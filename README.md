@@ -18,6 +18,8 @@ In addition, a low-stakes quiz before a class sets the intention of the student 
 
 While we have purposefully avoided introducing JavaScript frameworks so as to concentrate on the basic skills needed as a web developer before adopting a framework, a good next step to completing this curriculum would be learning about Node.js via another collection of videos: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=cxaall-4621-cxall)".
 
+> Find our [Code of Conduct](CODE-OF-CONDUCT.md) and [Contributing](CONTRIBUTING.md) guidelines. We welcome your constructive feedback!
+> 
 ## Each lesson includes:
 
 - optional sketchnote
