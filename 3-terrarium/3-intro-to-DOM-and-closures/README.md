@@ -73,7 +73,7 @@ Closures are useful when one or more functions need to access an outer function'
 
 ```javascript
 function displayCandy(){
-	let candy = ['jellybeans];
+	let candy = ['jellybeans'];
 	function addCandy(candyType) {
 		candy.push(candyType)
 	}
