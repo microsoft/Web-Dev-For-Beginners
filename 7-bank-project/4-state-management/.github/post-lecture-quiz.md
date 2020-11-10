@@ -4,7 +4,7 @@
 
 - [ ] Enforcement of law & order
 - [ ] Logging the user interface state over time
-- [ ] Keeping clean your app data flow
+- [ ] Keeping your app data flows clean and synchronizing the user interface with data
 
 2. How can you keep track of the user session state?
 
