@@ -12,7 +12,7 @@
 - [ ] It's easier to debug the code
 - [ ] All of the above
 
-3. What's the best way to persist user data across different sessions?
+3. What's the best way to persist critical user data across different sessions?
 - [ ] Using files
 - [ ] Using the browser's `localStorage` API
 - [ ] In a database behind a server API
