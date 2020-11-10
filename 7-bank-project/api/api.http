@@ -24,7 +24,7 @@ POST http://localhost:5000/api/accounts/sinedied/transactions
 Content-Type: application/json
 
 {
-  "date": "2020-07-24T11:09:17.781Z",
+  "date": "2020-07-24",
   "object": "Bought book",
   "amount": -20
 }
