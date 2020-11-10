@@ -1,0 +1,143 @@
+.container {
+	margin: 1.5em;
+	text-align: center;
+}
+
+.result {
+	margin-top: 1em;
+}
+
+.clear-btn {
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*basic css*/
+/* courtesy of: https://github.com/vladocar/Basic.css */
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--sans: 1em/1.6 system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+		Droid Sans, Helvetica Neue, Fira Sans, sans-serif;
+	--mono: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, 'Courier New', monospace;
+	--c1: #0074d9;
+	--c2: #eee;
+	--c3: #fff;
+	--c4: #000;
+	--c5: #fff;
+	--m1: 8px;
+	--rc: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--c2: #333;
+		--c3: #1e1f20;
+		--c4: #fff;
+	}
+}
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* General settings */
+
+body {
+	margin: 0;
+	font: var(--sans);
+	font-weight: 400;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	background-color: var(--c3);
+	color: var(--c4);
+	min-width: 300px;
+}
+img,
+iframe {
+	border: none;
+	max-width: 100%;
+}
+
+a {
+	color: var(--c1);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--c1);
+	text-decoration: underline;
+}
+
+/* Headlines */
+
+h1,
+h2 {
+	margin: 0.6em 0;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 1.5em;
+	line-height: 1.2;
+}
+
+h2 {
+	font-size: 1.4em;
+	line-height: 1.2;
+}
+
+/* Rounded Corners*/
+
+input,
+button,
+img {
+	border-radius: var(--rc);
+	margin: 5px;
+}
+
+/* Forms */
+
+input,
+select,
+textarea {
+	font-size: 1em;
+	color: var(--c4);
+	background: var(--c2);
+	border: 0;
+	padding: 0.6em;
+}
+
+label {
+	font-weight: bold;
+	text-align: left;
+}
+
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+	-webkit-appearance: none;
+	font-size: 1em;
+	display: inline-block;
+	color: var(--c5);
+	background: var(--c1);
+	border: 0;
+	margin: 4px;
+	padding: 0.6em;
+	cursor: pointer;
+	text-align: center;
+}
+
+button:hover,
+button:focus,
+input:hover,
+textarea:hover,
+select:hover {
+	opacity: 0.8;
+}

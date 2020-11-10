@@ -1,0 +1,25 @@
+{
+	"name": "carbon-trigger-extension",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"watch": "webpack --watch",
+		"build": "webpack"
+	},
+	"keywords": [
+		"chrome extension",
+		"edge extension",
+		"carbon usage tracker"
+	],
+	"author": "Jen Looper",
+	"license": "MIT",
+	"devDependencies": {
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12"
+	},
+	"dependencies": {
+		"axios": "^0.19.2"
+	}
+}

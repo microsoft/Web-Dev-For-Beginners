@@ -1,0 +1,351 @@
+:root {
+  /* Colors */
+  --primary: #0091ea;
+  --primary-light: #7bbde6;
+  --accent: #546e7a;
+  --grey: #445;
+  --error: #f52;
+  --background: #f5f5f6;
+  --background-accent: #cfe5f2;
+  --white: #fff;
+  --border: #99a;
+  /* Sizes */
+  --radius: 10px;
+  --space-xs: 5px;
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-xl: 40px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Micro reset */
+/* ------------------------------------------------------------------------ */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* ------------------------------------------------------------------------ */
+/* General styles */
+/* ------------------------------------------------------------------------ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h2 {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: var(--space-md) 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: var(--space-sm) var(--space-md);
+}
+
+input {
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  height: 40px;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: 0;
+}
+
+label {
+  color: var(--grey);
+  text-transform: uppercase;
+  font-size: 80%;
+}
+
+button {
+  font-weight: bold;
+  background-color: var(--primary);
+  color: var(--white);
+  height: 40px;
+  padding: var(--space-xs);
+  border: 0;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  min-width: 100px;
+  margin: var(--space-sm) 0;
+}
+
+.button-alt {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+button:hover {
+  filter: brightness(115%);
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  border: 2px solid var(--grey);
+}
+
+.error {
+  color: var(--error);
+  margin: var(--space-xs) 0;
+}
+
+.error:empty {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Login page */
+/* ------------------------------------------------------------------------ */
+
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+  margin: var(--space-md);
+}
+
+.login-logo {
+  height: 80px;
+  vertical-align: middle;
+}
+
+.login-page {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(var(--primary), var(--primary-light));
+}
+
+.login-container {
+  flex: auto;
+  max-width: 480px;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.login-content {
+  background-color: var(--background);
+  padding: var(--space-sm);
+}
+
+.login-separator {
+  position: relative;
+  top: 0.5em;
+  border-top: 1px solid var(--border);
+  opacity: 0.6;
+  margin: var(--space-md) 0;
+}
+
+.login-separator > span {
+  position: relative;
+  top: -0.5em;
+  background-color: var(--background);
+  padding: var(--space-sm);
+}
+
+/* ------------------------------------------------------------------------ */
+/* Dashboard page */
+/* ------------------------------------------------------------------------ */
+
+.dashboard-page {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  background-color: var(--grey);
+  padding: 0 var(--space-sm)
+}
+
+.dashboard-header button {
+  float: right;
+  border: 1px solid;
+  background-color: transparent;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--white);
+  vertical-align: middle;
+  margin: 0 var(--space-sm)
+}
+
+.dashboard-logo {
+  height: 60px;
+  vertical-align: middle;
+  padding: var(--space-xs);
+}
+
+.balance {
+  background: radial-gradient(circle at center, var(--primary), var(--primary-light));
+  text-align: center;
+}
+
+.balance > div {
+  color: var(--white);
+  padding-top: var(--space-xs);
+  text-transform: uppercase;
+}
+
+.balance > span {
+  color: var(--white);
+  font-size: 3rem;
+}
+
+.transactions-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--space-sm);
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.transactions-title > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.transactions-table {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: var(--space-sm);
+  margin: 0;
+  border-spacing: 0;
+  background-color: var(--background);
+}
+
+.transactions-table thead th {
+  border-bottom: 1px solid var(--border);
+}
+
+.transactions-table tr:nth-child(even) {
+  background-color: var(--background-accent);
+}
+
+.transactions-table td,
+.transactions-table th {
+  padding: var(--space-xs) var(--space-sm);
+  text-align: left;
+}
+
+.transactions-table td:first-child,
+.transactions-table th:first-child {
+  /* Make first column use the minimum width */
+  width: 1%;
+  white-space: nowrap;
+}
+
+.transactions-table td:last-child,
+.transactions-table th:last-child {
+  text-align: right;
+}
+
+.dialog {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  animation: slideFromTop 0.3s ease-in-out;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.dialog.show {
+  display: flex;
+}
+
+@keyframes slideFromTop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.dialog-content {
+  flex: auto;
+  background-color: var(--white);
+  max-width: 480px;
+  max-height: 100%;
+  padding: var(--space-sm);
+}
+
+.dialog-buttons {
+  text-align: right;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Utilities */
+/* ------------------------------------------------------------------------ */
+
+.text-center {
+  text-align: center;
+}
+
+.hide-xs {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Responsive adaptations */
+/* ------------------------------------------------------------------------ */
+
+@media only screen and (min-width: 480px) {
+  .hide-xs {
+    display: initial;
+  }
+
+  .login-content,
+  .dialog-content {
+    border-radius: var(--radius);
+  }
+
+  .dialog-content {
+    margin-top: var(--space-xl);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .transactions-table {
+    border-radius: var(--radius);
+  }
+
+  .dashboard-content {
+    width: 100%;
+    max-width: 768px;
+    align-self: center;
+  }
+}

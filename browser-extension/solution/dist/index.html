@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>My Carbon Trigger</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+
+	<body class="container">
+		<img alt="plants and people" src="images/plants-people.png" />
+		<div>
+			<h1>Welcome to Your Personal Carbon Trigger!</h1>
+		</div>
+		<form class="form-data" autocomplete="on">
+			<div>
+				<h2>New? Add your Information</h2>
+			</div>
+			<div>
+				<label>Region Name</label>
+				<input type="text" required class="region-name" />
+			</div>
+			<div>
+				<label>Your API Key from tmrow</label>
+				<input type="text" required class="api-key" />
+			</div>
+			<button class="search-btn">Submit</button>
+		</form>
+		<div class="result">
+			<div class="loading">loading...</div>
+			<div class="errors"></div>
+			<div class="data"></div>
+			<div class="result-container">
+				<p><strong>Region: </strong><span class="my-region"></span></p>
+				<p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
+				<p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
+			</div>
+			<button class="clear-btn">Change region</button>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+{
+	"manifest_version": 2,
+	"name": "My Carbon Trigger",
+	"version": "0.1.0",
+	"permissions": ["<all_urls>"],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"browser_action": {
+		"default_popup": "index.html"
+	}
+}
