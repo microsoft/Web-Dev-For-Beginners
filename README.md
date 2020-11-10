@@ -2,6 +2,8 @@
 
 Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson curriculum all about JavaScript, CSS, and HTML basics. Each lesson includes pre- and post-lesson quizzes, written instructions to complete the lesson, a solution, an assignment and more. Our project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
 
+> Teachers, we have [included some suggestions](for-teachers.md) on how to use this curriculum. If you would like to create your own lessons, we have also included a [lesson template](lesson-template/README.md)
+
 [![Promo video](screenshot.png)](https://youtube.com/watch?v=kQyTzefCHxI "Promo video")
 
 > Click the image above for a video about the project and the folks who created it!
