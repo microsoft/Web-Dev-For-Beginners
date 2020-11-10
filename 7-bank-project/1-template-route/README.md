@@ -43,7 +43,7 @@ If you want to create multiples screens for a web page, one solution would be to
 
 Another approach is have only one HTML file, and define multiple [HTML templates](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) using the `<template>` element. A template is a reusable HTML block that is not displayed by the browser, and needs to be instantiated at runtime using JavaScript.
 
-### Task:
+### Task
 
 We'll create a bank app with two screens: the login page and the dashboard. First, let's add in the HTML body a placeholder element that we'll use to instantiate the different screens of our app:
 

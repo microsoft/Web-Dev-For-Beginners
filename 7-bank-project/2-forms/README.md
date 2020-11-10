@@ -43,7 +43,7 @@ The `<button>` element within a form is a bit special. If you do not specify its
 - `reset`: The button resets all the form controls to their initial values.
 - `button`: Do not assign a default behavior when the button is pressed. You can then assign custom actions to it using JavaScript.
 
-### Task:
+### Task
 
 Let's start by adding a form to the `login` template. We'll need a *username* field and a *Login* button.
 

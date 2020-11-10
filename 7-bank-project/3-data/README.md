@@ -35,7 +35,7 @@ When AJAX was first introduced, the only API available to fetch data asynchronou
 
 > While all modern browsers supports the `Fetch API`, if you want your web application to work on legacy or old browsers it's always a good idea to check the [compatibility table on caniuse.com](https://caniuse.com/fetch) first.
 
-### Task:
+### Task
 
 In [the previous lesson](../2-forms/README.md) we implented the registration form to create an account. We'll now add code to login using an existing account, and fetch its data. Open the `app.js` file and add a new `login` function:
 
