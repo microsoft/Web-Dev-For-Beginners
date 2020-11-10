@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 
 const serverUrl = 'http://localhost:5000/api';
-const storageKey = 'savedState';
+const storageKey = 'savedAccount';
 
 // ---------------------------------------------------------------------------
 // Router
@@ -73,14 +73,16 @@ async function createTransaction(user, transaction) {
 // Global state
 // ---------------------------------------------------------------------------
 
-let state = {
-  user: null,
+let state = Object.freeze({
   account: null
-};
+});
 
-function updateState(newState) {
-  state = newState;
-  localStorage.setItem(storageKey, JSON.stringify(state));
+function updateState(property, newData) {
+  state = Object.freeze({
+    ...state,
+    [property]: newData
+  });
+  localStorage.setItem(storageKey, JSON.stringify(state.account));
 }
 
 // ---------------------------------------------------------------------------
@@ -96,12 +98,7 @@ async function login() {
     return updateElement('loginError', data.error);
   }
 
-  const newState = {
-    ...state,
-    user: data.user
-  };
-  updateState(newState);
-
+  updateState('account', data);
   navigate('/dashboard');
 }
 
@@ -116,12 +113,7 @@ async function register() {
     return updateElement('registerError', result.error);
   }
 
-  const newState = {
-    ...state,
-    user: result.user
-  };
-  updateState(newState);
-
+  updateState('account', result);
   navigate('/dashboard');
 }
 
@@ -130,26 +122,17 @@ async function register() {
 // ---------------------------------------------------------------------------
 
 async function updateAccountData() {
-  const user = state.user;
-
-  if (!user) {
+  const account = state.account;
+  if (!account) {
     return logout();
   }
 
-  const data = await getAccount(user);
-
+  const data = await getAccount(account.user);
   if (data.error) {
-    if (data.error === 'User does not exist') {
-      return logout();
-    }
-    return updateElement('dashboardError', data.error);
+    return logout();
   }
 
-  const newState = {
-    ...state,
-    account: data
-  };
-  updateState(newState);
+  updateState('account', data);
 }
 
 async function refresh() {
@@ -206,22 +189,19 @@ async function confirmTransaction() {
 
   const formData = new FormData(transactionForm);
   const jsonData = JSON.stringify(Object.fromEntries(formData));
-  const data = await createTransaction(state.user, jsonData);
+  const data = await createTransaction(state.account.user, jsonData);
 
   if (data.error) {
     return updateElement('transactionError', data.error);
   }
 
   // Update local state with new transaction
-  const newState = {
-    ...state,
-    account: {
-      ...state.account,
-      balance: state.account.balance + data.amount,
-      transactions: [...state.account.transactions, data]
-    }
+  const newAccount = {
+    ...state.account,
+    balance: state.account.balance + data.amount,
+    transactions: [...state.account.transactions, data]
   }
-  updateState(newState);
+  updateState('account', newAccount);
 
   // Update display
   updateDashboard();
@@ -233,12 +213,7 @@ async function cancelTransaction() {
 }
 
 function logout() {
-  const newState = {
-    user: null,
-    account: null
-  };
-  updateState(newState);
-
+  updateState('account', null);
   navigate('/login');
 }
 
@@ -260,7 +235,7 @@ function init() {
   // Restore state
   const savedState = localStorage.getItem(storageKey);
   if (savedState) {
-    updateState(JSON.parse(savedState));
+    updateState('account', JSON.parse(savedState));
   }
 
   // Update route for browser back/next buttons
