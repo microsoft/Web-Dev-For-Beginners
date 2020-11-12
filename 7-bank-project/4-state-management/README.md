@@ -42,7 +42,7 @@ We could update our code to tackle these issues one by one, but it would create 
 
 Once you've taken care of these, any other issues you might have may either be fixed already or have become easier to fix. There are many possible approaches for solving these problems, but we'll go with a common solution that consists in **centralizing the data and the ways to change it**. The data flows would go like this:
 
-![](./images/data-flow.png)
+![Schema showing the data flows between the HTML, user actions and state](./images/data-flow.png)
 
 > We won't cover here the part where the data automatically triggers the view update, as it's tied to more advanced concepts of [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming). It's a good follow-up subject if you're up to a deep dive.
 
@@ -64,7 +64,7 @@ let state = {
 };
 ```
 
-The idea is to *centralize* all our app data in a single state object. We only have `account` for now in the state so it doesn't change much, but it creates an easy path for evolutions.
+The idea is to *centralize* all our app data in a single state object. We only have `account` for now in the state so it doesn't change much, but it creates a path for evolutions.
 
 We also have to update the functions using it. In the `register()` and `login()` functions, replace `account = ...` with `state.account = ...`;
 
@@ -238,7 +238,7 @@ async function updateAccountData() {
 
 This method checks that we are currently logged in then reloads the account data from the server.
 
-Create another function name `refresh`:
+Create another function named `refresh`:
 
 ```js
 async function refresh() {
@@ -247,7 +247,7 @@ async function refresh() {
 }
 ```
 
-This one update the account data, then takes care of updating the HTML of the dashboard page. It's what we need to call when the dashboard route is loaded. Update the route definition with:
+This one updates the account data, then takes care of updating the HTML of the dashboard page. It's what we need to call when the dashboard route is loaded. Update the route definition with:
 
 ```js
 const routes = {
