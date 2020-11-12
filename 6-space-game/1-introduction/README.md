@@ -1,6 +1,6 @@
 # Build a Space Game Part I: Introduction
 
-![video](video-url)
+![video](/6-space-game/images/pewpew.gif)
 
 ## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
