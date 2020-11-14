@@ -4,7 +4,7 @@
 
 ### Introduction
 
-As a web application grows, it becomes a challenge to keep a clean track of all data flows. Which code gets the data, what page consumes it, where and when does it need to be updated, it's easy to end up with a messy code difficult to maintain. This is especially true when you need to share data among different pages of your app, for example the user data. The concept of *state managament* has always existed in all kinds of programs, but as web apps keep growing in complexity it's now a key point to think about during development.
+As a web application grows, it becomes a challenge to keep track of all data flows. Which code gets the data, what page consumes it, where and when does it need to be updated...it's easy to end up with messy code, difficult to maintain. This is especially true when you need to share data among different pages of your app, for example user data. The concept of *state management* has always existed in all kinds of programs, but as web apps keep growing in complexity it's now a key point to think about during development.
 
 In this final part, we'll look over the app we built to rethink how the state is managed, allowing support for browser refresh at any point, and persisting data across user sessions.
 
@@ -37,7 +37,7 @@ We could update our code to tackle these issues one by one, but it would create 
 
 [State management](https://en.wikipedia.org/wiki/State_management) is all about finding a good approach to solve these two particular problems:
 
-- How to keep the data flows in an app easy to understand?
+- How to keep the data flows in an app understandable?
 - How to keep the state data always in sync with the user interface (and vice versa)?
 
 Once you've taken care of these, any other issues you might have may either be fixed already or have become easier to fix. There are many possible approaches for solving these problems, but we'll go with a common solution that consists in **centralizing the data and the ways to change it**. The data flows would go like this:
@@ -140,7 +140,7 @@ Try registering a new account, logging out and in again to check that everything
 
 ## Persist the state
 
-Most web apps needs to persist data to be able to work correctly. All the critical data is usally stored on a database and accessed via a server API, like as the user account data in our case. But sometimes, it's also interesting to persist some data on the client app that's running in your browser, for a better user experience or to improve loading performance.
+Most web apps needs to persist data to be able to work correctly. All the critical data is usually stored on a database and accessed via a server API, like as the user account data in our case. But sometimes, it's also interesting to persist some data on the client app that's running in your browser, for a better user experience or to improve loading performance.
 
 When you want to persist data in your browser, there are a few important questions you should ask yourself:
 
@@ -160,7 +160,7 @@ Note that both these APIs only allow to store [strings](https://developer.mozill
 
 ### Task
 
-We want our users stay logged in until they explicitely click on the *Logout* button, so we'll use `localStorage` to store the account data. First, let's define a key that we'll use to store our data.
+We want our users stay logged in until they explicitly click on the *Logout* button, so we'll use `localStorage` to store the account data. First, let's define a key that we'll use to store our data.
 
 ```js
 const storageKey = 'savedAccount';
@@ -172,7 +172,7 @@ Then add this line at the end of the `updateState()` function:
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-With this, the user account data will be persisted and always up-to-date as we centralized previously all our state updates. This is where we begin to benefit from all our previous refactorings 🙂.
+With this, the user account data will be persisted and always up-to-date as we centralized previously all our state updates. This is where we begin to benefit from all our previous refactors 🙂.
 
 As the data is saved, we also have to take care of restoring it when the app is loaded. Since we'll begin to have more initialization code it may be a good idea to create a new `init` function, that also includes our previous code at the bottom of `app.js`:
 
@@ -199,7 +199,7 @@ Now login in the app and try refreshing the page, you should stay on the dashboa
 
 ## Refresh the data
 
-...But we might also have a created a new one. Oups.
+...But we might also have a created a new one. Oops!
 
 Go to the dashboard using the `test` account, then run this command on a terminal to create a new transaction:
 
@@ -274,4 +274,4 @@ Try working together to change what is saved and loaded from `localStorage` to o
 
 Here's an example result after completing the assignment:
 
-![Screenshot showing an example "Add transation" dialog](./images/dialog.png)
+![Screenshot showing an example "Add transaction" dialog](./images/dialog.png)
