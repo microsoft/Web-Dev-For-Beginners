@@ -3,19 +3,21 @@
 ![Browser sketchnote](images/sketchnote.jpg)
 > Sketchnote by [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
 
-### Introduction:
+[Pre-lecture quiz](5-browser-extension/1-about-browsers/.github/pre-lecture-quiz.md)
+
+### Introduction
 
 Browser extensions add additional functionality to a browser. But before you build one, you should learn a little about how browsers do their work.
 
-### About the browser:
+### About the browser
 
 In this series of lessons, you'll learn how to build a browser extension that will work on Chrome, Firefox and Edge browsers. In this part, you'll discover how browsers work and scaffold out the elements of the browser extension.
 
 But what is a browser exactly? It is a software application that allows an end user to access content from a server and display it on web pages.
 
-✅ A little history: the first browser was called 'WorldWideWeb' and was created by Sir Tim Berners-Lee in 1990.
+✅ A little history: the first browser was called 'WorldWideWeb' and was created by Sir Timothy Berners-Lee in 1990.
 
 ![early browsers](images/earlybrowsers.jpg)
 > Some early browsers, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
@@ -146,7 +148,9 @@ Congratulations, you've taken the first steps towards building a browser extensi
 
 Take a look at a browser extension store and install one to your browser. You can examine its files in interesting ways. What do you discover?
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](5-browser-extension/1-about-browsers/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -160,5 +164,5 @@ In this lesson you learned a little about the history of the web browser; take t
 
 ## Assignment 
 
-[Restyle your extension](assignment.md)
+[Restyle your extension](5-browser-extension/1-about-browsers/assignment.md)
 

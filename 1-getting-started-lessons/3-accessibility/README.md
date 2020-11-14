@@ -3,7 +3,8 @@
 ![All About Accessibility](webdev101-a11y.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+[Pre-lecture quiz](1-getting-started-lessons/3-accessibility/.github/pre-lecture-quiz.md)
 
 > The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
 >
@@ -205,7 +206,8 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
 </html>
 ```
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+[Post-lecture quiz](1-getting-started-lessons/3-accessibility/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -213,6 +215,6 @@ Many governments have laws regarding accessibility requirements. Read up on your
 
 ## Assignment
  
-[Analyze a non-accessible web site](assignment.md)
+[Analyze a non-accessible web site](1-getting-started-lessons/3-accessibility/assignment.md)
 
 Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument

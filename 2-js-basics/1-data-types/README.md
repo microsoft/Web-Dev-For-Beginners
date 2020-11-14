@@ -5,7 +5,8 @@
 ![JavaScript Basics - Data types](images/webdev101-js-datatypes.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+[Pre-lecture quiz](2-js-basics/1-data-types/.github/pre-lecture-quiz.md)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web.
 
@@ -182,7 +183,8 @@ Booleans can be only two values: `true` or `false`. Booleans can help make decis
 
 JavaScript is notorious for its surprising ways of handling datatypes on occasion. Do a bit of research on these 'gotchas'. For example: case sensitivity can bite! Try this in your console: `let age = 1; let Age = 2; age == Age` (resolves `false` -- why?). What other gotchas can you find?
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+[Post-lecture quiz](2-js-basics/1-data-types/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -190,5 +192,4 @@ Take a look at [this list of JavaScript exercises](https://css-tricks.com/snippe
 
 ## Assignment
 
-[Data Types Practice](assignment.md)
-
+[Data Types Practice](2-js-basics/1-data-types/assignment.md)

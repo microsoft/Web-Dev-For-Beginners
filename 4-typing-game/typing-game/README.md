@@ -1,6 +1,8 @@
 # Creating a game using events
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+
+[Pre-lecture quiz](4-typing-game/typing-game/.github/pre-lecture-quiz.md)
 
 ## Event driven programming
 
@@ -321,10 +323,14 @@ Add more functionality
 - Display a modal dialog box with the success message
 - Store high scores using [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](4-typing-game/typing-game/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
 Read up on [all the events available](https://developer.mozilla.org/en-US/docs/Web/Events) to the developer via the web browser, and consider the scenarios in which you would use each one.
 
-## Assignment [Create a new keyboard game](assignment.md)
+## Assignment
+
+[Create a new keyboard game](4-typing-game/typing-game/assignment.md)

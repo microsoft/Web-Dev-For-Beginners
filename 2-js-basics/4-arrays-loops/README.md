@@ -5,7 +5,9 @@
 ![JavaScript Basics - Arrays](images/webdev101-js-arrays.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## 
+Pre-Lecture Quiz
+[Pre-lecture quiz](2-js-basics/4-arrays-loops/.github/pre-lecture-quiz.md)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
 
@@ -110,7 +112,10 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 There are other ways of looping over arrays other than for and while loops. There are [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), and [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Rewrite your array loop using one of these techniques.
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## 
+Post-Lecture Quiz
+[Post-lecture quiz](2-js-basics/4-arrays-loops/.github/post-lecture-quiz.md)
+
 
 ## Review & Self Study
 
@@ -118,4 +123,4 @@ Arrays in JavaScript have many methods attached to them, extremely useful for da
 
 ## Assignment
 
-[Loop an Array](assignment.md)
+[Loop an Array](2-js-basics/4-arrays-loops/assignment.md)

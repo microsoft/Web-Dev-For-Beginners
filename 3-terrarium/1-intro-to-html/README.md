@@ -3,15 +3,17 @@
 ![Introduction to HTML](images/webdev101-html.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
 
-### Introduction:
+[Pre-lecture quiz](3-terrarium/1-intro-to-html/.github/pre-lecture-quiz.md)
+
+### Introduction
 
 HTML, or HyperText Markup Language, is the 'skeleton' of the web. If CSS 'dresses up' your HTML and JavaScript brings it to life, the body of your web application is its HTML. HTML's syntax even reflects that idea, as it includes "head", "body", and "footer" tags.
 
 In this lesson, we're going to use HTML to layout the 'skeleton' of our virtual terrarium's interface. It will have a title and three columns: a right and left column where the draggable plants live, and a center area that will be the actual glass-looking terrarium. By the end of this lesson, you will be able to see the plants in the columns, but the interface will look a little strange; don't worry, in the next section you will add CSS styles to the interface to make it look better.
 
-### Task:
+### Task
 
 On your computer, create a folder called 'terrarium' and inside it, a file called 'index.html'. You can do this in Visual Studio Code after you create your terrarium folder by opening a new VS Code window, clicking 'open folder', and navigating to your new folder. Click the small 'file' button in the Explorer pane and create the new file:
 
@@ -21,7 +23,7 @@ On your computer, create a folder called 'terrarium' and inside it, a file calle
 
 ---
 
-## 1. The DocType and html tags
+## The DocType and html tags
 
 The first line of an HTML file is its doctype. It's a little surprising that you need to have this line at the very top of the file, but it tells older browsers that the browser needs to render the page in a standard mode, following the current html specification.
 
@@ -29,7 +31,7 @@ The first line of an HTML file is its doctype. It's a little surprising that you
 
 The second line should be the `<html>` tag's opening tag, followed right now by its closing tag. These tags are the root elements of your interface.
 
-### Task:
+### Task
 
 Add these lines at the top of your `index.html` file:
 
@@ -42,7 +44,7 @@ Add these lines at the top of your `index.html` file:
 
 ---
 
-## 2. The document's 'head'
+## The document's 'head'
 
 The 'head' area of the HTML document includes crucial information about your web page, also known as [metadata](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta). In our case, we tell the web server to which this page will be sent to be rendered four things:
 
@@ -52,7 +54,7 @@ The 'head' area of the HTML document includes crucial information about your web
     -   browser information, including `x-ua-compatible` which indicates that the IE=edge browser is supported
     -   information about how the viewport should behave when it is loaded. Setting the viewport to have an initial scale of 1 controls the zoom level when the page is first loaded.
 
-### Task:
+### Task
 
 Add a 'head' block to your document in between the opening and closing `<html>` tags.
 
@@ -69,13 +71,13 @@ Add a 'head' block to your document in between the opening and closing `<html>` 
 
 ---
 
-## 3. The document's `body`
+## The document's `body`
 
 ### HTML Tags
 
 In HTML, you add tags to your .html file to create elements of a web page. Each tag usually has an opening and closing tag, like this: `<p>hello</p>` to indicate a paragraph. Create you interface's `<body>` by adding a set of tags inside the `<html>` tag pair; your markup now looks like this:
 
-### Task:
+### Task
 
 ```html
 <!DOCTYPE html>
@@ -98,7 +100,7 @@ One html tag that doesn't need a closing tag is the `<img>` tag, because it has 
 
 Create a folder in your app called `images` and in that, add all the images in the [source code folder](../images); (there are 14 images of plants).
 
-### Task:
+### Task
 
 Add those plant images into two columns between the `<body></body>` tags:
 
@@ -163,7 +165,7 @@ Each image has an alt tag that will appear even if you can't see or render an im
 
 ---
 
-## 4. Semantic markup
+## Semantic markup
 
 In general, it's preferable to use 'semantics' when writing HTML. What does that mean? It means that you use HTML tags the way they were designed: to represent its data; so an H1 tag should always be present on a page
 
@@ -177,7 +179,7 @@ Using semantic markup such as having headers be `<h1>` and unordered lists be re
 
 ✅ Take a look at a screen reader and [how it interacts with a web page](https://www.youtube.com/watch?v=OUDV1gqs9GA). Can you see why having non semantic markup might confuse the user?
 
-## 5. The terrarium
+## The terrarium
 
 The last part of this interface involves creating markup that will be styled to create a terrarium.
 
@@ -205,7 +207,9 @@ Add this markup above the last `</div>` tag:
 
 There are some wild 'older' tags in HTML that are still fun to play with, though you shouldn't use deprecated tags such as [these tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) in your markup. Still, can you use the old `<marquee>` tag to make the h1 title scroll horizontally? (if you do, don't forget to remove it afterwards)
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](3-terrarium/1-intro-to-html/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -216,4 +220,4 @@ Learn more about building sites for the web and mobile devices at [Microsoft Lea
 
 ## Assignment
 
-[Practice your HTML: Build a blog mockup](assignment.md)
+[Practice your HTML: Build a blog mockup](3-terrarium/1-intro-to-html/assignment.md)

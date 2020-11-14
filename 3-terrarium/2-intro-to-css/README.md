@@ -3,9 +3,11 @@
 ![Introduction to CSS](images/webdev101-css.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
 
-### Introduction:
+[Pre-lecture quiz](3-terrarium/2-intro-to-css.github/pre-lecture-quiz.md)
+
+### Introduction
 
 CSS, or Cascading Style Sheets, solve an important problem of web development: how to make your web site look nice. Styling your apps makes them more usable and nicer-looking; you can also use CSS to create Responsive Web Design (RWD) - allowing your apps to look good no matter what screen size they are displayed on. CSS is not only about making your app look nice; its spec includes animations and transforms that can enable sophisticated interactions for your apps. The CSS Working Group helps maintain current CSS specifications; you can follow their work at [World Wide Web Consortium's site](https://www.w3.org/Style/CSS/members).
 
@@ -13,11 +15,11 @@ CSS, or Cascading Style Sheets, solve an important problem of web development: h
 
 In this lesson, we're going to add styles to our online terrarium and learn more about several CSS concepts: the cascade, inheritance, and the use of selectors, positioning, and using CSS to build layouts. In the process we will layout the terrarium and create the actual terrarium itself.
 
-### Prequisite:
+### Prequisite
 
 You should have the HTML for your terrarium built and ready to be styled.
 
-### Task:
+### Task
 
 In your terrarium folder, create a new file called `style.css`. Import that file in the `<head>` section:
 
@@ -27,11 +29,11 @@ In your terrarium folder, create a new file called `style.css`. Import that file
 
 ---
 
-## 1. The Cascade
+## The Cascade
 
 Cascading Style Sheets incorporate the idea that the styles 'cascade' such that the application of a style is guided by its priority. Styles set by a web site author take priority over those set by a browser. Styles set 'inline' take priority over those set in an external style sheet.
 
-### Task:
+### Task
 
 Add the inline style "color: red" to your `<h1>` tag:
 
@@ -51,11 +53,11 @@ h1 {
 
 ---
 
-## 2. Inheritance
+## Inheritance
 
 Styles are inherited from an ancestor style to a descendent, such that nested elements inherit the styles of their parents.
 
-### Task:
+### Task
 
 Set the body's font to a given font, and check to see a nested element's font:
 
@@ -73,7 +75,7 @@ Open your browser's console to the 'Elements' tab and observe the H1's font. It 
 
 ---
 
-## 3. CSS Selectors
+## CSS Selectors
 
 ### Tags
 
@@ -167,7 +169,7 @@ Also notable is the use of z-index, which controls the relative altitude of an e
 
 ✅ Why do you need both a plant holder and a plant CSS selector?
 
-## 4. CSS Positioning
+## CSS Positioning
 
 Mixing position properties (there are static, relative, fixed, absolute, and sticky positions) can be a little tricky, but when done properly it gives you good control over the elements on your pages.
 
@@ -181,7 +183,7 @@ In our sample, the `plant-holder` is a relative-positioned element that is posit
 
 ✅ Experiment with switching the types of positioning of the side containers and the plant-holder. What happens?
 
-## 5. CSS Layouts
+## CSS Layouts
 
 Now you will use what you learned to build the terrarium itself, all using CSS!
 
@@ -248,7 +250,9 @@ Add a 'bubble' shine to the left bottom area of the jar to make it look more gla
 
 To complete the post-lecture quiz, go through this Learn module: [Style your HTML app with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](3-terrarium/2-intro-to-css/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -256,4 +260,4 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 
 ## Assignment
 
-[CSS Refactoring](assignment.md)
+[CSS Refactoring](3-terrarium/2-intro-to-css/assignment.md)

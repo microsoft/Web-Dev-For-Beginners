@@ -1,8 +1,10 @@
 # Browser Extension Project Part 3: Learn about Background Tasks and Performance
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
 
-### Introduction:
+[Pre-lecture quiz](5-browser-extension/3-background-tasks-and-performance/.github/pre-lecture-quiz.md)
+
+### Introduction
 
 In the last two lessons of this module, you learned how to build a form and display area for data fetched from an API. It's a very standard way of creating web presences on the web. You even learned how to handle fetching data asyncronously. Your browser extension is very nearly complete. 
 
@@ -143,7 +145,9 @@ Congratulations, you've built a useful browser extension and learned more about 
 
 Investigate some open source web sites have been around a long time ago, and, based on their GitHub history, see  if you can determine how they were optimized over the years for performance, if at all. What is the most common pain point?
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](5-browser-extension/3-background-tasks-and-performance/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -153,5 +157,5 @@ Investigate some of the ways that browsers gauge web performance by looking thro
 
 ## Assignment
 
-[Analyze a site for performance](assignment.md)
+[Analyze a site for performance](5-browser-extension/3-background-tasks-and-performance/assignment.md)
 

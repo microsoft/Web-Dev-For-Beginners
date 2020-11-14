@@ -5,10 +5,10 @@ This lesson covers the basics of GitHub, a platform to host and manage changes t
 ![Intro GitHub](images/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
+## Pre-Lecture Quiz
+[Pre-lecture quiz](1-getting-started-lessons/2-github-basics/.github/pre-lecture-quiz.md)
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
-
-### Introduction
+## Introduction
 
 In this lesson, we'll cover:
 
@@ -273,7 +273,8 @@ Projects might also have discussion in forums, mailing lists, or chat channels l
 
 Pair with a friend to work on each other's code. Create a project collaboratively, fork code, create branches, and merge changes.
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+[Post-lecture quiz](1-getting-started-lessons/2-github-basics/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

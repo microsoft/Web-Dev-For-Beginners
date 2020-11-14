@@ -5,7 +5,8 @@
 ![JavaScript Basics - Functions](images/webdev101-js-functions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+[Pre-lecture quiz](2-js-basics/2-functions-methods/.github/pre-lecture-quiz.md)
 
 When we think about writing code, we always want to ensure our code is readable. While this sounds counterintuitive, code is read many more times than it's written. One core tool in a developer's toolbox to ensure maintainable code is the **function**.
 
@@ -179,7 +180,8 @@ You've now seen we have three ways to pass a function as a parameter and might b
 
 Can you articulate in one sentence the difference between functions and methods? Give it a try!
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+[Post-lecture quiz](2-js-basics/2-functions-methods/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -187,4 +189,4 @@ It's worth [reading up a little more on arrow functions](https://developer.mozil
 
 ## Assignment
 
-[Fun with Functions](assignment.md)
+[Fun with Functions](2-js-basics/2-functions-methods/assignment.md)
