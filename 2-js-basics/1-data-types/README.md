@@ -1,7 +1,5 @@
 # JavaScript Basics: Data Types
 
-[![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
-
 ![JavaScript Basics - Data types](images/webdev101-js-datatypes.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
@@ -9,6 +7,9 @@
 [Pre-lecture quiz](2-js-basics/1-data-types/.github/pre-lecture-quiz.md)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web.
+
+[![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
+
 
 Let's start with variables and the data types that populate them!
 

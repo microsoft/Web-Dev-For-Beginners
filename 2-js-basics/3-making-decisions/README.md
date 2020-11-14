@@ -1,7 +1,5 @@
 # JavaScript Basics: Making Decisions
 
-[![Making Decisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
-
 ![JavaScript Basics - Making decisions](images/webdev101-js-decisions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
@@ -10,6 +8,8 @@ Pre-Lecture Quiz
 [Pre-lecture quiz](2-js-basics/3-making-decisions/.github/pre-lecture-quiz.md)
 
 Making decisions and controlling the order in which your code runs makes your code reusable and robust. This section covers the syntax for controlling data flow in JavaScript and its significance when used with Boolean data types
+
+[![Making Decisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
 
 ## A Brief Recap on Booleans
 

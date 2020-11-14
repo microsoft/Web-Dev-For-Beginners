@@ -1,7 +1,5 @@
 # JavaScript Basics: Arrays and Loops
 
-[![Arrays and Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
-
 ![JavaScript Basics - Arrays](images/webdev101-js-arrays.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
@@ -10,6 +8,8 @@ Pre-Lecture Quiz
 [Pre-lecture quiz](2-js-basics/4-arrays-loops/.github/pre-lecture-quiz.md)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
+
+[![Arrays and Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
 
 ## Arrays
 
