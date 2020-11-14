@@ -11,7 +11,7 @@
 - [ ] True
 - [ ] False
 
-1. A what will a developer do to fix buggy code?
+1. What will a developer do to fix buggy code?
 
 - [ ] Syntax highlighting
 - [ ] Debugging
