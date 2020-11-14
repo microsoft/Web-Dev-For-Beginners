@@ -1,6 +1,8 @@
-# Build a Space Game Part V: Scoring and Lives
+# Build a Space Game Part 5: Scoring and Lives
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+
+[Pre-lecture quiz](/6-space-game/5-keeping-score/.github/pre-lecture-quiz.md)
 
 In this lesson, you'll learn how to add scoring to a game and calculate lives.
 
@@ -174,7 +176,9 @@ By the end of this work, you should see the small 'life' ships at the bottom rig
 
 Your code is almost complete. Can you envision your next steps?
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](/6-space-game/5-keeping-score/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -182,4 +186,4 @@ Research some ways that you can increment and decrement game scores and lives. T
 
 ## Assignment
 
-[Build a Scoring Game](assignment.md)
+[Build a Scoring Game](/6-space-game/5-keeping-score/assignment.md)

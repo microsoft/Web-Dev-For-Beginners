@@ -1,6 +1,8 @@
-# Build a Space Game Part II: Draw Hero and Monsters to Canvas
+# Build a Space Game Part 2: Draw Hero and Monsters to Canvas
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+
+[Pre-lecture quiz](/6-space-game/2-drawing-to-canvas/.github/pre-lecture-quiz.md)
 
 ## The Canvas
 
@@ -201,7 +203,9 @@ Please try solving it yourself first but if you get stuck, have a look at a [sol
 
 You've learned about drawing with the 2D-focused Canvas API; take a look at the [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API), and try to draw a 3D object.
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](/6-space-game/2-drawing-to-canvas/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -209,4 +213,4 @@ Learn more about the Canvas API by [reading about it](https://developer.mozilla.
 
 ## Assignment
 
-[Play with the Canvas API](assignment.md)
+[Play with the Canvas API](/6-space-game/2-drawing-to-canvas/assignment.md)

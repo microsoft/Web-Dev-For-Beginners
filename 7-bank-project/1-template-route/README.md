@@ -1,8 +1,8 @@
-# HTML Templates and Routes in a Web App
+# Build a Banking App Part 1: HTML Templates and Routes in a Web App
 
-<!-- ![video](video-url) -->
+## Pre-Lecture Quiz
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](/7-bank-project/1-template-route/.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -282,7 +282,9 @@ Now try to use the back and forward buttons of your browsers, and check that the
 
 Add a new template and route for a third page that shows the credits for this app.
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](/7-bank-project/1-template-route/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -290,4 +292,4 @@ Routing is one of the surprisingly tricky parts of web development, especially a
 
 ## Assignment
 
-[Improve the routing](assignment.md)
+[Improve the routing](/7-bank-project/1-template-route/assignment.md)

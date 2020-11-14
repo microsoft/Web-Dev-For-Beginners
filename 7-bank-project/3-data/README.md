@@ -1,10 +1,12 @@
-# Methods of Fetching and Using Data
+# Build a Banking App Part 3: Methods of Fetching and Using Data
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+
+[Pre-lecture quiz](/7-bank-project/3-data/.github/pre-lecture-quiz.md)
 
 ### Introduction
 
-At the core of every web application there's *data*. Data can take many forms, but the end goal here is always to display information to the user. With web apps becoming increasingly interactive and complex, how the user access and interact with information is now a key part of web development.
+At the core of every web application there's *data*. Data can take many forms, but its main purpose is always to display information to the user. With web apps becoming increasingly interactive and complex, how the user accesses and interacts with information is now a key part of web development.
 
 In this lesson, we'll see how to fetch data from a server asynchronously, and use this data to display information on a web page without reloading the HTML.
 
@@ -315,8 +317,10 @@ Here's an example of a styled dashboard page:
 
 ![Screenshot of an example result of the dashboard after styling](../images/screen2.png)
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](/7-bank-project/3-data/.github/post-lecture-quiz.md)
 
 ## Assignment
 
-[Refactor and comment your code](assignment.md)
+[Refactor and comment your code](/7-bank-project/3-data/assignment.md)

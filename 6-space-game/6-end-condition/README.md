@@ -1,6 +1,8 @@
-# Build a Space Game Part VI: End and Restart
+# Build a Space Game Part 6: End and Restart
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+
+[Pre-lecture quiz](/6-space-game/6-end-condition/.github/pre-lecture-quiz.md)
 
 There are different ways to express and *end condition* in a game. It's up to you as the creator of the game to say why the game has ended. Here are some reasons, if we assume we are talking about the space game you have been building so far:
 
@@ -207,7 +209,9 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
 Add a sound! Can you add a sound to enhance your game play, maybe when there's a laser hit, or the hero dies or wins? Have a look at this [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) to learn how to play sound using JavaScript
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](/6-space-game/6-end-condition/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -215,4 +219,4 @@ Your assignment is to create a fresh sample game, so explore some of the interes
 
 ## Assignment
 
-[Build a Sample Game](assignment.md)
+[Build a Sample Game](/6-space-game/6-end-condition/assignment.md)

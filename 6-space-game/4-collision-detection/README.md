@@ -1,6 +1,8 @@
-# Build a Space Game Part IV: Adding A Laser and Detect Collisions
+# Build a Space Game Part 4: Adding A Laser and Detect Collisions
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+
+[Pre-lecture quiz](/6-space-game/4-collision-detection/.github/pre-lecture-quiz.md)
 
 In this lesson you will learn how to shoot lasers with JavaScript! We will add two things to our game:
 
@@ -282,7 +284,9 @@ At this point, your game has some functionality! You can navigate with your arro
 
 Add an explosion! Take a look at the game assets in [the Space Art repo](../solution/spaceArt/readme.txt) and try to add an explosion when the laser hits an alien
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](/6-space-game/4-collision-detection/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -290,4 +294,4 @@ Experiment with the intervals in your game thus far. What happens when you chang
 
 ## Assignment
 
-[Explore collisions](assignment.md)
+[Explore collisions](/6-space-game/4-collision-detection/assignment.md)

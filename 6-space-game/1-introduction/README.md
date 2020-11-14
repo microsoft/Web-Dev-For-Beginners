@@ -1,8 +1,10 @@
-# Build a Space Game Part I: Introduction
+# Build a Space Game Part 1: Introduction
 
-![video](/6-space-game/images/pewpew.gif)
+![video](../images/pewpew.gif)
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+
+[Pre-lecture quiz](/6-space-game/1-introduction/.github/pre-lecture-quiz.md)
 
 ### Inheritance and Composition in game development
 
@@ -209,7 +211,9 @@ As things gets more complicated when your game grows, this pattern stays the sam
 
 Think about how the pub-sub pattern can enhance a game. Which parts should emit events, and how should the game react to them? Now's your chance to get creative, thinking of a new game and how its parts might behave.
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](/6-space-game/1-introduction/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -217,4 +221,4 @@ Learn more about Pub/Sub by [reading about it](https://docs.microsoft.com/en-us/
 
 ## Assignment
 
-[Mock up a game](assignment.md)
+[Mock up a game](/6-space-game/1-introduction/assignment.md)

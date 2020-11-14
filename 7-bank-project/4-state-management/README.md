@@ -1,10 +1,12 @@
-# Concepts of State Management
+# Build a Banking App Part 4: Concepts of State Management
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+
+[Pre-lecture quiz](/7-bank-project/4-state-management/.github/pre-lecture-quiz.md)
 
 ### Introduction
 
-As a web application grows, it becomes a challenge to keep track of all data flows. Which code gets the data, what page consumes it, where and when does it need to be updated...it's easy to end up with messy code, difficult to maintain. This is especially true when you need to share data among different pages of your app, for example user data. The concept of *state management* has always existed in all kinds of programs, but as web apps keep growing in complexity it's now a key point to think about during development.
+As a web application grows, it becomes a challenge to keep track of all data flows. Which code gets the data, what page consumes it, where and when does it need to be updated...it's easy to end up with messy code that's difficult to maintain. This is especially true when you need to share data among different pages of your app, for example user data. The concept of *state management* has always existed in all kinds of programs, but as web apps keep growing in complexity it's now a key point to think about during development.
 
 In this final part, we'll look over the app we built to rethink how the state is managed, allowing support for browser refresh at any point, and persisting data across user sessions.
 
@@ -266,11 +268,13 @@ Now that we reload the account data every time the dashboard is loaded, do you t
 
 Try working together to change what is saved and loaded from `localStorage` to only include what is absolutely required for the app to work.
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](/7-bank-project/4-state-management/.github/post-lecture-quiz.md)
 
 ## Assignment
 
-[Implement "Add transaction" dialog](assignment.md)
+[Implement "Add transaction" dialog](/7-bank-project/4-state-management/assignment.md)
 
 Here's an example result after completing the assignment:
 

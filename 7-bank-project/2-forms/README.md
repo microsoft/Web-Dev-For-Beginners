@@ -1,6 +1,8 @@
-# Build a Login and Registration Form
+# Build a Banking App Part 2: Build a Login and Registration Form
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+
+[Pre-lecture quiz](/7-bank-project/2-forms/.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -275,7 +277,9 @@ Here's an example of what the final login page can look like after a bit of styl
 
 ![Screenshot of the login page after adding CSS styles](./images/result.png)
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](/7-bank-project/2-forms/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -283,4 +287,4 @@ Developers have gotten very creative about their form building efforts, especial
 
 ## Assignment
 
-[Style your bank app](assignment.md)
+[Style your bank app](/7-bank-project/2-forms/assignment.md)

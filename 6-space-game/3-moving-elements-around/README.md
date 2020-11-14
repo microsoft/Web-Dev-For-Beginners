@@ -1,6 +1,8 @@
-# Build a Space Game Part III: Adding Motion
+# Build a Space Game Part 3: Adding Motion
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+
+[Pre-lecture quiz](/6-space-game/3-moving-elements-around/.github/pre-lecture-quiz.md)
 
 Games aren't much fun until you have aliens running around on screen! In this game, we will make use of two types of movements:
 
@@ -373,7 +375,9 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
 As you can see, your code can turn into 'spaghetti code' when you start adding functions and variables and classes. How can you better organize your code so that it is more readable? Sketch out a system to organize your code, even if it still resides in one file.
 
-## [Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+
+[Post-lecture quiz](/6-space-game/3-moving-elements-around/.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
@@ -381,4 +385,4 @@ While we're writing our game without using frameworks, there are many JavaScript
 
 ## Assignment
 
-[Comment your code](assignment.md)
+[Comment your code](/6-space-game/3-moving-elements-around/assignment.md)
