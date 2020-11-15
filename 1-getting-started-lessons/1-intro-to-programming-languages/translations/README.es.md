@@ -15,11 +15,11 @@ En esta lección, cubriremos:
 
 ## ¿Qué es la programación?
 
-La programación (también conocida como codificación) es el proceso de escribir instrucciones en un dispositivo, como una computadora o un dispositivo móvil. Escribimos estas instrucciones con un lenguaje de programación, que luego es interpretado por el dispositivo. Estos conjuntos de instrucciones pueden tener varios nombres, pero *programa*, *programa de computadora*, *aplicación (aplicación)* y *ejecutable* son algunos nombres populares.
+La programación (también conocida como codificación) es el proceso de escribir instrucciones en un dispositivo, como una computadora o un dispositivo móvil. Escribimos estas instrucciones con un lenguaje de programación, que luego es interpretado por el dispositivo. Estos conjuntos de instrucciones pueden tener varios nombres, pero *programa*, *programa de computadora*, *aplicación (app)* y *ejecutable* son algunos nombres populares.
 
-Un *programa* puede ser cualquier cosa que esté escrita con código; Los sitios web, los juegos y las aplicaciones de teléfono son programas. Si bien es posible crear un programa sin escribir código, la lógica subyacente se interpreta al dispositivo y esa lógica probablemente se escribió con código. Un programa que está *ejecutándose* o *ejecutando código* está ejecutando instrucciones. El dispositivo con el que estás leyendo esta lección está ejecutando un programa para imprimirlo en tu pantalla.
+Un *programa* puede ser cualquier cosa que esté escrita con código; los sitios web, los juegos y las aplicaciones de teléfono son programas. Si bien es posible crear un programa sin escribir código, la lógica subyacente se interpreta al dispositivo y esa lógica probablemente se escribió con código. Un programa que está *ejecutándose* o *ejecutando código* está ejecutando instrucciones. El dispositivo con el que estás leyendo esta lección está ejecutando un programa para imprimirlo en tu pantalla.
 
-✅ Investigue un poco: ¿quién se considera el primer programador de computadoras del mundo?
+✅ Investigua un poco: ¿quién se considera el primer programador de computadoras del mundo?
 
 ## Lenguajes de programación
 
