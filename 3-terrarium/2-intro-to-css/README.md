@@ -20,6 +20,7 @@ In this lesson, we're going to add styles to our online terrarium and learn more
 You should have the HTML for your terrarium built and ready to be styled.
 
 ### Task
+This is how you link you're CSS `style.css` file to you're webpage.<br>
 
 In your terrarium folder, create a new file called `style.css`. Import that file in the `<head>` section:
 
@@ -35,6 +36,8 @@ Cascading Style Sheets incorporate the idea that the styles 'cascade' such that 
 
 ### Task
 
+Explaning: Inline Styling means that you're styling a element in the HTML(HyperText Markup Language) file,<br>
+This is not a really popular way you should do it.<br>
 Add the inline style "color: red" to your `<h1>` tag:
 
 ```HTML
@@ -59,9 +62,9 @@ Styles are inherited from an ancestor style to a descendent, such that nested el
 
 ### Task
 
-Set the body's font to a given font, and check to see a nested element's font:
+Set the body's font to a given font using the `font-family` elment, and check to see a nested element's font:
 
-```
+```CSS
 body {
 	font-family: helvetica, arial, sans-serif;
 }
@@ -81,7 +84,7 @@ Open your browser's console to the 'Elements' tab and observe the H1's font. It 
 
 So far, your `style.css` file has only a few tags styled, and the app looks pretty strange:
 
-```
+```CSS
 body {
 	font-family: helvetica, arial, sans-serif;
 }
@@ -94,7 +97,7 @@ h1 {
 
 This way of styling a tag gives you control over unique elements, but you need to control the styles of many plants in your terrarium. To do that, you need to leverage CSS selectors.
 
-### Ids
+### Id's
 
 Add some style to layout the left and right containers. Since there is only one left container and only one right container, they are given ids in the markup. To style them, use `#`:
 
@@ -128,7 +131,7 @@ Here, you have placed these containers with absolute positioning to the far left
 <div id="left-container" class="container"></div>
 ```
 
-### Classes
+### Classes (these are used a lot)
 
 In the example above, you styled two unique elements on the screen. If you want styles to apply to many elements on the screen, you can use CSS classes. Do this to layout the plants in the left and right containers.
 
