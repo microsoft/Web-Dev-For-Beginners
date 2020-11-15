@@ -15,11 +15,11 @@ En esta lección, cubriremos:
 
 ## ¿Qué es la programación?
 
-La programación (también conocida como codificación) es el proceso de escribir instrucciones en un dispositivo, como una computadora o un dispositivo móvil. Escribimos estas instrucciones con un lenguaje de programación, que luego es interpretado por el dispositivo. Estos conjuntos de instrucciones pueden tener varios nombres, pero *programa*, *programa de computadora*, *aplicación (aplicación)* y *ejecutable* son algunos nombres populares.
+La programación (también conocida como codificación) es el proceso de escribir instrucciones en un dispositivo, como una computadora o un dispositivo móvil. Escribimos estas instrucciones con un lenguaje de programación, que luego es interpretado por el dispositivo. Estos conjuntos de instrucciones pueden tener varios nombres, pero *programa*, *programa de computadora*, *aplicación (app)* y *ejecutable* son algunos nombres populares.
 
-Un *programa* puede ser cualquier cosa que esté escrita con código; Los sitios web, los juegos y las aplicaciones de teléfono son programas. Si bien es posible crear un programa sin escribir código, la lógica subyacente se interpreta al dispositivo y esa lógica probablemente se escribió con código. Un programa que está *ejecutándose* o *ejecutando código* está ejecutando instrucciones. El dispositivo con el que estás leyendo esta lección está ejecutando un programa para imprimirlo en tu pantalla.
+Un *programa* puede ser cualquier cosa que esté escrita con código; los sitios web, los juegos y las aplicaciones de teléfono son programas. Si bien es posible crear un programa sin escribir código, la lógica subyacente se interpreta al dispositivo y esa lógica probablemente se escribió con código. Un programa que está *ejecutándose* o *ejecutando código* está ejecutando instrucciones. El dispositivo con el que estás leyendo esta lección está ejecutando un programa para imprimirlo en tu pantalla.
 
-✅ Investigue un poco: ¿quién se considera el primer programador de computadoras del mundo?
+✅ Investigua un poco: ¿quién se considera el primer programador de computadoras del mundo?
 
 ## Lenguajes de programación
 
@@ -68,7 +68,7 @@ back add r0,r1
  end
 ```
 
-Lo crea o no, *ambos hacen lo mismo*: imprimir una secuencia de Fibonacci hasta 10.
+Lo creas o no, *ambos hacen lo mismo*: imprimir una secuencia de Fibonacci hasta 10.
 
 ✅ Una secuencia de Fibonacci se [define](https://en.wikipedia.org/wiki/Fibonacci_number) como un conjunto de números de modo que cada número es la suma de los dos precedentes, comenzando por 0 y 1.
 
@@ -76,13 +76,15 @@ Lo crea o no, *ambos hacen lo mismo*: imprimir una secuencia de Fibonacci hasta 
 
 Una sola instrucción en un programa se llama *instrucción* y generalmente tendrá un carácter o un espacio entre líneas que marca dónde termina la instrucción, o *termina*. La forma en que termina un programa varía con cada idioma.
 
-La mayoría de los programas se basan en el uso de datos de un usuario o de otros lugares, donde las declaraciones pueden basarse en datos para llevar a cabo instrucciones. Los datos pueden cambiar la forma en que se comporta un programa, por lo que los lenguajes de programación vienen con una forma de almacenar temporalmente datos que se pueden usar más adelante. Estos datos se denominan* variables*. Las variables son declaraciones que indican a un dispositivo que guarde datos en su memoria. Las variables en los programas son similares a las del álgebra, donde tienen un nombre único y su valor puede cambiar con el tiempo.
+La mayoría de los programas se basan en el uso de datos de un usuario o de otros lugares, donde las declaraciones pueden basarse en datos para llevar a cabo instrucciones. Los datos pueden cambiar la forma en que se comporta un programa, por lo que los lenguajes de programación vienen con una forma de almacenar temporalmente datos que se pueden usar más adelante. Estos datos se denominan *variables*. Las variables son declaraciones que indican a un dispositivo que guarde datos en su memoria. Las variables en los programas son similares a las del álgebra, donde tienen un nombre único y su valor puede cambiar con el tiempo.
 
 Existe la posibilidad de que un dispositivo no ejecute algunas declaraciones. Esto suele ser por diseño cuando lo escribe el desarrollador o por accidente cuando ocurre un error inesperado. Este tipo de control de una aplicación la hace más robusta y fácil de mantener. Por lo general, estos cambios en el control ocurren cuando se cumplen ciertas decisiones. Una declaración común en los lenguajes de programación modernos para controlar cómo se ejecuta un programa es la declaración `if..else`.
 
-✅ Aprenderá más sobre este tipo de afirmaciones en lecciones posteriores.
+✅ Aprenderás más sobre este tipo de afirmaciones en lecciones posteriores.
 
 ## Herramientas del oficio
+
+[![Tools of the Trade](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
 
 En esta sección, aprenderá sobre algún software que puede resultarle muy útil al comenzar su viaje de desarrollo profesional.
 
@@ -105,8 +107,8 @@ Los desarrolladores confían en los editores por algunas razones adicionales:
 - [Código de Visual Studio](https://code.visualstudio.com/)
   - [Corrector ortográfico de código](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
   - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
-  - [Más bonito - Formateador de código](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Átomo](https://atom.io/)
+  - [Prettier - Formateador de código](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Átom](https://atom.io/)
   - [revisión ortográfica](https://atom.io/packages/spell-check)
   - [teletipo](https://atom.io/packages/teletype)
   - [atom-beautify](https://atom.io/packages/atom-beautify)
@@ -169,10 +171,14 @@ Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recu
 
 ✅ Investiga un poco: ahora que conoces los conceptos básicos del entorno de un desarrollador web, compáralo y contrasta con el entorno de un diseñador web.
 
-🚀 Desafío: Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos únicos de JavaScript frente a Java? ¿Qué hay de COBOL vs. Go?
+## 🚀 Reto
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos únicos de JavaScript frente a Java? ¿Qué hay de COBOL vs. Go?
+
+## [Prueba Post-lectura](.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
+
+Estudia un poco sobre los diferentes lenguajes disponibles para el programador. Intente escribir una línea en un idioma y luego vuelva a hacerlo en otros dos. ¿Qué aprendes?
 
 **Asignación**: [Asignación](assignment.md)
