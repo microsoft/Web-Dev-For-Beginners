@@ -76,13 +76,15 @@ Lo crea o no, *ambos hacen lo mismo*: imprimir una secuencia de Fibonacci hasta 
 
 Una sola instrucción en un programa se llama *instrucción* y generalmente tendrá un carácter o un espacio entre líneas que marca dónde termina la instrucción, o *termina*. La forma en que termina un programa varía con cada idioma.
 
-La mayoría de los programas se basan en el uso de datos de un usuario o de otros lugares, donde las declaraciones pueden basarse en datos para llevar a cabo instrucciones. Los datos pueden cambiar la forma en que se comporta un programa, por lo que los lenguajes de programación vienen con una forma de almacenar temporalmente datos que se pueden usar más adelante. Estos datos se denominan* variables*. Las variables son declaraciones que indican a un dispositivo que guarde datos en su memoria. Las variables en los programas son similares a las del álgebra, donde tienen un nombre único y su valor puede cambiar con el tiempo.
+La mayoría de los programas se basan en el uso de datos de un usuario o de otros lugares, donde las declaraciones pueden basarse en datos para llevar a cabo instrucciones. Los datos pueden cambiar la forma en que se comporta un programa, por lo que los lenguajes de programación vienen con una forma de almacenar temporalmente datos que se pueden usar más adelante. Estos datos se denominan *variables*. Las variables son declaraciones que indican a un dispositivo que guarde datos en su memoria. Las variables en los programas son similares a las del álgebra, donde tienen un nombre único y su valor puede cambiar con el tiempo.
 
 Existe la posibilidad de que un dispositivo no ejecute algunas declaraciones. Esto suele ser por diseño cuando lo escribe el desarrollador o por accidente cuando ocurre un error inesperado. Este tipo de control de una aplicación la hace más robusta y fácil de mantener. Por lo general, estos cambios en el control ocurren cuando se cumplen ciertas decisiones. Una declaración común en los lenguajes de programación modernos para controlar cómo se ejecuta un programa es la declaración `if..else`.
 
-✅ Aprenderá más sobre este tipo de afirmaciones en lecciones posteriores.
+✅ Aprenderás más sobre este tipo de afirmaciones en lecciones posteriores.
 
 ## Herramientas del oficio
+
+[![Tools of the Trade](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
 
 En esta sección, aprenderá sobre algún software que puede resultarle muy útil al comenzar su viaje de desarrollo profesional.
 
