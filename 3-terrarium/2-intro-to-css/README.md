@@ -23,7 +23,7 @@ You should have the HTML for your terrarium built and ready to be styled.
 
 In your terrarium folder, create a new file called `style.css`. Import that file in the `<head>` section:
 
-```
+```html
 <link rel="stylesheet" href="./style.css" />
 ```
 
