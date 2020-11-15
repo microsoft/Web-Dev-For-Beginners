@@ -20,7 +20,7 @@ In this lesson, we're going to add styles to our online terrarium and learn more
 You should have the HTML for your terrarium built and ready to be styled.
 
 ### Task
-This is how you link you're CSS `style.css` file to you're webpage.<br>
+
 
 In your terrarium folder, create a new file called `style.css`. Import that file in the `<head>` section:
 
@@ -61,7 +61,7 @@ Styles are inherited from an ancestor style to a descendent, such that nested el
 
 ### Task
 
-Set the body's font to a given font using the `font-family` element, and check to see a nested element's font:
+Set the body's font to a given font, and check to see a nested element's font:
 
 ```CSS
 body {
