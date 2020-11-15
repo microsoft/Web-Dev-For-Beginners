@@ -68,7 +68,7 @@ back add r0,r1
  end
 ```
 
-Lo crea o no, *ambos hacen lo mismo*: imprimir una secuencia de Fibonacci hasta 10.
+Lo creas o no, *ambos hacen lo mismo*: imprimir una secuencia de Fibonacci hasta 10.
 
 ✅ Una secuencia de Fibonacci se [define](https://en.wikipedia.org/wiki/Fibonacci_number) como un conjunto de números de modo que cada número es la suma de los dos precedentes, comenzando por 0 y 1.
 
@@ -107,8 +107,8 @@ Los desarrolladores confían en los editores por algunas razones adicionales:
 - [Código de Visual Studio](https://code.visualstudio.com/)
   - [Corrector ortográfico de código](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
   - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
-  - [Más bonito - Formateador de código](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Átomo](https://atom.io/)
+  - [Prettier - Formateador de código](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Átom](https://atom.io/)
   - [revisión ortográfica](https://atom.io/packages/spell-check)
   - [teletipo](https://atom.io/packages/teletype)
   - [atom-beautify](https://atom.io/packages/atom-beautify)
@@ -171,10 +171,14 @@ Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recu
 
 ✅ Investiga un poco: ahora que conoces los conceptos básicos del entorno de un desarrollador web, compáralo y contrasta con el entorno de un diseñador web.
 
-🚀 Desafío: Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos únicos de JavaScript frente a Java? ¿Qué hay de COBOL vs. Go?
+## 🚀 Reto
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos únicos de JavaScript frente a Java? ¿Qué hay de COBOL vs. Go?
+
+## [Prueba Post-lectura](.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
+
+Estudia un poco sobre los diferentes lenguajes disponibles para el programador. Intente escribir una línea en un idioma y luego vuelva a hacerlo en otros dos. ¿Qué aprendes?
 
 **Asignación**: [Asignación](assignment.md)
