@@ -36,7 +36,6 @@ Cascading Style Sheets incorporate the idea that the styles 'cascade' such that 
 
 ### Task
 
-Explaning: Inline Styling means that you're styling a element in the HTML(HyperText Markup Language) file,<br>
 This is not a really popular way you should do it.<br>
 Add the inline style "color: red" to your `<h1>` tag:
 
@@ -62,7 +61,7 @@ Styles are inherited from an ancestor style to a descendent, such that nested el
 
 ### Task
 
-Set the body's font to a given font using the `font-family` elment, and check to see a nested element's font:
+Set the body's font to a given font using the `font-family` element, and check to see a nested element's font:
 
 ```CSS
 body {
@@ -131,7 +130,7 @@ Here, you have placed these containers with absolute positioning to the far left
 <div id="left-container" class="container"></div>
 ```
 
-### Classes (these are used a lot)
+### Classes
 
 In the example above, you styled two unique elements on the screen. If you want styles to apply to many elements on the screen, you can use CSS classes. Do this to layout the plants in the left and right containers.
 
