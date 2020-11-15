@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](/6-space-game/5-keeping-score/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 In this lesson, you'll learn how to add scoring to a game and calculate lives.
 
@@ -178,7 +178,7 @@ Your code is almost complete. Can you envision your next steps?
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](/6-space-game/5-keeping-score/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

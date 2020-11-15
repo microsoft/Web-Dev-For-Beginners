@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](3-terrarium/1-intro-to-html/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -209,7 +209,7 @@ There are some wild 'older' tags in HTML that are still fun to play with, though
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](3-terrarium/1-intro-to-html/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

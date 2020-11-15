@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](3-terrarium/3-intro-to-DOM-and-closures/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -199,7 +199,7 @@ Add new event handler to your closure to do something more to the plants; for ex
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](3-terrarium/3-intro-to-DOM-and-closures/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

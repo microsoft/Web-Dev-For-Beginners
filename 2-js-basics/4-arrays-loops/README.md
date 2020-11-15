@@ -5,7 +5,7 @@
 
 ## 
 Pre-Lecture Quiz
-[Pre-lecture quiz](2-js-basics/4-arrays-loops/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
 
@@ -114,7 +114,7 @@ There are other ways of looping over arrays other than for and while loops. Ther
 
 ## 
 Post-Lecture Quiz
-[Post-lecture quiz](2-js-basics/4-arrays-loops/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 
 ## Review & Self Study

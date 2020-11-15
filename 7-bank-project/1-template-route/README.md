@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](/7-bank-project/1-template-route/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -284,7 +284,7 @@ Add a new template and route for a third page that shows the credits for this ap
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](/7-bank-project/1-template-route/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

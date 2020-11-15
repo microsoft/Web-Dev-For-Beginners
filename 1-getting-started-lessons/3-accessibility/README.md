@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](1-getting-started-lessons/3-accessibility/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 > The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
 >
@@ -207,7 +207,7 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
 ```
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](1-getting-started-lessons/3-accessibility/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
