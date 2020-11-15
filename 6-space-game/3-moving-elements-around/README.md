@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](/6-space-game/3-moving-elements-around/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 Games aren't much fun until you have aliens running around on screen! In this game, we will make use of two types of movements:
 
@@ -377,7 +377,7 @@ As you can see, your code can turn into 'spaghetti code' when you start adding f
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](/6-space-game/3-moving-elements-around/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

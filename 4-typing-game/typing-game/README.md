@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](4-typing-game/typing-game/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ## Event driven programming
 
@@ -325,7 +325,7 @@ Add more functionality
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](4-typing-game/typing-game/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

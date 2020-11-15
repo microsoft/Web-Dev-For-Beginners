@@ -4,7 +4,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](/6-space-game/1-introduction/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ### Inheritance and Composition in game development
 
@@ -213,7 +213,7 @@ Think about how the pub-sub pattern can enhance a game. Which parts should emit 
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](/6-space-game/1-introduction/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

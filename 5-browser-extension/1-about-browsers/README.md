@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](5-browser-extension/1-about-browsers/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -150,7 +150,7 @@ Take a look at a browser extension store and install one to your browser. You ca
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](5-browser-extension/1-about-browsers/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
