@@ -1,6 +1,6 @@
 *Complete this quiz in class*
 
-1. A program be created without the creator writing any code
+1. A program can be created without the creator writing any code
 
 - [ ] True
 - [ ] False
