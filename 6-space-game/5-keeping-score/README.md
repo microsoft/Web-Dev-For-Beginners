@@ -186,4 +186,4 @@ Research some ways that you can increment and decrement game scores and lives. T
 
 ## Assignment
 
-[Build a Scoring Game](/6-space-game/5-keeping-score/assignment.md)
+[Build a Scoring Game](assignment.md)

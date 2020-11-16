@@ -333,4 +333,4 @@ Read up on [all the events available](https://developer.mozilla.org/en-US/docs/W
 
 ## Assignment
 
-[Create a new keyboard game](4-typing-game/typing-game/assignment.md)
+[Create a new keyboard game](assignment.md)

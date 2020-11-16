@@ -193,4 +193,4 @@ Take a look at [this list of JavaScript exercises](https://css-tricks.com/snippe
 
 ## Assignment
 
-[Data Types Practice](2-js-basics/1-data-types/assignment.md)
+[Data Types Practice](assignment.md)

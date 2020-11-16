@@ -157,5 +157,5 @@ Investigate some of the ways that browsers gauge web performance by looking thro
 
 ## Assignment
 
-[Analyze a site for performance](5-browser-extension/3-background-tasks-and-performance/assignment.md)
+[Analyze a site for performance](assignment.md)
 

@@ -123,4 +123,4 @@ Arrays in JavaScript have many methods attached to them, extremely useful for da
 
 ## Assignment
 
-[Loop an Array](2-js-basics/4-arrays-loops/assignment.md)
+[Loop an Array](assignment.md)

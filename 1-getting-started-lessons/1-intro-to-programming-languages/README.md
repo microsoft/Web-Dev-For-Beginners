@@ -189,4 +189,4 @@ Study a bit on the different languages available to the programmer. Try to write
 
 ## Assignment 
 
-[Reading the Docs](1-getting-started-lessons/1-intro-to-programming-languages/assignment.md)
+[Reading the Docs](assignment.md)
