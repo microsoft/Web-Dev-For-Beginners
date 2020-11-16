@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](5-browser-extension/2-forms-browsers-local-storage/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -210,7 +210,7 @@ We've discussed several types of API so far in these lessons. Choose a web API a
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](5-browser-extension/2-forms-browsers-local-storage/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

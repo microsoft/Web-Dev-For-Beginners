@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](/6-space-game/6-end-condition/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 There are different ways to express and *end condition* in a game. It's up to you as the creator of the game to say why the game has ended. Here are some reasons, if we assume we are talking about the space game you have been building so far:
 
@@ -211,7 +211,7 @@ Add a sound! Can you add a sound to enhance your game play, maybe when there's a
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](/6-space-game/6-end-condition/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

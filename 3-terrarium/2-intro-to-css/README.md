@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](3-terrarium/2-intro-to-css.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -23,7 +23,7 @@ You should have the HTML for your terrarium built and ready to be styled.
 
 In your terrarium folder, create a new file called `style.css`. Import that file in the `<head>` section:
 
-```
+```html
 <link rel="stylesheet" href="./style.css" />
 ```
 
@@ -252,7 +252,7 @@ To complete the post-lecture quiz, go through this Learn module: [Style your HTM
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](3-terrarium/2-intro-to-css/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

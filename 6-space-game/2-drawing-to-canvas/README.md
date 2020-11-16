@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](/6-space-game/2-drawing-to-canvas/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ## The Canvas
 
@@ -205,7 +205,7 @@ You've learned about drawing with the 2D-focused Canvas API; take a look at the 
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](/6-space-game/2-drawing-to-canvas/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

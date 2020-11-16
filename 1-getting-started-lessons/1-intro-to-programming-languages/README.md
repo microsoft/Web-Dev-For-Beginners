@@ -6,7 +6,7 @@ This lesson covers the basics of programming languages. The topics covered here 
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](1-getting-started-lessons/1-intro-to-programming-languages/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ## Introduction
 
@@ -181,7 +181,7 @@ When a developer wants to learn something new, they'll most likely turn to docum
 Compare some programming languages. What are some of the unique traits of JavaScript vs. Java? How about COBOL vs. Go?
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](1-getting-started-lessons/1-intro-to-programming-languages/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

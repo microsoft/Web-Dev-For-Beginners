@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](/7-bank-project/2-forms/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -279,7 +279,7 @@ Here's an example of what the final login page can look like after a bit of styl
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](/7-bank-project/2-forms/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

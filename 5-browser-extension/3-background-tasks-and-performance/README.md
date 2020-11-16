@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](5-browser-extension/3-background-tasks-and-performance/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -147,7 +147,7 @@ Investigate some open source web sites have been around a long time ago, and, ba
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](5-browser-extension/3-background-tasks-and-performance/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

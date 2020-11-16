@@ -6,7 +6,7 @@ This lesson covers the basics of GitHub, a platform to host and manage changes t
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](1-getting-started-lessons/2-github-basics/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ## Introduction
 
@@ -243,7 +243,7 @@ First, let's find a repository - or: repo - on GitHub of interest to you and to 
 
 ✅ A good way to find 'beginner-friendly' repos is to [search by the tag 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copy a repo locally](/images/clone_repo.png)
+![Copy a repo locally](images/clone_repo.png)
 
 There are several ways of copying code. One way is to "clone" the contents of the repository, using HTTPS, SSH, or using the GitHub CLI (Command Line Interface). 
 
@@ -274,7 +274,7 @@ Projects might also have discussion in forums, mailing lists, or chat channels l
 Pair with a friend to work on each other's code. Create a project collaboratively, fork code, create branches, and merge changes.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](1-getting-started-lessons/2-github-basics/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

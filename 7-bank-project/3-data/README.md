@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](/7-bank-project/3-data/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 ### Introduction
 
@@ -319,7 +319,7 @@ Here's an example of a styled dashboard page:
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](/7-bank-project/3-data/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Assignment
 

@@ -5,7 +5,7 @@
 
 ## 
 Pre-Lecture Quiz
-[Pre-lecture quiz](2-js-basics/3-making-decisions/.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 Making decisions and controlling the order in which your code runs makes your code reusable and robust. This section covers the syntax for controlling data flow in JavaScript and its significance when used with Boolean data types
 
@@ -162,7 +162,7 @@ Create a program that is written first with logical operators, and then rewrite 
 
 ## 
 Post-Lecture Quiz
-[Post-lecture quiz](2-js-basics/3-making-decisions/.github/post-lecture-quiz.md)
+[Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 
