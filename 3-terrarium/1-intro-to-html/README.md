@@ -75,7 +75,7 @@ Add a 'head' block to your document in between the opening and closing `<html>` 
 
 ### HTML Tags
 
-In HTML, you add tags to your .html file to create elements of a web page. Each tag usually has an opening and closing tag, like this: `<p>hello</p>` to indicate a paragraph. Create you interface's `<body>` by adding a set of tags inside the `<html>` tag pair; your markup now looks like this:
+In HTML, you add tags to your .html file to create elements of a web page. Each tag usually has an opening and closing tag, like this: `<p>hello</p>` to indicate a paragraph. Create your interface's body by adding a set of `<body>` tags inside the `<html>` tag pair; your markup now looks like this:
 
 ### Task
 
