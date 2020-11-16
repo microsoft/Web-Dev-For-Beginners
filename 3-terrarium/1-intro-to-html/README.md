@@ -220,4 +220,4 @@ Learn more about building sites for the web and mobile devices at [Microsoft Lea
 
 ## Assignment
 
-[Practice your HTML: Build a blog mockup](3-terrarium/1-intro-to-html/assignment.md)
+[Practice your HTML: Build a blog mockup](assignment.md)

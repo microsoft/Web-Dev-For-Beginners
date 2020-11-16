@@ -218,5 +218,5 @@ You learned about LocalStorage and APIs in this lesson, both very useful for the
 
 ## Assignment
 
-[Adopt an API](5-browser-extension/2-forms-browsers-local-storage/assignment.md)
+[Adopt an API](assignment.md)
 

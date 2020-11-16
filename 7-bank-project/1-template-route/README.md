@@ -292,4 +292,4 @@ Routing is one of the surprisingly tricky parts of web development, especially a
 
 ## Assignment
 
-[Improve the routing](/7-bank-project/1-template-route/assignment.md)
+[Improve the routing](assignment.md)
