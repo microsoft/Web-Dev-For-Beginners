@@ -186,4 +186,4 @@ Pelajari sedikit tentang berbagai bahasa yang tersedia untuk programmer. Cobalah
 
 ## Tugas 
 
-[Membaca Dokumentasi](1-getting-started-lessons/1-intro-to-programming-languages/assignment.id.md)
+[Membaca Dokumentasi](assignment.id.md)
