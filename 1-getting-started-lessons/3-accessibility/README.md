@@ -215,6 +215,6 @@ Many governments have laws regarding accessibility requirements. Read up on your
 
 ## Assignment
  
-[Analyze a non-accessible web site](1-getting-started-lessons/3-accessibility/assignment.md)
+[Analyze a non-accessible web site](assignment.md)
 
 Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument

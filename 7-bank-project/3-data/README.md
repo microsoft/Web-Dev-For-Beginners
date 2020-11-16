@@ -323,4 +323,4 @@ Here's an example of a styled dashboard page:
 
 ## Assignment
 
-[Refactor and comment your code](/7-bank-project/3-data/assignment.md)
+[Refactor and comment your code](assignment.md)

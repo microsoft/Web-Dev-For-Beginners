@@ -294,4 +294,4 @@ Experiment with the intervals in your game thus far. What happens when you chang
 
 ## Assignment
 
-[Explore collisions](/6-space-game/4-collision-detection/assignment.md)
+[Explore collisions](assignment.md)

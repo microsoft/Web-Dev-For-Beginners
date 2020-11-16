@@ -385,4 +385,4 @@ While we're writing our game without using frameworks, there are many JavaScript
 
 ## Assignment
 
-[Comment your code](/6-space-game/3-moving-elements-around/assignment.md)
+[Comment your code](assignment.md)
