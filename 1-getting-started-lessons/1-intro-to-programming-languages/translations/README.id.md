@@ -2,11 +2,11 @@
 
 Pelajaran ini mencakup dasar-dasar bahasa pemrograman. Topik yang dibahas di sini berlaku untuk sebagian besar bahasa pemrograman modern saat ini. Di bagian 'Alat Keterampilan', Anda akan belajar tentang perangkat lunak yang berguna yang membantu Anda sebagai pengembang.
 
-![Pemrograman Intro](webdev101-programming.png)
+![Pemrograman Intro](../webdev101-programming.png)
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Pra-Kuliah
-[Kuis pra-kuliah](.github/pre-lecture-quiz.md)
+[Kuis pra-kuliah](.github/pre-lecture-quiz.id.md)
 
 ## Pengantar
 
@@ -128,7 +128,6 @@ Banyak browser datang dengan *alat pengembang* (DevTools) yang berisi serangkaia
 - [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
 - [Firefox](https://developer.mozilla.org/docs/Tools)
 
-
 ### Alat Command Line
 
 Beberapa pengembang lebih suka tampilan grafis yang kurang untuk tugas sehari-hari mereka dan mengandalkan command line (baris perintah) untuk mencapai ini. Mengembangkan kode membutuhkan sejumlah besar pengetikan, dan beberapa pengembang lebih suka tidak mengganggu aliran mereka pada keyboard dan akan menggunakan pintasan keyboard untuk bertukar antara jendela desktop, mengerjakan file yang berbeda, dan menggunakan alat. Sebagian besar tugas dapat diselesaikan dengan mouse, tetapi satu manfaat menggunakan command line adalah bahwa banyak yang dapat dilakukan dengan alat command line tanpa perlu bertukar antara mouse dan keyboard. Manfaat lain dari command line adalah bahwa mereka dapat dikonfigurasi dan Anda dapat menyimpan konfigurasi kustom Anda, mengubahnya nanti, dan juga mengimpornya ke mesin pengembangan baru. Karena lingkungan pengembangan sangat unik untuk setiap pengembang, beberapa akan menghindari menggunakan command line, beberapa akan mengandalkannya sepenuhnya, dan beberapa lebih suka campuran keduanya.
@@ -182,8 +181,8 @@ Bandingkan beberapa bahasa pemrograman. Apa saja ciri-ciri unik JavaScript vs. J
 
 ## Ulasan & Belajar Mandiri
 
-Pelajari sedikit tentang berbagai bahasa yang tersedia untuk programmer. Cobalah untuk menulis baris dalam satu bahasa, dan kemudian mengulanginya pada dua bahasa lainnya. Apa yang Anda pelajari? 
+Pelajari sedikit tentang berbagai bahasa yang tersedia untuk programmer. Cobalah untuk menulis baris dalam satu bahasa, dan kemudian mengulanginya pada dua bahasa lainnya. Apa yang Anda pelajari?
 
-## Tugas 
+## Tugas
 
 [Membaca Dokumentasi](assignment.id.md)

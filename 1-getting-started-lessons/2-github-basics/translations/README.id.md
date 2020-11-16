@@ -6,7 +6,7 @@ Pelajaran ini mencakup dasar-dasar GitHub, platform untuk menghosting dan mengel
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Pra-Kuliah
-[Kuis pra-kuliah](.Github/pre-lecture-quiz.md)
+[Kuis pra-kuliah](.github/pre-lecture-quiz.id.md)
 
 ## Pengantar
 
@@ -151,7 +151,6 @@ Di repositori Anda, buka `Insights > Community` untuk melihat bagaimana proyek A
    - **Kode etik**. sebuah [Kode etik](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/), 
    - **Lisensi**. Mungkin yang paling penting, sebuah [lisensi](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
 
-
 Semua sumber daya ini akan bermanfaat bagi anggota tim baru. Dan biasanya itu adalah jenis hal yang dilihat oleh kontributor baru bahkan sebelum melihat kode Anda, untuk mengetahui apakah proyek Anda adalah tempat yang tepat bagi mereka untuk menghabiskan waktu mereka..
 
 ✅ File README, meskipun membutuhkan waktu untuk mempersiapkannya, sering kali diabaikan oleh pengelola yang sibuk. Dapatkah Anda menemukan contoh yang sangat deskriptif? Catatan: ada beberapa [alat untuk membantu membuat README yang baik](https://www.makeareadme.com/) yang mungkin ingin Anda coba.
@@ -159,7 +158,6 @@ Semua sumber daya ini akan bermanfaat bagi anggota tim baru. Dan biasanya itu ad
 ### Tugas: Menggabungkan beberapa kode
 
 Dokumen kontribusi membantu orang berkontribusi pada proyek. Itu menjelaskan jenis kontribusi yang Anda cari dan bagaimana prosesnya bekerja. Kontributor harus melalui serangkaian langkah untuk dapat berkontribusi ke repo Anda di GitHub:
-
 
 1. **Membagi (Forking) repo Anda** Anda mungkin ingin orang _fork_ proyek Anda. Forking berarti membuat replika repositori Anda di profil GitHub mereka.
 1. **Clone**. Dari sana mereka akan mengkloning proyek tersebut ke mesin lokal mereka. 
@@ -241,9 +239,9 @@ Perbarui cabang lokal Anda saat ini dengan semua komit baru dari cabang jarak ja
 
 Pertama, mari temukan repositori - atau: repo - di GitHub yang Anda minati dan yang ingin Anda beri kontribusi perubahan. Anda akan ingin menyalin konten ke mesin kami.
 
-✅ Cara yang baik untuk menemukan repositori 'ramah-pemula' adalah [menelusuri dengan tag 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to -mulai-berkontribusi-ke-open-source /).
+✅ Cara yang baik untuk menemukan repositori 'ramah-pemula' adalah [menelusuri dengan tag 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-mulai-berkontribusi-ke-open-source/).
 
-![Salin repo secara lokal](images/clone_repo.png)
+![Salin repo secara lokal](../images/clone_repo.png)
 
 Ada beberapa cara untuk menyalin kode. Salah satu caranya adalah dengan "menggandakan" konten repositori, menggunakan HTTPS, SSH, atau menggunakan GitHub CLI (Command Line Interface).
 
@@ -274,7 +272,7 @@ Proyek mungkin juga memiliki diskusi di forum, milis, atau saluran obrolan seper
 Sandingkan dengan seorang teman untuk mengerjakan kode satu sama lain. Buat proyek secara kolaboratif, buat kode, buat cabang, dan gabungkan perubahan.
 
 ## Kuis Pasca Kuliah
-[Kuis pasca kuliah](. Github / post-lecture-quiz.md)
+[Kuis pasca kuliah](.github/post-lecture-quiz.id.md)
 
 ## Review & Belajar Mandiri
 
