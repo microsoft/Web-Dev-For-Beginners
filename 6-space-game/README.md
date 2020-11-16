@@ -25,3 +25,7 @@ In these six lessons you will learn the following:
    - [Keeping score](5-keeping-score/README.md)
    - [Ending and restarting the game](6-end-condition/README.md)
 
+## Credits
+
+The assets used for this came from https://www.kenney.nl/. 
+If you are into building games, these are some seriously good assets, a lot is free and some are paid. 
