@@ -91,6 +91,7 @@ Create a new file named **index.html**. Add the following HTML:
     <input type="text" id="typed-value" /> <!-- The textbox for typing -->
     <button type="button" id="start">Start</button> <!-- To start the game -->
   <script src="script.js"></script>
+  </div>
 </body>
 </html>
 ```
