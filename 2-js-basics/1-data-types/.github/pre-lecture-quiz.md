@@ -3,15 +3,15 @@
 1. Booleans are a data type you can use to test the length of a string
 
 - [ ] true
-- [ ] false
+- [x ] false
 
 1. The following is an operation you can perform on a string
 
-- [ ] concatenation
+- [x ] concatenation
 - [ ] appending
 - [ ] splicing
 
 3. `==` and `===` are interchangeable
    
-- [ ] true
+- [ x] true
 - [ ] false
