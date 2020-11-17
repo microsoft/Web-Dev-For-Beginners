@@ -2,7 +2,7 @@
 
 Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar y administrar cambios en su código.
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 ### Introducción
 
@@ -266,7 +266,7 @@ Los proyectos también pueden tener discusiones en foros, listas de correo o can
 
 🚀 Desafío: empareje con un amigo para trabajar en el código del otro. Cree un proyecto de forma colaborativa, bifurque el código, cree ramas y combine los cambios.
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 

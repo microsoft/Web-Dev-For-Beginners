@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 ### Herencia y composición en el desarrollo de juegos
 
@@ -207,10 +207,10 @@ A medida que las cosas se complican cuando tu juego crece, este patrón permanec
 
 🚀Desafío: Piense en cómo el patrón pub-sub puede mejorar un juego. ¿Qué partes deberían emitir eventos y cómo debería reaccionar el juego ante ellos? Ahora tienes la oportunidad de ser creativo, pensar en un nuevo juego y en cómo podrían comportarse sus partes.
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
 Obtenga más información sobre Pub / Sub al [leer sobre él](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber).
 
-**Tarea**: [Mock up a game](assignment.md)
+**Tarea**: [Mock up a game](assignment.es.md)

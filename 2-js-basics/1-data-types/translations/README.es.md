@@ -2,7 +2,7 @@
 
 [![Tipos de datos en JavaScript](https://img.youtube.com/vi/rEHV3fFMfn0/0.jpg)](https://youtube.com/watch?v=rEHV3fFMfn0 "Tipos de datos en JavaScript")
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 Esta lección cubre los conceptos básicos de JavaScript, el lenguaje que proporciona interactividad en la web.
 
@@ -108,7 +108,7 @@ En la sección anterior, el valor de "myVariable" era un tipo de datos numérico
 
 `let myVariable = 123;`
 
-Las variables pueden almacenar todo tipo de números, incluidos decimales o números negativos. Los números también se pueden usar con operadores aritméticos, que se tratan en la [siguiente sección] (# operadores).
+Las variables pueden almacenar todo tipo de números, incluidos decimales o números negativos. Los números también se pueden usar con operadores aritméticos, que se tratan en la [siguiente sección](#operadores).
 
 ### Operadores aritméticos
 
@@ -178,10 +178,10 @@ Los booleanos pueden tener solo dos valores: `true` o `false`. Los valores boole
 
 🚀 Desafío: JavaScript es conocido por sus sorprendentes formas de manejar tipos de datos en ocasiones. Investiga un poco sobre estos "errores". Por ejemplo: ¡la sensibilidad a mayúsculas y minúsculas puede morder! Pruebe esto en su consola: `let age = 1; let Age = 2; age == Age` (resuelve `false` - ¿por qué?). ¿Qué otras trampas puedes encontrar?
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
 Eche un vistazo a [esta lista de ejercicios de JavaScript](https://css-tricks.com/snippets/javascript/) y pruebe uno. ¿Qué aprendiste?
 
-**Tarea**: [Práctica de tipos de datos](assignment.md)
+**Tarea**: [Práctica de tipos de datos](assignment.es.md)

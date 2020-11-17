@@ -2,11 +2,11 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 Hay diferentes formas de expresar y *condición final* en un juego. Depende de usted, como creador del juego, decir por qué ha terminado. Aquí hay algunas razones, si asumimos que estamos hablando del juego espacial que has estado construyendo hasta ahora:
 
-- **Las naves `N` enemigas han sido destruidas**: Es bastante común si divides un juego en diferentes niveles que necesites destruir las naves` N` Enemy para completar un nivel
+- **Las naves `N` enemigas han sido destruidas**: Es bastante común si divides un juego en diferentes niveles que necesites destruir las naves `N` Enemy para completar un nivel
 - **Tu nave ha sido destruida**: Definitivamente hay juegos en los que pierdes el juego si tu nave es destruida. Otro enfoque común es que tienes el concepto de vidas. Cada vez que un barco es destruido, se descuenta una vida. Una vez que se hayan perdido todas las vidas, perderá el juego.
 - **Has acumulado `N` puntos**: Otra condición final común es que acumules puntos. La forma de obtener puntos depende de usted, pero es bastante común asignar puntos a diversas actividades, como destruir una nave enemiga o tal vez recolectar elementos que los elementos *sueltan* cuando son destruidos.
 - **Completa un nivel**: Esto puede implicar varias condiciones como "X" barcos enemigos destruidos, puntos "Y" acumulados o tal vez que se haya recogido un objeto específico.
@@ -205,10 +205,10 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
 🚀 Desafío: ¡Agrega un sonido! ¿Puedes agregar un sonido para mejorar tu juego, tal vez cuando hay un golpe de láser, o el héroe muere o gana? Eche un vistazo a este [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) para aprender a reproducir sonido con JavaScript.
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
 Tu tarea es crear un juego de muestra nuevo, así que explora algunos de los juegos interesantes que existen para ver qué tipo de juego podrías construir.
 
-**Tarea**: [Crear un juego de muestra](assignment.md)
+**Tarea**: [Crear un juego de muestra](assignment.es.md)

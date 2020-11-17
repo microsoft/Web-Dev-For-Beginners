@@ -2,7 +2,7 @@
 
 <!-- ![video](video-url) -->
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 ### Introducción
 
@@ -165,7 +165,7 @@ Sin embargo, para nuestra aplicación web estamos usando un solo archivo HTML qu
 
 ### Tarea
 
-Usaremos un objeto simple para implementar un [mapa] (https://en.wikipedia.org/wiki/Associative_array) entre las rutas de URL y nuestras plantillas. Agregue este objeto en la parte superior de su archivo `app.js`.
+Usaremos un objeto simple para implementar un [mapa](https://en.wikipedia.org/wiki/Associative_array) entre las rutas de URL y nuestras plantillas. Agregue este objeto en la parte superior de su archivo `app.js`.
 
 ```js
 const routes = {
@@ -243,7 +243,7 @@ Completemos el sistema de navegación agregando enlaces a nuestros botones *logi
 <button onclick="navigate('/login')">Logout</button>
 ```
 
-Usando el atributo [`onclick`] (https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) enlaza el evento `click` al código JavaScript, aquí la llamada al` navigate()`función.
+Usando el atributo [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) enlaza el evento `click` al código JavaScript, aquí la llamada al` navigate()`función.
 
 Intente hacer clic en estos botones, ahora debería poder navegar entre las diferentes pantallas de su aplicación.
 
@@ -273,15 +273,14 @@ updateRoute();
 
 Ahora intente utilizar los botones de avance y retroceso de sus navegadores y compruebe que esta vez lo que se muestra está actualizado correctamente.
 
-
 ---
 
 ## 🚀 Desafío
 
 Agregue una nueva plantilla y ruta para una tercera página que muestre los créditos de esta aplicación.
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
-**Tarea**: [Mejorar el enrutamiento](assignment.md)
+**Tarea**: [Mejorar el enrutamiento](assignment.es.md)

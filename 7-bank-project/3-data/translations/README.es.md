@@ -2,7 +2,7 @@
 
 ! [Insertar un video aquí](video-url)
 
-## [Prueba previa a la conferencia](.github/prelecture-quiz.md)
+## [Prueba previa a la conferencia](../.github/prelecture-quiz.md)
 
 [Describe lo que aprenderemos]
 
@@ -52,8 +52,8 @@ bloques de código
 
 Opcional: agregue una captura de pantalla de la interfaz de usuario de la lección completa si corresponde
 
-## [Prueba posterior a la conferencia](.github/post-lecture-quiz.md)
+## [Prueba posterior a la conferencia](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
-**Vencimiento de la asignación [MM/AA]**: [Nombre de la asignación](assignment.md)
+**Vencimiento de la asignación [MM/AA]**: [Nombre de la asignación](assignment.es.md)

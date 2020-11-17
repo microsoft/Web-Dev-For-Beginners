@@ -1,6 +1,6 @@
 # Cree un formulario de inicio de sesión y registro
 
-## [Prueba previa a la conferencia](.github/prelecture-quiz.md)
+## [Prueba previa a la conferencia](../.github/prelecture-quiz.md)
 
 ### Introducción
 
@@ -181,7 +181,7 @@ async function createAccount(account) {
 
 Aquí hay un video rápido sobre el uso de `async/await`:
 
-[![Async y Await para administrar promesas](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)] (https://youtube.com/watch?v=YwmlRkrxvkk "Async y Await para administrar promesas")
+[![Async y Await para administrar promesas](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async y Await para administrar promesas")
 
 Usamos la API `fetch()` para enviar datos JSON al servidor. Este método toma 2 parámetros:
 
@@ -280,7 +280,7 @@ Aquí hay un ejemplo de cómo puede verse la página de inicio de sesión final 
 
 ![Captura de pantalla de la página de inicio de sesión después de agregar estilos CSS](./images/result.png)
 
-## [Prueba posterior a la conferencia](.github/post-lecture-quiz.md)
+## [Prueba posterior a la conferencia](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
@@ -288,4 +288,4 @@ Los desarrolladores se han vuelto muy creativos en sus esfuerzos de creación de
 
 ## Asignación
 
-[Diseña tu aplicación bancaria](assignment.md)
+[Diseña tu aplicación bancaria](assignment.es.md)
