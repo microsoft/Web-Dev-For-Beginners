@@ -1,9 +1,9 @@
-# Creating Accessible Webpages
+# 접근 가능한 웹 페이지 생성하기
 
 ![All About Accessibility](webdev101-a11y.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 > The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
@@ -12,9 +12,9 @@
 
 This quote perfectly highlights the importance of creating accessible websites. An application that can't be accessed by all is by definition exclusionary. As web developers we should always have accessibility in mind. By having this focus from the beginning you will be well on your way to ensure everyone can access the pages you create. In this lesson, you'll learn about the tools that can help you ensure that your web assets are accessible and how to build with accessibility in mind. 
 
-## Tools to use
+## 사용 도구
 
-### Screen readers
+### 스크린 리더
 
 One of the best-known accessibility tools are screen readers.
 
@@ -38,7 +38,7 @@ In the developer tool area of your browser, you'll find the Lighthouse tool. Thi
 
 ✅ Find Lighthouse in your browser's developer tool panel and run an analysis on any site. what do you discover?
 
-## Designing for accessibility
+## 접근성을 위한 디자인
 
 Accessibility is a relatively large topic. To help you out, there are numerous resources available.
 
@@ -46,35 +46,35 @@ Accessibility is a relatively large topic. To help you out, there are numerous r
 
 While we won't be able to cover every aspect of creating accessible sites, below are some of the core tenets you will want to implement. Designing an accessible page from the start is **always** easier than going back to an existing page to make it accessible.
 
-## Good display principles
+## 좋은 디스플레이 원칙
 
-### Color safe palettes
+### 색상 안전 팔레트
 
 People see the world in different ways, and this includes colors. When selecting a color scheme for your site, you should ensure it's accessible to all. One great [tool for generating color palettes is Color Safe](http://colorsafe.co/).
 
 ✅ Identify a web site that is very problematic in its use of color. Why?
 
-### Properly highlight text
+### 텍스트를 적절하게 강조하기
 
 Highlighting text by color, [font weight](https://developer.mozilla.org/docs/Web/CSS/font-weight), or other [text decoration](https://developer.mozilla.org/docs/Web/CSS/text-decoration) does not inherently inform a screen reader of its importance. A word could be bold because it's a key word, or because its the first word and the designer decided it should be bold.
 
 When a particular phrase needs to be highlighted, use the `<strong>` or `<em>` elements. These will indicate to a screen reader that those items are important.
 
-### Use the correct HTML
+### 올바른 HTML 사용하기
 
 With CSS and JavaScript it's possible to many any element look like any type of control. `<span>` could be used to create a `<button>`, and `<b>` could become a hyperlink. While this might be considered easier to style, it's baffling to a screen reader. Use the appropriate HTML when creating controls on a page. If you want a hyperlink, use `<a>`. Using the right HTML for the right control is called making use of Semantic HTML.
 
 ✅ Go to any web site and see if the designers and developers are using HTML properly. Can you find a button that should be a link? Hint: right click and choose 'View Page Source' in your browser to look at underlying code.
 
-### Use good visual clues
+### 좋은 시각적 단서를 사용하기
 
 CSS offers complete control over the look of any element on a page. You can create text boxes without an outline or hyperlinks without an underline. Unfortunately removing those clues can make it more challenging for someone who depends on them to be able to recognize the type of control.
 
-## The importance of link text
+## 링크 텍스트의 중요성
 
 Hyperlinks are core to navigating the web. As a result, ensuring a screen reader can properly read links allows all users to navigate your site.
 
-### Screen readers and links
+### 스크린 리더 및 링크
 
 As you would expect, screen readers read link text in the same way they'd read any other text on the page. With this in mind, the text demonstrated below might feel perfectly acceptable.
 
@@ -86,15 +86,15 @@ As you would expect, screen readers read link text in the same way they'd read a
 
 Remember, screen readers are a different interface from browsers with a different set of features.
 
-### The problem with using the URL
+### URL 사용 문제점
 
 Screen readers read the text. If a URL appears in the text, the screen reader will read the URL. Generally speaking, the URL does not convey meaningful information, and can sound annoying. You may have experienced this if your phone has ever audibly read a text message with a URL.
 
-### The problem with "click here"
+### "click here"의 문제점
 
 Screen readers also have the ability to read only the hyperlinks on a page, much in the same way a sighted person would scan a page for links. If the link text is always "click here", all the user will hear is "click here, click here, click here, click here, click here, ..." All links are now indistinguishable from one another.
 
-### Good link text
+### 좋은 링크 텍스트
 
 Good link text briefly describes what's on the other side of the link. In the above example talking about little penguins, the link is to the Wikipedia page about the species. The phrase *little penguins* would make for perfect link text as it makes it clear what someone will learn about if they click the link - little penguins.
 
@@ -102,7 +102,7 @@ Good link text briefly describes what's on the other side of the link. In the ab
 
 ✅ Surf the web for a few minutes to find pages that use obscure linking strategies. Compare them with other, better-linked sites. What do you learn?
 
-#### Search engine notes
+#### 검색 엔진 노트
 
 As an added bonus for ensuring your site is accessible to all, you'll help search engines navigate your site as well. Search engines use link text to learn the topics of pages. So using good link text helps everyone!
 
@@ -134,27 +134,27 @@ You can use `aria-label` to describe the link when the format of the page doesn'
 </div>
 ```
 
-## Images
+## 이미지
 
 It goes without saying screen readers are unable to automatically read what's in an image. Ensuring images are accessible doesn't take much work - it's what the `alt` attribute is all about. All images should have an `alt` to describe what they are.
 
 ✅ As you might expect, search engines are also unable to understand what's in an image. They also use alt text. So once again, ensuring your page is accessible provides additional bonuses!
 
-## The keyboard
+## 키보드
 
 Some users are unable to use a mouse or trackpad, instead relying on keyboard interactions to tab from one element to the next. It's important for your web site to present your content in logical order so a keyboard can access each element as the user moves down a document. If you build your web pages with semantic markup and use CSS to style their visual layout, your site should be keyboard-navigable, but it's important to test this aspect manually. Learn more about [keyboard navigation strategies](https://webaim.org/techniques/keyboard/).
 
 ✅ Go to any web site and try to navigate through it using only your tab key. What works, what doesn't work? Why?
 
-## Summary
+## 요약
 
 A web accessible to some is not a truly 'world-wide web'. The best way to ensure the sites you create are accessible is to incorporate accessibility best practices from the start. While there are extra steps involved, incorporating these skills into your workflow now will mean all pages you create will be accessible.
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
-Take this HTML and rewrite it to be as accessible as possible, given the strategies you learned.
+이 HTML을 가져와서 학습한 내용에 따라 가능한 하나의 접근을 할 수 있도록 다시 작성하십시오.
 
 ```html
 <!DOCTYPE html>
@@ -206,15 +206,15 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
 </html>
 ```
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Many governments have laws regarding accessibility requirements. Read up on your home country's accessibility laws. What is covered, and what isn't? An example is [this government web site](https://accessibility.blog.gov.uk/).
 
-## Assignment
+## 과제
  
 [Analyze a non-accessible web site](assignment.md)
 
-Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument
+크레딧: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument
