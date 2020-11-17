@@ -1,6 +1,6 @@
 # Conceptos de gestión del estado
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 ### Introducción
 
@@ -24,7 +24,7 @@ curl http://localhost:5000/api
 
 ## Repensar la gestión del estado
 
-En la [lección anterior] (../3-data/README.md), introdujimos un concepto básico de estado en nuestra aplicación con la variable global `account` que contiene los datos bancarios del usuario actualmente conectado. Sin embargo, nuestra implementación actual tiene algunas fallas. Intente actualizar la página cuando esté en el panel. ¿Lo que pasa?
+En la [lección anterior](../3-data/README.md), introdujimos un concepto básico de estado en nuestra aplicación con la variable global `account` que contiene los datos bancarios del usuario actualmente conectado. Sin embargo, nuestra implementación actual tiene algunas fallas. Intente actualizar la página cuando esté en el panel. ¿Lo que pasa?
 
 Hay 3 problemas con el código actual:
 
@@ -267,12 +267,12 @@ Ahora que recargamos los datos de la cuenta cada vez que se carga el panel, ¿cr
 
 Intente trabajar juntos para cambiar lo que se guarda y carga desde `localStorage` para incluir solo lo que es absolutamente necesario para que la aplicación funcione.
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Asignación
 
-[Implementar el cuadro de diálogo "Agregar transacción"](assignment.md)
+[Implementar el cuadro de diálogo "Agregar transacción"](assignment.es.md)
 
 Aquí hay un ejemplo de resultado después de completar la tarea:
 
-![Captura de pantalla que muestra un ejemplo de diálogo "Agregar transacción"](./images/dialog.png)
+![Captura de pantalla que muestra un ejemplo de diálogo "Agregar transacción"](../images/dialog.png)

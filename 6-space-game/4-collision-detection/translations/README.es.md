@@ -2,12 +2,12 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 ¡En esta lección aprenderá a disparar láseres con JavaScript! Agregaremos dos cosas a nuestro juego:
 
 - **Un láser**: este láser se dispara desde la nave de tu héroe y verticalmente hacia arriba
-- **Detección de colisiones**, como parte de la implementación de la capacidad de * disparar *, también agregaremos algunas reglas de juego interesantes:
+- **Detección de colisiones**, como parte de la implementación de la capacidad de *disparar*, también agregaremos algunas reglas de juego interesantes:
    - **El láser golpea al enemigo**: El enemigo muere si es golpeado por un láser
    - **El láser golpea la pantalla superior**: un láser se destruye si golpea la parte superior de la pantalla
    - **Colisión de héroe y enemigo**: Un enemigo y el héroe son destruidos si se golpean entre sí.
@@ -284,10 +284,10 @@ En este punto, ¡tu juego tiene algunas funciones! Puedes navegar con tus flecha
 
 🚀 Desafío: ¡Agrega una explosión! Echa un vistazo a los recursos del juego en [el repositorio de Space Art](../solution/spaceArt/readme.txt) e intenta agregar una explosión cuando el láser golpea a un extraterrestre.
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
 Experimente con los intervalos de su juego hasta ahora. ¿Qué pasa cuando los cambias? Más información sobre [eventos de tiempo de JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
-**Asignación**: [Explorar colisiones](assignment.md)
+**Asignación**: [Explorar colisiones](assignment.es.md)

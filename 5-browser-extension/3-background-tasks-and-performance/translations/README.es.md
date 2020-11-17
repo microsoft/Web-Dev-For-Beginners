@@ -141,7 +141,7 @@ Felicitaciones, ha creado una extensión de navegador útil y ha aprendido más 
 
 🚀 Desafío: Investigue algunos sitios web de código abierto que han existido hace mucho tiempo y, según su historial de GitHub, vea si puede determinar cómo se optimizaron a lo largo de los años para el rendimiento, si es que lo hicieron. ¿Cuál es el punto de dolor más común?
 
-## [Post-lecture prueba] (.github/post-lecture-quiz.md)
+## [Post-lecture prueba](.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
