@@ -260,4 +260,4 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 
 ## Assignment
 
-[CSS Refactoring](3-terrarium/2-intro-to-css/assignment.md)
+[CSS Refactoring](assignment.md)

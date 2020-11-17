@@ -213,4 +213,4 @@ Learn more about the Canvas API by [reading about it](https://developer.mozilla.
 
 ## Assignment
 
-[Play with the Canvas API](/6-space-game/2-drawing-to-canvas/assignment.md)
+[Play with the Canvas API](assignment.md)

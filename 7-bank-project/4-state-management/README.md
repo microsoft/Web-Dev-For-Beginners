@@ -274,7 +274,7 @@ Try working together to change what is saved and loaded from `localStorage` to o
 
 ## Assignment
 
-[Implement "Add transaction" dialog](/7-bank-project/4-state-management/assignment.md)
+[Implement "Add transaction" dialog](assignment.md)
 
 Here's an example result after completing the assignment:
 

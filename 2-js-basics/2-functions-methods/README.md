@@ -189,4 +189,4 @@ It's worth [reading up a little more on arrow functions](https://developer.mozil
 
 ## Assignment
 
-[Fun with Functions](2-js-basics/2-functions-methods/assignment.md)
+[Fun with Functions](assignment.md)

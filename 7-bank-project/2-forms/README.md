@@ -287,4 +287,4 @@ Developers have gotten very creative about their form building efforts, especial
 
 ## Assignment
 
-[Style your bank app](/7-bank-project/2-forms/assignment.md)
+[Style your bank app](assignment.md)

@@ -219,4 +219,4 @@ Your assignment is to create a fresh sample game, so explore some of the interes
 
 ## Assignment
 
-[Build a Sample Game](/6-space-game/6-end-condition/assignment.md)
+[Build a Sample Game](assignment.md)

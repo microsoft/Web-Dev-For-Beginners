@@ -221,4 +221,4 @@ Learn more about Pub/Sub by [reading about it](https://docs.microsoft.com/en-us/
 
 ## Assignment
 
-[Mock up a game](/6-space-game/1-introduction/assignment.md)
+[Mock up a game](assignment.md)

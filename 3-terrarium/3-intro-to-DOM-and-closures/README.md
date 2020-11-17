@@ -211,5 +211,5 @@ Always check browser capabilities using [CanIUse.com](https://caniuse.com/).
 
 ## Assignment
 
-[Work a bit more with the DOM](3-terrarium/3-intro-to-DOM-and-closures/assignment.md)
+[Work a bit more with the DOM](assignment.md)
 

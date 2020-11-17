@@ -164,5 +164,5 @@ In this lesson you learned a little about the history of the web browser; take t
 
 ## Assignment 
 
-[Restyle your extension](5-browser-extension/1-about-browsers/assignment.md)
+[Restyle your extension](assignment.md)
 

@@ -172,4 +172,4 @@ Go through Josh Comeau's wonderful [operator lookup](https://joshwcomeau.com/ope
 
 ## Assignment
 
-[Operators](2-js-basics/3-making-decisions/assignment.md)
+[Operators](assignment.md)
