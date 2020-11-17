@@ -9,15 +9,23 @@
 
 ### Introduction
 
-HTML, or HyperText Markup Language, is the 'skeleton' of the web. If CSS 'dresses up' your HTML and JavaScript brings it to life, the body of your web application is its HTML. HTML's syntax even reflects that idea, as it includes "head", "body", and "footer" tags.
+HTML, or HyperText Markup Language, is the 'skeleton' of the web. If CSS 'dresses up' your HTML and JavaScript brings it to life, HTML is the body of your web application. HTML's syntax even reflects that idea, as it includes "head", "body", and "footer" tags.
 
-In this lesson, we're going to use HTML to layout the 'skeleton' of our virtual terrarium's interface. It will have a title and three columns: a right and left column where the draggable plants live, and a center area that will be the actual glass-looking terrarium. By the end of this lesson, you will be able to see the plants in the columns, but the interface will look a little strange; don't worry, in the next section you will add CSS styles to the interface to make it look better.
+In this lesson, we're going to use HTML to layout the 'skeleton' of our virtual terrarium's interface. It will have a title and three columns: a right and a left column where the draggable plants live, and a center area that will be the actual glass-looking terrarium. By the end of this lesson, you will be able to see the plants in the columns, but the interface will look a little strange; don't worry, in the next section you will add CSS styles to the interface to make it look better.
 
 ### Task
 
 On your computer, create a folder called 'terrarium' and inside it, a file called 'index.html'. You can do this in Visual Studio Code after you create your terrarium folder by opening a new VS Code window, clicking 'open folder', and navigating to your new folder. Click the small 'file' button in the Explorer pane and create the new file:
 
 ![explorer in VS Code](images/vs-code-index.png)
+
+Or
+
+Use these commands on your git bash:
+* `mkdir terrarium`
+* `cd terrarium`
+* `touch index.html`
+* `code index.html` or `nano index.html`
 
 > index.html files indicate to a browser that it is the default file in a folder; URLs such as `https://anysite.com/test` might be built using a folder structure including a folder called `test` with `index.html` inside it; `index.html` doesn't have to show in a URL.
 
@@ -29,7 +37,7 @@ The first line of an HTML file is its doctype. It's a little surprising that you
 
 > Tip: in VS Code, you can hover over a tag and get information about its use from the MDN Reference guides.
 
-The second line should be the `<html>` tag's opening tag, followed right now by its closing tag. These tags are the root elements of your interface.
+The second line should be the `<html>` tag's opening tag, followed right now by its closing tag `</html>`. These tags are the root elements of your interface.
 
 ### Task
 
@@ -46,7 +54,7 @@ Add these lines at the top of your `index.html` file:
 
 ## The document's 'head'
 
-The 'head' area of the HTML document includes crucial information about your web page, also known as [metadata](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta). In our case, we tell the web server to which this page will be sent to be rendered four things:
+The 'head' area of the HTML document includes crucial information about your web page, also known as [metadata](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta). In our case, we tell the web server to which this page will be sent to be rendered, these four things:
 
 -   the page's title
 -   page metadata including:
@@ -159,7 +167,7 @@ Add those plant images into two columns between the `<body></body>` tags:
 
 With this markup, the plants now show up on the screen. It looks pretty bad, because they aren't yet styled using CSS, and we'll do that in the next lesson.
 
-Each image has an alt tag that will appear even if you can't see or render an image. This is an important element to include for accessibility. Learn more about accessibility in future lessons; for now, remember that it's important to enable screen readers to step through your web app so that visually impaired users can use your web site.
+Each image has an alt tag that will appear even if you can't see or render an image. This is an important element to include for accessibility. Learn more about accessibility in future lessons; for now, remember that the alt attribute provides alternative information for an image if a user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
 
 ✅ Did you notice that each image has the same alt tag? Is this good practice? Why or why not? Can you improve this code?
 
