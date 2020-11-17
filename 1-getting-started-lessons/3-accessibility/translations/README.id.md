@@ -1,4 +1,4 @@
-# Membuat Halaman Web yang Dapat Diakses
+# Membuat Halaman Web yang Dapat Diakses (oleh Semua Orang)
 
 ![Semua Tentang Aksesibilitas](../webdev101-a11y.png)
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
