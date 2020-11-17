@@ -6,13 +6,13 @@
 - [ ] Pull Request (Tarik Permintaan)
 - [ ] Feature branch (Cabang fitur)
 
-1. Bagaimana Anda mendapatkan semua komit dari cabang remote (jarak jauh)?
+2. Bagaimana Anda mendapatkan semua komit dari cabang remote (jarak jauh)?
 
 - [ ] `git fetch`
 - [ ] `git pull`
 - [ ] `git commits -r`
 
-1. Bagaimana Anda beralih ke sebuah cabang (branch)?
+3. Bagaimana Anda beralih ke sebuah cabang (branch)?
 
 - [ ] `git switch [branch-name]`
 - [ ] `git checkout [branch-name]`
