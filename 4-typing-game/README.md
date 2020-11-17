@@ -23,7 +23,7 @@ This lesson assumes you're familiar with the following concepts:
 
 ## Lesson
 
-[Creating a typing game by using event driven programming](./project/README.md)
+[Creating a typing game by using event driven programming](./typing-game/README.md)
 
 ## Credits
 
