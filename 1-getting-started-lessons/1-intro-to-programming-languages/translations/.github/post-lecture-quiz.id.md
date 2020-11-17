@@ -6,12 +6,12 @@
 - [ ] JavaScript
 - [ ] Bash
 
-1. Lingkungan pengembangan unik untuk setiap pengembang
+2. Lingkungan pengembangan unik untuk setiap pengembang
 
 - [ ] Benar
 - [ ] Salah
 
-1. Apa yang akan dilakukan pengembang untuk memperbaiki kode buggy (mudah rusak)?
+3. Apa yang akan dilakukan pengembang untuk memperbaiki kode buggy (mudah rusak)?
 
 - [ ] Syntax highlighting (Penyorotan sintaks)
 - [ ] Debugging
