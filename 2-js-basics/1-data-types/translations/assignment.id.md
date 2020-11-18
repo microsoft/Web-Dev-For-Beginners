@@ -1,10 +1,10 @@
-# Data Types Practice
+# Praktek Tipe Data
 
-## Instructions
+## Instruksi
 
-Imagine you are building a shopping cart. Write some documentation on the data types that you would need to complete your shopping experience. How did you arrive at your choices?
+Bayangkan Anda sedang membuat keranjang belanja. Tulislah beberapa dokumentasi tentang tipe data yang Anda perlukan untuk melengkapi pengalaman berbelanja Anda. Bagaimana Anda sampai pada pilihan Anda?
 
-## Rubric
+## Rubrik
 
 | Kriteria | Teladan                                                                                | Memenuhi Syarat              | Perlu Perbaikan            |
 |----------|----------------------------------------------------------------------------------------|------------------------------|----------------------------|
