@@ -2,7 +2,7 @@
 
 [![Methoden und Funktionen](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Methoden und Funktionen")
 
-## [Pre-Lecture Quiz](.github/pre-lecture-quiz.md)
+## [Pre-Lecture Quiz](../.github/pre-lecture-quiz.md)
 
 Wenn wir darüber nachdenken, Code zu schreiben, möchten wir immer sicherstellen, dass unser Code lesbar ist. Während dies nicht intuitiv klingt, wird Code viel öfter gelesen als geschrieben. Ein Kernwerkzeug in der Toolbox eines Entwicklers, um wartbaren Code sicherzustellen, ist die **Funktion**.
 
@@ -184,7 +184,7 @@ Sie haben jetzt gesehen, dass wir drei Möglichkeiten haben, eine Funktion als P
 
 Können Sie den Unterschied zwischen Funktionen und Methoden in einem Satz artikulieren? Versuche es!
 
-## [Quiz nach der Vorlesung](.github/post-lecture-quiz.md)
+## [Quiz nach der Vorlesung](../.github/post-lecture-quiz.md)
 
 ## Review & Selbststudium
 
@@ -192,4 +192,4 @@ Es lohnt sich, [etwas mehr über Pfeilfunktionen zu lesen](https://developer.moz
 
 ## Zuordnung
 
-[Spaß mit Funktionen](assignment.md)
+[Spaß mit Funktionen](assignment.de.md)

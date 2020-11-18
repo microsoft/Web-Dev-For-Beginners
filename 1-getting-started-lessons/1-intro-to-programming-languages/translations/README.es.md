@@ -2,7 +2,7 @@
 
 Esta lección cubre los conceptos básicos de los lenguajes de programación. Los temas que se tratan aquí se aplican a la mayoría de los lenguajes de programación modernos en la actualidad. En la sección 'Herramientas del oficio', aprenderá sobre software útil que lo ayuda como desarrollador.
 
-## [Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## [Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### Introducción
 
@@ -175,10 +175,10 @@ Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recu
 
 Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos únicos de JavaScript frente a Java? ¿Qué hay de COBOL vs. Go?
 
-## [Prueba Post-lectura](.github/post-lecture-quiz.md)
+## [Prueba Post-lectura](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
 Estudia un poco sobre los diferentes lenguajes disponibles para el programador. Intente escribir una línea en un idioma y luego vuelva a hacerlo en otros dos. ¿Qué aprendes?
 
-**Asignación**: [Asignación](assignment.md)
+**Asignación**: [Asignación](../assignment.md)

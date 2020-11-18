@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
  ¡Los juegos no son muy divertidos hasta que tienes extraterrestres corriendo por la pantalla! En este juego haremos uso de dos tipos de movimientos:
 
@@ -145,7 +145,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
 ### Agregar código
 
-1. **Agrega objetos dedicados** para `hero` y `enemy` y `game object`, deben tener propiedades `x` e` y`. (Recuerde la parte sobre [Herencia o composición](../README.md)).
+1. **Agrega objetos dedicados** para `hero` y `enemy` y `game object`, deben tener propiedades `x` e `y`. (Recuerde la parte sobre [Herencia o composición](../README.md)).
 
     * SUGERENCIA* `game object` debe ser el que tenga `x` e `y` y la capacidad de dibujarse a sí mismo en un lienzo.
 
@@ -217,7 +217,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
     
    Compruebe la consola de su navegador en este punto y observe cómo se registran las pulsaciones de teclas.
 
-3. **Implemente** el [subpatrón Pub] (../ README.md), esto mantendrá su código limpio mientras sigue las partes restantes.
+3. **Implemente** el [subpatrón Pub](../README.md), esto mantendrá su código limpio mientras sigue las partes restantes.
 
     Para hacer esta última parte, puede:
 
@@ -376,10 +376,10 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
 🚀 Desafío: como puede ver, su código puede convertirse en 'código espagueti' cuando comienza a agregar funciones, variables y clases. ¿Cómo puede organizar mejor su código para que sea más legible? Esboce un sistema para organizar su código, incluso si todavía reside en un archivo.
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
 Mientras escribimos nuestro juego sin usar marcos, existen muchos marcos de lienzo basados en JavaScript para el desarrollo de juegos. Tómate un tiempo para hacer algo [leer sobre estos](https://github.com/collections/javascript-game-engines).
 
-**Tarea**: [Comenta tu código](assignment.md)
+**Tarea**: [Comenta tu código](assignment.es.md)

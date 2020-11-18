@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 ## El lienzo
 
@@ -60,7 +60,7 @@ Puede dibujar todo tipo de cosas con la API de Canvas como:
 - **Texto**, puede dibujar un texto con cualquier fuente y color que desee.
 - **Imágenes**, puede dibujar una imagen basada en un activo de imagen como .jpg o .png, por ejemplo.
 
-✅ ¡Pruébalo! Sabes cómo dibujar un rectángulo, ¿puedes dibujar un círculo en una página? Eche un vistazo a algunos dibujos de Canvas interesantes en CodePen. Aquí hay un [ejemplo particularmente impresionante] (https://codepen.io/dissimulate/pen/KrAwx).
+✅ ¡Pruébalo! Sabes cómo dibujar un rectángulo, ¿puedes dibujar un círculo en una página? Eche un vistazo a algunos dibujos de Canvas interesantes en CodePen. Aquí hay un [ejemplo particularmente impresionante](https://codepen.io/dissimulate/pen/KrAwx).
 
 ## Cargar y dibujar un recurso de imagen
 
@@ -122,11 +122,11 @@ Construirá una página web con un elemento Canvas. Debería representar una pan
 
 - Barco héroe
 
-   ![Barco héroe](solution/assets/player.png)
+   ![Barco héroe](../solution/assets/player.png)
 
 - Monstruo 5*5
 
-   ![Monster ship](solution/assets/enemyShip.png)
+   ![Monster ship](../solution/assets/enemyShip.png)
 
 
 ### Pasos recomendados para iniciar el desarrollo
@@ -194,7 +194,7 @@ Agregue el código necesario a `your-work/app.js` para resolver lo siguiente
 
 El resultado final debería verse así:
 
-![Pantalla negra con un héroe y monstruos 5*5](partI-solution.png)
+![Pantalla negra con un héroe y monstruos 5*5](../partI-solution.png)
 
 ## Solución
 
@@ -203,10 +203,10 @@ Intente resolverlo usted mismo primero, pero si se atasca, eche un vistazo a una
 🚀 Desafío: ha aprendido a dibujar con la API Canvas enfocada en 2D; eche un vistazo a la [API WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) e intente dibujar un objeto 3D.
 
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
 Obtenga más información sobre la API de Canvas [leyendo sobre ella](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
 
-**Tarea**: [Jugar con la API de Canvas](assignment.md)
+**Tarea**: [Jugar con la API de Canvas](assignment.es.md)

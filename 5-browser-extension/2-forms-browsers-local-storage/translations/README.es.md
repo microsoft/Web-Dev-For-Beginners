@@ -199,7 +199,7 @@ Esta es una gran función. ¿Que está pasando aqui?
 
 ---
 
-🚀 Desafío: hemos discutido varios tipos de API hasta ahora en estas lecciones. Elija una API web e investigue en profundidad lo que ofrece. Por ejemplo, eche un vistazo a las API disponibles en los navegadores, como la [API HTML de arrastrar y soltar] (https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). En tu opinión, ¿qué hace que una API sea excelente?
+🚀 Desafío: hemos discutido varios tipos de API hasta ahora en estas lecciones. Elija una API web e investigue en profundidad lo que ofrece. Por ejemplo, eche un vistazo a las API disponibles en los navegadores, como la [API HTML de arrastrar y soltar](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). En tu opinión, ¿qué hace que una API sea excelente?
 
 
 ## [Post-lecture prueba](.github/post-lecture-quiz.md)

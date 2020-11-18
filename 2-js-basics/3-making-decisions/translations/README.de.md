@@ -2,7 +2,7 @@
 
 [![Entscheidungen treffen](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Entscheidungen treffen")
 
-## [Pre-Lecture Quiz](.github/pre-lecture-quiz.md)
+## [Pre-Lecture Quiz](../.github/pre-lecture-quiz.md)
 
 Wenn Sie Entscheidungen treffen und die Reihenfolge steuern, in der Ihr Code ausgeführt wird, ist Ihr Code wiederverwendbar und robust. Dieser Abschnitt behandelt die Syntax zur Steuerung des Datenflusses in JavaScript und ihre Bedeutung bei Verwendung mit booleschen Datentypen.
 
@@ -158,7 +158,7 @@ if (firstNumber > secondNumber) {
 
 Erstellen Sie ein Programm, das zuerst mit logischen Operatoren geschrieben wird, und schreiben Sie es dann mit einem ternären Ausdruck neu. Was ist Ihre bevorzugte Syntax?
 
-## [Quiz nach der Vorlesung] (.github/post-lecture-quiz.md)
+## [Quiz nach der Vorlesung](../.github/post-lecture-quiz.md)
 
 ## Review & Selbststudium
 
@@ -166,4 +166,4 @@ Lesen Sie mehr über die vielen Operatoren, die dem Benutzer [auf MDN](https://d
 
 ## Zuordnung
 
-[Operators](assignment.md)
+[Operators](assignment.de.md)

@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 En esta lección, aprenderá cómo agregar puntos a un juego y calcular vidas.
 
@@ -173,10 +173,10 @@ Al final de este trabajo, deberías ver las pequeñas naves de 'vida' en la part
 
 🚀Challenge: Tu código está casi completo. ¿Puedes imaginar tus próximos pasos?
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
 Investigue algunas formas en las que puede incrementar y disminuir las puntuaciones y vidas del juego. Hay algunos motores de juegos interesantes como [PlayFab](https://playfab.com). ¿Cómo podría mejorar tu juego el uso de uno de estos?
 
-**Tarea**: [Crear un juego de puntuación](assignment.md)
+**Tarea**: [Crear un juego de puntuación](assignment.es.md)

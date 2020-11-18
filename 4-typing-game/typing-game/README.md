@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ## Event driven programming
 
@@ -90,6 +90,7 @@ Create a new file named **index.html**. Add the following HTML:
   <div>
     <input type="text" id="typed-value" /> <!-- The textbox for typing -->
     <button type="button" id="start">Start</button> <!-- To start the game -->
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
@@ -325,7 +326,7 @@ Add more functionality
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## Review & Self Study
 

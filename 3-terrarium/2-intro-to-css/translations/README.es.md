@@ -1,9 +1,9 @@
 # Terrarium Project Parte 2: Introducción a CSS
 
-![Introducción a CSS](images/webdev101-css.png)
+![Introducción a CSS](../images/webdev101-css.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 ### Introducción:
 
@@ -67,7 +67,7 @@ body {
 
 Abra la consola de su navegador en la pestaña 'Elementos' y observe la fuente H1. Hereda su fuente del cuerpo, como se indica en el navegador:
 
-![fuente heredada](images/1.png)
+![fuente heredada](../images/1.png)
 
 ✅ ¿Puede hacer que un estilo anidado herede una propiedad diferente?
 
@@ -240,19 +240,18 @@ Tenga en cuenta el uso de porcentajes aquí, incluso para el `border-radius`. Si
 
 ---
 
-🚀 Desafío: agregue un brillo de 'burbuja' al área inferior izquierda del frasco para que se vea más parecido al vidrio. Estarás diseñando el `.jar-glossy-long` y el` .jar-glossy-short` para que parezca un brillo reflejado. Así es como se vería:
+🚀 Desafío: agregue un brillo de 'burbuja' al área inferior izquierda del frasco para que se vea más parecido al vidrio. Estarás diseñando el `.jar-glossy-long` y el `.jar-glossy-short` para que parezca un brillo reflejado. Así es como se vería:
 
-! [terrario terminado](./images/terrarium-final.png)
+![terrario terminado](../images/terrarium-final.png)
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
 CSS parece engañosamente sencillo, pero existen muchos desafíos cuando se trata de diseñar una aplicación perfectamente para todos los navegadores y todos los tamaños de pantalla. CSS-Grid y Flexbox son herramientas que se han desarrollado para hacer el trabajo un poco más estructurado y más confiable. Aprende sobre estas herramientas jugando a [Flexbox Froggy](https://flexboxfroggy.com/) y [Grid Garden](https://codepip.com/games/grid-garden/).
 
-**Asignación**: [Refactorización CSS] (asignación.md)
+**Asignación**: [Refactorización CSS](assignment.es.md)
 
-Complete los siguientes módulos de aprendizaje para completar el [cuestionario posterior a la conferencia](. Github / post-lecture-quiz.md):
+Complete los siguientes módulos de aprendizaje para completar el [cuestionario posterior a la conferencia](../.github/post-lecture-quiz.md):
 
 [Diseñe su aplicación HTML con CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
-

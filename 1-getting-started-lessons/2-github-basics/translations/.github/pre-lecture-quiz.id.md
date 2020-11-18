@@ -6,7 +6,7 @@
 - [ ] git start
 - [ ] git init
 
-1. Apa fungsi `git add`?
+2. Apa fungsi `git add`?
 
 - [ ] Commit (menyerahkan) kode Anda
 - [ ] Menambahkan file Anda ke area pementasan (staging area) untuk dilacak
