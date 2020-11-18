@@ -30,11 +30,11 @@ Een *programma* kan van alles zijn wat met code is geschreven; websites, spellen
 
 Programmeertalen hebben maar één hoofddoel: het voor ontwikkelaars mogelijk maken om instructies te sturen naar een apparaat. Apparaten begrijpen slechts binaire instructies (1-en en 0-en), en voor de meeste ontwikkelaars is dit niet een erg efficiënte manier om instructies te schrijven. Programmeertalen zijn daarom een mooi communicatiemiddel tussen mensen en computers.
 
-Programmeertalen zijn er in verschillende uitvoeringen en hebben soms specifieke doeleinden. Javascript wordt bijvoorbeeld voornamelijk gebruikt voor webapplicaties terwijl Bash hoofdzakelijk wordt gebruikt voor besturingssystemen.
+Programmeertalen zijn er in verschillende uitvoeringen en hebben soms specifieke doeleinden. JavaScript wordt bijvoorbeeld voornamelijk gebruikt voor webapplicaties terwijl Bash hoofdzakelijk wordt gebruikt voor besturingssystemen.
 
-*Lagere programmertalen* hebben over het algemeen minder stappen nodig dan *hogere programmeertalen* om door een apparaat geinterpreteerd te worden. Hogere programmeertalen zijn echter populairder omdat ze veel leesbaarder zijn. Een voorbeeld van een hogere programmeertaal is Javascript.
+*Lagere programmertalen* hebben over het algemeen minder stappen nodig dan *hogere programmeertalen* om door een apparaat geinterpreteerd te worden. Hogere programmeertalen zijn echter populairder omdat ze veel leesbaarder zijn. Een voorbeeld van een hogere programmeertaal is JavaScript.
 
-Het volgende codevoorbeeld laat het verschil zien tussen een hogere (Javascript) en een lagere (ARM assembly) programeertaal.
+Het volgende codevoorbeeld laat het verschil zien tussen een hogere (JavaScript) en een lagere (ARM assembly) programeertaal.
 
 ```javascript
 let number = 10
@@ -81,7 +81,7 @@ Geloof het of niet, maar beide codevoorbeelden *doen exact hetzelfde*: het print
 
 Een enkele instructie in een programma wordt ook wel *statement* genoemd en bevat vaak een karakter of witruimte om aan te geven waar de instructie begint en eindigt. Hoe een programma eindigt varieert per programmertaal.
 
-De meeste programma's zijn afhankelijk van gegevens, die ofwel door een gebruiker wordt ingevoerd, ofwel ergens vandaan wordt gehaald. De statements zijn afhankelijk van deze data om instructies uit te voeren. Data is van invloed hoe een programma reageert. Daarom hebben programmeertalen een manier om tijdelijk data op te slaan eat later weer gebruikt wordt. Deze data wordt ook wel *variabelen* genoemd. Variabelen zijn statements die een apparaat een instructie geven om de data op te slaan in het geheugen van het apparaat. Variabelen in programma's zijn gelijkwaardig aan hun tegenhanger in algebra. Ook daar hebben variabelen een unieke naam en kan de waarde veranderen in de loop der tijd.
+De meeste programma's zijn afhankelijk van gegevens, die ofwel door een gebruiker wordt ingevoerd, ofwel ergens vandaan wordt gehaald. De statements zijn afhankelijk van deze data om instructies uit te voeren. Data is van invloed hoe een programma reageert. Daarom hebben programmeertalen een manier om tijdelijk data op te slaan wat later weer gebruikt wordt. Deze data wordt ook wel *variabelen* genoemd. Variabelen zijn statements die een apparaat een instructie geven om de data op te slaan in het geheugen van het apparaat. Variabelen in programma's zijn gelijkwaardig aan hun tegenhanger in algebra. Ook daar hebben variabelen een unieke naam en kan de waarde veranderen in de loop der tijd.
 
 Niet alle statements in een programma worden altijd uitgevoerd. Dit is meestal zo bedacht door de ontwikkelaar of het treed onbedoeld op bij onverwachte fouten. Het is een vorm van controle in een applicatie, dat het robuuster en onderhoudbaarder maakt. De keuze in welke statements worden uitgevoerd hangt vaak af van de data en of dit voldoet aan bepaalde condities. Een veelvoorkomend statement in een moderne programmeertaal om de controle van een programma te beïnvloeden is het `if..else` statement.
 
@@ -93,7 +93,7 @@ Niet alle statements in een programma worden altijd uitgevoerd. Dit is meestal z
 
 In dit onderdeel leer je welke applicaties je wellicht handig vindt om mee te werken als je je professionele web ontwikkelaar carrière start.
 
-Een **ontwikkelomgeving** is een unieke set van applicaties wat een ontwikkelaar regelmatig gebruikt om software te schrijven. Sommige van deze applicaties zijn aangepast voor de specifieke eisen die de ontwikkelaar heeft en kunnen veranderen over de tijd. Dit kan te maken hebben met het type werk wat de ontwikkelaar uitvoert, bijvoorbeeld persoonlijke projecten versus projecten voor werk, of als er een andere programmeertaal moeten worden gebruikt. Ontwikkelomgevingen zijn zo uniek als de ontwikkelaars die ze gebruiken.
+Een **ontwikkelomgeving** is een unieke set van applicaties wat een ontwikkelaar regelmatig gebruikt om software te schrijven. Sommige van deze applicaties zijn aangepast voor de specifieke eisen die de ontwikkelaar heeft en kunnen veranderen over de tijd. Dit kan te maken hebben met het type werk wat de ontwikkelaar uitvoert, bijvoorbeeld persoonlijke projecten versus projecten voor werk, of als er een andere programmeertaal moet worden gebruikt. Ontwikkelomgevingen zijn zo uniek als de ontwikkelaars die ze gebruiken.
 
 ### Editors
 
@@ -129,7 +129,7 @@ Veel browsers hebben ingebouwd *ontwikkel gereedschap* (DevTools) waarmee ontwik
 - [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
 - [Firefox](https://developer.mozilla.org/docs/Tools)
 
-### Command Line Gereedschap
+### Command Line Applicaties
 
 Sommige ontwikkelaars hebben de voorkeur om minder grafische applicaties te gebruiken voor hun dagelijks werk. Zij gebruiken *command line applicaties* om hun werk te doen. Voor het schrijven van code is veel typewerk nodig, en aangezien sommige ontwikkelaars niet teveel afgeleid willen worden in hun keyboardgebruik maken zij daarom gebruik van keyboard shortcuts om bijvoorbeeld met verschillende bestanden te werken en tussen applicaties te wisselen. De meeste taken kunnen met een muis worden uitgevoerd, maar één van de voordelen van de command line is dat je heel veel kunt doen zonder te wisselen van keyboard en muis. Een bijkomend voordeel is dat command line applicaties aanpasbaar zijn en je deze naar wens kunt instellen. De instellingen kunnen opgeslagen worden op een andere computer weer herbruikt worden. Omdat elke ontwikkelaar een andere voorkeur heeft qua ontwikkelomgeving, gebruiken sommigen de command line nooit, sommigen doen juist alles ermee, en anderen gebruiken zowel de command line als grafische applicaties.
 
@@ -166,7 +166,7 @@ Beschikbaarheid van command lines verschilt op basis van het besturingssysteem w
 
 ### Documentatie
 
-Wanneer een ontwikkelaar iets nieuws wil leren dan zullen ze waarschijnlijk de bijbehorende documentatie raadplegen. Ontwikkelaars zijn erg afhankelijk van goede documentatie, wat hun verder helpt om nieuwe programmeertalen of applicaties te gebruiken waardoor ze een beter inzicht krijgen hoe dit toe te passen in hun dagelijks werk.
+Wanneer een ontwikkelaar iets nieuws wil leren dan zullen ze waarschijnlijk de bijbehorende documentatie (Docs) raadplegen. Ontwikkelaars zijn erg afhankelijk van goede documentatie, wat hun verder helpt om nieuwe programmeertalen of applicaties te gebruiken waardoor ze een beter inzicht krijgen hoe dit toe te passen in hun dagelijks werk.
 
 #### Populaire Documentatie over Web Ontwikkeling
 
@@ -186,7 +186,7 @@ Vergelijk wat programmeertalen. Wat zijn unieke kenmerken van JavaScript vs. Jav
 
 ## Review & Zelfstudie
 
-Bestudeer wat voor verschillende programmeertalen er zijn. Kies 3 talen en probeer een regel code te schrijven in elke taal. Wat heb je geleerd?
+Bestudeer wat voor verschillende programmeertalen er zijn. Zoek in 3 talen een 'Hello World' voorbeeld op. Zo krijg je een goed idee wat er voor nodig is om tekst in de browser te tonen.
 
 ## Opdracht
 
