@@ -44,7 +44,7 @@ Whenever we want to call (or invoke) our function, we use the name of the functi
 displayGreeting();
 ```
 
-> **NOTE:** There is a special type of function known as a **method**, which you've already been using! In fact, we saw this in our demo above when we used `console.log`. What makes a method different from a function is that, a `method` is attached to an `object` (`console` in our example), while a function is free floating. You will hear many developers use these terms interchangeably.
+> **NOTE:** There is a special type of function known as a **method**, which you've already been using! In fact, we saw this in our demo above when we used `console.log`. What makes a method different from a function is a `method` is attached to an `object` (`console` in our example), while a function is free floating. You will hear many developers use these terms interchangeably.
 
 ### Function best practices
 
@@ -56,12 +56,14 @@ There are a handful of best practices to keep in mind when creating functions
 
 ## Passing information to a function
 
-To make a function more reusable you'll often want to pass information into it. If we consider our `displayGreeting` example above, it will only display **Hello, world!**. Not the most useful function one could create. If we want to make it a little more flexible, like allowing someone to specify the name of the person to greet, we can add a **parameter**. A Parameter (also sometimes called an **argument**), is additional information sent to a function.
+To make a function more reusable you'll often want to pass information into it. If we consider our `displayGreeting` example above, it will only display **Hello, world!**. Not the most useful function one could create. If we want to make it a little more flexible, like allowing someone to specify the name of the person to greet, we can add a **parameter**. A parameter (also sometimes called an **argument**), is additional information sent to a function.
 
 Parameters are listed in the definition part within parenthesis and are comma separated like so:
 
 ```javascript
-function name(param1, param2, param3) {} //param short for parameter
+function name(param, param2, param3) {
+
+} 
 ```
 
 We can update our `displayGreeting` to accept a name and have that displayed.
@@ -160,7 +162,7 @@ If you run our new code you'll notice we get the same results. We've created a f
 
 ### Fat arrow functions
 
-One shortcut which is common in a lot of programming languages (including JavaScript) is the ability to use what's called an **arrow** or **fat arrow** function. It uses a special indicator of `=>`, which looks like an arrow - thus the name! By using `=>`, we are able to skip the `function` keyword.
+One shortcut common in a lot of programming languages (including JavaScript) is the ability to use what's called an **arrow** or **fat arrow** function. It uses a special indicator of `=>`, which looks like an arrow - thus the name! By using `=>`, we are able to skip the `function` keyword.
 
 Let's rewrite our code one more time to use a fat arrow function:
 
