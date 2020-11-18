@@ -1,15 +1,16 @@
 # JavaScript Basics: Data Types
 
 ![JavaScript Basics - Data types](images/webdev101-js-datatypes.png)
+
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
+
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web.
 
 [![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
-
 
 Let's start with variables and the data types that populate them!
 
@@ -17,40 +18,41 @@ Let's start with variables and the data types that populate them!
 
 Variables store values that can be used and changed throughout your code.
 
-Creating and **declaring** a variable has the following syntax **[keyword] [name]**. It's made up of the two parts:
+**Creating** and **declaring** a variable has the following syntax **[keyword] [name]**. It's made up of the two parts:
 
-- **Keyword**. Keywords can be `let` or `var`.  
+- **Keyword**. Keywords can be `let` or `var`.
 
-   > Note, They keyword `let` was introduced in ES6 and gives your variable a so called _block scope_. It's recommended that you use `let` over `var`. We will cover block scopes more in depth in future parts.
+  > Note, They keyword `let` was introduced in ES6 and gives your variable a so called _block scope_. It's recommended that you use `let` over `var`. We will cover block scopes more in depth in future parts.
+
 - **The variable name**, this is a name you choose yourself.
 
 ### Task - working with variables
 
 1. **Declare a variable**. Let's declare a variable using the `let` keyword:
 
-    ```javascript
-    let myVariable;
-    ```
+   ```javascript
+   let myVariable;
+   ```
 
    `myVariable` has now been declared using the `let` keyword. It currently doesn't have a value.
 
 1. **Assign a value**. Store a value in a variable with the `=` operator, followed by the expected value.
 
-    ```javascript
-    myVariable = 123;
-    ```
+   ```javascript
+   myVariable = 123;
+   ```
 
    > Note: the use of `=` in this lesson means we make use of an "assignment operator", used to set a value to a variable. It doesn't denote equality.
 
-   `myVariable` has now been *initialized* with the value 123.
+   `myVariable` has now been _initialized_ with the value 123.
 
 1. **Refactor**. Replace your code with the following statement.
 
-    ```javascript
-    let myVariable = 123;
-    ```
+   ```javascript
+   let myVariable = 123;
+   ```
 
-    The above is called an _explicit initialization_ when a variable is declared and is assigned a value at the same time.
+   The above is called an _explicit initialization_ when a variable is declared and is assigned a value at the same time.
 
 1. **Change the variable value**. Change the variable value in the following way:
 
@@ -74,30 +76,31 @@ Constants are similar to variables, with two exceptions:
 
 - **Must have a value**. Constants must be initialized, or an error will occur when running code.
 - **Reference cannot be changed**. The reference of a constant cannot be changed once initialized, or an error will occur when running code. Let's look at two examples:
-   - **Simple value**. The following is NOT allowed:
-   
-      ```javascript
-      const PI = 3;
-      PI = 4; // not allowed
-      ```
- 
-   - **Object reference is protected**. The following is NOT allowed.
-   
-      ```javascript
-      const obj = { a: 3 };
-      obj = { b: 5 } // not allowed
-      ```
 
-    - **Object value is not protected**. The following IS allowed:
-    
-      ```javascript
-      const obj = { a: 3 };
-      obj.a = 5;  // allowed
-      ```
+  - **Simple value**. The following is NOT allowed:
 
-      Above you are changing the value of the object but not the reference itself, which makes it allowed.
+    ```javascript
+    const PI = 3;
+    PI = 4; // not allowed
+    ```
 
-   > Note, a `const` means the reference is protected from reassignment. The value is not _immutable_ though and can change, especially if it's a complex construct like an object.
+  - **Object reference is protected**. The following is NOT allowed.
+
+    ```javascript
+    const obj = { a: 3 };
+    obj = { b: 5 }; // not allowed
+    ```
+
+  - **Object value is not protected**. The following IS allowed:
+
+    ```javascript
+    const obj = { a: 3 };
+    obj.a = 5; // allowed
+    ```
+
+    Above you are changing the value of the object but not the reference itself, which makes it allowed.
+
+  > Note, a `const` means the reference is protected from reassignment. The value is not _immutable_ though and can change, especially if it's a complex construct like an object.
 
 ## Data Types
 
@@ -150,19 +153,18 @@ let myString2 = "World";
 myString1 + myString2 + "!"; //HelloWorld!
 myString1 + " " + myString2 + "!"; //Hello World!
 myString1 + ", " + myString2 + "!"; //Hello, World!
-
 ```
 
 ✅ Why does `1 + 1 = 2` in JavaScript, but `'1' + '1' = 11?` Think about it. What about `'1' + 1`?
 
-**Template literals** are another way to format strings, except instead of quotes, the backtick  is used. Anything that is not plain text must be placed inside placeholders `${ }`. This includes any variables that may be strings.
+**Template literals** are another way to format strings, except instead of quotes, the backtick is used. Anything that is not plain text must be placed inside placeholders `${ }`. This includes any variables that may be strings.
 
 ```javascript
 let myString1 = "Hello";
 let myString2 = "World";
 
 `${myString1} ${myString2}!` //Hello World!
-`${myString1}, ${myString2}!` //Hello World!
+`${myString1}, ${myString2}!`; //Hello World!
 ```
 
 You can achieve your formatting goals with either method, but template literals will respect any spaces and line breaks.
@@ -185,6 +187,7 @@ Booleans can be only two values: `true` or `false`. Booleans can help make decis
 JavaScript is notorious for its surprising ways of handling datatypes on occasion. Do a bit of research on these 'gotchas'. For example: case sensitivity can bite! Try this in your console: `let age = 1; let Age = 2; age == Age` (resolves `false` -- why?). What other gotchas can you find?
 
 ## Post-Lecture Quiz
+
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
