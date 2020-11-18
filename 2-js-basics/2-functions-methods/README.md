@@ -1,9 +1,11 @@
 # JavaScript Basics: Methods and Functions
 
 ![JavaScript Basics - Functions](images/webdev101-js-functions.png)
+
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
+
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 When we think about writing code, we always want to ensure our code is readable. While this sounds counterintuitive, code is read many more times than it's written. One core tool in a developer's toolbox to ensure maintainable code is the **function**.
@@ -21,8 +23,9 @@ Just as important is the ability to name a function. While this might seem trivi
 The syntax for a function looks like the following:
 
 ```javascript
-function nameOfFunction() { // function definition
- // function definition/body
+function nameOfFunction() {
+  // function definition
+  // function definition/body
 }
 ```
 
@@ -30,18 +33,18 @@ If I wanted to create a function to display a greeting, it might look like this:
 
 ```javascript
 function displayGreeting() {
-  console.log('Hello, world!');
+  console.log("Hello, world!");
 }
 ```
 
-Whenever we want to call (or invoke) our function, we use the name of the function followed by `()`. It's worth noting the fact our function can be defined before or after we decide to call it; the JavaScript compiler will find it for you.
+Whenever we want to call (or invoke) our function, we use the name of the function followed by `()`. It's worth noting the fact that our function can be defined before or after we decide to call it; the JavaScript compiler will find it for you.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** There is a special type of function known as a **method**, which you've already been using! In fact, we saw this in our demo above when we used `console.log`. What makes a method different from a function is a method is attached to an object (`console` in our example), while a function is free floating. You will hear many developers use these terms interchangeably.
+> **NOTE:** There is a special type of function known as a **method**, which you've already been using! In fact, we saw this in our demo above when we used `console.log`. What makes a method different from a function is that, a `method` is attached to an `object` (`console` in our example), while a function is free floating. You will hear many developers use these terms interchangeably.
 
 ### Function best practices
 
@@ -53,14 +56,12 @@ There are a handful of best practices to keep in mind when creating functions
 
 ## Passing information to a function
 
-To make a function more reusable you'll often want to pass information into it. If we consider our `displayGreeting` example above, it will only display **Hello, world!**. Not the most useful function one could create. If we want to make it a little more flexible, like allowing someone to specify the name of the person to greet, we can add a **parameter**. A parameter (also sometimes called an **argument**), is additional information sent to a function.
+To make a function more reusable you'll often want to pass information into it. If we consider our `displayGreeting` example above, it will only display **Hello, world!**. Not the most useful function one could create. If we want to make it a little more flexible, like allowing someone to specify the name of the person to greet, we can add a **parameter**. A Parameter (also sometimes called an **argument**), is additional information sent to a function.
 
 Parameters are listed in the definition part within parenthesis and are comma separated like so:
 
 ```javascript
-function name(param, param2, param3) {
-
-}
+function name(param1, param2, param3) {} //param short for parameter
 ```
 
 We can update our `displayGreeting` to accept a name and have that displayed.
@@ -75,8 +76,7 @@ function displayGreeting(name) {
 When we want to call our function and pass in the parameter, we specify it in the parenthesis.
 
 ```javascript
-displayGreeting('Christopher');
-// displays "Hello, Christopher!" when run
+displayGreeting("Christopher"); // displays "Hello, Christopher!" when run
 ```
 
 ## Default values
@@ -84,7 +84,7 @@ displayGreeting('Christopher');
 We can make our function even more flexible by adding more parameters. But what if we don't want to require every value be specified? Keeping with our greeting example, we could leave name as required (we need to know who we're greeting), but we want to allow the greeting itself to be customized as desired. If someone doesn't want to customize it, we provide a default value instead. To provide a default value to a parameter, we set it much in the same way we set a value for a variable - `parameterName = 'defaultValue'`. To see a full example:
 
 ```javascript
-function displayGreeting(name, salutation='Hello') {
+function displayGreeting(name, salutation = "Hello") {
   console.log(`${salutation}, ${name}`);
 }
 ```
@@ -92,10 +92,10 @@ function displayGreeting(name, salutation='Hello') {
 When we call the function, we can then decide if we want to set a value for `salutation`.
 
 ```javascript
-displayGreeting('Christopher');
+displayGreeting("Christopher");
 // displays "Hello, Christopher"
 
-displayGreeting('Christopher', 'Hi');
+displayGreeting("Christopher", "Hi");
 // displays "Hi, Christopher"
 ```
 
@@ -109,7 +109,7 @@ If a function does return something then the keyword `return` is used. The `retu
 
 ```javascript
 return myVariable;
-```  
+```
 
 We could create a function to create a greeting message and return the value back to the caller
 
@@ -123,7 +123,7 @@ function createGreetingMessage(name) {
 When calling this function we'll store the value in a variable. This is much the same way we'd set a variable to a static value (like `const name = 'Christopher'`).
 
 ```javascript
-const greetingMessage = createGreetingMessage('Christopher');
+const greetingMessage = createGreetingMessage("Christopher");
 ```
 
 ## Functions as parameters for functions
@@ -136,7 +136,7 @@ If you run the code below, after 3 seconds you'll see the message **3 seconds ha
 
 ```javascript
 function displayDone() {
-  console.log('3 seconds has elapsed');
+  console.log("3 seconds has elapsed");
 }
 // timer value is in milliseconds
 setTimeout(3000, displayDone);
@@ -151,8 +151,8 @@ When we are passing a function as a parameter we can bypass creating one in adva
 Let's rewrite the code above to use an anonymous function:
 
 ```javascript
-setTimeout(3000, function() {
-  console.log('3 seconds has elapsed');
+setTimeout(3000, function () {
+  console.log("3 seconds has elapsed");
 });
 ```
 
@@ -160,13 +160,13 @@ If you run our new code you'll notice we get the same results. We've created a f
 
 ### Fat arrow functions
 
-One shortcut common in a lot of programming languages (including JavaScript) is the ability to use what's called an **arrow** or **fat arrow** function. It uses a special indicator of `=>`, which looks like an arrow - thus the name! By using `=>`, we are able to skip the `function` keyword.
+One shortcut which is common in a lot of programming languages (including JavaScript) is the ability to use what's called an **arrow** or **fat arrow** function. It uses a special indicator of `=>`, which looks like an arrow - thus the name! By using `=>`, we are able to skip the `function` keyword.
 
 Let's rewrite our code one more time to use a fat arrow function:
 
 ```javascript
 setTimeout(3000, () => {
-  console.log('3 seconds has elapsed');
+  console.log("3 seconds has elapsed");
 });
 ```
 
@@ -181,6 +181,7 @@ You've now seen we have three ways to pass a function as a parameter and might b
 Can you articulate in one sentence the difference between functions and methods? Give it a try!
 
 ## Post-Lecture Quiz
+
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
 ## Review & Self Study
