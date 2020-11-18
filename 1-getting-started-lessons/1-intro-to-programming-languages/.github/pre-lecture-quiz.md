@@ -5,13 +5,13 @@
 - [ ] True
 - [ ] False
 
-1. Low level languages are a popular choice for:
+2. Low level languages are a popular choice for:
 
 - [ ] Websites
 - [ ] Hardware
 - [ ] Video game software
 
-1. Which one of these tools would most most likely be in a web developer's environment?
+3. Which one of these tools would most most likely be in a web developer's environment?
 
 - [ ] Hardware, like a Raspberry Pi
 - [ ] Browser DevTools
