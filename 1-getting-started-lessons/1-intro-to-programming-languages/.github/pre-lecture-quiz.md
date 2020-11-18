@@ -11,7 +11,7 @@
 - [ ] Hardware
 - [ ] Video game software
 
-3. Which one of these tools would most most likely be in a web developer's environment?
+3. Which one of these tools would most likely be in a web developer's environment?
 
 - [ ] Hardware, like a Raspberry Pi
 - [ ] Browser DevTools
