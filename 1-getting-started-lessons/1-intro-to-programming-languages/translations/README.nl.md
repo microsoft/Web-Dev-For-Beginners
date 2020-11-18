@@ -20,7 +20,7 @@ In deze les hebben we het over:
 
 ## Wat is programmeren?
 
-Programmeren (ook wel coderen genoemd) is het process van het schrijven van instructies voor een apparaat, zoals een computer of een mobieltje. We schrijven deze instructies met een programmeertaal, welke wordt geinterpreteerd door het apparaat. Deze sets van instructies staan bekend onder verschillende namen zoals; *programma*, *computer programma*, *applicatie (app)*, en *executable*.
+Programmeren (ook wel coderen genoemd) is het process van het schrijven van instructies voor een apparaat, zoals een computer of een mobieltje. We schrijven deze instructies met een programmeertaal, welke wordt geinterpreteerd door het apparaat. Deze sets van instructies staan bekend onder verschillende namen zoals; *programma*, *computer programma*, *applicatie (app)*, *script* en *executable*.
 
 Een *programma* kan van alles zijn wat met code is geschreven; websites, spellen, en mobiele apps zijn programmas. Hoewel het mogelijk is om een programma te maken zonder code te schrijven, is de onderliggende logica, dat wordt geinterpreteerd door het apparaat, hoogstwaarschijnlijk wel geschreven met code. Een programma dat *draait* of *code uitvoert* voert instructies uit. Het apparaat wat je nu gebruikt om deze les te volgen draait een programma om deze tekst op het scherm te tonen.
 
