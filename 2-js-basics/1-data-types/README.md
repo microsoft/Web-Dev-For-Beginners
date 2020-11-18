@@ -104,7 +104,7 @@ Constants are similar to variables, with two exceptions:
 
 ## Data Types
 
-Variables can store many different types of values, like `numbers` and `text`. These various types of values are known as the **Data type**. Data types are an important part of software development because it helps developers make decisions on how the code should be written and how the software should run. Furthermore, some data types have unique features that help transform or extract additional information in a value.
+Variables can store many different types of values, like numbers and text. These various types of values are known as the **data type**. Data types are an important part of software development because it helps developers make decisions on how the code should be written and how the software should run. Furthermore, some data types have unique features that help transform or extract additional information in a value.
 
 ✅ Data Types are also referred to as JavaScript data primitives, as they are the lowest-level data types that are provided by the language. There are 6 primitive data types: **string**, **number**, **bigint**, **boolean**, **undefined**, and **symbol**. Take a minute to visualize what each of these primitives might represent. What is a `zebra`? How about `0`? `true`?
 
@@ -164,7 +164,7 @@ let myString1 = "Hello";
 let myString2 = "World";
 
 `${myString1} ${myString2}!` //Hello World!
-`${myString1}, ${myString2}!`; //Hello World!
+`${myString1}, ${myString2}!` //Hello World!
 ```
 
 You can achieve your formatting goals with either method, but template literals will respect any spaces and line breaks.
