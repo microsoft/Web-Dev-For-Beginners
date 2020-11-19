@@ -1,29 +1,29 @@
-# Build a Space Game
+# 스페이스 게임 만들기
 
-A space game to teach more advanced JavaScript fundamentals
+고급 JavaScript 기초를 가르치는 스페이스 게임
 
-In this lesson you will learn how to build your own space game. If you've ever played the game "Space Invaders", this game has the same idea: to steer a spaceship and fire on monsters that come down from above. Here's what the finished game will look like:
+이 강의에서는 자신만의 스페이스 게임을 만드는 방법을 배웁니다. 만약 "Space Invaders" 게임을 해본 적이 있다면, 이 게임은 같은 아이디어를 가지고 있습니다: 우주선을 조종하고 위에서 내려오는 몬스터를 향해서 발사하는 것입니다. 완성된 게임의 모습은 다음과 같습니다.
 
 ![Finished game](images/pewpew.gif)
 
-In these six lessons you will learn the following:
+6개의 강의에서 다음을 학습합니다:
 
-- **Interact** with the Canvas element to draw things on a screen
-- **Understand** the cartesian coordinate system
-- **Learn** the Pub-Sub pattern to create sound game architecture that's easier to maintain and extend
-- **Leverage** Async/Await to load game resources
-- **Handle** keyboard events
+- **상호 작용** Canvas 요소를 사용한 화면 그림
+- **이해** cartesian 좌표 시스템
+- **학습** 유지 및 확장이 더 쉬운 건전한 게임 아키텍처를 만들기위한 Pub-Sub 패턴
+- **이점** 게임 리소스를 불러오기 위한 Async/Await
+- **제어** 키보드 이벤트
 
-## Overview
+## 개요
 
-- Theory
-   - [Introduction to building games with JavaScript](1-introduction/README.md)
-- Practice
-   - [Drawing to canvas](2-drawing-to-canvas/README.md)
-   - [Moving elements around the screen](3-moving-elements-around/README.md)
-   - [Collision detection](4-collision-detection/README.md)
-   - [Keeping score](5-keeping-score/README.md)
-   - [Ending and restarting the game](6-end-condition/README.md)
+- 이론
+   - [JavaScript를 사용한 게임 빌드 소개](1-introduction/README.md)
+- 실습
+   - [canvas로 그리기](2-drawing-to-canvas/README.md)
+   - [화면에 요소 이동](3-moving-elements-around/README.md)
+   - [충돌 감지](4-collision-detection/README.md)
+   - [점수 유지](5-keeping-score/README.md)
+   - [게임 종료 및 재시작](6-end-condition/README.md)
 
 ## Credits
 
