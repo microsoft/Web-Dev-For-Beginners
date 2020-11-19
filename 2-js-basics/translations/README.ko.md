@@ -1,14 +1,14 @@
-# Introduction to JavaScript
+# JavaScript 소개하기
 
-JavaScript is the language of the web. In these four lessons, you'll learn its basics.
+JavaScript는 웹의 언어입니다. 이 네 가지 강의에서 기초를 배우게됩니다.
 
-### Topics
+### 주제
 
-1. [Variables and Data Types](1-data-types/README.md)
-2. [Functions and Methods](2-functions-methods/README.md)
-3. [Making Decisions with JavaScript](3-making-decisions/README.md)
-4. [Arrays and Loops](4-arrays-loops/README.md)
+1. [변수와 데이터 타입](1-data-types/README.md)
+2. [함수와 메소드](2-functions-methods/README.md)
+3. [JavaScript로 결정하기](3-making-decisions/README.md)
+4. [배열과 반복](4-arrays-loops/README.md)
 
-### Credits
+### 크레딧
 
 These lessons were written with ♥️ by [Jasmine Greenaway](https://twitter.com/paladique), [Christopher Harrison](https://twitter.com/geektrainer) and [Chris Noring](https://twitter.com/chris_noring)
