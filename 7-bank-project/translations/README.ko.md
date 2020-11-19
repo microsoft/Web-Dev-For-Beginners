@@ -1,17 +1,17 @@
-# :dollar: Build a Bank
+# :dollar: 은행 만들기
 
-In this project, you'll learn how to build a fictional bank. These lessons include instructions on how to layout a web app and provide routes, build forms, manage state, and fetch data from an API from which you can fetch the bank's data.
+이 프로젝트에서는, 가상의 은행을 만드는 방법을 배웁니다. 이 강의에는 웹 앱을 레이아웃과 라우트를 제공하고, 폼을 작성하며 상태를 관리하고, 은행 데이터 API에서 데이터를 가져오는 방법에 대한 지침이 포함되어 있습니다.
 
 <img src="images/screen1.png" width="50%" height="auto"/><img src="images/screen2.png" width="50%" height="auto"/>
 
-## Lessons
+## 강의
 
-1. [HTML Templates and Routes in a Web App](1-template-route/README.md)
-2. [Build a Login and Registration Form](2-forms/README.md)
-3. [Methods of Fetching and Using Data](3-data/README.md)
-4. [Concepts of State Management](4-state-management/README.md)
+1. [웹 앱에서 HTML 템플릿과 라우트](1-template-route/README.md)
+2. [로그인과 가입 폼 제작](2-forms/README.md)
+3. [데이터를 가져오고 사용하는 방식](3-data/README.md)
+4. [상태 관리의 개념](4-state-management/README.md)
 
-### Credits
+### 크레딧
 
 These lessons were written with :hearts: by [Yohan Lasorsa](https://twitter.com/sinedied).
 
