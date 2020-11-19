@@ -70,52 +70,52 @@
 const MY_VARIABLE = 123;
 ```
 
-Constants are similar to variables, with two exceptions:
+상수는 변수와 유사하지만, 두 차이점이 있습니다:
 
-- **반드시 값이 있어야 합니다**. Constants must be initialized, or an error will occur when running code.
-- **참조는 변경 불가합니다**. The reference of a constant cannot be changed once initialized, or an error will occur when running code. Let's look at two examples:
-   - **Simple value**. The following is NOT allowed:
+- **반드시 값이 있어야 합니다**. 상수는 초기화를 하지 않는다면, 코드 실행 중에 오류가 발생합니다.
+- **참조는 변경 불가합니다**. 상수 참조는 초기화된 후에는 변경할 수 없으며, 코드 실행 중에 오류가 발생합니다. 두 가지 예를 살펴 보겠습니다:
+   - **Simple value**. 허용하지 않습니다:
    
       ```javascript
       const PI = 3;
       PI = 4; // not allowed
       ```
  
-   - **Object reference is protected**. The following is NOT allowed.
+   - **객체 참고는 보호됩니다**. 허용하지 않습니다:
    
       ```javascript
       const obj = { a: 3 };
       obj = { b: 5 } // not allowed
       ```
 
-    - **Object value is not protected**. The following IS allowed:
+    - **객체 값은 보호되지 않습니다**. 허용합니다:
     
       ```javascript
       const obj = { a: 3 };
       obj.a = 5;  // allowed
       ```
 
-      Above you are changing the value of the object but not the reference itself, which makes it allowed.
+      위는 객체의 값을 변경하지만 참조 자체는 변경하지 않으므로, 허용됩니다.
 
-   > Note, a `const` means the reference is protected from reassignment. The value is not _immutable_ though and can change, especially if it's a complex construct like an object.
+   > Note, `const`는 참조가 다시 할당되지 않도록 보호한다는 점을 의미합니다. 값은 _immutable_ 이 아니며 객체와 같은 복잡한 구조인 경우, 변경될 수 있습니다.
 
 ## 데이터 타입
 
-Variables can store many different types of values, like numbers and text. These various types of values are known as the **data type**. Data types are an important part of software development because it helps developers make decisions on how the code should be written and how the software should run. Furthermore, some data types have unique features that help transform or extract additional information in a value.
+변수는 숫자 및 텍스트와 같은, 다양한 타입의 값을 저장할 수 있습니다. 이러한 다양한 타입의 값을 **데이터 타입**이라고 합니다. 데이터 타입은 개발자가 코드 작성 방법과 소프트웨어 실행 방법에 대한 결정을 내리는 데 도움이 되므로 소프트웨어 개발의 중요한 부분입니다. 또한 일부 데이터 타입에는 값에서 추가 정보를 변환하거나 추출하는 데 도움이 되는 기능이 있습니다.
 
-✅ Data Types are also referred to as JavaScript data primitives, as they are the lowest-level data types that are provided by the language. There are 6 primitive data types: string, number, bigint, boolean, undefined, and symbol. Take a minute to visualize what each of these primitives might represent. What is a `zebra`? How about `0`? `true`?
+✅ 데이터 타입은 언어에서 제공하는 저수준 데이터 타입이기 때문에 JavaScript data primitives 라고 합니다. 6개의 기본 데이터 유형이 있습니다: 문자열, 숫자, bigint, 논리 자료형, undefined 그리고 심볼. 몇 분을 투자하여 각 기본 요소가 무엇을 나타낼 수 있는지 시각화하십시오. `zebra`은 무엇입니까? `0`? `true`는 어떤가요?
 
 ### 숫자
 
-In the previous section, the value of `myVariable` was a number data type.
+이전 세션에서, `myVariable`의 값은 숫자 데이터 유형입니다.
 
 `let myVariable = 123;`
 
-Variables can store all types of numbers, including decimals or negative numbers. Numbers also can be used with arithmetic operators, covered in the [next section](#operators).
+변수는 소수 또는 음수를 포함하여 모든 유형의 숫자를 저장할 수 있습니다. 숫자는 [next section](#operators)에서 다룰 산술 연산자와 함께 사용할 수도 있습니다.
 
 ### 산술 연산자
 
-There are several types of operators to use when performing arithmetic functions, and some are listed here:
+산술 함수를 수행할 때 사용할 여러 유형의 연산자가 있으며, 일부는 다음과 같습니다:
 
 | Symbol | Description                                                              | Example                          |
 | ------ | ------------------------------------------------------------------------ | -------------------------------- |
@@ -125,23 +125,23 @@ There are several types of operators to use when performing arithmetic functions
 | `/`    | **Division**: Calculates the quotient of two numbers                     | `1 / 2 //expected answer is 0.5` |
 | `%`    | **Remainder**: Calculates the remainder from the division of two numbers | `1 % 2 //expected answer is 1`   |
 
-✅ Try it! Try an arithmetic operation in your browser's console. Do the results surprise you?
+✅ 시도해보세요! 브라우저의 콘솔에서 산술 연산을 시도하십시오. 놀라운 결과인가요?
 
 ### 문자열
 
-Strings are sets of characters that reside between single or double quotes.
+문자열은 작은 따옴표 또는 큰 따옴표 사이에 있는 문자의 세트입니다.
 
 - `'This is a string'`
 - `"This is also a string"`
 - `let myString = 'This is a string value stored in a variable';`
 
-Remember to use quotes when writing a string, or else JavaScript will assume it's a variable name.
+문자열을 만들 때 따옴표를 사용해야합니다. 그렇지 않으면 JavaScript가 변수명으로 간주합니다.
 
 ### 문자열 서식
 
-Strings are textual, and will require formatting from time to time.
+문자열은 텍스트이며, 때때로 포맷팅이 필요합니다.
 
-To **concatenate** two or more strings, or join them together, use the `+` operator.
+둘 이상의 문자열을 **연결**하거나 결합하려면 `+` 연산자를 사용하세요.
 
 ```javascript
 let myString1 = "Hello";
@@ -153,9 +153,9 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ```
 
-✅ Why does `1 + 1 = 2` in JavaScript, but `'1' + '1' = 11?` Think about it. What about `'1' + 1`?
+✅ 왜 JavaScript에서 `1 + 1 = 2`이지만, `'1'+ '1'= 11` 일까요?  `'1' + 1`은 어떻습니까?
 
-**템플릿 리터럴** are another way to format strings, except instead of quotes, the backtick  is used. Anything that is not plain text must be placed inside placeholders `${ }`. This includes any variables that may be strings.
+**템플릿 리터럴** 따옴표 대신 backtick이 사용된다는 점을 제외하면, 문자열을 형식화하는 또 다른 방법입니다. 일반 텍스트가 아닌 모든 것은 placeholders `${ }`안에 배치해야합니다. 여기에는 문자열일 수도 있는 모든 변수가 포함됩니다.
 
 ```javascript
 let myString1 = "Hello";
@@ -165,18 +165,18 @@ let myString2 = "World";
 `${myString1}, ${myString2}!` //Hello World!
 ```
 
-You can achieve your formatting goals with either method, but template literals will respect any spaces and line breaks.
+어느 방법이든지 포맷팅 목표를 달성할 수 있지만, 템플릿 리터럴은 모든 공백과 줄 바꿈을 고려합니다.
 
-✅ When would you use a template literal vs. a plain string?
+✅ 템플릿 리터럴과 일반적인 문자열은 언제 사용합니까?
 
 ### 논리 자료형
 
-Booleans can be only two values: `true` or `false`. Booleans can help make decisions on which lines of code should run when certain conditions are met. In many cases, [operators](#operators) assist with setting the value of a Boolean and you will often notice and write variables being initialized or their values being updated with an operator.
+논리 자료형은 `true` 또는 `false` 두 가지 값만 가능합니다. 논리 자료형은 특정 조건이 충족되며 실행할 코드 라인을 결정하는 순간 도움이 될 수 있습니다. 대부분의 경우, [operators](#operators)는 논리 연산자 값을 설정하는 데 도움이 되며, 변수 초기화되거나 해당 값이 연산자로 업데이트되는 것을 알고 쓰는 경우가 많습니다.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ A variable can be considered 'truthy' if it evaluates to a boolean `true`. Interestingly, in JavaScript, [all values are truthy unless defined as falsy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+✅ 변수가 논리 자료형이 `true`로 설정되면 '참'으로 간주될 수 있습니다. 흥미롭게도, JavaScript에서는 [거짓으로 정의되지 않는다면 모든 값은 참입니다](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
 
 ---
 
@@ -189,7 +189,7 @@ JavaScript는 때때로 놀라운 방법으로 데이터 타입을 처리하는 
 
 ## 리뷰 & 자기주도 학습
 
-Take a look at [this list of JavaScript exercises](https://css-tricks.com/snippets/javascript/) and try one. 무엇을 배울 수 있나요?
+[이 JavaScript 실습 목록](https://css-tricks.com/snippets/javascript/)을 살펴보고 시도해보십시오. 무엇을 배울 수 있나요?
 
 ## 과제
 
