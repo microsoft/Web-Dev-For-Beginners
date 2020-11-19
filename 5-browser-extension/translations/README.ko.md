@@ -1,22 +1,22 @@
-# Building a browser extension
+# 브라우저 확장 만들기
 
-Building browser extensions is a fun and interesting way to think about the performance of your apps while building a different type of web asset. This module includes lessons on how browsers work and how to deploy a browser extension, how to build a form, call an API, and use local storage, and how to gauge the performance of your website and improve it.
+브라우저 확장을 만드는 것은 다른 타입의 웹 어셋을 빌드하면서 앱의 성능에 대해 생각할 수 있는 재미있고 흥미로운 방법입니다. 이 모듈에는 브라우저의 작동 방식과 브라우저 확장을 배포하는 방법, 폼을 만들고 API를 호출하며 로컬 저장소를 사용하는 방법과 웹 사이트의 성능을 측정하고 개선하는 방법에 대한 강의가 포함되어 있습니다.
 
-You'll build a  browser extension that works on Edge, Chrome, and Firefox. This extension, which is like a mini web site that is tailored to a very specific task, checks the [C02 Signal API](https://www.co2signal.com) for a given region's electricity usage and carbon intensity, and returns a reading on the region's carbon footprint.
+Edge, Chrome과 Firefox에서 작동하는 브라우저 확장을 만듭니다. 매우 특정한 작업에 맞춰진 작은 웹 사이트와 같은 확장은 특정 지역의 전기 사용량과 탄소 강도에 대한 [C02 Signal API](https://www.co2signal.com)를 확인하고, 해당 지역의 탄소 발자국에 대한 판독 값을 반환합니다.
 
-This extension can be called ad hoc by a user once an API key and region code is input into a form to determine local electricity usage and thereby offer data that can influence a user's electricity decisions. For example, it may be preferable to delay running a clothes dryer (a carbon-intense activity) during a period of high electricity usage in your region.
+이 확장 기능은 API 키와 지역 코드를 양식에 입력하여 지역 전기 사용량을 결정하고 사용자의 전기 결정에 영향을 줄 수 있는 데이터를 제공하면 사용자가 임시로 호출할 수 있습니다. 예로 들면, 해당 지역에서 전기 사용량이 많은 기간에는 의류 건조기(a carbon-intense activity) 작동을 연기하는 것이 좋습니다.
 
-### Topics
+### 주제
 
-1. [About the browser](1-about-browsers/README.md)
-2. [Forms and local storage](2-forms-browsers-local-storage/README.md)
-3. [Background tasks and performance](3-background-tasks-and-performance/README.md)
+1. [브라우저에 대하여](1-about-browsers/README.md)
+2. [폼과 로컬 저장소](2-forms-browsers-local-storage/README.md)
+3. [백그라운드 작업과 성능](3-background-tasks-and-performance/README.md)
 
-### Credits
+### 크레딧
 
 ![a green browser extension](extension-screenshot.png)
 
-## Credits
+## 크레딧
 
 The idea for this web carbon trigger was offered by Asim Hussain, lead at Microsoft of the Green Cloud Advocacy team and author of the [Green Principles](https://principles.green/). It was originally a [web site project](https://github.com/jlooper/green).
 
