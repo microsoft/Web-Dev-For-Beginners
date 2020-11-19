@@ -173,10 +173,10 @@ const quotes = [
     'Education never ends, Watson. It is a series of lessons, with the greatest for the last.',
 ];
 // store the list of words and the index of the word the player is currently typing
-const words = [];
+let words = [];
 let wordIndex = 0;
 // the starting time
-let startTime = DateTime.getTime();
+let startTime = Date.now();
 // page elements
 const quoteElement = document.getElementById('quote');
 const messageElement = document.getElementById('message');
