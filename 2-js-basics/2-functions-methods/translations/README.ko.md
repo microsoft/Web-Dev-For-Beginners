@@ -1,22 +1,22 @@
-# JavaScript Basics: Methods and Functions
+# JavaScript 기초: 메소드와 함수
 
 ![JavaScript Basics - Functions](images/webdev101-js-functions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 When we think about writing code, we always want to ensure our code is readable. While this sounds counterintuitive, code is read many more times than it's written. One core tool in a developer's toolbox to ensure maintainable code is the **function**.
 
 [![Methods and Functions](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Methods and Functions")
 
-## Functions
+## 함수
 
 At its core, a function is a block of code we can execute on demand. This is perfect for scenarios where we need to perform the same task multiple times; rather than duplicating the logic in multiple locations (which would make it hard to update when the time comes), we can centralize it in one location, and call it whenever we need the operation performed - you can even call functions from other functions!.
 
 Just as important is the ability to name a function. While this might seem trivial, the name provides a quick way of documenting a section of code. You could think of this as a label on a button. If I click on a button which reads "Cancel timer", I know it's going to stop running the clock.
 
-## Creating and calling a function
+## 함수 만들고 호출하기
 
 The syntax for a function looks like the following:
 
@@ -43,7 +43,7 @@ displayGreeting();
 
 > **NOTE:** There is a special type of function known as a **method**, which you've already been using! In fact, we saw this in our demo above when we used `console.log`. What makes a method different from a function is a method is attached to an object (`console` in our example), while a function is free floating. You will hear many developers use these terms interchangeably.
 
-### Function best practices
+### 좋은 함수 예시
 
 There are a handful of best practices to keep in mind when creating functions
 
@@ -51,7 +51,7 @@ There are a handful of best practices to keep in mind when creating functions
 - Use **camelCasing** to combine words
 - Keep your functions focused on a specific task
 
-## Passing information to a function
+## 함수에 정보 전달하기
 
 To make a function more reusable you'll often want to pass information into it. If we consider our `displayGreeting` example above, it will only display **Hello, world!**. Not the most useful function one could create. If we want to make it a little more flexible, like allowing someone to specify the name of the person to greet, we can add a **parameter**. A parameter (also sometimes called an **argument**), is additional information sent to a function.
 
@@ -79,7 +79,7 @@ displayGreeting('Christopher');
 // displays "Hello, Christopher!" when run
 ```
 
-## Default values
+## 기본 값
 
 We can make our function even more flexible by adding more parameters. But what if we don't want to require every value be specified? Keeping with our greeting example, we could leave name as required (we need to know who we're greeting), but we want to allow the greeting itself to be customized as desired. If someone doesn't want to customize it, we provide a default value instead. To provide a default value to a parameter, we set it much in the same way we set a value for a variable - `parameterName = 'defaultValue'`. To see a full example:
 
@@ -99,7 +99,7 @@ displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
 ```
 
-## Return values
+## 반환 값
 
 Up until now the function we built will always output to the [console](https://developer.mozilla.org/en-US/docs/Web/API/console). Sometimes this can be exactly what we're looking for, especially when we create functions which will be calling other services. But what if I want to create a helper function to perform a calculation and provide the value back so I can use it elsewhere?
 
@@ -126,7 +126,7 @@ When calling this function we'll store the value in a variable. This is much the
 const greetingMessage = createGreetingMessage('Christopher');
 ```
 
-## Functions as parameters for functions
+## 함수에 대한 파라미터로서의 기능
 
 As you progress in your programming career, you will come across functions which accept functions as parameters. This neat trick is commonly used when we don't know when something is going to occur or complete, but we know we need to perform an operation in response.
 
@@ -142,7 +142,7 @@ function displayDone() {
 setTimeout(3000, displayDone);
 ```
 
-### Anonymous functions
+### 익명 함수
 
 Let's take another look at what we've built. We're creating a function with a name which will be used one time. As our application gets more complex, we can see ourselves creating a lot of functions which will only be called once. This isn't ideal. As it turns out, we don't always need to provide a name!
 
@@ -158,7 +158,7 @@ setTimeout(3000, function() {
 
 If you run our new code you'll notice we get the same results. We've created a function, but didn't have to give it a name!
 
-### Fat arrow functions
+### 화살표 함수
 
 One shortcut common in a lot of programming languages (including JavaScript) is the ability to use what's called an **arrow** or **fat arrow** function. It uses a special indicator of `=>`, which looks like an arrow - thus the name! By using `=>`, we are able to skip the `function` keyword.
 
@@ -170,23 +170,23 @@ setTimeout(3000, () => {
 });
 ```
 
-### When to use each strategy
+### 각 strategy를 사용하는 경우
 
 You've now seen we have three ways to pass a function as a parameter and might be wondering when to use each. If you know you'll be using the function more than once, create it as normal. If you'll be using it for just the one location, it's generally best to use an anonymous function. Whether or not you use a fat arrow function or the more traditional `function` syntax is up to you, but you will notice most modern developers prefer `=>`.
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
-Can you articulate in one sentence the difference between functions and methods? Give it a try!
+함수와 메소드의 차이점을 한 문장으로 표현할 수 있나요? 시도해보세요!
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 It's worth [reading up a little more on arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), as they are increasingly used in code bases. Practice writing a function, and then rewriting it with this syntax.
 
-## Assignment
+## 과제
 
 [Fun with Functions](assignment.md)
