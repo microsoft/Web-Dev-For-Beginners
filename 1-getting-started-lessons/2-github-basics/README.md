@@ -82,13 +82,38 @@ Let's say you have a folder locally with some code project and you want to start
 
    Typically a `git status` command tells you things like what files are ready to be _saved_ to the repo or has changes on it that you might want to persist.
 
-1. **Add files to tracking**
+1. **Add all files for tracking**
+   This also called as staging files/ adding files to the staging area.
 
    ```bash
    git add .
    ```
 
-   The `git add` plus `.` argument indicates that all your files & changes for tracking.
+   The `git add` plus `.` argument indicates that all your files & changes for tracking. 
+
+1. **Add selected files for tracking**
+
+   ```bash
+   git add [file or folder name]
+   ```
+
+   This helps us to add only selected files to the staging area when we don't want to commit all files at once.
+
+1. **Unstage all files**
+
+   ```bash
+   git reset
+   ```
+
+   This command helps us to unstage all files at once.
+
+1. **Unstage a particular file**
+
+   ```bash
+   git reset [file or folder name]
+   ```
+
+   This command helps us to unstage only a particular file at once that we don't want to include for the next commit.
 
 1. **Persisting your work**. At this point you've added the files to a so called _staging area_. A place where Git is tracking your files. To make the change permanent you need to _commit_ the files. To do so you create a _commit_ with the `git commit` command. A _commit_ represents a saving point in the history of your repo. Type the following to create a _commit_:
 
