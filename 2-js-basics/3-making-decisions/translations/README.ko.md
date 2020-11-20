@@ -1,17 +1,16 @@
-# JavaScript Basics: Making Decisions
+# JavaScript 기초: 결정하기
 
 ![JavaScript Basics - Making decisions](images/webdev101-js-decisions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## 
-Pre-Lecture Quiz
+## 강의 전 퀴즈
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 Making decisions and controlling the order in which your code runs makes your code reusable and robust. This section covers the syntax for controlling data flow in JavaScript and its significance when used with Boolean data types
 
 [![Making Decisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
 
-## A Brief Recap on Booleans
+## 논리 자료형에 대한 간략한 요약
 
 Booleans can be only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.
 
@@ -22,7 +21,7 @@ Set your boolean to be true or false like this:
 
 ✅ Booleans are named after the English mathematician, philosopher and logician George Boole (1815–1864).
 
-## Comparison Operators and Booleans
+## 비교 연산자와 논리 연산자
 
 Operators are used to evaluate conditions by making comparisons that will create a Boolean value. The following is a list of operators that are frequently used.
 
@@ -37,7 +36,7 @@ Operators are used to evaluate conditions by making comparisons that will create
 
 ✅ Check your knowledge by writing some comparisons in your browser's console. Does any returned data surprise you?
 
-## If Statement
+## If 문
 
 The if statement will run code in between its blocks if the condition is true.
 
@@ -59,7 +58,7 @@ if (currentMoney >= laptopPrice){
 }
 ```
 
-## IF..Else Statement
+## IF..Else 문
 
 The `else` statement will run the code in between its blocks when the condition is false. It's optional with an `if` statement.
 
@@ -79,7 +78,7 @@ else{
 
 ✅ Test your understanding of this code and the following code by running it in a browser console. Change the values of the currentMoney and laptopPrice variables to change the returned `console.log()`.
 
-## Logical Operators and Booleans
+## 논리 연산자와 논리 자료형
 
 Decisions might require more than one comparison, and can be strung together with logical operators to produce a Boolean value.
 
@@ -89,7 +88,7 @@ Decisions might require more than one comparison, and can be strung together wit
 | `||`   | **Logical OR**: Compares two Boolean expressions. Returns true if at least one side is true     | `(5 > 6) || (5 < 6) //One side is false, other is true. Returns true`   |
 | `!`    | **Logical NOT**: Returns the opposite value of a Boolean expression                             | `!(5 > 6) // 5 is not greater than 6, but "!" will return true`         |
 
-## Conditions and Decisions with Logical Operators
+## 논리 연산자의 조건 및 결정
 
 Logical operators can be used to form conditions in if..else statements.
 
@@ -108,7 +107,7 @@ else {
 }
 ```
 
-### Negation operator
+### 부정 연산자
 
 You've seen so far how if you can use an `if...else` statement to create conditional logic. Anything that goes into an `if` needs to evaluate to true/false. By using the `!` operator you can _negate_ the expression. It would look like so:
 
@@ -120,7 +119,7 @@ if (!condition) {
 }
 ```
 
-### Ternary expressions
+### 삼항식
 
 `if...else` isn't the only way to express decision logic. You can also use something called a ternary operator. The syntax for it looks like this:
 
@@ -156,20 +155,19 @@ if (firstNumber > secondNumber) {
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Create a program that is written first with logical operators, and then rewrite it using a ternary expression. What's your preferred syntax?
 
-## 
-Post-Lecture Quiz
+## 강의 후 퀴즈
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Read more about the many operators available to the user [on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
 
 Go through Josh Comeau's wonderful [operator lookup](https://joshwcomeau.com/operator-lookup/)!
 
-## Assignment
+## 과제
 
 [Operators](assignment.md)
