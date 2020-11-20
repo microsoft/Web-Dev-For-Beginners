@@ -233,8 +233,6 @@ Web開発者は、自分のコードがWeb上でどのように実行される�
 JavaScriptとJavaの特徴は？
 COBOLとGoについては？
 
-Compare some programming languages. What are some of the unique traits of JavaScript vs. Java? How about COBOL vs. Go?
-
 ## 事後テスト
 [事後テスト](.github/post-lecture-quiz.ja.md)
 
@@ -244,8 +242,6 @@ Compare some programming languages. What are some of the unique traits of JavaSc
 ひとつの言語で1行書いて実行したら、次は別のふたつの言語で同じことをやってみてください。
 なにかわかりましたか？
 
-Study a bit on the different languages available to the programmer. Try to write a line in one language, and then redo it in two others. What do you learn? 
-
-## アサイン
+## 課題
 
 [assignment.md](../assignment.md)
