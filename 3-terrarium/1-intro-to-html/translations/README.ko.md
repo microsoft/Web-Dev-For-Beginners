@@ -9,62 +9,62 @@
 
 ### 소개
 
-HTML, or HyperText Markup Language, is the 'skeleton' of the web. If CSS 'dresses up' your HTML and JavaScript brings it to life, HTML is the body of your web application. HTML's syntax even reflects that idea, as it includes "head", "body", and "footer" tags.
+HTML, HyperText Markup Language는 웹의 '뼈대' 입니다. CSS가 HTML과 JavaScript를 '꾸미면' HTML은 웹 애플리케이션의 본체입니다. HTML의 구문은 "head", "body" 그리고 "footer" 태그를 포함하므로 이러한 상상을 반영합니다.
 
-In this lesson, we're going to use HTML to layout the 'skeleton' of our virtual terrarium's interface. It will have a title and three columns: a right and a left column where the draggable plants live, and a center area that will be the actual glass-looking terrarium. By the end of this lesson, you will be able to see the plants in the columns, but the interface will look a little strange; don't worry, in the next section you will add CSS styles to the interface to make it look better.
+이 강의에서는, HTML을 사용하여 가상 terrarium 인터페이스의 '뼈대'을 구상할 것입니다. 제목과 3개의 열을 가집니다: 드래그 가능한 식물이 살고 있는 오른쪽과 왼쪽 열 그리고 유리처럼 보이는 테라리움이 될 가운데 영역이 있습니다. 이 강의가 끝나면, 열에서 식물을 볼 수 있지만, 인터페이스가 약간 이상하게 보일 것입니다; 걱정하지 마세요. 다음 강의에서는 인터페이스에 CSS 스타일을 추가하여 더 좋아 보이게 만들 것입니다.
 
 ### 작업
 
-On your computer, create a folder called 'terrarium' and inside it, a file called 'index.html'. You can do this in Visual Studio Code after you create your terrarium folder by opening a new VS Code window, clicking 'open folder', and navigating to your new folder. Click the small 'file' button in the Explorer pane and create the new file:
+컴퓨터에서, 'terrarium' 이라는 폴더를 만들고 그 안에 'index.html' 파일을 만듭니다. 새 VS Code 윈도우를 열어서 'open folder'를 클릭하고, terrarium 폴더를 만들면 Visual Studio Code에서 이 작업을 할 수 있습니다. 탐색기에서 작은 'file' 버튼을 클릭하고 새 파일을 만듭니다:
 
 ![explorer in VS Code](images/vs-code-index.png)
 
-Or
+또는
 
-Use these commands on your git bash:
+git bash에서 아래 명령어를 수행합니다:
 * `mkdir terrarium`
 * `cd terrarium`
 * `touch index.html`
-* `code index.html` or `nano index.html`
+* `code index.html` 또는 `nano index.html`
 
-> index.html files indicate to a browser that it is the default file in a folder; URLs such as `https://anysite.com/test` might be built using a folder structure including a folder called `test` with `index.html` inside it; `index.html` doesn't have to show in a URL.
+> index.html 파일은 브라우저에 폴더의 기본 파일임을 나타냅니다; `https://anysite.com/test`와 같은 URL은 `index.html`이 내부에 있는 `test`라는 폴더에 포함되어 있는 폴더 구조를 사용하여 제작될 수 있습니다; `index.html`은 URL에 표시할 필요가 없습니다.
 
 ---
 
 ## DocType과 html 태그
 
-The first line of an HTML file is its doctype. It's a little surprising that you need to have this line at the very top of the file, but it tells older browsers that the browser needs to render the page in a standard mode, following the current html specification.
+HTML 파일의 첫 번째 줄은 doctype입니다. 파일 최상단에 줄이 존재해야 된다는 사실에 살짝 놀랐지만, 현재 html 사양에 따라 페이지를 표준 모드로 렌더링해야한다고 오래된 브라우저에 알려줍니다.
 
-> Tip: in VS Code, you can hover over a tag and get information about its use from the MDN Reference guides.
+> Tip: VS Code에서는, 태그 위에 마우스를 가져가면 MDN 레퍼런스 가이드에서 정보를 얻을 수 있습니다.
 
-The second line should be the `<html>` tag's opening tag, followed right now by its closing tag `</html>`. These tags are the root elements of your interface.
+두 번째 줄에는 `<html>`이 열어주는 태그이며 그 뒤에 바로 닫는 태그로 `</html>`이 와야합니다. 이러한 태그는 인터페이스의 상위 요소입니다.
 
 ### 작업
 
-Add these lines at the top of your `index.html` file:
+`index.html` 파일의 상단에 해당 줄들을 추가합니다:
 
 ```HTML
 <!DOCTYPE html>
 <html></html>
 ```
 
-✅ There are a few different modes that can be determined by setting the DocType with a query string: [Quirks Mode and Standards Mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). These modes used to support really old browsers that aren't normally used nowadays (Netscape Navigator 4 and Internet Explorer 5). You can stick to the standard doctype declaration.
+✅ 쿼리 문자열로 DocType을 설정하여 결정할 수 있는 몇 가지 모드가 있습니다: [Quirks Mode and Standards Mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). 이 모드는 요즘 잘 사용하지 않는 오래된 브라우저를 지원하는 데 사용되었습니다 (Netscape Navigator 4 및 Internet Explorer 5). 표준 doctype 선언을 할 수도 있습니다.
 
 ---
 
 ## 문서의 'head'
 
-The 'head' area of the HTML document includes crucial information about your web page, also known as [metadata](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta). In our case, we tell the web server to which this page will be sent to be rendered, these four things:
+HTML 문서의 'head' 영역에는 [metadata](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)라고 하는 웹 페이지의 중요한 정보가 포함되어 있습니다. 우리의 경우에는, 이 페이지가 렌더링될 웹 서버에 다음 4가지를 알립니다.
 
--   the page's title
--   page metadata including:
-    -   the 'character set', telling about what character encoding is used in the page
-    -   browser information, including `x-ua-compatible` which indicates that the IE=edge browser is supported
-    -   information about how the viewport should behave when it is loaded. Setting the viewport to have an initial scale of 1 controls the zoom level when the page is first loaded.
+-   페이지의 제목
+-   페이지 메타데이터 포함:
+	- 페이지에서 사용되는 문자 인코딩을 알려주는, 'character set'
+    - IE=edge 브라우저가 지원됨을 나타내는 `x-ua-compatible`을 포함한, 브라우저 정보
+    - viewport가 볼러질 때 어떻게 동작해야되는 지에 대한 정보. viewport를 초기 배율 1로 설정하며 처음 불러올 때 줌 수준이 제어됩니다.
 
 ### 작업
 
-Add a 'head' block to your document in between the opening and closing `<html>` tags.
+문서의 열고 닫는 `<html>` 태그 사이에 'head' 블록을 추가합니다.
 
 ```html
 <head>
@@ -75,15 +75,15 @@ Add a 'head' block to your document in between the opening and closing `<html>` 
 </head>
 ```
 
-✅ What would happen if you set a viewport meta tag like this: `<meta name="viewport" content="width=600">`? Read more about the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ `<meta name="viewport" content="width=600">`과 같이 viewport 메타 태그를 설정하면 어떻게 되나요? [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)에 대해 자세히 알아보세요.
 
 ---
 
 ## 문서의 `body`
 
-### HTML Tags
+### HTML 태그
 
-In HTML, you add tags to your .html file to create elements of a web page. Each tag usually has an opening and closing tag, like this: `<p>hello</p>` to indicate a paragraph. Create your interface's body by adding a set of `<body>` tags inside the `<html>` tag pair; your markup now looks like this:
+HTML에서는, .html 파일에 태그를 추가하여 웹 페이지의 요소를 만듭니다. 각 태그에는 단락을 나타내기 위한 `<p>hello</p>` 같이 열고 닫는 태그가 있습니다. `<html>` 태그 쌍 안에 `<body>` 태그 세트를 추가하여 인터페이스의 본문을 만듭니다; 이제 마크업은 다음과 같습니다:
 
 ### 작업
 
@@ -100,17 +100,17 @@ In HTML, you add tags to your .html file to create elements of a web page. Each 
 </html>
 ```
 
-Now, you can start building out your page. Normally, you use `<div>` tags to create the separate elements in a page. We'll create a series of `<div>` elements which will contain images.
+이제 페이지 만들 수 있습니다. 일반적으로 `<div>` 태그를 사용하여 페이지에 별도의 요소를 만듭니다. 이미지를 포함한 일련의 `<div>`요소를 만듭니다.
 
 ### 이미지
 
-One html tag that doesn't need a closing tag is the `<img>` tag, because it has a `src` element that contains all the information the page needs to render the item.
+페이지가 아이템을 렌더링하면서 필요한 모든 정보가 `src` 요소에 들어있기 때문에, `<img>` 태그는 닫는 태그가 필요하지 않은 html 태그입니다.
 
-Create a folder in your app called `images` and in that, add all the images in the [source code folder](../images); (there are 14 images of plants).
+앱에 `images` 라는 폴더를 만들고, [소스코드 폴더](../images)에 모든 이미지(식물 14개의 이미지)를 모두 추가합니다.
 
 ### 작업
 
-Add those plant images into two columns between the `<body></body>` tags:
+식물 이미지를 `<body></body>` 태그 사이의 두 열에 추가합니다:
 
 ```html
 <div id="page">
@@ -163,37 +163,37 @@ Add those plant images into two columns between the `<body></body>` tags:
 </div>
 ```
 
-> Note: Spans vs. Divs. Divs are considered 'block' elements, and Spans are 'inline'. What would happen if you transformed these divs to spans?
+> Note: Spans vs. Divs. Div는 'block' 요소로 간주되고, Span은 'inline'입니다. 이 div를 spans으로 변환하면 어떻게 될까요?
 
-With this markup, the plants now show up on the screen. It looks pretty bad, because they aren't yet styled using CSS, and we'll do that in the next lesson.
+이 마크업을 사용하면, 이제 식물이 화면에 출력됩니다. 아직 CSS로 스타일이 지정되지 않았기 때문에 안 이뻐보입니다. 다음 강의에 그렇게 할 것입니다.
 
-Each image has an alt tag that will appear even if you can't see or render an image. This is an important element to include for accessibility. Learn more about accessibility in future lessons; for now, remember that the alt attribute provides alternative information for an image if a user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
+각 이미지에는 이미지를 보거나 렌더링 할 수 없는 경우에 보여지는 alt 태그가 있습니다. 이건 접근성을 위해 있어야 할 중요한 요소입니다. 이후 강의에서 접근성에 대해 자세히 알아보십시오. 지금은 어떤 이유로 이미지를 볼 수 없는 경우(연결이 느리거나, src 속성에 오류가 있거나, 스크린 리더를 사용하는 경우) alt 속성이 이미지의 대체 정보를 제공한다는 점을 기억하시기 바랍니다.
 
-✅ Did you notice that each image has the same alt tag? Is this good practice? Why or why not? Can you improve this code?
+✅ 각 이미지에 같은 alt 태그가 있다는 것을 알았습니까? 이건 좋은 습관일까요? 어떤 이유일까요? 이 코드를 개선할 수 있나요?
 
 ---
 
 ## 시멘틱 마크업
 
-In general, it's preferable to use 'semantics' when writing HTML. What does that mean? It means that you use HTML tags the way they were designed: to represent its data; so an H1 tag should always be present on a page
+일반적으로, HTML을 작성할 때 'semantics'을 사용하는 것이 좋습니다. 무슨 뜻일까요? 이는 HTML 태그를 디자인된 방식으로 사용한다는 것을 의미합니다: 데이터를 표현하기 위해; 따라서 H1 태그는 항상 페이지에 존재해야 합니다
 
-Add the following line right below your opening `<body>` tag:
+`<body>` 여는 태그 바로 아래에 다음 줄을 추가합니다:
 
 ```html
 <h1>My Terrarium</h1>
 ```
 
-Using semantic markup such as having headers be `<h1>` and unordered lists be rendered as `<ul>` helps screen readers navigate through a page. In general, buttons should be written as `<button>` and lists should be `<li>`. While it's _possible_ to use specially styled `<span>` elements with click handlers to mock buttons, it's better for differently-abled users to use technologies to determine where on a page a button resides, and to interact with it, if the element appears as a button. For this reason, try to use semantic markup as much as possible.
+헤더가 `<h1>`이고 순서가 지정되지 않은 목록은 `<ul>`로 렌더링하는 것처럼 마크업을 사용하면 스크린 리더가 페이지를 탐색하는 데 도움이 됩니다. 일반적으로, 버튼은 `<button>`으로, 목록은 `<li>`로 작성해야 합니다. 버튼을 구상하기 위해서 클릭 핸들러와 특별히 스타일이 지정된 `<span>` 요소를 사용 _가능하지만_ , differently-abled 사용자는 기술을 사용하여 페이지에 버튼이 있는 위치를 확인하므로 버튼으로 상호 작용하는 것이 더 좋습니다. 이러한 이유로, 가능한 시맨틱 마크업을 사용하십시오.
 
-✅ Take a look at a screen reader and [how it interacts with a web page](https://www.youtube.com/watch?v=OUDV1gqs9GA). Can you see why having non semantic markup might confuse the user?
+✅ 스크린 리더를 살펴보고 [웹 페이지와 상호 작용하는 방식](https://www.youtube.com/watch?v=OUDV1gqs9GA)을 살펴보세요. 의미 없는 마크업이 사용자를 혼란스럽게 하는 이유를 알 수 있습니까?
 
 ## terrarium
 
-The last part of this interface involves creating markup that will be styled to create a terrarium.
+이 인터페이스의 마지막 부분은 terrarium을 만들기 위해 스타일 지정할 마크업을 만드는 것입니다.
 
 ### 작업:
 
-Add this markup above the last `</div>` tag:
+마지막 `</div>` 태그 위에 이 마크업을 놓습니다:
 
 ```html
 <div id="terrarium">
@@ -207,13 +207,13 @@ Add this markup above the last `</div>` tag:
 </div>
 ```
 
-✅ Even though you added this markup to the screen, you see absolutely nothing render. Why?
+✅ 이 마크업을 화면에 추가했지만, 전혀 렌더링이 안됩니다. 왜 그럴까요?
 
 ---
 
 ## 🚀 도전
 
-There are some wild 'older' tags in HTML that are still fun to play with, though you shouldn't use deprecated tags such as [these tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) in your markup. Still, can you use the old `<marquee>` tag to make the h1 title scroll horizontally? (if you do, don't forget to remove it afterwards)
+HTML에는 여전히 재미있고 '오래된' 태그가 있지만, 마크업에서는 [이러한 태그](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)처럼 더 이상 사용되지 않는 태그를 쓰면 안됩니다. 그래도, 예전 `<marquee>` 태그를 사용하여 h1 제목을 가로로 스크롤할 수 있습니까? (한다면, 나중에 제거하는 것을 잊지 마십시오)
 
 ## 강의 후 퀴즈
 
@@ -221,9 +221,9 @@ There are some wild 'older' tags in HTML that are still fun to play with, though
 
 ## 리뷰 & 자기주도 학습
 
-HTML is the 'tried and true' building block system that has helped build the web into what it is today. Learn a little about its history by studying some old and new tags. Can you figure out why some tags were deprecated and some added? What tags might be introduced in the future?
+HTML은 웹을 오늘 날의 웹으로 구축하는 데 도움이 준 'tried and true' 빌딩 블록 시스템입니다. 오래된 태그와 새로운 태그를 연구하여 그 역사에 대해 조금 배우십시오. 일부는 더 이상 안 쓰고 일부는 새로 만들어진 이유를 알 수 있습니까? 앞으로 어떤 태그가 도입될까요?
 
-Learn more about building sites for the web and mobile devices at [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=cxaall-4621-cxall).
+[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=cxaall-4621-cxall)에서 웹과 모바일용 사이트 제작에 대해 자세히 알아보세요.
 
 
 ## 과제
