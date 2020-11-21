@@ -1,13 +1,13 @@
-# Terrarium Project Part 3: DOM Manipulation and a Closure
+# Terrarium 프로젝트 파트 3: DOM 조작과 클로저
 
 ![DOM and a closure](images/webdev101-js.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-### Introduction
+### 소개
 
 Manipulating the DOM, or the "Document Object Model", is a key aspect of web development. According to [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), "The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web." The challenges around DOM manipulation on the web have often been the impetus behind using JavaScript frameworks instead of vanilla JavaScript to manage the DOM, but we will manage on our own!
 
@@ -23,11 +23,11 @@ We will use a closure to manipulate the DOM.
 
 In this lesson, we will complete our interactive terrarium project by creating the JavaScript that will allow a user to manipulate the plants on the page.
 
-### Prequisite
+### 준비물
 
 You should have the HTML and CSS for your terrarium built. By the end of this lesson you will be able to move the plants into and out of the terrarium by dragging them.
 
-### Task
+### 작업
 
 In your terrarium folder, create a new file called `script.js`. Import that file in the `<head>` section:
 
@@ -38,11 +38,11 @@ In your terrarium folder, create a new file called `script.js`. Import that file
 > Note: use `defer` when importing an external JavaScript file into the html file so as to allow the JavaScript to execute only after the HTML file has been fully loaded. You could also use the `async` attribute, which allows the script to execute while the HTML file is parsing, but in our case, it's important to have the HTML elements fully available for dragging before we allow the drag script to be executed.
 ---
 
-## The DOM elements
+## DOM 요소
 
 The first thing you need to do is to create references to the elements that you want to manipulate in the DOM. In our case, they are the 14 plants currently waiting in the side bars.
 
-### Task
+### 작업
 
 ```html
 dragElement(document.getElementById('plant1'));
@@ -67,7 +67,7 @@ What's going on here? You are referencing the document and looking through its D
 
 ---
 
-## The Closure
+## 클로저
 
 Now you are ready to create the dragElement closure, which is an outer function that encloses an inner function or functions (in our case, we will have three). 
 
@@ -89,7 +89,7 @@ In this example, the displayCandy function surrounds a function that pushes a ne
 
 ✅ How can you make the `candy` array accessible? Try moving it outside the closure. This way, the array becomes global, rather than remaining only available to the closure's local scope.
 
-### Task
+### 작업
 
 Under the element declarations in `script.js`, create a function:
 
@@ -112,11 +112,11 @@ In addition, the terrariumElement that is passed to this function is assigned a 
 
 ---
 
-## The Pointerdrag function
+## Pointerdrag 함수
 
 The terrariumElement is ready to be dragged around; when the `onpointerdown` event is fired, the function pointerDrag is invoked. Add that function right under this line: `terrariumElement.onpointerdown = pointerDrag;`:
 
-### Task 
+### 작업 
 
 ```javascript
 function pointerDrag(e) {
@@ -145,11 +145,11 @@ document.onpointerup = stopElementDrag;
 ```
 Now you are indicating that you want the plant to be dragged along with the pointer as you move it, and for the dragging gesture to stop when you deselect the plant. `onpointermove` and `onpointerup` are all parts of the same API as `onpointerdown`. The interface will throw errors now as you have not yet defined the `elementDrag` and the `stopElementDrag` functions, so build those out next.
 
-## The elementDrag and stopElementDrag functions
+## elementDrag와 stopElementDrag 함수
 
 You will complete your closure by adding two more internal functions that will handle what happens when you drag a plant and stop dragging it. The behavior you want is that you can drag any plant at any time and place it anywhere on the screen. This interface is quite un-opinionated (there is no drop zone for example) to allow you to design your terrarium exactly as you like it by adding, removing, and repositioning plants.
 
-### Task
+### 작업
 
 Add the `elementDrag` function right after the closing curly bracket of `pointerDrag`:
 
@@ -172,7 +172,7 @@ As you drag, you reassign `pos1` by making it equal to `pos3` (which you set ear
 
 All this recalculation of positioning allows you to fine-tune the behavior of the terrarium and its plants.
 
-### Task 
+### 작업 
 
 The final task to complete the interface is to add the `closeElementDrag` function after the closing curly bracket of `elementDrag`:
 
@@ -193,15 +193,15 @@ Now you have completed your project!
 
 ---
 
-## 🚀Challenge
+## 🚀 도전
 
 Add new event handler to your closure to do something more to the plants; for example, double-click a plant to bring it to the front. Get creative!
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 While dragging elements around the screen seems trivial, there are many ways to do this and many pitfalls, depending on the effect you seek. In fact, there is an entire [drag and drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API) that you can try. We didn't use it in this module because the effect we wanted was somewhat different, but try this API on your own project and see what you can achieve.
 
@@ -209,7 +209,7 @@ Find more information on pointer events on the [W3C docs](https://www.w3.org/TR/
 
 Always check browser capabilities using [CanIUse.com](https://caniuse.com/).
 
-## Assignment
+## 과제
 
 [Work a bit more with the DOM](assignment.md)
 

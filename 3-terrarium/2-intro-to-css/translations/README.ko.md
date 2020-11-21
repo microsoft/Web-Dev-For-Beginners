@@ -1,13 +1,13 @@
-# Terrarium Project Part 2: Introduction to CSS
+# Terrarium 프로젝트 파트 2: CSS 소개
 
 ![Introduction to CSS](images/webdev101-css.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-### Introduction
+### 소개
 
 CSS, or Cascading Style Sheets, solve an important problem of web development: how to make your web site look nice. Styling your apps makes them more usable and nicer-looking; you can also use CSS to create Responsive Web Design (RWD) - allowing your apps to look good no matter what screen size they are displayed on. CSS is not only about making your app look nice; its spec includes animations and transforms that can enable sophisticated interactions for your apps. The CSS Working Group helps maintain current CSS specifications; you can follow their work at [World Wide Web Consortium's site](https://www.w3.org/Style/CSS/members).
 
@@ -15,11 +15,11 @@ CSS, or Cascading Style Sheets, solve an important problem of web development: h
 
 In this lesson, we're going to add styles to our online terrarium and learn more about several CSS concepts: the cascade, inheritance, and the use of selectors, positioning, and using CSS to build layouts. In the process we will layout the terrarium and create the actual terrarium itself.
 
-### Prequisite
+### 준비물
 
 You should have the HTML for your terrarium built and ready to be styled.
 
-### Task
+### 작업
 
 In your terrarium folder, create a new file called `style.css`. Import that file in the `<head>` section:
 
@@ -29,11 +29,11 @@ In your terrarium folder, create a new file called `style.css`. Import that file
 
 ---
 
-## The Cascade
+## Cascade
 
 Cascading Style Sheets incorporate the idea that the styles 'cascade' such that the application of a style is guided by its priority. Styles set by a web site author take priority over those set by a browser. Styles set 'inline' take priority over those set in an external style sheet.
 
-### Task
+### 작업
 
 Add the inline style "color: red" to your `<h1>` tag:
 
@@ -53,11 +53,11 @@ h1 {
 
 ---
 
-## Inheritance
+## 상속
 
 Styles are inherited from an ancestor style to a descendent, such that nested elements inherit the styles of their parents.
 
-### Task
+### 작업
 
 Set the body's font to a given font, and check to see a nested element's font:
 
@@ -75,9 +75,9 @@ Open your browser's console to the 'Elements' tab and observe the H1's font. It 
 
 ---
 
-## CSS Selectors
+## CSS 선택자
 
-### Tags
+### 태그
 
 So far, your `style.css` file has only a few tags styled, and the app looks pretty strange:
 
@@ -94,7 +94,7 @@ h1 {
 
 This way of styling a tag gives you control over unique elements, but you need to control the styles of many plants in your terrarium. To do that, you need to leverage CSS selectors.
 
-### Ids
+### Id
 
 Add some style to layout the left and right containers. Since there is only one left container and only one right container, they are given ids in the markup. To style them, use `#`:
 
@@ -128,7 +128,7 @@ Here, you have placed these containers with absolute positioning to the far left
 <div id="left-container" class="container"></div>
 ```
 
-### Classes
+### 클래스
 
 In the example above, you styled two unique elements on the screen. If you want styles to apply to many elements on the screen, you can use CSS classes. Do this to layout the plants in the left and right containers.
 
@@ -169,7 +169,7 @@ Also notable is the use of z-index, which controls the relative altitude of an e
 
 ✅ Why do you need both a plant holder and a plant CSS selector?
 
-## CSS Positioning
+## CSS 포지셔닝
 
 Mixing position properties (there are static, relative, fixed, absolute, and sticky positions) can be a little tricky, but when done properly it gives you good control over the elements on your pages.
 
@@ -183,7 +183,7 @@ In our sample, the `plant-holder` is a relative-positioned element that is posit
 
 ✅ Experiment with switching the types of positioning of the side containers and the plant-holder. What happens?
 
-## CSS Layouts
+## CSS 레이아웃
 
 Now you will use what you learned to build the terrarium itself, all using CSS!
 
@@ -242,7 +242,7 @@ Note the use of percentages here, even for the `border-radius`. If you scale you
 
 ---
 
-## 🚀Challenge
+## 🚀 도전
 
 Add a 'bubble' shine to the left bottom area of the jar to make it look more glasslike. You will be styling the `.jar-glossy-long` and `.jar-glossy-short` to look like a reflected shine. Here's how it would look:
 
@@ -250,14 +250,14 @@ Add a 'bubble' shine to the left bottom area of the jar to make it look more gla
 
 To complete the post-lecture quiz, go through this Learn module: [Style your HTML app with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 CSS seems deceptively straightforward, but there are many challenges when trying to style an app perfectly for all browsers and all screen sizes. CSS-Grid and Flexbox are tools that have been developed to make the job a little more structured and more reliable. Learn about these tools by playing [Flexbox Froggy](https://flexboxfroggy.com/) and [Grid Garden](https://codepip.com/games/grid-garden/).
 
-## Assignment
+## 과제
 
 [CSS Refactoring](assignment.md)
