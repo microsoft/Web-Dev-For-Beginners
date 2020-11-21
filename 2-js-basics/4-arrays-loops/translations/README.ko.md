@@ -1,17 +1,16 @@
-# JavaScript Basics: Arrays and Loops
+# JavaScript 기초: 배열과 반복
 
 ![JavaScript Basics - Arrays](images/webdev101-js-arrays.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## 
-Pre-Lecture Quiz
+## 강의 전 퀴즈
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
+이 강의에서는 웹에서 상호 작용을 제공하는 언어인 JavaScript의 기본 사항을 다룹니다. 데이터를 컨트롤하는 데 사용하는 배열과 반복문에 대해 알아 봅니다.
 
 [![Arrays and Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
 
-## Arrays
+## 배열
 
 Working with data is a common task for any language, and it's a much easier task when data is organized in a structural format, such as arrays. With arrays, data is stored in a structure similar to a list. One major benefit of arrays is that you can store different types of data in one array.
 
@@ -57,11 +56,11 @@ iceCreamFlavors.length; //5
 
 ✅ Try it yourself! Use your browser's console to create and manipulate an array of your own creation.
 
-## Loops
+## 반복문
 
 Loops allow for repetitive or **iterative** tasks, and can save a lot of time and code. Each iteration can vary in their variables, values, and conditions. There are different types of loops in JavaScript, and they have small differences, but essentially do the same thing: loop over data.
 
-### For Loop
+### For 반복문
 
 The `for` loop requires 3 parts to iterate:
     - `counter` A variable that is typically initialized with a number that counts the number of iterations.
@@ -77,7 +76,7 @@ The `for` loop requires 3 parts to iterate:
 
 ✅ Run this code in a browser console. What happens when you make small changes to the counter, condition, or iteration expression? Can you make it run backwards, creating a countdown?
 
-### While loop
+### While 반복문
 
 Unlike the syntax for the `for` loop, `while` loops only require a condition that will stop the loop when `true`. Conditions in loops usually rely on other values like counters, and must be managed during the loop. Starting values for counters must be created outside the loop, and any expressions to meet a condition, including changing the counter must be maintained inside the loop.
 
@@ -92,7 +91,7 @@ while (i < 10) {
 
 ✅ Why would you choose a for loop vs. a while loop? 17K viewers had the same question on StackOverflow, and some of the opinions [might be interesting to you](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
 
-## Loops and Arrays
+## 반복문과 배열
 
 Arrays are often used with loops because most conditions require the length of the array to stop the loop, and the index can also be the counter value.
 
@@ -108,19 +107,18 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 There are other ways of looping over arrays other than for and while loops. There are [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), and [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Rewrite your array loop using one of these techniques.
 
-## 
-Post-Lecture Quiz
+## 강의 후 퀴즈
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Arrays in JavaScript have many methods attached to them, extremely useful for data manipulation. [Read up on these methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) and try some of them out (like push, pop, slice and splice) on an array of your creation.
 
-## Assignment
+## 과제
 
 [Loop an Array](assignment.md)
