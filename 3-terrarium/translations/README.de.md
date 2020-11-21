@@ -18,8 +18,6 @@ Das mit CSS erstellte Terrarium wurde inspiriert von Jakub Mandra's Einmachglas 
 
 Die Grafiken wurden von [Jen Looper](http://jenlooper.com) mit Procreate handgezeichnet.
 
-Die Übersetzungen wurden von [Dominik Iffland](https://github.com/domi877) durchgeführt.
-
 ## Hochladen deines Terrariums
 
 Du kannst dein Terrarium mit Azure Static Web Apps hochladen.
