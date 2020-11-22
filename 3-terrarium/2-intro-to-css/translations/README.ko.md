@@ -9,19 +9,19 @@
 
 ### 소개
 
-CSS, or Cascading Style Sheets, solve an important problem of web development: how to make your web site look nice. Styling your apps makes them more usable and nicer-looking; you can also use CSS to create Responsive Web Design (RWD) - allowing your apps to look good no matter what screen size they are displayed on. CSS is not only about making your app look nice; its spec includes animations and transforms that can enable sophisticated interactions for your apps. The CSS Working Group helps maintain current CSS specifications; you can follow their work at [World Wide Web Consortium's site](https://www.w3.org/Style/CSS/members).
+CSS 또는 Cascading Style Sheets는 웹 개발의 중요한 이슈를 해결합니다: 웹 사이트를 멋지게 만드는 방법. 앱의 스타일을 지정하면 더 유용하고 보기 좋게 만들 수 있습니다; CSS를 사용하여 반응형 웹 디자인(RWD)을 만들 수도 있습니다 - 따라서 앱이 표시되는 화면 크기에 관계없이 멋지게 보일 수 있습니다. CSS는 앱을 멋지게 보이는 방법만 있는 것이 아닙니다; 사양에는 앱에 대한 정교한 상호 작용을 가능하게 하는 애니메이션 및 변환이 포함됩니다. CSS 워킹 그룹은 현재 CSS 사양을 유지하는 데 도움을 줍니다; [World Wide Web Consortium 사이트](https://www.w3.org/Style/CSS/members)에서 작업을 확인할 수 있습니다.
 
-> Note, CSS is a language that evolves, like everything on the web, and not all browsers support newer parts of the specification. Always check your implementations by consulting [CanIUse.com](caniuse.com).
+> Note, CSS는 웹의 모든 것과 마찬가지로, 진화하는 언어이며, 모든 브라우저가 사양의 최신 부분을 지원하는 것은 아닙니다. 항상 [CanIUse.com](caniuse.com)에 문의하여 구현을 확인하십시오.
 
-In this lesson, we're going to add styles to our online terrarium and learn more about several CSS concepts: the cascade, inheritance, and the use of selectors, positioning, and using CSS to build layouts. In the process we will layout the terrarium and create the actual terrarium itself.
+이 강의에서는, 온라인 terrarium에 스타일을 추가하며 여러 CSS 개념에 대해 자세히 알아봅시다: 캐스케이드, 상속과 선택자 사용, 포지셔닝과 레이아웃 구축을 하기위한 CSS 사용. 이 과정에서 terrarium을 레이아웃하고 실제 terrarium 자체를 만듭니다.
 
 ### 준비물
 
-You should have the HTML for your terrarium built and ready to be styled.
+terrarium으로 HTML이 제작되고 스타일을 지정할 준비가 되어있어야 합니다.
 
 ### 작업
 
-In your terrarium folder, create a new file called `style.css`. Import that file in the `<head>` section:
+terrarium 폴더에서, `style.css` 라고 불리는 파일을 만듭니다. 파일의 `<head>` 부분에 넣습니다:
 
 ```html
 <link rel="stylesheet" href="./style.css" />
@@ -31,17 +31,17 @@ In your terrarium folder, create a new file called `style.css`. Import that file
 
 ## Cascade
 
-Cascading Style Sheets incorporate the idea that the styles 'cascade' such that the application of a style is guided by its priority. Styles set by a web site author take priority over those set by a browser. Styles set 'inline' take priority over those set in an external style sheet.
+Cascade 스타일 시트는 우선 순위에 따라 스타일이 적용 되도록 'Cascade' 된다는 상상을 합칩니다. 웹 사이트 작성자가 지정한 스타일은 브라우저가 지정한 스타일보다 우선합니다. '인라인'으로 설정된 스타일은 외부 스타일 시트에 설정된 스타일보다 우선합니다.
 
 ### 작업
 
-Add the inline style "color: red" to your `<h1>` tag:
+`<h1>` 태그에 "color: red" inline 스타일을 추가합니다:
 
 ```HTML
 <h1 style="color: red">My Terrarium</h1>
 ```
 
-Then, add the following code to your `style.css` file:
+그러고, `style.css` 파일에 다은 코드를 추가합니다:
 
 ```CSS
 h1 {
@@ -49,17 +49,17 @@ h1 {
 }
 ```
 
-✅ Which color displays in your web app? Why? Can you find a way to override styles? When would you want to do this, or why not?
+✅ 웹 앱에는 어떤 색으로 표시되나요? 왜 그럴까요? 스타일을 오버라이드하는 방법을 찾을 수 있나요? 언제 하고 싶나요? 아니면 왜 안될까요?
 
 ---
 
 ## 상속
 
-Styles are inherited from an ancestor style to a descendent, such that nested elements inherit the styles of their parents.
+스타일은 상위 스타일에서 하위 요소로 상속되므로, 중첩된 요소는 상위 스타일을 상속합니다.
 
 ### 작업
 
-Set the body's font to a given font, and check to see a nested element's font:
+본문의 폰트를 지정된 주어진 폰트로 설정하고, 중첩된 요소의 폰트를 확인합니다:
 
 ```
 body {
@@ -67,11 +67,11 @@ body {
 }
 ```
 
-Open your browser's console to the 'Elements' tab and observe the H1's font. It inherits its font from the body, as stated within the browser:
+브라우저의 콘솔에서 'Elements'을 열고 H1 폰트를 보십시오. 브라우저에 기록된대로 본문에서 폰트를 상속합니다:
 
 ![inherited font](images/1.png)
 
-✅ Can you make a nested style inherit a different property?
+✅ 중첩된 스타일이 다른 속성을 상속하도록 만들 수 있습니까?
 
 ---
 
@@ -79,7 +79,7 @@ Open your browser's console to the 'Elements' tab and observe the H1's font. It 
 
 ### 태그
 
-So far, your `style.css` file has only a few tags styled, and the app looks pretty strange:
+지금까지, `style.css` 파일에는 스타일이 지정된 태그가 몇 개 뿐이며, 앱이 매우 이상하게 보입니다:
 
 ```
 body {
@@ -92,11 +92,11 @@ h1 {
 }
 ```
 
-This way of styling a tag gives you control over unique elements, but you need to control the styles of many plants in your terrarium. To do that, you need to leverage CSS selectors.
+이 태그 스타일링 방식을 사용하면 고유 요소를 제어할 수 있지만, terrarium에 있는 많은 식물의 스타일을 제어해야 합니다. 이를 위해서는, CSS 선택자를 활용해야 합니다.
 
 ### Id
 
-Add some style to layout the left and right containers. Since there is only one left container and only one right container, they are given ids in the markup. To style them, use `#`:
+왼쪽과 오른쪽 컨테이너 레이아웃에 스타일을 추가합니다. 왼쪽 컨테이너와 오른쪽 컨테이너가 하나만 있으므로, 마크업에 Id가 제공됩니다. 스타일을 지정하려면, `#`을 사용하세요:
 
 ```
 #left-container {
@@ -120,9 +120,9 @@ Add some style to layout the left and right containers. Since there is only one 
 }
 ```
 
-Here, you have placed these containers with absolute positioning to the far left and right of the screen, and used percentages for their width so that they can scale for small mobile screens.
+여기에서는, 컨테이너를 화면의 맨 왼쪽과 오른쪽에 절대 위치로 두고, 너비에 백분율을 사용하여 작은 모바일 화면에 맞을 수 있도록 조정했습니다.
 
-✅ This code is quite repeated, thus not "DRY" (Don't Repeat Yourself); can you find a better way to style these ids, perhaps with an id and a class? You would need to change the markup and refactor the CSS:
+✅ 이 코드는 꽤 반복되므로, "DRY" 하지 않습니다 (반복하지 마십시오); id와 클래스를 사용하여 스타일링하는 더 좋은 방법을 찾을 수 있나요? 마크업을 변경하고 CSS를 리팩토링해야 합니다:
 
 ```html
 <div id="left-container" class="container"></div>
@@ -130,9 +130,9 @@ Here, you have placed these containers with absolute positioning to the far left
 
 ### 클래스
 
-In the example above, you styled two unique elements on the screen. If you want styles to apply to many elements on the screen, you can use CSS classes. Do this to layout the plants in the left and right containers.
+위의 예시에서, 화면에서 두가지 고유 요소를 꾸몄습니다. 화면의 많은 요소에 꾸미려면, CSS 클래스를 사용할 수 있습니다. 왼쪽과 오른쪽 컨테이너에 식물을 둘 수 있습니다.
 
-Notice that each plant in the HTML markup has a combination of ids and classes. The ids here are used by the JavaScript that you will add later to manipulate the terrarium plant placement. The classes, however, give all the plants a given style.
+HTML 마크업의 각 식물에는 id와 클래스의 조합이 있습니다. id는 나중에 추가할 JavaScript에서 terrarium 식물 배치를 조작하는 데 사용됩니다. 그러나 이 강의에서는 모든 식물에 주어진 스타일로 부여합니다.
 
 ```html
 <div class="plant-holder">
@@ -140,7 +140,7 @@ Notice that each plant in the HTML markup has a combination of ids and classes. 
 </div>
 ```
 
-Add the following to your `style.css` file:
+`style.css` 파일에 다음을 추가합니다:
 
 ```css
 .plant-holder {
@@ -157,37 +157,37 @@ Add the following to your `style.css` file:
 }
 ```
 
-Notable in this snippet is the mixture of relative and absolute positioning, which we'll cover in the next section. Take a look at the way heights are handled by percentages:
+이 스니펫에서 볼 관점은 상대 위치와 절대 위치가 혼합되어 있다는 것이며, 다음 강의에서 다룰 것입니다. 높이가 백분율로 처리되는 방식을 살펴보십시오:
 
-You set the height of the plant holder to 13%, a good number to ensure that all the plants are displayed in each vertical container without need for scrolling.
+식물 홀더의 높이를 13%로 설정하면, 스크롤할 필요없이 모든 식물이 각 수직 컨테이너에 출력되도록 할 수 있습니다.
 
-You set the plant holder to move to the left to allow the plants to be more centered within their container. The images have a large amount of transparent background so as to make them more draggable, so need to be pushed to the left to fit better on the screen.
+식물 홀더를 왼쪽으로 이동하여 식물이 컨테이너 인에서 더 가운데로 들어오도록 설정합니다. 이미지는 드래그하기 쉽게 만들기 위해 투명한 배경을 많이 가지고 있으므로, 화면에 더 잘 맞게 왼쪽으로 밀어야 합니다.
 
-Then, the plant itself is given a max-width of 150%. This allows it to scale down as the browser scales down. Try resizing your browser; the plants stay in their containers but scale down to fit.
+그러면, 식물 자체의 최대 너비는 150% 입니다. 브라우저가 작아지면 같이 작아질 수 있습니다. 브라우저 크기를 조절해보십시오. 식물은 컨테이너에 있지만 크기에 맞게 작아집니다.
 
-Also notable is the use of z-index, which controls the relative altitude of an element (so that the plants sit on top of the container and appear to sit inside the terrarium).
+또한 요소의 상대적 고도를 제어하는, ​​z-index의 사용은 주목할만 합니다 (식물이 컨테이너 위에 있고 terrarium 안에 있는 것처럼 보이게).
 
-✅ Why do you need both a plant holder and a plant CSS selector?
+✅ 식물 홀더와 식물 CSS 선택자가 필요한 이유는 무엇입니까?
 
 ## CSS 포지셔닝
 
-Mixing position properties (there are static, relative, fixed, absolute, and sticky positions) can be a little tricky, but when done properly it gives you good control over the elements on your pages.
+위치 속성(static, relative, fixed, absolute 그리고 sticky 포지션)을 섞는 것은 약간 까다로울 수 있지만, 제대로 하면 페이지의 요소를 잘 제어할 수 있습니다.
 
-Absolute positioned elements are positioned relative to their nearest positioned ancestors, and if there are none, it is positioned according to the document body.
+절대 위치 요소는 가장 가까운 위치에 있는 최상위를 기준으로 위치하며, 없는 경우 문서 본문에 따라 위치가 지정됩니다.
 
-Relative positioned elements are positioned based on the CSS's directions to adjust its placement away from its initial position.
+상대 배치된 요소는 CSS의 방향에 따라 배치되며 처음 위치에서 떨어진 배치를 조정합니다.
 
-In our sample, the `plant-holder` is a relative-positioned element that is positioned within an absolute-positioned container. The resultant behavior is that the side bar containers are pinned left and right, and the plant-holder is nested, adjusting itself within the side bars, giving space for the plants to be placed in a vertical row.
+예시에서, `plant-holder`는 절대 위치지만 컨테이너 안에서는 상대 위치 요소입니다. 그 결과 사이드바 컨테이너가 왼쪽과 오른쪽에 고정되고, 식물 홀더가 중첩되어 사이드바 안에서 자체적으로 조정되므로 수직 행에 식물이 배치될 공간을 제공합니다.
 
-> The `plant` itself also has absolute positioning, necessary to making it draggable, as you will discover in the next lesson.
+> 다음 강의에서 확인해보면, `plant`은 드래그 가능한 필요한 절대 위치에 있습니다.
 
-✅ Experiment with switching the types of positioning of the side containers and the plant-holder. What happens?
+✅ 사이드 컨테이너와 식물 홀더의 위치 타입을 전환하여 실험하십시오. 무슨 일이 생기나요?
 
 ## CSS 레이아웃
 
-Now you will use what you learned to build the terrarium itself, all using CSS!
+이제는 배웠던 모든 CSS를 사용하여 terrarium 자체를 만듭니다!
 
-First, style the `.terrarium` div children as a rounded rectangle using CSS:
+먼저, CSS를 사용하여 `.terrarium` div 하위를 라운딩된 사각형으로 꾸밉니다:
 
 ```css
 .jar-walls {
@@ -236,19 +236,19 @@ First, style the `.terrarium` div children as a rounded rectangle using CSS:
 }
 ```
 
-Note the use of percentages here, even for the `border-radius`. If you scale your browser down, you can see how the jar corners scale as well. Also notice the widths and height percentages for the jar elements and how each element is absolutely positioned in the center, pinned to the bottom of the viewport.
+여기서는 `border-radius`에 대해서도 백분율을 사용합니다. 브라우저를 줄이면 jar 모서리도 어떻게 변하는 지 볼 수 있습니다. 또한 jar 요소의 너비, 높이 백분율과 각 요소가 뷰포트 하단에 고정되어 중앙에 절대 배치되는 방식을 확인하십시오.
 
-✅ Try changing the jar colors and opacity vs. those of the dirt. What happens? Why?
+✅ jar 색상과 투명도를 흙 색과 비교해보십시오. 무슨 일인가요? 왜 그럴까요?
 
 ---
 
 ## 🚀 도전
 
-Add a 'bubble' shine to the left bottom area of the jar to make it look more glasslike. You will be styling the `.jar-glossy-long` and `.jar-glossy-short` to look like a reflected shine. Here's how it would look:
+jar 좌측 하단 부분에 'bubble' 광택을 추가하여 유리처럼 보이도록 합니다. `.jar-glossy-long`과 `.jar-glossy-short`를 빛 반사되는 것처럼 보이도록 꾸밉니다. 다음과 같이 표시됩니다.
 
 ![finished terrarium](./images/terrarium-final.png)
 
-To complete the post-lecture quiz, go through this Learn module: [Style your HTML app with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
+강의 후 퀴즈를 완료하려면, 다음 학습 모듈을 진행하십시오: [Style your HTML app with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
 
 ## 강의 후 퀴즈
 
@@ -256,7 +256,7 @@ To complete the post-lecture quiz, go through this Learn module: [Style your HTM
 
 ## 리뷰 & 자기주도 학습
 
-CSS seems deceptively straightforward, but there are many challenges when trying to style an app perfectly for all browsers and all screen sizes. CSS-Grid and Flexbox are tools that have been developed to make the job a little more structured and more reliable. Learn about these tools by playing [Flexbox Froggy](https://flexboxfroggy.com/) and [Grid Garden](https://codepip.com/games/grid-garden/).
+CSS는 믿을 수 없게 간단해 보이지만, 모든 브라우저와 모든 화면 크기에 대해 완벽한 스타일을 지정하려면 많이 어렵습니다. CSS-Grid 및 Flexbox는 좀 더 구조화되고 안정적으로 보이게 개발된 도구입니다. [Flexbox Froggy](https://flexboxfroggy.com/)와 [Grid Garden](https://codepip.com/games/grid-garden/)을 플레이하여 도구에 대해 알아보세요.
 
 ## 과제
 
