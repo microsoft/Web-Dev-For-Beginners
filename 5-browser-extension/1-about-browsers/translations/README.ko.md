@@ -1,17 +1,17 @@
-# Browser Extension Project Part 1: All about Browsers
+# 브라우저 확장 프로젝트 파트 1: 브라우저에 대한 모든 것
 
 ![Browser sketchnote](images/sketchnote.jpg)
 > Sketchnote by [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-### Introduction
+### 소개
 
 Browser extensions add additional functionality to a browser. But before you build one, you should learn a little about how browsers do their work.
 
-### About the browser
+### 브라우저에 대하여
 
 In this series of lessons, you'll learn how to build a browser extension that will work on Chrome, Firefox and Edge browsers. In this part, you'll discover how browsers work and scaffold out the elements of the browser extension.
 
@@ -34,7 +34,7 @@ A really useful website that you probably should bookmark in whatever browser yo
 
 ✅ How can you tell what browsers are most popular with your web site's user base? Check your analytics - you can install various analytics packages as part of your web development process, and they will tell you what browsers are most used by the various popular browsers.
 
-## Browser extensions
+## 브라우저 확장
 
 Why would you want to build a browser extension? It's a handy thing to attach to your browser when you need quick access to tasks that you tend to repeat. For example, if you find yourself needing to check colors on the various web pages that you interact with, you might install a color-picker browser extension. If you have trouble remembering passwords, you might use a password-management browser extension. 
 
@@ -42,7 +42,7 @@ Browser extensions are fun to develop, too. They tend to manage a finite number 
 
 ✅ What are your favorite browser extensions? What tasks do they perform?
 
-### Installing extensions
+### 확장 설치하기
 
 Before you start building, take a look at the process of building and deploying a browser extension. While each browser varies a bit in how they manage this task, the process is similar on Chrome and Firefox to this example on Edge:
 
@@ -57,12 +57,12 @@ In essence, the process will be:
 
 ✅ These instructions pertain to extensions you build yourself; to install extensions that have been released to the browser extension store associated to each browser, you should navigate to those [stores](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) and install the extension of your choice.
 
-### Get Started
+### 시작하기
 
 You're going to build a browser extension that displays your region's carbon footprint, showing your region's energy usage and the source of the energy. The extension will have a form that collects an API key so that you can access
 CO2 Signal's API.
 
-**You need:**
+**필요합니다:**
 
 - [an API key](https://www.co2signal.com/); enter your email in the box on this page and one will be sent to you
 - the [code for your region](http://api.electricitymap.org/v3/zones) corresponding to the [Electricity Map](https://www.electricitymap.org/map) (in Boston, for example, I use 'US-NEISO').
@@ -83,7 +83,7 @@ src
 
 ✅ Once you have your API key and Region code handy, store those somewhere in a note for future use.
 
-### Build the HTML for the extension
+### 확장을 위한 HTML 제작하기
 
 This extension has two views. One to gather the API key and region code:
 
@@ -144,15 +144,15 @@ Congratulations, you've taken the first steps towards building a browser extensi
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Take a look at a browser extension store and install one to your browser. You can examine its files in interesting ways. What do you discover?
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 In this lesson you learned a little about the history of the web browser; take this opportunity to learn about how the inventors of the World Wide Web envisioned its use by reading more about its history. Some useful sites include:
 
@@ -162,7 +162,7 @@ In this lesson you learned a little about the history of the web browser; take t
 
 [An interview with Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)
 
-## Assignment 
+## 과제 
 
 [Restyle your extension](assignment.md)
 

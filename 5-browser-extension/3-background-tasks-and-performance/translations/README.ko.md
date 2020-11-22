@@ -1,16 +1,16 @@
-# Browser Extension Project Part 3: Learn about Background Tasks and Performance
+# 브라우저 확장 프로젝트 파트 3: 백그라운드 작업과 성능 학습
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-### Introduction
+### 소개
 
 In the last two lessons of this module, you learned how to build a form and display area for data fetched from an API. It's a very standard way of creating web presences on the web. You even learned how to handle fetching data asyncronously. Your browser extension is very nearly complete. 
 
 It remains to manage some background tasks, including refreshing the color of the extension's icon, so this is a great time to talk about how the browser manages this kind of task. Let's think about these browser tasks in the context of the performance of your web assets as you build them.
 
-## Web Performance Basics
+## 웹 성능 기초
 
 > "Website performance is about two things: how fast the page loads, and how fast the code on it runs." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
@@ -38,17 +38,17 @@ Check the Event Log pane to see if any event took longer than 15 ms:
 
 ✅ Get to know your profiler! Open the developer tools on this site and see if there are any bottlenecks. What's the slowest-loading asset? The fastest?
 
-## Profiling checks
+## 프로파일링 점검
 
 In general there are some "problem areas" that every web developer should watch for when building a site, so as to avoid nasty surprises when it's time to deploy to production.
 
-**Asset sizes**: The web has gotten 'heavier', and thus slower, over the past few years. Some of this weight has to do with the use of images.
+**어셋 크기**: The web has gotten 'heavier', and thus slower, over the past few years. Some of this weight has to do with the use of images.
 
 ✅ Look through the [Internet Archive](https://httparchive.org/reports/page-weight) for a historical view of page weight and more.
 
 A good practice is to ensure that your images are optimized, delivered at the right size and resolution for your users.
 
-**DOM traversals**: The browser has to build its Document Object Model based on the code you write, so it's in the interest of good page performance to keep your tags minimal, only using and styling what the page needs. To this point, excess CSS associated with a page could be optimized; styles that need to be used only on one page don't need to be included in the main style sheet, for example.
+**DOM 순회**: The browser has to build its Document Object Model based on the code you write, so it's in the interest of good page performance to keep your tags minimal, only using and styling what the page needs. To this point, excess CSS associated with a page could be optimized; styles that need to be used only on one page don't need to be included in the main style sheet, for example.
 
 **JavaScript**: Every JavaScript developer should watch for 'render-blocking' scripts that must be loaded before the rest of the DOM can be traversed and painted to the browser. Consider using `defer` with your inline scripts (as is done in the Terrarium module).
 
@@ -56,7 +56,7 @@ A good practice is to ensure that your images are optimized, delivered at the ri
 
 Now that you have an idea on how the browser renders the assets you send to it, let's look at the last few things you need to do to complete your extension:
 
-### Create a function to calculate color
+### 색상 계산하는 함수 생성하기
 
 Working in `/src/index.js`, add a function called `calculateColor()` after the series of `const` variables you set to gain access to the DOM:
 
@@ -89,7 +89,7 @@ The chrome.runtime has [an API](https://developer.chrome.com/extensions/runtime)
 
 > Note, if you want to profile a browser extension, launch the dev tools from within the extension itself, as it is its own separate browser instance.
 
-### Set a default icon color
+### 기본 아이콘 색상 지정하기
 
 Now, in the `init()` function, set the icon to be generic green to start by again calling chrome's `updateIcon` action:
 
@@ -101,7 +101,7 @@ chrome.runtime.sendMessage({
 		},
 });
 ```
-### Call the function, execute the call
+### 함수 호출하고, call 실행하기
 
 Next, call that function you just created by adding it to the promise returned by the C02Signal API:
 
@@ -141,21 +141,21 @@ Congratulations, you've built a useful browser extension and learned more about 
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Investigate some open source web sites have been around a long time ago, and, based on their GitHub history, see  if you can determine how they were optimized over the years for performance, if at all. What is the most common pain point?
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Consider signing up for a [performance newsletter](https://perf.email/)
 
 Investigate some of the ways that browsers gauge web performance by looking through the performance tabs in their web tools. Do you find any major differences?
 
-## Assignment
+## 과제
 
 [Analyze a site for performance](assignment.md)
 

@@ -1,16 +1,16 @@
-# Browser Extension Project Part 2: Call an API, use Local Storage
+# 브라우저 확장 프로젝트 파트 2: 로컬 저장소를 사용한, API 호출
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-### Introduction
+### 소개
 
 In this lesson, you'll call an API by submitting your browser extension's form and display the results in your browser extension. In addition, you'll learn about how you can store data in your browser's local storage for future reference and use.
 
 ✅ Follow the numbered segments in the appropriate files to know where to place your code
 
-### Set up the elements to manipulate in the extension:
+### 확장에서 조작할 요소를 설정합니다:
 
 By this time you have built the HTML for the form and results `<div>` for your browser extension. From now on, you'll need to work in the `/src/index.js` file and building your extension bit by bit. Refer to the [previous lesson](../about-browsers/README.md) on getting your project set up and on the build process.
 
@@ -34,7 +34,7 @@ const clearBtn = document.querySelector('.clear-btn');
 
 All of these fields are referenced by their css class, as you set it up in the HTML in the previous lesson.
 
-### Add listeners
+### 리스너 추가하기
 
 Next, add event listeners to the form and the clear button that resets the form, so that if a user submits the form or clicks that reset button, something will happen, and add the call to initialize the app at the bottom of the file:
 
@@ -46,7 +46,7 @@ init();
 
 ✅ Notice the shorthand used to listen for a submit or click event, and how the event it is passed to the handleSubmit or reset functions. Can you write the equivalent of this shorthand in a longer format? Which do you prefer?
 
-### Build out the init() function and the reset() function:
+### init() 함수와 reset() 함수 작성하기:
 
 Now you are going to build the function that initializes the extension, which is called init():
 
@@ -108,7 +108,7 @@ Notice that you use the Web API to manipulate LocalStorage, either by using `get
 
 Before building the `displayCarbonUsage()` function that is called in `init()`, let's build the functionality to handle the initial form submission.
 
-### Handle the form submission
+### 양식 제출 제어하기
 
 Create a function called `handleSubmit` that accepts an event argument `(e)`. Stop the event from propagating (in this case, we want to stop the browser from refreshing) and call a new function, `setUpUser`, passing in the arguments `apiKey.value` and `region.value`. In this way, you use the two values that are brought in via the initial form when the appropriate fields are populated.
 
@@ -120,7 +120,7 @@ function handleSubmit(e) {
 ```
 ✅ Refresh your memory - the HTML you set up in the last lesson has two input fields whose `values` are captured via the `const` you set up at the top of the file, and they are both `required` so the browser stops users from inputting null values.
 
-### Set up the user
+### 사용자 설정하기
 
 Moving on to the `setUpUser` function, here is where you set local storage values for apiKey and regionName. Add a new function:
 
@@ -137,7 +137,7 @@ function setUpUser(apiKey, regionName) {
 ```
 This function sets a loading message to show while the API is called. At this point, you have arrived at creating the most important function of this browser extension!
 
-### Display Carbon Usage
+### 탄소 사용량 출력하기
 
 Finally it's time to query the API!
 
@@ -204,19 +204,19 @@ Congratulations! If you build your extension (`npm run build`) and refresh it in
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 We've discussed several types of API so far in these lessons. Choose a web API and research in depth what it offers. For example, take a look at APIs available within browsers such as the [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). What makes a great API in your opinion?
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 You learned about LocalStorage and APIs in this lesson, both very useful for the professional web developer. Can you think how these two things work together? Think about how you would architect a web site that would store items to be used by an API.
 
-## Assignment
+## 과제
 
 [Adopt an API](assignment.md)
 
