@@ -164,7 +164,7 @@ let myString1 = "Hello";
 let myString2 = "World";
 
 `${myString1} ${myString2}!` //Hello World!
-`${myString1}, ${myString2}!` //Hello World!
+`${myString1}, ${myString2}!` //Hello, World!
 ```
 
 Sie können Ihre Formatierungsziele mit beiden Methoden erreichen, aber Vorlagenliterale berücksichtigen alle Leerzeichen und Zeilenumbrüche.

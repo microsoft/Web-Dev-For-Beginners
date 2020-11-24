@@ -160,7 +160,7 @@ let myString1 = "Hello";
 let myString2 = "World";
 
 `${myString1} ${myString2}!` //Hello World!
-`${myString1}, ${myString2}!` //Hello World!
+`${myString1}, ${myString2}!` //Hello, World!
 ```
 
 Puede lograr sus objetivos de formato con cualquier método, pero los literales de plantilla respetarán los espacios y saltos de línea.
