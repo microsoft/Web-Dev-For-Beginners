@@ -6,15 +6,15 @@
 
 ### 소개
 
-In this lesson, you'll call an API by submitting your browser extension's form and display the results in your browser extension. In addition, you'll learn about how you can store data in your browser's local storage for future reference and use.
+이 강의에서는, 브라우저 확장의 폼을 제출하여 API를 호출하고 브라우저 확장에 결과를 출력합니다. 또한, 나중에 참조하고 사용하도록 브라우저의 로컬 저장소에 데이터를 저장하는 방법에 대해 알아봅니다.
 
-✅ Follow the numbered segments in the appropriate files to know where to place your code
+✅ 적절한 파일 번호가 매겨진 세그먼트를 따라서 코드를 둘 위치를 알아봅니다.
 
 ### 확장에서 조작할 요소를 설정합니다:
 
-By this time you have built the HTML for the form and results `<div>` for your browser extension. From now on, you'll need to work in the `/src/index.js` file and building your extension bit by bit. Refer to the [previous lesson](../about-browsers/README.md) on getting your project set up and on the build process.
+지금까지 HTML 폼과 브라우저 확장에 대한 결과 `<div>`를 작성했습니다. 이제부터, `/src/index.js` 파일에서 작업하고 확장을 조금씩 빌드해야 합니다. 프로젝트 설정 및 빌드 프로세스에 대해서는 [이전 강의](../about-browsers/README.md)를 참조하세요.
 
-Working in your `index.js` file, start by creating some `const` variables to hold the values associated with various fields:
+`index.js` 파일에서 작업하면서, 다양한 필드에 값을 저장할 `const` 변수를 만드는 것으로 시작합니다:
 
 ```JavaScript
 // form fields
@@ -32,11 +32,11 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-All of these fields are referenced by their css class, as you set it up in the HTML in the previous lesson.
+모든 필드는 이전 강의에서 HTML을 설정한 것처럼 CSS 클래스에서 참조됩니다.
 
 ### 리스너 추가하기
 
-Next, add event listeners to the form and the clear button that resets the form, so that if a user submits the form or clicks that reset button, something will happen, and add the call to initialize the app at the bottom of the file:
+다음으로, 폼에 이벤트 리스너를 추가하고 폼을 리셋해주는 clear 버튼을 추가하여, 폼을 제출하거나 reset 버튼을 클릭하면 실행되도록, 파일 하단에 앱 초기화를 호출하도록 추가합니다:
 
 ```JavaScript
 form.addEventListener('submit', (e) => handleSubmit(e));
@@ -44,11 +44,11 @@ clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Notice the shorthand used to listen for a submit or click event, and how the event it is passed to the handleSubmit or reset functions. Can you write the equivalent of this shorthand in a longer format? Which do you prefer?
+✅ submit 또는 click 이벤트를 받을 때 사용되는 약칭과, 이벤트가 handleSubmit 또는 reset 함수에 전달되는 방법에 유의하십시오. 이 약칭에 관련된 것을 더 긴 형식으로 바꿔 작성할 수 있나요? 어느 쪽을 선호하나요?
 
 ### init() 함수와 reset() 함수 작성하기:
 
-Now you are going to build the function that initializes the extension, which is called init():
+이제 init()라고 불리는 확장 초기화하는 함수를 만드려고 합니다:
 
 ```JavaScript
 function init() {
@@ -83,34 +83,34 @@ function reset(e) {
 }
 
 ```
-In this function, there is some interesting logic. Reading through it, can you see what happens?
+함수에는, 약간의 흥미로운 로직이 있습니다. 이것을 읽어보면, 어떤 것이 보이나요?
 
-- two `const` are set up to check if the user has stored an APIKey and region code in local storage.
-- if either of those is null, show the form by changing its style to display as 'block'
-- hide the results, loading, and clearBtn and set any error text to an empty string
-- if there exists a key and region, start a routine to:
-  - call the API to get carbon usage data
-  - hide the results area
-  - hide the form
-  - show the reset button
+- 사용자가 로컬 저장소에 APIKey 및 지역 코드를 저장했는지 확인하기 위해 두 'const'가 설정됩니다.
+- 둘 중 하나가 null이면, 'block'으로 출력되도록 스타일을 변경하여 폼을 나타냅니다.
+- 결과를 숨기거나, 불러오고, 또한 clearBtn을 숨기며 오류 텍스트를 빈 문자열로 설정합니다
+- 키와 지역이 존재하는 경우에는, 다음 루틴이 시작됩니다:
+  - 탄소 사용량 데이터를 얻기 위한 API 호출
+  - 결과 영역 숨기기
+  - 폼 숨기기
+  - 리셋 버튼 보이기
 
-Before moving on, it's useful to learn about a very important concept available in browsers: [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). LocalStorage is a useful way to store strings in the browser as a `key-value` pair. This type of web storage can be manipulated by JavaScript to manage data in the browser. LocalStorage does not expire, while SessionStorage, another kind of web storage, is cleared when the browser is closed. The various types of storage have pros and cons to their usage.
+계속 진행하기 전, 브라우저에서 사용할 수 있는 매우 중요한 개념: [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)에 대해 알아 보는 것이 좋습니다. LocalStorage는 브라우저에 문자열을 `key-value` 쌍으로 저장하는 유용한 방법입니다. 이런 타입의 웹 저장소는 브라우저에서 데이터를 관리하기 위해 JavaScript로 제어할 수 있습니다. LocalStorage는 만료되지 않지만, 다른 종류의 웹 저장소인 SessionStorage는 브라우저를 닫는 즉시 지워집니다. 다양한 타입의 저장소를 사용하는 것은 장점과 단점이 존재합니다.
 
-> Note - your browser extension has its own local storage; the main browser window is a different instance and behaves separately.
+> Note - 이 브라우저 확장은 로컬 저장소를 가집니다; 주요 브라우저 창은 각자 다른 객체이며 별도로 동작합니다.
 
-You set your APIKey to have a string value, for example, and you can see that it is set on Edge by "inspecting" a web page (you can right-click a browser to inspect) and going to the Applications tab to see the storage.
+APIKey를 문자열 값으로 설정한다고 하면, 예를 들어 웹 페이지를 "inspecting" 하고 (브라우저를 우측 클릭하여 검사할 수 있습니다) 애플리케이션 탭으로 이동하여 저장소를 확인했을 때 Edge에 설정되어 있다는 것을 볼 수 있습니다.
 
 ![Local storage pane](images/localstorage.png)
 
-✅ Think about situations where you would NOT want to store some data in LocalStorage. In general, placing API Keys in LocalStorage is a bad idea! Can you see why? In our case, since our app is purely for learning and will not be deployed to an app store, we will use this method.
+✅ LocalStorage에 일부 데이터를 저장하기 꺼리는 상황을 생각해보세요. 일반적으로 API 키를 LocalStorage에 배치하는 것은 좋지 않은 생각입니다! 알 수 있나요? 우리 경우, 앱은 순수하게 학습을 위함이고, 앱 스토어에도 배포하지 않으므로 이 방법을 사용합니다.
 
-Notice that you use the Web API to manipulate LocalStorage, either by using `getItem()`, `setItem()` or `removeItem()`. It's widely supported across browsers.
+Web API로 `getItem()`, `setItem()` 또는 `removeItem()`을 사용하여 LocalStorage를 제어합니다. 대부분 브라우저에서 광범위하게 지원됩니다.
 
-Before building the `displayCarbonUsage()` function that is called in `init()`, let's build the functionality to handle the initial form submission.
+`init()`에서 호출되는 `displayCarbonUsage()` 함수를 만들기 전에 초기 폼 제출을 하는 기능을 만들어 보겠습니다.
 
 ### 양식 제출 제어하기
 
-Create a function called `handleSubmit` that accepts an event argument `(e)`. Stop the event from propagating (in this case, we want to stop the browser from refreshing) and call a new function, `setUpUser`, passing in the arguments `apiKey.value` and `region.value`. In this way, you use the two values that are brought in via the initial form when the appropriate fields are populated.
+이벤트 인자 `(e)`를 받는 `handleSubmit` 함수를 만듭니다. 이벤트 전달을 중단하고(브라우저 새로 고침을 중단) `apiKey.value`와 `region.value` 인자를 전달하는 새로운 함수 `setUpUser` 를 호출합니다. 이런 방식으로, 적절한 필드가 채워지는 순간 초기 폼을 통해 가져온 두 값을 사용합니다.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -118,11 +118,11 @@ function handleSubmit(e) {
 	setUpUser(apiKey.value, region.value);
 }
 ```
-✅ Refresh your memory - the HTML you set up in the last lesson has two input fields whose `values` are captured via the `const` you set up at the top of the file, and they are both `required` so the browser stops users from inputting null values.
+✅ 메모리를 초기화합니다 - 지난 강의에서 설정한 HTML에는 파일 상단에 지정한 `const`를 통해 `values`이 잡히는 두 입력 필드가 있으며, 둘 다 `required`이므로 브라우저에서 사용자가 null 값을 입력하지 못하도록 합니다.
 
 ### 사용자 설정하기
 
-Moving on to the `setUpUser` function, here is where you set local storage values for apiKey and regionName. Add a new function:
+`setUpUser` 함수로 이동하고, 여기에 apiKey와 regionName에 대한 로컬 저장소 값을 설정합니다. 새로운 함수를 추가합니다:
 
 ```JavaScript
 function setUpUser(apiKey, regionName) {
@@ -135,23 +135,23 @@ function setUpUser(apiKey, regionName) {
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
-This function sets a loading message to show while the API is called. At this point, you have arrived at creating the most important function of this browser extension!
+이 함수는 API가 호출되는 동안 로딩 메시지를 설정하게 합니다. 핵심으로, 이 브라우저 확장의 가장 중요한 함수를 만드는 데 도달했습니다!
 
 ### 탄소 사용량 출력하기
 
-Finally it's time to query the API!
+마지막으로 API 쿼리할 시간입니다!
 
-Before going further, we should discuss APIs. APIs, or [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), are a critical element of a web developer's toolbox. They provide standard ways for programs to interact and interface with each other. For example, if you are building a web site that needs to query a database, someone might have created an API for you to use. While there are many types of APIs, one of the most popular is a [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+계속 진행하기 전에, API에 대해 논의해야 합니다. API, 또는 [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html)는 웹 개발자의 툴박스에서 중요한 요소입니다. 프로그램이 상호 작용하거나 할 수 있게 도와주는 표준 방법을 제공합니다. 예시로, 데이터베이스를 쿼리할 웹 사이트를 구축하는 경우, 누군가 사용할 API를 만들었을 수 있습니다. 다양한 유형의 API가 있지만 가장 인기있는 API 중 하나는 [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)입니다.
 
-✅ The term 'REST' stands for 'Representational State Transfer' and features using variously-configured URLs to fetch data. Do a little research on the various types of APIs available to developers. What format appeals to you?
+✅ 'REST'라는 용어는 'Representational State Transfer'를 의미하고 데이터를 가져오기 위해서 다양하게-구성된 URL을 쓰는 기능입니다. 개발자가 사용할 수 있는 다양한 타입의 API에 대해 약간 알아보십시오. 어떤 포맷이 좋습니까?
 
-There are important things to note about this function. First notice the [`async` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). Writing your functions so that they run asynchronously means that they wait for an action, such as data being returned, to be completed before continuing.
+이 함수에 대해 유의해야 할 중요 사항이 있습니다. 먼저 [`async` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)를 확인합니다. 비동기로 실행되도록 함수를 작성한다는 것은 수행되기 전 데이터 반환 작업이 완료될 때를 기다린다는 점을 의미합니다.
 
-Here's a quick video about `async`:
+다음은 `async`에 대한 간단한 영상입니다 :
 
 [![Async and Await for managing promises](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async and Await for managing promises")
 
-Create a new function to query the C02Signal API:
+C02Signal API를 쿼리할 새로운 함수를 만듭니다:
 
 ```JavaScript
 import axios from '../node_modules/axios';
@@ -191,22 +191,22 @@ async function displayCarbonUsage(apiKey, region) {
 }
 ```
 
-This is a big function. What's going on here?
+이는 큰 함수입니다. 여기에 어떤 일이 일어나고 있나요?
 
-- following best practices, you use an `async` keyword to make this function behave asyncronously. The function contains a `try/catch` block as it will return a promise when the API returns data. Because you don't have control over the speed that the API will respond (it may not respond at all!), you need to handle this uncertainty by call it asyncronously. 
-- you're querying the co2signal API to get your region's data, using your API Key. To use that key, you have to use a type of authentication in your header parameters.
-- once the API responds, you assign various elements of its response data to the parts of your screen you set up to show this data.
-- if there's an error, or if there is no result, you show an error message.
+- 좋은 사례에 따라, `async` 키워드를 사용하여 이 함수가 비동기로 동작하도록 합니다. 이 함수는 API가 데이터를 반환할 때 promise를 반환하므로 `try/catch` 블록을 포함합니다. API 응답 속도를 제어할 수 없기 때문에 (전혀 응답을 못 받을 수 있습니다!) 확실하지 않은 일은 비동기로 호출하여 처리해야 합니다.
+- API 키를 사용해서, 지역의 데이터를 얻기 위해 co2signal API를 쿼리하고 있습니다. 이 키를 사용하려면, 헤더 파라미터에 인증 타입을 사용해야 합니다.
+- API가 응답하면, 이 데이터를 출력하도록 설정한 화면에 응답 데이터의 다양한 요소를 할당합니다.
+- 오류가 있거나, 결과가 없는 경우에는, 오류 메시지가 출력됩니다.
 
-✅ Using asyncronous programming patterns is another very useful tool in your toolbox. Read [about the various ways](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) you can configure this type of code.
+✅ 비동기 프로그래밍 패턴을 사용하는 것은 툴박스의 다른 매우 유용한 도구입니다. [about the various ways](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)를 읽고 이런 타입의 코드를 구성할 수 있습니다.
 
-Congratulations! If you build your extension (`npm run build`) and refresh it in your extensions pane, you have a working extension! The only thing that isn't working is the icon, and you'll fix that in the next lesson.
+축하합니다! 확장을 빌드하고 (`npm run build`) 확장 패널에서 새로 고치면, 작동하는 확장이 있습니다! 아이콘만 작동하지 않으며 다음 강의에서 수정할 예정입니다.
 
 ---
 
 ## 🚀 도전
 
-We've discussed several types of API so far in these lessons. Choose a web API and research in depth what it offers. For example, take a look at APIs available within browsers such as the [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). What makes a great API in your opinion?
+지금까지 이 강의에서 여러 타입의 API에 대해 논의했습니다. 웹 API를 선택하고 제공하는 내용에 대해 자세히 알아보세요. 예시로, [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)와 같은 브라우저에서 쓸 수 있는 API를 보세요. 당신의 의견에 비추어 볼 때 좋은 API를 만드는 방법은 무엇일까요?
 
 ## 강의 후 퀴즈
 
@@ -214,7 +214,7 @@ We've discussed several types of API so far in these lessons. Choose a web API a
 
 ## 리뷰 & 자기주도 학습
 
-You learned about LocalStorage and APIs in this lesson, both very useful for the professional web developer. Can you think how these two things work together? Think about how you would architect a web site that would store items to be used by an API.
+이 강의에서는 전문 웹 개발자에게 매우 유용한, LocalStorage와 API에 대해 학습했습니다. 어떻게 두 가지가 같이 작동하는지 생각해볼 수 있나요? API에서 사용할 아이템을 저장하는 웹 사이트를 어떻게 설계할지 생각해보세요.
 
 ## 과제
 
