@@ -1,6 +1,6 @@
-# Build a Space Game Part 3: Adding Motion
+# Space 게임 제작하기 파트 3: 모션 추가하기
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
@@ -32,7 +32,7 @@ ctx.drawImage(heroImg, hero.x, hero.y);
 
 ✅ Can you think of a reason why redrawing your hero many frames per second might accrue performance costs? Read about [alternatives to this pattern](https://www.html5rocks.com/en/tutorials/canvas/performance/).
 
-## Handle keyboard events
+## 키보드 이벤트 제어하기
 
 You handle events by attaching specific events to code. Keyboard events are triggered on the whole window whereas mouse events like a `click` can be connected to clicking a specific element. We will use keyboard events throughout this project. 
 
@@ -56,7 +56,7 @@ For key events there are two properties on the event you can use to see what key
 
 ✅ Key event manipulation is useful outside of game development. What other uses can you think of for this technique?
 
-### Special keys: a caveat
+### 특별한 키: a caveat
 
 There are some *special* keys that affect the window. That means that if you are listening to a `keyup` event and you use these special keys to move your hero it will also perform horizontal scrolling. For that reason you might want to *shut-off* this built-in browser behavior as you build out your game. You need code like this:
 
@@ -81,7 +81,7 @@ window.addEventListener('keydown', onKeyDown);
 
 The above code will ensure that arrow-keys and the space key have their *default* behavior shut off. The *shut-off* mechanism happens when we call `e.preventDefault()`.
 
-## Game induced movement
+## 게임의 움직임
 
 We can make things move by themselves by using timers such as the `setTimeout()` or `setInterval()` function that update the location of the object on each tick, or time interval. Here's what that can look like:
 
@@ -92,7 +92,7 @@ let id = setInterval(() => {
 })
 ```
 
-## The game loop
+## 게임 루프
 
 The game loop is a concept that is essentially a function that is invoked at regular intervals. It's called the game loop as everything that should be visible to the user is drawn into the loop. The game loop makes use of all the game objects that are part of the game, drawing all of them unless for some reason shouldn't be part of the game any more. For example if an object is an enemy that was hit by a laser and blows up, it's no longer part of the current game loop (you'll learn more on this in subsequent lessons).
 
@@ -112,14 +112,14 @@ let gameLoopId = setInterval(() =>
 
 The above loop is invoked every `200` milliseconds to redraw the canvas. You have the ability to choose the best interval that makes sense for your game.
 
-## Continuing the Space Game
+## Space 게임 계속하기
 
 You will take the existing code and extend it. Either start with the code that you completed during part I or use the code in [Part II- starter](your-work). 
 
 - **Moving the hero**: you will add code to ensure you can move the hero using the arrow keys.
 - **Move enemies**: you will also need to add code to ensure the enemies move from top to bottom at a given rate.
 
-## Recommended steps
+## 권장 단계
 
 Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
 
@@ -141,7 +141,7 @@ npm start
 
 The above will start a HTTP Server on address `http://localhost:5000`. Open up a browser and input that address, right now it should render the hero and all the enemies; nothing is moving - yet!
 
-### Add code
+### 코드 추가하기
 
 1. **Add dedicated objects** for `hero` and `enemy` and `game object`, they should have `x` and `y` properties. (Remember the portion on [Inheritance or composition](../README.md) ). 
 
@@ -371,18 +371,18 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 As you can see, your code can turn into 'spaghetti code' when you start adding functions and variables and classes. How can you better organize your code so that it is more readable? Sketch out a system to organize your code, even if it still resides in one file.
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 While we're writing our game without using frameworks, there are many JavaScript-based canvas frameworks for game development. Take some time to do some [reading about these](https://github.com/collections/javascript-game-engines).
 
-## Assignment
+## 과제
 
 [Comment your code](assignment.md)

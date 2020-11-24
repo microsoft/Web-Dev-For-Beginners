@@ -1,6 +1,6 @@
-# Build a Space Game Part 6: End and Restart
+# Space 게임 제작하기 파트 6: 끝과 재시작
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
@@ -11,20 +11,20 @@ There are different ways to express and *end condition* in a game. It's up to yo
 - **You've collected `N` points**: Another common end condition is for you to collect points. How you get points is up to you but it's quite common to assign points to various activities like destroying an enemy ship or maybe collect items that items *drop* when they are destroyed.
 - **Complete a level**: This might involve several conditions such as `X` enemy ships destroyed, `Y` points collected or maybe that a specific item has been collected.
 
-## Restarting
+## 다시 시작하기
 
 If people enjoy your game they are likely to want to replay it. Once the game ends for whatever reason you should offer an alternative to restart.
 
 ✅ Think a bit about under what conditions you find a game ends, and then how you are prompted to restart
 
-## What to build
+## 무엇을 만드나요
 
 You will be adding these rules to your game:
 
 1. **Winning the game**. Once all enemy ships have been destroyed, you win the game. Additionally display some kind of victory message.
 1. **Restart**. Once all your lives are lost or the game is won, you should offer a way to restart the game. Remember! You will need to reinitialize the game and the previous game state should be cleared.
 
-## Recommended steps
+## 권장 단계
 
 Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
 
@@ -50,7 +50,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
 > tip: to avoid warnings in Visual Studio Code, edit the `window.onload` function to call `gameLoopId` as is (without `let`), and declare the gameLoopId at the top of the file, independently: `let gameLoopId;`
 
-### Add code
+### 코드 추가하기
 
 1. **Track end condition**. Add code that keeps track of the number of enemies, or if the hero ship has been destroyedby adding these two functions:
 
@@ -205,18 +205,18 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Add a sound! Can you add a sound to enhance your game play, maybe when there's a laser hit, or the hero dies or wins? Have a look at this [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) to learn how to play sound using JavaScript
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Your assignment is to create a fresh sample game, so explore some of the interesting games out there to see what type of game you might build.
 
-## Assignment
+## 과제
 
 [Build a Sample Game](assignment.md)

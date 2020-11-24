@@ -1,10 +1,10 @@
-# Build a Space Game Part 2: Draw Hero and Monsters to Canvas
+# Space 게임 제작하기 파트 2: Canvas에 영웅과 몬스터 그리기
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-## The Canvas
+## Canvas
 
 The canvas is an HTML element that by default has no content; it's a blank slate. You need to add to it by drawing on it.
 
@@ -22,7 +22,7 @@ Above we are setting the `id`, `width` and `height`.
 - `width`: this is the width of the element.
 - `height`: this is the height of the element.
 
-## Drawing simple geometry
+## 간단한 geometry 그리기
 
 The Canvas is using a cartesian coordinate system to draw things. Thus it uses an x-axis and y-axis to express where something is located. The location `0,0` is the top left position and the bottom right is what you said to be the WIDTH and HEIGHT of the canvas.
 
@@ -62,11 +62,11 @@ You can draw all sorts of things with the Canvas API like:
 
 ✅ Try it! You know how to draw a rectangle, can you draw a circle to a page? Take a look at some interesting Canvas drawings on CodePen. Here's a [particularly impressive example](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Load and draw an image asset
+## 이미지 어셋 불러오고 그리기
 
 You load an image asset by creating an `Image` object and set its `src` property. Then you listen to the `load` event to know when it's ready to be used. The code looks like this:
 
-### Load asset
+### 어셋 불러오기
 
 ```javascript
 const img = new Image();
@@ -76,7 +76,7 @@ img.onload = () => {
 }
 ```
 
-### Load asset pattern
+### Load asset 패턴
 
 It's recommended to wrap the above in a construct like so, so it's easier to use and you only try to manipulate it when it's fully loaded:
 
@@ -115,9 +115,9 @@ async function run() {
 }
 ```
 
-## Now it's time to start building your game
+## 이제 게임 제작을 시작할 시간입니다
 
-### What to build
+### 무엇을 만드나요
 
 You will build a web page with a Canvas element. It should render a black screen `1024*768`. We've provided you with two images:
 
@@ -129,7 +129,7 @@ You will build a web page with a Canvas element. It should render a black screen
 
    ![Monster ship](solution/assets/enemyShip.png)
 
-### Recommended steps to start development
+### 개발 시작하기 위한 권장 단계
 
 Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
 
@@ -155,7 +155,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
 > Note: to see changes on your screen, refresh your browser.
 
-### Add code
+### 코드 추가하기
 
 Add the needed code to `your-work/app.js` to solve the below
 
@@ -187,30 +187,30 @@ Add the needed code to `your-work/app.js` to solve the below
       }
     ```
 
-## Result
+## 결과
 
 The finished result should look like so:
 
 ![Black screen with a hero and 5*5 monsters](partI-solution.png)
 
-## Solution
+## 솔루션
 
 Please try solving it yourself first but if you get stuck, have a look at a [solution](solution/app.js)
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 You've learned about drawing with the 2D-focused Canvas API; take a look at the [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API), and try to draw a 3D object.
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Learn more about the Canvas API by [reading about it](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
 
-## Assignment
+## 과제
 
 [Play with the Canvas API](assignment.md)

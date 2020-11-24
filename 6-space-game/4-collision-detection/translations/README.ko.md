@@ -1,6 +1,6 @@
-# Build a Space Game Part 4: Adding A Laser and Detect Collisions
+# Space 게임 제작하기 파트 4: 레이저 추가하고 충돌 감지하기
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
@@ -19,7 +19,7 @@ In short, you -- *the hero* -- need to hit all enemies with a laser before they 
 
 Let's be heroic together!
 
-## Collision detection
+## 충돌 감지하기
 
 How do we do collision detection? We need to think of our game objects as rectangles moving about. Why is that you might ask? Well, the image used to draw a game object is a rectangle: it has an `x`, `y`, `width` and `height`.
 
@@ -49,7 +49,7 @@ If two rectangles, i.e a hero and enemy *intersect*, you have a collision. What 
    }
    ```
 
-## How do we destroy things
+## 어떻게 파괴할까요
 
 To destroy things in a game you need to let the game know it should no longer paint this item in the game loop that triggers on a certain interval. A way to do this is to mark a game object as *dead* when something happens, like so:
 
@@ -64,7 +64,7 @@ Then you an proceed to sort out *dead* objects before repainting the screen, lik
 gameObjects = gameObject.filter(go => !go.dead);
 ```
 
-## How do we fire a laser
+## 어떻게 레이저를 발사할까요
 
 Firing a laser translates to responding to a key-event and creating an object that moves in a certain direction. We therefore need to carry out the following steps:
 
@@ -72,7 +72,7 @@ Firing a laser translates to responding to a key-event and creating an object th
 2. **Attach code to a key event**: we need to choose a key on the keyboard that represents the player shooting the laser.
 3. **Create a game object that looks like a laser** when the key is pressed.
 
-## Cooldown on our laser
+## 레이저 쿨다운
 
 The laser needs to fire every time you press a key, like *space* for example. To prevent the game producing way too many lasers in a short time we need to fix this. The fix is by implementing a so called *cooldown*, a timer, that ensures that a laser can only be fired so often. You can implement that in the following way:
 
@@ -102,7 +102,7 @@ class Weapon {
 
 ✅ Refer to lesson 1 in the space game series to remind yourself about *cooldowns*.
 
-## What to build
+## 무엇을 만드나요
 
 You will take the existing code (which you should have cleaned up and refactored) from the previous lesson, and extend it. Either start with the code from part II or use the code at [Part III- starter](/your-work).
 
@@ -114,7 +114,7 @@ You will take the existing code (which you should have cleaned up and refactored
    3. **Enemy and hero collision**: an enemy and the hero is destroyed if hitting each other
    4. **Enemy hits bottom of the screen**: An enemy and a hero is destroyed if the enemy hits the bottom of the screen
 
-## Recommended steps
+## 권장 단계
 
 Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
 
@@ -137,7 +137,7 @@ npm start
 
 The above will start a HTTP Server on address `http://localhost:5000`. Open up a browser and input that address, right now it should render the hero and all the enemies, nothing is moving - yet :).
 
-### Add code
+### 코드 추가하기
 
 1. **Setup a  rectangle representation of your game object, to handle collision** The below code allows you to get a rectangle representation of a `GameObject`. Edit your GameObject class to extend it:
 
@@ -280,18 +280,18 @@ At this point, your game has some functionality! You can navigate with your arro
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Add an explosion! Take a look at the game assets in [the Space Art repo](../solution/spaceArt/readme.txt) and try to add an explosion when the laser hits an alien
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Experiment with the intervals in your game thus far. What happens when you change them? Read more about [JavaScript timing events](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
-## Assignment
+## 과제
 
 [Explore collisions](assignment.md)

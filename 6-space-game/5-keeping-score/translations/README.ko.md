@@ -1,12 +1,12 @@
-# Build a Space Game Part 5: Scoring and Lives
+# Space 게임 제작하기 파트 5: 점수내고 살기
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
 In this lesson, you'll learn how to add scoring to a game and calculate lives.
 
-## Draw text on the screen
+## 화면에 텍스트 그리기
 
 To be able to display a game score on the screen, you'll need to know how to place text on the screen. The answer is using the `fillText()` method on the canvas object. You can also control other aspects like what font to use, the color of the text and even its alignment (left, right, center). Below is some code drawing some text on the screen.
 
@@ -19,18 +19,18 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ✅ Read more about [how to add text to a canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text), and feel free to make yours look fancier!
 
-## Life, as a game concept
+## 게임 컨셉에서 생명
 
 The concept of having a life in a game is only a number. In the context of a space game it's common to assign a set of lives that get deducted one by one when your ship takes damage. It's nice if you can show a graphical representation of this like miniships or hearts instead of a number.
 
-## What to build
+## 무엇을 만드나요
 
 Let's add the following to your game:
 
 - **Game score**: For every enemy ship that is destroyed, the hero should be awarded some points, we suggest a 100 points per ship. The game score should be shown in the bottom left.
 - **Life**: Your ship has three lives. You lose a life every time an enemy ship collides with you. A life score should be displayed at the bottom right and be made out of the following graphic ![life image](solution/assets/life.png).
 
-## Recommended steps
+## 권장 단계
 
 Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
 
@@ -53,7 +53,7 @@ npm start
 
 The above will start a HTTP Server on address `http://localhost:5000`. Open up a browser and input that address, right now it should render the hero and all the enemies, and as you hit your left and right arrows, the hero moves and can shoot down enemies.
 
-### Add code
+### 코드 추가하기
 
 1. **Copy over the needed assets** from the `solution/assets/` folder into `your-work` folder; you will add a `life.png` asset. Add the lifeImg to the window.onload function: 
 
@@ -172,18 +172,18 @@ By the end of this work, you should see the small 'life' ships at the bottom rig
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Your code is almost complete. Can you envision your next steps?
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Research some ways that you can increment and decrement game scores and lives. There are some interesting game engines like [PlayFab](https://playfab.com). How could using one of these would enhance your game?
 
-## Assignment
+## 과제
 
 [Build a Scoring Game](assignment.md)

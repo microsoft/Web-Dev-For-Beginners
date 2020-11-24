@@ -1,12 +1,12 @@
-# Build a Space Game Part 1: Introduction
+# Space 게임 제작하기 파트 1: 소개
 
 ![video](../images/pewpew.gif)
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-### Inheritance and Composition in game development
+### 게임 개발의 상속과 구성
 
 In earlier lessons, there was not much need to worry about the design architecture of the apps you built, as the projects were very small in scope. However, when your applications grow in size and scope, architectural decisions become a larger concern. There are two major approaches to creating larger applications in JavaScript: *composition* or *inheritance*. There are pros and cons to both but let's explain them from within the context of a game.
 
@@ -21,7 +21,7 @@ In a game you have `game objects` which are objects that exist on a screen. This
 
 ✅ Think about a game like Pac-Man. Can you identify the four object types listed above in this game?
 
-### Expressing behavior
+### 행동 표현
 
 All we described above are behavior that game objects can have. So how do we encode those? We can express this behavior as methods associated to either classes or objects.
 
@@ -136,7 +136,7 @@ It's up to you which pattern you choose. JavaScript supports both these paradigm
 
 Another pattern common in game development addresses the problem of handling the game's user experience and performance.
 
-## Pub/sub pattern
+## Pub/sub 패턴
 
 ✅ Pub/Sub stands for 'publish-subscribe'
 
@@ -207,18 +207,18 @@ As things gets more complicated when your game grows, this pattern stays the sam
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Think about how the pub-sub pattern can enhance a game. Which parts should emit events, and how should the game react to them? Now's your chance to get creative, thinking of a new game and how its parts might behave.
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Learn more about Pub/Sub by [reading about it](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber).
 
-## Assignment
+## 과제
 
 [Mock up a game](assignment.md)
