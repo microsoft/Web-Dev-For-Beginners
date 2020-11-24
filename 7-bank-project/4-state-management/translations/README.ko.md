@@ -1,16 +1,16 @@
-# Build a Banking App Part 4: Concepts of State Management
+# 은행 앱 제작하기 파트 4: 상태 관리의 컨셉
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-### Introduction
+### 소개
 
 As a web application grows, it becomes a challenge to keep track of all data flows. Which code gets the data, what page consumes it, where and when does it need to be updated...it's easy to end up with messy code that's difficult to maintain. This is especially true when you need to share data among different pages of your app, for example user data. The concept of *state management* has always existed in all kinds of programs, but as web apps keep growing in complexity it's now a key point to think about during development.
 
 In this final part, we'll look over the app we built to rethink how the state is managed, allowing support for browser refresh at any point, and persisting data across user sessions.
 
-### Prerequisite
+### 준비물
 
 You need to have completed the [data fetching](../3-data/README.md) part of the web app for this lesson. You also need to install [Node.js](https://nodejs.org) and [run the server API](../api/README.md) locally so you can manage account data.
 
@@ -23,7 +23,7 @@ curl http://localhost:5000/api
 
 ---
 
-## Rethink state management
+## 상태 관리에 대하여 다시 생각하기
 
 In the [previous lesson](../3-data/README.md), we introduced a basic concept of state in our app with the global `account` variable which contains the bank data for the currently logged in user. However, our current implementation has some flaws. Try refreshing the page when you're on the dashboard. What happens?
 
@@ -50,7 +50,7 @@ Once you've taken care of these, any other issues you might have may either be f
 
 ✅ There are a lot of libraries out there with different approaches to state management, [Redux](https://redux.js.org) being a popular option. Take a look at the concepts and patterns used as it's often a good way to learn what potential issues you may be facing in large web apps and how it can be solved.
 
-### Task
+### 작업
 
 We'll start with a bit of refactoring. Replace the `account` declaration:
 
@@ -78,7 +78,7 @@ const account = state.account;
 
 This refactoring by itself did not bring much improvements, but the idea was to lay out the foundation for the next changes.
 
-## Track data changes
+## 데이터 변경 추적하기
 
 Now that we have put in place the `state` object to store our data, the next step is centralize the updates. The goal is to make it easier to keep track of any changes and when they happen.
 
@@ -88,7 +88,7 @@ In JavaScript, you can use [`Object.freeze()`](https://developer.mozilla.org/en-
 
 ✅ Do you know the difference between a *shallow* and a *deep* immutable object? You can read about it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
 
-### Task
+### 작업
 
 Let's create a new `updateState()` function:
 
@@ -140,7 +140,7 @@ Try registering a new account, logging out and in again to check that everything
 
 > Tip: you can take a look at all state changes by adding `console.log(state)` at the bottom of `updateState()` and opening up the console in your browser's development tools.
 
-## Persist the state
+## 상태 유지하기
 
 Most web apps needs to persist data to be able to work correctly. All the critical data is usually stored on a database and accessed via a server API, like as the user account data in our case. But sometimes, it's also interesting to persist some data on the client app that's running in your browser, for a better user experience or to improve loading performance.
 
@@ -160,7 +160,7 @@ Note that both these APIs only allow to store [strings](https://developer.mozill
 
 ✅ If you want to create a web app that does not work with a server, it's also possible to create a database on the client using the [`IndexedDB` API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). This one is reserved for advanced use cases or if you need to store significant amount of data, as it's more complex to use.
 
-### Task
+### 작업
 
 We want our users stay logged in until they explicitly click on the *Logout* button, so we'll use `localStorage` to store the account data. First, let's define a key that we'll use to store our data.
 
@@ -199,7 +199,7 @@ We can also make the *Dashboard* page our application default page, as we are no
 
 Now login in the app and try refreshing the page, you should stay on the dashboard. With that update we've taken care of all our initial issues...
 
-## Refresh the data
+## 데이터 새로 고치기
 
 ...But we might also have a created a new one. Oops!
 
@@ -218,7 +218,7 @@ The state is persisted indefinitely thanks to the `localStorage`, but that also 
 
 One possible strategy to fix that is to reload the account data every time the dashboard is loaded, to avoid stall data.
 
-### Task
+### 작업
 
 Create a new function `updateAccountData`:
 
@@ -262,17 +262,17 @@ Try reloading the dashboard now, it should display the updated account data.
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Now that we reload the account data every time the dashboard is loaded, do you think we still need to persist *all the account* data?
 
 Try working together to change what is saved and loaded from `localStorage` to only include what is absolutely required for the app to work.
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Assignment
+## 과제
 
 [Implement "Add transaction" dialog](assignment.md)
 

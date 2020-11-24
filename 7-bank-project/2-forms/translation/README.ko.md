@@ -1,16 +1,16 @@
-# Build a Banking App Part 2: Build a Login and Registration Form
+# 은행 앱 제작하기 파트 2: 로그인과 가입 폼 작성하기
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-### Introduction
+### 소개
 
 In almost all modern web apps, you can create an account to have your own private space. As multiple users can access a web app at the same time, you need a mechanism to store each user personal data separately and select which information to display information. We won't cover how to manage [user identity securely](https://en.wikipedia.org/wiki/Authentication) as it's an extensive topic on its own, but we'll make sure each user is able to create one (or more) bank account on our app.
 
 In this part we'll use HTML forms to add login and registration to our web app. We'll see how to send the data to a server API programmatically, and ultimately how to define basic validation rules for user inputs.
 
-### Prerequisite
+### 준비물
 
 You need to have completed the [HTML templates and routing](../1-template-route/README.md) of the web app for this lesson. You also need to install [Node.js](https://nodejs.org) and [run the server API](../api/README.md) locally so you can send data to create accounts.
 
@@ -23,7 +23,7 @@ curl http://localhost:5000/api
 
 ---
 
-## Form and controls
+## 폼과 컨트롤
 
 The `<form>` element encapsulates a section of an HTML document where the user can input and submit data with interactive controls. There are all sorts of user interface (UI) controls that can be used within a form, the most common one being the `<input>` and the `<button>` elements.
 
@@ -45,7 +45,7 @@ The `<button>` element within a form is a bit special. If you do not specify its
 - `reset`: The button resets all the form controls to their initial values.
 - `button`: Do not assign a default behavior when the button is pressed. You can then assign custom actions to it using JavaScript.
 
-### Task
+### 작업
 
 Let's start by adding a form to the `login` template. We'll need a *username* field and a *Login* button.
 
@@ -93,7 +93,7 @@ Notice also that the input for `balance` has the `number` type. Does it look dif
 
 ✅ Can you navigate and interact with the forms using only a keyboard? How would you do that?
 
-## Submitting data to the server
+## 서버에 데이커 제출하기
 
 Now that we have a functional UI, the next step is to send the data over to our server. Let's make a quick test using our current code: what happens if you click on the *Login* or *Register* button?
 
@@ -111,7 +111,7 @@ That's why you can change it to use the [POST method](https://www.w3.org/Protoco
 
 > While POST is the most commonly used method to send data over, [in some specific scenarios](https://www.w3.org/2001/tag/doc/whenToUseGet.html) it is preferable to use the GET method, when implementing a search field for example.
 
-### Task
+### 작업
 
 Add `action` and `method` properties to the registration form:
 
@@ -127,7 +127,7 @@ If everything goes well, the server should answer your request with a [JSON](htt
 
 ✅ Try registering again with the same name. What happens?
 
-## Submitting data without reloading the page
+## 페이지를 다시 불러오지 않고 데이터 제출하기
 
 As you probably noticed, there's a slight issue with the approach we just used: when submitting the form, we get out of our app and the browser redirects to the server URL. We're trying to avoid all page reloads with our web app, as we're makng a [Single-page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
 
@@ -137,7 +137,7 @@ To send the form data to the server without forcing a page reload, we have to us
 - Convert and encode the form data to a suitable format
 - Create the HTTP request and send it to the server
 
-### Task
+### 작업
 
 Replace the registration form `action` with:
 
@@ -223,7 +223,7 @@ That was a bit long but we got there! If you open your [browser developer tools]
 
 ✅ Do you think the data is sent to the server securely? What if someone what was able to intercept the request? You can read about [HTTPS](https://en.wikipedia.org/wiki/HTTPS) to know more about secure data communication.
 
-## Data validation
+## Data 검증하기
 
 If you try to register a new account without setting an username first, you can see that the server returns an error with status code [400 (Bad Request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
@@ -237,7 +237,7 @@ Before sending data to a server it's a good practice to [validate the form data]
 
 > Tip: you can customize the look of your form controls depending if they're valid or not using the `:valid` and `:invalid` CSS pseudo-classes.
 
-### Task
+### 작업
 
 There are 2 required fields to create a valid new account, the username and currency, the other fields being optional. Update the form in the HTML to reflect that:
 
@@ -269,7 +269,7 @@ Usually both need to be implemented, and while using client-side validation impr
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Show an error message in the HTML if the user already exists.
 
@@ -277,14 +277,14 @@ Here's an example of what the final login page can look like after a bit of styl
 
 ![Screenshot of the login page after adding CSS styles](./images/result.png)
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Developers have gotten very creative about their form building efforts, especially regarding validation strategies. Learn about different form flows by looking through [CodePen](https://codepen.com); can you find some interesting and inspiring forms?
 
-## Assignment
+## 과제
 
 [Style your bank app](assignment.md)

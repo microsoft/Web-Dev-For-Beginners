@@ -1,16 +1,16 @@
-# Build a Banking App Part 3: Methods of Fetching and Using Data
+# 은행 앱 제작하기 파트 3: 데이터를 가져오고 사용하는 방식
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-### Introduction
+### 소개
 
 At the core of every web application there's *data*. Data can take many forms, but its main purpose is always to display information to the user. With web apps becoming increasingly interactive and complex, how the user accesses and interacts with information is now a key part of web development.
 
 In this lesson, we'll see how to fetch data from a server asynchronously, and use this data to display information on a web page without reloading the HTML.
 
-### Prerequisite
+### 준비물
 
 You need to have built the [Login and Registration Form](../2-forms/README.md) part of the web app for this lesson. You also need to install [Node.js](https://nodejs.org) and [run the server API](../api/README.md) locally so you get account data.
 
@@ -23,7 +23,7 @@ curl http://localhost:5000/api
 
 ---
 
-## AJAX and data fetching
+## AJAX와 데이터 가져오기
 
 Traditional web sites update the content displayed when the user click on a link or submit data using a form, by reloading the full HTML page. Every time new data needs to be loaded, the web server returns a brand new HTML page that needs to be processed by the browser, interrupting the current user action and limiting interactions during the reload. This workflow is also called a *Multi-Page Application* or *MPA*.
 
@@ -37,7 +37,7 @@ When AJAX was first introduced, the only API available to fetch data asynchronou
 
 > While all modern browsers supports the `Fetch API`, if you want your web application to work on legacy or old browsers it's always a good idea to check the [compatibility table on caniuse.com](https://caniuse.com/fetch) first.
 
-### Task
+### 작업
 
 In [the previous lesson](../2-forms/README.md) we implented the registration form to create an account. We'll now add code to login using an existing account, and fetch its data. Open the `app.js` file and add a new `login` function:
 
@@ -111,7 +111,7 @@ navigate('/dashboard');
 
 ✅ Did you know that by default, you can only call server APIs from the *same domain and port* than the web page you are viewing? This is security mechanism enforced by browsers. But wait, our web app is running on `localhost:3000` whereas the server API is running on ` localhost:5000`, why does it work? By using a technique called [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) it is possible to perform cross-origin HTTP requests is the server add specials headers to the response, allowing exceptions for specific domains.
 
-## Update HTML to display data
+## 데이터를 보여주기 위해 HTML 갱신하기
 
 Now that we have the user data, we have to update the existing HTML to display it. We already now how to retrieve element from the DOM using for example `document.getElementById()`. After you have a base element, here are some APIs you can use to modify it or add child elements to it:
 
@@ -121,7 +121,7 @@ Now that we have the user data, we have to update the existing HTML to display i
 
 ✅ Using the [`innerHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) property of an element it's also possible to change its HTML contents, but this one should avoided as it's vulnerable to [cross-site scripting (XSS)](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting) attacks.
 
-### Task
+### 작업
 
 Before moving on to the dashboard screen, there's one more thing we should do on the *login* page. Currently, if you try to login with a username that does not exist, a message is shown in the console but for a normal user nothing changes and you don't know what's going on.
 
@@ -159,7 +159,7 @@ Now if you try to login with an invalid account, you should see something like t
 
 Implement the same behavior for the `register` function errors (don't forget to update the HTML).
 
-## Display information on the dashboard
+## 대시보드로 정보 출력하기
 
 Using the same techniques we've just seen we'll also take care of displaying the account information on the the dashboard page.
 
@@ -181,7 +181,7 @@ This is what an account object received from the server looks like:
 
 > Note: to make your life easier, you can use the pre-existing `test` account that's already populated with data.
 
-### Task
+### 작업
 
 Let's start by replacing the "Balance" section in the HTML to add placeholder elements:
 
@@ -238,13 +238,13 @@ const routes = {
 
 With this change, everytime the dashboard page is displayed then the function `updateDashboard()` is called. After a login, you should then be able to see the account balance, currency and description.
 
-## Create table rows dynamically with HTML templates
+## HTML 템플릿으로 동적 테이블 row 만들기
 
 In the [first lesson](../1-template-route/README.md) we used HTML template along with the [`appendChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) method to implement the navigation in our app. Templates can also be smaller and used to dynamically populate repetitive parts of a page.
 
 We'll use a similar approach to display the list of transactions in the HTML table.
 
-### Task
+### 작업
 
 Add a new template in the HTML `<body>`:
 
@@ -309,7 +309,7 @@ If you try using the `test` account to login, you should now see a transaction l
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Work together to make the dashboard page look like a real banking app. If you already styled your app, try to use [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) to create a [responsive design](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) working nicely on both desktop and mobile devices.
 
@@ -317,10 +317,10 @@ Here's an example of a styled dashboard page:
 
 ![Screenshot of an example result of the dashboard after styling](../images/screen2.png)
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Assignment
+## 과제
 
 [Refactor and comment your code](assignment.md)

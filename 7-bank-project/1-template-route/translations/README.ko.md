@@ -1,20 +1,20 @@
-# Build a Banking App Part 1: HTML Templates and Routes in a Web App
+# 은행 앱 제작하기 파트 1: 웹 앱의 HTML 템플릿과 라우터
 
-## Pre-Lecture Quiz
+## 강의 전 퀴즈
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-### Introduction
+### 소개
 
 Since the advent of JavaScript in browsers, websites are becoming more interactive and complex than ever. Web technologies are now commonly used to create fully functional applications that runs directly into a browser that we call [web applications](https://en.wikipedia.org/wiki/Web_application). As Web apps are highly interactive, users do not want to wait for a full page reload every time an action is performed. That's why JavaScript is used to update the HTML directly using the DOM, to provide a smoother user experience.
 
 In this lesson, we're going to lay out the foundations to create bank web app, using HTML templates to create multiple screens that can be displayed and updated without having to reload the entire HTML page.
 
-### Prerequisite
+### 준비물
 
 You need a local web server to test the web app we'll build in this lesson. If don't have one, you can install [Node.js](https://nodejs.org) and use the command `npx lite-server` from your project folder. It will create a local web server and open your app in a browser.
 
-### Preparation
+### 준비
 
 On your computer, create a folder named `bank` with a file named `index.html` inside it. We'll start from this HTML [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code):
 
@@ -34,7 +34,7 @@ On your computer, create a folder named `bank` with a file named `index.html` in
 
 ---
 
-## HTML templates
+## HTML 템플릿
 
 If you want to create multiples screens for a web page, one solution would be to create one HTML file for every screen you want to display. However, this solution comes with some inconvenience:
 
@@ -43,7 +43,7 @@ If you want to create multiples screens for a web page, one solution would be to
 
 Another approach is have only one HTML file, and define multiple [HTML templates](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) using the `<template>` element. A template is a reusable HTML block that is not displayed by the browser, and needs to be instantiated at runtime using JavaScript.
 
-### Task
+### 작업
 
 We'll create a bank app with two screens: the login page and the dashboard. First, let's add in the HTML body a placeholder element that we'll use to instantiate the different screens of our app:
 
@@ -101,7 +101,7 @@ Then we'll add another HTML template for the dashboard page. This page will cont
 
 ✅ Why do you think we use `id` attributes on the templates? Could we use something else like classes?
 
-## Displaying templates with JavaScript
+## JavaScript로 템플릿 출력하기
 
 If you try your current HTML file in a browser, you'll see that it get stuck displaying `Loading...`. That's because we need to add some JavaScript code to instantiate and display the HTML templates.
 
@@ -113,7 +113,7 @@ Instantiating a template is usually done in 3 steps:
 
 ✅ Why do we need to clone the template before attaching it to the DOM? What do you think would happen if we skipped this step?
 
-### Task
+### 작업
 
 Create a new file named `app.js` in your project folder and import that file in the `<head>` section of your HTML:
 
@@ -143,7 +143,7 @@ updateRoute('login');
 
 ✅ What's the purpose of this code `app.innerHTML = '';`? What happens without it?
 
-## Creating routes
+## 라우터 생성하기
 
 When talking about a web app, we call *Routing* the intent to map **URLs** to specific screens that should be displayed. On a web site with multiple HTML files, this is done automatically as the file paths are reflected on the URL. For example, with these files in your project folder:
 
@@ -163,7 +163,7 @@ https://site.com/admin/     --> mywebsite/admin/index.html
 
 However, for our web app we are using a single HTML file containing all the screens so this default behavior won't help us. We have to create this map manually and perform update the displayed template using JavaScript.
 
-### Task
+### 작업
 
 We'll use a simple object to implement a [map](https://en.wikipedia.org/wiki/Associative_array) between URL paths and our templates. Add this object at the top of your `app.js` file.
 
@@ -193,7 +193,7 @@ Here we mapped the routes we declared to the corresponding template. You can try
 
 ✅ What happens if you enter an unknown path in the URL? How could we solve this?
 
-## Adding navigation
+## 네비게이션 추가하기
 
 The next step for ou app is to add the possibility to navigate between pages without having to change the URL manually. This implies two things:
 
@@ -206,7 +206,7 @@ While the HTML anchor element [`<a>`](https://developer.mozilla.org/en-US/docs/W
 
 Instead we'll have to use JavaScript and more specifically the [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) that allows to update the URL and create a new entry in the browsing history, without reloading the HTML.
 
-### Task
+### 작업
 
 Let's create a new function we can use to navigate in our app:
 
@@ -249,7 +249,7 @@ Try clicking on these buttons, you should be now able to navigate between the di
 
 ✅ The `history.pushState` method is part of the HTML5 standard and implemented in [all modern browsers](https://caniuse.com/?search=pushState). If you're building a web app for older browsers, there's a trick you can use in place of this API: using a [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) before the path you can implement routing that works with regular anchor navigation and does not reload the page, as it's purpose was to create internal links within a page.
 
-## Handling the browser's back and forward buttons
+## 브라우저의 뒤로가기와 앞으로가기 버튼 제어하기
 
 Using the `history.pushState` creates new entries in the browser's navigation history. You can check that by holding the *back button* of your browser, it should display something like this:
 
@@ -259,7 +259,7 @@ If you try clicking on the back button a few times, you'll see that the current 
 
 That's because don't know that we need to call `updateRoute()` every time the history changes. If you take a look at the [`history.pushState` documentation](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState), you can see that if the state changes - meaning that we moved to a different URL - the [`popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) event is triggered. We'll use that to fix that issue.
 
-### Task
+### 작업
 
 To make sure the displayed template is updated when the browser history changes, we'll attach a new function that calls `updateRoute()`. We'll do that at the bottom of our `app.js` file:
 
@@ -278,18 +278,18 @@ Now try to use the back and forward buttons of your browsers, and check that the
 
 ---
 
-## 🚀 Challenge
+## 🚀 도전
 
 Add a new template and route for a third page that shows the credits for this app.
 
-## Post-Lecture Quiz
+## 강의 후 퀴즈
 
 [Post-lecture quiz](.github/post-lecture-quiz.md)
 
-## Review & Self Study
+## 리뷰 & 자기주도 학습
 
 Routing is one of the surprisingly tricky parts of web development, especially as the web moves from page refresh behaviors to Single Page Application page refreshes. Read a little about [how the Azure Static Web App service](https://docs.microsoft.com/en-us/azure/static-web-apps/routes) handles routing. Can you explain why some of the decisions described on that document are necessary?
 
-## Assignment
+## 과제
 
 [Improve the routing](assignment.md)
