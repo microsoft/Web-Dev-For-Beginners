@@ -69,6 +69,8 @@ What's going on here? You are referencing the document and looking through its D
 
 ## The Closure
 
+<! --- I found the following paragrahs are more for explaining function scope. Beginners might find subject related to JS Closure a bit challenging to comprehend.  --->
+
 Now you are ready to create the dragElement closure, which is an outer function that encloses an inner function or functions (in our case, we will have three). 
 
 Closures are useful when one or more functions need to access an outer function's scope. Here's an example:
