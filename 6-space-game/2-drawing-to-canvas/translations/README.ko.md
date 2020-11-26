@@ -6,36 +6,36 @@
 
 ## Canvas
 
-The canvas is an HTML element that by default has no content; it's a blank slate. You need to add to it by drawing on it.
+canvas는 내용이 없는 게 기본인 HTML 요소입니다; 빈 상태입니다. 그리는 작업으로 추가해야 합니다.
 
-✅ Read [more about the Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) on MDN.
+✅ MDN애서 [Canvas API에 대하여 더](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) 읽어보세요.
 
-Here's how it's typically declared, as part of the page's body:
+보통 페이지 본문의 일부로 선언되는 방법은 다음과 같습니다:
 
 ```html
 <canvas id="myCanvas" width="200" height="100"></canvas>
 ```
 
-Above we are setting the `id`, `width` and `height`.
+위에서 우리는 `id`, `width`와 `height`를 설정합니다.
 
-- `id`: set this so you can obtain a reference when you need to interact with it.
-- `width`: this is the width of the element.
-- `height`: this is the height of the element.
+- `id`: 상호 작용을 해야 할 순간에 참조할 수 있도록 지정하세요.
+- `width`: 요소의 너비입니다.
+- `height`: 요소의 높이입니다.
 
 ## 간단한 geometry 그리기
 
-The Canvas is using a cartesian coordinate system to draw things. Thus it uses an x-axis and y-axis to express where something is located. The location `0,0` is the top left position and the bottom right is what you said to be the WIDTH and HEIGHT of the canvas.
+캔버스는 데카르트 좌표계로 사물을 그립니다. 따라서 x-축과 y-축을 이용하여 무언가의 위치를 나타냅니다. 위치 `0,0`은 죄측 상단이며 우측 하단은 캔버스의 너비와 높이라고 말한 위치입니다.
 
 ![the canvas's grid](canvas_grid.png)
 > Image from [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-To draw on the canvas element you will need to go through the following steps:
+캔버스 요소에 그리려면 다음 단계를 거쳐야 합니다:
 
-1. **Get a reference** to the Canvas element.
-1. **Get a reference** on the Context element that sits on the canvas element.
-1. **Perform a drawing operation** using the context element.
+1. 캔버스 요소에 **참조를 가져옵니다**.
+1. 캔버스 요소에 있는 Context 요소로 **참조를 가져옵니다**.
+1. 컨텍스트 요소를 사용하여 **그리는 작업을 수행**합니다.
 
-Code for the above steps usually looks like so:
+위 단계의 코드는 일반적으로 다음과 같습니다:
 
 ```javascript
 // draws a red rectangle
@@ -52,19 +52,19 @@ ctx.fillStyle = 'red';
 ctx.fillRect(0,0, 200, 200) // x,y,width, height
 ```
 
-✅ The Canvas API mostly focuses on 2D shapes, but you can also draw 3D elements to a web site; for this, you might use the [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API).
+✅ Canvas API는 2D 모양에 가장 초점이 맞추어져 있습니다, 그러나 웹사이트에서 3D 요소를 그려야 된다면, [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)를 사용해야 할 수도 있습니다.
 
-You can draw all sorts of things with the Canvas API like:
+Canvas API를 사용하면 다음과 같은 모든 종류를 그릴 수 있습니다:
 
-- **Geometrical shapes**, we've already showed how to draw a rectangle, but there is much more you can draw.
-- **Text**, you can draw a text with any font and color you wish.
-- **Images**, you can draw an image based off of an image asset like a .jpg or .png for example.
+- **기하학 모양**, 직사각형을 그리는 방법은 이미 보여 주었지만, 더 많이 그릴 수 있습니다.
+- **텍스트**, 원하는 폰트와 색상으로 텍스트를 그릴 수 있습니다.
+- **이미지**, 예를 들면 .jpg 혹은 .png와 같은 이미지 어셋을 바탕으로 이미지를 그릴 수 있습니다.
 
-✅ Try it! You know how to draw a rectangle, can you draw a circle to a page? Take a look at some interesting Canvas drawings on CodePen. Here's a [particularly impressive example](https://codepen.io/dissimulate/pen/KrAwx).
+✅ 시도 해보세요! 직사각형을 어떻게 그리는지 알고 있으면, 패이지에 원을 그릴 수 있나요? CodePen에서 흥미로운 캔버스 그림을 보세요. 여기 [particularly impressive example](https://codepen.io/dissimulate/pen/KrAwx)이 있습니다.
 
 ## 이미지 어셋 불러오고 그리기
 
-You load an image asset by creating an `Image` object and set its `src` property. Then you listen to the `load` event to know when it's ready to be used. The code looks like this:
+`Image` 객체를 만들고 `src` 속성을 설정하여 이미지 어셋을 불러옵니다. 그런 다음 `load` 이벤트를 수신하여 사용할 준비가 되었는지 알 수 있습니다. 코드는 다음과 같습니다:
 
 ### 어셋 불러오기
 
@@ -78,7 +78,7 @@ img.onload = () => {
 
 ### Load asset 패턴
 
-It's recommended to wrap the above in a construct like so, so it's easier to use and you only try to manipulate it when it's fully loaded:
+위의 내용을 이 구조로 래핑하는 것이 좋습니다, 그래서 쓰기 더 쉽고 완전히 불러올 수 있을 때만 조작하려고 시도합니다:
 
 ```javascript
 async function loadAsset(path) {
@@ -101,7 +101,7 @@ async function run() {
 
 ```
 
-To draw game assets to a screen, your code would look like this:
+게임 어셋을 화면에 그리려면, 코드는 다음과 같습니다:
 
 ```javascript
 async function run() {
@@ -119,7 +119,7 @@ async function run() {
 
 ### 무엇을 만드나요
 
-You will build a web page with a Canvas element. It should render a black screen `1024*768`. We've provided you with two images:
+Canvas 요소가 있는 웹 페이지를 만듭니다. 검은 화면 `1024 * 768`을 렌더링해야 합니다. 두 가지 이미지를 제공받았습니다:
 
 - Hero ship
 
@@ -131,7 +131,7 @@ You will build a web page with a Canvas element. It should render a black screen
 
 ### 개발 시작하기 위한 권장 단계
 
-Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
+`your-work` 하위 폴더에서 생성된 파일을 찾습니다. 다음을 포함해야 합니다:
 
 ```bash
 -| assets
@@ -142,33 +142,33 @@ Locate the files that have been created for you in the `your-work` sub folder. I
 -| package.json
 ```
 
-Open the copy of this folder in Visual Studio Code. You need to have a local development environment setup, preferably with Visual Studio Code with NPM and Node installed. If you don't have `npm` set up on your computer, [here's how to do that](https://www.npmjs.com/get-npm).
+Visual Studio Code에서 폴더의 복사본을 엽니다. 로컬 개발 환경을 설정해야 합니다, NPM과  Node가 설치되어있는 Visual Studio Code를 사용하는 것이 좋습니다. 컴퓨터에 `npm`이 설정되어 있지 않은 경우에, [방법은 다음과 같습니다](https://www.npmjs.com/get-npm).
 
-Start your project by navigating to the `your_work` folder:
+`your_work` 폴더로 이동하여 프로젝트를 시작합니다:
 
 ```bash
 cd your-work
 npm start
 ```
 
-The above will start a HTTP Server on address `http://localhost:5000`. Open up a browser and input that address. It's a blank page right now, but that will change
+위 코드는 `http://localhost:5000` 주소에서 HTTP 서버를 시작합니다. 브라우저를 열고 해당 주소를 입력하세요. 지금은 비어있는 페이지지만, 곧 바뀔 것 입니다
 
-> Note: to see changes on your screen, refresh your browser.
+> Note: 화면에서 변경점을 보고싶다면, 브라우저를 새로 고치세요.
 
 ### 코드 추가하기
 
-Add the needed code to `your-work/app.js` to solve the below
+필요한 코드를 `your-work/app.js`에 추가하여 아래 문제를 해결합니다
 
-1. **Draw** a canvas with black background
-   > tip: add two lines under the appropriate TODO in `/app.js`, setting the `ctx` element to be black and the top/left coordinates to be at 0,0 and the height and width to equal that of the canvas.
-2. **Load** textures
-   > tip: add the player and enemy images using `await loadTexture` and passing in the image path. You won't see them on the screen yet!
-3. **Draw** hero in the center of the screen in the bottom half
-   > tip: use the `drawImage` API to draw heroImg to the screen, setting  `canvas.width / 2 - 45` and `canvas.height - canvas.height / 4)`;
-4. **Draw** 5*5 monsters
-   > tip: Now you can uncomment the code to draw enemies on the screen. Next, go to the `createEnemies` function and build it out.
+1. 검은 바탕으로 canvas **그리기**
+   > tip: `/app.js`의 TODO 아래에 적절히 두 줄을 추가하며, `ctx` 요소를 검은 색으로 설정하고 상단/좌측 좌표를 0,0으로 설정하고 높이와 너비를 캔버스와 동일하게 설정합니다.
+2. 텍스쳐 **불러오기**
+   > tip: `await loadTexture`를 사용하여 플레이어와 적 이미지를 추가하고 이미지 경로를 전달합니다. 아직 화면에서 볼 수 없습니다!
+3. 화면 중앙 하단의 중간에 영웅 **그리기**
+   > tip: `drawImage` API 를 사용하여 화면에 heroImg를 그립니다, `canvas.width / 2 - 45`와 `canvas.height - canvas.height / 4)`로 설정합니다.
+4. 5*5 몬스터를 **그리기**
+   > tip: 이제 주석을 풀고 화면에 적을 그립니다. 그런 다음, `createEnemies` 함수로 가서 작성합니다.
 
-   First, set up some constants:
+   먼저, 약간의 constants를 설정합니다:
 
     ```javascript
     const MONSTER_TOTAL = 5;
@@ -177,7 +177,7 @@ Add the needed code to `your-work/app.js` to solve the below
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    then, create a loop to draw the array of monsters onto the screen:
+    그런 다음, 화면에 몬스터 배열을 그리는 반복문을 만듭니다:
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {
@@ -189,19 +189,19 @@ Add the needed code to `your-work/app.js` to solve the below
 
 ## 결과
 
-The finished result should look like so:
+완성된 결과는 아래와 같이 보이게 됩니다:
 
 ![Black screen with a hero and 5*5 monsters](partI-solution.png)
 
 ## 솔루션
 
-Please try solving it yourself first but if you get stuck, have a look at a [solution](solution/app.js)
+먼저 직접 해결해보고 문제가 발생한다면, [solution](solution/app.js)을 보세요
 
 ---
 
 ## 🚀 도전
 
-You've learned about drawing with the 2D-focused Canvas API; take a look at the [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API), and try to draw a 3D object.
+2D-중심의 Canvas API로 그리는 방식에 대해 배웠습니다; [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)를 살펴보고, 3D 개체를 그려보세요.
 
 ## 강의 후 퀴즈
 
@@ -209,7 +209,7 @@ You've learned about drawing with the 2D-focused Canvas API; take a look at the 
 
 ## 리뷰 & 자기주도 학습
 
-Learn more about the Canvas API by [reading about it](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
+[reading about it](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)을 통해 Canvas API에 대해 자세히 알아보세요.
 
 ## 과제
 
