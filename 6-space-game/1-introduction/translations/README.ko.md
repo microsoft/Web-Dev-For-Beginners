@@ -8,30 +8,30 @@
 
 ### 게임 개발의 상속과 구성
 
-In earlier lessons, there was not much need to worry about the design architecture of the apps you built, as the projects were very small in scope. However, when your applications grow in size and scope, architectural decisions become a larger concern. There are two major approaches to creating larger applications in JavaScript: *composition* or *inheritance*. There are pros and cons to both but let's explain them from within the context of a game.
+이전 강의에서는, 프로젝트의 범위가 매우 작았으므로, 만든 앱의 디자인 아키텍처에 대해 걱정할 필요가 없었습니다. 그러나, 애플리케이션의 크기와 범위가 커지면, 아키텍처 결정이 더 힘듭니다. JavaScript에서 더 큰 응용 프로그램을 만드는 데는 두 가지 주요 방식이 있습니다: *composition* 또는 *inheritance*. 둘 다 장점과 단점이 존재하지만 게임의 맥락에서 설명할 것 입니다.
 
-✅ One of the most famous programming books ever written has to do with [design patterns](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ 가장 유명한 프로그래밍 책 중에는 [design patterns](https://en.wikipedia.org/wiki/Design_Patterns)과 관련이 있습니다.
 
-In a game you have `game objects` which are objects that exist on a screen. This means they have a location on a cartesian coordinate system, characterized by having an `x` and `y` coordinate. As you develop a game you will notice that all your game objects have a standard property, common for every game you create, namely elements that are:
+게임에서는 화면에 존재하는 객체인 `game objects`가 있습니다. `x`와 `y` 좌표를 갖는 것이 특징인, 데카르트 좌표계에 있음을 의미합니다. 게임을 개발할 때 만드는, 모든 게임 객체를 가지고 있는 게임에는 공통적인 표준 속성이 있습니다:
 
-- **location-based** Most, if not all, game elements are location based. This means that they have a location, an `x` and `y`.
-- **movable** These are objects that can move to a new location. This is typically a hero, a monster or an NPC (a non player character), but not for example, a static object like a tree.
-- **self-destructing** These objects only exist for a set period of time before they set themselves up for deletion. Usually this is represented by a `dead` or `destroyed` boolean that signals to the game engine that this object should no longer be rendered.
-- **cool-down** 'Cool-down' is a typical property among short-lived objects. A typical example is a piece of text or graphical effect like an explosion that should only be seen for a few milliseconds.
+- **location-based** 전부는 아니지만, 대부분의 게임 요소는 위치 기반입니다. `x`와 `y`, 위치를 가지고 있음을 의미합니다.
+- **movable** 새 위치로 이동할 수 있는 객체입니다. 이는 일반적으로 영웅, 몬스터 혹은 NPC(non player character)이지만, 예를 들어, 나무와 같은 정적 객체는 아닙니다.
+- **self-destructing** 이런 객체는 삭제 작업을 위해 설정되기 전 일정한 시간에만 존재합니다. 일반적으로 이 객체가 더 이상 렌더링하지 않도록 게임 엔진에 알리기 위해서는 `dead` 또는 `destroyed` 논리 자료형으로 표시됩니다.
+- **cool-down** 'Cool-down'은 짧은-수명 객체의 일반적인 속성입니다. 일반적인 예시는 몇 milli 초 동안만 보이는 폭발과 같은 텍스트 또는 그래픽 이펙트입니다.
 
-✅ Think about a game like Pac-Man. Can you identify the four object types listed above in this game?
+✅ Pac-Man과 같은 게임을 생각해보세요. 이 게임에서 위 나열된 4가지 객체 타입을 구별할 수 있나요?
 
 ### 행동 표현
 
-All we described above are behavior that game objects can have. So how do we encode those? We can express this behavior as methods associated to either classes or objects.
+설명한 모든 것은 게임 객체가 가질 수 있는 동작입니다. 그럼 어떻게 인코딩 될까요? 이 동작을 클래스 혹은 객체와 관련된 메소드로 나타낼 수 있습니다.
 
 **Classes**
 
-The idea is to use `classes` in conjunction with `inheritance` to accomplish adding a certain behavior to a class.
+아이디어로는 클래스에 특정 동작을 추가하기 위해 `inheritance`과 함께 `classes`를 사용하는 것입니다.
 
-✅ Inheritance is an important concept to understand. Learn more on [MDN's article about inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+✅ 상속은 이해해야 할 중요한 컨셉입니다. [MDN's article about inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)로 더 배워보세요.
 
-Expressed via code, a game object can typically look like this:
+코드를 통해 표현되는, 게임 객체는 일반적으로 다음과 같습니다:
 
 ```javascript
 
@@ -79,11 +79,11 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Take a few minutes to re-envision a Pac-Man hero (Inky, Pinky or Blinky, for example) and how it would be written in JavaScript. 
+✅ 잠시 시간을 내어 Pac-Man 영웅 (예를 들어, Inky, Pinky 혹은 Blinky)과 JavaScript로 작성되는 방법을 다시 구상하십시오.
 
 **Composition**
 
-A different way of handling object inheritance is by using *Composition*. Then, objects express their behavior like this:
+객체 상속을 처리하는 다른 방법으로는 *Composition* 을 사용하는 것입니다. 그러면, 객체는 다음과 같이 동작을 표현합니다:
 
 ```javascript
 //create a constant gameObject
@@ -128,25 +128,25 @@ hero.moveTo(5,5);
 const tree = createStatic(0,0, 'Tree'); 
 ```
 
-**Which pattern should I use?**
+**어떤 패턴을 사용해야 하나요?**
 
-It's up to you which pattern you choose. JavaScript supports both these paradigms.
+어떤 패턴을 선택하는 지는 여러분에게 달려 있습니다. JavaScript는 이러한 패러다임을 모두 지원합니다.
 
 --
 
-Another pattern common in game development addresses the problem of handling the game's user experience and performance.
+게임 개발에서 흔히 볼 수 있는 또 다른 패턴으로는 게임의 사용자 경험과 성능 문제를 다룹니다.
 
 ## Pub/sub 패턴
 
-✅ Pub/Sub stands for 'publish-subscribe'
+✅ Pub/Sub은 'publish-subscribe'를 의미합니다
 
-This pattern addresses the idea that the disparate parts of your application shouldn't know about one another. Why is that? It makes it a lot easier to see what's going on in general if various parts are separated. It also makes it easier to suddenly change behavior if you need to. How do we accomplish this? We do this by establishing some concepts:
+이 패턴은 애플리케이션에서 각자 다른 부분이 서로 알고 있으면 안된다는 아이디어를 다룹니다. 왜 그럴까요? 여러 부분이 분리 되어있다면 보통 무슨 일이 일어나는지 쉽게 볼 수 있습니다. 필요한 경우에는 바로 동작을 변경하기도 더 쉽습니다. 어떻게 해야 할까요? 몇 가지 컨셉을 정하고 지킵시다.
 
-- **message**: A message is usually a text string accompanied by an optional payload (a piece of data that clarifies what the message is about). A typical message in a game can be `KEY_PRESSED_ENTER`.
-- **publisher**: This element *publishes* a message and sends it out to all subscribers.
-- **subscriber**: This element *listens* to specific messages and carries out some task as the result of receiving this message, such as firing a laser.
+- **message**: 메시지는 일반적으로 선택적 payload (명확한 메시지 내용 데이터 조각)와 함께 제공되는 텍스트 문자열입니다. 게임의 일반적인 메시지는 `KEY_PRESSED_ENTER` 일 수 있습니다.
+- **publisher**: 이 요소는 메시지를 *publishes*하고 모든 구독자에게 보냅니다.
+- **subscriber**: 이 요소는 특정 메시지를 *listens* 하고 메시지를 수신한 결과로 레이저 발사와 같은 일부 작업을 수행합니다.
 
-The implementation is quite small in size but it's a very powerful pattern. Here's how it can be implemented:
+implementation은 크기가 매우 작지만 매우 강한 패턴입니다. 구현 방법은 다음과 같습니다:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -171,7 +171,7 @@ class EventEmitter {
 
 ```
 
-To use the above code we can create a very small implementation:
+위의 코드를 사용하기 위해서 매우 작은 implementation을 만들 수 있습니다:
 
 ```javascript
 //set up a message structure
@@ -195,7 +195,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Above we connect a keyboard event, `ArrowLeft` and send the `HERO_MOVE_LEFT` message. We listen to that message and move the `hero` as a result. The strength with this pattern is that the event listener and the hero don't know about each other. You can remap the `ArrowLeft` to the `A` key. Additionally it would be possible to do something completely different on `ArrowLeft` by making a few edits to the eventEmitter's `on` function:
+위에서 우리는 키보드 이벤트 `ArrowLeft`를 연결하고, `HERO_MOVE_LEFT` 메시지를 보냅니다. 우리는 그 메시지를 듣고 최종적으로 `hero`을 움직입니다. 이 패턴의 강점은 이벤트 리스너와 영웅이 서로 알지 못한다는 점입니다. `ArrowLeft`를 `A`키로 다시 매핑할 수도 있습니다. 추가적으로 eventEmitter의 `on` 함수를 조금 수정하여 `ArrowLeft`로 완전히 다른 작업을 할 수 있습니다:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -203,13 +203,13 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-As things gets more complicated when your game grows, this pattern stays the same in complexity and your code stays clean. It's really recommended to adopt this pattern.
+게임의 몸집이 커질 때 더 복잡해진다면, 이 패턴은 복잡성을 동일하면서 코드도 깨끗하게 유지합니다. 이 패턴을 채택하는 것은 정말 추천드립니다.
 
 ---
 
 ## 🚀 도전
 
-Think about how the pub-sub pattern can enhance a game. Which parts should emit events, and how should the game react to them? Now's your chance to get creative, thinking of a new game and how its parts might behave.
+pub-sub 패턴이 어떻게 게임을 발전시킬 수 있는지 생각해보세요. 어떤 부분이 이벤트를 어떻게 발생하고, 반응해야 하나요? 이제는 창의력을 발휘하고, 새로운 게임과 그 부분에 대해 어떻게 작동하는지 생각해볼 수 있는 기회입니다.
 
 ## 강의 후 퀴즈
 
@@ -217,7 +217,7 @@ Think about how the pub-sub pattern can enhance a game. Which parts should emit 
 
 ## 리뷰 & 자기주도 학습
 
-Learn more about Pub/Sub by [reading about it](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber).
+[reading about it](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber)으로 Pub/Sub에 대해 조금 더 배워봅시다.
 
 ## 과제
 
