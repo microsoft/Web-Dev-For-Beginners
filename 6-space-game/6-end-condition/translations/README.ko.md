@@ -4,29 +4,29 @@
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-There are different ways to express and *end condition* in a game. It's up to you as the creator of the game to say why the game has ended. Here are some reasons, if we assume we are talking about the space game you have been building so far:
+게임에서 *조건을 표현하고 종료*하는 여러 방식이 있습니다. 게임이 종료된 이유를 말하는 것은 게임 크리에이터의 일입니다. 지금까지 만든 space 게임에 대해 말하고 있다고 가정하면, 몇 가지 이유가 있습니다:
 
-- **`N` Enemy ships have been destroyed**: It's quite common if you divide up a game into different levels that you need to destroy `N` Enemy ships to complete a level
-- **Your ship has been destroyed**: There are definitely games where you lose the game if your ship is destroyed. Another common approach is that you have the concept of lives. Every time a your ship is destroyed it deducts a life. Once all lives have been lost then you lose the game.
-- **You've collected `N` points**: Another common end condition is for you to collect points. How you get points is up to you but it's quite common to assign points to various activities like destroying an enemy ship or maybe collect items that items *drop* when they are destroyed.
-- **Complete a level**: This might involve several conditions such as `X` enemy ships destroyed, `Y` points collected or maybe that a specific item has been collected.
+- **`N`개의 적 배가 파괴되었습니다**: 게임을 여러 레벨로 나누면 레벨을 완료하기 위해 `N`개의 적 배를 부숴야하는 경우가 매우 흔합니다.
+- **배가 파괴되었습니다**: 배가 부서지면 지는 게임이 분명 있습니다. 또 다른 일반적인 접근 방식은 생명의 컨셉을 가지고 있다는 점입니다. 배가 부서질 때마다 생명이 깍입니다. 모든 목숨을 잃으면 게임에서 집니다.
+- **`N` 점수를 모았습니다**: 또 다른 종료 조건은 점수를 모으는 것입니다. 점수를 얻는 방법으로 각자 배를 파괴하는 것처럼 다양한 활동에 점수를 할당하거나 아이템이 부서질 때마다 *떨구는* 아이템을 수집하는 것은 매우 일반적입니다.
+- **레벨을 완료했습니다**: 적 배를 `X` 번 부시거나, `Y` 점수를 수집하거나 특정 아이템을 수집하는 것처럼 여러 조건들을 여기에 포함할 수 있습니다.
 
 ## 다시 시작하기
 
-If people enjoy your game they are likely to want to replay it. Once the game ends for whatever reason you should offer an alternative to restart.
+사람들이 게임을 즐기고 있다면 다시 플레이하고 싶어합니다. 어떤 이유든지 게임이 끝나면 다시 시작할 수 있는 대안을 줘야합니다.
 
-✅ Think a bit about under what conditions you find a game ends, and then how you are prompted to restart
+✅ 어떤 조건에서 게임이 끝나는 지에 대하여 찾고, 다시 시작이라는 메시지가 어떻게 보일지 생각해보세요
 
 ## 무엇을 만드나요
 
-You will be adding these rules to your game:
+게임에 다음 규칙을 추가합니다:
 
-1. **Winning the game**. Once all enemy ships have been destroyed, you win the game. Additionally display some kind of victory message.
-1. **Restart**. Once all your lives are lost or the game is won, you should offer a way to restart the game. Remember! You will need to reinitialize the game and the previous game state should be cleared.
+1. **게임에 우승합니다**. 모든 적의 배가 부서지면, 게임에서 승리합니다. 추가로 일종의 승리 메시지를 출력합니다.
+1. **다시 시작합니다**. 모든 생명을 잃거나 게임에서 이긴다면, 게임을 다시 시작할 방법을 제공해야 합니다. 생각해보세요! 게임을 다시 초기화하고 이전 게임 상태를 깨끗이 지워야 합니다.
 
 ## 권장 단계
 
-Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
+`your-work` 하위 폴더에서 생성된 파일을 찾습니다. 다음을 포함해야 합니다:
 
 ```bash
 -| assets
@@ -39,20 +39,20 @@ Locate the files that have been created for you in the `your-work` sub folder. I
 -| package.json
 ```
 
-You start your project the `your_work` folder by typing:
+타이핑해서 `your_work` 폴더에 프로젝트를 시작합니다:
 
 ```bash
 cd your-work
 npm start
 ```
 
-The above will start a HTTP Server on address `http://localhost:5000`. Open up a browser and input that address. Your game should be in a playable state.
+위 코드는 `http://localhost:5000` 주소에서 HTTP 서버를 시작합니다. 브라우저를 열고 해당 주소를 입력합니다. 게임은 플레이 가능한 상태여야 합니다.
 
-> tip: to avoid warnings in Visual Studio Code, edit the `window.onload` function to call `gameLoopId` as is (without `let`), and declare the gameLoopId at the top of the file, independently: `let gameLoopId;`
+> tip: Visual Studio Code에서 경고를 보이지 않게 하려면, `gameLoopId`를 (`let`없이) 그대로 호출하도록 `window.onload` 함수를 편집하고, 파일 최상단에 gameLoopId를 독립적으로 선언합니다: `let gameLoopId;`
 
 ### 코드 추가하기
 
-1. **Track end condition**. Add code that keeps track of the number of enemies, or if the hero ship has been destroyedby adding these two functions:
+1. **종료 조건을 추적합니다**. 다음 두 함수를 추가하여 적의 수를 추적하거나, 영웅의 배가 부서진 경우도 추적해주는 코드를 추가합니다:
 
     ```javascript
     function isHeroDead() {
@@ -65,7 +65,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
     }
     ```
 
-1. **Add logic to message handlers**. Edit the `eventEmitter` to handle these conditions:
+1. **메시지 핸들러에 로직을 추가합니다**. 이 조건을 제어하도록 `eventEmitter`를 편집합니다:
 
     ```javascript
     eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -99,16 +99,16 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
     });
     ```
 
-1. **Add new message types**. Add these Messages to the constants object:
+1. **새로운 메시지 타입을 추가합니다**. 상수 객체에 이 메시지를 추가합니다:
 
     ```javascript
     GAME_END_LOSS: "GAME_END_LOSS",
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Add restart code** code that restarts the game at the press of a selected button.
+2. **재시작 코드를 추가합니다** 선택한 버튼을 누르면 게임을 다시 시작하는 코드입니다.
 
-   1. **Listen to key press `Enter`**. Edit your window's eventListener to listen for this press:
+   1. **`Enter` 누를 키를 수신합니다**. 누르는 것을 수신하도록 윈도우의 이벤트 리스너를 편집합니다:
 
     ```javascript
      else if(evt.key === "Enter") {
@@ -116,17 +116,17 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
       }
     ```
 
-   1. **Add restart message**. Add this Message to your Messages constant:
+   1. **재시작 메시지 추가하기**. 메시지를 메시지 상수에 추가합니다:
 
         ```javascript
         KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
         ```
 
-1. **Implement game rules**.  Implement the following game rules:
+1. **게임 규칙을 구현합니다**.  다음 게임 규칙을 구현합니다:
 
-   1. **Player win condition**. When all enemy ships are destroyed, display a victory message.
+   1. **플레이어 승리 조건입니다**. 적 배가 모두 파괴되면, 승리 메시지를 출력합니다.
 
-      1. First, create a `displayMessage()` function:
+      1. 먼저, `displayMessage()` 함수를 만듭니다:
 
         ```javascript
         function displayMessage(message, color = "red") {
@@ -137,7 +137,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         }
         ```
 
-      1. Create an `endGame()` function:
+      1. `endGame()` 함수를 만듭니다:
 
         ```javascript
         function endGame(win) {
@@ -162,9 +162,9 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         }
         ```
 
-   1. **Restart logic**. When all lives are lost or the player won the game, display that the game can be restarted. Additionally restart the game when the *restart* key is hit (you can decide what key should be mapped to restart).
+   1. **로직을 다시 시작합니다**. 모든 생명을 잃거나 플레이어가 게임에서 이긴다면, 게임을 다시 시작할 수 있다고 출력합니다. 추가로 *restart* 키를 누르면 게임을 다시 시작합니다 (다시 시작하기 위해 매핑할 키를 고를 수 있습니다).
 
-      1. Create the `resetGame()` function:
+      1. `resetGame()` 함수를 만듭니다:
 
         ```javascript
         function resetGame() {
@@ -185,7 +185,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         }
         ```
 
-     1. Add a call to the `eventEmitter` to reset the game in `initGame()`:
+     1. `initGame()`에서 게임을 다시 설정하기 위해 `eventEmitter`에 호출하도록 추가합니다:
 
         ```javascript
         eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
@@ -193,7 +193,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         });
         ```
 
-     1. Add a `clear()` function to the EventEmitter:
+     1. EventEmitter에 `clear()` 힘수를 추가합니다:
 
         ```javascript
         clear() {
@@ -201,13 +201,13 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         }
         ```
 
-👽 💥 🚀 Congratulations, Captain! Your game is complete! Well done! 🚀 💥 👽
+👽 💥 🚀 축하합니다, 대장! 게임이 완성되었습니다! 잘 하셨습니다! 🚀 💥 👽
 
 ---
 
 ## 🚀 도전
 
-Add a sound! Can you add a sound to enhance your game play, maybe when there's a laser hit, or the hero dies or wins? Have a look at this [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) to learn how to play sound using JavaScript
+소리를 추가해보세요! 레이저가 때리거나, 영웅이 죽고 이길 때, 소리를 추가하여 게임 플레이를 향상시킬 수 있나요? [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play)에서 JavaScript로 소리를 재생하는 방법에 대하여 알아보세요
 
 ## 강의 후 퀴즈
 
@@ -215,7 +215,7 @@ Add a sound! Can you add a sound to enhance your game play, maybe when there's a
 
 ## 리뷰 & 자기주도 학습
 
-Your assignment is to create a fresh sample game, so explore some of the interesting games out there to see what type of game you might build.
+과제는 새로운 샘플 게임을 만드는 것이므로, 어떤 타입의 게임을 만들 수 있는지 알아보고 흥미로운 게임을 찾아보세요.
 
 ## 과제
 
