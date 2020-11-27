@@ -4,28 +4,28 @@
 
 [Pre-lecture quiz](.github/pre-lecture-quiz.md)
 
-In this lesson you will learn how to shoot lasers with JavaScript! We will add two things to our game:
+이 강의에서는 JavaScript로 레이저를 쏘는 방법을 배웁니다! 게임에 다음 두 가지를 추가합니다:
 
-- **A laser**: this laser is shot from your heroes ship and vertically upwards
-- **Collision detection**, as part of implementing the ability to *shoot* we will also add some nice game rules:
-   - **Laser hits enemy**: Enemy dies if hit by a laser
-   - **Laser hits top screen**: A laser is destroyed if hitting the top part of the screen
-   - **Enemy and hero collision**: An enemy and the hero are destroyed if hitting each other
-   - **Enemy hits bottom of the screen**: An enemy and a hero are destroyed if the enemy hits the bottom of the screen
+- **레이저**: 이 레이저는 영웅 우주선에서 수직 위쪽으로 발사되며
+- **충돌 감지**, *쏘는* 기능 구현의 부분으로 몇 가지 멋진 게임 규칙을 추가할 예정입니다:
+   - **레이저로 적 때리기**: 레이저에 맞으면 적은 사망합니다
+   - **레이저로 화면 상단 도달하기**: 화면의 상단 부분을 맞으면 레이저는 파괴됩니다
+   - **적과 영웅 충돌하기**: 적과 영웅이 부딪히면 파괴됩니다
+   - **적이 화면 하단 도달하기**: 적이 화면 하단에 부딪히면 적과 영웅이 파괴됩니다
 
-In short, you -- *the hero* -- need to hit all enemies with a laser before they manage to move to the bottom of the screen.
+짧게 요약해보면, 여러분은 -- *영웅* -- 모든 적들이 화면 아래로 내려오기 전에 레이저로 모든 적을 때려야 합니다.
 
-✅ Do a little research on the very first computer game ever written. What was its functionality?
+✅ 지금까지 작성된 최초의 컴퓨터 게임에 대해 약간 알아보새요. 어떻게 작동하나요?
 
-Let's be heroic together!
+함께 영웅이 됩시다!
 
 ## 충돌 감지하기
 
-How do we do collision detection? We need to think of our game objects as rectangles moving about. Why is that you might ask? Well, the image used to draw a game object is a rectangle: it has an `x`, `y`, `width` and `height`.
+충돌은 어떻게 감지할까요? 게임 객체를 움직이는 직사각형으로 생각해야 합니다. 왜 물어볼까요? 게임 객체를 그리는 데 사용되는 이미지는 직사각형이기 때문입니다: `x`, `y`, `width` 그리고 `height`가 있습니다.
 
-If two rectangles, i.e a hero and enemy *intersect*, you have a collision. What should happen then is up to the rules of the game. To implement collision detection you therefore need the following:
+만약 두 직사각형이, 즉 영웅과 적이 *교차*하면, 충돌합니다. 그런 뒤에 발생할 일은 게임의 룰에 달려 있습니다. 따라서 충돌 감지를 구현하려면 다음이 필요합니다:
 
-1. A way to get a rectangle representation of a game object, something like this:
+1. 게임 객체의 직사각형 표현을 얻는 방법은, 다음과 같습니다:
 
    ```javascript
    rectFromGameObject() {
@@ -38,7 +38,7 @@ If two rectangles, i.e a hero and enemy *intersect*, you have a collision. What 
    }
    ```
 
-2. A comparison function, this function can look like this:
+2. 비교 함수는, 다음 함수와 같습니다:
 
    ```javascript
    function intersectRect(r1, r2) {
@@ -51,14 +51,14 @@ If two rectangles, i.e a hero and enemy *intersect*, you have a collision. What 
 
 ## 어떻게 파괴할까요
 
-To destroy things in a game you need to let the game know it should no longer paint this item in the game loop that triggers on a certain interval. A way to do this is to mark a game object as *dead* when something happens, like so:
+게임에서 물건을 파괴하려면 특정 간격으로 연결되는 게임 루프에서 이 아이템을 더 이상 그리지 않아야 한다고 게임에 알려야 합니다. 이 방법은 다음과 같이, 어떤 일이 발생했을 때 게임 객체를 *dead*으로 표시합니다:
 
 ```javascript
 // collision happened
 enemy.dead = true
 ```
 
-Then you an proceed to sort out *dead* objects before repainting the screen, like so:
+그러고 다음과 같이, 화면을 다시 그리기 전에 *dead* 객체를 정렬합니다:
 
 ```javascript
 gameObjects = gameObject.filter(go => !go.dead);
@@ -66,15 +66,15 @@ gameObjects = gameObject.filter(go => !go.dead);
 
 ## 어떻게 레이저를 발사할까요
 
-Firing a laser translates to responding to a key-event and creating an object that moves in a certain direction. We therefore need to carry out the following steps:
+레이저를 발사하는 것은 키-이벤트에 반응하고 특정 방향으로 움직이는 객체를 만드는 것으로 바뀝니다. 따라서 다음 단계를 해야합니다:
 
-1. **Create a laser object**: from the top of our hero's ship, that upon creation starts moving upwards towards the screen top.
-2. **Attach code to a key event**: we need to choose a key on the keyboard that represents the player shooting the laser.
-3. **Create a game object that looks like a laser** when the key is pressed.
+1. **레이저 객체 생성**: 영웅 함선의 상단에서, 생성되고 화면 상단으로 올라가기 시작합니다.
+2. **키 이벤트에 코드 첨부**: 레이저를 쏘는 플레이어로 특정할 키보드의 키를 선택해야 합니다.
+3. 키를 누를 때, **레이저처럼 보이는 게임 객체를 생성합니다**.
 
 ## 레이저 쿨다운
 
-The laser needs to fire every time you press a key, like *space* for example. To prevent the game producing way too many lasers in a short time we need to fix this. The fix is by implementing a so called *cooldown*, a timer, that ensures that a laser can only be fired so often. You can implement that in the following way:
+레이저는 *space*와 같은 키를 누를 때마다 발사되어야 합니다. 게임이 짧은 시간에 너무 많은 레이저를 생성하는 것을 막으려면 이를 해결해야 합니다. 해결 방법은 레이저를 자주 발사하도록 보장하는 타이머인, *cooldown*을 구현하는 것입니다. 다음과 같이 구현할 수 있습니다:
 
 ```javascript
 class Cooldown {
@@ -100,23 +100,23 @@ class Weapon {
 }
 ```
 
-✅ Refer to lesson 1 in the space game series to remind yourself about *cooldowns*.
+✅ *cooldowns*에 대해 복습하려면 space 게임 시리즈의 1강을 참조하세요.
 
 ## 무엇을 만드나요
 
-You will take the existing code (which you should have cleaned up and refactored) from the previous lesson, and extend it. Either start with the code from part II or use the code at [Part III- starter](/your-work).
+이전 강의에 존재한 기존 코드 (정리하고 리팩토링함)를 가져와서, 확장합니다. 파트 II에서 코드를 시작하거나 [Part III- starter](/your-work) 코드를 사용합니다.
 
-> tip: the laser that you'll work with is already in your assets folder and referenced by your code
+> tip: 작업할 레이저는 이미 어셋 폴더에 있으므로 코드에서 참조합니다
 
-- **Add collision detection**, when a laser collides with something the following rules should apply:
-   1. **Laser hits enemy**: enemy dies if hit by a laser
-   2. **Laser hits top screen**: A laser is destroyed if it hits the top part of our screen
-   3. **Enemy and hero collision**: an enemy and the hero is destroyed if hitting each other
-   4. **Enemy hits bottom of the screen**: An enemy and a hero is destroyed if the enemy hits the bottom of the screen
+- **충돌 감지를 추가합니다**, 레이저가 무언가 부딪칠 때 다음 규칙이 적용되어야 합니다:
+   1. **레이저가 적 때리기**: 레이저에 맞으면 적은 사망합니다
+   2. **레이저로 화면 상단 도달하기**: 화면의 상단 부분을 맞으면 레이저는 부서집니다
+   3. **적과 영웅 충돌하기**: 적과 영웅이 부딪히면 파괴됩니다
+   4. **적이 화면 하단 도달하기**: 적이 화면 하단에 부딪히면 적과 영웅이 파괴됩니다
 
 ## 권장 단계
 
-Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
+`your-work` 하위 폴더에 생성된 파일을 찾습니다. 이는 다음을 포함하고 있어야 합니다:
 
 ```bash
 -| assets
@@ -128,18 +128,18 @@ Locate the files that have been created for you in the `your-work` sub folder. I
 -| package.json
 ```
 
-You start your project the `your_work` folder by typing:
+타이핑하여 `your_work` 폴더에서 프로젝트를 시작합니다:
 
 ```bash
 cd your-work
 npm start
 ```
 
-The above will start a HTTP Server on address `http://localhost:5000`. Open up a browser and input that address, right now it should render the hero and all the enemies, nothing is moving - yet :).
+위 코드는 `http://localhost:5000` 주소에서 HTTP 서버를 시작합니다. 브라우저를 열고 해당 주소를 입력하세요, 지금 바로 영웅과 모든 적을 렌더링해야합니다, 하지만 다 움직이지 않습니다 - 아직 :).
 
 ### 코드 추가하기
 
-1. **Setup a  rectangle representation of your game object, to handle collision** The below code allows you to get a rectangle representation of a `GameObject`. Edit your GameObject class to extend it:
+1. ***충돌을 처리하기 위해 게임 객체의 사각형 표현을 설정합니다** 아래 코드를 쓰면 `GameObject`의 사각형 표현을 얻을 수 있습니다. GameObject 클래스를 편집하여 확장합니다:
 
     ```javascript
     rectFromGameObject() {
@@ -152,7 +152,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
       }
     ```
 
-2. **Add code that checks collision** This will be a new function  that tests whether two rectangles intersect:
+2. **충돌을 확인하는 코드를 추가합니다** 이것은 두 개의 직사각형이 교차되는가에 대한 여부를 테스트하는 새로운 함수입니다:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -165,8 +165,8 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
     }
     ```
 
-3. **Add laser firing capability**
-   1. **Add key-event message**. The *space* key should create a laser just above the hero ship. Add three constants in the Messages object:
+3. **레이저 발사 기능 추가**
+   1. **키-이벤트 메시지 추가하기**. *space* 키는 영웅 함선 바로 위에 레이저를 만들어줘야 합니다. Messages 객체에 세 개의 상수를 추가합니다:
 
        ```javascript
         KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
@@ -174,7 +174,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
        ```
 
-   1. **Handle space key**. Edit the `window.addEventListener` keyup function to handle spaces:
+   1. **space 키 제어하기**. `window.addEventListener` 키업 함수로 spaces를 제어합니다:
 
       ```javascript
         } else if(evt.keyCode === 32) {
@@ -182,7 +182,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         }
       ```
 
-    1. **Add listeners**. Edit the `initGame()` function to ensure that hero can fire when the space bar is hit:
+    1. **리스너 추가하기**. `initGame()` 함수를 편집해서 space 바를 눌렀을 때 hero가 발사할 수 있도록 합니다:
 
        ```javascript
        eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
@@ -191,7 +191,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         }
        ```
 
-       and add a new `eventEmitter.on()` function to ensure behavior when an enemy collides with a laser:
+       새로운 `eventEmitter.on ()` 함수를 추가해서 적이 레이저와 부딪칠 때 동작하도록 합니다:
 
           ```javascript
           eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -200,7 +200,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
           })
           ```
 
-   1. **Move object**, Ensure the laser moves to the top of the screen gradually. You'll create a new Laser class that extends `GameObject`, as you've done before: 
+   1. **객체 움직이기**, 레이저가 화면 상단으로 조금씩 이동하고 있는지 확인합니다. 저번처럼, `GameObject`를 확장하는 새로운 Laser 클래스를 만듭니다:
    
       ```javascript
         class Laser extends GameObject {
@@ -221,7 +221,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
       }
       ```
 
-   1. **Handle collisions**, Implement collision rules for the laser. Add an `updateGameObjects()` function that tests colliding objects for hits
+   1. **충돌 제어하기**, 레이저에 대한 충돌 규칙을 구현합니다. 적에 충돌하는 객체를 테스트하는 `updateGameObjects ()` 함수를 추가합니다:
 
       ```javascript
       function updateGameObjects() {
@@ -243,11 +243,11 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
       }  
       ```
 
-      Make sure to add `updateGameObjects()` into your game loop in `window.onload`.
+      `window.onload`의 게임 루프에 `updateGameObjects()`를 추가해야 합니다.
 
-   4. **Implement cooldown** on the laser, so it can only be fired so often.
+   4. 레이저의 **cooldown을 구현합니다**, 그래서 자주 발사할 수 있습니다.
 
-      Finally, edit the Hero class so that it can cooldown:
+      마지막으로, cooldown을 할 수 있도록 Hero 클래스를 편집합니다:
 
        ```javascript
       class Hero extends GameObject {
@@ -276,13 +276,13 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
       }
       ```
 
-At this point, your game has some functionality! You can navigate with your arrow keys, fire a laser with your space bar, and enemies disappear when you hit them. Well done!
+여기에서 핵심은, 게임이 몇 가지 기능을 가지고 있다는 사실입니다! 화살표 키로 탐색하고, 스페이스 바로 레이저를 발사할 수 있으며, 적을 치면 사라지게 합니다. 잘 하셨습니다!
 
 ---
 
 ## 🚀 도전
 
-Add an explosion! Take a look at the game assets in [the Space Art repo](../solution/spaceArt/readme.txt) and try to add an explosion when the laser hits an alien
+폭발을 추가합니다! [the Space Art repo](../solution/spaceArt/readme.txt)에서 게임 어셋을 살펴보고 레이저가 외계인을 칠 때 폭발하도록 추가해보세요
 
 ## 강의 후 퀴즈
 
@@ -290,7 +290,7 @@ Add an explosion! Take a look at the game assets in [the Space Art repo](../solu
 
 ## 리뷰 & 자기주도 학습
 
-Experiment with the intervals in your game thus far. What happens when you change them? Read more about [JavaScript timing events](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
+지금까지 게임의 간격을 실험 해보세요. 바꾸면 어떻게 되나요? [JavaScript timing events](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/)에 대하여 더 읽어보시기 바랍니다.
 
 ## 과제
 
