@@ -6,17 +6,17 @@
 
 ### 소개
 
-Since the advent of JavaScript in browsers, websites are becoming more interactive and complex than ever. Web technologies are now commonly used to create fully functional applications that runs directly into a browser that we call [web applications](https://en.wikipedia.org/wiki/Web_application). As Web apps are highly interactive, users do not want to wait for a full page reload every time an action is performed. That's why JavaScript is used to update the HTML directly using the DOM, to provide a smoother user experience.
+브라우저에 JavaScript가 등장한 이후, 웹 사이트는 그 어느 순간보다 상호 작용하며 복잡해지고 있습니다. 웹 기술은 일반적으로 [web applications](https://en.wikipedia.org/wiki/Web_application)라고 불리는 브라우저로 직접 실행되는 완전한 기능의 애플리케이션을 만들 때 사용됩니다. 웹 앱은 매우 대화형이므로, 사용자는 작업되는 순간에 전체 페이지가 다시 불러오며 기다리는 것을 원치 않습니다. 원활한 사용자 경험을 제공하기 위해, JavaScript로 DOM을 사용하여 HTML을 직접 갱신합니다.
 
-In this lesson, we're going to lay out the foundations to create bank web app, using HTML templates to create multiple screens that can be displayed and updated without having to reload the entire HTML page.
+이번 강의에서는, 전체 HTML 페이지를 다시 불러오지 않으면서 출력하고 갱신할 여러 화면을 만들기 위해 HTML 템플릿을 사용할 것이므로, 은행 웹 앱을 만들기 위한 기초를 레이아웃합니다.
 
 ### 준비물
 
-You need a local web server to test the web app we'll build in this lesson. If don't have one, you can install [Node.js](https://nodejs.org) and use the command `npx lite-server` from your project folder. It will create a local web server and open your app in a browser.
+이 강의에서 만들 웹 앱을 테스트하려면 로컬 웹 서버가 필요합니다. 없는 경우에는, [Node.js](https://nodejs.org)를 설치하고 프로젝트 폴더에서 `npx lite-server` 명령을 수행할 수 있습니다. 로컬 웹 서버를 만들고 브라우저에서 앱을 엽니다.
 
 ### 준비
 
-On your computer, create a folder named `bank` with a file named `index.html` inside it. We'll start from this HTML [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code):
+컴퓨터에서, `index.html` 파일이 있는 `bank`라는 폴더를 만듭니다. 이 HTML [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code)에서 시작할 것 입니다.
 
 ```html
 <!DOCTYPE html>
@@ -36,26 +36,26 @@ On your computer, create a folder named `bank` with a file named `index.html` in
 
 ## HTML 템플릿
 
-If you want to create multiples screens for a web page, one solution would be to create one HTML file for every screen you want to display. However, this solution comes with some inconvenience:
+웹 페이지에 여러 화면을 만드려는 경우에는, 하나의 솔루션은 출력하려는 모든 화면에 대해 각자 HTML 파일을 만드는 것입니다. 그러나, 이 솔루션에는 몇 가지 불편한 점이 있습니다:
 
-- You have to reload the entire HTML when switching screen, which can be slow.
-- It's difficult to share data between the different screens.
+- 화면 전환 시 전체 HTML을 다시 불러와야 하므로, 속도가 느릴 수 있습니다.
+- 서로 다른 화면 간 데이터 공유가 어렵습니다.
 
-Another approach is have only one HTML file, and define multiple [HTML templates](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) using the `<template>` element. A template is a reusable HTML block that is not displayed by the browser, and needs to be instantiated at runtime using JavaScript.
+또 다른 방법은 HTML 파일이 하나일 때, `<template>` 요소로 여러 [HTML templates](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)을 정의하는 것입니다. 템플릿은 브라우저에 보이지 않는 재사용 가능한 HTML 블록이면서, JavaScript를 사용해서 런타임에 인스턴스화합니다.
 
 ### 작업
 
-We'll create a bank app with two screens: the login page and the dashboard. First, let's add in the HTML body a placeholder element that we'll use to instantiate the different screens of our app:
+두 화면이 있는 은행 앱을 만들 것입니다: 로그인 페이지와 대시보드. 먼저, 앱의 다양한 화면을 인스턴스화할 때 사용할 placeholder 요소를 HTML 본문에 추가하겠습니다:
 
 ```html
 <div id="app">Loading...</div>
 ```
 
-We're giving it an `id` to make it easier to locate it with JavaScript later.
+나중에 JavaScript로 쉽게 찾도록 `id`를 제공합니다.
 
-> Tip: since the content of this element will be replaced, we can put in a loading message or indicator that will be shown while the app is loading.
+> Tip: 이 요소의 내용은 바뀌므로, 앱이 불러와지는 동안 보여지는 로딩 메시지 또는 인디케이터를 넣을 수 있습니다.
 
-Next, let's add below the HTML template for the login page. For now we'll only put in there a title and a section containing a button that we'll use to perform the navigation.
+다음은, 로그인 페이지 HTML 템플릿 아래에 추가하겠습니다. 지금은 탐색하며 사용할 버튼이 포함된 제목과 섹션만 여기에 넣겠습니다.
 
 ```html
 <template id="login">
@@ -66,11 +66,11 @@ Next, let's add below the HTML template for the login page. For now we'll only p
 </template>
 ```
 
-Then we'll add another HTML template for the dashboard page. This page will contain different sections:
+그러고 대시보드 페이지에 대한 다른 HTML 템플릿을 추가합니다. 이 페이지에는 다른 섹션도 포함됩니다:
 
-- A header with a title and a logout button
-- The current balance of the bank account
-- A list of transactions, displayed in a table
+- 제목과 로그아웃 버튼이 있는 헤더
+- 은행 계정의 현재 잔액
+- 테이블에 표시된, 트랜잭션 목록
 
 ```html
 <template id="dashboard">
@@ -97,31 +97,31 @@ Then we'll add another HTML template for the dashboard page. This page will cont
 </template>
 ```
 
-> Tip: when creating HTML templates, if you want to see what it will look like, you can comment out the `<template>` and `</template>` lines by enclosing them with `<!-- -->`.
+> Tip: HTML 템플릿을 만들 때, 모양을 확인하려면, `<!-->`로 묶어 `<template>` 혹은 `</template>` 줄을 주석 처리할 수 있습니다.
 
-✅ Why do you think we use `id` attributes on the templates? Could we use something else like classes?
+✅ 템플릿에 `id` 속성을 사용하는 이유는 무엇일까요? 강의처럼 다른 것을 쓸 수 있나요?
 
 ## JavaScript로 템플릿 출력하기
 
-If you try your current HTML file in a browser, you'll see that it get stuck displaying `Loading...`. That's because we need to add some JavaScript code to instantiate and display the HTML templates.
+브라우저에서 현재 HTML 파일을 시도하면, `Loading...`이 출력되는 것을 볼 수 있습니다. HTML 템플릿을 인스턴스화하고 출력하기 위해 JavaScript 코드를 추가했기 때문입니다.
 
-Instantiating a template is usually done in 3 steps:
+템플릿 인스턴스화는 일반적으로 3 단계로 진행됩니다:
 
-1. Retrieve the template element in the DOM, for example using [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById).
-2. Clone the template element, using [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode).
-3. Attach it to the DOM under a visible element, for example using [`appendChild`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild).
+1. [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)를 사용한 예시로, DOM에서 템플릿 요소 검색합니다.
+2. [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)로, 템플릿 요소를 복제합니다.
+3. [`appendChild`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)를 사용한 예시로, 보이는 요소 아래의 DOM에 붙입니다.
 
-✅ Why do we need to clone the template before attaching it to the DOM? What do you think would happen if we skipped this step?
+✅ DOM에 붙이기 전에 템플릿을 복제해야하는 이유는 무엇일까요? 이 단계를 넘기면 어떻게 될까요?
 
 ### 작업
 
-Create a new file named `app.js` in your project folder and import that file in the `<head>` section of your HTML:
+프로젝트 폴더에 `app.js`라는 새 파일을 만들고 HTML의 `<head>` 섹션에서 해당 파일을 가져옵니다:
 
 ```html
 <script src="app.js" defer></script>
 ```
 
-Now in `app.js`, we'll create a new function `updateRoute`:
+이제 `app.js`에서, 새로운 함수인 `updateRoute`를 만듭니다: 
 
 ```js
 function updateRoute(templateId) {
@@ -133,19 +133,19 @@ function updateRoute(templateId) {
 }
 ```
 
-What we do here is exactly the 3 steps described above. We instantiate the template with the id `templateId`, and put its cloned content within our app placeholder. Note that we need to use `cloneNode(true)` to copy the entire subtree of the template.
+우리가 하는 일은 정확히 위에서 설명한 3단계입니다. id `templateId`로 템플릿을 인스턴스화하고, 복제된 콘텐츠를 앱 placeholder에 넣습니다. 템플릿의 전체 하위 트리를 복사하려면 `cloneNode(true)`로 사용해야 합니다.
 
-Now call this function with one of the template and look at the result.
+이제 템플릿 중 하나를 사용하여 이 함수를 호출하고 결과를 봅니다.
 
 ```js
 updateRoute('login');
 ```
 
-✅ What's the purpose of this code `app.innerHTML = '';`? What happens without it?
+✅ 이 `app.innerHTML = '';` 코드의 목적은 무엇인가요? 없다면 어떻게 될까요?
 
 ## 라우터 생성하기
 
-When talking about a web app, we call *Routing* the intent to map **URLs** to specific screens that should be displayed. On a web site with multiple HTML files, this is done automatically as the file paths are reflected on the URL. For example, with these files in your project folder:
+웹 앱에 대해 이야기할 때, **URLs**을 보여주기 위해 특정 화면에 매핑하려는 의도를 *Routing*이라고 합니다. 여러 HTML 파일에, 웹 사이트에서 파일 경로가 URL에 반영되므로 자동으로 수행됩니다. 예를 들면, 프로젝트 폴더에 다음 파일이 있습니다:
 
 ```
 mywebsite/index.html
@@ -153,7 +153,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-If you create a web server with `mywebsite` as the root, the URL mapping will be:
+만약 상위에 `mywebsite`로 웹 서버를 생성하면, URL 맵핑은 이렇게 이루어집니다:
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -161,11 +161,11 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-However, for our web app we are using a single HTML file containing all the screens so this default behavior won't help us. We have to create this map manually and perform update the displayed template using JavaScript.
+그러나, 웹 앱이라면 모든 화면이 포함된 단일 HTML 파일을 사용하므로 이러한 기본 동작은 도와주지 못합니다. 이 맵을 수동으로 만들고 JavaScript로 출력되는 템플릿을 갱신해야 합니다.
 
 ### 작업
 
-We'll use a simple object to implement a [map](https://en.wikipedia.org/wiki/Associative_array) between URL paths and our templates. Add this object at the top of your `app.js` file.
+간단한 객체로 URL 경로와 템플릿 사이에서 [map](https://en.wikipedia.org/wiki/Associative_array)을 구현합니다. `app.js` 파일의 상단에 객체를 추가합니다.
 
 ```js
 const routes = {
@@ -174,7 +174,7 @@ const routes = {
 };
 ```
 
-Now let's modify a bit the `updateRoute` function. Instead of passing directly the `templateId` as an argument, we want to retrieve it by first looking at the current URL, and then use our map to get the corresponding template ID value. We can use [`window.location.pathname`](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname) to get only the path section from the URL.
+이제 `updateRoute` 함수를 약간 수정합니다. `templateId`를 인수로 직접 주는 대신, 먼저 현재 URL을 보고 찾은 다음, 맵을 사용하여 해당 템플릿 ID 값을 가져오려 합니다. [`window.location.pathname`](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname)으로 URL에서 경로 섹션만 가져올 수 있습니다.
 
 ```js
 function updateRoute() {
@@ -189,26 +189,26 @@ function updateRoute() {
 }
 ```
 
-Here we mapped the routes we declared to the corresponding template. You can try it that it works correctlt by changing the URL manually in your browser.
+여기에서 선언한 라우터를 해당 템플릿에 매핑했습니다. 브라우저에서 수동으로 URL을 변경하여 잘 작동하는지 볼 수 있습니다.
 
-✅ What happens if you enter an unknown path in the URL? How could we solve this?
+✅ URL에 알 수 없는 경로를 입력하면 어떤 일이 벌어지나요? 어떻게 해결할 수 있나요?
 
 ## 네비게이션 추가하기
 
-The next step for ou app is to add the possibility to navigate between pages without having to change the URL manually. This implies two things:
+앱의 다음 단계는 URL을 수동으로 안 바꾸고 페이지 사이를 이동할 수 있도록 추가하는 것입니다. 이는 두 가지를 의미합니다:
 
-  1. Updating the current URL
-  2. Updating the displayed template based on the new URL
+  1. 현재 URL로 갱신하기
+  2. 새로운 URL를 기반으로 출력된 템플릿 갱신하기
 
-We already took care of the second part with the `updateRoute` function, so we have to figure out how to update the current URL.
+두 번째 부분은 `updateRoute` 함수로 이미 처리했으므로, 현재 URL로 갱신하는 방법을 알아냅니다.
 
-While the HTML anchor element [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) can be used to create hyperlinks to different URLs, we can't use that here as it will make the browser reload the HTML.
+HTML 앵커 요소 [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)를 사용하여 다른 URL에 대한 하이퍼링크를 만들 수 있지만, 여기에서 사용하면 브라우저가 HTML을 다시 불러오게 됩니다.
 
-Instead we'll have to use JavaScript and more specifically the [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) that allows to update the URL and create a new entry in the browsing history, without reloading the HTML.
+대신 URL을 업데이트 할 수 있는 JavaScript와 더 구체적으로 [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState)를 사용해야합니다. HTML을 다시 불러오지 않고 검색 기록에 새로운 항목을 만듭니다.
 
 ### 작업
 
-Let's create a new function we can use to navigate in our app:
+앱에서 탐색할 때 사용할 수 있는 새로운 함수를 만들어 보겠습니다:
 
 ```js
 function navigate(path) {
@@ -217,9 +217,9 @@ function navigate(path) {
 }
 ```
 
-This method first updates the current URL based on the path given, then updates the template. The property `window.location.origin` returns the URL root, allowing us to reconstruct a complete URL from a given path.
+이 메소드는 먼저 주어진 경로에 따라 현재 URL을 갱신한 다음에, 템플릿을 업데이트합니다. `window.location.origin` 속성은 URL 최상위를 반환하므로, 주어진 경로에서 전체 URL을 다시 구성할 수 있습니다.
 
-Now that we have this function, we can take care of the problem we have if a path does not match any defined route. We'll modify the `updateRoute` function by adding a fallback to one of the existing route if we can't find a match.
+이제 함수가 있으므로, 경로가 정의된 라우터와 일치하지 않는 경우에 발생할 문제를 해결할 수 있습니다. 일치하는 경로를 찾을 수 없는 경우에는 기존 경로 중 하나에 fallback로 추가하고자 `updateRoute` 함수를 수정합니다.
 
 ```js
 function updateRoute() {
@@ -233,9 +233,9 @@ function updateRoute() {
   ...
 ```
 
-If a route cannot be found, we'll now redirect to the `login` page.
+만약 라우터를 찾지 못한다면, `login` 페이지로 리다이렉트됩니다.
 
-Let's complete the navigation system by adding bindings to our *Login* and *Logout* buttons in the HTML.
+HTML의 *Login*과 *Logout* 버튼에 바인딩을 추가하여 내비게이션 시스템을 완성해봅니다.
 
 ```html
 <button onclick="navigate('/dashboard')">Login</button>
@@ -243,44 +243,44 @@ Let's complete the navigation system by adding bindings to our *Login* and *Logo
 <button onclick="navigate('/login')">Logout</button>
 ```
 
-Using the [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) attribute bind the `click` event to JavaScript code, here the call to the `navigate()` function.
+[`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) 속성을 사용하여 `click` 이벤트를 JavaScript 코드로 바인딩합니다, 여기에서 `navigate()` 함수를 호출합니다.
 
-Try clicking on these buttons, you should be now able to navigate between the different screens of your app.
+이 버튼들을 클릭해보세요, 이제 앱의 여러 화면들을 이동할 수 있습니다.
 
-✅ The `history.pushState` method is part of the HTML5 standard and implemented in [all modern browsers](https://caniuse.com/?search=pushState). If you're building a web app for older browsers, there's a trick you can use in place of this API: using a [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) before the path you can implement routing that works with regular anchor navigation and does not reload the page, as it's purpose was to create internal links within a page.
+✅ `history.pushState` 메소드는 HTML5 표준의 일부이며 [모든 모던 브라우저](https://caniuse.com/?search=pushState)에서 구현됩니다. 옛날 브라우저의 웹 앱을 제작하는 경우, 이 API 대신 사용할 수 있는 트릭이 있습니다: 경로 앞에 [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment)를 사용한다면 일반 앵커 탐색처럼 동작하면서 페이지를 다시 안 불러오는 라우팅을 구현할 수 있습니다, 페이지 내에 내부 링크를 만드는 것이 목적입니다.
 
 ## 브라우저의 뒤로가기와 앞으로가기 버튼 제어하기
 
-Using the `history.pushState` creates new entries in the browser's navigation history. You can check that by holding the *back button* of your browser, it should display something like this:
+`history.pushState`를 사용하면 브라우저의 탐색 기록에 새로운 항목이 생성됩니다. 브라우저의 *back button*을 누르고 있으면 다음처럼 내용이 표시되는지 볼 수 있습니다:
 
 ![Screenshot of navigation history](./history.png)
 
-If you try clicking on the back button a few times, you'll see that the current URL changes and the history is updated, but the same template keeps being displayed.
+뒤로가기 버튼을 몇 번 클릭하면, 현재 URL이 변경되며 히스토리가 갱신되지만 동일한 템플릿이 계속 출력되는 것을 볼 수 있습니다.
 
-That's because don't know that we need to call `updateRoute()` every time the history changes. If you take a look at the [`history.pushState` documentation](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState), you can see that if the state changes - meaning that we moved to a different URL - the [`popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) event is triggered. We'll use that to fix that issue.
+히스토리가 바뀔 때마다 `updateRoute()`를 호출해야 한다는 사실을 모르기 때문입니다. [`history.pushState` documentation](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState)을 살펴보면, 상태가 바뀌는 지 확인할 수 있습니다 - 다른 URL로 이동했다고 의미합니다. - [`popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) 이벤트가 연결됩니다. 이 이슈를 해결하는 데 사용할 것입니다.
 
 ### 작업
 
-To make sure the displayed template is updated when the browser history changes, we'll attach a new function that calls `updateRoute()`. We'll do that at the bottom of our `app.js` file:
+브라우저 히스토리가 바뀔 때마다 출력된 템플릿을 갱신하도록 `updateRoute()`를 호출하는 새 함수를 붙입니다. `app.js` 파일 하단에서 작업합니다:
 
 ```js
 window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Note: we used an [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) here to declare our `popstate` event handler for conciseness, but a regular function would work the same.
+> Note: 여기서는 간결함을 위해 [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)을 사용하여 `popstate` 이벤트 핸들러를 선언했지만, 일반적인 함수와 동일하게 작동합니다.
 
-Here's a refresher video on arrow functions:
+다음은 화살표 함수에 대한 복습 동영상입니다:
 
 [![Arrow Functions](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Arrow Functions")
 
-Now try to use the back and forward buttons of your browsers, and check that the displayed is correctly updated this time.
+이제 브라우저의 뒤로가기와 앞으로가기 버튼을 사용해보세요, 그리고 이 순간마다 올바르게 갱신되어 출력되는 지에 대하여 확인합니다.
 
 ---
 
 ## 🚀 도전
 
-Add a new template and route for a third page that shows the credits for this app.
+이 앱의 크레딧을 보여주는 세 번째 페이지에 새로운 템플릿과 라우터를 추가합니다.
 
 ## 강의 후 퀴즈
 
@@ -288,7 +288,7 @@ Add a new template and route for a third page that shows the credits for this ap
 
 ## 리뷰 & 자기주도 학습
 
-Routing is one of the surprisingly tricky parts of web development, especially as the web moves from page refresh behaviors to Single Page Application page refreshes. Read a little about [how the Azure Static Web App service](https://docs.microsoft.com/en-us/azure/static-web-apps/routes) handles routing. Can you explain why some of the decisions described on that document are necessary?
+라우팅은 웹 개발의 놀랍고 까다로운 부분 중 하나입니다, 특히 웹의 페이지 새로고침 동작에서 단일 페이지 애플리케이션 페이지 새로고침으로 이동함에 따라 더욱 더 그렇습니다. [how the Azure Static Web App service](https://docs.microsoft.com/en-us/azure/static-web-apps/routes)의 라우터 제어에 대해 약간 봅니다. 그 문서에 기술된 몇 가지 결정이 필요한 이유를 설명할 수 있나요?
 
 ## 과제
 
