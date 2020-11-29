@@ -6,15 +6,15 @@
 
 ### 소개
 
-As a web application grows, it becomes a challenge to keep track of all data flows. Which code gets the data, what page consumes it, where and when does it need to be updated...it's easy to end up with messy code that's difficult to maintain. This is especially true when you need to share data among different pages of your app, for example user data. The concept of *state management* has always existed in all kinds of programs, but as web apps keep growing in complexity it's now a key point to think about during development.
+웹 애플리케이션이 커지면서, 모든 데이터 흐름을 추적하는 것은 어렵습니다. 어떤 코드가 데이터를 가져오고, 어떤 페이지가 데이터를 사용하고, 언제 어디서 갱신해야 하는지... 관리하기 어려운 복잡한 코드로 끝날 수 있습니다. 이는 앱의 여러 페이지가 서로 데이터를 공유하는 경우에 특히 더 그렇습니다, 예시로 사용자 데이터. *상태 관리*의 컨셉은 항상 모든 종류의 프로그램에 존재했지만, 웹 앱이 계속 복잡해지면서 이제는 개발하면서 고려해야 할 키 포인트가 되었습니다.
 
-In this final part, we'll look over the app we built to rethink how the state is managed, allowing support for browser refresh at any point, and persisting data across user sessions.
+이 최종 부분에서는, 상태 관리하는 방법을 다시 생각해보며, 언제든 브라우저 새로고침을 지원하고, 사용자 세션에서 데이터를 유지하기 위해서 작성한 앱을 살펴 보겠습니다.
 
 ### 준비물
 
-You need to have completed the [data fetching](../3-data/README.md) part of the web app for this lesson. You also need to install [Node.js](https://nodejs.org) and [run the server API](../api/README.md) locally so you can manage account data.
+이 강의의 웹 앱 [data fetching](../3-data/README.md) 파트를 완료해둬야 합니다. [Node.js](https://nodejs.org)와 [run the server API](../api/README.md)를 로컬에 설치해야 계정 정보를 관리할 수 있습니다.
 
-You can test that the server is running properly by executing this command in a terminal:
+터미널에서 다음 명령을 수행하여 서버가 잘 실행되고 있는지 테스트할 수 있습니다:
 
 ```sh
 curl http://localhost:5000/api
@@ -25,34 +25,34 @@ curl http://localhost:5000/api
 
 ## 상태 관리에 대하여 다시 생각하기
 
-In the [previous lesson](../3-data/README.md), we introduced a basic concept of state in our app with the global `account` variable which contains the bank data for the currently logged in user. However, our current implementation has some flaws. Try refreshing the page when you're on the dashboard. What happens?
+[이전 강의](../3-data/README.md)에서는, 현재 로그인한 사용자의 은행 데이터를 포함하는 전역 `account` 변수를 사용하여 앱에 기초 상태 개념을 도입했습니다. 그러나, 현재 구현에는 조금 취약점이 있습니다. 대시보드에서 페이지를 새로 고쳐보기 바랍니다. 무슨 일이 일어나고 있나요?
 
-There's 3 issues with the current code:
+현재 코드에는 3가지 이슈가 있습니다:
 
-- The state is not persisted, as a browser refresh takes you back to the login page.
-- There are multiple functions that modify the state. As the app grows, it can make it difficult to track the changes and it's easy to forget updating one.
-- The state is not cleaned up, when you click on *Logout* the account data is still there even though you're on the login page.
+- 브라우저를 새로 고치면 로그인 페이지로 돌아가기 때문에, 상태가 유지되지 않습니다.
+- 상태를 바꾸는 여러 함수들이 있습니다. 앱이 커지면서, 변경점을 추적하기 어렵고 갱신한 것을 잊어버리기 쉽습니다.
+- 상태가 정리되지 않았습니다, *로그아웃*을 클릭하면 로그인 페이지에 있어도 계정 데이터가 그대로 유지됩니다.
 
-We could update our code to tackle these issues one by one, but it would create more code duplication and make the app more complex and difficult to maintain. Or we could pause for a few minutes and rethink our strategy.
+이런 이슈를 하나씩 해결하기 위해 코드를 갱신할 수는 있지만, 코드 중복이 더 많이 발생되고 앱이 더 복잡해져서 유지 관리가 어려워집니다. 또는 몇 분 동안 잠시 멈춰서 다시 기획할 수도 있습니다.
 
-> What problems are we really trying to solve here?
+> 여기서 우리가 실제로 해결할 문제는 무엇인가요?
 
-[State management](https://en.wikipedia.org/wiki/State_management) is all about finding a good approach to solve these two particular problems:
+[State management](https://en.wikipedia.org/wiki/State_management)는 다음 2가지 특정한 문제를 해결하기 위해 좋은 접근 방식을 찾습니다:
 
-- How to keep the data flows in an app understandable?
-- How to keep the state data always in sync with the user interface (and vice versa)?
+- 이해하기 쉽게 앱의 데이터 흐름을 유지하는 방법은 무엇인가요?
+- 상태 데이터를 사용자 인터페이스와 항상 동기화하는 방법은 있나요 (혹은 그 반대로)?
 
-Once you've taken care of these, any other issues you might have may either be fixed already or have become easier to fix. There are many possible approaches for solving these problems, but we'll go with a common solution that consists in **centralizing the data and the ways to change it**. The data flows would go like this:
+이런 문제를 해결한 후에는 다른 이슈가 이미 고쳐졌거나 더 쉽게 고칠 수 있습니다. 이러한 문제를 해결하기 위한 여러 가능한 방식들이 있지만, **데이터를 중앙 집중화하고 변경하는 방법**으로 구성된 공통 솔루션을 사용합니다. 데이터 흐름은 다음과 같습니다:
 
 ![Schema showing the data flows between the HTML, user actions and state](./images/data-flow.png)
 
-> We won't cover here the part where the data automatically triggers the view update, as it's tied to more advanced concepts of [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming). It's a good follow-up subject if you're up to a deep dive.
+> 데이터와 뷰 갱신을 자동으로 연결하는 부분은, [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming)의 고급 컨셉과 연결되었으므로 여기서 다루지는 않습니다. 깊게 분석한다면 좋게 팔로우 업할 주제입니다.
 
-✅ There are a lot of libraries out there with different approaches to state management, [Redux](https://redux.js.org) being a popular option. Take a look at the concepts and patterns used as it's often a good way to learn what potential issues you may be facing in large web apps and how it can be solved.
+✅ 상태 관리에 대한 접근 방식이 다른 수 많은 라이브러리가 있으며, [Redux](https://redux.js.org)는 인기있는 옵션입니다. 큰 웹 앱에서 마주할 수 있는 잠재적 이슈와 해결 방식을 알 수 있으므로 사용된 컨셉과 패턴을 살펴보세요.
 
 ### 작업
 
-We'll start with a bit of refactoring. Replace the `account` declaration:
+조금 리팩토링을 해보면서 시작해봅니다. `account` 선언을 바꿉니다:
 
 ```js
 let account = null;
@@ -66,31 +66,31 @@ let state = {
 };
 ```
 
-The idea is to *centralize* all our app data in a single state object. We only have `account` for now in the state so it doesn't change much, but it creates a path for evolutions.
+이 아이디어는 모든 앱 데이터를 단일 상태 개체에서 *중앙에 모으는* 것 입니다. 현재 상태에서는 `account`만 가지고 있으므로 많이 변하지 않지만, 발전을 위한 길을 닦아둡니다.
 
-We also have to update the functions using it. In the `register()` and `login()` functions, replace `account = ...` with `state.account = ...`;
+또한 그것을 사용하여 함수를 갱신해야 합니다. `register()`와 `login()` 함수에서, `account = ...`를 `state.account = ...`로 바꿉니다.
 
-At the top of the `updateDashboard()` function, add this line:
+`updateDashboard()` 함수 상단에, 이 줄을 추가합니다:
 
 ```js
 const account = state.account;
 ```
 
-This refactoring by itself did not bring much improvements, but the idea was to lay out the foundation for the next changes.
+이 리팩토링만으로는 많은 개선이 이루어지지 않지만, 아이디어는 다음 변경점의 토대를 마련해줍니다.
 
 ## 데이터 변경 추적하기
 
-Now that we have put in place the `state` object to store our data, the next step is centralize the updates. The goal is to make it easier to keep track of any changes and when they happen.
+데이터로 저장할 `state` 객체를 두었으므로, 다음 단계는 갱신 작업을 중앙 집중화하는 것입니다. 목표는 모든 변경점과 발생 시점을 쉽게 ​​추적하는 것입니다.
 
-To avoid having changes made to the `state` object it's also a good practice to consider it [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), meaning that it cannot be modified at all. It also means that you have to create a new state object if you want to change anything in it. By doing this, you build a protection about potentially unwanted [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)), and open up possibilities for new features in your app like implementing undo/redo, while also making it easier to debug. For example, you could log every changes made to the state and keep an history of the changes to understand the source of a bug.
+`state` 객체가 변경되지 않으려면, [*immutable*](https://en.wikipedia.org/wiki/Immutable_object)한 것으로 간주하는 것이 좋습니다. 즉, 전혀 수정할 수 없다는 점을 의미합니다. 또한 변경하려는 경우에는 새로운 상태 객체를 만들어야 된다는 점을 의미합니다. 이렇게 하면, 잠재적으로 원하지 않는 [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science))에 보호하도록 만들고, undo/redo를 구현하는 것 처럼 앱의 새로운 기능에 대한 가능성을 열어 디버깅을 더 쉽게 만듭니다. 예를 들자면, 상태에 대한 모든 변경점을 남기고 유지하여 버그의 원인을 파악할 수 있습니다.
 
-In JavaScript, you can use [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) to create an immutable version of an object. If you try to make changes to an immutable object, an exception will be raised.
+JavaScript에서, [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)를 사용하여 변경할 수 없는 버전의 객체를 만들 수 있습니다. 변경 불가능한 객체를 바꾸려고 하면 예외가 발생합니다.
 
-✅ Do you know the difference between a *shallow* and a *deep* immutable object? You can read about it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
+✅ *shallow*와 *deep* 불변 객체의 차이점을 알고 계시나요? [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze)에서 읽을 수 있습니다.
 
 ### 작업
 
-Let's create a new `updateState()` function:
+새로운 `updateState()` 함수를 만듭니다:
 
 ```js
 function updateState(property, newData) {
@@ -101,9 +101,9 @@ function updateState(property, newData) {
 }
 ```
 
-In this function, we're creating a new state object and copy data from the previous state using the [*spread (`...`) operator*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Then we override a particular property of the state object with the new data using the [bracket notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` for assignment. Finally, we lock the object to prevent modifications using `Object.freeze()`. We only have the `account` property stored in the state for now, but with this approach you can add as many properties as you need in the state.
+이 함수에서는, 새로운 상태 객체를 만들고 [*spread (`...`) operator*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals)로 이전 상태의 데이터를 복사합니다. 그러고  할당을 위해 [bracket notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]`를 사용하여 상태 객체의 특정한 속성을 새로운 데이터로 다시 정의합니다. 최종적으로, 변경되는 것을 막기 위해 `Object.freeze()`를 사용하여 객체를 잠급니다. 지금 상태에는 `account` 속성만 저장되어 있지만, 이 접근 방식으로 상태에 필요한 순간마다 많은 속성들을 추가할 수 있습니다.
 
-We'll also update the `state` initialization to make sure the initial state is frozen too:
+또한 초기 상태가 동결되도록 `state` 초기화 작업도 갱신합니다:
 
 ```js
 let state = Object.freeze({
@@ -111,21 +111,21 @@ let state = Object.freeze({
 });
 ```
 
-After that, update the `register` function by replacing the `state.account = result;` assignment with:
+그런 다음, `state.account = result;` 할당을 이 것으로 대체하여 `register` 함수를 갱신합니다:
 
 ```js
 updateState('account', result);
 ```
 
-Do the same with the `login` function, replacing `state.account = data;` with:
+`login` 함수에서도 동일하게 진행하고, `state.account = data;`도 이 것으로 바꿉니다:
 
 ```js
 updateState('account', data);
 ```
 
-We'll now take the chance to fix the issue of account data not being cleared when the user clicks on *Logout*.
+이제 사용자가 *Logout*을 클릭 할 때 계정 데이터가 지워지지 않는 이슈를 해결할 수 있습니다.
 
-Create a new function `logout()`:
+새로운 함수 `logout()`을 만듭니다:
 
 ```js
 function logout() {
@@ -134,49 +134,49 @@ function logout() {
 }
 ```
 
-In `updateDashboard()`, replace the redirection `return navigate('/login');` with `return logout()`;
+`updateDashboard()` 에서, 리다이렉션하는 `return navigate('/login');`을 `return logout()`으로 바꿉니다;
 
-Try registering a new account, logging out and in again to check that everything still works correctly.
+새로운 계정으로 가입을 시도하면, 로그아웃하고 다시 로그인하여 모두 잘 작동하는지 확인합니다.
 
-> Tip: you can take a look at all state changes by adding `console.log(state)` at the bottom of `updateState()` and opening up the console in your browser's development tools.
+> Tip: `updateState()` 하단에 `console.log(state)`를 추가하고 브라우저의 개발 도구에서 콘솔을 열면 모든 상태 변경점을 볼 수 있습니다.
 
 ## 상태 유지하기
 
-Most web apps needs to persist data to be able to work correctly. All the critical data is usually stored on a database and accessed via a server API, like as the user account data in our case. But sometimes, it's also interesting to persist some data on the client app that's running in your browser, for a better user experience or to improve loading performance.
+대부분 웹 앱이 잘 작동하려면 데이터를 유지할 필요가 있습니다. 모든 중요한 데이터는 일반적으로 데이터베이스에 저장되고 우리 케이스에는 사용자 계정 데이터처럼, 서버 API를 통해 접근됩니다. 그러나 때로는, 더 좋은 사용자 경험이나 로딩 퍼포먼스를 개선하기 위해서, 브라우저에서 실행중인 클라이언트 앱에 일부 데이터를 유지하는 것도 흥미롭습니다.
 
-When you want to persist data in your browser, there are a few important questions you should ask yourself:
+브라우저에서 데이터를 유지하려면, 스스로에게 몇 중요한 질문을 해야합니다:
 
-- *Is the data sensitive?* You should avoid storing any sensitive data on client, such as user passwords.
-- *For how long do you need to keep this data?* Do you plan to access this data only for the current session or do you want it to be stored forever?
+- *민감한 데이터인가요?* 사용자 암호와 같은, 민감한 데이터는 클라이언트에 저장하지 않아야 합니다.
+- *데이터를 얼마나 오래 보관해야 하나요?* 현재 세션에서만 데이터에 접근하거나 계속 저장할 계획인가요?
 
-There are multiple ways of storing information inside a web app, depending on what you want to achieve. For example, you can use the URLs to store a search query, and make it shareable between users. You can also use [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) if the data needs to be shared with the server, like [authentication](https://en.wikipedia.org/wiki/Authentication) information.
+달성하려는 목표에 따라, 웹 앱 안에서 정보를 저장하는 방법에는 여러 가지가 있습니다. 예를 들면, URL을 사용하여 검색 쿼리를 저장하고, 사용자끼리 공유할 수 있습니다. [authentication](https://en.wikipedia.org/wiki/Authentication) 정보처럼, 데이터를 서버와 공유해야하는 경우에도 [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)를 사용할 수 있습니다.
 
-Another option is to use one of the many browser APIs for storing data. Two of them are particularly interesting:
+다른 옵션으로는 데이터 저장을 위해 여러 브라우저 API 중 하나를 사용하는 것입니다. 그 중 2가지가 특히 흥미롭습니다:
 
-- [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage): a [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) allowing to persist data specific to the current web site across different sessions. The data saved in it never expires.
-- [`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage): this one is works the same as `localStorage` except that the data stored in it is cleared when the session ends (when the browser is closed).
+- [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage): [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)는 다른 세션에서 현재 웹 사이트에 대한 특정 데이터를 유지할 수 있습니다. 저장된 데이터는 만료되지 않습니다.
+- [`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage): 이는 세션이 끝날 때(브라우저가 닫힐 때)에 저장된 데이터가 지워진다는 점을 제외하면 `localStorage`와 동일하게 작동합니다.
 
-Note that both these APIs only allow to store [strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). If you want to store complex objects, you will need to serialize it to the [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) format using [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+이 두 API는 모두 [strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)만 저장할 수 있습니다. 복잡한 객체를 저장하려면, [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)를 사용하여 [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) 포맷으로 직렬화해야 합니다.
 
-✅ If you want to create a web app that does not work with a server, it's also possible to create a database on the client using the [`IndexedDB` API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). This one is reserved for advanced use cases or if you need to store significant amount of data, as it's more complex to use.
+✅ 서버에서 동작하지 않는 웹 앱을 만드려면, [`IndexedDB` API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)로 클라이언트에 데이터베이스를 만들 수도 있습니다. 이는 고급 사용 케이스이거나, 사용하기 복잡한 많은 양의 데이터를 저장해야 할 때에 사용하도록 되어있습니다.
 
 ### 작업
 
-We want our users stay logged in until they explicitly click on the *Logout* button, so we'll use `localStorage` to store the account data. First, let's define a key that we'll use to store our data.
+*Logout* 버튼을 명시적으로 클릭할 때까지 로그인 상태가 유지되기를 원하므로, `localStorage`로 계정 데이터를 저장합니다. 먼저, 데이터를 저장하는 데 사용할 키를 정의하겠습니다.
 
 ```js
 const storageKey = 'savedAccount';
 ```
 
-Then add this line at the end of the `updateState()` function:
+그러고 `updateState()` 함수의 하단에 이 줄을 추가합니다:
 
 ```js
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-With this, the user account data will be persisted and always up-to-date as we centralized previously all our state updates. This is where we begin to benefit from all our previous refactors 🙂.
+이를 통해, 이전의 모든 상태를 갱신하는 작업이 가운데로 모임에 따라 사용자 계정 데이터가 유지되고 항상 최신-상태를 유지합니다. 이것으로 이전 모든 리팩터링 작업의 혜택을 받기 시작했습니다 🙂.
 
-As the data is saved, we also have to take care of restoring it when the app is loaded. Since we'll begin to have more initialization code it may be a good idea to create a new `init` function, that also includes our previous code at the bottom of `app.js`:
+더 많은 초기화 코드를 가지게 될 예정이므로 새로운 `init` 함수를 만드는 것이 좋습니다, 여기에는 `app.js`의 하단에 이전 코드가 포함됩니다:
 
 ```js
 function init() {
@@ -193,17 +193,17 @@ function init() {
 init();
 ```
 
-Here we retrieve the saved data, and if there's any we update the state accordingly. It's important to do this *before* updating the route, as there might be code relying on the state during the page update.
+여기에서 저장된 데이터를 검색하고, 그에 따라서 상태를 갱신합니다. 페이지를 갱신하다가 상태에 의존하는 코드가 있을 수 있으므로, 라우터를 갱신하기 *전에* 하는 것이 중요합니다.
 
-We can also make the *Dashboard* page our application default page, as we are now persisting the account data. If no data is found, the dashboard takes care of redirecting to the *Login* page anyways. In `updateRoute()`, replace the fallback `return navigate('/login');` with `return navigate('dashboard');`.
+이제 계정 데이터를 유지하고 있으므로, *대시보드* 페이지를 애플리케이션 기본 페이지로 만들 수도 있습니다. 데이터가 없다면, 대시보드는 언제나 *로그인* 페이지로 리다이렉팅합니다. `updateRoute ()`에서, `return navigate('/login');`을 `return navigate('dashboard');`로 바꿉니다.
 
-Now login in the app and try refreshing the page, you should stay on the dashboard. With that update we've taken care of all our initial issues...
+이제 앱에 로그인하고 페이지를 새로 고쳐보면, 대시보드에 남아있어야 합니다. 이 업데이트로 모든 초기 이슈를 처리했습니다...
 
 ## 데이터 새로 고치기
 
-...But we might also have a created a new one. Oops!
+...그러나 새로운 것을 만들 수도 있습니다. 웁스!
 
-Go to the dashboard using the `test` account, then run this command on a terminal to create a new transaction:
+`test` 계정을 사용하여 대시보드로 이동하면, 터미널에서 이 명령을 실행하여 새로운 트랜잭션을 만듭니다:
 
 ```sh
 curl --request POST \
@@ -212,15 +212,15 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Try refreshing your the dashboard page in the browser now. What happens? Do you see the new transaction?
+지금 브라우저에서 대시보드 페이지를 새로 고쳐봅니다. 어떤 일이 일어났나요? 새로운 트랜잭션이 보이나요?
 
-The state is persisted indefinitely thanks to the `localStorage`, but that also means it's never updated until you log out of the app and log in again!
+상태는 `localStorage` 덕분에 무한으로 유지하지만, 앱에서 로그아웃하고 다시 로그인할 때까지 갱신하지 않는다는 점을 의미합니다!
 
-One possible strategy to fix that is to reload the account data every time the dashboard is loaded, to avoid stall data.
+해결할 수 있는 한 가지 전략은 대시보드를 불러올 때마다 계정 데이터를 다시 불러와서, 데이터가 오래되는 현상을 방지하는 것 입니다.
 
 ### 작업
 
-Create a new function `updateAccountData`:
+새로운 함수 `updateAccountData`를 만듭니다:
 
 ```js
 async function updateAccountData() {
@@ -238,9 +238,9 @@ async function updateAccountData() {
 }
 ```
 
-This method checks that we are currently logged in then reloads the account data from the server.
+이 메소드는 현재 로그인되어 있는지 본 다음에 서버에서 계정 데이터를 다시 불러옵니다.
 
-Create another function named `refresh`:
+`refresh`라고 이름을 지은 또 다른 함수를 만듭니다:
 
 ```js
 async function refresh() {
@@ -249,7 +249,7 @@ async function refresh() {
 }
 ```
 
-This one updates the account data, then takes care of updating the HTML of the dashboard page. It's what we need to call when the dashboard route is loaded. Update the route definition with:
+이는 계정 데이터를 갱신하고나서, 대시보드 페이지의 HTML도 갱신하게 됩니다. 대시보드 라우터를 불러올 때마다 호출해야 합니다. 다음으로 라우터 정의를 갱신합니다:
 
 ```js
 const routes = {
@@ -258,15 +258,15 @@ const routes = {
 };
 ```
 
-Try reloading the dashboard now, it should display the updated account data.
+지금 대시보드를 다시 불러옵니다, 갱신된 계정 데이터를 볼 수 있어야 합니다.
 
 ---
 
 ## 🚀 도전
 
-Now that we reload the account data every time the dashboard is loaded, do you think we still need to persist *all the account* data?
+이제 대시보드를 불러올 때마다 계정 데이터가 다시 불러와지는데, 여전히 *모든 계정* 데이터를 유지해야 된다고 생각하나요?
 
-Try working together to change what is saved and loaded from `localStorage` to only include what is absolutely required for the app to work.
+앱이 동작하는 데 꼭 필요한 것만 있도록 `localStorage` 에 저장하고 불러온 항목을 함께 바꿔봅니다.
 
 ## 강의 후 퀴즈
 
@@ -276,6 +276,6 @@ Try working together to change what is saved and loaded from `localStorage` to o
 
 [Implement "Add transaction" dialog](assignment.md)
 
-Here's an example result after completing the assignment:
+다음은 과제를 완료한 뒤의 예시 결과입니다:
 
 ![Screenshot showing an example "Add transaction" dialog](./images/dialog.png)
