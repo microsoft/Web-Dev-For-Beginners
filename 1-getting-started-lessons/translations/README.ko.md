@@ -4,9 +4,9 @@
 
 ### 토픽
 
-1. [프로그래밍 언어 및 도구 소개](1-intro-to-programming-languages/README.md)
-2. [GitHub의 기초](2-github-basics/README.md)
-3. [접근성의 기초](3-accessibility/README.md)
+1. [프로그래밍 언어 및 도구 소개](../1-intro-to-programming-languages/translations/README.ko.md)
+2. [GitHub의 기초](../2-github-basics/translations/README.ko.md)
+3. [접근성의 기초](../3-accessibility/translations/README.ko.md)
 
 ### 크레딧
 

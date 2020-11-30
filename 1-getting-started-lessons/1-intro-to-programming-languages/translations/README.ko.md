@@ -2,11 +2,11 @@
 
 이 강의에서는 프로그래밍 언어의 기초를 다룹니다. 여기에서 다루는 주제는 오늘 날 많은 최신 프로그래밍 언어에 적용됩니다. 'Tools of the Trade' 세션에서는 개발자에게 도움이 되는 유용한 소프트웨어에 대해 알아보겠습니다.
 
-![Intro Programming](webdev101-programming.png)
+![Intro Programming](../webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ## 소개
 
@@ -181,7 +181,7 @@ command line 옵션은 사용하는 운영체제에 따라 다릅니다.
 일부 프로그래밍 언어를 비교하십시오. JavaScript와 자바의 특징은 무엇입니까? COBOL과 Go는 어떻습니까?
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -189,4 +189,4 @@ command line 옵션은 사용하는 운영체제에 따라 다릅니다.
 
 ## 과제 
 
-[Reading the Docs](assignment.md)
+[Reading the Docs](../assignment.md)

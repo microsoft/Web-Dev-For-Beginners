@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 이 강의에서는 어떻게 게임에서 점수를 내고 생명을 구하는 가에 대하여 배웁니다.
 
@@ -28,7 +28,7 @@ ctx.fillText("show this on the screen", 0, 0);
 게임에 다음을 추가하겠습니다:
 
 - **게임 점수**: 적의 배가 파괴될 때마다, 영웅은 점수를 받아야하고, 하나의 배마다 100점을 제안합니다. 게임 점수는 좌측 하단에 보여야 합니다.
-- **생명**: 여러분의 배는 세 생명이 있습니다. 적의 배로 부딪칠 때마다 생명을 잃습니다. 생명 점수는 우측 하단에 보여야되고 ![life image](solution/assets/life.png)로 만들어야 합니다.
+- **생명**: 여러분의 배는 세 생명이 있습니다. 적의 배로 부딪칠 때마다 생명을 잃습니다. 생명 점수는 우측 하단에 보여야되고 ![life image](../solution/assets/life.png)로 만들어야 합니다.
 
 ## 권장 단계
 
@@ -178,7 +178,7 @@ npm start
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -186,4 +186,4 @@ npm start
 
 ## 과제
 
-[Build a Scoring Game](assignment.md)
+[Build a Scoring Game](../assignment.md)

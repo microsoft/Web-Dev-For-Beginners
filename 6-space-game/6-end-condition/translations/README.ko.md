@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 게임에서 *조건을 표현하고 종료*하는 여러 방식이 있습니다. 게임이 종료된 이유를 말하는 것은 게임 크리에이터의 일입니다. 지금까지 만든 space 게임에 대해 말하고 있다고 가정하면, 몇 가지 이유가 있습니다:
 
@@ -211,7 +211,7 @@ npm start
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -219,4 +219,4 @@ npm start
 
 ## 과제
 
-[Build a Sample Game](assignment.md)
+[Build a Sample Game](../assignment.md)

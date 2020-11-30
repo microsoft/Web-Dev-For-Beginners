@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 소개
 
@@ -12,7 +12,7 @@
 
 ### 확장에서 조작할 요소를 설정합니다:
 
-지금까지 HTML 폼과 브라우저 확장에 대한 결과 `<div>`를 작성했습니다. 이제부터, `/src/index.js` 파일에서 작업하고 확장을 조금씩 빌드해야 합니다. 프로젝트 설정 및 빌드 프로세스에 대해서는 [이전 강의](../about-browsers/README.md)를 참조하세요.
+지금까지 HTML 폼과 브라우저 확장에 대한 결과 `<div>`를 작성했습니다. 이제부터, `/src/index.js` 파일에서 작업하고 확장을 조금씩 빌드해야 합니다. 프로젝트 설정 및 빌드 프로세스에 대해서는 [이전 강의](../../1-about-browsers/translations/README.ko.md)를 참조하세요.
 
 `index.js` 파일에서 작업하면서, 다양한 필드에 값을 저장할 `const` 변수를 만드는 것으로 시작합니다:
 
@@ -100,7 +100,7 @@ function reset(e) {
 
 APIKey를 문자열 값으로 설정한다고 하면, 예를 들어 웹 페이지를 "inspecting" 하고 (브라우저를 우측 클릭하여 검사할 수 있습니다) 애플리케이션 탭으로 이동하여 저장소를 확인했을 때 Edge에 설정되어 있다는 것을 볼 수 있습니다.
 
-![Local storage pane](images/localstorage.png)
+![Local storage pane](../images/localstorage.png)
 
 ✅ LocalStorage에 일부 데이터를 저장하기 꺼리는 상황을 생각해보세요. 일반적으로 API 키를 LocalStorage에 배치하는 것은 좋지 않은 생각입니다! 알 수 있나요? 우리 경우, 앱은 순수하게 학습을 위함이고, 앱 스토어에도 배포하지 않으므로 이 방법을 사용합니다.
 
@@ -210,7 +210,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -218,5 +218,5 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## 과제
 
-[Adopt an API](assignment.md)
+[Adopt an API](../assignment.md)
 

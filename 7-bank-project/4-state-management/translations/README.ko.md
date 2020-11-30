@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 소개
 
@@ -12,7 +12,7 @@
 
 ### 준비물
 
-이 강의의 웹 앱 [data fetching](../3-data/README.md) 파트를 완료해둬야 합니다. [Node.js](https://nodejs.org)와 [run the server API](../api/README.md)를 로컬에 설치해야 계정 정보를 관리할 수 있습니다.
+이 강의의 웹 앱 [data fetching](../../3-data/translations/README.ko.md) 파트를 완료해둬야 합니다. [Node.js](https://nodejs.org)와 [run the server API](../../api/README.md)를 로컬에 설치해야 계정 정보를 관리할 수 있습니다.
 
 터미널에서 다음 명령을 수행하여 서버가 잘 실행되고 있는지 테스트할 수 있습니다:
 
@@ -25,7 +25,7 @@ curl http://localhost:5000/api
 
 ## 상태 관리에 대하여 다시 생각하기
 
-[이전 강의](../3-data/README.md)에서는, 현재 로그인한 사용자의 은행 데이터를 포함하는 전역 `account` 변수를 사용하여 앱에 기초 상태 개념을 도입했습니다. 그러나, 현재 구현에는 조금 취약점이 있습니다. 대시보드에서 페이지를 새로 고쳐보기 바랍니다. 무슨 일이 일어나고 있나요?
+[이전 강의](../../3-data/translations/README.ko.md)에서는, 현재 로그인한 사용자의 은행 데이터를 포함하는 전역 `account` 변수를 사용하여 앱에 기초 상태 개념을 도입했습니다. 그러나, 현재 구현에는 조금 취약점이 있습니다. 대시보드에서 페이지를 새로 고쳐보기 바랍니다. 무슨 일이 일어나고 있나요?
 
 현재 코드에는 3가지 이슈가 있습니다:
 
@@ -44,7 +44,7 @@ curl http://localhost:5000/api
 
 이런 문제를 해결한 후에는 다른 이슈가 이미 고쳐졌거나 더 쉽게 고칠 수 있습니다. 이러한 문제를 해결하기 위한 여러 가능한 방식들이 있지만, **데이터를 중앙 집중화하고 변경하는 방법**으로 구성된 공통 솔루션을 사용합니다. 데이터 흐름은 다음과 같습니다:
 
-![Schema showing the data flows between the HTML, user actions and state](./images/data-flow.png)
+![Schema showing the data flows between the HTML, user actions and state](.././images/data-flow.png)
 
 > 데이터와 뷰 갱신을 자동으로 연결하는 부분은, [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming)의 고급 컨셉과 연결되었으므로 여기서 다루지는 않습니다. 깊게 분석한다면 좋게 팔로우 업할 주제입니다.
 
@@ -270,12 +270,12 @@ const routes = {
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 과제
 
-[Implement "Add transaction" dialog](assignment.md)
+[Implement "Add transaction" dialog](../assignment.md)
 
 다음은 과제를 완료한 뒤의 예시 결과입니다:
 
-![Screenshot showing an example "Add transaction" dialog](./images/dialog.png)
+![Screenshot showing an example "Add transaction" dialog](.././images/dialog.png)

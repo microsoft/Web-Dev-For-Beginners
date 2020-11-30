@@ -2,11 +2,11 @@
 
 이 강의에서는 코드 변경점을 호스팅하고 관리하는 플랫폼인 GitHub의 기본 사항을 다룹니다.
 
-![Intro to GitHub](images/webdev101-github.png)
+![Intro to GitHub](../images/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ## 소개
 
@@ -242,9 +242,9 @@ pull request는 리뷰, 코멘트, 통합 테스트 등을 통해 브랜치에 �
 
 먼저, GitHub에서 관심있고 변경 사항을 기여할 저장소를 찾아 보겠습니다. 그 곳의 내용을 자신의 장치에 복사하고 싶을 것입니다.
 
-✅ '입문-친화적'인 저장소를 찾는 좋은 방법은 ['good-first-issue 태그로 검새'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
+✅ '입문-친화적'인 저장소를 찾는 좋은 방법은 ['good-first-issue 태그로 검색하는 것입니다.'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copy a repo locally](images/clone_repo.png)
+![Copy a repo locally](../images/clone_repo.png)
 
 코드를 복사하는 방법에는 여러 가지가 있습니다. 한 가지 방법은 HTTPS, SSH 또는 GitHub CLI (Command Line 인터페이스)를 사용하여 저장소의 내용을 "복제"하는 것입니다.
 
@@ -275,7 +275,7 @@ GitHub의 모든 공개 저장소에 스타 표시, 워치 및/또는 "포크" �
 친구와 페어링하여 서로의 코드를 작업하세요. 공동으로 프로젝트를 만들고, 코드를 포크하고, 브랜치를 만들고, 변경 사항을 병합합니다.
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 

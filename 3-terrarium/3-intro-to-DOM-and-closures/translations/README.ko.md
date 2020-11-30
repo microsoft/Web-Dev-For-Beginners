@@ -1,11 +1,11 @@
 # Terrarium 프로젝트 파트 3: DOM 조작과 클로저
 
-![DOM and a closure](images/webdev101-js.png)
+![DOM and a closure](../images/webdev101-js.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 소개
 
@@ -17,7 +17,7 @@ DOM을 조작하기 위해 클로저를 사용할 예정입니다.
 
 > DOM을 웹 페이지 문서를 제어할 수 있는 모든 방법으로 나타낼 수 있는 트리로 생각하십시오. 프로그래머가 선택한 프로그래밍 언어를 사용하여 DOM에 접근하고 편집, 변경, 재배치하며 관리할 수 있는 다양한 API(Application Program Interfaces)가 작성되어 있습니다.
 
-![DOM tree representation](./images/dom-tree.png)
+![DOM tree representation](.././images/dom-tree.png)
 
 > DOM과 참조하는 HTML 마크업의 표현입니다. From [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -189,7 +189,7 @@ function stopElementDrag() {
 
 이제 프로젝트를 완료했습니다!
 
-🥇 축하합니다! 아름다운 terrarium을 완성했습니다. ![finished terrarium](./images/terrarium-final.png)
+🥇 축하합니다! 아름다운 terrarium을 완성했습니다. ![finished terrarium](.././images/terrarium-final.png)
 
 ---
 
@@ -199,7 +199,7 @@ function stopElementDrag() {
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -211,5 +211,5 @@ function stopElementDrag() {
 
 ## 과제
 
-[Work a bit more with the DOM](assignment.md)
+[Work a bit more with the DOM](../assignment.md)
 

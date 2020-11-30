@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 소개
 
@@ -253,7 +253,7 @@ HTML의 *Login*과 *Logout* 버튼에 바인딩을 추가하여 내비게이션 
 
 `history.pushState`를 사용하면 브라우저의 탐색 기록에 새로운 항목이 생성됩니다. 브라우저의 *back button*을 누르고 있으면 다음처럼 내용이 표시되는지 볼 수 있습니다:
 
-![Screenshot of navigation history](./history.png)
+![Screenshot of navigation history](.././history.png)
 
 뒤로가기 버튼을 몇 번 클릭하면, 현재 URL이 변경되며 히스토리가 갱신되지만 동일한 템플릿이 계속 출력되는 것을 볼 수 있습니다.
 
@@ -284,7 +284,7 @@ updateRoute();
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -292,4 +292,4 @@ updateRoute();
 
 ## 과제
 
-[Improve the routing](assignment.md)
+[Improve the routing](../assignment.md)
