@@ -65,7 +65,7 @@ API de CO2 Signal.
 
 - [una clave API](https://www.co2signal.com/); ingrese su correo electrónico en el cuadro de esta página y se le enviará uno
 - el [código de su región](http://api.electricitymap.org/v3/zones) correspondiente al [Mapa de electricidad](https://www.electricitymap.org/map) (en Boston, por ejemplo, Yo uso 'US-NEISO').
-- el [código de inicio](../ inicio). Descargue la carpeta `start`; completará el código en esta carpeta.
+- el [código de inicio](../inicio). Descargue la carpeta `start`; completará el código en esta carpeta.
 - [NPM](https://www.npmjs.com) - NPM es una herramienta de gestión de paquetes; instálelo localmente y los paquetes enumerados en su archivo `package.json` se instalarán para que los use su recurso web
 
 ✅ Obtenga más información sobre la administración de paquetes en este [excelente módulo de aprendizaje](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/)

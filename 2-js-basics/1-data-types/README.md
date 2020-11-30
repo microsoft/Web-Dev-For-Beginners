@@ -162,7 +162,7 @@ let myString1 = "Hello";
 let myString2 = "World";
 
 `${myString1} ${myString2}!` //Hello World!
-`${myString1}, ${myString2}!` //Hello World!
+`${myString1}, ${myString2}!` //Hello, World!
 ```
 
 You can achieve your formatting goals with either method, but template literals will respect any spaces and line breaks.

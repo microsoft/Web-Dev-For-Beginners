@@ -11,11 +11,11 @@ Utilizando todo lo que ha aprendido en las cuatro lecciones anteriores, implemen
 - Cree datos JSON a partir de los datos del formulario y envíelos a la API
 - Actualiza la página del tablero con los nuevos datos.
 
-Mire las [especificaciones de la API del servidor](./images/dialog.png) para ver a qué API debe llamar y cuál es el formato JSON esperado.
+Mire las [especificaciones de la API del servidor](../images/dialog.png) para ver a qué API debe llamar y cuál es el formato JSON esperado.
 
 Aquí hay un ejemplo de resultado después de completar la tarea:
 
-! [Captura de pantalla que muestra un ejemplo de diálogo "Agregar transacción"] (./ images / dialog.png)
+! [Captura de pantalla que muestra un ejemplo de diálogo "Agregar transacción"](../images/dialog.png)
 
 ## Rúbrica
 

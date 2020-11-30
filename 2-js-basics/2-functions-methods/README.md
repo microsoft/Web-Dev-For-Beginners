@@ -139,7 +139,7 @@ function displayDone() {
   console.log('3 seconds has elapsed');
 }
 // timer value is in milliseconds
-setTimeout(3000, displayDone);
+setTimeout(displayDone, 3000);
 ```
 
 ### Anonymous functions
@@ -151,9 +151,9 @@ When we are passing a function as a parameter we can bypass creating one in adva
 Let's rewrite the code above to use an anonymous function:
 
 ```javascript
-setTimeout(3000, function() {
+setTimeout(function() {
   console.log('3 seconds has elapsed');
-});
+}, 3000);
 ```
 
 If you run our new code you'll notice we get the same results. We've created a function, but didn't have to give it a name!
@@ -165,9 +165,9 @@ One shortcut common in a lot of programming languages (including JavaScript) is 
 Let's rewrite our code one more time to use a fat arrow function:
 
 ```javascript
-setTimeout(3000, () => {
+setTimeout(() => {
   console.log('3 seconds has elapsed');
-});
+}, 3000);
 ```
 
 ### When to use each strategy

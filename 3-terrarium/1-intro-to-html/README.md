@@ -106,7 +106,7 @@ Now, you can start building out your page. Normally, you use `<div>` tags to cre
 
 One html tag that doesn't need a closing tag is the `<img>` tag, because it has a `src` element that contains all the information the page needs to render the item.
 
-Create a folder in your app called `images` and in that, add all the images in the [source code folder](../images); (there are 14 images of plants).
+Create a folder in your app called `images` and in that, add all the images in the [source code folder](../solution/images); (there are 14 images of plants).
 
 ### Task
 

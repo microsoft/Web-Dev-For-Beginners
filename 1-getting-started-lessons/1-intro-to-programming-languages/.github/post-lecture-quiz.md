@@ -6,12 +6,12 @@
 - [ ] JavaScript
 - [ ] Bash
 
-1. Development environments are unique to each developer
+2. Development environments are unique to each developer
 
 - [ ] True
 - [ ] False
 
-1. What will a developer do to fix buggy code?
+3. What will a developer do to fix buggy code?
 
 - [ ] Syntax highlighting
 - [ ] Debugging

@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 Tomar decisiones y controlar el orden en que se ejecuta su código hace que su código sea reutilizable y robusto. Esta sección cubre la sintaxis para controlar el flujo de datos en JavaScript y su importancia cuando se usa con tipos de datos booleanos.
 
@@ -154,11 +154,11 @@ if (firstNumber > secondNumber) {
 
 🚀 Desafío: cree un programa que se escriba primero con operadores lógicos y luego vuelva a escribirlo utilizando una expresión ternaria. ¿Cuál es tu sintaxis preferida?
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](../.github/post-lecture-quiz.md)
 
 ## Revisión y autoestudio
 
 Más información sobre los muchos operadores disponibles para el usuario [en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
 
-**Asignación**: [Operadores](assignment.md)
+**Asignación**: [Operadores](assignment.es.md)
 

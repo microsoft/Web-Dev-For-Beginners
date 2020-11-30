@@ -1,9 +1,9 @@
 # Terrarium Project Part 3: DOM Manipulación y cierre
 
-! [DOM y un cierre](images/webdev101-js.png)
+! [DOM y un cierre](../images/webdev101-js.png)
 > Boceto de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
 
 ### Introducción:
 
@@ -16,7 +16,7 @@ Usaremos un cierre para manipular el DOM.
 > Piense en el DOM como un árbol, que representa todas las formas en que se puede manipular un documento de página web. Se han escrito varias API (interfaces de programas de aplicación) para que los programadores, utilizando el lenguaje de programación de su elección, puedan acceder al DOM y editarlo, cambiarlo, reorganizarlo y administrarlo de otro modo.
 
 
-![DOM tree representation](./images/dom-tree.png)
+![DOM tree representation](../images/dom-tree.png)
 
 > Una representación del DOM y el marcado HTML que lo hace referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -193,7 +193,7 @@ Esta pequeña función restablece los eventos `onpointerup` y `onpointermove` pa
 
 ---
 
-🥇¡Felicitaciones! Has terminado tu hermoso terrario. ![terrario terminado](./images/terrarium-final.png)
+🥇¡Felicitaciones! Has terminado tu hermoso terrario. ![terrario terminado](../images/terrarium-final.png)
 
 🚀Challenge: agregue un nuevo controlador de eventos a su cierre para hacer algo más en las plantas; por ejemplo, haga doble clic en una planta para traerla al frente. ¡Se creativo!
 
@@ -203,5 +203,5 @@ Esta pequeña función restablece los eventos `onpointerup` y `onpointermove` pa
 
 Si bien arrastrar elementos por la pantalla parece trivial, hay muchas formas de hacerlo y muchas trampas, según el efecto que busque. De hecho, hay una [API de arrastrar y soltar](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API) completa que puedes probar. No lo usamos en este módulo porque el efecto que queríamos era algo diferente, pero pruebe esta API en su propio proyecto y vea lo que puede lograr.
 
-** Tarea: [Trabajar un poco más con el DOM](assignment.md)
+** Tarea: [Trabajar un poco más con el DOM](assignment.es.md)
 

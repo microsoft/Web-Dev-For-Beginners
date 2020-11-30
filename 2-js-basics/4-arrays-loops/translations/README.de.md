@@ -2,7 +2,7 @@
 
 [![Arrays und Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
 
-## [Pre-Lecture Quiz](.github/pre-lecture-quiz.md)
+## [Pre-Lecture Quiz](../.github/pre-lecture-quiz.md)
 
 Diese Lektion behandelt die Grundlagen von JavaScript, der Sprache, die Interaktivität im Web bietet. In dieser Lektion lernen Sie Arrays und Loops kennen, mit denen Daten bearbeitet werden.
 
@@ -111,7 +111,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 Es gibt andere Möglichkeiten, Arrays als for- und while-Schleifen zu durchlaufen. Es gibt [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) und [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Schreiben Sie Ihre Array-Schleife mit einer dieser Techniken neu.
 
-## [Quiz nach der Vorlesung](.github/post-lecture-quiz.md)
+## [Quiz nach der Vorlesung](../.github/post-lecture-quiz.md)
 
 ## Review & Selbststudium
 
@@ -119,4 +119,4 @@ An Arrays in JavaScript sind viele Methoden angehängt, die für die Datenmanipu
 
 ## Zuordnung
 
-[Array schleifen](assignment.md)
+[Array schleifen](assignment.de.md)

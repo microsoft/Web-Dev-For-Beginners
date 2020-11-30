@@ -2,7 +2,7 @@
 
 [![Datentypen in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Datentypen in JavaScript")
 
-## [Pre-Lecture Quiz](.github/pre-lecture-quiz.md)
+## [Pre-Lecture Quiz](../.github/pre-lecture-quiz.md)
 
 Diese Lektion behandelt die Grundlagen von JavaScript, der Sprache, die Interaktivität im Web bietet.
 
@@ -164,7 +164,7 @@ let myString1 = "Hello";
 let myString2 = "World";
 
 `${myString1} ${myString2}!` //Hello World!
-`${myString1}, ${myString2}!` //Hello World!
+`${myString1}, ${myString2}!` //Hello, World!
 ```
 
 Sie können Ihre Formatierungsziele mit beiden Methoden erreichen, aber Vorlagenliterale berücksichtigen alle Leerzeichen und Zeilenumbrüche.
@@ -186,7 +186,7 @@ Boolesche Werte können nur zwei Werte sein: `true` oder `false`. Boolesche Wert
 
 JavaScript ist bekannt für seine überraschende Art, gelegentlich mit Datentypen umzugehen. Recherchiere ein bisschen über diese 'Fallstricke'. Zum Beispiel: Groß- und Kleinschreibung kann beißen! Versuchen Sie dies in Ihrer Konsole: `let age = 1; let Age = 2; age == Age` (löst `false` auf - warum?). Welche anderen Fallstricke können Sie finden?
 
-## [Quiz nach der Vorlesung](.github/post-lecture-quiz.md)
+## [Quiz nach der Vorlesung](../.github/post-lecture-quiz.md)
 
 ## Review & Selbststudium
 
@@ -194,4 +194,4 @@ Schauen Sie sich [diese Liste der JavaScript-Übungen](https://css-tricks.com/sn
 
 ## Zuordnung
 
-[Praxis für Datentypen](assignment.md)
+[Praxis für Datentypen](assignment.de.md)
