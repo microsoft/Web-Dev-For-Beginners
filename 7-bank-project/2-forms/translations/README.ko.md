@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 소개
 
@@ -12,7 +12,7 @@
 
 ### 준비물
 
-이 강의를 위해 웹 앱의 [HTML templates and routing](../1-template-route/README.md)을 완료해야합니다. 또한 [Node.js](https://nodejs.org)와 [run the server API](../api/README.md)를 로컬에 설치해야 계정을 만들 데이터를 보낼 수 있습니다.
+이 강의를 위해 웹 앱의 [HTML templates and routing](../../1-template-route/translations/README.ko.md)을 완료해야합니다. 또한 [Node.js](https://nodejs.org)와 [run the server API](../../api/README.md)를 로컬에 설치해야 계정을 만들 데이터를 보낼 수 있습니다.
 
 터미널에서 다음 명령을 실행하여 서버가 잘 실행되고 있는지 테스트할 수 있습니다:
 
@@ -99,7 +99,7 @@ curl http://localhost:5000/api
 
 브라우저의 URL 섹션에서 변경된 것을 알고 있나요?
 
-![Screenshot of the browser's URL change after clicking the Register button](./images/click-register.png)
+![Screenshot of the browser's URL change after clicking the Register button](.././images/click-register.png)
 
 `<form>`의 기본 작업은 [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3)를 사용하여 현재 서버 URL에 폼을 제출하고, 폼 데이터를 URL에 직접 추가하는 것입니다. 이 방식에는 몇 가지 단점이 있습니다:
 
@@ -121,7 +121,7 @@ curl http://localhost:5000/api
 
 이제 이름으로 새로운 계정을 가입합니다. *Register* 버튼을 클릭하면 다음과 같은 내용이 표시됩니다:
 
-![](./images/form-post.png)
+![](.././images/form-post.png)
 
 모든 것이 잘 되면, 서버에 생성된 계정 데이터가 포함되어 [JSON](https://www.json.org/json-en.html)으로 응답해야 합니다.
 
@@ -219,7 +219,7 @@ async function register() {
 
 조금 길지만 도착했습니다! [browser developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열고, 새 계정을 가입하면, 웹 페이지에 변경 사항이 표시되지 않으면서 콘솔에 작동을 확인할 메시지가 나타납니다.
 
-![Screenshot showing log message in the browser console](./images/browser-console.png)
+![Screenshot showing log message in the browser console](.././images/browser-console.png)
 
 ✅ 데이터가 안전하게 서버로 보내졌다고 생각하나요? 누군가 요청을 가져갈 수 있다면 어떤가요? 보안 데이터 통신에 대해 자세히 보려면 [HTTPS](https://en.wikipedia.org/wiki/HTTPS)를 읽어보세요.
 
@@ -275,11 +275,11 @@ async function register() {
 
 다음은 살짝 스타일을 적용한 뒤에 최종 로그인 페이지를 보여주는 예시입니다:
 
-![Screenshot of the login page after adding CSS styles](./images/result.png)
+![Screenshot of the login page after adding CSS styles](.././images/result.png)
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -287,4 +287,4 @@ async function register() {
 
 ## 과제
 
-[Style your bank app](assignment.md)
+[Style your bank app](../assignment.md)

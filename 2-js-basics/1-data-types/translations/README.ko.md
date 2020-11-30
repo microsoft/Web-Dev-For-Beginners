@@ -1,10 +1,10 @@
 # JavaScript 기초: 데이터 타입
 
-![JavaScript Basics - Data types](images/webdev101-js-datatypes.png)
+![JavaScript Basics - Data types](../images/webdev101-js-datatypes.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 해당 강의에서는 웹에서 상호작용을 제공하는 언어인 JavaScript의 기초를 다룹니다. 
 
@@ -185,7 +185,7 @@ let myString2 = "World";
 JavaScript는 때때로 놀라운 방법으로 데이터 타입을 처리하는 것으로 유명합니다. 'gotchas'에 대해 약간 알아보세요. 예시: 대소문자 구분은 물릴 수 있습니다! 콘솔에서 다음을 시도하십시오: `let age = 1; let Age = 2; age == Age` (resolves `false` -- why?). 다른 문제를 찾을 수 있습니까?
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -193,4 +193,4 @@ JavaScript는 때때로 놀라운 방법으로 데이터 타입을 처리하는 
 
 ## 과제
 
-[Data Types Practice](assignment.md)
+[Data Types Practice](../assignment.md)

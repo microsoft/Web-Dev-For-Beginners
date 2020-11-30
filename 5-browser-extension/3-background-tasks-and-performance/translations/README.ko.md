@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 소개
 
@@ -20,7 +20,7 @@
 
 Performance 탭에는 Profiling 도구가 있습니다. 웹 사이트를 열고 (예를 들어, https://www.microsoft.com) 'Record' 버튼을 클릭한 뒤에, 사이트를 새로 고칩니다. 언제든 recording을 중단하면, 사이트를 'script', 'render', 그리고 'paint' 하려고 만든 루틴을 볼 수 있습니다:
 
-![Edge profiler](./images/profiler.png)
+![Edge profiler](.././images/profiler.png)
 
 ✅ Edge에서 Performance 패널에서 [Microsoft Documentation](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance)를 방문하세요
 
@@ -30,11 +30,11 @@ Performance 탭에는 Profiling 도구가 있습니다. 웹 사이트를 열고 
 
 프로필 타임라인의 일부를 선택하고 요약 패널을 보게된 뒤 페이지 performance의 snapshot을 가져옵니다:
 
-![Edge profiler snapshot](./images/snapshot.png)
+![Edge profiler snapshot](.././images/snapshot.png)
 
 이벤트 로그 패널을 확인하여 15ms 이상 넘긴 이벤트가 있는지 확인합니다:
 
-![Edge event log](./images/log.png)
+![Edge event log](.././images/log.png)
 
 ✅ 프로파일러에 대해 알아보세요! 이 사이트에서 개발자 도구를 열고 병목 현상이 있는지 확인하세요. 불러오는 속도가 가장 느린 어셋은 무엇인가요? 가장 빠른가요?
 
@@ -133,7 +133,7 @@ function drawIcon(value) {
 ```
 코드에서, 백엔드 작업 매니저로 들어오는 모든 메시지 리스너를 추가합니다. 'updateIcon' 이라고 불리면, 다음 코드가 수행되고, Canvas API를 사용해서 적절한 색상의 아이콘을 그립니다.
 
-✅ [Space Game lessons](../../space-game/drawing-to-canvas/README.md)에서 Canvas API에 대해 더 배울 것 입니다.
+✅ [Space Game lessons](../../../6-space-game/2-drawing-to-canvas/translations/README.ko.md)에서 Canvas API에 대해 더 배울 것 입니다.
 
 이제, 확장을 (`npm run build`)로 다시 빌드합니다, 확장을 새로 고치고 시작한 뒤, 색상이 변하는 것을 봅니다. 심부름을 하거나 설거지를 하기에 좋을 때 인가요? 이제 압니다!
 
@@ -147,7 +147,7 @@ function drawIcon(value) {
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -157,5 +157,5 @@ function drawIcon(value) {
 
 ## 과제
 
-[Analyze a site for performance](assignment.md)
+[Analyze a site for performance](../assignment.md)
 

@@ -8,13 +8,13 @@ Edge, Chrome과 Firefox에서 작동하는 브라우저 확장을 만듭니다. 
 
 ### 주제
 
-1. [브라우저에 대하여](1-about-browsers/README.md)
-2. [폼과 로컬 저장소](2-forms-browsers-local-storage/README.md)
-3. [백그라운드 작업과 성능](3-background-tasks-and-performance/README.md)
+1. [브라우저에 대하여](../1-about-browsers/translations/README.ko.md)
+2. [폼과 로컬 저장소](../2-forms-browsers-local-storage/translations/README.ko.md)
+3. [백그라운드 작업과 성능](../3-background-tasks-and-performance/translations/README.ko.md)
 
 ### 크레딧
 
-![a green browser extension](extension-screenshot.png)
+![a green browser extension](../extension-screenshot.png)
 
 ## 크레딧
 

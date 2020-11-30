@@ -8,7 +8,7 @@
 
 타이핑 게임을 만들기 위해 지금까지 배운 JavaScript, HTML 및 CSS 스킬을 사용합니다. 게임은 플레이어에게 무작위 인용문([Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes) 인용문 사용)과 플레이어가 정확하게 입력하는 데 걸리는 시간을 제시합니다.
 
-![demo](images/demo.gif)
+![demo](../images/demo.gif)
 
 ## 사전 조건
 

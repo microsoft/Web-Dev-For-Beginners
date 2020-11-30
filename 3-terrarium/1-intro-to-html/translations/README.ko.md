@@ -1,11 +1,11 @@
 # Terrarium 프로젝트 파트 1: HTML 소개
 
-![Introduction to HTML](images/webdev101-html.png)
+![Introduction to HTML](../images/webdev101-html.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 소개
 
@@ -17,7 +17,7 @@ HTML, HyperText Markup Language는 웹의 '뼈대' 입니다. CSS가 HTML과 Jav
 
 컴퓨터에서, 'terrarium' 이라는 폴더를 만들고 그 안에 'index.html' 파일을 만듭니다. 새 VS Code 윈도우를 열어서 'open folder'를 클릭하고, terrarium 폴더를 만들면 Visual Studio Code에서 이 작업을 할 수 있습니다. 탐색기에서 작은 'file' 버튼을 클릭하고 새 파일을 만듭니다:
 
-![explorer in VS Code](images/vs-code-index.png)
+![explorer in VS Code](../images/vs-code-index.png)
 
 또는
 
@@ -217,7 +217,7 @@ HTML에는 여전히 재미있고 '오래된' 태그가 있지만, 마크업에�
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -228,4 +228,4 @@ HTML은 웹을 오늘 날의 웹으로 구축하는 데 도움이 준 'tried and
 
 ## 과제
 
-[Practice your HTML: Build a blog mockup](assignment.md)
+[Practice your HTML: Build a blog mockup](../assignment.md)

@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 소개
 
@@ -12,7 +12,7 @@
 
 ### 준비물
 
-이 강의에서 웹 앱의 [Login and Registration Form](../2-forms/README.md) 부분을 작성하는 것이 필요합니다. 또한 계정 데이터를 가져오려면 [Node.js](https://nodejs.org)와 [run the server API](../api/README.md)를 로컬에 설치해야 합니다.
+이 강의에서 웹 앱의 [Login and Registration Form](../../2-forms/translations/README.ko.md) 부분을 작성하는 것이 필요합니다. 또한 계정 데이터를 가져오려면 [Node.js](https://nodejs.org)와 [run the server API](../../api/README.md)를 로컬에 설치해야 합니다.
 
 터미널에서 이 명령을 실행하여 서버가 실행되고 있는지 테스트할 수 있습니다:
 
@@ -27,11 +27,11 @@ curl http://localhost:5000/api
 
 기존 웹 사이트는 모든 HTML 페이지를 다시 불러오기 위해서 사용자가 링크를 클릭하거나 폼으로 데이터를 제출할 때 표시되는 콘텐츠를 갱신합니다. 새로운 데이터를 불러와야 할 때마다, 웹 서버는 브라우저에서 처리하는 새 HTML 페이지를 반환하여, 현재 사용자의 액션을 중단하고 다시 불러오는 동안 상호 작용을 제한합니다. 이 과정을 *Multi-Page Application* 혹은 *MPA*라고 합니다.
 
-![Update workflow in a multi-page application](./images/mpa.png)
+![Update workflow in a multi-page application](.././images/mpa.png)
 
 웹 애플리케이션이 더 복잡해지고 상호 작용하기 시작하면서, [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming))이라는 새로운 기술이 나타났습니다. 이 기술을 쓰면 웹 앱은 HTML 페이지를 다시 불러오지 않고, JavaScript를 사용하여 비동기로 서버에서 데이터를 보내고 찾을 수 있으므로, 갱신 속도가 빨라지고 사용자 상호 작용이 부드러워집니다. 서버에서 새로운 데이터를 받으면, [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) API로 현재 HTML 페이지를 JavaScript로 갱신할 수도 있습니다. 시간이 지나면서, 이 방식은 이제 [*Single-Page Application* or *SPA*](https://en.wikipedia.org/wiki/Single-page_application)라는 것으로 발전했습니다.
 
-![Update workflow in a single-page application](./images/spa.png)
+![Update workflow in a single-page application](.././images/spa.png)
 
 AJAX가 처음 소개되었을 때, 데이터를 비동기로 가져올 유일한 API는 [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)였습니다. 그러나 모던 브라우저는 이제 promises를 사용하고 JSON 데이터를 조작할 때 적당하며, 더 편리하고 강력한 [`Fetch` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)도 구현합니다.
 
@@ -39,7 +39,7 @@ AJAX가 처음 소개되었을 때, 데이터를 비동기로 가져올 유일�
 
 ### 작업
 
-[이전 강의](../2-forms/README.md)에서는 계정을 만들기 위해 가입 폼을 구현했습니다. 이제 이미 있는 계정으로 로그인하는 코드를 추가하고, 데이터를 가져올 것 입니다. `app.js` 파일을 열고 새로운 `login` 함수를 추가합니다:
+[이전 강의](../../2-forms/translations/README.ko.md)에서는 계정을 만들기 위해 가입 폼을 구현했습니다. 이제 이미 있는 계정으로 로그인하는 코드를 추가하고, 데이터를 가져올 것 입니다. `app.js` 파일을 열고 새로운 `login` 함수를 추가합니다:
 
 ```js
 async function login() {
@@ -155,7 +155,7 @@ if (data.error) {
 
 이제 유효하지 않은 계정으로 로그인 시도하면, 다음과 같이 보입니다:
 
-![Screenshot showing the error message displayed during login](./images/login-error.png)
+![Screenshot showing the error message displayed during login](.././images/login-error.png)
 
 `register` 함수 오류와 동일한 동작을 하도록 구현합니다 (HTML을 갱신하는 것을 잊지 마세요).
 
@@ -217,7 +217,7 @@ function updateDashboard() {
 
 > 잔액을 더 예쁘게 보이게 만드려면, [`toFixed(2)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) 방법으로 소수점 이하 2자리 값을 강제로 출력합니다.
 
-이제 대시보드를 불러올 때마다 `updateDashboard()` 함수를 호출해야 합니다. 이미 [lesson 1 assignment](../1-template-route/assignment.md)를 완료했다면 간단해야 합니다. 그렇지 않다면 이미 구현된 내용으로 쓸 수 있습니다.
+이제 대시보드를 불러올 때마다 `updateDashboard()` 함수를 호출해야 합니다. 이미 [lesson 1 assignment](../../1-template-route/assignment.md)를 완료했다면 간단해야 합니다. 그렇지 않다면 이미 구현된 내용으로 쓸 수 있습니다.
 
 `updateRoute()` 함수 끝에 이 코드를 추가합니다:
 
@@ -240,7 +240,7 @@ const routes = {
 
 ## HTML 템플릿으로 동적 테이블 row 만들기
 
-[first lesson](../1-template-route/README.md)에서는 HTML 템플릿과 [`appendChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) 메소드로 앱의 탐색을 구현했습니다. 템플릿은 더 작아 질 수 있고 페이지의 반복적인 부분을 동적으로 채우는 데 쓸 수 있습니다.
+[first lesson](../../1-template-route/translations/README.ko.md)에서는 HTML 템플릿과 [`appendChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) 메소드로 앱의 탐색을 구현했습니다. 템플릿은 더 작아 질 수 있고 페이지의 반복적인 부분을 동적으로 채우는 데 쓸 수 있습니다.
 
 유사한 접근 방식을 사용하여 HTML 테이블에 트랜잭션 목록을 출력합니다.
 
@@ -315,12 +315,12 @@ function updateElement(id, textOrNode) {
 
 여기는 꾸며진 대시보드 페이지의 예시입니다:
 
-![Screenshot of an example result of the dashboard after styling](../images/screen2.png)
+![Screenshot of an example result of the dashboard after styling](../../images/screen2.png)
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 과제
 
-[Refactor and comment your code](assignment.md)
+[Refactor and comment your code](../assignment.md)
