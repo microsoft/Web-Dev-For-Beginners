@@ -27,7 +27,7 @@ const db = {
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors({ origin: /http:\/\/(127(\.\d){3}|localhost)/}));
+app.use(cors({ origin: /http:\/\/localhost/ }));
 app.options('*', cors());
 
 // ***************************************************************************
