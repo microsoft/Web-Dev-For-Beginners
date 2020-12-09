@@ -55,20 +55,20 @@ We're giving it an `id` to make it easier to locate it with JavaScript later.
 
 > Tip: since the content of this element will be replaced, we can put in a loading message or indicator that will be shown while the app is loading.
 
-Next, let's add below the HTML template for the login page. For now we'll only put in there a title and a section containing a button that we'll use to perform the navigation.
+Next, let's add below the HTML template for the login page. For now we'll only put in there a title and a section containing a link that we'll use to perform the navigation.
 
 ```html
 <template id="login">
   <h1>Bank App</h1>
   <section>
-    <button>Login</button>
+    <a href="/dashboard">Login</a>
   </section>
 </template>
 ```
 
 Then we'll add another HTML template for the dashboard page. This page will contain different sections:
 
-- A header with a title and a logout button
+- A header with a title and a logout link
 - The current balance of the bank account
 - A list of transactions, displayed in a table
 
@@ -76,7 +76,7 @@ Then we'll add another HTML template for the dashboard page. This page will cont
 <template id="dashboard">
   <header>
     <h1>Bank App</h1>
-    <button>Logout</button>
+    <a href="/login">Logout</a>
   </header>
   <section>
     Balance: 100$
@@ -189,22 +189,22 @@ function updateRoute() {
 }
 ```
 
-Here we mapped the routes we declared to the corresponding template. You can try it that it works correctlt by changing the URL manually in your browser.
+Here we mapped the routes we declared to the corresponding template. You can try it that it works correctly by changing the URL manually in your browser.
 
 ✅ What happens if you enter an unknown path in the URL? How could we solve this?
 
 ## Adding navigation
 
-The next step for ou app is to add the possibility to navigate between pages without having to change the URL manually. This implies two things:
+The next step for our app is to add the possibility to navigate between pages without having to change the URL manually. This implies two things:
 
   1. Updating the current URL
   2. Updating the displayed template based on the new URL
 
 We already took care of the second part with the `updateRoute` function, so we have to figure out how to update the current URL.
 
-While the HTML anchor element [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) can be used to create hyperlinks to different URLs, we can't use that here as it will make the browser reload the HTML.
+We'll have to use JavaScript and more specifically the [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) that allows to update the URL and create a new entry in the browsing history, without reloading the HTML.
 
-Instead we'll have to use JavaScript and more specifically the [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) that allows to update the URL and create a new entry in the browsing history, without reloading the HTML.
+> Note: While the HTML anchor element [`<a href>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) can be used on its own to create hyperlinks to different URLs, it will make the browser reload the HTML by default. It is necessary to prevent this behavior when handling routing with custom javascript, using the preventDefault() function on the click event.
 
 ### Task
 
@@ -235,17 +235,26 @@ function updateRoute() {
 
 If a route cannot be found, we'll now redirect to the `login` page.
 
-Let's complete the navigation system by adding bindings to our *Login* and *Logout* buttons in the HTML.
+Now let's create a function to get the URL when a link is clicked, and to prevent the browser's default link behavior:
+
+```js
+function onLinkClick(event) {
+  event.preventDefault();
+  navigate(event.target.href);
+}
+```
+
+Let's complete the navigation system by adding bindings to our *Login* and *Logout* links in the HTML.
 
 ```html
-<button onclick="navigate('/dashboard')">Login</button>
+<a href="/dashboard" onclick="onLinkClick()">Login</a>
 ...
-<button onclick="navigate('/login')">Logout</button>
+<a href="/login" onclick="onLinkClick()">Logout</a>
 ```
 
 Using the [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) attribute bind the `click` event to JavaScript code, here the call to the `navigate()` function.
 
-Try clicking on these buttons, you should be now able to navigate between the different screens of your app.
+Try clicking on these links, you should be now able to navigate between the different screens of your app.
 
 ✅ The `history.pushState` method is part of the HTML5 standard and implemented in [all modern browsers](https://caniuse.com/?search=pushState). If you're building a web app for older browsers, there's a trick you can use in place of this API: using a [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) before the path you can implement routing that works with regular anchor navigation and does not reload the page, as it's purpose was to create internal links within a page.
 
@@ -274,7 +283,7 @@ Here's a refresher video on arrow functions:
 
 [![Arrow Functions](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Arrow Functions")
 
-Now try to use the back and forward buttons of your browsers, and check that the displayed is correctly updated this time.
+Now try to use the back and forward buttons of your browsers, and check that the displayed route is correctly updated this time.
 
 ---
 
