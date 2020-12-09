@@ -85,10 +85,10 @@ Create a new file named **index.html**. Add the following HTML:
 <body>
   <h1>Typing game!</h1>
   <p>Practice your typing skills with a quote from Sherlock Holmes. Click **start** to begin!</p>
-  <h2 id="quote"></h2> <!-- This will display our quote -->
-  <h2 id="message"></h2> <!-- This will display any status messages -->
+  <p id="quote"></p> <!-- This will display our quote -->
+  <p id="message"></p> <!-- This will display any status messages -->
   <div>
-    <input type="text" id="typed-value" /> <!-- The textbox for typing -->
+    <input type="text" aria-label="current word" id="typed-value" /> <!-- The textbox for typing -->
     <button type="button" id="start">Start</button> <!-- To start the game -->
   </div>
   <script src="script.js"></script>

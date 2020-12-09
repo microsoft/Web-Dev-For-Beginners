@@ -46,12 +46,12 @@ Browser extensions are fun to develop, too. They tend to manage a finite number 
 
 Before you start building, take a look at the process of building and deploying a browser extension. While each browser varies a bit in how they manage this task, the process is similar on Chrome and Firefox to this example on Edge:
 
-![install a browser extension](images/install-on-edge.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](images/install-on-edge.png)
 
 In essence, the process will be:
 
 - build your extension using `npm build` 
-- navigate in the browser to the extensions pane using the `...` icon on the top right
+- navigate in the browser to the extensions pane using the "Settings and more" button (the `...` icon) on the top right
 - if it's a new installation, choose `load unpacked` to upload a fresh extension from its build folder (in our case it is `/dist`) 
 - or, click `reload` if you are reloading the already-installed extension
 
@@ -87,11 +87,11 @@ src
 
 This extension has two views. One to gather the API key and region code:
 
-![extension form](images/1.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](images/1.png)
 
 And the second to display the region's carbon usage:
 
-![carbon usage](images/2.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](images/2.png)
 
 Let's start by building the HTML for the form and styling it with CSS.
 
@@ -103,12 +103,12 @@ In the `/dist` folder, you will build a form and a result area. In the `index.ht
 		<h2>New? Add your Information</h2>
 	</div>
 	<div>
-	<label>Region Name</label>
-		<input type="text" required class="region-name" />
+		<label for="region">Region Name</label>
+		<input type="text" id="region" required class="region-name" />
 	</div>
 	<div>
-		<label>Your API Key from tmrow</label>
-		<input type="text" required class="api-key" />
+		<label for="api">Your API Key from tmrow</label>
+		<input type="text" id="api" required class="api-key" />
 	</div>
 	<button class="search-btn">Submit</button>
 </form>	
