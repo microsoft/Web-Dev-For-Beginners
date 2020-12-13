@@ -1,13 +1,13 @@
-*Complete this quiz in class*
+*수업 들으시면서 퀴즈를 완성해주세요.*
 
-1. How do you create a Git repo?
+1. 어떤 명령어로 Git 레포지토리를 만드나요?
 
 - [ ] git create
 - [ ] git start
 - [ ] git init
 
-2. What does `git add` do?
+2. `git add`는 어떤 동작을 하는 것인가요?
 
-- [ ] Commits your code
-- [ ] Adds your files to a staging area for tracking
-- [ ] Adds your files to GitHub
+- [ ] 코드를 커밋
+- [ ] 추적을 위해 staging 영역으로 파일을 추가
+- [ ] Github에 파일을 추가
