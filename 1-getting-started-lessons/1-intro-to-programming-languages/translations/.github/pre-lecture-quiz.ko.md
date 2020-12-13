@@ -1,18 +1,18 @@
-*Complete this quiz in class*
+*수업 들으시면서 퀴즈를 완성해주세요.*
 
-1. A program can be created without the creator writing any code
+1. 생산자의 코드작성 없이 프로그램이 만들어질 수 있다.
 
-- [ ] True
-- [ ] False
+- [ ] 네
+- [ ] 아니요
 
-2. Low level languages are a popular choice for:
+2. 저수준 언어는 어떤 것을 만드는데 인기있는 선택지일까?
 
-- [ ] Websites
-- [ ] Hardware
-- [ ] Video game software
+- [ ] 웹사이트
+- [ ] 하드웨어
+- [ ] 비디오 게임 소프트웨어
 
-3. Which one of these tools would most likely be in a web developer's environment?
+1. 아래의 도구들 중 웹 개발자 환경으로 가장 적합한 것은?
 
-- [ ] Hardware, like a Raspberry Pi
-- [ ] Browser DevTools
-- [ ] Operating system documentation
+- [ ] 라즈베리 파이 같은 하드웨어
+- [ ] 브라우저 개발자도구
+- [ ] 운영체제 설명서

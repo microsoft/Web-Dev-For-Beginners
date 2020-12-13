@@ -1,18 +1,18 @@
-*Complete this quiz along with your submission by checking one answer per question.*
+*문제당 하나의 정답을 골라 퀴즈를 완성하세요.*
 
-1. What language would you most likely use to create a website?
+1. 어떤 언어로 웹사이트를 만들 것인가요?
 
-- [ ] Machine Code
+- [ ] 기계어
 - [ ] JavaScript
 - [ ] Bash
 
-2. Development environments are unique to each developer
+1. 개발 환경은 개발자 마다 고유하다.
 
-- [ ] True
-- [ ] False
+- [ ] 네
+- [ ] 아니요
 
-3. What will a developer do to fix buggy code?
+1. 버그가 있는 코드를 고치기위해 개발자는 어떤 것을 하게되나요?
 
-- [ ] Syntax highlighting
-- [ ] Debugging
-- [ ] Code formatting
+- [ ] 구문 강조 (Syntax highlighting)
+- [ ] 디버깅 (Debugging)
+- [ ] 코드 포맷팅 (Code Formatting)
