@@ -1,17 +1,17 @@
-*Complete this quiz by checking one answer per question.*
+*문제당 하나의 정답을 골라 퀴즈를 완성하세요.*
 
-1. Lighthouse only checks for accessibility problems
+1. Lighthouse 는 접근성 문제만 점검합니다.
 
-- [ ] true
-- [ ] false
+- [ ] 네
+- [ ] 아니요
 
-2. Color-safe palettes help people with
+2. 칼러 세이프 팔레트 (Color-safe palettes) 어떤 사람을 도울 수 있나요?
 
-- [ ] color-blindness
-- [ ] visual impairments
-- [ ] both the above
+- [ ] 색맹
+- [ ] 시각 장애
+- [ ] 둘다
 
-3. Descriptive links are vital for accessible web sites
+3. 설명 링크는 접근가능한 웹 사이트에 꼭 필요한 요소입니다.
    
-- [ ] true
-- [ ] false
+- [ ] 네
+- [ ] 아니요

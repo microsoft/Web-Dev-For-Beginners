@@ -1,17 +1,17 @@
-*Complete this quiz in class*
+*수업 들으시면서 퀴즈를 완성해주세요.*
 
-1. An accessible web site can be checked in which browser tool
+1. 접근가능한 웹사이트는 어떤 툴로 점검할 수 있을까요?
 
 - [ ] Lighthouse
 - [ ] Deckhouse
 - [ ] Cleanhouse
 
-2. You need a screen reader to test accessibility for visually-impaired users
+2.. 시각 장애인 유저들을 위한 접근가능성 테스트 용으로 스크린 리더가 필요합니다.
 
-- [ ] true
-- [ ] false
+- [ ] 네
+- [ ] 아니요
 
-3. Accessibility is only important on government web sites
+3. 접근가능성은 정보 웹사이트에서만 중요합니다.
    
-- [ ] true
-- [ ] false
+- [ ] 네
+- [ ] 아니요
