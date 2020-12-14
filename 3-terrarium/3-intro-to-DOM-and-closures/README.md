@@ -176,7 +176,7 @@ All this recalculation of positioning allows you to fine-tune the behavior of th
 
 ### Task 
 
-The final task to complete the interface is to add the `closeElementDrag` function after the closing curly bracket of `elementDrag`:
+The final task to complete the interface is to add the `stopElementDrag` function after the closing curly bracket of `elementDrag`:
 
 ```javascript
 function stopElementDrag() {
