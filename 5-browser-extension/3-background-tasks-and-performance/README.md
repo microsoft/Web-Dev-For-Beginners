@@ -16,7 +16,7 @@ It remains to manage some background tasks, including refreshing the color of th
 
 The topic of how to make your web sites blazingly fast on all kinds of devices, for all kinds of users, in all kinds of situations, is unsurprisingly vast. Here are some points to keep in mind as you build either a standard web project or a browser extension.
 
-The first thing you need to do to ensure that your site is running efficiently is to gather data about its performance. The first place to do this is in the developer tools of your web browser. In Edge, you can select the three dots on the top right of the browser, then navigate to More Tools > Developer Tools and open the Performance tab.
+The first thing you need to do to ensure that your site is running efficiently is to gather data about its performance. The first place to do this is in the developer tools of your web browser. In Edge, you can select the "Settings and more" button (the three dots icon on the top right of the browser), then navigate to More Tools > Developer Tools and open the Performance tab. You can also use the keyboard shortcuts `Ctrl` + `Shift` + `I` on Windows, or `Option` + `Command` + `I` on Mac to open developer tools.
 
 The Performance tab contains a Profiling tool. Open a web site (try, for example, https://www.microsoft.com) and click the 'Record' button, then refresh the site. Stop the recording at any time, and you will be able to see the routines that are generated to 'script', 'render', and 'paint' the site:
 

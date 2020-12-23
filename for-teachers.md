@@ -17,3 +17,7 @@ In an online format (Zoom, Teams, or other) you might form breakout rooms for th
 If you prefer a more private format, ask your students to fork the curriculum, lesson by lesson, to their own GitHub repos as private repos, and give you access. Then they can complete quizzes and assignments privately and submit them to you via issues on your classroom repo.
 
 There are many ways to make this work in an online classroom format. Please let us know what works best for you!
+
+## Please give us your thoughts!
+
+We want to make this curriculum work for you and your students. Please give us [feedback](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).

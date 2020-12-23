@@ -11,4 +11,4 @@ JavaScript ist die Sprache des Webs. In diesen vier Lektionen lernen Sie die Gru
 
 ### Credits
 
-Diese Lektionen wurden mit ♥ ️von [Jasmine Greenaway](https://twitter.com/paladique), [Christopher Harrison](https://twitter.com/geektrainer) und [Chris Noring](https://twitter.com/chris_noring)
+Diese Lektionen wurden mit ♥ ️von [Jasmine Greenaway](https://twitter.com/paladique), [Christopher Harrison](https://twitter.com/geektrainer) und [Chris Noring](https://twitter.com/chris_noring) erstellt.

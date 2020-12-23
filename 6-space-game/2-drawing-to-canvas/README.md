@@ -81,14 +81,14 @@ img.onload = () => {
 It's recommended to wrap the above in a construct like so, so it's easier to use and you only try to manipulate it when it's fully loaded:
 
 ```javascript
-async function loadAsset(path) {
+function loadAsset(path) {
   return new Promise((resolve) => {
     const img = new Image();
     img.src = path;
     img.onload = () => {
       // image loaded and ready to be used
+      resolve(img);
     }
-    resolve(img);
   })
 }
 

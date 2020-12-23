@@ -6,7 +6,7 @@
 - [ ] Deckhouse
 - [ ] Cleanhouse
 
-2. You need a physical screen reader to test accessibility for visually-impaired users
+2. You need a screen reader to test accessibility for visually-impaired users
 
 - [ ] true
 - [ ] false
