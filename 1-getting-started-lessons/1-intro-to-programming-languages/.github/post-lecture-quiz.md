@@ -3,16 +3,16 @@
 1. What language would you most likely use to create a website?
 
 - [ ] Machine Code
-- [ ] JavaScript
+- [Correct ] JavaScript
 - [ ] Bash
 
 2. Development environments are unique to each developer
 
-- [ ] True
+- [Yes ] True
 - [ ] False
 
 3. What will a developer do to fix buggy code?
 
 - [ ] Syntax highlighting
-- [ ] Debugging
+- [Debugging ] Debugging
 - [ ] Code formatting
