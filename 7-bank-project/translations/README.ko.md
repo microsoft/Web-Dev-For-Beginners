@@ -2,7 +2,8 @@
 
 이 프로젝트에서는, 가상의 은행을 만드는 방법을 배웁니다. 이 강의에는 웹 앱을 레이아웃과 라우트를 제공하고, 폼을 작성하며 상태를 관리하고, 은행 데이터 API에서 데이터를 가져오는 방법에 대한 지침이 포함되어 있습니다.
 
-<img src="../images/screen1.png" width="50%" height="auto"/><img src="../images/screen2.png" width="50%" height="auto"/>
+| ![Screen1](../images/screen1.png) | ![Screen2](../images/screen2.png) |
+|-----------------------------------|-----------------------------------|
 
 ## 강의
 
