@@ -1,13 +1,13 @@
-*Complete this quiz in class*
+_इस क्विज को कक्षा में पूरा करें_
 
-1. How do you create a Git repo?
+1. आप एक Git रेपो कैसे बनाते हैं?
 
 - [ ] git create
 - [ ] git start
 - [ ] git init
 
-2. What does `git add` do?
+2. `git add` क्या करता है ?
 
-- [ ] Commits your code
-- [ ] Adds your files to a staging area for tracking
-- [ ] Adds your files to GitHub
+- [ ] आपके कोड को कमिट करता है
+- [ ] ट्रैकिंग के लिए एक स्टेजिंग क्षेत्र में अपनी फ़ाइलों को जोड़ता है
+- [ ] अपनी फ़ाइलों को GitHub में जोड़ता है

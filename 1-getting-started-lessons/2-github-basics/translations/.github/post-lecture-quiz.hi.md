@@ -1,19 +1,19 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:
+1. समीक्षाओं, टिप्पणियों, एकीकृत परीक्षणों और अधिक के साथ एक शाखा पर पेश किए गए मतभेदों की तुलना और चर्चा करने का स्थान है:
 
 - [ ] GitHub
-- [ ] A Pull Request
-- [ ] A feature branch
+- [ ] A Pull Request(एक निवेदन)
+- [ ] A feature branch(एक सुविधा शाखा)
 
-2. How would you get all the commits from a remote branch?
+2. आपको दूरस्थ शाखा से सभी कमिटस कैसे मिलेंगे?
 
 - [ ] `git fetch`
 - [ ] `git pull`
 - [ ] `git commits -r`
 
-3. How do you switch to a branch?
-   
+3. आप किसी शाखा में कैसे जाते हैं?
+
 - [ ] `git switch [branch-name]`
 - [ ] `git checkout [branch-name]`
 - [ ] `git load [branch-name]`
