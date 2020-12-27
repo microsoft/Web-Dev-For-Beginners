@@ -1,17 +1,17 @@
-*Complete this quiz in class*
+_इस क्विज को कक्षा में पूरा करें_
 
-1. An accessible web site can be checked in which browser tool
+1. एक सुलभ वेब साइट की जाँच ब्राउज़र टूल की जा सकती है
 
 - [ ] Lighthouse
 - [ ] Deckhouse
 - [ ] Cleanhouse
 
-2. You need a screen reader to test accessibility for visually-impaired users
+2. आपको दृष्टिबाधित उपयोगकर्ताओं के लिए अभिगम्यता का परीक्षण करने के लिए एक स्क्रीन रीडर की आवश्यकता है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-3. Accessibility is only important on government web sites
-   
-- [ ] true
-- [ ] false
+3. सरकारी वेब साइटों पर पहुंच केवल महत्वपूर्ण है
+
+- [ ] सही
+- [ ] गलत

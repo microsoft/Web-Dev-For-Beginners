@@ -1,17 +1,17 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. Lighthouse only checks for accessibility problems
+1. Lighthouse केवल सुलभता की समस्याओं की जाँच करता है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. Color-safe palettes help people with
+2. Color-safe palettes मदद करती है लोगोकी जिसे
 
-- [ ] color-blindness
-- [ ] visual impairments
-- [ ] both the above
+- [ ] वर्णांधता
+- [ ] दृष्टिदोष
+- [ ] उपरोक्त दोनों
 
-3. Descriptive links are vital for accessible web sites
-   
-- [ ] true
-- [ ] false
+3. सुलभ वेब साइटों के लिए वर्णनात्मक लिंक महत्वपूर्ण हैं ?
+
+- [ ] सही
+- [ ] गलत

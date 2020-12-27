@@ -1,11 +1,12 @@
-# Analyze a non-accessible web site
+# एक गैर-सुलभ वेब साइट का विश्लेषण करें
 
-## Instructions
+## अनुदेश
 
-Identify a web site that you believe is NOT accessible, and create an action plan to improve its accessibility. Your first task would be to identify this site, detail the ways that you think it is inaccessible without using analytic tools, and then put it through a Lighthouse analysis. Take the results of this analysis and outline a detailed plan with a minimum of ten points showing how the site could be improved.
+एक ऐसी वेब साइट की पहचान करें जिसे आप मानते हैं कि वह सुलभ नहीं है, और उसकी पहुँच में सुधार के लिए एक कार्य योजना बनाएँ. आपका पहला काम इस साइट की पहचान करना होगा, उन तरीकों को विस्तार से बताएं जो आपको लगता है कि यह विश्लेषणात्मक उपकरणों का उपयोग किए बिना दुर्गम है, और फिर इसे लाइटहाउस विश्लेषण के माध्यम से डालें. इस विश्लेषण के परिणामों को लें और कम से कम दस बिंदुओं के साथ एक विस्तृत योजना की रूपरेखा दिखाएं कि साइट को कैसे बेहतर बनाया जा सकता है.
 
-## Rubric
+## सरनामा
 
-| Criteria       | Exemplary                                                                                                                                                      | Adequate                    | Needs Improvement           |
+| मानदंड | उदाहरणात्मक |
+पर्याप्त | सुधार की जरूरत |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
-| student report | includes paragraphs on how the site is inadequate, the Lighthouse report captured as a pdf, a list of ten points to improve, with details on how to improve it | missing 20% of the required | missing 50% of the required |
+| छात्र की रिपोर्ट | साइट कैसे अपर्याप्त है, इस पर पैराग्राफ शामिल हैं, पीडीएफ के रूप में कैप्चर की गई लाइटहाउस रिपोर्ट, सुधार करने के लिए दस बिंदुओं की एक सूची, इसे कैसे सुधारें, इस पर विवरण के साथ। | आवश्यक का 20% गायब है | आवश्यक का 50% गायब है |
