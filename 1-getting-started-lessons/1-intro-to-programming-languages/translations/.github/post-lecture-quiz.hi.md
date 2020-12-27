@@ -1,18 +1,18 @@
-*Complete this quiz along with your submission by checking one answer per question.*
+_ये क्विज एक सवाल पे एक जवाब का जाच करके अपना प्रस्तुत पूरा करे ._
 
-1. What language would you most likely use to create a website?
+1. तुम कोनसा भाषा बेहद पसन्द करोगे वेबसाइट बनाने के लिए ?
 
-- [ ] Machine Code
+- [ ] Machine Code (मशीन कोड)
 - [ ] JavaScript
 - [ ] Bash
 
-2. Development environments are unique to each developer
+2. डेवलपमेंट एनवायरनमेंट हरेक डेवलपर के लिए अद्वितीय होता है
 
-- [ ] True
-- [ ] False
+- [ ] सही
+- [ ] गलत
 
-3. What will a developer do to fix buggy code?
+3. डेवलपर क्या करेगा त्रुटिपूर्ण कोड को ठीक करने के लिए?
 
 - [ ] Syntax highlighting
 - [ ] Debugging
-- [ ] Code formatting
+- [ ] Code formatting(कोड स्वरूपण)

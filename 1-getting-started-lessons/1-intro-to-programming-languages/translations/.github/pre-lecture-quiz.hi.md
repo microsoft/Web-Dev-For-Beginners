@@ -1,18 +1,18 @@
-*Complete this quiz in class*
+_ये कक्षमे ये क्विज पूरा करे_
 
-1. A program can be created without the creator writing any code
+1. रचनाकार बिना कुछ कोड लिखे ही एक प्रोग्राम बना सकता है
 
-- [ ] True
-- [ ] False
+- [ ] सही
+- [ ] गलत
 
-2. Low level languages are a popular choice for:
+2. निम्न स्तर की भाषाएँ इसके लिए एक लोकप्रिय विकल्प हैं:
 
-- [ ] Websites
-- [ ] Hardware
-- [ ] Video game software
+- [ ] वेबसाइटें
+- [ ] हार्डवेयर
+- [ ] वीडियो गेम सॉफ्टवेयर
 
-3. Which one of these tools would most likely be in a web developer's environment?
+3. इनमें से कौन सा उपकरण सबसे अधिक संभावना वेब डेवलपर के वातावरण में होगा ?
 
-- [ ] Hardware, like a Raspberry Pi
-- [ ] Browser DevTools
-- [ ] Operating system documentation
+- [ ] हार्डवेयर, रास्पबेरी पाई की तरह
+- [ ] ब्राउज़र DevTools
+- [ ] ऑपरेटिंग सिस्टम प्रलेखन
