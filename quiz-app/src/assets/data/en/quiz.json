@@ -110,6 +110,218 @@
 		"title": "Lesson 2: Pre-Lecture Quiz",
 		"quiz": [
 			{
+				"questionText": "How do you create a Git repo?",
+				"answerOptions": [
+					{
+						"answerText": "git create",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "git start",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "git init",
+						"isCorrect": "true"
+					}
+				]
+			},
+			{
+				"questionText": "What does git add do?",
+				"answerOptions": [
+					{
+						"answerText": "Commits your code",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "Adds your files to a staging area for tracking",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "Adds your files to GitHub",
+						"isCorrect": "false"
+					}
+				]
+			},
+			{
+				"questionText": "How do you check if git is installed on your computer?",
+				"answerOptions": [
+					{
+						"answerText": "type git --version",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "type git --installed",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "type git --init",
+						"isCorrect": "false"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 4,
+		"title": "Lesson 2: Post-Lecture Quiz",
+		"quiz": [
+			{
+				"questionText": "A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:",
+				"answerOptions": [
+					{
+						"answerText": "GitHub",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "A Pull Request",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "A feature branch",
+						"isCorrect": "false"
+					}
+				]
+			},
+			{
+				"questionText": "How would you get all the commits from a remote branch?",
+				"answerOptions": [
+					{
+						"answerText": "git fetch",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "git pull",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "git commits -r",
+						"isCorrect": "false"
+					}
+				]
+			},
+			{
+				"questionText": "How do you switch to a branch?",
+				"answerOptions": [
+					{
+						"answerText": "git switch [branch-name]",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "git checkout [branch-name]",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "git load [branch-name]",
+						"isCorrect": "false"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 5,
+		"title": "Lesson 3: Pre-Lecture Quiz",
+		"quiz": [
+			{
+				"questionText": "An accessible web site can be checked in which browser tool",
+				"answerOptions": [
+					{
+						"answerText": "Lighthouse",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "Deckhouse",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "Cleanhouse",
+						"isCorrect": "true"
+					}
+				]
+			},
+			{
+				"questionText": "You need a physical screen reader to test accessibility for visually-impaired users",
+				"answerOptions": [
+					{
+						"answerText": "true",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "false",
+						"isCorrect": "true"
+					}
+				]
+			},
+			{
+				"questionText": "Accessibility is only important on government web sites",
+				"answerOptions": [
+					{
+						"answerText": "true",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "false",
+						"isCorrect": "true"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 6,
+		"title": "Lesson 3: Post-Lecture Quiz",
+		"quiz": [
+			{
+				"questionText": "Lighthouse only checks for accessibility problems",
+				"answerOptions": [
+					{
+						"answerText": "true",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "false",
+						"isCorrect": "true"
+					}
+				]
+			},
+			{
+				"questionText": "Color-safe palettes help people with",
+				"answerOptions": [
+					{
+						"answerText": "color-blindness",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "visual impairments",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "both the above",
+						"isCorrect": "true"
+					}
+				]
+			},
+			{
+				"questionText": "Descriptive links are vital for accessible web sites",
+				"answerOptions": [
+					{
+						"answerText": "true",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "false",
+						"isCorrect": "false"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 7,
+		"title": "Lesson 4: Pre-Lecture Quiz",
+		"quiz": [
+			{
 				"questionText": "Booleans are a data type you can use to test the length of a string",
 				"answerOptions": [
 					{
@@ -155,8 +367,8 @@
 		]
 	},
 	{
-		"id": 4,
-		"title": "Lesson 2: Post-Lecture Quiz",
+		"id": 8,
+		"title": "Lesson 4: Post-Lecture Quiz",
 		"quiz": [
 			{
 				"questionText": "Constants are the same as let and var to declare variables except",
@@ -202,234 +414,6 @@
 					{
 						"answerText": "false",
 						"isCorrect": "false"
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": 5,
-		"title": "Lesson 3: Pre-Lecture Quiz",
-		"quiz": [
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			},
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			},
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": 6,
-		"title": "Lesson 3: Post-Lecture Quiz",
-		"quiz": [
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			},
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			},
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": 7,
-		"title": "Lesson 4: Pre-Lecture Quiz",
-		"quiz": [
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			},
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			},
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": 8,
-		"title": "Lesson 4: Post-Lecture Quiz",
-		"quiz": [
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			},
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					}
-				]
-			},
-			{
-				"questionText": "",
-				"answerOptions": [
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
-					},
-					{
-						"answerText": "",
-						"isCorrect": ""
 					}
 				]
 			}
