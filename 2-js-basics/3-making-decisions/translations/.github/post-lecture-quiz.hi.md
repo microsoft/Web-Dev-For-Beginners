@@ -1,11 +1,11 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. What would the following code return: `'1' == 1`
+1. निम्नलिखित कोड क्या लौटाएगा: `'1' == 1`
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. Choose the correct operator to express _or_ logic
+2. _or_ तर्क व्यक्त करने के लिए सही ऑपरेटर चुनें
 
 - [ ] `a | b`
 - [ ] `a || b`

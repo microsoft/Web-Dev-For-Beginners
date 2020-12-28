@@ -1,12 +1,12 @@
-*Complete this quiz in class*
+_इस क्विज को कक्षा में पूरा करें_
 
-1. The following operator `==` is called
+1. निम्नलिखित ऑपरेटर को `==` क्या जाता है
 
-- [ ] Equality
-- [ ] Strict equality
-- [ ] Assignment
+- [ ] समानता
+- [ ] सख्त समानता
+- [ ] असाइनमेंट
 
-2. A comparison in JavaScript returns what type?
+2. जावास्क्रिप्ट में एक तुलना किस प्रकार देता है?
 
 - [ ] boolean
 - [ ] null

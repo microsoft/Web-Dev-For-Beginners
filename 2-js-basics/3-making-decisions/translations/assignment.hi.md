@@ -1,24 +1,24 @@
-# Operators
+# ऑपरेटर्स
 
-## Instructions
+## अनुदेश
 
-Play around with operators. Here's a suggestion for a program you can implement:
+ऑपरेटरों के साथ खेलते हैं। यहां एक प्रोग्राम के लिए एक सुझाव है जिसे आप कार्यान्वित कर सकते हैं:
 
-You have a set of students from two different grading systems.
+आपके पास दो अलग-अलग ग्रेडिंग सिस्टम के छात्रों का एक सेट है.
 
-### First grading system
+### पहला ग्रेडिंग सिस्टम
 
-One grading system is defined as grades being from 1-5 where 3 and above means you pass the course.
+एक ग्रेडिंग सिस्टम को 1-5 से ग्रेड के रूप में परिभाषित किया गया है जहां 3 और इसके बाद के संस्करण का मतलब है कि आप पाठ्यक्रम पास करते हैं।
 
-### Second grading system
+### दूसरा ग्रेडिंग सिस्टम
 
-The other grade system has the following grades `A, A-, B, B-, C, C-` where `A` is the top grade and `C` is the lowest passing grade.
+अन्य ग्रेड प्रणाली में निम्न ग्रेड हैं `A, A-, B, B-, C, C-` जहां `A` शीर्ष ग्रेड है और `C` सबसे कम पासिंग ग्रेड है।
 
-### The task
+### काम
 
-Given the following array `allStudents` representing all students and their grades, construct a new array `studentsWhoPass` containing all students who pass.
+निम्नलिखित सरणी को देखते हुए `allStudents` सभी छात्रों और उनके ग्रेड का प्रतिनिधित्व करते हैं, एक नई सरणी का निर्माण करते हैं` StudentsWhoPass` जिसमें सभी छात्र पास होते हैं।
 
-> TIP, use a for-loop and if...else and comparison operators:
+> सुझाब , for-loop और if...else और तुलना ऑपरेटरों का उपयोग करें :
 
 ```javascript
 let allStudents = [
@@ -33,8 +33,8 @@ let allStudents = [
 let studentsWhoPass = [];
 ```
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary                      | Adequate                      | Needs Improvement               |
-| -------- | ------------------------------ | ----------------------------- | ------------------------------- |
-|          | Complete solution is presented | Partial solution is presented | Solution with bugs is presented |
+| मानदंड | उदाहरणात्मक                  | पर्याप्त                      | सुधार की जरूरत                        |
+| ------ | ---------------------------- | ----------------------------- | ------------------------------------- |
+|        | पूरा समाधान प्रस्तुत किया है | आंशिक समाधान प्रस्तुत किया है | बग के साथ समाधान प्रस्तुत किया गया है |
