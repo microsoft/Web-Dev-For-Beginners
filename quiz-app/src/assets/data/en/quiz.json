@@ -1,0 +1,108 @@
+[
+	{
+		"id": 1,
+		"title": "Lesson 1: Pre-Lecture Quiz",
+		"quiz": [
+			{
+				"questionText": "A program can be created without the creator writing any code",
+				"answerOptions": [
+					{
+						"answerText": "true",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "false",
+						"isCorrect": "false"
+					}
+				]
+			},
+			{
+				"questionText": "Low level languages are a popular choice for",
+				"answerOptions": [
+					{
+						"answerText": "Websites",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "Hardware",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "Video game software",
+						"isCorrect": "false"
+					}
+				]
+			},
+			{
+				"questionText": "Which one of these tools would most likely be in a web developer's environment?",
+				"answerOptions": [
+					{
+						"answerText": "Hardware, like a Raspberry Pi",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "Browser DevTools",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "Operating system documentation",
+						"isCorrect": "false"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 2,
+		"title": "Lesson 1: Post-Lecture Quiz",
+		"quiz": [
+			{
+				"questionText": "What language would you most likely use to create a website?",
+				"answerOptions": [
+					{
+						"answerText": "Machine Code",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "JavaScript",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "Bash",
+						"isCorrect": "false"
+					}
+				]
+			},
+			{
+				"questionText": "Development environments are unique to each developer",
+				"answerOptions": [
+					{
+						"answerText": "true",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "false",
+						"isCorrect": "false"
+					}
+				]
+			},
+			{
+				"questionText": "What will a developer do to fix buggy code?",
+				"answerOptions": [
+					{
+						"answerText": "Syntax highlighting",
+						"isCorrect": "false"
+					},
+					{
+						"answerText": "Debugging",
+						"isCorrect": "true"
+					},
+					{
+						"answerText": "Code formatting",
+						"isCorrect": "false"
+					}
+				]
+			}
+		]
+	}
+]
