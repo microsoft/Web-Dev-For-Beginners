@@ -1,12 +1,12 @@
-*Complete this quiz in class*
+_इस क्विज को कक्षा में पूरा करें_
 
-1. What's an argument?
+1. तर्क क्या है?
 
-- [ ] It's something you declare in the function definition
-- [ ] It's something you pass into a function at invocation time
-- [ ] It's something you have with people you know
+- [ ] यह कुछ है जिसे आप फ़ंक्शन परिभाषा में घोषित करते हैं
+- [ ] यह ऐसा कुछ है जिसे आप एक समारोह में भेजते हैं
+- [ ] यह कुछ ऐसा है जो आप उन लोगों के साथ हैं जिन्हें आप जानते हैं
 
-2. True or false: a function must return something
+2. सही या गलत: एक फ़ंक्शन को कुछ वापस करना होगा
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत

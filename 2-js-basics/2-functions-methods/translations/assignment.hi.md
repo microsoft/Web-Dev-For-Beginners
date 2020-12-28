@@ -1,13 +1,13 @@
-# Fun with Functions
+# कार्य के साथ मज़ा
 
-## Instructions
+## अनुदेश
 
-Create different functions, both functions that return something and functions that don't return anything.
+अलग-अलग फ़ंक्शंस बनाएं, दोनों फ़ंक्शंस जो कुछ लौटाते हैं और फ़ंक्शंस जो कुछ भी वापस नहीं करते हैं।
 
-See if you can create a function that has a mix of parameters and parameters with default values.
+देखें कि क्या आप एक फ़ंक्शन बना सकते हैं जिसमें डिफ़ॉल्ट मानों के साथ मापदंडों और मापदंडों का मिश्रण है.
 
-## Rubric
+## सरनामा
 
-| Criteria | Exemplary                                                                              | Adequate                                                         | Needs Improvement |
-| -------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------- |
-|          | Solution is offered with two or more well-performing functions with diverse parameters | Working solution is offered with one function and few parameters | Solution has bugs |
+| मानदंड | उदाहरणात्मक                                                                                         | पर्याप्त                                                           | सुधार की जरूरत      |
+| ------ | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------- |
+|        | समाधान को विभिन्न मापदंडों के साथ दो या अधिक अच्छी तरह से निष्पादित कार्यों के साथ पेश किया जाता है | कार्य समाधान को एक फ़ंक्शन और कुछ मापदंडों के साथ पेश किया जाता है | समाधान में बग्स हैं |

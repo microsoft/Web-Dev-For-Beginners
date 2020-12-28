@@ -1,12 +1,12 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. Arguments must be provided for all parameters in a function
+1. किसी फ़ंक्शन में सभी मापदंडों के लिए तर्क प्रदान किए जाने चाहिए
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. What does a default value do?
+2. एक डिफ़ॉल्ट मान क्या करता है?
 
-- [ ] Sets a correct value
-- [ ] Gives a starter value for a parameters so your code still behaves if you omit an argument for it
-- [ ] Has no utility
+- [ ] एक सही मूल्य निर्धारित करता है
+- [ ] एक पैरामीटर के लिए एक स्टार्टर मूल्य देता है ताकि आपका कोड अभी भी व्यवहार करता है यदि आप इसके लिए एक तर्क छोड़ देते हैं
+- [ ] कोई उपयोगिता नहीं है
