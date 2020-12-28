@@ -1,13 +1,13 @@
-# Loop an Array
+# लूप अर्रे
 
-## Instructions
+## अनुदेश
 
-Create a program that lists every 3rd number between 1-20 and prints it to the console.
+एक प्रोग्राम बनाएं जो 1-20 के बीच हर तीसरे नंबर को सूचीबद्ध करता है और इसे कंसोल पर प्रिंट करता है.
 
-> TIP: use a for-loop and modify the iteration-expression
+> सुझाब : फॉर-लूप का उपयोग करें और पुनरावृत्ति-अभिव्यक्ति को संशोधित करें
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary                               | Adequate                 | Needs Improvement              |
-| -------- | --------------------------------------- | ------------------------ | ------------------------------ |
-|          | Program runs correctly and is commented | Program is not commented | Program is incomplete or buggy |
+| मानदंड | उदाहरणात्मक                                      | पर्याप्त                  | सुधार की जरूरत            |
+| ------ | ------------------------------------------------ | ------------------------- | ------------------------- |
+|        | प्रोग्राम सही ढंग से चलता है और टिप्पणी की गई है | प्रोग्राम टिप्पणी नहीं है | प्रोग्राम अधूरा या बगी है |

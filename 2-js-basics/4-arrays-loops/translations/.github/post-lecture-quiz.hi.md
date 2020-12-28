@@ -1,18 +1,18 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. What part of a for-loop would you need to modify to increment its iteration by 5
+1. फॉर-लूप के किस भाग को आपको इसके पुनरावृत्ति को 5 से बढ़ाना होगा
 
-- [ ] condition
-- [ ] counter
+- [ ] condition (स्थिति)
+- [ ] काउंटर
 - [ ] iteration-expression
 
-2. What's the difference between a `while` and a `for-loop`
+2. एक `while` और एक `for-loop` के बीच क्या अंतर है
 
-- [ ] A `for-loop` has a counter and iteration-expression, where `while` only has a condition
-- [ ] A `while` has a counter and iteration-expression where `for-loop` only has a condition
-- [ ] They are the same, just an alias for one another
+- [ ] एक `for-loop` में एक काउंटर और इटरेशन-एक्सप्रेशन है, जहां `while` में केवल एक शर्त है
+- [ ] एक `while` में एक काउंटर और इटरेशन-एक्सप्रेशन है, जहां `for-loop` में केवल एक शर्त है
+- [ ] वे समान हैं, बस एक दूसरे के लिए एक उपनाम
 
-3. Given the code `for (let i=1; i < 5; i++)`, how many iterations will it perform?
-   
+3. दिया गया कोड `for (let i=1; i < 5; i++)`, कितने पुनरावृत्तियों प्रदर्शन करेंगे?
+
 - [ ] 5
 - [ ] 4

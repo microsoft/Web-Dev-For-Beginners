@@ -1,13 +1,13 @@
-*Complete this quiz in class*
+_इस क्विज को कक्षा में पूरा करें_
 
-1. To refer to specific item in an array, you would use a
+1. किसी सरणी में विशिष्ट आइटम को संदर्भित करने के लिए, आप एक क्या उपयोग करेंगे
 
 - [ ] square bracket `[]`
 - [ ] index
 - [ ] curly braces `{}`
 
-2. How do you get the number of items in an array
+2. आपको किसी ऐरे में आइटम की संख्या कैसे मिलती है
 
-- [ ] The `len(array)` method
-- [ ] The property `size` on the array
-- [ ] The `length` property on the array
+- [ ] `len(array)` मेथड
+- [ ] ऐरे पर `size` गुण
+- [ ] ऐरे पर `length` गुण
