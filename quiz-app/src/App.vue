@@ -52,10 +52,9 @@ h3,
   text-align: center;
 }
 .card {
-  width: 40%;
+  width: 60%;
   border: #252d4a solid;
   border-radius: 5px;
-  display: flex;
   margin: auto;
   padding: 1em;
 }
