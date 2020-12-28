@@ -1,17 +1,17 @@
-*Complete this quiz in class*
+_इस क्विज को कक्षा में पूरा करें_
 
-1. Booleans are a data type you can use to test the length of a string
+1. बुलियन एक डेटा प्रकार है जिसका उपयोग आप एक स्ट्रिंग की लंबाई का परीक्षण करने के लिए कर सकते हैं
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-1. The following is an operation you can perform on a string
+2. निम्नलिखित एक ऑपरेशन है जो आप एक स्ट्रिंग पर प्रदर्शन कर सकते हैं
 
 - [ ] concatenation
 - [ ] appending
 - [ ] splicing
 
-3. `==` and `===` are interchangeable
-   
-- [ ] true
-- [ ] false
+3. `==` और `===` विनिमेय हैं
+
+- [ ] सही
+- [ ] गलत

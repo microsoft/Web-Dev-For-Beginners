@@ -1,18 +1,18 @@
-*Complete this quiz after the lesson by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके पाठ के बाद इस प्रश्नोत्तरी को पूरा करें_
 
-1. Constants are the same as `let` and `var` to declare variables except
+1.वैरिएबल घोषित करने के लिए कॉन्स्टेंट `let` और `var` के समान हैं सिवाय इसके कि
 
-- [ ] Constants must be initialized
-- [ ] Constants can be altered
-- [ ] Constants can be reassigned
+- [ ] स्थिरांक को प्रारंभिक किया जाना चाहिए
+- [ ] स्थिरांक बदलाव किए जा सकते हैं
+- [ ] स्थिरांक को पुन: सौंपा जा सकता है
 
-2. Numbers and ____ are JavaScript primitives that handle numeric data
+2. संख्याएँ और \_\_\_\_ जावास्क्रिप्ट आदिम हैं जो संख्यात्मक डेटा को संभालते हैं
 
 - [ ] bigint
 - [ ] boolean
 - [ ] star
 
-3. Strings can reside between both single and double quotes
-   
-- [ ] true
-- [ ] false
+3. स्ट्रिंग्स सिंगल और डबल दोनों कोट्स के बीच निवास कर सकते हैं
+
+- [ ] सही
+- [ ] गलत
