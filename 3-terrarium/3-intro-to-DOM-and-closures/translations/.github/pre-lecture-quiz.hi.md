@@ -1,18 +1,18 @@
-*A warm-up quiz about the DOM*
+_DOM के बारे में एक वार्म-अप क्विज़_
 
-Complete this quiz in class
+इस क्विज को कक्षा में पूरा करें
 
-1. The DOM stands for 'Document Object Management'
+1. DOM का अर्थ 'Document Object Management' है
 
-- [ ] [true]
-- [ ] [false]
+- [ ] सही
+- [ ] गलत
 
-2. The DOM can be thought of as a tree
+2. DOM को एक ट्री माना जा सकता है
 
-- [ ] [true]
-- [ ] [false]
+- [ ] सही
+- [ ] गलत
 
-3. Using the Web API, you can manipulate the DOM
+3. वेब API का उपयोग करके, आप DOM में हेरफेर कर सकते हैं
 
-- [ ] [true]
-- [ ] [false]
+- [ ] सही
+- [ ] गलत

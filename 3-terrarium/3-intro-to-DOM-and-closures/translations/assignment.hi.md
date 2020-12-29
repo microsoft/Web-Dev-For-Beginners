@@ -1,11 +1,11 @@
-# Work a bit more with the DOM
+# DOM के साथ थोड़ा और काम करें
 
-## Instructions
+## अनुदेश
 
-Research the DOM a little more by 'adopting' a DOM element. Visit the MSDN's [list of DOM interfaces](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) and pick one. Find it being used on a web site in the web, and write an explanation of how it is used.
+DOM तत्व को 'अपनाकर' DOM को थोड़ा और रिसर्च करें. MSDN की [डॉम इंटरफेसेस सुचि](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) पे जाये और एक चयन करे . इसे वेब में एक वेब साइट पर उपयोग किया जा रहा है, और यह कैसे उपयोग किया जाता है एक व्याख्या लिखें।
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary                                     | Adequate                                         | Needs Improvement       |
-| -------- | --------------------------------------------- | ------------------------------------------------ | ----------------------- |
-|          | Paragraph write-up is presented, with example | Paragraph write-up is presented, without example | No writeup is presented |
+| मानदंड | उदाहरणात्मक                                      | पर्याप्त                                              | सुधार की जरूरत                       |
+| ------ | ------------------------------------------------ | ----------------------------------------------------- | ------------------------------------ |
+|        | उदाहरण के साथ अनुच्छेद लेखन प्रस्तुत किया गया है | बिना उदाहरण के साथ अनुच्छेद लेखन प्रस्तुत किया गया है | कोई राइटअप प्रस्तुत नहीं किया गया है |

@@ -1,17 +1,17 @@
-*Complete this quiz after the lesson by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके पाठ के बाद इस प्रश्नोत्तरी को पूरा करें._
 
-1. [The DOM is a model to represent a document on the web]
+1. [DOM एक नमूना है जो वेब पर एक दस्तावेज़ का प्रतिनिधित्व करता है]
 
-- [ ] [true]
-- [ ] [false]
+- [ ] सही
+- [ ] गलत
 
-2. [Use JavaScript closures to perform the following:]
+2. [निम्नलिखित प्रदर्शन करने के लिए जावास्क्रिप्ट क्लोजर का उपयोग करें:]
 
-- [ ] [write functions within functions]
-- [ ] [enclose the DOM]
-- [ ] [close script blocks]
+- [ ] [फंक्शन्स के भीतर फंक्शन्स लिखें]
+- [ ] [डोम को संलग्न करें]
+- [ ] [स्क्रिप्ट ब्लॉक बंद करें]
 
-3. [Fill in the blank: Closures are useful when one or more functions need to access an outer function's ______]
+3. [रिक्त स्थान भरें: क्लोजर तब उपयोगी होते हैं जब एक या अधिक फ़ंक्शन को बाहरी फ़ंक्शन के ______ तक पहुंचने की आवश्यकता होती है]
 
 - [ ] [arrays]
 - [ ] [scope]
