@@ -1,17 +1,18 @@
-*Complete this quiz after the lesson by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके पाठ के बाद इस प्रश्नोत्तरी को पूरा करें._
 
-1. [Spans and Divs are interchangeable]
+1. [Spans और Divs विनिमेय हैं]
 
-- [ ] [true]
-- [ ] [false]
+- [ ] [सही]
+- [ ] [गलत]
 
-2. [The head of an HTML doc can contain:]
+2. [HTML डॉक के प्रमुख में क्या हो सकता है:]
 
-- [ ] [the title tag]
+- [ ] [title टैग ]
 - [ ] [metadata]
-- [ ] [all the above]
+- [ ] [उपर्युक्त सभी]
 
-3. [You can't use deprecated tags in your markup]
-- [ ] [true]
-- [ ] [false]
-- [ ] [false, but they have been deprecated for good reason]
+3. [आप अपने मार्कअप में पदावनत टैग का उपयोग नहीं कर सकते हैं]
+
+- [ ] [सही]
+- [ ] [गलत]
+- [ ] [गलत है, लेकिन उन्हें अच्छे कारण के लिए पदावनत किया गया है]

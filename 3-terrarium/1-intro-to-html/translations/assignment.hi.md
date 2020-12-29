@@ -1,11 +1,11 @@
-# Practice your HTML: Build a blog mockup
+# अपने HTML का अभ्यास करें: एक ब्लॉग मॉकअप बनाएँ
 
-## Instructions
+## अनुदेश
 
-Imagine you are designing, or redesigning, your personal web site. Create a graphical markup of your site, and then write down the HTML markup you would use to build out the various elements of the site. You can do this on paper, and scan it, or use software of your choice, just make sure to hand-code the HTML markup.
+कल्पना कीजिए कि आप अपनी निजी वेब साइट को डिजाइन कर रहे हैं, या नया स्वरूप दे रहे हैं . अपनी साइट का एक चित्रमय मार्कअप बनाएं, और फिर HTML मार्कअप को लिखें, जिसका उपयोग आप साइट के विभिन्न तत्वों का निर्माण करने के लिए करेंगे . आप इसे कागज पर कर सकते हैं, और इसे स्कैन कर सकते हैं, या अपनी पसंद के सॉफ़्टवेयर का उपयोग कर सकते हैं, बस HTML मार्कअप को हाथ से कोड करना सुनिश्चित करें.
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary                                                                           | Adequate                                                                         | Needs Improvement                                                                 |
-| -------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-|          | A blog layout is represented visually with at least 10 elements of markup displayed | A blog layout is represented visually with around 5 elements of markup displayed | A blog layout is represented visually with at most 3 elements of markup displayed |
+| मानदंड | उदाहरणात्मक                                                                                        | पर्याप्त                                                                       | सुधार की जरूरत                                                                           |
+| ------ | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+|        | एक ब्लॉग लेआउट को विसुआलय रूप से प्रदर्शित किया जाता है जिसमें कम से कम 10 तत्व प्रदर्शित होते हैं | प्रदर्शित लेआउट के लगभग 5 तत्वों के साथ एक ब्लॉग लेआउट नेत्रहीन दर्शाया गया है | प्रदर्शित लेआउट के अधिकांश 3 तत्वों के साथ एक ब्लॉग लेआउट नेत्रहीन रूप से दर्शाया गया है |

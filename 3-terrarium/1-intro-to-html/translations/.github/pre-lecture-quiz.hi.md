@@ -1,19 +1,19 @@
-*A warm-up quiz about HTML*
+_HTML के बारे में एक वार्म-अप क्विज़_
 
-Complete this quiz in class
+इस क्विज को कक्षा में पूरा करें
 
-1. HTML stands for 'HyperText Mockup Language'
+1. HTML का फुल फॉर्म 'HyperText Mockup Language' है
 
-- [ ] [true]
-- [ ] [false]
+- [ ] [सही]
+- [ ] [गलत]
 
-2. All HTML tags need both opening and closing tags
+2. सभी HTML टैग को टैग खोलने और बंद करने दोनों की आवश्यकता होती है
 
-- [ ] [true]
-- [ ] [false]
+- [ ] [सही]
+- [ ] [गलत]
 
-3. Using semantic markup is most important for 
+3. क्या करने के लिए सिमेंटिक मार्कअप का उपयोग करना सबसे महत्वपूर्ण है
 
 - [ ] [code readability]
-- [ ] [screen readers]
-- [ ] [maintenance]
+- [ ] [स्क्रीन रीडर]
+- [ ] [संरक्षण]
