@@ -1,34 +1,31 @@
-# My Terrarium: A project to learn about HTML, CSS, and DOM manipulation using JavaScript 🌵🌱
+# मेरा टेरारियम: जावास्क्रिप्ट का उपयोग करके HTML, CSS और DOM हेरफेर के बारे में जानने के लिए एक परियोजना 🌵🌱
 
-A small drag and drop code-meditation. With a little HTML, JS and CSS, you can build a web interface, style it, and add an interaction.
+एक छोटा सा ड्रैग एंड ड्रॉप कोड-मेडिटेशन। थोड़ा एचटीएमएल, जेएस और सीएसएस के साथ, आप एक वेब इंटरफ़ेस बना सकते हैं, इसे स्टाइल कर सकते हैं, और एक इंटरैक्शन जोड़ सकते हैं।
 
-![my terrarium](images/screenshot_gray.png)
+![मेरा टेरारियम](../images/screenshot_gray.png)
 
-# Lessons
+# पाठ
 
-1. [Intro to HTML](./1-intro-to-html/README.md)
-2. [Intro to CSS](./2-intro-to-css/README.md)
-3. [Intro to DOM and JS Closures](./3-intro-to-DOM-and-closures/README.md)
+1. [एचटीएमएल का परिचय](../1-intro-to-html/README.md)
+2. [सीएसएस का परिचय](../2-intro-to-css/README.md)
+3. [डोम और जेएस क्लोजर का परिचय](../3-intro-to-DOM-and-closures/README.md)
 
-## Credits
+## आभार सूची
 
-Written with ♥️  by [Jen Looper](https://www.twitter.com/jenlooper)
+[Jen Looper](https://www.twitter.com/jenlooper) द्वारा ♥️ से लिखा गया है
 
-The terrarium created via CSS was inspired by Jakub Mandra's glass jar [codepen](https://codepen.io/Rotarepmi/pen/rjpNZY).
+सीएसएस के माध्यम से बनाया गया टेरारियम जैकब मंडरा के ग्लास जार से प्रेरित था [codepen](https://codepen.io/Rotarepmi/pen/rjpNZY).
 
-The artwork was hand drawn by [Jen Looper](http://jenlooper.com) using Procreate.
+कलाकृति को [Jen Looper](http://jenlooper.com) द्वारा प्रोक्रीट का उपयोग करके हाथ से तैयार किया गया था।
 
-## Deploy your Terrarium
+## अपना टेरारियम तैनात करें
 
-You can deploy, or publish your terrarium to the web using Azure Static Web Apps. 
+आप Azure Static Web Apps का उपयोग करके वेब पर अपना टेरारियम तैनात या प्रकाशित कर सकते हैं
 
-1. Fork this repo
+1. ये रेपो फोर्क करे
 
-2. Press this button
+2. इस बटन को दबाएँ
 
 [![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=cxaall-4621-cxall#create/Microsoft.StaticApp)
 
-3. Walk through the wizard creating your app. Make sure you set the app root to either be `/solution` or the root of your codebase. There's no API in this app, so don't worry about adding that. A .github folder will be created in your forked repo that will help Azure Static Web Apps' build service build and publish your app to a new URL.
-
-
-
+3. अपना ऐप बनाने वाले विज़ार्ड के माध्यम से चलें। सुनिश्चित करें कि आपने ऐप रूट को या तो `../solution` या अपने कोडबेस की जड़ के रूप में सेट किया है. इस ऐप में कोई API नहीं है, इसलिए इसे जोड़ने की चिंता न करें. एक .github फोल्डर आपके फोर्क्ड रेपो में बनाया जाएगा जो Azure Static Web Apps की बिल्ड सर्विस बनाने और आपके ऐप को एक नए URL पर प्रकाशित करने में मदद करेगा।
