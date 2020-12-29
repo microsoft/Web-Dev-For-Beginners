@@ -1,21 +1,22 @@
-*Complete this quiz after the lesson by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके पाठ के बाद इस प्रश्नोत्तरी को पूरा करें._
 
-You will need to reference the following learn module to complete the quiz:
+क्विज़ को पूरा करने के लिए आपको निम्नलिखित सीखने के मॉड्यूल का संदर्भ देना होगा:
 
-[Work with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
+[CSS के साथ काम करें](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
 
-1. [You can write CSS directly in the head section of your HTML file]
+1. [आप अपनी HTML फ़ाइल के मुख्य भाग में सीधे CSS लिख सकते हैं]
 
-- [ ] [true]
-- [ ] [false]
+- [ ] [सही]
+- [ ] [गलत]
 
-1. [It's always necessary to include CSS in your app]
+1. [अपने ऐप में CSS को शामिल करना हमेशा आवश्यक होता है]
 
-- [ ] [true]
-- [ ] [false]
-- [ ] [false, but if you want it to look good you need CSS]
+- [ ] [सही]
+- [ ] [गलत]
+- [ ] [गलत है, लेकिन यदि आप चाहते हैं कि यह अच्छा लगे तो आपको CSS की आवश्यकता होगी]
 
-1. [Which browser tool can be used to inspect CSS?]
+1. [CSS का निरीक्षण करने के लिए कौन से ब्राउज़र टूल का उपयोग किया जा सकता है?]
+
 - [ ] [Elements]
 - [ ] [Styles]
 - [ ] [Network]

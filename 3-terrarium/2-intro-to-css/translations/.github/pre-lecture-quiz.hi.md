@@ -1,18 +1,18 @@
-*A warm-up quiz about CSS*
+_CSS के बारे में एक वार्म-अप क्विज़_
 
-Complete this quiz in class
+इस क्विज को कक्षा में पूरा करें
 
-1. HTML elements must have either a class or an id in order to be styled
+1. HTML तत्वों को स्टाइल करने के लिए एक वर्ग(क्लॉस) या एक आईडी होना चाहिए
 
-- [ ] [true]
-- [ ] [false]
+- [ ] [सही]
+- [ ] [गलत]
 
-2. CSS stands for 'Complete Style Sheets'
+2. CSS का अर्थ 'Complete Style Sheets' है
 
-- [ ] [true]
-- [ ] [false]
+- [ ] [सही]
+- [ ] [गलत]
 
-3. CSS can be used to create animations 
+3. एनिमेशन बनाने के लिए CSS का उपयोग किया जा सकता है
 
-- [ ] [true]
-- [ ] [false]
+- [ ] [सही]
+- [ ] [गलत]
