@@ -2,9 +2,14 @@
   <div>
     <nav>
       <router-link class="navlink" to="/">Home</router-link>
+      <label for="locale">locale</label>
+      <select v-model="locale">
+        <option>en</option>
+        <option>fr</option>
+      </select>
     </nav>
     <div id="app">
-      <h1>Web Development for Beginners: Quizzes</h1>
+      <h1>{{ $t("message.title") }}</h1>
       <router-view>
         <Quiz />
       </router-view>
@@ -14,11 +19,21 @@
 
 <script>
 import Quiz from "@/components/Quiz.vue";
+import messages from "@/assets/translations/messages";
 
 export default {
   name: "App",
+  i18n: { messages },
   components: {
     Quiz,
+  },
+  data() {
+    return { locale: "en" };
+  },
+  watch: {
+    locale(val) {
+      this.$root.$i18n.locale = val;
+    },
   },
 };
 </script>
@@ -50,6 +65,9 @@ h2,
 h3,
 .message {
   text-align: center;
+}
+.error {
+  color: red;
 }
 .card {
   width: 60%;
