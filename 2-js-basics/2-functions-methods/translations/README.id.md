@@ -1,9 +1,11 @@
 # Dasar-dasar JavaScript: Metode dan Fungsi
 
 ![Dasar-dasar JavaScript - Fungsi](../images/webdev101-js-functions.png)
+
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Pra-Kuliah
+
 [Kuis pra-Kuliah](./.github/pre-lecture-quiz.id.md)
 
 Ketika kita berpikir tentang menulis kode, kita selalu ingin memastikan kode kita dapat dibaca. Meskipun ini terdengar berlawanan dengan intuisi, kode dibaca lebih banyak kali daripada yang tertulis. Salah satu alat inti dalam kotak alat pengembang untuk memastikan kode yang dapat dipelihara adalah **function (fungsi)**.
@@ -21,8 +23,9 @@ Sama pentingnya adalah kemampuan untuk menamai suatu fungsi. Meskipun ini mungki
 Sintaks untuk suatu fungsi terlihat seperti berikut:
 
 ```javascript
-function nameOfFunction() { // definisi fungsi
- // definisi fungsi/tubuh
+function nameOfFunction() {
+  // definisi fungsi
+  // definisi fungsi/tubuh
 }
 ```
 
@@ -30,7 +33,7 @@ Jika saya ingin membuat fungsi untuk menampilkan salam, mungkin akan terlihat se
 
 ```javascript
 function tampilkanSapaan() {
-  console.log('Hello, world!');
+  console.log("Hello, world!");
 }
 ```
 
@@ -58,9 +61,7 @@ Agar suatu fungsi lebih dapat digunakan kembali, Anda sering kali ingin menyampa
 Parameter dicantumkan di bagian definisi dalam tanda kurung dan dipisahkan dengan koma seperti ini:
 
 ```javascript
-function nama(param, param2, param3) {
-
-}
+function nama(param, param2, param3) {}
 ```
 
 Kita dapat memperbarui `tampilkanSapaan` kita untuk menerima sebuah nama dan menampilkannya.
@@ -75,7 +76,7 @@ function tampilkanSapaan(nama) {
 Ketika kita ingin memanggil fungsi kita dan memasukkan parameternya, kita tentukan di dalam tanda kurung.
 
 ```javascript
-tampilkanSapaan('Christopher');
+tampilkanSapaan("Christopher");
 // Menampilkan "Hello, Christopher!" ketika dijalankan
 ```
 
@@ -84,7 +85,7 @@ tampilkanSapaan('Christopher');
 Kita dapat membuat fungsi kita lebih fleksibel dengan menambahkan lebih banyak parameter. Tetapi bagaimana jika kita tidak ingin setiap nilai ditentukan? Sesuai dengan contoh sapaan kita, kita bisa membiarkan nama sesuai kebutuhan (kita perlu tahu siapa yang kita sapa), tapi kita ingin membiarkan sapaan itu sendiri disesuaikan sesuai keinginan. Jika seseorang tidak ingin menyesuaikannya, kita memberikan nilai default sebagai gantinya. Untuk memberikan nilai default ke parameter, kita menyetelnya dengan cara yang sama seperti kita menyetel nilai untuk variabel - `namaParameter = 'nilaiDefault'`. Berikut contoh lengkapnya:
 
 ```javascript
-function tampilkanSapaan(nama, salam='Hello') {
+function tampilkanSapaan(nama, salam = "Hello") {
   console.log(`${salam}, ${nama}`);
 }
 ```
@@ -92,10 +93,10 @@ function tampilkanSapaan(nama, salam='Hello') {
 Ketika kita memanggil fungsi tersebut, kita kemudian dapat memutuskan apakah kita ingin menetapkan nilai dari `salam`.
 
 ```javascript
-tampilkanSapaan('Christopher');
+tampilkanSapaan("Christopher");
 // menampilkan "Hello, Christopher"
 
-tampilkanSapaan('Christopher', 'Hi');
+tampilkanSapaan("Christopher", "Hi");
 // menampilkan "Hi, Christopher"
 ```
 
@@ -109,7 +110,7 @@ Jika suatu fungsi mengembalikan sesuatu maka kata kunci `return` digunakan. Kata
 
 ```javascript
 return variabelSaya;
-```  
+```
 
 Kita bisa membuat fungsi untuk membuat pesan ucapan dan mengembalikan nilainya ke pemanggil
 
@@ -123,7 +124,7 @@ function buatPesanSapaan(nama) {
 Saat memanggil fungsi ini, kita akan menyimpan nilai dalam variabel. Ini hampir sama dengan cara kita menetapkan variabel ke nilai statis (seperti `const nama = 'Christopher'`).
 
 ```javascript
-const pesanSapaan = buatPesanSapaan('Christopher');
+const pesanSapaan = buatPesanSapaan("Christopher");
 ```
 
 ## Fungsi sebagai parameter untuk fungsi
@@ -136,7 +137,7 @@ Jika Anda menjalankan kode di bawah ini, setelah 3 detik Anda akan melihat pesan
 
 ```javascript
 function tampilkanSelesai() {
-  console.log('3 detik telah berlalu');
+  console.log("3 detik telah berlalu");
 }
 // nilai timer dalam milidetik
 setTimeout(3000, tampilkanSelesai);
@@ -151,8 +152,8 @@ Saat kita mengirimkan fungsi sebagai parameter, kita dapat mengabaikan pembuatan
 Mari tulis ulang kode di atas untuk menggunakan fungsi anonim:
 
 ```javascript
-setTimeout(3000, function() {
-  console.log('3 detik telah berlalu');
+setTimeout(3000, function () {
+  console.log("3 detik telah berlalu");
 });
 ```
 
@@ -166,13 +167,13 @@ Mari kita tulis ulang kode kita sekali lagi untuk menggunakan fungsi panah gemuk
 
 ```javascript
 setTimeout(3000, () => {
-  console.log('3 detik telah berlalu');
+  console.log("3 detik telah berlalu");
 });
 ```
 
 ### Kapan menggunakan setiap strategi
 
-Anda sekarang telah melihat bahwa kita memiliki tiga cara untuk meneruskan fungsi sebagai parameter dan mungkin bertanya-tanya kapan harus menggunakannya. Jika Anda tahu Anda akan menggunakan fungsi tersebut lebih dari sekali, buatlah seperti biasa. Jika Anda akan menggunakannya hanya untuk satu lokasi, biasanya yang terbaik adalah menggunakan fungsi anonim. Apakah Anda menggunakan fungsi panah gemuk atau tidak atau sintaks `function` yang lebih tradisional terserah Anda, tetapi Anda akan melihat sebagian besar pengembang modern lebih memilih` => `.
+Anda sekarang telah melihat bahwa kita memiliki tiga cara untuk meneruskan fungsi sebagai parameter dan mungkin bertanya-tanya kapan harus menggunakannya. Jika Anda tahu Anda akan menggunakan fungsi tersebut lebih dari sekali, buatlah seperti biasa. Jika Anda akan menggunakannya hanya untuk satu lokasi, biasanya yang terbaik adalah menggunakan fungsi anonim. Apakah Anda menggunakan fungsi panah gemuk atau tidak atau sintaks `function` yang lebih tradisional terserah Anda, tetapi Anda akan melihat sebagian besar pengembang modern lebih memilih`=>`.
 
 ---
 
@@ -181,12 +182,13 @@ Anda sekarang telah melihat bahwa kita memiliki tiga cara untuk meneruskan fungs
 Bisakah Anda mengartikulasikan dalam satu kalimat perbedaan antara fungsi dan metode? Cobalah!
 
 ## Kuis Pasca-Kuliah
+
 [Kuis pasca-kuliah](./.github/post-lecture-quiz.id.md)
 
 ## Review & Belajar Mandiri
 
 Layak [membaca lebih banyak tentang fungsi panah](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), karena semakin sering digunakan dalam basis kode. Berlatihlah menulis fungsi, lalu menulis ulang dengan sintaks ini.
 
-## Assignment
+## Tugas
 
-[Fun with Functions](./assignment.id.md)
+[Bersenang-senang dengan Fungsi](./assignment.id.md)
