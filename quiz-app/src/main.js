@@ -8,9 +8,7 @@ Vue.use(VueI18n);
 
 const i18n = new VueI18n({
 	locale: 'en',
-	messages: {
-		en: {},
-	},
+	fallbackLocale: 'en',
 });
 
 new Vue({ i18n, router, render: (h) => h(App) }).$mount('#app');

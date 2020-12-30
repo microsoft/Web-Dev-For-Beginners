@@ -2,9 +2,9 @@
   <div class="card">
     <div v-for="q in questions" :key="q.id">
       <div v-if="route == q.id">
-        <h3 v-if="complete" class="message">{{ $t("message.complete") }}</h3>
+        <h3 v-if="complete" class="message">{{ $t("complete") }}</h3>
         <div v-else>
-          <h3 v-if="error" class="error">{{ $t("message.error") }}</h3>
+          <h3 v-if="error" class="error">{{ $t("error") }}</h3>
           <h2>
             {{ q.quiz[currentQuestion].questionText }}
           </h2>
@@ -25,8 +25,7 @@
 </template>
 
 <script>
-import questions from "@/assets/translations/en/quiz.json";
-import messages from "@/assets/translations/messages";
+import messages from "@/assets/translations";
 
 export default {
   data() {
@@ -34,8 +33,8 @@ export default {
       currentQuestion: 0,
       complete: false,
       error: false,
-      questions: questions,
       route: "",
+      questions: this.$t("quizzes"),
     };
   },
 
@@ -57,6 +56,8 @@ export default {
     },
   },
   created() {
+    //console.log(this.$root.$i18n.locale,this.$i18n.locale);
+    //this.questions = this.$i18n.messages + "." + this.$i18n.locale;
     this.route = this.$route.params.id;
   },
 };

@@ -9,7 +9,7 @@
       </select>
     </nav>
     <div id="app">
-      <h1>{{ $t("message.title") }}</h1>
+      <h1>{{ $t("title") }}</h1>
       <router-view>
         <Quiz />
       </router-view>
@@ -19,7 +19,7 @@
 
 <script>
 import Quiz from "@/components/Quiz.vue";
-import messages from "@/assets/translations/messages";
+import messages from "@/assets/translations";
 
 export default {
   name: "App",
