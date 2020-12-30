@@ -1,18 +1,18 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. The World Wide Web was invented by
+1. वर्ल्ड वाइड किसके वेब द्वारा आविष्कार किया गया था
 
-- [ ] Tom Barnard-Loft
-- [ ] Tim Berners-Lee
-- [ ] Trish Berth-Pool
+- [ ] टॉम बरनार्ड-लॉफ्ट
+- [ ] टीम बैरनर्स-ली
+- [ ] ट्रिश बर्थ-पूल
 
-2. The first browser was called
+2. पहले ब्राउज़र को क्या जाता था
 
-- [ ] World Wide Web
-- [ ] Mozilla
-- [ ] Netscape
+- [ ] वर्ल्ड वाइड वेब
+- [ ] मोज़िल्ला
+- [ ] नेटस्केप
 
-3. Browsers can store a user's browsing history
+3. ब्राउज़र उपयोगकर्ता के ब्राउज़िंग इतिहास को संग्रहीत कर सकते हैं
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत

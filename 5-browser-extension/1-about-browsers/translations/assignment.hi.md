@@ -1,11 +1,11 @@
-# Restyle your Extension
+# अपने एक्सटेंशन को पुनर्स्थापित करें
 
-## Instructions
+## अनुदेश
 
-The codebase for this extension comes complete with styles, but you don't have to use them; make your extension your own by restyling it by editing its css file.
+इस एक्सटेंशन का कोडबेस शैलियों के साथ आता है, लेकिन आपको उनका उपयोग नहीं करना है; इसकी css फाइल को एडिट करके इसे अपने एक्सटेंशन को अपना बना लें।
 
-## Rubric
+## सरनामा
 
-| Criteria | Exemplary                                    | Adequate              | Needs Improvement |
-| -------- | -------------------------------------------- | --------------------- | ----------------- |
-|          | Code is submitted with functional new styles | Styling is incomplete | Styles are buggy  |
+| मानदंड | उदाहरणात्मक                                           | पर्याप्त        | सुधार की जरूरत       |
+| ------ | ----------------------------------------------------- | --------------- | -------------------- |
+|        | कोड नई कार्यात्मक शैलियों के साथ प्रस्तुत किया गया है | स्टाइल अधूरा है | स्टाइल्स में गलती है |

@@ -1,20 +1,20 @@
-*A warm-up quiz about browsers*
+_ब्राउज़रों के बारे में एक वार्म-अप क्विज़_
 
-Complete this quiz in class
+इस क्विज को कक्षा में पूरा करें
 
-1. You can get browser extensions from
+1. आप ब्राउज़र एक्सटेंशन कहासे प्राप्त कर सकते हैं
 
-- [ ] WalMart
-- [ ] The browser's extension store
-- [ ] The App store
+- [ ] वालमार्ट
+- [ ] ब्राउज़र का एक्सटेंशन स्टोर
+- [ ] ऐप स्टोर
 
-2. NPM stands for
+2. एनपीएम अर्थ है
 
-- [ ] Node Package Manager
-- [ ] Netscape Primary Mix
-- [ ] Natural Processing Manager
+- [ ] नोड पैकेज मैनेजर
+- [ ] नेटस्केप प्राइमरी मिक्स
+- [ ] नेचुरल प्रोसेसिंग मैनेजर
 
-3. Your browser can serve web pages both securely and insecurely 
+3. आपका ब्राउज़र सुरक्षित और असुरक्षित दोनों तरह से वेब पृष्ठों की सेवा कर सकता है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
