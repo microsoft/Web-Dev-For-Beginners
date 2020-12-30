@@ -1,18 +1,19 @@
-*Complete this quiz in class.*
+_इस क्विज को कक्षा में पूरा करें._
 
-1. Test the performance of your app
+1. अपने ऐप के प्रदर्शन का परीक्षण करें
 
-- [ ] Using the browser's tools
-- [ ] Using a separate software package
+- [ ] ब्राउज़र के टूल का उपयोग करके
+- [ ] एक अलग सॉफ्टवेयर पैकेज का उपयोग करके
 - [ ] Manually
 
-2. The 'performance' of a web site is an analysis of
+2. एक वेब साइट का 'प्रदर्शन' एक विश्लेषण है कि
 
-- [ ] How fast it loads
-- [ ] How fast the code on it runs
-- [ ] Both of the above
+- [ ] यह कितनी तेजी से लोड होता है
+- [ ] उस पर कोड कितनी तेजी से चलता है
+- [ ] ऊपर के दोनों
 
-3. Overall, the 'weight' of web pages over the past few years has gotten
-- [ ] lighter
-- [ ] heavier
-- [ ] stayed the same
+3. कुल मिलाकर, पिछले कुछ वर्षों में वेब पेजों के 'वजन' \_\_\_\_ है
+
+- [ ] कम हुआ
+- [ ] बढ़ गया
+- [ ] वैसा ही

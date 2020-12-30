@@ -1,9 +1,9 @@
-# Analyze a site for performance
+# प्रदर्शन के लिए एक साइट का विश्लेषण करें
 
-Provide a detailed report of a web site, showing areas where performance is problematic. Analyze why the site is slow and what you could do to speed it up. Don't rely only on the browser tools, but do some research on other tools that can help your report
+वेब साइट की एक विस्तृत रिपोर्ट प्रदान करें, जिसमें ऐसे क्षेत्र दिखाए जा रहे हैं जहाँ प्रदर्शन समस्याग्रस्त है. विश्लेषण करें कि साइट धीमी क्यों है और आप इसे गति देने के लिए क्या कर सकते हैं. केवल ब्राउज़र टूल पर भरोसा न करें, लेकिन अन्य उपकरणों पर कुछ शोध करें जो आपकी रिपोर्ट में मदद कर सकते हैं.
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary                                                                                                  | Adequate                    | Needs Improvement             |
-| -------- | ---------------------------------------------------------------------------------------------------------- | --------------------------- | ----------------------------- |
-|          | A report is presented with details drawn not only from browser tools but from 3rd party tools if available | A basic report is presented | A minimal report is presented |
+| मानदंड | उदाहरणात्मक                                                                                                         | पर्याप्त                              | सुधार की जरूरत                       |
+| ------ | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------------------ |
+|        | एक रिपोर्ट न केवल ब्राउज़र टूल से नहीं, बल्कि उपलब्ध है तो थर्ड पार्टी टूल्स से भी विवरण के साथ प्रस्तुत की जाती है | एक बुनियादी रिपोर्ट प्रस्तुत की गई है | एक न्यूनतम रिपोर्ट प्रस्तुत की गई है |
