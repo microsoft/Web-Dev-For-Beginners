@@ -1,28 +1,27 @@
-# Building a browser extension
+# ब्राउज़र एक्सटेंशन का निर्माण
 
-Building browser extensions is a fun and interesting way to think about the performance of your apps while building a different type of web asset. This module includes lessons on how browsers work and how to deploy a browser extension, how to build a form, call an API, and use local storage, and how to gauge the performance of your website and improve it.
+एक अलग प्रकार की वेब एसेट्स का निर्माण करते समय अपने ब्राउज़र के प्रदर्शन के बारे में सोचने के लिए ब्राउज़र एक्सटेंशन का निर्माण एक मजेदार और दिलचस्प तरीका है.इस मॉड्यूल में शामिल पाठ हैं कि ब्राउज़र कैसे काम करते हैं और ब्राउज़र एक्सटेंशन कैसे तैनात करते हैं, फॉर्म कैसे बनाते हैं, एपीआई कॉल करते हैं, और लोकलस्टोरेज का उपयोग करते हैं, और अपनी वेबसाइट के प्रदर्शन को कैसे गेज करें और इसमें सुधार करें।.
 
-You'll build a  browser extension that works on Edge, Chrome, and Firefox. This extension, which is like a mini web site that is tailored to a very specific task, checks the [C02 Signal API](https://www.co2signal.com) for a given region's electricity usage and carbon intensity, and returns a reading on the region's carbon footprint.
+आप एज, क्रोम और फ़ायरफ़ॉक्स पर काम करने वाले ब्राउज़र एक्सटेंशन का निर्माण करेंगे. यह एक्सटेंशन, जो एक मिनी वेब साइट की तरह है जो एक बहुत ही विशिष्ट कार्य के अनुरूप है, किसी दिए गए क्षेत्र की बिजली के उपयोग और कार्बन की तीव्रता के लिए [C02 सिग्नल एपीआई](https://www.co2signal.com) की जांच करता है, और इस क्षेत्र के कार्बन पदचिह्न पर एक रीडिंग देता है.
 
-This extension can be called ad hoc by a user once an API key and region code is input into a form to determine local electricity usage and thereby offer data that can influence a user's electricity decisions. For example, it may be preferable to delay running a clothes dryer (a carbon-intense activity) during a period of high electricity usage in your region.
+एपीआई कुंजी और क्षेत्र कोड स्थानीय बिजली के उपयोग को निर्धारित करने के लिए एक रूप में इनपुट होने के बाद इस विस्तार को उपयोगकर्ता द्वारा तदर्थ कहा जा सकता है और इस तरह डेटा की पेशकश करते हैं जो उपयोगकर्ता के बिजली निर्णयों को प्रभावित कर सकते हैं.उदाहरण के लिए, अपने क्षेत्र में उच्च बिजली के उपयोग की अवधि के दौरान कपड़े के ड्रायर (कार्बन-गहन गतिविधि) को चलाने में देरी करना बेहतर हो सकता है।
 
-### Topics
+### विषय
 
-1. [About the browser](1-about-browsers/README.md)
-2. [Forms and local storage](2-forms-browsers-local-storage/README.md)
-3. [Background tasks and performance](3-background-tasks-and-performance/README.md)
+1. [ब्राउज़र के बारे में](../1-about-browsers/README.md)
+2. [फॉर्म्स और लोकल स्टोरेज](../2-forms-browsers-local-storage/README.md)
+3. [पृष्ठभूमि के कार्य और प्रदर्शन](../3-background-tasks-and-performance/README.md)
 
-### Credits
+### क्रेडिट
 
-![a green browser extension](extension-screenshot.png)
+![एक हरा ब्राउज़र एक्सटेंशन](../extension-screenshot.png)
 
-## Credits
+## क्रेडिट
 
-The idea for this web carbon trigger was offered by Asim Hussain, lead at Microsoft of the Green Cloud Advocacy team and author of the [Green Principles](https://principles.green/). It was originally a [web site project](https://github.com/jlooper/green).
+इस वेब कार्बन ट्रिगर के लिए विचार असीम हुसैन द्वारा पेश किया गया था, माइक्रोसॉफ्ट के ग्रीन क्लाउड एडवोकेसी टीम में नेतृत्व और [ग्रीन प्रिंसिपल्स](https://principles.green/) के लेखक. यह मूल रूप से एक [वेब साइट परियोजना](https://github.com/jlooper/green) था.
 
-The structure of the browser extension was influenced by [Adebola Adeniran's COVID extension](https://github.com/onedebos/covtension).
+ब्राउज़र एक्सटेंशन की संरचना [Adebola Adeniran's COVID एक्सटेंशन](https://github.com/onedebos/covtension) से प्रभावित था.
 
-The concept behind the 'dot' icon system was suggested by the icon structure of the [Energy Lollipop](https://energylollipop.com/) browser extension for California emissions.
+'डॉट' आइकन सिस्टम के पीछे की अवधारणा को कैलिफ़ोर्निया उत्सर्जन के लिए [एनर्जी लॉलीपॉप] (https://energylollipop.com/) ब्राउज़र एक्सटेंशन की आइकन संरचना द्वारा सुझाया गया था।
 
-These lessons were written with ♥️ by [Jen Looper](https://www.twitter.com/jenlooper)
-
+ये पाठ [Jen Looper](https://www.twitter.com/jenlooper) द्वारा ♥️ के साथ लिखा गया है
