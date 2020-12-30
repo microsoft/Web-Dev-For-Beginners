@@ -6,6 +6,7 @@
       <select v-model="locale">
         <option>en</option>
         <option>fr</option>
+        <option>kr</option>
       </select>
     </nav>
     <div id="app">
