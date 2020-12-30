@@ -429,53 +429,49 @@
 				"title": "Lesson 5: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "What's an argument?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "It's something you declare in the function definition",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "It's something you pass into a function at invocation time",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "It's something you have with people you know",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "A function must return something",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "You can name a function anything",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true, but it should be a descriptive name",
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -486,53 +482,49 @@
 				"title": "Lesson 5: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "Arguments must be provided for all parameters in a function",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What does a default value do?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Sets a correct value",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Gives a starter value for a parameter so your code still behaves if you omit an argument for it",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Has no utility",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "A fat arrow function allows you to",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Create heavy functions",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Omit the function keyword",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Create an anonymous function",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -543,53 +535,53 @@
 				"title": "Lesson 6: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "The following operator == is called",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Equality",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Strict equality",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Assignment",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "A comparison in JavaScript returns what type?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "boolean",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "null",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "string",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The ! symbol in JavaScript means:",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Logical Not",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Important",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Equals",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -600,53 +592,53 @@
 				"title": "Lesson 6: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "What would the following code return: '1' == 1",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "null",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What would the following code return: '1' === 1",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "null",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Choose the correct operator to express 'or' logic",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "a | b",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "a || b",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "a or b",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -657,53 +649,53 @@
 				"title": "Lesson 7: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "To refer to a specific item in an array, you would use a",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "square bracket []",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "index",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "curly braces {}",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "How do you get the number of items in an array?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "The 'len(array)' method",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "The property size on the array",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "The length property on the array",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "In JavaScript, indexes start at",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "0",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "1",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "2",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -714,53 +706,49 @@
 				"title": "Lesson 7: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "What part of a for-loop would you need to modify to increment its iteration by 5?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "condition",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "counter",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "iteration-expression",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What's the difference between a while and a for-loop",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "A for-loop has a counter and iteration-expression, where while only has a condition",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "A while has a counter and iteration-expression where for-loop only has a condition",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "They are the same, just an alias for one another",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Given the code for (let i=1; i < 5; i++), how many iterations will it perform?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "5",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "4",
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -771,53 +759,45 @@
 				"title": "Lesson 8: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "HTML stands for 'HyperText Mockup Language'",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "All HTML tags need both opening and closing tags",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Using semantic markup is most important for",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "code readability",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "screen readers",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "maintenance",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -828,53 +808,49 @@
 				"title": "Lesson 8: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "Spans and Divs are interchangeable",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The head of an HTML doc can contain:",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "the title tag",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "metadata",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "all the above",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "You can't use deprecated tags in your markup",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false, but they have been deprecated for good reason",
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -885,53 +861,41 @@
 				"title": "Lesson 9: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "HTML elements must have either a class or an id in order to be styled",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "CSS stands for 'Complete Style Sheets'",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "CSS can be used to create animations",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -942,53 +906,49 @@
 				"title": "Lesson 9: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "You can write CSS directly in the head section of your HTML file",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "It's always necessary to include CSS in your app",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false, but if you want it to look good you probably need CSS",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Which browser tool can be used to inspect CSS?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Elements",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Styles",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Network",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -999,53 +959,41 @@
 				"title": "Lesson 10: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "The DOM stands for 'Document Object Management'",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The DOM can be thought of as a tree",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Using the Web API, you can manipulate the DOM",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1056,53 +1004,49 @@
 				"title": "Lesson 10: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "The DOM is a model to represent a document on the web",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Use JavaScript closures to perform the following:",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "write functions within functions",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "enclose the DOM",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "close script blocks",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Fill in the blank: Closures are useful when one or more functions need to access an outer function's...",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "arrays",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "scope",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "functions",
+								"isCorrect": "false"
 							}
 						]
 					}
