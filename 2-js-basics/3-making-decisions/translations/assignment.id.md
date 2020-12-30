@@ -1,24 +1,24 @@
-# Operators
+# Operator
 
-## Instructions
+## Instruksi
 
-Play around with operators. Here's a suggestion for a program you can implement:
+Bermain-main dengan operator. Berikut adalah saran untuk program yang dapat Anda terapkan:
 
-You have a set of students from two different grading systems.
+Anda memiliki satu set siswa dari dua sistem penilaian yang berbeda.
 
-### Sistem penilaian pertama
+### Sistem Layanan pertama
 
-Satu sistem penilaian didefinisikan sebagai nilai dari 1-5 di mana 3 ke atas berarti Anda lulus kursus.
+Satu sistem didefinisikan sebagai nilai dari 1-5 di mana 3 ke atas berarti Anda lulus kursus.
 
-### Sistem penilaian kedua
+### Sistem Produk kedua
 
 Sistem nilai lain memiliki nilai berikut `A, A-, B, B-, C, C-` di mana `A` adalah nilai tertinggi dan `C` adalah nilai kelulusan terendah.
 
-### The task
+### Tugas
 
-Diberikan array `semuaPelajar` yang mewakili semua siswa dan nilainya, buat array baru `pelajarYangLulus` yang berisi semua siswa yang lulus.
+Diberikan array `semuaPelajar` yang mewakili semua siswa dan nilai, buat array baru `pelajarYangLulus` yang berisi semua siswa yang lulus.
 
-> TIP, gunakan for-loop dan if ... else dan operator perbandingan:
+> TIPS, gunakan for-loop dan if ... else dan operator perbandingan:
 
 ```javascript
 let semuaPelajar = [
