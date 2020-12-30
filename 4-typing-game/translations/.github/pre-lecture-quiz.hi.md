@@ -1,20 +1,20 @@
-*Complete this quiz in class.*
+_इस क्विज को कक्षा में पूरा करें_
 
-1. Event-driven programming is when a user 
+1. इवेंट-संचालित प्रोग्रामिंग जब एक उपयोगकर्ता
 
-- [ ] clicks on a button
-- [ ] changes a value
-- [ ] interacts with the page
-- [ ] any of the above
+- [ ] एक बटन पर क्लिक करता है
+- [ ] एक वैल्यू बदलता है
+- [ ] पृष्ठ के साथ सहभागिता करता है
+- [ ] ऊपर मे से कोई
 
-2. In procedural programming, functions are called
+2. प्रक्रियात्मक प्रोग्रामिंग में, फंक्शन्स को कहा जाता है
 
-- [ ] any time
-- [ ] in a specific order
-- [ ] left to right
+- [ ] किसी भी समय
+- [ ] एक विशिष्ट क्रम में
+- [ ] बाएं से दाएं
 
-3. The universal method exposed in the DOM for registering event handlers is called
-   
+3. ईवेंट हैंडलर्स को पंजीकृत करने के लिए DOM में उजागर की गई सार्वभौमिक विधि को क्या जाता है
+
 - [ ] addEventListener
 - [ ] addListener
 - [ ] addEvent

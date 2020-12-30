@@ -1,18 +1,18 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. Just about anything a user does on a page raises an event
+1. किसी भी चीज़ के बारे में एक उपयोगकर्ता एक पृष्ठ पर एक घटना को बढ़ाता है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. Common events include
-   
+2. आम घटनाओं में क्या शामिल हैं
+
 - [ ] click_event
 - [ ] select_event
 - [ ] input_event
 - [ ] all of these
 
-3. You can use anonymous functions to create event handlers
+3. आप ईवेंट हैंडलर बनाने के लिए अनाम फ़ंक्शंस का उपयोग कर सकते हैं
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत

@@ -1,30 +1,30 @@
-# Event-Driven Programming - Build a Typing Game
+# ईवेंट-चालित प्रोग्रामिंग - एक टाइपिंग गेम बनाएँ
 
-## Introduction
+## परिचय
 
-Typing is one of the most underrated skills of the developer. The ability to quickly transfer thoughts from your head to your editor allows creativity to flow freely. One of the best ways to learn is to play a game!
+टाइपिंग डेवलपर के सबसे कम कौशल में से एक है.अपने संपादक से विचारों को जल्दी से स्थानांतरित करने की क्षमता रचनात्मकता को स्वतंत्र रूप से प्रवाह करने की अनुमति देती है। सीखने के सर्वोत्तम तरीकों में से एक खेल खेलना है!
 
-> So, let's build a typing game!
+> तो, चलिए एक टाइपिंग गेम बनाते हैं!
 
-You're going to use the JavaScript, HTML and CSS skills you have built up so far to create a typing game. The game will present the player with a random quote (we're using [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes) quotes) and time how long the player takes to type it out accurately. You're going to use the JavaScript, HTML and CSS skills you have built up so far to create a typing game.
+आप टाइपिंग गेम बनाने के लिए अब तक आपके द्वारा बनाए गए जावास्क्रिप्ट, HTML और सीएसएस कौशल का उपयोग करने जा रहे हैं. खेल एक यादृच्छिक उद्धरण के साथ खिलाड़ी को प्रस्तुत करेगा (हम [शर्लक होम्स](https://en.wikipedia.org/wiki/Sherlock_Holmes) का उद्धरण उपयोग कर रहे हैं) और खिलाड़ी को इसे सही ढंग से टाइप करने में कितना समय लगता है. आप टाइपिंग गेम बनाने के लिए अब तक आपके द्वारा बनाए गए जावास्क्रिप्ट, HTML और सीएसएस कौशल का उपयोग करने जा रहे हैं।
 
-![demo](images/demo.gif)
+![प्रदर्शन](images/demo.gif)
 
-## Prerequisites
+## आवश्यक शर्तें
 
-This lesson assumes you're familiar with the following concepts:
+यह पाठ मानता है कि आप निम्नलिखित अवधारणाओं से परिचित हैं:
 
-- Creating text input and button controls
-- CSS and setting styles using classes
-- JavaScript basics
-  - Creating an array
-  - Creating a random number
-  - Getting the current time
+- टेक्स्ट इनपुट और बटन नियंत्रण बनाना
+- क्लासेज का उपयोग करके सीएसएस और शैलियों की स्थापना
+- जावास्क्रिप्ट मूल बातें
+  - एक सरणी बनाना
+  - एक यादृच्छिक संख्या बनाना
+  - वर्तमान समय पाना
 
-## Lesson
+## पाठ
 
-[Creating a typing game by using event driven programming](./typing-game/README.md)
+[इवेंट संचालित प्रोग्रामिंग का उपयोग करके एक टाइपिंग गेम बनाना](./typing-game/README.md)
 
-## Credits
+## आभार सूची
 
-Written with ♥️ by [Christopher Harrison](http://www.twitter.com/geektrainer)
+[Christopher Harrison](http://www.twitter.com/geektrainer) द्वारा ♥️ के साथ लिखा गया है
