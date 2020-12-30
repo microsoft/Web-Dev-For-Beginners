@@ -28,14 +28,19 @@
 import messages from "@/assets/translations";
 
 export default {
+  name: "Quiz",
   data() {
     return {
       currentQuestion: 0,
       complete: false,
       error: false,
       route: "",
-      questions: this.$t("quizzes"),
     };
+  },
+  computed: {
+    questions() {
+      return this.$t("quizzes");
+    }
   },
 
   i18n: { messages },
