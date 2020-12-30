@@ -6,7 +6,7 @@
 		"quizzes": [
 			{
 				"id": 1,
-				"title": "Lesson 1: Pre-Lecture Quiz",
+				"title": "Lesson 1: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "A program can be created without the creator writing any code",
@@ -59,7 +59,7 @@
 			},
 			{
 				"id": 2,
-				"title": "Lesson 1: Post-Lecture Quiz",
+				"title": "Lesson 1: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "What language would you most likely use to create a website?",
@@ -112,7 +112,7 @@
 			},
 			{
 				"id": 3,
-				"title": "Lesson 2: Pre-Lecture Quiz",
+				"title": "Lesson 2: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "How do you create a Git repo?",
@@ -169,7 +169,7 @@
 			},
 			{
 				"id": 4,
-				"title": "Lesson 2: Post-Lecture Quiz",
+				"title": "Lesson 2: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:",
@@ -226,7 +226,7 @@
 			},
 			{
 				"id": 5,
-				"title": "Lesson 3: Pre-Lecture Quiz",
+				"title": "Lesson 3: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "An accessible web site can be checked in which browser tool",
@@ -275,7 +275,7 @@
 			},
 			{
 				"id": 6,
-				"title": "Lesson 3: Post-Lecture Quiz",
+				"title": "Lesson 3: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Lighthouse only checks for accessibility problems",
@@ -324,7 +324,7 @@
 			},
 			{
 				"id": 7,
-				"title": "Lesson 4: Pre-Lecture Quiz",
+				"title": "Lesson 4: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Booleans are a data type you can use to test the length of a string",
@@ -373,7 +373,7 @@
 			},
 			{
 				"id": 8,
-				"title": "Lesson 4: Post-Lecture Quiz",
+				"title": "Lesson 4: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Constants are the same as let and var to declare variables except",
@@ -426,7 +426,7 @@
 			},
 			{
 				"id": 9,
-				"title": "Lesson 5: Pre-Lecture Quiz",
+				"title": "Lesson 5: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -483,7 +483,7 @@
 			},
 			{
 				"id": 10,
-				"title": "Lesson 5: Post-Lecture Quiz",
+				"title": "Lesson 5: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -540,7 +540,7 @@
 			},
 			{
 				"id": 11,
-				"title": "Lesson 6: Pre-Lecture Quiz",
+				"title": "Lesson 6: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -597,7 +597,7 @@
 			},
 			{
 				"id": 12,
-				"title": "Lesson 6: Post-Lecture Quiz",
+				"title": "Lesson 6: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -654,7 +654,7 @@
 			},
 			{
 				"id": 13,
-				"title": "Lesson 7: Pre-Lecture Quiz",
+				"title": "Lesson 7: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -711,7 +711,7 @@
 			},
 			{
 				"id": 14,
-				"title": "Lesson 7: Post-Lecture Quiz",
+				"title": "Lesson 7: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -768,7 +768,7 @@
 			},
 			{
 				"id": 15,
-				"title": "Lesson 8: Pre-Lecture Quiz",
+				"title": "Lesson 8: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -825,7 +825,7 @@
 			},
 			{
 				"id": 16,
-				"title": "Lesson 8: Post-Lecture Quiz",
+				"title": "Lesson 8: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -882,7 +882,7 @@
 			},
 			{
 				"id": 17,
-				"title": "Lesson 9: Pre-Lecture Quiz",
+				"title": "Lesson 9: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -939,7 +939,7 @@
 			},
 			{
 				"id": 18,
-				"title": "Lesson 9: Post-Lecture Quiz",
+				"title": "Lesson 9: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -996,7 +996,7 @@
 			},
 			{
 				"id": 19,
-				"title": "Lesson 10: Pre-Lecture Quiz",
+				"title": "Lesson 10: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1053,7 +1053,7 @@
 			},
 			{
 				"id": 20,
-				"title": "Lesson 10: Post-Lecture Quiz",
+				"title": "Lesson 10: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1110,7 +1110,7 @@
 			},
 			{
 				"id": 21,
-				"title": "Lesson 11: Pre-Lecture Quiz",
+				"title": "Lesson 11: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1167,7 +1167,7 @@
 			},
 			{
 				"id": 22,
-				"title": "Lesson 11: Post-Lecture Quiz",
+				"title": "Lesson 11: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1224,7 +1224,7 @@
 			},
 			{
 				"id": 23,
-				"title": "Lesson 12: Pre-Lecture Quiz",
+				"title": "Lesson 12: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1281,7 +1281,7 @@
 			},
 			{
 				"id": 24,
-				"title": "Lesson 12: Post-Lecture Quiz",
+				"title": "Lesson 12: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
