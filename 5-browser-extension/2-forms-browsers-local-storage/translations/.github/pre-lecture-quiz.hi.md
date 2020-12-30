@@ -1,20 +1,20 @@
-*A warm-up quiz about the browser*
+_ब्राउज़र के बारे में एक वार्म-अप क्विज़_
 
-Complete this quiz in class
+इस क्विज को कक्षा में पूरा करें
 
-1. APIs stand for
+1. APIs अर्थ है
 
 - [ ] Application Programming Interfaces
 - [ ] A Programming Inference
 - [ ] Anti Proven Intentions
 
-2. Use an API to interact with
+2. API का इस्तेमाल करे \_\_\_\_\_\_\_\_\_\_\_\_ से इंटरैक्ट करने के लिए
 
-- [ ] Another web-connected asset
-- [ ] A database
-- [ ] Either of the above
+- [ ] एक और वेब से जुड़ी एसेट
+- [ ] एक डेटाबेस
+- [ ] ऊपर में से कोई
 
-3. Anyone can create an API 
+3. कोई भी व्यक्ति एपीआई बना सकता है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत

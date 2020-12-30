@@ -1,11 +1,11 @@
-# Adopt an API
+# एक एपीआई अपनाएं
 
-## Instructions
+## अनुदेश
 
-APIs can be very fun to play with. Here is a [list of many free ones](https://github.com/public-apis/public-apis). Pick and API, and build a browser extension that solves a problem. It can be as small a problem of not having enough pet pictures (so, try the [dog CEO API](https://dog.ceo/dog-api/)) or something bigger - have fun!
+एपीआई के साथ खेलने के लिए बहुत मजेदार हो सकता है। यहाँ एक [कई मुफ्त लोगों की सूची](https://github.com/public-apis/public-apis) है. एक एपीआई चुनें, और एक ब्राउज़र एक्सटेंशन का निर्माण करें जो एक समस्या को हल करता है. यह पर्याप्त पालतू चित्र नहीं होने की छोटी समस्या हो सकती है (इसलिए, [डॉग सीईओ एपीआई](https://dog.ceo/dog-api/) इस्तेमाल करे या कुछ बड़ा - मज़े करे!
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary                                                                  | Adequate                                 | Needs Improvement       |
-| -------- | -------------------------------------------------------------------------- | ---------------------------------------- | ----------------------- |
-|          | A complete browser extension is submitted using an API from the above list | A partial browser extension is submitted | The submission has bugs |
+| मानदंड | उदाहरणात्मक                                                                          | पर्याप्त                                       | सुधार की जरूरत                |
+| ------ | ------------------------------------------------------------------------------------ | ---------------------------------------------- | ----------------------------- |
+|        | उपरोक्त सूची से एपीआई का उपयोग करके एक पूर्ण ब्राउज़र एक्सटेंशन प्रस्तुत किया गया है | एक आंशिक ब्राउज़र एक्सटेंशन सबमिट किया जाता है | सबमिशन करने में त्रुटियाँ हैं |

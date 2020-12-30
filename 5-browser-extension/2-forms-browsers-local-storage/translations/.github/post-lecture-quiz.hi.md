@@ -1,16 +1,17 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. LocalStorage is cleared every time you close the browser window
+1. हर बार जब आप ब्राउज़र विंडो बंद करते हैं तो लोकलस्टोरेज साफ हो जाता है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. The main browser window controls a browser's extension's LocalStorage
+2. मुख्य ब्राउज़र विंडो एक ब्राउज़र के एक्सटेंशन के लोकलस्टोरेज को नियंत्रित करती है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-3. REST in an API context stands for
+3. एपीआई संदर्भ में REST का अर्थ क्या है
+
 - [ ] Representational State Transfer
 - [ ] Returning State Tasks
 - [ ] Rendering State To Browser
