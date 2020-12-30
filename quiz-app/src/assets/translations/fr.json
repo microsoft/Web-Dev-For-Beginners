@@ -1,0 +1,1341 @@
+[
+	{
+		"title": "Developpement Web pour Débutants: Quizzes",
+		"complete": "Felicitations, vous avez completé le quiz!",
+		"error": "Désolé, réessayez!",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "Lesson 1: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Un programme peut être créé sans que le créateur n'écrive de code",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Low level languages are a popular choice for",
+						"answerOptions": [
+							{
+								"answerText": "Websites",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hardware",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Video game software",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Which one of these tools would most likely be in a web developer's environment?",
+						"answerOptions": [
+							{
+								"answerText": "Hardware, like a Raspberry Pi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Browser DevTools",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Operating system documentation",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Lesson 1: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "What language would you most likely use to create a website?",
+						"answerOptions": [
+							{
+								"answerText": "Machine Code",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Development environments are unique to each developer",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "What will a developer do to fix buggy code?",
+						"answerOptions": [
+							{
+								"answerText": "Syntax highlighting",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Debugging",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Code formatting",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "Lesson 2: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "How do you create a Git repo?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "What does git add do?",
+						"answerOptions": [
+							{
+								"answerText": "Commits your code",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Adds your files to a staging area for tracking",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Adds your files to GitHub",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "How do you check if git is installed on your computer?",
+						"answerOptions": [
+							{
+								"answerText": "type git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "type git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "type git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "Lesson 2: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "A Pull Request",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A feature branch",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "How would you get all the commits from a remote branch?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "How do you switch to a branch?",
+						"answerOptions": [
+							{
+								"answerText": "git switch [branch-name]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [branch-name]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [branch-name]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "Lesson 3: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "An accessible web site can be checked in which browser tool",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "You need a physical screen reader to test accessibility for visually-impaired users",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Accessibility is only important on government web sites",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "Lesson 3: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Lighthouse only checks for accessibility problems",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Color-safe palettes help people with",
+						"answerOptions": [
+							{
+								"answerText": "color-blindness",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "visual impairments",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "both the above",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Descriptive links are vital for accessible web sites",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "Lesson 4: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Booleans are a data type you can use to test the length of a string",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "The following is an operation you can perform on a string",
+						"answerOptions": [
+							{
+								"answerText": "concatenation",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "appending",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "splicing",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== and === are interchangeable",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "Lesson 4: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Constants are the same as let and var to declare variables except",
+						"answerOptions": [
+							{
+								"answerText": "Constants must be initialized",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Constants can be altered",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Constants can be reassigned",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Numbers and ____ are JavaScript primitives that handle numeric data",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Strings can reside between both single and double quotes",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "Lesson 5: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "Lesson 5: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "Lesson 6: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "Lesson 6: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "Lesson 7: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "Lesson 7: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "Lesson 8: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "Lesson 8: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "Lesson 9: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "Lesson 9: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "Lesson 10: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "Lesson 10: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "Lesson 11: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "Lesson 11: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "Lesson 12: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "Lesson 12: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
