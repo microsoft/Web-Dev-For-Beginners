@@ -6,7 +6,7 @@
 		"quizzes": [
 			{
 				"id": 1,
-				"title": "Lesson 1: Pre-Lecture Quiz",
+				"title": "Lesson 1 - Intro to Programming Languages: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "A program can be created without the creator writing any code",
@@ -59,7 +59,7 @@
 			},
 			{
 				"id": 2,
-				"title": "Lesson 1: Post-Lecture Quiz",
+				"title": "Lesson 1 - Intro to Programming Languages: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "What language would you most likely use to create a website?",
@@ -112,7 +112,7 @@
 			},
 			{
 				"id": 3,
-				"title": "Lesson 2: Pre-Lecture Quiz",
+				"title": "Lesson 2 - Introduction to GitHub: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "How do you create a Git repo?",
@@ -169,7 +169,7 @@
 			},
 			{
 				"id": 4,
-				"title": "Lesson 2: Post-Lecture Quiz",
+				"title": "Lesson 2 - Introduction to GitHub: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:",
@@ -226,7 +226,7 @@
 			},
 			{
 				"id": 5,
-				"title": "Lesson 3: Pre-Lecture Quiz",
+				"title": "Lesson 3 - Creating Accessible Webpages: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "An accessible web site can be checked in which browser tool",
@@ -275,7 +275,7 @@
 			},
 			{
 				"id": 6,
-				"title": "Lesson 3: Post-Lecture Quiz",
+				"title": "Lesson 3 - Creating Accessible Webpages: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "Lighthouse only checks for accessibility problems",
@@ -324,7 +324,7 @@
 			},
 			{
 				"id": 7,
-				"title": "Lesson 4: Pre-Lecture Quiz",
+				"title": "Lesson 4 - JavaScript Basics - Data Types: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "Booleans are a data type you can use to test the length of a string",
@@ -373,7 +373,7 @@
 			},
 			{
 				"id": 8,
-				"title": "Lesson 4: Post-Lecture Quiz",
+				"title": "Lesson 4 - JavaScript Basics - Data Types: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "Constants are the same as let and var to declare variables except",
@@ -426,7 +426,7 @@
 			},
 			{
 				"id": 9,
-				"title": "Lesson 5: Pre-Lecture Quiz",
+				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "What's an argument?",
@@ -479,7 +479,7 @@
 			},
 			{
 				"id": 10,
-				"title": "Lesson 5: Post-Lecture Quiz",
+				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "Arguments must be provided for all parameters in a function",
@@ -532,7 +532,7 @@
 			},
 			{
 				"id": 11,
-				"title": "Lesson 6: Pre-Lecture Quiz",
+				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "The following operator == is called",
@@ -589,7 +589,7 @@
 			},
 			{
 				"id": 12,
-				"title": "Lesson 6: Post-Lecture Quiz",
+				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "What would the following code return: '1' == 1",
@@ -646,7 +646,7 @@
 			},
 			{
 				"id": 13,
-				"title": "Lesson 7: Pre-Lecture Quiz",
+				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "To refer to a specific item in an array, you would use a",
@@ -703,7 +703,7 @@
 			},
 			{
 				"id": 14,
-				"title": "Lesson 7: Post-Lecture Quiz",
+				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "What part of a for-loop would you need to modify to increment its iteration by 5?",
@@ -756,7 +756,7 @@
 			},
 			{
 				"id": 15,
-				"title": "Lesson 8: Pre-Lecture Quiz",
+				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "HTML stands for 'HyperText Mockup Language'",
@@ -805,7 +805,7 @@
 			},
 			{
 				"id": 16,
-				"title": "Lesson 8: Post-Lecture Quiz",
+				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "Spans and Divs are interchangeable",
@@ -858,7 +858,7 @@
 			},
 			{
 				"id": 17,
-				"title": "Lesson 9: Pre-Lecture Quiz",
+				"title": "Lesson 9  - Terrarium Project - Introduction to CSS: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "HTML elements must have either a class or an id in order to be styled",
@@ -903,7 +903,7 @@
 			},
 			{
 				"id": 18,
-				"title": "Lesson 9: Post-Lecture Quiz",
+				"title": "Lesson 9 - Terrarium Project - Introduction to CSS: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "You can write CSS directly in the head section of your HTML file",
@@ -956,7 +956,7 @@
 			},
 			{
 				"id": 19,
-				"title": "Lesson 10: Pre-Lecture Quiz",
+				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "The DOM stands for 'Document Object Management'",
@@ -1001,7 +1001,7 @@
 			},
 			{
 				"id": 20,
-				"title": "Lesson 10: Post-Lecture Quiz",
+				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "The DOM is a model to represent a document on the web",
