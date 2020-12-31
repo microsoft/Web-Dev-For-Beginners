@@ -1,18 +1,18 @@
-*A warm-up quiz about game development*
+_खेल के विकास के बारे में एक वार्म अप प्रश्नोत्तरी_
 
-Complete this quiz in class
+इस क्विज को कक्षा में पूरा करें
 
-1. The Canvas element is what you use to draw on a screen
+1. कैनवास तत्व वह है जिसे आप स्क्रीन पर खींचने के लिए उपयोग करते हैं
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. You can only draw simple geometric shapes
+2. आप केवल सरल ज्यामितीय आकृतियों को आकर्षित कर सकते हैं
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-3. The point 0,0 is in the bottom left
+3. बिंदु 0,0 नीचे बाईं ओर है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत

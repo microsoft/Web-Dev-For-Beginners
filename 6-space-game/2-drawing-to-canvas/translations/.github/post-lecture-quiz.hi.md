@@ -1,17 +1,17 @@
-*Complete this quiz after the lesson by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके पाठ के बाद इस प्रश्नोत्तरी को पूरा करें._
 
-1. You can perform drawing operations directly on the Canvas
+1. आप सीधे कैनवस पर ड्राइंग ऑपरेशन कर सकते हैं
 
-- [ ] true
-- [ ] false
+- [ ] [सही]
+- [ ] [गलत]
 
-2. You listen to the `onload` event to know when an image has loaded asynchronously
+2. आप यह जानने के लिए `onload` घटना सुनते हैं कि किसी छवि ने अतुल्यकालिक रूप से लोड किया है
 
-- [ ] true
-- [ ] false
+- [ ] [सही]
+- [ ] [गलत]
 
-3. You draw images onto a screen with an operation called
-   
+3. आप एक ऑपरेशन के साथ स्क्रीन पर चित्र बनाते हैं उसे क्या कहते है
+
 - [ ] paintImage()
 - [ ] drawImage()
 - [ ] draw()
