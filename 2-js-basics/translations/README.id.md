@@ -11,4 +11,4 @@ JavaScript adalah bahasa web. Dalam empat pelajaran ini, Anda akan mempelajari d
 
 ### Kredit
 
-Pelajaran ini ditulis dengan ♥️ ️ oleh [Jasmine Greenaway](https://twitter.com/paladique), [Christopher Harrison](https://twitter.com/geektrainer) dan [Chris Noring](https://twitter.com/chris_noring)
+Pelajaran ini ditulis dengan ♥️ ️oleh [Jasmine Greenaway](https://twitter.com/paladique), [Christopher Harrison](https://twitter.com/geektrainer) dan [Chris Noring](https://twitter.com/chris_noring)

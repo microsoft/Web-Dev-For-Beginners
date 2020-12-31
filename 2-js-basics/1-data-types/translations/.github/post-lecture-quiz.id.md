@@ -1,6 +1,6 @@
 *Complete this quiz after the lesson by checking one answer per question.*
 
-1. Konstanta sama dengan `let` dan` var` untuk mendeklarasikan variabel kecuali
+1. Konstanta sama dengan `let` dan `var` untuk mendeklarasikan variabel kecuali
 
 - [ ] Konstanta harus diinisialisasi
 - [ ] Konstanta dapat diubah
