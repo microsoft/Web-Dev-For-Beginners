@@ -125,7 +125,7 @@ if (!condition) {
 `if...else` isn't the only way to express decision logic. You can also use something called a ternary operator. The syntax for it looks like this:
 
 ```javascript
-let variable = condition ? <return this if true> : <return this if false>;
+let variable = condition ? <return this if true> : <return this if false>
 ```
 
 Below is a more tangible example:
