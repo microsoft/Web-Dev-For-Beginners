@@ -9,48 +9,48 @@
 				"title": "Lesson 1 - 프로그래밍 언어 소개: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "A program can be created without the creator writing any code",
+						"questionText": "생산자의 코드작성 없이 프로그램이 만들어질 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Low level languages are a popular choice for",
+						"questionText": "저수준 언어는 어떤 것을 만드는데 인기있는 선택지일까?",
 						"answerOptions": [
 							{
-								"answerText": "Websites",
+								"answerText": "웹사이트",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Hardware",
+								"answerText": "하드웨어",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Video game software",
+								"answerText": "비디오 게임 소프트웨어",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Which one of these tools would most likely be in a web developer's environment?",
+						"questionText": "아래의 도구들 중 웹 개발자 환경으로 가장 적합한 것은",
 						"answerOptions": [
 							{
-								"answerText": "Hardware, like a Raspberry Pi",
+								"answerText": "라즈베리 파이 같은 하드웨어",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Browser DevTools",
+								"answerText": "브라우저 개발자 도구",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Operating system documentation",
+								"answerText": "운영체제 설명서",
 								"isCorrect": "false"
 							}
 						]
@@ -62,10 +62,10 @@
 				"title": "Lesson 1 - 프로그래밍 언어 소개: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "What language would you most likely use to create a website?",
+						"questionText": "어떤 언어로 웹사이트를 만들 것인가?",
 						"answerOptions": [
 							{
-								"answerText": "Machine Code",
+								"answerText": "기계어",
 								"isCorrect": "false"
 							},
 							{
@@ -79,31 +79,31 @@
 						]
 					},
 					{
-						"questionText": "Development environments are unique to each developer",
+						"questionText": "개발 환경은 개발자 마다 고유하다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What will a developer do to fix buggy code?",
+						"questionText": "버그가 있는 코드를 고치기위해 개발자는 어떤 것을 하게되는가?",
 						"answerOptions": [
 							{
-								"answerText": "Syntax highlighting",
+								"answerText": "구문 강조 (Syntax highlighting)",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Debugging",
+								"answerText": "디버깅 (Debugging)",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Code formatting",
+								"answerText": "코드 포맷팅 (Code formatting)",
 								"isCorrect": "false"
 							}
 						]
