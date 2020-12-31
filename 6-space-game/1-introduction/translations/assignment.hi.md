@@ -1,11 +1,11 @@
-# Mock up a game
+# खेल का दिखावटी माडल
 
-## Instructions
+## अनुदेश
 
-Using the code samples in the lesson, write a representation of a game you enjoy. It will have to be a simple game, but the goal is to use either the class or the composition pattern and the pub/sub pattern to show how a game might launch. Get creative!
+पाठ में कोड नमूनों का उपयोग करते हुए, आप जिस खेल का आनंद लेते हैं उसका प्रतिनिधित्व लिखें.यह एक साधारण खेल होना होगा, लेकिन लक्ष्य यह है कि क्लासेज या कम्पोजीशन पैटर्न और pub/sub पैटर्न का उपयोग करें यह दिखाने के लिए कि कोई गेम कैसे लॉन्च हो सकता है. रचनात्मक हो!
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary                                               | Adequate                                              | Needs Improvement                                   |
-| -------- | ------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------- |
-|          | Three elements are placed on the screen and manipulated | Two elements are placed on the screen and manipulated | One element is placed on the screen and manipulated |
+| मानदंड | उदाहरणात्मक                                                 | पर्याप्त                                                   | सुधार की जरूरत                                           |
+| ------ | ----------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------- |
+|        | तीन तत्वों को स्क्रीन पर रखा जाता है और हेरफेर किया जाता है | दो तत्वों को स्क्रीन पर रखा जाता है और हेरफेर किया जाता है | एक तत्व को स्क्रीन पर रखा जाता है और हेरफेर किया जाता है |

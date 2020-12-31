@@ -1,18 +1,18 @@
-*A warm-up quiz about game development using JavaScript*
+_जावास्क्रिप्ट का उपयोग कर खेल के विकास के बारे में एक वार्म-अप प्रश्नोत्तरी_
 
-Complete this quiz in class
+इस क्विज को कक्षा में पूरा करें
 
-1. JavaScript is an unpopular language for building games
+1. जावास्क्रिप्ट खेल के निर्माण के लिए एक अलोकप्रिय भाषा है
 
-- [ ] [true]
-- [ ] [false]
+- [ ] [सही]
+- [ ] [गलत]
 
-2. Pub/Sub is a preferred pattern for managing the game's assets and flow
+2. Pub/Sub खेल की एसेट्स और प्रवाह के प्रबंधन के लिए एक पसंदीदा पैटर्न है
 
-- [ ] [true]
-- [ ] [false]
+- [ ] [सही]
+- [ ] [गलत]
 
-3. Object inheritance can be handled by either using classes or composition
+3. ऑब्जेक्ट इन्हेरिटेंस को या तो क्लासेज या कम्पोजीशन का उपयोग करके नियंत्रित किया जा सकता है
 
-- [ ] [true]
-- [ ] [false]
+- [ ] [सही]
+- [ ] [गलत]

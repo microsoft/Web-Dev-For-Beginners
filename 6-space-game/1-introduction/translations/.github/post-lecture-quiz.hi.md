@@ -1,17 +1,17 @@
-*Complete this quiz after the lesson by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके पाठ के बाद इस प्रश्नोत्तरी को पूरा करें._
 
-1. Classes rely on inheritance to ascribe to behaviors
+1. कक्षाएं व्यवहार पर निर्भर करने के लिए इन्हेरिटेंस पर भरोसा करती हैं
 
-- [ ] true
-- [ ] false
+- [ ] [सही]
+- [ ] [गलत]
 
-2. Composition is a preferred design pattern for game objects
+2. खेल वस्तुओं के लिए कम्पोजीशन एक पसंदीदा डिज़ाइन पैटर्न है
 
-- [ ] true
-- [ ] false
+- [ ] [सही]
+- [ ] [गलत]
 
-3. Pub/Sub stands for:
-   
+3. Pub/Sub का अर्थ है:
+
 - [ ] Publish/Subscribe
 - [ ] Print/Staple
 - [ ] Publish/Sanitize
