@@ -1171,53 +1171,49 @@
 				"title": "Lesson 12 - Browser Extension Project - All about Browsers: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "You can get browser extensions from",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "WalMart",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "The browser's extension store",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "The App store",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "NPM stands for",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Your browser can serve web pages both securely and insecurely",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1228,53 +1224,49 @@
 				"title": "Lesson 12 -  Browser Extension Project - All about Browsers: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "The World Wide Web was invented by",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The first browser was called",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Mozilla",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Netscape",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Browsers can store a user's browsing history",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1285,53 +1277,49 @@
 				"title": "Lesson 13 - Browser Extension Project - Call an API, use Local Storage: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "APIs stand for",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Use an API to interact with",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Another web-connected asset",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "A database",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Either of the above",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Anyone can create an API",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1342,53 +1330,45 @@
 				"title": "Lesson 13 - Browser Extension Project - Call an API, use Local Storage: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "LocalStorage is cleared every time you close the browser window",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The main browser window controls a browser's extension's LocalStorage",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "REST in an API context stands for",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1399,53 +1379,53 @@
 				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "Test the performance of your app",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Using the browser's tools",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Using a separate software package",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Manually",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The 'performance' of a web site is an analysis of",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "How fast it loads",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "How fast the code on it runs",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Both of the above",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Overall, the 'weight' of web pages over the past few years has",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "gotten lighter",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "gotten heavier",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "stayed the same",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1456,53 +1436,49 @@
 				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "To get a better view of your site's performance, clear its cache and reload in the profiler",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Browser extensions are inherently performant",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Analyze the following for performance bottlenecks",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "DOM traversals",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "JavaScript optimizations",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Asset management",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "All the above",
+								"isCorrect": "true"
 							}
 						]
 					}
