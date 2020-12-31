@@ -213,5 +213,5 @@ function stopElementDrag() {
 
 ## 課題
 
-[DOM をもう少し使いこなす](assignment.md)
+[DOM をもう少し使いこなす](assignment.ja.md)
 

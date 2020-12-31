@@ -228,4 +228,4 @@ Web やモバイル向けのサイト構築については、[Microsoft Learn](h
 
 ## 課題
 
-[HTML の練習: ブログのモックアップを構築する](assignment.md)
+[HTML の練習: ブログのモックアップを構築する](assignment.ja.md)

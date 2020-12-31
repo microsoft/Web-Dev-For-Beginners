@@ -261,4 +261,4 @@ CSS は一見簡単そうに見えますが、アプリをすべてのブラウ�
 
 ## 課題
 
-[CSS リファクタリング](assignment.md)
+[CSS リファクタリング](assignment.ja.md)
