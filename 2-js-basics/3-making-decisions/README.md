@@ -159,13 +159,8 @@ if (firstNumber > secondNumber) {
 
 Create a program that is written first with logical operators, and then rewrite it using a ternary expression. What's your preferred syntax?
 
-<<<<<<< HEAD
-## 
-Post-Lecture Quiz
-=======
 ---
 ## Post-Lecture Quiz
->>>>>>> f3df930... Fixed Post/Pre Lecture Quiz position.
 [Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12)
 
 ## Review & Self Study
