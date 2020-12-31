@@ -1057,53 +1057,57 @@
 				"title": "Lesson 11 - Typing Game: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "Event-driven programming is when a user",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "clicks on a button",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "changes a value",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "interacts with the page",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "any of the above",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "In procedural programming, functions are called",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "any time",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "in a specific order",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "left to right",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The universal method exposed in the DOM for registering event handlers is called",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "addEventListener",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "addListener",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "addEvent",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1114,53 +1118,49 @@
 				"title": "Lesson 11 - Typing Game: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "Just about anything a user does on a page raises an event",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Common events include",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "click_event",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "select_event",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "all of these",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "You can use anonymous functions to create event handlers",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					}
