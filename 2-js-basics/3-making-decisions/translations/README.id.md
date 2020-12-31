@@ -162,7 +162,7 @@ Buat program yang ditulis pertama kali dengan operator logika, lalu tulis ulang 
 
 ## Kuis Pasca-Kuliah
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Kuis pasca-kuliah](.github/post-lecture-quiz.md)
 
 ## Review & Belajar Mandiri
 
@@ -170,6 +170,6 @@ Baca lebih lanjut tentang banyak operator yang tersedia untuk pengguna [di MDN](
 
 Lihat [pencarian operator](https://joshwcomeau.com/operator-lookup/) oleh Josh Comeau yang luar biasa!
 
-## Assignment
+## Tugas
 
 [Operator](./assignment.id.md)

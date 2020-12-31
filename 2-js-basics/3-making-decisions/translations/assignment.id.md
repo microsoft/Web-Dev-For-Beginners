@@ -33,7 +33,7 @@ let semuaPelajar = [
 let pelajarYangLulus = [];
 ```
 
-## Rubric
+## Rubrik
 
 | Kriteria | Contoh                   | Memenuhi                       | Perlu Perbaikan             |
 | -------- | ------------------------ | ------------------------------ | --------------------------- |
