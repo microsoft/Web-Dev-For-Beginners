@@ -229,7 +229,7 @@
 				"title": "Lesson 3 - 접근 가능한 웹 페이지 생성하기: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "An accessible web site can be checked in which browser tool",
+						"questionText": "접근가능한 웹사이트는 어떤 툴로 점검할 수 있을까?",
 						"answerOptions": [
 							{
 								"answerText": "Lighthouse",
@@ -246,27 +246,27 @@
 						]
 					},
 					{
-						"questionText": "You need a physical screen reader to test accessibility for visually-impaired users",
+						"questionText": "시각 장앤 유저들을 위한 접근성 테스트 용으로 스크린 리더가 필요하다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Accessibility is only important on government web sites",
+						"questionText": "접근성은 정보성 웹사이트에서만 중요하다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
@@ -278,44 +278,44 @@
 				"title": "Lesson 3 - 접근 가능한 웹 페이지 생성하기: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "Lighthouse only checks for accessibility problems",
+						"questionText": "Lighthouse 는 접근성 문제만 점검한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Color-safe palettes help people with",
+						"questionText": "칼러 세이프 팔레트(Color-safe palettes)는 어떤 사람을 도울 수 있는가?",
 						"answerOptions": [
 							{
-								"answerText": "color-blindness",
+								"answerText": "색망",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "visual impairments",
+								"answerText": "시각 장애",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "both the above",
+								"answerText": "둘다",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Descriptive links are vital for accessible web sites",
+						"questionText": "설명 링크는 접근가능한 웹 사이트에 필수적인 요소이다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
