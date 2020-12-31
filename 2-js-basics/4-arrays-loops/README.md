@@ -5,7 +5,7 @@
 
 ## 
 Pre-Lecture Quiz
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
 
@@ -114,7 +114,7 @@ There are other ways of looping over arrays other than for and while loops. Ther
 
 ## 
 Post-Lecture Quiz
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14)
 
 
 ## Review & Self Study
