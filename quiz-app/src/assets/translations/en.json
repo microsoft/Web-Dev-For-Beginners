@@ -2094,56 +2094,48 @@
 			},
 			{
 				"id": 41,
-				"title": "Lesson 21 - Bank Project: Pre-Lecture Quiz",
+				"title": "Lesson 21 - Bank Project - HTML Templates and Routes in a Web App: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "You need to create multiple HTML files to display different screens in a web app",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "You can store and persist data locally in a web app",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What's the best data provider for a web app?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "A local database",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "A JavaScript object",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "A server with a JSON API",
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -2151,56 +2143,52 @@
 			},
 			{
 				"id": 42,
-				"title": "Lesson 21 - Bank Project: Post-Lecture Quiz",
+				"title": "Lesson 21 - Bank Project HTML Templates and Routes in a Web App: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "HTML templates are part of the DOM by default",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Which part of the URL is needed for routing?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "both",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What's the name of the event triggered when calling the history.pushState() function?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "pushstate",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "popstate",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "navigate",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -2208,56 +2196,44 @@
 			},
 			{
 				"id": 43,
-				"title": "Lesson 22 - Bank Project: Pre-Lecture Quiz",
+				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "HTML forms allow to send user input to a server without using JavaScript",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "<label> elements are mandatory for every form control",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "It is secure to send form data to a server over HTTP",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -2265,56 +2241,52 @@
 			},
 			{
 				"id": 44,
-				"title": "Lesson 22 - Bank Project: Post-Lecture Quiz",
+				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "Using <label> elements in forms is only for making the form pretty",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "How can you define how a form is sent to the server?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "using the action attribute",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "using the method attribute",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "both",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Which attribute can you use to set the maximum size of a text <input>?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "max",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "maxlength",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "pattern",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -2322,56 +2294,48 @@
 			},
 			{
 				"id": 45,
-				"title": "Lesson 23 - Bank Project: Pre-Lecture Quiz",
+				"title": "Lesson 23 - Bank Project - Methods of Fetching and Using Data: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "You can fetch data from a server synchronously in a browser",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What's the most common format used to exchange data on the web?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "HTML",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "XML",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "JSON",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "There's no way to prevent a web page from accessing a public server API",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -2379,56 +2343,52 @@
 			},
 			{
 				"id": 46,
-				"title": "Lesson 23 - Bank Project: Pre-Lecture Quiz",
+				"title": "Lesson 23 - Bank Project Methods of Fetching and Using Data: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "In a Single-page application, the HTML is loaded once and never updated",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Why is it important to not trust data coming from user input?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "because using special characters can make the UI ugly.",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "because it can contain non-sense or offensive words.",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "because it can be used as vector of attack to execute malicious scripts.",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What's the API name for sending asynchronous HTTP requests to a web server?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "request()",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "fetch()",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "ajax()",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -2436,56 +2396,56 @@
 			},
 			{
 				"id": 47,
-				"title": "Lesson 24 - Bank Project: Pre-Lecture Quiz",
+				"title": "Lesson 24 - Bank Project - Concepts of State Management: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "What is an immutable object?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "An object defined as a constant",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "An object that cannot be modified after it's created",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "A copy of an existing object",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What benefit(s) do you get from using state management?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "You can keep track of every place the state is updated",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "It's easier to debug the code",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "All of the above",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What's the best way to persist critical user data across different sessions?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Using files",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Using the browser's localStorage API",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "In a database behind a server API",
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -2493,56 +2453,52 @@
 			},
 			{
 				"id": 48,
-				"title": "Lesson 24 - Bank Project: Post-Lecture Quiz",
+				"title": "Lesson 24 - Bank Project - Concepts of State Management: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "What do you think state management means?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Enforcement of law & order",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Logging the user interface state over time",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Keeping your app data flows clean and synchronizing the user interface with data",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "How can you keep track of the user session state?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "HTTP cookies",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Local or session storage",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "All of the above",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Mutating an object is always the best way to update it",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					}
