@@ -6,7 +6,7 @@
 		"quizzes": [
 			{
 				"id": 1,
-				"title": "Lesson 1 - Intro to Programming Languages: Pre-Lecture Quiz",
+				"title": "Lesson 1 - 프로그래밍 언어 소개: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "A program can be created without the creator writing any code",
@@ -59,7 +59,7 @@
 			},
 			{
 				"id": 2,
-				"title": "Lesson 1 - Intro to Programming Languages: Post-Lecture Quiz",
+				"title": "Lesson 1 - 프로그래밍 언어 소개: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "What language would you most likely use to create a website?",
@@ -112,7 +112,7 @@
 			},
 			{
 				"id": 3,
-				"title": "Lesson 2 - Introduction to GitHub: Pre-Lecture Quiz",
+				"title": "Lesson 2 - GitHub 소개: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "How do you create a Git repo?",
@@ -169,7 +169,7 @@
 			},
 			{
 				"id": 4,
-				"title": "Lesson 2 - Introduction to GitHub: Post-Lecture Quiz",
+				"title": "Lesson 2 - GitHub 소개: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:",
@@ -226,7 +226,7 @@
 			},
 			{
 				"id": 5,
-				"title": "Lesson 3 - Creating Accessible Webpages: Pre-Lecture Quiz",
+				"title": "Lesson 3 - 접근 가능한 웹 페이지 생성하기: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "An accessible web site can be checked in which browser tool",
@@ -275,7 +275,7 @@
 			},
 			{
 				"id": 6,
-				"title": "Lesson 3 - Creating Accessible Webpages: Post-Lecture Quiz",
+				"title": "Lesson 3 - 접근 가능한 웹 페이지 생성하기: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Lighthouse only checks for accessibility problems",
@@ -324,7 +324,7 @@
 			},
 			{
 				"id": 7,
-				"title": "Lesson 4 - JavaScript Basics - Data Types: Pre-Lecture Quiz",
+				"title": "Lesson 4 - JavaScript 기초 - 데이터 타입: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Booleans are a data type you can use to test the length of a string",
@@ -373,7 +373,7 @@
 			},
 			{
 				"id": 8,
-				"title": "Lesson 4 - JavaScript Basics - Data Types: Post-Lecture Quiz",
+				"title": "Lesson 4 - JavaScript 기초 - 데이터 타입: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Constants are the same as let and var to declare variables except",
@@ -426,7 +426,7 @@
 			},
 			{
 				"id": 9,
-				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Pre-Lecture Quiz",
+				"title": "Lesson 5 - JavaScript 기초 - 메소드와 함수: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "What's an argument?",
@@ -479,7 +479,7 @@
 			},
 			{
 				"id": 10,
-				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Post-Lecture Quiz",
+				"title": "Lesson 5 - JavaScript 기초 - 메소드와 함수: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Arguments must be provided for all parameters in a function",
@@ -532,7 +532,7 @@
 			},
 			{
 				"id": 11,
-				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Pre-Lecture Quiz",
+				"title": "Lesson 6 - JavaScript 기초 - 결정하기: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "The following operator == is called",
@@ -589,7 +589,7 @@
 			},
 			{
 				"id": 12,
-				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Post-Lecture Quiz",
+				"title": "Lesson 6 - JavaScript 기초 - 결정하기: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "What would the following code return: '1' == 1",
@@ -646,7 +646,7 @@
 			},
 			{
 				"id": 13,
-				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Pre-Lecture Quiz",
+				"title": "Lesson 7 - JavaScript 기초 - 배열과 반복: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "To refer to a specific item in an array, you would use a",
@@ -703,7 +703,7 @@
 			},
 			{
 				"id": 14,
-				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Post-Lecture Quiz",
+				"title": "Lesson 7 - JavaScript 기초 - 배열과 반복: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "What part of a for-loop would you need to modify to increment its iteration by 5?",
@@ -756,7 +756,7 @@
 			},
 			{
 				"id": 15,
-				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Pre-Lecture Quiz",
+				"title": "Lesson 8 - Terrarium 프로젝트 - HTML 소개: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "HTML stands for 'HyperText Mockup Language'",
@@ -805,7 +805,7 @@
 			},
 			{
 				"id": 16,
-				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Post-Lecture Quiz",
+				"title": "Lesson 8 - Terrarium 프로젝트 - HTML 소개: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Spans and Divs are interchangeable",
@@ -858,7 +858,7 @@
 			},
 			{
 				"id": 17,
-				"title": "Lesson 9  - Terrarium Project - Introduction to CSS: Pre-Lecture Quiz",
+				"title": "Lesson 9  - Terrarium 프로젝트 - CSS 소개: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "HTML elements must have either a class or an id in order to be styled",
@@ -903,7 +903,7 @@
 			},
 			{
 				"id": 18,
-				"title": "Lesson 9 - Terrarium Project - Introduction to CSS: Post-Lecture Quiz",
+				"title": "Lesson 9 - Terrarium 프로젝트 - CSS 소개: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "You can write CSS directly in the head section of your HTML file",
@@ -956,7 +956,7 @@
 			},
 			{
 				"id": 19,
-				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Pre-Lecture Quiz",
+				"title": "Lesson 10 - Terrarium 프로젝트 - DOM 조작과 클로저: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "The DOM stands for 'Document Object Management'",
@@ -1001,7 +1001,7 @@
 			},
 			{
 				"id": 20,
-				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Post-Lecture Quiz",
+				"title": "Lesson 10 - Terrarium 프로젝트 - DOM 조작과 클로저: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "The DOM is a model to represent a document on the web",
@@ -1054,7 +1054,7 @@
 			},
 			{
 				"id": 21,
-				"title": "Lesson 11 - Typing Game: Pre-Lecture Quiz",
+				"title": "Lesson 11 - 타이핑 게임: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Event-driven programming is when a user",
@@ -1115,7 +1115,7 @@
 			},
 			{
 				"id": 22,
-				"title": "Lesson 11 - Typing Game: Post-Lecture Quiz",
+				"title": "Lesson 11 - 타이핑 게임: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Just about anything a user does on a page raises an event",
@@ -1168,7 +1168,7 @@
 			},
 			{
 				"id": 23,
-				"title": "Lesson 12 - Browser Extension Project - All about Browsers: Pre-Lecture Quiz",
+				"title": "Lesson 12 - 브라우저 확장 프로젝트 - 브라우저에 대한 모든 것: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "You can get browser extensions from",
@@ -1221,7 +1221,7 @@
 			},
 			{
 				"id": 24,
-				"title": "Lesson 12 -  Browser Extension Project - All about Browsers: Post-Lecture Quiz",
+				"title": "Lesson 12 - 브라우저 확장 프로젝트 - 브라우저에 대한 모든 것: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "The World Wide Web was invented by",
@@ -1274,7 +1274,7 @@
 			},
 			{
 				"id": 25,
-				"title": "Lesson 13 - Browser Extension Project - Call an API, use Local Storage: Pre-Lecture Quiz",
+				"title": "Lesson 13 - 브라우저 확장 프로젝트 - 로컬 저장소를 사용한 API 호출: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "APIs stand for",
@@ -1327,7 +1327,7 @@
 			},
 			{
 				"id": 26,
-				"title": "Lesson 13 - Browser Extension Project - Call an API, use Local Storage: Post-Lecture Quiz",
+				"title": "Lesson 13 - 브라우저 확장 프로젝트 - 로컬 저장소를 사용한 API 호출: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "LocalStorage is cleared every time you close the browser window",
@@ -1376,7 +1376,7 @@
 			},
 			{
 				"id": 27,
-				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Pre-Lecture Quiz",
+				"title": "Lesson 14 - 브라우저 확장 프로젝트 - 백그라운드 작업과 성능 학습: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Test the performance of your app",
@@ -1433,7 +1433,7 @@
 			},
 			{
 				"id": 28,
-				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Post-Lecture Quiz",
+				"title": "Lesson 14 - 브라우저 확장 프로젝트 - 백그라운드 작업과 성능 학습: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "To get a better view of your site's performance, clear its cache and reload in the profiler",
@@ -1486,7 +1486,7 @@
 			},
 			{
 				"id": 29,
-				"title": "Lesson 15 - Space Game: Pre-Lecture Quiz",
+				"title": "Lesson 15 - 스페이스 게임: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1543,7 +1543,7 @@
 			},
 			{
 				"id": 30,
-				"title": "Lesson 15 - Space Game: Post-Lecture Quiz",
+				"title": "Lesson 15 - 스페이스 게임: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1600,7 +1600,7 @@
 			},
 			{
 				"id": 31,
-				"title": "Lesson 16 - Space Game: Pre-Lecture Quiz",
+				"title": "Lesson 16 - 스페이스 게임: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1657,7 +1657,7 @@
 			},
 			{
 				"id": 32,
-				"title": "Lesson 16 - Space Game: Post-Lecture Quiz",
+				"title": "Lesson 16 - 스페이스 게임: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1714,7 +1714,7 @@
 			},
 			{
 				"id": 33,
-				"title": "Lesson 17 - Space Game: Pre-Lecture Quiz",
+				"title": "Lesson 17 - 스페이스 게임: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1771,7 +1771,7 @@
 			},
 			{
 				"id": 34,
-				"title": "Lesson 17 - Space Game: Post-Lecture Quiz",
+				"title": "Lesson 17 - 스페이스 게임: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1828,7 +1828,7 @@
 			},
 			{
 				"id": 35,
-				"title": "Lesson 18 - Space Game: Pre-Lecture Quiz",
+				"title": "Lesson 18 - 스페이스 게임: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1885,7 +1885,7 @@
 			},
 			{
 				"id": 36,
-				"title": "Lesson 18 - Space Game: Post-Lecture Quiz",
+				"title": "Lesson 18 - 스페이스 게임: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1942,7 +1942,7 @@
 			},
 			{
 				"id": 37,
-				"title": "Lesson 19 - Space Game: Pre-Lecture Quiz",
+				"title": "Lesson 19 - 스페이스 게임: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1999,7 +1999,7 @@
 			},
 			{
 				"id": 38,
-				"title": "Lesson 19 - Space Game: Post-Lecture Quiz",
+				"title": "Lesson 19 - 스페이스 게임: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -2056,7 +2056,7 @@
 			},
 			{
 				"id": 39,
-				"title": "Lesson 20 - Space Game: Pre-Lecture Quiz",
+				"title": "Lesson 20 - 스페이스 게임: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -2113,7 +2113,7 @@
 			},
 			{
 				"id": 40,
-				"title": "Lesson 20 - Space Game: Post-Lecture Quiz",
+				"title": "Lesson 20 - 스페이스 게임: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -2170,7 +2170,7 @@
 			},
 			{
 				"id": 41,
-				"title": "Lesson 21 - Bank Project: Pre-Lecture Quiz",
+				"title": "Lesson 21 - 은행 프로젝트: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -2227,7 +2227,7 @@
 			},
 			{
 				"id": 42,
-				"title": "Lesson 21 - Bank Project: Post-Lecture Quiz",
+				"title": "Lesson 21 - 은행 프로젝트: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -2284,7 +2284,7 @@
 			},
 			{
 				"id": 43,
-				"title": "Lesson 22 - Bank Project: Pre-Lecture Quiz",
+				"title": "Lesson 22 - 은행 프로젝트: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -2341,7 +2341,7 @@
 			},
 			{
 				"id": 44,
-				"title": "Lesson 22 - Bank Project: Post-Lecture Quiz",
+				"title": "Lesson 22 - 은행 프로젝트: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -2398,7 +2398,7 @@
 			},
 			{
 				"id": 45,
-				"title": "Lesson 23 - Bank Project: Pre-Lecture Quiz",
+				"title": "Lesson 23 - 은행 프로젝트: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -2455,7 +2455,7 @@
 			},
 			{
 				"id": 46,
-				"title": "Lesson 23 - Bank Project: Pre-Lecture Quiz",
+				"title": "Lesson 23 - 은행 프로젝트: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -2512,7 +2512,7 @@
 			},
 			{
 				"id": 47,
-				"title": "Lesson 24 - Bank Project: Pre-Lecture Quiz",
+				"title": "Lesson 24 - 은행 프로젝트: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
@@ -2569,7 +2569,7 @@
 			},
 			{
 				"id": 48,
-				"title": "Lesson 24 - Bank Project: Post-Lecture Quiz",
+				"title": "Lesson 24 - 은행 프로젝트: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "",
