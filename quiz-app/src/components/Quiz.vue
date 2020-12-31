@@ -1,7 +1,10 @@
 <template>
   <div class="card">
     <div v-for="q in questions" :key="q.id">
+      
       <div v-if="route == q.id">
+        <h2>{{q.title}}</h2>
+        <hr/>
         <h3 v-if="complete" class="message">{{ $t("complete") }}</h3>
         <div v-else>
           <h3 v-if="error" class="error">{{ $t("error") }}</h3>
@@ -28,14 +31,19 @@
 import messages from "@/assets/translations";
 
 export default {
+  name: "Quiz",
   data() {
     return {
       currentQuestion: 0,
       complete: false,
       error: false,
       route: "",
-      questions: this.$t("quizzes"),
     };
+  },
+  computed: {
+    questions() {
+      return this.$t("quizzes");
+    }
   },
 
   i18n: { messages },
@@ -56,8 +64,6 @@ export default {
     },
   },
   created() {
-    //console.log(this.$root.$i18n.locale,this.$i18n.locale);
-    //this.questions = this.$i18n.messages + "." + this.$i18n.locale;
     this.route = this.$route.params.id;
   },
 };
