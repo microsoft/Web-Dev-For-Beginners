@@ -6,7 +6,7 @@
 		"quizzes": [
 			{
 				"id": 1,
-				"title": "Lesson 1: 강의 전 퀴즈",
+				"title": "Lesson 1 - Intro to Programming Languages: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "A program can be created without the creator writing any code",
@@ -59,7 +59,7 @@
 			},
 			{
 				"id": 2,
-				"title": "Lesson 1: 강의 후 퀴즈",
+				"title": "Lesson 1 - Intro to Programming Languages: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "What language would you most likely use to create a website?",
@@ -112,7 +112,7 @@
 			},
 			{
 				"id": 3,
-				"title": "Lesson 2: 강의 전 퀴즈",
+				"title": "Lesson 2 - Introduction to GitHub: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "How do you create a Git repo?",
@@ -169,7 +169,7 @@
 			},
 			{
 				"id": 4,
-				"title": "Lesson 2: 강의 후 퀴즈",
+				"title": "Lesson 2 - Introduction to GitHub: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:",
@@ -226,7 +226,7 @@
 			},
 			{
 				"id": 5,
-				"title": "Lesson 3: 강의 전 퀴즈",
+				"title": "Lesson 3 - Creating Accessible Webpages: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "An accessible web site can be checked in which browser tool",
@@ -275,7 +275,7 @@
 			},
 			{
 				"id": 6,
-				"title": "Lesson 3: 강의 후 퀴즈",
+				"title": "Lesson 3 - Creating Accessible Webpages: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "Lighthouse only checks for accessibility problems",
@@ -324,7 +324,7 @@
 			},
 			{
 				"id": 7,
-				"title": "Lesson 4: 강의 전 퀴즈",
+				"title": "Lesson 4 - JavaScript Basics - Data Types: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "Booleans are a data type you can use to test the length of a string",
@@ -373,7 +373,7 @@
 			},
 			{
 				"id": 8,
-				"title": "Lesson 4: 강의 후 퀴즈",
+				"title": "Lesson 4 - JavaScript Basics - Data Types: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "Constants are the same as let and var to declare variables except",
@@ -426,56 +426,52 @@
 			},
 			{
 				"id": 9,
-				"title": "Lesson 5: 강의 전 퀴즈",
+				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "What's an argument?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "It's something you declare in the function definition",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "It's something you pass into a function at invocation time",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "It's something you have with people you know",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "A function must return something",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "You can name a function anything",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true, but it should be a descriptive name",
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -483,56 +479,52 @@
 			},
 			{
 				"id": 10,
-				"title": "Lesson 5: 강의 후 퀴즈",
+				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "Arguments must be provided for all parameters in a function",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What does a default value do?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Sets a correct value",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Gives a starter value for a parameter so your code still behaves if you omit an argument for it",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Has no utility",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "A fat arrow function allows you to",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Create heavy functions",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Omit the function keyword",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Create an anonymous function",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -540,56 +532,56 @@
 			},
 			{
 				"id": 11,
-				"title": "Lesson 6: 강의 전 퀴즈",
+				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "The following operator == is called",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Equality",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Strict equality",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Assignment",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "A comparison in JavaScript returns what type?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "boolean",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "null",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "string",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The ! symbol in JavaScript means:",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Logical Not",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Important",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Equals",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -597,56 +589,56 @@
 			},
 			{
 				"id": 12,
-				"title": "Lesson 6: 강의 후 퀴즈",
+				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "What would the following code return: '1' == 1",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "null",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What would the following code return: '1' === 1",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "null",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Choose the correct operator to express 'or' logic",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "a | b",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "a || b",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "a or b",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -654,56 +646,56 @@
 			},
 			{
 				"id": 13,
-				"title": "Lesson 7: 강의 전 퀴즈",
+				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "To refer to a specific item in an array, you would use a",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "square bracket []",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "index",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "curly braces {}",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "How do you get the number of items in an array?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "The 'len(array)' method",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "The property size on the array",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "The length property on the array",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "In JavaScript, indexes start at",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "0",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "1",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "2",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -711,56 +703,52 @@
 			},
 			{
 				"id": 14,
-				"title": "Lesson 7: 강의 후 퀴즈",
+				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "What part of a for-loop would you need to modify to increment its iteration by 5?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "condition",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "counter",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "iteration-expression",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "What's the difference between a while and a for-loop",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "A for-loop has a counter and iteration-expression, where while only has a condition",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "A while has a counter and iteration-expression where for-loop only has a condition",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "They are the same, just an alias for one another",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Given the code for (let i=1; i < 5; i++), how many iterations will it perform?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "5",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "4",
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -768,56 +756,48 @@
 			},
 			{
 				"id": 15,
-				"title": "Lesson 8: 강의 전 퀴즈",
+				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "HTML stands for 'HyperText Mockup Language'",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "All HTML tags need both opening and closing tags",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Using semantic markup is most important for",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "code readability",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "screen readers",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "maintenance",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -825,56 +805,52 @@
 			},
 			{
 				"id": 16,
-				"title": "Lesson 8: 강의 후 퀴즈",
+				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "Spans and Divs are interchangeable",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The head of an HTML doc can contain:",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "the title tag",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "metadata",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "all the above",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "You can't use deprecated tags in your markup",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false, but they have been deprecated for good reason",
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -882,56 +858,44 @@
 			},
 			{
 				"id": 17,
-				"title": "Lesson 9: 강의 전 퀴즈",
+				"title": "Lesson 9  - Terrarium Project - Introduction to CSS: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "HTML elements must have either a class or an id in order to be styled",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "CSS stands for 'Complete Style Sheets'",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "CSS can be used to create animations",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -939,56 +903,52 @@
 			},
 			{
 				"id": 18,
-				"title": "Lesson 9: 강의 후 퀴즈",
+				"title": "Lesson 9 - Terrarium Project - Introduction to CSS: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "You can write CSS directly in the head section of your HTML file",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "It's always necessary to include CSS in your app",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false, but if you want it to look good you probably need CSS",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Which browser tool can be used to inspect CSS?",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Elements",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Styles",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "Network",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -996,56 +956,44 @@
 			},
 			{
 				"id": 19,
-				"title": "Lesson 10: 강의 전 퀴즈",
+				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "The DOM stands for 'Document Object Management'",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The DOM can be thought of as a tree",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Using the Web API, you can manipulate the DOM",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1053,56 +1001,52 @@
 			},
 			{
 				"id": 20,
-				"title": "Lesson 10: 강의 후 퀴즈",
+				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "The DOM is a model to represent a document on the web",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Use JavaScript closures to perform the following:",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "write functions within functions",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "enclose the DOM",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "close script blocks",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Fill in the blank: Closures are useful when one or more functions need to access an outer function's...",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "arrays",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "scope",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "functions",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1110,56 +1054,60 @@
 			},
 			{
 				"id": 21,
-				"title": "Lesson 11: 강의 전 퀴즈",
+				"title": "Lesson 11 - Typing Game: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "Event-driven programming is when a user",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "clicks on a button",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "changes a value",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "interacts with the page",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "any of the above",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "In procedural programming, functions are called",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "any time",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "in a specific order",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "left to right",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "The universal method exposed in the DOM for registering event handlers is called",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "addEventListener",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "addListener",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "addEvent",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1167,56 +1115,52 @@
 			},
 			{
 				"id": 22,
-				"title": "Lesson 11: 강의 후 퀴즈",
+				"title": "Lesson 11 - Typing Game: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "",
+						"questionText": "Just about anything a user does on a page raises an event",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "Common events include",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "click_event",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "select_event",
+								"isCorrect": "false"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "all of these",
+								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "",
+						"questionText": "You can use anonymous functions to create event handlers",
 						"answerOptions": [
 							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "true",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "",
-								"isCorrect": ""
-							},
-							{
-								"answerText": "",
-								"isCorrect": ""
+								"answerText": "false",
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1224,7 +1168,325 @@
 			},
 			{
 				"id": 23,
-				"title": "Lesson 12: 강의 전 퀴즈",
+				"title": "Lesson 12 - Browser Extension Project - All about Browsers: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "You can get browser extensions from",
+						"answerOptions": [
+							{
+								"answerText": "WalMart",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "The browser's extension store",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "The App store",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM stands for",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Your browser can serve web pages both securely and insecurely",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "Lesson 12 -  Browser Extension Project - All about Browsers: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "The World Wide Web was invented by",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "The first browser was called",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Browsers can store a user's browsing history",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "Lesson 13 - Browser Extension Project - Call an API, use Local Storage: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "APIs stand for",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Use an API to interact with",
+						"answerOptions": [
+							{
+								"answerText": "Another web-connected asset",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "A database",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Either of the above",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anyone can create an API",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "Lesson 13 - Browser Extension Project - Call an API, use Local Storage: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "LocalStorage is cleared every time you close the browser window",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "The main browser window controls a browser's extension's LocalStorage",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "REST in an API context stands for",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Test the performance of your app",
+						"answerOptions": [
+							{
+								"answerText": "Using the browser's tools",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Using a separate software package",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Manually",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "The 'performance' of a web site is an analysis of",
+						"answerOptions": [
+							{
+								"answerText": "How fast it loads",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "How fast the code on it runs",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Both of the above",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Overall, the 'weight' of web pages over the past few years has",
+						"answerOptions": [
+							{
+								"answerText": "gotten lighter",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "gotten heavier",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "stayed the same",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "To get a better view of your site's performance, clear its cache and reload in the profiler",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Browser extensions are inherently performant",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Analyze the following for performance bottlenecks",
+						"answerOptions": [
+							{
+								"answerText": "DOM traversals",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript optimizations",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Asset management",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "All the above",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "Lesson 15 - Space Game: Pre-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "",
@@ -1280,8 +1542,1034 @@
 				]
 			},
 			{
-				"id": 24,
-				"title": "Lesson 12: 강의 후 퀴즈",
+				"id": 30,
+				"title": "Lesson 15 - Space Game: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "Lesson 16 - Space Game: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "Lesson 16 - Space Game: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "Lesson 17 - Space Game: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "Lesson 17 - Space Game: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "Lesson 18 - Space Game: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "Lesson 18 - Space Game: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "Lesson 19 - Space Game: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "Lesson 19 - Space Game: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "Lesson 20 - Space Game: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "Lesson 20 - Space Game: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "Lesson 21 - Bank Project: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "Lesson 21 - Bank Project: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "Lesson 22 - Bank Project: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "Lesson 22 - Bank Project: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "Lesson 23 - Bank Project: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "Lesson 23 - Bank Project: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "Lesson 24 - Bank Project: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					},
+					{
+						"questionText": "",
+						"answerOptions": [
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							},
+							{
+								"answerText": "",
+								"isCorrect": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "Lesson 24 - Bank Project: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "",
