@@ -115,7 +115,7 @@
 				"title": "Lesson 2 - GitHub 소개: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "How do you create a Git repo?",
+						"questionText": "어떤 명령어로 Git 레포지토리를 만드는가?",
 						"answerOptions": [
 							{
 								"answerText": "git create",
@@ -132,35 +132,35 @@
 						]
 					},
 					{
-						"questionText": "What does git add do?",
+						"questionText": "`git add`는 어떤 동작을 하는 것인가?",
 						"answerOptions": [
 							{
-								"answerText": "Commits your code",
+								"answerText": "코드 커밋",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Adds your files to a staging area for tracking",
+								"answerText": "추적을 위해 staging 영역으로 파일을 추가",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Adds your files to GitHub",
+								"answerText": "Github에 파일을 추가",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How do you check if git is installed on your computer?",
+						"questionText": "git이 본인 컴퓨터에 설치되어 있는지 어떻게 확인하는가?",
 						"answerOptions": [
 							{
-								"answerText": "type git --version",
+								"answerText": "`git --version` 입력",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "type git --installed",
+								"answerText": "`git --installed` 입력",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "type git --init",
+								"answerText": "`git --init` 입력",
 								"isCorrect": "false"
 							}
 						]
@@ -172,24 +172,24 @@
 				"title": "Lesson 2 - GitHub 소개: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:",
+						"questionText": "브랜치로부터 변경점을 토론하고 비교할수 있는 공간은? (리뷰, 코멘트, 통합 테스트 등을 할수 있음)",
 						"answerOptions": [
 							{
 								"answerText": "GitHub",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A Pull Request",
+								"answerText": "A Pull Request (PR, 풀리퀘스트)",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A feature branch",
+								"answerText": "A feature branch (기능 브랜치)",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How would you get all the commits from a remote branch?",
+						"questionText": "원격 브랜치로부터 모든 커밋을 가져올 수 있는 커맨드는?",
 						"answerOptions": [
 							{
 								"answerText": "git fetch",
@@ -206,18 +206,18 @@
 						]
 					},
 					{
-						"questionText": "How do you switch to a branch?",
+						"questionText": "브랜치를 전환하는 커맨드는?",
 						"answerOptions": [
 							{
-								"answerText": "git switch [branch-name]",
+								"answerText": "git switch [브랜치-이름]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [branch-name]",
+								"answerText": "git checkout [브랜치-이름]",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "git load [branch-name]",
+								"answerText": "git load [브랜치-이름]",
 								"isCorrect": "false"
 							}
 						]
