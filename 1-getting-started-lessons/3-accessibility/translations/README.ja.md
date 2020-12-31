@@ -222,8 +222,8 @@ CSS は、ページ上のあらゆる要素の外観を完全に制御するこ�
 
 多くの政府には、アクセシビリティの要件に関する法律があります。あなたの国のアクセシビリティに関する法律をお読みください。何が適用され、何が適用されないのか？例としては、[この政府の Web サイト](https://accessibility.blog.gov.uk/)があります。
 
-## 割り当て
+## 課題
  
-[Analyze a non-accessible web site](assignment.md)
+[Analyze a non-accessible web site](assignment.ja.md)
 
 Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument
