@@ -5,7 +5,7 @@
 - [ ] true
 - [ ] false
 
-2. Composition is a preferred design pattern for game objects
+2. Composition is the preferred design pattern for game objects
 
 - [ ] true
 - [ ] false
