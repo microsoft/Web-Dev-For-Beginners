@@ -3,8 +3,7 @@
 ![JavaScript Basics - Making decisions](images/webdev101-js-decisions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## 
-Pre-Lecture Quiz
+## Pre-Lecture Quiz
 [Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11)
 
 Making decisions and controlling the order in which your code runs makes your code reusable and robust. This section covers the syntax for controlling data flow in JavaScript and its significance when used with Boolean data types
@@ -160,8 +159,13 @@ if (firstNumber > secondNumber) {
 
 Create a program that is written first with logical operators, and then rewrite it using a ternary expression. What's your preferred syntax?
 
+<<<<<<< HEAD
 ## 
 Post-Lecture Quiz
+=======
+---
+## Post-Lecture Quiz
+>>>>>>> f3df930... Fixed Post/Pre Lecture Quiz position.
 [Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12)
 
 ## Review & Self Study
