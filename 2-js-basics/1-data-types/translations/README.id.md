@@ -1,4 +1,4 @@
-# JavaScript Basics: Data Types
+# Dasar-dasar JavaScript: Tipe Data
 
 ![Dasar-dasar JavaScript - Tipe data](../images/webdev101-js-datatypes.png)
 
