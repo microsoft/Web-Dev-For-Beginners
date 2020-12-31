@@ -121,4 +121,4 @@ JavaScript の配列には多くのメソッドがあり、データ操作に非
 
 ## 課題
 
-[配列のループ](assignment.md)
+[配列のループ](assignment.ja.md)

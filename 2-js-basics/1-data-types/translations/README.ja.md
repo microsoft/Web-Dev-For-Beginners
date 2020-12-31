@@ -193,4 +193,4 @@ JavaScript は、たまにデータ型を扱う際の意外な方法で悪名高
 
 ## 課題
 
-[データ型の練習](assignment.md)
+[データ型の練習](assignment.ja.md)

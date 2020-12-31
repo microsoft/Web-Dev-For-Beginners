@@ -189,4 +189,4 @@ setTimeout(() => {
 
 ## 課題
 
-[関数で楽しむ](assignment.md)
+[関数で楽しむ](assignment.ja.md)

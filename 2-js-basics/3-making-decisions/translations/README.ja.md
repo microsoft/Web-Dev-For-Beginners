@@ -172,4 +172,4 @@ Josh Comeau の素晴らしい [operator lookup](https://joshwcomeau.com/operato
 
 ## 課題
 
-[演算子](assignment.md)
+[演算子](assignment.ja.md)
