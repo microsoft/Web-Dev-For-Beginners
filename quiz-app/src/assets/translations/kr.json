@@ -1674,7 +1674,7 @@
 			},
 			{
 				"id": 33,
-				"title": "Lesson 17 - Space Game - Adding Motion: Pre-Lecture Quiz",
+				"title": "Lesson 17 - 스페이스 게임 - 모션 추가하기: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Any object on the screen can receive keyboard events",
@@ -1723,7 +1723,7 @@
 			},
 			{
 				"id": 34,
-				"title": "Lesson 17 - Space Game - Adding Motion: Post-Lecture Quiz",
+				"title": "Lesson 17 - 스페이스 게임 - 모션 추가하기: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "You always need to redraw the screen",
@@ -1776,7 +1776,7 @@
 			},
 			{
 				"id": 35,
-				"title": "Lesson 18 - Space Game - Adding A Laser and Detecting Collisions: Pre-Lecture Quiz",
+				"title": "Lesson 18 - 스페이스 게임 - 레이저 추가하고 충돌 감지하기: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Collision detection is how we detect if two things have collided",
@@ -1829,7 +1829,7 @@
 			},
 			{
 				"id": 36,
-				"title": "Lesson 18 - Space Game - Adding A Laser and Detecting Collisions: Post-Lecture Quiz",
+				"title": "Lesson 18 - 스페이스 게임 - 레이저 추가하고 충돌 감지하기: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "In collision detection you compare two",
@@ -1882,7 +1882,7 @@
 			},
 			{
 				"id": 37,
-				"title": "Lesson 19 - Space Game - Scoring and Lives: Pre-Lecture Quiz",
+				"title": "Lesson 19 - 스페이스 게임 - 점수내고 살기: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "How do you draw text on a screen using the Canvas element?",
@@ -1935,7 +1935,7 @@
 			},
 			{
 				"id": 38,
-				"title": "Lesson 19 - Space Game - Scoring and Lives: Post-Lecture Quiz",
+				"title": "Lesson 19 - 스페이스 게임 - 점수내고 살기: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "What's a fun way to show how many lives a player has left?",
@@ -1988,7 +1988,7 @@
 			},
 			{
 				"id": 39,
-				"title": "Lesson 20 - Space Game - End and Restart: Pre-Lecture Quiz",
+				"title": "Lesson 20 - 스페이스 게임 - 끝과 재시작: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "When is a good time to restart a game",
@@ -2041,7 +2041,7 @@
 			},
 			{
 				"id": 40,
-				"title": "Lesson 20 - Space Game - End and Restart: Post-Lecture Quiz",
+				"title": "Lesson 20 - 스페이스 게임 - 끝과 재시작: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "What is a good pattern to use when a game end condition has been met?",
@@ -2094,7 +2094,7 @@
 			},
 			{
 				"id": 41,
-				"title": "Lesson 21 - Bank Project - HTML Templates and Routes in a Web App: Pre-Lecture Quiz",
+				"title": "Lesson 21 - 은행 프로젝트 - 웹 앱의 HTML 템플릿과 라우터: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "You need to create multiple HTML files to display different screens in a web app",
@@ -2143,7 +2143,7 @@
 			},
 			{
 				"id": 42,
-				"title": "Lesson 21 - Bank Project HTML Templates and Routes in a Web App: Post-Lecture Quiz",
+				"title": "Lesson 21 - 은행 프로젝트 - 웹 앱의 HTML 템플릿과 라우터: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "HTML templates are part of the DOM by default",
@@ -2196,7 +2196,7 @@
 			},
 			{
 				"id": 43,
-				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Pre-Lecture Quiz",
+				"title": "Lesson 22 - 은행 프로젝트 - 로그인과 가입 폼 작성하기: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "HTML forms allow to send user input to a server without using JavaScript",
@@ -2241,7 +2241,7 @@
 			},
 			{
 				"id": 44,
-				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Post-Lecture Quiz",
+				"title": "Lesson 22 - 은행 프로젝트 - 로그인과 가입 폼 작성하기 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Using <label> elements in forms is only for making the form pretty",
@@ -2294,7 +2294,7 @@
 			},
 			{
 				"id": 45,
-				"title": "Lesson 23 - Bank Project - Methods of Fetching and Using Data: Pre-Lecture Quiz",
+				"title": "Lesson 23 - 은행 프로젝트 - 데이터를 가져오고 사용하는 방식: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "You can fetch data from a server synchronously in a browser",
@@ -2343,7 +2343,7 @@
 			},
 			{
 				"id": 46,
-				"title": "Lesson 23 - Bank Project Methods of Fetching and Using Data: Post-Lecture Quiz",
+				"title": "Lesson 23 - 은행 프로젝트 - 데이터를 가져오고 사용하는 방식: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "In a Single-page application, the HTML is loaded once and never updated",
@@ -2396,7 +2396,7 @@
 			},
 			{
 				"id": 47,
-				"title": "Lesson 24 - Bank Project - Concepts of State Management: Pre-Lecture Quiz",
+				"title": "Lesson 24 - 은행 프로젝트 - 상태 관리의 컨셉: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "What is an immutable object?",
@@ -2453,7 +2453,7 @@
 			},
 			{
 				"id": 48,
-				"title": "Lesson 24 - Bank Project - Concepts of State Management: Post-Lecture Quiz",
+				"title": "Lesson 24 - 은행 프로젝트 - 상태 관리의 컨셉: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "What do you think state management means?",
