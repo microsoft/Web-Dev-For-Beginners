@@ -1486,43 +1486,43 @@
 			},
 			{
 				"id": 29,
-				"title": "Lesson 15 - Space Game - Introduction: Pre-Lecture Quiz",
+				"title": "Pelajaran 15 - Game Luar Angkasa - Pendahuluan: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "JavaScript is an unpopular language for building games",
+						"questionText": "JavaScript adalah bahasa yang tidak populer untuk membuat game",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Pub/Sub is a preferred pattern for managing the game's assets and flow",
+						"questionText": "Pub / Sub adalah pola yang disukai untuk mengelola aset dan aliran game",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Object inheritance can be handled by either using classes or composition",
+						"questionText": "Pewarisan objek (object inheritance) dapat ditangani baik dengan menggunakan class atau komposisi",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
@@ -1531,36 +1531,36 @@
 			},
 			{
 				"id": 30,
-				"title": "Lesson 15 - Space Game - Introduction: Post-Lecture Quiz",
+				"title": "Pelajaran 15 - Game Luar Angkasa - Pendahuluan: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Classes rely on inheritance to ascribe to behaviors",
+						"questionText": "Class bergantung pada warisan untuk dianggap berasal dari perilaku",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Composition is the preferred design pattern for game objects",
+						"questionText": "Komposisi adalah pola desain yang disukai untuk objek game",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Pub/Sub stands for:",
+						"questionText": "Pub / Sub adalah singkatan dari:",
 						"answerOptions": [
 							{
 								"answerText": "Publish/Subscribe",
@@ -1580,43 +1580,43 @@
 			},
 			{
 				"id": 31,
-				"title": "Lesson 16 - Space Game - Draw Hero and Monsters to Canvas: Pre-Lecture Quiz",
+				"title": "Pelajaran 16 - Game Luar Angkasa - Menggambar Pahlawan dan Monster ke Kanvas: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "The Canvas element is what you use to draw on a screen",
+						"questionText": "Elemen Canvas adalah apa yang Anda gunakan untuk menggambar di layar",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "You can only draw simple geometric shapes using the Canvas API",
+						"questionText": "Anda hanya dapat menggambar bentuk geometris sederhana menggunakan Canvas API",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The point 0,0 is in the bottom left",
+						"questionText": "Titik 0,0 berada di kiri bawah",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
@@ -1625,36 +1625,36 @@
 			},
 			{
 				"id": 32,
-				"title": "Lesson 16 - Space Game - Draw Hero and Monsters to Canvas: Post-Lecture Quiz",
+				"title": "Pelajaran 16 - Game Luar Angkasa - Menggambar Pahlawan dan Monster ke Kanvas: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "You can perform drawing operations directly on the Canvas",
+						"questionText": "Anda dapat melakukan operasi menggambar langsung di Kanvas",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You listen to the onload event to know when an image has loaded asynchronously",
+						"questionText": "Anda mendengarkan acara onload untuk mengetahui kapan gambar dimuat secara asinkron",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "You draw images onto a screen with an operation called:",
+						"questionText": "Anda menggambar gambar ke layar dengan operasi yang disebut:",
 						"answerOptions": [
 							{
 								"answerText": "paintImage()",
@@ -1674,36 +1674,36 @@
 			},
 			{
 				"id": 33,
-				"title": "Lesson 17 - Space Game - Adding Motion: Pre-Lecture Quiz",
+				"title": "Pelajaran 17 - Game Luar Angkasa - Menambahkan Gerakan: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Any object on the screen can receive keyboard events",
+						"questionText": "Objek apa pun di layar dapat menerima acara keyboard",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "You can use the same method to listen to key events and mouse events",
+						"questionText": "Anda dapat menggunakan metode yang sama untuk mendengarkan peristiwa utama dan peristiwa mouse",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "To make things happen at a regular interval, you use what function?",
+						"questionText": "Untuk membuat sesuatu terjadi secara berkala, Anda menggunakan fungsi apa?",
 						"answerOptions": [
 							{
 								"answerText": "setInterval()",
@@ -1723,51 +1723,51 @@
 			},
 			{
 				"id": 34,
-				"title": "Lesson 17 - Space Game - Adding Motion: Post-Lecture Quiz",
+				"title": "Pelajaran 17 - Game Luar Angkasa - Menambahkan Gerakan: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "You always need to redraw the screen",
+						"questionText": "Anda selalu perlu menggambar ulang layar",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What is a game loop?",
+						"questionText": "Apa itu game loop?",
 						"answerOptions": [
 							{
-								"answerText": "A function that ensures the game can be restarted",
+								"answerText": "Sebuah fungsi yang memastikan game dapat dimulai ulang",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A function that decided how fast the game should run",
+								"answerText": "Fungsi yang memutuskan seberapa cepat game harus dijalankan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A function that is invoked at regular intervals and draws what the user should see",
+								"answerText": "Fungsi yang dipanggil secara berkala dan menggambarkan apa yang seharusnya dilihat pengguna",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "A good case for redrawing the screen is",
+						"questionText": "Kasus yang bagus untuk menggambar ulang layar adalah",
 						"answerOptions": [
 							{
-								"answerText": "A user interaction happened",
+								"answerText": "Interaksi pengguna terjadi",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Something has moved",
+								"answerText": "Sesuatu telah berpindah",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Time has passed",
+								"answerText": "Waktu telah berlalu",
 								"isCorrect": "false"
 							}
 						]
@@ -1776,51 +1776,51 @@
 			},
 			{
 				"id": 35,
-				"title": "Lesson 18 - Space Game - Adding A Laser and Detecting Collisions: Pre-Lecture Quiz",
+				"title": "Pelajaran 18 - Game Luar Angkasa - Menambahkan Laser dan Mendeteksi Tabrakan: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Collision detection is how we detect if two things have collided",
+						"questionText": "Deteksi tabrakan adalah cara kami mendeteksi jika dua benda bertabrakan",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How can we remove an item from the screen?",
+						"questionText": "Bagaimana cara menghapus item dari layar?",
 						"answerOptions": [
 							{
-								"answerText": "Call the garbage collector",
+								"answerText": "Panggil pengumpul sampah",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Mark it as dead, only paint not dead objects next time we draw the screen",
+								"answerText": "Tandai sebagai mati, hanya tampilkan bukan benda mati saat kita menggambar layar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Place the item on a negative coordinate",
+								"answerText": "Tempatkan item di koordinat negatif",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to simulate firing a laser in JavaScript is:",
+						"questionText": "Cara yang baik untuk mensimulasikan penembakan laser di JavaScript adalah:",
 						"answerOptions": [
 							{
-								"answerText": "make a visual element respond to a key event",
+								"answerText": "membuat elemen visual merespons peristiwa utama",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "create animated gifs",
+								"answerText": "membuat gif animasi",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "make enemies blow up at intervals",
+								"answerText": "membuat musuh meledak secara berkala",
 								"isCorrect": "false"
 							}
 						]
@@ -1829,51 +1829,51 @@
 			},
 			{
 				"id": 36,
-				"title": "Lesson 18 - Space Game - Adding A Laser and Detecting Collisions: Post-Lecture Quiz",
+				"title": "Pelajaran 18 - Game Luar Angkasa - Menambahkan Laser dan Mendeteksi Tabrakan: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "In collision detection you compare two",
+						"questionText": "Dalam deteksi tabrakan Anda membandingkan dua",
 						"answerOptions": [
 							{
-								"answerText": "circles and whether they intersect",
+								"answerText": "lingkaran dan apakah mereka berpotongan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "rectangles and whether they intersect",
+								"answerText": "persegi panjang dan apakah mereka berpotongan",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "distances between two points",
+								"answerText": "jarak antara dua titik",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The reason for implementing a cooldown effect is because",
+						"questionText": "Alasan penerapan efek cooldown adalah karena",
 						"answerOptions": [
 							{
-								"answerText": "Making the game harder as you can't repeatedly fire a laser to destroy enemies",
+								"answerText": "Membuat permainan lebih sulit karena Anda tidak dapat menembakkan laser berulang kali untuk menghancurkan musuh",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "JavaScript can only produce a certain number of events per time unit, so you need to limit them",
+								"answerText": "JavaScript hanya dapat menghasilkan sejumlah kejadian per unit waktu, jadi Anda perlu membatasinya",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Constants are identifiable in code because",
+						"questionText": "Konstanta dapat diidentifikasi dalam kode karena",
 						"answerOptions": [
 							{
-								"answerText": "they are written in capital letters",
+								"answerText": "mereka ditulis dengan huruf kapital",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "they have specific names",
+								"answerText": "mereka memiliki nama yang spesifik",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "they are written in kebab-case like-this",
+								"answerText": "mereka ditulis dalam kebab-case seperti-ini",
 								"isCorrect": "false"
 							}
 						]
@@ -1882,40 +1882,40 @@
 			},
 			{
 				"id": 37,
-				"title": "Lesson 19 - Space Game - Scoring and Lives: Pre-Lecture Quiz",
+				"title": "Pelajaran 19 - Game Luar Angkasa - Penilaian dan Kehidupan: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "How do you draw text on a screen using the Canvas element?",
+						"questionText": "Bagaimana Anda menggambar teks di layar menggunakan elemen Canvas?",
 						"answerOptions": [
 							{
-								"answerText": "Place text inside a div or span element",
+								"answerText": "Tempatkan teks di dalam div atau elemen span",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Call drawText() on the Canvas element",
+								"answerText": "Panggil drawText() pada elemen Canvas",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Call fillText() on the context object",
+								"answerText": "Panggil fillText() pada konteks objek",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Why do you have the concept of 'lives' in a game?",
+						"questionText": "Mengapa Anda memiliki konsep 'nyawa' dalam sebuah game?",
 						"answerOptions": [
 							{
-								"answerText": "To show how much damage you can take",
+								"answerText": "Untuk menunjukkan seberapa banyak kerusakan yang bisa Anda terima",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "So that the game doesn't end straight away, but you have n number of chances before the game is over",
+								"answerText": "Agar permainan tidak langsung berakhir, tetapi Anda memiliki sejumlah peluang sebelum permainan berakhir",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Add color to text on Canvas using",
+						"questionText": "Tambahkan warna ke teks di kanvas menggunakan",
 						"answerOptions": [
 							{
 								"answerText": "fillColor",
@@ -1935,51 +1935,51 @@
 			},
 			{
 				"id": 38,
-				"title": "Lesson 19 - Space Game - Scoring and Lives: Post-Lecture Quiz",
+				"title": "Pelajaran 19 - Game Luar Angkasa - Penilaian dan Kehidupan: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "What's a fun way to show how many lives a player has left?",
+						"questionText": "Apa cara yang menyenangkan untuk menunjukkan berapa banyak nyawa yang tersisa?",
 						"answerOptions": [
 							{
-								"answerText": "a number of ships",
+								"answerText": "jumlah kapal",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "a points system",
+								"answerText": "sistem poin",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How do you center text in the middle of the screen using the Canvas element?",
+						"questionText": "Bagaimana Anda memusatkan teks di tengah layar menggunakan elemen Canvas?",
 						"answerOptions": [
 							{
-								"answerText": "You use Flexbox",
+								"answerText": "Anda menggunakan Flexbox",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "You instruct the text to be drawn at the x coordinate of the client window width/2",
+								"answerText": "Anda menginstruksikan teks yang akan digambar pada koordinat x dari lebar jendela klien/2",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "You set the textAlign property to the value center on the context object",
+								"answerText": "Anda menyetel properti textAlign ke pusat nilai pada konteks objek",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "In code, deduct a life like this:",
+						"questionText": "Dalam kode, kurangi nyawa seperti ini:",
 						"answerOptions": [
 							{
-								"answerText": "this.life-",
+								"answerText": "this.nyawa-",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "this.life--",
+								"answerText": "this.nyawa--",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "this.life++",
+								"answerText": "this.nyawa++",
 								"isCorrect": "false"
 							}
 						]
@@ -1988,51 +1988,51 @@
 			},
 			{
 				"id": 39,
-				"title": "Lesson 20 - Space Game - End and Restart: Pre-Lecture Quiz",
+				"title": "Pelajaran 20 - Game Luar Angkasa - Akhiri dan Mulai Ulang: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "When is a good time to restart a game",
+						"questionText": "Kapan waktu yang tepat untuk memulai kembali permainan",
 						"answerOptions": [
 							{
-								"answerText": "when a player wins or loses",
+								"answerText": "ketika seorang pemain menang atau kalah",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "whenever",
+								"answerText": "kapanpun",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "When should a game end",
+						"questionText": "Kapan pertandingan harus berakhir",
 						"answerOptions": [
 							{
-								"answerText": "when an enemy ship is destroyed",
+								"answerText": "ketika kapal musuh dihancurkan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "when a hero ship is destroyed",
+								"answerText": "saat kapal pahlawan dihancurkan",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "when points are collected",
+								"answerText": "saat poin dikumpulkan",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to add a level to your game is:",
+						"questionText": "Cara yang baik untuk menambahkan level ke game Anda adalah:",
 						"answerOptions": [
 							{
-								"answerText": "Increment the amount of points necessary to complete a given level",
+								"answerText": "Meningkatkan jumlah poin yang diperlukan untuk menyelesaikan level tertentu",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Add more players to the game",
+								"answerText": "Tambahkan lebih banyak pemain ke dalam game",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Add more graphics to the game",
+								"answerText": "Tambahkan lebih banyak grafik ke dalam game",
 								"isCorrect": "false"
 							}
 						]
@@ -2041,51 +2041,51 @@
 			},
 			{
 				"id": 40,
-				"title": "Lesson 20 - Space Game - End and Restart: Post-Lecture Quiz",
+				"title": "Pelajaran 20 - Game Luar Angkasa - Akhiri dan Mulai Ulang: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "What is a good pattern to use when a game end condition has been met?",
+						"questionText": "Apa pola yang baik untuk digunakan ketika kondisi akhir permainan telah terpenuhi?",
 						"answerOptions": [
 							{
-								"answerText": "Display a suitable message",
+								"answerText": "Tampilkan pesan yang sesuai",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Quit the game",
+								"answerText": "Keluar dari permainan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Display a suitable message, offer the player to restart, and display what key to hit for that action",
+								"answerText": "Tampilkan pesan yang sesuai, tawarkan pemain untuk memulai kembali, dan tampilkan tombol apa yang harus ditekan untuk tindakan itu",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You should offer a restart only when the game has ended",
+						"questionText": "Anda harus menawarkan restart hanya ketika permainan telah berakhir",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to clear the EventEmitter when ending a game is:",
+						"questionText": "Cara yang baik untuk membersihkan EventEmitter saat mengakhiri permainan adalah:",
 						"answerOptions": [
 							{
-								"answerText": "clearing listeners",
+								"answerText": "membersihkan listeners",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "clearing the screen",
+								"answerText": "membersihkan layar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "closing the game window",
+								"answerText": "menutup jendela permainan",
 								"isCorrect": "false"
 							}
 						]
