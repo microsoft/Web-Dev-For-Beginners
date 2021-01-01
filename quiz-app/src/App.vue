@@ -5,7 +5,6 @@
       <label for="locale">locale</label>
       <select v-model="locale">
         <option>en</option>
-        <option>fr</option>
         <option>id</option>
       </select>
     </nav>
@@ -29,12 +28,17 @@ export default {
     Quiz,
   },
   data() {
-    return { locale: "en" };
+    return {
+      locale: "en",
+    };
   },
   watch: {
     locale(val) {
       this.$root.$i18n.locale = val;
     },
+  },
+  created() {
+    this.locale = this.$route.query.loc;
   },
 };
 </script>
