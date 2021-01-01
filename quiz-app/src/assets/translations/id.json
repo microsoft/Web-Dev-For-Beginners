@@ -646,44 +646,44 @@
 			},
 			{
 				"id": 13,
-				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Pre-Lecture Quiz",
+				"title": "Pelajaran 7 - Dasar-dasar JavaScript - Array dan Loop: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "To refer to a specific item in an array, you would use a",
+						"questionText": "Untuk merujuk ke item tertentu dalam sebuah array, Anda akan menggunakan a",
 						"answerOptions": [
 							{
-								"answerText": "square bracket []",
+								"answerText": "kurung siku []",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "index",
+								"answerText": "indeks",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "curly braces {}",
+								"answerText": "kurung kurawal {}",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How do you get the number of items in an array?",
+						"questionText": "Bagaimana Anda mendapatkan jumlah item dalam sebuah array",
 						"answerOptions": [
 							{
-								"answerText": "The 'len(array)' method",
+								"answerText": "Metode `len(array)`",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The property size on the array",
+								"answerText": "Properti `size` pada array",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The length property on the array",
+								"answerText": "Properti `length` pada array",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "In JavaScript, indexes start at",
+						"questionText": "Di JavaScript, indeks dimulai dari",
 						"answerOptions": [
 							{
 								"answerText": "0",
@@ -703,13 +703,13 @@
 			},
 			{
 				"id": 14,
-				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Post-Lecture Quiz",
+				"title": "Pelajaran 7 - Dasar-dasar JavaScript - Array dan Loop: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "What part of a for-loop would you need to modify to increment its iteration by 5?",
+						"questionText": "Bagian for-loop manakah yang perlu Anda modifikasi untuk menambah iterasinya sebesar 5",
 						"answerOptions": [
 							{
-								"answerText": "condition",
+								"answerText": "kondisi",
 								"isCorrect": "true"
 							},
 							{
@@ -717,30 +717,30 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "iteration-expression",
+								"answerText": "ekspresi-iterasi",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the difference between a while and a for-loop",
+						"questionText": "Apa perbedaan antara while dan for-loop",
 						"answerOptions": [
 							{
-								"answerText": "A for-loop has a counter and iteration-expression, where while only has a condition",
+								"answerText": "Sebuah for-loop memiliki penghitung dan ekspresi-iterasi, di mana while hanya memiliki kondisi",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A while has a counter and iteration-expression where for-loop only has a condition",
+								"answerText": "Sebuah while memiliki penghitung dan ekspresi-iterasi di mana for-loop hanya memiliki kondisi",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "They are the same, just an alias for one another",
+								"answerText": "Mereka sama, hanya alias untuk satu sama lain",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Given the code for (let i=1; i < 5; i++), how many iterations will it perform?",
+						"questionText": "Diberikan kode for (let i = 1; i <5; i ++), berapa banyak iterasi yang akan dilakukan?",
 						"answerOptions": [
 							{
 								"answerText": "5",
