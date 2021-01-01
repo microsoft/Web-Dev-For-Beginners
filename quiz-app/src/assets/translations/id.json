@@ -756,47 +756,47 @@
 			},
 			{
 				"id": 15,
-				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Pre-Lecture Quiz",
+				"title": "Pelajaran 8 - Proyek Terarium - Pengantar HTML: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "HTML stands for 'HyperText Mockup Language'",
+						"questionText": "HTML singkatan dari 'HyperText Mockup Language'",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "All HTML tags need both opening and closing tags",
+						"questionText": "Semua tag HTML membutuhkan tag pembuka dan penutup",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Using semantic markup is most important for",
+						"questionText": "Penggunaan markup semantik adalah yang paling penting untuk",
 						"answerOptions": [
 							{
-								"answerText": "code readability",
+								"answerText": "keterbacaan kode (code readability)",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "screen readers",
+								"answerText": "pembaca layar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "maintenance",
+								"answerText": "pemeliharaan",
 								"isCorrect": "false"
 							}
 						]
@@ -805,26 +805,26 @@
 			},
 			{
 				"id": 16,
-				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Post-Lecture Quiz",
+				"title": "Pelajaran 8 - Proyek Terarium - Pengantar HTML: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Spans and Divs are interchangeable",
+						"questionText": "Span dan Div dapat dipertukarkan",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The head of an HTML doc can contain:",
+						"questionText": "Kepala (head) dokumen HTML dapat berisi:",
 						"answerOptions": [
 							{
-								"answerText": "the title tag",
+								"answerText": "tag title",
 								"isCorrect": "false"
 							},
 							{
@@ -832,24 +832,24 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "all the above",
+								"answerText": "semua di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can't use deprecated tags in your markup",
+						"questionText": "Anda tidak dapat menggunakan tag yang tidak berlaku lagi di markup Anda",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false, but they have been deprecated for good reason",
+								"answerText": "salah, tapi mereka sudah tidak digunakan lagi karena alasan yang baik",
 								"isCorrect": "true"
 							}
 						]
@@ -858,43 +858,43 @@
 			},
 			{
 				"id": 17,
-				"title": "Lesson 9  - Terrarium Project - Introduction to CSS: Pre-Lecture Quiz",
+				"title": "Pelajaran 9 - Proyek Terarium - Pengantar CSS: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "HTML elements must have either a class or an id in order to be styled",
+						"questionText": "Elemen HTML harus memiliki class atau id untuk mendapatkan gaya",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "CSS stands for 'Complete Style Sheets'",
+						"questionText": "CSS adalah singkatan dari 'Complete Style Sheets'",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "CSS can be used to create animations",
+						"questionText": "CSS dapat digunakan untuk membuat animasi",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
@@ -903,30 +903,30 @@
 			},
 			{
 				"id": 18,
-				"title": "Lesson 9 - Terrarium Project - Introduction to CSS: Post-Lecture Quiz",
+				"title": "Pelajaran 9 - Proyek Terarium - Pengantar CSS: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "You can write CSS directly in the head section of your HTML file",
+						"questionText": "Anda dapat menulis CSS langsung di bagian kepala file HTML Anda",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "It's always necessary to include CSS in your app",
+						"questionText": "Itu selalu perlu untuk menyertakan CSS di aplikasi Anda",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							},
 							{
@@ -936,7 +936,7 @@
 						]
 					},
 					{
-						"questionText": "Which browser tool can be used to inspect CSS?",
+						"questionText": "Alat browser mana yang dapat digunakan untuk memeriksa CSS?",
 						"answerOptions": [
 							{
 								"answerText": "Elements",
@@ -956,43 +956,43 @@
 			},
 			{
 				"id": 19,
-				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Pre-Lecture Quiz",
+				"title": "Pelajaran 10 - Proyek Terarium - Manipulasi DOM dan Penutupan: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "The DOM stands for 'Document Object Management'",
+						"questionText": "DOM adalah singkatan dari 'Document Object Management'",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The DOM can be thought of as a tree",
+						"questionText": "DOM dapat dianggap sebagai pohon",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Using the Web API, you can manipulate the DOM",
+						"questionText": "Menggunakan API Web, Anda dapat memanipulasi DOM",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
@@ -1001,43 +1001,43 @@
 			},
 			{
 				"id": 20,
-				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Post-Lecture Quiz",
+				"title": "Pelajaran 10 - Proyek Terarium - Manipulasi DOM dan Penutupan: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "The DOM is a model to represent a document on the web",
+						"questionText": "DOM adalah model untuk merepresentasikan dokumen di web",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Use JavaScript closures to perform the following:",
+						"questionText": "Penutupan JavaScript (JavaScript closures) untuk melakukan hal berikut:",
 						"answerOptions": [
 							{
-								"answerText": "write functions within functions",
+								"answerText": "tulis fungsi di dalam fungsi",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "enclose the DOM",
+								"answerText": "menyertakan DOM",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "close script blocks",
+								"answerText": "tutup blok script",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Fill in the blank: Closures are useful when one or more functions need to access an outer function's...",
+						"questionText": "Isi yang kosong: Closures berguna ketika satu atau lebih fungsi perlu mengakses fungsi luar ...",
 						"answerOptions": [
 							{
-								"answerText": "arrays",
+								"answerText": "array",
 								"isCorrect": "false"
 							},
 							{
@@ -1045,7 +1045,7 @@
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "functions",
+								"answerText": "fungsi",
 								"isCorrect": "false"
 							}
 						]
