@@ -1,12 +1,12 @@
-*Complete this quiz after the lesson by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके पाठ के बाद इस प्रश्नोत्तरी को पूरा करें._
 
-1. What's a fun way to show how many lifes a player has left
+1. यह दिखाने का एक मजेदार तरीका है कि एक खिलाड़ी ने कितने जीवन जीते हैं
 
-- [ ] a number of ships
-- [ ] a decimal number
+- [ ] जहाजों की एक संख्या
+- [ ] एक दशमलव संख्या
 
-2. How do you center text in the middle of the screen using the Canvas element
+2. कैनवस तत्व का उपयोग करके आप स्क्रीन के बीच में टेक्स्ट को कैसे केन्द्रित करते हैं
 
-- [ ] You use Flexbox
-- [ ] You instruct the text to be drawn at the x coordinate of: the client window width/2
-- [ ] You set the `textAlign` property to the value `center` on the context object.
+- [ ] आप फ्लेक्सबॉक्स का उपयोग करें
+- [ ] आप पाठ को निर्देश देते हैं: क्लाइंट विंडो की चौड़ाई/2: के x समन्वय पर तैयार किया जाए
+- [ ] आप संदर्भ ऑब्जेक्ट पर `textAlign` गुण मान `center` पर सेट करें.

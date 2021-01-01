@@ -1,11 +1,11 @@
-# Build a Scoring Game
+# एक स्कोरिंग गेम बनाएँ
 
-## Instructions
+## अनुदेश
 
-Create a game where you display life and points in a creative way. A suggestion is to show the life as hearts and the points as a big number in the bottom center part of the screen. Have a look here for [Free game resources](https://www.kenney.nl/)
+एक खेल बनाएं जहां आप रचनात्मक तरीके से जीवन और बिंदुओं को प्रदर्शित करते हैं। एक सुझाव है कि जीवन को दिलों के रूप में दिखाना और स्क्रीन के निचले केंद्र भाग में एक बड़ी संख्या के रूप में अंक। [मुक्त खेल संसाधनों](https://www.kenney.nl/) के लिए यहाँ एक नज़र डाले ।
 
-# Rubric
+## शीर्ष
 
-| Criteria | Exemplary              | Adequate                    | Needs Improvement          |
-| -------- | ---------------------- | --------------------------- | -------------------------- |
-|          | full game is presented | game is partially presented | partial game contains bugs |
+| मानदंड | उदाहरणात्मक          | पर्याप्त                              | सुधार की जरूरत              |
+| ------ | -------------------- | ------------------------------------- | --------------------------- |
+|        | पूरा खेल प्रस्तुत है | खेल आंशिक रूप से प्रस्तुत किया गया है | आंशिक खेल में बग्स होते हैं |

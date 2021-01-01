@@ -1,14 +1,14 @@
-*A warm-up quiz about game development*
+_खेल के विकास के बारे में एक वार्म अप प्रश्नोत्तरी_
 
-Complete this quiz in class
+इस क्विज को कक्षा में पूरा करें
 
-1. How do you draw text on a screen using the Canvas element?
+1. कैनवस तत्व का उपयोग करके आप स्क्रीन पर टेक्स्ट कैसे बनाते हैं?
 
-- [ ] place text inside a div or span element
-- [ ] Call drawText() on the Canvas element
-- [ ] Call fillText() on the context object
+- [ ] पाठ को डिभ या स्पैन तत्व के अंदर रखें
+- [ ] कैनवास तत्व पर drawText() को कॉल करें
+- [ ] कैनवास तत्व पर fillText() को कॉल करें
 
-2. Why do you have the concept of *lifes* in a game?
+2. आप एक खेल में _जीवन_ की अवधारणा क्यों है?
 
-- [ ] to show how much damage you can take.
-- [ ] So that the game doesn't end straight away, but you have n number of chances before the game is over.
+- [ ] यह दिखाने के लिए कि आप कितना नुकसान उठा सकते हैं.
+- [ ] ताकि खेल सीधे खत्म न हो, लेकिन खेल खत्म होने से पहले आपके पास कई मौके हैं.

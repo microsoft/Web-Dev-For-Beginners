@@ -1,14 +1,14 @@
-# Build a Space Game Part 5: Scoring and Lives
+# एक अंतरिक्ष खेल बनाएँ भाग ५: स्कोरिंग और जीवन
 
-## Pre-Lecture Quiz
+## लेक्टरसे पहलेकी क्विज़
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[लेक्टरसे पहलेकी क्विज़](.github/pre-lecture-quiz.hi.md)
 
-In this lesson, you'll learn how to add scoring to a game and calculate lives.
+इस पाठ में, आप सीखेंगे कि किसी खेल में स्कोरिंग कैसे जोड़ें और जीवन की गणना करें.
 
-## Draw text on the screen
+## स्क्रीन पर टेक्स्ट ड्रा करें
 
-To be able to display a game score on the screen, you'll need to know how to place text on the screen. The answer is using the `fillText()` method on the canvas object. You can also control other aspects like what font to use, the color of the text and even its alignment (left, right, center). Below is some code drawing some text on the screen.
+स्क्रीन पर गेम स्कोर प्रदर्शित करने में सक्षम होने के लिए, आपको यह जानना होगा कि स्क्रीन पर टेक्स्ट कैसे रखा जाए. उत्तर कैनवास ऑब्जेक्ट पर `fillText()` विधि का उपयोग कर रहा है। आप अन्य पहलुओं को भी नियंत्रित कर सकते हैं जैसे कि किस फ़ॉन्ट का उपयोग करना है, पाठ का रंग और यहां तक ​​कि इसके संरेखण (बाएं, दाएं, केंद्र)। नीचे कुछ कोड है जो स्क्रीन पर कुछ टेक्स्ट खींच रहा है.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -17,22 +17,22 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Read more about [how to add text to a canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text), and feel free to make yours look fancier!
+✅ [एक कैनवास में पाठ कैसे जोड़ें](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text) इसके बारे में और पढ़ें और बेझिझक अपने को आकर्षक बनाने के लिए!
 
-## Life, as a game concept
+## जीवन, एक खेल अवधारणा के रूप में
 
-The concept of having a life in a game is only a number. In the context of a space game it's common to assign a set of lives that get deducted one by one when your ship takes damage. It's nice if you can show a graphical representation of this like miniships or hearts instead of a number.
+एक खेल में एक जीवन होने की अवधारणा केवल एक संख्या है। एक अंतरिक्ष खेल के संदर्भ में यह सामान्य है कि आपके जहाज को नुकसान होने पर एक-एक करके कटे हुए जीवन का एक सेट आवंटित किया जाए। यदि आप एक नंबर के बजाय मिनीशिप या दिल की तरह इस का एक चित्रमय प्रतिनिधित्व दिखा सकते हैं तो अच्छा है.
 
-## What to build
+## क्या बनाना है
 
-Let's add the following to your game:
+चलो अपने खेल में निम्नलिखित जोड़ते हैं:
 
-- **Game score**: For every enemy ship that is destroyed, the hero should be awarded some points, we suggest a 100 points per ship. The game score should be shown in the bottom left.
-- **Life**: Your ship has three lives. You lose a life every time an enemy ship collides with you. A life score should be displayed at the bottom right and be made out of the following graphic ![life image](solution/assets/life.png).
+- **खेल का स्कोर**: नष्ट होने वाले प्रत्येक दुश्मन जहाज के लिए, नायक को कुछ बिंदुओं से सम्मानित किया जाना चाहिए, हम प्रति जहाज १०० अंक का सुझाव देते हैं। खेल का स्कोर नीचे बाईं ओर दिखाया जाना चाहिए.
+- **जीबन**: आपके जहाज में तीन जीवन हैं। जब भी कोई दुश्मन जहाज आपसे टकराता है तो आप एक जीवन खो देते हैं। एक जीवन स्कोर नीचे दाईं ओर प्रदर्शित किया जाना चाहिए और निम्नलिखित ग्राफ़िक से बाहर किया जाना चाहिए! [जीवन छवि](../solution/assets/life.png).
 
-## Recommended steps
+## अनुशंसित कदम
 
-Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
+उन फ़ाइलों का पता लगाएँ जो आपके लिए `your-work` सब फ़ोल्डर में बनाई गई हैं। इसमें निम्नलिखित शामिल होना चाहिए:
 
 ```bash
 -| assets
@@ -44,146 +44,146 @@ Locate the files that have been created for you in the `your-work` sub folder. I
 -| package.json
 ```
 
-You start your project the `your_work` folder by typing:
+आप टाइप करके अपना प्रोजेक्ट `your_work` फ़ोल्डर शुरू करें:
 
 ```bash
 cd your-work
 npm start
 ```
 
-The above will start a HTTP Server on address `http://localhost:5000`. Open up a browser and input that address, right now it should render the hero and all the enemies, and as you hit your left and right arrows, the hero moves and can shoot down enemies.
+उपरोक्त पते पर एक HTTP सर्वर शुरू होगा `http://localhost:5000`। एक ब्राउज़र खोले और उस पते को डाले , अभी उसे नायक और सभी दुश्मनों को प्रस्तुत करना चाहिए, और जैसे ही आप अपने बाएँ और दाएँ तीर मारते हैं, नायक चलता है और दुश्मनों को मार सकता है।.
 
-### Add code
+### कोड जोड़े
 
-1. **Copy over the needed assets** from the `solution/assets/` folder into `your-work` folder; you will add a `life.png` asset. Add the lifeImg to the window.onload function: 
+1. `solution/assets/` फ़ोल्डर से `your-work` फ़ोल्डर में आवश्यक असेट्स की प्रतिलिपि बनाएँ;आप एक `life.png` एसेट जोड़ देंगे। LifeImg को window.onload फ़ंक्शन में जोड़ें:
 
-    ```javascript
-    lifeImg = await loadTexture("assets/life.png");
-    ```
+   ```javascript
+   lifeImg = await loadTexture("assets/life.png");
+   ```
 
-1. Add the `lifeImg` to the list of assets:
+1. असेट्स की सूची में `lifeImg` जोड़ें:
 
-    ```javascript
-    let heroImg,
-    ...
-    lifeImg,
-    ...
-    eventEmitter = new EventEmitter();
-    ```
-  
-2. **Add variables**. Add code that represents your total score (0) and lives left (3), display these scores on a screen.
+```javascript
+let heroImg,
+...
+lifeImg,
+...
+eventEmitter = new EventEmitter();
+```
 
-3. **Extend `updateGameObjects()` function**. Extend the `updateGameObjects()` function to handle enemy collisions:
+1. **चर जोड़ें** वह कोड जोड़ें जो आपके कुल स्कोर(0) का प्रतिनिधित्व करता है और बाईं ओर (3) रहता है, इन स्कोर को स्क्रीन पर प्रदर्शित करता है.
 
-    ```javascript
-    enemies.forEach(enemy => {
-        const heroRect = hero.rectFromGameObject();
-        if (intersectRect(heroRect, enemy.rectFromGameObject())) {
-          eventEmitter.emit(Messages.COLLISION_ENEMY_HERO, { enemy });
+1. **`updateGameObjects()` फ़ंक्शन बढ़ाएँ**। दुश्मन टकराव को संभालने के लिए `updateGameObjects()` फ़ंक्शन बढ़ाएँ:
+
+   ```javascript
+   enemies.forEach((enemy) => {
+     const heroRect = hero.rectFromGameObject();
+     if (intersectRect(heroRect, enemy.rectFromGameObject())) {
+       eventEmitter.emit(Messages.COLLISION_ENEMY_HERO, { enemy });
+     }
+   });
+   ```
+
+1. **`life` ओर `points` जोड़े**.
+
+   1. **आरंभिक चर**. `हीरो` वर्ग में `this.cooldown = 0` के तहत, जीवन और बिंदुओ निर्धारित करें:
+
+      ```javascript
+      this.life = 3;
+      this.points = 0;
+      ```
+
+   1. **स्क्रीन पर चर बनाए**. इन मूल्यों को स्क्रीन पर बनाए:
+
+      ```javascript
+      function drawLife() {
+        // TODO, 35, 27
+        const START_POS = canvas.width - 180;
+        for (let i = 0; i < hero.life; i++) {
+          ctx.drawImage(lifeImg, START_POS + 45 * (i + 1), canvas.height - 37);
         }
-      })
-    ```
+      }
 
-4. **Add `life` and `points`**. 
-   1. **Initialize variables**. Under `this.cooldown = 0` in the `Hero` class, set life and points:
+      function drawPoints() {
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "red";
+        ctx.textAlign = "left";
+        drawText("Points: " + hero.points, 10, canvas.height - 20);
+      }
 
-        ```javascript
-        this.life = 3;
-        this.points = 0;
-        ```
+      function drawText(message, x, y) {
+        ctx.fillText(message, x, y);
+      }
+      ```
 
-   1. **Draw variables on screen**. Draw these values to screen:
+   1. **गेम लूप के तरीके जोड़ें**. सुनिश्चित करें कि आप इन अपडेट्स को अपने विंडो में जोड़ें। फ़ंक्शन को `updateGameObjects()` के तहत लोड करें:
 
-        ```javascript
-        function drawLife() {
-          // TODO, 35, 27
-          const START_POS = canvas.width - 180;
-          for(let i=0; i < hero.life; i++ ) {
-            ctx.drawImage(
-              lifeImg, 
-              START_POS + (45 * (i+1) ), 
-              canvas.height - 37);
-          }
+      ```javascript
+      drawPoints();
+      drawLife();
+      ```
+
+1. **खेल के नियमों को लागू करें**. निम्नलिखित खेल नियमों को लागू करें:
+
+   1. **हर हीरो और दुश्मन की टक्कर के लिए**, जीवन घटाए.
+
+      इस कटौती को करने के लिए `हीरो` क्लास का विस्तार करें:
+
+      ```javascript
+      decrementLife() {
+        this.life--;
+        if (this.life === 0) {
+          this.dead = true;
         }
-        
-        function drawPoints() {
-          ctx.font = "30px Arial";
-          ctx.fillStyle = "red";
-          ctx.textAlign = "left";
-          drawText("Points: " + hero.points, 10, canvas.height-20);
+      }
+      ```
+
+   2. **हर लेजर के लिए जो दुश्मन को मारता है**, १०० अंकों के साथ गेम स्कोर बढ़ाता है.
+
+      इस वेतन वृद्धि को करने के लिए हीरो क्लास बढ़ाएँ:
+
+      ```javascript
+        incrementPoints() {
+          this.points += 100;
         }
-        
-        function drawText(message, x, y) {
-          ctx.fillText(message, x, y);
+      ```
+
+      अपने कॉलिसन ईवेंट एमीटर्स में इन कार्यों को जोड़ें:
+
+      ```javascript
+      eventEmitter.on(
+        Messages.COLLISION_ENEMY_LASER,
+        (_, { first, second }) => {
+          first.dead = true;
+          second.dead = true;
+          hero.incrementPoints();
         }
+      );
 
-        ```
+      eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
+        enemy.dead = true;
+        hero.decrementLife();
+      });
+      ```
 
-   1. **Add methods to Game loop**. Make sure you add these functions to your window.onload function under `updateGameObjects()`:
+✅ जावास्क्रिप्ट/कैनवस का उपयोग करके बनाए गए अन्य खेलों की खोज के लिए थोड़ा शोध करें। उनके सामान्य लक्षण क्या हैं?
 
-        ```javascript
-        drawPoints();
-        drawLife();
-        ```
-
-1. **Implement game rules**. Implement the following game rules:
-
-   1. **For every hero and enemy collision**, deduct a life.
-   
-      Extend the `Hero` class to do this deduction:
-
-        ```javascript
-        decrementLife() {
-          this.life--;
-          if (this.life === 0) {
-            this.dead = true;
-          }
-        }
-        ```
-
-   2. **For every laser that hits an enemy**, increase game score with a 100 points.
-
-      Extend the Hero class to do this increment:
-    
-        ```javascript
-          incrementPoints() {
-            this.points += 100;
-          }
-        ```
-
-        Add these functions to your Collision Event Emitters:
-
-        ```javascript
-        eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-           first.dead = true;
-           second.dead = true;
-           hero.incrementPoints();
-        })
-
-        eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
-           enemy.dead = true;
-           hero.decrementLife();
-        });
-        ```
-
-✅ Do a little research to discover other games that are created using JavaScript/Canvas. What are their common traits?
-
-By the end of this work, you should see the small 'life' ships at the bottom right, points at the bottom left, and you should see your life count decrement as you collide with enemies and your points increment when you shoot enemies. Well done! Your game is almost complete.
+इस काम के अंत तक, आपको छोटे 'जीवन' जहाजों को नीचे दाईं ओर, बिंदुओं को नीचे बाईं ओर देखना चाहिए, और जब आप दुश्मनों को गोली मारते हैं, तो आपको अपने जीवन की गिनती में कमी और दुश्मनों से टकराते हुए देखना चाहिए। बहुत बढ़िया! आपका खेल लगभग पूरा हो गया है.
 
 ---
 
-## 🚀 Challenge
+## 🚀 चुनोती
 
-Your code is almost complete. Can you envision your next steps?
+आपका कोड लगभग पूरा हो चुका है। क्या आप अपने अगले चरणों की कल्पना कर सकते हैं?
 
-## Post-Lecture Quiz
+## पोस्ट-व्याख्यान प्रश्नोत्तरी
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[पोस्ट-व्याख्यान प्रश्नोत्तरी](.github/post-lecture-quiz.hi.md)
 
-## Review & Self Study
+## समीक्षा और स्व अध्ययन
 
-Research some ways that you can increment and decrement game scores and lives. There are some interesting game engines like [PlayFab](https://playfab.com). How could using one of these would enhance your game?
+कुछ तरीकों पर शोध करें जो आप खेल के स्कोर और जीवन को बढ़ा सकते हैं। [PlayFab](https://playfab.com) जैसे कुछ दिलचस्प गेम इंजन हैं। इनमें से किसी एक का उपयोग करने से आपका खेल कैसे बढ़ेगा?
 
-## Assignment
+## असाइनमेंट
 
-[Build a Scoring Game](assignment.md)
+[एक स्कोरिंग गेम बनाएँ](assignment.hi.md)
