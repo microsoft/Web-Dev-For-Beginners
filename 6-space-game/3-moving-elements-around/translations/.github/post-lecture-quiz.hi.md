@@ -1,18 +1,18 @@
-*Complete this quiz after the lesson by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके पाठ के बाद इस प्रश्नोत्तरी को पूरा करें._
 
-1. You always need to redraw the screen
+1. आपको हमेशा स्क्रीन को फिर से तैयार करना होगा
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. What is a game loop?
+2. गेम लूप क्या है?
 
-- [ ] A function that ensures the game can be restarted
-- [ ] A function that decided how fast the game should run
-- [ ] A function that is invoked at regular intervals and draws what the user should see
+- [ ] एक फ़ंक्शन जो खेल को सुनिश्चित करता है, उसे फिर से शुरू किया जा सकता है
+- [ ] एक फ़ंक्शन जिसने यह तय किया कि खेल कितनी तेजी से चलना चाहिए
+- [ ] एक फ़ंक्शन जो नियमित अंतराल पर लगाया जाता है और उपयोगकर्ता को जो कुछ भी देखना चाहिए वह खींचता है
 
-3. A good case for redrawing the screen is
-   
-- [ ] A user interaction happened
-- [ ] Something has moved
-- [ ] Time has passed
+3. स्क्रीन को फिर से तैयार करने का एक अच्छा मामला क्या है?
+
+- [ ] एक उपयोगकर्ता सहभागिता हुई
+- [ ] कुछ स्थानांतरित हो गया है
+- [ ] समय निकलना

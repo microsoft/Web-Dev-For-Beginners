@@ -1,18 +1,18 @@
-*A warm-up quiz about game development*
+_खेल के विकास के बारे में एक वार्म अप प्रश्नोत्तरी_
 
-Complete this quiz in class
+इस क्विज को कक्षा में पूरा करें
 
-1. Any object on the screen can receive keyboard events
+1. स्क्रीन पर कोई भी ऑब्जेक्ट कीबोर्ड इवेंट प्राप्त कर सकता है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. You can use the same method to listen to key events and mouse events
+2. आप मुख्य घटनाओं और माउस घटनाओं को सुनने के लिए उसी विधि का उपयोग कर सकते हैं
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-3. To make things happen at a regular interval, you use what function?
+3. चीजों को एक नियमित अंतराल पर होने के लिए, आप किस फ़ंक्शन का उपयोग करते हैं?
 
 - [ ] setInterval()
 - [ ] setTimeout()

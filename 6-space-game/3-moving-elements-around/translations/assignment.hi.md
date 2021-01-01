@@ -1,11 +1,11 @@
-# Comment Your Code
+# अपना कोड कमेंट करें
 
-## Instructions
+## अनुदेश
 
-Go over your current /app.js file in your game folder, and find ways to comment it and tidy it up. It's very easy for code to get out of control, and now's a good chance to add comments to ensure that you have readable code so that you can use it later.
+अपने गेम फ़ोल्डर में अपने वर्तमान /app.js फ़ाइल पर जाएं, और इसे टिप्पणी करने और इसे साफ करने के तरीके खोजें. कोड को नियंत्रण से बाहर करना बहुत आसान है, और अब यह सुनिश्चित करने के लिए टिप्पणियां जोड़ने का एक अच्छा मौका है कि आपके पास पठनीय कोड है ताकि आप इसे बाद में उपयोग कर सकें.
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary                                                          | Adequate                              | Needs Improvement                                              |
-| -------- | ------------------------------------------------------------------ | ------------------------------------- | -------------------------------------------------------------- |
-|          | `app.js` code is fully commented and organized into logical blocks | `app.js` code is adequately commented | `app.js` code is somewhat disorganized and lacks good comments |
+| मानदंड | उदाहरणात्मक                                                                | पर्याप्त                                   | सुधार की जरूरत                                                      |
+| ------ | -------------------------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------- |
+|        | `app.js` कोड पूरी तरह से टिप्पणी की है और तार्किक ब्लॉकों में व्यवस्थित है | `app.js` कोड पर्याप्त रूप से टिप्पणी की है | `app.js` कोड कुछ हद तक अव्यवस्थित है और अच्छी टिप्पणियों का अभाव है |
