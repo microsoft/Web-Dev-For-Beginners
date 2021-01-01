@@ -2,7 +2,8 @@
 
 In this project, you'll learn how to build a fictional bank. These lessons include instructions on how to layout a web app and provide routes, build forms, manage state, and fetch data from an API from which you can fetch the bank's data.
 
-<img src="images/screen1.png" width="50%" height="auto"/><img src="images/screen2.png" width="50%" height="auto"/>
+| ![Screen1](images/screen1.png) | ![Screen2](images/screen2.png) |
+|--------------------------------|--------------------------------|
 
 ## Lessons
 

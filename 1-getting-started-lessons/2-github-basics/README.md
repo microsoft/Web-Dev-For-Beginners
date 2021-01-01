@@ -6,7 +6,7 @@ This lesson covers the basics of GitHub, a platform to host and manage changes t
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3)
 
 ## Introduction
 
@@ -149,7 +149,7 @@ Let's say you have a folder locally with some code project and you want to start
    git push
    ```
 
-   > Tip, You might also want to adopt a `.gitignore` file to prevent files you don't want to track from showing up on GitHub - like that notes file you store in the same folder but has no place on a public repository. You can find templates for `.gitignore` files at [.gitignore templates](github.com/github/gitignore).
+   > Tip, You might also want to adopt a `.gitignore` file to prevent files you don't want to track from showing up on GitHub - like that notes file you store in the same folder but has no place on a public repository. You can find templates for `.gitignore` files at [.gitignore templates](https://github.com/github/gitignore).
 
 #### Commit messages
 
@@ -299,7 +299,7 @@ Projects might also have discussion in forums, mailing lists, or chat channels l
 Pair with a friend to work on each other's code. Create a project collaboratively, fork code, create branches, and merge changes.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4)
 
 ## Review & Self Study
 

@@ -2,7 +2,7 @@
 
 Una pequeña meditación de código de arrastrar y soltar. Con un poco de HTML, JS y CSS, puede crear una interfaz web, darle estilo y agregar una interacción.
 
-![mi terrario](screenshot_gray.png)
+![mi terrario](../images/screenshot_gray.png)
 
 # Lessons
 

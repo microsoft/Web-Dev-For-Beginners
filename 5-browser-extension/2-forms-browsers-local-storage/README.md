@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/25)
 
 ### Introduction
 
@@ -210,7 +210,7 @@ We've discussed several types of API so far in these lessons. Choose a web API a
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/26)
 
 ## Review & Self Study
 

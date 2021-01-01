@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/19)
 
 ### Introduction
 
@@ -176,7 +176,7 @@ All this recalculation of positioning allows you to fine-tune the behavior of th
 
 ### Task 
 
-The final task to complete the interface is to add the `closeElementDrag` function after the closing curly bracket of `elementDrag`:
+The final task to complete the interface is to add the `stopElementDrag` function after the closing curly bracket of `elementDrag`:
 
 ```javascript
 function stopElementDrag() {
@@ -201,7 +201,7 @@ Add new event handler to your closure to do something more to the plants; for ex
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/20)
 
 ## Review & Self Study
 
