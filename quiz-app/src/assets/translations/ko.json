@@ -861,40 +861,40 @@
 				"title": "Lesson 9  - Terrarium 프로젝트 - CSS 소개: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "HTML elements must have either a class or an id in order to be styled",
+						"questionText": "HTML 요소에 스타일을 지정하려면 클래스나 id는 반드시 가지고 있어야한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "CSS stands for 'Complete Style Sheets'",
+						"questionText": "CSS는 'Complete Style Sheets'를 의미한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "CSS can be used to create animations",
+						"questionText": "CSS는 애니메이션을 만드는 데 쓰일 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
@@ -906,37 +906,37 @@
 				"title": "Lesson 9 - Terrarium 프로젝트 - CSS 소개: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "You can write CSS directly in the head section of your HTML file",
+						"questionText": "HTML 파일의 head 섹션에 CSS를 바로 적을 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "It's always necessary to include CSS in your app",
+						"questionText": "CSS는 앱에서 항상 필수적이다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false, but if you want it to look good you probably need CSS",
+								"answerText": "아니요, 하지만 보기 좋게 만드려면 CSS 가 필요할 겁니다.",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Which browser tool can be used to inspect CSS?",
+						"questionText": "어떤 브라우저 툴이 CSS를 감지합니까?",
 						"answerOptions": [
 							{
 								"answerText": "Elements",
