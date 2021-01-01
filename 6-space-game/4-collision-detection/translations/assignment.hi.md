@@ -1,11 +1,11 @@
-# Explore Collisions
+# टकरावों का अन्वेषण करें
 
-## Instructions
+## अनुदेश
 
-## Rubric
+## शीर्ष
 
-To better understand how collisions work, build a very small game with a few items that collide. Make them move via keypresses or mouse clicks, and make something happen to one of the items when it is hit. It could be something like a meteor hitting the earth, or bumper-cars. Get creative!
+बेहतर ढंग से समझने के लिए कि टकराव कैसे काम करता है, कुछ वस्तुओं के साथ बहुत छोटे खेल का निर्माण करें जो टकराते हैं. उन्हें कीप्रेसेस या माउस क्लिक के माध्यम से ले जाएँ, और यह हिट होने पर आइटम में से किसी एक के साथ कुछ करें . यह कुछ ऐसा हो सकता है जैसे उल्का पिंड पृथ्वी से टकराता है, या बम्पर-कार। रचनात्मक बनो!
 
-| Criteria | Exemplary                                                                                                                | Adequate                       | Needs Improvement |
-| -------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ----------------- |
-|          | Complete working code sample is produced, with items drawn to canvas, basic collision happening, and reactions occurring | Code is incomplete in some way | Code malfunctions |
+| मानदंड | उदाहरणात्मक                                                                                                     | पर्याप्त                 | सुधार की जरूरत |
+| ------ | --------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------- |
+|        | पूरा वर्किंग कोड सैंपल उत्पादित होता है, जिसमें कैनवस को खींची गई चीजें, बेसिक टक्कर, और प्रतिक्रियाएँ होती हैं | कोड किसी तरह से अधूरा है | कोड की खराबी   |

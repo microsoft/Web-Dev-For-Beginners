@@ -1,12 +1,12 @@
-*Complete this quiz after the lesson by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके पाठ के बाद इस प्रश्नोत्तरी को पूरा करें._
 
-1. In collision detection you compare two
+1. टकराव का पता लगाने में आप दो
 
-- [ ] circles and whether they intersect
-- [ ] rectangles and whether they intersect
-- [ ] the distance between two points
+- [ ] वृत्तों की तुलना करते हैं की वे प्रतिच्छेद करते है
+- [ ] आयतें और चाहे वे अंतरंग हों
+- [ ] दो बिंदुओं के बीच की दूरी
 
-2. The reason for implementing a *cooldown* effect is because
+2. एक cooldown प्रभाव को लागू करने का कारण है की
 
-- [ ] Making the game harder as you can't repeatedly fire a laser to destroy enemies
-- [ ] JavaScript can only produce a certain number of events per time unit, so you need to limit them
+- [ ] खेल को कठिन बनाते हुए आप दुश्मनों को नष्ट करने के लिए बार-बार लेजर फायर नहीं कर सकते
+- [ ] जावास्क्रिप्ट केवल समय इकाई के अनुसार कुछ निश्चित घटनाओं का उत्पादन कर सकती है, इसलिए आपको उन्हें सीमित करने की आवश्यकता है

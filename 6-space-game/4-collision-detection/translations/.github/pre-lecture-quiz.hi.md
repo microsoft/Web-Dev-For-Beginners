@@ -1,14 +1,14 @@
-*A warm-up quiz about about game development*
+_खेल के विकास के बारे में एक वार्म अप प्रश्नोत्तरी_
 
-Complete this quiz in class
+इस क्विज को कक्षा में पूरा करें
 
-1. Collision detection is how we detect if two things have collided.
+1. टकराव का पता लगाना है कि कैसे दो चीजें टकराई हैं.
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. How can we remove an item from the screen?
+2. हम स्क्रीन से किसी आइटम को कैसे निकाल सकते हैं?
 
-- [ ] Call the garbage collector
-- [ ] Mark it as dead, only paint *not dead* objects next time we draw the screen
-- [ ] Place the item on a negative coordinate
+- [ ] गार्बेज कलेक्टर को बुलाओ
+- [ ] इसे मृत के रूप में चिह्नित करें, केवल जो _मृत नहीं_ है उन वस्तुओं को पेंट करें अगली बार जब हम स्क्रीन खींचते हैं
+- [ ] आइटम को एक नकारात्मक समन्वय पर रखें
