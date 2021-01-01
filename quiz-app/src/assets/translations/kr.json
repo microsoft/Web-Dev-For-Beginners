@@ -1776,7 +1776,7 @@
 			},
 			{
 				"id": 35,
-				"title": "Lesson 18 - 스페이스 게임 - 레이저 추가하고 충돌 감지하기: 강의 전 퀴즈",
+				"title": "Lesson 18 - 스페이스 게임 - 레이저 추가 및 충돌 감지하기: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "Collision detection is how we detect if two things have collided",
@@ -1829,7 +1829,7 @@
 			},
 			{
 				"id": 36,
-				"title": "Lesson 18 - 스페이스 게임 - 레이저 추가하고 충돌 감지하기: 강의 후 퀴즈",
+				"title": "Lesson 18 - 스페이스 게임 - 레이저 추가 및 충돌 감지하기: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "In collision detection you compare two",
@@ -1882,7 +1882,7 @@
 			},
 			{
 				"id": 37,
-				"title": "Lesson 19 - 스페이스 게임 - 점수내고 살기: 강의 전 퀴즈",
+				"title": "Lesson 19 - 스페이스 게임 - 점수 및 생명: 강의 전 퀴즈",
 				"quiz": [
 					{
 						"questionText": "How do you draw text on a screen using the Canvas element?",
@@ -1935,7 +1935,7 @@
 			},
 			{
 				"id": 38,
-				"title": "Lesson 19 - 스페이스 게임 - 점수내고 살기: 강의 후 퀴즈",
+				"title": "Lesson 19 - 스페이스 게임 - 점수 및 생명: 강의 후 퀴즈",
 				"quiz": [
 					{
 						"questionText": "What's a fun way to show how many lives a player has left?",
