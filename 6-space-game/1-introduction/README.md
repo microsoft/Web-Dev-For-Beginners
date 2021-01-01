@@ -4,7 +4,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/29)
 
 ### Inheritance and Composition in game development
 
@@ -213,7 +213,7 @@ Think about how the pub-sub pattern can enhance a game. Which parts should emit 
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30)
 
 ## Review & Self Study
 

@@ -3,8 +3,7 @@
 ![JavaScript Basics - Making decisions](images/webdev101-js-decisions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## 
-Pre-Lecture Quiz
+## Pre-Lecture Quiz
 [Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11)
 
 Making decisions and controlling the order in which your code runs makes your code reusable and robust. This section covers the syntax for controlling data flow in JavaScript and its significance when used with Boolean data types
@@ -125,7 +124,7 @@ if (!condition) {
 `if...else` isn't the only way to express decision logic. You can also use something called a ternary operator. The syntax for it looks like this:
 
 ```javascript
-let variable = condition ? <return this if true> : <return this if false>`
+let variable = condition ? <return this if true> : <return this if false>
 ```
 
 Below is a more tangible example:
@@ -160,8 +159,8 @@ if (firstNumber > secondNumber) {
 
 Create a program that is written first with logical operators, and then rewrite it using a ternary expression. What's your preferred syntax?
 
-## 
-Post-Lecture Quiz
+---
+## Post-Lecture Quiz
 [Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12)
 
 ## Review & Self Study
