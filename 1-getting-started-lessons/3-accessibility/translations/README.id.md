@@ -5,7 +5,7 @@
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
+[Kuis pra-kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5?loc=id)
 
 > Kekuatan Web ada dalam universalitasnya. Akses oleh semua orang tanpa memandang disabilitas merupakan aspek penting.
 >
@@ -113,7 +113,7 @@ Sebagai bonus tambahan untuk memastikan situs Anda dapat diakses oleh semua, And
 Bayangkan halaman berikut:
 
 | Produk       | Deskripsi        | Pesan        |
-|--------------|------------------|--------------|
+| ------------ | ---------------- | ------------ |
 | Widget       | [Deskripsi]('#') | [Pesan]('#') |
 | Widget super | [Deskripsi]('#') | [Pesan]('#') |
 
@@ -210,7 +210,7 @@ Ambil HTML ini dan tulis ulang agar dapat diakses semaksimal mungkin, dengan str
 
 ## Kuis Pasca Kuliah
 
-[Kuis pasca kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6)
+[Kuis pasca kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6?loc=id)
 
 ## Review & Belajar Mandiri
 
