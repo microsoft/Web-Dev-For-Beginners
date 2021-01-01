@@ -1054,48 +1054,48 @@
 			},
 			{
 				"id": 21,
-				"title": "Lesson 11 - Typing Game: Pre-Lecture Quiz",
+				"title": "Pelajaran 11 - Game Mengetik: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Event-driven programming is when a user",
+						"questionText": "Pemrograman berbasis peristiwa (Event-driven programming) adalah saat pengguna",
 						"answerOptions": [
 							{
-								"answerText": "clicks on a button",
+								"answerText": "mengklik tombol",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "changes a value",
+								"answerText": "mengubah nilai",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "interacts with the page",
+								"answerText": "berinteraksi dengan halaman",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "any of the above",
+								"answerText": "salah satu di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "In procedural programming, functions are called",
+						"questionText": "Dalam pemrograman prosedural, fungsi dipanggil",
 						"answerOptions": [
 							{
-								"answerText": "any time",
+								"answerText": "kapan saja",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "in a specific order",
+								"answerText": "dalam urutan tertentu",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "left to right",
+								"answerText": "kiri ke kanan",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The universal method exposed in the DOM for registering event handlers is called",
+						"questionText": "Metode universal yang diekspos di DOM untuk mendaftarkan penangan kejadian (event handlers) dipanggil",
 						"answerOptions": [
 							{
 								"answerText": "addEventListener",
@@ -1115,23 +1115,23 @@
 			},
 			{
 				"id": 22,
-				"title": "Lesson 11 - Typing Game: Post-Lecture Quiz",
+				"title": "Pelajaran 11 - Game Mengetik: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Just about anything a user does on a page raises an event",
+						"questionText": "Hampir semua hal yang dilakukan pengguna di halaman akan menimbulkan peristiwa",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Common events include",
+						"questionText": "Event umum termasuk",
 						"answerOptions": [
 							{
 								"answerText": "click_event",
@@ -1152,14 +1152,14 @@
 						]
 					},
 					{
-						"questionText": "You can use anonymous functions to create event handlers",
+						"questionText": "Anda bisa menggunakan fungsi anonim untuk membuat penangan kejadian",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
