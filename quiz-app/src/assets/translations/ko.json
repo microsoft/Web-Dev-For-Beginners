@@ -649,41 +649,41 @@
 				"title": "Lesson 7 - JavaScript 기초 - 배열과 반복: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "To refer to a specific item in an array, you would use a",
+						"questionText": "배열의 특정 항목을 참조하려면, 어떤 것을 쓸 것인가?",
 						"answerOptions": [
 							{
-								"answerText": "square bracket []",
+								"answerText": "대괄호 []",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "index",
+								"answerText": "인덱스 (index)",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "curly braces {}",
+								"answerText": "중괄호 {}",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How do you get the number of items in an array?",
+						"questionText": "배열의 항목 개수는 어떻게 알아낼 수 있는가?",
 						"answerOptions": [
 							{
-								"answerText": "The 'len(array)' method",
+								"answerText": "'len(array)' 메소드",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The property size on the array",
+								"answerText": "배열의 속성 사이즈",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The length property on the array",
+								"answerText": "배열의 속성 길이",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "In JavaScript, indexes start at",
+						"questionText": "JavaScript에서 인덱스 값은 무엇으로 시작되는가?",
 						"answerOptions": [
 							{
 								"answerText": "0",
@@ -706,41 +706,41 @@
 				"title": "Lesson 7 - JavaScript 기초 - 배열과 반복: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "What part of a for-loop would you need to modify to increment its iteration by 5?",
+						"questionText": "for-loop에서 반복 횟수를 5회 늘이려면 어떤부분을 수정해야 하는가?",
 						"answerOptions": [
 							{
-								"answerText": "condition",
+								"answerText": "조건",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "counter",
+								"answerText": "카운터",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "iteration-expression",
+								"answerText": "반복-표현식",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the difference between a while and a for-loop",
+						"questionText": "while과 for-loop의 차이는?",
 						"answerOptions": [
 							{
-								"answerText": "A for-loop has a counter and iteration-expression, where while only has a condition",
+								"answerText": "for-loop에는 카운터와 반복-표현식이 있는 반면, while에는 오직 조건만 있다.",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A while has a counter and iteration-expression where for-loop only has a condition",
+								"answerText": "while에는 카운터와 반복-표현식이 있는 반면, for-loop 오직 조건만 있다",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "They are the same, just an alias for one another",
+								"answerText": "둘다 같다, 별칭만 다를 뿐이다.",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Given the code for (let i=1; i < 5; i++), how many iterations will it perform?",
+						"questionText": "해당 코드 (let i=1; i < 5; i++) 에서 몇 번의 반복이 수행되는가?",
 						"answerOptions": [
 							{
 								"answerText": "5",
@@ -759,44 +759,44 @@
 				"title": "Lesson 8 - Terrarium 프로젝트 - HTML 소개: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "HTML stands for 'HyperText Mockup Language'",
+						"questionText": "HTML은 'HyperText Mockup Language'를 의미한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "All HTML tags need both opening and closing tags",
+						"questionText": "모든 HTML 태그는 열고 닫는 태그 둘다 필요하다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Using semantic markup is most important for",
+						"questionText": "시맨틱 마크업을 사요하는 것은 다음에 가장 중요하다.",
 						"answerOptions": [
 							{
-								"answerText": "code readability",
+								"answerText": "코드 가독성",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "screen readers",
+								"answerText": "스크린 리더",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "maintenance",
+								"answerText": "유지보수",
 								"isCorrect": "false"
 							}
 						]
@@ -808,23 +808,23 @@
 				"title": "Lesson 8 - Terrarium 프로젝트 - HTML 소개: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "Spans and Divs are interchangeable",
+						"questionText": "span 과 div 는 서로 교체가능하다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The head of an HTML doc can contain:",
+						"questionText": "HTML문서의 head 에는 다음이 포함 가능하다.",
 						"answerOptions": [
 							{
-								"answerText": "the title tag",
+								"answerText": "title 태그",
 								"isCorrect": "false"
 							},
 							{
@@ -832,24 +832,24 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "all the above",
+								"answerText": "위 둘다",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can't use deprecated tags in your markup",
+						"questionText": "제외된 태그들은 마크업에 사용할 수 없다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false, but they have been deprecated for good reason",
+								"answerText": "아니요, 하지만 제외된 데에는 좋은 이유가 있다.",
 								"isCorrect": "true"
 							}
 						]
