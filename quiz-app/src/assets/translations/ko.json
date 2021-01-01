@@ -535,27 +535,27 @@
 				"title": "Lesson 6 - JavaScript 기초 - 결정하기: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "The following operator == is called",
+						"questionText": "== 연산자는 다음과 같이 불린다.",
 						"answerOptions": [
 							{
-								"answerText": "Equality",
+								"answerText": "동등 (Euqaility)",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Strict equality",
+								"answerText": "일치 (Strict equality)",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Assignment",
+								"answerText": "할당 (Assignment)",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A comparison in JavaScript returns what type?",
+						"questionText": "JavaScript 비교는 어떤 타입을 리턴하는가?",
 						"answerOptions": [
 							{
-								"answerText": "boolean",
+								"answerText": "불리언",
 								"isCorrect": "true"
 							},
 							{
@@ -563,24 +563,24 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "string",
+								"answerText": "문자열",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The ! symbol in JavaScript means:",
+						"questionText": "JavaScript의 ! 심볼은 다음을 의미한다.",
 						"answerOptions": [
 							{
-								"answerText": "Logical Not",
+								"answerText": "논리 Not",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Important",
+								"answerText": "중요",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Equals",
+								"answerText": "동등",
 								"isCorrect": "false"
 							}
 						]
@@ -592,7 +592,7 @@
 				"title": "Lesson 6 - JavaScript 기초 - 결정하기: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "What would the following code return: '1' == 1",
+						"questionText": "다음 코드는 무엇을 리턴하는가: '1' == 1",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -609,7 +609,7 @@
 						]
 					},
 					{
-						"questionText": "What would the following code return: '1' === 1",
+						"questionText": "다음 코드는 무엇을 리턴하는가: '1' === 1",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -626,7 +626,7 @@
 						]
 					},
 					{
-						"questionText": "Choose the correct operator to express 'or' logic",
+						"questionText": "'or' 로직을 표현하는 연산자를 고르시오.",
 						"answerOptions": [
 							{
 								"answerText": "a | b",
