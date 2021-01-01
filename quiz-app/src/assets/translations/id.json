@@ -112,10 +112,10 @@
 			},
 			{
 				"id": 3,
-				"title": "Lesson 2 - Introduction to GitHub: Pre-Lecture Quiz",
+				"title": "Pelajaran 2 - Pengantar GitHub: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "How do you create a Git repo?",
+						"questionText": "Bagaimana Anda membuat repo Git?",
 						"answerOptions": [
 							{
 								"answerText": "git create",
@@ -132,35 +132,35 @@
 						]
 					},
 					{
-						"questionText": "What does git add do?",
+						"questionText": "Apa fungsi git add?",
 						"answerOptions": [
 							{
-								"answerText": "Commits your code",
+								"answerText": "Commit (menyerahkan) kode Anda",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Adds your files to a staging area for tracking",
+								"answerText": "Menambahkan file Anda ke area pementasan (staging area) untuk dilacak",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Adds your files to GitHub",
+								"answerText": "Menambahkan file Anda ke GitHub",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How do you check if git is installed on your computer?",
+						"questionText": "Bagaimana Anda memeriksa apakah git terinstal di komputer Anda?",
 						"answerOptions": [
 							{
-								"answerText": "type git --version",
+								"answerText": "ketik git --version",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "type git --installed",
+								"answerText": "ketik git --installed",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "type git --init",
+								"answerText": "ketik git --init",
 								"isCorrect": "false"
 							}
 						]
@@ -169,27 +169,27 @@
 			},
 			{
 				"id": 4,
-				"title": "Lesson 2 - Introduction to GitHub: Post-Lecture Quiz",
+				"title": "Pelajaran 2 - Pengantar GitHub: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:",
+						"questionText": "Tempat untuk membandingkan dan mendiskusikan perbedaan yang diperkenalkan pada cabang dengan review, komentar, tes terintegrasi, dan banyak ",
 						"answerOptions": [
 							{
 								"answerText": "GitHub",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A Pull Request",
+								"answerText": "Pull Request (Permintaan Tarik)",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A feature branch",
+								"answerText": "Feature branch (Cabang fitur)",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How would you get all the commits from a remote branch?",
+						"questionText": "Bagaimana Anda mendapatkan semua komit dari cabang remote (jarak jauh)?",
 						"answerOptions": [
 							{
 								"answerText": "git fetch",
@@ -206,7 +206,7 @@
 						]
 					},
 					{
-						"questionText": "How do you switch to a branch?",
+						"questionText": "Bagaimana Anda beralih ke sebuah cabang (branch)?",
 						"answerOptions": [
 							{
 								"answerText": "git switch [branch-name]",
