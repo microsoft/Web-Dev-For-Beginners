@@ -429,48 +429,48 @@
 				"title": "Lesson 5 - JavaScript 기초 - 메소드와 함수: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "What's an argument?",
+						"questionText": "아규먼트란?",
 						"answerOptions": [
 							{
-								"answerText": "It's something you declare in the function definition",
+								"answerText": "함수 정의내 선언되는 것",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's something you pass into a function at invocation time",
+								"answerText": "함수 실행 시 함수로 전달되는 것",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "It's something you have with people you know",
+								"answerText": "아는 사람들과 같이 가지고 있는 것",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A function must return something",
+						"questionText": "함수는 꼭 무언가를 리턴해야한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can name a function anything",
+						"questionText": "함수이름은 어떤 이름이든 될 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "true, but it should be a descriptive name",
+								"answerText": "네, 하지만 설명적인 이름이어야 한다.",
 								"isCorrect": "true"
 							}
 						]
@@ -482,48 +482,48 @@
 				"title": "Lesson 5 - JavaScript 기초 - 메소드와 함수: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "Arguments must be provided for all parameters in a function",
+						"questionText": "아규먼트는 반드시 함수에 모든 파라미터가 제공되어야 한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What does a default value do?",
+						"questionText": "기본 값은 어떤 것을 하는 것인가?",
 						"answerOptions": [
 							{
-								"answerText": "Sets a correct value",
+								"answerText": "올바른 값을 지정하는 것",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Gives a starter value for a parameter so your code still behaves if you omit an argument for it",
+								"answerText": "파라미터의 시작 값을 주는 것, 그래서 아규먼트가 빠져 있을 때도 코드가 동작할 수 있다.",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Has no utility",
+								"answerText": "쓸모없음",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A fat arrow function allows you to",
+						"questionText": "fat arrow(=>) 함수는 다음을 제공한다.",
 						"answerOptions": [
 							{
-								"answerText": "Create heavy functions",
+								"answerText": "무거운 함수를 만드는 것",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Omit the function keyword",
+								"answerText": "`function` 키워드를 생략하는 것",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Create an anonymous function",
+								"answerText": "익명 함수를 만드는 것",
 								"isCorrect": "false"
 							}
 						]
