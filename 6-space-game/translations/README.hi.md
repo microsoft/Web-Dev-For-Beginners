@@ -1,31 +1,31 @@
-# Build a Space Game
+# एक अंतरिक्ष खेल बनाएँ
 
-A space game to teach more advanced JavaScript fundamentals
+अधिक उन्नत जावास्क्रिप्ट बुनियादी बातों को सिखाने के लिए एक अंतरिक्ष खेल
 
-In this lesson you will learn how to build your own space game. If you've ever played the game "Space Invaders", this game has the same idea: to steer a spaceship and fire on monsters that come down from above. Here's what the finished game will look like:
+इस पाठ में आप सीखेंगे कि कैसे अपना खुद का स्पेस गेम बनाएं। यदि आपने कभी "स्पेस इंवेडर्स" गेम खेला है, तो इस गेम का एक ही विचार है: एक अंतरिक्ष यान को चलाने और ऊपर से नीचे आने वाले राक्षसों पर आग लगाने के लिए। यहाँ समाप्त खेल कैसा दिखेगा
 
-![Finished game](images/pewpew.gif)
+![खत्म हुआ खेल](../images/pewpew.gif)
 
-In these six lessons you will learn the following:
+इन छह पाठों में आप निम्नलिखित सीखेंगे:
 
-- **Interact** with the Canvas element to draw things on a screen
-- **Understand** the cartesian coordinate system
-- **Learn** the Pub-Sub pattern to create sound game architecture that's easier to maintain and extend
-- **Leverage** Async/Await to load game resources
-- **Handle** keyboard events
+- एक स्क्रीन पर चीजों को खींचने के लिए कैनवास तत्व के साथ **इनरैक्ट** करें
+- कार्टेशियन समन्वय प्रणाली को **समझें**
+- ध्वनि-गेम आर्किटेक्चर बनाने के लिए पब-सब पैटर्न **सीखें** जो बनाए रखने और बढ़ाने में आसान है
+- खेल संसाधनों को लोड करने के लिए Async/Await का **लाभ उठाएं**
+- कीबोर्ड घटनाओं को **संभालें**
 
-## Overview
+## अवलोकन
 
-- Theory
-   - [Introduction to building games with JavaScript](1-introduction/README.md)
-- Practice
-   - [Drawing to canvas](2-drawing-to-canvas/README.md)
-   - [Moving elements around the screen](3-moving-elements-around/README.md)
-   - [Collision detection](4-collision-detection/README.md)
-   - [Keeping score](5-keeping-score/README.md)
-   - [Ending and restarting the game](6-end-condition/README.md)
+- सिद्धांतजावास्क्रिप्ट के साथ खेल के निर्माण का परिचय
+  - [Introduction to building games with JavaScript](1-introduction/README.md)
+- अभ्यास
+  - [कैनवास पर आरेखण](../2-drawing-to-canvas/README.md)
+  - [स्क्रीन के चारों ओर बढ़ते तत्व](../3-moving-elements-around/README.md)
+  - [टक्कर की पहचान](../4-collision-detection/README.md)
+  - [हिसाब रखना](../5-keeping-score/README.md)
+  - [खेल को समाप्त और पुनः आरंभ करना](../6-end-condition/README.md)
 
-## Credits
+## आभार सूची
 
-The assets used for this came from https://www.kenney.nl/. 
-If you are into building games, these are some seriously good assets, a lot is free and some are paid. 
+इसके लिए इस्तेमाल की जाने वाली असेट् https://www.kenney.nl/ से आई है।
+यदि आप खेल का निर्माण कर रहे हैं, तो ये कुछ गंभीर रूप से अच्छी असेट्स हैं, बहुत कुछ मुफ्त है और कुछ का भुगतान किया जाता है।
