@@ -324,23 +324,23 @@
 			},
 			{
 				"id": 7,
-				"title": "Lesson 4 - JavaScript Basics - Data Types: Pre-Lecture Quiz",
+				"title": "Pelajaran 4 - Dasar-dasar JavaScript - Tipe Data: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Booleans are a data type you can use to test the length of a string",
+						"questionText": "Boolean adalah tipe data yang dapat Anda gunakan untuk menguji panjang string",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The following is an operation you can perform on a string",
+						"questionText": "Berikut ini adalah operasi yang dapat Anda lakukan pada string",
 						"answerOptions": [
 							{
 								"answerText": "concatenation",
@@ -357,14 +357,14 @@
 						]
 					},
 					{
-						"questionText": "== and === are interchangeable",
+						"questionText": "== dan === dapat dipertukarkan",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
@@ -373,27 +373,27 @@
 			},
 			{
 				"id": 8,
-				"title": "Lesson 4 - JavaScript Basics - Data Types: Post-Lecture Quiz",
+				"title": "Pelajaran 4 - Dasar-dasar JavaScript - Tipe Data: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Constants are the same as let and var to declare variables except",
+						"questionText": "Konstanta sama dengan let dan var untuk mendeklarasikan variabel kecuali",
 						"answerOptions": [
 							{
-								"answerText": "Constants must be initialized",
+								"answerText": "Konstanta harus diinisialisasi",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Constants can be altered",
+								"answerText": "Konstanta dapat diubah",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Constants can be reassigned",
+								"answerText": "Konstanta dapat ditetapkan kembali",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Numbers and ____ are JavaScript primitives that handle numeric data",
+						"questionText": "Numbers dan ____ adalah primitif JavaScript yang menangani data numerik",
 						"answerOptions": [
 							{
 								"answerText": "bigint",
@@ -410,14 +410,14 @@
 						]
 					},
 					{
-						"questionText": "Strings can reside between both single and double quotes",
+						"questionText": "String dapat berada di antara tanda kutip tunggal dan ganda",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
