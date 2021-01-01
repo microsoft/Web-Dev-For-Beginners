@@ -8,7 +8,7 @@
 
 これまで培ってきた JavaScript、HTML、CSS のスキルを使ってタイピングゲームを作っていただきます。このゲームでは、プレイヤーにランダムな引用文 ([シャーロック・ホームズ](https://en.wikipedia.org/wiki/Sherlock_Holmes)の名言を使用しています) を提示し、それを正確に入力するのにどれくらいの時間がかかるかを競います。これまでに培った JavaScript、HTML、CSS のスキルを使ってタイピングゲームを作ってみましょう。
 
-![demo](images/demo.gif)
+![demo](../images/demo.gif)
 
 ## 前提条件
 
