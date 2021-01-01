@@ -4,7 +4,8 @@
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Pra-Kuliah
-[Kuis pra-kuliah](.github/pre-lecture-quiz.id.md)
+
+[Kuis pra-kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
 
 > Kekuatan Web ada dalam universalitasnya. Akses oleh semua orang tanpa memandang disabilitas merupakan aspek penting.
 >
@@ -208,7 +209,8 @@ Ambil HTML ini dan tulis ulang agar dapat diakses semaksimal mungkin, dengan str
 ```
 
 ## Kuis Pasca Kuliah
-[Kuis pasca kuliah](.github/post-lecture-quiz.id.md)
+
+[Kuis pasca kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6)
 
 ## Review & Belajar Mandiri
 
