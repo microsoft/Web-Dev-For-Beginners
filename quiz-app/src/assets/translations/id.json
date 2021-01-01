@@ -226,10 +226,10 @@
 			},
 			{
 				"id": 5,
-				"title": "Lesson 3 - Creating Accessible Webpages: Pre-Lecture Quiz",
+				"title": "Pelajaran 3 - Membuat Halaman Web yang Dapat Diakses: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "An accessible web site can be checked in which browser tool",
+						"questionText": "Situs web yang dapat diakses dapat diperiksa di alat browser mana",
 						"answerOptions": [
 							{
 								"answerText": "Lighthouse",
@@ -246,27 +246,27 @@
 						]
 					},
 					{
-						"questionText": "You need a physical screen reader to test accessibility for visually-impaired users",
+						"questionText": "Anda memerlukan pembaca layar fisik untuk menguji aksesibilitas bagi pengguna dengan gangguan penglihatan",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Accessibility is only important on government web sites",
+						"questionText": "Aksesibilitas hanya penting di situs web pemerintah",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
@@ -275,47 +275,47 @@
 			},
 			{
 				"id": 6,
-				"title": "Lesson 3 - Creating Accessible Webpages: Post-Lecture Quiz",
+				"title": "Pelajaran 3 - Membuat Halaman Web yang Dapat Diakses: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Lighthouse only checks for accessibility problems",
+						"questionText": "Lighthouse hanya memeriksa masalah aksesibilitas",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Color-safe palettes help people with",
+						"questionText": "Palet warna aman membantu orang dengan",
 						"answerOptions": [
 							{
-								"answerText": "color-blindness",
+								"answerText": "buta warna",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "visual impairments",
+								"answerText": "gangguan penglihatan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "both the above",
+								"answerText": "keduanya di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Descriptive links are vital for accessible web sites",
+						"questionText": "Tautan deskriptif sangat penting untuk situs web yang dapat diakses",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
