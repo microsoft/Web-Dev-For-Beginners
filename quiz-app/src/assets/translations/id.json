@@ -1168,27 +1168,27 @@
 			},
 			{
 				"id": 23,
-				"title": "Lesson 12 - Browser Extension Project - All about Browsers: Pre-Lecture Quiz",
+				"title": "Pelajaran 12 - Proyek Ekstensi Browser - Semua tentang Browser: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "You can get browser extensions from",
+						"questionText": "Anda bisa mendapatkan ekstensi browser dari",
 						"answerOptions": [
 							{
 								"answerText": "WalMart",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The browser's extension store",
+								"answerText": "Toko ekstensi browser",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "The App store",
+								"answerText": "Toko Aplikasi",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "NPM stands for",
+						"questionText": "NPM adalah singkatan dari",
 						"answerOptions": [
 							{
 								"answerText": "Node Package Manager",
@@ -1205,14 +1205,14 @@
 						]
 					},
 					{
-						"questionText": "Your browser can serve web pages both securely and insecurely",
+						"questionText": "Browser Anda dapat menyajikan halaman web dengan aman dan tidak aman",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
@@ -1221,10 +1221,10 @@
 			},
 			{
 				"id": 24,
-				"title": "Lesson 12 -  Browser Extension Project - All about Browsers: Post-Lecture Quiz",
+				"title": "Pelajaran 12 - Proyek Ekstensi Browser - Semua tentang Browser: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "The World Wide Web was invented by",
+						"questionText": "World Wide Web ditemukan oleh",
 						"answerOptions": [
 							{
 								"answerText": "Tom Barnard-Loft",
@@ -1241,7 +1241,7 @@
 						]
 					},
 					{
-						"questionText": "The first browser was called",
+						"questionText": "Browser pertama dipanggil",
 						"answerOptions": [
 							{
 								"answerText": "WorldWideWeb",
@@ -1258,14 +1258,14 @@
 						]
 					},
 					{
-						"questionText": "Browsers can store a user's browsing history",
+						"questionText": "Browser dapat menyimpan riwayat penjelajahan pengguna",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
@@ -1274,10 +1274,10 @@
 			},
 			{
 				"id": 25,
-				"title": "Lesson 13 - Browser Extension Project - Call an API, use Local Storage: Pre-Lecture Quiz",
+				"title": "Pelajaran 13 - Proyek Ekstensi Browser - Panggil API, gunakan Penyimpanan Lokal: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "APIs stand for",
+						"questionText": "API singkatan dari",
 						"answerOptions": [
 							{
 								"answerText": "Application Programming Interfaces",
@@ -1294,31 +1294,31 @@
 						]
 					},
 					{
-						"questionText": "Use an API to interact with",
+						"questionText": "Menggunakan API untuk berinteraksi dengan",
 						"answerOptions": [
 							{
-								"answerText": "Another web-connected asset",
+								"answerText": "Aset lain yang terhubung ke web",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A database",
+								"answerText": "Sebuah database",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Either of the above",
+								"answerText": "Salah satu dari yang di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Anyone can create an API",
+						"questionText": "Siapapun dapat membuat API",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
@@ -1327,36 +1327,36 @@
 			},
 			{
 				"id": 26,
-				"title": "Lesson 13 - Browser Extension Project - Call an API, use Local Storage: Post-Lecture Quiz",
+				"title": "Pelajaran 13 - Proyek Ekstensi Browser - Panggil API, gunakan Penyimpanan Lokal: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "LocalStorage is cleared every time you close the browser window",
+						"questionText": "LocalStorage dihapus setiap kali Anda menutup jendela browser",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The main browser window controls a browser's extension's LocalStorage",
+						"questionText": "Jendela browser utama mengontrol Penyimpanan Lokal ekstensi browser",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "REST in an API context stands for",
+						"questionText": "REST dalam konteks API adalah singkatan dari",
 						"answerOptions": [
 							{
 								"answerText": "Representational State Transfer",
@@ -1376,44 +1376,44 @@
 			},
 			{
 				"id": 27,
-				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Pre-Lecture Quiz",
+				"title": "Pelajaran 14 - Proyek Ekstensi Browser - Pelajari tentang Tugas Latar Belakang dan Kinerja: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Test the performance of your app",
+						"questionText": "Uji performa aplikasi Anda",
 						"answerOptions": [
 							{
-								"answerText": "Using the browser's tools",
+								"answerText": "Menggunakan alat dari peramban",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Using a separate software package",
+								"answerText": "Menggunakan paket perangkat lunak terpisah",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Manually",
+								"answerText": "Secara manual",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The 'performance' of a web site is an analysis of",
+						"questionText": "'Kinerja' situs web adalah analisis dari",
 						"answerOptions": [
 							{
-								"answerText": "How fast it loads",
+								"answerText": "Seberapa cepat itu dimuat",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "How fast the code on it runs",
+								"answerText": "Seberapa cepat kodenya berjalan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Both of the above",
+								"answerText": "Kedua di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Overall, the 'weight' of web pages over the past few years has",
+						"questionText": "Secara keseluruhan, 'bobot' halaman web selama beberapa tahun terakhir telah",
 						"answerOptions": [
 							{
 								"answerText": "gotten lighter",
@@ -1433,51 +1433,51 @@
 			},
 			{
 				"id": 28,
-				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Post-Lecture Quiz",
+				"title": "Pelajaran 14 - Proyek Ekstensi Browser - Pelajari tentang Tugas Latar Belakang dan Kinerja: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "To get a better view of your site's performance, clear its cache and reload in the profiler",
+						"questionText": "Untuk mendapatkan gambaran yang lebih baik tentang kinerja situs Anda, kosongkan cache-nya dan muat ulang di profiler",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Browser extensions are inherently performant",
+						"questionText": "Ekstensi browser pada dasarnya memiliki performa yang baik",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Analyze the following for performance bottlenecks",
+						"questionText": "Analisis hal-hal berikut untuk kemacetan kinerja",
 						"answerOptions": [
 							{
 								"answerText": "DOM traversals",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "JavaScript optimizations",
+								"answerText": "Pengoptimalan JavaScript",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Asset management",
+								"answerText": "Manajemen aset",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All the above",
+								"answerText": "Semua yang di atas",
 								"isCorrect": "true"
 							}
 						]
