@@ -930,7 +930,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "아니요, 하지만 보기 좋게 만드려면 CSS 가 필요할 겁니다.",
+								"answerText": "아니요, 하지만 보기 좋게 만드려면 CSS 가 필요할 것이다.",
 								"isCorrect": "true"
 							}
 						]
@@ -959,40 +959,40 @@
 				"title": "Lesson 10 - Terrarium 프로젝트 - DOM 조작과 클로저: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "The DOM stands for 'Document Object Management'",
+						"questionText": "DOM은 'Document Object Management'를 의미한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The DOM can be thought of as a tree",
+						"questionText": "DOM은 tree 형태로 여겨질 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Using the Web API, you can manipulate the DOM",
+						"questionText": "Web API를 사용해서 DOM을 조작할 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
@@ -1004,48 +1004,48 @@
 				"title": "Lesson 10 - Terrarium 프로젝트 - DOM 조작과 클로저: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "The DOM is a model to represent a document on the web",
+						"questionText": "DOM은 웹에서 문서를 표현하기 위한 모델이다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Use JavaScript closures to perform the following:",
+						"questionText": "다음을 수행하기 위해 JavaScript 클로저를 사용해야 한다.",
 						"answerOptions": [
 							{
-								"answerText": "write functions within functions",
+								"answerText": "함수 내 함수 작성",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "enclose the DOM",
+								"answerText": "DOM 을 둘러싸기",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "close script blocks",
+								"answerText": "스크립트 블럭 닫기",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Fill in the blank: Closures are useful when one or more functions need to access an outer function's...",
+						"questionText": "빈칸 채우기: 클로저는 하나 혹은 여러 함수가 함수 밖 ___을(를) 접근하는데 유용하다.",
 						"answerOptions": [
 							{
-								"answerText": "arrays",
+								"answerText": "배열",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "scope",
+								"answerText": "범위",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "functions",
+								"answerText": "함수",
 								"isCorrect": "false"
 							}
 						]
