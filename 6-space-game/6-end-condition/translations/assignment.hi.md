@@ -1,8 +1,8 @@
-# Build a Sample Game
+# एक नमूना खेल बनाएँ
 
-## Instructions
+## अनुदेश
 
-Try building a small game where you practice on different end conditions. Vary between getting a number of points, the hero loses all lives or all monsters are defeated. Build something simple like a console based adventure game. Use the below game flow as inspiration:
+एक छोटा गेम बनाने की कोशिश करें जहां आप विभिन्न अंत स्थितियों पर अभ्यास करते हैं। कई अंकों के बीच भिन्न, नायक सभी जीवन खो देता है या सभी राक्षसों को हराया जाता है। कंसोल आधारित साहसिक गेम की तरह कुछ सरल बनाएं। प्रेरणा के रूप में नीचे के खेल प्रवाह का उपयोग करें:
 
 ```
 Hero> Strikes with broadsword - orc takes 3p damage
@@ -12,8 +12,8 @@ Game> Orc is defeated - Hero collects 2 coins
 Game> ****No more monsters, you have conquered the evil fortress****
 ```
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary              | Adequate                    | Needs Improvement          |
-| -------- | ---------------------- | --------------------------- | -------------------------- |
-|          | full game is presented | game is partially presented | partial game contains bugs |
+| मानदंड | उदाहरणात्मक          | पर्याप्त                              | सुधार की जरूरत              |
+| ------ | -------------------- | ------------------------------------- | --------------------------- |
+|        | पूरा खेल प्रस्तुत है | खेल आंशिक रूप से प्रस्तुत किया गया है | आंशिक खेल में बग्स होते हैं |

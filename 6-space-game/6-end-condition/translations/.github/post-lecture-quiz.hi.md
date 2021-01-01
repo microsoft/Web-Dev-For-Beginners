@@ -1,12 +1,12 @@
-*Complete this quiz after the lesson by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके पाठ के बाद इस प्रश्नोत्तरी को पूरा करें._
 
-1. What is a good pattern to use when a game end condition has been met?
+1. जब गेम एंड कंडीशन पूरी हो गई हो तो उपयोग करने के लिए एक अच्छा पैटर्न क्या है?
 
-- [ ] Display a suitable message
-- [ ] Quit the game
-- [ ] Display a suitable message, offer the player to restart, and display what key to hit for that action
+- [ ] एक उपयुक्त संदेश प्रदर्शित करें
+- [ ] खेल से बाहर निकलें
+- [ ] एक उपयुक्त संदेश प्रदर्शित करें, खिलाड़ी को पुनः आरंभ करने की पेशकश करें, और प्रदर्शित करें कि उस कार्रवाई के लिए क्या की है
 
-1. You should offer a restart only when the game has ended
+1. जब खेल समाप्त हो गया हो तब ही आपको पुनः आरंभ करना चाहिए
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
