@@ -532,27 +532,27 @@
 			},
 			{
 				"id": 11,
-				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Pre-Lecture Quiz",
+				"title": "Pelajaran 6 - Dasar-dasar JavaScript - Membuat Keputusan: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "The following operator == is called",
+						"questionText": "Operator berikut == dipanggil",
 						"answerOptions": [
 							{
-								"answerText": "Equality",
+								"answerText": "Kesetaraan",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Strict equality",
+								"answerText": "Kesetaraan yang ketat",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Assignment",
+								"answerText": "Penugasan",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A comparison in JavaScript returns what type?",
+						"questionText": "Perbandingan dalam JavaScript mengembalikan tipe apa?",
 						"answerOptions": [
 							{
 								"answerText": "boolean",
@@ -569,18 +569,18 @@
 						]
 					},
 					{
-						"questionText": "The ! symbol in JavaScript means:",
+						"questionText": "Simbol ! dalam JavaScript artinya:",
 						"answerOptions": [
 							{
-								"answerText": "Logical Not",
+								"answerText": "Logika Not",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Important",
+								"answerText": "Penting",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Equals",
+								"answerText": "Sama",
 								"isCorrect": "false"
 							}
 						]
@@ -589,10 +589,10 @@
 			},
 			{
 				"id": 12,
-				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Post-Lecture Quiz",
+				"title": "Pelajaran 6 - Dasar-dasar JavaScript - Membuat Keputusan: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "What would the following code return: '1' == 1",
+						"questionText": "Apa yang akan dikembalikan kode berikut: '1' == 1",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -609,7 +609,7 @@
 						]
 					},
 					{
-						"questionText": "What would the following code return: '1' === 1",
+						"questionText": "Apa yang akan dikembalikan kode berikut: '1' === 1",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -626,7 +626,7 @@
 						]
 					},
 					{
-						"questionText": "Choose the correct operator to express 'or' logic",
+						"questionText": "Pilih operator yang benar untuk mengekspresikan logika _or_",
 						"answerOptions": [
 							{
 								"answerText": "a | b",
