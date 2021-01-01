@@ -2094,47 +2094,47 @@
 			},
 			{
 				"id": 41,
-				"title": "Lesson 21 - Bank Project - HTML Templates and Routes in a Web App: Pre-Lecture Quiz",
+				"title": "Pelajaran 21 - Proyek Bank - Template HTML dan Rute di Aplikasi Web: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "You need to create multiple HTML files to display different screens in a web app",
+						"questionText": "Anda perlu membuat beberapa file HTML untuk menampilkan layar yang berbeda di web app",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can store and persist data locally in a web app",
+						"questionText": "Anda dapat menyimpan dan menyimpan data secara lokal di web app",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the best data provider for a web app?",
+						"questionText": "Apa penyedia data terbaik untuk web app?",
 						"answerOptions": [
 							{
-								"answerText": "A local database",
+								"answerText": "Database lokal",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A JavaScript object",
+								"answerText": "Objek JavaScript",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A server with a JSON API",
+								"answerText": "Server dengan JSON API",
 								"isCorrect": "true"
 							}
 						]
@@ -2143,23 +2143,23 @@
 			},
 			{
 				"id": 42,
-				"title": "Lesson 21 - Bank Project HTML Templates and Routes in a Web App: Post-Lecture Quiz",
+				"title": "Pelajaran 21 - Template dan Rute HTML Proyek Bank di Aplikasi Web: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "HTML templates are part of the DOM by default",
+						"questionText": "Template HTML adalah bagian dari DOM secara default",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Which part of the URL is needed for routing?",
+						"questionText": "Bagian mana dari URL yang diperlukan untuk perutean (routing)?",
 						"answerOptions": [
 							{
 								"answerText": "window.location.pathname",
@@ -2176,7 +2176,7 @@
 						]
 					},
 					{
-						"questionText": "What's the name of the event triggered when calling the history.pushState() function?",
+						"questionText": "Apa nama peristiwa yang dipicu saat memanggil fungsi history.pushState()?",
 						"answerOptions": [
 							{
 								"answerText": "pushstate",
@@ -2196,43 +2196,43 @@
 			},
 			{
 				"id": 43,
-				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Pre-Lecture Quiz",
+				"title": "Pelajaran 22 - Proyek Bank - Buat Formulir Login dan Pendaftaran: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "HTML forms allow to send user input to a server without using JavaScript",
+						"questionText": "Formulir HTML memungkinkan untuk mengirim input pengguna ke server tanpa menggunakan JavaScript",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "<label> elements are mandatory for every form control",
+						"questionText": "Elemen <label> wajib untuk setiap kontrol formulir (form control)",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "It is secure to send form data to a server over HTTP",
+						"questionText": "Apakah aman untuk mengirim data formulir ke server melalui HTTP",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
@@ -2241,30 +2241,30 @@
 			},
 			{
 				"id": 44,
-				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Post-Lecture Quiz",
+				"title": "Pelajaran 22 - Proyek Bank - Buat Formulir Login dan Pendaftaran: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Using <label> elements in forms is only for making the form pretty",
+						"questionText": "Menggunakan elemen <label> dalam formulir hanya untuk membuat formulir cantik",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How can you define how a form is sent to the server?",
+						"questionText": "Bagaimana Anda dapat menentukan bagaimana formulir dikirim ke server?",
 						"answerOptions": [
 							{
-								"answerText": "using the action attribute",
+								"answerText": "menggunakan atribut action",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "using the method attribute",
+								"answerText": "menggunakan atribut method",
 								"isCorrect": "true"
 							},
 							{
@@ -2274,7 +2274,7 @@
 						]
 					},
 					{
-						"questionText": "Which attribute can you use to set the maximum size of a text <input>?",
+						"questionText": "Atribut mana yang dapat Anda gunakan untuk menyetel ukuran maksimum teks <input>?",
 						"answerOptions": [
 							{
 								"answerText": "max",
@@ -2294,23 +2294,23 @@
 			},
 			{
 				"id": 45,
-				"title": "Lesson 23 - Bank Project - Methods of Fetching and Using Data: Pre-Lecture Quiz",
+				"title": "Pelajaran 23 - Proyek Bank - Metode Mengambil dan Menggunakan Data: Kuis Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "You can fetch data from a server synchronously in a browser",
+						"questionText": "Anda dapat mengambil data dari server secara sinkron (synchronously) di browser",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the most common format used to exchange data on the web?",
+						"questionText": "Apa format paling umum yang digunakan untuk bertukar data di web?",
 						"answerOptions": [
 							{
 								"answerText": "HTML",
@@ -2327,14 +2327,14 @@
 						]
 					},
 					{
-						"questionText": "There's no way to prevent a web page from accessing a public server API",
+						"questionText": "Tidak ada cara untuk mencegah halaman web mengakses API server publik",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
@@ -2343,40 +2343,40 @@
 			},
 			{
 				"id": 46,
-				"title": "Lesson 23 - Bank Project Methods of Fetching and Using Data: Post-Lecture Quiz",
+				"title": "Pelajaran 23 - Proyek Bank - Metode Mengambil dan Menggunakan Data: Kuis Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "In a Single-page application, the HTML is loaded once and never updated",
+						"questionText": "Dalam aplikasi satu halaman (Single-page application), HTML dimuat sekali dan tidak pernah diperbarui",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Why is it important to not trust data coming from user input?",
+						"questionText": "Mengapa penting untuk tidak memercayai data yang berasal dari input pengguna?",
 						"answerOptions": [
 							{
-								"answerText": "because using special characters can make the UI ugly.",
+								"answerText": "karena menggunakan karakter khusus bisa membuat UI menjadi jelek.",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "because it can contain non-sense or offensive words.",
+								"answerText": "karena dapat berisi kata-kata yang tidak masuk akal atau menyinggung.",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "because it can be used as vector of attack to execute malicious scripts.",
+								"answerText": "karena dapat digunakan sebagai vektor serangan untuk mengeksekusi skrip berbahaya.",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the API name for sending asynchronous HTTP requests to a web server?",
+						"questionText": "Apa nama API untuk mengirimkan permintaan HTTP asinkron ke server web?",
 						"answerOptions": [
 							{
 								"answerText": "request()",
@@ -2396,55 +2396,55 @@
 			},
 			{
 				"id": 47,
-				"title": "Lesson 24 - Bank Project - Concepts of State Management: Pre-Lecture Quiz",
+				"title": "Pelajaran 24 - Proyek Bank - Konsep Manajemen Negara: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "What is an immutable object?",
+						"questionText": "Apa itu objek yang tidak bisa diubah (immutable object)?",
 						"answerOptions": [
 							{
-								"answerText": "An object defined as a constant",
+								"answerText": "Objek yang didefinisikan sebagai konstanta",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "An object that cannot be modified after it's created",
+								"answerText": "Objek yang tidak dapat diubah setelah dibuat",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A copy of an existing object",
+								"answerText": "Salinan objek yang sudah ada",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What benefit(s) do you get from using state management?",
+						"questionText": "Manfaat apa yang Anda dapatkan dari penggunaan state management?",
 						"answerOptions": [
 							{
-								"answerText": "You can keep track of every place the state is updated",
+								"answerText": "Anda dapat melacak setiap tempat yang statusnya diperbarui",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's easier to debug the code",
+								"answerText": "Lebih mudah untuk men-debug kode",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All of the above",
+								"answerText": "Semua yang di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the best way to persist critical user data across different sessions?",
+						"questionText": "Apa cara terbaik untuk mempertahankan data pengguna penting di berbagai sesi?",
 						"answerOptions": [
 							{
-								"answerText": "Using files",
+								"answerText": "Menggunakan file",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Using the browser's localStorage API",
+								"answerText": "Menggunakan localStorage API browser",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "In a database behind a server API",
+								"answerText": "Dalam database di belakang API server",
 								"isCorrect": "true"
 							}
 						]
@@ -2453,51 +2453,51 @@
 			},
 			{
 				"id": 48,
-				"title": "Lesson 24 - Bank Project - Concepts of State Management: Post-Lecture Quiz",
+				"title": "Pelajaran 24 - Proyek Bank - Konsep Manajemen Negara: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "What do you think state management means?",
+						"questionText": "Menurut Anda apa artinya state management?",
 						"answerOptions": [
 							{
-								"answerText": "Enforcement of law & order",
+								"answerText": "Penegakan hukum & ketertiban",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Logging the user interface state over time",
+								"answerText": "Mencatat status antarmuka pengguna dari waktu ke waktu",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Keeping your app data flows clean and synchronizing the user interface with data",
+								"answerText": "Menjaga agar data aplikasi Anda tetap bersih dan menyinkronkan antarmuka pengguna dengan data",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How can you keep track of the user session state?",
+						"questionText": "Bagaimana Anda dapat melacak status sesi pengguna?",
 						"answerOptions": [
 							{
-								"answerText": "HTTP cookies",
+								"answerText": "Cookie HTTP",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Local or session storage",
+								"answerText": "Penyimpanan lokal atau sesi",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All of the above",
+								"answerText": "Semua yang di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Mutating an object is always the best way to update it",
+						"questionText": "Mutasi objek selalu merupakan cara terbaik untuk memperbaruinya",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
