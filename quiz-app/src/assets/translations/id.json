@@ -426,51 +426,51 @@
 			},
 			{
 				"id": 9,
-				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Pre-Lecture Quiz",
+				"title": "Pelajaran 5 - Dasar-Dasar JavaScript - Metode dan Fungsi: Kuis Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "What's an argument?",
+						"questionText": "Apa itu argumen?",
 						"answerOptions": [
 							{
-								"answerText": "It's something you declare in the function definition",
+								"answerText": "Itu adalah sesuatu yang Anda deklarasikan dalam definisi fungsi",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's something you pass into a function at invocation time",
+								"answerText": "Itu adalah sesuatu yang Anda berikan ke suatu fungsi pada waktu pemanggilan",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "It's something you have with people you know",
+								"answerText": "Itu adalah sesuatu yang Anda miliki dengan orang yang Anda kenal",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A function must return something",
+						"questionText": "Suatu fungsi harus mengembalikan sesuatu",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can name a function anything",
+						"questionText": "Anda dapat memberi nama fungsi apa saja",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "true, but it should be a descriptive name",
+								"answerText": "benar, tetapi harus merupakan nama deskriptif",
 								"isCorrect": "true"
 							}
 						]
@@ -479,51 +479,51 @@
 			},
 			{
 				"id": 10,
-				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Post-Lecture Quiz",
+				"title": "Pelajaran 5 - Dasar-Dasar JavaScript - Metode dan Fungsi: Kuis Pasca-Kuliah",
 				"quiz": [
 					{
-						"questionText": "Arguments must be provided for all parameters in a function",
+						"questionText": "Argumen harus disediakan untuk semua parameter dalam suatu fungsi",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What does a default value do?",
+						"questionText": "Apa fungsi nilai default?",
 						"answerOptions": [
 							{
-								"answerText": "Sets a correct value",
+								"answerText": "Menetapkan nilai yang benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Gives a starter value for a parameter so your code still behaves if you omit an argument for it",
+								"answerText": "Memberikan nilai awal untuk parameter sehingga kode Anda tetap berfungsi jika Anda menghilangkan argumen untuk itu",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Has no utility",
+								"answerText": "Tidak memiliki utilitas",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A fat arrow function allows you to",
+						"questionText": "Fungsi panah gemuk memungkinkan Anda melakukan",
 						"answerOptions": [
 							{
-								"answerText": "Create heavy functions",
+								"answerText": "Ciptakan fungsi yang berat",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Omit the function keyword",
+								"answerText": "Hilangkan kata kunci function",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Create an anonymous function",
+								"answerText": "Membuat fungsi anonim",
 								"isCorrect": "false"
 							}
 						]
