@@ -1057,45 +1057,45 @@
 				"title": "Lesson 11 - 타이핑 게임: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "Event-driven programming is when a user",
+						"questionText": "이벤트-주도 프로그래밍은 사용자가 ___ 하는 경우에 사용된다.",
 						"answerOptions": [
 							{
-								"answerText": "clicks on a button",
+								"answerText": "버튼 클릭",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "changes a value",
+								"answerText": "값 변경",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "interacts with the page",
+								"answerText": "페이지 상호작용",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "any of the above",
+								"answerText": "위 모든 경우",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "In procedural programming, functions are called",
+						"questionText": "절차형 프로그래밍에서 함수는 ___ 불려진다.",
 						"answerOptions": [
 							{
-								"answerText": "any time",
+								"answerText": "언제든",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "in a specific order",
+								"answerText": "특정 순서대로",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "left to right",
+								"answerText": "왼쪽에서 오른쪽으로",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The universal method exposed in the DOM for registering event handlers is called",
+						"questionText": "이벤트 핸들러에 등록되기 위해 돔에서 제공하는 메소드는?",
 						"answerOptions": [
 							{
 								"answerText": "addEventListener",
@@ -1118,48 +1118,48 @@
 				"title": "Lesson 11 - 타이핑 게임: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "Just about anything a user does on a page raises an event",
+						"questionText": "유저가 페이지서 하는 거의 모든것은 이벤트를 발생시킨다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Common events include",
+						"questionText": "일반적인 이벤트는 다음을 포함한다.",
 						"answerOptions": [
 							{
-								"answerText": "click_event",
+								"answerText": "클릭 이벤트",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "select_event",
+								"answerText": "선택 이벤트",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "input_event",
+								"answerText": "입력 이벤트",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "all of these",
+								"answerText": "위 모든 경우",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can use anonymous functions to create event handlers",
+						"questionText": "익명 함수를 이벤트 핸들러를 만드는데 사용할 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
@@ -1171,24 +1171,24 @@
 				"title": "Lesson 12 - 브라우저 확장 프로젝트 - 브라우저에 대한 모든 것: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "You can get browser extensions from",
+						"questionText": "브라우저 확장 프로그램은 어디로부터 얻을 수 있는가?",
 						"answerOptions": [
 							{
-								"answerText": "WalMart",
+								"answerText": "월마트",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The browser's extension store",
+								"answerText": "브라우저의 확장 프로그램 스토어",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "The App store",
+								"answerText": "앱 스토어",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "NPM stands for",
+						"questionText": "NPM 은 다음을 의미한다.",
 						"answerOptions": [
 							{
 								"answerText": "Node Package Manager",
@@ -1205,14 +1205,14 @@
 						]
 					},
 					{
-						"questionText": "Your browser can serve web pages both securely and insecurely",
+						"questionText": "브라우저는 웹페이지를 안정하게도, 불안정하게도 제공할 수 있다. (둘 다 가능)",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
@@ -1224,7 +1224,7 @@
 				"title": "Lesson 12 - 브라우저 확장 프로젝트 - 브라우저에 대한 모든 것: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "The World Wide Web was invented by",
+						"questionText": "World Wide Web 은 누가 발명했는가?",
 						"answerOptions": [
 							{
 								"answerText": "Tom Barnard-Loft",
@@ -1241,7 +1241,7 @@
 						]
 					},
 					{
-						"questionText": "The first browser was called",
+						"questionText": "첫 번째 브라우저는 어떻게 불렸는가?",
 						"answerOptions": [
 							{
 								"answerText": "WorldWideWeb",
@@ -1258,14 +1258,14 @@
 						]
 					},
 					{
-						"questionText": "Browsers can store a user's browsing history",
+						"questionText": "브라우저는 사용자의 검색 기록을 저장할 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
@@ -1277,7 +1277,7 @@
 				"title": "Lesson 13 - 브라우저 확장 프로젝트 - 로컬 저장소를 사용한 API 호출: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "APIs stand for",
+						"questionText": "API는 다음을 의미한다.",
 						"answerOptions": [
 							{
 								"answerText": "Application Programming Interfaces",
@@ -1294,31 +1294,31 @@
 						]
 					},
 					{
-						"questionText": "Use an API to interact with",
+						"questionText": "API는 다음과 상호작용하기 위해 사용해야 한다.",
 						"answerOptions": [
 							{
-								"answerText": "Another web-connected asset",
+								"answerText": "웹으로 연결된 다른 에셋",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A database",
+								"answerText": "데이터베이스",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Either of the above",
+								"answerText": "위의 둘 다",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Anyone can create an API",
+						"questionText": "누구든 API를 만들 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
@@ -1330,33 +1330,33 @@
 				"title": "Lesson 13 - 브라우저 확장 프로젝트 - 로컬 저장소를 사용한 API 호출: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "LocalStorage is cleared every time you close the browser window",
+						"questionText": "로컬 스토리지는 브라우저 윈도를 닫을 때 마다 비워진다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The main browser window controls a browser's extension's LocalStorage",
+						"questionText": "메인 브라우저 윈도우는 브라우저 확장 프로그램의 로컬 스토리지를 컨트롤한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "REST in an API context stands for",
+						"questionText": "API에서의 REST는 다음을 의미한다.",
 						"answerOptions": [
 							{
 								"answerText": "Representational State Transfer",
