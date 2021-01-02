@@ -226,47 +226,47 @@
 			},
 			{
 				"id": 5,
-				"title": "Lesson 3 - Creating Accessible Webpages: Pre-Lecture Quiz",
+				"title": "पाठ 3 - सुलभ वेबपेज बनाना: प्री-लेक्चर क्विज़",
 				"quiz": [
 					{
-						"questionText": "An accessible web site can be checked in which browser tool",
+						"questionText": "एक सुलभ वेब साइट की जाँच कॉनसी ब्राउज़र टूल मे की सकती है",
 						"answerOptions": [
 							{
-								"answerText": "Lighthouse",
+								"answerText": "लाइटहाउस",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Deckhouse",
+								"answerText": "डेकहाउस",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Cleanhouse",
-								"isCorrect": "true"
-							}
-						]
-					},
-					{
-						"questionText": "You need a physical screen reader to test accessibility for visually-impaired users",
-						"answerOptions": [
-							{
-								"answerText": "true",
-								"isCorrect": "false"
-							},
-							{
-								"answerText": "false",
+								"answerText": "क्लीनहाउस",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Accessibility is only important on government web sites",
+						"questionText": "दृष्टिहीन उपयोगकर्ताओं के लिए पहुँच क्षमता का परीक्षण करने के लिए आपको एक भौतिक स्क्रीन रीडर की आवश्यकता होती है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "सरकारी वेब साइटों पर पहुंच केवल महत्वपूर्ण है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
@@ -275,47 +275,47 @@
 			},
 			{
 				"id": 6,
-				"title": "Lesson 3 - Creating Accessible Webpages: Post-Lecture Quiz",
+				"title": "पाठ 3 - एक्सेसिबल वेबपेज बनाना: पोस्ट-लेक्चर क्विज़",
 				"quiz": [
 					{
-						"questionText": "Lighthouse only checks for accessibility problems",
+						"questionText": "लाइटहाउस केवल सुलभता की समस्याओं की जाँच करता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Color-safe palettes help people with",
+						"questionText": "रंग-सुरक्षित पट्टियाँ कौनसे लोगोकि मदद करती हैं",
 						"answerOptions": [
 							{
-								"answerText": "color-blindness",
+								"answerText": "वर्णांधता (color-blindness)",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "visual impairments",
+								"answerText": "दृष्टिदोष (visual impairments)",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "both the above",
+								"answerText": "उपरोक्त दोनों",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Descriptive links are vital for accessible web sites",
+						"questionText": "सुलभ वेब साइटों के लिए वर्णनात्मक लिंक महत्वपूर्ण हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
