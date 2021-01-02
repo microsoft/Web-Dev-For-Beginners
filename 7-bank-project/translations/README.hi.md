@@ -1,21 +1,21 @@
-# :dollar: Build a Bank
+# : डॉलर: एक बैंक बनाएँ
 
-In this project, you'll learn how to build a fictional bank. These lessons include instructions on how to layout a web app and provide routes, build forms, manage state, and fetch data from an API from which you can fetch the bank's data.
+इस परियोजना में, आप सीखेंगे कि एक काल्पनिक बैंक कैसे बनाया जाए। इन पाठों में एक वेब ऐप को लेआउट करने और मार्ग प्रदान करने, प्रपत्र बनाने, राज्य का प्रबंधन करने और एपीआई से डेटा प्राप्त करने के निर्देश शामिल हैं, जिनसे आप बैंक का डेटा प्राप्त कर सकते हैं।.
 
-| ![Screen1](images/screen1.png) | ![Screen2](images/screen2.png) |
-|--------------------------------|--------------------------------|
+| ![स्क्रीन १](../images/screen1.png) | ![स्क्रीन २](../images/screen2.png) |
+| ----------------------------------- | ----------------------------------- |
 
-## Lessons
+## पाठ
 
-1. [HTML Templates and Routes in a Web App](1-template-route/README.md)
-2. [Build a Login and Registration Form](2-forms/README.md)
-3. [Methods of Fetching and Using Data](3-data/README.md)
-4. [Concepts of State Management](4-state-management/README.md)
+1. [HTML टेम्पलेट्स और वेब ऐप में रूट](../1-template-route/README.md)
+2. [एक लॉगिन और पंजीकरण फॉर्म बनाएँ](../2-forms/README.md)
+3. [डेटा लाने और उपयोग करने के तरीके](../3-data/README.md)
+4. [राज्य प्रबंधन की अवधारणाएँ](../4-state-management/README.md)
 
-### Credits
+### आभार सूची
 
-These lessons were written with :hearts: by [Yohan Lasorsa](https://twitter.com/sinedied).
+[Yohan Lasorsa](https://twitter.com/sinedied) द्वारा इन पाठों को :hearts: के साथ लिखा गया था.
 
-If you're interested to learn how to build the [server API](./api/README) used in these lessons, you can follow [this series of videos](https://aka.ms/NodeBeginner) (in particular videos 17 through 21).
+यदि आप सीखना चाहते हैं कि इन पाठों में उपयोग किए जाने वाले [सर्वर एपीआई](../api/translations/README.hi.md) का निर्माण कैसे किया जाए, तो आप [वीडियो की यह श्रृंखला](https://aka.ms/NodeBeginner) का अनुसरण कर सकते हैं (विशेष रूप से वीडियो १७ से २१).
 
-You can also take a look at [this interactive Learn tutorial](https://aka.ms/learn/express-api). 
+आप [इस इंटरएक्टिव लर्न ट्यूटोरियल](https://aka.ms/learn/express-api) पर भी नज़र डाल सकते हैं.
