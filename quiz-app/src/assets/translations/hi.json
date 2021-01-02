@@ -324,47 +324,47 @@
 			},
 			{
 				"id": 7,
-				"title": "Lesson 4 - JavaScript Basics - Data Types: Pre-Lecture Quiz",
+				"title": "पाठ 4 - जावास्क्रिप्ट मूल बातें - डेटा प्रकार: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Booleans are a data type you can use to test the length of a string",
+						"questionText": "बुलियन एक डेटा प्रकार है जिसका उपयोग आप एक स्ट्रिंग की लंबाई का परीक्षण करने के लिए कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The following is an operation you can perform on a string",
+						"questionText": "निम्नलिखित एक ऑपरेशन है जो आप एक स्ट्रिंग पर प्रदर्शन कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "concatenation",
+								"answerText": "कोणक्यानटीनैशन",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "appending",
+								"answerText": "अपेंडिंग",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "splicing",
+								"answerText": "स्लाइसिंग",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "== and === are interchangeable",
+						"questionText": "== और === विनिमेय हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
@@ -373,27 +373,27 @@
 			},
 			{
 				"id": 8,
-				"title": "Lesson 4 - JavaScript Basics - Data Types: Post-Lecture Quiz",
+				"title": "पाठ 4 - जावास्क्रिप्ट मूल बातें - डेटा प्रकार: पोस्ट-व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Constants are the same as let and var to declare variables except",
+						"questionText": "सिवाय इसके कि वैरिएबल घोषित करने के लिए कॉन्स्टेंट let और var के समान हैं",
 						"answerOptions": [
 							{
-								"answerText": "Constants must be initialized",
+								"answerText": "स्थिरांक को प्रारंभिक किया जाना चाहिए",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Constants can be altered",
+								"answerText": "स्थिरांक बदलाव किए जा सकते हैं",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Constants can be reassigned",
+								"answerText": "स्थिरांक को पुन: असाइन किया जा सकता है",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Numbers and ____ are JavaScript primitives that handle numeric data",
+						"questionText": "संख्या और ____ जावास्क्रिप्ट प्रीमिटिव्स हैं जो संख्यात्मक डेटा को संभालते हैं",
 						"answerOptions": [
 							{
 								"answerText": "bigint",
@@ -410,14 +410,14 @@
 						]
 					},
 					{
-						"questionText": "Strings can reside between both single and double quotes",
+						"questionText": "स्ट्रिंग्स सिंगल और डबल दोनों कोट्स के बीच निवास कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
