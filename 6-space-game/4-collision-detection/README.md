@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/35)
 
 In this lesson you will learn how to shoot lasers with JavaScript! We will add two things to our game:
 
@@ -286,7 +286,7 @@ Add an explosion! Take a look at the game assets in [the Space Art repo](../solu
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/36)
 
 ## Review & Self Study
 

@@ -6,7 +6,8 @@ Pelajaran ini mencakup dasar-dasar bahasa pemrograman. Topik yang dibahas di sin
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Pra-Kuliah
-[Kuis pra-kuliah](.github/pre-lecture-quiz.id.md)
+
+[Kuis pra-kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1?loc=id)
 
 ## Pengantar
 
@@ -178,6 +179,10 @@ Ketika pengembang ingin mempelajari sesuatu yang baru, mereka kemungkinan besar 
 ## 🚀 Tantangan
 
 Bandingkan beberapa bahasa pemrograman. Apa saja ciri-ciri unik JavaScript vs. Java? Bagaimana dengan COBOL vs. Go?
+
+## Kuis Pasca-Kuliah
+
+[Kuis pasca-kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2?loc=id)
 
 ## Ulasan & Belajar Mandiri
 

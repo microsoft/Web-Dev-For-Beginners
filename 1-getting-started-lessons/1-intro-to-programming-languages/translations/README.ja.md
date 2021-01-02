@@ -244,4 +244,4 @@ COBOLとGoについては？
 
 ## 課題
 
-[assignment.md](../assignment.md)
+[assignment.md](assignment.ja.md)

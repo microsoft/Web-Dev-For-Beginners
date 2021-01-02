@@ -4,7 +4,7 @@ Un juego espacial para enseñar los fundamentos de JavaScript más avanzados
 
 En esta lección aprenderás a construir tu propio juego espacial. Si alguna vez has jugado al juego "Space Invaders", este juego tiene la misma idea: dirigir una nave espacial y disparar a los monstruos que vienen desde arriba. Así es como se verá el juego terminado:
 
-![Finished game](pewpew.gif)
+![Finished game](../images/pewpew.gif)
 
 En estas seis lecciones aprenderá lo siguiente:
 
