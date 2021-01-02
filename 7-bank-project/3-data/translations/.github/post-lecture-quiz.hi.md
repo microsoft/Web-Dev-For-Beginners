@@ -1,17 +1,18 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. In a Single-page application, the HTML is loaded once and never updated:
+1. सिंगल-पेज एप्लिकेशन में, HTML एक बार लोड होता है और कभी अपडेट नहीं होता है:
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. Why is it important to not trust data coming from user input?
+2. उपयोगकर्ता इनपुट से आने वाले डेटा पर भरोसा नहीं करना क्यों महत्वपूर्ण है?
 
-- [ ] because using special characters can make the UI ugly.
-- [ ] because it can contain non-sense or offensive words.
-- [ ] because it can be used as vector of attack to execute malicious scripts.
+- [ ] क्योंकि विशेष वर्णों का उपयोग करने से UI बदसूरत हो सकता है.
+- [ ] क्योंकि इसमें गैर-अर्थ या आपत्तिजनक शब्द हो सकते हैं.
+- [ ] क्योंकि यह दुर्भावनापूर्ण स्क्रिप्ट को निष्पादित करने के लिए हमले के वेक्टर के रूप में इस्तेमाल किया जा सकता है.
 
-3. What's the API name for sending asynchronous HTTP requests to a web server?
+3. वेब सर्वर पर असिंक्रोनोस HTTP अनुरोध भेजने के लिए एपीआई नाम क्या है?
+
 - [ ] `request()`
 - [ ] `fetch()`
 - [ ] `ajax()`

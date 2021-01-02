@@ -1,15 +1,15 @@
-# Refactor and comment your code
+# अपना कोड रिफैक्टर और टिप्पणी करें
 
-## Instructions
+## अनुदेश
 
-As your codebase grows, it's important to refactor your code frequently to keep it readable and maintainable over time. Add comments and refactor your `app.js` to improve the code quality:
+जैसे-जैसे आपका कोडबेस बढ़ता है, समय के साथ-साथ पठनीय और बनाए रखने के लिए अपने कोड को बार-बार रिफलेक्टर करना महत्वपूर्ण है। टिप्पणी जोड़ें और कोड की गुणवत्ता में सुधार करने के लिए अपने `app.js` को फिर से फ़िल्टर करें:
 
-- Extract constants, like the server API base URL
-- Factorize similar code: for example you can create a `sendRequest()` function to regroup the code used in both `createAccount()` and `getAccount()`
-- Reorganize the code to make it easier to read, and add comments
+- सर्वर API बेस URL की तरह, स्थिरांक निकालें
+- समान कोड को फैक्टराइज़ करें: उदाहरण के लिए आप दोनों `createAccount()` और `getAccount()` में उपयोग किए गए कोड को फिर से इकट्ठा करने के लिए एक `sendRequest()` फ़ंक्शन बना सकते हैं।
+- कोड को पढ़ने, और टिप्पणी जोड़ने में आसान बनाने के लिए इसे पुनर्गठित करें
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary                                                                                                                                                     | Adequate                                                                                          | Needs Improvement                                                                     |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-|          | Code is commented, well-organized in different sections and easy to read. Constants are extracted and a factorized `sendRequest()` function has been created. | Code is clean but can still be improved with more comments, constant extraction or factorization. | Code is messy, not commented, constants are not extracted and code is not factorized. |
+| मानदंड | उदाहरणात्मक                                                                                                                                          | पर्याप्त                                                                                        | सुधार की जरूरत                                                                         |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+|        | कोड टिप्पणी की गई है, विभिन्न वर्गों में सुव्यवस्थित और पढ़ने में आसान है। स्थिरांक निकाले जाते हैं और एक कारक `sendRequest()` फ़ंक्शन बनाया गया है. | कोड साफ है लेकिन फिर भी अधिक टिप्पणियों, निरंतर निष्कर्षण या कारक के साथ सुधार किया जा सकता है. | कोड गड़बड़ है, टिप्पणी नहीं की गई है, स्थिरांक नहीं निकाले गए हैं और कोड कारक नहीं है. |
