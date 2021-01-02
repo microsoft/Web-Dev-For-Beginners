@@ -1,24 +1,24 @@
-*Complete this quiz along with your submission by checking one answer per question.*
+_प्रति प्रश्न के एक उत्तर की जाँच करके अपने प्रस्तुतिकरण के साथ इस प्रश्नोत्तरी को पूरा करें._
 
-You will need to complete the following learn module(s) to complete the quiz:
+क्विज़ को पूरा करने के लिए आपको निम्नलिखित लर्निंग मॉड्यूल(एस) को पूरा करना होगा:
 
-[Learn Link 1]()
-[Learn Link 2]()
+[लर्न लिंक १]()
+[लर्न लिंक २]()
 
 1. [Q1]
 
-- [ ] [Option 1]
-- [ ] [Option 2]
-- [ ] [Option 3]
+- [ ] [विकल्प १]
+- [ ] [विकल्प २]
+- [ ] [विकल्प ३]
 
 2. [Q2]
 
-- [ ] [Option 1]
-- [ ] [Option 2]
-- [ ] [Option 3]
+- [ ] [विकल्प १]
+- [ ] [विकल्प २]
+- [ ] [विकल्प ३]
 
 3. [Q3]
-   
-- [ ] [Option 1]
-- [ ] [Option 2]
-- [ ] [Option 3]
+
+- [ ] [विकल्प १]
+- [ ] [विकल्प २]
+- [ ] [विकल्प ३]
