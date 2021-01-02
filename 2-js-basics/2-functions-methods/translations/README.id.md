@@ -6,7 +6,7 @@
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-Kuliah](./.github/pre-lecture-quiz.id.md)
+[Kuis pra-Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/9?loc=id)
 
 Ketika kita berpikir tentang menulis kode, kita selalu ingin memastikan kode kita dapat dibaca. Meskipun ini terdengar berlawanan dengan intuisi, kode dibaca lebih banyak kali daripada yang tertulis. Salah satu alat inti dalam kotak alat pengembang untuk memastikan kode yang dapat dipelihara adalah **function (fungsi)**.
 
@@ -183,7 +183,7 @@ Bisakah Anda mengartikulasikan dalam satu kalimat perbedaan antara fungsi dan me
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](./.github/post-lecture-quiz.id.md)
+[Kuis pasca-kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/10?loc=id)
 
 ## Review & Belajar Mandiri
 

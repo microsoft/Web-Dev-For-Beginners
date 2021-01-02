@@ -1,10 +1,9 @@
 <template>
   <div class="card">
     <div v-for="q in questions" :key="q.id">
-      
       <div v-if="route == q.id">
-        <h2>{{q.title}}</h2>
-        <hr/>
+        <h2>{{ q.title }}</h2>
+        <hr />
         <h3 v-if="complete" class="message">{{ $t("complete") }}</h3>
         <div v-else>
           <h3 v-if="error" class="error">{{ $t("error") }}</h3>
@@ -38,12 +37,13 @@ export default {
       complete: false,
       error: false,
       route: "",
+      locale: "",
     };
   },
   computed: {
     questions() {
       return this.$t("quizzes");
-    }
+    },
   },
 
   i18n: { messages },
@@ -65,6 +65,7 @@ export default {
   },
   created() {
     this.route = this.$route.params.id;
+    this.locale = this.$route.query.loc;
   },
 };
 </script>

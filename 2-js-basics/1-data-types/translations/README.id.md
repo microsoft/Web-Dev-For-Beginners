@@ -6,7 +6,7 @@
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-Kuliah](.github/pre-lecture-quiz.id.md)
+[Kuis pra-Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7?loc=id)
 
 Pelajaran ini mencakup dasar-dasar JavaScript, bahasa yang menyediakan interaktivitas di web.
 
@@ -188,7 +188,7 @@ JavaScript terkenal karena cara yang mengejutkan dalam menangani tipe data pada 
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](.github/post-lecture-quiz.id.md)
+[Kuis pasca-kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8?loc=id)
 
 ## Review & Belajar Mandiri
 

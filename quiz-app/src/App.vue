@@ -7,6 +7,7 @@
         <option>en</option>
         <option>fr</option>
         <option>ko</option>
+        <option>id</option>
       </select>
     </nav>
     <div id="app">
@@ -29,12 +30,17 @@ export default {
     Quiz,
   },
   data() {
-    return { locale: "en" };
+    return {
+      locale: "en",
+    };
   },
   watch: {
     locale(val) {
       this.$root.$i18n.locale = val;
     },
+  },
+  created() {
+    this.locale = this.$route.query.loc;
   },
 };
 </script>

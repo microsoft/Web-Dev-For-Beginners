@@ -6,7 +6,8 @@ Pelajaran ini mencakup dasar-dasar GitHub, platform untuk menghosting dan mengel
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Pra-Kuliah
-[Kuis pra-kuliah](.github/pre-lecture-quiz.id.md)
+
+[Kuis pra-kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3?loc=id)
 
 ## Pengantar
 
@@ -272,7 +273,8 @@ Proyek mungkin juga memiliki diskusi di forum, milis, atau saluran obrolan seper
 Sandingkan dengan seorang teman untuk mengerjakan kode satu sama lain. Buat proyek secara kolaboratif, buat kode, buat cabang, dan gabungkan perubahan.
 
 ## Kuis Pasca Kuliah
-[Kuis pasca kuliah](.github/post-lecture-quiz.id.md)
+
+[Kuis pasca kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4?loc=id)
 
 ## Review & Belajar Mandiri
 
