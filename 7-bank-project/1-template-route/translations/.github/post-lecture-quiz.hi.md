@@ -1,18 +1,18 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. HTML templates are part of the DOM by default
+1. HTML टेम्पलेट डिफ़ॉल्ट रूप से DOM का हिस्सा हैं
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. Which part of the URL is needed for routing?
+2. रूटिंग के लिए URL के किस भाग की आवश्यकता है?
 
 - [ ] window.location.pathname
 - [ ] window.location.origin
-- [ ] both
+- [ ] दोनों
 
-3. What's the name of the event triggered when calling the `history.pushState()` function?
-   
+3. `History.pushState()` फ़ंक्शन को कॉल करते समय का घटना का नाम क्या है?
+
 - [ ] `pushstate`
 - [ ] `popstate`
 - [ ] `navigate`

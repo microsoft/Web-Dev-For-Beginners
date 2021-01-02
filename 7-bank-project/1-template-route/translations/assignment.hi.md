@@ -1,14 +1,14 @@
-# Improve the routing
+# रूटिंग में सुधार करें
 
-## Instructions
+## अनुदेश
 
-The routes declaration contains currently only the template ID to use. But when displaying a new page, a bit more is needed sometimes. Let's improve our routing implementation with two additional features:
+मार्गों की घोषणा में वर्तमान में उपयोग करने के लिए केवल टेम्पलेट आईडी है। लेकिन एक नया पृष्ठ प्रदर्शित करते समय, कभी-कभी थोड़ा और अधिक की आवश्यकता होती है। आइए दो अतिरिक्त सुविधाओं के साथ हमारे रूटिंग कार्यान्वयन में सुधार करें:
 
-- Give titles to each template and update the window title with this new title when the template changes.
-- Add an option to run some code after the template changes. We want to print `'Dashboard is shown'` in the developer console every time the dashboard page is displayed. 
+- प्रत्येक टेम्पलेट को शीर्षक दें और जब टेम्पलेट बदलता है तो इस नए शीर्षक के साथ विंडो शीर्षक को अपडेट करें।
+- टेम्पलेट परिवर्तन के बाद कुछ कोड चलाने के लिए एक विकल्प जोड़ें। हम हर बार डैशबोर्ड पृष्ठ प्रदर्शित होने पर डेवलपर कंसोल में `'Dashboard is shown'` प्रिंट करना चाहते हैं
 
-## Rubric
+## शीर्ष
 
-| Criteria | Exemplary                                                                                                                          | Adequate                                                                                                                                                                                  | Needs Improvement                                       |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-|          | The two features are implemented and working. Title and code addition also work for a new route added in the `routes` declaration. | The two features work, but the behavior is hardcoded and not configurable via the `routes` declaration. Adding a third route with title and code addition does not work or works partially. | One of the features is missing or not working properly. |
+| मानदंड | उदाहरणात्मक                                                                                                                    | पर्याप्त                                                                                                                                                                                 | सुधार की जरूरत                                           |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+|        | दो विशेषताएं कार्यान्वित और काम कर रही हैं। शीर्षक और कोड जोड़ भी `routes` घोषणा में जोड़े गए एक नए मार्ग के लिए काम करते हैं. | दो सुविधाएँ काम करती हैं, लेकिन व्यवहार कठिन है और `routes` घोषणा के माध्यम से विन्यास योग्य नहीं है। शीर्षक और कोड जोड़ के साथ तीसरा मार्ग जोड़ना आंशिक रूप से काम या काम नहीं करता है. | सुविधाओं में से एक गायब है या ठीक से काम नहीं कर रहा है. |

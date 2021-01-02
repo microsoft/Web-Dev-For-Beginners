@@ -1,19 +1,19 @@
-*A quick warm-up about web apps*
+_वेब ऐप्स के बारे में एक त्वरित वार्म-अप_
 
-*Complete this quiz in class.*
+_इस क्विज को कक्षा में पूरा करें._
 
-1. You need to create multiple HTML files to display different screens in a web app
+1. वेब ऐप में अलग-अलग स्क्रीन प्रदर्शित करने के लिए आपको कई HTML फाइल बनाने की आवश्यकता है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. You can store and persist data locally in a web app
+2. आप वेब ऐप में स्थानीय रूप से डेटा स्टोर और बनाये रख सकते हैं
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-3. What's the best data provider for a web app?
+3. वेब ऐप के लिए सबसे अच्छा डेटा प्रदाता क्या है?
 
-- [ ] A local database
-- [ ] A JavaScript object
-- [ ] A server with a JSON API
+- [ ] एक स्थानीय डेटाबेस
+- [ ] एक जावास्क्रिप्ट वस्तु
+- [ ] JSON API वाला सर्वर
