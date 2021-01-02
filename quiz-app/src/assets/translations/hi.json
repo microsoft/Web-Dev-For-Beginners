@@ -1,56 +1,56 @@
 [
 	{
-		"title": "Web Development for Beginners: Quizzes",
-		"complete": "Congratulations, you completed the quiz!",
-		"error": "Sorry, try again",
+		"title": "शुरुआती के लिए वेब विकास: क्विज़",
+		"complete": "बधाई, आपने प्रश्नोत्तरी पूरी कर ली!",
+		"error": "क्षमा करें दोबारा प्रयास कीजिये",
 		"quizzes": [
 			{
 				"id": 1,
-				"title": "Lesson 1 - Intro to Programming Languages: Pre-Lecture Quiz",
+				"title": "पाठ 1 - प्रोग्रामिंग भाषाओं का परिचय: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "A program can be created without the creator writing any code",
+						"questionText": "किसी भी कोड को लिखने वाले निर्माता के बिना एक कार्यक्रम बनाया जा सकता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Low level languages are a popular choice for",
+						"questionText": "निम्न स्तर की भाषाएँ इसके लिए एक लोकप्रिय विकल्प हैं",
 						"answerOptions": [
 							{
-								"answerText": "Websites",
+								"answerText": "वेबसाइटें",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Hardware",
+								"answerText": "हार्डवेयर",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Video game software",
+								"answerText": "वीडियो गेम सॉफ्टवेयर",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Which one of these tools would most likely be in a web developer's environment?",
+						"questionText": "इनमें से कौन सा उपकरण सबसे अधिक संभावना वेब डेवलपर के वातावरण में होगा?",
 						"answerOptions": [
 							{
-								"answerText": "Hardware, like a Raspberry Pi",
+								"answerText": "हार्डवेयर, रास्पबेरी पाई की तरह",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Browser DevTools",
+								"answerText": "ब्राउज़र डेबटूल्स",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Operating system documentation",
+								"answerText": "ऑपरेटिंग सिस्टम प्रलेखन",
 								"isCorrect": "false"
 							}
 						]
@@ -59,51 +59,51 @@
 			},
 			{
 				"id": 2,
-				"title": "Lesson 1 - Intro to Programming Languages: Post-Lecture Quiz",
+				"title": "पाठ 1 - प्रोग्रामिंग भाषाओं का परिचय: पोस्ट-व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "What language would you most likely use to create a website?",
+						"questionText": "वेबसाइट बनाने के लिए आप किस भाषा का सबसे अधिक उपयोग करेंगे?",
 						"answerOptions": [
 							{
-								"answerText": "Machine Code",
+								"answerText": "मशीन कोड",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "JavaScript",
+								"answerText": "जावास्क्रिप्ट",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Bash",
+								"answerText": "ब्यास",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Development environments are unique to each developer",
+						"questionText": "विकास वातावरण प्रत्येक डेवलपर के लिए अद्वितीय हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What will a developer do to fix buggy code?",
+						"questionText": "बगी कोड को ठीक करने के लिए एक डेवलपर क्या करेगा?",
 						"answerOptions": [
 							{
-								"answerText": "Syntax highlighting",
+								"answerText": "वाक्य - विन्यास पर प्रकाश डालना",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Debugging",
+								"answerText": "डिबगिंग",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Code formatting",
+								"answerText": "कोड स्वरूपण",
 								"isCorrect": "false"
 							}
 						]
