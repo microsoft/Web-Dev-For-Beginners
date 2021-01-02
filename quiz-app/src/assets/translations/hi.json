@@ -112,10 +112,10 @@
 			},
 			{
 				"id": 3,
-				"title": "Lesson 2 - Introduction to GitHub: Pre-Lecture Quiz",
+				"title": "पाठ 2 - गिटहब का परिचय: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "How do you create a Git repo?",
+						"questionText": "गिट रेपो कैसे बनाते हैं?",
 						"answerOptions": [
 							{
 								"answerText": "git create",
@@ -132,35 +132,35 @@
 						]
 					},
 					{
-						"questionText": "What does git add do?",
+						"questionText": "git add क्या करता है ?",
 						"answerOptions": [
 							{
-								"answerText": "Commits your code",
+								"answerText": "आपके कोड को कमिट करता है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Adds your files to a staging area for tracking",
+								"answerText": "ट्रैकिंग के लिए एक स्टेजिंग क्षेत्र में अपनी फ़ाइलों को जोड़ता है",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Adds your files to GitHub",
+								"answerText": "अपनी फ़ाइलों को गिटहब में जोड़ता है",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How do you check if git is installed on your computer?",
+						"questionText": "यदि आपके कंप्यूटर पर गिट स्थापित है, तो आप कैसे जांचेंगे?",
 						"answerOptions": [
 							{
-								"answerText": "type git --version",
+								"answerText": "git --version लिखके",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "type git --installed",
+								"answerText": "git --installed लिखके",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "type git --init",
+								"answerText": "git --init लिखके",
 								"isCorrect": "false"
 							}
 						]
@@ -169,27 +169,27 @@
 			},
 			{
 				"id": 4,
-				"title": "Lesson 2 - Introduction to GitHub: Post-Lecture Quiz",
+				"title": "पाठ 2 - गिटहब का परिचय: पोस्ट-व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:",
+						"questionText": "समीक्षाओं, टिप्पणियों, एकीकृत परीक्षणों और अधिक के साथ एक शाखा पर पेश किए गए मतभेदों की तुलना और चर्चा करने का स्थान है:",
 						"answerOptions": [
 							{
-								"answerText": "GitHub",
+								"answerText": "गिटहब",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A Pull Request",
+								"answerText": "एक पुल रीक्वेस्ट",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A feature branch",
+								"answerText": "एक फीचर ब्रांच",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How would you get all the commits from a remote branch?",
+						"questionText": "दूरस्थ शाखा से आप सभी आवागमन कैसे करेंगे?",
 						"answerOptions": [
 							{
 								"answerText": "git fetch",
@@ -206,7 +206,7 @@
 						]
 					},
 					{
-						"questionText": "How do you switch to a branch?",
+						"questionText": "आप किसी शाखा में कैसे जाते हैं?",
 						"answerOptions": [
 							{
 								"answerText": "git switch [branch-name]",
