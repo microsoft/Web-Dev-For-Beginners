@@ -1,13 +1,13 @@
-# Bank app
+# बैंक एप
 
-> Example solution for the bank app project, built with vanilla HTML5, CSS and JavaScript (no frameworks or libraries used).
+> बैंक ऐप परियोजना के लिए उदाहरण समाधान, वेनिला एचटीएमएल 5, सीएसएस और जावास्क्रिप्ट के साथ बनाया गया (कोई फ्रेमवर्क या लाइब्रेरी का उपयोग नहीं किया गया) है.
 
-## Running the app
+## ऐप चल रहा हैं
 
-First make sure you have the [API server](../api/README.md) running.
+First make sure you have the [API server](../api/README.md) running पहले सुनिश्चित करें कि आपके पास [एपीआई सर्वर](../../api/translations/README.hi.md) चल रहा है.
 
-Any web server can be used to run the app, but since you should have [Node.js](https://nodejs.org) installed anyway to run the API, you can:
+एप्लिकेशन को चलाने के लिए किसी भी वेब सर्वर का उपयोग किया जा सकता है, लेकिन चूंकि आपके पास एपीआई चलाने के लिए वैसे भी [नोडजेयस](https://nodejs.org) स्थापित होना चाहिए, आप कर सकते हैं:
 
-1. Git clone this repo.
-2. Open a terminal, then run `npx lite-server solution`. It will start a development web server on port `3000`
-3. Open `http://localhost:3000` in a browser to run the app.
+1. ये रेपो गिट क्लोन.
+2. एक टर्मिनल खोलें, फिर `npx lite-server solution` चलाएँ। यह पोर्ट `3000` पर एक विकास वेब सर्वर शुरू करेगा
+3. एप्लिकेशन चलाने के लिए ब्राउज़र में `http://localhost:3000` खोलें.
