@@ -1,17 +1,18 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. Using `<label>` elements in forms is only for making the form pretty
+1. रूपों में `<label>` तत्वों का उपयोग केवल फ़ॉर्म को सुंदर बनाने के लिए है
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. How can you define how a form is sent to the server?
+2. आप कैसे परिभाषित कर सकते हैं कि एक फॉर्म सर्वर पर कैसे भेजा जाता है?
 
-- [ ] using the `action` attribute
-- [ ] using the `method` attribute
-- [ ] both
+- [ ] `action` विशेषता का उपयोग करना
+- [ ] `method` विशेषता का उपयोग करना
+- [ ] दोनों
 
-3. Which attribute can you use to set the maximum size of a text `<input>`?
+3. <input> पाठ के अधिकतम आकार को सेट करने के लिए आप किस विशेषता का उपयोग कर सकते हैं?
+
 - [ ] `max`
 - [ ] `maxlength`
 - [ ] `pattern`

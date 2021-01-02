@@ -1,16 +1,16 @@
-*Complete this quiz in class.*
+_इस क्विज को कक्षा में पूरा करें._
 
-1. HTML forms allow to send user input to a server without using JavaScript
+1. HTML फ़ॉर्म जावास्क्रिप्ट का उपयोग किए बिना एक सर्वर से उपयोगकर्ता इनपुट भेजने की अनुमति देते हैं
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-2. `<label>` elements are mandatory for every form control
+2. `<label>` तत्व हर फॉर्म नियंत्रण के लिए अनिवार्य हैं
 
-- [ ] true
-- [ ] false
+- [ ] सही
+- [ ] गलत
 
-3. It is secure to send form data to a server over HTTP
-   
-- [ ] true
-- [ ] false
+3. HTTP पर सर्वर पर फ़ॉर्म डेटा भेजना सुरक्षित है
+
+- [ ] सही
+- [ ] गलत
