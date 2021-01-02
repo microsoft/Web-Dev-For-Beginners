@@ -1,17 +1,18 @@
-*Complete this quiz by checking one answer per question.*
+_प्रति प्रश्न एक उत्तर की जाँच करके इस प्रश्नोत्तरी को पूरा करें._
 
-1. What do you think *state management* means?
+1. _स्टेट मैनिज्मन्ट_ का मतलब है आप क्या सोचते हैं ?
 
-- [ ] Enforcement of law & order
-- [ ] Logging the user interface state over time
-- [ ] Keeping your app data flows clean and synchronizing the user interface with data
+- [ ] कानून और व्यवस्था का प्रवर्तन
+- [ ] समय के साथ उपयोगकर्ता इंटरफ़ेस स्थिति लॉगिंग
+- [ ] अपने एप्लिकेशन डेटा को स्वच्छ रखना और डेटा के साथ उपयोगकर्ता इंटरफ़ेस को सिंक्रनाइज़ करना
 
-2. How can you keep track of the user session state?
+2. आप उपयोगकर्ता सत्र स्थिति का ट्रैक कैसे रख सकते हैं?
 
-- [ ] HTTP cookies
-- [ ] Local or session storage
-- [ ] All of the above
+- [ ] HTTP कूकीज
+- [ ] स्थानीय या सत्र भंडारण
+- [ ] ऊपर के सभी
 
-3. Mutating an object is always the best way to update it
-- [ ] true
-- [ ] false
+3. किसी ऑब्जेक्ट को मियूटेट करना हमेशा इसे अपडेट करने का सबसे अच्छा तरीका है
+
+- [ ] सही
+- [ ] गलत

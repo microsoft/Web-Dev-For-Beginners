@@ -1,18 +1,19 @@
-*Complete this quiz in class.*
+_इस क्विज को कक्षा में पूरा करें._
 
-1. What is an immutable object?
+1. एक अपरिवर्तनीय वस्तु क्या है?
 
-- [ ] An object defined as a constant
-- [ ] An object that cannot be modified after it's created
-- [ ] A copy of an existing object
+- [ ] स्थिरांक के रूप में परिभाषित एक वस्तु
+- [ ] एक ऐसी वस्तु जिसे बनने के बाद संशोधित नहीं किया जा सकता है
+- [ ] मौजूदा वस्तु की एक प्रति
 
-2. What benefit(s) you get from using state management?
+2. स्टेट मैनिज्मन्ट का उपयोग करने से आपको क्या लाभ होता है?
 
-- [ ] You can keep track of every place the state is updated
-- [ ] It's easier to debug the code
-- [ ] All of the above
+- [ ] आप हर उस जगह पर नज़र रख सकते हैं जहाँ स्टेट अपडेट किया गया है
+- [ ] कोड डिबग करना आसान है
+- [ ] ऊपर के सभी
 
-3. What's the best way to persist critical user data across different sessions?
-- [ ] Using files
-- [ ] Using the browser's `localStorage` API
-- [ ] In a database behind a server API
+3. विभिन्न सत्रों में महत्वपूर्ण उपयोगकर्ता डेटा को बनाए रखने का सबसे अच्छा तरीका क्या है?
+
+- [ ] फ़ाइलों का उपयोग करना
+- [ ] ब्राउज़र के `लोकलस्टोरेज` एपीआई का उपयोग करना
+- [ ] एक सर्वर एपीआई के पीछे एक डेटाबेस में
