@@ -2396,55 +2396,55 @@
 			},
 			{
 				"id": 47,
-				"title": "Lesson 24 - Bank Project - Concepts of State Management: Pre-Lecture Quiz",
+				"title": "पाठ 24 - बैंक प्रोजेक्ट - राज्य प्रबंधन(स्टेट मैनिज्मन्ट) की अवधारणा: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "What is an immutable object?",
+						"questionText": "अपरिवर्तनीय वस्तु(इमिउतएबल ऑब्जेक्ट)क्या है?",
 						"answerOptions": [
 							{
-								"answerText": "An object defined as a constant",
+								"answerText": "स्थिरांक के रूप में परिभाषित एक वस्तु(ऑब्जेक्ट)",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "An object that cannot be modified after it's created",
+								"answerText": "एक ऐसी वस्तु(ऑब्जेक्ट) जिसे बनने के बाद संशोधित नहीं किया जा सकता है",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A copy of an existing object",
+								"answerText": "मौजूदा ऑब्जेक्ट की एक प्रति",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What benefit(s) do you get from using state management?",
+						"questionText": "स्टेट मैनिज्मन्ट का उपयोग करने से आपको क्या लाभ होता है?",
 						"answerOptions": [
 							{
-								"answerText": "You can keep track of every place the state is updated",
+								"answerText": "आप हर उस जगह पर नज़र रख सकते हैं जहाँ स्टेट अपडेट किया गया है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's easier to debug the code",
+								"answerText": "कोड डिबग करना आसान है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All of the above",
+								"answerText": "ऊपर के सभी",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the best way to persist critical user data across different sessions?",
+						"questionText": "विभिन्न सत्रों(सेशन्स) में महत्वपूर्ण उपयोगकर्ता डेटा को बनाए रखने का सबसे अच्छा तरीका क्या है?",
 						"answerOptions": [
 							{
-								"answerText": "Using files",
+								"answerText": "फ़ाइलों का उपयोग करना",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Using the browser's localStorage API",
+								"answerText": "ब्राउज़र के लोकलस्टोरेज एपीआई का उपयोग करना",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "In a database behind a server API",
+								"answerText": "एक सर्वर एपीआई के पीछे एक डेटाबेस में",
 								"isCorrect": "true"
 							}
 						]
@@ -2453,51 +2453,51 @@
 			},
 			{
 				"id": 48,
-				"title": "Lesson 24 - Bank Project - Concepts of State Management: Post-Lecture Quiz",
+				"title": "पाठ 24 - बैंक प्रोजेक्ट - राज्य प्रबंधन(स्टेट मैनिज्मन्ट) की अवधारणा: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "What do you think state management means?",
+						"questionText": "आपको क्या लगता है कि स्टेट मैनिज्मन्ट का क्या मतलब है?",
 						"answerOptions": [
 							{
-								"answerText": "Enforcement of law & order",
+								"answerText": "कानून और व्यवस्था का प्रवर्तन",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Logging the user interface state over time",
+								"answerText": "समय के साथ उपयोगकर्ता इंटरफ़ेस स्थिति लॉगिंग",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Keeping your app data flows clean and synchronizing the user interface with data",
+								"answerText": "अपने एप्लिकेशन डेटा को स्वच्छ रखना और डेटा के साथ उपयोगकर्ता इंटरफ़ेस को सिंक्रनाइज़ करना",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How can you keep track of the user session state?",
+						"questionText": "आप उपयोगकर्ता सत्र(सेशन) स्थिति का ट्रैक कैसे रख सकते हैं?",
 						"answerOptions": [
 							{
-								"answerText": "HTTP cookies",
+								"answerText": "HTTP कूकीस",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Local or session storage",
+								"answerText": "स्थानीय या सत्र(सेशन) भंडारण",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All of the above",
+								"answerText": "ऊपर के सभी",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Mutating an object is always the best way to update it",
+						"questionText": "किसी ऑब्जेक्ट को म्यूटैट करना हमेशा इसे अपडेट करने का सबसे अच्छा तरीका है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
