@@ -2094,47 +2094,47 @@
 			},
 			{
 				"id": 41,
-				"title": "Lesson 21 - Bank Project - HTML Templates and Routes in a Web App: Pre-Lecture Quiz",
+				"title": "पाठ 21 - बैंक प्रोजेक्ट - वेब ऐप में HTML टेम्प्लेट और रूट: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "You need to create multiple HTML files to display different screens in a web app",
+						"questionText": "वेब ऐप में अलग-अलग स्क्रीन प्रदर्शित करने के लिए आपको कई HTML फाइल बनाने की आवश्यकता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can store and persist data locally in a web app",
+						"questionText": "आप वेब ऐप में स्थानीय रूप से डेटा स्टोर और बनायेरख(पर्सिस्ट) सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the best data provider for a web app?",
+						"questionText": "वेब ऐप के लिए सबसे अच्छा डेटा प्रदाता क्या है?",
 						"answerOptions": [
 							{
-								"answerText": "A local database",
+								"answerText": "एक लोकल डेटाबेस",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A JavaScript object",
+								"answerText": "एक जावास्क्रिप्ट वस्तु(ऑब्जेक्ट)",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A server with a JSON API",
+								"answerText": "JSON API वाला सर्वर",
 								"isCorrect": "true"
 							}
 						]
@@ -2143,23 +2143,23 @@
 			},
 			{
 				"id": 42,
-				"title": "Lesson 21 - Bank Project HTML Templates and Routes in a Web App: Post-Lecture Quiz",
+				"title": "पाठ 21 - एक वेब ऐप में बैंक प्रोजेक्ट HTML टेम्प्लेट और रूट: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "HTML templates are part of the DOM by default",
+						"questionText": "HTML टेम्पलेट डिफ़ॉल्ट रूप से DOM का हिस्सा हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Which part of the URL is needed for routing?",
+						"questionText": "रूटिंग के लिए URL के किस भाग की आवश्यकता है?",
 						"answerOptions": [
 							{
 								"answerText": "window.location.pathname",
@@ -2170,13 +2170,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "both",
+								"answerText": "दोनों",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the name of the event triggered when calling the history.pushState() function?",
+						"questionText": "history.pushState() फ़ंक्शन को कॉल करते समय घटना(ट्रिगगेरेड ईवेंट) का क्या नाम है?",
 						"answerOptions": [
 							{
 								"answerText": "pushstate",
