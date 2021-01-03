@@ -1486,43 +1486,43 @@
 			},
 			{
 				"id": 29,
-				"title": "Lesson 15 - Space Game - Introduction: Pre-Lecture Quiz",
+				"title": "पाठ 15 - अंतरिक्ष खेल - परिचय: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "JavaScript is an unpopular language for building games",
+						"questionText": "जावास्क्रिप्ट खेल के निर्माण के लिए एक अलोकप्रिय भाषा है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Pub/Sub is a preferred pattern for managing the game's assets and flow",
+						"questionText": "पब/सब खेल की संपत्ति और प्रवाह के प्रबंधन के लिए एक पसंदीदा पैटर्न है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Object inheritance can be handled by either using classes or composition",
+						"questionText": "ऑब्जेक्ट इनहेरिटेंस को कक्षाओं या रचना का उपयोग करके नियंत्रित किया जा सकता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
@@ -1531,47 +1531,47 @@
 			},
 			{
 				"id": 30,
-				"title": "Lesson 15 - Space Game - Introduction: Post-Lecture Quiz",
+				"title": "पाठ 15 - अंतरिक्ष खेल - परिचय: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Classes rely on inheritance to ascribe to behaviors",
+						"questionText": "क्लासेस व्यवहार पर निर्भर करने के लिए इन्हेरीटेन्स पर भरोसा करती हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Composition is the preferred design pattern for game objects",
+						"questionText": "काम्पज़िशन खेल की वस्तुओं के लिए पसंदीदा डिज़ाइन पैटर्न है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Pub/Sub stands for:",
+						"questionText": "Pub/Sub का अर्थ:",
 						"answerOptions": [
 							{
-								"answerText": "Publish/Subscribe",
+								"answerText": "Publish/Subscribe है",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Print/Staple",
+								"answerText": "Print/Staple है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Publish/Sanitize",
+								"answerText": "Publish/Sanitize है",
 								"isCorrect": "false"
 							}
 						]
