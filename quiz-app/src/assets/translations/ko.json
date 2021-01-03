@@ -1991,48 +1991,48 @@
 				"title": "Lesson 20 - 스페이스 게임 - 끝과 재시작: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "When is a good time to restart a game",
+						"questionText": "게임을 재시작하기 좋은 타이밍은 언제인가?",
 						"answerOptions": [
 							{
-								"answerText": "when a player wins or loses",
+								"answerText": "플레이어가 이겼거나 졌을 때",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "whenever",
+								"answerText": "언제든지",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "When should a game end",
+						"questionText": "언제 게임이 종료되야 하는가?",
 						"answerOptions": [
 							{
-								"answerText": "when an enemy ship is destroyed",
+								"answerText": "적의 우주선이 파괴되었을 때",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "when a hero ship is destroyed",
+								"answerText": "히어로 우주선이 파괴되었을 때",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "when points are collected",
+								"answerText": "점수가 수집될 때",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to add a level to your game is:",
+						"questionText": "게임에 레벨이 추가되는 좋은 방법은?",
 						"answerOptions": [
 							{
-								"answerText": "Increment the amount of points necessary to complete a given level",
+								"answerText": "주어진 레벨을 완료하는데 필요한 점수를 증가",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Add more players to the game",
+								"answerText": "게임에 더 많은 플레이어를 추가",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Add more graphics to the game",
+								"answerText": "게임에 그래픽 요소를 더 추가",
 								"isCorrect": "false"
 							}
 						]
@@ -2044,48 +2044,48 @@
 				"title": "Lesson 20 - 스페이스 게임 - 끝과 재시작: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "What is a good pattern to use when a game end condition has been met?",
+						"questionText": "게임 종료 조건을 만났을 때 사용하는 좋은 패턴은?",
 						"answerOptions": [
 							{
-								"answerText": "Display a suitable message",
+								"answerText": "적절한 메세지를 보여주는 것",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Quit the game",
+								"answerText": "게임을 나가는 것",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Display a suitable message, offer the player to restart, and display what key to hit for that action",
+								"answerText": "적절한 메세지를 보여주고, 재시작하도록 플레이어에게 제공하는 것, 그리고 어떤 키를 입력해야 재시작할 수 있는지 보여주는 것",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You should offer a restart only when the game has ended",
+						"questionText": "게임이 끝날때만 재시작 기능을 제공해야한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to clear the EventEmitter when ending a game is:",
+						"questionText": "게임이 끝날 때, EventEmitter를 초기화하는 좋은 방법은?",
 						"answerOptions": [
 							{
-								"answerText": "clearing listeners",
+								"answerText": "listeners를 초기화",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "clearing the screen",
+								"answerText": "스크린을 비우기",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "closing the game window",
+								"answerText": "게임 윈도우를 닫기",
 								"isCorrect": "false"
 							}
 						]
@@ -2097,44 +2097,44 @@
 				"title": "Lesson 21 - 은행 프로젝트 - 웹 앱의 HTML 템플릿과 라우터: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "You need to create multiple HTML files to display different screens in a web app",
+						"questionText": "웹 앱에서 다른 스크린을 보여주기 위해선 여러 개의 HTML 파일을 만들어야 한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can store and persist data locally in a web app",
+						"questionText": "웹 앱에서 로컬에 데이터를 저장하고 유지할 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the best data provider for a web app?",
+						"questionText": "웹 앱에서 가장 적절한 데이터 공급원은?",
 						"answerOptions": [
 							{
-								"answerText": "A local database",
+								"answerText": "로컬 데이터베이스",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A JavaScript object",
+								"answerText": "JavaScript 객체",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A server with a JSON API",
+								"answerText": "JSON API를 제공하는 서버",
 								"isCorrect": "true"
 							}
 						]
@@ -2146,20 +2146,20 @@
 				"title": "Lesson 21 - 은행 프로젝트 - 웹 앱의 HTML 템플릿과 라우터: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "HTML templates are part of the DOM by default",
+						"questionText": "HTML 템플릿은 DOM에 기본적인 부분이다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Which part of the URL is needed for routing?",
+						"questionText": "URL에 어떤 부분이 라우팅에 필요한가?",
 						"answerOptions": [
 							{
 								"answerText": "window.location.pathname",
@@ -2170,13 +2170,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "both",
+								"answerText": "둘 다",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the name of the event triggered when calling the history.pushState() function?",
+						"questionText": "history.pushState() 함수를 호출 할때 트리거되는 이벤트 이름은?",
 						"answerOptions": [
 							{
 								"answerText": "pushstate",
@@ -2199,40 +2199,40 @@
 				"title": "Lesson 22 - 은행 프로젝트 - 로그인과 가입 폼 작성하기: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "HTML forms allow to send user input to a server without using JavaScript",
+						"questionText": "HTML forms는 JavaScript 없이 유저 입력을 서버로 전송하는 것을 제공한다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "<label> elements are mandatory for every form control",
+						"questionText": "<label> 요소는 form 제어에 필수적이다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "It is secure to send form data to a server over HTTP",
+						"questionText": "HTTP를 통해 서버로 폼 데이터를 보내는 것은 안전하다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
@@ -2244,37 +2244,37 @@
 				"title": "Lesson 22 - 은행 프로젝트 - 로그인과 가입 폼 작성하기 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "Using <label> elements in forms is only for making the form pretty",
+						"questionText": "폼에서 <label> 요소를 사용하는 것은 폼을 예쁘게만 만드는 것이다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How can you define how a form is sent to the server?",
+						"questionText": "폼 데이터가 서버에 어떤 식으로 보내는지 결정하는 것은?",
 						"answerOptions": [
 							{
-								"answerText": "using the action attribute",
+								"answerText": "action 속성을 사용하는 것",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "using the method attribute",
+								"answerText": "method 속성을 사용하는 것",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "both",
+								"answerText": "둘 다",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Which attribute can you use to set the maximum size of a text <input>?",
+						"questionText": "어떤 속성이 <input> 텍스트의 최대 사이즈를 지정하는가?",
 						"answerOptions": [
 							{
 								"answerText": "max",
@@ -2297,20 +2297,20 @@
 				"title": "Lesson 23 - 은행 프로젝트 - 데이터를 가져오고 사용하는 방식: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "You can fetch data from a server synchronously in a browser",
+						"questionText": "브라우저에서 서버로 부터 데이터를 동기적으로 받아올 수 있다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the most common format used to exchange data on the web?",
+						"questionText": "웹과 데이터를 교환하는데 가장 일반적으로 사용되는 포맷은?",
 						"answerOptions": [
 							{
 								"answerText": "HTML",
@@ -2327,14 +2327,14 @@
 						]
 					},
 					{
-						"questionText": "There's no way to prevent a web page from accessing a public server API",
+						"questionText": "공용 서버 API를 접근하는 것을 웹에서 방지하는 방법은 없다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
@@ -2346,37 +2346,37 @@
 				"title": "Lesson 23 - 은행 프로젝트 - 데이터를 가져오고 사용하는 방식: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "In a Single-page application, the HTML is loaded once and never updated",
+						"questionText": "싱글-페이지 애플리케이션(SPA)에서, HTML은 한 번 로드되고 업데이트되지 않는다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Why is it important to not trust data coming from user input?",
+						"questionText": "유저 입력으로 들어오는 데이터를 신뢰하지 않는 것은 왜 중요한가?",
 						"answerOptions": [
 							{
-								"answerText": "because using special characters can make the UI ugly.",
+								"answerText": "특수문자를 사용하면 UI를 못생기게 만들 수 있기 때문",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "because it can contain non-sense or offensive words.",
+								"answerText": "비상식적이거나 공격적인 단어들이 포함될 수 있기 때문",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "because it can be used as vector of attack to execute malicious scripts.",
+								"answerText": "악의 적인 스크립트를 실행하는 공격이 쓰여질 수 있기 때문",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the API name for sending asynchronous HTTP requests to a web server?",
+						"questionText": "웹서버에 HTTL 요청을 비동기적으로 보내주는 API 이름은?",
 						"answerOptions": [
 							{
 								"answerText": "request()",
@@ -2399,52 +2399,52 @@
 				"title": "Lesson 24 - 은행 프로젝트 - 상태 관리의 컨셉: 강의 전 퀴즈",
 				"quiz": [
 					{
-						"questionText": "What is an immutable object?",
+						"questionText": "불변 객체란 무엇인가?",
 						"answerOptions": [
 							{
-								"answerText": "An object defined as a constant",
+								"answerText": "상수로 정의된 객체",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "An object that cannot be modified after it's created",
+								"answerText": "만들어진 후 수정이 될 수 없는 객체",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A copy of an existing object",
+								"answerText": "기존에 있는 객체의 복사본",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What benefit(s) do you get from using state management?",
+						"questionText": "상태 관리를 사용하면서 얻는 이점은?",
 						"answerOptions": [
 							{
-								"answerText": "You can keep track of every place the state is updated",
+								"answerText": "상태가 업데이트 되는 지점을 모두 추적할 수 있다.",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's easier to debug the code",
+								"answerText": "코드를 디버깅하는데 쉬워진다.",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All of the above",
+								"answerText": "위의 둘 다",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the best way to persist critical user data across different sessions?",
+						"questionText": "다른 세션 간 중요한 유저 데이터를 보관하는 가장 좋은 방법은?",
 						"answerOptions": [
 							{
-								"answerText": "Using files",
+								"answerText": "파일 사용",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Using the browser's localStorage API",
+								"answerText": "브라우저 localStorage API 사용",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "In a database behind a server API",
+								"answerText": "서버 API 뒤에 있는 데이터베이스에 저장",
 								"isCorrect": "true"
 							}
 						]
@@ -2456,48 +2456,48 @@
 				"title": "Lesson 24 - 은행 프로젝트 - 상태 관리의 컨셉: 강의 후 퀴즈",
 				"quiz": [
 					{
-						"questionText": "What do you think state management means?",
+						"questionText": "상태 관리의 의미는?",
 						"answerOptions": [
 							{
-								"answerText": "Enforcement of law & order",
+								"answerText": "법칙과 순서를 강제하는 작업",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Logging the user interface state over time",
+								"answerText": "시간에 따른 유저 인터페이스 상태 로깅",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Keeping your app data flows clean and synchronizing the user interface with data",
+								"answerText": "앱 데이터의 흐름을 깔끔하게 유지하고, 사용자 인터페이스를 데이터와 동기화하는 작업",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How can you keep track of the user session state?",
+						"questionText": "유저 세션 상태는 어떻게 추적하는가?",
 						"answerOptions": [
 							{
-								"answerText": "HTTP cookies",
+								"answerText": "HTTP 쿠키",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Local or session storage",
+								"answerText": "로컬 혹은 세션 스토리지",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All of the above",
+								"answerText": "위의 둘 다",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Mutating an object is always the best way to update it",
+						"questionText": "객체를 변경 가능하도록 유지하는 것은 업데이트 시 항상 좋은 방법이다.",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "네",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "아니요",
 								"isCorrect": "true"
 							}
 						]
