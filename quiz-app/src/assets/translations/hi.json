@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "शुरुआती के लिए वेब विकास: क्विज़",
+		"complete": "बधाई, आपने प्रश्नोत्तरी पूरी कर ली!",
+		"error": "क्षमा करें दोबारा प्रयास कीजिये",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "पाठ 1 - प्रोग्रामिंग भाषाओं का परिचय: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "किसी भी कोड को लिखने वाले निर्माता के बिना एक कार्यक्रम बनाया जा सकता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "निम्न स्तर की भाषाएँ इसके लिए एक लोकप्रिय विकल्प हैं",
+						"answerOptions": [
+							{
+								"answerText": "वेबसाइटें",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "हार्डवेयर",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "वीडियो गेम सॉफ्टवेयर",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "इनमें से कौन सा उपकरण सबसे अधिक संभावना वेब डेवलपर के वातावरण में होगा?",
+						"answerOptions": [
+							{
+								"answerText": "हार्डवेयर, रास्पबेरी पाई की तरह",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ब्राउज़र डेबटूल्स",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ऑपरेटिंग सिस्टम प्रलेखन",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "पाठ 1 - प्रोग्रामिंग भाषाओं का परिचय: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "वेबसाइट बनाने के लिए आप किस भाषा का सबसे अधिक उपयोग करेंगे?",
+						"answerOptions": [
+							{
+								"answerText": "मशीन कोड",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "जावास्क्रिप्ट",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ब्यास",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "विकास वातावरण प्रत्येक डेवलपर के लिए अद्वितीय हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "बगी कोड को ठीक करने के लिए एक डेवलपर क्या करेगा?",
+						"answerOptions": [
+							{
+								"answerText": "वाक्य - विन्यास पर प्रकाश डालना",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "डिबगिंग",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "कोड स्वरूपण",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "पाठ 2 - गिटहब का परिचय: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "गिट रेपो कैसे बनाते हैं?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "git add क्या करता है ?",
+						"answerOptions": [
+							{
+								"answerText": "आपके कोड को कमिट करता है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ट्रैकिंग के लिए एक स्टेजिंग क्षेत्र में अपनी फ़ाइलों को जोड़ता है",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "अपनी फ़ाइलों को गिटहब में जोड़ता है",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "यदि आपके कंप्यूटर पर गिट स्थापित है, तो आप कैसे जांचेंगे?",
+						"answerOptions": [
+							{
+								"answerText": "git --version लिखके",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git --installed लिखके",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git --init लिखके",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "पाठ 2 - गिटहब का परिचय: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "समीक्षाओं, टिप्पणियों, एकीकृत परीक्षणों और अधिक के साथ एक शाखा पर पेश किए गए मतभेदों की तुलना और चर्चा करने का स्थान है:",
+						"answerOptions": [
+							{
+								"answerText": "गिटहब",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक पुल रीक्वेस्ट",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "एक फीचर ब्रांच",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "दूरस्थ शाखा से आप सभी आवागमन कैसे करेंगे?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "आप किसी शाखा में कैसे जाते हैं?",
+						"answerOptions": [
+							{
+								"answerText": "git switch [branch-name]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [branch-name]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [branch-name]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "पाठ 3 - सुलभ वेबपेज बनाना: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "एक सुलभ वेब साइट की जाँच कॉनसी ब्राउज़र टूल मे की सकती है",
+						"answerOptions": [
+							{
+								"answerText": "लाइटहाउस",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "डेकहाउस",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "क्लीनहाउस",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "दृष्टिहीन उपयोगकर्ताओं के लिए पहुँच क्षमता का परीक्षण करने के लिए आपको एक भौतिक स्क्रीन रीडर की आवश्यकता होती है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "सरकारी वेब साइटों पर पहुंच केवल महत्वपूर्ण है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "पाठ 3 - एक्सेसिबल वेबपेज बनाना: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "लाइटहाउस केवल सुलभता की समस्याओं की जाँच करता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "रंग-सुरक्षित पट्टियाँ कौनसे लोगोकि मदद करती हैं",
+						"answerOptions": [
+							{
+								"answerText": "वर्णांधता (color-blindness)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "दृष्टिदोष (visual impairments)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "उपरोक्त दोनों",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "सुलभ वेब साइटों के लिए वर्णनात्मक लिंक महत्वपूर्ण हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "पाठ 4 - जावास्क्रिप्ट मूल बातें - डेटा प्रकार: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "बुलियन एक डेटा प्रकार है जिसका उपयोग आप एक स्ट्रिंग की लंबाई का परीक्षण करने के लिए कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "निम्नलिखित एक ऑपरेशन है जो आप एक स्ट्रिंग पर प्रदर्शन कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "कोणक्यानटीनैशन",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "अपेंडिंग",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "स्लाइसिंग",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== और === विनिमेय हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "पाठ 4 - जावास्क्रिप्ट मूल बातें - डेटा प्रकार: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "सिवाय इसके कि वैरिएबल घोषित करने के लिए कॉन्स्टेंट let और var के समान हैं",
+						"answerOptions": [
+							{
+								"answerText": "स्थिरांक को प्रारंभिक किया जाना चाहिए",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "स्थिरांक बदलाव किए जा सकते हैं",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "स्थिरांक को पुन: असाइन किया जा सकता है",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "संख्या और ____ जावास्क्रिप्ट प्रीमिटिव्स हैं जो संख्यात्मक डेटा को संभालते हैं",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "स्ट्रिंग्स सिंगल और डबल दोनों कोट्स के बीच निवास कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "पाठ 5 - जावास्क्रिप्ट मूल बातें - तरीके और कार्य: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "एक अरगुनमेंट क्या है?",
+						"answerOptions": [
+							{
+								"answerText": "यह कुछ है जिसे आप फ़ंक्शन परिभाषा में घोषित करते हैं",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "यह कुछ ऐसा है जिसे आप एक समारोह में भेजते हैं",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "यह कुछ ऐसा है जिसे आप उन लोगों के साथ रखते हैं जिन्हें आप जानते हैं",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "एक फ़ंक्शन को कुछ वापस करना होगा",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "आप एक फंक्शन को कुछ भी नाम दे सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "सच है, लेकिन यह एक वर्णनात्मक नाम होना चाहिए",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "पाठ 5 - जावास्क्रिप्ट मूल बातें - तरीके और कार्य: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "किसी फ़ंक्शन में सभी मापदंडों के लिए अरगुनमेंट प्रदान किया जाना चाहिए",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "एक डिफ़ॉल्ट मान क्या करता है?",
+						"answerOptions": [
+							{
+								"answerText": "एक सही मान निर्धारित करता है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक पैरामीटर के लिए एक स्टार्टर मान देता है तो आपका कोड अभी भी सही चलता है यदि आप इसके लिए एक अरगुनमेंट छोड़ते हैं",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "कोई उपयोगिता नहीं है",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "एक फैट तीर फ़ंक्शन आपको क्या करने की अनुमति देता है",
+						"answerOptions": [
+							{
+								"answerText": "हेबी फ़ंक्शन बनानेका",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "फ़ंक्शन कीवर्ड को छोड़ेंने का",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "एक अनाम फ़ंक्शन बनाने का",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "पाठ 6 - जावास्क्रिप्ट मूल बातें - निर्णय लेना: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "निम्नलिखित ऑपरेटर == को क्या कहा जाता है",
+						"answerOptions": [
+							{
+								"answerText": "समानता",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "सख्त समानता",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "असाइनमेंट",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "जावास्क्रिप्ट में तुलना किस प्रकार लौटती है?",
+						"answerOptions": [
+							{
+								"answerText": "बुलियन",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "नल",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "स्ट्रिंग",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "जावास्क्रिप्ट में ! प्रतीक का अर्थ है:",
+						"answerOptions": [
+							{
+								"answerText": "तार्किक नहीं",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "जरूरी",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "बराबर",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "पाठ 6 - जावास्क्रिप्ट मूल बातें - निर्णय लेना: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "निम्नलिखित कोड क्या लौटाएगा: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "नल",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "निम्नलिखित कोड क्या लौटाएगा: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "नल",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "व्यक्त करने के लिए सही ऑपरेटर चुनें 'या' तर्क",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "पाठ 7 - जावास्क्रिप्ट मूल बातें - ऐरे और लूप: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "To refer to a specific item in an array, you would use a",
+						"answerOptions": [
+							{
+								"answerText": "बड़ा कोष्टक-square bracket []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "index",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "मझोला कोष्टक-curly braces {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "आपको किसी सरणी में आइटम की संख्या कैसे मिलती है?",
+						"answerOptions": [
+							{
+								"answerText": "'len(array)' मेथड",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "सरणी पर size का गुण",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "सरणी पर length का गुण",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "जावास्क्रिप्ट में, इंडेक्स कहासे शुरू होते हैं",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "पाठ 7 - जावास्क्रिप्ट मूल बातें - ऐरे और लूप्स: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "फॉर-लूप के किस भाग को आपको अपनी पुनरावृत्ति को ५ से बढ़ाना होगा?",
+						"answerOptions": [
+							{
+								"answerText": "शर्त (condition)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "काउंटर",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "इटरेसन-इक्स्प्रेशन",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "वाइल और फॉर-लूप में क्या अंतर है",
+						"answerOptions": [
+							{
+								"answerText": "फॉर-लूप में एक काउंटर और इटरेसन-इक्स्प्रेशन है, जहां केवल एक शर्त है",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "एक वाइल में एक काउंटर और इटरेसन-इक्स्प्रेशन होती है, जहां फॉर-लूप के लिए बस एक शर्त होती है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "वे एक ही हैं, एक दूसरे के लिए सिर्फ एक उपनाम",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "कोड को देखते हुए (i=1;i<5;i++), यह कितने पुनरावृत्तियों का प्रदर्शन करेगा?",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "पाठ 8 - टेरारियम प्रोजेक्ट - HTML का परिचय: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "HTML अर्थ 'HyperText Mockup Language' है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "सभी HTML टैग को टैग खोलने और बंद करने दोनों की आवश्यकता होती है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "सेमेन्टीक मार्कअप का उपयोग करना सबसे महत्वपूर्ण है",
+						"answerOptions": [
+							{
+								"answerText": "कोड पठनीयता",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "स्क्रीन रीडर",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "मैन्ट्नन्स",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "पाठ 8 - टेरारियम प्रोजेक्ट - HTML का परिचय: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "Spans और Divs विनिमेय हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "HTML डॉक के प्रमुख में ये शामिल हो सकते हैं:",
+						"answerOptions": [
+							{
+								"answerText": "टाइटल टैग",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "मेटाडाटा",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "उपर्युक्त सभी",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "आप अपने मार्कअप में पदावनत टैग का उपयोग नहीं कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत है, लेकिन उन्हें अच्छे कारण के लिए पदावनत किया गया है",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "पाठ 9 - टेरारियम प्रोजेक्ट - सीएसएस का परिचय: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "HTML तत्वों को स्टाइल करने के लिए एक वर्ग या एक आईडी होना चाहिए",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS का अर्थ 'Complete Style Sheets' है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "एनिमेशन बनाने के लिए CSS का उपयोग किया जा सकता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{ 
+				"id": 18,
+				"title": "पाठ 9 - टेरारियम प्रोजेक्ट - सीएसएस का परिचय: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "आप अपनी HTML फ़ाइल के head भाग में सीधे CSS लिख सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "अपने ऐप में सीएसएस को शामिल करना हमेशा आवश्यक होता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत है, लेकिन यदि आप चाहते हैं कि यह अच्छा लगे तो आपको शायद सीएसएस की जरूरत है",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "सीएसएस का निरीक्षण करने के लिए किस ब्राउज़र टूल का उपयोग किया जा सकता है?",
+						"answerOptions": [
+							{
+								"answerText": "एलिमेंट्स",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "स्टाइलस",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "नेटवर्क",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "पाठ 10 - टेरारियम प्रोजेक्ट - डोम मैनिपुलेशन और क्लोजर: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "DOM का अर्थ 'Document Object Management' है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "DOM को एक ट्री माना जा सकता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "वेब एपियाई का उपयोग करके, आप डोम में हेरफेर कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "पाठ 10 - टेरारियम प्रोजेक्ट - डोम मैनिपुलेशन और क्लोजर: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "DOM एक दस्तावेज़ है जो वेब पर एक दस्तावेज़ का प्रतिनिधित्व करता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "निम्नलिखित प्रदर्शन करने के लिए जावास्क्रिप्ट क्लोजर का उपयोग करें:",
+						"answerOptions": [
+							{
+								"answerText": "फंगक्शनस के भीतर फंगक्शन लिखें",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "डोम को संलग्न करें",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "स्क्रिप्ट ब्लॉक बंद करें",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "रिक्त स्थान भरें: क्लोजर तब उपयोगी होते हैं जब किसी बाहरी फ़ंक्शन के ....... को एक्सेस करने के लिए एक या अधिक फ़ंक्शन की आवश्यकता होती है",
+						"answerOptions": [
+							{
+								"answerText": "अरेस ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "स्कोप",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "फंगक्शनस",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "पाठ 11 - टाइपिंग गेम: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "इवेंट-संचालित प्रोग्रामिंग जब एक उपयोगकर्ता",
+						"answerOptions": [
+							{
+								"answerText": "एक बटन पर क्लिक दबाता है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक मान बदलता है ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "पृष्ठ के साथ सहभागिता करता है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ऊपर मे से कोई",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "प्रक्रियात्मक प्रोग्रामिंग में, कार्यों को कहा जाता है",
+						"answerOptions": [
+							{
+								"answerText": "किसी भी समय",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक विशिष्ट क्रम में",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "बाएं से दाएं",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ईवेंट हैंडलर्स को पंजीकृत करने के लिए डोम में उजागर की गई सार्वभौमिक विधि को क्या कहा जाता है",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "पाठ 11 - टाइपिंग गेम: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "किसी भी चीज़ के बारे में एक उपयोगकर्ता एक पृष्ठ पर एक इवेंट्स को बढ़ाता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "आम इवेंट्स में शामिल हैं",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "all of these",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "आप ईवेंट हैंडलर बनाने के लिए अनाम फ़ंक्शंस का उपयोग कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "पाठ 12 - ब्राउज़र एक्सटेंशन प्रोजेक्ट - सभी ब्राउज़रों के बारे में: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "आप ब्राउज़र एक्सटेंशन कहासे प्राप्त कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "वालमार्ट",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ब्राउज़र का एक्सटेंशन स्टोर",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ऐप स्टोर",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM का अर्थ है",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "आपका ब्राउज़र सुरक्षित और असुरक्षित दोनों तरह से वेब पृष्ठों की सेवा कर सकता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "पाठ 12 - ब्राउज़र एक्सटेंशन प्रोजेक्ट - सभी ब्राउज़र के बारे में: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "वर्ल्ड वाइड वेब किसके द्वारा आविष्कार किया गया था",
+						"answerOptions": [
+							{
+								"answerText": "टॉम बर्नार्ड-लॉफ्ट  ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "टीम बेर्नेर्स-ली ",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": " ट्रिश बर्थ-पूल ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "पहले ब्राउज़रको क्या कहा जाता था",
+						"answerOptions": [
+							{
+								"answerText": "वर्ल्डवाइडवेब",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "मोजिला",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "नेटस्केप",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ब्राउज़र उपयोगकर्ता के ब्राउज़िंग इतिहास को संग्रहीत कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "पाठ 13 - ब्राउज़र एक्सटेंशन प्रोजेक्ट - एक एपीआई को कॉल करें, स्थानीय भंडारण(लोकल स्टॉरिज) का उपयोग करें: प्री-लेक्चर क्विज़",
+				"quiz": [
+					{
+						"questionText": "APIs का अर्थ है",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "........ के साथ बातचीत करने के लिए एक एपीआई का उपयोग करें",
+						"answerOptions": [
+							{
+								"answerText": "एक और वेब से जुड़ी ऐसेट",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक डेटाबेस",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "या तो ऊपरके कोई",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "कोई भी व्यक्ति एपीआई बना सकता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "पाठ 13 - ब्राउज़र एक्सटेंशन प्रोजेक्ट - एक एपीआई को कॉल करें, स्थानीय भंडारण(लोकल स्टॉरिज) का उपयोग करें: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "हर बार जब आप ब्राउज़र विंडो बंद करते हैं तो लोकलस्टोरेज साफ हो जाता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "मुख्य ब्राउज़र विंडो एक ब्राउज़र के एक्सटेंशन के लोकलस्टोरेज को नियंत्रित करती है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "एपियाई संदर्भ में REST का अर्थ है",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "पाठ 14 - ब्राउज़र एक्सटेंशन प्रोजेक्ट - पृष्ठभूमि कार्य और प्रदर्शन के बारे में जानें: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "अपने ऐप के प्रदर्शन का परीक्षण करें",
+						"answerOptions": [
+							{
+								"answerText": "ब्राउज़र के टूल का उपयोग करना",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "एक अलग सॉफ्टवेयर पैकेज का उपयोग ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "मैन्युअल",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "एक वेब साइट का 'प्रदर्शन' एक विश्लेषण है की",
+						"answerOptions": [
+							{
+								"answerText": "कितनी तेजी से लोड होता है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "उस पर कोड कितनी तेजी से चलता है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "उपरके दोनों",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "कुल मिलाकर, पिछले कुछ वर्षों में वेब पेजों का 'वजन' अधिक है",
+						"answerOptions": [
+							{
+								"answerText": "हल्का हो गया",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "भारी हो गया",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "वैसे ही रहा",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "पाठ 14 - ब्राउज़र एक्सटेंशन प्रोजेक्ट - पृष्ठभूमि कार्य और प्रदर्शन के बारे में जानें: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "अपनी साइट के प्रदर्शन के बारे में बेहतर जानकारी प्राप्त करने के लिए, इसका कैश साफ़ करें और प्रोफाइलर में पुनः लोड करें",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ब्राउज़र एक्सटेंशन स्वाभाविक रूप से प्रदर्शन कर रहे हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "प्रदर्शन अड़चनों(बोटलनेक्स) के लिए निम्नलिखित का विश्लेषण करें",
+						"answerOptions": [
+							{
+								"answerText": "डोम ट्रैवर्सल्स",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "जावास्क्रिप्ट अनुकूलन",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "असेट प्रबंधन",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "उपरके सभी",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "पाठ 15 - अंतरिक्ष खेल - परिचय: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "जावास्क्रिप्ट खेल के निर्माण के लिए एक अलोकप्रिय भाषा है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "पब/सब खेल की संपत्ति और प्रवाह के प्रबंधन के लिए एक पसंदीदा पैटर्न है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ऑब्जेक्ट इनहेरिटेंस को कक्षाओं या रचना का उपयोग करके नियंत्रित किया जा सकता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "पाठ 15 - अंतरिक्ष खेल - परिचय: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "क्लासेस व्यवहार पर निर्भर करने के लिए इन्हेरीटेन्स पर भरोसा करती हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "काम्पज़िशन खेल की वस्तुओं के लिए पसंदीदा डिज़ाइन पैटर्न है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub का अर्थ:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe है",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize है",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "लेसन 16 - स्पेस गेम - कैनवस के लिए नायक और राक्षस आकर्षित करें: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "कैनवास तत्व वह है जिसे आप स्क्रीन पर खींचने के लिए उपयोग करते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "आप केवल कैनवस एपीआई का उपयोग करके सरल ज्यामितीय आकृतियाँ बना सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "बिंदु 0,0 नीचे बाईं ओर है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "पाठ 16 - अंतरिक्ष खेल - कैनवस के लिए नायक और राक्षस आकर्षित करें: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "आप सीधे कैनवस पर ड्राइंग ऑपरेशन कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "जब आप किसी छवि को अतुल्यकालिक(असिंक्रोनोसली) रूप से लोड करते हैं, तो यह जानने के लिए आप ऑनलोड घटना सुनते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "You draw images onto a screen with an operation called:",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "पाठ 17 - स्पेस गेम - एडिंग मोशन: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "स्क्रीन पर कोई भी ऑब्जेक्ट कीबोर्ड इवेंट प्राप्त कर सकता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "आप मुख्य घटनाओं और माउस घटनाओं को सुनने के लिए उसी विधि का उपयोग कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "चीजों को एक नियमित अंतराल पर होने के लिए, आप किस फ़ंक्शन का उपयोग करते हैं?",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "पाठ 17 - स्पेस गेम - एडिंग मोशन: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "आपको हमेशा स्क्रीन को फिर से तैयार करना होगा",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "गेम लूप क्या है?",
+						"answerOptions": [
+							{
+								"answerText": "एक फ़ंक्शन जो गेम को सुनिश्चित करता है उसे फिर से शुरू किया जा सकता है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक फ़ंक्शन जिसने यह तय किया कि खेल कितनी तेजी से चलना चाहिए",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक फ़ंक्शन जो नियमित अंतराल पर लगाया जाता है और उपयोगकर्ता को जो कुछ भी देखना चाहिए वह खींचता है",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "स्क्रीन को दोबारा तैयार करने का एक अच्छा मामला है",
+						"answerOptions": [
+							{
+								"answerText": "एक उपयोगकर्ता सहभागिता हुई",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "कुछ स्थानांतरित हो गया है",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "समय निकलना",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "पाठ 18 - अंतरिक्ष खेल - एक लेजर जोड़ना और टकराव का पता लगाना: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "टकराव का पता लगाना है कि कैसे पता लगाया जाए कि दो चीजें टकराई हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "हम स्क्रीन से कोई आइटम कैसे निकाल सकते हैं?",
+						"answerOptions": [
+							{
+								"answerText": "कचरा बीनने वाले(गारबेज कोल्लेक्टर) को बुलाओ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "इसे मृत के रूप में चिह्नित करें, केवल मृत वस्तुओं को पेंट न करें अगली बार जब हम स्क्रीन खींचते हैं",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "आइटम को एक नकारात्मक समन्वय पर रखें",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "जावास्क्रिप्ट में एक लेजर फायरिंग का अनुकरण करने का एक अच्छा तरीका है:",
+						"answerOptions": [
+							{
+								"answerText": "एक मुख्य घटना के लिए एक दृश्य तत्व प्रतिक्रिया करे",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "एनिमेटेड गीफस(gifs)  बनाएं",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "दुश्मनों को अंतराल पर उड़ा दें",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "पाठ 18 - अंतरिक्ष खेल - एक लेजर जोड़ना और टकराव का पता लगाना: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "टक्कर का पता लगाने में आप तुलना करते हैं की दो",
+						"answerOptions": [
+							{
+								"answerText": "मंडलियां और चाहे वे अंतरंग हों",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "आयतें और चाहे वे अंतरंग हों",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "दो बिंदुओं के बीच की दूरी",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "एक कूलदावन प्रभाब(इफेक्ट) को लागू करने का कारण है क्योंकि",
+						"answerOptions": [
+							{
+								"answerText": "खेल को कठिन बनाते हुए आप दुश्मनों को नष्ट करने के लिए बार-बार लेजर फायर नहीं कर सकते",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "जावास्क्रिप्ट केवल समय इकाई के अनुसार कुछ निश्चित घटनाओं का उत्पादन कर सकती है, इसलिए आपको उन्हें सीमित करने की आवश्यकता है",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "स्थिरांक कोड में पहचाने जाने योग्य हैं क्योंकि",
+						"answerOptions": [
+							{
+								"answerText": "वे बड़े अक्षरों में लिखे गए हैं",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "उनके विशिष्ट नाम हैं",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "वे कबाब-केस में इस तरह लिखे गए हैं",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "पाठ 19 - स्पेस गेम - स्कोरिंग एंड लाइव्स: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "कैनवस तत्व का उपयोग करके आप स्क्रीन पर टेक्स्ट कैसे बनाते हैं?",
+						"answerOptions": [
+							{
+								"answerText": "एक div या span तत्व के अंदर पाठ रखें",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "कैनवास तत्व पर drawText() को कॉल करें",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "संदर्भ(context) ऑब्जेक्ट पर fillText() को कॉल करें",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "आपके पास एक खेल में 'जीवन' की अवधारणा क्यों है?",
+						"answerOptions": [
+							{
+								"answerText": "यह दिखाने के लिए कि आप कितना नुकसान उठा सकते हैं",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ताकि खेल सीधे खत्म न हो, लेकिन खेल खत्म होने से पहले आपके पास कई मौके हैं",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "कैनवस पर पाठ का रंग जोड़ें",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "पाठ 19 - स्पेस गेम - स्कोरिंग एंड लाइव्स: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "यह दिखाने का एक मजेदार तरीका है कि एक खिलाड़ी ने कितने जीवन जीते हैं?",
+						"answerOptions": [
+							{
+								"answerText": "जहाजों की एक संख्या",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक अंक प्रणाली",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "कैनवस तत्व का उपयोग करके आप स्क्रीन के बीच में टेक्स्ट को कैसे केन्द्रित करते हैं?",
+						"answerOptions": [
+							{
+								"answerText": "आप Flexbox का उपयोग करें",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "आप क्लाइंट विंडो की चौड़ाई/2 के x निर्देशांक पर आरेखित पाठ का निर्देश देते हैं",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "आप संदर्भ ऑब्जेक्ट पर textAlign गुण मान केंद्र पर सेट करते हैं",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "कोड में, इस तरह से जीवन काटें:",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "पाठ 20 - स्पेस गेम - अंत और पुनः आरंभ: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "खेल को पुनः आरंभ करने का अच्छा समय कब है",
+						"answerOptions": [
+							{
+								"answerText": "जब कोई खिलाड़ी जीतता है या हारता है",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "कभी भी",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "खेल कब समाप्त होना चाहिए",
+						"answerOptions": [
+							{
+								"answerText": "जब एक दुश्मन जहाज नष्ट हो जाता है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "जब एक नायक जहाज नष्ट हो जाता है",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "जब अंक एकत्र किए जाते हैं",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "अपने खेल में एक स्तर जोड़ने का अच्छा तरीका है:",
+						"answerOptions": [
+							{
+								"answerText": "दिए गए लेवल को पूरा करने के लिए आवश्यक बिंदुओं की मात्रा बढ़ाएँ",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "खेल में अधिक खिलाड़ी जोड़ें",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "खेल में और अधिक ग्राफिक्स जोड़ें",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "पाठ 20 - स्पेस गेम - अंत और पुनः आरंभ: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "गेम एंड कंडीशन मिलने पर उपयोग करने के लिए एक अच्छा पैटर्न क्या है?",
+						"answerOptions": [
+							{
+								"answerText": "एक उपयुक्त संदेश प्रदर्शित करें",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "खेल से बाहर निकलें",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक उपयुक्त संदेश प्रदर्शित करें, खिलाड़ी को पुनः आरंभ करने की पेशकश करें, और प्रदर्शित करें कि उस कार्रवाई के लिए क्या की है",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "जब खेल समाप्त हो गया हो तब ही आपको पुनः आरंभ करना चाहिए",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "गेम को समाप्त करते समय EventEmitter को खाली करने का एक अच्छा तरीका है:",
+						"answerOptions": [
+							{
+								"answerText": "क्लीयरिंग लिस्टनर्स ",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "स्क्रीन साफ़ करना",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "closing the game window",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "पाठ 21 - बैंक प्रोजेक्ट - वेब ऐप में HTML टेम्प्लेट और रूट: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "वेब ऐप में अलग-अलग स्क्रीन प्रदर्शित करने के लिए आपको कई HTML फाइल बनाने की आवश्यकता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "आप वेब ऐप में स्थानीय रूप से डेटा स्टोर और बनायेरख(पर्सिस्ट) सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "वेब ऐप के लिए सबसे अच्छा डेटा प्रदाता क्या है?",
+						"answerOptions": [
+							{
+								"answerText": "एक लोकल डेटाबेस",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक जावास्क्रिप्ट वस्तु(ऑब्जेक्ट)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON API वाला सर्वर",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "पाठ 21 - एक वेब ऐप में बैंक प्रोजेक्ट HTML टेम्प्लेट और रूट: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "HTML टेम्पलेट डिफ़ॉल्ट रूप से DOM का हिस्सा हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "रूटिंग के लिए URL के किस भाग की आवश्यकता है?",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "दोनों",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "history.pushState() फ़ंक्शन को कॉल करते समय घटना(ट्रिगगेरेड ईवेंट) का क्या नाम है?",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "पाठ 22 - बैंक प्रोजेक्ट - एक लॉगिन और पंजीकरण फॉर्म बनाएँ: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "HTML फ़ॉर्म जावास्क्रिप्ट का उपयोग किए बिना एक सर्वर से उपयोगकर्ता इनपुट भेजने की अनुमति देते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "<label> तत्व हर फॉर्म नियंत्रण के लिए अनिवार्य हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "HTTP पर सर्वर पर फ़ॉर्म डेटा भेजना सुरक्षित है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "पाठ 22 - बैंक प्रोजेक्ट - एक लॉगिन और पंजीकरण फॉर्म बनाएँ: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "फॉर्म्स में <label> एलिमेंट का उपयोग केवल फॉर्म को सुंदर बनाने के लिए है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "आप कैसे परिभाषित कर सकते हैं कि कैसे एक फॉर्म सर्वर पर भेजा जाता है?",
+						"answerOptions": [
+							{
+								"answerText": "एक्शन एट्रिब्यूट का उपयोग करना",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "मेथड एट्रिब्यूट का उपयोग करना",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "दोनों",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "<label> टेक्स्ट के अधिकतम आकार को सेट करने के लिए आप किस विशेषता का उपयोग कर सकते हैं?",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "पाठ 23 - बैंक प्रोजेक्ट - डेटा लाने और उपयोग करने के तरीके: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "आप किसी ब्राउज़र में सर्वर से डेटा को सिंक्रोनाइज़ कर सकते हैं",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "वेब पर डेटा का आदान-प्रदान करने के लिए सबसे आम प्रारूप क्या है?",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "सार्वजनिक सर्वर एपियाई तक वेब पेज को रोकने का कोई तरीका नहीं है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "पाठ 23 - बैंक प्रोजेक्ट - डेटा लाने और उपयोग करने के तरीके: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "सिंगल-पेज एप्लिकेशन में, HTML एक बार लोड होता है और कभी अपडेट नहीं होता है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "उपयोगकर्ता इनपुट से आने वाले डेटा पर भरोसा नहीं करना क्यों महत्वपूर्ण है?",
+						"answerOptions": [
+							{
+								"answerText": "क्योंकि विशेष वर्णों का उपयोग करने से UI बदसूरत हो सकता है.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "क्योंकि इसमें गैर-अर्थ या आपत्तिजनक शब्द हो सकते हैं.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "क्योंकि यह दुर्भावनापूर्ण स्क्रिप्ट को निष्पादित करने के लिए हमले के वेक्टर के रूप में इस्तेमाल किया जा सकता है.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "वेब सर्वर पर अतुल्यकालिक(असिंक्रोनोस) HTTP अनुरोध भेजने के लिए एपीआई नाम क्या है?",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "पाठ 24 - बैंक प्रोजेक्ट - राज्य प्रबंधन(स्टेट मैनिज्मन्ट) की अवधारणा: पूर्व व्याख्यान प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "अपरिवर्तनीय वस्तु(इमिउतएबल ऑब्जेक्ट)क्या है?",
+						"answerOptions": [
+							{
+								"answerText": "स्थिरांक के रूप में परिभाषित एक वस्तु(ऑब्जेक्ट)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक ऐसी वस्तु(ऑब्जेक्ट) जिसे बनने के बाद संशोधित नहीं किया जा सकता है",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "मौजूदा ऑब्जेक्ट की एक प्रति",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "स्टेट मैनिज्मन्ट का उपयोग करने से आपको क्या लाभ होता है?",
+						"answerOptions": [
+							{
+								"answerText": "आप हर उस जगह पर नज़र रख सकते हैं जहाँ स्टेट अपडेट किया गया है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "कोड डिबग करना आसान है",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ऊपर के सभी",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "विभिन्न सत्रों(सेशन्स) में महत्वपूर्ण उपयोगकर्ता डेटा को बनाए रखने का सबसे अच्छा तरीका क्या है?",
+						"answerOptions": [
+							{
+								"answerText": "फ़ाइलों का उपयोग करना",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ब्राउज़र के लोकलस्टोरेज एपीआई का उपयोग करना",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "एक सर्वर एपीआई के पीछे एक डेटाबेस में",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "पाठ 24 - बैंक प्रोजेक्ट - राज्य प्रबंधन(स्टेट मैनिज्मन्ट) की अवधारणा: व्याख्यान उपरांत प्रश्नोत्तरी",
+				"quiz": [
+					{
+						"questionText": "आपको क्या लगता है कि स्टेट मैनिज्मन्ट का क्या मतलब है?",
+						"answerOptions": [
+							{
+								"answerText": "कानून और व्यवस्था का प्रवर्तन",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "समय के साथ उपयोगकर्ता इंटरफ़ेस स्थिति लॉगिंग",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "अपने एप्लिकेशन डेटा को स्वच्छ रखना और डेटा के साथ उपयोगकर्ता इंटरफ़ेस को सिंक्रनाइज़ करना",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "आप उपयोगकर्ता सत्र(सेशन) स्थिति का ट्रैक कैसे रख सकते हैं?",
+						"answerOptions": [
+							{
+								"answerText": "HTTP कूकीस",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "स्थानीय या सत्र(सेशन) भंडारण",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ऊपर के सभी",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "किसी ऑब्जेक्ट को म्यूटैट करना हमेशा इसे अपडेट करने का सबसे अच्छा तरीका है",
+						"answerOptions": [
+							{
+								"answerText": "सही",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "गलत",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
