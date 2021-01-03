@@ -1580,43 +1580,43 @@
 			},
 			{
 				"id": 31,
-				"title": "Lesson 16 - Space Game - Draw Hero and Monsters to Canvas: Pre-Lecture Quiz",
+				"title": "लेसन 16 - स्पेस गेम - कैनवस के लिए नायक और राक्षस आकर्षित करें: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "The Canvas element is what you use to draw on a screen",
+						"questionText": "कैनवास तत्व वह है जिसे आप स्क्रीन पर खींचने के लिए उपयोग करते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "You can only draw simple geometric shapes using the Canvas API",
+						"questionText": "आप केवल कैनवस एपीआई का उपयोग करके सरल ज्यामितीय आकृतियाँ बना सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The point 0,0 is in the bottom left",
+						"questionText": "बिंदु 0,0 नीचे बाईं ओर है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
@@ -1625,30 +1625,30 @@
 			},
 			{
 				"id": 32,
-				"title": "Lesson 16 - Space Game - Draw Hero and Monsters to Canvas: Post-Lecture Quiz",
+				"title": "पाठ 16 - अंतरिक्ष खेल - कैनवस के लिए नायक और राक्षस आकर्षित करें: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "You can perform drawing operations directly on the Canvas",
+						"questionText": "आप सीधे कैनवस पर ड्राइंग ऑपरेशन कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You listen to the onload event to know when an image has loaded asynchronously",
+						"questionText": "जब आप किसी छवि को अतुल्यकालिक(असिंक्रोनोसली) रूप से लोड करते हैं, तो यह जानने के लिए आप ऑनलोड घटना सुनते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
