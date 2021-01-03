@@ -1698,7 +1698,7 @@
 							},
 							{
 								"answerText": "아니요",
-								"isCorrect": "false"
+								"isCorrect": "true"
 							}
 						]
 					},
