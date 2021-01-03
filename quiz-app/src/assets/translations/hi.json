@@ -1674,36 +1674,36 @@
 			},
 			{
 				"id": 33,
-				"title": "Lesson 17 - Space Game - Adding Motion: Pre-Lecture Quiz",
+				"title": "पाठ 17 - स्पेस गेम - एडिंग मोशन: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Any object on the screen can receive keyboard events",
+						"questionText": "स्क्रीन पर कोई भी ऑब्जेक्ट कीबोर्ड इवेंट प्राप्त कर सकता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "You can use the same method to listen to key events and mouse events",
+						"questionText": "आप मुख्य घटनाओं और माउस घटनाओं को सुनने के लिए उसी विधि का उपयोग कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "To make things happen at a regular interval, you use what function?",
+						"questionText": "चीजों को एक नियमित अंतराल पर होने के लिए, आप किस फ़ंक्शन का उपयोग करते हैं?",
 						"answerOptions": [
 							{
 								"answerText": "setInterval()",
@@ -1723,51 +1723,51 @@
 			},
 			{
 				"id": 34,
-				"title": "Lesson 17 - Space Game - Adding Motion: Post-Lecture Quiz",
+				"title": "पाठ 17 - स्पेस गेम - एडिंग मोशन: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "You always need to redraw the screen",
+						"questionText": "आपको हमेशा स्क्रीन को फिर से तैयार करना होगा",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What is a game loop?",
+						"questionText": "गेम लूप क्या है?",
 						"answerOptions": [
 							{
-								"answerText": "A function that ensures the game can be restarted",
+								"answerText": "एक फ़ंक्शन जो गेम को सुनिश्चित करता है उसे फिर से शुरू किया जा सकता है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A function that decided how fast the game should run",
+								"answerText": "एक फ़ंक्शन जिसने यह तय किया कि खेल कितनी तेजी से चलना चाहिए",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A function that is invoked at regular intervals and draws what the user should see",
+								"answerText": "एक फ़ंक्शन जो नियमित अंतराल पर लगाया जाता है और उपयोगकर्ता को जो कुछ भी देखना चाहिए वह खींचता है",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "A good case for redrawing the screen is",
+						"questionText": "स्क्रीन को दोबारा तैयार करने का एक अच्छा मामला है",
 						"answerOptions": [
 							{
-								"answerText": "A user interaction happened",
+								"answerText": "एक उपयोगकर्ता सहभागिता हुई",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Something has moved",
+								"answerText": "कुछ स्थानांतरित हो गया है",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Time has passed",
+								"answerText": "समय निकलना",
 								"isCorrect": "false"
 							}
 						]
