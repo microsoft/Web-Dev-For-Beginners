@@ -1882,40 +1882,40 @@
 			},
 			{
 				"id": 37,
-				"title": "Lesson 19 - Space Game - Scoring and Lives: Pre-Lecture Quiz",
+				"title": "पाठ 19 - स्पेस गेम - स्कोरिंग एंड लाइव्स: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "How do you draw text on a screen using the Canvas element?",
+						"questionText": "कैनवस तत्व का उपयोग करके आप स्क्रीन पर टेक्स्ट कैसे बनाते हैं?",
 						"answerOptions": [
 							{
-								"answerText": "Place text inside a div or span element",
+								"answerText": "एक div या span तत्व के अंदर पाठ रखें",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Call drawText() on the Canvas element",
+								"answerText": "कैनवास तत्व पर drawText() को कॉल करें",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Call fillText() on the context object",
+								"answerText": "संदर्भ(context) ऑब्जेक्ट पर fillText() को कॉल करें",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Why do you have the concept of 'lives' in a game?",
+						"questionText": "आपके पास एक खेल में 'जीवन' की अवधारणा क्यों है?",
 						"answerOptions": [
 							{
-								"answerText": "To show how much damage you can take",
+								"answerText": "यह दिखाने के लिए कि आप कितना नुकसान उठा सकते हैं",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "So that the game doesn't end straight away, but you have n number of chances before the game is over",
+								"answerText": "ताकि खेल सीधे खत्म न हो, लेकिन खेल खत्म होने से पहले आपके पास कई मौके हैं",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Add color to text on Canvas using",
+						"questionText": "कैनवस पर पाठ का रंग जोड़ें",
 						"answerOptions": [
 							{
 								"answerText": "fillColor",
@@ -1935,40 +1935,40 @@
 			},
 			{
 				"id": 38,
-				"title": "Lesson 19 - Space Game - Scoring and Lives: Post-Lecture Quiz",
+				"title": "पाठ 19 - स्पेस गेम - स्कोरिंग एंड लाइव्स: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "What's a fun way to show how many lives a player has left?",
+						"questionText": "यह दिखाने का एक मजेदार तरीका है कि एक खिलाड़ी ने कितने जीवन जीते हैं?",
 						"answerOptions": [
 							{
-								"answerText": "a number of ships",
+								"answerText": "जहाजों की एक संख्या",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "a points system",
+								"answerText": "एक अंक प्रणाली",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How do you center text in the middle of the screen using the Canvas element?",
+						"questionText": "कैनवस तत्व का उपयोग करके आप स्क्रीन के बीच में टेक्स्ट को कैसे केन्द्रित करते हैं?",
 						"answerOptions": [
 							{
-								"answerText": "You use Flexbox",
+								"answerText": "आप Flexbox का उपयोग करें",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "You instruct the text to be drawn at the x coordinate of the client window width/2",
+								"answerText": "आप क्लाइंट विंडो की चौड़ाई/2 के x निर्देशांक पर आरेखित पाठ का निर्देश देते हैं",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "You set the textAlign property to the value center on the context object",
+								"answerText": "आप संदर्भ ऑब्जेक्ट पर textAlign गुण मान केंद्र पर सेट करते हैं",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "In code, deduct a life like this:",
+						"questionText": "कोड में, इस तरह से जीवन काटें:",
 						"answerOptions": [
 							{
 								"answerText": "this.life-",
