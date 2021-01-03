@@ -2294,23 +2294,23 @@
 			},
 			{
 				"id": 45,
-				"title": "Lesson 23 - Bank Project - Methods of Fetching and Using Data: Pre-Lecture Quiz",
+				"title": "पाठ 23 - बैंक प्रोजेक्ट - डेटा लाने और उपयोग करने के तरीके: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "You can fetch data from a server synchronously in a browser",
+						"questionText": "आप किसी ब्राउज़र में सर्वर से डेटा को सिंक्रोनाइज़ कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the most common format used to exchange data on the web?",
+						"questionText": "वेब पर डेटा का आदान-प्रदान करने के लिए सबसे आम प्रारूप क्या है?",
 						"answerOptions": [
 							{
 								"answerText": "HTML",
@@ -2327,14 +2327,14 @@
 						]
 					},
 					{
-						"questionText": "There's no way to prevent a web page from accessing a public server API",
+						"questionText": "सार्वजनिक सर्वर एपियाई तक वेब पेज को रोकने का कोई तरीका नहीं है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
@@ -2343,40 +2343,40 @@
 			},
 			{
 				"id": 46,
-				"title": "Lesson 23 - Bank Project Methods of Fetching and Using Data: Post-Lecture Quiz",
+				"title": "पाठ 23 - बैंक प्रोजेक्ट - डेटा लाने और उपयोग करने के तरीके: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "In a Single-page application, the HTML is loaded once and never updated",
+						"questionText": "सिंगल-पेज एप्लिकेशन में, HTML एक बार लोड होता है और कभी अपडेट नहीं होता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Why is it important to not trust data coming from user input?",
+						"questionText": "उपयोगकर्ता इनपुट से आने वाले डेटा पर भरोसा नहीं करना क्यों महत्वपूर्ण है?",
 						"answerOptions": [
 							{
-								"answerText": "because using special characters can make the UI ugly.",
+								"answerText": "क्योंकि विशेष वर्णों का उपयोग करने से UI बदसूरत हो सकता है.",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "because it can contain non-sense or offensive words.",
+								"answerText": "क्योंकि इसमें गैर-अर्थ या आपत्तिजनक शब्द हो सकते हैं.",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "because it can be used as vector of attack to execute malicious scripts.",
+								"answerText": "क्योंकि यह दुर्भावनापूर्ण स्क्रिप्ट को निष्पादित करने के लिए हमले के वेक्टर के रूप में इस्तेमाल किया जा सकता है.",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the API name for sending asynchronous HTTP requests to a web server?",
+						"questionText": "वेब सर्वर पर अतुल्यकालिक(असिंक्रोनोस) HTTP अनुरोध भेजने के लिए एपीआई नाम क्या है?",
 						"answerOptions": [
 							{
 								"answerText": "request()",
