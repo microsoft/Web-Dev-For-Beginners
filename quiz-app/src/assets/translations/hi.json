@@ -1168,27 +1168,27 @@
 			},
 			{
 				"id": 23,
-				"title": "Lesson 12 - Browser Extension Project - All about Browsers: Pre-Lecture Quiz",
+				"title": "पाठ 12 - ब्राउज़र एक्सटेंशन प्रोजेक्ट - सभी ब्राउज़रों के बारे में: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "You can get browser extensions from",
+						"questionText": "आप ब्राउज़र एक्सटेंशन कहासे प्राप्त कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "WalMart",
+								"answerText": "वालमार्ट",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The browser's extension store",
+								"answerText": "ब्राउज़र का एक्सटेंशन स्टोर",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "The App store",
+								"answerText": "ऐप स्टोर",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "NPM stands for",
+						"questionText": "NPM का अर्थ है",
 						"answerOptions": [
 							{
 								"answerText": "Node Package Manager",
@@ -1205,14 +1205,14 @@
 						]
 					},
 					{
-						"questionText": "Your browser can serve web pages both securely and insecurely",
+						"questionText": "आपका ब्राउज़र सुरक्षित और असुरक्षित दोनों तरह से वेब पृष्ठों की सेवा कर सकता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
@@ -1221,51 +1221,51 @@
 			},
 			{
 				"id": 24,
-				"title": "Lesson 12 -  Browser Extension Project - All about Browsers: Post-Lecture Quiz",
+				"title": "पाठ 12 - ब्राउज़र एक्सटेंशन प्रोजेक्ट - सभी ब्राउज़र के बारे में: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "The World Wide Web was invented by",
+						"questionText": "वर्ल्ड वाइड वेब किसके द्वारा आविष्कार किया गया था",
 						"answerOptions": [
 							{
-								"answerText": "Tom Barnard-Loft",
+								"answerText": "टॉम बर्नार्ड-लॉफ्ट  ",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Tim Berners-Lee",
+								"answerText": "टीम बेर्नेर्स-ली ",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Trish Berth-Pool",
+								"answerText": " ट्रिश बर्थ-पूल ",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The first browser was called",
+						"questionText": "पहले ब्राउज़रको क्या कहा जाता था",
 						"answerOptions": [
 							{
-								"answerText": "WorldWideWeb",
+								"answerText": "वर्ल्डवाइडवेब",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Mozilla",
+								"answerText": "मोजिला",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Netscape",
+								"answerText": "नेटस्केप",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Browsers can store a user's browsing history",
+						"questionText": "ब्राउज़र उपयोगकर्ता के ब्राउज़िंग इतिहास को संग्रहीत कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
