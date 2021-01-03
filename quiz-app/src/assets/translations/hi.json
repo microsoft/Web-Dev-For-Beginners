@@ -1376,55 +1376,55 @@
 			},
 			{
 				"id": 27,
-				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Pre-Lecture Quiz",
+				"title": "पाठ 14 - ब्राउज़र एक्सटेंशन प्रोजेक्ट - पृष्ठभूमि कार्य और प्रदर्शन के बारे में जानें: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Test the performance of your app",
+						"questionText": "अपने ऐप के प्रदर्शन का परीक्षण करें",
 						"answerOptions": [
 							{
-								"answerText": "Using the browser's tools",
+								"answerText": "ब्राउज़र के टूल का उपयोग करना",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Using a separate software package",
+								"answerText": "एक अलग सॉफ्टवेयर पैकेज का उपयोग ",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Manually",
+								"answerText": "मैन्युअल",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The 'performance' of a web site is an analysis of",
+						"questionText": "एक वेब साइट का 'प्रदर्शन' एक विश्लेषण है की",
 						"answerOptions": [
 							{
-								"answerText": "How fast it loads",
+								"answerText": "कितनी तेजी से लोड होता है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "How fast the code on it runs",
+								"answerText": "उस पर कोड कितनी तेजी से चलता है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Both of the above",
+								"answerText": "उपरके दोनों",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Overall, the 'weight' of web pages over the past few years has",
+						"questionText": "कुल मिलाकर, पिछले कुछ वर्षों में वेब पेजों का 'वजन' अधिक है",
 						"answerOptions": [
 							{
-								"answerText": "gotten lighter",
+								"answerText": "हल्का हो गया",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "gotten heavier",
+								"answerText": "भारी हो गया",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "stayed the same",
+								"answerText": "वैसे ही रहा",
 								"isCorrect": "false"
 							}
 						]
@@ -1433,51 +1433,51 @@
 			},
 			{
 				"id": 28,
-				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Post-Lecture Quiz",
+				"title": "पाठ 14 - ब्राउज़र एक्सटेंशन प्रोजेक्ट - पृष्ठभूमि कार्य और प्रदर्शन के बारे में जानें: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "To get a better view of your site's performance, clear its cache and reload in the profiler",
+						"questionText": "अपनी साइट के प्रदर्शन के बारे में बेहतर जानकारी प्राप्त करने के लिए, इसका कैश साफ़ करें और प्रोफाइलर में पुनः लोड करें",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Browser extensions are inherently performant",
+						"questionText": "ब्राउज़र एक्सटेंशन स्वाभाविक रूप से प्रदर्शन कर रहे हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Analyze the following for performance bottlenecks",
+						"questionText": "प्रदर्शन अड़चनों(बोटलनेक्स) के लिए निम्नलिखित का विश्लेषण करें",
 						"answerOptions": [
 							{
-								"answerText": "DOM traversals",
+								"answerText": "डोम ट्रैवर्सल्स",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "JavaScript optimizations",
+								"answerText": "जावास्क्रिप्ट अनुकूलन",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Asset management",
+								"answerText": "असेट प्रबंधन",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All the above",
+								"answerText": "उपरके सभी",
 								"isCorrect": "true"
 							}
 						]
