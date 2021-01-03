@@ -858,43 +858,43 @@
 			},
 			{
 				"id": 17,
-				"title": "Lesson 9  - Terrarium Project - Introduction to CSS: Pre-Lecture Quiz",
+				"title": "पाठ 9 - टेरारियम प्रोजेक्ट - सीएसएस का परिचय: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "HTML elements must have either a class or an id in order to be styled",
+						"questionText": "HTML तत्वों को स्टाइल करने के लिए एक वर्ग या एक आईडी होना चाहिए",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "CSS stands for 'Complete Style Sheets'",
+						"questionText": "CSS का अर्थ 'Complete Style Sheets' है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "CSS can be used to create animations",
+						"questionText": "एनिमेशन बनाने के लिए CSS का उपयोग किया जा सकता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
@@ -903,51 +903,51 @@
 			},
 			{
 				"id": 18,
-				"title": "Lesson 9 - Terrarium Project - Introduction to CSS: Post-Lecture Quiz",
+				"title": "पाठ 9 - टेरारियम प्रोजेक्ट - सीएसएस का परिचय: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "You can write CSS directly in the head section of your HTML file",
+						"questionText": "आप अपनी HTML फ़ाइल के head भाग में सीधे CSS लिख सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "It's always necessary to include CSS in your app",
+						"questionText": "अपने ऐप में सीएसएस को शामिल करना हमेशा आवश्यक होता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false, but if you want it to look good you probably need CSS",
+								"answerText": "गलत है, लेकिन यदि आप चाहते हैं कि यह अच्छा लगे तो आपको शायद सीएसएस की जरूरत है",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Which browser tool can be used to inspect CSS?",
+						"questionText": "सीएसएस का निरीक्षण करने के लिए किस ब्राउज़र टूल का उपयोग किया जा सकता है?",
 						"answerOptions": [
 							{
-								"answerText": "Elements",
+								"answerText": "एलिमेंट्स",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Styles",
+								"answerText": "स्टाइलस",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Network",
+								"answerText": "नेटवर्क",
 								"isCorrect": "false"
 							}
 						]
