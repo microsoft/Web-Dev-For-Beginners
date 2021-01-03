@@ -5,6 +5,8 @@
       <label for="locale">locale</label>
       <select v-model="locale">
         <option>en</option>
+        <option>fr</option>
+        <option>ko</option>
         <option>id</option>
       </select>
     </nav>
