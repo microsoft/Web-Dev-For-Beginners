@@ -1988,51 +1988,51 @@
 			},
 			{
 				"id": 39,
-				"title": "Lesson 20 - Space Game - End and Restart: Pre-Lecture Quiz",
+				"title": "पाठ 20 - स्पेस गेम - अंत और पुनः आरंभ: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "When is a good time to restart a game",
+						"questionText": "खेल को पुनः आरंभ करने का अच्छा समय कब है",
 						"answerOptions": [
 							{
-								"answerText": "when a player wins or loses",
+								"answerText": "जब कोई खिलाड़ी जीतता है या हारता है",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "whenever",
+								"answerText": "कभी भी",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "When should a game end",
+						"questionText": "खेल कब समाप्त होना चाहिए",
 						"answerOptions": [
 							{
-								"answerText": "when an enemy ship is destroyed",
+								"answerText": "जब एक दुश्मन जहाज नष्ट हो जाता है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "when a hero ship is destroyed",
+								"answerText": "जब एक नायक जहाज नष्ट हो जाता है",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "when points are collected",
+								"answerText": "जब अंक एकत्र किए जाते हैं",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to add a level to your game is:",
+						"questionText": "अपने खेल में एक स्तर जोड़ने का अच्छा तरीका है:",
 						"answerOptions": [
 							{
-								"answerText": "Increment the amount of points necessary to complete a given level",
+								"answerText": "दिए गए लेवल को पूरा करने के लिए आवश्यक बिंदुओं की मात्रा बढ़ाएँ",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Add more players to the game",
+								"answerText": "खेल में अधिक खिलाड़ी जोड़ें",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Add more graphics to the game",
+								"answerText": "खेल में और अधिक ग्राफिक्स जोड़ें",
 								"isCorrect": "false"
 							}
 						]
@@ -2041,47 +2041,47 @@
 			},
 			{
 				"id": 40,
-				"title": "Lesson 20 - Space Game - End and Restart: Post-Lecture Quiz",
+				"title": "पाठ 20 - स्पेस गेम - अंत और पुनः आरंभ: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "What is a good pattern to use when a game end condition has been met?",
+						"questionText": "गेम एंड कंडीशन मिलने पर उपयोग करने के लिए एक अच्छा पैटर्न क्या है?",
 						"answerOptions": [
 							{
-								"answerText": "Display a suitable message",
+								"answerText": "एक उपयुक्त संदेश प्रदर्शित करें",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Quit the game",
+								"answerText": "खेल से बाहर निकलें",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Display a suitable message, offer the player to restart, and display what key to hit for that action",
+								"answerText": "एक उपयुक्त संदेश प्रदर्शित करें, खिलाड़ी को पुनः आरंभ करने की पेशकश करें, और प्रदर्शित करें कि उस कार्रवाई के लिए क्या की है",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You should offer a restart only when the game has ended",
+						"questionText": "जब खेल समाप्त हो गया हो तब ही आपको पुनः आरंभ करना चाहिए",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to clear the EventEmitter when ending a game is:",
+						"questionText": "गेम को समाप्त करते समय EventEmitter को खाली करने का एक अच्छा तरीका है:",
 						"answerOptions": [
 							{
-								"answerText": "clearing listeners",
+								"answerText": "क्लीयरिंग लिस्टनर्स ",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "clearing the screen",
+								"answerText": "स्क्रीन साफ़ करना",
 								"isCorrect": "false"
 							},
 							{
