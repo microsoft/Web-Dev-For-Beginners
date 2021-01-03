@@ -40,7 +40,9 @@ export default {
     },
   },
   created() {
-    this.locale = this.$route.query.loc;
+    if (this.$route.query.loc) {
+      this.locale = this.$route.query.loc;
+    }
   },
 };
 </script>
