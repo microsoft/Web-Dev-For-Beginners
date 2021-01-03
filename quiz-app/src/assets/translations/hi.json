@@ -2196,43 +2196,43 @@
 			},
 			{
 				"id": 43,
-				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Pre-Lecture Quiz",
+				"title": "पाठ 22 - बैंक प्रोजेक्ट - एक लॉगिन और पंजीकरण फॉर्म बनाएँ: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "HTML forms allow to send user input to a server without using JavaScript",
+						"questionText": "HTML फ़ॉर्म जावास्क्रिप्ट का उपयोग किए बिना एक सर्वर से उपयोगकर्ता इनपुट भेजने की अनुमति देते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "<label> elements are mandatory for every form control",
+						"questionText": "<label> तत्व हर फॉर्म नियंत्रण के लिए अनिवार्य हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "It is secure to send form data to a server over HTTP",
+						"questionText": "HTTP पर सर्वर पर फ़ॉर्म डेटा भेजना सुरक्षित है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
@@ -2241,40 +2241,40 @@
 			},
 			{
 				"id": 44,
-				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Post-Lecture Quiz",
+				"title": "पाठ 22 - बैंक प्रोजेक्ट - एक लॉगिन और पंजीकरण फॉर्म बनाएँ: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Using <label> elements in forms is only for making the form pretty",
+						"questionText": "फॉर्म्स में <label> एलिमेंट का उपयोग केवल फॉर्म को सुंदर बनाने के लिए है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How can you define how a form is sent to the server?",
+						"questionText": "आप कैसे परिभाषित कर सकते हैं कि कैसे एक फॉर्म सर्वर पर भेजा जाता है?",
 						"answerOptions": [
 							{
-								"answerText": "using the action attribute",
+								"answerText": "एक्शन एट्रिब्यूट का उपयोग करना",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "using the method attribute",
+								"answerText": "मेथड एट्रिब्यूट का उपयोग करना",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "both",
+								"answerText": "दोनों",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Which attribute can you use to set the maximum size of a text <input>?",
+						"questionText": "<label> टेक्स्ट के अधिकतम आकार को सेट करने के लिए आप किस विशेषता का उपयोग कर सकते हैं?",
 						"answerOptions": [
 							{
 								"answerText": "max",
