@@ -1054,48 +1054,48 @@
 			},
 			{
 				"id": 21,
-				"title": "Lesson 11 - Typing Game: Pre-Lecture Quiz",
+				"title": "पाठ 11 - टाइपिंग गेम: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Event-driven programming is when a user",
+						"questionText": "इवेंट-संचालित प्रोग्रामिंग जब एक उपयोगकर्ता",
 						"answerOptions": [
 							{
-								"answerText": "clicks on a button",
+								"answerText": "एक बटन पर क्लिक दबाता है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "changes a value",
+								"answerText": "एक मान बदलता है ",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "interacts with the page",
+								"answerText": "पृष्ठ के साथ सहभागिता करता है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "any of the above",
+								"answerText": "ऊपर मे से कोई",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "In procedural programming, functions are called",
+						"questionText": "प्रक्रियात्मक प्रोग्रामिंग में, कार्यों को कहा जाता है",
 						"answerOptions": [
 							{
-								"answerText": "any time",
+								"answerText": "किसी भी समय",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "in a specific order",
+								"answerText": "एक विशिष्ट क्रम में",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "left to right",
+								"answerText": "बाएं से दाएं",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The universal method exposed in the DOM for registering event handlers is called",
+						"questionText": "ईवेंट हैंडलर्स को पंजीकृत करने के लिए डोम में उजागर की गई सार्वभौमिक विधि को क्या कहा जाता है",
 						"answerOptions": [
 							{
 								"answerText": "addEventListener",
@@ -1115,23 +1115,23 @@
 			},
 			{
 				"id": 22,
-				"title": "Lesson 11 - Typing Game: Post-Lecture Quiz",
+				"title": "पाठ 11 - टाइपिंग गेम: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Just about anything a user does on a page raises an event",
+						"questionText": "किसी भी चीज़ के बारे में एक उपयोगकर्ता एक पृष्ठ पर एक इवेंट्स को बढ़ाता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Common events include",
+						"questionText": "आम इवेंट्स में शामिल हैं",
 						"answerOptions": [
 							{
 								"answerText": "click_event",
@@ -1152,14 +1152,14 @@
 						]
 					},
 					{
-						"questionText": "You can use anonymous functions to create event handlers",
+						"questionText": "आप ईवेंट हैंडलर बनाने के लिए अनाम फ़ंक्शंस का उपयोग कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
