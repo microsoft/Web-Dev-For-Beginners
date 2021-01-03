@@ -1776,51 +1776,51 @@
 			},
 			{
 				"id": 35,
-				"title": "Lesson 18 - Space Game - Adding A Laser and Detecting Collisions: Pre-Lecture Quiz",
+				"title": "पाठ 18 - अंतरिक्ष खेल - एक लेजर जोड़ना और टकराव का पता लगाना: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Collision detection is how we detect if two things have collided",
+						"questionText": "टकराव का पता लगाना है कि कैसे पता लगाया जाए कि दो चीजें टकराई हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How can we remove an item from the screen?",
+						"questionText": "हम स्क्रीन से कोई आइटम कैसे निकाल सकते हैं?",
 						"answerOptions": [
 							{
-								"answerText": "Call the garbage collector",
+								"answerText": "कचरा बीनने वाले(गारबेज कोल्लेक्टर) को बुलाओ",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Mark it as dead, only paint not dead objects next time we draw the screen",
+								"answerText": "इसे मृत के रूप में चिह्नित करें, केवल मृत वस्तुओं को पेंट न करें अगली बार जब हम स्क्रीन खींचते हैं",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Place the item on a negative coordinate",
+								"answerText": "आइटम को एक नकारात्मक समन्वय पर रखें",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to simulate firing a laser in JavaScript is:",
+						"questionText": "जावास्क्रिप्ट में एक लेजर फायरिंग का अनुकरण करने का एक अच्छा तरीका है:",
 						"answerOptions": [
 							{
-								"answerText": "make a visual element respond to a key event",
+								"answerText": "एक मुख्य घटना के लिए एक दृश्य तत्व प्रतिक्रिया करे",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "create animated gifs",
+								"answerText": "एनिमेटेड गीफस(gifs)  बनाएं",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "make enemies blow up at intervals",
+								"answerText": "दुश्मनों को अंतराल पर उड़ा दें",
 								"isCorrect": "false"
 							}
 						]
@@ -1829,51 +1829,51 @@
 			},
 			{
 				"id": 36,
-				"title": "Lesson 18 - Space Game - Adding A Laser and Detecting Collisions: Post-Lecture Quiz",
+				"title": "पाठ 18 - अंतरिक्ष खेल - एक लेजर जोड़ना और टकराव का पता लगाना: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "In collision detection you compare two",
+						"questionText": "टक्कर का पता लगाने में आप तुलना करते हैं की दो",
 						"answerOptions": [
 							{
-								"answerText": "circles and whether they intersect",
+								"answerText": "मंडलियां और चाहे वे अंतरंग हों",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "rectangles and whether they intersect",
+								"answerText": "आयतें और चाहे वे अंतरंग हों",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "distances between two points",
+								"answerText": "दो बिंदुओं के बीच की दूरी",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The reason for implementing a cooldown effect is because",
+						"questionText": "एक कूलदावन प्रभाब(इफेक्ट) को लागू करने का कारण है क्योंकि",
 						"answerOptions": [
 							{
-								"answerText": "Making the game harder as you can't repeatedly fire a laser to destroy enemies",
+								"answerText": "खेल को कठिन बनाते हुए आप दुश्मनों को नष्ट करने के लिए बार-बार लेजर फायर नहीं कर सकते",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "JavaScript can only produce a certain number of events per time unit, so you need to limit them",
+								"answerText": "जावास्क्रिप्ट केवल समय इकाई के अनुसार कुछ निश्चित घटनाओं का उत्पादन कर सकती है, इसलिए आपको उन्हें सीमित करने की आवश्यकता है",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Constants are identifiable in code because",
+						"questionText": "स्थिरांक कोड में पहचाने जाने योग्य हैं क्योंकि",
 						"answerOptions": [
 							{
-								"answerText": "they are written in capital letters",
+								"answerText": "वे बड़े अक्षरों में लिखे गए हैं",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "they have specific names",
+								"answerText": "उनके विशिष्ट नाम हैं",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "they are written in kebab-case like-this",
+								"answerText": "वे कबाब-केस में इस तरह लिखे गए हैं",
 								"isCorrect": "false"
 							}
 						]
