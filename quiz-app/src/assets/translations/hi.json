@@ -646,13 +646,13 @@
 			},
 			{
 				"id": 13,
-				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Pre-Lecture Quiz",
+				"title": "पाठ 7 - जावास्क्रिप्ट मूल बातें - ऐरे और लूप: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
 						"questionText": "To refer to a specific item in an array, you would use a",
 						"answerOptions": [
 							{
-								"answerText": "square bracket []",
+								"answerText": "बड़ा कोष्टक-square bracket []",
 								"isCorrect": "false"
 							},
 							{
@@ -660,30 +660,30 @@
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "curly braces {}",
+								"answerText": "मझोला कोष्टक-curly braces {}",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How do you get the number of items in an array?",
+						"questionText": "आपको किसी सरणी में आइटम की संख्या कैसे मिलती है?",
 						"answerOptions": [
 							{
-								"answerText": "The 'len(array)' method",
+								"answerText": "'len(array)' मेथड",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The property size on the array",
+								"answerText": "सरणी पर size का गुण",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The length property on the array",
+								"answerText": "सरणी पर length का गुण",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "In JavaScript, indexes start at",
+						"questionText": "जावास्क्रिप्ट में, इंडेक्स कहासे शुरू होते हैं",
 						"answerOptions": [
 							{
 								"answerText": "0",
@@ -703,44 +703,44 @@
 			},
 			{
 				"id": 14,
-				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Post-Lecture Quiz",
+				"title": "पाठ 7 - जावास्क्रिप्ट मूल बातें - ऐरे और लूप्स: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "What part of a for-loop would you need to modify to increment its iteration by 5?",
+						"questionText": "फॉर-लूप के किस भाग को आपको अपनी पुनरावृत्ति को ५ से बढ़ाना होगा?",
 						"answerOptions": [
 							{
-								"answerText": "condition",
+								"answerText": "शर्त (condition)",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "counter",
+								"answerText": "काउंटर",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "iteration-expression",
+								"answerText": "इटरेसन-इक्स्प्रेशन",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the difference between a while and a for-loop",
+						"questionText": "वाइल और फॉर-लूप में क्या अंतर है",
 						"answerOptions": [
 							{
-								"answerText": "A for-loop has a counter and iteration-expression, where while only has a condition",
+								"answerText": "फॉर-लूप में एक काउंटर और इटरेसन-इक्स्प्रेशन है, जहां केवल एक शर्त है",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A while has a counter and iteration-expression where for-loop only has a condition",
+								"answerText": "एक वाइल में एक काउंटर और इटरेसन-इक्स्प्रेशन होती है, जहां फॉर-लूप के लिए बस एक शर्त होती है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "They are the same, just an alias for one another",
+								"answerText": "वे एक ही हैं, एक दूसरे के लिए सिर्फ एक उपनाम",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Given the code for (let i=1; i < 5; i++), how many iterations will it perform?",
+						"questionText": "कोड को देखते हुए (i=1;i<5;i++), यह कितने पुनरावृत्तियों का प्रदर्शन करेगा?",
 						"answerOptions": [
 							{
 								"answerText": "5",
