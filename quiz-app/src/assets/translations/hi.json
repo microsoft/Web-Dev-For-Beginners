@@ -532,55 +532,55 @@
 			},
 			{
 				"id": 11,
-				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Pre-Lecture Quiz",
+				"title": "पाठ 6 - जावास्क्रिप्ट मूल बातें - निर्णय लेना: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "The following operator == is called",
+						"questionText": "निम्नलिखित ऑपरेटर == को क्या कहा जाता है",
 						"answerOptions": [
 							{
-								"answerText": "Equality",
+								"answerText": "समानता",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Strict equality",
+								"answerText": "सख्त समानता",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Assignment",
+								"answerText": "असाइनमेंट",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A comparison in JavaScript returns what type?",
+						"questionText": "जावास्क्रिप्ट में तुलना किस प्रकार लौटती है?",
 						"answerOptions": [
 							{
-								"answerText": "boolean",
+								"answerText": "बुलियन",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "null",
+								"answerText": "नल",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "string",
+								"answerText": "स्ट्रिंग",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The ! symbol in JavaScript means:",
+						"questionText": "जावास्क्रिप्ट में ! प्रतीक का अर्थ है:",
 						"answerOptions": [
 							{
-								"answerText": "Logical Not",
+								"answerText": "तार्किक नहीं",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Important",
+								"answerText": "जरूरी",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Equals",
+								"answerText": "बराबर",
 								"isCorrect": "false"
 							}
 						]
@@ -589,44 +589,44 @@
 			},
 			{
 				"id": 12,
-				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Post-Lecture Quiz",
+				"title": "पाठ 6 - जावास्क्रिप्ट मूल बातें - निर्णय लेना: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "What would the following code return: '1' == 1",
+						"questionText": "निम्नलिखित कोड क्या लौटाएगा: '1' == 1",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "null",
+								"answerText": "नल",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What would the following code return: '1' === 1",
+						"questionText": "निम्नलिखित कोड क्या लौटाएगा: '1' == 1",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "null",
+								"answerText": "नल",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Choose the correct operator to express 'or' logic",
+						"questionText": "व्यक्त करने के लिए सही ऑपरेटर चुनें 'या' तर्क",
 						"answerOptions": [
 							{
 								"answerText": "a | b",
