@@ -901,7 +901,7 @@
 					}
 				]
 			},
-			{
+			{ 
 				"id": 18,
 				"title": "पाठ 9 - टेरारियम प्रोजेक्ट - सीएसएस का परिचय: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
@@ -956,43 +956,43 @@
 			},
 			{
 				"id": 19,
-				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Pre-Lecture Quiz",
+				"title": "पाठ 10 - टेरारियम प्रोजेक्ट - डोम मैनिपुलेशन और क्लोजर: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "The DOM stands for 'Document Object Management'",
+						"questionText": "DOM का अर्थ 'Document Object Management' है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The DOM can be thought of as a tree",
+						"questionText": "DOM को एक ट्री माना जा सकता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Using the Web API, you can manipulate the DOM",
+						"questionText": "वेब एपियाई का उपयोग करके, आप डोम में हेरफेर कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
@@ -1001,51 +1001,51 @@
 			},
 			{
 				"id": 20,
-				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Post-Lecture Quiz",
+				"title": "पाठ 10 - टेरारियम प्रोजेक्ट - डोम मैनिपुलेशन और क्लोजर: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "The DOM is a model to represent a document on the web",
+						"questionText": "DOM एक दस्तावेज़ है जो वेब पर एक दस्तावेज़ का प्रतिनिधित्व करता है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Use JavaScript closures to perform the following:",
+						"questionText": "निम्नलिखित प्रदर्शन करने के लिए जावास्क्रिप्ट क्लोजर का उपयोग करें:",
 						"answerOptions": [
 							{
-								"answerText": "write functions within functions",
+								"answerText": "फंगक्शनस के भीतर फंगक्शन लिखें",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "enclose the DOM",
+								"answerText": "डोम को संलग्न करें",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "close script blocks",
+								"answerText": "स्क्रिप्ट ब्लॉक बंद करें",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Fill in the blank: Closures are useful when one or more functions need to access an outer function's...",
+						"questionText": "रिक्त स्थान भरें: क्लोजर तब उपयोगी होते हैं जब किसी बाहरी फ़ंक्शन के ....... को एक्सेस करने के लिए एक या अधिक फ़ंक्शन की आवश्यकता होती है",
 						"answerOptions": [
 							{
-								"answerText": "arrays",
+								"answerText": "अरेस ",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "scope",
+								"answerText": "स्कोप",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "functions",
+								"answerText": "फंगक्शनस",
 								"isCorrect": "false"
 							}
 						]
