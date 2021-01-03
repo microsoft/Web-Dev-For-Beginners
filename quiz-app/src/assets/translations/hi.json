@@ -756,47 +756,47 @@
 			},
 			{
 				"id": 15,
-				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Pre-Lecture Quiz",
+				"title": "पाठ 8 - टेरारियम प्रोजेक्ट - HTML का परिचय: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "HTML stands for 'HyperText Mockup Language'",
+						"questionText": "HTML अर्थ 'HyperText Mockup Language' है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "All HTML tags need both opening and closing tags",
+						"questionText": "सभी HTML टैग को टैग खोलने और बंद करने दोनों की आवश्यकता होती है",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Using semantic markup is most important for",
+						"questionText": "सेमेन्टीक मार्कअप का उपयोग करना सबसे महत्वपूर्ण है",
 						"answerOptions": [
 							{
-								"answerText": "code readability",
+								"answerText": "कोड पठनीयता",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "screen readers",
+								"answerText": "स्क्रीन रीडर",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "maintenance",
+								"answerText": "मैन्ट्नन्स",
 								"isCorrect": "false"
 							}
 						]
@@ -805,51 +805,51 @@
 			},
 			{
 				"id": 16,
-				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Post-Lecture Quiz",
+				"title": "पाठ 8 - टेरारियम प्रोजेक्ट - HTML का परिचय: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Spans and Divs are interchangeable",
+						"questionText": "Spans और Divs विनिमेय हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The head of an HTML doc can contain:",
+						"questionText": "HTML डॉक के प्रमुख में ये शामिल हो सकते हैं:",
 						"answerOptions": [
 							{
-								"answerText": "the title tag",
+								"answerText": "टाइटल टैग",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "metadata",
+								"answerText": "मेटाडाटा",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "all the above",
+								"answerText": "उपर्युक्त सभी",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can't use deprecated tags in your markup",
+						"questionText": "आप अपने मार्कअप में पदावनत टैग का उपयोग नहीं कर सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false, but they have been deprecated for good reason",
+								"answerText": "गलत है, लेकिन उन्हें अच्छे कारण के लिए पदावनत किया गया है",
 								"isCorrect": "true"
 							}
 						]
