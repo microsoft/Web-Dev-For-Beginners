@@ -426,51 +426,51 @@
 			},
 			{
 				"id": 9,
-				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Pre-Lecture Quiz",
+				"title": "पाठ 5 - जावास्क्रिप्ट मूल बातें - तरीके और कार्य: पूर्व व्याख्यान प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "What's an argument?",
+						"questionText": "एक अरगुनमेंट क्या है?",
 						"answerOptions": [
 							{
-								"answerText": "It's something you declare in the function definition",
+								"answerText": "यह कुछ है जिसे आप फ़ंक्शन परिभाषा में घोषित करते हैं",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's something you pass into a function at invocation time",
+								"answerText": "यह कुछ ऐसा है जिसे आप एक समारोह में भेजते हैं",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "It's something you have with people you know",
+								"answerText": "यह कुछ ऐसा है जिसे आप उन लोगों के साथ रखते हैं जिन्हें आप जानते हैं",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A function must return something",
+						"questionText": "एक फ़ंक्शन को कुछ वापस करना होगा",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can name a function anything",
+						"questionText": "आप एक फंक्शन को कुछ भी नाम दे सकते हैं",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "true, but it should be a descriptive name",
+								"answerText": "सच है, लेकिन यह एक वर्णनात्मक नाम होना चाहिए",
 								"isCorrect": "true"
 							}
 						]
@@ -479,51 +479,51 @@
 			},
 			{
 				"id": 10,
-				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Post-Lecture Quiz",
+				"title": "पाठ 5 - जावास्क्रिप्ट मूल बातें - तरीके और कार्य: व्याख्यान उपरांत प्रश्नोत्तरी",
 				"quiz": [
 					{
-						"questionText": "Arguments must be provided for all parameters in a function",
+						"questionText": "किसी फ़ंक्शन में सभी मापदंडों के लिए अरगुनमेंट प्रदान किया जाना चाहिए",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "सही",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "गलत",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What does a default value do?",
+						"questionText": "एक डिफ़ॉल्ट मान क्या करता है?",
 						"answerOptions": [
 							{
-								"answerText": "Sets a correct value",
+								"answerText": "एक सही मान निर्धारित करता है",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Gives a starter value for a parameter so your code still behaves if you omit an argument for it",
+								"answerText": "एक पैरामीटर के लिए एक स्टार्टर मान देता है तो आपका कोड अभी भी सही चलता है यदि आप इसके लिए एक अरगुनमेंट छोड़ते हैं",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Has no utility",
+								"answerText": "कोई उपयोगिता नहीं है",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A fat arrow function allows you to",
+						"questionText": "एक फैट तीर फ़ंक्शन आपको क्या करने की अनुमति देता है",
 						"answerOptions": [
 							{
-								"answerText": "Create heavy functions",
+								"answerText": "हेबी फ़ंक्शन बनानेका",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Omit the function keyword",
+								"answerText": "फ़ंक्शन कीवर्ड को छोड़ेंने का",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Create an anonymous function",
+								"answerText": "एक अनाम फ़ंक्शन बनाने का",
 								"isCorrect": "false"
 							}
 						]
