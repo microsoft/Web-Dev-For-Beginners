@@ -10,7 +10,7 @@ These [full instructions](https://github.blog/2020-03-18-set-up-your-digital-cla
 
 ## Using the repo as is
 
-If you would like to use this repo as it currently stands, without using GitHub Classroom, that can be done as well. You would need to communicate with your students which lesson to work through together.
+If you would like to use this repo as it currently stands, without using GitHub Classroom, that can be done as well. You would need to communicate with your students who lesson to work through together.
 
 In an online format (Zoom, Teams, or other) you might form breakout rooms for the quizzes, and mentor students to help them get ready to learn. Then invite students to for the quizzes and submit their answers as 'issues' at a certain time. You might do the same with assignments, if you want students to work collaboratively out in the open.
 
