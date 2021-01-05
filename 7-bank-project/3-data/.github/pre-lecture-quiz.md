@@ -1,6 +1,6 @@
 *Complete this quiz in class.*
 
-1. You can fetch data from a server synchronously in a browser
+1. You usually fetch data from a server synchronously in a browser
 
 - [ ] true
 - [ ] false
