@@ -244,7 +244,7 @@ Let's go through a contributor workflow. Assume the contributor has already _for
 
 1. **Open a PR**. Next, you want to open up a PR. You do that by navigating to the forked repo on GitHub. You will see an indication on GitHub where it asks whether you want to create a new PR, you click that and you are taken to an interface where you can change commit message title, give it a more suitable description. Now the maintainer of the repo you forked will see this PR and _fingers crossed_ they will appreciate and _merge_ your PR. You are now a contributor, yay :)
 
-1. **Clean up**. It's considered good practice to _clean up_ after you. You want to clean up both your local branch and the branch you pushed to GitHub. First let's delete it locally with the following command: 
+1. **Clean up**. It's considered good practice to _clean up_ after you successfully merge a PR. You want to clean up both your local branch and the branch you pushed to GitHub. First let's delete it locally with the following command: 
 
    ```bash
    git branch -d [branch-name]
@@ -284,7 +284,7 @@ Lastly, you can download the code in a zipped folder.
 
 ### A few more interesting things about GitHub
 
-You can star, watching, and/or "fork" any public repository on GitHub. You can find your starred repositories in the top-right drop-down menu. It's like bookmarking, but for code. 
+You can star, watch and/or "fork" any public repository on GitHub. You can find your starred repositories in the top-right drop-down menu. It's like bookmarking, but for code. 
 
 Projects have an issue tracker, mostly on GitHub in the "Issues" tab unless indicated otherwise, where people discuss issues related to the project. And the Pull Requests tab is where people discuss and review changes that are in progress.
 
