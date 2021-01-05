@@ -2199,7 +2199,7 @@
 				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "HTML forms allow to send user input to a server without using JavaScript",
+						"questionText": "HTML forms allow you to send user input to a server without using JavaScript",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2257,15 +2257,15 @@
 						]
 					},
 					{
-						"questionText": "How can you define how a form is sent to the server?",
+						"questionText": "A URL is sent to a server in which part of a form?",
 						"answerOptions": [
 							{
-								"answerText": "using the action attribute",
-								"isCorrect": "false"
+								"answerText": "the action attribute",
+								"isCorrect": "true"
 							},
 							{
-								"answerText": "using the method attribute",
-								"isCorrect": "true"
+								"answerText": "the method attribute",
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "both",
@@ -2297,10 +2297,10 @@
 				"title": "Lesson 23 - Bank Project - Methods of Fetching and Using Data: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "You can fetch data from a server synchronously in a browser",
+						"questionText": "You usually fetch data from a server synchronously in a browser",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "true, but async is best!",
 								"isCorrect": "true"
 							},
 							{
