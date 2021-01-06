@@ -7,7 +7,7 @@ Deze les beschrijft de basis over programmeertalen. De onderwerpen zijn van toep
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)
 
 ## Introductie
 
@@ -182,7 +182,7 @@ Wanneer een ontwikkelaar iets nieuws wil leren dan zullen ze waarschijnlijk de b
 Vergelijk wat programmeertalen. Wat zijn unieke kenmerken van JavaScript vs. Java. En het verschil tussen COBOL en Go?
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](../.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2)
 
 ## Review & Zelfstudie
 

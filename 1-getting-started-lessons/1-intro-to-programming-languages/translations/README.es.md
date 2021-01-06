@@ -2,8 +2,7 @@
 
 Esta lección cubre los conceptos básicos de los lenguajes de programación. Los temas que se tratan aquí se aplican a la mayoría de los lenguajes de programación modernos en la actualidad. En la sección 'Herramientas del oficio', aprenderá sobre software útil que lo ayuda como desarrollador.
 
-## [Pre-lecture quiz](../.github/pre-lecture-quiz.md)
-
+## [Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)
 ### Introducción
 
 En esta lección, cubriremos:
@@ -175,7 +174,7 @@ Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recu
 
 Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos únicos de JavaScript frente a Java? ¿Qué hay de COBOL vs. Go?
 
-## [Prueba Post-lectura](../.github/post-lecture-quiz.md)
+## [Prueba Post-lectura](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2)
 
 ## Revisión y autoestudio
 
