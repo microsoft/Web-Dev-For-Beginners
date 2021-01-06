@@ -10,6 +10,7 @@ Making decisions and controlling the order in which your code runs makes your co
 
 [![Making Decisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
 
+> Click the image above for a video about making decisions.
 ## A Brief Recap on Booleans
 
 Booleans can be only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.

@@ -283,6 +283,8 @@ Here's a refresher video on arrow functions:
 
 [![Arrow Functions](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Arrow Functions")
 
+> Click the image above for a video about arrow functions.
+
 Now try to use the back and forward buttons of your browsers, and check that the displayed route is correctly updated this time.
 
 ---

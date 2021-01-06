@@ -151,6 +151,8 @@ Here's a quick video about `async`:
 
 [![Async and Await for managing promises](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async and Await for managing promises")
 
+> Click the image above for a video about async/await.
+
 Create a new function to query the C02Signal API:
 
 ```JavaScript
