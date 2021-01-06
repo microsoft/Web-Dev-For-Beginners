@@ -4,7 +4,7 @@
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
-[Quiz Pre-Lezione](../.github/pre-lecture-quiz.md)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5?loc=it)
 
 > La forza del Web è nella usa universalità. L'accesso garantito a tutti a prescindere dalla disabilità è us aspetto essenziale.
 >
@@ -116,9 +116,9 @@ Come bonus aggiuntivo per garantire che il proprio sito sia accessibile a tutti,
 
 Si Immagini la pagina seguente:
 
-| Prodotto | Descrizione | Ordine |
-| ------------ | ------------------ | ------------ |
-| Widget | [Descrizione]('#') | [Ordine]('#') |
+| Prodotto         | Descrizione        | Ordine        |
+| ---------------- | ------------------ | ------------- |
+| Widget           | [Descrizione]('#') | [Ordine]('#') |
 | DMX Super Widget | [Descrizione]('#') | [Ordine]('#') |
 
 In questo esempio, la duplicazione del testo della descrizione e dell'ordine ha senso per qualcuno che utilizza un browser. Tuttavia, qualcuno che utilizza uno screen reader ascolterebbe solo le parole *descrizione* e *ordine* ripetute senza contesto.
@@ -215,7 +215,7 @@ Prendere questo HTML e riscriverlo per essere il più accessibile possibile, dat
 ```
 
 ## Quiz post-lezione
-[Quiz post-lezione](../.github/post-lecture-quiz.md)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6?loc=it)
 
 ## Revisione e auto apprendimento
 
