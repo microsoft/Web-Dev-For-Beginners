@@ -6,7 +6,7 @@ Questa lezione tratta delle basi di GitHub, una piattaforma per ospitare e gesti
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-lezione
-[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3?loc=it)
 
 ## Introduzione
 
@@ -296,7 +296,7 @@ I progetti potrebbero anche essere discussi nei forum, liste di distribuzione, o
 Fare coppia con un amico per lavorare al codice dei progetti l'uno dell'altro. Creare un progetto in modo collaborativo, biforcare il codice, craare rami e fondere modifiche.
 
 ## Quiz Post-lezione
-[Post-lecture quiz](../.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4?loc=it)
 
 ## Revisione e Auto Apprendimento
 
