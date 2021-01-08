@@ -1054,48 +1054,48 @@
 			},
 			{
 				"id": 21,
-				"title": "レッスン 11 - Typing Game: レッスン前の小テスト",
+				"title": "レッスン 11 - タイピングゲーム: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "Event-driven programming is when a user",
+						"questionText": "イベント駆動型のプログラミングは、ユーザーが",
 						"answerOptions": [
 							{
-								"answerText": "clicks on a button",
+								"answerText": "ボタンをクリックしたとき",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "changes a value",
+								"answerText": "値を変更したとき",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "interacts with the page",
+								"answerText": "ページと相互にやりとりしたとき",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "any of the above",
+								"answerText": "上記のいずれか",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "In procedural programming, functions are called",
+						"questionText": "手続き型プログラミングでは、関数は",
 						"answerOptions": [
 							{
-								"answerText": "any time",
+								"answerText": "いつでも呼び出されます。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "in a specific order",
+								"answerText": "特定の順序で呼び出されます。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "left to right",
+								"answerText": "左から右へと呼び出されます。",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The universal method exposed in the DOM for registering event handlers is called",
+						"questionText": "イベントハンドラを登録するために DOM で公開されているユニバーサルメソッドは",
 						"answerOptions": [
 							{
 								"answerText": "addEventListener",
@@ -1115,10 +1115,10 @@
 			},
 			{
 				"id": 22,
-				"title": "レッスン 11 - Typing Game: レッスン後の小テスト",
+				"title": "レッスン 11 - タイピングゲーム: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "Just about anything a user does on a page raises an event",
+						"questionText": "ユーザーがページ上で何かをするだけで、イベントが発生します。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1131,7 +1131,7 @@
 						]
 					},
 					{
-						"questionText": "Common events include",
+						"questionText": "よくあるイベントには以下のものがあります。",
 						"answerOptions": [
 							{
 								"answerText": "click_event",
@@ -1146,13 +1146,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "all of these",
+								"answerText": "これら全て",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can use anonymous functions to create event handlers",
+						"questionText": "匿名関数を使用してイベントハンドラを作成することができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1168,27 +1168,27 @@
 			},
 			{
 				"id": 23,
-				"title": "レッスン 12 - Browser Extension Project - All about Browsers: レッスン前の小テスト",
+				"title": "レッスン 12 - ブラウザ拡張機能プロジェクト - ブラウザについて: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "You can get browser extensions from",
+						"questionText": "ブラウザの拡張機能を取得できるのは",
 						"answerOptions": [
 							{
-								"answerText": "WalMart",
+								"answerText": "ウォルマート",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The browser's extension store",
+								"answerText": "ブラウザの拡張機能ストア",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "The App store",
+								"answerText": "App store",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "NPM stands for",
+						"questionText": "NPM とは",
 						"answerOptions": [
 							{
 								"answerText": "Node Package Manager",
@@ -1205,7 +1205,7 @@
 						]
 					},
 					{
-						"questionText": "Your browser can serve web pages both securely and insecurely",
+						"questionText": "お使いのブラウザは、安全な Web ページと安全でない Web ページを提供することができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1221,27 +1221,27 @@
 			},
 			{
 				"id": 24,
-				"title": "レッスン 12 -  Browser Extension Project - All about Browsers: レッスン後の小テスト",
+				"title": "レッスン 12 - ブラウザ拡張機能プロジェクト - ブラウザについて: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "The World Wide Web was invented by",
+						"questionText": "World Wide Web (ワールドワイドウェブ) の発明者は",
 						"answerOptions": [
 							{
-								"answerText": "Tom Barnard-Loft",
+								"answerText": "トム・バーナード=ロフト",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Tim Berners-Lee",
+								"answerText": "ティム・バーナーズ=リー",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Trish Berth-Pool",
+								"answerText": "トリッシュ バース=プール",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The first browser was called",
+						"questionText": "最初のブラウザは",
 						"answerOptions": [
 							{
 								"answerText": "WorldWideWeb",
@@ -1258,7 +1258,7 @@
 						]
 					},
 					{
-						"questionText": "Browsers can store a user's browsing history",
+						"questionText": "ブラウザはユーザーの閲覧履歴を保存することができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1274,10 +1274,10 @@
 			},
 			{
 				"id": 25,
-				"title": "レッスン 13 - Browser Extension Project - Call an API, use Local Storage: レッスン前の小テスト",
+				"title": "レッスン 13 - ブラウザ拡張機能プロジェクト - API の呼び出し、ローカルストレージの使用: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "APIs stand for",
+						"questionText": "API とは",
 						"answerOptions": [
 							{
 								"answerText": "Application Programming Interfaces",
@@ -1294,24 +1294,24 @@
 						]
 					},
 					{
-						"questionText": "Use an API to interact with",
+						"questionText": "API を使用して",
 						"answerOptions": [
 							{
-								"answerText": "Another web-connected asset",
+								"answerText": "別の Web で接続されたアセットとやりとりします。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A database",
+								"answerText": "データベースとやりとりします。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Either of the above",
+								"answerText": "上記のいずれかを実行します。",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Anyone can create an API",
+						"questionText": "誰でも API を作成することができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1327,10 +1327,10 @@
 			},
 			{
 				"id": 26,
-				"title": "レッスン 13 - Browser Extension Project - Call an API, use Local Storage: レッスン後の小テスト",
+				"title": "レッスン 13 - ブラウザ拡張機能プロジェクト - API の呼び出し、ローカルストレージの使用: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "LocalStorage is cleared every time you close the browser window",
+						"questionText": "ブラウザウィンドウを閉じるたびにローカルストレージがクリアされます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1343,7 +1343,7 @@
 						]
 					},
 					{
-						"questionText": "The main browser window controls a browser's extension's LocalStorage",
+						"questionText": "ブラウザのメインウィンドウは、ブラウザの拡張機能のローカルストレージを制御します。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1356,7 +1356,7 @@
 						]
 					},
 					{
-						"questionText": "REST in an API context stands for",
+						"questionText": "API コンテキストでの REST は、以下の略です。",
 						"answerOptions": [
 							{
 								"answerText": "Representational State Transfer",
@@ -1376,55 +1376,55 @@
 			},
 			{
 				"id": 27,
-				"title": "レッスン 14 - Browser Extension Project - Learn about Background Tasks and Performance: レッスン前の小テスト",
+				"title": "レッスン 14 - ブラウザ拡張機能プロジェクト - バックグラウンドタスクとパフォーマンスについて学ぶ: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "Test the performance of your app",
+						"questionText": "アプリのパフォーマンスをテストするには",
 						"answerOptions": [
 							{
-								"answerText": "Using the browser's tools",
+								"answerText": "ブラウザのツールを使用します。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Using a separate software package",
+								"answerText": "別のソフトウェアパッケージを使用します",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Manually",
+								"answerText": "手作業で行います",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The 'performance' of a web site is an analysis of",
+						"questionText": "Web サイトの「パフォーマンス」は、次の内容を分析したものです。",
 						"answerOptions": [
 							{
-								"answerText": "How fast it loads",
+								"answerText": "どのくらいの速さでロードされるか",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "How fast the code on it runs",
+								"answerText": "コードの実行速度",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Both of the above",
+								"answerText": "上記のどちらも",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Overall, the 'weight' of web pages over the past few years has",
+						"questionText": "全体的に、ここ数年の Web ページの「重さ」は",
 						"answerOptions": [
 							{
-								"answerText": "gotten lighter",
+								"answerText": "軽くなっています。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "gotten heavier",
+								"answerText": "重くなっています。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "stayed the same",
+								"answerText": "変わっていません。",
 								"isCorrect": "false"
 							}
 						]
@@ -1433,10 +1433,10 @@
 			},
 			{
 				"id": 28,
-				"title": "レッスン 14 - Browser Extension Project - Learn about Background Tasks and Performance: レッスン後の小テスト",
+				"title": "レッスン 14 - ブラウザ拡張機能プロジェクト - バックグラウンドタスクとパフォーマンスについて学ぶ: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "To get a better view of your site's performance, clear its cache and reload in the profiler",
+						"questionText": "サイトのパフォーマンスを向上させるには、プロファイラでキャッシュをクリアしてリロードします。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1449,7 +1449,7 @@
 						]
 					},
 					{
-						"questionText": "Browser extensions are inherently performant",
+						"questionText": "ブラウザの拡張機能は本質的にパフォーマンスが高い。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1462,22 +1462,22 @@
 						]
 					},
 					{
-						"questionText": "Analyze the following for performance bottlenecks",
+						"questionText": "パフォーマンスのボトルネックについて、次のように分析します。",
 						"answerOptions": [
 							{
-								"answerText": "DOM traversals",
+								"answerText": "DOM 走査",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "JavaScript optimizations",
+								"answerText": "JavaScript の最適化",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Asset management",
+								"answerText": "アセット管理",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All the above",
+								"answerText": "上記のすべて",
 								"isCorrect": "true"
 							}
 						]
@@ -1486,7 +1486,7 @@
 			},
 			{
 				"id": 29,
-				"title": "レッスン 15 - Space Game - Introduction: レッスン前の小テスト",
+				"title": "レッスン 15 - スペースゲーム - Introduction: レッスン前の小テスト",
 				"quiz": [
 					{
 						"questionText": "JavaScript is an unpopular language for building games",
@@ -1531,7 +1531,7 @@
 			},
 			{
 				"id": 30,
-				"title": "レッスン 15 - Space Game - Introduction: レッスン後の小テスト",
+				"title": "レッスン 15 - スペースゲーム - Introduction: レッスン後の小テスト",
 				"quiz": [
 					{
 						"questionText": "Classes rely on inheritance to ascribe to behaviors",
@@ -1580,7 +1580,7 @@
 			},
 			{
 				"id": 31,
-				"title": "レッスン 16 - Space Game - Draw Hero and Monsters to Canvas: レッスン前の小テスト",
+				"title": "レッスン 16 - スペースゲーム - Draw Hero and Monsters to Canvas: レッスン前の小テスト",
 				"quiz": [
 					{
 						"questionText": "The Canvas element is what you use to draw on a screen",
@@ -1625,7 +1625,7 @@
 			},
 			{
 				"id": 32,
-				"title": "レッスン 16 - Space Game - Draw Hero and Monsters to Canvas: レッスン後の小テスト",
+				"title": "レッスン 16 - スペースゲーム - Draw Hero and Monsters to Canvas: レッスン後の小テスト",
 				"quiz": [
 					{
 						"questionText": "You can perform drawing operations directly on the Canvas",
@@ -1674,7 +1674,7 @@
 			},
 			{
 				"id": 33,
-				"title": "レッスン 17 - Space Game - Adding Motion: レッスン前の小テスト",
+				"title": "レッスン 17 - スペースゲーム - Adding Motion: レッスン前の小テスト",
 				"quiz": [
 					{
 						"questionText": "Any object on the screen can receive keyboard events",
@@ -1723,7 +1723,7 @@
 			},
 			{
 				"id": 34,
-				"title": "レッスン 17 - Space Game - Adding Motion: レッスン後の小テスト",
+				"title": "レッスン 17 - スペースゲーム - Adding Motion: レッスン後の小テスト",
 				"quiz": [
 					{
 						"questionText": "You always need to redraw the screen",
@@ -1776,7 +1776,7 @@
 			},
 			{
 				"id": 35,
-				"title": "レッスン 18 - Space Game - Adding A Laser and Detecting Collisions: レッスン前の小テスト",
+				"title": "レッスン 18 - スペースゲーム - Adding A Laser and Detecting Collisions: レッスン前の小テスト",
 				"quiz": [
 					{
 						"questionText": "Collision detection is how we detect if two things have collided",
@@ -1829,7 +1829,7 @@
 			},
 			{
 				"id": 36,
-				"title": "レッスン 18 - Space Game - Adding A Laser and Detecting Collisions: レッスン後の小テスト",
+				"title": "レッスン 18 - スペースゲーム - Adding A Laser and Detecting Collisions: レッスン後の小テスト",
 				"quiz": [
 					{
 						"questionText": "In collision detection you compare two",
@@ -1882,7 +1882,7 @@
 			},
 			{
 				"id": 37,
-				"title": "レッスン 19 - Space Game - Scoring and Lives: レッスン前の小テスト",
+				"title": "レッスン 19 - スペースゲーム - Scoring and Lives: レッスン前の小テスト",
 				"quiz": [
 					{
 						"questionText": "How do you draw text on a screen using the Canvas element?",
@@ -1935,7 +1935,7 @@
 			},
 			{
 				"id": 38,
-				"title": "レッスン 19 - Space Game - Scoring and Lives: レッスン後の小テスト",
+				"title": "レッスン 19 - スペースゲーム - Scoring and Lives: レッスン後の小テスト",
 				"quiz": [
 					{
 						"questionText": "What's a fun way to show how many lives a player has left?",
@@ -1988,7 +1988,7 @@
 			},
 			{
 				"id": 39,
-				"title": "レッスン 20 - Space Game - End and Restart: レッスン前の小テスト",
+				"title": "レッスン 20 - スペースゲーム - End and Restart: レッスン前の小テスト",
 				"quiz": [
 					{
 						"questionText": "When is a good time to restart a game",
@@ -2041,7 +2041,7 @@
 			},
 			{
 				"id": 40,
-				"title": "レッスン 20 - Space Game - End and Restart: レッスン後の小テスト",
+				"title": "レッスン 20 - スペースゲーム - End and Restart: レッスン後の小テスト",
 				"quiz": [
 					{
 						"questionText": "What is a good pattern to use when a game end condition has been met?",
@@ -2094,7 +2094,7 @@
 			},
 			{
 				"id": 41,
-				"title": "レッスン 21 - Bank Project - HTML Templates and Routes in a Web App: レッスン前の小テスト",
+				"title": "レッスン 21 - 銀行プロジェクト - HTML Templates and Routes in a Web App: レッスン前の小テスト",
 				"quiz": [
 					{
 						"questionText": "You need to create multiple HTML files to display different screens in a web app",
@@ -2143,7 +2143,7 @@
 			},
 			{
 				"id": 42,
-				"title": "レッスン 21 - Bank Project HTML Templates and Routes in a Web App: レッスン後の小テスト",
+				"title": "レッスン 21 - 銀行プロジェクト - HTML Templates and Routes in a Web App: レッスン後の小テスト",
 				"quiz": [
 					{
 						"questionText": "HTML templates are part of the DOM by default",
@@ -2196,7 +2196,7 @@
 			},
 			{
 				"id": 43,
-				"title": "レッスン 22 - Bank Project - Build a Login and Registration Form: レッスン前の小テスト",
+				"title": "レッスン 22 - 銀行プロジェクト - Build a Login and Registration Form: レッスン前の小テスト",
 				"quiz": [
 					{
 						"questionText": "HTML forms allow you to send user input to a server without using JavaScript",
@@ -2241,7 +2241,7 @@
 			},
 			{
 				"id": 44,
-				"title": "レッスン 22 - Bank Project - Build a Login and Registration Form: レッスン後の小テスト",
+				"title": "レッスン 22 - 銀行プロジェクト - Build a Login and Registration Form: レッスン後の小テスト",
 				"quiz": [
 					{
 						"questionText": "Using <label> elements in forms is only for making the form pretty",
@@ -2294,7 +2294,7 @@
 			},
 			{
 				"id": 45,
-				"title": "レッスン 23 - Bank Project - Methods of Fetching and Using Data: レッスン前の小テスト",
+				"title": "レッスン 23 - 銀行プロジェクト - Methods of Fetching and Using Data: レッスン前の小テスト",
 				"quiz": [
 					{
 						"questionText": "You usually fetch data from a server synchronously in a browser",
@@ -2343,7 +2343,7 @@
 			},
 			{
 				"id": 46,
-				"title": "レッスン 23 - Bank Project Methods of Fetching and Using Data: レッスン後の小テスト",
+				"title": "レッスン 23 - 銀行プロジェクト - Methods of Fetching and Using Data: レッスン後の小テスト",
 				"quiz": [
 					{
 						"questionText": "In a Single-page application, the HTML is loaded once and never updated",
@@ -2396,7 +2396,7 @@
 			},
 			{
 				"id": 47,
-				"title": "レッスン 24 - Bank Project - Concepts of State Management: レッスン前の小テスト",
+				"title": "レッスン 24 - 銀行プロジェクト - Concepts of State Management: レッスン前の小テスト",
 				"quiz": [
 					{
 						"questionText": "What is an immutable object?",
@@ -2453,7 +2453,7 @@
 			},
 			{
 				"id": 48,
-				"title": "レッスン 24 - Bank Project - Concepts of State Management: レッスン後の小テスト",
+				"title": "レッスン 24 - 銀行プロジェクト - Concepts of State Management: レッスン後の小テスト",
 				"quiz": [
 					{
 						"questionText": "What do you think state management means?",
