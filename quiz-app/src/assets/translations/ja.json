@@ -1486,10 +1486,10 @@
 			},
 			{
 				"id": 29,
-				"title": "レッスン 15 - スペースゲーム - Introduction: レッスン前の小テスト",
+				"title": "レッスン 15 - スペースゲーム - イントロダクション: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "JavaScript is an unpopular language for building games",
+						"questionText": "JavaScript はゲームを作るのに人気ではない言語",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1502,7 +1502,7 @@
 						]
 					},
 					{
-						"questionText": "Pub/Sub is a preferred pattern for managing the game's assets and flow",
+						"questionText": "Pub/Sub はゲームの資産や流れを管理するための好ましいパターンです。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1515,7 +1515,7 @@
 						]
 					},
 					{
-						"questionText": "Object inheritance can be handled by either using classes or composition",
+						"questionText": "オブジェクトの継承は、クラスを使用して処理することもできますし、コンポジションを使用して処理することもできます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1531,10 +1531,10 @@
 			},
 			{
 				"id": 30,
-				"title": "レッスン 15 - スペースゲーム - Introduction: レッスン後の小テスト",
+				"title": "レッスン 15 - スペースゲーム - イントロダクション: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "Classes rely on inheritance to ascribe to behaviors",
+						"questionText": "クラスは振る舞いを継承に依存しています。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1547,7 +1547,7 @@
 						]
 					},
 					{
-						"questionText": "Composition is the preferred design pattern for game objects",
+						"questionText": "ゲームオブジェクトの好ましいデザインパターンはコンポジションです。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1560,7 +1560,7 @@
 						]
 					},
 					{
-						"questionText": "Pub/Sub stands for:",
+						"questionText": "Pub/Sub の略:",
 						"answerOptions": [
 							{
 								"answerText": "Publish/Subscribe",
@@ -1580,10 +1580,10 @@
 			},
 			{
 				"id": 31,
-				"title": "レッスン 16 - スペースゲーム - Draw Hero and Monsters to Canvas: レッスン前の小テスト",
+				"title": "レッスン 16 - スペースゲーム - ヒーローとモンスターをキャンバスに描く: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "The Canvas element is what you use to draw on a screen",
+						"questionText": "Canvas 要素は、画面上に描画するために使用するものです。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1596,7 +1596,7 @@
 						]
 					},
 					{
-						"questionText": "You can only draw simple geometric shapes using the Canvas API",
+						"questionText": "Canvas API を使用して単純な幾何学的形状を描くことしかできません。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1609,7 +1609,7 @@
 						]
 					},
 					{
-						"questionText": "The point 0,0 is in the bottom left",
+						"questionText": "点 0,0 は左下にあります。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1625,10 +1625,10 @@
 			},
 			{
 				"id": 32,
-				"title": "レッスン 16 - スペースゲーム - Draw Hero and Monsters to Canvas: レッスン後の小テスト",
+				"title": "レッスン 16 - スペースゲーム - ヒーローとモンスターをキャンバスに描く: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "You can perform drawing operations directly on the Canvas",
+						"questionText": "Canvas 上で直接描画操作を行うことができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1641,7 +1641,7 @@
 						]
 					},
 					{
-						"questionText": "You listen to the onload event to know when an image has loaded asynchronously",
+						"questionText": "画像が非同期的に読み込まれたかどうかを知るために onload イベントを待ち受けます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1654,7 +1654,7 @@
 						]
 					},
 					{
-						"questionText": "You draw images onto a screen with an operation called:",
+						"questionText": "画面に画像を描画するには、次の呼ばれる操作を行います:",
 						"answerOptions": [
 							{
 								"answerText": "paintImage()",
@@ -1674,10 +1674,10 @@
 			},
 			{
 				"id": 33,
-				"title": "レッスン 17 - スペースゲーム - Adding Motion: レッスン前の小テスト",
+				"title": "レッスン 17 - スペースゲーム - モーションの追加: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "Any object on the screen can receive keyboard events",
+						"questionText": "画面上の任意のオブジェクトはキーボードイベントを受信することができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1690,7 +1690,7 @@
 						]
 					},
 					{
-						"questionText": "You can use the same method to listen to key events and mouse events",
+						"questionText": "キーイベントやマウスイベントを待ち受けるのにも同じ方法を使うことができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1703,7 +1703,7 @@
 						]
 					},
 					{
-						"questionText": "To make things happen at a regular interval, you use what function?",
+						"questionText": "一定の間隔で物事を進行させるためには、どのような関数を使用しますか？",
 						"answerOptions": [
 							{
 								"answerText": "setInterval()",
@@ -1723,10 +1723,10 @@
 			},
 			{
 				"id": 34,
-				"title": "レッスン 17 - スペースゲーム - Adding Motion: レッスン後の小テスト",
+				"title": "レッスン 17 - スペースゲーム - モーションの追加: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "You always need to redraw the screen",
+						"questionText": "常に画面を再描画する必要があります。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1739,35 +1739,35 @@
 						]
 					},
 					{
-						"questionText": "What is a game loop?",
+						"questionText": "ゲームループとは?",
 						"answerOptions": [
 							{
-								"answerText": "A function that ensures the game can be restarted",
+								"answerText": "ゲームを再起動できるようにする関数",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A function that decided how fast the game should run",
+								"answerText": "ゲームの実行速度を決定する関数",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A function that is invoked at regular intervals and draws what the user should see",
+								"answerText": "一定の間隔で呼び出され、ユーザーが見るべきものを描画する関数",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "A good case for redrawing the screen is",
+						"questionText": "画面を再描画するための良いケースは、",
 						"answerOptions": [
 							{
-								"answerText": "A user interaction happened",
+								"answerText": "ユーザーとのインタラクションが発生したことです。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Something has moved",
+								"answerText": "何かが動いたということです。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Time has passed",
+								"answerText": "時間が経つということです。",
 								"isCorrect": "false"
 							}
 						]
@@ -1776,10 +1776,10 @@
 			},
 			{
 				"id": 35,
-				"title": "レッスン 18 - スペースゲーム - Adding A Laser and Detecting Collisions: レッスン前の小テスト",
+				"title": "レッスン 18 - スペースゲーム - レーザーの追加と衝突の検出: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "Collision detection is how we detect if two things have collided",
+						"questionText": "衝突検出は、2つのものが衝突したかどうかを検出する方法です。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1792,35 +1792,35 @@
 						]
 					},
 					{
-						"questionText": "How can we remove an item from the screen?",
+						"questionText": "画面からアイテムを削除するにはどうすればいいですか?",
 						"answerOptions": [
 							{
-								"answerText": "Call the garbage collector",
+								"answerText": "ガベージコレクタを呼び出します。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Mark it as dead, only paint not dead objects next time we draw the screen",
+								"answerText": "dead としてマークして、次に画面を描くときは dead ではないオブジェクトだけをペイントします。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Place the item on a negative coordinate",
+								"answerText": "マイナス座標にアイテムを配置します",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to simulate firing a laser in JavaScript is:",
+						"questionText": "JavaScript でレーザー発射をシミュレートする良い方法は:",
 						"answerOptions": [
 							{
-								"answerText": "make a visual element respond to a key event",
+								"answerText": "ビジュアル要素をキーイベントに反応させます",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "create animated gifs",
+								"answerText": "アニメーション GIF を作成します",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "make enemies blow up at intervals",
+								"answerText": "間隔をおいて敵を吹き飛ばします",
 								"isCorrect": "false"
 							}
 						]
@@ -1829,51 +1829,51 @@
 			},
 			{
 				"id": 36,
-				"title": "レッスン 18 - スペースゲーム - Adding A Laser and Detecting Collisions: レッスン後の小テスト",
+				"title": "レッスン 18 - スペースゲーム - レーザーの追加と衝突の検出: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "In collision detection you compare two",
+						"questionText": "衝突検出では、以下の2つを比較します。",
 						"answerOptions": [
 							{
-								"answerText": "circles and whether they intersect",
+								"answerText": "円と交差するかどうか",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "rectangles and whether they intersect",
+								"answerText": "矩形と交差するかどうか",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "distances between two points",
+								"answerText": "二点間の距離",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The reason for implementing a cooldown effect is because",
+						"questionText": "クールダウン効果を実装した理由は、",
 						"answerOptions": [
 							{
-								"answerText": "Making the game harder as you can't repeatedly fire a laser to destroy enemies",
+								"answerText": "レーザーを連射して敵を破壊することができないため、ゲームを難しくするためです。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "JavaScript can only produce a certain number of events per time unit, so you need to limit them",
+								"answerText": "JavaScript は時間単位で一定数のイベントしか生成できないので、制限する必要があるからです。",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Constants are identifiable in code because",
+						"questionText": "定数はコード内で識別可能です。理由は",
 						"answerOptions": [
 							{
-								"answerText": "they are written in capital letters",
+								"answerText": "定数は大文字で書かれているため",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "they have specific names",
+								"answerText": "それらは固有の名前を持っているため",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "they are written in kebab-case like-this",
+								"answerText": "このようにケバブ文字で書かれているため",
 								"isCorrect": "false"
 							}
 						]
@@ -1882,40 +1882,40 @@
 			},
 			{
 				"id": 37,
-				"title": "レッスン 19 - スペースゲーム - Scoring and Lives: レッスン前の小テスト",
+				"title": "レッスン 19 - スペースゲーム - スコアリングとライフ: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "How do you draw text on a screen using the Canvas element?",
+						"questionText": "Canvas 要素を使って画面上にテキストを描くには?",
 						"answerOptions": [
 							{
-								"answerText": "Place text inside a div or span element",
+								"answerText": "div または span 要素内にテキストを配置します",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Call drawText() on the Canvas element",
+								"answerText": "Canvas 要素で drawText() を呼び出します",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Call fillText() on the context object",
+								"answerText": "コンテキストオブジェクト上で fillText() を呼び出します",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Why do you have the concept of 'lives' in a game?",
+						"questionText": "なんでゲームに「ライフ」という概念があるのでしょうか?",
 						"answerOptions": [
 							{
-								"answerText": "To show how much damage you can take",
+								"answerText": "どれだけのダメージを受けられるかを示すため",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "So that the game doesn't end straight away, but you have n number of chances before the game is over",
+								"answerText": "ゲームはすぐには終わらないが、ゲームが終了するまでにチャンスの数が N 回あるようにするため",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Add color to text on Canvas using",
+						"questionText": "キャンバス上のテキストに色を追加するのに使用するのは",
 						"answerOptions": [
 							{
 								"answerText": "fillColor",
@@ -1935,40 +1935,40 @@
 			},
 			{
 				"id": 38,
-				"title": "レッスン 19 - スペースゲーム - Scoring and Lives: レッスン後の小テスト",
+				"title": "レッスン 19 - スペースゲーム - スコアリングとライフ: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "What's a fun way to show how many lives a player has left?",
+						"questionText": "プレイヤーの残りライフの多さを示す楽しい方法とは？",
 						"answerOptions": [
 							{
-								"answerText": "a number of ships",
+								"answerText": "宇宙船の数",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "a points system",
+								"answerText": "ポイントシステム",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How do you center text in the middle of the screen using the Canvas element?",
+						"questionText": "Canvas 要素を使って画面の中央にテキストを配置するには?",
 						"answerOptions": [
 							{
-								"answerText": "You use Flexbox",
+								"answerText": "Flexbox を使用します。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "You instruct the text to be drawn at the x coordinate of the client window width/2",
+								"answerText": "クライアントウィンドウの width/2 の x 座標にテキストを描画するように指示します。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "You set the textAlign property to the value center on the context object",
+								"answerText": "textAlign プロパティをコンテキストオブジェクトの値の中心に設定します。",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "In code, deduct a life like this:",
+						"questionText": "コードでは、このようにライフを差し引きます:",
 						"answerOptions": [
 							{
 								"answerText": "this.life-",
@@ -1988,51 +1988,51 @@
 			},
 			{
 				"id": 39,
-				"title": "レッスン 20 - スペースゲーム - End and Restart: レッスン前の小テスト",
+				"title": "レッスン 20 - スペースゲーム - 終了と再起動: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "When is a good time to restart a game",
+						"questionText": "ゲームを再開するのに良いタイミングはいつですか?",
 						"answerOptions": [
 							{
-								"answerText": "when a player wins or loses",
+								"answerText": "勝敗時",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "whenever",
+								"answerText": "いつでも",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "When should a game end",
+						"questionText": "いつゲームを終了すべきでしょうか?",
 						"answerOptions": [
 							{
-								"answerText": "when an enemy ship is destroyed",
+								"answerText": "敵の宇宙船撃破時",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "when a hero ship is destroyed",
+								"answerText": "ヒーローの宇宙船撃破時",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "when points are collected",
+								"answerText": "ポイントがたまったら",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to add a level to your game is:",
+						"questionText": "ゲームにレベルを追加する良い方法は:",
 						"answerOptions": [
 							{
-								"answerText": "Increment the amount of points necessary to complete a given level",
+								"answerText": "与えられたレベルを完了するために必要なポイントの量を増加させます。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Add more players to the game",
+								"answerText": "より多くのプレイヤーをゲームに追加します。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Add more graphics to the game",
+								"answerText": "ゲームにグラフィックを追加します。",
 								"isCorrect": "false"
 							}
 						]
@@ -2041,27 +2041,27 @@
 			},
 			{
 				"id": 40,
-				"title": "レッスン 20 - スペースゲーム - End and Restart: レッスン後の小テスト",
+				"title": "レッスン 20 - スペースゲーム - 終了と再起動: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "What is a good pattern to use when a game end condition has been met?",
+						"questionText": "ゲーム終了条件が満たされた時に使うと良いパターンとは?",
 						"answerOptions": [
 							{
-								"answerText": "Display a suitable message",
+								"answerText": "適切なメッセージを表示します",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Quit the game",
+								"answerText": "ゲームを終了します。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Display a suitable message, offer the player to restart, and display what key to hit for that action",
+								"answerText": "適切なメッセージを表示し、プレイヤーに再起動を提案し、そのアクションのために押すべきキーを表示します。",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You should offer a restart only when the game has ended",
+						"questionText": "ゲームが終了したときにのみ再起動するようにすべきである。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -2074,18 +2074,18 @@
 						]
 					},
 					{
-						"questionText": "A good way to clear the EventEmitter when ending a game is:",
+						"questionText": "ゲーム終了時に EventEmitter をクリアする良い方法は以下の通りです:",
 						"answerOptions": [
 							{
-								"answerText": "clearing listeners",
+								"answerText": "リスナーのクリア",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "clearing the screen",
+								"answerText": "画面消去",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "closing the game window",
+								"answerText": "ゲームウィンドウを閉じる",
 								"isCorrect": "false"
 							}
 						]
@@ -2427,7 +2427,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All of the above",
+								"answerText": "上記のすべて",
 								"isCorrect": "true"
 							}
 						]
@@ -2484,7 +2484,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All of the above",
+								"answerText": "上記のすべて",
 								"isCorrect": "true"
 							}
 						]
