@@ -2094,10 +2094,10 @@
 			},
 			{
 				"id": 41,
-				"title": "レッスン 21 - 銀行プロジェクト - HTML Templates and Routes in a Web App: レッスン前の小テスト",
+				"title": "レッスン 21 - 銀行プロジェクト - Web アプリの HTML テンプレートとルート: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "You need to create multiple HTML files to display different screens in a web app",
+						"questionText": "Web アプリで異なる画面を表示するためには、複数の HTML ファイルを作成する必要があります。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -2110,7 +2110,7 @@
 						]
 					},
 					{
-						"questionText": "You can store and persist data locally in a web app",
+						"questionText": "Web アプリ内のデータをローカルに保存し、永続化することができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -2123,18 +2123,18 @@
 						]
 					},
 					{
-						"questionText": "What's the best data provider for a web app?",
+						"questionText": "Web アプリに最適なデータプロバイダとは？",
 						"answerOptions": [
 							{
-								"answerText": "A local database",
+								"answerText": "ローカルデータベース",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A JavaScript object",
+								"answerText": "JavaScript オブジェクト",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A server with a JSON API",
+								"answerText": "JSON API を持つサーバー",
 								"isCorrect": "true"
 							}
 						]
@@ -2143,10 +2143,10 @@
 			},
 			{
 				"id": 42,
-				"title": "レッスン 21 - 銀行プロジェクト - HTML Templates and Routes in a Web App: レッスン後の小テスト",
+				"title": "レッスン 21 - 銀行プロジェクト - Web アプリの HTML テンプレートとルート: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "HTML templates are part of the DOM by default",
+						"questionText": "HTML テンプレートはデフォルトでは DOM の一部です。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -2159,7 +2159,7 @@
 						]
 					},
 					{
-						"questionText": "Which part of the URL is needed for routing?",
+						"questionText": "URLのどの部分がルーティングに必要なのでしょうか?",
 						"answerOptions": [
 							{
 								"answerText": "window.location.pathname",
@@ -2176,7 +2176,7 @@
 						]
 					},
 					{
-						"questionText": "What's the name of the event triggered when calling the history.pushState() function?",
+						"questionText": "history.pushState() 関数を呼び出したときにトリガーされるイベントの名前は?",
 						"answerOptions": [
 							{
 								"answerText": "pushstate",
@@ -2196,10 +2196,10 @@
 			},
 			{
 				"id": 43,
-				"title": "レッスン 22 - 銀行プロジェクト - Build a Login and Registration Form: レッスン前の小テスト",
+				"title": "レッスン 22 - 銀行プロジェクト - ログイン・登録フォームの構築: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "HTML forms allow you to send user input to a server without using JavaScript",
+						"questionText": "HTML フォームでは、JavaScript を使用せずにユーザーの入力をサーバーに送信することができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -2212,7 +2212,7 @@
 						]
 					},
 					{
-						"questionText": "<label> elements are mandatory for every form control",
+						"questionText": "<label> 要素はすべてのフォームコントロールに必須です。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -2225,7 +2225,7 @@
 						]
 					},
 					{
-						"questionText": "It is secure to send form data to a server over HTTP",
+						"questionText": "フォームデータを HTTP でサーバーに送信するのは安全です。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -2241,10 +2241,10 @@
 			},
 			{
 				"id": 44,
-				"title": "レッスン 22 - 銀行プロジェクト - Build a Login and Registration Form: レッスン後の小テスト",
+				"title": "レッスン 22 - 銀行プロジェクト - ログイン・登録フォームの構築: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "Using <label> elements in forms is only for making the form pretty",
+						"questionText": "フォームで <label> 要素を使うのは、フォームをきれいにするためだけです。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -2257,24 +2257,24 @@
 						]
 					},
 					{
-						"questionText": "A URL is sent to a server in which part of a form?",
+						"questionText": "URL はフォームのどの部分でサーバーに送信されますか?",
 						"answerOptions": [
 							{
-								"answerText": "the action attribute",
+								"answerText": "アクション属性",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "the method attribute",
+								"answerText": "メソッド属性",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "both",
+								"answerText": "両方",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Which attribute can you use to set the maximum size of a text <input>?",
+						"questionText": "テキスト <input> の最大サイズを設定するために使用できる属性はどれでしょうか?",
 						"answerOptions": [
 							{
 								"answerText": "max",
@@ -2294,13 +2294,13 @@
 			},
 			{
 				"id": 45,
-				"title": "レッスン 23 - 銀行プロジェクト - Methods of Fetching and Using Data: レッスン前の小テスト",
+				"title": "レッスン 23 - 銀行プロジェクト - データの取得と利用方法: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "You usually fetch data from a server synchronously in a browser",
+						"questionText": "通常、ブラウザでサーバから同期的にデータを取得します。",
 						"answerOptions": [
 							{
-								"answerText": "true, but async is best!",
+								"answerText": "確かにそうですが、非同期が一番いいですね!",
 								"isCorrect": "true"
 							},
 							{
@@ -2310,7 +2310,7 @@
 						]
 					},
 					{
-						"questionText": "What's the most common format used to exchange data on the web?",
+						"questionText": "Web 上でデータをやり取りする際に最も一般的なフォーマットは何ですか?",
 						"answerOptions": [
 							{
 								"answerText": "HTML",
@@ -2327,7 +2327,7 @@
 						]
 					},
 					{
-						"questionText": "There's no way to prevent a web page from accessing a public server API",
+						"questionText": "Web ページが公開サーバー API にアクセスするのを防ぐ方法はありません。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -2343,10 +2343,10 @@
 			},
 			{
 				"id": 46,
-				"title": "レッスン 23 - 銀行プロジェクト - Methods of Fetching and Using Data: レッスン後の小テスト",
+				"title": "レッスン 23 - 銀行プロジェクト - データの取得と利用方法: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "In a Single-page application, the HTML is loaded once and never updated",
+						"questionText": "シングルページアプリケーションでは、HTML は一度読み込まれ、更新されることはありません。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -2359,24 +2359,24 @@
 						]
 					},
 					{
-						"questionText": "Why is it important to not trust data coming from user input?",
+						"questionText": "なぜ、ユーザーの入力から来るデータを信用しないことが重要なのでしょうか?",
 						"answerOptions": [
 							{
-								"answerText": "because using special characters can make the UI ugly.",
+								"answerText": "特殊文字を使うと UI が醜くなるからです。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "because it can contain non-sense or offensive words.",
+								"answerText": "意味のない言葉や不快な言葉が含まれている可能性があるからです。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "because it can be used as vector of attack to execute malicious scripts.",
+								"answerText": "なぜなら、悪意のあるスクリプトを実行するための攻撃のベクトルとして使用される可能性があるからです。",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the API name for sending asynchronous HTTP requests to a web server?",
+						"questionText": "Web サーバに非同期 HTTP リクエストを送信するための API 名は何でしょうか?",
 						"answerOptions": [
 							{
 								"answerText": "request()",
@@ -2396,34 +2396,34 @@
 			},
 			{
 				"id": 47,
-				"title": "レッスン 24 - 銀行プロジェクト - Concepts of State Management: レッスン前の小テスト",
+				"title": "レッスン 24 - 銀行プロジェクト - 状態管理の概念: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "What is an immutable object?",
+						"questionText": "不変オブジェクトとは何でしょうか?",
 						"answerOptions": [
 							{
-								"answerText": "An object defined as a constant",
+								"answerText": "定数として定義されたオブジェクト",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "An object that cannot be modified after it's created",
+								"answerText": "作成後に変更できないオブジェクト",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A copy of an existing object",
+								"answerText": "既存のオブジェクトのコピー",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What benefit(s) do you get from using state management?",
+						"questionText": "状態管理を利用することで、どのようなメリットがありますか?",
 						"answerOptions": [
 							{
-								"answerText": "You can keep track of every place the state is updated",
+								"answerText": "状態が更新されているすべての場所を把握することができます",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's easier to debug the code",
+								"answerText": "コードのデバッグが簡単になります",
 								"isCorrect": "false"
 							},
 							{
@@ -2433,18 +2433,18 @@
 						]
 					},
 					{
-						"questionText": "What's the best way to persist critical user data across different sessions?",
+						"questionText": "異なるセッション間で重要なユーザーデータを永続化する最良の方法とは何でしょうか?",
 						"answerOptions": [
 							{
-								"answerText": "Using files",
+								"answerText": "ファイルの使用",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Using the browser's localStorage API",
+								"answerText": "ブラウザの localStorage API の使用",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "In a database behind a server API",
+								"answerText": "サーバー API の背後にあるデータベース",
 								"isCorrect": "true"
 							}
 						]
@@ -2453,34 +2453,34 @@
 			},
 			{
 				"id": 48,
-				"title": "レッスン 24 - 銀行プロジェクト - Concepts of State Management: レッスン後の小テスト",
+				"title": "レッスン 24 - 銀行プロジェクト - 状態管理の概念: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "What do you think state management means?",
+						"questionText": "状態管理とはどういうことだと思いますか?",
 						"answerOptions": [
 							{
-								"answerText": "Enforcement of law & order",
+								"answerText": "法と秩序の執行",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Logging the user interface state over time",
+								"answerText": "ユーザーインターフェースの状態を経時的に記録する",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Keeping your app data flows clean and synchronizing the user interface with data",
+								"answerText": "アプリのデータフローをクリーンに保ち、ユーザーインターフェースをデータと同期させる",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How can you keep track of the user session state?",
+						"questionText": "ユーザーセッションの状態を把握するにはどうすればいいですか?",
 						"answerOptions": [
 							{
-								"answerText": "HTTP cookies",
+								"answerText": "HTTP クッキー",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Local or session storage",
+								"answerText": "ローカルまたはセッションストレージ",
 								"isCorrect": "false"
 							},
 							{
@@ -2490,7 +2490,7 @@
 						]
 					},
 					{
-						"questionText": "Mutating an object is always the best way to update it",
+						"questionText": "オブジェクトを更新するには、常にオブジェクトを変異させるのが最善の方法です",
 						"answerOptions": [
 							{
 								"answerText": "はい",
