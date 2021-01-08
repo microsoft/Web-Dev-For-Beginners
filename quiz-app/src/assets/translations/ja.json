@@ -324,10 +324,10 @@
 			},
 			{
 				"id": 7,
-				"title": "レッスン 4 - JavaScript Basics - Data Types: レッスン前の小テスト",
+				"title": "レッスン 4 - JavaScript の基本 - データ型: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "Booleans are a data type you can use to test the length of a string",
+						"questionText": "ブール値は、文字列の長さをテストするために使用できるデータ型です。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -340,7 +340,7 @@
 						]
 					},
 					{
-						"questionText": "The following is an operation you can perform on a string",
+						"questionText": "文字列に対して実行できる操作は次の通りです。",
 						"answerOptions": [
 							{
 								"answerText": "concatenation",
@@ -357,7 +357,7 @@
 						]
 					},
 					{
-						"questionText": "== and === are interchangeable",
+						"questionText": "== と === は互換性があります。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -373,27 +373,27 @@
 			},
 			{
 				"id": 8,
-				"title": "レッスン 4 - JavaScript Basics - Data Types: レッスン後の小テスト",
+				"title": "レッスン 4 - JavaScript の基本 - データ型: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "Constants are the same as let and var to declare variables except",
+						"questionText": "定数は変数を宣言するための let や var と同じですが、",
 						"answerOptions": [
 							{
-								"answerText": "Constants must be initialized",
+								"answerText": "定数は初期化されていなければなりません。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Constants can be altered",
+								"answerText": "定数を変更することができます。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Constants can be reassigned",
+								"answerText": "定数は再代入が可能です。",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Numbers and ____ are JavaScript primitives that handle numeric data",
+						"questionText": "Numbers と ____ は、数値データを扱う JavaScript プリミティブ型です。",
 						"answerOptions": [
 							{
 								"answerText": "bigint",
@@ -410,7 +410,7 @@
 						]
 					},
 					{
-						"questionText": "Strings can reside between both single and double quotes",
+						"questionText": "文字列は、シングルクォートとダブルクォートの間に存在することができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -426,27 +426,27 @@
 			},
 			{
 				"id": 9,
-				"title": "レッスン 5 - JavaScript Basics - Methods and Functions: レッスン前の小テスト",
+				"title": "レッスン 5 - JavaScript の基本 - メソッドと関数: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "What's an argument?",
+						"questionText": "引数とは何でしょうか?",
 						"answerOptions": [
 							{
-								"answerText": "It's something you declare in the function definition",
+								"answerText": "関数の定義で宣言するものです。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's something you pass into a function at invocation time",
+								"answerText": "呼び出し時に関数に渡すものです。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "It's something you have with people you know",
+								"answerText": "それは、あなたが知っている人と一緒に持っているものです。",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A function must return something",
+						"questionText": "関数は何かを返さなければなりません。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -459,7 +459,7 @@
 						]
 					},
 					{
-						"questionText": "You can name a function anything",
+						"questionText": "関数には何でも名前を付けることができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -470,7 +470,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "true, but it should be a descriptive name",
+								"answerText": "はい。しかし記述的な名前でなければなりません。",
 								"isCorrect": "true"
 							}
 						]
@@ -479,10 +479,10 @@
 			},
 			{
 				"id": 10,
-				"title": "レッスン 5 - JavaScript Basics - Methods and Functions: レッスン後の小テスト",
+				"title": "レッスン 5 - JavaScript の基本 - メソッドと関数: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "Arguments must be provided for all parameters in a function",
+						"questionText": "引数は、関数内のすべてのパラメータに対して提供されなければなりません。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -495,35 +495,35 @@
 						]
 					},
 					{
-						"questionText": "What does a default value do?",
+						"questionText": "デフォルト値は何をするのでしょうか？",
 						"answerOptions": [
 							{
-								"answerText": "Sets a correct value",
+								"answerText": "正しい値を設定します。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Gives a starter value for a parameter so your code still behaves if you omit an argument for it",
+								"answerText": "パラメータの引数を省略してもコードが動作するように、パラメータに初期値を与えます。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Has no utility",
+								"answerText": "実用性を持ちません。",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A fat arrow function allows you to",
+						"questionText": "太いアロー関数でできることは",
 						"answerOptions": [
 							{
-								"answerText": "Create heavy functions",
+								"answerText": "重い関数を作成する",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Omit the function keyword",
+								"answerText": "関数キーワードを省略する",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Create an anonymous function",
+								"answerText": "匿名関数を作成する",
 								"isCorrect": "false"
 							}
 						]
@@ -532,27 +532,27 @@
 			},
 			{
 				"id": 11,
-				"title": "レッスン 6 - JavaScript Basics - Making Decisions: レッスン前の小テスト",
+				"title": "レッスン 6 - JavaScript の基本 - 意思決定: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "The following operator == is called",
+						"questionText": "次の演算子 == は",
 						"answerOptions": [
 							{
-								"answerText": "Equality",
+								"answerText": "等号",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Strict equality",
+								"answerText": "厳格な平等",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Assignment",
+								"answerText": "割り当て",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A comparison in JavaScript returns what type?",
+						"questionText": "JavaScript での比較はどのような型を返しますか?",
 						"answerOptions": [
 							{
 								"answerText": "boolean",
@@ -569,18 +569,18 @@
 						]
 					},
 					{
-						"questionText": "The ! symbol in JavaScript means:",
+						"questionText": "JavaScript の ! 記号は、次のような意味です:",
 						"answerOptions": [
 							{
-								"answerText": "Logical Not",
+								"answerText": "論理否定",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Important",
+								"answerText": "重要",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Equals",
+								"answerText": "等価",
 								"isCorrect": "false"
 							}
 						]
@@ -589,17 +589,17 @@
 			},
 			{
 				"id": 12,
-				"title": "レッスン 6 - JavaScript Basics - Making Decisions: レッスン後の小テスト",
+				"title": "レッスン 6 - JavaScript の基本 - 意思決定: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "What would the following code return: '1' == 1",
+						"questionText": "次のコードは何を返すでしょうか: '1' == 1",
 						"answerOptions": [
 							{
-								"answerText": "はい",
+								"answerText": "true",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "いいえ",
+								"answerText": "false",
 								"isCorrect": "false"
 							},
 							{
@@ -609,14 +609,14 @@
 						]
 					},
 					{
-						"questionText": "What would the following code return: '1' === 1",
+						"questionText": "次のコードは何を返すでしょうか: '1' === 1",
 						"answerOptions": [
 							{
-								"answerText": "はい",
+								"answerText": "true",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "いいえ",
+								"answerText": "false",
 								"isCorrect": "true"
 							},
 							{
@@ -626,7 +626,7 @@
 						]
 					},
 					{
-						"questionText": "Choose the correct operator to express 'or' logic",
+						"questionText": "'or' 論理を表現する正しい演算子を選んでください。",
 						"answerOptions": [
 							{
 								"answerText": "a | b",
@@ -646,44 +646,44 @@
 			},
 			{
 				"id": 13,
-				"title": "レッスン 7 - JavaScript Basics - Arrays and Loops: レッスン前の小テスト",
+				"title": "レッスン 7 - JavaScript の基本 - 配列とループ: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "To refer to a specific item in an array, you would use a",
+						"questionText": "配列内の特定の項目を参照するには",
 						"answerOptions": [
 							{
-								"answerText": "square bracket []",
+								"answerText": "角括弧 []",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "index",
+								"answerText": "インデックス",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "curly braces {}",
+								"answerText": "中括弧 {}",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How do you get the number of items in an array?",
+						"questionText": "配列の項目数を取得するには？",
 						"answerOptions": [
 							{
-								"answerText": "The 'len(array)' method",
+								"answerText": "'len(array)' メソッド",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The property size on the array",
+								"answerText": "配列上のプロパティサイズ",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The length property on the array",
+								"answerText": "配列の length プロパティ",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "In JavaScript, indexes start at",
+						"questionText": "JavaScript では、インデックスの始まりは",
 						"answerOptions": [
 							{
 								"answerText": "0",
@@ -703,44 +703,44 @@
 			},
 			{
 				"id": 14,
-				"title": "レッスン 7 - JavaScript Basics - Arrays and Loops: レッスン後の小テスト",
+				"title": "レッスン 7 - JavaScript の基本 - 配列とループ: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "What part of a for-loop would you need to modify to increment its iteration by 5?",
+						"questionText": "for ループのどの部分を修正して、その繰り返しを5つ増やす必要がありますか?",
 						"answerOptions": [
 							{
-								"answerText": "condition",
+								"answerText": "条件",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "counter",
+								"answerText": "カウンター",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "iteration-expression",
+								"answerText": "くり返し式",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the difference between a while and a for-loop",
+						"questionText": "whilte と for ループの違いは?",
 						"answerOptions": [
 							{
-								"answerText": "A for-loop has a counter and iteration-expression, where while only has a condition",
+								"answerText": "for ループにはカウンタと反復式があり、while には条件があるだけです。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A while has a counter and iteration-expression where for-loop only has a condition",
+								"answerText": "while にはカウンタと反復式があり、for ループには条件があるだけです。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "They are the same, just an alias for one another",
+								"answerText": "それらは同じであり、お互いの別名に過ぎません。",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Given the code for (let i=1; i < 5; i++), how many iterations will it perform?",
+						"questionText": "for (let i=1; i < 5; i++) というコードがあるとすると、それは何回繰り返し実行されますか？",
 						"answerOptions": [
 							{
 								"answerText": "5",
@@ -756,10 +756,10 @@
 			},
 			{
 				"id": 15,
-				"title": "レッスン 8 - Terrarium Project - Introduction to HTML: レッスン前の小テスト",
+				"title": "レッスン 8 - テラリウムプロジェクト - HTML 入門: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "HTML stands for 'HyperText Mockup Language'",
+						"questionText": "HTML は 'HyperText Mockup Language' の略です。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -772,7 +772,7 @@
 						]
 					},
 					{
-						"questionText": "All HTML tags need both opening and closing tags",
+						"questionText": "すべての HTML タグは、開始タグと終了タグの両方を必要とします。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -785,18 +785,18 @@
 						]
 					},
 					{
-						"questionText": "Using semantic markup is most important for",
+						"questionText": "意味的なマークアップを使用することが最も重要なのは",
 						"answerOptions": [
 							{
-								"answerText": "code readability",
+								"answerText": "コードの読みやすさ",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "screen readers",
+								"answerText": "スクリーンリーダー",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "maintenance",
+								"answerText": "保守性",
 								"isCorrect": "false"
 							}
 						]
@@ -805,10 +805,10 @@
 			},
 			{
 				"id": 16,
-				"title": "レッスン 8 - Terrarium Project - Introduction to HTML: レッスン後の小テスト",
+				"title": "レッスン 8 - テラリウムプロジェクト - HTML 入門: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "Spans and Divs are interchangeable",
+						"questionText": "Span と Div は互換性があります。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -821,10 +821,10 @@
 						]
 					},
 					{
-						"questionText": "The head of an HTML doc can contain:",
+						"questionText": "HTML ドキュメントの head には、次のようなものが含まれています:",
 						"answerOptions": [
 							{
-								"answerText": "the title tag",
+								"answerText": "title タグ",
 								"isCorrect": "false"
 							},
 							{
@@ -832,13 +832,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "all the above",
+								"answerText": "上記のすべて",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can't use deprecated tags in your markup",
+						"questionText": "マークアップで非推奨のタグを使用することはできません。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -849,7 +849,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false, but they have been deprecated for good reason",
+								"answerText": "いいえ。ただし正当な理由で非推奨とされています。",
 								"isCorrect": "true"
 							}
 						]
@@ -858,10 +858,10 @@
 			},
 			{
 				"id": 17,
-				"title": "レッスン 9  - Terrarium Project - Introduction to CSS: レッスン前の小テスト",
+				"title": "レッスン 9  - テラリウムプロジェクト - CSS 入門: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "HTML elements must have either a class or an id in order to be styled",
+						"questionText": "HTML 要素がスタイルされるためには、クラスか id のどちらかを持っていなければなりません。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -874,7 +874,7 @@
 						]
 					},
 					{
-						"questionText": "CSS stands for 'Complete Style Sheets'",
+						"questionText": "CSS は 'Complete Style Sheets' の略です。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -887,7 +887,7 @@
 						]
 					},
 					{
-						"questionText": "CSS can be used to create animations",
+						"questionText": "CSS を使ってアニメーションを作成することができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -903,10 +903,10 @@
 			},
 			{
 				"id": 18,
-				"title": "レッスン 9 - Terrarium Project - Introduction to CSS: レッスン後の小テスト",
+				"title": "レッスン 9 - テラリウムプロジェクト - CSS 入門: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "You can write CSS directly in the head section of your HTML file",
+						"questionText": "HTML ファイルの head セクションに直接 CSS を書くことができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -919,7 +919,7 @@
 						]
 					},
 					{
-						"questionText": "It's always necessary to include CSS in your app",
+						"questionText": "アプリには必ず CSS を含める必要があります。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -930,13 +930,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false, but if you want it to look good you probably need CSS",
+								"answerText": "いいえ。しかし、見栄えを良くするには CSS が必要でしょう。",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Which browser tool can be used to inspect CSS?",
+						"questionText": "CSS の検査に使えるブラウザツールは?",
 						"answerOptions": [
 							{
 								"answerText": "Elements",
@@ -956,10 +956,10 @@
 			},
 			{
 				"id": 19,
-				"title": "レッスン 10 - Terrarium Project - DOM Manipulation and a Closure: レッスン前の小テスト",
+				"title": "レッスン 10 - テラリウムプロジェクト - DOM の操作とクロージャ: レッスン前の小テスト",
 				"quiz": [
 					{
-						"questionText": "The DOM stands for 'Document Object Management'",
+						"questionText": "DOM は 'Document Object Management' の略です。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -972,7 +972,7 @@
 						]
 					},
 					{
-						"questionText": "The DOM can be thought of as a tree",
+						"questionText": "DOM はツリーと考えられる",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -985,7 +985,7 @@
 						]
 					},
 					{
-						"questionText": "Using the Web API, you can manipulate the DOM",
+						"questionText": "Web API を使用すると、DOM を操作することができます。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1001,10 +1001,10 @@
 			},
 			{
 				"id": 20,
-				"title": "レッスン 10 - Terrarium Project - DOM Manipulation and a Closure: レッスン後の小テスト",
+				"title": "レッスン 10 - テラリウムプロジェクト - DOM の操作とクロージャ: レッスン後の小テスト",
 				"quiz": [
 					{
-						"questionText": "The DOM is a model to represent a document on the web",
+						"questionText": "DOM は、Web 上でドキュメントを表現するためのモデルです。",
 						"answerOptions": [
 							{
 								"answerText": "はい",
@@ -1017,35 +1017,35 @@
 						]
 					},
 					{
-						"questionText": "Use JavaScript closures to perform the following:",
+						"questionText": "JavaScript のクロージャを使用して、以下を実行します:",
 						"answerOptions": [
 							{
-								"answerText": "write functions within functions",
+								"answerText": "関数内に関数を書き込みます。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "enclose the DOM",
+								"answerText": "DOM を囲みます。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "close script blocks",
+								"answerText": "スクリプトブロックを閉じます。",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Fill in the blank: Closures are useful when one or more functions need to access an outer function's...",
+						"questionText": "空欄を埋めてください: 1つ以上の関数が外部関数の...にアクセスする必要がある場合に便利です。",
 						"answerOptions": [
 							{
-								"answerText": "arrays",
+								"answerText": "配列",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "scope",
+								"answerText": "スコープ",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "functions",
+								"answerText": "関数",
 								"isCorrect": "false"
 							}
 						]
