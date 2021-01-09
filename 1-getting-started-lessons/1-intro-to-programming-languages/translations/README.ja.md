@@ -8,7 +8,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 事前クイズ
-[事前クイズ](.github/pre-lecture-quiz.ja.md)
+[事前クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1?loc=ja)
 
 ## Introduction
 
@@ -234,7 +234,7 @@ JavaScriptとJavaの特徴は？
 COBOLとGoについては？
 
 ## 事後テスト
-[事後テスト](.github/post-lecture-quiz.ja.md)
+[事後テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1?loc=ja)
 
 ## レビュー & 自習
 
@@ -244,4 +244,4 @@ COBOLとGoについては？
 
 ## 課題
 
-[assignment.md](../assignment.md)
+[assignment.md](assignment.ja.md)

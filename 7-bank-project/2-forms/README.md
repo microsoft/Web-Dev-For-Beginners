@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/43)
 
 ### Introduction
 
@@ -30,10 +30,10 @@ The `<form>` element encapsulates a section of an HTML document where the user c
 There are a lot of different [types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) of `<input>`, for example to create a field where the user can enter its username you can use:
 
 ```html
-<input name="username" type="text">
+<input id="username" name="username" type="text">
 ```
 
-The `name` attribute is used to identify the control and will be used as the property name when the form data will be sent over.
+The `name` attribute will be used as the property name when the form data will be sent over. The `id` attribute is used to associate a `<label>` with the form control.
 
 > Take a look at the whole list of [`<input>` types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and [other form controls](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls) to get an idea of all the native UI elements you can use when building your UI.
 
@@ -55,20 +55,20 @@ Let's start by adding a form to the `login` template. We'll need a *username* fi
   <section>
     <h2>Login</h2>
     <form id="loginForm">
-      <label for="user">Username</label>
-      <input name="user" type="text">
+      <label for="username">Username</label>
+      <input id="username" name="user" type="text">
       <button>Login</button>
     </form>
   </section>
 </template>
 ```
 
-If you take a closer look, you can notice that we also added a `<label>` element here. `<label>` are used to add a caption for UI controls, such as our username field. Labels are important for the readbility of your forms, but also comes with additional benefits:
+If you take a closer look, you can notice that we also added a `<label>` element here. `<label>` elements are used to add a name to UI controls, such as our username field. Labels are important for the readability of your forms, but also comes with additional benefits:
 
 - By associating a label to a form control, it helps users using assistive technologies (like a screen reader) to understand what data they're expected to provide.
 - You can click on the label to directly put focus on the associated input, making it easier to reach on touch-screen based devices.
 
-> [Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) on the web is a very important topic that's often overlooked. Thanks to [HTML5 semantic elements](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) it's not difficult to create accessible content if you use them properly. You can [read more about accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) to avoid common mistakes and become a responsible developer.
+> [Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) on the web is a very important topic that's often overlooked. Thanks to [semantic HTML elements](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) it's not difficult to create accessible content if you use them properly. You can [read more about accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) to avoid common mistakes and become a responsible developer.
 
 Now we'll add a second form for the registration, just below the previous one:
 
@@ -77,13 +77,13 @@ Now we'll add a second form for the registration, just below the previous one:
 <h2>Register</h2>
 <form id="registerForm">
   <label for="user">Username</label>
-  <input name="user" type="text">
+  <input id="user" name="user" type="text">
   <label for="currency">Currency</label>
-  <input name="currency" type="text" value="$">
+  <input id="currency" name="currency" type="text" value="$">
   <label for="description">Description</label>
-  <input name="description" type="text">
+  <input id="description" name="description" type="text">
   <label for="balance">Current balance</label>
-  <input name="balance" type="number" value="0">
+  <input id="balance" name="balance" type="number" value="0">
   <button>Register</button>
 </form>
 ```
@@ -121,7 +121,7 @@ Add `action` and `method` properties to the registration form:
 
 Now try to register a new account with your name. After clicking on the *Register* button you should see something like this:
 
-![](./images/form-post.png)
+![A browser window at the address localhost:5000/api/accounts, showing a JSON string with user data](./images/form-post.png)
 
 If everything goes well, the server should answer your request with a [JSON](https://www.json.org/json-en.html) response containing the account data that was created.
 
@@ -181,6 +181,8 @@ Here's a quick video about `async/await` usage:
 
 [![Async and Await for managing promises](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async and Await for managing promises")
 
+> Click the image above for a video about async/await.
+
 We use the `fetch()` API to send JSON data to the server. This method takes 2 parameters:
 
 - The URL of the server, so we put back `//localhost:5000/api/accounts` here.
@@ -239,12 +241,14 @@ Before sending data to a server it's a good practice to [validate the form data]
 
 ### Task
 
-There are 2 required fields to create a valid new account, the username and currency, the other fields being optional. Update the form in the HTML to reflect that:
+There are 2 required fields to create a valid new account, the username and currency, the other fields being optional. Update the form's HTML, using both the `required` attribute and text in the field's label to that:
 
 ```html
-<input name="user" type="text" required>
+<label for="user">Username (required)</label>
+<input id="user" name="user" type="text" required>
 ...
-<input name="currency" type="text" value="$" required>
+<label for="currency">Currency (required)</label>
+<input id="currency" name="currency" type="text" value="$" required>
 ```
 
 While this particular server implementation does not enforce specific limits on the fields maximum length, it's always a good practice to define reasonable limits for any user text entry.
@@ -252,11 +256,11 @@ While this particular server implementation does not enforce specific limits on 
 Add a `maxlength` attribute to the text fields:
 
 ```html
-<input name="user" type="text" maxlength="20" required>
+<input id="user" name="user" type="text" maxlength="20" required>
 ...
-<input name="currency" type="text" value="$" maxlength="5" required>
+<input id="currency" name="currency" type="text" value="$" maxlength="5" required>
 ...
-<input name="description" type="text" maxlength="100">
+<input id="description" name="description" type="text" maxlength="100">
 ```
 
 Now if you press the *Register* button and a field does not respect a validation rule we defined, you should see something like this:
@@ -279,7 +283,7 @@ Here's an example of what the final login page can look like after a bit of styl
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/44)
 
 ## Review & Self Study
 

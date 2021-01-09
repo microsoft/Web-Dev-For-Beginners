@@ -2,13 +2,13 @@
 
 작은 드래그 앤 드롭 코드-명상. 약간의 HTML, JS와 CSS를 사용하여 웹 인터페이스를 구축하고, 스타일을 지정하고, 상호 작용을 추가합니다.
 
-![my terrarium](images/screenshot_gray.png)
+![my terrarium](../images/screenshot_gray.png)
 
 # Lessons
 
-1. [HTML 소개](./1-intro-to-html/README.md)
-2. [CSS 소개](./2-intro-to-css/README.md)
-3. [DOM 및 JS Closures](./3-intro-to-DOM-and-closures/README.md)
+1. [HTML 소개](.././1-intro-to-html/translations/README.ko.md)
+2. [CSS 소개](.././2-intro-to-css/translations/README.ko.md)
+3. [DOM 및 JS Closures](.././3-intro-to-DOM-and-closures/translations/README.ko.md)
 
 ## 크레딧
 

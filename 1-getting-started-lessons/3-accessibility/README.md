@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
 
 > The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
 >
@@ -22,9 +22,17 @@ One of the best-known accessibility tools are screen readers.
 
 At its most basic, a screen reader will read a page from top to bottom audibly. If your page is all text, the reader will convey the information in a similar fashion to a browser. Of course, web pages are rarely purely text; they will contain links, graphics, color, and other visual components. Care must be taken to ensure that this information is read correctly by a screen reader.
 
-Every web developer should familiarize themselves with a screen reader. As highlighted above, it's the client your users will utilize. Much in the same way you're familiar with how a browser operates, you should learn how a screen reader operates. Fortunately screen readers are built into most operating systems, and many browsers contain extensions to emulate a screen reader.
+Every web developer should familiarize themselves with a screen reader. As highlighted above, it's the client your users will utilize. Much in the same way you're familiar with how a browser operates, you should learn how a screen reader operates. Fortunately, screen readers are built into most operating systems.
 
-✅ Try a screen reader browser extension or tool. One that works on Windows only is [JAWS](https://webaim.org/articles/jaws/). Browsers also have built-in tools that can be used for this purpose; check out [these accessibility-focused Edge browser tools](https://support.microsoft.com/en-us/help/4000734/microsoft-edge-accessibility-features).
+Some browsers also have built-in tools and extensions that can read text aloud or even provide some basic navigational features, such as [these accessibility-focused Edge browser tools](https://support.microsoft.com/en-us/help/4000734/microsoft-edge-accessibility-features). These are also important accessibility tools, but function very differently from screen readers and they should not be mistaken for screen reader testing tools.
+
+✅ Try a screen reader and browser text reader. On Windows [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) is included by default, and [JAWS](https://webaim.org/articles/jaws/) and [NVDA](https://www.nvaccess.org/about-nvda/) can also be installed. On macOS and iOS, [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) is installed by default.
+
+### Zoom
+
+Another tool commonly used by people with vision impairments is zooming. The most basic type of zooming is static zoom, controlled through `Control + plus sign (+)` or by decreasing screen resolution. This type of zoom causes the entire page to resize, so using [responsive design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is important to provide a good user experience at increased zoom levels.
+
+Another type of zoom relies on specialized software to magnify one area of the screen and pan, much like using a real magnifying glass. On Windows, [Magnifier](https://support.microsoft.com/en-us/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) is built in, and [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) is a third-party magnification software with more features and a larger user base. Both macOS and iOS have a built-in magnification software called [Zoom](https://www.apple.com/accessibility/mac/vision/).
 
 ### Contrast checkers
 
@@ -54,17 +62,15 @@ People see the world in different ways, and this includes colors. When selecting
 
 ✅ Identify a web site that is very problematic in its use of color. Why?
 
-### Properly highlight text
-
-Highlighting text by color, [font weight](https://developer.mozilla.org/docs/Web/CSS/font-weight), or other [text decoration](https://developer.mozilla.org/docs/Web/CSS/text-decoration) does not inherently inform a screen reader of its importance. A word could be bold because it's a key word, or because its the first word and the designer decided it should be bold.
-
-When a particular phrase needs to be highlighted, use the `<strong>` or `<em>` elements. These will indicate to a screen reader that those items are important.
-
 ### Use the correct HTML
 
-With CSS and JavaScript it's possible to make any element look like any type of control. `<span>` could be used to create a `<button>`, and `<b>` could become a hyperlink. While this might be considered easier to style, it's baffling to a screen reader. Use the appropriate HTML when creating controls on a page. If you want a hyperlink, use `<a>`. Using the right HTML for the right control is called making use of Semantic HTML.
+With CSS and JavaScript it's possible to make any element look like any type of control. `<span>` could be used to create a `<button>`, and `<b>` could become a hyperlink. While this might be considered easier to style, it conveys nothing to a screen reader. Use the appropriate HTML when creating controls on a page. If you want a hyperlink, use `<a>`. Using the right HTML for the right control is called making use of Semantic HTML.
 
 ✅ Go to any web site and see if the designers and developers are using HTML properly. Can you find a button that should be a link? Hint: right click and choose 'View Page Source' in your browser to look at underlying code.
+
+### Create a descriptive heading hierarchy
+
+Screen reader users [rely heavily on headings](https://webaim.org/projects/screenreadersurvey8/#finding) to find information and navigate through a page. Writing descriptive heading content and using semantic heading tags are important for creating an easily navigable site for screen reader users.
 
 ### Use good visual clues
 
@@ -127,24 +133,27 @@ You can use `aria-label` to describe the link when the format of the page doesn'
 <a href="#" aria-label="Widget description">description</a>
 ```
 
-✅ In general, using Semantic markup as described above supersedes the use of ARIA, but sometimes there is no semantic equivalent for various HTML widgets. A good example is a Progressbar. There's no HTML equivalent for a progress bar, so you identify the generic `<div>` for this element with a proper role and aria values. The [MDN documentation on ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) contains more useful information.
+✅ In general, using Semantic markup as described above supersedes the use of ARIA, but sometimes there is no semantic equivalent for various HTML widgets. A good example is a Tree. There's no HTML equivalent for a tree, so you identify the generic `<div>` for this element with a proper role and aria values. The [MDN documentation on ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) contains more useful information.
 
 ```html
-<div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+<h2 id="tree-label">File Viewer</h2>
+<div role="tree" aria-labelledby="tree-label">
+  <div role="treeitem" aria-expanded="false" tabindex="0">Uploads</div>
 </div>
 ```
 
 ## Images
 
-It goes without saying screen readers are unable to automatically read what's in an image. Ensuring images are accessible doesn't take much work - it's what the `alt` attribute is all about. All images should have an `alt` to describe what they are.
+It goes without saying screen readers are unable to automatically read what's in an image. Ensuring images are accessible doesn't take much work - it's what the `alt` attribute is all about. All meaningful images should have an `alt` to describe what they are.
+Images that are purely decorative should have their `alt` attribute set to an empty string: `alt=""`. This prevents screen readers from unnecessarily announcing the decorative image.
 
 ✅ As you might expect, search engines are also unable to understand what's in an image. They also use alt text. So once again, ensuring your page is accessible provides additional bonuses!
 
 ## The keyboard
 
-Some users are unable to use a mouse or trackpad, instead relying on keyboard interactions to tab from one element to the next. It's important for your web site to present your content in logical order so a keyboard can access each element as the user moves down a document. If you build your web pages with semantic markup and use CSS to style their visual layout, your site should be keyboard-navigable, but it's important to test this aspect manually. Learn more about [keyboard navigation strategies](https://webaim.org/techniques/keyboard/).
+Some users are unable to use a mouse or trackpad, instead relying on keyboard interactions to tab from one element to the next. It's important for your web site to present your content in logical order so a keyboard user can access each interactive element as they move down a document. If you build your web pages with semantic markup and use CSS to style their visual layout, your site should be keyboard-navigable, but it's important to test this aspect manually. Learn more about [keyboard navigation strategies](https://webaim.org/techniques/keyboard/).
 
-✅ Go to any web site and try to navigate through it using only your tab key. What works, what doesn't work? Why?
+✅ Go to any web site and try to navigate through it using only your keyboard. What works, what doesn't work? Why?
 
 ## Summary
 
@@ -207,7 +216,7 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
 ```
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6)
 
 ## Review & Self Study
 

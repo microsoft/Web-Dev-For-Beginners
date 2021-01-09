@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/21)
 
 ## Event driven programming
 
@@ -85,10 +85,10 @@ Create a new file named **index.html**. Add the following HTML:
 <body>
   <h1>Typing game!</h1>
   <p>Practice your typing skills with a quote from Sherlock Holmes. Click **start** to begin!</p>
-  <h2 id="quote"></h2> <!-- This will display our quote -->
-  <h2 id="message"></h2> <!-- This will display any status messages -->
+  <p id="quote"></p> <!-- This will display our quote -->
+  <p id="message"></p> <!-- This will display any status messages -->
   <div>
-    <input type="text" id="typed-value" /> <!-- The textbox for typing -->
+    <input type="text" aria-label="current word" id="typed-value" /> <!-- The textbox for typing -->
     <button type="button" id="start">Start</button> <!-- To start the game -->
   </div>
   <script src="script.js"></script>
@@ -190,6 +190,8 @@ const typedValueElement = document.getElementById('typed-value');
 Take a minute to watch a video on using `const`, `let` and `var`
 
 [![Types of variables](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Types of variables")
+
+> Click the image above for a video about variables.
 
 ### Add start logic
 
@@ -326,7 +328,7 @@ Add more functionality
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](../.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/22)
 
 ## Review & Self Study
 

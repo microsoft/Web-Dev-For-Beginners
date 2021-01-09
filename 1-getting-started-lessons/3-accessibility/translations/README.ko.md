@@ -1,10 +1,10 @@
 # 접근 가능한 웹 페이지 생성하기
 
-![All About Accessibility](webdev101-a11y.png)
+![All About Accessibility](../webdev101-a11y.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5?loc=ko)
 
 > 웹의 힘은 보편성에 있습니다. 장애에 관계없이 모든 사람이 접근하는 것은 필수 요소입니다.
 >
@@ -207,7 +207,7 @@ CSS는 페이지에 있는 모든 요소의 형태를 완벽하게 제어합니�
 ```
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 
@@ -215,6 +215,6 @@ CSS는 페이지에 있는 모든 요소의 형태를 완벽하게 제어합니�
 
 ## 과제
  
-[Analyze a non-accessible web site](assignment.md)
+[Analyze a non-accessible web site](../assignment.md)
 
 크레딧: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument

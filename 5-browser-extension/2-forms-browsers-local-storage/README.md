@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/25)
 
 ### Introduction
 
@@ -151,6 +151,8 @@ Here's a quick video about `async`:
 
 [![Async and Await for managing promises](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async and Await for managing promises")
 
+> Click the image above for a video about async/await.
+
 Create a new function to query the C02Signal API:
 
 ```JavaScript
@@ -210,7 +212,7 @@ We've discussed several types of API so far in these lessons. Choose a web API a
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/26)
 
 ## Review & Self Study
 

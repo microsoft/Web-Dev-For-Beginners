@@ -23,9 +23,9 @@ Given the following array `allStudents` representing all students and their grad
 ```javascript
 let allStudents = [
   'A',
-  'B-'
+  'B-',
   1,
-  4
+  4,
   5,
   2
 ]

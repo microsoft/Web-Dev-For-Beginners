@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 외계인이 화면을 돌아다니기 전까지는 게임이 재미 없습니다! 이 게임에서는, 두 가지 타입의 동작을 씁니다:
 
@@ -115,7 +115,7 @@ let gameLoopId = setInterval(() =>
 
 ## Space 게임 계속하기
 
-기존 코드를 가져와 확장합니다. 파트 I 에서 작성한 코드로 시작하거나 [Part II- starter](your-work)의 코드를 사용합니다.
+기존 코드를 가져와 확장합니다. 파트 I 에서 작성한 코드로 시작하거나 [Part II- starter](../your-work)의 코드를 사용합니다.
 
 - **영웅을 움직이기**: 화살표 키를 사용하여 영웅을 이동할 수 있도록 코드를 추가합니다.
 - **적을 움직이기**: 적들이 주어진 속도로 상단에서 하단으로 이동할 수 있도록 코드를 추가합니다.
@@ -378,7 +378,7 @@ npm start
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -386,4 +386,4 @@ npm start
 
 ## 과제
 
-[Comment your code](assignment.md)
+[Comment your code](../assignment.md)

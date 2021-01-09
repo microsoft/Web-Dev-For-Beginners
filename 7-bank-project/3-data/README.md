@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45)
 
 ### Introduction
 
@@ -113,7 +113,7 @@ navigate('/dashboard');
 
 ## Update HTML to display data
 
-Now that we have the user data, we have to update the existing HTML to display it. We already now how to retrieve element from the DOM using for example `document.getElementById()`. After you have a base element, here are some APIs you can use to modify it or add child elements to it:
+Now that we have the user data, we have to update the existing HTML to display it. We already know how to retrieve element from the DOM using for example `document.getElementById()`. After you have a base element, here are some APIs you can use to modify it or add child elements to it:
 
 - Using the [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) property you can change the text of an element. Note that changing this values removes all the element's children (if there's any) and replace it with the text provided. As such, it's also an efficient method to remove all children of a given element by assigning an empty string `''` to it.
 
@@ -157,6 +157,12 @@ Now if you try to login with an invalid account, you should see something like t
 
 ![Screenshot showing the error message displayed during login](./images/login-error.png)
 
+Now we have error text that shows up visually, but if you try it with a screen reader you'll notice that nothing is announced. In order for text that is dynamically added to a page to be announced by screen readers, it will need to use something called a [Live Region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Here we're going to use a specific type of live region called an alert:
+
+```html
+<div id="loginError" role="alert"></div>
+```
+
 Implement the same behavior for the `register` function errors (don't forget to update the HTML).
 
 ## Display information on the dashboard
@@ -194,10 +200,10 @@ Let's start by replacing the "Balance" section in the HTML to add placeholder el
 We'll also add a new section just below to display the account description:
 
 ```html
-<section id="description" aria-label="Account description"></section>
+<h2 id="description"></h2>
 ```
 
-✅ As there is no text label here to explain what this section is about, we use the `aria-label` attribute to give an accessibility hint. Learn more about [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) to make sure your web apps are accessible to everyone.
+✅ Since the account description functions as a title for the content underneath it, it is marked up semantically as a heading. Learn more about how [heading structure](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) is important for accessibility, and take a critical look at the page to determine what else could be a heading.
 
 Next, we'll create a new function in `app.js` to fill in the placeholder:
 
@@ -213,7 +219,7 @@ function updateDashboard() {
 }
 ```
 
-First, we check that we have the account data we need before going futher. Then we use the `updateElement()` function we created earlier to update the HTML.
+First, we check that we have the account data we need before going further. Then we use the `updateElement()` function we created earlier to update the HTML.
 
 > To make the balance display prettier, we use the method [`toFixed(2)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) to force displaying the value with 2 digits after the decimal point.
 
@@ -319,7 +325,7 @@ Here's an example of a styled dashboard page:
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46)
 
 ## Assignment
 

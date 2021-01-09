@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ## Canvas
 
@@ -26,7 +26,7 @@ canvas는 내용이 없는 게 기본인 HTML 요소입니다; 빈 상태입니�
 
 캔버스는 데카르트 좌표계로 사물을 그립니다. 따라서 x-축과 y-축을 이용하여 무언가의 위치를 나타냅니다. 위치 `0,0`은 죄측 상단이며 우측 하단은 캔버스의 너비와 높이라고 말한 위치입니다.
 
-![the canvas's grid](canvas_grid.png)
+![the canvas's grid](../canvas_grid.png)
 > Image from [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 캔버스 요소에 그리려면 다음 단계를 거쳐야 합니다:
@@ -123,11 +123,11 @@ Canvas 요소가 있는 웹 페이지를 만듭니다. 검은 화면 `1024 * 768
 
 - Hero ship
 
-   ![Hero ship](solution/assets/player.png)
+   ![Hero ship](../solution/assets/player.png)
 
 - 5*5 monster
 
-   ![Monster ship](solution/assets/enemyShip.png)
+   ![Monster ship](../solution/assets/enemyShip.png)
 
 ### 개발 시작하기 위한 권장 단계
 
@@ -191,11 +191,11 @@ npm start
 
 완성된 결과는 아래와 같이 보이게 됩니다:
 
-![Black screen with a hero and 5*5 monsters](partI-solution.png)
+![Black screen with a hero and 5*5 monsters](../partI-solution.png)
 
 ## 솔루션
 
-먼저 직접 해결해보고 문제가 발생한다면, [solution](solution/app.js)을 보세요
+먼저 직접 해결해보고 문제가 발생한다면, [solution](../solution/app.js)을 보세요
 
 ---
 
@@ -205,7 +205,7 @@ npm start
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -213,4 +213,4 @@ npm start
 
 ## 과제
 
-[Play with the Canvas API](assignment.md)
+[Play with the Canvas API](../assignment.md)

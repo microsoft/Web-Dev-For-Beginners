@@ -3,7 +3,7 @@
 ![Todo sobre accesibilidad](webdev101-a11y.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
 
 > El poder de la Web está en su universalidad. El acceso de todas las personas independientemente de su discapacidad es un aspecto fundamental.
 >
@@ -110,7 +110,7 @@ Como una ventaja adicional para garantizar que su sitio sea accesible para todos
 
 Imagina la siguiente página:
 
-| Producto      | Descripción        | Orden        |
+| Producto     | Descripción        | Orden        |
 | ------------ | ------------------ | ------------ |
 | Widget       | [Descripción]('#') | [Orden]('#') |
 | Super widget | [Descripción]('#') | [Orden]('#') |
@@ -202,7 +202,7 @@ Una web accesible para algunos no es una verdadera "red mundial". La mejor maner
 </html>
 ```
 
-## [Post-lecture prueba](../.github/post-lecture-quiz.md)
+## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6)
 
 ## Revisión y autoestudio
 

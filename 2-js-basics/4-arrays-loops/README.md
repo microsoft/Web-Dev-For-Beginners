@@ -3,14 +3,14 @@
 ![JavaScript Basics - Arrays](images/webdev101-js-arrays.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## 
-Pre-Lecture Quiz
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+## Pre-Lecture Quiz
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
 
 [![Arrays and Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
 
+> Click the image above for a video about arrays and loops.
 ## Arrays
 
 Working with data is a common task for any language, and it's a much easier task when data is organized in a structural format, such as arrays. With arrays, data is stored in a structure similar to a list. One major benefit of arrays is that you can store different types of data in one array.
@@ -112,9 +112,8 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 There are other ways of looping over arrays other than for and while loops. There are [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), and [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Rewrite your array loop using one of these techniques.
 
-## 
-Post-Lecture Quiz
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+## Post-Lecture Quiz
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14)
 
 
 ## Review & Self Study

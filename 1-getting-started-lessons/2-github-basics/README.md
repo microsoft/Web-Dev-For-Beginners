@@ -6,7 +6,7 @@ This lesson covers the basics of GitHub, a platform to host and manage changes t
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3)
 
 ## Introduction
 
@@ -149,7 +149,7 @@ Let's say you have a folder locally with some code project and you want to start
    git push
    ```
 
-   > Tip, You might also want to adopt a `.gitignore` file to prevent files you don't want to track from showing up on GitHub - like that notes file you store in the same folder but has no place on a public repository. You can find templates for `.gitignore` files at [.gitignore templates](github.com/github/gitignore).
+   > Tip, You might also want to adopt a `.gitignore` file to prevent files you don't want to track from showing up on GitHub - like that notes file you store in the same folder but has no place on a public repository. You can find templates for `.gitignore` files at [.gitignore templates](https://github.com/github/gitignore).
 
 #### Commit messages
 
@@ -244,7 +244,7 @@ Let's go through a contributor workflow. Assume the contributor has already _for
 
 1. **Open a PR**. Next, you want to open up a PR. You do that by navigating to the forked repo on GitHub. You will see an indication on GitHub where it asks whether you want to create a new PR, you click that and you are taken to an interface where you can change commit message title, give it a more suitable description. Now the maintainer of the repo you forked will see this PR and _fingers crossed_ they will appreciate and _merge_ your PR. You are now a contributor, yay :)
 
-1. **Clean up**. It's considered good practice to _clean up_ after you. You want to clean up both your local branch and the branch you pushed to GitHub. First let's delete it locally with the following command: 
+1. **Clean up**. It's considered good practice to _clean up_ after you successfully merge a PR. You want to clean up both your local branch and the branch you pushed to GitHub. First let's delete it locally with the following command: 
 
    ```bash
    git branch -d [branch-name]
@@ -284,7 +284,7 @@ Lastly, you can download the code in a zipped folder.
 
 ### A few more interesting things about GitHub
 
-You can star, watching, and/or "fork" any public repository on GitHub. You can find your starred repositories in the top-right drop-down menu. It's like bookmarking, but for code. 
+You can star, watch and/or "fork" any public repository on GitHub. You can find your starred repositories in the top-right drop-down menu. It's like bookmarking, but for code. 
 
 Projects have an issue tracker, mostly on GitHub in the "Issues" tab unless indicated otherwise, where people discuss issues related to the project. And the Pull Requests tab is where people discuss and review changes that are in progress.
 
@@ -299,7 +299,7 @@ Projects might also have discussion in forums, mailing lists, or chat channels l
 Pair with a friend to work on each other's code. Create a project collaboratively, fork code, create branches, and merge changes.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4)
 
 ## Review & Self Study
 

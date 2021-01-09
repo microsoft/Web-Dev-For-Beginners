@@ -1,11 +1,11 @@
 # 브라우저 확장 프로젝트 파트 1: 브라우저에 대한 모든 것
 
-![Browser sketchnote](images/sketchnote.jpg)
+![Browser sketchnote](../images/sketchnote.jpg)
 > Sketchnote by [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 소개
 
@@ -19,7 +19,7 @@
 
 ✅ 약간의 역사: 첫번째 브라우저는 'WorldWideWeb'라고 불렸으며 Sir Timothy Berners-Lee가 1990년에 만들었습니다.
 
-![early browsers](images/earlybrowsers.jpg)
+![early browsers](../images/earlybrowsers.jpg)
 > Some early browsers, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 사용자가 URL(Uniform Resource Locator) 주소를 사용하여 인터넷에 연결하고, `http` 혹은 `https` 주소를 통해 Hypertext Transfer Protocol을 사용하면, 브라우저가 웹 서버와 통신하여 웹 페이지를 가져옵니다.
@@ -46,7 +46,7 @@
 
 만들기 전에, 브라우저 확장을 작성하고 배포하는 프로세스를 찾아보세요. 브라우저마다 이 작업을 관리하는 방법이 다소 다르지만, 프로세스는 Chrome과 Firefox와 같이 Edge의 예제와 유사합니다:
 
-![install a browser extension](images/install-on-edge.png)
+![install a browser extension](../images/install-on-edge.png)
 
 본질적으로, 프로세스는 다음과 같습니다:
 
@@ -86,11 +86,11 @@ src
 
 이 확장은 두 화면을 가집니다. 한 화면에는 API 키와 지역 코드를 수집합니다:
 
-![extension form](images/1.png)
+![extension form](../images/1.png)
 
 그리고 두번째 화면에는 지역의 탄소 사용량을 출력합니다:
 
-![carbon usage](images/2.png)
+![carbon usage](../images/2.png)
 
 이제 HTML 폼을 작성하고 CSS 스타일을 지정하는 것으로 시작하겠습니다.
 
@@ -149,7 +149,7 @@ npm install
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -163,5 +163,5 @@ npm install
 
 ## 과제 
 
-[Restyle your extension](assignment.md)
+[Restyle your extension](../assignment.md)
 

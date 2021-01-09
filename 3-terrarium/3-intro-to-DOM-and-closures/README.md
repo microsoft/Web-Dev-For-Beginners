@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/19)
 
 ### Introduction
 
@@ -13,9 +13,11 @@ Manipulating the DOM, or the "Document Object Model", is a key aspect of web dev
 
 In addition, this lesson will introduce the idea of a [JavaScript closure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), which you can think of as a function enclosed by another function so that the inner function has access to the outer function's scope.
 
+> JavaScript closures are a vast and complex topic. This lesson touches on the most basic idea that in this terrarium's code, you will find a closure: an inner function and an outer function constructed in a way to allow the inner function access to the outer function's scope. For much more information on how this works, please visit the [extensive documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
+
 We will use a closure to manipulate the DOM.
 
-> Think of the DOM as a tree, representing all the ways that a web page document can be manipulated. Various APIs (Application Program Interfaces) have been written so that programmers, using their programming language of choice, can access the DOM and edit, change, rearrange, and otherwise manage it.
+Think of the DOM as a tree, representing all the ways that a web page document can be manipulated. Various APIs (Application Program Interfaces) have been written so that programmers, using their programming language of choice, can access the DOM and edit, change, rearrange, and otherwise manage it.
 
 ![DOM tree representation](./images/dom-tree.png)
 
@@ -174,7 +176,7 @@ All this recalculation of positioning allows you to fine-tune the behavior of th
 
 ### Task 
 
-The final task to complete the interface is to add the `closeElementDrag` function after the closing curly bracket of `elementDrag`:
+The final task to complete the interface is to add the `stopElementDrag` function after the closing curly bracket of `elementDrag`:
 
 ```javascript
 function stopElementDrag() {
@@ -199,7 +201,7 @@ Add new event handler to your closure to do something more to the plants; for ex
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/20)
 
 ## Review & Self Study
 

@@ -14,7 +14,7 @@ Esta extensión puede ser llamada ad hoc por un usuario una vez que se ingresa u
 
 ### Créditos
 
-![a green browser extension](extension-screenshot.png)
+![a green browser extension](../extension-screenshot.png)
 
 ## Créditos
 

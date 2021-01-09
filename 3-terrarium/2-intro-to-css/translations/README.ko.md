@@ -1,11 +1,11 @@
 # Terrarium 프로젝트 파트 2: CSS 소개
 
-![Introduction to CSS](images/webdev101-css.png)
+![Introduction to CSS](../images/webdev101-css.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 소개
 
@@ -69,7 +69,7 @@ body {
 
 브라우저의 콘솔에서 'Elements'을 열고 H1 폰트를 보십시오. 브라우저에 기록된대로 본문에서 폰트를 상속합니다:
 
-![inherited font](images/1.png)
+![inherited font](../images/1.png)
 
 ✅ 중첩된 스타일이 다른 속성을 상속하도록 만들 수 있습니까?
 
@@ -246,13 +246,13 @@ HTML 마크업의 각 식물에는 id와 클래스의 조합이 있습니다. id
 
 jar 좌측 하단 부분에 'bubble' 광택을 추가하여 유리처럼 보이도록 합니다. `.jar-glossy-long`과 `.jar-glossy-short`를 빛 반사되는 것처럼 보이도록 꾸밉니다. 다음과 같이 표시됩니다.
 
-![finished terrarium](./images/terrarium-final.png)
+![finished terrarium](.././images/terrarium-final.png)
 
 강의 후 퀴즈를 완료하려면, 다음 학습 모듈을 진행하십시오: [Style your HTML app with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -260,4 +260,4 @@ CSS는 믿을 수 없게 간단해 보이지만, 모든 브라우저와 모든 �
 
 ## 과제
 
-[CSS Refactoring](assignment.md)
+[CSS Refactoring](../assignment.md)

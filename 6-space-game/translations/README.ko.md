@@ -4,7 +4,7 @@
 
 이 강의에서는 자신만의 스페이스 게임을 만드는 방법을 배웁니다. 만약 "Space Invaders" 게임을 해본 적이 있다면, 이 게임은 같은 아이디어를 가지고 있습니다: 우주선을 조종하고 위에서 내려오는 몬스터를 향해서 발사하는 것입니다. 완성된 게임의 모습은 다음과 같습니다.
 
-![Finished game](images/pewpew.gif)
+![Finished game](../images/pewpew.gif)
 
 6개의 강의에서 다음을 학습합니다:
 
@@ -17,13 +17,13 @@
 ## 개요
 
 - 이론
-   - [JavaScript를 사용한 게임 빌드 소개](1-introduction/README.md)
+   - [JavaScript를 사용한 게임 빌드 소개](../1-introduction/translations/README.ko.md)
 - 실습
-   - [canvas로 그리기](2-drawing-to-canvas/README.md)
-   - [화면에 요소 이동](3-moving-elements-around/README.md)
-   - [충돌 감지](4-collision-detection/README.md)
-   - [점수 유지](5-keeping-score/README.md)
-   - [게임 종료 및 재시작](6-end-condition/README.md)
+   - [canvas로 그리기](../2-drawing-to-canvas/translations/README.ko.md)
+   - [화면에 요소 이동](../3-moving-elements-around/translations/README.ko.md)
+   - [충돌 감지](../4-collision-detection/translations/README.ko.md)
+   - [점수 유지](../5-keeping-score/translations/README.ko.md)
+   - [게임 종료 및 재시작](../6-end-condition/translations/README.ko.md)
 
 ## Credits
 

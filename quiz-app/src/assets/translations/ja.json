@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "初心者のための Web 開発: クイズ",
+		"complete": "おめでとうございます! クイズをクリアしました。",
+		"error": "申し訳ありませんが、もう一度お試しください。",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "レッスン 1 - プログラミング言語入門: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "作成者がコードを書かなくてもプログラムを作成できる",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "低階層の言語がポピュラーなのは",
+						"answerOptions": [
+							{
+								"answerText": "Web サイト",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ハードウェア",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ビデオゲームソフト",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Web 開発者の環境で一番ありそうなツールはどれでしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "Raspberry Pi のようなハードウェア",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ブラウザの開発者ツール",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "オペレーティングシステムのドキュメント",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "レッスン 1 - プログラミング言語入門: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "Web サイトを作成する際には、どのような言葉を使うことが多いのでしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "マシンコード",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "開発環境は開発者ごとに異なる。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "開発者はバグのあるコードを修正するために何をするのでしょうか？",
+						"answerOptions": [
+							{
+								"answerText": "シンタックスハイライト",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "デバッグ",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "コードフォーマット",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "レッスン 2 - GitHub 入門: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "Git のリポジトリはどうやって作るのでしょうか？",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "git add は何をするのでしょうか？",
+						"answerOptions": [
+							{
+								"answerText": "コードをコミットします。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ファイルをトラッキング用のステージングエリアに追加します。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ファイルを GitHub に追加します。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "gitがインストールされているかどうかを確認する方法は?",
+						"answerOptions": [
+							{
+								"answerText": "git --version と入力します。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git --installed と入力します。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git --init と入力します。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "レッスン 2 - GitHub 入門: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "ブランチで導入された違いをレビュー、コメント、統合テストなどで比較検討する場所は",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "プルリクエスト",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "feature ブランチ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "リモートブランチからすべてのコミットを取得するには?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ブランチを切り替えるにはどうしたらいいですか?",
+						"answerOptions": [
+							{
+								"answerText": "git switch [ブランチ名]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [ブランチ名]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [ブランチ名]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "レッスン 3 - アクセシブルな Web ページの作成: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "アクセシブルな Web サイトかどうかは、どのブラウザツールで確認することができますか?",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "視覚障害者のアクセシビリティをテストするには、物理的なスクリーンリーダーが必要です。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "アクセシビリティが重要なのは、政府機関の Web サイトだけ",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "レッスン 3 - アクセシブルな Web ページの作成: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "Lighthouse はアクセシビリティの問題をチェックするだけ",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "カラーセーフパレットは、以下のような人に役立ちます。",
+						"answerOptions": [
+							{
+								"answerText": "色覚異常",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "視覚障害",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "両方",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "記述的なリンクは、アクセシブルな Web サイトには不可欠です。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "レッスン 4 - JavaScript の基本 - データ型: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "ブール値は、文字列の長さをテストするために使用できるデータ型です。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "文字列に対して実行できる操作は次の通りです。",
+						"answerOptions": [
+							{
+								"answerText": "concatenation",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "appending",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "splicing",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== と === は互換性があります。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "レッスン 4 - JavaScript の基本 - データ型: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "定数は変数を宣言するための let や var と同じですが、",
+						"answerOptions": [
+							{
+								"answerText": "定数は初期化されていなければなりません。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "定数を変更することができます。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "定数は再代入が可能です。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Numbers と ____ は、数値データを扱う JavaScript プリミティブ型です。",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "文字列は、シングルクォートとダブルクォートの間に存在することができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "レッスン 5 - JavaScript の基本 - メソッドと関数: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "引数とは何でしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "関数の定義で宣言するものです。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "呼び出し時に関数に渡すものです。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "それは、あなたが知っている人と一緒に持っているものです。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "関数は何かを返さなければなりません。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "関数には何でも名前を付けることができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "はい。しかし記述的な名前でなければなりません。",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "レッスン 5 - JavaScript の基本 - メソッドと関数: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "引数は、関数内のすべてのパラメータに対して提供されなければなりません。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "デフォルト値は何をするのでしょうか？",
+						"answerOptions": [
+							{
+								"answerText": "正しい値を設定します。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "パラメータの引数を省略してもコードが動作するように、パラメータに初期値を与えます。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "実用性を持ちません。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "太いアロー関数でできることは",
+						"answerOptions": [
+							{
+								"answerText": "重い関数を作成する",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "関数キーワードを省略する",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "匿名関数を作成する",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "レッスン 6 - JavaScript の基本 - 意思決定: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "次の演算子 == は",
+						"answerOptions": [
+							{
+								"answerText": "等号",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "厳格な平等",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "割り当て",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript での比較はどのような型を返しますか?",
+						"answerOptions": [
+							{
+								"answerText": "boolean",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "string",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript の ! 記号は、次のような意味です:",
+						"answerOptions": [
+							{
+								"answerText": "論理否定",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "重要",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "等価",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "レッスン 6 - JavaScript の基本 - 意思決定: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "次のコードは何を返すでしょうか: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "次のコードは何を返すでしょうか: '1' === 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "'or' 論理を表現する正しい演算子を選んでください。",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "レッスン 7 - JavaScript の基本 - 配列とループ: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "配列内の特定の項目を参照するには",
+						"answerOptions": [
+							{
+								"answerText": "角括弧 []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "インデックス",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "中括弧 {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "配列の項目数を取得するには？",
+						"answerOptions": [
+							{
+								"answerText": "'len(array)' メソッド",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "配列上のプロパティサイズ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "配列の length プロパティ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript では、インデックスの始まりは",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "レッスン 7 - JavaScript の基本 - 配列とループ: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "for ループのどの部分を修正して、その繰り返しを5つ増やす必要がありますか?",
+						"answerOptions": [
+							{
+								"answerText": "条件",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "カウンター",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "くり返し式",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "whilte と for ループの違いは?",
+						"answerOptions": [
+							{
+								"answerText": "for ループにはカウンタと反復式があり、while には条件があるだけです。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "while にはカウンタと反復式があり、for ループには条件があるだけです。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "それらは同じであり、お互いの別名に過ぎません。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "for (let i=1; i < 5; i++) というコードがあるとすると、それは何回繰り返し実行されますか？",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "レッスン 8 - テラリウムプロジェクト - HTML 入門: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "HTML は 'HyperText Mockup Language' の略です。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "すべての HTML タグは、開始タグと終了タグの両方を必要とします。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "意味的なマークアップを使用することが最も重要なのは",
+						"answerOptions": [
+							{
+								"answerText": "コードの読みやすさ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "スクリーンリーダー",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "保守性",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "レッスン 8 - テラリウムプロジェクト - HTML 入門: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "Span と Div は互換性があります。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "HTML ドキュメントの head には、次のようなものが含まれています:",
+						"answerOptions": [
+							{
+								"answerText": "title タグ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "metadata",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "上記のすべて",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "マークアップで非推奨のタグを使用することはできません。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ。ただし正当な理由で非推奨とされています。",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "レッスン 9  - テラリウムプロジェクト - CSS 入門: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "HTML 要素がスタイルされるためには、クラスか id のどちらかを持っていなければなりません。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS は 'Complete Style Sheets' の略です。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS を使ってアニメーションを作成することができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "レッスン 9 - テラリウムプロジェクト - CSS 入門: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "HTML ファイルの head セクションに直接 CSS を書くことができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "アプリには必ず CSS を含める必要があります。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ。しかし、見栄えを良くするには CSS が必要でしょう。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS の検査に使えるブラウザツールは?",
+						"answerOptions": [
+							{
+								"answerText": "Elements",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Styles",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Network",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "レッスン 10 - テラリウムプロジェクト - DOM の操作とクロージャ: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "DOM は 'Document Object Management' の略です。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "DOM はツリーと考えられる",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Web API を使用すると、DOM を操作することができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "レッスン 10 - テラリウムプロジェクト - DOM の操作とクロージャ: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "DOM は、Web 上でドキュメントを表現するためのモデルです。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript のクロージャを使用して、以下を実行します:",
+						"answerOptions": [
+							{
+								"answerText": "関数内に関数を書き込みます。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "DOM を囲みます。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "スクリプトブロックを閉じます。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "空欄を埋めてください: 1つ以上の関数が外部関数の...にアクセスする必要がある場合に便利です。",
+						"answerOptions": [
+							{
+								"answerText": "配列",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "スコープ",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "関数",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "レッスン 11 - タイピングゲーム: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "イベント駆動型のプログラミングは、ユーザーが",
+						"answerOptions": [
+							{
+								"answerText": "ボタンをクリックしたとき",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "値を変更したとき",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ページと相互にやりとりしたとき",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "上記のいずれか",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "手続き型プログラミングでは、関数は",
+						"answerOptions": [
+							{
+								"answerText": "いつでも呼び出されます。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "特定の順序で呼び出されます。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "左から右へと呼び出されます。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "イベントハンドラを登録するために DOM で公開されているユニバーサルメソッドは",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "レッスン 11 - タイピングゲーム: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "ユーザーがページ上で何かをするだけで、イベントが発生します。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "よくあるイベントには以下のものがあります。",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "これら全て",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "匿名関数を使用してイベントハンドラを作成することができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "レッスン 12 - ブラウザ拡張機能プロジェクト - ブラウザについて: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "ブラウザの拡張機能を取得できるのは",
+						"answerOptions": [
+							{
+								"answerText": "ウォルマート",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ブラウザの拡張機能ストア",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "App store",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM とは",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "お使いのブラウザは、安全な Web ページと安全でない Web ページを提供することができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "レッスン 12 - ブラウザ拡張機能プロジェクト - ブラウザについて: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "World Wide Web (ワールドワイドウェブ) の発明者は",
+						"answerOptions": [
+							{
+								"answerText": "トム・バーナード=ロフト",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ティム・バーナーズ=リー",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "トリッシュ バース=プール",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "最初のブラウザは",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ブラウザはユーザーの閲覧履歴を保存することができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "レッスン 13 - ブラウザ拡張機能プロジェクト - API の呼び出し、ローカルストレージの使用: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "API とは",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "API を使用して",
+						"answerOptions": [
+							{
+								"answerText": "別の Web で接続されたアセットとやりとりします。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "データベースとやりとりします。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "上記のいずれかを実行します。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "誰でも API を作成することができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "レッスン 13 - ブラウザ拡張機能プロジェクト - API の呼び出し、ローカルストレージの使用: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "ブラウザウィンドウを閉じるたびにローカルストレージがクリアされます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ブラウザのメインウィンドウは、ブラウザの拡張機能のローカルストレージを制御します。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "API コンテキストでの REST は、以下の略です。",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "レッスン 14 - ブラウザ拡張機能プロジェクト - バックグラウンドタスクとパフォーマンスについて学ぶ: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "アプリのパフォーマンスをテストするには",
+						"answerOptions": [
+							{
+								"answerText": "ブラウザのツールを使用します。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "別のソフトウェアパッケージを使用します",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "手作業で行います",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Web サイトの「パフォーマンス」は、次の内容を分析したものです。",
+						"answerOptions": [
+							{
+								"answerText": "どのくらいの速さでロードされるか",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "コードの実行速度",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "上記のどちらも",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "全体的に、ここ数年の Web ページの「重さ」は",
+						"answerOptions": [
+							{
+								"answerText": "軽くなっています。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "重くなっています。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "変わっていません。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "レッスン 14 - ブラウザ拡張機能プロジェクト - バックグラウンドタスクとパフォーマンスについて学ぶ: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "サイトのパフォーマンスを向上させるには、プロファイラでキャッシュをクリアしてリロードします。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ブラウザの拡張機能は本質的にパフォーマンスが高い。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "パフォーマンスのボトルネックについて、次のように分析します。",
+						"answerOptions": [
+							{
+								"answerText": "DOM 走査",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript の最適化",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "アセット管理",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "上記のすべて",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "レッスン 15 - スペースゲーム - イントロダクション: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "JavaScript はゲームを作るのに人気ではない言語",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub はゲームの資産や流れを管理するための好ましいパターンです。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "オブジェクトの継承は、クラスを使用して処理することもできますし、コンポジションを使用して処理することもできます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "レッスン 15 - スペースゲーム - イントロダクション: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "クラスは振る舞いを継承に依存しています。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ゲームオブジェクトの好ましいデザインパターンはコンポジションです。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub の略:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "レッスン 16 - スペースゲーム - ヒーローとモンスターをキャンバスに描く: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "Canvas 要素は、画面上に描画するために使用するものです。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Canvas API を使用して単純な幾何学的形状を描くことしかできません。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "点 0,0 は左下にあります。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "レッスン 16 - スペースゲーム - ヒーローとモンスターをキャンバスに描く: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "Canvas 上で直接描画操作を行うことができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "画像が非同期的に読み込まれたかどうかを知るために onload イベントを待ち受けます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "画面に画像を描画するには、次の呼ばれる操作を行います:",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "レッスン 17 - スペースゲーム - モーションの追加: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "画面上の任意のオブジェクトはキーボードイベントを受信することができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "キーイベントやマウスイベントを待ち受けるのにも同じ方法を使うことができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "一定の間隔で物事を進行させるためには、どのような関数を使用しますか？",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "レッスン 17 - スペースゲーム - モーションの追加: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "常に画面を再描画する必要があります。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ゲームループとは?",
+						"answerOptions": [
+							{
+								"answerText": "ゲームを再起動できるようにする関数",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ゲームの実行速度を決定する関数",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "一定の間隔で呼び出され、ユーザーが見るべきものを描画する関数",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "画面を再描画するための良いケースは、",
+						"answerOptions": [
+							{
+								"answerText": "ユーザーとのインタラクションが発生したことです。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "何かが動いたということです。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "時間が経つということです。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "レッスン 18 - スペースゲーム - レーザーの追加と衝突の検出: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "衝突検出は、2つのものが衝突したかどうかを検出する方法です。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "画面からアイテムを削除するにはどうすればいいですか?",
+						"answerOptions": [
+							{
+								"answerText": "ガベージコレクタを呼び出します。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "dead としてマークして、次に画面を描くときは dead ではないオブジェクトだけをペイントします。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "マイナス座標にアイテムを配置します",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript でレーザー発射をシミュレートする良い方法は:",
+						"answerOptions": [
+							{
+								"answerText": "ビジュアル要素をキーイベントに反応させます",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "アニメーション GIF を作成します",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "間隔をおいて敵を吹き飛ばします",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "レッスン 18 - スペースゲーム - レーザーの追加と衝突の検出: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "衝突検出では、以下の2つを比較します。",
+						"answerOptions": [
+							{
+								"answerText": "円と交差するかどうか",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "矩形と交差するかどうか",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "二点間の距離",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "クールダウン効果を実装した理由は、",
+						"answerOptions": [
+							{
+								"answerText": "レーザーを連射して敵を破壊することができないため、ゲームを難しくするためです。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript は時間単位で一定数のイベントしか生成できないので、制限する必要があるからです。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "定数はコード内で識別可能です。理由は",
+						"answerOptions": [
+							{
+								"answerText": "定数は大文字で書かれているため",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "それらは固有の名前を持っているため",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "このようにケバブ文字で書かれているため",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "レッスン 19 - スペースゲーム - スコアリングとライフ: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "Canvas 要素を使って画面上にテキストを描くには?",
+						"answerOptions": [
+							{
+								"answerText": "div または span 要素内にテキストを配置します",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Canvas 要素で drawText() を呼び出します",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "コンテキストオブジェクト上で fillText() を呼び出します",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "なんでゲームに「ライフ」という概念があるのでしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "どれだけのダメージを受けられるかを示すため",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ゲームはすぐには終わらないが、ゲームが終了するまでにチャンスの数が N 回あるようにするため",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "キャンバス上のテキストに色を追加するのに使用するのは",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "レッスン 19 - スペースゲーム - スコアリングとライフ: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "プレイヤーの残りライフの多さを示す楽しい方法とは？",
+						"answerOptions": [
+							{
+								"answerText": "宇宙船の数",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ポイントシステム",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Canvas 要素を使って画面の中央にテキストを配置するには?",
+						"answerOptions": [
+							{
+								"answerText": "Flexbox を使用します。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "クライアントウィンドウの width/2 の x 座標にテキストを描画するように指示します。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign プロパティをコンテキストオブジェクトの値の中心に設定します。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "コードでは、このようにライフを差し引きます:",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "レッスン 20 - スペースゲーム - 終了と再起動: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "ゲームを再開するのに良いタイミングはいつですか?",
+						"answerOptions": [
+							{
+								"answerText": "勝敗時",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いつでも",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "いつゲームを終了すべきでしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "敵の宇宙船撃破時",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ヒーローの宇宙船撃破時",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ポイントがたまったら",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ゲームにレベルを追加する良い方法は:",
+						"answerOptions": [
+							{
+								"answerText": "与えられたレベルを完了するために必要なポイントの量を増加させます。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "より多くのプレイヤーをゲームに追加します。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ゲームにグラフィックを追加します。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "レッスン 20 - スペースゲーム - 終了と再起動: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "ゲーム終了条件が満たされた時に使うと良いパターンとは?",
+						"answerOptions": [
+							{
+								"answerText": "適切なメッセージを表示します",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ゲームを終了します。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "適切なメッセージを表示し、プレイヤーに再起動を提案し、そのアクションのために押すべきキーを表示します。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ゲームが終了したときにのみ再起動するようにすべきである。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ゲーム終了時に EventEmitter をクリアする良い方法は以下の通りです:",
+						"answerOptions": [
+							{
+								"answerText": "リスナーのクリア",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "画面消去",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ゲームウィンドウを閉じる",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "レッスン 21 - 銀行プロジェクト - Web アプリの HTML テンプレートとルート: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "Web アプリで異なる画面を表示するためには、複数の HTML ファイルを作成する必要があります。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Web アプリ内のデータをローカルに保存し、永続化することができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Web アプリに最適なデータプロバイダとは？",
+						"answerOptions": [
+							{
+								"answerText": "ローカルデータベース",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript オブジェクト",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON API を持つサーバー",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "レッスン 21 - 銀行プロジェクト - Web アプリの HTML テンプレートとルート: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "HTML テンプレートはデフォルトでは DOM の一部です。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "URLのどの部分がルーティングに必要なのでしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "both",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "history.pushState() 関数を呼び出したときにトリガーされるイベントの名前は?",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "レッスン 22 - 銀行プロジェクト - ログイン・登録フォームの構築: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "HTML フォームでは、JavaScript を使用せずにユーザーの入力をサーバーに送信することができます。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "<label> 要素はすべてのフォームコントロールに必須です。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "フォームデータを HTTP でサーバーに送信するのは安全です。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "レッスン 22 - 銀行プロジェクト - ログイン・登録フォームの構築: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "フォームで <label> 要素を使うのは、フォームをきれいにするためだけです。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "URL はフォームのどの部分でサーバーに送信されますか?",
+						"answerOptions": [
+							{
+								"answerText": "アクション属性",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "メソッド属性",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "両方",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "テキスト <input> の最大サイズを設定するために使用できる属性はどれでしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "レッスン 23 - 銀行プロジェクト - データの取得と利用方法: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "通常、ブラウザでサーバから同期的にデータを取得します。",
+						"answerOptions": [
+							{
+								"answerText": "確かにそうですが、非同期が一番いいですね!",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Web 上でデータをやり取りする際に最も一般的なフォーマットは何ですか?",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Web ページが公開サーバー API にアクセスするのを防ぐ方法はありません。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "レッスン 23 - 銀行プロジェクト - データの取得と利用方法: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "シングルページアプリケーションでは、HTML は一度読み込まれ、更新されることはありません。",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "なぜ、ユーザーの入力から来るデータを信用しないことが重要なのでしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "特殊文字を使うと UI が醜くなるからです。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "意味のない言葉や不快な言葉が含まれている可能性があるからです。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "なぜなら、悪意のあるスクリプトを実行するための攻撃のベクトルとして使用される可能性があるからです。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Web サーバに非同期 HTTP リクエストを送信するための API 名は何でしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "レッスン 24 - 銀行プロジェクト - 状態管理の概念: レッスン前の小テスト",
+				"quiz": [
+					{
+						"questionText": "不変オブジェクトとは何でしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "定数として定義されたオブジェクト",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "作成後に変更できないオブジェクト",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "既存のオブジェクトのコピー",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "状態管理を利用することで、どのようなメリットがありますか?",
+						"answerOptions": [
+							{
+								"answerText": "状態が更新されているすべての場所を把握することができます",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "コードのデバッグが簡単になります",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "上記のすべて",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "異なるセッション間で重要なユーザーデータを永続化する最良の方法とは何でしょうか?",
+						"answerOptions": [
+							{
+								"answerText": "ファイルの使用",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ブラウザの localStorage API の使用",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "サーバー API の背後にあるデータベース",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "レッスン 24 - 銀行プロジェクト - 状態管理の概念: レッスン後の小テスト",
+				"quiz": [
+					{
+						"questionText": "状態管理とはどういうことだと思いますか?",
+						"answerOptions": [
+							{
+								"answerText": "法と秩序の執行",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ユーザーインターフェースの状態を経時的に記録する",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "アプリのデータフローをクリーンに保ち、ユーザーインターフェースをデータと同期させる",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ユーザーセッションの状態を把握するにはどうすればいいですか?",
+						"answerOptions": [
+							{
+								"answerText": "HTTP クッキー",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ローカルまたはセッションストレージ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "上記のすべて",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "オブジェクトを更新するには、常にオブジェクトを変異させるのが最善の方法です",
+						"answerOptions": [
+							{
+								"answerText": "はい",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "いいえ",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

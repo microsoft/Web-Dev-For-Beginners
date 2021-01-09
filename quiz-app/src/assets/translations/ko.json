@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "비기너를 위한 웹 개발: 퀴즈",
+		"complete": "축하합니다! 퀴즈를 완료하셨습니다.!",
+		"error": "죄송해요, 다시 시도해주세요.",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "Lesson 1 - 프로그래밍 언어 소개: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "생산자의 코드작성 없이 프로그램이 만들어질 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "저수준 언어는 어떤 것을 만드는데 인기있는 선택지일까?",
+						"answerOptions": [
+							{
+								"answerText": "웹사이트",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "하드웨어",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "비디오 게임 소프트웨어",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "아래의 도구들 중 웹 개발자 환경으로 가장 적합한 것은",
+						"answerOptions": [
+							{
+								"answerText": "라즈베리 파이 같은 하드웨어",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "브라우저 개발자 도구",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "운영체제 설명서",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Lesson 1 - 프로그래밍 언어 소개: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "어떤 언어로 웹사이트를 만들 것인가?",
+						"answerOptions": [
+							{
+								"answerText": "기계어",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "개발 환경은 개발자 마다 고유하다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "버그가 있는 코드를 고치기위해 개발자는 어떤 것을 하게되는가?",
+						"answerOptions": [
+							{
+								"answerText": "구문 강조 (Syntax highlighting)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "디버깅 (Debugging)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "코드 포맷팅 (Code formatting)",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "Lesson 2 - GitHub 소개: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "어떤 명령어로 Git 레포지토리를 만드는가?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "`git add`는 어떤 동작을 하는 것인가?",
+						"answerOptions": [
+							{
+								"answerText": "코드 커밋",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "추적을 위해 staging 영역으로 파일을 추가",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Github에 파일을 추가",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "git이 본인 컴퓨터에 설치되어 있는지 어떻게 확인하는가?",
+						"answerOptions": [
+							{
+								"answerText": "`git --version` 입력",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "`git --installed` 입력",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "`git --init` 입력",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "Lesson 2 - GitHub 소개: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "브랜치로부터 변경점을 토론하고 비교할수 있는 공간은? (리뷰, 코멘트, 통합 테스트 등을 할수 있음)",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "A Pull Request (PR, 풀리퀘스트)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A feature branch (기능 브랜치)",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "원격 브랜치로부터 모든 커밋을 가져올 수 있는 커맨드는?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "브랜치를 전환하는 커맨드는?",
+						"answerOptions": [
+							{
+								"answerText": "git switch [브랜치-이름]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [브랜치-이름]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [브랜치-이름]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "Lesson 3 - 접근 가능한 웹 페이지 생성하기: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "접근가능한 웹사이트는 어떤 툴로 점검할 수 있을까?",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "시각 장앤 유저들을 위한 접근성 테스트 용으로 스크린 리더가 필요하다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "접근성은 정보성 웹사이트에서만 중요하다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "Lesson 3 - 접근 가능한 웹 페이지 생성하기: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "Lighthouse 는 접근성 문제만 점검한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "칼러 세이프 팔레트(Color-safe palettes)는 어떤 사람을 도울 수 있는가?",
+						"answerOptions": [
+							{
+								"answerText": "색망",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "시각 장애",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "둘다",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "설명 링크는 접근가능한 웹 사이트에 필수적인 요소이다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "Lesson 4 - JavaScript 기초 - 데이터 타입: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "불리언 타입은 문자열의 길이를 구하는데 쓸 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "문자열에 사용할 수 있는 연산은?",
+						"answerOptions": [
+							{
+								"answerText": "concatenation",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "appending",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "splicing",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== 와 === 는 서로 교체가능하다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "Lesson 4 - JavaScript 기초 - 데이터 타입: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "상수(const)는 다음을 제외하고 변수를 선언 시 let과 var과 같다.",
+						"answerOptions": [
+							{
+								"answerText": "반드시 초기화되어야 한다",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "변경 가능하다",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "재할당 가능하다",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Numbers(숫자) 와 ____ 는 숫자 데이터를 다루는 JavaScript 원시 타입이다.",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "문자열은 작은 따옴표와 큰 따옴표 사이에 있을 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "Lesson 5 - JavaScript 기초 - 메소드와 함수: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "아규먼트란?",
+						"answerOptions": [
+							{
+								"answerText": "함수 정의내 선언되는 것",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "함수 실행 시 함수로 전달되는 것",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아는 사람들과 같이 가지고 있는 것",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "함수는 꼭 무언가를 리턴해야한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "함수이름은 어떤 이름이든 될 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "네, 하지만 설명적인 이름이어야 한다.",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "Lesson 5 - JavaScript 기초 - 메소드와 함수: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "아규먼트는 반드시 함수에 모든 파라미터가 제공되어야 한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "기본 값은 어떤 것을 하는 것인가?",
+						"answerOptions": [
+							{
+								"answerText": "올바른 값을 지정하는 것",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "파라미터의 시작 값을 주는 것, 그래서 아규먼트가 빠져 있을 때도 코드가 동작할 수 있다.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "쓸모없음",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "fat arrow(=>) 함수는 다음을 제공한다.",
+						"answerOptions": [
+							{
+								"answerText": "무거운 함수를 만드는 것",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "`function` 키워드를 생략하는 것",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "익명 함수를 만드는 것",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "Lesson 6 - JavaScript 기초 - 결정하기: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "== 연산자는 다음과 같이 불린다.",
+						"answerOptions": [
+							{
+								"answerText": "동등 (Euqaility)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "일치 (Strict equality)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "할당 (Assignment)",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript 비교는 어떤 타입을 리턴하는가?",
+						"answerOptions": [
+							{
+								"answerText": "불리언",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "문자열",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript의 ! 심볼은 다음을 의미한다.",
+						"answerOptions": [
+							{
+								"answerText": "논리 Not",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "중요",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "동등",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "Lesson 6 - JavaScript 기초 - 결정하기: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "다음 코드는 무엇을 리턴하는가: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "다음 코드는 무엇을 리턴하는가: '1' === 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "'or' 로직을 표현하는 연산자를 고르시오.",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "Lesson 7 - JavaScript 기초 - 배열과 반복: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "배열의 특정 항목을 참조하려면, 어떤 것을 쓸 것인가?",
+						"answerOptions": [
+							{
+								"answerText": "대괄호 []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "인덱스 (index)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "중괄호 {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "배열의 항목 개수는 어떻게 알아낼 수 있는가?",
+						"answerOptions": [
+							{
+								"answerText": "'len(array)' 메소드",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "배열의 속성 사이즈",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "배열의 속성 길이",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript에서 인덱스 값은 무엇으로 시작되는가?",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "Lesson 7 - JavaScript 기초 - 배열과 반복: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "for-loop에서 반복 횟수를 5회 늘이려면 어떤부분을 수정해야 하는가?",
+						"answerOptions": [
+							{
+								"answerText": "조건",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "카운터",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "반복-표현식",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "while과 for-loop의 차이는?",
+						"answerOptions": [
+							{
+								"answerText": "for-loop에는 카운터와 반복-표현식이 있는 반면, while에는 오직 조건만 있다.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "while에는 카운터와 반복-표현식이 있는 반면, for-loop 오직 조건만 있다",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "둘다 같다, 별칭만 다를 뿐이다.",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "해당 코드 (let i=1; i < 5; i++) 에서 몇 번의 반복이 수행되는가?",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "Lesson 8 - Terrarium 프로젝트 - HTML 소개: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "HTML은 'HyperText Mockup Language'를 의미한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "모든 HTML 태그는 열고 닫는 태그 둘다 필요하다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "시맨틱 마크업을 사요하는 것은 다음에 가장 중요하다.",
+						"answerOptions": [
+							{
+								"answerText": "코드 가독성",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "스크린 리더",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "유지보수",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "Lesson 8 - Terrarium 프로젝트 - HTML 소개: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "span 과 div 는 서로 교체가능하다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "HTML문서의 head 에는 다음이 포함 가능하다.",
+						"answerOptions": [
+							{
+								"answerText": "title 태그",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "metadata",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "위 둘다",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "제외된 태그들은 마크업에 사용할 수 없다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요, 하지만 제외된 데에는 좋은 이유가 있다.",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "Lesson 9  - Terrarium 프로젝트 - CSS 소개: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "HTML 요소에 스타일을 지정하려면 클래스나 id는 반드시 가지고 있어야한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS는 'Complete Style Sheets'를 의미한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS는 애니메이션을 만드는 데 쓰일 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "Lesson 9 - Terrarium 프로젝트 - CSS 소개: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "HTML 파일의 head 섹션에 CSS를 바로 적을 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "CSS는 앱에서 항상 필수적이다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요, 하지만 보기 좋게 만드려면 CSS 가 필요할 것이다.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "어떤 브라우저 툴이 CSS를 감지합니까?",
+						"answerOptions": [
+							{
+								"answerText": "Elements",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Styles",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Network",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "Lesson 10 - Terrarium 프로젝트 - DOM 조작과 클로저: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "DOM은 'Document Object Management'를 의미한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "DOM은 tree 형태로 여겨질 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Web API를 사용해서 DOM을 조작할 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "Lesson 10 - Terrarium 프로젝트 - DOM 조작과 클로저: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "DOM은 웹에서 문서를 표현하기 위한 모델이다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "다음을 수행하기 위해 JavaScript 클로저를 사용해야 한다.",
+						"answerOptions": [
+							{
+								"answerText": "함수 내 함수 작성",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "DOM 을 둘러싸기",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "스크립트 블럭 닫기",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "빈칸 채우기: 클로저는 하나 혹은 여러 함수가 함수 밖 ___을(를) 접근하는데 유용하다.",
+						"answerOptions": [
+							{
+								"answerText": "배열",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "범위",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "함수",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "Lesson 11 - 타이핑 게임: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "이벤트-주도 프로그래밍은 사용자가 ___ 하는 경우에 사용된다.",
+						"answerOptions": [
+							{
+								"answerText": "버튼 클릭",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "값 변경",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "페이지 상호작용",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "위 모든 경우",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "절차형 프로그래밍에서 함수는 ___ 불려진다.",
+						"answerOptions": [
+							{
+								"answerText": "언제든",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "특정 순서대로",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "왼쪽에서 오른쪽으로",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "이벤트 핸들러에 등록되기 위해 돔에서 제공하는 메소드는?",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "Lesson 11 - 타이핑 게임: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "유저가 페이지서 하는 거의 모든것은 이벤트를 발생시킨다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "일반적인 이벤트는 다음을 포함한다.",
+						"answerOptions": [
+							{
+								"answerText": "클릭 이벤트",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "선택 이벤트",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "입력 이벤트",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "위 모든 경우",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "익명 함수를 이벤트 핸들러를 만드는데 사용할 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "Lesson 12 - 브라우저 확장 프로젝트 - 브라우저에 대한 모든 것: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "브라우저 확장 프로그램은 어디로부터 얻을 수 있는가?",
+						"answerOptions": [
+							{
+								"answerText": "월마트",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "브라우저의 확장 프로그램 스토어",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "앱 스토어",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM 은 다음을 의미한다.",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "브라우저는 웹페이지를 안정하게도, 불안정하게도 제공할 수 있다. (둘 다 가능)",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "Lesson 12 - 브라우저 확장 프로젝트 - 브라우저에 대한 모든 것: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "World Wide Web 은 누가 발명했는가?",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "첫 번째 브라우저는 어떻게 불렸는가?",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "브라우저는 사용자의 검색 기록을 저장할 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "Lesson 13 - 브라우저 확장 프로젝트 - 로컬 저장소를 사용한 API 호출: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "API는 다음을 의미한다.",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "API는 다음과 상호작용하기 위해 사용해야 한다.",
+						"answerOptions": [
+							{
+								"answerText": "웹으로 연결된 다른 에셋",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "데이터베이스",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "위의 둘 다",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "누구든 API를 만들 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "Lesson 13 - 브라우저 확장 프로젝트 - 로컬 저장소를 사용한 API 호출: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "로컬 스토리지는 브라우저 윈도를 닫을 때 마다 비워진다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "메인 브라우저 윈도우는 브라우저 확장 프로그램의 로컬 스토리지를 컨트롤한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "API에서의 REST는 다음을 의미한다.",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "Lesson 14 - 브라우저 확장 프로젝트 - 백그라운드 작업과 성능 학습: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "웹 앱의 성능을 다음을 이용하여 테스트할 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "브라우저 툴 사용",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "분리된 소프트웨어 패키지를 사용",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "매뉴얼대로",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "웹 사이트의 '성능' 은 다음을 분석하는 것을 의미한다.",
+						"answerOptions": [
+							{
+								"answerText": "얼마나 빨리 로드되는지",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "코드가 얼마나 빨리 동작하는지",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "위의 둘 다",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "전반적으로, 웹 페이지의 '무게'는 과거 몇년간 다음과 같이 변화였다.",
+						"answerOptions": [
+							{
+								"answerText": "가벼워졌다.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "무거워졌다.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "그대로다.",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "Lesson 14 - 브라우저 확장 프로젝트 - 백그라운드 작업과 성능 학습: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "사이트의 성능을 잘 확인하려면, 캐시를 비우고 프로파일러에서 다시 로드해야한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "브라우저 확장 프로그램은 기본적으로 실행된다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "성능 병목을 확인하려면 다음을 분석해야한다.",
+						"answerOptions": [
+							{
+								"answerText": "DOM 순회",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript 최적화",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "자원 관리",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "위 모두",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "Lesson 15 - 스페이스 게임 - 소개: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "JavaScript는 게임을 만드는데 인기가 없다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub은 게임 자원과 진행 흐름을 관리하는데 선호되는 패턴이다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "객체 상속은 클래스나 구성(Composition)에 의해 다뤄진다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "Lesson 15 - 스페이스 게임 - 소개: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "클래스는 행동에 중점을 두는 상속에 의존한다.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "구성(Composition)은 게임 객체들을 다루는데 선호되는 디자인 패턴이다.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub 은 다음을 의미한다:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "Lesson 16 - 스페이스 게임 - Canvas에 영웅과 몬스터 그리기: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "Canvas 요소는 스크린에 그릴때 사용하는 것이다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Canvas API를 사용하여 단순한 기하학적인 모양만 만들 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "0,0 좌표는 왼쪽 아래를 가르킨다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "Lesson 16 - 스페이스 게임 - Canvas에 영웅과 몬스터 그리기: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "Canvas에 직접적으로 그리기 연산을 수행할 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "비동기적으로 이미지가 로드되는 것을 알기위해 onload 이벤트를 등록해야한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "스크린에 이미지를 그리라는 연산은?",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "Lesson 17 - 스페이스 게임 - 모션 추가하기: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "스크린의 어떤 오브젝트든지 키보드 이벤트를 받을 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "키 이벤트와 마우스 이벤트를 감지하는 것은 같은 메소드를 사용하여 가능하다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "일정 간격으로 어떤 일이 일어나게 하려면, 어떤 함수를 사용해야 하는가?",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "Lesson 17 - 스페이스 게임 - 모션 추가하기: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "항상 스크린을 다시 그려야한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "게임 루프란?",
+						"answerOptions": [
+							{
+								"answerText": "게임이 다시 시작될 수 있음을 보장되는 함수",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "게임이 얼마나 빨리 동작되는지 결정하는 함수",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "일정 간격으로 실행되며, 유저에게 보여지는 것을 그리는 함수",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "스크린을 다시 그리는 좋은 경우는?",
+						"answerOptions": [
+							{
+								"answerText": "유저 상호작용이 발생했을 때",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "무언가 이동되었을 때",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "시간이 지났을 때",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "Lesson 18 - 스페이스 게임 - 레이저 추가 및 충돌 감지하기: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "충돌 감지는 두 물체가 충돌 했는 것을 감지하는 방법을 나타낸다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "화면에서 어떻게 한 항목을 지우는가?",
+						"answerOptions": [
+							{
+								"answerText": "가비지 컬렉터를 호출한다.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "죽었다고 표시만 하고, 다음 화면을 그릴때 살아있는 객체만 그린다.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "음수 좌표에 해당 항목을 배치한다.",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript에서 레이저 쏘는 것을 보여주는 좋은 방법은?",
+						"answerOptions": [
+							{
+								"answerText": "키 이벤트에 반응하는 비주얼 요소를 만든다.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "움직이는 gif를 만든다.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "간격을 두고 적들을 폭발시킨다.",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "Lesson 18 - 스페이스 게임 - 레이저 추가 및 충돌 감지하기: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "충돌 감지는 어떻게 이루어지는가?",
+						"answerOptions": [
+							{
+								"answerText": "두 원이 교차하는지 비교해서",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "두 사각형이 교차하는지 비교해서",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "두 점의 거리를 비교해서",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "쿨다운 효과를 구현하는 이유는?",
+						"answerOptions": [
+							{
+								"answerText": "레이저를 반복적으로 발사하여 적들을 파괴할 수 없어, 게임을 더 어렵게 만들기 위함이다.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript는 각 시간 단위에 특정 숫자의 이벤트만 생산할 수 있어, 이벤트를 제한해야 하기 때문이다.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "상수는 코드에서 식별가능하다. 그 이유는?",
+						"answerOptions": [
+							{
+								"answerText": "대문자로 쓰여져 있으므로",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "특정 이름을 가지고 있으므로",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "케밥-케이스로 적혀있으므로 (예시: like-this)",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "Lesson 19 - 스페이스 게임 - 점수 및 생명: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "Canvas 요소를 사용하여 어떻게 텍스트를 스크린에 그릴 수 있는가?",
+						"answerOptions": [
+							{
+								"answerText": "div 나 span 요소에 텍스트를 넣는다.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawText()를 Canvas 요소에서 호출한다.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillText()를 컨텍스트 객체에서 호출한다.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "게임에서 '생명'이란 개념은 왜 가지고 있어야 하는가?",
+						"answerOptions": [
+							{
+								"answerText": "얼마나 피해를 입었는지 보여주기 위해서",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "게임을 바로 끝내는 것이 아니라, 끝나기 전 몇 번의 기회를 더 가지기 위해서",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Canvas의 텍스트에 색을 입히기 위해 다음을 사용하면 된다.",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "Lesson 19 - 스페이스 게임 - 점수 및 생명: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "플레이어 생명이 얼마나 남았는지 알려주는 방법은?",
+						"answerOptions": [
+							{
+								"answerText": "많은 우주선들",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "점수 시스템",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "어떻게 Canvas 요소를 사용하여 스크린의 중앙에 텍스트를 위치시킬 수 있는가?",
+						"answerOptions": [
+							{
+								"answerText": "Flexbox 사용해서",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "클라이언트 윈도우의 가로사이즈/2 만큼의 x 좌표에 텍스트를 그리도록 지시한다.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "컨텍스트 오브젝트에서 textAlign 요소를 center 값으로 지정한다.",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "코드에서 다음처럼 생명을 감소시킨다.",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "Lesson 20 - 스페이스 게임 - 끝과 재시작: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "게임을 재시작하기 좋은 타이밍은 언제인가?",
+						"answerOptions": [
+							{
+								"answerText": "플레이어가 이겼거나 졌을 때",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "언제든지",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "언제 게임이 종료되야 하는가?",
+						"answerOptions": [
+							{
+								"answerText": "적의 우주선이 파괴되었을 때",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "히어로 우주선이 파괴되었을 때",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "점수가 수집될 때",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "게임에 레벨이 추가되는 좋은 방법은?",
+						"answerOptions": [
+							{
+								"answerText": "주어진 레벨을 완료하는데 필요한 점수를 증가",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "게임에 더 많은 플레이어를 추가",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "게임에 그래픽 요소를 더 추가",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "Lesson 20 - 스페이스 게임 - 끝과 재시작: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "게임 종료 조건을 만났을 때 사용하는 좋은 패턴은?",
+						"answerOptions": [
+							{
+								"answerText": "적절한 메세지를 보여주는 것",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "게임을 나가는 것",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "적절한 메세지를 보여주고, 재시작하도록 플레이어에게 제공하는 것, 그리고 어떤 키를 입력해야 재시작할 수 있는지 보여주는 것",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "게임이 끝날때만 재시작 기능을 제공해야한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "게임이 끝날 때, EventEmitter를 초기화하는 좋은 방법은?",
+						"answerOptions": [
+							{
+								"answerText": "listeners를 초기화",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "스크린을 비우기",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "게임 윈도우를 닫기",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "Lesson 21 - 은행 프로젝트 - 웹 앱의 HTML 템플릿과 라우터: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "웹 앱에서 다른 스크린을 보여주기 위해선 여러 개의 HTML 파일을 만들어야 한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "웹 앱에서 로컬에 데이터를 저장하고 유지할 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "웹 앱에서 가장 적절한 데이터 공급원은?",
+						"answerOptions": [
+							{
+								"answerText": "로컬 데이터베이스",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript 객체",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON API를 제공하는 서버",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "Lesson 21 - 은행 프로젝트 - 웹 앱의 HTML 템플릿과 라우터: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "HTML 템플릿은 DOM에 기본적인 부분이다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "URL에 어떤 부분이 라우팅에 필요한가?",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "둘 다",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "history.pushState() 함수를 호출 할때 트리거되는 이벤트 이름은?",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "Lesson 22 - 은행 프로젝트 - 로그인과 가입 폼 작성하기: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "HTML forms는 JavaScript 없이 유저 입력을 서버로 전송하는 것을 제공한다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "<label> 요소는 form 제어에 필수적이다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "HTTP를 통해 서버로 폼 데이터를 보내는 것은 안전하다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "Lesson 22 - 은행 프로젝트 - 로그인과 가입 폼 작성하기 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "폼에서 <label> 요소를 사용하는 것은 폼을 예쁘게만 만드는 것이다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "폼 데이터가 서버에 어떤 식으로 보내는지 결정하는 것은?",
+						"answerOptions": [
+							{
+								"answerText": "action 속성을 사용하는 것",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "method 속성을 사용하는 것",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "둘 다",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "어떤 속성이 <input> 텍스트의 최대 사이즈를 지정하는가?",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "Lesson 23 - 은행 프로젝트 - 데이터를 가져오고 사용하는 방식: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "브라우저에서 서버로 부터 데이터를 동기적으로 받아올 수 있다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "웹과 데이터를 교환하는데 가장 일반적으로 사용되는 포맷은?",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "공용 서버 API를 접근하는 것을 웹에서 방지하는 방법은 없다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "Lesson 23 - 은행 프로젝트 - 데이터를 가져오고 사용하는 방식: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "싱글-페이지 애플리케이션(SPA)에서, HTML은 한 번 로드되고 업데이트되지 않는다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "유저 입력으로 들어오는 데이터를 신뢰하지 않는 것은 왜 중요한가?",
+						"answerOptions": [
+							{
+								"answerText": "특수문자를 사용하면 UI를 못생기게 만들 수 있기 때문",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "비상식적이거나 공격적인 단어들이 포함될 수 있기 때문",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "악의 적인 스크립트를 실행하는 공격이 쓰여질 수 있기 때문",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "웹서버에 HTTL 요청을 비동기적으로 보내주는 API 이름은?",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "Lesson 24 - 은행 프로젝트 - 상태 관리의 컨셉: 강의 전 퀴즈",
+				"quiz": [
+					{
+						"questionText": "불변 객체란 무엇인가?",
+						"answerOptions": [
+							{
+								"answerText": "상수로 정의된 객체",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "만들어진 후 수정이 될 수 없는 객체",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "기존에 있는 객체의 복사본",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "상태 관리를 사용하면서 얻는 이점은?",
+						"answerOptions": [
+							{
+								"answerText": "상태가 업데이트 되는 지점을 모두 추적할 수 있다.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "코드를 디버깅하는데 쉬워진다.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "위의 둘 다",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "다른 세션 간 중요한 유저 데이터를 보관하는 가장 좋은 방법은?",
+						"answerOptions": [
+							{
+								"answerText": "파일 사용",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "브라우저 localStorage API 사용",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "서버 API 뒤에 있는 데이터베이스에 저장",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "Lesson 24 - 은행 프로젝트 - 상태 관리의 컨셉: 강의 후 퀴즈",
+				"quiz": [
+					{
+						"questionText": "상태 관리의 의미는?",
+						"answerOptions": [
+							{
+								"answerText": "법칙과 순서를 강제하는 작업",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "시간에 따른 유저 인터페이스 상태 로깅",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "앱 데이터의 흐름을 깔끔하게 유지하고, 사용자 인터페이스를 데이터와 동기화하는 작업",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "유저 세션 상태는 어떻게 추적하는가?",
+						"answerOptions": [
+							{
+								"answerText": "HTTP 쿠키",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "로컬 혹은 세션 스토리지",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "위의 둘 다",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "객체를 변경 가능하도록 유지하는 것은 업데이트 시 항상 좋은 방법이다.",
+						"answerOptions": [
+							{
+								"answerText": "네",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "아니요",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

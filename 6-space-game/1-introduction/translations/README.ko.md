@@ -1,10 +1,10 @@
 # Space 게임 제작하기 파트 1: 소개
 
-![video](../images/pewpew.gif)
+![video](../../images/pewpew.gif)
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
 
 ### 게임 개발의 상속과 구성
 
@@ -213,7 +213,7 @@ pub-sub 패턴이 어떻게 게임을 발전시킬 수 있는지 생각해보세
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](.github/post-lecture-quiz.md)
+[Post-lecture quiz](../.github/post-lecture-quiz.md)
 
 ## 리뷰 & 자기주도 학습
 
@@ -221,4 +221,4 @@ pub-sub 패턴이 어떻게 게임을 발전시킬 수 있는지 생각해보세
 
 ## 과제
 
-[Mock up a game](assignment.md)
+[Mock up a game](../assignment.md)
