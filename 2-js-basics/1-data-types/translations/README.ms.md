@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
-[Kuiz Pra Kuliah](../.github/pre-lecture-quiz.md)
+[Kuiz Pra Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7)
 
 Pelajaran ini merangkumi asas-asas JavaScript, bahasa yang menyediakan interaktiviti di web.
 
@@ -185,7 +185,7 @@ Booleans boleh hanya dua nilai: `benar` atau `salah`. Booleans dapat membantu me
 JavaScript terkenal kerana kaedahnya yang mengagumkan dalam mengendalikan jenis data sesekali. Lakukan sedikit kajian mengenai 'gotchas' ini. Contohnya: kepekaan kes boleh menggigit! Cubalah ini di konsol anda: `let age = 1; biarkan Umur = 2; age == Age` (menyelesaikan `false` - mengapa?). Apa lagi gotchas yang anda dapati?
 
 ## Kuiz Pasca Kuliah
-[Kuiz Pasca Kuliah](../.github/post-lecture-quiz.md)
+[Kuiz Pasca Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8)
 
 ## Mengkaji dan belajar sendiri
 

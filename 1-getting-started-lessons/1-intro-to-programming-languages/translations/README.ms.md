@@ -6,7 +6,7 @@ Pelajaran ini merangkumi asas bahasa pengaturcaraan. Topik yang anda akan belaja
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra-Kuliah
-[Kuiz Pra-Kuliah](.github/pre-lecture-quiz.ms.md)
+[Kuiz Pra-Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)
 
 ## Pengenalan
 
@@ -179,7 +179,7 @@ Apabila pembangun ingin mempelajari sesuatu yang baru, kemungkinan besar mereka 
 Bandingkan beberapa bahasa pengaturcaraan. Apa ciri unik JavaScript berbanding dengan Java? Bagaimanakah dengan COBOL vs. Go?
 
 ## Kuiz Pasca Kuliah
-[Kuiz Pasca Kuliah](.github/post-lecture-quiz.ms.md)
+[Kuiz Pasca Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2)
 
 ## Mengkaji sendiri & Belajar sendiri
 

@@ -4,7 +4,7 @@
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
-[Kuiz Pra Kuliah](../.github/pre-lecture-quiz.md)
+[Kuiz Pra Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
 
 > Kekuatan Web berada dalam kesejagatannya. Akses oleh semua orang tanpa mengira kecacatan adalah aspek penting.
 >
@@ -207,7 +207,7 @@ Ambil HTML ini dan tulis semula agar dapat diakses semaksimum mungkin, mengingat
 ```
 
 ## Kuiz Pasca Kuliah
-[Kuiz Pasca Kuliah](../.github/post-lecture-quiz.md)
+[Kuiz Pasca Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6)
 
 ## Mengkaji dan belajar sendiri
 
