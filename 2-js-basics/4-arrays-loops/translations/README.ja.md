@@ -3,8 +3,8 @@
 ![JavaScript Basics - Arrays](images/webdev101-js-arrays.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## レクチャー前クイズ
-[レクチャー前クイズ](.github/pre-lecture-quiz.md)
+## レッスン前の小テスト
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13?loc=ja)
 
 このレッスンでは、Web 上でインタラクティブな機能を提供する言語である JavaScript の基礎を学びます。このレッスンでは、データを操作するために使用される配列とループについて学びます。
 
@@ -111,8 +111,8 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 配列をループする方法は for ループと while ループ以外にもあります。[forEach](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/for...of)、[map](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) があります。これらのテクニックのいずれかを使って、配列のループを書き換えてください。
 
-## レクチャー後クイズ
-[レクチャー後クイズ](.github/post-lecture-quiz.md)
+## レッスン後の小テスト
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14?loc=ja)
 
 
 ## 復習と自己学習

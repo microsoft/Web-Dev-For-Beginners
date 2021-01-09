@@ -3,8 +3,8 @@
 ![JavaScript Basics - Data types](images/webdev101-js-datatypes.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## レクチャー前クイズ
-[レクチャー前クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7?loc=ja)
+## レッスン前の小テスト
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7?loc=ja)
 
 このレッスンでは、Web 上でインタラクティブな機能を提供する言語である JavaScript の基礎を学びます。
 
@@ -184,8 +184,8 @@ let myString2 = "World";
 
 JavaScript は、たまにデータ型を扱う際の意外な方法で悪名高いです。これらの 'gotchas' について少し調べてみてください。例えば: 大文字小文字の区別でつまずくことがあります! コンソールで以下のようにしてみてください。`let age = 1; let Age = 2; age == Age` (解決は `false` -- なぜ?) 他にどのような gotchas があるでしょうか?
 
-## レクチャー後クイズ
-[レクチャー後クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8?loc=ja)
+## レッスン後の小テスト
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8?loc=ja)
 
 ## 復習と自己学習
 

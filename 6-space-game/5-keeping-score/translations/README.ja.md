@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/37)
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/37?loc=ja)
 
 このレッスンでは、ゲームに得点を加えてライフを計算する方法を学びます。
 
@@ -179,7 +179,7 @@ npm start
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/38)
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/38?loc=ja)
 
 ## 復習と自己学習
 

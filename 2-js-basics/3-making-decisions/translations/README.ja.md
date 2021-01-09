@@ -3,9 +3,8 @@
 ![JavaScript Basics - Making decisions](images/webdev101-js-decisions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## 
-レクチャー前クイズ
-[レクチャー前クイズ](.github/pre-lecture-quiz.md)
+## レッスン前の小テスト
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11?loc=ja)
 
 意思決定を行い、コードの実行順序を制御することで、コードを再利用可能で堅牢なものにします。このセクションでは、JavaScript のデータフローを制御するための構文と、ブール値データ型で使用される場合の意味について説明します。
 
@@ -160,9 +159,9 @@ if (firstNumber > secondNumber) {
 
 最初に論理演算子を使ってプログラムを作成し、それを三項式で書き換えます。お好みの構文は？
 
-## レクチャー後クイズ
+## レッスン後の小テスト
 
-[レクチャー後クイズ](.github/post-lecture-quiz.md)
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12?loc=ja)
 
 ## 復習と自己学習
 
