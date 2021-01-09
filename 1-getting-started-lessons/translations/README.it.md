@@ -1,4 +1,4 @@
-# Getting Started with Web Development
+# Iniziare con lo Sviluppo Web
 
 In questa sezione del curriculum, vi saranno introdotti concetti non relativi al progetto importanti per diventare uno sviluppatore professionista.
 
