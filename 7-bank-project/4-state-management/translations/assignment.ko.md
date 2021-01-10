@@ -15,7 +15,7 @@
 
 다음은 과제를 완료 한 후의 예시 결과입니다.
 
-![Screenshot showing an example ](./images/dialog.png)
+![예시를 보여주는 스크린샷 이미지](./images/dialog.png)
 
 ## 평가 기준
 
