@@ -1,0 +1,24 @@
+# "거래 추가" 대화 상자 구현
+
+## Instructions
+
+우리 은행 앱에는 여전히 새로운 거래를 입력 할 수 있는 한 가지 중요한 기능이 없습니다. 이전 네 가지 수업에서 배운 모든 것을 사용하여 "트랜잭션 추가" 대화 상자를 구현해봅시다.
+
+- 대시 보드 페이지에 "거래 추가" 버튼 추가
+- HTML 템플릿으로 새 페이지를 만들거나 JavaScript를 사용하여 대시 보드 페이지를 벗어나지 않고 대화 상자 HTML을 표시하거나 숨깁니다(해당 항목에 대해 [`hidden`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden) 속성 또는 CSS 클래스를 사용할 수 있음).
+- 대화 상자에 대한 [키보드 및 화면 판독기 접근성](https://developer.paciellogroup.com/blog/2018/06/the-current-state-of-modal-dialog-accessibility/)을 처리해야합니다.
+- 입력 데이터 수신을 위한 HTML 양식 구현
+- Create JSON data from the form data and send it to the API
+- Update the dashboard page with the new data
+
+Look at the [server API specifications](../api/README.md) to see which API you need to call and what is the expected JSON format.
+
+Here's an example result after completing the assignment:
+
+![Screenshot showing an example ](./images/dialog.png)
+
+## Rubric
+
+Criteria | Exemplary | Adequate | Needs Improvement
+--- | --- | --- | ---
+ | 거래 추가 기능이 수업에서 본 모든 모범 사례에 따라 완전히 구현된 경우 | 거래 추가기능은 구현되지만, 강의에 표시된 모범 사례를 따르지 않거나 부분적으로만 작동하는 경우 | 거래 추가기능이 전혀 동작하지 않는 경우
