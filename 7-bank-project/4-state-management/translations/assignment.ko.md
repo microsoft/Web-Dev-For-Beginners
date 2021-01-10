@@ -1,6 +1,6 @@
 # "거래 추가" 대화 상자 구현
 
-## Instructions
+## 설명
 
 우리 은행 앱에는 여전히 새로운 거래를 입력 할 수 있는 한 가지 중요한 기능이 없습니다. 이전 네 가지 수업에서 배운 모든 것을 사용하여 "트랜잭션 추가" 대화 상자를 구현해봅시다.
 
@@ -17,8 +17,8 @@ Here's an example result after completing the assignment:
 
 ![Screenshot showing an example ](./images/dialog.png)
 
-## Rubric
+## 평가 기준
 
-Criteria | Exemplary | Adequate | Needs Improvement
+기준 | 모범 답안 | 적당한 답안 | 개선이 필요한 답안
 --- | --- | --- | ---
  | 거래 추가 기능이 수업에서 본 모든 모범 사례에 따라 완전히 구현된 경우 | 거래 추가기능은 구현되지만, 강의에 표시된 모범 사례를 따르지 않거나 부분적으로만 작동하는 경우 | 거래 추가기능이 전혀 동작하지 않는 경우
