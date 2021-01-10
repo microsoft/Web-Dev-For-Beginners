@@ -12,4 +12,4 @@
 
 기준 | 모범 답안 | 적당한 답안 | 개선이 필요한 답안
 --- | --- | --- | ---
- | Code is commented, well-organized in different sections and easy to read. Constants are extracted and a factorized `sendRequest()` function has been created. | Code is clean but can still be improved with more comments, constant extraction or factorization. | Code is messy, not commented, constants are not extracted and code is not factorized.
+ | 코드 주석이 잘 짜여진 여러개의 섹션으로 나뉘며 읽기 쉬운 경우. 그리고 상수들이 추출되고 잘 쪼개진 `sendRequest()` 함수를 생성한 경우 | 코드는 깔끔하지만 더 많은 주석, 지속적인 추출 또는 분해를 통해 개선될 수 있는 경우 | 코드가 지저분하고 주석도 잘 작성하지 않았으며 상수 또한 추출되지 않고 코드도 분해되지 않은 경우
