@@ -2,7 +2,7 @@
 
 ## 설명
 
-Using the code samples in the lesson, write a representation of a game you enjoy. It will have to be a simple game, but the goal is to use either the class or the composition pattern and the pub/sub pattern to show how a game might launch. Get creative!
+수업에 있는 예제 코드를 사용해서 게임을 만들어 봅시다. 간단한 게임이어야 하며, 목표는 class 또는 composition 패턴과 pub/sub 패턴 중 하나를 사용하여 게임을 만드는 것입니다. 창의력을 보여주세요!
 
 ## 평가 기준
 
