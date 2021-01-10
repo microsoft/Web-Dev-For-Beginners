@@ -25,7 +25,7 @@ curl http://localhost:5000/api
 
 ## AJAX and data fetching
 
-Traditional web sites update the content displayed when the user click on a link or submit data using a form, by reloading the full HTML page. Every time new data needs to be loaded, the web server returns a brand new HTML page that needs to be processed by the browser, interrupting the current user action and limiting interactions during the reload. This workflow is also called a *Multi-Page Application* or *MPA*.
+Traditional web sites update the content displayed when the user selects a link or submits data using a form, by reloading the full HTML page. Every time new data needs to be loaded, the web server returns a brand new HTML page that needs to be processed by the browser, interrupting the current user action and limiting interactions during the reload. This workflow is also called a *Multi-Page Application* or *MPA*.
 
 ![Update workflow in a multi-page application](./images/mpa.png)
 
