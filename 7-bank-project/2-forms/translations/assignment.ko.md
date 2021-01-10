@@ -4,7 +4,7 @@
 
 새 `styles.css` 파일을 만들고 현재 `index.html` 파일에 링크를 추가해봅니다. 방금 만든 CSS 파일에서 *로그인* 및 *대시 보드* 페이지가 멋지고 깔끔하게 보이도록 스타일을 추가합니다. 앱에 자체 브랜딩을 제공하기 위해 색상 테마를 만들어봅니다.
 
-> Tip: you can modify the HTML and add new elements and classes if needed.
+> 팁 : HTML을 수정하고 필요한 경우 새 요소와 클래스를 추가 할 수 있습니다.
 
 ## 평가 기준
 
