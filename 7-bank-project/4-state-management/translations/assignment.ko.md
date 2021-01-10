@@ -8,12 +8,12 @@
 - HTML 템플릿으로 새 페이지를 만들거나 JavaScript를 사용하여 대시 보드 페이지를 벗어나지 않고 대화 상자 HTML을 표시하거나 숨깁니다(해당 항목에 대해 [`hidden`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden) 속성 또는 CSS 클래스를 사용할 수 있음).
 - 대화 상자에 대한 [키보드 및 화면 판독기 접근성](https://developer.paciellogroup.com/blog/2018/06/the-current-state-of-modal-dialog-accessibility/)을 처리해야합니다.
 - 입력 데이터 수신을 위한 HTML 양식 구현
-- Create JSON data from the form data and send it to the API
-- Update the dashboard page with the new data
+- 양식 데이터에서 JSON 데이터를 만들어 API로 보냅니다.
+- 새 데이터로 대시 보드 페이지 업데이트
 
-Look at the [server API specifications](../api/README.md) to see which API you need to call and what is the expected JSON format.
+호출해야하는 API와 예상되는 JSON 형식을 확인하려면 [서버 API 사양](../api/README.md) 을 살펴보세요.
 
-Here's an example result after completing the assignment:
+다음은 과제를 완료 한 후의 예시 결과입니다.
 
 ![Screenshot showing an example ](./images/dialog.png)
 
