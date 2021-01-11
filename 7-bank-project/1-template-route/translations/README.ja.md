@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/41)
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/41?loc=ja)
 
 ### イントロダクション
 
@@ -293,7 +293,7 @@ updateRoute();
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/42)
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/42?loc=ja)
 
 ## 復習と自己学習
 

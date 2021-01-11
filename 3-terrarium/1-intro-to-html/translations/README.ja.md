@@ -3,9 +3,9 @@
 ![Introduction to HTML](images/webdev101-html.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## レクチャー前クイズ
+## レッスン前の小テスト
 
-[レクチャー前クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15)
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15?loc=ja)
 
 ### イントロダクション
 
@@ -215,9 +215,9 @@ HTML では、.html ファイルにタグを追加して Web ページの要素�
 
 HTMLに はまだ遊んで楽しいワイルドな「古い」タグがいくつかありますが、[これらのタグ](https://developer.mozilla.org/ja/docs/Web/HTML/Element#Obsolete_and_deprecated_elements)のような非推奨のタグをマークアップに使うべきではありません。それでも、古い `<marquee>` タグを使って h1 タイトルを水平方向にスクロールさせることはできますか？(もしそうする場合は、後から削除することを忘れないでください)
 
-## レクチャー後クイズ
+## レッスン後の小テスト
 
-[レクチャー後クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16)
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16?loc=ja)
 
 ## 復習と自己学習
 

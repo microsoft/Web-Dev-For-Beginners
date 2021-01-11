@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45)
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45?loc=ja)
 
 ### イントロダクション
 
@@ -325,7 +325,7 @@ function updateElement(id, textOrNode) {
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46)
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46?loc=ja)
 
 ## 課題
 

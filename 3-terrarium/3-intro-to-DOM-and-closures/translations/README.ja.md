@@ -3,9 +3,9 @@
 ![DOM and a closure](images/webdev101-js.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## レクチャー前クイズ
+## レッスン前の小テスト
 
-[レクチャー前クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/19)
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/19?loc=ja)
 
 ### イントロダクション
 
@@ -199,9 +199,9 @@ function stopElementDrag() {
 
 新しいイベントハンドラをクロージャに追加して、植物にもっと何かをするようにします。例えば、植物をダブルクリックして前の方に持ってきます。創造力を発揮してください。
 
-## レクチャー後クイズ
+## レッスン後の小テスト
 
-[レクチャー後クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/20)
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/20?loc=ja)
 
 ## 復習と自己学習
 

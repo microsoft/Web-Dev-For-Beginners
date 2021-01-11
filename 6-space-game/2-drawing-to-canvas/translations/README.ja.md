@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/31)
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/31?loc=ja)
 
 ## Canvas
 
@@ -205,7 +205,7 @@ npm start
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/32)
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/32?loc=ja)
 
 ## 復習と自己学習
 
