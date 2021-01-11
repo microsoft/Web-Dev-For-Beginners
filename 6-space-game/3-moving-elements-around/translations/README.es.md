@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/33)
 
  ¡Los juegos no son muy divertidos hasta que tienes extraterrestres corriendo por la pantalla! En este juego haremos uso de dos tipos de movimientos:
 
@@ -376,7 +376,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
 🚀 Desafío: como puede ver, su código puede convertirse en 'código espagueti' cuando comienza a agregar funciones, variables y clases. ¿Cómo puede organizar mejor su código para que sea más legible? Esboce un sistema para organizar su código, incluso si todavía reside en un archivo.
 
-## [Post-lecture prueba](../.github/post-lecture-quiz.md)
+## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/34)
 
 ## Revisión y autoestudio
 
