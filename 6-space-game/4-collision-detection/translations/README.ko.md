@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/35?loc=ko)
 
 이 강의에서는 JavaScript로 레이저를 쏘는 방법을 배웁니다! 게임에 다음 두 가지를 추가합니다:
 
@@ -286,7 +286,7 @@ npm start
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](../.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/36?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

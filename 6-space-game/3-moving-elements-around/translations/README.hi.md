@@ -2,7 +2,7 @@
 
 ## प्री-लेक्चर क्विज
 
-[प्री-लेक्चर क्विज](.github/pre-lecture-quiz.hi.md)
+[प्री-लेक्चर क्विज](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/33?loc=hi)
 
 जब तक आप परदे पर चारों ओर एलियंस चल रहे हैं तब तक गेम्स बहुत मज़ेदार नहीं हैं! इस खेल में, हम दो प्रकार के आंदोलनों का उपयोग करेंगे:
 
@@ -376,7 +376,7 @@ class Enemy extends GameObject {
 
 ## व्याख्यान के बाद की क्विज
 
-[व्याख्यान के बाद की क्विज](.github/post-lecture-quiz.hi.md)
+[व्याख्यान के बाद की क्विज](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/34?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

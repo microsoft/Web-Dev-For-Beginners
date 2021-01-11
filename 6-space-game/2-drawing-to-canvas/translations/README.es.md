@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/31)
 
 ## El lienzo
 
@@ -203,7 +203,7 @@ Intente resolverlo usted mismo primero, pero si se atasca, eche un vistazo a una
 🚀 Desafío: ha aprendido a dibujar con la API Canvas enfocada en 2D; eche un vistazo a la [API WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) e intente dibujar un objeto 3D.
 
 
-## [Post-lecture prueba](../.github/post-lecture-quiz.md)
+## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/32)
 
 ## Revisión y autoestudio
 
