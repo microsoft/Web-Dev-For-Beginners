@@ -25,21 +25,21 @@ curl http://localhost:5000/api
 
 ## AJAX and data fetching
 
-Traditional web sites update the content displayed when the user click on a link or submit data using a form, by reloading the full HTML page. Every time new data needs to be loaded, the web server returns a brand new HTML page that needs to be processed by the browser, interrupting the current user action and limiting interactions during the reload. This workflow is also called a *Multi-Page Application* or *MPA*.
+Traditional web sites update the content displayed when the user selects a link or submits data using a form, by reloading the full HTML page. Every time new data needs to be loaded, the web server returns a brand new HTML page that needs to be processed by the browser, interrupting the current user action and limiting interactions during the reload. This workflow is also called a *Multi-Page Application* or *MPA*.
 
 ![Update workflow in a multi-page application](./images/mpa.png)
 
-When web applications started to become more complex and interactive, a new technique called [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) emerged. This technique allows web apps to send and retrieve data from a server asynchronously using JavaScript, without having to reload the HTML page, resulting in faster updates and smoother user interactions. When new data is received from the server, the current HTML page can also be updated with JavaScript using the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) API. Over time, this approach has evolved into what we is now called a [*Single-Page Application* or *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+When web applications started to become more complex and interactive, a new technique called [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) emerged. This technique allows web apps to send and retrieve data from a server asynchronously using JavaScript, without having to reload the HTML page, resulting in faster updates and smoother user interactions. When new data is received from the server, the current HTML page can also be updated with JavaScript using the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) API. Over time, this approach has evolved into what is now called a [*Single-Page Application* or *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
 
 ![Update workflow in a single-page application](./images/spa.png)
 
-When AJAX was first introduced, the only API available to fetch data asynchronously was [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). But modern browsers now also implement the more convenient and powerful [`Fetch` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), which use promises and is better suited to manipulate JSON data.
+When AJAX was first introduced, the only API available to fetch data asynchronously was [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). But modern browsers now also implement the more convenient and powerful [`Fetch` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), which uses promises and is better suited to manipulate JSON data.
 
-> While all modern browsers supports the `Fetch API`, if you want your web application to work on legacy or old browsers it's always a good idea to check the [compatibility table on caniuse.com](https://caniuse.com/fetch) first.
+> While all modern browsers support the `Fetch API`, if you want your web application to work on legacy or old browsers it's always a good idea to check the [compatibility table on caniuse.com](https://caniuse.com/fetch) first.
 
 ### Task
 
-In [the previous lesson](../2-forms/README.md) we implented the registration form to create an account. We'll now add code to login using an existing account, and fetch its data. Open the `app.js` file and add a new `login` function:
+In [the previous lesson](../2-forms/README.md) we implemented the registration form to create an account. We'll now add code to login using an existing account, and fetch its data. Open the `app.js` file and add a new `login` function:
 
 ```js
 async function login() {
@@ -63,9 +63,9 @@ async function getAccount(user) {
 }
 ```
 
-We use the `fetch` API to request the data asynchronously from the server, but this time we don't need any extra parameters other than the URL to call, as we're only querying data. By default, `fetch` create a [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) HTTP request, which is what we are seeking here.
+We use the `fetch` API to request the data asynchronously from the server, but this time we don't need any extra parameters other than the URL to call, as we're only querying data. By default, `fetch` creates a [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) HTTP request, which is what we are seeking here.
 
-✅ `encodeURIComponent()` is a function that escapes special characters for URL. What possible issues could we possibly have if we do not call this function and use directly the `user` value in the URL?
+✅ `encodeURIComponent()` is a function that escapes special characters for URL. What issues could we possibly have if we do not call this function and use directly the `user` value in the URL?
 
 Let's now update our `login` function to use `getAccount`:
 
@@ -84,9 +84,9 @@ async function login() {
 }
 ```
 
-First, as `getAccount` is an asynchronous function we need to match it with the `await` keyword to wait for the server result. As with any server request, we also have to deal with errors cases. For now we'll only add a log message to display the error, and come back to it layer.
+First, as `getAccount` is an asynchronous function we need to match it with the `await` keyword to wait for the server result. As with any server request, we also have to deal with error cases. For now we'll only add a log message to display the error, and come back to it later.
 
-Then we have to store the data somewhere so we can later use it to display the dashboard informations. Since we the `account` variable does not exist yet, we'll create a global variable for it at the top of our file:
+Then we have to store the data somewhere so we can later use it to display the dashboard informations. Since the `account` variable does not exist yet, we'll create a global variable for it at the top of our file:
 
 ```js
 let account = null;
@@ -94,7 +94,7 @@ let account = null;
 
 After the user data is saved into a variable we can navigate from the *login* page to the *dashboard* using the `navigate()` function we already have.
 
-Finally, we need to call our `login` function when the login form is submitted by modifying the HTML:
+Finally, we need to call our `login` function when the login form is submitted, by modifying the HTML:
 
 ```html
 <form id="loginForm" action="javascript:login()">
@@ -109,17 +109,17 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ Did you know that by default, you can only call server APIs from the *same domain and port* than the web page you are viewing? This is security mechanism enforced by browsers. But wait, our web app is running on `localhost:3000` whereas the server API is running on ` localhost:5000`, why does it work? By using a technique called [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) it is possible to perform cross-origin HTTP requests is the server add specials headers to the response, allowing exceptions for specific domains.
+✅ Did you know that by default, you can only call server APIs from the *same domain and port* than the web page you are viewing? This is security mechanism enforced by browsers. But wait, our web app is running on `localhost:3000` whereas the server API is running on ` localhost:5000`, why does it work? By using a technique called [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), it is possible to perform cross-origin HTTP requests if the server adds special headers to the response, allowing exceptions for specific domains.
 
 ## Update HTML to display data
 
-Now that we have the user data, we have to update the existing HTML to display it. We already know how to retrieve element from the DOM using for example `document.getElementById()`. After you have a base element, here are some APIs you can use to modify it or add child elements to it:
+Now that we have the user data, we have to update the existing HTML to display it. We already know how to retrieve an element from the DOM using for example `document.getElementById()`. After you have a base element, here are some APIs you can use to modify it or add child elements to it:
 
-- Using the [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) property you can change the text of an element. Note that changing this values removes all the element's children (if there's any) and replace it with the text provided. As such, it's also an efficient method to remove all children of a given element by assigning an empty string `''` to it.
+- Using the [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) property you can change the text of an element. Note that changing this value removes all the element's children (if there's any) and replaces it with the text provided. As such, it's also an efficient method to remove all children of a given element by assigning an empty string `''` to it.
 
 - Using [`document.createElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) along with the [`append()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append) method you can create and attach one or more new child elements.
 
-✅ Using the [`innerHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) property of an element it's also possible to change its HTML contents, but this one should avoided as it's vulnerable to [cross-site scripting (XSS)](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting) attacks.
+✅ Using the [`innerHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) property of an element it's also possible to change its HTML contents, but this one should be avoided as it's vulnerable to [cross-site scripting (XSS)](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting) attacks.
 
 ### Task
 
@@ -134,7 +134,7 @@ Let's add a placeholder element in the login form where we can display an error 
 ...
 ```
 
-This `<div>` element is empty, meaning that nothing we be displayed on the screen until we add some content to it. We also give it an `id` so we can retrieve it easily with JavaScript.
+This `<div>` element is empty, meaning that nothing will be displayed on the screen until we add some content to it. We also give it an `id` so we can retrieve it easily with JavaScript.
 
 Go back to the `app.js` file and create a new helper function `updateElement`:
 
@@ -145,7 +145,7 @@ function updateElement(id, text) {
 }
 ```
 
-This one is quite straightforward, given an element *id* and *text* it will update the text content of the DOM element with the matching `id`. Let's use this method in place of the previous error message in the `login` function:
+This one is quite straightforward: given an element *id* and *text*, it will update the text content of the DOM element with the matching `id`. Let's use this method in place of the previous error message in the `login` function:
 
 ```js
 if (data.error) {
@@ -167,7 +167,7 @@ Implement the same behavior for the `register` function errors (don't forget to 
 
 ## Display information on the dashboard
 
-Using the same techniques we've just seen we'll also take care of displaying the account information on the the dashboard page.
+Using the same techniques we've just seen, we'll also take care of displaying the account information on the dashboard page.
 
 This is what an account object received from the server looks like:
 
@@ -242,11 +242,11 @@ const routes = {
 };
 ```
 
-With this change, everytime the dashboard page is displayed then the function `updateDashboard()` is called. After a login, you should then be able to see the account balance, currency and description.
+With this change, every time the dashboard page is displayed, the function `updateDashboard()` is called. After a login, you should then be able to see the account balance, currency and description.
 
 ## Create table rows dynamically with HTML templates
 
-In the [first lesson](../1-template-route/README.md) we used HTML template along with the [`appendChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) method to implement the navigation in our app. Templates can also be smaller and used to dynamically populate repetitive parts of a page.
+In the [first lesson](../1-template-route/README.md) we used HTML templates along with the [`appendChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) method to implement the navigation in our app. Templates can also be smaller and used to dynamically populate repetitive parts of a page.
 
 We'll use a similar approach to display the list of transactions in the HTML table.
 
@@ -286,7 +286,7 @@ function createTransactionRow(transaction) {
 }
 ```
 
-This function does exactly what its names implies: using the template we created earlier, it create a new table row and fill in its contents using transaction data. We'll use this to in our `updateDashboard()` function to populate the table:
+This function does exactly what its names implies: using the template we created earlier, it creates a new table row and fills in its contents using transaction data. We'll use this in our `updateDashboard()` function to populate the table:
 
 ```js
 const transactionsRows = document.createDocumentFragment();
@@ -297,7 +297,7 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-We use here the method [`document.createDocumentFragment()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment) that create a new DOM fragment on which we can work, before finally attaching it to our HTML table.
+Here we use the method [`document.createDocumentFragment()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment) that creates a new DOM fragment on which we can work, before finally attaching it to our HTML table.
 
 There's still one more thing we have to do before this code can work, as our `updateElement()` function currently supports text content only. Let's change its code a bit:
 
