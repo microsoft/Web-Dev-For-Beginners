@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45?loc=ko)
 
 ### 소개
 
@@ -319,7 +319,7 @@ function updateElement(id, textOrNode) {
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](../.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46?loc=ko)
 
 ## 과제
 

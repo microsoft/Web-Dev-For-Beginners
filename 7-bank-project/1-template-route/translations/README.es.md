@@ -1,8 +1,6 @@
 # Plantillas HTML y rutas en una aplicación web
 
-<!-- ![video](video-url) -->
-
-## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/41)
 
 ### Introducción
 
@@ -279,7 +277,7 @@ Ahora intente utilizar los botones de avance y retroceso de sus navegadores y co
 
 Agregue una nueva plantilla y ruta para una tercera página que muestre los créditos de esta aplicación.
 
-## [Post-lecture prueba](../.github/post-lecture-quiz.md)
+## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/42)
 
 ## Revisión y autoestudio
 
