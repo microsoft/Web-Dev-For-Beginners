@@ -4,7 +4,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/29)
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/29?loc=ja)
 
 ### ゲーム開発における継承とコンポジション
 
@@ -213,7 +213,7 @@ pub-sub パターンがどのようにゲームを盛り上げるかを考えて
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30)
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30?loc=ja)
 
 ## 復習と自己学習
 

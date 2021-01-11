@@ -3,9 +3,9 @@
 ![Introduction to CSS](images/webdev101-css.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## レクチャー前クイズ
+## レッスン前の小テスト
 
-[レクチャー前クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/17)
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/17?loc=ja)
 
 ### イントロダクション
 
@@ -249,11 +249,11 @@ HTML マークアップの各植物には、id とクラスの組み合わせが
 
 ![finished terrarium](./images/terrarium-final.png)
 
-レクチャー後クイズを完成させるには、この Learn モジュールを通ってください: [HTML アプリを CSS でスタイルを整える](https://docs.microsoft.com/ja-jp/learn/modules/build-simple-website/4-css-basics)
+レッスン後の小テストを完成させるには、この Learn モジュールを通ってください: [HTML アプリを CSS でスタイルを整える](https://docs.microsoft.com/ja-jp/learn/modules/build-simple-website/4-css-basics)
 
-## レクチャー後クイズ
+## レッスン後の小テスト
 
-[レクチャー後クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/18)
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/18?loc=ja)
 
 ## 復習と自己学習
 

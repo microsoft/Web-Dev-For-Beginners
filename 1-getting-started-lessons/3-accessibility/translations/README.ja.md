@@ -3,8 +3,8 @@
 ![All About Accessibility](webdev101-a11y.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## レクチャー前クイズ
-[レクチャー前クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5?loc=ja)
+## レッスン前の小テスト
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5?loc=ja)
 
 > Web の力は、その普遍性にあります。障害の有無に関わらず、誰もがアクセスできることが重要です。
 >
@@ -215,8 +215,8 @@ CSS は、ページ上のあらゆる要素の外観を完全に制御するこ�
 </html>
 ```
 
-## レクチャー後クイズ
-[レクチャー後クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6?loc=ja)
+## レッスン後の小テスト
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6?loc=ja)
 
 ## 復習と自己学習
 

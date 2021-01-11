@@ -1,8 +1,8 @@
 # イベントを使ったゲームの作成
 
-## レクチャー前クイズ
+## レッスン前の小テスト
 
-[レクチャー前クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/21)
+[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/21?loc=ja)
 
 ## イベント駆動型プログラミング
 
@@ -324,9 +324,9 @@ typedValueElement.addEventListener('input', () => {
 - 成功メッセージを含むモーダルダイアログボックスを表示します
 - [localStorage](https://developer.mozilla.org/ja/docs/Web/API/Window/localStorage) を使ってハイスコアを保存します
 
-## レクチャー後クイズ
+## レッスン後の小テスト
 
-[レクチャー後クイズ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/22)
+[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/22?loc=ja)
 
 ## 復習と自己学習
 

@@ -23,7 +23,7 @@
 
 ## 레슨
 
-[이벤트 기반 프로그래밍을 사용하여 타이핑 게임 만들기](./project/README.md)
+[이벤트 기반 프로그래밍을 사용하여 타이핑 게임 만들기](../typing-game/translations/README.ko.md)
 
 ## 크레딧
 
