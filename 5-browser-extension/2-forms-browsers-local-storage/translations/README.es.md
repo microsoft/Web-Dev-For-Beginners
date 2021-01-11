@@ -1,6 +1,6 @@
 # Proyecto de extensión del navegador, parte 2: llamar a una API, usar almacenamiento local
 
-## [Pre-lecture prueba](.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/25)
 
 ### Introducción:
 
@@ -202,7 +202,7 @@ Esta es una gran función. ¿Que está pasando aqui?
 🚀 Desafío: hemos discutido varios tipos de API hasta ahora en estas lecciones. Elija una API web e investigue en profundidad lo que ofrece. Por ejemplo, eche un vistazo a las API disponibles en los navegadores, como la [API HTML de arrastrar y soltar](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). En tu opinión, ¿qué hace que una API sea excelente?
 
 
-## [Post-lecture prueba](.github/post-lecture-quiz.md)
+## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/26)
 
 ## Revisión y autoestudio
 

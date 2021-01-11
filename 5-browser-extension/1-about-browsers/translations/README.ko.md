@@ -5,7 +5,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
+[Pre-lecture quiz][Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/23?loc=ko)
 
 ### 소개
 
@@ -149,7 +149,7 @@ npm install
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](../.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/24?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 
