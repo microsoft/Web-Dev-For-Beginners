@@ -1,6 +1,6 @@
-# Projek Terrarium Bahagian 1: Pengenalan HTML
+# Projek Terrarium Bahagian 1: Pengenalan Kepada HTML
 
-![Pengenalan HTML](images/webdev101-html.png)
+![Pengenalan Kepada HTML](images/webdev101-html.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
