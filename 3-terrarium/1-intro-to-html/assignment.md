@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Imagine you are designing, or redesigning, your personal web site. Create a graphical markup of your site, and then write down the HTML markup you would use to build out the various elements of the site. You can do this on paper, and scan it, or use software of your choice, just make sure to hand-code the HTML markup.
+Imagine you are designing, or redesigning, your personal web site. Create a graphical mockup of your site, and then write down the HTML markup you would use to build out the various elements of the site. You can do this on paper, and scan it, or use software of your choice, just make sure to hand-code the HTML markup.
 
 ## Rubric
 
