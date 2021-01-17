@@ -61,7 +61,7 @@ Styles are inherited from an ancestor style to a descendent, such that nested el
 
 Set the body's font to a given font, and check to see a nested element's font:
 
-```
+```CSS
 body {
 	font-family: helvetica, arial, sans-serif;
 }
@@ -81,7 +81,7 @@ Open your browser's console to the 'Elements' tab and observe the H1's font. It 
 
 So far, your `style.css` file has only a few tags styled, and the app looks pretty strange:
 
-```
+```CSS
 body {
 	font-family: helvetica, arial, sans-serif;
 }
@@ -98,7 +98,7 @@ This way of styling a tag gives you control over unique elements, but you need t
 
 Add some style to layout the left and right containers. Since there is only one left container and only one right container, they are given ids in the markup. To style them, use `#`:
 
-```
+```CSS
 #left-container {
 	background-color: #eee;
 	width: 15%;
@@ -142,7 +142,7 @@ Notice that each plant in the HTML markup has a combination of ids and classes. 
 
 Add the following to your `style.css` file:
 
-```css
+```CSS
 .plant-holder {
 	position: relative;
 	height: 13%;
@@ -189,7 +189,7 @@ Now you will use what you learned to build the terrarium itself, all using CSS!
 
 First, style the `.terrarium` div children as a rounded rectangle using CSS:
 
-```css
+```CSS
 .jar-walls {
 	height: 80%;
 	width: 60%;
