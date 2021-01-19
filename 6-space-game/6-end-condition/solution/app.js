@@ -65,8 +65,9 @@ class Hero extends GameObject {
 		let id = setInterval(() => {
 			if (this.cooldown > 0) {
 				this.cooldown -= 100;
-			} else {
-				clearInterval(id);
+				if(this.cooldown === 0) {
+					clearInterval(id);
+				}
 			}
 		}, 200);
 	}
