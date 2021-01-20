@@ -13,11 +13,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -26,15 +26,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Siti Web",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Hardware",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Software per video giochi",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -43,15 +43,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Hardware, tipo un Raspberry Pi",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Lo strumento DevTools nel browser",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Documentazione del sistema operativo",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -66,15 +66,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Codice Macchina",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "JavaScript",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Bash",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -83,11 +83,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -96,15 +96,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Evidenziazione della Sintassi",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Debugging",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Formattazione del Codice",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -119,15 +119,15 @@
 						"answerOptions": [
 							{
 								"answerText": "git create",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "git start",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "git init",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -136,15 +136,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Esegue una azione di commit per il proprio codice",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Aggiunge i propri file alla staging area per la tracciatura",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Aggiunge i propri file a GitHub",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -153,15 +153,15 @@
 						"answerOptions": [
 							{
 								"answerText": "digitare git --version",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "digitare git --installed",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "digitare git --init",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -176,15 +176,15 @@
 						"answerOptions": [
 							{
 								"answerText": "GitHub",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Una Pull Request",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Un ramo di funzionalità",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -193,15 +193,15 @@
 						"answerOptions": [
 							{
 								"answerText": "git fetch",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "git pull",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "git commits -r",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -210,15 +210,15 @@
 						"answerOptions": [
 							{
 								"answerText": "git switch [branch-name]",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "git checkout [branch-name]",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "git load [branch-name]",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -233,15 +233,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Lighthouse",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Deckhouse",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Cleanhouse",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -250,11 +250,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -263,11 +263,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -282,11 +282,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -295,15 +295,15 @@
 						"answerOptions": [
 							{
 								"answerText": "daltonismo",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "impedimenti alla vista",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "entrambi i precedenti",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -312,11 +312,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -331,11 +331,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -344,15 +344,15 @@
 						"answerOptions": [
 							{
 								"answerText": "concatenazione",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "aggiunta",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "splicing",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -361,11 +361,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -380,15 +380,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Le costanti devono essere inizializzate",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Le costanti possono essere alterate",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Le costanti possono essere riassegnate",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -397,15 +397,15 @@
 						"answerOptions": [
 							{
 								"answerText": "bigint",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "boolean",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "star",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -414,11 +414,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -433,15 +433,15 @@
 						"answerOptions": [
 							{
 								"answerText": "E' qualcosa che si dichiara nella definizione della funzione",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "E' qualcosa che si passa in una funzione quando viene invocata",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "E' qualcosa che si con persone che si conoscono",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -450,11 +450,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -463,15 +463,15 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "vero, ma dovrebbe essere un nome descrittivo",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -486,11 +486,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -499,15 +499,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Imposta un valore corretto",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Fornisce un valore di partenza per un parametro in modo che il proprio codice funzioni comunque se non viene passato ad esso un argomento",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Non ha utilità",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -516,15 +516,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Creare funzioni pesanti",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Omettere la parola chiave function",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Creare una funzione anonima",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -539,15 +539,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Uguaglianza",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Stretta uguaglianza",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Assegnazione",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -556,15 +556,15 @@
 						"answerOptions": [
 							{
 								"answerText": "boolean",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "null",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "string",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -573,15 +573,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Logico Non",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Importante",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Uguale",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -596,15 +596,15 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "null",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -613,15 +613,15 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "null",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -630,15 +630,15 @@
 						"answerOptions": [
 							{
 								"answerText": "a | b",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "a || b",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "a or b",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -653,15 +653,15 @@
 						"answerOptions": [
 							{
 								"answerText": "parentesi quadre []",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "indice",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "parentesi graffe {}",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -670,15 +670,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Il metodo 'len(array)'",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "La proprietà size dell'array",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "The proprietà length dell'array",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -687,15 +687,15 @@
 						"answerOptions": [
 							{
 								"answerText": "0",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "1",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "2",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -710,15 +710,15 @@
 						"answerOptions": [
 							{
 								"answerText": "condizione",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "contatore",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "espressione-di-iterazione",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -727,15 +727,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Un ciclo for-loop ha un contatore e una espressione di iterazione, mentre while ha solo una condizione",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Un ciclo while ha un contatore e una espressione di iterazione mentre un ciclo for-loop ha solo una condizione",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Sono la stessa cosa, solo un alias l'uno dell'altro",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -744,11 +744,11 @@
 						"answerOptions": [
 							{
 								"answerText": "5",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "4",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -763,11 +763,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -776,11 +776,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -789,15 +789,15 @@
 						"answerOptions": [
 							{
 								"answerText": "leggibilità del codice",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "lettori di schermo",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "manutenzione",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -812,11 +812,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -825,15 +825,15 @@
 						"answerOptions": [
 							{
 								"answerText": "il tag title",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "metadati",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "tutto quanto sopra",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -842,15 +842,15 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso, ma sono stati deprecati per una buona ragione",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -865,11 +865,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -878,11 +878,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -891,11 +891,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -910,11 +910,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -923,15 +923,15 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso, ma se si vuole che abbia un bell'aspetto probabilmente servirà CSS",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -940,15 +940,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Elements",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Styles",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Network",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -963,11 +963,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -976,11 +976,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -989,11 +989,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1008,11 +1008,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1021,15 +1021,15 @@
 						"answerOptions": [
 							{
 								"answerText": "scrivere funzioni all'interno di funzioni",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "includere il DOM",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "chiudere i blocchi di script",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1038,15 +1038,15 @@
 						"answerOptions": [
 							{
 								"answerText": "array",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "ambito",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "funzione",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1061,19 +1061,19 @@
 						"answerOptions": [
 							{
 								"answerText": "fa click su un bottone",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "modifica un valore",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "interagisce con la pagina",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "uno qualsiasi dei precedenti",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1082,15 +1082,15 @@
 						"answerOptions": [
 							{
 								"answerText": "sempre",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "in uno specifico ordine",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "da sinistra a destra",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1099,15 +1099,15 @@
 						"answerOptions": [
 							{
 								"answerText": "addEventListener",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "addListener",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "addEvent",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1122,11 +1122,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1135,19 +1135,19 @@
 						"answerOptions": [
 							{
 								"answerText": "click_event",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "select_event",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "input_event",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "tutti i precedenti",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1156,11 +1156,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1175,15 +1175,15 @@
 						"answerOptions": [
 							{
 								"answerText": "WalMart",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Lo store delle estensioni del browser",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "L'App store",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1192,15 +1192,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Node Package Manager",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Netscape Primary Mix",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Natural Processing Manager",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1209,11 +1209,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1228,15 +1228,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Tom Barnard-Loft",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Tim Berners-Lee",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Trish Berth-Pool",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1245,15 +1245,15 @@
 						"answerOptions": [
 							{
 								"answerText": "WorldWideWeb",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Mozilla",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Netscape",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1262,11 +1262,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1281,15 +1281,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Application Programming Interfaces",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "A Programming Inference",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Anti Proven Intentions",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1298,15 +1298,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Un'altra risorsa connessa al Web",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Un database",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Uno dei precedenti",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1315,11 +1315,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1334,11 +1334,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1347,11 +1347,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1360,15 +1360,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Representational State Transfer",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Returning State Tasks",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Rendering State To Browser",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1383,15 +1383,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Usando gli strumenti del browser",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Usando un pacchetto software separato",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Manualmente",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1400,15 +1400,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Come velocemente si carica",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Quanto velocemente viene eseguito il codice su di esso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Entrambe le risposte precedenti",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1417,15 +1417,15 @@
 						"answerOptions": [
 							{
 								"answerText": "diminuito",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "aumentato",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "rimasto lo stesso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1440,11 +1440,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1453,11 +1453,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1466,19 +1466,19 @@
 						"answerOptions": [
 							{
 								"answerText": "Attraversamenti del DOM",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Ottimizzazioni JavaScript",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Gestione risorse",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Tutto quanto sopra",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -1493,11 +1493,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1506,11 +1506,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1519,11 +1519,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1538,11 +1538,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1551,11 +1551,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1564,15 +1564,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Publish/Subscribe",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Print/Staple",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Publish/Sanitize",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1587,11 +1587,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1600,11 +1600,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1613,11 +1613,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -1632,11 +1632,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1645,11 +1645,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1658,15 +1658,15 @@
 						"answerOptions": [
 							{
 								"answerText": "paintImage()",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "drawImage()",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "draw()",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1681,11 +1681,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1694,11 +1694,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1707,15 +1707,15 @@
 						"answerOptions": [
 							{
 								"answerText": "setInterval()",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "setTimeout()",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "sleep()",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1730,11 +1730,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1743,15 +1743,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Una funzione che assicura che il gioco possa essere riavviato",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Una funzione che decide la velocità di esecuzione del gioco",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Una funzione che viene invocata a intervalli regolari e disegna quello che dovrebbe vedere l'utente",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1760,15 +1760,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Si è verificata un'interazione con l'utente",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Qualcosa si è mosso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "E' passato del tempo",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1783,11 +1783,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1796,15 +1796,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Chiamare il garbage collector",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Contrassegnarlo come morto, disegnare solo oggetti non morti la prossima volta che si disegna lo schermo",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Posizionare l'elemento su una coordinata negativa",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1813,15 +1813,15 @@
 						"answerOptions": [
 							{
 								"answerText": "fare in modo che un elemento visivo risponda a un evento chiave",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "creare gif animate",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "fare esplodere i nemici a intervalli",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1836,15 +1836,15 @@
 						"answerOptions": [
 							{
 								"answerText": "cerchi e se si intersecano",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "rettangoli e se si intersecano",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "distanze tra due punti",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1853,11 +1853,11 @@
 						"answerOptions": [
 							{
 								"answerText": "Rende il gioco più difficile visto che non è possibile azionare ripetutamente un laser per distruggere nemici",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "JavaScript può produrre solo un certo numero di eventi in un intervallo temporale, quindi occorre limitarli",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1866,15 +1866,15 @@
 						"answerOptions": [
 							{
 								"answerText": "sono scritte in maiuscolo",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "hanno specifici nomi",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "sono scritte con la notazione kebab-case come-questa",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1889,15 +1889,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Si piazza il testo all'interno di un elemento div o span",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Si chiama drawText() sull'elemento Canvas",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Si chiama fillText() sull'oggetto nel contesto",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1906,11 +1906,11 @@
 						"answerOptions": [
 							{
 								"answerText": "Per mostrare quanti danni si possono subire",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "In modo che il gioco non finisca subito, ma si abbiano n numero di possibilità prima che il gioco finisca",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1919,15 +1919,15 @@
 						"answerOptions": [
 							{
 								"answerText": "fillColor",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "fillStyle",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "textAlign",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1942,11 +1942,11 @@
 						"answerOptions": [
 							{
 								"answerText": "un numero di navi",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "un sistema a punti",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -1955,15 +1955,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Si usa Flexbox",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Si fa in modo che il testo possa essere disegnato alla coordinata x della larghezza/2 della finestra del client",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Si imposta la proprietà textAlign al valore che rappresenta il centro dell'oggetto nel contesto",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -1972,15 +1972,15 @@
 						"answerOptions": [
 							{
 								"answerText": "this.life-",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "this.life--",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "this.life++",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -1995,11 +1995,11 @@
 						"answerOptions": [
 							{
 								"answerText": "quando un giocatore vince o perde",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "in qualsiasi momento",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -2008,15 +2008,15 @@
 						"answerOptions": [
 							{
 								"answerText": "quando una navicella nemica viene distrutta",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "quando la navicella dell'eroe viene distrutta",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "quando vengono raccolti punti",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -2025,15 +2025,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Incrementare l'ammontare di punti necessari per completare un dato livello",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Aggiungere ulteriori giocatori al gioco",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Aggiungere più grafica al gioco",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -2048,15 +2048,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Visualizzare un messaggio adatto",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Abbandonare il gioco",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Visualizzare un messaggio adatto, offrire al giocatore la possibilità di riavviare, e mostrare quale tasto premere per quell'azione",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2065,11 +2065,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2078,15 +2078,15 @@
 						"answerOptions": [
 							{
 								"answerText": "pulire i listeners",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "pulire lo schermo",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "chiudere la finestra del gioco",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -2101,11 +2101,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2114,11 +2114,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -2127,15 +2127,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Un database locale",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Un oggetto JavaScript",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Un server con una API JSON",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -2150,11 +2150,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2163,15 +2163,15 @@
 						"answerOptions": [
 							{
 								"answerText": "window.location.pathname",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "window.location.origin",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "entrambe",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2180,15 +2180,15 @@
 						"answerOptions": [
 							{
 								"answerText": "pushstate",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "popstate",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "navigate",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -2203,11 +2203,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -2216,11 +2216,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2229,11 +2229,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -2248,11 +2248,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2261,15 +2261,15 @@
 						"answerOptions": [
 							{
 								"answerText": "usando l'attributo action",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "usando l'attributo method",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "entrambi",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -2278,15 +2278,15 @@
 						"answerOptions": [
 							{
 								"answerText": "max",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "maxlength",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "pattern",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -2301,11 +2301,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -2314,15 +2314,15 @@
 						"answerOptions": [
 							{
 								"answerText": "HTML",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "XML",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "JSON",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2331,11 +2331,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -2350,11 +2350,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2363,15 +2363,15 @@
 						"answerOptions": [
 							{
 								"answerText": "perché l'uso di caratteri speciali può rendere brutta l'interfaccia utente.",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "perché può contenere parole non sensate o offensive.",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "perché può essere utilizzato come vettore di attacco per eseguire script dannosi.",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2380,15 +2380,15 @@
 						"answerOptions": [
 							{
 								"answerText": "request()",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "fetch()",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "ajax()",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					}
@@ -2403,15 +2403,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Un oggetto definito come costante",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Un oggetto che può essere modificato dopo che è stato creato",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							},
 							{
 								"answerText": "Una copia di un oggetto esistente",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -2420,15 +2420,15 @@
 						"answerOptions": [
 							{
 								"answerText": "E' possibile tenere traccia di ogni punto nel quale lo stato viene aggiornato",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Facilita il debug del codice",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Entrambe le precedenti risposte",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2437,15 +2437,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Usando dei file",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Usando l'API localStorage del browser",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Su un database dietro a una API del server",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
@@ -2460,15 +2460,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Applicazione della legge e dell'ordine",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Registrazione dello stato dell'interfaccia utente nel tempo",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Mantenere pulito il flusso di dati della propria app e sincronizzare l'interfaccia utente con i dati",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2477,15 +2477,15 @@
 						"answerOptions": [
 							{
 								"answerText": "Cookie HTTP",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Memorizzazione locale e di sessione",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Entrambe le risposte precedenti",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					},
@@ -2494,11 +2494,11 @@
 						"answerOptions": [
 							{
 								"answerText": "vero",
-								"isCorrect": "falso"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "falso",
-								"isCorrect": "vero"
+								"isCorrect": "true"
 							}
 						]
 					}
