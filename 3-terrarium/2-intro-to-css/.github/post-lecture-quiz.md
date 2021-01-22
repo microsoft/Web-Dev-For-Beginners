@@ -2,7 +2,7 @@
 
 You will need to reference the following learn module to complete the quiz:
 
-[Work with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
+[Work with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-4621-cxa)
 
 1. You can write CSS directly in the head section of your HTML file
 

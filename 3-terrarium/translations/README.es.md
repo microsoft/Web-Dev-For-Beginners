@@ -24,4 +24,4 @@ Encuentre más información sobre eventos de punteros en los [documentos del W3C
 
 Siempre verifique las capacidades del navegador usando [CanIUse.com](https://caniuse.com/).
 
-Obtenga más información sobre cómo crear sitios para la Web y dispositivos móviles en [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=cxaall-4621-cxall).
+Obtenga más información sobre cómo crear sitios para la Web y dispositivos móviles en [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-4621-cxa).

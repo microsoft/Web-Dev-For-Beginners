@@ -223,7 +223,7 @@ HTML에는 여전히 재미있고 '오래된' 태그가 있지만, 마크업에�
 
 HTML은 웹을 오늘 날의 웹으로 구축하는 데 도움이 준 'tried and true' 빌딩 블록 시스템입니다. 오래된 태그와 새로운 태그를 연구하여 그 역사에 대해 조금 배우십시오. 일부는 더 이상 안 쓰고 일부는 새로 만들어진 이유를 알 수 있습니까? 앞으로 어떤 태그가 도입될까요?
 
-[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=cxaall-4621-cxall)에서 웹과 모바일용 사이트 제작에 대해 자세히 알아보세요.
+[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-4621-cxa)에서 웹과 모바일용 사이트 제작에 대해 자세히 알아보세요.
 
 
 ## 과제

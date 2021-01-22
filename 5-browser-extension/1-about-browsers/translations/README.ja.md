@@ -68,7 +68,7 @@
 - [スターターコード](../../start)。`start`フォルダをダウンロードしてください。このフォルダでコードを完成させることになります。
 - [NPM](https://www.npmjs.com) - NPM はパッケージ管理ツールです。ローカルにインストールすると、`package.json` ファイルに記載されているパッケージがインストールされ、Web アセットで使用されます。
 
-✅ この[優れた Learn モジュール](https://docs.microsoft.com/ja-jp/learn/modules/create-nodejs-project-dependencies/)では、パッケージ管理の詳細を学ぶことができます。
+✅ この[優れた Learn モジュール](https://docs.microsoft.com/ja-jp/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-4621-cxa)では、パッケージ管理の詳細を学ぶことができます。
 
 コードベースに目を通してみてください。
 

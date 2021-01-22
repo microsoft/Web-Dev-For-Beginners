@@ -68,7 +68,7 @@ API de CO2 Signal.
 - el [código de inicio](../inicio). Descargue la carpeta `start`; completará el código en esta carpeta.
 - [NPM](https://www.npmjs.com) - NPM es una herramienta de gestión de paquetes; instálelo localmente y los paquetes enumerados en su archivo `package.json` se instalarán para que los use su recurso web
 
-✅ Obtenga más información sobre la administración de paquetes en este [excelente módulo de aprendizaje](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/)
+✅ Obtenga más información sobre la administración de paquetes en este [excelente módulo de aprendizaje](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-4621-cxa)
 
 Tómate un minuto para revisar el código base:
 

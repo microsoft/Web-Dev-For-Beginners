@@ -299,7 +299,7 @@ Add a new template and route for a third page that shows the credits for this ap
 
 ## Review & Self Study
 
-Routing is one of the surprisingly tricky parts of web development, especially as the web moves from page refresh behaviors to Single Page Application page refreshes. Read a little about [how the Azure Static Web App service](https://docs.microsoft.com/en-us/azure/static-web-apps/routes) handles routing. Can you explain why some of the decisions described on that document are necessary?
+Routing is one of the surprisingly tricky parts of web development, especially as the web moves from page refresh behaviors to Single Page Application page refreshes. Read a little about [how the Azure Static Web App service](https://docs.microsoft.com/en-us/azure/static-web-apps/routes?WT.mc_id=academic-4621-cxa) handles routing. Can you explain why some of the decisions described on that document are necessary?
 
 ## Assignment
 

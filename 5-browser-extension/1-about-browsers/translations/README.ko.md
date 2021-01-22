@@ -68,7 +68,7 @@
 - [starter code](../start). `start` 폴더를 다운로드하세요; 이 폴더에서 코드를 완성하게됩니다.
 - [NPM](https://www.npmjs.com) - NPM은 패키지 관리 도구입니다. 로컬에 설치하고 `package.json` 파일에 나열된 패키지를 웹 어셋에서 사용하도록 설치합니다.
 
-✅ 이 [excellent Learn module](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/)에서 패키지 관리에 대해 자세히 알아보세요
+✅ 이 [excellent Learn module](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-4621-cxa)에서 패키지 관리에 대해 자세히 알아보세요
 
 잠시 시간을 내어 코드베이스를 보세요:
 

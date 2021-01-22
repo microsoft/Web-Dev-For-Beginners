@@ -252,6 +252,4 @@ CSS parece engañosamente sencillo, pero existen muchos desafíos cuando se trat
 
 **Asignación**: [Refactorización CSS](assignment.es.md)
 
-Complete los siguientes módulos de aprendizaje para completar el [cuestionario posterior a la conferencia](../.github/post-lecture-quiz.md):
-
-[Diseñe su aplicación HTML con CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
+[Diseñe su aplicación HTML con CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-4621-cxa)
