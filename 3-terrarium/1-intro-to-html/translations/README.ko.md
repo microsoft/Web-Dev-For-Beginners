@@ -5,7 +5,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15?loc=ko)
 
 ### 소개
 
@@ -217,7 +217,7 @@ HTML에는 여전히 재미있고 '오래된' 태그가 있지만, 마크업에�
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](../.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15?loc=it)
 
 ### Introduzione
 
@@ -218,7 +218,7 @@ Ci sono alcuni "vecchi" selvaggi tag in HTML con cui è ancora divertente giocar
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16?loc=it)
 
 ## Revisione e Auto Apprendimento
 

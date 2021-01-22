@@ -4,7 +4,7 @@
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11?loc=it)
 
 Prendere decisioni e controllare l'ordine in cui il proprio codice viene eseguito lo rende riutilizzabile e robusto. Questa sezione descrive la sintassi per il controllo del flusso di dati in JavaScript e il suo significato quando viene utilizzato con tipi di dato Booleani
 
@@ -25,14 +25,14 @@ Si impostano i booleani come vero o falso in questo modo:
 
 Gli operatori vengono utilizzati per valutare condizioni effettuando confronti che creeranno un valore Booleano. Di seguito è riportato un elenco di operatori utilizzati di frequente.
 
-| Simbolo | Descrizione | Esempio |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<` | **Minore di**: Confronta due valori e restituisce il tipo di dato booleano `true` se il valore sul lato sinistro è minore di quello del lato di destra | `5 < 6 // true` |
-| `<=` | **Minore di o uguale a**: Confronta due valori e restituisce il tipo di dato Booleano `true` se il valore sul lato sinistro è minore o uguale a quello di destra | `5 <= 6 // true` |
-| `>` | **Maggiore di**: Confronta due valori e restituisce il tipo di dato Booleano `true` se il valore sul lato sinistro è maggiore di quello del lato destro | `5 > 6 // false` |
-| `>=` | **Maggiore di o uguale a**: Confronta due valori e restituisce il tipo di dato Booleano `true` se il valore sul lato sinistro è maggiore o uguale a quello del  lato destro | `5 >= 6 // false` |
-| `===` | **Uguaglianza rigorosa**: Confronta due valori e restituisce il tipo di dato Booleano `true` se i valori a destra e a sinistra sono uguali E sono lo stesso tipo di dato. | `5 === 6 // false` |
-| `!==` | **Disuguaglianza**: Confronta due valori e restituisce il valore Booleano opposto di quello che restituirebbe un operatore di uguaglianza rigorosa | `5! == 6 // true` |
+| Simbolo | Descrizione                                                                                                                                                                 | Esempio            |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `<`     | **Minore di**: Confronta due valori e restituisce il tipo di dato booleano `true` se il valore sul lato sinistro è minore di quello del lato di destra                      | `5 < 6 // true`    |
+| `<=`    | **Minore di o uguale a**: Confronta due valori e restituisce il tipo di dato Booleano `true` se il valore sul lato sinistro è minore o uguale a quello di destra            | `5 <= 6 // true`   |
+| `>`     | **Maggiore di**: Confronta due valori e restituisce il tipo di dato Booleano `true` se il valore sul lato sinistro è maggiore di quello del lato destro                     | `5 > 6 // false`   |
+| `>=`    | **Maggiore di o uguale a**: Confronta due valori e restituisce il tipo di dato Booleano `true` se il valore sul lato sinistro è maggiore o uguale a quello del  lato destro | `5 >= 6 // false`  |
+| `===`   | **Uguaglianza rigorosa**: Confronta due valori e restituisce il tipo di dato Booleano `true` se i valori a destra e a sinistra sono uguali E sono lo stesso tipo di dato.   | `5 === 6 // false` |
+| `!==`   | **Disuguaglianza**: Confronta due valori e restituisce il valore Booleano opposto di quello che restituirebbe un operatore di uguaglianza rigorosa                          | `5! == 6 // true`  |
 
 ✅ Verificare le proprie conoscenze scrivendo alcuni confronti nella console del browser. I dati restituiti sorprendono?
 
@@ -82,11 +82,11 @@ else{
 
 Le decisioni potrebbero richiedere più di un confronto e possono essere combinate con operatori logici per produrre un valore Booleano.
 
-| Simbolo | Descrizione | Esempio |
-| ------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&` | **AND logico**: Confronta due espressioni Booleane. Restituisce vero **solo** se entrambe le parti sono vere | `(5 > 6) && (5 < 6) // Un lato è falso, l'altro è vero. Restituisce false` |
-| `\|\|` | **OR logico**: Confronta due espressioni Booleane. Restituisce vero se almeno una parte è vera | `(5 > 6) || (5 < 6) // Un lato è falso, l'altro è vero. Restituisce true` |
-| `!` | **NOT logico**: Restituisce il valore opposto di un'espressione Booleana | `!(5 > 6) // 5 non è maggiore di 6, ma "!" restituirà true` |
+| Simbolo | Descrizione                                                                                                  | Esempio                                                                    |
+| ------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| `&&`    | **AND logico**: Confronta due espressioni Booleane. Restituisce vero **solo** se entrambe le parti sono vere | `(5 > 6) && (5 < 6) // Un lato è falso, l'altro è vero. Restituisce false` |
+| `\|\|`  | **OR logico**: Confronta due espressioni Booleane. Restituisce vero se almeno una parte è vera               | `(5 > 6) || (5 < 6) // Un lato è falso, l'altro è vero. Restituisce true`  |
+| `!`     | **NOT logico**: Restituisce il valore opposto di un'espressione Booleana                                     | `!(5 > 6) // 5 non è maggiore di 6, ma "!" restituirà true`                |
 
 ## Condizioni e Decisioni con Operatori Logici
 
@@ -162,7 +162,7 @@ Creare un programma che viene scritto prima con operatori logici, quindi riscriv
 
 ---
 ## Quiz Post-Lezione
-[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12?loc=12)
 
 ## Revisione e Auto Apprendimento
 

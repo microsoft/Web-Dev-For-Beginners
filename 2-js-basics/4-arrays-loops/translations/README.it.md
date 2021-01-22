@@ -4,7 +4,7 @@
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13?loc=it)
 
 Questa lezione tratta le basi di javascript, il linguaggio che fornisce interattività sul web. In questa lezione, si conosceranno gli array e i cicli, usati per manipolare i dati.
 
@@ -113,7 +113,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Esistono altri modi per eseguire un ciclo sugli array. diversi dai cicli for e while. Ci sono [forEach](https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Statements/for...of) e [map](https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Riscrivere il ciclo sull'array usando una di queste tecniche.
 
 ## Quiz Post-Lezione
-[Quiz Post-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14)
+[Quiz Post-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14?loc=14)
 
 
 ## Revisione e Auto Apprendimento

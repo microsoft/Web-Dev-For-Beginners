@@ -2,7 +2,7 @@
 
 [![Métodos y funciones](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Métodos y funciones")
 
-## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/9)
 
 Cuando necesite su código para realizar una tarea, utilizará un método o una función. Analicemos las diferencias.
 
@@ -89,7 +89,7 @@ Cualquier parámetro con valores predeterminados debe estar al final de la lista
 🚀 Desafío:
 
 
-## [Post-lecture prueba](../.github/post-lecture-quiz.md)
+## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/10)
 
 ## Revisión y autoestudio
 
