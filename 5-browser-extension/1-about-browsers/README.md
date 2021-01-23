@@ -69,7 +69,7 @@ CO2 Signal's API.
 - the [starter code](../start). Download the `start` folder; you will be completing code in this folder.
 - [NPM](https://www.npmjs.com) - NPM is a package management tool; install it locally and the packages listed in you `package.json` file will be installed for use by your web asset
 
-✅ Learn more about package management in this [excellent Learn module](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-4621-cxa)
+✅ Learn more about package management in this [excellent Learn module](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)
 
 Take a minute to look through the codebase:
 

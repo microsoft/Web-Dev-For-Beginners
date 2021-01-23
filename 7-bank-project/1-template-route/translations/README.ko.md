@@ -288,7 +288,7 @@ updateRoute();
 
 ## 리뷰 & 자기주도 학습
 
-라우팅은 웹 개발의 놀랍고 까다로운 부분 중 하나입니다, 특히 웹의 페이지 새로고침 동작에서 단일 페이지 애플리케이션 페이지 새로고침으로 이동함에 따라 더욱 더 그렇습니다. [how the Azure Static Web App service](https://docs.microsoft.com/en-us/azure/static-web-apps/routes?WT.mc_id=academic-4621-cxa)의 라우터 제어에 대해 약간 봅니다. 그 문서에 기술된 몇 가지 결정이 필요한 이유를 설명할 수 있나요?
+라우팅은 웹 개발의 놀랍고 까다로운 부분 중 하나입니다, 특히 웹의 페이지 새로고침 동작에서 단일 페이지 애플리케이션 페이지 새로고침으로 이동함에 따라 더욱 더 그렇습니다. [how the Azure Static Web App service](https://docs.microsoft.com/en-us/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa)의 라우터 제어에 대해 약간 봅니다. 그 문서에 기술된 몇 가지 결정이 필요한 이유를 설명할 수 있나요?
 
 ## 과제
 

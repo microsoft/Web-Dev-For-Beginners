@@ -297,7 +297,7 @@ updateRoute();
 
 ## 復習と自己学習
 
-ルーティングは Web 開発の驚くほどトリッキーな部分の1つで、特に Web がページ更新の動作からシングルページアプリケーションのページ更新へと移行するにつれ、そのような部分が増えてきています。[Azure Static Web Apps プレビューでのルート](https://docs.microsoft.com/ja-jp/azure/static-web-apps/routes?WT.mc_id=academic-4621-cxa)がルーティングを扱うことについて少し読んでみてください。そのドキュメントに記載されているいくつかの決定が必要な理由を説明できますか？
+ルーティングは Web 開発の驚くほどトリッキーな部分の1つで、特に Web がページ更新の動作からシングルページアプリケーションのページ更新へと移行するにつれ、そのような部分が増えてきています。[Azure Static Web Apps プレビューでのルート](https://docs.microsoft.com/ja-jp/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa)がルーティングを扱うことについて少し読んでみてください。そのドキュメントに記載されているいくつかの決定が必要な理由を説明できますか？
 
 ## 課題
 

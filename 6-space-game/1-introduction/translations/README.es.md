@@ -211,6 +211,6 @@ A medida que las cosas se complican cuando tu juego crece, este patrón permanec
 
 ## Revisión y autoestudio
 
-Obtenga más información sobre Pub / Sub al [leer sobre él](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-4621-cxa).
+Obtenga más información sobre Pub / Sub al [leer sobre él](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa).
 
 **Tarea**: [Mock up a game](assignment.es.md)

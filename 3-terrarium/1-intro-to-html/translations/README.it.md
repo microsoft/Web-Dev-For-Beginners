@@ -224,7 +224,7 @@ Ci sono alcuni "vecchi" selvaggi tag in HTML con cui è ancora divertente giocar
 
 L'HTML è il sistema di blocchi costitutivi "collaudato e vero" che ha contribuito a trasformare il Web in quello che è oggi. Imparare un po' sulla sua storia studiando alcuni tag vecchi e nuovi. Si riusce a capire perché alcuni tag sono stati deprecati e altri aggiunti? Quali tag potrebbero essere introdotti in futuro?
 
-Ulteriori informazioni sulla creazione di siti per il Web e i dispositivi mobili in [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-4621-cxa).
+Ulteriori informazioni sulla creazione di siti per il Web e i dispositivi mobili in [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa).
 
 
 ## Compito

@@ -22,7 +22,7 @@ Performance 탭에는 Profiling 도구가 있습니다. 웹 사이트를 열고 
 
 ![Edge profiler](.././images/profiler.png)
 
-✅ Edge에서 Performance 패널에서 [Microsoft Documentation](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-4621-cxa)를 방문하세요
+✅ Edge에서 Performance 패널에서 [Microsoft Documentation](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa)를 방문하세요
 
 > Tip: 웹 사이트의 시작 시간을 순수하게 보려면, 브라우저의 캐시를 지우세요
 
