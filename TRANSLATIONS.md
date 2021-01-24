@@ -11,3 +11,11 @@ Translated lessons should follow this naming convention:
 **README._[language]_.md**
 
 where _[language]_ is a two letter language abbreviation following the ISO 639-1 standard (e.g. `README.es.md` for Spanish and `README.nl.md` for Dutch).
+
+**Quizzes**
+
+Add your translation to the quiz-app by adding a file here: https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/quiz-app/src/assets/translations. Please don't localize the words 'true' or 'false' however. thanks!
+
+**THANK YOU**
+
+We truly appreciate your efforts!
