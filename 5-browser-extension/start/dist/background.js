@@ -1,4 +1,4 @@
-//add listener here
+//aggiungere qui il listener
 
-//borrowed from energy lollipop extension
-//draw the icon here
+//presa in prestito dall'estensione energy lollipop
+//disegnare qui l'icona

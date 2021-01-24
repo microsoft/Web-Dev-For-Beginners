@@ -1,17 +1,17 @@
 //1
-// form fields
-// results divs
+// campi del form
+// risultati
 
 //6
-//call the API
+//chiamata API
 
 //5
-//set up user's api key and region
+//imposta la chiave api e la regione per l'utente
 
 //4
-// handle form submission
+// gestisce l'invio del form
 
-//3 initial checks
+//3 controlli iniziali
 
 //2
-// set listeners and start app
+// imposta i listeners e la partenza dell'app
