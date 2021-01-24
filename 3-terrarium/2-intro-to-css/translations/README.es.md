@@ -3,7 +3,7 @@
 ![Introducción a CSS](../images/webdev101-css.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/17)
 
 ### Introducción:
 
@@ -244,7 +244,7 @@ Tenga en cuenta el uso de porcentajes aquí, incluso para el `border-radius`. Si
 
 ![terrario terminado](../images/terrarium-final.png)
 
-## [Post-lecture prueba](../.github/post-lecture-quiz.md)
+## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/18)
 
 ## Revisión y autoestudio
 
@@ -252,6 +252,4 @@ CSS parece engañosamente sencillo, pero existen muchos desafíos cuando se trat
 
 **Asignación**: [Refactorización CSS](assignment.es.md)
 
-Complete los siguientes módulos de aprendizaje para completar el [cuestionario posterior a la conferencia](../.github/post-lecture-quiz.md):
-
-[Diseñe su aplicación HTML con CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
+[Diseñe su aplicación HTML con CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)

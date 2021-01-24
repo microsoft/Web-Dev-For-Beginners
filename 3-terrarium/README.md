@@ -26,7 +26,7 @@ You can deploy, or publish your terrarium to the web using Azure Static Web Apps
 
 2. Press this button
 
-[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=cxaall-4621-cxall#create/Microsoft.StaticApp)
+[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-13441-cxa#create/Microsoft.StaticApp)
 
 3. Walk through the wizard creating your app. Make sure you set the app root to either be `/solution` or the root of your codebase. There's no API in this app, so don't worry about adding that. A .github folder will be created in your forked repo that will help Azure Static Web Apps' build service build and publish your app to a new URL.
 

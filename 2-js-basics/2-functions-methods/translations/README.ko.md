@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/9?loc=ko)
 
 코드 작성에 대해 생각할 때 항상 코드를 읽을 수 있도록 해야합니다. 직설적이지 않지만, 코드는 작성된 것보다 더 많이 읽힙니다. 개발자의 툴 박스에서 유지관리 가능한 코드를 보장하는 핵심 도구는 **함수**입니다.
 
@@ -181,7 +181,7 @@ setTimeout(3000, () => {
 함수와 메소드의 차이점을 한 문장으로 표현할 수 있나요? 시도해보세요!
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](../.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/10?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

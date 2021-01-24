@@ -215,7 +215,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## समीक्षा और स्व अध्ययन
 
-pub/sub[के बारे में पढ़े](https://docs.microsoft.com/en-us/azure/altecture/patterns/publisher-subscriber) और अधिक जानें .
+pub/sub[के बारे में पढ़े](https://docs.microsoft.com/en-us/azure/altecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa) और अधिक जानें .
 
 ## असाइनमेंट
 

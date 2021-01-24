@@ -217,7 +217,7 @@ pub-sub パターンがどのようにゲームを盛り上げるかを考えて
 
 ## 復習と自己学習
 
-Pub/Sub については、[こちらを読んでみてください](https://docs.microsoft.com/ja-jp/azure/architecture/patterns/publisher-subscriber)。
+Pub/Sub については、[こちらを読んでみてください](https://docs.microsoft.com/ja-jp/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa)。
 
 ## 課題
 

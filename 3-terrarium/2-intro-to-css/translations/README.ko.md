@@ -5,7 +5,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](../.github/pre-lecture-quiz.md)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/17?loc=ko)
 
 ### 소개
 
@@ -248,11 +248,11 @@ jar 좌측 하단 부분에 'bubble' 광택을 추가하여 유리처럼 보이�
 
 ![finished terrarium](.././images/terrarium-final.png)
 
-강의 후 퀴즈를 완료하려면, 다음 학습 모듈을 진행하십시오: [Style your HTML app with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
+강의 후 퀴즈를 완료하려면, 다음 학습 모듈을 진행하십시오: [Style your HTML app with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](../.github/post-lecture-quiz.md)
+[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/18?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

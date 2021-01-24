@@ -26,7 +26,7 @@ Azure Static Web Apps を使ってテラリウムをデプロイしたり、ウ�
 
 2. このボタンを押します
 
-[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=cxaall-4621-cxall#create/Microsoft.StaticApp)
+[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-13441-cxa#create/Microsoft.StaticApp)
 
 3. アプリを作成するウィザードに沿って進みます。アプリのルートを `/solution` またはコードベースのルートに設定してください。このアプリには API はありませんので、追加については心配しないでください。フォークされたレポに .github フォルダが作成され、Azure Static Web Apps のビルドサービスのビルドを支援し、新しい URL にアプリを公開します。
 

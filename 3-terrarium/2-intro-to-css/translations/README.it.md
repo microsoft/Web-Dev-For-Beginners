@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/17)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/17?loc=it)
 
 ### Introduzione
 
@@ -248,11 +248,11 @@ Aggiungere una lucentezza a forma di bolla nell'area inferiore sinistra del bara
 
 ![terrario finito](../images/terrarium-final.png)
 
-Per completare il quiz post-lezione, seguire questo modulo di apprendimento: [Applicare uno stile al codice HTML con CSS](https://docs.microsoft.com/it-it/learn/modules/build-simple-website/4-css-basics)
+Per completare il quiz post-lezione, seguire questo modulo di apprendimento: [Applicare uno stile al codice HTML con CSS](https://docs.microsoft.com/it-it/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/18)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/18?loc=it)
 
 ## Revisione e Auto Apprendimento
 

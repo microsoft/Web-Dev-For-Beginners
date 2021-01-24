@@ -1,8 +1,6 @@
 # Conceptos básicos de JavaScript: tomar decisiones
 
-![video](video-url)
-
-## [Pre-lecture prueba](../.github/pre-lecture-quiz.md)
+## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11)
 
 Tomar decisiones y controlar el orden en que se ejecuta su código hace que su código sea reutilizable y robusto. Esta sección cubre la sintaxis para controlar el flujo de datos en JavaScript y su importancia cuando se usa con tipos de datos booleanos.
 
@@ -22,14 +20,14 @@ Establezca su booleano en verdadero o falso de esta manera:
 
 Los operadores se utilizan para evaluar las condiciones haciendo comparaciones que crearán un valor booleano. La siguiente es una lista de operadores que se utilizan con frecuencia.
 
-| Símbolo | Descripción | Ejemplo |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`    | **Mayor que**: compara dos valores y devuelve el tipo de datos booleano `true` si el valor del lado derecho es mayor que el del izquierdo                         | `5 < 6 // true`    |
-| `<=`   | **Mayor o igual que**: compara dos valores y devuelve el tipo de datos booleano `true` si el valor del lado derecho es mayor o igual que el del lado izquierdo | `5 <= 6 // true`   |
-| `>`    | **Menor que**: compara dos valores y devuelve el tipo de datos booleano `true` si el valor del lado izquierdo es mayor que el del derecho                            | `5 > 6 // false`   |
-| `=>`   | **Menor o igual que**: compara dos valores y devuelve el tipo de datos booleano `true` si el valor del lado izquierdo es mayor o igual que el del lado derecho    | `5 => 6 // false`  |
-| `===`  |  **Igualdad estricta**: compara dos valores y devuelve el tipo de datos booleano `true` si los valores de la derecha y la izquierda son iguales Y son del mismo tipo de datos       | `5 === 6 // false` |
-| `!==`  | **Desigualdad**: compara dos valores y devuelve el valor booleano opuesto de lo que devolvería un operador de igualdad estricta                                    | `5 !== 6 // true`  |
+| Símbolo | Descripción                                                                                                                                                                  | Ejemplo            |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `<`     | **Mayor que**: compara dos valores y devuelve el tipo de datos booleano `true` si el valor del lado derecho es mayor que el del izquierdo                                    | `5 < 6 // true`    |
+| `<=`    | **Mayor o igual que**: compara dos valores y devuelve el tipo de datos booleano `true` si el valor del lado derecho es mayor o igual que el del lado izquierdo               | `5 <= 6 // true`   |
+| `>`     | **Menor que**: compara dos valores y devuelve el tipo de datos booleano `true` si el valor del lado izquierdo es mayor que el del derecho                                    | `5 > 6 // false`   |
+| `=>`    | **Menor o igual que**: compara dos valores y devuelve el tipo de datos booleano `true` si el valor del lado izquierdo es mayor o igual que el del lado derecho               | `5 => 6 // false`  |
+| `===`   | **Igualdad estricta**: compara dos valores y devuelve el tipo de datos booleano `true` si los valores de la derecha y la izquierda son iguales Y son del mismo tipo de datos | `5 === 6 // false` |
+| `!==`   | **Desigualdad**: compara dos valores y devuelve el valor booleano opuesto de lo que devolvería un operador de igualdad estricta                                              | `5 !== 6 // true`  |
 
 ✅ Compruebe sus conocimientos escribiendo algunas comparaciones en la consola de su navegador. ¿Te sorprende algún dato devuelto?
 
@@ -80,11 +78,11 @@ else{
 
 Las decisiones pueden requerir más de una comparación y se pueden unir con operadores lógicos para producir un valor booleano.
 
-| Símbolo | Descripción | Ejemplo |
-| ------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **AND lógico**: compara dos expresiones booleanas. Devuelve verdadero **solo** si ambos lados son verdaderos | `(5 > 6) && (5 < 6 ) //Un lado es falso, el otro es verdadero. Devuelve falso` |
-| `||`   | **OR lógico**: compara dos expresiones booleanas. Devuelve verdadero si al menos un lado es verdadero     | `(5 > 6) || (5 < 6) //Un lado es falso, el otro es verdadero. Devuelve verdadero`   |
-| `!`    | **NOT lógico**: Devuelve el valor opuesto de una expresión booleana                             | `!(5 > 6) // 5 no es mayor que 6, pero "!" devolverá verdadero`         |
+| Símbolo | Descripción                                                                                                  | Ejemplo                                                                           |
+| ------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| `&&`    | **AND lógico**: compara dos expresiones booleanas. Devuelve verdadero **solo** si ambos lados son verdaderos | `(5 > 6) && (5 < 6 ) //Un lado es falso, el otro es verdadero. Devuelve falso`    |
+| `||`    | **OR lógico**: compara dos expresiones booleanas. Devuelve verdadero si al menos un lado es verdadero        | `(5 > 6) || (5 < 6) //Un lado es falso, el otro es verdadero. Devuelve verdadero` |
+| `!`     | **NOT lógico**: Devuelve el valor opuesto de una expresión booleana                                          | `!(5 > 6) // 5 no es mayor que 6, pero "!" devolverá verdadero`                   |
 
 ## Condiciones y decisiones con operadores lógicos
 
@@ -154,7 +152,7 @@ if (firstNumber > secondNumber) {
 
 🚀 Desafío: cree un programa que se escriba primero con operadores lógicos y luego vuelva a escribirlo utilizando una expresión ternaria. ¿Cuál es tu sintaxis preferida?
 
-## [Post-lecture prueba](../.github/post-lecture-quiz.md)
+## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12)
 
 ## Revisión y autoestudio
 

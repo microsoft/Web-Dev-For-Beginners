@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/19)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/19?loc=it)
 
 ### Introduzione
 
@@ -201,7 +201,7 @@ Aggiungere un nuovo gestore di eventi alla closure per fare qualcosa di più con
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/20)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/20?loc=it)
 
 ## Revisione e Auto Apprendimento
 
