@@ -1,6 +1,6 @@
-## Track Translation Progress by opening a draft PR here and checking off the translations completed
+## Track translation progress by opening a draft PR using this template and checking off the translations completed
 
-Each lesson includes translation of the README and the Assignment.md file, if available. Only mark as complete if both those files are translated per lesson, please.
+Each lesson includes a translation of the README.md and the Assignment.md file, if available. Only mark the lesson complete if both those files are translated per lesson, please.
 
 - [ ] 1
 - [ ] 1-1
