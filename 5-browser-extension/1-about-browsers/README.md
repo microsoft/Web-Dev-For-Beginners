@@ -50,7 +50,7 @@ Before you start building, take a look at the process of building and deploying 
 
 In essence, the process will be:
 
-- build your extension using `npm build` 
+- build your extension using `npm run build` 
 - navigate in the browser to the extensions pane using the "Settings and more" button (the `...` icon) on the top right
 - if it's a new installation, choose `load unpacked` to upload a fresh extension from its build folder (in our case it is `/dist`) 
 - or, click `reload` if you are reloading the already-installed extension
