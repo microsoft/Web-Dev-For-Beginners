@@ -9,6 +9,7 @@
         <option>id</option>
         <option>hi</option>
         <option>it</option>
+        <option>ms</option>
       </select>
     </nav>
     <div id="app">
