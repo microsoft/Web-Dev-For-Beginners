@@ -20,6 +20,8 @@ where _[language]_ is a two letter language abbreviation following the ISO 639-1
 
 3. Edit the quiz-app's [translations index.js file](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/quiz-app/src/assets/translations/index.js) to add your language.
 
+4. Finally, edit ALL the quiz links in your translated README.md files to point directly to your translated quiz: https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1 becomes https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1?loc=id
+
 **THANK YOU**
 
 We truly appreciate your efforts!
