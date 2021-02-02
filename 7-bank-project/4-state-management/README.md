@@ -31,7 +31,7 @@ There's 3 issues with the current code:
 
 - The state is not persisted, as a browser refresh takes you back to the login page.
 - There are multiple functions that modify the state. As the app grows, it can make it difficult to track the changes and it's easy to forget updating one.
-- The state is not cleaned up, when you click on *Logout* the account data is still there even though you're on the login page.
+- The state is not cleaned up, so when you click on *Logout* the account data is still there even though you're on the login page.
 
 We could update our code to tackle these issues one by one, but it would create more code duplication and make the app more complex and difficult to maintain. Or we could pause for a few minutes and rethink our strategy.
 
@@ -42,7 +42,7 @@ We could update our code to tackle these issues one by one, but it would create 
 - How to keep the data flows in an app understandable?
 - How to keep the state data always in sync with the user interface (and vice versa)?
 
-Once you've taken care of these, any other issues you might have may either be fixed already or have become easier to fix. There are many possible approaches for solving these problems, but we'll go with a common solution that consists in **centralizing the data and the ways to change it**. The data flows would go like this:
+Once you've taken care of these, any other issues you might have may either be fixed already or have become easier to fix. There are many possible approaches for solving these problems, but we'll go with a common solution that consists of **centralizing the data and the ways to change it**. The data flows would go like this:
 
 ![Schema showing the data flows between the HTML, user actions and state](./images/data-flow.png)
 
@@ -82,7 +82,7 @@ This refactoring by itself did not bring much improvements, but the idea was to 
 
 Now that we have put in place the `state` object to store our data, the next step is centralize the updates. The goal is to make it easier to keep track of any changes and when they happen.
 
-To avoid having changes made to the `state` object it's also a good practice to consider it [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), meaning that it cannot be modified at all. It also means that you have to create a new state object if you want to change anything in it. By doing this, you build a protection about potentially unwanted [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)), and open up possibilities for new features in your app like implementing undo/redo, while also making it easier to debug. For example, you could log every changes made to the state and keep an history of the changes to understand the source of a bug.
+To avoid having changes made to the `state` object, it's also a good practice to consider it [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), meaning that it cannot be modified at all. It also means that you have to create a new state object if you want to change anything in it. By doing this, you build a protection about potentially unwanted [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)), and open up possibilities for new features in your app like implementing undo/redo, while also making it easier to debug. For example, you could log every change made to the state and keep a history of the changes to understand the source of a bug.
 
 In JavaScript, you can use [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) to create an immutable version of an object. If you try to make changes to an immutable object, an exception will be raised.
 
@@ -195,9 +195,9 @@ init();
 
 Here we retrieve the saved data, and if there's any we update the state accordingly. It's important to do this *before* updating the route, as there might be code relying on the state during the page update.
 
-We can also make the *Dashboard* page our application default page, as we are now persisting the account data. If no data is found, the dashboard takes care of redirecting to the *Login* page anyways. In `updateRoute()`, replace the fallback `return navigate('/login');` with `return navigate('dashboard');`.
+We can also make the *Dashboard* page our application default page, as we are now persisting the account data. If no data is found, the dashboard takes care of redirecting to the *Login* page anyways. In `updateRoute()`, replace the fallback `return navigate('/login');` with `return navigate('/dashboard');`.
 
-Now login in the app and try refreshing the page, you should stay on the dashboard. With that update we've taken care of all our initial issues...
+Now login in the app and try refreshing the page. You should stay on the dashboard. With that update we've taken care of all our initial issues...
 
 ## Refresh the data
 
