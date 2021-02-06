@@ -275,10 +275,10 @@
 			},
 			{
 				"id": 6,
-				"title": "Lesson 3 - Creating Accessible Webpages: Post-Lecture Quiz",
+				"title": "Pelajaran 3 - Membuat Laman Web yang Boleh Diakses: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "Lighthouse only checks for accessibility problems",
+						"questionText": "Rumah Api hanya memeriksa masalah aksesibiliti",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -291,24 +291,24 @@
 						]
 					},
 					{
-						"questionText": "Color-safe palettes help people with",
+						"questionText": "Palet selamat warna menolong orang",
 						"answerOptions": [
 							{
-								"answerText": "color-blindness",
+								"answerText": "buta warna",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "visual impairments",
+								"answerText": "masalah penglihatan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "both the above",
+								"answerText": "kedua-dua perkara di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Descriptive links are vital for accessible web sites",
+						"questionText": "Pautan deskriptif sangat penting untuk laman web yang boleh diakses",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -324,10 +324,10 @@
 			},
 			{
 				"id": 7,
-				"title": "Lesson 4 - JavaScript Basics - Data Types: Pre-Lecture Quiz",
+				"title": "Pelajaran 4 - Asas JavaScript - Jenis Data: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "Booleans are a data type you can use to test the length of a string",
+						"questionText": "Booleans adalah jenis data yang boleh anda gunakan untuk menguji panjang tali",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -340,7 +340,7 @@
 						]
 					},
 					{
-						"questionText": "The following is an operation you can perform on a string",
+						"questionText": "Berikut adalah operasi yang boleh anda lakukan pada rentetan",
 						"answerOptions": [
 							{
 								"answerText": "concatenation",
@@ -357,7 +357,7 @@
 						]
 					},
 					{
-						"questionText": "== and === are interchangeable",
+						"questionText": "== dan === boleh ditukar ganti",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -373,27 +373,27 @@
 			},
 			{
 				"id": 8,
-				"title": "Lesson 4 - JavaScript Basics - Data Types: Post-Lecture Quiz",
+				"title": "Pelajaran 4 - Asas JavaScript - Jenis Data: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "Constants are the same as let and var to declare variables except",
+						"questionText": "Pemalar adalah sama dengan let dan var untuk menyatakan pemboleh ubah kecuali",
 						"answerOptions": [
 							{
-								"answerText": "Constants must be initialized",
+								"answerText": "Pemalar mesti dimulakan",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Constants can be altered",
+								"answerText": "Pemalar boleh diubah",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Constants can be reassigned",
+								"answerText": "Pemalar boleh ditugaskan semula",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Numbers and ____ are JavaScript primitives that handle numeric data",
+						"questionText": "Nombor dan ____ adalah primitif JavaScript yang mengendalikan data berangka",
 						"answerOptions": [
 							{
 								"answerText": "bigint",
@@ -410,7 +410,7 @@
 						]
 					},
 					{
-						"questionText": "Strings can reside between both single and double quotes",
+						"questionText": "Rentetan boleh berada di antara tanda petik tunggal dan dua",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -426,27 +426,27 @@
 			},
 			{
 				"id": 9,
-				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Pre-Lecture Quiz",
+				"title": "Pelajaran 5 - Asas JavaScript - Kaedah dan Fungsi: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "What's an argument?",
+						"questionText": "Apa itu hujah (argument)?",
 						"answerOptions": [
 							{
-								"answerText": "It's something you declare in the function definition",
+								"answerText": "Ini adalah sesuatu yang anda nyatakan dalam definisi fungsi",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's something you pass into a function at invocation time",
+								"answerText": "Ini adalah sesuatu yang anda gunakan dalam fungsi pada waktu pemanggilan",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "It's something you have with people you know",
+								"answerText": "Ini sesuatu yang anda ada dengan orang yang anda kenali",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A function must return something",
+						"questionText": "Fungsi mesti mengembalikan sesuatu",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -459,7 +459,7 @@
 						]
 					},
 					{
-						"questionText": "You can name a function anything",
+						"questionText": "Anda boleh menamakan fungsi apa sahaja",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -470,7 +470,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "true, but it should be a descriptive name",
+								"answerText": "benar, tetapi mestilah nama deskriptif",
 								"isCorrect": "true"
 							}
 						]
@@ -479,10 +479,10 @@
 			},
 			{
 				"id": 10,
-				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Post-Lecture Quiz",
+				"title": "Pelajaran 5 - Asas JavaScript - Kaedah dan Fungsi: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "Arguments must be provided for all parameters in a function",
+						"questionText": "Hujah mesti disediakan untuk semua parameter dalam fungsi",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -495,35 +495,35 @@
 						]
 					},
 					{
-						"questionText": "What does a default value do?",
+						"questionText": "Apa yang dilakukan oleh nilai lalai?",
 						"answerOptions": [
 							{
-								"answerText": "Sets a correct value",
+								"answerText": "Menetapkan nilai yang betul",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Gives a starter value for a parameter so your code still behaves if you omit an argument for it",
+								"answerText": "Memberi nilai permulaan untuk parameter sehingga kod anda masih berkelakuan jika anda menghilangkan argumen untuknya",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Has no utility",
+								"answerText": "Tidak mempunyai utiliti",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A fat arrow function allows you to",
+						"questionText": "Fungsi anak panah lemak membolehkan anda melakukannya",
 						"answerOptions": [
 							{
-								"answerText": "Create heavy functions",
+								"answerText": "Buat fungsi berat",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Omit the function keyword",
+								"answerText": "Hilangkan kata kunci fungsi",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Create an anonymous function",
+								"answerText": "Buat fungsi tanpa nama",
 								"isCorrect": "false"
 							}
 						]
@@ -532,27 +532,27 @@
 			},
 			{
 				"id": 11,
-				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Pre-Lecture Quiz",
+				"title": "Pelajaran 6 - Asas JavaScript - Membuat Keputusan: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "The following operator == is called",
+						"questionText": "Pengendali berikut == dipanggil",
 						"answerOptions": [
 							{
-								"answerText": "Equality",
+								"answerText": "Kesaksamaan",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Strict equality",
+								"answerText": "Persamaan yang ketat",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Assignment",
+								"answerText": "Tugasan",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A comparison in JavaScript returns what type?",
+						"questionText": "Perbandingan dalam JavaScript mengembalikan jenis apa?",
 						"answerOptions": [
 							{
 								"answerText": "boolean",
@@ -569,18 +569,18 @@
 						]
 					},
 					{
-						"questionText": "The ! symbol in JavaScript means:",
+						"questionText": "The ! simbol dalam JavaScript bermaksud:",
 						"answerOptions": [
 							{
-								"answerText": "Logical Not",
+								"answerText": "Tidak logik",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Important",
+								"answerText": "Penting",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Equals",
+								"answerText": "Sama",
 								"isCorrect": "false"
 							}
 						]
