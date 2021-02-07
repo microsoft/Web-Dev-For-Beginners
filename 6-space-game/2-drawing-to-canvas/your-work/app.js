@@ -9,16 +9,16 @@ function loadTexture(path) {
 }
 
 function createEnemies(ctx, canvas, enemyImg) {
-  // TODO disegnare i nemici
+  // TODO draw enemies
 }
 
 window.onload = async () => {
   canvas = document.getElementById('canvas')
   ctx = canvas.getContext('2d')
-  // TODO 2 - caricare le strutture di gioco
+  // TODO load textures
 
-  // TODO 1 - disegnare lo sfondo nero
-  // TODO 3 - disegnare l'eroe
-  // TODO 4 - togliere il commento dalla riga successiva quando si aggiungono nemici sullo schermo
+  // TODO draw black background
+  // TODO draw hero
+  // TODO uncomment the next line when you add enemies to screen
   //createEnemies(ctx, canvas, enemyImg);
 }
