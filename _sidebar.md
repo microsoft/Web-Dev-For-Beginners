@@ -19,12 +19,14 @@
 		- [1. HTML 入門](/3-terrarium/1-intro-to-html/translations/README.ja)
 		- [2. CSS 入門](/3-terrarium/2-intro-to-css/translations/README.ja)
 		- [3. DOM の操作とクロージャ](/3-terrarium/3-intro-to-DOM-and-closures/translations/README.ja)
+	- [(デモ)](https://wdfb.netlify.app/3-terrarium/solution/)
 	- [(参考コード)](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/3-terrarium/solution)
 
 - タイピングゲーム
 
 	- [はじめに](/4-typing-game/translations/README.ja)
 		- [タイピングゲームの作成](/4-typing-game/typing-game/translations/README.ja)
+	- [(デモ)](https://wdfb.netlify.app/4-typing-game/solution/)
 	- [(参考コード)](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/4-typing-game/solution)
 
 - ブラウザ拡張機能
@@ -44,6 +46,7 @@
 		- [4. 衝突の検出](/6-space-game/4-collision-detection/translations/README.ja)
 		- [5. スコアの保持](/6-space-game/5-keeping-score/translations/README.ja)
 		- [6. ゲームの終了と再起動](/6-space-game/6-end-condition/translations/README.ja)
+	- [(デモ)](https://wdfb.netlify.app/6-space-game/solution/)
 	- [(参考コード)](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/6-space-game/solution)
 
 - バンキングアプリ
@@ -53,4 +56,5 @@
 		- [2. ログインと登録フォームの構築](/7-bank-project/2-forms/translations/README.ja)
 		- [3. データの取得と利用方法](/7-bank-project/3-data/translations/README.ja)
 		- [4. 状態管理の概念](/7-bank-project/4-state-management/translations/README.ja)
+	- [(デモ)](https://wdfb.netlify.app/7-bank-project/solution)
 	- [(参考コード)](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/7-bank-project/solution)
