@@ -65,7 +65,7 @@
 
 - [API キー](https://www.co2signal.com/); このページのボックスにメールアドレスを入力します
 - [電力地図](https://www.electricitymap.org/map) に対応する地域のコード (例えばボストンでは 'US-NEISO' を使用しています)
-- [スターターコード](/5-browser-extension/start/translations/README.ja)。`start`フォルダをダウンロードしてください。このフォルダでコードを完成させることになります。
+- [スターターコード](../../start)。`start`フォルダをダウンロードしてください。このフォルダでコードを完成させることになります。
 - [NPM](https://www.npmjs.com) - NPM はパッケージ管理ツールです。ローカルにインストールすると、`package.json` ファイルに記載されているパッケージがインストールされ、Web アセットで使用されます。
 
 ✅ この[優れた Learn モジュール](https://docs.microsoft.com/ja-jp/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)では、パッケージ管理の詳細を学ぶことができます。
