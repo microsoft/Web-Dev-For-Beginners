@@ -6,9 +6,9 @@
 
 # レッスン
 
-1. [HTML 入門](../1-intro-to-html/translations/README.ja)
-2. [CSS 入門](../2-intro-to-css/translations/README.ja)
-3. [DOM の操作とクロージャ](../3-intro-to-DOM-and-closures/translations/README.ja)
+1. [HTML 入門](../1-intro-to-html/translations/README.ja.md)
+2. [CSS 入門](../2-intro-to-css/translations/README.ja.md)
+3. [DOM の操作とクロージャ](../3-intro-to-DOM-and-closures/translations/README.ja.md)
 
 ## クレジット
 
