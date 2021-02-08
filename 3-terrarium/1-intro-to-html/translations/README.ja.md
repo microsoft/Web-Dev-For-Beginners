@@ -1,6 +1,6 @@
 # テラリウムプロジェクト その1: HTML 入門
 
-![Introduction to HTML](images/webdev101-html.png)
+![Introduction to HTML](../images/webdev101-html.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト
@@ -17,7 +17,7 @@ HTML (HyperText Markup Language) は、Web の「骨格」です。CSS が HTML 
 
 コンピュータ上に 'terrarium' というフォルダを作成し、その中に 'index.html' というファイルを作成します。テラリウムのフォルダを作成した後、Visual Studio Code で新しい VS Code ウィンドウを開き、「フォルダを開く」をクリックして新しいフォルダに移動することで、この作業を行うことができます。エクスプローラペインの「ファイル」ボタンをクリックして、新しいファイルを作成してください。
 
-![explorer in VS Code](images/vs-code-index.png)
+![explorer in VS Code](../images/vs-code-index.png)
 
 もしくは
 
