@@ -12,7 +12,7 @@
 
 ### 前提条件
 
-このレッスンでは、Web アプリの [HTML テンプレートとルーティング](../../1-template-route/README.md)が完了している必要があります。また、アカウントを作成するためのデータを送信できるように、ローカルに [Node.js](https://nodejs.org/ja) と[サーバー API を実行する](../../api/translations/README.ja.md)をインストールする必要があります。
+このレッスンでは、Web アプリの [HTML テンプレートとルーティング](../../1-template-route/translations/README.ja)が完了している必要があります。また、アカウントを作成するためのデータを送信できるように、ローカルに [Node.js](https://nodejs.org/ja) と[サーバー API を実行する](../../api/translations/README.ja.md)をインストールする必要があります。
 
 ターミナルでこのコマンドを実行することで、サーバーが正常に動作していることを確認することができます。
 

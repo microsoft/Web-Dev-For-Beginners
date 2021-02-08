@@ -321,7 +321,7 @@ function updateElement(id, textOrNode) {
 
 ダッシュボードページのスタイリング例です。
 
-![スタイリング後のダッシュボードの結果例のスクリーンショット](../images/screen2.png)
+![スタイリング後のダッシュボードの結果例のスクリーンショット](../../images/screen2.png)
 
 ## レッスン後の小テスト
 

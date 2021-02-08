@@ -2,13 +2,13 @@
 
 ちょっとしたドラッグ＆ドロップのコードメディテーション。少しの HTML、JS、CSS で、Web インターフェースを構築し、スタイルを設定し、インタラクションを追加することができます。
 
-![my terrarium](images/screenshot_gray.png)
+![my terrarium](../images/screenshot_gray.png)
 
 # レッスン
 
-1. [HTML 入門](./1-intro-to-html/README.md)
-2. [CSS 入門](./2-intro-to-css/README.md)
-3. [DOM と JS Closures の紹介](./3-intro-to-DOM-and-closures/README.md)
+1. [HTML 入門](../1-intro-to-html/translations/README.ja)
+2. [CSS 入門](../2-intro-to-css/translations/README.ja)
+3. [DOM の操作とクロージャ](../3-intro-to-DOM-and-closures/translations/README.ja)
 
 ## クレジット
 

@@ -12,11 +12,11 @@
 
 ### 拡張機能で操作する要素の設定:
 
-この時点で、フォーム用の HTML とブラウザ拡張機能用の結果 `<div>` が構築されています。これからは、`/src/index.js` ファイルを使って少しずつ拡張機能を構築していく必要があります。プロジェクトのセットアップとビルドのプロセスについては [前のレッスン](.../.../1-about-browsers/translations/README.ja.md) を参照してください。
+この時点で、フォーム用の HTML とブラウザ拡張機能用の結果 `<div>` が構築されています。これからは、`/src/index.js` ファイルを使って少しずつ拡張機能を構築していく必要があります。プロジェクトのセットアップとビルドのプロセスについては [前のレッスン](/5-browser-extension/1-about-browsers/translations/README.ja) を参照してください。
 
 `index.js` ファイルの中で作業を行うには、様々なフィールドに関連付けられた値を保持するための `const` 変数を作成することから始めます。
 
-```JavaScript
+```javascript
 // フォームフィールド
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -38,7 +38,7 @@ const clearBtn = document.querySelector('.clear-btn');
 
 次に、フォームにイベントリスナーを追加し、フォームをリセットするクリアボタンを追加します。ユーザーがフォームを送信したり、リセットボタンをクリックしたりした場合に、そのリセットボタンをクリックするようにします。何かが起こるときのため、ファイルの一番下にアプリを初期化するための呼び出しを追加します。
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
@@ -50,7 +50,7 @@ init();
 
 今度は拡張機能を初期化する関数を作ります。これは init() と呼ばれています。
 
-```JavaScript
+```javascript
 function init() {
 	//何かがローカルストレージにある場合は、それをピックアップします。
 	const storedApiKey = localStorage.getItem('apiKey');
@@ -112,7 +112,7 @@ API キーに文字列の値を設定して、例えば Edge では Web ペー�
 
 イベント引数 `(e)` を受け取る関数 `handleSubmit` を作成します。イベントの伝播を停止し (この場合、ブラウザの更新を停止したい)、新しい関数 `setUpUser` を呼び出し、引数 `apiKey.value` と `region.value` を渡します。このようにして、適切なフィールドが入力されたときに初期フォームから取得される2つの値を利用します。
 
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
@@ -124,7 +124,7 @@ function handleSubmit(e) {
 
 次に `setUpUser` 関数に進み、ここで apiKey と regionName のローカルストレージの値を設定します。新しい関数を追加します。
 
-```JavaScript
+```javascript
 function setUpUser(apiKey, regionName) {
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
@@ -153,7 +153,7 @@ function setUpUser(apiKey, regionName) {
 
 C02Signal API に問い合わせを行うための新しい関数を作成します:
 
-```JavaScript
+```javascript
 import axios from '../node_modules/axios';
 
 async function displayCarbonUsage(apiKey, region) {

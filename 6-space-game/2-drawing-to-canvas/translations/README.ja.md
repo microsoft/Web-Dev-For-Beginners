@@ -195,7 +195,7 @@ npm start
 
 ## Solution
 
-まずはご自身で解決してみていただきたいですが、行き詰った場合は [solution](../solution/app.js) を参考にしてみてください。
+まずはご自身で解決してみていただきたいですが、行き詰った場合は [solution](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/6-space-game/2-drawing-to-canvas/solution) を参考にしてみてください。
 
 ---
 

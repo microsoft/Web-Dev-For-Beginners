@@ -88,7 +88,7 @@ back add r0,r1
 信じられないかもしれませんが、両者は同じ処理をしています。
 いずれもフィボナッチ数を順番に10個出力します。
 
-✅ [フィボナッチ数](https://en.wikipedia.org/wiki/Fibonacci_number)とは、各数がその手前の二つの値の和である値の集合です。
+✅ [フィボナッチ数](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0)とは、各数がその手前の二つの値の和である値の集合です。
 
 ## プログラムの基本要素
 
@@ -244,4 +244,4 @@ COBOLとGoについては？
 
 ## 課題
 
-[assignment.md](assignment.ja.md)
+[ドキュメントを読む](assignment.ja.md)
