@@ -589,10 +589,10 @@
 			},
 			{
 				"id": 12,
-				"title": "Lesson 6 - JavaScript Basics - Making Decisions: Post-Lecture Quiz",
+				"title": "Pelajaran 6 - Asas JavaScript - Membuat Keputusan: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "What would the following code return: '1' == 1",
+						"questionText": "Apakah kod berikut yang akan dikembalikan: '1' == 1",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -609,7 +609,7 @@
 						]
 					},
 					{
-						"questionText": "What would the following code return: '1' === 1",
+						"questionText": "Apakah kod berikut yang akan dikembalikan: '1' === 1",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -626,7 +626,7 @@
 						]
 					},
 					{
-						"questionText": "Choose the correct operator to express 'or' logic",
+						"questionText": "Pilih operator yang betul untuk menyatakan 'atau' logik",
 						"answerOptions": [
 							{
 								"answerText": "a | b",
@@ -646,44 +646,44 @@
 			},
 			{
 				"id": 13,
-				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Pre-Lecture Quiz",
+				"title": "Pelajaran 7 - Asas JavaScript - Susunan dan Gelung: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "To refer to a specific item in an array, you would use a",
+						"questionText": "Untuk merujuk pada item tertentu dalam array, anda akan menggunakan a",
 						"answerOptions": [
 							{
-								"answerText": "square bracket []",
+								"answerText": "pendakap persegi []",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "index",
+								"answerText": "indeks",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "curly braces {}",
+								"answerText": "pendakap kerinting {}",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How do you get the number of items in an array?",
+						"questionText": "Bagaimana anda mendapatkan bilangan item dalam satu array?",
 						"answerOptions": [
 							{
-								"answerText": "The 'len(array)' method",
+								"answerText": "Kaedah 'len (array)'",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The property size on the array",
+								"answerText": "Properti `size` pada array",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The length property on the array",
+								"answerText": "Properti `length` pada array",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "In JavaScript, indexes start at",
+						"questionText": "Dalam JavaScript, indeks bermula pada",
 						"answerOptions": [
 							{
 								"answerText": "0",
@@ -703,13 +703,13 @@
 			},
 			{
 				"id": 14,
-				"title": "Lesson 7 - JavaScript Basics - Arrays and Loops: Post-Lecture Quiz",
+				"title": "Pelajaran 7 - Asas JavaScript - Susunan dan Gelung: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "What part of a for-loop would you need to modify to increment its iteration by 5?",
+						"questionText": "Bahagian mana untuk loop yang perlu anda ubah untuk meningkatkan lelarannya dengan 5?",
 						"answerOptions": [
 							{
-								"answerText": "condition",
+								"answerText": "kondisi",
 								"isCorrect": "true"
 							},
 							{
@@ -717,30 +717,30 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "iteration-expression",
+								"answerText": "ekspresi-iterasi",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What's the difference between a while and a for-loop",
+						"questionText": "Apa perbezaan antara while dan for loop untuk",
 						"answerOptions": [
 							{
-								"answerText": "A for-loop has a counter and iteration-expression, where while only has a condition",
+								"answerText": "A for-loop mempunyai pembilang dan ekspresi iterasi, di mana while hanya mempunyai keadaan",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A while has a counter and iteration-expression where for-loop only has a condition",
+								"answerText": "Sebuah while memiliki penghitung dan ekspresi-iterasi di mana for-loop hanya memiliki kondisi",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "They are the same, just an alias for one another",
+								"answerText": "Mereka sama, hanya alias untuk satu sama lain",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Given the code for (let i=1; i < 5; i++), how many iterations will it perform?",
+						"questionText": "Diberikan kode for (let i = 1; i <5; i ++), berapa banyak iterasi yang akan dilakukan?",
 						"answerOptions": [
 							{
 								"answerText": "5",
@@ -756,47 +756,47 @@
 			},
 			{
 				"id": 15,
-				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Pre-Lecture Quiz",
+				"title": "Pelajaran 8 - Projek Terrarium - Pengenalan HTML: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "HTML stands for 'HyperText Mockup Language'",
+						"questionText": "HTML bermaksud 'HyperText Mockup Language'",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "All HTML tags need both opening and closing tags",
+						"questionText": "Semua tag HTML memerlukan tag pembuka dan penutup",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Using semantic markup is most important for",
+						"questionText": "Menggunakan penanda semantik adalah yang paling penting untuk",
 						"answerOptions": [
 							{
-								"answerText": "code readability",
+								"answerText": "kebolehbacaan kod",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "screen readers",
+								"answerText": "pembaca skrin",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "maintenance",
+								"answerText": "penyelenggaraan",
 								"isCorrect": "false"
 							}
 						]
@@ -805,26 +805,26 @@
 			},
 			{
 				"id": 16,
-				"title": "Lesson 8 - Terrarium Project - Introduction to HTML: Post-Lecture Quiz",
+				"title": "Pelajaran 8 - Projek Terrarium - Pengenalan HTML: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "Spans and Divs are interchangeable",
+						"questionText": "Span dan Div boleh ditukar ganti",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The head of an HTML doc can contain:",
+						"questionText": "Ketua dokumen HTML boleh mengandungi:",
 						"answerOptions": [
 							{
-								"answerText": "the title tag",
+								"answerText": "tag title",
 								"isCorrect": "false"
 							},
 							{
@@ -832,24 +832,24 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "all the above",
+								"answerText": "semua di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can't use deprecated tags in your markup",
+						"questionText": "Anda tidak boleh menggunakan teg yang tidak digunakan dalam markup anda",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "benar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "salah",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false, but they have been deprecated for good reason",
+								"answerText": "salah, tapi mereka sudah tidak digunakan lagi karena alasan yang baik",
 								"isCorrect": "true"
 							}
 						]
