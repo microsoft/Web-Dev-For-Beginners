@@ -31,7 +31,7 @@ Les langages de programmation ont un objectif principal: permettre aux développ
 
 Les langages de programmation se présentent sous différents formats et peuvent servir à des fins différentes. Par exemple, JavaScript est principalement utilisé pour les applications Web, tandis que Bash est principalement utilisé pour les systèmes d'exploitation.
 
-* Les langues de bas niveau *nécessitent généralement moins d'étapes que les* langues de haut niveau * pour qu'un appareil interprète les instructions. Cependant, ce qui rend les langages de haut niveau populaires, c'est leur lisibilité et leur support. JavaScript est considéré comme un langage de haut niveau.
+*Les langues de bas niveau* nécessitent généralement moins d'étapes que les *langues de haut niveau* pour qu'un appareil interprète les instructions. Cependant, ce qui rend les langages de haut niveau populaires, c'est leur lisibilité et leur support. JavaScript est considéré comme un langage de haut niveau.
 
 Le code suivant illustre la différence entre un langage de haut niveau avec JavaScript et un langage de bas niveau avec le code d'assembly ARM.
 
