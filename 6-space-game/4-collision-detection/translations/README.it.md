@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/35)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/35?loc=it)
 
 In questa lezione si imparererà come fare fuoco con i laser con JavaScript! Verranno aggiunte due cose al gioco:
 
@@ -287,7 +287,7 @@ Aggiungere un'esplosione! Dare un'occhiata alle risorse di gioco [nel repository
 ## Quiz Post-Lezione
 
 [
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/36)
+Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/36?loc=it)
 
 ## Revisione e Auto Apprendimento
 

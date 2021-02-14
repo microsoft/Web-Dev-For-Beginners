@@ -4,7 +4,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/29)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/29?loc=it)
 
 ### Ereditarietà e Composizione nello sviluppo del gioco
 
@@ -214,7 +214,7 @@ Pensare a come il modello pub/sub può migliorare un gioco. Quali parti dovrebbe
 ## Quiz Post-Lezione
 
 [
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30)
+Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30?loc=it)
 
 ## Revisione e Auto Apprendimento
 

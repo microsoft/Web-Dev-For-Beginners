@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/31)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/31?loc=it)
 
 ## Canvas
 
@@ -206,7 +206,7 @@ Si è imparato a disegnare con l'API Canvas incentrata sul 2D; dare un'occhiata 
 ## Quiz Post-Lezione
 
 [
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/32)
+Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/32?loc=it)
 
 ## Revisione e Auto Apprendimento
 

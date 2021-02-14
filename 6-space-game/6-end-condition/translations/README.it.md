@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/39)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/39?loc=it)
 
 Esistono diversi modi per esprimere una *condizione di fine gioco*. Spetta al creatore del gioco dire perché il gioco è finito. Ecco alcuni motivi, si supponga di parlare del gioco spaziale costruito finora:
 
@@ -212,7 +212,7 @@ Aggiungere un suono! Si può aggiungere un suono per migliorare il gioco, magari
 ## Quiz Post-Lezione
 
 [
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/40)
+Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/40?loc=it)
 
 ## Revisione e Auto Apprendimento
 

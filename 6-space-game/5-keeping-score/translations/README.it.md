@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/37)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/37?loc=it)
 
 In questa lezione si imparerà come aggiungere punteggi a una partita e calcolare le vite.
 
@@ -179,7 +179,7 @@ Il codice è quasi completo. Si riescono a immaginare i prossimi passi?
 ## Quiz Post-Lezione
 
 [
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/38)
+Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/38?loc=it)
 
 ## Revisione e Auto Apprendimento
 

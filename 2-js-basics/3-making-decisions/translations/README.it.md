@@ -162,7 +162,7 @@ Creare un programma che viene scritto prima con operatori logici, quindi riscriv
 
 ---
 ## Quiz Post-Lezione
-[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12?loc=12)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12?loc=it)
 
 ## Revisione e Auto Apprendimento
 
