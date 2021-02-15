@@ -286,8 +286,7 @@ Aggiungere un'esplosione! Dare un'occhiata alle risorse di gioco [nel repository
 
 ## Quiz Post-Lezione
 
-[
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/36?loc=it)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/36?loc=it)
 
 ## Revisione e Auto Apprendimento
 

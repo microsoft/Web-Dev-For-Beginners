@@ -213,8 +213,7 @@ Pensare a come il modello pub/sub può migliorare un gioco. Quali parti dovrebbe
 
 ## Quiz Post-Lezione
 
-[
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30?loc=it)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30?loc=it)
 
 ## Revisione e Auto Apprendimento
 

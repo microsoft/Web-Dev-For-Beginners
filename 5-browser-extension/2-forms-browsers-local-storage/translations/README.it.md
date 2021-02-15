@@ -212,8 +212,7 @@ Finora si è discusso sui diversi tipi di API in queste lezioni. Scegliere un'AP
 
 ## Quiz Post-Lezione
 
-[
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/26?loc=it)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/26?loc=it)
 
 ## Revisione e Auto Apprendimento
 
