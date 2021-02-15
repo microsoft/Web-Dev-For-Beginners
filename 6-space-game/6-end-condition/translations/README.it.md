@@ -211,8 +211,7 @@ Aggiungere un suono! Si può aggiungere un suono per migliorare il gioco, magari
 
 ## Quiz Post-Lezione
 
-[
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/40)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/40?loc=it)
 
 ## Revisione e Auto Apprendimento
 

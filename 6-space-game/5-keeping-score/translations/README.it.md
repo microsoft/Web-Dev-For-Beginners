@@ -178,8 +178,7 @@ Il codice è quasi completo. Si riescono a immaginare i prossimi passi?
 
 ## Quiz Post-Lezione
 
-[
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/38)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/38?loc=it)
 
 ## Revisione e Auto Apprendimento
 

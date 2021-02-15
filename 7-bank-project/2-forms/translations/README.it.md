@@ -282,8 +282,7 @@ Ecco un esempio di come può apparire la pagina di accesso finale dopo l'applica
 
 ## Quiz Post-Lezione
 
-[
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/44)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/44?loc=it)
 
 ## Revisione e Auto Apprendimento
 
