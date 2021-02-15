@@ -211,7 +211,8 @@ Aggiungere un suono! Si può aggiungere un suono per migliorare il gioco, magari
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://nice-b
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/40?loc=it)
+
 ## Revisione e Auto Apprendimento
 
 Il compito è creare un nuovo gioco di esempio, quindi esplorare alcuni dei giochi interessanti esistenti per vedere che tipo di gioco si potrebbe costruire.
