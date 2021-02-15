@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/27)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/27?loc=it)
 
 ### Introduzione
 
@@ -147,7 +147,7 @@ Esaminare alcuni siti web open source che esistono da molto tempo e, in base all
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/28)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/28?loc=it)
 
 ## Revisione e Auto Apprendimento
 

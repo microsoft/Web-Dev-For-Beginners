@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45?loc=it)
 
 ### Introduzione
 
@@ -327,7 +327,7 @@ Ecco un esempio di una pagina cruscotto con applicato uno stile:
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46?loc=it)
 
 ## Compito
 
