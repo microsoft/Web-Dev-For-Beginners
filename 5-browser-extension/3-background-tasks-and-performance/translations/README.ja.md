@@ -22,7 +22,7 @@
 
 ![Edge profiler](../images/profiler.png)
 
-✅ Edge のパフォーマンスパネルの [Microsoft ドキュメント](https://docs.microsoft.com/ja-jp/microsoft-edge/edgehtml/?WT.mc_id=academic-4621-cxa) を参照してください。
+✅ Edge のパフォーマンスパネルの [Microsoft ドキュメント](https://docs.microsoft.com/ja-jp/microsoft-edge/edgehtml/?WT.mc_id=academic-13441-cxa) を参照してください。
 
 > ヒント: Web サイトの起動時間を正確に把握するには、ブラウザのキャッシュをクリアしてください。
 
@@ -60,7 +60,7 @@
 
 `src/index.js` の中で作業し、`calculateColor()` という関数を、DOM にアクセスするために設定した一連の変数 `const` の後に追加します。
 
-```JavaScript
+```javascript
 function calculateColor(value) {
 	let co2Scale = [0, 150, 600, 750, 800];
 	let colors = ['#2AA364', '#F5EB4D', '#9E4229', '#381D02', '#381D02'];
@@ -93,7 +93,7 @@ chrome.runtime には、あらゆる種類のバックグラウンドタスク�
 
 ここで、`init()` 関数の中で、アイコンをジェネリックグリーンに設定して、chrome の `updateIcon` アクションを再度呼び出して起動します。
 
-```JavaScript
+```javascript
 chrome.runtime.sendMessage({
 	action: 'updateIcon',
 		value: {
@@ -105,14 +105,14 @@ chrome.runtime.sendMessage({
 
 次に、C02Signal API が返すプロミスに追加して、先ほど作成した関数を呼び出します。
 
-```JavaScript
+```javascript
 //let CO2...
 calculateColor(CO2);
 ```
 
 最後に、`/dist/background.js` で、これらのバックグラウンドアクションの呼び出し用のリスナーを追加します。
 
-```JavaScript
+```javascript
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	if (msg.action === 'updateIcon') {
 		chrome.browserAction.setIcon({ imageData: drawIcon(msg.value) });

@@ -25,7 +25,7 @@ Think of the DOM as a tree, representing all the ways that a web page document c
 
 In this lesson, we will complete our interactive terrarium project by creating the JavaScript that will allow a user to manipulate the plants on the page.
 
-### Prequisite
+### Prerequisite
 
 You should have the HTML and CSS for your terrarium built. By the end of this lesson you will be able to move the plants into and out of the terrarium by dragging them.
 

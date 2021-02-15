@@ -26,6 +26,6 @@
 
 2. इस बटन को दबाएँ
 
-[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=cxaall-4621-cxall#create/Microsoft.StaticApp)
+[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=WT.mc_id=academic-13441-cxa#create/Microsoft.StaticApp)
 
 3. अपना ऐप बनाने वाले विज़ार्ड के माध्यम से चलें। सुनिश्चित करें कि आपने ऐप रूट को या तो `../solution` या अपने कोडबेस की जड़ के रूप में सेट किया है. इस ऐप में कोई API नहीं है, इसलिए इसे जोड़ने की चिंता न करें. एक .github फोल्डर आपके फोर्क्ड रेपो में बनाया जाएगा जो Azure Static Web Apps की बिल्ड सर्विस बनाने और आपके ऐप को एक नए URL पर प्रकाशित करने में मदद करेगा।

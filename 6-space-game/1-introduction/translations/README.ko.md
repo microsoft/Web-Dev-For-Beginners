@@ -217,7 +217,7 @@ pub-sub 패턴이 어떻게 게임을 발전시킬 수 있는지 생각해보세
 
 ## 리뷰 & 자기주도 학습
 
-[reading about it](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-4621-cxa)으로 Pub/Sub에 대해 조금 더 배워봅시다.
+[reading about it](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa)으로 Pub/Sub에 대해 조금 더 배워봅시다.
 
 ## 과제
 

@@ -111,7 +111,7 @@ navigate('/dashboard');
 
 ✅ Did you know that by default, you can only call server APIs from the *same domain and port* than the web page you are viewing? This is security mechanism enforced by browsers. But wait, our web app is running on `localhost:3000` whereas the server API is running on ` localhost:5000`, why does it work? By using a technique called [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), it is possible to perform cross-origin HTTP requests if the server adds special headers to the response, allowing exceptions for specific domains.
 
-> Learn more about APIs by taking this [lesson](https://docs.microsoft.com/en-us/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-4621-cxa)
+> Learn more about APIs by taking this [lesson](https://docs.microsoft.com/en-us/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-13441-cxa)
 
 ## Update HTML to display data
 

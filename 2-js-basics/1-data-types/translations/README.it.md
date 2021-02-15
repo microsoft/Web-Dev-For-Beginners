@@ -116,13 +116,13 @@ Le variabili possono memorizzare tutti i tipi di numero, inclusi decimali o nume
 
 Esistono diversi tipi di operatori da utilizzare quando si eseguono funzioni aritmetiche e alcuni sono elencati qui:
 
-| Simbolo | Descrizione | Esempio |
-| ------ | ------------------------------------------------------------------------ | -------------------------------- |
-| `+` | **Addizione**: calcola la somma di due numeri | `1 + 2 // la risposta attesa è 3` |
-| `-` | **Sottrazione**: calcola la differenza tra due numeri | `1-2 // la risposta attesa è -1` |
-| `*` | **Moltiplicazione**: calcola il prodotto di due numeri | `1 * 2 // la risposta attesa è 2` |
-| `/` | **Divisione**: calcola il quoziente di due numeri | `1/2 // la risposta attesa è 0,5` |
-| `%` | **Resto**: calcola il resto dalla divisione di due numeri | `1 % 2 // la risposta attesa è 1` |
+| Simbolo | Descrizione                                               | Esempio                           |
+| ------- | --------------------------------------------------------- | --------------------------------- |
+| `+`     | **Addizione**: calcola la somma di due numeri             | `1 + 2 // la risposta attesa è 3` |
+| `-`     | **Sottrazione**: calcola la differenza tra due numeri     | `1-2 // la risposta attesa è -1`  |
+| `*`     | **Moltiplicazione**: calcola il prodotto di due numeri    | `1 * 2 // la risposta attesa è 2` |
+| `/`     | **Divisione**: calcola il quoziente di due numeri         | `1/2 // la risposta attesa è 0,5` |
+| `%`     | **Resto**: calcola il resto dalla divisione di due numeri | `1 % 2 // la risposta attesa è 1` |
 
 ✅ Proviamolo! Provare un'operazione aritmetica nella console del proprio browser. I risultati sorprendono?
 

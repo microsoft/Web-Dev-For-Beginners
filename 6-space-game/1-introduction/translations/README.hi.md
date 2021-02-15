@@ -211,11 +211,11 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## लेक्चर बाद की क्विज
 
-[लेक्चर बाद की क्विज](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30?loc=30)
+[लेक्चर बाद की क्विज](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 
-pub/sub[के बारे में पढ़े](https://docs.microsoft.com/en-us/azure/altecture/patterns/publisher-subscriber?WT.mc_id=academic-4621-cxa) और अधिक जानें .
+pub/sub[के बारे में पढ़े](https://docs.microsoft.com/en-us/azure/altecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa) और अधिक जानें .
 
 ## असाइनमेंट
 

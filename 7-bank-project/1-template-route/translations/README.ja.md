@@ -202,7 +202,7 @@ function updateRoute() {
 
 2番目の部分はすでに `updateRoute` 関数で処理したので、現在の URL を更新する方法を見つけなければなりません。
 
-JavaScript、特に [history.pushState`](https://developer.mozilla.org/ja/docs/Web/API/History/pushState) を使う必要があります。これは HTML をリロードせずに URL を更新して閲覧履歴に新しいエントリを作成することができます。
+JavaScript、特に [`history.pushState`](https://developer.mozilla.org/ja/docs/Web/API/History/pushState) を使う必要があります。これは HTML をリロードせずに URL を更新して閲覧履歴に新しいエントリを作成することができます。
 
 > 注: HTML アンカー要素[`<a href>`](https://developer.mozilla.org/ja/docs/Web/HTML/Element/a)は単独で使用して異なる URL へのハイパーリンクを作成することができますが、ブラウザはデフォルトで HTML をリロードさせることになります。カスタム javascript でルーティングを扱う際には、クリックイベントの preventDefault() 関数を使用して、この動作を防ぐ必要があります。
 
@@ -297,7 +297,7 @@ updateRoute();
 
 ## 復習と自己学習
 
-ルーティングは Web 開発の驚くほどトリッキーな部分の1つで、特に Web がページ更新の動作からシングルページアプリケーションのページ更新へと移行するにつれ、そのような部分が増えてきています。[Azure Static Web Apps プレビューでのルート](https://docs.microsoft.com/ja-jp/azure/static-web-apps/routes?WT.mc_id=academic-4621-cxa)がルーティングを扱うことについて少し読んでみてください。そのドキュメントに記載されているいくつかの決定が必要な理由を説明できますか？
+ルーティングは Web 開発の驚くほどトリッキーな部分の1つで、特に Web がページ更新の動作からシングルページアプリケーションのページ更新へと移行するにつれ、そのような部分が増えてきています。[Azure Static Web Apps プレビューでのルート](https://docs.microsoft.com/ja-jp/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa)がルーティングを扱うことについて少し読んでみてください。そのドキュメントに記載されているいくつかの決定が必要な理由を説明できますか？
 
 ## 課題
 
