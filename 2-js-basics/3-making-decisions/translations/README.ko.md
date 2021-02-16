@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11&loc=ko)
+[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11?loc=ko)
 
 결정을 내리고 코드가 실행되는 순서를 제어하면 코드를 재사용하며 강력하게 만들 수 있습니다. 이 강의에서는 JavaScript에서 데이터 흐름을 제어하기 위한 구문과 논리 자료형 데이터 타입을 함께 사용하는 중요성을 다룹니다.
 
