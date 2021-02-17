@@ -4,20 +4,20 @@ Você gostaria de usar esse curso em sala de aula? Sinta-se livre!
 
 Na verdade, você pode fazer isso com o próprio GitHub, pelo GitHub Classroom.
 
-Para isso, crie um fork desse repositório. Você precisará criar um repositório para cada aula, então extraia cada pasta para um repositório separado. Dessa forma, [GitHub Classroom](https://classroom.github.com/classrooms) pode selecionar cada aula separadamente. 
+Para isso, crie um 'fork' desse repositório. Você precisará criar um repositório para cada aula, então extraia cada pasta para um repositório separado. Dessa forma, o [GitHub Classroom](https://classroom.github.com/classrooms) pode selecionar cada aula separadamente. 
 
 Essas [instruções](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) vão ajudar você a configurar sua sala de aula. 
 
-## Using the repo as is
+## Usando esse repositório
 
-If you would like to use this repo as it currently stands, without using GitHub Classroom, that can be done as well. You would need to communicate with your students which lesson to work through together.
+Caso prefira utilizar esse curso como ele atualmente se apresenta, sem a utilização do GitHub Classroom, também é possível. Você terá que apresentar aos seus alunos qual lição trabalharão juntos.
 
-In an online format (Zoom, Teams, or other) you might form breakout rooms for the quizzes, and mentor students to help them get ready to learn. Then invite students to for the quizzes and submit their answers as 'issues' at a certain time. You might do the same with assignments, if you want students to work collaboratively out in the open.
+Em um formato online (Zoom, Meet, Teams, ou outros) você pode formar salas para os testes, e orientar os alunos para ajudá-los a ficarem prontos para o aprendizado. Convide os para os testes e submita as respostas deles como 'issues'. Você pode fazer o mesmo com os exercícios, caso queira que os alunos trabalhem de forma colaborativa na comunidade.
 
-If you prefer a more private format, ask your students to fork the curriculum, lesson by lesson, to their own GitHub repos as private repos, and give you access. Then they can complete quizzes and assignments privately and submit them to you via issues on your classroom repo.
+Se um formato mais privado for melhor, peça para que os alunos criem um 'fork' desse repositório, aula por aula, para os seus próprios GitHub como repositórios privados, e para que te deem acesso. Assim eles podem completar os testes de forma privada e submeter a você via 'issues' em um repositório da sala.
 
-There are many ways to make this work in an online classroom format. Please let us know what works best for you!
+Existem várias maneiras para realizar esse curso de forma online. Nos conte qual delas funciona melhor para você!
 
-## Please give us your thoughts!
+## Queremos saber sua opinião!
 
-We want to make this curriculum work for you and your students. Please give us [feedback](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
+Queremos que esse curso funcione para você e seus alunos. Por favor, deixe um [feedback](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
