@@ -1,43 +1,43 @@
 
 # Desenvolvimento Web para iniciantes - Curso
-Os membros da Azure Cloud  na Microsoft estão muito contentes em oferecer um curso de 12 semanas e 14 aulas todo sobre JavaScript, CSS, e HTML básico. Cada lição conta com testes para serem feitos antes e depois, instruções escritas para completar a lição, uma solução, exercícios e mais. Nossa metodologia permite que você aprenda enquanto cria, uma maneira já testada para construir novas habilidades.
+Os membros do Azure Cloud Advocates na Microsoft estamos muito contentes em oferecer um curso/currículo de 12 semanas e 24 aulas sobre JavaScript, CSS, e HTML básico. Cada lição possui perguntas a serem realizados antes e depois, instruções para completar a lição, uma solução, exercícios e muito mais. Nossa metodologia permitirá que você aprenda enquanto cria uma maneira comprovada para desenvolver novas habilidades.
 
 **Um grande agradecimento aos nossos autores Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, e à artista gráfica Tomomi Imura!**
 
-> **Professores**, nós [incluimos algumas sugestões](../for-teachers.md) sobre como utilizar esse curso. Caso queiram criar suas próprias lições, também criamos um [modelo.](../lesson-template/README.md)
+> **Professores**: nós [incluimos algumas sugestões](../for-teachers.md) sobre como utilizar esse curso. Caso desejam criar suas próprias lições, também criamos um [modelo.](../lesson-template/README.md)
 
-> **Alunos**, para usar esse curso, crie uma bifurcação (fork) de todo o repositório e faça os exercícios, respondendo primeiro o teste pré leitura, e então leia o material e complete as atividades restantes. Dê preferência para criar os projetos de acordo com o seu entendimento das atividades ao invés de copiar o código de solução; no entanto esse código está disponível nas pastas /solutions em cada atividade orientada a projeto. Para mais estudos, recomendamos o [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa) e o acompanhamento dos vídeos mencionados abaixo.
+> **Alunos**: para usar esse curso/currículo, birfuque (fazer um fork) de todo o repositório e faça os exercícios, respondendo primeiro o teste pré leitura, e então leia o material e complete as atividades restantes. Dê preferência para criar os projetos de acordo com o seu entendimento das atividades ao invés de copiar o código de solução. No entanto, o código já está disponível na pasta /solutions em cada atividade orientada ao projeto. Para mais estudos, recomendamos o [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa) e o acompanhamento dos vídeos mencionados abaixo.
 
 [![Promo video](../screenshot.png)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
 
-> Clique na imagem acima para um vídeo sobre o projeto e o pessoal que criou ele!
+> Clique na imagem acima para um vídeo sobre o projeto e saber mais ao pessoal que criou!
 
 ## Metodologia
 
-Nós escolhemos duas premissas metodológicas enquanto estávamos elaborando esse curso: garantir que é baseado em projetos e que inclui testes constantes. No final dessa etapa, os estudantes terão criado um jogo de digitação, um terrário virtual, uma extensão de navegador 'verde', um jogo no estilo 'Space Invaders', e um tipo de aplicativo de negócios bancários, além de aprender o básico de JavaScript, HTML e CSS junto com uma moderna seleção de ferramentas do desenvolvimento web atual.
+Nós escolhemos dois princípios metodológicos enquanto estávamos elaborando esse curso: garantir que seja baseado em projetos e que inclua questionários frequentes. No final dessa etapa, os(as) estudantes terão desenvolvido um jogo de digitação, um terrário virtual, uma extensão de navegador 'verde', um jogo no estilo 'Space Invaders' e um tipo de aplicação de negócios bancários. Além disso, você aprenderá o básico de JavaScript, HTML e CSS junto com uma moderna seleção de ferramentas do desenvolvimento web atual.
 
-Garantindo que o conteúo alinha-se com os projetos, o processo é mais atrativo para os alunos e a retenção dos conceitos será mais eficaz. Além disso, nós também escrevemos diversas lições iniciais em JavaScript básico para introduzir conceitos, em conjunto com a coleção de vídeos tutoriais disponíveis em "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-13441-cxa)" cujo alguns autores contribuiram para esse curso.
+Garantindo que o conteúdo seja alinhado com os projetos, o processo é mais atrativo para os(as) alunos(as) e a retenção dos conceitos será mais eficaz. Além disso, nós também escrevemos diversas lições iniciais em JavaScript básico para introduzir conceitos, em conjunto com a coleção de vídeos tutoriais disponíveis em "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-13441-cxa)" cujo alguns autores contribuiram para esse curso/currículo.
 
-Ademais, um teste mais básico antes da aula coloca na intenção do aluno o aprendizado de um tópico, enquanto um segundo teste depois da aula garante maior retenção. Esse curso foi elaborado para ser flexível e divertido, podendo ser feito inteiramente ou em partes. Os projetos iniciam-se pequenos e se tornam gradatiavamente mais complexos ao fim do ciclo de 12 semanas.
+Além disso, um teste mais básico antes da aula, com a intenção de auxiliar o/a aluno(a) em um determinado tópico. Enquanto um segundo teste depois da aula garantirá uma maior retenção. Esse curso foi elaborado para ser flexível e divertido, podendo ser feito inteiramente ou em partes. Os projetos iniciam-se pequenos e se tornam gradatiavamente mais complexos ao fim do ciclo de 12 semanas.
 
-Como evitamos propositalmente introduzir os frameworks de Javascript para concentrar nas habilidades básicas necessárias de um desenvolvedor web, um bom próximo passo para complementar esse curso seria aprender sobre Node.js por meio de outra coleção de vídeos tutorias: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-13441-cxa)".
+Como evitamos propositalmente introduzir os frameworks de Javascript para concentrar nas habilidades básicas necessárias de uma Pessoa Desenvolvedora, um bom próximo passo para complementar esse curso seria aprender sobre Node.js por meio de uma outra coleção de vídeos tutorias: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-13441-cxa)".
 
->Acesse nosso [Código de Conduta](../CODE_OF_CONDUCT.md), [Contribuição](../CONTRIBUTING.md), e [Guia de Tradução](../TRANSLATIONS.md). Seu feedback construtivo é bem-vindo!
->
+> Acesse o nosso [Código de Conduta](../CODE_OF_CONDUCT.md), [Contribuição](../CONTRIBUTING.md) e o [Guia de Tradução](../TRANSLATIONS.md). Seu feedback serpa é bem-vindo(a)!
+
 ## Cada aula inclui:
 
 - mapa mental opcional
 - vídeo complementar opcional
-- pré-teste de aquecimento
+- um pré-teste de aquecimento
 - aula escrita
 - para aulas baseadas em projetos, guias de como fazer o projeto passo a passo
-- verificadores de conteúdo
+- verificação de conhecimento do conteúdo
 - um desafio
 - leitura complementar
 - exercício
 - teste pós-aula
 
-> **Observação sobre testes**: Todos os testes estão contidos [nesse app](https://nice-beach-0fe9e9d0f.azurestaticapps.net/), em um total de 48 testes de três perguntas cada. Eles são linkados dentre as aulas mas seu app pode ser executado separadamente; siga as instruções na pasta `quiz-app`. Eles estão gradualmente sendo localizados.
+> **Observação sobre testes**: Todos os testes estão contidos [nessa aplicação](https://nice-beach-0fe9e9d0f.azurestaticapps.net/), com um total de 48 testes de três perguntas cada. Eles são vinculador nas aulas. Mas, a aplicação pode ser executado localmente. Com isso, siga as instruções na pasta `quiz-app`. Eles estão gradualmente sendo localizados.
 
 ## Aulas
 
