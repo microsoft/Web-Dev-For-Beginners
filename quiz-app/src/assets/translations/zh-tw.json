@@ -6,7 +6,7 @@
 		"quizzes": [
 			{
 				"id": 1,
-				"title": "課程一 - 程式語言簡介：課前測驗",
+				"title": "課程一 - 程式語言概論：課前測驗",
 				"quiz": [
 					{
 						"questionText": "開發人員可在不編寫程式碼的情況下產生程式。",
@@ -95,7 +95,7 @@
 						"questionText": "開發人員會如何修正錯誤的程式碼?",
 						"answerOptions": [
 							{
-								"answerText": "語法凸顯",
+								"answerText": "語法突顯",
 								"isCorrect": "false"
 							},
 							{
@@ -149,7 +149,7 @@
 						]
 					},
 					{
-						"questionText": "如何確認電腦內是否有安裝git?",
+						"questionText": "如何確認電腦內是否有安裝 git?",
 						"answerOptions": [
 							{
 								"answerText": "輸入 git --version",
@@ -172,7 +172,7 @@
 				"title": "課程二 - GitHub簡介：課後測驗",
 				"quiz": [
 					{
-						"questionText": "下列何者能確認同一分支內不同的審查、評論、測試……等?",
+						"questionText": "下列何者能確認同一分支內不同更動的審查、評論、測試……等?",
 						"answerOptions": [
 							{
 								"answerText": "GitHub",
@@ -189,7 +189,7 @@
 						]
 					},
 					{
-						"questionText": "如何從雲端數據庫中取得所有的提交?",
+						"questionText": "如何從遠端數據庫中取得所有的提交?",
 						"answerOptions": [
 							{
 								"answerText": "git fetch",
@@ -209,15 +209,15 @@
 						"questionText": "如何切換分支?",
 						"answerOptions": [
 							{
-								"answerText": "git switch [branch-name]",
+								"answerText": "git switch [分支名稱]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [branch-name]",
+								"answerText": "git checkout [分支名稱]",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "git load [branch-name]",
+								"answerText": "git load [分支名稱]",
 								"isCorrect": "false"
 							}
 						]
@@ -291,7 +291,7 @@
 						]
 					},
 					{
-						"questionText": "Color-safe 色彩工具可以幫助到：",
+						"questionText": "安全的配色可以幫助到：",
 						"answerOptions": [
 							{
 								"answerText": "色盲",
