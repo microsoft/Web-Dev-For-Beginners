@@ -4,7 +4,7 @@
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz pre-lezione
-[Quiz pre-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7)
+[Quiz pre-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7?loc=it)
 
 Questa lezione copre le basi di JavaScript, il linguaggio che fornisce l'interattività sul web.
 
@@ -116,13 +116,13 @@ Le variabili possono memorizzare tutti i tipi di numero, inclusi decimali o nume
 
 Esistono diversi tipi di operatori da utilizzare quando si eseguono funzioni aritmetiche e alcuni sono elencati qui:
 
-| Simbolo | Descrizione | Esempio |
-| ------ | ------------------------------------------------------------------------ | -------------------------------- |
-| `+` | **Addizione**: calcola la somma di due numeri | `1 + 2 // la risposta attesa è 3` |
-| `-` | **Sottrazione**: calcola la differenza tra due numeri | `1-2 // la risposta attesa è -1` |
-| `*` | **Moltiplicazione**: calcola il prodotto di due numeri | `1 * 2 // la risposta attesa è 2` |
-| `/` | **Divisione**: calcola il quoziente di due numeri | `1/2 // la risposta attesa è 0,5` |
-| `%` | **Resto**: calcola il resto dalla divisione di due numeri | `1 % 2 // la risposta attesa è 1` |
+| Simbolo | Descrizione                                               | Esempio                           |
+| ------- | --------------------------------------------------------- | --------------------------------- |
+| `+`     | **Addizione**: calcola la somma di due numeri             | `1 + 2 // la risposta attesa è 3` |
+| `-`     | **Sottrazione**: calcola la differenza tra due numeri     | `1-2 // la risposta attesa è -1`  |
+| `*`     | **Moltiplicazione**: calcola il prodotto di due numeri    | `1 * 2 // la risposta attesa è 2` |
+| `/`     | **Divisione**: calcola il quoziente di due numeri         | `1/2 // la risposta attesa è 0,5` |
+| `%`     | **Resto**: calcola il resto dalla divisione di due numeri | `1 % 2 // la risposta attesa è 1` |
 
 ✅ Proviamolo! Provare un'operazione aritmetica nella console del proprio browser. I risultati sorprendono?
 
@@ -184,7 +184,7 @@ I  booleani possono avere solo due valori: vero (`true`) o falso (`false`). I bo
 JavaScript è noto per i suoi modi sorprendenti di gestire talvolta i tipi di dato. Effettuare un po' di ricerca su questi "trabocchetti". Ad esempio: la distinzione tra maiuscole e minuscole può mordere! Provare questo nella propria console: `let age = 1; let Age = 2; age == Age` (risulta `false` - perché?). Quali altri trabocchetti si riescono a trovare?
 
 ## quiz post-lezione
-[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8?loc=it)
 
 ## Revisione e auto apprendimento
 

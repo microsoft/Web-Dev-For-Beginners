@@ -5,7 +5,7 @@
 
 ## Quiz pre-lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/9)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/9?loc=it)
 
 Quando si pensa di scrivere codice, ci si vuole sempre assicurare che il proprio codice sia leggibile. Anche se questo sembra controintuitivo, il codice viene letto molte più volte di quanto non venga scritto. Uno strumento base nella cassetta degli attrezzi dello sviluppatore è la **funzione**
 
@@ -184,7 +184,7 @@ Si riesce ad articolare in una frase la differenza tra funzioni e metodi? Fare u
 
 ## Quiz post-lezione
 
-[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/10)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/10?loc=it)
 
 ## Revisione e auto apprendimento
 
