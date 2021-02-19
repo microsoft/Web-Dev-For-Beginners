@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/21)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/21?loc=it)
 
 ## Programmazione guidata dagli eventi
 
@@ -328,7 +328,7 @@ Aggiungere più funzionalità
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/22)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/22?loc=it)
 
 ## Revisione e Auto Apprendimento
 

@@ -29,7 +29,7 @@
 
 クラスに特定の振る舞いを追加するために `クラス` を `継承` と組み合わせて使うという考え方です。
 
-✅ 継承は理解しておくべき重要な概念です。[継承に関する MdN の記事](https://developer.mozilla.org/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)で詳しく解説しています。
+✅ 継承は理解しておくべき重要な概念です。[継承に関する MDN の記事](https://developer.mozilla.org/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)で詳しく解説しています。
 
 コードで表現すると、ゲームオブジェクトは通常このようになります。
 
@@ -136,7 +136,7 @@ const tree = createStatic(0,0, 'Tree');
 
 ゲーム開発に共通するもう一つのパターンは、ゲームのユーザーエクスペリエンスとパフォーマンスを処理する問題を扱っています。
 
-## Pub/sub パターン
+## Pub/Sub パターン
 
 ✅ Pub/Sub は 'publish-subscribe' の略です。
 

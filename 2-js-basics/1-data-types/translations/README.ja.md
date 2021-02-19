@@ -1,6 +1,6 @@
 # JavaScript の基本: データ型
 
-![JavaScript Basics - Data types](images/webdev101-js-datatypes.png)
+![JavaScript Basics - Data types](../images/webdev101-js-datatypes.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト
@@ -111,7 +111,7 @@ const MY_VARIABLE = 123;
 
 `let myVariable = 123;`
 
-変数は、小数や負の数を含むあらゆるタイプの数値を格納することができます。数値は、[次のセクション](#operators)で説明する算術演算子と一緒に使用することもできます。
+変数は、小数や負の数を含むあらゆるタイプの数値を格納することができます。数値は、[次のセクション](#算術演算子)で説明する算術演算子と一緒に使用することもできます。
 
 ### 算術演算子
 
@@ -171,7 +171,7 @@ let myString2 = "World";
 
 ### ブール値
 
-ブール値は2つの値だけを持つことができます。`true` か `false` です。ブール値は、特定の条件が満たされたときにどの行のコードを実行するかを決定するのに役立ちます。多くの場合、[演算子](#operators) がブール値の設定を支援し、変数が初期化されたり、演算子で値が更新されたりしていることに気付いたり、書いたりすることが多いでしょう。
+ブール値は2つの値だけを持つことができます。`true` か `false` です。ブール値は、特定の条件が満たされたときにどの行のコードを実行するかを決定するのに役立ちます。多くの場合、[演算子](#算術演算子) がブール値の設定を支援し、変数が初期化されたり、演算子で値が更新されたりしていることに気付いたり、書いたりすることが多いでしょう。
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
