@@ -8,7 +8,7 @@
 
 > **学生の皆さん**、このカリキュラムを自分で使うためには、リポジトリ全体をフォークして、講義前の小テストから始めて、講義を読んで、残りのアクティビティを自分で完成させてください。解答コードは各レッスンの /solutions フォルダにありますが、解答コードをコピーするのではなく、授業を理解した上でプロジェクトを作成するようにしてください。また、友達と勉強会を作って、一緒に勉強するのもいいでしょう。さらに勉強するには、[Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa) や以下のビデオを見ることをお勧めします。
 
-[![Promo video](screenshot.png)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
+[![Promo video](../screenshot.png)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
 
 > 上の画像をクリックすると、プロジェクトとそれを作成した人々についてのビデオを見ることができます。
 

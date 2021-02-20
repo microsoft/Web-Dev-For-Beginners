@@ -202,7 +202,7 @@ function updateRoute() {
 
 2番目の部分はすでに `updateRoute` 関数で処理したので、現在の URL を更新する方法を見つけなければなりません。
 
-JavaScript、特に [history.pushState`](https://developer.mozilla.org/ja/docs/Web/API/History/pushState) を使う必要があります。これは HTML をリロードせずに URL を更新して閲覧履歴に新しいエントリを作成することができます。
+JavaScript、特に [`history.pushState`](https://developer.mozilla.org/ja/docs/Web/API/History/pushState) を使う必要があります。これは HTML をリロードせずに URL を更新して閲覧履歴に新しいエントリを作成することができます。
 
 > 注: HTML アンカー要素[`<a href>`](https://developer.mozilla.org/ja/docs/Web/HTML/Element/a)は単独で使用して異なる URL へのハイパーリンクを作成することができますが、ブラウザはデフォルトで HTML をリロードさせることになります。カスタム javascript でルーティングを扱う際には、クリックイベントの preventDefault() 関数を使用して、この動作を防ぐ必要があります。
 
