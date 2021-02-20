@@ -324,10 +324,10 @@
 			},
 			{
 				"id": 7,
-				"title": "課程四 - JavaScript 基礎 - 資料類態：課前測驗",
+				"title": "課程四 - JavaScript 入門 - 資料型態：課前測驗",
 				"quiz": [
 					{
-						"questionText": "布林值是檢查字串的長度的資料型態。",
+						"questionText": "布林是檢查字串的長度的資料型態。",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -373,7 +373,7 @@
 			},
 			{
 				"id": 8,
-				"title": "課程四 - JavaScript 基礎 - 資料類態：課後測驗",
+				"title": "課程四 - JavaScript 入門 - 資料型態：課後測驗",
 				"quiz": [
 					{
 						"questionText": "常數與 let 和 var 宣告的變數相同，除了：",
@@ -426,7 +426,7 @@
 			},
 			{
 				"id": 9,
-				"title": "課程五 - JavaScript 基礎 - 函式與方法：課前測驗",
+				"title": "課程五 - JavaScript 入門 - 函式與方法：課前測驗",
 				"quiz": [
 					{
 						"questionText": "什麼是引數物件?",
@@ -479,7 +479,7 @@
 			},
 			{
 				"id": 10,
-				"title": "課程五 - JavaScript 基礎 - 函式與方法：課後測驗",
+				"title": "課程五 - JavaScript 入門 - 函式與方法：課後測驗",
 				"quiz": [
 					{
 						"questionText": "引數物件必須提供函式需要的所有參數。",
@@ -532,7 +532,7 @@
 			},
 			{
 				"id": 11,
-				"title": "課程六 - JavaScript 基礎 - 在代碼中做出決定：課前測驗",
+				"title": "課程六 - JavaScript 入門 - 做出決定：課前測驗",
 				"quiz": [
 					{
 						"questionText": "運算子 == 的運算為：",
@@ -555,7 +555,7 @@
 						"questionText": "在 JavaScript 中，比較式後回傳的資料型態為?",
 						"answerOptions": [
 							{
-								"answerText": "布林值",
+								"answerText": "布林",
 								"isCorrect": "true"
 							},
 							{
@@ -572,7 +572,7 @@
 						"questionText": "在 JavaScript 中，符號 ! 代表：",
 						"answerOptions": [
 							{
-								"answerText": "邏輯否定",
+								"answerText": "邏輯非",
 								"isCorrect": "true"
 							},
 							{
@@ -589,7 +589,7 @@
 			},
 			{
 				"id": 12,
-				"title": "課程六 - JavaScript 基礎 - 在代碼中做出決定：課後測驗",
+				"title": "課程六 - JavaScript 入門 - 做出決定：課後測驗",
 				"quiz": [
 					{
 						"questionText": "條件式 '1' == 1 會回傳下列何種結果?",
@@ -646,7 +646,7 @@
 			},
 			{
 				"id": 13,
-				"title": "課程七 - JavaScript 基礎 - 矩陣與迴圈：課前測驗",
+				"title": "課程七 - JavaScript 入門 - 矩陣與迴圈：課前測驗",
 				"quiz": [
 					{
 						"questionText": "如果要提出矩陣中特定的元素，必須使用：",
@@ -703,7 +703,7 @@
 			},
 			{
 				"id": 14,
-				"title": "課程七 - JavaScript 基礎 - 矩陣與迴圈：課後測驗",
+				"title": "課程七 - JavaScript 入門 - 矩陣與迴圈：課後測驗",
 				"quiz": [
 					{
 						"questionText": "在 for-loop 迴圈中，需要修改何處來增加迭代次數到5次?",
