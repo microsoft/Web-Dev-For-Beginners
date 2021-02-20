@@ -762,11 +762,11 @@
 						"questionText": "HTML bermaksud 'HyperText Mockup Language'",
 						"answerOptions": [
 							{
-								"answerText": "benar",
+								"answerText": "true",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "salah",
+								"answerText": "false",
 								"isCorrect": "true"
 							}
 						]
@@ -775,11 +775,11 @@
 						"questionText": "Semua tag HTML memerlukan tag pembuka dan penutup",
 						"answerOptions": [
 							{
-								"answerText": "benar",
+								"answerText": "true",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "salah",
+								"answerText": "false",
 								"isCorrect": "true"
 							}
 						]
@@ -811,11 +811,11 @@
 						"questionText": "Span dan Div boleh ditukar ganti",
 						"answerOptions": [
 							{
-								"answerText": "benar",
+								"answerText": "true",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "salah",
+								"answerText": "false",
 								"isCorrect": "true"
 							}
 						]
@@ -841,11 +841,11 @@
 						"questionText": "Anda tidak boleh menggunakan teg yang tidak digunakan dalam markup anda",
 						"answerOptions": [
 							{
-								"answerText": "benar",
+								"answerText": "true",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "salah",
+								"answerText": "false",
 								"isCorrect": "false"
 							},
 							{
@@ -858,10 +858,10 @@
 			},
 			{
 				"id": 17,
-				"title": "Lesson 9  - Terrarium Project - Introduction to CSS: Pre-Lecture Quiz",
+				"title": "Pelajaran 9 - Projek Terrarium - Pengenalan kepada CSS: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "HTML elements must have either a class or an id in order to be styled",
+						"questionText": "Elemen HTML mesti mempunyai kelas atau id untuk digayakan",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -874,7 +874,7 @@
 						]
 					},
 					{
-						"questionText": "CSS stands for 'Complete Style Sheets'",
+						"questionText": "CSS bermaksud 'Complete Style Sheets'",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -903,10 +903,10 @@
 			},
 			{
 				"id": 18,
-				"title": "Lesson 9 - Terrarium Project - Introduction to CSS: Post-Lecture Quiz",
+				"title": "Pelajaran 9 - Projek Terrarium - Pengenalan kepada CSS: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "You can write CSS directly in the head section of your HTML file",
+						"questionText": "Anda boleh menulis CSS secara langsung di bahagian utama fail HTML anda",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -919,7 +919,7 @@
 						]
 					},
 					{
-						"questionText": "It's always necessary to include CSS in your app",
+						"questionText": "Selalu perlu memasukkan CSS dalam aplikasi anda",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -930,24 +930,24 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false, but if you want it to look good you probably need CSS",
+								"answerText": "false, tetapi jika anda mahu ia kelihatan baik, anda mungkin memerlukan CSS",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Which browser tool can be used to inspect CSS?",
+						"questionText": "Alat penyemak imbas mana yang boleh digunakan untuk memeriksa CSS?",
 						"answerOptions": [
 							{
-								"answerText": "Elements",
+								"answerText": "Elemen",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Styles",
+								"answerText": "Gaya",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Network",
+								"answerText": "Rangkaian",
 								"isCorrect": "false"
 							}
 						]
@@ -956,10 +956,10 @@
 			},
 			{
 				"id": 19,
-				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Pre-Lecture Quiz",
+				"title": "Pelajaran 10 - Projek Terrarium - Manipulasi DOM dan Penutupan: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "The DOM stands for 'Document Object Management'",
+						"questionText": "DOM bermaksud 'Document Object Management'",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -972,7 +972,7 @@
 						]
 					},
 					{
-						"questionText": "The DOM can be thought of as a tree",
+						"questionText": "DOM boleh dianggap sebagai pokok",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -985,7 +985,7 @@
 						]
 					},
 					{
-						"questionText": "Using the Web API, you can manipulate the DOM",
+						"questionText": "Dengan menggunakan Web API, anda boleh memanipulasi DOM",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1001,10 +1001,10 @@
 			},
 			{
 				"id": 20,
-				"title": "Lesson 10 - Terrarium Project - DOM Manipulation and a Closure: Post-Lecture Quiz",
+				"title": "Pelajaran 10 - Projek Terrarium - Manipulasi DOM dan Penutupan: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "The DOM is a model to represent a document on the web",
+						"questionText": "DOM adalah model untuk mewakili dokumen di web",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1017,35 +1017,35 @@
 						]
 					},
 					{
-						"questionText": "Use JavaScript closures to perform the following:",
+						"questionText": "Gunakan penutupan JavaScript untuk melakukan perkara berikut:",
 						"answerOptions": [
 							{
-								"answerText": "write functions within functions",
+								"answerText": "menulis fungsi dalam fungsi",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "enclose the DOM",
+								"answerText": "sertakan DOM",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "close script blocks",
+								"answerText": "tutup blok skrip",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Fill in the blank: Closures are useful when one or more functions need to access an outer function's...",
+						"questionText": "Isi tempat kosong: Penutupan berguna apabila satu atau lebih fungsi perlu mengakses fungsi luar ...",
 						"answerOptions": [
 							{
-								"answerText": "arrays",
+								"answerText": "tatasusunan(array)",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "scope",
+								"answerText": "skop",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "functions",
+								"answerText": "fungsi",
 								"isCorrect": "false"
 							}
 						]
@@ -1054,48 +1054,48 @@
 			},
 			{
 				"id": 21,
-				"title": "Lesson 11 - Typing Game: Pre-Lecture Quiz",
+				"title": "Pelajaran 11 - Permainan Menaip: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "Event-driven programming is when a user",
+						"questionText": "Pengaturcaraan berdasarkan acara adalah ketika pengguna",
 						"answerOptions": [
 							{
-								"answerText": "clicks on a button",
+								"answerText": "klik pada butang",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "changes a value",
+								"answerText": "mengubah nilai",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "interacts with the page",
+								"answerText": "berinteraksi dengan halaman",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "any of the above",
+								"answerText": "mana-mana perkara di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "In procedural programming, functions are called",
+						"questionText": "Dalam pengaturcaraan prosedur, fungsi dipanggil",
 						"answerOptions": [
 							{
-								"answerText": "any time",
+								"answerText": "bila-bila masa",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "in a specific order",
+								"answerText": "mengikut urutan tertentu",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "left to right",
+								"answerText": "kiri ke kanan",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The universal method exposed in the DOM for registering event handlers is called",
+						"questionText": "Kaedah universal yang dinyatakan dalam DOM untuk mendaftar pengendali acara dipanggil",
 						"answerOptions": [
 							{
 								"answerText": "addEventListener",
@@ -1115,10 +1115,10 @@
 			},
 			{
 				"id": 22,
-				"title": "Lesson 11 - Typing Game: Post-Lecture Quiz",
+				"title": "Pelajaran 11 - Permainan Menaip: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "Just about anything a user does on a page raises an event",
+						"questionText": "Apa sahaja yang dilakukan pengguna di halaman menimbulkan peristiwa",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1131,7 +1131,7 @@
 						]
 					},
 					{
-						"questionText": "Common events include",
+						"questionText": "Acara biasa merangkumi",
 						"answerOptions": [
 							{
 								"answerText": "click_event",
@@ -1146,13 +1146,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "all of these",
+								"answerText": "semua di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can use anonymous functions to create event handlers",
+						"questionText": "Anda boleh menggunakan fungsi tanpa nama untuk membuat pengendali acara",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1168,27 +1168,27 @@
 			},
 			{
 				"id": 23,
-				"title": "Lesson 12 - Browser Extension Project - All about Browsers: Pre-Lecture Quiz",
+				"title": "Pelajaran 12 - Projek Penyambungan Penyemak Imbas - Semua mengenai Penyemak Imbas: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "You can get browser extensions from",
+						"questionText": "Anda boleh mendapatkan pelanjutan penyemak imbas dari",
 						"answerOptions": [
 							{
 								"answerText": "WalMart",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "The browser's extension store",
+								"answerText": "Kedai pelanjutan penyemak imbas",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "The App store",
+								"answerText": "App store",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "NPM stands for",
+						"questionText": "NPM bermaksud",
 						"answerOptions": [
 							{
 								"answerText": "Node Package Manager",
@@ -1205,7 +1205,7 @@
 						]
 					},
 					{
-						"questionText": "Your browser can serve web pages both securely and insecurely",
+						"questionText": "Penyemak imbas anda dapat melayani laman web dengan selamat dan tidak selamat",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1221,10 +1221,10 @@
 			},
 			{
 				"id": 24,
-				"title": "Lesson 12 -  Browser Extension Project - All about Browsers: Post-Lecture Quiz",
+				"title": "Pelajaran 12 - Projek Penyambungan Penyemak Imbas - Semua mengenai Penyemak Imbas: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "The World Wide Web was invented by",
+						"questionText": "World Wide Web dicipta oleh",
 						"answerOptions": [
 							{
 								"answerText": "Tom Barnard-Loft",
@@ -1241,7 +1241,7 @@
 						]
 					},
 					{
-						"questionText": "The first browser was called",
+						"questionText": "Penyemak imbas pertama dipanggil",
 						"answerOptions": [
 							{
 								"answerText": "WorldWideWeb",
@@ -1258,7 +1258,7 @@
 						]
 					},
 					{
-						"questionText": "Browsers can store a user's browsing history",
+						"questionText": "Penyemak imbas boleh menyimpan sejarah penyemakan imbas pengguna",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1274,10 +1274,10 @@
 			},
 			{
 				"id": 25,
-				"title": "Lesson 13 - Browser Extension Project - Call an API, use Local Storage: Pre-Lecture Quiz",
+				"title": "Pelajaran 13 - Projek Penyambungan Penyemak Imbas - Panggil API, gunakan Penyimpanan Tempatan: Kuiz Pra-Kuliah",
 				"quiz": [
 					{
-						"questionText": "APIs stand for",
+						"questionText": "APIs bremaksud",
 						"answerOptions": [
 							{
 								"answerText": "Application Programming Interfaces",
@@ -1294,24 +1294,24 @@
 						]
 					},
 					{
-						"questionText": "Use an API to interact with",
+						"questionText": "Gunakan API untuk berinteraksi",
 						"answerOptions": [
 							{
-								"answerText": "Another web-connected asset",
+								"answerText": "Aset lain yang disambungkan ke web",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A database",
+								"answerText": "Pangkalan data",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Either of the above",
+								"answerText": "Salah satu perkara di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Anyone can create an API",
+						"questionText": "Sesiapa sahaja boleh membuat API",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1327,10 +1327,10 @@
 			},
 			{
 				"id": 26,
-				"title": "Lesson 13 - Browser Extension Project - Call an API, use Local Storage: Post-Lecture Quiz",
+				"title": "Pelajaran 13 - Projek Penyambungan Penyemak Imbas - Panggil API, gunakan Penyimpanan Tempatan: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "LocalStorage is cleared every time you close the browser window",
+						"questionText": "LocalStorage dibersihkan setiap kali anda menutup tetingkap penyemak imbas",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1343,7 +1343,7 @@
 						]
 					},
 					{
-						"questionText": "The main browser window controls a browser's extension's LocalStorage",
+						"questionText": "Tetingkap penyemak imbas utama mengawal LocalStorage pelanjutan penyemak imbas",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1356,7 +1356,7 @@
 						]
 					},
 					{
-						"questionText": "REST in an API context stands for",
+						"questionText": "REST dalam konteks API bermaksud",
 						"answerOptions": [
 							{
 								"answerText": "Representational State Transfer",
@@ -1376,55 +1376,55 @@
 			},
 			{
 				"id": 27,
-				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Pre-Lecture Quiz",
+				"title": "Pelajaran 14 - Projek Sambungan Penyemak Imbas - Ketahui mengenai Tugas dan Prestasi Latar Belakang: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "Test the performance of your app",
+						"questionText": "Uji prestasi aplikasi anda",
 						"answerOptions": [
 							{
-								"answerText": "Using the browser's tools",
+								"answerText": "Menggunakan alat penyemak imbas",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Using a separate software package",
+								"answerText": "Menggunakan pakej perisian yang berasingan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Manually",
+								"answerText": "Secara manual",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The 'performance' of a web site is an analysis of",
+						"questionText": "Prestasi' laman web adalah analisis mengenai",
 						"answerOptions": [
 							{
-								"answerText": "How fast it loads",
+								"answerText": "Berapa cepat ia memuatkan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "How fast the code on it runs",
+								"answerText": "Seberapa pantas kod di dalamnya berjalan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Both of the above",
+								"answerText": "Kedua-dua di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Overall, the 'weight' of web pages over the past few years has",
+						"questionText": "Secara keseluruhan, 'berat' laman web sejak beberapa tahun kebelakangan ini",
 						"answerOptions": [
 							{
-								"answerText": "gotten lighter",
+								"answerText": "semakin ringan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "gotten heavier",
+								"answerText": "semakin berat",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "stayed the same",
+								"answerText": "sama",
 								"isCorrect": "false"
 							}
 						]
@@ -1433,10 +1433,10 @@
 			},
 			{
 				"id": 28,
-				"title": "Lesson 14 - Browser Extension Project - Learn about Background Tasks and Performance: Post-Lecture Quiz",
+				"title": "Pelajaran 14 - Projek Pelanjutan Penyemak Imbas - Ketahui mengenai Tugas dan Prestasi Latar Belakang: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "To get a better view of your site's performance, clear its cache and reload in the profiler",
+						"questionText": "Untuk mendapatkan gambaran yang lebih baik mengenai prestasi laman web anda, kosongkan cache dan muatkan semula profiler tersebut",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1449,7 +1449,7 @@
 						]
 					},
 					{
-						"questionText": "Browser extensions are inherently performant",
+						"questionText": "Sambungan penyemak imbas sememangnya berprestasi",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1462,7 +1462,7 @@
 						]
 					},
 					{
-						"questionText": "Analyze the following for performance bottlenecks",
+						"questionText": "Analisis yang berikut untuk masalah prestasi",
 						"answerOptions": [
 							{
 								"answerText": "DOM traversals",
@@ -1477,7 +1477,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All the above",
+								"answerText": "Semua di atas",
 								"isCorrect": "true"
 							}
 						]
@@ -1486,10 +1486,10 @@
 			},
 			{
 				"id": 29,
-				"title": "Lesson 15 - Space Game - Introduction: Pre-Lecture Quiz",
+				"title": "Pelajaran 15 - Permainan Angkasa - Pengenalan: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "JavaScript is an unpopular language for building games",
+						"questionText": "JavaScript adalah bahasa yang tidak popular untuk membina permainan",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1502,7 +1502,7 @@
 						]
 					},
 					{
-						"questionText": "Pub/Sub is a preferred pattern for managing the game's assets and flow",
+						"questionText": "Pub / Sub adalah corak pilihan untuk menguruskan aset dan aliran permainan",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1515,7 +1515,7 @@
 						]
 					},
 					{
-						"questionText": "Object inheritance can be handled by either using classes or composition",
+						"questionText": "Pewarisan objek dapat dikendalikan dengan menggunakan kelas atau komposisi",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1531,10 +1531,10 @@
 			},
 			{
 				"id": 30,
-				"title": "Lesson 15 - Space Game - Introduction: Post-Lecture Quiz",
+				"title": "Pelajaran 15 - Permainan Angkasa - Pengenalan: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "Classes rely on inheritance to ascribe to behaviors",
+						"questionText": "Kelas bergantung pada pewarisan untuk menganggap tingkah laku",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1547,7 +1547,7 @@
 						]
 					},
 					{
-						"questionText": "Composition is the preferred design pattern for game objects",
+						"questionText": "Komposisi adalah corak reka bentuk yang disukai untuk objek permainan",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1560,7 +1560,7 @@
 						]
 					},
 					{
-						"questionText": "Pub/Sub stands for:",
+						"questionText": "Pub/Sub bermaksud:",
 						"answerOptions": [
 							{
 								"answerText": "Publish/Subscribe",
@@ -1580,10 +1580,10 @@
 			},
 			{
 				"id": 31,
-				"title": "Lesson 16 - Space Game - Draw Hero and Monsters to Canvas: Pre-Lecture Quiz",
+				"title": "Pelajaran 16 - Permainan Angkasa - Lukis Pahlawan dan Monster ke Kanvas: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "The Canvas element is what you use to draw on a screen",
+						"questionText": "Elemen Canvas adalah yang anda gunakan untuk melukis di skrin",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1596,7 +1596,7 @@
 						]
 					},
 					{
-						"questionText": "You can only draw simple geometric shapes using the Canvas API",
+						"questionText": "Anda hanya dapat melukis bentuk geometri sederhana menggunakan Canvas API",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1609,7 +1609,7 @@
 						]
 					},
 					{
-						"questionText": "The point 0,0 is in the bottom left",
+						"questionText": "Titik 0,0 berada di kiri bawah",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1625,10 +1625,10 @@
 			},
 			{
 				"id": 32,
-				"title": "Lesson 16 - Space Game - Draw Hero and Monsters to Canvas: Post-Lecture Quiz",
+				"title": "Pelajaran 16 - Permainan Angkasa - Lukis Pahlawan dan Monster ke Kanvas: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "You can perform drawing operations directly on the Canvas",
+						"questionText": "Anda boleh melakukan operasi melukis terus di Kanvas",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1641,7 +1641,7 @@
 						]
 					},
 					{
-						"questionText": "You listen to the onload event to know when an image has loaded asynchronously",
+						"questionText": "Anda mendengar peristiwa muatan untuk mengetahui bila gambar dimuat secara tidak segerak",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1654,7 +1654,7 @@
 						]
 					},
 					{
-						"questionText": "You draw images onto a screen with an operation called:",
+						"questionText": "Anda melukis gambar ke skrin dengan operasi yang disebut:",
 						"answerOptions": [
 							{
 								"answerText": "paintImage()",
@@ -1674,10 +1674,10 @@
 			},
 			{
 				"id": 33,
-				"title": "Lesson 17 - Space Game - Adding Motion: Pre-Lecture Quiz",
+				"title": "Pelajaran 17 - Permainan Angkasa - Menambah Gerak: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "Any object on the screen can receive keyboard events",
+						"questionText": "Sebarang objek di layar dapat menerima acara papan kekunci",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1690,7 +1690,7 @@
 						]
 					},
 					{
-						"questionText": "You can use the same method to listen to key events and mouse events",
+						"questionText": "Anda boleh menggunakan kaedah yang sama untuk mendengarkan peristiwa penting dan acara tetikus",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1703,7 +1703,7 @@
 						]
 					},
 					{
-						"questionText": "To make things happen at a regular interval, you use what function?",
+						"questionText": "Untuk membuat sesuatu berlaku secara berkala, anda menggunakan fungsi apa?",
 						"answerOptions": [
 							{
 								"answerText": "setInterval()",
@@ -1723,10 +1723,10 @@
 			},
 			{
 				"id": 34,
-				"title": "Lesson 17 - Space Game - Adding Motion: Post-Lecture Quiz",
+				"title": "Pelajaran 17 - Permainan Angkasa - Menambah Gerak: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "You always need to redraw the screen",
+						"questionText": "Anda selalu perlu melukis semula skrin",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1739,35 +1739,35 @@
 						]
 					},
 					{
-						"questionText": "What is a game loop?",
+						"questionText": "Apakah gelung permainan (game loop) ?",
 						"answerOptions": [
 							{
-								"answerText": "A function that ensures the game can be restarted",
+								"answerText": "Fungsi yang memastikan permainan dapat dimulakan semula",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A function that decided how fast the game should run",
+								"answerText": "Fungsi yang menentukan seberapa pantas permainan harus dijalankan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A function that is invoked at regular intervals and draws what the user should see",
+								"answerText": "Fungsi yang dipanggil secara berkala dan menarik apa yang pengguna harus lihat",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "A good case for redrawing the screen is",
+						"questionText": "Kes yang baik untuk melukis semula skrin adalah",
 						"answerOptions": [
 							{
-								"answerText": "A user interaction happened",
+								"answerText": "Interaksi pengguna berlaku",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Something has moved",
+								"answerText": "Sesuatu telah bergerak",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Time has passed",
+								"answerText": "Masa telah berlalu",
 								"isCorrect": "false"
 							}
 						]
@@ -1776,10 +1776,10 @@
 			},
 			{
 				"id": 35,
-				"title": "Lesson 18 - Space Game - Adding A Laser and Detecting Collisions: Pre-Lecture Quiz",
+				"title": "Pelajaran 18 - Permainan Angkasa - Menambah Laser dan Mengesan Perlanggaran: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "Collision detection is how we detect if two things have collided",
+						"questionText": "Pengesanan perlanggaran adalah bagaimana kita mengesan jika dua perkara bertembung",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1792,35 +1792,35 @@
 						]
 					},
 					{
-						"questionText": "How can we remove an item from the screen?",
+						"questionText": "Bagaimana kita boleh mengeluarkan item dari skrin?",
 						"answerOptions": [
 							{
-								"answerText": "Call the garbage collector",
+								"answerText": "Hubungi pemungut sampah",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Mark it as dead, only paint not dead objects next time we draw the screen",
+								"answerText": "Tandakan sebagai mati, hanya cat bukan benda mati lain kali kita melukis skrin",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Place the item on a negative coordinate",
+								"answerText": "Letakkan item pada koordinat negatif",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to simulate firing a laser in JavaScript is:",
+						"questionText": "Kaedah yang baik untuk mensimulasikan penembakan laser dalam JavaScript adalah:",
 						"answerOptions": [
 							{
-								"answerText": "make a visual element respond to a key event",
+								"answerText": "membuat elemen visual bertindak balas terhadap peristiwa penting",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "create animated gifs",
+								"answerText": "buat gif animasi",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "make enemies blow up at intervals",
+								"answerText": "membuat musuh meletup pada selang waktu",
 								"isCorrect": "false"
 							}
 						]
@@ -1829,51 +1829,51 @@
 			},
 			{
 				"id": 36,
-				"title": "Lesson 18 - Space Game - Adding A Laser and Detecting Collisions: Post-Lecture Quiz",
+				"title": "Pelajaran 18 - Permainan Angkasa - Menambah Laser dan Mengesan Perlanggaran: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "In collision detection you compare two",
+						"questionText": "Dalam pengesanan perlanggaran anda membandingkan dua",
 						"answerOptions": [
 							{
-								"answerText": "circles and whether they intersect",
+								"answerText": "bulatan dan sama ada mereka bersilang",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "rectangles and whether they intersect",
+								"answerText": "segi empat tepat dan sama ada mereka bersilang",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "distances between two points",
+								"answerText": "jarak antara dua titik",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "The reason for implementing a cooldown effect is because",
+						"questionText": "Sebab untuk melaksanakan kesan cooldown adalah kerana",
 						"answerOptions": [
 							{
-								"answerText": "Making the game harder as you can't repeatedly fire a laser to destroy enemies",
+								"answerText": "Menjadikan permainan lebih sukar kerana anda tidak dapat menembak laser berulang kali untuk menghancurkan musuh",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "JavaScript can only produce a certain number of events per time unit, so you need to limit them",
+								"answerText": "JavaScript hanya dapat menghasilkan sejumlah peristiwa per unit waktu, jadi anda perlu menghadkannya",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Constants are identifiable in code because",
+						"questionText": "Pemalar dikenal pasti dalam kod kerana",
 						"answerOptions": [
 							{
-								"answerText": "they are written in capital letters",
+								"answerText": "mereka ditulis dengan huruf besar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "they have specific names",
+								"answerText": "mereka mempunyai nama tertentu",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "they are written in kebab-case like-this",
+								"answerText": "mereka ditulis dalam kes kebab-seperti ini",
 								"isCorrect": "false"
 							}
 						]
@@ -1882,40 +1882,40 @@
 			},
 			{
 				"id": 37,
-				"title": "Lesson 19 - Space Game - Scoring and Lives: Pre-Lecture Quiz",
+				"title": "Pelajaran 19 - Permainan Angkasa - Pemarkahan dan Kehidupan: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "How do you draw text on a screen using the Canvas element?",
+						"questionText": "Bagaimana anda melukis teks pada layar menggunakan elemen Canvas?",
 						"answerOptions": [
 							{
-								"answerText": "Place text inside a div or span element",
+								"answerText": "Letakkan teks di dalam elemen div atau span",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Call drawText() on the Canvas element",
+								"answerText": "Panggil drawText () pada elemen Kanvas",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Call fillText() on the context object",
+								"answerText": "Panggil fillText () pada objek konteks",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Why do you have the concept of 'lives' in a game?",
+						"questionText": "Mengapa anda mempunyai konsep 'nyawa' dalam permainan?",
 						"answerOptions": [
 							{
-								"answerText": "To show how much damage you can take",
+								"answerText": "Untuk menunjukkan berapa banyak kerosakan yang boleh anda ambil",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "So that the game doesn't end straight away, but you have n number of chances before the game is over",
+								"answerText": "Supaya permainan tidak berakhir dengan segera, tetapi anda mempunyai banyak peluang sebelum permainan berakhir",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Add color to text on Canvas using",
+						"questionText": "Tambahkan warna pada teks pada Kanvas menggunakan",
 						"answerOptions": [
 							{
 								"answerText": "fillColor",
@@ -1935,40 +1935,40 @@
 			},
 			{
 				"id": 38,
-				"title": "Lesson 19 - Space Game - Scoring and Lives: Post-Lecture Quiz",
+				"title": "Pelajaran 19 - Permainan Angkasa - Pemarkahan dan Kehidupan: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "What's a fun way to show how many lives a player has left?",
+						"questionText": "Apa cara yang menyeronokkan untuk menunjukkan berapa banyak nyawa yang ditinggalkan oleh pemain?",
 						"answerOptions": [
 							{
-								"answerText": "a number of ships",
+								"answerText": "sebilangan kapal",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "a points system",
+								"answerText": "sistem mata",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How do you center text in the middle of the screen using the Canvas element?",
+						"questionText": "Bagaimana anda memusatkan teks di tengah-tengah skrin menggunakan elemen Canvas?",
 						"answerOptions": [
 							{
-								"answerText": "You use Flexbox",
+								"answerText": "Guna Flexbox",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "You instruct the text to be drawn at the x coordinate of the client window width/2",
+								"answerText": "Anda mengarahkan teks dilukis pada koordinat x lebar tetingkap klien / 2",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "You set the textAlign property to the value center on the context object",
+								"answerText": "Anda menetapkan properti textAlign ke pusat nilai pada objek konteks",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "In code, deduct a life like this:",
+						"questionText": "Dalam kod, tolak kehidupan seperti ini:",
 						"answerOptions": [
 							{
 								"answerText": "this.life-",
@@ -1988,51 +1988,51 @@
 			},
 			{
 				"id": 39,
-				"title": "Lesson 20 - Space Game - End and Restart: Pre-Lecture Quiz",
+				"title": "Pelajaran 20 - Permainan Angkasa - Tamat dan Mulakan Semula: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "When is a good time to restart a game",
+						"questionText": "Bilakah masa yang baik untuk memulakan semula permainan",
 						"answerOptions": [
 							{
-								"answerText": "when a player wins or loses",
+								"answerText": "apabila pemain menang atau kalah",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "whenever",
+								"answerText": "bila-bila masa",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "When should a game end",
+						"questionText": "Bilakah permainan harus berakhir",
 						"answerOptions": [
 							{
-								"answerText": "when an enemy ship is destroyed",
+								"answerText": "ketika kapal musuh musnah",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "when a hero ship is destroyed",
+								"answerText": "apabila kapal wira musnah",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "when points are collected",
+								"answerText": "semasa mata dikumpulkan",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A good way to add a level to your game is:",
+						"questionText": "Cara yang baik untuk menambahkan tahap ke permainan anda adalah:",
 						"answerOptions": [
 							{
-								"answerText": "Increment the amount of points necessary to complete a given level",
+								"answerText": "Menambah jumlah mata yang diperlukan untuk menyelesaikan tahap tertentu",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Add more players to the game",
+								"answerText": "Tambahkan lebih banyak pemain ke permainan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Add more graphics to the game",
+								"answerText": "Tambahkan lebih banyak grafik ke permainan",
 								"isCorrect": "false"
 							}
 						]
@@ -2041,27 +2041,27 @@
 			},
 			{
 				"id": 40,
-				"title": "Lesson 20 - Space Game - End and Restart: Post-Lecture Quiz",
+				"title": "Pelajaran 20 - Permainan Angkasa - Tamat dan Mulakan Semula: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "What is a good pattern to use when a game end condition has been met?",
+						"questionText": "Apakah corak yang baik untuk digunakan apabila keadaan akhir permainan dipenuhi?",
 						"answerOptions": [
 							{
-								"answerText": "Display a suitable message",
+								"answerText": "Paparkan mesej yang sesuai",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Quit the game",
+								"answerText": "Hentikan permainan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Display a suitable message, offer the player to restart, and display what key to hit for that action",
+								"answerText": "Paparkan mesej yang sesuai, tawarkan pemain untuk memulakan semula, dan tunjukkan kunci apa yang harus dipukul untuk tindakan itu",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You should offer a restart only when the game has ended",
+						"questionText": "Anda harus menawarkan memulakan semula hanya apabila permainan telah berakhir",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2074,18 +2074,18 @@
 						]
 					},
 					{
-						"questionText": "A good way to clear the EventEmitter when ending a game is:",
+						"questionText": "Cara yang baik untuk membersihkan EventEmitter ketika mengakhiri permainan adalah:",
 						"answerOptions": [
 							{
-								"answerText": "clearing listeners",
+								"answerText": "membersihkan pendengar",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "clearing the screen",
+								"answerText": "membersihkan skrin",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "closing the game window",
+								"answerText": "menutup tingkap permainan",
 								"isCorrect": "false"
 							}
 						]
@@ -2094,10 +2094,10 @@
 			},
 			{
 				"id": 41,
-				"title": "Lesson 21 - Bank Project - HTML Templates and Routes in a Web App: Pre-Lecture Quiz",
+				"title": "Pelajaran 21 - Projek Bank - Templat dan Laluan HTML dalam Aplikasi Web: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "You need to create multiple HTML files to display different screens in a web app",
+						"questionText": "Anda perlu membuat banyak fail HTML untuk memaparkan skrin yang berbeza dalam aplikasi web",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2110,7 +2110,7 @@
 						]
 					},
 					{
-						"questionText": "You can store and persist data locally in a web app",
+						"questionText": "Anda boleh menyimpan dan menyimpan data secara tempatan dalam aplikasi web",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2123,18 +2123,18 @@
 						]
 					},
 					{
-						"questionText": "What's the best data provider for a web app?",
+						"questionText": "Apakah penyedia data terbaik untuk aplikasi web?",
 						"answerOptions": [
 							{
-								"answerText": "A local database",
+								"answerText": "Pangkalan data tempatan",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A JavaScript object",
+								"answerText": "Objek JavaScript",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A server with a JSON API",
+								"answerText": "Pelayan dengan JSON API",
 								"isCorrect": "true"
 							}
 						]
@@ -2143,10 +2143,10 @@
 			},
 			{
 				"id": 42,
-				"title": "Lesson 21 - Bank Project HTML Templates and Routes in a Web App: Post-Lecture Quiz",
+				"title": "Pelajaran 21 - Templat dan Laluan HTML Projek Bank dalam Aplikasi Web: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "HTML templates are part of the DOM by default",
+						"questionText": "Templat HTML adalah sebahagian dari DOM secara lalai",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2159,7 +2159,7 @@
 						]
 					},
 					{
-						"questionText": "Which part of the URL is needed for routing?",
+						"questionText": "Bahagian URL mana yang diperlukan untuk penghalaan?",
 						"answerOptions": [
 							{
 								"answerText": "window.location.pathname",
@@ -2170,13 +2170,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "both",
+								"answerText": "kedua-duanya",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the name of the event triggered when calling the history.pushState() function?",
+						"questionText": "Apakah nama peristiwa yang dicetuskan ketika memanggil fungsi history.pushState ()?",
 						"answerOptions": [
 							{
 								"answerText": "pushstate",
@@ -2196,10 +2196,10 @@
 			},
 			{
 				"id": 43,
-				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Pre-Lecture Quiz",
+				"title": "Pelajaran 22 - Projek Bank - Bina Log Masuk dan Pendaftaran: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "HTML forms allow you to send user input to a server without using JavaScript",
+						"questionText": "Bentuk HTML membolehkan anda mengirim input pengguna ke pelayan tanpa menggunakan JavaScript",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2212,7 +2212,7 @@
 						]
 					},
 					{
-						"questionText": "<label> elements are mandatory for every form control",
+						"questionText": "Elemen <label> adalah wajib bagi setiap kawalan bentuk",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2225,7 +2225,7 @@
 						]
 					},
 					{
-						"questionText": "It is secure to send form data to a server over HTTP",
+						"questionText": "Adalah selamat untuk menghantar data borang ke pelayan melalui HTTP",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2241,10 +2241,10 @@
 			},
 			{
 				"id": 44,
-				"title": "Lesson 22 - Bank Project - Build a Login and Registration Form: Post-Lecture Quiz",
+				"title": "Pelajaran 22 - Projek Bank - Bina Log Masuk dan Pendaftaran: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "Using <label> elements in forms is only for making the form pretty",
+						"questionText": "Menggunakan elemen <label> dalam bentuk hanya untuk menjadikan bentuknya cantik",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2257,24 +2257,24 @@
 						]
 					},
 					{
-						"questionText": "A URL is sent to a server in which part of a form?",
+						"questionText": "URL dihantar ke pelayan di bahagian mana borang?",
 						"answerOptions": [
 							{
-								"answerText": "the action attribute",
+								"answerText": "atribut tindakan",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "the method attribute",
+								"answerText": "atribut kaedah",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "both",
+								"answerText": "kedua-duanya",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Which attribute can you use to set the maximum size of a text <input>?",
+						"questionText": "Atribut mana yang boleh anda gunakan untuk menetapkan ukuran maksimum teks <input>?",
 						"answerOptions": [
 							{
 								"answerText": "max",
@@ -2294,13 +2294,13 @@
 			},
 			{
 				"id": 45,
-				"title": "Lesson 23 - Bank Project - Methods of Fetching and Using Data: Pre-Lecture Quiz",
+				"title": "Pelajaran 23 - Projek Bank - Kaedah Mengambil dan Menggunakan Data: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "You usually fetch data from a server synchronously in a browser",
+						"questionText": "Anda biasanya mengambil data dari pelayan secara serentak dalam penyemak imbas",
 						"answerOptions": [
 							{
-								"answerText": "true, but async is best!",
+								"answerText": "true, tetapi async adalah yang terbaik!",
 								"isCorrect": "true"
 							},
 							{
@@ -2310,7 +2310,7 @@
 						]
 					},
 					{
-						"questionText": "What's the most common format used to exchange data on the web?",
+						"questionText": "Apakah format yang paling biasa digunakan untuk menukar data di web?",
 						"answerOptions": [
 							{
 								"answerText": "HTML",
@@ -2327,7 +2327,7 @@
 						]
 					},
 					{
-						"questionText": "There's no way to prevent a web page from accessing a public server API",
+						"questionText": "Tidak ada cara untuk menghalang laman web mengakses API pelayan awam",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2343,10 +2343,10 @@
 			},
 			{
 				"id": 46,
-				"title": "Lesson 23 - Bank Project Methods of Fetching and Using Data: Post-Lecture Quiz",
+				"title": "Pelajaran 23 - Kaedah Projek Bank Mengambil dan Menggunakan Data: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "In a Single-page application, the HTML is loaded once and never updated",
+						"questionText": "Dalam aplikasi Satu halaman, HTML dimuat sekali dan tidak pernah dikemas kini",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -2359,24 +2359,24 @@
 						]
 					},
 					{
-						"questionText": "Why is it important to not trust data coming from user input?",
+						"questionText": "Mengapakah penting untuk tidak mempercayai data yang berasal dari input pengguna?",
 						"answerOptions": [
 							{
-								"answerText": "because using special characters can make the UI ugly.",
+								"answerText": "kerana menggunakan watak khas boleh menjadikan UI jelek.",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "because it can contain non-sense or offensive words.",
+								"answerText": "kerana boleh mengandungi kata-kata yang tidak masuk akal atau menyinggung perasaan.",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "because it can be used as vector of attack to execute malicious scripts.",
+								"answerText": "kerana dapat digunakan sebagai vektor serangan untuk melaksanakan skrip jahat.",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the API name for sending asynchronous HTTP requests to a web server?",
+						"questionText": "Apakah nama API untuk menghantar permintaan HTTP tidak segerak ke pelayan web?",
 						"answerOptions": [
 							{
 								"answerText": "request()",
@@ -2396,51 +2396,51 @@
 			},
 			{
 				"id": 47,
-				"title": "Lesson 24 - Bank Project - Concepts of State Management: Pre-Lecture Quiz",
+				"title": "Pelajaran 24 - Projek Bank - Konsep Pengurusan Negeri: Kuiz Pra Kuliah",
 				"quiz": [
 					{
-						"questionText": "What is an immutable object?",
+						"questionText": "Apakah objek yang tidak berubah?",
 						"answerOptions": [
 							{
-								"answerText": "An object defined as a constant",
+								"answerText": "Objek yang ditakrifkan sebagai pemalar",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "An object that cannot be modified after it's created",
+								"answerText": "Objek yang tidak dapat diubah setelah dibuat ",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A copy of an existing object",
+								"answerText": "Salinan objek yang ada",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "What benefit(s) do you get from using state management?",
+						"questionText": "Apa faedah yang anda peroleh daripada menggunakan pengurusan negeri?",
 						"answerOptions": [
 							{
-								"answerText": "You can keep track of every place the state is updated",
+								"answerText": "Anda boleh mengesan setiap tempat yang dikemas kini negeri ini",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's easier to debug the code",
+								"answerText": "Lebih mudah untuk menyahpepijat kod",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All of the above",
+								"answerText": "Semua di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What's the best way to persist critical user data across different sessions?",
+						"questionText": "Apakah kaedah terbaik untuk mengekalkan data pengguna kritikal dalam pelbagai sesi?",
 						"answerOptions": [
 							{
-								"answerText": "Using files",
+								"answerText": "Guna fail",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Using the browser's localStorage API",
+								"answerText": "Menggunakan API LocalStorage penyemak imbas",
 								"isCorrect": "false"
 							},
 							{
@@ -2453,44 +2453,44 @@
 			},
 			{
 				"id": 48,
-				"title": "Lesson 24 - Bank Project - Concepts of State Management: Post-Lecture Quiz",
+				"title": "Pelajaran 24 - Projek Bank - Konsep Pengurusan Negeri: Kuiz Pasca Kuliah",
 				"quiz": [
 					{
-						"questionText": "What do you think state management means?",
+						"questionText": "Apa pendapat anda tentang pengurusan negeri?",
 						"answerOptions": [
 							{
-								"answerText": "Enforcement of law & order",
+								"answerText": "Penguatkuasaan undang-undang & ketertiban",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Logging the user interface state over time",
+								"answerText": "Mencatat keadaan antara muka pengguna dari masa ke masa",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Keeping your app data flows clean and synchronizing the user interface with data",
+								"answerText": "Menjaga aliran data aplikasi anda bersih dan menyegerakkan antara muka pengguna dengan data",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "How can you keep track of the user session state?",
+						"questionText": "Bagaimana anda dapat mengawasi keadaan sesi pengguna?",
 						"answerOptions": [
 							{
 								"answerText": "HTTP cookies",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Local or session storage",
+								"answerText": "Storan tempatan atau sesi",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "All of the above",
+								"answerText": "Semua di atas",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Mutating an object is always the best way to update it",
+						"questionText": "Mematikan objek selalu merupakan kaedah terbaik untuk mengemasinya",
 						"answerOptions": [
 							{
 								"answerText": "true",
