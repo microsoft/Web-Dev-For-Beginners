@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "Web Development για Αρχάριους: Κουίζ",
+		"complete": "Συγχαρητήρια, ολοκληρώσατε το κουίζ!",
+		"error": "Λυπούμαστε, δοκιμάστε ξανά",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "Μάθημα 1 - Εισαγωγή στις Γλώσσες Προγραμματισμού: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Ένα πρόγραμμα μπορεί να δημιουργηθεί χωρίς ο δημιουργός του να γράψει κώδικα",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Οι γλώσσες προγραμματισμού χαμηλού επιπέδου είναι δημοφιλής επιλογή για",
+						"answerOptions": [
+							{
+								"answerText": "Ιστοσελίδες",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hardware",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Software για βιντεοπαιχνίδια",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ποια από τα παρακάτω εργαλεία είναι πιθανότερο να βρίσκεται στο περιβάλλον ενός web developer;",
+						"answerOptions": [
+							{
+								"answerText": "Hardware, όπως ένα Raspberry Pi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Τα εργαλεία DevTools του φυλλομετρητή",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Εγχειρίδιο του λειτουργικού συστήματος",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Μάθημα 1 - Εισαγωγή στις Γλώσσες Προγραμματισμού: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Ποια γλώσσα προγραμματισμού είναι πιθανότερο να χρησιμοποιήσετε για τη δημιουργία μιας ιστοσελίδας;",
+						"answerOptions": [
+							{
+								"answerText": "Γλώσσα Μηχανής",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Τα περιβάλλοντα ανάπτυξης είναι μοναδικά για κάθε προγραμματιστή",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Τι θα κάνει ένας προγραμματιστής για να διορθώσει έναν κώδικα με σφάλματα;",
+						"answerOptions": [
+							{
+								"answerText": "Επισήμανση συντακτικού",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Αποσφαλμάτωση",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Μορφοποίηση κώδικα",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "Μάθημα 2 - Εισαγωγή στο GitHub: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Πώς δημιουργείται ένα αποθετήριο Git;",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Τι κάνει η εντολή git add;",
+						"answerOptions": [
+							{
+								"answerText": "Υποβάλλει τον κώδικά σας",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Καταχωρεί τα αρχεία σας σε ένα ενδιάμεσο στάδιο για παρακολούθηση",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Καταχωρεί τα αρχεία σας στο GitHub",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Πώς ελέγχετε αν το git είναι εγκατεστημένο στον υπολογιστή σας;",
+						"answerOptions": [
+							{
+								"answerText": "Πληκτρολογείτε την εντολή git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Πληκτρολογείτε την εντολή git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Πληκτρολογείτε την εντολή git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "Μάθημα 2 - Εισαγωγή στο GitHub: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Ένα μέρος όπου συγκρίνονται και συζητούνται οι διαφορές που προκύπτουν μέσα από έναν κλάδο (branch) με ανασκοπήσεις, σχόλια, τεστ ολοκλήρωσης και άλλα είναι:",
+						"answerOptions": [
+							{
+								"answerText": "Το GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ένα Pull Request",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Ένα feature branch",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Πώς θα λαμβάνατε όλες τις υποβολές από έναν απομακρυσμένο κλάδο;",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Πώς μεταβαίνετε σε έναν κλάδο;",
+						"answerOptions": [
+							{
+								"answerText": "git switch [όνομα-κλαδου]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [όνομα-κλαδου]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [όνομα-κλαδου]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "Μάθημα 3 - Δημιουργώντας Προσβάσιμες Ιστοσελίδες: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Με ποιο εργαλείο του φυλλομετρητή μπορείτε να ελέγξετε αν μια ιστοσελίδα είναι προσβάσιμη;",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Απαιτείται ένας φυσικός αναγνώστης οθόνης για την επαλήθευση της προσβασιμότητας για χρήστες με προβλήματα όρασης",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Η προσβασιμότητα είναι σημαντική μόνο σε κυβερνητικές ιστοσελίδες",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "Μάθημα 3 - Δημιουργώντας Προσβάσιμες Ιστοσελίδες: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Το Lighthouse ελέγχει μόνο για προβλήματα προσβασιμότητας",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Οι ασφαλείς χρωματικές παλέτες βοηθούν τους χρήστες με",
+						"answerOptions": [
+							{
+								"answerText": "Αχρωματοψία",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Προβλήματα όρασης",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Όλα τα παραπάνω",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Οι περιγραφικοί σύνδεσμοι είναι ζωτικής σημασίας για προσβάσιμες ιστοσελίδες",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "Μάθημα 4 - Τα Βασικά της Javascript - Τύποι Δεδομένων: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Οι τύποι δεδομένων αλήθειας (booleans) μπορούν να χρησιμοποιηθούν για τον έλεγχο του μήκους μιας συμβολοσειράς",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Το παρακάτω είναι μια λειτουργία που μπορείτε να εκτελέσετε σε μια συμβολοσειρά",
+						"answerOptions": [
+							{
+								"answerText": "Συνένωση (concatenation)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Προσάρτηση (appending)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Συναρμολόγηση (splicing)",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Οι τελεστές == και === είναι ταυτόσημοι",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "Μάθημα 4 - Τα Βασικά της Javascript - Τύποι Δεδομένων: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Οι σταθερές είναι το ίδιο με τις μεταβλητές let και var με τη διαφορά ότι",
+						"answerOptions": [
+							{
+								"answerText": "Οι σταθερές πρέπει να αρχικοποιηθούν",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Οι σταθερές μπορούν να τροποποιηθούν",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Στις σταθερές μπορούν να εκχωρηθούν εκ νέου τιμές",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Οι number και ____ είναι οι πρωταρχικοί τύποι δεδομένων της JavaScript που χειρίζονται αριθμητικά δεδομένα",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Οι συμβολοσειρές μπορούν να περικλείονται τόσο από μονά όσο και από διπλά εισαγωγικά",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "Μάθημα 5 - Τα Βασικά της Javascript - Μέθοδοι και Συναρτήσεις: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Τι είναι ένα όρισμα;",
+						"answerOptions": [
+							{
+								"answerText": "Είναι κάτι που δηλώνεται στον ορισμό της συνάρτησης",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Είναι κάτι που μεταβιβάζεται σε μια συνάρτηση κατά την κλήση της",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Είναι κάτι που χαρακτηρίζει έναν άνθρωπο",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Μια συνάρτηση πρέπει να επιστρέφει κάτι",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Μπορείτε να δώσετε όποιο όνομα θέλετε σε μια συνάρτηση",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Σωστό, αλλά θα πρέπει να είναι κάτι περιγραφικό",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "Μάθημα 5 - Τα Βασικά της Javascript - Μέθοδοι και Συναρτήσεις: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Θα πρέπει να μεταβιβάσετε ορίσματα για όλες τις παραμέτρους μιας συνάρτησης",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Τι κάνει μια προεπιλεγμένη τιμή;",
+						"answerOptions": [
+							{
+								"answerText": "Ορίζει μια σωστή τιμή",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Παρέχει μια αρχική τιμή για μια παράμετρο ώστε ο κώδικάς σας να εξακολουθεί να λειτουργεί αν παραλείψετε ένα όρισμα για αυτή την παράμετρο",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Δεν έχει καμία χρησιμότητα",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Μια συνάρτηση fat arrow σας επιτρέπει να",
+						"answerOptions": [
+							{
+								"answerText": "Δημιουργήσετε βαριές συναρτήσεις",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Παραλείψετε τη λέξη-κλειδί function",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Δημιουργήσετε μια ανώνυμη συνάρτηση",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "Μάθημα 6 - Τα Βασικά της Javascript - Λαμβάνοντας Αποφάσεις: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Ο τελεστής == ονομάζεται",
+						"answerOptions": [
+							{
+								"answerText": "Ισότητας",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Αυστηρής ισότητας",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ανάθεσης",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Τι τύπο επιστρέφει μια σύγκριση στη JavaScript;",
+						"answerOptions": [
+							{
+								"answerText": "boolean",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "string",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Το σύμβολο ! στη JavaScript δηλώνει:",
+						"answerOptions": [
+							{
+								"answerText": "Λογικό Όχι",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Σημασία",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ισότητα",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "Μάθημα 6 - Τα Βασικά της Javascript - Λαμβάνοντας Αποφάσεις: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Τι θα επιστρέψει ο παρακάτω κώδικας: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Τι θα επιστρέψει ο παρακάτω κώδικας: '1' === 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Επιλέξτε το σωστό τελεστή για να εκφράσετε το λογικό 'or'",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "Μάθημα 7 - Τα Βασικά της Javascript - Πίνακες και Βρόγχοι: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Για να αναφερθείτε σε ένα συγκεκριμένο στοιχείο ενός πίνακα, θα χρησιμοποιούσατε",
+						"answerOptions": [
+							{
+								"answerText": "Αγκύλες []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Δείκτη",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Άγκιστρα {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Πώς μπορείτε να πάρετε τον αριθμό των στοιχείων ενός πίνακα;",
+						"answerOptions": [
+							{
+								"answerText": "Με τη μέθοδο 'len(array)'",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Με την ιδιότητα size του πίνακα",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Με την ιδιότητα length του πίνακα",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Στη JavaScript, οι δείκτες ξεκινούν από το",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "Μάθημα 7 - Τα Βασικά της Javascript - Πίνακες και Βρόγχοι: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Ποιο μέρος ενός βρόγχου for θα τροποποιούσατε για να αυξήσετε την επανάληψή του κατά 5;",
+						"answerOptions": [
+							{
+								"answerText": "Τη συνθήκη",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Το μετρητή",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Την έκφραση της επανάληψης",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ποια είναι η διαφορά μεταξύ των βρόγχων while και for;",
+						"answerOptions": [
+							{
+								"answerText": "Ο βρόγχος for έχει μετρητή και έκφραση επανάληψης, ενώ ο βρόγχος while έχει μόνο συνθήκη",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Ο βρόγχος while έχει μετρητή και έκφραση επανάληψης ενώ ο βρόγχος for έχει μόνο συνθήκη",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Είναι τα ίδια, απλά με διαφορετική λέξη",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Σύμφωνα με τον παρακάτω κώδικα (let i=1; i < 5; i++), πόσες επαναλήψεις θα εκτελεστούν;",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "Μάθημα 8 - Project Terrarium - Εισαγωγή στην HTML: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "HTML είναι το ακρωνύμιο των λέξεων 'HyperText Mockup Language'",
+						"answerOptions": [
+							{
+								"answerText": "Σώστο",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Όλες οι ετικέτες στην HTML απαιτούν ζευγάρι ετικετών ανοίγματος και κλεισίματος",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Η χρήση σημασιολογικού κώδικα είναι σημαντική για",
+						"answerOptions": [
+							{
+								"answerText": "Την αναγνωσιμότητα του κώδικα",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Τους αναγνώστες οθόνης",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Τη συντήρηση",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "Μάθημα 8 - Project Terrarium - Εισαγωγή στην HTML: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Οι ετικέτες Span και Div είναι ταυτόσημες",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Η κεφαλίδα ενός αρχείου HTML μπορεί να περιέχει:",
+						"answerOptions": [
+							{
+								"answerText": "Την ετικέτα title",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Μεταδεδομένα",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Όλα τα παραπάνω",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Δεν μπορείτε να χρησιμοποιήσετε ετικέτες που έχουν καταργηθεί",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος, αλλά έχουν καταργηθεί για καλό λόγο",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "Μάθημα 9 - Project Terrarium - Εισαγωγή στα CSS: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Τα στοιχεία της HTML πρέπει να έχουν μια κλάση (class) ή ένα αναγνωριστικό (id) για να μορφοποιηθούν",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS είναι το ακρωνύμιο των λέξεων 'Complete Style Sheets'",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Με τα CSS μπορείτε να δημιουργήσετε κινούμενα σχέδια",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "Μάθημα 9 - Project Terrarium - Εισαγωγή στα CSS: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Μπορείτε να γράψετε CSS απευθείας μέσα στην κεφαλίδα του αρχείου HTML",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Είναι απαραίτητο να συμπεριλάβετε CSS στην εφαρμογή σας",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος, αλλά αν θέλετε να έχει μια καλή εμφάνιση τότε μάλλον χρειάζεστε CSS",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Ποιο εργαλείο του φυλλομετρητή μπορεί να χρησιμοποιηθεί για τον έλεγχο των CSS;",
+						"answerOptions": [
+							{
+								"answerText": "Elements",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Styles",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Network",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "Μάθημα 10 - Project Terrarium - Χειρισμός του DOM και Κλείσιμο: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "DOM είναι το ακρωνύμιο των λέξεων 'Document Object Management'",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Μπορούμε να σκεφτούμε το DOM ως ένα δέντρο",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Χρησιμοποιώντας το Web API, μπορείτε να χειριστείτε το DOM",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "Μάθημα 10 - Project Terrarium - Χειρισμός του DOM και Κλείσιμο: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Το DOM είναι ένα μοντέλο αναπαράστασης ενός εγγράφου στο διαδίκτυο",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Μπορείτε να χρησιμοποιήσετε τα Κλεισίματα στη JavaScript για να:",
+						"answerOptions": [
+							{
+								"answerText": "Γράψετε συναρτήσεις μέσα σε συναρτήσεις",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Περικλείσετε το DOM",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Κλείσετε τμήματα κώδικα",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Συμπληρώστε το κενό: Τα Κλεισίματα είναι χρήσιμα όταν μία ή περισσότερες συναρτήσεις χρειάζονται πρόσβαση ... μιας εξωτερικής συνάρτησης",
+						"answerOptions": [
+							{
+								"answerText": "Στους πίνακες",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Στο πεδίο εμβέλειας",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Στις συναρτήσεις",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "Μάθημα 11 - Παιχνίδι Πληκτρολόγησης: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Προγραμματισμό χειρισμού συμβάντων έχουμε όταν ο χρήστης",
+						"answerOptions": [
+							{
+								"answerText": "Πατάει ένα κουμπί",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Μεταβάλλει μια τιμή",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Αλληλεπιδρά με την ιστοσελίδα",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Όλα τα παραπάνω",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Στο διαδικαστικό προγραμματισμό, οι συναρτήσεις καλούνται",
+						"answerOptions": [
+							{
+								"answerText": "Οποιαδήποτε στιγμή",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Με μια συγκεκριμένη σειρά",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Από αριστερά προς τα δεξιά",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Η καθολική μέθοδος που διατίθεται στο DOM για την εγγραφή χειριστών συμβάντων είναι η",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "Μάθημα 11 - Παιχνίδι Πληκτρολόγησης: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Σχεδόν οτιδήποτε κάνει ένας χρήστης σε μια ιστοσελίδα προκαλεί ένα συμβάν",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Μερικά από τα πιο συνηθισμένα συμβάντα είναι",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Όλα τα παραπάνω",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Οι ανώνυμες συναρτήσεις μπορούν να χρησιμοποιηθούν για τη δημιουργία χειριστών συμβάντων",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "Μάθημα 12 - Project Επέκταση Φυλλομετρητή - Τα Πάντα για τους Φυλλομετρητές: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Επεκτάσεις για τον φυλλομετρητή μπορείτε να βρείτε στο",
+						"answerOptions": [
+							{
+								"answerText": "WalMart",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Αποθετήριο επεκτάσεων του φυλλομετρητή",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "App store",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM είναι το ακρωνύμιο των λέξεων",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ο φυλλομετρητής σας μπορεί να εξυπηρετεί ιστοσελίδες τόσο με ασφαλεία όσο και χωρίς",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "Μάθημα 12 -  Project Επέκταση Φυλλομετρητή - Τα Πάντα για τους Φυλλομετρητές: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Ο Παγκόσμιος Ιστός (World Wide Web) εφευρέθηκε από τον",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ο πρώτος φυλλομετρητής ονομαζόταν",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Οι φυλλομετρητές μπορούν να αποθηκεύουν το ιστορικό περιήγησης ενός χρήστη",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "Μάθημα 13 - Project Επέκταση Φυλλομετρητή - Κλήση API, χρήση Local Storage: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "APIs είναι το ακρωνύμιο των λέξεων",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Το API χρησιμοποιείται για την αλληλεπίδραση με",
+						"answerOptions": [
+							{
+								"answerText": "Έναν άλλο πόρο στο διαδίκτυο",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Μια βάση δεδομένων",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Οποιοδήποτε από τα παραπάνω",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Οποιοσδήποτε μπορεί να δημιουργήσει ένα API",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "Μάθημα 13 - Project Επέκταση Φυλλομετρητή - Κλήση API, χρήση Local Storage: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Τα δεδομένα στο LocalStorage καθαρίζονται κάθε φορά που κλείνετε το παράθυρο του φυλλομετρητή",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Το κύριο παράθυρο του φυλλομετρητή ελέγχει το LocalStorage μιας επέκτασης φυλλομετρητή",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "REST στα πλαίσια ενός API είναι ακρωνύμιο των λέξεων",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "Μάθημα 14 - Project Επέκταση Φυλλομετρητή - Μάθετε για τις Διεργασίες Παρασκηνίου και την Απόδοση: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Πώς θα ελέγξετε την απόδοση της εφαρμογής σας",
+						"answerOptions": [
+							{
+								"answerText": "Με τα εργαλεία του φυλλομετρητή",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Με ξεχωριστό πακέτο λογισμικού",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Χειροκίνητα",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Η 'απόδοση' μιας ιστοσελίδας είναι ανάλυση του",
+						"answerOptions": [
+							{
+								"answerText": "Πόσο γρήγορα φορτώνει",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Πόσο γρήγορα τρέχει ο κώδικας της",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Όλα τα παραπάνω",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Γενικά, το 'βάρος' των ιστοσελίδων τα τελευταία χρόνια έχει",
+						"answerOptions": [
+							{
+								"answerText": "Μειωθεί",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Αυξηθεί",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Μείνει το ίδιο",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "Μάθημα 14 - Project Επέκταση Φυλλομετρητή - Μάθετε για τις Διεργασίες Παρασκηνίου και την Απόδοση: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Για να έχετε μια καλύτερη άποψη για την απόδοση της ιστοσελίδας σας, καθαρίστε την προσωρινή μνήμη και φορτώστε την εκ νέου",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Οι επεκτάσεις του φυλλομετρητή έχουν εκ φύσεως καλή απόδοση",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Ποια από τα παρακάτω θα αναλύσετε για προβλήματα απόδοσης",
+						"answerOptions": [
+							{
+								"answerText": "Διάσχιση του DOM",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Βελτιστοποιήσεις στη JavaScript",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Διαχείριση πόρων",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Όλα τα παραπάνω",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "Μάθημα 15 - Διαστημικό Παιχνίδι - Εισαγωγή: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Η JavaScript δεν είναι δημοφιλής γλώσσα για δημιουργία παιχνιδιών",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Το Pub/Sub είναι ένα προτιμώμενο μοντέλο για τη διαχείριση των πόρων και της ροής ενός παιχνιδιού",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Η κληρονομικότητα των αντικειμένων μπορεί να επιτευχθεί μέσω κλάσεων ή σύνθεσης",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "Μάθημα 15 - Διαστημικό Παιχνίδι - Εισαγωγή: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Οι κλάσεις βασίζονται στην κληρονομικότητα για να αποδώσουν συμπεριφορές",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Η σύνθεση είναι η προτιμώμενη μέθοδος σχεδιασμού αντικειμένων σε παιχνίδια",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub σημαίνει:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "Μάθημα 16 - Διαστημικό Παιχνίδι - Σχεδιασμός Ήρωα και Τεράτων στον Καμβά: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Το στοιχείο Canvas το χρησιμοποιείτε για να σχεδιάσετε στην οθόνη",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Μπορείτε να σχεδιάσετε μόνο απλά γεωμετρικά σχήματα με το API του Canvas",
+						"answerOptions": [
+							{
+								"answerText": "Σώστο",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Το σημείο 0,0 βρίσκεται κάτω αριστερά",
+						"answerOptions": [
+							{
+								"answerText": "Σώστο",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "Μάθημα 16 - Διαστημικό Παιχνίδι - Σχεδιασμός Ήρωα και Τεράτων στον Καμβά: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Μπορείτε να εκτελέσετε λειτουργίες σχεδίασης απευθείας πάνω στο στοιχείο Canvas",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Παρακολουθείτε το συμβάν onload για να γνωρίζετε πότε μια εικόνα έχει φορτωθεί ασύγχρονα",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Σχεδιάζετε εικόνες πάνω στην οθόνη με τη λειτουργία:",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "Μάθημα 17 - Διαστημικό Παιχνίδι - Προσθέτοντας Κίνηση: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Οποιοδήποτε αντικείμενο στην οθόνη μπορεί να λάβει συμβάντα από το πληκτρολόγιο",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Μπορείτε να χρησιμοποιήσετε την ίδια μέθοδο για να παρακολουθήσετε συμβάντα από το πληκτρολόγιο και το ποντίκι",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ποια συνάρτηση θα χρησιμοποιήσετε ώστε να συμβαίνει κάτι σε τακτά χρονικά διαστήματα;",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "Μάθημα 17 - Διαστημικό Παιχνίδι - Προσθέτοντας Κίνηση: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Ο επανασχεδιασμός της οθόνης είναι πάντα απαραίτητος",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Τι είναι ένας βρόγχος παιχνιδιού;",
+						"answerOptions": [
+							{
+								"answerText": "Μια συνάρτηση που διασφαλίζει την επανέναρξη του παιχνιδιού",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Μια συνάρτηση που αποφασίζει την ταχύτητα του παιχνιδιού",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Μια συνάρτηση που καλείται σε τακτά χρονικά διαστήματα και σχεδιάζει αυτό που πρέπει να δει ο χρήστης",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Σε ποια περίπτωση θα επανασχεδιαστεί η οθόνη",
+						"answerOptions": [
+							{
+								"answerText": "Ο χρήστης έκανε κάποια ενέργεια",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Κάτι μετακινήθηκε",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Έχει περάσει κάποια ώρα",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "Μάθημα 18 - Διαστημικό Παιχνίδι - Προσθήκη Λέιζερ και Ανίχνευση Συγκρούσεων: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Η ανίχνευση συγκρούσεων είναι ο τρόπος με τον οποίο εντοπίζεται η σύγκρουση δύο αντικειμένων",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Πώς μπορεί να αφαιρεθεί ένα αντικείμενο από την οθόνη;",
+						"answerOptions": [
+							{
+								"answerText": "Καλώντας το συλλέκτη απορριμμάτων",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Σημειώνεται ως νεκρό και σχεδιάζονται μόνο μη νεκρά αντικείμενα στον επόμενο επανασχεδιασμό της οθόνης",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Τοποθετείται σε σημείο με αρνητικές συντεταγμένες",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ένας καλός τρόπος προσομοίωσης της λειτουργίας ενός λέιζερ στη JavaScript είναι:",
+						"answerOptions": [
+							{
+								"answerText": "Η απόκριση ενός οπτικού στοιχείου σε ένα συμβάν",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Η δημιουργία κινούμενων gifs",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Η ανατίναξη των εχθρών ανά τακτά χρονικά διαστήματα",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "Μάθημα 18 - Διαστημικό Παιχνίδι - Προσθήκη Λέιζερ και Ανίχνευση Συγκρούσεων: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Στην ανίχνευση συγκρούσεων συγκρίνονται δύο",
+						"answerOptions": [
+							{
+								"answerText": "Κύκλοι και αν τέμνονται",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ορθογώνια και αν τέμνονται",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Αποστάσεις μεταξύ δύο σημείων",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ο λόγος εφαρμογής ενός εφέ cooldown είναι επειδή",
+						"answerOptions": [
+							{
+								"answerText": "Κάνει το παιχνίδι πιο δύσκολο αφού δε μπορεί να πυροδοτηθεί επανειλημμένα ένα λέιζερ για να καταστραφούν οι εχθροί",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Η JavaScript μπορεί να παράγει μόνο ένα συγκεκριμένο αριθμό συμβάντων ανά μονάδα χρόνου, επομένως πρέπει να περιοριστούν",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Οι σταθερές μέσα στον κώδικα μπορούν να αναγνωριστούν επειδή",
+						"answerOptions": [
+							{
+								"answerText": "Γράφονται με κεφαλαία γράμματα",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Έχουν συγκεκριμένα ονόματα",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Γράφονται με στυλ-kebab όπως-αυτό",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "Μάθημα 19 - Διαστημικό Παιχνίδι - Σκορ και Ζωές: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Πώς σχεδιάζετε κείμενο στην οθόνη με το στοιχείο Canvas;",
+						"answerOptions": [
+							{
+								"answerText": "Τοποθετείτε το κείμενο μέσα σε ένα div ή span",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Καλείτε τη συνάρτηση drawText() στο στοιχείο Canvas",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Καλείτε τη συνάρτηση fillText() στο αντικείμενο του πλαισίου",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Τι εξυπηρετεί η έννοια της 'ζωής' σε ένα παιχνίδι;",
+						"answerOptions": [
+							{
+								"answerText": "Υποδεικνύει πόση ζημιά μπορείτε να δεχτείτε",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Για να μην τελειώνει αμέσως το παιχνίδι, αλλά να έχετε κάποιες ευκαιρίες πρώτα",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Μπορείτε να προσθέσετε χρώμα στο κείμενο πάνω στο στοιχείο Canvas με τη μέθοδο",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "Μάθημα 19 - Διαστημικό Παιχνίδι - Σκορ και Ζωές: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Με ποιο τρόπο μπορείτε να δείξετε πόσες ζωές έχουν απομείνει σε κάποιον παίχτη;",
+						"answerOptions": [
+							{
+								"answerText": "Με έναν αριθμό από πλοία",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Με μια σειρά από τελείες",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Πώς κεντράρετε το κείμενο στο μέσο της οθόνης χρησιμοποιώντας το στοιχείο Canvas;",
+						"answerOptions": [
+							{
+								"answerText": "Χρησιμοποιείτε Flexbox",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Σχεδιάζετε το κείμενο στη συντεταγμένη x του πλάτους του παραθύρου/2",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Ορίζετε την ιδιότητα textAlign με τιμή center στο αντικείμενο του πλαισίου",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Στον κώδικα, θα αφαιρέσετε μια ζωή ως εξής:",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "Μάθημα 20 - Διαστημικό Παιχνίδι - Τέλος και Επανεκκίνηση: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Πότε είναι η κατάλληλη στιγμή για επανεκκίνηση του παιχνιδιού",
+						"answerOptions": [
+							{
+								"answerText": "Όταν ένας παίχτης κερδίσει ή χάσει",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Οποτεδήποτε",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Πότε πρέπει να τελειώσει το παιχνίδι",
+						"answerOptions": [
+							{
+								"answerText": "Όταν ένα πλοίο του αντιπάλου καταστρέφεται",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Όταν ένα πλοίο του ήρωα καταστρέφεται",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Όταν συλλεχθούν πόντοι",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ένας καλός τρόπος για να προσθέσετε ένα επίπεδο στο παιχνίδι σας είναι να:",
+						"answerOptions": [
+							{
+								"answerText": "Αυξήσετε τους απαιτούμενους πόντους για την ολοκλήρωση ενός δεδομένου επιπέδου",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Προσθέσετε περισσότερους παίχτες στο παιχνίδι",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Προσθέσετε περισσότερα γραφικά στο παιχνίδι",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "Μάθημα 20 - Διαστημικό Παιχνίδι - Τέλος και Επανεκκίνηση: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Ποια είναι μια καλή μέθοδος για να εφαρμόσετε στο τέλος ενός παιχνιδιού;",
+						"answerOptions": [
+							{
+								"answerText": "Εμφανίση κατάλληλου μηνύματος",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Κλείσιμο του παιχνιδιού",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Εμφάνιση κατάλληλου μηνύματος, προτροπή για επανεκκίνηση, και εμφάνιση του αντίστοιχου πλήκτρου",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Η προτροπή για επανεκκίνηση πρέπει να υπάρχει μόνο στο τέλος του παιχνιδιού",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Μια καλή μέθοδος καθαρισμού του EventEmitter όταν τερματίζεται ένα παιχνίδι είναι:",
+						"answerOptions": [
+							{
+								"answerText": "Ο καθαρισμός των ακροατών",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Ο καθαρισμός της οθόνης",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Το κλείσιμο του παραθύρου του παιχνιδιού",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "Μάθημα 21 - Project Τράπεζα - Πρότυπα HTML και Διαδρομές σε μια Διαδικτυακή Εφαρμογή: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Απαιτούνται πολλαπλά αρχεία HTML για την εμφάνιση διαφορετικών οθονών σε μια διαδικτυακή εφαρμογή",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Μπορείτε να αποθηκεύσετε και να διατηρήσετε δεδομένα τοπικά σε μια διαδικτυακή εφαρμογή",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ποιος είναι ο καλύτερος πάροχος δεδομένων για μια διαδικτυακή εφαρμογή;",
+						"answerOptions": [
+							{
+								"answerText": "Μια τοπική βάση δεδομένων",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ένα αντικείμενο JavaScript",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ένας διακομιστής με JSON API",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "Μάθημα 21 - Project Τράπεζα - Πρότυπα HTML και Διαδρομές σε μια Διαδικτυακή Εφαρμογή: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Τα πρότυπα HTML είναι εξ ορισμού μέρη του DOM",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Ποιο μέρος του URL απαιτείται για τη δρομολόγηση;",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Και τα δύο",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Πώς λέγεται το συμβάν που ενεργοποιείται κατά την κλήση της συνάρτησης history.pushState();",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "Μάθημα 22 - Project Τράπεζα - Δημιουργία Φόρμας Σύνδεσης και Εγγραφής: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Οι φόρμες HTML επιτρέπουν την αποστολή στοιχείων από το χρήστη σε έναν διακομιστή χωρίς τη χρήση JavaScript",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Τα στοιχεία <label> απαιτούνται σε κάθε έλεγχο της φόρμας",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Η αποστολή των δεδομένων μιας φόρμας μέσω HTTP είναι ασφαλής",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "Μάθημα 22 - Project Τράπεζα - Δημιουργία Φόρμας Σύνδεσης και Εγγραφής: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Τα στοιχεία <label> χρησιμοποιούνται μόνο για να ομορφύνουν μια φόρμα",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Με ποιο τρόπο αποστέλεται ένα URL στο διακομιστή σε μια φόρμα;",
+						"answerOptions": [
+							{
+								"answerText": "Με το χαρακτηριστικό action",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Με το χαρακτηριστικό method",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Και τα δύο",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ποιο χαρακτηριστικό χρησιμοποιείται για να οριστεί το μέγιστο μήκος ενός κειμένου του στοιχείου <input>;",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "Μάθημα 23 - Project Τράπεζα - Τρόποι Ανάκτησης και Χρησιμοποίησης Δεδομένων: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Η ανάκτηση δεδομένων από ένα διακομιστή σε ένα φυλλομετρητή γίνεται συνήθως με σύγχρονο τρόπο",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό, αλλά ο ασύγχρονος τρόπος είναι καλύτερος!",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ποιος είναι ο πιο κοινός τρόπος ανταλλαγής δεδομένων στο διαδίκτυο;",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Δεν υπάρχει τρόπος να αποτραπεί η πρόσβαση μιας ιστοσελίδας σε ένα δημόσιο API",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "Μάθημα 23 - Project Τράπεζα - Τρόποι Ανάκτησης και Χρησιμοποίησης Δεδομένων: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Σε μια εφαρμογή τύπου Single-page, η HTML φορτώνεται μόνο μια φορά και δεν ενημερώνεται ποτέ ξανά",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Γιατί είναι σημαντικό να μην εμπιστεύεστε δεδομένα που προέρχονται από το χρήστη;",
+						"answerOptions": [
+							{
+								"answerText": "Επειδή η χρήση ειδικών χαρακτήρων μπορεί να προκαλέσει άσχημη εμφάνιση",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Επειδή μπορεί να περιέχει ανούσιο ή προσβλητικό λεξιλόγιο",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Επειδή μπορεί να χρησιμοποιηθεί ως μέσο επίθεσης για την εκτέλεση κακόβουλου κώδικα",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Ποιο είναι το όνομα του API για την αποστολή ασύγχρονων αιτημάτων HTTP σε ένα διακομιστή;",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "Μάθημα 24 - Project Τράπεζα - Έννοιες Διαχείρισης Κατάστασης: Προκαταρκτικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Τι είναι ένα αμετάβλητο αντικείμενο;",
+						"answerOptions": [
+							{
+								"answerText": "Ένα αντικείμενο που έχει οριστεί ως σταθερά",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ένα αντικείμενο που δε μπορεί να τροποποιηθεί μετά τη δημιουργία του",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Ένα αντίγραφο ενός υπάρχοντος αντικειμένου",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ποια είναι τα πλεονεκτήματα της διαχείρισης κατάστασης;",
+						"answerOptions": [
+							{
+								"answerText": "Μπορείτε να παρακαλουθείτε οποιαδήποτε αλλαγή κατάστασης",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Διευκολύνει την αποσφαλμάτωση του κώδικα",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Όλα τα παραπάνω",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Ποιος είναι ο καλύτερος τρόπος για να διατηρήσετε κρίσιμα δεδομένα του χρήστη ανάμεσα σε διαφορετικές συνεδρίες;",
+						"answerOptions": [
+							{
+								"answerText": "Η χρήση αρχείων",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Η χρήση του localStorage API του φυλλομετρητή",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Σε μια βάση δεδομένων με ένα API του διακομιστή",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "Μάθημα 24 - Project Τράπεζα - Έννοιες Διαχείρισης Κατάστασης: Τελικό Κουίζ",
+				"quiz": [
+					{
+						"questionText": "Τι σημαίνει η διαχείριση κατάστασης;",
+						"answerOptions": [
+							{
+								"answerText": "Εφαρμογή του νόμου και της τάξης",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Καταγραφή της κατάστασης της διεπαφής του χρήστη ανά τακτά χρονικά διαστήματα",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Διατήρηση καθαρής ροής των δεδομένων της εφαρμογής και συγχρονισμός της διεπαφής του χρήστη με τα δεδομένα",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Πώς μπορείτε να παρακολουθήσετε την κατάσταση της συνεδρίας του χρήστη;",
+						"answerOptions": [
+							{
+								"answerText": "HTTP cookies",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Αποθήκευση τοπικά ή στη συνεδρία",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Όλα τα παραπάνω",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Η μεταβολή ενός αντικειμένου είναι πάντα ο καλύτερος τρόπος για να ενημερωθεί",
+						"answerOptions": [
+							{
+								"answerText": "Σωστό",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Λάθος",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
