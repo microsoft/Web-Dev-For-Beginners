@@ -63,7 +63,7 @@ Let's say you have a folder locally with some code project and you want to start
    git init
    ```
 
-1. **Check status**. To check the status if your repository type:
+1. **Check status**. To check the status of your repository type:
 
    ```bash
    git status
