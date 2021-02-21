@@ -5,6 +5,7 @@ import id from './id.json';
 import hi from './hi.json';
 import it from './it.json';
 import ja from './ja.json';
+import ms from './ms.json';
 
 //export const defaultLocale = 'en';
 
@@ -15,6 +16,7 @@ const messages = {
 	hi: hi[0],
 	it: it[0],
 	ja: ja[0],
+	ms: ms[0],
 };
 
 export default messages;
