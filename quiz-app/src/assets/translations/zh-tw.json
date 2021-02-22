@@ -756,7 +756,7 @@
 			},
 			{
 				"id": 15,
-				"title": "課程八 - Terrarium 專案 - HTML簡介：課前測驗",
+				"title": "課程八 - Terrarium 專案 - HTML 簡介：課前測驗",
 				"quiz": [
 					{
 						"questionText": "HTML 的全名為 HyperText Mockup Language。",
@@ -805,7 +805,7 @@
 			},
 			{
 				"id": 16,
-				"title": "課程八 - Terrarium 專案 - HTML簡介：課後測驗",
+				"title": "課程八 - 盆栽盒專案 - HTML 簡介：課後測驗",
 				"quiz": [
 					{
 						"questionText": "Spans 與 Divs 可以互相替換。",
@@ -821,7 +821,7 @@
 						]
 					},
 					{
-						"questionText": "HTML文件的標頭可以包含：",
+						"questionText": "HTML 文件的標頭可以包含：",
 						"answerOptions": [
 							{
 								"answerText": "標題標籤(title tag)",
@@ -858,7 +858,7 @@
 			},
 			{
 				"id": 17,
-				"title": "課程九 - Terrarium 專案 - CSS簡介：課前測驗",
+				"title": "課程九 - 盆栽盒專案 - CSS簡介：課前測驗",
 				"quiz": [
 					{
 						"questionText": "HTML 元素必須包含 class 或 id 才能被造型化。",
@@ -903,7 +903,7 @@
 			},
 			{
 				"id": 18,
-				"title": "課程九 - Terrarium 專案 - CSS簡介：課後測驗",
+				"title": "課程九 - 盆栽盒專案 - CSS簡介：課後測驗",
 				"quiz": [
 					{
 						"questionText": "CSS 可以被撰寫在 HTML 檔案的開頭。",
@@ -956,7 +956,7 @@
 			},
 			{
 				"id": 19,
-				"title": "課程十 - Terrarium 專案 - DOM 元素控制與閉包：課前測驗",
+				"title": "課程十 - 盆栽盒專案 - DOM 元素控制與閉包：課前測驗",
 				"quiz": [
 					{
 						"questionText": "DOM 元素全名為 Document Object Management",
@@ -1001,7 +1001,7 @@
 			},
 			{
 				"id": 20,
-				"title": "課程十 - Terrarium 專案 - DOM 元素控制與閉包：課後測驗",
+				"title": "課程十 - 盆栽盒專案 - DOM 元素控制與閉包：課後測驗",
 				"quiz": [
 					{
 						"questionText": "DOM 元素是表現網頁文件的一種物件。",
