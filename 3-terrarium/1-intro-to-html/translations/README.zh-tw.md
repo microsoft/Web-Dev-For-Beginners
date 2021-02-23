@@ -11,7 +11,7 @@
 
 HTML (HyperText Markup Language) 可說是網頁的骨架。若說 CSS 打扮你的 HTML 而 JavaScript 讓它活起來，HTML 則是網頁應用的身體。HTML 的語法甚至佐證前行說明，它包含了 "head"、 "body" 和 "footer" 的標籤。
 
-在這堂課中，我們會使用 HTML 去構建我們盆栽盒的虛擬介面。包含一個標題、三個欄位：左右各一的可拖曳植物盆栽欄位與中間的玻璃盆栽盒。這堂課程後，你會看到欄位中有許多盆栽，但介面可能會有點奇怪。不用擔心，往後的課程會講述 CSS 語法來造型化你的介面。
+在這堂課中，我們會使用 HTML 去構建我們盆栽盒的虛擬介面。包含一個標題、三個欄位：左右各一的可拖曳植物欄位與中間的玻璃盆栽罐。這堂課程後，你會看到欄位中有許多盆栽，但介面可能會有點奇怪。不用擔心，往後的課程會講述 CSS 語法來造型化你的介面。
 
 ### 課題
 
@@ -68,7 +68,7 @@ HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[
 
 ```html
 <head>
-	<title>歡迎來到我的虛擬盆栽盒</title>
+	<title>Welcome to my Virtual Terrarium</title>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -91,7 +91,7 @@ HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>歡迎來到我的虛擬盆栽盒</title>
+		<title>Welcome to my Virtual Terrarium</title>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -180,7 +180,7 @@ HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[
 新增下列程式碼到你的 `<body>` 標籤中：
 
 ```html
-<h1>我的盆栽盒</h1>
+<h1>My Terrarium</h1>
 ```
 
 使用語義化標籤如：標題 `<h1>` 和未排序串列 `<ul>` ，能幫助螢幕報讀器理解網頁的內容。普遍來說，按鈕為 `<button>` 而串列為 `<li>`。我們當然 _可以_ 用自訂義包含按鈕事件的 `<span>` 元素來替代按鈕，但這對障礙者而言，無法直接地理解語法功用會是一種負擔。基於這項原因，盡量只使用語義化標籤。

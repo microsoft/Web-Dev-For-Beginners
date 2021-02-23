@@ -858,7 +858,7 @@
 			},
 			{
 				"id": 17,
-				"title": "課程九 - 盆栽盒專案 - CSS簡介：課前測驗",
+				"title": "課程九 - 盆栽盒專案 - CSS 簡介：課前測驗",
 				"quiz": [
 					{
 						"questionText": "HTML 元素必須包含 class 或 id 才能被造型化。",
@@ -903,7 +903,7 @@
 			},
 			{
 				"id": 18,
-				"title": "課程九 - 盆栽盒專案 - CSS簡介：課後測驗",
+				"title": "課程九 - 盆栽盒專案 - CSS 簡介：課後測驗",
 				"quiz": [
 					{
 						"questionText": "CSS 可以被撰寫在 HTML 檔案的開頭。",
@@ -959,7 +959,7 @@
 				"title": "課程十 - 盆栽盒專案 - DOM 元素控制與閉包：課前測驗",
 				"quiz": [
 					{
-						"questionText": "DOM 元素全名為 Document Object Management",
+						"questionText": "DOM 全名為 Document Object Management",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -972,7 +972,7 @@
 						]
 					},
 					{
-						"questionText": "可以將 DOM 元素理解為樹的一種。",
+						"questionText": "可以將 DOM 理解為樹的一種。",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -985,7 +985,7 @@
 						]
 					},
 					{
-						"questionText": "利用 Web API，開發人員就能控制 DOM 元素。",
+						"questionText": "利用網頁 API，開發人員就能控制 DOM 元素。",
 						"answerOptions": [
 							{
 								"answerText": "是",
