@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "Desarrollo Web para Principiantes: Cuestionarios",
+		"complete": "¡Felicidades, completaste el cuestionario!",
+		"error": "Oops, intenta de nuevo",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "Lección 1 - Introducción a Lenguajes de Programación: Cuestionario Previo a la Lección",
+				"quiz": [
+					{
+						"questionText": "Se puede crear un programa sin que el creador escriba código",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Los lenguajes de programación de bajo nivel son una opción popular para...",
+						"answerOptions": [
+							{
+								"answerText": "Sitios web",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hardware",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Software de videojuegos",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cuál de estas herramientas sería más probable en el entorno de desarrollador web?",
+						"answerOptions": [
+							{
+								"answerText": "Hardware, como un Raspberry Pi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "DevTools del Navegador Web",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Documentación del Systema Operativo",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Lección 1 - Introducción a los Lenguajes de Programación: Cuestionario Posterior a la Lección",
+				"quiz": [
+					{
+						"questionText": "¿Qué idioma usaría probablemente para crear un sitio web?",
+						"answerOptions": [
+							{
+								"answerText": "Codigo de Máquina",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Los entornos de desarrollo son únicos para cada desarrollador.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Qué haría un desarrollador para corregir código defectuoso?",
+						"answerOptions": [
+							{
+								"answerText": "Resaltado de sintaxis",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Debugging",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Formato de código",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "Lección 2: Introducción a GitHub: Cuestionario Previo a la Lección",
+				"quiz": [
+					{
+						"questionText": "¿Cómo se crea un repositorio Git?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Qué hace git add?",
+						"answerOptions": [
+							{
+								"answerText": "Comete tu código",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Añade tus archivos (files) al área de preparación para seguimiento",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Añade tus archivos (files) a GitHub",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cómo verificas si git está instalado en tu computadora?",
+						"answerOptions": [
+							{
+								"answerText": "Escribo git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Escribo git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Escribo git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "Lección 2 - Introducción a GitHub: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Un lugar para comparar y discutir las diferencias introducidas en git branch con revisiones, comentarios, pruebas integradas y más es:",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Un Pull Request",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Un feature branch",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cómo obtendrías todas los commits de un git branch remoto?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cómo cambiarías a otro git branch?",
+						"answerOptions": [
+							{
+								"answerText": "git switch [branch-name]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [branch-name]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [branch-name]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "Lección 3: Creación de Páginas Web Accesibles: Cuestionario Previo a la Lección",
+				"quiz": [
+					{
+						"questionText": "¿Con que herramienta de navegador puedes verificar si un sitio web es accesible?",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Necesitas un lector de pantalla físico para verificar accesibilidad para usuarios con discapacidad visual",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "La accesibilidad solo es importante en sitios web del gobierno",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "Lección 3: Creación de Páginas Web Accesibles: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Lighthouse solo verifica problemas de accesibilidad",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Los (color safe) paletas de colores seguros ayudan a las personas con...",
+						"answerOptions": [
+							{
+								"answerText": "daltonismo",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "impedimentos visuales",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ambos los anteriores",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Los enlaces descriptivos son vitales para tener sitios web accesibles",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "Lección 4: Conceptos Básicos de JavaScript - Tipos de Datos (Data Types): Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "Los booleanos son un tipo de data (data type) que puedes usar para verificar la longitud de un string.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Lo siguiente es una operación que puedes realizar en un string",
+						"answerOptions": [
+							{
+								"answerText": "concatenación",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "añadiendo",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "empalmar (splicing)",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== y === son intercambiables",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "Lección 4: Conceptos Básicos de JavaScript - Tipos de Datos (Data Types): Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Constantes son lo mismo que 'let' y 'var' para declarar variables, a excepción de...",
+						"answerOptions": [
+							{
+								"answerText": "Las constantes deben inicializarse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Las constantes pueden ser alterados",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Las constantes se pueden reasignar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Los números y ____ son primitivas de JavaScript que manejan datos numéricos",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "*",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Strings pueden residir entre comillas simples y dobles",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "Lección 5: Conceptos Básicos de JavaScript - Métodos y Funciones: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "¿Qué es un argumento?",
+						"answerOptions": [
+							{
+								"answerText": "Es algo que declaras en la definición de la función.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Es algo que pasas a una función en el momento de la invocación.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Es algo que tienes con gente que conoces.",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Una función debe devolver algo.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Puedes nombrar una función como quieras.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cierto, pero debe ser un nombre descriptivo.",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "Lección 5: Conceptos Básicos de JavaScript - Métodos y Funciones: Cuestionario Posterior al Curso",
+				"quiz": [
+					{
+						"questionText": "Se deben proporcionar argumentos para todos los parámetros en una función.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Qué hace un valor predeterminado?",
+						"answerOptions": [
+							{
+								"answerText": "Establece un valor correcto",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Da un valor inicial para un parámetro, por lo que tu código aún funciona si omites un argumento.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "No tiene utilidad.",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Un  => (fat arrow function) te permite...",
+						"answerOptions": [
+							{
+								"answerText": "Crear funciones pesadas.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Omitir la palabra clave de la función.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Crear una función anónima.",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "Lección 6: Conceptos Básicos de JavaScript - Tomar Decisiones: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "El siguiente operador == se llama:",
+						"answerOptions": [
+							{
+								"answerText": "Igual",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Estrictamente Igual",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Asignar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Una comparación en JavaScript devuelve qué tipo?",
+						"answerOptions": [
+							{
+								"answerText": "boolean",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "string",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "El ! símbolo en JavaScript significa:",
+						"answerOptions": [
+							{
+								"answerText": "Lógico no",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Importante",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Igual",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "Lección 6: Conceptos Básicos de JavaScript - Tomar Decisiones: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "¿Qué devolvería el siguiente código?: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Qué devolvería el siguiente código?: '1' === 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Elije el operador correcto para expresar 'or' lógica:",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "Lección 7: Conceptos Básicos de JavaScript - Matrices (Arrays) y Bucles (Loops): Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "Para hacer referencia a un elemento específico en una matriz (array), usarías un...",
+						"answerOptions": [
+							{
+								"answerText": "paréntesis brackets []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "index",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "paréntesis curly {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cómo se obtiene la cantidad de elementos en una matriz (array)?",
+						"answerOptions": [
+							{
+								"answerText": "El 'len(array)' método",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "El tamaño de la propiedad en la matriz (array)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "La propiedad de longitud en la matriz (array)",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "En JavaScript, los índices comienzan en...",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "Lesson 7: JavaScript Básico - Matrices (array) y Bucles (Loops): Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "¿Qué parte de un 'for-loop' necesitarías modificar para incrementar tu iteración por 5?",
+						"answerOptions": [
+							{
+								"answerText": "condición",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "contador de programa",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "expresión-iteración",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cuál es la diferencia entre una declaración-while (while loop) y una declaración-for (for loop)?",
+						"answerOptions": [
+							{
+								"answerText": "Una declaración-for (for loop) tiene un contador y una expresión de iteración, mientras que while solo tiene una condición.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Una declaración-while tiene un contador y una expresión de iteración, mientras que  una declaración-for (for loop) solo tiene una condición.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Son lo mismo, un alias el uno para el otro.",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Dado este código (let i = 1; i <5; i ++), ¿cuántas iteraciones realizará?",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "Lección 8: Proyecto Terrario - Introducción a HTML: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "HTML representa 'HyperText Mockup Language'",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Todas las etiquetas HTML necesitan etiquetas de apertura y cierre.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "El HTML markup semántico es importante para...",
+						"answerOptions": [
+							{
+								"answerText": "legibilidad del código",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "lectores de pantalla",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "mantenimiento",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "Lección 8: Proyecto Terrario - Introducción a HTML: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Los Spans y los Divs son intercambiables.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "El encabezado de un documento HTML puede contener:",
+						"answerOptions": [
+							{
+								"answerText": "la etiqueta del título",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "metadatos",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "todo lo anterior",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "No puedes usar etiquetas obsoletas en tu HTML markup",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Falso, pero han sido desaprobados por buena razón.",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "Lección 9: Proyecto Terrario - Introducción a CSS: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "Los elementos de HTML deben tener una clase o un ID para que se les aplique el estilo.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS representa 'Complete Style Sheets'",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS se puede utilizar para crear animaciones.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "Lección 9: Proyecto Terrario - Introducción a CSS: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Puedes escribir CSS directamente en la cabecera de tu archivo de HTML.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Siempre es necesario incluir CSS en tu aplicación.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Falso, pero si quieres que se vea bien, probablemente necesites CSS.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Qué herramienta de navegador puedes utilizar para inspeccionar CSS?",
+						"answerOptions": [
+							{
+								"answerText": "Elementos",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Estilos",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Network",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "Lección 10: Proyecto Terrario - Manipulación de DOM y cierre: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "DOM representa 'Document Object Management'.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "El DOM es como un arbol.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Usando un Web API, puedes manipular el DOM.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "Lección 10: Proyecto Terrario - Manipulación de DOM y cierre: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "El DOM es un modelo para representar un documento en la web.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Utiliza cierres de JavaScript para realizar lo siguiente:",
+						"answerOptions": [
+							{
+								"answerText": "escribir funciones dentro de funciones",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "encerrar el DOM",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "cerrar bloques de script",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Complete el espacio en blanco: los cierres son útiles cuando una o más funciones necesitan acceder a una función externa...",
+						"answerOptions": [
+							{
+								"answerText": "arrays (matrices)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "scope (alcance)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "funciones",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "Lección 11: Juego de Mecanografía: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "La programación impulsada por eventos (event-driven programming) es cuando un usuario...",
+						"answerOptions": [
+							{
+								"answerText": "hace clic en un botón",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "cambia un valor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "interactúa con la página",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "cualquiera de los anteriores",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "En la programación procedimental, las funciones se llaman...",
+						"answerOptions": [
+							{
+								"answerText": "en cualquier momento",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "en un orden específico",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "de izquierda a derecha",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "El método universal expuesto en el DOM para registrar controladores de eventos (event handlers) se llama...",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "Lección 11: Juego de Mecanografía: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Casi todo lo que hace un usuario en una página genera un evento.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Los eventos comunes incluyen...",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "cualquiera de los anteriores",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Puede utilizar funciones anónimas para crear controladores de eventos.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "Lección 12: Proyecto de Extensión del Navegador - Todo Sobre los Navegadores: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "Puedes obtener extensiones de navegador de...",
+						"answerOptions": [
+							{
+								"answerText": "WalMart",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "la tienda de extensiones del navegador",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "la tienda de aplicaciones (App store)",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM representa...",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Su navegador puede servir páginas web de forma segura e insegura.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "Lección 12: Proyecto de Extensión del Navegador - Todo Sobre los Navegadores: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "El World Wide Web fue inventado por...",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "El primer navegador se llamó...",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Los navegadores pueden almacenar el historial de navegación de un usuario.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "Lección 13: Proyecto de Extensión del Navegador: Llamar un API y usar almacenamiento local: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "APIs representa...",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces (Interfaces de programación de aplicaciones)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference (Una inferencia de programación)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions (Intenciones anti probadas)",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Utiliza un API para interactuar con...",
+						"answerOptions": [
+							{
+								"answerText": "Otro activo conectado a la web.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Una base de datos.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cualquiera de los anteriores.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Cualquiera puede crear una API",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "Lección 13: Proyecto de Extensión del Navegador: Llamar un API y usar almacenamiento local: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "LocalStorage se borra cada vez que cierra la ventana del navegador",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "La ventana principal del navegador controla el LocalStorage de la extensión del navegador.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "REST en un API contexto representa...",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer (Transferencia de estado representacional)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks (Tareas estatales que regresan)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser (Estado de representación en el navegador)",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "Lección 14: Proyecto de Extensión del Navegador - Obtén información sobre 'background tasks' y Rendimiento: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "Prueba el rendimiento de tu aplicación...",
+						"answerOptions": [
+							{
+								"answerText": "usando las herramientas del navegador",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "usando un paquete de software separado",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "manualmente",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "El 'rendimiento' de un sitio web es un análisis de...",
+						"answerOptions": [
+							{
+								"answerText": "Que tan rápido se carga",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Qué tan rápido se ejecuta el código",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ambos de los anteriores",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "En general, el 'peso' de las páginas web en los últimos años ha...",
+						"answerOptions": [
+							{
+								"answerText": "se volvió más ligero",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "se volvió más pesado",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "se quedó igual",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "Lección 14: Proyecto de Extensión del Navegador - Obtén información sobre 'background tasks' y Rendimiento: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Para obtener una mejor vista del rendimiento de su sitio, borra tu caché y vuelve a cargar en el generador de perfiles.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Las extensiones del navegador tienen un rendimiento inherente.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Analiza lo siguiente para detectar cuellos de botella en el rendimiento...",
+						"answerOptions": [
+							{
+								"answerText": "DOM traversales",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript optimizaciones",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": " gestión de activos (asset management en inglés)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Todo lo anterior",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "Lección 15: Juego espacial - Introducción: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "JavaScript es un lenguaje impopular para crear juegos",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub es un patrón preferido para administrar los activos y el flujo del juego",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "La herencia de objetos se puede manejar usando clases o composición",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "Lección 15: Juego espacial - Introducción: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Las clases se basan en la herencia para atribuirse a comportamientos",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "La composición es el patrón de diseño preferido para los objetos del juego.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub representa:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "Lección 16: Juego espacial - Dibujar Héroes y Monstruos con el elemento Canvas: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "El elemento Canvas se usa para dibujar en una pantalla",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Solo puedes dibujar formas geométricas simples usando el Canvas API",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "El punto 0,0 está en la parte inferior izquierda.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "Lección 16: Juego espacial - Dibujar Héroes y Monstruos con el elemento Canvas: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Puede realizar operaciones de dibujo directamente en el elemento Canvas",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Escuchas el evento onload para saber cuándo una imagen se ha cargado de forma asincrónica.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "You draw images onto a screen with an operation called:",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "Lección 17: Juego Espacial - Agregando Movimiento: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "Cualquier objeto en la pantalla puede recibir eventos de teclado.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Puede usar el mismo método para escuchar eventos clave y eventos del mouse.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Para hacer que las cosas sucedan a intervalos regulares, ¿qué función usas?",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "Lección 17: Juego Espacial - Agregando Movimiento: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Siempre necesitas volver a dibujar la pantalla.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Qué es un bucle (loop) de juego?",
+						"answerOptions": [
+							{
+								"answerText": "Una función que garantiza que el juego se pueda reiniciar.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Una función que decide qué tan rápido debe ejecutarse el juego.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Una función que se invoca a intervalos regulares y dibuja lo que el usuario debería ver.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Un buen caso para volver a dibujar la pantalla es...",
+						"answerOptions": [
+							{
+								"answerText": "Se produjo una interacción de usuario",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Algo se movió",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "El tiempo ha pasado",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "Lección 18: Juego espacial: Agrega un láser y Detección de Colisiones: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "La detección de colisiones es cómo detectamos si dos cosas han chocado",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cómo podemos eliminar un elemento de la pantalla?",
+						"answerOptions": [
+							{
+								"answerText": "Llamar al recolector de basura",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Márqualo como muerto, solo pinta objetos no muertos la próxima vez que dibujes en la pantalla",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Coloca el artículo en una coordenada negativa",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Una buena forma de simular el disparo de un láser en JavaScript es:",
+						"answerOptions": [
+							{
+								"answerText": "hacer que un elemento visual responda a un evento clave",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "crear gifs animados",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "hacer explotar enemigos a intervalos",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "Lección 18: Juego espacial: Agrega un láser y Detección de Colisiones: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "En la detección de colisiones, compara dos",
+						"answerOptions": [
+							{
+								"answerText": "círculos y si se cruzan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "rectángulos y si se cruzan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "distancias entre dos puntos",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "La razón para implementar un efecto de enfriamiento es porque...",
+						"answerOptions": [
+							{
+								"answerText": "Haciendo el juego más difícil ya que no puedes disparar repetidamente un láser para destruir enemigos.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript solo puede producir una cierta cantidad de eventos por unidad de tiempo, por lo que debe limitarlos.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Las constantes son identificables en código porque...",
+						"answerOptions": [
+							{
+								"answerText": "Están escritos en mayúsculas.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Ellos tienen nombres específicos.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Están escritas en kebab-case como-asi-por-ejemplo.",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "Lección 19: Juego espacial - Puntuación y Vidas: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "¿Cómo se dibuja texto en una pantalla usando el elemento Canvas?",
+						"answerOptions": [
+							{
+								"answerText": "Colocar texto dentro de un elemento div o span.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Llamar drawText() en el elemento Canvas.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Llamar fillText() en el objeto de contexto.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Por qué tienes el concepto de 'vidas' en un juego?",
+						"answerOptions": [
+							{
+								"answerText": "Para mostrar cuánto daño puedes recibir.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Para que el juego no termine de inmediato, pero tienes N número de oportunidades antes de que termine el juego",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Agregue color al texto en Canvas usando.",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "Lección 19: Juego espacial - Puntuación y Vidas: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "¿Cuál es una forma divertida de mostrar cuántas vidas le quedan a un jugador?",
+						"answerOptions": [
+							{
+								"answerText": "varios barcos",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "un sistema de puntos",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cómo se centra el texto en el medio de la pantalla con el elemento Canvas?",
+						"answerOptions": [
+							{
+								"answerText": "Usas Flexbox",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Indicás que el texto se dibuje en la coordenada x del ancho de la ventana del cliente  width/2",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Estableces la propiedad textAlign en el centro del valor en el objeto de contexto",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "En el código, deduce una vida como esta:",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "Lección 20: Juego espacial - Finalizar y reiniciar: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "¿Cuándo es un buen momento para reiniciar un juego?",
+						"answerOptions": [
+							{
+								"answerText": "Cuando un jugador gana o pierde",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "cuando sea",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cuándo debes terminar un juego?",
+						"answerOptions": [
+							{
+								"answerText": "cuando un barco enemigo es destruido",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "cuando un barco héroe es destruido",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "cuando se acumulan puntos",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Una buena forma de agregar niveles a tu juego es:",
+						"answerOptions": [
+							{
+								"answerText": "Incrementar la cantidad de puntos necesarios para completar un nivel determinado.",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Añadir más jugadores al juego",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Agrega más gráficos al juego",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "Lección 20: Juego Espacial - Finalizar y Reiniciar: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "¿Cuál es un buen patrón para usar cuando se cumple una condición del final de juego?",
+						"answerOptions": [
+							{
+								"answerText": "Mostrar un mensaje adecuado",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Salir del juego",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Muestre un mensaje adecuado, ofreziendo al jugador que reinicie y muestre qué tecla presionar para esa acción.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Debes ofrecer un reinicio solo cuando el juego haya terminado",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Una buena forma de borrar el EventEmitter al finalizar un juego es:",
+						"answerOptions": [
+							{
+								"answerText": "limpiando oyentes (listeners)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "limpiando la pantalla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "cerrando la ventana del juego",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "Lección 21: Proyecto Bancario - Rutas y plantillas HTML en una Aplicación Web: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "Necesita crear varios archivos HTML para mostrar diferentes pantallas en una aplicación web.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Puede almacenar y conservar datos localmente en una aplicación web.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cuál es el mejor proveedor de datos para una aplicación web?",
+						"answerOptions": [
+							{
+								"answerText": "Una base de datos local",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Un objeto JavaScript",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Un servidor con un API JSON",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "Lección 21: Proyecto Bancario - Rutas y plantillas HTML en una Aplicación Web: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Las plantillas HTML son parte del DOM de forma predeterminada",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Qué parte de la URL se necesita para el enrutamiento?",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ambos",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "What's the name of the event triggered when calling the history.pushState() function?",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "Lección 22: Proyecto Bancario - Crear un Formulario de Inicio de Sesión y registro: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "Los formularios HTML te permiten enviar la entrada del usuario a un servidor sin usar JavaScript.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "<label> los elementos son obligatorios para cada control de formulario",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Es seguro enviar datos de formularios a un servidor a través de HTTP.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "Lección 22: Proyecto Bancario - Crear un Formulario de Inicio de Sesión y Registro: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "Usar elementos <etiqueta> en formularios es solo para que el formulario se vea bonito.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿En qué parte de un formulario se envía un URL a un servidor?",
+						"answerOptions": [
+							{
+								"answerText": "el atributo de acción",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "el atributo del método",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ambos",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Qué atributo puedes utilizar para establecer el tamaño máximo de un texto <input>?",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "Lección 23: Proyecto bancario - Métodos de Obtención y Uso de Datos: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "Por lo general, obtienes datos de un servidor de forma síncrona en un navegador.",
+						"answerOptions": [
+							{
+								"answerText": "cierto, ¡pero asíncrono es mejor!",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cuál es el formato más común utilizado para intercambiar datos en la web?",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "No hay forma de evitar que una página web acceda a una API de servidor público",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "Lección 23: Proyecto bancario - Métodos de Obtención y Uso de Datos: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "En una aplicación de una sola página, el HTML se carga una vez y nunca se actualiza.",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Por qué es importante no confiar en los datos que provienen de la entrada del usuario?",
+						"answerOptions": [
+							{
+								"answerText": "porque el uso de caracteres especiales puede hacer que la interfaz de usuario sea fea",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "porque puede contener palabras sin sentido u ofensivas",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "porque puede usarse como vector de ataque para ejecutar scripts maliciosos",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cuál es el nombre de la API para enviar solicitudes HTTP asincrónicas a un servidor web?",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "Lección 24: Proyecto Bancario - Conceptos de Gestión Estatal: Cuestionario Previo a Lección",
+				"quiz": [
+					{
+						"questionText": "¿Qué es un objeto inmutable?",
+						"answerOptions": [
+							{
+								"answerText": "Un objeto definido como constante",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Un objeto que no se puede modificar una vez creado",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Una copia de un objeto existente",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "¿Qué beneficio (s) obtienes al utilizar la administración estatal?",
+						"answerOptions": [
+							{
+								"answerText": "Puedes realizar un seguimiento de cada lugar donde se actualiza el estado",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Es más fácil depurar el código",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Todo lo anterior",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cuál es la mejor manera de conservar los datos críticos del usuario en diferentes sesiones?",
+						"answerOptions": [
+							{
+								"answerText": "Usando archivos",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Usando la API localStorage del navegador",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "En una base de datos detrás de una API de servidor",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "Lección 24: Proyecto Bancario - Conceptos de Gestión Estatal: Cuestionario Posterior a Lección",
+				"quiz": [
+					{
+						"questionText": "¿Qué crees que significa la gestión estatal?",
+						"answerOptions": [
+							{
+								"answerText": "Aplicación de la ley y el orden",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Registro del estado de la interfaz de usuario a lo largo del tiempo",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Mantener limpios los flujos de datos de su aplicación y sincronizar la interfaz de usuario con los datos",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "¿Cómo puedes realizar un seguimiento del estado de la sesión del usuario?",
+						"answerOptions": [
+							{
+								"answerText": "HTTP cookies",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Almacenamiento local o de sesiones",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Todo lo anterior",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Mutar un objeto es siempre la mejor forma de actualizarlo",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
