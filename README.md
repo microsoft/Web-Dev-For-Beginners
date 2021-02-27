@@ -3,11 +3,10 @@
 Sourced primarily from [Azure Cloud Advocates at Microsoft](https://youtube.com/watch?v=R1wrdtmBSII) who created [Web Dev for Beginners](https://aka.ms/webdev-beginners), we are pleased to offer an 11-week, 22-lesson curriculum all about JavaScript, CSS, and HTML basics, with a sprinkling of React.js at the end. Each lesson includes pre- and post-lesson quizzes, written instructions to complete the lesson, a solution, an assignment and more. Our project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
 
 > **Students**, this is the curriculum that is taught at Front-End Foxes School, a bootcamp for women with worldwide cohorts. Here are things to get set up before the cohort starts:
-
-> - Create a GitHub.com account. This is where you will store your code.
+> - Create a free [GitHub.com](https://github.com) account. This is where you will store your code.
 > - Install .git on you local computer. [Here are instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on how to do this. 
 > - Get used to the command line. This is your Terminal on Mac, and your Command Prompt on Windows. Learn more in [this article](https://www.davidbaumgold.com/tutorials/command-line).
-> - Download and install [Visual Studio Code](https://code.visualstudio.com/).
+> - Download and install the free code editor, [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Pedagogy
 
