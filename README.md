@@ -17,7 +17,7 @@ By ensuring that the content aligns with projects, the process is made more enga
 
 In addition, a low-stakes quiz before a class sets the intention of the student towards learning a topic, while a second quiz after class ensures further retention. This curriculum was designed to be flexible and fun and can be taken in whole or in part. The projects start small and become increasingly complex by the end of the 11 week cycle.
 
-> Find our [Code of Conduct](CODE_OF_CONDUCT.md), [Contributing](CONTRIBUTING.md), and [Translation](TRANSLATIONS.md) guidelines. 
+> Here are links to our [Code of Conduct](CODE_OF_CONDUCT.md), [Contributing](CONTRIBUTING.md), and [Translation](TRANSLATIONS.md) guidelines. 
 
 ## Each lesson includes:
 
@@ -31,8 +31,6 @@ In addition, a low-stakes quiz before a class sets the intention of the student 
 - supplemental reading
 - assignment
 - post-lesson quiz
-
-> **A note about quizzes**: All quizzes are contained [in this app](link here), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
 
 ## Lessons
 
