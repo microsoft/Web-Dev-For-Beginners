@@ -4,9 +4,9 @@ Di bagian kurikulum ini, Anda akan diperkenalkan dengan konsep berbasis non-proy
 
 ### Topik
 
-1. [Pengantar Bahasa Pemrograman dan Alat Keterampilan](../1-intro-to-programming-languages/translations/README.id.md)
-2. [Dasar-dasar GitHub](../2-github-basics/translations/README.id.md)
-3. [Dasar-dasar Aksesibilitas](../3-accessibility/translations/README.id.md)
+1. [Dasar-dasar GitHub](../2-github-basics/translations/README.id.md)
+2. [Pengantar Bahasa Pemrograman dan Alat Keterampilan](../1-intro-to-programming-languages/translations/README.id.md)
+2. [Dasar-dasar Aksesibilitas](../3-accessibility/translations/README.id.md)
 
 ### Kredit
 

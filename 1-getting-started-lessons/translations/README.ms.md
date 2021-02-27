@@ -4,9 +4,9 @@ Dalam bahagian kurikulum ini, anda akan diperkenalkan kepada konsep bukan projek
 
 ### Topik
 
-1. [Pengenalan Bahasa Pengaturcaraan dan Alat Perdagangan](1-intro-to-programming-languages/README.md)
-2. [Pengetahuan Asas tentang GitHub](2-github-basics/README.md)
-3. [Asas Kebolehcapaian](3-accessibility/README.md)
+1. [Pengetahuan Asas tentang GitHub](1-github-basics/translations/README.ms.md)
+2. [Pengenalan Bahasa Pengaturcaraan dan Alat Perdagangan](1-intro-to-programming-languages/translations/README.ms.md)
+3. [Asas Kebolehcapaian](3-accessibility/translations/README.ms.md)
 
 ### Kredit
 

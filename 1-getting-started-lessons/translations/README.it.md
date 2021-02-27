@@ -4,8 +4,8 @@ In questa sezione del curriculum, vi saranno introdotti concetti non relativi al
 
 ### Argomenti
 
-1. [Introduzione ai Linguaggi di Programmazione e agli Strumenti Necessari](1-intro-to-programming-languages/translations/README.id.md)
-2. [Concetti base di GitHub](2-github-basics/translations/README.it.md)
+1. [Concetti base di GitHub](1-github-basics/translations/README.it.md)
+2. [Introduzione ai Linguaggi di Programmazione e agli Strumenti Necessari](2-intro-to-programming-languages/translations/README.it.md)
 3. [Concetti base di Accessibilità](3-accessibility/translations/README.it.md)
 
 ### Riconoscimenti
