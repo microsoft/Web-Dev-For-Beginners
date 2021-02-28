@@ -2,6 +2,8 @@
 
 Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar y administrar cambios en su código.
 
+![Intro to GitHub](../images/webdev101-github.png)
+
 ## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3)
 
 ### Introducción
@@ -44,8 +46,8 @@ Digamos que tiene una carpeta localmente con algún proyecto de código y desea 
 
 1. **Crear repositorio en GitHub**. En GitHub.com, en la pestaña de repositorios, o en la barra de navegación superior derecha, busque el botón **nuevo repositorio**.
 
-    1. Dale un nombre a tu repositorio (carpeta)
-    1. Seleccione **crear repositorio**.
+   1. Dale un nombre a tu repositorio (carpeta)
+   1. Seleccione **crear repositorio**.
 
 1. **Navegue a su carpeta de trabajo**. En su terminal, cambie a la carpeta (también conocida como directorio) que desea comenzar a rastrear. Tipo:
 
@@ -96,9 +98,7 @@ Digamos que tiene una carpeta localmente con algún proyecto de código y desea 
 
 1. **Conecte su repositorio de Git local con GitHub**. Un repositorio de Git es bueno en su máquina, pero en algún momento desea tener una copia de seguridad de sus archivos en algún lugar y también invitar a otras personas a trabajar con usted en su repositorio. Un gran lugar para hacerlo es GitHub. Recuerde que ya hemos creado un repositorio en GitHub, por lo que lo único que debemos hacer es conectar nuestro repositorio de Git local con GitHub. El comando `git remote add` hará precisamente eso. Escriba el siguiente comando:
 
-
    > Tenga en cuenta que antes de escribir el comando, vaya a la página de su repositorio de GitHub para encontrar la URL del repositorio. Lo usará en el siguiente comando. Reemplaza `repository_name` con tu URL de GitHub.
-
 
    ```bash
    git remote add origin https://github.com/username/repository_name.git
@@ -107,7 +107,6 @@ Digamos que tiene una carpeta localmente con algún proyecto de código y desea 
    Esto crea un _remote_, o conexión, llamado "origin" que apunta al repositorio de GitHub que creó anteriormente.
 
 1. **Envía archivos locales a GitHub**. Hasta ahora ha creado una _conexión_ entre el repositorio local y el repositorio de GitHub. Enviemos estos archivos a GitHub con el siguiente comando `git push`, así:
- 
 
    ```bash
    git push -u origin main
@@ -124,7 +123,6 @@ Digamos que tiene una carpeta localmente con algún proyecto de código y desea 
    ```
 
    > Sugerencia: es posible que también desee adoptar un archivo `.gitignore` para evitar que los archivos que no desea rastrear aparezcan en GitHub, como el archivo de notas que almacena en la misma carpeta pero no tiene lugar para escribir su mensaje de confirmación aquí repositorio público. Puede encontrar plantillas para archivos `.gitignore` en [.gitignore templates](github.com/github/gitignore).
-
 
 #### Confirmar mensajes
 
@@ -144,17 +142,17 @@ La razón principal para poner cosas en GitHub fue hacer posible la colaboració
 
 En su repositorio, vaya a `Insights > Community` para ver cómo se compara su proyecto con los estándares comunitarios recomendados.
 
-   Aquí hay algunas cosas que pueden mejorar su repositorio de GitHub:
-   - **Descripción**. ¿Agregaste una descripción para tu proyecto?
-   - **README**. ¿Agregaste un archivo README? GitHub proporciona una guía para escribir un [README](https://docs.github.com/articles/about-readmes/).
-   - **Pauta de contribución**. ¿Su proyecto tiene [pautas de contribución](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/),
-   - **Código de Conducta**. un [Código de conducta](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/),
-   - **Licencia**. Quizás lo más importante, una [licencia](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
+Aquí hay algunas cosas que pueden mejorar su repositorio de GitHub:
+
+- **Descripción**. ¿Agregaste una descripción para tu proyecto?
+- **README**. ¿Agregaste un archivo README? GitHub proporciona una guía para escribir un [README](https://docs.github.com/articles/about-readmes/).
+- **Pauta de contribución**. ¿Su proyecto tiene [pautas de contribución](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/),
+- **Código de Conducta**. un [Código de conducta](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/),
+- **Licencia**. Quizás lo más importante, una [licencia](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
 
 Todos estos recursos beneficiarán la incorporación de nuevos miembros del equipo. Y esos son típicamente el tipo de cosas que los nuevos colaboradores miran antes incluso de mirar su código, para descubrir si su proyecto es el lugar adecuado para que ellos pasen su tiempo.
 
 ✅ Los archivos README, aunque requieren tiempo para prepararse, a menudo son descuidados por los ocupados mantenedores. ¿Puede encontrar un ejemplo de uno particularmente descriptivo? Nota: hay algunas [herramientas para ayudar a crear buenos archivos READMEs](https://www.makeareadme.com/) que le gustaría probar.
-
 
 ### Tarea: Fusionar código
 

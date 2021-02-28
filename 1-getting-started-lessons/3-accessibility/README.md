@@ -1,16 +1,18 @@
 # Creating Accessible Webpages
 
-![All About Accessibility](webdev101-a11y.png)
+![All About Accessibility](images/webdev101-a11y.png)
+
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
+
 [Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
 
 > The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
 >
 > \- Sir Timothy Berners-Lee, W3C Director and inventor of the World Wide Web
 
-This quote perfectly highlights the importance of creating accessible websites. An application that can't be accessed by all is by definition exclusionary. As web developers we should always have accessibility in mind. By having this focus from the beginning you will be well on your way to ensure everyone can access the pages you create. In this lesson, you'll learn about the tools that can help you ensure that your web assets are accessible and how to build with accessibility in mind. 
+This quote perfectly highlights the importance of creating accessible websites. An application that can't be accessed by all is by definition exclusionary. As web developers we should always have accessibility in mind. By having this focus from the beginning you will be well on your way to ensure everyone can access the pages you create. In this lesson, you'll learn about the tools that can help you ensure that your web assets are accessible and how to build with accessibility in mind.
 
 ## Tools to use
 
@@ -36,7 +38,7 @@ Another type of zoom relies on specialized software to magnify one area of the s
 
 ### Contrast checkers
 
-Colors on web sites need to be carefully chosen to  answer the needs of color-blind users or people who have  difficulty seeing low-contrast colors.
+Colors on web sites need to be carefully chosen to answer the needs of color-blind users or people who have difficulty seeing low-contrast colors.
 
 ✅ Test a web site you enjoy using for color usage with a browser extension such as [WCAG's color checker](https://microsoftedge.microsoft.com/addons/detail/wcag-color-contrast-check/idahaggnlnekelhgplklhfpchbfdmkjp?hl=en-US). What do you learn?
 
@@ -102,7 +104,7 @@ Screen readers also have the ability to read only the hyperlinks on a page, much
 
 ### Good link text
 
-Good link text briefly describes what's on the other side of the link. In the above example talking about little penguins, the link is to the Wikipedia page about the species. The phrase *little penguins* would make for perfect link text as it makes it clear what someone will learn about if they click the link - little penguins.
+Good link text briefly describes what's on the other side of the link. In the above example talking about little penguins, the link is to the Wikipedia page about the species. The phrase _little penguins_ would make for perfect link text as it makes it clear what someone will learn about if they click the link - little penguins.
 
 > The [little penguin](https://en.wikipedia.org/wiki/Little_penguin), sometimes known as the fairy penguin, is the smallest penguin in the world.
 
@@ -121,7 +123,7 @@ Imagine the following page:
 | Widget       | [Description]('#') | [Order]('#') |
 | Super widget | [Description]('#') | [Order]('#') |
 
-In this example, duplicating the text of description and order make sense for someone using a browser. However, someone using a screen reader would only hear the words *description* and *order* repeated without context.
+In this example, duplicating the text of description and order make sense for someone using a browser. However, someone using a screen reader would only hear the words _description_ and _order_ repeated without context.
 
 To support these types of scenarios, HTML supports a set of attributes known as [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA). These attributes allow you to provide additional information to screen readers.
 
@@ -129,7 +131,7 @@ To support these types of scenarios, HTML supports a set of attributes known as 
 
 You can use `aria-label` to describe the link when the format of the page doesn't allow you to. The description for widget could be set as
 
-``` html
+```html
 <a href="#" aria-label="Widget description">description</a>
 ```
 
@@ -189,7 +191,7 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
     </div>
     <div class="main-content">
       <div>
-        <p class="page-title">Welcome to Turtle Ipsum. 
+        <p class="page-title">Welcome to Turtle Ipsum.
             <a href="">Click here</a> to learn more.
         </p>
         <p class="article-text">
@@ -216,6 +218,7 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
 ```
 
 ## Post-Lecture Quiz
+
 [Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6)
 
 ## Review & Self Study
@@ -223,7 +226,7 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
 Many governments have laws regarding accessibility requirements. Read up on your home country's accessibility laws. What is covered, and what isn't? An example is [this government web site](https://accessibility.blog.gov.uk/).
 
 ## Assignment
- 
+
 [Analyze a non-accessible web site](assignment.md)
 
 Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument

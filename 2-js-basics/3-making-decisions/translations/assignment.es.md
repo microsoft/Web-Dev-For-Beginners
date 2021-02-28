@@ -1,5 +1,7 @@
 # Operadores
 
+![JavaScript Basics - Making decisions](images/webdev101-js-decisions.png)
+
 ## Instrucciones
 
 Juega con los operadores. Aquí hay una sugerencia de un programa que puede implementar.
@@ -20,7 +22,6 @@ Dada la siguiente matriz `allStudents` que representa a todos los estudiantes y 
 
 > SUGERENCIA, use un bucle for y if ... else y operadores de comparación:
 
-
 ```javascript
 let allStudents = [
   'A',
@@ -36,6 +37,6 @@ let studentsWhoPass = [];
 
 ## Rúbrica
 
-| Criterios | Ejemplar | Adecuado | Necesita mejorar |
-| -------- | ------------------------------ | ----------------------------- | ------------------------------- |
-| | Se presenta la solución completa | Se presenta solución parcial | Se presenta solución con errores |
+| Criterios | Ejemplar                         | Adecuado                     | Necesita mejorar                 |
+| --------- | -------------------------------- | ---------------------------- | -------------------------------- |
+|           | Se presenta la solución completa | Se presenta solución parcial | Se presenta solución con errores |
