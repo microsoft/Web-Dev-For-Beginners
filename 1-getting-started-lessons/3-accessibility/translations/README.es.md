@@ -1,6 +1,6 @@
 # Creación de páginas web accesibles
 
-![Todo sobre accesibilidad](webdev101-a11y.png)
+![Todo sobre accesibilidad](../webdev101-a11y.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
