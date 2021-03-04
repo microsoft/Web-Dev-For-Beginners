@@ -10,7 +10,7 @@ Essas [instruções](https://github.blog/2020-03-18-set-up-your-digital-classroo
 
 ## Usando esse repositório
 
-Caso prefira utilizar esse curso como ele atualmente se apresenta, sem a utilização do GitHub Classroom, também é possível. Você terá que apresentar aos seus alunos qual lição trabalharão juntos.
+Se desejar utilizar esse repositório/curso como está atualmente, sem a utilização do GitHub Classroom, também é possível. Você terá que apresentar aos seus/suas alunos(as) qual lição trabalharão juntos.
 
 Em um formato online (Zoom, Meet, Teams, ou outros) você pode formar salas para os testes, e orientar os alunos para ajudá-los a ficarem prontos para o aprendizado. Convide os para os testes e submita as respostas deles como 'issues'. Você pode fazer o mesmo com os exercícios, caso queira que os alunos trabalhem de forma colaborativa na comunidade.
 
