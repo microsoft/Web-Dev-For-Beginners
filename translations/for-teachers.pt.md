@@ -1,6 +1,6 @@
 ## Para Educadores
 
-Você gostaria de usar esse curso em sala de aula? Sinta-se livre!
+Você gostaria de usar esse curso em sala de aula? Fique à vontade!
 
 Na verdade, você pode fazer isso com o próprio GitHub, pelo GitHub Classroom.
 
