@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "Pembangunan Web untuk Pemula: Kuiz",
+		"complete": "Tahniah, anda telah menyelesaikan kuiz!",
+		"error": "Maaf, cuba lagi",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "Pelajaran 1 - Pengenalan Bahasa Pengaturcaraan: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Program boleh dibuat tanpa pencipta menulis kod apa pun",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bahasa tahap rendah adalah pilihan yang popular untuk",
+						"answerOptions": [
+							{
+								"answerText": "Websites",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hardware",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Perisian permainan video",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Alat mana yang kemungkinan besar terdapat di persekitaran pembangun web?",
+						"answerOptions": [
+							{
+								"answerText": "Perkakasan, seperti Raspberry Pi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "DevTools Penyemak Imbas",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Dokumentasi sistem operasi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Pelajaran 1 - Pengenalan Bahasa Pengaturcaraan: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Bahasa apa yang kemungkinan besar anda gunakan untuk membuat laman web?",
+						"answerOptions": [
+							{
+								"answerText": "Kod Mesin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Persekitaran pembangunan adalah unik bagi setiap pembangun",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Apa yang akan dilakukan oleh pembangun untuk memperbaiki kod kereta?",
+						"answerOptions": [
+							{
+								"answerText": "Penyorotan sintaks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Debugging",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Pemformatan kod",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "Pelajaran 2 - Pengenalan kepada GitHub: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Bagaimana anda membuat repo Git?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apa yang dilakukan oleh git add?",
+						"answerOptions": [
+							{
+								"answerText": "Komit kod anda",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Menambah fail anda ke kawasan pementasan untuk mengesan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Menambah fail anda ke GitHub",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana anda memeriksa sama ada git dipasang pada komputer anda?",
+						"answerOptions": [
+							{
+								"answerText": "taip git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "taip git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "taip git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "Pelajaran 2 - Pengenalan kepada GitHub: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Tempat untuk membandingkan dan membincangkan perbezaan yang diperkenalkan di cabang dengan ulasan, komen, ujian bersepadu, dan banyak lagi adalah:",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Pull Request",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Feature branch",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana anda mendapat semua komit dari remote branch?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana anda beralih ke branch?",
+						"answerOptions": [
+							{
+								"answerText": "git switch [branch-name]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [branch-name]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [branch-name]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "Pelajaran 3 - Membuat Laman Web yang Boleh Diakses: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Laman web yang boleh diakses boleh diperiksa di mana alat penyemak imbas",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda memerlukan pembaca skrin fizikal untuk menguji kebolehaksesan bagi pengguna yang cacat penglihatan",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Kebolehcapaian hanya penting di laman web kerajaan",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "Pelajaran 3 - Membuat Laman Web yang Boleh Diakses: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Rumah Api hanya memeriksa masalah aksesibiliti",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Palet selamat warna menolong orang",
+						"answerOptions": [
+							{
+								"answerText": "buta warna",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "masalah penglihatan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "kedua-dua perkara di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pautan deskriptif sangat penting untuk laman web yang boleh diakses",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "Pelajaran 4 - Asas JavaScript - Jenis Data: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Booleans adalah jenis data yang boleh anda gunakan untuk menguji panjang tali",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Berikut adalah operasi yang boleh anda lakukan pada rentetan",
+						"answerOptions": [
+							{
+								"answerText": "concatenation",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "appending",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "splicing",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== dan === boleh ditukar ganti",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "Pelajaran 4 - Asas JavaScript - Jenis Data: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Pemalar adalah sama dengan let dan var untuk menyatakan pemboleh ubah kecuali",
+						"answerOptions": [
+							{
+								"answerText": "Pemalar mesti dimulakan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Pemalar boleh diubah",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Pemalar boleh ditugaskan semula",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Nombor dan ____ adalah primitif JavaScript yang mengendalikan data berangka",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Rentetan boleh berada di antara tanda petik tunggal dan dua",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "Pelajaran 5 - Asas JavaScript - Kaedah dan Fungsi: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apa itu hujah (argument)?",
+						"answerOptions": [
+							{
+								"answerText": "Ini adalah sesuatu yang anda nyatakan dalam definisi fungsi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ini adalah sesuatu yang anda gunakan dalam fungsi pada waktu pemanggilan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Ini sesuatu yang anda ada dengan orang yang anda kenali",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Fungsi mesti mengembalikan sesuatu",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda boleh menamakan fungsi apa sahaja",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "benar, tetapi mestilah nama deskriptif",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "Pelajaran 5 - Asas JavaScript - Kaedah dan Fungsi: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Hujah mesti disediakan untuk semua parameter dalam fungsi",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apa yang dilakukan oleh nilai lalai?",
+						"answerOptions": [
+							{
+								"answerText": "Menetapkan nilai yang betul",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Memberi nilai permulaan untuk parameter sehingga kod anda masih berkelakuan jika anda menghilangkan argumen untuknya",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Tidak mempunyai utiliti",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Fungsi anak panah lemak membolehkan anda melakukannya",
+						"answerOptions": [
+							{
+								"answerText": "Buat fungsi berat",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hilangkan kata kunci fungsi",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Buat fungsi tanpa nama",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "Pelajaran 6 - Asas JavaScript - Membuat Keputusan: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Pengendali berikut == dipanggil",
+						"answerOptions": [
+							{
+								"answerText": "Kesaksamaan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Persamaan yang ketat",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tugasan",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Perbandingan dalam JavaScript mengembalikan jenis apa?",
+						"answerOptions": [
+							{
+								"answerText": "boolean",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "string",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "The ! simbol dalam JavaScript bermaksud:",
+						"answerOptions": [
+							{
+								"answerText": "Tidak logik",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Penting",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sama",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "Pelajaran 6 - Asas JavaScript - Membuat Keputusan: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apakah kod berikut yang akan dikembalikan: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Apakah kod berikut yang akan dikembalikan: '1' === 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Pilih operator yang betul untuk menyatakan 'atau' logik",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "Pelajaran 7 - Asas JavaScript - Susunan dan Gelung: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Untuk merujuk pada item tertentu dalam array, anda akan menggunakan a",
+						"answerOptions": [
+							{
+								"answerText": "pendakap persegi []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "indeks",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pendakap kerinting {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana anda mendapatkan bilangan item dalam satu array?",
+						"answerOptions": [
+							{
+								"answerText": "Kaedah 'len (array)'",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Properti `size` pada array",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Properti `length` pada array",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Dalam JavaScript, indeks bermula pada",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "Pelajaran 7 - Asas JavaScript - Susunan dan Gelung: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Bahagian mana untuk loop yang perlu anda ubah untuk meningkatkan lelarannya dengan 5?",
+						"answerOptions": [
+							{
+								"answerText": "kondisi",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "counter",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ekspresi-iterasi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Apa perbezaan antara while dan for loop untuk",
+						"answerOptions": [
+							{
+								"answerText": "A for-loop mempunyai pembilang dan ekspresi iterasi, di mana while hanya mempunyai keadaan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sebuah while memiliki penghitung dan ekspresi-iterasi di mana for-loop hanya memiliki kondisi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Mereka sama, hanya alias untuk satu sama lain",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Diberikan kode for (let i = 1; i <5; i ++), berapa banyak iterasi yang akan dilakukan?",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "Pelajaran 8 - Projek Terrarium - Pengenalan HTML: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "HTML bermaksud 'HyperText Mockup Language'",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Semua tag HTML memerlukan tag pembuka dan penutup",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Menggunakan penanda semantik adalah yang paling penting untuk",
+						"answerOptions": [
+							{
+								"answerText": "kebolehbacaan kod",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "pembaca skrin",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "penyelenggaraan",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "Pelajaran 8 - Projek Terrarium - Pengenalan HTML: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Span dan Div boleh ditukar ganti",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Ketua dokumen HTML boleh mengandungi:",
+						"answerOptions": [
+							{
+								"answerText": "tag title",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "metadata",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "semua di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda tidak boleh menggunakan teg yang tidak digunakan dalam markup anda",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah, tapi mereka sudah tidak digunakan lagi karena alasan yang baik",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "Pelajaran 9 - Projek Terrarium - Pengenalan kepada CSS: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Elemen HTML mesti mempunyai kelas atau id untuk digayakan",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS bermaksud 'Complete Style Sheets'",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS can be used to create animations",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "Pelajaran 9 - Projek Terrarium - Pengenalan kepada CSS: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda boleh menulis CSS secara langsung di bahagian utama fail HTML anda",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Selalu perlu memasukkan CSS dalam aplikasi anda",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false, tetapi jika anda mahu ia kelihatan baik, anda mungkin memerlukan CSS",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Alat penyemak imbas mana yang boleh digunakan untuk memeriksa CSS?",
+						"answerOptions": [
+							{
+								"answerText": "Elemen",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Gaya",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Rangkaian",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "Pelajaran 10 - Projek Terrarium - Manipulasi DOM dan Penutupan: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "DOM bermaksud 'Document Object Management'",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "DOM boleh dianggap sebagai pokok",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Dengan menggunakan Web API, anda boleh memanipulasi DOM",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "Pelajaran 10 - Projek Terrarium - Manipulasi DOM dan Penutupan: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "DOM adalah model untuk mewakili dokumen di web",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Gunakan penutupan JavaScript untuk melakukan perkara berikut:",
+						"answerOptions": [
+							{
+								"answerText": "menulis fungsi dalam fungsi",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "sertakan DOM",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "tutup blok skrip",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Isi tempat kosong: Penutupan berguna apabila satu atau lebih fungsi perlu mengakses fungsi luar ...",
+						"answerOptions": [
+							{
+								"answerText": "tatasusunan(array)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "skop",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "fungsi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "Pelajaran 11 - Permainan Menaip: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Pengaturcaraan berdasarkan acara adalah ketika pengguna",
+						"answerOptions": [
+							{
+								"answerText": "klik pada butang",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "mengubah nilai",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "berinteraksi dengan halaman",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "mana-mana perkara di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Dalam pengaturcaraan prosedur, fungsi dipanggil",
+						"answerOptions": [
+							{
+								"answerText": "bila-bila masa",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "mengikut urutan tertentu",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "kiri ke kanan",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Kaedah universal yang dinyatakan dalam DOM untuk mendaftar pengendali acara dipanggil",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "Pelajaran 11 - Permainan Menaip: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apa sahaja yang dilakukan pengguna di halaman menimbulkan peristiwa",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Acara biasa merangkumi",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "semua di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda boleh menggunakan fungsi tanpa nama untuk membuat pengendali acara",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "Pelajaran 12 - Projek Penyambungan Penyemak Imbas - Semua mengenai Penyemak Imbas: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda boleh mendapatkan pelanjutan penyemak imbas dari",
+						"answerOptions": [
+							{
+								"answerText": "WalMart",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Kedai pelanjutan penyemak imbas",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "App store",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM bermaksud",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Penyemak imbas anda dapat melayani laman web dengan selamat dan tidak selamat",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "Pelajaran 12 - Projek Penyambungan Penyemak Imbas - Semua mengenai Penyemak Imbas: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "World Wide Web dicipta oleh",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Penyemak imbas pertama dipanggil",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Penyemak imbas boleh menyimpan sejarah penyemakan imbas pengguna",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "Pelajaran 13 - Projek Penyambungan Penyemak Imbas - Panggil API, gunakan Penyimpanan Tempatan: Kuiz Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "APIs bremaksud",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Gunakan API untuk berinteraksi",
+						"answerOptions": [
+							{
+								"answerText": "Aset lain yang disambungkan ke web",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Pangkalan data",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Salah satu perkara di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Sesiapa sahaja boleh membuat API",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "Pelajaran 13 - Projek Penyambungan Penyemak Imbas - Panggil API, gunakan Penyimpanan Tempatan: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "LocalStorage dibersihkan setiap kali anda menutup tetingkap penyemak imbas",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tetingkap penyemak imbas utama mengawal LocalStorage pelanjutan penyemak imbas",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "REST dalam konteks API bermaksud",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "Pelajaran 14 - Projek Sambungan Penyemak Imbas - Ketahui mengenai Tugas dan Prestasi Latar Belakang: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Uji prestasi aplikasi anda",
+						"answerOptions": [
+							{
+								"answerText": "Menggunakan alat penyemak imbas",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Menggunakan pakej perisian yang berasingan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Secara manual",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Prestasi' laman web adalah analisis mengenai",
+						"answerOptions": [
+							{
+								"answerText": "Berapa cepat ia memuatkan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Seberapa pantas kod di dalamnya berjalan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Kedua-dua di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Secara keseluruhan, 'berat' laman web sejak beberapa tahun kebelakangan ini",
+						"answerOptions": [
+							{
+								"answerText": "semakin ringan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "semakin berat",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "sama",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "Pelajaran 14 - Projek Pelanjutan Penyemak Imbas - Ketahui mengenai Tugas dan Prestasi Latar Belakang: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Untuk mendapatkan gambaran yang lebih baik mengenai prestasi laman web anda, kosongkan cache dan muatkan semula profiler tersebut",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Sambungan penyemak imbas sememangnya berprestasi",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Analisis yang berikut untuk masalah prestasi",
+						"answerOptions": [
+							{
+								"answerText": "DOM traversals",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript optimizations",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Asset management",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Semua di atas",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "Pelajaran 15 - Permainan Angkasa - Pengenalan: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "JavaScript adalah bahasa yang tidak popular untuk membina permainan",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub / Sub adalah corak pilihan untuk menguruskan aset dan aliran permainan",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Pewarisan objek dapat dikendalikan dengan menggunakan kelas atau komposisi",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "Pelajaran 15 - Permainan Angkasa - Pengenalan: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Kelas bergantung pada pewarisan untuk menganggap tingkah laku",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Komposisi adalah corak reka bentuk yang disukai untuk objek permainan",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub bermaksud:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "Pelajaran 16 - Permainan Angkasa - Lukis Pahlawan dan Monster ke Kanvas: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Elemen Canvas adalah yang anda gunakan untuk melukis di skrin",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Anda hanya dapat melukis bentuk geometri sederhana menggunakan Canvas API",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Titik 0,0 berada di kiri bawah",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "Pelajaran 16 - Permainan Angkasa - Lukis Pahlawan dan Monster ke Kanvas: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda boleh melakukan operasi melukis terus di Kanvas",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda mendengar peristiwa muatan untuk mengetahui bila gambar dimuat secara tidak segerak",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Anda melukis gambar ke skrin dengan operasi yang disebut:",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "Pelajaran 17 - Permainan Angkasa - Menambah Gerak: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Sebarang objek di layar dapat menerima acara papan kekunci",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Anda boleh menggunakan kaedah yang sama untuk mendengarkan peristiwa penting dan acara tetikus",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Untuk membuat sesuatu berlaku secara berkala, anda menggunakan fungsi apa?",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "Pelajaran 17 - Permainan Angkasa - Menambah Gerak: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda selalu perlu melukis semula skrin",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apakah gelung permainan (game loop) ?",
+						"answerOptions": [
+							{
+								"answerText": "Fungsi yang memastikan permainan dapat dimulakan semula",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Fungsi yang menentukan seberapa pantas permainan harus dijalankan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Fungsi yang dipanggil secara berkala dan menarik apa yang pengguna harus lihat",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Kes yang baik untuk melukis semula skrin adalah",
+						"answerOptions": [
+							{
+								"answerText": "Interaksi pengguna berlaku",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sesuatu telah bergerak",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Masa telah berlalu",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "Pelajaran 18 - Permainan Angkasa - Menambah Laser dan Mengesan Perlanggaran: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Pengesanan perlanggaran adalah bagaimana kita mengesan jika dua perkara bertembung",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana kita boleh mengeluarkan item dari skrin?",
+						"answerOptions": [
+							{
+								"answerText": "Hubungi pemungut sampah",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tandakan sebagai mati, hanya cat bukan benda mati lain kali kita melukis skrin",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Letakkan item pada koordinat negatif",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Kaedah yang baik untuk mensimulasikan penembakan laser dalam JavaScript adalah:",
+						"answerOptions": [
+							{
+								"answerText": "membuat elemen visual bertindak balas terhadap peristiwa penting",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "buat gif animasi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "membuat musuh meletup pada selang waktu",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "Pelajaran 18 - Permainan Angkasa - Menambah Laser dan Mengesan Perlanggaran: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Dalam pengesanan perlanggaran anda membandingkan dua",
+						"answerOptions": [
+							{
+								"answerText": "bulatan dan sama ada mereka bersilang",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "segi empat tepat dan sama ada mereka bersilang",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "jarak antara dua titik",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Sebab untuk melaksanakan kesan cooldown adalah kerana",
+						"answerOptions": [
+							{
+								"answerText": "Menjadikan permainan lebih sukar kerana anda tidak dapat menembak laser berulang kali untuk menghancurkan musuh",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript hanya dapat menghasilkan sejumlah peristiwa per unit waktu, jadi anda perlu menghadkannya",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pemalar dikenal pasti dalam kod kerana",
+						"answerOptions": [
+							{
+								"answerText": "mereka ditulis dengan huruf besar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "mereka mempunyai nama tertentu",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "mereka ditulis dalam kes kebab-seperti ini",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "Pelajaran 19 - Permainan Angkasa - Pemarkahan dan Kehidupan: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Bagaimana anda melukis teks pada layar menggunakan elemen Canvas?",
+						"answerOptions": [
+							{
+								"answerText": "Letakkan teks di dalam elemen div atau span",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Panggil drawText () pada elemen Kanvas",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Panggil fillText () pada objek konteks",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Mengapa anda mempunyai konsep 'nyawa' dalam permainan?",
+						"answerOptions": [
+							{
+								"answerText": "Untuk menunjukkan berapa banyak kerosakan yang boleh anda ambil",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Supaya permainan tidak berakhir dengan segera, tetapi anda mempunyai banyak peluang sebelum permainan berakhir",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tambahkan warna pada teks pada Kanvas menggunakan",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "Pelajaran 19 - Permainan Angkasa - Pemarkahan dan Kehidupan: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apa cara yang menyeronokkan untuk menunjukkan berapa banyak nyawa yang ditinggalkan oleh pemain?",
+						"answerOptions": [
+							{
+								"answerText": "sebilangan kapal",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sistem mata",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana anda memusatkan teks di tengah-tengah skrin menggunakan elemen Canvas?",
+						"answerOptions": [
+							{
+								"answerText": "Guna Flexbox",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anda mengarahkan teks dilukis pada koordinat x lebar tetingkap klien / 2",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Anda menetapkan properti textAlign ke pusat nilai pada objek konteks",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Dalam kod, tolak kehidupan seperti ini:",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "Pelajaran 20 - Permainan Angkasa - Tamat dan Mulakan Semula: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Bilakah masa yang baik untuk memulakan semula permainan",
+						"answerOptions": [
+							{
+								"answerText": "apabila pemain menang atau kalah",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "bila-bila masa",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bilakah permainan harus berakhir",
+						"answerOptions": [
+							{
+								"answerText": "ketika kapal musuh musnah",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "apabila kapal wira musnah",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "semasa mata dikumpulkan",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Cara yang baik untuk menambahkan tahap ke permainan anda adalah:",
+						"answerOptions": [
+							{
+								"answerText": "Menambah jumlah mata yang diperlukan untuk menyelesaikan tahap tertentu",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Tambahkan lebih banyak pemain ke permainan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tambahkan lebih banyak grafik ke permainan",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "Pelajaran 20 - Permainan Angkasa - Tamat dan Mulakan Semula: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apakah corak yang baik untuk digunakan apabila keadaan akhir permainan dipenuhi?",
+						"answerOptions": [
+							{
+								"answerText": "Paparkan mesej yang sesuai",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hentikan permainan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Paparkan mesej yang sesuai, tawarkan pemain untuk memulakan semula, dan tunjukkan kunci apa yang harus dipukul untuk tindakan itu",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda harus menawarkan memulakan semula hanya apabila permainan telah berakhir",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Cara yang baik untuk membersihkan EventEmitter ketika mengakhiri permainan adalah:",
+						"answerOptions": [
+							{
+								"answerText": "membersihkan pendengar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "membersihkan skrin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "menutup tingkap permainan",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "Pelajaran 21 - Projek Bank - Templat dan Laluan HTML dalam Aplikasi Web: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda perlu membuat banyak fail HTML untuk memaparkan skrin yang berbeza dalam aplikasi web",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda boleh menyimpan dan menyimpan data secara tempatan dalam aplikasi web",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Apakah penyedia data terbaik untuk aplikasi web?",
+						"answerOptions": [
+							{
+								"answerText": "Pangkalan data tempatan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Objek JavaScript",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Pelayan dengan JSON API",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "Pelajaran 21 - Templat dan Laluan HTML Projek Bank dalam Aplikasi Web: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Templat HTML adalah sebahagian dari DOM secara lalai",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bahagian URL mana yang diperlukan untuk penghalaan?",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "kedua-duanya",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apakah nama peristiwa yang dicetuskan ketika memanggil fungsi history.pushState ()?",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "Pelajaran 22 - Projek Bank - Bina Log Masuk dan Pendaftaran: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Bentuk HTML membolehkan anda mengirim input pengguna ke pelayan tanpa menggunakan JavaScript",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Elemen <label> adalah wajib bagi setiap kawalan bentuk",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Adalah selamat untuk menghantar data borang ke pelayan melalui HTTP",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "Pelajaran 22 - Projek Bank - Bina Log Masuk dan Pendaftaran: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Menggunakan elemen <label> dalam bentuk hanya untuk menjadikan bentuknya cantik",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "URL dihantar ke pelayan di bahagian mana borang?",
+						"answerOptions": [
+							{
+								"answerText": "atribut tindakan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "atribut kaedah",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "kedua-duanya",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Atribut mana yang boleh anda gunakan untuk menetapkan ukuran maksimum teks <input>?",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "Pelajaran 23 - Projek Bank - Kaedah Mengambil dan Menggunakan Data: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda biasanya mengambil data dari pelayan secara serentak dalam penyemak imbas",
+						"answerOptions": [
+							{
+								"answerText": "true, tetapi async adalah yang terbaik!",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Apakah format yang paling biasa digunakan untuk menukar data di web?",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tidak ada cara untuk menghalang laman web mengakses API pelayan awam",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "Pelajaran 23 - Kaedah Projek Bank Mengambil dan Menggunakan Data: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Dalam aplikasi Satu halaman, HTML dimuat sekali dan tidak pernah dikemas kini",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Mengapakah penting untuk tidak mempercayai data yang berasal dari input pengguna?",
+						"answerOptions": [
+							{
+								"answerText": "kerana menggunakan watak khas boleh menjadikan UI jelek.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "kerana boleh mengandungi kata-kata yang tidak masuk akal atau menyinggung perasaan.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "kerana dapat digunakan sebagai vektor serangan untuk melaksanakan skrip jahat.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apakah nama API untuk menghantar permintaan HTTP tidak segerak ke pelayan web?",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "Pelajaran 24 - Projek Bank - Konsep Pengurusan Negeri: Kuiz Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apakah objek yang tidak berubah?",
+						"answerOptions": [
+							{
+								"answerText": "Objek yang ditakrifkan sebagai pemalar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Objek yang tidak dapat diubah setelah dibuat ",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Salinan objek yang ada",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Apa faedah yang anda peroleh daripada menggunakan pengurusan negeri?",
+						"answerOptions": [
+							{
+								"answerText": "Anda boleh mengesan setiap tempat yang dikemas kini negeri ini",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Lebih mudah untuk menyahpepijat kod",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Semua di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apakah kaedah terbaik untuk mengekalkan data pengguna kritikal dalam pelbagai sesi?",
+						"answerOptions": [
+							{
+								"answerText": "Guna fail",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Menggunakan API LocalStorage penyemak imbas",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "In a database behind a server API",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "Pelajaran 24 - Projek Bank - Konsep Pengurusan Negeri: Kuiz Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apa pendapat anda tentang pengurusan negeri?",
+						"answerOptions": [
+							{
+								"answerText": "Penguatkuasaan undang-undang & ketertiban",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Mencatat keadaan antara muka pengguna dari masa ke masa",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Menjaga aliran data aplikasi anda bersih dan menyegerakkan antara muka pengguna dengan data",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana anda dapat mengawasi keadaan sesi pengguna?",
+						"answerOptions": [
+							{
+								"answerText": "HTTP cookies",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Storan tempatan atau sesi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Semua di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Mematikan objek selalu merupakan kaedah terbaik untuk mengemasinya",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

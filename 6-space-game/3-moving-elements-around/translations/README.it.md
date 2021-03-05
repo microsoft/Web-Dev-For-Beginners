@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/33)
+[Quiz Pre-Lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/33?loc=it)
 
 I giochi non sono molto divertenti finché non si hanno alieni che scorazzano per lo schermo! In questo gioco, si utilizzeranno due tipi di movimenti:
 
@@ -377,8 +377,7 @@ Come si può vedere, il proprio codice può trasformarsi in ["spaghetti code"](h
 
 ## Quiz Post-Lezione
 
-[
-Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/34)
+[Quiz post-lezione](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/34?loc=it)
 
 ## Revisione e Auto Apprendimento
 
