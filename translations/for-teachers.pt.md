@@ -6,7 +6,7 @@ Na verdade, você pode fazer isso com o próprio GitHub, pelo GitHub Classroom.
 
 Para isso, crie um 'fork' desse repositório. Você precisará criar um repositório para cada aula. Então, extraia cada pasta para um repositório separado. Dessa forma, o [GitHub Classroom](https://classroom.github.com/classrooms) selecionará cada aula separadamente. 
 
-Essas [instruções](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) vão ajudar você a configurar sua sala de aula. 
+Essas [instruções](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) ajudarão você a configurar sua sala de aula. 
 
 ## Usando esse repositório
 
