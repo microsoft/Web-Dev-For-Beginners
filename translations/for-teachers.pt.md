@@ -1,4 +1,4 @@
-## Para educadores
+## Para Educadores
 
 Você gostaria de usar esse curso em sala de aula? Sinta-se livre!
 
