@@ -16,7 +16,7 @@ Num formato online (via Zoom, Meet, Teams, ou outros aplicativos) você pode for
 
 Se um formato mais privado for melhor, peça para que os/as alunos(as) criem um 'fork' desse repositório de aula por aula, para seus próprios repositórios do GitHub como repositórios privados e dê o seu acesso. Assim eles(as) podem completar os testes de forma privada e submeter a você via 'issues' em um repositório da sala.
 
-Existem várias maneiras para realizar esse curso de forma online. Nos conte qual delas funciona melhor para você!
+Existem várias maneiras para realizar esse curso de forma on-line. Nos conte qual delas funciona melhor para você!
 
 ## Queremos saber sua opinião!
 
