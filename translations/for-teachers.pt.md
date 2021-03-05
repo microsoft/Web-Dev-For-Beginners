@@ -20,4 +20,4 @@ Existem várias maneiras para realizar esse curso de forma on-line. Nos conte qu
 
 ## Queremos saber sua opinião!
 
-Queremos que esse curso funcione para você e seus alunos. Por favor, deixe um [feedback](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
+Queremos que esse curso funcione para você e seus/suas alunos(as). Por favor, deixe um [feedback](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
