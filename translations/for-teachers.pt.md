@@ -14,7 +14,7 @@ Se desejar utilizar esse repositório/curso como está atualmente, sem a utiliza
 
 Num formato online (via Zoom, Meet, Teams, ou outros aplicativos) você pode formar salas para os testes e orientar os/as alunos(as) para ajudar a ficarem prontos para o aprendizado. Convide para os testes e submeta as respostas deles como 'issues'. Você pode fazer o mesmo com os exercícios, caso deseja que os/as alunos(as) trabalhem de forma colaborativa na comunidade.
 
-Se um formato mais privado for melhor, peça para que os alunos criem um 'fork' desse repositório, aula por aula, para os seus próprios GitHub como repositórios privados, e para que te deem acesso. Assim eles podem completar os testes de forma privada e submeter a você via 'issues' em um repositório da sala.
+Se um formato mais privado for melhor, peça para que os/as alunos(as) criem um 'fork' desse repositório de aula por aula, para seus próprios repositórios do GitHub como repositórios privados e dê o seu acesso. Assim eles(as) podem completar os testes de forma privada e submeter a você via 'issues' em um repositório da sala.
 
 Existem várias maneiras para realizar esse curso de forma online. Nos conte qual delas funciona melhor para você!
 
