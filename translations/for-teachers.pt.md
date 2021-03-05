@@ -8,7 +8,7 @@ Para isso, crie um 'fork' desse repositório. Você precisará criar um reposit�
 
 Essas [instruções](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) ajudarão você a configurar sua sala de aula. 
 
-## Usando esse repositório
+## Fazendo uso desse Repositório
 
 Se desejar utilizar esse repositório/curso como está atualmente, sem a utilização do GitHub Classroom, também é possível. Você terá que apresentar aos seus/suas alunos(as) qual lição trabalharão juntos.
 
