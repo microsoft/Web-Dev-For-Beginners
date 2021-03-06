@@ -44,7 +44,7 @@ La accesibilidad es un tema relativamente extenso. Para ayudarlo, existen numero
 
 - [Accessible U - University of Minnesota](https://accessibility.umn.edu/your-role/web-developers)
 
-Si bien no podremos cubrir todos los aspectos de la creación de sitios accesibles, a continuación se muestran algunos de los principios básicos que querrá implementar. Diseñar una página accesible desde el principio es ** siempre ** más fácil que volver a una página existente para hacerla accesible.
+Si bien no podremos cubrir todos los aspectos de la creación de sitios accesibles, a continuación se muestran algunos de los principios básicos que querrá implementar. Diseñar una página accesible desde el principio es **siempre** más fácil que volver a una página existente para hacerla accesible.
 
 ## Buenos principios de visualización
 
@@ -82,7 +82,7 @@ Como era de esperar, los lectores de pantalla leen el texto del enlace de la mis
 
 > El pequeño pingüino, a veces conocido como el pingüino de hadas, es el pingüino más pequeño del mundo. Visite https://en.wikipedia.org/wiki/Little_penguin para obtener más información.
 
-> ** NOTA ** Mientras estás a punto de leer, ** nunca ** debes crear enlaces que se parezcan al anterior.
+> **NOTA** Mientras estás a punto de leer, **nunca** debes crear enlaces que se parezcan al anterior.
 
 Recuerde, los lectores de pantalla son una interfaz diferente de los navegadores con un conjunto diferente de características.
 
@@ -115,7 +115,7 @@ Imagina la siguiente página:
 | Widget       | [Descripción]('#') | [Orden]('#') |
 | Super widget | [Descripción]('#') | [Orden]('#') |
 
-En este ejemplo, duplicar el texto de descripción y orden tiene sentido para alguien que usa un navegador. Sin embargo, alguien que use un lector de pantalla solo escuchará las palabras * descripción * y * orden * repetidas sin contexto.
+En este ejemplo, duplicar el texto de descripción y orden tiene sentido para alguien que usa un navegador. Sin embargo, alguien que use un lector de pantalla solo escuchará las palabras *descripción* y *orden* repetidas sin contexto.
 
 Para admitir este tipo de escenarios, HTML admite un conjunto de atributos conocidos como [Aplicaciones de Internet enriquecidas accesibles (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA). Estos atributos le permiten proporcionar información adicional a los lectores de pantalla.
 
