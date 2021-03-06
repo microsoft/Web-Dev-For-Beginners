@@ -194,7 +194,7 @@ Pertama, gayakan anak-anak `.terrarium` sebagai segi empat bulat menggunakan CSS
 	height: 80%;
 	width: 60%;
 	background: #d1e1df;
-	border-radius: 10%;
+	border-radius: 1rem;
 	position: absolute;
 	bottom: 0.5%;
 	left: 20%;
@@ -224,19 +224,19 @@ Pertama, gayakan anak-anak `.terrarium` sebagai segi empat bulat menggunakan CSS
 }
 
 .dirt {
-	width: 58%;
+	width: 60%;
 	height: 5%;
 	background: #3a241d;
 	position: absolute;
-	border-radius: 0 0 4rem 4rem;
+	border-radius: 0 0 1rem 1rem;
 	bottom: 1%;
-	left: 21%;
+	left: 20%;
 	opacity: 0.7;
 	z-index: -1;
 }
 ```
 
-Perhatikan penggunaan peratusan di sini, walaupun untuk `radius sempadan (border-radius)`. Sekiranya anda menurunkan penyemak imbas anda, anda dapat melihat bagaimana skala sudut jar juga. Perhatikan juga peratusan lebar dan tinggi untuk elemen balang dan bagaimana setiap elemen benar-benar diposisikan di tengah, disematkan ke bahagian bawah pandang.
+Perhatikan penggunaan peratusan di sini. Sekiranya anda menurunkan penyemak imbas anda, anda dapat melihat bagaimana skala sudut jar juga. Perhatikan juga peratusan lebar dan tinggi untuk elemen balang dan bagaimana setiap elemen benar-benar diposisikan di tengah, disematkan ke bahagian bawah pandang.
 
 ✅ Cubalah ubah warna balang dan kelegapan berbanding kotoran. Apa yang berlaku? Kenapa?
 
