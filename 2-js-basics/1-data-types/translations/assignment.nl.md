@@ -2,7 +2,7 @@
 
 ## Instructies
 
-Stel je voor dat u een winkelwagentje aan het bouwen bent. Schrijf wat documentatie over de gegevenstypen die u nodig zou hebben om uw winkelervaring te voltooien. Hoe bent u tot uw keuzes gekomen?
+Stelt u voor dat u een winkelwagentje aan het bouwen bent. Schrijf wat documentatie over de gegevenstypen die u nodig zou hebben om uw winkelervaring te voltooien. Hoe bent u tot uw keuzes gekomen?
 
 ## Rubriek
 

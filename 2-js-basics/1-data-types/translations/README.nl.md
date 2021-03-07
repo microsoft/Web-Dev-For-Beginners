@@ -95,7 +95,7 @@ Constanten zijn vergelijkbaar met variabelen, met twee uitzonderingen:
       obj.a = 5;  // toegestaan
       ```
 
-      Hierboven verander je de waarde van het object maar niet de referentie zelf, waardoor het toegestaan is.
+      Hierboven verandert u de waarde van het object maar niet de referentie zelf, waardoor het toegestaan is.
 
    > Let op: een 'const' betekent dat de referentie is beschermd tegen opnieuw toewijzen. De waarde is echter niet _onveranderlijk_ en kan veranderen, vooral als het een complexe constructie is, zoals een object.
 
@@ -182,14 +182,14 @@ Booleans kunnen slechts twee waarden zijn: `true` of `false`. Booleans kunnen he
 
 ## 🚀 Uitdaging
 
-JavaScript is berucht om zijn verrassende manieren om af en toe met gegevenstypen om te gaan. Doe een beetje onderzoek naar deze 'valstrikken'. Bijvoorbeeld: hoofdlettergevoeligheid kan bijten! Probeer dit in uw console: `let age = 1; let Age = 2; age == Age` (lost `false` op - waarom?). Welke andere valstrikken kun je vinden?
+JavaScript is berucht om zijn verrassende manieren om af en toe met gegevenstypen om te gaan. Doe een beetje onderzoek naar deze 'valstrikken'. Bijvoorbeeld: hoofdlettergevoeligheid kan bijten! Probeer dit in uw console: `let age = 1; let Age = 2; age == Age` (lost `false` op - waarom?). Welke andere valstrikken kunt u vinden?
 
 ## Quiz na de lezing
 [Quiz na de lezing](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8)
 
 ## Beoordeling en zelfstudie
 
-Bekijk [deze lijst met JavaScript-oefeningen](https://css-tricks.com/snippets/javascript/) en probeer er een. Wat heb je geleerd?
+Bekijk [deze lijst met JavaScript-oefeningen](https://css-tricks.com/snippets/javascript/) en probeer er een. Wat heeft u geleerd?
 
 ## Toewijzing
 
