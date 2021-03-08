@@ -1,6 +1,6 @@
 # Aan de slag met webontwikkeling
 
-In dit deel van het curriculum maak je kennis met niet-projectgebaseerde concepten die belangrijk zijn om een professionele ontwikkelaar te worden.
+In dit deel van het curriculum maakt u kennis met niet-projectgebaseerde concepten die belangrijk zijn om een professionele ontwikkelaar te worden.
 
 ### Onderwerpen
 

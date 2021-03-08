@@ -2,7 +2,7 @@
 
 ## Instructies
 
-Identificeer een website waarvan u denkt dat deze NIET toegankelijk is, en maak een actieplan om de toegankelijkheid ervan te verbeteren. Je eerste taak zou zijn om deze site te identificeren, de manieren te beschrijven waarop je denkt dat deze ontoegankelijk is zonder analytische tools te gebruiken, en deze vervolgens door een Lighthouse-analyse te laten gaan. Neem de resultaten van deze analyse en maak een gedetailleerd plan met minimaal tien punten waaruit blijkt hoe de site kan worden verbeterd.
+Identificeer een website waarvan u denkt dat deze NIET toegankelijk is, en maak een actieplan om de toegankelijkheid ervan te verbeteren. Uw eerste taak zou zijn om deze site te identificeren, de manieren te beschrijven waarop u denkt dat deze ontoegankelijk is zonder analytische tools te gebruiken, en deze vervolgens door een Lighthouse-analyse te laten gaan. Neem de resultaten van deze analyse en maak een gedetailleerd plan met minimaal tien punten waaruit blijkt hoe de site kan worden verbeterd.
 
 ## Rubriek
 

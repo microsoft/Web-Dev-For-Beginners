@@ -2,7 +2,7 @@
 
 ## Instructies
 
-Om beter te begrijpen hoe botsingen werken, bouw je een heel klein spel met een paar items die botsen. Laat ze bewegen door middel van toetsaanslagen of muisklikken, en zorg dat er iets gebeurt met een van de items wanneer deze wordt geraakt. Het kan zoiets zijn als een meteoor die de aarde raakt, of botsauto's. Wees creatief!
+Om beter te begrijpen hoe botsingen werken, bouwt u een heel klein spel met een paar items die botsen. Laat ze bewegen door middel van toetsaanslagen of muisklikken, en zorg dat er iets gebeurt met een van de items wanneer deze wordt geraakt. Het kan zoiets zijn als een meteoor die de aarde raakt, of botsauto's. Wees creatief!
 
 ## Rubriek
 

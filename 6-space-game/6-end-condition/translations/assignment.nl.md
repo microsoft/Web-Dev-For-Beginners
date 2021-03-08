@@ -9,7 +9,7 @@ Held> slaat aan met slagzwaard - orc krijgt 3p schade
 Orc> Slaat met club - held krijgt 2p schade
 Held> Schopt - orc krijgt 1p schade
 Game> Orc is verslagen - Held verzamelt 2 munten
-Game> ****Geen monsters meer, je hebt het kwaadaardige fort veroverd****
+Game> ****Geen monsters meer, u heeft het kwaadaardige fort veroverd****
 ```
 
 ## Rubriek

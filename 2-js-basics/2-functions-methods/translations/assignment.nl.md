@@ -4,7 +4,7 @@
 
 Maak verschillende functies, zowel functies die iets retourneren als functies die niets retourneren.
 
-Kijk of je een functie kunt maken met een combinatie van parameters en parameters met standaardwaarden.
+Kijk of u een functie kunt maken met een combinatie van parameters en parameters met standaardwaarden.
 
 ## Rubriek
 

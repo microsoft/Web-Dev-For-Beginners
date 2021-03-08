@@ -1,6 +1,6 @@
 # Inleiding tot JavaScript
 
-JavaScript is de taal van het web. In deze vier lessen leer je de basisprincipes.
+JavaScript is de taal van het web. In deze vier lessen leert u de basisprincipes.
 
 ### Onderwerpen
 
