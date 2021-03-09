@@ -12,7 +12,8 @@ In this lesson, we're going to lay out the foundations to create bank web app, u
 
 ### Prerequisite
 
-You need a local web server to test the web app we'll build in this lesson. If don't have one, you can install [Node.js](https://nodejs.org) and use the command `npx lite-server` from your project folder. It will create a local web server and open your app in a browser.
+You need a local web server to test the web app we'll build in this lesson. If don't have one, you can install [Node.js](https://nodejs.org) and use the command 
+`npx lite-server` from your project folder. It will create a local web server and open your app in a browser.
 
 ### Preparation
 
