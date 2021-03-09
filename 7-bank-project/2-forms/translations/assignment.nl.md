@@ -4,7 +4,7 @@
 
 Maak een nieuw `styles.css`-bestand en voeg er een link naar toe in uw huidige `index.html`-bestand. Voeg in het CSS-bestand dat u zojuist hebt gemaakt wat stijl toe om de pagina *Login* en *Dashboard* er netjes en opgeruimd uit te laten zien. Probeer een kleurenthema te maken om uw app een eigen branding te geven.
 
-> Tip: u kunt de HTML aanpassen en indien nodig nieuwe elementen en classen toevoegen.
+> Tip: u kunt de HTML aanpassen en indien nodig nieuwe elementen en class toevoegen.
 
 ## Rubriek
 

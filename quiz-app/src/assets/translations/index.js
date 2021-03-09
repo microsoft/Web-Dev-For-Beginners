@@ -8,6 +8,7 @@ import ja from './ja.json';
 import gr from './gr.json';
 import ms from './ms.json';
 import es from './es.json';
+import nl from './nl.json';
 
 //export const defaultLocale = 'en';
 
@@ -21,6 +22,7 @@ const messages = {
 	gr: gr[0],
 	ms: ms[0],
 	es: es[0],
+	nl: nl[0],
 };
 
 export default messages;
