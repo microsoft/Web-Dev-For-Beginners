@@ -186,7 +186,7 @@ Al deze middelen zullen nieuwe teamleden helpen. En dat zijn typisch het soort d
 Documenten voor bijdragen helpen mensen bij te dragen aan het project. Het legt uit wat voor soort bijdragen u zoekt en hoe het proces werkt. Bijdragers moeten een reeks stappen doorlopen om bij te dragen aan uw repo op GitHub:
 
 
-1. **Uw repo vorken** Waarschijnlijk wilt u dat mensen uw project _vorken_ (forking). Vorken betekent het maken van een replica van uw repository op hun GitHub-profiel.
+1. **Uw repo forken** Waarschijnlijk wilt u dat mensen uw project _forken_. Forken betekent het maken van een replica van uw repository op hun GitHub-profiel.
 1. **Kloon**. Van daaruit zullen ze het project naar hun lokale computer klonen (clone). 
 1. **Maak een tak**. U zult ze willen vragen om een _tak_ voor hun werk te creëren (branch). 
 1. **Richt hun verandering op één gebied**. Vraag bijdragers om hun bijdragen op één ding tegelijk te concentreren - op die manier is de kans groter dat u hun werk kan _samenvoegen_ (merge). Stelt u voor dat ze een bugfix schrijven, een nieuwe functie toevoegen en verschillende tests bijwerken - wat als u slechts 2 van de 3 of 1 van de 3 wijzigingen wilt of kunt implementeren?
@@ -195,7 +195,7 @@ Documenten voor bijdragen helpen mensen bij te dragen aan het project. Het legt 
 
 > Let op: wees de verandering die u in de wereld wilt zien, en maak ook takken voor uw eigen werk. Alle commits die u maakt, worden gemaakt op de tak waar u momenteel naar "uitgecheckt" bent. Gebruik `git status` om te zien welke tak dat is.
 
-Laten we een workflow voor bijdragers doorlopen. Veronderstel dat de bijdrager de repo al _gevorkt_ en _gekloond_ heeft, zodat ze een Git-repo hebben klaar om aan te werken, op hun lokale computer:
+Laten we een workflow voor bijdragers doorlopen. Veronderstel dat de bijdrager de repo al _geforkt_ en _gekloond_ heeft, zodat ze een Git-repo hebben klaar om aan te werken, op hun lokale computer:
 
 1. **Maak een tak**. Gebruik het commando `git branch` om een branch te maken die de wijzigingen bevat die ze willen bijdragen:
 
@@ -240,9 +240,9 @@ Laten we een workflow voor bijdragers doorlopen. Veronderstel dat de bijdrager d
    git push --set-upstream origin [taknaam]
    ```
 
-   Het bovenstaande commando maakt de tak op uw gevorkte repo.
+   Het bovenstaande commando maakt de tak op uw geforkte repo.
 
-1. **Open een PR**. Vervolgens wilt u een PR openen. U doet dat door naar de gevorkte repo op GitHub te navigeren. U ziet een indicatie op GitHub waar het vraagt of u een nieuwe PR wilt maken, u klikt erop en u wordt naar een interface geleid waar u de titel van het commitbericht kunt wijzigen, geef het een meer geschikte beschrijving. Nu zal de beheerder van de repo die u heeft gevorkt deze PR zien en, _fingers gekruist_, zullen ze uw PR waarderen en _samenvoegen_. U bent nu een bijdrager, yay :)
+1. **Open een PR**. Vervolgens wilt u een PR openen. U doet dat door naar de geforkte repo op GitHub te navigeren. U ziet een indicatie op GitHub waar het vraagt of u een nieuwe PR wilt maken, u klikt erop en u wordt naar een interface geleid waar u de titel van het commitbericht kunt wijzigen, geef het een meer geschikte beschrijving. Nu zal de beheerder van de repo die u heeft geforkt deze PR zien en, _vingers gekruist_, zullen ze uw PR waarderen en _samenvoegen_. U bent nu een bijdrager, yay :)
 
 1. **Opruimen**. Het wordt als een goede gewoonte beschouwd om _op te ruimen_ nadat u met succes een PR hebt samengevoegd. U wilt zowel uw lokale tak opruimen als de tak die u naar GitHub hebt gepusht. Laten we het eerst lokaal verwijderen met het volgende commando: 
 
@@ -250,7 +250,7 @@ Laten we een workflow voor bijdragers doorlopen. Veronderstel dat de bijdrager d
    git branch -d [taknaam]
    ```
 
-   Zorg ervoor dat u naar de GitHub-pagina gaat voor de gevorkte repo en verwijder de externe tak die u er zojuist naartoe hebt gepusht.
+   Zorg ervoor dat u naar de GitHub-pagina gaat voor de geforkte repo en verwijder de externe tak die u er zojuist naartoe hebt gepusht.
 
 `Pull request` lijkt een gekke term, omdat u uw wijzigingen echt in het project wilt pushen. Maar de onderhouder (projecteigenaar) of het kernteam moet rekening houden met uw wijzigingen voordat u deze samenvoegt met de "main" tak van het project, dus u vraagt echt om een wijzigingsbesluit van een onderhouder.  
 
@@ -284,7 +284,7 @@ Ten slotte kunt u de code downloaden in een gecomprimeerde map.
 
 ### Nog een paar interessante dingen over GitHub
 
-U kunt elke openbare repository op GitHub een ster geven, bekijken en/of "vorken". U kunt uw repositories met ster vinden in het vervolgkeuzemenu rechtsboven. Het is net als bladwijzers, maar dan voor code. 
+U kunt elke openbare repository op GitHub een ster geven, bekijken en/of "forken". U kunt uw repositories met ster vinden in het vervolgkeuzemenu rechtsboven. Het is net als bladwijzers, maar dan voor code. 
 
 Projecten hebben een issue tracker, meestal op GitHub in de "Issues" tab, tenzij anders aangegeven, waar mensen problemen bespreken die verband houden met het project. En op het tabblad Pull Requests bespreken en beoordelen mensen lopende wijzigingen.
 
@@ -296,7 +296,7 @@ Projecten kunnen ook worden besproken in forums, mailinglijsten of chatkanalen z
 
 ## 🚀 Uitdaging 
 
-Koppel met een vriend om aan elkaars code te werken. Creëer gezamenlijk een project, vork code, maak takken en voeg wijzigingen samen.
+Koppel met een vriend om aan elkaars code te werken. Creëer gezamenlijk een project, fork code, maak takken en voeg wijzigingen samen.
 
 ## Quiz na de lezing
 [Quiz na de lezing](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4)
