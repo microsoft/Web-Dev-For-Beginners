@@ -9,7 +9,7 @@
         <option>id</option>
         <option>hi</option>
         <option>it</option>
-        <option>zh-tw</option>
+        <option>zh_tw</option>
       </select>
     </nav>
     <div id="app">

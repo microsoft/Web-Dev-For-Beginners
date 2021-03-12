@@ -5,7 +5,7 @@ import id from './id.json';
 import hi from './hi.json';
 import it from './it.json';
 import ja from './ja.json';
-import zh-tw from './zh-tw.json';
+import zh_tw from './zh_tw.json';
 
 //export const defaultLocale = 'en';
 
@@ -16,7 +16,7 @@ const messages = {
 	hi: hi[0],
 	it: it[0],
 	ja: ja[0],
-	zh-tw: zh-tw[0],
+	zh_tw: zh_tw[0],
 };
 
 export default messages;
