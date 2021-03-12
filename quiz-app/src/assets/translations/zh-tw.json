@@ -2362,7 +2362,7 @@
 						"questionText": "為什麼阻止用戶輸入不信任的資料很重要?",
 						"answerOptions": [
 							{
-								"answerText": "因為使用奇特字元讓UI變很醜。",
+								"answerText": "因為使用奇特字元讓 UI 變得很醜。",
 								"isCorrect": "false"
 							},
 							{
@@ -2433,7 +2433,7 @@
 						]
 					},
 					{
-						"questionText": "下列何者為最合適的方式來儲存不同session中重要的用戶資料?",
+						"questionText": "下列何者為最合適的方式來儲存不同 session 中重要的用戶資料?",
 						"answerOptions": [
 							{
 								"answerText": "利用檔案。",
