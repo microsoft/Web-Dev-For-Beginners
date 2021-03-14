@@ -6,9 +6,9 @@ Een kleine codemeditatie met drag and drop. Met een beetje HTML, JS en CSS kunt 
 
 # Lessen
 
-1. [Inleiding tot HTML](./1-intro-to-html/README.md)
-2. [Inleiding tot CSS](./2-intro-to-css/README.md)
-3. [Inleiding tot DOM en JS Sluitingen](./3-intro-to-DOM-and-closures/README.md)
+1. [Inleiding tot HTML](../1-intro-to-html/translations/README.nl.md)
+2. [Inleiding tot CSS](../2-intro-to-css/translations/README.nl.md)
+3. [Inleiding tot DOM en JS Sluitingen](../3-intro-to-DOM-and-closures/translations/README.nl.md)
 
 ## Credits
 
