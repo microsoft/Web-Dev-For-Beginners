@@ -34,7 +34,16 @@ h1 {
 	position: absolute;
 	max-width: 150%;
 	max-height: 150%;
+	border-radius: 50%;
 	z-index: 2;
+}
+
+.plant:focus-visible {
+	/* A transparent outline shows up in Windows High Contrast mode */
+	outline: 4px solid transparent;
+	/* A box shadow makes a pretty focus style, but is invisible in high contrast mode */
+	box-shadow: 0 0 6px 2px #516c16;
+	z-index: 3;
 }
 
 /*https://codepen.io/Rotarepmi/pen/rjpNZY*/

@@ -27,6 +27,7 @@ function dragElement(terrariumElement) {
 		pos3 = 0,
 		pos4 = 0;
 	terrariumElement.onpointerdown = pointerDrag;
+	terrariumElement.onkeydown = keyboardMove;
 
 	function pointerDrag(e) {
 		e.preventDefault();
@@ -61,4 +62,64 @@ function dragElement(terrariumElement) {
 		document.onpointerup = null;
 		document.onpointermove = null;
 	}
+
+	// keyboard "dragging" functionality
+	// arrow keys move a plant by a small increment
+	// home/end/page up/page down move a plant by a larger increment
+	function keyboardMove(e) {
+		// set movement amounts
+		const smallIncrement = 5;
+		const largeIncrement = 200;
+
+		let diffX = 0;
+		let diffY = 0;
+
+		const { key } = e;
+		let moved = false;
+
+		switch (key) {
+			case 'ArrowLeft':
+				diffX = -1 * smallIncrement;
+				moved = true;
+				break;
+			case 'ArrowRight':
+				diffX = smallIncrement;
+				moved = true;
+				break;
+			case 'ArrowUp':
+				diffY = -1 * smallIncrement;
+				moved = true;
+				break;
+			case 'ArrowDown':
+				diffY = smallIncrement;
+				moved = true;
+				break;
+			case 'Home':
+				diffX = -1 * largeIncrement;
+				moved = true;
+				break;
+			case 'End':
+				diffX = largeIncrement;
+				moved = true;
+				break;
+			case 'PageUp':
+				diffY = -1 * largeIncrement;
+				moved = true;
+				break;
+			case 'PageDown':
+				diffY = largeIncrement;
+				moved = true;
+				break;
+		}
+
+		if (moved) {
+			e.preventDefault();
+			terrariumElement.style.top = terrariumElement.offsetTop + diffY + 'px';
+			terrariumElement.style.left = terrariumElement.offsetLeft + diffX + 'px';
+		}
+	}
 }
+
+// Can you think of ways to improve accessibility?
+// For example, how would someone using a screen reader know to use arrow keys?
+// Or how would you let someone with less dexterity place plants without dragging?
