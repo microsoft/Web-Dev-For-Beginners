@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/21)
+[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/21?loc=zh_tw)
 
 ## 事件驅動程式設計
 
@@ -328,7 +328,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/22)
+[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/22?loc=zh_tw)
 
 ## 複習與自學
 

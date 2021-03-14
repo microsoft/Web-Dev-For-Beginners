@@ -4,7 +4,7 @@
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
+[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5?loc=zh_tw)
 
 > 網路的強大在於它的普遍性。無論用戶是否有殘疾，讓大家無差別地使用網路是必要的。
 >
@@ -218,7 +218,7 @@ CSS 提供完整的網頁造型控制，你可以讓文字框框線隱藏或是�
 ```
 
 ## 課後測驗
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6)
+[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6?loc=zh_tw)
 
 ## 複習與自學
 

@@ -6,7 +6,7 @@
 > 由[Tomomi Imura](https://twitter.com/girlie_mac) 繪製。
 
 ## 課前測驗
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)
+[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1?loc=zh_tw)
 
 ## 大綱
 
@@ -181,7 +181,7 @@ back add r0,r1
 比較不同的程式語言： JavaScript 與 Java 間有什麼獨特的特徵? 那 COBOL 與 Go 呢?
 
 ## 課後測驗
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2)
+[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2?loc=zh_tw)
 
 ## 複習與自學
 

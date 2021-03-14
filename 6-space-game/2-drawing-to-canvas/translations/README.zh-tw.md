@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/31)
+[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/31?loc=zh_tw)
 
 ## Canvas
 
@@ -205,7 +205,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/32)
+[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/32?loc=zh_tw)
 
 ## 複習與自學
 

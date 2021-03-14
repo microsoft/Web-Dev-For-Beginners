@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/33)
+[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/33?loc=zh_tw)
 
 有外星人在移動的遊戲才會好玩！在這款遊戲中，我們會建立兩種移動模式：
 
@@ -377,7 +377,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/34)
+[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/34?loc=zh_tw)
 
 ## 複習與自學
 

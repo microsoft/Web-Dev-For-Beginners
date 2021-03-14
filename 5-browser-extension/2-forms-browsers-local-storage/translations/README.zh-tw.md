@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/25)
+[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/25?loc=zh_tw)
 
 ### 大綱
 
@@ -212,7 +212,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/26)
+[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/26?loc=zh_tw)
 
 ## 複習與自學
 

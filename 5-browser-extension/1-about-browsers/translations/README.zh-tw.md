@@ -5,7 +5,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/23)
+[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/23?loc=zh_tw)
 
 ### 大綱
 
@@ -149,7 +149,7 @@ npm install
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/24)
+[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/24?loc=zh_tw)
 
 ## 複習與自學
 

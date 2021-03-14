@@ -4,7 +4,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/29)
+[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/29?loc=zh_tw)
 
 ### 遊戲開發中的繼承(Inheritance)與組合(Composition)
 
@@ -213,7 +213,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30)
+[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30?loc=zh_tw)
 
 ## 複習與自學
 

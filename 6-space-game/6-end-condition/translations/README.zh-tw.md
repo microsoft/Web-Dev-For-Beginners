@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/39)
+[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/39?loc=zh_tw)
 
 有許多方式可以表達遊戲中的*結束狀態*。這都取決於你這位遊戲開發者，定義遊戲結束的理由。假設我們討論這款已經開發許久的太空遊戲，以下是遊戲結束的理由：
 
@@ -211,7 +211,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/40)
+[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/40?loc=zh_tw)
 
 ## 複習與自學
 

@@ -4,7 +4,7 @@
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13)
+[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13?loc=zh_tw)
 
 這堂課會包含程式語言 JavaScript，建立互動式網頁的基礎。課程中，你會學到用來操作資料的矩陣與迴圈。
 
@@ -113,9 +113,8 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 除了 for 迴圈與 while 迴圈外，仍有許多使用矩陣與迴圈的方法：[forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)與[map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。 用上列其中一種語法改寫你的迴圈。
 
-## Post-Lecture Quiz
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14)
-
+## 課後測驗
+[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14?loc=zh_tw)
 
 ## 複習與自學
 
