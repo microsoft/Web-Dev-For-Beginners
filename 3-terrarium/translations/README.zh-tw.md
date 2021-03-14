@@ -14,7 +14,7 @@
 
 由 [Jen Looper](https://www.twitter.com/jenlooper) 用滿滿的 ♥️ 來編寫。
 
-用 CSS 建立盆栽盒的發想來自於 Jakub Mandra 的玻璃罐 [codepen](https://codepen.io/Rotarepmi/pen/rjpNZY)。
+用 CSS 建立盆栽盒的發想來自於 Jakub Mandra 的玻璃罐 [CodePen](https://codepen.io/Rotarepmi/pen/rjpNZY)。
 
 手繪插圖由 [Jen Looper](http://jenlooper.com) 使用 Procreate 繪製。
 

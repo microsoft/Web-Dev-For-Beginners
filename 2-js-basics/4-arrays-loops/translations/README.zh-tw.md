@@ -121,6 +121,6 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 在 JavaScript 中，矩陣有許多控制的方法，它們在處理資料上有很大的幫助。
 [學習這些方法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)，如 push、pop、slice 和 splice，試著套用在你所創造的矩陣上。 
 
-## 課題
+## 作業
 
 [給矩陣的迴圈](assignment.zh-tw.md)

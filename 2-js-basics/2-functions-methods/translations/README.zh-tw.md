@@ -190,6 +190,6 @@ setTimeout(() => {
 
 這很值得去閱讀[關於箭頭函式的資料](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，它們越來越常被用在程式碼上。試著寫個函式，再改寫成箭頭語法。
 
-## 課題
+## 作業
 
 [把玩函式](assignment.zh-tw.md)

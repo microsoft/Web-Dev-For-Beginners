@@ -14,7 +14,7 @@
 
 ### 成就
 
-![綠能瀏覽器擴充功能](extension-screenshot.png)
+![綠能瀏覽器擴充功能](../extension-screenshot.png)
 
 ## 參與人員
 

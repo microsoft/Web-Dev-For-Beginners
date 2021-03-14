@@ -314,6 +314,6 @@
 
 你能找到更資深的實驗內容。 
 
-## 課題
+## 作業
 
 完成[第一週在 GitHub 上](https://lab.github.com/githubtraining/first-week-on-github)

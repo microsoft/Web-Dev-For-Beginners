@@ -192,6 +192,6 @@ JavaScript 在處理資料結構時有許多種方法，有些場合為人詬病
 
 試試看[這些 JavaScript 練習題](https://css-tricks.com/snippets/javascript/)。 你學到了什麼?
 
-## 課題
+## 作業
 
 [練習資料型態](assignment.zh-tw.md)

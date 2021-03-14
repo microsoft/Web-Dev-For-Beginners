@@ -171,6 +171,6 @@ if (firstNumber > secondNumber) {
 
 瀏覽 Josh Comeau 所編制的[運算子查詢表](https://joshwcomeau.com/operator-lookup/)！
 
-## 課題
+## 作業
 
 [運算子](assignment.zh-tw.md)
