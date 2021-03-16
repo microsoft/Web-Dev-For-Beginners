@@ -176,7 +176,7 @@ Booleans can be only two values: `true` or `false`. Booleans can help make decis
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ A variable can be considered 'truthy' if it evaluates to a boolean `true`. Interestingly, in JavaScript, [all values are truthy unless defined as falsy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+✅ A variable can be considered 'truthy' if it evaluates to a boolean `true`. Interestingly, in JavaScript, [all values are truthy unless defined as falsy](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 ---
 

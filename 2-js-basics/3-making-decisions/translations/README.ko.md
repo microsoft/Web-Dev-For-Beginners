@@ -164,7 +164,7 @@ if (firstNumber > secondNumber) {
 
 ## 리뷰 & 자기주도 학습
 
-[MDN에서](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators) 사용할 수 있는 많은 연산자에 대해 자세히 알아보십시오.
+[MDN에서](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators) 사용할 수 있는 많은 연산자에 대해 자세히 알아보십시오.
 
 Josh Comeau'의 wonderful [operator lookup](https://joshwcomeau.com/operator-lookup/)을 통할 수 있습니다!
 

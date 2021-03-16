@@ -17,7 +17,7 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Baca lebih lanjut mengenai [cara menambahkan teks ke kanvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text), dan jangan ragu untuk menjadikan teks anda kelihatan lebih menarik!
+✅ Baca lebih lanjut mengenai [cara menambahkan teks ke kanvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), dan jangan ragu untuk menjadikan teks anda kelihatan lebih menarik!
 
 ## Hidup, sebagai konsep permainan
 

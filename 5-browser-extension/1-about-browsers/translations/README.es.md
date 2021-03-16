@@ -68,7 +68,7 @@ API de CO2 Signal.
 - el [código de inicio](../inicio). Descargue la carpeta `start`; completará el código en esta carpeta.
 - [NPM](https://www.npmjs.com) - NPM es una herramienta de gestión de paquetes; instálelo localmente y los paquetes enumerados en su archivo `package.json` se instalarán para que los use su recurso web
 
-✅ Obtenga más información sobre la administración de paquetes en este [excelente módulo de aprendizaje](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)
+✅ Obtenga más información sobre la administración de paquetes en este [excelente módulo de aprendizaje](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)
 
 Tómate un minuto para revisar el código base:
 
@@ -151,7 +151,7 @@ Felicitaciones, ha dado los primeros pasos para crear una extensión de navegado
 
 En esta lección aprendió un poco sobre la historia del navegador web; Aproveche esta oportunidad para aprender cómo los inventores de la World Wide Web imaginaron su uso leyendo más sobre su historia. Algunos sitios útiles incluyen:
 
-[La historia de los navegadores web](https://www.mozilla.org/en-US/firefox/browsers/browser-history/)
+[La historia de los navegadores web](https://www.mozilla.org/firefox/browsers/browser-history/)
 
 [Historia de la Web](https://webfoundation.org/about/vision/history-of-the-web/)
 

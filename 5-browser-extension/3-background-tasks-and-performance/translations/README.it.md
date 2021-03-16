@@ -22,7 +22,7 @@ La scheda Prestazioni contiene uno strumento di profilazione. Aprire un sito web
 
 ![Edge profiler](../images/profiler.png)
 
-✅ Visitare la [documentazione Microsoft](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance) nel pannello Prestazioni in Edge
+✅ Visitare la [documentazione Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance) nel pannello Prestazioni in Edge
 
 > Suggerimento: per ottenere una lettura fedele del tempo di avvio del proprio sito web, svuotare la cache del browser
 

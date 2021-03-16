@@ -8,7 +8,7 @@
 
 Canvas è un elemento HTML che per impostazione predefinita non ha contenuto; è una lavagna vuota. Si può riempirla disegnandoci sopra.
 
-✅ [Ulteriori informazioni sull'API Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) su MDN.
+✅ [Ulteriori informazioni sull'API Canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API) su MDN.
 
 Ecco come viene tipicamente dichiarato, come parte dell'elemento body della pagina:
 
@@ -27,7 +27,7 @@ Sopra si è  impostato l'`id`entificativo, la larghezza `(width)` e l'altezza (`
 Canvas utilizza un sistema di coordinate cartesiane per disegnare le cose. Quindi utilizza un asse x e un asse y per esprimere dove si trova qualcosa. La posizione `0,0` è la posizione in alto a sinistra e quella in basso a destra è ciò che si è determinato come larghezza (WIDTH) e altezza (HEIGHT) del canvas
 
 ![la griglia del canvas](../canvas_grid.png)
-> Immagine da [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+> Immagine da [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Per disegnare sull'elemento canvas si dovranno eseguire i seguenti passaggi:
 
@@ -52,7 +52,7 @@ ctx.fillStyle = 'red';
 ctx.fillRect(0,0, 200, 200) // x,y,larghezza, altezza
 ```
 
-✅ L'API Canvas si concentra principalmente su forme 2D, ma si possono anche disegnare elementi 3D su un sito web; per questo, si potrebbe utilizzare l' [API WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API).
+✅ L'API Canvas si concentra principalmente su forme 2D, ma si possono anche disegnare elementi 3D su un sito web; per questo, si potrebbe utilizzare l' [API WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
 Si può disegnare ogni sorta di cose con l'API Canvas come:
 
@@ -209,7 +209,7 @@ Si è imparato a disegnare con l'API Canvas incentrata sul 2D; dare un'occhiata 
 
 ## Revisione e Auto Apprendimento
 
-Scoprire di più sull'API Canvas raccogliendo [informazioni su di essa](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
+Scoprire di più sull'API Canvas raccogliendo [informazioni su di essa](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
 ## Compito
 
