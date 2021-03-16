@@ -23,7 +23,7 @@ En su forma más básica, un lector de pantalla leerá una página de arriba a a
 
 Todo desarrollador web debería familiarizarse con un lector de pantalla. Como se destacó anteriormente, es el cliente que utilizarán sus usuarios. De la misma manera que estás familiarizado con el funcionamiento de un navegador, debes aprender cómo funciona un lector de pantalla. Afortunadamente, los lectores de pantalla están integrados en la mayoría de los sistemas operativos y muchos navegadores contienen extensiones para emular un lector de pantalla.
 
-✅ Prueba una extensión o herramienta de navegador de lector de pantalla. Uno que solo funciona en Windows es [JAWS](https://webaim.org/articles/jaws/). Los navegadores también tienen herramientas integradas que se pueden utilizar para este propósito; Consulta estas [herramientas de navegador Edge centradas en accesibilidad](https://support.microsoft.com/en-us/help/4000734/microsoft-edge-accessibility-features).
+✅ Prueba una extensión o herramienta de navegador de lector de pantalla. Uno que solo funciona en Windows es [JAWS](https://webaim.org/articles/jaws/). Los navegadores también tienen herramientas integradas que se pueden utilizar para este propósito; Consulta estas [herramientas de navegador Edge centradas en accesibilidad](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features).
 
 ### Checar contrastes
 
@@ -127,7 +127,7 @@ Puedes usar `aria-label` para describir el enlace cuando el formato de la págin
 <a href="#" aria-label="Widget description">descripción</a>
 ```
 
-✅ En general, el uso de HTML semántico como se describe arriba reemplaza el uso de ARIA, pero a veces no existe un equivalente semántico para varios widgets HTML. Un buen ejemplo es una barra de progreso. No hay un equivalente HTML para una barra de progreso, por lo que identifica el `<div>` genérico para este elemento con un rol y valores de aria adecuados. La [documentación de MDN sobre ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) contiene más información útil.
+✅ En general, el uso de HTML semántico como se describe arriba reemplaza el uso de ARIA, pero a veces no existe un equivalente semántico para varios widgets HTML. Un buen ejemplo es una barra de progreso. No hay un equivalente HTML para una barra de progreso, por lo que identifica el `<div>` genérico para este elemento con un rol y valores de aria adecuados. La [documentación de MDN sobre ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) contiene más información útil.
 
 ```html
 <div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">

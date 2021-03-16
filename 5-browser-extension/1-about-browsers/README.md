@@ -69,7 +69,7 @@ CO2 Signal's API.
 - the [starter code](../start). Download the `start` folder; you will be completing code in this folder.
 - [NPM](https://www.npmjs.com) - NPM is a package management tool; install it locally and the packages listed in you `package.json` file will be installed for use by your web asset
 
-✅ Learn more about package management in this [excellent Learn module](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)
+✅ Learn more about package management in this [excellent Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)
 
 Take a minute to look through the codebase:
 
@@ -156,7 +156,7 @@ Take a look at a browser extension store and install one to your browser. You ca
 
 In this lesson you learned a little about the history of the web browser; take this opportunity to learn about how the inventors of the World Wide Web envisioned its use by reading more about its history. Some useful sites include:
 
-[The History of Web Browsers](https://www.mozilla.org/en-US/firefox/browsers/browser-history/)
+[The History of Web Browsers](https://www.mozilla.org/firefox/browsers/browser-history/)
 
 [History of the Web](https://webfoundation.org/about/vision/history-of-the-web/)
 

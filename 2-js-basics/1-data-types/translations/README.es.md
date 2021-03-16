@@ -174,7 +174,7 @@ Los booleanos pueden tener solo dos valores: `true` o `false`. Los valores boole
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ Una variable se puede considerar 'verdadera' si se evalúa como un valor booleano 'verdadero'. Curiosamente, en JavaScript, [todos los valores son verdaderos a menos que se definan como falsos](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+✅ Una variable se puede considerar 'verdadera' si se evalúa como un valor booleano 'verdadero'. Curiosamente, en JavaScript, [todos los valores son verdaderos a menos que se definan como falsos](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 🚀 Desafío: JavaScript es conocido por sus sorprendentes formas de manejar tipos de datos en ocasiones. Investiga un poco sobre estos "errores". Por ejemplo: ¡la sensibilidad a mayúsculas y minúsculas puede morder! Pruebe esto en su consola: `let age = 1; let Age = 2; age == Age` (resuelve `false` - ¿por qué?). ¿Qué otras trampas puedes encontrar?
 

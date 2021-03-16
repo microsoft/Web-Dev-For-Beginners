@@ -166,7 +166,7 @@ Create a program that is written first with logical operators, and then rewrite 
 
 ## Review & Self Study
 
-Read more about the many operators available to the user [on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
+Read more about the many operators available to the user [on MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
 Go through Josh Comeau's wonderful [operator lookup](https://joshwcomeau.com/operator-lookup/)!
 

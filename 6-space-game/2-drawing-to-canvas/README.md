@@ -8,7 +8,7 @@
 
 The canvas is an HTML element that by default has no content; it's a blank slate. You need to add to it by drawing on it.
 
-✅ Read [more about the Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) on MDN.
+✅ Read [more about the Canvas API](https://developer.mozilla.org/docs/Web/API/Canvas_API) on MDN.
 
 Here's how it's typically declared, as part of the page's body:
 
@@ -27,7 +27,7 @@ Above we are setting the `id`, `width` and `height`.
 The Canvas is using a cartesian coordinate system to draw things. Thus it uses an x-axis and y-axis to express where something is located. The location `0,0` is the top left position and the bottom right is what you said to be the WIDTH and HEIGHT of the canvas.
 
 ![the canvas's grid](canvas_grid.png)
-> Image from [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+> Image from [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 To draw on the canvas element you will need to go through the following steps:
 
@@ -52,7 +52,7 @@ ctx.fillStyle = 'red';
 ctx.fillRect(0,0, 200, 200) // x,y,width, height
 ```
 
-✅ The Canvas API mostly focuses on 2D shapes, but you can also draw 3D elements to a web site; for this, you might use the [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API).
+✅ The Canvas API mostly focuses on 2D shapes, but you can also draw 3D elements to a web site; for this, you might use the [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
 You can draw all sorts of things with the Canvas API like:
 
@@ -201,7 +201,7 @@ Please try solving it yourself first but if you get stuck, have a look at a [sol
 
 ## 🚀 Challenge
 
-You've learned about drawing with the 2D-focused Canvas API; take a look at the [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API), and try to draw a 3D object.
+You've learned about drawing with the 2D-focused Canvas API; take a look at the [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API), and try to draw a 3D object.
 
 ## Post-Lecture Quiz
 
@@ -209,7 +209,7 @@ You've learned about drawing with the 2D-focused Canvas API; take a look at the 
 
 ## Review & Self Study
 
-Learn more about the Canvas API by [reading about it](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
+Learn more about the Canvas API by [reading about it](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
 ## Assignment
 

@@ -86,7 +86,7 @@ Per evitare che vengano apportate modifiche all'oggetto `state` è anche una buo
 
 In JavaScript, si può  utilizzare [`Object.freeze()`](https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) per creare una versione immutabile di un oggetto. Se si prova ad apportare modifiche a un oggetto immutabile, verrà sollevata un'eccezione.
 
-✅ Si conosce la differenza tra un oggetto *shallow* e uno *deep* immutabile? Si può leggere [qui](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze) per saperne di più.
+✅ Si conosce la differenza tra un oggetto *shallow* e uno *deep* immutabile? Si può leggere [qui](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze) per saperne di più.
 
 ### Attività
 
@@ -101,7 +101,7 @@ function updateState(property, newData) {
 }
 ```
 
-In questa funzione, si crea un nuovo oggetto di stato e si copiano i dati dallo stato precedente utilizzando l' [*operatore spread (`...`)*](https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Quindi si sovrascrive una particolare proprietà dell'oggetto state con i nuovi dati usando la [notazione tra parentesi quadre](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` per l'assegnazione. Infine, si blocca l'oggetto per impedire modifiche utilizzando `Object.freeze()`. Per ora si ha solo la proprietà `account` memorizzata nello stato, ma con questo approccio si possono aggiungere tutte le proprietà che servono nello stato.
+In questa funzione, si crea un nuovo oggetto di stato e si copiano i dati dallo stato precedente utilizzando l' [*operatore spread (`...`)*](https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Quindi si sovrascrive una particolare proprietà dell'oggetto state con i nuovi dati usando la [notazione tra parentesi quadre](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` per l'assegnazione. Infine, si blocca l'oggetto per impedire modifiche utilizzando `Object.freeze()`. Per ora si ha solo la proprietà `account` memorizzata nello stato, ma con questo approccio si possono aggiungere tutte le proprietà che servono nello stato.
 
 Si aggiornerà anche l'inizializzazione di `state` per assicurarsi che anche lo stato iniziale sia congelato:
 

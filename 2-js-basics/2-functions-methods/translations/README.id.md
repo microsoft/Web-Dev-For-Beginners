@@ -102,7 +102,7 @@ tampilkanSapaan("Christopher", "Hi");
 
 ## Nilai Kembali (Return values)
 
-Hingga saat ini fungsi yang kita buat akan selalu menghasilkan [konsol](https://developer.mozilla.org/en-US/docs/Web/API/console). Terkadang ini persis seperti yang kita cari, terutama saat kita membuat fungsi yang akan memanggil layanan lain. Tetapi bagaimana jika saya ingin membuat fungsi pembantu untuk melakukan kalkulasi dan memberikan nilai kembali sehingga saya dapat menggunakannya di tempat lain?
+Hingga saat ini fungsi yang kita buat akan selalu menghasilkan [konsol](https://developer.mozilla.org/docs/Web/API/console). Terkadang ini persis seperti yang kita cari, terutama saat kita membuat fungsi yang akan memanggil layanan lain. Tetapi bagaimana jika saya ingin membuat fungsi pembantu untuk melakukan kalkulasi dan memberikan nilai kembali sehingga saya dapat menggunakannya di tempat lain?
 
 Kita bisa melakukan ini dengan menggunakan **nilai kembali (return value)**. Nilai kembali dikembalikan oleh fungsi, dan dapat disimpan dalam variabel sama seperti kita dapat menyimpan nilai literal seperti string atau angka.
 
@@ -131,7 +131,7 @@ const pesanSapaan = buatPesanSapaan("Christopher");
 
 Saat Anda maju dalam karir pemrograman Anda, Anda akan menemukan fungsi yang menerima fungsi sebagai parameter. Trik rapi ini biasanya digunakan ketika kita tidak tahu kapan sesuatu akan terjadi atau selesai, tetapi kita tahu kita perlu melakukan operasi sebagai tanggapan.
 
-Sebagai contoh, pertimbangkan [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), yang memulai timer dan akan mengeksekusi kode setelah selesai. Kita perlu memberi tahu kode apa yang ingin kita jalankan. Kedengarannya seperti pekerjaan yang sempurna untuk suatu fungsi!
+Sebagai contoh, pertimbangkan [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), yang memulai timer dan akan mengeksekusi kode setelah selesai. Kita perlu memberi tahu kode apa yang ingin kita jalankan. Kedengarannya seperti pekerjaan yang sempurna untuk suatu fungsi!
 
 Jika Anda menjalankan kode di bawah ini, setelah 3 detik Anda akan melihat pesan **3 detik telah berlalu**.
 
@@ -187,7 +187,7 @@ Bisakah Anda mengartikulasikan dalam satu kalimat perbedaan antara fungsi dan me
 
 ## Review & Belajar Mandiri
 
-Layak [membaca lebih banyak tentang fungsi panah](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), karena semakin sering digunakan dalam basis kode. Berlatihlah menulis fungsi, lalu menulis ulang dengan sintaks ini.
+Layak [membaca lebih banyak tentang fungsi panah](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), karena semakin sering digunakan dalam basis kode. Berlatihlah menulis fungsi, lalu menulis ulang dengan sintaks ini.
 
 ## Tugas
 

@@ -25,7 +25,7 @@ curl http://localhost:5000/api
 
 El elemento `<form>` encapsula una sección de un documento HTML donde el usuario puede ingresar y enviar datos con controles interactivos. Hay todo tipo de controles de interfaz de usuario (UI) que se pueden usar dentro de un formulario, siendo el más común los elementos `<input>` y `<button>`.
 
-Hay muchos [types diferentes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) de `<input>`, por ejemplo, para crear un campo donde el usuario puede ingresar su nombre de usuario que puede usar:
+Hay muchos [types diferentes](https://developer.mozilla.org/docs/Web/HTML/Element/input) de `<input>`, por ejemplo, para crear un campo donde el usuario puede ingresar su nombre de usuario que puede usar:
 
 
 ```html
@@ -34,9 +34,9 @@ Hay muchos [types diferentes](https://developer.mozilla.org/en-US/docs/Web/HTML/
 
 El atributo `name` se usa para identificar el control y se usará como el nombre de la propiedad cuando se envíen los datos del formulario.
 
-> Eche un vistazo a la lista completa de [`<input>` tipos](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) y [otros controles de formulario](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls) para tener una idea de todos los elementos nativos de la interfaz de usuario que puede utilizar al crear su interfaz de usuario.
+> Eche un vistazo a la lista completa de [`<input>` tipos](https://developer.mozilla.org/docs/Web/HTML/Element/input) y [otros controles de formulario](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls) para tener una idea de todos los elementos nativos de la interfaz de usuario que puede utilizar al crear su interfaz de usuario.
 
-✅ Tenga en cuenta que `<input>` es un [elemento vacío](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) en el que *no* debe agregar una etiqueta de cierre coincidente. Sin embargo, puede usar la notación de cierre automático `<input/>`, pero no es necesaria.
+✅ Tenga en cuenta que `<input>` es un [elemento vacío](https://developer.mozilla.org/docs/Glossary/Empty_element) en el que *no* debe agregar una etiqueta de cierre coincidente. Sin embargo, puede usar la notación de cierre automático `<input/>`, pero no es necesaria.
 
 El elemento `<button>` dentro de un formulario es un poco especial. Si no especifica su atributo `type`, automáticamente enviará los datos del formulario al servidor cuando se presione. Estos son los posibles valores de tipo:
 
@@ -68,7 +68,7 @@ Si observa más de cerca, puede notar que también agregamos un elemento `<label
 - Al asociar una etiqueta a un control de formulario, ayuda a los usuarios que utilizan tecnologías de asistencia (como un lector de pantalla) a comprender qué datos se espera que proporcionen.
 - Puede hacer clic en la etiqueta para centrarse directamente en la entrada asociada, lo que facilita el acceso a los dispositivos con pantalla táctil.
 
-> [Accesibilidad](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) en la web es un tema muy importante que a menudo se pasa por alto. Gracias a los [elementos semánticos HTML5](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) no es difícil crear contenido accesible si los usas correctamente. Puede [leer más sobre accesibilidad](https://developer.mozilla.org/en-US/docs/Web/Accessibility) para evitar errores comunes y convertirse en un desarrollador responsable.
+> [Accesibilidad](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) en la web es un tema muy importante que a menudo se pasa por alto. Gracias a los [elementos semánticos HTML5](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) no es difícil crear contenido accesible si los usas correctamente. Puede [leer más sobre accesibilidad](https://developer.mozilla.org/docs/Web/Accessibility) para evitar errores comunes y convertirse en un desarrollador responsable.
 
 Ahora agregaremos un segundo formulario para el registro, justo debajo del anterior:
 
@@ -157,7 +157,7 @@ function register() {
 }
 ```
 
-Aquí recuperamos el elemento del formulario usando `getElementById()` y usamos el ayudante [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) para extraer los valores del formulario controles como un conjunto de pares clave/valor. Luego convertimos los datos a un objeto regular usando [`Object.fromEntries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) y finalmente serialice los datos en [JSON](https://www.json.org/json-en.html), un formato que se utiliza comúnmente para intercambiar datos en la web.
+Aquí recuperamos el elemento del formulario usando `getElementById()` y usamos el ayudante [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) para extraer los valores del formulario controles como un conjunto de pares clave/valor. Luego convertimos los datos a un objeto regular usando [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) y finalmente serialice los datos en [JSON](https://www.json.org/json-en.html), un formato que se utiliza comúnmente para intercambiar datos en la web.
 
 Los datos ahora están listos para enviarse al servidor. Cree una nueva función llamada `createAccount`:
 
@@ -177,7 +177,7 @@ async function createAccount(account) {
 }
 ```
 
-¿Qué hace esta función? Primero, observe la palabra clave `async` aquí. Esto significa que la función contiene código que se ejecutará [** asincrónicamente**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). Cuando se usa junto con la palabra clave `await`, permite esperar a que se ejecute el código asincrónico, como esperar la respuesta del servidor aquí, antes de continuar.
+¿Qué hace esta función? Primero, observe la palabra clave `async` aquí. Esto significa que la función contiene código que se ejecutará [** asincrónicamente**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Cuando se usa junto con la palabra clave `await`, permite esperar a que se ejecute el código asincrónico, como esperar la respuesta del servidor aquí, antes de continuar.
 
 Aquí hay un video rápido sobre el uso de `async/await`:
 
@@ -219,7 +219,7 @@ async function register() {
 }
 ```
 
-¡Eso fue un poco largo pero llegamos allí! Si abre sus [herramientas de desarrollo del navegador](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) e intenta registrar una nueva cuenta, no debería ver ningún cambio en la página web pero aparecerá un mensaje en la consola confirmando que todo funciona.
+¡Eso fue un poco largo pero llegamos allí! Si abre sus [herramientas de desarrollo del navegador](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools) e intenta registrar una nueva cuenta, no debería ver ningún cambio en la página web pero aparecerá un mensaje en la consola confirmando que todo funciona.
 
 ![Captura de pantalla que muestra el mensaje de registro en la consola del navegador](./images/browser-console.png)
 
@@ -227,15 +227,15 @@ async function register() {
 
 ## Validación de datos
 
-Si intenta registrar una nueva cuenta sin establecer un nombre de usuario primero, puede ver que el servidor devuelve un error con el código de estado [400 (Solicitud incorrecta)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
+Si intenta registrar una nueva cuenta sin establecer un nombre de usuario primero, puede ver que el servidor devuelve un error con el código de estado [400 (Solicitud incorrecta)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
-Antes de enviar datos a un servidor, es una buena práctica [validar los datos del formulario](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) de antemano cuando sea posible, para asegurarse de enviar un solicitud válida. Los controles de formularios HTML5 proporcionan una validación incorporada utilizando varios atributos:
+Antes de enviar datos a un servidor, es una buena práctica [validar los datos del formulario](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) de antemano cuando sea posible, para asegurarse de enviar un solicitud válida. Los controles de formularios HTML5 proporcionan una validación incorporada utilizando varios atributos:
 
 - `required`: el campo debe completarse; de ​​lo contrario, el formulario no se podrá enviar
 - `minlength` y `maxlength`: define el número mínimo y máximo de caracteres en los campos de texto.
 - `min` y `max`: define el valor mínimo y máximo de un campo numérico.
-- `type`: define el tipo de datos esperados, como `number`, `email`, `file` u [otros tipos integrados](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input). Este atributo también puede cambiar la representación visual del control de formulario.
-- `patrón`: permite definir un patrón [expresión regular](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) para probar si los datos ingresados ​​son válidos o no.
+- `type`: define el tipo de datos esperados, como `number`, `email`, `file` u [otros tipos integrados](https://developer.mozilla.org/docs/Web/HTML/Element/input). Este atributo también puede cambiar la representación visual del control de formulario.
+- `patrón`: permite definir un patrón [expresión regular](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) para probar si los datos ingresados ​​son válidos o no.
 
 > Consejo: puedes personalizar el aspecto de los controles de tu formulario dependiendo de si son válidos o no usando las pseudoclases CSS `:valid` y `:invalid`.
 

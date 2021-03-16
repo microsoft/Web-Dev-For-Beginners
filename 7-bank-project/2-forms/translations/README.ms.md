@@ -27,7 +27,7 @@ curl http://localhost:5000/api
 
 Elemen `<form>` merangkumi bahagian dokumen HTML di mana pengguna dapat memasukkan dan menyerahkan data dengan kawalan interaktif. Terdapat pelbagai jenis kawalan antara muka pengguna (UI) yang dapat digunakan dalam bentuk, yang paling umum adalah elemen `<input>` dan elemen `<button>`.
 
-Terdapat banyak [jenis yang berbeza](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) dari `<input>`, misalnya untuk membuat bidang di mana pengguna boleh memasukkan nama penggunanya yang boleh anda gunakan:
+Terdapat banyak [jenis yang berbeza](https://developer.mozilla.org/docs/Web/HTML/Element/input) dari `<input>`, misalnya untuk membuat bidang di mana pengguna boleh memasukkan nama penggunanya yang boleh anda gunakan:
 
 ```html
 <input id="username" name="username" type="text">
@@ -35,9 +35,9 @@ Terdapat banyak [jenis yang berbeza](https://developer.mozilla.org/en-US/docs/We
 
 Atribut `name` akan digunakan sebagai nama harta ketika data borang akan dihantar. Atribut `id` digunakan untuk mengaitkan` <label>` dengan kawalan bentuk.
 
-> Lihat keseluruhan senarai [`<input>` types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) dan [kawalan bentuk lain](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls) untuk mendapatkan idea tentang semua elemen UI asli yang boleh anda gunakan semasa membina UI anda.
+> Lihat keseluruhan senarai [`<input>` types](https://developer.mozilla.org/docs/Web/HTML/Element/input) dan [kawalan bentuk lain](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls) untuk mendapatkan idea tentang semua elemen UI asli yang boleh anda gunakan semasa membina UI anda.
 
-✅ Perhatikan bahawa `<input>` adalah [elemen kosong](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) di mana anda seharusnya *tidak* menambahkan tag penutup yang sepadan. Anda bagaimanapun boleh menggunakan notasi `<input/>` tutup sendiri, tetapi tidak diperlukan.
+✅ Perhatikan bahawa `<input>` adalah [elemen kosong](https://developer.mozilla.org/docs/Glossary/Empty_element) di mana anda seharusnya *tidak* menambahkan tag penutup yang sepadan. Anda bagaimanapun boleh menggunakan notasi `<input/>` tutup sendiri, tetapi tidak diperlukan.
 
 Elemen `<button>` dalam bentuk agak istimewa. Sekiranya anda tidak menentukan atribut `type`, ia akan secara automatik mengirimkan data borang ke pelayan ketika ditekan. Berikut adalah nilai `type` yang mungkin:
 
@@ -68,7 +68,7 @@ Sekiranya anda melihat lebih dekat, anda dapat melihat bahawa kami juga menambah
 - Dengan mengaitkan label dengan kawalan bentuk, ia membantu pengguna menggunakan teknologi bantu (seperti pembaca skrin) untuk memahami data apa yang diharapkan dapat mereka berikan.
 - Anda dapat mengklik label untuk memberi fokus langsung pada input yang berkaitan, sehingga lebih mudah dijangkau pada peranti berdasarkan layar sentuh.
 
-> [Kebolehcapaian](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) di web adalah topik yang sangat penting yang sering diabaikan. Terima kasih kepada [elemen HTML semantik](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) tidak sukar untuk membuat kandungan yang boleh diakses jika anda menggunakannya dengan betul. Anda boleh [baca lebih lanjut mengenai kebolehaksesan](https://developer.mozilla.org/en-US/docs/Web/Accessibility) untuk mengelakkan kesilapan biasa dan menjadi pembangun yang bertanggungjawab.
+> [Kebolehcapaian](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) di web adalah topik yang sangat penting yang sering diabaikan. Terima kasih kepada [elemen HTML semantik](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) tidak sukar untuk membuat kandungan yang boleh diakses jika anda menggunakannya dengan betul. Anda boleh [baca lebih lanjut mengenai kebolehaksesan](https://developer.mozilla.org/docs/Web/Accessibility) untuk mengelakkan kesilapan biasa dan menjadi pembangun yang bertanggungjawab.
 
 Sekarang kita akan menambah borang kedua untuk pendaftaran, tepat di bawah yang sebelumnya:
 
@@ -156,7 +156,7 @@ function register() {
 }
 ```
 
-Di sini kita mengambil elemen borang menggunakan `getElementById()` dan menggunakan pembantu [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) untuk mengekstrak nilai dari borang kawalan sebagai satu set pasangan kunci / nilai. Kemudian kami menukar data ke objek biasa menggunakan [`Object.fromEntries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) dan akhirnya bersiri data ke [JSON](https://www.json.org/json-en.html), format yang biasa digunakan untuk pertukaran data di web.
+Di sini kita mengambil elemen borang menggunakan `getElementById()` dan menggunakan pembantu [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) untuk mengekstrak nilai dari borang kawalan sebagai satu set pasangan kunci / nilai. Kemudian kami menukar data ke objek biasa menggunakan [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) dan akhirnya bersiri data ke [JSON](https://www.json.org/json-en.html), format yang biasa digunakan untuk pertukaran data di web.
 
 Data kini siap dihantar ke pelayan. Buat fungsi baru bernama `createAccount`:
 
@@ -175,7 +175,7 @@ async function createAccount(account) {
 }
 ```
 
-Apakah fungsi ini? Pertama, perhatikan kata kunci `async` di sini. Ini bermaksud bahawa fungsi tersebut mengandungi kod yang akan menjalankan [**asynchronously**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). Apabila digunakan di sepanjang kata kunci `await`, ia membolehkan menunggu kod tak segerak untuk dilaksanakan - seperti menunggu tindak balas pelayan di sini - sebelum meneruskan.
+Apakah fungsi ini? Pertama, perhatikan kata kunci `async` di sini. Ini bermaksud bahawa fungsi tersebut mengandungi kod yang akan menjalankan [**asynchronously**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Apabila digunakan di sepanjang kata kunci `await`, ia membolehkan menunggu kod tak segerak untuk dilaksanakan - seperti menunggu tindak balas pelayan di sini - sebelum meneruskan.
 
 Berikut adalah video ringkas mengenai penggunaan `async/await`:
 
@@ -219,7 +219,7 @@ async function register() {
 }
 ```
 
-Itu agak lama tetapi kami sampai di sana! Sekiranya anda membuka [alat pembangun penyemak imbas](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), dan cuba mendaftarkan akaun baru, anda tidak akan melihat perubahan di laman web tetapi mesej akan muncul di konsol yang mengesahkan bahawa semuanya berfungsi.
+Itu agak lama tetapi kami sampai di sana! Sekiranya anda membuka [alat pembangun penyemak imbas](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools), dan cuba mendaftarkan akaun baru, anda tidak akan melihat perubahan di laman web tetapi mesej akan muncul di konsol yang mengesahkan bahawa semuanya berfungsi.
 
 ![Tangkapan skrin yang menunjukkan mesej log di konsol penyemak imbas](../images/browser-console.png)
 
@@ -227,15 +227,15 @@ Itu agak lama tetapi kami sampai di sana! Sekiranya anda membuka [alat pembangun
 
 ## Pengesahan data
 
-Sekiranya anda cuba mendaftarkan akaun baru tanpa menetapkan nama pengguna terlebih dahulu, anda dapat melihat bahawa pelayan mengembalikan ralat dengan kod status [400 (Bad Request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
+Sekiranya anda cuba mendaftarkan akaun baru tanpa menetapkan nama pengguna terlebih dahulu, anda dapat melihat bahawa pelayan mengembalikan ralat dengan kod status [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
-Sebelum menghantar data ke pelayan, adalah amalan yang baik untuk [mengesahkan data borang](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) terlebih dahulu apabila mungkin, untuk memastikan anda menghantar permintaan yang sah. Kawalan borang HTML5 memberikan pengesahan terbina dalam menggunakan pelbagai atribut:
+Sebelum menghantar data ke pelayan, adalah amalan yang baik untuk [mengesahkan data borang](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) terlebih dahulu apabila mungkin, untuk memastikan anda menghantar permintaan yang sah. Kawalan borang HTML5 memberikan pengesahan terbina dalam menggunakan pelbagai atribut:
 
 - `diperlukan`: bidang perlu diisi jika tidak, borang tidak dapat dihantar.
 - `minlength` dan` maxlength`: menentukan bilangan aksara minimum dan maksimum dalam bidang teks.
 - `min` dan `max`: menentukan nilai minimum dan maksimum medan angka.
-- `type`: mentakrifkan jenis data yang diharapkan, seperti `number`, `email`, `file` atau [other built-in types](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen/input). Atribut ini juga dapat mengubah rendering visual kawalan bentuk.
-- `pattern`: memungkinkan untuk menentukan [ungkapan biasa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) untuk menguji sama ada data yang dimasukkan sah atau tidak.
+- `type`: mentakrifkan jenis data yang diharapkan, seperti `number`, `email`, `file` atau [other built-in types](https://developer.mozilla.org/docs/Web/HTML/Elemen/input). Atribut ini juga dapat mengubah rendering visual kawalan bentuk.
+- `pattern`: memungkinkan untuk menentukan [ungkapan biasa](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) untuk menguji sama ada data yang dimasukkan sah atau tidak.
 
 > Petua: anda boleh menyesuaikan rupa kawalan borang anda bergantung pada apakah itu sah atau tidak menggunakan kelas pseudo CSS `:invalid` dan`:valid`.
 

@@ -248,7 +248,7 @@ Tambahkan kilauan 'bubble' ke bahagian bawah kiri balang agar kelihatan lebih me
 
 ![finished terrarium](../images/terrarium-final.png)
 
-Untuk menyelesaikan kuiz pasca kuliah, baca modul Belajar ini: [Gaya aplikasi HTML anda dengan CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics)
+Untuk menyelesaikan kuiz pasca kuliah, baca modul Belajar ini: [Gaya aplikasi HTML anda dengan CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics)
 
 ## Kuiz Pasca Kuliah
 

@@ -8,7 +8,7 @@
 
 El lienzo es un elemento HTML que por defecto no tiene contenido; es una pizarra en blanco. Necesita agregarle dibujo sobre él.
 
-✅ Lea [más sobre la API Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) en MDN.
+✅ Lea [más sobre la API Canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API) en MDN.
 
 Así es como se declara normalmente, como parte del cuerpo de la página:
 
@@ -27,7 +27,7 @@ Arriba estamos configurando el `id`, `width` y `alto`.
 Canvas utiliza un sistema de coordenadas cartesiano para dibujar cosas. Por lo tanto, usa un eje xy un eje y para expresar dónde se encuentra algo. La ubicación `0,0` es la posición superior izquierda y la inferior derecha es lo que dijiste que era el ANCHO y ALTO del lienzo.
 
 ! [cuadrícula del lienzo](canvas_grid.png)
-> Imagen de [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+> Imagen de [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Para dibujar en el elemento de lienzo, deberá seguir los siguientes pasos:
 
@@ -52,7 +52,7 @@ ctx.fillStyle = 'red';
 ctx.fillRect(0,0, 200, 200) // x, y, ancho, alto
 ```
 
-✅ La API de Canvas se enfoca principalmente en formas 2D, pero también puede dibujar elementos 3D en un sitio web; para esto, puede usar la [API WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API).
+✅ La API de Canvas se enfoca principalmente en formas 2D, pero también puede dibujar elementos 3D en un sitio web; para esto, puede usar la [API WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
 Puede dibujar todo tipo de cosas con la API de Canvas como:
 
@@ -200,13 +200,13 @@ El resultado final debería verse así:
 
 Intente resolverlo usted mismo primero, pero si se atasca, eche un vistazo a una [solución](solution/app.js)
 
-🚀 Desafío: ha aprendido a dibujar con la API Canvas enfocada en 2D; eche un vistazo a la [API WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) e intente dibujar un objeto 3D.
+🚀 Desafío: ha aprendido a dibujar con la API Canvas enfocada en 2D; eche un vistazo a la [API WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API) e intente dibujar un objeto 3D.
 
 
 ## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/32)
 
 ## Revisión y autoestudio
 
-Obtenga más información sobre la API de Canvas [leyendo sobre ella](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
+Obtenga más información sobre la API de Canvas [leyendo sobre ella](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
 **Tarea**: [Jugar con la API de Canvas](assignment.es.md)

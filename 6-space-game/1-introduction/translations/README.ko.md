@@ -29,7 +29,7 @@
 
 아이디어로는 클래스에 특정 동작을 추가하기 위해 `inheritance`과 함께 `classes`를 사용하는 것입니다.
 
-✅ 상속은 이해해야 할 중요한 컨셉입니다. [MDN's article about inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)로 더 배워보세요.
+✅ 상속은 이해해야 할 중요한 컨셉입니다. [MDN's article about inheritance](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)로 더 배워보세요.
 
 코드를 통해 표현되는, 게임 객체는 일반적으로 다음과 같습니다:
 
@@ -217,7 +217,7 @@ pub-sub 패턴이 어떻게 게임을 발전시킬 수 있는지 생각해보세
 
 ## 리뷰 & 자기주도 학습
 
-[reading about it](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa)으로 Pub/Sub에 대해 조금 더 배워봅시다.
+[reading about it](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa)으로 Pub/Sub에 대해 조금 더 배워봅시다.
 
 ## 과제
 

@@ -109,13 +109,13 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ## 🚀 Herausforderung
 
-Es gibt andere Möglichkeiten, Arrays als for- und while-Schleifen zu durchlaufen. Es gibt [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) und [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Schreiben Sie Ihre Array-Schleife mit einer dieser Techniken neu.
+Es gibt andere Möglichkeiten, Arrays als for- und while-Schleifen zu durchlaufen. Es gibt [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) und [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Schreiben Sie Ihre Array-Schleife mit einer dieser Techniken neu.
 
 ## [Quiz nach der Vorlesung](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14)
 
 ## Review & Selbststudium
 
-An Arrays in JavaScript sind viele Methoden angehängt, die für die Datenmanipulation äußerst nützlich sind. [Informieren Sie sich über diese Methoden](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) und probieren Sie einige davon aus (wie Push, Pop, Slice und Splice). auf einem Array Ihrer Kreation.
+An Arrays in JavaScript sind viele Methoden angehängt, die für die Datenmanipulation äußerst nützlich sind. [Informieren Sie sich über diese Methoden](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) und probieren Sie einige davon aus (wie Push, Pop, Slice und Splice). auf einem Array Ihrer Kreation.
 
 ## Zuordnung
 
