@@ -12,6 +12,7 @@
         <option>it</option>
         <option>gr</option>
         <option>ms</option>
+        <option>zh_tw</option>
       </select>
     </nav>
     <div id="app">
