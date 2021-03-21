@@ -194,7 +194,7 @@ HTML 마크업의 각 식물에는 id와 클래스의 조합이 있습니다. id
 	height: 80%;
 	width: 60%;
 	background: #d1e1df;
-	border-radius: 10%;
+	border-radius: 1rem;
 	position: absolute;
 	bottom: 0.5%;
 	left: 20%;
@@ -224,13 +224,13 @@ HTML 마크업의 각 식물에는 id와 클래스의 조합이 있습니다. id
 }
 
 .dirt {
-	width: 58%;
+	width: 60%;
 	height: 5%;
 	background: #3a241d;
 	position: absolute;
-	border-radius: 0 0 4rem 4rem;
+	border-radius: 0 0 1rem 1rem;
 	bottom: 1%;
-	left: 21%;
+	left: 20%;
 	opacity: 0.7;
 	z-index: -1;
 }
@@ -248,7 +248,7 @@ jar 좌측 하단 부분에 'bubble' 광택을 추가하여 유리처럼 보이�
 
 ![finished terrarium](.././images/terrarium-final.png)
 
-강의 후 퀴즈를 완료하려면, 다음 학습 모듈을 진행하십시오: [Style your HTML app with CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
+강의 후 퀴즈를 완료하려면, 다음 학습 모듈을 진행하십시오: [Style your HTML app with CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
 
 ## 강의 후 퀴즈
 

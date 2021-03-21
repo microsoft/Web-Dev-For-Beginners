@@ -21,7 +21,7 @@
 アプリケーションを作成するときに聞くことができる[多数のイベント](https://developer.mozilla.org/ja/docs/Web/Events)があります。基本的に、ユーザーがページ上で何かをするとイベントが発生しますが、これはプレイヤーがあなたの意図した経験を得られるようにするうえで大きな力となります。幸いなことに、通常はほんの一握りのイベントしか必要ありません。ここでは、(ゲームを作成する際に使用する 2 つのイベントを含む) いくつかの一般的なイベントを紹介します:
 
 - [click](https://developer.mozilla.org/ja/docs/Web/API/Element/click_event): ユーザーが何かをクリックした場合、通常はボタンやハイパーリンクをクリックします
-- [contextmenu](https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event): ユーザーがマウスの右ボタンをクリックした場合
+- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): ユーザーがマウスの右ボタンをクリックした場合
 - [select](https://developer.mozilla.org/ja/docs/Web/API/Element/select_event): ユーザーがテキストをハイライトした場合
 - [input](https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/input_event): ユーザーが何かテキストを入力した場合
 

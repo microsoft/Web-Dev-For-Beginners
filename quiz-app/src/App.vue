@@ -6,13 +6,15 @@
       <select v-model="locale">
         <option>en</option>
         <option>es</option>
-        <option>ko</option>
-        <option>id</option>
-        <option>hi</option>
-        <option>it</option>
         <option>gr</option>
+        <option>hi</option>
+        <option>id</option>
+        <option>it</option>
+        <option>ko</option>
         <option>ms</option>
         <option>nl</option>
+        <option>zh_tw</option>
+
       </select>
     </nav>
     <div id="app">

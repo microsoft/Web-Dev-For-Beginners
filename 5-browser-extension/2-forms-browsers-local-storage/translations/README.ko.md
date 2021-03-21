@@ -94,7 +94,7 @@ function reset(e) {
   - 폼 숨기기
   - 리셋 버튼 보이기
 
-계속 진행하기 전, 브라우저에서 사용할 수 있는 매우 중요한 개념: [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)에 대해 알아 보는 것이 좋습니다. LocalStorage는 브라우저에 문자열을 `key-value` 쌍으로 저장하는 유용한 방법입니다. 이런 타입의 웹 저장소는 브라우저에서 데이터를 관리하기 위해 JavaScript로 제어할 수 있습니다. LocalStorage는 만료되지 않지만, 다른 종류의 웹 저장소인 SessionStorage는 브라우저를 닫는 즉시 지워집니다. 다양한 타입의 저장소를 사용하는 것은 장점과 단점이 존재합니다.
+계속 진행하기 전, 브라우저에서 사용할 수 있는 매우 중요한 개념: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)에 대해 알아 보는 것이 좋습니다. LocalStorage는 브라우저에 문자열을 `key-value` 쌍으로 저장하는 유용한 방법입니다. 이런 타입의 웹 저장소는 브라우저에서 데이터를 관리하기 위해 JavaScript로 제어할 수 있습니다. LocalStorage는 만료되지 않지만, 다른 종류의 웹 저장소인 SessionStorage는 브라우저를 닫는 즉시 지워집니다. 다양한 타입의 저장소를 사용하는 것은 장점과 단점이 존재합니다.
 
 > Note - 이 브라우저 확장은 로컬 저장소를 가집니다; 주요 브라우저 창은 각자 다른 객체이며 별도로 동작합니다.
 
@@ -145,7 +145,7 @@ function setUpUser(apiKey, regionName) {
 
 ✅ 'REST'라는 용어는 'Representational State Transfer'를 의미하고 데이터를 가져오기 위해서 다양하게-구성된 URL을 쓰는 기능입니다. 개발자가 사용할 수 있는 다양한 타입의 API에 대해 약간 알아보십시오. 어떤 포맷이 좋습니까?
 
-이 함수에 대해 유의해야 할 중요 사항이 있습니다. 먼저 [`async` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)를 확인합니다. 비동기로 실행되도록 함수를 작성한다는 것은 수행되기 전 데이터 반환 작업이 완료될 때를 기다린다는 점을 의미합니다.
+이 함수에 대해 유의해야 할 중요 사항이 있습니다. 먼저 [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function)를 확인합니다. 비동기로 실행되도록 함수를 작성한다는 것은 수행되기 전 데이터 반환 작업이 완료될 때를 기다린다는 점을 의미합니다.
 
 다음은 `async`에 대한 간단한 영상입니다 :
 
@@ -198,7 +198,7 @@ async function displayCarbonUsage(apiKey, region) {
 - API가 응답하면, 이 데이터를 출력하도록 설정한 화면에 응답 데이터의 다양한 요소를 할당합니다.
 - 오류가 있거나, 결과가 없는 경우에는, 오류 메시지가 출력됩니다.
 
-✅ 비동기 프로그래밍 패턴을 사용하는 것은 툴박스의 다른 매우 유용한 도구입니다. [about the various ways](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)를 읽고 이런 타입의 코드를 구성할 수 있습니다.
+✅ 비동기 프로그래밍 패턴을 사용하는 것은 툴박스의 다른 매우 유용한 도구입니다. [about the various ways](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function)를 읽고 이런 타입의 코드를 구성할 수 있습니다.
 
 축하합니다! 확장을 빌드하고 (`npm run build`) 확장 패널에서 새로 고치면, 작동하는 확장이 있습니다! 아이콘만 작동하지 않으며 다음 강의에서 수정할 예정입니다.
 
@@ -206,7 +206,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## 🚀 도전
 
-지금까지 이 강의에서 여러 타입의 API에 대해 논의했습니다. 웹 API를 선택하고 제공하는 내용에 대해 자세히 알아보세요. 예시로, [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)와 같은 브라우저에서 쓸 수 있는 API를 보세요. 당신의 의견에 비추어 볼 때 좋은 API를 만드는 방법은 무엇일까요?
+지금까지 이 강의에서 여러 타입의 API에 대해 논의했습니다. 웹 API를 선택하고 제공하는 내용에 대해 자세히 알아보세요. 예시로, [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API)와 같은 브라우저에서 쓸 수 있는 API를 보세요. 당신의 의견에 비추어 볼 때 좋은 API를 만드는 방법은 무엇일까요?
 
 ## 강의 후 퀴즈
 

@@ -17,7 +17,7 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ [एक कैनवास में पाठ कैसे जोड़ें](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text) इसके बारे में और पढ़ें और बेझिझक अपने को आकर्षक बनाने के लिए!
+✅ [एक कैनवास में पाठ कैसे जोड़ें](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) इसके बारे में और पढ़ें और बेझिझक अपने को आकर्षक बनाने के लिए!
 
 ## जीवन, एक खेल अवधारणा के रूप में
 

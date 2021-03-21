@@ -176,7 +176,7 @@ let myString2 = "World";
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ 변수가 논리 자료형이 `true`로 설정되면 '참'으로 간주될 수 있습니다. 흥미롭게도, JavaScript에서는 [거짓으로 정의되지 않는다면 모든 값은 참입니다](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+✅ 변수가 논리 자료형이 `true`로 설정되면 '참'으로 간주될 수 있습니다. 흥미롭게도, JavaScript에서는 [거짓으로 정의되지 않는다면 모든 값은 참입니다](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 ---
 

@@ -194,7 +194,7 @@ Innanzitutto, si applica lo stile al div figlio `.terrarium` in modo che sia un 
 	height: 80%;
 	width: 60%;
 	background: #d1e1df;
-	border-radius: 10%;
+	border-radius: 1rem;
 	position: absolute;
 	bottom: 0.5%;
 	left: 20%;
@@ -224,19 +224,19 @@ Innanzitutto, si applica lo stile al div figlio `.terrarium` in modo che sia un 
 }
 
 .dirt {
-	width: 58%;
+	width: 60%;
 	height: 5%;
 	background: #3a241d;
 	position: absolute;
-	border-radius: 0 0 4rem 4rem;
+	border-radius: 0 0 1rem 1rem;
 	bottom: 1%;
-	left: 21%;
+	left: 20%;
 	opacity: 0.7;
 	z-index: -1;
 }
 ```
 
-Notare l'uso delle percentuali qui, anche per il `border-radius` (il raggio del bordo arrotondato). Se si riduce la finestra del browser, si puòi vedere come si ridimensionano anche gli angoli del barattolo. Notare anche le percentuali di larghezza e altezza per gli elementi jar e come ogni elemento sia posizionato in modo assoluto al centro, bloccato nella parte inferiore della finestra visualizzata.
+Notare l'uso delle percentuali qui. Se si riduce la finestra del browser, si puòi vedere come si ridimensionano anche gli angoli del barattolo. Notare anche le percentuali di larghezza e altezza per gli elementi jar e come ogni elemento sia posizionato in modo assoluto al centro, bloccato nella parte inferiore della finestra visualizzata.
 
 ✅ Provare a cambiare i colori e l'opacità del barattolo rispetto a quelli della terra. Che cosa accade? Perché?
 

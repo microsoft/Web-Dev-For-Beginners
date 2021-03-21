@@ -166,7 +166,7 @@ Buat program yang ditulis pertama kali dengan operator logika, lalu tulis ulang 
 
 ## Review & Belajar Mandiri
 
-Baca lebih lanjut tentang banyak operator yang tersedia untuk pengguna [di MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
+Baca lebih lanjut tentang banyak operator yang tersedia untuk pengguna [di MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
 Lihat [pencarian operator](https://joshwcomeau.com/operator-lookup/) oleh Josh Comeau yang luar biasa!
 

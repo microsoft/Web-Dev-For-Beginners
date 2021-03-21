@@ -174,7 +174,7 @@ const routes = {
 };
 ```
 
-では、`updateRoute` 関数を少し修正してみましょう。引数に `templateId` を直接渡すのではなく、まず現在の URL を見て、map を使って対応するテンプレート ID の値を取得したいと思います。URL からパス部分だけを取得するには、[`window.location.pathname`](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname)を使うことができます。
+では、`updateRoute` 関数を少し修正してみましょう。引数に `templateId` を直接渡すのではなく、まず現在の URL を見て、map を使って対応するテンプレート ID の値を取得したいと思います。URL からパス部分だけを取得するには、[`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname)を使うことができます。
 
 ```js
 function updateRoute() {
@@ -266,7 +266,7 @@ HTML の *Login* と *Logout* リンクにバインディングを追加して�
 
 何度か戻るボタンをクリックしてみると、現在の URL が変わって履歴が更新されていますが、同じテンプレートが表示され続けています。
 
-これは、履歴が変わるたびに `updateRoute()` を呼び出す必要があることを知らないからです。[`history.pushState` のドキュメント](https://developer.mozilla.org/ja/docs/Web/API/History/pushState)を見てみると、状態が変化した場合、つまり別の URL に移動した場合には、[`popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event)イベントが発生することがわかります。これを使ってこの問題を解決しましょう。
+これは、履歴が変わるたびに `updateRoute()` を呼び出す必要があることを知らないからです。[`history.pushState` のドキュメント](https://developer.mozilla.org/ja/docs/Web/API/History/pushState)を見てみると、状態が変化した場合、つまり別の URL に移動した場合には、[`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event)イベントが発生することがわかります。これを使ってこの問題を解決しましょう。
 
 ### タスク
 

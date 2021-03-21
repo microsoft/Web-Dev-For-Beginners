@@ -131,7 +131,7 @@ const greetingMessage = createGreetingMessage('Christopher');
 
 Man mano che si progredisce nella propria carriera di programmatore, ci si imbatterà in funzioni che accettano funzioni come parametri. Questo trucco è comunemente usato quando non si sa quando qualcosa accadrà o sarà completata, ma si sa che si deve eseguire un'operazione in risposta.
 
-Come esempio si consideri [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), che fa partire un timer ed eseguirà del codice il tempo viene esaurito. Occorre dirgli quale codice si vuole eseguire. Sembra un lavoro perfetto per una funzione!
+Come esempio si consideri [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), che fa partire un timer ed eseguirà del codice il tempo viene esaurito. Occorre dirgli quale codice si vuole eseguire. Sembra un lavoro perfetto per una funzione!
 
 Se si esegue il codice qui sopra, dopo 3 secondi si vedrà il messaggio **3 seconds has elapsed** (sono trascorsi 3 secondi).
 
@@ -188,7 +188,7 @@ Si riesce ad articolare in una frase la differenza tra funzioni e metodi? Fare u
 
 ## Revisione e auto apprendimento
 
-Vale la pena [leggere un poco di più sulle funzioni arrow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), poiché sono sempre più utilizzate nelle basi di codice. Esercitarsi a scrivere una funzione, quindi riscriverla con questa sintassi.
+Vale la pena [leggere un poco di più sulle funzioni arrow](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), poiché sono sempre più utilizzate nelle basi di codice. Esercitarsi a scrivere una funzione, quindi riscriverla con questa sintassi.
 
 ## Compito
 

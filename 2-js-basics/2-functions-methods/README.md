@@ -104,7 +104,7 @@ displayGreeting('Christopher', 'Hi');
 
 ## Return values
 
-Up until now the function we built will always output to the [console](https://developer.mozilla.org/en-US/docs/Web/API/console). Sometimes this can be exactly what we're looking for, especially when we create functions which will be calling other services. But what if I want to create a helper function to perform a calculation and provide the value back so I can use it elsewhere?
+Up until now the function we built will always output to the [console](https://developer.mozilla.org/docs/Web/API/console). Sometimes this can be exactly what we're looking for, especially when we create functions which will be calling other services. But what if I want to create a helper function to perform a calculation and provide the value back so I can use it elsewhere?
 
 We can do this by using a **return value**. A return value is returned by the function, and can be stored in a variable just the same as we could store a literal value such as a string or number.
 
@@ -133,7 +133,7 @@ const greetingMessage = createGreetingMessage('Christopher');
 
 As you progress in your programming career, you will come across functions which accept functions as parameters. This neat trick is commonly used when we don't know when something is going to occur or complete, but we know we need to perform an operation in response.
 
-As an example, consider [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), which begins a timer and will execute code when it completes. We need to tell it what code we want to execute. Sounds like a perfect job for a function!
+As an example, consider [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), which begins a timer and will execute code when it completes. We need to tell it what code we want to execute. Sounds like a perfect job for a function!
 
 If you run the code below, after 3 seconds you'll see the message **3 seconds has elapsed**.
 
@@ -188,7 +188,7 @@ Can you articulate in one sentence the difference between functions and methods?
 
 ## Review & Self Study
 
-It's worth [reading up a little more on arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), as they are increasingly used in code bases. Practice writing a function, and then rewriting it with this syntax.
+It's worth [reading up a little more on arrow functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), as they are increasingly used in code bases. Practice writing a function, and then rewriting it with this syntax.
 
 ## Assignment
 

@@ -20,10 +20,10 @@ To handle events (button clicking, typing, etc.), we register **event listeners*
 
 There are [dozens of events](https://developer.mozilla.org/docs/Web/Events) available for you to listen to when creating an application. Basically anything a user does on a page raises an event, which gives you a lot of power to ensure they get the experience you desire. Fortunately, you'll normally only need a small handful of events. Here's a few common ones (including the two we'll use when creating our game):
 
-- [click](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event): The user clicked on something, typically a button or hyperlink
-- [contextmenu](https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event): The user clicked the right mouse button
-- [select](https://developer.mozilla.org/en-US/docs/Web/API/Element/select_event): The user highlighted some text
-- [input](https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event): The user input some text
+- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): The user clicked on something, typically a button or hyperlink
+- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): The user clicked the right mouse button
+- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): The user highlighted some text
+- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): The user input some text
 
 ## Creating the game
 
@@ -332,7 +332,7 @@ Add more functionality
 
 ## Review & Self Study
 
-Read up on [all the events available](https://developer.mozilla.org/en-US/docs/Web/Events) to the developer via the web browser, and consider the scenarios in which you would use each one.
+Read up on [all the events available](https://developer.mozilla.org/docs/Web/Events) to the developer via the web browser, and consider the scenarios in which you would use each one.
 
 ## Assignment
 

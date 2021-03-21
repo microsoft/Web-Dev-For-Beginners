@@ -2,7 +2,7 @@
 
 ## 説明書
 
-Web 開発者が必要とする可能性のあるツールは、[クライアントサイドツールの MDN ドキュメント](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)に記載されているものが多くあります。このレッスンでカバーされていないツールを3つ選び、Web 開発者がそれを使う理由を説明し、このカテゴリに該当するツールを検索し、そのドキュメントを共有してください。同じツールの例を MDN ドキュメント上で使用しないでください。
+Web 開発者が必要とする可能性のあるツールは、[クライアントサイドツールの MDN ドキュメント](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)に記載されているものが多くあります。このレッスンでカバーされていないツールを3つ選び、Web 開発者がそれを使う理由を説明し、このカテゴリに該当するツールを検索し、そのドキュメントを共有してください。同じツールの例を MDN ドキュメント上で使用しないでください。
 
 ## ルーブリック
 
