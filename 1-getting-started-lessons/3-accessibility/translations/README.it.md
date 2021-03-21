@@ -223,6 +223,6 @@ Molti governi hanno leggi riguardanti i requisiti di accessibilità. Consultare 
 
 ## Assegnazione
 
-[Analizzare un sito web non accessibile](assignment.md)
+[Analizzare un sito web non accessibile](assignment.it.md)
 
 Crediti: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) da Instrument

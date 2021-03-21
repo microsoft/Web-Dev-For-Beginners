@@ -2343,7 +2343,7 @@
 			},
 			{
 				"id": 46,
-				"title": "Lesson 23 - Bank Project Methods of Fetching and Using Data: Post-Lecture Quiz",
+				"title": "Lesson 23 - Bank Project - Methods of Fetching and Using Data: Post-Lecture Quiz",
 				"quiz": [
 					{
 						"questionText": "In a Single-page application, the HTML is loaded once and never updated",
