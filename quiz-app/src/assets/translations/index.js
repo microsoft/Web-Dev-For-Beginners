@@ -9,6 +9,7 @@ import gr from './gr.json';
 import ms from './ms.json';
 import es from './es.json';
 import nl from './nl.json';
+import zh_cn from './zh_cn.json';
 import zh_tw from './zh_tw.json';
 
 
@@ -25,6 +26,7 @@ const messages = {
 	ms: ms[0],
 	es: es[0],
 	nl: nl[0],
+	zh_cn: zh_cn[0],
   zh_tw: zh_tw[0],
 
 };
