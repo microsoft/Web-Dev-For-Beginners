@@ -1,15 +1,15 @@
 [
 	{
-		"title": "給初學者的網頁開發：小測驗",
-		"complete": "恭喜，您完成了所有試題!",
-		"error": "抱歉。請稍後再試。",
+		"title": "面向初学者的 Web 开发入门: 小测验",
+		"complete": "恭喜，你完成了小测验！",
+		"error": "抱歉，请再试一次",
 		"quizzes": [
 			{
 				"id": 1,
-				"title": "課程一 - 程式語言概論：課前測驗",
+				"title": "课程 1 - 编程语言介绍：课前小测",
 				"quiz": [
 					{
-						"questionText": "開發人員可在不編寫程式碼的情況下產生程式。",
+						"questionText": "程序可以在不编写任何代码的情况下生成",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -22,35 +22,35 @@
 						]
 					},
 					{
-						"questionText": "低階語言常被使用在：",
+						"questionText": "低级语言常被用于",
 						"answerOptions": [
 							{
-								"answerText": "網頁",
+								"answerText": "网页",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "硬體",
+								"answerText": "硬件",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "遊戲軟體",
+								"answerText": "游戏软件",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "下列何者工具會出現在網頁開發的環境中?",
+						"questionText": "下列哪种工具最可能出现在 Web 开发环境中？",
 						"answerOptions": [
 							{
-								"answerText": "硬體，如樹莓派",
+								"answerText": "硬件，如树莓派",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "瀏覽器開發工具",
+								"answerText": "浏览器开发者工具",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "作業系統相關文件",
+								"answerText": "操作系统文档",
 								"isCorrect": "false"
 							}
 						]
@@ -59,13 +59,13 @@
 			},
 			{
 				"id": 2,
-				"title": "課程一 - 程式語言簡介：課後測驗",
+				"title": "课程 1 - 编程语言介绍：课后小测",
 				"quiz": [
 					{
-						"questionText": "下列何者程式語言比較適合用來撰寫網頁?",
+						"questionText": "你最可能用哪种语言来创建一个网站？",
 						"answerOptions": [
 							{
-								"answerText": "機器語言",
+								"answerText": "机器语言",
 								"isCorrect": "false"
 							},
 							{
@@ -79,7 +79,7 @@
 						]
 					},
 					{
-						"questionText": "每一位開發人員的開發環境都不盡相同。",
+						"questionText": "每位开发者的开发环境都不尽相同",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -92,18 +92,18 @@
 						]
 					},
 					{
-						"questionText": "開發人員會如何修正錯誤的程式碼?",
+						"questionText": "开发者会通过什么方式修复有问题的代码？",
 						"answerOptions": [
 							{
-								"answerText": "語法突顯",
+								"answerText": "语法高亮",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "偵錯",
+								"answerText": "代码调试",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "程式碼格式化",
+								"answerText": "代码格式化",
 								"isCorrect": "false"
 							}
 						]
@@ -112,10 +112,10 @@
 			},
 			{
 				"id": 3,
-				"title": "課程二 - GitHub簡介：課前測驗",
+				"title": "课程 2 - GitHub 介绍：课前小测",
 				"quiz": [
 					{
-						"questionText": "下列何種指令可以建立 Git 數據庫?",
+						"questionText": "如何创建一个 Git 仓库？",
 						"answerOptions": [
 							{
 								"answerText": "git create",
@@ -132,35 +132,35 @@
 						]
 					},
 					{
-						"questionText": "指令 git add 的目的為何?",
+						"questionText": "git add 命令的作用是？",
 						"answerOptions": [
 							{
-								"answerText": "提交程式碼。",
+								"answerText": "提交你的代码",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "加入檔案至索引成追蹤對象。",
+								"answerText": "将你的文件放到暂存区以追踪它们",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "加入檔案至GitHub。",
+								"answerText": "将你的文件放到 GitHub",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "如何確認電腦內是否有安裝 git?",
+						"questionText": "如何确认你的电脑上是否已经安装了 git？",
 						"answerOptions": [
 							{
-								"answerText": "輸入 git --version",
+								"answerText": "输入 git --version",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "輸入 git --installed",
+								"answerText": "输入 git --installed",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "輸入 git --init",
+								"answerText": "输入 git --init",
 								"isCorrect": "false"
 							}
 						]
@@ -169,10 +169,10 @@
 			},
 			{
 				"id": 4,
-				"title": "課程二 - GitHub簡介：課後測驗",
+				"title": "课程 2 - GitHub 介绍：课后小测",
 				"quiz": [
 					{
-						"questionText": "下列何者能確認同一分支內不同更動的審查、評論、測試……等?",
+						"questionText": "有一个地方可以用来比较和讨论一个分支引入的改动，并有检查、评论代码、集成测试等功能，这个地方是？",
 						"answerOptions": [
 							{
 								"answerText": "GitHub",
@@ -183,13 +183,13 @@
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Feature Branch",
+								"answerText": "一个特性分支",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "如何從遠端數據庫中取得所有的提交?",
+						"questionText": "你该如何从一个远程分支获取所有提交？",
 						"answerOptions": [
 							{
 								"answerText": "git fetch",
@@ -206,18 +206,18 @@
 						]
 					},
 					{
-						"questionText": "如何切換分支?",
+						"questionText": "你该如何切换到一个分支？",
 						"answerOptions": [
 							{
-								"answerText": "git switch [分支名稱]",
+								"answerText": "git switch [branch-name]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [分支名稱]",
+								"answerText": "git checkout [branch-name]",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "git load [分支名稱]",
+								"answerText": "git load [branch-name]",
 								"isCorrect": "false"
 							}
 						]
@@ -226,10 +226,10 @@
 			},
 			{
 				"id": 5,
-				"title": "課程三 - 建立無障礙網頁：課前測驗",
+				"title": "课程 3 - 创造无障碍网页：课前小测",
 				"quiz": [
 					{
-						"questionText": "下列何種工具可以確認網頁的無障礙性?",
+						"questionText": "下列哪种浏览器工具可以用于检查网站的无障碍性？",
 						"answerOptions": [
 							{
 								"answerText": "Lighthouse",
@@ -246,7 +246,7 @@
 						]
 					},
 					{
-						"questionText": "只有實體的螢幕報讀器才能對視覺障礙者測試網頁親和力。",
+						"questionText": "你必须得用一个实体的屏幕阅读器才能检查网页对视力障碍者的无障碍性",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -259,7 +259,7 @@
 						]
 					},
 					{
-						"questionText": "網頁親和力只在公家機關的網頁才有需求。",
+						"questionText": "只有政府网站才需要关注无障碍性",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -275,10 +275,10 @@
 			},
 			{
 				"id": 6,
-				"title": "課程三 - 建立無障礙網頁：課後測驗",
+				"title": "课程 3 - 创造无障碍网页：课后小测",
 				"quiz": [
 					{
-						"questionText": "Lighthouse 只能檢查網頁親和力。",
+						"questionText": "Lighthouse 只能用于检查无障碍相关问题",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -291,24 +291,24 @@
 						]
 					},
 					{
-						"questionText": "安全的配色可以幫助到：",
+						"questionText": "使用安全色的色板可以帮助到",
 						"answerOptions": [
 							{
-								"answerText": "色盲",
+								"answerText": "色盲人群",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "視覺障礙者",
+								"answerText": "视力障碍者",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是",
+								"answerText": "以上两者",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "描述性連結是無障礙網頁中重要的部分。",
+						"questionText": "描述性链接对于无障碍网站来说很重要",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -324,10 +324,10 @@
 			},
 			{
 				"id": 7,
-				"title": "課程四 - JavaScript 入門 - 資料型態：課前測驗",
+				"title": "课程 4 - JavaScript 基础 - 数据类型：课前小测",
 				"quiz": [
 					{
-						"questionText": "布林是檢查字串的長度的資料型態。",
+						"questionText": "布尔值是可以用来记录字符串长度的数据类型",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -340,24 +340,24 @@
 						]
 					},
 					{
-						"questionText": "下列何種行為可以用在字串上?",
+						"questionText": "你可以对字符串进行以下哪种操作？",
 						"answerOptions": [
 							{
-								"answerText": "合併",
+								"answerText": "连接（concatenation）",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "串接",
+								"answerText": "增添（appending）",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "拼接",
+								"answerText": "剪接（splicing）",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "== 和 === 是可互換的。",
+						"questionText": "== 和 === 可以互换使用",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -373,27 +373,27 @@
 			},
 			{
 				"id": 8,
-				"title": "課程四 - JavaScript 入門 - 資料型態：課後測驗",
+				"title": "课程 4 - JavaScript 基础 - 数据类型：课后小测",
 				"quiz": [
 					{
-						"questionText": "常數與 let 和 var 宣告的變數相同，除了：",
+						"questionText": "在用于声明变量时，用 const 创建的常量与用 let 和 var 基本是相同的，区别在于：",
 						"answerOptions": [
 							{
-								"answerText": "常數必須要初始化。",
+								"answerText": "常量必须被初始化",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "常數可以被修改。",
+								"answerText": "常量可以被修改",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "常數可以被重新賦值。",
+								"answerText": "常量可以被重新赋值",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "在 JavaScript 中，負責處理數值型態資料的為 Numbers 與：",
+						"questionText": "Numbers 和 ____ 是用于处理数值型数据的 JavaScript 基本类型",
 						"answerOptions": [
 							{
 								"answerText": "bigint",
@@ -410,7 +410,7 @@
 						]
 					},
 					{
-						"questionText": "字串值可以被單引號與雙引號所包住。",
+						"questionText": "单引号和双引号都可以用来包裹字符串",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -426,27 +426,27 @@
 			},
 			{
 				"id": 9,
-				"title": "課程五 - JavaScript 入門 - 函式與方法：課前測驗",
+				"title": "课程 5 - JavaScript 基础 - 方法和函数：课前小测",
 				"quiz": [
 					{
-						"questionText": "什麼是引數物件?",
+						"questionText": "参数（argument）是什么？",
 						"answerOptions": [
 							{
-								"answerText": "用來宣告函式的定義。",
+								"answerText": "是你在函数定义中声明的一个东西",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "用來呼叫函式。",
+								"answerText": "是在函数调用时你传给函数的一个东西",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "用來與熟識的人共同持有。",
+								"answerText": "是你和熟人间共有的一个东西",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "函式必須要有回傳值。",
+						"questionText": "函数必须有返回值",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -459,7 +459,7 @@
 						]
 					},
 					{
-						"questionText": "你可以隨意命名函式的名稱。",
+						"questionText": "你可以随意命名一个函数",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -470,7 +470,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "是，但以可描述性的名稱為佳。",
+								"answerText": "是，但它最好是一个描述性的名称",
 								"isCorrect": "true"
 							}
 						]
@@ -479,10 +479,10 @@
 			},
 			{
 				"id": 10,
-				"title": "課程五 - JavaScript 入門 - 函式與方法：課後測驗",
+				"title": "课程 5 - JavaScript 基础 - 方法和函数：课后小测",
 				"quiz": [
 					{
-						"questionText": "引數物件必須提供函式需要的所有參數。",
+						"questionText": "函数在被调用时必须提供所有参数",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -495,35 +495,35 @@
 						]
 					},
 					{
-						"questionText": "預設值(Default Value)的目的為何?",
+						"questionText": "默认值是做什么用的？",
 						"answerOptions": [
 							{
-								"answerText": "設定正確的數值。",
+								"answerText": "设置一个正确的值",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "參數的初始值，當忽略引數時，程式碼仍可運作。",
+								"answerText": "为参数提供一个默认值，使得在省略参数时函数仍能正常工作",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "沒有意義。",
+								"answerText": "毫无意义",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "箭頭函式(fat arrow functions)允許開發人員：",
+						"questionText": "箭头函数（fat arrow function）可以让你",
 						"answerOptions": [
 							{
-								"answerText": "建立很重(heavy)的函式。",
+								"answerText": "创建很重（heavy）的函数",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "可以忽略部分的函式名稱。",
+								"answerText": "省略部分函数关键字（keyword）",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "建立匿名函式。",
+								"answerText": "创建匿名函数",
 								"isCorrect": "false"
 							}
 						]
@@ -532,55 +532,55 @@
 			},
 			{
 				"id": 11,
-				"title": "課程六 - JavaScript 入門 - 做出決定：課前測驗",
+				"title": "课程 6 - JavaScript 基础 - 做出决定：课前小测",
 				"quiz": [
 					{
-						"questionText": "運算子 == 的運算為：",
+						"questionText": "运算符 == 被称为",
 						"answerOptions": [
 							{
 								"answerText": "相等",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "嚴格相等",
+								"answerText": "严格相等",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "賦值",
-								"isCorrect": "false"
-							}
-						]
-					},
-					{
-						"questionText": "在 JavaScript 中，比較式後回傳的資料型態為?",
-						"answerOptions": [
-							{
-								"answerText": "布林",
-								"isCorrect": "true"
-							},
-							{
-								"answerText": "空值",
-								"isCorrect": "false"
-							},
-							{
-								"answerText": "字串",
+								"answerText": "赋值",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "在 JavaScript 中，符號 ! 代表：",
+						"questionText": "JavaScript 中比较表达式会返回什么数据类型？",
 						"answerOptions": [
 							{
-								"answerText": "邏輯非",
+								"answerText": "布尔值（boolean）",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "重要的",
+								"answerText": "空值（null）",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "等於",
+								"answerText": "字符串（string）",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript 中 ! 符号表示：",
+						"answerOptions": [
+							{
+								"answerText": "逻辑非",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "很重要",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "等于",
 								"isCorrect": "false"
 							}
 						]
@@ -589,10 +589,10 @@
 			},
 			{
 				"id": 12,
-				"title": "課程六 - JavaScript 入門 - 做出決定：課後測驗",
+				"title": "课程 6 - JavaScript 基础 - 做出决定：课后小测",
 				"quiz": [
 					{
-						"questionText": "條件式 '1' == 1 會回傳下列何種結果?",
+						"questionText": "表达式 '1' == 1 的返回值是？",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -609,24 +609,24 @@
 						]
 					},
 					{
-						"questionText": "條件式 '1' === 1 會回傳下列何種結果?",
+						"questionText": "表达式 '1' === 1 的返回值是？",
 						"answerOptions": [
 							{
-								"answerText": "是",
+								"answerText": "true",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "否",
+								"answerText": "false",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "空值",
+								"answerText": "null",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "下列何者為正確的邏輯「或」表示方法?",
+						"questionText": "选择一个表达逻辑“或”的运算符",
 						"answerOptions": [
 							{
 								"answerText": "a | b",
@@ -646,13 +646,13 @@
 			},
 			{
 				"id": 13,
-				"title": "課程七 - JavaScript 入門 - 矩陣與迴圈：課前測驗",
+				"title": "课程 7 - JavaScript 基础 - 数组和循环：课前小测",
 				"quiz": [
 					{
-						"questionText": "如果要提出矩陣中特定的元素，必須使用：",
+						"questionText": "要引用数组中的特定元素，你需要使用",
 						"answerOptions": [
 							{
-								"answerText": "中括號 []",
+								"answerText": "方括号 []",
 								"isCorrect": "false"
 							},
 							{
@@ -660,30 +660,30 @@
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "大括號 {}",
+								"answerText": "大括号 {}",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "如何取得矩陣內的元素個數?",
+						"questionText": "如何获取数组内元素个数？",
 						"answerOptions": [
 							{
-								"answerText": "len(array)",
+								"answerText": "使用 'len(array)' 方法",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "矩陣的屬性大小(Property Size)。",
+								"answerText": "数组的 size 属性",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "矩陣的屬性長度(Property Length)。",
+								"answerText": "数组的 length 属性",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "在 JavaScript 中，索引從何數開始計算?",
+						"questionText": "JavaScript 中数组的索引从多少开始？",
 						"answerOptions": [
 							{
 								"answerText": "0",
@@ -703,44 +703,44 @@
 			},
 			{
 				"id": 14,
-				"title": "課程七 - JavaScript 入門 - 矩陣與迴圈：課後測驗",
+				"title": "课程 7 - JavaScript 基础 - 数组和循环：课后小测",
 				"quiz": [
 					{
-						"questionText": "在 for-loop 迴圈中，需要修改何處來增加迭代次數到5次?",
+						"questionText": "修改 for 循环的哪一部分可以使它的迭代次数增加 5 次？",
 						"answerOptions": [
 							{
-								"answerText": "條件式",
+								"answerText": "条件表达式（condition）",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "計數器",
+								"answerText": "计数器（counter）",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "迭代陳述式",
+								"answerText": "迭代表达式（iteration-expression）",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "while 迴圈與 for-loop 迴圈的差異在於：",
+						"questionText": "while 循环和 for 循环的区别是：",
 						"answerOptions": [
 							{
-								"answerText": "for-loop 迴圈需要計數器與迭代陳述式，while 迴圈只需要條件式。",
+								"answerText": "for 循环有迭代表达式和计数器，而 while 循环只有条件表达式",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "while 迴圈需要計數器與迭代陳述式，for-loop 迴圈只需要條件式。",
+								"answerText": "while 循环有迭代表达式和计数器，而 for 循环只有条件表达式",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "它們是一樣的，只是另一種稱呼而已。",
+								"answerText": "它们是相同的，只是互为别称而已",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "迴圈 (let i=1; i < 5; i++)中，會執行多少次迭代??",
+						"questionText": "循环表达式 for (let i=1; i < 5; i++) 会执行多少次迭代？",
 						"answerOptions": [
 							{
 								"answerText": "5",
@@ -756,10 +756,10 @@
 			},
 			{
 				"id": 15,
-				"title": "課程八 - Terrarium 專案 - HTML 簡介：課前測驗",
+				"title": "课程 8 - 玻璃养育箱项目 - HTML 介绍：课前小测",
 				"quiz": [
 					{
-						"questionText": "HTML 的全名為 HyperText Mockup Language。",
+						"questionText": "HTML 全称 'HyperText Mockup Language'",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -772,7 +772,7 @@
 						]
 					},
 					{
-						"questionText": "所有的 HTML 標籤都需要起始標籤與結束標籤。",
+						"questionText": "所有 HTML 标签都需要起始和闭合标签",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -785,18 +785,18 @@
 						]
 					},
 					{
-						"questionText": "使用語意標籤最重要的應用為：",
+						"questionText": "使用语义化标签最重要的作用在于",
 						"answerOptions": [
 							{
-								"answerText": "方便程式碼的閱讀。",
+								"answerText": "代码可读性",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "螢幕閱讀器。",
+								"answerText": "屏幕阅读器",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "管理用途。",
+								"answerText": "可维护性",
 								"isCorrect": "false"
 							}
 						]
@@ -805,10 +805,10 @@
 			},
 			{
 				"id": 16,
-				"title": "課程八 - 盆栽盒專案 - HTML 簡介：課後測驗",
+				"title": "课程 8 - 玻璃养育箱项目 - HTML 介绍：课后小测",
 				"quiz": [
 					{
-						"questionText": "Spans 與 Divs 可以互相替換。",
+						"questionText": "Spans 和 Divs 可以互换",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -821,24 +821,24 @@
 						]
 					},
 					{
-						"questionText": "HTML 文件的標頭可以包含：",
+						"questionText": "HTML 文档的 head 可以包含:",
 						"answerOptions": [
 							{
-								"answerText": "標題標籤(title tag)",
+								"answerText": "标题（title）标签",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "元資訊(metadata)",
+								"answerText": "元数据（metadata）",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是",
+								"answerText": "以上皆可",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "開發人員無法使用不推薦使用的標籤。",
+						"questionText": "你不能使用不被推荐使用的标签",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -849,7 +849,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "否，但它們有被否決的充分理由。",
+								"answerText": "否，但它们不被推荐使用是有原因的",
 								"isCorrect": "true"
 							}
 						]
@@ -858,10 +858,10 @@
 			},
 			{
 				"id": 17,
-				"title": "課程九 - 盆栽盒專案 - CSS 簡介：課前測驗",
+				"title": "课程 9  - 玻璃养育箱项目 - CSS 介绍：课前小测",
 				"quiz": [
 					{
-						"questionText": "HTML 元素必須包含 class 或 id 才能被造型化。",
+						"questionText": "HTML 元素必须有一个 class 或者 id 属性才能被添加样式",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -874,7 +874,7 @@
 						]
 					},
 					{
-						"questionText": "CSS 全名為 Complete Style Sheets。",
+						"questionText": "CSS 全称 'Complete Style Sheets'",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -887,7 +887,7 @@
 						]
 					},
 					{
-						"questionText": "可以利用 CSS 來建立動畫。",
+						"questionText": "CSS 可以被用来创建动画",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -903,10 +903,10 @@
 			},
 			{
 				"id": 18,
-				"title": "課程九 - 盆栽盒專案 - CSS 簡介：課後測驗",
+				"title": "课程 9 - 玻璃养育箱项目 - CSS 介绍：课后小测",
 				"quiz": [
 					{
-						"questionText": "CSS 可以被撰寫在 HTML 檔案的開頭。",
+						"questionText": "你可以在 HTML 文件的 head 部分直接写 CSS",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -919,7 +919,7 @@
 						]
 					},
 					{
-						"questionText": "CSS 在應用程式中是必須的物件。",
+						"questionText": "CSS 在应用程序中是必须的",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -930,13 +930,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "否，但如果想讓畫面變美觀就需要使用CSS。",
+								"answerText": "否，但是为了好看你就得用 CSS",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "可以利用下列何者瀏覽器工具來檢查 CSS?",
+						"questionText": "哪一个浏览器工具可以被用来查看 CSS？",
 						"answerOptions": [
 							{
 								"answerText": "Elements",
@@ -956,10 +956,10 @@
 			},
 			{
 				"id": 19,
-				"title": "課程十 - 盆栽盒專案 - DOM 元素控制與閉包：課前測驗",
+				"title": "课程 10 - 玻璃养育箱项目 - DOM 操作与闭包：课前小测",
 				"quiz": [
 					{
-						"questionText": "DOM 全名為 Document Object Management",
+						"questionText": "DOM 全称 'Document Object Management'",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -972,7 +972,7 @@
 						]
 					},
 					{
-						"questionText": "可以將 DOM 理解為樹的一種。",
+						"questionText": "DOM 可以理解为一棵树",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -985,7 +985,7 @@
 						]
 					},
 					{
-						"questionText": "利用網頁 API，開發人員就能控制 DOM 元素。",
+						"questionText": "你可以利用 Web API 来操作 DOM",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1001,10 +1001,10 @@
 			},
 			{
 				"id": 20,
-				"title": "課程十 - 盆栽盒專案 - DOM 元素控制與閉包：課後測驗",
+				"title": "课程 10 - 玻璃养育箱项目 - DOM 操作与闭包：课后小测",
 				"quiz": [
 					{
-						"questionText": "DOM 元素是表現網頁文件的一種物件。",
+						"questionText": "DOM 是用于表示网页文档的一个模型",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1017,27 +1017,27 @@
 						]
 					},
 					{
-						"questionText": "使用 JavaScript 閉包可以達成：",
+						"questionText": "使用 JavaScript 闭包可以做到：",
 						"answerOptions": [
 							{
-								"answerText": "在函式中撰寫函式。",
+								"answerText": "在函数里写函数",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "將 DOM 元素包住。",
+								"answerText": "包住 DOM",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "關閉腳本區。",
+								"answerText": "关闭脚本代码块",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "使用閉包可以在單一或多個函式中存取外部函式的 _________。",
+						"questionText": "当一个或多个函数需要访问外部函数的 ______ 时，闭包会很有用",
 						"answerOptions": [
 							{
-								"answerText": "矩陣",
+								"answerText": "数组",
 								"isCorrect": "false"
 							},
 							{
@@ -1045,7 +1045,7 @@
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "函式",
+								"answerText": "函数",
 								"isCorrect": "false"
 							}
 						]
@@ -1054,48 +1054,48 @@
 			},
 			{
 				"id": 21,
-				"title": "課程十一 - 打字遊戲：課前測驗",
+				"title": "课程 11 - 打字游戏：课前小测",
 				"quiz": [
 					{
-						"questionText": "事件驅動程式發生在使用者：",
+						"questionText": "事件驱动程序发生在使用者 ______ 时",
 						"answerOptions": [
 							{
-								"answerText": "按下按鈕。",
+								"answerText": "点击按钮",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "改變數值。",
+								"answerText": "改变数值",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "與網頁作互動。",
+								"answerText": "与页面互动",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是。",
+								"answerText": "以上皆是",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "在程序式程式中，函式會以下列方式被呼叫。",
+						"questionText": "在面向过程编程中，函数会以下列哪种方式被调用？",
 						"answerOptions": [
 							{
-								"answerText": "在任何時刻中。",
+								"answerText": "任何时间",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "在特定的順序中。",
+								"answerText": "按特定顺序",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "由左至右。",
+								"answerText": "从左到右",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "在 DOM 中最常用來建立事件處理的方法為：",
+						"questionText": "由 DOM 暴露的用于注册事件句柄的全局方法是",
 						"answerOptions": [
 							{
 								"answerText": "addEventListener",
@@ -1115,10 +1115,10 @@
 			},
 			{
 				"id": 22,
-				"title": "課程十一 - 打字遊戲：課後測驗",
+				"title": "课程 11 - 打字游戏：课后小测",
 				"quiz": [
 					{
-						"questionText": "使用者做的大部分網頁互動都會觸發事件。",
+						"questionText": "用户在页面上的几乎所有行为都会触发事件",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1131,7 +1131,7 @@
 						]
 					},
 					{
-						"questionText": "常見的事件包括：",
+						"questionText": "常见的事件包括",
 						"answerOptions": [
 							{
 								"answerText": "click_event",
@@ -1146,13 +1146,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是。",
+								"answerText": "以上皆是",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "可以使用匿名函式來建立事件處理。",
+						"questionText": "你可以用匿名函数来创建事件回调",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1168,27 +1168,27 @@
 			},
 			{
 				"id": 23,
-				"title": "課程十二 - 瀏覽器擴充功能專案 - 關於瀏覽器：課前測驗",
+				"title": "课程 12 - 浏览器扩展程序项目 - 关于浏览器的一切：课前小测",
 				"quiz": [
 					{
-						"questionText": "使用者可以從下列管道取得瀏覽器擴充功能：",
+						"questionText": "你可以从下列哪一处获取浏览器扩展程序：",
 						"answerOptions": [
 							{
-								"answerText": "沃爾瑪(WalMart)",
+								"answerText": "沃尔玛",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "瀏覽器擴充商店",
+								"answerText": "浏览器扩展程序商店",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "應用程式商店",
+								"answerText": "App store",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "NPM 全名為",
+						"questionText": "NPM 全称",
 						"answerOptions": [
 							{
 								"answerText": "Node Package Manager",
@@ -1205,7 +1205,7 @@
 						]
 					},
 					{
-						"questionText": "瀏覽器可以安全地或非安全地提供網頁服務。",
+						"questionText": "你的浏览器可以安全或非安全地提供网页服务",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1221,10 +1221,10 @@
 			},
 			{
 				"id": 24,
-				"title": "課程十二 - 瀏覽器擴充功能專案 - 關於瀏覽器：課後測驗",
+				"title": "课程 12 - 浏览器扩展程序项目 - 关于浏览器的一切：课后小测",
 				"quiz": [
 					{
-						"questionText": "網際網路的發明者為：",
+						"questionText": "万维网（The World Wide Web）的发明者是",
 						"answerOptions": [
 							{
 								"answerText": "Tom Barnard-Loft",
@@ -1241,7 +1241,7 @@
 						]
 					},
 					{
-						"questionText": "第一款網頁瀏覽器為：",
+						"questionText": "世界上第一款浏览器是",
 						"answerOptions": [
 							{
 								"answerText": "WorldWideWeb",
@@ -1258,7 +1258,7 @@
 						]
 					},
 					{
-						"questionText": "瀏覽器可以儲存使用者上網的歷史紀錄。",
+						"questionText": "浏览器可以记录使用者的浏览记录",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1274,10 +1274,10 @@
 			},
 			{
 				"id": 25,
-				"title": "課程十三 - 瀏覽器擴充功能專案 - 呼叫API、使用Local Storage：課前測驗",
+				"title": "课程 13 - 浏览器扩展程序项目 - 调用 API，使用 Local Storage：课前小测",
 				"quiz": [
 					{
-						"questionText": "APIs 全名為",
+						"questionText": "APIs 全称",
 						"answerOptions": [
 							{
 								"answerText": "Application Programming Interfaces",
@@ -1294,24 +1294,24 @@
 						]
 					},
 					{
-						"questionText": "使用API能與 _________ 做互動。",
+						"questionText": "API 用于和 _____ 交互",
 						"answerOptions": [
 							{
-								"answerText": "網路上的一項資產",
+								"answerText": "另一处网络资源",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "資料庫",
+								"answerText": "数据库",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是",
+								"answerText": "以上皆可",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "任何人都可以建立 API。",
+						"questionText": "任何人都可以创建 API",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1327,10 +1327,10 @@
 			},
 			{
 				"id": 26,
-				"title": "課程十三 - 瀏覽器擴充功能專案 - 呼叫API、使用Local Storage：課後測驗",
+				"title": "课程 13 - 浏览器扩展程序项目 - 调用 API，使用 Local Storage：课后小测",
 				"quiz": [
 					{
-						"questionText": "當使用者關閉瀏覽器視窗時，LocalStorage 會被清除。",
+						"questionText": "LocalStorage 会在关闭浏览器窗口时清空",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1343,7 +1343,7 @@
 						]
 					},
 					{
-						"questionText": "主要瀏覽器視窗會管理擴充功能的LocalStorage使用情形。",
+						"questionText": "浏览器扩展程序的 LocalStorage 由浏览器主窗口负责管理",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1356,7 +1356,7 @@
 						]
 					},
 					{
-						"questionText": "在API context中，REST 全名為",
+						"questionText": "REST 在 API 语境下全称",
 						"answerOptions": [
 							{
 								"answerText": "Representational State Transfer",
@@ -1376,55 +1376,55 @@
 			},
 			{
 				"id": 27,
-				"title": "課程十四 - 瀏覽器擴充功能專案 - 學習背景工作與效能：課前測驗",
+				"title": "课程 14 - 浏览器扩展程序项目 - 了解后台任务和性能：课前小测",
 				"quiz": [
 					{
-						"questionText": "使用者可以利用下列何種方式測試應用程式的效能?",
+						"questionText": "你该用什么方式来测试应用程序的性能？",
 						"answerOptions": [
 							{
-								"answerText": "瀏覽器工具",
+								"answerText": "使用浏览器工具",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "獨立軟體包",
+								"answerText": "使用独立软件包",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "手動測試",
+								"answerText": "手动测试",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "通常網頁的效能代表：",
+						"questionText": "网站的“性能”一般指的是",
 						"answerOptions": [
 							{
-								"answerText": "多快可以載入完成。",
+								"answerText": "加载速度有多快",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "程式執行的速率有多快。",
+								"answerText": "代码运行速度有多快",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是。",
+								"answerText": "以上皆是",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "總體來說，在這幾年間網頁的「負擔」：",
+						"questionText": "总体来说，近年来网页的“重量”",
 						"answerOptions": [
 							{
-								"answerText": "變輕了。",
+								"answerText": "变轻了",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "變重了。",
+								"answerText": "变重了",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "維持原樣。",
+								"answerText": "没怎么变",
 								"isCorrect": "false"
 							}
 						]
@@ -1433,10 +1433,10 @@
 			},
 			{
 				"id": 28,
-				"title": "課程十四 - 瀏覽器擴充功能專案 - 學習背景工作與效能：課後測驗",
+				"title": "课程 14 - 浏览器扩展程序项目 - 了解后台任务和性能：课后小测",
 				"quiz": [
 					{
-						"questionText": "為了取得更好的網頁效能，清除快取並重新載入效能分析器是一種方法。",
+						"questionText": "为了更好地查看你的网站的性能，应当清空网站缓存并且重新加载分析工具",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1449,7 +1449,7 @@
 						]
 					},
 					{
-						"questionText": "瀏覽器擴充功能是固有的功能。",
+						"questionText": "浏览器扩展程序天然性能就不错",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1462,22 +1462,22 @@
 						]
 					},
 					{
-						"questionText": "分析下列地方來尋找效能的瓶頸：",
+						"questionText": "一般会在什么方面寻找性能瓶颈？",
 						"answerOptions": [
 							{
-								"answerText": "DOM 查找元素。",
+								"answerText": "DOM 遍历",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "JavaScript 最佳化。",
+								"answerText": "JavaScript 优化",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "資產管理。",
+								"answerText": "静态资源管理",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是。",
+								"answerText": "以上皆是",
 								"isCorrect": "true"
 							}
 						]
@@ -1486,10 +1486,10 @@
 			},
 			{
 				"id": 29,
-				"title": "課程十五 - 太空遊戲 - 介紹：課前測驗",
+				"title": "课程 15 - 太空游戏 - 介绍：课前小测",
 				"quiz": [
 					{
-						"questionText": "JavaScript 是不常見的遊戲開發程式語言。",
+						"questionText": "JavaScript 不是常见的游戏开发语言",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1502,7 +1502,7 @@
 						]
 					},
 					{
-						"questionText": "發布/訂閱是管理遊戲資產與流程的合理規範。",
+						"questionText": "发布/订阅（Pub/Sub）管理游戏资源和流程的首选模式",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1515,7 +1515,7 @@
 						]
 					},
 					{
-						"questionText": "類別與組合可以處理物件繼承的概念。",
+						"questionText": "类（classes）和组合（composition）都可以用来实现对象继承",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1531,10 +1531,10 @@
 			},
 			{
 				"id": 30,
-				"title": "課程十五 - 太空遊戲 - 介紹：課後測驗",
+				"title": "课程 15 - 太空游戏 - 介绍：课后小测",
 				"quiz": [
 					{
-						"questionText": "依賴物件繼承的類別可以歸咎於其行為。",
+						"questionText": "类通过继承来合并各种行为",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1547,7 +1547,7 @@
 						]
 					},
 					{
-						"questionText": "組合是處理遊戲物件最好的設計模式。",
+						"questionText": "组合是游戏对象的最佳设计模式",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1560,7 +1560,7 @@
 						]
 					},
 					{
-						"questionText": "Pub/Sub 代表的是：",
+						"questionText": "Pub/Sub 全称为:",
 						"answerOptions": [
 							{
 								"answerText": "Publish/Subscribe",
@@ -1580,10 +1580,10 @@
 			},
 			{
 				"id": 31,
-				"title": "課程十六 - 太空遊戲 - 在畫布繪製英雄與怪物：課前測驗",
+				"title": "课程 16 - 太空游戏 - 把英雄和怪兽画到画布上：课前小测",
 				"quiz": [
 					{
-						"questionText": "你可以利用Canvas元素在螢幕上繪製圖案。",
+						"questionText": "你可以利用 Canvas 元素来在屏幕上绘制图案",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1596,7 +1596,7 @@
 						]
 					},
 					{
-						"questionText": "Canvas API只能畫出簡單的幾何圖形。",
+						"questionText": "你只能用 Canvas API 绘制简单的几何图形",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1609,7 +1609,7 @@
 						]
 					},
 					{
-						"questionText": "座標點(0,0)代表Canvas左下方。",
+						"questionText": "坐标点 (0,0) 在画布左下角",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1625,10 +1625,10 @@
 			},
 			{
 				"id": 32,
-				"title": "課程十六 - 太空遊戲 - 在畫布繪製英雄與怪物：課後測驗",
+				"title": "课程 16 - 太空游戏 - 把英雄和怪兽画到画布上：课后小测",
 				"quiz": [
 					{
-						"questionText": "繪圖處理能直接應用在Canvas上。",
+						"questionText": "你可以直接在 Canvas 上执行绘制操作",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1641,7 +1641,7 @@
 						]
 					},
 					{
-						"questionText": "藉由監測讀取事件來得知非同步的圖片是否被載入完成。",
+						"questionText": "你可以通过监听 onload 事件来获知一个图片是否已经异步加载完成",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1654,7 +1654,7 @@
 						]
 					},
 					{
-						"questionText": "繪製圖片到螢幕的指令為：",
+						"questionText": "你可以通过下列哪个方法来将图片绘制在屏幕上？",
 						"answerOptions": [
 							{
 								"answerText": "paintImage()",
@@ -1674,10 +1674,10 @@
 			},
 			{
 				"id": 33,
-				"title": "課程十七 - 太空遊戲 - 加入動作：課前測驗",
+				"title": "课程 17 - 太空游戏 - 添加动作：课前小测",
 				"quiz": [
 					{
-						"questionText": "任何物件可以接收鍵盤事件。",
+						"questionText": "屏幕上的任何对象都可以接收键盘事件",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1690,7 +1690,7 @@
 						]
 					},
 					{
-						"questionText": "鍵盤事件與滑鼠事件是相同的監聽方法。",
+						"questionText": "你可以用相同的方式来监听鼠标事件和键盘事件",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1703,7 +1703,7 @@
 						]
 					},
 					{
-						"questionText": "若想讓事情定期的觸發，需要用到什麼函式?",
+						"questionText": "如果想要定期触发什么事情，你可以使用",
 						"answerOptions": [
 							{
 								"answerText": "setInterval()",
@@ -1723,10 +1723,10 @@
 			},
 			{
 				"id": 34,
-				"title": "課程十七 - 太空遊戲 - 加入動作：課後測驗",
+				"title": "课程 17 - 太空游戏 - 添加动作：课后小测",
 				"quiz": [
 					{
-						"questionText": "更新螢幕一定要全部重新繪製。",
+						"questionText": "你总是需要完全重绘整个屏幕",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1739,35 +1739,35 @@
 						]
 					},
 					{
-						"questionText": "什麼是遊戲迴圈?",
+						"questionText": "游戏循环（game loop）是什么？",
 						"answerOptions": [
 							{
-								"answerText": "函式確保遊戲能重新開始。",
+								"answerText": "一个确保游戏可以重新开始的函数",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "函式決定遊戲的運作時速。",
+								"answerText": "一个决定游戏运行速度的函数",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "函式確保定期事件發生並將畫面呈獻給玩家。",
+								"answerText": "一个定期触发来绘制使用者所见内容的函数",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "重新繪製螢幕的時機點為：",
+						"questionText": "下列哪一个是触发屏幕重绘的恰当时机？",
 						"answerOptions": [
 							{
-								"answerText": "玩家產生互動。",
+								"answerText": "使用者产生了交互",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "有東西移動。",
+								"answerText": "有东西移动了",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "時間的推移。",
+								"answerText": "时间推移",
 								"isCorrect": "false"
 							}
 						]
@@ -1776,10 +1776,10 @@
 			},
 			{
 				"id": 35,
-				"title": "課程十八 - 太空遊戲 - 加入雷射與碰撞偵測：課前測驗",
+				"title": "课程 18 - 太空游戏 - 添加激光和碰撞检测：课前小测",
 				"quiz": [
 					{
-						"questionText": "碰撞偵測是偵測兩物體是否發生碰撞。",
+						"questionText": "碰撞检测（Collision detection）指的是我们如何检测两个物件是否碰撞",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1792,35 +1792,35 @@
 						]
 					},
 					{
-						"questionText": "如何將成員從螢幕中移除?",
+						"questionText": "如何从屏幕中移除一个物体?",
 						"answerOptions": [
 							{
-								"answerText": "呼叫垃圾清潔員。",
+								"answerText": "调用垃圾清理程序",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "標記為陣亡，在下一個繪製週期只畫存活的成員。",
+								"answerText": "将其标记为死亡，下一次只绘制未死亡的物体",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "將成員移動到其他象限。",
+								"answerText": "将物体放到负坐标位置",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "在 JavaScript 中模擬雷射最合適的方式為：",
+						"questionText": "在 JavaScript 中模拟发射激光的一个好办法是：",
 						"answerOptions": [
 							{
-								"answerText": "根據鍵盤事件建立可視物件。",
+								"answerText": "响应键盘事件来创建一个可见元素",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "建立動態圖像。",
+								"answerText": "创建动态 gifs 图像",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "讓敵人定期地爆炸。",
+								"answerText": "使敌人定期爆炸",
 								"isCorrect": "false"
 							}
 						]
@@ -1829,51 +1829,51 @@
 			},
 			{
 				"id": 36,
-				"title": "課程十八 - 太空遊戲 - 加入雷射與碰撞偵測：課後測驗",
+				"title": "课程 18 - 太空游戏 - 添加激光和碰撞检测：课后小测",
 				"quiz": [
 					{
-						"questionText": "在碰撞偵測中，需要判斷兩者：",
+						"questionText": "在碰撞检测中你会对比",
 						"answerOptions": [
 							{
-								"answerText": "圓圈內是否有所相交。",
+								"answerText": "圆是否相交",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "矩形內是否有所相交。",
+								"answerText": "矩形是否相交",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "兩點之間的距離。",
+								"answerText": "两点间距",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "建立冷卻時間的目的為：",
+						"questionText": "实现冷却时间的目的是",
 						"answerOptions": [
 							{
-								"answerText": "讓遊戲變得更難，讓玩家無法重複擊發雷射摧毀敵人。",
+								"answerText": "让你没法反复地开火消灭敌人，以此提高游戏难度",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "JavaScript 在單位時間內只能處理一定額度的事件，需要有所限制。",
+								"answerText": "JavaScript 在一定时间内只能处理有限的事件，需要进行限制",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "常數在程式碼中是醒目的原因為：",
+						"questionText": "常量在代码中非常明显地原因是",
 						"answerOptions": [
 							{
-								"answerText": "它們以全大寫書寫。",
+								"answerText": "它们全是大写字母",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "它們有特定的名稱。",
+								"answerText": "它们有特定的名称",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "它們用特定字元，連接。",
+								"answerText": "它们会以 kebab-case 命名",
 								"isCorrect": "false"
 							}
 						]
@@ -1882,40 +1882,40 @@
 			},
 			{
 				"id": 37,
-				"title": "課程十九 - 太空遊戲 - 分數與生命數：課前測驗",
+				"title": "课程 19 - 太空游戏 - 分数与生命数：课前小测",
 				"quiz": [
 					{
-						"questionText": "如何利用Canvas元素在畫面上寫字?",
+						"questionText": "如何利用 Canvas 元素在屏幕上绘制文字？",
 						"answerOptions": [
 							{
-								"answerText": "將文字包在div或span元素中。",
+								"answerText": "将文字放在 div 或 span 元素中",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "呼叫 drawText()在Canvas元素上。",
+								"answerText": "在 Canvas 元素上调用 drawText() 方法",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Call fillText() on the context object",
+								"answerText": "在 Canvas 上下文对象调用 fillText() 方法",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "為什麼遊戲需要有「性命數」的概念?",
+						"questionText": "为什么游戏中需要有“生命数”这一概念？",
 						"answerOptions": [
 							{
-								"answerText": "為了表現玩家還能承受多少攻擊。",
+								"answerText": "来表现玩家能抗住多少攻击",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "為了讓遊戲不會直接結束，允許玩家有容錯空間。",
+								"answerText": "这样游戏就不会直接草草结束，你会有数次机会来尝试通关它",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "改變 Canvas 元素上字的顏色可以利用：",
+						"questionText": "可以通过 _____ 来改变 Canvas 上文字的颜色",
 						"answerOptions": [
 							{
 								"answerText": "fillColor",
@@ -1935,40 +1935,40 @@
 			},
 			{
 				"id": 38,
-				"title": "課程十九 - 太空遊戲 - 分數與性命數：課後測驗",
+				"title": "课程 19 - 太空游戏 - 分数与生命数：课后小测",
 				"quiz": [
 					{
-						"questionText": "如何有趣地表現出玩家剩餘的性命數?",
+						"questionText": "怎么样有趣地展示玩家剩余生命数？",
 						"answerOptions": [
 							{
-								"answerText": "剩餘艦艇的數字。",
+								"answerText": "剩余舰船的数目",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "得點系統。",
+								"answerText": "一个点数系统",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "如何讓畫面裡 Canvas 元素上的文字置中?",
+						"questionText": "如何让 Canvas 元素中的文字在屏幕水平居中？",
 						"answerOptions": [
 							{
-								"answerText": "利用 Flexbox。",
+								"answerText": "用 Flexbox",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "讓文字的 x 座標點為玩家視窗寬度的一半。",
+								"answerText": "将文字的 x 坐标设置为窗口宽度的一半",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "設定文字內容的 textAlign 屬性為 center。",
+								"answerText": "将上下文对象的 textAlign 属性值设置为 center",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "在程式碼中，用下列何者表示扣除一條性命?",
+						"questionText": "在代码中，用这条代码来扣除一条生命：",
 						"answerOptions": [
 							{
 								"answerText": "this.life-",
@@ -1988,51 +1988,51 @@
 			},
 			{
 				"id": 39,
-				"title": "課程二十 - 太空遊戲 - 結束與重來：課前測驗",
+				"title": "课程 20 - 太空游戏 - 结束与重新开始：课前小测",
 				"quiz": [
 					{
-						"questionText": "何時為重新遊戲的最好時機?",
+						"questionText": "何时是重新开始游戏的合适时机？",
 						"answerOptions": [
 							{
-								"answerText": "當玩家勝利或落敗時。",
+								"answerText": "当玩家胜利或失败时",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "任一時刻。",
+								"answerText": "任何时间",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "什麼時候該讓遊戲結束?",
+						"questionText": "游戏何时应该结束？",
 						"answerOptions": [
 							{
-								"answerText": "當單一敵人艦艇遭到擊毀。",
+								"answerText": "当一艘敌方舰艇被击毁时",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "當玩家艦艇遭到擊毀。",
+								"answerText": "当一艘英雄舰艇被击毁时",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "當分數進帳。",
+								"answerText": "当点数足够时",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "最適合加入新關卡到遊戲的方式為：",
+						"questionText": "给游戏添加新关卡的合理方式是：",
 						"answerOptions": [
 							{
-								"answerText": "增加通關要求的分數門檻。",
+								"answerText": "对给定关卡，提高过关所需的点数要求",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "增加更多的玩家。",
+								"answerText": "增加更多玩家",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "增加更好的圖像。",
+								"answerText": "增加更多图像",
 								"isCorrect": "false"
 							}
 						]
@@ -2041,27 +2041,27 @@
 			},
 			{
 				"id": 40,
-				"title": "課程二十 - 太空遊戲 - 結束與重來：課後測驗",
+				"title": "课程 20 - 太空游戏 - 结束与重新开始：课后小测",
 				"quiz": [
 					{
-						"questionText": "當遊戲結束時，下列何者為合適的事件?",
+						"questionText": "当触发游戏结束条件时，该以什么方式来展现？",
 						"answerOptions": [
 							{
-								"answerText": "顯示適當的訊息。",
+								"answerText": "展示一条合适的信息",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "結束遊戲。",
+								"answerText": "退出游戏",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "顯示適當的訊息，詢問玩家是否重來，顯示對應的選項按鈕。",
+								"answerText": "展示一条合适的信息，询问玩家是否重来，并展示对应操作的按键",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "只有當遊戲結束時才能重新遊戲。",
+						"questionText": "只有游戏结束时才应该提供重新开始功能",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2074,18 +2074,18 @@
 						]
 					},
 					{
-						"questionText": "當遊戲結束時，清除 EventEmitter 的合適方式是：",
+						"questionText": "当游戏结束时，清除 EventEmitter 的合适方式是：",
 						"answerOptions": [
 							{
-								"answerText": "清除事件監聽者。",
+								"answerText": "清除事件监听",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "清除畫面。",
+								"answerText": "清空屏幕",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "關閉遊戲視窗。",
+								"answerText": "关闭游戏窗口",
 								"isCorrect": "false"
 							}
 						]
@@ -2094,10 +2094,10 @@
 			},
 			{
 				"id": 41,
-				"title": "課程二十一 - 銀行專案 - HTML模板與網路連線App：課前測驗",
+				"title": "课程 21 - 银行项目 - HTML 模板和 Web 应用的路由：课前小测",
 				"quiz": [
 					{
-						"questionText": "一個網路程式必須要有多個HTML檔才能呈現不同頁面。",
+						"questionText": "Web 应用中需要用多个 HTML 文件才能创建多个页面",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2110,7 +2110,7 @@
 						]
 					},
 					{
-						"questionText": "網路程式允許用戶在本地儲存資料",
+						"questionText": "Web 应用中可以在本地存储和保持数据",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2123,18 +2123,18 @@
 						]
 					},
 					{
-						"questionText": "什麼是網路程式資料供應者最合適的方式?",
+						"questionText": "Web 应用中数据来源的最佳选择是：",
 						"answerOptions": [
 							{
-								"answerText": "一個本地資料庫。",
+								"answerText": "一个本地数据库",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "一個 JavaScript 物件。",
+								"answerText": "一个 JavaScript 对象",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "一個含有 JSON API 的伺服器。",
+								"answerText": "一个有 JSON API 的服务器",
 								"isCorrect": "true"
 							}
 						]
@@ -2143,10 +2143,10 @@
 			},
 			{
 				"id": 42,
-				"title": "課程二十一 - 銀行專案 - HTML模板與網路連線App：課後測驗",
+				"title": "课程 21 - 银行项目 - HTML 模板和 Web 应用的路由：课后小测",
 				"quiz": [
 					{
-						"questionText": "HTML 模板在預設中是 DOM 元素的一部份。",
+						"questionText": "HTML 模板默认是 DOM 的一部分",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2159,7 +2159,7 @@
 						]
 					},
 					{
-						"questionText": "哪個 URL 部分需要被使用在路由上?",
+						"questionText": "URL 中的哪一部分被用于路由？",
 						"answerOptions": [
 							{
 								"answerText": "window.location.pathname",
@@ -2170,13 +2170,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是。",
+								"answerText": "两者皆是",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "當呼叫 history.pushState() 函式時，下列何者事件會被觸發?",
+						"questionText": "当 history.pushState() 函数被调用时，触发的事件名为",
 						"answerOptions": [
 							{
 								"answerText": "pushstate",
@@ -2196,10 +2196,10 @@
 			},
 			{
 				"id": 43,
-				"title": "課程二十二 - 銀行專案 - 登入與註冊表單：課前測驗",
+				"title": "课程 22 - 银行项目 - 建立登录和注册表单：课前小测",
 				"quiz": [
 					{
-						"questionText": "HTML 表單允許用戶不須利用 JavaScript 輸入資料到伺服器。",
+						"questionText": "HTML 表单允许你不利用 JavaScript 即可将用户输入传给服务器",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2212,7 +2212,7 @@
 						]
 					},
 					{
-						"questionText": "<label> 元素在表單控制上是強制必要的。",
+						"questionText": "<label> 元素在每个表单控制上都是强制需要的",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2225,7 +2225,7 @@
 						]
 					},
 					{
-						"questionText": "以 HTTP 傳送資料到伺服器是安全的。",
+						"questionText": "通过 HTTP 协议向服务器传输表单数据是安全的",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2241,10 +2241,10 @@
 			},
 			{
 				"id": 44,
-				"title": "課程二十二 - 銀行專案 - 登入與註冊表單：課後測驗",
+				"title": "课程 22 - 银行项目 - 建立登录和注册表单：课后小测",
 				"quiz": [
 					{
-						"questionText": "利用 <label> 表單元素只為了表單的美觀。",
+						"questionText": "在表单中使用 <label> 元素只是为了让表单更好看",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2257,24 +2257,24 @@
 						]
 					},
 					{
-						"questionText": "傳送給伺服器時，URL 會在表單的哪一個部分?",
+						"questionText": "将数据传给服务器时，URL 会在表单的哪一部分？",
 						"answerOptions": [
 							{
-								"answerText": "Action 屬性。",
+								"answerText": "Action 属性",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Method 屬性。",
+								"answerText": "Method 属性",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是。",
+								"answerText": "以上皆是",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "下列何者屬性能決定文字輸入 <input> 的上限值?",
+						"questionText": "用哪个属性可以设置 <input> 标签输入文字的字数上限？",
 						"answerOptions": [
 							{
 								"answerText": "max",
@@ -2294,13 +2294,13 @@
 			},
 			{
 				"id": 45,
-				"title": "課程二十三 - 銀行專案 - 拿取與使用資料：課前測驗",
+				"title": "课程 23 - 银行项目 - 拉取和使用数据的方法：课前小测",
 				"quiz": [
 					{
-						"questionText": "用戶通常會同步地利用瀏覽器向伺服器抓取資料。",
+						"questionText": "在浏览器中，常通过同步（synchronously）的方式拉取服务器的数据",
 						"answerOptions": [
 							{
-								"answerText": "是，但非同步才是最好的!",
+								"answerText": "是，但是异步才是最好的！",
 								"isCorrect": "true"
 							},
 							{
@@ -2310,7 +2310,7 @@
 						]
 					},
 					{
-						"questionText": "下列何者為最常見的網路交換資料格式?",
+						"questionText": "在 Web 中最常见的数据交换格式是",
 						"answerOptions": [
 							{
 								"answerText": "HTML",
@@ -2327,7 +2327,7 @@
 						]
 					},
 					{
-						"questionText": "沒有方法能阻止網頁存取供用伺服器的 API。",
+						"questionText": "没有办法阻止一个网页访问公开服务器的 API",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2343,10 +2343,10 @@
 			},
 			{
 				"id": 46,
-				"title": "課程二十三 - 銀行專案 - 拿取與使用資料：課後測驗",
+				"title": "课程 23 - 银行项目 - 拉取和使用数据的方法：课后小测",
 				"quiz": [
 					{
-						"questionText": "在單頁網頁應用中，HTML載入完後就不再更新。",
+						"questionText": "在单页应用中，HTML 文件只会被加载一次且不再更新",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2359,24 +2359,24 @@
 						]
 					},
 					{
-						"questionText": "為什麼阻止用戶輸入不信任的資料很重要?",
+						"questionText": "为什么不信任来自用户输入的数据很重要？",
 						"answerOptions": [
 							{
-								"answerText": "因為使用奇特字元讓 UI 變得很醜。",
+								"answerText": "因为使用特定字符会让 UI 变丑。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "因為它可能會包含無意義或攻擊性言論。",
+								"answerText": "因为可能包含无意义或攻击性的言论。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "因為它可以成為執行惡意程式的一種途徑。",
+								"answerText": "因为其可被利用为执行恶意脚本进行攻击的途径。",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "下列何者 API 可以向伺服器發出非同步 HTTP 請求?",
+						"questionText": "发送异步 HTTP 请求到 Web 服务器的 API 名称是？",
 						"answerOptions": [
 							{
 								"answerText": "request()",
@@ -2396,55 +2396,55 @@
 			},
 			{
 				"id": 47,
-				"title": "課程二十四 - 銀行專案 - 狀態控管的概念：課前測驗",
+				"title": "课程 24 - 银行项目 - 状态管理介绍：课前小测",
 				"quiz": [
 					{
-						"questionText": "什麼是不可變物件?",
+						"questionText": "什么是不可变对象（immutable object）？",
 						"answerOptions": [
 							{
-								"answerText": "物件被定義為常數。",
+								"answerText": "定义为常量的一个对象",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "物件在建立後就不可以被修改。",
+								"answerText": "在创建后就不能再修改的对象",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "存在物件的複本。",
+								"answerText": "对已经存在的对象的拷贝",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "狀態控管有什麼好處?",
+						"questionText": "使用状态管理的益处有？",
 						"answerOptions": [
 							{
-								"answerText": "可以追蹤到每一個狀態發生改變的位置。",
+								"answerText": "可以追踪到每一个状态发生改变的位置",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "可以更容易地偵錯程式碼。",
+								"answerText": "更容易调试代码",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是。",
+								"answerText": "以上皆是",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "下列何者為最合適的方式來儲存不同 session 中重要的用戶資料?",
+						"questionText": "在不同会话期（session）保留重要用户数据的最佳方式是？",
 						"answerOptions": [
 							{
-								"answerText": "利用檔案。",
+								"answerText": "使用文件",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "利用瀏覽器 LocalStorage API。",
+								"answerText": "使用浏览器的 localStorage API",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "利用伺服器 API 後的資料庫。",
+								"answerText": "使用服务器 API 后的数据库",
 								"isCorrect": "true"
 							}
 						]
@@ -2453,27 +2453,27 @@
 			},
 			{
 				"id": 48,
-				"title": "課程二十四 - 銀行專案 - 狀態控管的概念：課後測驗",
+				"title": "课程 24 - 银行项目 - 状态管理介绍：课后小测",
 				"quiz": [
 					{
-						"questionText": "狀態管控的意義是?",
+						"questionText": "你认为状态管理的意义是？",
 						"answerOptions": [
 							{
-								"answerText": "公權力的強制性。",
+								"answerText": "规则与秩序的强制性",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "隨時間變化記錄用戶界面的狀態。",
+								"answerText": "随时间变化记录用户界面的状态",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "讓用戶端的資料流清晰可控，保持資料和用戶界面的同步性。",
+								"answerText": "保证应用的数据流清晰可控，保持数据和用户界面的同步性",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "如何追蹤用戶 session 的狀態?",
+						"questionText": "你该如何保持用户会话期状态的追踪？",
 						"answerOptions": [
 							{
 								"answerText": "HTTP cookies",
@@ -2484,13 +2484,13 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以上皆是。",
+								"answerText": "两者皆可",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "改變物件一向是最佳的更新資訊方式。",
+						"questionText": "直接改变一个对象总是更新它的最佳方式",
 						"answerOptions": [
 							{
 								"answerText": "是",

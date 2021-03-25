@@ -13,6 +13,7 @@
         <option>ko</option>
         <option>ms</option>
         <option>nl</option>
+        <option>zh_cn</option>
         <option>zh_tw</option>
 
       </select>
