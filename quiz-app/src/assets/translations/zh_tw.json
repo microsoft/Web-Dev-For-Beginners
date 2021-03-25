@@ -595,21 +595,21 @@
 						"questionText": "條件式 '1' == 1 會回傳下列何種結果?",
 						"answerOptions": [
 							{
-								"answerText": "是",
+								"answerText": "true",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "否",
+								"answerText": "false",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "空值",
+								"answerText": "null",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "條件式 '1' == 1 會回傳下列何種結果?",
+						"questionText": "條件式 '1' === 1 會回傳下列何種結果?",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -1849,7 +1849,7 @@
 						]
 					},
 					{
-						"questionText": "建立無敵時間的目的為：",
+						"questionText": "建立冷卻時間的目的為：",
 						"answerOptions": [
 							{
 								"answerText": "讓遊戲變得更難，讓玩家無法重複擊發雷射摧毀敵人。",
@@ -1962,7 +1962,7 @@
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "設定文字內容的 textAlign 屬性為中間。",
+								"answerText": "設定文字內容的 textAlign 屬性為 center。",
 								"isCorrect": "false"
 							}
 						]
@@ -2074,14 +2074,14 @@
 						]
 					},
 					{
-						"questionText": "當遊戲結束時，何種時機清除 EventEmitter 較為合適?",
+						"questionText": "當遊戲結束時，清除 EventEmitter 的合適方式是：",
 						"answerOptions": [
 							{
-								"answerText": "清除完事件監聽者。",
+								"answerText": "清除事件監聽者。",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "清除完畫面。",
+								"answerText": "清除畫面。",
 								"isCorrect": "false"
 							},
 							{
@@ -2225,7 +2225,7 @@
 						]
 					},
 					{
-						"questionText": "以 HTTP 傳送資料到伺服器是不安全的。",
+						"questionText": "以 HTTP 傳送資料到伺服器是安全的。",
 						"answerOptions": [
 							{
 								"answerText": "是",
@@ -2419,7 +2419,7 @@
 						"questionText": "狀態控管有什麼好處?",
 						"answerOptions": [
 							{
-								"answerText": "可以追蹤更新後的狀態。",
+								"answerText": "可以追蹤到每一個狀態發生改變的位置。",
 								"isCorrect": "false"
 							},
 							{
@@ -2456,18 +2456,18 @@
 				"title": "課程二十四 - 銀行專案 - 狀態控管的概念：課後測驗",
 				"quiz": [
 					{
-						"questionText": "什麼是狀態控管?",
+						"questionText": "狀態管控的意義是?",
 						"answerOptions": [
 							{
 								"answerText": "公權力的強制性。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "以時間來控制用戶的登入狀態。",
+								"answerText": "隨時間變化記錄用戶界面的狀態。",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "讓用戶端應用程式的資料流完整且同步。",
+								"answerText": "讓用戶端的資料流清晰可控，保持資料和用戶界面的同步性。",
 								"isCorrect": "true"
 							}
 						]
