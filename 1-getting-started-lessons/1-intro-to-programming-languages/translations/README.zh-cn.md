@@ -92,7 +92,7 @@ back add r0,r1
 
 在这一部分，你将会了解到一些能在你的专业开发之旅中颇有帮助的软件。
 
-**开发环境（development environment）**指的是一位开发者自己在编写软件时常会用到的工具和功能的集合。其中一些工具会按照开发者的特定需求被自定义配置，这些工具集也会随着时间发生变化，原因可能是开发者在工作或个人项目中改变了需求的优先级，抑或是切换到了另一种编程语言。开发环境往往因人而异。
+**开发环境（development environment）** 指的是一位开发者自己在编写软件时常会用到的工具和功能的集合。其中一些工具会按照开发者的特定需求被自定义配置，这些工具集也会随着时间发生变化，原因可能是开发者在工作或个人项目中改变了需求的优先级，抑或是切换到了另一种编程语言。开发环境往往因人而异。
 
 ### 编辑器
 
@@ -141,7 +141,7 @@ back add r0,r1
 #### Windows
 
 - [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-13441-cxa) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (also known as CMD) 💻
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (即 CMD) 💻
 - [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-13441-cxa)
 - [mintty](https://mintty.github.io/)
   
@@ -159,7 +159,7 @@ back add r0,r1
 
 #### 常用命令行工具
 
-- [Git](https://git-scm.com/) (💻 on most operating sytems)
+- [Git](https://git-scm.com/) (💻 <- 在多数操作系统上)
 - [NPM](https://www.npmjs.com/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/cli/)
 
