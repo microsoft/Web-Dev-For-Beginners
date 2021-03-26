@@ -17,7 +17,7 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ [how to add text to a canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)에 대하여 더 읽어보세요, 그리고 더 멋지게 보이도록 자유롭게 느껴보세요!
+✅ [how to add text to a canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text)에 대하여 더 읽어보세요, 그리고 더 멋지게 보이도록 자유롭게 느껴보세요!
 
 ## 게임 컨셉에서 생명
 

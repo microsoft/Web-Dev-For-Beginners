@@ -27,7 +27,7 @@ Todo lo que describimos anteriormente son comportamientos que pueden tener los o
 
 La idea es usar `classes` junto con `inheritance` para lograr agregar un cierto comportamiento a una clase.
 
-✅ La herencia es un concepto importante de comprender. Obtenga más información en el [artículo de MDN sobre herencia](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+✅ La herencia es un concepto importante de comprender. Obtenga más información en el [artículo de MDN sobre herencia](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 Expresado a través de código, un objeto de juego normalmente puede verse así:
 
@@ -211,6 +211,6 @@ A medida que las cosas se complican cuando tu juego crece, este patrón permanec
 
 ## Revisión y autoestudio
 
-Obtenga más información sobre Pub / Sub al [leer sobre él](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa).
+Obtenga más información sobre Pub / Sub al [leer sobre él](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa).
 
 **Tarea**: [Mock up a game](assignment.es.md)

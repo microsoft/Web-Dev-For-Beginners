@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "Webontwikkeling voor Beginners: Quizzen",
+		"complete": "Gefeliciteerd, u hebt de quiz voltooid!",
+		"error": "Sorry probeer het opnieuw",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "Les 1 - Inleiding tot Programmeertalen: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Een programma kan worden gemaakt zonder dat de maker zelf code hoeft te schrijven",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Talen op laag niveau zijn een populaire keuze voor",
+						"answerOptions": [
+							{
+								"answerText": "Websites",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hardware",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Software voor videogames",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Welke van deze tools zou zich waarschijnlijk in de omgeving van een webontwikkelaar bevinden?",
+						"answerOptions": [
+							{
+								"answerText": "Hardware, zoals een Raspberry Pi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Browser DevTools",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Besturingssysteem documentatie",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Les 1 - Inleiding tot Programmeertalen: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Welke taal zou u waarschijnlijk gebruiken om een website te maken?",
+						"answerOptions": [
+							{
+								"answerText": "Machine Code",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ontwikkelomgevingen zijn uniek voor elke ontwikkelaar",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Wat zal een ontwikkelaar doen om foutcodes te herstellen?",
+						"answerOptions": [
+							{
+								"answerText": "Syntaxis accentuering",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Debuggen",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Code-opmaak",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "Les 2 - Inleiding tot GitHub: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Hoe maakt u een Git-repo aan?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Wat doet git add?",
+						"answerOptions": [
+							{
+								"answerText": "Commit uw code",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Voegt uw bestanden toe aan een verzamelgebied voor tracking",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Voegt uw bestanden toe aan GitHub",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Hoe controleert u of git op uw computer is geïnstalleerd?",
+						"answerOptions": [
+							{
+								"answerText": "typ git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "typ git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "typ git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "Les 2 - Inleiding tot GitHub: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Een plek om de verschillen die op een tak zijn geïntroduceerd te vergelijken en te bespreken met recensies, opmerkingen, geïntegreerde tests en meer is:",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Een Pull Request",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Een feature tak",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Hoe zou u alle commits van een afgelegen (remote) tak krijgen?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Hoe stapt u over naar een tak?",
+						"answerOptions": [
+							{
+								"answerText": "git switch [taknaam]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [taknaam]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [taknaam]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "Les 3 - Toegankelijke Webpagina's Maken: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Een toegankelijke website kan ook in welke browser worden gecontroleerdl",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "U hebt een fysieke schermlezer nodig om de toegankelijkheid voor slechtzienden te testen",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Toegankelijkheid is alleen belangrijk op websites van de overheid",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "Les 3 - Toegankelijke Webpagina's Maken: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Lighthouse controleert alleen op toegankelijkheidsproblemen",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Kleurveilige paletten helpen mensen met",
+						"answerOptions": [
+							{
+								"answerText": "kleurenblindheid",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Gezichtsverlies",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "beide bovenstaande",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Beschrijvende links zijn essentieel voor toegankelijke websites",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "Les 4 - JavaScript Basics - Gegevenstypen: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Booleans zijn een gegevenstype dat u kunt gebruiken om de lengte van een string te testen",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Het volgende is een bewerking die u op een string kunt uitvoeren",
+						"answerOptions": [
+							{
+								"answerText": "aaneenschakeling",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "toevoeging",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "splitsing",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== en === zijn uitwisselbaar",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "Les 4 - JavaScript Basics - Gegevenstypen: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Constanten zijn hetzelfde als let en var om variabelen te declareren, behalve",
+						"answerOptions": [
+							{
+								"answerText": "Constanten moeten worden geïnitialiseerd",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Constanten kunnen worden gewijzigd",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Constanten kunnen opnieuw worden toegewezen",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Getallen en ____ zijn JavaScript-primitieven die numerieke gegevens verwerken",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Strings kunnen tussen enkele en dubbele aanhalingstekens staan",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "Les 5 - JavaScript Basics - Methoden en Functies: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Wat is een argument?",
+						"answerOptions": [
+							{
+								"answerText": "Het is iets dat u aangeeft in de functiedefinitie",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Het is iets waar u tijdens het aanroepen in een functie overgaat",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Het is iets dat u heeft met mensen die u kent",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Een functie moet iets teruggeven",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "U kunt een functie van alles een naam geven",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "waar, maar het moet een beschrijvende naam zijn",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "Les 5 - JavaScript Basics - Methoden en Functies: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Er moeten argumenten worden opgegeven voor alle parameters in een functie",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Wat doet een standaardwaarde?",
+						"answerOptions": [
+							{
+								"answerText": "Stelt een juiste waarde in",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Geeft een startwaarde voor een parameter zodat uw code zich nog steeds gedraagt als u er een argument voor weglaat",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Heeft geen nut",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Een fat arrow-functie stelt u in staat om",
+						"answerOptions": [
+							{
+								"answerText": "Zware functies te creëren",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Het functietrefwoord weg te laten",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Een anonieme functie creëren",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "Les 6 - Basisprincipes van JavaScript - Beslissingen Nemen: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "De volgende operator == heet",
+						"answerOptions": [
+							{
+								"answerText": "Gelijkheid",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Strikte gelijkheid",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Toewijzing",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Een vergelijking in JavaScript geeft welk type terug?",
+						"answerOptions": [
+							{
+								"answerText": "boolean",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "string",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "De ! symbool in JavaScript betekent:",
+						"answerOptions": [
+							{
+								"answerText": "Logisch niet",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Belangrijk",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Is gelijk aan",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "Les 6 - Basisprincipes van JavaScript - Beslissingen Nemen: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Wat zou de volgende code retourneren:'1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Wat zou de volgende code retourneren: '1' === 1",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Kies de juiste operator om 'or' logica uit te drukken",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "Les 7 - JavaScript Basics - Arrays en Loops: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Om naar een specifiek item in een array te verwijzen, gebruikt u een",
+						"answerOptions": [
+							{
+								"answerText": "vierkant haakje []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "index",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "accolades {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Hoe krijgt u het aantal items in een array?",
+						"answerOptions": [
+							{
+								"answerText": "De 'len(array)' methode",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "De eigenschapsgrootte op de array",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "De eigenschap length op de array",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "In JavaScript beginnen indexen bij",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "Les 7 - JavaScript Basics - Arrays en Loops: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Welk deel van een for-loop zou u moeten aanpassen om de iteratie met 5 te verhogen?",
+						"answerOptions": [
+							{
+								"answerText": "voorwaarde",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "teller",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "iteratie-uitdrukking",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Wat is het verschil tussen een while en een for-loop",
+						"answerOptions": [
+							{
+								"answerText": "Een for-loop heeft een teller en iteratie-uitdrukking, terwijl while alleen een voorwaarde heeft",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Een while heeft een teller en iteratie-uitdrukking waar for-loop alleen een voorwaarde heeft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ze zijn hetzelfde, alleen een alias voor elkaar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Gezien de code voor (let i=1; i < 5; i++), hoeveel iteraties zal het uitvoeren?",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "Les 8 - Terrariumproject - Inleiding tot HTML: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "HTML staat voor 'HyperText Mockup Language'",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Alle HTML-tags hebben zowel openings- als sluitingstags nodig",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Het gebruik van semantische opmaak is het belangrijkst voor",
+						"answerOptions": [
+							{
+								"answerText": "leesbaarheid van de code",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "schermlezers",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "onderhoud",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "Les 8 - Terrariumproject - Inleiding tot HTML: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Spans en Divs zijn uitwisselbaar",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "De kop van een HTML-document kan het volgende bevatten:",
+						"answerOptions": [
+							{
+								"answerText": "de title-tag",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "metadata",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "alle bovenstaande",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "U kunt geen verouderde tags gebruiken in uw opmaak",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar, maar ze zijn om een goede reden verouderd",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "Les 9 - Terrariumproject - Inleiding tot CSS: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "HTML-elementen moeten een class of een id hebben om te worden opgemaakt",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS staat voor 'Complete Style Sheets'",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS kan worden gebruikt om animaties te maken",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "Les 9 - Terrariumproject - Inleiding tot CSS: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "U kunt CSS rechtstreeks in het hoofdgedeelte van uw HTML-bestand schrijven",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Het is altijd nodig om CSS in uw app op te nemen",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar, maar als u wilt dat het er goed uitziet, heeft u waarschijnlijk CSS nodig",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Welke browsertool kan worden gebruikt om CSS te inspecteren?",
+						"answerOptions": [
+							{
+								"answerText": "Elements",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Styles",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Network",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "Les 10 - Terrariumproject - DOM-Manipulatie en een afsluiting: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "De DOM staat voor 'Document Object Management'",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "De DOM kan worden gezien als een boom",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Met behulp van de web-API kunt u de DOM manipuleren",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "Les 10 - Terrariumproject - DOM-Manipulatie en een Afsluiting: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "De DOM is een model om een document op internet weer te geven",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Gebruik JavaScript-sluitingen om het volgende te doen:",
+						"answerOptions": [
+							{
+								"answerText": "schrijf functies binnen functies",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "omsluit de DOM",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sluit scriptblokken",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Vul de blanco in: Sluitingen zijn handig wanneer een of meer functies toegang moeten hebben tot de ... van een externe functie",
+						"answerOptions": [
+							{
+								"answerText": "arrays",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "reikwijdte",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "functies",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "Les 11 - Typespel: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Gebeurtenisgestuurde programmering is wanneer een gebruiker",
+						"answerOptions": [
+							{
+								"answerText": "op een knop klikt",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "klikt op een knop",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "interageert met de pagina",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "elk van de bovenstaande",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bij procedureel programmeren worden functies ... aangeroepen",
+						"answerOptions": [
+							{
+								"answerText": "elk moment",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "in een specifieke volgorde",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "van links naar rechts",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "De universele methode die in de DOM wordt weergegeven voor het registreren van gebeurtenishandlers, heet",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "Les 11 - Typespel: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Bijna alles wat een gebruiker op een pagina doet, roept een gebeurtenis op",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Veel voorkomende gebeurtenissen zijn onder meer",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "all of these",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "U kunt anonieme functies gebruiken om gebeurtenishandlers te maken",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "Les 12 - Browser-Extensieproject - Alles over Browsers: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "U kunt browserextensies krijgen van",
+						"answerOptions": [
+							{
+								"answerText": "WalMart",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "De extensie store van de browser",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "De App Store",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM staat voor",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Uw browser kan webpagina's zowel veilig als onveilig weergeven",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "Les 12 - Browser-Extensieproject - Alles over Browsers: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Het World Wide Web is uitgevonden door",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "De eerste browser heette",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Browsers kunnen de browsegeschiedenis van een gebruiker opslaan",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "Les 13 - Browser Extensie-project - Roep een API aan, gebruik Local Storage: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "APIs staan voor",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Gebruik een API om te communiceren met",
+						"answerOptions": [
+							{
+								"answerText": "Een andere web-verbonden asset",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Een database",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Een van de bovenstaande",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Iedereen kan een API maken",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "Les 13 - Browser Extensie-project - Roep een API aan, gebruik Local Storage: Quiz na de Lezingz",
+				"quiz": [
+					{
+						"questionText": "LocalStorage wordt elke keer dat u het browservenster sluit gewist",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Het hoofdbrowservenster regelt de LocalStorage van een browserextensie",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "REST in een API-context staat voor",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "Les 14 - Browser Extensie-project - Leer over Achtergrondtaken en Prestaties: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Test de prestaties van uw app",
+						"answerOptions": [
+							{
+								"answerText": "Met behulp van de hulpprogramma's van de browser",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Met behulp van een apart softwarepakket",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Handmatig",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "De 'prestatie' van een website is een analyse van",
+						"answerOptions": [
+							{
+								"answerText": "Hoe snel het laadt",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hoe snel de code erop werkt",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Beide bovenstaande",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Over het algemeen is het 'gewicht' van webpagina's de afgelopen jaren",
+						"answerOptions": [
+							{
+								"answerText": "lichter geworden",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "zwaarder geworden",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "het zelfde gebleven",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "Les 14 - Browser-Extensieproject - Leer over Achtergrondtaken en Prestaties: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Om een beter beeld te krijgen van de prestaties van uw site, moet u het cachegeheugen wissen en opnieuw laden in de profiler",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Browserextensies zijn inherent performant",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Analyseer het volgende voor knelpunten in de prestatiess",
+						"answerOptions": [
+							{
+								"answerText": "DOM-doorlopen",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript-optimalisaties",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Vermogensbeheer",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Alle bovenstaande",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "Les 15 - Ruimtespel - Inleiding: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "JavaScript is een onpopulaire taal voor het bouwen van games",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub is een voorkeurspatroon voor het beheren van de activa en stroom van de game",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Overerving van objecten kan worden afgehandeld door class of compositie te gebruiken",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "Les 15 - Ruimtespel - Inleiding: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Class zijn afhankelijk van overerving om gedrag toe te schrijven",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Compositie is het geprefereerde ontwerppatroon voor game-objecten",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub staat voor:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "Les 16 - Ruimtespel - Teken Held en Monsters op Canvas: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Het Canvas-element is wat u gebruikt om op een scherm te tekenen",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "U kunt alleen eenvoudige geometrische vormen tekenen met de Canvas API",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Het punt 0,0 staat linksonder",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "Les 16 - Ruimtespel - Teken Held en Monsters op Canvas: Quiz na de Lezingz",
+				"quiz": [
+					{
+						"questionText": "U kunt tekenbewerkingen rechtstreeks op het canvas uitvoeren",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "U luistert naar de onload-gebeurtenis om te weten wanneer een afbeelding asynchroon is geladen",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "U tekent afbeeldingen op een scherm met een bewerking genaamd:",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "Les 17 - Ruimtespel - Beweging Toevoegen: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Elk object op het scherm kan toetsenbordgebeurtenissen ontvangen",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "U kunt dezelfde methode gebruiken om naar toetsgebeurtenissen en muisgebeurtenissen te luisteren",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Welke functie gebruikt u om dingen met regelmatige tussenpozen te laten gebeuren?",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "Les 17 - Ruimtespel - Beweging Toevoegen: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "U moet het scherm altijd opnieuw tekenen",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Wat is een game-loop?",
+						"answerOptions": [
+							{
+								"answerText": "Een functie die ervoor zorgt dat het spel herstart kan worden",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Een functie die bepaalt hoe snel het spel moet draaien",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Een functie die met regelmatige tussenpozen wordt aangeroepen en tekent wat de gebruiker zou moeten zien",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Een goede reden om het scherm opnieuw te tekenen is",
+						"answerOptions": [
+							{
+								"answerText": "Er heeft een gebruikersinteractie plaatsgevonden",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Er is iets verplaatst",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Er is tijd voorbij gegaan",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "Les 18 - Ruimtespel - Een laser Toevoegen en Botsingen Detecteren: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Aanrijdingsdetectie is hoe we detecteren of twee dingen zijn gebotst",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Hoe kunnen we een item van het scherm verwijderen?",
+						"answerOptions": [
+							{
+								"answerText": "Bel de vuilnisman",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Markeer het als dood, schilder alleen geen dode objecten de volgende keer dat we het scherm tekenen",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Plaats het item op een negatieve coördinaat",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Een goede manier om het afvuren van een laser in JavaScript te simuleren is:",
+						"answerOptions": [
+							{
+								"answerText": "een visueel element laten reageren op een toetsgebeurtenis",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "geanimeerde gifs maken",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "vijanden met tussenpozen laten opblazen",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "Les 18 - Ruimtespel - Een Laser Toevoegen en Botsingen Detecteren: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Bij botsingsdetectie vergelijkt u twee",
+						"answerOptions": [
+							{
+								"answerText": "cirkels en of ze elkaar snijden",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "rechthoeken en of ze elkaar snijden",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "afstanden tussen twee punten",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "De reden voor het implementeren van een afkoeleffect is omdat",
+						"answerOptions": [
+							{
+								"answerText": "Het spel moeilijker wordt omdat u niet herhaaldelijk een laser kunt afvuren om vijanden te vernietigen",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript slechts een bepaald aantal gebeurtenissen per tijdseenheid kan produceren, dus u moet ze beperken",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Constanten zijn identificeerbaar in code omdat",
+						"answerOptions": [
+							{
+								"answerText": "ze in hoofdletters zijn geschreven",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ze specifieke namen hebben",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ze zo in een kebab-doosje zijn geschreven",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "Les 19 - Ruimtespel - Scoren en Levens: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Hoe tekent u tekst op een scherm met het Canvas-element?",
+						"answerOptions": [
+							{
+								"answerText": "Plaats tekst in een div- of span-element",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Roep drawText() aan op het Canvas-element",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Roep fillText() aan voor het contextobject",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Waarom heeft u het concept van 'levens' in een game?",
+						"answerOptions": [
+							{
+								"answerText": "Om te laten zien hoeveel schade u kunt oplopen",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Zodat het spel niet meteen eindigt, maar u n aantal kansen hebt voordat het spel afgelopen is",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Voeg kleur toe aan tekst op Canvas met",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "Les 19 - Ruimtespel - Scoren en Levens: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Wat is een leuke manier om te laten zien hoeveel levens een speler nog heeft?",
+						"answerOptions": [
+							{
+								"answerText": "een aantal schepen",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "een puntensysteem",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Hoe centreert u tekst in het midden van het scherm met behulp van het Canvas-element?",
+						"answerOptions": [
+							{
+								"answerText": "U gebruikt Flexbox",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "U instrueert de tekst die moet worden getekend op de x-coördinaat van de breedte van het cliëntvenster/2",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "U stelt de eigenschap textAlign in op het waardecentrum van het contextobject",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Trek in code een leven af met dit:",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "Les 20 - Ruimtespel - Einde en Herstart: Quiz voorafgaand aan de Lezingz",
+				"quiz": [
+					{
+						"questionText": "Wanneer is een goed moment om een game opnieuw te starten?",
+						"answerOptions": [
+							{
+								"answerText": "wanneer een speler wint of verliest",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "wanneer dan ook",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Wanneer moet een spel eindigen?",
+						"answerOptions": [
+							{
+								"answerText": "wanneer een vijandelijk schip wordt vernietigd",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "wanneer een heldenschip wordt vernietigd",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "wanneer punten worden verzameld",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Een goede manier om een level aan uw game toe te voegen is:",
+						"answerOptions": [
+							{
+								"answerText": "Het aantal punten dat nodig is om een bepaald niveau te voltooien verhogen",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Meer spelers aan het spel toe te voegen",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Meer afbeeldingen aan het spel toe te voegen",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "Les 20 - Ruimtespel - Einde en Herstart: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Wat is een goed patroon om te gebruiken als aan een speleindvoorwaarde is voldaan?",
+						"answerOptions": [
+							{
+								"answerText": "Een passend bericht weergeven",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Het spel verlaten",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Een passend bericht weergeven, bied de speler aan om opnieuw op te starten en laat zien welke toets hij voor die actie moet raken",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "U moet alleen een herstart aanbieden als het spel is afgelopen",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Een goede manier om de EventEmitter te wissen bij het beëindigen van een game is:",
+						"answerOptions": [
+							{
+								"answerText": "luisteraars opruimen",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "het scherm leegmaken",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "het spelvenster sluiten",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "Les 21 - Bankproject - HTML-Sjablonen en Routes in een Webapp: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "U moet meerdere HTML-bestanden maken om verschillende schermen in een webapp weer te geven",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "U kunt gegevens lokaal opslaan en bewaren in een webapp",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Wat is de beste gegevensprovider voor een webapp?",
+						"answerOptions": [
+							{
+								"answerText": "Een lokale database",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Een JavaScript-object",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Een server met een JSON API",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "Les 21 - Bankproject - HTML-Sjablonen en Routes in een Webapp: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "HTML-sjablonen maken standaard deel uit van de DOM",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Welk deel van de URL is nodig voor routering?",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "beide",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Wat is de naam van de gebeurtenis die is geactiveerd bij het aanroepen van de functie history.pushState()?",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "Les 22 - Bankproject - Bouw een Aanmeldings- en Registratieformulier: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Met HTML-formulieren kunt u gebruikersinvoer naar een server sturen zonder JavaScript te gebruiken",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "<label>-elementen zijn verplicht voor elk formulierelement",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Het is veilig om formuliergegevens via HTTP naar een server te verzenden",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "Les 22 - Bankproject - Bouw een Aanmeldings- en Registratieformulier: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Het gebruik van <label>-elementen in formulieren is alleen bedoeld om het formulier mooi te maken",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "In welk deel van een formulier wordt een URL naar een server gestuurd?",
+						"answerOptions": [
+							{
+								"answerText": "het action attribuut",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "het method attribuut",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "beide",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Welk attribuut kunt u gebruiken om de maximale grootte van een tekst <input> in te stellen?",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "Les 23 - Bankproject - Methoden voor het Ophalen en Gebruiken van Gegevens: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Meestal haalt u gegevens synchroon op van een server in een browser",
+						"answerOptions": [
+							{
+								"answerText": "waar, maar async is het beste!",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Wat is het meest gebruikte formaat om gegevens op internet uit te wisselen?",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Er is geen manier om te voorkomen dat een webpagina toegang krijgt tot een openbare server-API",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "Les 23 - Bankproject - Methoden voor het Ophalen en Gebruiken van Gegevens: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "In een app met één pagina wordt de HTML één keer geladen en nooit bijgewerkt",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Waarom is het belangrijk om gegevens die afkomstig zijn van gebruikersinvoer niet te vertrouwen?",
+						"answerOptions": [
+							{
+								"answerText": "omdat het gebruik van speciale tekens de gebruikersinterface lelijk kan maken.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "omdat het onlogische of aanstootgevende woorden kan bevatten.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "omdat het kan worden gebruikt als aanvalsvector om kwaadaardige scripts uit te voeren.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Wat is de API-naam voor het verzenden van asynchrone HTTP-verzoeken naar een webserver?",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "Les 24 - Bankproject - Concepten van Staatsbeheer: Quiz voorafgaand aan de Lezing",
+				"quiz": [
+					{
+						"questionText": "Wat is een onveranderlijk object?",
+						"answerOptions": [
+							{
+								"answerText": "Een object gedefinieerd als een constante",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Een object dat niet kan worden gewijzigd nadat het is gemaakt",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Een kopie van een bestaand object",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Welk voordeel(en) haalt u uit het gebruik van staatsbeheer?",
+						"answerOptions": [
+							{
+								"answerText": "U kunt elke plaats bijhouden waar de staat wordt bijgewerkt",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Het is gemakkelijker om de code te debuggen",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Alle bovenstaande",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Wat is de beste manier om kritieke gebruikersgegevens in verschillende sessies te bewaren?",
+						"answerOptions": [
+							{
+								"answerText": "Met behulp van bestanden",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Met behulp van de localStorage API van de browser",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "In een database achter een server-API",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "Les 24 - Bankproject - Concepten van Staatsbeheer: Quiz na de Lezing",
+				"quiz": [
+					{
+						"questionText": "Wat denkt u dat staatsbeheer betekent?",
+						"answerOptions": [
+							{
+								"answerText": "Handhaving van de openbare orde",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "De status van de gebruikersinterface in de loop van de tijd registreren",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "De gegevensstromen van uw app schoon houden en de gebruikersinterface synchroniseren met gegevens",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Hoe kunt u de status van de gebruikerssessie bijhouden?",
+						"answerOptions": [
+							{
+								"answerText": "HTTP-cookies",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Lokale of sessieopslag",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Alle bovenstaande",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Het muteren van een object is altijd de beste manier om het bij te werken",
+						"answerOptions": [
+							{
+								"answerText": "waar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "niet waar",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

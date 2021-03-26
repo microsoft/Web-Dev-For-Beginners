@@ -9,9 +9,9 @@
 
 ### 소개
 
-DOM 또는 "Document Object Model"을 조작하는 것은 웹 개발의 핵심입니다. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)에 따르면, "The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web." 이라고 합니다. 웹의 DOM 조작과 관련하여 간혹 DOM을 관리하기 위해 순수 JavaScript 대신 JavaScript 프레임워크를 도전하게 되는 원동력이지만, 우리는 스스로 관리할 것입니다!
+DOM 또는 "Document Object Model"을 조작하는 것은 웹 개발의 핵심입니다. [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction)에 따르면, "The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web." 이라고 합니다. 웹의 DOM 조작과 관련하여 간혹 DOM을 관리하기 위해 순수 JavaScript 대신 JavaScript 프레임워크를 도전하게 되는 원동력이지만, 우리는 스스로 관리할 것입니다!
 
-추가로, 이 강의에서는 [JavaScript closure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)에 대한 아이디어를 소개합니다. 내부 함수가 외부 함수의 범위에 접근할 수 있도록 합니다.
+추가로, 이 강의에서는 [JavaScript closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures)에 대한 아이디어를 소개합니다. 내부 함수가 외부 함수의 범위에 접근할 수 있도록 합니다.
 
 DOM을 조작하기 위해 클로저를 사용할 예정입니다.
 
@@ -106,9 +106,9 @@ function dragElement(terrariumElement) {
 
 `dragElement`는 스크립트 상단의 선언에서 `terrariumElement` 객체를 가져옵니다. 그러고, 함수에 전달된 객체의 일부 로컬 위치를 `0`으로 설정합니다. 클로저 안에서 드래그 앤 드롭 기능을 각 요소에 추가할 때 각 요소에 대해 조작될 지역 변수입니다. terrarium에 드래그된 요소로 채워지므로, 애플리케이션은 배치된 위치를 추적해야 합니다.
 
-추가로, 이 함수에 전달되는 terrariumElement에는 DOM 관리에 도움이 되도록 설계된 [web APIs](https://developer.mozilla.org/en-US/docs/Web/API)의 일부인 `pointerdown` 이벤트가 할당됩니다. `onpointerdown`은 버튼이 눌리거나 드래그 하는 요소가 터치될 때 발생합니다. 이 이벤트 핸들러는 몇 가지 예외를 제외하고, [웹과 모바일 브라우저](https://caniuse.com/?search=onpointerdown) 다 작동합니다.
+추가로, 이 함수에 전달되는 terrariumElement에는 DOM 관리에 도움이 되도록 설계된 [web APIs](https://developer.mozilla.org/docs/Web/API)의 일부인 `pointerdown` 이벤트가 할당됩니다. `onpointerdown`은 버튼이 눌리거나 드래그 하는 요소가 터치될 때 발생합니다. 이 이벤트 핸들러는 몇 가지 예외를 제외하고, [웹과 모바일 브라우저](https://caniuse.com/?search=onpointerdown) 다 작동합니다.
 
-✅ [event handler `onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick)은 크로스 브라우저 지원이 훨씬 더 많습니다. 왜 여기서 사용하지 않나요? 여기에서 만들고자 하는 정확한 화면 상호작용 타입에 대해 생각해보세요.
+✅ [event handler `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick)은 크로스 브라우저 지원이 훨씬 더 많습니다. 왜 여기서 사용하지 않나요? 여기에서 만들고자 하는 정확한 화면 상호작용 타입에 대해 생각해보세요.
 
 ---
 
@@ -203,9 +203,9 @@ function stopElementDrag() {
 
 ## 리뷰 & 자기주도 학습
 
-화면에서 요소를 드래그하는 것은 사소한 것처럼 보이지만, 원하는 효과에 따라 여러 가지 방식과 함정이 있습니다. 실제로, 시도할 수 있는 전체 [drag and drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)가 있습니다. 우리가 원하는 효과가 다소 다르기 때문에 이 모듈에서는 사용하지 않았지만, 그러나 이 API를 자신의 프로젝트에서 시도해보고 얻을 수 있는 게 무엇인지 확인하시기 바랍니다.
+화면에서 요소를 드래그하는 것은 사소한 것처럼 보이지만, 원하는 효과에 따라 여러 가지 방식과 함정이 있습니다. 실제로, 시도할 수 있는 전체 [drag and drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API)가 있습니다. 우리가 원하는 효과가 다소 다르기 때문에 이 모듈에서는 사용하지 않았지만, 그러나 이 API를 자신의 프로젝트에서 시도해보고 얻을 수 있는 게 무엇인지 확인하시기 바랍니다.
 
-포인터 이벤트에 대한 자세한 내용은 [W3C docs](https://www.w3.org/TR/pointerevents1/)와 [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events)에서 확인하세요.
+포인터 이벤트에 대한 자세한 내용은 [W3C docs](https://www.w3.org/TR/pointerevents1/)와 [MDN web docs](https://developer.mozilla.org/docs/Web/API/Pointer_events)에서 확인하세요.
 
 항상 [CanIUse.com](https://caniuse.com/)으로 브라우저 기능을 확인하십시오.
 

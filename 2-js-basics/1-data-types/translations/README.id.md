@@ -178,7 +178,7 @@ Boolean hanya dapat berupa dua nilai: `true` atau `false`. Boolean dapat membant
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ Variabel dapat dianggap 'benar (truthy)' jika dievaluasi ke boolean `true`. Menariknya, di JavaScript, [semua nilai adalah benar (truthy) kecuali jika didefinisikan sebagai salah](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+✅ Variabel dapat dianggap 'benar (truthy)' jika dievaluasi ke boolean `true`. Menariknya, di JavaScript, [semua nilai adalah benar (truthy) kecuali jika didefinisikan sebagai salah](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 ---
 

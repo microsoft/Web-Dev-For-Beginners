@@ -8,7 +8,7 @@
 
 canvas는 내용이 없는 게 기본인 HTML 요소입니다; 빈 상태입니다. 그리는 작업으로 추가해야 합니다.
 
-✅ MDN애서 [Canvas API에 대하여 더](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) 읽어보세요.
+✅ MDN애서 [Canvas API에 대하여 더](https://developer.mozilla.org/docs/Web/API/Canvas_API) 읽어보세요.
 
 보통 페이지 본문의 일부로 선언되는 방법은 다음과 같습니다:
 
@@ -27,7 +27,7 @@ canvas는 내용이 없는 게 기본인 HTML 요소입니다; 빈 상태입니�
 캔버스는 데카르트 좌표계로 사물을 그립니다. 따라서 x-축과 y-축을 이용하여 무언가의 위치를 나타냅니다. 위치 `0,0`은 죄측 상단이며 우측 하단은 캔버스의 너비와 높이라고 말한 위치입니다.
 
 ![the canvas's grid](../canvas_grid.png)
-> Image from [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+> Image from [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 캔버스 요소에 그리려면 다음 단계를 거쳐야 합니다:
 
@@ -52,7 +52,7 @@ ctx.fillStyle = 'red';
 ctx.fillRect(0,0, 200, 200) // x,y,width, height
 ```
 
-✅ Canvas API는 2D 모양에 가장 초점이 맞추어져 있습니다, 그러나 웹사이트에서 3D 요소를 그려야 된다면, [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)를 사용해야 할 수도 있습니다.
+✅ Canvas API는 2D 모양에 가장 초점이 맞추어져 있습니다, 그러나 웹사이트에서 3D 요소를 그려야 된다면, [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API)를 사용해야 할 수도 있습니다.
 
 Canvas API를 사용하면 다음과 같은 모든 종류를 그릴 수 있습니다:
 
@@ -201,7 +201,7 @@ npm start
 
 ## 🚀 도전
 
-2D-중심의 Canvas API로 그리는 방식에 대해 배웠습니다; [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)를 살펴보고, 3D 개체를 그려보세요.
+2D-중심의 Canvas API로 그리는 방식에 대해 배웠습니다; [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API)를 살펴보고, 3D 개체를 그려보세요.
 
 ## 강의 후 퀴즈
 
@@ -209,7 +209,7 @@ npm start
 
 ## 리뷰 & 자기주도 학습
 
-[reading about it](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)을 통해 Canvas API에 대해 자세히 알아보세요.
+[reading about it](https://developer.mozilla.org/docs/Web/API/Canvas_API)을 통해 Canvas API에 대해 자세히 알아보세요.
 
 ## 과제
 

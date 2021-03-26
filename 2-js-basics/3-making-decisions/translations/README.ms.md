@@ -166,7 +166,7 @@ Buat program yang ditulis terlebih dahulu dengan operator logik, dan kemudian tu
 
 ## Mengkaji & Belajar Sendiri
 
-Baca lebih lanjut mengenai banyak pengendali yang ada pada pengguna[pada laman MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
+Baca lebih lanjut mengenai banyak pengendali yang ada pada pengguna[pada laman MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
 Lalui laman Josh Comeau tentang [pengendali](https://joshwcomeau.com/operator-lookup/)!
 

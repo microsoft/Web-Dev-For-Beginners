@@ -83,9 +83,9 @@ Ahora que hemos implementado el objeto `state` para almacenar nuestros datos, el
 
 Para evitar que se realicen cambios en el objeto `state`, también es una buena práctica considerarlo [*inmutable*](https://en.wikipedia.org/wiki/Immutable_object), lo que significa que no se puede modificar en absoluto. También significa que debe crear un nuevo objeto de estado si desea cambiar algo en él. Al hacer esto, crea una protección contra [efectos secundarios](https://en.wikipedia.org/wiki/Side_effect_(computer_science)) potencialmente no deseados y abre posibilidades para nuevas funciones en su aplicación, como implementar deshacer / rehacer, al mismo tiempo que facilita la depuración. Por ejemplo, puede registrar todos los cambios realizados en el estado y mantener un historial de los cambios para comprender el origen de un error.
 
-En JavaScript, puede usar [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) para crear una versión inmutable de un objeto. Si intenta realizar cambios en un objeto inmutable, se generará una excepción.
+En JavaScript, puede usar [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) para crear una versión inmutable de un objeto. Si intenta realizar cambios en un objeto inmutable, se generará una excepción.
 
-✅ ¿Conoce la diferencia entre un objeto *superficial* y un objeto inmutable *profundo*? Puede leer sobre esto [aquí](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
+✅ ¿Conoce la diferencia entre un objeto *superficial* y un objeto inmutable *profundo*? Puede leer sobre esto [aquí](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
 
 ### Tarea
 
@@ -100,7 +100,7 @@ function updateState(property, newData) {
 }
 ```
 
-En esta función, estamos creando un nuevo objeto de estado y copiamos datos del estado anterior usando el operador [*spread (`...`)*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Luego anulamos una propiedad particular del objeto de estado con los nuevos datos usando la [notación de corchetes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` para asignación. Finalmente, bloqueamos el objeto para evitar modificaciones usando `Object.freeze()`. Solo tenemos la propiedad `account` almacenada en el estado por ahora, pero con este enfoque puede agregar tantas propiedades como necesite en el estado.
+En esta función, estamos creando un nuevo objeto de estado y copiamos datos del estado anterior usando el operador [*spread (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Luego anulamos una propiedad particular del objeto de estado con los nuevos datos usando la [notación de corchetes](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` para asignación. Finalmente, bloqueamos el objeto para evitar modificaciones usando `Object.freeze()`. Solo tenemos la propiedad `account` almacenada en el estado por ahora, pero con este enfoque puede agregar tantas propiedades como necesite en el estado.
 
 También actualizaremos la inicialización del `estado` para asegurarnos de que el estado inicial también esté congelado:
 
@@ -148,16 +148,16 @@ Cuando desee conservar los datos en su navegador, hay algunas preguntas importan
 - *¿Son los datos confidenciales?* Debe evitar almacenar datos confidenciales en el cliente, como contraseñas de usuario.
 - *¿Por cuánto tiempo necesita conservar estos datos?* ¿Planea acceder a estos datos solo para la sesión actual o desea que se almacenen para siempre?
 
-Hay varias formas de almacenar información dentro de una aplicación web, dependiendo de lo que desee lograr. Por ejemplo, puede utilizar las URL para almacenar una consulta de búsqueda y hacer que se pueda compartir entre los usuarios. También puede utilizar [cookies HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) si los datos deben compartirse con el servidor, como [autenticación](https://en.wikipedia.org/wiki/Authentication) información.
+Hay varias formas de almacenar información dentro de una aplicación web, dependiendo de lo que desee lograr. Por ejemplo, puede utilizar las URL para almacenar una consulta de búsqueda y hacer que se pueda compartir entre los usuarios. También puede utilizar [cookies HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies) si los datos deben compartirse con el servidor, como [autenticación](https://en.wikipedia.org/wiki/Authentication) información.
 
 Otra opción es utilizar una de las muchas API del navegador para almacenar datos. Dos de ellos son particularmente interesantes:
 
-- [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage): un [almacén de claves / valores](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) que permite conservar datos específicos del sitio web actual en diferentes sesiones. Los datos guardados en él nunca caducan.
-- [`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage): este funciona igual que `localStorage` excepto que los datos almacenados en él son se borra cuando finaliza la sesión (cuando se cierra el navegador).
+- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): un [almacén de claves / valores](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) que permite conservar datos específicos del sitio web actual en diferentes sesiones. Los datos guardados en él nunca caducan.
+- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): este funciona igual que `localStorage` excepto que los datos almacenados en él son se borra cuando finaliza la sesión (cuando se cierra el navegador).
 
-Tenga en cuenta que estas dos API solo permiten almacenar [cadenas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). Si desea almacenar objetos complejos, deberá serializarlos al formato [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) usando [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+Tenga en cuenta que estas dos API solo permiten almacenar [cadenas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String). Si desea almacenar objetos complejos, deberá serializarlos al formato [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) usando [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
 
-✅ Si desea crear una aplicación web que no funcione con un servidor, también es posible crear una base de datos en el cliente usando la [API de IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). Este está reservado para casos de uso avanzados o si necesita almacenar una cantidad significativa de datos, ya que es más complejo de usar.
+✅ Si desea crear una aplicación web que no funcione con un servidor, también es posible crear una base de datos en el cliente usando la [API de IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Este está reservado para casos de uso avanzados o si necesita almacenar una cantidad significativa de datos, ya que es más complejo de usar.
 
 ### Tarea
 

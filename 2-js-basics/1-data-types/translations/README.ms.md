@@ -176,7 +176,7 @@ Booleans boleh hanya dua nilai: `benar` atau `salah`. Booleans dapat membantu me
 - `let myTrueBool = betul`
 - `let myFalseBool = salah`
 
-✅ Pemboleh ubah boleh dianggap 'benar' jika dinilai menjadi `benar` boolean. Menariknya, dalam JavaScript, [semua nilai adalah benar kecuali ditakrifkan sebagai palsu](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+✅ Pemboleh ubah boleh dianggap 'benar' jika dinilai menjadi `benar` boolean. Menariknya, dalam JavaScript, [semua nilai adalah benar kecuali ditakrifkan sebagai palsu](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 --- 
 

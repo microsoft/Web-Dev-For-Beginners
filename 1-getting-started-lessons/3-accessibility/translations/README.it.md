@@ -24,15 +24,15 @@ Nella sua forma più elementare, uno screen reader leggerà una pagina dall'alto
 
 Ogni sviluppatore web dovrebbe acquisire familiarità con uno screen reader. Come evidenziato sopra, è il client che gli utenti dello sviluppatore  utilizzeranno. Allo stesso modo in cui si ha familiarità con il funzionamento di un browser, si dovrebbe imparare come funziona uno screen reader. Fortunatamente, gli screen reader sono integrati nella maggior parte dei sistemi operativi.
 
-Alcuni browser hanno anche strumenti incorporati ed estensioni che possono leggere il testo ad alta voce o persino fornire alcune funzionalità di navigazione di base, come [questi strumenti orientati all'accessibilità del browser Edge](https://support.microsoft.com/en-us/help/4000734/microsoft-edge-accessibility-features) . Anche questi sono importanti strumenti di accessibilità, ma funzionano in modo molto diverso dagli screen reader e non dovrebbero essere scambiati per strumenti di test per uno screen reader.
+Alcuni browser hanno anche strumenti incorporati ed estensioni che possono leggere il testo ad alta voce o persino fornire alcune funzionalità di navigazione di base, come [questi strumenti orientati all'accessibilità del browser Edge](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features) . Anche questi sono importanti strumenti di accessibilità, ma funzionano in modo molto diverso dagli screen reader e non dovrebbero essere scambiati per strumenti di test per uno screen reader.
 
-✅ Provare un lettore di schermo e un lettore di testo del browser. In Windows, l'[Assistente vocale](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Narrator) è incluso per impostazione predefinita e anche [JAWS](https://webaim.org/articles/jaws/) e [NVDA](https://www.nvaccess.org/about-nvda/) possono essere installati Su macOS e iOS, [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) è installato per impostazione predefinita.
+✅ Provare un lettore di schermo e un lettore di testo del browser. In Windows, l'[Assistente vocale](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Narrator) è incluso per impostazione predefinita e anche [JAWS](https://webaim.org/articles/jaws/) e [NVDA](https://www.nvaccess.org/about-nvda/) possono essere installati Su macOS e iOS, [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) è installato per impostazione predefinita.
 
 ### Zoom
 
-Un altro strumento comunemente utilizzato dalle persone con problemi di vista è lo zoom. Il tipo più semplice di zoom è lo zoom statico, controllato tramite `Control + segno più (+)` o diminuendo la risoluzione dello schermo. Questo tipo di zoom provoca il ridimensionamento dell'intera pagina, quindi l'utilizzo [di una progettazione responsive](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) della pagina è importante per fornire una buona esperienza utente a livelli di zoom aumentati.
+Un altro strumento comunemente utilizzato dalle persone con problemi di vista è lo zoom. Il tipo più semplice di zoom è lo zoom statico, controllato tramite `Control + segno più (+)` o diminuendo la risoluzione dello schermo. Questo tipo di zoom provoca il ridimensionamento dell'intera pagina, quindi l'utilizzo [di una progettazione responsive](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) della pagina è importante per fornire una buona esperienza utente a livelli di zoom aumentati.
 
-Un altro tipo di zoom si basa su un software specializzato per ingrandire un'area dello schermo e fare una panoramica, proprio come usare una vera lente di ingrandimento. Su Windows, [Magnifier](https://support.microsoft.com/en-us/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) è integrato e   [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) è un software di ingrandimento di terze parti con più funzionalità e una base di utenti più ampia. Sia macOS che iOS hanno un software di ingrandimento integrato chiamato [Zoom](https://www.apple.com/accessibility/mac/vision/).
+Un altro tipo di zoom si basa su un software specializzato per ingrandire un'area dello schermo e fare una panoramica, proprio come usare una vera lente di ingrandimento. Su Windows, [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) è integrato e   [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) è un software di ingrandimento di terze parti con più funzionalità e una base di utenti più ampia. Sia macOS che iOS hanno un software di ingrandimento integrato chiamato [Zoom](https://www.apple.com/accessibility/mac/vision/).
 
 ### Verificatori di contrasto
 
@@ -133,7 +133,7 @@ E' possibile utilizzare `aria-label` per descrivere il collegamento quando il fo
 <a href="#" aria-label="Widget description">description</a>
 ```
 
-✅ In generale, l'uso del markup semantico come descritto sopra sostituisce l'uso di ARIA, ma a volte non esiste un equivalente semantico per diversi widget HTML. Un buon esempio è una struttura ad albero. Non esiste un equivalente HTML per una struttura ad albero, quindi si identifica il generico  `<div>` per questo elemento con un ruolo e valori aria appropriati. La [documentazione MDN su ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) contiene ulteriori utili informazioni.
+✅ In generale, l'uso del markup semantico come descritto sopra sostituisce l'uso di ARIA, ma a volte non esiste un equivalente semantico per diversi widget HTML. Un buon esempio è una struttura ad albero. Non esiste un equivalente HTML per una struttura ad albero, quindi si identifica il generico  `<div>` per questo elemento con un ruolo e valori aria appropriati. La [documentazione MDN su ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) contiene ulteriori utili informazioni.
 
 ```html
 <h2 id="tree-label">File Viewer</h2>
@@ -223,6 +223,6 @@ Molti governi hanno leggi riguardanti i requisiti di accessibilità. Consultare 
 
 ## Assegnazione
 
-[Analizzare un sito web non accessibile](assignment.md)
+[Analizzare un sito web non accessibile](assignment.it.md)
 
 Crediti: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) da Instrument

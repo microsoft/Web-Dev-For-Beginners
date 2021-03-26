@@ -20,10 +20,10 @@ Untuk menangani acara (klik butang, menaip, dll.), Kami mendaftarkan **pendengar
 
 Terdapat [puluhan acara](https://developer.mozilla.org/docs/Web/Events) yang tersedia untuk anda dengarkan semasa membuat aplikasi. Pada asasnya apa sahaja yang dilakukan pengguna pada halaman menimbulkan peristiwa, yang memberi anda banyak kekuatan untuk memastikan mereka mendapat pengalaman yang anda inginkan. Nasib baik, anda biasanya hanya memerlukan sebilangan kecil acara. Berikut adalah beberapa perkara biasa (termasuk dua yang akan kami gunakan semasa membuat permainan kami):
 
-- [click](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event): Pengguna mengklik sesuatu, biasanya butang atau hyperlink
-- [contextmenu](https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event): Pengguna mengklik butang tetikus kanan
-- [select](https://developer.mozilla.org/en-US/docs/Web/API/Element/select_event): Pengguna menyoroti beberapa teks
-- [input](https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event): Pengguna memasukkan beberapa teks
+- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Pengguna mengklik sesuatu, biasanya butang atau hyperlink
+- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Pengguna mengklik butang tetikus kanan
+- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Pengguna menyoroti beberapa teks
+- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Pengguna memasukkan beberapa teks
 
 ## Membuat permainan
 
@@ -332,7 +332,7 @@ Tambahkan lebih banyak fungsi
 
 ## Mengkaji & Belajar Sendiri
 
-Bacalah [semua acara yang ada](https://developer.mozilla.org/en-US/docs/Web/Events) kepada pembangun melalui penyemak imbas web, dan pertimbangkan senario di mana anda akan menggunakannya.
+Bacalah [semua acara yang ada](https://developer.mozilla.org/docs/Web/Events) kepada pembangun melalui penyemak imbas web, dan pertimbangkan senario di mana anda akan menggunakannya.
 
 ## Tugasan
 

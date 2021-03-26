@@ -156,7 +156,7 @@ if (firstNumber > secondNumber) {
 
 ## Revisión y autoestudio
 
-Más información sobre los muchos operadores disponibles para el usuario [en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
+Más información sobre los muchos operadores disponibles para el usuario [en MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
 **Asignación**: [Operadores](assignment.es.md)
 

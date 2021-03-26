@@ -17,7 +17,7 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Lea más sobre [cómo agregar texto a un lienzo](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text), ¡y siéntase libre de hacer que el suyo se vea más elegante!
+✅ Lea más sobre [cómo agregar texto a un lienzo](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), ¡y siéntase libre de hacer que el suyo se vea más elegante!
 
 ## La vida, como concepto de juego
 

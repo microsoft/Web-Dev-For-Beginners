@@ -9,11 +9,11 @@
 
 ### Pengenalan
 
-Memanipulasi DOM, atau "Document Object Model", adalah aspek penting dalam pengembangan web. Menurut [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), "Document Object Model (DOM) adalah representasi data dari objek yang terdiri dari struktur dan kandungan dokumen di web. " Cabaran di sekitar manipulasi DOM di web sering menjadi dorongan di belakang menggunakan kerangka kerja JavaScript dan bukannya JavaScript vanila untuk menguruskan DOM, tetapi kami akan menguruskannya sendiri!
+Memanipulasi DOM, atau "Document Object Model", adalah aspek penting dalam pengembangan web. Menurut [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "Document Object Model (DOM) adalah representasi data dari objek yang terdiri dari struktur dan kandungan dokumen di web. " Cabaran di sekitar manipulasi DOM di web sering menjadi dorongan di belakang menggunakan kerangka kerja JavaScript dan bukannya JavaScript vanila untuk menguruskan DOM, tetapi kami akan menguruskannya sendiri!
 
-Selain itu, pelajaran ini akan memperkenalkan idea [Penutupan JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), yang dapat anda fikirkan sebagai fungsi yang dilampirkan oleh yang lain berfungsi sehingga fungsi dalaman mempunyai akses ke ruang fungsi scope luar.
+Selain itu, pelajaran ini akan memperkenalkan idea [Penutupan JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), yang dapat anda fikirkan sebagai fungsi yang dilampirkan oleh yang lain berfungsi sehingga fungsi dalaman mempunyai akses ke ruang fungsi scope luar.
 
-> Penutupan JavaScript adalah topik yang luas dan kompleks. Pelajaran ini menyentuh idea paling asas bahawa dalam kod terarium ini, anda akan menemui penutup: fungsi dalaman dan fungsi luar yang dibina dengan cara yang membolehkan fungsi dalaman mengakses ke ruang lingkup fungsi luar. Untuk lebih banyak maklumat mengenai cara ini berfungsi, sila lawati [dokumentasi yang luas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
+> Penutupan JavaScript adalah topik yang luas dan kompleks. Pelajaran ini menyentuh idea paling asas bahawa dalam kod terarium ini, anda akan menemui penutup: fungsi dalaman dan fungsi luar yang dibina dengan cara yang membolehkan fungsi dalaman mengakses ke ruang lingkup fungsi luar. Untuk lebih banyak maklumat mengenai cara ini berfungsi, sila lawati [dokumentasi yang luas](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
 
 Kami akan menggunakan penutup untuk memanipulasi DOM.
 
@@ -108,9 +108,9 @@ function dragElement(terrariumElement) {
 
 `dragElement` dapatkan objek` terrariumElement` dari pernyataan di bahagian atas skrip. Kemudian, anda menetapkan beberapa kedudukan tempatan pada `0` untuk objek yang dilewatkan ke dalam fungsi. Ini adalah pemboleh ubah tempatan yang akan dimanipulasi untuk setiap elemen semasa anda menambahkan fungsi seret dan lepas dalam penutupan ke setiap elemen. Terarium akan dihuni oleh unsur-unsur yang diseret ini, jadi aplikasinya perlu memantau lokasi mereka ditempatkan.
 
-Selain itu, elemen terarium yang diteruskan ke fungsi ini diberikan acara `pointerdown`, yang merupakan sebahagian dari [web API](https://developer.mozilla.org/en-US/docs/Web/API) yang dirancang untuk membantu pengurusan DOM. `onpointerdown` menyala apabila butang ditekan, atau dalam kes kita, elemen yang boleh diseret disentuh. Pengendali acara ini berfungsi pada [penyemak imbas web dan mudah alih](https://caniuse.com/?search=onpointerdown), dengan beberapa pengecualian.
+Selain itu, elemen terarium yang diteruskan ke fungsi ini diberikan acara `pointerdown`, yang merupakan sebahagian dari [web API](https://developer.mozilla.org/docs/Web/API) yang dirancang untuk membantu pengurusan DOM. `onpointerdown` menyala apabila butang ditekan, atau dalam kes kita, elemen yang boleh diseret disentuh. Pengendali acara ini berfungsi pada [penyemak imbas web dan mudah alih](https://caniuse.com/?search=onpointerdown), dengan beberapa pengecualian.
 
-✅ [Pengendali acara (event handler) `onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) mempunyai sokongan penyemak imbas yang lebih banyak; mengapa anda tidak menggunakannya di sini? Fikirkan jenis interaksi skrin yang tepat yang ingin anda buat di sini.
+✅ [Pengendali acara (event handler) `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) mempunyai sokongan penyemak imbas yang lebih banyak; mengapa anda tidak menggunakannya di sini? Fikirkan jenis interaksi skrin yang tepat yang ingin anda buat di sini.
 
 ---
 
@@ -205,9 +205,9 @@ Tambahkan pengendali acara (event handler) baharu ke penutupan anda untuk melaku
 
 ## Mengkaji & Belajar Sendiri
 
-Walaupun menyeret elemen di sekitar skrin kelihatan remeh, ada banyak cara untuk melakukan ini dan banyak perangkap, bergantung pada kesan yang anda cari. Sebenarnya, terdapat keseluruhan [drag and drop API] (https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API) yang boleh anda cuba. Kami tidak menggunakannya dalam modul ini kerana kesan yang kami mahukan agak berbeza, tetapi cuba API ini pada projek anda sendiri dan lihat apa yang boleh anda capai.
+Walaupun menyeret elemen di sekitar skrin kelihatan remeh, ada banyak cara untuk melakukan ini dan banyak perangkap, bergantung pada kesan yang anda cari. Sebenarnya, terdapat keseluruhan [drag and drop API] (https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) yang boleh anda cuba. Kami tidak menggunakannya dalam modul ini kerana kesan yang kami mahukan agak berbeza, tetapi cuba API ini pada projek anda sendiri dan lihat apa yang boleh anda capai.
 
-Dapatkan lebih banyak maklumat mengenai peristiwa penunjuk pada [dokumen W3C](https://www.w3.org/TR/pointerevents1/) dan di [dokumen web MDN](https://developer.mozilla.org/en-US/ dokumen / Web / API / Pointer_events).
+Dapatkan lebih banyak maklumat mengenai peristiwa penunjuk pada [dokumen W3C](https://www.w3.org/TR/pointerevents1/) dan di [dokumen web MDN](https://developer.mozilla.org/ dokumen / Web / API / Pointer_events).
 
 Sentiasa periksa keupayaan penyemak imbas menggunakan [CanIUse.com](https://caniuse.com/).
 
