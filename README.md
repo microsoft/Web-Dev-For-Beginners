@@ -15,7 +15,7 @@ Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson cur
 
 **Hearty thanks to our authors Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, and sketchnote artist Tomomi Imura!**
 
-> **Teachers**, we have [included some suggestions](for-teachers.md) on how to use this curriculum. If you would like to create your own lessons, we have also included a [lesson template](lesson-template/README.md)
+> **Teachers**, we have [included some suggestions](for-teachers.md) on how to use this curriculum. If you would like to create your own lessons, we have also included a [lesson template](lesson-template/README.md). We'd love your feedback [via this form](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u)!
 
 > **Students**, to use this curriculum on your own, fork the entire repo and complete the exercises on your own, starting with a pre-lecture quiz, then reading the lecture and completing the rest of the activities. Try to create the projects by comprehending the lessons rather than copying the solution code; however that code is available in the /solutions folders in each project-oriented lesson. Another idea would be to form a study group with friends and go through the content together. For further study, we recommend [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa) and by watching the videos mentioned below.
 
