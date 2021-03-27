@@ -33,7 +33,7 @@
 
 对于设备来说看，解释*低级语言（low level languages）*的指令一般会比解释*高级语言（high level languages）*的指令需要更少的步骤。然而，高级语言因为其可读性和兼容性会更加常用。JavaScript 就是一种高级语言。
 
-下面的代码展示了高级语言（以 JavaScript 为例）和低级语言（以 ARM 汇编代码）为例的区别：
+下面的代码展示了高级语言（以 JavaScript 为例）和低级语言（以 ARM 汇编代码为例）的区别：
 
 ```javascript
 let number = 10
