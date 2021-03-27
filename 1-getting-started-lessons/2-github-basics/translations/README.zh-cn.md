@@ -303,7 +303,7 @@ Pull Request 是一个可以用来比较和讨论一个分支引入的改动的�
 
 ## 复习 & 自学
 
-了解更多 [参与开源软件贡献](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution)。
+了解更多 [如何提交贡献](https://opensource.guide/zh-hans/how-to-contribute/#%E5%A6%82%E4%BD%95%E6%8F%90%E4%BA%A4%E8%B4%A1%E7%8C%AE)。
 
 [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/)。
 
