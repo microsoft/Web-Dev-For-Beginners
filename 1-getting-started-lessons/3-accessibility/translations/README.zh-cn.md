@@ -10,7 +10,7 @@
 >
 > —— Timothy Berners-Lee， W3C（万维网联盟）主席、万维网发明者
 
-This quote perfectly highlights the importance of creating accessible websites. An application that can't be accessed by all is by definition exclusionary. As web developers we should always have accessibility in mind. By having this focus from the beginning you will be well on your way to ensure everyone can access the pages you create. In this lesson, you'll learn about the tools that can help you ensure that your web assets are accessible and how to build with accessibility in mind. 
+这段引言恰当地强调了创造无障碍网页的重要性。一个无法被所有人顺畅访问的应用按照定义来说是排他的，作为 Web 开发者我们应该始终将无障碍性牢记在心中。从一开始就关注到这一点，可以让你在确保每个人都能顺利访问你创造的页面这一方面做得很优秀。这节课中，你会了解到一些能帮助你确保你的网站资源无障碍的工具，也会学到该怎样将无障碍性牢记在心中。
 
 ## 相关工具
 
