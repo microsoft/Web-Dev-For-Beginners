@@ -3,7 +3,7 @@
 
 In the previous web application projects, we learned how to build fully functional applications that runs directly in the browser using static HTML, CSS, and JavaScript. In this next chapter, we'll be using React, a declarative, efficient, and flexible JavaScript library for building modern user interfaces and web applications. It is a very popular choice when building a SPA, Single Page Application. Frameworks and libraries are commonly used in modern web applications because of the ease of starting a new project. A scaffolded project normally would have configurations, toolings and dependencies already set up and installed for you. We will be taking a practical approach by builidng a project to learn React as a frontend library and will also be linking resources such as the React documentation, for further reading. Throughtout the chapter, we will introduce concepts such as JSX, components, props, state, and lifecycle.
 
-In this lesson, we're going to lay out the foundations to create your very own customizable single page application portfolio in React. This lesson is the first of three lessons in the React chapter where we will first scaffold the React project, install necessary tooling and libraries, one of which is TailwindCSS, a CSS utility library and build out the structure of the porfolio.
+In this lesson, we'll be setting our React application using `create-react-app` and using a Tailwind for styling. This lesson is the first of three lessons in the React chapter where we will first scaffold the React project, install necessary tooling and libraries, one of which is TailwindCSS, a CSS utility library and build out the structure of the porfolio.
 
 ### Prerequisites
 
@@ -125,9 +125,11 @@ export default App;
 
 The `App` function in App.js represents a React function component. In React, components can be defined as class components or function components. We will get into explaining more about these components in the next chapter when we start building out more components. You can create your components as a individual files (Single File Component - SFC). In React, html-like tags which are what we call JSX can be passed in the return statement to be returned. The JSX inside the return function is what the App.js will render out. JSX stands for JavaScript XML and is a syntax extension to JavaScript that allows you to write markup inside a React component.
 
-### Install TailwindCSS
+### Set up TailwindCSS
 
 Before we go any further, let's install [TailwindCSS](https://tailwindcss.com/), the CSS utility library we will be using for styling of this project. Tailwind CSS is a highly customizable, low-level CSS framework that gives us all of the building blocks we need to build intuitive user interfaces. So, it is simply a utility first CSS framework. Let's install Tailwind:
+
+#### Install Tailwind
 
 ```bash
 npm i tailwindcss autoprefixer postcss-cli
@@ -149,6 +151,8 @@ npx tailwind init --full # with all default configuration
 
 touch postcss.config.js
 ```
+
+#### Install and configure CRACO
 
 After running the above commands, the `tailwind.config.js` file is created which contains all our default configuration. Next we need to install [CRACO (Create React App Configuration Override)](https://github.com/gsoft-inc/craco), an easy and comprehensible configuration layer for create-react-app, because Create React App doesn't let you override the PostCSS configuration natively.
 
@@ -194,6 +198,8 @@ module.exports = {
 }
 ```
 
+#### Purge styles and include Tailwind in CSS
+
 Because Tailwind is a library with default utility classes, CSS will be need to compiled for production. It is good practive to purge your project of unused styles in production builds so that load time is faster In your tailwind.config.js file, configure the purge option with the paths to all of your components so Tailwind can tree-shake unused styles in production builds:
 
 ```diff
@@ -212,8 +218,95 @@ plugins: [],
 }
 ```
 
-### Task
+Now open up the `src/app.css` file that was generated when creating your React app and import in Tailwind's `base`, `components`, and `utitlities` styles, replacing all the original file contents.
 
+```css
+// src/index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Next, you'll need to import the CSS file in your `/src/index.js`
+
+```diff
+import React from 'react';
+import ReactDOM from 'react-dom';
++ import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+
+#### Run your development environment
+
+Run the below command to start up your development environment:
+
+```bash
+npm run start
+
+# OR
+
+yarn start
+```
+
+There might be a caveat with downgrading your PostCSS version if you run into this error when your development environment starts.
+
+```
+Error: PostCSS plugin tailwindcss requires PostCSS 8.
+```
+
+If this is the case, follow the rest of the commands below to install PostCSS 7 and restart your local development environment after. To read more about Tailwind's compatibility build [here](https://tailwindcss.com/docs/installation#post-css-7-compatibility-build).
+
+```bash
+npm uninstall tailwindcss postcss autoprefixer
+npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+
+# OR
+
+yarn remove tailwindcss postcss autoprefixer
+yarn add -D tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+```
+
+Once the error clears out, let's go back to `App.js` and replace the markup with:
+
+```jsx
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Frontend Foxes School
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn how to build your own portfolio
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+In localhost:3000, you should be able to see the hotreloaded changes reflected in your browser!
+
+## Next
+
+In the next lesson, we will be diving into creating React components!
 
 ---
 
