@@ -2,7 +2,7 @@
 
 Deze les beschrijft de basis over programmeertalen. De onderwerpen zijn van toepassing op de meeste hedendaagse programeertalen. In het 'Vakgereedschap' onderdeel leert u over nuttige toepassingen die u helpen als web ontwikkelaar.
 
-![Introductie Programmeren](../webdev101-programming.png)
+![Introductie Programmeren](/sketchnotes/webdev101-programming.png)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz

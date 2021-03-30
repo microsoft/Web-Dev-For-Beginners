@@ -1,6 +1,6 @@
 # 접근 가능한 웹 페이지 생성하기
 
-![All About Accessibility](../webdev101-a11y.png)
+![All About Accessibility](/sketchnotes/webdev101-a11y.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈

@@ -1,6 +1,6 @@
 # JavaScript の基本: データ型
 
-![JavaScript Basics - Data types](../images/webdev101-js-datatypes.png)
+![JavaScript Basics - Data types](/sketchnotes/webdev101-js-datatypes.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト

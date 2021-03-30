@@ -1,6 +1,6 @@
 # JavaScript 기초: 메소드와 함수
 
-![JavaScript Basics - Functions](../images/webdev101-js-functions.png)
+![JavaScript Basics - Functions](/sketchnotes/webdev101-js-functions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈

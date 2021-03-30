@@ -1,6 +1,6 @@
 # Terrarium 프로젝트 파트 2: CSS 소개
 
-![Introduction to CSS](../images/webdev101-css.png)
+![Introduction to CSS](/sketchnotes/webdev101-css.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈

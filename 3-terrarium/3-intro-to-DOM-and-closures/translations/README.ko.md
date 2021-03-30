@@ -1,6 +1,6 @@
 # Terrarium 프로젝트 파트 3: DOM 조작과 클로저
 
-![DOM and a closure](../images/webdev101-js.png)
+![DOM and a closure](/sketchnotes/webdev101-js.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈

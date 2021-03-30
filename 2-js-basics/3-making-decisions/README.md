@@ -1,6 +1,6 @@
 # JavaScript Basics: Making Decisions
 
-![JavaScript Basics - Making decisions](images/webdev101-js-decisions.png)
+![JavaScript Basics - Making decisions](/sketchnotes/webdev101-js-decisions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz

@@ -1,6 +1,6 @@
 # 瀏覽器擴充功能專案 Part 1：關於瀏覽器
 
-![瀏覽器繪圖筆記](../images/sketchnote.jpg)
+![瀏覽器繪圖筆記](/sketchnotes/browser.jpg)
 > 由 [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob) 繪製
 
 ## 課前測驗

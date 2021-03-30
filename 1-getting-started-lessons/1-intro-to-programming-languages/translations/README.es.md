@@ -2,7 +2,7 @@
 
 Esta lección cubre los conceptos básicos de los lenguajes de programación. Los temas que aprenderemos aquí se aplican a la mayoría de los lenguajes de programación modernos en la actualidad. En la sección 'Herramientas del oficio', aprenderás sobre software y herramientas que te ayudarán como desarrollador.
 
-![Intro Programming](../webdev101-programming.png)
+![Intro Programming](/sketchnotes/webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## [Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)

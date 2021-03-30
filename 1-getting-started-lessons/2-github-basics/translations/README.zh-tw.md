@@ -2,7 +2,7 @@
 
 這堂課程講述一個提供加設與管理程式碼的平台 ── Github的基本功能。
 
-![GitHub 簡介](../images/webdev101-github.png)
+![GitHub 簡介](/sketchnotes/webdev101-github.png)
 > 由[Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗

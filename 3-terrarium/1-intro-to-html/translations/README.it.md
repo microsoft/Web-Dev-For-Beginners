@@ -1,6 +1,6 @@
 # Progetto Terrario Parte 1: Introduzione all'HTML
 
-![Introduzione all'HTML](../images/webdev101-html.png)
+![Introduzione all'HTML](/sketchnotes/webdev101-html.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione

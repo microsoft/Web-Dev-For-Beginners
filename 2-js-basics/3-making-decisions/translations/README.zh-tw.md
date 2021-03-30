@@ -1,6 +1,6 @@
 # JavaScript 入門 - 做出決定
 
-![JavaScript 入門 - 做出決定](../images/webdev101-js-decisions.png)
+![JavaScript 入門 - 做出決定](/sketchnotes/webdev101-js-decisions.png)
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗

@@ -1,6 +1,6 @@
 # JavaScript 入門 - 函式與方法
 
-![JavaScript 入門 - 函式](../images/webdev101-js-functions.png)
+![JavaScript 入門 - 函式](/sketchnotes/webdev101-js-functions.png)
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗

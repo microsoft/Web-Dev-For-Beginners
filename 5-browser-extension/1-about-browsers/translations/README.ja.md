@@ -1,6 +1,6 @@
 # ブラウザ拡張機能プロジェクト その 1: ブラウザのすべて
 
-![Browser sketchnote](../images/sketchnote.jpg)
+![Browser sketchnote](/sketchnotes/browser.jpg)
 > Sketchnote by [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## レッスン前の小テスト

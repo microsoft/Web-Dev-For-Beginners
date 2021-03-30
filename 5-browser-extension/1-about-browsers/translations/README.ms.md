@@ -1,6 +1,6 @@
 # Projek Pelanjutan Penyemak Imbas Bahagian 1: Semua mengenai Penyemak Imbas
 
-![Sketchnote penyemak imbas](../images/sketchnote.jpg)
+![Sketchnote penyemak imbas](/sketchnotes/browser.jpg)
 > Sketchnote karya [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Kuiz Pra Kuliah

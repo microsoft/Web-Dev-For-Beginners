@@ -1,6 +1,6 @@
 # Projek Terrarium Bahagian 3: Memanipulasi DOM dan Penutupan
 
-![DOM dan penutupan](../images/webdev101-js.png)
+![DOM dan penutupan](/sketchnotes/webdev101-js.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
