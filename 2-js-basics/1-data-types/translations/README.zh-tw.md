@@ -1,6 +1,6 @@
 # JavaScript 入門 - 資料型態
 
-![JavaScript 入門 - 資料型態](../images/webdev101-js-datatypes.png)
+![JavaScript 入門 - 資料型態](/sketchnotes/webdev101-js-datatypes.png)
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗

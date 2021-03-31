@@ -1,6 +1,6 @@
 # Terrarium Project Parte 2: Introducción a CSS
 
-![Introducción a CSS](../images/webdev101-css.png)
+![Introducción a CSS](/sketchnotes/webdev101-css.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/17)

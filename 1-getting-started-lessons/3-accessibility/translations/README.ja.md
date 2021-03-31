@@ -1,6 +1,6 @@
 # アクセシブルな Web ページの作成
 
-![All About Accessibility](../webdev101-a11y.png)
+![All About Accessibility](/sketchnotes/webdev101-a11y.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト

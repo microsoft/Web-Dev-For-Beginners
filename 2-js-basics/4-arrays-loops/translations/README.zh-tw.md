@@ -1,6 +1,6 @@
 # JavaScript 入門 - 矩陣與迴圈
 
-![JavaScript 入門 - 矩陣](../images/webdev101-js-arrays.png)
+![JavaScript 入門 - 矩陣](/sketchnotes/webdev101-js-arrays.png)
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗

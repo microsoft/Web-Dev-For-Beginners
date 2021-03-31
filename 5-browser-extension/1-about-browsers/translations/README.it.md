@@ -1,6 +1,6 @@
 # Progetto di Estensione del Browser Parte 1: Tutto sui Browser
 
-![schizzo di un browser](../images/sketchnote.jpg)
+![schizzo di un browser](/sketchnotes/browser.jpg)
 > Sketchnote di [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Quiz Pre-Lezione

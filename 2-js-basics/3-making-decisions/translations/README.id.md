@@ -1,6 +1,6 @@
 # Dasar-dasar JavaScript: Membuat Keputusan
 
-![Dasar-dasar JavaScript - Membuat Keputusan](../images/webdev101-js-decisions.png)
+![Dasar-dasar JavaScript - Membuat Keputusan](/sketchnotes/webdev101-js-decisions.png)
 
 > Sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 

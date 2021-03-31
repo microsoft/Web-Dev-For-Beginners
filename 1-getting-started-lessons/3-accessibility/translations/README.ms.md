@@ -1,6 +1,6 @@
 # Membuat Halaman Web yang Boleh Diakses
 
-![Semua Tentang Kebolehcapaian](../webdev101-a11y.png)
+![Semua Tentang Kebolehcapaian](/sketchnotes/webdev101-a11y.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah

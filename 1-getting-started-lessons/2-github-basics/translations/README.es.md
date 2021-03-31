@@ -2,7 +2,7 @@
 
 Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar y administrar cambios en tu código.
 
-![Intro to GitHub](../images/webdev101-github.png)
+![Intro to GitHub](/sketchnotes/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3)

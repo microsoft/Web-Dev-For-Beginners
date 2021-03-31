@@ -1,6 +1,6 @@
 # Progetto Terrario Parte 2: Introduzione a CSS
 
-![Introduzione a CSS](../images/webdev101-css.png)
+![Introduzione a CSS](/sketchnotes/webdev101-css.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione

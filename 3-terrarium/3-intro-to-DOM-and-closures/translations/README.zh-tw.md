@@ -1,6 +1,6 @@
 # 盆栽盒專案 Part 3 - DOM 元素控制與閉包
 
-![DOM 元素與閉包](../images/webdev101-js.png)
+![DOM 元素與閉包](/sketchnotes/webdev101-js.png)
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗

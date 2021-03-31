@@ -1,6 +1,6 @@
 # JavaScript Basics: Arrays and Loops
 
-![JavaScript Basics - Arrays](images/webdev101-js-arrays.png)
+![JavaScript Basics - Arrays](/sketchnotes/webdev101-js-arrays.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz

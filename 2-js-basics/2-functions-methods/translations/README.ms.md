@@ -1,6 +1,6 @@
 # Asas JavaScript: Kaedah dan Fungsi
 
-![Asas JavaScript - Fungsi](../images/webdev101-js-functions.png)
+![Asas JavaScript - Fungsi](/sketchnotes/webdev101-js-functions.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah

@@ -1,6 +1,6 @@
 # Nozioni di base di JavaScript: Array e Cicli
 
-![Nozioni di base su JavaScript - Array](../images/webdev101-js-arrays.png)
+![Nozioni di base su JavaScript - Array](/sketchnotes/webdev101-js-arrays.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
