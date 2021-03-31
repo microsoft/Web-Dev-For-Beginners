@@ -1,6 +1,6 @@
 # 创造无障碍网页
 
-![All About Accessibility](../webdev101-a11y.png)
+![All About Accessibility](/sketchnotes/webdev101-a11y.png)
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测

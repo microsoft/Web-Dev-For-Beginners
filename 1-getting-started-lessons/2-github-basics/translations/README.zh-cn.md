@@ -2,7 +2,7 @@
 
 这节课涵盖了 GitHub 的基础知识，这是一个可以用来存放代码和管理代码变更的平台。
 
-![Intro to GitHub](../images/webdev101-github.png)
+![Intro to GitHub](/sketchnotes/webdev101-github.png)
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
