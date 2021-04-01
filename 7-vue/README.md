@@ -33,7 +33,7 @@ We're going to build an application to load random dog images and store them to 
 
 ![random dog app](./images/mini2_1.png)
 
-Take a look at the code that was scaffolded by CodeSandbox for a basic Vue.js app. Navigate to `src/main.js`. This is the main starting point of a Vue.js app. Note that in this file you import parts of Vue from its npm package: `import { createApp } from 'vue'";`. The app also imports other needed dependencies from npm to build the app. You can always check out the root `package.json` to find out which dependencies are needed.
+Take a look at the code that was scaffolded the CLI for a basic Vue.js app. Navigate to `src/main.js`. This is the main starting point of a Vue.js app. Note that in this file you import parts of Vue from its npm package: `import { createApp } from 'vue'";`. The app also imports other needed dependencies from npm to build the app. You can always check out the root `package.json` to find out which dependencies are needed.
 
 `main.js` also initializes the app as a new Vue.js app, imports the `App.vue` file and sets the div into which the app code will be injected.
 
@@ -125,8 +125,6 @@ Check whether the dependency is installed by opening `package.json` and checking
 > Don't forget to restart your app: `npm run serve`.
 
 Vuetify works via a plugin structure. In the `/src` folder of your project, create a new folder called `plugins` and inside that a new file called `vuetify.js`.
-
-> 💡 In CodeSandbox, right click on the new folder to create a new file. Be careful to create these new assets in the `/src` folder!
 
 In the new `vuetify.js` file, add this code to bootstrap the plugin:
 
@@ -224,7 +222,7 @@ export default {
 </script>
 ```
 
-> 💡 At this point you can remove the `HelloWorld.vue` file from the `components` folder as we won't need it. Right-click the file in CodeSandbox and click 'delete'.
+> 💡 At this point you can remove the `HelloWorld.vue` file from the `components` folder as we won't need it.
 
 Now you have a variable called `currentDogLink` and its default value is an empty string. We will use this variable to provide a link to a current dog in `v-img`. First, we will set the `currentDogLink` value by overwriting the data block we just added in `App.vue`:
 
@@ -254,7 +252,7 @@ To perform API calls we will need a library called [Axios](https://github.com/ax
 
 > 💡 Originally, Vue supported its own way of making API calls using .ajax; but this resource was deprecated as Axios's standalone library worked very well for this purpose, removing the need for an integrated solution. Read more about this decision [here](https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4).
 
-First, add Axios's library to your project dependencies. To do so in CodeSandbox, click on the `Add Dependency` button and search for `axios`. Install the latest version.
+First, add Axios's library to your project dependencies. To do so using the command line, stop your app (ctrl-c) and type `npm i axios`. Install the latest version.
 
 Import Axios into the component where we will perform our API call - `App.vue`. In that component's script block, add this line right under `<script>`:
 
@@ -517,11 +515,7 @@ Try to add and remove some dogs from favorites. IT WORKS!
 
 ## Push your work to a repository on your GitHub account
 
-**Step 1**: In CodeSandbox, click the Github icon in the sidebar, and grant permissions if necessary.
-
-**Step 2**: Enter a name for your repository.
-
-**Step 3**: Click create repository.
+**TODO - add instructions here on pushing to GH
 
 ## Supplement 1: Creating a Dog Component
 
