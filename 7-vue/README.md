@@ -515,7 +515,7 @@ Try to add and remove some dogs from favorites. IT WORKS!
 
 ## Push your work to a repository on your GitHub account
 
-**TODO - add instructions here on pushing to GH
+Follow [these instructions](https://code.visualstudio.com/docs/editor/github) to push your app to GitHub
 
 ## Supplement 1: Creating a Dog Component
 
@@ -732,7 +732,9 @@ Now our list has a nice move animation after deleting its element!
 
 **🎊You've finished Supplement 2!🎊**
 
-##[Assignment: Build a new App](assignment.md)
+Don't forget to push your changes to GitHub!
+
+## [Assignment: Build a new App](assignment.md)
 
 ## Authors
 
