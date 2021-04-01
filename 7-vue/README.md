@@ -1,4 +1,4 @@
-# 🖥️ 1: Build A Simple Pet Fetching Web App
+#A Taste of Vue: Build A Simple Pet Fetching Web App
 
 | **Project&nbsp;Goal**           | Get started with Vue.js basics and simple API calls                                                                                       |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -732,6 +732,8 @@ Now our list has a nice move animation after deleting its element!
 
 **🎊You've finished Supplement 2!🎊**
 
-## Author
+##[Assignment: Build a new App](assignment.md)
+
+## Authors
 
 Made with ❤️ by Natalia Tepluhina, updated by Jen Looper
