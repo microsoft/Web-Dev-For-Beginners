@@ -3,7 +3,7 @@
 | **Project&nbsp;Goal**           | Get started with Vue.js basics and simple API calls                                                                                       |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | **What&nbsp;you’ll&nbsp;learn** | Setting up your Vue app, components basics, performing simple REST API calls using Axios                                                  |
-| **Tools you’ll need**           | A modern browser like Chrome. A [GitHub](https://github.com) account which can be used to login to [CodeSandbox](https://codesandbox.io). |
+| **Tools you’ll need**           | A modern browser like Chrome. A [GitHub](https://github.com) account, [VS Code editor](https://code.visualstudio.com/), and the [Vue CLI installed](https://cli.vuejs.org/). |
 | **Time needed to complete**     | 1 hour                                                                                                                                    |
 | **Just want to try the app?**   | [CodeSandbox link](https://codesandbox.io/s/web-1-mini-workshop-koj8w)                                                                    |
 
@@ -11,7 +11,15 @@
 
 ## Scaffold your app
 
-We'll start from scratch in [CodeSandbox](http://codesandbox.io). Create a CodeSandbox account and scaffold a starter Vue.js template by clicking [here](https://codesandbox.io/s/vue).
+We'll start from scratch on your local computer. Navigate to an area where you want to create your new web app and use your terminal or command line to use the Vue CLI to scaffold an app. Type: `vue create my-pet-app`. A folder with that name will be created in your specified location. 
+
+Answer the CLI questions to create a Vue 3 app:
+
+`Default (Vue 3 Preview) ([Vue 3] babel, eslint)`
+
+Your app is scaffolded and initialized.
+
+---
 
 We're going to build an application to load random dog images and store them to a favorites list:
 
