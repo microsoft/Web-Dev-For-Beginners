@@ -13,11 +13,19 @@
 
 We'll start from scratch on your local computer. Navigate to an area where you want to create your new web app and use your terminal or command line to use the Vue CLI to scaffold an app. Type: `vue create my-pet-app`. A folder with that name will be created in your specified location. 
 
-Answer the CLI questions to create a Vue 3 app:
+Answer the CLI questions to create a Vue 2* app:
 
-`Default (Vue 3 Preview) ([Vue 3] babel, eslint)`
+`Default ([Vue 2] babel, eslint)`
 
-Your app is scaffolded and initialized.
+* Vue 3 is out and many folks are using it, but the styling library we use in this tutorial does not yet support it yet, so we will stick to Vue 2 for now.
+
+Your app is scaffolded and initialized. Navigate to the folder and run the app as it looks so far:
+
+`cd my-pet-app && npm run serve`
+
+Your app should open in a browser window - you'll see the Vue logo and some text.
+
+Open the folder in VS Code. You'll see several files.
 
 ---
 
@@ -25,23 +33,28 @@ We're going to build an application to load random dog images and store them to 
 
 ![random dog app](./images/mini2_1.png)
 
-Take a look at the code that was scaffolded by CodeSandbox for a basic Vue.js app. The file `main.js` is open by default. This is the main starting point of a Vue.js app. Note that in this file you import Vue from its npm package: `import Vue from "vue";`. CodeSandbox imports all the needed dependencies from npm to build the app. You can always check out the root `package.json` to find out which dependencies are needed.
+Take a look at the code that was scaffolded by CodeSandbox for a basic Vue.js app. Navigate to `src/main.js`. This is the main starting point of a Vue.js app. Note that in this file you import parts of Vue from its npm package: `import { createApp } from 'vue'";`. The app also imports other needed dependencies from npm to build the app. You can always check out the root `package.json` to find out which dependencies are needed.
 
-`main.js` also initializes the app as a new Vue.js app and sets the div into which the app code will be injected.
+`main.js` also initializes the app as a new Vue.js app, imports the `App.vue` file and sets the div into which the app code will be injected.
 
 ```js
+import Vue from 'vue'
+import App from './App.vue'
+
+Vue.config.productionTip = false
+
 new Vue({
-	render: (h) => h(App),
-}).$mount('#app');
+  render: h => h(App),
+}).$mount('#app')
 ```
 
-Open up `App.vue`. In this file, the 'home' component is built. It contains the three main parts of a Vue.js Single File Component (SFC): a template, a script block, and a style block.
+Open up `App.vue` in the `src` folder. In this file, the 'home' component is built. It contains the three main parts of a Vue.js Single File Component (SFC): a template, a script block, and a style block.
 
 Note the first div in the template block has the id of 'app' - this is the div where the app code will be injected. There's also a `<HelloWorld>` component included underneath the logo image. This is an example of an SFC being included into `App.vue`.
 
 Open `components/HelloWorld.vue` and you'll find the source of the list of links that appears embedded in `App.vue`. This file also includes a script block with a `msg` variable and some more styles in a `<style>` block.
 
-We're going to rip this sample app apart and recreate it! Let's get started.
+We're going to rip this sample app apart and build a new one! Let's get started.
 
 ## Add the Styles
 
@@ -87,7 +100,7 @@ h1 {
 
 > 💡 Notice we don't use `<scoped>` as part of the style block. The 'scoped' keyword ensures that your styles will remain valid only for the current SFC, but we're going to make these styles universal.
 
-This style block uses a path to an external image hosted on GitHub, rather than to a relative path. This is because CodeSandbox doesn't host images easily; normally you'd just add an image on a relative path such as `/images/myImage.png`.
+This style block uses a path to an external image hosted on GitHub, rather than to a relative path. This is because we're quickly styling the app; normally you'd just add an image on a relative path such as `/images/myImage.png`. If you want to, download a different background image to your app and store it in the assets folder. You can reference it by naming it appropriately and editing the `.dogs-layout` class: `background-image: url("assets/local-background-file.png");`
 
 Adding the stylesheet didn't do much to our template except break the existing styles. Let's fix the template!
 
@@ -98,18 +111,18 @@ Before we edit the template, we're going to install Vuetify. Vuetify is a cool l
 
 > 💡 Vuetify is a semantic component framework for Vue. It aims to provide clean, semantic and reusable components for building your application. You can find full documentation for it [here](https://vuetifyjs.com/en/getting-started/quick-start)
 
-Install it by clicking the 'Add Dependency' button in the Dependency dropdown area on the left in CodeSandbox. Search for 'Vuetify'.
-
-Then click on the library in the list to install it.
+Install it by stopping the app in the terminal (ctrl-c) and typing `npm i vuetify`.
 
 Check whether the dependency is installed by opening `package.json` and checking the "dependencies" object. It should look like this:
 
 ```json
 "dependencies": {
-    "vue": "^2.6.10",
-    "vuetify": "^2.0.19"
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "vuetify": "^2.4.9"
 },
 ```
+> Don't forget to restart your app: `npm run serve`.
 
 Vuetify works via a plugin structure. In the `/src` folder of your project, create a new folder called `plugins` and inside that a new file called `vuetify.js`.
 
