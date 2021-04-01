@@ -1,4 +1,4 @@
-#A Taste of Vue: Build A Simple Pet Fetching Web App
+# A Taste of Vue: Build A Simple Pet Fetching Web App
 
 | **Project&nbsp;Goal**           | Get started with Vue.js basics and simple API calls                                                                                       |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
