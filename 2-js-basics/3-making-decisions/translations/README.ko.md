@@ -1,6 +1,6 @@
 # JavaScript 기초: 결정하기
 
-![JavaScript Basics - Making decisions](../images/webdev101-js-decisions.png)
+![JavaScript Basics - Making decisions](/sketchnotes/webdev101-js-decisions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
@@ -164,7 +164,7 @@ if (firstNumber > secondNumber) {
 
 ## 리뷰 & 자기주도 학습
 
-[MDN에서](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators) 사용할 수 있는 많은 연산자에 대해 자세히 알아보십시오.
+[MDN에서](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators) 사용할 수 있는 많은 연산자에 대해 자세히 알아보십시오.
 
 Josh Comeau'의 wonderful [operator lookup](https://joshwcomeau.com/operator-lookup/)을 통할 수 있습니다!
 

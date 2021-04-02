@@ -84,9 +84,9 @@ const account = state.account;
 
 `state` 객체가 변경되지 않으려면, [*immutable*](https://en.wikipedia.org/wiki/Immutable_object)한 것으로 간주하는 것이 좋습니다. 즉, 전혀 수정할 수 없다는 점을 의미합니다. 또한 변경하려는 경우에는 새로운 상태 객체를 만들어야 된다는 점을 의미합니다. 이렇게 하면, 잠재적으로 원하지 않는 [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science))에 보호하도록 만들고, undo/redo를 구현하는 것 처럼 앱의 새로운 기능에 대한 가능성을 열어 디버깅을 더 쉽게 만듭니다. 예를 들자면, 상태에 대한 모든 변경점을 남기고 유지하여 버그의 원인을 파악할 수 있습니다.
 
-JavaScript에서, [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)를 사용하여 변경할 수 없는 버전의 객체를 만들 수 있습니다. 변경 불가능한 객체를 바꾸려고 하면 예외가 발생합니다.
+JavaScript에서, [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)를 사용하여 변경할 수 없는 버전의 객체를 만들 수 있습니다. 변경 불가능한 객체를 바꾸려고 하면 예외가 발생합니다.
 
-✅ *shallow*와 *deep* 불변 객체의 차이점을 알고 계시나요? [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze)에서 읽을 수 있습니다.
+✅ *shallow*와 *deep* 불변 객체의 차이점을 알고 계시나요? [here](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze)에서 읽을 수 있습니다.
 
 ### 작업
 
@@ -101,7 +101,7 @@ function updateState(property, newData) {
 }
 ```
 
-이 함수에서는, 새로운 상태 객체를 만들고 [*spread (`...`) operator*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals)로 이전 상태의 데이터를 복사합니다. 그러고  할당을 위해 [bracket notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]`를 사용하여 상태 객체의 특정한 속성을 새로운 데이터로 다시 정의합니다. 최종적으로, 변경되는 것을 막기 위해 `Object.freeze()`를 사용하여 객체를 잠급니다. 지금 상태에는 `account` 속성만 저장되어 있지만, 이 접근 방식으로 상태에 필요한 순간마다 많은 속성들을 추가할 수 있습니다.
+이 함수에서는, 새로운 상태 객체를 만들고 [*spread (`...`) operator*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals)로 이전 상태의 데이터를 복사합니다. 그러고  할당을 위해 [bracket notation](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]`를 사용하여 상태 객체의 특정한 속성을 새로운 데이터로 다시 정의합니다. 최종적으로, 변경되는 것을 막기 위해 `Object.freeze()`를 사용하여 객체를 잠급니다. 지금 상태에는 `account` 속성만 저장되어 있지만, 이 접근 방식으로 상태에 필요한 순간마다 많은 속성들을 추가할 수 있습니다.
 
 또한 초기 상태가 동결되도록 `state` 초기화 작업도 갱신합니다:
 
@@ -149,16 +149,16 @@ function logout() {
 - *민감한 데이터인가요?* 사용자 암호와 같은, 민감한 데이터는 클라이언트에 저장하지 않아야 합니다.
 - *데이터를 얼마나 오래 보관해야 하나요?* 현재 세션에서만 데이터에 접근하거나 계속 저장할 계획인가요?
 
-달성하려는 목표에 따라, 웹 앱 안에서 정보를 저장하는 방법에는 여러 가지가 있습니다. 예를 들면, URL을 사용하여 검색 쿼리를 저장하고, 사용자끼리 공유할 수 있습니다. [authentication](https://en.wikipedia.org/wiki/Authentication) 정보처럼, 데이터를 서버와 공유해야하는 경우에도 [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)를 사용할 수 있습니다.
+달성하려는 목표에 따라, 웹 앱 안에서 정보를 저장하는 방법에는 여러 가지가 있습니다. 예를 들면, URL을 사용하여 검색 쿼리를 저장하고, 사용자끼리 공유할 수 있습니다. [authentication](https://en.wikipedia.org/wiki/Authentication) 정보처럼, 데이터를 서버와 공유해야하는 경우에도 [HTTP cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)를 사용할 수 있습니다.
 
 다른 옵션으로는 데이터 저장을 위해 여러 브라우저 API 중 하나를 사용하는 것입니다. 그 중 2가지가 특히 흥미롭습니다:
 
-- [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage): [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)는 다른 세션에서 현재 웹 사이트에 대한 특정 데이터를 유지할 수 있습니다. 저장된 데이터는 만료되지 않습니다.
-- [`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage): 이는 세션이 끝날 때(브라우저가 닫힐 때)에 저장된 데이터가 지워진다는 점을 제외하면 `localStorage`와 동일하게 작동합니다.
+- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)는 다른 세션에서 현재 웹 사이트에 대한 특정 데이터를 유지할 수 있습니다. 저장된 데이터는 만료되지 않습니다.
+- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): 이는 세션이 끝날 때(브라우저가 닫힐 때)에 저장된 데이터가 지워진다는 점을 제외하면 `localStorage`와 동일하게 작동합니다.
 
-이 두 API는 모두 [strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)만 저장할 수 있습니다. 복잡한 객체를 저장하려면, [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)를 사용하여 [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) 포맷으로 직렬화해야 합니다.
+이 두 API는 모두 [strings](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)만 저장할 수 있습니다. 복잡한 객체를 저장하려면, [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)를 사용하여 [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) 포맷으로 직렬화해야 합니다.
 
-✅ 서버에서 동작하지 않는 웹 앱을 만드려면, [`IndexedDB` API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)로 클라이언트에 데이터베이스를 만들 수도 있습니다. 이는 고급 사용 케이스이거나, 사용하기 복잡한 많은 양의 데이터를 저장해야 할 때에 사용하도록 되어있습니다.
+✅ 서버에서 동작하지 않는 웹 앱을 만드려면, [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)로 클라이언트에 데이터베이스를 만들 수도 있습니다. 이는 고급 사용 케이스이거나, 사용하기 복잡한 많은 양의 데이터를 저장해야 할 때에 사용하도록 되어있습니다.
 
 ### 작업
 

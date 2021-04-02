@@ -22,7 +22,7 @@ Tab Prestasi mengandungi alat Profil. Buka laman web (cuba, misalnya, https://ww
 
 ![Edge profiler](../images/profiler.png)
 
-✅ Lawati [Microsoft Documentation](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance) pada panel Performance di Edge
+✅ Lawati [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance) pada panel Performance di Edge
 
 > Petua: untuk mendapatkan bacaan sebenar mengenai masa permulaan laman web anda, kosongkan cache penyemak imbas anda
 

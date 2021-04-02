@@ -94,7 +94,7 @@ Dalam fungsi ini, terdapat beberapa logik yang menarik. Bacalah, anda dapat meli
   - sembunyikan borang
   - tunjukkan butang set semula
 
-Sebelum meneruskan, berguna untuk mengetahui konsep yang sangat penting yang terdapat dalam penyemak imbas: [LocalStorage] https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). LocalStorage adalah cara yang berguna untuk menyimpan rentetan dalam penyemak imbas sebagai pasangan `kunci-nilai` . Jenis storan web ini dapat dimanipulasi oleh JavaScript untuk menguruskan data di penyemak imbas. LocalStorage tidak akan habis masa berlakunya, sementara SessionStorage, jenis penyimpanan web lain, akan dihapus apabila penyemak imbas ditutup. Pelbagai jenis storan mempunyai kebaikan dan keburukan terhadap penggunaannya.
+Sebelum meneruskan, berguna untuk mengetahui konsep yang sangat penting yang terdapat dalam penyemak imbas: [LocalStorage] https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage adalah cara yang berguna untuk menyimpan rentetan dalam penyemak imbas sebagai pasangan `kunci-nilai` . Jenis storan web ini dapat dimanipulasi oleh JavaScript untuk menguruskan data di penyemak imbas. LocalStorage tidak akan habis masa berlakunya, sementara SessionStorage, jenis penyimpanan web lain, akan dihapus apabila penyemak imbas ditutup. Pelbagai jenis storan mempunyai kebaikan dan keburukan terhadap penggunaannya.
 
 > Catatan - pelanjutan penyemak imbas anda mempunyai storan tempatan sendiri; tetingkap penyemak imbas utama adalah contoh yang berbeza dan berkelakuan secara berasingan.
 
@@ -143,7 +143,7 @@ Sebelum melangkah lebih jauh, kita harus membincangkan API. API, atau [Applicati
 
 ✅ Istilah 'REST' adalah singkatan dari 'Representational State Transfer' dan ciri menggunakan URL yang dikonfigurasikan dengan pelbagai untuk mengambil data. Lakukan sedikit kajian mengenai pelbagai jenis API yang tersedia untuk pembangun. Format apa yang menarik bagi anda?
 
-Terdapat perkara penting yang perlu diperhatikan mengenai fungsi ini. Perhatikan dahulu kata kunci [`async` kata kunci](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). Menulis fungsi anda supaya mereka berjalan secara tidak segerak bermakna mereka menunggu tindakan, seperti data yang dikembalikan, diselesaikan sebelum meneruskan.
+Terdapat perkara penting yang perlu diperhatikan mengenai fungsi ini. Perhatikan dahulu kata kunci [`async` kata kunci](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Menulis fungsi anda supaya mereka berjalan secara tidak segerak bermakna mereka menunggu tindakan, seperti data yang dikembalikan, diselesaikan sebelum meneruskan.
 
 Inilah video ringkas mengenai `async`:
 
@@ -198,7 +198,7 @@ Ini adalah fungsi besar. Apa yang berlaku di sini?
 - setelah API bertindak balas, anda menetapkan pelbagai elemen data responsnya ke bahagian-bahagian skrin yang anda siapkan untuk menunjukkan data ini.
 - jika ada ralat, atau jika tidak ada hasil, anda akan menunjukkan mesej ralat.
 
-✅ Menggunakan corak pengaturcaraan tak segerak adalah alat lain yang sangat berguna dalam kotak alat anda. Baca untuk[mengenai pelbagai cara](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) anda boleh mengkonfigurasi jenis kod ini.
+✅ Menggunakan corak pengaturcaraan tak segerak adalah alat lain yang sangat berguna dalam kotak alat anda. Baca untuk[mengenai pelbagai cara](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) anda boleh mengkonfigurasi jenis kod ini.
 
 Tahniah! Sekiranya anda membina pelanjutan anda (`npm run build`) dan menyegarkannya di panel pelanjutan anda, anda mempunyai sambungan yang berfungsi! Satu-satunya perkara yang tidak berfungsi ialah ikon, dan anda akan memperbaikinya pada pelajaran seterusnya.
 
@@ -206,7 +206,7 @@ Tahniah! Sekiranya anda membina pelanjutan anda (`npm run build`) dan menyegarka
 
 ## 🚀 Cabaran
 
-Kami telah membincangkan beberapa jenis API setakat ini dalam pelajaran ini. Pilih API web dan teliti secara mendalam apa yang ditawarkannya. Sebagai contoh, perhatikan API yang tersedia dalam penyemak imbas seperti [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). Apa yang menjadikan API hebat pada pendapat anda?
+Kami telah membincangkan beberapa jenis API setakat ini dalam pelajaran ini. Pilih API web dan teliti secara mendalam apa yang ditawarkannya. Sebagai contoh, perhatikan API yang tersedia dalam penyemak imbas seperti [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Apa yang menjadikan API hebat pada pendapat anda?
 
 ## Kuiz Pasca Kuliah
 

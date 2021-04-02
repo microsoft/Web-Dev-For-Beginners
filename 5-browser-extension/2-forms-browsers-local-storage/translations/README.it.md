@@ -145,7 +145,7 @@ Prima di andare oltre, si dovrebbe parlare delle API. Le API, o [Application Pro
 
 ✅ Il termine "REST" sta per "Representational State Transfer" e prevede l'utilizzo di URL variamente configurati per recuperare dati. Fare una piccola ricerca sui vari tipi di API disponibili per gli sviluppatori. Quale formato piace?
 
-Ci sono cose importanti da notare su questa funzione. Per prima cosa nota la [parola chiave `async`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). Scrivere le funzioni in modo che vengano eseguite in modo asincrono significa che attendono il completamento di un'azione, come la restituzione dei dati, prima di continuare.
+Ci sono cose importanti da notare su questa funzione. Per prima cosa nota la [parola chiave `async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Scrivere le funzioni in modo che vengano eseguite in modo asincrono significa che attendono il completamento di un'azione, come la restituzione dei dati, prima di continuare.
 
 Ecco un breve video su `async`:
 
@@ -200,7 +200,7 @@ Questa è una grande funzione. Cosa sta succedendo qui?
 - una volta che l'API risponde, si assegnano i vari elementi dei suoi dati di risposta alle parti dello schermo che sono state impostate per mostrare questi dati.
 - se c'è un errore, o se non c'è risultato, viene mostrato un messaggio di errore.
 
-✅ L'utilizzo di schemi di programmazione asincrona è un altro strumento molto utile nella propria cassetta degli attrezzi. Informarsi [sui vari modi in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) cui si può configurare questo tipo di codice.
+✅ L'utilizzo di schemi di programmazione asincrona è un altro strumento molto utile nella propria cassetta degli attrezzi. Informarsi [sui vari modi in](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) cui si può configurare questo tipo di codice.
 
 Complimenti! Se si compila la propria estensione`(npm run build`) e la si aggiorna nel pannello delle estensioni, si avrà un'estensione funzionante! L'unica cosa che non funziona è l'icona, verrà risolto nella prossima lezione.
 
@@ -208,7 +208,7 @@ Complimenti! Se si compila la propria estensione`(npm run build`) e la si aggior
 
 ## 🚀 Sfida
 
-Finora si è discusso sui diversi tipi di API in queste lezioni. Scegliere un'API web e cercare in profondità cosa offre. Ad esempio, dare un'occhiata alle API disponibili nei browser come l' [API HTML Drag and Drop](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). Cosa si ritiene renda grande un'API?
+Finora si è discusso sui diversi tipi di API in queste lezioni. Scegliere un'API web e cercare in profondità cosa offre. Ad esempio, dare un'occhiata alle API disponibili nei browser come l' [API HTML Drag and Drop](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Cosa si ritiene renda grande un'API?
 
 ## Quiz Post-Lezione
 

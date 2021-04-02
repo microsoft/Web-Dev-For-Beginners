@@ -2,7 +2,7 @@
 
 Questa lezione tratta delle basi dei linguaggi di programmazione. Gli argomenti trattati qui si applicano alla maggior parte dei moderni linguaggi di programmazione di oggi. Nella sezione 'Strumenti Necessari' conoscerete utili software che vi aiuteranno come programmatore.
 
-![Introduzione alla  Programmazione](../webdev101-programming.png)
+![Introduzione alla  Programmazione](/sketchnotes/webdev101-programming.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione

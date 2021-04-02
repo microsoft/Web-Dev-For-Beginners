@@ -41,7 +41,7 @@ Se si desidera creare più schermate per una pagina Web, una soluzione potrebbe 
 - È necessario ricaricare l'intero HTML quando si cambia schermata, il che può essere lento.
 - È difficile condividere i dati tra le diverse schermate.
 
-Un altro approccio consiste nell'avere un solo file HTML e definire più [modelli HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) utilizzando l'elemento `<template>`. Un modello è un blocco HTML riutilizzabile che non viene visualizzato dal browser e deve essere istanziato in fase di esecuzione utilizzando JavaScript.
+Un altro approccio consiste nell'avere un solo file HTML e definire più [modelli HTML](https://developer.mozilla.org/docs/Web/HTML/Element/template) utilizzando l'elemento `<template>`. Un modello è un blocco HTML riutilizzabile che non viene visualizzato dal browser e deve essere istanziato in fase di esecuzione utilizzando JavaScript.
 
 ### Attività
 
@@ -108,7 +108,7 @@ Se si prova il proprio file HTML corrente in un browser, si vedrà che si blocca
 L'istanza di un modello viene solitamente eseguita in 3 passaggi:
 
 1. Recuperare l'elemento del modello nel DOM, ad esempio utilizzando [`document.getElementById`](https://developer.mozilla.org/it/docs/Web/API/Document/getElementById).
-2. Clonare l'elemento template, usando [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode).
+2. Clonare l'elemento template, usando [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
 3. Collegarlo al DOM sotto un elemento visibile, ad esempio utilizzando [`appendChild`](https://developer.mozilla.org/it/docs/Web/API/Node/appendChild).
 
 ✅ Perché è necessario clonare il modello prima di collegarlo al DOM? Cosa si pensa che accadrebbe se venisse saltato questo passaggio?
@@ -174,7 +174,7 @@ const routes = {
 };
 ```
 
-Ora modificare un po' la funzione `updateRoute`. Invece di passare direttamente il `templateId` come argomento, lo si vuole recuperare guardando prima l'URL corrente, quindi utilizzndo la mappa per ottenere il valore dell'ID del modello corrispondente. Si può  usare [`window.location.pathname`](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname) per ottenere solo la sezione del percorso dall'URL.
+Ora modificare un po' la funzione `updateRoute`. Invece di passare direttamente il `templateId` come argomento, lo si vuole recuperare guardando prima l'URL corrente, quindi utilizzndo la mappa per ottenere il valore dell'ID del modello corrispondente. Si può  usare [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) per ottenere solo la sezione del percorso dall'URL.
 
 ```js
 function updateRoute() {
@@ -202,7 +202,7 @@ Il prossimo passo per la costruzione dell'app è aggiungere la possibilità di n
 
 E' già stata trattata la seconda parte con la funzione `updateRoute`, quindi occorre capire come aggiornare l'URL corrente.
 
-Si dovrà utilizzare JavaScript e più precisamente [history.pushState](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) che permette di aggiornare l'URL e creare una nuova voce nella cronologia di navigazione, senza ricaricare l'HTML.
+Si dovrà utilizzare JavaScript e più precisamente [history.pushState](https://developer.mozilla.org/docs/Web/API/History/pushState) che permette di aggiornare l'URL e creare una nuova voce nella cronologia di navigazione, senza ricaricare l'HTML.
 
 > Nota: Sebbene l'elemento HTML ancora [`<a href>`](https://developer.mozilla.org/it/docs/Web/HTML/Element/a) possa essere usato da solo per creare collegamenti ipertestuali a diversi URL, è anche in grado di fare ricaricare al browser l'HTML nella modalità predefinita. È necessario prevenire questo comportamento quando si gestisce il routing con javascript personalizzato, utilizzando la funzione preventDefault() sull'evento click.
 
@@ -252,7 +252,7 @@ Si completa il sistema di navigazione aggiungendo collegamenti ai link di access
 <a href="/login" onclick="onLinkClick()">Logout</a>
 ```
 
-Utilizzando l 'attributo [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) associare l'evento `click` al codice JavaScript, in questo caso la chiamata alla funzione `navigate()` .
+Utilizzando l 'attributo [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) associare l'evento `click` al codice JavaScript, in questo caso la chiamata alla funzione `navigate()` .
 
 Provare a fare clic su questi collegamenti, ora si dovrebbe essere in grado di navigare tra le diverse schermate dell'app.
 
@@ -266,7 +266,7 @@ L'utilizzo di `history.pushState` crea nuove voci nella cronologia di navigazion
 
 Se si prova a fare clic sul pulsante Indietro alcune volte, si vedrà che l'URL corrente cambia e la cronologia viene aggiornata, ma lo stesso modello continua a essere visualizzato.
 
-Questo perché il browser non sa che si deve chiamare `updateRoute()` ogni volta che cambia la cronologia. Se si dà un'occhiata alla documentazione di [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) si può vedere che se lo stato cambia, vale a dire che si è passati a un URL diverso, viene attivato l'[evento](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) `popstate`. Verrà usato per risolvere quel problema.
+Questo perché il browser non sa che si deve chiamare `updateRoute()` ogni volta che cambia la cronologia. Se si dà un'occhiata alla documentazione di [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) si può vedere che se lo stato cambia, vale a dire che si è passati a un URL diverso, viene attivato l'[evento](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) `popstate`. Verrà usato per risolvere quel problema.
 
 ### Attività
 
@@ -277,7 +277,7 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Nota: è stata usata una [funzione freccia](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) qui per dichiarare il gestore di eventi `popstate` per concisione, ma una funzione normale andrebbe bene allo stesso modo.
+> Nota: è stata usata una [funzione freccia](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) qui per dichiarare il gestore di eventi `popstate` per concisione, ma una funzione normale andrebbe bene allo stesso modo.
 
 Ecco un video di aggiornamento sulle funzioni freccia:
 
@@ -299,7 +299,7 @@ Aggiungere un nuovo modello e instradare per una terza pagina che mostra i credi
 
 ## Revisione e Auto Apprendimento
 
-Il routing (instradamento) è una delle parti sorprendentemente complicate dello sviluppo web, soprattutto perché il web passa dai comportamenti di aggiornamento della pagina all'aggiornamento della pagina dell'applicazione a pagina singola. Leggere alcune informazioni su [come il servizio App Web Static di Azure](https://docs.microsoft.com/en-us/azure/static-web-apps/routes?WT.mc_id=academic-4621-cxa) gestisce il routing. Si può spiegare perché alcune delle decisioni descritte in quel documento sono necessarie?
+Il routing (instradamento) è una delle parti sorprendentemente complicate dello sviluppo web, soprattutto perché il web passa dai comportamenti di aggiornamento della pagina all'aggiornamento della pagina dell'applicazione a pagina singola. Leggere alcune informazioni su [come il servizio App Web Static di Azure](https://docs.microsoft.com/azure/static-web-apps/routes?WT.mc_id=academic-4621-cxa) gestisce il routing. Si può spiegare perché alcune delle decisioni descritte in quel documento sono necessarie?
 
 ## Compito
 

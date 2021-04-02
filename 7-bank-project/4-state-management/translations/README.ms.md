@@ -84,9 +84,9 @@ Sekarang kita telah meletakkan objek `state` untuk menyimpan data kita, langkah 
 
 Untuk mengelakkan berlakunya perubahan pada objek `state`, adalah praktik yang baik untuk mempertimbangkannya [*tidak berubah*](https://en.wikipedia.org/wiki/Immutable_object), yang bermaksud bahawa ia tidak dapat diubah sama sekali. Ini juga bermaksud bahawa anda harus membuat objek keadaan baru jika anda ingin mengubah apa-apa di dalamnya. Dengan melakukan ini, anda membina perlindungan mengenai [kesan sampingan](https://en.wikipedia.org/wiki/Side_effect_ (computer_science)), dan membuka kemungkinan untuk ciri baru dalam aplikasi anda seperti melaksanakan undo / redo, sambil mempermudah debug. Sebagai contoh, anda boleh mencatat setiap perubahan yang dibuat ke negeri dan menyimpan sejarah perubahan untuk memahami sumber pepijat.
 
-Dalam JavaScript, anda boleh menggunakan [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) untuk membuat versi yang tidak berubah dari sebuah objek. Sekiranya anda cuba membuat perubahan pada objek yang tidak dapat diubah, pengecualian akan ditimbulkan.
+Dalam JavaScript, anda boleh menggunakan [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) untuk membuat versi yang tidak berubah dari sebuah objek. Sekiranya anda cuba membuat perubahan pada objek yang tidak dapat diubah, pengecualian akan ditimbulkan.
 
-✅ Adakah anda tahu perbezaan antara objek *cetek* dan *dalam* tidak berubah? Anda boleh membacanya [di sini](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
+✅ Adakah anda tahu perbezaan antara objek *cetek* dan *dalam* tidak berubah? Anda boleh membacanya [di sini](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
 
 ### Tugas
 
@@ -101,7 +101,7 @@ function updateState(property, newData) {
 }
 ```
 
-Dalam fungsi ini, kami membuat objek keadaan baru dan menyalin data dari keadaan sebelumnya menggunakan operator [*spread (`...`) operator*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Kemudian kami menimpa harta benda objek tertentu dengan data baru menggunakan [notasi kurungan](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` untuk tugasan. Akhirnya, kita mengunci objek untuk mengelakkan pengubahsuaian menggunakan `Object.freeze()`. Kami hanya menyimpan harta `akaun` di negeri ini buat masa ini, tetapi dengan pendekatan ini anda dapat menambahkan seberapa banyak harta tanah yang anda perlukan di negeri ini.
+Dalam fungsi ini, kami membuat objek keadaan baru dan menyalin data dari keadaan sebelumnya menggunakan operator [*spread (`...`) operator*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Kemudian kami menimpa harta benda objek tertentu dengan data baru menggunakan [notasi kurungan](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` untuk tugasan. Akhirnya, kita mengunci objek untuk mengelakkan pengubahsuaian menggunakan `Object.freeze()`. Kami hanya menyimpan harta `akaun` di negeri ini buat masa ini, tetapi dengan pendekatan ini anda dapat menambahkan seberapa banyak harta tanah yang anda perlukan di negeri ini.
 
 Kami juga akan mengemas kini inisialisasi `state` untuk memastikan keadaan awal juga dibekukan:
 
@@ -149,16 +149,16 @@ Apabila anda ingin menyimpan data dalam penyemak imbas anda, terdapat beberapa s
 - *Adakah data sensitif?* Anda harus mengelakkan menyimpan data sensitif pada pelanggan, seperti kata laluan pengguna.
 - *Berapa lama anda perlu menyimpan data ini?* Adakah anda merancang untuk mengakses data ini hanya untuk sesi semasa atau adakah anda ingin menyimpannya selamanya?
 
-Terdapat banyak cara untuk menyimpan maklumat di dalam aplikasi web, bergantung pada apa yang ingin anda capai. Sebagai contoh, anda boleh menggunakan URL untuk menyimpan pertanyaan carian, dan menjadikannya boleh dibagikan antara pengguna. Anda juga boleh menggunakan [kuki HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) jika data perlu dikongsi dengan pelayan, seperti [pengesahan](https://en.wikipedia.org/wiki/Authentication) maklumat.
+Terdapat banyak cara untuk menyimpan maklumat di dalam aplikasi web, bergantung pada apa yang ingin anda capai. Sebagai contoh, anda boleh menggunakan URL untuk menyimpan pertanyaan carian, dan menjadikannya boleh dibagikan antara pengguna. Anda juga boleh menggunakan [kuki HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies) jika data perlu dikongsi dengan pelayan, seperti [pengesahan](https://en.wikipedia.org/wiki/Authentication) maklumat.
 
 Pilihan lain adalah menggunakan salah satu dari banyak API penyemak imbas untuk menyimpan data. Dua daripadanya sangat menarik:
 
-- [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage): a [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) yang memungkinkan untuk mengekalkan data khusus untuk laman web semasa di pelbagai sesi. Data yang disimpan di dalamnya tidak akan luput.
-- [`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage): ini berfungsi sama seperti `localStorage` kecuali data yang disimpan di dalamnya dibersihkan semasa sesi berakhir (semasa penyemak imbas ditutup).
+- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): a [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) yang memungkinkan untuk mengekalkan data khusus untuk laman web semasa di pelbagai sesi. Data yang disimpan di dalamnya tidak akan luput.
+- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): ini berfungsi sama seperti `localStorage` kecuali data yang disimpan di dalamnya dibersihkan semasa sesi berakhir (semasa penyemak imbas ditutup).
 
-Perhatikan bahawa kedua-dua API ini hanya membenarkan menyimpan [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). Sekiranya anda ingin menyimpan objek yang kompleks, anda perlu membuat siri ke siri [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) menggunakan [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+Perhatikan bahawa kedua-dua API ini hanya membenarkan menyimpan [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String). Sekiranya anda ingin menyimpan objek yang kompleks, anda perlu membuat siri ke siri [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) menggunakan [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
 
-✅ Sekiranya anda ingin membuat aplikasi web yang tidak berfungsi dengan pelayan, anda juga boleh membuat pangkalan data pada klien menggunakan [`IndexedDB` API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). Yang ini dikhaskan untuk kes penggunaan lanjutan atau jika anda perlu menyimpan sejumlah besar data, kerana lebih kompleks untuk digunakan.
+✅ Sekiranya anda ingin membuat aplikasi web yang tidak berfungsi dengan pelayan, anda juga boleh membuat pangkalan data pada klien menggunakan [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Yang ini dikhaskan untuk kes penggunaan lanjutan atau jika anda perlu menyimpan sejumlah besar data, kerana lebih kompleks untuk digunakan.
 
 ### Tugas
 

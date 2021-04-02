@@ -1,6 +1,6 @@
 # Creación de páginas web accesibles
 
-![Todo sobre accesibilidad](../webdev101-a11y.png)
+![Todo sobre accesibilidad](/sketchnotes/webdev101-a11y.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
@@ -23,7 +23,7 @@ En su forma más básica, un lector de pantalla leerá una página de arriba a a
 
 Todo desarrollador web debería familiarizarse con un lector de pantalla. Como se destacó anteriormente, es el cliente que utilizarán sus usuarios. De la misma manera que estás familiarizado con el funcionamiento de un navegador, debes aprender cómo funciona un lector de pantalla. Afortunadamente, los lectores de pantalla están integrados en la mayoría de los sistemas operativos y muchos navegadores contienen extensiones para emular un lector de pantalla.
 
-✅ Prueba una extensión o herramienta de navegador de lector de pantalla. Uno que solo funciona en Windows es [JAWS](https://webaim.org/articles/jaws/). Los navegadores también tienen herramientas integradas que se pueden utilizar para este propósito; Consulta estas [herramientas de navegador Edge centradas en accesibilidad](https://support.microsoft.com/en-us/help/4000734/microsoft-edge-accessibility-features).
+✅ Prueba una extensión o herramienta de navegador de lector de pantalla. Uno que solo funciona en Windows es [JAWS](https://webaim.org/articles/jaws/). Los navegadores también tienen herramientas integradas que se pueden utilizar para este propósito; Consulta estas [herramientas de navegador Edge centradas en accesibilidad](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features).
 
 ### Checar contrastes
 
@@ -44,7 +44,7 @@ La accesibilidad es un tema relativamente extenso. Para ayudarte, existen numero
 
 - [Accessible U - University of Minnesota](https://accessibility.umn.edu/your-role/web-developers)
 
-Si bien no podremos cubrir todos los aspectos de la creación de sitios accesibles, a continuación se muestran algunos de los principios básicos que querrás implementar. Diseñar una página accesible desde el principio es ** siempre ** más fácil que volver a una página existente para hacerla accesible.
+Si bien no podremos cubrir todos los aspectos de la creación de sitios accesibles, a continuación se muestran algunos de los principios básicos que querrá implementar. Diseñar una página accesible desde el principio es **siempre** más fácil que volver a una página existente para hacerla accesible.
 
 ## Buenos principios de visualización
 
@@ -82,7 +82,7 @@ Como era de esperar, los lectores de pantalla leen el texto del enlace de la mis
 
 > El pequeño pingüino, a veces conocido como el pingüino de hadas, es el pingüino más pequeño del mundo. Visita https://en.wikipedia.org/wiki/Little_penguin para obtener más información.
 
-> ** NOTA ** Mientras estás a punto de leer, ** nunca ** debes crear enlaces que se parezcan al anterior.
+> **NOTA** Mientras estás a punto de leer, **nunca** debes crear enlaces que se parezcan al anterior.
 
 Recuerda, los lectores de pantalla son una interfaz diferente de los navegadores con diferentes características.
 
@@ -115,7 +115,7 @@ Imagina la siguiente página:
 | Widget       | [Descripción]('#') | [Orden]('#') |
 | Super widget | [Descripción]('#') | [Orden]('#') |
 
-En este ejemplo, duplicar el texto de descripción y orden tiene sentido para alguien que usa un navegador. Sin embargo, alguien que use un lector de pantalla solo escuchará las palabras * descripción * y * orden * repetidas sin contexto.
+En este ejemplo, duplicar el texto de descripción y orden tiene sentido para alguien que usa un navegador. Sin embargo, alguien que use un lector de pantalla solo escuchará las palabras *descripción* y *orden* repetidas sin contexto.
 
 Para apoyar este tipo de escenarios, HTML apoya un conjunto de atributos conocidos como [Aplicaciones de Internet enriquecidas accesibles (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA). Estos atributos te permiten proporcionar información adicional a los lectores de pantalla.
 
@@ -127,7 +127,7 @@ Puedes usar `aria-label` para describir el enlace cuando el formato de la págin
 <a href="#" aria-label="Widget description">descripción</a>
 ```
 
-✅ En general, el uso de HTML semántico como se describe arriba reemplaza el uso de ARIA, pero a veces no existe un equivalente semántico para varios widgets HTML. Un buen ejemplo es una barra de progreso. No hay un equivalente HTML para una barra de progreso, por lo que identifica el `<div>` genérico para este elemento con un rol y valores de aria adecuados. La [documentación de MDN sobre ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) contiene más información útil.
+✅ En general, el uso de HTML semántico como se describe arriba reemplaza el uso de ARIA, pero a veces no existe un equivalente semántico para varios widgets HTML. Un buen ejemplo es una barra de progreso. No hay un equivalente HTML para una barra de progreso, por lo que identifica el `<div>` genérico para este elemento con un rol y valores de aria adecuados. La [documentación de MDN sobre ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) contiene más información útil.
 
 ```html
 <div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">

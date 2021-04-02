@@ -1,6 +1,6 @@
 # テラリウムプロジェクト その1: HTML 入門
 
-![Introduction to HTML](../images/webdev101-html.png)
+![Introduction to HTML](/sketchnotes/webdev101-html.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト
@@ -75,7 +75,7 @@ HTML ドキュメントの 'head' 領域には、Web ページに関する重要
 </head>
 ```
 
-✅ このように viewport の meta タグを設定するとどうなるでしょうか: `<meta name="viewport" content="width=600">`? [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) についてはこちらをご覧ください。
+✅ このように viewport の meta タグを設定するとどうなるでしょうか: `<meta name="viewport" content="width=600">`? [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag) についてはこちらをご覧ください。
 
 ---
 

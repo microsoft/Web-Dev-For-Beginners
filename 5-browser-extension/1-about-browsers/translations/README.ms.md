@@ -1,6 +1,6 @@
 # Projek Pelanjutan Penyemak Imbas Bahagian 1: Semua mengenai Penyemak Imbas
 
-![Sketchnote penyemak imbas](../images/sketchnote.jpg)
+![Sketchnote penyemak imbas](/sketchnotes/browser.jpg)
 > Sketchnote karya [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Kuiz Pra Kuliah
@@ -69,7 +69,7 @@ CO2 Signal's API.
 - [kod pemula](../start). Muat turun folder `start`; anda akan melengkapkan kod dalam folder ini.
 - [NPM](https://www.npmjs.com) - NPM adalah alat pengurusan pakej; memasangnya secara tempatan dan pakej yang disenaraikan dalam fail `package.json` anda akan dipasang untuk digunakan oleh aset web anda
 
-✅ Ketahui lebih lanjut mengenai pengurusan pakej dalam [modul pembelajaran yang sangat baik](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/)
+✅ Ketahui lebih lanjut mengenai pengurusan pakej dalam [modul pembelajaran yang sangat baik](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/)
 
 Luangkan masa sebentar untuk melihat pangkalan kode:
 
@@ -156,7 +156,7 @@ Lihatlah kedai pelanjutan penyemak imbas dan pasang satu di penyemak imbas anda.
 
 Dalam pelajaran ini anda belajar sedikit mengenai sejarah penyemak imbas web; ambil kesempatan ini untuk mengetahui bagaimana pencipta World Wide Web membayangkan penggunaannya dengan membaca lebih banyak mengenai sejarahnya. Beberapa laman web yang berguna termasuk:
 
-[Sejarah Penyemak Imbas Web](https://www.mozilla.org/en-US/firefox/browsers/browser-history/)
+[Sejarah Penyemak Imbas Web](https://www.mozilla.org/firefox/browsers/browser-history/)
 
 [Sejarah Tentang Web](https://webfoundation.org/about/vision/history-of-the-web/)
 

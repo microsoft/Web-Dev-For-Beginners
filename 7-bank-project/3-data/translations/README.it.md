@@ -33,7 +33,7 @@ Quando le applicazioni web hanno iniziato a diventare più complesse e interatti
 
 ![Aggiornare il flusso di lavoro in un'applicazione a pagina singola](../images/spa.png)
 
-Quando è stato introdotto per la prima volta AJAX, l'unica API disponibile per recuperare i dati in modo asincrono era [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). I browser moderni ora implementano anche l'[API Fetch](https://developer.mozilla.org/it/docs/Web/API/Fetch_API), più conveniente e potente, che utilizza le promesse ed è più adatta per manipolare i dati JSON.
+Quando è stato introdotto per la prima volta AJAX, l'unica API disponibile per recuperare i dati in modo asincrono era [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). I browser moderni ora implementano anche l'[API Fetch](https://developer.mozilla.org/it/docs/Web/API/Fetch_API), più conveniente e potente, che utilizza le promesse ed è più adatta per manipolare i dati JSON.
 
 > Sebbene tutti i browser moderni supportino l'`API Fetch`, se si desidera che la propria applicazione web funzioni su browser legacy o vecchi, è sempre una buona idea controllare prima la [tabella di compatibilità su caniuse.com](https://caniuse.com/fetch).
 
@@ -63,7 +63,7 @@ async function getAccount(user) {
 }
 ```
 
-Si usa l'API `fetch` per richiedere i dati in modo asincrono dal server, ma questa volta non servono parametri aggiuntivi oltre all'URL da chiamare, poiché si sta solo interrogando i dati. Per impostazione predefinita, `fetch` crea una richiesta  HTTP [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET), che è ciò che serve qui.
+Si usa l'API `fetch` per richiedere i dati in modo asincrono dal server, ma questa volta non servono parametri aggiuntivi oltre all'URL da chiamare, poiché si sta solo interrogando i dati. Per impostazione predefinita, `fetch` crea una richiesta  HTTP [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET), che è ciò che serve qui.
 
 ✅ `encodeURIComponent()` è una funzione che evita i caratteri speciali per l'URL. Quali problemi si potrebbero avere se non viene chiamata questa funzione e si utilizza direttamente il valore del campo `user` nell'URL?
 
@@ -111,17 +111,17 @@ navigate('/dashboard');
 
 ✅ Si sa che per impostazione predefinita, si possono  chiamare solo le API di un server che ha *stesso dominio e porta* della pagina web che si sta visualizzando? Questo è un meccanismo di sicurezza applicato dai browser. Un momento, la nostra app web è in esecuzione su `localhost:3000` mentre l'API del server è in esecuzione su  `localhost:5000`, come mai funziona? Utilizzando una tecnica chiamata CORS [Cross-Origin Resource Sharing](https://developer.mozilla.org/it/docs/Web/HTTP/CORS), è possibile eseguire richieste HTTP con diverse origini (cross-origin) se il server aggiunge intestazioni speciali alla risposta, consentendo eccezioni per domini specifici.
 
-> Ulteriori informazioni sulle API sono disponibili seguendo questa [lezione](https://docs.microsoft.com/en-us/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-4621-cxa)
+> Ulteriori informazioni sulle API sono disponibili seguendo questa [lezione](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-4621-cxa)
 
 ## Aggiornare HTML per visualizzare i dati
 
 Ora che si hanno i dati dell'utente, occorre aggiornare l'HTML esistente per visualizzarli. E'  già noto come recuperare un elemento dal DOM utilizzando ad esempio `document.getElementById()`. Dopo aver ottenuto un elemento base, ecco alcune API che si possono utilizzare per modificarlo o aggiungervi elementi figlio:
 
-- Usando la proprietà [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)  si può  cambiare il testo di un elemento. Notare che la modifica di questo valore rimuove tutti i figli dell'elemento (se presenti) e li sostituisce con il testo fornito. In quanto tale, è anche un metodo efficiente per rimuovere tutti i figli di un dato elemento assegnandogli una stringa vuota  `""` .
+- Usando la proprietà [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent)  si può  cambiare il testo di un elemento. Notare che la modifica di questo valore rimuove tutti i figli dell'elemento (se presenti) e li sostituisce con il testo fornito. In quanto tale, è anche un metodo efficiente per rimuovere tutti i figli di un dato elemento assegnandogli una stringa vuota  `""` .
 
-- Usando [`document.createElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) insieme al metodo [`append()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append) si può  creare e allegare uno o più nuovi elementi figlio.
+- Usando [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) insieme al metodo [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) si può  creare e allegare uno o più nuovi elementi figlio.
 
-✅ Utilizzando la proprietà [`innerHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) di un elemento è anche possibile modificare il suo contenuto HTML, ma questo dovrebbe essere evitato poiché è vulnerabile agli attacchi di [cross-site scripting (XSS)](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting) .
+✅ Utilizzando la proprietà [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) di un elemento è anche possibile modificare il suo contenuto HTML, ma questo dovrebbe essere evitato poiché è vulnerabile agli attacchi di [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting) .
 
 ### Attività
 
@@ -159,7 +159,7 @@ Ora se si prova ad accedere con un account non valido, si dovrebbe vedere qualco
 
 ![Videata che mostra il messaggio di errore visualizzato durante l'accesso](../images/login-error.png)
 
-Ora si ha un testo di errore che viene visualizzato, ma se si prova con un lettore di schermo si noterà che non viene annunciato nulla. Affinché il testo che viene aggiunto dinamicamente a una pagina venga annunciato dai lettori di schermo, sarà necessario utilizzare qualcosa chiamato [Live Region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Qui verrà utilizzato un tipo specifico di live region chiamato alert:
+Ora si ha un testo di errore che viene visualizzato, ma se si prova con un lettore di schermo si noterà che non viene annunciato nulla. Affinché il testo che viene aggiunto dinamicamente a una pagina venga annunciato dai lettori di schermo, sarà necessario utilizzare qualcosa chiamato [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Qui verrà utilizzato un tipo specifico di live region chiamato alert:
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -223,7 +223,7 @@ function updateDashboard() {
 
 Innanzitutto, controllare di avere i dati dell'account necessari prima di andare oltre. Quindi si usa la funzione `updateElement()` creata in precedenza per aggiornare l'HTML.
 
-> Per rendere la visualizzazione del saldo più bella, si usa il metodo [`toFixed(2)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) per forzare la visualizzazione del valore con 2 cifre per la parte decimale.
+> Per rendere la visualizzazione del saldo più bella, si usa il metodo [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) per forzare la visualizzazione del valore con 2 cifre per la parte decimale.
 
 Ora occorre chiamare la funzione `updateDashboard()` ogni volta che viene caricato il cruscotto. Se si è già terminato il [compito della lezione 1](../../1-template-route/translations/assignment.it.md) , questo dovrebbe essere immediato, altrimenti si può  utilizzare la seguente implementazione.
 
@@ -248,7 +248,7 @@ Con questa modifica, ogni volta che viene visualizzata la pagina del cruscotto v
 
 ## Creare righe di tabelle dinamicamente con modelli HTML
 
-Nella [prima lezione](../../1-template-route/translations/README.it.md) sono stati utilizzati modelli HTML insieme al metodo [`appendChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) per implementare la navigazione nell'app. I modelli possono anche essere più piccoli e utilizzati per popolare dinamicamente parti ripetitive di una pagina.
+Nella [prima lezione](../../1-template-route/translations/README.it.md) sono stati utilizzati modelli HTML insieme al metodo [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) per implementare la navigazione nell'app. I modelli possono anche essere più piccoli e utilizzati per popolare dinamicamente parti ripetitive di una pagina.
 
 Verrà usato un approccio simile per visualizzare l'elenco delle transazioni nella tabella HTML.
 
@@ -299,7 +299,7 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-Qui si utilizza il metodo [`document.createDocumentFragment()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment) che crea un nuovo frammento DOM su cui si può  lavorare, prima di collegarlo finalmente alla tabella HTML.
+Qui si utilizza il metodo [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) che crea un nuovo frammento DOM su cui si può  lavorare, prima di collegarlo finalmente alla tabella HTML.
 
 C'è ancora un'altra cosa da fare prima che questo codice possa funzionare, poiché la funzione `updateElement()` attualmente supporta solo contenuto di testo. Occorre cambiare un poco il suo codice:
 
@@ -311,7 +311,7 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-Si usa il metodo [`append()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append) in quanto consente di allegare testo o [nodi DOM](https://developer.mozilla.org/en-US/docs/Web/API/Node) a un elemento genitore, che è perfetto per tutti i casi d'uso.
+Si usa il metodo [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) in quanto consente di allegare testo o [nodi DOM](https://developer.mozilla.org/docs/Web/API/Node) a un elemento genitore, che è perfetto per tutti i casi d'uso.
 
 Se si prova a utilizzare l'account `test` per accedere, ora si dovrebbe vedere un elenco di transazioni sul cruscotto 🎉.
 
@@ -319,7 +319,7 @@ Se si prova a utilizzare l'account `test` per accedere, ora si dovrebbe vedere u
 
 ## 🚀 Sfida
 
-Collaborare per far sembrare la pagina del cruscotto una vera app bancaria. Se è già stato definito lo stile della propria app, provare a utilizzare le [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) per creare una [disposizione reattiva](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) che funzioni bene sia su dispositivi desktop che mobili.
+Collaborare per far sembrare la pagina del cruscotto una vera app bancaria. Se è già stato definito lo stile della propria app, provare a utilizzare le [media query](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) per creare una [disposizione reattiva](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) che funzioni bene sia su dispositivi desktop che mobili.
 
 Ecco un esempio di una pagina cruscotto con applicato uno stile:
 
