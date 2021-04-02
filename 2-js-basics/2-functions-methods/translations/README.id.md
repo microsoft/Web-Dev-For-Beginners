@@ -1,6 +1,6 @@
 # Dasar-dasar JavaScript: Metode dan Fungsi
 
-![Dasar-dasar JavaScript - Fungsi](../images/webdev101-js-functions.png)
+![Dasar-dasar JavaScript - Fungsi](/sketchnotes/webdev101-js-functions.png)
 
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 

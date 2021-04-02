@@ -2,7 +2,7 @@
 
 Deze les behandelt de basisprincipes van GitHub, een platform voor het hosten en beheren van wijzigingen in uw code.
 
-![Intro to GitHub](../images/webdev101-github.png)
+![Intro to GitHub](/sketchnotes/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz voorafgaand aan de lezing

@@ -1,6 +1,6 @@
 # 建立無障礙網頁
 
-![關於網頁親和力](../webdev101-a11y.png)
+![關於網頁親和力](/sketchnotes/webdev101-a11y.png)
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗

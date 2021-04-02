@@ -1,6 +1,6 @@
 # Projek Terrarium Bahagian 2: Pengenalan Kepada CSS
 
-![Pengenalan Kepada CSS](../images/webdev101-css.png)
+![Pengenalan Kepada CSS](/sketchnotes/webdev101-css.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah

@@ -1,6 +1,6 @@
 # Asas JavaScript: Membuat Keputusan
 
-![Asas JavaScript - Membuat Keputusan](../images/webdev101-js-decisions.png)
+![Asas JavaScript - Membuat Keputusan](/sketchnotes/webdev101-js-decisions.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah

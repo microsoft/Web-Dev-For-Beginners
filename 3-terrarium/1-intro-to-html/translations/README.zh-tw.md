@@ -1,6 +1,6 @@
 # 盆栽盒專案 Part 1： HTML 簡介
 
-![HTML 簡介](../images/webdev101-html.png)
+![HTML 簡介](/sketchnotes/webdev101-html.png)
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗

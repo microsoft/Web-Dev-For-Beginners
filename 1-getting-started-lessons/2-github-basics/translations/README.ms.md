@@ -2,7 +2,7 @@
 
 Pelajaran ini merangkumi pengetahuan asas tentang GitHub, dan adalah salah satu platform untuk menjadi tuan rumah dan menguruskan perubahan pada kod anda.
 
-![Intro to GitHub](../images/webdev101-github.png)
+![Intro to GitHub](/sketchnotes/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra-Kuliah

@@ -1,6 +1,6 @@
 # Toegankelijke webpagina's maken
 
-![Alles over toegankelijkheid](../webdev101-a11y.png)
+![Alles over toegankelijkheid](/sketchnotes/webdev101-a11y.png)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz voorafgaand aan de lezing
