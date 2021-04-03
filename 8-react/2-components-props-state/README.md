@@ -118,12 +118,112 @@ const Hero = ({ heroData }) => {
 export default Hero;
 ```
 
-We won't be dealing with too much complex data in this course but the examples provided give some options as to how React can handle data in multiple ways depending on preference and use cases. Before we go any further with introducing another way of providing centralized data, let's create a file where we will store our portfolio data to pull from. In a real-world application, there are other ways to input and source your data from platforms suchs as a Content Management System or even from markdown.
+We won't be dealing with too much complex data in this course but the examples provided give some options as to how React can handle data in multiple ways depending on preference and use cases. Before we go any further with introducing another way of providing centralized data, let's create a file where we will store our portfolio data to pull from. In a real-world application, there are other ways to input and source your data from platforms such as a Content Management System or even from markdown. For this project and course, we'll be creating a mock data to pull data objects from, so let's get right to it!
 
 ### Creating a data source
 
-install nanoid
+First create a new directory in `src` called `mock` and a file inside of it call `data.js`. Copy in the following snippet to that file:
 
+```jsx
+// Head data
+export const headData = {
+  title: 'Name | Developer', // e.g: 'Name | Developer'
+  description: 'Welcome to my portfolio', // e.g: Welcome to my website
+};
+
+// Hero data
+export const heroData = {
+  title: 'Hi, my name is',
+  name: 'Name',
+  subtitle: 'I\'m a developer!',
+  cta: 'Know more',
+};
+
+// About data
+export const aboutData = {
+  img: 'profile.jpg',
+  paragraphOne: '',
+  paragraphTwo: '',
+  paragraphThree: '',
+  resume: '', // if no resume, the button will not show up
+};
+
+// Projects data
+export const projectsData = [
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: '',
+    info: '',
+    info2: '',
+    url: '',
+    repo: '', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: '',
+    info: '',
+    info2: '',
+    url: '',
+    repo: '', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: '',
+    info: '',
+    info2: '',
+    url: '',
+    repo: '', // if no repo, the button will not show up
+  },
+];
+
+// Contact data
+export const contactData = {
+  cta: '',
+  btn: '',
+  email: '',
+};
+
+// Footer data
+export const footerData = {
+  networks: [
+    {
+      id: nanoid(),
+      name: 'twitter',
+      url: '',
+    },
+    {
+      id: nanoid(),
+      name: 'codepen',
+      url: '',
+    },
+    {
+      id: nanoid(),
+      name: 'linkedin',
+      url: '',
+    },
+    {
+      id: nanoid(),
+      name: 'github',
+      url: '',
+    },
+  ],
+};
+```
+
+In this file, we've created several objects with properties and immediately exported them. For brevity's sake, each of the object points to a component in the portfolio project with mainly string properties that we will use to store our data. You can replace or fill out the key values on those properties when you start to build out more components. Note the `nanoid()` function we are calling at the `id` keys. `nanoid` is an external library we will be using to generate unique string IDs. Let's go ahead a install nano id now:
+
+```bash
+npm i nanoid
+
+# OR
+
+yarn add nanoid
+```
+
+ Unique ID keys are necessary when rendering lists in React as the keys help React to identify which items have changed. We will go into keys and lists when we get to mapping out and rendering the lists in our components. Go to this [React documentation](https://reactjs.org/docs/lists-and-keys.html#keys) to read more about keys.
 ## Context and hooks
 
 useContext
