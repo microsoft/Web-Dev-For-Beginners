@@ -125,9 +125,19 @@ export default App;
 
 The `App` function in App.js represents a React function component. In React, components can be defined as class components or function components. We will get into explaining more about these components in the next chapter when we start building out more components. You can create your components as a individual files (Single File Component - SFC). In React, html-like tags which are what we call JSX can be passed in the return statement to be returned. The JSX inside the return function is what the App.js will render out. JSX stands for JavaScript XML and is a syntax extension to JavaScript that allows you to write markup inside a React component.
 
-### Set up TailwindCSS
+### Set up TailwindCSS and SASS
 
-Before we go any further, let's install [TailwindCSS](https://tailwindcss.com/), the CSS utility library we will be using for styling of this project. Tailwind CSS is a highly customizable, low-level CSS framework that gives us all of the building blocks we need to build intuitive user interfaces. So, it is simply a utility first CSS framework. Let's install Tailwind:
+Before we go any further, let's install [TailwindCSS](https://tailwindcss.com/), the CSS utility library we will be using for styling of this project. Tailwind CSS is a highly customizable, low-level CSS framework that gives us all of the building blocks we need to build intuitive user interfaces. So, it is simply a utility first CSS framework. We want to write our CSS using SASS, a CSS compiler so that we can easily nest our styles seamlessly. Let's install Tailwind and the node-sass package:
+
+#### Install Node SASS
+
+```bash
+npm i sass
+
+# OR
+
+yarn add sass
+```
 
 #### Install Tailwind
 
@@ -136,7 +146,7 @@ npm i tailwindcss autoprefixer postcss-cli
 
 # OR
 
-yarn add tailwindcss autoprefixer postcss-cli.
+yarn add tailwindcss autoprefixer postcss-cli
 ```
 
 More details on [here](https://tailwindcss.com/docs/installation).
@@ -218,14 +228,24 @@ plugins: [],
 }
 ```
 
-Now open up the `src/app.css` file that was generated when creating your React app and import in Tailwind's `base`, `components`, and `utitlities` styles, replacing all the original file contents.
+#### Create styles directory and files
+
+Next, let's create a `styles` folder and a new `tailwind.scss` file inside of it. Move the `index.css` file that was generated when creating your React app into the `styles` directory and rename it to `index.scss`. In the `tailwind.scss` file, import in Tailwind's `base`, `components`, and `utitlities` styles, replacing all the original file contents.
 
 ```css
-// src/index.css
+// src/tailwind.scss
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+
+/* Start purging... */
+@import "tailwindcss/components";
+/* Stop purging. */
+
+/* Start purging... */
+@import "tailwindcss/utilities";
+/* Stop purging. */
+
+/* Custom utilities */
 ```
 
 Next, you'll need to import the CSS file in your `/src/index.js`
@@ -233,7 +253,8 @@ Next, you'll need to import the CSS file in your `/src/index.js`
 ```diff
 import React from 'react';
 import ReactDOM from 'react-dom';
-+ import './index.css';
++ import './styles/index.scss';
++ import './styles/tailwind.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -244,6 +265,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+
+The `index.scss` will be empty for now until component styles are imported in when you start creating components in the next lesson.
 
 #### Run your development environment
 
@@ -302,7 +325,7 @@ function App() {
 export default App;
 ```
 
-In localhost:3000, you should be able to see the hotreloaded changes reflected in your browser!
+In localhost:3000, you should be able to see the compiled and hotreloaded changes reflected in your browser!
 
 ## Next
 
