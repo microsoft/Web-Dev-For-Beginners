@@ -36,10 +36,10 @@ const Hero = () => {
 Essentially, JSX translate the HTML tags into `React.createElement` calls. Note that `className` attribute key is used instead of `class`, as `class` is a reserved keyword in JavaScript. JavaScript expressions can also be written inside JSX. For instance, the code below shows a variable or prop passed in. We will dive more into props later in the lesson. In the JSX, you  would then output the prop's value inside curly braces. When the component renders, the name's value will output onto the DOM.
 
 ```jsx
-const Hero = ({ name }) => {
+const Hero = ({ hero }) => {
   return (
     <div className="hero">
-      <h1>My name is {name} and this is my portfolio!</h1>
+      <h1>My name is {hero.name} and this is my portfolio!</h1>
     </div>
   );
 }
@@ -87,7 +87,7 @@ const Hero = ({ hero }) => {
 export default Hero;
 ```
 
-The `hero` prop variable is being passed down from our outer most parent component which is our `App.js` in this case. The `hero` variable is an arbitrary data value that we haven't defined yet. But what is happening here is that `hero` is a variable or 'placeholder' that when accessed at `hero.name` will render and evaluate to whatever you've set the the property name value to e.g a string containing your name.
+The `hero` prop variable is being passed down from our outer most parent component which is our `App.js` in this case. The `hero` variable is an arbitrary data value that we haven't defined yet. To pass in the prop, we include `hero` inside of the parentheses where our `Hero` function is defined. The wrapping of curly braces is destructuring our `hero` from props, otherwise we'll need to write access props doing this: `props.hero.name`. But what is happening here is that `hero` is a variable or 'placeholder' that when accessed at `hero.name` will render and evaluate to whatever you've set the the property name value to e.g a string containing your name.
 
 Let's now have a look at our `App.js` with some markup edits and adding of a data layer:
 
@@ -98,7 +98,7 @@ import Hero from './components/Hero';
 function App() {
   return (
     <div className="App">
-      <Hero hero={{ ...hero }} />
+      <Hero hero={hero} />
     </div>
   );
 }
@@ -227,16 +227,135 @@ yarn add nanoid
 
  Unique ID keys are necessary when rendering lists in React as the keys help React to identify which items have changed. We will go more into keys and lists when we get to mapping out and rendering the lists in our components. Go to this [React documentation](https://reactjs.org/docs/lists-and-keys.html#keys) to read more about keys.
 
-## Hooks
+## Hooks and State
 
-In this section, we'll be introducing another core concept of React, [hooks](https://reactjs.org/docs/hooks-intro.html). Hooks make function components stateful without using the 'class' concept in React.
+In this section, we'll be introducing another core concept of React, [hooks](https://reactjs.org/docs/hooks-intro.html). Hooks make function components stateful using these functions that hook into our components without using the 'class' concept in React. Currently, we are not using any data source of outputting any dynamic data just yet. But the idea is to make our data dynamic, so it's time to create your first Reactive variable and set your app's state. We will make use of the mock data structure we created earlier and pull it in as our state source. The idea of this data is to mock what an API (Application Programming Interface) data source might look like. We will not be going into APIs in this lesson but will utilize the idea of setting the state and passing it down into our components.
 
-useState
+**State** is an attribute that is used to store information. It contains all the app component data that can dynamically change when the component re-renders. This means that the components has the ability to keep track of changing data. In a functional component, we can utilize the hook [`useState.](https://reactjs.org/docs/hooks-overview.html#state-hook)`. 
 
-useEffect
+### State (`useState`)
 
-The three dots in `...heroData` is called the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and it helps to pass in all the props so that we don't have to write out the prop variables individually.
-## Hooks
+To set state with `useState` we will first need to import it in our `App.js` component. Going back to our `App.js`, first let's import in the `useState` hook from React.
+
+```jsx
+import React, { useState } from 'react';
+```
+
+Next, we need to declare our state, our function to update state and call `useState` within our component. After the opening of our App function, we need to destructure and return `hero` and a function `setHero` from the hook `useState`. `useState` returns a tuple, which is an array with two items, in this case an initial value and a function that will update that value. The argument we will pass in to useState is the initial value of an empty object to be able to store the hero data in it when component mounts.
+
+Within your component (under `function App() {`) add:
+
+```jsx
+const [hero, setHero] = useState({});
+```
+
+### Side-effect (`useEffect`)
+
+Above we have defined the `setHero` function, which will be used to set the hero state. This function will simply be used to set the hero state. When the app component mounts to the DOM, we will use our next React hook `useEffect()` to set the hero data. It is a React lifecycle hook also known as side effects, that helps to call functions after the component first renders to the DOM and also anytime the DOM updates. Since we are loading data from a static mock file, we want to call our `setHero` function to update the state with the returned hero data so that we can render our updated data. This is a common pattern when you are fetching data from a remote endpoint.
+
+First import `useEffect` from React in our import statement at the very top:
+
+```jsx
+import React, { useState, useEffect } from 'react';
+```
+
+Then we can set the hero data like so:
+
+```jsx
+useEffect(() => {
+  setHero({ ...heroData });
+}, []);
+```
+
+Above, we pass in our effect as the `heroData` and also by leaving the second argument array empty, this method will run once before the initial render. The three dots in `...heroData` is called the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and it helps to pass in all the props so that we don't have to write out the prop variables individually.
+
+
+The updated `App.js` file should now look like this:
+
+```jsx
+import React, { useState, useEffect } from 'react';
+import { heroData } from './mock/data';
+import Hero from './components/Hero';
+
+function App() {
+  const [hero, setHero] = useState({});
+
+  useEffect(() => {
+    setHero({ ...heroData });
+  }, []);
+
+  return (
+    <div>
+      <Hero hero={hero} />
+    </div>
+  );
+}
+
+export default App;
+```
+
+Let's go back to our hero component and update it to pull in the necessary properties:
+
+```jsx
+import React from 'react';
+
+const Hero = ({ hero }) => {
+
+  return (
+    <section className="hero">
+      <div className="hero__container">
+        <h1 className="hero__title">
+          { hero.title || 'Hi, my name is' }
+        <span>{ hero.name || 'Your name' }</span>
+        <br />
+        { hero.subtitle || 'I\'m a developer.' }
+        </h1>
+      </div>
+    </section>
+  );
+}
+
+export default Hero;
+```
+
+Just expanding on what we've already done above with this component, we are accessing the property `title`, `name`, and `subtitle` from the hero object being passed down from the application's state. The `||` is the logical OR operator that helps to fallback to the right expression which is a string when for instance, `hero.name` does not exist.
+
+## Utilizing React devtools and creating subcomponents
+
+In the previous lesson one of the recommendations is to install React devtools extension in your browser, if you haven't already, go ahead and do that as in the next section we will go into learning a bit inspecting our components and props and debugging.
+
+Now go into your inspector tool under the React **Components** tab, you should see a view where you can click in and inspect the `App` and `Hero` components. If you've followed the above sections, you should see that you are able to see the `state` store in the App component under the `hooks` subheading:
+
+```json
+[
+  {
+    "name": "State",
+    "value": {
+      "title": "Hi, my name is",
+      "name": "Name",
+      "subtitle": "I'm a developer!",
+      "cta": "Know more"
+    }
+  }
+]
+```
+
+And when inspecting the hero component you should see:
+
+```json
+{
+  "hero": {
+    "title": "Ciao, my name is",
+    "name": "Name",
+    "subtitle": "I'm a developer!",
+    "cta": "Know more"
+  }
+}
+```
+
+The `hero` object is being passed down to the hero component where you can then access all the property values.
+
+
 
 ## Credits
 Written with ♥️ by [Jaeriah Tay](https://www.twitter.com/jaeriahtay)

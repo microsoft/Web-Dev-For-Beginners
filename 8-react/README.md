@@ -3,9 +3,9 @@
 In the React chapter, we're going to lay out the foundations to create your very own customizable single page application portfolio in React. At the end of the chapter and ultimately the end of the bootcamp program, you will have multiple projects and materials to showcase in your portfolio.
 ## Lessons
 
-1. Scaffold React project and set up tooling
-2. Build out your site: Components, Props, JSX, State & Hooks
-3. Add styling and deploy your site
+1. [Scaffold React project and set up tooling](https://github.com/FrontEndFoxes/school-curriculum/tree/main/8-react/1-scaffold-site)
+2. [Build out your site: Components, Props, JSX, State & Hooks](https://github.com/FrontEndFoxes/school-curriculum/tree/main/8-react/2-components-props-state)
+3. [Add styling and deploy your site](https://github.com/FrontEndFoxes/school-curriculum/tree/main/8-react/3-styling-deployment)
 
 ## Requirements and Submission
 
