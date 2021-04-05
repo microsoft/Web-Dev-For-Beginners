@@ -19,7 +19,7 @@ You need a local web server to test the web app we'll build in this lesson. If d
 - Node.js. Make sure you version of Node.js is at least 12, or the latest stable release.
 - Preferred code edition or IDE
 - Terminal. MacOS and Windows both have built-in terminals. If you're using a code editor like VSCode, it also has conveniently built-in terminal.
-- React devtools is recommended. It is a web browser extension that helps with developing and debugging when using React.
+- React devtools is recommended. It is a web browser extension that helps with developing and debugging when using React. We will be using the devtools when we start creating components.
 
 ## Project Setup
 
