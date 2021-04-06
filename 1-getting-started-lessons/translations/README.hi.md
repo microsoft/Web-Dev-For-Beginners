@@ -1,17 +1,17 @@
-# Getting Started with Web Development
+# वेब डेवलपमेंट के साथ शुरुआत करना
 
-In this section of the curriculum, you will be introduced to non project-based concepts important to becoming a professional developer.
+पाठ्यक्रम के इस खंड में, आपको पेशेवर डेवलपर बनने के लिए महत्वपूर्ण गैर-परियोजना आधारित अवधारणाओं से परिचित कराया जाएगा।
 
-### Topics
+### विषय
 
-1. [Introduction to Programming Languages and Tools of the Trade](1-intro-to-programming-languages/README.md)
-2. [Basics of GitHub](2-github-basics/README.md)
-3. [Basics of Accessibility](3-accessibility/README.md)
+1. [प्रोग्रामिंग भाषाओं और व्यापार के उपकरण का परिचय](../1-intro-to-programming-languages/translations/README.hi.md)
+2. [गिटहब की मूल बातें](../2-github-basics/translations/README.hi.md)
+3. [पहुँच की मूल बातें](../3-accessibility/translations/README.hi.md)
 
-### Credits
+### क्रेडिट
 
-Basics of Accessibility was written with ♥️ by [Christopher Harrison](https://twitter.com/geektrainer)
+एक्सेसिबिलिटी की मूल बातें [क्रिस्टोफर हैरिसन](https://twitter.com/geektrainer) द्वारा लिखी गया था
 
-Introduction to GitHub was written with ♥️ by [Floor Drees](https://twitter.com/floordrees)
+GitHub का परिचय [फ्लोर ड्रेस](https://twitter.com/floordrees) द्वारा ♥️ के साथ  लिखी गई थीं
 
-Introduction to Programming Languages and Tools of the Trade was written with ♥️ by [Jasmine Greenaway](https://twitter.com/paladique)
+प्रोग्रामिंग भाषाओं और व्यापार के उपकरण का परिचय  [जस्मिने ग्रीनवे](https://twitter.com/paladique)  द्वारा ♥️ के साथ  लिखी गई थीं
