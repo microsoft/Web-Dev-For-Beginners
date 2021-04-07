@@ -1,5 +1,8 @@
 # Conceptos básicos de JavaScript: matrices y bucles
 
+![JavaScript Basics - Arrays](../images/webdev101-js-arrays.png)
+> Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
+
 [![Matrices y bucles](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Matrices y bucles")
 
 
@@ -87,7 +90,7 @@ while (i < 10) {
 }
 ```
 
-✅ ¿Por qué elegiría un bucle for frente a un bucle while? 17K espectadores tenían la misma pregunta sobre StackOverflow, y algunas de las opiniones [podrían ser interesantes para usted](https://stackoverflow.com/questions/39969145/ while-loops-vs-for-loops-in-javascript).
+✅ ¿Por qué elegiría un bucle for frente a un bucle while? 17K espectadores tenían la misma pregunta sobre StackOverflow, y algunas de las opiniones [podrían ser interesantes para usted](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
 
 ## Bucles y matrices
 
