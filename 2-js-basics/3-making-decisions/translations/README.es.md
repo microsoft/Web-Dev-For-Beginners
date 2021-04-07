@@ -1,7 +1,7 @@
 # Conceptos básicos de JavaScript: tomar decisiones
 
 
-![JavaScript Basics - Making decisions](../images/webdev101-js-decisions.png)
+![JavaScript Basics - Making decisions](/sketchnotes/webdev101-js-decisions.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11)

@@ -1,6 +1,6 @@
 # Conceptos básicos de JavaScript: matrices y bucles
 
-![JavaScript Basics - Arrays](../images/webdev101-js-arrays.png)
+![JavaScript Basics - Arrays](/sketchnotes/webdev101-js-arrays.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 [![Matrices y bucles](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Matrices y bucles")
