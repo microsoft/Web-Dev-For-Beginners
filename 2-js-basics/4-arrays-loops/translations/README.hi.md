@@ -1,72 +1,72 @@
-# JavaScript Basics: Arrays and Loops
+# जावास्क्रिप्ट मूल बातें: ऐरे और लूप्स
 
-![JavaScript Basics - Arrays](images/webdev101-js-arrays.png)
-> Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
+![जावास्क्रिप्ट मूल बातें - एरेस ](/sketchnotes/webdev101-js-arrays.png)
+> [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा स्केचनेट
 
-## Pre-Lecture Quiz
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13)
+## पूर्व व्याख्यान प्रश्नोत्तरी
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13?loc=hi)
 
-This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
+इस पाठ में जावास्क्रिप्ट की मूल बातें शामिल हैं, वह भाषा जो वेब पर अन्तरक्रियाशीलता प्रदान करती है। इस पाठ में, आप ऐरे और लूप्स के बारे में जानेंगे, जिनका उपयोग डेटा में हेरफेर करने के लिए किया जाता है।
 
-[![Arrays and Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
+[![ऐरे और लूप्स](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "ऐरे और लूप्स")
 
-> Click the image above for a video about arrays and loops.
-## Arrays
+> ऐरे और लूप्स के बारे में वीडियो के लिए ऊपर दी गई छवि पर क्लिक करें।
+## एरेस
 
-Working with data is a common task for any language, and it's a much easier task when data is organized in a structural format, such as arrays. With arrays, data is stored in a structure similar to a list. One major benefit of arrays is that you can store different types of data in one array.
+डेटा के साथ काम करना किसी भी भाषा के लिए एक सामान्य कार्य है, और यह एक बहुत आसान काम है जब डेटा को एक संरचनात्मक प्रारूप में व्यवस्थित किया जाता है, जैसे कि सरणियाँ। एरेस के साथ, डेटा को एक सूची के समान संरचना में संग्रहीत किया जाता है। सरणियों का एक प्रमुख लाभ यह है कि आप विभिन्न प्रकार के डेटा को एक सरणी में संग्रहीत कर सकते हैं।
 
-✅ Arrays are all around us! Can you think of a real-life example of an array, such as a solar panel array?
+✅ हमारे चारों तरफ ऐरे हैं! क्या आप किसी सरणी के वास्तविक जीवन के उदाहरण के बारे में सोच सकते हैं, जैसे कि सौर पैनल एरे?
 
-The syntax for an array is a pair of square brackets.
+एक एरे के लिए सिंटेक्स वर्ग कोष्ठक की एक जोड़ी है।
 
 `let myArray = [];`
 
-This is an empty array, but arrays can be declared already populated with data. Multiple values in an array are separated by a comma.
+यह एक खाली एरे है, लेकिन एरेस को पहले से ही डेटा के साथ आबाद घोषित किया जा सकता है। एक एरे में एकाधिक मान अल्पविराम द्वारा अलग किए गए हैं।
 
 `let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
 
-The array values are assigned a unique value called the **index**, a whole number that is assigned based on its distance from the beginning of the array. In the example above, the string value "Chocolate" has an index of 0, and the index of "Rocky Road" is 4. Use the index with square brackets to retrieve, change, or insert array values.
+एरे मानों को एक अद्वितीय मान दिया जाता है जिसे **सूचकांक** कहा जाता है, एक पूरी संख्या जो कि एरे की शुरुआत से इसकी दूरी के आधार पर निर्दिष्ट की जाती है। ऊपर के उदाहरण में, स्ट्रिंग मूल्य "चॉकलेट" में 0 का सूचकांक है, और "रॉकी ​​रोड" का सूचकांक है। 4. एरे मानों को पुनः प्राप्त करने, बदलने या सम्मिलित करने के लिए वर्ग कोष्ठक के साथ सूचकांक का उपयोग करें।
 
-✅ Does it surprise you that arrays start at the zero index? In some programming languages, indexes start at 1. There's an interesting history around this, which you can [read on Wikipedia](https://en.wikipedia.org/wiki/Zero-based_numbering).
+✅ क्या यह आपको आश्चर्यचकित करता है कि एरेस शून्य सूचकांक पर शुरू होती हैं? कुछ प्रोग्रामिंग भाषाओं में, अनुक्रमित 1 से शुरू होते हैं। इसके आसपास एक दिलचस्प इतिहास है, जिसे आप [विकिपीडिया पर पढ़ सकते हैं] (https://en.wikipedia.org/wiki/Zero-based_numbering)।
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 iceCreamFlavors[2]; //"Vanilla"
 ```
 
-You can leverage the index to change a value, like this:
+आप इस तरह से मूल्य बदलने के लिए सूचकांक का लाभ उठा सकते हैं:
 
 ```javascript
 iceCreamFlavors[4] = "Butter Pecan"; //Changed "Rocky Road" to "Butter Pecan"
 ```
 
-And you can insert a new value at a given index like this:
+और आप किसी दिए गए इंडेक्स में इस तरह से एक नया मान सम्मिलित कर सकते हैं:
 
 ```javascript
 iceCreamFlavors[5] = "Cookie Dough"; //Added "Cookie Dough"
 ```
 
-✅ A more common way to push values to an array is by using array operators such as array.push()
+✅ एरे संचालकों के लिए मानों को धकेलने का एक अधिक सामान्य तरीका है सरणी संचालक जैसे array.push() का उपयोग करना
 
-To find out how many items are in an array, use the `length` property.
+एक एरे में कितने आइटम हैं, यह जानने के लिए `length` संपत्ति का उपयोग करें।
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 iceCreamFlavors.length; //5
 ```
 
-✅ Try it yourself! Use your browser's console to create and manipulate an array of your own creation.
+✅ इसे स्वयं आज़माएं! अपने खुद के निर्माण की एक सरणी बनाने और हेरफेर करने के लिए अपने ब्राउज़र के कंसोल का उपयोग करें।
 
-## Loops
+## लुपस
 
-Loops allow for repetitive or **iterative** tasks, and can save a lot of time and code. Each iteration can vary in their variables, values, and conditions. There are different types of loops in JavaScript, and they have small differences, but essentially do the same thing: loop over data.
+लूप पुनरावृत्ति या **पुनरावृत्त** कार्यों के लिए अनुमति देते हैं, और बहुत समय और कोड बचा सकते हैं। प्रत्येक पुनरावृत्ति उनके वेरीअबल, मूल्यों और स्थितियों में भिन्न हो सकती है। जावास्क्रिप्ट में विभिन्न प्रकार के लूप हैं, और उनके बीच छोटे अंतर हैं, लेकिन अनिवार्य रूप से एक ही काम करते हैं: डेटा पर लूप।
 
-### For Loop
+### फॉर लूप
 
-The `for` loop requires 3 parts to iterate:
-    - `counter` A variable that is typically initialized with a number that counts the number of iterations.
-    - `condition` Expression that uses comparison operators to cause the loop to stop when `true`
-    - `iteration-expression` Runs at the end of each iteration, typically used to change the counter value
+`For` लूप को पुनरावृति के लिए 3 भागों की आवश्यकता होती है:
+    - `counter` एक वैरिएबल है जिसे आमतौर पर एक संख्या के साथ आरंभीकृत किया जाता है जो पुनरावृत्तियों की संख्या को गिनता है।
+    - `condition` अभिव्यक्ति कि तुलना ऑपरेटरों का उपयोग करता है जब लूप को रोकने का कारण होता है `true`
+    - `iteration-expression` प्रत्येक पुनरावृत्ति के अंत में चलता है, आमतौर पर काउंटर मान को बदलने के लिए उपयोग किया जाता है
   
 ```javascript
     //Counting up to 10
@@ -75,11 +75,11 @@ The `for` loop requires 3 parts to iterate:
     }
 ```
 
-✅ Run this code in a browser console. What happens when you make small changes to the counter, condition, or iteration expression? Can you make it run backwards, creating a countdown?
+✅ इस कोड को ब्राउज़र कंसोल में चलाएं। जब आप काउंटर, स्थिति या पुनरावृत्ति अभिव्यक्ति में छोटे बदलाव करते हैं तो क्या होता है? क्या आप उल्टी गिनती बनाकर इसे पीछे की ओर चला सकते हैं?
 
-### While loop
+### व्हाइल लूप
 
-Unlike the syntax for the `for` loop, `while` loops only require a condition that will stop the loop when `true`. Conditions in loops usually rely on other values like counters, and must be managed during the loop. Starting values for counters must be created outside the loop, and any expressions to meet a condition, including changing the counter must be maintained inside the loop.
+`for` लूप के लिए सिंटैक्स के विपरीत, `वाइल` लूप्स को केवल एक शर्त की आवश्यकता होती है जो लूप को रोक देगा जब `true` होगा। लूप में स्थितियां आमतौर पर काउंटर जैसे अन्य मूल्यों पर निर्भर करती हैं, और लूप के दौरान प्रबंधित की जानी चाहिए। काउंटर के लिए मान शुरू करना लूप के बाहर बनाया जाना चाहिए, और किसी भी स्थिति को पूरा करने के लिए किसी भी भाव सहित, काउंटर को लूप के अंदर बनाए रखा जाना चाहिए।
 
 ```javascript
 //Counting up to 10
@@ -90,11 +90,11 @@ while (i < 10) {
 }
 ```
 
-✅ Why would you choose a for loop vs. a while loop? 17K viewers had the same question on StackOverflow, and some of the opinions [might be interesting to you](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
+✅ आप एक फॉर लूप और वाइल लूप क्यों चुनेंगे? 17K दर्शकों का StackOverflow पर एक ही सवाल था, और कुछ राय [आपके लिए दिलचस्प हो सकती है] (https://stackoverflow.com/questions/39969145/ORE-loops-vs-for-loops-in-javascript)
 
-## Loops and Arrays
+## लूपस और अररेस
 
-Arrays are often used with loops because most conditions require the length of the array to stop the loop, and the index can also be the counter value.
+अररेस अक्सर लूपस के साथ उपयोग किया जाता है क्योंकि अधिकांश स्थितियों में लूप को रोकने के लिए अरै की लंबाई की आवश्यकता होती है, और सूचकांक भी काउंटर मूल्य हो सकता है।
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
@@ -104,22 +104,22 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 } //Ends when all flavors are printed
 ```
 
-✅ Experiment with looping over an array of your own making in your browser's console. 
+✅ अपने ब्राउजर के कंसोल में अपनी खुद की मेकिंग पर लूपिंग के साथ प्रयोग करें।
 
 ---
 
-## 🚀 Challenge
+## 🚀 चुनौती
 
-There are other ways of looping over arrays other than for and while loops. There are [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), and [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Rewrite your array loop using one of these techniques.
+लूप के अलावा और अन्य अररेस पर लूपिंग के अन्य तरीके हैं। [ForEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web) हैं /JavaScript/Reference/Statements/for...of), और [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Anray/map)। इन तकनीकों में से किसी एक का उपयोग करके अपने ऐरे लूप को फिर से लिखें।
 
-## Post-Lecture Quiz
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14)
+## व्याख्यान उपरांत प्रश्नोत्तरी
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14?loc=hi)
 
 
-## Review & Self Study
+## समीक्षा और स्व अध्ययन
 
-Arrays in JavaScript have many methods attached to them, extremely useful for data manipulation. [Read up on these methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) and try some of them out (like push, pop, slice and splice) on an array of your creation.
+जावास्क्रिप्ट में ऐरे के पास कई तरीके हैं, जो डेटा हेरफेर के लिए बेहद उपयोगी हैं। [इन तरीकों को पढ़ें](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) और उनमें से कुछ को आज़माएं (जैसे पुश, पॉप, स्लाइस और एसप्लाइस) आपकी रचना पे।
 
-## Assignment
+## असाइनमेंट
 
-[Loop an Array](assignment.md)
+[एक अरै लूप](assignment.hi.md)
