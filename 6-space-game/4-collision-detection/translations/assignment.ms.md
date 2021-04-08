@@ -2,9 +2,9 @@
 
 ## Arahan
 
-## Rubrik
-
 Untuk lebih memahami bagaimana perlanggaran berfungsi, bina permainan yang sangat kecil dengan beberapa item yang bertembung. Buat mereka bergerak melalui menekan kekunci atau klik tetikus, dan membuat sesuatu berlaku pada salah satu item ketika dipukul. Ini mungkin seperti meteor yang menghantam bumi, atau kereta bumper. Dapatkan kreatif!
+
+## Rubrik
 
 | Kriteria | Contoh                                                                                                                | Mencukupi                       | Usaha Lagi |
 | -------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ----------------- |

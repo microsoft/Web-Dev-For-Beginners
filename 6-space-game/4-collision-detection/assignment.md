@@ -2,9 +2,9 @@
 
 ## Instructions
 
-## Rubric
-
 To better understand how collisions work, build a very small game with a few items that collide. Make them move via keypresses or mouse clicks, and make something happen to one of the items when it is hit. It could be something like a meteor hitting the earth, or bumper-cars. Get creative!
+
+## Rubric
 
 | Criteria | Exemplary                                                                                                                | Adequate                       | Needs Improvement |
 | -------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ----------------- |

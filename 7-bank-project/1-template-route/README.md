@@ -41,7 +41,7 @@ If you want to create multiples screens for a web page, one solution would be to
 - You have to reload the entire HTML when switching screen, which can be slow.
 - It's difficult to share data between the different screens.
 
-Another approach is have only one HTML file, and define multiple [HTML templates](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) using the `<template>` element. A template is a reusable HTML block that is not displayed by the browser, and needs to be instantiated at runtime using JavaScript.
+Another approach is have only one HTML file, and define multiple [HTML templates](https://developer.mozilla.org/docs/Web/HTML/Element/template) using the `<template>` element. A template is a reusable HTML block that is not displayed by the browser, and needs to be instantiated at runtime using JavaScript.
 
 ### Task
 
@@ -107,9 +107,9 @@ If you try your current HTML file in a browser, you'll see that it get stuck dis
 
 Instantiating a template is usually done in 3 steps:
 
-1. Retrieve the template element in the DOM, for example using [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById).
-2. Clone the template element, using [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode).
-3. Attach it to the DOM under a visible element, for example using [`appendChild`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild).
+1. Retrieve the template element in the DOM, for example using [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
+2. Clone the template element, using [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
+3. Attach it to the DOM under a visible element, for example using [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
 ✅ Why do we need to clone the template before attaching it to the DOM? What do you think would happen if we skipped this step?
 
@@ -174,7 +174,7 @@ const routes = {
 };
 ```
 
-Now let's modify a bit the `updateRoute` function. Instead of passing directly the `templateId` as an argument, we want to retrieve it by first looking at the current URL, and then use our map to get the corresponding template ID value. We can use [`window.location.pathname`](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname) to get only the path section from the URL.
+Now let's modify a bit the `updateRoute` function. Instead of passing directly the `templateId` as an argument, we want to retrieve it by first looking at the current URL, and then use our map to get the corresponding template ID value. We can use [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) to get only the path section from the URL.
 
 ```js
 function updateRoute() {
@@ -202,9 +202,9 @@ The next step for our app is to add the possibility to navigate between pages wi
 
 We already took care of the second part with the `updateRoute` function, so we have to figure out how to update the current URL.
 
-We'll have to use JavaScript and more specifically the [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) that allows to update the URL and create a new entry in the browsing history, without reloading the HTML.
+We'll have to use JavaScript and more specifically the [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) that allows to update the URL and create a new entry in the browsing history, without reloading the HTML.
 
-> Note: While the HTML anchor element [`<a href>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) can be used on its own to create hyperlinks to different URLs, it will make the browser reload the HTML by default. It is necessary to prevent this behavior when handling routing with custom javascript, using the preventDefault() function on the click event.
+> Note: While the HTML anchor element [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) can be used on its own to create hyperlinks to different URLs, it will make the browser reload the HTML by default. It is necessary to prevent this behavior when handling routing with custom javascript, using the preventDefault() function on the click event.
 
 ### Task
 
@@ -252,7 +252,7 @@ Let's complete the navigation system by adding bindings to our *Login* and *Logo
 <a href="/login" onclick="onLinkClick()">Logout</a>
 ```
 
-Using the [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) attribute bind the `click` event to JavaScript code, here the call to the `navigate()` function.
+Using the [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) attribute bind the `click` event to JavaScript code, here the call to the `navigate()` function.
 
 Try clicking on these links, you should be now able to navigate between the different screens of your app.
 
@@ -266,7 +266,7 @@ Using the `history.pushState` creates new entries in the browser's navigation hi
 
 If you try clicking on the back button a few times, you'll see that the current URL changes and the history is updated, but the same template keeps being displayed.
 
-That's because don't know that we need to call `updateRoute()` every time the history changes. If you take a look at the [`history.pushState` documentation](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState), you can see that if the state changes - meaning that we moved to a different URL - the [`popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) event is triggered. We'll use that to fix that issue.
+That's because don't know that we need to call `updateRoute()` every time the history changes. If you take a look at the [`history.pushState` documentation](https://developer.mozilla.org/docs/Web/API/History/pushState), you can see that if the state changes - meaning that we moved to a different URL - the [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) event is triggered. We'll use that to fix that issue.
 
 ### Task
 
@@ -277,7 +277,7 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Note: we used an [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) here to declare our `popstate` event handler for conciseness, but a regular function would work the same.
+> Note: we used an [arrow function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) here to declare our `popstate` event handler for conciseness, but a regular function would work the same.
 
 Here's a refresher video on arrow functions:
 
@@ -299,7 +299,7 @@ Add a new template and route for a third page that shows the credits for this ap
 
 ## Review & Self Study
 
-Routing is one of the surprisingly tricky parts of web development, especially as the web moves from page refresh behaviors to Single Page Application page refreshes. Read a little about [how the Azure Static Web App service](https://docs.microsoft.com/en-us/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa) handles routing. Can you explain why some of the decisions described on that document are necessary?
+Routing is one of the surprisingly tricky parts of web development, especially as the web moves from page refresh behaviors to Single Page Application page refreshes. Read a little about [how the Azure Static Web App service](https://docs.microsoft.com/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa) handles routing. Can you explain why some of the decisions described on that document are necessary?
 
 ## Assignment
 

@@ -1,6 +1,6 @@
 # 접근 가능한 웹 페이지 생성하기
 
-![All About Accessibility](../webdev101-a11y.png)
+![All About Accessibility](/sketchnotes/webdev101-a11y.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
@@ -24,7 +24,7 @@
 
 모든 웹 개발자는 스크린 리더에 익숙해야합니다. 위에서 강조한 것처럼 사용자가 활용할 클라이언트입니다. 브라우저가 작동하는 방식에 익숙한 것과 마찬가지로 스크린 리더가 작동하는 방식을 배워야합니다. 다행히 스크린 리더는 대부분의 운영체제에 내장되어 있으며, 많은 브라우저에는 스크린 리더를 모방하는 확장이 포함되어 있습니다.
 
-✅ 스크린 리더 브라우저 확장이나 도구를 시도해보세요.[JAWS](https://webaim.org/articles/jaws/)는 윈도우에서만 작동합니다. 브라우저에는 이러한 목적으로 사용할 수 있는 내장 도구도 있습니다; [these accessibility-focused Edge browser tools](https://support.microsoft.com/en-us/help/4000734/microsoft-edge-accessibility-features) 확인합니다.
+✅ 스크린 리더 브라우저 확장이나 도구를 시도해보세요.[JAWS](https://webaim.org/articles/jaws/)는 윈도우에서만 작동합니다. 브라우저에는 이러한 목적으로 사용할 수 있는 내장 도구도 있습니다; [these accessibility-focused Edge browser tools](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features) 확인합니다.
 
 ### Contrast checkers
 
@@ -127,7 +127,7 @@ CSS는 페이지에 있는 모든 요소의 형태를 완벽하게 제어합니�
 <a href="#" aria-label="Widget description">description</a>
 ```
 
-✅ 일반적으로, 위에서 설명한 시맨틱 마크업을 사용하는 것은 ARIA의 사용을 대체하지만, 때때로 다양한 HTML 위젯에 해당하는 시맨틱이 없습니다. 좋은 예는 Progressbar입니다. 진행률 표시줄에 해당하는 HTML이 없으므로 적절한 역할 및 aria 값을 사용하여 일반 `<div>`를 식별합니다. [AMDN documentation on ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)에 더 유용한 정보가 포함되어 있습니다.
+✅ 일반적으로, 위에서 설명한 시맨틱 마크업을 사용하는 것은 ARIA의 사용을 대체하지만, 때때로 다양한 HTML 위젯에 해당하는 시맨틱이 없습니다. 좋은 예는 Progressbar입니다. 진행률 표시줄에 해당하는 HTML이 없으므로 적절한 역할 및 aria 값을 사용하여 일반 `<div>`를 식별합니다. [AMDN documentation on ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA)에 더 유용한 정보가 포함되어 있습니다.
 
 ```html
 <div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">

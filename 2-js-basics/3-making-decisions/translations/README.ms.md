@@ -1,6 +1,6 @@
 # Asas JavaScript: Membuat Keputusan
 
-![Asas JavaScript - Membuat Keputusan](../images/webdev101-js-decisions.png)
+![Asas JavaScript - Membuat Keputusan](/sketchnotes/webdev101-js-decisions.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
@@ -166,7 +166,7 @@ Buat program yang ditulis terlebih dahulu dengan operator logik, dan kemudian tu
 
 ## Mengkaji & Belajar Sendiri
 
-Baca lebih lanjut mengenai banyak pengendali yang ada pada pengguna[pada laman MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
+Baca lebih lanjut mengenai banyak pengendali yang ada pada pengguna[pada laman MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
 Lalui laman Josh Comeau tentang [pengendali](https://joshwcomeau.com/operator-lookup/)!
 

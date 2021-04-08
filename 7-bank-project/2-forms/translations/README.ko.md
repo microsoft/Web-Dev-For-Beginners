@@ -27,7 +27,7 @@ curl http://localhost:5000/api
 
 `<form>` 요소는 사용자가 대화형 컨트롤을 사용하여 데이터를 입력하고 제출할 수 있는 HTML 문서의 섹션을 캡슐화합니다. 폼 내에서 쓸 수 있는 모든 종류의 사용자 인터페이스(UI) 컨트롤이 있으며, 가장 일반적인 컨트롤은 `<input>`과 `<button>` 요소입니다.
 
-`<input>`에는 다양한 [types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)이 많이 있습니다, 예를 들어 사용자 이름으로 입력 가능한 필드를 만들려면 다음과 같이 사용할 수 있습니다:
+`<input>`에는 다양한 [types](https://developer.mozilla.org/docs/Web/HTML/Element/input)이 많이 있습니다, 예를 들어 사용자 이름으로 입력 가능한 필드를 만들려면 다음과 같이 사용할 수 있습니다:
 
 ```html
 <input name="username" type="text">
@@ -35,9 +35,9 @@ curl http://localhost:5000/api
 
 `name` 속성은 컨트롤을 식별하는 데 사용되고 폼 데이터를 전송할 때 속성 이름으로 사용됩니다.
 
-> UI를 작성할 때 쓸 수 있는 모든 네이티브 UI 요소에 대한 아이디어를 얻으려면 [`<input>` types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)과 [other form controls](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls)의 전체 목록을 찾아봅시다.
+> UI를 작성할 때 쓸 수 있는 모든 네이티브 UI 요소에 대한 아이디어를 얻으려면 [`<input>` types](https://developer.mozilla.org/docs/Web/HTML/Element/input)과 [other form controls](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls)의 전체 목록을 찾아봅시다.
 
-✅ `<input>`은 닫는 태그를 맞추지 *않는* [empty element](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)입니다. 자동으로-닫는 `<input/>` 표기법을 사용할 수 있지만, 필수는 아닙니다.
+✅ `<input>`은 닫는 태그를 맞추지 *않는* [empty element](https://developer.mozilla.org/docs/Glossary/Empty_element)입니다. 자동으로-닫는 `<input/>` 표기법을 사용할 수 있지만, 필수는 아닙니다.
 
 폼 내의 `<button>` 요소는 약간 특별합니다. `type` 속성을 지정하지 않으면, 눌렀을 때 폼 데이터가 자동으로 서버에 제출됩니다. 가능한 `type` 값은 다음과 같습니다:
 
@@ -68,7 +68,7 @@ curl http://localhost:5000/api
 - 라벨을 폼 컨트롤에 연결하면, (화면 판독기와 같은) 보조 기술을 사용하는 사용자가 받는 것으로 예상되는 데이터를 이해하는 데 도움이 됩니다.
 - 라벨을 클릭하여 연결된 입력에 직접 맞출 수 있으므로, 터치-스크린 기반 장치에서 더 쉽게 접근할 수 있습니다.
 
-> 웹에서의 [Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility)은 종종 간과되는 매우 중요한 주제입니다. [HTML5 semantic elements](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) 덕분에 이를 적절하게 사용한다면 접근성 콘텐츠로 만드는 것은 어렵지 않습니다. 일반적인 실수를 피하고 책임있는 개발자가 되기 위해 [accessibility에 대하여 읽을 수](https://developer.mozilla.org/en-US/docs/Web/Accessibility) 있습니다.
+> 웹에서의 [Accessibility](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility)은 종종 간과되는 매우 중요한 주제입니다. [HTML5 semantic elements](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) 덕분에 이를 적절하게 사용한다면 접근성 콘텐츠로 만드는 것은 어렵지 않습니다. 일반적인 실수를 피하고 책임있는 개발자가 되기 위해 [accessibility에 대하여 읽을 수](https://developer.mozilla.org/docs/Web/Accessibility) 있습니다.
 
 이제 이전 항목의 바로 아래에, 가입을 위한 두번째 폼을 추가합니다:
 
@@ -156,7 +156,7 @@ function register() {
 }
 ```
 
-여기서는 `getElementById()`를 사용하여 폼 요소를 검색하고, [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) 헬퍼를 사용하여 키/값 쌍 집합으로 폼 컨트롤에서 값을 추출합니다. 그러고 [`Object.fromEntries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)를 사용하여 데이터를 일반 객체로 변환하여 최종적으로 웹에서 데이터를 교환할 때, 일반적으로 사용되는 포맷인 [JSON](https://www.json.org/json-en.html)으로 데이터를 직렬화합니다.
+여기서는 `getElementById()`를 사용하여 폼 요소를 검색하고, [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) 헬퍼를 사용하여 키/값 쌍 집합으로 폼 컨트롤에서 값을 추출합니다. 그러고 [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)를 사용하여 데이터를 일반 객체로 변환하여 최종적으로 웹에서 데이터를 교환할 때, 일반적으로 사용되는 포맷인 [JSON](https://www.json.org/json-en.html)으로 데이터를 직렬화합니다.
 
 데이터는 이제 서버에 보낼 준비가 되었습니다. `createAccount`라고 지은 새로운 함수를 만듭니다:
 
@@ -175,7 +175,7 @@ async function createAccount(account) {
 }
 ```
 
-이 함수는 어떤 일을 할까요? 먼저, 여기있는 `async` 키워드를 확인하세요. 이 함수는 [**asynchronously**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)하게 실행하는 코드가 포함되어 있다는 것을 의미합니다. `await` 키워드와 함께 사용하면, 비동기 코드가 실행될 때까지 기다릴 수 있습니다 - 여기에서 서버의 응답을 기다리는 것과 같습니다 - 계속하기 전에.
+이 함수는 어떤 일을 할까요? 먼저, 여기있는 `async` 키워드를 확인하세요. 이 함수는 [**asynchronously**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function)하게 실행하는 코드가 포함되어 있다는 것을 의미합니다. `await` 키워드와 함께 사용하면, 비동기 코드가 실행될 때까지 기다릴 수 있습니다 - 여기에서 서버의 응답을 기다리는 것과 같습니다 - 계속하기 전에.
 
 여기는 ``async/await` 사용 방식에 대한 간단한 영상입니다:
 
@@ -217,7 +217,7 @@ async function register() {
 }
 ```
 
-조금 길지만 도착했습니다! [browser developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열고, 새 계정을 가입하면, 웹 페이지에 변경 사항이 표시되지 않으면서 콘솔에 작동을 확인할 메시지가 나타납니다.
+조금 길지만 도착했습니다! [browser developer tools](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열고, 새 계정을 가입하면, 웹 페이지에 변경 사항이 표시되지 않으면서 콘솔에 작동을 확인할 메시지가 나타납니다.
 
 ![Screenshot showing log message in the browser console](.././images/browser-console.png)
 
@@ -225,15 +225,15 @@ async function register() {
 
 ## Data 검증하기
 
-사용자 이름을 먼저 설정하지 않고 새 계정을 가입하려하면, 서버에서 상태 코드 [400 (Bad Request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).) 오류를 반환하는 것으로 볼 수 있습니다.
+사용자 이름을 먼저 설정하지 않고 새 계정을 가입하려하면, 서버에서 상태 코드 [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).) 오류를 반환하는 것으로 볼 수 있습니다.
 
-데이터를 서버로 보내기 전에 할 수 있다면, 유요한 요청을 보낼 수 있도록, 미리 [validate the form data](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)를 실습하는 것이 좋습니다. HTML5 포맷 컨트롤은 다양한 속성을 사용하여 빌트인 유효성 검사를 제공합니다:
+데이터를 서버로 보내기 전에 할 수 있다면, 유요한 요청을 보낼 수 있도록, 미리 [validate the form data](https://developer.mozilla.org/docs/Learn/Forms/Form_validation)를 실습하는 것이 좋습니다. HTML5 포맷 컨트롤은 다양한 속성을 사용하여 빌트인 유효성 검사를 제공합니다:
 
 - `required`: 필드를 채워야하며 안 채운다면 폼을 제출할 수 없습니다.
 - `minlength`와 `maxlength`: 텍스트 입력의 최소 및 최대 문자 수를 정의합니다.
 - `min`과 `max`: 숫자 필드의 최소값과 최대값을 정의합니다.
-- `type`: `number`, `email`, `file` 또는 [other built-in types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)처럼, 예상되는 데이터의 종류를 정의합니다. 이 속성은 폼 컨트롤의 비주얼 렌더링을 바꿀 수도 있습니다.
-- `pattern`: 입력된 데이터가 유효한지 테스트하기 위해 [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) 패턴을 정의할 수 있습니다.
+- `type`: `number`, `email`, `file` 또는 [other built-in types](https://developer.mozilla.org/docs/Web/HTML/Element/input)처럼, 예상되는 데이터의 종류를 정의합니다. 이 속성은 폼 컨트롤의 비주얼 렌더링을 바꿀 수도 있습니다.
+- `pattern`: 입력된 데이터가 유효한지 테스트하기 위해 [regular expression](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) 패턴을 정의할 수 있습니다.
 
 > Tip: 유효하거나 `:valid`와 `:invalid` CSS pseudo-classes를 사용하지 않는 여부에 따라 폼 컨트롤의 모양을 커스텀할 수 있습니다.
 

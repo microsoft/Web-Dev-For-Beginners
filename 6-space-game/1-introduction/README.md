@@ -29,7 +29,7 @@ All we described above are behavior that game objects can have. So how do we enc
 
 The idea is to use `classes` in conjunction with `inheritance` to accomplish adding a certain behavior to a class.
 
-✅ Inheritance is an important concept to understand. Learn more on [MDN's article about inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+✅ Inheritance is an important concept to understand. Learn more on [MDN's article about inheritance](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 Expressed via code, a game object can typically look like this:
 
@@ -217,7 +217,7 @@ Think about how the pub-sub pattern can enhance a game. Which parts should emit 
 
 ## Review & Self Study
 
-Learn more about Pub/Sub by [reading about it](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa).
+Learn more about Pub/Sub by [reading about it](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa).
 
 ## Assignment
 

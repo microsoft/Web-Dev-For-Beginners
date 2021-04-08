@@ -94,7 +94,7 @@ In this function, there is some interesting logic. Reading through it, can you s
   - hide the form
   - show the reset button
 
-Before moving on, it's useful to learn about a very important concept available in browsers: [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). LocalStorage is a useful way to store strings in the browser as a `key-value` pair. This type of web storage can be manipulated by JavaScript to manage data in the browser. LocalStorage does not expire, while SessionStorage, another kind of web storage, is cleared when the browser is closed. The various types of storage have pros and cons to their usage.
+Before moving on, it's useful to learn about a very important concept available in browsers: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage is a useful way to store strings in the browser as a `key-value` pair. This type of web storage can be manipulated by JavaScript to manage data in the browser. LocalStorage does not expire, while SessionStorage, another kind of web storage, is cleared when the browser is closed. The various types of storage have pros and cons to their usage.
 
 > Note - your browser extension has its own local storage; the main browser window is a different instance and behaves separately.
 
@@ -145,7 +145,7 @@ Before going further, we should discuss APIs. APIs, or [Application Programming 
 
 ✅ The term 'REST' stands for 'Representational State Transfer' and features using variously-configured URLs to fetch data. Do a little research on the various types of APIs available to developers. What format appeals to you?
 
-There are important things to note about this function. First notice the [`async` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). Writing your functions so that they run asynchronously means that they wait for an action, such as data being returned, to be completed before continuing.
+There are important things to note about this function. First notice the [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Writing your functions so that they run asynchronously means that they wait for an action, such as data being returned, to be completed before continuing.
 
 Here's a quick video about `async`:
 
@@ -200,7 +200,7 @@ This is a big function. What's going on here?
 - once the API responds, you assign various elements of its response data to the parts of your screen you set up to show this data.
 - if there's an error, or if there is no result, you show an error message.
 
-✅ Using asyncronous programming patterns is another very useful tool in your toolbox. Read [about the various ways](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) you can configure this type of code.
+✅ Using asyncronous programming patterns is another very useful tool in your toolbox. Read [about the various ways](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) you can configure this type of code.
 
 Congratulations! If you build your extension (`npm run build`) and refresh it in your extensions pane, you have a working extension! The only thing that isn't working is the icon, and you'll fix that in the next lesson.
 
@@ -208,7 +208,7 @@ Congratulations! If you build your extension (`npm run build`) and refresh it in
 
 ## 🚀 Challenge
 
-We've discussed several types of API so far in these lessons. Choose a web API and research in depth what it offers. For example, take a look at APIs available within browsers such as the [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). What makes a great API in your opinion?
+We've discussed several types of API so far in these lessons. Choose a web API and research in depth what it offers. For example, take a look at APIs available within browsers such as the [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). What makes a great API in your opinion?
 
 ## Post-Lecture Quiz
 

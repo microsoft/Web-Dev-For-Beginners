@@ -1,6 +1,6 @@
 # Asas JavaScript: Array dan Loop
 
-![Asas JavaScript - Array](../images/webdev101-js-arrays.png)
+![Asas JavaScript - Array](/sketchnotes/webdev101-js-arrays.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
@@ -110,14 +110,14 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ## 🚀 Cabaran
 
-Terdapat cara lain untuk mengulangi tatasusunan selain untuk dan semasa gelung. Terdapat [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), dan [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Tulis semula array loop anda menggunakan salah satu teknik ini.
+Terdapat cara lain untuk mengulangi tatasusunan selain untuk dan semasa gelung. Terdapat [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), dan [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Tulis semula array loop anda menggunakan salah satu teknik ini.
 
 ## Kuiz Pasca Kuliah
 [Kuiz Pasca Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14)
 
 ## Mengkaji and Belajar Sendiri 
 
-Array dalam JavaScript mempunyai banyak kaedah yang melekat padanya, sangat berguna untuk manipulasi data. [Baca kaedah ini](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) dan cuba beberapa di antaranya (seperti push, pop, slice dan splice) pada pelbagai ciptaan anda.
+Array dalam JavaScript mempunyai banyak kaedah yang melekat padanya, sangat berguna untuk manipulasi data. [Baca kaedah ini](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) dan cuba beberapa di antaranya (seperti push, pop, slice dan splice) pada pelbagai ciptaan anda.
 
 ## Tugasan
 

@@ -1,6 +1,6 @@
 # Nozioni di base su JavaScript: Prendere Decisioni
 
-![Nozioni di base su JavaScript - Prendere decisioni](../images/webdev101-js-decisions.png)
+![Nozioni di base su JavaScript - Prendere decisioni](/sketchnotes/webdev101-js-decisions.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione

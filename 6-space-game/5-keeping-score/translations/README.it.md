@@ -17,7 +17,7 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Si legga di più su [come aggiungere testo a un oggetto canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text), ci si senta liberi di far sembrare il proprio più elaborato!
+✅ Si legga di più su [come aggiungere testo a un oggetto canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), ci si senta liberi di far sembrare il proprio più elaborato!
 
 ## La vita, come concetto di gioco
 

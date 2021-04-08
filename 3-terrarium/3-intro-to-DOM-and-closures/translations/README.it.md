@@ -1,6 +1,6 @@
 # Progetto Terrario Parte 3: Manipolazione del DOM e Closure
 
-![Manipolazione DOM e closure](../images/webdev101-js.png)
+![Manipolazione DOM e closure](/sketchnotes/webdev101-js.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
@@ -9,11 +9,11 @@
 
 ### Introduzione
 
-La manipolazione del DOM, acronimo per "Document Object Model", è un aspetto chiave dello sviluppo web. Secondo [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), "Il Document Object Model (DOM) è la rappresentazione dei dati degli oggetti che compongono la struttura e il contenuto di un documento sul web". Le sfide intorno alla manipolazione del DOM sul Web sono state spesso l'impulso dietro l'utilizzo di infrastrutture (framework) JavaScript invece di JavaScript puro (vanilla) per gestire il DOM, ma ce la faremo da soli!
+La manipolazione del DOM, acronimo per "Document Object Model", è un aspetto chiave dello sviluppo web. Secondo [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "Il Document Object Model (DOM) è la rappresentazione dei dati degli oggetti che compongono la struttura e il contenuto di un documento sul web". Le sfide intorno alla manipolazione del DOM sul Web sono state spesso l'impulso dietro l'utilizzo di infrastrutture (framework) JavaScript invece di JavaScript puro (vanilla) per gestire il DOM, ma ce la faremo da soli!
 
-Inoltre, questa lezione introdurrà l'idea di una [closure JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), che si può intendere come una funzione racchiusa da un'altra funzione in modo che la funzione più interna abbia accesso all'ambito della funzione più esterna.
+Inoltre, questa lezione introdurrà l'idea di una [closure JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), che si può intendere come una funzione racchiusa da un'altra funzione in modo che la funzione più interna abbia accesso all'ambito della funzione più esterna.
 
-> Le closure JavaScript sono un argomento vasto e complesso. Questa lezione tocca l'idea più basilare che nel codice di questo terrario si troverà una closure: una funzione interna e una funzione esterna costruite in modo da consentire alla funzione interna di accedere all'ambito della funzione esterna. Per molte più informazioni su come funziona, visitare l'[ampia documentazione](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
+> Le closure JavaScript sono un argomento vasto e complesso. Questa lezione tocca l'idea più basilare che nel codice di questo terrario si troverà una closure: una funzione interna e una funzione esterna costruite in modo da consentire alla funzione interna di accedere all'ambito della funzione esterna. Per molte più informazioni su come funziona, visitare l'[ampia documentazione](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
 
 Verra usata una closure per manipolare il DOM.
 
@@ -110,7 +110,7 @@ function dragElement(terrariumElement) {
 
 Inoltre, al terrariumElement passato a questa funzione viene assegnato un  evento di riconoscimento pressione pulsante (`pointerdown`), che fa parte delle [API web](https://developer.mozilla.org/it/docs/Web/API) progettate per aiutare con la gestione del DOM. `onpointerdown` si attiva quando viene premuto un pulsante o, in questo caso, viene toccato un elemento trascinabile. Questo gestore di evento funziona sia su browser [web che su browser di dispositivi mobili](https://caniuse.com/?search=onpointerdown), con poche eccezioni.
 
-✅ Il [gestore di evento `onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) ha molto più supporto intra-browser; perché non viene usato qui? Si pensi al tipo esatto di interazione con lo schermo che si sta cercando di creare qui.
+✅ Il [gestore di evento `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) ha molto più supporto intra-browser; perché non viene usato qui? Si pensi al tipo esatto di interazione con lo schermo che si sta cercando di creare qui.
 
 ---
 
@@ -205,9 +205,9 @@ Aggiungere un nuovo gestore di eventi alla closure per fare qualcosa di più con
 
 ## Revisione e Auto Apprendimento
 
-Mentre trascinare elementi sullo schermo sembra banale, ci sono molti modi per farlo e molte insidie, a seconda dell'effetto che si cerca. In effetti, esiste un'intera [API di trascinamento della selezione](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API) che si può provare. Non è stata usata in questo modulo perché l'effetto che si voleva era leggermente diverso, tuttavia provare questa API sul proprio progetto per vedere cosa si può ottenere.
+Mentre trascinare elementi sullo schermo sembra banale, ci sono molti modi per farlo e molte insidie, a seconda dell'effetto che si cerca. In effetti, esiste un'intera [API di trascinamento della selezione](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) che si può provare. Non è stata usata in questo modulo perché l'effetto che si voleva era leggermente diverso, tuttavia provare questa API sul proprio progetto per vedere cosa si può ottenere.
 
-Trovare ulteriori informazioni sugli eventi di puntamento nei [documenti W3C](https://www.w3.org/TR/pointerevents1/) e nei [documenti Web MDN](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events).
+Trovare ulteriori informazioni sugli eventi di puntamento nei [documenti W3C](https://www.w3.org/TR/pointerevents1/) e nei [documenti Web MDN](https://developer.mozilla.org/docs/Web/API/Pointer_events).
 
 Controllare sempre le funzionalità del browser utilizzando [CanIUse.com](https://caniuse.com/).
 

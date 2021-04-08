@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "給初學者的網頁開發：小測驗",
+		"complete": "恭喜，您完成了所有試題!",
+		"error": "抱歉。請稍後再試。",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "課程一 - 程式語言概論：課前測驗",
+				"quiz": [
+					{
+						"questionText": "開發人員可在不編寫程式碼的情況下產生程式。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "低階語言常被使用在：",
+						"answerOptions": [
+							{
+								"answerText": "網頁",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "硬體",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "遊戲軟體",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "下列何者工具會出現在網頁開發的環境中?",
+						"answerOptions": [
+							{
+								"answerText": "硬體，如樹莓派",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "瀏覽器開發工具",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "作業系統相關文件",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "課程一 - 程式語言簡介：課後測驗",
+				"quiz": [
+					{
+						"questionText": "下列何者程式語言比較適合用來撰寫網頁?",
+						"answerOptions": [
+							{
+								"answerText": "機器語言",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "每一位開發人員的開發環境都不盡相同。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "開發人員會如何修正錯誤的程式碼?",
+						"answerOptions": [
+							{
+								"answerText": "語法突顯",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "偵錯",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "程式碼格式化",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "課程二 - GitHub簡介：課前測驗",
+				"quiz": [
+					{
+						"questionText": "下列何種指令可以建立 Git 數據庫?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "指令 git add 的目的為何?",
+						"answerOptions": [
+							{
+								"answerText": "提交程式碼。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "加入檔案至索引成追蹤對象。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "加入檔案至GitHub。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "如何確認電腦內是否有安裝 git?",
+						"answerOptions": [
+							{
+								"answerText": "輸入 git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "輸入 git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "輸入 git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "課程二 - GitHub簡介：課後測驗",
+				"quiz": [
+					{
+						"questionText": "下列何者能確認同一分支內不同更動的審查、評論、測試……等?",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Pull Request",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Feature Branch",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "如何從遠端數據庫中取得所有的提交?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "如何切換分支?",
+						"answerOptions": [
+							{
+								"answerText": "git switch [分支名稱]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [分支名稱]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [分支名稱]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "課程三 - 建立無障礙網頁：課前測驗",
+				"quiz": [
+					{
+						"questionText": "下列何種工具可以確認網頁的無障礙性?",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "只有實體的螢幕報讀器才能對視覺障礙者測試網頁親和力。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "網頁親和力只在公家機關的網頁才有需求。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "課程三 - 建立無障礙網頁：課後測驗",
+				"quiz": [
+					{
+						"questionText": "Lighthouse 只能檢查網頁親和力。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "安全的配色可以幫助到：",
+						"answerOptions": [
+							{
+								"answerText": "色盲",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "視覺障礙者",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "描述性連結是無障礙網頁中重要的部分。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "課程四 - JavaScript 入門 - 資料型態：課前測驗",
+				"quiz": [
+					{
+						"questionText": "布林是檢查字串的長度的資料型態。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "下列何種行為可以用在字串上?",
+						"answerOptions": [
+							{
+								"answerText": "合併",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "串接",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "拼接",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== 和 === 是可互換的。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "課程四 - JavaScript 入門 - 資料型態：課後測驗",
+				"quiz": [
+					{
+						"questionText": "常數與 let 和 var 宣告的變數相同，除了：",
+						"answerOptions": [
+							{
+								"answerText": "常數必須要初始化。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "常數可以被修改。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "常數可以被重新賦值。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "在 JavaScript 中，負責處理數值型態資料的為 Numbers 與：",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "字串值可以被單引號與雙引號所包住。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "課程五 - JavaScript 入門 - 函式與方法：課前測驗",
+				"quiz": [
+					{
+						"questionText": "什麼是引數物件?",
+						"answerOptions": [
+							{
+								"answerText": "用來宣告函式的定義。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "用來呼叫函式。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "用來與熟識的人共同持有。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "函式必須要有回傳值。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "你可以隨意命名函式的名稱。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "是，但以可描述性的名稱為佳。",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "課程五 - JavaScript 入門 - 函式與方法：課後測驗",
+				"quiz": [
+					{
+						"questionText": "引數物件必須提供函式需要的所有參數。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "預設值(Default Value)的目的為何?",
+						"answerOptions": [
+							{
+								"answerText": "設定正確的數值。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "參數的初始值，當忽略引數時，程式碼仍可運作。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "沒有意義。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "箭頭函式(fat arrow functions)允許開發人員：",
+						"answerOptions": [
+							{
+								"answerText": "建立很重(heavy)的函式。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "可以忽略部分的函式名稱。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "建立匿名函式。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "課程六 - JavaScript 入門 - 做出決定：課前測驗",
+				"quiz": [
+					{
+						"questionText": "運算子 == 的運算為：",
+						"answerOptions": [
+							{
+								"answerText": "相等",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "嚴格相等",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "賦值",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "在 JavaScript 中，比較式後回傳的資料型態為?",
+						"answerOptions": [
+							{
+								"answerText": "布林",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "空值",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "字串",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "在 JavaScript 中，符號 ! 代表：",
+						"answerOptions": [
+							{
+								"answerText": "邏輯非",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "重要的",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "等於",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "課程六 - JavaScript 入門 - 做出決定：課後測驗",
+				"quiz": [
+					{
+						"questionText": "條件式 '1' == 1 會回傳下列何種結果?",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "條件式 '1' === 1 會回傳下列何種結果?",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "空值",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "下列何者為正確的邏輯「或」表示方法?",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "課程七 - JavaScript 入門 - 矩陣與迴圈：課前測驗",
+				"quiz": [
+					{
+						"questionText": "如果要提出矩陣中特定的元素，必須使用：",
+						"answerOptions": [
+							{
+								"answerText": "中括號 []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "索引",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "大括號 {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "如何取得矩陣內的元素個數?",
+						"answerOptions": [
+							{
+								"answerText": "len(array)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "矩陣的屬性大小(Property Size)。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "矩陣的屬性長度(Property Length)。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "在 JavaScript 中，索引從何數開始計算?",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "課程七 - JavaScript 入門 - 矩陣與迴圈：課後測驗",
+				"quiz": [
+					{
+						"questionText": "在 for-loop 迴圈中，需要修改何處來增加迭代次數到5次?",
+						"answerOptions": [
+							{
+								"answerText": "條件式",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "計數器",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "迭代陳述式",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "while 迴圈與 for-loop 迴圈的差異在於：",
+						"answerOptions": [
+							{
+								"answerText": "for-loop 迴圈需要計數器與迭代陳述式，while 迴圈只需要條件式。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "while 迴圈需要計數器與迭代陳述式，for-loop 迴圈只需要條件式。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "它們是一樣的，只是另一種稱呼而已。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "迴圈 (let i=1; i < 5; i++)中，會執行多少次迭代??",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "課程八 - Terrarium 專案 - HTML 簡介：課前測驗",
+				"quiz": [
+					{
+						"questionText": "HTML 的全名為 HyperText Mockup Language。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "所有的 HTML 標籤都需要起始標籤與結束標籤。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "使用語意標籤最重要的應用為：",
+						"answerOptions": [
+							{
+								"answerText": "方便程式碼的閱讀。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "螢幕閱讀器。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "管理用途。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "課程八 - 盆栽盒專案 - HTML 簡介：課後測驗",
+				"quiz": [
+					{
+						"questionText": "Spans 與 Divs 可以互相替換。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "HTML 文件的標頭可以包含：",
+						"answerOptions": [
+							{
+								"answerText": "標題標籤(title tag)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "元資訊(metadata)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "開發人員無法使用不推薦使用的標籤。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否，但它們有被否決的充分理由。",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "課程九 - 盆栽盒專案 - CSS 簡介：課前測驗",
+				"quiz": [
+					{
+						"questionText": "HTML 元素必須包含 class 或 id 才能被造型化。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS 全名為 Complete Style Sheets。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "可以利用 CSS 來建立動畫。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "課程九 - 盆栽盒專案 - CSS 簡介：課後測驗",
+				"quiz": [
+					{
+						"questionText": "CSS 可以被撰寫在 HTML 檔案的開頭。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "CSS 在應用程式中是必須的物件。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否，但如果想讓畫面變美觀就需要使用CSS。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "可以利用下列何者瀏覽器工具來檢查 CSS?",
+						"answerOptions": [
+							{
+								"answerText": "Elements",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Styles",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Network",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "課程十 - 盆栽盒專案 - DOM 元素控制與閉包：課前測驗",
+				"quiz": [
+					{
+						"questionText": "DOM 全名為 Document Object Management",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "可以將 DOM 理解為樹的一種。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "利用網頁 API，開發人員就能控制 DOM 元素。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "課程十 - 盆栽盒專案 - DOM 元素控制與閉包：課後測驗",
+				"quiz": [
+					{
+						"questionText": "DOM 元素是表現網頁文件的一種物件。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "使用 JavaScript 閉包可以達成：",
+						"answerOptions": [
+							{
+								"answerText": "在函式中撰寫函式。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "將 DOM 元素包住。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "關閉腳本區。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "使用閉包可以在單一或多個函式中存取外部函式的 _________。",
+						"answerOptions": [
+							{
+								"answerText": "矩陣",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "作用域",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "函式",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "課程十一 - 打字遊戲：課前測驗",
+				"quiz": [
+					{
+						"questionText": "事件驅動程式發生在使用者：",
+						"answerOptions": [
+							{
+								"answerText": "按下按鈕。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "改變數值。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "與網頁作互動。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "在程序式程式中，函式會以下列方式被呼叫。",
+						"answerOptions": [
+							{
+								"answerText": "在任何時刻中。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "在特定的順序中。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "由左至右。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "在 DOM 中最常用來建立事件處理的方法為：",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "課程十一 - 打字遊戲：課後測驗",
+				"quiz": [
+					{
+						"questionText": "使用者做的大部分網頁互動都會觸發事件。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "常見的事件包括：",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "可以使用匿名函式來建立事件處理。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "課程十二 - 瀏覽器擴充功能專案 - 關於瀏覽器：課前測驗",
+				"quiz": [
+					{
+						"questionText": "使用者可以從下列管道取得瀏覽器擴充功能：",
+						"answerOptions": [
+							{
+								"answerText": "沃爾瑪(WalMart)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "瀏覽器擴充商店",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "應用程式商店",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM 全名為",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "瀏覽器可以安全地或非安全地提供網頁服務。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "課程十二 - 瀏覽器擴充功能專案 - 關於瀏覽器：課後測驗",
+				"quiz": [
+					{
+						"questionText": "網際網路的發明者為：",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "第一款網頁瀏覽器為：",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "瀏覽器可以儲存使用者上網的歷史紀錄。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "課程十三 - 瀏覽器擴充功能專案 - 呼叫API、使用Local Storage：課前測驗",
+				"quiz": [
+					{
+						"questionText": "APIs 全名為",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "使用API能與 _________ 做互動。",
+						"answerOptions": [
+							{
+								"answerText": "網路上的一項資產",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "資料庫",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "任何人都可以建立 API。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "課程十三 - 瀏覽器擴充功能專案 - 呼叫API、使用Local Storage：課後測驗",
+				"quiz": [
+					{
+						"questionText": "當使用者關閉瀏覽器視窗時，LocalStorage 會被清除。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "主要瀏覽器視窗會管理擴充功能的LocalStorage使用情形。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "在API context中，REST 全名為",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "課程十四 - 瀏覽器擴充功能專案 - 學習背景工作與效能：課前測驗",
+				"quiz": [
+					{
+						"questionText": "使用者可以利用下列何種方式測試應用程式的效能?",
+						"answerOptions": [
+							{
+								"answerText": "瀏覽器工具",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "獨立軟體包",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "手動測試",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "通常網頁的效能代表：",
+						"answerOptions": [
+							{
+								"answerText": "多快可以載入完成。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "程式執行的速率有多快。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "總體來說，在這幾年間網頁的「負擔」：",
+						"answerOptions": [
+							{
+								"answerText": "變輕了。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "變重了。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "維持原樣。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "課程十四 - 瀏覽器擴充功能專案 - 學習背景工作與效能：課後測驗",
+				"quiz": [
+					{
+						"questionText": "為了取得更好的網頁效能，清除快取並重新載入效能分析器是一種方法。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "瀏覽器擴充功能是固有的功能。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "分析下列地方來尋找效能的瓶頸：",
+						"answerOptions": [
+							{
+								"answerText": "DOM 查找元素。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript 最佳化。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "資產管理。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是。",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "課程十五 - 太空遊戲 - 介紹：課前測驗",
+				"quiz": [
+					{
+						"questionText": "JavaScript 是不常見的遊戲開發程式語言。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "發布/訂閱是管理遊戲資產與流程的合理規範。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "類別與組合可以處理物件繼承的概念。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "課程十五 - 太空遊戲 - 介紹：課後測驗",
+				"quiz": [
+					{
+						"questionText": "依賴物件繼承的類別可以歸咎於其行為。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "組合是處理遊戲物件最好的設計模式。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub 代表的是：",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "課程十六 - 太空遊戲 - 在畫布繪製英雄與怪物：課前測驗",
+				"quiz": [
+					{
+						"questionText": "你可以利用Canvas元素在螢幕上繪製圖案。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Canvas API只能畫出簡單的幾何圖形。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "座標點(0,0)代表Canvas左下方。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "課程十六 - 太空遊戲 - 在畫布繪製英雄與怪物：課後測驗",
+				"quiz": [
+					{
+						"questionText": "繪圖處理能直接應用在Canvas上。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "藉由監測讀取事件來得知非同步的圖片是否被載入完成。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "繪製圖片到螢幕的指令為：",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "課程十七 - 太空遊戲 - 加入動作：課前測驗",
+				"quiz": [
+					{
+						"questionText": "任何物件可以接收鍵盤事件。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "鍵盤事件與滑鼠事件是相同的監聽方法。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "若想讓事情定期的觸發，需要用到什麼函式?",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "課程十七 - 太空遊戲 - 加入動作：課後測驗",
+				"quiz": [
+					{
+						"questionText": "更新螢幕一定要全部重新繪製。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "什麼是遊戲迴圈?",
+						"answerOptions": [
+							{
+								"answerText": "函式確保遊戲能重新開始。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "函式決定遊戲的運作時速。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "函式確保定期事件發生並將畫面呈獻給玩家。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "重新繪製螢幕的時機點為：",
+						"answerOptions": [
+							{
+								"answerText": "玩家產生互動。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "有東西移動。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "時間的推移。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "課程十八 - 太空遊戲 - 加入雷射與碰撞偵測：課前測驗",
+				"quiz": [
+					{
+						"questionText": "碰撞偵測是偵測兩物體是否發生碰撞。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "如何將成員從螢幕中移除?",
+						"answerOptions": [
+							{
+								"answerText": "呼叫垃圾清潔員。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "標記為陣亡，在下一個繪製週期只畫存活的成員。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "將成員移動到其他象限。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "在 JavaScript 中模擬雷射最合適的方式為：",
+						"answerOptions": [
+							{
+								"answerText": "根據鍵盤事件建立可視物件。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "建立動態圖像。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "讓敵人定期地爆炸。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "課程十八 - 太空遊戲 - 加入雷射與碰撞偵測：課後測驗",
+				"quiz": [
+					{
+						"questionText": "在碰撞偵測中，需要判斷兩者：",
+						"answerOptions": [
+							{
+								"answerText": "圓圈內是否有所相交。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "矩形內是否有所相交。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "兩點之間的距離。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "建立冷卻時間的目的為：",
+						"answerOptions": [
+							{
+								"answerText": "讓遊戲變得更難，讓玩家無法重複擊發雷射摧毀敵人。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript 在單位時間內只能處理一定額度的事件，需要有所限制。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "常數在程式碼中是醒目的原因為：",
+						"answerOptions": [
+							{
+								"answerText": "它們以全大寫書寫。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "它們有特定的名稱。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "它們用特定字元，連接。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "課程十九 - 太空遊戲 - 分數與生命數：課前測驗",
+				"quiz": [
+					{
+						"questionText": "如何利用Canvas元素在畫面上寫字?",
+						"answerOptions": [
+							{
+								"answerText": "將文字包在div或span元素中。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "呼叫 drawText()在Canvas元素上。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Call fillText() on the context object",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "為什麼遊戲需要有「性命數」的概念?",
+						"answerOptions": [
+							{
+								"answerText": "為了表現玩家還能承受多少攻擊。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "為了讓遊戲不會直接結束，允許玩家有容錯空間。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "改變 Canvas 元素上字的顏色可以利用：",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "課程十九 - 太空遊戲 - 分數與性命數：課後測驗",
+				"quiz": [
+					{
+						"questionText": "如何有趣地表現出玩家剩餘的性命數?",
+						"answerOptions": [
+							{
+								"answerText": "剩餘艦艇的數字。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "得點系統。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "如何讓畫面裡 Canvas 元素上的文字置中?",
+						"answerOptions": [
+							{
+								"answerText": "利用 Flexbox。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "讓文字的 x 座標點為玩家視窗寬度的一半。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "設定文字內容的 textAlign 屬性為 center。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "在程式碼中，用下列何者表示扣除一條性命?",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "課程二十 - 太空遊戲 - 結束與重來：課前測驗",
+				"quiz": [
+					{
+						"questionText": "何時為重新遊戲的最好時機?",
+						"answerOptions": [
+							{
+								"answerText": "當玩家勝利或落敗時。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "任一時刻。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "什麼時候該讓遊戲結束?",
+						"answerOptions": [
+							{
+								"answerText": "當單一敵人艦艇遭到擊毀。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "當玩家艦艇遭到擊毀。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "當分數進帳。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "最適合加入新關卡到遊戲的方式為：",
+						"answerOptions": [
+							{
+								"answerText": "增加通關要求的分數門檻。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "增加更多的玩家。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "增加更好的圖像。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "課程二十 - 太空遊戲 - 結束與重來：課後測驗",
+				"quiz": [
+					{
+						"questionText": "當遊戲結束時，下列何者為合適的事件?",
+						"answerOptions": [
+							{
+								"answerText": "顯示適當的訊息。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "結束遊戲。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "顯示適當的訊息，詢問玩家是否重來，顯示對應的選項按鈕。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "只有當遊戲結束時才能重新遊戲。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "當遊戲結束時，清除 EventEmitter 的合適方式是：",
+						"answerOptions": [
+							{
+								"answerText": "清除事件監聽者。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "清除畫面。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "關閉遊戲視窗。",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "課程二十一 - 銀行專案 - HTML模板與網路連線App：課前測驗",
+				"quiz": [
+					{
+						"questionText": "一個網路程式必須要有多個HTML檔才能呈現不同頁面。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "網路程式允許用戶在本地儲存資料",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "什麼是網路程式資料供應者最合適的方式?",
+						"answerOptions": [
+							{
+								"answerText": "一個本地資料庫。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "一個 JavaScript 物件。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "一個含有 JSON API 的伺服器。",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "課程二十一 - 銀行專案 - HTML模板與網路連線App：課後測驗",
+				"quiz": [
+					{
+						"questionText": "HTML 模板在預設中是 DOM 元素的一部份。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "哪個 URL 部分需要被使用在路由上?",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "當呼叫 history.pushState() 函式時，下列何者事件會被觸發?",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "課程二十二 - 銀行專案 - 登入與註冊表單：課前測驗",
+				"quiz": [
+					{
+						"questionText": "HTML 表單允許用戶不須利用 JavaScript 輸入資料到伺服器。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "<label> 元素在表單控制上是強制必要的。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "以 HTTP 傳送資料到伺服器是安全的。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "課程二十二 - 銀行專案 - 登入與註冊表單：課後測驗",
+				"quiz": [
+					{
+						"questionText": "利用 <label> 表單元素只為了表單的美觀。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "傳送給伺服器時，URL 會在表單的哪一個部分?",
+						"answerOptions": [
+							{
+								"answerText": "Action 屬性。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Method 屬性。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "下列何者屬性能決定文字輸入 <input> 的上限值?",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "課程二十三 - 銀行專案 - 拿取與使用資料：課前測驗",
+				"quiz": [
+					{
+						"questionText": "用戶通常會同步地利用瀏覽器向伺服器抓取資料。",
+						"answerOptions": [
+							{
+								"answerText": "是，但非同步才是最好的!",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "下列何者為最常見的網路交換資料格式?",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "沒有方法能阻止網頁存取供用伺服器的 API。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "課程二十三 - 銀行專案 - 拿取與使用資料：課後測驗",
+				"quiz": [
+					{
+						"questionText": "在單頁網頁應用中，HTML載入完後就不再更新。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "為什麼阻止用戶輸入不信任的資料很重要?",
+						"answerOptions": [
+							{
+								"answerText": "因為使用奇特字元讓 UI 變得很醜。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "因為它可能會包含無意義或攻擊性言論。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "因為它可以成為執行惡意程式的一種途徑。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "下列何者 API 可以向伺服器發出非同步 HTTP 請求?",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "課程二十四 - 銀行專案 - 狀態控管的概念：課前測驗",
+				"quiz": [
+					{
+						"questionText": "什麼是不可變物件?",
+						"answerOptions": [
+							{
+								"answerText": "物件被定義為常數。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "物件在建立後就不可以被修改。",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "存在物件的複本。",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "狀態控管有什麼好處?",
+						"answerOptions": [
+							{
+								"answerText": "可以追蹤到每一個狀態發生改變的位置。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "可以更容易地偵錯程式碼。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "下列何者為最合適的方式來儲存不同 session 中重要的用戶資料?",
+						"answerOptions": [
+							{
+								"answerText": "利用檔案。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "利用瀏覽器 LocalStorage API。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "利用伺服器 API 後的資料庫。",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "課程二十四 - 銀行專案 - 狀態控管的概念：課後測驗",
+				"quiz": [
+					{
+						"questionText": "狀態管控的意義是?",
+						"answerOptions": [
+							{
+								"answerText": "公權力的強制性。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "隨時間變化記錄用戶界面的狀態。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "讓用戶端的資料流清晰可控，保持資料和用戶界面的同步性。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "如何追蹤用戶 session 的狀態?",
+						"answerOptions": [
+							{
+								"answerText": "HTTP cookies",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Local or session storage",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "改變物件一向是最佳的更新資訊方式。",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

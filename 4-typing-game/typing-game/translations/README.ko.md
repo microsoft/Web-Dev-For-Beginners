@@ -20,10 +20,10 @@
 
 응용 프로그램을 만들 때 수신할 수 있는 [dozens of events](https://developer.mozilla.org/docs/Web/Events)가 있습니다. 기본적으로 사용자가 페이지에서 수행하는 모든 작업은 이벤트를 발생시키므로, 원하는 경험으로 많은 도움을 줍니다. 다행스럽게, 일반적인 이벤트만 필요합니다. 다음은 일반적 몇가지입니다 (게임을 만들 때 사용할 두 가지를 포함합니다):
 
-- [click](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event): 사용자가 버튼 또는 하이퍼링크와 같은 무언가를 클릭했습니다
-- [contextmenu](https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event): 사용자가 우측 마우스 버튼을 클릭했습니다
-- [select](https://developer.mozilla.org/en-US/docs/Web/API/Element/select_event): 사용자가 어떤 텍스트를 강조했습니다
-- [input](https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event): 사용자가 어떤 텍스트를 입력했습니다
+- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): 사용자가 버튼 또는 하이퍼링크와 같은 무언가를 클릭했습니다
+- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): 사용자가 우측 마우스 버튼을 클릭했습니다
+- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): 사용자가 어떤 텍스트를 강조했습니다
+- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): 사용자가 어떤 텍스트를 입력했습니다
 
 ## 게임 만들기
 
@@ -331,7 +331,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## 리뷰 & 자기주도 학습
 
-웹 브라우저를 통해 [all the events available]((https://developer.mozilla.org/en-US/docs/Web/Events)) to the developer를 읽고, 각 이벤트를 사용할 시나리오를 고려합니다.
+웹 브라우저를 통해 [all the events available]((https://developer.mozilla.org/docs/Web/Events)) to the developer를 읽고, 각 이벤트를 사용할 시나리오를 고려합니다.
 
 ## 과제
 

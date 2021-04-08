@@ -178,7 +178,7 @@ Boolesche Werte können nur zwei Werte sein: `true` oder `false`. Boolesche Wert
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ Eine Variable kann als "wahr" betrachtet werden, wenn sie als boolescher Wert "wahr" ausgewertet wird. Interessanterweise sind in JavaScript [alle Werte wahr, sofern sie nicht als falsch definiert sind](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+✅ Eine Variable kann als "wahr" betrachtet werden, wenn sie als boolescher Wert "wahr" ausgewertet wird. Interessanterweise sind in JavaScript [alle Werte wahr, sofern sie nicht als falsch definiert sind](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 --- ---.
 

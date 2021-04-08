@@ -29,7 +29,7 @@ Yang kami terangkan di atas adalah tingkah laku yang boleh dimiliki oleh objek p
 
 Ideanya adalah untuk menggunakan `kelas` bersama dengan `pewarisan` untuk menyelesaikan penambahan tingkah laku tertentu ke kelas.
 
-✅ Warisan adalah konsep penting untuk difahami. Ketahui lebih lanjut mengenai [artikel MDN mengenai pewarisan](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+✅ Warisan adalah konsep penting untuk difahami. Ketahui lebih lanjut mengenai [artikel MDN mengenai pewarisan](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 Diekspresikan melalui kod, objek permainan biasanya dapat terlihat seperti ini:
 
@@ -217,7 +217,7 @@ Fikirkan bagaimana corak pub-sub dapat meningkatkan permainan. Bahagian mana yan
 
 ## Mengkaji & Belajar Sendiri
 
-Ketahui lebih lanjut mengenai Pub/Sub dengan [membaca mengenainya](https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber).
+Ketahui lebih lanjut mengenai Pub/Sub dengan [membaca mengenainya](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber).
 
 ## Tugasan
 
