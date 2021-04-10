@@ -1,50 +1,50 @@
-# Terrarium Project Part 3: DOM Manipulation and a Closure
+# टेरारियम प्रोजेक्ट पार्ट 3: DOM मैनिपुलेशन और एक क्लोजर
 
-![DOM and a closure](images/webdev101-js.png)
-> Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
+![DOM मैनिपुलेशन और एक क्लोजर](/sketchnotes/webdev101-js.png)
+> [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा स्केचनेट
 
-## Pre-Lecture Quiz
+## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/19)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/19?loc=hi)
 
-### Introduction
+### परिचय
 
-Manipulating the DOM, or the "Document Object Model", is a key aspect of web development. According to [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), "The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web." The challenges around DOM manipulation on the web have often been the impetus behind using JavaScript frameworks instead of vanilla JavaScript to manage the DOM, but we will manage on our own!
+DOM, या "Document Object Model" में हेरफेर, वेब विकास का एक प्रमुख पहलू है। [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) के अनुसार, "The Document Object Model (DOM) संरचना को समाहित करने वाली वस्तुओं का डेटा प्रतिनिधित्व है। और वेब पर एक दस्तावेज़ की सामग्री। " वेब पर DOM हेरफेर के आसपास की चुनौतियाँ अक्सर DOM का प्रबंधन करने के लिए वैनिला जावास्क्रिप्ट के बजाय जावास्क्रिप्ट चौखटे का उपयोग करने के पीछे होती हैं, लेकिन हम अपने दम पर प्रबंधित करेंगे!
 
-In addition, this lesson will introduce the idea of a [JavaScript closure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), which you can think of as a function enclosed by another function so that the inner function has access to the outer function's scope.
+इसके अलावा, यह पाठ एक [जावास्क्रिप्ट क्लोजर](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) के विचार को पेश करेगा, जिसे आप दूसरे से संलग्न फ़ंक्शन के रूप में सोच सकते हैं कार्य करें ताकि आंतरिक फ़ंक्शन बाहरी फ़ंक्शन के दायरे तक पहुंच सके।
 
-> JavaScript closures are a vast and complex topic. This lesson touches on the most basic idea that in this terrarium's code, you will find a closure: an inner function and an outer function constructed in a way to allow the inner function access to the outer function's scope. For much more information on how this works, please visit the [extensive documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).
+> जावास्क्रिप्ट क्लोजर एक विशाल और जटिल विषय है। यह सबक सबसे बुनियादी विचार पर छूता है कि इस टेरारियम के कोड में, आपको एक बंद मिलेगा: एक आंतरिक फ़ंक्शन और एक बाहरी फ़ंक्शन, जो बाहरी फ़ंक्शन के दायरे में आंतरिक फ़ंक्शन का उपयोग करने की अनुमति देता है। यह कैसे काम करता है, इस बारे में अधिक जानकारी के लिए, कृपया [व्यापक प्रलेखन](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) पर जाएँ।
 
-We will use a closure to manipulate the DOM.
+हम DOM को हेरफेर करने के लिए एक क्लोशर का उपयोग करेंगे।
 
-Think of the DOM as a tree, representing all the ways that a web page document can be manipulated. Various APIs (Application Program Interfaces) have been written so that programmers, using their programming language of choice, can access the DOM and edit, change, rearrange, and otherwise manage it.
+DOM को एक पेड़ के रूप में सोचें, उन सभी तरीकों का प्रतिनिधित्व करता है जो एक वेब पेज दस्तावेज़ में हेरफेर किया जा सकता है। विभिन्न एपीआई (एप्लिकेशन प्रोग्राम इंटरफेस) लिखे गए हैं ताकि प्रोग्रामर अपनी पसंद की प्रोग्रामिंग भाषा का उपयोग करके, DOM तक पहुंच सकें और इसे संपादित, बदल सकें, पुनर्व्यवस्थित कर सकें और अन्यथा इसका प्रबंधन कर सकें।
 
-![DOM tree representation](./images/dom-tree.png)
+![डोम ट्री प्रतिनिधित्व](../images/dom-tree.png)
 
-> A representation of the DOM and the HTML markup that references it. From [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+> DOM और HTML मार्कअप का प्रतिनिधित्व जो इसे संदर्भित करता है। [ओलाफा नसरौई](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites) से
 
-In this lesson, we will complete our interactive terrarium project by creating the JavaScript that will allow a user to manipulate the plants on the page.
+इस पाठ में, हम जावास्क्रिप्ट बनाकर अपनी इंटरैक्टिव टेरारियम परियोजना को पूरा करेंगे जो उपयोगकर्ता को पृष्ठ पर पौधों को हेरफेर करने की अनुमति देगा।
 
-### Prerequisite
+### शर्त
 
-You should have the HTML and CSS for your terrarium built. By the end of this lesson you will be able to move the plants into and out of the terrarium by dragging them.
+आपके पास निर्मित टेरारियम के लिए आपके पास HTML और CSS होना चाहिए। इस पाठ के अंत तक आप पौधों को खींचकर टेरारियम में ले जा सकेंगे।
 
-### Task
+### टास्क
 
-In your terrarium folder, create a new file called `script.js`. Import that file in the `<head>` section:
+अपने टेरारियम फ़ोल्डर में, `script.js` नामक एक नई फ़ाइल बनाएँ। उस फ़ाइल को `<head>` अनुभाग में आयात करें:
 
 ```html
 	<script src="./script.js" defer></script>
 ```
 
-> Note: use `defer` when importing an external JavaScript file into the html file so as to allow the JavaScript to execute only after the HTML file has been fully loaded. You could also use the `async` attribute, which allows the script to execute while the HTML file is parsing, but in our case, it's important to have the HTML elements fully available for dragging before we allow the drag script to be executed.
+> नोट: HTML फ़ाइल में एक बाहरी जावास्क्रिप्ट फ़ाइल आयात करते समय `defer` का उपयोग करें ताकि HTML फ़ाइल पूरी तरह से लोड होने के बाद ही जावास्क्रिप्ट निष्पादित हो सके। आप `async` विशेषता का भी उपयोग कर सकते हैं, जो स्क्रिप्ट को निष्पादित करने की अनुमति देता है जबकि HTML फ़ाइल पार्सिंग है, लेकिन हमारे मामले में, ड्रैग स्क्रिप्ट को निष्पादित करने की अनुमति देने से पहले HTML तत्वों को खींचने के लिए पूरी तरह से उपलब्ध होना आवश्यक है।
 ---
 
-## The DOM elements
+## डोम तत्व
 
-The first thing you need to do is to create references to the elements that you want to manipulate in the DOM. In our case, they are the 14 plants currently waiting in the side bars.
+पहली चीज जो आपको करने की ज़रूरत है वह उन तत्वों के संदर्भ बनाना है जिन्हें आप DOM में हेरफेर करना चाहते हैं। हमारे मामले में, वे 14 पौधे हैं जो वर्तमान में साइड बार में इंतजार कर रहे हैं।
 
-### Task
+### टास्क
 
 ```html
 dragElement(document.getElementById('plant1'));
@@ -63,17 +63,17 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-What's going on here? You are referencing the document and looking through its DOM to find an element with a particular Id. Remember in the first lesson on HTML that you gave individual Ids to each plant image (`id="plant1"`)? Now you will make use of that effort. After identifying each element, you pass that item to a function called `dragElement` that you'll build in a minute. Thus, the element in the HTML is now drag-enabled, or will be shortly.
+यहाँ क्या चल रहा है? आप दस्तावेज़ को संदर्भित कर रहे हैं और किसी विशेष आईडी के साथ एक तत्व खोजने के लिए इसके DOM के माध्यम से देख रहे हैं। HTML पर पहले पाठ में याद रखें कि आपने प्रत्येक संयंत्र छवि (`id="plant1"`) के लिए अलग-अलग Ids दिए हैं? अब आप उस प्रयास का उपयोग करेंगे। प्रत्येक तत्व की पहचान करने के बाद, आप उस आइटम को `dragElement` नामक एक फ़ंक्शन में पास करते हैं जिसे आप एक मिनट में बनाएंगे। इस प्रकार, HTML में तत्व अब ड्रैग-सक्षम है, या शीघ्र ही होगा।
 
-✅ Why do we reference elements by Id? Why not by their CSS class? You might refer to the previous lesson on CSS to answer this question.
+✅ हम आईडी द्वारा तत्वों का संदर्भ क्यों देते हैं? उनके CSS क्लास के द्वारा क्यों नहीं? आप इस प्रश्न का उत्तर देने के लिए CSS के पिछले पाठ का उल्लेख कर सकते हैं।
 
 ---
 
-## The Closure
+## थे क्लोशर
 
-Now you are ready to create the dragElement closure, which is an outer function that encloses an inner function or functions (in our case, we will have three). 
+अब आप DragElement बंद करने के लिए तैयार हैं, जो एक बाहरी फ़ंक्शन है जो एक आंतरिक फ़ंक्शन या फ़ंक्शन को संलग्न करता है (हमारे मामले में, हमारे पास तीन होंगे)।
 
-Closures are useful when one or more functions need to access an outer function's scope. Here's an example:
+बाहरी फ़ंक्शन के कार्यक्षेत्र तक पहुँचने के लिए क्लोज़र उपयोगी होते हैं। यहाँ एक उदाहरण है:
 
 ```javascript
 function displayCandy(){
@@ -87,13 +87,13 @@ displayCandy();
 console.log(candy)
 ```
 
-In this example, the displayCandy function surrounds a function that pushes a new candy type into an array that already exists in the function. If you were to run this code, the `candy` array would be undefined, as it is a local variable (local to the closure). 
+इस उदाहरण में, DisplayCandy फ़ंक्शन एक फ़ंक्शन को घेरता है जो एक नए कैंडी प्रकार को एक सरणी में धकेलता है जो पहले से ही फ़ंक्शन में मौजूद है। यदि आप इस कोड को चलाते हैं, तो `candy` सरणी अपरिभाषित होगी, क्योंकि यह एक स्थानीय चर (बंद करने के लिए स्थानीय) है।
 
-✅ How can you make the `candy` array accessible? Try moving it outside the closure. This way, the array becomes global, rather than remaining only available to the closure's local scope.
+✅ आप `candy` अरै को कैसे सुलभ बना सकते हैं? इसे बंद करने के बाहर ले जाने की कोशिश करें। इस तरह, यह सरणी वैश्विक हो जाती है, बजाए केवल बंद होने के स्थानीय दायरे के उपलब्ध होने के।
 
-### Task
+### टास्क
 
-Under the element declarations in `script.js`, create a function:
+`Script.js` में तत्व घोषणाओं के तहत, एक फ़ंक्शन बनाएँ:
 
 ```javascript
 function dragElement(terrariumElement) {
@@ -106,19 +106,19 @@ function dragElement(terrariumElement) {
 }
 ```
 
-`dragElement` get its `terrariumElement` object from the declarations at the top of the script. Then, you set some local positions at `0` for the object passed into the function. These are the local variables that will be manipulated for each element as you add drag and drop functionality within the closure to each element. The terrarium will be populated by these dragged elements, so the application needs to keep track of where they are placed.
+`dragElement` स्क्रिप्ट के शीर्ष पर घोषणाओं से अपनी `terrariumElement` वस्तु प्राप्त करें। फिर, आप फ़ंक्शन में पारित ऑब्जेक्ट के लिए `0` पर कुछ स्थानीय स्थिति निर्धारित करते हैं। ये स्थानीय चर हैं जिन्हें प्रत्येक तत्व के लिए हेरफेर किया जाएगा क्योंकि आप प्रत्येक तत्व को बंद करने के भीतर खींचें और ड्रॉप कार्यक्षमता जोड़ते हैं। टेरारियम को इन घसीटे गए तत्वों द्वारा पॉपुलेट किया जाएगा, इसलिए एप्लिकेशन को इस बात पर नज़र रखने की आवश्यकता है कि उन्हें कहाँ रखा गया है।
 
-In addition, the terrariumElement that is passed to this function is assigned a `pointerdown` event, which is part of the [web APIs](https://developer.mozilla.org/en-US/docs/Web/API) designed to help with DOM management. `onpointerdown` fires when a button is pushed, or in our case, a draggable element is touched. This event handler works on both [web and mobile browsers](https://caniuse.com/?search=onpointerdown), with a few exceptions.
+इसके अलावा, इस फ़ंक्शन को पारित किए जाने वाले टेरारियम ईमेंट को एक `onpointerdown` ईवेंट सौंपा गया है, जो [वेब एपीआई](https://developer.mozilla.org/en-US/docs/Web/API) का एक हिस्सा है। डोम प्रबंधन के साथ मदद करने के लिए। `onpointerdown` एक बटन धकेलने पर, या हमारे मामले में, एक ड्रैग करने योग्य तत्व को छू जाता है। यह ईवेंट हैंडलर कुछ अपवादों के साथ [वेब और मोबाइल ब्राउज़र](https://caniuse.com/?search=onpointerdown) दोनों पर काम करता है।
 
-✅ The [event handler `onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) has much more support cross-browser; why wouldn't you use it here? Think about the exact type of screen interaction you're trying to create here.
+✅ [ईवेंट हैंडलर `onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) को अधिक समर्थन क्रॉस-ब्राउज़र है; आप इसका उपयोग यहां क्यों नहीं करेंगे? स्क्रीन निर्माण के सटीक प्रकार के बारे में सोचें जिसे आप यहाँ बनाने का प्रयास कर रहे हैं।
 
 ---
 
-## The Pointerdrag function
+## पॉइंटरड्रैग फ़ंक्शन
 
-The terrariumElement is ready to be dragged around; when the `onpointerdown` event is fired, the function pointerDrag is invoked. Add that function right under this line: `terrariumElement.onpointerdown = pointerDrag;`:
+terrariumElement को घसीटने के लिए तैयार है; जब `onpointerdown` ईवेंट को निकाल दिया जाता है, तो फ़ंक्शन पॉइंटरड्रैग को आमंत्रित किया जाता है। इस पंक्ति के नीचे उस फ़ंक्शन को जोड़ें: `terrariumElement.onpointerdown = pointerDrag;`:
 
-### Task 
+### टास्क
 
 ```javascript
 function pointerDrag(e) {
@@ -129,31 +129,31 @@ function pointerDrag(e) {
 }
 ```
 
-Several things happen. First, you prevent the default events that normally happen on pointerdown from occurring by using `e.preventDefault();`. This way you have more control over the interface's behavior.
+कई चीजें होती हैं। सबसे पहले, आप डिफ़ॉल्ट ईवेंट्स को इंगित करते हैं जो आमतौर पर पॉइंटरडाउन पर होता है `e.preventDefault ();` का उपयोग करके। इस तरह से आपके पास इंटरफ़ेस के व्यवहार पर अधिक नियंत्रण है।
 
-> Come back to this line when you've built the script file completely and try it without `e.preventDefault()` - what happens?
+> जब आप पूरी तरह से स्क्रिप्ट फ़ाइल का निर्माण कर चुके हों और `e.preventDefault ()` के बिना प्रयास करें - इस पंक्ति में वापस आएं - क्या होता है?
 
-Second, open `index.html` in a browser window, and inspect the interface. When you click a plant, you can see how the 'e' event is captured. Dig into the event to see how much information is gathered by one pointer down event!  
+दूसरा, ब्राउज़र विंडो में `index.html` खोलें, और इंटरफ़ेस का निरीक्षण करें। जब आप किसी प्लांट पर क्लिक करते हैं, तो आप देख सकते हैं कि 'e' ईवेंट कैसे कैप्चर किया जाता है। घटना में खुदाई करके देखें कि एक सूचक डाउन घटना द्वारा कितनी जानकारी एकत्र की जाती है!
 
-Next, note how the local variables `pos3` and `pos4` are set to e.clientX. You can find the `e` values in the inspection pane. These values capture the x and y coordinates of the plant at the moment you click on it or touch it. You will need fine-grained control over the behavior of the plants as you click and drag them, so you keep track of their coordinates.
+इसके बाद, ध्यान दें कि कैसे स्थानीय चर `pos3` और` pos4` को e.clientX पर सेट किया जाता है। आप निरीक्षण फलक में `e` मान पा सकते हैं। ये मान उस समय संयंत्र के x और y निर्देशांक को कैप्चर करते हैं जब आप उस पर क्लिक करते हैं या उसे स्पर्श करते हैं। जब आप क्लिक करते हैं और उन्हें खींचते हैं, तो आपको पौधों के व्यवहार पर ठीक-ठीक नियंत्रण की आवश्यकता होगी, इसलिए आप उनके निर्देशांक पर नज़र रखें।
 
-✅ Is it becoming more clear why this entire app is built with one big closure? If it wasn't, how would you maintain scope for each of the 14 draggable plants?
+✅ क्या यह अधिक स्पष्ट हो रहा है कि इस पूरे ऐप को एक बड़े क्लोजर के साथ क्यों बनाया गया है? यदि यह नहीं था, तो आप 14 ड्रैगेबल पौधों में से प्रत्येक के लिए गुंजाइश कैसे बनाए रखेंगे?
 
-Complete the initial function by adding two more pointer event manipulations under `pos4 = e.clientY`:
+`pos4 = e.clientY` के तहत दो और पॉइंटर इवेंट जोड़-तोड़ जोड़कर प्रारंभिक कार्य पूरा करें:
 
 ```html
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
-Now you are indicating that you want the plant to be dragged along with the pointer as you move it, and for the dragging gesture to stop when you deselect the plant. `onpointermove` and `onpointerup` are all parts of the same API as `onpointerdown`. The interface will throw errors now as you have not yet defined the `elementDrag` and the `stopElementDrag` functions, so build those out next.
+अब आप यह संकेत दे रहे हैं कि आप चाहते हैं कि प्लांट आपको पॉइंटर के साथ-साथ खींचे, और जब आप प्लांट को अचयनित करते हैं, तब उसे रोकने के लिए जेस्चर को खींचे। `onpointermove` और` onpointerup` एक ही API के सभी भाग `onpointerdown` के रूप में हैं। इंटरफ़ेस अब त्रुटियों को फेंक देगा क्योंकि आपने अभी तक `elementDrag` और `stopElementDrag` फ़ंक्शन को परिभाषित नहीं किया है, इसलिए उन लोगों का निर्माण करेंt.
 
-## The elementDrag and stopElementDrag functions
+## elementDrag और stopElementDrag फंगक्शनस 
 
-You will complete your closure by adding two more internal functions that will handle what happens when you drag a plant and stop dragging it. The behavior you want is that you can drag any plant at any time and place it anywhere on the screen. This interface is quite un-opinionated (there is no drop zone for example) to allow you to design your terrarium exactly as you like it by adding, removing, and repositioning plants.
+आप दो और आंतरिक कार्यों को जोड़कर अपने बंद को पूरा करेंगे जो तब होगा जब आप किसी पौधे को खींचते हैं और उसे खींचना बंद कर देंगे। जो व्यवहार आप चाहते हैं, वह यह है कि आप किसी भी समय किसी भी पौधे को खींच सकते हैं और स्क्रीन पर कहीं भी रख सकते हैं। यह इंटरफ़ेस काफी गैर-राय है (उदाहरण के लिए कोई ड्रॉप ज़ोन नहीं है) आपको अपने टेरारियम को ठीक उसी तरह से डिज़ाइन करने की अनुमति देता है, जैसे आप पौधों को जोड़कर, हटाकर और रिपोजिट करके।
 
-### Task
+### टास्क
 
-Add the `elementDrag` function right after the closing curly bracket of `pointerDrag`:
+`PointerDrag` के समापन घुंघराले ब्रैकेट के ठीक बाद `elementDrag` फ़ंक्शन जोड़ें।
 
 ```javascript
 function elementDrag(e) {
@@ -166,17 +166,17 @@ function elementDrag(e) {
 	terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
 }
 ```
-In this function, you do a lot of editing of the initial positions 1-4 that you set as local variables in the outer function. What's going on here?
+इस फ़ंक्शन में, आप प्रारंभिक पदों 1-4 का बहुत अधिक संपादन करते हैं जो आप बाहरी फ़ंक्शन में स्थानीय चर के रूप में सेट करते हैं। यहाँ क्या चल रहा है?
 
-As you drag, you reassign `pos1` by making it equal to `pos3` (which you set earlier as `e.clientX`)  minus the current `e.clientX` value. You do a similar operation to `pos2`. Then, you reset `pos3` and `pos4` to the new X and Y coordinates of the element. You can watch these changes in the console as you drag. Then, you manipulate the plant's css style to set its new position based on the new positions of `pos1` and `pos2`, calculating the plant's top and left X and Y coordinates based on comparing its offset with these new positions.
+जैसा कि आप खींचते हैं, आप `pos1` को` pos3` (जिसे आप पहले `e.clientX` के रूप में सेट करते हैं) के बराबर करके वर्तमान` e.clientX` मान को पुन: असाइन करते हैं। आप `pos2` के समान ऑपरेशन करते हैं। फिर, आप तत्व के नए X और Y निर्देशांक के लिए `pos3` और `pos4` को रीसेट करते हैं। जैसे ही आप ड्रैग करते हैं आप इन बदलावों को कंसोल में देख सकते हैं। फिर, आप प्लांट की सीएसएस शैली में हेरफेर करते हैं, ताकि पॉज़ के शीर्ष और बाएं एक्स और वाई निर्देशांक की गणना इन नए पदों के साथ तुलना करने के आधार पर `pos1` और `pos2` के नए पदों के आधार पर अपनी नई स्थिति निर्धारित कर सकें।
 
-> `offsetTop` and `offsetLeft` are CSS properties that set an element's position based on that of its parent; its parent can be any element that is not positioned as `static`. 
+> `offsetTop` और `offsetLeft` सीएसएस गुण हैं जो एक तत्व की स्थिति को उसके पेरेंट्स के आधार पर निर्धारित करते हैं; इसका मूल कोई भी तत्व हो सकता है जिसे `static` के रूप में तैनात नहीं किया जाता है।
 
-All this recalculation of positioning allows you to fine-tune the behavior of the terrarium and its plants.
+स्थिति के इस सभी पुनर्गणना से आपको टेरारियम और उसके पौधों के व्यवहार को ठीक करने की अनुमति मिलती है।
 
-### Task 
+### टास्क
 
-The final task to complete the interface is to add the `stopElementDrag` function after the closing curly bracket of `elementDrag`:
+इंटरफ़ेस को पूरा करने के लिए अंतिम कार्य `elementDrag` के समापन कर्ली ब्रैकेट के बाद `stopElementDrag` फ़ंक्शन को जोड़ना है:
 
 ```javascript
 function stopElementDrag() {
@@ -185,33 +185,33 @@ function stopElementDrag() {
 }
 ```
 
-This small function resets the `onpointerup` and `onpointermove` events so that you can either restart your plant's progress by starting to drag it again, or start dragging a new plant.
+यह छोटा फ़ंक्शन `onpointerup` और `onpointermove` इवेंट्स को रीसेट करता है ताकि आप या तो अपने प्लांट की प्रगति को फिर से खींचना शुरू कर सकें, या एक नए प्लांट को खींचना शुरू कर सकें।
 
-✅ What happens if you don't set these events to null?
+✅ यदि आप इन घटनाओं को नल करने के लिए सेट नहीं करते हैं तो क्या होगा?
 
-Now you have completed your project!
+अब आपने अपना प्रोजेक्ट पूरा कर लिया है!
 
-🥇Congratulations! You have finished your beautiful terrarium. ![finished terrarium](./images/terrarium-final.png)
+🥇बधाई हो! आपने अपना सुंदर टेरारियम पूरा कर लिया है। [समाप्त टेरारियम](./images/terrarium-final.png)
 
 ---
 
-## 🚀Challenge
+## 🚀चुनौती
 
-Add new event handler to your closure to do something more to the plants; for example, double-click a plant to bring it to the front. Get creative!
+पौधों को कुछ और करने के लिए अपने क्लोशर करने के लिए नया ईवेंट हैंडलर जोड़ें; उदाहरण के लिए, किसी पौधे को सामने लाने के लिए उस पर डबल-क्लिक करें। रचनात्मक हो!
 
-## Post-Lecture Quiz
+## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/20)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/20?loc=hi)
 
-## Review & Self Study
+## समीक्षा और स्व अध्ययन
 
-While dragging elements around the screen seems trivial, there are many ways to do this and many pitfalls, depending on the effect you seek. In fact, there is an entire [drag and drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API) that you can try. We didn't use it in this module because the effect we wanted was somewhat different, but try this API on your own project and see what you can achieve.
+स्क्रीन के चारों ओर तत्वों को खींचते समय तुच्छ लगता है, ऐसा करने के कई तरीके और कई नुकसान हैं, जो आपके चाहने वाले प्रभाव पर निर्भर करता है। वास्तव में, एक संपूर्ण [ड्रैग एंड ड्रॉप एपीआई](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API) है जिसे आप आज़मा सकते हैं। हमने इसका उपयोग इस मॉड्यूल में नहीं किया क्योंकि हम जो प्रभाव चाहते थे वह कुछ अलग था, लेकिन इस एपीआई को अपने प्रोजेक्ट पर आज़माएँ और देखें कि आप क्या हासिल कर सकते हैं।
 
-Find more information on pointer events on the [W3C docs](https://www.w3.org/TR/pointerevents1/) and on [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events).
+[W3C डॉक्स](https://www.w3.org/TR/pointerevents1/) और [MDN वेब डॉक्स](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events) पर सूचक घटनाओं के बारे में अधिक जानकारी प्राप्त करें।
 
-Always check browser capabilities using [CanIUse.com](https://caniuse.com/).
+हमेशा [CanIUse.com] (https://caniuse.com/) का उपयोग करके ब्राउज़र क्षमताओं की जाँच करें।
 
-## Assignment
+## असाइनमेंट
 
-[Work a bit more with the DOM](assignment.md)
+[DOM के साथ थोड़ा और काम करें](assignment.hi.md)
 
