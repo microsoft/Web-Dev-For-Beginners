@@ -1,6 +1,6 @@
 # Dasar-dasar JavaScript: Array dan Loop
 
-![Dasar-dasar JavaScript - Array](../images/webdev101-js-arrays.png)
+![Dasar-dasar JavaScript - Array](/sketchnotes/webdev101-js-arrays.png)
 
 > Sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 

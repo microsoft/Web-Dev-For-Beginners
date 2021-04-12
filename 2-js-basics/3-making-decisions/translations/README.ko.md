@@ -1,6 +1,6 @@
 # JavaScript 기초: 결정하기
 
-![JavaScript Basics - Making decisions](../images/webdev101-js-decisions.png)
+![JavaScript Basics - Making decisions](/sketchnotes/webdev101-js-decisions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈

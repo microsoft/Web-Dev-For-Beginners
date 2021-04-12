@@ -1,6 +1,6 @@
 # 盆栽盒專案 Part 2： CSS 簡介
 
-![CSS 簡介](../images/webdev101-css.png)
+![CSS 簡介](/sketchnotes/webdev101-css.png)
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗

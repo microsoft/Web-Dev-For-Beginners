@@ -1,6 +1,6 @@
 # Membuat Halaman Web yang Dapat Diakses (oleh Semua Orang)
 
-![Semua Tentang Aksesibilitas](../webdev101-a11y.png)
+![Semua Tentang Aksesibilitas](/sketchnotes/webdev101-a11y.png)
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Pra-Kuliah

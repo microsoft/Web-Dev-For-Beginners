@@ -1,6 +1,6 @@
 # Dasar-dasar JavaScript: Tipe Data
 
-![Dasar-dasar JavaScript - Tipe data](../images/webdev101-js-datatypes.png)
+![Dasar-dasar JavaScript - Tipe data](/sketchnotes/webdev101-js-datatypes.png)
 
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 

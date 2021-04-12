@@ -1,6 +1,6 @@
 # JavaScript Basics: Gegevenstypen
 
-![JavaScript Basics - Data types](../images/webdev101-js-datatypes.png)
+![JavaScript Basics - Data types](/sketchnotes/webdev101-js-datatypes.png)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz voorafgaand aan de lezing

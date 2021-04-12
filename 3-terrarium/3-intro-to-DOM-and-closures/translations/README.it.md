@@ -1,6 +1,6 @@
 # Progetto Terrario Parte 3: Manipolazione del DOM e Closure
 
-![Manipolazione DOM e closure](../images/webdev101-js.png)
+![Manipolazione DOM e closure](/sketchnotes/webdev101-js.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione

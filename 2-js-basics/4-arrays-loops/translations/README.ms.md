@@ -1,6 +1,6 @@
 # Asas JavaScript: Array dan Loop
 
-![Asas JavaScript - Array](../images/webdev101-js-arrays.png)
+![Asas JavaScript - Array](/sketchnotes/webdev101-js-arrays.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah

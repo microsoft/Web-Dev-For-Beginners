@@ -1,6 +1,6 @@
 # Asas JavaScript: Jenis Data
 
-![Asas JavaScript: Jenis Data](../images/webdev101-js-datatypes.png)
+![Asas JavaScript: Jenis Data](/sketchnotes/webdev101-js-datatypes.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah

@@ -1,6 +1,6 @@
 # Terrarium 프로젝트 파트 1: HTML 소개
 
-![Introduction to HTML](../images/webdev101-html.png)
+![Introduction to HTML](/sketchnotes/webdev101-html.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈

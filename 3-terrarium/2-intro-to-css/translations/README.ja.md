@@ -1,6 +1,6 @@
 # テラリウムプロジェクト その2: CSS 入門
 
-![Introduction to CSS](../images/webdev101-css.png)
+![Introduction to CSS](/sketchnotes/webdev101-css.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト

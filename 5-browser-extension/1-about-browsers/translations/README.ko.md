@@ -1,6 +1,6 @@
 # 브라우저 확장 프로젝트 파트 1: 브라우저에 대한 모든 것
 
-![Browser sketchnote](../images/sketchnote.jpg)
+![Browser sketchnote](/sketchnotes/browser.jpg)
 > Sketchnote by [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## 강의 전 퀴즈
