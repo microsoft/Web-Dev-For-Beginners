@@ -1,8 +1,11 @@
 # Conceptos básicos de JavaScript: tipos de datos
 
+![JavaScript Basics - Data types](/sketchnotes/webdev101-js-datatypes.png)
+> Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
+
 [![Tipos de datos en JavaScript](https://img.youtube.com/vi/rEHV3fFMfn0/0.jpg)](https://youtube.com/watch?v=rEHV3fFMfn0 "Tipos de datos en JavaScript")
 
-## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7)
+## [Pre-lectura prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7)
 
 Esta lección cubre los conceptos básicos de JavaScript, el lenguaje que proporciona interactividad en la web.
 
@@ -21,7 +24,7 @@ Crear y **declarar** una variable tiene la siguiente sintaxis **[keyword] [name]
 
 ### Tarea - trabajar con variables
 
-1. **Declare una variable**. Declaremos una variable usando la palabra clave `let`:
+1. **Declara una variable**. Declaremos una variable usando la palabra clave `let`:
 
     ```javascript
     let myVariable;
@@ -39,7 +42,7 @@ Crear y **declarar** una variable tiene la siguiente sintaxis **[keyword] [name]
 
     `myVariable` ahora se ha *inicializado* con el valor 123.
 
-1. **Refactor**. Reemplace su código con la siguiente declaración.
+1. **Refactorizar código**. Reemplace su código con la siguiente declaración.
 
     ```javascript
     let myVariable = 123;
@@ -66,9 +69,9 @@ La declaración e inicialización de una constante sigue los mismos conceptos qu
 const MY_VARIABLE = 123;
 ```
 
-CLas constantes son similares a las variables, con dos excepciones:
+Las constantes son similares a las variables, con dos excepciones:
 
-- **Debe tener un valor**. Las constantes deben inicializarse o se producirá un error al ejecutar el código.
+- **Deben tener un valor**. Las constantes deben inicializarse o se producirá un error al ejecutar el código.
 - **La referencia no se puede cambiar**. La referencia de una constante no se puede cambiar una vez inicializada, o se producirá un error al ejecutar el código. Veamos dos ejemplos:
     - **Valor simple**. NO se permite lo siguiente:
 
@@ -78,11 +81,11 @@ CLas constantes son similares a las variables, con dos excepciones:
       PI = 4; // no permitido
       ```
  
-   - **La referencia de objeto está protegida**. NO se permite lo siguiente.
+   - **La referencia del objeto está protegida**. NO se permite lo siguiente.
    
       ```javascript
       const obj = { a: 3 };
-      obj = { b: 5 } // o permitido
+      obj = { b: 5 } // no permitido
       ```
 
     - **El valor del objeto no está protegido**. Se permite lo siguiente:
@@ -94,7 +97,7 @@ CLas constantes son similares a las variables, con dos excepciones:
 
       Arriba está cambiando el valor del objeto pero no la referencia en sí, lo que lo permite.
 
-   > Tenga en cuenta que una `const` significa que la referencia está protegida contra la reasignación. Sin embargo, el valor no es _immutable_ y puede cambiar, especialmente si es una construcción compleja como un objeto.
+   > Tenga en cuenta que `const` significa que la referencia está protegida contra la reasignación. Sin embargo, el valor no es _immutable_ y puede cambiar, especialmente si es una construcción compleja como un objeto.
 
 ## Tipos de datos
 
@@ -120,52 +123,52 @@ Hay varios tipos de operadores que se pueden utilizar al realizar funciones arit
 | `-`     | **Resta**: Calcula la diferencia de dos números                    | `1 - 2 //la respuesta esperada es -1`  |
 | `*`     | **Multiplicación**: Calcula el producto de dos números             | `1 * 2 //la respuesta esperada es 2`   |
 | `/`     | **División**: Calcula el cociente de dos números                   | `1 / 2 //la respuesta esperada es 0.5` |
-| `%`     | **Resto**: Calcula el resto a partir de la división de dos números | `1 % 2 //la respuesta esperada es 1`   |
+| `%`     | **Restante**: Calcula el resto a partir de la división de dos números | `1 % 2 //la respuesta esperada es 1`   |
 
 ✅ ¡Pruébalo! Pruebe una operación aritmética en la consola de su navegador. ¿Te sorprenden los resultados?
 
-### Cadenas
+### String
 
-Las cadenas son conjuntos de caracteres que residen entre comillas simples o dobles.
+Las cadenas (Strings) son conjuntos de caracteres que residen entre comillas simples o dobles.
 
-- `'Esto es una cadena'`
-- `"Esto también es una cadena"`
-- `let myString = 'Este es un valor de cadena almacenado en una variable';`
+- `'Esto es un String'`
+- `"Esto también es un String"`
+- `let myString = 'Este es un valor del String almacenado en una variable';`
 
-Recuerde utilizar comillas al escribir una cadena, de lo contrario JavaScript asumirá que es un nombre de variable.
+Recuerde utilizar comillas al escribir un String, de lo contrario JavaScript asumirá que es un nombre de variable.
 
-### Formateo de cadenas
+### Formateo de Strings
 
-Las cadenas son textuales y requerirán formato de vez en cuando.
+Los Strings son textuales y requerirán formato de vez en cuando.
 
-Para **concatenar** dos o más cadenas, o unirlas, use el operador `+`.
+Para **concatenar** dos o más Strings, o unirlas, use el operador `+`.
 
 ```javascript
-let myString1 = "Hello";
-let myString2 = "World";
+let myString1 = "Hola";
+let myString2 = "Mundo";
 
-myString1 + myString2 + "!"; //HelloWorld!
-myString1 + " " + myString2 + "!"; //Hello World!
-myString1 + ", " + myString2 + "!"; //Hello, World!
+myString1 + myString2 + "!"; //¡Hola, mundo!
+myString1 + " " + myString2 + "!"; //¡Hola, mundo!
+myString1 + ", " + myString2 + "!"; //¡Hola, mundo!
 
 ```
 
 ✅ ¿Por qué `1 + 1 = 2` en JavaScript, pero `'1' + '1' = 11?` Piense en ello. ¿Qué pasa con `'1' + 1`?
 
-** Los literales de plantilla ** son otra forma de formatear cadenas, excepto que en lugar de comillas, se usa la comilla invertida. Todo lo que no sea texto sin formato debe colocarse dentro de los marcadores de posición `${ }`. Esto incluye cualquier variable que pueda ser cadenas.
+**Los literales de plantilla** son otra forma de formatear Strings, excepto que en lugar de comillas, se usa la comilla invertida. Todo lo que no sea texto sin formato debe colocarse dentro de los marcadores de posición `${ }`. Esto incluye cualquier variable que pueda ser Strings.
 
 
 ```javascript
-let myString1 = "Hello";
-let myString2 = "World";
+let myString1 = "Hola";
+let myString2 = "Mundo";
 
-`${myString1} ${myString2}!` //Hello World!
-`${myString1}, ${myString2}!` //Hello, World!
+`${myString1} ${myString2}!` //¡Hola, mundo!
+`${myString1}, ${myString2}!` //¡Hola, mundo!
 ```
 
 Puede lograr sus objetivos de formato con cualquier método, pero los literales de plantilla respetarán los espacios y saltos de línea.
 
-✅ ¿Cuándo usaría una plantilla literal frente a una cadena simple?
+✅ ¿Cuándo usaría una plantilla literal frente a un String simple?
 
 ### Booleanos
 
@@ -178,7 +181,7 @@ Los booleanos pueden tener solo dos valores: `true` o `false`. Los valores boole
 
 🚀 Desafío: JavaScript es conocido por sus sorprendentes formas de manejar tipos de datos en ocasiones. Investiga un poco sobre estos "errores". Por ejemplo: ¡la sensibilidad a mayúsculas y minúsculas puede morder! Pruebe esto en su consola: `let age = 1; let Age = 2; age == Age` (resuelve `false` - ¿por qué?). ¿Qué otras trampas puedes encontrar?
 
-## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8)
+## [Post-lectura prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8)
 
 ## Revisión y autoestudio
 
