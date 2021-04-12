@@ -1,20 +1,20 @@
-# Build a Banking App Part 3: Methods of Fetching and Using Data
+# एक बैंकिंग ऐप पार्ट 3 का निर्माण करें: डेटा प्राप्त करने और उपयोग करने के तरीके
 
-## Pre-Lecture Quiz
+## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45?loc=hi)
 
-### Introduction
+### परिचय
 
-At the core of every web application there's *data*. Data can take many forms, but its main purpose is always to display information to the user. With web apps becoming increasingly interactive and complex, how the user accesses and interacts with information is now a key part of web development.
+हर वेब एप्लिकेशन के मूल में *डेटा* है। डेटा कई रूप ले सकता है, लेकिन इसका मुख्य उद्देश्य हमेशा उपयोगकर्ता को जानकारी प्रदर्शित करना है। वेब एप्लिकेशन तेजी से इंटरेक्टिव और जटिल होने के साथ, उपयोगकर्ता कैसे पहुंचता है और जानकारी के साथ सहभागिता करता है, अब वेब विकास का एक महत्वपूर्ण हिस्सा है।
 
-In this lesson, we'll see how to fetch data from a server asynchronously, and use this data to display information on a web page without reloading the HTML.
+इस पाठ में, हम एक सर्वर से डेटा को असिंक्रोनोस  रूप से प्राप्त करने का तरीका देखेंगे, और HTML को पुनः लोड किए बिना वेब पेज पर जानकारी प्रदर्शित करने के लिए इस डेटा का उपयोग करेंगे।
 
-### Prerequisite
+### शर्त
 
-You need to have built the [Login and Registration Form](../2-forms/README.md) part of the web app for this lesson. You also need to install [Node.js](https://nodejs.org) and [run the server API](../api/README.md) locally so you get account data.
+इस पाठ के लिए आपको वेब ऐप का [लॉगिन और पंजीकरण फॉर्म](../../2-forms/translations/README.hi.md) भाग बनाने की आवश्यकता है। आपको स्थानीय रूप से [Node.js](https://nodejs.org) और [सर्वर एपीआई चलाने](../../api/translations/README.hi.md) स्थापित करने की आवश्यकता है ताकि आपको खाता डेटा प्राप्त हो सके।
 
-You can test that the server is running properly by executing this command in a terminal:
+आप परीक्षण कर सकते हैं कि सर्वर टर्मिनल में इस कमांड को निष्पादित करके ठीक से चल रहा है:
 
 ```sh
 curl http://localhost:5000/api
@@ -23,23 +23,23 @@ curl http://localhost:5000/api
 
 ---
 
-## AJAX and data fetching
+## AJAX और डेटा लाना
 
-Traditional web sites update the content displayed when the user selects a link or submits data using a form, by reloading the full HTML page. Every time new data needs to be loaded, the web server returns a brand new HTML page that needs to be processed by the browser, interrupting the current user action and limiting interactions during the reload. This workflow is also called a *Multi-Page Application* or *MPA*.
+पारंपरिक वेब साइटें प्रदर्शित सामग्री को अपडेट करती हैं जब उपयोगकर्ता एक लिंक का चयन करता है या पूर्ण HTML पृष्ठ को फिर से लोड करके एक फॉर्म का उपयोग करके डेटा सबमिट करता है। हर बार नए डेटा को लोड करने की आवश्यकता होती है, वेब सर्वर एक नया HTML पृष्ठ लौटाता है जिसे ब्राउज़र द्वारा संसाधित करने की आवश्यकता होती है, वर्तमान उपयोगकर्ता कार्रवाई को बाधित करता है और पुनः लोड के दौरान इंटरैक्शन को सीमित करता है। इस वर्कफ़्लो को *मल्टी-पेज एप्लिकेशन* या *एमपीए* भी कहा जाता है।
 
-![Update workflow in a multi-page application](./images/mpa.png)
+![मल्टी-पेज एप्लिकेशन में वर्कफ़्लो अपडेट करें](../images/mpa.png)
 
-When web applications started to become more complex and interactive, a new technique called [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) emerged. This technique allows web apps to send and retrieve data from a server asynchronously using JavaScript, without having to reload the HTML page, resulting in faster updates and smoother user interactions. When new data is received from the server, the current HTML page can also be updated with JavaScript using the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) API. Over time, this approach has evolved into what is now called a [*Single-Page Application* or *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+जब वेब एप्लिकेशन अधिक जटिल और संवादात्मक होने लगे, तो [AJAX (असिंक्रोनोस  जावास्क्रिप्ट और XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) नामक एक नई तकनीक सामने आई। यह तकनीक वेब ऐप्स को HTML पेज को फिर से लोड किए बिना, जावास्क्रिप्ट के उपयोग से सर्वर से असिंक्रोनोस  रूप से डेटा भेजने और पुनः प्राप्त करने की अनुमति देती है, जिसके परिणामस्वरूप तेज़ अपडेट और सुगम उपयोगकर्ता सहभागिता होती है। जब सर्वर से नया डेटा प्राप्त होता है, तो वर्तमान HTML पृष्ठ को [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Melel) API का उपयोग करके जावास्क्रिप्ट के साथ भी अपडेट किया जा सकता है। समय के साथ, यह दृष्टिकोण अब एक [* सिंगल-पेज एप्लिकेशन* या *एसपीए*](https://en.wikipedia.org/wiki/Single-page_application) कहलाता है।
 
-![Update workflow in a single-page application](./images/spa.png)
+![एकल-पृष्ठ एप्लिकेशन में वर्कफ़्लो अपडेट करें](../images/spa.png)
 
-When AJAX was first introduced, the only API available to fetch data asynchronously was [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). But modern browsers now also implement the more convenient and powerful [`Fetch` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), which uses promises and is better suited to manipulate JSON data.
+जब AJAX पहली बार पेश किया गया था, तो डेटा को अतुल्य रूप से लाने के लिए उपलब्ध एकमात्र API [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) था। लेकिन आधुनिक ब्राउज़र अब अधिक सुविधाजनक और शक्तिशाली [`Fetch` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) लागू करते हैं, जो प्रामिसेस का उपयोग करता है और हेरफेर करने के लिए बेहतर अनुकूल है JSON डेटा।
 
-> While all modern browsers support the `Fetch API`, if you want your web application to work on legacy or old browsers it's always a good idea to check the [compatibility table on caniuse.com](https://caniuse.com/fetch) first.
+> जबकि सभी आधुनिक ब्राउज़र `Fetch API` का समर्थन करते हैं, यदि आप चाहते हैं कि आपका वेब एप्लिकेशन विरासत या पुराने ब्राउज़रों पर काम करे, तो यह हमेशा एक अच्छा विचार है कि [caniuse.com पर संगतता तालिका](https://caniuse.com/fetch) पहले की जाँच करें।
 
-### Task
+### टास्क
 
-In [the previous lesson](../2-forms/README.md) we implemented the registration form to create an account. We'll now add code to login using an existing account, and fetch its data. Open the `app.js` file and add a new `login` function:
+[पिछले पाठ में](../../2-forms/translations/README.hi.md) हमने खाता बनाने के लिए पंजीकरण फ़ॉर्म लागू किया था। अब हम किसी मौजूदा खाते का उपयोग कर लॉगिन करने के लिए कोड जोड़ेंगे और उसका डेटा प्राप्त करेंगे। `app.js` फ़ाइल खोलें और एक नया `login` फ़ंक्शन जोड़ें:
 
 ```js
 async function login() {
@@ -48,9 +48,9 @@ async function login() {
 }
 ```
 
-Here we start by retrieving the form element with `getElementById()`, and then we get the username from the input with `loginForm.user.value`. Every form control can be accessed by its name (set in the HTML using the `name` attribute) as a property of the form.
+यहाँ हम `getElementById()` के साथ फॉर्म एलिमेंट को पुनः प्राप्त करके शुरू करते हैं, और फिर हम `loginForm.user.value` के साथ इनपुट से यूज़रनेम प्राप्त करते हैं। प्रत्येक प्रपत्र नियंत्रण को उसके नाम (फॉर्म का गुण के रूप में HTML में `name` विशेषता का उपयोग करके सेट) तक पहुँचा जा सकता है।
 
-In a similar fashion to what we did for the registration, we'll create another function to perform a server request, but this time for retrieving the account data:
+पंजीकरण के लिए हमने जो कुछ किया था, उसी तरह से, हम सर्वर अनुरोध करने के लिए एक और कार्य करेंगे, लेकिन इस बार खाता डेटा प्राप्त करने के लिए:
 
 ```js
 async function getAccount(user) {
@@ -63,11 +63,11 @@ async function getAccount(user) {
 }
 ```
 
-We use the `fetch` API to request the data asynchronously from the server, but this time we don't need any extra parameters other than the URL to call, as we're only querying data. By default, `fetch` creates a [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) HTTP request, which is what we are seeking here.
+हम सर्वर से एसिंक्रोनस रूप से डेटा का अनुरोध करने के लिए `fetch` एपीआई का उपयोग करते हैं, लेकिन इस बार हमें कॉल करने के लिए URL के अलावा किसी भी अतिरिक्त पैरामीटर की आवश्यकता नहीं है, क्योंकि हम केवल डेटा क्वेरी कर रहे हैं। डिफ़ॉल्ट रूप से, 'fetch' एक [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET)  HTTP अनुरोध बनाता है , जो हम यहाँ चाह रहे हैं।
 
-✅ `encodeURIComponent()` is a function that escapes special characters for URL. What issues could we possibly have if we do not call this function and use directly the `user` value in the URL?
+✅ `encodeURIComponent()` एक फ़ंक्शन है जो URL के लिए विशेष वर्णों से बच जाता है। यदि हम इस फ़ंक्शन को कॉल नहीं करते हैं और URL में सीधे `user` वैल्यू का उपयोग करते हैं, तो संभवतः हमारे पास क्या समस्याएँ हो सकती हैं?
 
-Let's now update our `login` function to use `getAccount`:
+आइए अब `getAccount` का उपयोग करने के लिए हमारे `login` फ़ंक्शन को अपडेट करें:
 
 ```js
 async function login() {
@@ -84,50 +84,50 @@ async function login() {
 }
 ```
 
-First, as `getAccount` is an asynchronous function we need to match it with the `await` keyword to wait for the server result. As with any server request, we also have to deal with error cases. For now we'll only add a log message to display the error, and come back to it later.
+सबसे पहले, जैसा कि `getAccount` एक असिंक्रोनोस  फ़ंक्शन है, जिसे हमें सर्वर परिणाम की प्रतीक्षा करने के लिए `await` कीवर्ड के साथ मेल खाना चाहिए। किसी भी सर्वर अनुरोध के साथ, हमें त्रुटि मामलों से भी निपटना होगा। अभी के लिए हम केवल त्रुटि प्रदर्शित करने के लिए एक लॉग संदेश जोड़ेंगे, और बाद में वापस आएँगे।
 
-Then we have to store the data somewhere so we can later use it to display the dashboard informations. Since the `account` variable does not exist yet, we'll create a global variable for it at the top of our file:
+फिर हमें डेटा को कहीं स्टोर करना होगा ताकि हम बाद में इसे डैशबोर्ड इनफार्मेशन्स को प्रदर्शित कर सकें। चूंकि `account` चर अभी तक मौजूद नहीं है, हम अपनी फ़ाइल के शीर्ष पर इसके लिए एक वैश्विक चर बनाएंगे।
 
 ```js
 let account = null;
 ```
 
-After the user data is saved into a variable we can navigate from the *login* page to the *dashboard* using the `navigate()` function we already have.
+उपयोगकर्ता डेटा को एक चर में सहेजे जाने के बाद हम पहले से मौजूद `navigate()` फ़ंक्शन का उपयोग करके *लॉगिन* पृष्ठ से *डैशबोर्ड* तक नेविगेट कर सकते हैं।
 
-Finally, we need to call our `login` function when the login form is submitted, by modifying the HTML:
+अंत में, हमें HTML को संशोधित करके लॉगिन फ़ॉर्म सबमिट करने पर हमारे `login` फ़ंक्शन को कॉल करने की आवश्यकता है:
 
 ```html
 <form id="loginForm" action="javascript:login()">
 ```
 
-Test that everything is working correctly by registering a new account and trying to login using the same account.
+परीक्षण करें कि नया खाता पंजीकृत करके और उसी खाते का उपयोग करके लॉगिन करने का प्रयास करके सब कुछ सही ढंग से काम कर रहा है।
 
-Before moving on to the next part, we can also complete the `register` function by adding this at the bottom of the function:
+अगले भाग पर जाने से पहले, हम फ़ंक्शन के निचले भाग में इसे जोड़कर `register` फ़ंक्शन को भी पूरा कर सकते हैं:
 
 ```js
 account = result;
 navigate('/dashboard');
 ```
 
-✅ Did you know that by default, you can only call server APIs from the *same domain and port* than the web page you are viewing? This is security mechanism enforced by browsers. But wait, our web app is running on `localhost:3000` whereas the server API is running on ` localhost:5000`, why does it work? By using a technique called [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), it is possible to perform cross-origin HTTP requests if the server adds special headers to the response, allowing exceptions for specific domains.
+✅ क्या आप जानते हैं कि डिफ़ॉल्ट रूप से, आप सर्वर API को केवल उसी वेब पेज से *उसी डोमेन और पोर्ट* से कॉल कर सकते हैं जो आप देख रहे हैं? यह सुरक्षा तंत्र है जो ब्राउज़र द्वारा लागू किया जाता है। लेकिन रुकिए, हमारा वेब ऐप `localhost:3000` पर चल रहा है जबकि सर्वर एपीआई `localhost:5000` पर चल रहा है, यह काम क्यों नहीं करता है? [क्रॉस-ओरिजिनल रिसोर्स शेयरिंग (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) नामक तकनीक का उपयोग करके, क्रॉस-ऑरिजनल HTTP रिक्वेस्ट करना संभव है अगर सर्वर प्रतिक्रिया के लिए विशेष हेडर जोड़ता है, विशिष्ट डोमेन के लिए अपवाद की अनुमति देता है।
 
-> Learn more about APIs by taking this [lesson](https://docs.microsoft.com/en-us/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-13441-cxa)
+> इसे [पाठ](https://docs.microsoft.com/en-us/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-13441-cxa) ले कर एपीआई के बारे में और जानें
 
-## Update HTML to display data
+## डेटा प्रदर्शित करने के लिए HTML अपडेट करें
 
-Now that we have the user data, we have to update the existing HTML to display it. We already know how to retrieve an element from the DOM using for example `document.getElementById()`. After you have a base element, here are some APIs you can use to modify it or add child elements to it:
+अब जब हमारे पास उपयोगकर्ता डेटा है, तो हमें इसे प्रदर्शित करने के लिए मौजूदा HTML को अपडेट करना होगा। हम पहले से ही जानते हैं कि DOM से एक एलेमेन्ट कैसे प्राप्त किया जा सकता है उदाहरण के लिए `document.getElementById()` का उपयोग करना। आपके पास आधार एलेमेन्ट होने के बाद, यहां कुछ API हैं जिनका उपयोग आप इसे संशोधित करने या इसमें बाल एलेमेन्ट जोड़ने के लिए कर सकते हैं:
 
-- Using the [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) property you can change the text of an element. Note that changing this value removes all the element's children (if there's any) and replaces it with the text provided. As such, it's also an efficient method to remove all children of a given element by assigning an empty string `''` to it.
+- [`TextContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) प्रॉपर्टी का उपयोग करके आप किसी एलेमेन्ट का पाठ बदल सकते हैं। ध्यान दें कि इस मान को बदलने से सभी एलेमेन्ट के बच्चे (यदि कोई हो) को हटा देता है और प्रदान किए गए पाठ के साथ बदल देता है। जैसे, यह किसी दिए गए एलेमेन्ट के सभी बच्चों को एक खाली स्ट्रिंग `''` को निर्दिष्ट करके निकालने की एक कुशल विधि है।
 
-- Using [`document.createElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) along with the [`append()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append) method you can create and attach one or more new child elements.
+- [`document.createElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)  के साथ [`append()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append) विधि का उपयोग करके आप बना सकते हैं और एक या अधिक नए बाल एलेमेन्ट संलग्न करें।
 
-✅ Using the [`innerHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) property of an element it's also possible to change its HTML contents, but this one should be avoided as it's vulnerable to [cross-site scripting (XSS)](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting) attacks.
+✅ किसी एलेमेन्ट की प्रॉपर्टी का उपयोग करते हुए [`innerHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) का उपयोग करना संभव है, लेकिन यह एक होना चाहिए [क्रॉस-साइट स्क्रिप्टिंग (XSS)](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting) हमलों के कारण इसकी चपेट में आने से बचा जा सकता है।
 
-### Task
+### टास्क
 
-Before moving on to the dashboard screen, there's one more thing we should do on the *login* page. Currently, if you try to login with a username that does not exist, a message is shown in the console but for a normal user nothing changes and you don't know what's going on.
+डैशबोर्ड स्क्रीन पर जाने से पहले, एक और चीज़ है जो हमें *लॉगिन* पेज पर करनी चाहिए। वर्तमान में, यदि आप एक उपयोगकर्ता नाम के साथ लॉगिन करने की कोशिश करते हैं जो मौजूद नहीं है, तो कंसोल में एक संदेश दिखाया जाता है लेकिन एक सामान्य उपयोगकर्ता के लिए कुछ भी नहीं बदलता है और आपको नहीं पता कि क्या चल रहा है।
 
-Let's add a placeholder element in the login form where we can display an error message if needed. A good place would be just before the login `<button>`:
+आइए लॉगिन फॉर्म में एक प्लेसहोल्डर एलेमेन्ट जोड़ें जहां हम एक त्रुटि संदेश प्रदर्शित कर सकते हैं यदि आवश्यक हो। लॉगिन `<button>` के ठीक पहले एक अच्छी जगह होगी:
 
 ```html
 ...
@@ -136,9 +136,10 @@ Let's add a placeholder element in the login form where we can display an error 
 ...
 ```
 
-This `<div>` element is empty, meaning that nothing will be displayed on the screen until we add some content to it. We also give it an `id` so we can retrieve it easily with JavaScript.
+यह `<div>` एलेमेन्ट रिक्त है, जिसका अर्थ है कि स्क्रीन पर कुछ भी प्रदर्शित नहीं किया जाएगा जब तक हम इसमें कुछ सामग्री नहीं जोड़ते। हम इसे एक `id` भी देते हैं ताकि हम इसे जावास्क्रिप्ट के साथ आसानी से प्राप्त कर सकें।
 
-Go back to the `app.js` file and create a new helper function `updateElement`:
+
+`app.js` फ़ाइल पर वापस जाएँ और एक नया सहायक फ़ंक्शन `updateElement` बनाएँ:
 
 ```js
 function updateElement(id, text) {
@@ -147,7 +148,7 @@ function updateElement(id, text) {
 }
 ```
 
-This one is quite straightforward: given an element *id* and *text*, it will update the text content of the DOM element with the matching `id`. Let's use this method in place of the previous error message in the `login` function:
+यह एक बहुत सीधा है: एक एलेमेन्ट *आईडी* और *टेक्स्ट* दिया गया है, यह DOM एलेमेन्ट के टेक्स्ट कंटेंट को `id` के मेल से अपडेट करेगा। आइए `login` फ़ंक्शन में पिछले त्रुटि संदेश के स्थान पर इस मेथड का उपयोग करें:
 
 ```js
 if (data.error) {
@@ -155,23 +156,23 @@ if (data.error) {
 }
 ```
 
-Now if you try to login with an invalid account, you should see something like this:
+अब यदि आप अमान्य खाते से लॉगिन करने का प्रयास करते हैं, तो आपको कुछ इस तरह से देखना चाहिए:
 
-![Screenshot showing the error message displayed during login](./images/login-error.png)
+![लॉगिन के दौरान प्रदर्शित त्रुटि संदेश दिखाने वाला स्क्रीनशॉट](../images/login-error.png)
 
-Now we have error text that shows up visually, but if you try it with a screen reader you'll notice that nothing is announced. In order for text that is dynamically added to a page to be announced by screen readers, it will need to use something called a [Live Region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Here we're going to use a specific type of live region called an alert:
+अब हमारे पास त्रुटि पाठ है जो नेत्रहीन रूप से दिखाई देता है, लेकिन यदि आप इसे एक स्क्रीन रीडर के साथ आज़माते हैं तो आप देखेंगे कि कुछ भी घोषित नहीं हुआ है। पाठ पाठकों के लिए गतिशील रूप से एक पृष्ठ में जोड़े जाने की घोषणा के लिए, इसे [लाइव रीजन](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) नामक कुछ का उपयोग करने की आवश्यकता होगी। यहां हम एक विशिष्ट प्रकार के लाइव क्षेत्र का उपयोग करने जा रहे हैं, जिसे अलर्ट कहा जाता है:
 
 ```html
 <div id="loginError" role="alert"></div>
 ```
 
-Implement the same behavior for the `register` function errors (don't forget to update the HTML).
+`register` फ़ंक्शन त्रुटियों के लिए समान व्यवहार को लागू करें (एचटीएमएल को अपडेट करना न भूलें)।
 
-## Display information on the dashboard
+## डैशबोर्ड पर जानकारी प्रदर्शित करें
 
-Using the same techniques we've just seen, we'll also take care of displaying the account information on the dashboard page.
+हमने अभी जो तकनीक देखी है, उसी का उपयोग करते हुए, हम डैशबोर्ड पृष्ठ पर खाता जानकारी प्रदर्शित करने का भी ध्यान रखेंगे।
 
-This is what an account object received from the server looks like:
+सर्वर से प्राप्त खाता ऑब्जेक्ट ऐसा दिखता है:
 
 ```json
 {
@@ -187,11 +188,11 @@ This is what an account object received from the server looks like:
 }
 ```
 
-> Note: to make your life easier, you can use the pre-existing `test` account that's already populated with data.
+> नोट: अपने जीवन को आसान बनाने के लिए, आप पहले से मौजूद `test` खाते का उपयोग कर सकते हैं जो पहले से ही डेटा से आबाद है।
 
-### Task
+### टास्क
 
-Let's start by replacing the "Balance" section in the HTML to add placeholder elements:
+प्लेसहोल्डर एलिमेंटस को जोड़ने के लिए HTML में "बैलेंस" अनुभाग को प्रतिस्थापित करके शुरू करें:
 
 ```html
 <section>
@@ -199,15 +200,16 @@ Let's start by replacing the "Balance" section in the HTML to add placeholder el
 </section>
 ```
 
-We'll also add a new section just below to display the account description:
+
+खाता विवरण प्रदर्शित करने के लिए हम नीचे एक नया अनुभाग भी जोड़ेंगे:
 
 ```html
 <h2 id="description"></h2>
 ```
 
-✅ Since the account description functions as a title for the content underneath it, it is marked up semantically as a heading. Learn more about how [heading structure](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) is important for accessibility, and take a critical look at the page to determine what else could be a heading.
+✅ चूंकि खाता विवरण इसके नीचे की सामग्री के लिए एक शीर्षक के रूप में कार्य करता है, इसलिए इसे एक शीर्षक के रूप में शब्दार्थ के रूप में चिह्नित किया जाता है। पहुँच क्षमता के लिए [शीर्षक संरचना](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) के बारे में और जानें, और क्या निर्धारित करने के लिए पृष्ठ पर एक महत्वपूर्ण नज़र डालें एक शीर्षक हो सकता है।
 
-Next, we'll create a new function in `app.js` to fill in the placeholder:
+अगला, हम प्लेसहोल्डर में भरने के लिए `app.js` में एक नया फ़ंक्शन बनाएंगे:
 
 ```js
 function updateDashboard() {
@@ -221,13 +223,13 @@ function updateDashboard() {
 }
 ```
 
-First, we check that we have the account data we need before going further. Then we use the `updateElement()` function we created earlier to update the HTML.
+पहले, हम जाँचते हैं कि आगे जाने से पहले हमारे पास खाता डेटा है जो हमें चाहिए। तब हम HTML को अपडेट करने के लिए पहले बनाए गए `updateElement()` फ़ंक्शन का उपयोग करते हैं।
 
-> To make the balance display prettier, we use the method [`toFixed(2)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) to force displaying the value with 2 digits after the decimal point.
+> बैलेंस डिस्प्ले को प्रीटियर करने के लिए, हम दशमलव बिंदु के बाद 2 अंकों के साथ मान प्रदर्शित करने के लिए मजबूर करने के लिए [`toFixed (2)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) विधि का उपयोग करते हैं।
 
-Now we need to call our `updateDashboard()` function everytime the dashboard is loaded. If you already finished the [lesson 1 assignment](../1-template-route/assignment.md) this should be straighforward, otherwise you can use the following implementation.
+अब हमें अपने `updateDashboard()` को हर बार डैशबोर्ड लोड होने पर कॉल करने की आवश्यकता है। यदि आपने पहले ही [पाठ 1 असाइनमेंट](../../1-template-route/translations/assignment.hi.md) को पूरा कर लिया है, तो यह स्ट्रेचेफोवर्ड होना चाहिए, अन्यथा आप निम्नलिखित कार्यान्वयन का उपयोग कर सकते हैं।
 
-Add this code to the end of the `updateRoute()` function:
+इस कोड को `updateRoute()` फ़ंक्शन के अंत में जोड़ें:
 
 ```js
 if (typeof route.init === 'function') {
@@ -235,7 +237,7 @@ if (typeof route.init === 'function') {
 }
 ```
 
-And update the routes definition with:
+और मार्गों की परिभाषा के साथ अद्यतन करें:
 
 ```js
 const routes = {
@@ -244,17 +246,17 @@ const routes = {
 };
 ```
 
-With this change, every time the dashboard page is displayed, the function `updateDashboard()` is called. After a login, you should then be able to see the account balance, currency and description.
+इस परिवर्तन के साथ, हर बार डैशबोर्ड पृष्ठ प्रदर्शित होने पर, फ़ंक्शन `updateDashboard()` कल किया जाता है। एक लॉगिन के बाद, आपको तब खाता शेष, मुद्रा और विवरण देखने में सक्षम होना चाहिए।
 
-## Create table rows dynamically with HTML templates
+## HTML टेम्पलेट के साथ गतिशील रूप से तालिका पंक्तियाँ बनाएं
 
-In the [first lesson](../1-template-route/README.md) we used HTML templates along with the [`appendChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) method to implement the navigation in our app. Templates can also be smaller and used to dynamically populate repetitive parts of a page.
+[पहला पाठ](../../1-template-route/translations/README.hi.md) मे हमने एचटीएमएल टेम्पलेटके साथ [`appendChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) मेथड को नेवीगेशनके लिए अपने एप मे लागू किया था । टेम्प्लेट छोटे भी हो सकते हैं और किसी पृष्ठ के दोहराए गए भागों को गतिशील रूप से आबाद करने के लिए उपयोग किए जा सकते हैं।
 
-We'll use a similar approach to display the list of transactions in the HTML table.
+हम एचटीएमएल तालिका में लेनदेन की सूची प्रदर्शित करने के लिए एक समान दृष्टिकोण का उपयोग करेंगे।
 
-### Task
+### टास्क
 
-Add a new template in the HTML `<body>`:
+HTML `<body>` में एक नया टेम्प्लेट जोड़ें :
 
 ```html
 <template id="transaction">
@@ -266,15 +268,15 @@ Add a new template in the HTML `<body>`:
 </template>
 ```
 
-This template represents a single table row, with the 3 columns we want to populate: *date*, *object* and *amount* of a transaction.
+यह टेम्प्लेट एक एकल तालिका पंक्ति का प्रतिनिधित्व करता है, 3 कॉलम जिन्हें हम आबाद करना चाहते हैं: *डेट*, *ऑब्जेक्ट* और लेनदेन की *अमाउन्ट*।
 
-Then, add this `id` property to the `<tbody>` element of the table within the dashboard template to make it easier to find using JavaScript:
+फिर, इस `<id>` गुण को डैशबोर्ड टेम्पलेट के भीतर स्थित तालिका के तत्व `<tbody>` में जोड़ें, जिससे जावास्क्रिप्ट का उपयोग करना आसान हो:
 
 ```html
 <tbody id="transactions"></tbody>
 ```
 
-Our HTML is ready, let's switch to JavaScript code and create a new function `createTransactionRow`:
+हमारा HTML तैयार है, चलो जावास्क्रिप्ट कोड पर जाएँ और एक नया फ़ंक्शन `createTransactionRow` बनाएं :
 
 ```js
 function createTransactionRow(transaction) {
@@ -288,7 +290,7 @@ function createTransactionRow(transaction) {
 }
 ```
 
-This function does exactly what its names implies: using the template we created earlier, it creates a new table row and fills in its contents using transaction data. We'll use this in our `updateDashboard()` function to populate the table:
+यह फ़ंक्शन ठीक वही करता है जो इसके नाम का अर्थ है: हमने पहले बनाए गए टेम्पलेट का उपयोग करके, यह एक नई तालिका पंक्ति बनाता है और लेनदेन डेटा का उपयोग करके अपनी सामग्री में भरता है। हम टेबल को आबाद करने के लिए अपने `updateDashboard()` फ़ंक्शन में इसका उपयोग करेंगे:
 
 ```js
 const transactionsRows = document.createDocumentFragment();
@@ -299,9 +301,9 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-Here we use the method [`document.createDocumentFragment()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment) that creates a new DOM fragment on which we can work, before finally attaching it to our HTML table.
+यहां हम उस मेथड का उपयोग करते हैं [`document.createDocumentFragment()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment) जो एक नया DOM टुकड़ा बनाता है जिस पर हम काम कर सकते हैं, अंत में इसे हमारे HTML तालिका में संलग्न करने से पहले।
 
-There's still one more thing we have to do before this code can work, as our `updateElement()` function currently supports text content only. Let's change its code a bit:
+इस कोड के काम करने से पहले अभी भी हमें एक और काम करना है, क्योंकि हमारा `updateElement()` फ़ंक्शन वर्तमान में केवल टेक्स्ट सामग्री का सपोर्ट करता है। आइए इसके कोड को थोड़ा बदलें:
 
 ```js
 function updateElement(id, textOrNode) {
@@ -311,24 +313,25 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-We use the [`append()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append) method as it allows to attach either text or [DOM Nodes](https://developer.mozilla.org/en-US/docs/Web/API/Node) to a parent element, which is perfect for all our use cases.
+हम [`append()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append) मेथड का उपयोग करते हैं क्योंकि यह टेक्स्ट या [DOM नोड्स](https://developer.mozilla.org/en-US/docs/Web/API/Node) को पेरन्ट एलेमेन्टसे जोड़ने की अनुमति देता है , जो हमारे सभी उपयोग मामलों के लिए एकदम सही है।
 
-If you try using the `test` account to login, you should now see a transaction list on the dashboard 🎉.
+यदि आप लॉगिन करने के लिए `टेस्ट` खाते का उपयोग करने का प्रयास करते हैं, तो आपको अब डैशबोर्ड पर एक लेनदेन सूची देखनी चाहिए 🎉.
 
 ---
 
-## 🚀 Challenge
+## 🚀 चुनौती
 
-Work together to make the dashboard page look like a real banking app. If you already styled your app, try to use [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) to create a [responsive design](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) working nicely on both desktop and mobile devices.
+डैशबोर्ड पृष्ठ को वास्तविक बैंकिंग ऐप की तरह बनाने के लिए एक साथ काम करें। यदि आप पहले से ही अपने ऐप को स्टाइल करते हैं, तो डेस्कटॉप और मोबाइल डिवाइस दोनों पर अच्छी तरह से काम करते हुए [उत्तरदायी डिज़ाइन](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) बनाने के लिए [मीडिया क्वेरीज़](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) का उपयोग करने का प्रयास करें।
 
-Here's an example of a styled dashboard page:
+यहाँ एक सत्यलेड डैशबोर्ड पृष्ठ का उदाहरण दिया गया है:
 
-![Screenshot of an example result of the dashboard after styling](../images/screen2.png)
+![
+स्टाइल के बाद डैशबोर्ड के उदाहरण परिणाम का स्क्रीनशॉट](../../images/screen2.png)
 
-## Post-Lecture Quiz
+## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46?loc=hi)
 
-## Assignment
+## असाइनमेंट
 
-[Refactor and comment your code](assignment.md)
+[Refactor and comment your code](assignment.hi.md)
