@@ -1,20 +1,21 @@
-# Build a Banking App Part 2: Build a Login and Registration Form
+# 
+बैंकिंग ऐप पार्ट 2 बनाएँ: एक लॉगिन और पंजीकरण फॉर्म बनाएँ
 
-## Pre-Lecture Quiz
+## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/43)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/43?loc=hi)
 
-### Introduction
+### परिचय
 
-In almost all modern web apps, you can create an account to have your own private space. As multiple users can access a web app at the same time, you need a mechanism to store each user personal data separately and select which information to display information. We won't cover how to manage [user identity securely](https://en.wikipedia.org/wiki/Authentication) as it's an extensive topic on its own, but we'll make sure each user is able to create one (or more) bank account on our app.
+लगभग सभी आधुनिक वेब ऐप्स में, आप अपना निजी स्थान रखने के लिए एक खाता बना सकते हैं। चूंकि एक ही समय में कई उपयोगकर्ता वेब ऐप तक पहुंच सकते हैं, इसलिए आपको प्रत्येक उपयोगकर्ता के व्यक्तिगत डेटा को अलग से संग्रहीत करने के लिए एक तंत्र की आवश्यकता होती है और जानकारी प्रदर्शित करने के लिए कौन सी जानकारी का चयन करना चाहिए। हम [उपयोगकर्ता पहचान को सुरक्षित](https://en.wikipedia.org/wiki/Authentication) रूप से प्रबंधित करने के लिए को कवर नहीं करेंगे  क्योंकि यह अपने आप में एक व्यापक विषय है, लेकिन हम सुनिश्चित करेंगे कि प्रत्येक उपयोगकर्ता एक बनाने में सक्षम है (या अधिक) हमारे ऐप पर बैंक खाता।
 
-In this part we'll use HTML forms to add login and registration to our web app. We'll see how to send the data to a server API programmatically, and ultimately how to define basic validation rules for user inputs.
+इस भाग में हम अपने वेब ऐप में लॉगिन और पंजीकरण को जोड़ने के लिए HTML रूपों का उपयोग करेंगे। हम देखेंगे कि डेटा को सर्वर एपीआई को प्रोग्रामेटिक रूप से कैसे भेजा जाए, और अंततः उपयोगकर्ता इनपुट के लिए बुनियादी सत्यापन नियमों को कैसे परिभाषित किया जाए।
 
-### Prerequisite
+### शर्त
 
-You need to have completed the [HTML templates and routing](../1-template-route/README.md) of the web app for this lesson. You also need to install [Node.js](https://nodejs.org) and [run the server API](../api/README.md) locally so you can send data to create accounts.
+इस पाठ के लिए आपको वेब ऐप का [HTML टेम्प्लेट और रूटिंग](../../1-template-route/translations/README.hi.md)) पूरा करना होगा। आपको स्थानीय रूप से [Node.js](https://nodejs.org) और [सर्वर एपीआई चलाने](../../api/README.hi.md) स्थापित करने की आवश्यकता है ताकि आप खाते बनाने के लिए डेटा भेज सकें।
 
-You can test that the server is running properly by executing this command in a terminal:
+आप परीक्षण कर सकते हैं कि सर्वर टर्मिनल में इस कमांड को निष्पादित करके ठीक से चल रहा है:
 
 ```sh
 curl http://localhost:5000/api
@@ -23,31 +24,32 @@ curl http://localhost:5000/api
 
 ---
 
-## Form and controls
+## फोरम और कोन्टरोल्स
 
-The `<form>` element encapsulates a section of an HTML document where the user can input and submit data with interactive controls. There are all sorts of user interface (UI) controls that can be used within a form, the most common one being the `<input>` and the `<button>` elements.
+`<form>` एलेमेन्ट एक HTML दस्तावेज़ के एक भाग को एन्क्रिप्ट करता है जहां उपयोगकर्ता इनपुट कर सकता है और इंटरैक्टिव नियंत्रणों के साथ डेटा जमा कर सकता है। सभी प्रकार के उपयोगकर्ता इंटरफ़ेस (UI) नियंत्रण हैं जिनका उपयोग एक फॉर्म के भीतर किया जा सकता है, सबसे आम है `<input>` और `<button>` एलेमेन्ट ।
 
-There are a lot of different [types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) of `<input>`, for example to create a field where the user can enter its username you can use:
+`<input>` के विभिन्न [प्रकार](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) के कई उदाहरण हैं, उदाहरण के लिए एक फ़ील्ड बनाने के लिए जहां उपयोगकर्ता आप उपयोग कर सकते हैं इसके उपयोगकर्ता नाम दर्ज कर सकते हैं:
 
 ```html
 <input id="username" name="username" type="text">
 ```
 
-The `name` attribute will be used as the property name when the form data will be sent over. The `id` attribute is used to associate a `<label>` with the form control.
+जब फॉर्म डेटा को भेज दिया जाएगा तो `name` विशेषता को संपत्ति के नाम के रूप में उपयोग किया जाएगा। `id` विशेषता का उपयोग फॉर्म नियंत्रण के साथ एक `label` को जोड़ने के लिए किया जाता है।
 
-> Take a look at the whole list of [`<input>` types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and [other form controls](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls) to get an idea of all the native UI elements you can use when building your UI.
+> 
+एक विचार पाने के लिए [`<input>` प्रकार](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) और [अन्य फोरम कोन्टरोल्स](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls) की संपूर्ण सूची पर एक नज़र डालें अपने UI का निर्माण करते समय आप उपयोग कर सकते हैं सभी देशी UI तत्व।
 
-✅ Note that `<input>` is an [empty element](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) on which you should *not* add a matching closing tag. You can however use the self-closing `<input/>` notation, but it's not required.
+✅ ध्यान दें कि `<input>` एक [खाली एलेमेन्ट](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) है, जिस पर आपको एक मिलान समापन टैग नहीं जोड़ना चाहिए। हालाँकि आप स्व-समापन `<input/>` संकेतन का उपयोग कर सकते हैं, लेकिन इसकी आवश्यकता नहीं है।
 
-The `<button>` element within a form is a bit special. If you do not specify its `type` attribute, it will automatically submit the form data to the server when pressed. Here are the possible `type` values:
+फॉर्म के भीतर `<button>` एलेमेन्ट थोड़ा विशेष है। यदि आप इसकी `type` विशेषता निर्दिष्ट नहीं करते हैं, तो यह स्वचालित रूप से दबाए जाने पर सर्वर को फॉर्म डेटा प्रस्तुत करेगा। यहां संभावित `type` मान दिए गए हैं:
 
-- `submit`: The default within a `<form>`, the button triggers the form submit action.
-- `reset`: The button resets all the form controls to their initial values.
-- `button`: Do not assign a default behavior when the button is pressed. You can then assign custom actions to it using JavaScript.
+- `submit`: एक `form` के भीतर डिफ़ॉल्ट, बटन फार्म सबमिट एक्शन को ट्रिगर करता है।
+- `reset`: बटन उनके प्रारंभिक मूल्यों पर सभी फॉर्म नियंत्रणों को रीसेट करता है।
+- `button`: बटन दबाए जाने पर डिफ़ॉल्ट व्यवहार न निर्दिष्ट करें। फिर आप जावास्क्रिप्ट का उपयोग करके इसे कस्टम एक्शन दे सकते हैं।
 
-### Task
+### टास्क
 
-Let's start by adding a form to the `login` template. We'll need a *username* field and a *Login* button.
+आइए `login` टेम्प्लेट में एक फ़ॉर्म जोड़कर शुरू करें। हमें एक *उपयोगकर्ता नाम* फ़ील्ड और एक *लॉगिन* बटन की आवश्यकता होगी।
 
 ```html
 <template id="login">
@@ -63,14 +65,14 @@ Let's start by adding a form to the `login` template. We'll need a *username* fi
 </template>
 ```
 
-If you take a closer look, you can notice that we also added a `<label>` element here. `<label>` elements are used to add a name to UI controls, such as our username field. Labels are important for the readability of your forms, but also comes with additional benefits:
+यदि आप एक करीब से देखते हैं, तो आप देख सकते हैं कि हमने यहां एक `<label>` एलेमेन्ट भी जोड़ा है। `<label>` एलेमेन्टस का उपयोग UI नियंत्रणों में एक नाम जोड़ने के लिए किया जाता है, जैसे कि हमारा उपयोगकर्ता नाम फ़ील्ड। लेबल आपके रूपों की पठनीयता के लिए महत्वपूर्ण हैं, लेकिन अतिरिक्त लाभ के साथ भी आते हैं:
 
-- By associating a label to a form control, it helps users using assistive technologies (like a screen reader) to understand what data they're expected to provide.
-- You can click on the label to directly put focus on the associated input, making it easier to reach on touch-screen based devices.
+- एक लेबल को फोरम कोन्टरोल्स से जोड़कर, यह उपयोगकर्ताओं को सहायक तकनीकों (जैसे कि स्क्रीन रीडर) का उपयोग करके यह समझने में मदद करता है कि उन्हें क्या डेटा प्रदान करने की उम्मीद है।
+- आप संबंधित इनपुट पर सीधे ध्यान केंद्रित करने के लिए लेबल पर क्लिक कर सकते हैं, जिससे टच-स्क्रीन आधारित उपकरणों तक पहुंचना आसान हो जाता है।
 
-> [Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) on the web is a very important topic that's often overlooked. Thanks to [semantic HTML elements](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) it's not difficult to create accessible content if you use them properly. You can [read more about accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) to avoid common mistakes and become a responsible developer.
+> वेब पर [एक्सेसिबिलिटी](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) एक बहुत ही महत्वपूर्ण विषय है जिसकी अक्सर अनदेखी की जाती है। [अर्थ संबंधी HTML एलेमेन्टस](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) के लिए धन्यवाद यदि आप इन्हें ठीक से उपयोग करते हैं तो सुलभ सामग्री बनाना मुश्किल नहीं है। सामान्य गलतियों से बचने और एक जिम्मेदार डेवलपर बनने के लिए आप (पहुंच के बारे में और अधिक पढ़ सकते हैं](https://developer.mozilla.org/en-US/docs/Web/Accessibility)।
 
-Now we'll add a second form for the registration, just below the previous one:
+अब हम पंजीकरण के लिए दूसरा रूप जोड़ेंगे, पिछले एक के नीचे:
 
 ```html
 <hr/>
@@ -88,64 +90,64 @@ Now we'll add a second form for the registration, just below the previous one:
 </form>
 ```
 
-Using the `value` attribute we can define a default value for a given input.
-Notice also that the input for `balance` has the `number` type. Does it look different than the other inputs? Try interacting with it.
+`value` विशेषता का उपयोग करके हम दिए गए इनपुट के लिए एक डिफ़ॉल्ट मान को परिभाषित कर सकते हैं।
+सूचना यह भी है कि `balance` के इनपुट में `number` प्रकार है। क्या यह अन्य इनपुटों की तुलना में अलग दिखता है? इसके साथ बातचीत करने का प्रयास करें।
 
-✅ Can you navigate and interact with the forms using only a keyboard? How would you do that?
+✅ क्या आप केवल कीबोर्ड का उपयोग करके फ़ॉर्म के साथ नेविगेट और इंटरैक्ट कर सकते हैं? आप वह कैसे करेंगें?
 
-## Submitting data to the server
+## सर्वर पर डेटा जमा करना
 
-Now that we have a functional UI, the next step is to send the data over to our server. Let's make a quick test using our current code: what happens if you click on the *Login* or *Register* button?
+अब जब हमारे पास एक कार्यात्मक UI है, तो अगला चरण हमारे सर्वर पर डेटा भेजने के लिए है। चलो हमारे वर्तमान कोड का उपयोग करके एक त्वरित परीक्षण करें: यदि आप *लॉगिन* या *रजिस्टर* बटन पर क्लिक करते हैं तो क्या होता है?
 
-Did you notice the change in your browser's URL section?
+क्या आपने अपने ब्राउज़र के URL अनुभाग में परिवर्तन को देखा है?
 
-![Screenshot of the browser's URL change after clicking the Register button](./images/click-register.png)
+![रजिस्टर बटन पर क्लिक करने के बाद ब्राउज़र के URL का स्क्रीनशॉट बदल जाता है](../images/click-register.png)
 
-The default action for a `<form>` is to submit the form to the current server URL using the [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), appending the form data directly to the URL. This method has some shortcomings though:
+`<form>` के लिए डिफ़ॉल्ट क्रिया [GET मेथड](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html##ecec9.3) का उपयोग करके वर्तमान सर्वर URL को फ़ॉर्म सबमिट करना है , फॉर्म डेटा को सीधे URL में जोड़ना। इस विधि में कुछ कमियाँ हैं:
 
-- The data sent is very limited in size (about 2000 characters)
-- The data is directly visible in the URL (not great for passwords)
-- It does not work with file uploads
+- भेजा गया डेटा आकार में बहुत सीमित है (लगभग 2000 वर्ण)
+- डेटा सीधे URL में दिखाई देता है (पासवर्ड के लिए महान नहीं)
+- यह फ़ाइल अपलोड के साथ काम नहीं करता है
 
-That's why you can change it to use the [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) which sends the form data to the server in the body of the HTTP request, without any of the previous limitations.
+इसीलिए आप इसे [POST विधि](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) का उपयोग करने के लिए बदल सकते हैं, जो शरीर में सर्वर को फॉर्म डेटा भेजता है HTTP अनुरोध, पिछली सीमाओं के बिना।
 
-> While POST is the most commonly used method to send data over, [in some specific scenarios](https://www.w3.org/2001/tag/doc/whenToUseGet.html) it is preferable to use the GET method, when implementing a search field for example.
+> जबकि POST डेटा को भेजने के लिए सबसे आम तौर पर उपयोग की जाने वाली विधि है, [कुछ विशिष्ट परिदृश्यों में](https://www.w3.org/2001/tag/doc/whenToUseGet.html) यह GET विधि का उपयोग करने के लिए बेहतर है, जब उदाहरण के लिए खोज क्षेत्र लागू करना।
 
-### Task
+### टास्क
 
-Add `action` and `method` properties to the registration form:
+पंजीकरण फॉर्म में `action` और `method` गुण जोड़ें:
 
 ```html
 <form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
 ```
 
-Now try to register a new account with your name. After clicking on the *Register* button you should see something like this:
+अब अपने नाम के साथ एक नया खाता पंजीकृत करने का प्रयास करें। * रजिस्टर * बटन पर क्लिक करने के बाद आपको कुछ इस तरह से देखना चाहिए:
 
-![A browser window at the address localhost:5000/api/accounts, showing a JSON string with user data](./images/form-post.png)
+![उपयोगकर्ता के डेटा के साथ एक JSON स्ट्रिंग दिखाते हुए, पता localhost:5000/api/accounts पर एक ब्राउज़र विंडो](../images/form-post.png)
 
-If everything goes well, the server should answer your request with a [JSON](https://www.json.org/json-en.html) response containing the account data that was created.
+यदि सब कुछ ठीक हो जाता है, तो सर्वर को आपके अनुरोध का जवाब एक [JSON](https://www.json.org/json-en.html) प्रतिक्रिया के साथ देना चाहिए जिसमें खाता डेटा बनाया गया था।
 
-✅ Try registering again with the same name. What happens?
+✅ एक ही नाम के साथ फिर से पंजीकरण करने का प्रयास करें। क्या होता है?
 
-## Submitting data without reloading the page
+## पृष्ठ को फिर से लोड किए बिना डेटा सबमिट करना
 
-As you probably noticed, there's a slight issue with the approach we just used: when submitting the form, we get out of our app and the browser redirects to the server URL. We're trying to avoid all page reloads with our web app, as we're makng a [Single-page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
+जैसा कि आपने शायद देखा है, हमारे द्वारा अभी उपयोग किए गए दृष्टिकोण के साथ एक मामूली समस्या है: फॉर्म जमा करते समय, हम अपने ऐप से बाहर निकलते हैं और ब्राउज़र सर्वर URL पर रीडायरेक्ट करता है। हम अपने वेब ऐप के साथ सभी पेज रीलोड से बचने की कोशिश कर रहे हैं, क्योंकि हम एक [सिंगल-पेज एप्लिकेशन (SPA)](https://en.wikipedia.org/wiki/Single-page_application) हैं।
 
-To send the form data to the server without forcing a page reload, we have to use JavaScript code. Instead of putting an URL in the `action` property of a `<form>` element, you can use any JavaScript code prepended by the `javascript:` string to perform a custom action. Using this also means that you'll have to implement some tasks that were previously done automatically by the browser:
+पृष्ठ पुनः लोड किए बिना सर्वर को फ़ॉर्म डेटा भेजने के लिए, हमें जावास्क्रिप्ट कोड का उपयोग करना होगा। एक `<form>` तत्व की `action` प्रॉपर्टी में एक यूआरएल डालने के बजाय, आप कस्टम क्रिया करने के लिए `javascript` स्ट्रिंग द्वारा प्रचलित किसी भी जावास्क्रिप्ट कोड का उपयोग कर सकते हैं। इसका उपयोग करने का अर्थ यह भी है कि आपको कुछ कार्यों को लागू करना होगा जो पहले ब्राउज़र द्वारा स्वचालित रूप से किए गए थे:
 
-- Retrieve the form data
-- Convert and encode the form data to a suitable format
-- Create the HTTP request and send it to the server
+- फॉर्म डेटा को पुनः प्राप्त करें
+- फ़ॉर्म डेटा को एक उपयुक्त प्रारूप में कनवर्ट और एन्कोड करें
+- HTTP रिक्वेस्ट बनाएं और इसे सर्वर पर भेजें
 
-### Task
+### टास्क
 
-Replace the registration form `action` with:
+पंजीकरण फॉर्म को `action` से बदलें:
 
 ```html
 <form id="registerForm" action="javascript:register()">
 ```
 
-Open `app.js` add a new function named `register`:
+`app.js` खोलें `register` नामक एक नया फ़ंक्शन जोड़ें:
 
 ```js
 function register() {
@@ -156,9 +158,9 @@ function register() {
 }
 ```
 
-Here we retrieve the form element using `getElementById()` and use the [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) helper to extract the values from form controls as a set of key/value pairs. Then we convert the data to a regular object using [`Object.fromEntries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) and finally serialize the data to [JSON](https://www.json.org/json-en.html), a format commonly used for exchanging data on the web.
+यहाँ हम `getElementById()` का उपयोग कर फॉर्म एलिमेंट को पुनः प्राप्त करते हैं और फॉर्म से मान निकालने के लिए [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData/) का उपयोग करते हैं। की/वैल्यू जोड़े के एक सेट के रूप में नियंत्रण। फिर हम [`Object.fromEntries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Object/Object/fromEntries) का उपयोग करके डेटा को एक नियमित ऑब्जेक्ट में परिवर्तित करते हैं और अंत में डेटा को [JSON](https://www.json.org/json-en.html) में क्रमबद्ध करते हैं, आमतौर पर वेब पर डेटा के आदान-प्रदान के लिए उपयोग किया जाने वाला प्रारूप।
 
-The data is now ready to be sent to the server. Create a new function named `createAccount`:
+डेटा अब सर्वर पर भेजे जाने के लिए तैयार है। `CreateAccount` नामक एक नया फ़ंक्शन बनाएँ:
 
 ```js
 async function createAccount(account) {
@@ -175,34 +177,34 @@ async function createAccount(account) {
 }
 ```
 
-What's this function doing? First, notice the `async` keyword here. This means that the function contains code that will execute [**asynchronously**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). When used along the `await` keyword, it allows waiting for asynchronous code to execute - like waiting for the server response here - before continuing.
+यह क्या कार्य कर रहा है? सबसे पहले, यहां `async` कीवर्ड देखें। इसका मतलब है कि फ़ंक्शन में कोड शामिल है जो [**asynchronously**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) को निष्पादित करेगा। जब `await` कीवर्ड का उपयोग किया जाता है, तो यह एसिंक्रोनस कोड को निष्पादित करने के लिए प्रतीक्षा करने की अनुमति देता है - जैसे सर्वर प्रतिक्रिया का इंतजार यहां जारी रखने से पहले।
 
-Here's a quick video about `async/await` usage:
+यहाँ `async/await` उपयोग के बारे में एक त्वरित वीडियो है:
 
-[![Async and Await for managing promises](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async and Await for managing promises")
+[![परोमीसेस के प्रबंधन के लिए Async और Await](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "परोमीसेस के प्रबंधन के लिए Async और Await")
 
-> Click the image above for a video about async/await.
+> async/await के वीडियो के लिए ऊपर दी गई छवि पर क्लिक करें।
 
-We use the `fetch()` API to send JSON data to the server. This method takes 2 parameters:
+हम JSON डेटा को सर्वर पर भेजने के लिए `fetch()` API का उपयोग करते हैं। इस विधि में 2 पैरामीटर हैं:
 
-- The URL of the server, so we put back `//localhost:5000/api/accounts` here.
-- The settings of the request. That's where we set the method to `POST` and provide the `body` for the request. As we're sending JSON data to the server, we also need to set the `Content-Type` header to `application/json` so the server know how to interpret the content.
+- सर्वर का URL, इसलिए हमने यहां `//localhost:5000/api/accounts` वापस रखा है।
+- अनुरोध की सेटिंग। यही कारण है कि हम अनुरोध के लिए `POST` विधि निर्धारित करते हैं और `body` प्रदान करते हैं। जैसा कि हम JSON डेटा सर्वर पर भेज रहे हैं, हमें `Content-type` हेडर को `application/json` पर सेट करने की भी आवश्यकता है, इसलिए सर्वर को पता है कि सामग्री की व्याख्या कैसे करें।
 
-As the server will respond to the request with JSON, we can use `await response.json()` to parse the JSON content and return the resulting object. Note that this method is asynchronous, so we use the `await` keyword here before returning to make sure any errors during parsing are also caught.
+जैसा कि सर्वर JSON के साथ अनुरोध का जवाब देगा, हम JSON सामग्री को पार्स करने के लिए `await response.json()` का उपयोग कर सकते हैं और परिणामी वस्तु वापस कर सकते हैं। ध्यान दें कि यह विधि अतुल्यकालिक है, इसलिए हम यह सुनिश्चित करने के लिए कि प्रतीक्षा के दौरान किसी भी त्रुटि को भी पकड़ा जाता है, लौटने से पहले हम यहाँ `await` कीवर्ड का उपयोग करते हैं।
 
-Now add some code to the `register` function to call `createAccount()`:
+अब `createAccount()` कहने के लिए `register` फ़ंक्शन में कुछ कोड जोड़ें:
 
 ```js
 const result = await createAccount(jsonData);
 ```
 
-Because we use the `await` keyword here, we need to add the `async` keyword before the register function:
+चूँकि हम यहाँ `await` कीवर्ड का उपयोग करते हैं, हमें रजिस्टर फंक्शन से पहले `async` कीवर्ड जोड़ना होगा:
 
 ```js
 async function register() {
 ```
 
-Finally, let's add some logs to check the result. The final function should look like this:
+अंत में, परिणाम को जांचने के लिए कुछ लॉग जोड़ें। अंतिम कार्य इस तरह दिखना चाहिए:
 
 ```js
 async function register() {
@@ -219,29 +221,29 @@ async function register() {
 }
 ```
 
-That was a bit long but we got there! If you open your [browser developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), and try registering a new account, you should not see any change on the web page but a message will appear in the console confirming that everything works.
+वह थोड़ा लंबा था लेकिन हम वहां पहुंच गए! यदि आप अपने [ब्राउज़र डेवलपर टूल] (https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) खोलते हैं, और एक नया खाता आज़माते हैं, तो आपको वेब पेज पर कोई बदलाव नहीं देखना चाहिए लेकिन एक संदेश कंसोल में दिखाई देगा जो पुष्टि करता है कि सब कुछ काम करता है।
 
-![Screenshot showing log message in the browser console](./images/browser-console.png)
+![ब्राउज़र कंसोल में लॉग संदेश दिखाते हुए स्क्रीनशॉट](../images/browser-console.png)
 
-✅ Do you think the data is sent to the server securely? What if someone what was able to intercept the request? You can read about [HTTPS](https://en.wikipedia.org/wiki/HTTPS) to know more about secure data communication.
+✅ क्या आपको लगता है कि डेटा सर्वर पर सुरक्षित रूप से भेजा जाता है? क्या होगा यदि कोई व्यक्ति अनुरोध को बाधित करने में सक्षम था? सुरक्षित डेटा संचार के बारे में अधिक जानने के लिए आप [HTTPS](https://en.wikipedia.org/wiki/HTTPS) के बारे में पढ़ सकते हैं।
 
-## Data validation
+## डेटा मान्य
 
-If you try to register a new account without setting an username first, you can see that the server returns an error with status code [400 (Bad Request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
+यदि आप पहले उपयोगकर्ता नाम सेट किए बिना एक नया खाता पंजीकृत करने का प्रयास करते हैं, तो आप देख सकते हैं कि सर्वर स्थिति कोड [400 (खराब अनुरोध)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).) के साथ एक त्रुटि देता है
 
-Before sending data to a server it's a good practice to [validate the form data](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) beforehand when possible, to make sure you send a valid request. HTML5 forms controls provides built-in validation using various attributes:
+किसी सर्वर पर डेटा भेजने से पहले, जब संभव हो, एक वैध अनुरोध भेजना सुनिश्चित करने के लिए पहले से [फॉर्म डेटा को मान्य करें](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) यह एक अच्छा अभ्यास है। HTML5 फॉर्म नियंत्रण विभिन्न विशेषताओं का उपयोग करके अंतर्निहित मान्यता प्रदान करता है:
 
-- `required`: the field needs to be filled otherwise the form cannot be submitted.
-- `minlength` and `maxlength`: defines the minimum and maximum number of characters in text fields.
-- `min` and `max`: defines the minimum and maximum value of a numerical field.
-- `type`: defines the kind of data expected, like `number`, `email`, `file` or [other built-in types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input). This attribute may also change the visual rendering of the form control.
-- `pattern`: allows to define a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) pattern to test if the entered data is valid or not.
+- `required`: फ़ील्ड को भरने की आवश्यकता है अन्यथा फॉर्म जमा नहीं किया जा सकता है।
+- `minlength` और `maxlength`: टेक्स्ट क्षेत्रों में न्यूनतम और अधिकतम वर्णों को परिभाषित करता है।
+- `min` और `max`:एक संख्यात्मक क्षेत्र के न्यूनतम और अधिकतम मूल्य को परिभाषित करता है।
+- `type`: अपेक्षित डेटा के प्रकार को परिभाषित करता है, जैसे `number`, `email`, `file` या [अन्य निर्मित प्रकार](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input). यह विशेषता फॉर्म नियंत्रण के दृश्य रेंडरिंग को भी बदल सकती है.
+- `pattern`: एक [रेगुलर इक्स्प्रेशन](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) पैटर्न को निर्धारित करने के लिए परीक्षण करने की अनुमति देता है कि दर्ज किया गया डेटा वैध है या नहीं।
 
-> Tip: you can customize the look of your form controls depending if they're valid or not using the `:valid` and `:invalid` CSS pseudo-classes.
+> युक्ति: यदि आप मान्य हैं और `:valid` और `:invalid` CSS छद्म-क्लेसे का उपयोग नहीं कर रहे हैं, तो आप अपने फ़ॉर्म नियंत्रणों को अनुकूलित कर सकते हैं।s.
 
-### Task
+### टास्क
 
-There are 2 required fields to create a valid new account, the username and currency, the other fields being optional. Update the form's HTML, using both the `required` attribute and text in the field's label to that:
+वैध नया खाता बनाने के लिए 2 आवश्यक फ़ील्ड हैं, उपयोगकर्ता नाम और मुद्रा, अन्य फ़ील्ड वैकल्पिक हैं। फॉर्म के HTML को अपडेट करें, फ़ील्ड के लेबल में `required` विशेषता और टेक्स्ट दोनों का उपयोग करके:
 
 ```html
 <label for="user">Username (required)</label>
@@ -251,9 +253,9 @@ There are 2 required fields to create a valid new account, the username and curr
 <input id="currency" name="currency" type="text" value="$" required>
 ```
 
-While this particular server implementation does not enforce specific limits on the fields maximum length, it's always a good practice to define reasonable limits for any user text entry.
+हालांकि यह विशेष सर्वर कार्यान्वयन अधिकतम लंबाई वाले क्षेत्रों पर विशिष्ट सीमाएँ लागू नहीं करता है, यह किसी भी उपयोगकर्ता पाठ प्रविष्टि के लिए उचित सीमा को परिभाषित करने के लिए हमेशा एक अच्छा अभ्यास है।
 
-Add a `maxlength` attribute to the text fields:
+टेक्स्ट फ़ील्ड में एक `maxlength` विशेषता जोड़ें:
 
 ```html
 <input id="user" name="user" type="text" maxlength="20" required>
@@ -263,32 +265,32 @@ Add a `maxlength` attribute to the text fields:
 <input id="description" name="description" type="text" maxlength="100">
 ```
 
-Now if you press the *Register* button and a field does not respect a validation rule we defined, you should see something like this:
+अब यदि आप *रजिस्टर* बटन दबाते हैं और एक फ़ील्ड हमारे द्वारा परिभाषित सत्यापन नियम का सम्मान नहीं करता है, तो आपको कुछ इस तरह से देखना चाहिए:
 
-![Screenshot showing the validation error when trying to submit the form](./images/validation-error.png)
+![फॉर्म जमा करने का प्रयास करते समय सत्यापन त्रुटि दिखाते हुए स्क्रीनशॉट](../images/validation-error.png)
 
-Validation like this performed *before* sending any data to the server is called **client-side** validation. But note that's it's not always possible to peform all checks without sending the data. For example, we cannot check here if an account already exists with the same username without sending a request to the server. Additional validation performed on the server is called **server-side** validation.
+इस तरह के सत्यापन *से पहले* किसी भी डेटा को सर्वर पर भेजने के लिए **क्लाइंट-साइड** सत्यापन कहा जाता है। लेकिन ध्यान दें कि डेटा भेजे बिना हमेशा सभी जांचों को बेहतर बनाना संभव नहीं है। उदाहरण के लिए, यदि सर्वर पर रिक्वेस्ट भेजे बिना एक ही यूज़रनेम के साथ कोई खाता पहले से मौजूद है तो हम यहाँ जाँच नहीं कर सकते। सर्वर पर निष्पादित अतिरिक्त सत्यापन को **सर्वर-साइड** सत्यापन कहा जाता है।
 
-Usually both need to be implemented, and while using client-side validation improves the user experience by providing instant feedback to the user, server-side validation is crucial to make sure the user data you manipulate is sound and safe.
+आमतौर पर दोनों को लागू करने की आवश्यकता होती है, और क्लाइंट-साइड सत्यापन का उपयोग करते समय उपयोगकर्ता को त्वरित प्रतिक्रिया प्रदान करके उपयोगकर्ता के अनुभव को बेहतर बनाता है, यह सुनिश्चित करने के लिए सर्वर-साइड सत्यापन महत्वपूर्ण है कि जिस उपयोगकर्ता डेटा में आप हेरफेर करते हैं वह ध्वनि और सुरक्षित है।
 
 ---
 
-## 🚀 Challenge
+## 🚀 चुनौती
 
-Show an error message in the HTML if the user already exists.
+यदि उपयोगकर्ता पहले से मौजूद है, तो HTML में एक त्रुटि संदेश दिखाएं।
 
-Here's an example of what the final login page can look like after a bit of styling:
+यहाँ एक उदाहरण दिया गया है कि अंतिम लॉगिन पृष्ठ स्टाइल के थोड़े समय बाद कैसा दिख सकता है:
 
-![Screenshot of the login page after adding CSS styles](./images/result.png)
+![CSS स्टाइल जोड़ने के बाद लॉगिन पेज का स्क्रीनशॉट](../images/result.png)
 
-## Post-Lecture Quiz
+## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/44)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/44?loc=hi)
 
-## Review & Self Study
+## समीक्षा और स्व अध्ययन
 
-Developers have gotten very creative about their form building efforts, especially regarding validation strategies. Learn about different form flows by looking through [CodePen](https://codepen.com); can you find some interesting and inspiring forms?
+डेवलपर्स ने अपने फॉर्म निर्माण प्रयासों के बारे में, विशेष रूप से सत्यापन रणनीतियों के बारे में बहुत रचनात्मक जानकारी प्राप्त की है। [CodePen](https://codepen.com) के माध्यम से देख कर विभिन्न प्रकार के प्रवाह के बारे में जानें; क्या आप कुछ दिलचस्प और प्रेरक रूप पा सकते हैं?
 
-## Assignment
+## असाइनमेंट
 
-[Style your bank app](assignment.md)
+[अपने बैंक ऐप को स्टाइल करें](assignment.hi.md)
