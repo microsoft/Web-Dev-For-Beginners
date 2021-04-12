@@ -8,7 +8,7 @@
 2. [GitHub 基础知识](../2-github-basics/translations/README.zh-cn.md)
 3. [无障碍性基础知识](../3-accessibility/translations/README.zh-cn.md)
 
-### 参考
+### 鸣谢
 
 无障碍性基础知识由 [Christopher Harrison](https://twitter.com/geektrainer) 用 ♥️ 编写
 
