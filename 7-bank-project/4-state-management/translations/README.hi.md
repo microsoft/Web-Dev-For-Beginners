@@ -1,20 +1,20 @@
-# Build a Banking App Part 4: Concepts of State Management
+# एक बैंकिंग ऐप का निर्माण करें भाग 4: स्टेट प्रबंधन की अवधारणा
 
-## Pre-Lecture Quiz
+## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/47)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/47?loc=hi)
 
-### Introduction
+### परिचय
 
-As a web application grows, it becomes a challenge to keep track of all data flows. Which code gets the data, what page consumes it, where and when does it need to be updated...it's easy to end up with messy code that's difficult to maintain. This is especially true when you need to share data among different pages of your app, for example user data. The concept of *state management* has always existed in all kinds of programs, but as web apps keep growing in complexity it's now a key point to think about during development.
+जैसे-जैसे वेब एप्लिकेशन बढ़ता है, यह सभी डेटा फ्लो पर नज़र रखना एक चुनौती बन जाता है। किस कोड को डेटा मिलता है, कौन सा पेज इसका उपभोग करता है, कहां और कब इसे अपडेट करने की आवश्यकता होती है ... गंदे कोड को समाप्त करना आसान है जिसे बनाए रखना मुश्किल है। यह विशेष रूप से सच है जब आपको अपने ऐप के विभिन्न पृष्ठों के बीच डेटा साझा करने की आवश्यकता होती है, उदाहरण के लिए उपयोगकर्ता डेटा। *स्टेट प्रबंधन* की अवधारणा हमेशा सभी प्रकार के कार्यक्रमों में मौजूद रही है, लेकिन जैसा कि वेब ऐप जटिलता में बढ़ रहे हैं, यह अब विकास के दौरान सोचने का एक महत्वपूर्ण बिंदु है।
 
-In this final part, we'll look over the app we built to rethink how the state is managed, allowing support for browser refresh at any point, and persisting data across user sessions.
+इस अंतिम भाग में, हम उस ऐप पर नज़र डालेंगे जिसे हमने बनाया है कि स्टेट कैसे प्रबंधित किया जाता है, किसी भी बिंदु पर ब्राउज़र रीफ्रेश के लिए समर्थन और उपयोगकर्ता सत्रों में डेटा को बनाए रखने की अनुमति देता है।
 
-### Prerequisite
+### शर्त
 
-You need to have completed the [data fetching](../3-data/README.md) part of the web app for this lesson. You also need to install [Node.js](https://nodejs.org) and [run the server API](../api/README.md) locally so you can manage account data.
+आपको इस पाठ के लिए वेब ऐप का [डेटा प्राप्त करने](../../3-data/translations/README.hi.md) वाला भाग पूरा करना होगा। आपको स्थानीय रूप से [Node.js](https://nodejs.org) और [सर्वर एपीआई चलाने](../../api/translations/README.hi.md) को स्थापित करने की आवश्यकता है ताकि आप खाता डेटा प्रबंधित कर सकें।
 
-You can test that the server is running properly by executing this command in a terminal:
+आप परीक्षण कर सकते हैं कि सर्वर टर्मिनल में इस कमांड को निष्पादित करके ठीक से चल रहा है:
 
 ```sh
 curl http://localhost:5000/api
@@ -23,36 +23,37 @@ curl http://localhost:5000/api
 
 ---
 
-## Rethink state management
+## स्टेट प्रबंधन पुनर्विचार
 
-In the [previous lesson](../3-data/README.md), we introduced a basic concept of state in our app with the global `account` variable which contains the bank data for the currently logged in user. However, our current implementation has some flaws. Try refreshing the page when you're on the dashboard. What happens?
+[पिछले पाठ](../../3-data/translations/README.hi.md) में, हमने अपने ऐप में वैश्विक `account` चर के साथ स्टेट की एक बुनियादी अवधारणा पेश की, जिसमें वर्तमान में लॉग इन उपयोगकर्ता के लिए बैंक डेटा शामिल है। हालांकि, हमारे वर्तमान कार्यान्वयन में कुछ खामियां हैं। जब आप डैशबोर्ड पर हों तो पृष्ठ को ताज़ा करने का प्रयास करें। क्या होता है?
 
-There's 3 issues with the current code:
+वर्तमान कोड के साथ 3 समस्याएँ हैं:
 
-- The state is not persisted, as a browser refresh takes you back to the login page.
-- There are multiple functions that modify the state. As the app grows, it can make it difficult to track the changes and it's easy to forget updating one.
-- The state is not cleaned up, so when you click on *Logout* the account data is still there even though you're on the login page.
+- स्टेट कायम नहीं है, क्योंकि ब्राउज़र रीफ़्रेश आपको लॉगिन पृष्ठ पर वापस ले जाता है।
+- स्टेट को संशोधित करने वाले कई कार्य हैं। जैसे-जैसे ऐप बढ़ता है, यह परिवर्तनों को ट्रैक करना मुश्किल बना सकता है और किसी एक को अपडेट करना भूल जाना आसान है।
+- स्टेट को साफ नहीं किया जाता है, इसलिए जब आप * लॉगआउट * पर क्लिक करते हैं, तो खाता डेटा अभी भी वहीं है जबकि आप लॉगिन पेज पर हैं।
 
-We could update our code to tackle these issues one by one, but it would create more code duplication and make the app more complex and difficult to maintain. Or we could pause for a few minutes and rethink our strategy.
+हम एक-एक करके इन मुद्दों से निपटने के लिए अपने कोड को अपडेट कर सकते हैं, लेकिन यह अधिक कोड दोहराव पैदा करेगा और ऐप को अधिक जटिल और बनाए रखना मुश्किल होगा। या हम कुछ मिनटों के लिए रुक सकते हैं और अपनी रणनीति पर फिर से विचार कर सकते हैं।
 
-> What problems are we really trying to solve here?
+> 
+हम वास्तव में किन समस्याओं को हल करने की कोशिश कर रहे हैं?
 
-[State management](https://en.wikipedia.org/wiki/State_management) is all about finding a good approach to solve these two particular problems:
+[स्टेट प्रबंधन](https://en.wikipedia.org/wiki/State_management) इन दो विशेष समस्याओं को हल करने के लिए एक अच्छा तरीका खोजने के बारे में है:
 
-- How to keep the data flows in an app understandable?
-- How to keep the state data always in sync with the user interface (and vice versa)?
+- ऐप में डेटा फ्लो को कैसे समझा जा सकता है?
+- उपयोगकर्ता इंटरफ़ेस (और इसके विपरीत) के साथ स्टेट के डेटा को हमेशा सिंक में कैसे रखा जाए?
 
-Once you've taken care of these, any other issues you might have may either be fixed already or have become easier to fix. There are many possible approaches for solving these problems, but we'll go with a common solution that consists of **centralizing the data and the ways to change it**. The data flows would go like this:
+एक बार जब आप इनका ध्यान रख लेते हैं, तो हो सकता है कि कोई अन्य समस्या या तो पहले से ही ठीक हो जाए या जिसे ठीक करना आसान हो जाए। इन समस्याओं को हल करने के लिए कई संभावित दृष्टिकोण हैं, लेकिन हम एक सामान्य समाधान के साथ जाएंगे जिसमें डेटा को **केंद्रीकृत करना और इसे बदलने के तरीके** शामिल हैं। डेटा प्रवाह इस तरह होगा:
 
-![Schema showing the data flows between the HTML, user actions and state](./images/data-flow.png)
+![HTML, उपयोगकर्ता क्रियाओं और स्टेट के बीच डेटा प्रवाह दिखाती हुई स्कीमा](../images/data-flow.png)
 
-> We won't cover here the part where the data automatically triggers the view update, as it's tied to more advanced concepts of [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming). It's a good follow-up subject if you're up to a deep dive.
+> हम यहां उस हिस्से को कवर नहीं करेंगे जहां डेटा स्वचालित रूप से दृश्य अद्यतन को ट्रिगर करता है, क्योंकि यह [रीऐक्टिव प्रोग्रामिंग](https://en.wikipedia.org/wiki/Reactive_programming) की अधिक उन्नत अवधारणाओं से बंधा है। यदि आप एक गहरी गोता लगाने के लिए एक अच्छा अनुवर्ती विषय है।
 
-✅ There are a lot of libraries out there with different approaches to state management, [Redux](https://redux.js.org) being a popular option. Take a look at the concepts and patterns used as it's often a good way to learn what potential issues you may be facing in large web apps and how it can be solved.
+✅ स्टेट प्रबंधन के विभिन्न दृष्टिकोणों के साथ वहाँ बहुत सारे पुस्तकालय हैं, [Redux](https://redux.js.org) एक लोकप्रिय विकल्प है। उपयोग की जाने वाली अवधारणाओं और पैटर्नों पर एक नज़र डालें क्योंकि यह अक्सर सीखने का एक अच्छा तरीका है कि आप बड़े वेब ऐप में किन संभावित मुद्दों का सामना कर रहे हैं और इसे कैसे हल किया जा सकता है।
 
-### Task
+### टास्क
 
-We'll start with a bit of refactoring. Replace the `account` declaration:
+हम थोड़ा सा रिफैक्टरिंग के साथ शुरुआत करेंगे। `account` घोषणा बदलें:
 
 ```js
 let account = null;
@@ -66,29 +67,30 @@ let state = {
 };
 ```
 
-The idea is to *centralize* all our app data in a single state object. We only have `account` for now in the state so it doesn't change much, but it creates a path for evolutions.
+एक स्टेट वस्तु में हमारे सभी एप्लिकेशन डेटा को *केंद्रीकृत* करने का विचार है। हमारे पास स्टेट में अभी के लिए `account` है, इसलिए यह बहुत अधिक नहीं बदलता है, लेकिन यह प्रस्तावों के लिए एक रास्ता बनाता है।
 
-We also have to update the functions using it. In the `register()` and `login()` functions, replace `account = ...` with `state.account = ...`;
 
-At the top of the `updateDashboard()` function, add this line:
+हमें इसका उपयोग करके कार्यों को भी अपडेट करना होगा। `register()` और `login()` फंगक्शनसमे,`account = ...` को `state.account = ...` से बदले;
+
+`UpdateDashboard()` फ़ंक्शन के शीर्ष पर, यह पंक्ति जोड़ें:
 
 ```js
 const account = state.account;
 ```
 
-This refactoring by itself did not bring much improvements, but the idea was to lay out the foundation for the next changes.
+अपने आप में इस रिफ्रैक्टिंग  में बहुत सुधार नहीं हुआ, लेकिन विचार अगले बदलावों की नींव रखने का था।
 
-## Track data changes
+## डेटा परिवर्तन ट्रैक करें
 
-Now that we have put in place the `state` object to store our data, the next step is centralize the updates. The goal is to make it easier to keep track of any changes and when they happen.
+अब जब हमने अपने डेटा को स्टोर करने के लिए `state` ऑब्जेक्ट को रखा है, तो अगला चरण अपडेट को केंद्रीकृत करना है। लक्ष्य किसी भी परिवर्तन का ट्रैक रखना आसान है और जब वे होते हैं।
 
-To avoid having changes made to the `state` object, it's also a good practice to consider it [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), meaning that it cannot be modified at all. It also means that you have to create a new state object if you want to change anything in it. By doing this, you build a protection about potentially unwanted [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)), and open up possibilities for new features in your app like implementing undo/redo, while also making it easier to debug. For example, you could log every change made to the state and keep a history of the changes to understand the source of a bug.
+`state` वस्तु में किए गए परिवर्तनों से बचने के लिए, यह [*अपरिवर्तनीय*](https://en.wikipedia.org/wiki/Immutable_object) पर विचार करने के लिए एक अच्छा अभ्यास है, जिसका अर्थ है कि इसे बिल्कुल भी संशोधित नहीं किया जा सकता है। इसका अर्थ यह भी है कि यदि आप इसमें कुछ भी बदलना चाहते हैं तो आपको एक नया स्टेट ऑब्जेक्ट बनाना होगा। ऐसा करने से, आप संभावित रूप से अवांछित [साइड इफेक्ट्स](https://en.wikipedia.org/wiki/Side_effect_(computer_science)) के बारे में एक सुरक्षा का निर्माण करते हैं, और अपने ऐप में नई सुविधाओं के लिए संभावनाएं खोलते हैं जैसे कि undo/redo को लागू करना, जबकि डिबग करना भी आसान है। उदाहरण के लिए, आप स्टेट में किए गए प्रत्येक परिवर्तन को लॉग कर सकते हैं और बग के स्रोत को समझने के लिए परिवर्तनों का इतिहास रख सकते हैं।
 
-In JavaScript, you can use [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) to create an immutable version of an object. If you try to make changes to an immutable object, an exception will be raised.
+जावास्क्रिप्ट में, आप एक अपरिवर्तनीय संस्करण एक ऑब्जेक्ट बनाने के लिए [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) का उपयोग कर सकते हैं । यदि आप एक अपरिवर्तनीय वस्तु में परिवर्तन करने की कोशिश करते हैं, तो एक अपवाद उठाया जाएगा।
 
-✅ Do you know the difference between a *shallow* and a *deep* immutable object? You can read about it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
+✅ क्या आप एक *उथले* और एक *गहरी* अपरिवर्तनीय वस्तु के बीच का अंतर जानते हैं? आप इसके बारे में [यहां](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze) पढ़ सकते हैं.
 
-### Task
+### टास्क
 
 Let's create a new `updateState()` function:
 
@@ -101,9 +103,9 @@ function updateState(property, newData) {
 }
 ```
 
-In this function, we're creating a new state object and copy data from the previous state using the [*spread (`...`) operator*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Then we override a particular property of the state object with the new data using the [bracket notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` for assignment. Finally, we lock the object to prevent modifications using `Object.freeze()`. We only have the `account` property stored in the state for now, but with this approach you can add as many properties as you need in the state.
+इस फ़ंक्शन में, हम [*spread (`...`) operator*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals) का उपयोग करके पिछले स्टेट से एक नया स्टेट ऑब्जेक्ट और कॉपी डेटा बना रहे हैं। फिर हम नए डेटा के साथ स्टेट ऑब्जेक्ट की एक विशेष प्रॉपर्टी को ओवरराइड करते हैं [ब्रैकेट नोटेशन] `[property]` असाइनमेंट के लिए। अंत में, हम `Object.freeze()` का उपयोग करके संशोधनों को रोकने के लिए ऑब्जेक्ट को लॉक करते हैं। हमारे पास अब केवल स्टेट में संग्रहीत `अकाउंट` प्रॉपर्टी है, लेकिन इस दृष्टिकोण के साथ आप स्टेट में जितनी आवश्यकता हो उतने गुण जोड़ सकते हैं।
 
-We'll also update the `state` initialization to make sure the initial state is frozen too:
+हम यह भी सुनिश्चित करेंगे कि प्रारंभिक अवस्था भी जम गई है, यह सुनिश्चित करने के लिए `state` आरंभीकरण को अद्यतन करेगा:
 
 ```js
 let state = Object.freeze({
@@ -111,21 +113,21 @@ let state = Object.freeze({
 });
 ```
 
-After that, update the `register` function by replacing the `state.account = result;` assignment with:
+उसके बाद, `state.account = result` के स्थान पर `register` फ़ंक्शन को अपडेट करें; असाइनमेंट के साथ:
 
 ```js
 updateState('account', result);
 ```
 
-Do the same with the `login` function, replacing `state.account = data;` with:
+`login` फ़ंक्शन के साथ भी ऐसा ही करें, `state.account = data;` के स्थान पर:
 
 ```js
 updateState('account', data);
 ```
 
-We'll now take the chance to fix the issue of account data not being cleared when the user clicks on *Logout*.
+जब उपयोगकर्ता *लॉगआउट* पर क्लिक करेगा तो हम खाता डेटा के मुद्दे को ठीक करने का मौका नहीं लेंगे।
 
-Create a new function `logout()`:
+एक नया `logout()` फंगक्शन बनाए:
 
 ```js
 function logout() {
@@ -134,49 +136,50 @@ function logout() {
 }
 ```
 
-In `updateDashboard()`, replace the redirection `return navigate('/login');` with `return logout()`;
+`updateDashboard()` मे , पुनर्निर्देशन `return navigate('/login');` की जगह `return logout()` के साथ;
 
-Try registering a new account, logging out and in again to check that everything still works correctly.
+एक नया खाता पंजीकृत करने की कोशिश करें, लॉग आउट करें और फिर से जाँच करें कि सब कुछ अभी भी सही ढंग से काम करता है।
 
-> Tip: you can take a look at all state changes by adding `console.log(state)` at the bottom of `updateState()` and opening up the console in your browser's development tools.
+युक्ति: आप `updateState()` के तल पर `console.log(state)` जोड़कर और अपने ब्राउज़र के डेवलपमेंट टूल में कंसोल खोलकर सभी स्टेट परिवर्तनों पर एक नज़र डाल सकते हैं।
 
-## Persist the state
+## स्टेट को पर्सिस्ट करे
 
-Most web apps needs to persist data to be able to work correctly. All the critical data is usually stored on a database and accessed via a server API, like as the user account data in our case. But sometimes, it's also interesting to persist some data on the client app that's running in your browser, for a better user experience or to improve loading performance.
+अधिकांश वेब ऐप्स को डेटा को सही ढंग से काम करने में सक्षम बनाने के लिए लगातार बने रहने की आवश्यकता होती है। सभी महत्वपूर्ण डेटा को आमतौर पर डेटाबेस पर संग्रहीत किया जाता है और सर्वर एपीआई के माध्यम से एक्सेस किया जाता है, जैसे हमारे मामले में उपयोगकर्ता खाता डेटा। लेकिन कभी-कभी, एक बेहतर उपयोगकर्ता अनुभव के लिए या लोडिंग प्रदर्शन में सुधार करने के लिए आपके ब्राउज़र में चल रहे क्लाइंट ऐप पर कुछ डेटा को जारी रखना भी दिलचस्प है।
 
-When you want to persist data in your browser, there are a few important questions you should ask yourself:
+जब आप अपने ब्राउज़र में डेटा को पर्सिस्ट रखना चाहते हैं, तो कुछ महत्वपूर्ण सवाल हैं जो आपको खुद से पूछना चाहिए:
 
-- *Is the data sensitive?* You should avoid storing any sensitive data on client, such as user passwords.
-- *For how long do you need to keep this data?* Do you plan to access this data only for the current session or do you want it to be stored forever?
+- *क्या डेटा संवेदनशील है?* आपको क्लाइंट पर किसी भी संवेदनशील डेटा, जैसे उपयोगकर्ता पासवर्ड को संग्रहीत करने से बचना चाहिए।
+- *आपको यह डेटा कब तक रखने की आवश्यकता है?* क्या आप इस डेटा को केवल वर्तमान सत्र के लिए एक्सेस करने की योजना बना रहे हैं या क्या आप चाहते हैं कि यह हमेशा के लिए स्टोर हो जाए?
 
-There are multiple ways of storing information inside a web app, depending on what you want to achieve. For example, you can use the URLs to store a search query, and make it shareable between users. You can also use [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) if the data needs to be shared with the server, like [authentication](https://en.wikipedia.org/wiki/Authentication) information.
+वेब ऐप के अंदर जानकारी संग्रहीत करने के कई तरीके हैं, जो इस बात पर निर्भर करता है कि आप क्या हासिल करना चाहते हैं। उदाहरण के लिए, आप खोज क्वेरी को संग्रहीत करने के लिए URL का उपयोग कर सकते हैं, और इसे उपयोगकर्ताओं के बीच साझा करने योग्य बना सकते हैं। यदि आप डेटा को सर्वर के साथ साझा करने की आवश्यकता है, जैसे कि [authentication](https://en.wikipedia.org/wiki/Authentication) की जानकारी।
 
-Another option is to use one of the many browser APIs for storing data. Two of them are particularly interesting:
 
-- [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage): a [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) allowing to persist data specific to the current web site across different sessions. The data saved in it never expires.
-- [`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage): this one is works the same as `localStorage` except that the data stored in it is cleared when the session ends (when the browser is closed).
+एक अन्य विकल्प डेटा भंडारण के लिए कई ब्राउज़र एपीआई में से एक का उपयोग करना है। उनमें से दो विशेष रूप से दिलचस्प हैं:
 
-Note that both these APIs only allow to store [strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). If you want to store complex objects, you will need to serialize it to the [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) format using [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+- [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage): एक [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) विभिन्न सत्रों में वर्तमान वेब साइट के लिए विशिष्ट डेटा को बनाए रखने की अनुमति देते हैं। इसमें सहेजा गया डेटा कभी समाप्त नहीं होता है।
+- [`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage): यह एक `sessionStorage` की तरह ही काम करता है, सिवाय इसके कि इसमें संग्रहीत डेटा सत्र समाप्त होने पर (जब ब्राउज़र बंद हो जाता है) साफ हो जाता है।
 
-✅ If you want to create a web app that does not work with a server, it's also possible to create a database on the client using the [`IndexedDB` API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). This one is reserved for advanced use cases or if you need to store significant amount of data, as it's more complex to use.
+यदि आप जटिल वस्तुओं को संग्रहीत करना चाहते हैं, तो आपको इसे [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) प्रारूप [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) का उपयोग करके क्रमबद्ध करना होगा। 
 
-### Task
+✅ यदि आप एक वेब ऐप बनाना चाहते हैं जो सर्वर के साथ काम नहीं करता है, तो [`IndexedDB` API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) का उपयोग करके क्लाइंट पर डेटाबेस बनाना भी संभव है। यह एक उन्नत उपयोग मामलों के लिए आरक्षित है या यदि आपको महत्वपूर्ण मात्रा में डेटा संग्रहीत करने की आवश्यकता है, क्योंकि यह उपयोग करने के लिए अधिक जटिल है।
 
-We want our users stay logged in until they explicitly click on the *Logout* button, so we'll use `localStorage` to store the account data. First, let's define a key that we'll use to store our data.
+### टास्क
+
+हम चाहते हैं कि हमारे उपयोगकर्ता तब तक लॉग इन रहें जब तक कि वे स्पष्ट रूप से *लॉगआउट* बटन पर क्लिक न करें, इसलिए हम खाता डेटा संग्रहीत करने के लिए `localStorage` का उपयोग करेंगे। सबसे पहले, एक कुंजी परिभाषित करते हैं जिसका उपयोग हम अपने डेटा को संग्रहीत करने के लिए करेंगे।.
 
 ```js
 const storageKey = 'savedAccount';
 ```
 
-Then add this line at the end of the `updateState()` function:
+फिर इस लाइन को `updateState()` फ़ंक्शन के अंत में जोड़ें:
 
 ```js
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-With this, the user account data will be persisted and always up-to-date as we centralized previously all our state updates. This is where we begin to benefit from all our previous refactors 🙂.
+इसके साथ, उपयोगकर्ता खाते के डेटा को बनाए रखा जाएगा और हमेशा अप-टू-डेट रहेगा क्योंकि हमने अपने सभी स्टेट अपडेट पहले केंद्रीकृत किए थे। यह वह जगह है जहाँ हम अपने सभी पिछले रिफ्लेक्टरों से लाभान्वित होने लगते हैं 🙂.
 
-As the data is saved, we also have to take care of restoring it when the app is loaded. Since we'll begin to have more initialization code it may be a good idea to create a new `init` function, that also includes our previous code at the bottom of `app.js`:
+डेटा सहेजे जाने के साथ, हमें ऐप को लोड करने पर इसे पुनर्स्थापित करने का भी ध्यान रखना होगा। चूंकि हम अधिक आरंभीकरण कोड शुरू करेंगे, इसलिए यह एक नया `init` फ़ंक्शन बनाने के लिए एक अच्छा विचार हो सकता है, जिसमें `app.js` के नीचे हमारा पिछला कोड भी शामिल है।:
 
 ```js
 function init() {
@@ -193,17 +196,17 @@ function init() {
 init();
 ```
 
-Here we retrieve the saved data, and if there's any we update the state accordingly. It's important to do this *before* updating the route, as there might be code relying on the state during the page update.
+यहां हम सहेजे गए डेटा को पुनर्प्राप्त करते हैं, और यदि कोई है तो हम तदनुसार स्टेट को अपडेट करते हैं। रूट अपडेट करने से *पहले* इसे करना महत्वपूर्ण है, क्योंकि पेज अपडेट के दौरान स्टेट पर कोड निर्भर हो सकता है।
 
-We can also make the *Dashboard* page our application default page, as we are now persisting the account data. If no data is found, the dashboard takes care of redirecting to the *Login* page anyways. In `updateRoute()`, replace the fallback `return navigate('/login');` with `return navigate('/dashboard');`.
+हम अपने एप्लिकेशन डिफॉल्ट पेज को भी * डैशबोर्ड * पेज बना सकते हैं, क्योंकि हम अब खाता डेटा को जारी रख रहे हैं। यदि कोई डेटा नहीं मिला है, तो डैशबोर्ड * लॉगिन * पेज वैसे भी पुनर्निर्देशित करने का ख्याल रखता है। `updateRoute()` में, फ़ॉलबैक `return navigate('/login');` को `return navigate('/dashboard');` से बदलें।
 
-Now login in the app and try refreshing the page. You should stay on the dashboard. With that update we've taken care of all our initial issues...
+अब ऐप में लॉगइन करें और पेज को रिफ्रेश करने की कोशिश करें। आपको डैशबोर्ड पर रहना चाहिए। उस अपडेट के साथ हमने अपने सभी शुरुआती मुद्दों का ध्यान रखा है ...
 
-## Refresh the data
+## डाटाको रिफ्रेश करे
 
-...But we might also have a created a new one. Oops!
+...लेकिन हम एक नया भी बना सकते हैं। ऊपस!
 
-Go to the dashboard using the `test` account, then run this command on a terminal to create a new transaction:
+ `test` खाते का उपयोग करके डैशबोर्ड पर जाएं, फिर एक नया लेनदेन बनाने के लिए इस कमांड को टर्मिनल पर चलाएं:
 
 ```sh
 curl --request POST \
@@ -212,15 +215,15 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Try refreshing your the dashboard page in the browser now. What happens? Do you see the new transaction?
+अब ब्राउज़र में अपने डैशबोर्ड पृष्ठ को रिफ्रेश करने का प्रयास करें। क्या होता है? क्या आप नया लेनदेन देखते हैं?
 
-The state is persisted indefinitely thanks to the `localStorage`, but that also means it's never updated until you log out of the app and log in again!
+स्टेट अनिश्चित काल तक `localStorage` की बदौलत कायम है, लेकिन इसका मतलब यह भी है कि यह तब तक अपडेट नहीं किया जाता जब तक आप ऐप से लॉग-आउट नहीं करते और फिर से लॉग इन नहीं करते!
 
-One possible strategy to fix that is to reload the account data every time the dashboard is loaded, to avoid stall data.
+स्टेक डेटा से बचने के लिए, हर बार डैशबोर्ड को लोड करने के बाद खाते के डेटा को फिर से लोड करना एक निश्चित रणनीति है।
 
-### Task
+### टास्क
 
-Create a new function `updateAccountData`:
+एक नया फंगक्शन `updateAccountData` बनाए:
 
 ```js
 async function updateAccountData() {
@@ -238,9 +241,9 @@ async function updateAccountData() {
 }
 ```
 
-This method checks that we are currently logged in then reloads the account data from the server.
+यह विधि जांचती है कि हम वर्तमान में लॉग इन हैं फिर सर्वर से खाता डेटा पुनः लोड करता है।
 
-Create another function named `refresh`:
+एक दूसरा नया `refresh` नामका फंगक्शन बनाए:
 
 ```js
 async function refresh() {
@@ -249,7 +252,7 @@ async function refresh() {
 }
 ```
 
-This one updates the account data, then takes care of updating the HTML of the dashboard page. It's what we need to call when the dashboard route is loaded. Update the route definition with:
+यह एक खाता डेटा अपडेट करता है, फिर डैशबोर्ड पृष्ठ के HTML को अपडेट करने का ध्यान रखता है। डैशबोर्ड मार्ग लोड होने पर हमें यह कॉल करना होगा। इसके साथ रूट की परिभाषा को अपडेट करें:
 
 ```js
 const routes = {
@@ -258,24 +261,24 @@ const routes = {
 };
 ```
 
-Try reloading the dashboard now, it should display the updated account data.
+डैशबोर्ड को अब पुनः लोड करने का प्रयास करें, इसे अद्यतन खाता डेटा प्रदर्शित करना चाहिए।
 
 ---
 
-## 🚀 Challenge
+## 🚀 चुनौती
 
-Now that we reload the account data every time the dashboard is loaded, do you think we still need to persist *all the account* data?
+अब जब हम डैशबोर्ड लोड होने के बाद हर बार खाते के डेटा को लोड करते हैं, तो क्या आपको लगता है कि हमें अभी भी *सभी खाते* डेटा को बनाए रखने की आवश्यकता है?
 
-Try working together to change what is saved and loaded from `localStorage` to only include what is absolutely required for the app to work.
+सहेजने और लोड करने के लिए एक साथ काम करने का प्रयास करें `localStorage` से केवल उस ऐप में काम करने के लिए जो आवश्यक है उसे शामिल करें।
 
-## Post-Lecture Quiz
+## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/48)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/48?loc=hi)
 
-## Assignment
+## असाइनमेंट
 
-[Implement "Add transaction" dialog](assignment.md)
+["ट्रैन्सैक्शन जोड़े" डायलॉग इम्प्लमेन्ट करे](assignment.hi.md)
 
-Here's an example result after completing the assignment:
+यहां असाइनमेंट पूरा करने के बाद एक उदाहरण दिया गया है:
 
-![Screenshot showing an example "Add transaction" dialog](./images/dialog.png)
+![एक स्क्रीनशॉट "लेनदेन जोड़ें" डायलॉग दिखाते हुए](../images/dialog.png)
