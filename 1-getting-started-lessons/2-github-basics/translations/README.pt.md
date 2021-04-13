@@ -25,51 +25,51 @@ Se o Git não estiver instalado, [baixe o Git aqui](https://git-scm.com/download
 * `git config --global user.name "your-name"`
 * `git config --global user.email "your-email"`
 
-To check if Git is already configured you can type:
+Para verificar se o Git já está configurado, você pode digitar:
 `git config --list`
 
-You'll also need a GitHub account, a code editor (like Visual Studio Code), and you'll need to open your terminal (or: command prompt).
+Você também precisará de uma conta do GitHub, um editor de código (como o Visual Studio Code) e abrir seu terminal (ou: prompt de comando).
 
-Navigate to [github.com](https://github.com/) and create an account if you haven't already, or log in and fill out your profile. 
+Navegue para [github.com](https://github.com/) e crie uma conta, caso ainda não o tenha feito, ou faça login e preencha o seu perfil. 
 
-✅ GitHub isn't the only code repository in the world; there are others, but GitHub is the best known
+✅ O GitHub não é o único repositório de código do mundo; existem outros, mas o GitHub é o mais conhecido
 
-### Preparation
+### Preparação
 
-You'll need both a folder with a code project on your local machine (laptop or PC), and a public repository on GitHub, which will serve as an example for how to contribute to the projects of others.  
+Você precisará de uma pasta com um projeto de código em sua máquina local (laptop ou PC) e de um repositório público no GitHub, que servirá como um exemplo de como contribuir com os projetos de outras pessoas. 
 
 ---
 
-## Code management
+## Gerenciamento de código
 
-Let's say you have a folder locally with some code project and you want to start tracking your progress using git - the version control system. Some people compare using git to writing a love letter to your future self. Reading your commit messages days or weeks or months later you'll be able to recall why you made a decision, or "rollback" a change - that is, when you write good "commit messages".
+Digamos que você tenha uma pasta localmente com algum projeto de código e deseja começar a monitorar seu progresso usando git - o sistema de controle de versão. Algumas pessoas comparam o uso do git a escrever uma carta de amor para o seu futuro eu. Lendo suas mensagens de commit dias, semanas ou meses depois, você será capaz de se lembrar por que tomou uma decisão, ou "reverter" uma mudança - isto é, quando você escreve boas "mensagens de commit".
 
-### Task: Make a repository and commit code
+### Tarefa: Faça um repositório e conmmit o código
 
-1. **Create repository on GitHub**. On GitHub.com, in the repositories tab, or from the navigation bar top-right, find the **new repo** button.
+1. **Crie um repositório no GitHub**. No GitHub.com, na guia de repositórios ou na barra de navegação superior direita, encontre o botão **new repo** .
 
-   1. Give your repository (folder) a name
-   1. Select **create repository**.
+   1. Dê um nome ao seu repositório (pasta) 
+   1. Selecione **create repository**.
 
-1. **Navigate to your working folder**. In your terminal, switch to the folder (also known as the directory) you want to start tracking. Type:
+1. **Navegue até sua pasta de trabalho**. Em seu terminal, mude para a pasta (também conhecida como diretório) que deseja iniciar o rastreamento. Digite:
 
    ```bash
-   cd [name of your folder]
+   cd [nome da sua pasta]
    ```
 
-1. **Initialize a git repository**. In your project type:
+1. **Inicialize um repositório git**. No seu projeto, digite:
 
    ```bash
    git init
    ```
 
-1. **Check status**. To check the status of your repository type:
+1. **Cheque status**. Para checar o status de seu repositório, digite:
 
    ```bash
    git status
    ```
 
-   the output can look something like this:
+   a saída pode ser parecida com esta:
 
    ```output
    Changes not staged for commit:
@@ -80,106 +80,105 @@ Let's say you have a folder locally with some code project and you want to start
         modified:   file2.txt
    ```
 
-   Typically a `git status` command tells you things like what files are ready to be _saved_ to the repo or has changes on it that you might want to persist.
+   Geralmente o comando `git status` diz a você coisas como quais arquivos estão prontos para serem _salvos_ para o repo ou tem alterações que você pode querer persistir.
 
-1. **Add all files for tracking**
-   This also called as staging files/ adding files to the staging area.
+1. **Adicionar todos os arquivos para rastreamento**
+   Isso também é chamado de arquivos de teste / adição de arquivos à área de teste.
 
    ```bash
    git add .
    ```
 
-   The `git add` plus `.` argument indicates that all your files & changes for tracking. 
+   O argumento `git add` plus `.` indiciona todos os seus arquivos e alterações para rastreamento. 
 
-1. **Add selected files for tracking**
+1. **Adicionar arquivos selecionados para rastreamento**
 
    ```bash
-   git add [file or folder name]
+   git add [nome do arquivo ou pasta]
    ```
 
-   This helps us to add only selected files to the staging area when we don't want to commit all files at once.
+Isso nos ajuda a adicionar apenas os arquivos selecionados à área de teste quando não queremos enviar todos os arquivos de uma vez.
 
-1. **Unstage all files**
+1. **Unstage todos os arquivos**
 
    ```bash
    git reset
    ```
+   Este comando nos ajuda a unstage todos os arquivos de uma vez.
 
-   This command helps us to unstage all files at once.
-
-1. **Unstage a particular file**
+1. **Unstage um arquivo em particular**
 
    ```bash
-   git reset [file or folder name]
+   git reset [nome do arquivo ou pasta]
    ```
 
-   This command helps us to unstage only a particular file at once that we don't want to include for the next commit.
+   Este comando nos ajuda a remover stage de apenas um arquivo específico de uma vez que não queremos incluir no próximo commit.
 
-1. **Persisting your work**. At this point you've added the files to a so called _staging area_. A place where Git is tracking your files. To make the change permanent you need to _commit_ the files. To do so you create a _commit_ with the `git commit` command. A _commit_ represents a saving point in the history of your repo. Type the following to create a _commit_:
+1. **Persistindo no seu trabalho**. Neste ponto, você adicionou os arquivos a um local chamado _staging area_. Um lugar onde o Git está rastreando seus arquivos. Para tornar a mudança permanente, você precisa _committar_ os arquivos. Para fazer isso, crie um _commit_ com o comando `git commit`. Um _commit_ representa um ponto na história do seu repo sendo salvo. Digite o seguinte para criar um _commit_:
 
    ```bash
    git commit -m "first commit"
    ```
 
-   This commits all of your files, adding the message "first commit". For future commit messages you will want to be more descriptive in your description to convey what type of change you've made.
+   Isso confirma todos os seus arquivos, adicionando a mensagem "first commit" (primeiro commit). Para mensagens de commit futuras, você desejará ser mais descritiva em sua descrição para transmitir que tipo de mudança você fez.
 
-1. **Connect your local Git repo with GitHub**. A Git repo is good on your machine but at some point you want to have backup of your files somewhere and also invite other people to work with you on your repo. One such great place to do so is GitHub. Remember we've already created a repo on GitHub so the only thing we need to do is to connect our local Git repo with GitHub. The command `git remote add` will do just that. Type the following command:
+1. **Conecte seu repositório Git local com GitHub**. Um repositório Git é bom em sua máquina, mas em algum momento você vai querer fazer backup de seus arquivos em algum lugar e também convidar outras pessoas para trabalhar com você em seu repositório. Um ótimo lugar para fazer isso é o GitHub. Lembre-se de que já criamos um repositório no GitHub, então a única coisa que precisamos fazer é conectar nosso repositório Git local ao GitHub. O comando `git remote add` fará exatamente isso. Digite o seguinte comando:
 
-   > Note, before you type the command go to your GitHub repo page to find the repository URL. You will use it in the below command. Replace `repository_name` with your GitHub URL.
+   > Antes de digitar o comando, vá para a página do repositório GitHub para encontrar o URL do repositório. Você o usará no comando abaixo. Substitua `repository_name` pelo seu URL do GitHub.
 
    ```bash
    git remote add origin https://github.com/username/repository_name.git
    ```
 
-   This creates a _remote_, or connection, named "origin" pointing at the GitHub repository you created earlier.
+   Isso cria um _remote_, ou conexão, chamada "origin" apontando para o repositório GitHub que você criou anteriormente.
 
-1. **Send local files to GitHub**. So far you've created a _connection_ between the local repo and the GitHub repo. Let's send these files to GitHub with the following command `git push`, like so: 
+1. **Envie arquivos locais para GitHub**. Até agora, você criou uma _conexão_ entre o repositório local e o repositório GitHub. Vamos enviar esses arquivos para o GitHub com o seguinte comando `git push`, assim: 
 
    ```bash
    git push -u origin main
    ```
 
-   This sends your commits in your "main" branch to GitHub.
+   Isso envia seus commits em seu branch "principal" para o GitHub.
 
-1. **To add more changes**. If you want to continue making changes and pushing them to GitHub you’ll just need to use the following three commands:
+1. **Para adicionar mais mudanças**. Se quiser continuar fazendo alterações e enviando-as para o GitHub, você só precisará usar os três comandos a seguir:
 
    ```bash
    git add .
-   git commit -m "type your commit message here"
+   git commit -m "digite sua mensagem de commit aqui"
    git push
    ```
 
-   > Tip, You might also want to adopt a `.gitignore` file to prevent files you don't want to track from showing up on GitHub - like that notes file you store in the same folder but has no place on a public repository. You can find templates for `.gitignore` files at [.gitignore templates](https://github.com/github/gitignore).
+   > Dica, você também pode adotar um arquivo `.gitignore` para evitar que arquivos que você não deseja rastrear apareçam no GitHub - como aquele arquivo de notas que você armazena na mesma pasta, mas não tem lugar em um repositório público. Você pode encontrar modelos para arquivos `.gitignore` em [modelos .gitignore](https://github.com/github/gitignore).
 
-#### Commit messages
+#### Mensagens de Commit 
 
-A great Git commit subject line completes the following sentence:
-If applied, this commit will <your subject line here>
+Uma ótima mensagem de Git commit completa a seguinte frase:
+Se aplicado, este commit irá <sua mensagem de commit aqui>
 
-For the subject use the imperative, present tense: "change" not "changed" nor "changes". 
-As in the subject, in the body (optional) also use the imperative, present tense. The body should include the motivation for the change and contrast this with previous behavior. You're explaining the `why`, not the `how`.
+Para o assunto use o tempo presente imperativo: "mudar" e não "mudou" nem "muda".
+Assim como no sujeito, no corpo (opcional) também use o tempo presente imperativo. O corpo deve incluir a motivação para a mudança e contrastar isso com o comportamento anterior. Você está explicando o `porquê`, não o` como`.
 
-✅ Take a few minutes to surf around GitHub. Can you find a really great commit message? Can you find a really minimal one? What information do you think is the most important and useful to convey in a commit message?
+✅ Reserve alguns minutos para navegar no GitHub. Você consegue encontrar uma mensagem de commit realmente ótima? Você pode encontrar uma ruim? Quais informações você acha que são as mais importantes e úteis para transmitir em uma mensagem de commit?
 
-### Task: Collaborate
+### Tarefa: Colabore
 
-The main reason for putting things on GitHub was to make it possible to collaborate with other developers.
+O principal motivo para colocar coisas no GitHub foi possibilitar a colaboração com outros desenvolvedores.
 
-## Working on projects with others
+## Trabalhando em projetos com outras pessoas
 
-In your repository, navigate to `Insights > Community` to see how your project compares to recommended community standards.
+Em seu repositório, navegue até `Insights> Community` para ver como seu projeto se compara aos padrões recomendados da comunidade.
 
-   Here are some things that can improve your GitHub repo:
-   - **Description**. Did you add a description for your project?
-   - **README**. Did you add a README? GitHub provides guidance for writing a [README](https://docs.github.com/articles/about-readmes/).
-   - **Contributing guideline**. Does your project have [contributing guidelines](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/), 
-   - **Code of Conduct**. a [Code of Conduct](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/), 
-   - **License**. Perhaps most importantly, a [license](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
+   Aqui estão algumas coisas que podem melhorar seu repositório GitHub: 
+   - **Descrição**. Você adicionou uma descrição para o seu projeto?
+   - **README**. Você adicionou um README? O GitHub fornece orientação para escrever um [README](https://docs.github.com/articles/about-readmes/).
+   - **Guia de Contribuição**. Seu projeto tem um [guia para contribuição](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/), 
+   - **Código de Conduta**. Um [Código de Conduta](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/), 
+   - **Licença**. Talvez o mais importante, a [licença](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
 
 
-All these resources will benefit onboarding new team members. And those are typically the kind of things new contributors look at before even looking at your code, to find out if your project is the right place for them to be spending their time.
+Todos esses recursos irão beneficiar a integração de novos membros da equipe. E esses são normalmente o tipo de coisas que os novas pessoas colaboradoras olham antes mesmo de olhar para o seu código, para descobrir se o seu projeto é o lugar certo para elas passarem o tempo.
 
-✅ README files, although they take time to prepare, are often neglected by busy maintainers. Can you find an example of a particularly descriptive one? Note: there are some [tools to help create good READMEs](https://www.makeareadme.com/) that you might like to try.
+✅ Arquivos README, embora levem tempo para serem preparados, são freqüentemente negligenciados por pessoas mantenedores ocupadas. Você pode encontrar um exemplo particularmente descritivo? Nota: existem algumas [ferramentas para ajudar a criar bons READMEs](https://www.makeareadme.com/) que você pode querer experimentar.
 
 ### Task: Merge some code
 
