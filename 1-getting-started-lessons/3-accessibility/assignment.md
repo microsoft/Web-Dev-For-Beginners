@@ -1,11 +1,13 @@
-# Analyze a non-accessible web site
+# Analise um site não acessível
 
-## Instructions
+## Instruções
 
-Identify a web site that you believe is NOT accessible, and create an action plan to improve its accessibility. Your first task would be to identify this site, detail the ways that you think it is inaccessible without using analytic tools, and then put it through a Lighthouse analysis. Take the results of this analysis and outline a detailed plan with a minimum of ten points showing how the site could be improved.
+Identifique um site que você acredita que NÃO está acessível e crie um plano de ação para melhorar sua acessibilidade. 
+Sua primeira tarefa seria identificar este site, detalhar as maneiras pelas quais você acha que ele é inacessível sem o uso de ferramentas analíticas e, em seguida, submetê-lo a uma análise Lighthouse. P
+egue os resultados desta análise e esboce um plano detalhado com um mínimo de dez pontos mostrando como o site poderia ser melhorado.
 
-## Rubric
+## Rubrica
 
-| Criteria       | Exemplary                                                                                                                                                      | Adequate                    | Needs Improvement           |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
-| student report | includes paragraphs on how the site is inadequate, the Lighthouse report captured as a pdf, a list of ten points to improve, with details on how to improve it | missing 20% of the required | missing 50% of the required |
+| Critérios | Exemplar | Adequado | Precisa Melhorar |
+| -------------- | -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------- | --------------------------- | --------------------------- |
+| relatório | inclui parágrafos sobre como o site é inadequado, o relatório Lighthouse capturado em pdf, uma lista de dez pontos a melhorar, com detalhes sobre como melhorá-lo | faltando 20% do exigido | faltando 50% do exigido |
