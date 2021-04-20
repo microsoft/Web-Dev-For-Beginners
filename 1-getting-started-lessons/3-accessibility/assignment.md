@@ -1,13 +1,13 @@
-# Analise um site não acessível
+# Analyze an inaccessible site
 
-## Instruções
+## Instructions
 
-Identifique um site que você acredita que NÃO está acessível e crie um plano de ação para melhorar sua acessibilidade. 
-Sua primeira tarefa seria identificar este site, detalhar as maneiras pelas quais você acha que ele é inacessível sem o uso de ferramentas analíticas e, em seguida, submetê-lo a uma análise Lighthouse. P
-egue os resultados desta análise e esboce um plano detalhado com um mínimo de dez pontos mostrando como o site poderia ser melhorado.
+Identify a website that you believe is NOT accessible and create an action plan to improve its accessibility.
+Your first task would be to identify this site, detail the ways in which you think it is inaccessible without using analytical tools, and then submit it to a Lighthouse analysis. P
+egue the results of this analysis and outline a detailed plan with a minimum of ten points showing how the site could be improved.
 
-## Rubrica
+## Heading
 
-| Critérios | Exemplar | Adequado | Precisa Melhorar |
+| Criteria | Exemplary | Adequate | Need to Improve |
 | -------------- | -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------- | --------------------------- | --------------------------- |
-| relatório | inclui parágrafos sobre como o site é inadequado, o relatório Lighthouse capturado em pdf, uma lista de dez pontos a melhorar, com detalhes sobre como melhorá-lo | faltando 20% do exigido | faltando 50% do exigido |
+| Student report | includes paragraphs on how inappropriate the site is, the Lighthouse report captured in pdf, a list of ten points to improve, with details on how to improve it | missing 20% ​​of what is required | missing 50% of what is required |
