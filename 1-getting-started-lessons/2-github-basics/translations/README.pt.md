@@ -180,84 +180,84 @@ Todos esses recursos irão beneficiar a integração de novos membros da equipe.
 
 ✅ Arquivos README, embora levem tempo para serem preparados, são freqüentemente negligenciados por pessoas mantenedores ocupadas. Você pode encontrar um exemplo particularmente descritivo? Nota: existem algumas [ferramentas para ajudar a criar bons READMEs](https://www.makeareadme.com/) que você pode querer experimentar.
 
-### Task: Merge some code
+### Tarefa: Dar merge em algum código
 
-Contributing docs help people contribute to the project. It explains what types of contributions you're looking for and how the process works. Contributors will need to go through a series of steps to be able to contribute to your repo on GitHub:
+Documentos contribuintes ajudam as pessoas a contribuir para o projeto. Ele explica quais tipos de contribuições você está procurando e como funciona o processo. As pessoas colaboradoras precisarão seguir uma série de etapas para poder contribuir com seu repo no GitHub:
 
 
-1. **Forking your repo** You will probably want people to _fork_ your project. Forking means creating a replica of your repository on their GitHub profile.
-1. **Clone**. From there they will clone the project to their local machine. 
-1. **Create a branch**. You will want to ask them to create a _branch_ for their work. 
-1. **Focus their change on one area**. Ask contributors to concentrate their contributions on one thing at a time - that way the chances that you can _merge_ in their work is higher. Imagine they write a bug fix, add a new feature, and update several tests - what if you want to, or can only implement 2 out of 3, or 1 out of 3 changes?
+ 1. **Bifurcando seu repo** Você provavelmente vai querer que as pessoas _fork_ seu projeto. Bifurcação significa criar uma réplica de seu repositório em seu perfil GitHub.
+1. **Clone**. A partir daí, elas clonarão o projeto em sua máquina local.
+1. **Crie um branch**. Você vai querer pedir a elas que criem um _branch_ para seu trabalho.
+1. **Concentre sua mudança em uma área**. Peça aos colaboradores para concentrarem suas contribuições em uma coisa de cada vez - dessa forma, as chances de você se _mergir_ no trabalho delas são maiores. Imagine que elas escrevam uma correção de bug, adicionem um novo recurso e atualizem vários testes - e se você quiser ou só puder implementar 2 de 3, ou 1 de 3 alterações?
 
-✅ Imagine a situation where branches are particularly critical to writing and shipping good code. What use cases can you think of?
+✅ Imagine uma situação em que os branches são particularmente críticos para escrever e distribuir bons códigos. Em quais casos de uso você consegue pensar?
 
-> Note, be the change you want to see in the world, and create branches for your own work as well. Any commits you make will be made on the branch you’re currently “checked out” to. Use `git status` to see which branch that is.
+> Nota, seja a mudança que você deseja ver no mundo e crie ramificações para o seu próprio trabalho também. Todos os commits que você fizer serão feitos no branch em que você está atualmente “check-out”. Use `git status` para ver qual branch é.
 
-Let's go through a contributor workflow. Assume the contributor has already _forked_ and _cloned_ the repo so they have a Git repo ready to be worked on, on their local machine:
+Vamos analisar o fluxo de trabalho de uma pessoa colaboradora. Suponha que ela já _forked_ e _cloned_ o repo para que ela tenha um repositório Git pronto para ser trabalhado, em sua máquina local:
 
-1. **Create a branch**. Use the command `git branch` to create a branch that will contain the changes they mean to contribute:
+1. **Crie um brancj**. Use o comando `git branch` para criar um branch que conterá as mudanças que pretendem contribuir:
 
    ```bash
    git branch [branch-name]
    ```
 
-1. **Switch to working branch**. Switch to the specified branch and update the working directory with `git checkout`:
+1. **Mudar para o branch de trabalho**. Mude para o branch especificado e atualize o diretório de trabalho com `git checkout`:
 
    ```bash
    git checkout [branch-name]
    ```
 
-1. **Do work**. At this point you want to add your changes. Don't forget to tell Git about it with the following commands:
+1. **Trabalhe**. Neste ponto, você deseja adicionar suas alterações. Não se esqueça de contar ao Git sobre isso com os seguintes comandos:
 
    ```bash
    git add .
-   git commit -m "my changes"
+   git commit -m "minhas mudancas"
    ```
 
-   Ensure you give your commit a good name, for your sake as well as the maintainer of the repo you are helping on.
+   Certifique-se de dar ao seu commit um bom nome, para seu bem e também para os mantenedores do repo no qual você está ajudando.
 
-1. **Combine your work with the `main` branch**. At some point you are done working and you want to combine your work with that of the `main` branch. The `main` branch might have changed meanwhile so make sure you first update it to the latest with the following commands:
+1. **Combine seu trabalho com o branch `main`**. Em algum ponto, você concluiu o trabalho e deseja combinar seu trabalho com o do branch `principal`. O branch `main` pode ter mudado enquanto isso, certifique-se de primeiro atualizá-lo para o mais recente com os seguintes comandos:
 
    ```bash
    git checkout main
    git pull
    ```
 
-   At this point you want to make sure that any _conflicts_, situations where Git can't easily _combine_ the changes happens in your working branch. Therefore run the following commands:
+   Neste ponto, você quer ter certeza de que quaisquer _conflitos_, situações em que o Git não pode _combinar_ facilmente as mudanças aconteçam em seu branch de trabalho. Portanto, execute os seguintes comandos:
 
    ```bash
    git checkout [branch_name]
    git merge main
    ```
 
-   This will bring in all changes from `main` into your branch and hopefully you can just continue. If not, VS Code will tell you where Git is _confused_ and you just alter the affected files to say which content is the most accurate.
+   Isso trará todas as mudanças de `main` em seu branch e esperançosamente você pode simplesmente continuar. Caso contrário, o VS Code dirá onde o Git está _confundido_ e você apenas alterará os arquivos afetados para dizer qual conteúdo é o mais preciso.
 
-1. **Send your work to GitHub**. Sending your work to GitHub means two things. Pushing your branch to your repo and then open up a PR, Pull Request.
+1. **Envie seu trabalho para o GitHub**. Enviar seu trabalho para o GitHub significa duas coisas. Enviando seu branch para o repo e, em seguida, abra um PR, Pull Request.
 
    ```bash
    git push --set-upstream origin [branch-name]
    ```
 
-   The above command creates the branch on your forked repo.
+    O comando acima cria o branch em seu repositório bifurcado.
 
-1. **Open a PR**. Next, you want to open up a PR. You do that by navigating to the forked repo on GitHub. You will see an indication on GitHub where it asks whether you want to create a new PR, you click that and you are taken to an interface where you can change commit message title, give it a more suitable description. Now the maintainer of the repo you forked will see this PR and _fingers crossed_ they will appreciate and _merge_ your PR. You are now a contributor, yay :)
+1. **Abra um PR**. Em seguida, você deseja abrir um PR. Você faz isso navegando até o repositório bifurcado no GitHub. Você verá uma indicação no GitHub onde pergunta se você deseja criar um novo PR, você clica nele e é levado a uma interface onde pode alterar o título da mensagem de commit, dê-lhe uma descrição mais adequada. Agora, a mantenedora do repo que você bifurcou verá este PR e _dedos cruzados_, eles apreciarão e _mergirão_ seu PR. Agora você é uma pessoa contribuidora, eba :)
 
-1. **Clean up**. It's considered good practice to _clean up_ after you successfully merge a PR. You want to clean up both your local branch and the branch you pushed to GitHub. First let's delete it locally with the following command: 
+1. **Limpeza**. É considerado uma boa prática _limpar_ após mesclar com sucesso um PR. Você deseja limpar seu branch local e o branch que você enviou para o GitHub. Primeiro, vamos excluí-lo localmente com o seguinte comando:
 
    ```bash
    git branch -d [branch-name]
    ```
 
-   Ensure you go the GitHub page for the forked repo next and remove the remote branch you just pushed to it.
+   Em seguida, vá para a página GitHub do repositório bifurcado e remova o branch remoto que você acabou de enviar para ele.
 
-`Pull request` seems like a silly term because really you want to push your changes to the project. But the maintainer (project owner) or core team needs to consider your changes before merging it with the project's "main" branch, so you're really requesting a change decision from a maintainer.  
+`Pull request` parece um termo bobo porque na verdade você deseja enviar suas alterações para o projeto. Mas a pessoa mantendo o repo ou equipe central precisa considerar suas mudanças antes de fundi-las com o branch "principal" do projeto, então você está realmente solicitando uma decisão de mudança de uma pessoa mantenedora. 
 
-A pull request is the place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more. A good pull request follows roughly the same rules as a commit message. You can add a reference to an issue in the issue tracker, when your work for instance fixes an issue. This is done using a `#` followed by the number of your issue. For example `#97`.
+Uma PR é o lugar para comparar e discutir as diferenças introduzidas em um branch com revisões, comentários, testes integrados e muito mais. Uma boa PR segue aproximadamente as mesmas regras de uma mensagem de commit. Você pode adicionar uma referência a um problema no rastreador de problemas, quando seu trabalho, por exemplo, corrige um problema. Isso é feito usando um `#` seguido pelo número do seu problema. Por exemplo `# 97`.
 
-🤞Fingers crossed that all checks pass and the project owner(s) merge your changes into the project🤞
+🤞 Dedos cruzados para que todas as verificações sejam aprovadas e as pessoas proprietárias do projeto deem merge nas suas alterações no projeto🤞
 
-Update your current local working branch with all new commits from the corresponding remote branch on GitHub:
+Atualize seu branch de trabalho local atual com todos os novos commits do branch remoto correspondente no GitHub:
 
 `git pull`
 
