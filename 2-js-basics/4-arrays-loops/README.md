@@ -8,9 +8,17 @@
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
 
-[![Arrays and Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
+## Related Videos
 
-> Click the image above for a video about arrays and loops.
+[![Arrays](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Arrays")
+> Click the image above for a video about arrays.
+
+[![Populating Arrays](https://img.youtube.com/vi/ZARmjyg7Lik/0.jpg)](https://youtube.com/watch?v=ZARmjyg7Lik "Populating Arrays")
+> Click the image above for a video about populating arrays.
+
+[![Loops](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loops")
+> Click the image above for a video about loops.
+
 ## Arrays
 
 Working with data is a common task for any language, and it's a much easier task when data is organized in a structural format, such as arrays. With arrays, data is stored in a structure similar to a list. One major benefit of arrays is that you can store different types of data in one array.
