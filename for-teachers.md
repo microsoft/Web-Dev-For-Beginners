@@ -8,6 +8,10 @@ To do that, fork this repo. You are going to need to create a repo for each less
 
 These [full instructions](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) will give you an idea how to set up your classroom.
 
+## Using it in Moodle, Canvas or Blackboard
+
+This curriculum works well in these Learning Management Systems! Use the [Moodle upload file](/teaching-files/webdev-moodle.mbz) for the full content, or try the [Common Cartridge file](/teaching-files/webdev-common-cartridge.imscc) which contains some of the content. Moodle Cloud does not support full Common Cartridge exports, so it is preferable to use the Moodle download file which can be uploaded into Canvas. Please let us know how we can improve this experience.
+
 ## Using the repo as is
 
 If you would like to use this repo as it currently stands, without using GitHub Classroom, that can be done as well. You would need to communicate with your students which lesson to work through together.
