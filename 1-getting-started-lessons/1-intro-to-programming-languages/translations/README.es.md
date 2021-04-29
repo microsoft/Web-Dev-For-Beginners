@@ -3,9 +3,9 @@
 Esta lección cubre los conceptos básicos de los lenguajes de programación. Los temas que aprenderemos aquí se aplican a la mayoría de los lenguajes de programación modernos en la actualidad. En la sección 'Herramientas del oficio', aprenderás sobre software y herramientas que te ayudarán como desarrollador.
 
 ![Intro Programming](/sketchnotes/webdev101-programming.png)
-> Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
+> Dibujo por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)
+## [Cuestionario](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)
 ### Introducción
 
 En esta lección, cubriremos:
@@ -17,7 +17,7 @@ En esta lección, cubriremos:
 
 ## ¿Qué es la programación?
 
-La programación (también conocida como codificación) es el proceso de escribir instrucciones en un dispositivo, como una computadora o un celular. Escribimos estas instrucciones con un lenguaje de programación, que luego es interpretado por el dispositivo. Este conjuntos de instrucciones pueden tener varios nombres, como *programa*, *programa de computadora*, *aplicación (app)* o *ejecutable* son algunos de los nombres mas populares.
+La programación (también conocida como codificación) es el proceso de escribir instrucciones en un dispositivo, como una computadora o un celular. Escribimos estas instrucciones con un lenguaje de programación, que luego es interpretado por el dispositivo. Este conjuntos de instrucciones pueden tener varios nombres, como *programa*, *programa de computadora*, *aplicación (app)* o *ejecutable* son algunos de los mas populares.
 
 
 Un *programa* puede ser cualquier cosa que esté escrita con código; los sitios web, los videojuegos y las aplicaciones de teléfono son programas. Si bien es posible crear un programa sin escribir código, la lógica subyacente se interpreta al dispositivo y esa lógica probablemente se escribió con código. Un programa que está *ejecutándose* o *ejecutando código* está ejecutando una serie de instrucciones. El dispositivo con el que estás leyendo esta lección está ejecutando un programa para imprimirlo en tu pantalla.
@@ -26,13 +26,13 @@ Un *programa* puede ser cualquier cosa que esté escrita con código; los sitios
 
 ## Lenguajes de programación
 
-Los lenguajes de programación tienen un propósito principal: que los desarrolladores creen instrucciones para enviarlas a un dispositivo. Los dispositivos solo pueden entender binarios (1 y 0), y para *la mayoría* de los desarrolladores, esa no es una forma muy amigable de comunicarse. Los lenguajes de programación son un vehículo para la comunicación entre los humanos y las computadoras.
+Los lenguajes de programación tienen un propósito principal: que los desarrolladores creen instrucciones para enviarlas a un dispositivo. Los dispositivos solo pueden entender codigo binario (1 y 0), y para *la mayoría* de los desarrolladores, esa no es una forma muy amigable de comunicarse. Los lenguajes de programación son un vehículo para la comunicación entre los humanos y las computadoras.
 
 Los lenguajes de programación vienen en diferentes formatos y tienen diferentes propósitos. Por ejemplo, JavaScript se usa principalmente para aplicaciones web, mientras que Bash se usa principalmente para sistemas operativos.
 
-*Los idiomas de bajo nivel* normalmente requieren menos pasos que los *idiomas de alto nivel* para que un dispositivo interprete las instrucciones. Sin embargo, lo que hace que los lenguajes de alto nivel sean populares es su legibilidad y soporte. JavaScript se considera un lenguaje de alto nivel.
+*Los idiomas de bajo nivel* normalmente requieren menos pasos que los *idiomas de alto nivel* para que un dispositivo interprete las instrucciones. Sin embargo, lo que hace que los lenguajes de alto nivel sean populares es su legibilidad y soporte. JavaScript es considerado un lenguaje de alto nivel.
 
-El siguiente código ilustra la diferencia entre un lenguaje de alto nivel con JavaScript y un lenguaje de bajo nivel con código Assembly (ensamblador) ARM.
+El siguiente código ilustra la diferencia entre un lenguaje de alto nivel con JavaScript y un lenguaje de bajo nivel con código Assembly ARM.
 
 ```javascript
 let number = 10
@@ -77,7 +77,7 @@ Lo creas o no, *ambos hacen lo mismo*: imprimir una secuencia de Fibonacci hasta
 
 ## Elementos de un programa
 
-Una sola instrucción en un programa se llama *instrucción* y generalmente tendrá un carácter o un espacio entre líneas que marca dónde termina esta instrucción, o *termina*. La forma en que termina un programa varía con cada idioma.
+Una sola instrucción en un programa se llama *instrucción* y generalmente tendrá un carácter o un espacio entre líneas que marca dónde termina esta. La forma en que termina un programa varía con cada idioma.
 
 La mayoría de los programas se basan en el uso de datos de un usuario o de otros lugares, donde las declaraciones pueden basarse en datos para llevar a cabo instrucciones. Los datos pueden cambiar la forma en que se comporta un programa, por lo que los lenguajes de programación vienen con una forma de almacenar temporalmente datos que se pueden usar más adelante. Estos datos se denominan *variables*. Las variables son declaraciones que indican a un dispositivo que guarde datos en su memoria. Las variables en los programas son similares a las del álgebra, donde tienen un nombre único y su valor puede cambiar con el tiempo.
 
@@ -99,7 +99,7 @@ Una de las herramientas más importantes para el desarrollo de software es el ed
 
 Los desarrolladores confían en los editores por algunas razones adicionales:
 
-- *Depuración* - Descubrimiento de errores y errores al recorrer el código, línea por línea. Algunos editores tienen capacidades de depuración o se pueden personalizar y agregar para lenguajes de programación específicos.
+- *Depuración* - Descubrimiento de errores al recorrer el código, línea por línea. Algunos editores tienen capacidades de depuración o se pueden personalizar y agregar para lenguajes de programación específicos.
 - *Resaltado de sintaxis* - Agrega colores y formato de texto al código, lo hace más fácil de leer. La mayoría de los editores permiten el resaltado de sintaxis personalizado.
 - *Extensiones e integraciones del navegador*  -  Adiciones especializadas para desarrolladores, por desarrolladores, para acceder a herramientas adicionales que no están integradas en el editor base. Por ejemplo, muchos desarrolladores también necesitan una forma de documentar su código y explicar cómo funciona, e instalarán una extensión de revisión ortográfica para verificar si hay errores. La mayoría de estas adiciones están diseñadas para usarse dentro de un editor específico, y la mayoría de los editores vienen con una forma de buscar extensiones disponibles.
 - *Personalización*  - La mayoría de los editores son extremadamente personalizables, y cada desarrollador tendrá su propio entorno de desarrollo único que se adapta a sus necesidades. Muchos también permiten a los desarrolladores crear su propia extensión.
@@ -122,7 +122,7 @@ Los desarrolladores confían en los editores por algunas razones adicionales:
 
 Otra herramienta esencial es el navegador. Los desarrolladores Web confían en el navegador para observar cómo se ejecuta su código. También se usa para ver elementos visuales de una página web que están escritos en el editor, como HTML.
 
-Muchos navegadores vienen con *herramientas para desarrolladores* (DevTools) que contienen un conjunto de características e información útiles para ayudar a los desarrolladores a recopilar y capturar información importante sobre su aplicación. Por ejemplo: si una página web tiene errores, a veces es útil saber cuándo ocurrieron. Se puede configurar DevTools en un navegador para capturar esta información.
+Muchos navegadores vienen con *herramientas para desarrolladores* (DevTools) que contienen un conjunto de características e información útil para ayudar a los desarrolladores a recopilar y capturar información importante sobre su aplicación. Por ejemplo: si una página web tiene errores, a veces es útil saber cuándo ocurrieron. Se puede configurar DevTools en un navegador para capturar esta información.
 
 #### Navegadores y herramientas de desarrollo populares
 
@@ -132,9 +132,7 @@ Muchos navegadores vienen con *herramientas para desarrolladores* (DevTools) que
 
 ### Herramientas de línea de comandos (CLI)
 
-[comment]: # (El desarrollo de código requiere una gran cantidad de escritura, LEER)
-
-Algunos desarrolladores prefieren una vista menos gráfica para sus tareas diarias y confían en la línea de comandos **(CLI)** para lograrlo. El desarrollo de código requiere una gran cantidad de escritura, y algunos desarrolladores prefieren no interrumpir su flujo en el teclado y usarán atajos (shortcut) de teclado para cambiar entre ventanas de escritorio, trabajar en diferentes archivos y usar herramientas. La mayoría de las tareas se pueden completar con un mouse, pero una de las ventajas de utilizar la línea de comandos es que se pueden hacer muchas cosas con las herramientas de la línea de comandos, sin necesidad de cambiar entre el mouse y el teclado. Otro beneficio de la línea de comandos es que son configurables y puedes guardar tu configuración personalizada, cambiarla más tarde y también importarla a nuevas máquinas de desarrollo. Debido a que los entornos de desarrollo son tan exclusivos para cada desarrollador, algunos evitarán usar la línea de comandos, algunos dependerán de ella por completo y algunos prefieren una combinación de ambos.
+Algunos desarrolladores prefieren una vista menos gráfica para sus tareas diarias y confían en la línea de comandos **(CLI)** para lograrlo. El desarrollo de código requiere una gran cantidad de escritura, y algunos desarrolladores prefieren no interrumpir su flujo de trabajo con el teclado es por eso que usan atajos(shortcuts) para cambiar entre ventanas de escritorio, trabajar en diferentes archivos y usar herramientas. La mayoría de las tareas se pueden completar con un mouse, pero una de las ventajas de utilizar la línea de comandos es que se pueden hacer muchas cosas sin la necesidad de cambiar entre el mouse y el teclado. Otro beneficio de esta es que son configurables, puedes guardar tu configuración personalizada, asi como tambien cambiarla más tarde o importarla a nueva máquina. Debido a que los entornos son tan exclusivos para cada desarrollador, algunos evitarán usar la línea de comandos, algunos dependerán de ella por completo asi como tambien otros pueden preferir una combinación de ambos.
 
 ### Opciones de línea de comandos (CLI) populares
 
@@ -169,7 +167,7 @@ Las opciones para la línea de comando varian según el sistema operativo que ut
 
 ### Documentación
 
-Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recurras a la documentación para aprender a usarla. Los desarrolladores a menudo confían en esta para guiarlos a través de cómo usar ciertas herramientas asi como tambien para entender como funcionan los lenguajes de manera correcta o a profundidad.
+Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recurras a la documentación para aprender a usarla. Los desarrolladores a menudo confían en esta para guiarlos a través de cómo usar ciertas herramientas asi como tambien para entender como funcionan los lenguajes.
 
 #### Documentación popular sobre desarrollo de web
 
@@ -186,6 +184,6 @@ Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos 
 
 ## Revisión y autoestudio
 
-Estudia un poco sobre los diferentes lenguajes disponibles para el programador. Intenta escribir una línea en un idioma y luego vuelve a hacerlo en otros dos. ¿Qué aprendiste?
+Estudia un poco sobre los diferentes lenguajes disponibles para programar. Intenta escribir una línea en un lenguaje y luego vuelve a hacerlo en otros dos. ¿Qué aprendiste?
 
 **Tarea**: [Tarea](../assignment.md)
