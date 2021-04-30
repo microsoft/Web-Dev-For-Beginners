@@ -210,4 +210,4 @@ Estude um pouco sobre as diferentes linguagens de programação à disposição.
 
 ## Lição de casa
 
-[Lendo Documentação](assignment.md)
+[Lendo Documentação](assignment.pt.md)

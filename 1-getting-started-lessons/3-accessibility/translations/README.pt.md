@@ -223,6 +223,6 @@ Muitos governos têm leis relacionadas aos requisitos de acessibilidade. Leia so
 
 ## Lição de casa
  
-[Analise um site não acessível](assignment.md)
+[Analise um site não acessível](assignment.pt.md)
 
 Créditos: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) por Instrument
