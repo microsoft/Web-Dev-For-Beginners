@@ -2,10 +2,10 @@
 
 Each lesson includes a translation of the README.md and the Assignment.md file, if available. Only mark the lesson complete if both those files are translated per lesson, please.
 
-- [ ] 1
-- [ ] 1-1
-- [ ] 1-2
-- [ ] 1-3
+- [ x ] 1
+- [ x ] 1-1
+- [ x ] 1-2
+- [ x ] 1-3
 - [ ] 2
 - [ ] 2
 - [ ] 2-1
