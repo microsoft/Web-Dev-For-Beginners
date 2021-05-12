@@ -135,7 +135,7 @@ function updateRoute(templateId) {
 
 What we do here is exactly the 3 steps described above. We instantiate the template with the id `templateId`, and put its cloned content within our app placeholder. Note that we need to use `cloneNode(true)` to copy the entire subtree of the template.
 
-Now call this function with one of the template and look at the result.
+Now call this function with one of the templates and look at the result.
 
 ```js
 updateRoute('login');
@@ -189,7 +189,7 @@ function updateRoute() {
 }
 ```
 
-Here we mapped the routes we declared to the corresponding template. You can try it that it works correctly by changing the URL manually in your browser.
+Here we mapped the routes we declared to the corresponding template. You can check that it works correctly by changing the URL manually in your browser.
 
 ✅ What happens if you enter an unknown path in the URL? How could we solve this?
 
@@ -266,7 +266,7 @@ Using the `history.pushState` creates new entries in the browser's navigation hi
 
 If you try clicking on the back button a few times, you'll see that the current URL changes and the history is updated, but the same template keeps being displayed.
 
-That's because don't know that we need to call `updateRoute()` every time the history changes. If you take a look at the [`history.pushState` documentation](https://developer.mozilla.org/docs/Web/API/History/pushState), you can see that if the state changes - meaning that we moved to a different URL - the [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) event is triggered. We'll use that to fix that issue.
+That's because the browser doesn't know that we need to call `updateRoute()` every time the history changes. If you take a look at the [`history.pushState` documentation](https://developer.mozilla.org/docs/Web/API/History/pushState), you can see that if the state changes - meaning that we moved to a different URL - the [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) event is triggered. We'll use that to fix that issue.
 
 ### Task
 
