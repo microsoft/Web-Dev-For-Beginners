@@ -17,6 +17,8 @@ In this lesson, we'll cover:
 - Basic elements of a program
 - Useful software and tooling for the professional developer
 
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming?WT.mc_id=academic-13441-cxa)!
+
 ## What is Programming?
 
 Programming (also known as coding) is the process of writing instructions to a device, such as a computer or mobile device. We write these instructions with a programming language, which is then interpreted by the device. These sets of instructions may be referred to by various names, but *program*, *computer program*, *application (app)*, and *executable* are a few popular names.
