@@ -11,6 +11,7 @@ import es from './es.json';
 import nl from './nl.json';
 import zh_cn from './zh_cn.json';
 import zh_tw from './zh_tw.json';
+import sw from './sw.json';
 
 
 //export const defaultLocale = 'en';
@@ -28,6 +29,7 @@ const messages = {
 	nl: nl[0],
 	zh_cn: zh_cn[0],
   zh_tw: zh_tw[0],
+	sw: sw[0],
 
 };
 
