@@ -1,6 +1,6 @@
 # Criando  Webpages Acessíveis
 
-![Tudo sobre acessibilidade](webdev101-a11y.png)
+![Tudo sobre acessibilidade](/sketchnotes/webdev101-a11y.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula 
