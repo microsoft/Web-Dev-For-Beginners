@@ -2,7 +2,7 @@
 
 Esta lição cobre os fundamentos do GitHub, uma plataforma para hospedar e gerenciar alterações em seu código.
 
-![Intro ao Github](images/webdev101-github.png)
+![Intro ao Github](/sketchnotes/webdev101-github.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula
