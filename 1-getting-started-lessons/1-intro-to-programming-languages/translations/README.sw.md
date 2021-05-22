@@ -89,7 +89,7 @@ Katika sehemu hii, utajifunza juu ya programu ambayo unaweza kupata muhimu sana 
 **Mazingira ya maendeleo** ni seti ya kipekee ya vifaa na huduma ambazo msanidi programu hutumia mara nyingi wakati wa kuandika programu. Baadhi ya zana hizi zimebadilishwa kwa mahitaji maalum ya msanidi programu na zinaweza kubadilika kwa muda ikiwa msanidi programu atabadilisha vipaumbele katika biashara zao au miradi ya kibinafsi, 
 au wanapotumia lugha tofauti ya programu. Mazingira ya maendeleo ni ya kipekee kama watengenezaji wanaotumia.
 
-# # # wahariri
+### Wahariri
 
 Mhariri ni moja wapo ya zana muhimu zaidi katika ukuzaji wa programu. Wahariri ni mahali unapoandika nambari yako na wakati mwingine utasimamia nambari yako.
 
