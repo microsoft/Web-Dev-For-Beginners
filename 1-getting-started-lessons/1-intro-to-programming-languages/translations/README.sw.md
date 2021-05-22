@@ -130,7 +130,7 @@ kwamba inaweza kusanidiwa na unaweza kuhifadhi usanidi wako wa kawaida, kurekebi
 mazingira ya maendeleo ni ya kipekee kwa kila msanidi programu, wengine wataepuka kutumia laini ya amri, wengine wataitegemea kabisa, na wengine wanapendelea 
 mchanganyiko wa hizo mbili.
 
-Chaguzi maarufu za laini ya amri
+Chaguzi maarufu za laini ya amri.
 
 Chaguzi za mstari wa amri zinatofautiana kulingana na mfumo wa uendeshaji unaotumia.
 
