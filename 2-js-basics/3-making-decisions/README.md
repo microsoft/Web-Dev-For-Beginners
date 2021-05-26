@@ -72,7 +72,7 @@ if (currentMoney >= laptopPrice){
     console.log("Getting a new laptop!");
 }
 else{
-    //Condition was true. Code in this block will run.
+    //Condition was false. Code in this block will run.
     console.log("Can't afford a new laptop, yet!");
 }
 ```
