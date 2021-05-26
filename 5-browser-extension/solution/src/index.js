@@ -1,37 +1,37 @@
-import axios from './node_modules/axios';
+const axios = require('./node_modules/axios');
 
 // form fields
-const form = document.querySelector('.form-data');
-const region = document.querySelector('.region-name');
-const apiKey = document.querySelector('.api-key');
+const form = document.querySelector('.form-data'),
+      region = document.querySelector('.region-name'),
+      apiKey = document.querySelector('.api-key');
 
 // results
-const errors = document.querySelector('.errors');
-const loading = document.querySelector('.loading');
-const results = document.querySelector('.result-container');
-const usage = document.querySelector('.carbon-usage');
-const fossilfuel = document.querySelector('.fossil-fuel');
-const myregion = document.querySelector('.my-region');
-const clearBtn = document.querySelector('.clear-btn');
+const errors = document.querySelector('.errors'),
+      loading = document.querySelector('.loading'),
+      results = document.querySelector('.result-container'),
+      usage = document.querySelector('.carbon-usage'),
+      fossilfuel = document.querySelector('.fossil-fuel'),
+      myregion = document.querySelector('.my-region'),
+      clearBtn = document.querySelector('.clear-btn');
 
 calculateColor = async (value) => {
-	let co2Scale = [0, 150, 600, 750, 800];
-	let colors = ['#2AA364', '#F5EB4D', '#9E4229', '#381D02', '#381D02'];
+	const co2Scale = [0, 150, 600, 750, 800];
+	const colors = ['#2AA364', '#F5EB4D', '#9E4229', '#381D02', '#381D02'];
 
-	let closestNum = co2Scale.sort((a, b) => {
+	const closestNum = co2Scale.sort((a, b) => {
 		return Math.abs(a - value) - Math.abs(b - value);
 	})[0];
-	//console.log(value + ' is closest to ' + closestNum);
-	let num = (element) => element > closestNum;
-	let scaleIndex = co2Scale.findIndex(num);
+	// console.log(value + ' is closest to ' + closestNum);
+	const num = (element) => element > closestNum;
+	const scaleIndex = co2Scale.findIndex(num);
 
-	let closestColor = colors[scaleIndex];
-	//console.log(scaleIndex, closestColor);
+	const closestColor = colors[scaleIndex];
+	// console.log(scaleIndex, closestColor);
 
 	chrome.runtime.sendMessage({ action: 'updateIcon', value: { color: closestColor } });
 };
 
-const displayCarbonUsage = async (apiKey, region) => {
+async function displayCarbonUsage (apiKey, region) {
 	try {
 		await axios
 			.get('https://api.co2signal.com/v1/latest', {
@@ -39,14 +39,13 @@ const displayCarbonUsage = async (apiKey, region) => {
 					countryCode: region,
 				},
 				headers: {
-					//please get your own token from CO2Signal https://www.co2signal.com/
+					// Please get your own token from CO2Signal - https://www.co2signal.com/
 					'auth-token': apiKey,
 				},
 			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+			.then(response => {
 
-				calculateColor(CO2);
+				calculateColor(Math.floor(response.data.data.carbonIntensity));
 
 				loading.style.display = 'none';
 				form.style.display = 'none';
@@ -59,7 +58,7 @@ const displayCarbonUsage = async (apiKey, region) => {
 				results.style.display = 'block';
 			});
 	} catch (error) {
-		console.log(error);
+		console.error(error);
 		loading.style.display = 'none';
 		results.style.display = 'none';
 		errors.textContent = 'Sorry, we have no data for the region you have requested.';
@@ -67,45 +66,45 @@ const displayCarbonUsage = async (apiKey, region) => {
 };
 
 // set up api key and region
-const setUpUser = async (apiKey, regionName) => {
+async function setUpUser (apiKey, regionName) {
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	// make initial call
 	displayCarbonUsage(apiKey, regionName);
-};
+} 
 
-// handle form submission
-const handleSubmit = async (e) => {
+// Handle form submission
+async function handleSubmit (e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
-};
+} 
 
-//initial checks
-const init = async () => {
-	//if anything is in localStorage, pick it up
+// Initial checks
+async function init () {
+	// if anything is in localStorage, pick it up
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
+	// set icon to be generic green
 	chrome.runtime.sendMessage({
 		action: 'updateIcon',
 		value: {
-			color: 'green',
-		},
+			color: 'green'
+		}
 	});
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// if we don't have the keys, show the form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-		//if we have saved keys/regions in localStorage, show results when they load
+		// if we have saved keys/regions in localStorage, show results when they load
 		results.style.display = 'none';
 		form.style.display = 'none';
 		displayCarbonUsage(storedApiKey, storedRegion);
@@ -113,15 +112,15 @@ const init = async () => {
 	}
 };
 
-const reset = async (e) => {
+async function reset (e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// clear local storage for region only
 	localStorage.removeItem('regionName');
 	init();
-};
+}
 
-form.addEventListener('submit', (e) => handleSubmit(e));
-clearBtn.addEventListener('click', (e) => reset(e));
+form.addEventListener('submit', handleSubmit);
+clearBtn.addEventListener('click', reset);
 
 //start app
 init();
