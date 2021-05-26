@@ -10,7 +10,7 @@ Katika sehemu ya "Zana za biashara", utagundua programu muhimu ambayo itakusaidi
 [Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)
 
 
-## utangulizi
+## Utangulizi
 Katika somo hili tutashughulikia:
 
 - Programu ni nini?
@@ -100,12 +100,12 @@ Watengenezaji wanategemea wachapishaji kwa sababu chache zaidi:
 - *Viendelezi na ujumuishaji* nyongeza maalum kwa watengenezaji, na watengenezaji, kupata zana za ziada ambazo hazijaunganishwa na mhariri wa msingi. Kwa mfano, watengenezaji wengi pia wanahitaji njia ya kuandika nambari zao na kuelezea jinsi inavyofanya kazi na itaweka kiendelezi cha kukagua tahajia kukagua typos. Zaidi ya nyongeza hizi zimekusudiwa kutumiwa katika mhariri maalum, na wahariri wengi hutoa njia ya kupata viendelezi vinavyopatikana.
 - *Ugeuzaji kukufaa* Wahariri wengi wamebadilika sana, na kila msanidi programu atakuwa na mazingira yao ya kipekee ya maendeleo ambayo yanakidhi mahitaji yao. Wengi pia huruhusu watengenezaji kuunda ugani wao wenyewe.
 
-#### Wahariri na waendelezaji maarufu wa wavuti
+### Wahariri na waendelezaji maarufu wa wavuti
 - [Visual Studio Code](https://code.visualstudio.com/)
   - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
   - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
   - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Atom](https://atom.io/)
+  - [Atom](https://atom.io/)
   - [spell-check](https://atom.io/packages/spell-check)
   - [teletype](https://atom.io/packages/teletype)
   - [atom-beautify](https://atom.io/packages/atom-beautify)
