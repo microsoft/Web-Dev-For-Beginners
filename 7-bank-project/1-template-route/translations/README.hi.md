@@ -245,9 +245,9 @@ function onLinkClick(event) {
 HTML में हमारे *लॉगिन* और *लॉगआउट* लिंक से बाइंडिंग जोड़कर नेविगेशन सिस्टम को पूरा करें।
 
 ```html
-<a href="/dashboard" onclick="onLinkClick()">Login</a>
+<a href="/dashboard" onclick="onLinkClick(event)">Login</a>
 ...
-<a href="/login" onclick="onLinkClick()">Logout</a>
+<a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
 
 [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) विशेषता का उपयोग करके जावास्क्रिप्ट कोड पर `click` ईवेंट को बांधें, यहाँ `navigate()` फ़ंक्शन पर कॉल करें।
