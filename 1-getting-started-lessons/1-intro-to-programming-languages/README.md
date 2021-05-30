@@ -171,8 +171,10 @@ When a developer wants to learn something new, they'll most likely turn to docum
 
 #### Popular Documentation on Web Development
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), from Mozilla, the publishers of the [Firefox](https://www.mozilla.org/firefox/) browser
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), from Google, publishers of [Chrome](https://www.google.com/chrome/)
+- [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
 
 ✅ Do some research: Now that you know the basics of a web developer's environment, compare and contrast it with a web designer's environment.
 
