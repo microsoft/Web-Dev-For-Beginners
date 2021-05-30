@@ -212,7 +212,7 @@ Let's create a new function we can use to navigate in our app:
 
 ```js
 function navigate(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  window.history.pushState({}, path, path);
   updateRoute();
 }
 ```
@@ -266,7 +266,7 @@ Using the `history.pushState` creates new entries in the browser's navigation hi
 
 If you try clicking on the back button a few times, you'll see that the current URL changes and the history is updated, but the same template keeps being displayed.
 
-That's because don't know that we need to call `updateRoute()` every time the history changes. If you take a look at the [`history.pushState` documentation](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState), you can see that if the state changes - meaning that we moved to a different URL - the [`popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) event is triggered. We'll use that to fix that issue.
+That's because the application does not know that we need to call `updateRoute()` every time the history changes. If you take a look at the [`history.pushState` documentation](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState), you can see that if the state changes - meaning that we moved to a different URL - the [`popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) event is triggered. We'll use that to fix that issue.
 
 ### Task
 
