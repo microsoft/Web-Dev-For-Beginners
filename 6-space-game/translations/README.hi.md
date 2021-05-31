@@ -19,11 +19,11 @@
 - सिद्धांतजावास्क्रिप्ट के साथ खेल के निर्माण का परिचय
   - [Introduction to building games with JavaScript](1-introduction/README.md)
 - अभ्यास
-  - [कैनवास पर आरेखण](../2-drawing-to-canvas/README.md)
-  - [स्क्रीन के चारों ओर बढ़ते तत्व](../3-moving-elements-around/README.md)
-  - [टक्कर की पहचान](../4-collision-detection/README.md)
-  - [हिसाब रखना](../5-keeping-score/README.md)
-  - [खेल को समाप्त और पुनः आरंभ करना](../6-end-condition/README.md)
+  - [कैनवास पर आरेखण](../2-drawing-to-canvas/README.hi.md)
+  - [स्क्रीन के चारों ओर बढ़ते तत्व](../3-moving-elements-around/README.hi.md)
+  - [टक्कर की पहचान](../4-collision-detection/README.hi.md)
+  - [हिसाब रखना](../5-keeping-score/README.hi.md)
+  - [खेल को समाप्त और पुनः आरंभ करना](../6-end-condition/README.hi.md)
 
 ## आभार सूची
 

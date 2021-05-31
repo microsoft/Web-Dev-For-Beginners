@@ -8,9 +8,9 @@
 
 ### विषय
 
-1. [ब्राउज़र के बारे में](../1-about-browsers/README.md)
-2. [फॉर्म्स और लोकल स्टोरेज](../2-forms-browsers-local-storage/README.md)
-3. [पृष्ठभूमि के कार्य और प्रदर्शन](../3-background-tasks-and-performance/README.md)
+1. [ब्राउज़र के बारे में](../1-about-browsers/README.hi.md)
+2. [फॉर्म्स और लोकल स्टोरेज](../2-forms-browsers-local-storage/README.hi.md)
+3. [पृष्ठभूमि के कार्य और प्रदर्शन](../3-background-tasks-and-performance/README.hi.md)
 
 ### क्रेडिट
 
