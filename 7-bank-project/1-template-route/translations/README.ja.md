@@ -212,7 +212,7 @@ JavaScript、特に [`history.pushState`](https://developer.mozilla.org/ja/docs/
 
 ```js
 function navigate(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  window.history.pushState({}, path, path);
   updateRoute();
 }
 ```
