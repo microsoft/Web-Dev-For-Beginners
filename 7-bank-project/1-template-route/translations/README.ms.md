@@ -212,7 +212,7 @@ Mari buat fungsi baru yang dapat kita gunakan untuk menavigasi di aplikasi kita:
 
 ```js
 function navigate(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  window.history.pushState({}, path, path);
   updateRoute();
 }
 ```
