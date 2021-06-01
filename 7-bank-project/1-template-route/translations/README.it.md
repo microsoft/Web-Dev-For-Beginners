@@ -212,7 +212,7 @@ Si crea una nuova funzione da utilizzare per navigare nell'app:
 
 ```js
 function navigate(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  window.history.pushState({}, path, path);
   updateRoute();
 }
 ```
