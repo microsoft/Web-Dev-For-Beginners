@@ -169,8 +169,10 @@ back add r0,r1
 
 #### Δημοφιλή documentation για την ανάπτυξη Ιστού(Web Development)
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), από τη Μοζίλα, εκδότες του [Firefox](https://www.mozilla.org/firefox/)
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), από την Google, εκδότες του [Chrome](https://www.google.com/chrome/)
+- [Τα έγγραφα προγραμματιστών της Microsoft](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), Για τον [Microsoft Edge](https://www.microsoft.com/edge)
 
 ✅ Κάντε λίγη έρευνα: Τώρα που γνωρίζετε τα βασικά για το περιβάλλον ενός προγραμματιστή ιστού(Web Developer), συγκρίνετέ το και βρείτε τις διαφορές με το περιβάλλον ενός σχεδιαστή ιστού(Web Designer).
 

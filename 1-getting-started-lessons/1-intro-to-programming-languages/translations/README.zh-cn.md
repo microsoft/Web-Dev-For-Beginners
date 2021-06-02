@@ -169,8 +169,10 @@ back add r0,r1
 
 #### Web 开发常用文档
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), 来自 Mozilla，[Firefox](https://www.mozilla.org/firefox/) 的出版商
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev)，来自 Google，[Chrome](https://www.google.com/chrome/) 的发布者
+- [Microsoft 自己的开发人员文档](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers)，用于 [Microsoft Edge](https://www.microsoft.com/edge)
 
 ✅ 查一查：既然你已经对 Web 开发者的环境有所了解，何不比较一下其与 Web 设计师的环境的差异？
 
