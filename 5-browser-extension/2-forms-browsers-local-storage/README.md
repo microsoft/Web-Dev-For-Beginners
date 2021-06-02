@@ -12,7 +12,7 @@ In this lesson, you'll call an API by submitting your browser extension's form a
 
 ### Set up the elements to manipulate in the extension:
 
-By this time you have built the HTML for the form and results `<div>` for your browser extension. From now on, you'll need to work in the `/src/index.js` file and building your extension bit by bit. Refer to the [previous lesson](../about-browsers/README.md) on getting your project set up and on the build process.
+By this time you have built the HTML for the form and results `<div>` for your browser extension. From now on, you'll need to work in the `/src/index.js` file and building your extension bit by bit. Refer to the [previous lesson](../1-about-browsers/README.md) on getting your project set up and on the build process.
 
 Working in your `index.js` file, start by creating some `const` variables to hold the values associated with various fields:
 
