@@ -10,7 +10,7 @@ En esta lección, llamará a una API enviando el formulario de la extensión de 
 
 ### 1. Configure los elementos para manipular en la extensión:
 
-En este momento, ha creado el HTML para el formulario y los resultados `<div>` para la extensión de su navegador. De ahora en adelante, necesitará trabajar en el archivo `/src/index.js` y construir su extensión poco a poco. Consulte la [lección anterior](../about-browsers/ README.md) sobre cómo configurar su proyecto y el proceso de compilación.
+En este momento, ha creado el HTML para el formulario y los resultados `<div>` para la extensión de su navegador. De ahora en adelante, necesitará trabajar en el archivo `/src/index.js` y construir su extensión poco a poco. Consulte la [lección anterior](../../1-about-browsers/translations/README.es.md) sobre cómo configurar su proyecto y el proceso de compilación.
 
 Trabajando en su archivo `index.js`, comience creando algunas variables `const` para contener los valores asociados con varios campos:
 
