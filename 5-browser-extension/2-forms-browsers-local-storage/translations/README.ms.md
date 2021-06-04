@@ -12,7 +12,7 @@ Dalam pelajaran ini, anda akan memanggil API dengan menyerahkan borang pelanjuta
 
 ### Sediakan elemen untuk dimanipulasi dalam pelanjutan:
 
-Pada masa ini anda telah membina HTML untuk bentuk dan hasilnya `<div>` untuk pelanjutan penyemak imbas anda. Mulai sekarang, anda perlu bekerja dalam fail `/src/index.js` dan membina pelanjutan anda sedikit demi sedikit. Rujuk [pelajaran sebelumnya](../../about-browser/README.md) untuk menyiapkan projek anda dan pada proses pembinaan.
+Pada masa ini anda telah membina HTML untuk bentuk dan hasilnya `<div>` untuk pelanjutan penyemak imbas anda. Mulai sekarang, anda perlu bekerja dalam fail `/src/index.js` dan membina pelanjutan anda sedikit demi sedikit. Rujuk [pelajaran sebelumnya](../../1-about-browsers/translations/README.ms.md) untuk menyiapkan projek anda dan pada proses pembinaan.
 
 Bekerja dalam fail `index.js` anda, mulakan dengan membuat beberapa pemboleh ubah `const` untuk menahan nilai yang berkaitan dengan pelbagai bidang:
 
