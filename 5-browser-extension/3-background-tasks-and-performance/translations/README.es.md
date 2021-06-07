@@ -133,7 +133,7 @@ function drawIcon(value) {
 ```
 En este código, está agregando un oyente para cualquier mensaje que llegue al administrador de tareas de backend. Si se llama 'updateIcon', entonces se ejecuta el siguiente código para dibujar un icono del color adecuado usando la API de Canvas.
 
-✅ Aprenderá más sobre la API Canvas en las [lecciones del juego espacial](../../space-game/drawing-to-canvas/README.md).
+✅ Aprenderá más sobre la API Canvas en las [lecciones del juego espacial](../../../6-space-game/2-drawing-to-canvas/translations/README.es.md).
 
 Ahora, reconstruya su extensión (`npm run build`), actualice y ejecute su extensión, y observe el cambio de color. ¿Es un buen momento para hacer un mandado o lavar los platos? ¡Ahora lo sabes!
 

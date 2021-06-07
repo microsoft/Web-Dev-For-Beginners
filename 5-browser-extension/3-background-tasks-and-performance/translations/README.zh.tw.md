@@ -132,7 +132,7 @@ function drawIcon(value) {
 ```
 在此程式中，你建立了事件監聽者給任何前到背景工作管理者的訊息。若 'updateIcon' 被呼叫，則接下來的程式會被執行，利用 Canvas API 繪製出對應顏色的圖示。
 
-✅ 你會學習更多關於 Canvas API 在往後的[太空遊戲課程](../../6-space-game/2-drawing-to-canvas/translations/README.zh-tw.md)。
+✅ 你會學習更多關於 Canvas API 在往後的[太空遊戲課程](../../../6-space-game/2-drawing-to-canvas/translations/README.zh-tw.md)。
 
 現在，重新建制你的擴充功能(`npm run build`)，刷新並運行你的套件，觀察圖示的顏色變化。現在是時候去跑腿或是洗碗嗎？現在你知道了！
 
