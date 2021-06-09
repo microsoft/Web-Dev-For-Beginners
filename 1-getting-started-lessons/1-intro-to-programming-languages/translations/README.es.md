@@ -156,7 +156,7 @@ Las opciones para la línea de comando varian según el sistema operativo que ut
 #### Linux
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
-- [KDE Konsole](https://docs.kde.org/trunk5/en/applications/konsole/index.html)
+- [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
 - [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
 
 #### Línea de comandos (CLI) Populares
