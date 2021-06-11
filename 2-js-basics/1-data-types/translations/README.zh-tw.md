@@ -111,7 +111,7 @@ const MY_VARIABLE = 123;
 
 `let myVariable = 123;`
 
-變數能儲存所有類型的數字，包含小數點與負數。數字也可以被套用在四則運算上，這被放在[下一個段落](#operators)中。
+變數能儲存所有類型的數字，包含小數點與負數。數字也可以被套用在四則運算上，這被放在[下一個段落](#算術運算子-(Arithmetic-Operators))中。
 
 ### 算術運算子 (Arithmetic Operators)
 
@@ -172,7 +172,7 @@ let myString2 = "World";
 
 ### 布林 (Booleans)
 
-布林有兩種數值：`true` 或 `false`，使用在程式碼做條件決定的時候。在多數情況下，[運算子](#operators)可以套用在布林上，你會在初始化或更新數值時使用。
+布林有兩種數值：`true` 或 `false`，使用在程式碼做條件決定的時候。在多數情況下，[運算子](#算術運算子-(Arithmetic-Operators))可以套用在布林上，你會在初始化或更新數值時使用。
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`

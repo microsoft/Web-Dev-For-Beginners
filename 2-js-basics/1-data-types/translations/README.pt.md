@@ -110,7 +110,7 @@ Na seção anterior, o valor de `myVariable` era um tipo de dado numérico.
 
 `let myVariable = 123;`
 
-As variáveis podem armazenar todos os tipos de números, incluindo decimais ou números negativos. Os números também podem ser usados com operadores aritméticos, abordados na [próxima seção](#operadores).
+As variáveis podem armazenar todos os tipos de números, incluindo decimais ou números negativos. Os números também podem ser usados com operadores aritméticos, abordados na [próxima seção](#Operadores-aritméticos).
 
 ### Operadores aritméticos
 
@@ -170,7 +170,7 @@ Você pode atingir seus objetivos de formatação com qualquer um dos métodos, 
 
 ### Booleanos
 
-Os booleanos podem ter apenas dois valores: `true` ou` false`. Os booleanos podem ajudar a tomar decisões sobre quais linhas de código devem ser executadas quando certas condições são atendidas. Em muitos casos, [operadores](#operadores) auxiliam na configuração do valor de um booleano e você freqüentemente notará e escreverá variáveis sendo inicializadas ou seus valores sendo atualizados com um operador.
+Os booleanos podem ter apenas dois valores: `true` ou` false`. Os booleanos podem ajudar a tomar decisões sobre quais linhas de código devem ser executadas quando certas condições são atendidas. Em muitos casos, [operadores](#Operadores-aritméticos) auxiliam na configuração do valor de um booleano e você freqüentemente notará e escreverá variáveis sendo inicializadas ou seus valores sendo atualizados com um operador.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
