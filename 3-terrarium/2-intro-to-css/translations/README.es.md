@@ -1,6 +1,6 @@
 # Terrarium Project Parte 2: Introducción a CSS
 
-![Introducción a CSS](../images/webdev101-css.png)
+![Introducción a CSS](/sketchnotes/webdev101-css.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/17)
@@ -252,4 +252,4 @@ CSS parece engañosamente sencillo, pero existen muchos desafíos cuando se trat
 
 **Asignación**: [Refactorización CSS](assignment.es.md)
 
-[Diseñe su aplicación HTML con CSS](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
+[Diseñe su aplicación HTML con CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
