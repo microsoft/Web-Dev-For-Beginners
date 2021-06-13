@@ -4,10 +4,10 @@ JavaScript は Web の言語です。この4つのレッスンでは、その基
 
 ### トピック
 
-1. [変数とデータ型](1-data-types/README.md)
-2. [関数とメソッド](2-functions-methods/README.md)
-3. [JavaScript での意思決定](3-making-decisions/README.md)
-4. [配列とループ](4-arrays-loops/README.md)
+1. [変数とデータ型](../1-data-types/translations/README.ja.md)
+2. [関数とメソッド](../2-functions-methods/translations/README.ja.md)
+3. [JavaScript での意思決定](../3-making-decisions/translations/README.ja.md)
+4. [配列とループ](../4-arrays-loops/translations/README.ja.md)
 
 ### Credits
 

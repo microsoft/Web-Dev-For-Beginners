@@ -1,6 +1,6 @@
 # JavaScript の基本: 配列とループ
 
-![JavaScript Basics - Arrays](../images/webdev101-js-arrays.png)
+![JavaScript Basics - Arrays](/sketchnotes/webdev101-js-arrays.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト

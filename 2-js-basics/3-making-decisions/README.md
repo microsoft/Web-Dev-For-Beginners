@@ -1,6 +1,6 @@
 # JavaScript Basics: Making Decisions
 
-![JavaScript Basics - Making decisions](images/webdev101-js-decisions.png)
+![JavaScript Basics - Making decisions](/sketchnotes/webdev101-js-decisions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
@@ -72,7 +72,7 @@ if (currentMoney >= laptopPrice){
     console.log("Getting a new laptop!");
 }
 else{
-    //Condition was true. Code in this block will run.
+    //Condition was false. Code in this block will run.
     console.log("Can't afford a new laptop, yet!");
 }
 ```
@@ -166,7 +166,7 @@ Create a program that is written first with logical operators, and then rewrite 
 
 ## Review & Self Study
 
-Read more about the many operators available to the user [on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
+Read more about the many operators available to the user [on MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
 Go through Josh Comeau's wonderful [operator lookup](https://joshwcomeau.com/operator-lookup/)!
 
