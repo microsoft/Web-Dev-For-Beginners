@@ -2,7 +2,7 @@
 
 Pelajaran ini mencakup dasar-dasar GitHub, platform untuk menghosting dan mengelola perubahan pada kode Anda.
 
-![Dasar-dasar GitHub](images/webdev101-github.png)
+![Dasar-dasar GitHub](/sketchnotes/webdev101-github.png)
 > Catatan sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Pra-Kuliah
