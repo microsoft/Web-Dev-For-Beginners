@@ -41,7 +41,7 @@ Jika anda ingin membuat beberapa layar untuk halaman web, satu penyelesaiannya a
 - Anda harus memuat semula keseluruhan HTML ketika menukar skrin, yang boleh menjadi lambat.
 - Sukar untuk berkongsi data antara skrin yang berbeza.
 
-Pendekatan lain hanya mempunyai satu fail HTML, dan menentukan beberapa [templat HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) menggunakan elemen `<template>`. Templat adalah blok HTML yang dapat digunakan kembali yang tidak ditampilkan oleh penyemak imbas, dan perlu dibuat pada waktu berjalan menggunakan JavaScript.
+Pendekatan lain hanya mempunyai satu fail HTML, dan menentukan beberapa [templat HTML](https://developer.mozilla.org/docs/Web/HTML/Element/template) menggunakan elemen `<template>`. Templat adalah blok HTML yang dapat digunakan kembali yang tidak ditampilkan oleh penyemak imbas, dan perlu dibuat pada waktu berjalan menggunakan JavaScript.
 
 ### Tugas
 
@@ -107,9 +107,9 @@ Sekiranya anda mencuba fail HTML semasa anda dalam penyemak imbas, anda akan mel
 
 Membuat templat biasanya dilakukan dalam 3 langkah:
 
-1. Dapatkan semula elemen templat di DOM, misalnya menggunakan [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById).
-2. Klon elemen templat, menggunakan [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode).
-3. Lampirkan ke DOM di bawah elemen yang kelihatan, misalnya menggunakan [`appendChild`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild).
+1. Dapatkan semula elemen templat di DOM, misalnya menggunakan [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
+2. Klon elemen templat, menggunakan [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
+3. Lampirkan ke DOM di bawah elemen yang kelihatan, misalnya menggunakan [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
 ✅ Mengapa kita perlu mengklon templat sebelum melampirkannya ke DOM? Apa yang anda fikir akan berlaku sekiranya kita melangkau langkah ini?
 
@@ -174,7 +174,7 @@ const routes = {
 };
 ```
 
-Sekarang mari kita ubah sedikit fungsi `updateRoute`. Daripada meneruskan secara langsung `templateId` sebagai argumen, kami ingin mendapatkannya dengan terlebih dahulu melihat URL semasa, dan kemudian menggunakan peta kami untuk mendapatkan nilai ID templat yang sesuai. Kita boleh menggunakan [`window.location.pathname`](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname) untuk mendapatkan hanya bahagian jalan dari URL.
+Sekarang mari kita ubah sedikit fungsi `updateRoute`. Daripada meneruskan secara langsung `templateId` sebagai argumen, kami ingin mendapatkannya dengan terlebih dahulu melihat URL semasa, dan kemudian menggunakan peta kami untuk mendapatkan nilai ID templat yang sesuai. Kita boleh menggunakan [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) untuk mendapatkan hanya bahagian jalan dari URL.
 
 ```js
 function updateRoute() {
@@ -202,9 +202,9 @@ Langkah seterusnya untuk aplikasi kita adalah menambahkan kemungkinan untuk mena
 
 Kami sudah mengurus bahagian kedua dengan fungsi `updateRoute`, jadi kami harus memikirkan cara mengemas kini URL semasa.
 
-Kita mesti menggunakan JavaScript dan lebih khusus lagi [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) yang memungkinkan untuk mengemas kini URL dan buat entri baru dalam sejarah penyemakan imbas, tanpa memuatkan semula HTML.
+Kita mesti menggunakan JavaScript dan lebih khusus lagi [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) yang memungkinkan untuk mengemas kini URL dan buat entri baru dalam sejarah penyemakan imbas, tanpa memuatkan semula HTML.
 
-> Catatan: Walaupun elemen anchor HTML [`<a href>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) dapat digunakan sendiri untuk membuat hyperlink ke URL yang berbeza, ini akan menjadikan penyemak imbas memuat semula HTML secara lalai. Adalah perlu untuk mencegah tingkah laku ini ketika menangani routing dengan javascript khusus, menggunakan fungsi preventDefault () pada peristiwa klik.
+> Catatan: Walaupun elemen anchor HTML [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) dapat digunakan sendiri untuk membuat hyperlink ke URL yang berbeza, ini akan menjadikan penyemak imbas memuat semula HTML secara lalai. Adalah perlu untuk mencegah tingkah laku ini ketika menangani routing dengan javascript khusus, menggunakan fungsi preventDefault () pada peristiwa klik.
 
 ### Tugas
 
@@ -212,7 +212,7 @@ Mari buat fungsi baru yang dapat kita gunakan untuk menavigasi di aplikasi kita:
 
 ```js
 function navigate(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  window.history.pushState({}, path, path);
   updateRoute();
 }
 ```
@@ -247,12 +247,12 @@ function onLinkClick(event) {
 Mari lengkapkan sistem navigasi dengan menambahkan pengikatan pada pautan *Login* dan *Logout* kami dalam HTML.
 
 ```html
-<a href="/dashboard" onclick="onLinkClick()">Login</a>
+<a href="/dashboard" onclick="onLinkClick(event)">Login</a>
 ...
-<a href="/login" onclick="onLinkClick()">Logout</a>
+<a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
 
-Menggunakan atribut [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) mengikat peristiwa`klik` ke kod JavaScript, di sini panggilan ke `navigasi() `fungsi.
+Menggunakan atribut [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) mengikat peristiwa`klik` ke kod JavaScript, di sini panggilan ke `navigasi() `fungsi.
 
 Cuba klik pada pautan-pautan ini, kini anda seharusnya dapat menavigasi antara pelbagai skrin aplikasi anda.
 
@@ -266,7 +266,7 @@ Menggunakan `history.pushState` membuat entri baru dalam sejarah navigasi penyem
 
 Sekiranya anda cuba mengklik butang kembali beberapa kali, anda akan melihat bahawa URL semasa berubah dan sejarahnya dikemas kini, tetapi templat yang sama terus dipaparkan.
 
-Ini kerana tidak tahu bahawa kita perlu memanggil `updateRoute()` setiap kali sejarah berubah. Sekiranya anda melihat dokumentasi [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState), anda dapat melihat bahawa jika keadaan berubah - yang bermaksud bahawa kami berpindah ke URL yang berbeza - peristiwa [`popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) dicetuskan. Kami akan menggunakannya untuk menyelesaikan masalah itu.
+Ini kerana tidak tahu bahawa kita perlu memanggil `updateRoute()` setiap kali sejarah berubah. Sekiranya anda melihat dokumentasi [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), anda dapat melihat bahawa jika keadaan berubah - yang bermaksud bahawa kami berpindah ke URL yang berbeza - peristiwa [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) dicetuskan. Kami akan menggunakannya untuk menyelesaikan masalah itu.
 
 ### Tugas
 
@@ -277,7 +277,7 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Catatan: kami menggunakan [fungsi panah](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) di sini untuk menyatakan pengendali acara `popstate` kami untuk kesimpulan, fungsi biasa akan berfungsi sama.
+> Catatan: kami menggunakan [fungsi panah](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) di sini untuk menyatakan pengendali acara `popstate` kami untuk kesimpulan, fungsi biasa akan berfungsi sama.
 
 Berikut adalah video penyegaran mengenai fungsi anak panah:
 
@@ -299,7 +299,7 @@ Tambahkan templat dan laluan baru untuk halaman ketiga yang menunjukkan kredit u
 
 ## Mengkaji & Belajar Sendiri
 
-Perutean adalah salah satu bahagian pengembangan web yang sangat mengejutkan, terutama ketika web beralih dari tingkah laku penyegaran halaman ke penyegaran halaman Aplikasi Halaman Tunggal. Baca sedikit mengenai [bagaimana perkhidmatan Aplikasi Web Statik Azure](https://docs.microsoft.com/en-us/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa) menangani penghalaan . Bolehkah anda menjelaskan mengapa beberapa keputusan yang dijelaskan pada dokumen itu diperlukan?
+Perutean adalah salah satu bahagian pengembangan web yang sangat mengejutkan, terutama ketika web beralih dari tingkah laku penyegaran halaman ke penyegaran halaman Aplikasi Halaman Tunggal. Baca sedikit mengenai [bagaimana perkhidmatan Aplikasi Web Statik Azure](https://docs.microsoft.com/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa) menangani penghalaan . Bolehkah anda menjelaskan mengapa beberapa keputusan yang dijelaskan pada dokumen itu diperlukan?
 
 ## Tugasan
 

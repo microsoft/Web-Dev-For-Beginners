@@ -27,7 +27,7 @@ curl http://localhost:5000/api
 
 The `<form>` element encapsulates a section of an HTML document where the user can input and submit data with interactive controls. There are all sorts of user interface (UI) controls that can be used within a form, the most common one being the `<input>` and the `<button>` elements.
 
-There are a lot of different [types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) of `<input>`, for example to create a field where the user can enter its username you can use:
+There are a lot of different [types](https://developer.mozilla.org/docs/Web/HTML/Element/input) of `<input>`, for example to create a field where the user can enter its username you can use:
 
 ```html
 <input id="username" name="username" type="text">
@@ -35,9 +35,9 @@ There are a lot of different [types](https://developer.mozilla.org/en-US/docs/We
 
 The `name` attribute will be used as the property name when the form data will be sent over. The `id` attribute is used to associate a `<label>` with the form control.
 
-> Take a look at the whole list of [`<input>` types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and [other form controls](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls) to get an idea of all the native UI elements you can use when building your UI.
+> Take a look at the whole list of [`<input>` types](https://developer.mozilla.org/docs/Web/HTML/Element/input) and [other form controls](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls) to get an idea of all the native UI elements you can use when building your UI.
 
-✅ Note that `<input>` is an [empty element](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) on which you should *not* add a matching closing tag. You can however use the self-closing `<input/>` notation, but it's not required.
+✅ Note that `<input>` is an [empty element](https://developer.mozilla.org/docs/Glossary/Empty_element) on which you should *not* add a matching closing tag. You can however use the self-closing `<input/>` notation, but it's not required.
 
 The `<button>` element within a form is a bit special. If you do not specify its `type` attribute, it will automatically submit the form data to the server when pressed. Here are the possible `type` values:
 
@@ -68,7 +68,7 @@ If you take a closer look, you can notice that we also added a `<label>` element
 - By associating a label to a form control, it helps users using assistive technologies (like a screen reader) to understand what data they're expected to provide.
 - You can click on the label to directly put focus on the associated input, making it easier to reach on touch-screen based devices.
 
-> [Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) on the web is a very important topic that's often overlooked. Thanks to [semantic HTML elements](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) it's not difficult to create accessible content if you use them properly. You can [read more about accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) to avoid common mistakes and become a responsible developer.
+> [Accessibility](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) on the web is a very important topic that's often overlooked. Thanks to [semantic HTML elements](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) it's not difficult to create accessible content if you use them properly. You can [read more about accessibility](https://developer.mozilla.org/docs/Web/Accessibility) to avoid common mistakes and become a responsible developer.
 
 Now we'll add a second form for the registration, just below the previous one:
 
@@ -156,7 +156,7 @@ function register() {
 }
 ```
 
-Here we retrieve the form element using `getElementById()` and use the [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) helper to extract the values from form controls as a set of key/value pairs. Then we convert the data to a regular object using [`Object.fromEntries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) and finally serialize the data to [JSON](https://www.json.org/json-en.html), a format commonly used for exchanging data on the web.
+Here we retrieve the form element using `getElementById()` and use the [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) helper to extract the values from form controls as a set of key/value pairs. Then we convert the data to a regular object using [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) and finally serialize the data to [JSON](https://www.json.org/json-en.html), a format commonly used for exchanging data on the web.
 
 The data is now ready to be sent to the server. Create a new function named `createAccount`:
 
@@ -175,7 +175,7 @@ async function createAccount(account) {
 }
 ```
 
-What's this function doing? First, notice the `async` keyword here. This means that the function contains code that will execute [**asynchronously**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). When used along the `await` keyword, it allows waiting for asynchronous code to execute - like waiting for the server response here - before continuing.
+What's this function doing? First, notice the `async` keyword here. This means that the function contains code that will execute [**asynchronously**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). When used along the `await` keyword, it allows waiting for asynchronous code to execute - like waiting for the server response here - before continuing.
 
 Here's a quick video about `async/await` usage:
 
@@ -219,7 +219,7 @@ async function register() {
 }
 ```
 
-That was a bit long but we got there! If you open your [browser developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), and try registering a new account, you should not see any change on the web page but a message will appear in the console confirming that everything works.
+That was a bit long but we got there! If you open your [browser developer tools](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools), and try registering a new account, you should not see any change on the web page but a message will appear in the console confirming that everything works.
 
 ![Screenshot showing log message in the browser console](./images/browser-console.png)
 
@@ -227,15 +227,15 @@ That was a bit long but we got there! If you open your [browser developer tools]
 
 ## Data validation
 
-If you try to register a new account without setting an username first, you can see that the server returns an error with status code [400 (Bad Request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
+If you try to register a new account without setting an username first, you can see that the server returns an error with status code [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
-Before sending data to a server it's a good practice to [validate the form data](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) beforehand when possible, to make sure you send a valid request. HTML5 forms controls provides built-in validation using various attributes:
+Before sending data to a server it's a good practice to [validate the form data](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) beforehand when possible, to make sure you send a valid request. HTML5 forms controls provides built-in validation using various attributes:
 
 - `required`: the field needs to be filled otherwise the form cannot be submitted.
 - `minlength` and `maxlength`: defines the minimum and maximum number of characters in text fields.
 - `min` and `max`: defines the minimum and maximum value of a numerical field.
-- `type`: defines the kind of data expected, like `number`, `email`, `file` or [other built-in types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input). This attribute may also change the visual rendering of the form control.
-- `pattern`: allows to define a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) pattern to test if the entered data is valid or not.
+- `type`: defines the kind of data expected, like `number`, `email`, `file` or [other built-in types](https://developer.mozilla.org/docs/Web/HTML/Element/input). This attribute may also change the visual rendering of the form control.
+- `pattern`: allows to define a [regular expression](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) pattern to test if the entered data is valid or not.
 
 > Tip: you can customize the look of your form controls depending if they're valid or not using the `:valid` and `:invalid` CSS pseudo-classes.
 
