@@ -10,7 +10,7 @@ En esta lección, llamará a una API enviando el formulario de la extensión de 
 
 ### 1. Configure los elementos para manipular en la extensión:
 
-En este momento, ha creado el HTML para el formulario y los resultados `<div>` para la extensión de su navegador. De ahora en adelante, necesitará trabajar en el archivo `/src/index.js` y construir su extensión poco a poco. Consulte la [lección anterior](../about-browsers/ README.md) sobre cómo configurar su proyecto y el proceso de compilación.
+En este momento, ha creado el HTML para el formulario y los resultados `<div>` para la extensión de su navegador. De ahora en adelante, necesitará trabajar en el archivo `/src/index.js` y construir su extensión poco a poco. Consulte la [lección anterior](../../1-about-browsers/translations/README.es.md) sobre cómo configurar su proyecto y el proceso de compilación.
 
 Trabajando en su archivo `index.js`, comience creando algunas variables `const` para contener los valores asociados con varios campos:
 
@@ -93,7 +93,7 @@ En esta función, hay una lógica interesante. Al leerlo, ¿puedes ver lo que su
   - ocultar el formulario
   - mostrar el botón de reinicio
 
-Antes de continuar, es útil conocer un concepto muy importante disponible en los navegadores: [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). LocalStorage es una forma útil de almacenar cadenas en el navegador como un par "clave-valor". Este tipo de almacenamiento web puede ser manipulado por JavaScript para administrar datos en el navegador. LocalStorage no caduca, mientras que SessionStorage, otro tipo de almacenamiento web, se borra cuando se cierra el navegador. Los distintos tipos de almacenamiento tienen ventajas y desventajas para su uso.
+Antes de continuar, es útil conocer un concepto muy importante disponible en los navegadores: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage es una forma útil de almacenar cadenas en el navegador como un par "clave-valor". Este tipo de almacenamiento web puede ser manipulado por JavaScript para administrar datos en el navegador. LocalStorage no caduca, mientras que SessionStorage, otro tipo de almacenamiento web, se borra cuando se cierra el navegador. Los distintos tipos de almacenamiento tienen ventajas y desventajas para su uso.
 
 > Nota: la extensión de su navegador tiene su propio almacenamiento local; la ventana principal del navegador es una instancia diferente y se comporta por separado.
 
@@ -193,13 +193,13 @@ Esta es una gran función. ¿Que está pasando aqui?
 - una vez que la API responde, asigna varios elementos de sus datos de respuesta a las partes de su pantalla que configura para mostrar estos datos.
 - si hay un error o si no hay ningún resultado, muestra un mensaje de error.
 
-✅ El uso de patrones de programación asíncronos es otra herramienta muy útil en su caja de herramientas. Lea [acerca de las diversas formas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) puede configurar este tipo de código.
+✅ El uso de patrones de programación asíncronos es otra herramienta muy útil en su caja de herramientas. Lea [acerca de las diversas formas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) puede configurar este tipo de código.
 
 ¡Felicidades! Si construye su extensión (`npm run build`) y la actualiza en su panel de extensiones, ¡tiene una extensión que funciona! Lo único que no funciona es el ícono, y lo solucionará en la próxima lección.
 
 ---
 
-🚀 Desafío: hemos discutido varios tipos de API hasta ahora en estas lecciones. Elija una API web e investigue en profundidad lo que ofrece. Por ejemplo, eche un vistazo a las API disponibles en los navegadores, como la [API HTML de arrastrar y soltar](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). En tu opinión, ¿qué hace que una API sea excelente?
+🚀 Desafío: hemos discutido varios tipos de API hasta ahora en estas lecciones. Elija una API web e investigue en profundidad lo que ofrece. Por ejemplo, eche un vistazo a las API disponibles en los navegadores, como la [API HTML de arrastrar y soltar](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). En tu opinión, ¿qué hace que una API sea excelente?
 
 
 ## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/26)
