@@ -1,6 +1,6 @@
 # JavaScript の基本: メソッドと関数
 
-![JavaScript Basics - Functions](../images/webdev101-js-functions.png)
+![JavaScript Basics - Functions](/sketchnotes/webdev101-js-functions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト

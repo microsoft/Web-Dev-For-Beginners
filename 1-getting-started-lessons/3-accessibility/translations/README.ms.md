@@ -1,6 +1,6 @@
 # Membuat Halaman Web yang Boleh Diakses
 
-![Semua Tentang Kebolehcapaian](../webdev101-a11y.png)
+![Semua Tentang Kebolehcapaian](/sketchnotes/webdev101-a11y.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
@@ -24,7 +24,7 @@ Pada asasnya, pembaca skrin akan membaca halaman dari atas ke bawah dengan diden
 
 Setiap pembangun web harus membiasakan diri dengan pembaca skrin. Seperti yang dinyatakan di atas, ini adalah pelanggan yang akan digunakan pengguna anda Sama seperti anda mengetahui bagaimana penyemak imbas beroperasi, anda harus mengetahui cara pembaca skrin beroperasi. Nasib baik pembaca skrin dimasukkan ke dalam kebanyakan sistem operasi, dan banyak penyemak imbas mengandungi sambungan untuk meniru pembaca skrin.
 
-✅ Cuba pelanjutan atau alat penyemak imbas pembaca skrin. Yang hanya berfungsi pada Windows ialah [JAWS](https://webaim.org/articles/jaws/). Penyemak imbas juga mempunyai alat bawaan yang dapat digunakan untuk tujuan ini; cuba [alat penyemak imbas Edge yang berfokus kebolehaksesan ini](https://support.microsoft.com/en-us/help/4000734/microsoft-edge-accessibility-features).
+✅ Cuba pelanjutan atau alat penyemak imbas pembaca skrin. Yang hanya berfungsi pada Windows ialah [JAWS](https://webaim.org/articles/jaws/). Penyemak imbas juga mempunyai alat bawaan yang dapat digunakan untuk tujuan ini; cuba [alat penyemak imbas Edge yang berfokus kebolehaksesan ini](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features).
 
 ### Pemeriksa Kontras
 
@@ -127,7 +127,7 @@ Anda boleh menggunakan `aria-label` untuk menerangkan pautan apabila format hala
 <a href="#" aria-label="Widget description">description</a>
 ```
 
-✅ Secara umum, menggunakan markup Semantik seperti yang dijelaskan di atas menggantikan penggunaan ARIA, tetapi kadang-kadang tidak ada yang setara dengan semantik untuk pelbagai widget HTML. Contoh yang baik ialah Progressbar. Tidak ada setara HTML untuk bar kemajuan, jadi anda mengenal pasti generik `<div>` untuk elemen ini dengan peranan dan nilai aria yang betul. [MDN documentation on ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) mengandungi maklumat yang lebih berguna.
+✅ Secara umum, menggunakan markup Semantik seperti yang dijelaskan di atas menggantikan penggunaan ARIA, tetapi kadang-kadang tidak ada yang setara dengan semantik untuk pelbagai widget HTML. Contoh yang baik ialah Progressbar. Tidak ada setara HTML untuk bar kemajuan, jadi anda mengenal pasti generik `<div>` untuk elemen ini dengan peranan dan nilai aria yang betul. [MDN documentation on ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) mengandungi maklumat yang lebih berguna.
 
 ```html
 <div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">

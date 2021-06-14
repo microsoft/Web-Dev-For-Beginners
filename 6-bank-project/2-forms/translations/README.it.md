@@ -27,7 +27,7 @@ curl http://localhost:5000/api
 
 L'elemento  `<form>` incapsula una sezione di un documento HTML in cui l'utente può inserire e inviare dati con controlli interattivi. Esistono tutti i tipi di controlli dell'interfaccia utente (UI) che possono essere utilizzati all'interno di un form, i più comuni sono gli elementi `<input>` e `<button>`.
 
-Esistono molti [tipi](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) diversi di `<input>`, ad esempio per creare un campo in cui l'utente può inserire il proprio nome utente si può  utilizzare:
+Esistono molti [tipi](https://developer.mozilla.org/docs/Web/HTML/Element/input) diversi di `<input>`, ad esempio per creare un campo in cui l'utente può inserire il proprio nome utente si può  utilizzare:
 
 ```html
 <input id="username" name="username" type="text">
@@ -35,9 +35,9 @@ Esistono molti [tipi](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 
 L'attributo `name` verrà utilizzato come nome della proprietà quando verranno inviati i dati del form. L'attributo `id` viene utilizzato per associare un'etichetta (`<label>`) al relativo controllo nel form.
 
-> Si dia un'occhiata all'intero elenco di  [tipi di `<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) e [altri controlli del form](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls) per avere un'idea di tutti gli elementi nativi dell'interfaccia utente che si possono utilizzare durante la creazione della propria interfaccia utente.
+> Si dia un'occhiata all'intero elenco di  [tipi di `<input>`](https://developer.mozilla.org/docs/Web/HTML/Element/input) e [altri controlli del form](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls) per avere un'idea di tutti gli elementi nativi dell'interfaccia utente che si possono utilizzare durante la creazione della propria interfaccia utente.
 
-✅ Si noti che  `<input>` è un [elemento vuoto](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) su cui *non* si dovrebbe aggiungere un tag di chiusura corrispondente. È comunque possibile utilizzare la notazione a chiusura automatica  `<input/>` , ma non è richiesta.
+✅ Si noti che  `<input>` è un [elemento vuoto](https://developer.mozilla.org/docs/Glossary/Empty_element) su cui *non* si dovrebbe aggiungere un tag di chiusura corrispondente. È comunque possibile utilizzare la notazione a chiusura automatica  `<input/>` , ma non è richiesta.
 
 L'elemento `<button>` all'interno di un form è un po' speciale. Se non si specifica il suo attributo di tipo (`type`) , invierà automaticamente i dati del form al server quando viene premuto. Ecco i possibili valori di `type` :
 
@@ -68,7 +68,7 @@ Se si guarda più attentamente, si può notare che è stato aggiunto anche un el
 - Associaer un'etichetta a un controllo in un form, aiuta gli utenti che utilizzano tecnologie assistite (come unlettore di schremo) a capire quali dati dovrebbero fornire.
 - È possibile fare clic sull'etichetta per portare direttamente il focus sull'input associato, rendendolo più facile da raggiungere su dispositivi basati su touch screen.
 
-> [L'accessibilità](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) sul Web è un argomento molto importante che spesso viene trascurato. Grazie agli [elementi HTML semantici](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) non è difficile creare contenuti accessibili se usati correttamente. Si può [leggere di più sull'accessibilità](https://developer.mozilla.org/en-US/docs/Web/Accessibility) per evitare errori comuni e diventare uno sviluppatore responsabile.
+> [L'accessibilità](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) sul Web è un argomento molto importante che spesso viene trascurato. Grazie agli [elementi HTML semantici](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) non è difficile creare contenuti accessibili se usati correttamente. Si può [leggere di più sull'accessibilità](https://developer.mozilla.org/docs/Web/Accessibility) per evitare errori comuni e diventare uno sviluppatore responsabile.
 
 Ora si aggiungerà un secondo modulo per la registrazione, appena sotto il precedente:
 
@@ -155,7 +155,7 @@ function register() {
 }
 ```
 
-Qui si recupera l'elemento form utilizzando `getElementById()` e si utilizza il [metodo di supporto FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData)  per estrarre i valori dai controlli del forma come un insieme di coppie chiave/valore. Quindi si convertono i dati in un oggetto normale utilizzando [`Object.fromEntries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) e infine si serializzano i dati in [JSON](https://www.json.org/json-en.html), un formato comunemente utilizzato per lo scambio di dati sul web.
+Qui si recupera l'elemento form utilizzando `getElementById()` e si utilizza il [metodo di supporto FormData](https://developer.mozilla.org/docs/Web/API/FormData)  per estrarre i valori dai controlli del forma come un insieme di coppie chiave/valore. Quindi si convertono i dati in un oggetto normale utilizzando [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) e infine si serializzano i dati in [JSON](https://www.json.org/json-en.html), un formato comunemente utilizzato per lo scambio di dati sul web.
 
 I dati sono ora pronti per essere inviati al server. Creare una nuova funzione denominata `createAccount`:
 
@@ -174,7 +174,7 @@ async function createAccount(account) {
 }
 ```
 
-Cosa fa questa funzione? Per prima cosa notare la  parola chiave `async`. Ciò significa che la funzione contiene codice che verrà eseguito [**in modo asincrono**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). Quando viene utilizzato insieme alla parola chiave `await`, consente di attendere l'esecuzione del codice asincrono, come l'attesa della risposta del server qui, prima di continuare.
+Cosa fa questa funzione? Per prima cosa notare la  parola chiave `async`. Ciò significa che la funzione contiene codice che verrà eseguito [**in modo asincrono**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Quando viene utilizzato insieme alla parola chiave `await`, consente di attendere l'esecuzione del codice asincrono, come l'attesa della risposta del server qui, prima di continuare.
 
 Ecco un breve video sull'utilizzo di `async/await`:
 
@@ -218,7 +218,7 @@ async function register() {
 }
 ```
 
-È stato un po' lungo ma si è arrivati! Se si apre [strumenti di sviluppo del browser](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) e si prava a registrare un nuovo account, non si dovrebbe  vedere alcun cambiamento nella pagina web ma apparirà un messaggio nella console che conferma che tutto funziona.
+È stato un po' lungo ma si è arrivati! Se si apre [strumenti di sviluppo del browser](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools) e si prava a registrare un nuovo account, non si dovrebbe  vedere alcun cambiamento nella pagina web ma apparirà un messaggio nella console che conferma che tutto funziona.
 
 ![Videata che mostra il messaggio di registro nella console del browser](../images/browser-console.png)
 
@@ -226,15 +226,15 @@ async function register() {
 
 ## Convalida dati
 
-Se si prova a registrare un nuovo account senza prima impostare un nome utente, si può  vedere che il server restituisce un errore con codice di stato [400 Bad Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).), (richiesta non valida)
+Se si prova a registrare un nuovo account senza prima impostare un nome utente, si può  vedere che il server restituisce un errore con codice di stato [400 Bad Request](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).), (richiesta non valida)
 
-Prima di inviare i dati a un server è buona norma [convalidare i dati del modulo](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) in anticipo quando possibile, per assicurarsi di inviare una richiesta valida. I controlli dei form HTML5 forniscono la convalida incorporata utilizzando vari attributi:
+Prima di inviare i dati a un server è buona norma [convalidare i dati del modulo](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) in anticipo quando possibile, per assicurarsi di inviare una richiesta valida. I controlli dei form HTML5 forniscono la convalida incorporata utilizzando vari attributi:
 
 - `requested`: il campo deve essere compilato altrimenti il modulo non può essere inviato.
 - `minlength` e `maxlength`: definisce il numero minimo e massimo di caratteri nei campi di testo.
 - `min` e `max`: definisce il valore minimo e massimo di un campo numerico.
-- `type`: definisce il tipo di dati attesi, come `number`, `email`, `file` o [altri tipi incorporati](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input). Questo attributo può anche modificare il rendering visivo del form.
-- `pattern`: permette di definire un modello di [espressione regolare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) per verificare se i dati inseriti sono validi o meno.
+- `type`: definisce il tipo di dati attesi, come `number`, `email`, `file` o [altri tipi incorporati](https://developer.mozilla.org/docs/Web/HTML/Element/input). Questo attributo può anche modificare il rendering visivo del form.
+- `pattern`: permette di definire un modello di [espressione regolare](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) per verificare se i dati inseriti sono validi o meno.
 
 > Suggerimento: si può  personalizzare l'aspetto dei controlli del form a seconda che siano validi o meno utilizzando le pseudo-classi CSS `:valid` e `:invalid` .
 

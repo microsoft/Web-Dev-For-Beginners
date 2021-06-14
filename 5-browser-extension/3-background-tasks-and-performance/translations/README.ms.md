@@ -22,7 +22,7 @@ Tab Prestasi mengandungi alat Profil. Buka laman web (cuba, misalnya, https://ww
 
 ![Edge profiler](../images/profiler.png)
 
-✅ Lawati [Microsoft Documentation](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance) pada panel Performance di Edge
+✅ Lawati [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance) pada panel Performance di Edge
 
 > Petua: untuk mendapatkan bacaan sebenar mengenai masa permulaan laman web anda, kosongkan cache penyemak imbas anda
 
@@ -133,7 +133,7 @@ function drawIcon(value) {
 ```
 Dalam kod ini, anda menambahkan pendengar untuk sebarang mesej yang datang ke pengurus tugas backend. Sekiranya disebut 'updateIcon', maka kod seterusnya dijalankan, untuk menggambar ikon warna yang tepat menggunakan Canvas API.
 
-✅ Anda akan mengetahui lebih lanjut mengenai Canvas API dalam [pelajaran Space Game](../../space-game/drawing-to-canvas/README.md).
+✅ Anda akan mengetahui lebih lanjut mengenai Canvas API dalam [pelajaran Space Game](../../../6-space-game/2-drawing-to-canvas/translations/README.ms.md).
 
 Sekarang, buat semula pelanjutan anda (`npm run build`), muat semula dan lancarkan peluasan anda, dan perhatikan perubahan warnanya. Adakah masa yang sesuai untuk menjalankan tugas atau mencuci pinggan? Sekarang anda tahu!
 

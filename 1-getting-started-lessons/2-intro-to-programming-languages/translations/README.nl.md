@@ -1,8 +1,8 @@
 # Introductie van Programmeertalen en Bijbehorend Vakgereedschap
 
-Deze les beschrijft de basis over programmeertalen. De onderwerpen zijn van toepassing op de meeste hedendaagse programeertalen. In het 'Vakgereedschap' onderdeel leer je over nuttige toepassingen die je helpen als web ontwikkelaar.
+Deze les beschrijft de basis over programmeertalen. De onderwerpen zijn van toepassing op de meeste hedendaagse programeertalen. In het 'Vakgereedschap' onderdeel leert u over nuttige toepassingen die u helpen als web ontwikkelaar.
 
-![Introductie Programmeren](../webdev101-programming.png)
+![Introductie Programmeren](/sketchnotes/webdev101-programming.png)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
@@ -22,7 +22,7 @@ In deze les hebben we het over:
 
 Programmeren (ook wel coderen genoemd) is het process van het schrijven van instructies voor een apparaat, zoals een computer of een mobieltje. We schrijven deze instructies met een programmeertaal, welke wordt geinterpreteerd door het apparaat. Deze sets van instructies staan bekend onder verschillende namen zoals; *programma*, *computer programma*, *applicatie (app)*, *script* en *executable*.
 
-Een *programma* kan van alles zijn wat met code is geschreven; websites, spellen, en mobiele apps zijn programmas. Hoewel het mogelijk is om een programma te maken zonder code te schrijven, is de onderliggende logica, dat wordt geinterpreteerd door het apparaat, hoogstwaarschijnlijk wel geschreven met code. Een programma dat *draait* of *code uitvoert* voert instructies uit. Het apparaat wat je nu gebruikt om deze les te volgen draait een programma om deze tekst op het scherm te tonen.
+Een *programma* kan van alles zijn wat met code is geschreven; websites, spellen, en mobiele apps zijn programmas. Hoewel het mogelijk is om een programma te maken zonder code te schrijven, is de onderliggende logica, dat wordt geinterpreteerd door het apparaat, hoogstwaarschijnlijk wel geschreven met code. Een programma dat *draait* of *code uitvoert* voert instructies uit. Het apparaat wat u nu gebruikt om deze les te volgen draait een programma om deze tekst op het scherm te tonen.
 
 ✅ Doe wat onderzoek: wie wordt gezien als werelds eerste computer programmeur?
 
@@ -85,24 +85,24 @@ De meeste programma's zijn afhankelijk van gegevens, die ofwel door een gebruike
 
 Niet alle statements in een programma worden altijd uitgevoerd. Dit is meestal zo bedacht door de ontwikkelaar of het treed onbedoeld op bij onverwachte fouten. Het is een vorm van controle in een applicatie, dat het robuuster en onderhoudbaarder maakt. De keuze in welke statements worden uitgevoerd hangt vaak af van de data en of dit voldoet aan bepaalde condities. Een veelvoorkomend statement in een moderne programmeertaal om de controle van een programma te beïnvloeden is het `if..else` statement.
 
-✅ Je leert meer over het `if..else` statement in de volgende lessen.
+✅ U leert meer over het `if..else` statement in de volgende lessen.
 
 ## Vakgereedschap
 
 [![Vakgereedschap](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Vakgereedschap")
 
-In dit onderdeel leer je welke applicaties je wellicht handig vindt om mee te werken als je je professionele web ontwikkelaar carrière start.
+In dit onderdeel leert u welke applicaties u wellicht handig vindt om mee te werken als u uw professionele web ontwikkelaar carrière start.
 
 Een **ontwikkelomgeving** is een unieke set van applicaties wat een ontwikkelaar regelmatig gebruikt om software te schrijven. Sommige van deze applicaties zijn aangepast voor de specifieke eisen die de ontwikkelaar heeft en kunnen veranderen over de tijd. Dit kan te maken hebben met het type werk wat de ontwikkelaar uitvoert, bijvoorbeeld persoonlijke projecten versus projecten voor werk, of als er een andere programmeertaal moet worden gebruikt. Ontwikkelomgevingen zijn zo uniek als de ontwikkelaars die ze gebruiken.
 
 ### Editors
 
-Een van de meest cruciale applicaties voor software ontwikkeling is de code editor. In een editor schrijf je je code en soms run je daar ook je code.
+Een van de meest cruciale applicaties voor software ontwikkeling is de code editor. In een editor schrijft u uw code en soms runt u daar ook uw code.
 
 Ontwikkelaars gebruiken editors ook om de volgende redenen:
 
-- *Debugging* Het regel voor regel runnen van je code om bugs te ontdekken. Sommige editors hebben debugging mogelijkheden, of kunnen aangepast worden voor specifieke programmeertalen.
-- *Syntax markering* Voegt kleuren en tekst opmaak toe aan code om het leesbaarder te maken. De meeste editors hebben de mogelijkheid om dit aan te passen naar je eigen smaak.  
+- *Debugging* Het regel voor regel runnen van uw code om bugs te ontdekken. Sommige editors hebben debugging mogelijkheden, of kunnen aangepast worden voor specifieke programmeertalen.
+- *Syntax markering* Voegt kleuren en tekst opmaak toe aan code om het leesbaarder te maken. De meeste editors hebben de mogelijkheid om dit aan te passen naar uw eigen smaak.  
 - *Extensies en Integraties* Uitbreidingen van de editor, speciaal voor ontwikkelaars en gemaakt door ontwikkelaars, om extra functionaliteiten toe te voegen die standaard niet in de editor inzitten. Bijvoorbeeld een spellingscontrole extensie wat documentatie kan controleren op spelfouten. Vaak zijn extensies ontwikkeld voor een specifieke code editor. De meeste editors bieden een zoekfunctie om relevante extensies te vinden.
 - *Persoonlijke instellingen* De meeste editors hebben instellingen die volledig aan te passen zijn naar de wens van de ontwikkelaar. Elke ontwikkelaar zal daarom een unieke ontwikkelomgeving hebben wat voldoet aan hun specifieke wensen.
 
@@ -131,11 +131,11 @@ Veel browsers hebben ingebouwd *ontwikkel gereedschap* (DevTools) waarmee ontwik
 
 ### Command Line Applicaties
 
-Sommige ontwikkelaars hebben de voorkeur om minder grafische applicaties te gebruiken voor hun dagelijks werk. Zij gebruiken *command line applicaties* om hun werk te doen. Voor het schrijven van code is veel typewerk nodig, en aangezien sommige ontwikkelaars niet teveel afgeleid willen worden in hun keyboardgebruik maken zij daarom gebruik van keyboard shortcuts om bijvoorbeeld met verschillende bestanden te werken en tussen applicaties te wisselen. De meeste taken kunnen met een muis worden uitgevoerd, maar één van de voordelen van de command line is dat je heel veel kunt doen zonder te wisselen van keyboard en muis. Een bijkomend voordeel is dat command line applicaties aanpasbaar zijn en je deze naar wens kunt instellen. De instellingen kunnen opgeslagen worden op een andere computer weer herbruikt worden. Omdat elke ontwikkelaar een andere voorkeur heeft qua ontwikkelomgeving, gebruiken sommigen de command line nooit, sommigen doen juist alles ermee, en anderen gebruiken zowel de command line als grafische applicaties.
+Sommige ontwikkelaars hebben de voorkeur om minder grafische applicaties te gebruiken voor hun dagelijks werk. Zij gebruiken *command line applicaties* om hun werk te doen. Voor het schrijven van code is veel typewerk nodig, en aangezien sommige ontwikkelaars niet teveel afgeleid willen worden in hun keyboardgebruik maken zij daarom gebruik van keyboard shortcuts om bijvoorbeeld met verschillende bestanden te werken en tussen applicaties te wisselen. De meeste taken kunnen met een muis worden uitgevoerd, maar één van de voordelen van de command line is dat u heel veel kunt doen zonder te wisselen van keyboard en muis. Een bijkomend voordeel is dat command line applicaties aanpasbaar zijn en u deze naar wens kunt instellen. De instellingen kunnen opgeslagen worden op een andere computer weer herbruikt worden. Omdat elke ontwikkelaar een andere voorkeur heeft qua ontwikkelomgeving, gebruiken sommigen de command line nooit, sommigen doen juist alles ermee, en anderen gebruiken zowel de command line als grafische applicaties.
 
 ### Populaire Command Lines
 
-Beschikbaarheid van command lines verschilt op basis van het besturingssysteem wat je gebruikt.
+Beschikbaarheid van command lines verschilt op basis van het besturingssysteem wat u gebruikt.
 
 *💻 = is geïnstalleerd met het besturingssysteem.*
 
@@ -173,7 +173,7 @@ Wanneer een ontwikkelaar iets nieuws wil leren dan zullen ze waarschijnlijk de b
 - [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
 - [Frontend Masters](https://frontendmasters.com/learn/)
 
-✅ Doe wat onderzoek: Nu je de basis weet van de omgeving van een web ontwikkelaar, probeer eens uit te zoeken in hoeverre dit verschilt van een omgeving voor een web designer.
+✅ Doe wat onderzoek: Nu u de basis weet van de omgeving van een web ontwikkelaar, probeer eens uit te zoeken in hoeverre dit verschilt van een omgeving voor een web designer.
 
 ---
 
@@ -186,7 +186,7 @@ Vergelijk wat programmeertalen. Wat zijn unieke kenmerken van JavaScript vs. Jav
 
 ## Review & Zelfstudie
 
-Bestudeer wat voor verschillende programmeertalen er zijn. Zoek in 3 talen een 'Hello World' voorbeeld op. Zo krijg je een goed idee wat er voor nodig is om tekst in de browser te tonen.
+Bestudeer wat voor verschillende programmeertalen er zijn. Zoek in 3 talen een 'Hello World' voorbeeld op. Zo krijgt u een goed idee wat er voor nodig is om tekst in de browser te tonen.
 
 ## Opdracht
 

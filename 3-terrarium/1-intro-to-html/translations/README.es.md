@@ -1,6 +1,6 @@
 # Terrarium Project Parte 1: Introducción a HTML
 
-![Introducción a HTML](images/webdev101-html.png)
+![Introducción a HTML](/sketchnotes/webdev101-html.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15)
@@ -39,13 +39,13 @@ Agrega estas líneas en la parte superior de tu archivo `index.html`:
 <html></html>
 ```
 
-✅ Hay algunos modos diferentes que se pueden determinar configurando DocType con una cadena de consulta: [Modo Quirks y Modo estándar](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Estos modos solían admitir navegadores realmente antiguos que no se utilizan normalmente en la actualidad (Netscape Navigator 4 e Internet Explorer 5). Puede ceñirse a la declaración de tipo de documento estándar.
+✅ Hay algunos modos diferentes que se pueden determinar configurando DocType con una cadena de consulta: [Modo Quirks y Modo estándar](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Estos modos solían admitir navegadores realmente antiguos que no se utilizan normalmente en la actualidad (Netscape Navigator 4 e Internet Explorer 5). Puede ceñirse a la declaración de tipo de documento estándar.
 
 ---
 
 ## 2. El 'encabezado' del documento
 
-El área 'encabezado' del documento HTML incluye información crucial sobre su página web, también conocida como [metadatos](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta). En nuestro caso, le decimos al servidor web al que se enviará esta página para que sea renderizada cuatro cosas:
+El área 'encabezado' del documento HTML incluye información crucial sobre su página web, también conocida como [metadatos](https://developer.mozilla.org/docs/Web/HTML/Element/meta). En nuestro caso, le decimos al servidor web al que se enviará esta página para que sea renderizada cuatro cosas:
 
 - el título de la página
 - metadatos de la página que incluyen:
@@ -66,7 +66,7 @@ Agregue un bloque de 'encabezado' a su documento entre las etiquetas de apertura
 </head>
 ```
 
-✅ ¿Qué pasaría si configuras una metaetiqueta de ventana gráfica como esta: `<meta name =" viewport "content =" width = 600 ">`? Obtenga más información sobre [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ ¿Qué pasaría si configuras una metaetiqueta de ventana gráfica como esta: `<meta name =" viewport "content =" width = 600 ">`? Obtenga más información sobre [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag).
 
 ---
 
@@ -203,7 +203,7 @@ Agregue este marcado encima de la última etiqueta `</div>`:
 
 ---
 
-🚀 Desafío: hay algunas etiquetas "antiguas" salvajes en HTML con las que todavía es divertido jugar, aunque no debes usar etiquetas obsoletas como [estas etiquetas](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) en su marcado. Aún así, ¿puede usar la antigua etiqueta `<marquee>` para hacer que el título h1 se desplace horizontalmente? (si lo hace, no olvide quitarlo después)
+🚀 Desafío: hay algunas etiquetas "antiguas" salvajes en HTML con las que todavía es divertido jugar, aunque no debes usar etiquetas obsoletas como [estas etiquetas](https://developer.mozilla.org/docs/Web/HTML/Element) en su marcado. Aún así, ¿puede usar la antigua etiqueta `<marquee>` para hacer que el título h1 se desplace horizontalmente? (si lo hace, no olvide quitarlo después)
 
 ## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16)
 

@@ -1,6 +1,6 @@
 # Nozioni di base su JavaScript: tipi di dato
 
-![Nozioni di base su JavaScript: tipi di dati](../images/webdev101-js-datatypes.png)
+![Nozioni di base su JavaScript: tipi di dati](/sketchnotes/webdev101-js-datatypes.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz pre-lezione
@@ -175,7 +175,7 @@ I  booleani possono avere solo due valori: vero (`true`) o falso (`false`). I bo
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ Una variabile può essere considerata "veritiera" se restituisce un valore booleano `true`. È interessante notare che in JavaScript [tutti i valori sono veritieri a meno che non siano definiti falsi](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+✅ Una variabile può essere considerata "veritiera" se restituisce un valore booleano `true`. È interessante notare che in JavaScript [tutti i valori sono veritieri a meno che non siano definiti falsi](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 ---
 

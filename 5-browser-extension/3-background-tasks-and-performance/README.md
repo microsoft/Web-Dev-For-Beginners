@@ -22,7 +22,7 @@ The Performance tab contains a Profiling tool. Open a web site (try, for example
 
 ![Edge profiler](./images/profiler.png)
 
-✅ Visit the [Microsoft Documentation](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa) on the Performance panel in Edge
+✅ Visit the [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa) on the Performance panel in Edge
 
 > Tip: to get a true reading of your web site's startup time, clear your browser's cache
 
@@ -133,7 +133,7 @@ function drawIcon(value) {
 ```
 In this code, you are adding a listener for any messages coming to the backend task manager. If it's called 'updateIcon', then the next code is run, to draw an icon of the proper color using the Canvas API.
 
-✅ You'll learn more about the Canvas API in the [Space Game lessons](../6-space-game/2-drawing-to-canvas/README.md/drawing-to-canvas/README.md).
+✅ You'll learn more about the Canvas API in the [Space Game lessons](../../6-space-game/2-drawing-to-canvas/README.md).
 
 Now, rebuild your extension (`npm run build`), refresh and launch your extension, and watch the color change. Is it a good time to run an errand or wash the dishes? Now you know!
 

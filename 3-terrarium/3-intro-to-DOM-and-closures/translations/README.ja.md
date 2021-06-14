@@ -1,6 +1,6 @@
 # テラリウムプロジェクト その3: DOM の操作とクロージャ
 
-![DOM and a closure](../images/webdev101-js.png)
+![DOM and a closure](/sketchnotes/webdev101-js.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト

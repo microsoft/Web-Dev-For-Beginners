@@ -41,7 +41,7 @@
 - 화면 전환 시 전체 HTML을 다시 불러와야 하므로, 속도가 느릴 수 있습니다.
 - 서로 다른 화면 간 데이터 공유가 어렵습니다.
 
-또 다른 방법은 HTML 파일이 하나일 때, `<template>` 요소로 여러 [HTML templates](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)을 정의하는 것입니다. 템플릿은 브라우저에 보이지 않는 재사용 가능한 HTML 블록이면서, JavaScript를 사용해서 런타임에 인스턴스화합니다.
+또 다른 방법은 HTML 파일이 하나일 때, `<template>` 요소로 여러 [HTML templates](https://developer.mozilla.org/docs/Web/HTML/Element/template)을 정의하는 것입니다. 템플릿은 브라우저에 보이지 않는 재사용 가능한 HTML 블록이면서, JavaScript를 사용해서 런타임에 인스턴스화합니다.
 
 ### 작업
 
@@ -107,9 +107,9 @@
 
 템플릿 인스턴스화는 일반적으로 3 단계로 진행됩니다:
 
-1. [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)를 사용한 예시로, DOM에서 템플릿 요소 검색합니다.
-2. [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)로, 템플릿 요소를 복제합니다.
-3. [`appendChild`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)를 사용한 예시로, 보이는 요소 아래의 DOM에 붙입니다.
+1. [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById)를 사용한 예시로, DOM에서 템플릿 요소 검색합니다.
+2. [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode)로, 템플릿 요소를 복제합니다.
+3. [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild)를 사용한 예시로, 보이는 요소 아래의 DOM에 붙입니다.
 
 ✅ DOM에 붙이기 전에 템플릿을 복제해야하는 이유는 무엇일까요? 이 단계를 넘기면 어떻게 될까요?
 
@@ -174,7 +174,7 @@ const routes = {
 };
 ```
 
-이제 `updateRoute` 함수를 약간 수정합니다. `templateId`를 인수로 직접 주는 대신, 먼저 현재 URL을 보고 찾은 다음, 맵을 사용하여 해당 템플릿 ID 값을 가져오려 합니다. [`window.location.pathname`](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname)으로 URL에서 경로 섹션만 가져올 수 있습니다.
+이제 `updateRoute` 함수를 약간 수정합니다. `templateId`를 인수로 직접 주는 대신, 먼저 현재 URL을 보고 찾은 다음, 맵을 사용하여 해당 템플릿 ID 값을 가져오려 합니다. [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname)으로 URL에서 경로 섹션만 가져올 수 있습니다.
 
 ```js
 function updateRoute() {
@@ -202,9 +202,9 @@ function updateRoute() {
 
 두 번째 부분은 `updateRoute` 함수로 이미 처리했으므로, 현재 URL로 갱신하는 방법을 알아냅니다.
 
-HTML 앵커 요소 [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)를 사용하여 다른 URL에 대한 하이퍼링크를 만들 수 있지만, 여기에서 사용하면 브라우저가 HTML을 다시 불러오게 됩니다.
+HTML 앵커 요소 [`<a>`](https://developer.mozilla.org/docs/Web/HTML/Element/a)를 사용하여 다른 URL에 대한 하이퍼링크를 만들 수 있지만, 여기에서 사용하면 브라우저가 HTML을 다시 불러오게 됩니다.
 
-대신 URL을 업데이트 할 수 있는 JavaScript와 더 구체적으로 [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState)를 사용해야합니다. HTML을 다시 불러오지 않고 검색 기록에 새로운 항목을 만듭니다.
+대신 URL을 업데이트 할 수 있는 JavaScript와 더 구체적으로 [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState)를 사용해야합니다. HTML을 다시 불러오지 않고 검색 기록에 새로운 항목을 만듭니다.
 
 ### 작업
 
@@ -212,7 +212,7 @@ HTML 앵커 요소 [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Ele
 
 ```js
 function navigate(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  window.history.pushState({}, path, path);
   updateRoute();
 }
 ```
@@ -243,7 +243,7 @@ HTML의 *Login*과 *Logout* 버튼에 바인딩을 추가하여 내비게이션 
 <button onclick="navigate('/login')">Logout</button>
 ```
 
-[`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) 속성을 사용하여 `click` 이벤트를 JavaScript 코드로 바인딩합니다, 여기에서 `navigate()` 함수를 호출합니다.
+[`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) 속성을 사용하여 `click` 이벤트를 JavaScript 코드로 바인딩합니다, 여기에서 `navigate()` 함수를 호출합니다.
 
 이 버튼들을 클릭해보세요, 이제 앱의 여러 화면들을 이동할 수 있습니다.
 
@@ -257,7 +257,7 @@ HTML의 *Login*과 *Logout* 버튼에 바인딩을 추가하여 내비게이션 
 
 뒤로가기 버튼을 몇 번 클릭하면, 현재 URL이 변경되며 히스토리가 갱신되지만 동일한 템플릿이 계속 출력되는 것을 볼 수 있습니다.
 
-히스토리가 바뀔 때마다 `updateRoute()`를 호출해야 한다는 사실을 모르기 때문입니다. [`history.pushState` documentation](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState)을 살펴보면, 상태가 바뀌는 지 확인할 수 있습니다 - 다른 URL로 이동했다고 의미합니다. - [`popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) 이벤트가 연결됩니다. 이 이슈를 해결하는 데 사용할 것입니다.
+히스토리가 바뀔 때마다 `updateRoute()`를 호출해야 한다는 사실을 모르기 때문입니다. [`history.pushState` documentation](https://developer.mozilla.org/docs/Web/API/History/pushState)을 살펴보면, 상태가 바뀌는 지 확인할 수 있습니다 - 다른 URL로 이동했다고 의미합니다. - [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) 이벤트가 연결됩니다. 이 이슈를 해결하는 데 사용할 것입니다.
 
 ### 작업
 
@@ -268,7 +268,7 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Note: 여기서는 간결함을 위해 [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)을 사용하여 `popstate` 이벤트 핸들러를 선언했지만, 일반적인 함수와 동일하게 작동합니다.
+> Note: 여기서는 간결함을 위해 [arrow function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions)을 사용하여 `popstate` 이벤트 핸들러를 선언했지만, 일반적인 함수와 동일하게 작동합니다.
 
 다음은 화살표 함수에 대한 복습 동영상입니다:
 
@@ -288,7 +288,7 @@ updateRoute();
 
 ## 리뷰 & 자기주도 학습
 
-라우팅은 웹 개발의 놀랍고 까다로운 부분 중 하나입니다, 특히 웹의 페이지 새로고침 동작에서 단일 페이지 애플리케이션 페이지 새로고침으로 이동함에 따라 더욱 더 그렇습니다. [how the Azure Static Web App service](https://docs.microsoft.com/en-us/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa)의 라우터 제어에 대해 약간 봅니다. 그 문서에 기술된 몇 가지 결정이 필요한 이유를 설명할 수 있나요?
+라우팅은 웹 개발의 놀랍고 까다로운 부분 중 하나입니다, 특히 웹의 페이지 새로고침 동작에서 단일 페이지 애플리케이션 페이지 새로고침으로 이동함에 따라 더욱 더 그렇습니다. [how the Azure Static Web App service](https://docs.microsoft.com/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa)의 라우터 제어에 대해 약간 봅니다. 그 문서에 기술된 몇 가지 결정이 필요한 이유를 설명할 수 있나요?
 
 ## 과제
 
