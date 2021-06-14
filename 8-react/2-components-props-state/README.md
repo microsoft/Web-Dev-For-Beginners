@@ -353,8 +353,67 @@ And when inspecting the hero component you should see:
 }
 ```
 
-The `hero` object is being passed down to the hero component where you can then access all the property values.
+The `hero` object is being passed down to the hero component where you can then access all the property values. Developing your React as functional as possible when doing function programming is to componentize out your elements as much as possible. As example of this is a button component. We will utitlize the CTA button in this case to create a function component and consume it in our hero component.
 
+```js
+import { Link } from 'react-scroll';
+
+const CtaButton = ({ cta }) => (
+    <div className="hero__cta">
+      <Link to="about" smooth-duration={1000}>
+        { cta }
+      </Link>
+    </div>
+);
+
+export default CtaButton;
+```
+
+Then going back to your hero component, you will import `CtaButton` and include it in the template.
+
+```js
+import React from 'react';
+import CtaButton from './CtaButton';
+
+const Hero = ({ hero }) => {
+
+  return (
+    <section className="hero">
+      <div className="hero__container">
+        <h1 className="hero__title">
+          { hero.title || 'Hi, my name is' }
+        <span>{ hero.name || 'Your name' }</span>
+        <br />
+        { hero.subtitle || 'I\'m a developer.' }
+        </h1>
+        <CtaButton cta={hero.cta} />
+      </div>
+    </section>
+  );
+}
+
+export default Hero;
+```
+
+Since the components we are builing out are static content, the rest of the components you will build out will follow the same pattern. Create the rest of the files in the `components` folder: `About.js`, `Projects.js`, `Resume.js` `Contact.js`, `Footer.js`.
+
+Now you components folder should look like:
+
+```
+portfolio
+└── src
+    └── components
+        ├── Hero.js
+        ├── CtaButton.js
+        ├── About.js
+        ├── Projects.js
+        ├── Contact.js
+        └── Footer.js
+```
+
+Referring back to your data file, customize and add to the data objects however you need, and start building out the components. Don't forget to import them into `App.js` and include your components in the template as well for them to render out into the single page application.
+
+In the next section, we will touch on styling Tailwind.
 
 
 ## Credits
