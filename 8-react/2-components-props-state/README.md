@@ -411,7 +411,53 @@ portfolio
         └── Footer.js
 ```
 
-Referring back to your data file, customize and add to the data objects however you need, and start building out the components. Don't forget to import them into `App.js` and include your components in the template as well for them to render out into the single page application.
+Referring back to your data file, customize and add to the data objects however you need, and start building out the components. Don't forget to import them into `App.js` and include your components in the template as well for them to render out into the single page application. Ultimately, your `App.js` might look like this:
+
+```js
+import React, { useState, useEffect } from 'react';
+import {
+  heroData,
+  aboutData,
+  projectsData,
+  contactData,
+  footerData
+} from './mock/data';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+function App() {
+  const [hero, setHero] = useState({});
+  const [about, setAbout] = useState({});
+  const [projects, setProject] = useState([]);
+  const [contact, setContact] = useState({});
+  const [footer, setFooter] = useState({});
+
+  useEffect(() => {
+    setHero({ ...heroData });
+    setAbout({ ...aboutData });
+    setProject({ ...projectsData });
+    setContact({ ...contactData });
+    setFooter({ ...footerData });
+  }, []);
+
+  return (
+    <div>
+      <Hero hero={hero} />
+      <About about={about} />
+      <Projects projects={projects} />
+      <Contact contact={contact} />
+      <Footer footer={footer} />
+    </div>
+  );
+}
+
+export default App;
+```
+
+The projects list component might be a good contender to split out in a `ProjectCard.js` where you can map out in the `Projects.js` component.
 
 In the next section, we will touch on styling Tailwind.
 
