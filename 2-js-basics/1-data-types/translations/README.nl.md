@@ -111,7 +111,7 @@ In de vorige sectie was de waarde van `myVariable` een gegevenstype met een geta
 
 `let myVariable = 123;`
 
-Variabelen kunnen alle soorten getallen opslaan, inclusief decimalen of negatieve getallen. Getallen kunnen ook worden gebruikt met rekenkundige operatoren, behandeld in de [volgende sectie](#operators).
+Variabelen kunnen alle soorten getallen opslaan, inclusief decimalen of negatieve getallen. Getallen kunnen ook worden gebruikt met rekenkundige operatoren, behandeld in de [volgende sectie](#Rekenkundige-operatoren).
 
 ### Rekenkundige operatoren
 
@@ -171,7 +171,7 @@ U kunt uw opmaakdoelen met beide methoden bereiken, maar template literals respe
 
 ### Booleans
 
-Booleans kunnen slechts twee waarden zijn: `true` of `false`. Booleans kunnen helpen bij het nemen van beslissingen over welke regels code moeten worden uitgevoerd wanneer aan bepaalde voorwaarden is voldaan. In veel gevallen helpen [operatoren](# operators) bij het instellen van de waarde van een Boolean waarde en u zult vaak merken en variabelen schrijven die geïnitialiseerd worden of dat hun waarden worden bijgewerkt met een operator.
+Booleans kunnen slechts twee waarden zijn: `true` of `false`. Booleans kunnen helpen bij het nemen van beslissingen over welke regels code moeten worden uitgevoerd wanneer aan bepaalde voorwaarden is voldaan. In veel gevallen helpen [operatoren](#Rekenkundige-operatoren) bij het instellen van de waarde van een Boolean waarde en u zult vaak merken en variabelen schrijven die geïnitialiseerd worden of dat hun waarden worden bijgewerkt met een operator.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`

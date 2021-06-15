@@ -112,7 +112,7 @@ Im vorherigen Abschnitt war der Wert von `myVariable` ein Datentyp für Zahlen.
 
 `let myVariable = 123;`
 
-Variablen können alle Arten von Zahlen speichern, einschließlich Dezimalstellen oder negativer Zahlen. Zahlen können auch mit arithmetischen Operatoren verwendet werden, die im [nächsten Abschnitt](#operators) behandelt werden.
+Variablen können alle Arten von Zahlen speichern, einschließlich Dezimalstellen oder negativer Zahlen. Zahlen können auch mit arithmetischen Operatoren verwendet werden, die im [nächsten Abschnitt](#rechenzeichen) behandelt werden.
 
 ### Rechenzeichen
 
@@ -173,7 +173,7 @@ Sie können Ihre Formatierungsziele mit beiden Methoden erreichen, aber Vorlagen
 
 ### Boolesche Werte
 
-Boolesche Werte können nur zwei Werte sein: `true` oder `false`. Boolesche Werte können dabei helfen, Entscheidungen darüber zu treffen, welche Codezeilen ausgeführt werden sollen, wenn bestimmte Bedingungen erfüllt sind. In vielen Fällen helfen [Operatoren](#operators) beim Festlegen des Werts eines Booleschen Werts, und Sie werden häufig feststellen und schreiben, dass Variablen initialisiert oder ihre Werte mit einem Operator aktualisiert werden.
+Boolesche Werte können nur zwei Werte sein: `true` oder `false`. Boolesche Werte können dabei helfen, Entscheidungen darüber zu treffen, welche Codezeilen ausgeführt werden sollen, wenn bestimmte Bedingungen erfüllt sind. In vielen Fällen helfen [Operatoren](#rechenzeichen) beim Festlegen des Werts eines Booleschen Werts, und Sie werden häufig feststellen und schreiben, dass Variablen initialisiert oder ihre Werte mit einem Operator aktualisiert werden.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
