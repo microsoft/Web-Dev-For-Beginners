@@ -191,7 +191,7 @@ Take a minute to watch a video on using `const`, `let` and `var`
 
 [![Types of variables](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Types of variables")
 
-> Click the image above for a video about variables.
+> 🎥 Click the image above for a video about variables.
 
 ### Add start logic
 

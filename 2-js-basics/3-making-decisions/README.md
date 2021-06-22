@@ -10,7 +10,9 @@ Making decisions and controlling the order in which your code runs makes your co
 
 [![Making Decisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
 
-> Click the image above for a video about making decisions.
+> 🎥 Click the image above for a video about making decisions.
+
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
 ## A Brief Recap on Booleans
 
 Booleans can be only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.

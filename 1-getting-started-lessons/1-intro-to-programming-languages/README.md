@@ -92,6 +92,8 @@ There's a chance that some statements will not be executed by a device. This is 
 
 [![Tools of the Trade](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
 
+> 🎥 Click the image above for a video about tooling
+
 In this section, you'll learn about some software that you might find very useful as you start your professional development journey.
 
 A **development environment** is a unique set of tools and features that a developer will use often when writing software. Some of these tools have been customized for a developer specific needs, and may change over time if a developer changes priorities in work or personal projects, or when they use a different programming language. Development environments are as unique as the developers who use them.

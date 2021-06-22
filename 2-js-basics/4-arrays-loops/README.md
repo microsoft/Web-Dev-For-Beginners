@@ -10,7 +10,9 @@ This lesson covers the basics of JavaScript, the language that provides interact
 
 [![Arrays and Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
 
-> Click the image above for a video about arrays and loops.
+> 🎥 Click the image above for a video about arrays and loops.
+
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!
 ## Arrays
 
 Working with data is a common task for any language, and it's a much easier task when data is organized in a structural format, such as arrays. With arrays, data is stored in a structure similar to a list. One major benefit of arrays is that you can store different types of data in one array.
