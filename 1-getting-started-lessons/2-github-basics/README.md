@@ -149,6 +149,8 @@ Let's say you have a folder locally with some code project and you want to start
    git push
    ```
 
+   > Note, the command `git push` will work only if you put `-u` in the last step.
+
    > Tip, You might also want to adopt a `.gitignore` file to prevent files you don't want to track from showing up on GitHub - like that notes file you store in the same folder but has no place on a public repository. You can find templates for `.gitignore` files at [.gitignore templates](https://github.com/github/gitignore).
 
 #### Commit messages
