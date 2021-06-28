@@ -216,7 +216,7 @@ document.getElementById('start').addEventListener('click', () => {
   // Convert into string and set as innerHTML on quote display
   quoteElement.innerHTML = spanWords.join('');
   // Highlight the first word
-  quoteElement.childNodes[0].className = 'highlight';
+  quoteElement.children[0].className = 'highlight';
   // Clear any prior messages
   messageElement.innerText = '';
 
@@ -279,7 +279,7 @@ typedValueElement.addEventListener('input', () => {
       wordElement.className = '';
     }
     // highlight the new word
-    quoteElement.childNodes[wordIndex].className = 'highlight';
+    quoteElement.children[wordIndex].className = 'highlight';
   } else if (currentWord.startsWith(typedValue)) {
     // currently correct
     // highlight the next word
