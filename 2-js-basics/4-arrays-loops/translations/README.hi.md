@@ -8,7 +8,8 @@
 
 इस पाठ में जावास्क्रिप्ट की मूल बातें शामिल हैं, वह भाषा जो वेब पर अन्तरक्रियाशीलता प्रदान करती है। इस पाठ में, आप ऐरे और लूप्स के बारे में जानेंगे, जिनका उपयोग डेटा में हेरफेर करने के लिए किया जाता है।
 
-[![ऐरे और लूप्स](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "ऐरे और लूप्स")
+[![ऐरे](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "ऐरे")
+[![लूप्स](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "लूप्स")
 
 > ऐरे और लूप्स के बारे में वीडियो के लिए ऊपर दी गई छवि पर क्लिक करें।
 ## एरेस
