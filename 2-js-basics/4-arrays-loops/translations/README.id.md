@@ -10,7 +10,10 @@
 
 Pelajaran ini mencakup dasar-dasar JavaScript, bahasa yang menyediakan interaktivitas di web. Dalam pelajaran ini, Anda akan belajar tentang array dan loop, yang digunakan untuk memanipulasi data.
 
-[![Array dan Loop](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Array dan Loop")
+
+[![Arrays](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Arrays")
+[![Loop](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loop")
+
 
 ## Array
 

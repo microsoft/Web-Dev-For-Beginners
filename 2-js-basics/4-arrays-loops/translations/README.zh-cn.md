@@ -8,7 +8,8 @@
 
 这节课将会介绍 JavaScript 的基础知识，正是它为网页提供了可交互性。这节课中，你将学习数组和循环，它们会被用于操控数据。
 
-[![Arrays and Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "数组和循环")
+[![数组](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "数组")
+[![循环](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "循环")
 
 > 点击上方图片来观看一个有关数组和循环的视频。
 
