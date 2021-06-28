@@ -8,8 +8,8 @@
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
 
-[![Arrays and Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
-
+[![Arrays](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Arrays")
+[![Loops](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loops")
 > 🎥 Click the image above for a video about arrays and loops.
 
 > You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!

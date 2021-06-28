@@ -8,7 +8,8 @@
 
 這堂課會包含程式語言 JavaScript，建立互動式網頁的基礎。課程中，你會學到用來操作資料的矩陣與迴圈。
 
-[![矩陣與迴圈](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "矩陣與迴圈")
+[![矩陣](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "矩陣")
+[![迴圈](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "迴圈")
 
 > 點擊以上的圖片來觀賞關於矩陣與迴圈的影片。
 

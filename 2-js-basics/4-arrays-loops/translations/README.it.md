@@ -8,7 +8,11 @@
 
 Questa lezione tratta le basi di javascript, il linguaggio che fornisce interattività sul web. In questa lezione, si conosceranno gli array e i cicli, usati per manipolare i dati.
 
-[![Array e loop](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg " Array e loop")
+
+[![Arrays](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Array")
+[![Loops](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loops")
+
+
 
 ## Array
 

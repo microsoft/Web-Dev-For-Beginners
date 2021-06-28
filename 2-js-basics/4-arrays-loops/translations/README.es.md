@@ -3,7 +3,9 @@
 ![JavaScript Basics - Arrays](/sketchnotes/webdev101-js-arrays.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-[![Matrices y bucles](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Matrices y bucles")
+
+[![Matrices](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Matrices")
+[![Bucles](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Bucles")
 
 
 ## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13)
