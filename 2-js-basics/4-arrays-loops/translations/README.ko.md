@@ -8,7 +8,10 @@
 
 이 강의에서는 웹에서 상호 작용을 제공하는 언어인 JavaScript의 기본 사항을 다룹니다. 데이터를 컨트롤하는 데 사용하는 배열과 반복문에 대해 알아 봅니다.
 
-[![Arrays and Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
+
+[![Array](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Array")
+[![Loops](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loops")
+
 
 ## 배열
 
