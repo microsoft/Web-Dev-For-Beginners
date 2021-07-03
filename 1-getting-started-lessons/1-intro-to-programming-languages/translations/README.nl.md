@@ -170,8 +170,10 @@ Wanneer een ontwikkelaar iets nieuws wil leren dan zullen ze waarschijnlijk de b
 
 #### Populaire Documentatie over Web Ontwikkeling
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), van Mozilla, uitgevers van [Firefox](https://www.mozilla.org/firefox/)
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), van Google, uitgevers van [Chrome](https://www.google.com/chrome/)
+- [eigen ontwikkelaarsdocumenten van Microsoft](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), voor [Microsoft Edge](https://www.microsoft.com/edge)
 
 ✅ Doe wat onderzoek: Nu u de basis weet van de omgeving van een web ontwikkelaar, probeer eens uit te zoeken in hoeverre dit verschilt van een omgeving voor een web designer.
 

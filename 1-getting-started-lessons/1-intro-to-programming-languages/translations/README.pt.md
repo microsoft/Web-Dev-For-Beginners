@@ -185,8 +185,10 @@ Quando uma pessoa desenvolvedora deseja aprender algo novo, provavelmente recorr
 
 #### Documentações Populares para Desenvolvimento de Web
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), do Mozilla, editores do [Firefox](https://www.mozilla.org/firefox/)
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), do Google, editores do [Chrome](https://www.google.com/chrome/)
+- [Documentos de desenvolvedor da própria Microsoft](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), para [Microsoft Edge](https://www.microsoft.com/edge)
 
 ✅ Faça uma pesquisa: agora que você conhece os fundamentos do ambiente de desenvolvimento da web, compare-o com o ambiente de um web designer.
 

@@ -170,8 +170,11 @@ Ketika pengembang ingin mempelajari sesuatu yang baru, mereka kemungkinan besar 
 
 #### Dokumentasi Populer tentang Pengembangan Web
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web) dari Mozilla, penerbit [Firefox](https://www.mozilla.org/firefox/)
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), dari Google, penerbit [Chrome](https://www.google.com/chrome/)
+- [Dokumen pengembang Microsoft sendiri](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), untuk [Microsoft Edge](https://www.microsoft.com/edge)
+
 ✅ Lakukan riset: Sekarang Anda tahu dasar-dasar lingkungan pengembang web, bandingkan dan kontras dengan lingkungan desainer web.
 
 ---

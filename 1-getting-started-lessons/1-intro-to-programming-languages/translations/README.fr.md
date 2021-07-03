@@ -168,8 +168,10 @@ Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tourne
 
 #### Documentation populaire sur le développement Web
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), de Mozilla, éditeurs de [Firefox](https://www.mozilla.org/firefox/)
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), de Google, éditeurs de [Chrome](https://www.google.com/chrome/)
+- [Documents de développeur de Microsoft](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), pour [Microsoft Edge](https://www.microsoft.com/edge)
 
 ✅ Faites des recherches: maintenant que vous connaissez les bases de l'environnement d'un développeur Web, comparez-le et comparez-le à l'environnement d'un concepteur Web.
 

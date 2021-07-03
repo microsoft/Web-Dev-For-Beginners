@@ -169,10 +169,12 @@ back add r0,r1
 
 #### वेब विकास पर लोकप्रिय प्रलेखन
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), Mozilla से, [Firefox](https://www.mozilla.org/firefox/) के प्रकाशक
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), Google की ओर से, [Chrome](https://www.google.com/chrome/) के प्रकाशक
+- [Microsoft के अपने डेवलपर दस्तावेज़](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), के लिए [Microsoft Edge](https://www.microsoft.com/edge)
 
-✅ कुछ शोध करें: अब जब आप एक वेब डेवलपर के वातावरण की मूल बातें जानते हैं, तो इसकी तुलना करें और वेब डिजाइनर के वातावरण के साथ इसके विपरीत करें।
+✅ कुछ शोध करें: अब जब आप वेब डेवलपर के परिवेश की मूल बातें जानते हैं, तो इसकी तुलना वेब डिज़ाइनर के परिवेश से करें।
 
 ---
 
