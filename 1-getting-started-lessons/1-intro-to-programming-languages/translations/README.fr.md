@@ -19,7 +19,7 @@ Dans cette leçon, nous aborderons:
 
 ## Qu'est-ce que la programmation?
 
-Pla programmation (également appelée codage) est le processus d'écriture d'instructions sur un appareil, tel qu'un ordinateur ou un appareil mobile. Nous écrivons ces instructions avec un langage de programmation, qui est ensuite interprété par l'appareil. Ces ensembles d'instructions peuvent être désignés sous différents noms, mais *programme*, *programme informatique*, *application (application)* et *exécutable* sont quelques noms courants.
+La programmation (également appelée codage) est le processus d'écriture d'instructions sur un appareil, tel qu'un ordinateur ou un appareil mobile. Nous écrivons ces instructions avec un langage de programmation, qui est ensuite interprété par l'appareil. Ces ensembles d'instructions peuvent être désignés sous différents noms, mais *programme*, *programme informatique*, *application (application)* et *exécutable* sont quelques noms courants.
 
 Un *programme* peut être tout ce qui est écrit avec du code; les sites Web, les jeux et les applications téléphoniques sont des programmes. Bien qu'il soit possible de créer un programme sans écrire de code, la logique sous-jacente est interprétée sur le périphérique et cette logique a probablement été écrite avec du code. Un programme qui *exécute* ou *exécute du code* exécute des instructions. L'appareil avec lequel vous lisez actuellement cette leçon exécute un programme pour l'imprimer sur votre écran.
 
@@ -72,9 +72,9 @@ back add r0,r1
  end
 ```
 
-Croyez-le ou non, *they're both doing the same thing*: impression d'une séquence de Fibonacci jusqu'à 10.
+Croyez-le ou non, *ils font tous les deux la même chose*: l'affichage d'une séquence de Fibonacci jusqu'à 10.
 
-✅ Une séquence de Fibonacci est [defined](https://en.wikipedia.org/wiki/Fibonacci_number) comme un ensemble de nombres tels que chaque nombre est la somme des deux précédents, à partir de 0 et 1.
+✅ Une séquence de Fibonacci est [définie](https://en.wikipedia.org/wiki/Fibonacci_number) comme un ensemble de nombres tels que chaque nombre est la somme des deux précédents, à partir de 0 et 1.
 
 ## Éléments d'un programme
 
