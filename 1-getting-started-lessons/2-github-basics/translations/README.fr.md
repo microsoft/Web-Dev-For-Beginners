@@ -123,9 +123,9 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
    Cela valide tous vos fichiers, en ajoutant le message " premier commit ". Pour les futurs messages de validation, vous voudrez être plus descriptif dans votre description pour indiquer le type de modification que vous avez apportée.
 
-1. **Connectez votre référentiel Git local avec GitHub**. Un référentiel Git est bon sur votre machine, mais à un moment donné, vous voulez avoir une sauvegarde de vos fichiers quelque part et également inviter d’autres personnes à travailler avec vous sur votre dépôt. GitHub est un excellent endroit pour le faire. N’oubliez pas que nous avons déjà créé un référentiel sur GitHub, donc la seule chose que nous devons faire est de connecter notre référentiel Git local à GitHub.Remember we’ve already created a repo on GitHub so the only thing we need to do is to connect our local Git repo with GitHub. La commande `git remote add` fera exactement cela. Tapez la commande suivante :
+1. **Connectez votre référentiel Git local avec GitHub**. Un référentiel Git est bon sur votre machine, mais à un moment donné, vous voulez avoir une sauvegarde de vos fichiers quelque part et également inviter d’autres personnes à travailler avec vous sur votre dépôt. GitHub est un excellent endroit pour le faire. N’oubliez pas que nous avons déjà créé un référentiel sur GitHub, donc la seule chose que nous devons faire est de connecter notre référentiel Git local à GitHub. La commande `git remote add` fera exactement cela. Tapez la commande suivante :
 
-   > Remarque, avant de taper la commande, accédez à votre page de référentiel GitHub pour trouver l’URL du référentiel. Vous l’utiliserez dans la commande ci-dessous. Remplacez " repository_name " par votre URL GitHub.
+   > Remarque, avant de taper la commande, accédez à votre page de référentiel GitHub pour trouver l’URL du référentiel. Vous l’utiliserez dans la commande ci-dessous. Remplacez `repository_name` par votre URL GitHub.
 
    ```bash
    git remote add origin https://github.com/username/repository_name.git
@@ -133,13 +133,13 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
    Cela crée un _remote_, ou une connexion, nommé " origin " pointant vers le référentiel GitHub que vous avez créé précédemment.
 
-1. **Envoyer des fichiers locaux à GitHub**. Jusqu’à présent, vous avez créé une _connexion_ entre le référentiel local et le référentiel GitHub.So far you’ve created a _connection_ between the local repo and the GitHub repo. Envoyons ces fichiers à GitHub avec la commande suivante `git push`, comme suit: 
+1. **Envoyer des fichiers locaux à GitHub**. Jusqu’à présent, vous avez créé une _connexion_ entre le référentiel local et le référentiel GitHub. Envoyons ces fichiers à GitHub avec la commande suivante `git push`, comme suit: 
 
    ```bash
    git push -u origin main
    ```
 
-   Cela envoie vos commits dans votre branche " principale " à GitHub.This sends your commits in your " main " branch to GitHub.
+   Cela envoie vos commits dans votre branche "main" à GitHub..
 
 1. **Pour ajouter d’autres modifications**. Si vous souhaitez continuer à apporter des modifications et à les pousser vers GitHub, il vous suffit d’utiliser les trois commandes suivantes:
 
@@ -154,7 +154,7 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 #### Valider les messages
 
 Une grande ligne d’objet de commit Git complète la phrase suivante:
-S’il est appliqué, ce commit <votre ligne d’objet ici>
+S’il est appliqué, ce commit le sera
 
 Pour le sujet, utilisez l’impératif, présent: "changement" pas "changé" ni "changements". 
 Comme dans le sujet, dans le corps (facultatif) utilisez également l’impératif, le présent. Le corps doit inclure la motivation du changement et contraster cela avec le comportement précédent. Vous expliquez le `pourquoi`, pas le `comment`.
@@ -179,14 +179,14 @@ Dans votre référentiel, accédez à `Insights > Community ` pour voir comment 
 
 Toutes ces ressources profiteront à l’intégration des nouveaux membres de l’équipe. Et ce sont généralement le genre de choses que les nouveaux contributeurs regardent avant même de regarder votre code, pour savoir si votre projet est le bon endroit pour qu’ils passent leur temps.
 
-✅ fichiers README, bien qu’ils prennent du temps à préparer, sont souvent négligés par les mainteneurs occupés. Pouvez-vous trouver un exemple particulièrement descriptif? Remarque: il y a quelques [outils pour aider à créer de bons README] (https://www.makeareadme.com/) que vous voudrez peut-être essayer.
+✅ fichiers README, bien qu’ils prennent du temps à préparer, sont souvent négligés par les mainteneurs occupés. Pouvez-vous trouver un exemple particulièrement descriptif? Remarque: il y a quelques [outils pour aider à créer de bons README](https://www.makeareadme.com/) que vous voudrez peut-être essayer.
 
 ### Tâche : fusionner du code
 
 Les documents contributeurs aident les gens à contribuer au projet. Il explique les types de contributions que vous recherchez et comment le processus fonctionne. Les contributeurs devront passer par une série d’étapes pour pouvoir contribuer à votre référentiel sur GitHub :
 
 
-1. ** Forker votre repo ** Vous voudrez probablement que les gens _fork_ votre projet. La duplication signifie la création d’un réplica de votre référentiel sur leur profil GitHub.
+1. **Forker votre repo** Vous voudrez probablement que les gens _fork_ votre projet. La duplication signifie la création d’un réplica de votre référentiel sur leur profil GitHub.
 1. **Cloner**. De là, ils cloneront le projet sur leur ordinateur local. 
 1. **Créer une branche**. Vous voudrez leur demander de créer une _branche_ pour leur travail. 
 1. **Concentrez leur changement sur un seul domaine**. Demandez aux contributeurs de concentrer leurs contributions sur une chose à la fois - de cette façon, les chances que vous puissiez _fusionner_ dans leur travail sont plus élevées. Imaginez qu’ils écrivent un correctif de bogue, ajoutent une nouvelle fonctionnalité et mettent à jour plusieurs tests - que se passe-t-il si vous le souhaitez ou si vous ne pouvez implémenter que 2 modifications sur 3 ou 1 sur 3?
@@ -232,7 +232,7 @@ Passons en revue un flux de travail de contributeur. Supposons que le contribute
    git merge main
    ```
 
-   Cela apportera tous les changements de " principal " dans votre branche et j’espère que vous pourrez simplement continuer. Sinon, VS Code vous dira où Git est _confus_ et vous modifiez simplement les fichiers affectés pour dire quel contenu est le plus précis.
+   Cela apportera tous les changements de `main` dans votre branche et j’espère que vous pourrez simplement continuer. Sinon, VS Code vous dira où Git est _confus_ et vous modifiez simplement les fichiers affectés pour dire quel contenu est le plus précis.
 
 1. **Envoyez votre travail à GitHub**. L’envoi de votre travail à GitHub signifie deux choses. Pousser votre succursale à votre dépôt, puis ouvrir un PR, Pull Request.
 
@@ -252,7 +252,7 @@ Passons en revue un flux de travail de contributeur. Supposons que le contribute
 
    Assurez-vous d’accéder à la page GitHub pour le référentiel duppliqué suivant et supprimez la branche distante que vous venez d’y pousser.
 
-`pull request` semble être un terme stupide parce que vous voulez vraiment pousser vos modifications au projet. Mais le responsable (propriétaire du projet) ou l’équipe principale doit prendre en compte vos modifications avant de la fusionner avec la branche " principale " du projet, vous demandez donc vraiment une décision de modification à un responsable.  
+`Pull request` semble être un terme stupide parce que vous voulez vraiment pousser vos modifications au projet. Mais le responsable (propriétaire du projet) ou l’équipe principale doit prendre en compte vos modifications avant de la fusionner avec la branche " principale " du projet, vous demandez donc vraiment une décision de modification à un responsable.  
 
 Une pull request est l’endroit idéal pour comparer et discuter des différences introduites sur une branche avec des révisions, des commentaires, des tests intégrés, etc. Une bonne pull request suit à peu près les mêmes règles qu’un message de validation. Vous pouvez ajouter une référence à un problème dans le suivi des problèmes, lorsque votre travail, par exemple, résout un problème. Cela se fait à l’aide d’un `#` suivi du numéro de votre problème. Par exemple `#97`.
 
@@ -266,9 +266,9 @@ Mettez à jour votre branche de travail locale actuelle avec tous les nouveaux c
 
 Tout d’abord, trouvons un référentiel (ou **repo**) sur GitHub qui vous intéresse et auquel vous souhaitez apporter une modification. Vous voudrez copier son contenu sur votre machine.
 
-✅ Un bon moyen de trouver des repos " conviviaux pour les débutants " est de [rechercher par la balise 'good-first-issue'] (https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
+✅ Un bon moyen de trouver des repos " conviviaux pour les débutants " est de [rechercher par la balise 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-! [Copier un référentiel localement] (images/clone_repo.png)
+![Copy a repo locally](images/clone_repo.png)
 
 Il existe plusieurs façons de copier du code. Une façon consiste à " cloner " le contenu du référentiel, en utilisant HTTPS, SSH ou en utilisant l’interface de ligne de commande GitHub CLI (Interface de ligne de commande). 
 
@@ -278,7 +278,7 @@ Ouvrez votre terminal et clonez le référentiel comme suit:
 Pour travailler sur le projet, basculez vers le dossier de droite :
 `cd ProjectURL`
 
-Vous pouvez également ouvrir l’ensemble du projet à l’aide de [Codespaces](https://github.com/features/codespaces), de l’éditeur de code intégré / environnement de développement cloud de GitHub ou de [GitHub Desktop] (https://desktop.github.com/).
+Vous pouvez également ouvrir l’ensemble du projet à l’aide de [Codespaces](https://github.com/features/codespaces), de l’éditeur de code intégré / environnement de développement cloud de GitHub ou de [GitHub Desktop](https://desktop.github.com/).
 
 Enfin, vous pouvez télécharger le code dans un dossier compressé. 
 
@@ -294,20 +294,20 @@ Les projets peuvent également avoir des discussions dans des forums, des listes
 
 ---
 
-## Défi 🚀
+## 🚀 Challenge
 
 Associez-vous à un ami pour travailler sur le code de l’autre. Créez un projet en collaboration, bifurquez du code, créez des branches et fusionnez les modifications.
 
 ## Quiz de post-lecture
 [Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4)
 
-## Examen &Auto-apprentissage
+## Examen & Auto-apprentissage
 
 En savoir plus sur [contribuer à un logiciel open source](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution). 
 
 [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/).
 
-Pratique, pratique, pratique. GitHub a d’excellents chemins d’apprentissage disponibles via [lab.github.com] (https://lab.github.com/):
+Pratique, pratique, pratique. GitHub a d’excellents chemins d’apprentissage disponibles via [lab.github.com](https://lab.github.com/):
 
 - [Première semaine sur GitHub](https://lab.github.com/githubtraining/first-semaine-sur-github)
 
