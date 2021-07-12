@@ -80,7 +80,7 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
         modified:   file2.txt
    ```
 
-   En règle générale, une commande 'git status' vous indique des choses comme quels fichiers sont prêts à être _enregistrés_ dans le référentiel ou contient des modifications que vous voudrez peut-être conserver.
+   En règle générale, une commande `git status` vous indique des choses comme quels fichiers sont prêts à être _enregistrés_ dans le référentiel ou contient des modifications que vous voudrez peut-être conserver.
 
 1. **Ajouter tous les fichiers pour le suivi**
    Cela s’appelle aussi fichiers intermédiaires/ ajout de fichiers à la zone de transit.
