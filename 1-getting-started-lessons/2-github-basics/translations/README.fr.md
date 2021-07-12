@@ -19,14 +19,14 @@ Dans cette leçon, nous allons couvrir :
 ### Prérequis
 
 Avant de commencer, vous devrez vérifier si Git est installé. Dans le type de terminal : 
-'git --version'
+`git --version`
 
 Si Git n’est pas installé, [télécharger Git](https://git-scm.com/downloads). Ensuite, configurez votre profil Git local dans le terminal:
-* 'git config --global user.name " votre-nom"'
-* 'git config --global user.email " your-email"'
+* `git config --global user.name " votre-nom"`
+* `git config --global user.email " your-email"`
 
 Pour vérifier si Git est déjà configuré, vous pouvez taper :
-'git config --list'
+`git config --list`
 
 Vous aurez également besoin d’un compte GitHub, d’un éditeur de code (comme Visual Studio Code), et vous devrez ouvrir votre terminal (ou : invite de commandes).
 
@@ -53,13 +53,13 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
 1. **Accédez à votre dossier de travail**. Dans votre terminal, basculez vers le dossier (également connu sous le nom de répertoire) que vous souhaitez démarrer le suivi. Tapez :
 
-   '''bash
+   ```bash
    cd [nom de votre dossier]
    ```
 
 1. **Initialiser un dépôt git**. Dans votre type de projet :
 
-   '''bash
+   ```bash
    git init
    ```
 
@@ -71,13 +71,13 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
    la sortie peut ressembler à ceci :
 
-   '''sortie
-   Modifications non mises en scène pour la validation :
-   (utilisez " git add <file>... " pour mettre à jour ce qui sera engagé)
-   (utilisez " git checkout -- <file>... " pour ignorer les modifications dans le répertoire de travail)
+   ```output
+   Changes not staged for commit:
+   (use "git add <file>..." to update what will be committed)
+   (use "git checkout -- <file>..." to discard changes in working directory)
 
-        modifié: fichier.txt
-        modifié: file2.txt
+        modified:   file.txt
+        modified:   file2.txt
    ```
 
    En règle générale, une commande 'git status' vous indique des choses comme quels fichiers sont prêts à être _enregistrés_ dans le référentiel ou contient des modifications que vous voudrez peut-être conserver.
@@ -85,15 +85,15 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 1. **Ajouter tous les fichiers pour le suivi**
    Cela s’appelle aussi fichiers intermédiaires/ ajout de fichiers à la zone de transit.
 
-   '''bash
+   ```bash
    git add .
    ```
 
-   L’argument 'git add' plus '.' indique que tous vos fichiers &changes pour le suivi. 
+   L’argument `git add` plus `.` indique que tous vos fichiers &changes pour le suivi. 
 
 1. **Ajouter les fichiers sélectionnés pour le suivi**
 
-   '''bash
+  ```bash
    git add [nom du fichier ou du dossier]
    ```
 
@@ -101,7 +101,7 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
 1. **Défaire la scène de tous les fichiers**
 
-   '''bash
+   ```bash
    git reset
    ```
 
@@ -109,7 +109,7 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
 1. **Défaire un fichier particulier**
 
-   '''bash
+   ```bash
    git reset [nom du fichier ou du dossier]
    ```
 
@@ -117,7 +117,7 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
 1. **Persistance de votre travail**. À ce stade, vous avez ajouté les fichiers à un soi-disant _staging area_. Un endroit où Git suit vos fichiers. Pour rendre la modification permanente, vous devez _valider_ les fichiers. Pour ce faire, vous créez un _commit_ avec la commande 'git commit'. Un _commit_ représente un point d’enregistrement dans l’historique de votre référentiel. Tapez ce qui suit pour créer un _commit_ :
 
-   '''bash
+   ```bash
    git commit -m " premier commit "
    ```
 
@@ -127,15 +127,15 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
    > Remarque, avant de taper la commande, accédez à votre page de référentiel GitHub pour trouver l’URL du référentiel. Vous l’utiliserez dans la commande ci-dessous. Remplacez " repository_name " par votre URL GitHub.
 
-   '''bash
+   ```bash
    git remote add origin https://github.com/username/repository_name.git
    ```
 
-   Cela crée un _remote_, ou connexion, nommé " origin " pointant vers le référentiel GitHub que vous avez créé précédemment.
+   Cela crée un _remote_, ou une connexion, nommé " origin " pointant vers le référentiel GitHub que vous avez créé précédemment.
 
 1. **Envoyer des fichiers locaux à GitHub**. Jusqu’à présent, vous avez créé une _connexion_ entre le référentiel local et le référentiel GitHub.So far you’ve created a _connection_ between the local repo and the GitHub repo. Envoyons ces fichiers à GitHub avec la commande suivante 'git push', comme suit: 
 
-   '''bash
+   ```bash
    git push -u origin main
    ```
 
@@ -143,21 +143,21 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
 1. **Pour ajouter d’autres modifications**. Si vous souhaitez continuer à apporter des modifications et à les pousser vers GitHub, il vous suffit d’utiliser les trois commandes suivantes:
 
-   '''bash
-   git ajouter .
+   ```bash
+   git add .
    git commit -m " tapez votre message de validation ici "
    git push
    ```
 
-   > Conseil, vous pouvez également adopter un fichier '.gitignore' pour empêcher les fichiers que vous ne souhaitez pas suivre d’apparaître sur GitHub - comme ce fichier de notes que vous stockez dans le même dossier mais n’a pas sa place sur un référentiel public. Vous pouvez trouver des modèles pour les fichiers '.gitignore' dans [.gitignore templates](https://github.com/github/gitignore).
+   > Conseil, vous pouvez également adopter un fichier `.gitignore` pour empêcher les fichiers que vous ne souhaitez pas suivre d’apparaître sur GitHub - comme ce fichier de notes que vous stockez dans le même dossier mais n’a pas sa place sur un référentiel public. Vous pouvez trouver des modèles pour les fichiers `.gitignore` dans [.gitignore templates](https://github.com/github/gitignore).
 
 #### Valider les messages
 
 Une grande ligne d’objet de commit Git complète la phrase suivante:
 S’il est appliqué, ce commit <votre ligne d’objet ici>
 
-Pour le sujet, utilisez l’impératif, présent: " changement " pas " changé " ni " changements ". 
-Comme dans le sujet, dans le corps (facultatif) utilisez également l’impératif, le présent. Le corps doit inclure la motivation du changement et contraster cela avec le comportement précédent. Vous expliquez le " pourquoi ", pas le " comment ".
+Pour le sujet, utilisez l’impératif, présent: "changement" pas "changé" ni "changements". 
+Comme dans le sujet, dans le corps (facultatif) utilisez également l’impératif, le présent. Le corps doit inclure la motivation du changement et contraster cela avec le comportement précédent. Vous expliquez le `pourquoi`, pas le `comment`.
 
 ✅ Prenez quelques minutes pour surfer sur GitHub. Pouvez-vous trouver un très bon message d’engagement? Pouvez-vous en trouver un vraiment minime? Quelles informations pensez-vous être les plus importantes et les plus utiles à transmettre dans un message de validation ?
 
@@ -167,7 +167,7 @@ La principale raison de mettre des choses sur GitHub était de permettre de coll
 
 ## Travailler sur des projets avec d’autres
 
-Dans votre référentiel, accédez à " Insights > Community " pour voir comment votre projet se compare aux normes communautaires recommandées.
+Dans votre référentiel, accédez à `Insights > Community ` pour voir comment votre projet se compare aux normes communautaires recommandées.
 
    Voici quelques éléments qui peuvent améliorer votre référentiel GitHub :
    - **Description**. Avez-vous ajouté une description pour votre projet ?
@@ -193,41 +193,41 @@ Les documents contributeurs aident les gens à contribuer au projet. Il explique
 
 ✅ Imaginez une situation où les branches sont particulièrement essentielles à l’écriture et à l’expédition d’un bon code. À quels cas d’utilisation pouvez-vous penser ?
 
-> Remarque, soyez le changement que vous voulez voir dans le monde et créez également des branches pour votre propre travail. Tous les commits que vous faites seront effectués sur la branche dans laquelle vous êtes actuellement " extrait ". Utilisez 'git status' pour voir de quelle branche il s’agit.
+> Remarque, soyez le changement que vous voulez voir dans le monde et créez également des branches pour votre propre travail. Tous les commits que vous faites seront effectués sur la branche que vous avez actuellement "extraite". Utilisez `git status` pour voir de quelle branche il s’agit.
 
 Passons en revue un flux de travail de contributeur. Supposons que le contributeur a déjà _forked_ et _cloné_ le référentiel afin qu’il ait un référentiel Git prêt à être travaillé, sur sa machine locale :
 
-1. **Créer une branche**. Utilisez la commande 'git branch' pour créer une branche qui contiendra les modifications qu’ils veulent contribuer:
+1. **Créer une branche**. Utilisez la commande `git branch` pour créer une branche qui contiendra les modifications qu’ils veulent contribuer:
 
-   '''bash
+   ```bash
    git branch [nom_branche]
    ```
 
-1. **Passer à la branche de travail**. Basculez vers la branche spécifiée et mettez à jour le répertoire de travail avec 'git checkout':
+1. **Passer à la branche de travail**. Basculez vers la branche spécifiée et mettez à jour le répertoire de travail avec `git checkout`:
 
-   '''bash
+   ```bash
    git checkout [nom_branche]
    ```
 
 1. **Travailler**. À ce stade, vous souhaitez ajouter vos modifications. N’oubliez pas d’en parler à Git avec les commandes suivantes:
 
-   '''bash
+   ```bash
    git add .
    git commit -m " mes modifications "
    ```
 
    Assurez-vous de donner à votre engagement une bonne réputation, pour votre bien ainsi que pour le mainteneur du repo que vous aidez.
 
-1. **Combinez votre travail avec la branche 'main'**. À un moment donné, vous avez fini de travailler et vous voulez combiner votre travail avec celui de la branche " principale ". La branche " principale " a peut-être changé entre-temps, alors assurez-vous de la mettre à jour au plus tard avec les commandes suivantes:
+1. **Combinez votre travail avec la branche `main`**. À un moment donné, vous avez fini de travailler et vous voulez combiner votre travail avec celui de la branche `main`. La branche `main`" a peut-être changé entre-temps, alors assurez-vous de la mettre à jour au plus tard avec les commandes suivantes:
 
-   '''bash
+   ```bash
    git checkout principal
    git pull
    ```
 
    À ce stade, vous voulez vous assurer que tous les _conflits_, les situations où Git ne peut pas facilement _combiner_ les modifications se produisent dans votre branche de travail. Par conséquent, exécutez les commandes suivantes :
 
-   '''bash
+   ```bash
    git checkout [branch_name]
    git merge main
    ```
@@ -236,7 +236,7 @@ Passons en revue un flux de travail de contributeur. Supposons que le contribute
 
 1. **Envoyez votre travail à GitHub**. L’envoi de votre travail à GitHub signifie deux choses. Pousser votre succursale à votre dépôt, puis ouvrir un PR, Pull Request.
 
-   '''bash
+   ```bash
    git push --set-upstream origin [nom_branche]
    ```
 
@@ -246,21 +246,21 @@ Passons en revue un flux de travail de contributeur. Supposons que le contribute
 
 1. **Nettoyer**. Il est considéré comme une bonne pratique de _clean up_ après avoir fusionné avec succès un PR. You want to clean up both your local branch and the branch you pushed to GitHub. Commençons par le supprimer localement avec la commande suivante: 
 
-   '''bash
+   ```bash
    git branch -d [nom_branche]
    ```
 
    Assurez-vous d’accéder à la page GitHub pour le référentiel duppliqué suivant et supprimez la branche distante que vous venez d’y pousser.
 
-" Pull request " semble être un terme stupide parce que vous voulez vraiment pousser vos modifications au projet. Mais le responsable (propriétaire du projet) ou l’équipe principale doit prendre en compte vos modifications avant de la fusionner avec la branche " principale " du projet, vous demandez donc vraiment une décision de modification à un responsable.  
+`pull request` semble être un terme stupide parce que vous voulez vraiment pousser vos modifications au projet. Mais le responsable (propriétaire du projet) ou l’équipe principale doit prendre en compte vos modifications avant de la fusionner avec la branche " principale " du projet, vous demandez donc vraiment une décision de modification à un responsable.  
 
-Une pull request est l’endroit idéal pour comparer et discuter des différences introduites sur une branche avec des révisions, des commentaires, des tests intégrés, etc. Une bonne pull request suit à peu près les mêmes règles qu’un message de validation. Vous pouvez ajouter une référence à un problème dans le suivi des problèmes, lorsque votre travail, par exemple, résout un problème. Cela se fait à l’aide d’un " # " suivi du numéro de votre problème. Par exemple '#97'.
+Une pull request est l’endroit idéal pour comparer et discuter des différences introduites sur une branche avec des révisions, des commentaires, des tests intégrés, etc. Une bonne pull request suit à peu près les mêmes règles qu’un message de validation. Vous pouvez ajouter une référence à un problème dans le suivi des problèmes, lorsque votre travail, par exemple, résout un problème. Cela se fait à l’aide d’un `#` suivi du numéro de votre problème. Par exemple `#97`.
 
 🤞croisons les doigts pour que toutes les vérifications réussissent et que le ou les propriétaires du projet fusionnent vos modifications dans le projet🤞
 
 Mettez à jour votre branche de travail locale actuelle avec tous les nouveaux commits de la branche distante correspondante sur GitHub :
 
-'git pull'
+`git pull`
 
 ## Comment contribuer à l’open source
 
@@ -273,10 +273,10 @@ Tout d’abord, trouvons un référentiel (ou **repo**) sur GitHub qui vous int�
 Il existe plusieurs façons de copier du code. Une façon consiste à " cloner " le contenu du référentiel, en utilisant HTTPS, SSH ou en utilisant l’interface de ligne de commande GitHub CLI (Interface de ligne de commande). 
 
 Ouvrez votre terminal et clonez le référentiel comme suit:
-'git clone https://github.com/ProjectURL'
+`git clone https://github.com/ProjectURL`
 
 Pour travailler sur le projet, basculez vers le dossier de droite :
-'cd ProjectURL'
+`cd ProjectURL`
 
 Vous pouvez également ouvrir l’ensemble du projet à l’aide de [Codespaces](https://github.com/features/codespaces), de l’éditeur de code intégré / environnement de développement cloud de GitHub ou de [GitHub Desktop] (https://desktop.github.com/).
 
