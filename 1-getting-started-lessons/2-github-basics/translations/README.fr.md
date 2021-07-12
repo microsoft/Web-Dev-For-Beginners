@@ -115,7 +115,7 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
    Cette commande nous aide à défaire un fichier particulier à la fois que nous ne voulons pas inclure pour le prochain commit.
 
-1. **Persistance de votre travail**. À ce stade, vous avez ajouté les fichiers à un soi-disant _staging area_. Un endroit où Git suit vos fichiers. Pour rendre la modification permanente, vous devez _valider_ les fichiers. Pour ce faire, vous créez un _commit_ avec la commande 'git commit'. Un _commit_ représente un point d’enregistrement dans l’historique de votre référentiel. Tapez ce qui suit pour créer un _commit_ :
+1. **Persistance de votre travail**. À ce stade, vous avez ajouté les fichiers à un soi-disant _staging area_. Un endroit où Git suit vos fichiers. Pour rendre la modification permanente, vous devez _valider_ les fichiers. Pour ce faire, vous créez un _commit_ avec la commande `git commit`. Un _commit_ représente un point d’enregistrement dans l’historique de votre référentiel. Tapez ce qui suit pour créer un _commit_ :
 
    ```bash
    git commit -m " premier commit "
@@ -123,7 +123,7 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
    Cela valide tous vos fichiers, en ajoutant le message " premier commit ". Pour les futurs messages de validation, vous voudrez être plus descriptif dans votre description pour indiquer le type de modification que vous avez apportée.
 
-1. **Connectez votre référentiel Git local avec GitHub**. Un référentiel Git est bon sur votre machine, mais à un moment donné, vous voulez avoir une sauvegarde de vos fichiers quelque part et également inviter d’autres personnes à travailler avec vous sur votre dépôt. GitHub est un excellent endroit pour le faire. N’oubliez pas que nous avons déjà créé un référentiel sur GitHub, donc la seule chose que nous devons faire est de connecter notre référentiel Git local à GitHub.Remember we’ve already created a repo on GitHub so the only thing we need to do is to connect our local Git repo with GitHub. La commande 'git remote add' fera exactement cela. Tapez la commande suivante :
+1. **Connectez votre référentiel Git local avec GitHub**. Un référentiel Git est bon sur votre machine, mais à un moment donné, vous voulez avoir une sauvegarde de vos fichiers quelque part et également inviter d’autres personnes à travailler avec vous sur votre dépôt. GitHub est un excellent endroit pour le faire. N’oubliez pas que nous avons déjà créé un référentiel sur GitHub, donc la seule chose que nous devons faire est de connecter notre référentiel Git local à GitHub.Remember we’ve already created a repo on GitHub so the only thing we need to do is to connect our local Git repo with GitHub. La commande `git remote add` fera exactement cela. Tapez la commande suivante :
 
    > Remarque, avant de taper la commande, accédez à votre page de référentiel GitHub pour trouver l’URL du référentiel. Vous l’utiliserez dans la commande ci-dessous. Remplacez " repository_name " par votre URL GitHub.
 
@@ -133,7 +133,7 @@ Supposons que vous ayez un dossier localement avec un projet de code et que vous
 
    Cela crée un _remote_, ou une connexion, nommé " origin " pointant vers le référentiel GitHub que vous avez créé précédemment.
 
-1. **Envoyer des fichiers locaux à GitHub**. Jusqu’à présent, vous avez créé une _connexion_ entre le référentiel local et le référentiel GitHub.So far you’ve created a _connection_ between the local repo and the GitHub repo. Envoyons ces fichiers à GitHub avec la commande suivante 'git push', comme suit: 
+1. **Envoyer des fichiers locaux à GitHub**. Jusqu’à présent, vous avez créé une _connexion_ entre le référentiel local et le référentiel GitHub.So far you’ve created a _connection_ between the local repo and the GitHub repo. Envoyons ces fichiers à GitHub avec la commande suivante `git push`, comme suit: 
 
    ```bash
    git push -u origin main
