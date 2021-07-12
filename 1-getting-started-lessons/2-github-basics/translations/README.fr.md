@@ -268,7 +268,7 @@ Tout d’abord, trouvons un référentiel (ou **repo**) sur GitHub qui vous int�
 
 ✅ Un bon moyen de trouver des repos " conviviaux pour les débutants " est de [rechercher par la balise 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copy a repo locally](images/clone_repo.png)
+![Copy a repo locally](../images/clone_repo.png)
 
 Il existe plusieurs façons de copier du code. Une façon consiste à " cloner " le contenu du référentiel, en utilisant HTTPS, SSH ou en utilisant l’interface de ligne de commande GitHub CLI (Interface de ligne de commande). 
 
