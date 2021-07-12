@@ -267,7 +267,7 @@ Primeiramente, vamos encontrar um repositório (ou **repo**) no GitHub de intere
 
 ✅ Uma boa maneira de encontrar repos 'iniciantes' é [buscar usando a tag  'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copiar um repo localmente](images/clone_repo.png)
+![Copiar um repo localmente](../images/clone_repo.png)
 
 Existem várias maneiras de copiar códigos. Uma maneira é "clonar" o conteúdo do repositório, usando HTTPS, SSH ou usando o GitHub CLI (Command Line Interface). 
 
