@@ -261,57 +261,57 @@ Atualize seu branch de trabalho local atual com todos os novos commits do branch
 
 `git pull`
 
-## How to contribute to open source
+## Como contribuir com Open Source
 
-First, let's find a repository (or **repo**) on GitHub of interest to you and to which you'd like to contribute a change. You will want to copy its contents to your machine.
+Primeiramente, vamos encontrar um repositório (ou **repo**) no GitHub de interesse para você e para o qual você gostaria de contribuir. Você vai querer copiar o conteúdo para desse repo parasua máquina.
 
-✅ A good way to find 'beginner-friendly' repos is to [search by the tag 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
+✅ Uma boa maneira de encontrar repos 'iniciantes' é [buscar usando a tag  'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copy a repo locally](images/clone_repo.png)
+![Copiar um repo localmente](images/clone_repo.png)
 
-There are several ways of copying code. One way is to "clone" the contents of the repository, using HTTPS, SSH, or using the GitHub CLI (Command Line Interface). 
+Existem várias maneiras de copiar códigos. Uma maneira é "clonar" o conteúdo do repositório, usando HTTPS, SSH ou usando o GitHub CLI (Command Line Interface). 
 
-Open your terminal and clone the repository like so:
+Abra seu terminal e clone o repositório assim:
 `git clone https://github.com/ProjectURL`
 
-To work on the project, switch to the right folder:
+Para trabalhar no projeto, mude para a pasta certa:
 `cd ProjectURL`
 
-You can also open the entire project using [Codespaces](https://github.com/features/codespaces), GitHub's embedded code editor / cloud development environment, or [GitHub Desktop](https://desktop.github.com/).
+Você também pode abrir todo o projeto usando [Codespaces](https://github.com/features/codespaces), O editor de código incorporado do GitHub/ ambiente de desenvolvimento em nuvem, ou o [GitHub Desktop](https://desktop.github.com/).
 
-Lastly, you can download the code in a zipped folder. 
+Por  último, você pode baixar o código em uma pasta com zíper.
 
-### A few more interesting things about GitHub
+###  Mais algumas coisas interessantes sobre o GitHub
 
-You can star, watch and/or "fork" any public repository on GitHub. You can find your starred repositories in the top-right drop-down menu. It's like bookmarking, but for code. 
+Você pode dar uma strela, assistir e/ou "bifurcação" em qualquer repositório público no GitHub. Você pode encontrar seus repositórios estrelados no menu suspenso de cima para a direita. É como marcar, mas para código. 
 
-Projects have an issue tracker, mostly on GitHub in the "Issues" tab unless indicated otherwise, where people discuss issues related to the project. And the Pull Requests tab is where people discuss and review changes that are in progress.
+Os projetos têm um rastreador de problemas, no GitHub na aba "Problemas", a menos que indicado o contrário, onde as pessoas discutem questões relacionadas ao projeto. E a aba de Pull Requests é onde as pessoas discutem e analisam as mudanças que estão em andamento.
 
-Projects might also have discussion in forums, mailing lists, or chat channels like Slack, Discord or IRC.
+Os projetos também podem ter discussão em fóruns, listas de discussão ou canais de bate-papo como Slack, Discord ou IRC.
 
-✅ Take a look around your new GitHub repo and try a few things, like editing settings, adding information to your repo, and creating a project (like a Kanban board). There's a lot you can do!
+✅ Dê uma olhada no seu novo GitHub repo e experimente algumas coisas, como editar configurações, adicionar informações ao seu repo e criar um projeto (como uma placa Kanban). Há muita coisa que você pode fazer!
 
 ---
 
-## 🚀 Challenge 
+## 🚀 Desafio 
 
-Pair with a friend to work on each other's code. Create a project collaboratively, fork code, create branches, and merge changes.
+Parear com uma amiga para trabalhar no código uma da outra. Crie um projeto de forma colaborativa, de fork no código, crie branches e de merge mudanças.
 
-## Post-Lecture Quiz
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4)
+## Quiz pós-aula
+[Quiz pós-aula](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4)
 
-## Review & Self Study
+## Revisão & Auto estudo
 
-Read more about [contributing to open source software](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution). 
+Leia mais sobre [contribuindo para o software de código aberto](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution). 
 
 [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/).
 
-Practice, practice, practice. GitHub has great learning paths available via [lab.github.com](https://lab.github.com/):
+Pratique, pratique, pratique. GitHub tem ótimos caminhos de aprendizagem disponíveis via [lab.github.com](https://lab.github.com/):
 
-- [First Week on GitHub](https://lab.github.com/githubtraining/first-week-on-github)
+- [Primeira semana no GitHub](https://lab.github.com/githubtraining/first-week-on-github)
 
-You'll also find more advanced labs. 
+Você também encontrará laboratórios mais avançados.
 
-## Assignment 
+## Lição de casa
 
-Complete [the First Week on GitHub training lab](https://lab.github.com/githubtraining/first-week-on-github)
+Complete [o lab a Primeira Semana gitHub](https://lab.github.com/githubtraining/first-week-on-github)
