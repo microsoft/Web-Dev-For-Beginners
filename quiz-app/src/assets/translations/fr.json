@@ -1,0 +1,376 @@
+[
+	{
+		"title": "Développement Web pour les débutants : Quiz",
+		"complete": "Félicitations, vous avez terminé le quiz !",
+		"error": "Désolé, essayez encore",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "Leçon 1 - Introduction aux langages de programmation : quiz de pré-lecture",
+				"quiz": [
+					{
+						"questionText": "Un programme peut être créé sans que le créateur n'écrive de code",
+						"answerOptions": [
+							{
+								"answerText": "vrai",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "faux",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Les langages de bas niveau sont un choix populaire pour",
+						"answerOptions": [
+							{
+								"answerText": "Les sites internet",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Le Hardware",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Les logiciels de jeux vidéo",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Lequel de ces outils serait le plus susceptible de se trouver dans l'environnement d'un développeur Web ?",
+						"answerOptions": [
+							{
+								"answerText": "Du hardware, comme un Raspberry Pi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Des outils de développement de navigateur",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "De la documentation de système d'exploitation",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Leçon 1 - Introduction aux langages de programmation : quiz post-lecture",
+				"quiz": [
+					{
+						"questionText": "Quelle langue utiliseriez-vous le plus probablement pour créer un site Web ?",
+						"answerOptions": [
+							{
+								"answerText": "Langage machine",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Les environnements de développement sont uniques à chaque développeur",
+						"answerOptions": [
+							{
+								"answerText": "vrai",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "faux",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Que fera un développeur pour corriger un code bugué ?",
+						"answerOptions": [
+							{
+								"answerText": "Mise en évidence de la syntaxe",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Débugage",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Formatage du code",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "Leçon 2 - Introduction à GitHub : quiz de pré-lecture",
+				"quiz": [
+					{
+						"questionText": "Comment créer un dépôt Git ?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Que fait git add ?",
+						"answerOptions": [
+							{
+								"answerText": "Valide votre code",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ajoute vos fichiers à une zone de transit pour le suivi",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Ajoute vos fichiers à GitHub",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Comment vérifier si git est installé sur votre ordinateur ?",
+						"answerOptions": [
+							{
+								"answerText": "type git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "type git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "type git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "Leçon 2 - Introduction à GitHub : quiz post-lecture",
+				"quiz": [
+					{
+						"questionText": "Un endroit pour comparer et discuter des différences introduites sur une branche avec des critiques, des commentaires, des tests intégrés, etc. est :",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Une Pull Request",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Une branche de fonctionnalité",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Comment obtiendriez-vous tous les commits d'une branche distante?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Comment passer d'une branche à une autre?",
+						"answerOptions": [
+							{
+								"answerText": "git switch [nom de la branche]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [nom de la branche]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [nom de la branche]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "Leçon 3 - Création de pages Web accessibles : quiz de pré-lecture",
+				"quiz": [
+					{
+						"questionText": "Un site Web accessible peut être vérifié dans quel outil de navigateur",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Vous avez besoin d'un lecteur d'écran physique pour tester l'accessibilité pour les utilisateurs malvoyants",
+						"answerOptions": [
+							{
+								"answerText": "vrai",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "faux",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "L'accessibilité n'est importante que sur les sites Web du gouvernement",
+						"answerOptions": [
+							{
+								"answerText": "vrai",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "faux",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "Leçon 3 - Création de pages Web accessibles : quiz post-lecture",
+				"quiz": [
+					{
+						"questionText": "Lighthouse vérifie uniquement les problèmes d'accessibilité",
+						"answerOptions": [
+							{
+								"answerText": "vrai",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "faux",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Les palettes les couleurs sans danger aident les gens à",
+						"answerOptions": [
+							{
+								"answerText": "daltonisme",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "déficiences visuelles",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "les deux ci-dessus",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Les liens descriptifs sont essentiels pour les sites Web accessibles",
+						"answerOptions": [
+							{
+								"answerText": "vrai",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "faux",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "Leçon 4 - Principes de base de JavaScript - Types de données : quiz pré-conférence",
+				"quiz": [
+					{
+						"questionText": "Les booléens sont un type de données que vous pouvez utiliser pour tester la longueur d'une chaîne",
+						"answerOptions": [
+							{
+								"answerText": "vrai",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "faux",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Ce qui suit est une opération que vous pouvez effectuer sur une chaîne",
+						"answerOptions": [
+							{
+								"answerText": "concatenation",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "appending",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "splicing",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== et === sont interchangeables",
+						"answerOptions": [
+							{
+								"answerText": "vrai",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "faux",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
