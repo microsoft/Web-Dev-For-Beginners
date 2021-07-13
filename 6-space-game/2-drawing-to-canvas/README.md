@@ -131,7 +131,7 @@ You will build a web page with a Canvas element. It should render a black screen
 
 ### Recommended steps to start development
 
-Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
+Download the [starter code](./your-work) that have been created for you in the `your-work` sub folder. It should contain the following:
 
 ```bash
 -| assets
