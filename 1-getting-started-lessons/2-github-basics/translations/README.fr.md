@@ -5,8 +5,8 @@ Cette leçon couvre les principes de base de GitHub, une plateforme permettant d
 ![Intro to GitHub](/sketchnotes/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Quiz de préconférence
-[Quiz de préconférenc](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3)
+## Quiz préalable
+[Quiz préalable](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3)
 
 ## Introduction
 
@@ -298,8 +298,8 @@ Les projets peuvent également avoir des discussions dans des forums, des listes
 
 Associez-vous à un ami pour travailler sur le code de l’autre. Créez un projet en collaboration, bifurquez du code, créez des branches et fusionnez les modifications.
 
-## Quiz de postconférence
-[Quiz de postconférence](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4)
+## Quiz de validation des connaissances
+[Quiz de validation des connaissances](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4)
 
 ## Examen & Auto-apprentissage
 
