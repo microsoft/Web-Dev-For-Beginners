@@ -5,8 +5,8 @@ Cette leçon couvre les bases des langages de programmation. Les sujets abordés
 ![Intro Programming](/sketchnotes/webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Pre-Lecture Quiz
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)
+## Quiz préalable
+[Quiz préalablez](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)
 
 ## introduction
 
@@ -181,8 +181,8 @@ Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tourne
 
 Comparez quelques langages de programmation. Quelles sont certaines des caractéristiques uniques de JavaScript par rapport à Java? Et COBOL vs Go?
 
-## Quiz post-conférence
-[Quiz post-conférence](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2)
+## Quiz de validation des connaissances
+[Quiz de validation des connaissances](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2)
 
 ## Révision et auto-étude
 
