@@ -6,7 +6,7 @@
 		"quizzes": [
 			{
 				"id": 1,
-				"title": "Leçon 1 - Introduction aux langages de programmation : quiz de préconférence",
+				"title": "Leçon 1 - Introduction aux langages de programmation : quiz préalable",
 				"quiz": [
 					{
 						"questionText": "Un programme peut être créé sans que le créateur n'écrive de code",
@@ -59,7 +59,7 @@
 			},
 			{
 				"id": 2,
-				"title": "Leçon 1 - Introduction aux langages de programmation : quiz de postconférence",
+				"title": "Leçon 1 - Introduction aux langages de programmation : quiz de validation des connaissances",
 				"quiz": [
 					{
 						"questionText": "Quelle langue utiliseriez-vous le plus probablement pour créer un site Web ?",
@@ -112,7 +112,7 @@
 			},
 			{
 				"id": 3,
-				"title": "Leçon 2 - Introduction à GitHub : quiz de préconférence",
+				"title": "Leçon 2 - Introduction à GitHub : quiz préalable",
 				"quiz": [
 					{
 						"questionText": "Comment créer un dépôt Git ?",
@@ -169,7 +169,7 @@
 			},
 			{
 				"id": 4,
-				"title": "Leçon 2 - Introduction à GitHub : quiz de postconférence",
+				"title": "Leçon 2 - Introduction à GitHub : quiz de validation des connaissances",
 				"quiz": [
 					{
 						"questionText": "Un endroit pour comparer et discuter des différences introduites sur une branche avec des critiques, des commentaires, des tests intégrés, etc. est :",
@@ -226,7 +226,7 @@
 			},
 			{
 				"id": 5,
-				"title": "Leçon 3 - Création de pages Web accessibles : quiz de préconférence",
+				"title": "Leçon 3 - Création de pages Web accessibles : quiz préalable",
 				"quiz": [
 					{
 						"questionText": "Un site Web accessible peut être vérifié dans quel outil de navigateur",
@@ -275,7 +275,7 @@
 			},
 			{
 				"id": 6,
-				"title": "Leçon 3 - Création de pages Web accessibles : quiz de postconférence",
+				"title": "Leçon 3 - Création de pages Web accessibles : quiz de validation des connaissances",
 				"quiz": [
 					{
 						"questionText": "Lighthouse vérifie uniquement les problèmes d'accessibilité",
@@ -324,7 +324,7 @@
 			},
 			{
 				"id": 7,
-				"title": "Leçon 4 - Principes de base de JavaScript - Types de données : quiz de préconférence",
+				"title": "Leçon 4 - Principes de base de JavaScript - Types de données : quiz préalable",
 				"quiz": [
 					{
 						"questionText": "Les booléens sont un type de données que vous pouvez utiliser pour tester la longueur d'une chaîne",
@@ -373,7 +373,7 @@
 			},
             {
                 "id": 8,
-                "title": "Leçon 4 - Notions de base de JavaScript - Types de données : quiz de postconférence",
+                "title": "Leçon 4 - Notions de base de JavaScript - Types de données : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Les constantes sont identiques à let et var pour déclarer des variables sauf que",
@@ -426,7 +426,7 @@
             },
             {
                 "id": 9,
-                "title": "Leçon 5 - Notions de base de JavaScript - Méthodes et fonctions : quiz de préconférence",
+                "title": "Leçon 5 - Notions de base de JavaScript - Méthodes et fonctions : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Qu’est-ce qu’un argument ?",
@@ -479,7 +479,7 @@
             },
             {
                 "id": 10,
-                "title": "Leçon 5 - Notions de base de JavaScript - Méthodes et fonctions : quiz de postconférence",
+                "title": "Leçon 5 - Notions de base de JavaScript - Méthodes et fonctions : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Des arguments doivent être fournis pour tous les paramètres d’une fonction",
@@ -532,7 +532,7 @@
             },
             {
                 "id": 11,
-                "title": "Leçon 6 - Notions de base de JavaScript - Prise de décisions : quiz de préconférence",
+                "title": "Leçon 6 - Notions de base de JavaScript - Prise de décisions : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "L’opérateur suivant == est appelé",
@@ -589,7 +589,7 @@
             },
             {
                 "id": 12,
-                "title": "Leçon 6 - Notions de base de JavaScript - Prise de décisions : quiz de postconférence",
+                "title": "Leçon 6 - Notions de base de JavaScript - Prise de décisions : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Que retournerait le code suivant : '1' == 1",
@@ -646,7 +646,7 @@
             },
             {
                 "id": 13,
-                "title": "Leçon 7 - Notions de base de JavaScript - Tableaux et boucles : quiz de préconférence",
+                "title": "Leçon 7 - Notions de base de JavaScript - Tableaux et boucles : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Pour faire référence à un élément spécifique dans un tableau, vous devez utiliser un",
@@ -703,7 +703,7 @@
             },
             {
                 "id": 14,
-                "title": "Leçon 7 - Notions de base de JavaScript - Tableaux et boucles : quiz de postconférence",
+                "title": "Leçon 7 - Notions de base de JavaScript - Tableaux et boucles : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Quelle partie d’une boucle for auriez-vous besoin de modifier pour incrémenter son itération de 5 ?",
@@ -756,7 +756,7 @@
             },
             {
                 "id": 15,
-                "title": "Leçon 8 - Projet Terrarium - Introduction au HTML : quiz de préconférence",
+                "title": "Leçon 8 - Projet Terrarium - Introduction au HTML : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "HTML signifie 'HyperText Mockup Language'",
@@ -805,7 +805,7 @@
             },
             {
                 "id": 16,
-                "title": "Leçon 8 - Projet Terrarium - Introduction au HTML : quiz de postconférence",
+                "title": "Leçon 8 - Projet Terrarium - Introduction au HTML : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Les Spans and Divs sont interchangeables",
@@ -858,7 +858,7 @@
             },
             {
                 "id": 17,
-                "title": "Leçon 9 - Projet Terrarium - Introduction au CSS : quiz de préconférence",
+                "title": "Leçon 9 - Projet Terrarium - Introduction au CSS : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Les éléments HTML doivent avoir une classe ou un id pour être stylés",
@@ -903,7 +903,7 @@
             },
             {
                 "id": 18,
-                "title": "Leçon 9 - Projet Terrarium - Introduction au CSS : quiz de postconférence",
+                "title": "Leçon 9 - Projet Terrarium - Introduction au CSS : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Vous pouvez écrire du css directement dans la section head de votre fichier HTML",
@@ -956,7 +956,7 @@
             },
             {
                 "id": 19,
-                "title": "Leçon 10 - Projet Terrarium - Manipulation DOM et clôture : quiz de préconférence",
+                "title": "Leçon 10 - Projet Terrarium - Manipulation DOM et clôture : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Le DOM signifie 'Document Object Management'",
@@ -1001,7 +1001,7 @@
             },
             {
                 "id": 20,
-                "title": "Leçon 10 - Projet Terrarium - Manipulation DOM et clôture : quiz de postconférence",
+                "title": "Leçon 10 - Projet Terrarium - Manipulation DOM et clôture : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Le DOM est un modèle pour représenter un document sur le web",
@@ -1054,7 +1054,7 @@
             },
             {
                 "id": 21,
-                "title": "Leçon 11 - Jeu de dactylographie : quiz de préconférence",
+                "title": "Leçon 11 - Jeu de dactylographie : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "La programmation pilotée par les événements se fait lorsqu’un utilisateur",
@@ -1115,7 +1115,7 @@
             },
             {
                 "id": 22,
-                "title": "Leçon 11 - Jeu de dactylographie : quiz de postconférence",
+                "title": "Leçon 11 - Jeu de dactylographie : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "À peu près tout ce qu’un utilisateur fait sur une page déclenche un événement",
@@ -1168,7 +1168,7 @@
             },
             {
                 "id": 23,
-                "title": "Leçon 12 - Projet d’extension de navigateur - Tout sur les navigateurs: quiz de préconférence",
+                "title": "Leçon 12 - Projet d’extension de navigateur - Tout sur les navigateurs: quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Vous pouvez obtenir des extensions de navigateur à partir de",
@@ -1221,7 +1221,7 @@
             },
             {
                 "id": 24,
-                "title": "Leçon 12 - Projet d’extension de navigateur - Tout sur les navigateurs: quiz de postconférence",
+                "title": "Leçon 12 - Projet d’extension de navigateur - Tout sur les navigateurs: quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Le World Wide Web a été inventé par",
@@ -1327,7 +1327,7 @@
             },
             {
                 "id": 26,
-                "title": "Leçon 13 - Projet d’extension de navigateur - Appelez une API, utilisez le stockage local : quiz de postconférence",
+                "title": "Leçon 13 - Projet d’extension de navigateur - Appelez une API, utilisez le stockage local : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Le localStorage est effacé chaque fois que vous fermez la fenêtre du navigateur",
@@ -1376,7 +1376,7 @@
             },
             {
                 "id": 27,
-                "title": "Leçon 14 - Projet d’extension de navigateur - En savoir plus sur les tâches en arrière-plan et les performances : quiz de préconférence",
+                "title": "Leçon 14 - Projet d’extension de navigateur - En savoir plus sur les tâches en arrière-plan et les performances : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Tester les performances de votre application",
@@ -1433,7 +1433,7 @@
             },
             {
                 "id": 28,
-                "title": "Leçon 14 - Projet d’extension de navigateur - En savoir plus sur les tâches en arrière-plan et les performances : quiz de postconférence",
+                "title": "Leçon 14 - Projet d’extension de navigateur - En savoir plus sur les tâches en arrière-plan et les performances : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Pour obtenir une meilleure vue des performances de votre site, videz son cache et rechargez-le dans le profileur",
@@ -1486,7 +1486,7 @@
             },
             {
                 "id": 29,
-                "title": "Leçon 15 - Jeu spatial  -  Introduction:  quiz de préconférence",
+                "title": "Leçon 15 - Jeu spatial  -  Introduction:  quiz préalable",
                 "quiz": [
                     {
                         "questionText": "JavaScript est un langage impopulaire pour la construction de jeux",
@@ -1531,7 +1531,7 @@
             },
             {
                 "id": 30,
-                "title": "Leçon 15 - Jeu spatial - Introduction: quiz de postconférence",
+                "title": "Leçon 15 - Jeu spatial - Introduction: quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Les classes s’appuient sur l’héritage pour attribuer des comportements",
@@ -1580,7 +1580,7 @@
             },
             {
                 "id": 31,
-                "title": "Leçon 16 - Jeu spatial - Dessiner des héros et des monstres sur la toile: quiz de préconférence",
+                "title": "Leçon 16 - Jeu spatial - Dessiner des héros et des monstres sur la toile: quiz préalable",
                 "quiz": [
                     {
                         "questionText": "L’élément Canvas est ce que vous utilisez pour dessiner sur un écran",
@@ -1625,7 +1625,7 @@
             },
             {
                 "id": 32,
-                "title": "Leçon 16 - Jeu spatial - Dessiner des héros et des monstres sur la toile: quiz de postconférence",
+                "title": "Leçon 16 - Jeu spatial - Dessiner des héros et des monstres sur la toile: quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Vous pouvez effectuer des opérations de dessin directement sur le Canvas",
@@ -1674,7 +1674,7 @@
             },
             {
                 "id": 33,
-                "title": "Leçon 17 - Jeu spatial - Ajout de mouvement: quiz de préconférence",
+                "title": "Leçon 17 - Jeu spatial - Ajout de mouvement: quiz préalable",
                 "quiz": [
                     {
                         "questionText": "N’importe quel objet à l’écran peut recevoir des événements de clavier",
@@ -1723,7 +1723,7 @@
             },
             {
                 "id": 34,
-                "title": "Leçon 17 - Jeu spatial - Ajout de mouvement: quiz de postconférence",
+                "title": "Leçon 17 - Jeu spatial - Ajout de mouvement: quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Vous devez toujours redessiner l’écran",
@@ -1776,7 +1776,7 @@
             },
             {
                 "id": 35,
-                "title": "Leçon 18 - Jeu spatial - Ajout d’un laser et détection des collisions: quiz de préconférence",
+                "title": "Leçon 18 - Jeu spatial - Ajout d’un laser et détection des collisions: quiz préalable",
                 "quiz": [
                     {
                         "questionText": "La détection de collision est la façon dont nous détectons si deux choses sont entrées en collision",
@@ -1829,7 +1829,7 @@
             },
             {
                 "id": 36,
-                "title": "Leçon 18 - Jeu spatial - Ajout d’un laser et détection des collisions: quiz de postconférence",
+                "title": "Leçon 18 - Jeu spatial - Ajout d’un laser et détection des collisions: quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Dans la détection de collision, vous comparez deux",
@@ -1882,7 +1882,7 @@
             },
             {
                 "id": 37,
-                "title": "Leçon 19 - Jeu spatial - Notation et vies: quiz de préconférence",
+                "title": "Leçon 19 - Jeu spatial - Notation et vies: quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Comment dessiner du texte sur un écran à l’aide de l’élément Canvas ?",
@@ -1935,7 +1935,7 @@
             },
             {
                 "id": 38,
-                "title": "Leçon 19 - Jeu spatial - Notation et vies: quiz de postconférence",
+                "title": "Leçon 19 - Jeu spatial - Notation et vies: quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "De quelle façon amusante peut-on montrer combien de vies un joueur a laissé?",
@@ -1988,7 +1988,7 @@
             },
             {
                 "id": 39,
-                "title": "Leçon 20 - Jeu spatial - Fin et redémarrage: quiz de préconférence",
+                "title": "Leçon 20 - Jeu spatial - Fin et redémarrage: quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Quel est le bon moment pour redémarrer un jeu",
@@ -2041,7 +2041,7 @@
             },
             {
                 "id": 40,
-                "title": "Leçon 20 - Jeu spatial - Fin et redémarrage: quiz de postconférence",
+                "title": "Leçon 20 - Jeu spatial - Fin et redémarrage: quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Quel est un bon modèle à utiliser lorsqu’une condition de fin de jeu a été remplie ?",
@@ -2143,7 +2143,7 @@
             },
             {
                 "id": 42,
-                "title": "Leçon 21 - Modèles et itinéraires HTML de projet bancaire dans une application web : quiz de postconférence",
+                "title": "Leçon 21 - Modèles et itinéraires HTML de projet bancaire dans une application web : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Les templates HTML font partie du DOM par défaut",
@@ -2196,7 +2196,7 @@
             },
             {
                 "id": 43,
-                "title": "Leçon 22 - Projet bancaire - Créer un formulaire de connexion et d’inscription : quiz de préconférence",
+                "title": "Leçon 22 - Projet bancaire - Créer un formulaire de connexion et d’inscription : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Les formulaires HTML vous permettent d’envoyer des entrées d’utilisateur à un serveur sans utiliser JavaScript",
@@ -2241,7 +2241,7 @@
             },
             {
                 "id": 44,
-                "title": "Leçon 22 - Projet bancaire - Créer un formulaire de connexion et d’inscription : quiz de postconférence",
+                "title": "Leçon 22 - Projet bancaire - Créer un formulaire de connexion et d’inscription : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "L’utilisation d'éléménts <label> dans les formulaires ne sert qu’à rendre la forme jolie",
@@ -2294,7 +2294,7 @@
             },
             {
                 "id": 45,
-                "title": "Leçon 23 - Projet bancaire - Méthodes d’extraction et d’utilisation des données : quiz de préconférence",
+                "title": "Leçon 23 - Projet bancaire - Méthodes d’extraction et d’utilisation des données : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Vous récupérez généralement des données à partir d’un serveur de manière synchrone dans un navigateur",
@@ -2343,7 +2343,7 @@
             },
             {
                 "id": 46,
-                "title": "Leçon 23 - Projet bancaire - Méthodes d’extraction et d’utilisation des données : quiz de postconférence",
+                "title": "Leçon 23 - Projet bancaire - Méthodes d’extraction et d’utilisation des données : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Dans une application mono-page, le code HTML est chargé une fois et jamais mis à jou",
@@ -2396,7 +2396,7 @@
             },
             {
                 "id": 47,
-                "title": "Leçon 24 - Projet bancaire - Concepts de gestion de l’État : quiz de préconférence",
+                "title": "Leçon 24 - Projet bancaire - Concepts de gestion de l’État : quiz préalable",
                 "quiz": [
                     {
                         "questionText": "Qu’est-ce qu’un objet immuable ?",
@@ -2453,7 +2453,7 @@
             },
             {
                 "id": 48,
-                "title": "Leçon 24 - Projet bancaire - Concepts de gestion de l’État : quiz de postconférence",
+                "title": "Leçon 24 - Projet bancaire - Concepts de gestion de l’État : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Que signifie, selon vous, la gestion de l’État ?",
