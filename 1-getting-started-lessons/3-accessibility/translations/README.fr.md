@@ -6,11 +6,11 @@
 ## Quiz préalable
 [Quiz préalable](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
 
-> La puissance du Web est dans son universalité.L'accès par tout le monde indépendamment d'invalidité est un aspect essentiel.
+> La puissance du Web est dans son universalité. L'accès par tout le monde indépendamment d'invalidité est un aspect essentiel.
 >
 > \- Sir Timothy Berners-Lee, directeur du W3C et inventeur du World Wide Web
 
-Cette citation met parfaitement l'accent sur l'importance de créer des sites Web accessibles.Une application qui ne peut pas être accessible par tous est par définition exclusionnaire.En tant que développeurs Web, nous devrions toujours avoir l'accessibilité à l'esprit.En ayant cet objectif dès le début, vous serez déjà bien lancé sur la façon de vous assurer que tout le monde peut accéder aux pages que vous créez. Dans cette leçon, vous découvrirez les outils pouvant vous aider à vous assurer que vos éléments Web sont accessibles et comment développer avec l'accessibilité à l'esprit. 
+Cette citation met parfaitement l'accent sur l'importance de créer des sites Web accessibles. Une application qui ne peut pas être accessible par tous est par définition exclusionnaire. En tant que développeurs Web, nous devrions toujours avoir l'accessibilité à l'esprit. En ayant cet objectif dès le début, vous serez déjà bien lancé sur la façon de vous assurer que tout le monde peut accéder aux pages que vous créez. Dans cette leçon, vous découvrirez les outils pouvant vous aider à vous assurer que vos éléments Web sont accessibles et comment développer avec l'accessibilité à l'esprit. 
 
 > Vous pouvez accéder à cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility?WT.mc_id=academic-13441-cxa)!
 
@@ -100,7 +100,7 @@ Les lecteurs d'écran lisent le texte. Si une URL apparaît dans le texte, le le
 
 ### Le problème avec "cliquez ici"
 
-Les lecteurs d'écran ont également la possibilité de lire uniquement les hyperliens sur une page, de la même manière qu'une personne voyante numériserait une page à la recherche de liens. Si le texte du lien est toujours « cliquez ici », tout ce que l'utilisateur entendra est « cliquez ici, cliquez ici, cliquez ici, cliquez ici, cliquez ici, ... » Tous les liens sont désormais indiscernables les uns des autres.
+Les lecteurs d'écran ont également la possibilité de lire uniquement les hyperliens sur une page, de la même manière qu'une personne voyante numériserait une page à la recherche de liens. Si le texte du lien est toujours « cliquez ici », tout ce que l'utilisateur entendra est « cliquez ici, cliquez ici, cliquez ici, cliquez ici, cliquez ici, ... ». Tous les liens sont désormais indiscernables les uns des autres.
 
 ### Bon texte de lien
 
@@ -123,19 +123,19 @@ Imaginez la page suivante :
 | Widget       | [Description]('#') | [Commande]('#') |
 | Super widget | [Description]('#') | [Commande]('#') |
 
-In this example, duplicating the text of description and order make sense for someone using a browser. However, someone using a screen reader would only hear the words *description* and *order* repeated without context.
+Dans cet exemple, la duplication du texte de la description et de l'ordre a du sens pour une personne utilisant un navigateur. Cependant, une personne utilisant un lecteur d'écran n'entendrait que les mots *description* et *ordre* répétés sans contexte.
 
-To support these types of scenarios, HTML supports a set of attributes known as [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA). These attributes allow you to provide additional information to screen readers.
+Pour prendre en charge ces types de scénarios, HTML prend en charge un ensemble d'attributs appelés [Applications Internet riches accessibles (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA). Ces attributs vous permettent de fournir des informations supplémentaires aux lecteurs d'écran.
 
-> **NOTE**: Like many aspects of HTML, browser and screen reader support may vary. However, most mainline clients support ARIA attributes.
+> **REMARQUE** : Comme de nombreux aspects du code HTML, la prise en charge du navigateur et du lecteur d'écran peut varier. Cependant, la plupart des clients principaux prennent en charge les attributs ARIA.
 
-You can use `aria-label` to describe the link when the format of the page doesn't allow you to. The description for widget could be set as
+Vous pouvez utiliser `aria-label` pour décrire le lien lorsque le format de la page ne vous le permet pas. La description du widget peut être définie comme: 
 
 ``` html
 <a href="#" aria-label="Widget description">description</a>
 ```
 
-✅ In general, using Semantic markup as described above supersedes the use of ARIA, but sometimes there is no semantic equivalent for various HTML widgets. A good example is a Tree. There's no HTML equivalent for a tree, so you identify the generic `<div>` for this element with a proper role and aria values. The [MDN documentation on ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) contains more useful information.
+✅ En général, l'utilisation du balisage sémantique comme décrit ci-dessus remplace l'utilisation d'ARIA, mais parfois il n'y a pas d'équivalent sémantique pour divers widgets HTML. Un bon exemple est un arbre. Il n'y a pas d'équivalent HTML pour un arbre, vous identifiez donc le `<div>` générique pour cet élément avec un rôle et des valeurs aria appropriés. La [documentation MDN sur ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) contient des informations plus utiles.
 
 ```html
 <h2 id="tree-label">File Viewer</h2>
@@ -146,26 +146,25 @@ You can use `aria-label` to describe the link when the format of the page doesn'
 
 ## Images
 
-It goes without saying screen readers are unable to automatically read what's in an image. Ensuring images are accessible doesn't take much work - it's what the `alt` attribute is all about. All meaningful images should have an `alt` to describe what they are.
-Images that are purely decorative should have their `alt` attribute set to an empty string: `alt=""`. This prevents screen readers from unnecessarily announcing the decorative image.
+Il va sans dire que les lecteurs d'écran ne sont pas en mesure de lire automatiquement le contenu d'une image. S'assurer que les images sont accessibles ne demande pas beaucoup de travail - c'est l'objet de l'attribut `alt`. Toutes les images significatives devraient avoir un "alt" pour décrire ce qu'elles sont. Les images purement décoratives doivent avoir leur attribut `alt` défini sur une chaîne vide : `alt=""`. Cela empêche les lecteurs d'écran d'annoncer inutilement l'image décorative.
 
-✅ As you might expect, search engines are also unable to understand what's in an image. They also use alt text. So once again, ensuring your page is accessible provides additional bonuses!
+✅ Comme vous pouvez vous y attendre, les moteurs de recherche sont également incapables de comprendre ce qu'il y a dans une image. Ils utilisent également du texte alternatif. Encore une fois, s'assurer que votre page est accessible offre des bonus supplémentaires !
 
-## The keyboard
+## Le clavier
 
-Some users are unable to use a mouse or trackpad, instead relying on keyboard interactions to tab from one element to the next. It's important for your web site to present your content in logical order so a keyboard user can access each interactive element as they move down a document. If you build your web pages with semantic markup and use CSS to style their visual layout, your site should be keyboard-navigable, but it's important to test this aspect manually. Learn more about [keyboard navigation strategies](https://webaim.org/techniques/keyboard/).
+Certains utilisateurs sont incapables d'utiliser une souris ou un trackpad, se fiant plutôt aux interactions du clavier pour passer d'un élément à l'autre. Il est important que votre site Web présente votre contenu dans un ordre logique afin qu'un utilisateur du clavier puisse accéder à chaque élément interactif lorsqu'il se déplace vers le bas d'un document. Si vous créez vos pages Web avec un balisage sémantique et utilisez CSS pour styliser leur mise en page visuelle, votre site doit être navigable au clavier, mais il est important de tester cet aspect manuellement. En savoir plus sur [les stratégies de navigation au clavier](https://webaim.org/techniques/keyboard/).
 
-✅ Go to any web site and try to navigate through it using only your keyboard. What works, what doesn't work? Why?
+✅ Allez sur n'importe quel site Web et essayez de le parcourir en utilisant uniquement votre clavier. Qu'est-ce qui marche, qu'est-ce qui ne marche pas ? Pourquoi?
 
-## Summary
+## Résumé
 
-A web accessible to some is not a truly 'world-wide web'. The best way to ensure the sites you create are accessible is to incorporate accessibility best practices from the start. While there are extra steps involved, incorporating these skills into your workflow now will mean all pages you create will be accessible.
+Un web accessible à certains n'est pas vraiment un « world-wide web ». Le meilleur moyen de garantir l'accessibilité des sites que vous créez est d'intégrer les meilleures pratiques d'accessibilité dès le départ. Bien qu'il y ait des étapes supplémentaires, l'intégration de ces compétences dans votre flux de travail signifie maintenant que toutes les pages que vous créez seront accessibles.
 
 ---
 
 ## 🚀 Challenge
 
-Take this HTML and rewrite it to be as accessible as possible, given the strategies you learned.
+Prenez ce code HTML et réécrivez-le pour qu'il soit aussi accessible que possible, compte tenu des stratégies que vous avez apprises.
 
 ```html
 <!DOCTYPE html>
@@ -220,12 +219,12 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
 ## Quiz de validation des connaissances
 [Quiz de validation des connaissances](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6)
 
-## Review & Self Study
+## Révision et auto-apprentissage
 
-Many governments have laws regarding accessibility requirements. Read up on your home country's accessibility laws. What is covered, and what isn't? An example is [this government web site](https://accessibility.blog.gov.uk/).
+De nombreux gouvernements ont des lois concernant les exigences d'accessibilité. Renseignez-vous sur les lois d'accessibilité de votre pays d'origine. Qu'est-ce qui est couvert et qu'est-ce qui ne l'est pas ? Un exemple est [ce site Web du gouvernement](https://accessibility.blog.gov.uk/).
 
-## Assignment
+## Mission
  
-[Analyze a non-accessible web site](assignment.md)
+[Analyser un site Web non accessible](assignment.md)
 
-Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument
+Crédits : [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) par Instrument
