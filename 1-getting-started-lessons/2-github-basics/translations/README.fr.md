@@ -173,7 +173,7 @@ Dans votre référentiel, accédez à `Insights > Community ` pour voir comment 
    - **Description**. Avez-vous ajouté une description pour votre projet ?
    - **README**. Avez-vous ajouté un fichier README ? GitHub fournit des conseils pour l’écriture d’un [README](https://docs.github.com/articles/about-readmes/).
    - **Guide de contribution**. Votre projet a-t-il des [directives de contribution](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/), 
-   - **Code de conduite**. Un [Code de conduite](https://docs.github.com/articles/adding-un-code-de-conduite-à-votre-projet/), 
+   - **Code de conduite**. Un [Code de conduite](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/), 
    - **Licence**. Peut-être plus important encore, une [licence](https://docs.github.com/articles/adding-a-license-to-a-repository/) ?
 
 
@@ -309,7 +309,7 @@ En savoir plus sur [contribuer à un logiciel open source](https://opensource.gu
 
 Pratique, pratique, pratique. GitHub a d’excellents chemins d’apprentissage disponibles via [lab.github.com](https://lab.github.com/):
 
-- [Première semaine sur GitHub](https://lab.github.com/githubtraining/first-semaine-sur-github)
+- [Première semaine sur GitHub](https://lab.github.com/githubtraining/first-week-on-github)
 
 Vous trouverez également des laboratoires plus avancés. 
 
