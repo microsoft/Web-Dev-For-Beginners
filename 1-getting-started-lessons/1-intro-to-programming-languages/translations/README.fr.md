@@ -140,8 +140,8 @@ Les options de la ligne de commande varient en fonction du système d'exploitati
 #### Windows
 
 - [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-13441-cxa) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (also known as CMD) 💻
-- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-13441-cxa)
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (appellé également CMD) 💻
+- [Terminal Windows](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-13441-cxa)
 - [mintty](https://mintty.github.io/)
   
 #### MacOS
@@ -158,7 +158,7 @@ Les options de la ligne de commande varient en fonction du système d'exploitati
 
 #### Popular Command Line Tools
 
-- [Git](https://git-scm.com/) (💻 on most operating sytems)
+- [Git](https://git-scm.com/) (💻 sur la plupart des SE)
 - [NPM](https://www.npmjs.com/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/cli/)
 
@@ -188,6 +188,6 @@ Comparez quelques langages de programmation. Quelles sont certaines des caracté
 
 Étudiez un peu les différentes langues disponibles pour le programmeur. Essayez d'écrire une ligne dans une langue, puis refaites-la dans deux autres. Qu'apprenez-vous?
 
-## Affectation
+## Consigne
 
 [Lire la documentation](assignment.fr.md)
