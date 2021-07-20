@@ -173,7 +173,7 @@ Dans votre référentiel, accédez à `Insights > Community ` pour voir comment 
    - **Description**. Avez-vous ajouté une description pour votre projet ?
    - **README**. Avez-vous ajouté un fichier README ? GitHub fournit des conseils pour l’écriture d’un [README](https://docs.github.com/articles/about-readmes/).
    - **Guide de contribution**. Votre projet a-t-il des [directives de contribution](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/), 
-   - **Code de conduite**. Un [Code de conduite](https://docs.github.com/articles/adding-un-code-de-conduite-à-votre-projet/), 
+   - **Code de conduite**. Un [Code de conduite](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/), 
    - **Licence**. Peut-être plus important encore, une [licence](https://docs.github.com/articles/adding-a-license-to-a-repository/) ?
 
 
@@ -242,9 +242,9 @@ Passons en revue un flux de travail de contributeur. Supposons que le contribute
 
    La commande ci-dessus crée la branche sur votre référentiel duppliqué.
 
-1. **Ouvrez un PR**. Ensuite, vous souhaitez ouvrir un PR. Pour ce faire, accédez au référentiel fourré sur GitHub.You do that by navigating to the forked repo on GitHub. Vous verrez une indication sur GitHub où il vous demande si vous souhaitez créer un nouveau PR, vous cliquez dessus et vous êtes emmené vers une interface où vous pouvez changer le titre du message de validation, lui donner une description plus appropriée. Maintenant, le mainteneur du repo que vous avez fourché verra ce PR et _fingers crossed_ qu’ils apprécieront et _fusionner_ votre PR. Vous êtes maintenant un contributeur, yay :)
+1. **Ouvrez une PR**. Ensuite, vous souhaitez ouvrir une PR. Pour ce faire, accédez au référentiel forké sur GitHub. Vous verrez une indication sur GitHub où il vous demande si vous souhaitez créer une nouvelle PR, vous cliquez dessus et vous êtes emmené vers une interface où vous pouvez changer le titre du message de validation, lui donner une description plus appropriée. Maintenant, le mainteneur du repo que vous avez forké verra ce PR et _croisons les doigts_ qu’il apprécieront et _fusionnera_ votre PR. Vous êtes maintenant un contributeur, yay :)
 
-1. **Nettoyer**. Il est considéré comme une bonne pratique de _clean up_ après avoir fusionné avec succès un PR. You want to clean up both your local branch and the branch you pushed to GitHub. Commençons par le supprimer localement avec la commande suivante: 
+1. **Nettoyer**. Il est considéré comme une bonne pratique de _clean up_ après avoir fusionné avec succès un PR. Vous voulez nettoyer à la fois votre branche locale et la branche que vous avez poussée vers GitHub. Commençons par le supprimer localement avec la commande suivante: 
 
    ```bash
    git branch -d [nom_branche]
@@ -309,7 +309,7 @@ En savoir plus sur [contribuer à un logiciel open source](https://opensource.gu
 
 Pratique, pratique, pratique. GitHub a d’excellents chemins d’apprentissage disponibles via [lab.github.com](https://lab.github.com/):
 
-- [Première semaine sur GitHub](https://lab.github.com/githubtraining/first-semaine-sur-github)
+- [Première semaine sur GitHub](https://lab.github.com/githubtraining/first-week-on-github)
 
 Vous trouverez également des laboratoires plus avancés. 
 
