@@ -8,6 +8,7 @@ assignees: ''
 ---
 
 - [ ] Base README.md
+- [ ] for-teachers.md
 - [ ] Quizzes
 - [ ] 1-getting-started-lessons base README
    - [ ] intro-to-programming-languages README
