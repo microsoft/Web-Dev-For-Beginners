@@ -14,7 +14,6 @@ assignees: ''
    - [ ] intro-to-programming-languages README
    - [ ] intro-to-programming-languages assignment
    - [ ] github-basics README
-   - [ ] github-basics assignment
    - [ ] accessibility README
    - [ ] accessibility assignment
 - [ ] 2-js-basics base README
