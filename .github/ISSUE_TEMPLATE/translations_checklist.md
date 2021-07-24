@@ -8,12 +8,12 @@ assignees: ''
 ---
 
 - [ ] Base README.md
+- [ ] for-teachers.md
 - [ ] Quizzes
 - [ ] 1-getting-started-lessons base README
    - [ ] intro-to-programming-languages README
    - [ ] intro-to-programming-languages assignment
    - [ ] github-basics README
-   - [ ] github-basics assignment
    - [ ] accessibility README
    - [ ] accessibility assignment
 - [ ] 2-js-basics base README

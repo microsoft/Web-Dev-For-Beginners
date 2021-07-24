@@ -4,9 +4,9 @@ Dans cette section du programme, vous serez initié à des concepts importants p
 
 ### Thèmes
 
-1. [Introduction aux langages de programmation et aux outils du métier](1-intro-to-programming-languages/README.md)
-2. [Bases de GitHub](2-github-basics/README.md)
-3. [Bases de l'accessibilité](3-accessibility/README.md)
+1. [Introduction aux langages de programmation et aux outils du métier](../1-intro-to-programming-languages/translations/README.fr.md)
+2. [Bases de GitHub](../2-github-basics/translations/README.fr.md)
+3. [Bases de l'accessibilité](../3-accessibility/translations/README.fr.md)
 
 ### Crédits
 
