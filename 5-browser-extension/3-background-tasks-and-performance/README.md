@@ -133,7 +133,7 @@ function drawIcon(value) {
 ```
 In this code, you are adding a listener for any messages coming to the backend task manager. If it's called 'updateIcon', then the next code is run, to draw an icon of the proper color using the Canvas API.
 
-✅ You'll learn more about the Canvas API in the [Space Game lessons](../6-space-game/2-drawing-to-canvas/README.md/drawing-to-canvas/README.md).
+✅ You'll learn more about the Canvas API in the [Space Game lessons](../../6-space-game/2-drawing-to-canvas/README.md).
 
 Now, rebuild your extension (`npm run build`), refresh and launch your extension, and watch the color change. Is it a good time to run an errand or wash the dishes? Now you know!
 

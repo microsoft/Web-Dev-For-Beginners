@@ -5,8 +5,8 @@ Cette leçon couvre les bases des langages de programmation. Les sujets abordés
 ![Intro Programming](/sketchnotes/webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Pre-Lecture Quiz
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1)
+## Quiz préalable
+[Quiz préalable](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1?loc=fr)
 
 ## introduction
 
@@ -19,7 +19,7 @@ Dans cette leçon, nous aborderons:
 
 ## Qu'est-ce que la programmation?
 
-Pla programmation (également appelée codage) est le processus d'écriture d'instructions sur un appareil, tel qu'un ordinateur ou un appareil mobile. Nous écrivons ces instructions avec un langage de programmation, qui est ensuite interprété par l'appareil. Ces ensembles d'instructions peuvent être désignés sous différents noms, mais *programme*, *programme informatique*, *application (application)* et *exécutable* sont quelques noms courants.
+La programmation (également appelée codage) est le processus d'écriture d'instructions sur un appareil, tel qu'un ordinateur ou un appareil mobile. Nous écrivons ces instructions avec un langage de programmation, qui est ensuite interprété par l'appareil. Ces ensembles d'instructions peuvent être désignés sous différents noms, mais *programme*, *programme informatique*, *application (application)* et *exécutable* sont quelques noms courants.
 
 Un *programme* peut être tout ce qui est écrit avec du code; les sites Web, les jeux et les applications téléphoniques sont des programmes. Bien qu'il soit possible de créer un programme sans écrire de code, la logique sous-jacente est interprétée sur le périphérique et cette logique a probablement été écrite avec du code. Un programme qui *exécute* ou *exécute du code* exécute des instructions. L'appareil avec lequel vous lisez actuellement cette leçon exécute un programme pour l'imprimer sur votre écran.
 
@@ -72,9 +72,9 @@ back add r0,r1
  end
 ```
 
-Croyez-le ou non, *they're both doing the same thing*: impression d'une séquence de Fibonacci jusqu'à 10.
+Croyez-le ou non, *ils font tous les deux la même chose*: l'affichage d'une séquence de Fibonacci jusqu'à 10.
 
-✅ Une séquence de Fibonacci est [defined](https://en.wikipedia.org/wiki/Fibonacci_number) comme un ensemble de nombres tels que chaque nombre est la somme des deux précédents, à partir de 0 et 1.
+✅ Une séquence de Fibonacci est [définie](https://en.wikipedia.org/wiki/Fibonacci_number) comme un ensemble de nombres tels que chaque nombre est la somme des deux précédents, à partir de 0 et 1.
 
 ## Éléments d'un programme
 
@@ -140,8 +140,8 @@ Les options de la ligne de commande varient en fonction du système d'exploitati
 #### Windows
 
 - [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-13441-cxa) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (also known as CMD) 💻
-- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-13441-cxa)
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (appellé également CMD) 💻
+- [Terminal Windows](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-13441-cxa)
 - [mintty](https://mintty.github.io/)
   
 #### MacOS
@@ -153,12 +153,12 @@ Les options de la ligne de commande varient en fonction du système d'exploitati
 #### Linux
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
-- [KDE Konsole](https://docs.kde.org/trunk5/en/applications/konsole/index.html)
+- [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
 - [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
 
 #### Popular Command Line Tools
 
-- [Git](https://git-scm.com/) (💻 on most operating sytems)
+- [Git](https://git-scm.com/) (💻 sur la plupart des SE)
 - [NPM](https://www.npmjs.com/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/cli/)
 
@@ -168,8 +168,10 @@ Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tourne
 
 #### Documentation populaire sur le développement Web
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), de Mozilla, éditeurs de [Firefox](https://www.mozilla.org/firefox/)
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), de Google, éditeurs de [Chrome](https://www.google.com/chrome/)
+- [Documents de développeur de Microsoft](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), pour [Microsoft Edge](https://www.microsoft.com/edge)
 
 ✅ Faites des recherches: maintenant que vous connaissez les bases de l'environnement d'un développeur Web, comparez-le et comparez-le à l'environnement d'un concepteur Web.
 
@@ -179,13 +181,13 @@ Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tourne
 
 Comparez quelques langages de programmation. Quelles sont certaines des caractéristiques uniques de JavaScript par rapport à Java? Et COBOL vs Go?
 
-## Quiz post-conférence
-[Quiz post-conférence](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2)
+## Quiz de validation des connaissances
+[Quiz de validation des connaissances](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2?loc=fr)
 
-## Révision et auto-étude
+## Révision et auto-apprentissage
 
 Étudiez un peu les différentes langues disponibles pour le programmeur. Essayez d'écrire une ligne dans une langue, puis refaites-la dans deux autres. Qu'apprenez-vous?
 
-## Affectation
+## Consigne
 
 [Lire la documentation](assignment.fr.md)

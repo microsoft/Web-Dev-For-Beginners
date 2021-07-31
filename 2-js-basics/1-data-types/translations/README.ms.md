@@ -111,7 +111,7 @@ Pada bahagian sebelumnya, nilai `myVariable` adalah jenis data nombor.
 
 `let myVariable = 123;`
 
-Pemboleh ubah boleh menyimpan semua jenis nombor, termasuk nombor perpuluhan atau nombor negatif. Nombor juga boleh digunakan dengan pengendali aritmetik, yang terdapat dalam [bahagian seterusnya](#pengendali).
+Pemboleh ubah boleh menyimpan semua jenis nombor, termasuk nombor perpuluhan atau nombor negatif. Nombor juga boleh digunakan dengan pengendali aritmetik, yang terdapat dalam [bahagian seterusnya](#Pengendali-Aritmetik).
 
 ### Pengendali Aritmetik
 
@@ -171,7 +171,7 @@ Anda boleh mencapai matlamat pemformatan anda dengan mana-mana kaedah, tetapi te
 
 ### Booleans
 
-Booleans boleh hanya dua nilai: `benar` atau `salah`. Booleans dapat membantu membuat keputusan mengenai garis kod mana yang harus dijalankan apabila syarat tertentu dipenuhi. Dalam banyak kes, [pengendali](#pengendali) membantu menetapkan nilai Boolean dan anda sering akan melihat dan menulis pemboleh ubah yang dimulakan atau nilainya dikemas kini dengan operator.
+Booleans boleh hanya dua nilai: `benar` atau `salah`. Booleans dapat membantu membuat keputusan mengenai garis kod mana yang harus dijalankan apabila syarat tertentu dipenuhi. Dalam banyak kes, [pengendali](#Pengendali-Aritmetik) membantu menetapkan nilai Boolean dan anda sering akan melihat dan menulis pemboleh ubah yang dimulakan atau nilainya dikemas kini dengan operator.
 
 - `let myTrueBool = betul`
 - `let myFalseBool = salah`

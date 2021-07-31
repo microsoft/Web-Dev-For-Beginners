@@ -212,7 +212,7 @@ JavaScript、特に [`history.pushState`](https://developer.mozilla.org/ja/docs/
 
 ```js
 function navigate(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  window.history.pushState({}, path, path);
   updateRoute();
 }
 ```
@@ -247,9 +247,9 @@ function onLinkClick(event) {
 HTML の *Login* と *Logout* リンクにバインディングを追加してナビゲーションシステムを完成させましょう。
 
 ```html
-<a href="/dashboard" onclick="onLinkClick()">Login</a>
+<a href="/dashboard" onclick="onLinkClick(event)">Login</a>
 ...
-<a href="/login" onclick="onLinkClick()">Logout</a>
+<a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
 
 [`onclick`](https://developer.mozilla.org/ja/docs/Web/API/GlobalEventHandlers/onclick) 属性を使用して、`click` イベントを JavaScript コードにバインドし、ここでは `navigate()` 関数の呼び出しを行います。

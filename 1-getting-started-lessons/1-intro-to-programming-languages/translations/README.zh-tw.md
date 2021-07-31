@@ -154,7 +154,7 @@ back add r0,r1
 #### Linux
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
-- [KDE Konsole](https://docs.kde.org/trunk5/en/applications/konsole/index.html)
+- [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
 - [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
 
 #### 其他常用指令
@@ -169,8 +169,10 @@ back add r0,r1
 
 #### 常用的網頁開發文件
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), 來自 Mozilla，[Firefox](https://www.mozilla.org/firefox/) 的出版商
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev)，來自 Google，[Chrome](https://www.google.com/chrome/) 的發布者
+- [Microsoft 自己的開發人員文檔](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers)，用於 [Microsoft Edge](https://www.microsoft.com/edge)
 
 ✅ 研究項目： 現在你已經了解基本的網頁開發環境了。請比較「網頁開發環境」與「網頁設計環境」之間的差異。
 

@@ -154,7 +154,7 @@ command line 옵션은 사용하는 운영체제에 따라 다릅니다.
 #### 리눅스
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
-- [KDE Konsole](https://docs.kde.org/trunk5/en/applications/konsole/index.html)
+- [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
 - [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
 
 #### 인기있는 Command Line 도구
@@ -169,8 +169,10 @@ command line 옵션은 사용하는 운영체제에 따라 다릅니다.
 
 #### 웹 개발의 인기있는 문서
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), Mozilla, [Firefox](https://www.mozilla.org/firefox/) 게시자
 - [Frontend Masters](https://frontendmasters.com/learn/)
+-[Web.dev](https://web.dev), Google의 [Chrome](https://www.google.com/chrome/) 게시자
+-[Microsoft 자체 개발자 문서](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), [Microsoft Edge](https://www.microsoft.com/edge) 용 
 
 ✅ 약간의 조사를 해보세요: 이제 웹 개발자 환경의 기본 사항을 알았으므로, 웹 디자이너 환경과 비교하고 대조하십시오.
 

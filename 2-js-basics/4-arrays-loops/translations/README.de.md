@@ -1,6 +1,9 @@
 # JavaScript-Grundlagen: Arrays und Loops
 
-[![Arrays und Loops](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Arrays and Loops")
+
+[![Arrays](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Arrays")
+[![Loops](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loops")
+
 
 ## [Pre-Lecture Quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13)
 

@@ -210,7 +210,7 @@ Creemos una nueva función que podamos usar para navegar en nuestra aplicación:
 
 ```js
 function navigate(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  window.history.pushState({}, path, path);
   updateRoute();
 }
 ```

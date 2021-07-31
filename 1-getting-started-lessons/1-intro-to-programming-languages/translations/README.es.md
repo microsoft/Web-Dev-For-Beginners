@@ -156,7 +156,7 @@ Las opciones para la línea de comando varian según el sistema operativo que ut
 #### Linux
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
-- [KDE Konsole](https://docs.kde.org/trunk5/en/applications/konsole/index.html)
+- [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
 - [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
 
 #### Línea de comandos (CLI) Populares
@@ -171,8 +171,10 @@ Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recu
 
 #### Documentación popular sobre desarrollo de web
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), de Mozilla, editores de [Firefox](https://www.mozilla.org/firefox/)
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), de Google, editores de [Chrome](https://www.google.com/chrome/)
+- [Documentos para desarrolladores propios de Microsoft](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), para [Microsoft Edge](https://www.microsoft.com/edge)
 
 ✅ Investiga un poco: ahora que conoces los conceptos básicos del entorno de un desarrollador web, compáralo y contrasta con el entorno de un diseñador web.
 

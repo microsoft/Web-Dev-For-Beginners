@@ -212,7 +212,7 @@ Si crea una nuova funzione da utilizzare per navigare nell'app:
 
 ```js
 function navigate(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  window.history.pushState({}, path, path);
   updateRoute();
 }
 ```
@@ -247,9 +247,9 @@ function onLinkClick(event) {
 Si completa il sistema di navigazione aggiungendo collegamenti ai link di accesso (*Login*) e di disconnessione (*Logout*) nell'HTML.
 
 ```html
-<a href="/dashboard" onclick="onLinkClick()">Login</a>
+<a href="/dashboard" onclick="onLinkClick(event)">Login</a>
 ...
-<a href="/login" onclick="onLinkClick()">Logout</a>
+<a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
 
 Utilizzando l 'attributo [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) associare l'evento `click` al codice JavaScript, in questo caso la chiamata alla funzione `navigate()` .

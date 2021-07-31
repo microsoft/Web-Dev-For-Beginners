@@ -7,10 +7,10 @@
 
 ## पाठ
 
-1. [HTML टेम्पलेट्स और वेब ऐप में रूट](../1-template-route/README.md)
-2. [एक लॉगिन और पंजीकरण फॉर्म बनाएँ](../2-forms/README.md)
-3. [डेटा लाने और उपयोग करने के तरीके](../3-data/README.md)
-4. [राज्य प्रबंधन की अवधारणाएँ](../4-state-management/README.md)
+1. [HTML टेम्पलेट्स और वेब ऐप में रूट](../1-template-route/README.hi.md)
+2. [एक लॉगिन और पंजीकरण फॉर्म बनाएँ](../2-forms/README.hi.md)
+3. [डेटा लाने और उपयोग करने के तरीके](../3-data/README.hi.md)
+4. [राज्य प्रबंधन की अवधारणाएँ](../4-state-management/README.hi.md)
 
 ### आभार सूची
 

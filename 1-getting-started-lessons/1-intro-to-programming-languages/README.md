@@ -92,6 +92,8 @@ There's a chance that some statements will not be executed by a device. This is 
 
 [![Tools of the Trade](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
 
+> 🎥 Click the image above for a video about tooling
+
 In this section, you'll learn about some software that you might find very useful as you start your professional development journey.
 
 A **development environment** is a unique set of tools and features that a developer will use often when writing software. Some of these tools have been customized for a developer specific needs, and may change over time if a developer changes priorities in work or personal projects, or when they use a different programming language. Development environments are as unique as the developers who use them.
@@ -156,7 +158,7 @@ Options for the command line will differ based on the operating system you use.
 #### Linux
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
-- [KDE Konsole](https://docs.kde.org/trunk5/en/applications/konsole/index.html)
+- [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
 - [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
 
 #### Popular Command Line Tools
@@ -171,8 +173,10 @@ When a developer wants to learn something new, they'll most likely turn to docum
 
 #### Popular Documentation on Web Development
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), from Mozilla, the publishers of the [Firefox](https://www.mozilla.org/firefox/) browser
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), from Google, publishers of [Chrome](https://www.google.com/chrome/)
+- [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
 
 ✅ Do some research: Now that you know the basics of a web developer's environment, compare and contrast it with a web designer's environment.
 

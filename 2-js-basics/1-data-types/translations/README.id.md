@@ -173,7 +173,7 @@ Anda dapat mencapai tujuan pemformatan Anda dengan salah satu metode, tetapi tem
 
 ### Boolean
 
-Boolean hanya dapat berupa dua nilai: `true` atau `false`. Boolean dapat membantu membuat keputusan tentang baris kode mana yang harus dijalankan ketika kondisi tertentu terpenuhi. Dalam banyak kasus, [operator](#operator) membantu pengaturan nilai Boolean dan Anda akan sering melihat dan menulis variabel yang diinisialisasi atau nilainya diperbarui dengan operator.
+Boolean hanya dapat berupa dua nilai: `true` atau `false`. Boolean dapat membantu membuat keputusan tentang baris kode mana yang harus dijalankan ketika kondisi tertentu terpenuhi. Dalam banyak kasus, [operator](#Operator-Aritmatika) membantu pengaturan nilai Boolean dan Anda akan sering melihat dan menulis variabel yang diinisialisasi atau nilainya diperbarui dengan operator.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`

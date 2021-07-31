@@ -110,7 +110,7 @@ const MY_VARIABLE = 123;
 
 `let myVariable = 123;`
 
-变量可以存储所有类型的数值，包括小数或者负数。数值也可以搭配算术运算符使用，将在[下一部分](#operators)介绍。
+变量可以存储所有类型的数值，包括小数或者负数。数值也可以搭配算术运算符使用，将在[下一部分](#算术运算符(Arithmetic-Operators))介绍。
 
 ### 算术运算符（Arithmetic Operators）
 
@@ -170,7 +170,7 @@ let myString2 = "World";
 
 ### 布尔值（Booleans）
 
-布尔值只可能是这两个值：`true` 或 `false`。布尔值可以用于决定特定条件被满足时该运行哪些代码。多数情况下，[运算符](#operators)都可以设置布尔值，你会常常看到或者自己写出一些被通过运算符初始化或更新为布尔值。
+布尔值只可能是这两个值：`true` 或 `false`。布尔值可以用于决定特定条件被满足时该运行哪些代码。多数情况下，[运算符](#算术运算符(Arithmetic-Operators))都可以设置布尔值，你会常常看到或者自己写出一些被通过运算符初始化或更新为布尔值。
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`

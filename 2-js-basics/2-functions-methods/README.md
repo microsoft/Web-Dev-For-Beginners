@@ -10,8 +10,9 @@ When we think about writing code, we always want to ensure our code is readable.
 
 [![Methods and Functions](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Methods and Functions")
 
-> Click the image above for a video about methods and functions.
+> 🎥 Click the image above for a video about methods and functions.
 
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-functions/?WT.mc_id=academic-13441-cxa)!
 
 ## Functions
 

@@ -110,7 +110,7 @@ Nella sezione precedente, il valore di `myVariable` era un tipo di dato number (
 
 `let myVariable = 123;`
 
-Le variabili possono memorizzare tutti i tipi di numero, inclusi decimali o numeri negativi. I numeri possono anche essere usati con operatori aritmetici, trattati nella [prossima sezione](#operators).
+Le variabili possono memorizzare tutti i tipi di numero, inclusi decimali o numeri negativi. I numeri possono anche essere usati con operatori aritmetici, trattati nella [prossima sezione](#Operatori-aritmetici).
 
 ### Operatori aritmetici
 
@@ -170,7 +170,7 @@ Si possono raggiungere i propri obiettivi di formattazione con entrambi i metodi
 
 ### Booleani
 
-I  booleani possono avere solo due valori: vero (`true`) o falso (`false`). I booleani possono aiutare a prendere decisioni su quali righe di codice devono essere eseguite quando vengono soddisfatte determinate condizioni. In molti casi, [gli operatori](#operators) assistono nell'impostazione del valore di un Booleano e spesso si noteranno e scriveranno variabili inizializzate o i loro valori aggiornati con un operatore.
+I  booleani possono avere solo due valori: vero (`true`) o falso (`false`). I booleani possono aiutare a prendere decisioni su quali righe di codice devono essere eseguite quando vengono soddisfatte determinate condizioni. In molti casi, [gli operatori](#Operatori-aritmetici) assistono nell'impostazione del valore di un Booleano e spesso si noteranno e scriveranno variabili inizializzate o i loro valori aggiornati con un operatore.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`

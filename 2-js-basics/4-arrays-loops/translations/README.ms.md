@@ -8,7 +8,8 @@
 
 Pelajaran ini merangkumi asas-asas JavaScript, bahasa yang menyediakan interaktiviti di web. Dalam pelajaran ini, anda akan belajar tentang array dan loop, yang digunakan untuk memanipulasi data.
 
-[![Array dan Loop](https://img.youtube.com/vi/Q_CRM2lXXBg/0.jpg)](https://youtube.com/watch?v=Q_CRM2lXXBg "Array dan Loop")
+[![Array](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Array")
+[![Gelung](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Gelung")
 
 > Klik gambar di atas untuk video mengenai tatasusunan dan gelung.
 ## Array

@@ -1,16 +1,16 @@
 # Premiers pas avec le développement Web
 
-Dans cette section du programme, vous serez initié à des concepts non basés sur des projets importants pour devenir un développeur professionnel.
+Dans cette section du programme, vous serez initié à des concepts importants pour devenir un développeur professionnel non basés sur des projets.
 
-### theme
+### Thèmes
 
-1. [Introduction aux langages de programmation et aux outils du métier](1-intro-to-programming-languages/README.md)
-2. [Bases de GitHub](2-github-basics/README.md)
-3. [Bases de l'accessibilité](3-accessibility/README.md)
+1. [Introduction aux langages de programmation et aux outils du métier](../1-intro-to-programming-languages/translations/README.fr.md)
+2. [Bases de GitHub](../2-github-basics/translations/README.fr.md)
+3. [Bases de l'accessibilité](../3-accessibility/translations/README.fr.md)
 
 ### Crédits
 
-Bases de l'accessibilité a été écrit avec ♥ ️ par [Christopher Harrison](https://twitter.com/geektrainer)
+Les bases de l'accessibilité ont été écrites avec ♥ ️ par [Christopher Harrison](https://twitter.com/geektrainer)
 
 L'introduction à GitHub a été écrite avec ♥ ️ par [Floor Drees](https://twitter.com/floordrees)
 

@@ -204,7 +204,7 @@ Web開発者は、自分のコードがWeb上でどのように実行される�
 #### Linux
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
-- [KDE Konsole](https://docs.kde.org/trunk5/en/applications/konsole/index.html)
+- [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
 - [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
 
 #### 有名なコマンドラインツール
@@ -220,8 +220,10 @@ Web開発者は、自分のコードがWeb上でどのように実行される�
 
 #### Web開発者向けの有名なドキュメント
 
-- [Mozilla Developer Network](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), [Firefox](https://www.mozilla.org/firefox/) の発行元である Mozilla から
 - [Frontend Masters](https://frontendmasters.com/learn/)
+- [Web.dev](https://web.dev), [Chrome](https://www.google.com/chrome/) の発行元である Google から
+- [Microsoft 独自の開発者向けドキュメント](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), [Microsoft Edge](https://www.microsoft.com/edge) の場合
 
 ✅ Web開発者の開発環境の基礎を理解したところで、Webデザイナーの開発環境との違いを見てみましょう。
 

@@ -212,7 +212,7 @@ HTML 앵커 요소 [`<a>`](https://developer.mozilla.org/docs/Web/HTML/Element/a
 
 ```js
 function navigate(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  window.history.pushState({}, path, path);
   updateRoute();
 }
 ```

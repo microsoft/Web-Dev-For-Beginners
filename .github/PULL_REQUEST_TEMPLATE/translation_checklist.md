@@ -7,6 +7,7 @@ Each lesson includes a translation of the README.md and the Assignment.md file, 
 - [ ] 1-2
 - [ ] 1-3
 - [ ] 2
+- [ ] 2
 - [ ] 2-1
 - [ ] 2-2
 - [ ] 2-3

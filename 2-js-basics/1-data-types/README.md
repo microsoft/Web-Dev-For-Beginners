@@ -8,11 +8,13 @@
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web.
 
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-variables/?WT.mc_id=academic-13441-cxa)!
+
 [![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
 
+> 🎥 Click the image above for a video about data types
 
 Let's start with variables and the data types that populate them!
-
 ## Variables
 
 Variables store values that can be used and changed throughout your code.
@@ -111,7 +113,7 @@ In the previous section, the value of `myVariable` was a number data type.
 
 `let myVariable = 123;`
 
-Variables can store all types of numbers, including decimals or negative numbers. Numbers also can be used with arithmetic operators, covered in the [next section](#operators).
+Variables can store all types of numbers, including decimals or negative numbers. Numbers also can be used with arithmetic operators, covered in the [next section](#arithmetic-operators).
 
 ### Arithmetic Operators
 
@@ -171,7 +173,7 @@ You can achieve your formatting goals with either method, but template literals 
 
 ### Booleans
 
-Booleans can be only two values: `true` or `false`. Booleans can help make decisions on which lines of code should run when certain conditions are met. In many cases, [operators](#operators) assist with setting the value of a Boolean and you will often notice and write variables being initialized or their values being updated with an operator.
+Booleans can be only two values: `true` or `false`. Booleans can help make decisions on which lines of code should run when certain conditions are met. In many cases, [operators](#arithmetic-operators) assist with setting the value of a Boolean and you will often notice and write variables being initialized or their values being updated with an operator.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
