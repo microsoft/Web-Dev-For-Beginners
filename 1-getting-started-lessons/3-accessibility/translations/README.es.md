@@ -1,15 +1,15 @@
 # Creación de páginas web accesibles
 
 ![Todo sobre accesibilidad](/sketchnotes/webdev101-a11y.png)
-> Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
+> Dibujo por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
+## [Cuestionario](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
 
 > El poder de la Web está en su universalidad. El acceso de todas las personas independientemente de su discapacidad es un aspecto fundamental.
 >
 > \- Sir Timothy Berners-Lee, director del W3C e inventor de la World Wide Web
 
-Esta cita destaca perfectamente la importancia de crear sitios web accesibles. Una aplicación a la que no pueden acceder todos es, por definición, excluyente. Como desarrolladores web, siempre debemos tener en cuenta la accesibilidad. Al tener este enfoque desde el principio, estará bien encaminado para garantizar que todos puedan acceder a las páginas que crea. En esta lección, aprenderás sobre las herramientas que pueden ayudarlo a asegurarse de que sus activos web sean accesibles y cómo construir teniendo en cuenta la accesibilidad. 
+Esta cita destaca perfectamente la importancia de crear sitios web accesibles. Una aplicación a la que no pueden acceder todos es, por definición, excluyente. Como desarrolladores web, siempre debemos tener en cuenta la accesibilidad. Al tener este enfoque desde el principio, estará todo bien encaminado para garantizar que todos puedan acceder a las páginas que crea. En esta lección, aprenderás sobre las herramientas que pueden ayudarlo a asegurarse de que sus activos web sean accesibles y cómo construir teniendo en cuenta la accesibilidad. 
 
 ## Herramientas para usar
 
@@ -19,13 +19,13 @@ Una de las herramientas de accesibilidad más conocidas son los lectores de pant
 
 [Lectores de pantalla](https://en.wikipedia.org/wiki/Screen_reader) son clientes de uso común para personas con problemas de visión. A medida que dedicamos tiempo a asegurarnos de que un navegador transmita correctamente la información que deseamos compartir, también debemos asegurarnos de que un lector de pantalla haga lo mismo.
 
-En su forma más básica, un lector de pantalla leerá una página de arriba a abajo de forma audible. Si la página es todo texto, el lector transmitirá la información de manera similar a un navegador. Por supuesto, las páginas web rara vez son puramente texto; contendrán enlaces, gráficos, color y otros componentes visuales. Se debe tener cuidado para garantizar que un lector de pantalla lea correctamente esta información.
+En su forma más básica, un lector de pantalla leerá una página de arriba a abajo de forma audible. Si la página es todo texto, el lector transmitirá la información de manera similar a un navegador. Por supuesto, las páginas web rara vez son puramente texto; contendrán enlaces, gráficos, color y otros componentes visuales. Debemos tener cuidado para garantizar que un lector de pantalla lea correctamente esta información.
 
-Todo desarrollador web debería familiarizarse con un lector de pantalla. Como se destacó anteriormente, es el cliente que utilizarán sus usuarios. De la misma manera que estás familiarizado con el funcionamiento de un navegador, debes aprender cómo funciona un lector de pantalla. Afortunadamente, los lectores de pantalla están integrados en la mayoría de los sistemas operativos y muchos navegadores contienen extensiones para emular un lector de pantalla.
+Todo desarrollador web debería estar familiarizado con un lector de pantalla. Como se destacó anteriormente, es el cliente que utilizarán sus usuarios. De la misma manera que estás familiarizado con el funcionamiento de un navegador, debes aprender cómo funciona un lector de pantalla. Afortunadamente, los lectores de pantalla están integrados en la mayoría de los sistemas operativos y muchos navegadores contienen extensiones para emular un lector de pantalla.
 
-✅ Prueba una extensión o herramienta de navegador de lector de pantalla. Uno que solo funciona en Windows es [JAWS](https://webaim.org/articles/jaws/). Los navegadores también tienen herramientas integradas que se pueden utilizar para este propósito; Consulta estas [herramientas de navegador Edge centradas en accesibilidad](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features).
+✅ Prueba una extensión o herramienta del navegador de lector de pantalla. Uno que solo funciona en Windows es [JAWS](https://webaim.org/articles/jaws/). Los navegadores también tienen herramientas integradas que se pueden utilizar para este propósito; Consulta estas [herramientas de navegador Edge centradas en accesibilidad](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features).
 
-### Checar contrastes
+### Chequear contrastes
 
 Los colores en los sitios web deben elegirse cuidadosamente para responder a las necesidades de los usuarios daltónicos o de las personas que tienen dificultades para ver colores de bajo contraste.
 
@@ -44,7 +44,7 @@ La accesibilidad es un tema relativamente extenso. Para ayudarte, existen numero
 
 - [Accessible U - University of Minnesota](https://accessibility.umn.edu/your-role/web-developers)
 
-Si bien no podremos cubrir todos los aspectos de la creación de sitios accesibles, a continuación se muestran algunos de los principios básicos que querrá implementar. Diseñar una página accesible desde el principio es **siempre** más fácil que volver a una página existente para hacerla accesible.
+Si bien no podremos cubrir todos los aspectos de la creación de sitios accesibles, a continuación se muestran algunos de los principios básicos que querrá implementar. Diseñar una página accesible desde el principio es **siempre** más fácil que agarrar una página existente y hacerla accesible.
 
 ## Buenos principios de visualización
 
