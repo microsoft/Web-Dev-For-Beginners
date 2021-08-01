@@ -2,36 +2,36 @@
 
 Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar y administrar cambios en tu código.
 
-![Intro to GitHub](/sketchnotes/webdev101-github.png)
-> Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
+![Introducción a GitHub](/sketchnotes/webdev101-github.png)
+> Dibujo de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3)
+## [Cuestionario](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3)
 
 ### Introducción
 
 En esta lección, cubriremos:
 
-- dando seguimiento al trabajo que realizas en tu máquina
-- trabajar en proyectos con otros
-- cómo contribuir al software de código abierto (open source)
+- Seguimiento de trabajo que se realiza en su maquina.
+- Trabajar en proyectos con otros.
+- Cómo contribuir al software de código abierto (Open Source)
 
 ### Prerrequisitos
 
-Antes de comenzar, verifica si Git está instalado. Escribe en tu terminal:
+Antes de comenzar, debemos verificar si Git está instalado. Escribe en tu terminal:
 `git --version`
 
-Si Git no está instalado, [descarga Git aquí](https://git-scm.com/downloads). Luego, configura tu perfil de Git local en la terminal:
+Si Git no está instalado, [descargue Git desde aquí](https://git-scm.com/downloads). Luego, configure su perfil de Git local en la terminal:
 `git config --global user.name "tu-nombre"`
 `git config --global user.email "tu-email"`
 
 Para comprobar si Git ya está configurado, escribe:
 `git config --list`
 
-También necesitarás una cuenta de GitHub, un editor de código (como Visual Studio Code) y deberás abrir tu terminal.
+También necesitarás una cuenta de GitHub, un editor de código (como Visual Studio Code) una terminal (tambien conocida como linea de comandos o simbolo del sistema).
 
-Ve a [github.com](https://github.com/) y crea una cuenta si aún no lo has hecho, o inicia sesión y completa tu perfil.
+Ve a [GitHub.com](https://github.com/) y crea una cuenta si aún no lo has hecho, o inicia sesión y completa tu perfil.
 
-✅ GitHub no es el único repositorio de código del mundo; hay otros, pero GitHub es el más conocido.
+✅ GitHub no es el único lugar para almacenar codigo; hay otros, pero GitHub es el más conocido.
 
 ### Preparación
 
@@ -41,28 +41,28 @@ Necesitarás una directorio con un proyecto de código en tu máquina local (com
 
 ## Gestión de código
 
-Digamos que tienes una directorio local con algún proyecto de código y deseas rastrear tu progreso usando git, el sistema de control de versiones. Algunas personas comparan el uso de git con escribir una carta de amor a tu futuro. Al leer tus mensajes de confirmación días, semanas o meses después, podrás recordar por qué tomaste una decisión o "revertiste" un cambio, es decir, cuando escribes buenos "mensajes de confirmación".
+Digamos que tienes una directorio local con algún proyecto de código y deseas rastrear tu progreso usando git (sistema de control de versiones). Algunas personas comparan el uso de git con escribir una carta de amor a tu futuro. Al leer tus mensajes de confirmación días, semanas o meses después, podrás recordar por qué tomaste una decisión o "revertiste" un cambio, siempre y cuando escribas buenos mensajes a la hora de enviar un commit.
 
-### Tarea: hacer un repositorio git y enviar código
+### Tarea: Hacer un repositorio git y enviar código
 
 1. **Crear repositorio en GitHub**. En GitHub.com, en la pestaña de repositorios, o en la barra de navegación superior derecha, busca el botón **nuevo repositorio**.
 
     1. Dale un nombre a tu repositorio (directorio)
-    1. Selecciona **crear repositorio**.
+    1. Selecciona **Crear Repositorio**.
 
-1. **Navegue a su directorio de trabajo**. En tu terminal, cambia a la directorio (también conocida como directorio) que deseas comenzar a rastrear. Escribe:
+1. **Navegue a su directorio de trabajo**. En su terminal, navegue hasta el directorio donde tiene su proyecto que deseas comenzar a rastrear. Escribe:
 
    ```bash
-   cd [nombre de tu directorio]
+   cd [nombre de su directorio]
    ```
 
-1. **Inicializar un repositorio de git**. En tu proyecto escribe:
+1. **Inicializar un repositorio de git**. En su proyecto escribe:
 
    ```bash
    git init
    ```
 
-1. **Comprobar estado**. Para checar el estado del proyecto escribe:
+1. **Comprobar estado**. Para comprobar el estado del proyecto escribe:
 
    ```bash
    git status
@@ -79,7 +79,7 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
         modified:   file2.txt
    ```
 
-   Por lo general, un comando `git status` te dice cosas como qué archivos están listos para ser guardados en el repositorio o cambios en tu codigo que puedes conservar.
+   Por lo general, el comando `git status` nos avisa qué archivos están listos para ser guardados en el repositorio o cambios en tu codigo que puedes conservar.
 
 1. **Agregar archivos al seguimiento**
 
@@ -87,22 +87,49 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
    git add .
    ```
 
-   El argumento `git add` más `.` indica que todos tus archivos y cambios están listos para darles seguimiento.
+   El comando `git add` más `.` indica que todos tus archivos y cambios están listos para darles seguimiento.
 
-1. **Persistir en tu trabajo**. En este punto, has agregado los archivos a lo que se denomina _área de preparación_. Un lugar donde Git rastrea tus archivos. Para que el cambio sea permanente, debes _commitir_ los archivos. Para hacerlo, creas un _commit_ con el comando `git commit`. Un _commit_ representa un punto en el historial de tu repositorio que estás guardando. Escribe lo siguiente para crear un _commit_:
+1. **Agregar archivos puntuales**
+
+   ```bash
+   git add [nombre de archivo o carpeta]
+   ```
+
+  Esto nos ayuda a agregar solo los archivos seleccionados al área de preparación cuando no queremos confirmar todos los archivos a la vez.
+
+
+1. **Eliminar archivos de la zona de staging**
+
+   ```bash
+   git reset
+   ```
+
+  Este comando nos ayuda a eliminar todos los archivos a la vez.
+
+
+1. **Quitar un archivo en particular**
+
+   ```bash
+   git reset [nombre del archivo o carpeta]
+   ```
+
+  Este comando nos ayuda a eliminar un archivo/directorio puntual, para que este no sea enviado en el proximo commit.
+
+
+1. **Persistir en tu trabajo**. En este punto, has agregado los archivos a lo que se denomina _stagin area_. Un lugar donde Git rastrea tus archivos. Para que el cambio sea permanente, debes realizar un _commit_. Para hacerlo, utilizas el siguiente commando `git commit`. Un _commit_ representa un punto en el historial de tu repositorio que estás guardando, este viene acompañado de un mensaje, el cual nos sirve para saber que cambios se hicieron dentro de ese commit. Ejecuta el siguiente comando para realizar tu primer commit.
 
    ```bash
    git commit -m "first commit"
    ```
 
-   Esto confirma todos tus archivos, agregando el mensaje "primer compromiso". Para futuros mensajes de confirmación, querrás ser más descriptivo en tu descripción para transmitir qué tipo de cambio has realizado.
+   Esto confirma todos tus archivos, agregando el mensaje "first commit". Para futuros mensajes de confirmación, querrás ser más descriptivo en tu descripción para transmitir qué tipo de cambio has realizado.
 
-1. **Conecta tu repositorio de Git local con GitHub**. Es bueno tener un repositorio de Git en tu máquina, pero también tienes que guarder todos sus archivos en algún lugar e invitar a otras personas a trabajar contigo en tu repositorio. Un buen lugar para hacerlo es GitHub. Recuerda que ya hemos creado un repositorio en GitHub, por lo que lo único que debemos hacer es conectar nuestro repositorio de Git local con GitHub. El comando `git remote add` hará precisamente eso. Escribe el siguiente comando:
+1. **Conecta tu repositorio de Git local con GitHub**. Es bueno tener un repositorio de Git en tu máquina, pero también tienes que guardar todos estos archivos en algún lugar e invitar a otras personas a trabajar contigo en tu repositorio. Un buen lugar para hacerlo es GitHub. Recuerda que ya hemos creado un repositorio en GitHub, por lo que lo único que debemos hacer es conectar nuestro repositorio de Git local con GitHub. El comando `git remote add` hará precisamente eso. Escribe el siguiente comando:
 
    > Nota, antes de escribir el comando, ve a la página de tu repositorio de GitHub para encontrar el URL del repositorio. Lo usarás en el siguiente comando. Reemplaza `repository_name` con tu URL de GitHub.
 
    ```bash
-   git remote add origin https://github.com/username/repository_name.git
+   git remote add origin https://github.com/USUARIO/NOMBRE_DEL_REPOSITORIO.git
    ```
 
    Esto crea un _remote_, o conexión, llamado "origin" que apunta al repositorio de GitHub que creaste anteriormente.
@@ -114,7 +141,7 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
    git push -u origin main
    ```
 
-   Esto envía una confirmación en tu rama "principal" a GitHub.
+   Esto envía una confirmación en tu rama "main" en GitHub.
 
 1. **Para agregar más cambios**. Si deseas continuar haciendo cambios y enviarlos a GitHub, solo necesitas usar los siguientes tres comandos:
 
@@ -171,7 +198,7 @@ Los documentos que contribuyes ayudan a las personas a contribuir al proyecto. E
 
 > Se el cambio que deseas ver en el mundo y crea también ramas  para tu propio trabajo. Todas las confirmaciones que realices se realizarán en la rama en la que estás actualmente "registrado". Usa `git status` para ver qué rama es.
 
-Repasemos el flujo de trabajo de un colaborador. Supon que el colaborador ya ha _bifurcado_ y _clonado_ el repositorio para que tenga un repositorio de Git listo para trabajar en su máquina local:
+Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador ya ha _bifurcado_ y _clonado_ el repositorio para que tenga un repositorio de Git listo para trabajar en su máquina local:
 
 1. **Crea una rama**. Usa el comando `git branch` para crear una rama que tendrá los cambios que quieres contribuir:
 
