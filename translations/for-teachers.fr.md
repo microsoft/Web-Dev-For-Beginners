@@ -10,7 +10,7 @@ Ces [instructions complètes](https://github.blog/2020-03-18-set-up-your-digital
 
 ## Utilisation dans Moodle, Canvas ou Blackboard
 
-Ce programme fonctionne bien dans ces systèmes de gestion de l'apprentissage ! Utilisez le [fichier de téléchargement Moodle](/teaching-files/webdev-moodle.mbz) pour le contenu complet, ou essayez le [fichier Common Cartridge](/teaching-files/webdev-common-cartridge.imscc) qui contient une partie du contenu. Moodle Cloud ne prend pas en charge les exportations Common Cartridge complètes, il est donc préférable d'utiliser le fichier de téléchargement Moodle qui peut être téléchargé dans Canvas. S'il vous plaît laissez-nous savoir comment nous pouvons améliorer cette expérience.
+Ce programme fonctionne bien dans ces systèmes de gestion de l'apprentissage ! Utilisez le [fichier de téléchargement Moodle](../teaching-files/webdev-moodle.mbz) pour le contenu complet, ou essayez le [fichier Common Cartridge](../teaching-files/webdev-common-cartridge.imscc) qui contient une partie du contenu. Moodle Cloud ne prend pas en charge les exportations Common Cartridge complètes, il est donc préférable d'utiliser le fichier de téléchargement Moodle qui peut être téléchargé dans Canvas. S'il vous plaît laissez-nous savoir comment nous pouvons améliorer cette expérience.
 
 ![Moodle](../teaching-files/moodle.png)
 > Le programme dans une classe Moodle

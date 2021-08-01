@@ -11,7 +11,7 @@
 
 # Développement Web pour débutants - Programme
 
-Azure Cloud Advocates de Microsoft sont heureux de vous offrir un cours de 24 leçons portant sur les bases du HTML, CSS et Javascript.
+Azure Cloud Advocates de Microsoft sont heureux de vous offrir un cours de 24 leçons portant sur les bases du HTML, CSS et JavaScript.
 Chaque leçon comporte des instructions, des projets et des quizs.
 Grâce à la pédagogie basée sur la pratique, vous pouvez apprendre tout en créant des interfaces. 
 Ce qui représente une méthode qui consiste à acquérir des compétances et s'en rappelant !.
@@ -105,7 +105,7 @@ Vous pouvez y accéder en utilisant [Docsify](https://docsify.js.org/#/). Effect
 
 ## PDF
 
-Ce cours est disponible en PDF. [Cliquez ici](pdf/readme.pdf)
+Ce cours est disponible en PDF. [Cliquez ici](../pdf/readme.pdf)
 
 ## Autres Cours
 
