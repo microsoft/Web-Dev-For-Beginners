@@ -192,7 +192,7 @@ JavaScript est célèbre pour sa manière occasionnellement surprenante de gére
 
 ## Révision et auto-apprentissage
 
-Regardez [cette liste d'exervices en JavaScript](https://css-tricks.com/snippets/javascript/) et essayez-en un. Qu'avez-vous appris ?
+Regardez [cette liste d'exercices en JavaScript](https://css-tricks.com/snippets/javascript/) et essayez-en un. Qu'avez-vous appris ?
 
 ## Consigne
 
