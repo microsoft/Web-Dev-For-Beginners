@@ -4,7 +4,7 @@
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Qui préalable](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7?loc=fr)
+[Quiz préalable](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7?loc=fr)
 
 Cette leçon couvre les bases de JavaScript, le language qui permet l'interactivité sur le web.
 
@@ -12,7 +12,7 @@ Cette leçon couvre les bases de JavaScript, le language qui permet l'interactiv
 
 [![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
 
-> 🎥 Cliquez sur l'image ci-dessus pour une vidéo sur les types de données
+> 🎥 Cliquez sur l'image ci-dessus pour voir une vidéo sur les types de données
 
 Commençons par les variables et les types de données qui les composent!
 
@@ -22,10 +22,10 @@ Les variables stockent des valeurs qui peuvent être utilisées et changées tou
 
 Créer et **déclarer** une variable se fait avec la syntaxe suivante **[mot-clé] [nom]**. Elle est composée de deux parties:
 
-- **Mot-clé**. Le mot-cké peut être `let` ou `var`.  
+- **Mot-clé**. Le mot-clé peut être `let` ou `var`.  
 
    > Note: Le mot-clé `let` a été introduit par ES6 et donne à votre variable une _portée de bloc_. Il vous est recommandé d'utiliser `let` plutôt que `var`. Nous allons couvrir les portées de bloc de manière plus approfondie dans l'une des partie suivantes.
-- **Le nom de la variable**, ceci est un nom que vous choisissez.
+- **Le nom de la variable**. Ceci est un nom que vous choisissez.
 
 ### Tâche - travailler avec les variables
 
@@ -55,7 +55,7 @@ Créer et **déclarer** une variable se fait avec la syntaxe suivante **[mot-cl�
 
     Ceci est appelé une _initialisation explicite_ lorsqu'une variable est déclarée et se voit assigner une valeur en même temps.
 
-1. **Changer la valeur de la variable**. Changez la valeur de la variable de la façon suivante:
+1. **Changer la valeur de la variable**. Changez la valeur de la variable de la façon suivante :
 
    ```javascript
    myVariable = 321;
@@ -63,7 +63,7 @@ Créer et **déclarer** une variable se fait avec la syntaxe suivante **[mot-cl�
 
    Après qu'une variable ait été déclarée, vous pouvez changer sa valeur à tout moment dans votre code avec l'opérateur `=` et la nouvelle valeur.
 
-   ✅ Essayez! Vous pouvez écrire du JavaScript directement dans votre navigateur. Ouvrez une fenêtre du navigateur et allez dans les Outils de Développement. Dans la console, vous trouverez une invite; tapez `let myVariable = 123`, pressez la touche Retour Chariot, puis tapez `myVariable`. Que se passe-t-il ? Note: Vous en apprendrez plus sur ces concepts dans les leçons suivantes.
+   ✅ Essayez ! Vous pouvez écrire du JavaScript directement dans votre navigateur. Ouvrez une fenêtre du navigateur et allez dans les Outils de Développement. Dans la console, vous trouverez une invite ; tapez `let myVariable = 123`, pressez la touche Retour Chariot, puis tapez `myVariable`. Que se passe-t-il ? Note: Vous en apprendrez plus sur ces concepts dans les leçons suivantes.
 
 ## Constantes
 
@@ -84,14 +84,14 @@ Les constantes sont similaires aux variables, avec deux exceptions:
       PI = 4; // not allowed
       ```
  
-   - **La référence à un object est protégée**. Ceci N'EST PAS autorisé:
+   - **La référence à un objet est protégée**. Ceci N'EST PAS autorisé:
    
       ```javascript
       const obj = { a: 3 };
       obj = { b: 5 } // not allowed
       ```
 
-    - **La valeur d'une object n'est pas protégée**. Ceci EST autorisé:
+    - **La valeur d'une objet n'est pas protégée**. Ceci EST autorisé:
     
       ```javascript
       const obj = { a: 3 };
@@ -100,17 +100,17 @@ Les constantes sont similaires aux variables, avec deux exceptions:
 
       Ci-dessus vous changez la valeur de l'objet mais pas la référence elle-même, ce qui rend le changement autorisé.
 
-   > Note: Un `const` signifie que la référence est protégée contre une réassignation. La valeur n'est toutefois pas _immutable_ et peut changer, en particulier s'il s'agit d'une structure complexe telle qu'un object.
+   > Note: Un `const` signifie que la référence est protégée contre une réassignation. La valeur n'est toutefois pas _immutable_ et peut changer, en particulier s'il s'agit d'une structure complexe telle qu'un objet.
 
 ## Types de Données
 
 Les variables peuvent stocker différents types de valeurs, tels que des nombres et du texte. Ces différents types de valeurs sont connus sous le nom de **type de donnée**. Les types de données sont un composant important du développement logiciel car il aide les développeurs à décider comment le code devrait être écrit et comment le logiciel devrait s'exécuter. De plus, certains types de données viennent avec des fonctionnalités uniques qui aident à transformer ou extraire des informations supplémentaires d'une valeur.
 
-✅ On fait aussi référence aux types de données sous le nom de primitives de données en JavaScript, puisqu'ils sont les types de données du plus bas niveau fournis par le langage. Il y a 6 types de données primitifs: string (chaîne de caractères), number (numérique), bigint (entier long), booléen (boolean), indéfini (undefined) et symbole (symbol). Prenez un instant pour visualiser ce que chacune de ces primitives peut représenter. Qu'est-ce qu'un `zèbre`? Et `0`? `true`?
+✅ On fait aussi référence aux types de données sous le nom de primitives de données en JavaScript, puisqu'ils sont les types de données du plus bas niveau fournis par le langage. Il y a 6 types de données primitifs : string (chaîne de caractères), number (numérique), bigint (entier long), boolean (booléen), undefined (indéfini) et symbol (symbole). Prenez un instant pour visualiser ce que chacune de ces primitives peut représenter. Qu'est-ce qu'un `zèbre` ? Et `0` ? `true` ?
 
-### Numbers
+### Nombres
 
-Dans la section précédente, la valeur de `myVariable` était d'un type numérique.
+Dans la section précédente, la valeur de `myVariable` était de type numérique.
 
 `let myVariable = 123;`
 
@@ -156,9 +156,9 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ```
 
-✅ Pourquoi est-ce que `1 + 1 = 2` en JavaScript, mais `'1' + '1' = 11?` Réflechissez-y. Et qu'en est-il de `'1' + 1`?
+✅ Pourquoi est-ce que `1 + 1 = 2` en JavaScript, mais `'1' + '1' = 11` ? Réflechissez-y. Et qu'en est-il de `'1' + 1` ?
 
-Les **Modèles littéraux** sont une autre façon de mettre en forme les chaînes, si ce n'est que l'accent grave est utilisé au lieu des guillements ou apostrophes. Tout ce qui n'est pas du texte brut doit être placé à l'intérieur d'une balise `${ }`. Ceci inclut toute variable qui soit une chaîne.
+Les **modèles littéraux** sont une autre façon de mettre en forme les chaînes, si ce n'est que l'accent grave est utilisé au lieu des guillements ou apostrophes. Tout ce qui n'est pas du texte brut doit être placé à l'intérieur d'une balise `${ }`. Ceci inclut toute variable qui soit une chaîne.
 
 ```javascript
 let myString1 = "Hello";
@@ -174,7 +174,7 @@ Vous pouvez atteindre vos buts de formatage avec l'une ou l'autre méthode, mais
 
 ### Booléens
 
-Les booléens n'ont que deux valeurs possibles : `true` (vrai) ou `false` (faux). Les booléens peuvent contribuer à décider quelles lignes de code devraient s'exécuter lorsque certaines conditions sont remplies. Dans de nombreux cas, des [opérateurs](#opérateurs-arithmetiques) aident à définir la valeur d'un booléen et vous rencontrerez et écrirez souvent des variables initialisées ou dont la valeur est mise à jour à l'aide d'un opérateur.
+Les booléens n'ont que deux valeurs possibles : `true` (vrai) ou `false` (faux). Les booléens peuvent contribuer à décider quelles lignes de code devraient s'exécuter lorsque certaines conditions sont remplies. Dans de nombreux cas, des [opérateurs](#opérateurs-arithmétiques) aident à définir la valeur d'un booléen et vous rencontrerez et écrirez souvent des variables initialisées ou dont la valeur est mise à jour à l'aide d'un opérateur.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
