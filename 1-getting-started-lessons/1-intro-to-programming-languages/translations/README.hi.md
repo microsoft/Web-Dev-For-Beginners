@@ -6,7 +6,7 @@
 >[टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा स्केचनेट
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1?loc=hi)
 
 ## परिचय
 
@@ -183,7 +183,7 @@ back add r0,r1
 कुछ प्रोग्रामिंग भाषाओं की तुलना करें। जावास्क्रिप्ट बनाम जावा के कुछ विशिष्ट लक्षण क्या हैं? COBOL बनाम GO के बारे मे?
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/2?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

@@ -4,7 +4,7 @@
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
-[Kuiz Pra Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11)
+[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/11)
 
 Membuat keputusan dan mengawal urutan kod anda berjalan menjadikan kod anda boleh digunakan semula dan kukuh. Bahagian ini merangkumi sintaks untuk mengawal aliran data dalam JavaScript dan kepentingannya apabila digunakan dengan jenis data Boolean
 
@@ -26,14 +26,14 @@ Tetapkan boolean anda menjadi benar atau salah seperti ini:
 
 Pengendali digunakan untuk menilai keadaan dengan membuat perbandingan yang akan menghasilkan nilai Boolean. Berikut adalah senarai pengendali yang sering digunakan.
 
-| Simbol | Penerangan                                                                                                                                                  | Contoh            |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`    | **Kurang daripada**: Membandingkan dua nilai dan mengembalikan jenis data Boolean `true` jika nilai di sebelah kiri kurang dari kanan                              | `5 < 6 // true`    |
-| `<=`   | **Kurang daripada atau sama dengan**: Membandingkan dua nilai dan mengembalikan jenis data Boolean `true` jika nilai di sebelah kiri kurang dari atau sama dengan kanan      | `5 <= 6 // true`   |
-| `>`    | **Lebih daripada**: Membandingkan dua nilai dan mengembalikan jenis data Boolean `true` jika nilai di sebelah kiri lebih besar daripada kanan                        | `5 > 6 // false`   |
-| `>=`   | **Lebih daripada atau sama dengan**: Membandingkan dua nilai dan mengembalikan jenis data Boolean `true` jika nilai di sebelah kiri lebih besar daripada atau sama dengan kanan| `5 >= 6 // false`  |
-| `===`  | **Persamaan yang ketat**: Membandingkan dua nilai dan mengembalikan jenis data Boolean `true` jika nilai di kanan dan kiri sama DAN adalah jenis data yang sama.      | `5 === 6 // false` |
-| `!==`  | **Ketidaksamaan**: Membandingkan dua nilai dan mengembalikan nilai Boolean yang bertentangan dengan apa yang akan dikembalikan oleh operator persamaan yang ketat                                   | `5 !== 6 // true`  |
+| Simbol | Penerangan                                                                                                                                                                      | Contoh             |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `<`    | **Kurang daripada**: Membandingkan dua nilai dan mengembalikan jenis data Boolean `true` jika nilai di sebelah kiri kurang dari kanan                                           | `5 < 6 // true`    |
+| `<=`   | **Kurang daripada atau sama dengan**: Membandingkan dua nilai dan mengembalikan jenis data Boolean `true` jika nilai di sebelah kiri kurang dari atau sama dengan kanan         | `5 <= 6 // true`   |
+| `>`    | **Lebih daripada**: Membandingkan dua nilai dan mengembalikan jenis data Boolean `true` jika nilai di sebelah kiri lebih besar daripada kanan                                   | `5 > 6 // false`   |
+| `>=`   | **Lebih daripada atau sama dengan**: Membandingkan dua nilai dan mengembalikan jenis data Boolean `true` jika nilai di sebelah kiri lebih besar daripada atau sama dengan kanan | `5 >= 6 // false`  |
+| `===`  | **Persamaan yang ketat**: Membandingkan dua nilai dan mengembalikan jenis data Boolean `true` jika nilai di kanan dan kiri sama DAN adalah jenis data yang sama.                | `5 === 6 // false` |
+| `!==`  | **Ketidaksamaan**: Membandingkan dua nilai dan mengembalikan nilai Boolean yang bertentangan dengan apa yang akan dikembalikan oleh operator persamaan yang ketat               | `5 !== 6 // true`  |
 
 ✅ Periksa pengetahuan anda dengan menulis beberapa perbandingan di konsol penyemak imbas anda. Adakah data yang dikembalikan mengejutkan anda?
 
@@ -83,11 +83,11 @@ else{
 
 Keputusan mungkin memerlukan lebih dari satu perbandingan, dan dapat disatukan dengan operator logik untuk menghasilkan nilai Boolean.
 
-| Simbol | Penerangan                                                                                    | Contoh                                                                 |
-| ------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **Logik AND**: Membandingkan dua ungkapan Boolean. Mengembalikan benar **hanya** jika kedua-dua sisi benar | `(5 > 6) && (5 < 6 ) //Satu pihak salah, yang lain benar. Mengembalikan palsu` |
-| `\|\|` | **Logik OR**: Membandingkan dua ungkapan Boolean. Mengembalikan benar jika sekurang-kurangnya satu sisi benar     | `(5 > 6) \|\| (5 < 6) //Satu pihak salah, yang lain benar. Kembali benar` |
-| `!`    | **Logik NOT**: Mengembalikan nilai bertentangan ungkapan Boolean                             | `!(5 > 6) // 5 tidak lebih besar daripada 6, tetapi "!" akan kembali benar`         |
+| Simbol | Penerangan                                                                                                    | Contoh                                                                         |
+| ------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `&&`   | **Logik AND**: Membandingkan dua ungkapan Boolean. Mengembalikan benar **hanya** jika kedua-dua sisi benar    | `(5 > 6) && (5 < 6 ) //Satu pihak salah, yang lain benar. Mengembalikan palsu` |
+| `\|\|` | **Logik OR**: Membandingkan dua ungkapan Boolean. Mengembalikan benar jika sekurang-kurangnya satu sisi benar | `(5 > 6) \|\| (5 < 6) //Satu pihak salah, yang lain benar. Kembali benar`      |
+| `!`    | **Logik NOT**: Mengembalikan nilai bertentangan ungkapan Boolean                                              | `!(5 > 6) // 5 tidak lebih besar daripada 6, tetapi "!" akan kembali benar`    |
 
 ## Syarat dan Keputusan dengan Pengendali Logik
 
@@ -162,7 +162,7 @@ Buat program yang ditulis terlebih dahulu dengan operator logik, dan kemudian tu
 
 ---
 ## Kuiz Pasca Kuliah
-[Kuiz Pasca Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12)
+[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/12)
 
 ## Mengkaji & Belajar Sendiri
 

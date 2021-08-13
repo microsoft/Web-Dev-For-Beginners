@@ -5,7 +5,7 @@
 [![Loops](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loops")
 
 
-## [Pre-Lecture Quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13)
+## [Pre-Lecture Quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13)
 
 Diese Lektion behandelt die Grundlagen von JavaScript, der Sprache, die Interaktivität im Web bietet. In dieser Lektion lernen Sie Arrays und Loops kennen, mit denen Daten bearbeitet werden.
 
@@ -114,7 +114,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 Es gibt andere Möglichkeiten, Arrays als for- und while-Schleifen zu durchlaufen. Es gibt [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) und [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Schreiben Sie Ihre Array-Schleife mit einer dieser Techniken neu.
 
-## [Quiz nach der Vorlesung](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14)
+## [Quiz nach der Vorlesung](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14)
 
 ## Review & Selbststudium
 

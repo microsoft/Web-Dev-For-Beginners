@@ -4,7 +4,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13?loc=zh_cn)
+[课前小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=zh_cn)
 
 这节课将会介绍 JavaScript 的基础知识，正是它为网页提供了可交互性。这节课中，你将学习数组和循环，它们会被用于操控数据。
 
@@ -115,7 +115,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 除了 for 和 while 循环，还有一些用于遍历数组的办法。比如 [forEach](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 和 [map](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。用这些办法重写一下你的数组遍历代码。
 
 ## 课后小测
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14?loc=zh_cn)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=zh_cn)
 
 ## 复习 & 自学
 

@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15)
+[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15)
 
 ### Introduction
 
@@ -217,7 +217,7 @@ There are some wild 'older' tags in HTML that are still fun to play with, though
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16)
 
 ## Review & Self Study
 

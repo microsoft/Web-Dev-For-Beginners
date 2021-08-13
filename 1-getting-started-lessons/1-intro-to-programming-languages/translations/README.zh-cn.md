@@ -6,7 +6,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1?loc=zh_cn)
+[课前小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1?loc=zh_cn)
 
 ## 大纲
 
@@ -183,7 +183,7 @@ back add r0,r1
 比较一些编程语言。JavaScript 和 Java 相互之间有什么独特的特征？COBOL 和 Go 之间呢？
 
 ## 课后小测
-[课后小测](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2?loc=zh_cn)
+[课后小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/2?loc=zh_cn)
 
 ## 复习 & 自学
 

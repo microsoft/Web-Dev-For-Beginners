@@ -8,7 +8,7 @@
 [![Bucles](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Bucles")
 
 
-## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13)
+## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13)
 
 Esta lección cubre los conceptos básicos de JavaScript, el lenguaje que proporciona interactividad en la web. En esta lección, aprenderá sobre matrices y bucles, que se utilizan para manipular datos.
 
@@ -110,7 +110,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 🚀 Desafío: Hay otras formas de realizar un bucle sobre arreglos además de los bucles for y while. Existen [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), y [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Vuelva a escribir su bucle de matriz utilizando una de estas técnicas.
 
-## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14)
+## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14)
 
 ## Revisión y autoestudio
 

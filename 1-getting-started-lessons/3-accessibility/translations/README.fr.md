@@ -4,7 +4,7 @@
 > SketchNote par[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
+[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5)
 
 > La puissance du Web est dans son universalité. L'accès par tout le monde indépendamment d'invalidité est un aspect essentiel.
 >
@@ -119,7 +119,7 @@ En plus de garantir que votre site est accessible à tous, vous aiderez égaleme
 Imaginez la page suivante :
 
 | Produit      | Description        | Commande        |
-| ------------ | ------------------ | ------------ |
+| ------------ | ------------------ | --------------- |
 | Widget       | [Description]('#') | [Commande]('#') |
 | Super widget | [Description]('#') | [Commande]('#') |
 
@@ -217,7 +217,7 @@ Prenez ce code HTML et réécrivez-le pour qu'il soit aussi accessible que possi
 ```
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6)
+[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6)
 
 ## Révision et auto-apprentissage
 

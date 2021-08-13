@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/37?loc=zh_tw)
+[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/37?loc=zh_tw)
 
 在這堂課中，你會學習如何為遊戲加入計分功能與計算性命數。
 
@@ -178,7 +178,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/38?loc=zh_tw)
+[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/38?loc=zh_tw)
 
 ## 複習與自學
 

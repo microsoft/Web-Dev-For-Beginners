@@ -4,7 +4,7 @@
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula
-[Quiz Pré-Aula](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/9)
+[Quiz Pré-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9)
 
 Quando pensamos em escrever código, sempre queremos garantir que nosso código seja legível. Embora isso pareça contra-intuitivo, o código é lido muito mais vezes do que escrito. Uma ferramenta central na caixa de ferramentas de uma pessoa desenvolvedora para garantir código sustentável é a **função**.
 
@@ -184,7 +184,7 @@ Agora você viu que temos três maneiras de passar uma função como parâmetro 
 Você pode articular em uma frase a diferença entre funções e métodos? Tente!
 
 ## Quiz Pós-Aula
-[Quiz Pós-Aula](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/10)
+[Quiz Pós-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/10)
 
 ## Revisão e autoestudo
 

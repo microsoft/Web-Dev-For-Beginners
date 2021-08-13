@@ -4,7 +4,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/29?loc=ko)
+[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/29?loc=ko)
 
 ### 게임 개발의 상속과 구성
 
@@ -213,7 +213,7 @@ pub-sub 패턴이 어떻게 게임을 발전시킬 수 있는지 생각해보세
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30?loc=ko)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/30?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

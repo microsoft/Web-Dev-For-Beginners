@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/47?loc=ko)
+[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/47?loc=ko)
 
 ### 소개
 
@@ -270,7 +270,7 @@ const routes = {
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/48?loc=ko)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/48?loc=ko)
 
 ## 과제
 

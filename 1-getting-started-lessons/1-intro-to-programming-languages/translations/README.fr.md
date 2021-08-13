@@ -6,7 +6,7 @@ Cette leçon couvre les bases des langages de programmation. Les sujets abordés
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1?loc=fr)
+[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1?loc=fr)
 
 ## introduction
 
@@ -182,7 +182,7 @@ Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tourne
 Comparez quelques langages de programmation. Quelles sont certaines des caractéristiques uniques de JavaScript par rapport à Java? Et COBOL vs Go?
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2?loc=fr)
+[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/2?loc=fr)
 
 ## Révision et auto-apprentissage
 

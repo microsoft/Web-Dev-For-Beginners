@@ -6,7 +6,7 @@ Deze les behandelt de basisprincipes van GitHub, een platform voor het hosten en
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz voorafgaand aan de lezing
-[Quiz voorafgaand aan de lezing](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3)
+[Quiz voorafgaand aan de lezing](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3)
 
 ## Inleiding
 
@@ -299,7 +299,7 @@ Projecten kunnen ook worden besproken in forums, mailinglijsten of chatkanalen z
 Koppel met een vriend om aan elkaars code te werken. Creëer gezamenlijk een project, fork code, maak takken en voeg wijzigingen samen.
 
 ## Quiz na de lezing
-[Quiz na de lezing](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4)
+[Quiz na de lezing](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4)
 
 ## Beoordeling en zelfstudie
 

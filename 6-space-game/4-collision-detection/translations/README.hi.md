@@ -2,7 +2,7 @@
 
 ## लेक्चरसे पहलेकी क्विज
 
-[लेक्चरसे पहलेकी क्विज](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/35?loc=hi)
+[लेक्चरसे पहलेकी क्विज](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/35?loc=hi)
 
 इस पाठ में आप सीखेंगे कि जावास्क्रिप्ट के साथ लेज़रों को कैसे शूट किया जाए! हम अपने खेल में दो चीजें जोड़ेंगे:
 
@@ -294,7 +294,7 @@ npm start
 
 ## पोस्ट-व्याख्यान प्रश्नोत्तरी
 
-[पोस्ट-व्याख्यान प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/36?loc=hi)
+[पोस्ट-व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/36?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

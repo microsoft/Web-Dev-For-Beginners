@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45)
+[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45)
 
 ### Introduction
 
@@ -327,7 +327,7 @@ Here's an example of a styled dashboard page:
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46)
 
 ## Assignment
 

@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/19)
+[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/19)
 
 ### Introduction
 
@@ -201,7 +201,7 @@ Add new event handler to your closure to do something more to the plants; for ex
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/20)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/20)
 
 ## Review & Self Study
 
