@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45?loc=zh_tw)
+[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45?loc=zh_tw)
 
 ### 大綱
 
@@ -329,7 +329,7 @@ function updateElement(id, textOrNode) {
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46?loc=zh_tw)
+[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46?loc=zh_tw)
 
 ## 作業
 

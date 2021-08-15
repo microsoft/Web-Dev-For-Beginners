@@ -5,7 +5,7 @@
 
 [![Tipos de datos en JavaScript](https://img.youtube.com/vi/rEHV3fFMfn0/0.jpg)](https://youtube.com/watch?v=rEHV3fFMfn0 "Tipos de datos en JavaScript")
 
-## [Pre-lectura prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7)
+## [Pre-lectura prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7)
 
 Esta lección cubre los conceptos básicos de JavaScript, el lenguaje que proporciona interactividad en la web.
 
@@ -117,12 +117,12 @@ Las variables pueden almacenar todo tipo de números, incluidos decimales o núm
 
 Hay varios tipos de operadores que se pueden utilizar al realizar funciones aritméticas, y algunos se enumeran aquí:
 
-| Símbolo | Descripción                                                        | Ejemplo                                |
-| ------- | ------------------------------------------------------------------ | -------------------------------------- |
-| `+`     | **Suma**: Calcula la suma de dos números                           | `1 + 2 //la respuesta esperada es 3`   |
-| `-`     | **Resta**: Calcula la diferencia de dos números                    | `1 - 2 //la respuesta esperada es -1`  |
-| `*`     | **Multiplicación**: Calcula el producto de dos números             | `1 * 2 //la respuesta esperada es 2`   |
-| `/`     | **División**: Calcula el cociente de dos números                   | `1 / 2 //la respuesta esperada es 0.5` |
+| Símbolo | Descripción                                                           | Ejemplo                                |
+| ------- | --------------------------------------------------------------------- | -------------------------------------- |
+| `+`     | **Suma**: Calcula la suma de dos números                              | `1 + 2 //la respuesta esperada es 3`   |
+| `-`     | **Resta**: Calcula la diferencia de dos números                       | `1 - 2 //la respuesta esperada es -1`  |
+| `*`     | **Multiplicación**: Calcula el producto de dos números                | `1 * 2 //la respuesta esperada es 2`   |
+| `/`     | **División**: Calcula el cociente de dos números                      | `1 / 2 //la respuesta esperada es 0.5` |
 | `%`     | **Restante**: Calcula el resto a partir de la división de dos números | `1 % 2 //la respuesta esperada es 1`   |
 
 ✅ ¡Pruébalo! Pruebe una operación aritmética en la consola de su navegador. ¿Te sorprenden los resultados?
@@ -181,7 +181,7 @@ Los booleanos pueden tener solo dos valores: `true` o `false`. Los valores boole
 
 🚀 Desafío: JavaScript es conocido por sus sorprendentes formas de manejar tipos de datos en ocasiones. Investiga un poco sobre estos "errores". Por ejemplo: ¡la sensibilidad a mayúsculas y minúsculas puede morder! Pruebe esto en su consola: `let age = 1; let Age = 2; age == Age` (resuelve `false` - ¿por qué?). ¿Qué otras trampas puedes encontrar?
 
-## [Post-lectura prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8)
+## [Post-lectura prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8)
 
 ## Revisión y autoestudio
 

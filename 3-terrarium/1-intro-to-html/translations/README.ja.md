@@ -5,7 +5,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15?loc=ja)
+[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=ja)
 
 ### イントロダクション
 
@@ -217,7 +217,7 @@ HTMLに はまだ遊んで楽しいワイルドな「古い」タグがいくつ
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16?loc=ja)
+[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=ja)
 
 ## 復習と自己学習
 

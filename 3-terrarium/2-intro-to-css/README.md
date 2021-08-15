@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/17)
+[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/17)
 
 ### Introduction
 
@@ -254,7 +254,7 @@ To complete the post-lecture quiz, go through this Learn module: [Style your HTM
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/18)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/18)
 
 ## Review & Self Study
 

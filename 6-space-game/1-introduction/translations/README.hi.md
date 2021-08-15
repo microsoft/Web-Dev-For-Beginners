@@ -4,7 +4,7 @@
 
 ## लेक्चर से पहलेकी क्विज
 
-[लेक्चर से पहलेकी क्विज ](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/29?loc=hi)
+[लेक्चर से पहलेकी क्विज ](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/29?loc=hi)
 
 ### खेल के विकास में इन्हेरिटेंस और कम्पोजीशन
 
@@ -211,7 +211,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## लेक्चर बाद की क्विज
 
-[लेक्चर बाद की क्विज](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/30?loc=hi)
+[लेक्चर बाद की क्विज](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/30?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

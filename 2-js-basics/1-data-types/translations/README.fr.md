@@ -4,7 +4,7 @@
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7?loc=fr)
+[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7?loc=fr)
 
 Cette leçon couvre les bases de JavaScript, le language qui permet l'interactivité sur le web.
 
@@ -120,13 +120,13 @@ Les variables peuvent stocker tous les types de nombres, y compris les décimaux
 
 Il y a plusieurs types d'opérateurs à utiliser lors de l'exécution de fonctions arithmétiques, et certains sont listés ici :
 
-| Symbol | Description                                                              | Example                               |
-| ------ | ------------------------------------------------------------------------ | ------------------------------------- |
-| `+`    | **Addition**: Calcule la somme de deux nombres                           | `1 + 2 //la réponse attendue est 3`   |
-| `-`    | **Soustraction**: Calcule la différence entre deux nombres               | `1 - 2 //la réponse attendue est -1`  |
-| `*`    | **Multiplication**: Calcule le produit de deux nombres                   | `1 * 2 //la réponse attendue est 2`   |
-| `/`    | **Division**: Calcule le quotient de deux nombres                        | `1 / 2 //la réponse attendue est 0.5` |
-| `%`    | **Reste**: Calcule le reste de la division entière entre deux nombres    | `1 % 2 //la réponse attendue est 1`   |
+| Symbol | Description                                                           | Example                               |
+| ------ | --------------------------------------------------------------------- | ------------------------------------- |
+| `+`    | **Addition**: Calcule la somme de deux nombres                        | `1 + 2 //la réponse attendue est 3`   |
+| `-`    | **Soustraction**: Calcule la différence entre deux nombres            | `1 - 2 //la réponse attendue est -1`  |
+| `*`    | **Multiplication**: Calcule le produit de deux nombres                | `1 * 2 //la réponse attendue est 2`   |
+| `/`    | **Division**: Calcule le quotient de deux nombres                     | `1 / 2 //la réponse attendue est 0.5` |
+| `%`    | **Reste**: Calcule le reste de la division entière entre deux nombres | `1 % 2 //la réponse attendue est 1`   |
 
 ✅ Essayez ! Essayez une opération arithmétique dans la console de votre navigateur. Les résultats vous surprennent-ils ?
 
@@ -188,7 +188,7 @@ Les booléens n'ont que deux valeurs possibles : `true` (vrai) ou `false` (faux)
 JavaScript est célèbre pour sa manière occasionnellement surprenante de gérer les types de données. Effectuez quelques recherches sur ces pièges. Par exemple : la sensibilité à la casse peut vous causer soucis ! Essayez ceci dans votre console : `let age = 1; let Age = 2; age == Age` (renvoie `false` (faux) -- pourquoi ?). Quels autres pièges pouvez-vous trouver ?
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8?loc=fr)
+[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8?loc=fr)
 
 ## Révision et auto-apprentissage
 

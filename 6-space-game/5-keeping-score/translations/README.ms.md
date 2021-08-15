@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/37)
+[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/37)
 
 Dalam pelajaran ini, anda akan belajar bagaimana menambahkan skor pada permainan dan mengira kehidupan.
 
@@ -178,7 +178,7 @@ Kod anda hampir lengkap. Bolehkah anda membayangkan langkah seterusnya?
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/38)
+[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/38)
 
 ## Mengkaji & Belajar Sendiri
 

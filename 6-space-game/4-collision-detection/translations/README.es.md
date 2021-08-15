@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/35)
+## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/35)
 
 ¡En esta lección aprenderá a disparar láseres con JavaScript! Agregaremos dos cosas a nuestro juego:
 
@@ -284,7 +284,7 @@ En este punto, ¡tu juego tiene algunas funciones! Puedes navegar con tus flecha
 
 🚀 Desafío: ¡Agrega una explosión! Echa un vistazo a los recursos del juego en [el repositorio de Space Art](../solution/spaceArt/readme.txt) e intenta agregar una explosión cuando el láser golpea a un extraterrestre.
 
-## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/36)
+## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/36)
 
 ## Revisión y autoestudio
 

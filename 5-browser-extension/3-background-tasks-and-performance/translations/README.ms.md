@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/27)
+[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/27)
 
 ### Pengenalan
 
@@ -147,7 +147,7 @@ Selidiki beberapa laman web sumber terbuka telah lama wujud, dan, berdasarkan se
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/28)
+[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/28)
 
 ## Mengkaji & Belajar Sendiri
 

@@ -3,7 +3,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula
-[Quiz Pré-Aula](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11)
+[Quiz Pré-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/11)
 
 Tomar decisões e controlar a ordem do que é executado no seu código o torna recusável e robusto. Essa seção cobre a sintaxe para controle do fluxo de dados no JavaScript e sua significância quando usada com tipos Booleanos.
 
@@ -27,14 +27,14 @@ Atribua valores verdadeiro ou falso no seu booleano da seguinte forma:
 
 Os operadores são usados para avaliar as condições fazendo comparações que criarão um valor booleano. A seguir está uma lista de operadores que são usados com frequência
 
-| Simbolo | Descrição                                                                                                                                                   | Exemplo            |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`    | **Menor que**: Compara dois valores e retorna o tipo de dados Booleano `true` se o valor do lado esquerdo for menor que o direito                              | `5 < 6 // true`    |
-| `<=`   | **Menor ou igual**: Compara dois valores e retorna o tipo de dados Booleano `true` se o valor à esquerda for menor ou igual à direita      | `5 <= 6 // true`   |
-| `>`    | **Maior que**: Compara dois valores e retorna o tipo de dados Booleano `true` se o valor à esquerda for menor ou igual à direita                         | `5 > 6 // false`   |
-| `>=`   | **Maior ou igual**: Compara dois valores e retorna o tipo de dados Booleano `true` se o valor à esquerda for maior ou igual à direita | `5 >= 6 // false`  |
-| `===`  | **Igualdade estrita**: Compara dois valores e retorna o tipo de dados booleano `true` se os valores à direita e à esquerda forem iguais E forem do mesmo tipo de dados.       | `5 === 6 // false` |
-| `!==`  | **Desigualdade**: Compara dois valores e retorna o valor booleano oposto ao que um operador de igualdade estrita retornaria                                    | `5 !== 6 // true`  |
+| Simbolo | Descrição                                                                                                                                                               | Exemplo            |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `<`     | **Menor que**: Compara dois valores e retorna o tipo de dados Booleano `true` se o valor do lado esquerdo for menor que o direito                                       | `5 < 6 // true`    |
+| `<=`    | **Menor ou igual**: Compara dois valores e retorna o tipo de dados Booleano `true` se o valor à esquerda for menor ou igual à direita                                   | `5 <= 6 // true`   |
+| `>`     | **Maior que**: Compara dois valores e retorna o tipo de dados Booleano `true` se o valor à esquerda for menor ou igual à direita                                        | `5 > 6 // false`   |
+| `>=`    | **Maior ou igual**: Compara dois valores e retorna o tipo de dados Booleano `true` se o valor à esquerda for maior ou igual à direita                                   | `5 >= 6 // false`  |
+| `===`   | **Igualdade estrita**: Compara dois valores e retorna o tipo de dados booleano `true` se os valores à direita e à esquerda forem iguais E forem do mesmo tipo de dados. | `5 === 6 // false` |
+| `!==`   | **Desigualdade**: Compara dois valores e retorna o valor booleano oposto ao que um operador de igualdade estrita retornaria                                             | `5 !== 6 // true`  |
 
 ✅ Verifique seu conhecimento escrevendo algumas comparações no console do seu navegador. Algum dado retornado o surpreende?
 
@@ -84,11 +84,11 @@ else{
 
 As decisões podem exigir mais de uma comparação e podem ser combinadas com operadores lógicos para produzir um valor booleano.
 
-| Simbolo | Descrição                                                                                     | Exemplo                                                                 |
-| ------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **AND Lógico**: Compara duas expressões booleanas. Retorna verdadeiro ** apenas ** se ambos os lados forem verdadeiros | `(5 > 6) && (5 < 6 ) //// Um lado é falso, o outro é verdadeiro. Retorna falso` |
-| `\|\|` | **OR Lógico**: Compara duas expressões booleanas. Retorna verdadeiro se pelo menos um lado for verdadeiro | `(5> 6) \ | \ | (5 <6) // Um lado é falso, o outro é verdadeiro. Retorna verdadeiro` |
-| `!`    | **NOT Lógico**: Retorna o valor oposto de uma expressão booleana | `! (5> 6) // 5 não é maior que 6, mas"! " retornará verdadeiro`         |
+| Simbolo | Descrição                                                                                                              | Exemplo                                                                              |
+| ------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `&&`    | **AND Lógico**: Compara duas expressões booleanas. Retorna verdadeiro ** apenas ** se ambos os lados forem verdadeiros | `(5 > 6) && (5 < 6 ) //// Um lado é falso, o outro é verdadeiro. Retorna falso`      |
+| `\|\|`  | **OR Lógico**: Compara duas expressões booleanas. Retorna verdadeiro se pelo menos um lado for verdadeiro              | `(5> 6) \ | \ | (5 <6) // Um lado é falso, o outro é verdadeiro. Retorna verdadeiro` |
+| `!`     | **NOT Lógico**: Retorna o valor oposto de uma expressão booleana                                                       | `! (5> 6) // 5 não é maior que 6, mas"! " retornará verdadeiro`                      |
 
 ## Codições e Decisões com Operadores Lógicos
 
@@ -163,7 +163,7 @@ Crie um programa que seja escrito primeiro com operadores lógicos e, em seguida
 
 ---
 ## Quiz Pós-Aula
-[Quiz Pós Aula](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12)
+[Quiz Pós Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/12)
 
 ## Revisão e autoestudo
 

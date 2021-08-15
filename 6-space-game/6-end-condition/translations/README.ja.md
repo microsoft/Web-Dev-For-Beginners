@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/39?loc=ja)
+[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/39?loc=ja)
 
 ゲーム内での表現方法や *終了条件* の表現方法は様々です。なぜゲームが終了したのかは、ゲームを作る側のあなた次第です。ここでは、あなたが今まで作ってきた宇宙ゲームの話をしていると仮定して、いくつかの理由を挙げてみましょう。
 
@@ -212,7 +212,7 @@ npm start
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/40?loc=ja)
+[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/40?loc=ja)
 
 ## 復習と自己学習
 

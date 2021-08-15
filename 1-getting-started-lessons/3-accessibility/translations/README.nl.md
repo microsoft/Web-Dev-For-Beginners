@@ -4,7 +4,7 @@
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz voorafgaand aan de lezing
-[Quiz voorafgaand aan de lezing](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/5)
+[Quiz voorafgaand aan de lezing](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5)
 
 > De kracht van het web zit in zijn universaliteit. Toegang voor iedereen, ongeacht hun handicap, is een essentieel aspect.
 >
@@ -117,7 +117,7 @@ Als extra bonus om ervoor te zorgen dat uw site voor iedereen toegankelijk is, h
 Stelt u de volgende pagina voor:
 
 | Product      | beschrijving        | Volgorde        |
-| ------------ | ------------------ | ------------ |
+| ------------ | ------------------- | --------------- |
 | Widget       | [beschrijving]('#') | [Volgorde]('#') |
 | Super widget | [beschrijving]('#') | [Volgorde]('#') |
 
@@ -216,7 +216,7 @@ Neem deze HTML en herschrijf deze zodat deze zo toegankelijk mogelijk is, gezien
 ```
 
 ## Quiz na de lezing
-[Quiz na de lezing](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/6)
+[Quiz na de lezing](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6)
 
 ## Beoordeling en zelfstudie
 

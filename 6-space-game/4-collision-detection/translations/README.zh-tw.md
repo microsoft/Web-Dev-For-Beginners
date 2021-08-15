@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/35?loc=zh_tw)
+[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/35?loc=zh_tw)
 
 這堂課中，你會學會如何在 JavaScript 上發射雷射光！我們需要在遊戲中新增兩項東西：
 
@@ -286,7 +286,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/36?loc=zh_tw)
+[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/36?loc=zh_tw)
 
 ## 複習與自學
 

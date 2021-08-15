@@ -6,7 +6,7 @@ Cette leçon couvre les principes de base de GitHub, une plateforme permettant d
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3?loc=fr)
+[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3?loc=fr)
 
 ## Introduction
 
@@ -299,7 +299,7 @@ Les projets peuvent également avoir des discussions dans des forums, des listes
 Associez-vous à un ami pour travailler sur le code de l’autre. Créez un projet en collaboration, bifurquez du code, créez des branches et fusionnez les modifications.
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4?loc=fr)
+[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4?loc=fr)
 
 ## Examen & Auto-apprentissage
 

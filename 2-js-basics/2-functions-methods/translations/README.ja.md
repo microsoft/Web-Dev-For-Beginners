@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト
-[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/9?loc=ja)
+[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9?loc=ja)
 
 コードを書くことを考えるとき、私たちは常にコードが読みやすいようにしたいと考えています。直感的ではないように聞こえるかもしれませんが、コードは書かれた回数よりも何度も読まれます。コードを確実にメンテナンスできるようにするための開発者のツールボックスの中心的なツールの一つが **関数** です。
 
@@ -181,7 +181,7 @@ setTimeout(() => {
 関数とメソッドの違いを一文で表現できますか？試してみてください。
 
 ## レッスン後の小テスト
-[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/10?loc=ja)
+[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/10?loc=ja)
 
 ## 復習と自己学習
 

@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/33)
+[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/33)
 
 Permainan tidak begitu menyeronokkan sehingga anda mempunyai makhluk asing di layar! Dalam permainan ini, kami akan menggunakan dua jenis pergerakan:
 
@@ -377,7 +377,7 @@ Seperti yang anda lihat, kod anda boleh berubah menjadi 'spaghetti code' apabila
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/34)
+[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/34)
 
 ## Mengkaji & Belajar Sendiri
 
