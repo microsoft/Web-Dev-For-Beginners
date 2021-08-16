@@ -6,9 +6,9 @@
 
 # 教程
 
-1. [HTML 简介](../1-intro-to-html/translations/README.zh-tw.md)
-2. [CSS 简介](../2-intro-to-css/translations/README.zh-tw.md)
-3. [DOM 简介与 JS 闭包](../translations/3-intro-to-DOM-and-closures/README.zh-tw.md)
+1. [HTML 简介](../1-intro-to-html/translations/README.zh-cn.md)
+2. [CSS 简介](../2-intro-to-css/translations/README.zh-cn.md)
+3. [DOM 简介与 JS 闭包](../translations/3-intro-to-DOM-and-closures/README.zh-cn.md)
 
 ## 参与人员
 
