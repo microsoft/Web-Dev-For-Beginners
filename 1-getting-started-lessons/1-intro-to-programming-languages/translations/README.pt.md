@@ -1,6 +1,6 @@
 # Introdução a Linguagens de Programação e Ferramentas
 
-Essa lição trata dos básicos de linguagens de programação. Os tõpicos tratados aqui se aplicam na maioria das linguages de prorgamação modernas. Na sessão 'Ferramentas', você vai aprender sobre softwares úteis que que ajudarão como uma pessoa desenvolvedora.
+Essa lição trata dos básicos de linguagens de programação. Os tópicos tratados aqui se aplicam na maioria das linguages de prorgamação modernas. Na sessão 'Ferramentas', você vai aprender sobre softwares úteis que ajudarão como uma pessoa desenvolvedora.
 
 ![Introdução a Programação](/sketchnotes/webdev101-programming.png)
 
@@ -21,7 +21,7 @@ Nessa lição, vamos falar sobre:
 
 ## O que é Programação?
 
-Programação (também conhecida como codificação) é o processo de escrever instruções em um dispositivo, como um computador ou dispositivo móvel. Escrevemos essas instruções com uma linguagem de programação, que é então interpretada pelo dispositivo. Esses conjuntos de instruções podem ser chamados de vários nomes, mas _programa_, _programa de computador_, _aplicativo (app_ e _executável_ são alguns nomes populares.
+Programação (também conhecida como codificação) é o processo de escrever instruções em um dispositivo, como um computador ou dispositivo móvel. Escrevemos essas instruções com uma linguagem de programação, que é então interpretada pelo dispositivo. Esses conjuntos de instruções podem ser chamados de vários nomes, mas _programa_, _programa de computador_, _aplicativo (app_ e _executável_) são alguns nomes populares.
 
 Um _programa_ pode ser qualquer coisa escrita com código; sites, jogos e aplicativos de celular são programas. Embora seja possível criar um programa sem escrever código, a lógica subjacente é interpretada para o dispositivo e essa lógica provavelmente foi escrita com o código. Um programa que está * executando* ou *executando código* está executando instruções. O dispositivo com o qual você está lendo esta lição está executando um programa para exibi-la em sua tela.
 
