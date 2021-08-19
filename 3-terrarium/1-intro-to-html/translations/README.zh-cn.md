@@ -228,4 +228,4 @@ HTML是 '久经考验的' 构建模块系统，它帮助构建了今天的 web �
 
 ## 作业
 
-[练习你的 HTML：建立一个博客模型](assignment.zh-tw.md)
+[练习你的 HTML：建立一个博客模型](assignment.zh-cn.md)
