@@ -25,24 +25,24 @@ La capacité de nommer une fonction est tout aussi importante. Bien que cela pui
 La syntaxe d'une fonction ressemble à la suivante :
 
 ```javascript
-function nameOfFunction() { // définition de la fonction
- // définition/corps de la fonction
+function nameOfFunction() { // function definition
+ // function definition/body
 }
 ```
 
 Si je voulais créer une fonction pour afficher un message d'accueil, cela pourrait ressembler à ceci :
 
 ```javascript
-fonction affichageSalutation() {
-  console.log('Bonjour tout le monde !');
+function displayGreeting() {
+  console.log('¡Hola, mundo!');
 }
 ```
 
 Chaque fois que nous voulons appeler (ou invoquer) notre fonction, nous utilisons le nom de la fonction suivi de `()`. Il convient de noter que notre fonction peut être définie avant ou après que nous décidions de l'appeler ; le compilateur JavaScript le trouvera pour vous.
 
 ```javascript
-// appeler notre fonction
-afficherSalutation();
+// calling our function
+displayGreeting();
 ```
 
 > **REMARQUE :** Il existe un type spécial de fonction connu sous le nom de **méthode**, que vous avez déjà utilisé ! En fait, nous l'avons vu dans notre démo ci-dessus lorsque nous avons utilisé `console.log`. Ce qui différencie une méthode d'une fonction, c'est qu'une méthode est attachée à un objet (`console` dans notre exemple), tandis qu'une fonction est flottante. Vous entendrez de nombreux développeurs utiliser ces termes de manière interchangeable.
@@ -52,7 +52,7 @@ afficherSalutation();
 Il y a une poignée de bonnes pratiques à garder à l'esprit lors de la création de fonctions
 
 - Comme toujours, utilisez des noms descriptifs pour savoir ce que la fonction fera
-- Utilisez **camelCasing** pour combiner des mots
+- Utilisez **boîte de chameau** pour combiner des mots
 - Gardez vos fonctions concentrées sur une tâche spécifique
 
 ## Passer des informations à une fonction
@@ -85,11 +85,11 @@ displayGreeting('Christopher');
 
 ## Les valeurs par défaut
 
-Nous pouvons rendre notre fonction encore plus flexible en ajoutant plus de paramètres. Mais que se passe-t-il si nous ne voulons pas exiger que chaque valeur soit spécifiée ? Conformément à notre exemple de salutation, nous pourrions laisser le nom tel que requis (nous devons savoir qui nous saluons), mais nous voulons permettre à la salutation elle-même d'être personnalisée à votre guise. Si quelqu'un ne veut pas le personnaliser, nous fournissons une valeur par défaut à la place. Pour fournir une valeur par défaut à un paramètre, nous le définissons de la même manière que nous définissons une valeur pour une variable - `parameterName = 'defaultValue'`. Pour voir un exemple complet :
+Nous pouvons rendre notre fonction encore plus flexible en ajoutant plus de paramètres. Mais que se passe-t-il si nous ne voulons pas exiger que chaque valeur soit spécifiée ? Conformément à notre exemple de salutation, nous pourrions laisser le nom tel que requis (nous devons savoir qui nous saluons), mais nous voulons permettre à la salutation elle-même d'être personnalisée à votre guise. Si quelqu'un ne souhaite pas le personnaliser, nous fournissons une valeur par défaut à la place. Pour fournir une valeur par défaut à un paramètre, nous le définissons de la même manière que nous définissons une valeur pour une variable - `parameterName = 'defaultValue'`. Pour voir un exemple complet :
 
 ```javascript
-function displayGreeting(nom, salutation='Bonjour') {
-  console.log(`${salutation}, ${nom}`);
+function displayGreeting(name, salutation='Hello') {
+  console.log(`${salutation}, ${name}`);
 }
 ```
 
@@ -97,10 +97,10 @@ Lorsque nous appelons la fonction, nous pouvons alors décider si nous voulons d
 
 ```javascript
 displayGreeting('Christopher');
-// affiche "Bonjour, Christophe"
+// displays "Hello, Christopher"
 
-displayGreeting('Christopher', 'Bonjour');
-// affiche "Bonjour, Christophe"
+displayGreeting('Christopher', 'Hi');
+// displays "Hi, Christopher"
 ```
 
 ## Valeurs de retour
@@ -112,22 +112,22 @@ Nous pouvons le faire en utilisant une **valeur de retour**. Une valeur de retou
 Si une fonction renvoie quelque chose, le mot-clé « return » est utilisé. Le mot-clé `return` attend une valeur ou une référence de ce qui est renvoyé comme suit :
 
 ```javascript
-retourner maVariable ;
-```
+return myVariable;
+```  
 
 Nous pourrions créer une fonction pour créer un message d'accueil et renvoyer la valeur à l'appelant
 
 ```javascript
-fonction createGreetingMessage(nom) {
-  const message = `Bonjour, ${nom}`;
-  renvoyer le message ;
+function createGreetingMessage(name) {
+  const message = `Hello, ${name}`;
+  return message;
 }
 ```
 
 Lors de l'appel de cette fonction, nous allons stocker la valeur dans une variable. C'est à peu près de la même manière que nous définirions une variable sur une valeur statique (comme `const name = 'Christopher'`).
 
 ```javascript
-const GreetingMessage = createGreetingMessage('Christopher');
+const greetingMessage = createGreetingMessage('Christopher');
 ```
 
 ## Fonctions comme paramètres de fonctions
@@ -164,7 +164,7 @@ Si vous exécutez notre nouveau code, vous remarquerez que nous obtenons les mê
 
 ### Fonctions de la grosse flèche
 
-Un raccourci courant dans de nombreux langages de programmation (y compris JavaScript) est la possibilité d'utiliser ce qu'on appelle une fonction **flèche** ou **flèche grasse**. Il utilise un indicateur spécial de `=>`, qui ressemble à une flèche - d'où le nom ! En utilisant `=>`, nous pouvons ignorer le mot-clé `function`.
+Un raccourci courant dans de nombreux langages de programmation (y compris JavaScript) est la possibilité d'utiliser une fonction appelée ** flèche ** ou ** flèche en gras ** . Il utilise un drapeau spécial de `=>` , qui ressemble à une flèche - d'où le nom ! En utilisant `=>` , nous pouvons ignorer le mot-clé `function` .
 
 Réécrivons notre code une fois de plus pour utiliser une fonction grosse flèche :
 

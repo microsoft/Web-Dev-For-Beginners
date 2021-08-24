@@ -109,7 +109,7 @@ Up until now the function we built will always output to the [console](https://d
 
 We can do this by using a **return value**. A return value is returned by the function, and can be stored in a variable just the same as we could store a literal value such as a string or number.
 
-If a function does return something then the keyword `return` is used. The `return` keyword expects a value or reference of what's being returned like so:
+If a function does return something then the keyword `return` is used. The `return` keyword expects a value or a reference from what is returned as follows:
 
 ```javascript
 return myVariable;
@@ -162,9 +162,9 @@ setTimeout(function() {
 
 If you run our new code you'll notice we get the same results. We've created a function, but didn't have to give it a name!
 
-### Fat arrow functions
+###  Functions of the big arrow
 
-One shortcut common in a lot of programming languages (including JavaScript) is the ability to use what's called an **arrow** or **fat arrow** function. It uses a special indicator of `=>`, which looks like an arrow - thus the name! By using `=>`, we are able to skip the `function` keyword.
+A common shortcut in many programming languages ​​(including JavaScript) is the ability to use something called an ** arrow ** or ** bold arrow ** function . It uses a special flag of `=>` , which looks like an arrow - hence the name! By using `=>` , we can ignore the `function` keyword .
 
 Let's rewrite our code one more time to use a fat arrow function:
 
