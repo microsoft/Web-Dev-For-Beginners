@@ -59,7 +59,7 @@ HTML 文档中的 'head' 包含的区域有很多关于页面的重要信息，�
 -   网页的标题
 -   网页的元数据，它包含：
     -   字符集(Character Set)，说明在页面中使用的字符编码。
-    -   浏览器信息，包括 `x-ua-compatible`，表示支持IE=edge浏览器
+    -   浏览器信息，包括 `x-ua-compatible`，表示支持 IE=edge 浏览器
     -   关于视图在加载时应该如何表现的信息。将视口设置为初始比例为 1 可以控制页面首次加载时的缩放级别。
 
 ### 任务
@@ -75,7 +75,7 @@ HTML 文档中的 'head' 包含的区域有很多关于页面的重要信息，�
 </head>
 ```
 
-✅ 当你把视图信息标签的内容设置成这个样子 `<meta name="viewport" content="width=600">` 会发生什么事情？ 请阅读更多关于[Viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)的信息吧。
+✅ 当你把视图信息标签的内容设置成这个样子 `<meta name="viewport" content="width=600">` 会发生什么事情？ 请阅读更多关于 [Viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) 的信息吧。
 
 ---
 
@@ -83,7 +83,7 @@ HTML 文档中的 'head' 包含的区域有很多关于页面的重要信息，�
 
 ### HTML 标签
 
-在 HTML 中，往你的 .html 文档中添加标签去创建元素到你的页面中。每个标签都通常都有一个开始标签和结束标签，像是：`<p>hello</p>` 就表明是一个段落。 使用一组 `<body>` 标签放在`<html>` 标签中以创建你界面的身体部分，现在你的文档应该变成下面这样：
+在 HTML 中，往你的 .html 文档中添加标签去创建元素到你的页面中。每个标签都通常都有一个开始标签和结束标签，像是：`<p>hello</p>` 就表明是一个段落。 使用一组 `<body>` 标签放在 `<html>` 标签中以创建你界面的身体部分，现在你的文档应该变成下面这样：
 
 ### 任务
 
@@ -223,7 +223,7 @@ HTML 中还有一些狂野的'旧'标签，玩起来仍然很有趣。虽然[这
 
 HTML是 '久经考验的' 构建模块系统，它帮助构建了今天的 web 。通过研究一些旧的和新的标签来了解它的历史。你能找出为什么有些标签被弃用而有些被添加吗？未来可能引入哪些标签？
 
-要了解更多关于为web和移动设备建立网站的信息，请访问：[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa)。
+要了解更多关于为 web 和移动设备建立网站的信息，请访问：[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa)。
 
 
 ## 作业
