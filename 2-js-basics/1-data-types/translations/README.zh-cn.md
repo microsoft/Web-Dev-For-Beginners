@@ -140,7 +140,7 @@ const MY_VARIABLE = 123;
 
 字符串是文本，自然会有格式化的需求。
 
-要**连接（concatenate）**两个或更多字符串，或者说把它们结合到一起，可以用 `+` 运算符。
+要 **连接（concatenate）** 两个或更多字符串，或者说把它们结合到一起，可以用 `+` 运算符。
 
 ```javascript
 let myString1 = "Hello";
@@ -154,7 +154,7 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ✅ 在 JavaScript 中，为什么 `1 + 1 = 2` 但 `'1' + '1' = 11`？仔细想想。如果是 `'1' + 1` 呢？
 
-**模板字符串（Template literals）**是另一种格式化字符串的方式，使用反引号（backtick）而非引号。 任何非纯文本的内容都要放到 `${ }` 占位符内，可以是任何可能是字符串的变量。
+**模板字符串（Template literals）** 是另一种格式化字符串的方式，使用反引号（backtick）而非引号。 任何非纯文本的内容都要放到 `${ }` 占位符内，可以是任何可能是字符串的变量。
 
 ```javascript
 let myString1 = "Hello";
