@@ -2,7 +2,7 @@
 
 ## 설명
 
-DOM 요소를 '채택'하여 DOM을 조금 더 조사합니다. MSDN의 [DOM 인터페이스 목록](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)을 방문하여 하나를 선택합니다. 웹의 웹 사이트에서 사용중인 것을 찾아 사용 방법에 대한 설명을 작성해봅니다.
+DOM 요소를 '채택'하여 DOM 을 조금 더 조사합니다. MDN 의 [DOM 인터페이스 목록](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)을 방문하여 하나를 선택합니다. 웹의 웹 사이트에서 사용중인 것을 찾아 사용 방법에 대한 설명을 작성해봅니다.
 
 ## 평가 기준
 
