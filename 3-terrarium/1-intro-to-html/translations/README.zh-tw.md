@@ -75,7 +75,7 @@ HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[
 </head>
 ```
 
-✅ 你認為設定下列視窗元資訊 `<meta name="viewport" content="width=600">` 會發生什麼事？ 請閱讀更多有關於[Viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)的資訊。
+✅ 你認為設定下列視窗元資訊 `<meta name="viewport" content="width=600">` 會發生什麼事？ 請閱讀更多有關於 [Viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) 的資訊。
 
 ---
 
