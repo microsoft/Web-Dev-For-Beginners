@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Recherchez un peu plus sur le DOM en 'adoptant' un élément du DOM. Visitez la [liste des interfaces DOM de MSN ](https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model) et choisissez-en une. Trouvez une de ces utilisations dans un site sur le web et rédigez une explication sur la façon dont elle est utilisée.
+Recherchez un peu plus sur le DOM en 'adoptant' un élément du DOM. Visitez la [liste des interfaces DOM de MDN ](https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model) et choisissez-en une. Trouvez une de ces utilisations dans un site sur le web et rédigez une explication sur la façon dont elle est utilisée.
 
 ## Rubrique
 
