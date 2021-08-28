@@ -2,7 +2,7 @@
 
 ## Instructies
 
-Onderzoek de DOM een beetje meer door een DOM-element te 'adopteren'. Bezoek de [lijst met DOM-interfaces](https://developer.mozilla.org/nl/docs/Web/API/Document_Object_Model) van MSN en kies er een. Zoek dat het wordt gebruikt op een website op internet en schrijf een uitleg over hoe het wordt gebruikt.
+Onderzoek de DOM een beetje meer door een DOM-element te 'adopteren'. Bezoek de [lijst met DOM-interfaces](https://developer.mozilla.org/nl/docs/Web/API/Document_Object_Model) van MDN en kies er een. Zoek dat het wordt gebruikt op een website op internet en schrijf een uitleg over hoe het wordt gebruikt.
 
 ## Rubriek
 

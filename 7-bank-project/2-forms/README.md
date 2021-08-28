@@ -212,7 +212,7 @@ async function register() {
   const result = await createAccount(jsonData);
 
   if (result.error) {
-    return console.log('An error occured:', result.error);
+    return console.log('An error occurred:', result.error);
   }
 
   console.log('Account created!', result);
