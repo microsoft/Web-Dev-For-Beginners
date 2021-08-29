@@ -9,4 +9,3 @@ Créez un petit jeu qui utilise des événements de clavier pour effectuer des t
 | Critères | Exemplaire                | Adéquat                 | Besoin d'amélioration |
 | -------- | ------------------------ | ------------------------ | ----------------- |
 |          | Un jeu complet est présenté | Le jeu est très minime | Le jeu a des bugs |
-|          |
