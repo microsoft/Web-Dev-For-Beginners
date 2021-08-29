@@ -9,7 +9,7 @@
 
 ### 大綱
 
-操作 DOM (Document Object Model) 是網頁開發的一項關鍵。根據[MDN 文件](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)， 「Document Object Model (DOM) 元素能根據網頁文件的結構與內容來呈現物件」。藉由使用 JavaScript 框架而非原始的 JavaScript 程式碼來管理 DOM，在網頁上操作 DOM 的挑戰已經不比以前困難了，但這裡我們要自己來管理它們！
+操作 DOM (Document Object Model) 是網頁開發的一項關鍵。根據 [MDN 文件](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)， 「Document Object Model (DOM) 元素能根據網頁文件的結構與內容來呈現物件」。藉由使用 JavaScript 框架而非原始的 JavaScript 程式碼來管理 DOM，在網頁上操作 DOM 的挑戰已經不比以前困難了，但這裡我們要自己來管理它們！
 
 此外，這堂課也會介紹有關[JavaScript 閉包(Closure)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)的概念，你可以想像成一個函式被包在另一個函式中，以訪問外面函式範圍中的變數。
 
@@ -209,9 +209,9 @@ function stopElementDrag() {
 
 在螢幕上拖曳物件看似簡單，但依照不同的目的與實現方法會遭遇到不同的問題。事實上，這邊有一份關於你可以嘗試的[拖曳 API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)。我們沒在專案中使用是為了建立不一樣的實現方法，試著使用這些 API 到專案中，看看你能完成什麼。
 
-在[W3C 文件](https://www.w3.org/TR/pointerevents1/) 和 [MDN 網頁文件](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events)上取得更多關於 pointer 的事件。
+在 [W3C 文件](https://www.w3.org/TR/pointerevents1/) 和 [MDN 網頁文件](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events)上取得更多關於 pointer 的事件。
 
-記得習慣性用[CanIUse.com](https://caniuse.com/)檢查網頁的瀏覽器兼容性。
+記得習慣性用 [CanIUse.com](https://caniuse.com/) 檢查網頁的瀏覽器兼容性。
 
 ## 作業
 

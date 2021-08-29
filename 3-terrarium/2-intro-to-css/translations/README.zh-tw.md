@@ -11,7 +11,7 @@
 
 階層式樣式表，CSS (Cascading Style Sheets)解決了網頁開發重要的問題：如何讓網頁變得漂亮。為你的應用造型化可以讓網頁更好用、更好看。你也可以使用 CSS 建立回應式網頁設計(Responsive Web Design - RWD)，依據你的視窗大小改變網頁的呈現方式。 CSS 不只讓網頁變美麗，它允許加入動畫以呈現更生動的互動體驗。CSS 工作組持續維護 CSS 的規格書，你可以在[全球資訊網協會官網](https://www.w3.org/Style/CSS/members)追蹤他們的作業。
 
-> 筆記，CSS 是一種程式語言，但就像任何在網路上的東西一樣，並不是所有瀏覽器都支援最新的規格。請時常利用[CanIUse.com](https://caniuse.com)檢查你的設計是否支援相關瀏覽器。
+> 筆記，CSS 是一種程式語言，但就像任何在網路上的東西一樣，並不是所有瀏覽器都支援最新的規格。請時常利用 [CanIUse.com](https://caniuse.com) 檢查你的設計是否支援相關瀏覽器。
 
 這堂課中，我們會為我們的線上盆栽盒增加造型，學習更多 CSS 的概念：串接(Cascade)、繼承(Inheritance)、選擇器(Selectors)、定位(Positioning)與建立布局(Layout)。我們會規劃盆栽盒的布局，建立實際的盆栽盒。
 
@@ -256,7 +256,7 @@ h1 {
 
 ## 複習與自學
 
-CSS 看似很好上手，但要在所有瀏覽器與螢幕大小上運作正常，也會面臨到許多挑戰。CSS-Grid 與 Flexbox 這兩種工具讓上述作業變得比較好規劃與調整。藉由遊玩[Flexbox Froggy](https://flexboxfroggy.com/)與[Grid Garden](https://codepip.com/games/grid-garden/)來學習它們。
+CSS 看似很好上手，但要在所有瀏覽器與螢幕大小上運作正常，也會面臨到許多挑戰。CSS-Grid 與 Flexbox 這兩種工具讓上述作業變得比較好規劃與調整。藉由遊玩 [Flexbox Froggy](https://flexboxfroggy.com/) 與 [Grid Garden](https://codepip.com/games/grid-garden/) 來學習它們。
 
 ## 作業
 
