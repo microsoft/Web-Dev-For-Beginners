@@ -9,4 +9,3 @@ Buat permainan kecil yang menggunakan acara papan kekunci untuk melakukan tugas.
 | Kriteria | Contoh                | Mencukupi                 | Usaha Lagi |
 | -------- | ------------------------ | ------------------------ | ----------------- |
 |          | Permainan penuh dipersembahkan | Permainan ini sangat minimum | Permainan ini mempunyai pepijat |
-|          |
