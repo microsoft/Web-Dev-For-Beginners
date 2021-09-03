@@ -1,6 +1,6 @@
 # Analyze a site for performance
 
-Provide a detailed report of a web site, showing areas where performance is problematic. Analyze why the site is slow and what you could do to speed it up. Don't rely only on the browser tools, but do some research on other tools that can help your report
+Provide a detailed report of a web site, showing areas where performance is problematic. Analyze why the site is slow and what you could do to speed it up. Don't rely only on the browser tools, but do some research on other tools that can help your report.
 
 ## Rubric
 
