@@ -142,7 +142,7 @@ async function run() {
 -| package.json
 ```
 
-在 Visual Studio Code 中開啟這個資料夾的副本。你需要建立本地端的開發環境，建議為 Visual Studio Code 與安裝好的 NPM 與 Node。如果你的電腦中還沒設定好 `npm`，[這是它的設定流程]](https://www.npmjs.com/get-npm)。
+在 Visual Studio Code 中開啟這個資料夾的副本。你需要建立本地端的開發環境，建議為 Visual Studio Code 與安裝好的 NPM 與 Node。如果你的電腦中還沒設定好 `npm`，[這是它的設定流程](https://www.npmjs.com/get-npm)。
 
 前往 `your_work` 資料夾，開始你的專案：
 
