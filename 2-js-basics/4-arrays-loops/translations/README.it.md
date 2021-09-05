@@ -73,10 +73,10 @@ Il ciclo `for` richiede 3 parti per iterare:
 - `espressione-di-iterazione`: Viene eseguita alla fine di ogni iterazione, tipicamente utilizzata per modificare il valore del contatore
 
 ```javascript
-    //Conta fino a 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// Conta fino a 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ Si esegua questo codice in una console del browser. Cosa succede quando si apportano piccole modifiche al contatore, alla condizione o all'espressione di iterazione? E' possibile farlo funzionare all'indietro, creando un conto alla rovescia?
