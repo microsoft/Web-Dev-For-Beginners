@@ -20,11 +20,15 @@ Trabalhar com dados é uma tarefa comum para qualquer língua, e é uma tarefa m
 
 A sintaxe de uma matriz é um par de parênteses rectos.
 
-`let myArray = [];`
+```javscript
+let myArray = [];
+```
 
 Esta é uma matriz vazia, mas as matrizes podem ser declaradas já povoadas com dados. Os valores múltiplos numa matriz são separados por uma vírgula.
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 Aos valores da matriz é atribuído um valor único chamado **índice**, um número inteiro que é atribuído com base na sua distância desde o início da matriz. No exemplo acima, o valor da string "Chocolate" tem um índice de 0, e o índice de "Rocky Road" é 4. Use o índice com parênteses rectos para recuperar, alterar, ou inserir valores da array.
 
@@ -70,10 +74,10 @@ O laço `para` requer 3 partes para iterar:
     - `expressão de iteração` Funciona no final de cada iteração, normalmente utilizada para alterar o valor do contador
   
 ```javascript
-    //Contagem até 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// Contagem até 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅Executar este código numa consola de navegação. O que acontece quando se fazem pequenas alterações ao contador, condição, ou expressão de iteração? Pode fazê-lo correr para trás, criando uma contagem decrescente?
