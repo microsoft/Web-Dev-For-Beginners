@@ -21,11 +21,15 @@
 
 配列の構文は角括弧のペアです。
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 これは空の配列ですが、配列はすでにデータを埋めた状態で宣言することができます。配列内の複数の値はカンマで区切られます。
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 配列の値には、**インデックス** と呼ばれる一意の値が割り当てられ、配列の先頭からの距離に基づいて整数が割り当てられます。上の例では、文字列の値 "Chocolate" のインデックスは 0 で、"Rocky Road" のインデックスは 4 です。 配列の値を取得、変更、挿入するには、角括弧付きのインデックスを使用します。
 
@@ -71,10 +75,10 @@ iceCreamFlavors.length; //5
     - `iteration-expression` 各反復の最後に実行され，通常はカウンタの値を変更するために使用されます
   
 ```javascript
-    //10までカウントアップ
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// 10までカウントアップ
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ このコードをブラウザのコンソールで実行してください。カウンタ、条件、反復式に小さな変更を加えるとどうなりますか？カウントダウンを作成して逆走させることはできますか？
