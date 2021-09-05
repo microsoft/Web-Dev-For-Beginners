@@ -69,10 +69,10 @@ Die `for`-Schleife benötigt 3 Teile, um zu iterieren:
      - `iteration-expression` Wird am Ende jeder Iteration ausgeführt und normalerweise zum Ändern des Zählerwerts verwendet
   
 ```javascript
-    //Counting up to 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+//Counting up to 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ Führen Sie diesen Code in einer Browserkonsole aus. Was passiert, wenn Sie kleine Änderungen am Zähler, der Bedingung oder dem Iterationsausdruck vornehmen? Können Sie es rückwärts laufen lassen und einen Countdown erstellen?
