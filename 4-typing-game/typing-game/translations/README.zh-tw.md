@@ -313,7 +313,7 @@ typedValueElement.addEventListener('input', () => {
 
 點擊按鈕 **start**，馬上開始輸入單字！你可以看看這預覽動畫。
 
-![遊戲中的動畫](../../4-typing-game/images/demo.gif)
+![遊戲中的動畫](../../images/demo.gif)
 
 ---
 
