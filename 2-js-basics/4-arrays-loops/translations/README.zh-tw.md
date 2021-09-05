@@ -21,11 +21,15 @@
 
 矩陣的語法需要用到中括號。
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 上述為一個空矩陣，矩陣也能在宣告時設定內容資料，資料會以逗號來做區隔。
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 矩陣數值位置會以 **索引（index）** 來決定，標記從矩陣的開頭相隔多少元素。在上述例子中，字串 "Chocolate" 的索引為 0，"Rocky Road" 為 4。以中括號帶入索引來接收、修改或加入特定元素數值。
 
