@@ -21,11 +21,15 @@
 
 배열 구문은 대괄호 쌍으로 이루어져 있습니다.
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 빈 배열이지만, 이미 데이터가 채워진 배열로 선언할 수 있습니다. 배열에 들어있는 여러가지 값들은 쉼표로 구분합니다.
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 배열 값에는 **index**라는 고유 값이 할당됩니다. 이 값은 배열 시작부터 측정한 길이를 기준으로 할당되는 정수입니다. 예시에서, 문자열 값 "Chocolate"의 인덱스는 0이고, "Rocky Road"의 인덱스는 4입니다. 배열 값을 검색하고, 변경하거나 넣으려면 대괄호가 있는 인덱스를 사용합니다.
 
@@ -71,10 +75,10 @@ iceCreamFlavors.length; //5
     - `반복-표현식` 각 반복의 마무리에 실행되며, 일반적으로 값을 세면서 변경할 떄 사용됩니다
   
 ```javascript
-    //Counting up to 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// Counting up to 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ 브라우저 콘솔에서 코드를 실행하십시오. 카운터, 조건 혹은 반복 표현식을 약간 변경하면 어떻게 되나요? 돌아와서 카운트 다운할 수 있습니까?
