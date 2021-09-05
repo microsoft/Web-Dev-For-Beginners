@@ -128,4 +128,4 @@ JavaScript의 배열에는 많은 메서드를 가져서 데이터 조작에 매
 
 ## 과제
 
-[Loop an Array](./assignment.ko.md)
+[배열 순회하기](./assignment.ko.md)
