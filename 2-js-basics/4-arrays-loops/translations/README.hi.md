@@ -95,7 +95,7 @@ while (i < 10) {
 }
 ```
 
-✅ आप एक फॉर लूप और वाइल लूप क्यों चुनेंगे? 17K दर्शकों का StackOverflow पर एक ही सवाल था, और कुछ राय [आपके लिए दिलचस्प हो सकती है] (https://stackoverflow.com/questions/39969145/ORE-loops-vs-for-loops-in-javascript)
+✅ आप एक फॉर लूप और वाइल लूप क्यों चुनेंगे? 17K दर्शकों का StackOverflow पर एक ही सवाल था, और कुछ राय [आपके लिए दिलचस्प हो सकती है](https://stackoverflow.com/questions/39969145/ORE-loops-vs-for-loops-in-javascript)
 
 ## लूपस और अररेस
 
