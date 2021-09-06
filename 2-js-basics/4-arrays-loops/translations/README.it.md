@@ -22,11 +22,15 @@ Lavorare con i dati è un'attività comune per qualsiasi linguaggio ed è un'att
 
 La sintassi per un array è una coppia di parentesi quadre.
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 Questo è un array vuoto, ma gli array possono essere dichiarati già popolati con i dati. Più valori in un array sono separati da una virgola.
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 Ai valori dell'array viene assegnato un valore univoco chiamato **indice**, un numero intero che viene assegnato a un elemento in base alla sua distanza dall'inizio dell'array. Nell'esempio precedente, il valore di stringa "Chocolate" ha un indice di 0 e l'indice di "Rocky Road" è 4. Si utilizza l'indice all'interno di parentesi quadre per recuperare, modificare o inserire valori di matrice.
 
@@ -73,10 +77,10 @@ Il ciclo `for` richiede 3 parti per iterare:
 - `espressione-di-iterazione`: Viene eseguita alla fine di ogni iterazione, tipicamente utilizzata per modificare il valore del contatore
 
 ```javascript
-    //Conta fino a 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// Conta fino a 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ Si esegua questo codice in una console del browser. Cosa succede quando si apportano piccole modifiche al contatore, alla condizione o all'espressione di iterazione? E' possibile farlo funzionare all'indietro, creando un conto alla rovescia?

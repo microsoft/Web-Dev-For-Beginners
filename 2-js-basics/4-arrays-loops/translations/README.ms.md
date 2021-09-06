@@ -20,11 +20,15 @@ Bekerja dengan data adalah tugas biasa untuk bahasa apa pun, dan ini adalah tuga
 
 Sintaks untuk array adalah sepasang tanda kurung persegi.
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 Ini adalah array kosong, tetapi tatasusunan dapat dinyatakan sudah diisi dengan data. Pelbagai nilai dalam array dipisahkan dengan koma.
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 Nilai array diberikan nilai unik yang disebut **indeks**, nombor bulat yang diberikan berdasarkan jaraknya dari awal array. Dalam contoh di atas, nilai rentetan "Chocolate" mempunyai indeks 0, dan indeks "Rocky Road" adalah 4. Gunakan indeks dengan tanda kurung persegi untuk mengambil, mengubah, atau memasukkan nilai array.
 
@@ -70,10 +74,10 @@ Gelung `for` memerlukan 3 bahagian untuk berulang:
     - `iterasi-ekspresi` Berjalan pada akhir setiap lelaran, biasanya digunakan untuk mengubah nilai pembilang
 
 ```javascript
-    //Menggira hingga 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// Menggira hingga 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ Jalankan kod ini di konsol penyemak imbas. Apa yang berlaku apabila anda membuat perubahan kecil pada ungkapan pembilang, keadaan, atau lelaran? Bolehkah anda membuatnya berjalan ke belakang, membuat undur?

@@ -13,7 +13,7 @@
 
 > 點擊以上的圖片來觀賞關於矩陣與迴圈的影片。
 
-## 矩陣(Arrays)
+## 矩陣（Arrays）
 
 處理資料是任何程式語言中最常見的任務，如果能將程式碼有條理地編排成如矩陣的形式，處理任務來會更加輕鬆。矩陣的資料儲存格式就像串列，其中一項好處是矩陣可以儲存不同的資料型態資料。
 
@@ -21,13 +21,17 @@
 
 矩陣的語法需要用到中括號。
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 上述為一個空矩陣，矩陣也能在宣告時設定內容資料，資料會以逗號來做區隔。
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
-矩陣數值位置會以**索引(index)**來決定，標記從矩陣的開頭相隔多少元素。在上述例子中，字串 "Chocolate" 的索引為 0，"Rocky Road" 為 4。以中括號帶入索引來接收、修改或加入特定元素數值。
+矩陣數值位置會以 **索引（index）** 來決定，標記從矩陣的開頭相隔多少元素。在上述例子中，字串 "Chocolate" 的索引為 0，"Rocky Road" 為 4。以中括號帶入索引來接收、修改或加入特定元素數值。
 
 ✅ 索引從 0 開始有超出你的預料之外嗎？在部分程式語言中，索引會從 1 開始。這有一段有趣的歷史，你可以[閱讀維基百科](https://zh.wikipedia.org/wiki/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E7%9A%84%E7%B7%A8%E8%99%9F)來了解它。
 
@@ -59,27 +63,27 @@ iceCreamFlavors.length; //5
 
 ✅ 自己動手試試看！使用瀏覽器命令欄，自由地建立並操控矩陣。
 
-## 迴圈(Loops)
+## 迴圈（Loops）
 
-迴圈幫助你處理重複性與**迭代(iterative)**任務，這可以省下許多程式碼行數與時間。每一次迭代可以有不同的變數、數值或條件。在 JavaScript 中有許多種迴圈的樣式，彼此都有些微的差異，但主要功能都一樣：對資料做迴圈。
+迴圈幫助你處理重複性與 **迭代（iterative）** 任務，這可以省下許多程式碼行數與時間。每一次迭代可以有不同的變數、數值或條件。在 JavaScript 中有許多種迴圈的樣式，彼此都有些微的差異，但主要功能都一樣：對資料做迴圈。
 
-### For 迴圈(For Loop)
+### For 迴圈（For Loop）
 
 `for` 迴圈有三個條件：
-    - `計數器(counter)` 一個初始化變數決定目前迭代的次數。
-    - `條件式(condition)` 一個以比較運算子表示的陳述式，當結果為 `true` 時終止迴圈。
-    - `迭代陳述式(iteration-expression)` 在每一次迭代完後，改變計數器的數值。
+    - `計數器（counter）` 一個初始化變數決定目前迭代的次數。
+    - `條件式（condition）` 一個以比較運算子表示的陳述式，當結果為 `true` 時終止迴圈。
+    - `迭代陳述式（iteration-expression）` 在每一次迭代完後，改變計數器的數值。
   
 ```javascript
-    // 從 0 加到 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// 從 0 加到 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ 在瀏覽器命令欄中運行這段迴圈。在改變計數器、條件式與迭代陳述式後有什麼改變？你能讓它變成從 10 減到 0 嗎？
 
-### While 迴圈(While Loop)
+### While 迴圈（While Loop）
 
 不同於 `for` 迴圈語法，`while` 迴圈只要求一個條件式，當條件式回傳 `true` 時即終止迴圈。迴圈中的條件是通常需要依賴像計數器的變數，這些變數必須被合理的處理。計數器的起始化需要在迴圈外面，之後的條件陳述式與計數器的變化則需要在迴圈當中。
 
@@ -112,9 +116,10 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ## 🚀 挑戰
 
-除了 for 迴圈與 while 迴圈外，仍有許多使用矩陣與迴圈的方法：[forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)與[map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。 用上列其中一種語法改寫你的迴圈。
+除了 for 迴圈與 while 迴圈外，仍有許多使用矩陣與迴圈的方法：[forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 與 [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。用上列其中一種語法改寫你的迴圈。
 
 ## 課後測驗
+
 [課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=zh_tw)
 
 ## 複習與自學

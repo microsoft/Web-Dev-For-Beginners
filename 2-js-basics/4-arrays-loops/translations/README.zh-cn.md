@@ -21,11 +21,15 @@
 
 数组的语法需要一对方括号。
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 这是一个空数组，但数组其实可以在声明时就存入一些数据。数组中的多项数据用逗号分隔。
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 数组中的值会被指定一个唯一的值，称为 **索引（index）**，它是一个整数，表示对应值在数组中的位置与数组开头的距离。在上方的例子中，字符串值 `"Chocolate"` 的索引就是 0，而 `"Rocky Road"` 的索引是 4。可以用索引加上方括号来获取、改变或者插入数组值。
 
@@ -71,10 +75,10 @@ iceCreamFlavors.length; // 5
     - `迭代式（iteration-expression）` 在每一次迭代的模为执行，一般用于更新计数器的值
   
 ```javascript
-    // 从 0 数到 9
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// 从 0 数到 9
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ 在浏览器控制台中运行这段代码。试试调整计数器、条件式或迭代式时会发生什么。你能让它反过来运行，倒着计数吗？

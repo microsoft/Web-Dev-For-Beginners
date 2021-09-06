@@ -20,11 +20,15 @@ Trabajar con datos es una tarea común para cualquier lenguaje y es una tarea mu
 
 La sintaxis de una matriz es un par de corchetes.
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 Esta es una matriz vacía, pero las matrices se pueden declarar ya pobladas con datos. Varios valores en una matriz están separados por una coma.
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 A los valores de la matriz se les asigna un valor único llamado **índice**, un número entero que se asigna en función de su distancia desde el principio de la matriz. En el ejemplo anterior, el valor de cadena "Chocolate" tiene un índice de 0 y el índice de "Rocky Road" es 4. Utilice el índice entre corchetes para recuperar, cambiar o insertar valores de matriz.
 
@@ -71,10 +75,10 @@ El ciclo `for` requiere 3 partes para iterar:
 
   
 ```javascript
-    //Contando hasta 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// Contando hasta 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ Ejecute este código en una consola de navegador. ¿Qué sucede cuando realiza pequeños cambios en el contador, la condición o la expresión de iteración? ¿Puedes hacer que corra al revés, creando una cuenta regresiva?

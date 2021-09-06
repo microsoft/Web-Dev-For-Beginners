@@ -17,11 +17,15 @@ Das Arbeiten mit Daten ist eine häufige Aufgabe für jede Sprache und eine viel
 
 Die Syntax für ein Array besteht aus zwei eckigen Klammern.
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 Dies ist ein leeres Array, aber Arrays können als bereits mit Daten gefüllt deklariert werden. Mehrere Werte in einem Array werden durch ein Komma getrennt.
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 Den Array-Werten wird ein eindeutiger Wert zugewiesen, der als **Index** bezeichnet wird. Diese ganze Zahl wird basierend auf dem Abstand vom Anfang des Arrays zugewiesen. Im obigen Beispiel hat der Zeichenfolgenwert "Chocolate" den Index 0 und der Index "Rocky Road" den Wert 4. Verwenden Sie den Index in eckigen Klammern, um Array-Werte abzurufen, zu ändern oder einzufügen.
 
@@ -69,10 +73,10 @@ Die `for`-Schleife benötigt 3 Teile, um zu iterieren:
      - `iteration-expression` Wird am Ende jeder Iteration ausgeführt und normalerweise zum Ändern des Zählerwerts verwendet
   
 ```javascript
-    //Counting up to 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// Counting up to 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ Führen Sie diesen Code in einer Browserkonsole aus. Was passiert, wenn Sie kleine Änderungen am Zähler, der Bedingung oder dem Iterationsausdruck vornehmen? Können Sie es rückwärts laufen lassen und einen Countdown erstellen?

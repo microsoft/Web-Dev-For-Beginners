@@ -23,11 +23,15 @@ Bekerja dengan data adalah tugas umum untuk bahasa apa pun, dan ini jauh lebih m
 
 Sintaks untuk array adalah sepasang tanda kurung siku.
 
-`let arrayKu = [];`
+```javascript
+let arrayKu = [];
+```
 
 Ini adalah array kosong, tetapi array dapat dideklarasikan sudah diisi dengan data. Beberapa nilai dalam array dipisahkan dengan koma.
 
-`let rasaRasaEsKrim = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let rasaRasaEsKrim = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 Nilai array diberi nilai unik yang disebut **indeks**, bilangan bulat yang ditetapkan berdasarkan jaraknya dari awal array. Dalam contoh di atas, nilai string "Chocolate" memiliki indeks 0, dan indeks "Rocky Road" adalah 4. Gunakan indeks dengan tanda kurung siku untuk mengambil, mengubah, atau menyisipkan nilai array.
 
@@ -82,7 +86,7 @@ Pengulangan memungkinkan untuk tugas berulang atau **iterative**, dan dapat meng
 Perulangan `for` membutuhkan 3 bagian untuk melakukan iterasi: - `counter` Variabel yang biasanya diinisialisasi dengan angka yang menghitung jumlah iterasi. - `condition` Expression yang menggunakan operator perbandingan untuk menyebabkan loop berhenti ketika `true`. - `iteration-expression` Berjalan di akhir setiap iterasi, biasanya digunakan untuk mengubah nilai penghitung.
 
 ```javascript
-//Menghitung hingga 10
+// Menghitung hingga 10
 for (let i = 0; i < 10; i++) {
   console.log(i);
 }

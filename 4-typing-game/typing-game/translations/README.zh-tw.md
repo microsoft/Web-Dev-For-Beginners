@@ -8,13 +8,13 @@
 
 當我們建立專為瀏覽器設計的應用程式時，我們會提供 Graphical User Interface (GUI) 給用戶使用，在我們建立的格式上進行互動。最常見的互動方式是透過點擊或輸入在多樣的物件。開發者面臨的問題是，我們不了解用戶會何時對這些物件產生互動！
 
-[事件驅動程式設計](https://zh.wikipedia.org/zh-tw/%E4%BA%8B%E4%BB%B6%E9%A9%85%E5%8B%95%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88)是一種程式設計的方式，以建立我們的 GUI。若拆解該名詞的話，我們知道主軸關鍵會是**事件(Event)**。根據 Merriam-Webster，[事件](https://www.merriam-webster.com/dictionary/event)according定義為「將發生的事」。它能有效地解決我們面臨的問題。我們知道當用戶產生互動時，什麼程式必須回應其要求，只差在我們不知道用戶會何時產生互動。
+[事件驅動程式設計](https://zh.wikipedia.org/zh-tw/%E4%BA%8B%E4%BB%B6%E9%A9%85%E5%8B%95%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88)是一種程式設計的方式，以建立我們的 GUI。若拆解該名詞的話，我們知道主軸關鍵會是**事件（Event）**。根據 Merriam-Webster，[事件](https://www.merriam-webster.com/dictionary/event)定義為「將發生的事」。它能有效地解決我們面臨的問題。我們知道當用戶產生互動時，什麼程式必須回應其要求，只差在我們不知道用戶會何時產生互動。
 
 藉由建立新的函式，我們可以標記這段將被運行的程式碼。我們回顧一下[程序式程式設計](https://zh.wikipedia.org/wiki/%E8%BF%87%E7%A8%8B%E5%BC%8F%E7%BC%96%E7%A8%8B)，函式會依照順序一行一行的被運行。這同樣也會被實踐在事件驅動程式設計上，差別在於**如何**去呼叫這些函式。
 
-要處理這些事件：點擊按鈕、輸入字串等等，我們需註冊**事件監聽者(Event Listeners)**。事件監聽者是函式之一，負責回應當事件觸發時，提供相對應的回應。事件監聽者可以根據用戶的行為，更新使用者介面，呼叫伺服器，或是任何你想要它做的事。我們利用[addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener)新增事件監聽者，提供要被運行的函式。
+要處理這些事件：點擊按鈕、輸入字串等等，我們需註冊**事件監聽者（Event Listeners）**。事件監聽者是函式之一，負責回應當事件觸發時，提供相對應的回應。事件監聽者可以根據用戶的行為，更新使用者介面，呼叫伺服器，或是任何你想要它做的事。我們利用 [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) 新增事件監聽者，提供要被運行的函式。
 
-> **注意** 值得注意我們有許多建立事件監聽者的方式。你可以使用匿名函式(anonymous functions)，或是有名字的；你可以使用多種的快捷，好比直接設定 `click` 屬性，或使用 `addEventListener`。在我們練習過程中，主要專注在 `addEventLister` 與匿名函式上，它們可能是開發者最常見的網頁開發技巧。同時，也是彈性最高的： `addEventListener` 作用在任何事件，任何以參數方式輸入的事件名稱。
+> **注意** 值得注意我們有許多建立事件監聽者的方式。你可以使用匿名函式（anonymous functions），或是有名字的；你可以使用多種的快捷，好比直接設定 `click` 屬性，或使用 `addEventListener`。在我們練習過程中，主要專注在 `addEventLister` 與匿名函式上，它們可能是開發者最常見的網頁開發技巧。同時，也是彈性最高的： `addEventListener` 作用在任何事件，任何以參數方式輸入的事件名稱。
 
 ### 常見事件
 
@@ -39,7 +39,7 @@
 
 ### 檔案結構
 
-我們總共需要三個檔案：**index.html**、**script.js**與**style.css**。我們來設定它們，以完成後續的步驟。
+我們總共需要三個檔案：**index.html**、**script.js** 與 **style.css**。我們來設定它們，以完成後續的步驟。
 
 - 建立新的資料夾存放我們的遊戲，開啟 Console 或是終端機，輸入下列指令：
 
@@ -98,9 +98,9 @@ code .
 
 ### 執行應用程式
 
-最好的逐段開發模式是定期的確認程式結果。讓我們來執行現在的應用程式。Visual Studio Code 上有一個好用的擴充套件為[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)，它會在你儲存網頁檔案時，同時架設並更新瀏覽器上的網頁。
+最好的逐段開發模式是定期的確認程式結果。讓我們來執行現在的應用程式。Visual Studio Code 上有一個好用的擴充套件為 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)，它會在你儲存網頁檔案時，同時架設並更新瀏覽器上的網頁。
 
-- 安裝[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)，點擊連結中的 **Install**
+- 安裝 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)，點擊連結中的 **Install**
   - 瀏覽器要求開啟 Visual Studio Code，Visual Studio Code 會執行後續的安裝流程
   - 安裝完後，重啟 Visual Studio Code
 - 一旦安裝完成，在 Visual Studio Code 下按下 Ctrl-Shift-P (或 Cmd-Shift-P) 開啟指令視窗。
@@ -185,7 +185,7 @@ const typedValueElement = document.getElementById('typed-value');
 
 ✅ 試著加入更多的引文到你的遊戲中。
 
-> **筆記** 我們可以接收任何物件，只要使用程式碼 `document.getElementById`。因為我們需要定期參考這些元素，所以使用常數來確認是否有單字輸入錯誤的問題。框架如[Vue.js](https://vuejs.org/)或[React](https://reactjs.org/)可以幫助你更好管理你的程式碼。
+> **筆記** 我們可以接收任何物件，只要使用程式碼 `document.getElementById`。因為我們需要定期參考這些元素，所以使用常數來確認是否有單字輸入錯誤的問題。框架如 [Vue.js](https://vuejs.org/) 或 [React](https://reactjs.org/) 可以幫助你更好管理你的程式碼。
 
 花點時間觀看下列關於 `const`、`let` 與 `var` 的影片。
 
@@ -235,7 +235,7 @@ document.getElementById('start').addEventListener('click', () => {
 我們來分解程式碼吧！
 
 - 設定單字追蹤
-  - 使用[Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)和[Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random)讓我們能隨機從矩陣 `quotes` 中挑選一行引文
+  - 使用 [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) 和 [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 讓我們能隨機從矩陣 `quotes` 中挑選一行引文
   - 轉換 `quote` 成 `words` 組成的矩陣，追蹤目前玩家正在輸入的單字
   - `wordIndex` 設定為 0，玩家會從第一的單字開始輸入
 - 設定使用者介面
@@ -313,7 +313,7 @@ typedValueElement.addEventListener('input', () => {
 
 點擊按鈕 **start**，馬上開始輸入單字！你可以看看這預覽動畫。
 
-![遊戲中的動畫](../../4-typing-game/images/demo.gif)
+![遊戲中的動畫](../../images/demo.gif)
 
 ---
 
@@ -324,7 +324,7 @@ typedValueElement.addEventListener('input', () => {
 - 在完成遊戲時，關閉 `input` 事件監聽者；遊戲重新開始時，再重新開啟它。
 - 當玩家完成引文時，關閉文字框
 - 以對話窗格的方式顯示恭賀訊息
-- 利用[localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)儲存最高分的資料
+- 利用 [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) 儲存最高分的資料
 
 ## 課後測驗
 
