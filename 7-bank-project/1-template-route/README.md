@@ -247,10 +247,12 @@ function onLinkClick(event) {
 Let's complete the navigation system by adding bindings to our *Login* and *Logout* links in the HTML.
 
 ```html
-<a href="/dashboard" onclick="onLinkClick()">Login</a>
+<a href="/dashboard" onclick="onLinkClick(event)">Login</a>
 ...
-<a href="/login" onclick="onLinkClick()">Logout</a>
+<a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
+
+The `event` object above, captures the `click` event and passes it to our `onLinkClick` function.
 
 Using the [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) attribute bind the `click` event to JavaScript code, here the call to the `navigate()` function.
 
