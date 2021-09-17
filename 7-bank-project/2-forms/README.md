@@ -14,6 +14,13 @@ In this part we'll use HTML forms to add login and registration to our web app. 
 
 You need to have completed the [HTML templates and routing](../1-template-route/README.md) of the web app for this lesson. You also need to install [Node.js](https://nodejs.org) and [run the server API](../api/README.md) locally so you can send data to create accounts.
 
+**Take note**
+You will have two terminals running at the same time as listed below.
+1. For the the main bank app we built in the [HTML templates and routing](../1-template-route/README.md) lesson
+2. For the [Bank APP server API](../api/README.md) we just setup above.
+
+You need two of the servers up and running to follow through with the rest of the lesson. They are listening on different ports(port `3000` and port `5000`) so everything should work just fine.
+
 You can test that the server is running properly by executing this command in a terminal:
 
 ```sh
