@@ -12,11 +12,13 @@ You can also take a look at this interactive tutorial: https://aka.ms/learn/expr
 
 Make sure you have [Node.js](https://nodejs.org) installed.
 
-1. Git clone this repo.
-2. Open a terminal in `api` folder, then run `npm install`.
-3. Run `npm start`.
+1. Git clone this repo [The Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners).
+2. Open your terminal and navigate into the `Web-Dev-For-Beginners/7-bank-project/api` folder
+2. Run `npm install` and wait for the packages to be installed(could take a while depending on the quality of your internet connection).
+3. When the installation is over, run `npm start` and you are good to go.
 
 The server should start listening on port `5000`.
+*This server will be running together with the main bank app server terminal(listening on port `3000`), do not close it.*
 
 > Note: all entries are stored in-memory and are not persisted, so when the server is stopped all data is lost.
 
