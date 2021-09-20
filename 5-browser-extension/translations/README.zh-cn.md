@@ -18,10 +18,10 @@
 
 ## 贡献者
 
-网页碳排放追踪的想法由 Asim Hussain，微软绿色云计算倡导团队的负责人和 [Green Principles](https://principles.green/) 的作者。这源自于一个[网页项目](https://github.com/jlooper/green)。
+网页碳排放追踪的想法由微软绿色云计算倡导团队的负责人和 [Green Principles](https://principles.green/) 的作者 Asim Hussain 提出。这源自于一个[网页项目](https://github.com/jlooper/green)。
 
 浏览器插件的结构受到 [Adebola Adeniran 的 COVID 插件](https://github.com/onedebos/covtension)的启发
 
 「点」 图标系统背后的概念是由加州排放的 [Energy Lollipop](https://energylollipop.com/) 浏览器插件的图标结构提出的。
 
-这些课程由 [Jen Looper](https://www.twitter.com/jenlooper) 用满满的 ♥️ 來编写。
+这些课程由 [Jen Looper](https://www.twitter.com/jenlooper) 用满满的 ♥️ 编写。
