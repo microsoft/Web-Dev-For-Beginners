@@ -39,7 +39,7 @@ While we have purposefully avoided introducing JavaScript frameworks so as to co
 
 > Find our [Code of Conduct](CODE_OF_CONDUCT.md), [Contributing](CONTRIBUTING.md), and [Translation](TRANSLATIONS.md) guidelines. We welcome your constructive feedback!
 >
-## Each lesson includes:
+## ഓരോ പാഠവും ഉൾപ്പെടുന്നു:
 
 - optional sketchnote
 - optional supplemental video
@@ -52,9 +52,9 @@ While we have purposefully avoided introducing JavaScript frameworks so as to co
 - assignment
 - post-lesson quiz
 
-> **A note about quizzes**: All quizzes are contained [in this app](https://happy-mud-02d95f10f.azurestaticapps.net/), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
+> **ക്വിസുകളെക്കുറിച്ചുള്ള ഒരു കുറിപ്പ്**: All quizzes are contained [in this app](https://happy-mud-02d95f10f.azurestaticapps.net/), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
 
-## Lessons
+## പാഠങ്ങൾ
 
 |       |                       Project Name                       |                            Concepts Taught                             | Learning Objectives                                                                                                                 |                                                         Linked Lesson                                                          |         Author          |
 | :---: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
@@ -87,11 +87,11 @@ While we have purposefully avoided introducing JavaScript frameworks so as to co
 
 You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
 
-## PDF
+## പിഡിഫ് 
 
 A PDF of all of the lessons can be found [here](pdf/readme.pdf)
 
-## Other Curricula
+## മറ്റ് പാഠ്യപദ്ധതികൾ
 
 Our team produces other curricula! Check out:
 
