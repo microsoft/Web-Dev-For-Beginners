@@ -9,13 +9,13 @@
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
 
-# Web Development for Beginners - A Curriculum
+# തുടക്കക്കാർക്കുള്ള വെബ് വികസനം - ഒരു പാഠ്യപദ്ധതി
 
-Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson curriculum all about JavaScript, CSS, and HTML basics. Each lesson includes pre- and post-lesson quizzes, written instructions to complete the lesson, a solution, an assignment and more. Our project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
+മൈക്രോസോഫ്റ്റിലെ അസുർ ക്ലൗഡ് അഡ്വക്കേറ്റ്സ് ജാവാസ്ക്രിപ്റ്റ്, സിഎസ്എസ്, എച്ച്ടിഎംഎൽ അടിസ്ഥാനകാര്യങ്ങൾ എന്നിവയെക്കുറിച്ച് 12-ആഴ്ച, 24-പാഠ പാഠ്യപദ്ധതി വാഗ്ദാനം ചെയ്യുന്നതിൽ സന്തോഷമുണ്ട്. ഓരോ പാഠത്തിലും പാഠത്തിന് മുമ്പും ശേഷവുമുള്ള ക്വിസുകൾ, പാഠം പൂർത്തിയാക്കാനുള്ള രേഖാമൂലമുള്ള നിർദ്ദേശങ്ങൾ, ഒരു പരിഹാരം, ഒരു അസൈൻമെന്റ് എന്നിവയും അതിലേറെയും ഉൾപ്പെടുന്നു. ഞങ്ങളുടെ പ്രോജക്റ്റ് അധിഷ്‌ഠിത അദ്ധ്യാപനം പുതിയ കഴിവുകൾ 'എത്തിപ്പിടിക്കാൻ' തെളിയിക്കപ്പെട്ട ഒരു മാർഗം നിർമ്മിക്കുമ്പോൾ പഠിക്കാൻ നിങ്ങളെ അനുവദിക്കുന്നു. 
 
-**Hearty thanks to our authors Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, and sketchnote artist Tomomi Imura!**
+**ഞങ്ങളുടെ രചയിതാക്കളായ ജെൻ ലൂപ്പർ, ക്രിസ് നോറിംഗ്, ക്രിസ്റ്റഫർ ഹാരിസൺ, ജാസ്മിൻ ഗ്രീൻവേ, യോഹാൻ ലസോർസ, ഫ്ലോർ ഡ്രീസ്, സ്കെച്ച്നോട്ട് ആർട്ടിസ്റ്റ് ടോമിമി ഇമുറ എന്നിവർക്ക് ഹൃദയം നിറഞ്ഞ നന്ദി!**
 
-# Getting Started
+# ആമുഖം
 
 > **Teachers**, we have [included some suggestions](for-teachers.md) on how to use this curriculum. We'd love your feedback [in our discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
