@@ -14,8 +14,8 @@
 
 ### 크레딧
 
-These lessons were written with :hearts: by [Yohan Lasorsa](https://twitter.com/sinedied).
+강의를 제작한 분 : :hearts: by [Yohan Lasorsa](https://twitter.com/sinedied)
 
-If you're interested to learn how to build the [server API](./api/README) used in these lessons, you can follow [this series of videos](https://aka.ms/NodeBeginner) (in particular videos 17 through 21).
+강의에 사용된 서버 API 만드는 것이 궁금하시면 [YouTube 영상](https://aka.ms/NodeBeginner)을 참고하세요. (17번 ~ 21번 영상 주목)
 
-You can also take a look at [this interactive Learn tutorial](https://aka.ms/learn/express-api). 
+Node.js와 Express로 웹 API를 만드는 참고 자료는 [여기](https://aka.ms/learn/express-api).
