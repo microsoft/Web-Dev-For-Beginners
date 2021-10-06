@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Essayez de créer un petit jeu où vous vous entraînez dans différentes conditions finales. Variez entre obtenir un certain nombre de points, le héros perd toutes les vies ou tous les monstres sont vaincus. Construisez quelque chose de simple comme un jeu d'aventure sur console. Utilisez le flux de jeu ci-dessous comme source d'inspiration :
+Essayez de créer un petit jeu où vous vous entraînez dans différentes conditions finales. Variez entre le fait d'obtenir un certain nombre de points, que le héros perde toutes les vies ou que tous les monstres soit vaincus. Construisez quelque chose de simple comme un jeu d'aventure sur console. Utilisez le flux de jeu ci-dessous comme source d'inspiration :
 
 ```
 Héros> Frappe avec une épée large - l'orc subit 3p de dégâts
