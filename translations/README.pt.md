@@ -26,7 +26,7 @@ Procure fazer os projetos baseado no que aprendeu ao invés de simplesmente copi
 Uma boa opção seria criar um grupo de estudos e completar todos os conteúdos juntos.
 Para estudos mais profundos, recomendamos que assista aos vídeos mencionados abaixo e procure pelo [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa).
 
-[![Promo video](screenshot.png)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
+[![Promo video](../screenshot.png)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
 
 > 🎥 Clique na imagem acima para acessar um vídeo sobre o projeto e aqueles que o criaram !
 
