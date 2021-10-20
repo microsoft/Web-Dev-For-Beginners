@@ -23,7 +23,7 @@ Creating and **declaring** a variable has the following syntax **[keyword] [name
 
 - **Keyword**. Keywords can be `let` or `var`.  
 
-   > Note, They keyword `let` was introduced in ES6 and gives your variable a so called _block scope_. It's recommended that you use `let` over `var`. We will cover block scopes more in depth in future parts.
+✅ The keyword `let` was introduced in ES6 and gives your variable a so called _block scope_. It's recommended that you use `let` over `var`. We will cover block scopes more in depth in future parts.
 - **The variable name**, this is a name you choose yourself.
 
 ### Task - working with variables
