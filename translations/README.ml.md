@@ -83,17 +83,17 @@
 |  23   |         [Banking App](/7-bank-project/solution)          |                   Methods of Fetching and Using Data                   | How data flows in and out of your app, how to fetch it, store it, and dispose of it                                                 |                                            [Data](/7-bank-project/3-data/README.md)                                            |          Yohan          |
 |  24   |         [Banking App](/7-bank-project/solution)          |                      Concepts of State Management                      | Learn how your app retains state and how to manage it programmatically                                                              |                                [State Management](/7-bank-project/4-state-management/README.md)                                |          Yohan          |
 
-## Offline access
+## ഓഫ്‌ലൈൻ ആക്‌സസ്സ്
 
-You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
+നിങ്ങൾക്ക് ഈ ഡോക്യുമെന്റേഷൻ [Docsify](https://docsify.js.org/#/) ഉപയോഗിച്ച്  ഓഫ്‌ലൈനിൽ പ്രവർത്തിപ്പിക്കാനാകും. ഈ റിപ്പോ ഫോർക്ക് ചെയ്യുക, [install Docsify](https://docsify.js.org/#/quickstart) നിങ്ങളുടെ പ്രാദേശിക മെഷീനിൽ,തുടർന്ന് ഈ റിപ്പോയുടെ റൂട്ട് ഫോൾഡറിൽ `docsify serve` ടൈപ്പ് ചെയ്യുക.  നിങ്ങളുടെ ലോക്കൽഹോസ്റ്റിൽ പോർട്ട് 3000 ൽ വെബ്സൈറ്റ് കാണാം : `localhost:3000`.
 
 ## പിഡിഫ് 
 
-A PDF of all of the lessons can be found [here](pdf/readme.pdf)
+എല്ലാ പാഠങ്ങളുടെയും ഒരു PDF കാണാം [ഇവിടെ](pdf/readme.pdf)
 
 ## മറ്റ് പാഠ്യപദ്ധതികൾ
 
-Our team produces other curricula! Check out:
+ഞങ്ങളുടെ ടീം മറ്റ് പാഠ്യപദ്ധതികൾ നിർമ്മിക്കുന്നു! പരിശോധിക്കുക :
 
 - [Machine Learning for Beginners](https://aka.ms/ml-beginners)
 - [IoT for Beginners](https://aka.ms/iot-beginners)
