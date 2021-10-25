@@ -38,7 +38,7 @@
 
 > Find our [Code of Conduct](CODE_OF_CONDUCT.md), [Contributing](CONTRIBUTING.md), and [Translation](TRANSLATIONS.md) guidelines. We welcome your constructive feedback!
 >
-## ഓരോ പാഠവും ഉൾപ്പെടുന്നു:
+## ഓരോ പാഠത്തിലും  ഉൾപ്പെടുന്നത്:
 
 - ഓപ്ഷണൽ സ്കെച്ച്നോട്ട്
 - ഓപ്ഷണൽ അനുബന്ധ വീഡിയോ
