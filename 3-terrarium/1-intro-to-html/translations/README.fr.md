@@ -1,11 +1,11 @@
 # Projet Terrarium Partie 1 : Introduction au HTML
 
-![Introduction to HTML](/sketchnotes/webdev101-html.png)
-> Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
+![Introduction au HTML](/sketchnotes/webdev101-html.png)
+> Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Quiz de pré-lecture
+## Quiz préalable
 
-[Quiz de pré-lecture](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15)
+[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=fr)
 
 ### Introduction
 
@@ -15,7 +15,7 @@ Dans cette leçon, nous allons utiliser le HTML pour mettre en page le "squelett
 
 ### Tâche
 
-Sur ton ordinateur, créez un dossier appelé "terrarium" et, à l'intérieur, un fichier appelé "index.html". Vous pouvez le faire dans Visual Studio Code après avoir créé votre dossier terrarium en ouvrant une nouvelle fenêtre VS Code, en cliquant sur "Ouvrir le dossier" et en naviguant vers votre nouveau dossier. Cliquez sur le petit bouton "file" dans le panneau de l'explorateur et créez le nouveau fichier :
+Sur votre ordinateur, créez un dossier appelé "terrarium" et, à l'intérieur, un fichier appelé "index.html". Vous pouvez le faire dans Visual Studio Code après avoir créé votre dossier terrarium en ouvrant une nouvelle fenêtre VS Code, en cliquant sur "Ouvrir le dossier" et en naviguant vers votre nouveau dossier. Cliquez sur le petit bouton "file" dans le panneau de l'explorateur et créez le nouveau fichier :
 
 ![explorer in VS Code](images/vs-code-index.png)
 
@@ -25,7 +25,7 @@ Utilisez ces commandes sur votre terminal git :
 * `mkdir terrarium`
 * `cd terrarium`
 * `touch index.html`
-* `code index.html` or `nano index.html`
+* `code index.html` ou `nano index.html`
 
 > Les fichiers index.html indiquent au navigateur qu'il s'agit du fichier par défaut d'un dossier ; des URL telles que `https://anysite.com/test` peuvent être construites à l'aide d'une structure de dossiers comprenant un dossier appelé `test` avec `index.html` à l'intérieur ; `index.html` ne doit pas nécessairement apparaître dans une URL.
 
@@ -217,9 +217,9 @@ Ajoutez cette balise au-dessus de la dernière balise `</div>` :
 
 Il existe quelques "vieilles" balises sauvages en HTML avec lesquelles il est encore amusant de jouer, même si vous ne devriez pas utiliser des balises obsolètes telles que [ces balises](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) dans votre balisage. Pouvez-vous utiliser l'ancienne balise `<marquee>` pour faire défiler horizontalement le titre h1 ? (si vous le faites, n'oubliez pas de la supprimer ensuite)
 
-## Quiz post-lecture
+## Quiz de validation des connaissances
 
-[Quiz post-lecture](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16)
+[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=fr)
 
 ## Révision et autoformation
 
