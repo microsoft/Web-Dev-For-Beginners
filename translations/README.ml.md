@@ -40,16 +40,16 @@
 >
 ## ഓരോ പാഠവും ഉൾപ്പെടുന്നു:
 
-- optional sketchnote
-- optional supplemental video
-- pre-lesson warmup quiz
-- written lesson
-- for project-based lessons, step-by-step guides on how to build the project
-- knowledge checks
-- a challenge
-- supplemental reading
-- assignment
-- post-lesson quiz
+- ഓപ്ഷണൽ സ്കെച്ച്നോട്ട്
+- ഓപ്ഷണൽ അനുബന്ധ വീഡിയോ
+- പാഠത്തിനു മുമ്പുള്ള വാംഅപ്പ് ക്വിസ്
+- എഴുതിയ പാഠഭാഗം 
+- പ്രോജക്റ്റ് അധിഷ്‌ഠിത പാഠങ്ങൾക്കായി, പ്രോജക്റ്റ് എങ്ങനെ നിർമ്മിക്കാം എന്നതിനെക്കുറിച്ചുള്ള ഘട്ടം ഘട്ടമായുള്ള ഗൈഡുകൾ
+- വിജ്ഞാന പരിശോധനകൾ
+- ഒരു വെല്ലുവിളി
+- അനുബന്ധ വായന
+- അസ്സൈൻമെന്റ്  
+- പാഠാനന്തര ക്വിസ്
 
 > **ക്വിസുകളെക്കുറിച്ചുള്ള ഒരു കുറിപ്പ്**: All quizzes are contained [in this app](https://happy-mud-02d95f10f.azurestaticapps.net/), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
 
