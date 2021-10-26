@@ -16,6 +16,6 @@ Dans ce projet, vous apprendrez à créer une banque fictive. Ces leçons compre
 
 Ces leçons ont été rédigées avec :hearts: par [Yohan Lasorsa](https://twitter.com/sinedied).
 
-Si vous souhaitez apprendre comment construire l'[API serveur](../api/README.md) utilisés dans ces leçons, vous pouvez suivre [cette série de videos](https://aka.ms/NodeBeginner) (en particulier les vidéos 17 à 21).
+Si vous souhaitez apprendre comment créer l'[API serveur](../api/README.md) utilisés dans ces leçons, vous pouvez suivre [cette série de videos](https://aka.ms/NodeBeginner) (en particulier les vidéos 17 à 21).
 
 Vous pouvez également jeter un coup d'œil à [ce tutoriel d'apprentissage interactif](https://aka.ms/learn/express-api). 
