@@ -9,9 +9,9 @@
 
 ### Introduction
 
-Les CSS, ou feuilles de style en cascade, résolvent un problème important du développement web : comment rendre votre site web agréable à regarder. Le style de vos applications les rend plus faciles à utiliser et plus belles. Vous pouvez également utiliser les feuilles de style CSS pour créer un design Web réactif (Responsive Web Design, RWD), ce qui permet à vos applications d'être belles quelle que soit la taille de l'écran sur lequel elles sont affichées. CSS n'a pas pour seul but d'améliorer l'apparence de votre application ; ses spécifications incluent des animations et des transformations qui permettent des interactions sophistiquées pour vos applications. Le groupe de travail CSS contribue à la mise à jour des spécifications CSS ; vous pouvez suivre leurs travaux sur le [site du World Wide Web Consortium] (https://www.w3.org/Style/CSS/members).
+Les CSS, ou feuilles de style en cascade, résolvent un problème important du développement web : comment rendre votre site web agréable à regarder. Le style de vos applications les rend plus faciles à utiliser et plus belles. Vous pouvez également utiliser les feuilles de style CSS pour créer un design Web réactif (Responsive Web Design, RWD), ce qui permet à vos applications d'être belles quelle que soit la taille de l'écran sur lequel elles sont affichées. CSS n'a pas pour seul but d'améliorer l'apparence de votre application ; ses spécifications incluent des animations et des transformations qui permettent des interactions sophistiquées pour vos applications. Le groupe de travail CSS contribue à la mise à jour des spécifications CSS ; vous pouvez suivre leurs travaux sur le [site du World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
 
-> Remarque : CSS est un langage qui évolue, comme tout ce qui existe sur le Web, et tous les navigateurs ne prennent pas en charge les parties les plus récentes de la spécification. Vérifiez toujours vos implémentations en consultant [CanIUse.com] (https://caniuse.com).
+> Remarque : CSS est un langage qui évolue, comme tout ce qui existe sur le Web, et tous les navigateurs ne prennent pas en charge les parties les plus récentes de la spécification. Vérifiez toujours vos implémentations en consultant [CanIUse.com](https://caniuse.com).
 
 Dans cette leçon, nous allons ajouter des styles à notre terrarium en ligne et en apprendre davantage sur plusieurs concepts CSS : la cascade, l'héritage et l'utilisation de sélecteurs, le positionnement et l'utilisation de CSS pour créer des mises en page. Au cours de ce processus, nous allons mettre en page le terrarium et créer le terrarium lui-même.
 
@@ -238,7 +238,7 @@ Tout d'abord, donnez aux enfants de la div `.terrarium` le style d'un rectangle 
 
 Notez l'utilisation des pourcentages ici. Si vous réduisez la taille de votre navigateur, vous pouvez voir comment le bocal est également mis à l'échelle. Remarquez également les pourcentages de largeur et de hauteur des éléments du pot et la manière dont chaque élément est positionné de manière absolue au centre, épinglé au bas de la fenêtre.
 
-Nous utilisons également `rem` pour le border-radius, une longueur relative à la police. Pour en savoir plus sur ce type de mesure relative, consultez la [spécification CSS] (https://www.w3.org/TR/css-values-3/#font-relative-lengths).
+Nous utilisons également `rem` pour le border-radius, une longueur relative à la police. Pour en savoir plus sur ce type de mesure relative, consultez la [spécification CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
 ✅ Essayez de modifier les couleurs et l'opacité du bocal par rapport à celles de la saleté. Que se passe-t-il ? Pourquoi ?
 
@@ -258,7 +258,7 @@ Pour répondre au Quiz de validation des connaissances, suivez ce module d'appre
 
 ## Révision et étude personnelle
 
-Les feuilles de style en cascade (CSS) sont apparemment très simples, mais les difficultés sont nombreuses lorsqu'il s'agit d'adapter parfaitement une application à tous les navigateurs et à toutes les tailles d'écran. CSS-Grid et Flexbox sont des outils qui ont été développés pour rendre le travail un peu plus structuré et plus fiable. Découvrez ces outils en jouant à [Flexbox Froggy] (https://flexboxfroggy.com/) et [Grid Garden] (https://codepip.com/games/grid-garden/).
+Les feuilles de style en cascade (CSS) sont apparemment très simples, mais les difficultés sont nombreuses lorsqu'il s'agit d'adapter parfaitement une application à tous les navigateurs et à toutes les tailles d'écran. CSS-Grid et Flexbox sont des outils qui ont été développés pour rendre le travail un peu plus structuré et plus fiable. Découvrez ces outils en jouant à [Flexbox Froggy](https://flexboxfroggy.com/) et [Grid Garden](https://codepip.com/games/grid-garden/).
 
 ## Affectation
 
