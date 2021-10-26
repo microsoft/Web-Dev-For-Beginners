@@ -3,7 +3,7 @@
 ![Les bases de JavaScript - Fonctions](/sketchnotes/webdev101-js-functions.png)
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Quizz préalable
+## Quiz préalable
 [Quizz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9?loc=fr)
 
 Lorsque nous pensons à écrire du code, nous voulons toujours nous assurer que notre code est lisible. Bien que cela puisse paraître contre-intuitif, le code est lu bien plus souvent qu'il n'est écrit. Un outil essentiel dans la boîte à outils d'un développeur pour garantir un code maintenable est la **fonction**.
