@@ -7,15 +7,15 @@ Dans ce projet, vous apprendrez à créer une banque fictive. Ces leçons compre
 
 ## Leçons
 
-1. [Modèles HTML et itinéraires dans une application Web](../1-template-route/README.md)
-2. [Créer un formulaire de connexion et d'inscription](../2-forms/README.md)
-3. [Méthodes d'extraction et d'utilisation des données](../3-data/README.md)
-4. [Concepts de gestion de l'État](../4-state-management/README.md)
+1. [Modèles HTML et itinéraires dans une application Web](../1-template-route/README.fr.md)
+2. [Créer un formulaire de connexion et d'inscription](../2-forms/README.fr.md)
+3. [Méthodes d'extraction et d'utilisation des données](../3-data/README.fr.md)
+4. [Concepts de gestion de l'État](../4-state-management/README.fr.md)
 
 ### Crédits
 
 Ces leçons ont été rédigées avec :hearts: par [Yohan Lasorsa](https://twitter.com/sinedied).
 
-Si vous souhaitez apprendre comment créer l'[API serveur](../api/README.md) utilisés dans ces leçons, vous pouvez suivre [cette série de videos](https://aka.ms/NodeBeginner) (en particulier les vidéos 17 à 21).
+Si vous souhaitez apprendre comment créer l'[API serveur](../api/README.fr.md) utilisée dans ces leçons, vous pouvez suivre [cette série de videos](https://aka.ms/NodeBeginner) (en particulier les vidéos 17 à 21).
 
 Vous pouvez également jeter un coup d'œil à [ce tutoriel d'apprentissage interactif](https://aka.ms/learn/express-api). 
