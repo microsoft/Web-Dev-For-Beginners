@@ -5,7 +5,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/19)
+[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/19?loc=fr)
 
 ### Introduction
 
