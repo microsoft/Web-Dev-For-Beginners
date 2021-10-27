@@ -9,11 +9,11 @@
 
 ### Introduction
 
-La manipulation du DOM, ou "Document Object Model", est un aspect essentiel du développement web. Selon [MDN] (https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "le Document Object Model (DOM) est la représentation des données des objets qui comprennent la structure et le contenu d'un document sur le Web". Les défis autour de la manipulation du DOM sur le web ont souvent été à l'origine de l'utilisation de frameworks JavaScript au lieu de vanilla JavaScript pour gérer le DOM, mais nous nous débrouillerons seuls !
+La manipulation du DOM, ou "Document Object Model", est un aspect essentiel du développement web. Selon [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "le Document Object Model (DOM) est la représentation des données des objets qui comprennent la structure et le contenu d'un document sur le Web". Les défis autour de la manipulation du DOM sur le web ont souvent été à l'origine de l'utilisation de frameworks JavaScript au lieu de vanilla JavaScript pour gérer le DOM, mais nous nous débrouillerons seuls !
 
-En outre, cette leçon présente l'idée d'une [fermeture JavaScript] (https://developer.mozilla.org/docs/Web/JavaScript/Closures), que vous pouvez considérer comme une fonction entourée d'une autre fonction, de sorte que la fonction interne ait accès à la portée de la fonction externe.
+En outre, cette leçon présente l'idée d'une [fermeture JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), que vous pouvez considérer comme une fonction entourée d'une autre fonction, de sorte que la fonction interne ait accès à la portée de la fonction externe.
 
-> Les fermetures JavaScript sont un sujet vaste et complexe. Cette leçon aborde l'idée la plus élémentaire : dans le code de ce terrarium, vous trouverez une fermeture : une fonction interne et une fonction externe construites de manière à permettre à la fonction interne d'accéder à la portée de la fonction externe. Pour de plus amples informations sur la façon dont cela fonctionne, veuillez consulter la [documentation approfondie] (https://developer.mozilla.org/docs/Web/JavaScript/Closures).
+> Les fermetures JavaScript sont un sujet vaste et complexe. Cette leçon aborde l'idée la plus élémentaire : dans le code de ce terrarium, vous trouverez une fermeture : une fonction interne et une fonction externe construites de manière à permettre à la fonction interne d'accéder à la portée de la fonction externe. Pour de plus amples informations sur la façon dont cela fonctionne, veuillez consulter la [documentation approfondie](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
 
 Nous allons utiliser une fermeture pour manipuler le DOM.
 
@@ -108,9 +108,9 @@ function dragElement(terrariumElement) {
 
 `dragElement` obtient son objet `terrariumElement` à partir des déclarations en haut du script. Ensuite, vous définissez quelques positions locales à `0` pour l'objet passé dans la fonction. Ce sont les variables locales qui seront manipulées pour chaque élément au fur et à mesure que vous ajouterez la fonctionnalité de glisser-déposer dans la fermeture à chaque élément. Le terrarium sera peuplé par ces éléments glissés, l'application doit donc garder la trace de l'endroit où ils sont placés.
 
-En outre, l'élément terrariumElement qui est passé à cette fonction se voit attribuer un événement `pointerdown`, qui fait partie des [web APIs] (https://developer.mozilla.org/docs/Web/API) conçus pour aider à la gestion du DOM. L'événement `onpointerdown` se déclenche lorsqu'on appuie sur un bouton ou, dans notre cas, lorsqu'on touche un élément glissant. Ce gestionnaire d'événements fonctionne à la fois sur les [navigateurs Web et mobiles] (https://caniuse.com/?search=onpointerdown), à quelques exceptions près.
+En outre, l'élément terrariumElement qui est passé à cette fonction se voit attribuer un événement `pointerdown`, qui fait partie des [web APIs](https://developer.mozilla.org/docs/Web/API) conçus pour aider à la gestion du DOM. L'événement `onpointerdown` se déclenche lorsqu'on appuie sur un bouton ou, dans notre cas, lorsqu'on touche un élément glissant. Ce gestionnaire d'événements fonctionne à la fois sur les [navigateurs Web et mobiles](https://caniuse.com/?search=onpointerdown), à quelques exceptions près.
 
-✅ Le [gestionnaire d'événement `onclick`] (https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) est bien mieux supporté par les différents navigateurs ; pourquoi ne l'utiliseriez-vous pas ici ? Pensez au type exact d'interaction à l'écran que vous essayez de créer ici.
+✅ Le [gestionnaire d'événement `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) est bien mieux supporté par les différents navigateurs ; pourquoi ne l'utiliseriez-vous pas ici ? Pensez au type exact d'interaction à l'écran que vous essayez de créer ici.
 
 ---
 
@@ -207,9 +207,9 @@ Ajoutez un nouveau gestionnaire d'événements à votre fermeture pour faire que
 
 Si faire glisser des éléments à l'écran semble trivial, il existe de nombreuses façons de le faire et de nombreux pièges, en fonction de l'effet recherché. En fait, il existe toute une [API de glisser-déposer] (https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) que vous pouvez essayer. Nous ne l'avons pas utilisée dans ce module car l'effet recherché était quelque peu différent, mais essayez cette API sur votre propre projet et voyez ce que vous pouvez réaliser.
 
-Vous trouverez plus d'informations sur les événements liés aux pointeurs sur le site [W3C docs] (https://www.w3.org/TR/pointerevents1/) et sur le site [MDN web docs] (https://developer.mozilla.org/docs/Web/API/Pointer_events).
+Vous trouverez plus d'informations sur les événements liés aux pointeurs sur le site [W3C docs](https://www.w3.org/TR/pointerevents1/) et sur le site [MDN web docs](https://developer.mozilla.org/docs/Web/API/Pointer_events).
 
-Vérifiez toujours les capacités du navigateur en utilisant [CanIUse.com] (https://caniuse.com/).
+Vérifiez toujours les capacités du navigateur en utilisant [CanIUse.com](https://caniuse.com/).
 
 ## Affectation
 
