@@ -205,7 +205,7 @@ Ajoutez un nouveau gestionnaire d'événements à votre fermeture pour faire que
 
 ## Examen et étude personnelle
 
-Si faire glisser des éléments à l'écran semble trivial, il existe de nombreuses façons de le faire et de nombreux pièges, en fonction de l'effet recherché. En fait, il existe toute une [API de glisser-déposer] (https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) que vous pouvez essayer. Nous ne l'avons pas utilisée dans ce module car l'effet recherché était quelque peu différent, mais essayez cette API sur votre propre projet et voyez ce que vous pouvez réaliser.
+Si faire glisser des éléments à l'écran semble trivial, il existe de nombreuses façons de le faire et de nombreux pièges, en fonction de l'effet recherché. En fait, il existe toute une [API de glisser-déposer](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) que vous pouvez essayer. Nous ne l'avons pas utilisée dans ce module car l'effet recherché était quelque peu différent, mais essayez cette API sur votre propre projet et voyez ce que vous pouvez réaliser.
 
 Vous trouverez plus d'informations sur les événements liés aux pointeurs sur le site [W3C docs](https://www.w3.org/TR/pointerevents1/) et sur le site [MDN web docs](https://developer.mozilla.org/docs/Web/API/Pointer_events).
 
