@@ -55,7 +55,7 @@ En substance, le processus sera le suivant :
 - s'il s'agit d'une nouvelle installation, choisissez `load unpacked` pour charger une nouvelle extension depuis son dossier de construction (dans notre cas, c'est `/dist`) 
 - ou, cliquez sur `reload` si vous rechargez l'extension déjà installée.
 
-✅ Ces instructions concernent les extensions que vous construisez vous-même ; pour installer des extensions qui ont été publiées dans le magasin d'extension du navigateur associé à chaque navigateur, vous devez vous rendre dans ces [magasins] (https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) et installer l'extension de votre choix.
+✅ Ces instructions concernent les extensions que vous construisez vous-même ; pour installer des extensions qui ont été publiées dans le magasin d'extension du navigateur associé à chaque navigateur, vous devez vous rendre dans ces [magasins](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) et installer l'extension de votre choix.
 
 ### Commencer
 
@@ -64,12 +64,12 @@ l'API de CO2 Signal.
 
 **Vous avez besoin de:**
 
-- [une clé API] (https://www.co2signal.com/) ; saisissez votre adresse électronique dans le champ de cette page et une clé vous sera envoyée.
+- [une clé API](https://www.co2signal.com/) ; saisissez votre adresse électronique dans le champ de cette page et une clé vous sera envoyée.
 - le [code pour votre région](http://api.electricitymap.org/v3/zones) correspondant à la [carte de l'électricité](https://www.electricitymap.org/map) (à Boston, par exemple, j'utilise 'US-NEISO').
 - le [code de démarrage](../start). Téléchargez le dossier `start` ; vous allez compléter le code dans ce dossier.
 - [NPM](https://www.npmjs.com) - NPM est un outil de gestion de paquets ; installez-le localement et les paquets listés dans votre fichier `package.json` seront installés pour être utilisés par votre ressource web.
 
-✅ Apprenez-en plus sur la gestion des paquets dans cet [excellent module d'apprentissage] (https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)
+✅ Apprenez-en plus sur la gestion des paquets dans cet [excellent module d'apprentissage](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)
 
 Prenez une minute pour parcourir la base de code :
 
