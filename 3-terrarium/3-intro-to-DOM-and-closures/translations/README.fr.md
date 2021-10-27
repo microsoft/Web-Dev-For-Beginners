@@ -133,9 +133,9 @@ Plusieurs choses se produisent. Premièrement, vous empêchez les événements p
 
 > Revenez à cette ligne lorsque vous avez construit le fichier de script complètement et essayez-le sans `e.preventDefault()` - que se passe-t-il ?
 
-Ensuite, ouvrez `index.html` dans une fenêtre du navigateur, et inspectez l'interface. Lorsque vous cliquez sur une plante, vous pouvez voir comment l'événement 'e' est capturé. Creusez dans l'événement pour voir combien d'informations sont recueillies par un événement de type "pointeur vers le bas" !  
+Ensuite, ouvrez `index.html` dans une fenêtre du navigateur, et inspectez l'interface. Lorsque vous cliquez sur une plante, vous pouvez voir comment l'événement 'e' est capturé. Creusez dans l'événement pour voir combien d'informations sont recueillies par un événement de type "pointeur vers le bas" ! 
 
-Ensuite, notez comment les variables locales `pos3` et `pos4` sont définies sur e.clientX. Vous pouvez trouver les valeurs `e` dans le volet d'inspection. Ces valeurs capturent les coordonnées x et y de la plante au moment où vous cliquez dessus ou la touchez. Vous aurez besoin d'un contrôle fin du comportement des plantes lorsque vous les cliquerez et les ferez glisser, c'est pourquoi vous devez garder la trace de leurs coordonnées.
+Ensuite, notez comment les variables locales `pos3` et `pos4` sont définies sur e.clientX. Vous pouvez trouver les valeurs `e` dans le volet d'inspection. Ces valeurs capturent les coordonnées x et y de la plante au moment où vous cliquez dessus ou la touchez. Vous aurez besoin d'un contrôle précis sur le comportement des plantes lorsque vous cliquerez dessus et les ferez glisser, afin de garder une trace de leurs coordonnées.
 
 ✅ On comprend mieux pourquoi toute cette application est construite avec une seule grosse fermeture ? Si ce n'était pas le cas, comment maintiendriez-vous la portée de chacune des 14 plantes glissantes ?
 
