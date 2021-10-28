@@ -19,7 +19,7 @@ Nossa pedagogia baseada em prática permite que você aprenda enquanto construi,
 
 # Começando
 
-> **Professores**, nós incluímos algmas [sugestões](for-teachers.pt.md) sobre como tilizar este curso. Adoraríamos o seu Feedback em nosso [fórum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Professores**, nós incluímos algumas [sugestões](for-teachers.pt.md) sobre como tilizar este curso. Adoraríamos o seu Feedback em nosso [fórum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
 > **Estudantes**, para usar esse crrículo por conta própria, faça um fork do repositório inteiro, começando por um qizz pré-aula, veja a aula e então faça o resto das atividades.
 Procure fazer os projetos baseado no que aprendeu ao invés de simplesmente copiar a solução que se encontra na pasta de soluções das atividades.
