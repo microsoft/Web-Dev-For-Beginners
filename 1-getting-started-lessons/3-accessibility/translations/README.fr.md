@@ -4,7 +4,7 @@
 > SketchNote par[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5,loc=fr)
+[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5?loc=fr)
 
 > La puissance du Web est dans son universalité. L'accès par tout le monde indépendamment d'invalidité est un aspect essentiel.
 >
