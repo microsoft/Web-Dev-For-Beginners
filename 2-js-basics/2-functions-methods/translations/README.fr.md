@@ -4,7 +4,7 @@
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quizz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9?loc=fr)
+[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9?loc=fr)
 
 Lorsque nous pensons à écrire du code, nous voulons toujours nous assurer que notre code est lisible. Bien que cela puisse paraître contre-intuitif, le code est lu bien plus souvent qu'il n'est écrit. Un outil essentiel dans la boîte à outils d'un développeur pour garantir un code maintenable est la **fonction**.
 
@@ -105,7 +105,7 @@ displayGreeting('Christopher', 'Hi');
 
 ## Valeurs de retour
 
-Jusqu'à présent, la fonction que nous avons créée s'affiche toujours dans la [console] (https://developer.mozilla.org/docs/Web/API/console). Parfois, c'est exactement ce que nous recherchons, notamment lorsque nous créons des fonctions qui appelleront d'autres services. Mais que faire si je veux créer une fonction d'aide pour effectuer un calcul et renvoyer la valeur afin de pouvoir l'utiliser ailleurs ?
+Jusqu'à présent, la fonction que nous avons créée s'affiche toujours dans la [console](https://developer.mozilla.org/docs/Web/API/console). Parfois, c'est exactement ce que nous recherchons, notamment lorsque nous créons des fonctions qui appelleront d'autres services. Mais que faire si je veux créer une fonction d'aide pour effectuer un calcul et renvoyer la valeur afin de pouvoir l'utiliser ailleurs ?
 
 Nous pouvons le faire en utilisant une **valeur de retour**. Une valeur de retour est renvoyée par la fonction et peut être stockée dans une variable de la même manière qu'une valeur littérale telle qu'une chaîne ou un nombre.
 
@@ -189,8 +189,8 @@ Pouvez-vous expliquer en une phrase la différence entre les fonctions et les m�
 
 ## Révision et étude personnelle
 
-Cela vaut la peine de [lire un peu plus sur les fonctions fléchées] (https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), car elles sont de plus en plus utilisées dans les bases de code. Entraînez-vous à écrire une fonction, puis à la réécrire avec cette syntaxe.
+Cela vaut la peine de [lire un peu plus sur les fonctions fléchées](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), car elles sont de plus en plus utilisées dans les bases de code. Entraînez-vous à écrire une fonction, puis à la réécrire avec cette syntaxe.
 
 ## Affectation
 
-[S'amuser avec les fonctions](assignment.md)
+[S'amuser avec les fonctions](assignment.fr.md)
