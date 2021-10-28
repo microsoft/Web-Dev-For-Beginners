@@ -30,7 +30,7 @@ Les navigateurs ont également la capacité de mettre en cache le contenu afin q
 
 Une chose très importante à retenir au sujet des navigateurs est qu'ils ne sont pas tous identiques ! Chaque navigateur a ses forces et ses faiblesses, et un développeur web professionnel doit savoir comment faire en sorte que les pages web fonctionnent bien sur plusieurs navigateurs. Cela inclut la gestion des petites fenêtres d'affichage, comme celles des téléphones portables, ainsi que la gestion des utilisateurs hors ligne.
 
-Le site [caniuse.com] (https://www.caniuse.com) est un site Web très utile que vous devriez probablement marquer d'un signet dans le navigateur que vous préférez utiliser. Lorsque vous créez des pages Web, il est très utile d'utiliser les listes de technologies prises en charge de caniuse afin d'aider au mieux vos utilisateurs.
+Le site [caniuse.com](https://www.caniuse.com) est un site Web très utile que vous devriez probablement marquer d'un signet dans le navigateur que vous préférez utiliser. Lorsque vous créez des pages Web, il est très utile d'utiliser les listes de technologies prises en charge de caniuse afin d'aider au mieux vos utilisateurs.
 
 ✅ Comment pouvez-vous savoir quels sont les navigateurs les plus populaires parmi les utilisateurs de votre site Web ? Vérifiez vos analyses - vous pouvez installer divers progiciels d'analyse dans le cadre de votre processus de développement web, et ils vous indiqueront quels sont les navigateurs les plus utilisés par les différents navigateurs populaires.
 
@@ -154,7 +154,7 @@ Jetez un coup d'œil à un magasin d'extensions de navigateur et installez-en un
 
 ## Révision et étude personnelle
 
-Dans cette leçon, vous avez appris quelques mots sur l'histoire du navigateur Web ; profitez-en pour découvrir comment les inventeurs du World Wide Web envisageaient son utilisation en lisant d'autres documents sur son histoire. Voici quelques sites utiles :
+Dans cette leçon, vous en avez appris un peu plus sur l'histoire du navigateur Web; profitez-en pour découvrir comment les inventeurs du World Wide Web envisageaient son utilisation en lisant d'autres documents sur son histoire. Voici quelques sites utiles :
 
 [L'histoire des navigateurs Web](https://www.mozilla.org/firefox/browsers/browser-history/)
 
