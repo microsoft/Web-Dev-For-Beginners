@@ -1,8 +1,8 @@
-[![License Github](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)
-[![Les contributeurs](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
+[![Licensa Github](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)
+[![Contribuidores](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
 [![Issues](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)
 [![PRs](https://img.shields.io/github/issues-pr/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/pulls/)
-[![Vous pouvez contribuer !](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Contribuições são bem vindas !](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 [![Watchers](https://img.shields.io/github/watchers/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/watchers/)
 [![Forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
@@ -19,7 +19,7 @@ Nossa pedagogia baseada em prática permite que você aprenda enquanto construi,
 
 # Começando
 
-> **Professores**, nós incluímos algmas [sugestões](for-teachers.md) sobre como tilizar este curso. Adoraríamos o seu Feedback em nosso [fórum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Professores**, nós incluímos algmas [sugestões](for-teachers.pt.md) sobre como tilizar este curso. Adoraríamos o seu Feedback em nosso [fórum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
 > **Estudantes**, para usar esse crrículo por conta própria, faça um fork do repositório inteiro, começando por um qizz pré-aula, veja a aula e então faça o resto das atividades.
 Procure fazer os projetos baseado no que aprendeu ao invés de simplesmente copiar a solução que se encontra na pasta de soluções das atividades.
