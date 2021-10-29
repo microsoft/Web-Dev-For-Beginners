@@ -17,7 +17,7 @@ Ang Azure Cloud Advocates sa Microsoft ay nalulugod na mag-alok ng 12-linggo, 24
 
 # Simula
 
-> **Mga Guro**, mayroon kaming [included some suggestions](/Web-Dev-For-Beginners/for-teachers.md) kung paano gamitin ang curriculum na ito. Gusto namin ang iyong feedback [sa aming discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Mga Guro**, mayroon kaming [included some suggestions](../for-teachers.md) kung paano gamitin ang curriculum na ito. Gusto namin ang iyong feedback [sa aming discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
 > **Mga mag-aaral**, para magamit ang curriculum na ito nang mag-isa, i-fork ang buong repo at kumpletuhin ang mga pagsasanay nang mag-isa, simula sa pagsusulit bago ang lecture, pagkatapos ay basahin ang lecture at kumpletuhin ang iba pang aktibidad. Subukang lumikha ng mga proyekto sa pamamagitan ng pag-unawa sa mga aralin sa halip na pagkopya ng code ng solusyon; gayunpaman, ang code na iyon ay magagamit sa mga folder ng /solutions sa bawat aralin na nakatuon sa proyekto. Ang isa pang ideya ay ang bumuo ng isang grupo ng pag-aaral kasama ang mga kaibigan at sabay-sabay na suriin ang nilalaman. Para sa karagdagang pag-aaral, inirerekomenda namin ang [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa) and by watching the videos mentioned below.
 
@@ -37,7 +37,7 @@ Bilang karagdagan, ang isang mababang-stakes na pagsusulit bago ang isang klase 
 
 Bagama't sinadya naming iwasan ang pagpapakilala ng mga balangkas ng JavaScript upang makapag-concentrate sa mga pangunahing kasanayang kailangan bilang isang web developer bago magpatibay ng isang balangkas, isang magandang susunod na hakbang sa pagkumpleto ng kurikulum na ito ay ang pag-aaral tungkol sa Node.js sa pamamagitan ng isa pang koleksyon ng mga video: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-13441-cxa)".
 
-> Hanapin ang aming [Code of Conduct](/Web-Dev-For-Beginners/CODE_OF_CONDUCT.md), [Contributing](/Web-Dev-For-Beginners/CONTRIBUTING.md), at [Translation](TRANSLATIONS.md) mga alituntunin. Tinatanggap namin ang iyong nakabubuo na feedback!
+> Hanapin ang aming [Code of Conduct](../CODE_OF_CONDUCT.md), [Contributing](../CONTRIBUTING.md), at [Translation](../TRANSLATIONS.md) mga alituntunin. Tinatanggap namin ang iyong nakabubuo na feedback!
 >
 ## Kasama sa bawat aralin ang:
 
