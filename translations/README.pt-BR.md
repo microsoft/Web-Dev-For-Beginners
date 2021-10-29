@@ -107,3 +107,4 @@ Nossa equipe produziu outros cursos! Veja só :
 
 - [Machine Learning para iniciantes](https://aka.ms/ml-beginners)
 - [IoT para iniciantes](https://aka.ms/iot-beginners)
+- [Data Science para iniciantes](https://aka.ms/datascience-beginners)
