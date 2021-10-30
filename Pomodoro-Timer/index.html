@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>Pomodoro Timer</title>
+</head>
+<body>
+    <div class="heading">
+      <h1>POMODORO TIMER</h1>
+    </div>
+    <div class="bdy">
+    <div class="main-ui">
+        <div class="session-break-length">
+            <div class="session-length">
+                <div class="session-break-h">Session Length</div>
+                <div class="session-break-b">
+                    <button type="button" id="sessionLength">25</button>
+                </div>
+                <div class="change-buttons">
+                   <button type="button" class="ssr" id="add-session">+</button>
+                   <button type="button" class="ssr" id="sub-session" >-</button>
+                </div>
+            </div>
+            <div class="break-length">
+                <div class="session-break-h">Break Length</div>
+                <div class="session-break-b">
+                    <button type="button" id="breakLength">5</button>
+                </div>
+                <div class="change-buttons">
+                   <button type="button" class="ssr" id="add-break">+</button>
+                   <button type="button" class="ssr" id="sub-break">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="pomodoro">
+            <div class="timer">
+              <div class="session">Work Session</div>
+              <div class="clock">25:00</div>
+            </div>
+        </div>
+        <div class="important-btns">
+            <button type="button" class="ssr start">START</button>
+            <button type="button" class="ssr stop">STOP</button>
+            <button type="button" class="ssr reset">RESET</button>
+        </div>
+    </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

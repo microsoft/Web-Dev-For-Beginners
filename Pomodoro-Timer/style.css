@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgb(242, 245, 237);
+    height: 100vh;
+}
+.heading{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    font-family: 'Bree Serif', serif;
+}
+.bdy{
+    background-color: rgb(242, 245, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    transition: 0.1s all ease-out;
+}
+.main-ui{
+    height: 400px;
+    width: 400px;
+    background-color:#E1578A;
+    box-shadow: 2px 2px 10px #252525, -2px -2px 10px #252424
+}
+.session-break-length{
+        height: 30%;
+        font-family: 'Bree Serif', serif;
+}
+.pomodoro{
+    height: 50%;
+}
+/* Buttons top */
+.session-break-length{
+    display: flex;
+    align-items: center;
+}
+.session-length,.break-length{
+    width: 50%;
+}
+.session-break-h{
+    color: rgb(242, 245, 237);
+    font-size: 20px;
+    text-align: center;
+}
+.session-break-b button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    color:#A9333A;
+    font-weight: 700;
+}
+.session-break-b{
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.session-break-length .change-buttons{
+    text-align: center;
+}
+/* The pomodora clock */
+.pomodoro{
+    display: flex;
+    justify-content: center;
+}
+.timer{
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #A9333A;
+    /* border-color:rgb(5, 60, 243); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(242, 245, 237);
+    flex-direction: column;
+}
+.session{
+    font-size: 17px;
+    padding-bottom: 2%;
+}
+.clock{
+    font-size: 40px;
+    font-weight: 500
+}
+/* Bottom controls */
+.important-btns{
+    padding-top:5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.ssr{
+     padding: 8px 15px;
+     background-color: #A9333A;
+     border-radius: 10%;
+     border: 2px solid #BD3737;
+     color: rgb(242, 245, 237);
+     font-size: 16px;
+}
+.change-buttons .ssr{
+    padding: 4px 14px;
+    font-size: 18px;
+}
+.ssr:hover{
+    background-color: #BD3737;
+    font-weight:700;
+}
+@media screen and (max-width: 400px){
+    .main-ui{
+        height: 300px;
+        width:300px;
+    }
+    .session-break-h{
+        font-size: 16px;
+    }
+    .session-break-b button{
+        width: 25px;
+        height: 25px;
+    }
+    .ssr{
+        padding: 5px 10px;
+    }
+}
