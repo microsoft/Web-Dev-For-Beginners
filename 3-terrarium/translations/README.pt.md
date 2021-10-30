@@ -2,7 +2,7 @@
 
 Uma pequena meditação de código de arrastar e soltar. Com um pouco de HTML, JS e CSS, você pode construir uma interface web, esilizá-la, e adiconar uma interação.
 
-![Meu Terrário](images/screenshot_gray.png)
+![Meu Terrário](./images/screenshot_gray.png)
 
 # Lições
 
