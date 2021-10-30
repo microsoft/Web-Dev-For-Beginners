@@ -226,6 +226,6 @@ HTML é o sistema de blocos de construção 'testado e comprovado' que ajudou a 
 Saiba mais sobre como construir sites para a web e dispositivos móveis em [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa).
 
 
-## Atribuição
+## Atribuiçao
 
-[Pratique seu HTML: Construa uma maquete de blog](assignment.md)
+[Pratique seu HTML: Construa uma maquete de blog](assignment.pt.md)
