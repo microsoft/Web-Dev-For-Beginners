@@ -6,9 +6,9 @@ Uma pequena meditação de código de arrastar e soltar. Com um pouco de HTML, J
 
 # Lições
 
-1. [Introdução a HTML](../1-intro-to-html/README.md)
-2. [Introdução a CSS](../2-intro-to-css/README.md)
-3. [Introdução a DOM e fechamentos JS](../3-intro-to-DOM-and-closures/README.md)
+1. [Introdução à HTML](../1-intro-to-html/translations/README.pt.md)
+2. [Introdução à CSS](../2-intro-to-css/README.md)
+3. [Introdução à DOM e fechamentos JS](../3-intro-to-DOM-and-closures/README.md)
 
 ## Créditos
 
