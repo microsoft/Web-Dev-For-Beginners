@@ -1,11 +1,11 @@
-# Practice your HTML: Build a blog mockup
+# Pratique seu HTML: Crie um mockup de blog
 
-## Instructions
+## Instruções
 
-Imagine you are designing, or redesigning, your personal web site. Create a graphical mockup of your site, and then write down the HTML markup you would use to build out the various elements of the site. You can do this on paper, and scan it, or use software of your choice, just make sure to hand-code the HTML markup.
+Imagine que você está projetando ou redesenhando seu web site pessoal. Crie um mockup gráfico do seu site e então escreva as marcações HTML que você usaria para construir os vários elementos do site. Você pode fazer isso no papel e digitalizar ou usar o software de sua preferência, apenas tenha certeza de elaborar manualmente a marcação HTML.
 
-## Rubric
+## Rubrica
 
-| Criteria | Exemplary                                                                           | Adequate                                                                         | Needs Improvement                                                                 |
+| Critério | Exemplar                                                                           | Adequado                                                                         | Precisa de melhoria                                                                 |
 | -------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-|          | A blog layout is represented visually with at least 10 elements of markup displayed | A blog layout is represented visually with around 5 elements of markup displayed | A blog layout is represented visually with at most 3 elements of markup displayed |
+|          | Um layout de blog é representado visualmente com pelo menos 10 elementos de marcação HTML exibidos | Um layout de blog é representado visualmente com cerca de 5 elementos de marcação HTML exibidos | Um layout de blog é representado com no máxiom 3 elementos de marcação HTML exibidos |
