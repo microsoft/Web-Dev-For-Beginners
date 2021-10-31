@@ -4,9 +4,9 @@
 
 ### Теми
 
-1. [Введення до мов програмування та інструменти](1-intro-to-programming-languages/README.md)
-2. [Ввід до GitHub](2-github-basics/README.md)
-3. [Основи доступності](3-accessibility/README.md)
+1. [Введення до мов програмування та інструменти](../1-intro-to-programming-languages/README.md)
+2. [Ввід до GitHub](../2-github-basics/README.md)
+3. [Основи доступності](../3-accessibility/README.md)
 
 ### Титри
 
