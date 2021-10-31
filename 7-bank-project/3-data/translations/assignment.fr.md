@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Au fur et à mesure que votre codebase se développe, il est important de remanier votre code fréquemment pour qu'il reste lisible et maintenable dans le temps. Ajoutez des commentaires et remaniez votre `app.js` pour améliorer la qualité du code :
+Au fur et à mesure que votre base de code se développe, il est important de refactorisez votre code fréquemment pour qu'il reste lisible et maintenable dans le temps. Ajoutez des commentaires et refactorisez votre `app.js` pour améliorer la qualité du code :
 
 - Extrayez des constantes, telles que l'URL de base de l'API du serveur.
 - Factorisez tout code similaire : par exemple, vous pouvez créer une fonction `sendRequest()` pour regrouper le code utilisé dans les fonctions `createAccount()` et `getAccount()`.
