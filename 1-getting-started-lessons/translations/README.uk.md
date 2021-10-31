@@ -14,7 +14,7 @@
 
 Ввід до GitHub були написані з ♥️ від [Floor Drees](https://twitter.com/floordrees)
 
-Основи достіпності були написані з ♥️ від [Christopher Harrison](https://twitter.com/geektrainer)
+Основи доступності були написані з ♥️ від [Christopher Harrison](https://twitter.com/geektrainer)
 
 
 
