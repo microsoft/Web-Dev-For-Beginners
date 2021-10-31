@@ -1,12 +1,14 @@
 # Projeto Terrarium Parte 3:  Manipulação do DOM e fechamento
 
-! [DOM e fechamento](/sketchnotes/webdev101-js.png)
+![DOM e fechamento](/sketchnotes/webdev101-js.png)
 > Esboço de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz pré-leitura 
+
 [Quiz pré-leitura](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/19)
 
-### Introdução:
+
+### Introdução
 
 Manipular o DOM, ou o "Modelo de objeto de documento", é um aspecto chave do desenvolvimento web. Segundo [MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction), "O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web.". Os desafios em torno da manipulação do DOM na web, muitas vezes tem sido o ímpeto por trás do uso de frameworks JavaScript em vez de JavaScript vanilla para gerenciar o DOM, mas vamos gerenciar por conta própria!!
 
@@ -18,17 +20,17 @@ Usaremos um closure para manipular o DOM.
 
 Pense no DOM como uma árvore, representando todas as maneiras como um documento de página da web pode ser manipulado. Várias APIs (interfaces de programa de aplicativo) foram escritas para que os programadores, usando sua linguagem de programação de escolha, possam acessar o DOM e editar, alterar, reorganizar e de outra forma gerenciá-lo.
 
-![Representação da árvore DOM](./images/dom-tree.png)
+![Representação da árvore DOM](../images/dom-tree.png)
 
 > Uma representação do DOM e a marcação HTML que faz referência a ele. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
 Nesta lição, concluiremos nosso projeto de terrário interativo criando o JavaScript que permitirá ao usuário manipular as plantas na página.
 
-### Pré-requisitos:
+### Pré-requisitos
 
 Você deve ter construído o HTML e CSS para o seu terrário. Ao final desta lição, você será capaz de mover as plantas para dentro e para fora do terrário arrastando-as.
 
-### Tarefa:
+### Tarefa
 
 
 Na pasta do seu terrário, crie um novo arquivo chamado script.js. Importe esse arquivo na seção `<head>`:
@@ -39,14 +41,15 @@ Na pasta do seu terrário, crie um novo arquivo chamado script.js. Importe esse 
 ```
 
 > Nota: use `defer` ao importar um arquivo JavaScript externo para o arquivo html, de modo a permitir que o JavaScript seja executado somente depois que o arquivo HTML tiver sido totalmente carregado. Você também pode usar o atributo async, que permite que o script seja executado enquanto o arquivo HTML está sendo analisado, mas, em nosso caso, é importante ter os elementos HTML totalmente disponíveis para arrastar antes de permitir que o script de arrastar seja executado.
+
 ---
 
-## 1. Os elementos DOM
+## Os elementos DOM
 
 A primeira coisa que você precisa fazer é criar referências aos elementos que deseja manipular no DOM. No nosso caso, são as 14 plantas que aguardam atualmente nas barras laterais.
 
 
-### Tarefa:
+### Tarefa
 
 ```html
 dragElement(document.getElementById('plant1'));
@@ -71,7 +74,7 @@ O que está acontecendo aqui? Você está referenciando o documento e olhando at
 
 ---
 
-## 2. O Closure(fechamento)
+## O Closure(fechamento)
 
 Agora você está pronto para criar o closure(fechamento) dragElement, que é uma função externa que inclui uma função ou funções internas (em nosso caso, teremos três).
 
@@ -93,7 +96,7 @@ Neste exemplo, a função mostrarDoce envolve uma função que coloca um novo ti
 
 ✅ Como você pode tornar o conjunto de doces acessível? Tente movê-lo para fora do fechamento. Dessa forma, o array torna-se global, ao invés de ficar disponível apenas para o escopo local do fechamento.
 
-### Tarefa:
+### Tarefa
 
 Nas declarações de elemento em `script.js`, crie uma função:
 
@@ -117,11 +120,11 @@ Além disso, o terrariumElement que é passado para essa função é atribuído 
 
 ---
 
-## 3. A função Pointerdrag
+## A função Pointerdrag
 
 O terrariumElement está pronto para ser arrastado; quando o evento `onpointerdown` é disparado, a função `pointerDrag` é chamada. Adicione essa função logo abaixo desta linha: `terrariumElement.onpointerdown = pointerDrag;`:
 
-### Tarefa: 
+### Tarefa
 
 ```javascript
 function pointerDrag(e) {
@@ -135,7 +138,7 @@ function pointerDrag(e) {
 
 Várias coisas acontecem. Primeiro, você evita que os eventos padrão que normalmente acontecem em pointerdown ocorram usando `e.preventDefault ();`. Dessa forma, você tem mais controle sobre o comportamento da interface.
 
-> Volte a esta linha quando tiver criado o arquivo de script completamente e tente sem `e.preventDefault ()` - o que acontece?
+> Volte a esta linha quando tiver criado o arquivo de script completamente e tente sem `e.preventDefault()` - o que acontece?
 
 Em segundo lugar, abra `index.html` em uma janela do navegador e inspecione a interface. Ao clicar em uma planta, você pode ver como o evento 'e' é capturado. Explore o evento para ver quanta informação é coletada por um evento de ponteiro para baixo!
 
@@ -154,11 +157,12 @@ document.onpointerup = stopElementDrag;
 Agora você está indicando que deseja que a planta seja arrastada junto com o ponteiro conforme você a move e que o gesto de arrastar pare quando você desmarcar a planta. `onpointermove` e `onpointerup` são partes da mesma API que `onpointerdown`. A interface lançará erros agora, pois você ainda não definiu as funções `elementDrag` e `stopElementDrag`, então crie-as a seguir.
 
 
-## 4. As funções elementDrag y stopElementDrag
+## As funções elementDrag e stopElementDrag 
+
 
 Você completará seu fechamento adicionando mais duas funções internas que irão lidar com o que acontece quando você arrasta uma planta e para de arrastá-la. O comportamento que você deseja é que você possa arrastar qualquer planta a qualquer momento e colocá-la em qualquer lugar da tela. Esta interface é bastante neutra (não há zona de queda, por exemplo) para permitir que você projete seu terrário exatamente como você gosta, adicionando, removendo e reposicionando plantas.
 
-### Tarefa:
+### Tarefa
 
 Adicione a função `elementDrag` logo após a chave de fechamento de `pointerDrag`:
 
@@ -182,7 +186,7 @@ Conforme você arrasta, você reatribui `pos1` tornando-o igual a `pos3` (que vo
 
 Todo este recálculo de posicionamento permite afinar o comportamento do terrário e das suas plantas.
 
-### Tarefa:
+### Tarefa
 
 
 A tarefa final para completar a interface é adicionar a função `stopElementDrag` após a chave de fechamento de `elementDrag`:
@@ -200,14 +204,19 @@ Esta pequena função redefine os eventos `onpointerup` e `onpointermove` para q
 
 Agora você concluiu seu projeto!
 
+🥇 Parabéns! Você terminou seu lindo terrário. 
+
+![terrario terminado](../images/terrarium-final.png)
+
 ---
 
-🥇 Parabéns! Você terminou seu lindo terrário. ![terrario terminado](../images/terrarium-final.png)
 
 ## 🚀Desafio
+
 Adicione um novo manipulador de eventos ao seu fechamento para fazer algo mais para as plantas; por exemplo, clique duas vezes em uma planta para trazê-la para a frente. Seja criativo!
 
 ## Quiz pós-leitura
+
 [Quiz pós-leitura](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/20)
 
 ## Revisão & auto-estudo
@@ -218,5 +227,8 @@ Encontre mais informações sobre eventos de ponteiro nos documentos [W3C](https
 
 Sempre verifique os recursos do navegador usando [CanIUse](https://caniuse.com/)
 
-** Tarefa: [Trabalhar um pouco mais com o DOM](assignment.pt.md)
+## Tarefa
+---
+
+[Trabalhar um pouco mais com o DOM](assignment.pt.md)
 
