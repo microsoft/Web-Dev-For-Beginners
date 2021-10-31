@@ -1,4 +1,4 @@
-# Concevez votre application bancaire
+# Stylisez votre application bancaire
 
 ## Instructions
 
