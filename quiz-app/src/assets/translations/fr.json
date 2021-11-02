@@ -2094,7 +2094,7 @@
             },
             {
                 "id": 41,
-                "title": "Leçon 21 - Projet bancaire - Modèles et itinéraires HTML dans une application Web : quiz de pré-conférence",
+                "title": "Leçon 21 - Projet bancaire - Modèles et routages HTML dans une application Web : quiz de pré-conférence",
                 "quiz": [
                     {
                         "questionText": "Vous devez créer plusieurs fichiers HTML pour afficher différents écrans dans une application web",
@@ -2143,7 +2143,7 @@
             },
             {
                 "id": 42,
-                "title": "Leçon 21 - Modèles et itinéraires HTML de projet bancaire dans une application web : quiz de validation des connaissances",
+                "title": "Leçon 21 - Modèles et routages HTML de projet bancaire dans une application web : quiz de validation des connaissances",
                 "quiz": [
                     {
                         "questionText": "Les templates HTML font partie du DOM par défaut",

@@ -1,4 +1,4 @@
-# Créer une application bancaire Partie 1 : Modèles HTML et itinéraires dans une application Web
+# Créer une application bancaire Partie 1 : Modèles HTML et routages dans une application Web
 
 ## Quiz préalable
 
