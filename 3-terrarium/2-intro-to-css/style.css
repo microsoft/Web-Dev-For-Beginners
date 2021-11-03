@@ -3,7 +3,24 @@ body {
     font-family: helvetica, arial, sans-serif;
 }
 
-
+#left-container {
+    background-color: #eee;
+    width: 15%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    padding: 10px;
+}
+#right-container {
+    background-color: #eee;
+    width: 15%;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    padding: 10px;
+}
 h1{
     color: red;
     font-size: 50px;
