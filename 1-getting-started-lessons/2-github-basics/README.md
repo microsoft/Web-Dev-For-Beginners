@@ -128,6 +128,7 @@ Let's say you have a folder locally with some code project and you want to start
    > Note, before you type the command go to your GitHub repo page to find the repository URL. You will use it in the below command. Replace `repository_name` with your GitHub URL.
 
    ```bash
+   git branch -M main
    git remote add origin https://github.com/username/repository_name.git
    ```
 
