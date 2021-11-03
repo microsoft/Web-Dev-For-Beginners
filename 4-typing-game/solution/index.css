@@ -6,3 +6,52 @@
 	background-color: lightcoral;
 	border-color: red;
 }
+
+.heading{
+	background-color: greenyellow;
+	color: blue;
+	font-size: 50px;
+	height: 10vh;
+	text-align: center;
+}
+
+h1{
+	font-size:35px;
+}
+
+.para{
+text-align: center;
+font-size:30px ;
+}
+
+.btn{
+	text-align: center;
+	margin: 50px;
+	height: 100px;
+	font-size: 30px;
+}
+
+#quote{
+	text-align: center;
+	font-size: 25px;
+}
+
+#message{
+	text-align: center;
+}
+
+.type{
+     text-align: center;
+	 height: 20px;
+	
+}
+
+#typed-value{
+	font-size: 20px;
+	height: 22px;
+	width:  50vh;
+}
+
+.all{
+	background-color:rgb(214, 39, 200);
+}

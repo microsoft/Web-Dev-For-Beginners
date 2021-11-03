@@ -7,17 +7,26 @@
 	</head>
 
 	<body>
-		<h1>Practice your typing</h1>
-		<div>Click start to have a quote displayed. Type the quote as fast as you can!</div>
+		<p class="heading">Practice your typing</p>
+		<div class="all">
+		<h2 class="para">Click start to have a quote displayed. Type the quote as fast as you can!</h2>
 
-		<p id="quote"></p>
-		<p id="message"></p>
 		<div>
+			<p id="quote"></p>
+			<p id="message"></p>
+		</div>
+		
+		<div class="type">
 			<input type="text" aria-label="current word" id="typed-value" />
 		</div>
-		<div>
-			<button id="start" type="button">Start</button>
+
+
+
+		<div class="btn">
+			<button id="start" type="button" style="height: 30px; width: 100px;">Start</button>
+		</div>
 		</div>
 		<script src="./index.js"></script>
 	</body>
 </html>
+
