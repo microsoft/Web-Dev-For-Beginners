@@ -76,7 +76,7 @@ Aggiungere un blocco "head" al proprio documento tra i tag di apertura e di chiu
 </head>
 ```
 
-✅ Cosa accadrebbe se il meta tag viewport viene impostato come questo: `<meta name="viewport" content="width=600">`? Ulteriori informazioni sul [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ Cosa accadrebbe se il meta tag viewport viene impostato come questo: `<meta name="viewport" content="width=600">`? Ulteriori informazioni sul [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ---
 

@@ -75,7 +75,7 @@ Ajoutez un bloc "head" à votre document, entre les balises d'ouverture et de fe
 </head>
 ```
 
-✅ Que se passerait-il si vous définissiez une métabalise viewport comme ceci : `<meta name="viewport" content="width=600">`? En savoir plus sur le [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ Que se passerait-il si vous définissiez une métabalise viewport comme ceci : `<meta name="viewport" content="width=600">`? En savoir plus sur le [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ---
 
