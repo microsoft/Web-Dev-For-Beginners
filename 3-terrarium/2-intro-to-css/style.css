@@ -41,7 +41,7 @@ h1{
 .jar-walls {
     height: 80%;
     width: 60%;
-    background: #d1e1df;
+    background: #e7f1ef;
     border-radius: 1rem;
     position: absolute;
     bottom: 0.5%;
@@ -49,10 +49,30 @@ h1{
     opacity: 0.5;
     z-index: 1;
 }
+.jar-glossy-long{
+    margin-left: 22%;
+    margin-top: 25%;
+    height: 70px;
+    width: 10px;
+    border-radius: 1rem;
+    background: #459c9c;
+    
+    position: absolute;
+}
+.jar-glossy-short{
+    margin-left: 22%;
+    margin-top: 20%;
+    height: 20px;
+    width: 10px;
+    border-radius: 1rem;
+    background: #4fb3b3;
+    
+    position: absolute;
+}
 .jar-top {
     width: 50%;
     height: 5%;
-    background: #d1e1df;
+    background: #e7f1ef;
     position: absolute;
     bottom: 80.5%;
     left: 25%;
@@ -62,7 +82,7 @@ h1{
 .jar-bottom {
     width: 50%;
     height: 1%;
-    background: #d1e1df;
+    background: #e7f1ef;
     position: absolute;
     bottom: 0%;
     left: 25%;
