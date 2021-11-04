@@ -75,7 +75,7 @@ HTML 文档中的 'head' 包含的区域有很多关于页面的重要信息，�
 </head>
 ```
 
-✅ 当你把视图信息标签的内容设置成这个样子 `<meta name="viewport" content="width=600">` 会发生什么事情？ 请阅读更多关于 [Viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) 的信息吧。
+✅ 当你把视图信息标签的内容设置成这个样子 `<meta name="viewport" content="width=600">` 会发生什么事情？ 请阅读更多关于 [Viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag) 的信息吧。
 
 ---
 
