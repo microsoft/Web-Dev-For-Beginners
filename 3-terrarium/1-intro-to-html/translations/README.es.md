@@ -66,7 +66,7 @@ Agregue un bloque de 'encabezado' a su documento entre las etiquetas de apertura
 </head>
 ```
 
-✅ ¿Qué pasaría si configuras una metaetiqueta de ventana gráfica como esta: `<meta name =" viewport "content =" width = 600 ">`? Obtenga más información sobre [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ ¿Qué pasaría si configuras una metaetiqueta de ventana gráfica como esta: `<meta name =" viewport "content =" width = 600 ">`? Obtenga más información sobre [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ---
 

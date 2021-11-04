@@ -75,7 +75,7 @@ Adicione um bloco 'head' ao seu documento entre a tag `<html>` inicial e a final
 </head>
 ```
 
-✅ O que aconteceria se você definir uma metatag de janela de visualização como esta: `<meta name =" viewport "content =" width = 600 ">`? Leia mais sobre a [janela de exibição](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ O que aconteceria se você definir uma metatag de janela de visualização como esta: `<meta name =" viewport "content =" width = 600 ">`? Leia mais sobre a [janela de exibição](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ---
 

@@ -75,7 +75,7 @@ Tambahkan blok 'head' ke dokumen anda di antara tag pembuka dan penutup `<html>`
 </head>
 ```
 
-✅ Apa yang akan berlaku jika anda menetapkan tag meta viewport seperti ini: `<meta name =" viewport "content =" width = 600 ">`? Baca lebih lanjut mengenai [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ Apa yang akan berlaku jika anda menetapkan tag meta viewport seperti ini: `<meta name =" viewport "content =" width = 600 ">`? Baca lebih lanjut mengenai [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ---
 

@@ -75,7 +75,7 @@ HTML दस्तावेज़ के 'हेड' क्षेत्र मे
 </head>
 ```
 
-✅ यदि आप व्यूपोर्ट मेटा टैग इस तरह सेट करते हैं तो क्या होगा: `<meta name="viewport" content="width=600">`? [Viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) के बारे में और पढ़ें।
+✅ यदि आप व्यूपोर्ट मेटा टैग इस तरह सेट करते हैं तो क्या होगा: `<meta name="viewport" content="width=600">`? [Viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag) के बारे में और पढ़ें।
 ---
 
 ## दस्तावेज़ की `body`

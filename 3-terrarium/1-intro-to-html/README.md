@@ -75,7 +75,7 @@ Add a 'head' block to your document in between the opening and closing `<html>` 
 </head>
 ```
 
-✅ What would happen if you set a viewport meta tag like this: `<meta name="viewport" content="width=600">`? Read more about the [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ What would happen if you set a viewport meta tag like this: `<meta name="viewport" content="width=600">`? Read more about the [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ---
 
