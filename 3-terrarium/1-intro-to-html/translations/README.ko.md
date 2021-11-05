@@ -75,7 +75,7 @@ HTML 문서의 'head' 영역에는 [metadata](https://developer.mozilla.org/docs
 </head>
 ```
 
-✅ `<meta name="viewport" content="width=600">`과 같이 viewport 메타 태그를 설정하면 어떻게 되나요? [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag)에 대해 자세히 알아보세요.
+✅ `<meta name="viewport" content="width=600">`과 같이 viewport 메타 태그를 설정하면 어떻게 되나요? [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag)에 대해 자세히 알아보세요.
 
 ---
 

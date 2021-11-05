@@ -75,7 +75,7 @@ HTML ドキュメントの 'head' 領域には、Web ページに関する重要
 </head>
 ```
 
-✅ このように viewport の meta タグを設定するとどうなるでしょうか: `<meta name="viewport" content="width=600">`? [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag) についてはこちらをご覧ください。
+✅ このように viewport の meta タグを設定するとどうなるでしょうか: `<meta name="viewport" content="width=600">`? [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag) についてはこちらをご覧ください。
 
 ---
 
