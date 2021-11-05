@@ -91,7 +91,7 @@
 
 ## പിഡിഫ് 
 
-എല്ലാ പാഠങ്ങളുടെയും ഒരു PDF കാണാം [ഇവിടെ](/pdf/readme.pdf)
+എല്ലാ പാഠങ്ങളുടെയും ഒരു PDF കാണാം [ഇവിടെ](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
 
 ## മറ്റ് പാഠ്യപദ്ധതികൾ
 
