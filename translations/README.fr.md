@@ -105,7 +105,7 @@ Vous pouvez y accéder en utilisant [Docsify](https://docsify.js.org/#/). Effect
 
 ## PDF
 
-Ce cours est disponible en PDF. [Cliquez ici](../pdf/readme.pdf)
+Ce cours est disponible en PDF. [Cliquez ici](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
 
 ## Autres Cours
 
