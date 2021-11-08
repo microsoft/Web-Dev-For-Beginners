@@ -89,7 +89,7 @@ Maaari mong patakbuhin ang dokumentasyong ito offline sa pamamagitan ng paggamit
 
 ## PDF
 
-Ang isang PDF ng lahat ng mga aralin ay matatagpuan [dito](pdf/readme.pdf)
+Ang isang PDF ng lahat ng mga aralin ay matatagpuan [dito](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
 
 ## Iba pang Kurikulum
 
