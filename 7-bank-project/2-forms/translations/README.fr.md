@@ -128,7 +128,7 @@ Ajoutez les propriétés `action` et `method` au formulaire d'inscription :
 
 Essayez maintenant d'enregistrer un nouveau compte avec votre nom. Après avoir cliqué sur le bouton *S'inscrire*, vous devriez voir quelque chose comme ceci :
 
-![Une fenêtre de navigateur à l'adresse localhost:5000/api/accounts, affichant une chaîne JSON avec des données utilisateur](./images/form-post.png)
+![Une fenêtre de navigateur à l'adresse localhost:5000/api/accounts, affichant une chaîne JSON avec des données utilisateur](../images/form-post.png)
 
 Si tout se passe bien, le serveur doit répondre à votre demande avec une réponse [JSON](https://www.json.org/json-fr.html) contenant les données de compte qui ont été créées.
 
