@@ -99,7 +99,7 @@ Você pode utilizar essa documentação quando estiver offline através de [Docs
 
 ## PDF
 
-Um PDF de todas as lições pode ser encontrado [bem aqui](../pdf/readme.pdf)
+Um PDF de todas as lições pode ser encontrado [bem aqui](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
 
 ## Outros Cursos
 

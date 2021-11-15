@@ -88,7 +88,7 @@
 
 ## PDF
 
-Μπορείτε να βρείτε [εδώ](pdf/readme.pdf) ενα PDF με όλα τα μαθήματα.
+Μπορείτε να βρείτε [εδώ](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf) ενα PDF με όλα τα μαθήματα.
 
 ## Άλλα προγράμματα μαθημάτων
 
