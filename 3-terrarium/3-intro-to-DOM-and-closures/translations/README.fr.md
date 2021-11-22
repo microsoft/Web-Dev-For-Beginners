@@ -19,7 +19,7 @@ Nous allons utiliser une fermeture pour manipuler le DOM.
 
 Imaginez le DOM comme un arbre, représentant toutes les façons dont un document de page Web peut être manipulé. Diverses API (interfaces de programme d'application) ont été écrites pour que les programmeurs, en utilisant le langage de programmation de leur choix, puissent accéder au DOM et l'éditer, le modifier, le réorganiser et le gérer.
 
-![Représentation de l'arbre DOM](./images/dom-tree.png)
+![Représentation de l'arbre DOM](../images/dom-tree.png)
 
 > Une représentation du DOM et du balisage HTML qui y fait référence. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -191,7 +191,7 @@ Cette petite fonction réinitialise les événements `onpointerup` et `onpointer
 
 Vous avez maintenant terminé votre projet !
 
-🥇Congratulations ! Tu as terminé ton magnifique terrarium. !terrarium fini](./images/terrarium-final.png)
+🥇Félicitations ! Tu as terminé ton magnifique terrarium. ![terrarium fini](../images/terrarium-final.png)
 
 ---
 
@@ -213,5 +213,5 @@ Vérifiez toujours les capacités du navigateur en utilisant [CanIUse.com](https
 
 ## Affectation
 
-[Travailler un peu plus avec le DOM](assignment.md)
+[Travailler un peu plus avec le DOM](assignment.fr.md)
 

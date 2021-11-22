@@ -69,7 +69,7 @@ body {
 
 Ouvrez la console de votre navigateur dans l'onglet "Éléments" et observez la police de caractères de la page H1. Elle hérite de la police du corps, comme indiqué dans le navigateur :
 
-![police héritée](images/1.png)
+![police héritée](../images/1.png)
 
 ✅ Peut-on faire en sorte qu'un style imbriqué hérite d'une propriété différente ?
 
@@ -179,7 +179,7 @@ Les éléments positionnés de manière relative sont positionnés en fonction d
 
 Dans notre exemple, le `plant-holder` est un élément à positionnement relatif qui est positionné dans un conteneur à positionnement absolu. Le comportement qui en résulte est que les conteneurs de la barre latérale sont épinglés à gauche et à droite, et que le porte-plante est imbriqué, s'ajustant lui-même dans les barres latérales, ce qui donne de l'espace pour que les plantes soient placées dans une rangée verticale.
 
-> La "plante" elle-même a également un positionnement absolu, nécessaire pour la rendre glissante, comme vous le découvrirez dans la prochaine leçon.
+> La `plante` elle-même a également un positionnement absolu, nécessaire pour la rendre glissante, comme vous le découvrirez dans la prochaine leçon.
 
 ✅ Expérimentez en changeant les types de positionnement des récipients latéraux et du porte-plante. Que se passe-t-il ?
 
@@ -248,7 +248,7 @@ Nous utilisons également `rem` pour le border-radius, une longueur relative à 
 
 Ajoutez un éclat "bulle" à la partie inférieure gauche du pot pour qu'il ressemble davantage à du verre. Vous allez styliser les fichiers `.jar-glossy-long` et `.jar-glossy-short` pour qu'ils ressemblent à une brillance réfléchie. Voici à quoi cela ressemblerait :
 
-![terrarium terminé](./images/terrarium-final.png)
+![terrarium terminé](../images/terrarium-final.png)
 
 Pour répondre au Quiz de validation des connaissances, suivez ce module d'apprentissage : [Donnez du style à votre application HTML avec CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
 
