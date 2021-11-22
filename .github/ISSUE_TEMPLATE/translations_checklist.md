@@ -32,7 +32,6 @@ assignees: ''
    - [ ] intro-to-css assignment
    - [ ] intro-to-DOM-and-closures README
    - [ ] intro-to-DOM-and-closures assignment
-   - [ ] solution base README
 - [ ] 4-typing-game base README
    - [ ] typing-game README
    - [ ] typing-game assignment
@@ -68,3 +67,4 @@ assignees: ''
    - [ ] state-management README
    - [ ] state-management  assignment
    - [ ] solution base README
+   - [ ] API base README

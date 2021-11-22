@@ -2,7 +2,7 @@
 
 ! [Insertar un video aquí](video-url)
 
-## [Prueba previa a la conferencia](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45)
+## [Prueba previa a la conferencia](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45)
 
 [Describe lo que aprenderemos]
 
@@ -52,7 +52,7 @@ bloques de código
 
 Opcional: agregue una captura de pantalla de la interfaz de usuario de la lección completa si corresponde
 
-## [Prueba posterior a la conferencia]((https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46)
+## [Prueba posterior a la conferencia]((https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46)
 
 ## Revisión y autoestudio
 

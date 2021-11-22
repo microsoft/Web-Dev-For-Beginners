@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/33?loc=zh_tw)
+[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/33?loc=zh_tw)
 
 有外星人在移動的遊戲才會好玩！在這款遊戲中，我們會建立兩種移動模式：
 
@@ -143,7 +143,7 @@ npm start
 
 ### 加入程式碼
 
-1. **加入特定物件** `hero`、`enemy` 和 `game object`，它們皆有 `x` 與 `y` 位置屬性。(記得課程[繼承與組合](../../README.zh-tw.md)中的片段)。 
+1. **加入特定物件** `hero`、`enemy` 和 `game object`，它們皆有 `x` 與 `y` 位置屬性。(記得課程[繼承與組合](../../translations/README.zh-tw.md)中的片段)。 
 
    *提示* `game object` 要有 `x` 和 `y`，以及繪製到畫布上的能力。
 
@@ -214,7 +214,7 @@ npm start
     
    這時候檢查你的瀏覽器命令欄，看看是否能偵測到鍵盤輸入。
 
-3. **建立**[發布訂閱模式](../../README.zh-tw.md)，這能讓剩下的程式段落保持乾淨。
+3. **建立**[發布訂閱模式](../../translations/README.zh-tw.md)，這能讓剩下的程式段落保持乾淨。
 
    要做到此步驟，你可以：
 
@@ -377,7 +377,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/34?loc=zh_tw)
+[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/34?loc=zh_tw)
 
 ## 複習與自學
 

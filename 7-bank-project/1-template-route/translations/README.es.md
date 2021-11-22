@@ -1,6 +1,6 @@
 # Plantillas HTML y rutas en una aplicación web
 
-## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/41)
+## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/41)
 
 ### Introducción
 
@@ -277,7 +277,7 @@ Ahora intente utilizar los botones de avance y retroceso de sus navegadores y co
 
 Agregue una nueva plantilla y ruta para una tercera página que muestre los créditos de esta aplicación.
 
-## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/42)
+## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/42)
 
 ## Revisión y autoestudio
 

@@ -5,7 +5,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15?loc=ko)
+[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=ko)
 
 ### 소개
 
@@ -75,7 +75,7 @@ HTML 문서의 'head' 영역에는 [metadata](https://developer.mozilla.org/docs
 </head>
 ```
 
-✅ `<meta name="viewport" content="width=600">`과 같이 viewport 메타 태그를 설정하면 어떻게 되나요? [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag)에 대해 자세히 알아보세요.
+✅ `<meta name="viewport" content="width=600">`과 같이 viewport 메타 태그를 설정하면 어떻게 되나요? [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag)에 대해 자세히 알아보세요.
 
 ---
 
@@ -217,7 +217,7 @@ HTML에는 여전히 재미있고 '오래된' 태그가 있지만, 마크업에�
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16?loc=ko)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

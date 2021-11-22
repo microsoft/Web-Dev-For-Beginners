@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13?loc=ko)
+[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=ko)
 
 이 강의에서는 웹에서 상호 작용을 제공하는 언어인 JavaScript의 기본 사항을 다룹니다. 데이터를 컨트롤하는 데 사용하는 배열과 반복문에 대해 알아 봅니다.
 
@@ -21,11 +21,15 @@
 
 배열 구문은 대괄호 쌍으로 이루어져 있습니다.
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 빈 배열이지만, 이미 데이터가 채워진 배열로 선언할 수 있습니다. 배열에 들어있는 여러가지 값들은 쉼표로 구분합니다.
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 배열 값에는 **index**라는 고유 값이 할당됩니다. 이 값은 배열 시작부터 측정한 길이를 기준으로 할당되는 정수입니다. 예시에서, 문자열 값 "Chocolate"의 인덱스는 0이고, "Rocky Road"의 인덱스는 4입니다. 배열 값을 검색하고, 변경하거나 넣으려면 대괄호가 있는 인덱스를 사용합니다.
 
@@ -71,10 +75,10 @@ iceCreamFlavors.length; //5
     - `반복-표현식` 각 반복의 마무리에 실행되며, 일반적으로 값을 세면서 변경할 떄 사용됩니다
   
 ```javascript
-    //Counting up to 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// Counting up to 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ 브라우저 콘솔에서 코드를 실행하십시오. 카운터, 조건 혹은 반복 표현식을 약간 변경하면 어떻게 되나요? 돌아와서 카운트 다운할 수 있습니까?
@@ -115,7 +119,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 for문과 while문 외에 배열을 반복하는 다른 방법이 있습니다. [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) 그리고 [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)도 있습니다. 해당 기술 중 하나를 사용하여 배열 반복을 다시 작성하십시오.
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14?loc=ko)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=ko)
 
 
 ## 리뷰 & 자기주도 학습
@@ -124,4 +128,4 @@ JavaScript의 배열에는 많은 메서드를 가져서 데이터 조작에 매
 
 ## 과제
 
-[Loop an Array](../assignment.md)
+[배열 순회하기](./assignment.ko.md)

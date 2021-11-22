@@ -2,7 +2,7 @@
 
 ## लेक्चर पाहिले की क्विज
 
-[लेक्चर पाहिले की क्विज](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/31?loc=hi)
+[लेक्चर पाहिले की क्विज](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/31?loc=hi)
 
 ## कैनवास
 
@@ -207,7 +207,7 @@ npm start
 
 ## पोस्ट-व्याख्यान प्रश्नोत्तरी
 
-[पोस्ट-व्याख्यान प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/32?loc=hi)
+[पोस्ट-व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/32?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

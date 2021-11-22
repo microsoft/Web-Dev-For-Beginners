@@ -2,7 +2,7 @@
 
 [![Datentypen in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Datentypen in JavaScript")
 
-## [Pre-Lecture Quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/7)
+## [Pre-Lecture Quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7)
 
 Diese Lektion behandelt die Grundlagen von JavaScript, der Sprache, die Interaktivität im Web bietet.
 
@@ -118,13 +118,13 @@ Variablen können alle Arten von Zahlen speichern, einschließlich Dezimalstelle
 
 Es gibt verschiedene Arten von Operatoren, die beim Ausführen von arithmetischen Funktionen verwendet werden können. Einige sind hier aufgeführt:
 
-| Symbol | Beschreibung | Beispiel |
-| ------ | ------------ |---------------------- | -------------------------------- |
-| `+` | **Addition**: Berechnet die Summe zweier Zahlen | `1 + 2 // erwartete Antwort ist 3` |
-| `-` | **Subtraktion**: Berechnet die Differenz zweier Zahlen | `1 - 2 // erwartete Antwort ist -1` |
-| `*` | **Multiplikation**: Berechnet das Produkt zweier Zahlen | `1 * 2 // erwartete Antwort ist 2` |
-| `/` | **Division**: Berechnet den Quotienten aus zwei Zahlen | `1/2 // erwartete Antwort ist 0.5` |
-| %% | **Rest**: Berechnet den Rest aus der Division zweier Zahlen | `1 % 2 // erwartete Antwort ist 1` |
+| Symbol | Beschreibung                                                | Beispiel                            |
+| ------ | ----------------------------------------------------------- | ----------------------------------- |  |
+| `+`    | **Addition**: Berechnet die Summe zweier Zahlen             | `1 + 2 // erwartete Antwort ist 3`  |
+| `-`    | **Subtraktion**: Berechnet die Differenz zweier Zahlen      | `1 - 2 // erwartete Antwort ist -1` |
+| `*`    | **Multiplikation**: Berechnet das Produkt zweier Zahlen     | `1 * 2 // erwartete Antwort ist 2`  |
+| `/`    | **Division**: Berechnet den Quotienten aus zwei Zahlen      | `1/2 // erwartete Antwort ist 0.5`  |
+| %%     | **Rest**: Berechnet den Rest aus der Division zweier Zahlen | `1 % 2 // erwartete Antwort ist 1`  |
 
 
 ✅ Probieren Sie es aus! Versuchen Sie eine arithmetische Operation in der Konsole Ihres Browsers. Überraschen Sie die Ergebnisse?
@@ -186,7 +186,7 @@ Boolesche Werte können nur zwei Werte sein: `true` oder `false`. Boolesche Wert
 
 JavaScript ist bekannt für seine überraschende Art, gelegentlich mit Datentypen umzugehen. Recherchiere ein bisschen über diese 'Fallstricke'. Zum Beispiel: Groß- und Kleinschreibung kann beißen! Versuchen Sie dies in Ihrer Konsole: `let age = 1; let Age = 2; age == Age` (löst `false` auf - warum?). Welche anderen Fallstricke können Sie finden?
 
-## [Quiz nach der Vorlesung](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/8)
+## [Quiz nach der Vorlesung](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8)
 
 ## Review & Selbststudium
 

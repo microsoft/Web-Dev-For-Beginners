@@ -6,7 +6,7 @@
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13?loc=id)
+[Kuis pra-Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=id)
 
 Pelajaran ini mencakup dasar-dasar JavaScript, bahasa yang menyediakan interaktivitas di web. Dalam pelajaran ini, Anda akan belajar tentang array dan loop, yang digunakan untuk memanipulasi data.
 
@@ -23,11 +23,15 @@ Bekerja dengan data adalah tugas umum untuk bahasa apa pun, dan ini jauh lebih m
 
 Sintaks untuk array adalah sepasang tanda kurung siku.
 
-`let arrayKu = [];`
+```javascript
+let arrayKu = [];
+```
 
 Ini adalah array kosong, tetapi array dapat dideklarasikan sudah diisi dengan data. Beberapa nilai dalam array dipisahkan dengan koma.
 
-`let rasaRasaEsKrim = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let rasaRasaEsKrim = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 Nilai array diberi nilai unik yang disebut **indeks**, bilangan bulat yang ditetapkan berdasarkan jaraknya dari awal array. Dalam contoh di atas, nilai string "Chocolate" memiliki indeks 0, dan indeks "Rocky Road" adalah 4. Gunakan indeks dengan tanda kurung siku untuk mengambil, mengubah, atau menyisipkan nilai array.
 
@@ -82,7 +86,7 @@ Pengulangan memungkinkan untuk tugas berulang atau **iterative**, dan dapat meng
 Perulangan `for` membutuhkan 3 bagian untuk melakukan iterasi: - `counter` Variabel yang biasanya diinisialisasi dengan angka yang menghitung jumlah iterasi. - `condition` Expression yang menggunakan operator perbandingan untuk menyebabkan loop berhenti ketika `true`. - `iteration-expression` Berjalan di akhir setiap iterasi, biasanya digunakan untuk mengubah nilai penghitung.
 
 ```javascript
-//Menghitung hingga 10
+// Menghitung hingga 10
 for (let i = 0; i < 10; i++) {
   console.log(i);
 }
@@ -133,7 +137,7 @@ Ada cara lain untuk melakukan perulangan pada array selain perulangan for dan wh
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14?loc=id)
+[Kuis pasca-kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=id)
 
 ## Review & Belajar Mandiri
 

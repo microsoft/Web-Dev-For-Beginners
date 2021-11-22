@@ -6,7 +6,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/1?loc=zh_cn)
+[课前小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1?loc=zh_cn)
 
 ## 大纲
 
@@ -120,7 +120,7 @@ back add r0,r1
 
 另一个关键工具是浏览器。Web 开发者需要用浏览器来观察它们的代码如何在网页上运行，还可以看到编辑器中编写的元素（如 HTML 元素）如何展现在网页上。
 
-许多浏览器都提供了*开发者工具*（DevTools），包括一系列有用的功能和信息，用以辅助开发者收集和捕获它们应用程序的重要信息。例如当网页发生错误时，获知错误是何时发生的有助于帮助解决错误，而浏览器 DevTools 就可以被配置来捕获这个信息。
+许多浏览器都提供了*开发者工具*（DevTools），包括一系列有用的功能和信息，用以辅助开发者收集和捕获它们应用程序的重要信息。例如当网页发生错误时，获知错误是何时发生的有助于解决错误，而浏览器 DevTools 就可以被配置来捕获这个信息。
 
 #### 主流浏览器和 DevTools
 
@@ -183,7 +183,7 @@ back add r0,r1
 比较一些编程语言。JavaScript 和 Java 相互之间有什么独特的特征？COBOL 和 Go 之间呢？
 
 ## 课后小测
-[课后小测](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/2?loc=zh_cn)
+[课后小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/2?loc=zh_cn)
 
 ## 复习 & 自学
 

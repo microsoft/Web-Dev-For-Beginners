@@ -5,7 +5,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15)
+[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15)
 
 ### Pengenalan
 
@@ -75,7 +75,7 @@ Tambahkan blok 'head' ke dokumen anda di antara tag pembuka dan penutup `<html>`
 </head>
 ```
 
-✅ Apa yang akan berlaku jika anda menetapkan tag meta viewport seperti ini: `<meta name =" viewport "content =" width = 600 ">`? Baca lebih lanjut mengenai [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ Apa yang akan berlaku jika anda menetapkan tag meta viewport seperti ini: `<meta name =" viewport "content =" width = 600 ">`? Baca lebih lanjut mengenai [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ---
 
@@ -217,7 +217,7 @@ Terdapat beberapa tag 'lawas' liar dalam HTML yang masih menyeronokkan untuk dim
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16)
+[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16)
 
 ## Mengkaji dan Belajar Sendiri
 

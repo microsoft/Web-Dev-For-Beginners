@@ -1,6 +1,6 @@
 # Analizar el rendimiento de un sitio
 
-Proporcione un informe detallado de un sitio web, que muestre las áreas donde el rendimiento es problemático. Analice por qué el sitio es lento y qué podría hacer para acelerarlo. No confíe solo en las herramientas del navegador, investigue un poco sobre otras herramientas que pueden ayudar a su informe
+Proporcione un informe detallado de un sitio web, que muestre las áreas donde el rendimiento es problemático. Analice por qué el sitio es lento y qué podría hacer para acelerarlo. No confíe solo en las herramientas del navegador, investigue un poco sobre otras herramientas que pueden ayudar a su informe.
 
 ## Rúbrica
 

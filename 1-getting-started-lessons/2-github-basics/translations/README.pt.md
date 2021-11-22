@@ -6,7 +6,7 @@ Esta lição cobre os fundamentos do GitHub, uma plataforma para hospedar e gere
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula
-[Quiz Pré-Aula](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3)
+[Quiz Pré-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3)
 
 ## Introdução
 
@@ -298,7 +298,7 @@ Os projetos também podem ter discussão em fóruns, listas de discussão ou can
 Parear com uma amiga para trabalhar no código uma da outra. Crie um projeto de forma colaborativa, de fork no código, crie branches e de merge mudanças.
 
 ## Quiz pós-aula
-[Quiz pós-aula](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4)
+[Quiz pós-aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4)
 
 ## Revisão & Auto estudo
 

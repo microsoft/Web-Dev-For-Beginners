@@ -2,7 +2,7 @@
 
 [![Entscheidungen treffen](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Entscheidungen treffen")
 
-## [Pre-Lecture Quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/11)
+## [Pre-Lecture Quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/11)
 
 Wenn Sie Entscheidungen treffen und die Reihenfolge steuern, in der Ihr Code ausgeführt wird, ist Ihr Code wiederverwendbar und robust. Dieser Abschnitt behandelt die Syntax zur Steuerung des Datenflusses in JavaScript und ihre Bedeutung bei Verwendung mit booleschen Datentypen.
 
@@ -22,7 +22,7 @@ Stellen Sie Ihren Booleschen Wert wie folgt auf wahr oder falsch ein:
 Operatoren werden verwendet, um Bedingungen durch Vergleiche zu bewerten, die einen Booleschen Wert erzeugen. Das Folgende ist eine Liste von Operatoren, die häufig verwendet werden.
 
 | Symbol | Beschreibung | Beispiel |
-| ------ | -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ------- | ------------------ |
+| ------ | ------------ |-------------------------------------------------- -------------------------------------------------- ------- | ------------------ |
 | `<` | **Größer als**: Vergleicht zwei Werte und gibt den booleschen Datentyp "true" zurück, wenn der Wert auf der rechten Seite größer als der linke ist `5 < 6 // true` |
 | `<=` | **Größer oder gleich**: Vergleicht zwei Werte und gibt den booleschen Datentyp `true` zurück, wenn der Wert auf der rechten Seite größer oder gleich dem linken | ist `5 <= 6 // true` |
 | `>` | **Kleiner als**: Vergleicht zwei Werte und gibt den booleschen Datentyp `true` zurück, wenn der Wert auf der linken Seite größer als der rechte ist `5 > 6 // false` |
@@ -81,7 +81,7 @@ Entscheidungen erfordern möglicherweise mehr als einen Vergleich und können mi
 
 
 | Symbol | Beschreibung | Beispiel |
-| ------ | -------------------------------------------------- ----------------------------------------- | -------------------------------------------------- --------------------- |
+| ------ | ------------ |----------------------------------------- | -------------------------------------------------- --------------------- |
 | `&&` | **Logisches UND**: Vergleicht zwei Boolesche Ausdrücke. Gibt true **nur** zurück, wenn beide Seiten true | sind `(5 > 6) && (5 < 6) // Eine Seite ist falsch, die andere ist wahr. Gibt false` | zurück
 | `||` | **Logisches ODER**: Vergleicht zwei Boolesche Ausdrücke. Gibt true zurück, wenn mindestens eine Seite true ist `(5 > 6) || (5 < 6) // Eine Seite ist falsch, die andere ist wahr. Gibt true` | zurück
 | `!` | **Logisch NICHT**: Gibt den entgegengesetzten Wert eines Booleschen Ausdrucks | zurück `! (5 > 6) // 5 ist nicht größer als 6, aber "!" wird true zurückgeben` |
@@ -158,7 +158,7 @@ if (firstNumber > secondNumber) {
 
 Erstellen Sie ein Programm, das zuerst mit logischen Operatoren geschrieben wird, und schreiben Sie es dann mit einem ternären Ausdruck neu. Was ist Ihre bevorzugte Syntax?
 
-## [Quiz nach der Vorlesung](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/12)
+## [Quiz nach der Vorlesung](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/12)
 
 ## Review & Selbststudium
 

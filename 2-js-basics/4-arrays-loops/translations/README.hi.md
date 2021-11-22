@@ -4,7 +4,7 @@
 > [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा स्केचनेट
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=hi)
 
 इस पाठ में जावास्क्रिप्ट की मूल बातें शामिल हैं, वह भाषा जो वेब पर अन्तरक्रियाशीलता प्रदान करती है। इस पाठ में, आप ऐरे और लूप्स के बारे में जानेंगे, जिनका उपयोग डेटा में हेरफेर करने के लिए किया जाता है।
 
@@ -20,11 +20,15 @@
 
 एक एरे के लिए सिंटेक्स वर्ग कोष्ठक की एक जोड़ी है।
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 यह एक खाली एरे है, लेकिन एरेस को पहले से ही डेटा के साथ आबाद घोषित किया जा सकता है। एक एरे में एकाधिक मान अल्पविराम द्वारा अलग किए गए हैं।
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 एरे मानों को एक अद्वितीय मान दिया जाता है जिसे **सूचकांक** कहा जाता है, एक पूरी संख्या जो कि एरे की शुरुआत से इसकी दूरी के आधार पर निर्दिष्ट की जाती है। ऊपर के उदाहरण में, स्ट्रिंग मूल्य "चॉकलेट" में 0 का सूचकांक है, और "रॉकी ​​रोड" का सूचकांक है। 4. एरे मानों को पुनः प्राप्त करने, बदलने या सम्मिलित करने के लिए वर्ग कोष्ठक के साथ सूचकांक का उपयोग करें।
 
@@ -70,10 +74,10 @@ iceCreamFlavors.length; //5
     - `iteration-expression` प्रत्येक पुनरावृत्ति के अंत में चलता है, आमतौर पर काउंटर मान को बदलने के लिए उपयोग किया जाता है
   
 ```javascript
-    //Counting up to 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// Counting up to 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ इस कोड को ब्राउज़र कंसोल में चलाएं। जब आप काउंटर, स्थिति या पुनरावृत्ति अभिव्यक्ति में छोटे बदलाव करते हैं तो क्या होता है? क्या आप उल्टी गिनती बनाकर इसे पीछे की ओर चला सकते हैं?
@@ -91,7 +95,7 @@ while (i < 10) {
 }
 ```
 
-✅ आप एक फॉर लूप और वाइल लूप क्यों चुनेंगे? 17K दर्शकों का StackOverflow पर एक ही सवाल था, और कुछ राय [आपके लिए दिलचस्प हो सकती है] (https://stackoverflow.com/questions/39969145/ORE-loops-vs-for-loops-in-javascript)
+✅ आप एक फॉर लूप और वाइल लूप क्यों चुनेंगे? 17K दर्शकों का StackOverflow पर एक ही सवाल था, और कुछ राय [आपके लिए दिलचस्प हो सकती है](https://stackoverflow.com/questions/39969145/ORE-loops-vs-for-loops-in-javascript)
 
 ## लूपस और अररेस
 
@@ -114,7 +118,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 लूप के अलावा और अन्य अररेस पर लूपिंग के अन्य तरीके हैं। [ForEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web) हैं /JavaScript/Reference/Statements/for...of), और [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Anray/map)। इन तकनीकों में से किसी एक का उपयोग करके अपने ऐरे लूप को फिर से लिखें।
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=hi)
 
 
 ## समीक्षा और स्व अध्ययन

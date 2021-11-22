@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/45?loc=zh_tw)
+[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45?loc=zh_tw)
 
 ### 大綱
 
@@ -37,11 +37,11 @@ curl http://localhost:5000/api
 
 在 AJAX 早期，唯一取得資料的 API 為 [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。但當代的瀏覽器已經建立出更方便且強大的 [`Fetch` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)，它們使用 Promises 物件且更適合應用在 JSON 資料上。
 
-> 許多當代瀏覽器支援 `Fetch API`，如果你想確認你的網頁應用程式是否運作在舊款的瀏覽器，檢查[caniuse.com 上的相容性測試](https://caniuse.com/fetch)是一個好方法。
+> 許多當代瀏覽器支援 `Fetch API`，如果你想確認你的網頁應用程式是否運作在舊款的瀏覽器，檢查 [caniuse.com 上的相容性測試](https://caniuse.com/fetch)是一個好方法。
 
 ### 課題
 
-在[前一堂課程中](../../2-forms/translations/README.zh-tw.md)，我們製作出註冊表單來建立新帳戶。現在我們來加入新程式，使用現有的帳戶登入，並取得其相關資料。開啟檔案 `app.js`並新增函式 `login`：
+在[前一堂課程中](../../2-forms/translations/README.zh-tw.md)，我們製作出註冊表單來建立新帳戶。現在我們來加入新程式，使用現有的帳戶登入，並取得其相關資料。開啟檔案 `app.js` 並新增函式 `login`：
 
 ```js
 async function login() {
@@ -111,7 +111,7 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ 你知道在預設上，你只能從*同一個網域(domain)與連接埠(port)*的網頁呼叫伺服器 APIs嗎？這是瀏覽器強制性的安全機制。但我們的網頁應用程式在 `localhost:3000` 上執行，而伺服器 API 則在 `localhost:5000` 上執行。為什麼這樣能正常運作？利用[跨來源資源共用 (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)，只要伺服器添加特殊的標頭檔到網頁回應中，我們就可以處理跨資源的 HTTP 請求，允許特殊的網域進行呼叫。
+✅ 你知道在預設上，你只能從*同一個網域(domain)與連接埠(port)*的網頁呼叫伺服器 APIs 嗎？這是瀏覽器強制性的安全機制。但我們的網頁應用程式在 `localhost:3000` 上執行，而伺服器 API 則在 `localhost:5000` 上執行。為什麼這樣能正常運作？利用[跨來源資源共用 (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)，只要伺服器添加特殊的標頭檔到網頁回應中，我們就可以處理跨資源的 HTTP 請求，允許特殊的網域進行呼叫。
 
 > 藉由前往[此課程](https://docs.microsoft.com/en-us/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-13441-cxa)學習更多有關 API 的資訊。
 
@@ -329,7 +329,7 @@ function updateElement(id, textOrNode) {
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/46?loc=zh_tw)
+[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46?loc=zh_tw)
 
 ## 作業
 

@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15)
+[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15)
 
 ### Introduction
 
@@ -75,7 +75,7 @@ Add a 'head' block to your document in between the opening and closing `<html>` 
 </head>
 ```
 
-✅ What would happen if you set a viewport meta tag like this: `<meta name="viewport" content="width=600">`? Read more about the [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ What would happen if you set a viewport meta tag like this: `<meta name="viewport" content="width=600">`? Read more about the [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ---
 
@@ -217,7 +217,7 @@ There are some wild 'older' tags in HTML that are still fun to play with, though
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16)
 
 ## Review & Self Study
 

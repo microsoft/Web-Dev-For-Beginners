@@ -5,7 +5,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15?loc=zh_tw)
+[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=zh_tw)
 
 ### 大綱
 
@@ -75,7 +75,7 @@ HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[
 </head>
 ```
 
-✅ 你認為設定下列視窗元資訊 `<meta name="viewport" content="width=600">` 會發生什麼事？ 請閱讀更多有關於[Viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)的資訊。
+✅ 你認為設定下列視窗元資訊 `<meta name="viewport" content="width=600">` 會發生什麼事？ 請閱讀更多有關於 [Viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag) 的資訊。
 
 ---
 
@@ -217,7 +217,7 @@ HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16?loc=zh_tw)
+[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=zh_tw)
 
 ## 複習與自學
 

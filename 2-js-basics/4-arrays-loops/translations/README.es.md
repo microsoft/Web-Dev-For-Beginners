@@ -8,7 +8,7 @@
 [![Bucles](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Bucles")
 
 
-## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13)
+## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13)
 
 Esta lección cubre los conceptos básicos de JavaScript, el lenguaje que proporciona interactividad en la web. En esta lección, aprenderá sobre matrices y bucles, que se utilizan para manipular datos.
 
@@ -20,11 +20,15 @@ Trabajar con datos es una tarea común para cualquier lenguaje y es una tarea mu
 
 La sintaxis de una matriz es un par de corchetes.
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 Esta es una matriz vacía, pero las matrices se pueden declarar ya pobladas con datos. Varios valores en una matriz están separados por una coma.
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 A los valores de la matriz se les asigna un valor único llamado **índice**, un número entero que se asigna en función de su distancia desde el principio de la matriz. En el ejemplo anterior, el valor de cadena "Chocolate" tiene un índice de 0 y el índice de "Rocky Road" es 4. Utilice el índice entre corchetes para recuperar, cambiar o insertar valores de matriz.
 
@@ -71,10 +75,10 @@ El ciclo `for` requiere 3 partes para iterar:
 
   
 ```javascript
-    //Contando hasta 10
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// Contando hasta 10
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ Ejecute este código en una consola de navegador. ¿Qué sucede cuando realiza pequeños cambios en el contador, la condición o la expresión de iteración? ¿Puedes hacer que corra al revés, creando una cuenta regresiva?
@@ -110,7 +114,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 🚀 Desafío: Hay otras formas de realizar un bucle sobre arreglos además de los bucles for y while. Existen [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), y [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Vuelva a escribir su bucle de matriz utilizando una de estas técnicas.
 
-## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14)
+## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14)
 
 ## Revisión y autoestudio
 

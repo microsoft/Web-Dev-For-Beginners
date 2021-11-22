@@ -2,7 +2,7 @@
 
 ## 説明書
 
-DOM 要素を「採用」することで、もう少し DOM を研究してみましょう。MSDN の [DOM インターフェイス一覧](https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model)にアクセスして、一つ選びます。それが Web 上の Web サイトで使われているのを Web 上で見つけて、それがどのように使われているかの説明を書きます。
+DOM 要素を「採用」することで、もう少し DOM を研究してみましょう。MDN の [DOM インターフェイス一覧](https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model)にアクセスして、一つ選びます。それが Web 上の Web サイトで使われているのを Web 上で見つけて、それがどのように使われているかの説明を書きます。
 
 ## ルーブリック
 

@@ -3,7 +3,7 @@
 ![Introducción a HTML](/sketchnotes/webdev101-html.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15)
+## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15)
 
 ### Introducción:
 
@@ -66,7 +66,7 @@ Agregue un bloque de 'encabezado' a su documento entre las etiquetas de apertura
 </head>
 ```
 
-✅ ¿Qué pasaría si configuras una metaetiqueta de ventana gráfica como esta: `<meta name =" viewport "content =" width = 600 ">`? Obtenga más información sobre [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag).
+✅ ¿Qué pasaría si configuras una metaetiqueta de ventana gráfica como esta: `<meta name =" viewport "content =" width = 600 ">`? Obtenga más información sobre [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ---
 
@@ -205,7 +205,7 @@ Agregue este marcado encima de la última etiqueta `</div>`:
 
 🚀 Desafío: hay algunas etiquetas "antiguas" salvajes en HTML con las que todavía es divertido jugar, aunque no debes usar etiquetas obsoletas como [estas etiquetas](https://developer.mozilla.org/docs/Web/HTML/Element) en su marcado. Aún así, ¿puede usar la antigua etiqueta `<marquee>` para hacer que el título h1 se desplace horizontalmente? (si lo hace, no olvide quitarlo después)
 
-## [Post-lecture prueba](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16)
+## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16)
 
 ## Revisión y autoestudio
 

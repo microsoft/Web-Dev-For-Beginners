@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/27?loc=zh_tw)
+[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/27?loc=zh_tw)
 
 ### 大綱
 
@@ -18,11 +18,11 @@
 
 第一件事為確保網頁收集關於網頁效能的資料，在瀏覽器的開發者工具中可以實現它。在 Edge 中，選擇「設定及更多」按鈕(瀏覽器上三個點的圖示)，並選擇更多工具 > 開發人員工具並開啟 Performance 分頁。你也可以使用鍵盤快捷鍵，Windows 上的 `Ctrl` + `Shift` + `I` 與 Mac 上的 `Option` + `Command` + `I` 來開啟開發人員工具。
 
-Performance 分頁包括了效能分析工具。開啟一個網頁，例如 https://www.microsoft.com，點擊 'Record' 按鈕並重新整理網頁。停止錄製後你就能取得網頁的 'script'、'render' 與 'paint' 的過程與資訊：
+Performance 分頁包括了效能分析工具。開啟一個網頁，例如 https://www.microsoft.com ，點擊 'Record' 按鈕並重新整理網頁。停止錄製後你就能取得網頁的 'script'、'render' 與 'paint' 的過程與資訊：
 
 ![Edge 性能分析工具](../images/profiler.png)
 
-✅ 造訪[Microsoft 文件](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa)觀看 Edge 的 Performance 分頁資訊
+✅ 造訪 [Microsoft 文件](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa)觀看 Edge 的 Performance 分頁資訊
 
 > 提示：要取得真正的網頁開啟時間，記得清除你的瀏覽器快取。
 
@@ -44,7 +44,7 @@ Performance 分頁包括了效能分析工具。開啟一個網頁，例如 http
 
 **資產(Asset)大小**：過去幾年來，網頁「變重」了，也因此變慢了。有些負擔來自於圖片的使用。
 
-✅ 查詢[Internet Archive](https://httparchive.org/reports/page-weight)，看看過去的網頁負擔等資訊。
+✅ 查詢 [Internet Archive](https://httparchive.org/reports/page-weight)，看看過去的網頁負擔等資訊。
 
 一個好的習慣是確保你的圖片有做最佳化，呈現合理的檔案大小及解析度影像給你的使用者。
 
@@ -146,7 +146,7 @@ function drawIcon(value) {
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/28?loc=zh_tw)
+[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/28?loc=zh_tw)
 
 ## 複習與自學
 

@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト
-[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13?loc=ja)
+[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=ja)
 
 このレッスンでは、Web 上でインタラクティブな機能を提供する言語である JavaScript の基礎を学びます。このレッスンでは、データを操作するために使用される配列とループについて学びます。
 
@@ -21,11 +21,15 @@
 
 配列の構文は角括弧のペアです。
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 これは空の配列ですが、配列はすでにデータを埋めた状態で宣言することができます。配列内の複数の値はカンマで区切られます。
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 配列の値には、**インデックス** と呼ばれる一意の値が割り当てられ、配列の先頭からの距離に基づいて整数が割り当てられます。上の例では、文字列の値 "Chocolate" のインデックスは 0 で、"Rocky Road" のインデックスは 4 です。 配列の値を取得、変更、挿入するには、角括弧付きのインデックスを使用します。
 
@@ -71,10 +75,10 @@ iceCreamFlavors.length; //5
     - `iteration-expression` 各反復の最後に実行され，通常はカウンタの値を変更するために使用されます
   
 ```javascript
-    //10までカウントアップ
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// 10までカウントアップ
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ このコードをブラウザのコンソールで実行してください。カウンタ、条件、反復式に小さな変更を加えるとどうなりますか？カウントダウンを作成して逆走させることはできますか？
@@ -115,7 +119,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 配列をループする方法は for ループと while ループ以外にもあります。[forEach](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/for...of)、[map](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) があります。これらのテクニックのいずれかを使って、配列のループを書き換えてください。
 
 ## レッスン後の小テスト
-[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14?loc=ja)
+[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=ja)
 
 
 ## 復習と自己学習

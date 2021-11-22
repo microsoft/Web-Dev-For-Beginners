@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/43?loc=zh_tw)
+[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/43?loc=zh_tw)
 
 ### 大綱
 
@@ -12,7 +12,7 @@
 
 ### 開始之前
 
-你需要完成第一單元 [HTML 模板與網頁路由](../../1-template-route/translations/README.zh-tw.md)的應用程式。你還需要安裝 [Node.js](https://nodejs.org) 與在本地端[運行伺服器 API](../../api/translations/README.zh-tw.md)以傳輸建立帳戶所需的資料。
+你需要完成第一單元 [HTML 模板與網頁路由](../../1-template-route/translations/README.zh-tw.md)的應用程式。你還需要安裝 [Node.js](https://nodejs.org) 與在本地端[運行伺服器 API](../../api/translations/README.zh-tw.md) 以傳輸建立帳戶所需的資料。
 
 你可以測試伺服器是否運作正常，在終端機內輸入指令：
 
@@ -47,7 +47,7 @@ curl http://localhost:5000/api
 
 ### 課題
 
-在 `login` 模板內加入表單。我們需要*使用者名稱(username)*的輸入框與*登入(Login)*的按鈕。 
+在 `login` 模板內加入表單。我們需要 *使用者名稱(username)* 的輸入框與 *登入(Login)* 的按鈕。 
 
 ```html
 <template id="login">
@@ -270,7 +270,7 @@ async function register() {
 
 ![傳輸錯誤表單而出現驗證失敗的截圖](../images/validation-error.png)
 
-這類在傳輸資料給伺服器*之前*的驗證系統稱之為**用戶端(client-side)**驗證。但注意有些資料是沒有辦法在傳輸前被驗證的。舉例來說，我們沒辦法在發出請求前，確認是否已經存在著一組相同姓名的帳戶。伺服器上額外的驗證措施就稱之為**伺服器端(server-side)**驗證。
+這類在傳輸資料給伺服器*之前*的驗證系統稱之為 **用戶端(client-side)** 驗證。但注意有些資料是沒有辦法在傳輸前被驗證的。舉例來說，我們沒辦法在發出請求前，確認是否已經存在著一組相同姓名的帳戶。伺服器上額外的驗證措施就稱之為 **伺服器端(server-side)** 驗證。
 
 通常這兩個驗證都需要去編寫，用戶端驗證能及時回饋給用戶，提升使用者體驗；伺服器端驗證確保你要處理的用戶資料是合理且安全的。
 
@@ -286,7 +286,7 @@ async function register() {
 
 ## 課後測驗
 
-[課後測驗](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/44?loc=zh_tw)
+[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/44?loc=zh_tw)
 
 ## 複習與自學
 

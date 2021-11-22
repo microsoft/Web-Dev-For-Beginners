@@ -4,7 +4,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/13?loc=zh_cn)
+[课前小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=zh_cn)
 
 这节课将会介绍 JavaScript 的基础知识，正是它为网页提供了可交互性。这节课中，你将学习数组和循环，它们会被用于操控数据。
 
@@ -21,11 +21,15 @@
 
 数组的语法需要一对方括号。
 
-`let myArray = [];`
+```javascript
+let myArray = [];
+```
 
 这是一个空数组，但数组其实可以在声明时就存入一些数据。数组中的多项数据用逗号分隔。
 
-`let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];`
+```javascript
+let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
+```
 
 数组中的值会被指定一个唯一的值，称为 **索引（index）**，它是一个整数，表示对应值在数组中的位置与数组开头的距离。在上方的例子中，字符串值 `"Chocolate"` 的索引就是 0，而 `"Rocky Road"` 的索引是 4。可以用索引加上方括号来获取、改变或者插入数组值。
 
@@ -61,7 +65,7 @@ iceCreamFlavors.length; // 5
 
 ## 循环（Loops）
 
-数组可以用来做重复性的或者**迭代性的（iterative）**的工作，会省下很多时间和代码量。每一次迭代中的变量、值或者条件可能会不同。JavaScript 中有几种不同类型的循环，它们有一些小差别，但本质上都是做同一件事：遍历数据。
+数组可以用来做重复性的或者 **迭代性的（iterative）** 的工作，会省下很多时间和代码量。每一次迭代中的变量、值或者条件可能会不同。JavaScript 中有几种不同类型的循环，它们有一些小差别，但本质上都是做同一件事：遍历数据。
 
 ### For 循环
 
@@ -71,10 +75,10 @@ iceCreamFlavors.length; // 5
     - `迭代式（iteration-expression）` 在每一次迭代的模为执行，一般用于更新计数器的值
   
 ```javascript
-    // 从 0 数到 9
-    for (let i = 0; i < 10; i++) {
-        console.log(i);
-    }
+// 从 0 数到 9
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 ```
 
 ✅ 在浏览器控制台中运行这段代码。试试调整计数器、条件式或迭代式时会发生什么。你能让它反过来运行，倒着计数吗？
@@ -115,7 +119,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 除了 for 和 while 循环，还有一些用于遍历数组的办法。比如 [forEach](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 和 [map](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。用这些办法重写一下你的数组遍历代码。
 
 ## 课后小测
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/14?loc=zh_cn)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=zh_cn)
 
 ## 复习 & 自学
 

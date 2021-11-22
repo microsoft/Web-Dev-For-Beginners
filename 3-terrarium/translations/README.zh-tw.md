@@ -8,7 +8,7 @@
 
 1. [HTML 簡介](../1-intro-to-html/translations/README.zh-tw.md)
 2. [CSS 簡介](../2-intro-to-css/translations/README.zh-tw.md)
-3. [DOM 簡介與閉包](../translations/3-intro-to-DOM-and-closures/README.zh-tw.md)
+3. [DOM 簡介與閉包](../3-intro-to-DOM-and-closures/translations/README.zh-tw.md)
 
 ## 參與人員
 

@@ -7,7 +7,7 @@ Pelajaran ini mencakup dasar-dasar GitHub, platform untuk menghosting dan mengel
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3?loc=id)
+[Kuis pra-kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3?loc=id)
 
 ## Pengantar
 
@@ -274,7 +274,7 @@ Sandingkan dengan seorang teman untuk mengerjakan kode satu sama lain. Buat proy
 
 ## Kuis Pasca Kuliah
 
-[Kuis pasca kuliah](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4?loc=id)
+[Kuis pasca kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4?loc=id)
 
 ## Review & Belajar Mandiri
 

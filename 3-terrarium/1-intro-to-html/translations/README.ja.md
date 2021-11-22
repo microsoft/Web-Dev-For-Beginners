@@ -5,7 +5,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/15?loc=ja)
+[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=ja)
 
 ### イントロダクション
 
@@ -75,7 +75,7 @@ HTML ドキュメントの 'head' 領域には、Web ページに関する重要
 </head>
 ```
 
-✅ このように viewport の meta タグを設定するとどうなるでしょうか: `<meta name="viewport" content="width=600">`? [viewport](https://developer.mozilla.org/docs/Mozilla/Mobile/Viewport_meta_tag) についてはこちらをご覧ください。
+✅ このように viewport の meta タグを設定するとどうなるでしょうか: `<meta name="viewport" content="width=600">`? [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag) についてはこちらをご覧ください。
 
 ---
 
@@ -217,7 +217,7 @@ HTMLに はまだ遊んで楽しいワイルドな「古い」タグがいくつ
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/16?loc=ja)
+[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=ja)
 
 ## 復習と自己学習
 

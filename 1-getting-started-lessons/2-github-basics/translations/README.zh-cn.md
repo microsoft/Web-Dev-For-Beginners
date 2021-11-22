@@ -6,7 +6,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/3?loc=zh_cn)
+[课前小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3?loc=zh_cn)
 
 ## 大纲
 
@@ -284,7 +284,7 @@ Pull Request 是一个可以用来比较和讨论一个分支引入的改动的�
 
 ### 更多 GitHub 的有趣小知识
 
-你可以收藏（star）、关注（watch）和/或复刻（fork）GitHub 上的任何公开仓库。可以在右上角的下拉菜单找到你收藏的仓库，这就像书签一样，但收藏的是代码。
+你可以收藏（star）、关注（watch）和复刻（fork）GitHub 上的任何公开仓库。可以在右上角的下拉菜单找到你收藏的仓库，这就像书签一样，但收藏的是代码。
 
 项目都有一个事项面板（issue tracker），用于让人们讨论和这个项目相关的事项，事项面板基本都在 GitHub 的 “Issues” 标签页中，偶尔也会指明在其他地方。而 “Pull Requests” 标签页则是人们讨论和检查正在进行的变更的地方。
 
@@ -299,7 +299,7 @@ Pull Request 是一个可以用来比较和讨论一个分支引入的改动的�
 找朋友一起编辑彼此的代码。协作创建一个项目、复刻代码、创建分支，然后合并变更。
 
 ## 课后小测
-[课后小测](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/4?loc=zh_cn)
+[课后小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4?loc=zh_cn)
 
 ## 复习 & 自学
 

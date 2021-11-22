@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/41)
+[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/41)
 
 ### Introduction
 
@@ -247,10 +247,12 @@ function onLinkClick(event) {
 Let's complete the navigation system by adding bindings to our *Login* and *Logout* links in the HTML.
 
 ```html
-<a href="/dashboard" onclick="onLinkClick()">Login</a>
+<a href="/dashboard" onclick="onLinkClick(event)">Login</a>
 ...
-<a href="/login" onclick="onLinkClick()">Logout</a>
+<a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
+
+The `event` object above, captures the `click` event and passes it to our `onLinkClick` function.
 
 Using the [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) attribute bind the `click` event to JavaScript code, here the call to the `navigate()` function.
 
@@ -295,7 +297,7 @@ Add a new template and route for a third page that shows the credits for this ap
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://nice-beach-0fe9e9d0f.azurestaticapps.net/quiz/42)
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/42)
 
 ## Review & Self Study
 
