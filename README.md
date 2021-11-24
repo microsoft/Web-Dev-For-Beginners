@@ -22,7 +22,7 @@ Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson cur
 
 > **Students**, to use this curriculum on your own, fork the entire repo and complete the exercises on your own, starting with a pre-lecture quiz, then reading the lecture and completing the rest of the activities. Try to create the projects by comprehending the lessons rather than copying the solution code; however that code is available in the /solutions folders in each project-oriented lesson. Another idea would be to form a study group with friends and go through the content together. For further study, we recommend [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa) and by watching the videos mentioned below.
 
-[![Promo video](web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
+[![Promo video](images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
 
 Gif by [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
 
