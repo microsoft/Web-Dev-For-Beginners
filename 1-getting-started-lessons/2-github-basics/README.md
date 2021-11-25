@@ -125,7 +125,7 @@ Let's say you have a folder locally with some code project and you want to start
 
 1. **Connect your local Git repo with GitHub**. A Git repo is good on your machine but at some point you want to have backup of your files somewhere and also invite other people to work with you on your repo. One such great place to do so is GitHub. Remember we've already created a repo on GitHub so the only thing we need to do is to connect our local Git repo with GitHub. The command `git remote add` will do just that. Type the following command:
 
-   > Note, before you type the command go to your GitHub repo page to find the repository URL. You will use it in the below command. Replace `repository_name` with your GitHub URL.
+   > Note, before you type the command go to your GitHub repo page to find the repository URL. You will use it in the below command. Replace ```https://github.com/username/repository_name.git``` with your GitHub URL.
 
    ```bash
    git remote add origin https://github.com/username/repository_name.git
