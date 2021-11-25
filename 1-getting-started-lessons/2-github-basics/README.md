@@ -2,7 +2,7 @@
 
 This lesson covers the basics of GitHub, a platform to host and manage changes to your code.
 
-![Intro to GitHub](/sketchnotes/webdev101-github.png)
+![Intro to GitHub](../../sketchnotes/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
