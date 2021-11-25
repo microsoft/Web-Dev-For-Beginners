@@ -134,6 +134,8 @@ Let's say you have a folder locally with some code project and you want to start
    This creates a _remote_, or connection, named "origin" pointing at the GitHub repository you created earlier.
 
 1. **Send local files to GitHub**. So far you've created a _connection_ between the local repo and the GitHub repo. Let's send these files to GitHub with the following command `git push`, like so: 
+   
+   > Note, replace ```main``` with the branch name you want to push to GitHub.
 
    ```bash
    git push -u origin main
@@ -141,7 +143,7 @@ Let's say you have a folder locally with some code project and you want to start
 
    This sends your commits in your "main" branch to GitHub.
 
-1. **To add more changes**. If you want to continue making changes and pushing them to GitHub you’ll just need to use the following three commands:
+2. **To add more changes**. If you want to continue making changes and pushing them to GitHub you’ll just need to use the following three commands:
 
    ```bash
    git add .
