@@ -135,7 +135,7 @@ Let's say you have a folder locally with some code project and you want to start
 
 1. **Send local files to GitHub**. So far you've created a _connection_ between the local repo and the GitHub repo. Let's send these files to GitHub with the following command `git push`, like so: 
    
-   > Note, replace ```main``` with the branch name you want to push to GitHub.
+   > Note, your branch name may be different by default from ```main```.
 
    ```bash
    git push -u origin main
