@@ -6,23 +6,23 @@
 
 ### Introduction
 
-In this lesson, you'll call an API by submitting your browser extension's form and display the results in your browser extension. In addition, you'll learn about how you can store data in your browser's local storage for future reference and use.
+Dans cette leçon, vous allez appeler une API en soumettant le formulaire de votre extension de navigateur et afficher les résultats dans votre extension. De plus, vous apprendrez comment vous pouvez stocker des données dans le stockage local de votre navigateur pour des références et utilisations futures.
 
-✅ Follow the numbered segments in the appropriate files to know where to place your code
+✅ Suivez les segments numérotés dans les fichiers appropriés pour savoir où placer votre code
 
-### Set up the elements to manipulate in the extension:
+### Paramétrez les éléments à manipuler dans l'extension :
 
-By this time you have built the HTML for the form and results `<div>` for your browser extension. From now on, you'll need to work in the `/src/index.js` file and building your extension bit by bit. Refer to the [previous lesson](../1-about-browsers/README.md) on getting your project set up and on the build process.
+À ce stade, vous avez créé le code HTML pour le formulaire et les résultats `<div>` pour l'extension de votre navigateur. A partir de maintenant, vous devrez travailler dans le fichier `/src/index.js` et construire votre extension au fur et à mesure. Reportez-vous à la [leçon précédente](../../1-about-browsers/translations/README.fr.md) sur la configuration de votre projet et sur le processus de génération.
 
-Working in your `index.js` file, start by creating some `const` variables to hold the values associated with various fields:
+En travaillant dans votre fichier `index.js`, commencez par créer des variables `const` pour contenir les valeurs associées aux différents champs:
 
 ```JavaScript
-// form fields
+// champs de formulaire
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
 const apiKey = document.querySelector('.api-key');
 
-// results
+// résultats
 const errors = document.querySelector('.errors');
 const loading = document.querySelector('.loading');
 const results = document.querySelector('.result-container');
@@ -32,11 +32,11 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-All of these fields are referenced by their css class, as you set it up in the HTML in the previous lesson.
+Tous ces champs sont référencés par leur classe CSS, comme vous l'avez configuré dans le code HTML de la leçon précédente.
 
-### Add listeners
+### Ajouter des écouteurs
 
-Next, add event listeners to the form and the clear button that resets the form, so that if a user submits the form or clicks that reset button, something will happen, and add the call to initialize the app at the bottom of the file:
+Ensuite, ajoutez des écouteurs d'événement au formulaire et le bouton d'effacement qui réinitialise le formulaire, de sorte que si un utilisateur soumet le formulaire ou clique sur ce bouton de réinitialisation, quelque chose se passe, et ajoutez l'appel pour initialiser l'application au bas du fichier:
 
 ```JavaScript
 form.addEventListener('submit', (e) => handleSubmit(e));
@@ -44,30 +44,30 @@ clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Notice the shorthand used to listen for a submit or click event, and how the event it is passed to the handleSubmit or reset functions. Can you write the equivalent of this shorthand in a longer format? Which do you prefer?
+✅ Notez le raccourci utilisé pour écouter un événement de soumission ou de clic, et comment l'événement est transmis aux fonctions handleSubmit ou reset. Pouvez-vous écrire l'équivalent de ce raccourci dans un format plus long ? Lequel préfèrez-vous?
 
-### Build out the init() function and the reset() function:
+### Construisez la fonction init() et la fonction reset():
 
-Now you are going to build the function that initializes the extension, which is called init():
+Vous allez maintenant construire la fonction qui initialise l'extension, qui s'appelle init():
 
 ```JavaScript
 function init() {
-	//if anything is in localStorage, pick it up
+	//si quelque chose est dans localStorage, choisissez-lep
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	//définir l'icône pour qu'elle soit verte générique
+    //à faire
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		//si nous n'avons pas les clés, montrez le formulaire
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
+        //si nous avons enregistré des clés/régions dans localStorage, afficher les résultats lorsqu'ils se chargent
         displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
@@ -77,40 +77,40 @@ function init() {
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	//effacer le stockage local pour la région uniquement
 	localStorage.removeItem('regionName');
 	init();
 }
 
 ```
-In this function, there is some interesting logic. Reading through it, can you see what happens?
+Dans cette fonction, il y a une logique intéressante. En le lisant, pouvez-vous voir ce qui se passe?
 
-- two `const` are set up to check if the user has stored an APIKey and region code in local storage.
-- if either of those is null, show the form by changing its style to display as 'block'
-- hide the results, loading, and clearBtn and set any error text to an empty string
-- if there exists a key and region, start a routine to:
-  - call the API to get carbon usage data
-  - hide the results area
-  - hide the form
-  - show the reset button
+- deux `const` sont configurés pour vérifier si l'utilisateur a stocké une APIKey et un code de région dans le stockage local.
+- si l'un de ceux-ci est nul, affiche le formulaire en changeant son style pour qu'il s'affiche en tant que 'block'
+- masquer les résultats, le chargement et clearBtn et définir tout texte d'erreur sur une chaîne vide
+- s'il existe une clé et une région, lancer une routine pour:
+  - appeler l'API pour obtenir les données d'utilisation du carbone
+  - masquer la zone de résultats
+  - masquer le formulaire
+  - afficher le bouton de réinitialisation
 
-Before moving on, it's useful to learn about a very important concept available in browsers: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage is a useful way to store strings in the browser as a `key-value` pair. This type of web storage can be manipulated by JavaScript to manage data in the browser. LocalStorage does not expire, while SessionStorage, another kind of web storage, is cleared when the browser is closed. The various types of storage have pros and cons to their usage.
+Avant de continuer, il est utile de se renseigner sur un concept très important disponible dans les navigateurs: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage est un moyen utile de stocker des chaînes dans le navigateur en tant que paire `key-value`. Ce type de stockage Web peut être manipulé par JavaScript pour gérer les données dans le navigateur. LocalStorage n'expire pas, tandis que SessionStorage, un autre type de stockage Web, est effacé lorsque le navigateur est fermé. Les différents types de stockage ont des avantages et des inconvénients à leur utilisation.
 
-> Note - your browser extension has its own local storage; the main browser window is a different instance and behaves separately.
+> Remarque - l'extension de votre navigateur dispose de son propre stockage local ; la fenêtre principale du navigateur est une instance différente et se comporte séparément.
 
-You set your APIKey to have a string value, for example, and you can see that it is set on Edge by "inspecting" a web page (you can right-click a browser to inspect) and going to the Applications tab to see the storage.
+Vous définissez votre APIKey pour qu'elle ait une valeur de chaîne, par exemple, et vous pouvez voir qu'elle est définie sur Edge en "inspectant" une page Web (vous pouvez cliquer avec le bouton droit sur un navigateur pour inspecter) et en accédant à l'onglet Applications pour voir le espace de rangement.
 
-![Local storage pane](images/localstorage.png)
+![Volet de stockage local](../images/localstorage.png)
 
-✅ Think about situations where you would NOT want to store some data in LocalStorage. In general, placing API Keys in LocalStorage is a bad idea! Can you see why? In our case, since our app is purely for learning and will not be deployed to an app store, we will use this method.
+✅ Pensez aux situations dans lesquelles vous ne voudriez PAS stocker certaines données dans LocalStorage. En général, placer des clés API dans LocalStorage est une mauvaise idée ! Pouvez-vous voir pourquoi? Dans notre cas, étant donné que notre application est purement destinée à l'apprentissage et ne sera pas déployée dans un magasin d'applications, nous utiliserons cette méthode.
 
-Notice that you use the Web API to manipulate LocalStorage, either by using `getItem()`, `setItem()` or `removeItem()`. It's widely supported across browsers.
+Notez que vous utilisez l'API Web pour manipuler LocalStorage, soit en utilisant `getItem()`, `setItem()` ou `removeItem()`. Il est largement pris en charge sur tous les navigateurs.
 
-Before building the `displayCarbonUsage()` function that is called in `init()`, let's build the functionality to handle the initial form submission.
+Avant de développer la fonction `displayCarbonUsage()` qui est appelée dans `init()`, définissons la fonctionnalité pour gérer la soumission initiale du formulaire.
 
-### Handle the form submission
+### Gérer la soumission du formulaire
 
-Create a function called `handleSubmit` that accepts an event argument `(e)`. Stop the event from propagating (in this case, we want to stop the browser from refreshing) and call a new function, `setUpUser`, passing in the arguments `apiKey.value` and `region.value`. In this way, you use the two values that are brought in via the initial form when the appropriate fields are populated.
+Créez une fonction appelée `handleSubmit` qui accepte un argument d'événement `(e)`. Arrêtez la propagation de l'événement (dans ce cas, nous voulons arrêter le rafraîchissement du navigateur) et appelez une nouvelle fonction, `setUpUser`, en passant les arguments `apiKey.value` et `region.value`. De cette façon, vous utilisez les deux valeurs qui sont apportées via le formulaire initial lorsque les champs appropriés sont remplis.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -118,7 +118,7 @@ function handleSubmit(e) {
 	setUpUser(apiKey.value, region.value);
 }
 ```
-✅ Refresh your memory - the HTML you set up in the last lesson has two input fields whose `values` are captured via the `const` you set up at the top of the file, and they are both `required` so the browser stops users from inputting null values.
+✅ Rafraîchissez votre mémoire - le HTML que vous avez configuré dans la dernière leçon a deux champs de saisie dont les `values` sont capturées via le `const` que vous avez configuré en haut du fichier, et ils sont tous les deux `required` pour que le navigateur arrête les utilisateurs de la saisie de valeurs nulles.
 
 ### Set up the user
 
@@ -131,29 +131,29 @@ function setUpUser(apiKey, regionName) {
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	//faire un premier appel
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
-This function sets a loading message to show while the API is called. At this point, you have arrived at creating the most important function of this browser extension!
+Cette fonction définit un message de chargement à afficher pendant l'appel de l'API. À ce stade, vous êtes arrivé à créer la fonction la plus importante de cette extension de navigateur!
 
-### Display Carbon Usage
+### Afficher la consommation de carbone
 
-Finally it's time to query the API!
+Il est enfin temps d'interroger l'API !
 
-Before going further, we should discuss APIs. APIs, or [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), are a critical element of a web developer's toolbox. They provide standard ways for programs to interact and interface with each other. For example, if you are building a web site that needs to query a database, someone might have created an API for you to use. While there are many types of APIs, one of the most popular is a [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Avant d'aller plus loin, nous devrions discuter des API. Les API, ou [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), sont un élément essentiel de la boîte à outils d'un développeur Web. Ils fournissent des moyens standard pour les programmes d'interagir et d'interagir les uns avec les autres. Par exemple, si vous créez un site Web qui doit interroger une base de données, quelqu'un peut avoir créé une API que vous pouvez utiliser. Bien qu'il existe de nombreux types d'API, l'une des plus populaires est l'[API REST](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
-✅ The term 'REST' stands for 'Representational State Transfer' and features using variously-configured URLs to fetch data. Do a little research on the various types of APIs available to developers. What format appeals to you?
+✅ Le terme 'REST' signifie 'Representational State Transfer' et utilise des URL configurées de différentes manières pour récupérer des données. Faites une petite recherche sur les différents types d'API disponibles pour les développeurs. Quel format vous séduit ?
 
-There are important things to note about this function. First notice the [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Writing your functions so that they run asynchronously means that they wait for an action, such as data being returned, to be completed before continuing.
+Il y a des choses importantes à noter à propos de cette fonction. Remarquez d'abord le [mot-clé `async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). L'écriture de vos fonctions pour qu'elles s'exécutent de manière asynchrone signifie qu'elles attendent qu'une action, telle que le retour de données, soit terminée avant de continuer.
 
-Here's a quick video about `async`:
+Voici une vidéo rapide sur `async`:
 
-[![Async and Await for managing promises](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async and Await for managing promises")
+[![Async et Await pour la gestion des promesses](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async et Await pour la gestion des promesses")
 
-> 🎥 Click the image above for a video about async/await.
+> 🎥 Cliquez sur l'image ci-dessus pour une vidéo sur async/await.
 
-Create a new function to query the C02Signal API:
+Créez une nouvelle fonction pour interroger l'API C02Signal:
 
 ```JavaScript
 import axios from '../node_modules/axios';
@@ -193,16 +193,16 @@ async function displayCarbonUsage(apiKey, region) {
 }
 ```
 
-This is a big function. What's going on here?
+C'est une grande fonction. Que se passe t-il ici?
 
-- following best practices, you use an `async` keyword to make this function behave asyncronously. The function contains a `try/catch` block as it will return a promise when the API returns data. Because you don't have control over the speed that the API will respond (it may not respond at all!), you need to handle this uncertainty by call it asyncronously. 
-- you're querying the co2signal API to get your region's data, using your API Key. To use that key, you have to use a type of authentication in your header parameters.
-- once the API responds, you assign various elements of its response data to the parts of your screen you set up to show this data.
-- if there's an error, or if there is no result, you show an error message.
+- en suivant les meilleures pratiques, vous utilisez un mot-clé `async` pour que cette fonction se comporte de manière asynchrone. La fonction contient un bloc `try/catch` car elle renverra une promesse lorsque l'API renverra des données. Étant donné que vous n'avez aucun contrôle sur la vitesse à laquelle l'API répondra (elle peut ne pas répondre du tout!), vous devez gérer cette incertitude en l'appelant de manière asynchrone.
+- vous interrogez l'API co2signal pour obtenir les données de votre région, en utilisant votre clé API. Pour utiliser cette clé, vous devez utiliser un type d'authentification dans vos paramètres d'en-tête.
+- une fois que l'API a répondu, vous affectez divers éléments de ses données de réponse aux parties de votre écran que vous avez configurées pour afficher ces données.
+- s'il y a une erreur, ou s'il n'y a pas de résultat, vous affichez un message d'erreur.
 
-✅ Using asyncronous programming patterns is another very useful tool in your toolbox. Read [about the various ways](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) you can configure this type of code.
+✅ L'utilisation de modèles de programmation asynchrone est un autre outil très utile dans votre boîte à outils. Lisez les [différentes manières](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) de configurer ce type de code.
 
-Congratulations! If you build your extension (`npm run build`) and refresh it in your extensions pane, you have a working extension! The only thing that isn't working is the icon, and you'll fix that in the next lesson.
+Toutes nos félicitations! Si vous compilez votre extension (`npm run build`) et l'actualisez dans votre volet d'extensions, vous avez une extension qui fonctionne ! La seule chose qui ne fonctionne pas est l'icône, et vous corrigerez cela dans la prochaine leçon.
 
 ---
 
