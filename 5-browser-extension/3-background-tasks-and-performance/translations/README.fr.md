@@ -6,7 +6,7 @@
 
 ### Introduction
 
-Dans les deux dernières leçons de ce module, vous avez appris à créer un formulaire et une zone d'affichage pour les données extraites d'une API. C'est un moyen très standard de créer des présences Web sur le Web. Vous avez même appris à gérer la récupération de données de manière asynchrone. Votre extension de navigateur est presque terminée. 
+Dans les deux dernières leçons de ce module, vous avez appris à créer un formulaire et une zone d'affichage pour les données extraites d'une API. C'est un moyen très standard de créer des présences Web sur le Web. Vous avez même appris à gérer la récupération de données de manière asynchrone. Votre extension de navigateur est presque terminée.
 
 Il reste à gérer certaines tâches en arrière-plan, dont le rafraîchissement de la couleur de l'icône de l'extension, c'est donc le moment idéal pour parler de la façon dont le navigateur gère ce genre de tâche. Pensons à ces tâches de navigateur dans le contexte des performances de vos ressources Web au fur et à mesure que vous les créez.
 
@@ -22,44 +22,43 @@ L'onglet Performance contient un outil de profilage. Ouvrez un site Web (essayez
 
 ![Edge profiler](../images/profiler.png)
 
-✅ 
-Consultez la [Documentation Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa) sur le panneau Performances dans Edge
+✅ Consultez la [Documentation Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa) à propos du panneau Performances dans Edge
 
 > Astuce : pour avoir une vraie lecture de l'heure de démarrage de votre site web, videz le cache de votre navigateur
 
 Sélectionnez des éléments de la chronologie du profil pour zoomer sur les événements qui se produisent pendant le chargement de votre page.
 
-Get a snapshot of your page's performance by selecting a part of the profile timeline and looking at the summary pane:
+Obtenez un aperçu des performances de votre page en sélectionnant une partie de la chronologie du profil et en regardant le volet récapitulatif :
 
-![Edge profiler snapshot](./images/snapshot.png)
+![Capture du profileur Edge](../images/snapshot.png)
 
-Check the Event Log pane to see if any event took longer than 15 ms:
+Vérifiez le volet Journal des événements pour voir si un événement a pris plus de 15 ms:
 
-![Edge event log](./images/log.png)
+![Journal des événements Edge](../images/log.png)
 
-✅ Get to know your profiler! Open the developer tools on this site and see if there are any bottlenecks. What's the slowest-loading asset? The fastest?
+✅ Apprenez à connaître votre profileur! Ouvrez les outils de développement sur ce site et voyez s'il y a des goulots d'étranglement. Quel est l'élément le plus lent? Le plus rapide?
 
-## Profiling checks
+## Contrôles de profilage
 
-In general there are some "problem areas" that every web developer should watch for when building a site, so as to avoid nasty surprises when it's time to deploy to production.
+En général, il existe des "zones à problèmes" que chaque développeur Web doit surveiller lors de la création d'un site, afin d'éviter les mauvaises surprises au moment du déploiement en production.
 
-**Asset sizes**: The web has gotten 'heavier', and thus slower, over the past few years. Some of this weight has to do with the use of images.
+**Tailles des éléments**: Le Web est devenu 'plus lourd', et donc plus lent, au cours des dernières années. Une partie de ce poids est liée à l'utilisation d'images.
 
-✅ Look through the [Internet Archive](https://httparchive.org/reports/page-weight) for a historical view of page weight and more.
+✅ Parcourez les [archives d'Internet](https://httparchive.org/reports/page-weight) pour une vue historique du poids des pages et plus encore.
 
-A good practice is to ensure that your images are optimized, delivered at the right size and resolution for your users.
+Une bonne pratique consiste à vous assurer que vos images sont optimisées, livrées à la bonne taille et à la bonne résolution pour vos utilisateurs.
 
-**DOM traversals**: The browser has to build its Document Object Model based on the code you write, so it's in the interest of good page performance to keep your tags minimal, only using and styling what the page needs. To this point, excess CSS associated with a page could be optimized; styles that need to be used only on one page don't need to be included in the main style sheet, for example.
+**Traversées du DOM**: Le navigateur doit construire son modèle objet de document en fonction du code que vous écrivez, il est donc dans l'intérêt d'une bonne performance de la page de garder vos balises minimales, en utilisant et en stylisant uniquement ce dont la page a besoin. À ce stade, l'excès de CSS associé à une page pourrait être optimisé ; les styles qui ne doivent être utilisés que sur une seule page n'ont pas besoin d'être inclus dans la feuille de style principale, par exemple.
 
-**JavaScript**: Every JavaScript developer should watch for 'render-blocking' scripts that must be loaded before the rest of the DOM can be traversed and painted to the browser. Consider using `defer` with your inline scripts (as is done in the Terrarium module).
+**JavaScript**: Chaque développeur JavaScript doit surveiller les scripts 'bloquant le rendu' qui doivent être chargés avant que le reste du DOM puisse être parcouru et peint sur le navigateur. Pensez à utiliser `defer` avec vos scripts en ligne (comme cela se fait dans le module Terrarium).
 
-✅ Try some sites on a [Site Speed Test website](https://www.webpagetest.org/) to learn more about the common checks that are done to determine site performance.
+✅ Essayez certains sites sur un [site Web de test de vitesse de site](https://www.webpagetest.org/) pour en apprendre plus sur les vérifications courantes qui sont effectuées pour déterminer les performances du site.
 
-Now that you have an idea on how the browser renders the assets you send to it, let's look at the last few things you need to do to complete your extension:
+Maintenant que vous avez une idée de la façon dont le navigateur rend les ressources que vous lui envoyez, examinons les dernières choses que vous devez faire pour terminer votre extension:
 
-### Create a function to calculate color
+### Créer une fonction pour calculer la couleur
 
-Working in `/src/index.js`, add a function called `calculateColor()` after the series of `const` variables you set to gain access to the DOM:
+En travaillant dans `/src/index.js`, ajoutez une fonction appelée `calculateColor()` après la série de variables `const` que vous avez définies pour accéder au DOM:
 
 ```JavaScript
 function calculateColor(value) {
@@ -80,19 +79,19 @@ function calculateColor(value) {
 }
 ```
 
-What's going on here? You pass in a value (the carbon intensity) from the API call you completed in the last lesson, and then you calculate how close its value is to the index presented in colors array. Then you send that closest color value over to the chrome runtime.
+Que se passe t-il ici? Vous transmettez une valeur (l'intensité carbone) de l'appel d'API que vous avez terminé dans la dernière leçon, puis vous calculez à quel point sa valeur est proche de l'indice présenté dans le tableau de couleurs. Ensuite, vous envoyez la valeur de couleur la plus proche au moteur d'exécution Chrome.
 
-The chrome.runtime has [an API](https://developer.chrome.com/extensions/runtime) that handles all kinds of background tasks, and your extension is leveraging that:
+Le chrome.runtime a [une API](https://developer.chrome.com/extensions/runtime) qui gère toutes sortes de tâches en arrière-plan, et votre extension en tire parti:
 
-> "Use the chrome.runtime API to retrieve the background page, return details about the manifest, and listen for and respond to events in the app or extension lifecycle. You can also use this API to convert the relative path of URLs to fully-qualified URLs."
+> "Utilisez l'API chrome.runtime pour récupérer la page d'arrière-plan, renvoyer des détails sur le manifeste, et écouter et répondre aux événements dans le cycle de vie de l'application ou de l'extension. Vous pouvez également utiliser cette API pour convertir le chemin relatif des URL en URL entièrement qualifiées."
 
-✅ If you're developing this browser extension for Edge, it might surprise you that you're using a chrome API. The newer Edge  browser versions run on the Chromium browser engine, so you can leverage these tools.
+✅ Si vous développez cette extension de navigateur pour Edge, vous pourriez être surpris d'utiliser une API Chrome. Les nouvelles versions du navigateur Edge s'exécutent sur le moteur de navigateur Chromium, vous pouvez donc tirer parti de ces outils.
 
-> Note, if you want to profile a browser extension, launch the dev tools from within the extension itself, as it is its own separate browser instance.
+> Notez que si vous souhaitez profiler une extension de navigateur, lancez les outils de développement à partir de l'extension elle-même, car il s'agit de sa propre instance de navigateur distincte.
 
-### Set a default icon color
+### Définir une couleur d'icône par défaut
 
-Now, in the `init()` function, set the icon to be generic green to start by again calling chrome's `updateIcon` action:
+Maintenant, dans la fonction `init()`, définissez l'icône sur un vert générique pour commencer en appelant à nouveau l'action `updateIcon` de chrome:
 
 ```JavaScript
 chrome.runtime.sendMessage({
@@ -102,16 +101,16 @@ chrome.runtime.sendMessage({
 		},
 });
 ```
-### Call the function, execute the call
+### Appeler la fonction, exécuter l'appel
 
-Next, call that function you just created by adding it to the promise returned by the C02Signal API:
+Ensuite, appelez cette fonction que vous venez de créer en l'ajoutant à la promesse renvoyée par l'API C02Signal:
 
 ```JavaScript
 //let CO2...
 calculateColor(CO2);
 ```
 
-And finally, in `/dist/background.js`, add the listener for these background action calls:
+Et enfin, dans `/dist/background.js`, ajoutez l'écouteur pour ces appels d'action en arrière-plan:
 
 ```JavaScript
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
@@ -119,7 +118,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 		chrome.browserAction.setIcon({ imageData: drawIcon(msg.value) });
 	}
 });
-//borrowed from energy lollipop extension, nice feature!
+//emprunté à l'extension energy lollipop, fonctionnalité intéressante !
 function drawIcon(value) {
 	let canvas = document.createElement('canvas');
 	let context = canvas.getContext('2d');
@@ -132,13 +131,13 @@ function drawIcon(value) {
 	return context.getImageData(50, 50, 100, 100);
 }
 ```
-In this code, you are adding a listener for any messages coming to the backend task manager. If it's called 'updateIcon', then the next code is run, to draw an icon of the proper color using the Canvas API.
+Dans ce code, vous ajoutez un écouteur pour tous les messages arrivant au gestionnaire de tâches principal. S'il s'appelle 'updateIcon', le code suivant est exécuté pour dessiner une icône de la bonne couleur à l'aide de l'API Canvas.
 
-✅ You'll learn more about the Canvas API in the [Space Game lessons](../../6-space-game/2-drawing-to-canvas/README.md).
+✅ Vous en saurez plus sur l'API Canvas dans les [Cours sur le jeu spatial](../../../6-space-game/2-drawing-to-canvas/translations/README.fr.md).
 
-Now, rebuild your extension (`npm run build`), refresh and launch your extension, and watch the color change. Is it a good time to run an errand or wash the dishes? Now you know!
+Maintenant, recompiler votre extension (`npm run build`), actualisez et lancez la, et observez le changement de couleur. Est-ce le bon moment pour faire une course ou faire la vaisselle? Vous le savez maintenant!
 
-Congratulations, you've built a useful browser extension and learned more about how the browser works and how to profile its performance.
+Félicitations, vous avez créé une extension de navigateur utile et en avez appris davantage sur le fonctionnement du navigateur et sur la façon de profiler ses performances.
 
 ---
 
