@@ -8,7 +8,7 @@
 
 ### Héritage et composition dans le développement de jeux
 
-ans les leçons précédentes, il n'y avait pas vraiment besoin de s'inquiéter de l'architecture de conception des applications que vous avez créées, car les projets étaient de très petite portée. Cependant, lorsque vos applications augmentent en taille et en étendue, les décisions architecturales deviennent une préoccupation plus importante. Il existe deux approches principales pour créer des applications plus volumineuses en JavaScript : la *composition* ou l'*héritage*. Il y a des avantages et des inconvénients dans les deux cas, mais expliquons-les dans le contexte d'un jeu.
+ans les leçons précédentes, il n'y avait pas vraiment besoin de s'inquiéter de l'architecture de conception des applications que vous avez créées, car les projets étaient de très petite portée. Cependant, lorsque vos applications augmentent en taille et en étendue, les décisions architecturales deviennent une préoccupation plus importante. Il existe deux approches principales pour créer des applications plus volumineuses en JavaScript: la *composition* ou l'*héritage*. Il y a des avantages et des inconvénients dans les deux cas, mais expliquons-les dans le contexte d'un jeu.
 
 ✅ L'un des livres de programmation les plus célèbres jamais écrits concerne les [modèles de conception](https://en.wikipedia.org/wiki/Design_Patterns).
 
@@ -35,7 +35,7 @@ Exprimé via du code, un objet de jeu peut généralement ressembler à ceci:
 
 ```javascript
 
-//set up the class GameObject
+//configurer la classe GameObject
 class GameObject {
   constructor(x, y, type) {
     this.x = x;
@@ -44,38 +44,38 @@ class GameObject {
   }
 }
 
-//this class will extend the GameObject's inherent class properties
+//cette classe étendra les propriétés de classe inhérentes à GameObject
 class Movable extends GameObject {
   constructor(x,y, type) {
     super(x,y, type)
   }
 
-//this movable object can be moved on the screen
+//cet objet mobile peut être déplacé sur l'écran
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
 }
 
-//this is a specific class that extends the Movable class, so it can take advantage of all the properties that it inherits
+//il s'agit d'une classe spécifique qui étend la classe Movable, afin qu'elle puisse profiter de toutes les propriétés dont elle hérite
 class Hero extends Movable {
   constructor(x,y) {
     super(x,y, 'Hero')
   }
 }
 
-//this class, on the other hand, only inherits the GameObject properties
+//cette classe, en revanche, n'hérite que des propriétés de GameObject
 class Tree extends GameObject {
   constructor(x,y) {
     super(x,y, 'Tree')
   }
 }
 
-//a hero can move...
+//un héros peut bouger...
 const hero = new Hero();
 hero.moveTo(5,5);
 
-//but a tree cannot
+//mais un arbre ne le peut pas
 const tree = new Tree();
 ```
 
@@ -86,24 +86,24 @@ const tree = new Tree();
 Une autre manière de gérer l'héritage d'objet consiste à utiliser la *Composition*. Ensuite, les objets expriment leur comportement comme ceci:
 
 ```javascript
-//create a constant gameObject
+//créer un constant gameObject
 const gameObject = {
   x: 0,
   y: 0,
   type: ''
 };
 
-//...and a constant movable
+//...et un constant movable
 const movable = {
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
 }
-//then the constant movableObject is composed of the gameObject and movable constants
+//alors la constante mobileObject est composée du gameObject et des constantes mobiles
 const movableObject = {...gameObject, ...movable};
 
-//then create a function to create a new Hero who inherits the movableObject properties
+//puis créez une fonction pour créer un nouveau héros qui hérite des propriétés mobileObject
 function createHero(x, y) {
   return {
     ...movableObject,
@@ -112,7 +112,7 @@ function createHero(x, y) {
     type: 'Hero'
   }
 }
-//...and a static object that inherits only the gameObject properties
+//...et un objet statique qui hérite uniquement des propriétés de gameObject
 function createStatic(x, y, type) {
   return {
     ...gameObject
@@ -121,10 +121,10 @@ function createStatic(x, y, type) {
     type
   }
 }
-//create the hero and move it
+//créer le héros et le déplacer
 const hero = createHero(10,10);
 hero.moveTo(5,5);
-//and create a static tree which only stands around
+//et créer un arbre statique qui ne se trouve que dans les environs
 const tree = createStatic(0,0, 'Tree'); 
 ```
 
@@ -149,19 +149,19 @@ Ce modèle répond à l'idée que les parties disparates de votre application ne
 L'implémentation est assez petite mais c'est un modèle très puissant. Voici comment cela peut être mis en œuvre:
 
 ```javascript
-//set up an EventEmitter class that contains listeners
+//configurer une classe EventEmitter qui contient des écouteurs
 class EventEmitter {
   constructor() {
     this.listeners = {};
   }
-//when a message is received, let the listener to handle its payload
+//lorsqu'un message est reçu, laissez l'auditeur gérer sa charge utile
   on(message, listener) {
     if (!this.listeners[message]) {
       this.listeners[message] = [];
     }
     this.listeners[message].push(listener);
   }
-//when a message is sent, send it to a listener with some payload
+//lorsqu'un message est envoyé, envoyez-le à un auditeur avec une charge utile
   emit(message, payload = null) {
     if (this.listeners[message]) {
       this.listeners[message].forEach(l => l(message, payload))
@@ -174,20 +174,20 @@ class EventEmitter {
 Pour utiliser le code ci-dessus, nous pouvons créer une très petite implémentation:
 
 ```javascript
-//set up a message structure
+//mettre en place une structure de message
 const Messages = {
   HERO_MOVE_LEFT: 'HERO_MOVE_LEFT'
 };
-//invoke the eventEmitter you set up above
+//invoquez l'eventEmitter que vous avez configuré ci-dessus
 const eventEmitter = new EventEmitter();
-//set up a hero
+//définissez un héros
 const hero = createHero(0,0);
-//let the eventEmitter know to watch for messages pertaining to the hero moving left, and act on it
+//faites savoir à l'EventEmitter de surveiller les messages concernant le héros qui se déplace vers la gauche et agissez en conséquence
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
   hero.move(5,0);
 });
 
-//set up the window to listen for the keyup event, specifically if the left arrow is hit, emit a message to move the hero left
+//configurer la fenêtre pour écouter l'événement keyup, en particulier si la flèche gauche est touchée, émettre un message pour déplacer le héros vers la gauche
 window.addEventListener('keyup', (evt) => {
   if (evt.key === 'ArrowLeft') {
     eventEmitter.emit(Messages.HERO_MOVE_LEFT)
