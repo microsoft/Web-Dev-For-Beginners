@@ -26,7 +26,7 @@ Ci-dessus, nous définissons `id`, `width` et `height`.
 
 Le Canvas utilise un système de coordonnées cartésiennes pour dessiner des choses. Ainsi, il utilise un axe x et un axe y pour exprimer où se trouve quelque chose. L'emplacement `0,0` est la position en haut à gauche et en bas à droite ce que vous appelez également la LARGEUR et la HAUTEUR du canvas.
 
-![la grille du canvas](../canvas_grid.png)
+![la grille du canevas](../canvas_grid.png)
 > Image de [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Pour dessiner sur l'élément canvas, vous devrez suivre les étapes suivantes:
@@ -38,18 +38,18 @@ Pour dessiner sur l'élément canvas, vous devrez suivre les étapes suivantes:
 Le code pour les étapes ci-dessus ressemble communément à ceci:
 
 ```javascript
-// draws a red rectangle
-//1. get the canvas reference
+// dessine un rectangle rouge
+//1. obtenir la référence de la toile
 canvas = document.getElementById("myCanvas");
 
-//2. set the context to 2D to draw basic shapes
+//2. définir le contexte en 2D pour dessiner des formes de base
 ctx = canvas.getContext("2d");
 
-//3. fill it with the color red
+//3. le remplir avec la couleur rouge
 ctx.fillStyle = 'red';
 
-//4. and draw a rectangle with these parameters, setting location and size
-ctx.fillRect(0,0, 200, 200) // x,y,width, height
+//4. et dessiner un rectangle avec ces paramètres, en définissant l'emplacement et la taille
+ctx.fillRect(0,0, 200, 200) // x,y, largeur, hauteur
 ```
 
 ✅ L'API Canvas se concentre principalement sur les formes 2D, mais vous pouvez également dessiner des éléments 3D sur un site Web ; pour cela, vous pouvez utiliser l'[API WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API).
@@ -58,27 +58,27 @@ Vous pouvez dessiner toutes sortes de choses avec l'API Canvas comme:
 
 - **Des formes géométriques**, nous avons déjà montré comment dessiner un rectangle, mais il y a beaucoup plus que vous pouvez dessiner.
 - **Du texte**, vous pouvez dessiner un texte avec la police et la couleur de votre choix.
-- **Images**, you can draw an image based off of an image asset like a .jpg or .png for example.
+- **Des images**, vous pouvez dessiner une image basée sur un élément d'image comme un .jpg ou .png par exemple.
 
-✅ Try it! You know how to draw a rectangle, can you draw a circle to a page? Take a look at some interesting Canvas drawings on CodePen. Here's a [particularly impressive example](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Essayez-le ! Vous savez dessiner un rectangle, pouvez-vous dessiner un cercle sur une page ? Jetez un œil à quelques dessins Canvas intéressants sur CodePen. Voici un [exemple particulièrement impressionnant](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Load and draw an image asset
+## Charger et dessiner un élément d'image
 
-You load an image asset by creating an `Image` object and set its `src` property. Then you listen to the `load` event to know when it's ready to be used. The code looks like this:
+Vous chargez une ressource image en créant un objet `Image` et définissez sa propriété `src`. Ensuite, vous écoutez l'événement `load` pour savoir quand il est prêt à être utilisé. Le code ressemble à ceci:
 
-### Load asset
+### Charger l'élément
 
 ```javascript
 const img = new Image();
 img.src = 'path/to/my/image.png';
 img.onload = () => {
-  // image loaded and ready to be used
+  // image chargée et prête à être utilisée
 }
 ```
 
-### Load asset pattern
+### Charger le modèle d'élément
 
-It's recommended to wrap the above in a construct like so, so it's easier to use and you only try to manipulate it when it's fully loaded:
+Il est recommandé d'envelopper ce qui précède dans une construction comme celle-ci, il est donc plus facile à utiliser et vous n'essayez de le manipuler que lorsqu'il est complètement chargé:
 
 ```javascript
 function loadAsset(path) {
@@ -86,13 +86,13 @@ function loadAsset(path) {
     const img = new Image();
     img.src = path;
     img.onload = () => {
-      // image loaded and ready to be used
+      // image chargée et prête à être utilisée
       resolve(img);
     }
   })
 }
 
-// use like so
+// utiliser comme celà
 
 async function run() {
   const heroImg = await loadAsset('hero.png')
@@ -101,7 +101,7 @@ async function run() {
 
 ```
 
-To draw game assets to a screen, your code would look like this:
+Pour dessiner les ressources du jeu sur un écran, votre code ressemblerait à ceci:
 
 ```javascript
 async function run() {
@@ -115,23 +115,23 @@ async function run() {
 }
 ```
 
-## Now it's time to start building your game
+## Il est maintenant temps de commencer à créer votre jeu
 
-### What to build
+### Que construire
 
-You will build a web page with a Canvas element. It should render a black screen `1024*768`. We've provided you with two images:
+Vous allez créer une page Web avec un élément Canvas. Il devrait rendre un écran noir `1024*768`. Nous vous avons fourni deux images:
 
-- Hero ship
+- Navire héros
 
-   ![Hero ship](solution/assets/player.png)
+   ![Hero ship](../solution/assets/player.png)
 
-- 5*5 monster
+- Monstre 5*5
 
-   ![Monster ship](solution/assets/enemyShip.png)
+   ![Monster ship](../solution/assets/enemyShip.png)
 
-### Recommended steps to start development
+### Étapes recommandées pour commencer le développement
 
-Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
+Recherchez les fichiers qui ont été créés pour vous dans le sous-dossier `your-work`. Il doit contenir les éléments suivants:
 
 ```bash
 -| assets
@@ -142,33 +142,33 @@ Locate the files that have been created for you in the `your-work` sub folder. I
 -| package.json
 ```
 
-Open the copy of this folder in Visual Studio Code. You need to have a local development environment setup, preferably with Visual Studio Code with NPM and Node installed. If you don't have `npm` set up on your computer, [here's how to do that](https://www.npmjs.com/get-npm).
+Ouvrez la copie de ce dossier dans Visual Studio Code. Vous devez disposer d'une configuration d'environnement de développement local, de préférence avec Visual Studio Code ainsi que NPM et Node installés. Si `npm` n'est pas configuré sur votre ordinateur, [voici comment procéder](https://www.npmjs.com/get-npm).
 
-Start your project by navigating to the `your_work` folder:
+Démarrez votre projet en accédant au dossier `your_work`:
 
 ```bash
 cd your-work
 npm start
 ```
 
-The above will start a HTTP Server on address `http://localhost:5000`. Open up a browser and input that address. It's a blank page right now, but that will change
+Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et saisissez cette adresse. C'est une page blanche actuellement, mais cela va changer
 
-> Note: to see changes on your screen, refresh your browser.
+> Remarque : pour voir les changements sur votre écran, actualisez votre navigateur.
 
-### Add code
+### Ajouter du code
 
-Add the needed code to `your-work/app.js` to solve the below
+Ajoutez le code nécessaire à `your-work/app.js` pour résoudre le problème ci-dessous
 
-1. **Draw** a canvas with black background
-   > tip: add two lines under the appropriate TODO in `/app.js`, setting the `ctx` element to be black and the top/left coordinates to be at 0,0 and the height and width to equal that of the canvas.
-2. **Load** textures
-   > tip: add the player and enemy images using `await loadTexture` and passing in the image path. You won't see them on the screen yet!
-3. **Draw** hero in the center of the screen in the bottom half
-   > tip: use the `drawImage` API to draw heroImg to the screen, setting  `canvas.width / 2 - 45` and `canvas.height - canvas.height / 4)`;
-4. **Draw** 5*5 monsters
-   > tip: Now you can uncomment the code to draw enemies on the screen. Next, go to the `createEnemies` function and build it out.
+1. **Dessinez** une toile avec un fond noir
+   > astuce : ajoutez deux lignes sous le TODO approprié dans `/app.js`, en définissant l'élément `ctx` sur noir et les coordonnées haut/gauche à 0,0 et la hauteur et la largeur à égales à celles du canevas.
+2. **Charger** les textures
+   > astuce : ajoutez les images du joueur et de l'ennemi en utilisant `await loadTexture` et en passant le chemin de l'image. Vous ne les verrez pas encore à l'écran!
+3. **Dessinez** le héros au centre de l'écran dans la moitié inférieure
+   > astuce : utilisez l'API `drawImage` pour dessiner heroImg à l'écran, en définissant `canvas.width / 2 - 45` et `canvas.height - canvas.height / 4)`;
+4. **Dessinez**les monstres 5*5
+   > astuce : vous pouvez maintenant décommenter le code pour dessiner les ennemis à l'écran. Ensuite, allez à la fonction `createEnemies` et compilez la.
 
-   First, set up some constants:
+   Tout d'abord, configurez quelques constantes:
 
     ```javascript
     const MONSTER_TOTAL = 5;
@@ -177,7 +177,7 @@ Add the needed code to `your-work/app.js` to solve the below
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    then, create a loop to draw the array of monsters onto the screen:
+    Ensuite, créez une boucle pour dessiner le tableau de monstres sur l'écran:
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {
