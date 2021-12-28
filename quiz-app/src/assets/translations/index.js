@@ -5,7 +5,7 @@ import id from "./id.json";
 import hi from "./hi.json";
 import it from "./it.json";
 import ja from "./ja.json";
-import gr from "./gr.json";
+import el from "./el.json";
 import ms from "./ms.json";
 import es from "./es.json";
 import nl from "./nl.json";
@@ -22,7 +22,7 @@ const messages = {
   hi: hi[0],
   it: it[0],
   ja: ja[0],
-  gr: gr[0],
+  el: el[0],
   ms: ms[0],
   es: es[0],
   nl: nl[0],

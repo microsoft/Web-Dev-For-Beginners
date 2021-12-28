@@ -1,6 +1,6 @@
 # JavaScript Basics: Methods and Functions
 
-![JavaScript Basics - Functions](/sketchnotes/webdev101-js-functions.png)
+![JavaScript Basics - Functions](../../sketchnotes/webdev101-js-functions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
