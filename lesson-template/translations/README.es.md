@@ -47,4 +47,4 @@ Opcional: Agregue una captura de pantalla de la interfaz de usuario al completar
 
 ## Revisión y autoestudio
 
-**Deberes asignados [MM/YY]**: [Nombre de la asignación](assignment.md)
+**Deberes asignados [MM/YY]**: [Nombre de la asignación](assignment.es.md)
