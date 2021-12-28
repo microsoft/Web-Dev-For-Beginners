@@ -1,10 +1,10 @@
-# Construisez un jeu spatial, partie 2 : dessinez des héros et des monstres sur le canvas
+# Construisez un jeu spatial, partie 2 : dessinez des héros et des monstres sur le canevas
 
 ## Quiz préalable
 
 [Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/31?loc=fr)
 
-## Le Canvas
+## Le canevas
 
 Le canevas est un élément HTML qui par défaut n'a pas de contenu ; c'est une ardoise vierge. Vous devez dessiner dessus pour y ajouter quelque chose.
 
@@ -24,12 +24,12 @@ Ci-dessus, nous définissons `id`, `width` et `height`.
 
 ## Dessiner une géométrie simple
 
-Le Canvas utilise un système de coordonnées cartésiennes pour dessiner des choses. Ainsi, il utilise un axe x et un axe y pour exprimer où se trouve quelque chose. L'emplacement `0,0` est la position en haut à gauche et en bas à droite ce que vous appelez également la LARGEUR et la HAUTEUR du canvas.
+Le Canvas utilise un système de coordonnées cartésiennes pour dessiner des choses. Ainsi, il utilise un axe x et un axe y pour exprimer où se trouve quelque chose. L'emplacement `0,0` est la position en haut à gauche et en bas à droite ce que vous appelez également la LARGEUR et la HAUTEUR du canevas.
 
 ![la grille du canevas](../canvas_grid.png)
 > Image de [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-Pour dessiner sur l'élément canvas, vous devrez suivre les étapes suivantes:
+Pour dessiner sur l'élément de canevas, vous devrez suivre les étapes suivantes:
 
 1. **Obtenir une référence** à l'élément Canvas.
 1. **Obtenez une référence** sur l'élément Context qui se trouve sur l'élément canvas.
@@ -39,7 +39,7 @@ Le code pour les étapes ci-dessus ressemble communément à ceci:
 
 ```javascript
 // dessine un rectangle rouge
-//1. obtenir la référence de la toile
+//1. obtenir la référence du canevas
 canvas = document.getElementById("myCanvas");
 
 //2. définir le contexte en 2D pour dessiner des formes de base
@@ -159,7 +159,7 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
 
 Ajoutez le code nécessaire à `your-work/app.js` pour résoudre le problème ci-dessous
 
-1. **Dessinez** une toile avec un fond noir
+1. **Dessinez** un canevas avec un fond noir
    > astuce : ajoutez deux lignes sous le TODO approprié dans `/app.js`, en définissant l'élément `ctx` sur noir et les coordonnées haut/gauche à 0,0 et la hauteur et la largeur à égales à celles du canevas.
 2. **Charger** les textures
    > astuce : ajoutez les images du joueur et de l'ennemi en utilisant `await loadTexture` et en passant le chemin de l'image. Vous ne les verrez pas encore à l'écran!
