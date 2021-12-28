@@ -1,4 +1,4 @@
-# Projet Terrarium Partie 3 : Manipulation DOM et une fermeture
+# Projet Terrarium Partie 3 : Manipulation du DOM et notion de closure (fermeture)
 
 ![DOM et une fermeture](/sketchnotes/webdev101-js.png)
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
