@@ -16,7 +16,7 @@ Look at the [server API specifications](../api/README.md) to see which API you n
 
 Here's an example result after completing the assignment:
 
-![Screenshot showing an example "Add transation" dialog](./images/dialog.png)
+![Screenshot showing an example "Add transaction" dialog](./images/dialog.png)
 
 ## Rubric
 
