@@ -1,0 +1,66 @@
+body {
+    background-color: #000f42;
+}
+
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: turquoise;
+    border: 0;
+    opacity: .25;
+}
+
+.card {
+    background-color: transparent;
+}
+
+.form-control {
+    background: transparent;
+}
+
+.btn {
+    background: transparent;
+    border: 3px solid #0d6efd;
+}
+
+.container {
+    max-width: 44%;
+}
+
+.notescontainer {
+    max-width: 90%;
+    margin: auto;
+}
+
+.notecard {
+    margin: 5vh;
+}
+
+.row {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+h1 {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    color: white;
+}
+
+.card-title {
+    margin-bottom: .5rem;
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+}
+
+.navbar {
+    background-color: #000f42;
+}

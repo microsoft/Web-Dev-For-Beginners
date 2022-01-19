@@ -1,0 +1,21 @@
+.flex-box-container-2 img {
+    border: 1px solid green;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
+}
+
+.flex-box-rps img:hover {
+    box-shadow: 0px 10px 50px rgba(37, 58, 223, 1)
+}
+
+.container-3 {
+    border: 1px solid black;
+    max-width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10%;
+}

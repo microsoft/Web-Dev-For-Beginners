@@ -1,0 +1,42 @@
+body {
+    background-image: url(./img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.butt {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: 21%;
+}
+
+.Modal {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    max-width: 30%;
+    margin-top: -12%;
+    background-image: url(./img/modal.png);
+    display: none;
+}
+
+.content {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding: 11vh;
+    color: antiquewhite;
+}
+
+.content h2 {
+    font-weight: 700;
+    color: black;
+}
+
+.Modal button {
+    max-width: 8%;
+    margin-left: 92%;
+    border-radius: 11px;
+}

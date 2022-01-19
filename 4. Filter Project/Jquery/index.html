@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Filters!</title>
+    <style>
+        .btn {
+            border: 2px solid;
+            background: azure;
+            border-radius: 11px;
+            margin: 56px;
+            font-weight: 800;
+        }
+        
+        .container {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .card img {
+            border: 2px solid;
+            border-radius: 25px;
+            padding: 1px;
+            background: burlywood;
+            border-top-right-radius: 14px;
+            border-top-left-radius: 14px;
+            max-width: 134%;
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+        }
+        
+        .filterDiv {
+            border: none;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 20%;
+            margin: 58px;
+        }
+        
+        .card-group {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 90%;
+            margin: auto;
+            padding: 36px;
+        }
+        
+        .filterDiv-con {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .input-group {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            width: 66%;
+            margin: auto;
+        }
+        
+        body {
+            background-color: #000f42;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5 a-auto mb-2">
+        <button type="button" class="btn" data-filter="all" active>All</button>
+        <button type="button" class="btn" data-filter="blackCat">Black Cat</button>
+        <button type="button" class="btn" data-filter="whiteCat">White Cat</button>
+        <button type="button" class="btn" data-filter="lion">Lion</button>
+    </div>
+
+    <div class="card-group" id="card-group">
+        <div class="filterDiv-con">
+            <div class="filterDiv blackCat">
+                <img src="./img/b1.jpg" class="card-img" alt="...">
+
+            </div>
+            <div class="filterDiv blackCat">
+                <img src="./img/b2.jpg" class="card-img" alt="...">
+            </div>
+            <div class="filterDiv blackCat">
+                <img src="./img/b3.jpg" class="card-img" alt="...">
+            </div>
+            <div class="filterDiv whiteCat">
+                <img src="./img/w1.jpg" class="card-img" alt="...">
+            </div>
+            <div class="filterDiv whiteCat">
+                <img src="./img/w2.jpg" class="card-img" alt="...">
+            </div>
+            <div class="filterDiv whiteCat">
+                <img src="./img/w3.jpg" class="card-img" alt="...">
+            </div>
+
+            <div class="filterDiv lion">
+                <img src="./img/l1.jpg" class="card-img" alt="...">
+            </div>
+
+            <div class="filterDiv lion">
+                <img src="./img/l2.jpg" class="card-img" alt="...">
+            </div>
+
+            <div class="filterDiv lion">
+                <img src="./img/l3.jpg" class="card-img" alt="...">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.btn').click(function() {
+                const value = $(this).attr('data-filter');
+                if (value == 'all') {
+                    $('.filterDiv').show('1000');
+                } else {
+                    $('.filterDiv').not('.' + value).hide('1000');
+                    $('.filterDiv').filter('.' + value).show('1000');
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

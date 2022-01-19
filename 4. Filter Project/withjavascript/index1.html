@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <title>Filters!</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5 a-auto mb-2" id="container">
+        <button type="button" class="btn active" onclick="filterSelection('all')">All</button>
+        <button type="button" class="btn" onclick="filterSelection('blackCat')">Black Cat</button>
+        <button type="button" class="btn" onclick="filterSelection('whiteCat')">White Cat</button>
+        <button type="button" class="btn" onclick="filterSelection('lion')">Lion</button>
+    </div>
+
+    <div class="card-group" id="card-group">
+        <div class="filterDiv-con">
+            <div class="filterDiv blackCat">
+                <img src="./img/b1.jpg" class="card-img" alt="...">
+
+            </div>
+            <div class="filterDiv blackCat">
+                <img src="./img/b2.jpg" class="card-img" alt="...">
+            </div>
+            <div class="filterDiv blackCat">
+                <img src="./img/b3.jpg" class="card-img" alt="...">
+            </div>
+            <div class="filterDiv whiteCat">
+                <img src="./img/w1.jpg" class="card-img" alt="...">
+            </div>
+            <div class="filterDiv whiteCat">
+                <img src="./img/w2.jpg" class="card-img" alt="...">
+            </div>
+            <div class="filterDiv whiteCat">
+                <img src="./img/w3.jpg" class="card-img" alt="...">
+            </div>
+
+            <div class="filterDiv lion">
+                <img src="./img/l1.jpg" class="card-img" alt="...">
+            </div>
+
+            <div class="filterDiv lion">
+                <img src="./img/l2.jpg" class="card-img" alt="...">
+            </div>
+
+            <div class="filterDiv lion">
+                <img src="./img/l3.jpg" class="card-img" alt="...">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+    <script src="./index.js">
+    </script>
+</body>
+
+</html>

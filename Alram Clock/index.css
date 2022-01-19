@@ -1,0 +1,48 @@
+canvas {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+body {
+    background-color: #000f42;
+}
+
+h1 {
+    font-weight: bold;
+    color: cadetblue;
+    font-size: -webkit-xxx-large;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: aqua;
+}
+
+input {
+    max-width: 100%;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    border-radius: 2px;
+    padding: 9px;
+    color: antiquewhite;
+    font-weight: 600;
+    border-radius: 12px;
+    margin: 12px 0px;
+}
+
+button {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    padding: 6px;
+    border-radius: 11px;
+    background: cornsilk;
+    font-weight: 800;
+}

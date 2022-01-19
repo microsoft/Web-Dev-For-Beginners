@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    margin: auto;
+    max-width: 30%;
+    margin-top: 10%;
+    flex-direction: column;
+}
+
+h2 {
+    margin: auto;
+}

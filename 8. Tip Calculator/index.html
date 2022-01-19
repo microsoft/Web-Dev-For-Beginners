@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <title>Tip Calculator!</title>
+</head>
+
+<body>
+
+    <div class="continer">
+        <h2>Tip Calculator</h2>
+        <div class="mb-3">
+            <label for="number" class="form-label">How Much Was Your Bill ? (in $ )</label>
+            <input type="number" class="form-control" id="number">
+
+        </div>
+        <div class="mb-3">
+            <label for="person" class="form-label">How Many People Sharing The Bill ?</label>
+            <input type="number" class="form-control" id="person">
+        </div>
+
+        <div class="mb-3">
+            <label for="Select" class="form-label">How Was Your Service</label>
+            <select id="Select" class="form-select">
+                <option>Choose.....</option>
+              <option value="20">20%</option>
+              <option value="10">10%</option>
+              <option value="2">2%</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" id="calc">Calculate</button>
+
+        <div class="result mt-5">
+            <h4 id="tip"></h4>
+            <h4 id="amount"> </h4>
+            <h4 id="each"> </h4>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

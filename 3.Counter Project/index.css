@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+    background: black;
+    max-width: 25%;
+    padding: 54px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: 12px 12px 1px -7px darkgrey;
+    color: whitesmoke;
+}
+
+button {
+    margin: 20px;
+}

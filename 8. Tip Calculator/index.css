@@ -1,0 +1,62 @@
+.continer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 31%;
+    justify-content: center;
+    margin-top: 12vh;
+    background: black;
+    padding: 11vh;
+    color: aquamarine;
+    border-radius: 21px;
+}
+
+body {
+    background-color: tomato;
+}
+
+h2,
+h4 {
+    display: flex;
+    margin: auto;
+    margin-bottom: 22px;
+    font-weight: 900;
+    color: crimson;
+}
+
+#tip,
+#amount,
+#each {
+    display: none;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+@media only screen and (max-width:1150px) {
+    .confiner {
+        max-width: 51%;
+    }
+}
+
+@media only screen and (max-width: 794px) {
+    .continer {
+        max-width: 66%;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .continer {
+        max-width: 81%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .continer {
+        max-width: 95%;
+        padding: 6vh;
+    }
+}

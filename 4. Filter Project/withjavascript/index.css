@@ -1,0 +1,76 @@
+.btn {
+    border: 2px solid;
+    background: azure;
+    border-radius: 11px;
+    margin: 56px;
+    font-weight: 800;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 1px;
+    background: burlywood;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+    max-width: 134%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.filterDiv {
+    border: none;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 20%;
+    display: none;
+    margin: 58px;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: auto;
+    padding: 36px;
+}
+
+.filterDiv-con {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 66%;
+    margin: auto;
+}
+
+body {
+    background-color: #000f42;
+}
+
+.show {
+    display: block;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}

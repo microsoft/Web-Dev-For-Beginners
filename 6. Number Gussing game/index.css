@@ -1,0 +1,105 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 34%;
+    margin-top: 10%;
+    border: 2px solid;
+    padding: 48px;
+    border-radius: 19px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.content div {
+    margin: auto;
+    margin-top: 13px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: green;
+    border-color: #0d6efd;
+    border-radius: 17px;
+}
+
+.input {
+    border-radius: 11px;
+    padding: 7px;
+}
+
+.message {
+    margin-bottom: -29px;
+    margin-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    color: aqua;
+}
+
+h5 {
+    color: aqua;
+}
+
+#menChoice {
+    display: none;
+}
+
+#boatGuess {
+    display: none;
+}
+
+#al-message strong {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-weight: 900;
+    color: teal;
+}
+
+.heading h2 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-weight: 700;
+    color: aquamarine;
+    margin-bottom: 21px;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    color: red;
+}
+
+body {
+    background-color: #000f;
+}
+
+@media only screen and (max-width:900px) {
+    .container {
+        max-width: 47%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        max-width: 65%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        max-width: 81%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .container {
+        max-width: 96%;
+    }
+}

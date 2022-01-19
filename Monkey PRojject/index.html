@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #000f42;
+        }
+        
+        h1 {
+            font-weight: bolder;
+            font-size: 23vh;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            margin-top: 16%;
+            position: absolute;
+            margin-left: 87vh;
+            user-select: none;
+        }
+        
+        #im1 {
+            display: none;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="img">
+        <h1 id="im1">🐵</h1>
+        <h1 id="im2">🙊</h1>
+    </div>
+
+    <script>
+        let one = document.getElementById("im1");
+        let two = document.getElementById("im2");
+
+        one.addEventListener("click", function() {
+            two.style.display = "block";
+            one.style.display = "none";
+        })
+        two.addEventListener("click", function() {
+            one.style.display = "block";
+            two.style.display = "none";
+        })
+    </script>
+</body>
+
+</html>

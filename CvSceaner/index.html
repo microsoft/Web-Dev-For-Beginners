@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #image {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+        
+        button {
+            width: 100%;
+        }
+        
+        .container {
+            max-width: 61%;
+            padding: 65px;
+        }
+    </style>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h4>
+                    Browser through Cv profiles
+                </h4>
+                <hr>
+                <div id="image">
+
+                </div>
+                <br>
+                <div id="profile">
+
+                </div>
+                <hr>
+                <button class="btn btn-primary btn-block" id="next">Next</button> </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        console.log("hello");
+        const data = [{
+            name: 'Pawan kumar',
+            age: 20,
+            city: 'kolkata',
+            language: 'all',
+            framework: 'django',
+            image: 'https://randomuser.me/api/portraits/men/75.jpg',
+
+
+        }, {
+            name: 'Nishu',
+            age: 19,
+            city: 'kolkata',
+            language: 'all',
+            framework: 'dangular',
+            image: 'https://randomuser.me/api/portraits/women/75.jpg',
+
+
+        }, {
+            name: 'bro',
+            age: 21,
+            city: 'kolkata',
+            language: 'all',
+            framework: 'java',
+            image: 'https://randomuser.me/api/portraits/women/70.jpg',
+
+
+        }]
+
+        function cvIterator(profile) {
+            let nextIndex = 0;
+            return {
+                next: function() {
+                    return nextIndex < profile.length ? {
+                        value: profile[nextIndex++],
+                        done: false
+                    } : {
+                        done: true
+                    }
+                }
+            }
+        }
+
+
+        const next = document.getElementById("next");
+        next.addEventListener("click", nextCv);
+
+        const candidate = cvIterator(data);
+
+        nextCv();
+
+        function nextCv() {
+
+            const currentCandidate = candidate.next().value;
+            let profile = document.getElementById("profile");
+            let image = document.getElementById('image');
+            if (currentCandidate != undefined) {
+
+                image.innerHTML = `<img src='${currentCandidate.image}'>`;
+                profile.innerHTML = `<ul class="list-group">
+                <li class="list-group-item">${currentCandidate.name}</li>
+                <li class="list-group-item">${currentCandidate.age}</li>
+                <li class="list-group-item">${currentCandidate.city}</li>
+                <li class="list-group-item">${currentCandidate.language}</li>
+                <li class="list-group-item">${currentCandidate.framework}</li>
+              </ul>`;
+            } else {
+                alert("End of the candidate applications");
+                window.location.reload();
+            }
+        }
+    </script>
+</body>
+
+</html>
