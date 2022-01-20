@@ -187,6 +187,8 @@ HTML 文档中的 'head' 包含的区域有很多关于页面的重要信息，�
 
 ✅ 看看屏幕阅读器是[如何去处理的一个网页的](https://www.youtube.com/watch?v=OUDV1gqs9GA)。你看到了非语义化标签对他们造成的障碍了吗？
 
+---
+
 ## 花艺瓶
 
 这个界面的最后一部分涉及创建标记，这些标记后面将被装饰成一个花艺瓶。
@@ -217,7 +219,7 @@ HTML 中还有一些狂野的'旧'标签，玩起来仍然很有趣。虽然[这
 
 ## 课后测试
 
-[课后测试](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=zh_ch)
+[课后测试](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=zh_cn)
 
 ## 复习 & 预习
 

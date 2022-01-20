@@ -61,7 +61,7 @@ if (currentMoney >= laptopPrice){
 }
 ```
 
-## IF..Else Statement
+## If..Else Statement
 
 The `else` statement will run the code in between its blocks when the condition is false. It's optional with an `if` statement.
 
