@@ -62,7 +62,7 @@ if (currentMoney >= laptopPrice){
 
 ## If..Else 语句
 
-`else` 语句会在条件为假的情况下运行它块中的代码。它后面可以跟上一个 `if` 语句。
+`else` 语句会在条件为假的情况下运行它块中的代码。它可以跟在一个 `if` 语句后面。
 
 ```javascript
 let currentMoney;

@@ -195,12 +195,12 @@ async function displayCarbonUsage(apiKey, region) {
 
 This is a big function. What's going on here?
 
-- following best practices, you use an `async` keyword to make this function behave asyncronously. The function contains a `try/catch` block as it will return a promise when the API returns data. Because you don't have control over the speed that the API will respond (it may not respond at all!), you need to handle this uncertainty by call it asyncronously. 
+- following best practices, you use an `async` keyword to make this function behave asynchronously. The function contains a `try/catch` block as it will return a promise when the API returns data. Because you don't have control over the speed that the API will respond (it may not respond at all!), you need to handle this uncertainty by call it asynchronously. 
 - you're querying the co2signal API to get your region's data, using your API Key. To use that key, you have to use a type of authentication in your header parameters.
 - once the API responds, you assign various elements of its response data to the parts of your screen you set up to show this data.
 - if there's an error, or if there is no result, you show an error message.
 
-✅ Using asyncronous programming patterns is another very useful tool in your toolbox. Read [about the various ways](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) you can configure this type of code.
+✅ Using asynchronous programming patterns is another very useful tool in your toolbox. Read [about the various ways](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) you can configure this type of code.
 
 Congratulations! If you build your extension (`npm run build`) and refresh it in your extensions pane, you have a working extension! The only thing that isn't working is the icon, and you'll fix that in the next lesson.
 

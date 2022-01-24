@@ -52,7 +52,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
 ### Add code
 
-1. **Track end condition**. Add code that keeps track of the number of enemies, or if the hero ship has been destroyedby adding these two functions:
+1. **Track end condition**. Add code that keeps track of the number of enemies, or if the hero ship has been destroyed by adding these two functions:
 
     ```javascript
     function isHeroDead() {
