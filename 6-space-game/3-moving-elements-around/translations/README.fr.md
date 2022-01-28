@@ -4,12 +4,12 @@
 
 [Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/33?loc=fr)
 
-Les jeux ne sont pas très amusants tant que vous n'avez pas des extraterrestres qui courent à l'écran ! Dans ce jeu, nous utiliserons deux types de mouvements:
+Les jeux ne sont pas très amusants tant que vous n'avez pas des extraterrestres qui courent à l'écran! Dans ce jeu, nous utiliserons deux types de mouvements:
 
 - **Mouvement clavier/souris**: lorsque l'utilisateur interagit avec le clavier ou la souris pour déplacer un objet à l'écran.
 - **Mouvement induit par le jeu**: lorsque le jeu déplace un objet avec un certain intervalle de temps.
 
-Alors, comment déplacer les choses sur un écran ? Tout est question de coordonnées cartésiennes : nous changeons l'emplacement (x,y) de l'objet puis redessinons l'écran.
+Alors, comment déplacer les choses sur un écran? Tout est question de coordonnées cartésiennes: nous changeons l'emplacement (x,y) de l'objet puis redessinons l'écran.
 
 Généralement, vous devez suivre les étapes suivantes pour accomplir un *mouvement* sur un écran:
 
@@ -20,11 +20,11 @@ Généralement, vous devez suivre les étapes suivantes pour accomplir un *mouve
  Voici à quoi cela peut ressembler dans le code:
 
 ```javascript
-//set the hero's location
+//définir l'emplacement du héros
 hero.x += 5;
-// clear the rectangle that hosts the hero
+// effacer le rectangle qui accueille le héros
 ctx.clearRect(0, 0, canvas.width, canvas.height);
-// redraw the game background and hero
+// redessiner le fond du jeu et le héros
 ctx.fillRect(0, 0, canvas.width, canvas.height)
 ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
@@ -42,9 +42,9 @@ Voici un exemple:
 
 ```javascript
 window.addEventListener('keyup', (evt) => {
-  // `evt.key` = string representation of the key
+  // `evt.key` = représentation sous forme de chaîne de la clé
   if (evt.key === 'ArrowUp') {
-    // do something
+    // faire quelque chose
   }
 })
 ```
@@ -67,12 +67,12 @@ let onKeyDown = function (e) {
     case 37:
     case 39:
     case 38:
-    case 40: // Arrow keys
+    case 40: // Touches directionnelles
     case 32:
       e.preventDefault();
-      break; // Space
+      break; // Espace
     default:
-      break; // do not block other keys
+      break; // ne pas bloquer d'autres clés
   }
 };
 
@@ -87,7 +87,7 @@ Nous pouvons faire bouger les choses d'elles-mêmes en utilisant des minuteries 
 
 ```javascript
 let id = setInterval(() => {
-  //move the enemy on the y axis
+  //déplacer l'ennemi sur l'axe y
   enemy.y += 10;
 })
 ```
@@ -114,7 +114,7 @@ La boucle ci-dessus est invoquée toutes les `200` millisecondes pour redessiner
 
 ## Continuer le jeu spatial
 
-Vous allez prendre le code existant et l'étendre. Soit commencez par le code que vous avez complété au cours de la partie I, soit utilisez le code de la [Partie II - starter](your-work). 
+Vous allez prendre le code existant et l'étendre. Soit commencez par le code que vous avez complété au cours de la partie I, soit utilisez le code de la [Partie II - starter](../your-work). 
 
 - **Déplacer le héros**: vous ajouterez du code pour vous assurer de pouvoir déplacer le héros à l'aide des touches fléchées.
 - **Déplacer les ennemis**: vous devrez également ajouter du code pour vous assurer que les ennemis se déplacent de haut en bas à un rythme donné.
@@ -141,13 +141,13 @@ npm start
 
 Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et entrez cette adresse, pour le moment, cela devrait rendre le héros et tous les ennemis; rien ne bouge - pour l'instant!
 
-### Add code
+### Ajouter un code
 
-1. **Add dedicated objects** for `hero` and `enemy` and `game object`, they should have `x` and `y` properties. (Remember the portion on [Inheritance or composition](../README.md) ). 
+1. **Ajouter des objets dédiés** pour `hero` et `enemy` et `game object`, ils doivent avoir les propriétés `x` et `y`. (Rappelez-vous la partie sur l'[héritage ou la composition](../../translations/README.fr.md) ). 
 
-   *HINT* `game object` should be the one with `x` and `y` and the ability to draw itself to a canvas.
+   *CONSEIL* `game object` (l'objet de jeu) doit être celui avec `x` et `y` et la possibilité de se dessiner sur un canevas.
 
-   >tip: start by adding a new GameObject class with its constructor delineated as below, and then draw it to the canvas:
+   >astuce: commencez par ajouter une nouvelle classe GameObject avec son constructeur délimité comme ci-dessous, puis dessinez-la sur le canevas:
   
     ```javascript
         
@@ -168,7 +168,7 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
     }
     ```
 
-    Now, extend this GameObject to create the Hero and Enemy.
+    Maintenant, étendez ce GameObject pour créer le héros et l'ennemi.
     
     ```javascript
     class Hero extends GameObject {
@@ -196,11 +196,11 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
     }
     ```
 
-2. **Add key-event handlers** to handle key navigation (move hero up/down left/right)
+2. **Ajoutez des gestionnaires d'événements de touche** pour gérer la navigation des touches (déplacez le héros vers le haut/bas vers la gauche/la droite)
 
-   *REMEMBER* it's a cartesian system, top-left is `0,0`. Also remember to add code to stop *default behavior*
+   *RAPPELEZ-VOUS* que c'est un système cartésien, le haut à gauche est `0,0`. N'oubliez pas également d'ajouter du code pour arrêter *le comportement par défaut*
 
-   >tip: create your onKeyDown function and attach it to the window:
+   >astuce: créez votre fonction onKeyDown et attachez-la à la fenêtre:
 
    ```javascript
     let onKeyDown = function (e) {
@@ -212,13 +212,13 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
     window.addEventListener("keydown", onKeyDown);
    ```
     
-   Check your browser console at this point, and watch the keystrokes being logged. 
+   Vérifiez la console de votre navigateur à ce stade et regardez les frappes enregistrées. 
 
-3. **Implement** the [Pub sub pattern](../README.md), this will keep your code clean as you follow the remaining parts.
+3. **Implémentez** le [modèle Pub Sub](../../translations/README.fr.md), cela gardera votre code propre pendant que vous suivez les parties restantes.
 
-   To do this last part, you can:
+   Pour faire cette dernière partie, vous pouvez:
 
-   1. **Add an event listener** on the window:
+   1. **Ajouter un écouteur d'événement** sur la fenêtre:
 
        ```javascript
         window.addEventListener("keyup", (evt) => {
@@ -234,7 +234,7 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
         });
         ```
 
-    1. **Create an EventEmitter class** to publish and subscribe to messages:
+    1. **Créez une classe EventEmitter** pour publier et vous abonner aux messages:
 
         ```javascript
         class EventEmitter {
@@ -257,7 +257,7 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
         }
         ```
 
-    1. **Add constants** and set up the EventEmitter:
+    1. **Ajoutez des constantes** et configurez l'EventEmitter:
 
         ```javascript
         const Messages = {
@@ -276,7 +276,7 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
             eventEmitter = new EventEmitter();
         ```
 
-    1. **Initialize the game**
+    1. **Initialiser le jeu**
 
     ```javascript
     function initGame() {
@@ -285,7 +285,7 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
       createHero();
     
       eventEmitter.on(Messages.KEY_EVENT_UP, () => {
-        hero.y -=5 ;
+        hero.y -= 5;
       })
     
       eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
@@ -302,9 +302,9 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
     }
     ```
 
-1. **Setup the game loop**
+1. **Configurer la boucle de jeu**
 
-   Refactor the window.onload function to initialize the game and set up a game loop on a good interval. You'll also add a laser beam:
+   Refactorisez la fonction window.onload pour initialiser le jeu et mettre en place une boucle de jeu sur un bon intervalle. Vous ajouterez également un faisceau laser:
 
     ```javascript
     window.onload = async () => {
@@ -325,9 +325,9 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
     };
     ```
 
-5. **Add code** to move enemies at a certain interval
+5. **Ajoutez du code** pour déplacer les ennemis à un certain intervalle
 
-    Refactor the `createEnemies()` function to create the enemies and push them into the new gameObjects class:
+    Refactoriser la fonction `createEnemies()` pour créer les ennemis et les pousser dans la nouvelle classe gameObjects:
 
     ```javascript
     function createEnemies() {
@@ -346,7 +346,7 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
     }
     ```
     
-    and add a `createHero()` function to do a similar process for the hero.
+    et ajoutez une fonction `createHero()` pour faire un processus similaire pour le héros.
     
     ```javascript
     function createHero() {
@@ -359,7 +359,7 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
     }
     ```
 
-    and finally, add a `drawGameObjects()` function to start the drawing:
+    et enfin, ajoutez une fonction `drawGameObjects()` pour démarrer le dessin:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -367,13 +367,13 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
     }
     ```
 
-    Your enemies should start advancing on your hero spaceship!
+    Vos ennemis devraient commencer à avancer sur votre vaisseau spatial héros!
 
 ---
 
 ## 🚀 Challenge
 
-Comme vous pouvez le constater, votre code peut se transformer en 'code spaghetti' lorsque vous commencez à ajouter des fonctions, des variables et des classes. Comment pouvez-vous mieux organiser votre code pour qu'il soit plus lisible ? Esquissez un système pour organiser votre code, même s'il réside toujours dans un seul fichier.
+Comme vous pouvez le constater, votre code peut se transformer en 'code spaghetti' lorsque vous commencez à ajouter des fonctions, des variables et des classes. Comment pouvez-vous mieux organiser votre code pour qu'il soit plus lisible? Esquissez un système pour organiser votre code, même s'il réside toujours dans un seul fichier.
 
 ## Quiz de validation des connaissances
 
