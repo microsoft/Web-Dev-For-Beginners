@@ -52,7 +52,7 @@ window.addEventListener('keyup', (evt) => {
 Pour les événements clés, il existe deux propriétés sur l'événement que vous pouvez utiliser pour voir quelle touche a été pressée:
 
 - `key`, il s'agit d'une représentation sous forme de chaîne de la touche enfoncée, par exemple `ArrowUp`
-- `keyCode`, c'est une représentation numérique, par exemple '37', correspond à `ArrowLeft`.
+- `keyCode`, c'est une représentation numérique, par exemple `37`, correspond à `ArrowLeft`.
 
 ✅ La manipulation des événements clés est utile en dehors du développement de jeux. A quelles autres utilisations pensez-vous pour cette technique?
 
@@ -143,7 +143,7 @@ Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`
 
 ### Ajouter un code
 
-1. **Ajouter des objets dédiés** pour `hero` et `enemy` et `game object`, ils doivent avoir les propriétés `x` et `y`. (Rappelez-vous la partie sur l'[héritage ou la composition](../../translations/README.fr.md) ). 
+1. **Ajouter des objets dédiés** pour `hero` et `enemy` et `game object`, ils doivent avoir les propriétés `x` et `y`. (Rappelez-vous la partie sur l'[héritage ou la composition](../../translations/README.fr.md)). 
 
    *CONSEIL* `game object` (l'objet de jeu) doit être celui avec `x` et `y` et la possibilité de se dessiner sur un canevas.
 
