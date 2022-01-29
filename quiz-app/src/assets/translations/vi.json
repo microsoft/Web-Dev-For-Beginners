@@ -226,10 +226,10 @@
 			},
 			{
 				"id": 5,
-				"title": "Bài 3 - Tạo các trang web thân thiện với người dùng: Pre-Lecture Quiz",
+				"title": "Bài 3 - Tạo các trang web có khả năng truy cập: Pre-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "Một trang web thân thiện có thể được kiểm tra bằng:",
+						"questionText": "Khả năng truy cập có thể được kiểm tra bằng:",
 						"answerOptions": [
 							{
 								"answerText": "Lighthouse",
@@ -246,7 +246,7 @@
 						]
 					},
 					{
-						"questionText": "Bạn cần một trình đọc màn hình vật lý để kiểm tra mức độ thân thiện cho người dùng khiếm thị",
+						"questionText": "Bạn cần một trình đọc màn hình vật lý để kiểm tra khả năng truy cập cho người dùng khiếm thị",
 						"answerOptions": [
 							{
 								"answerText": "Đúng",
@@ -259,7 +259,7 @@
 						]
 					},
 					{
-						"questionText": "Trang web thân thiện chỉ quan trọng trên các trang web của chính phủ",
+						"questionText": "Khả năng truy cập chỉ quan trọng trên các trang web của chính phủ",
 						"answerOptions": [
 							{
 								"answerText": "Đúng vậy",
@@ -275,10 +275,10 @@
 			},
 			{
 				"id": 6,
-				"title": "Bài 3 - Tạo các trang web thân thiện với người dùng: Post-Lecture Quiz",
+				"title": "Bài 3 - Tạo các trang web có khả năng truy cập: Post-Lecture Quiz",
 				"quiz": [
 					{
-						"questionText": "Lighthouse chỉ kiểm tra các vấn đề liên quan đến sự thân thiện của website",
+						"questionText": "Lighthouse chỉ kiểm tra các vấn đề liên quan đến khả năng truy cập của website",
 						"answerOptions": [
 							{
 								"answerText": "Đúng",
@@ -291,7 +291,7 @@
 						]
 					},
 					{
-						"questionText": "Bảng màu an toàn thân thiện với những người",
+						"questionText": "Bảng màu an toàn tăng khả năng truy cập với những người",
 						"answerOptions": [
 							{
 								"answerText": "Mù màu",
@@ -308,7 +308,7 @@
 						]
 					},
 					{
-						"questionText": "Các mô tả liên kết rất quan trọng với các trang web thân thiện",
+						"questionText": "Các mô tả liên kết rất quan trọng với các trang web có khả năng truy cập",
 						"answerOptions": [
 							{
 								"answerText": "Đúng",
