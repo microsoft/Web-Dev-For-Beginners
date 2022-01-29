@@ -12,6 +12,7 @@ import nl from "./nl.json";
 import zh_cn from "./zh_cn.json";
 import zh_tw from "./zh_tw.json";
 import fr from "./fr.json";
+import vi from './vi.json'
 
 //export const defaultLocale = 'en';
 
@@ -29,6 +30,7 @@ const messages = {
   zh_cn: zh_cn[0],
   zh_tw: zh_tw[0],
   fr: fr[0],
+  vi: vi[0],
 };
 
 export default messages;

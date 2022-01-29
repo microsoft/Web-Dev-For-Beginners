@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "Nhập môn lập trình web: Câu hỏi",
+		"complete": "Hoan hô, bạn đã hoàn thành tất cả các câu hỏi!",
+		"error": "Rất tiếc, hãy thử lại",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "Bài 1 - Giới thiệu về ngôn ngữ lập trình: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Một chương trình có thể được tạo ra mà không có ngừời viết mã nào",
+						"answerOptions": [
+							{
+								"answerText": "Đúng",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ngôn ngữ lập trình bậc thấp được dùng phổ biến cho",
+						"answerOptions": [
+							{
+								"answerText": "Websites",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Phần cứng",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trò chơi điện tử",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Công cụ dành cho nhà phát triển web?",
+						"answerOptions": [
+							{
+								"answerText": "Phân cứng, giống như Raspberry Pi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Browser DevTools",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Tài liệu về hệ điều hành",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Bài 1 - Giới thiệu về ngôn ngữ lập trình: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Ngôn ngữ nào được dùng nhiều trong việc phát triển website?",
+						"answerOptions": [
+							{
+								"answerText": "Mã máy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Môi trường phát triển là độc lập đối với mỗi lập trình viên",
+						"answerOptions": [
+							{
+								"answerText": "Đúng",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Nhà phát triển sẽ làm gì để sửa mã lỗi?",
+						"answerOptions": [
+							{
+								"answerText": "Syntax highlighting",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Debugging",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Code formatting",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "Bài 2 - Giới thiệu về Github: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Câu lệnh để khời tạo một git repo?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Câu lệnh 'git add' dùng để làm gì?",
+						"answerOptions": [
+							{
+								"answerText": "Commits code của bạn",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Thêm các file của bạn vào danh sách theo dõi của git",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Thêm các file của bạn vào trên Github",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Cách để kiểm tra máy tính của bạn có cài git hay không?",
+						"answerOptions": [
+							{
+								"answerText": "gõ git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "gõ git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "gõ git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "Bài 2 - Giới thiệu về Github: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Một nơi để so sánh và thảo luận về sự khác biệt được giới thiệu trên một nhánh với đánh giá, bình luận, thử nghiệm tích hợp, và nhiều hơn nữa là:",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Một Pull Request",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Một feature branch",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Làm thế nào để bạn nhận được tất cả commits trên một nhánh của remote?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Làm thế nào để thay đổi nhánh của bạn?",
+						"answerOptions": [
+							{
+								"answerText": "git switch [tên-nhánh]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git checkout [tên-nhánh]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [tên-nhánh]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "Bài 3 - Tạo các trang web thân thiện với người dùng: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Một trang web thân thiện có thể được kiểm tra bằng:",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn cần một trình đọc màn hình vật lý để kiểm tra mức độ thân thiện cho người dùng khiếm thị",
+						"answerOptions": [
+							{
+								"answerText": "Đúng",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Trang web thân thiện chỉ quan trọng trên các trang web của chính phủ",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "Bài 3 - Tạo các trang web thân thiện với người dùng: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Lighthouse chỉ kiểm tra các vấn đề liên quan đến sự thân thiện của website",
+						"answerOptions": [
+							{
+								"answerText": "Đúng",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Đúng",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bảng màu an toàn thân thiện với những người",
+						"answerOptions": [
+							{
+								"answerText": "Mù màu",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Khiếm thị",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cả hai",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Các mô tả liên kết rất quan trọng với các trang web thân thiện",
+						"answerOptions": [
+							{
+								"answerText": "Đúng",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "Bài 4 - JavaScript Cơ bản - Kiểu dữ liệu: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Boolean là kiểu dữ liệu mà bạn có thể dùng để kiểm tra độ dài của chuỗi",
+						"answerOptions": [
+							{
+								"answerText": "Đúng",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Sau đây là một chức năng mà bạn có thể thực hiện trên một chuỗi",
+						"answerOptions": [
+							{
+								"answerText": "concatenation",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "appending",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "splicing",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== và === là như nhau",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "Bài 4 - JavaScript Cơ bản - Kiểu dữ liệu: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Các hằng giống như let và var để khai báo các biến ngoại trừ",
+						"answerOptions": [
+							{
+								"answerText": "Các hằng số phải có giá trị khi khởi tạo",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Các hằng số có thể được thay đổi giá trị",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Các hằng số có thể được khai báo lại",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Numbers và ____ là Những kiểu dữ liệu nguyên thủy trong Javascript trong việc xử lý số",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Chuối có thể nằm giữa cả dấu ngoặc kép và ngoặc đơn",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "Bài 5 - JavaScript Cơ bản - Phương thức và Hàm: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Đối số là gì?",
+						"answerOptions": [
+							{
+								"answerText": "Đó là biến bạn khai báo trong định nghĩa hàm",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Là một giá trị bạn truyền vào khi gọi hàm",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Đó là thứ bạn có với những người bạn biết",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Một hàm phải trả về một giá trị",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn có thể đặt tên hàm tùy thích",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Đúng vậy, Nhưng phải tuân theo quy tắc đặt tên",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "Bài 5 - JavaScript Cơ bản - Phương thức and Hàm: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Đối số phải được cung cấp cho tất cả các tham số trong một hàm",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Đặt giá trị mặc định có ý nghĩa gì?",
+						"answerOptions": [
+							{
+								"answerText": "Đặt một giá trị chính xác",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cung cấp giá trị khởi động cho một tham số để mã của bạn vẫn hoạt động nếu bạn bỏ qua một đối số cho nó",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Không có ý nghĩa",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Một arrow function giúp bạn",
+						"answerOptions": [
+							{
+								"answerText": "Tạo heavy functions",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Bỏ qua từ khóa hàm",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Tạo ra một hàm không có tên",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "Bài 6 - JavaScript Cơ bản - Đưa ra quyết định: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Toán tử == được gọi là",
+						"answerOptions": [
+							{
+								"answerText": "Equality",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Strict equality",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Assignment",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Toán tử so sánh trong JavaScript trả về?",
+						"answerOptions": [
+							{
+								"answerText": "boolean",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "string",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Toán tử ! trong JavaScript có ý nghĩa:",
+						"answerOptions": [
+							{
+								"answerText": "Logical Not",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Important",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Equals",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "Bào 6 - JavaScript Cơ bản - Đưa ra quyết định: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Giá trị của: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Giá trị của: '1' === 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Chọn đáp án đúng cho toán tử 'or'",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "Bài 7 - JavaScript Cơ bản - Mảng và Lặp: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Để tham chiếu đến một phần tử của mảng, ta dùng",
+						"answerOptions": [
+							{
+								"answerText": "Cặp ngoặc vuông []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Chỉ số (index)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Cặp ngoặc nhọn {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Làm thế nào để biết được số lượng phần tử của một mảng trong JS?",
+						"answerOptions": [
+							{
+								"answerText": "Dùng phương thức 'len(array)'",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Thuộc tính 'size' của mảng",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Thuộc tính 'length' của mảng",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Trong JavaScript, chỉ số của mảng bắt đầu tại",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "Bài 7 - JavaScript Cơ bản - Mảng và Lặp: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Bạn cần sửa đổi phần nào của vòng lặp for để tăng số lần lặp của nó lên 5?",
+						"answerOptions": [
+							{
+								"answerText": "Biểu thức điều kiện",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Biến đếm",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Biểu thức lặp",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Sự khác nhau giữa cấu trúc lặp for và while",
+						"answerOptions": [
+							{
+								"answerText": "Vòng lặp for có một bộ đếm và biểu thức lặp, trong đó while chỉ có một điều kiện",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A while có một bộ đếm và biểu thức lặp trong đó vòng lặp for chỉ có một điều kiện",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Chúng giống nhau, chỉ là bí danh của nhau",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Cho đoạn code: for (let i=1; i < 5; i++), nó sẽ lặp bao nhiêu lần?",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "Bài 8 - Terrarium Project - Giới thiệu về HTML: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "HTML là viết tắt của 'HyperText Mockup Language'",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tất cả các thẻ (Tag) của HTML đều phải có thẻ đóng",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Sử dụng đánh dấu ngữ nghĩa là quan trọng nhất đối với",
+						"answerOptions": [
+							{
+								"answerText": "Khả năng đọc code",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Trình đọc màn hình",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bảo trì",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "Bài 8 - Terrarium Project - Giới thiệu về HTML: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "<span> và <div> có thể thay đổi cho nhau",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Thẻ <head> của một trang HTML có thể chứa:",
+						"answerOptions": [
+							{
+								"answerText": "Thẻ <title>",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "metadata",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tất cả",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn không thể dùng cá thẻ 'deprecated'",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi, Nhưng tốt nhất là không nên dùng :)",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "Bài 9  - Terrarium Project - Giới thiệu về CSS: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Các phần thử HTML phải có class hoặc id để áp dụng định dạng của css",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS viết tắt cho 'Complete Style Sheets'",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS có thể dùng để tạo chuyển động",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "Bài 9 - Terrarium Project - Giới thiệu về CSS: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Bạn có thể viết mã css trong phần <head> của file HTML",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Lúc nào cũng phải có CSS cho ứng dụng web của bạn",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi, Nhưng trang web của bạn sẽ đẹp hơn nếu có CSS đấy :3",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Công cụ nào trên trình duyệt có thể xem được mã CSS của trang web",
+						"answerOptions": [
+							{
+								"answerText": "Elements",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Styles",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Network",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "Bài 10 - Terrarium Project - DOM Manipulation và Closure: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "DOM viết tắt của 'Document Object Management'",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "DOM được tổ chức theo cấu trúc cây",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn có thể dùng Web API để thao tác với DOM",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "Bài 10 - Terrarium Project - DOM Manipulation và Closure: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "DOM là một mô hình để đại diện cho một tài liệu trên web",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Sử dụng JavaScript closures để thể hiện những điều sau:",
+						"answerOptions": [
+							{
+								"answerText": "Viết các hàm trong các hàm",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bao quanh các DOM",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Đóng khối lệnh",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Điền vào chỗ trống: Closures rất hữu ích khi một hoặc nhiều hàm cần truy cập vào function's... từ bên ngoài",
+						"answerOptions": [
+							{
+								"answerText": "arrays",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "scope",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "functions",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "Bài 11 - Typing Game: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Lập trình theo hướng sự kiện là khi người dùng",
+						"answerOptions": [
+							{
+								"answerText": "Click vào một button",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Thay đổi một giá trị",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tương tác với trang",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tất cả những thứ trên",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Trong lập trình thủ tục, các hàm được gọi khi nào",
+						"answerOptions": [
+							{
+								"answerText": "Bất kỳ lúc nào",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Theo một thứ tự cụ thể",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trái qua phải",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Phương thức phổ quát được hiển thị trong DOM để đăng ký trình xử lý sự kiện được gọi là",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "Bài 11 - Typing Game: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Bất kỳ hành động nào của người dùng đều có thể tạo ra sự kiện",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Các sự kiện phổ biến bao gồm",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tất cả ở trên",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn có thể tạo ra các hàm ẩn danh để xử lý sự kiện",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "Bài 12 - Tiện ích mở rộng trên trình duyệt - Tất cả về trình duyệt: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Bạn có thể tải tiện ích mở rộng của trình duyệt tại",
+						"answerOptions": [
+							{
+								"answerText": "WalMart",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Kho tiện ích mở rộng của trình duyệt",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "The App store",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM là viết tắt của",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Trình duyệt của bạn có thể cung cấp các trang web cả an toàn và không an toàn",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "Bài 12 - Tiện ích mở rộng trên trình duyệt - Tất cả về trình duyệt: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "The World Wide Web được phát minh bởi",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Trình duyệt đầu tiên được gọi là",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Trình duyệt có thể lưu lịch sử của người dùng",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "Bài 13 - Tiện ích mở rộng trên trình duyệt - Gọi một API, sử dụng Local Storage: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "APIs viết tắt cho",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Sử dụng một API để tương tác với",
+						"answerOptions": [
+							{
+								"answerText": "Một nội dung được kết nối web khác",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Một cơ sở dữ liệu",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Một trong hai điều trên",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bất kỳ ai đều có thể tạo ra một API",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "Bài 13 - Tiện ích mở rộng trên trình duyệt - Gọi một API, sử dụng Local Storage: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "LocalStorage bị xóa mỗi khi người dùng tắt trình duyệt",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Cửa sổ trình duyệt chính kiểm soát LocalStorage của tiện ích mở rộng của trình duyệt",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "REST trong một API context viết tắt cho",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "Bài 14 - Tiện ích mở rộng trên trình duyệt - Tìm hiểu về Nhiệm vụ nền và Hiệu suất: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Kiểm tra hiệu suất của ứng dụng của bạn",
+						"answerOptions": [
+							{
+								"answerText": "Sử dụng các công cụ của trình duyệt",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sử dụng một gói phần mềm riêng biệt",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Thủ công",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "'Hiệu suất' của một trang web là một phân tích về",
+						"answerOptions": [
+							{
+								"answerText": "Nó tải nhanh như thế nào",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Mã trên đó chạy nhanh như thế nào",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cả hai",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Nhìn chung, kích thước của các trang web đang",
+						"answerOptions": [
+							{
+								"answerText": "nhẹ hơn",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "nặng hơn",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "giữ nguyên",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "Bài 14 - Tiện ích mở rộng trên trình duyệt - Tìm hiểu về Nhiệm vụ nền và Hiệu suất: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Để có cái nhìn rõ hơn về hiệu suất trang web của bạn, hãy xóa bộ nhớ cache của nó và tải lại trong trình cấu hình",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Tiện ích mở rộng trình duyệt vốn đã hoạt động tốt",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Phân tích những điều sau đây để biết các điểm nghẽn về hiệu suất",
+						"answerOptions": [
+							{
+								"answerText": "DOM traversals",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript optimizations",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Quản lý tài nguyên",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tất cả các ý trên",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "Bài 15 - Space Game - Giới thiệu: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "JavaScript là một ngôn ngữ không phổ biến trong lập trình game",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub là một mô hình ưa thích để quản lý nội dung và luồng của trò chơi",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Kế thừa đối tượng có thể được xử lý bằng cách sử dụng các lớp hoặc thành phần",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "Bài 15 - Space Game - Giới thiệu: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Các lớp dựa vào tính kế thừa để mô tả các hành vi",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Composition là mẫu thiết kế ưa thích cho các đối tượng trò chơi",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub viết tắt cho:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "Bài 16 - Space Game - Vẽ Anh hùng và Quái vậy lên trên Canvas: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Phần tử Canvas là thứ bạn sử dụng để vẽ trên màn hình",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn chỉ có thể vẽ những hình họa đơn giản bằng Canvas API",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tọa độ (0,0) nằm ở bên trái dưới",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "Bài 16 - Space Game - Vẽ Anh hùng và Quái vậy lên trên Canvas: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Bạn có thể thực hiện các thao tác vẽ trực tiếp trên Canvas",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn lắng nghe sự kiện onload để biết khi nào một hình ảnh đã tải không đồng bộ",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn vẽ hình ảnh lên màn hình bằng một phương thức được gọi là:",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "Bài 17 - Space Game - Thêm chuyển động: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Bất kỳ đối tượng nào trên màn hình đều có thể nhận các sự kiện bàn phím",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn có thể sử dụng cùng một phương thức để nghe các sự kiện chính và sự kiện chuột",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Để mọi thứ lặp lại đều đặn, bạn sử dụng hàm gì?",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "Bài 17 - Space Game - Thêm chuyển động: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Bạn luôn cần vẽ lại màn hình",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Game loop là gì?",
+						"answerOptions": [
+							{
+								"answerText": "Một hàm đảm bảo trò chơi có thể được khởi động lại",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Một hàm quyết định tốc độ trò chơi sẽ chạy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Một hàm được gọi theo khoảng thời gian đều đặn và vẽ những gì người dùng sẽ thấy",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Một trường hợp tốt để vẽ lại màn hình là",
+						"answerOptions": [
+							{
+								"answerText": "Một tương tác người dùng đã xảy ra",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Bất kì thứ gì bị dịch chuyển",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Một khoảng thời gian xác định",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "Bài 18 - Space Game - Thêm Laser và Collision detection: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Collision detection là cách chúng tôi phát hiện xem hai thứ có va chạm hay không",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Làm cách nào chúng ta có thể xóa một mục khỏi màn hình?",
+						"answerOptions": [
+							{
+								"answerText": "Gọi cho người thu gom rác",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Đánh dấu nó là đã chết, chỉ sơn các đối tượng không chết vào lần sau khi chúng ta vẽ màn hình",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Đặt mục trên một tọa độ âm",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Một cách tốt để mô phỏng bắn tia laser trong JavaScript là:",
+						"answerOptions": [
+							{
+								"answerText": "Tạo một yếu tố hình ảnh phản hồi cho một sự kiện quan trọng",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Tạo ảnh gif động",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Làm cho kẻ thù nổ tung trong khoảng thời gian",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "Bài 18 - Space Game - Thêm Laser và Detecting Collisions: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Trong collision detection bạn so sánh hai",
+						"answerOptions": [
+							{
+								"answerText": "vòng tròn và liệu chúng có giao nhau không",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "hình chữ nhật và liệu chúng có giao nhau không",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "khoảng cách giữa hai điểm",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Lý do thực hiện hiệu ứng hồi chiêu là vì",
+						"answerOptions": [
+							{
+								"answerText": "Làm cho trò chơi khó hơn vì bạn không thể liên tục bắn tia laser để tiêu diệt kẻ thù",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript chỉ có thể tạo ra một số sự kiện nhất định trên mỗi đơn vị thời gian, vì vậy bạn cần hạn chế chúng",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Hằng số có thể nhận dạng được trong mã vì",
+						"answerOptions": [
+							{
+								"answerText": "chúng được viết bằng chữ in hoa",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "chúng có tên cụ thể",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "chúng được viết bằng kebab-case như thế-này",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "Bài 19 - Space Game - Chấm điểm và Mạng: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Làm cách nào để bạn vẽ văn bản trên màn hình bằng phần tử Canvas?",
+						"answerOptions": [
+							{
+								"answerText": "Đặt văn bản bên trong phần tử <div> hoặc <span>",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Gọi hàm drawText() trong phần tử Canvas",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Gọi hàm fillText() trong đối tượng context",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tại sao bạn có khái niệm về 'mạng' trong một trò chơi?",
+						"answerOptions": [
+							{
+								"answerText": "Để hiển thị mức độ thiệt hại bạn có thể chịu",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sao cho trò chơi không kết thúc ngay lập tức, nhưng bạn có n cơ hội trước khi trò chơi kết thúc",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Đặt màu cho chữ trên Canvas",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "Bài 19 - Space Game - Chấm điểm và Mạng: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Một cách thú vị để hiển thị số mạng người chơi còn lại là gì?",
+						"answerOptions": [
+							{
+								"answerText": "Một con số",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Một hệ thống điểm",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Làm cách nào để căn giữa văn bản ở giữa màn hình bằng cách sử dụng phần tử Canvas?",
+						"answerOptions": [
+							{
+								"answerText": "Sử dụng FlexBox",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Vẽ văn bản tại 1/2 chiều rộng của cửa sổ",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bạn đặt thuộc tính textAlign thành center giá trị trên đối tượng ngữ cảnh",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Trong code, trừ một mạng viết như thế này:",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "Bài 20 - Space Game - Kết thúc and Restart: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Khi nào là thời điểm thích hợp để khởi động lại trò chơi?",
+						"answerOptions": [
+							{
+								"answerText": "Khi người chơi thắng hoặc thua",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bất cứ khi nào",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Khi nào trò chơi nên kết thúc",
+						"answerOptions": [
+							{
+								"answerText": "khi tàu địch bị phá hủy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "khi con tàu của anh hùng bị phá hủy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "khi điểm được thu thập",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Một cách tốt để thêm một cấp độ vào trò chơi của bạn là:",
+						"answerOptions": [
+							{
+								"answerText": "Tăng số điểm cần thiết để hoàn thành một cấp độ nhất định",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Thêm nhiều người chơi hơn vào trò chơi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Thêm nhiều đồ họa vào trò chơi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "Bài 20 - Space Game - Kết thúc and Restart: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Mô hình tốt để sử dụng khi điều kiện kết thúc trò chơi đã được đáp ứng là gì?",
+						"answerOptions": [
+							{
+								"answerText": "Hiển thị một thông báo phù hợp",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Thoát trò chơi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hiển thị thông báo phù hợp, đề nghị trình phát khởi động lại và hiển thị phím nào cần nhấn cho hành động đó",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn chỉ nên đề nghị khởi động lại khi trò chơi đã kết thúc",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Một cách tốt để xóa EventEmitter khi kết thúc trò chơi là:",
+						"answerOptions": [
+							{
+								"answerText": "clearing listeners",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "clearing the screen",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "closing the game window",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "Bài 21 - Dự án Ngân hàng - HTML Templates và Routes trong một ứng dụng web: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Bạn cần tạo nhiều tệp HTML để hiển thị các màn hình khác nhau trong một ứng dụng web",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn có thể lưu trữ và duy trì dữ liệu cục bộ trong một ứng dụng web",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Nhà cung cấp dữ liệu tốt nhất cho ứng dụng web là gì?",
+						"answerOptions": [
+							{
+								"answerText": "Cơ sở dữ liệu cục bộ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Một đối tượng JavaScript",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Máy chủ có API JSON",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "Bài 21 - Dự án Ngân hàng - HTML Templates và Routes in trong một ứng dụng web: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "HTML templates là một phần của DOM theo mặc định",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Phần nào của URL là cần thiết để định tuyến?",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cả hai",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tên của sự kiện được kích hoạt khi gọi hàm history.pushState () là gì?",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "Bài 22 - Dự án Ngân hàng - Xây dựng biểu mẫu đăng nhập và đăng ký: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Các biểu mẫu HTML cho phép bạn gửi thông tin đầu vào của người dùng đến máy chủ mà không cần sử dụng JavaScript",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Thẻ <label> là bắt buộc trong biểu mẫu",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Gửi dữ liệu biểu mẫu đến máy chủ qua HTTP là an toàn",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "Bài 22 - Dự án Ngân hàng - Xây dựng biểu mẫu đăng nhập và đăng ký: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Dùng <label> giúp cho biểu mẫu đẹp hơn",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "URL được gửi đến máy chủ trong phần nào của biểu mẫu?",
+						"answerOptions": [
+							{
+								"answerText": "Thuộc tính action",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Thuộc tính method",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cả hai",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn có thể sử dụng thuộc tính nào để đặt kích thước tối đa của văn bản <input>?",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "Bài 23 - Dự án Ngân hàng - Methods of Fetching and Using Data: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Bạn thường tìm nạp đồng bộ dữ liệu từ máy chủ trong trình duyệt",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy, nhưng bất đồng bộ là tốt nhất!",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Định dạng phổ biến nhất được sử dụng để trao đổi dữ liệu trên web là gì?",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Không có cách nào để ngăn một trang web truy cập vào API máy chủ công cộng",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "Bài 23 - Dự án Ngân hàng - Methods of Fetching and Using Data: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Trong ứng dụng một trang, HTML được tải một lần và không bao giờ được cập nhật",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sa rồi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tại sao điều quan trọng là không tin tưởng dữ liệu đến từ đầu vào của người dùng?",
+						"answerOptions": [
+							{
+								"answerText": "bởi vì việc sử dụng các ký tự đặc biệt có thể làm cho giao diện người dùng trở nên xấu xí.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "bởi vì nó có thể chứa những từ không có ý nghĩa hoặc xúc phạm.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "bởi vì nó có thể được sử dụng làm véc tơ tấn công để thực thi các tập lệnh độc hại.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tên API để gửi các yêu cầu HTTP không đồng bộ đến máy chủ web là gì?",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "Bài 24 - Dự án Ngân hàng - Concepts của Quản lý State: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Đối tượng bất biến là gì?",
+						"answerOptions": [
+							{
+								"answerText": "Một đối tượng được định nghĩa là một hằng số",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Một đối tượng không thể sửa đổi sau khi nó được tạo",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bản sao của một đối tượng hiện có",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bạn nhận được (những) lợi ích gì khi sử dụng state management?",
+						"answerOptions": [
+							{
+								"answerText": "Bạn có thể theo dõi mọi nơi mà trạng thái được cập nhật",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Gỡ lỗi mã dễ dàng hơn",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tất cả những điều trên",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Cách tốt nhất để duy trì dữ liệu người dùng quan trọng trong các phiên khác nhau là gì?",
+						"answerOptions": [
+							{
+								"answerText": "Sử dụng file",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sử dụng API localStorage của trình duyệt",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Trong cơ sở dữ liệu đằng sau một API máy chủ",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "Bài 24 - Bank Project - Concepts của Trình quản lý State: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Theo bạn, state management nghĩa là gì?",
+						"answerOptions": [
+							{
+								"answerText": "Thực thi các nguyên tắc và trật tự",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Ghi nhật ký trạng thái giao diện người dùng theo thời gian",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Giữ cho luồng dữ liệu ứng dụng của bạn sạch sẽ và đồng bộ hóa giao diện người dùng với dữ liệu",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Làm cách nào bạn có thể theo dõi trạng thái phiên của người dùng?",
+						"answerOptions": [
+							{
+								"answerText": "HTTP cookies",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Local hoặc session storage",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tất cả các ý trên",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Thay đổi một đối tượng luôn là cách tốt nhất để cập nhật nó",
+						"answerOptions": [
+							{
+								"answerText": "Đúng vậy",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sai rồi",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
