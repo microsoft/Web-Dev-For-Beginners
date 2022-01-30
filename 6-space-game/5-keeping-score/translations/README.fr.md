@@ -1,4 +1,4 @@
-# Construire un jeu de l'espace - Partie 5 : scores et vies
+# Construire un jeu de l'espace - Partie 5: scores et vies
 
 ## Quiz de pré-lecture
 
@@ -17,7 +17,7 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ En savoir plus sur [comment ajouter du texte à un canvas ](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), et n'hésitez pas à rendre le vôtre plus sophistiqué !
+✅ En savoir plus sur [comment ajouter du texte à un canvas ](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), et n'hésitez pas à rendre le vôtre plus sophistiqué!
 
 ## La vie, comme concept de jeu
 
@@ -25,14 +25,14 @@ Le concept d'avoir une vie dans un jeu n'est qu'un nombre. Dans le contexte d'un
 
 ## Ce qu'il faut construire
 
-Ajoutons les éléments suivants à votre jeu :
+Ajoutons les éléments suivants à votre jeu:
 
-- **Score de jeu** : Pour chaque navire ennemi détruit, le héros devrait recevoir quelques points, nous suggérons 100 points par navire. Le score du jeu devrait être affiché en bas à gauche.
-- **Vie** : Votre navire a trois vies. Vous perdez une vie chaque fois qu'un navire ennemi entre en collision avec vous. Un score de vie devrait être affiché en bas à droite et être composé du graphique suivant [image de vie](solution/assets/life.png).
+- **Score de jeu**: Pour chaque navire ennemi détruit, le héros devrait recevoir quelques points, nous suggérons 100 points par navire. Le score du jeu devrait être affiché en bas à gauche.
+- **Vie**: Votre navire a trois vies. Vous perdez une vie chaque fois qu'un navire ennemi entre en collision avec vous. Un score de vie devrait être affiché en bas à droite et être composé du graphique suivant ![image de vie](../solution/assets/life.png).
 
 ## Étapes recommandées
 
-Localisez les fichiers qui ont été créés pour vous dans le sous-répertoire `your-work`. Il devrait contenir les éléments suivants :
+Localisez les fichiers qui ont été créés pour vous dans le sous-répertoire `your-work`. Il devrait contenir les éléments suivants:
 
 ```bash
 -| assets
@@ -44,7 +44,7 @@ Localisez les fichiers qui ont été créés pour vous dans le sous-répertoire 
 -| package.json
 ```
 
-Vous démarrez votre projet dans le dossier `your_work` en tapant :
+Vous démarrez votre projet dans le dossier `your_work` en tapant:
 
 ```bash
 cd your-work
@@ -55,13 +55,13 @@ Ce qui précède va démarrer un serveur HTTP sur l'adresse `http://localhost:50
 
 ### Ajouter du code
 
-1. **Copiez les éléments nécessaires** du dossier `solution/assets/` dans le dossier `your-work` ; vous allez ajouter un élément `life.png`. Ajoutez l'image lifeImg à la fonction window.onload :
+1. **Copiez les éléments nécessaires** du dossier `solution/assets/` dans le dossier `your-work` ; vous allez ajouter un élément `life.png`. Ajoutez l'image lifeImg à la fonction window.onload:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
     ```
 
-1. Ajoutez le `lifeImg` à la liste des éléments :
+1. Ajoutez le `lifeImg` à la liste des éléments:
 
     ```javascript
     let heroImg,
@@ -73,7 +73,7 @@ Ce qui précède va démarrer un serveur HTTP sur l'adresse `http://localhost:50
   
 2. **Ajoutez des variables**. Ajoutez le code qui représente votre score total (0) et les vies restantes (3), affichez ces scores sur un écran.
 
-3. **Étendre la fonction `updateGameObjects()`**. Étendre la fonction `updateGameObjects()` pour gérer les collisions avec les ennemis :
+3. **Étendre la fonction `updateGameObjects()`**. Étendre la fonction `updateGameObjects()` pour gérer les collisions avec les ennemis:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -85,14 +85,14 @@ Ce qui précède va démarrer un serveur HTTP sur l'adresse `http://localhost:50
     ```
 
 4. **Ajouter `life` et `points`**. 
-   1. **Initialiser les variables**. Sous `this.cooldown = 0` dans la classe `Hero` , définissez la vie et les points :
+   1. **Initialiser les variables**. Sous `this.cooldown = 0` dans la classe `Hero` , définissez la vie et les points:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Dessinez les variables à l'écran**. Dessinez ces valeurs à l'écran :
+   1. **Dessinez les variables à l'écran**. Dessinez ces valeurs à l'écran:
 
         ```javascript
         function drawLife() {
@@ -126,7 +126,7 @@ Ce qui précède va démarrer un serveur HTTP sur l'adresse `http://localhost:50
         drawLife();
         ```
 
-1. **Mettre en œuvre les règles du jeu**. Mettez en œuvre les règles du jeu suivantes :
+1. **Mettre en œuvre les règles du jeu**. Mettez en œuvre les règles du jeu suivantes:
 
    1. **Pour chaque collision entre héros et ennemis**, retirez une vie.
    
@@ -143,7 +143,7 @@ Ce qui précède va démarrer un serveur HTTP sur l'adresse `http://localhost:50
 
    2. **Pour chaque laser qui touche un ennemi**, augmentez le score du jeu de 100 points.
 
-      Étendez la classe Hero pour faire cet ajout :
+      Étendez la classe Hero pour faire cet ajout:
     
         ```javascript
           incrementPoints() {
@@ -151,7 +151,7 @@ Ce qui précède va démarrer un serveur HTTP sur l'adresse `http://localhost:50
           }
         ```
 
-        Ajoutez ces fonctions à vos émetteurs d'événements de collision :
+        Ajoutez ces fonctions à vos émetteurs d'événements de collision:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -166,15 +166,15 @@ Ce qui précède va démarrer un serveur HTTP sur l'adresse `http://localhost:50
         });
         ```
 
-✅ Faites une petite recherche pour découvrir d'autres jeux créés à l'aide de JavaScript/Canvas. Quels sont leurs points communs ?
+✅ Faites une petite recherche pour découvrir d'autres jeux créés à l'aide de JavaScript/Canvas. Quels sont leurs points communs?
 
-À la fin de ce travail, vous devriez voir les petits vaisseaux de "vie" en bas à droite, les points en bas à gauche, et vous devriez voir votre compte de vie diminuer lorsque vous entrez en collision avec des ennemis et vos points augmenter lorsque vous tirez sur des ennemis. Bien joué ! Votre jeu est presque terminé.
+À la fin de ce travail, vous devriez voir les petits vaisseaux de "vie" en bas à droite, les points en bas à gauche, et vous devriez voir votre compte de vie diminuer lorsque vous entrez en collision avec des ennemis et vos points augmenter lorsque vous tirez sur des ennemis. Bien joué! Votre jeu est presque terminé.
 
 ---
 
 ## 🚀 Challenge
 
-Votre code est presque complet. Pouvez-vous envisager vos prochaines étapes ?
+Votre code est presque complet. Pouvez-vous envisager vos prochaines étapes?
 
 ## Quiz post-lecture
 
@@ -182,7 +182,7 @@ Votre code est presque complet. Pouvez-vous envisager vos prochaines étapes ?
 
 ## Révision et autoformation
 
-Recherchez des moyens d'incrémenter et de décrémenter les scores et les vies. Il existe des moteurs de jeu intéressants comme [PlayFab](https://playfab.com). Comment l'utilisation de l'un d'eux pourrait-elle améliorer votre jeu ?
+Recherchez des moyens d'incrémenter et de décrémenter les scores et les vies. Il existe des moteurs de jeu intéressants comme [PlayFab](https://playfab.com). Comment l'utilisation de l'un d'eux pourrait-elle améliorer votre jeu?
 
 ## Travail à faire
 
