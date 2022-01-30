@@ -117,7 +117,7 @@ async function run() {
 
 ## Il est maintenant temps de commencer à créer votre jeu
 
-### Que construire
+### Quoi construire
 
 Vous allez créer une page Web avec un élément Canvas. Il devrait rendre un écran noir `1024*768`. Nous vous avons fourni deux images:
 
@@ -165,7 +165,7 @@ Ajoutez le code nécessaire à `your-work/app.js` pour résoudre le problème ci
    > astuce : ajoutez les images du joueur et de l'ennemi en utilisant `await loadTexture` et en passant le chemin de l'image. Vous ne les verrez pas encore à l'écran!
 3. **Dessinez** le héros au centre de l'écran dans la moitié inférieure
    > astuce : utilisez l'API `drawImage` pour dessiner heroImg à l'écran, en définissant `canvas.width / 2 - 45` et `canvas.height - canvas.height / 4)`;
-4. **Dessinez**les monstres 5*5
+4. **Dessinez** les monstres 5*5
    > astuce : vous pouvez maintenant décommenter le code pour dessiner les ennemis à l'écran. Ensuite, allez à la fonction `createEnemies` et compilez la.
 
    Tout d'abord, configurez quelques constantes:
