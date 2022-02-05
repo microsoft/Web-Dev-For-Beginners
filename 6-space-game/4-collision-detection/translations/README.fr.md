@@ -9,7 +9,7 @@ Dans cette leçon, vous apprendrez à tirer des lasers avec JavaScript! Nous ajo
 - **Un laser**: ce laser est tiré depuis le vaisseau de vos héros et verticalement vers le haut
 - **La détection de collision**, dans le cadre de la mise en œuvre de la possibilité de *tirer*, nous ajouterons également quelques règles de jeu intéressantes:
    - **Le laser frappe l'ennemi**: L'ennemi meurt s'il est touché par un laser
-   - **Le laser touche l'écran supérieur** : un laser est détruit s'il touche la partie supérieure de l'écran
+   - **Le laser touche l'écran supérieur**: un laser est détruit s'il touche la partie supérieure de l'écran
    - **Collision entre ennemis et héros**: Un ennemi et le héros sont détruits s'ils se frappent
    - **L'ennemi touche le bas de l'écran**: Un ennemi et un héros sont détruits si l'ennemi touche le bas de l'écran
 
@@ -21,7 +21,7 @@ Soyons héroïques ensemble!
 
 ## La détection de collision
 
-Comment fait-on la détection de collision ? Nous devons penser à nos objets de jeu comme des rectangles se déplaçant. Pourquoi vous pourriez vous demander? Eh bien, l'image utilisée pour dessiner un objet de jeu est un rectangle : il a un `x`, `y`, `width` et `height`.
+Comment fait-on la détection de collision? Nous devons penser à nos objets de jeu comme des rectangles se déplaçant. Pourquoi vous pourriez vous demander? Eh bien, l'image utilisée pour dessiner un objet de jeu est un rectangle: il a un `x`, `y`, `width` et `height`.
 
 Si deux rectangles, c'est-à-dire un héros et un ennemi *se croisent*, vous avez une collision. Ce qui devrait arriver alors dépend des règles du jeu. Pour implémenter la détection de collision, vous avez donc besoin des éléments suivants:
 
@@ -49,32 +49,32 @@ Si deux rectangles, c'est-à-dire un héros et un ennemi *se croisent*, vous ave
    }
    ```
 
-## How do we destroy things
+## Comment détruire les objets
 
-To destroy things in a game you need to let the game know it should no longer paint this item in the game loop that triggers on a certain interval. A way to do this is to mark a game object as *dead* when something happens, like so:
+Pour détruire des objets dans un jeu, vous devez faire savoir au jeu qu'il ne doit plus afficher cet objet dans la boucle de jeu qui se déclenche à un certain intervalle. Une façon de faire est de marquer un objet de jeu comme *mort* quand quelque chose se passe, comme ceci:
 
 ```javascript
-// collision happened
+// la collision s'est produite
 enemy.dead = true
 ```
 
-Then you an proceed to sort out *dead* objects before repainting the screen, like so:
+Ensuite, vous procédez au tri des objets *morts* avant de repeindre l'écran, comme ceci:
 
 ```javascript
 gameObjects = gameObject.filter(go => !go.dead);
 ```
 
-## How do we fire a laser
+## Comment tirons-nous un laser
 
-Firing a laser translates to responding to a key-event and creating an object that moves in a certain direction. We therefore need to carry out the following steps:
+Tirer un laser se traduit par répondre à un événement clé et créer un objet qui se déplace dans une certaine direction. Nous devons donc effectuer les étapes suivantes:
 
-1. **Create a laser object**: from the top of our hero's ship, that upon creation starts moving upwards towards the screen top.
-2. **Attach code to a key event**: we need to choose a key on the keyboard that represents the player shooting the laser.
-3. **Create a game object that looks like a laser** when the key is pressed.
+1. **Créez un objet laser**: du haut du vaisseau de notre héros, celui-ci commence à se déplacer vers le haut de l'écran lors de sa création.
+2. **Attacher un code à un événement clé**: nous devons choisir une touche du clavier qui représente le joueur tirant le laser.
+3. **Créez un objet de jeu qui ressemble à un laser** lorsque la touche est enfoncée.
 
-## Cooldown on our laser
+## Cooldown sur notre laser
 
-The laser needs to fire every time you press a key, like *space* for example. To prevent the game producing way too many lasers in a short time we need to fix this. The fix is by implementing a so called *cooldown*, a timer, that ensures that a laser can only be fired so often. You can implement that in the following way:
+Le laser doit se déclencher à chaque fois que vous appuyez sur une touche, comme *espace* par exemple. Pour éviter que le jeu ne produise trop de lasers en peu de temps, nous devons résoudre ce problème. La solution consiste à implémenter un soi-disant *cooldown*(temps de recharge), une minuterie, qui garantit qu'un laser ne peut être tiré aussi souvent. Vous pouvez implémenter cela de la manière suivante:
 
 ```javascript
 class Cooldown {
@@ -91,32 +91,32 @@ class Weapon {
   }
   fire() {
     if (!this.cooldown || this.cooldown.cool) {
-      // produce a laser
+      // produire un laser
       this.cooldown = new Cooldown(500);
     } else {
-      // do nothing - it hasn't cooled down yet.
+      // ne rien faire - il n'a pas encore refroidi.
     }
   }
 }
 ```
 
-✅ Refer to lesson 1 in the space game series to remind yourself about *cooldowns*.
+✅ Reportez-vous à la leçon 1 de la série de jeux spatiaux pour vous rappeler des *temps de recharge*
 
-## What to build
+## Que construire
 
-You will take the existing code (which you should have cleaned up and refactored) from the previous lesson, and extend it. Either start with the code from part II or use the code at [Part III- starter](/your-work).
+Vous allez prendre le code existant (que vous avez dû nettoyer et refactoriser) de la leçon précédente et l'étendre. Commencez par le code de la partie II ou utilisez le code de la [partie III - démarreur](../../your-work).
 
-> tip: the laser that you'll work with is already in your assets folder and referenced by your code
+> astuce: le laser avec lequel vous allez travailler est déjà dans votre dossier assets et référencé par votre code
 
-- **Add collision detection**, when a laser collides with something the following rules should apply:
-   1. **Laser hits enemy**: enemy dies if hit by a laser
-   2. **Laser hits top screen**: A laser is destroyed if it hits the top part of our screen
-   3. **Enemy and hero collision**: an enemy and the hero is destroyed if hitting each other
-   4. **Enemy hits bottom of the screen**: An enemy and a hero is destroyed if the enemy hits the bottom of the screen
+- **Ajoutez la détection de collision**, lorsqu'un laser entre en collision avec quelque chose, les règles suivantes doivent s'appliquer:
+   1. **Le laser touche l'ennemi**: l'ennemi meurt s'il est touché par un laser
+   2. **Le laser touche l'écran supérieur**: un laser est détruit s'il touche la partie supérieure de notre écran
+   3. **Collision ennemi et héros**: un ennemi et le héros sont détruits s'ils se frappent
+   4. **L'ennemi touche le bas de l'écran**: un ennemi et un héros sont détruits si l'ennemi touche le bas de l'écran
 
-## Recommended steps
+## Étapes recommandées
 
-Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
+Localisez les fichiers qui ont été créés pour vous dans le sous-dossier `your-work`. Il doit contenir les éléments suivants:
 
 ```bash
 -| assets
@@ -128,18 +128,18 @@ Locate the files that have been created for you in the `your-work` sub folder. I
 -| package.json
 ```
 
-You start your project the `your_work` folder by typing:
+Vous démarrez votre projet dans le dossier `your_work` en tapant:
 
 ```bash
 cd your-work
 npm start
 ```
 
-The above will start a HTTP Server on address `http://localhost:5000`. Open up a browser and input that address, right now it should render the hero and all the enemies, nothing is moving - yet :).
+Ce qui précède démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et saisissez cette adresse, pour le moment, cela devrait rendre le héros et tous les ennemis, rien ne bouge - pour le moment :).
 
-### Add code
+### Ajouter un code
 
-1. **Setup a  rectangle representation of your game object, to handle collision** The below code allows you to get a rectangle representation of a `GameObject`. Edit your GameObject class to extend it:
+1. **Configurez une représentation rectangulaire de votre objet de jeu, pour gérer les collisions** Le code ci-dessous vous permet d'obtenir une représentation rectangulaire d'un `GameObject`. Modifiez votre classe GameObject pour l'étendre:
 
     ```javascript
     rectFromGameObject() {
@@ -152,7 +152,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
       }
     ```
 
-2. **Add code that checks collision** This will be a new function  that tests whether two rectangles intersect:
+2. **Ajouter du code qui vérifie la collision** Il s'agira d'une nouvelle fonction qui teste si deux rectangles se croisent:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -165,8 +165,8 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
     }
     ```
 
-3. **Add laser firing capability**
-   1. **Add key-event message**. The *space* key should create a laser just above the hero ship. Add three constants in the Messages object:
+3. **Ajouter une capacité de tir laser **
+   1. **Ajouter un message d'événement clé**. La touche *espace* devrait créer un laser juste au-dessus du vaisseau héros. Ajoutez trois constantes dans l'objet Messages:
 
        ```javascript
         KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
@@ -174,7 +174,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
        ```
 
-   1. **Handle space key**. Edit the `window.addEventListener` keyup function to handle spaces:
+   1. **Manipuler la touche espace**. Modifiez la fonction keyup `window.addEventListener` pour gérer les espaces:
 
       ```javascript
         } else if(evt.keyCode === 32) {
@@ -182,7 +182,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         }
       ```
 
-    1. **Add listeners**. Edit the `initGame()` function to ensure that hero can fire when the space bar is hit:
+    1. **Ajouter des auditeurs**. Modifiez la fonction `initGame()` pour vous assurer que le héros peut se déclencher lorsque la barre d'espace est enfoncée:
 
        ```javascript
        eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
@@ -191,7 +191,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         }
        ```
 
-       and add a new `eventEmitter.on()` function to ensure behavior when an enemy collides with a laser:
+       et ajoutez une nouvelle fonction `eventEmitter.on()` pour assurer le comportement lorsqu'un ennemi entre en collision avec un laser:
 
           ```javascript
           eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -200,7 +200,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
           })
           ```
 
-   1. **Move object**, Ensure the laser moves to the top of the screen gradually. You'll create a new Laser class that extends `GameObject`, as you've done before: 
+   1. **Déplacez l'objet**, assurez-vous que le laser se déplace progressivement vers le haut de l'écran. Vous allez créer une nouvelle classe Laser qui étend `GameObject`, comme vous l'avez fait auparavant: 
    
       ```javascript
         class Laser extends GameObject {
@@ -221,7 +221,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
       }
       ```
 
-   1. **Handle collisions**, Implement collision rules for the laser. Add an `updateGameObjects()` function that tests colliding objects for hits
+   1. **Gérer les collisions**, Implémenter les règles de collision pour le laser. Ajouter une fonction `updateGameObjects()` qui teste les objets en collision pour les hits
 
       ```javascript
       function updateGameObjects() {
@@ -243,11 +243,11 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
       }  
       ```
 
-      Make sure to add `updateGameObjects()` into your game loop in `window.onload`.
+      Assurez-vous d'ajouter `updateGameObjects()` dans votre boucle de jeu dans `window.onload`.
 
-   4. **Implement cooldown** on the laser, so it can only be fired so often.
+   4. **Mettez en place un temps de recharge (cooldown)** sur le laser, de sorte qu'il ne peut être tiré qu'un certain temps.
 
-      Finally, edit the Hero class so that it can cooldown:
+      Enfin, modifiez la classe de héros afin qu'elle puisse se recharger:
 
        ```javascript
       class Hero extends GameObject {
@@ -276,7 +276,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
       }
       ```
 
-At this point, your game has some functionality! You can navigate with your arrow keys, fire a laser with your space bar, and enemies disappear when you hit them. Well done!
+À ce stade, votre jeu a quelques fonctionnalités! Vous pouvez naviguer avec vos touches fléchées, tirer un laser avec votre barre d'espace et les ennemis disparaissent lorsque vous les frappez. Bien joué!
 
 ---
 
@@ -290,7 +290,7 @@ Ajoutez une explosion! Jetez un œil aux ressources du jeu dans [le référentie
 
 ## Révision et étude personnelle
 
-Faites des expériences avec les intervalles de votre jeu à ce stade. Que se passe-t-il lorsque vous les modifiez ? En savoir plus sur les [événements de minutage JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
+Faites des expériences avec les intervalles de votre jeu à ce stade. Que se passe-t-il lorsque vous les modifiez? En savoir plus sur les [événements de minutage JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
 ## Affectation
 
