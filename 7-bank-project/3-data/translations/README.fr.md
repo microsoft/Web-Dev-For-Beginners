@@ -23,23 +23,23 @@ curl http://localhost:5000/api
 
 ---
 
-## AJAX and data fetching
+## AJAX et la récupération de données
 
-Traditional web sites update the content displayed when the user selects a link or submits data using a form, by reloading the full HTML page. Every time new data needs to be loaded, the web server returns a brand new HTML page that needs to be processed by the browser, interrupting the current user action and limiting interactions during the reload. This workflow is also called a *Multi-Page Application* or *MPA*.
+Les sites Web traditionnels mettent à jour le contenu affiché lorsque l’utilisateur sélectionne un lien ou soumet des données à l’aide d’un formulaire, en rechargeant la page HTML complète. Chaque fois que de nouvelles données doivent être chargées, le serveur Web renvoie une toute nouvelle page HTML qui doit être traitée par le navigateur, interrompant l’action actuelle de l’utilisateur et limitant les interactions pendant le rechargement. Ce flux de travail est également appelé *Application multipage* ou *AMP*.
 
-![Update workflow in a multi-page application](./images/mpa.png)
+![Mettre à jour le flux de travail dans une application multipage](../images/mpa.png)
 
-When web applications started to become more complex and interactive, a new technique called [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) emerged. This technique allows web apps to send and retrieve data from a server asynchronously using JavaScript, without having to reload the HTML page, resulting in faster updates and smoother user interactions. When new data is received from the server, the current HTML page can also be updated with JavaScript using the [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API. Over time, this approach has evolved into what is now called a [*Single-Page Application* or *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+Lorsque les applications Web ont commencé à devenir plus complexes et interactives, une nouvelle technique appelée [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) a émergé. Cette technique permet aux applications Web d’envoyer et de récupérer des données à partir d’un serveur de manière asynchrone à l’aide de JavaScript, sans avoir à recharger la page HTML, ce qui se traduit par des mises à jour plus rapides et des interactions utilisateur plus fluides. Lorsque de nouvelles données sont reçues du serveur, la page HTML actuelle peut également être mise à jour avec JavaScript à l’aide de l’API [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model). Au fil du temps, cette approche a évolué pour devenir ce qu’on appelle maintenant une [*Application d’une seule page* ou *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
 
-![Update workflow in a single-page application](./images/spa.png)
+![Mettre à jour le flux de travail dans une application d’une seule page](../images/spa.png)
 
-When AJAX was first introduced, the only API available to fetch data asynchronously was [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). But modern browsers now also implement the more convenient and powerful [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), which uses promises and is better suited to manipulate JSON data.
+Lors de l’introduction d’AJAX, la seule API disponible pour récupérer des données de manière asynchrone était [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Mais les navigateurs modernes implémentent désormais également [l’API `Fetch`](https://developer.mozilla.org/docs/Web/API/Fetch_API) plus pratique et plus puissante, qui utilise des promesses et est mieux adaptée à la manipulation des données JSON.
 
-> While all modern browsers support the `Fetch API`, if you want your web application to work on legacy or old browsers it's always a good idea to check the [compatibility table on caniuse.com](https://caniuse.com/fetch) first.
+> Bien que tous les navigateurs modernes prennent en charge l’API Fetch, si vous souhaitez que votre application Web fonctionne sur des navigateurs hérités ou anciens, il est toujours judicieux de vérifier d’abord le [tableau de compatibilité sur caniuse.com](https://caniuse.com/fetch).
 
-### Task
+### Tâche
 
-In [the previous lesson](../2-forms/README.md) we implemented the registration form to create an account. We'll now add code to login using an existing account, and fetch its data. Open the `app.js` file and add a new `login` function:
+Dans [la leçon précédente](../../2-forms/translations/README.fr.md) nous avons implémenté le formulaire d’inscription pour créer un compte. Nous allons maintenant ajouter du code pour vous connecter à l’aide d’un compte existant et récupérer ses données. Ouvrez le fichier `app.js` et ajoutez une nouvelle fonction `login`:
 
 ```js
 async function login() {
@@ -48,9 +48,9 @@ async function login() {
 }
 ```
 
-Here we start by retrieving the form element with `getElementById()`, and then we get the username from the input with `loginForm.user.value`. Every form control can be accessed by its name (set in the HTML using the `name` attribute) as a property of the form.
+Ici, nous commençons par récupérer l’élément de formulaire avec `getElementById()`, puis nous obtenons le nom d’utilisateur à partir de l’entrée avec `loginForm.user.value`. Chaque contrôle de formulaire est accessible par son nom (défini dans le code HTML à l’aide de l’attribut `name`) en tant que propriété du formulaire.
 
-In a similar fashion to what we did for the registration, we'll create another function to perform a server request, but this time for retrieving the account data:
+De la même manière que nous avons fait pour l’enregistrement, nous allons créer une autre fonction pour effectuer une demande de serveur, mais cette fois pour récupérer les données du compte:
 
 ```js
 async function getAccount(user) {
@@ -63,11 +63,11 @@ async function getAccount(user) {
 }
 ```
 
-We use the `fetch` API to request the data asynchronously from the server, but this time we don't need any extra parameters other than the URL to call, as we're only querying data. By default, `fetch` creates a [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP request, which is what we are seeking here.
+Nous utilisons l’API `fetch` pour demander les données de manière asynchrone au serveur, mais cette fois, nous n’avons pas besoin de paramètres supplémentaires autres que l’URL à appeler, car nous n’interrogeons que des données. Par défaut, `fetch` crée une requête HTTP [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET), ce que nous recherchons ici.
 
-✅ `encodeURIComponent()` is a function that escapes special characters for URL. What issues could we possibly have if we do not call this function and use directly the `user` value in the URL?
+✅ `encodeURIComponent()` est une fonction qui échappe les caractères spéciaux pour URL. Quels problèmes pourrions-nous avoir si nous n’appelons pas cette fonction et n’utilisons pas directement la valeur `user` dans l’URL?
 
-Let's now update our `login` function to use `getAccount`:
+Mettons maintenant à jour notre fonction `login` pour utiliser `getAccount`:
 
 ```js
 async function login() {
@@ -84,50 +84,50 @@ async function login() {
 }
 ```
 
-First, as `getAccount` is an asynchronous function we need to match it with the `await` keyword to wait for the server result. As with any server request, we also have to deal with error cases. For now we'll only add a log message to display the error, and come back to it later.
+Tout d’abord, comme `getAccount` est une fonction asynchrone, nous devons la faire correspondre avec le mot-clé `await` pour attendre le résultat du serveur. Comme pour toute demande de serveur, nous devons également traiter les cas d’erreur. Pour l’instant, nous allons seulement ajouter un message de journal pour afficher l’erreur, et y revenir plus tard.
 
-Then we have to store the data somewhere so we can later use it to display the dashboard informations. Since the `account` variable does not exist yet, we'll create a global variable for it at the top of our file:
+Ensuite, nous devons stocker les données quelque part afin de pouvoir les utiliser plus tard pour afficher les informations du tableau de bord. Étant donné que la variable `account` n’existe pas encore, nous allons créer une variable globale pour elle en haut de notre fichier:
 
 ```js
 let account = null;
 ```
 
-After the user data is saved into a variable we can navigate from the *login* page to the *dashboard* using the `navigate()` function we already have.
+Une fois les données utilisateur enregistrées dans une variable, nous pouvons naviguer de la page *login* au *dashboard* en utilisant la fonction `navigate()` que nous avons déjà.
 
-Finally, we need to call our `login` function when the login form is submitted, by modifying the HTML:
+Enfin, nous devons appeler notre fonction `login` lorsque le formulaire de login est soumis, en modifiant le HTML:
 
 ```html
 <form id="loginForm" action="javascript:login()">
 ```
 
-Test that everything is working correctly by registering a new account and trying to login using the same account.
+Vérifiez que tout fonctionne correctement en enregistrant un nouveau compte et en essayant de vous connecter à l’aide du même compte.
 
-Before moving on to the next part, we can also complete the `register` function by adding this at the bottom of the function:
+Avant de passer à la partie suivante, nous pouvons également compléter la fonction `register` en ajoutant ceci au bas de la fonction:
 
 ```js
 account = result;
 navigate('/dashboard');
 ```
 
-✅ Did you know that by default, you can only call server APIs from the *same domain and port* than the web page you are viewing? This is security mechanism enforced by browsers. But wait, our web app is running on `localhost:3000` whereas the server API is running on ` localhost:5000`, why does it work? By using a technique called [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), it is possible to perform cross-origin HTTP requests if the server adds special headers to the response, allowing exceptions for specific domains.
+✅ Saviez-vous que par défaut, vous ne pouvez appeler les API du serveur qu’à partir du *même domaine et port* que la page Web que vous consultez? Il s’agit d’un mécanisme de sécurité appliqué par les navigateurs. Mais attendez, notre application web s’exécute sur 'localhost:3000' alors que l’API du serveur s’exécute sur `localhost:3000`, pourquoi cela fonctionne-t-il? En utilisant une technique appelée [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), il est possible d’effectuer des requêtes HTTP inter-origines si le serveur ajoute des en-têtes spéciaux à la réponse, ce qui permet des exceptions pour des domaines spécifiques.
 
-> Learn more about APIs by taking this [lesson](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-13441-cxa)
+> En savoir plus sur les API en suivant cette [leçon](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-13441-cxa)
 
-## Update HTML to display data
+## Mettre à jour le code HTML pour afficher les données
 
-Now that we have the user data, we have to update the existing HTML to display it. We already know how to retrieve an element from the DOM using for example `document.getElementById()`. After you have a base element, here are some APIs you can use to modify it or add child elements to it:
+Maintenant que nous avons les données utilisateur, nous devons mettre à jour le code HTML existant pour l’afficher. Nous savons déjà comment récupérer un élément du DOM en utilisant par exemple `document.getElementById()`. Une fois que vous avez un élément de base, voici quelques API que vous pouvez utiliser pour le modifier ou y ajouter des éléments enfants:
 
-- Using the [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) property you can change the text of an element. Note that changing this value removes all the element's children (if there's any) and replaces it with the text provided. As such, it's also an efficient method to remove all children of a given element by assigning an empty string `''` to it.
+- En utilisant la propriété [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent), vous pouvez modifier le texte d’un élément. Notez que la modification de cette valeur supprime tous les enfants de l’élément (le cas échéant) et le remplace par le texte fourni. En tant que tel, c’est aussi une méthode efficace pour supprimer tous les enfants d’un élément donné en lui attribuant une chaîne vide `''` à celui-ci.
 
-- Using [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) along with the [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) method you can create and attach one or more new child elements.
+- En utilisant [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) avec la méthode [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append), vous pouvez créer et attacher un ou plusieurs nouveaux éléments enfants.
 
-✅ Using the [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) property of an element it's also possible to change its HTML contents, but this one should be avoided as it's vulnerable to [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting) attacks.
+✅ En utilisant la propriété [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) d’un élément, il est également possible de modifier son contenu HTML, mais celui-ci doit être évité car il est vulnérable aux attaques [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting).
 
-### Task
+### Tâche
 
-Before moving on to the dashboard screen, there's one more thing we should do on the *login* page. Currently, if you try to login with a username that does not exist, a message is shown in the console but for a normal user nothing changes and you don't know what's going on.
+Avant de passer à l’écran du tableau de bord, il y a encore une chose que nous devrions faire sur la page *connexion*. Actuellement, si vous essayez de vous connecter avec un nom d’utilisateur qui n’existe pas, un message s’affiche dans la console, mais pour un utilisateur normal, rien ne change et vous ne savez pas ce qui se passe.
 
-Let's add a placeholder element in the login form where we can display an error message if needed. A good place would be just before the login `<button>`:
+Ajoutons un élément d’espace réservé dans le formulaire de connexion où nous pouvons afficher un message d’erreur si nécessaire. Un bon endroit serait juste avant la connexion `<button>`:
 
 ```html
 ...
@@ -136,9 +136,9 @@ Let's add a placeholder element in the login form where we can display an error 
 ...
 ```
 
-This `<div>` element is empty, meaning that nothing will be displayed on the screen until we add some content to it. We also give it an `id` so we can retrieve it easily with JavaScript.
+Cet élément `<div>` est vide, ce qui signifie que rien ne sera affiché à l’écran tant que nous n’y aurons pas ajouté du contenu. Nous lui donnons également un `id` afin que nous puissions le récupérer facilement avec JavaScript.
 
-Go back to the `app.js` file and create a new helper function `updateElement`:
+Revenez au fichier `app.js` et créez une nouvelle fonction d’assistance `updateElement`:
 
 ```js
 function updateElement(id, text) {
@@ -147,7 +147,7 @@ function updateElement(id, text) {
 }
 ```
 
-This one is quite straightforward: given an element *id* and *text*, it will update the text content of the DOM element with the matching `id`. Let's use this method in place of the previous error message in the `login` function:
+Celui-ci est assez simple: selon un élément *id* et *text*, il mettra à jour le contenu textuel de l’élément DOM avec l'`id` correspondant. Utilisons cette méthode à la place du message d’erreur précédent dans la fonction `login`:
 
 ```js
 if (data.error) {
@@ -155,23 +155,23 @@ if (data.error) {
 }
 ```
 
-Now if you try to login with an invalid account, you should see something like this:
+Maintenant, si vous essayez de vous connecter avec un compte non valide, vous devriez voir quelque chose comme ceci:
 
-![Screenshot showing the error message displayed during login](./images/login-error.png)
+![Capture d’écran montrant le message d’erreur affiché lors de la connexion](../images/login-error.png)
 
-Now we have error text that shows up visually, but if you try it with a screen reader you'll notice that nothing is announced. In order for text that is dynamically added to a page to be announced by screen readers, it will need to use something called a [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Here we're going to use a specific type of live region called an alert:
+Maintenant, nous avons un texte d’erreur qui apparaît visuellement, mais si vous l’essayez avec un lecteur d’écran, vous remarquerez que rien n’est annoncé. Pour que le texte ajouté dynamiquement à une page soit annoncé par les lecteurs d’écran, il devra utiliser quelque chose appelé [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Ici, nous allons utiliser un type spécifique de région en direct (live region) appelée alerte:
 
 ```html
 <div id="loginError" role="alert"></div>
 ```
 
-Implement the same behavior for the `register` function errors (don't forget to update the HTML).
+Implémentez le même comportement pour les erreurs de la fonction `register` (n’oubliez pas de mettre à jour le code HTML).
 
-## Display information on the dashboard
+## Afficher les informations sur le tableau de bord
 
-Using the same techniques we've just seen, we'll also take care of displaying the account information on the dashboard page.
+En utilisant les mêmes techniques que nous venons de voir, nous nous occuperons également d’afficher les informations du compte sur la page du tableau de bord.
 
-This is what an account object received from the server looks like:
+Voici à quoi ressemble un objet de compte reçu du serveur:
 
 ```json
 {
@@ -187,11 +187,11 @@ This is what an account object received from the server looks like:
 }
 ```
 
-> Note: to make your life easier, you can use the pre-existing `test` account that's already populated with data.
+> Remarque: pour vous faciliter la vie, vous pouvez utiliser le compte `test` préexistant qui est déjà rempli de données.
 
-### Task
+### Tâche
 
-Let's start by replacing the "Balance" section in the HTML to add placeholder elements:
+Commençons par remplacer la section "Balance" dans le code HTML pour ajouter des éléments d’espace réservé:
 
 ```html
 <section>
@@ -199,15 +199,15 @@ Let's start by replacing the "Balance" section in the HTML to add placeholder el
 </section>
 ```
 
-We'll also add a new section just below to display the account description:
+Nous ajouterons également une nouvelle section juste en dessous pour afficher la description du compte:
 
 ```html
 <h2 id="description"></h2>
 ```
 
-✅ Since the account description functions as a title for the content underneath it, it is marked up semantically as a heading. Learn more about how [heading structure](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) is important for accessibility, and take a critical look at the page to determine what else could be a heading.
+✅ Étant donné que la description du compte fonctionne comme un titre pour le contenu en dessous, elle est marquée sémantiquement comme un en-tête. Apprenez-en davantage sur l’importance de [structure de titre](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) pour l’accessibilité, et jetez un coup d’œil critique à la page pour déterminer ce qui pourrait être un autre titre.
 
-Next, we'll create a new function in `app.js` to fill in the placeholder:
+Ensuite, nous allons créer une nouvelle fonction dans `app.js` pour remplir l’espace réservé:
 
 ```js
 function updateDashboard() {
@@ -221,13 +221,13 @@ function updateDashboard() {
 }
 ```
 
-First, we check that we have the account data we need before going further. Then we use the `updateElement()` function we created earlier to update the HTML.
+Tout d’abord, nous vérifions que nous avons les données de compte dont nous avons besoin avant d’aller plus loin. Ensuite, nous utilisons la fonction `updateElement()` que nous avons créée précédemment pour mettre à jour le code HTML.
 
-> To make the balance display prettier, we use the method [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) to force displaying the value with 2 digits after the decimal point.
+> Pour rendre l’affichage de la balance plus joli, nous utilisons la méthode [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) pour forcer l’affichage de la valeur avec 2 chiffres après la virgule.
 
-Now we need to call our `updateDashboard()` function everytime the dashboard is loaded. If you already finished the [lesson 1 assignment](../1-template-route/assignment.md) this should be straightforward, otherwise you can use the following implementation.
+Maintenant, nous devons appeler notre fonction `updateDashboard()` chaque fois que le tableau de bord est chargé. Si vous avez déjà terminé le [devoir de la leçon 1](../../1-template-route/translations/README.fr.md) cela devrait être simple, sinon vous pouvez utiliser l’implémentation suivante.
 
-Add this code to the end of the `updateRoute()` function:
+Ajoutez ce code à la fin de la fonction `updateRoute()`:
 
 ```js
 if (typeof route.init === 'function') {
@@ -235,7 +235,7 @@ if (typeof route.init === 'function') {
 }
 ```
 
-And update the routes definition with:
+Et mettez à jour la définition des itinéraires avec:
 
 ```js
 const routes = {
@@ -244,17 +244,17 @@ const routes = {
 };
 ```
 
-With this change, every time the dashboard page is displayed, the function `updateDashboard()` is called. After a login, you should then be able to see the account balance, currency and description.
+Avec ce changement, chaque fois que la page du tableau de bord est affichée, la fonction `updateDashboard()` est appelée. Après une connexion, vous devriez alors être en mesure de voir le solde du compte, la devise et la description.
 
-## Create table rows dynamically with HTML templates
+## Créer dynamiquement des lignes de tableau avec des modèles HTML
 
-In the [first lesson](../1-template-route/README.md) we used HTML templates along with the [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) method to implement the navigation in our app. Templates can also be smaller and used to dynamically populate repetitive parts of a page.
+Dans la [première leçon](../../1-template-route/translations/README.fr.md) nous avons utilisé des modèles HTML avec la méthode [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) pour implémenter la navigation dans notre application. Les modèles peuvent également être plus petits et utilisés pour remplir dynamiquement des parties répétitives d’une page.
 
-We'll use a similar approach to display the list of transactions in the HTML table.
+Nous utiliserons une approche similaire pour afficher la liste des transactions dans le tableau HTML.
 
-### Task
+### Tâche
 
-Add a new template in the HTML `<body>`:
+Ajoutez un nouveau modèle dans le code HTML `<body>`:
 
 ```html
 <template id="transaction">
@@ -266,15 +266,15 @@ Add a new template in the HTML `<body>`:
 </template>
 ```
 
-This template represents a single table row, with the 3 columns we want to populate: *date*, *object* and *amount* of a transaction.
+Ce modèle représente une seule ligne de tableau, avec les 3 colonnes que nous voulons remplir: *date*, *object* et *amount* d’une transaction.
 
-Then, add this `id` property to the `<tbody>` element of the table within the dashboard template to make it easier to find using JavaScript:
+Ensuite, ajoutez cette propriété `id` à l’élément `<tbody>` du tableau dans le modèle de tableau de bord pour faciliter la recherche à l’aide de JavaScript:
 
 ```html
 <tbody id="transactions"></tbody>
 ```
 
-Our HTML is ready, let's switch to JavaScript code and create a new function `createTransactionRow`:
+Notre HTML est prêt, passons au code JavaScript et créons une nouvelle fonction `createTransactionRow`:
 
 ```js
 function createTransactionRow(transaction) {
@@ -288,7 +288,7 @@ function createTransactionRow(transaction) {
 }
 ```
 
-This function does exactly what its names implies: using the template we created earlier, it creates a new table row and fills in its contents using transaction data. We'll use this in our `updateDashboard()` function to populate the table:
+Cette fonction fait exactement ce que ses noms impliquent: en utilisant le modèle que nous avons créé précédemment, elle crée une nouvelle ligne de tableau et remplit son contenu à l’aide de données de transaction. Nous l’utiliserons dans notre fonction `updateDashboard()` pour remplir la table:
 
 ```js
 const transactionsRows = document.createDocumentFragment();
@@ -299,9 +299,9 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-Here we use the method [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) that creates a new DOM fragment on which we can work, before finally attaching it to our HTML table.
+Ici, nous utilisons la méthode [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) qui crée un nouveau fragment DOM sur lequel nous pouvons travailler, avant de finalement l’attacher à notre tableau HTML.
 
-There's still one more thing we have to do before this code can work, as our `updateElement()` function currently supports text content only. Let's change its code a bit:
+Il reste encore une chose à faire avant que ce code puisse fonctionner, car notre fonction `updateElement()` ne prend actuellement en charge que le contenu texte. Changeons un peu son code:
 
 ```js
 function updateElement(id, textOrNode) {
@@ -311,9 +311,9 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-We use the [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) method as it allows to attach either text or [DOM Nodes](https://developer.mozilla.org/docs/Web/API/Node) to a parent element, which is perfect for all our use cases.
+Nous utilisons la méthode [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) car elle permet d’attacher du texte ou des [nœuds DOM](https://developer.mozilla.org/docs/Web/API/Node) à un élément parent, ce qui est parfait pour tous nos cas d’utilisation.
 
-If you try using the `test` account to login, you should now see a transaction list on the dashboard 🎉.
+Si vous essayez d’utiliser le compte `test` pour vous connecter, vous devriez maintenant voir une liste de transactions sur le tableau de bord 🎉.
 
 ---
 
