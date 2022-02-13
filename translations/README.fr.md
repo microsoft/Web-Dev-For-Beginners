@@ -12,13 +12,13 @@
 
 # Développement Web pour débutants - Programme
 
-Azure Cloud Advocates de Microsoft a le plaisir de proposer un programme de 12 semaines et 24 leçons sur les bases de JavaScript, CSS et HTML. Chaque leçon comprend des quiz avant et après la leçon, des instructions écrites pour terminer la leçon, une solution, un devoir et plus encore. Notre pédagogie basée sur des projets vous permet d’apprendre tout en construisant, un moyen éprouvé pour que de nouvelles compétences puissent "coller".
+Azure Cloud Advocates de Microsoft ont le plaisir de vous proposer un programme de 12 semaines et 24 leçons sur les bases de JavaScript, CSS et HTML. Chaque leçon comprend des quiz avant et après la leçon, des instructions écrites pour terminer la leçon, une solution, un devoir et plus encore. Notre pédagogie basée sur des projets vous permet d’apprendre tout en construisant, un moyen éprouvé pour que de nouvelles compétences puissent 'coller'.
 
 **Un grand merci à nos auteurs Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees et l’artiste de sketchnote Tomomi Imura!**
 
 # Pour commencer
 
-> **Instituteurs**, nous avons [inclus quelques suggestions] (pour teachers.md) sur la façon d’utiliser ce programme. Nous aimerions avoir vos commentaires [dans notre forum de discussion] (https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Instituteurs**, nous avons [inclus quelques suggestions](for-teachers.fr.md) sur la façon d’utiliser ce programme. Nous aimerions avoir vos commentaires [dans notre forum de discussion](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
 > **Elèves**, pour utiliser ce programme par vous-même, effectuer un Fork l’ensemble du dépôt et compléter les exercices par vous-même, en commençant par un quiz préalable, puis en lisant le cours et en complétant le reste des activités. Essayez de créer les projets en comprenant les leçons plutôt que de copier le code de la solution; toutefois, ce code est disponible dans les dossiers /solutions de chaque leçon orientée projet. Une autre idée serait de former un groupe d’étude avec des amis et de parcourir le contenu ensemble. Pour une étude plus approfondie, nous recommandons [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa) et en regardant les vidéos mentionnées ci-dessous.
 
@@ -26,7 +26,7 @@ Azure Cloud Advocates de Microsoft a le plaisir de proposer un programme de 12 s
 
 Gif par [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
 
-🎥 >  Cliquez sur l’image ci-dessus pour une vidéo sur le projet et les personnes qui l’ont créé!
+> 🎥 Cliquez sur l’image ci-dessus pour une vidéo sur le projet et les personnes qui l’ont créé!
 
 ## Pédagogie
 
