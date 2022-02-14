@@ -10,9 +10,11 @@ This lesson covers the basics of JavaScript, the language that provides interact
 
 > You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-variables/?WT.mc_id=academic-13441-cxa)!
 
-[![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
+[![Variables](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Variables in JavaScript")
 
-> 🎥 Click the image above for a video about data types
+[![Data Types in JavaScript](https://img.youtube.com/vi/rEHV3fFMfn0/0.jpg)](https://youtube.com/watch?v=rEHV3fFMfn0 "Data Types in JavaScript")
+
+> 🎥 Click the images above for videos about variables and data types
 
 Let's start with variables and the data types that populate them!
 ## Variables
