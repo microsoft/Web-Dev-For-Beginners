@@ -20,10 +20,10 @@
 
 創造應用時，這邊有[數種事件](https://developer.mozilla.org/docs/Web/Events)提供給你監聽。基本上，使用者在網頁上做的任何行為都會觸發事件，你需要花大量時間、大量精力確保它們有相對應的使用者體驗。幸運的是，你只需要處理少部分的事件類型。這邊是一些常見的事件類型，我們會使用其中兩種來建立遊戲：
 
-- [點擊](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event)： 使用者點擊物件，通常會是按鈕或是連結。
-- [右鍵選單](https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event)： 使用者點擊滑鼠右鍵。
-- [選取](https://developer.mozilla.org/en-US/docs/Web/API/Element/select_event)： 使用者標記特定文字。
-- [輸入](https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event)： 使用者輸入文字。
+- [點擊](https://developer.mozilla.org/docs/Web/API/Element/click_event)： 使用者點擊物件，通常會是按鈕或是連結。
+- [右鍵選單](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event)： 使用者點擊滑鼠右鍵。
+- [選取](https://developer.mozilla.org/docs/Web/API/Element/select_event)： 使用者標記特定文字。
+- [輸入](https://developer.mozilla.org/docs/Web/API/Element/input_event)： 使用者輸入文字。
 
 ## 建立遊戲
 
@@ -332,7 +332,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## 複習與自學
 
-在瀏覽器上閱讀[所有開發者可運用的事件](https://developer.mozilla.org/en-US/docs/Web/Events)，想想你能在什麼樣的場合使用各個事件。
+在瀏覽器上閱讀[所有開發者可運用的事件](https://developer.mozilla.org/docs/Web/Events)，想想你能在什麼樣的場合使用各個事件。
 
 ## 作業
 

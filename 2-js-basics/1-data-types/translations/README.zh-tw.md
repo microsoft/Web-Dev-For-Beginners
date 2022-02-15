@@ -179,7 +179,7 @@ let myString2 = "World";
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ 布林值 `true` 亦有廣義的 'truthy' 數值。有趣的是，在 JavaScript 中，[除非被定義為 falsy，其餘的數值都會被當作是 truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)。
+✅ 布林值 `true` 亦有廣義的 'truthy' 數值。有趣的是，在 JavaScript 中，[除非被定義為 falsy，其餘的數值都會被當作是 truthy](https://developer.mozilla.org/docs/Glossary/Truthy)。
 
 ---
 

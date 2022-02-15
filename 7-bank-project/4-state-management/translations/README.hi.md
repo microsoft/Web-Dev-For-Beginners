@@ -86,9 +86,9 @@ const account = state.account;
 
 `state` वस्तु में किए गए परिवर्तनों से बचने के लिए, यह [*अपरिवर्तनीय*](https://en.wikipedia.org/wiki/Immutable_object) पर विचार करने के लिए एक अच्छा अभ्यास है, जिसका अर्थ है कि इसे बिल्कुल भी संशोधित नहीं किया जा सकता है। इसका अर्थ यह भी है कि यदि आप इसमें कुछ भी बदलना चाहते हैं तो आपको एक नया स्टेट ऑब्जेक्ट बनाना होगा। ऐसा करने से, आप संभावित रूप से अवांछित [साइड इफेक्ट्स](https://en.wikipedia.org/wiki/Side_effect_(computer_science)) के बारे में एक सुरक्षा का निर्माण करते हैं, और अपने ऐप में नई सुविधाओं के लिए संभावनाएं खोलते हैं जैसे कि undo/redo को लागू करना, जबकि डिबग करना भी आसान है। उदाहरण के लिए, आप स्टेट में किए गए प्रत्येक परिवर्तन को लॉग कर सकते हैं और बग के स्रोत को समझने के लिए परिवर्तनों का इतिहास रख सकते हैं।
 
-जावास्क्रिप्ट में, आप एक अपरिवर्तनीय संस्करण एक ऑब्जेक्ट बनाने के लिए [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) का उपयोग कर सकते हैं । यदि आप एक अपरिवर्तनीय वस्तु में परिवर्तन करने की कोशिश करते हैं, तो एक अपवाद उठाया जाएगा।
+जावास्क्रिप्ट में, आप एक अपरिवर्तनीय संस्करण एक ऑब्जेक्ट बनाने के लिए [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) का उपयोग कर सकते हैं । यदि आप एक अपरिवर्तनीय वस्तु में परिवर्तन करने की कोशिश करते हैं, तो एक अपवाद उठाया जाएगा।
 
-✅ क्या आप एक *उथले* और एक *गहरी* अपरिवर्तनीय वस्तु के बीच का अंतर जानते हैं? आप इसके बारे में [यहां](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze) पढ़ सकते हैं.
+✅ क्या आप एक *उथले* और एक *गहरी* अपरिवर्तनीय वस्तु के बीच का अंतर जानते हैं? आप इसके बारे में [यहां](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze) पढ़ सकते हैं.
 
 ### टास्क
 
@@ -103,7 +103,7 @@ function updateState(property, newData) {
 }
 ```
 
-इस फ़ंक्शन में, हम [*spread (`...`) operator*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals) का उपयोग करके पिछले स्टेट से एक नया स्टेट ऑब्जेक्ट और कॉपी डेटा बना रहे हैं। फिर हम नए डेटा के साथ स्टेट ऑब्जेक्ट की एक विशेष प्रॉपर्टी को ओवरराइड करते हैं [ब्रैकेट नोटेशन] `[property]` असाइनमेंट के लिए। अंत में, हम `Object.freeze()` का उपयोग करके संशोधनों को रोकने के लिए ऑब्जेक्ट को लॉक करते हैं। हमारे पास अब केवल स्टेट में संग्रहीत `अकाउंट` प्रॉपर्टी है, लेकिन इस दृष्टिकोण के साथ आप स्टेट में जितनी आवश्यकता हो उतने गुण जोड़ सकते हैं।
+इस फ़ंक्शन में, हम [*spread (`...`) operator*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals) का उपयोग करके पिछले स्टेट से एक नया स्टेट ऑब्जेक्ट और कॉपी डेटा बना रहे हैं। फिर हम नए डेटा के साथ स्टेट ऑब्जेक्ट की एक विशेष प्रॉपर्टी को ओवरराइड करते हैं [ब्रैकेट नोटेशन] `[property]` असाइनमेंट के लिए। अंत में, हम `Object.freeze()` का उपयोग करके संशोधनों को रोकने के लिए ऑब्जेक्ट को लॉक करते हैं। हमारे पास अब केवल स्टेट में संग्रहीत `अकाउंट` प्रॉपर्टी है, लेकिन इस दृष्टिकोण के साथ आप स्टेट में जितनी आवश्यकता हो उतने गुण जोड़ सकते हैं।
 
 हम यह भी सुनिश्चित करेंगे कि प्रारंभिक अवस्था भी जम गई है, यह सुनिश्चित करने के लिए `state` आरंभीकरण को अद्यतन करेगा:
 
@@ -156,12 +156,12 @@ function logout() {
 
 एक अन्य विकल्प डेटा भंडारण के लिए कई ब्राउज़र एपीआई में से एक का उपयोग करना है। उनमें से दो विशेष रूप से दिलचस्प हैं:
 
-- [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage): एक [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) विभिन्न सत्रों में वर्तमान वेब साइट के लिए विशिष्ट डेटा को बनाए रखने की अनुमति देते हैं। इसमें सहेजा गया डेटा कभी समाप्त नहीं होता है।
-- [`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage): यह एक `sessionStorage` की तरह ही काम करता है, सिवाय इसके कि इसमें संग्रहीत डेटा सत्र समाप्त होने पर (जब ब्राउज़र बंद हो जाता है) साफ हो जाता है।
+- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): एक [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) विभिन्न सत्रों में वर्तमान वेब साइट के लिए विशिष्ट डेटा को बनाए रखने की अनुमति देते हैं। इसमें सहेजा गया डेटा कभी समाप्त नहीं होता है।
+- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): यह एक `sessionStorage` की तरह ही काम करता है, सिवाय इसके कि इसमें संग्रहीत डेटा सत्र समाप्त होने पर (जब ब्राउज़र बंद हो जाता है) साफ हो जाता है।
 
-यदि आप जटिल वस्तुओं को संग्रहीत करना चाहते हैं, तो आपको इसे [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) प्रारूप [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) का उपयोग करके क्रमबद्ध करना होगा। 
+यदि आप जटिल वस्तुओं को संग्रहीत करना चाहते हैं, तो आपको इसे [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) प्रारूप [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) का उपयोग करके क्रमबद्ध करना होगा। 
 
-✅ यदि आप एक वेब ऐप बनाना चाहते हैं जो सर्वर के साथ काम नहीं करता है, तो [`IndexedDB` API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) का उपयोग करके क्लाइंट पर डेटाबेस बनाना भी संभव है। यह एक उन्नत उपयोग मामलों के लिए आरक्षित है या यदि आपको महत्वपूर्ण मात्रा में डेटा संग्रहीत करने की आवश्यकता है, क्योंकि यह उपयोग करने के लिए अधिक जटिल है।
+✅ यदि आप एक वेब ऐप बनाना चाहते हैं जो सर्वर के साथ काम नहीं करता है, तो [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) का उपयोग करके क्लाइंट पर डेटाबेस बनाना भी संभव है। यह एक उन्नत उपयोग मामलों के लिए आरक्षित है या यदि आपको महत्वपूर्ण मात्रा में डेटा संग्रहीत करने की आवश्यकता है, क्योंकि यह उपयोग करने के लिए अधिक जटिल है।
 
 ### टास्क
 

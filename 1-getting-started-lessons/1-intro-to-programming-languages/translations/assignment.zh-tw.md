@@ -2,7 +2,7 @@
 
 ## 說明
 
-網頁開發人員所需要使用的工具套件可以參考 [MDN Client端技術開發文件](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)。 請選擇三種未被本課程提及的工具，試解釋為何網頁開發人員使用它，並搜尋其相關的工具與它的技術文件。這些資料不能出現在前述的 MDN 文件當中。
+網頁開發人員所需要使用的工具套件可以參考 [MDN Client端技術開發文件](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)。 請選擇三種未被本課程提及的工具，試解釋為何網頁開發人員使用它，並搜尋其相關的工具與它的技術文件。這些資料不能出現在前述的 MDN 文件當中。
 
 ## 學習評量
 

@@ -248,7 +248,7 @@ h1 {
 
 ![盆栽盒成果圖](../images/terrarium-final.png)
 
-在做課後測驗前，請先前往下列的學習頁面：[用 CSS 造型化你的網頁應用](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
+在做課後測驗前，請先前往下列的學習頁面：[用 CSS 造型化你的網頁應用](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
 
 ## 課後測驗
 

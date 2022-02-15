@@ -2,7 +2,7 @@
 
 ## Maagizo
 
-Msanidi wa wavuti anaweza kuhitaji zana nyingi ambazo zinaweza kupatikana kwenye [Hati ya MDN ya Utengenezaji Upande wa Mteja](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview). 
+Msanidi wa wavuti anaweza kuhitaji zana nyingi ambazo zinaweza kupatikana kwenye [Hati ya MDN ya Utengenezaji Upande wa Mteja](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview). 
 
 Chagua zana 3 ambazo hazijafunikwa kwenye somo, eleza ni kwanini msanidi wa wavuti atatumia, pata zana ambayo iko kwenye kitengo hiki, na ushiriki nyaraka zake. Usitumie zana sawa ya sampuli kwenye hati za MDN.
 

@@ -116,7 +116,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ## 🚀 挑戰
 
-除了 for 迴圈與 while 迴圈外，仍有許多使用矩陣與迴圈的方法：[forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 與 [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。用上列其中一種語法改寫你的迴圈。
+除了 for 迴圈與 while 迴圈外，仍有許多使用矩陣與迴圈的方法：[forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) 與 [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。用上列其中一種語法改寫你的迴圈。
 
 ## 課後測驗
 
@@ -125,7 +125,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 ## 複習與自學
 
 在 JavaScript 中，矩陣有許多控制的方法，它們在處理資料上有很大的幫助。
-[學習這些方法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)，如 push、pop、slice 和 splice，試著套用在你所創造的矩陣上。 
+[學習這些方法](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)，如 push、pop、slice 和 splice，試著套用在你所創造的矩陣上。 
 
 ## 作業
 

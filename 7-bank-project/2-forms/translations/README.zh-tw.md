@@ -27,7 +27,7 @@ curl http://localhost:5000/api
 
 `<form>` 元素打包了 HTML 文件中使用者輸入與提交資料的地方。有許多種使用者介面(UI)以表單的方式呈現，最常見的內容會包含 `<input>` 與 `<button>` 元素。
 
-有許多種 `<input>` 的[種類](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)，舉例來說，若要建立使用者輸入使用者名稱的地方，你可以：
+有許多種 `<input>` 的[種類](https://developer.mozilla.org/docs/Web/HTML/Element/input)，舉例來說，若要建立使用者輸入使用者名稱的地方，你可以：
 
 ```html
 <input id="username" name="username" type="text">
@@ -35,9 +35,9 @@ curl http://localhost:5000/api
 
 `name` 屬性同時亦是表單傳輸資料的名稱。`id` 屬性是用來與 `<label>` 做表單控制(form control)的連接。
 
-> 花點時間看看 [`<input>` 種類](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)的清單與[其他表單控制](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls)，讓你在建立使用者介面時，有全部供你使用的原生 UI 元素可以參考。
+> 花點時間看看 [`<input>` 種類](https://developer.mozilla.org/docs/Web/HTML/Element/input)的清單與[其他表單控制](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls)，讓你在建立使用者介面時，有全部供你使用的原生 UI 元素可以參考。
 
-✅ 紀錄一下 `<input>` 是種[空元素](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)，你*不應該*在它後面加上對應的結束標籤。然而，你仍然可以在它的後面使用 `<input/>`，這沒有強制規定。
+✅ 紀錄一下 `<input>` 是種[空元素](https://developer.mozilla.org/docs/Glossary/Empty_element)，你*不應該*在它後面加上對應的結束標籤。然而，你仍然可以在它的後面使用 `<input/>`，這沒有強制規定。
 
 表單中的 `<button>` 元素是有些特別。如果你沒有指定它的 `type` 屬性，它會在你輸入文字時，自動地提交表單內容給伺服器。這邊有一些你可以設定的 `type` 內容：
 
@@ -68,7 +68,7 @@ curl http://localhost:5000/api
 - 連結標籤到表單控制上，它能幫助使用者的額外工具，好比說螢幕報讀器，理解接下來該提供何種資料。
 - 你可以點擊標籤，它會跳轉到相對應的輸入框，讓使用觸控型裝置的用戶更容易操作。
 
-> [網頁親和力](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility)是非常重要但常被忽視的主題。感謝[語義化 HTML 元素](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML)的幫助，建立無障礙的網頁內容變得更加容易。你可以[閱讀更多有關網頁親和力的文章](https://developer.mozilla.org/en-US/docs/Web/Accessibility)，避免觸犯到常見的錯誤並成為負責任的開發者。
+> [網頁親和力](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility)是非常重要但常被忽視的主題。感謝[語義化 HTML 元素](https://developer.mozilla.org/docs/Learn/Accessibility/HTML)的幫助，建立無障礙的網頁內容變得更加容易。你可以[閱讀更多有關網頁親和力的文章](https://developer.mozilla.org/docs/Web/Accessibility)，避免觸犯到常見的錯誤並成為負責任的開發者。
 
 現在，我們加入第二張表單給用戶註冊使用，就像前一張一樣：
 
@@ -158,8 +158,8 @@ function register() {
 }
 ```
 
-我們使用 `getElementById()` 蒐集表單的元素，使用 [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) 協助從表單控制中取出 key/value 的數據對。
-之後，利用 [`Object.fromEntries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) 轉換資料成正規物件，最後再將檔案轉成 [JSON](https://www.json.org/json-en.html) ── 一個在網路上常見的資料交換格式。
+我們使用 `getElementById()` 蒐集表單的元素，使用 [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) 協助從表單控制中取出 key/value 的數據對。
+之後，利用 [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) 轉換資料成正規物件，最後再將檔案轉成 [JSON](https://www.json.org/json-en.html) ── 一個在網路上常見的資料交換格式。
 
 現在資料已經準備提交給伺服器了。建立新函式 `createAccount`：
 
@@ -178,7 +178,7 @@ async function createAccount(account) {
 }
 ```
 
-這個函式做了什麼？首先，注意關鍵字 `async`，代表著函式包含了[**非同步化程式**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)。在與關鍵字 `await` 一起使用時，它會在繼續運行程式前，等待非同步的程式被執行，就像等待伺服器回應一樣。
+這個函式做了什麼？首先，注意關鍵字 `async`，代表著函式包含了[**非同步化程式**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function)。在與關鍵字 `await` 一起使用時，它會在繼續運行程式前，等待非同步的程式被執行，就像等待伺服器回應一樣。
 
 這邊有關於使用 `async/await` 的影片：
 
@@ -222,7 +222,7 @@ async function register() {
 }
 ```
 
-過程有些冗長，但我們達成了！當你開啟[瀏覽器開發者工具](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)，試著註冊新的帳戶，你應該能看到網頁並沒有改變，但命令欄中會顯示帳戶成功註冊的訊息。
+過程有些冗長，但我們達成了！當你開啟[瀏覽器開發者工具](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools)，試著註冊新的帳戶，你應該能看到網頁並沒有改變，但命令欄中會顯示帳戶成功註冊的訊息。
 
 ![瀏覽器命令欄中顯示紀錄訊息之截圖](../images/browser-console.png)
 
@@ -230,15 +230,15 @@ async function register() {
 
 ## 資料驗證
 
-試著在註冊新帳戶時，不輸入你的使用者名稱，你會發現伺服器回傳了錯誤狀態訊息：[400 (Bad Request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).)。
+試著在註冊新帳戶時，不輸入你的使用者名稱，你會發現伺服器回傳了錯誤狀態訊息：[400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).)。
 
-在傳輸資料給伺服器之前，最好先[驗證表單資料](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)，以確保我們傳送合法的網頁請求。 HTML5 表單控制內建包含了驗證方法，使用了多樣的屬性： controls provides built-in validation using various attributes:
+在傳輸資料給伺服器之前，最好先[驗證表單資料](https://developer.mozilla.org/docs/Learn/Forms/Form_validation)，以確保我們傳送合法的網頁請求。 HTML5 表單控制內建包含了驗證方法，使用了多樣的屬性： controls provides built-in validation using various attributes:
 
 - `required`： 輸入框必須被填寫，否則表單不能被提交。
 - `minlength` 和 `maxlength`： 定義輸入框的文字下限與文字上限。
 - `min` 和 `max`： 定義輸入框的數字下限與數字上限。
-- `type`： 定義輸入框內的資料格式，例如`數字`、`email`、`檔案`或是[其他內建的格式](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)。這個屬性可能會改變表單控制的表現方法。
-- `pattern`： 允許定義[正規表示法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)的字串，測試輸入的內容是否滿足它。
+- `type`： 定義輸入框內的資料格式，例如`數字`、`email`、`檔案`或是[其他內建的格式](https://developer.mozilla.org/docs/Web/HTML/Element/input)。這個屬性可能會改變表單控制的表現方法。
+- `pattern`： 允許定義[正規表示法](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions)的字串，測試輸入的內容是否滿足它。
 
 > 提示：你可以自定義表單控制的呈現方法，利用 CSS pseudo-classes `:valid` 和 `:invalid` 判斷內容是否合理。
 

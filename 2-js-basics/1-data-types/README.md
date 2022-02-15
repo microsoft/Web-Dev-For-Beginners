@@ -8,7 +8,7 @@
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web.
 
-> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-variables/?WT.mc_id=academic-13441-cxa)!
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-variables/?WT.mc_id=academic-13441-cxa)!
 
 [![Variables](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Variables in JavaScript")
 

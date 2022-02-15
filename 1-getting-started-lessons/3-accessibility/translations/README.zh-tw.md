@@ -32,7 +32,7 @@
 
 ### 放大器
 
-另一項為視覺障礙者提供的輔助程式為放大器。最常見的定點放大功能，可以藉由 `Control + 加號(+)` 或降低螢幕解析度來完成。這個步驟會重新縮放整個網頁，確保網頁的[互動式設計](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)是縮放頁面重要的一環。
+另一項為視覺障礙者提供的輔助程式為放大器。最常見的定點放大功能，可以藉由 `Control + 加號(+)` 或降低螢幕解析度來完成。這個步驟會重新縮放整個網頁，確保網頁的[互動式設計](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design)是縮放頁面重要的一環。
 
 其他放大功能會專注在小部分的區域上，這些額外軟體提供類似於實體放大器的功能。 Windows 內建[放大器](https://support.microsoft.com/zh-tw/windows/%E4%BD%BF%E7%94%A8%E6%94%BE%E5%A4%A7%E9%8F%A1%E4%BB%A5%E8%AE%93%E8%9E%A2%E5%B9%95%E4%B8%8A%E7%9A%84%E5%85%A7%E5%AE%B9%E6%9B%B4%E5%AE%B9%E6%98%93%E7%9C%8B%E5%88%B0-414948ba-8b1c-d3bd-8615-0e5e32204198)功能；第三方程式[ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/)則受到廣泛用戶的使用。 macOS 與 iOS 內建[Zoom](https://www.apple.com/accessibility/mac/vision/)軟體。
 
@@ -135,7 +135,7 @@ CSS 提供完整的網頁造型控制，你可以讓文字框框線隱藏或是�
 <a href="#" aria-label="Widget description">description</a>
 ```
 
-✅ 總體而言，使用語義化標籤得以取代 ARIA 功能，但是這些標籤無法全面性地覆蓋 HTML 的各式物件。樹(Tree)就是一種例子。沒有 HTML 物件能處理一棵樹，所以你可以在 `<div>` 元素中加上 aria 數值。[關於 ARIA 的 MDN 技術文件](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)說明許多有用的資訊。
+✅ 總體而言，使用語義化標籤得以取代 ARIA 功能，但是這些標籤無法全面性地覆蓋 HTML 的各式物件。樹(Tree)就是一種例子。沒有 HTML 物件能處理一棵樹，所以你可以在 `<div>` 元素中加上 aria 數值。[關於 ARIA 的 MDN 技術文件](https://developer.mozilla.org/docs/Web/Accessibility/ARIA)說明許多有用的資訊。
 
 ```html
 <h2 id="tree-label">File Viewer</h2>

@@ -6,7 +6,7 @@
 使用你在這四堂課中學到的知識，編寫"加入交易明細"視窗：
 
 - 在儀表板頁面新增"加入交易明細"按鈕
-- 加入新的 HTML 模板建立新頁面，或是在同一頁面中使用 JavaScript 顯示 HTML 窗格(可以使用 [`hidden`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden) 屬性，或是 CSS classes)
+- 加入新的 HTML 模板建立新頁面，或是在同一頁面中使用 JavaScript 顯示 HTML 窗格(可以使用 [`hidden`](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/hidden) 屬性，或是 CSS classes)
 - 確保視窗能滿足[鍵盤與螢幕報讀器的相容性](https://developer.paciellogroup.com/blog/2018/06/the-current-state-of-modal-dialog-accessibility/)
 - 編寫 HTML 表單來接收輸入資料
 - 建立 JSON 表單資料並傳送到 API 上

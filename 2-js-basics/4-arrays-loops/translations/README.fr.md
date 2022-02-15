@@ -12,7 +12,7 @@ Cette leçon couvre les bases de JavaScript, le langage qui offre de l'interacti
 [![Les boucles](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Les boucles")
 > 🎥 Cliquez sur l'image ci-dessus pour une vidéo sur les tableaux et les boucles.
 
-> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!
+> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!
 ## Les tableaux
 
 Travailler avec des données est une tâche courante pour n'importe quel langage, et c'est une tâche beaucoup plus facile lorsque les données sont organisées dans un format structurel, tel que des tableaux. Avec les tableaux, les données sont stockées dans une structure similaire à une liste. L'un des principaux avantages des tableaux est que vous pouvez stocker différents types de données dans un seul tableau.

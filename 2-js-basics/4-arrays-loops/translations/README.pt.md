@@ -14,7 +14,7 @@ Esta lição cobre os conceitos básicos do JavaScript, a linguagem que proporci
 
 > 🎥 Clique na imagem acima para um vídeo sobre arrays e loops.
 
-> Pode seguir esta lição em [Microsoft Aprender](https://docs.microsoft.com/en-us/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!
+> Pode seguir esta lição em [Microsoft Aprender](https://docs.microsoft.com/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!
 
 ## Arrays
 Trabalhar com dados é uma tarefa comum para qualquer língua, e é uma tarefa muito mais fácil quando os dados são organizados num formato estrutural, tal como as matrizes. Com arrays, os dados são armazenados numa estrutura semelhante a uma lista. Uma grande vantagem dos arrays é que se pode armazenar diferentes tipos de dados numa única matriz.
