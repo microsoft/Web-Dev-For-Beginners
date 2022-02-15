@@ -8,11 +8,14 @@
 
 Esta lição cobre os conceitos básicos do JavaScript, a linguagem que proporciona interactividade na web. Nesta lição, aprenderá sobre arrays e loops, que são usados para manipular dados.
 
-[![Arrays](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Arrays")
-[![Loops](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Laços")
+[![Arrays](https://img.youtube.com/vi/rlvD4Umw37U/0.jpg)](https://youtube.com/watch?v=rlvD4Umw37U "Arrays")
+
+[![Loops](https://img.youtube.com/vi/J2X-olc3Z6Y/0.jpg)](https://www.youtube.com/watch?v=J2X-olc3Z6Y "Laços")
+
 > 🎥 Clique na imagem acima para um vídeo sobre arrays e loops.
 
 > Pode seguir esta lição em [Microsoft Aprender](https://docs.microsoft.com/en-us/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!
+
 ## Arrays
 Trabalhar com dados é uma tarefa comum para qualquer língua, e é uma tarefa muito mais fácil quando os dados são organizados num formato estrutural, tal como as matrizes. Com arrays, os dados são armazenados numa estrutura semelhante a uma lista. Uma grande vantagem dos arrays é que se pode armazenar diferentes tipos de dados numa única matriz.
 
