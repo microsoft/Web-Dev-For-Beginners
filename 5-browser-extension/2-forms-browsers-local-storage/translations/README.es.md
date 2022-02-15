@@ -99,7 +99,7 @@ Antes de continuar, es útil conocer un concepto muy importante disponible en lo
 
 Configura su APIKey para que tenga un valor de cadena, por ejemplo, y puede ver que está configurado en Edge "inspeccionando" una página web (puede hacer clic con el botón derecho en un navegador para inspeccionar) y yendo a la pestaña Aplicaciones para ver el almacenamiento.
 
-![Panel de almacenamiento local](images/localstorage.png)
+![Panel de almacenamiento local](../images/localstorage.png)
 
 ✅ Piense en situaciones en las que NO le gustaría almacenar algunos datos en LocalStorage. En general, colocar claves API en LocalStorage es una mala idea. ¿Puedes ver por qué? En nuestro caso, dado que nuestra aplicación es puramente para aprender y no se implementará en una tienda de aplicaciones, usaremos este método.
 
@@ -194,6 +194,8 @@ Esta es una gran función. ¿Que está pasando aqui?
 - si hay un error o si no hay ningún resultado, muestra un mensaje de error.
 
 ✅ El uso de patrones de programación asíncronos es otra herramienta muy útil en su caja de herramientas. Lea [acerca de las diversas formas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) puede configurar este tipo de código.
+
+[![Async and Await for managing promises](https://img.youtube.com/vi/4yJUTjtIlww/0.jpg)](https://youtube.com/watch?v=4yJUTjtIlww "Async and Await for managing promises")
 
 ¡Felicidades! Si construye su extensión (`npm run build`) y la actualiza en su panel de extensiones, ¡tiene una extensión que funciona! Lo único que no funciona es el ícono, y lo solucionará en la próxima lección.
 
