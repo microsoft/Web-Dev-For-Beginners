@@ -4,7 +4,7 @@
 
 # Conceptos básicos de JavaScript: funcións y funciones
 
-[![funcións y funciones](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "funcións y funciones")
+[![funcións y funciones](https://img.youtube.com/vi/DdCRhOQibMo/0.jpg)](https://youtube.com/watch?v=DdCRhOQibMo "funcións y funciones")
 
 ## [Pre-lectura prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9)
 
