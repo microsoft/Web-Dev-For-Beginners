@@ -96,7 +96,7 @@ Há uma chance de que algumas instruções não sejam executadas por um disposit
 
 ## Ferramentas
 
-[![Ferramentas](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Ferramentas")
+[![Ferramentas](https://img.youtube.com/vi/bynF1E0Hq98/0.jpg)](https://youtube.com/watch?v=bynF1E0Hq98 "Ferramentas")
 
 Nesta seção, você aprenderá sobre alguns softwares que podem ser muito úteis ao iniciar sua jornada de desenvolvimento profissional.
 
