@@ -181,7 +181,7 @@ async function createAccount(account) {
 
 Aquí hay un video rápido sobre el uso de `async/await`:
 
-[![Async y Await para administrar promesas](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async y Await para administrar promesas")
+[![Async y Await para administrar promesas](https://img.youtube.com/vi/4yJUTjtIlww/0.jpg)](https://youtube.com/watch?v=4yJUTjtIlww "Async y Await para administrar promesas")
 
 Usamos la API `fetch()` para enviar datos JSON al servidor. Este método toma 2 parámetros:
 
