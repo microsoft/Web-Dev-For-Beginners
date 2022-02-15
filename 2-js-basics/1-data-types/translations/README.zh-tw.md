@@ -10,6 +10,8 @@
 
 [![JavaScript 的資料型態](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "JavaScript 的資料型態")
 
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
+
 讓我們從程式語言的基礎 ── 「變數」與「資料型態」開始吧！
 
 ## 變數 (Variable)

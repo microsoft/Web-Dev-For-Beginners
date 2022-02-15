@@ -12,7 +12,7 @@ This lesson covers the basics of JavaScript, the language that provides interact
 
 [![Variables](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Variables in JavaScript")
 
-[![Data Types in JavaScript](https://img.youtube.com/vi/rEHV3fFMfn0/0.jpg)](https://youtube.com/watch?v=rEHV3fFMfn0 "Data Types in JavaScript")
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
 
 > 🎥 Click the images above for videos about variables and data types
 

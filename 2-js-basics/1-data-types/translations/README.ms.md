@@ -10,6 +10,7 @@ Pelajaran ini merangkumi asas-asas JavaScript, bahasa yang menyediakan interakti
 
 [![Jenis Data Dalam JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
 
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
 
 Marilah kita mulakan dengan pemboleh ubah dan jenis data yang mengisinya!
 
