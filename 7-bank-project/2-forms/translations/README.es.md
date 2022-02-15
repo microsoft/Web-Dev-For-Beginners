@@ -221,7 +221,7 @@ async function register() {
 
 ¡Eso fue un poco largo pero llegamos allí! Si abre sus [herramientas de desarrollo del navegador](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools) e intenta registrar una nueva cuenta, no debería ver ningún cambio en la página web pero aparecerá un mensaje en la consola confirmando que todo funciona.
 
-![Captura de pantalla que muestra el mensaje de registro en la consola del navegador](./images/browser-console.png)
+![Captura de pantalla que muestra el mensaje de registro en la consola del navegador](../images/browser-console.png)
 
 ✅ ¿Crees que los datos se envían al servidor de forma segura? ¿Y si alguien pudiera interceptar la solicitud? Puede leer sobre [HTTPS](https://en.wikipedia.org/wiki/HTTPS) para saber más sobre la comunicación segura de datos.
 
@@ -264,7 +264,7 @@ Agrega un atributo `maxlength` a los campos de texto:
 
 Ahora, si presiona el botón *Registrar* y un campo no respeta una regla de validación que definimos, debería ver algo como esto:
 
-![Captura de pantalla que muestra el error de validación al intentar enviar el formulario](./images/validation-error.png)
+![Captura de pantalla que muestra el error de validación al intentar enviar el formulario](../images/validation-error.png)
 
 Una validación como esta realizada *antes* de enviar cualquier dato al servidor se llama validación **del lado del cliente**. Pero tenga en cuenta que no siempre es posible realizar todas las comprobaciones sin enviar los datos. Por ejemplo, no podemos comprobar aquí si ya existe una cuenta con el mismo nombre de usuario sin enviar una solicitud al servidor. La validación adicional realizada en el servidor se denomina validación **del lado del servidor**.
 
@@ -278,7 +278,7 @@ Muestra un mensaje de error en el HTML si el usuario ya existe.
 
 Aquí hay un ejemplo de cómo puede verse la página de inicio de sesión final después de un poco de estilo:
 
-![Captura de pantalla de la página de inicio de sesión después de agregar estilos CSS](./images/result.png)
+![Captura de pantalla de la página de inicio de sesión después de agregar estilos CSS](../images/result.png)
 
 ## [Prueba posterior a la conferencia](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/44)
 
