@@ -12,7 +12,7 @@ Lorsque nous pensons à écrire du code, nous voulons toujours nous assurer que 
 
 > 🎥 Cliquez sur l'image ci-dessus pour voir une vidéo sur les méthodes et les fonctions.
 
-> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/fr-fr/learn/modules/web-development-101-functions/?WT.mc_id=academic-13441-cxa)!
+> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-13441-cxa)!
 
 ## Fonctions
 
