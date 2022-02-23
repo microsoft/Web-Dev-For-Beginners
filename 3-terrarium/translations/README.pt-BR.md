@@ -1,6 +1,6 @@
-# Meu Terrário: Um projeto para aprender HTML, CSS, e manipulação  DOM usando JavaScript 🌵🌱
+# Meu Terrário: Um projeto para aprender HTML, CSS, e manipulação de DOM usando JavaScript 🌵🌱
 
-Uma pequena meditação de código de arrastar e soltar. Com um pouco de HTML, JS e CSS, você pode construir uma interface web, esilizá-la, e adiconar uma interação.
+Uma pequena meditação de código de arrastar e soltar. Com um pouco de HTML, JS e CSS, você pode construir uma interface web, estilizá-la, e adicionar uma interação.
 
 ![Meu Terrário](../images/screenshot_gray.png)
 
