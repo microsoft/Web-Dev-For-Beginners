@@ -1,6 +1,6 @@
 # Introdução a Linguagens de Programação e Ferramentas
 
-Essa lição trata dos básicos de linguagens de programação. Os tópicos tratados aqui se aplicam na maioria das linguages de prorgamação modernas. Na sessão 'Ferramentas', você vai aprender sobre softwares úteis que ajudarão como uma pessoa desenvolvedora.
+Essa lição trata dos básicos de linguagens de programação. Os tópicos tratados aqui se aplicam na maioria das linguagens de programação modernas. Na sessão 'Ferramentas', você vai aprender sobre softwares úteis que ajudarão como uma pessoa desenvolvedora.
 
 ![Introdução a Programação](/sketchnotes/webdev101-programming.png)
 
@@ -141,7 +141,7 @@ Muitos navegadores vêm com _ferramentas para desenvolvimento_ (DevTools) que co
 - [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
 - [Firefox](https://developer.mozilla.org/docs/Tools)
 
-### Ferramentas da Linah de Comando
+### Ferramentas da Linha de Comando
 
 Algumas pessoas desenvolvedoras preferem uma visualização menos gráfica para suas tarefas diárias e contam com a linha de comando para fazer isso. O desenvolvimento de código requer uma quantidade significativa de digitação e algumas pessoas desenvolvedoras preferem não interromper seu fluxo no teclado e usam atalhos de teclado para alternar entre as janelas da área de trabalho, trabalhar em arquivos diferentes e usar ferramentas. 
 A maioria das tarefas pode ser concluída com um mouse, mas um benefício de usar a linha de comando é que muito pode ser feito com ferramentas de linha de comando sem a necessidade de alternar entre o mouse e o teclado. Outro benefício da linha de comando é que ela é configurável ​​e você pode salvar sua configuração personalizada, alterá-la posteriormente e também importá-la para novas máquinas de desenvolvimento. Como os ambientes de desenvolvimento são tão exclusivos para cada pessoa desenvolvedora, algumas evitam o uso da linha de comando e outras dependem dela inteiramente e existem também aquelas que preferem uma combinação dos dois.
