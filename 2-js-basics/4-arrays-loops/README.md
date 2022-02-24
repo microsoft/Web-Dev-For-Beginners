@@ -73,9 +73,9 @@ Loops allow for repetitive or **iterative** tasks, and can save a lot of time an
 ### For Loop
 
 The `for` loop requires 3 parts to iterate:
-    - `counter` A variable that is typically initialized with a number that counts the number of iterations.
-    - `condition` Expression that uses comparison operators to cause the loop to stop when `true`
-    - `iteration-expression` Runs at the end of each iteration, typically used to change the counter value
+- `counter` A variable that is typically initialized with a number that counts the number of iterations
+- `condition` Expression that uses comparison operators to cause the loop to stop when `true`
+- `iteration-expression` Runs at the end of each iteration, typically used to change the counter value
   
 ```javascript
 // Counting up to 10
