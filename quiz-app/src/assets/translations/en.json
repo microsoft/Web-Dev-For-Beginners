@@ -710,7 +710,7 @@
 						"answerOptions": [
 							{
 								"answerText": "condition",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "counter",
@@ -718,7 +718,7 @@
 							},
 							{
 								"answerText": "iteration-expression",
-								"isCorrect": "false"
+								"isCorrect": "true"
 							}
 						]
 					},
