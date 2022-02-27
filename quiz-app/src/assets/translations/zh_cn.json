@@ -710,7 +710,7 @@
 						"answerOptions": [
 							{
 								"answerText": "条件表达式（condition）",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "计数器（counter）",
@@ -718,7 +718,7 @@
 							},
 							{
 								"answerText": "迭代表达式（iteration-expression）",
-								"isCorrect": "false"
+								"isCorrect": "true"
 							}
 						]
 					},

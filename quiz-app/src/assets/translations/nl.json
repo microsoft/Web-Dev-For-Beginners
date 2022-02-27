@@ -710,7 +710,7 @@
 						"answerOptions": [
 							{
 								"answerText": "voorwaarde",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "teller",
@@ -718,7 +718,7 @@
 							},
 							{
 								"answerText": "iteratie-uitdrukking",
-								"isCorrect": "false"
+								"isCorrect": "true"
 							}
 						]
 					},

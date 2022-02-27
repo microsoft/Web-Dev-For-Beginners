@@ -710,7 +710,7 @@
                         "answerOptions": [
                             {
                                 "answerText": "condition",
-                                "isCorrect": "true"
+                                "isCorrect": "false"
                             },
                             {
                                 "answerText": "compteur",
@@ -718,7 +718,7 @@
                             },
                             {
                                 "answerText": "expression d'itération",
-                                "isCorrect": "false"
+                                "isCorrect": "true"
                             }
                         ]
                     },

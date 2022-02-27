@@ -710,7 +710,7 @@
 						"answerOptions": [
 							{
 								"answerText": "शर्त (condition)",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "काउंटर",
@@ -718,7 +718,7 @@
 							},
 							{
 								"answerText": "इटरेसन-इक्स्प्रेशन",
-								"isCorrect": "false"
+								"isCorrect": "true"
 							}
 						]
 					},

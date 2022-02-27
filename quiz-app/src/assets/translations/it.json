@@ -710,7 +710,7 @@
 						"answerOptions": [
 							{
 								"answerText": "condizione",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "contatore",
@@ -718,7 +718,7 @@
 							},
 							{
 								"answerText": "espressione-di-iterazione",
-								"isCorrect": "false"
+								"isCorrect": "true"
 							}
 						]
 					},

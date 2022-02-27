@@ -710,7 +710,7 @@
 						"answerOptions": [
 							{
 								"answerText": "條件式",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "計數器",
@@ -718,7 +718,7 @@
 							},
 							{
 								"answerText": "迭代陳述式",
-								"isCorrect": "false"
+								"isCorrect": "true"
 							}
 						]
 					},

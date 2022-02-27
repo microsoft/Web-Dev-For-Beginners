@@ -710,7 +710,7 @@
 						"answerOptions": [
 							{
 								"answerText": "kondisi",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "counter",
@@ -718,7 +718,7 @@
 							},
 							{
 								"answerText": "ekspresi-iterasi",
-								"isCorrect": "false"
+								"isCorrect": "true"
 							}
 						]
 					},
