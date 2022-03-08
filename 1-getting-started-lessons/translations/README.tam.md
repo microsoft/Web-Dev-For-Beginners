@@ -4,9 +4,9 @@
 
 ### தலைப்புகள்
 
-1. [வர்த்தகத்தின் நிரலாக்க மொழிகள் மற்றும் கருவிகள் அறிமுகம்](1-intro-to-programming-languages/README.md)
-2. [கிட்ஹப் அறிமுகம்](2-github-basics/README.md)
-3. [அணுகல்தன்மையின் அடிப்படைகள்](3-accessibility/README.md)
+1. [வர்த்தகத்தின் நிரலாக்க மொழிகள் மற்றும் கருவிகள் அறிமுகம்](../1-intro-to-programming-languages/README.md)
+2. [கிட்ஹப் அறிமுகம்](../2-github-basics/README.md)
+3. [அணுகல்தன்மையின் அடிப்படைகள்](../3-accessibility/README.md)
 
 ### கடன்கள்
 
