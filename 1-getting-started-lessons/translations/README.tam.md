@@ -10,9 +10,9 @@
 
 ### கடன்கள்
 
-வர்த்தகத்தின் நிரலாக்க மொழிகள் மற்றும் கருவிகள் அறிமுகம் ♥️ எழுதியவர் [Jasmine Greenaway](https://twitter.com/paladique)
+வர்த்தகத்தின் நிரலாக்க மொழிகள் மற்றும் கருவிகள் அறிமுகம் ♥️ எழுதியவர் [ஜாஸ்மின் கிரீன்வே](https://twitter.com/paladique/)
 
-கிட்ஹப் அறிமுகம் ♥️ எழுதியவர் [Floor Drees](https://twitter.com/floordrees)
+கிட்ஹப் அறிமுகம் ♥️ எழுதியவர் [ஃப்ளோர் டிரீஸ்](https://twitter.com/floordrees/)
 
-அணுகல்தன்மையின் அடிப்படைகள் ♥️ எழுதியவர் [Christopher Harrison](https://twitter.com/geektrainer)
+அணுகல்தன்மையின் அடிப்படைகள் ♥️ எழுதியவர் [கிறிஸ்டோபர் ஹாரிசன்](https://twitter.com/geektrainer/)
 
