@@ -29,6 +29,7 @@ const messages = {
   zh_cn: zh_cn[0],
   zh_tw: zh_tw[0],
   fr: fr[0],
+  
   tam: tam[0],
 };
 
