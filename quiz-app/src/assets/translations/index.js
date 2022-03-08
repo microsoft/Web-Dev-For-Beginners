@@ -12,7 +12,7 @@ import nl from "./nl.json";
 import zh_cn from "./zh_cn.json";
 import zh_tw from "./zh_tw.json";
 import fr from "./fr.json";
-import tam from "./tam.json";
+import ta from "./ta.json";
 //export const defaultLocale = 'en';
 
 const messages = {
@@ -29,8 +29,7 @@ const messages = {
   zh_cn: zh_cn[0],
   zh_tw: zh_tw[0],
   fr: fr[0],
-  
-  tam: tam[0],
+  ta: ta[0],
 };
 
 export default messages;
