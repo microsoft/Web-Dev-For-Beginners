@@ -47,40 +47,77 @@ export default {
 
 <style>
 html {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #252d4a;
+  color: rgb(69, 90, 100);
+  background : #f5f5f5;
 }
 nav {
-  background-color: #252d4a;
+  background-color: #ffffff;
   padding: 1em;
   margin-bottom: 20px;
+  border: 2px solid #efeef1;
+  border-radius: 5px;
 }
 
-nav a {
-  color: white;
+nav a , label {
+  color : rgb(69, 90, 100);
   text-align: right;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin-right: 1em;
+}
+
+nav a:hover{
+  text-decoration :underline;
+}
+
+select{
+  color : rgb(69, 90, 100);
+  background-color: #ffffff;
+  border-radius: 5px; 
+  border: 1px solid #cccccc;
+}
+
+option{
+  color : rgb(69, 90, 100); 
 }
 
 .link {
   display: list-item;
+  text-decoration: none;
+  background: white;
+  border-radius: 8px;
+  padding: 1%;
+  font-weight : 500;
+  color : rgb(102 102 102);
+  border: 1px solid #efeef1;
+  margin-top: 10px;
+}
+.link:hover{
+  background : rgb(236, 239, 241)
 }
 
 h1,
-h2,
 h3,
 .message {
   text-align: center;
+}
+h2{
+  font-weight : 500;
+  text-align: center;
+  color : rgb(102 102 102);
 }
 .error {
   color: red;
 }
 .card {
   width: 60%;
-  border: #252d4a solid;
-  border-radius: 5px;
+  border: 2px #efeef1 solid;
+  border-radius: 10px;
   margin: auto;
+  background : white;
   padding: 1em;
 }
 .btn {
@@ -90,11 +127,12 @@ h3,
   cursor: pointer;
   margin-bottom: 5px;
   width: 50%;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #252d4a;
+  font-size: 17px;
+  color: rgb(102 102 102);
+  background-color:#ffffff;
   border-radius: 5px;
-  padding: 5px;
+  border: 2px solid #efeef1;
+  padding: 1%;
   justify-content: flex-start;
   align-items: center;
 }
