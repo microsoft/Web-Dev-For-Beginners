@@ -209,11 +209,11 @@
 						"questionText": "Πώς μεταβαίνετε σε έναν κλάδο;",
 						"answerOptions": [
 							{
-								"answerText": "git switch [όνομα-κλαδου]",
+								"answerText": "git checkout [όνομα-κλαδου]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [όνομα-κλαδου]",
+								"answerText": "git switch [όνομα-κλαδου]",
 								"isCorrect": "true"
 							},
 							{
