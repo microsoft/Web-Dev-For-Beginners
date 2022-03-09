@@ -179,10 +179,10 @@ GitHub에 코드를 올리는 주 이유는 다른 개발자와 협력할 수 �
    git branch [branch-name]
    ```
 
-1. **작업 브랜치 변경하기**. 지정된 브랜치로 전환하고 `git checkout`으로 작업 디렉토리를 업데이트합니다:
+1. **작업 브랜치 변경하기**. 지정된 브랜치로 전환하고 `git switch`으로 작업 디렉토리를 업데이트합니다:
 
    ```bash
-   git checkout [branch-name]
+   git switch [branch-name]
    ```
 
 1. **일하기**. 이 시점에서 변경 사항을 추가하려고 합니다. 다음 명령을 사용하여 Git에 알리는 것을 잊지 마시기 바랍니다:
@@ -197,14 +197,14 @@ GitHub에 코드를 올리는 주 이유는 다른 개발자와 협력할 수 �
 1. **`main` 브랜치에서 작업하기**. 어느 시점에서 작업을 마치고 `main` 브랜치의 작업과 병합하려고 합니다. 그동안 `main` 브랜치가 변경되었을 수 있으므로, 먼저 다음 명령을 사용하여 최신 버전으로 업데이트해야합니다:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    이 시점에서 Git이 변경 사항을 쉽게 _결합_ 할 수 없는 _충돌_ 상황이 작업 브랜치에서 발생하는지 확인하려고합니다. 따라서 다음 명령을 실행합니다:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 
