@@ -209,11 +209,11 @@
 						"questionText": "Bagaimana Anda beralih ke sebuah cabang (branch)?",
 						"answerOptions": [
 							{
-								"answerText": "git switch [branch-name]",
+								"answerText": "git checkout [branch-name]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [branch-name]",
+								"answerText": "git switch [branch-name]",
 								"isCorrect": "true"
 							},
 							{
