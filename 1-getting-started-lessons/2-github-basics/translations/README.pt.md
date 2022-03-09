@@ -202,10 +202,10 @@ Vamos analisar o fluxo de trabalho de uma pessoa colaboradora. Suponha que ela j
    git branch [branch-name]
    ```
 
-1. **Mudar para o branch de trabalho**. Mude para o branch especificado e atualize o diretório de trabalho com `git checkout`:
+1. **Mudar para o branch de trabalho**. Mude para o branch especificado e atualize o diretório de trabalho com `git switch`:
 
    ```bash
-   git checkout [branch-name]
+   git switch [branch-name]
    ```
 
 1. **Trabalhe**. Neste ponto, você deseja adicionar suas alterações. Não se esqueça de contar ao Git sobre isso com os seguintes comandos:
@@ -220,14 +220,14 @@ Vamos analisar o fluxo de trabalho de uma pessoa colaboradora. Suponha que ela j
 1. **Combine seu trabalho com o branch `main`**. Em algum ponto, você concluiu o trabalho e deseja combinar seu trabalho com o do branch `principal`. O branch `main` pode ter mudado enquanto isso, certifique-se de primeiro atualizá-lo para o mais recente com os seguintes comandos:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    Neste ponto, você quer ter certeza de que quaisquer _conflitos_, situações em que o Git não pode _combinar_ facilmente as mudanças aconteçam em seu branch de trabalho. Portanto, execute os seguintes comandos:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 
