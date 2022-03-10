@@ -209,11 +209,11 @@
 						"questionText": "ブランチを切り替えるにはどうしたらいいですか?",
 						"answerOptions": [
 							{
-								"answerText": "git switch [ブランチ名]",
+								"answerText": "git checkout [ブランチ名]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [ブランチ名]",
+								"answerText": "git switch [ブランチ名]",
 								"isCorrect": "true"
 							},
 							{

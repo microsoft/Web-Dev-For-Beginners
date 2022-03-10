@@ -209,11 +209,11 @@
 						"questionText": "நீங்கள் ஒரு கிளைக்கு எப்படி மாறுகிறீர்கள்?",
 						"answerOptions": [
 							{
-								"answerText": "git switch [branch-name]",
+								"answerText": "git checkout [branch-name]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [branch-name]",
+								"answerText": "git switch [branch-name]",
 								"isCorrect": "true"
 							},
 							{

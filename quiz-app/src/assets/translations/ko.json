@@ -209,11 +209,11 @@
 						"questionText": "브랜치를 전환하는 커맨드는?",
 						"answerOptions": [
 							{
-								"answerText": "git switch [브랜치-이름]",
+								"answerText": "git checkout [브랜치-이름]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [브랜치-이름]",
+								"answerText": "git switch [브랜치-이름]",
 								"isCorrect": "true"
 							},
 							{

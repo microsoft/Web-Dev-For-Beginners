@@ -209,11 +209,11 @@
 						"questionText": "Hoe stapt u over naar een tak?",
 						"answerOptions": [
 							{
-								"answerText": "git switch [taknaam]",
+								"answerText": "git checkout [taknaam]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [taknaam]",
+								"answerText": "git switch [taknaam]",
 								"isCorrect": "true"
 							},
 							{

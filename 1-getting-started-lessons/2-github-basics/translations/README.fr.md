@@ -203,10 +203,10 @@ Passons en revue un flux de travail de contributeur. Supposons que le contribute
    git branch [nom_branche]
    ```
 
-1. **Passer à la branche de travail**. Basculez vers la branche spécifiée et mettez à jour le répertoire de travail avec `git checkout`:
+1. **Passer à la branche de travail**. Basculez vers la branche spécifiée et mettez à jour le répertoire de travail avec `git switch`:
 
    ```bash
-   git checkout [nom_branche]
+   git switch [nom_branche]
    ```
 
 1. **Travailler**. À ce stade, vous souhaitez ajouter vos modifications. N’oubliez pas d’en parler à Git avec les commandes suivantes:
@@ -221,14 +221,14 @@ Passons en revue un flux de travail de contributeur. Supposons que le contribute
 1. **Combinez votre travail avec la branche `main`**. À un moment donné, vous avez fini de travailler et vous voulez combiner votre travail avec celui de la branche `main`. La branche `main`" a peut-être changé entre-temps, alors assurez-vous de la mettre à jour au plus tard avec les commandes suivantes:
 
    ```bash
-   git checkout principal
+   git switch principal
    git pull
    ```
 
    À ce stade, vous voulez vous assurer que tous les _conflits_, les situations où Git ne peut pas facilement _combiner_ les modifications se produisent dans votre branche de travail. Par conséquent, exécutez les commandes suivantes :
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 

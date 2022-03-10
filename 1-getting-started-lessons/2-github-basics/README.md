@@ -205,10 +205,10 @@ Let's go through a contributor workflow. Assume the contributor has already _for
    git branch [branch-name]
    ```
 
-1. **Switch to working branch**. Switch to the specified branch and update the working directory with `git checkout`:
+1. **Switch to working branch**. Switch to the specified branch and update the working directory with `git switch`:
 
    ```bash
-   git checkout [branch-name]
+   git switch [branch-name]
    ```
 
 1. **Do work**. At this point you want to add your changes. Don't forget to tell Git about it with the following commands:
@@ -223,14 +223,14 @@ Let's go through a contributor workflow. Assume the contributor has already _for
 1. **Combine your work with the `main` branch**. At some point you are done working and you want to combine your work with that of the `main` branch. The `main` branch might have changed meanwhile so make sure you first update it to the latest with the following commands:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    At this point you want to make sure that any _conflicts_, situations where Git can't easily _combine_ the changes happens in your working branch. Therefore run the following commands:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 

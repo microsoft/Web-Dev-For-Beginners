@@ -206,10 +206,10 @@ Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador y
    git branch [branch-name]
    ```
 
-1. **Cambiar a rama de trabajo**. Cambia a la rama especificada y actualiza tu directorio de trabajo con `git checkout`:
+1. **Cambiar a rama de trabajo**. Cambia a la rama especificada y actualiza tu directorio de trabajo con `git switch`:
 
    ```bash
-   git checkout [branch-name]
+   git switch [branch-name]
    ```
 
 1. **Trabaja**. En este punto, deseas agregar tus cambios. No olvides informarle a Git con los siguientes comandos:
@@ -224,14 +224,14 @@ Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador y
 1. **Combina tu trabajo con la rama `principal`**. En algún momento has terminado de trabajar y deseas combinar tu trabajo con el de la rama `principal`. La rama `main` podría haber cambiado mientras tanto, así que asegúrate de actualizarla con los siguientes comandos:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    En este punto, querrás asegurarte de que cualquier _conflicto_, situaciones en las que Git no pueda _combinarse_ fácilmente los cambios, ocurren en tu rama de trabajo. Mientras tanto, ejecuta los siguientes comandos:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 
