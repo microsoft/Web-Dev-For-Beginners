@@ -203,10 +203,10 @@ Dumaan tayo sa isang daloy ng trabaho ng contributor. Ipagpalagay na ang nag-amb
    git branch [branch-name]
    ```
 
-1. **Switch to working branch**. Lumipat sa tinukoy na sangay at i-update ang gumaganang direktoryo gamit ang `git checkout`:
+1. **Switch to working branch**. Lumipat sa tinukoy na sangay at i-update ang gumaganang direktoryo gamit ang `git switch`:
 
    ```bash
-   git checkout [branch-name]
+   git switch [branch-name]
    ```
 
 1. **Do work**. Sa puntong ito gusto mong idagdag ang iyong mga pagbabago. Huwag kalimutang sabihin kay Git ang tungkol dito gamit ang mga sumusunod na utos:
@@ -221,14 +221,14 @@ Dumaan tayo sa isang daloy ng trabaho ng contributor. Ipagpalagay na ang nag-amb
 1. **Combine your work with the `main` branch**. Sa ilang mga punto ay tapos ka nang magtrabaho at gusto mong pagsamahin ang iyong trabaho sa iyong trabaho `main` sangay. Ang `main` maaaring nagbago ang branch samantala kaya siguraduhing i-update mo muna ito sa pinakabago gamit ang mga sumusunod na command:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    Sa puntong ito gusto mong tiyakin na anuman _conflicts_, mga sitwasyon kung saan hindi madali ang Git _combine_ ang mga pagbabago ay nangyayari sa iyong nagtatrabaho na sangay. Samakatuwid, patakbuhin ang sumusunod na mga atas:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 

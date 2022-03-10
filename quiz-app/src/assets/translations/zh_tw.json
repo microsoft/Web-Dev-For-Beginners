@@ -209,11 +209,11 @@
 						"questionText": "如何切換分支?",
 						"answerOptions": [
 							{
-								"answerText": "git switch [分支名稱]",
+								"answerText": "git checkout [分支名稱]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [分支名稱]",
+								"answerText": "git switch [分支名稱]",
 								"isCorrect": "true"
 							},
 							{

@@ -1,0 +1,2509 @@
+[
+    {
+        "title" : "ஆரம்ப வலை வளர்ச்சி: வினாடி வினாக்கள்",
+        "complete" : "வாழ்த்துக்கள், நீங்கள் வினாடி வினா முடித்தீர்கள்!",
+        "error": "மன்னிக்கவும், மீண்டும் முயற்சிக்கவும்", 
+        "quizzes" : [
+            {
+				"id": 1,
+				"title": "பாடம் 1 - நிரலாக்க மொழிகளுக்கான அறிமுகம்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "படைப்பாளி எந்த குறியீட்டைஎழுதாமல் ஒரு நிரலை உருவாக்க லாம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "குறைந்த நிலை மொழிகள் ஒரு பிரபலமான தேர்வாகும்",
+						"answerOptions": [
+							{
+								"answerText": "இணையதளங்கள்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "வன்பொருள்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "வீடியோ கேம் மென்பொருள்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "இந்த கருவிகளில் எது பெரும்பாலும் ஒரு வலை டெவலப்பரின் சூழலில் இருக்கும்?",
+						"answerOptions": [
+							{
+								"answerText": "வன்பொருள், ஒரு ராஸ்பெர்ரி பை போன்ற",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "உலாவி தேவ்டூல்ஸ்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "இயக்க முறைமை ஆவணப்படுத்தல்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 2,
+				"title": "பாடம் 1 - நிரலாக்க மொழிகளுக்கான அறிமுகம்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு வலைத்தளத்தை உருவாக்க நீங்கள் பெரும்பாலும் எந்த மொழியைப் பயன்படுத்துவீர்கள்?",
+						"answerOptions": [
+							{
+								"answerText": "இயந்திர குறியீடு",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஜாவா ஸ்கிரிப்ட்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பாஷ்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "வளர்ச்சி சூழல்கள் ஒவ்வொரு டெவலப்பருக்குதனித்துவமானவை",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "பக்கி குறியீட்டை சரிசெய்ய ஒரு டெவலப்பர் என்ன செய்வார்?",
+						"answerOptions": [
+							{
+								"answerText": "தொடரியல் சிறப்பித்துக் காட்டுதல்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பிழைநீக்குதல்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "குறியீடு வடிவமைத்தல்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 3,
+				"title": "பாடம் 2 - கிட்ஹப் அறிமுகம்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "எப்படி நீங்கள் ஒரு கிட் ரெப்போ உருவாக்க?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "git add என்ன செய்கிறது?",
+						"answerOptions": [
+							{
+								"answerText": "உங்கள் குறியீட்டை ஒப்புக்கொள்கிறது",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "கண்காணிப்புக்கான ஒரு ஸ்டேஜிங் பகுதியில் உங்கள் கோப்புகளைச் சேர்க்கிறது",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "உங்கள் கோப்புகளை கிட்ஹப்பில் சேர்க்கிறது",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "உங்கள் கணினியில் கிட் நிறுவப்பட்டதா என்பதை எவ்வாறு சரிபார்ப்பீர்கள்?",
+						"answerOptions": [
+							{
+								"answerText": "மாதிப் படிவம் git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "மாதிப் படிவம் git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மாதிப் படிவம் git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 4,
+				"title": "பாடம் 2 - கிட்ஹப் அறிமுகம்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு கிளையில் அறிமுகப்படுத்தப்பட்ட வேறுபாடுகளை மதிப்புரைகள், கருத்துகள், ஒருங்கிணைந்த சோதனைகள் மற்றும் பலவற்றுடன் ஒப்பிட்டு விவாதிக்க ஒரு இடம்:",
+						"answerOptions": [
+							{
+								"answerText": "கிட்ஹப்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "புல் ராகுவெஸ்ட்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "அம்சக் கிளை",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு தொலைதூர கிளையில் இருந்து அனைத்து கமிட்களையும் நீங்கள் எவ்வாறு பெறுவீர்கள் மற்றும் ஒருங்கிணைப்பீர்கள்?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "நீங்கள் ஒரு கிளைக்கு எப்படி மாறுகிறீர்கள்?",
+						"answerOptions": [
+							{
+								"answerText": "git checkout [branch-name]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git switch [branch-name]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [branch-name]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 5,
+				"title": "பாடம் 3 - அணுகக்கூடிய வலைப்பக்கங்களை உருவாக்குதல்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "அணுகக்கூடிய வலைத் தளத்தை எந்த உலாவி கருவியில் சரிபார்க்கலாம்",
+						"answerOptions": [
+							{
+								"answerText": "லத்ஹவுஸ்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "டெக்ஹவுஸ்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "கிளீன்ஹவுஸ்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "பார்வைக் குறைபாடுள்ள பயனர்களுக்கான அணுகல்தன்மையை சோதிக்க உங்களுக்கு ஒரு உடல் திரை வாசகர் தேவை",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "அரசாங்க வலைத் தளங்களில் அணுகல் தன்மை மட்டுமே முக்கியமானது",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 6,
+				"title": "பாடம் 3 - அணுகக்கூடிய வலைப்பக்கங்களை உருவாக்குதல்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "அணுகல் சிக்கல்களுக்கு மட்டுமே லாட்ஹவுஸ் சரிபார்க்கிறது",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "வண்ண-பாதுகாப்பான தட்டுகள் மக்களுக்கு உதவுகின்றன",
+						"answerOptions": [
+							{
+								"answerText": "நிறக்குருடு",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பார்வை குறைபாடுகள்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "இரண்டும்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "அணுகக்கூடிய இணைய தளங்களுக்கு விளக்க இணைப்புகள் இன்றியமையாதவை",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 7,
+				"title": "பாடம் 4 - ஜாவாஸ்கிரிப்ட் அடிப்படைகள் - தரவு வகைகள்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "பூலியன்கள் என்பது சரத்தின் நீளத்தை சோதிக்க நீங்கள் பயன்படுத்தக்கூடிய தரவு வகையாகும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "பின்வருபவை நீங்கள் ஒரு சரத்தில் செய்யக்கூடிய ஒரு செயல்பாடு ஆகும்",
+						"answerOptions": [
+							{
+								"answerText": "கான்கோட்னேஷன்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "அப்பாண்ட்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஸ்ப்ளிசீ",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== மற்றும் === ஒன்றுக்கொன்று மாற்றக்கூடியவை",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 8,
+				"title": "பாடம் 4 - ஜாவாஸ்கிரிப்ட் அடிப்படைகள் - தரவு வகைகள்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "மாறிகளை அறிவிக்க அனுமதிக்கமற்றும் வார் போலவே மாறிகள் உள்ளன",
+						"answerOptions": [
+							{
+								"answerText": "மாறிலிகள் துவக்கப்பட வேண்டும்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "மாறிலிகளை மாற்றலாம்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மாறிலிகளை மறுஒதுக்கீடு செய்யலாம்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "எண்கள் மற்றும் _____ ஆகியவை எண் தரவை கையாளும் ஜாவாஸ்கிரிப்ட் பழமையானவை",
+						"answerOptions": [
+							{
+								"answerText": "பிஜிண்ட்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பூலியன்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "விண்மீன்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "சரங்கள் ஒற்றை மற்றும் இரட்டை மேற்கோள்களுக்கு இடையில் வசிக்கலாம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 9,
+				"title": "பாடம் 5 - ஜாவாஸ்கிரிப்ட் அடிப்படைகள் - செயல்பாடுகள் மற்றும் முறைகள்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு வாதம் என்ன?",
+						"answerOptions": [
+							{
+								"answerText": "இது செயல்பாடு வரையறையில் நீங்கள் அறிவிக்கும் ஒன்று",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "இது நீங்கள் அழைப்பு நேரத்தில் ஒரு செயல்பாட்டிற்கு கடந்து செல்லும் ஒன்று",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "இது உங்களுக்குத் தெரிந்தவர்களுடன் உங்களிடம் உள்ள ஒன்று",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு செயல்பாடு எதையாவது திருப்பித் தரும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "நீங்கள் ஒரு செயல்பாடு எதையும் பெயரிட முடியும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "உண்மை, ஆனால் அது ஒரு விளக்கப் பெயராக இருக்க வேண்டும்",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 10,
+				"title": "பாடம் 5 - ஜாவாஸ்கிரிப்ட் அடிப்படைகள் - செயல்பாடுகள் மற்றும் முறைகள்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு செயல்முறையில் அனைத்து அளவுருக்களுக்கும் வாதங்கள் வழங்கப்பட வேண்டும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "What does a default value do?",
+						"answerOptions": [
+							{
+								"answerText": "இயல்புநிலை மதிப்பு என்ன செய்கிறது?",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஒரு அளவுருவிற்கு ஒரு ஸ்டார்டர் மதிப்பை அளிக்கிறது, எனவே நீங்கள் ஒரு வாதத்தை தவிர்த்தால் உங்கள் குறியீடு இன்னும் நடந்துகொள்ளுகிறது",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பயன்பாடு இல்லை",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு கொழுப்பு அம்பு செயல்பாடு நீங்கள் அனுமதிக்கிறது",
+						"answerOptions": [
+							{
+								"answerText": "கனமான செயல்பாடுகளை உருவாக்கவும்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "செயல்திறவுச் சொல்லை த் தவிர்த்துவிடு",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ஒரு அநாமதேய செயல்பாட்டை உருவாக்கு",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 11,
+				"title": "பாடம் 6 -  ஜாவாஸ்கிரிப்ட் அடிப்படைகள் - ஜாவாஸ்கிரிப்ட் மூலம் முடிவுகளை எடுக்க: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "பின்வரும் ஆபரேட்டர் == அழைக்கப்படுகிறார்",
+						"answerOptions": [
+							{
+								"answerText": "சமத்துவம்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "கடுமையான சமத்துவம்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "வகுத்தமைத்தல்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ஜாவாஸ்கிரிப்டில் உள்ள ஒப்பீடு எந்த வகையை அளிக்கிறது?",
+						"answerOptions": [
+							{
+								"answerText": "பூலியன்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பூஜ்யம்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "சரம்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "கப்பற் பெயர்ச்சுட்டு! ஜாவா ஸ்கிரிப்டில் உள்ள குறியீடு:",
+						"answerOptions": [
+							{
+								"answerText": "தருக்க இல்லை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "முக்கியமான",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "சமமான",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 12,
+				"title": "பாடம் 6 -  ஜாவாஸ்கிரிப்ட் அடிப்படைகள் - ஜாவாஸ்கிரிப்ட் மூலம் முடிவுகளை எடுக்க: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "பின்வரும் குறியீடு என்ன திரும்பும்: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பூஜ்யம்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "What would the following code return: '1' === 1",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பூஜ்யம்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "தர்க்கத்தை வெளிப்படுத்த சரியான ஆபரேட்டரைத் தேர்வு செய்யவும்",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 13,
+				"title": "பாடம் 7 - ஜாவாஸ்கிரிப்ட் அடிப்படைகள் - வரிசைகள் மற்றும் வளையங்கள்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு வரிசையில் குறிப்பிட்ட உருப்படியை குறிப்பிட, நீங்கள் ஒரு பயன்படுத்தவேண்டும்",
+						"answerOptions": [
+							{
+								"answerText": "[]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "அடைவு",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "{}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு வரிசையில் உள்ள உருப்படிகளின் எண்ணிக்கையை நீங்கள் எவ்வாறு பெறுவீர்கள்?",
+						"answerOptions": [
+							{
+								"answerText": "'லென்(வரிசை)' முறை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "அணி வரிசைசொத்து அளவு",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "வரிசையின் நீளம் பண்பு",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஜாவா ஸ்கிரிப்டில், குறியீடுகள் தொடங்குகின்றன",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 14,
+				"title": "பாடம் 7 -  ஜாவாஸ்கிரிப்ட் அடிப்படைகள் - வரிசைகள் மற்றும் வளையங்கள்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு வளையத்தின் எந்த பகுதியை நீங்கள் 5 மூலம் அதன் மறுசீரமைப்பை அதிகரிப்பதற்கு மாற்ற வேண்டும்?",
+						"answerOptions": [
+							{
+								"answerText": "நிலைமை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "எண்ணுபவர்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மறு-வெளிப்பாடு",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "சிறிது நேரம் மற்றும் ஒரு வளையத்திற்கு இடையிலான வித்தியாசம் என்ன",
+						"answerOptions": [
+							{
+								"answerText": "ஒரு வளையத்திற்கு ஒரு எதிர் மற்றும் மறுபதிப்பு வெளிப்பாடு உள்ளது, அங்கு ஒரு நிலை மட்டுமே உள்ளது",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "சிறிது நேரம் ஒரு கவுண்டர் மற்றும் மீண்டும்-வெளிப்பாடு உள்ளது, அங்கு லூப் மட்டுமே ஒரு நிபந்தனைஉள்ளது",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "அவர்கள் ஒரே மாதிரியானவர்கள், ஒருவருக்கொருவர் ஒரு மாற்றுப் பெயர்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": " (let i=1; i < 5; i++) குறியீட்டைக் கொடுக்கப்பட்டால், அது எத்தனை மறுபயன்பாடுகளைச் செய்யும்?",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 15,
+				"title": "பாடம் 8 -  திட்டம் நிலப்பரப்பு - ஹெச்டிஎம்எல் அறிமுகம்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஹெச்டிஎம்எல் என்பது 'ஹைப்பர்டெக்ஸ்ட் மோக்அப் மொழி' என்று குறிக்கிறது",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "அனைத்து ஹெச்டிஎம்எல் குறிச்சொற்களும் தொடக்க மற்றும் மூடும் குறிச்சொற்களை வேண்டும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "சொற்பொருள் மார்க்அப் பயன்படுத்துவது மிகவும் முக்கியம்",
+						"answerOptions": [
+							{
+								"answerText": "குறியீடு படிக்கக்கூடியதன்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "திரை வாசகர்கள்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பராமரிப்பு",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 16,
+				"title": "பாடம் 8 -  திட்டம் நிலப்பரப்பு - ஹெச்டிஎம்எல் அறிமுகம்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஸ்பான்கள் மற்றும் டைவ்கள் பரிமாற்றம் செய்யக்கூடியவை",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு ஹெச்டிஎம்எல் ஆவணத்தின் தலை:",
+						"answerOptions": [
+							{
+								"answerText": "தலைப்பு குறிச்சொல்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மெட்டாடேட்டா",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "இரண்டும்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "உங்கள் குறியிடலில் மதிப்பிழந்த குறிச்சொற்களை நீங்கள் பயன்படுத்த முடியாது",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய், ஆனால், அவர்கள் நல்ல காரணத்திற்காக ப்ரேக் செய்யப்பட்டுள்ளனர்.",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 17,
+				"title": "பாடம் 9  - திட்டம் நிலப்பரப்பு - சிஎஸ்எஸ் அறிமுகம்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "HTML கள் பாணியாவதற்கு ஒரு வகுப்பு அல்லது ஐடி வேண்டும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS stands for 'Complete Style Sheets'",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS can be used to create animations",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 18,
+				"title": "பாடம் 9  - திட்டம் நிலப்பரப்பு - சிஎஸ்எஸ் அறிமுகம்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "உங்கள் ஹெச்டிஎம்எல் கோப்பின் தலைமைப் பிரிவில் நேரடியாக சிஎஸ்எஸ் எழுதலாம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "உங்கள் பயன்பாட்டில் சிஎஸ்எஸ் ஐ ச் சேர்ப்பது எப்போதும் அவசியம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய், ஆனால் நீங்கள் அதை அழகாக இருக்க விரும்பினால் ஒருவேளை நீங்கள் சிஎஸ்எஸ் வேண்டும்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "எந்த உலாவி கருவியை சிஎஸ்எஸ் ஆய்வு செய்ய பயன்படுத்தலாம்?",
+						"answerOptions": [
+							{
+								"answerText": "நாற்பெரும் பூதங்கள்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பாணிகள்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பின்னல் வேலை",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 19,
+				"title": "பாடம் 10 - திட்டம் நிலப்பரப்பு - டோம் மற்றும் ஜேஎஸ் மூடல்களுக்கு அறிமுகம்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "DOM என்பது 'Document Object Management'",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "DOM ஒரு மரமாக கருதப்படலாம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "வலை API ஐப் பயன்படுத்தி, நீங்கள் DOM ஐக் கையாளலாம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 20,
+				"title": "பாடம் 10 - திட்டம் நிலப்பரப்பு - டோம் மற்றும் ஜேஎஸ் மூடல்களுக்கு அறிமுகம்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "இணையத்தில் ஒரு ஆவணத்தை பிரதிநிதித்துவப்படுத்த டிஓஎன் ஒரு மாதிரி",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "பின்வருவனசெய்ய ஜாவாஸ்கிரிப்ட் மூடல்களைப் பயன்படுத்தவும்:",
+						"answerOptions": [
+							{
+								"answerText": "தொழிற்பாடுகளுக்குள் செயல்பாடுகளை எழுதுதல்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "டோம் ஐ மூடவும்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஸ்கிரிப்ட் தொகுதிகள் மூடவும்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "வெற்றிடத்தை நிரப்பவும்: ஒன்று அல்லது அதற்கு மேற்பட்ட செயல்பாடுகள் வெளிப்புற செயல்பாட்டை அணுக வேண்டும் போது மூடல்கள் பயனுள்ளதாக இருக்கும் ...",
+						"answerOptions": [
+							{
+								"answerText": "வரிசைகள்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "நோக்கம்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பணிகள்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 21,
+				"title": "பாடம் 11 - ஒரு தட்டச்சு விளையாட்டு உருவாக்க : முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "நிகழ்வு சார்ந்த நிரலாக்கம் என்பது ஒரு பயனர் போது",
+						"answerOptions": [
+							{
+								"answerText": "ஒரு பொத்தானை கிளிக்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மதிப்பை மாற்றும்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பக்கத்துடன் ஊடாடுகிறது",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மேலே உள்ள எந்த",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "செயல்முறை நிரலாக்கத்தில், செயல்பாடுகள் அழைக்கப்படுகின்றன",
+						"answerOptions": [
+							{
+								"answerText": "எந்த நேரத்திலும்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஒரு குறிப்பிட்ட வரிசையில்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "இடமிருந்து வலமாக",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "நிகழ்வு கையாளுநர்களைப் பதிவு செய்வதற்கான DOM இல் வெளிப்படும் உலகளாவிய முறை அழைக்கப்படுகிறது",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 22,
+				"title": "பாடம் 11 - ஒரு தட்டச்சு விளையாட்டு உருவாக்க : பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு பக்கத்தில் ஒரு பயனர் செய்யும் எதையும் பற்றி ஒரு நிகழ்வை எழுப்புகிறது",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "பொதுவான நிகழ்வுகள் பின்வருமாறு",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "all of these",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "You can use anonymous functions to create event handlers",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 23,
+				"title": "பாடம் 12 -  உலாவி விரிவாக்க திட்டம் - உலாவி பற்றி:  முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "நீங்கள் இருந்து உலாவி நீட்டிப்புகள் பெற முடியும்",
+						"answerOptions": [
+							{
+								"answerText": "வால்மார்ட்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "உலாவியின் நீட்டிப்பு ஸ்டோர்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ஆப் ஸ்டோர்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM குறிக்கிறது",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "உங்கள் உலாவி பாதுகாப்பாகவும் பாதுகாப்பற்ற தாகவும் வலைப் பக்கங்களை வழங்க முடியும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 24,
+				"title": "பாடம் 12 -  உலாவி விரிவாக்க திட்டம் - உலாவி பற்றி:  பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "உலகளாவிய வலை மூலம் கண்டுபிடிக்கப்பட்டது",
+						"answerOptions": [
+							{
+								"answerText": "டாம் பர்னார்ட்-லாஃப்ட்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "டிம் பெர்னர்ஸ்-லீ",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "முதல் உலாவி அழைக்கப்பட்டது",
+						"answerOptions": [
+							{
+								"answerText": "உலகளாவிய வலை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "மொசில்லா",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "நெட்ஸ்கேப்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "உலாவிகள் பயனரின் உலாவல் வரலாற்றைசேமிக்கமுடியும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 25,
+				"title": "பாடம் 13 - உலாவி விரிவாக்க திட்டம் - படிவங்கள் மற்றும் உள்ளூர் சேமிப்பு: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "APIs நிற்க",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "தொடர்பு கொள்ள API ஐப் பயன்படுத்தவும்",
+						"answerOptions": [
+							{
+								"answerText": "மற்றொரு வலை இணைக்கப்பட்ட சொத்து",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஒரு தரவுத்தளம்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மேலே ஒன்று",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "எவரும் API உருவாக்கலாம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 26,
+				"title": "பாடம் 13 - உலாவி விரிவாக்க திட்டம் - படிவங்கள் மற்றும் உள்ளூர் சேமிப்பு: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "உலாவி சாளரத்தை மூடும் ஒவ்வொரு முறையும் அகச்சேமிப்பகம் அழிக்கப்படும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "முக்கிய உலாவி சாளரம் உலாவியின் விரிவாக்கத்தின் அகச்சேமிப்பகத்தை கட்டுப்படுத்துகிறது",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "REST ஒரு API தறுவாய் குறிக்கிறது",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 27,
+				"title": "பாடம் 14 - உலாவி விரிவாக்க திட்டம் - பின்னணி பணிகள் மற்றும் செயல்திறன்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "உங்கள் பயன்பாட்டின் செயல்திறனை சோதிக்கவும்",
+						"answerOptions": [
+							{
+								"answerText": "உலாவியின் கருவிகளைப் பயன்படுத்துதல்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "தனி மென்பொருள் தொகுப்பைப் பயன்படுத்துதல்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "கைமுறையாக",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு வலைத் தளத்தின் 'செயல்திறன்' ஒரு பகுப்பாய்வு ஆகும்",
+						"answerOptions": [
+							{
+								"answerText": "அது எவ்வளவு வேகமாக ஏற்றுகிறது",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "அதன் குறியீடு எவ்வளவு வேகமாக இயங்குகிறது",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மேலே உள்ள இரண்டும்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒட்டுமொத்தமாக, கடந்த சில ஆண்டுகளில் வலைப் பக்கங்களின் 'எடை' உள்ளது",
+						"answerOptions": [
+							{
+								"answerText": "இலகுவான கிடைத்தது",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "கனமான கிடைத்தது",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "அதே தங்கி",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 28,
+				"title": "பாடம் 14 - உலாவி விரிவாக்க திட்டம் - பின்னணி பணிகள் மற்றும் செயல்திறன்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "உங்கள் தளத்தின் செயல்திறன் பற்றிய சிறந்த பார்வையைப் பெற, அதன் கேச்சை அழிக்கவும் மற்றும் சுயவிவரத்தில் மீண்டும் ஏற்றவும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "உலாவி நீட்டிப்புகள் இயல்பாகவே செயல்திறன் கொண்டவை",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "செயல்திறன் தடைகளுக்கு பின்வருவனவை பகுப்பாய்வு செய்யுங்கள்",
+						"answerOptions": [
+							{
+								"answerText": "டிஓஎம் டிராவர்சல்ஸ்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஜாவாஸ்கிரிப்ட் தேர்வுமுறை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "சொத்து மேலாண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மேலே உள்ள அனைத்தும்",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 29,
+				"title": "பாடம் 15 - விண்வெளி விளையாட்டை - ஜாவாஸ்கிரிப்ட் மூலம் விளையாட்டுகளை உருவாக்குவதற்கான அறிமுகம்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஜாவாஸ்கிரிப்ட் விளையாட்டுகளை உருவாக்குவதற்கான ஒரு பிரபலமற்ற மொழி",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "பப் / துணை விளையாட்டின் சொத்துக்கள் மற்றும் ஓட்டத்தை நிர்வகிக்க ஒரு விருப்பமான முறை",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "பொருள் மரபுரிமையை வகுப்புகள் அல்லது கலவையைப் பயன்படுத்தி கையாளலாம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 30,
+				"title": "பாடம் 15 - விண்வெளி விளையாட்டை - ஜாவாஸ்கிரிப்ட் மூலம் விளையாட்டுகளை உருவாக்குவதற்கான அறிமுகம்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "வகுப்புகள் நடத்தைகளை உருவாக்க பரம்பரையை நம்பியுள்ளன",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "கலவை விளையாட்டு பொருட்களை விருப்பமான வடிவமைப்பு முறை",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub குறிக்கிறது:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 31,
+				"title": "பாடம் 16 - விண்வெளி விளையாட்டை - கேன்வாஸ் வரைதல்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "கேன்வாஸ் உறுப்பு என்பது திரையில் வரைய நீங்கள் பயன்படுத்துவது",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "கேன்வாஸ் ஏபிஐ பயன்படுத்தி எளிய வடிவியல் வடிவங்களை மட்டுமே நீங்கள் வரைய முடியும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "புள்ளி 0.0 கீழே இடது உள்ளது",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 32,
+				"title": "பாடம் 16 - விண்வெளி விளையாட்டை - கேன்வாஸ் வரைதல்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "நீங்கள் கேன்வாஸ் நேரடியாக வரைதல் செயல்பாடுகளை செய்ய முடியும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு படம் ஒத்திசைவாக ஏற்றப்பட்டபோது தெரிந்து கொள்ள நீங்கள் ஆன்லோட் நிகழ்வைக் கேட்கிறீர்கள்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "நீங்கள் ஒரு திரையில் படங்களை வரைக:",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 33,
+				"title": "பாடம் 17 - விண்வெளி விளையாட்டை - இயக்கம் சேர்த்தல்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "திரையில் உள்ள எந்த பொருளும் விசைப்பலகை நிகழ்வுகளைப் பெறலாம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "முக்கிய நிகழ்வுகள் மற்றும் சுட்டி நிகழ்வுகளைக் கேட்க நீங்கள் அதே முறையைப் பயன்படுத்தலாம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு குறிப்பிட்ட இடைவெளியில் விஷயங்களை நடக்க, நீங்கள் என்ன செயல்பாடு பயன்படுத்த?",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 34,
+				"title": "பாடம் 17 - விண்வெளி விளையாட்டை - இயக்கம் சேர்த்தல்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "நீங்கள் எப்போதும் திரையை மீண்டும் வரைய வேண்டும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு விளையாட்டு வளையம் என்றால் என்ன?",
+						"answerOptions": [
+							{
+								"answerText": "விளையாட்டை மீண்டும் தொடங்குவதை உறுதிப்படுத்தும் ஒரு செயல்பாடு",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "விளையாட்டு எவ்வளவு வேகமாக இயங்க வேண்டும் என்பதை முடிவு செய்த ஒரு செயல்பாடு",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "குறிப்பிட்ட இடைவெளியில் பயன்படுத்தப்படும் ஒரு செயல்பாடு மற்றும் பயனர் பார்க்க வேண்டியதை வரைகிறது",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "திரையை மறுவரைதல் ஒரு நல்ல வழக்கு",
+						"answerOptions": [
+							{
+								"answerText": "ஒரு பயனர் தொடர்பு நடந்தது",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஏதோ நகர்ந்துவிட்டது",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "காலம் கடந்துவிட்டது",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 35,
+				"title": "பாடம் 18 - விண்வெளி விளையாட்டை - ஒரு லேசர் சேர்த்து மற்றும் மோதல்கள் கண்டறியும் : முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "மோதல் கண்டறிதல் என்பது இரண்டு விஷயங்கள் மோதிக்கொண்டிருந்தால் நாம் எவ்வாறு கண்டுபிடிப்போம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "திரையில் இருந்து ஒரு உருப்படியை எப்படி அகற்றலாம்?",
+						"answerOptions": [
+							{
+								"answerText": "குப்பை சேகரிப்பவரை அழைக்கவும்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "அது இறந்த என குறிக்க, மட்டுமே நாம் திரையில் வரைய அடுத்த முறை இறந்த பொருட்களை வரைய",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "உருப்படியை எதிர்மறை ஆயத்தளத்தில் வைக்கவும்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ஜாவாஸ்கிரிப்டில் ஒரு லேசர் துப்பாக்கி சூடு உருவகப்படுத்த ஒரு நல்ல வழி:",
+						"answerOptions": [
+							{
+								"answerText": "ஒரு முக்கிய நிகழ்வுக்கு ஒரு காட்சி உறுப்பு பதிலளிக்கவும்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "அனிமேஷன் ஜிஃப்களை உருவாக்கவும்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "எதிரிகளை இடைவெளியில் வெடிக்கச் செய்யுங்கள்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 36,
+				"title": "பாடம் 18 - விண்வெளி விளையாட்டை - ஒரு லேசர் சேர்த்து மற்றும் மோதல்கள் கண்டறியும் : மபிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "மோதல் கண்டறிதலில் நீங்கள் இரண்டு ஒப்பிடுகிறீர்கள்",
+						"answerOptions": [
+							{
+								"answerText": "வட்டங்கள் மற்றும் அவை குறுக்கிடுகின்றனவா",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "செவ்வகங்கள் மற்றும் அவை குறுக்கிடுகின்றனவா",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "இரண்டு புள்ளிகளுக்கு இடையில் உள்ள தூரங்கள்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "குளிர்விக்கும் விளைவை செயல்படுத்துவதற்கான காரணம்",
+						"answerOptions": [
+							{
+								"answerText": "நீங்கள் மீண்டும் மீண்டும் எதிரிகள் அழிக்க ஒரு லேசர் சுட முடியாது என விளையாட்டு கடினமாக செய்யும்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஜாவாஸ்கிரிப்ட் ஒரு குறிப்பிட்ட எண்ணிக்கையிலான நிகழ்வுகளை மட்டுமே ஒரு முறை யூனிட்டில் உருவாக்க முடியும், எனவே நீங்கள் அவற்றை கட்டுப்படுத்த வேண்டும்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "மாறிலிகள் குறியீட்டில் அடையாளம் காணக்கூடியவை, ஏனெனில்",
+						"answerOptions": [
+							{
+								"answerText": "அவை பெரிய எழுத்துக்களில் எழுதப்பட்டுள்ளன",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "அவர்கள் குறிப்பிட்ட பெயர்கள் உள்ளன",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "அவர்கள் கபாப் வழக்கில் இது போன்ற எழுதப்பட்ட",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 37,
+				"title": "பாடம் 19 - விண்வெளி விளையாட்டை - அடித்தல் மற்றும் லைவ்ஸ்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "கேன்வாஸ் உறுப்பைப் பயன்படுத்தி திரையில் உரையை எவ்வாறு வரைகிறீர்கள்?",
+						"answerOptions": [
+							{
+								"answerText": "உரை ஒரு டைவ் அல்லது ஸ்பான் உறுப்பு உள்ளே வைக்கவும்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "கேன்வாஸ் உறுப்பு மீது உரை drawText() அழைக்கவும்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "சூழல் பொருளில் fillText() ஐ அழை",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு விளையாட்டில் 'உயிர்கள்' என்ற கருத்து உங்களுக்கு ஏன் இருக்கிறது?",
+						"answerOptions": [
+							{
+								"answerText": "நீங்கள் எவ்வளவு சேதத்தை எடுக்கலாம் என்பதைக் காட்ட",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "எனவே விளையாட்டு நேராக முடிவடையாது, ஆனால் விளையாட்டு முடிவடைவதற்கு முன்பு உங்களுக்கு பல வாய்ப்புகள் உள்ளன",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "பயன்படுத்தி கேன்வாஸ் உரை க்கு நிறம் சேர்",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 38,
+				"title": "பாடம் 19 - விண்வெளி விளையாட்டை - அடித்தல் மற்றும் லைவ்ஸ்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு வீரர் எத்தனை உயிர்களை விட்டுச் சென்றுள்ளார் என்பதைக் காட்ட ஒரு வேடிக்கையான வழி என்ன?",
+						"answerOptions": [
+							{
+								"answerText": "கப்பல்கள் பல",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஒரு புள்ளிகள் அமைப்பு",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "கேன்வாஸ் உறுப்பைப் பயன்படுத்தி திரையின் நடுவில் உரையை எவ்வாறு மையப்படுத்துக?",
+						"answerOptions": [
+							{
+								"answerText": "நீங்கள் ஃப்ளெக்ஸ்பாக்ஸ் பயன்படுத்துகிறீர்கள்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "நீங்கள் உரை வாடிக்கையாளர் சாளரஅகலம் /2 இன் எக்ஸ் ஆயத்தில் வரைய அறிவுறுத்துகிறீர்கள்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "நீங்கள் உரை ஒழுங்கமை சொத்து சூழல் பொருள் மதிப்பு மையத்தில் அமைக்க",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "குறியீட்டில், இது போன்ற ஒரு வாழ்க்கையைக் கழிக்கவும்:",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 39,
+				"title": "பாடம் 20 - விண்வெளி விளையாட்டை - முடிவு மற்றும் மறுதொடக்கம்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு விளையாட்டை மறுதொடக்கம் செய்ய ஒரு நல்ல நேரம் எப்போது",
+						"answerOptions": [
+							{
+								"answerText": "ஒரு வீரர் வெற்றி அல்லது தோல்வி போது",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "எப்போது வேண்டுமானாலும்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு விளையாட்டு எப்போது முடிவுக்கு வர வேண்டும்",
+						"answerOptions": [
+							{
+								"answerText": "ஒரு எதிரி கப்பல் அழிக்கப்படும் போது",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஒரு ஹீரோ கப்பல் அழிக்கப்படும் போது",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "புள்ளிகள் சேகரிக்கப்படும் போது",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "உங்கள் விளையாட்டில் ஒரு நிலை சேர்க்க ஒரு நல்ல வழி:",
+						"answerOptions": [
+							{
+								"answerText": "கொடுக்கப்பட்ட அளவை நிறைவு செய்ய தேவையான புள்ளிகளின் அளவை அதிகரிப்பு",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "விளையாட்டில் அதிக வீரர்களைச் சேர்க்கவும்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "விளையாட்டில் மேலும் கிராபிக்ஸ் சேர்க்கவும்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 40,
+				"title": "பாடம் 20 - விண்வெளி விளையாட்டை - முடிவு மற்றும் மறுதொடக்கம்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு விளையாட்டு இறுதியில் நிலை பூர்த்தி போது பயன்படுத்த ஒரு நல்ல முறை என்ன?",
+						"answerOptions": [
+							{
+								"answerText": "பொருத்தமான செய்தியைக் காட்டு",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "விளையாட்டை விட்டு வெளியேறு",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொருத்தமான செய்தியைக் காட்டு, மறுதொடக்கம் செய்ய பிளேயரை வழங்கவும், அந்த செயலுக்கு அடிக்க என்ன திறவுகோலைக் காட்டவும்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "விளையாட்டு முடிந்த பிறகு மட்டுமே நீங்கள் மறுதொடக்கம் வழங்க வேண்டும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு விளையாட்டை முடிக்கும் போது நிகழ்வுஉமிழ்ப்பான் அழிக்க ஒரு நல்ல வழி:",
+						"answerOptions": [
+							{
+								"answerText": "கேட்போரை அழிக்கிறது",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "திரையை அகற்றுதல்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "விளையாட்டு சாளரத்தை மூடுதல்",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 41,
+				"title": "பாடம் 21 - வங்கி கட்டவும் - ஹெச்டிஎம்எல் வார்ப்புருக்கள் மற்றும் வலை பயன்பாட்டில் வழிகள்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "வலை பயன்பாட்டில் வெவ்வேறு திரைகளைக் காண்பிக்க பல ஹெச்டிஎம்எல் கோப்புகளை உருவாக்க வேண்டும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "நீங்கள் ஒரு வலை பயன்பாட்டில் உள்ளூரில் தரவை சேமித்து வைக்கலாம் மற்றும் நீடிக்கலாம்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு வலை பயன்பாட்டிற்கான சிறந்த தரவு வழங்குநர் என்ன?",
+						"answerOptions": [
+							{
+								"answerText": "ஒரு உள்ளூர் தரவுத்தளம்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஒரு ஜாவாஸ்கிரிப்ட் பொருள்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஒரு ஜேசன் ஏபிஐ ஒரு சர்வர்",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 42,
+				"title": "பாடம் 21 - வங்கி கட்டவும் - ஹெச்டிஎம்எல் வார்ப்புருக்கள் மற்றும் வலை பயன்பாட்டில் வழிகள்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "HTML கள் முன்னிருப்பாக DOM இன் ஒரு பகுதியாகும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "வழியமைக்க, எந்த பகுதி யுஆர்எல் தேவை?",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "both",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "வரலாற்றை அழைக்கும்போது தூண்டப்பட்ட நிகழ்வின் பெயர் history.pushState() செயல்பாடு?",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 43,
+				"title": "பாடம் 22 - வங்கி கட்டவும் - உள்நுழைவு மற்றும் பதிவு படிவத்தை உருவாக்கவும்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஜாவாஸ்கிரிப்டைப் பயன்படுத்தாமல் பயனர் உள்ளீட்டை சேவையகத்திற்கு அனுப்ப ுவதற்கு ஹெச்டிஎம்எல் படிவங்கள் உங்களை அனுமதிக்கின்றன",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "<label> ஒவ்வொரு படிவ கட்டுப்பாட்டிற்கும் கூறுகள் கட்டாயமாகும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "படிவ தரவை ஒரு சேவையகத்திற்கு அனுப்புவதற்கு பாதுகாப்பானது.",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 44,
+				"title": "பாடம் 22 - வங்கி கட்டவும் - உள்நுழைவு மற்றும் பதிவு படிவத்தை உருவாக்கவும்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "<label> படிவங்களில் கூறுகளைப் பயன்படுத்துவது வடிவத்தை அழகாக மாற்றுவதற்கு மட்டுமே",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு படிவம் எந்த பகுதியில் ஒரு சேவையகத்திற்கு ஒரு யுஆர்எல் அனுப்பப்படும்?",
+						"answerOptions": [
+							{
+								"answerText": "செயல் பண்பு",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "முறை பண்பு",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "இரண்டும்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "உரையின் அதிகபட்ச அளவை அமைக்க நீங்கள் எந்த பண்புக்கூறை பயன்படுத்தலாம்<input>?",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 45,
+				"title": "பாடம் 23 - வங்கி கட்டவும் - தரவுகளை ப் பெறுதல் மற்றும் பயன்படுத்துதல் முறைகள் : முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "வழக்கமாக உலாவியில் சேவையகத்திலிருந்து தரவை ஒத்திசைவாகப் பெறுவீர்கள்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை, ஆனால் async சிறந்தது!",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "இணையத்தில் தரவைப் பரிமாறிக்கொள்ள பயன்படுத்தப்படும் மிகவும் பொதுவான வடிவம் என்ன?",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு பொது சேவையக ஏபிஐ ஐ அணுகுவதிலிருந்து ஒரு வலைப் பக்கத்தைத் தடுக்க எந்த வழியும் இல்லை",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 46,
+				"title": "பாடம் 23 - வங்கி கட்டவும் - தரவுகளை ப் பெறுதல் மற்றும் பயன்படுத்துதல் முறைகள் : பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "ஒரு பக்க பயன்பாட்டில், ஹெச்டிஎம்எல் ஒருமுறை ஏற்றப்பட்டு ஒருபோதும் புதுப்பிக்கப்படவில்லை",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "பயனர் உள்ளீட்டிலிருந்து வரும் தரவை நம்பாமல் இருப்பது ஏன் முக்கியம்?",
+						"answerOptions": [
+							{
+								"answerText": "ஏனெனில் சிறப்பு கதாபாத்திரங்களைப் பயன்படுத்துவது யுஐ ஐ அசிங்கமாக மாற்றலாம்.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஏனெனில் அது அல்லாத உணர்வு அல்லது தாக்குதல் வார்த்தைகள் இருக்க முடியும்.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஏனென்றால் தீங்கிழைக்கும் ஸ்கிரிப்ட்களை இயக்க ுவதற்கு இது தாக்குதலின் திசையன் பயன்படுத்தப்படலாம்.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு வலை சேவையகத்திற்கு ஒத்திசைவான HTTP கோரிக்கைகளை அனுப்புவதற்கான API பெயர் என்ன?",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 47,
+				"title": "பாடம் 24 - வங்கி கட்டவும் - நிலை மேலாண்மை பற்றிய கருத்துக்கள்: முன் விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "மாறாத பொருள் என்றால் என்ன?",
+						"answerOptions": [
+							{
+								"answerText": "ஒரு பொருள் ஒரு மாறிலி என வரையறுக்கப்படுகிறது",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "உருவாக்கப்பட்ட பிறகு மாற்ற முடியாத ஒரு பொருள்",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ஏற்கனவே உள்ள பொருளின் நகல்",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "மாநில நிர்வாகத்தைப் பயன்படுத்துவதன் மூலம் உங்களுக்கு என்ன நன்மை(கள்) கிடைக்கும்?",
+						"answerOptions": [
+							{
+								"answerText": "மாநிலம் புதுப்பிக்கப்பட்ட ஒவ்வொரு இடத்தையும் நீங்கள் கண்காணிக்கலாம்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "குறியீட்டை பிழைநீக்குவது எளிது",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மேலே அனைத்து",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "வெவ்வேறு அமர்வுகளில் முக்கியமான பயனர் தரவை நீடிக்க சிறந்த வழி என்ன?",
+						"answerOptions": [
+							{
+								"answerText": "கோப்புகளைப் பயன்படுத்துதல்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "உலாவியின் அகச்சேமிப்பு API ஐப் பயன்படுத்துதல்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ஒரு சேவையகத்திற்கு பின்னால் உள்ள தரவுத்தளத்தில் API",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+            {
+				"id": 48,
+				"title": "பாடம் 24 - வங்கி கட்டவும் - நிலை மேலாண்மை பற்றிய கருத்துக்கள்: பிந்தைய விரிவுரை வினாடி வினா",
+				"quiz": [
+					{
+						"questionText": "மாநில மேலாண்மை என்றால் என்ன என்று நீங்கள் நினைக்கிறீர்கள்?",
+						"answerOptions": [
+							{
+								"answerText": "சட்டம் மற்றும் ஒழுங்கு அமலாக்கம்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "காலப்போக்கில் பயனர் இடைமுக நிலையை பதிவுசெய்தல்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "உங்கள் பயன்பாட்டுத் தரவை சுத்தமாக வைத்திருப்பது மற்றும் தரவுடன் பயனர் இடைமுகத்தை ஒத்திசைப்பது",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "பயனர் அமர்வு நிலையை நீங்கள் எவ்வாறு கண்காணிக்க முடியும்?",
+						"answerOptions": [
+							{
+								"answerText": "HTTp குக்கீகள்",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "உள்ளூர் அல்லது அமர்வு சேமிப்பு",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "மேலே அனைத்து",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ஒரு பொருளை மாற்றுவதே எப்போதும் அதை புதுப்பிக்க சிறந்த வழியாகும்",
+						"answerOptions": [
+							{
+								"answerText": "உண்மை",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "பொய்",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+        ]
+    }
+]
