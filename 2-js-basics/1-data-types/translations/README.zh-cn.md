@@ -8,7 +8,9 @@
 
 这节课将会介绍 JavaScript 的基础知识，正是它为网页提供了可交互性。
 
-[![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "JavaScript 中的数据类型")
+[![Variables in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "JavaScript 中的数据类型")
+
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
 
 让我们从它最基础的组成部分 —— “变量”和“数据类型”学起吧！
 

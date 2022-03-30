@@ -87,7 +87,7 @@ Existe la posibilidad de que un dispositivo no ejecute algunas declaraciones. Es
 
 ## Herramientas del oficio
 
-[![Tools of the Trade](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
+[![Herramientas](https://img.youtube.com/vi/ysMrHssmhl0/0.jpg)](https://youtube.com/watch?v=ysMrHssmhl0 "Herramientas")
 
 En esta sección, aprenderás sobre software que puede ayudarte comenzar tu viaje de desarrollo profesional.
 

@@ -8,7 +8,7 @@
 
 Quando pensamos em escrever código, sempre queremos garantir que nosso código seja legível. Embora isso pareça contra-intuitivo, o código é lido muito mais vezes do que escrito. Uma ferramenta central na caixa de ferramentas de uma pessoa desenvolvedora para garantir código sustentável é a **função**.
 
-[![Métodos e Funções](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Métodos e Funções")
+[![Métodos e Funções](https://img.youtube.com/vi/aAfSVldL6Vk/0.jpg)](https://youtube.com/watch?v=aAfSVldL6Vk "Métodos e Funções")
 
 > Clique na imagem acima para ver um vídeo sobre métodos e funções.
 

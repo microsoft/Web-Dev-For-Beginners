@@ -200,10 +200,10 @@ Si analizza il flusso di lavoro di un contributore. Si assume che egli abbia gi√
    git branch [branch-name]
    ```
 
-1. **Passare al ramo di lavoro**. Passare al ramo specificato e aggiornare la directory di lavoro con `git checkout`:
+1. **Passare al ramo di lavoro**. Passare al ramo specificato e aggiornare la directory di lavoro con `git switch`:
 
    ```bash
-   git checkout [nome ramo]
+   git switch [nome ramo]
    ```
 
 1. **Eseguire il lavoro**. A questo punto si vorranno aggiungere i propri cambiamenti. Non dimenticarsi di dirlo a Git tramite questi comandi:
@@ -218,14 +218,14 @@ Si analizza il flusso di lavoro di un contributore. Si assume che egli abbia gi√
 1. **Combinare il proprio lavoro con il ramo `main`**. Una volta terminato il lavoro occorre combinarlo con quello del ramo principale (`main`). Il ramo principale potrebbe avere subito cambiamenti nel mentre quindi ci si deve assicurare di eseguire prima un aggiornamento all'ultima versione con i comandi:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    A questo punto occorre assicurarsi che qualsiasi eventuale _conflitto_ (conflict), situazioni dove Git non √® in grado di determinare facilmente come _combinare_ le modifiche effettuate nel proprio ramo di lavoro. Eseguire i seguenti comandi:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 

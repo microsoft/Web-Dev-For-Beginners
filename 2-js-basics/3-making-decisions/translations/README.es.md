@@ -8,6 +8,8 @@
 
 Tomar decisiones y controlar el orden en que se ejecuta su código hace que su código sea reutilizable y robusto. Esta sección cubre la sintaxis para controlar el flujo de datos en JavaScript y su importancia cuando se usa con tipos de datos booleanos.
 
+[![tomar decisiones](https://img.youtube.com/vi/P0TrLOz15zk/0.jpg)](https://youtube.com/watch?v=P0TrLOz15zk "tomar decisiones")
+
 ## Un breve resumen sobre los valores booleanos
 
 Los booleanos pueden tener solo dos valores: `true` o` false`. Los booleanos ayudan a tomar decisiones sobre qué líneas de código deben ejecutarse cuando se cumplen ciertas condiciones.

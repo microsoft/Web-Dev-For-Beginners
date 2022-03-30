@@ -9,10 +9,13 @@
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
 
 [![Arrays](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Arrays")
-[![Loops](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loops")
-> 🎥 Click the image above for a video about arrays and loops.
 
-> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!
+[![Loops](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loops")
+
+> 🎥 Click the images above for videos about arrays and loops.
+
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!
+
 ## Arrays
 
 Working with data is a common task for any language, and it's a much easier task when data is organized in a structural format, such as arrays. With arrays, data is stored in a structure similar to a list. One major benefit of arrays is that you can store different types of data in one array.
@@ -70,9 +73,9 @@ Loops allow for repetitive or **iterative** tasks, and can save a lot of time an
 ### For Loop
 
 The `for` loop requires 3 parts to iterate:
-    - `counter` A variable that is typically initialized with a number that counts the number of iterations.
-    - `condition` Expression that uses comparison operators to cause the loop to stop when `true`
-    - `iteration-expression` Runs at the end of each iteration, typically used to change the counter value
+- `counter` A variable that is typically initialized with a number that counts the number of iterations
+- `condition` Expression that uses comparison operators to cause the loop to stop when `true`
+- `iteration-expression` Runs at the end of each iteration, typically used to change the counter value
   
 ```javascript
 // Counting up to 10

@@ -4,7 +4,7 @@
 
 # Conceptos básicos de JavaScript: funcións y funciones
 
-[![funcións y funciones](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "funcións y funciones")
+[![funcións y funciones](https://img.youtube.com/vi/DdCRhOQibMo/0.jpg)](https://youtube.com/watch?v=DdCRhOQibMo "funcións y funciones")
 
 ## [Pre-lectura prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9)
 
@@ -118,7 +118,7 @@ Los parámetros se enumeran en la parte de definición entre paréntesis y está
 
 ### Parámetro
 
-Hasta ahora, la función que construimos siempre saldrá a la [consola](https://developer.mozilla.org/en-US/docs/Web/API/console). A veces, esto puede ser exactamente lo que estamos buscando, especialmente cuando creamos funciones que llamarán a otros servicios. Pero, ¿qué pasa si quiero crear una función auxiliar para realizar un cálculo y devolver el valor para poder usarlo en otro lugar?
+Hasta ahora, la función que construimos siempre saldrá a la [consola](https://developer.mozilla.org/docs/Web/API/console). A veces, esto puede ser exactamente lo que estamos buscando, especialmente cuando creamos funciones que llamarán a otros servicios. Pero, ¿qué pasa si quiero crear una función auxiliar para realizar un cálculo y devolver el valor para poder usarlo en otro lugar?
 
 Podemos hacer esto usando un **valor de retorno**. La función devuelve un valor de retorno y se puede almacenar en una variable de la misma manera que podríamos almacenar un valor literal como una cadena o un número.
 
@@ -183,7 +183,7 @@ Cualquier parámetro con valores predeterminados debe estar al final de la lista
 
 ## Revisión y autoestudio
 
-Vale la pena [leer un poco más sobre las funciones de flecha](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), ya que se utilizan cada vez más en bases de código. Practique escribir una función y luego reescribirla con esta sintaxis.
+Vale la pena [leer un poco más sobre las funciones de flecha](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), ya que se utilizan cada vez más en bases de código. Practique escribir una función y luego reescribirla con esta sintaxis.
 
 **Tarea**: [Práctica de tipos de datos](assignment.es.md)
 

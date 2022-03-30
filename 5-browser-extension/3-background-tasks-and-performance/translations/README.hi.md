@@ -22,7 +22,7 @@
 
 ![एज प्रोफाइल](../images/profiler.png)
 
-✅ किनारे पर प्रदर्शन पैनल पर [Microsoft दस्तावेज़ीकरण](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance?WT.mc_id=academy-13441-cxa) पर जाएँ
+✅ किनारे पर प्रदर्शन पैनल पर [Microsoft दस्तावेज़ीकरण](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academy-13441-cxa) पर जाएँ
 
 > युक्ति: अपनी वेब साइट के स्टार्टअप समय का सही पठन करने के लिए, अपने ब्राउज़र का कैश साफ़ करें
 

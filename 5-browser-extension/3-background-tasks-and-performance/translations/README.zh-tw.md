@@ -22,7 +22,7 @@ Performance 分頁包括了效能分析工具。開啟一個網頁，例如 http
 
 ![Edge 性能分析工具](../images/profiler.png)
 
-✅ 造訪 [Microsoft 文件](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa)觀看 Edge 的 Performance 分頁資訊
+✅ 造訪 [Microsoft 文件](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa)觀看 Edge 的 Performance 分頁資訊
 
 > 提示：要取得真正的網頁開啟時間，記得清除你的瀏覽器快取。
 

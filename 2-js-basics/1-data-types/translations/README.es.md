@@ -3,7 +3,9 @@
 ![JavaScript Basics - Data types](/sketchnotes/webdev101-js-datatypes.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-[![Tipos de datos en JavaScript](https://img.youtube.com/vi/rEHV3fFMfn0/0.jpg)](https://youtube.com/watch?v=rEHV3fFMfn0 "Tipos de datos en JavaScript")
+[![Declaracion de Variables](https://img.youtube.com/vi/mUvddpeBCAs/0.jpg)](https://youtube.com/watch?v=mUvddpeBCAs "Declaracion de Variables")
+
+[![Tipos de datos en JavaScript](https://img.youtube.com/vi/fuksTtTga90/0.jpg)](https://youtube.com/watch?v=fuksTtTga90 "Tipos de datos en JavaScript")
 
 ## [Pre-lectura prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7)
 

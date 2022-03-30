@@ -203,10 +203,10 @@ Mari melalui aliran kerja penyumbang. Anggaplah penyumbang telah _forked_ dan _c
    git branch [branch-name]
    ```
 
-1. **Tukar ke working branch**. Tukar ke branch yang ditentukan dan kemas kini direktori kerja dengan `git checkout`:
+1. **Tukar ke working branch**. Tukar ke branch yang ditentukan dan kemas kini direktori kerja dengan `git switch`:
 
    ```bash
-   git checkout [branch-name]
+   git switch [branch-name]
    ```
 
 1. **Membuat kerja**. Pada ketika ini anda ingin menambahkan perubahan anda. Jangan lupa memberitahu Git mengenainya dengan arahan berikut:
@@ -221,14 +221,14 @@ Mari melalui aliran kerja penyumbang. Anggaplah penyumbang telah _forked_ dan _c
 1. **Gabungkan kerja anda dengan `main` branch**. Pada satu ketika anda selesai bekerja dan anda ingin menggabungkan kerja anda dengan `main` branch. `main` branch mungkin telah berubah sementara itu, pastikan anda mengemas kini terlebih dahulu kepada yang terbaru dengan arahan berikut:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    Pada ketika ini anda ingin memastikan bahawa apa-apa _conflicts_, keadaan di mana Git tidak dapat dengan mudah _combine_ perubahan berlaku di working branch anda. Oleh itu, jalankan arahan berikut:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 

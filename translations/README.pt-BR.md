@@ -38,7 +38,7 @@ Até o fim deste curso, estudantes terão construído um jogo de digitação, um
 
 > 🎓 Você pode tomar as primeiras lições nesse curso como um [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101?WT.mc_id=academic-13441-cxa) no Microsoft Learn!
 
-Ao garantir que o conteúdo esteja alinhado com os projetos, o processo se torna mais envolvente para os alunos e a retenção dos conceitos será aumentada. Também escrevemos várias lições iniciais em noções básicas de JavaScript para introduzir conceitos, emparelhadas com o vídeo da coleção [accessible ici](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-13441-cxa) de vídeo-aulas, alguns de autores os quais contribuíram para este curso.
+Ao garantir que o conteúdo esteja alinhado com os projetos, o processo se torna mais envolvente para os alunos e a retenção dos conceitos será aumentada. Também escrevemos várias lições iniciais em noções básicas de JavaScript para introduzir conceitos, emparelhadas com o vídeo da coleção [accessible ici](https://www.youtube.com/playlist?list=PLb2HQ45KP0WsFop0pItGSUYl6baYjKEye) de vídeo-aulas, alguns de autores os quais contribuíram para este curso.
 
 Além disso, um teste simples antes da aula define a intenção do aluno de aprender um tópico, enquanto um segundo teste após a aula garante maior retenção. Este currículo foi projetado para ser flexível e divertido e pode ser realizado no todo ou em partes. Os projetos começam pequenos e tornam-se cada vez mais complexos no final do ciclo de 12 semanas.
 

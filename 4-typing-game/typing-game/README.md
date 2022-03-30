@@ -313,7 +313,7 @@ You've made it to the end! The last step is to ensure our application works. Giv
 
 Click on **start**, and start typing away! It should look a little like the animation we saw before.
 
-![Animation of the game in action](/4-typing-game/images/demo.gif)
+![Animation of the game in action](../images/demo.gif)
 
 ---
 
