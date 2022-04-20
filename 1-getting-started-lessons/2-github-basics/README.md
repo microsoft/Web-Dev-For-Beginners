@@ -6,6 +6,7 @@ This lesson covers the basics of GitHub, a platform to host and manage changes t
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
+
 [Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3)
 
 ## Introduction
@@ -18,19 +19,20 @@ In this lesson, we'll cover:
 
 ### Prerequisites
 
-Before you begin, you'll need to check if Git is installed. In the terminal type: 
+Before you begin, you'll need to check if Git is installed. In the terminal type:
 `git --version`
 
 If Git is not installed, [download Git](https://git-scm.com/downloads). Then, setup your local Git profile in the terminal:
-* `git config --global user.name "your-name"`
-* `git config --global user.email "your-email"`
+
+- `git config --global user.name "your-name"`
+- `git config --global user.email "your-email"`
 
 To check if Git is already configured you can type:
 `git config --list`
 
 You'll also need a GitHub account, a code editor (like Visual Studio Code), and you'll need to open your terminal (or: command prompt).
 
-Navigate to [github.com](https://github.com/) and create an account if you haven't already, or log in and fill out your profile. 
+Navigate to [github.com](https://github.com/) and create an account if you haven't already, or log in and fill out your profile.
 
 ✅ GitHub isn't the only code repository in the world; there are others, but GitHub is the best known
 
@@ -89,7 +91,7 @@ Let's say you have a folder locally with some code project and you want to start
    git add .
    ```
 
-   The `git add` plus `.` argument indicates that all your files & changes for tracking. 
+   The `git add` plus `.` argument indicates that all your files & changes for tracking.
 
 1. **Add selected files for tracking**
 
@@ -133,15 +135,15 @@ Let's say you have a folder locally with some code project and you want to start
 
    This creates a _remote_, or connection, named "origin" pointing at the GitHub repository you created earlier.
 
-1. **Send local files to GitHub**. So far you've created a _connection_ between the local repo and the GitHub repo. Let's send these files to GitHub with the following command `git push`, like so: 
-   
+1. **Send local files to GitHub**. So far you've created a _connection_ between the local repo and the GitHub repo. Let's send these files to GitHub with the following command `git push`, like so:
+
    > Note, your branch name may be different by default from ```main```.
 
    ```bash
    git push -u origin main
    ```
 
-   This sends your commits in your "main" branch to GitHub.
+   This sends your commits in your "main" branch to GitHub
 
 2. **To add more changes**. If you want to continue making changes and pushing them to GitHub you’ll just need to use the following three commands:
 
@@ -158,7 +160,7 @@ Let's say you have a folder locally with some code project and you want to start
 A great Git commit subject line completes the following sentence:
 If applied, this commit will <your subject line here>
 
-For the subject use the imperative, present tense: "change" not "changed" nor "changes". 
+For the subject use the imperative, present tense: "change" not "changed" nor "changes".
 As in the subject, in the body (optional) also use the imperative, present tense. The body should include the motivation for the change and contrast this with previous behavior. You're explaining the `why`, not the `how`.
 
 ✅ Take a few minutes to surf around GitHub. Can you find a really great commit message? Can you find a really minimal one? What information do you think is the most important and useful to convey in a commit message?
@@ -172,12 +174,12 @@ The main reason for putting things on GitHub was to make it possible to collabor
 In your repository, navigate to `Insights > Community` to see how your project compares to recommended community standards.
 
    Here are some things that can improve your GitHub repo:
-   - **Description**. Did you add a description for your project?
-   - **README**. Did you add a README? GitHub provides guidance for writing a [README](https://docs.github.com/articles/about-readmes/).
-   - **Contributing guideline**. Does your project have [contributing guidelines](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/), 
-   - **Code of Conduct**. a [Code of Conduct](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/), 
-   - **License**. Perhaps most importantly, a [license](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
 
+- **Description**. Did you add a description for your project?
+- **README**. Did you add a README? GitHub provides guidance for writing a [README](https://docs.github.com/articles/about-readmes/).
+- **Contributing guideline**. Does your project have [contributing guidelines](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/),
+- **Code of Conduct**. a [Code of Conduct](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/),
+- **License**. Perhaps most importantly, a [license](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
 
 All these resources will benefit onboarding new team members. And those are typically the kind of things new contributors look at before even looking at your code, to find out if your project is the right place for them to be spending their time.
 
@@ -187,10 +189,9 @@ All these resources will benefit onboarding new team members. And those are typi
 
 Contributing docs help people contribute to the project. It explains what types of contributions you're looking for and how the process works. Contributors will need to go through a series of steps to be able to contribute to your repo on GitHub:
 
-
 1. **Forking your repo** You will probably want people to _fork_ your project. Forking means creating a replica of your repository on their GitHub profile.
-1. **Clone**. From there they will clone the project to their local machine. 
-1. **Create a branch**. You will want to ask them to create a _branch_ for their work. 
+1. **Clone**. From there they will clone the project to their local machine.
+1. **Create a branch**. You will want to ask them to create a _branch_ for their work.
 1. **Focus their change on one area**. Ask contributors to concentrate their contributions on one thing at a time - that way the chances that you can _merge_ in their work is higher. Imagine they write a bug fix, add a new feature, and update several tests - what if you want to, or can only implement 2 out of 3, or 1 out of 3 changes?
 
 ✅ Imagine a situation where branches are particularly critical to writing and shipping good code. What use cases can you think of?
@@ -246,7 +247,7 @@ Let's go through a contributor workflow. Assume the contributor has already _for
 
 1. **Open a PR**. Next, you want to open up a PR. You do that by navigating to the forked repo on GitHub. You will see an indication on GitHub where it asks whether you want to create a new PR, you click that and you are taken to an interface where you can change commit message title, give it a more suitable description. Now the maintainer of the repo you forked will see this PR and _fingers crossed_ they will appreciate and _merge_ your PR. You are now a contributor, yay :)
 
-1. **Clean up**. It's considered good practice to _clean up_ after you successfully merge a PR. You want to clean up both your local branch and the branch you pushed to GitHub. First let's delete it locally with the following command: 
+1. **Clean up**. It's considered good practice to _clean up_ after you successfully merge a PR. You want to clean up both your local branch and the branch you pushed to GitHub. First let's delete it locally with the following command:
 
    ```bash
    git branch -d [branch-name]
@@ -272,7 +273,7 @@ First, let's find a repository (or **repo**) on GitHub of interest to you and to
 
 ![Copy a repo locally](images/clone_repo.png)
 
-There are several ways of copying code. One way is to "clone" the contents of the repository, using HTTPS, SSH, or using the GitHub CLI (Command Line Interface). 
+There are several ways of copying code. One way is to "clone" the contents of the repository, using HTTPS, SSH, or using the GitHub CLI (Command Line Interface).
 
 Open your terminal and clone the repository like so:
 `git clone https://github.com/ProjectURL`
@@ -282,11 +283,11 @@ To work on the project, switch to the right folder:
 
 You can also open the entire project using [Codespaces](https://github.com/features/codespaces), GitHub's embedded code editor / cloud development environment, or [GitHub Desktop](https://desktop.github.com/).
 
-Lastly, you can download the code in a zipped folder. 
+Lastly, you can download the code in a zipped folder.
 
 ### A few more interesting things about GitHub
 
-You can star, watch and/or "fork" any public repository on GitHub. You can find your starred repositories in the top-right drop-down menu. It's like bookmarking, but for code. 
+You can star, watch and/or "fork" any public repository on GitHub. You can find your starred repositories in the top-right drop-down menu. It's like bookmarking, but for code.
 
 Projects have an issue tracker, mostly on GitHub in the "Issues" tab unless indicated otherwise, where people discuss issues related to the project. And the Pull Requests tab is where people discuss and review changes that are in progress.
 
@@ -296,16 +297,17 @@ Projects might also have discussion in forums, mailing lists, or chat channels l
 
 ---
 
-## 🚀 Challenge 
+## 🚀 Challenge
 
 Pair with a friend to work on each other's code. Create a project collaboratively, fork code, create branches, and merge changes.
 
 ## Post-Lecture Quiz
+
 [Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4)
 
 ## Review & Self Study
 
-Read more about [contributing to open source software](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution). 
+Read more about [contributing to open source software](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution).
 
 [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/).
 
@@ -313,8 +315,8 @@ Practice, practice, practice. GitHub has great learning paths available via [lab
 
 - [First Week on GitHub](https://lab.github.com/githubtraining/first-week-on-github)
 
-You'll also find more advanced labs. 
+You'll also find more advanced labs.
 
-## Assignment 
+## Assignment
 
 Complete [the First Week on GitHub training lab](https://lab.github.com/githubtraining/first-week-on-github)
