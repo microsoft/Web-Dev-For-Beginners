@@ -17,7 +17,7 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ 閱讀更多關於[在畫布上建立文字](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)，你可以自由地豐富你的文字！
+✅ 閱讀更多關於[在畫布上建立文字](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text)，你可以自由地豐富你的文字！
 
 ## 性命，一個遊戲概念
 

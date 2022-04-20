@@ -167,7 +167,7 @@ if (firstNumber > secondNumber) {
 
 ## 複習與自學
 
-閱讀更多可被使用的運算子：[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)。
+閱讀更多可被使用的運算子：[MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)。
 
 瀏覽 Josh Comeau 所編制的[運算子查詢表](https://joshwcomeau.com/operator-lookup/)！
 

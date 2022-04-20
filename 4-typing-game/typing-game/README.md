@@ -103,7 +103,7 @@ It's always best to develop iteratively to see how things look. Let's launch our
 - Install [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) by following the link and clicking **Install**
   - You will be prompted by the browser to open Visual Studio Code, and then by Visual Studio Code to perform the installation
   - Restart Visual Studio Code if prompted
-- Once installed, in Visual Studio Code, click Ctrl-Shift-P (or Cmd-Shift-P) to open the command pallate
+- Once installed, in Visual Studio Code, click Ctrl-Shift-P (or Cmd-Shift-P) to open the command palette
 - Type **Live Server: Open with Live Server**
   - Live Server will start hosting your application
 - Open a browser and navigate to **https://localhost:5500**
@@ -313,7 +313,7 @@ You've made it to the end! The last step is to ensure our application works. Giv
 
 Click on **start**, and start typing away! It should look a little like the animation we saw before.
 
-![Animation of the game in action](/4-typing-game/images/demo.gif)
+![Animation of the game in action](../images/demo.gif)
 
 ---
 

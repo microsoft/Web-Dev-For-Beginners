@@ -4,9 +4,8 @@
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 
-[![Matrices](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Matrices")
-[![Bucles](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Bucles")
-
+[![Matrices](https://img.youtube.com/vi/4o64A0IewZ4/0.jpg)](https://youtube.com/watch?v=4o64A0IewZ4 "Matrices")
+[![Bucles](https://img.youtube.com/vi/9mDkAALcX9o/0.jpg)](https://www.youtube.com/watch?v=9mDkAALcX9o "Bucles")
 
 ## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13)
 

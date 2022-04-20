@@ -202,10 +202,10 @@
    git branch [分支名稱]
    ```
 
-1. **切換到該工作分支** 使用指令 `git checkout` 來切換到特定分支，更新分支的檔案狀態：
+1. **切換到該工作分支** 使用指令 `git switch` 來切換到特定分支，更新分支的檔案狀態：
 
    ```bash
-   git checkout [分支名稱]
+   git switch [分支名稱]
    ```
 
 1. **程式設計** 記得追蹤你所更改的地方，利用下列的指令來告訴 Git：
@@ -220,14 +220,14 @@
 1. **將工作分支與 `main` 分支進行合併** 當工作完成時，你會需要將工作分支與 `main` 分支進行合併。 `main` 分支可能會被他人更新，在合併之前記得更新主分支：
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    這項步驟可能會面臨到 _衝突(conflicts)_，代表 Git 無法將本地的更動作 _合併(combine)_ 。此時你需要執行下列的指令：
 
    ```bash
-   git checkout [分支名稱]
+   git switch [分支名稱]
    git merge main
    ```
 

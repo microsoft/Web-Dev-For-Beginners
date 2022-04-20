@@ -10,6 +10,8 @@
 
 [![JavaScript 的資料型態](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "JavaScript 的資料型態")
 
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
+
 讓我們從程式語言的基礎 ── 「變數」與「資料型態」開始吧！
 
 ## 變數 (Variable)
@@ -177,7 +179,7 @@ let myString2 = "World";
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ 布林值 `true` 亦有廣義的 'truthy' 數值。有趣的是，在 JavaScript 中，[除非被定義為 falsy，其餘的數值都會被當作是 truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)。
+✅ 布林值 `true` 亦有廣義的 'truthy' 數值。有趣的是，在 JavaScript 中，[除非被定義為 falsy，其餘的數值都會被當作是 truthy](https://developer.mozilla.org/docs/Glossary/Truthy)。
 
 ---
 

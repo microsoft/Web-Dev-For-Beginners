@@ -10,6 +10,8 @@ Deze les behandelt de basisprincipes van JavaScript, de taal die voor interactiv
 
 [![Gegevenstypen in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Gegevenstypen in JavaScript")
 
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
+
 
 Laten we beginnen met variabelen en de gegevenstypen waarmee ze worden gevuld!
 

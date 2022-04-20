@@ -8,7 +8,9 @@
 
 Esta lição cobre o básico do JavaScript, a linguagem que fornece interatividade na web.
 
-[![Tipos de dados em JavaScriptt](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Tipos de dados em JavaScript")
+[![Variáveis](https://img.youtube.com/vi/u_aLTZHsclg/0.jpg)](https://youtube.com/watch?v=u_aLTZHsclg "Variáveis")
+
+[![Data Types](https://img.youtube.com/vi/ylaZV-UKTe4/0.jpg)](https://youtube.com/watch?v=ylaZV-UKTe4 "Data Types")
 
 
 Vamos começar com variáveis e os tipos de dados que as preenchem!

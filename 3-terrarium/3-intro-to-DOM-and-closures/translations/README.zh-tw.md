@@ -9,11 +9,11 @@
 
 ### 大綱
 
-操作 DOM (Document Object Model) 是網頁開發的一項關鍵。根據 [MDN 文件](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)， 「Document Object Model (DOM) 元素能根據網頁文件的結構與內容來呈現物件」。藉由使用 JavaScript 框架而非原始的 JavaScript 程式碼來管理 DOM，在網頁上操作 DOM 的挑戰已經不比以前困難了，但這裡我們要自己來管理它們！
+操作 DOM (Document Object Model) 是網頁開發的一項關鍵。根據 [MDN 文件](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction)， 「Document Object Model (DOM) 元素能根據網頁文件的結構與內容來呈現物件」。藉由使用 JavaScript 框架而非原始的 JavaScript 程式碼來管理 DOM，在網頁上操作 DOM 的挑戰已經不比以前困難了，但這裡我們要自己來管理它們！
 
-此外，這堂課也會介紹有關[JavaScript 閉包(Closure)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)的概念，你可以想像成一個函式被包在另一個函式中，以訪問外面函式範圍中的變數。
+此外，這堂課也會介紹有關[JavaScript 閉包(Closure)](https://developer.mozilla.org/docs/Web/JavaScript/Closures)的概念，你可以想像成一個函式被包在另一個函式中，以訪問外面函式範圍中的變數。
 
-> JavaScript 閉包是個廣闊且複雜的主題。本堂課只觸及建立盆栽盒需要的最基礎概念。你能得知一個閉包為：內部函式和外部函式建立一項關係，允許內部函式存取外部函式的變數等作用域。要得知更多關於閉包的原理，請造訪觀看[額外的文件](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)。
+> JavaScript 閉包是個廣闊且複雜的主題。本堂課只觸及建立盆栽盒需要的最基礎概念。你能得知一個閉包為：內部函式和外部函式建立一項關係，允許內部函式存取外部函式的變數等作用域。要得知更多關於閉包的原理，請造訪觀看[額外的文件](https://developer.mozilla.org/docs/Web/JavaScript/Closures)。
 
 我們會使用閉包來操控 DOM。
 
@@ -108,9 +108,9 @@ function dragElement(terrariumElement) {
 
 `dragElement` 藉由程式定義的參數取得 `terrariumElement` 物件。之後，設定一些位置 `0` 的變數給函式內的物件使用。它們是本地變數，給每一個進到拖曳函式內的物件操控。盆栽盒會被這些拖曳物件填充，我們的網頁應用必須要持續追蹤這些物件的位置。
 
-此外，進到函式的 terrariumElement 也被新增了 `pointerdown` 事件，它是管理 DOM 的其中一項[網頁 APIs](https://developer.mozilla.org/en-US/docs/Web/API)。當按鈕按下時，或是在我們案例中，一個拖曳物件被點擊時，`onpointerdown` 事件就會被觸發。這個事件處理器(event handler)皆運作在[網頁與行動瀏覽器](https://caniuse.com/?search=onpointerdown)上，只有少部分的例外。
+此外，進到函式的 terrariumElement 也被新增了 `pointerdown` 事件，它是管理 DOM 的其中一項[網頁 APIs](https://developer.mozilla.org/docs/Web/API)。當按鈕按下時，或是在我們案例中，一個拖曳物件被點擊時，`onpointerdown` 事件就會被觸發。這個事件處理器(event handler)皆運作在[網頁與行動瀏覽器](https://caniuse.com/?search=onpointerdown)上，只有少部分的例外。
 
-✅ [事件處理器 `onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick)支援更多的瀏覽器。為什麼我們不在這邊使用它？ 想想看我們在這此建立的視窗互動類型。
+✅ [事件處理器 `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick)支援更多的瀏覽器。為什麼我們不在這邊使用它？ 想想看我們在這此建立的視窗互動類型。
 
 ---
 
@@ -207,9 +207,9 @@ function stopElementDrag() {
 
 ## 複習與自學
 
-在螢幕上拖曳物件看似簡單，但依照不同的目的與實現方法會遭遇到不同的問題。事實上，這邊有一份關於你可以嘗試的[拖曳 API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)。我們沒在專案中使用是為了建立不一樣的實現方法，試著使用這些 API 到專案中，看看你能完成什麼。
+在螢幕上拖曳物件看似簡單，但依照不同的目的與實現方法會遭遇到不同的問題。事實上，這邊有一份關於你可以嘗試的[拖曳 API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API)。我們沒在專案中使用是為了建立不一樣的實現方法，試著使用這些 API 到專案中，看看你能完成什麼。
 
-在 [W3C 文件](https://www.w3.org/TR/pointerevents1/) 和 [MDN 網頁文件](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events)上取得更多關於 pointer 的事件。
+在 [W3C 文件](https://www.w3.org/TR/pointerevents1/) 和 [MDN 網頁文件](https://developer.mozilla.org/docs/Web/API/Pointer_events)上取得更多關於 pointer 的事件。
 
 記得習慣性用 [CanIUse.com](https://caniuse.com/) 檢查網頁的瀏覽器兼容性。
 
