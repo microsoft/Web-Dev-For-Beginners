@@ -14,4 +14,7 @@ In this game, I have used simple `HTML` `CSS` and `JavaScript`. In `HTML` I crea
 * Blue cars are enemies and you need to save your car from enemies
 
 ---
+Written with ♥️ by [Akshay Kumar Kushwaha](https://github.com/xiakshay)
+
 🙏 Thank You 
+
