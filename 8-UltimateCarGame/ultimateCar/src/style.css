@@ -1,0 +1,114 @@
+:root{
+    --black: #000;
+    --lightBlack: #504f4f;
+    --white: #fff;
+    --darkWhite: #999999;
+    --lightWhite: #c9c9c9;
+    --mainBackground: #40b876;
+    --scoreBoard: #5aebf0;
+    --scoreBorder: #392c50;
+    --messageBox: rgb(138, 61, 61);
+    --roadColor: #5f5f5fbb;
+    --roadlineCol: #fff;
+    --scoreRes: #7d39eb;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background: var(--mainBackground); */
+    display: inline-block;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url('./back.jpg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.road{
+    position: absolute;
+    width: 450px;
+    height: 100%;
+    background: var(--darkWhite);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid var(--roadColor);
+}
+
+.score{
+    float: right;
+    background-color: var(--scoreBoard);
+    color: var(--scoreRes);
+    height: 40px;
+    width: 170px;
+    margin-top: 10px;
+    border: 2px solid var(--scoreBorder);
+    border-radius: 20px 0 0 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.message {
+    position: absolute;
+    height: 120px;
+    width: 600px;
+    background-color: var(--messageBox);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--white);
+    border-radius: 20px 0 20px 0;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px  0 ;
+    color: var(--lightWhite);
+    visibility: visible;
+}
+
+.main{
+    width: 440px;
+    height: 100%;
+    margin: 0 5px;
+    background: var(--roadColor);
+    visibility: visible;
+    border-right: 7px dashed #c8d6e5;
+    border-left: 7px dashed #c8d6e5;
+}
+
+.message.hide{
+    visibility: hidden;
+}
+
+.car{
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    position: absolute;
+    left: 50px;
+    top: 450px;
+}
+
+.roadLine{
+    width: 5px;
+    height: 70px;
+    background: var(--roadlineCol);
+    position: absolute;
+    left: 50%;
+    /* top: 50px; */
+    transform: translateX(-50%);
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.enemyCar{
+    width: 50px;
+    height: 70px;
+    background-color: #252147;
+    position: absolute;
+    left: 50px;
+    top: 450px;
+}
