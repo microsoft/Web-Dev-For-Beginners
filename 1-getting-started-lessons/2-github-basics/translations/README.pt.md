@@ -80,7 +80,7 @@ Digamos que você tenha uma pasta localmente com algum projeto de código e dese
         modified:   file2.txt
    ```
 
-   Geralmente o comando `git status` diz a você coisas como: quais arquivos estão prontos para serem _salvos_ para o repo ou tem alterações que você pode querer persistir.
+   Geralmente o comando `git status` diz a você coisas como quais arquivos estão prontos para serem _salvos_ para o repo ou tem alterações que você pode querer persistir.
 
 1. **Adicionar todos os arquivos para rastreamento**
    Isso também é chamado de arquivos de teste / adição de arquivos à área de teste.
