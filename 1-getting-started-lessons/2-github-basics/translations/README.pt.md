@@ -255,7 +255,7 @@ Vamos analisar o fluxo de trabalho de uma pessoa colaboradora. Suponha que ela j
 
 Uma PR é o lugar para comparar e discutir as diferenças introduzidas em um branch com revisões, comentários, testes integrados e muito mais. Uma boa PR segue aproximadamente as mesmas regras de uma mensagem de commit. Você pode adicionar uma referência a um problema no rastreador de problemas, quando seu trabalho, por exemplo, corrige um problema. Isso é feito usando um `#` seguido pelo número do seu problema. Por exemplo `# 97`.
 
-🤞 Dedos cruzados para que todas as verificações sejam aprovadas e as pessoas proprietárias do projeto deem merge nas suas alterações no projeto🤞
+🤞 Dedos cruzados para que todas as verificações sejam aprovadas e as pessoas proprietárias do projeto deem merge nas suas alterações no projeto 🤞
 
 Atualize seu branch de trabalho local atual com todos os novos commits do branch remoto correspondente no GitHub:
 
@@ -279,7 +279,7 @@ Para trabalhar no projeto, mude para a pasta certa:
 
 Você também pode abrir todo o projeto usando [Codespaces](https://github.com/features/codespaces), O editor de código incorporado do GitHub/ ambiente de desenvolvimento em nuvem, ou o [GitHub Desktop](https://desktop.github.com/).
 
-Por  último, você pode baixar o código em uma pasta com zíper.
+Por último, você pode baixar o código em uma pasta como .zip.
 
 ###  Mais algumas coisas interessantes sobre o GitHub
 
