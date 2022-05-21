@@ -21,7 +21,7 @@ In this lesson, we'll cover:
 
 ## What is Programming?
 
-Programming (also known as coding) is the process of writing instructions for a device, such as a computer or mobile device. We write these instructions with a programming language, which is then interpreted by the device. These sets of instructions may be referred to by various names, but *program*, *computer program*, *application (app)*, and *executable* are a few popular names.
+Programming (also known as coding) is the process of writing instructions for a device such as a computer or mobile device. We write these instructions with a programming language, which is then interpreted by the device. These sets of instructions may be referred to by various names, but *program*, *computer program*, *application (app)*, and *executable* are a few popular names.
 
 A *program* can be anything that is written with code; websites, games, and phone apps are programs. While it's possible to create a program without writing code, the underlying logic is interpreted by the device and that logic was most likely written with code. A program that is *running* or *executing* code is carrying out instructions. The device that you're reading this lesson with is running a program to print it to your screen.
 
@@ -96,7 +96,7 @@ There's a chance that some statements will not be executed by a device. This is 
 
 In this section, you'll learn about some software that you may find to be very useful as you start your professional development journey.
 
-A **development environment** is a unique set of tools and features that a developer uses often when writing software. Some of these tools have been customized for a developers specific needs, and may change over time if that developer changes priorities in work, personal projects, or when they use a different programming language. Development environments are as unique as the developers who use them.
+A **development environment** is a unique set of tools and features that a developer uses often when writing software. Some of these tools have been customized for a developer's specific needs, and may change over time if that developer changes priorities in work, personal projects, or when they use a different programming language. Development environments are as unique as the developers who use them.
 
 ### Editors
 
@@ -104,7 +104,7 @@ One of the most crucial tools for software development is the editor. Editors ar
 
 Developers rely on editors for a few additional reasons:
 
-- *Debugging* helps uncover bugs and errors by stepping through the code, line by line. Some editors have debugging capabilities, they can be customized and added for specific programming languages.  
+- *Debugging* helps uncover bugs and errors by stepping through the code, line by line. Some editors have debugging capabilities; they can be customized and added for specific programming languages.  
 - *Syntax highlighting* adds colors and text formatting to code, making it easier to read. Most editors allow customized syntax highlighting.
 - *Extensions and Integrations* are specialized tools for developers, by developers. These tools weren't built into the base editor. For example, many developers document their code to explain how it works. They may install a spell check extension to help find typos within the documentation. Most extensions are intended for use within a specific editor, and most editors come with a way to search for available extensions.
 - *Customization* enables developers to create a unique development environment to suit their needs. Most editors are extremely customizable and may also allow developers to create custom extensions.
@@ -122,7 +122,7 @@ Developers rely on editors for a few additional reasons:
 
 ### Browsers
 
-Another crucial tool is the browser. Web developers rely on the browser to see how their code runs on the web, it's also used to display the visual elements of a web page that are written in the editor, like HTML.
+Another crucial tool is the browser. Web developers rely on the browser to see how their code runs on the web. It's also used to display the visual elements of a web page that are written in the editor, like HTML.
 
 Many browsers come with *developer tools* (DevTools) that contain a set of helpful features and information to help developers collect and capture important information about their application. For example: If a web page has errors, it's sometimes helpful to know when they occurred. DevTools in a browser can be configured to capture this information.
 
@@ -134,7 +134,7 @@ Many browsers come with *developer tools* (DevTools) that contain a set of helpf
 
 ### Command Line Tools
 
-Some developers prefer a less graphical view for their daily tasks and rely on the command line to achieve this. Writing code requires a significant amount of typing and some developers prefer to not disrupt their flow on the keyboard. They will use keyboard shortcuts to swap between desktop windows, work on different files, and use tools. Most tasks can be completed with a mouse, but one benefit of using the command line is that a lot can be done with command line tools without taking your hands off the keyboard. Another benefit of the command line is that they're configurable and you can save a custom configuration, change it later, and import it to other development machines. Because development environments are so unique to each developer, some will avoid using the command line, some will rely on it entirely, and some prefer a mix of the two.
+Some developers prefer a less graphical view for their daily tasks and rely on the command line to achieve this. Writing code requires a significant amount of typing and some developers prefer to not disrupt their flow on the keyboard. They will use keyboard shortcuts to swap between desktop windows, work on different files, and use tools. Most tasks can be completed with a mouse, but one benefit of using the command line is that a lot can be done with command line tools without the need of swapping between the mouse and keyboard. Another benefit of the command line is that they're configurable and you can save a custom configuration, change it later, and import it to other development machines. Because development environments are so unique to each developer, some will avoid using the command line, some will rely on it entirely, and some prefer a mix of the two.
 
 ### Popular Command Line Options
 
