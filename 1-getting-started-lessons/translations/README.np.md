@@ -15,5 +15,3 @@
 GitHub को परिचय [Floor Drees](https://twitter.com/floordrees) द्वारा ♥️ लेखिएको थियो।
 
 पहुँचका आधारभूत कुराहरू [Christopher Harrison](https://twitter.com/geektrainer) द्वारा ♥️ लेखिएको थियो।
-
-
