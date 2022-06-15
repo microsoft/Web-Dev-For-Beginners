@@ -2,13 +2,13 @@
 
 यो पाठले प्रोग्रामिङ भाषाहरूको आधारभूत कुराहरू समेट्छ। यहाँ समेटिएका विषयहरू आजका अधिकांश आधुनिक प्रोग्रामिङ भाषाहरूमा लागू हुन्छन्। 'व्यापारका उपकरणहरू' खण्डमा, तपाईंले विकासकर्ताको रूपमा मद्दत गर्ने उपयोगी सफ्टवेयरको बारेमा सिक्नुहुनेछ।
 
-![Intro Programming](../../sketchnotes/webdev101-programming.png)
+![Intro Programming](../../../sketchnotes/webdev101-programming.png)
 > [Tomomi Imura](https://twitter.com/girlie_mac) द्वारा स्केचनोट
 
 ## प्रि-लेक्चर क्विज
 [प्री-लेक्चर क्विज](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1)
 
-##परिचय
+## परिचय
 
 यस पाठमा, हामी कभर गर्नेछौं:
 
