@@ -4,9 +4,9 @@
 
 ### विषयहरू
 
-1. [प्रोग्रामिङ भाषाहरू र व्यापारका उपकरणहरूको परिचय](1-intro-to-programming-languages/README.md)
-2. [GitHub को परिचय](2-github-basics/README.md)
-3. [पहुँचको आधारभूत](3-accessibility/README.md)
+1. [प्रोग्रामिङ भाषाहरू र व्यापारका उपकरणहरूको परिचय](../1-intro-to-programming-languages/translations/README.np.md)
+2. [GitHub को परिचय](../2-github-basics/README.md)
+3. [पहुँचको आधारभूत](../3-accessibility/README.md)
 
 ### क्रेडिट
 
