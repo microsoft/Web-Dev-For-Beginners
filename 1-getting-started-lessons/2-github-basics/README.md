@@ -173,6 +173,9 @@ The main reason for putting things on GitHub was to make it possible to collabor
 
 ## Working on projects with others
 
+> Check out video
+> [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
+
 In your repository, navigate to `Insights > Community` to see how your project compares to recommended community standards.
 
    Here are some things that can improve your GitHub repo:
