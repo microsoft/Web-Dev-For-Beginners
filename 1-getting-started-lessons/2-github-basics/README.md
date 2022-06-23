@@ -47,6 +47,7 @@ Let's say you have a folder locally with some code project and you want to start
 ### Task: Make a repository and commit code  
 
 > Check out video
+> 
 > [![Git and GitHub basics video](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
 
 
@@ -174,6 +175,7 @@ The main reason for putting things on GitHub was to make it possible to collabor
 ## Working on projects with others
 
 > Check out video
+>
 > [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
 In your repository, navigate to `Insights > Community` to see how your project compares to recommended community standards.
