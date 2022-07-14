@@ -5,7 +5,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/17?loc=ja)
+[レッスン前の小テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/17?loc=ja)
 
 ### イントロダクション
 
@@ -252,7 +252,7 @@ HTML マークアップの各植物には、id とクラスの組み合わせが
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/18?loc=ja)
+[レッスン後の小テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/18?loc=ja)
 
 ## 復習と自己学習
 

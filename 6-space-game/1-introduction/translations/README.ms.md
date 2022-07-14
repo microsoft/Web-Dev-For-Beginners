@@ -4,7 +4,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/29)
+[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/29)
 
 ### Warisan dan Komposisi dalam pembangunan permainan
 
@@ -213,7 +213,7 @@ Fikirkan bagaimana corak pub-sub dapat meningkatkan permainan. Bahagian mana yan
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/30)
+[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/30)
 
 ## Mengkaji & Belajar Sendiri
 

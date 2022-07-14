@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/35?loc=fr)
+[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/35?loc=fr)
 
 Dans cette leçon, vous apprendrez à tirer des lasers avec JavaScript! Nous ajouterons deux choses à notre jeu:
 
@@ -286,7 +286,7 @@ Ajoutez une explosion! Jetez un œil aux ressources du jeu dans [le référentie
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/36?loc=fr)
+[Quiz de validation des connaissances](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/36?loc=fr)
 
 ## Révision et étude personnelle
 

@@ -5,7 +5,7 @@
 
 ## 课前测试
 
-[课前测试](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=zh_cn)
+[课前测试](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/15?loc=zh_cn)
 
 ### 介绍
 
@@ -219,7 +219,7 @@ HTML 中还有一些狂野的'旧'标签，玩起来仍然很有趣。虽然[这
 
 ## 课后测试
 
-[课后测试](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=zh_cn)
+[课后测试](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/16?loc=zh_cn)
 
 ## 复习 & 预习
 

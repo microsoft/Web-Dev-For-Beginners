@@ -4,7 +4,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/29?loc=ja)
+[レッスン前の小テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/29?loc=ja)
 
 ### ゲーム開発における継承とコンポジション
 
@@ -213,7 +213,7 @@ pub-sub パターンがどのようにゲームを盛り上げるかを考えて
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/30?loc=ja)
+[レッスン後の小テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/30?loc=ja)
 
 ## 復習と自己学習
 

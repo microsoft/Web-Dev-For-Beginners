@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/25?loc=it)
+[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/25?loc=it)
 
 ### Introduzione
 
@@ -212,7 +212,7 @@ Finora si è discusso sui diversi tipi di API in queste lezioni. Scegliere un'AP
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/26?loc=it)
+[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/26?loc=it)
 
 ## Revisione e Auto Apprendimento
 

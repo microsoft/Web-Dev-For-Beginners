@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/33?loc=ja)
+[レッスン前の小テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/33?loc=ja)
 
 ゲームは、あなたが画面上を走り回るエイリアンを持っているまでは、あまり楽しいものではありません! このゲームでは、2種類の動きを使用しています。このゲームでは、2種類の動きを利用していきます。
 
@@ -376,7 +376,7 @@ npm start
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/34?loc=ja)
+[レッスン後の小テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/34?loc=ja)
 
 ## 復習と自己学習
 

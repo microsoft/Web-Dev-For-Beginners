@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/37)
+[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/37)
 
 In this lesson, you'll learn how to add scoring to a game and calculate lives.
 
@@ -178,7 +178,7 @@ Your code is almost complete. Can you envision your next steps?
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/38)
+[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/38)
 
 ## Review & Self Study
 

@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/29)
+## [Pre-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/29)
 
 ### Herencia y composición en el desarrollo de juegos
 
@@ -207,7 +207,7 @@ A medida que las cosas se complican cuando tu juego crece, este patrón permanec
 
 🚀Desafío: Piense en cómo el patrón pub-sub puede mejorar un juego. ¿Qué partes deberían emitir eventos y cómo debería reaccionar el juego ante ellos? Ahora tienes la oportunidad de ser creativo, pensar en un nuevo juego y en cómo podrían comportarse sus partes.
 
-## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/30)
+## [Post-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/30)
 
 ## Revisión y autoestudio
 

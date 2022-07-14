@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/35)
+[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/35)
 
 Dalam pelajaran ini, anda akan belajar bagaimana menembak laser dengan JavaScript! Kami akan menambah dua perkara pada permainan kami:
 
@@ -286,7 +286,7 @@ Tambah letupan! Lihat aset permainan di [Space Art repo](../../solution/spaceArt
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/36)
+[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/36)
 
 ## Mengkaji & Belajar Sendiri
 

@@ -4,7 +4,7 @@
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9?loc=zh_tw)
+[課前測驗](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/9?loc=zh_tw)
 
 撰寫程式碼時，我們必須確保程式碼的閱讀性。聽來不太直覺，理解程式碼的時間遠比撰寫時間來的久。裡面最需要被管理的程式項目就是**函式**。
 
@@ -184,7 +184,7 @@ setTimeout(() => {
 你能用一句話清楚地說明這些函式與方法的差別嗎? 試試看吧！
 
 ## 課後測驗
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/10?loc=zh_tw)
+[課後測驗](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/10?loc=zh_tw)
 
 ## 複習與自學
 

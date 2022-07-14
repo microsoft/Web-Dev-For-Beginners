@@ -6,7 +6,7 @@
 
 [![funcións y funciones](https://img.youtube.com/vi/DdCRhOQibMo/0.jpg)](https://youtube.com/watch?v=DdCRhOQibMo "funcións y funciones")
 
-## [Pre-lectura prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9)
+## [Pre-lectura prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/9)
 
 Cuando necesite su código para realizar una tarea, utilizará un función o una función. Analicemos las diferencias.
 
@@ -179,7 +179,7 @@ Cualquier parámetro con valores predeterminados debe estar al final de la lista
 🚀 Desafío:
 
 
-## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/10)
+## [Post-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/10)
 
 ## Revisión y autoestudio
 

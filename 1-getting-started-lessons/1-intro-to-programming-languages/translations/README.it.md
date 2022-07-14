@@ -6,7 +6,7 @@ Questa lezione tratta delle basi dei linguaggi di programmazione. Gli argomenti 
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1?loc=it)
+[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/1?loc=it)
 
 ## Introduzione
 
@@ -183,7 +183,7 @@ Quando uno sviluppatore vuole imparare qualcosa di nuovo, per la maggior parte d
 Confrontate alcuni linguaggi di programmazione. Quali sono i tratti univoci di  JavaScript rispetto a Java? E COBOL rispetto a Go?
 
 ## Quiz Post-Lezione
-[Quiz Post-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/2?loc=it)
+[Quiz Post-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/2?loc=it)
 
 ## Revisione e Auto Istruzione
 

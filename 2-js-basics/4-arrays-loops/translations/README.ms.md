@@ -4,7 +4,7 @@
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13)
+[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/13)
 
 Pelajaran ini merangkumi asas-asas JavaScript, bahasa yang menyediakan interaktiviti di web. Dalam pelajaran ini, anda akan belajar tentang array dan loop, yang digunakan untuk memanipulasi data.
 
@@ -118,7 +118,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Terdapat cara lain untuk mengulangi tatasusunan selain untuk dan semasa gelung. Terdapat [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), dan [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Tulis semula array loop anda menggunakan salah satu teknik ini.
 
 ## Kuiz Pasca Kuliah
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14)
+[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/14)
 
 ## Mengkaji and Belajar Sendiri 
 

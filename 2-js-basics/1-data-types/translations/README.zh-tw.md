@@ -4,7 +4,7 @@
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7?loc=zh_tw)
+[課前測驗](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/7?loc=zh_tw)
 
 這堂課會講述 Javascript 的基礎 ── 一款建立互動性網頁的程式語言。
 
@@ -188,7 +188,7 @@ let myString2 = "World";
 JavaScript 在處理資料結構時有許多種方法，有些場合為人詬病。在這方面做一些調查，例如：大小寫敏感性的問題！在命令欄中輸入看看： `let age = 1; let Age = 2; age == Age`，輸出結果是 `false`，為什麼? 你能找到其他問題嗎?
 
 ## 課後測驗
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8?loc=zh_tw)
+[課後測驗](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/8?loc=zh_tw)
 
 ## 複習與自學
 

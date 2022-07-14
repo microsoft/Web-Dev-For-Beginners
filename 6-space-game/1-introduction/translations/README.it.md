@@ -4,7 +4,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/29?loc=it)
+[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/29?loc=it)
 
 ### Ereditarietà e Composizione nello sviluppo del gioco
 
@@ -213,7 +213,7 @@ Pensare a come il modello pub/sub può migliorare un gioco. Quali parti dovrebbe
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/30?loc=it)
+[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/30?loc=it)
 
 ## Revisione e Auto Apprendimento
 

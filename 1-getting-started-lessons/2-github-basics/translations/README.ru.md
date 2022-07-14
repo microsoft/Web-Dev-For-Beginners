@@ -8,7 +8,7 @@
 
 ## Предлекционный квиз
 
-[Предлекционный квиз](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3)
+[Предлекционный квиз](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/3)
 
 ## Введение
 
@@ -302,7 +302,7 @@ Pull request - это место, где можно сравнить и обсу
 
 ## Постлекционный квиз
 
-[Постлекционный квиз](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4)
+[Постлекционный квиз](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/4)
 
 ## Обзор и самообучение
 
