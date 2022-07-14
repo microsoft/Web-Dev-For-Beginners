@@ -1,6 +1,6 @@
 # Conceptos de gestión del estado
 
-## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/47)
+## [Pre-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/47)
 
 ### Introducción
 
@@ -267,7 +267,7 @@ Ahora que recargamos los datos de la cuenta cada vez que se carga el panel, ¿cr
 
 Intente trabajar juntos para cambiar lo que se guarda y carga desde `localStorage` para incluir solo lo que es absolutamente necesario para que la aplicación funcione.
 
-## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/48)
+## [Post-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/48)
 
 ## Asignación
 

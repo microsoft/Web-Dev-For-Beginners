@@ -8,7 +8,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 事前クイズ
-[事前クイズ](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1?loc=ja)
+[事前クイズ](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/1?loc=ja)
 
 ## Introduction
 
@@ -236,7 +236,7 @@ JavaScriptとJavaの特徴は？
 COBOLとGoについては？
 
 ## 事後テスト
-[事後テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1?loc=ja)
+[事後テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/1?loc=ja)
 
 ## レビュー & 自習
 

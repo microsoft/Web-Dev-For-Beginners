@@ -2,7 +2,7 @@
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/25?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/25?loc=hi)
 
 ### परिचय
 
@@ -212,7 +212,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/26?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/26?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

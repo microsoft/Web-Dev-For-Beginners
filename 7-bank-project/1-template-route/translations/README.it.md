@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/41?loc=it)
+[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/41?loc=it)
 
 ### Introduzione
 
@@ -295,7 +295,7 @@ Aggiungere un nuovo modello e instradare per una terza pagina che mostra i credi
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/42?loc=it)
+[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/42?loc=it)
 
 ## Revisione e Auto Apprendimento
 

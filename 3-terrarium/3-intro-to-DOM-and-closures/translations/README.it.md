@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/19?loc=it)
+[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/19?loc=it)
 
 ### Introduzione
 
@@ -201,7 +201,7 @@ Aggiungere un nuovo gestore di eventi alla closure per fare qualcosa di più con
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/20?loc=it)
+[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/20?loc=it)
 
 ## Revisione e Auto Apprendimento
 

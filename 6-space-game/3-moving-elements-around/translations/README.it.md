@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/33?loc=it)
+[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/33?loc=it)
 
 I giochi non sono molto divertenti finché non si hanno alieni che scorazzano per lo schermo! In questo gioco, si utilizzeranno due tipi di movimenti:
 
@@ -377,7 +377,7 @@ Come si può vedere, il proprio codice può trasformarsi in ["spaghetti code"](h
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/34?loc=it)
+[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/34?loc=it)
 
 ## Revisione e Auto Apprendimento
 

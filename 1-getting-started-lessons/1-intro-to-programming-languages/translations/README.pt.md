@@ -8,7 +8,7 @@ Essa lição trata dos básicos de linguagens de programação. Os tópicos trat
 
 ## Quiz Pré-Lição
 
-[Quiz Pré-Lição](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1)
+[Quiz Pré-Lição](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/1)
 
 ## Introdução
 
@@ -203,7 +203,7 @@ Compare algumas linguagens de programação. Quais são algumas das característ
 
 ## Quiz Pós-Aula
 
-[Quiz Pós-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/2)
+[Quiz Pós-Aula](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/2)
 
 ## Revisão & Autoestudo
 

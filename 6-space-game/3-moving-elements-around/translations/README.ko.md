@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/33?loc=ko)
+[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/33?loc=ko)
 
 외계인이 화면을 돌아다니기 전까지는 게임이 재미 없습니다! 이 게임에서는, 두 가지 타입의 동작을 씁니다:
 
@@ -378,7 +378,7 @@ npm start
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/34?loc=ko)
+[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/34?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

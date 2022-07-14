@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/21)
+[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/21)
 
 ## Event driven programming
 
@@ -328,7 +328,7 @@ Add more functionality
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/22)
+[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/22)
 
 ## Review & Self Study
 

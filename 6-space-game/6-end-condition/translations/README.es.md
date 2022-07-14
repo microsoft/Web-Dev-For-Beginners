@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/39)
+## [Pre-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/39)
 
 Hay diferentes formas de expresar y *condición final* en un juego. Depende de usted, como creador del juego, decir por qué ha terminado. Aquí hay algunas razones, si asumimos que estamos hablando del juego espacial que has estado construyendo hasta ahora:
 
@@ -205,7 +205,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
 🚀 Desafío: ¡Agrega un sonido! ¿Puedes agregar un sonido para mejorar tu juego, tal vez cuando hay un golpe de láser, o el héroe muere o gana? Eche un vistazo a este [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) para aprender a reproducir sonido con JavaScript.
 
-## [Post-lecture prueba]((https://happy-mud-02d95f10f.azurestaticapps.net/quiz/40)
+## [Post-lecture prueba]((https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/40)
 
 ## Revisión y autoestudio
 

@@ -4,7 +4,7 @@
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula
-[Quiz Pré-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7)
+[Quiz Pré-Aula](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/7)
 
 Esta lição cobre o básico do JavaScript, a linguagem que fornece interatividade na web.
 
@@ -186,7 +186,7 @@ Os booleanos podem ter apenas dois valores: `true` ou` false`. Os booleanos pode
 JavaScript é notório por suas maneiras surpreendentes de lidar com tipos de dados ocasionalmente. Pesquise sobre essas 'pegadinhas'. Por exemplo: a diferenciação de maiúsculas e minúsculas pode afetar! Tente isto em seu console: `let age = 1; deixe Idade = 2; age == Age` (resolve `false` - por quê?). Que outras dicas você pode encontrar?
 
 ## Quiz Pós-Aula
-[Quiz Pós-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8)
+[Quiz Pós-Aula](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/8)
 
 ## Revisão e autoestudo
 

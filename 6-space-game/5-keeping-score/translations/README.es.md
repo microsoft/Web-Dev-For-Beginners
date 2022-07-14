@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/37)
+## [Pre-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/37)
 
 En esta lección, aprenderá cómo agregar puntos a un juego y calcular vidas.
 
@@ -173,7 +173,7 @@ Al final de este trabajo, deberías ver las pequeñas naves de 'vida' en la part
 
 🚀Challenge: Tu código está casi completo. ¿Puedes imaginar tus próximos pasos?
 
-## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/38)
+## [Post-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/38)
 
 ## Revisión y autoestudio
 

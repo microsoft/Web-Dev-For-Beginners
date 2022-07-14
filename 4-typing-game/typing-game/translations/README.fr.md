@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/21?loc=fr)
+[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/21?loc=fr)
 
 ## La programmation événementielle
 
@@ -329,7 +329,7 @@ Ajouter plus de fonctionnalités
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/22?loc=fr)
+[Quiz de validation des connaissances](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/22?loc=fr)
 
 ## Révision et étude personnelle
 

@@ -4,7 +4,7 @@
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9)
+[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/9)
 
 Apabila kita berfikir tentang menulis kod, kita selalu ingin memastikan kod kita dapat dibaca. Walaupun ini terdengar berlawanan dengan intuisi, kod dibaca lebih banyak kali daripada yang ditulis. Satu alat inti dalam kotak alat pemaju untuk memastikan kod yang dapat dikendalikan adalah **fungsi**.
 
@@ -184,7 +184,7 @@ Anda sekarang telah melihat kita mempunyai tiga cara untuk meneruskan fungsi seb
 Bolehkah anda menyatakan dalam satu ayat perbezaan antara fungsi dan kaedah? Mencubanya!
 
 ## Kuiz Pasca Kuliah
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/10)
+[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/10)
 
 ## Mengkaji & Belajar Sendiri 
 

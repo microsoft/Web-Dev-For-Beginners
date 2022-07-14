@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/39)
+[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/39)
 
 Terdapat pelbagai cara untuk menyatakan dan *keadaan akhir* dalam permainan. Terserah anda sebagai pencipta permainan untuk mengatakan mengapa permainan ini berakhir. Berikut adalah beberapa sebab, jika kita menganggap bahawa kita sedang membincangkan permainan ruang angkasa yang anda buat sejauh ini:
 
@@ -211,7 +211,7 @@ Tambahkan suara! Bolehkah anda menambahkan suara untuk meningkatkan permainan an
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/40)
+[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/40)
 
 ## Mengkaji & Belajar Sendiri
 

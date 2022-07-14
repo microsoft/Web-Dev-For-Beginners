@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/47)
+[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/47)
 
 ### Pengenalan
 
@@ -270,7 +270,7 @@ Cuba bekerjasama untuk mengubah apa yang disimpan dan dimuat dari `localStorage`
 
 ## Post-Lecture Quiz
 
-[Post-Lecture Quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/48)
+[Post-Lecture Quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/48)
 
 ## Tugasan
 

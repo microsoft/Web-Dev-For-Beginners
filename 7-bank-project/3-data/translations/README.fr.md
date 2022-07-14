@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45?loc=fr)
+[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/45?loc=fr)
 
 ### Introduction
 
@@ -327,7 +327,7 @@ Voici un exemple de page de tableau de bord stylisée:
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46?loc=fr)
+[Quiz de validation des connaissances](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/46?loc=fr)
 
 ## Affectation
 

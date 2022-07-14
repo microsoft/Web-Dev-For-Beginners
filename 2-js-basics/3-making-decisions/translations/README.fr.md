@@ -4,7 +4,7 @@
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/11?loc=fr)
+[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/11?loc=fr)
 
 Prendre des décisions et contrôler l'ordre dans lequel votre code s'exécute rend votre code réutilisable et robuste. Cette section couvre la syntaxe pour contrôler le flux de données dans JavaScript et sa signification lorsqu'elle est utilisée avec des types de données booléens
 
@@ -164,7 +164,7 @@ Créez un programme écrit d'abord avec des opérateurs logiques, puis réécriv
 
 ---
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissancesz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/12?loc=fr)
+[Quiz de validation des connaissancesz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/12?loc=fr)
 
 ## Révision et étude personnelle
 

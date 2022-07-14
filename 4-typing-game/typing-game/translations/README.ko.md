@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/21?loc=ko)
+[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/21?loc=ko)
 
 ## 이벤트 기반 프로그래밍
 
@@ -327,7 +327,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/22?loc=ko)
+[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/22?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

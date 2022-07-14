@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/33?loc=fr)
+[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/33?loc=fr)
 
 Les jeux ne sont pas très amusants tant que vous n'avez pas des extraterrestres qui courent à l'écran! Dans ce jeu, nous utiliserons deux types de mouvements:
 
@@ -377,7 +377,7 @@ Comme vous pouvez le constater, votre code peut se transformer en 'code spaghett
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/34?loc=fr)
+[Quiz de validation des connaissances](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/34?loc=fr)
 
 ## Révision et étude personnelle
 

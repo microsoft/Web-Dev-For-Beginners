@@ -6,7 +6,7 @@
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=id)
+[Kuis pra-Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/13?loc=id)
 
 Pelajaran ini mencakup dasar-dasar JavaScript, bahasa yang menyediakan interaktivitas di web. Dalam pelajaran ini, Anda akan belajar tentang array dan loop, yang digunakan untuk memanipulasi data.
 
@@ -137,7 +137,7 @@ Ada cara lain untuk melakukan perulangan pada array selain perulangan for dan wh
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=id)
+[Kuis pasca-kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/14?loc=id)
 
 ## Review & Belajar Mandiri
 

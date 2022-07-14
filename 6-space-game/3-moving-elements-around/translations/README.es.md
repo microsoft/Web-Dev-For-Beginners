@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/33)
+## [Pre-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/33)
 
  ¡Los juegos no son muy divertidos hasta que tienes extraterrestres corriendo por la pantalla! En este juego haremos uso de dos tipos de movimientos:
 
@@ -376,7 +376,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
 🚀 Desafío: como puede ver, su código puede convertirse en 'código espagueti' cuando comienza a agregar funciones, variables y clases. ¿Cómo puede organizar mejor su código para que sea más legible? Esboce un sistema para organizar su código, incluso si todavía reside en un archivo.
 
-## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/34)
+## [Post-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/34)
 
 ## Revisión y autoestudio
 

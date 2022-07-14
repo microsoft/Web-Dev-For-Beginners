@@ -4,7 +4,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5?loc=zh_cn)
+[课前小测](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/5?loc=zh_cn)
 
 > 互联网的力量存在于其普适性中，让包括残障人士在内的每个人都能访问互联网，是其中不可或缺的一方面。
 >
@@ -215,7 +215,7 @@ CSS 让你可以完全随意地控制页面中任何元素的外观。你可以�
 ```
 
 ## 课后小测
-[课后小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6?loc=zh_cn)
+[课后小测](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/6?loc=zh_cn)
 
 ## 复习 & 自学
 

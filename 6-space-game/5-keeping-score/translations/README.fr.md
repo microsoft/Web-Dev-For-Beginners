@@ -2,7 +2,7 @@
 
 ## Quiz de pré-lecture
 
-[Quiz de pré-lecture](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/37?loc=fr)
+[Quiz de pré-lecture](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/37?loc=fr)
 
 Dans cette leçon, vous apprendrez à ajouter des points à un jeu et à calculer des vies.
 
@@ -178,7 +178,7 @@ Votre code est presque complet. Pouvez-vous envisager vos prochaines étapes?
 
 ## Quiz post-lecture
 
-[Quiz post-lecture](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/38?loc=fr)
+[Quiz post-lecture](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/38?loc=fr)
 
 ## Révision et autoformation
 

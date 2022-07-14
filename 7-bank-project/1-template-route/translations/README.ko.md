@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/41?loc=ko)
+[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/41?loc=ko)
 
 ### 소개
 
@@ -284,7 +284,7 @@ updateRoute();
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/42?loc=ko)
+[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/42?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

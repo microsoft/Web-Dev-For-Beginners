@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45?loc=it)
+[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/45?loc=it)
 
 ### Introduzione
 
@@ -327,7 +327,7 @@ Ecco un esempio di una pagina cruscotto con applicato uno stile:
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46?loc=it)
+[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/46?loc=it)
 
 ## Compito
 

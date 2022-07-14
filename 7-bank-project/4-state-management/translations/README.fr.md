@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/47?loc=fr)
+[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/47?loc=fr)
 
 ### Introduction
 
@@ -270,7 +270,7 @@ Essayez de travailler ensemble pour modifier ce qui est enregistré et chargé �
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/48?loc=fr)
+[Quiz de validation des connaissances](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/48?loc=fr)
 
 ## Affectation
 

@@ -5,7 +5,7 @@
 
 ## Quiz Pré-aula
 
-[Quiz pré-aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15)
+[Quiz pré-aula](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/15)
 
 ### Introdução
 
@@ -217,7 +217,7 @@ Existem algumas tags 'mais antigas' selvagens em HTML que ainda são divertidas 
 
 ## Quiz Pós-aula
 
-[Quiz pós-aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16)
+[Quiz pós-aula](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/16)
 
 ## Revisão e autoestudo
 

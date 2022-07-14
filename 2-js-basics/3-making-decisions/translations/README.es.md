@@ -4,7 +4,7 @@
 ![JavaScript Basics - Making decisions](/sketchnotes/webdev101-js-decisions.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/11)
+## [Pre-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/11)
 
 Tomar decisiones y controlar el orden en que se ejecuta su código hace que su código sea reutilizable y robusto. Esta sección cubre la sintaxis para controlar el flujo de datos en JavaScript y su importancia cuando se usa con tipos de datos booleanos.
 
@@ -158,7 +158,7 @@ if (firstNumber > secondNumber) {
 
 🚀 Desafío: cree un programa que se escriba primero con operadores lógicos y luego vuelva a escribirlo utilizando una expresión ternaria. ¿Cuál es tu sintaxis preferida?
 
-## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/12)
+## [Post-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/12)
 
 ## Revisión y autoestudio
 
