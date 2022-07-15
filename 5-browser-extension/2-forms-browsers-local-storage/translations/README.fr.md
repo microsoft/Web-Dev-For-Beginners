@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/25?loc=fr)
+[Quiz préalable](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/25?loc=fr)
 
 ### Introduction
 
@@ -212,7 +212,7 @@ Nous avons discuté de plusieurs types d'API jusqu'à présent dans ces leçons.
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/26?loc=fr)
+[Quiz de validation des connaissances](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/26?loc=fr)
 
 ## Révision et étude personnelle
 

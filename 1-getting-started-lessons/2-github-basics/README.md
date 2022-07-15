@@ -6,7 +6,7 @@ This lesson covers the basics of GitHub, a platform to host and manage changes t
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/3)
+[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/3)
 
 ## Introduction
 
@@ -310,7 +310,7 @@ Projects might also have discussion in forums, mailing lists, or chat channels l
 Pair with a friend to work on each other's code. Create a project collaboratively, fork code, create branches, and merge changes.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/4)
 
 ## Review & Self Study
 

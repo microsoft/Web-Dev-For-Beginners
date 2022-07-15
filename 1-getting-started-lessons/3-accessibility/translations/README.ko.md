@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/5?loc=ko)
+[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/5?loc=ko)
 
 > 웹의 힘은 보편성에 있습니다. 장애에 관계없이 모든 사람이 접근하는 것은 필수 요소입니다.
 >
@@ -207,7 +207,7 @@ CSS는 페이지에 있는 모든 요소의 형태를 완벽하게 제어합니�
 ```
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/6?loc=ko)
+[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/6?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

@@ -4,7 +4,7 @@
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗
-[課前測驗](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/11?loc=zh_tw)
+[課前測驗](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/11?loc=zh_tw)
 
 為程式碼做決定與控制順序以提高其重複利用性與豐富性。這堂課程提供 JavaScript 的資料流控制語法與布林資料型的重點。
 
@@ -163,7 +163,7 @@ if (firstNumber > secondNumber) {
 
 ---
 ## 課後測驗
-[課後測驗](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/12?loc=zh_tw)
+[課後測驗](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/12?loc=zh_tw)
 
 ## 複習與自學
 

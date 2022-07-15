@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/41)
+[Kuiz Pra Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/41)
 
 ### Arahan
 
@@ -295,7 +295,7 @@ Tambahkan templat dan laluan baru untuk halaman ketiga yang menunjukkan kredit u
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/42)
+[Kuiz Pasca Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/42)
 
 ## Mengkaji & Belajar Sendiri
 

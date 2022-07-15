@@ -2,7 +2,7 @@
 
 ## प्री-लेक्चर क्विज
 
-[प्री-लेक्चर क्विज](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/33?loc=hi)
+[प्री-लेक्चर क्विज](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/33?loc=hi)
 
 जब तक आप परदे पर चारों ओर एलियंस चल रहे हैं तब तक गेम्स बहुत मज़ेदार नहीं हैं! इस खेल में, हम दो प्रकार के आंदोलनों का उपयोग करेंगे:
 
@@ -376,7 +376,7 @@ class Enemy extends GameObject {
 
 ## व्याख्यान के बाद की क्विज
 
-[व्याख्यान के बाद की क्विज](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/34?loc=hi)
+[व्याख्यान के बाद की क्विज](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/34?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

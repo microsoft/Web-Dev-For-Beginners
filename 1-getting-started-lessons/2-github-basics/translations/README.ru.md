@@ -8,7 +8,7 @@
 
 ## Предлекционный квиз
 
-[Предлекционный квиз](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/3)
+[Предлекционный квиз](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/3)
 
 ## Введение
 
@@ -302,7 +302,7 @@ Pull request - это место, где можно сравнить и обсу
 
 ## Постлекционный квиз
 
-[Постлекционный квиз](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/4)
+[Постлекционный квиз](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/4)
 
 ## Обзор и самообучение
 

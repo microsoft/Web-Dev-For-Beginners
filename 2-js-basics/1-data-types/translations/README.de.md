@@ -2,7 +2,7 @@
 
 [![Datentypen in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Datentypen in JavaScript")
 
-## [Pre-Lecture Quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/7)
+## [Pre-Lecture Quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/7)
 
 Diese Lektion behandelt die Grundlagen von JavaScript, der Sprache, die Interaktivität im Web bietet.
 
@@ -186,7 +186,7 @@ Boolesche Werte können nur zwei Werte sein: `true` oder `false`. Boolesche Wert
 
 JavaScript ist bekannt für seine überraschende Art, gelegentlich mit Datentypen umzugehen. Recherchiere ein bisschen über diese 'Fallstricke'. Zum Beispiel: Groß- und Kleinschreibung kann beißen! Versuchen Sie dies in Ihrer Konsole: `let age = 1; let Age = 2; age == Age` (löst `false` auf - warum?). Welche anderen Fallstricke können Sie finden?
 
-## [Quiz nach der Vorlesung](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/8)
+## [Quiz nach der Vorlesung](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/8)
 
 ## Review & Selbststudium
 

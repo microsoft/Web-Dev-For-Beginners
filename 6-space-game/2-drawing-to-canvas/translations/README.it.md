@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/31?loc=it)
+[Quiz Pre-Lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/31?loc=it)
 
 ## Canvas
 
@@ -205,7 +205,7 @@ Si è imparato a disegnare con l'API Canvas incentrata sul 2D; dare un'occhiata 
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/32?loc=it)
+[Quiz post-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/32?loc=it)
 
 ## Revisione e Auto Apprendimento
 

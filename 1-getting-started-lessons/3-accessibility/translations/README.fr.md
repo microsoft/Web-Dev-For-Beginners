@@ -4,7 +4,7 @@
 > SketchNote par[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/5?loc=fr)
+[Quiz préalable](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/5?loc=fr)
 
 > La puissance du Web est dans son universalité. L'accès par tout le monde indépendamment d'invalidité est un aspect essentiel.
 >
@@ -217,7 +217,7 @@ Prenez ce code HTML et réécrivez-le pour qu'il soit aussi accessible que possi
 ```
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/6?loc=fr)
+[Quiz de validation des connaissances](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/6?loc=fr)
 
 ## Révision et auto-apprentissage
 

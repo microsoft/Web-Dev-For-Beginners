@@ -61,7 +61,7 @@ Seu Feedback contrutivo é bem vindo.
 - Exercícios
 - Quiz pós-aula
 
-> **Nota sobre os qizzes**: todos os qizzes se encontram [aqui](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/), um total de 48 quizzes, com 3 questões em cada.
+> **Nota sobre os qizzes**: todos os qizzes se encontram [aqui](https://calm-wave-0d1a32b03.1.azurestaticapps.net/), um total de 48 quizzes, com 3 questões em cada.
 Também podem ser acessados localmente pela pasta `quiz-app`.
 
 ## Lições
