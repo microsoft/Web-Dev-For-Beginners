@@ -16,7 +16,7 @@ Azure Cloud Advocates de Microsoft ont le plaisir de vous proposer un programme 
 
 **Un grand merci à nos auteurs Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees et l’artiste de sketchnote Tomomi Imura!**
 
-# Pour commencer
+# Pour commencerhttps://wonderful-flower-063e19f0f.1.azurestaticapps.net/
 
 > **Instituteurs**, nous avons [inclus quelques suggestions](for-teachers.fr.md) sur la façon d’utiliser ce programme. Nous aimerions avoir vos commentaires [dans notre forum de discussion](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
@@ -55,7 +55,7 @@ Bien que nous ayons délibérément évité d’introduire des frameworks JavaSc
 - affectation
 - quiz de validation des connaissances
 
-> **Une note sur les quiz**: Tous les quiz sont contenus [dans cette application](https://happy-mud-02d95f10f.azurestaticapps.net/), pour un total de 48 quiz de trois questions chacun. Ils sont liés à partir des leçons, mais l’application de quiz peut être exécutée localement; suivez les instructions dans le dossier `quiz-app`. Ils sont progressivement localisés.
+> **Une note sur les quiz**: Tous les quiz sont contenus [dans cette application](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/), pour un total de 48 quiz de trois questions chacun. Ils sont liés à partir des leçons, mais l’application de quiz peut être exécutée localement; suivez les instructions dans le dossier `quiz-app`. Ils sont progressivement localisés.
 
 ## Leçons
 

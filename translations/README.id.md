@@ -51,7 +51,7 @@ Meskipun kami sengaja menghindari pengenalan kerangka kerja JavaScript untuk ber
 - penugasan
 - kuis setelah pelajaran
 
-> **Catatan tentang kuis**: Semua kuis terkandung [di aplikasi ini](https://happy-mud-02d95f10f.azurestaticapps.net/), untuk 48 total kuis dari tiga pertanyaan masing-masing. Mereka ditautkan dari dalam pelajaran tetapi aplikasi kuis dapat dijalankan secara lokal; ikuti petunjuk di `quiz-app` folder. Mereka secara bertahap dilokalisasi.
+> **Catatan tentang kuis**: Semua kuis terkandung [di aplikasi ini](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/), untuk 48 total kuis dari tiga pertanyaan masing-masing. Mereka ditautkan dari dalam pelajaran tetapi aplikasi kuis dapat dijalankan secara lokal; ikuti petunjuk di `quiz-app` folder. Mereka secara bertahap dilokalisasi.
 ## Pelajaran
 
 |     |                       Nama Project                      |                            Konsep yang Diajarkan                             | Tujuan pembelajaran                                                                                                                 |                                                         Linked Lesson                                                          |         Author          |
