@@ -4,7 +4,7 @@
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz voorafgaand aan de lezing
-[Quiz voorafgaand aan de lezing](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/5)
+[Quiz voorafgaand aan de lezing](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/5)
 
 > De kracht van het web zit in zijn universaliteit. Toegang voor iedereen, ongeacht hun handicap, is een essentieel aspect.
 >
@@ -216,7 +216,7 @@ Neem deze HTML en herschrijf deze zodat deze zo toegankelijk mogelijk is, gezien
 ```
 
 ## Quiz na de lezing
-[Quiz na de lezing](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/6)
+[Quiz na de lezing](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/6)
 
 ## Beoordeling en zelfstudie
 

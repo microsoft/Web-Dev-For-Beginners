@@ -6,7 +6,7 @@
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/7?loc=id)
+[Kuis pra-Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/7?loc=id)
 
 Pelajaran ini mencakup dasar-dasar JavaScript, bahasa yang menyediakan interaktivitas di web.
 
@@ -190,7 +190,7 @@ JavaScript terkenal karena cara yang mengejutkan dalam menangani tipe data pada 
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/8?loc=id)
+[Kuis pasca-kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/8?loc=id)
 
 ## Review & Belajar Mandiri
 

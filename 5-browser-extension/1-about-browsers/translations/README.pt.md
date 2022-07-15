@@ -4,7 +4,7 @@
 > Esboço de [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Leitura pré-quiz
-[Leitura pré-quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/23)
+[Leitura pré-quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/23)
 
 ### Introdução:
 
@@ -150,7 +150,7 @@ Parabéns, você deu os primeiros passos para criar uma extensão de navegador. 
 Dê uma olhada em uma loja de extensões de navegador e instale uma em seu navegador. Você pode examinar seus arquivos de maneiras interessantes. O que você descobriu?
 
 ## Quiz pós-leitura
-[Quiz pós-leitura](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/24)
+[Quiz pós-leitura](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/24)
 
 ## Revisão e auto-estudo
 

@@ -5,7 +5,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/17?loc=ko)
+[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/17?loc=ko)
 
 ### 소개
 
@@ -252,7 +252,7 @@ jar 좌측 하단 부분에 'bubble' 광택을 추가하여 유리처럼 보이�
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/18?loc=ko)
+[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/18?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

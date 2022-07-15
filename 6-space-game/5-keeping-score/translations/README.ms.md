@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/37)
+[Kuiz Pra Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/37)
 
 Dalam pelajaran ini, anda akan belajar bagaimana menambahkan skor pada permainan dan mengira kehidupan.
 
@@ -178,7 +178,7 @@ Kod anda hampir lengkap. Bolehkah anda membayangkan langkah seterusnya?
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/38)
+[Kuiz Pasca Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/38)
 
 ## Mengkaji & Belajar Sendiri
 

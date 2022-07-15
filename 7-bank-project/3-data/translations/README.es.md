@@ -2,7 +2,7 @@
 
 ! [Insertar un video aquí](video-url)
 
-## [Prueba previa a la conferencia](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/45)
+## [Prueba previa a la conferencia](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/45)
 
 [Describe lo que aprenderemos]
 
@@ -52,7 +52,7 @@ bloques de código
 
 Opcional: agregue una captura de pantalla de la interfaz de usuario de la lección completa si corresponde
 
-## [Prueba posterior a la conferencia]((https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/46)
+## [Prueba posterior a la conferencia]((https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/46)
 
 ## Revisión y autoestudio
 

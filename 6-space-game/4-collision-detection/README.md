@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/35)
+[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/35)
 
 In this lesson you will learn how to shoot lasers with JavaScript! We will add two things to our game:
 
@@ -286,7 +286,7 @@ Add an explosion! Take a look at the game assets in [the Space Art repo](../solu
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/36)
+[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/36)
 
 ## Review & Self Study
 

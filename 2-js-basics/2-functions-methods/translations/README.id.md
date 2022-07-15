@@ -6,7 +6,7 @@
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/9?loc=id)
+[Kuis pra-Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/9?loc=id)
 
 Ketika kita berpikir tentang menulis kode, kita selalu ingin memastikan kode kita dapat dibaca. Meskipun ini terdengar berlawanan dengan intuisi, kode dibaca lebih banyak kali daripada yang tertulis. Salah satu alat inti dalam kotak alat pengembang untuk memastikan kode yang dapat dipelihara adalah **function (fungsi)**.
 
@@ -183,7 +183,7 @@ Bisakah Anda mengartikulasikan dalam satu kalimat perbedaan antara fungsi dan me
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/10?loc=id)
+[Kuis pasca-kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/10?loc=id)
 
 ## Review & Belajar Mandiri
 

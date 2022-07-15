@@ -4,7 +4,7 @@
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/7?loc=fr)
+[Quiz préalable](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/7?loc=fr)
 
 Cette leçon couvre les bases de JavaScript, le language qui permet l'interactivité sur le web.
 
@@ -190,7 +190,7 @@ Les booléens n'ont que deux valeurs possibles : `true` (vrai) ou `false` (faux)
 JavaScript est célèbre pour sa manière occasionnellement surprenante de gérer les types de données. Effectuez quelques recherches sur ces pièges. Par exemple : la sensibilité à la casse peut vous causer soucis ! Essayez ceci dans votre console : `let age = 1; let Age = 2; age == Age` (renvoie `false` (faux) -- pourquoi ?). Quels autres pièges pouvez-vous trouver ?
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/8?loc=fr)
+[Quiz de validation des connaissances](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/8?loc=fr)
 
 ## Révision et auto-apprentissage
 

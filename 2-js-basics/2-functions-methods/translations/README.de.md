@@ -2,7 +2,7 @@
 
 [![Methoden und Funktionen](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Methoden und Funktionen")
 
-## [Pre-Lecture Quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/9)
+## [Pre-Lecture Quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/9)
 
 Wenn wir darüber nachdenken, Code zu schreiben, möchten wir immer sicherstellen, dass unser Code lesbar ist. Während dies nicht intuitiv klingt, wird Code viel öfter gelesen als geschrieben. Ein Kernwerkzeug in der Toolbox eines Entwicklers, um wartbaren Code sicherzustellen, ist die **Funktion**.
 
@@ -184,7 +184,7 @@ Sie haben jetzt gesehen, dass wir drei Möglichkeiten haben, eine Funktion als P
 
 Können Sie den Unterschied zwischen Funktionen und Methoden in einem Satz artikulieren? Versuche es!
 
-## [Quiz nach der Vorlesung](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/10)
+## [Quiz nach der Vorlesung](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/10)
 
 ## Review & Selbststudium
 

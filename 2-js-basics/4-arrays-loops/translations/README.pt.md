@@ -4,7 +4,7 @@
 > Nota de esboço por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Questionário de Pré-Palestra
-[Questionário de Pré-Palestra](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/13)
+[Questionário de Pré-Palestra](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/13)
 
 Esta lição cobre os conceitos básicos do JavaScript, a linguagem que proporciona interactividade na web. Nesta lição, aprenderá sobre arrays e loops, que são usados para manipular dados.
 
@@ -121,7 +121,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Existem outras formas de looping sobre arrays que não são para e enquanto se faz loops. Existem [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), and [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Reescreva o seu laço de matriz usando uma destas técnicas.
 
 ## Questionário de pós-publicidade
-[Questionário de pós-publicidade](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/14)
+[Questionário de pós-publicidade](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/14)
 
 
 ## Revisão e Auto-estudo

@@ -6,7 +6,7 @@
 > 由[Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗
-[課前測驗](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/3?loc=zh_tw)
+[課前測驗](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/3?loc=zh_tw)
 
 ## 大綱
 
@@ -298,7 +298,7 @@
 找朋友一起編輯彼此的程式。共同建立一項專案、分叉程式、建立分支、合併更動。
 
 ## 課後測驗
-[課後測驗](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/4?loc=zh_tw)
+[課後測驗](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/4?loc=zh_tw)
 
 ## 複習與自學
 

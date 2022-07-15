@@ -5,7 +5,7 @@
 
 ## Quiz pre-lezione
 
-[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/9?loc=it)
+[Quiz Pre-Lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/9?loc=it)
 
 Quando si pensa di scrivere codice, ci si vuole sempre assicurare che il proprio codice sia leggibile. Anche se questo sembra controintuitivo, il codice viene letto molte più volte di quanto non venga scritto. Uno strumento base nella cassetta degli attrezzi dello sviluppatore è la **funzione**
 
@@ -184,7 +184,7 @@ Si riesce ad articolare in una frase la differenza tra funzioni e metodi? Fare u
 
 ## Quiz post-lezione
 
-[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/10?loc=it)
+[Quiz post-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/10?loc=it)
 
 ## Revisione e auto apprendimento
 

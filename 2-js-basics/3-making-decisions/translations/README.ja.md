@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト
-[レッスン前の小テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/11?loc=ja)
+[レッスン前の小テスト](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/11?loc=ja)
 
 意思決定を行い、コードの実行順序を制御することで、コードを再利用可能で堅牢なものにします。このセクションでは、JavaScript のデータフローを制御するための構文と、ブール値データ型で使用される場合の意味について説明します。
 
@@ -161,7 +161,7 @@ if (firstNumber > secondNumber) {
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/12?loc=ja)
+[レッスン後の小テスト](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/12?loc=ja)
 
 ## 復習と自己学習
 

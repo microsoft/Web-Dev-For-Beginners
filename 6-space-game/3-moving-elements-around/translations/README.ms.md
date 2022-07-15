@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/33)
+[Kuiz Pra Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/33)
 
 Permainan tidak begitu menyeronokkan sehingga anda mempunyai makhluk asing di layar! Dalam permainan ini, kami akan menggunakan dua jenis pergerakan:
 
@@ -377,7 +377,7 @@ Seperti yang anda lihat, kod anda boleh berubah menjadi 'spaghetti code' apabila
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/34)
+[Kuiz Pasca Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/34)
 
 ## Mengkaji & Belajar Sendiri
 

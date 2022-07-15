@@ -2,7 +2,7 @@
 
 ## लेक्चर पाहिले की क्विज
 
-[लेक्चर पाहिले की क्विज](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/31?loc=hi)
+[लेक्चर पाहिले की क्विज](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/31?loc=hi)
 
 ## कैनवास
 
@@ -207,7 +207,7 @@ npm start
 
 ## पोस्ट-व्याख्यान प्रश्नोत्तरी
 
-[पोस्ट-व्याख्यान प्रश्नोत्तरी](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/32?loc=hi)
+[पोस्ट-व्याख्यान प्रश्नोत्तरी](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/32?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

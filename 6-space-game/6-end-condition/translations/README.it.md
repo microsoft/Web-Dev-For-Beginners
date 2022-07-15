@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/39?loc=it)
+[Quiz Pre-Lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/39?loc=it)
 
 Esistono diversi modi per esprimere una *condizione di fine gioco*. Spetta al creatore del gioco dire perché il gioco è finito. Ecco alcuni motivi, si supponga di parlare del gioco spaziale costruito finora:
 
@@ -211,7 +211,7 @@ Aggiungere un suono! Si può aggiungere un suono per migliorare il gioco, magari
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/40?loc=it)
+[Quiz post-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/40?loc=it)
 
 ## Revisione e Auto Apprendimento
 

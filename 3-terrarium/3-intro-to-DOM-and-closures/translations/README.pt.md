@@ -5,7 +5,7 @@
 
 ## Quiz pré-leitura 
 
-[Quiz pré-leitura](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/19)
+[Quiz pré-leitura](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/19)
 
 
 ### Introdução
@@ -217,7 +217,7 @@ Adicione um novo manipulador de eventos ao seu fechamento para fazer algo mais p
 
 ## Quiz pós-leitura
 
-[Quiz pós-leitura](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/20)
+[Quiz pós-leitura](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/20)
 
 ## Revisão & auto-estudo
 

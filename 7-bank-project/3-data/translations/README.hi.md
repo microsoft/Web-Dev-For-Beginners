@@ -2,7 +2,7 @@
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/45?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/45?loc=hi)
 
 ### परिचय
 
@@ -330,7 +330,7 @@ function updateElement(id, textOrNode) {
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/46?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/46?loc=hi)
 
 ## असाइनमेंट
 

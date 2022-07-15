@@ -5,7 +5,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/19?loc=ko)
+[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/19?loc=ko)
 
 ### 소개
 
@@ -199,7 +199,7 @@ function stopElementDrag() {
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/20?loc=ko)
+[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/20?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 
