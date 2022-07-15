@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/27?loc=ko)
+[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/27?loc=ko)
 
 ### 소개
 
@@ -147,7 +147,7 @@ function drawIcon(value) {
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/28?loc=ko)
+[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/28?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

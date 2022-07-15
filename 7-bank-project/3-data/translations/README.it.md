@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/45?loc=it)
+[Quiz Pre-Lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/45?loc=it)
 
 ### Introduzione
 
@@ -327,7 +327,7 @@ Ecco un esempio di una pagina cruscotto con applicato uno stile:
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/46?loc=it)
+[Quiz post-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/46?loc=it)
 
 ## Compito
 

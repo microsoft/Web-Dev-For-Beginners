@@ -4,7 +4,7 @@
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/13?loc=fr)
+[Quiz préalable](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/13?loc=fr)
 
 Cette leçon couvre les bases de JavaScript, le langage qui offre de l'interactivité sur le Web. Dans cette leçon, vous découvrirez les tableaux et les boucles, qui sont utilisés pour manipuler des données.
 
@@ -119,7 +119,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Il existe d'autres façons d'itérer sur des tableaux autres que les boucles for et while. Il y a [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), et [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Réécrivez votre boucle de tableau en utilisant l'une de ces techniques.
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/14?loc=fr)
+[Quiz de validation des connaissances](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/14?loc=fr)
 
 
 ## Révision et étude personnelle

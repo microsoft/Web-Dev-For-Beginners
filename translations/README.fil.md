@@ -52,7 +52,7 @@ Bagama't sinadya naming iwasan ang pagpapakilala ng mga balangkas ng JavaScript 
 - assignment
 - post-lesson quiz
 
-> **Isang tala tungkol sa mga pagsusulit**: Ang lahat ng mga pagsusulit ay nakapaloob [in this app](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/), para sa 48 kabuuang pagsusulit ng tatlong tanong bawat isa. Ang mga ito ay naka-link mula sa loob ng mga aralin ngunit ang pagsusulit app ay maaaring patakbuhin nang lokal; sundin ang panuto sa `quiz-app` folder. Unti-unti silang na-localize.
+> **Isang tala tungkol sa mga pagsusulit**: Ang lahat ng mga pagsusulit ay nakapaloob [in this app](https://calm-wave-0d1a32b03.1.azurestaticapps.net/), para sa 48 kabuuang pagsusulit ng tatlong tanong bawat isa. Ang mga ito ay naka-link mula sa loob ng mga aralin ngunit ang pagsusulit app ay maaaring patakbuhin nang lokal; sundin ang panuto sa `quiz-app` folder. Unti-unti silang na-localize.
 
 ## Mga aralin
 

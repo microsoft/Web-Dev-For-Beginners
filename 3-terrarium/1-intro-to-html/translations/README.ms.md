@@ -5,7 +5,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/15)
+[Kuiz Pra Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/15)
 
 ### Pengenalan
 
@@ -217,7 +217,7 @@ Terdapat beberapa tag 'lawas' liar dalam HTML yang masih menyeronokkan untuk dim
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/16)
+[Kuiz Pasca Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/16)
 
 ## Mengkaji dan Belajar Sendiri
 

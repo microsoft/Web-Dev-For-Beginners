@@ -5,7 +5,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/23?loc=zh_tw)
+[課前測驗](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/23?loc=zh_tw)
 
 ### 大綱
 
@@ -149,7 +149,7 @@ npm install
 
 ## 課後測驗
 
-[課後測驗](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/24?loc=zh_tw)
+[課後測驗](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/24?loc=zh_tw)
 
 ## 複習與自學
 

@@ -2,7 +2,7 @@
 
 ## लेक्टरसे पहलेकी क्विज़
 
-[लेक्टरसे पहलेकी क्विज़](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/37?loc=hi)
+[लेक्टरसे पहलेकी क्विज़](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/37?loc=hi)
 
 इस पाठ में, आप सीखेंगे कि किसी खेल में स्कोरिंग कैसे जोड़ें और जीवन की गणना करें.
 
@@ -178,7 +178,7 @@ eventEmitter = new EventEmitter();
 
 ## पोस्ट-व्याख्यान प्रश्नोत्तरी
 
-[पोस्ट-व्याख्यान प्रश्नोत्तरी](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/38?loc=hi)
+[पोस्ट-व्याख्यान प्रश्नोत्तरी](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/38?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

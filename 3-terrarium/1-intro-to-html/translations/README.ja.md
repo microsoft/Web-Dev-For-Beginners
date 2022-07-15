@@ -5,7 +5,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/15?loc=ja)
+[レッスン前の小テスト](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/15?loc=ja)
 
 ### イントロダクション
 
@@ -217,7 +217,7 @@ HTMLに はまだ遊んで楽しいワイルドな「古い」タグがいくつ
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/16?loc=ja)
+[レッスン後の小テスト](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/16?loc=ja)
 
 ## 復習と自己学習
 

@@ -5,7 +5,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/15?loc=fr)
+[Quiz préalable](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/15?loc=fr)
 
 ### Introduction
 
@@ -219,7 +219,7 @@ Il existe quelques "vieilles" balises sauvages en HTML avec lesquelles il est en
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/16?loc=fr)
+[Quiz de validation des connaissances](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/16?loc=fr)
 
 ## Révision et autoformation
 

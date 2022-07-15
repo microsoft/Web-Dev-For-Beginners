@@ -2,7 +2,7 @@
 
 # Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/43)
+[Kuiz Pra Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/43)
 
 ### Pengenalan
 
@@ -283,7 +283,7 @@ Berikut adalah contoh bagaimana rupa halaman log masuk akhir setelah sedikit gay
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/44)
+[Kuiz Pasca Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/44)
 
 ## Mengkaji & Belajar Sendiri
 

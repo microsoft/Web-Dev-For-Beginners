@@ -6,7 +6,7 @@
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/11?loc=id)
+[Kuis pra-Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/11?loc=id)
 
 Membuat keputusan dan mengontrol urutan kode Anda berjalan membuat kode Anda dapat digunakan kembali dan kuat. Bagian ini membahas sintaks untuk mengontrol aliran data di JavaScript dan signifikansinya saat digunakan dengan tipe data Boolean.
 
@@ -162,7 +162,7 @@ Buat program yang ditulis pertama kali dengan operator logika, lalu tulis ulang 
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/12?loc=id)
+[Kuis pasca-kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/12?loc=id)
 
 ## Review & Belajar Mandiri
 

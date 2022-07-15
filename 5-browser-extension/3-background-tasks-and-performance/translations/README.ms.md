@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/27)
+[Kuiz Pra Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/27)
 
 ### Pengenalan
 
@@ -147,7 +147,7 @@ Selidiki beberapa laman web sumber terbuka telah lama wujud, dan, berdasarkan se
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/28)
+[Kuiz Pasca Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/28)
 
 ## Mengkaji & Belajar Sendiri
 

@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/17?loc=it)
+[Quiz Pre-Lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/17?loc=it)
 
 ### Introduzione
 
@@ -252,7 +252,7 @@ Per completare il quiz post-lezione, seguire questo modulo di apprendimento: [Ap
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/18?loc=it)
+[Quiz post-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/18?loc=it)
 
 ## Revisione e Auto Apprendimento
 

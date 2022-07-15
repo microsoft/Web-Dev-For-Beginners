@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/37?loc=ko)
+[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/37?loc=ko)
 
 이 강의에서는 어떻게 게임에서 점수를 내고 생명을 구하는 가에 대하여 배웁니다.
 
@@ -178,7 +178,7 @@ npm start
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/38?loc=ko)
+[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/38?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

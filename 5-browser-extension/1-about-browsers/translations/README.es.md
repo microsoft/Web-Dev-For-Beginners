@@ -3,7 +3,7 @@
 ![Browser sketchnote](/sketchnotes/browser.jpg)
 > Sketchnote de [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
-## [Pre-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/23)
+## [Pre-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/23)
 
 ### Introducción:
 
@@ -145,7 +145,7 @@ Felicitaciones, ha dado los primeros pasos para crear una extensión de navegado
 🚀Challenge: Eche un vistazo a una tienda de extensiones de navegador e instale una en su navegador. Puede examinar sus archivos de formas interesantes. ¿Qué descubres?
 
 
-## [Post-lecture prueba](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/24)
+## [Post-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/24)
 
 ## Revisión y autoestudio
 

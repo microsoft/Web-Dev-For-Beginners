@@ -2,7 +2,7 @@
 
 ## Quiz de prélecture
 
-[Quiz de prélecture](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/39?loc=fr)
+[Quiz de prélecture](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/39?loc=fr)
 
 Il existe différentes façons d'exprimer et de terminer une condition dans un jeu. C'est à vous, en tant que créateur du jeu, de dire pourquoi le jeu est terminé. Voici quelques raisons, si nous supposons que nous parlons du jeu spatial que vous avez construit jusqu'à présent:
 
@@ -212,7 +212,7 @@ Ajoutez un son! Pouvez-vous ajouter un son pour améliorer votre jeu, par exempl
 
 ## Quiz post-lecture
 
-[Quiz post-lecture](https://wonderful-flower-063e19f0f.1.azurestaticapps.net/quiz/40?loc=fr)
+[Quiz post-lecture](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/40?loc=fr)
 
 ## Révision et autoformation
 
