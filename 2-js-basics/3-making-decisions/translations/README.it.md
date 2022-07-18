@@ -4,7 +4,7 @@
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
-[Quiz Pre-Lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/11?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11?loc=it)
 
 Prendere decisioni e controllare l'ordine in cui il proprio codice viene eseguito lo rende riutilizzabile e robusto. Questa sezione descrive la sintassi per il controllo del flusso di dati in JavaScript e il suo significato quando viene utilizzato con tipi di dato Booleani
 
@@ -162,7 +162,7 @@ Creare un programma che viene scritto prima con operatori logici, quindi riscriv
 
 ---
 ## Quiz Post-Lezione
-[Quiz post-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/12?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12?loc=it)
 
 ## Revisione e Auto Apprendimento
 

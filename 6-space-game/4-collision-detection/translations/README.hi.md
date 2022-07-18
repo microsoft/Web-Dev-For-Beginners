@@ -2,7 +2,7 @@
 
 ## लेक्चरसे पहलेकी क्विज
 
-[लेक्चरसे पहलेकी क्विज](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/35?loc=hi)
+[लेक्चरसे पहलेकी क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35?loc=hi)
 
 इस पाठ में आप सीखेंगे कि जावास्क्रिप्ट के साथ लेज़रों को कैसे शूट किया जाए! हम अपने खेल में दो चीजें जोड़ेंगे:
 
@@ -294,7 +294,7 @@ npm start
 
 ## पोस्ट-व्याख्यान प्रश्नोत्तरी
 
-[पोस्ट-व्याख्यान प्रश्नोत्तरी](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/36?loc=hi)
+[पोस्ट-व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

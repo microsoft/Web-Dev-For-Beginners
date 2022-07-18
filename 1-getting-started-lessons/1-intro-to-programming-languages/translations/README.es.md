@@ -5,7 +5,7 @@ Esta lección cubre los conceptos básicos de los lenguajes de programación. Lo
 ![Intro Programming](/sketchnotes/webdev101-programming.png)
 > Dibujo por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Cuestionario](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/1)
+## [Cuestionario](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1)
 ### Introducción
 
 En esta lección, cubriremos:
@@ -182,7 +182,7 @@ Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recu
 
 Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos únicos de JavaScript frente a Java? ¿Qué hay de COBOL vs. Go?
 
-## [Prueba Post-lectura](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/2)
+## [Prueba Post-lectura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
 
 ## Revisión y autoestudio
 

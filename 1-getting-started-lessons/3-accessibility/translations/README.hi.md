@@ -4,7 +4,7 @@
 > [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा स्केचनेट
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/5?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5?loc=hi)
 
 > वेब की शक्ति अपनी सार्वभौमिकता में है। विकलांगता की परवाह किए बिना सभी तक पहुंच एक आवश्यक पहलू है।
 >
@@ -214,7 +214,7 @@
 ```
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/6?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

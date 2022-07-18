@@ -4,7 +4,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/29)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
 
 ### Inheritance and Composition in game development
 
@@ -213,7 +213,7 @@ Think about how the pub-sub pattern can enhance a game. Which parts should emit 
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/30)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
 
 ## Review & Self Study
 

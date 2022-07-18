@@ -4,7 +4,7 @@
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz pre-lezione
-[Quiz pre-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/7?loc=it)
+[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7?loc=it)
 
 Questa lezione copre le basi di JavaScript, il linguaggio che fornisce l'interattività sul web.
 
@@ -186,7 +186,7 @@ I  booleani possono avere solo due valori: vero (`true`) o falso (`false`). I bo
 JavaScript è noto per i suoi modi sorprendenti di gestire talvolta i tipi di dato. Effettuare un po' di ricerca su questi "trabocchetti". Ad esempio: la distinzione tra maiuscole e minuscole può mordere! Provare questo nella propria console: `let age = 1; let Age = 2; age == Age` (risulta `false` - perché?). Quali altri trabocchetti si riescono a trovare?
 
 ## quiz post-lezione
-[Quiz post-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/8?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8?loc=it)
 
 ## Revisione e auto apprendimento
 

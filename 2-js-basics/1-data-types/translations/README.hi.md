@@ -4,7 +4,7 @@
 > [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा स्केचनेट
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/7?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7?loc=hi)
 
 इस पाठ में जावास्क्रिप्ट की मूल बातें शामिल हैं, वह भाषा जो वेब पर अन्तरक्रियाशीलता प्रदान करती है।
 
@@ -187,7 +187,7 @@ let myString2 = "World";
 जावास्क्रिप्ट मौके पर डेटाटिप्स को संभालने के अपने आश्चर्यजनक तरीकों के लिए कुख्यात है।इन 'gotchas' पर थोड़ा शोध करें। For example: case sensitivity can bite! इसे अपने कंसोल में आज़माएँ: `let age = 1; let Age = 2; age == Age` (`false` हल करता है - क्यों?). आपको अन्य क्या मिल सकते हैं?
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/8?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

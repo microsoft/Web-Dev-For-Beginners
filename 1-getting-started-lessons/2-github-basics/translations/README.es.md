@@ -5,7 +5,7 @@ Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar
 ![Introducción a GitHub](/sketchnotes/webdev101-github.png)
 > Dibujo de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Cuestionario](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/3)
+## [Cuestionario](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ### Introducción
 
@@ -295,7 +295,7 @@ Los proyectos también pueden tener discusiones en foros, listas de correo o can
 
 🚀 Desafío: empareja con un amigo(a) para trabajar en el código juntos. Crea un proyecto de forma colaborativa, bifurque el código, crea ramas y combina los cambios.
 
-## [Post-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/4)
+## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
 ## Revisión y autoestudio
 

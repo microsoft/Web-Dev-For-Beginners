@@ -5,7 +5,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/19)
+[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
 
 ### Pengenalan
 
@@ -201,7 +201,7 @@ Tambahkan pengendali acara (event handler) baharu ke penutupan anda untuk melaku
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/20)
+[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
 
 ## Mengkaji & Belajar Sendiri
 

@@ -7,7 +7,7 @@ Pelajaran ini mencakup dasar-dasar GitHub, platform untuk menghosting dan mengel
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/3?loc=id)
+[Kuis pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3?loc=id)
 
 ## Pengantar
 
@@ -274,7 +274,7 @@ Sandingkan dengan seorang teman untuk mengerjakan kode satu sama lain. Buat proy
 
 ## Kuis Pasca Kuliah
 
-[Kuis pasca kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/4?loc=id)
+[Kuis pasca kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4?loc=id)
 
 ## Review & Belajar Mandiri
 

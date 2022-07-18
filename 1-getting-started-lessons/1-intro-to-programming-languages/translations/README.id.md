@@ -7,7 +7,7 @@ Pelajaran ini mencakup dasar-dasar bahasa pemrograman. Topik yang dibahas di sin
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/1?loc=id)
+[Kuis pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1?loc=id)
 
 ## Pengantar
 
@@ -185,7 +185,7 @@ Bandingkan beberapa bahasa pemrograman. Apa saja ciri-ciri unik JavaScript vs. J
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/2?loc=id)
+[Kuis pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2?loc=id)
 
 ## Ulasan & Belajar Mandiri
 

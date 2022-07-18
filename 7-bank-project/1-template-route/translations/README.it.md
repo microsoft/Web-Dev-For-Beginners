@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/41?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41?loc=it)
 
 ### Introduzione
 
@@ -295,7 +295,7 @@ Aggiungere un nuovo modello e instradare per una terza pagina che mostra i credi
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/42?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42?loc=it)
 
 ## Revisione e Auto Apprendimento
 

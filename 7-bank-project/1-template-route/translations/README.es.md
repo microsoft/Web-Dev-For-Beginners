@@ -1,6 +1,6 @@
 # Plantillas HTML y rutas en una aplicación web
 
-## [Pre-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/41)
+## [Pre-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
 
 ### Introducción
 
@@ -281,7 +281,7 @@ Ahora intente utilizar los botones de avance y retroceso de sus navegadores y co
 
 Agregue una nueva plantilla y ruta para una tercera página que muestre los créditos de esta aplicación.
 
-## [Post-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/42)
+## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
 
 ## Revisión y autoestudio
 

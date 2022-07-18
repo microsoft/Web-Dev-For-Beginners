@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/37)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
 
 In this lesson, you'll learn how to add scoring to a game and calculate lives.
 
@@ -178,7 +178,7 @@ Your code is almost complete. Can you envision your next steps?
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/38)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
 
 ## Review & Self Study
 

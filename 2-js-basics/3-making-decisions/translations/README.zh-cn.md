@@ -4,7 +4,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/11?loc=zh_cn)
+[课前小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11?loc=zh_cn)
 
 对你的代码运行方式做出决定并且控制它们的顺序可以让你的代码更加可复用和稳定。这节课会介绍 JavaScript 中控制数据流的语法以及其与布尔数据类型搭配使用时的重要性。
 
@@ -164,7 +164,7 @@ if (firstNumber > secondNumber) {
 
 ---
 ## 课后小测
-[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/12?loc=zh_cn)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12?loc=zh_cn)
 
 ## 复习 & 自学
 

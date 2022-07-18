@@ -3,7 +3,7 @@
 ! [DOM y un cierre](/sketchnotes/webdev101-js.png)
 > Boceto de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/19)
+## [Pre-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
 
 ### Introducción:
 
@@ -197,7 +197,7 @@ Esta pequeña función restablece los eventos `onpointerup` y `onpointermove` pa
 
 🚀Challenge: agregue un nuevo controlador de eventos a su cierre para hacer algo más en las plantas; por ejemplo, haga doble clic en una planta para traerla al frente. ¡Se creativo!
 
-## [Post-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/20)
+## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
 
 ## Revisión y autoestudio
 

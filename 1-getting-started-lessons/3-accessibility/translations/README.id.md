@@ -5,7 +5,7 @@
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/5?loc=id)
+[Kuis pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5?loc=id)
 
 > Kekuatan Web ada dalam universalitasnya. Akses oleh semua orang tanpa memandang disabilitas merupakan aspek penting.
 >
@@ -210,7 +210,7 @@ Ambil HTML ini dan tulis ulang agar dapat diakses semaksimal mungkin, dengan str
 
 ## Kuis Pasca Kuliah
 
-[Kuis pasca kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/6?loc=id)
+[Kuis pasca kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6?loc=id)
 
 ## Review & Belajar Mandiri
 

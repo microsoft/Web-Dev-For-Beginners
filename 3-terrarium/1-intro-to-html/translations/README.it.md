@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/15?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15?loc=it)
 
 ### Introduzione
 
@@ -218,7 +218,7 @@ Ci sono alcuni "vecchi" selvaggi tag in HTML con cui è ancora divertente giocar
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/16?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16?loc=it)
 
 ## Revisione e Auto Apprendimento
 

@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/19)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
 
 ### Introduction
 
@@ -201,7 +201,7 @@ Add new event handler to your closure to do something more to the plants; for ex
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/20)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
 
 ## Review & Self Study
 

@@ -6,7 +6,7 @@ Sinasaklaw ng araling ito ang mga pangunahing kaalaman ng GitHub, isang platform
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pagsusulit bago ang lektura
-[Pagsusulit bago ang lektura](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/3)
+[Pagsusulit bago ang lektura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ## Panimula
 
@@ -299,7 +299,7 @@ Maaaring magkaroon din ng talakayan ang mga proyekto sa mga forum, mailing list,
 Ipares sa isang kaibigan para magtrabaho sa code ng isa't isa. Gumawa ng proyekto nang magkakasama, mag-fork ng code, gumawa ng mga sangay, at magsama ng mga pagbabago.
 
 ## Pagsusulit pagkatapos ng Lektura
-[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
 ## Pagsusuri at Sariling pag-aaral
 

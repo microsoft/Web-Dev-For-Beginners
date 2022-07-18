@@ -1,6 +1,6 @@
 # Cree un formulario de inicio de sesión y registro
 
-## [Prueba previa a la conferencia](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/43)
+## [Prueba previa a la conferencia](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
 
 ### Introducción
 
@@ -280,7 +280,7 @@ Aquí hay un ejemplo de cómo puede verse la página de inicio de sesión final 
 
 ![Captura de pantalla de la página de inicio de sesión después de agregar estilos CSS](../images/result.png)
 
-## [Prueba posterior a la conferencia](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/44)
+## [Prueba posterior a la conferencia](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
 
 ## Revisión y autoestudio
 

@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/21?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21?loc=it)
 
 ## Programmazione guidata dagli eventi
 
@@ -328,7 +328,7 @@ Aggiungere più funzionalità
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/22?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22?loc=it)
 
 ## Revisione e Auto Apprendimento
 
