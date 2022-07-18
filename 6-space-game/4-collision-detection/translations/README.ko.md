@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/35?loc=ko)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35?loc=ko)
 
 이 강의에서는 JavaScript로 레이저를 쏘는 방법을 배웁니다! 게임에 다음 두 가지를 추가합니다:
 
@@ -286,7 +286,7 @@ npm start
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/36?loc=ko)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

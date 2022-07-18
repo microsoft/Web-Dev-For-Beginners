@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/37)
+## [Pre-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
 
 En esta lección, aprenderá cómo agregar puntos a un juego y calcular vidas.
 
@@ -173,7 +173,7 @@ Al final de este trabajo, deberías ver las pequeñas naves de 'vida' en la part
 
 🚀Challenge: Tu código está casi completo. ¿Puedes imaginar tus próximos pasos?
 
-## [Post-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/38)
+## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
 
 ## Revisión y autoestudio
 

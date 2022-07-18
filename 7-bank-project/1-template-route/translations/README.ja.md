@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/41?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41?loc=ja)
 
 ### イントロダクション
 
@@ -293,7 +293,7 @@ updateRoute();
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/42?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42?loc=ja)
 
 ## 復習と自己学習
 

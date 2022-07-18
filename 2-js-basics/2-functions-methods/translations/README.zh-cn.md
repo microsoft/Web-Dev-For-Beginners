@@ -4,7 +4,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/9?loc=zh_cn)
+[课前小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9?loc=zh_cn)
 
 当我们思考如何去写代码的时候，我们总是希望确保自己的代码是可读的。尽管听起来有些违反直觉，代码被阅读的次数会远多于它被写下的次数。**函数（function）** 正是开发者的工具箱里用于确保代码可维护的一件利器。
 
@@ -184,7 +184,7 @@ setTimeout(() => {
 你能用一句话清楚说明函数和方法的区别吗？试一试！
 
 ## 课后小测
-[课后小测](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/10?loc=zh_cn)
+[课后小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10?loc=zh_cn)
 
 ## 复习 & 自学
 

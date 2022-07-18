@@ -2,7 +2,7 @@
 
 ![video](video-url)
 
-## [Pre-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/31)
+## [Pre-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
 
 ## El lienzo
 
@@ -203,7 +203,7 @@ Intente resolverlo usted mismo primero, pero si se atasca, eche un vistazo a una
 🚀 Desafío: ha aprendido a dibujar con la API Canvas enfocada en 2D; eche un vistazo a la [API WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API) e intente dibujar un objeto 3D.
 
 
-## [Post-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/32)
+## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
 
 ## Revisión y autoestudio
 

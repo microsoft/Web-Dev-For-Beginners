@@ -8,7 +8,7 @@ Essa lição trata dos básicos de linguagens de programação. Os tópicos trat
 
 ## Quiz Pré-Lição
 
-[Quiz Pré-Lição](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/1)
+[Quiz Pré-Lição](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1)
 
 ## Introdução
 
@@ -203,7 +203,7 @@ Compare algumas linguagens de programação. Quais são algumas das característ
 
 ## Quiz Pós-Aula
 
-[Quiz Pós-Aula](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/2)
+[Quiz Pós-Aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
 
 ## Revisão & Autoestudo
 

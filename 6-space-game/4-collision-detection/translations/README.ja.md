@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/35?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35?loc=ja)
 
 このレッスンでは、JavaScript でレーザーを撃つ方法を学びます! 私たちはゲームに2つのものを追加します。
 
@@ -287,7 +287,7 @@ npm start
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/36?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36?loc=ja)
 
 ## 復習と自己学習
 

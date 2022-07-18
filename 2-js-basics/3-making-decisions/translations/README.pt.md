@@ -3,7 +3,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula
-[Quiz Pré-Aula](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/11)
+[Quiz Pré-Aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
 
 Tomar decisões e controlar a ordem do que é executado no seu código o torna recusável e robusto. Essa seção cobre a sintaxe para controle do fluxo de dados no JavaScript e sua significância quando usada com tipos Booleanos.
 
@@ -164,7 +164,7 @@ Crie um programa que seja escrito primeiro com operadores lógicos e, em seguida
 
 ---
 ## Quiz Pós-Aula
-[Quiz Pós Aula](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/12)
+[Quiz Pós Aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
 
 ## Revisão e autoestudo
 

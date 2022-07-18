@@ -4,7 +4,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/29?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29?loc=fr)
 
 ### Héritage et composition dans le développement de jeux
 
@@ -213,7 +213,7 @@ Pensez à la façon dont le modèle pub-sub peut améliorer un jeu. Quelles part
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissancesz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/30?loc=fr)
+[Quiz de validation des connaissancesz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30?loc=fr)
 
 ## Révision et étude personnelle
 

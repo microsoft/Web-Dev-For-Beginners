@@ -3,7 +3,7 @@
 ![Introducción a CSS](/sketchnotes/webdev101-css.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Pre-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/17)
+## [Pre-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
 
 ### Introducción:
 
@@ -244,7 +244,7 @@ Tenga en cuenta el uso de porcentajes aquí. Si reduce la escala de su navegador
 
 ![terrario terminado](../images/terrarium-final.png)
 
-## [Post-lecture prueba](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/18)
+## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
 
 ## Revisión y autoestudio
 

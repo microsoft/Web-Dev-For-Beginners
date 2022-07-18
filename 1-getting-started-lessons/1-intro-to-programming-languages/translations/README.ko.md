@@ -6,7 +6,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/1?loc=ko)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1?loc=ko)
 
 ## 소개
 
@@ -183,7 +183,7 @@ command line 옵션은 사용하는 운영체제에 따라 다릅니다.
 일부 프로그래밍 언어를 비교하십시오. JavaScript와 자바의 특징은 무엇입니까? COBOL과 Go는 어떻습니까?
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/2?loc=ko)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

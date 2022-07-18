@@ -8,7 +8,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 事前クイズ
-[事前クイズ](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/1?loc=ja)
+[事前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1?loc=ja)
 
 ## Introduction
 
@@ -236,7 +236,7 @@ JavaScriptとJavaの特徴は？
 COBOLとGoについては？
 
 ## 事後テスト
-[事後テスト](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/1?loc=ja)
+[事後テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1?loc=ja)
 
 ## レビュー & 自習
 

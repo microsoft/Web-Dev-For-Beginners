@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/45)
+[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
 
 ### Pengenalan
 
@@ -327,7 +327,7 @@ Berikut adalah contoh halaman papan pemuka yang digayakan:
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/46)
+[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
 
 ## Tugasan
 

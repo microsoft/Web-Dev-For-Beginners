@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/33?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33?loc=fr)
 
 Les jeux ne sont pas très amusants tant que vous n'avez pas des extraterrestres qui courent à l'écran! Dans ce jeu, nous utiliserons deux types de mouvements:
 
@@ -377,7 +377,7 @@ Comme vous pouvez le constater, votre code peut se transformer en 'code spaghett
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/34?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34?loc=fr)
 
 ## Révision et étude personnelle
 

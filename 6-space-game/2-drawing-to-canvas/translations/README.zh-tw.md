@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/31?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31?loc=zh_tw)
 
 ## Canvas
 
@@ -205,7 +205,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://calm-wave-0d1a32b03.1.azurestaticapps.net/quiz/32?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32?loc=zh_tw)
 
 ## 複習與自學
 
