@@ -302,7 +302,7 @@ Pull request - это место, где можно сравнить и обсу
 
 ## Постлекционный квиз
 
-[Постлекционный квиз](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Постлекционный квиз](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4?loc=ru)
 
 ## Обзор и самообучение
 
