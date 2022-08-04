@@ -7,6 +7,12 @@
 
 [Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
 
+
+> Check out video
+
+> 
+> [![Git and GitHub basics video](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
+
 ### Introduction
 
 HTML, or HyperText Markup Language, is the 'skeleton' of the web. If CSS 'dresses up' your HTML and JavaScript brings it to life, HTML is the body of your web application. HTML's syntax even reflects that idea, as it includes "head", "body", and "footer" tags.
