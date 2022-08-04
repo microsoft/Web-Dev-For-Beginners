@@ -74,7 +74,7 @@ Loops allow for repetitive or **iterative** tasks, and can save a lot of time an
 
 The `for` loop requires 3 parts to iterate:
 - `counter` A variable that is typically initialized with a number that counts the number of iterations
-- `condition` Expression that uses comparison operators to cause the loop to stop when `true`
+- `condition` Expression that uses comparison operators to cause the loop to stop when `false`
 - `iteration-expression` Runs at the end of each iteration, typically used to change the counter value
   
 ```javascript
@@ -88,7 +88,7 @@ for (let i = 0; i < 10; i++) {
 
 ### While loop
 
-Unlike the syntax for the `for` loop, `while` loops only require a condition that will stop the loop when `true`. Conditions in loops usually rely on other values like counters, and must be managed during the loop. Starting values for counters must be created outside the loop, and any expressions to meet a condition, including changing the counter must be maintained inside the loop.
+Unlike the syntax for the `for` loop, `while` loops only require a condition that will stop the loop when `false`. Conditions in loops usually rely on other values like counters, and must be managed during the loop. Starting values for counters must be created outside the loop, and any expressions to meet a condition, including changing the counter must be maintained inside the loop.
 
 ```javascript
 //Counting up to 10
