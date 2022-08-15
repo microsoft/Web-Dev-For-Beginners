@@ -8,6 +8,7 @@
 [![Forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
 [![Stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
+[![Open in Visual Studio Code](https://img.shields.io/badge/Open%20in%20Visual%20Studio%20Code-007ACC?logo=visualstudiocode&logoColor=fff&style=flat)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 # Desenvolvimento Web para Iniciantes - Programa de Estudos
 

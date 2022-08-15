@@ -8,6 +8,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
+[![Open in Visual Studio Code](https://img.shields.io/badge/Open%20in%20Visual%20Studio%20Code-007ACC?logo=visualstudiocode&logoColor=fff&style=flat)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+
 # Ανάπτυξη Ιστού για Αρχάριους - Πρόγραμμα Μαθημάτων
 
 Οι Azure Could Advocates της Microsoft, είναι στην ευχάριστη θέση να σας προσφέρουν ένα πρόγραμμα μαθημάτων διάρκειας 12 εβδομάδων, 24 μαθήματα στο σύνολο, για τα βασικά της JavaScript, CSS και HTML. Κάθε μάθημα περιλαμβάνει ένα κουίζ στην αρχή και στο τέλος του, γραπτές οδηγίες για την ολοκλήρωση του μαθήματος, μια λύση, εργασία και άλλα. Η παιδαγωγική μας αρχή που στηρίζεται στις εργασίες, επιτρέπει να μαθαίνετε ενώ χτίζετε, ενας αποδεδειγμένος τρόπος να «κολλήσουν» νέες δεξιότητες.
