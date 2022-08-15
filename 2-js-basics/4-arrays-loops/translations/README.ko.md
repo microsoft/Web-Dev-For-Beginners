@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=ko)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13?loc=ko)
 
 이 강의에서는 웹에서 상호 작용을 제공하는 언어인 JavaScript의 기본 사항을 다룹니다. 데이터를 컨트롤하는 데 사용하는 배열과 반복문에 대해 알아 봅니다.
 
@@ -119,7 +119,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 for문과 while문 외에 배열을 반복하는 다른 방법이 있습니다. [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) 그리고 [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)도 있습니다. 해당 기술 중 하나를 사용하여 배열 반복을 다시 작성하십시오.
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=ko)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14?loc=ko)
 
 
 ## 리뷰 & 자기주도 학습

@@ -4,11 +4,13 @@
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula
-[Quiz Pré-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7)
+[Quiz Pré-Aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
 
 Esta lição cobre o básico do JavaScript, a linguagem que fornece interatividade na web.
 
-[![Tipos de dados em JavaScriptt](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Tipos de dados em JavaScript")
+[![Variáveis](https://img.youtube.com/vi/u_aLTZHsclg/0.jpg)](https://youtube.com/watch?v=u_aLTZHsclg "Variáveis")
+
+[![Data Types](https://img.youtube.com/vi/ylaZV-UKTe4/0.jpg)](https://youtube.com/watch?v=ylaZV-UKTe4 "Data Types")
 
 
 Vamos começar com variáveis e os tipos de dados que as preenchem!
@@ -29,24 +31,24 @@ A criação e **declaração** de uma variável tem a seguinte sintaxe **[palavr
 1. **Declare uma variável**. Vamos declarar uma variável usando a palavra-chave `let`:
 
     ```javascript
-    let minhaVariável;
+    let minhaVariavel;
     ```
 
-   `minhaVariável` agora foi declarada usando a palavra-chave`let`. Atualmente não tem um valor.
+   `minhaVariavel` agora foi declarada usando a palavra-chave`let`. Atualmente não tem um valor.
 
 1. **Atribua um valor**. Armazene um valor em uma variável com o operador `=`, seguido pelo valor esperado.
     ```javascript
-    minhaVariável = 123;
+    minhaVariavel = 123;
     ```
 
    > Nota: o uso de `=` nesta lição significa que fazemos uso de um "operador de atribuição", usado para definir um valor para uma variável. Não denota igualdade.
 
-   `minhaVariável` agora foi *inicializada* com o valor 123.
+   `minhaVariavel` agora foi *inicializada* com o valor 123.
 
 1. **Refatorar**. Substitua seu código pela seguinte instrução.
 
     ```javascript
-    let minhaVariável = 123;
+    let minhaVariavel = 123;
     ```
 
     O acima é chamado de _inicialização explícita_ quando uma variável é declarada e recebe um valor ao mesmo tempo.
@@ -54,7 +56,7 @@ A criação e **declaração** de uma variável tem a seguinte sintaxe **[palavr
 1. **Altere o valor da variável**. Altere o valor da variável da seguinte maneira:
 
    ```javascript
-   minhaVariável = 321;
+   minhaVariavel = 321;
    ```
 
    Uma vez que uma variável é declarada, você pode alterar seu valor em qualquer ponto do seu código com o operador `=` e o novo valor.
@@ -184,11 +186,11 @@ Os booleanos podem ter apenas dois valores: `true` ou` false`. Os booleanos pode
 JavaScript é notório por suas maneiras surpreendentes de lidar com tipos de dados ocasionalmente. Pesquise sobre essas 'pegadinhas'. Por exemplo: a diferenciação de maiúsculas e minúsculas pode afetar! Tente isto em seu console: `let age = 1; deixe Idade = 2; age == Age` (resolve `false` - por quê?). Que outras dicas você pode encontrar?
 
 ## Quiz Pós-Aula
-[Quiz Pós-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8)
+[Quiz Pós-Aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
 
 ## Revisão e autoestudo
 
-Dê uma olhada [nessa lista de exercícios de JavaScript](https://css-tricks.com/snippets/javascript/) e tente um. O que você aprendeu?
+Dê uma olhada [nessa lista de exercícios de JavaScript](https://css-tricks.com/snippets/javascript/) e tente resolver um exercício. O que você aprendeu?
 
 ## Tarefa
 

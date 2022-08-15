@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45?loc=zh_tw)
 
 ### 大綱
 
@@ -31,11 +31,11 @@ curl http://localhost:5000/api
 
 網頁應用程式變得更加複雜，促使新的技術問世：[AJAX (Asynchronous JavaScript and XML)](https://zh.wikipedia.org/wiki/AJAX)。
 
-這個技巧允許網頁應用程式使用 JavaScript 非同步地傳遞與接收伺服器的資料，不需要重新載入 HTML 頁面，也反映在更快速的更新速率與更流暢的使用者體驗。在接收伺服器的新資料時，目前的 HTML 頁面可以被 JavaScript 利用 [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) API 更新。自此之後，這種流程演變成現今的[*單一頁面應用程式(Single-Page Application)*，*SPA*](https://zh.wikipedia.org/wiki/%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8)。
+這個技巧允許網頁應用程式使用 JavaScript 非同步地傳遞與接收伺服器的資料，不需要重新載入 HTML 頁面，也反映在更快速的更新速率與更流暢的使用者體驗。在接收伺服器的新資料時，目前的 HTML 頁面可以被 JavaScript 利用 [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API 更新。自此之後，這種流程演變成現今的[*單一頁面應用程式(Single-Page Application)*，*SPA*](https://zh.wikipedia.org/wiki/%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8)。
 
 ![單一頁面應用程式的更新流程](../images/spa.png)
 
-在 AJAX 早期，唯一取得資料的 API 為 [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。但當代的瀏覽器已經建立出更方便且強大的 [`Fetch` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)，它們使用 Promises 物件且更適合應用在 JSON 資料上。
+在 AJAX 早期，唯一取得資料的 API 為 [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。但當代的瀏覽器已經建立出更方便且強大的 [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API)，它們使用 Promises 物件且更適合應用在 JSON 資料上。
 
 > 許多當代瀏覽器支援 `Fetch API`，如果你想確認你的網頁應用程式是否運作在舊款的瀏覽器，檢查 [caniuse.com 上的相容性測試](https://caniuse.com/fetch)是一個好方法。
 
@@ -65,7 +65,7 @@ async function getAccount(user) {
 }
 ```
 
-我們使用 `fetch` API 來向伺服器做非同步資料請求。這次我們不需要添加額外的參數，如網址，我們只詢問資料內容。預設上，`fetch` 建立出 [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) HTTP 請求，即我們想做的事情。
+我們使用 `fetch` API 來向伺服器做非同步資料請求。這次我們不需要添加額外的參數，如網址，我們只詢問資料內容。預設上，`fetch` 建立出 [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP 請求，即我們想做的事情。
 
 ✅ 函式 `encodeURIComponent()` 可以轉換網址內的特殊字元。如果我們不呼叫這個函式，而是直接將 `user` 這項數值放入網址中，這會發生什麼問題？
 
@@ -111,19 +111,19 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ 你知道在預設上，你只能從*同一個網域(domain)與連接埠(port)*的網頁呼叫伺服器 APIs 嗎？這是瀏覽器強制性的安全機制。但我們的網頁應用程式在 `localhost:3000` 上執行，而伺服器 API 則在 `localhost:5000` 上執行。為什麼這樣能正常運作？利用[跨來源資源共用 (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)，只要伺服器添加特殊的標頭檔到網頁回應中，我們就可以處理跨資源的 HTTP 請求，允許特殊的網域進行呼叫。
+✅ 你知道在預設上，你只能從*同一個網域(domain)與連接埠(port)*的網頁呼叫伺服器 APIs 嗎？這是瀏覽器強制性的安全機制。但我們的網頁應用程式在 `localhost:3000` 上執行，而伺服器 API 則在 `localhost:5000` 上執行。為什麼這樣能正常運作？利用[跨來源資源共用 (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS)，只要伺服器添加特殊的標頭檔到網頁回應中，我們就可以處理跨資源的 HTTP 請求，允許特殊的網域進行呼叫。
 
-> 藉由前往[此課程](https://docs.microsoft.com/en-us/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-13441-cxa)學習更多有關 API 的資訊。
+> 藉由前往[此課程](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-13441-cxa)學習更多有關 API 的資訊。
 
 ## 更新 HTML 顯示資料
 
 現在取得完用戶資料，我們必須更新到現有的 HTML 上。我們已經知道如何接收 DOM 的元素，例子為 `document.getElementById()`。只要你有元素，這邊有一些 API 讓你修改，或是新增子元素上去：
 
-- 使用 [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) 屬性，你可以改變元素的文字內容。注意改變此數值會刪除它的所有子元素(若存在的話)，並以該文字內容來替換它。同時，這也是個有效的方法來刪去所有的子成員，只要賦予它空字串 `''`。
+- 使用 [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) 屬性，你可以改變元素的文字內容。注意改變此數值會刪除它的所有子元素(若存在的話)，並以該文字內容來替換它。同時，這也是個有效的方法來刪去所有的子成員，只要賦予它空字串 `''`。
 
-- 使用 [`document.createElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) 與 [`append()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append) 這兩方法，你可以建立並接上一到多個子元素成員。
+- 使用 [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) 與 [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) 這兩方法，你可以建立並接上一到多個子元素成員。
 
-✅ 使用 [`innerHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) 元素屬性也能改變 HTML 的內容，但這方法要避免使用。這可能會遭遇有關[跨網站指令碼 (XSS)](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting)的攻擊。
+✅ 使用 [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) 元素屬性也能改變 HTML 的內容，但這方法要避免使用。這可能會遭遇有關[跨網站指令碼 (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting)的攻擊。
 
 ### 課題
 
@@ -161,7 +161,7 @@ if (data.error) {
 
 ![登入出現錯誤訊息之截圖](../images/login-error.png)
 
-現在我們印出錯誤訊息，但螢幕報讀器並沒有做任何報讀。為了讓被動態加入的文字能被螢幕報讀器閱讀出來，我們需要使用 [Live Region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)。這邊我們使用一種 Live Region 的類型 alert：
+現在我們印出錯誤訊息，但螢幕報讀器並沒有做任何報讀。為了讓被動態加入的文字能被螢幕報讀器閱讀出來，我們需要使用 [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)。這邊我們使用一種 Live Region 的類型 alert：
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -225,7 +225,7 @@ function updateDashboard() {
 
 首先，我們需要先檢查帳戶的資料。使用我們之前建立的函式 `updateElement()` 來更新 HTML 檔。
 
-> 為了讓帳戶餘額漂亮地呈現，我們使用 [`toFixed(2)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) 這個方法，強迫數值只顯示到小數點第二位。
+> 為了讓帳戶餘額漂亮地呈現，我們使用 [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) 這個方法，強迫數值只顯示到小數點第二位。
 
 現在，每當儀表板被載入時，我們就需要呼叫函式 `updateDashboard()`。如果你已經完成[課程一的作業](../../1-template-route/translations/assignment.zh-tw.md)，就不需要額外做處理，不然你可以使用接下來的設定。
 
@@ -250,7 +250,7 @@ const routes = {
 
 ## 利用 HTML 模板動態建立表格列
 
-在[第一堂課](../../1-template-route/translations/README.zh-tw.md)中，我們使用 HTML 模板與方法 [`appendChild()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) 來做出應用程式內的轉換。模板還能執行更小規模的行為，動態地改變一部份的頁面
+在[第一堂課](../../1-template-route/translations/README.zh-tw.md)中，我們使用 HTML 模板與方法 [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) 來做出應用程式內的轉換。模板還能執行更小規模的行為，動態地改變一部份的頁面
 
 我們使用類似的方式來顯示 HTML 表格中的交易清單。
 
@@ -301,7 +301,7 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-這裡我們使用了方法 [`document.createDocumentFragment()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment)，建立新的 DOM 分段，再接到我們的 HTML 表格中。
+這裡我們使用了方法 [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment)，建立新的 DOM 分段，再接到我們的 HTML 表格中。
 
 我們還需要做一件事才能讓程式運作正常，目前函式 `updateElement()` 只能接受文字類型的內容。我們稍微修改一下程式碼：
 
@@ -313,7 +313,7 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-我們使用方法 [`append()`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append)，它能連接文字或者是 [DOM 節點](https://developer.mozilla.org/en-US/docs/Web/API/Node)到父元素中，正好滿足我們的需求。
+我們使用方法 [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)，它能連接文字或者是 [DOM 節點](https://developer.mozilla.org/docs/Web/API/Node)到父元素中，正好滿足我們的需求。
 
 試著以 `test` 帳戶來登入，你應該能看到儀表板顯示出交易明細了 🎉。
 
@@ -321,7 +321,7 @@ function updateElement(id, textOrNode) {
 
 ## 🚀 挑戰
 
-花功夫讓儀表板頁面看起來像是正規的銀行界面。如果你已經為你的應用程式做好造型，你可以試試 [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) 來建立出[回應式網頁設計](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)，它能完美地呈現在電腦或是行動裝置上。
+花功夫讓儀表板頁面看起來像是正規的銀行界面。如果你已經為你的應用程式做好造型，你可以試試 [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) 來建立出[回應式網頁設計](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)，它能完美地呈現在電腦或是行動裝置上。
 
 這邊有造型過後的儀表板例子：
 
@@ -329,7 +329,7 @@ function updateElement(id, textOrNode) {
 
 ## 課後測驗
 
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46?loc=zh_tw)
 
 ## 作業
 

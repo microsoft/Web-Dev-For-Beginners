@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/39)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
 
 There are different ways to express and *end condition* in a game. It's up to you as the creator of the game to say why the game has ended. Here are some reasons, if we assume we are talking about the space game you have been building so far:
 
@@ -52,7 +52,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
 ### Add code
 
-1. **Track end condition**. Add code that keeps track of the number of enemies, or if the hero ship has been destroyedby adding these two functions:
+1. **Track end condition**. Add code that keeps track of the number of enemies, or if the hero ship has been destroyed by adding these two functions:
 
     ```javascript
     function isHeroDead() {
@@ -211,7 +211,7 @@ Add a sound! Can you add a sound to enhance your game play, maybe when there's a
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/40)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
 
 ## Review & Self Study
 

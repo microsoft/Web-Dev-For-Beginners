@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/43?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43?loc=fr)
 
 ### Introduction
 
@@ -128,7 +128,7 @@ Ajoutez les propriétés `action` et `method` au formulaire d'inscription :
 
 Essayez maintenant d'enregistrer un nouveau compte avec votre nom. Après avoir cliqué sur le bouton *S'inscrire*, vous devriez voir quelque chose comme ceci :
 
-![Une fenêtre de navigateur à l'adresse localhost:5000/api/accounts, affichant une chaîne JSON avec des données utilisateur](./images/form-post.png)
+![Une fenêtre de navigateur à l'adresse localhost:5000/api/accounts, affichant une chaîne JSON avec des données utilisateur](../images/form-post.png)
 
 Si tout se passe bien, le serveur doit répondre à votre demande avec une réponse [JSON](https://www.json.org/json-fr.html) contenant les données de compte qui ont été créées.
 
@@ -290,7 +290,7 @@ Voici un exemple de ce à quoi peut ressembler la page de connexion finale aprè
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/44?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44?loc=fr)
 
 ## Révision et étude personnelle
 

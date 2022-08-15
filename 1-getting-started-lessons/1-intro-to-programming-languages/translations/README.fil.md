@@ -6,7 +6,7 @@ Sinasaklaw ng araling ito ang mga pangunahing kaalaman sa mga programming langua
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pagsusulit bago ang lektura
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1)
 
 ## Panimula
 
@@ -187,7 +187,7 @@ Kapag ang isang developer ay gustong matuto ng bago, malamang na bumaling sila s
 Ihambing ang ilang mga programming language. Ano ang ilan sa mga natatanging katangian ng JavaScript vs. Java? Kumusta naman ang COBOL vs. Go?
 
 ## Pagsusulit pagkatapos ng Lektura
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/2)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
 
 ## Pagsusuri
 

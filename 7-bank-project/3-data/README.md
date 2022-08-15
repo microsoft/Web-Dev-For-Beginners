@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
 
 ### Introduction
 
@@ -225,7 +225,7 @@ First, we check that we have the account data we need before going further. Then
 
 > To make the balance display prettier, we use the method [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) to force displaying the value with 2 digits after the decimal point.
 
-Now we need to call our `updateDashboard()` function everytime the dashboard is loaded. If you already finished the [lesson 1 assignment](../1-template-route/assignment.md) this should be straighforward, otherwise you can use the following implementation.
+Now we need to call our `updateDashboard()` function everytime the dashboard is loaded. If you already finished the [lesson 1 assignment](../1-template-route/assignment.md) this should be straightforward, otherwise you can use the following implementation.
 
 Add this code to the end of the `updateRoute()` function:
 
@@ -327,7 +327,7 @@ Here's an example of a styled dashboard page:
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
 
 ## Assignment
 

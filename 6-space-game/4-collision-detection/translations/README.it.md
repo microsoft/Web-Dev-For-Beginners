@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/35?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35?loc=it)
 
 In questa lezione si imparererà come fare fuoco con i laser con JavaScript! Verranno aggiunte due cose al gioco:
 
@@ -286,7 +286,7 @@ Aggiungere un'esplosione! Dare un'occhiata alle risorse di gioco [nel repository
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/36?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36?loc=it)
 
 ## Revisione e Auto Apprendimento
 

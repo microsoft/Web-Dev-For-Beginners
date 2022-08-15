@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45?loc=ja)
 
 ### イントロダクション
 
@@ -223,7 +223,7 @@ function updateDashboard() {
 
 > 残高表示をよりきれいにするために、メソッド [`toFixed(2)`](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) を使用して、小数点以下2桁の値を強制的に表示します。
 
-これで、ダッシュボードがロードされるたびに `updateDashboard()` 関数を呼び出す必要があります。既に [レッスン1の課題] (../../1-template-route/translations/README.ja.md) を終了している場合は簡単ですが、そうでない場合は以下の実装を使用することができます。
+これで、ダッシュボードがロードされるたびに `updateDashboard()` 関数を呼び出す必要があります。既に [レッスン1の課題](../../1-template-route/translations/README.ja.md) を終了している場合は簡単ですが、そうでない場合は以下の実装を使用することができます。
 
 このコードを `updateRoute()` 関数の最後に追加します。
 
@@ -325,7 +325,7 @@ function updateElement(id, textOrNode) {
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46?loc=ja)
 
 ## 課題
 

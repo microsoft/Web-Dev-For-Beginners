@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/17?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17?loc=it)
 
 ### Introduzione
 
@@ -252,7 +252,7 @@ Per completare il quiz post-lezione, seguire questo modulo di apprendimento: [Ap
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/18?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18?loc=it)
 
 ## Revisione e Auto Apprendimento
 

@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/41?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41?loc=zh_tw)
 
 ### 大綱
 
@@ -41,7 +41,7 @@
 - 你需要在切換頁面時，重新載入整個網頁。這會很花時間。
 - 在不同子頁面上共享數據會是一大難題。
 
-另一個解決方案是只有一個 HTML 檔案，並使用 `<template>` 元素定義多個 [HTML 模板](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)。
+另一個解決方案是只有一個 HTML 檔案，並使用 `<template>` 元素定義多個 [HTML 模板](https://developer.mozilla.org/docs/Web/HTML/Element/template)。
 一個模板提供可重複利用的 HTML 區塊，它不會顯示在瀏覽器上，而在需要之時由 JavaScript 以呈現出來。
 
 ### 課題
@@ -108,9 +108,9 @@
 
 展現模板通常需要三個步驟：
 
-1. 在 DOM 內接收模板元素，舉例來說，使用 [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)。
-2. 複製模板元素，使用 [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)。
-3. 將複製元素接到 DOM 的顯示元素上，例如使用 [`appendChild`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)。
+1. 在 DOM 內接收模板元素，舉例來說，使用 [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById)。
+2. 複製模板元素，使用 [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode)。
+3. 將複製元素接到 DOM 的顯示元素上，例如使用 [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild)。
 
 ✅ 我們為什麼需要在接到 DOM 前，複製一份模板？你能想像如果我們省略了此步驟後，會發生什麼事嗎？
 
@@ -175,7 +175,7 @@ const routes = {
 };
 ```
 
-現在，我們對函式 `updateRoute` 做一些更動。我們不直接將 `templateId` 作為參數傳遞，而是接收現在的 URL 網址，在使用關聯表來取得相對應的模板 ID 數值。我們可以使用 [`window.location.pathname`](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname) 來取得網址的部分路徑。
+現在，我們對函式 `updateRoute` 做一些更動。我們不直接將 `templateId` 作為參數傳遞，而是接收現在的 URL 網址，在使用關聯表來取得相對應的模板 ID 數值。我們可以使用 [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) 來取得網址的部分路徑。
 
 ```js
 function updateRoute() {
@@ -203,9 +203,9 @@ function updateRoute() {
 
 我們已經完成了第二點，藉由使用函式 `updateRoute` 來完成，所以我們需要釐清該如何更新現在的網址。
 
-我們需要使用 JavaScript，詳細來看為 [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState)，更新網址位置並建立瀏覽紀錄，同時不更新整個 HTML 頁面。
+我們需要使用 JavaScript，詳細來看為 [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState)，更新網址位置並建立瀏覽紀錄，同時不更新整個 HTML 頁面。
 
-> 筆記：網頁超連結元素 [`<a href>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) 可以建立不同網址的連接，但它預設上會讓瀏覽器重新載入 HTML 檔。我們需要手動新增 JavaScript 處理路由以避免此行為發生，在點擊事件中使用函式 preventDefault() 。
+> 筆記：網頁超連結元素 [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) 可以建立不同網址的連接，但它預設上會讓瀏覽器重新載入 HTML 檔。我們需要手動新增 JavaScript 處理路由以避免此行為發生，在點擊事件中使用函式 preventDefault() 。
 
 ### 課題
 
@@ -253,7 +253,7 @@ function onLinkClick(event) {
 <a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
 
-使用 [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) 屬性會將 `click` 事件連接到 JavaScript 程式碼中，這邊會再呼叫函式 `navigate()`。
+使用 [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) 屬性會將 `click` 事件連接到 JavaScript 程式碼中，這邊會再呼叫函式 `navigate()`。
 
 試著點擊這些連結，你應該能造訪網頁中不同的的畫面了。
 
@@ -267,7 +267,7 @@ function onLinkClick(event) {
 
 點擊上一頁數次，你會看到網址會改變且歷史紀錄也更新上去了，但同一個模板還是被顯示出來。
 
-這是因為網頁不知道該如何依據歷史紀錄來呼叫 `updateRoute()`。如果你閱讀了 [`history.pushState` 技術文件](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState)，你會發現如果狀態改變 ── 同時代表著網址改變 ── [`popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) 事件就會被觸發。我們會利用此特徵來修復這個問題。
+這是因為網頁不知道該如何依據歷史紀錄來呼叫 `updateRoute()`。如果你閱讀了 [`history.pushState` 技術文件](https://developer.mozilla.org/docs/Web/API/History/pushState)，你會發現如果狀態改變 ── 同時代表著網址改變 ── [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) 事件就會被觸發。我們會利用此特徵來修復這個問題。
 
 ### 課題
 
@@ -278,7 +278,7 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> 筆記：我們在這裡使用[箭頭函式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，簡短地宣告 `popstate` 事件處理器。它與正規的函式的功能是一樣的。
+> 筆記：我們在這裡使用[箭頭函式](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，簡短地宣告 `popstate` 事件處理器。它與正規的函式的功能是一樣的。
 
 這是關於箭頭函式的回想影片：
 
@@ -296,11 +296,11 @@ updateRoute();
 
 ## 課後測驗
 
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/42?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42?loc=zh_tw)
 
 ## 複習與自學
 
-網頁路由是網頁開發中很棘手的部分，特別是將網頁切換轉變為單一頁面應用程式(Single Page Application)。閱讀關於[Azure Static Web App 提供服務的方式](https://docs.microsoft.com/en-us/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa)以處理網頁路由。你能解釋為什麼文件上的某些決定會如此重要呢？
+網頁路由是網頁開發中很棘手的部分，特別是將網頁切換轉變為單一頁面應用程式(Single Page Application)。閱讀關於[Azure Static Web App 提供服務的方式](https://docs.microsoft.com/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa)以處理網頁路由。你能解釋為什麼文件上的某些決定會如此重要呢？
 
 ## 作業
 

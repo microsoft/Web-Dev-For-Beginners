@@ -5,7 +5,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/17)
+[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
 
 ### Pengenalan
 
@@ -252,7 +252,7 @@ Untuk menyelesaikan kuiz pasca kuliah, baca modul Belajar ini: [Gaya aplikasi HT
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/18)
+[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
 
 ## Mengkaji & Belajar Sendiri
 

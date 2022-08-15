@@ -6,7 +6,7 @@ Cette leçon couvre les principes de base de GitHub, une plateforme permettant d
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3?loc=fr)
 
 ## Introduction
 
@@ -203,10 +203,10 @@ Passons en revue un flux de travail de contributeur. Supposons que le contribute
    git branch [nom_branche]
    ```
 
-1. **Passer à la branche de travail**. Basculez vers la branche spécifiée et mettez à jour le répertoire de travail avec `git checkout`:
+1. **Passer à la branche de travail**. Basculez vers la branche spécifiée et mettez à jour le répertoire de travail avec `git switch`:
 
    ```bash
-   git checkout [nom_branche]
+   git switch [nom_branche]
    ```
 
 1. **Travailler**. À ce stade, vous souhaitez ajouter vos modifications. N’oubliez pas d’en parler à Git avec les commandes suivantes:
@@ -221,14 +221,14 @@ Passons en revue un flux de travail de contributeur. Supposons que le contribute
 1. **Combinez votre travail avec la branche `main`**. À un moment donné, vous avez fini de travailler et vous voulez combiner votre travail avec celui de la branche `main`. La branche `main`" a peut-être changé entre-temps, alors assurez-vous de la mettre à jour au plus tard avec les commandes suivantes:
 
    ```bash
-   git checkout principal
+   git switch principal
    git pull
    ```
 
    À ce stade, vous voulez vous assurer que tous les _conflits_, les situations où Git ne peut pas facilement _combiner_ les modifications se produisent dans votre branche de travail. Par conséquent, exécutez les commandes suivantes :
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 
@@ -299,7 +299,7 @@ Les projets peuvent également avoir des discussions dans des forums, des listes
 Associez-vous à un ami pour travailler sur le code de l’autre. Créez un projet en collaboration, bifurquez du code, créez des branches et fusionnez les modifications.
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4?loc=fr)
 
 ## Examen & Auto-apprentissage
 

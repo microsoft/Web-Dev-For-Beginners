@@ -7,7 +7,7 @@ Pelajaran ini mencakup dasar-dasar GitHub, platform untuk menghosting dan mengel
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3?loc=id)
+[Kuis pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3?loc=id)
 
 ## Pengantar
 
@@ -177,10 +177,10 @@ Mari kita melalui alur kerja kontributor. Asumsikan kontributor sudah _forked (m
    git branch [nama-cabang]
    ```
 
-1. **Beralih ke cabang kerja**. Beralih ke cabang yang ditentukan dan perbarui direktori kerja dengan `git checkout`:
+1. **Beralih ke cabang kerja**. Beralih ke cabang yang ditentukan dan perbarui direktori kerja dengan `git switch`:
 
    ```bash
-   git checkout [nama-cabang]
+   git switch [nama-cabang]
    ```
 
 1. **Bekerja**. Pada titik ini Anda ingin menambahkan perubahan Anda. Jangan lupa untuk memberi tahu Git tentangnya dengan perintah berikut:
@@ -195,14 +195,14 @@ Mari kita melalui alur kerja kontributor. Asumsikan kontributor sudah _forked (m
 1. **Gabungkan pekerjaan Anda dengan cabang `main`**. Pada titik tertentu Anda telah selesai bekerja dan Anda ingin menggabungkan pekerjaan Anda dengan pekerjaan yang ada di cabang `main`. Cabang `main` mungkin telah berubah sementara itu jadi pastikan Anda terlebih dahulu memperbaruinya ke yang terbaru dengan perintah berikut:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    Pada titik ini Anda ingin memastikan bahwa setiap _conflicts (konflik)_, situasi di mana Git tidak dapat dengan mudah _combine (menggabugkan)_ perubahan terjadi di cabang kerja Anda. Oleh karena itu jalankan perintah berikut:
 
    ```bash
-   git checkout [nama-cabang]
+   git switch [nama-cabang]
    git merge main
    ```
 
@@ -274,7 +274,7 @@ Sandingkan dengan seorang teman untuk mengerjakan kode satu sama lain. Buat proy
 
 ## Kuis Pasca Kuliah
 
-[Kuis pasca kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4?loc=id)
+[Kuis pasca kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4?loc=id)
 
 ## Review & Belajar Mandiri
 

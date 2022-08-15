@@ -6,7 +6,7 @@ Deze les behandelt de basisprincipes van GitHub, een platform voor het hosten en
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz voorafgaand aan de lezing
-[Quiz voorafgaand aan de lezing](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3)
+[Quiz voorafgaand aan de lezing](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ## Inleiding
 
@@ -203,10 +203,10 @@ Laten we een workflow voor bijdragers doorlopen. Veronderstel dat de bijdrager d
    git branch [taknaam]
    ```
 
-1. **Overschakelen naar werkende tak**. Schakel over naar de gespecificeerde tak en update de werkdirectory met `git checkout`:
+1. **Overschakelen naar werkende tak**. Schakel over naar de gespecificeerde tak en update de werkdirectory met `git switch`:
 
    ```bash
-   git checkout [taknaam]
+   git switch [taknaam]
    ```
 
 1. **Werken**. Op dit punt wilt u uw wijzigingen toevoegen. Vergeet niet om Git erover te vertellen met de volgende commando's:
@@ -221,14 +221,14 @@ Laten we een workflow voor bijdragers doorlopen. Veronderstel dat de bijdrager d
 1. **Combineer uw werk met de `main` tak**. Op een gegeven moment bent u klaar met werken en wilt u uw werk combineren met dat van de `main` tak. De `main` tak kan ondertussen veranderd zijn, dus zorg ervoor dat u deze eerst bijwerkt naar de laatste versie met de volgende commando's:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    Op dit punt wilt u er zeker van zijn dat alle _conflicten_, situaties waarin Git niet gemakkelijk de veranderingen kan _combineren_ plaatsvinden in uw werkende tak. Voer daarom de volgende opdrachten uit:
 
    ```bash
-   git checkout [taknaam]
+   git switch [taknaam]
    git merge main
    ```
 
@@ -299,7 +299,7 @@ Projecten kunnen ook worden besproken in forums, mailinglijsten of chatkanalen z
 Koppel met een vriend om aan elkaars code te werken. Creëer gezamenlijk een project, fork code, maak takken en voeg wijzigingen samen.
 
 ## Quiz na de lezing
-[Quiz na de lezing](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4)
+[Quiz na de lezing](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
 ## Beoordeling en zelfstudie
 

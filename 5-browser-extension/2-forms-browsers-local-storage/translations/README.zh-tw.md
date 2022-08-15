@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/25?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25?loc=zh_tw)
 
 ### 大綱
 
@@ -94,7 +94,7 @@ function reset(e) {
   - 隱藏表單
   - 顯示重置按鈕
 
-在下一步之前，你可以學習一些瀏覽器的重要成員：[LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)。 LocalStorage 是瀏覽器儲存字串的有效方法，以 `key-value` 配對兩兩一組。這種儲存型態可以被 JavaScript 管理並控制瀏覽器的資料。LocalStorage 沒有期限，而另一款網頁儲存 SessionStorage 會在瀏覽器關閉時清除內容。不同的儲存方式有各自的優缺點。
+在下一步之前，你可以學習一些瀏覽器的重要成員：[LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)。 LocalStorage 是瀏覽器儲存字串的有效方法，以 `key-value` 配對兩兩一組。這種儲存型態可以被 JavaScript 管理並控制瀏覽器的資料。LocalStorage 沒有期限，而另一款網頁儲存 SessionStorage 會在瀏覽器關閉時清除內容。不同的儲存方式有各自的優缺點。
 
 > 注意 ── 你的瀏覽器擴充套件有自己的 local storage。主瀏覽器視窗是不同的個體，兩者會做各自的行為。
 
@@ -145,7 +145,7 @@ function setUpUser(apiKey, regionName) {
 
 ✅ 'REST' 全名為 'Representational State Transfer'，提供各式各樣 URL 形式來抓取資料。對網路開發者的 API 種類做一點研究，什麼形式的 API 最吸引你？
 
-這條函式中有一個重要到值得紀錄的事情。第一點為[關鍵字 `async`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)。讓你的函式非同步地執行，在行為完成前做等待，譬如資料被回傳。
+這條函式中有一個重要到值得紀錄的事情。第一點為[關鍵字 `async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function)。讓你的函式非同步地執行，在行為完成前做等待，譬如資料被回傳。
 
 這裡有一個簡短的影片介紹 `async`：
 
@@ -200,7 +200,7 @@ async function displayCarbonUsage(apiKey, region) {
 - 當 API 回應時，你將各種物件填入回傳的數值，並輸出到畫面上中。
 - 如果發生錯誤，或沒有結果產生，輸出錯誤訊息。
 
-✅ 非同步程式設計是一種實用的工具。閱讀[更多使用方法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)設定非同步程式的程式碼。
+✅ 非同步程式設計是一種實用的工具。閱讀[更多使用方法](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function)設定非同步程式的程式碼。
 
 恭喜你！當你建制你的專案(`npm run build`)並在瀏覽器上刷新功能，你有個可以運作的應用套件了！現在只差圖示無法正常顯示，我們會在下一堂課中修正它。
 
@@ -208,11 +208,11 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## 🚀 挑戰
 
-我們在課程中討論了不同種類的 API。選擇一樣網頁 API 並做更深度的研究。舉例來說，看看瀏覽器內支援的 API 如 [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)。依你看，什麼決定了 API 的優劣？
+我們在課程中討論了不同種類的 API。選擇一樣網頁 API 並做更深度的研究。舉例來說，看看瀏覽器內支援的 API 如 [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API)。依你看，什麼決定了 API 的優劣？
 
 ## 課後測驗
 
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/26?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26?loc=zh_tw)
 
 ## 複習與自學
 

@@ -5,7 +5,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/23)
+[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
 
 ### Pengenalan
 
@@ -150,7 +150,7 @@ Lihatlah kedai pelanjutan penyemak imbas dan pasang satu di penyemak imbas anda.
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/24)
+[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
 
 ## Mengkaji dan Belajar Sendiri
 
