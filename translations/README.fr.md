@@ -16,7 +16,7 @@ Azure Cloud Advocates de Microsoft ont le plaisir de vous proposer un programme 
 
 **Un grand merci à nos auteurs Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees et l’artiste de sketchnote Tomomi Imura!**
 
-# êtes vous étudiant ?
+# Êtes vous étudiant ?
 
 Commencez avec les ressources suivantes :
 
