@@ -19,6 +19,11 @@ In this lesson, we're going to add styles to our online terrarium and learn more
 
 You should have the HTML for your terrarium built and ready to be styled.
 
+> Check out video
+
+> 
+> [![Git and GitHub basics video](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
+
 ### Task
 
 In your terrarium folder, create a new file called `style.css`. Import that file in the `<head>` section:
