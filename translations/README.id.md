@@ -21,7 +21,7 @@ Azure Cloud Advocates di Microsoft dengan senang hati menawarkan kurikulum 12 mi
 > **Guru**, kita punya [termasuk beberapa saran](for-teachers.md) tentang bagaimana menggunakan kurikulum ini. Kami akan menyukai tanggapan Anda [di forum diskusi kami](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 > **Pelajar**, untuk menggunakan kurikulum ini sendiri, bagilah seluruh repo dan selesaikan latihannya sendiri, dimulai dengan kuis pra-kuliah, kemudian membaca kuliah dan menyelesaikan sisa kegiatan. Cobalah untuk membuat proyek dengan memahami pelajaran daripada menyalin kode solusi; namun kode tersebut tersedia di folder /solutions di setiap pelajaran berorientasi proyek. Ide lain adalah membentuk kelompok belajar dengan teman-teman dan membahas isinya bersama-sama. Untuk studi lebih lanjut, kami merekomendasikan [Belajar Microsoft](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa) dan dengan menonton video yang disebutkan di bawah ini.
 
-[![Promo video](https://github.com/GarudaID/Web-Dev-For-Beginners/blob/main/images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
+[![Promo video](/images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
 
 Gif by [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
 
