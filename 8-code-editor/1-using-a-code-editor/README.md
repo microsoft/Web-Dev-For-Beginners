@@ -50,9 +50,9 @@ When you start creating code or modifying existing code, it will happen in the b
 
 ## Open a GitHub repository
 
-The first think you'll need is to open a GitHub repository. There are multiple ways of opening a repository. In this section you'll see two different ways you can open a repository so that you can start working on changes.
+The first thing you'll need is to open a GitHub repository. There are multiple ways of opening a repository. In this section you'll see two different ways you can open a repository so that you can start working on changes.
 
-### With the editor
+### 1. With the editor
 
 Use the editor itself to open a remote repository. If you go to [VSCode.dev](https://vscode.dev) you will see an _"Open Remote Repository"_ button:
 
@@ -71,7 +71,7 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 ✅ If succesful, you'll see all files for this repository loaded in the text editor.
 
 
-### Using the URL
+### 2. Using the URL
 
 You can also use a url directly to load a repository. For example, the full URL for the current repo is [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), but you can swap the GitHub domain with `VSCode.dev/github` and load the repository directly. The resulting URL would be [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
 
