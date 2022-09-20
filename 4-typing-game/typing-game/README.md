@@ -77,22 +77,41 @@ Create a new file named **index.html**. Add the following HTML:
 
 ```html
 <!-- inside index.html -->
-<html>
 <head>
-  <title>Typing game</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Typing game!</h1>
-  <p>Practice your typing skills with a quote from Sherlock Holmes. Click **start** to begin!</p>
-  <p id="quote"></p> <!-- This will display our quote -->
-  <p id="message"></p> <!-- This will display any status messages -->
-  <div>
-    <input type="text" aria-label="current word" id="typed-value" /> <!-- The textbox for typing -->
-    <button type="button" id="start">Start</button> <!-- To start the game -->
-  </div>
-  <script src="script.js"></script>
-</body>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+    <title>Typing</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Practice your typing</h1>
+      <div class="title">
+        Click start to have a quote displayed. Type the quote as fast as you
+        can!
+      </div>
+
+      <p id="quote"></p> <!-- This will display our quote-->
+      <div class="win">
+        <p id="message"></p> <!--This will display our message-->
+      </div>
+      <div>
+        <input type="text" aria-label="current word" id="typed-value" /><!-- The textbox for typing -->
+      </div>
+      <div>
+        <button id="start" type="button">Start</button> <!--To start the game-->
+      </div>
+      <script src="./index.js"></script>
+    </main>
+  </body>
 </html>
 ```
 
@@ -119,13 +138,95 @@ Create a new file named **style.css** and add the following syntax.
 
 ```css
 /* inside style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Barlow Condensed";
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #141e30, #243b55);
+}
+
+main {
+  padding: 1.2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+input {
+  font-size: 1.6rem;
+  display: block;
+  width: 100%;
+  height: 1.8rem;
+  color: #fff;
+  border: none;
+  background-color: #243b55;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: "Bungee Spice", sans-serif;
+  font-size: 3.2rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 1.2rem;
+}
+
+button {
+  width: 100%;
+  font-family: "Barlow Condensed";
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  height: 2.2rem;
+  background: linear-gradient(to top, #f12711, #f5af19);
+  color: #fff;
+  transition: all 300ms;
+  border: none;
+}
+
+button:hover,
+button:active {
+  background: linear-gradient(to top, #fc4a1a, #f7b733);
+  color: #000;
+}
+.win {
+  font-family: "Barlow Condensed";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1fae37;
+  height: 0;
+  transition: all 300ms;
+}
+#quote {
+  font-family: "Barlow Condensed";
+  font-size: 2rem;
+}
+
 .highlight {
-  background-color: yellow;
+  background-color: #f5af19;
+  transition: all 500ms;
 }
 
 .error {
   background-color: lightcoral;
-  border: red;
+  border-color: red;
 }
 ```
 
@@ -161,26 +262,28 @@ We're also going to want references to the UI elements:
 - The message (**message**)
 
 ```javascript
-// inside script.js
-// all of our quotes
 const quotes = [
-    'When you have eliminated the impossible, whatever remains, however improbable, must be the truth.',
-    'There is nothing more deceptive than an obvious fact.',
-    'I ought to know by this time that when a fact appears to be opposed to a long train of deductions it invariably proves to be capable of bearing some other interpretation.',
-    'I never make exceptions. An exception disproves the rule.',
-    'What one man can invent another can discover.',
-    'Nothing clears up a case so much as stating it to another person.',
-    'Education never ends, Watson. It is a series of lessons, with the greatest for the last.',
+  "When you have eliminated the impossible, whatever remains, however improbable, must be the truth.",
+  "There is nothing more deceptive than an obvious fact.",
+  "I ought to know by this time that when a fact appears to be opposed to a long train of deductions it invariably proves to be capable of bearing some other interpretation.",
+  "I never make exceptions. An exception disproves the rule.",
+  "What one man can invent another can discover.",
+  "Nothing clears up a case so much as stating it to another person.",
+  "Education never ends, Watson. It is a series of lessons, with the greatest for the last.",
 ];
-// store the list of words and the index of the word the player is currently typing
+
+// array for storing the words of the current challenge
 let words = [];
+// stores the index of the word the player is currently typing
 let wordIndex = 0;
-// the starting time
+// default value for startTime (will be set on start)
 let startTime = Date.now();
-// page elements
-const quoteElement = document.getElementById('quote');
-const messageElement = document.getElementById('message');
-const typedValueElement = document.getElementById('typed-value');
+
+// grab UI items
+const quoteElement = document.getElementById("quote");
+const messageElement = document.getElementById("message");
+const typedValueElement = document.getElementById("typed-value");
+const winElement = document.querySelector(".win");
 ```
 
 ✅ Go ahead and add more quotes to your game
@@ -201,28 +304,31 @@ When the user clicks **start**, we need to select a quote, setup the user interf
 
 ```javascript
 // at the end of script.js
-document.getElementById('start').addEventListener('click', () => {
+document.getElementById("start").addEventListener("click", () => {
   // get a quote
   const quoteIndex = Math.floor(Math.random() * quotes.length);
   const quote = quotes[quoteIndex];
   // Put the quote into an array of words
-  words = quote.split(' ');
+  words = quote.split(" ");
   // reset the word index for tracking
   wordIndex = 0;
 
   // UI updates
   // Create an array of span elements so we can set a class
-  const spanWords = words.map(function(word) { return `<span>${word} </span>`});
+  const spanWords = words.map(function (word) {
+    return `<span>${word} </span>`;
+  });
   // Convert into string and set as innerHTML on quote display
-  quoteElement.innerHTML = spanWords.join('');
+  quoteElement.innerHTML = spanWords.join("");
   // Highlight the first word
-  quoteElement.childNodes[0].className = 'highlight';
+  quoteElement.childNodes[0].className = "highlight";
   // Clear any prior messages
-  messageElement.innerText = '';
+  winElement.style.height = "0";
+  messageElement.innerText = "";
 
   // Setup the textbox
   // Clear the textbox
-  typedValueElement.value = '';
+  typedValueElement.value = "";
   // set focus
   typedValueElement.focus();
   // set the event handler
@@ -244,6 +350,7 @@ Let's break down the code!
   - `join` the array to create a string which we can use to update the `innerHTML` on `quoteElement`
     - This will display the quote to the player
   - Set the `className` of the first `span` element to `highlight` to highlight it as yellow
+  - Hiding the `win` class by setting height to `0`
   - Clean the `messageElement` by setting `innerText` to `''`
 - Setup the textbox
   - Clear the current `value` on `typedValueElement`
@@ -256,7 +363,7 @@ As the player types, an `input` event will be raised. This event listener will c
 
 ```javascript
 // at the end of script.js
-typedValueElement.addEventListener('input', () => {
+typedValueElement.addEventListener("input", () => {
   // Get the current word
   const currentWord = words[wordIndex];
   // get the current value
@@ -266,27 +373,30 @@ typedValueElement.addEventListener('input', () => {
     // end of sentence
     // Display success
     const elapsedTime = new Date().getTime() - startTime;
-    const message = `CONGRATULATIONS! You finished in ${elapsedTime / 1000} seconds.`;
+    winElement.style.height = "2rem";
+    const message = `CONGRATULATIONS! You finished in ${
+      elapsedTime / 1000
+    } seconds.`;
     messageElement.innerText = message;
-  } else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
+  } else if (typedValue.endsWith(" ") && typedValue.trim() === currentWord) {
     // end of word
     // clear the typedValueElement for the new word
-    typedValueElement.value = '';
+    typedValueElement.value = "";
     // move to the next word
     wordIndex++;
     // reset the class name for all elements in quote
     for (const wordElement of quoteElement.childNodes) {
-      wordElement.className = '';
+      wordElement.className = "";
     }
     // highlight the new word
-    quoteElement.childNodes[wordIndex].className = 'highlight';
+    quoteElement.childNodes[wordIndex].className = "highlight";
   } else if (currentWord.startsWith(typedValue)) {
     // currently correct
     // highlight the next word
-    typedValueElement.className = '';
+    typedValueElement.className = "";
   } else {
     // error state
-    typedValueElement.className = 'error';
+    typedValueElement.className = "error";
   }
 });
 ```
@@ -296,6 +406,7 @@ Let's break down the code! We start by grabbing the current word and the value t
 - Quote is complete, indicated by `typedValue` being equal to `currentWord`, and `wordIndex` being equal to one less than the `length` of `words`
   - Calculate `elapsedTime` by subtracting `startTime` from the current time
   - Divide `elapsedTime` by 1,000 to convert from milliseconds to seconds
+  - The class `win` is given a height of `2rem` to display the `message`
   - Display a success message
 - Word is complete, indicated by `typedValue` ending with a space (the end of a word) and `typedValue` being equal to `currentWord`
   - Set `value` on `typedElement` to be `''` to allow for the next word to be typed
