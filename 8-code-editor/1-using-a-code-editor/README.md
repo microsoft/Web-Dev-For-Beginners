@@ -75,6 +75,7 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 
 You can also use a url directly to load a repository. For example, the full URL for the current repo is [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), but you can swap the GitHub domain with `VSCode.dev/github` and load the repository directly. The resulting URL would be [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
 
+Open a repository on github.com and hit the . button on your keyboard to swap the github.com domain with the vscode.dev domain instantly.
 
 ✅ If succesful, you'll see all files for this repository loaded in the text editor.
 
