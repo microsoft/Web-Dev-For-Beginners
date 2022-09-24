@@ -32,7 +32,7 @@ You'll also need a GitHub account, a code editor (like Visual Studio Code), and 
 
 Navigate to [github.com](https://github.com/) and create an account if you haven't already, or log in and fill out your profile. 
 
-✅ GitHub isn't the only code repository in the world; there are others, but GitHub is the best known
+✅ GitHub isn't the only code repository in the world; there are others, but GitHub is the best known to everyone.
 
 ### Preparation
 
