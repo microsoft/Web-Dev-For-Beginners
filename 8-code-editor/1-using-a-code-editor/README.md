@@ -79,13 +79,13 @@ You can also use a url directly to load a repository. For example, the full URL 
 ## Edit files
 Once you have opened the repository on the browser/ vscode.dev, the next step would be to make updates or changes to the project.
 
-a) Create a new file
+### 1. Create a new file
 
 You can either create a file inside an existing folder, or create it in the root directory/folder. To create a new file  open a location/directory to which you want the file to be saved and select the _'New file ...'_ icon, give it a name and hit enter.
 
 ![Create a new file](../images/create-new-file.png)
 
-b) Edit and save a file on the repository
+### 2. Edit and save a file on the repository
 
 Using vscode.dev is helpful whenever you want to make quick updates to your project without having to load any software on your computer.
 To update your code, click the 'Explorer' icon to view files & folders in the repository.
