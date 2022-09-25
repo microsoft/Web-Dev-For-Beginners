@@ -75,11 +75,39 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 
 You can also use a url directly to load a repository. For example, the full URL for the current repo is [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), but you can swap the GitHub domain with `VSCode.dev/github` and load the repository directly. The resulting URL would be [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
 
-Open a repository on github.com and hit the . button on your keyboard to swap the github.com domain with the vscode.dev domain instantly.
-
-✅ If succesful, you'll see all files for this repository loaded in the text editor.
 
 ## Edit files
+Once you have opened the repository on the browser/ vscode.dev, the next step would be to make updates or changes to the project.
+
+a) Create a new file
+
+You can either create a file inside an existing folder, or create it in the root directory/folder. To create a new file  open a location/directory to which you want the file to be saved and select the _'New file ...'_ icon, give it a name and hit enter.
+
+![Create a new file](../images/create-new-file.png)
+
+b) Edit and save a file on the repository
+
+Using vscode.dev is helpful whenever you want to make quick updates to your project without having to load any software on your computer.
+To update your code, click the 'Explorer' icon to view files & folders in the repository.
+Select a file to open it on the screen and make your changes.
+
+![Edit a file](../images/edit-a-file.png)
+
+Once you are done updating your project, select the _'source control'_ icon which contains all the new changes you have made to your repository.
+
+To view the changes you made to your project, select the file(s) in the 'Changes' folder. This will open a 'Working Tree' for you to visually see the changes you made to the file. Red shows an ommission to the project, while green signifies an addition.
+
+![View changes](../images/working-tree.png)
+
+If you are safisfied with the changes you made, hover on the 'Changes' folder and click the + button to stage the changes. Staging simply means preparing your changes to commit them to GitHub.
+
+If however you are not comfortable with some changes and you want to discard them, hover on the 'Changes' folder and select the undo icon.
+
+Then, type in a commit message _(A description of the change you have made to the project)_ and commit your changes by clicking the 'tick'.
+
+Once done working on your project, select the hamburger menu icon at the top left to return to the repository on GitHub.
+
+![Stage & commit changes](../images/EditVSCode.dev.gif)
 
 ## Using extensions
 
