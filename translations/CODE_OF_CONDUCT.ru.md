@@ -1,6 +1,6 @@
 # Правила взаимодействия с Open Source проектами Microsoft
 
-Этот проект регулируется [правилами взаимодействия с Open Source проектами Mkcrosoft](https://opensource.microsoft.com/codeofconduct/).
+Этот проект регулируется [правилами взаимодействия с Open Source проектами Microsoft](https://opensource.microsoft.com/codeofconduct/).
 
 Веб-ресурсы с подробной информацией:
 
