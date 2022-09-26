@@ -142,6 +142,10 @@ You can either click the _blue install button_ on the expanded activity bar to i
 
 ![Install extensions](../images/install-extension.gif)
 
+For our resume-site project, we will install the codeswing extension to create a swing for your project/ visualize the resume website on the code area. Immediately after installing the extension, observe your code area to see the changes to your project 😃
+
+![Codeswing extension in action](../images/after-codeswing-extension-pb.png)
+
 ### 2. Customize Extensions
 After installing the extension, you may need to modify its behaviour and customize it based on your preferences. To do this, select the Extensions icon, and this time, your extension will appear in the _Installed folder_, click on the _**Gear icon**_ and navigate to _Extensions Setting_
 
