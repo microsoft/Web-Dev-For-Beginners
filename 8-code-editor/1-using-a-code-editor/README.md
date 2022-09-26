@@ -81,14 +81,14 @@ Once you have opened the repository on the browser/ vscode.dev, the next step wo
 
 ### 1. Create a new file
 
-You can either create a file inside an existing folder, or create it in the root directory/folder. To create a new file  open a location/directory to which you want the file to be saved and select the _'New file ...'_ icon, give it a name and hit enter.
+You can either create a file inside an existing folder, or create it in the root directory/folder. To create a new file, open a location/directory to which you want the file to be saved and select the _'New file ...'_ icon on the activity bar _(left)_, give it a name and hit enter.
 
 ![Create a new file](../images/create-new-file.png)
 
 ### 2. Edit and save a file on the repository
 
 Using vscode.dev is helpful whenever you want to make quick updates to your project without having to load any software on your computer.
-To update your code, click the 'Explorer' icon to view files & folders in the repository.
+To update your code, click the 'Explorer' icon, also located on the activity bar to view files & folders in the repository.
 Select a file to open it on the screen and make your changes.
 
 ![Edit a file](../images/edit-a-file.png)
@@ -107,9 +107,40 @@ Then, type in a commit message _(A description of the change you have made to th
 
 Once done working on your project, select the hamburger menu icon at the top left to return to the repository on GitHub.
 
-![Stage & commit changes](../images/EditVSCode.dev.gif)
+![Stage & commit changes](../images/edit-vscode.dev.gif)
 
 ## Using extensions
+Extensions installed on VSCode allow you to add new features and customized development environment options on your editor to improve your development workflow. These extensions also help you add support for multiple programming languages and are often either generic extensions or language-based extensions.
+
+To browse through the list of all available extensions, click the _'Extensions'_ icon on the activity bar and start typing the name of the extension on the text field labelled _'Search Extensions in Marketplace'_.
+You will see a list of extensions with each one containing **the extension name, publisher's name, a 1 sentense description, number of downloads** and **a start rating**.
+
+![Extension details](../images/extension-details.png)
+
+You can also view all previously installed extensions by expanding the _'Installed folder'_ , popular extensions used by most developers in the _'Popular folder'_ and recommended extensions for you either by users in the same workspace or based on your recently opened files in the _'recommended folder'_ .
+
+![View extensions](../images/extensions.png)
+
+
+### 1. Install Extensions
+To install an extension, type the extension's name in the search field and click on it to view additional information about the extension on the code area once it appears on the expanded activity bar.
+
+You can either click the _blue install button_ on the expanded activity bar to install or use the install button that appears on the code area once you select the extension to load additional information.
+
+![Install extensions](../images/install-extension.gif)
+
+### 2. Customize Extensions
+After installing the extension, you may need to modify its behaviour and customize it based on your preferences. To do this, select the Extensions icon, and this time, your extension will appear in the _Installed folder_, click on the _**Gear icon**_ and navigate to _Extensions Setting_
+
+![Modify extension settings](../images/extension-settings.png)
+
+### 3. Manage Extensions
+After installing and using your extension, vscode.dev offers options to manage your extension based on different needs. For example, you may choose to:
+- **Disable:** Select installed extension on the expanded activity bar > click the Gear icon > select 'Disable' or 'Disable (Workspace)' **OR** Open the extension on the code area and click the blue Disable button.
+
+    _(You temporarily disable an extension when you no longer need it but don't want to uninstall it completely)_
+- **Uninstall:** Select installed extension on the expanded activity bar > click the Gear icon > select 'Uninstall' **OR** Open the extension on the code area and click the blue Uninstall button.
+
 
 
 ## Editing and updating
