@@ -32,6 +32,9 @@ You'll also need a GitHub account, a code editor (like Visual Studio Code), and 
 
 Navigate to [github.com](https://github.com/) and create an account if you haven't already, or log in and fill out your profile. 
 
+Note: You should also be familiar with bash commands(Linux terminal commands). The commands on Git bash are very much similar to the terminal commands.
+All the work to be done on git is done on Git Bash.
+
 ✅ GitHub isn't the only code repository in the world; there are others, but GitHub is the best known
 
 ### Preparation
