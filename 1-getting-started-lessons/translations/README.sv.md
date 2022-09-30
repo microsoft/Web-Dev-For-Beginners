@@ -4,9 +4,9 @@ I det här avsnittet av läroplanen kommer du att introduceras till icke-projekt
 
 ### Ämnen
 
-1. [Introduktion till programmeringsspråk och branschverktyg](1-intro-to-programming-languages/README.sv.md)
-2. [Introduktion till GitHub](2-github-basics/README.sv.md)
-3. [Grunderna för tillgänglighet](3-tillgänglighet/README.sv.md)
+1. [Introduktion till programmeringsspråk och branschverktyg](../1-intro-to-programming-languages/README.sv.md)
+2. [Introduktion till GitHub](../2-github-basics/README.sv.md)
+3. [Grunderna för tillgänglighet](../3-tillgänglighet/README.sv.md)
 
 ### Krediter
 
