@@ -119,6 +119,10 @@ Developers rely on editors for a few additional reasons:
   - [spell-check](https://atom.io/packages/spell-check)
   - [teletype](https://atom.io/packages/teletype)
   - [atom-beautify](https://atom.io/packages/atom-beautify)
+  
+- [www.sublimetext](https://www.sublimetext.com/)
+  - [emmet](https://emmet.io/)
+  - [SublimeLinter](http://www.sublimelinter.com/en/stable/)
 
 ### Browsers
 
