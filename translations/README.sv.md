@@ -47,7 +47,7 @@ Dessutom ställer ett quiz med låga insatser före en klass studentens avsikt a
 
 Även om vi avsiktligt har undvikit att introducera JavaScript-ramverk för att koncentrera oss på de grundläggande färdigheter som behövs som webbutvecklare innan vi antar ett ramverk, skulle ett bra nästa steg för att slutföra den här läroplanen vara att lära oss om Node.js via en annan samling videor: "[Nybörjare" Serie till: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-13441-cxa)".
 
-> Hitta våra riktlinjer för [Code of Conduct](CODE_OF_CONDUCT.md), [Contributing](CONTRIBUTING.md) och [Translation](TRANSLATIONS.md). Vi välkomnar din konstruktiva feedback!
+> Hitta våra riktlinjer för [Code of Conduct](../CODE_OF_CONDUCT.md), [Contributing](../CONTRIBUTING.md) och [Translation](../TRANSLATIONS.md). Vi välkomnar din konstruktiva feedback!
 
 ## Varje lektion innehåller:
 
