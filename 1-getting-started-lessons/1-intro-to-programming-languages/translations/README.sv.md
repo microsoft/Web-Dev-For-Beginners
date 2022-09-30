@@ -194,6 +194,6 @@ Jämför några programmeringsspråk. Vilka är några av de unika egenskaperna 
 
 Studera lite om de olika språk som är tillgängliga för programmeraren. Försök att skriva en rad på ett språk och skriv sedan om den på två andra. Vad lärde du dig?
 
-## Inlämningsuppgift
+## Uppgift
 
 [Reading the Docs](assignment.sv.md)
