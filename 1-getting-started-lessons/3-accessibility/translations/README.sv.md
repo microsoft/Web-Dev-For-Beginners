@@ -1,6 +1,6 @@
 # Skapa tillgängliga webbsidor
 
-![Allt om tillgänglighet](../../sketchnotes/webdev101-a11y.png)
+![Allt om tillgänglighet](../../../sketchnotes/webdev101-a11y.png)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz före föreläsningen
@@ -119,7 +119,7 @@ Som en extra bonus för att säkerställa att din webbplats är tillgänglig fö
 Föreställ dig följande sida:
 
 | Produkt | Beskrivning | Beställning |
-| ------------ | ------------------ | ------------ |
+| ------- | ----------- | ----------- |
 | Widget | [Beskrivning]('#') | [Beställning]('#') |
 | Super widget | [Beskrivning]('#') | [Beställning]('#') |
 
