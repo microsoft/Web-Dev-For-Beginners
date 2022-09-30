@@ -2,7 +2,7 @@
 
 Den här lektionen täcker grunderna i programmeringsspråk. Ämnena som tas upp här gäller de flesta moderna programmeringsspråk idag. I avsnittet "Tools of the Trade" får du lära dig om användbar programvara som hjälper dig som utvecklare.
 
-![Introprogrammering](../../sketchnotes/webdev101-programming.png)
+![Introprogrammering](../../../sketchnotes/webdev101-programming.png)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz före föreläsningen
@@ -196,4 +196,4 @@ Studera lite om de olika språk som är tillgängliga för programmeraren. Förs
 
 ## Uppgift
 
-[Reading the Docs](assignment.sv.md)
+[Läs dokumentationen](assignment.sv.md)
