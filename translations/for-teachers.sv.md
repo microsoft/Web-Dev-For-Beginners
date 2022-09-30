@@ -6,7 +6,7 @@ Faktum är att du kan använda det inom själva GitHub genom att använda GitHub
 
 För att göra det, forka detta repo. Du kommer att behöva skapa ett repo för varje lektion, så du kommer att behöva extrahera varje mapp till ett separat repo. På så sätt kan [GitHub Classroom](https://classroom.github.com/classrooms) hämta varje lektion separat.
 
-De[fullständiga instruktionerna](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) ger dig en idé om hur du ställer in ditt klassrum.
+De [fullständiga instruktionerna](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) ger dig en idé om hur du ställer in ditt klassrum.
 
 ## Användning i Moodle, Canvas eller Blackboard
 
@@ -30,4 +30,4 @@ Det finns många sätt att få detta att fungera i ett klassrumsformat online. L
 
 ## Ge oss dina åsikter!
 
-Vi vill få den här läroplanen att fungera för dig och dina elever. Vänligen ge oss [feedback](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLUTRLx4WlkyWSQZRVVU9VVlU5UlFLUTRLx4WlkyWSQ).
+Vi vill få den här läroplanen att fungera för dig och dina elever. Vänligen ge oss [feedback](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
