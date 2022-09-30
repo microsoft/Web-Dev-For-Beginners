@@ -8,8 +8,8 @@ Din första uppgift skulle vara att identifiera den här webbplatsen, detaljera 
 ## Tabell för att testa webbplatsens tillgänglighet
 
 | Kriterier | Exemplariskt | Tillräckligt | Behöver förbättras |
-|--------|--------|--------|-------------------- -|
-|        | saknas <10% av vad som krävs | saknar 20 % av vad som krävs | saknar 50 % av vad som krävs |
+|-----------|--------------|--------------|--------------------|
+|           | saknas <10% av vad som krävs | saknar 20 % av vad som krävs | saknar 50 % av vad som krävs |
 
 ----
 Studentrapport: innehåller stycken om hur otillgänglig webbplatsen är, Lighthouse-rapporten skapad i pdf, en lista med tio punkter att förbättra, med detaljer om hur man kan förbättra den.
