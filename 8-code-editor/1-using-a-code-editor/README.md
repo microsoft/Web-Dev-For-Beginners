@@ -87,37 +87,37 @@ You can either create a file inside an existing folder, or create it in the root
 
 ### 2. Edit and save a file on the repository
 
-Using vscode.dev is helpful whenever you want to make quick updates to your project without having to load any software on your computer.
+Using vscode.dev is helpful whenever you want to make quick updates to your project without having to load any software locally.
 To update your code, click the 'Explorer' icon, also located on the activity bar to view files & folders in the repository.
-Select a file to open it on the screen and make your changes.
+Select a file to open it on the code area, make your changes and save.
 
 ![Edit a file](../images/edit-a-file.png)
 
-Once you are done updating your project, select the _'source control'_ icon which contains all the new changes you have made to your repository.
+Once you are done updating your project, select the _`source control`_ icon which contains all the new changes you have made to your repository.
 
-To view the changes you made to your project, select the file(s) in the 'Changes' folder. This will open a 'Working Tree' for you to visually see the changes you made to the file. Red shows an ommission to the project, while green signifies an addition.
+To view the changes you made to your project, select the file(s) in the `Changes` folder in the expanded activity bar. This will open a 'Working Tree' for you to visually see the changes you made to the file. Red shows an ommission to the project, while green signifies an addition.
 
 ![View changes](../images/working-tree.png)
 
-If you are safisfied with the changes you made, hover on the 'Changes' folder and click the + button to stage the changes. Staging simply means preparing your changes to commit them to GitHub.
+If you are safisfied with the changes you made, hover on the `Changes` folder and click the `+` button to stage the changes. Staging simply means preparing your changes to commit them to GitHub.
 
-If however you are not comfortable with some changes and you want to discard them, hover on the 'Changes' folder and select the undo icon.
+If however you are not comfortable with some changes and you want to discard them, hover on the `Changes` folder and select the `undo` icon.
 
-Then, type in a commit message _(A description of the change you have made to the project)_ and commit your changes by clicking the 'tick'.
+Then, type in a `commit message` _(A description of the change you have made to the project)_, click the `check icon` to commit and push your changes.
 
-Once done working on your project, select the hamburger menu icon at the top left to return to the repository on GitHub.
+Once done working on your project, select the `hamburger menu icon` at the top left to return to the repository on github.com.
 
 ![Stage & commit changes](../images/edit-vscode.dev.gif)
 
 ## Using extensions
-Extensions installed on VSCode allow you to add new features and customized development environment options on your editor to improve your development workflow. These extensions also help you add support for multiple programming languages and are often either generic extensions or language-based extensions.
+Installing extensions on VSCode allows you to add new features and customized development environment options on your editor to improve your development workflow. These extensions also help you add support for multiple programming languages and are often either generic extensions or language-based extensions.
 
-To browse through the list of all available extensions, click the _'Extensions'_ icon on the activity bar and start typing the name of the extension on the text field labelled _'Search Extensions in Marketplace'_.
-You will see a list of extensions with each one containing **the extension name, publisher's name, a 1 sentense description, number of downloads** and **a start rating**.
+To browse through the list of all available extensions, click the _`Extensions icon`_ on the activity bar and start typing the name of the extension on the text field labelled _'Search Extensions in Marketplace'_.
+You will see a list of extensions, each one containing **the extension name, publisher's name, a 1 sentense description, number of downloads** and **a star rating**.
 
 ![Extension details](../images/extension-details.png)
 
-You can also view all previously installed extensions by expanding the _'Installed folder'_ , popular extensions used by most developers in the _'Popular folder'_ and recommended extensions for you either by users in the same workspace or based on your recently opened files in the _'recommended folder'_ .
+You can also view all previously installed extensions by expanding the _`Installed folder`_ , popular extensions used by most developers in the _`Popular folder`_ and recommended extensions for you either by users in the same workspace or based on your recently opened files in the _`recommended folder`_ .
 
 ![View extensions](../images/extensions.png)
 
@@ -136,17 +136,19 @@ After installing the extension, you may need to modify its behaviour and customi
 
 ### 3. Manage Extensions
 After installing and using your extension, vscode.dev offers options to manage your extension based on different needs. For example, you may choose to:
-- **Disable:** Select installed extension on the expanded activity bar > click the Gear icon > select 'Disable' or 'Disable (Workspace)' **OR** Open the extension on the code area and click the blue Disable button.
+- **Disable:**  _(You temporarily disable an extension when you no longer need it but don't want to uninstall it completely)_
 
-    _(You temporarily disable an extension when you no longer need it but don't want to uninstall it completely)_
+    Select the installed extension on the expanded activity bar > click the Gear icon > select 'Disable' or 'Disable (Workspace)' **OR** Open the extension on the code area and click the blue Disable button.
+
+   
 - **Uninstall:** Select installed extension on the expanded activity bar > click the Gear icon > select 'Uninstall' **OR** Open the extension on the code area and click the blue Uninstall button.
 
 
 
-## Editing and updating
-
-
 ---
+
+## Assignment
+Check out how you can **create a resume website using vscode.dev**
 
 ## 🚀 Challenge
 
