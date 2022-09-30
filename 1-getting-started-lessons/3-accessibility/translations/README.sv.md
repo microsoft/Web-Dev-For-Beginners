@@ -227,6 +227,6 @@ Många regeringar har lagar om tillgänglighetskrav. Läs upp om ditt hemlands t
 
 ## Uppgift
 
-[Analysera en icke-tillgänglig webbplats](assignment.sv.md)
+[Analysera en otillgänglig webbplats](assignment.sv.md)
 
 Tack: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) av Instrument
