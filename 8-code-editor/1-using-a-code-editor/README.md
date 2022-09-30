@@ -148,11 +148,8 @@ After installing and using your extension, vscode.dev offers options to manage y
 ---
 
 ## Assignment
-Check out how you can **create a resume website using vscode.dev**
+[Create a resume website using vscode.dev]()
 
-## 🚀 Challenge
-
-Open a remote repository you have permissions to make changes and update some files. Next, try creating a new branch with your changes and make a Pull Request.
 
 <!----
 ## Post-Lecture Quiz

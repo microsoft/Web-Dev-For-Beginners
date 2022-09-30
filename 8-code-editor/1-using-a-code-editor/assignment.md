@@ -21,7 +21,7 @@ After this assignment, you'll learn how to:
 
 ### Prerequisites
 
-1. A GitHub account. Navigate to [GtiHub](https://github.com/) and create an account if you haven't already.
+1. A GitHub account. Navigate to [GitHub](https://github.com/) and create an account if you haven't already.
 
 ## Steps
 
@@ -33,6 +33,7 @@ After this assignment, you'll learn how to:
 Click the `creating a new file` link, type in the name `index.html` and select the `Commit new file` button
 
 ![Create a new file on github.com](../images/new-file-github.com.png)
+
 
 **Step 3:** Open [VSCode.dev](https://vscode.dev) and select the `Open Remote Repository` button
 
@@ -222,9 +223,9 @@ Add your resume details to replace the _placeholder text_ on the html code
     }
 
 
-**Step 7:** Install the `Codeswing extension` to visualize the resume website on the code area. Immediately after installing the extension, observe your code area to see the changes to your project 😃
+**Step 7:** Install the `Codeswing extension` to visualize the resume website on the code area. 
 
-Click the _`Extensions`_ icon on the activity bar and type in Codeswing. Either click the _blue install button_ on the expanded activity bar to install or use the install button that appears on the code area once you select the extension to load additional information.
+Click the _`Extensions`_ icon on the activity bar and type in Codeswing. Either click the _blue install button_ on the expanded activity bar to install or use the install button that appears on the code area once you select the extension to load additional information. Immediately after installing the extension, observe your code area to see the changes to your project 😃
 
 ![Install extensions](../images/install-extension.gif)
 
@@ -232,9 +233,9 @@ This is what you will see on your on your screen after you install the extension
 
 ![Codeswing extension in action](../images/after-codeswing-extension-pb.png)
 
-If you are satisfied with the changes you made, hover on the 'Changes' folder and click the + button to stage the changes. Staging simply means preparing your changes to commit them to GitHub.
+If you are satisfied with the changes you made, hover on the `Changes` folder and click the `+` button to stage the changes.
 
-Then, type in a commit message _(A description of the change you have made to the project)_ and commit your changes by clicking the 'tick'.Once done working on your project, select the hamburger menu icon at the top left to return to the repository on GitHub.
+Type in a commit message _(A description of the change you have made to the project)_ and commit your changes by clicking the `check`.Once done working on your project, select the hamburger menu icon at the top left to return to the repository on GitHub.
 
 Congratulations 🎉 You have just created your resume website using vscode.dev in few steps.
 ## 🚀 Challenge
