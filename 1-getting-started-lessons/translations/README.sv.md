@@ -1,4 +1,4 @@
-# Komma igång med webbutveckling
+# Kom igång med webbutveckling
 
 I det här avsnittet av läroplanen kommer du att introduceras till icke-projektbaserade koncept som är viktiga för att bli en professionell utvecklare.
 
