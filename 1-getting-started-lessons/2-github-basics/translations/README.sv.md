@@ -2,7 +2,7 @@
 
 Den här lektionen täcker grunderna i GitHub, en plattform för att vara värd och hantera ändringar av din kod.
 
-![Intro till Github](../../sketchnotes/webdev101-github.png)
+![Intro till Github](../../../sketchnotes/webdev101-github.png)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz före föreläsningen
