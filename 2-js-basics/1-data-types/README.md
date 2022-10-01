@@ -109,6 +109,17 @@ Variables can store many different types of values, like numbers and text. These
 
 ✅ Data Types are also referred to as JavaScript data primitives, as they are the lowest-level data types that are provided by the language. There are 6 primitive data types: string, number, bigint, boolean, undefined, and symbol. Take a minute to visualize what each of these primitives might represent. What is a `zebra`? How about `0`? `true`?
 
+## Primitive Types in JavaScript
+Primitive types:- Primitive data types are numbers, Booleans, strings, undefined, null, and symbol. Primitive data types are the basic or common data types in JavaScript. 
+
+## Reference Types in JavaScript
+Reference in JavaScript are datatypes based on primitive. Like Objects, Arrays, and Functions. Everything is JavaScript is either an Object or Primitive datatype. When we create an object, that value is not directly assigned to the variable. Instead, a reference to that value is what gets set. Variable knows about the location of the object in memory, not the object itself.
+
+## What is the difference between primitive and reference datatype?
+JavaScript stores the primitive value on the stack because the size of a primitive value is fixed. On the other hand, JavaScript stores the reference value on the heap because the size of the reference value is dynamic.
+
+One of the most significant differences between primitive data and reference data is that, If the value is primitive, then we manipulate the actual valuestored in that variable. Whereas, If the value is of reference data type, we can manipulate that object's reference, rather than the actual object. It means a variable that stores an object is accessed by reference.
+
 ### Numbers
 
 In the previous section, the value of `myVariable` was a number data type.
@@ -190,6 +201,18 @@ JavaScript is notorious for its surprising ways of handling datatypes on occasio
 
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+
+## 🚀 Javascript Interview Questions: DataType Edition
+1. What are truthy values?
+2. What are the falsy values in JavaScript?
+3. What are Wrapper Objects?
+4. What is the difference between Implicit and Explicit Coercion?
+5. What Does 0 || 1 Return?
+6. What Does false == ‘0’ Return?
+7. What Does typeof undefined == typeof null Return?
+8. What Does typeof typeof 10 Return?
+9. What Does 6 > 5 > 4 Return?
+10. What Does 4 < 5 < 6 Return?
 
 ## Review & Self Study
 
