@@ -3,15 +3,16 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula
-[Quiz Pré-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/11)
+[Quiz Pré-Aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
 
 Tomar decisões e controlar a ordem do que é executado no seu código o torna recusável e robusto. Essa seção cobre a sintaxe para controle do fluxo de dados no JavaScript e sua significância quando usada com tipos Booleanos.
 
-[![Tomando Decisões](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
+[![Tomando Decisões](https://img.youtube.com/vi/jqxfynLcNIw/0.jpg)](https://youtube.com/watch?v=jqxfynLcNIw "Making Decisions")
 
-> 🎥 Clique na imagem acima para ver um video sobre tomada de decisões (Em Inglês)
+> 🎥 Clique na imagem acima para ver um video sobre tomada de decisões 
 
-> Você pode fazer essa aula em [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)! (Em Inglês)
+> Você pode fazer essa aula em [Microsoft Learn](https://docs.microsoft.com/pt-br/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
+
 ## Uma breve recapitulação sobre Booleanos
 
 Booleanos podem ter apenas dois valores `true` ou `false` (Verdadeiro ou falso). Os booleanos ajudam a tomar decisões sobre quais linhas de código devem ser executadas quando certas condições são atendidas.
@@ -163,7 +164,7 @@ Crie um programa que seja escrito primeiro com operadores lógicos e, em seguida
 
 ---
 ## Quiz Pós-Aula
-[Quiz Pós Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/12)
+[Quiz Pós Aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
 
 ## Revisão e autoestudo
 

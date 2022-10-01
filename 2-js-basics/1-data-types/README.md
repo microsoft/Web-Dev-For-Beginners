@@ -1,18 +1,20 @@
 # JavaScript Basics: Data Types
 
-![JavaScript Basics - Data types](/sketchnotes/webdev101-js-datatypes.png)
+![JavaScript Basics - Data types](../../sketchnotes/webdev101-js-datatypes.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web.
 
-> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-variables/?WT.mc_id=academic-13441-cxa)!
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-variables/?WT.mc_id=academic-13441-cxa)!
 
-[![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
+[![Variables](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Variables in JavaScript")
 
-> 🎥 Click the image above for a video about data types
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
+
+> 🎥 Click the images above for videos about variables and data types
 
 Let's start with variables and the data types that populate them!
 ## Variables
@@ -187,7 +189,7 @@ Booleans can be only two values: `true` or `false`. Booleans can help make decis
 JavaScript is notorious for its surprising ways of handling datatypes on occasion. Do a bit of research on these 'gotchas'. For example: case sensitivity can bite! Try this in your console: `let age = 1; let Age = 2; age == Age` (resolves `false` -- why?). What other gotchas can you find?
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
 
 ## Review & Self Study
 

@@ -2,11 +2,11 @@
 
 This lesson covers the basics of programming languages. The topics covered here apply to most modern programming languages today. In the 'Tools of the Trade' section, you'll learn about useful software that helps you as a developer.
 
-![Intro Programming](/sketchnotes/webdev101-programming.png)
+![Intro Programming](../../sketchnotes/webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1)
 
 ## Introduction
 
@@ -21,21 +21,21 @@ In this lesson, we'll cover:
 
 ## What is Programming?
 
-Programming (also known as coding) is the process of writing instructions to a device, such as a computer or mobile device. We write these instructions with a programming language, which is then interpreted by the device. These sets of instructions may be referred to by various names, but *program*, *computer program*, *application (app)*, and *executable* are a few popular names.
+Programming (also known as coding) is the process of writing instructions for a device such as a computer or mobile device. We write these instructions with a programming language, which is then interpreted by the device. These sets of instructions may be referred to by various names, but *program*, *computer program*, *application (app)*, and *executable* are a few popular names.
 
-A *program* can be anything that is written with code; websites, games, and phone apps are programs. While it's possible to create a program without writing code, the underlying logic is interpreted to the device and that logic was most likely written with code. A program that is *running* or *executing code* is carrying out instructions. The device that you're currently reading this lesson with is running a program to print it to your screen.
+A *program* can be anything that is written with code; websites, games, and phone apps are programs. While it's possible to create a program without writing code, the underlying logic is interpreted by the device and that logic was most likely written with code. A program that is *running* or *executing* code is carrying out instructions. The device that you're reading this lesson with is running a program to print it to your screen.
 
 ✅ Do a little research: who is considered to have been the world's first computer programmer?
 
 ## Programming Languages
 
-Programming languages serve a main purpose: for developers to build instructions to send to a device. Devices only can understand binary (1s and 0s), and for *most* developers that's not a very efficient way to communicate. Programming languages are a vehicle for communication between humans and computers.
+Programming languages enable developers to write instructions for a device. Devices can only understand binary (1s and 0s), and for *most* developers that's not a very efficient way to communicate. Programming languages are the vehicle for communication between humans and computers.
 
 Programming languages come in different formats and may serve different purposes. For example, JavaScript is primarily used for web applications, while Bash is primarily used for operating systems.
 
 *Low level languages* typically require fewer steps than *high level languages* for a device to interpret instructions. However, what makes high level languages popular is their readability and support. JavaScript is considered a high level language.
 
-The following code illustrates the difference between a high level language with JavaScript and low level language with ARM assembly code.
+The following code illustrates the difference between a high level language with JavaScript and a low level language with ARM assembly code.
 
 ```javascript
 let number = 10
@@ -78,15 +78,15 @@ Believe it or not, *they're both doing the same thing*: printing a Fibonacci seq
 
 ✅ A Fibonacci sequence is [defined](https://en.wikipedia.org/wiki/Fibonacci_number) as a set of numbers such that each number is the sum of the two preceding ones, starting from 0 and 1.
 
-## Elements of a program
+## Elements of a Program
 
 A single instruction in a program is called a *statement* and will usually have a character or line spacing that marks where the instruction ends, or *terminates*. How a program terminates varies with each language.
 
-Most programs rely on using data from a user or elsewhere, where statements may rely on data to carry out instructions. Data can change how a program behaves, so programming languages come with a way to temporarily store data that can be used later. This data is called *variables*. Variables are statements that instruct a device to save data in its memory. Variables in programs are similar to ones in algebra, where they have a unique name and their value may change over time.
+Statements within a program may rely on data provided by a user or elsewhere to carry out instructions. Data can change how a program behaves, so programming languages come with a way to temporarily store data so that it can be used later. These are called *variables*. Variables are statements that instruct a device to save data in its memory. Variables in programs are similar to variables in algebra, where they have a unique name and their value may change over time.
 
-There's a chance that some statements will not be executed by a device. This is usually by design when written by the developer or by accident when an unexpected error occurs. This type of control of an application makes it more robust and maintainable. Typically these changes in control happen when certain decisions are met. A common statement in modern programming languages to control how a program is run is the `if..else` statement.
+There's a chance that some statements will not be executed by a device. This is usually by design when written by the developer or by accident when an unexpected error occurs. This type of control over an application makes it more robust and maintainable. Typically, these changes in control happen when certain conditions are met. A common statement used in modern programming to control how a program runs is the `if..else` statement.
 
-✅ You'll learn more about this type of statement in subsequent lessons
+✅ You'll learn more about this type of statement in subsequent lessons.
 
 ## Tools of the Trade
 
@@ -94,20 +94,20 @@ There's a chance that some statements will not be executed by a device. This is 
 
 > 🎥 Click the image above for a video about tooling
 
-In this section, you'll learn about some software that you might find very useful as you start your professional development journey.
+In this section, you'll learn about some software that you may find to be very useful as you start your professional development journey.
 
-A **development environment** is a unique set of tools and features that a developer will use often when writing software. Some of these tools have been customized for a developer specific needs, and may change over time if a developer changes priorities in work or personal projects, or when they use a different programming language. Development environments are as unique as the developers who use them.
+A **development environment** is a unique set of tools and features that a developer uses often when writing software. Some of these tools have been customized for a developer's specific needs, and may change over time if that developer changes priorities in work, personal projects, or when they use a different programming language. Development environments are as unique as the developers who use them.
 
 ### Editors
 
-One of the most crucial tools for software development is the editor. Editors are where you write your code and sometimes where you will run your code.
+One of the most crucial tools for software development is the editor. Editors are where you write your code and sometimes where you run your code.
 
 Developers rely on editors for a few additional reasons:
 
-- *Debugging* Discovering bugs and errors by stepping through code, line by line. Some editors have debugging capabilities, or can be customized and added for specific programming languages.  
-- *Syntax highlighting* Adds colors and text formatting to code, makes it easier to read. Most editors allow customized syntax highlighting.
-- *Extensions and Integrations* Additions that are specialized for developers, by developers, for access to additional tools that aren't built into the base editor. For example, many developers also need a way to document their code and explain how it works and will install a spell check extension to check for typos. Most of these additions are intended for use within a specific editor, and most editors come with a way to search for available extensions.
-- *Customization* Most editors are extremely customizable, and each developer will have their own unique development environment that suits their needs. Many also allow developers to create their own extensions.
+- *Debugging* helps uncover bugs and errors by stepping through the code, line by line. Some editors have debugging capabilities; they can be customized and added for specific programming languages.  
+- *Syntax highlighting* adds colors and text formatting to code, making it easier to read. Most editors allow customized syntax highlighting.
+- *Extensions and Integrations* are specialized tools for developers, by developers. These tools weren't built into the base editor. For example, many developers document their code to explain how it works. They may install a spell check extension to help find typos within the documentation. Most extensions are intended for use within a specific editor, and most editors come with a way to search for available extensions.
+- *Customization* enables developers to create a unique development environment to suit their needs. Most editors are extremely customizable and may also allow developers to create custom extensions.
 
 #### Popular Editors and Web Development Extensions
 
@@ -122,9 +122,9 @@ Developers rely on editors for a few additional reasons:
 
 ### Browsers
 
-Another crucial tool is the browser. Web developers rely on the browser to observe how their code runs on the web, it's also used to view visual elements of a web page that are written in the editor, like HTML.
+Another crucial tool is the browser. Web developers rely on the browser to see how their code runs on the web. It's also used to display the visual elements of a web page that are written in the editor, like HTML.
 
-Many browsers come with *developer tools* (DevTools) that contain a set of helpful features and information to assist developers to collect and capture important insights about their application. For example: If a web page has errors, it's sometimes helpful to know when they occurred. DevTools in a browser can be configured to capture this information.
+Many browsers come with *developer tools* (DevTools) that contain a set of helpful features and information to help developers collect and capture important information about their application. For example: If a web page has errors, it's sometimes helpful to know when they occurred. DevTools in a browser can be configured to capture this information.
 
 #### Popular Browsers and DevTools
 
@@ -134,7 +134,7 @@ Many browsers come with *developer tools* (DevTools) that contain a set of helpf
 
 ### Command Line Tools
 
-Some developers prefer a less graphical view for their daily tasks and rely on the command line to achieve this. Developing code requires a significant amount of typing, and some developers prefer to not disrupt their flow on the keyboard and will use keyboard shortcuts to swap between desktop windows, work on different files, and use tools. Most tasks can be completed with a mouse, but one benefit of using the command line is that a lot can be done with command line tools without the need of swapping between the mouse and keyboard. Another benefit of the command line is that they're configurable and you can save your custom configuration, change it later, and also import it to new development machines. Because development environments are so unique to each developer, some will avoid using the command line, some will rely on it entirely, and some prefer a mix of the two.
+Some developers prefer a less graphical view for their daily tasks and rely on the command line to achieve this. Writing code requires a significant amount of typing and some developers prefer to not disrupt their flow on the keyboard. They will use keyboard shortcuts to swap between desktop windows, work on different files, and use tools. Most tasks can be completed with a mouse, but one benefit of using the command line is that a lot can be done with command line tools without the need of swapping between the mouse and keyboard. Another benefit of the command line is that they're configurable and you can save a custom configuration, change it later, and import it to other development machines. Because development environments are so unique to each developer, some will avoid using the command line, some will rely on it entirely, and some prefer a mix of the two.
 
 ### Popular Command Line Options
 
@@ -169,7 +169,7 @@ Options for the command line will differ based on the operating system you use.
 
 ### Documentation
 
-When a developer wants to learn something new, they'll most likely turn to documentation to learn how to use it. Developers rely on documentation often to guide them through how to use tools and languages properly, and also to gain deeper knowledge of how it works.
+When a developer wants to learn something new, they'll most likely turn to documentation to learn how to use it. Developers often rely on documentation to guide them through how to use tools and languages properly, and also to gain deeper knowledge of how it works.
 
 #### Popular Documentation on Web Development
 
@@ -187,11 +187,11 @@ When a developer wants to learn something new, they'll most likely turn to docum
 Compare some programming languages. What are some of the unique traits of JavaScript vs. Java? How about COBOL vs. Go?
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/2)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
 
 ## Review & Self Study
 
-Study a bit on the different languages available to the programmer. Try to write a line in one language, and then redo it in two others. What do you learn?
+Study a bit on the different languages available to the programmer. Try to write a line in one language, and then rewrite it in two others. What did you learn?
 
 ## Assignment
 

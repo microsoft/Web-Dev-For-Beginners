@@ -4,15 +4,17 @@
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7?loc=fr)
 
 Cette leçon couvre les bases de JavaScript, le language qui permet l'interactivité sur le web.
 
-> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-variables/?WT.mc_id=academic-13441-cxa)!
+> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-variables/?WT.mc_id=academic-13441-cxa)!
 
-[![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
+[![Variables](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Variables in JavaScript")
 
-> 🎥 Cliquez sur l'image ci-dessus pour voir une vidéo sur les types de données
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
+
+> 🎥 Cliquez sur l'image ci-dessus pour voir une vidéo sur les types de données et des variables
 
 Commençons par les variables et les types de données qui les composent!
 
@@ -188,7 +190,7 @@ Les booléens n'ont que deux valeurs possibles : `true` (vrai) ou `false` (faux)
 JavaScript est célèbre pour sa manière occasionnellement surprenante de gérer les types de données. Effectuez quelques recherches sur ces pièges. Par exemple : la sensibilité à la casse peut vous causer soucis ! Essayez ceci dans votre console : `let age = 1; let Age = 2; age == Age` (renvoie `false` (faux) -- pourquoi ?). Quels autres pièges pouvez-vous trouver ?
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8?loc=fr)
 
 ## Révision et auto-apprentissage
 

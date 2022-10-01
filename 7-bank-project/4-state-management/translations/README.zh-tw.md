@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/47?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47?loc=zh_tw)
 
 ### 大綱
 
@@ -86,9 +86,9 @@ This refactoring by itself did not bring much improvements, but the idea was to 
 為了避免改動 `state` 物件，我們考慮使它[*不可變*](https://zh.wikipedia.org/wiki/%E4%B8%8D%E5%8F%AF%E8%AE%8A%E7%89%A9%E4%BB%B6)，意味著它不能被做任何的修改。
 這也代表你必須建立新的狀態物件來替換它。藉由這個方式，你就有一套保護措施阻絕潛在非預期[風險](https://zh.wikipedia.org/wiki/%E5%89%AF%E4%BD%9C%E7%94%A8_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6))，也開創出應用程式內還原與重做的功能，讓程式偵錯更加的容易。舉例來說，你可以紀錄狀態的改變，儲存狀態的歷史紀錄來了解錯誤的來源。
 
-在 JavaScript 中，你可以使用 [`Object.freeze()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) 來建立不可變物件。若你想在不可變物件上做更動，例外處理(exception)就會發生。
+在 JavaScript 中，你可以使用 [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) 來建立不可變物件。若你想在不可變物件上做更動，例外處理(exception)就會發生。
 
-✅ 你知道*淺複製(shallow)*和*深複製(deep)*這兩種不可變物件的差別嗎？你可以從[這裡](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze)閱讀相關資訊。
+✅ 你知道*淺複製(shallow)*和*深複製(deep)*這兩種不可變物件的差別嗎？你可以從[這裡](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze)閱讀相關資訊。
 
 ### 課題
 
@@ -103,7 +103,7 @@ function updateState(property, newData) {
 }
 ```
 
-在這個函式中，我們會建立新的狀態物件，並利用[*展開運算子(`...`)(Spread Operator)*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals)複製前一個資料狀態。接著，我們使用[括弧記法(Bracket Notation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` 賦予並覆蓋特定的狀態物件。最後，我們為物件上鎖，`Object.freeze()` 避免任何的改動。目前我們只有 `account` 資料存在狀態中，利用此方法可以讓你新增任何你想要的資料。
+在這個函式中，我們會建立新的狀態物件，並利用[*展開運算子(`...`)(Spread Operator)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals)複製前一個資料狀態。接著，我們使用[括弧記法(Bracket Notation)](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` 賦予並覆蓋特定的狀態物件。最後，我們為物件上鎖，`Object.freeze()` 避免任何的改動。目前我們只有 `account` 資料存在狀態中，利用此方法可以讓你新增任何你想要的資料。
 
 我們會更新 `state` 初始化設定，確保初始狀態也被上鎖：
 
@@ -151,17 +151,17 @@ function logout() {
 - *這項資料很危險嗎？* 你應該要避免在用戶端儲存敏感的資料，例如帳戶密碼。
 - *你需要儲存資料多久？* 你打算短時間內做存取，還是永久地保存？
 
-網頁應用程式中有許多儲存資訊的方法，一切都取決於你想達成的目標。舉例來說，你可以利用網址來儲存搜尋資訊，讓使用者間能共享資訊。若資料需要與伺服器共享，好比說[認證](https://zh.wikipedia.org/wiki/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81)資訊，你可以使用 [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)。
+網頁應用程式中有許多儲存資訊的方法，一切都取決於你想達成的目標。舉例來說，你可以利用網址來儲存搜尋資訊，讓使用者間能共享資訊。若資料需要與伺服器共享，好比說[認證](https://zh.wikipedia.org/wiki/%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81)資訊，你可以使用 [HTTP cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)。
 
 另一個選擇是使用其中一個廣大的瀏覽器 API 來儲存資料。下列這兩項就特別有趣：
 
-- [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)：[Key/Value 儲存法](https://zh.wikipedia.org/wiki/%E9%94%AE-%E5%80%BC%E5%AD%98%E5%82%A8)可以保存不同時刻的網頁資料。這些資料不會有期限的限制。
-- [`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)：它的運作模式與 `localStorage` 相同，只差在資料會在網頁段落結束時被清除，如瀏覽器關閉時。
+- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)：[Key/Value 儲存法](https://zh.wikipedia.org/wiki/%E9%94%AE-%E5%80%BC%E5%AD%98%E5%82%A8)可以保存不同時刻的網頁資料。這些資料不會有期限的限制。
+- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)：它的運作模式與 `localStorage` 相同，只差在資料會在網頁段落結束時被清除，如瀏覽器關閉時。
 
-紀錄一下這兩個 API 只能儲存[字串](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)格式。
-如果你想儲存更複雜的物件，你需要利用 [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 將資料整理成 [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) 格式。
+紀錄一下這兩個 API 只能儲存[字串](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)格式。
+如果你想儲存更複雜的物件，你需要利用 [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 將資料整理成 [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) 格式。
 
-✅ 如果你想要建立不仰賴伺服器的網頁應用程式，你有辦法在用戶端建立資料庫。[`IndexedDB` API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) 可以應用在更進階的案例上，儲存更大量的資料，當然使用上也相對複雜。
+✅ 如果你想要建立不仰賴伺服器的網頁應用程式，你有辦法在用戶端建立資料庫。[`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) 可以應用在更進階的案例上，儲存更大量的資料，當然使用上也相對複雜。
 
 ### 課題
 
@@ -273,7 +273,7 @@ const routes = {
 
 ## 課後測驗
 
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/48?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48?loc=zh_tw)
 
 ## 作業
 

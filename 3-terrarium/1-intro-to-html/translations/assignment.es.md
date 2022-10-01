@@ -2,7 +2,7 @@
 
 ## Instrucciones
 
-Imagínese que está diseñando o rediseñando su sitio web personal. Cree un marcado gráfico de su sitio y luego escriba el marcado HTML que usaría para construir los diversos elementos del sitio. Puede hacer esto en papel y escanearlo, o usar el software de su elección, solo asegúrese de codificar manualmente el marcado HTML.
+Imagina que está diseñando o rediseñando su sitio web personal. Cree mockup del mismo y luego el HTML que usaría para construir los diversos elementos que componen al mismo. Puede hacer esto en papel y escanearlo, o usar el software de su elección, solo asegúrese de codificar manualmente todo el HTML.
 
 ## Rúbrica
 

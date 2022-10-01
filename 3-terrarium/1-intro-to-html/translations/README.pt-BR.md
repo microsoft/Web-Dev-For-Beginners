@@ -5,7 +5,7 @@
 
 ## Quiz Pré-aula
 
-[Quiz pré-aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15)
+[Quiz pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
 
 ### Introdução
 
@@ -217,7 +217,7 @@ Existem algumas tags 'mais antigas' selvagens em HTML que ainda são divertidas 
 
 ## Quiz Pós-aula
 
-[Quiz pós-aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16)
+[Quiz pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
 
 ## Revisão e autoestudo
 

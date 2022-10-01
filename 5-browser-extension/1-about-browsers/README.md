@@ -1,11 +1,11 @@
 # Browser Extension Project Part 1: All about Browsers
 
-![Browser sketchnote](/sketchnotes/browser.jpg)
+![Browser sketchnote](../../sketchnotes/browser.jpg)
 > Sketchnote by [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/23)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
 
 ### Introduction
 
@@ -150,7 +150,7 @@ Take a look at a browser extension store and install one to your browser. You ca
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/24)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
 
 ## Review & Self Study
 

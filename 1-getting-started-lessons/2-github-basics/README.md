@@ -2,11 +2,11 @@
 
 This lesson covers the basics of GitHub, a platform to host and manage changes to your code.
 
-![Intro to GitHub](/sketchnotes/webdev101-github.png)
+![Intro to GitHub](../../sketchnotes/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ## Introduction
 
@@ -44,7 +44,12 @@ You'll need both a folder with a code project on your local machine (laptop or P
 
 Let's say you have a folder locally with some code project and you want to start tracking your progress using git - the version control system. Some people compare using git to writing a love letter to your future self. Reading your commit messages days or weeks or months later you'll be able to recall why you made a decision, or "rollback" a change - that is, when you write good "commit messages".
 
-### Task: Make a repository and commit code
+### Task: Make a repository and commit code  
+
+> Check out video
+> 
+> [![Git and GitHub basics video](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
+
 
 1. **Create repository on GitHub**. On GitHub.com, in the repositories tab, or from the navigation bar top-right, find the **new repo** button.
 
@@ -125,7 +130,7 @@ Let's say you have a folder locally with some code project and you want to start
 
 1. **Connect your local Git repo with GitHub**. A Git repo is good on your machine but at some point you want to have backup of your files somewhere and also invite other people to work with you on your repo. One such great place to do so is GitHub. Remember we've already created a repo on GitHub so the only thing we need to do is to connect our local Git repo with GitHub. The command `git remote add` will do just that. Type the following command:
 
-   > Note, before you type the command go to your GitHub repo page to find the repository URL. You will use it in the below command. Replace `repository_name` with your GitHub URL.
+   > Note, before you type the command go to your GitHub repo page to find the repository URL. You will use it in the below command. Replace ```https://github.com/username/repository_name.git``` with your GitHub URL.
 
    ```bash
    git remote add origin https://github.com/username/repository_name.git
@@ -134,6 +139,8 @@ Let's say you have a folder locally with some code project and you want to start
    This creates a _remote_, or connection, named "origin" pointing at the GitHub repository you created earlier.
 
 1. **Send local files to GitHub**. So far you've created a _connection_ between the local repo and the GitHub repo. Let's send these files to GitHub with the following command `git push`, like so: 
+   
+   > Note, your branch name may be different by default from ```main```.
 
    ```bash
    git push -u origin main
@@ -141,7 +148,7 @@ Let's say you have a folder locally with some code project and you want to start
 
    This sends your commits in your "main" branch to GitHub.
 
-1. **To add more changes**. If you want to continue making changes and pushing them to GitHub you’ll just need to use the following three commands:
+2. **To add more changes**. If you want to continue making changes and pushing them to GitHub you’ll just need to use the following three commands:
 
    ```bash
    git add .
@@ -166,6 +173,10 @@ As in the subject, in the body (optional) also use the imperative, present tense
 The main reason for putting things on GitHub was to make it possible to collaborate with other developers.
 
 ## Working on projects with others
+
+> Check out video
+>
+> [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
 In your repository, navigate to `Insights > Community` to see how your project compares to recommended community standards.
 
@@ -203,10 +214,10 @@ Let's go through a contributor workflow. Assume the contributor has already _for
    git branch [branch-name]
    ```
 
-1. **Switch to working branch**. Switch to the specified branch and update the working directory with `git checkout`:
+1. **Switch to working branch**. Switch to the specified branch and update the working directory with `git switch`:
 
    ```bash
-   git checkout [branch-name]
+   git switch [branch-name]
    ```
 
 1. **Do work**. At this point you want to add your changes. Don't forget to tell Git about it with the following commands:
@@ -221,14 +232,14 @@ Let's go through a contributor workflow. Assume the contributor has already _for
 1. **Combine your work with the `main` branch**. At some point you are done working and you want to combine your work with that of the `main` branch. The `main` branch might have changed meanwhile so make sure you first update it to the latest with the following commands:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    At this point you want to make sure that any _conflicts_, situations where Git can't easily _combine_ the changes happens in your working branch. Therefore run the following commands:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 
@@ -299,7 +310,7 @@ Projects might also have discussion in forums, mailing lists, or chat channels l
 Pair with a friend to work on each other's code. Create a project collaboratively, fork code, create branches, and merge changes.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
 ## Review & Self Study
 

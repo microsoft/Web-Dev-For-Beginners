@@ -189,7 +189,7 @@
 						]
 					},
 					{
-						"questionText": "How would you get all the commits from a remote branch?",
+						"questionText": "How would you get and integrate all the commits from a remote branch?",
 						"answerOptions": [
 							{
 								"answerText": "git fetch",
@@ -209,11 +209,11 @@
 						"questionText": "How do you switch to a branch?",
 						"answerOptions": [
 							{
-								"answerText": "git switch [branch-name]",
+								"answerText": "git checkout [branch-name]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [branch-name]",
+								"answerText": "git switch [branch-name]",
 								"isCorrect": "true"
 							},
 							{
@@ -241,7 +241,7 @@
 							},
 							{
 								"answerText": "Cleanhouse",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -710,7 +710,7 @@
 						"answerOptions": [
 							{
 								"answerText": "condition",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "counter",
@@ -718,7 +718,7 @@
 							},
 							{
 								"answerText": "iteration-expression",
-								"isCorrect": "false"
+								"isCorrect": "true"
 							}
 						]
 					},

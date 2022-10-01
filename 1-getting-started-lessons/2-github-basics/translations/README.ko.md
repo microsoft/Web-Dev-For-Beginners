@@ -6,7 +6,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3?loc=ko)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3?loc=ko)
 
 ## 소개
 
@@ -179,10 +179,10 @@ GitHub에 코드를 올리는 주 이유는 다른 개발자와 협력할 수 �
    git branch [branch-name]
    ```
 
-1. **작업 브랜치 변경하기**. 지정된 브랜치로 전환하고 `git checkout`으로 작업 디렉토리를 업데이트합니다:
+1. **작업 브랜치 변경하기**. 지정된 브랜치로 전환하고 `git switch`으로 작업 디렉토리를 업데이트합니다:
 
    ```bash
-   git checkout [branch-name]
+   git switch [branch-name]
    ```
 
 1. **일하기**. 이 시점에서 변경 사항을 추가하려고 합니다. 다음 명령을 사용하여 Git에 알리는 것을 잊지 마시기 바랍니다:
@@ -197,14 +197,14 @@ GitHub에 코드를 올리는 주 이유는 다른 개발자와 협력할 수 �
 1. **`main` 브랜치에서 작업하기**. 어느 시점에서 작업을 마치고 `main` 브랜치의 작업과 병합하려고 합니다. 그동안 `main` 브랜치가 변경되었을 수 있으므로, 먼저 다음 명령을 사용하여 최신 버전으로 업데이트해야합니다:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    이 시점에서 Git이 변경 사항을 쉽게 _결합_ 할 수 없는 _충돌_ 상황이 작업 브랜치에서 발생하는지 확인하려고합니다. 따라서 다음 명령을 실행합니다:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 
@@ -275,7 +275,7 @@ GitHub의 모든 공개 저장소에 스타 표시, 워치 및/또는 "포크" �
 친구와 페어링하여 서로의 코드를 작업하세요. 공동으로 프로젝트를 만들고, 코드를 포크하고, 브랜치를 만들고, 변경 사항을 병합합니다.
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4?loc=ko)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

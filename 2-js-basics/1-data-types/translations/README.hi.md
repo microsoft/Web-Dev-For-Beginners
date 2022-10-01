@@ -4,11 +4,13 @@
 > [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा स्केचनेट
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7?loc=hi)
 
 इस पाठ में जावास्क्रिप्ट की मूल बातें शामिल हैं, वह भाषा जो वेब पर अन्तरक्रियाशीलता प्रदान करती है।
 
 [![जावास्क्रिप्ट में डेटा प्रकार](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "जावास्क्रिप्ट में डेटा प्रकार")
+
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
 
 
 चलो वेरिएबल्स और डेटा प्रकारों के साथ शुरू करते हैं जो उन्हें आबाद करते हैं!
@@ -176,7 +178,7 @@ let myString2 = "World";
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ एक चर को 'सत्य' माना जा सकता है यदि यह एक बूलियन `true` का मूल्यांकन करता है। दिलचस्प रूप से, जावास्क्रिप्ट में, [सभी मूल्य सत्य हैं जब तक कि मिथ्या के रूप में परिभाषित नहीं किया जाता](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) 
+✅ एक चर को 'सत्य' माना जा सकता है यदि यह एक बूलियन `true` का मूल्यांकन करता है। दिलचस्प रूप से, जावास्क्रिप्ट में, [सभी मूल्य सत्य हैं जब तक कि मिथ्या के रूप में परिभाषित नहीं किया जाता](https://developer.mozilla.org/docs/Glossary/Truthy) 
 
 ---
 
@@ -185,7 +187,7 @@ let myString2 = "World";
 जावास्क्रिप्ट मौके पर डेटाटिप्स को संभालने के अपने आश्चर्यजनक तरीकों के लिए कुख्यात है।इन 'gotchas' पर थोड़ा शोध करें। For example: case sensitivity can bite! इसे अपने कंसोल में आज़माएँ: `let age = 1; let Age = 2; age == Age` (`false` हल करता है - क्यों?). आपको अन्य क्या मिल सकते हैं?
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

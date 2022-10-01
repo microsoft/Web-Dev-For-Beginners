@@ -2,7 +2,7 @@
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/21?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21?loc=hi)
 
 ## इवेंट संचालित प्रोग्रामिंग
 
@@ -20,10 +20,10 @@
 
 एप्लिकेशन बनाते समय आपको सुनने के लिए [दर्जनों इवेंट](https://developer.mozilla.org/docs/Web/Events) उपलब्ध हैं। मूल रूप से एक पृष्ठ पर एक उपयोगकर्ता कुछ भी करता है, एक घटना को बढ़ाता है, जो आपको यह सुनिश्चित करने के लिए बहुत शक्ति देता है कि वे आपकी इच्छा का अनुभव प्राप्त करें। सौभाग्य से, आपको आम तौर पर केवल कुछ मुट्ठी भर घटनाओं की आवश्यकता होगी। यहां कुछ सामान्य बातें हैं (दोनों में से एक का उपयोग हम अपने खेल को बनाते समय करेंगे)
 
-- [click](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event): उपयोगकर्ता ने कुछ पर क्लिक किया, आमतौर पर एक बटन या हाइपरलिंक
-- [contextmenu](https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event): उपयोगकर्ता ने सही माउस बटन क्लिक किया
-- [select](https://developer.mozilla.org/en-US/docs/Web/API/Element/select_event): उपयोगकर्ता ने कुछ टेक्स्ट पर प्रकाश डाला
-- [input](https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event): उपयोगकर्ता कुछ टेक्स्ट इनपुट करता है
+- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): उपयोगकर्ता ने कुछ पर क्लिक किया, आमतौर पर एक बटन या हाइपरलिंक
+- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): उपयोगकर्ता ने सही माउस बटन क्लिक किया
+- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): उपयोगकर्ता ने कुछ टेक्स्ट पर प्रकाश डाला
+- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): उपयोगकर्ता कुछ टेक्स्ट इनपुट करता है
 
 ## खेल का निर्माण
 
@@ -328,11 +328,11 @@ typedValueElement.addEventListener('input', () => {
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/22?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 
-वेब ब्राउज़र के माध्यम से डेवलपर के लिए [उपलब्ध सभी घटनाओं](https://developer.mozilla.org/en-US/docs/Web/Events) को पढ़ें, और उन परिदृश्यों पर विचार करें जिनमें आप प्रत्येक का उपयोग करेंगे।
+वेब ब्राउज़र के माध्यम से डेवलपर के लिए [उपलब्ध सभी घटनाओं](https://developer.mozilla.org/docs/Web/Events) को पढ़ें, और उन परिदृश्यों पर विचार करें जिनमें आप प्रत्येक का उपयोग करेंगे।
 
 ## असाइनमेंट
 

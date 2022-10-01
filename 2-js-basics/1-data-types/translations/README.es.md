@@ -3,9 +3,11 @@
 ![JavaScript Basics - Data types](/sketchnotes/webdev101-js-datatypes.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-[![Tipos de datos en JavaScript](https://img.youtube.com/vi/rEHV3fFMfn0/0.jpg)](https://youtube.com/watch?v=rEHV3fFMfn0 "Tipos de datos en JavaScript")
+[![Declaracion de Variables](https://img.youtube.com/vi/mUvddpeBCAs/0.jpg)](https://youtube.com/watch?v=mUvddpeBCAs "Declaracion de Variables")
 
-## [Pre-lectura prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7)
+[![Tipos de datos en JavaScript](https://img.youtube.com/vi/fuksTtTga90/0.jpg)](https://youtube.com/watch?v=fuksTtTga90 "Tipos de datos en JavaScript")
+
+## [Pre-lectura prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
 
 Esta lección cubre los conceptos básicos de JavaScript, el lenguaje que proporciona interactividad en la web.
 
@@ -181,7 +183,7 @@ Los booleanos pueden tener solo dos valores: `true` o `false`. Los valores boole
 
 🚀 Desafío: JavaScript es conocido por sus sorprendentes formas de manejar tipos de datos en ocasiones. Investiga un poco sobre estos "errores". Por ejemplo: ¡la sensibilidad a mayúsculas y minúsculas puede morder! Pruebe esto en su consola: `let age = 1; let Age = 2; age == Age` (resuelve `false` - ¿por qué?). ¿Qué otras trampas puedes encontrar?
 
-## [Post-lectura prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8)
+## [Post-lectura prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
 
 ## Revisión y autoestudio
 

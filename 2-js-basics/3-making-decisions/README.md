@@ -1,10 +1,10 @@
 # JavaScript Basics: Making Decisions
 
-![JavaScript Basics - Making decisions](/sketchnotes/webdev101-js-decisions.png)
+![JavaScript Basics - Making decisions](../../sketchnotes/webdev101-js-decisions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/11)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
 
 Making decisions and controlling the order in which your code runs makes your code reusable and robust. This section covers the syntax for controlling data flow in JavaScript and its significance when used with Boolean data types
 
@@ -12,7 +12,7 @@ Making decisions and controlling the order in which your code runs makes your co
 
 > 🎥 Click the image above for a video about making decisions.
 
-> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
 ## A Brief Recap on Booleans
 
 Booleans can be only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.
@@ -61,7 +61,7 @@ if (currentMoney >= laptopPrice){
 }
 ```
 
-## IF..Else Statement
+## If..Else Statement
 
 The `else` statement will run the code in between its blocks when the condition is false. It's optional with an `if` statement.
 
@@ -164,7 +164,7 @@ Create a program that is written first with logical operators, and then rewrite 
 
 ---
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/12)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
 
 ## Review & Self Study
 

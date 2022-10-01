@@ -4,7 +4,7 @@
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5?loc=it)
 
 > La forza del Web è nella usa universalità. L'accesso garantito a tutti a prescindere dalla disabilità è us aspetto essenziale.
 >
@@ -215,7 +215,7 @@ Prendere questo HTML e riscriverlo per essere il più accessibile possibile, dat
 ```
 
 ## Quiz post-lezione
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6?loc=it)
 
 ## Revisione e auto apprendimento
 

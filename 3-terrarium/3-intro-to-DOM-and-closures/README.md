@@ -1,11 +1,11 @@
 # Terrarium Project Part 3: DOM Manipulation and a Closure
 
-![DOM and a closure](/sketchnotes/webdev101-js.png)
+![DOM and a closure](../../sketchnotes/webdev101-js.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/19)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
 
 ### Introduction
 
@@ -201,7 +201,7 @@ Add new event handler to your closure to do something more to the plants; for ex
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/20)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
 
 ## Review & Self Study
 

@@ -5,7 +5,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15?loc=fr)
 
 ### Introduction
 
@@ -219,7 +219,7 @@ Il existe quelques "vieilles" balises sauvages en HTML avec lesquelles il est en
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16?loc=fr)
 
 ## Révision et autoformation
 

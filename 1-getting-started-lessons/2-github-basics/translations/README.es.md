@@ -5,7 +5,7 @@ Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar
 ![Introducción a GitHub](/sketchnotes/webdev101-github.png)
 > Dibujo de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Cuestionario](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3)
+## [Cuestionario](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ### Introducción
 
@@ -206,10 +206,10 @@ Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador y
    git branch [branch-name]
    ```
 
-1. **Cambiar a rama de trabajo**. Cambia a la rama especificada y actualiza tu directorio de trabajo con `git checkout`:
+1. **Cambiar a rama de trabajo**. Cambia a la rama especificada y actualiza tu directorio de trabajo con `git switch`:
 
    ```bash
-   git checkout [branch-name]
+   git switch [branch-name]
    ```
 
 1. **Trabaja**. En este punto, deseas agregar tus cambios. No olvides informarle a Git con los siguientes comandos:
@@ -224,14 +224,14 @@ Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador y
 1. **Combina tu trabajo con la rama `principal`**. En algún momento has terminado de trabajar y deseas combinar tu trabajo con el de la rama `principal`. La rama `main` podría haber cambiado mientras tanto, así que asegúrate de actualizarla con los siguientes comandos:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    En este punto, querrás asegurarte de que cualquier _conflicto_, situaciones en las que Git no pueda _combinarse_ fácilmente los cambios, ocurren en tu rama de trabajo. Mientras tanto, ejecuta los siguientes comandos:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 
@@ -295,7 +295,7 @@ Los proyectos también pueden tener discusiones en foros, listas de correo o can
 
 🚀 Desafío: empareja con un amigo(a) para trabajar en el código juntos. Crea un proyecto de forma colaborativa, bifurque el código, crea ramas y combina los cambios.
 
-## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4)
+## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
 ## Revisión y autoestudio
 
