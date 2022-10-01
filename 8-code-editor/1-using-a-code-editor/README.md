@@ -40,7 +40,7 @@ Once it loads, it should look similar to this image:
 There are three main sections, starting from the far left and moving to the right:
 
 1. The _activity bar_ which includes some icons, like the magnifying glass 🔎, the gear ⚙️  and a few others
-1. The expanded acivity bar which defaults to the _Explorer_, called the _side bar_.
+1. The expanded activity bar which defaults to the _Explorer_, called the _side bar_.
 1. And finally, the code area to the right.
 
 Click on each of the icons to display a different menu. Once done, click on the _Explorer_ so you are back where you started.
@@ -68,7 +68,7 @@ Once the menu opens, type _open remote repository_, and then select the first op
 https://github.com/microsoft/Web-Dev-For-Beginners
 ```
 
-✅ If succesful, you'll see all files for this repository loaded in the text editor.
+✅ If successful, you'll see all files for this repository loaded in the text editor.
 
 
 ### 2. Using the URL
