@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>querySelector</title>
+  <link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+  <h1 class="header">My Webpage</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint natus nostrum quas laudantium quasi ut
+    voluptatem fugiat aliquid architecto. In distinctio expedita doloribus veritatis, vitae voluptates optio commodi
+    itaque.
+  <i>Hell</i>
+  </p>
+  <p id="main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sint, magni dolorum sapiente voluptate
+    quia
+    praesentium autem! Veniam delectus, placeat excepturi in porro minima quo laudantium temporibus, aliquid repellendus
+    similique.
+  </p>
+  <form action="">
+    <input type="text" placeholder="Bear Name">
+    <input type="password" placeholder="password">
+    <input type="submit">
+  </form>
+  <p class="special">
+    ADIJAKLSJDLKSAJLDKJL
+  </p>
+  <ul>
+    <li class="special">First Thing</li>
+    <li>Second Thing</li>
+    <li class="special">Third Thing</li>
+  </ul>
+  <img id="bear-photo"
+    src="https://images.unsplash.com/photo-1573920111312-04f1b25c6b85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80"
+    alt="">
+  <section>
+    <ul>
+      <li>Carrots</li>
+      <li class="special">Peas</li>
+      <li>Broccoli</li>
+    </ul>
+  </section>
+  <section>
+    <button class="btn">1</button><button class="btn">2</button><button class="btn"></button><button class="btn"></button><button class="btn"></button><button class="btn"></button><button class="btn"></button><button class="btn"></button><button class="btn"></button><button class="btn"></button>
+    <script>
+      const btns = document.querySelectorAll(".btn");
+      btns.forEach(element => {
+        element.innerText = "Butt"
+      });
+    </script>
+  </section>
+  <h3>TODO List</h3>
+  <input type="text" class="todoinput">
+  <button class="todoadd">Add</button>
+  <ul id="todos">
+    <li class="todo">Mow the lawn <button>X</button> </li>
+    <li class="todo">Milk the cows <button>X</button> </li>
+    <li class="todo">Feed the alpacas <button>X</button> </li>
+  </ul>
+  <!-- <script src="app.js" ></script> -->
+  <!-- <script src="create-elements.js" ></script> -->
+
+  <script src="remove.js"></script>
+</body>
+
+</html>
