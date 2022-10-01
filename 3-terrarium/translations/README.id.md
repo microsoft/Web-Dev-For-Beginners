@@ -2,7 +2,7 @@
 
 Sebuah meditasi kode drag and drop kecil. Dengan sedikit HTML, JS, dan CSS, Anda dapat membangun antarmuka web, menatanya, dan menambahkan interaksi.
 
-![terarium saya](gambar/screenshot_gray.png)
+![terarium saya](images/screenshot_gray.png)
 
 # Pelajaran
 
@@ -12,7 +12,7 @@ Sebuah meditasi kode drag and drop kecil. Dengan sedikit HTML, JS, dan CSS, Anda
 
 ## Kredit
 
-Ditulis dengan ️ oleh [Jen Looper](https://www.twitter.com/jenlooper)
+Ditulis dengan ️♥️ oleh [Jen Looper](https://www.twitter.com/jenlooper)
 
 Terarium yang dibuat melalui CSS terinspirasi oleh toples kaca [codepen](https://codepen.io/Rotarepmi/pen/rjpNZY) Jakub Mandra.
 
