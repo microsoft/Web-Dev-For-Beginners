@@ -28,7 +28,7 @@
         '/(README.*)': '/translations/$1',
         '/((?!README).*)/README.(.*)': '$1/translations/README.$2',
 
-        // handle english file, since English files isn't in translation folders
+        // handle English, since English files isn't in translation folders
         '/(README$)': '/$1',
         '/((?!README).*)/(README$)': '$1/$2'
       }
