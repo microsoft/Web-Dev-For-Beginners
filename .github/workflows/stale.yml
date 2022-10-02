@@ -6,9 +6,6 @@
 name: Mark stale issues and pull requests
 
 on:
-  pull_request:
-    branches:
-      - main
   schedule:
   - cron: '35 8 * * *'
 
