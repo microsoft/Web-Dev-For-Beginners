@@ -127,6 +127,14 @@ Let's say you have a folder locally with some code project and you want to start
    ```
 
    This commits all of your files, adding the message "first commit". For future commit messages you will want to be more descriptive in your description to convey what type of change you've made.
+   
+1. **Check Logs**. The git log command displays all of the commits in a repository’s history. Type the following command to check the logs:
+
+   ```bash
+   git log
+   ```
+
+   By default, the command displays each commit’s: Secure Hash Algorithm (SHA), author, date, commit message.
 
 1. **Connect your local Git repo with GitHub**. A Git repo is good on your machine but at some point you want to have backup of your files somewhere and also invite other people to work with you on your repo. One such great place to do so is GitHub. Remember we've already created a repo on GitHub so the only thing we need to do is to connect our local Git repo with GitHub. The command `git remote add` will do just that. Type the following command:
 
