@@ -8,7 +8,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 # ஆரம்ப நிலையாளர்களுக்கான வலை அபிவிருத்தி - ஒரு பாடத்திட்டம்
 
@@ -56,7 +56,7 @@
 - வகுத்தமைத்தல்
 - பிந்தைய பாடம் வினாடி வினா
 
-> **வினாடி வினாக்கள் பற்றிய குறிப்பு**: அனைத்து வினாடி வினாக்களும் [இந்த பயன்பாட்டில்](https://happy-mud-02d95f10f.azurestaticapps.net/) உள்ளன, ஒவ்வொன்றும் மூன்று கேள்விகளின் 48 மொத்த வினாடி வினாக்களுக்கு. அவர்கள் பாடங்களில் இருந்து இணைக்கப்பட்டுள்ளது ஆனால் வினாடி வினா பயன்பாட்டை உள்நாட்டில் இயக்க முடியும்; `வினாடி வினா-பயன்பாடு` கோப்புறையில் உள்ள அறிவுறுத்தலைப் பின்பற்றவும். அவை படிப்படியாக உள்ளூர்மயமாக்கப்படுகின்றன.
+> **வினாடி வினாக்கள் பற்றிய குறிப்பு**: அனைத்து வினாடி வினாக்களும் [இந்த பயன்பாட்டில்](https://ashy-river-0debb7803.1.azurestaticapps.net/) உள்ளன, ஒவ்வொன்றும் மூன்று கேள்விகளின் 48 மொத்த வினாடி வினாக்களுக்கு. அவர்கள் பாடங்களில் இருந்து இணைக்கப்பட்டுள்ளது ஆனால் வினாடி வினா பயன்பாட்டை உள்நாட்டில் இயக்க முடியும்; `வினாடி வினா-பயன்பாடு` கோப்புறையில் உள்ள அறிவுறுத்தலைப் பின்பற்றவும். அவை படிப்படியாக உள்ளூர்மயமாக்கப்படுகின்றன.
 
 
 ## பாடங்கள்

@@ -6,7 +6,7 @@ Pelajaran ini merangkumi pengetahuan asas tentang GitHub, dan adalah salah satu 
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra-Kuliah
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ## Pengenalan
 
@@ -299,7 +299,7 @@ Projek mungkin juga ada perbincangan di forum, senarai surat, atau saluran semba
 Berpasangan dengan rakan untuk mengerjakan kod masing-masing. Buat projek secara kolaboratif, fork kod, buat branch dan gabungkan perubahan.
 
 ## Kuiz Pasca Kuliah
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4)
+[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
 ## Mengkaji dan belajar sendiri
 

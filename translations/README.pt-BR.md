@@ -8,6 +8,7 @@
 [![Forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
 [![Stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 # Desenvolvimento Web para Iniciantes - Programa de Estudos
 
@@ -61,7 +62,7 @@ Seu Feedback contrutivo é bem vindo.
 - Exercícios
 - Quiz pós-aula
 
-> **Nota sobre os qizzes**: todos os qizzes se encontram [aqui](https://happy-mud-02d95f10f.azurestaticapps.net/), um total de 48 quizzes, com 3 questões em cada.
+> **Nota sobre os qizzes**: todos os qizzes se encontram [aqui](https://ashy-river-0debb7803.1.azurestaticapps.net/), um total de 48 quizzes, com 3 questões em cada.
 Também podem ser acessados localmente pela pasta `quiz-app`.
 
 ## Lições

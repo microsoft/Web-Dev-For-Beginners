@@ -5,7 +5,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/23?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23?loc=fr)
 
 ### Introduction
 
@@ -150,7 +150,7 @@ Jetez un coup d'œil à un magasin d'extensions de navigateur et installez-en un
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/24?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24?loc=fr)
 
 ## Révision et étude personnelle
 

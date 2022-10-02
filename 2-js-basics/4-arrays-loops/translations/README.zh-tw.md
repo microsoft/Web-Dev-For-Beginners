@@ -4,7 +4,7 @@
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13?loc=zh_tw)
 
 這堂課會包含程式語言 JavaScript，建立互動式網頁的基礎。課程中，你會學到用來操作資料的矩陣與迴圈。
 
@@ -120,7 +120,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ## 課後測驗
 
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14?loc=zh_tw)
 
 ## 複習與自學
 

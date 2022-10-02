@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/41)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
 
 ### Introduction
 
@@ -297,7 +297,7 @@ Add a new template and route for a third page that shows the credits for this ap
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/42)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
 
 ## Review & Self Study
 

@@ -8,7 +8,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 # ప్రారంభకులకు వెబ్ అభివృద్ధి - ఒక పాఠ్యప్రణాళిక
 
@@ -55,7 +55,7 @@
 - అసైన్ మెంట్
 - పాఠం అనంతర క్విజ్
 
-> **క్విజ్ ల గురించి ఒక నోట్**: అన్ని క్విజ్ లు [ఈ యాప్ లో](https://happy-mud-02d95f10f.azurestaticapps.net/) కలిగి ఉంటాయి, ఒక్కొక్కటి మూడు ప్రశ్నల యొక్క 48 మొత్తం క్విజ్ లు. అవి పాఠాల లోపల నుంచి లింక్ చేయబడతాయి, అయితే క్విజ్ యాప్ ని స్థానికంగా రన్ చేయవచ్చు; 'క్విజ్-యాప్' ఫోల్డర్ లోని సూచనను పాటించండి. అవి క్రమంగా స్థానికీకరించబడుతున్నాయి.
+> **క్విజ్ ల గురించి ఒక నోట్**: అన్ని క్విజ్ లు [ఈ యాప్ లో](https://ashy-river-0debb7803.1.azurestaticapps.net/) కలిగి ఉంటాయి, ఒక్కొక్కటి మూడు ప్రశ్నల యొక్క 48 మొత్తం క్విజ్ లు. అవి పాఠాల లోపల నుంచి లింక్ చేయబడతాయి, అయితే క్విజ్ యాప్ ని స్థానికంగా రన్ చేయవచ్చు; 'క్విజ్-యాప్' ఫోల్డర్ లోని సూచనను పాటించండి. అవి క్రమంగా స్థానికీకరించబడుతున్నాయి.
 
 ## పాఠాలు
 

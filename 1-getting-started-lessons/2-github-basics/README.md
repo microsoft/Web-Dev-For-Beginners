@@ -6,7 +6,7 @@ This lesson covers the basics of GitHub, a platform to host and manage changes t
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ## Introduction
 
@@ -44,7 +44,12 @@ You'll need both a folder with a code project on your local machine (laptop or P
 
 Let's say you have a folder locally with some code project and you want to start tracking your progress using git - the version control system. Some people compare using git to writing a love letter to your future self. Reading your commit messages days or weeks or months later you'll be able to recall why you made a decision, or "rollback" a change - that is, when you write good "commit messages".
 
-### Task: Make a repository and commit code
+### Task: Make a repository and commit code  
+
+> Check out video
+> 
+> [![Git and GitHub basics video](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
+
 
 1. **Create repository on GitHub**. On GitHub.com, in the repositories tab, or from the navigation bar top-right, find the **new repo** button.
 
@@ -168,6 +173,10 @@ As in the subject, in the body (optional) also use the imperative, present tense
 The main reason for putting things on GitHub was to make it possible to collaborate with other developers.
 
 ## Working on projects with others
+
+> Check out video
+>
+> [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
 In your repository, navigate to `Insights > Community` to see how your project compares to recommended community standards.
 
@@ -301,7 +310,7 @@ Projects might also have discussion in forums, mailing lists, or chat channels l
 Pair with a friend to work on each other's code. Create a project collaboratively, fork code, create branches, and merge changes.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
 ## Review & Self Study
 

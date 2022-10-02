@@ -8,7 +8,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 # নতুনদের জন্য ওয়েব ডেভেলপমেন্ট - একটি পাঠ্যক্রম
 
@@ -55,7 +55,7 @@
 -   অ্যাসাইনমেন্ট
 -   পোস্ট-পাঠ কুইজ
 
-> **কুইজ সম্পর্কে একটি নোট**: সমস্ত কুইজ রয়েছে [এই অ্যাপে](https://happy-mud-02d95f10f.azurestaticapps.net/), প্রতিটিতে তিনটি প্রশ্নের মোট 48টি কুইজ রয়েছে। এগুলি পাঠের মধ্যে থেকে লিঙ্ক করা হয়েছে তবে কুইজ অ্যাপটি স্থানীয়ভাবে চালানো যেতে পারে; `কুইজ-অ্যাপ` ফোল্ডারে নির্দেশনা অনুসরণ করুন। সেগুলো ধীরে ধীরে স্থানীয়করণ করা হচ্ছে।
+> **কুইজ সম্পর্কে একটি নোট**: সমস্ত কুইজ রয়েছে [এই অ্যাপে](https://ashy-river-0debb7803.1.azurestaticapps.net/), প্রতিটিতে তিনটি প্রশ্নের মোট 48টি কুইজ রয়েছে। এগুলি পাঠের মধ্যে থেকে লিঙ্ক করা হয়েছে তবে কুইজ অ্যাপটি স্থানীয়ভাবে চালানো যেতে পারে; `কুইজ-অ্যাপ` ফোল্ডারে নির্দেশনা অনুসরণ করুন। সেগুলো ধীরে ধীরে স্থানীয়করণ করা হচ্ছে।
 
 ## Lessons
 

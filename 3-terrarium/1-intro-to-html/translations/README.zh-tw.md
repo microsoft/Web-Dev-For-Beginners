@@ -5,7 +5,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15?loc=zh_tw)
 
 ### 大綱
 
@@ -217,7 +217,7 @@ HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[
 
 ## 課後測驗
 
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16?loc=zh_tw)
 
 ## 複習與自學
 

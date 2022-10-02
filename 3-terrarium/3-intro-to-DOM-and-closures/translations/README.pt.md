@@ -5,7 +5,7 @@
 
 ## Quiz pré-leitura 
 
-[Quiz pré-leitura](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/19)
+[Quiz pré-leitura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
 
 
 ### Introdução
@@ -217,7 +217,7 @@ Adicione um novo manipulador de eventos ao seu fechamento para fazer algo mais p
 
 ## Quiz pós-leitura
 
-[Quiz pós-leitura](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/20)
+[Quiz pós-leitura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
 
 ## Revisão & auto-estudo
 

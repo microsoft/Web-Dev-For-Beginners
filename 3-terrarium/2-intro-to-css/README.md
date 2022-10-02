@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/17)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
 
 ### Introduction
 
@@ -18,6 +18,11 @@ In this lesson, we're going to add styles to our online terrarium and learn more
 ### Prerequisite
 
 You should have the HTML for your terrarium built and ready to be styled.
+
+> Check out video
+
+> 
+> [![Git and GitHub basics video](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
 
 ### Task
 
@@ -254,7 +259,7 @@ To complete the post-lecture quiz, go through this Learn module: [Style your HTM
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/18)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
 
 ## Review & Self Study
 

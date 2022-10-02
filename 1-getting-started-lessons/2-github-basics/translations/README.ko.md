@@ -6,7 +6,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3?loc=ko)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3?loc=ko)
 
 ## 소개
 
@@ -275,7 +275,7 @@ GitHub의 모든 공개 저장소에 스타 표시, 워치 및/또는 "포크" �
 친구와 페어링하여 서로의 코드를 작업하세요. 공동으로 프로젝트를 만들고, 코드를 포크하고, 브랜치를 만들고, 변경 사항을 병합합니다.
 
 ## 강의 후 퀴즈
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4?loc=ko)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

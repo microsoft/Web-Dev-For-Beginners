@@ -6,7 +6,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3?loc=zh_cn)
+[课前小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3?loc=zh_cn)
 
 ## 大纲
 
@@ -299,7 +299,7 @@ Pull Request 是一个可以用来比较和讨论一个分支引入的改动的�
 找朋友一起编辑彼此的代码。协作创建一个项目、复刻代码、创建分支，然后合并变更。
 
 ## 课后小测
-[课后小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4?loc=zh_cn)
+[课后小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4?loc=zh_cn)
 
 ## 复习 & 自学
 

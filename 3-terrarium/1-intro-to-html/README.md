@@ -5,7 +5,13 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+
+
+> Check out video
+
+> 
+> [![Git and GitHub basics video](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
 
 ### Introduction
 
@@ -217,7 +223,7 @@ There are some wild 'older' tags in HTML that are still fun to play with, though
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
 
 ## Review & Self Study
 

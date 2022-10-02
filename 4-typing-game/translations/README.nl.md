@@ -23,7 +23,7 @@ In deze les wordt ervan uitgegaan dat u bekend bent met de volgende concepten:
 
 ## Les
 
-[Een typspel maken met behulp van event driven programming](../typing-game/translations/README.it.md)
+[Een typspel maken met behulp van event driven programming (Engels)](../typing-game/README.md)
 
 ## Credits
 

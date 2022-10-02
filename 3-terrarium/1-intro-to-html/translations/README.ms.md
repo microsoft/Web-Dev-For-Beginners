@@ -5,7 +5,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15)
+[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
 
 ### Pengenalan
 
@@ -217,7 +217,7 @@ Terdapat beberapa tag 'lawas' liar dalam HTML yang masih menyeronokkan untuk dim
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16)
+[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
 
 ## Mengkaji dan Belajar Sendiri
 

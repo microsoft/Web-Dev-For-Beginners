@@ -2,7 +2,7 @@
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45?loc=hi)
 
 ### परिचय
 
@@ -330,7 +330,7 @@ function updateElement(id, textOrNode) {
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46?loc=hi)
 
 ## असाइनमेंट
 

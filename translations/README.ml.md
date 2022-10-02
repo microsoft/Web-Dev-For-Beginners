@@ -9,7 +9,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 # തുടക്കക്കാർക്കുള്ള വെബ് വികസനം - ഒരു പാഠ്യപദ്ധതി
 
@@ -53,7 +54,7 @@
 - അസ്സൈൻമെന്റ്
 - പാഠാനന്തര ക്വിസ്
 
-> **ക്വിസുകളെക്കുറിച്ചുള്ള ഒരു കുറിപ്പ്**: എല്ലാ ക്വിസുകളും [ഈ ആപ്പിൽ](https://happy-mud-02d95f10f.azurestaticapps.net/) അടങ്ങിയിരിക്കുന്നു, മൂന്ന് ചോദ്യങ്ങൾ വീതമടങ്ങിയ മൊത്തം 48 ക്വിസുകൾ. അവ പാഠങ്ങൾക്കുള്ളിൽ നിന്ന് ബന്ധിപ്പിച്ചിരിക്കുന്നു, പക്ഷേ ക്വിസ് ആപ്പ് പ്രാദേശികമായി പ്രവർത്തിപ്പിക്കാൻ കഴിയും; 'ക്വിസ്-ആപ്പ്' ഫോൾഡറിലെ നിർദ്ദേശം പാലിക്കുക. അവ ക്രമേണ പ്രാദേശികവൽക്കരിക്കപ്പെടുന്നു.
+> **ക്വിസുകളെക്കുറിച്ചുള്ള ഒരു കുറിപ്പ്**: എല്ലാ ക്വിസുകളും [ഈ ആപ്പിൽ](https://ashy-river-0debb7803.1.azurestaticapps.net/) അടങ്ങിയിരിക്കുന്നു, മൂന്ന് ചോദ്യങ്ങൾ വീതമടങ്ങിയ മൊത്തം 48 ക്വിസുകൾ. അവ പാഠങ്ങൾക്കുള്ളിൽ നിന്ന് ബന്ധിപ്പിച്ചിരിക്കുന്നു, പക്ഷേ ക്വിസ് ആപ്പ് പ്രാദേശികമായി പ്രവർത്തിപ്പിക്കാൻ കഴിയും; 'ക്വിസ്-ആപ്പ്' ഫോൾഡറിലെ നിർദ്ദേശം പാലിക്കുക. അവ ക്രമേണ പ്രാദേശികവൽക്കരിക്കപ്പെടുന്നു.
 
 ## പാഠങ്ങൾ
 

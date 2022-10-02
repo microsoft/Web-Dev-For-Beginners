@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/27)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
 
 ### Introduction
 
@@ -147,7 +147,7 @@ Investigate some open source web sites have been around a long time ago, and, ba
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/28)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
 
 ## Review & Self Study
 

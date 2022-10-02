@@ -8,7 +8,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 # Веб-разработка для Начинающих - О Курсе
 
@@ -55,7 +55,7 @@
 - задания
 - викторину для прохождения после урока
 
-> **На заметку о викторинах**: все викторины находятся в [этом приложении](https://happy-mud-02d95f10f.azurestaticapps.net/), всего мы подготовили 48 викторин, в каждой из которых по три вопроса. Ссылки на них расположены в уроках, но вы можете взаимодействовать с викторинами в отдельности. Для этого, обратитесь к инструкциям в папке `quiz-app`. Эти инструкции активно локализуются.
+> **На заметку о викторинах**: все викторины находятся в [этом приложении](https://ashy-river-0debb7803.1.azurestaticapps.net/), всего мы подготовили 48 викторин, в каждой из которых по три вопроса. Ссылки на них расположены в уроках, но вы можете взаимодействовать с викторинами в отдельности. Для этого, обратитесь к инструкциям в папке `quiz-app`. Эти инструкции активно локализуются.
 
 ## Уроки
 

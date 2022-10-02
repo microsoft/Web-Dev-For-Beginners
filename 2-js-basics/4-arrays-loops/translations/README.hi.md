@@ -4,7 +4,7 @@
 > [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा स्केचनेट
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13?loc=hi)
 
 इस पाठ में जावास्क्रिप्ट की मूल बातें शामिल हैं, वह भाषा जो वेब पर अन्तरक्रियाशीलता प्रदान करती है। इस पाठ में, आप ऐरे और लूप्स के बारे में जानेंगे, जिनका उपयोग डेटा में हेरफेर करने के लिए किया जाता है।
 
@@ -118,7 +118,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 लूप के अलावा और अन्य अररेस पर लूपिंग के अन्य तरीके हैं। [ForEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web) हैं /JavaScript/Reference/Statements/for...of), और [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Anray/map)। इन तकनीकों में से किसी एक का उपयोग करके अपने ऐरे लूप को फिर से लिखें।
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14?loc=hi)
 
 
 ## समीक्षा और स्व अध्ययन

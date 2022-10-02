@@ -8,13 +8,21 @@
 [![Forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
 [![Stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 # Développement Web pour débutants - Programme
 
 Azure Cloud Advocates de Microsoft ont le plaisir de vous proposer un programme de 12 semaines et 24 leçons sur les bases de JavaScript, CSS et HTML. Chaque leçon comprend des quiz avant et après la leçon, des instructions écrites pour terminer la leçon, une solution, un devoir et plus encore. Notre pédagogie basée sur des projets vous permet d’apprendre tout en construisant, un moyen éprouvé pour que de nouvelles compétences puissent 'coller'.
 
 **Un grand merci à nos auteurs Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees et l’artiste de sketchnote Tomomi Imura!**
+
+# Êtes vous étudiant ?
+
+Commencez avec les ressources suivantes :
+
+[La page Hub étudiants](https://docs.microsoft.com/fr-fr/learn/student-hub/?WT.mc_id=academic-13441-cxa), vous trouverez des ressources pour les débutants, packs étudiants et des méthodes pour avoir des vouchers gratuits pour des certifications. C'est une page que vous pouvez enregistrer and vérifier de temps en temps car nous modifions le contenu mensuellement.
+
+[Microsoft Learn Student Ambassadors](https://studentambassadors.microsoft.com/?WT.mc_id=academic-13441-cxa), rejoignez une communauté globale d'étudiants ambassadeurs, cela peut vous faire découvrir Microsoft.
 
 # Pour commencer
 
@@ -55,7 +63,7 @@ Bien que nous ayons délibérément évité d’introduire des frameworks JavaSc
 - affectation
 - quiz de validation des connaissances
 
-> **Une note sur les quiz**: Tous les quiz sont contenus [dans cette application](https://happy-mud-02d95f10f.azurestaticapps.net/), pour un total de 48 quiz de trois questions chacun. Ils sont liés à partir des leçons, mais l’application de quiz peut être exécutée localement; suivez les instructions dans le dossier `quiz-app`. Ils sont progressivement localisés.
+> **Une note sur les quiz**: Tous les quiz sont contenus [dans cette application](https://ashy-river-0debb7803.1.azurestaticapps.net/), pour un total de 48 quiz de trois questions chacun. Ils sont liés à partir des leçons, mais l’application de quiz peut être exécutée localement; suivez les instructions dans le dossier `quiz-app`. Ils sont progressivement localisés.
 
 ## Leçons
 
@@ -97,8 +105,9 @@ Un PDF de toutes les leçons peut être trouvé [ici](https://microsoft.github.i
 
 ## Autres programmes d’études
 
-Notre équipe produit d’autres programmes! Jettez un oeil:
+Notre équipe produit d’autres programmes! Jetez un oeil:
 
 - [Machine Learning for Beginners](https://aka.ms/ml-beginners)
 - [IoT for Beginners](https://aka.ms/iot-beginners)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners)
+- [AI for Beginners](https://aka.ms/ai-beginners)
