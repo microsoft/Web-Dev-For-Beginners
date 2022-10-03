@@ -1,6 +1,6 @@
 # Основы JavaScript: методы и функции
 
-![Основы JavaScript — Функции](../../sketchnotes/webdev101-js-functions.png)
+![Основы JavaScript — Функции](../../../sketchnotes/webdev101-js-functions.png)
 
 > Скетчноут [Tomomi Imura](https://twitter.com/girlie_mac)
 
