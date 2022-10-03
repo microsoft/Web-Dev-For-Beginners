@@ -1,6 +1,6 @@
 # Основы JavaScript: типы данных
 
-![Основы JavaScript: типы данных](../../sketchnotes/webdev101-js-datatypes.png)
+![Основы JavaScript: типы данных](../../../sketchnotes/webdev101-js-datatypes.png)
 
 > Скетчноут [Tomomi Imura](https://twitter.com/girlie_mac)
 
