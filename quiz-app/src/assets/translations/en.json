@@ -209,11 +209,11 @@
 						"questionText": "How do you switch to a branch?",
 						"answerOptions": [
 							{
-								"answerText": "git checkout [branch-name]",
+								"answerText": "git fetch [branch-name]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git switch [branch-name]",
+								"answerText": "git switch [branch-name] OR git checkout [branch-name]",
 								"isCorrect": "true"
 							},
 							{
