@@ -291,7 +291,7 @@
                         ]
                     },
                     {
-                        "questionText": "As paletas de cores seguras (color-safe pallets) ajudam pessoas com",
+                        "questionText": "As paletas de cores seguras (color-safe pallets) ajudam pessoas com:",
                         "answerOptions": [
                             {
                                 "answerText": "daltonismo",
@@ -376,7 +376,7 @@
                 "title": "Lição 4 - Básico de JavaScript - Tipos de Dados (Data Types): Questionário Pós-aula",
                 "quiz": [
                     {
-                        "questionText": "Constantes são como 'let' e 'var' ao declará-las como variáveis, exceto que:",
+                        "questionText": "Constantes são como 'let' e 'var' em suas declarações como variáveis, exceto que:",
                         "answerOptions": [
                             {
                                 "answerText": "Constantes devem ser inicializadas",
@@ -495,7 +495,7 @@
                         ]
                     },
                     {
-                        "questionText": "O que faz um valor pré-definido?",
+                        "questionText": "O que faz um valor pré-definido (default)?",
                         "answerOptions": [
                             {
                                 "answerText": "Estabelece um valor correto",
@@ -673,7 +673,7 @@
                                 "isCorrect": "false"
                             },
                             {
-                                "answerText": "Usando a propriedade tamanho (size) no array",
+                                "answerText": "Usando a propriedade size no array",
                                 "isCorrect": "false"
                             },
                             {
@@ -717,7 +717,7 @@
                                 "isCorrect": "false"
                             },
                             {
-                                "answerText": "expressão-iteração",
+                                "answerText": "expressão da iteração",
                                 "isCorrect": "true"
                             }
                         ]
@@ -726,11 +726,11 @@
                         "questionText": "Qual a diferença entre um 'while loop' e um 'for loop'?",
                         "answerOptions": [
                             {
-                                "answerText": "Um 'for loop' tem um contador e uma expressão de iteração, enquanto um 'while loop' tem apenas uma condição",
+                                "answerText": "Um 'for loop' tem um contador e uma expressão da iteração, enquanto um 'while loop' tem apenas uma condição",
                                 "isCorrect": "true"
                             },
                             {
-                                "answerText": "Um 'while loop' tem um contador e uma expressão de iteração, enquanto um 'for loop' tem apenas uma condição",
+                                "answerText": "Um 'while loop' tem um contador e uma expressão da iteração, enquanto um 'for loop' tem apenas uma condição",
                                 "isCorrect": "false"
                             },
                             {
@@ -1367,7 +1367,7 @@
                                 "isCorrect": "false"
                             },
                             {
-                                "answerText": "Rendering State To Browser (Estado de Renderização ao Navegador)",
+                                "answerText": "Rendering State To Browser (Estado de Renderização para o Navegador)",
                                 "isCorrect": "false"
                             }
                         ]
@@ -1799,7 +1799,7 @@
                                 "isCorrect": "false"
                             },
                             {
-                                "answerText": "Marcando o item como morto (dead) e pintando apenas o objetos não-mortos na próxima vez que desenharmos a tela",
+                                "answerText": "Marcando o item como morto (dead) e pintando apenas os objetos não-mortos na próxima vez que desenharmos a tela",
                                 "isCorrect": "true"
                             },
                             {
