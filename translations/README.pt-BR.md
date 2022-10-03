@@ -13,7 +13,7 @@
 # Desenvolvimento Web para Iniciantes - Programa de Estudos
 
 Azure Cloud Advocates da Microsoft têm o prazer de oferecer um curso de 12 semanas e 24 lições sobre o básico de JavaScript, CSS e HTML.
-Cada lição possiu quizzes pré- e pós-lição , instruções escritas para completar a lição, uma solução, uma tarefa e mais.
+Cada lição possui quizzes pré e pós-lição , instruções escritas para completar a lição, uma solução, uma tarefa e mais.
 Nossa pedagogia baseada em prática permite que você aprenda enquanto construi, uma forma de aprendizado eficaz e comprovada.
 
 **Grandes agradecimentos aos nossos autores Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, e Tomomi Imura!**
