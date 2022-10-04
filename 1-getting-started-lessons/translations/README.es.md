@@ -1,12 +1,12 @@
 # Primeros pasos con el Desarrollo Web
 
-En esta sección del plan de estudios, se le presentarán conceptos no basados en proyectos, importantes para convertirse en un desarrollador profesional.
+En esta sección del plan de estudios, se te presentarán conceptos importantes para convertirte en un desarrollador profesional.
 
 ### Temas
 
-1. [Introducción a los lenguajes de programación y herramientas del oficio](1-intro-to-programming-languages/README.md)
-2. [Introducción a GitHub](2-github-basics/README.md)
-3. [Conceptos básicos de Accesibilidad](3-accessibility/README.md)
+1. [Introducción a los lenguajes de programación y herramientas del oficio](../1-intro-to-programming-languages/README.md)
+2. [Introducción a GitHub](../2-github-basics/README.md)
+3. [Conceptos básicos de Accesibilidad](../3-accessibility/README.md)
 
 ### Créditos
 
