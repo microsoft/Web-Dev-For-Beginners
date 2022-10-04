@@ -219,6 +219,7 @@ Let's go through a contributor workflow. Assume the contributor has already _for
    ```bash
    git switch [branch-name]
    ```
+   Another common way to switch branches is using the command `git checkout [branch-name]`.
 
 1. **Do work**. At this point you want to add your changes. Don't forget to tell Git about it with the following commands:
 
