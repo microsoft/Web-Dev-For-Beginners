@@ -69,7 +69,7 @@ iceCreamFlavors[4] = "Butter Pecan"; //Изменяет "Rocky Road" на "Butte
 iceCreamFlavors[5] = "Cookie Dough"; //Добавили "Cookie Dough"
 ```
 
-✅ Более распространенный способ поместить значения в массив — использовать методы массива, например array.push().
+✅ Более распространенный способ поместить значения в массив — использовать методы массива, например `array.push()`.
 
 Чтобы узнать, сколько элементов содержится в массиве, используйте свойство `length`.
 
@@ -120,7 +120,7 @@ while (i < 10) {
 }
 ```
 
-✅ Почему вы должны выбрать цикл for вместо цикла while? 17 тысяч людей задали один и тот же вопрос на StackOverflow, и некоторые мнения [могут быть вам интересны](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
+✅ Когда следует выбрать цикл for, а когда цикл while? 17 тысяч людей, просмотревших [этот пост на StackOverflow](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript), задавались тем же вопросом. Посмотрите и вы, некоторые мнения могут быть вам интересны.
 
 ## Циклы и массивы
 
@@ -154,7 +154,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ## Обзор и самообучение
 
-У массивов в JavaScript есть множество методов, чрезвычайно полезных для манипулирования данными. [Почитайте об этих методах](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) и попробуйте некоторые из них (например, push, pop, slice и splice) на созданном вами массиве.
+У массивов в JavaScript есть множество методов, чрезвычайно полезных для манипулирования данными. [Почитайте об этих методах](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) и попробуйте некоторые из них (например, `push`, `pop`, `slice` и `splice`) на созданном вами массиве.
 
 ## Задание
 
