@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        #fname,
+        #lname,
+        #add,
+        #male,
+        #female,
+        #mail,
+        #pincode,
+        #c1,
+        #expire,
+        #cvv,
+        #cardnmbr {
+            background-color: antiquewhite;
+        }
+        
+        h1 {
+            color: rgb(29, 157, 142);
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            <!-- font-family: Verdana, Geneva, Tahoma, sans-serif;
+            -->
+        }
+        
+        h2 {
+            border: 88ch;
+            color: rgb(65, 66, 29);
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            <!-- font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            -->
+        }
+        
+        #paymentdetail {
+            background-color: blueviolet;
+        }
+        
+        #userdetail {
+            background-color: blueviolet;
+        }
+        
+        body {
+            background-color: rgb(13, 63, 83);
+        }
+        
+        .button {
+            position: relative;
+            border-style: double;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <center>
+            <u>  <h1>Payment Form </u>
+            </h1>
+        </center>
+    </header>
+    <main> <br><i class="fas fa-bars"></i>
+        <div id="userdetail">
+            <form action="practice_ho_rhi_h">
+                <caption>
+
+                    <u><h2>
+                    User Details :
+                </h2></u> <br> <span> (Note - Required Fields are followed by * ) </span> <br>
+                    <br> </caption>
+                <label for="fname"> First Name :
+                    <input type="text" id="fname"  placeholder="Your First Name Goes Here !!" required>
+                </label><br> <br>
+                <label for="fname"> Last Name :
+                    <input type="text" id="lname"  placeholder="Your Last Name Goes Here !!" required>
+                </label><br>
+
+                <fieldset><i class="glyphicon glyphicon-user"></i>
+                    <legend></legend> <label for="gender">Gender :  </label>
+                    <label for="male">
+                    <input type="radio" id="male" name="g1">Male
+                    <label for="female">
+                    <input type="radio" id="female" name="g1">Female </label></fieldset> <br>
+
+                <i class="glyphicon glyphicon-cloud"></i> <label for="Address"> Address :
+            <textarea name="" id="add" cols="25" rows="7"></textarea>
+         </label> <br><i class="glyphicon glyphicon-envelope"></i>
+                <label for="mail">Email :</label>
+                <input type="email" name="mail" id="mail"> <br>
+                <label for="pincode">Pin Code :</label>
+                <input type="number" name="" id="pincode">
+        </div>
+
+        <div id="paymentdetail">
+            <u><h2>Payment Details :</h2></u>
+            <label for="">Card Type :</label>
+            <select name="cardselect" id="c1">
+                <option value="select">--Select a Card Type--</option>
+                    <option value="vi">Visa</option>
+                    <option value="ru">Rupay</option>
+                    <option value="mc">MasterCard</option>
+                </select> <br>
+
+            <label for="Card">Card Number : </label>
+            <input type="number" name="cardnmbr" id="cardnmbr"> <br>
+            <label for="">Expiration Date : 
+                <input type="date" name="expire" id="expire">
+              <br>  <label for="cvv">CVV : 
+                    <input type="password" name="cvv" id="cvv" >
+                    <br> <br>  </div> <br>
+                    <input type="submit" value="Pay Now " class="button">
+                    <input type="reset" name="" class="button">
+                
+
+
+
+        </form>
+    </main>
+</body>
+
+</html>
