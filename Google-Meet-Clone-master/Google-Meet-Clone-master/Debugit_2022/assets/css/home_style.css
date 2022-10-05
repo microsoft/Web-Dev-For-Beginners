@@ -1,0 +1,105 @@
+#header img {
+    width: 200px;
+}
+
+#root-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#left-div {
+    width: 50vw;
+}
+
+#large-message {
+    margin-top: 25vh;
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    margin-left: 2rem;
+}
+
+#small-message {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    margin-left: 2rem;
+    color: gray;
+}
+
+#start-meeting a {
+    text-decoration: none;
+    color: white;
+}
+
+#new-meeting-root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35vw;
+    height: 10vh;
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+#enter-meeting-link {
+    border: 1px solid grey;
+    border-radius: .2rem;
+    font-size: 1.5rem;
+    color: rgb(97, 94, 94);
+    height: 2rem;
+    padding: .5rem;
+    line-height: 2rem;
+}
+
+#enter-meeting-link input {
+    border: none;
+    height: 2rem;
+    font-size: 1rem;
+}
+
+#join-button {
+    font-family: sans-serif;
+    color: #063d86;
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 4rem;
+    border-radius: .2rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+#join-button:hover {
+    cursor: pointer;
+    background-color: hsla(214, 93%, 47%, .1);
+}
+
+#enter-meeting-link input:focus {
+    outline: none;
+}
+
+#start-meeting {
+    width: 150px;
+    height: 2.1rem;
+    padding-top: 1rem;
+    border-radius: .2rem;
+    color: white;
+    background-color: #096ae7;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+#start-meeting:hover {
+    background-color: #1b66ca;
+    transition: background-color .5s ease-in-out;
+}
+
+#right-div {
+    width: 40vw;
+}
+
+#right-div img {
+    width: 40vw;
+    margin-top: 20vh;
+    margin-left: -5rem;
+}

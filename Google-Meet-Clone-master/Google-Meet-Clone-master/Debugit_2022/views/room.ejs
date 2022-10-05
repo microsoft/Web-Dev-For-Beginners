@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Meet</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6f0f83005a.js" crossorigin="anonymous"></script>
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+    <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="main-div">
+        <div id="video-grid"></div>
+        <div id="screen-share-grid"></div>
+        <div id="chat-box">
+            <div id="chat-header">
+                <div>In-call messages</div>
+                <div id="close-chat-div"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+            <div id="chats">
+                <div id="messages-info">Messages can only be seen by people in the call and are deleted when the call ends</div>
+                <ul id="messages">
+
+                </ul>
+            </div>
+            <div id="form">
+                <form>
+                    <input type="text" id="message-form" placeholder="Send a message to everyone" autocomplete="off">
+                    <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="controls-tab">
+        <div id="time"></div>
+        <div class="icons">
+            <div class="btn" id="mute"><i class="fa fa-microphone"></i></div>
+            <div class="btn" id="video-off"><i class="fa fa-video-camera"></i></div>
+            <div class="btn" id="screen-share-btn"><i class="fa fa-upload"></i></div>
+            <a href="/room/end/<%= roomId %>">
+                <div class="end-btn"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        <div class="icons">
+            <div class="btn" id="chat-box-btn"><i class="fas fa-comment-alt"></i></i>
+            </div>
+            <div class="btn"><i class="fas fa-info-circle"></i></div>
+            <div class="btn"><i class="fas fa-user-friends"></i>
+            </div>
+</body>
+
+</html>

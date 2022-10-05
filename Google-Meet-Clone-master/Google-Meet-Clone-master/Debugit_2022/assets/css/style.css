@@ -1,0 +1,238 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #202124;
+}
+
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#main-div {
+    display: flex;
+    flex-direction: row;
+}
+
+#video-grid {
+    height: 90vh;
+    width: 1000px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: 1px solid black;
+}
+
+#screen-share-grid {
+    display: hidden;
+    height: 90vh;
+    width: 1000px;
+}
+
+#screen-share-grid video {
+    display: hidden;
+    height: 80vh;
+    width: 900px;
+    object-fit: contain;
+}
+
+#chat-box {
+    width: 350px;
+    margin: 1rem;
+    height: 78vh;
+    border-radius: 1rem;
+    background-color: rgb(236, 183, 226);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#chat-header {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#close-chat-div {
+    cursor: pointer;
+    margin-right: .5rem;
+    height: 22px;
+    width: 23px;
+    padding: .5rem;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: -.5rem;
+    margin-left: 1rem;
+}
+
+#close-chat-div:hover {
+    background-color: rgb(233, 233, 233);
+    transition: background-color .5s ease-in-out;
+}
+
+#chats {
+    min-height: 57vh;
+    overflow-y: scroll;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+}
+
+#form {
+    background-color: #F1F3F4;
+    border-radius: 1.5rem;
+}
+
+input {
+    width: 80%;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: #F1F3F4;
+    padding-left: 1rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border: none;
+    background-color: #F1F3F4;
+    font-size: 1.3rem;
+    color: #1A73E8;
+    cursor: pointer;
+}
+
+.user-video {
+    cursor: pointer;
+}
+
+video {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: .5rem;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.user-video:hover {
+    opacity: .6;
+    transition: opacity .5s ease-in-out;
+}
+
+#controls-tab {
+    background-color: #202124;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-right: 2rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#time {
+    color: white;
+    margin-right: 4rem;
+    font-family: sans-serif;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    border-radius: 50%;
+    height: 33px;
+    width: 45px;
+    font-size: 1.1rem;
+    color: white;
+    margin-right: 1rem;
+    background-color: #434649;
+    text-align: center;
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+a .end-btn {
+    text-decoration: none;
+}
+
+.end-btn {
+    background-color: rgb(245, 69, 38);
+    color: white;
+    width: 60px;
+    padding-top: 12px;
+    height: 30px;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.end-btn i {
+    transform: rotateY(-180deg);
+}
+
+.end-btn:hover {
+    background-color: rgb(250, 64, 32);
+    transition: background-color .5s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #3a3c3d;
+    transition: background-color .5s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#messages li {
+    font-family: sans-serif;
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-left: -1rem;
+    font-size: .8rem;
+}
+
+#messages-info {
+    font-size: .7rem;
+    color: rgb(66, 66, 66);
+    background-color: #F1F3F4;
+    height: 2rem;
+    width: 250px;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-family: sans-serif;
+}
+
+video {
+    position: relative;
+    z-index: -1;
+}
+
+.user-name {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 4px;
+    color: white;
+    margin-top: -2rem;
+    margin-left: 1rem;
+    font-size: .7rem;
+    z-index: 5;
+}
