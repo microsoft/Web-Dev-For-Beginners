@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&family=Silkscreen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway Dots', cursive;
+    
+
+}
+
+.skeleton {
+
+
+    animation: skeleton-loading 1s linear infinite alternate;
+
+
+}
+
+@keyframes animation {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #07252d;
+    overflow-x: hidden;
+
+}
+
+.container h1 {
+    position: relative;
+    font-size: 10vw;
+    letter-spacing: 15px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.73em;
+    outline: none;
+    animation: animate 3s linear infinite;
+
+
+}
+
+@keyframes animate {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #0e3742;
+        box-shadow: none;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    90.2%,
+    100% {
+        color: #fff;
+        box-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 60px #03bcf4,
+            0 0 160px #03bcf4,
+        ;
+    }
+}
+
+nav {
+    background: transparent;
+    border-bottom: 4px solid white;
+    position: absolute;
+    width: 100%;
+}
+
+.items {
+    padding: 1rem;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+
+}
+
+.items ul {
+    display: flex;
+    list-style: none;
+}
+
+.items ul li {
+    margin-right: 2rem;
+}
+
+.items ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    font-size: 2vh;
+
+}
+
+a:hover {
+    border-bottom: 3px solid white;
+    border-radius: 2px;
+
+}
+

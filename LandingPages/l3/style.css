@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Silkscreen', cursive;
+}
+
+body {
+    /* background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%); */
+    background: black;
+    overflow-x: hidden;
+    background-size: cover;
+}
+
+nav {
+    position: absolute;
+    background: rgb(25, 24, 24);
+    height: 100%;
+    position: fixed;
+    z-index: 11;
+}
+
+.material-symbols-outlined {
+    display: block;
+    color: aliceblue;
+    padding: 20px;
+}
+
+.material-symbols-outlined:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #1f4a5d,
+        0 0 82px #1e5269,
+        0 0 92px #215266,
+        0 0 102px #28637c,
+        0 0 151px #1f6482;
+}
+
+.bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.3;
+    z-index: -2;
+}
+
+.parallax .text-box {
+
+    /* text-align: center; */
+    top: 30%;
+    left: 60%;
+    position: absolute;
+    padding: 5rem;
+    color: aliceblue;
+
+
+}
+
+.text-box {
+    /* background: rgba(0, 0, 0, 0.5); */
+    position: relative;
+    display: flex;
+    height: 2px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.text-box::before {
+    content: '';
+    position: absolute;
+    z-index: -3;
+    width: 100px;
+    height: 550px;
+    background: #000428;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+    animation: animate 4s linear infinite;
+
+
+}
+
+.text-box::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: rgba(0, 0, 0);
+
+}
+
+.text-box h1 {
+    position: relative;
+    z-index: 4;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text h1 {
+    position: relative;
+    color: #fff;
+    z-index: 1;
+}
