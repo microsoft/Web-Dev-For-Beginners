@@ -6,3 +6,72 @@
 	background-color: lightcoral;
 	border-color: red;
 }
+
+body{
+	background-color: #EDFFD3;
+}
+h1{
+	font-family: Tahoma, Geneva, sans-serif;
+font-size: 40px;
+letter-spacing: 0.2px;
+word-spacing: 1.8px;
+color: #0B6A60;
+font-weight: 700;
+text-decoration: underline solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: uppercase;
+text-align: center;
+}
+
+div{
+	font-family: "Times New Roman", Times, serif;
+font-size: 20px;
+letter-spacing: 0.2px;
+word-spacing: 1.8px;
+color: #05322D;
+font-weight: 400;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+text-align: center;
+}
+
+button{
+	font-family: "Times New Roman", Times, serif;
+font-size: 20px;
+letter-spacing: 0.2px;
+word-spacing: 1.8px;
+color: #05322D;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+margin-top: 1%;
+border: 2px solid #092537;
+-webkit-border-radius: 30px;
+border-radius: 30px;
+}
+input{
+	border: 4px solid #092537;
+	-webkit-border-radius: 30px;
+border-radius: 30px;
+width: 20%;
+height:5%;
+}
+
+#quote{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 15px;
+	letter-spacing: 0.2px;
+	word-spacing: 1.8px;
+	color: #109d8d;
+	font-weight: 700;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-align: center;
+}
