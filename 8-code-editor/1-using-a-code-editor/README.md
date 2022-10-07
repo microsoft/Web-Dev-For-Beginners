@@ -153,9 +153,9 @@ After installing and using your extension, vscode.dev offers options to manage y
 
 <!----
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
 ---->
 
 ## Review & Self Study
 
-Read more about [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) and some of its other features.
+Read more about [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web) and some of its other features.
