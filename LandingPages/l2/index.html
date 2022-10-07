@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Parallax</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="items">
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="greet-container" id="greete-container">
+        <h2 id="greet" class="greet">Hello,</h2>
+      </div>
+      <div class="about-container">
+        <h1 class="about">About us</h1>
+        <p class="about">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+          autem maiores nemo rem dolorem necessitatibus, quas, vero vitae
+          veritatis porro eligendi nulla sed ullam ratione sunt error, itaque
+          ipsa exercitationem. Quis doloremque enim illum natus, nihil alias
+          aperiam doloribus velit?
+        </p>
+      </div>
+
+    </main>
+    
+    <footer>
+      <ul>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>Discord</li>
+        <li>Company</li>
+        <li>E-mail</li>
+        <li>Support</li>
+      </ul>
+    </footer>
+  </body>
+
+  <script src="main.js"></script>
+
+  <script>
+    const d = new Date();
+    let time = d.getHours();
+    if (time >= 1 && time < 12) {
+      var greet = (document.getElementById("greet").innerText +=
+        "Good Morning");
+    } else if (time >= 12 && time < 18) {
+      var greet = (document.getElementById("greet").innerText +=
+        "Good afternoon");
+    } else {
+      var greet = (document.getElementById("greet").innerText += "Good Evening");
+    }
+  </script>
+</html>

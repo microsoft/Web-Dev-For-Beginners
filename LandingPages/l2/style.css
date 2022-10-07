@@ -1,0 +1,139 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+
+  box-sizing: border-box;
+}
+
+
+
+.navbar {
+  /* position: absolute; */
+  display: flex;
+  background-color: rgba(109, 104, 104, 0.616);
+  height: 7vh;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  margin: 10px;
+
+}
+
+.navbar ul li {
+  margin-right: 3ch;
+}
+
+/* *************************************************************************************** */
+main {
+
+  background: hsl(204 100% 5%);
+  background: hsl(204 100% 5%);
+  /*   background: conic-gradient(
+      hsl(100 100% 60%), 
+      hsl(200 100% 60%),
+      hsl(100 100% 60%)
+    ) fixed; */
+  color: white;
+  min-block-size: 200vh;
+  min-inline-size: 100%;
+  padding: 5vmin;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  font-family: system-ui;
+  font-size: min(200%, 5vmin);
+}
+
+
+main div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+
+}
+
+/* *************************************************************************************** */
+
+
+/* *************************************************************************************** */
+/* 1st div */
+
+.greet {
+  color: rgb(0, 0, 0);
+  font-size: 5vw;
+  background: rgba(255, 255, 255, 0.796);
+  padding: 8px 24px;
+  border-radius: 16px;
+ 
+}
+
+main div:nth-child(1) {
+  background: rgba(181, 141, 141, 0.759);
+  background-image: url(img/luca-bravo-O453M2Liufs-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  /* position: absolute; */
+}
+
+/* *************************************************************************************** */
+
+
+
+
+.about-conatiner {
+
+  background-color: black;
+
+}
+
+.about-container h1{
+  padding: 100px;
+position: absolute;
+font-size: 30vh;
+text-decoration: line-through;
+z-index: 0;
+opacity: 0.4;
+background-color: black;
+background-image: linear-gradient(60deg, #b4b4b4, #da435f);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-align: center;
+}
+
+.about {
+
+  background-color: black;
+  background: radial-gradient(hsl(100 100% 60%),
+      hsl(200 100% 60%)) fixed;
+  background: conic-gradient(hsl(100 100% 60%),
+      hsl(200 100% 60%),
+      hsl(100 100% 60%)) fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  z-index: 3;
+}
+
+
+footer {
+  background: rgb(206, 204, 210);
+  padding: 40px;
+}
+
+footer ul {
+  display: grid;
+}
+
+footer ul li {
+  margin: 20px;
+  grid-template-rows: repeat(1, 1fr);
+}

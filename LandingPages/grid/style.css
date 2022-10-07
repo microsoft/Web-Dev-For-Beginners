@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: rgb(255, 90, 90);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.box {
+    margin: 0.2em;
+    background: rgb(233, 233, 233);
+    padding: 6vh;
+
+}
+
+.container :nth-child(1){
+    grid-column:  span 3;
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+}
+.container :nth-child(2){
+    grid-row:  span 2;
+    background-color: blueviolet;
+}
+
+.container :nth-child(5){
+   grid-column: span 2;
+   background-color: rgb(233, 132, 0);
+}
+
+
+@media(max-width:370px){
+   .container{
+    display: block;
+   }
+}
