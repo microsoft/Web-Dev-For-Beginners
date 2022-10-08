@@ -120,13 +120,23 @@ Let's say you have a folder locally with some code project and you want to start
 
    This command helps us to unstage only a particular file at once that we don't want to include for the next commit.
 
-1. **Persisting your work**. At this point you've added the files to a so called _staging area_. A place where Git is tracking your files. To make the change permanent you need to _commit_ the files. To do so you create a _commit_ with the `git commit` command. A _commit_ represents a saving point in the history of your repo. Type the following to create a _commit_:
+1. **Persisting your work**. At this point you've added the files to a so called _staging area_. A place where Git is tracking
+your files. To make the change permanent you need to _commit_ the files. To do so you create a _commit_ with the `git commit` command. A _commit_ represents a saving point in the history of your repo. Type the following to create a _commit_:
 
    ```bash
    git commit -m "first commit"
    ```
 
    This commits all of your files, adding the message "first commit". For future commit messages you will want to be more descriptive in your description to convey what type of change you've made.
+
+1. **Keep track of commits**. In the real-world applications we will most often deal with mutliple commit. In order to keep track of the commit history git provides `git log` command. 
+
+   ```bash
+   git log
+   ```
+
+   This command helps us to keep track of all the commits in the repository. Other than commit history, log command also contains
+   author information, date time, and commit id.  
 
 1. **Connect your local Git repo with GitHub**. A Git repo is good on your machine but at some point you want to have backup of your files somewhere and also invite other people to work with you on your repo. One such great place to do so is GitHub. Remember we've already created a repo on GitHub so the only thing we need to do is to connect our local Git repo with GitHub. The command `git remote add` will do just that. Type the following command:
 
@@ -219,6 +229,8 @@ Let's go through a contributor workflow. Assume the contributor has already _for
    ```bash
    git switch [branch-name]
    ```
+
+   You can also use `git checkout [branch-name]` to switch to the specified branch. 
 
 1. **Do work**. At this point you want to add your changes. Don't forget to tell Git about it with the following commands:
 
