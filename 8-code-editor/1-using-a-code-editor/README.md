@@ -159,3 +159,4 @@ After installing and using your extension, vscode.dev offers options to manage y
 ## Review & Self Study
 
 Read more about [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) and some of its other features.
+
