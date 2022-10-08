@@ -102,7 +102,7 @@ You can run this documentation offline by using [Docsify](https://docsify.js.org
 
 A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
 
-## Other Curricula
+## Other Curricula/Curriculum
 
 Our team produces other curricula! Check out:
 
