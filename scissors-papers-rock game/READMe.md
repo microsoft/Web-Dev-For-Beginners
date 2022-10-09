@@ -1,7 +1,7 @@
 This is a simple Rock Scissors Paper Game.
 Here you can learn about basic javascript, css, html.
 
-![demo](/demo.gif)
+![demo](demo.gif)
 
 
 This lesson assumes you're familiar with the following concepts:
