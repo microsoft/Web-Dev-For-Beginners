@@ -20,8 +20,8 @@ Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson cur
 
 Get started with the following resources:
 
-- [Student Hub page](https://docs.microsoft.com/en-gb/learn/student-hub?WT.mc_id=academic-13441-cxa) In this page, you will find beginner resources, Student packs and even ways to get a free cert voucher. This is one page you want to bookmark and check from time to time as we switch out content at least monthly.
-- [Microsoft Student Learn ambassadors](https://studentambassadors.microsoft.com?WT.mc_id=academic-13441-cxa) Join a global community of student ambassadors, this could be your way into Microsoft
+- [Student Hub page](https://docs.microsoft.com/en-gb/learn/student-hub?WT.mc_id=academic-13441-cxa) In this page, you will find beginner resources, Student packs and even ways to get a free cert voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
+- [Microsoft Student Learn ambassadors](https://studentambassadors.microsoft.com?WT.mc_id=academic-13441-cxa) Join a global community of student ambassadors. This could be your way into Microsoft
 
 
 # Getting Started
@@ -38,7 +38,7 @@ Gif by [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
 
 ## Pedagogy
 
-We have chosen two pedagogical tenets while building this curriculum: ensuring that it is project-based and that it includes frequent quizzes. By the end of this series, students will have built a typing game, a virtual terrarium, a 'green' browser extension, a 'space invaders' type game, and a business-type banking app, and will have learned the basics of JavaScript, HTML, and CSS along with the modern toolchain of today's web developer.
+We have chosen two pedagogical tenets while building this curriculum: ensuring that it is project-based and that it includes frequent quizzes. By the end of this series, students will have built a typing game, a virtual terrarium, a 'green' browser extension, a 'space invaders' type game, and a business-type banking app, and will have also learned the basics of JavaScript, HTML, and CSS along with the modern toolchain of today's web developer.
 
 > 🎓 You can take the first few lessons in this curriculum as a [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101?WT.mc_id=academic-13441-cxa) on Microsoft Learn!
 
