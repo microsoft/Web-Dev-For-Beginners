@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ECDFD7;
+    padding: 40px;
+}
+
+#head {
+    font-weight: 700;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+#player,
+#computer {
+    height: 240px;
+    width: 240px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+#playerCount,
+#computerCount {
+    text-align: center;
+    padding: 6px 0px;
+}
+
+#round {
+    padding: 4px;
+    width: 200px;
+}
+
+#round #span {
+    font-size: x-large;
+    font-weight: 600;
+    text-align: center;
+}
+
+#round p {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+#selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#selection p {
+    font-weight: 600;
+    font-size: large;
+}
+
+.imageContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 40px 20px;
+}
+
+.pic {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    height: 180px;
+    width: 220px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+#display {
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.img:hover {
+    scale: 1.25;
+    transition: all ease-in-out 400ms;
+}
+
+#newElement{
+    background-color: rgb(17, 15, 15);
+    color: white;
+    padding: 4px;
+    width: 200px;
+    border-radius: 8px;
+    text-align: center;
+    margin: auto;
+    align-self: center;
+    display: block;
+    margin-top: 60px;
+}

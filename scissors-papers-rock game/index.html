@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Saurav's Game</title>
+</head>
+
+<body id="body">
+    <h1 id="head">
+        Rock Paper Scissors
+    </h1>
+    <div id="container">
+        <div id="playerContainer">
+            <h2 id="playerCount">You : <span id="you1">0</span></h2>
+            <div id="player">
+
+            </div>
+        </div>
+        <div id="round">
+            <p id="span">Round</p>
+            <p id="count">
+                0
+            </p>
+            <div id="display">
+
+            </div>
+        </div>
+        <div id="computerContainer">
+            <h2 id="computerCount">Computer : <span id="comp1">0</span></h2>
+            <div id="computer">
+
+            </div>
+        </div>
+    </div>
+    <div id="selection">
+        <p id="para">Choose One!</p>
+    </div>
+    <div class="imageContainer" id="div">
+        <div class="pic">
+            <img src="img/scissors.png" alt="" onclick="func(0)" class="img" id="img1">
+        </div>
+        <div class="pic" id="pic">
+            <img src="img/paper.png" alt="" onclick="func(1)" class="img" id="img2">
+        </div>
+        <div class="pic">
+            <img src="img/rock.png" alt="" onclick="func(2)" class="img" id="img3">
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
