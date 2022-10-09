@@ -13,7 +13,7 @@ Esta cita destaca perfectamente la importancia de crear sitios web accesibles. U
 
 ## Herramientas para usar
 
-### Lectoras de pantalla
+### Lectores de pantalla
 
 Una de las herramientas de accesibilidad más conocidas son los lectores de pantalla.
 
@@ -24,6 +24,12 @@ En su forma más básica, un lector de pantalla leerá una página de arriba a a
 Todo desarrollador web debería estar familiarizado con un lector de pantalla. Como se destacó anteriormente, es el cliente que utilizarán sus usuarios. De la misma manera que estás familiarizado con el funcionamiento de un navegador, debes aprender cómo funciona un lector de pantalla. Afortunadamente, los lectores de pantalla están integrados en la mayoría de los sistemas operativos y muchos navegadores contienen extensiones para emular un lector de pantalla.
 
 ✅ Prueba una extensión o herramienta del navegador de lector de pantalla. Uno que solo funciona en Windows es [JAWS](https://webaim.org/articles/jaws/). Los navegadores también tienen herramientas integradas que se pueden utilizar para este propósito; Consulta estas [herramientas de navegador Edge centradas en accesibilidad](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features).
+
+### Zoom
+
+Otra herramienta comúnmente usada por las personas con problemas de visión es la ampliación (zooming). El tipo más básico de ampliación es el zoom estático, controlado a través de `Control + signo de suma (+)` o disminuyendo la resolución de la pantalla. Este tipo de zoom hace que todo el tamaño de la pantalla cambie, por lo que es importante usar un [diseño responsivo](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) para brindar una buena experiencia de usuario a mayores niveles de zoom.
+
+Otro tipo de zoom se basa en un software especializado para ampliar un área de la pantalla y desplazarse, como si se usara una lupa real. En Windows, [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) está incorporado, y [Zoom Text](https://www.freedomscientific.com/training/zoomtext/getting-started/) es un software de ampliación de terceros con más funciones y una base de usuarios más grande. Tanto macOS como iOS, tienen incorporado un software de ampliación llamado [Zoom](https://www.apple.com/accessibility/mac/vision/).
 
 ### Chequear contrastes
 
@@ -136,7 +142,7 @@ Puedes usar `aria-label` para describir el enlace cuando el formato de la págin
 
 ## Imágenes
 
-No hace falta decir que los lectores de pantalla no pueden leer automáticamente lo que hay en una imagen. Asegurarse de que las imágenes sean accesibles no requiere mucho trabajo; de eso se trata el atributo ʻalt`. Todas las imágenes deben tener un ʻalt` para describir lo que son.
+No hace falta decir que los lectores de pantalla no pueden leer automáticamente lo que hay en una imagen. Asegurarse de que las imágenes sean accesibles no requiere mucho trabajo; de eso se trata el atributo `alt`. Todas las imágenes deben tener un `alt` para describir lo que son.Las imágenes que son puramente decorativas deben tener su atributo `alt` establecido en una cadena vacía: `alt=""`. Esto evita que los lectores de pantalla anuncien innecesariamente la imagen decorativa.
 
 ✅ Como era de esperar, los motores de búsqueda tampoco pueden comprender qué hay en una imagen. También usan texto alternativo. Una vez más, ¡asegurarse de que su página sea accesible proporciona bonificaciones adicionales!
 
@@ -150,7 +156,9 @@ Algunos usuarios no pueden usar un mouse o trackpad, sino que dependen de las in
 
 Una web accesible para algunos no es una verdadera "red mundial". La mejor manera de garantizar que los sitios que creas sean accesibles, es incorporar las mejores prácticas de accesibilidad desde el principio. Si bien hay pasos adicionales involucrados, incorporar estas habilidades en tu flujo de trabajo ahora significará que todas las páginas que creas sean accesibles.
 
-🚀 Desafío: toma este HTML y vuelve a escribirlo para que sea lo más accesible posible, dados los temas que aprendiste.
+## 🚀 Desafío 
+
+Toma este HTML y vuelve a escribirlo para que sea lo más accesible posible, dados los temas que aprendiste.
 
 ```html
 <!DOCTYPE html>
@@ -208,7 +216,9 @@ Una web accesible para algunos no es una verdadera "red mundial". La mejor maner
 
 Muchos gobiernos tienen leyes sobre los requisitos de accesibilidad. Lee sobre las leyes de accesibilidad de tu país de origen. ¿Qué está cubierto y qué no? Un ejemplo es [este sitio web de gobierno](https://accessibility.blog.gov.uk/).
 
-** Tarea **: [Analizar un sitio web no accesible](assignment.es.md)
+## Tarea
+
+[Analizar un sitio web no accesible](assignment.es.md)
 
 Créditos: [Tortuga Ipsum](https://github.com/Instrument/semantic-html-sample) por Instrument
 
