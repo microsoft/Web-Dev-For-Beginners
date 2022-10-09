@@ -35,7 +35,7 @@ Ve a [GitHub.com](https://github.com/) y crea una cuenta si aún no lo has hecho
 
 ### Preparación
 
-Necesitarás una directorio con un proyecto de código en tu máquina local (computadora portátil o PC) y un repositorio público en GitHub, que te servirá como ejemplo de cómo contribuir a los proyectos de otros.
+Necesitarás un directorio con un proyecto de código en tu máquina local (computadora portátil o PC) y un repositorio público en GitHub, que te servirá como ejemplo de cómo contribuir a los proyectos de otros.
 
 ---
 
@@ -156,13 +156,12 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
 
 #### Confirmar mensajes
 
-Una buena línea de asunto (subject line) de confirmación de Git completa la siguiente oración:
-Si se aplica, esta confirmación será <su línea de asunto aquí>
+Una buena línea de asunto (subject line), completa la siguiente frase: "Si se aplica, este commit hará..."
 
-Para el sujeto use el imperativo, tiempo presente: "cambiar" no "cambió" ni "cambiara".
-Como en el sujeto, en el cuerpo (opcional) también use el imperativo, presente. El cuerpo debe incluir la motivación para el cambio y contrastarla con la conducta anterior. Estás explicando el "por qué", no el "cómo".
+Para el asunto use el imperativo, tiempo presente: "cambiar" no "cambió" ni "cambiara".
+Como en el asunto, en el cuerpo (opcional) también use el presente imperativo. El cuerpo debe incluir el motivo del cambio y contrastarlo con el funcionamiento previo. Estás explicando el "por qué", no el "cómo".
 
-✅ Tómate unos minutos para navegar por GitHub. ¿Puedes encontrar un mensaje de compromiso realmente bueno? ¿Puedes encontrar uno realmente mínimo? ¿Qué información crees que es la más importante y útil de transmitir en un mensaje de compromiso?
+✅ Tómate unos minutos para navegar por GitHub. ¿Puedes encontrar un mensaje de commit realmente bueno? ¿Puedes hallar uno aún más simple? ¿Qué información crees que es la más importante y útil de transmitir en un mensaje de commit?
 
 ### Tarea: Colaborar
 
@@ -187,16 +186,16 @@ Todos estos recursos beneficiarán la incorporación de nuevos miembros del equi
 
 ### Tarea: Fusionar (merging) código
 
-Los documentos que contribuyes ayudan a las personas a contribuir al proyecto. Explica qué tipos de contribuciones estás buscando y cómo funciona el proceso. Los colaboradores deberán seguir una serie de pasos para poder contribuir a tu repositorio en GitHub:
+Los documentos de contribución ayudan a las personas a contribuir al proyecto. Explica qué tipos de contribuciones estás buscando y cómo funciona el proceso. Los colaboradores deberán seguir una serie de pasos para poder contribuir a tu repositorio en GitHub:
 
 1. **Bifurcando (forking) tu repositorio** Probablemente querrás que la gente _bifurque_ (fork) tu proyecto. Bifurcar significa crear una réplica de tu repositorio en su perfil de GitHub.
 1. **Clonar**. Desde allí, clonarán el proyecto en su máquina local.
-1. **Crear una rama**. Querrás pedirles que creen una _ rama_ para su trabajo.
+1. **Crear una rama**. Querrás pedirles que creen una _rama_ para su trabajo.
 1. **Concentre su cambio en un área**. Pida a los colaboradores que concentren sus contribuciones en una cosa a la vez; de esa manera, las posibilidades de _fusionar_ su trabajo son mayores. Imagínate que escriben una corrección de errores, agregan una nueva función y actualizan varias pruebas; ¿qué sucede si quieres todos los cambios o solo puedes implementar 2 de 3 o 1 de 3 cambios?
 
 ✅ Imagínate una situación en la que las ramas (branches) de git son particularmente críticas para escribir y enviar buen código. ¿Qué casos de uso se te ocurren?
 
-> Se el cambio que deseas ver en el mundo y crea también ramas  para tu propio trabajo. Todas las confirmaciones que realices se realizarán en la rama en la que estás actualmente "registrado". Usa `git status` para ver qué rama es.
+> Sé el cambio que deseas ver en el mundo y crea también ramas  para tu propio trabajo. Todos los commits que hagas se realizarán en la rama en la que estás actualmente "registrado". Usa `git status` para ver qué rama es.
 
 Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador ya ha _bifurcado_ y _clonado_ el repositorio para que tenga un repositorio de Git listo para trabajar en su máquina local:
 
@@ -219,7 +218,7 @@ Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador y
    git commit -m "mis cambios"
    ```
 
-   Asegúrate de darle un buen nombre a tu commit, tanto por tu bien como por el mantenedor del repositorio en el que estás ayudando.
+   Asegúrate de darle un buen nombre a tu commit, tanto por tu bien como por el del mantenedor del repositorio en el que estás ayudando.
 
 1. **Combina tu trabajo con la rama `principal`**. En algún momento has terminado de trabajar y deseas combinar tu trabajo con el de la rama `principal`. La rama `main` podría haber cambiado mientras tanto, así que asegúrate de actualizarla con los siguientes comandos:
 
@@ -228,7 +227,7 @@ Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador y
    git pull
    ```
 
-   En este punto, querrás asegurarte de que cualquier _conflicto_, situaciones en las que Git no pueda _combinarse_ fácilmente los cambios, ocurren en tu rama de trabajo. Mientras tanto, ejecuta los siguientes comandos:
+   En este punto, querrás asegurarte de que cualquier _conflicto_, situaciones en las que Git no pueda _combinarse_ fácilmente los cambios, ocurran en tu rama de trabajo. Por lo tanto, ejecuta los siguientes comandos:
 
    ```bash
    git switch [branch_name]
@@ -245,9 +244,9 @@ Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador y
 
    El comando anterior crea la rama en tu repositorio bifurcado.
 
-1. **Abre un PR**. A continuación, abre un PR. Para hacerlo, navega al repositorio bifurcado en GitHub. Verás una indicación en GitHub donde te preguntarán si deseas crear un nuevo PR. Haz clic en eso y lo llevará a una interfaz donde puedes cambiar el título del mensaje de confirmación, asignarle una descripción más adecuada. Ahora, el mantenedor del repositorio que bifurcaste verá este PR y _dedos cruzados_ apreciarán y _ fusionarán_ tu PR. Ahora eres un colaborador, yay :)
+2. **Abre un PR**. A continuación, abre un PR. Para hacerlo, navega al repositorio bifurcado en GitHub. Verás una indicación en GitHub donde te preguntarán si deseas crear un nuevo PR. Haz clic allí y te llevará a una interfaz donde puedes cambiar el título del mensaje de commit, asignale una descripción más adecuada. Ahora, el mantenedor del repositorio que bifurcaste verá esta PR y _dedos cruzados_ valorarán y _fusionarán_ tu PR. Ahora eres un colaborador, yay :)
 
-1. **Limpiar**. Se considera una buena práctica _limpiar_ después de ti. Limpiar tanto tu rama local como la rama que enviaste a GitHub. Primero eliminémoslo localmente con el siguiente comando:
+3. **Limpiar**. Se considera una buena práctica _limpiar_ despuésde que tu PR fue combinada exitosamente. Limpia tanto tu rama local como la rama que enviaste a GitHub. Primero eliminémoslo localmente con el siguiente comando:
 
    ```bash
    git branch -d [branch-name]
@@ -255,13 +254,13 @@ Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador y
 
    Asegúrate de ir a la página de GitHub del repositorio bifurcado a continuación y elimina la rama remota que acabas de ingresar.
 
-`Solicitud de extracción` parece un término tonto porque realmente deseas impulsar los cambios al proyecto. Pero el mantenedor (propietario del proyecto) o el equipo central debe considerar tus cambios antes de fusionarlo con la rama "principal" del proyecto, por lo que realmente estás solicitando una decisión de cambio a un mantenedor.
+`Solicitud de extracción` (Pull request) parece un término tonto porque realmente deseas impulsar los cambios al proyecto. Pero el mantenedor (propietario del proyecto) o el equipo central debe considerar tus cambios antes de fusionarlo con la rama "principal" del proyecto, por lo que realmente estás solicitando una decisión de cambio a un mantenedor.
 
-Una solicitud de extracción es el lugar para comparar y discutir las diferencias introducidas en una rama con revisiones, comentarios, pruebas integradas y más. Una buena solicitud de extracción sigue aproximadamente las mismas reglas que un mensaje de confirmación. Puedes agregar una referencia a un problema en el rastreador de problemas, cuando tu trabajo, por ejemplo, soluciona un problema. Esto se hace usando un '#' seguido del número de tu problema. Por ejemplo, `#97`.
+Una Pull request es el lugar para comparar y discutir las diferencias introducidas en una rama con revisiones, comentarios, pruebas integradas y más. Una buena Pull request sigue aproximadamente las mismas reglas que un mensaje de commit. Puedes agregar una referencia a un problema (issue) en el rastreador de problemas, cuando tu trabajo, por ejemplo, soluciona un problema. Esto se hace usando un '#' seguido del número de tu problema. Por ejemplo, `#97`.
 
 🤞 Cruza los dedos para que todos los controles pasen y los propietarios del proyecto combinen tus cambios en el proyecto🤞
 
-Actualice tu rama de trabajo local actual con todas las nuevas confirmaciones de la rama remota correspondiente en GitHub:
+Actualiza tu rama de trabajo local actual con todas las nuevas confirmaciones de la rama remota correspondiente en GitHub:
 
 `git pull`
 
@@ -269,7 +268,7 @@ Actualice tu rama de trabajo local actual con todas las nuevas confirmaciones de
 
 Primero, busquemos un repositorio en GitHub que te interese y al que te gustaría contribuir con un cambio. Querrás copiar el contenido a nuestra máquina.
 
-✅ Una buena forma de encontrar repositorios 'aptos para principiantes' es [buscar por la etiqueta `buena-primera-edición`](https://github.blog/2020-01-22-browse-good-first-issues-para-empezar-a-contribuir-al-código-abierto/).
+✅ Una buena forma de encontrar repositorios 'aptos para principiantes' es [buscar por la etiqueta `good-first-issue`](https://github.blog/2020-01-22-browse-good-first-issues-para-empezar-a-contribuir-al-código-abierto/).
 
 Hay varias formas de copiar código. Una forma es "clonar" el contenido del repositorio, usando HTTPS, SSH o usando GitHub CLI (Interfaz de línea de comandos).
 
@@ -287,13 +286,13 @@ Por último, puedes descargar el código en un directorio comprimido.
 
 Puede destacar, ver y / o "fork" cualquier repositorio público en GitHub. Puedes encontrar tus repositorios destacados en el menú desplegable de la parte superior derecha. Es como marcar como favorito, pero por código.
 
-Los proyectos tienen un rastreador de problemas, principalmente en GitHub en la pestaña "Issues" a menos que se indique lo contrario, donde las personas debaten los problemas relacionados con el proyecto. Y la pestaña Solicitudes de extracción es donde las personas debaten y revisan los cambios que están en curso.
+Los proyectos tienen un rastreador de problemas, principalmente en GitHub en la pestaña "Issues" a menos que se indique lo contrario, donde las personas debaten los problemas relacionados con el proyecto. Y la pestaña Pull requests es donde las personas debaten y revisan los cambios que están en curso.
 
 Los proyectos también pueden tener discusiones en foros, listas de correo o canales de chat como Slack, Discord o IRC.
 
 ✅ Echa un vistazo a tu nuevo repositorio de GitHub y prueba algunas cosas, como editar la configuración, agregar información a tu repositorio y crear un proyecto (como un tablero Kanban). ¡Hay muchas cosas que puedes hacer!
 
-🚀 Desafío: empareja con un amigo(a) para trabajar en el código juntos. Crea un proyecto de forma colaborativa, bifurque el código, crea ramas y combina los cambios.
+🚀 Desafío: Haz pareja con un amigo(a) para trabajar juntos en el código. Crea un proyecto de forma colaborativa, bifurca el código, crea ramas y combina los cambios.
 
 ## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
