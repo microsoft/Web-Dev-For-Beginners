@@ -1,5 +1,46 @@
+# icons for websites
+
 Over 1,300 high-quality icons, available as SVGs, SVG sprites, or web fonts, are now part of Bootstrap. In any project, you may use them with or without Bootstrap.
 
 The benefit of employing font icons is that any color may be used to make icons by just applying the CSS color attribute. Additionally, you can use the CSS font-size property to modify the size of icons.
 
 Let's now look at how to add and utilize Bootstrap icons on a website.
+
+## How to Add Bootstrap Icons to a Website?
+
+Using the CDN link is the simplest approach to incorporating Bootstrap icons into a website. This CDN link directs users to a remote CSS file containing every class required to produce font icons.
+
+A plain web page and a template made using the Bootstrap framework are compatible with including Bootstrap icons. Let's look at the following example: Icon.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Including Bootstrap Icons in HTML</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <h1><i class="bi-globe"></i> Hello, world!</h1>
+    <h1><i class="bi bi-bootstrap"></i> Bootstrap icon!</h1>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+## Use Bootstrap Icons in Your Code
+
+It is necessary to have an <i> tag with the individual icon class.bi-* placed on it in order to use Bootstrap icons in your code. To use Bootstrap icons, use the following general syntax:
+
+<i class="bi-class-name"></i>
+
+## Bootstrap icon link
+
+https://icons.getbootstrap.com/
+
+
