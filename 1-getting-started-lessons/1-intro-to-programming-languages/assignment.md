@@ -9,3 +9,6 @@ There are many tools that a web developer may need that are on the [MDN document
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |
 |Explained why web developer would use tool| Explained how, but not why developer would use tool| Did not mention how or why a developer would use tool  |
+1. Transformation (Babel) - It help to do code readable on more browsers and devices, even if they use old fashioned JavaScript
+2. Bundlers/packagers (FuseBox) - Bundlers take resources/files. Then resources/files are analise, transform, clean, minimisation and placed in the pacages. 
+3. Deployment tools (Octopus Deploy) Reliable, repeatable, traceable deployments across clouds and on-prem
