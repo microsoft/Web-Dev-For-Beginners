@@ -90,7 +90,7 @@ There's a chance that some statements will not be executed by a device. This is 
 
 ## Tools of the Trade
 
-[![Tools of the Trade](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
+[![Tools of the Trade](https://i.ibb.co/0XpydkW/Thumbnail.png)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
 
 > 🎥 Click the image above for a video about tooling
 
