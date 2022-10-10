@@ -1,0 +1,121 @@
+:root {
+    
+    --primaria-hover: rgb(193, 193, 193);
+    --secundaria: rgb(20, 20, 20);  
+    --secundaria-dois: rgba(234, 234, 234, 0.509);  
+    --text-logo: rgb(48, 48, 48);  
+    --primaria: rgb(255, 255, 255);
+    --primaria2: rgb(212, 212, 212);
+    --btn: rgb(137, 119, 211); 
+    --btn-hover: rgb(224, 224, 224); 
+}
+
+*{
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background-image: url("./img/fundo2.png");
+    
+}
+
+.container{
+    background-color: var(--primaria);
+    border: 2px solid var(--primaria2);
+    opacity: 85%;
+    position: relative;
+    margin: 35px auto;
+    width: 27%;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.logo{
+    width: 200px;
+    position: absolute;
+    display: flex;
+    margin: 10px 0px 0px 10%;
+    color: var(--text-logo);
+}
+.logo .max{
+    position: absolute;
+    margin: 17px 0px 0px 80%;
+}
+
+.box{
+    position: absolute;
+    margin: 45px 32px 0px 10%;
+    width: 80%;
+    height: 377px;
+    border-radius: 12px;
+    border: 1px solid rgb(233, 232, 232);
+}
+.box div{
+    background-color: var(--secundaria);
+    border-radius: 12px;
+    margin-bottom: 2px;
+    opacity: 90%;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    transition: 0.6s;
+}
+.box div:hover{
+    background-color: var(--text-logo);
+}
+.box div h3{
+    position: absolute;
+    margin: 15px 0px 0px 3%;
+    color: var(--primaria);
+}
+.box div button{
+    position: absolute;
+    margin: 10px 0px 0px 90%;
+    width: 4%;
+    color: var(--primaria);
+    background-color: transparent;
+    border: 0;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.box div button:hover{
+    color: var(--secundaria-dois);
+}
+.box label{
+    position: absolute;
+    margin: 300px 0px 0px 43%;
+    font-size: 22px;
+    color: var(--primaria-hover);
+}
+
+.painel{
+    position: absolute;
+    margin: 440px 0px 0px 10%;
+    width: 80%;
+    height: 100px;
+}
+.painel input{
+    color: var(--text-logo);
+    width: 98.5%;
+    height: 37px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(232, 177, 191), rgb(129, 227, 231));
+    border: 0;
+    transition: 0.6s;
+}
+.painel button{
+    color: var(--primaria);
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(225, 146, 166), rgb(143, 220, 222));
+    border: 0;
+    transition: 0.6s;
+}
+
