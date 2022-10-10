@@ -1,6 +1,6 @@
 # Introduction to JavaScript
 
-JavaScript is the language of the web. In these four lessons, you'll learn its basics.
+JavaScript is the language of the web.it is mostly used to keep the people interacted with the website. In these four lessons, you'll learn its basics.
 
 ### Topics
 
