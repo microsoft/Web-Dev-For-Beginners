@@ -12,7 +12,7 @@ Nessa aula, você vai chamar uma API submetendo o forms da extensão do seu nave
 
 ### Configurar os elementos a serem manipulados na extensão:
 
-Até agora você fez o HTML para as `<div>` de forms e resultados para a extensão do seu navegador. A partir de agora, você vai parecisar trabalhar no `/src/index.js` e construir sua extensão por partes. Baseie-se na [última aula](../1-about-browsers/README.md) para configurar seu projeto e o processo de build.
+Até agora você fez o HTML para as `<div>` de forms e resultados para a extensão do seu navegador. A partir de agora, você vai parecisar trabalhar no `/src/index.js` e construir sua extensão por partes. Baseie-se na [última aula](../../1-about-browsers/translations/README.pt.md) para configurar seu projeto e o processo de build.
 
 No seu arquivo `index.js`, comece criando algumas variáveis ´const´ para armazenar os valores associados a diferentes campos:
 
@@ -219,4 +219,4 @@ Você aprendeu sobre LocalStorage e APIs nessa aula, ambos muito úteis para des
 
 ## Tarefa
 
-[Adopt an API](assignment.md)
+[Adote uma API](assignment.pt-br.md)
