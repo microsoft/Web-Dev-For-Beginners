@@ -1,0 +1,53 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+  
+}
+h2,
+h3,
+h1 {
+
+  text-align: center;
+}
+.box{
+    border:2px solid black;
+    margin:auto;
+    padding:5rem;
+    background :rgb(238, 174, 174);
+    width:100%;
+    max-width:100vw;
+    min-height:100vh;
+}
+#rps-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  #rps-box .ig {
+    height: 150px;
+    width: 150px;
+
+  }
+
+  .ig:hover {
+    box-shadow: 0px 5px 2px 4px rgba(44, 44, 215, 0.715)
+  }
+
+  #rock {
+    border: 2px solid red;
+  }
+
+  #paper {
+    border: 2px solid rgb(53, 113, 53);
+
+  }
+
+  #scissor {
+    border: 2px solid blue;
+  }
+
+  
