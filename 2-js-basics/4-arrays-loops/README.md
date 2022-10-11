@@ -68,7 +68,7 @@ iceCreamFlavors.length; //5
 
 ## Loops
 
-Loops allow for repetitive or **iterative** tasks, and can save a lot of time and code. Each iteration can vary in their variables, values, and conditions. There are different types of loops in JavaScript, and they have small differences, but essentially do the same thing: loop over data.
+Loops allow us to perform repetitive or **iterative** tasks, and can save a lot of time and code. Each iteration can vary in their variables, values, and conditions. There are different types of loops in JavaScript, and they all have small differences, but essentially do the same thing: loop over data.
 
 ### For Loop
 
@@ -88,7 +88,7 @@ for (let i = 0; i < 10; i++) {
 
 ### While loop
 
-Unlike the syntax for the `for` loop, `while` loops only require a condition that will stop the loop when `false`. Conditions in loops usually rely on other values like counters, and must be managed during the loop. Starting values for counters must be created outside the loop, and any expressions to meet a condition, including changing the counter must be maintained inside the loop.
+Unlike the syntax of the `for` loop, `while` loops only require a condition that will stop the loop when the condition becomes `false`. Conditions in loops usually rely on other values like counters, and must be managed during the loop. Starting values for counters must be created outside the loop, and any expressions to meet a condition, including changing the counter must be maintained inside the loop.
 
 ```javascript
 //Counting up to 10
@@ -127,7 +127,7 @@ There are other ways of looping over arrays other than for and while loops. Ther
 
 ## Review & Self Study
 
-Arrays in JavaScript have many methods attached to them, extremely useful for data manipulation. [Read up on these methods](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) and try some of them out (like push, pop, slice and splice) on an array of your creation.
+Arrays in JavaScript have many methods attached to them, that are extremely useful for data manipulation. [Read up on these methods](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) and try some of them out (like push, pop, slice and splice) on an array of your creation.
 
 ## Assignment
 
