@@ -100,11 +100,11 @@ You can run this documentation offline by using [Docsify](https://docsify.js.org
 
 ## PDF
 
-A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
+A PDF of all of the lessons can be found [here.](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
 
 ## Other Curricula
 
-Our team produces other curricula! Check out:
+Our team produces other curricula too! Check out:
 
 - [Machine Learning for Beginners](https://aka.ms/ml-beginners)
 - [IoT for Beginners](https://aka.ms/iot-beginners)
