@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--pale-blue);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+}
+
+.card {
+  width: 450px;
+  background-color: white;
+  color: var(--desaturated-blue);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 25px auto;
+}
+
+.title {
+  color: var(--dark-blue);
+  font-size: 32px;
+  font-weight: 900;
+  margin: 7px;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.container {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.order-desc {
+  line-height: 25px;
+}
+
+.container>* {
+  margin: 13px 0;
+
+}
+
+.plan-container {
+  font-size: 16px;
+  background-color: var(--very-pale-blue);
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-container a {
+  color: var(--bright-blue);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.plan-container a:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.plan-container strong {
+  font-weight: bold;
+  color: var(--dark-blue);
+}
+
+button {
+  width: 100%;
+  border: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.proceed-button {
+  background-color: var(--bright-blue);
+  padding: 1rem 0;
+  color: white;
+  box-shadow: 0 20px 30px -8px rgb(197 187 245);
+}
+
+.proceed-button:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: 0 20px 10px -8px rgb(197 187 245);
+
+}
+
+.cancel-button {
+  background-color: white;
+  color: var(--desaturated-blue);
+  border: none;
+  margin-top: 22px;
+}
+
+.cancel-button:hover {
+  color: black;
+  transition: 0.3s;
+}
+
+.plan-desc {
+  line-height: 20px;
+  margin-right: 75px;
+}
