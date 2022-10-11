@@ -11,7 +11,7 @@ Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar
 
 En esta lección, cubriremos:
 
-- Seguimiento de trabajo que se realiza en su maquina.
+- Seguimiento de trabajo que se realiza en su máquina.
 - Trabajar en proyectos con otros.
 - Cómo contribuir al software de código abierto (Open Source)
 
@@ -27,21 +27,21 @@ Si Git no está instalado, [descargue Git desde aquí](https://git-scm.com/downl
 Para comprobar si Git ya está configurado, escribe:
 `git config --list`
 
-También necesitarás una cuenta de GitHub, un editor de código (como Visual Studio Code) una terminal (tambien conocida como linea de comandos o simbolo del sistema).
+También necesitarás una cuenta de GitHub, un editor de código (como Visual Studio Code), una terminal (también conocida como línea de comandos o simbolo del sistema).
 
 Ve a [GitHub.com](https://github.com/) y crea una cuenta si aún no lo has hecho, o inicia sesión y completa tu perfil.
 
-✅ GitHub no es el único lugar para almacenar codigo; hay otros, pero GitHub es el más conocido.
+✅ GitHub no es el único lugar para almacenar código; hay otros, pero GitHub es el más conocido.
 
 ### Preparación
 
-Necesitarás una directorio con un proyecto de código en tu máquina local (computadora portátil o PC) y un repositorio público en GitHub, que te servirá como ejemplo de cómo contribuir a los proyectos de otros.
+Necesitarás un directorio con un proyecto de código en tu máquina local (computadora portátil o PC) y un repositorio público en GitHub, que te servirá como ejemplo de cómo contribuir a los proyectos de otros.
 
 ---
 
 ## Gestión de código
 
-Digamos que tienes una directorio local con algún proyecto de código y deseas rastrear tu progreso usando git (sistema de control de versiones). Algunas personas comparan el uso de git con escribir una carta de amor a tu futuro. Al leer tus mensajes de confirmación días, semanas o meses después, podrás recordar por qué tomaste una decisión o "revertiste" un cambio, siempre y cuando escribas buenos mensajes a la hora de enviar un commit.
+Digamos que tienes un directorio local con algún proyecto de código y deseas rastrear tu progreso usando git (sistema de control de versiones). Algunas personas comparan el uso de git con escribir una carta de amor a tu futuro. Al leer tus mensajes de confirmación días, semanas o meses después, podrás recordar por qué tomaste una decisión o "revertiste" un cambio, siempre y cuando escribas buenos mensajes a la hora de enviar un commit.
 
 ### Tarea: Hacer un repositorio git y enviar código
 
@@ -113,10 +113,10 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
    git reset [nombre del archivo o carpeta]
    ```
 
-  Este comando nos ayuda a eliminar un archivo/directorio puntual, para que este no sea enviado en el proximo commit.
+  Este comando nos ayuda a eliminar un archivo/directorio puntual, para que éste no sea enviado en el proximo commit.
 
 
-1. **Persistir en tu trabajo**. En este punto, has agregado los archivos a lo que se denomina _stagin area_. Un lugar donde Git rastrea tus archivos. Para que el cambio sea permanente, debes realizar un _commit_. Para hacerlo, utilizas el siguiente commando `git commit`. Un _commit_ representa un punto en el historial de tu repositorio que estás guardando, este viene acompañado de un mensaje, el cual nos sirve para saber que cambios se hicieron dentro de ese commit. Ejecuta el siguiente comando para realizar tu primer commit.
+1. **Persistir en tu trabajo**. En este punto, has agregado los archivos a lo que se denomina _stagin area_. Un lugar donde Git rastrea tus archivos. Para que el cambio sea permanente, debes realizar un _commit_. Para hacerlo, utilizas el siguiente commando `git commit`. Un _commit_ representa un punto en el historial de tu repositorio que estás guardando, éste viene acompañado de un mensaje, el cual nos sirve para saber que cambios se hicieron dentro de ese commit. Ejecuta el siguiente comando para realizar tu primer commit.
 
    ```bash
    git commit -m "first commit"
@@ -159,7 +159,7 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
 Una buena línea de asunto (subject line) de confirmación de Git completa la siguiente oración:
 Si se aplica, esta confirmación será <su línea de asunto aquí>
 
-Para el sujeto use el imperativo, tiempo presente: "cambiar" no "cambió" ni "cambiara".
+Para el sujeto use el imperativo, tiempo presente: "cambiar" no "cambió" ni "cambiará".
 Como en el sujeto, en el cuerpo (opcional) también use el imperativo, presente. El cuerpo debe incluir la motivación para el cambio y contrastarla con la conducta anterior. Estás explicando el "por qué", no el "cómo".
 
 ✅ Tómate unos minutos para navegar por GitHub. ¿Puedes encontrar un mensaje de compromiso realmente bueno? ¿Puedes encontrar uno realmente mínimo? ¿Qué información crees que es la más importante y útil de transmitir en un mensaje de compromiso?
@@ -196,7 +196,7 @@ Los documentos que contribuyes ayudan a las personas a contribuir al proyecto. E
 
 ✅ Imagínate una situación en la que las ramas (branches) de git son particularmente críticas para escribir y enviar buen código. ¿Qué casos de uso se te ocurren?
 
-> Se el cambio que deseas ver en el mundo y crea también ramas  para tu propio trabajo. Todas las confirmaciones que realices se realizarán en la rama en la que estás actualmente "registrado". Usa `git status` para ver qué rama es.
+> Sé el cambio que deseas ver en el mundo y crea también ramas para tu propio trabajo. Todas las confirmaciones que realices se realizarán en la rama en la que estás actualmente "registrado". Usa `git status` para ver qué rama es.
 
 Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador ya ha _bifurcado_ y _clonado_ el repositorio para que tenga un repositorio de Git listo para trabajar en su máquina local:
 
@@ -303,7 +303,7 @@ Obtén más información sobre [contribución al software de código abierto](ht
 
 [Hoja de referencia de Git](https://training.github.com/downloads/github-git-cheat-sheet/).
 
-Práctica práctica práctica. GitHub tiene excelentes rutas de aprendizaje disponibles a través de [lab.github.com](https://lab.github.com/):
+Práctica, práctica, práctica. GitHub tiene excelentes rutas de aprendizaje disponibles a través de [lab.github.com](https://lab.github.com/):
 
 - [Primera semana en GitHub](https://lab.github.com/githubtraining/first-week-on-github)
 
