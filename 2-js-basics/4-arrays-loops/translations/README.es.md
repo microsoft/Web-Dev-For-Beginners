@@ -68,9 +68,9 @@ Los bucles permiten tareas repetitivas o **iterativas** y pueden ahorrar mucho t
 ### En bucle
 
 El ciclo `for` requiere 3 partes para iterar:
-     - `counter` Una variable que normalmente se inicializa con un número que cuenta el número de iteraciones.
-     - `condition` Expresión que usa operadores de comparación para hacer que el bucle se detenga cuando `true`
-     - `iteration-expression` Se ejecuta al final de cada iteración, generalmente se usa para cambiar el valor del contador
+- `counter` Variable que normalmente se inicializa con un número que cuenta el número de iteraciones.
+- `condition` Expresión que usa operadores de comparación para hacer que el bucle se detenga cuando sea `false`
+- `iteration-expression` Se ejecuta al final de cada iteración, generalmente se usa para cambiar el valor del contador
 
   
 ```javascript
@@ -84,7 +84,7 @@ for (let i = 0; i < 10; i++) {
 
 ### Bucle while
 
-A diferencia de la sintaxis para el ciclo `for`, los ciclos `while` solo requieren una condición que detendrá el ciclo cuando sea `true`. Las condiciones en los bucles suelen depender de otros valores, como contadores, y deben gestionarse durante el bucle. Los valores iniciales para los contadores deben crearse fuera del ciclo, y cualquier expresión que cumpla una condición, incluido el cambio del contador, debe mantenerse dentro del ciclo.
+A diferencia de la sintaxis para el ciclo `for`, los ciclos `while` solo requieren una condición que detendrá el ciclo cuando sea `false`. Las condiciones en los bucles suelen depender de otros valores, como contadores, y deben gestionarse durante el bucle. Los valores iniciales para los contadores deben crearse fuera del ciclo, y cualquier expresión que cumpla una condición, incluido el cambio del contador, debe mantenerse dentro del ciclo.
 
 ```javascript
 //Contando hasta 10
@@ -95,7 +95,7 @@ while (i < 10) {
 }
 ```
 
-✅ ¿Por qué elegiría un bucle for frente a un bucle while? 17K espectadores tenían la misma pregunta sobre StackOverflow, y algunas de las opiniones [podrían ser interesantes para usted](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
+✅ ¿Por qué elegiría un bucle for frente a un bucle while? 17K espectadores tenían la misma pregunta en StackOverflow, y algunas de las opiniones [podrían ser interesantes para usted](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
 
 ## Bucles y matrices
 
@@ -111,7 +111,8 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ✅ Experimente recorriendo una serie de su propia creación en la consola de su navegador.
 
-🚀 Desafío: Hay otras formas de realizar un bucle sobre arreglos además de los bucles for y while. Existen [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), y [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Vuelva a escribir su bucle de matriz utilizando una de estas técnicas.
+## 🚀 Desafío 
+ Hay otras formas de realizar un bucle sobre arreglos además de los bucles for y while. Existen [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), y [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Vuelva a escribir su bucle de matriz utilizando una de estas técnicas.
 
 ## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
 
@@ -119,4 +120,5 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 Las matrices en JavaScript tienen muchos métodos adjuntos, extremadamente útiles para la manipulación de datos. [Lea sobre estos métodos](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) y pruebe algunos de ellos (como push, pop, slice y splice) en una matriz de su creación.
 
-**Asignación**: [Bucle de una matriz](assignment.es.md)
+## Tarea
+ [Bucle de una matriz](assignment.es.md)
