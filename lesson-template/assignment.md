@@ -1,8 +1,8 @@
 # [Assignment Name]
 
-## Instructions
+## Instructions to be followed
 
-## Rubric
+## Rubrics/Metrics
 
 | Criteria | Exemplary | Adequate | Needs Improvement |
 | -------- | --------- | -------- | ----------------- |
