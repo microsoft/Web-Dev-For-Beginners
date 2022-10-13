@@ -23,7 +23,7 @@ In this lesson, you'll learn how to:
 
 ### Prerequisites
 
-Before you begin, you'll need to create an account with [GitHub](https://github.com). Navigate to [GtiHub](https://github.com/) and create an account if you haven't already.
+Before you begin, you'll need to create an account with [GitHub](https://github.com). Navigate to [GitHub](https://github.com/) and create an account if you haven't already.
 
 ### Introduction
 
@@ -31,7 +31,7 @@ A code editor is an essential tool for writing programs and collaborating with e
 
 ## Getting started with VSCode.dev
 
-[VSCode.dev](https://vscode.dev) is a code editor on the web. You don't need to install anything in order to use it, just like opening any other website. To get started with the editor, open the following link: [https://vscode.dev](https://vscode.dev). If you aren't signed in into [GtiHub](https://github.com/), follow the prompts to sign in or create a new account and then sign in.
+[VSCode.dev](https://vscode.dev) is a code editor on the web. You don't need to install anything in order to use it, just like opening any other website. To get started with the editor, open the following link: [https://vscode.dev](https://vscode.dev). If you aren't signed in into [GitHub](https://github.com/), follow the prompts to sign in or create a new account and then sign in.
 
 Once it loads, it should look similar to this image:
 
