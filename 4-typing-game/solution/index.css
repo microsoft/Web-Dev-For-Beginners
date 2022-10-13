@@ -1,3 +1,7 @@
+body{
+	background-color: rgb(185, 238, 220);
+}
+
 .highlight {
 	background-color: yellow;
 }
@@ -5,4 +9,49 @@
 .error {
 	background-color: lightcoral;
 	border-color: red;
+}
+
+h1{
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+font-size: 42px;
+letter-spacing: -0.4px;
+word-spacing: 0.8px;
+color: #310202;
+font-weight: 700;
+text-decoration: underline solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: uppercase;
+}
+
+.new{
+	padding-top: 1%;
+	padding-bottom: 1%;
+	text-align: center;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 22px;
+	letter-spacing: -0.4px;
+	word-spacing: 0.8px;
+	color: #000000;
+	font-weight: 700;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+}
+
+input{
+	margin-left: 37%;
+	height: 40px;
+	width: 500px;
+	border-radius: 40px;
+}
+
+button{
+	width: 90px;
+	height: 40px;
+	margin-left: 870px;
+	margin-top: 30px;
+	font-size: 15px;
 }
