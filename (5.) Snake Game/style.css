@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Varela+Round&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.body{
+    background-image: url("bg.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board{
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+#scoreBoard{
+    position: absolute;
+    top: 65px;
+    font-size: 40px;
+    right: 100px;
+    font-weight: bolder;
+    border: 4px dotted rgb(1, 48, 1);
+    padding: 10px;
+    font-family: 'New Tegomin', serif;
+}
+
+#highScoreBoard{
+    position: absolute;
+    top: 160px;
+    font-size: 40px;
+    right: 100px;
+    font-weight: bolder;
+    border: 4px dotted rgb(1, 48, 1);
+    padding: 10px;
+    font-family: 'New Tegomin', serif;
+}
+
+#gameName{
+    position: absolute;
+    top: 65px;
+    font-size: 70px;
+    left: 25px;
+    font-weight: bolder;
+    padding: 10px;
+    font-family: 'New Tegomin', serif;
+    height: 100vh;
+}
+
+#rules{
+    font-size: 20px;
+    line-height: 200%;
+}
+
+.head{
+    background: radial-gradient(circle, green, pink, lightgreen, red);
+    border: .25vmin solid rgb(48, 68, 48);
+    border-radius: 12px;
+    transform: scale(1.02);
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background: linear-gradient(green, blue);
+    border-radius: 50%;
+    border: .25vmin dotted purple;
+}
