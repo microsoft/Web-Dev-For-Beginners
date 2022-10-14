@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R-P-S Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e391ce7786.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <h2 id="demo">Try your luck !</h2>
+<!--  The Container  -->
+    <div class="container">
+<!--   The first section     -->
+        <div class="section">
+            <div class="info">
+                <h3>You :</h3><span id="playerScore">0</span>
+            </div>
+            <div class="show">
+                <i class="fas fa-hand-rock"></i>
+            </div>
+        </div>
+<!--   The second section     -->
+        <div class="section">
+            <div class="info">
+                <h3>Computer :</h3><span id="computerScore">0</span>
+            </div>
+            <div class="show computer">
+                <i class="fas fa-hand-scissors"></i>
+            </div>
+        </div>
+    </div>
+    <h2 style="color: rgb(233, 33, 19);" id="demo2">Choose One !</h2>
+<!-- This selection div contains the buttons   -->
+    <div class="selection">
+        <button class="fas fa-hand-rock" id="rock"></button>
+        <button class="fas fa-hand-paper" id="paper"></button>
+        <button class="fas fa-hand-scissors" id="scissors"></button>
+    </div>
+</body>
+</html>
