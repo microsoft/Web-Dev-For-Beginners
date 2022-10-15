@@ -130,6 +130,18 @@ if (!condition) {
 let variable = condition ? <return this if true> : <return this if false>
 ```
 
+
+  - Nested Ternary expression:  
+
+  ```javascript
+  let variable = condition ? <return this if true> : 
+                <return this if 1st condition is false but this condition is true> :
+                <return this if first two conditions are false>
+  ```
+
+  - Better to use if..else statements if there are 3 or more conditions.
+  
+
 Below is a more tangible example:
 
 ```javascript
