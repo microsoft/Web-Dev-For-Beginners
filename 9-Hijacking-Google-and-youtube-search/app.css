@@ -1,0 +1,42 @@
+body{
+    background-color: #000000;
+    background-image:url("pic.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:auto;
+}
+
+h1{
+    text-align: center;
+    color:whitesmoke;
+}
+
+form{
+    text-align: center;
+
+}
+
+#gs{
+    color:aqua;
+}
+
+#yt{
+    color: whitesmoke
+}
+
+button{
+    
+    background-color:#0a0a23;
+    color: #fff;
+    border-radius:100px; 
+    padding:5px;
+    min-height:30px; 
+    min-width: 70px;
+}
+
+#credit{
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 350px;
+}
