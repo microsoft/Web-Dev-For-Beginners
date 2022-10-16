@@ -148,7 +148,7 @@ After installing and using your extension, vscode.dev offers options to manage y
 ---
 
 ## Assignment
-[Create a resume website using vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/vscode-dev/8-code-editor/1-using-a-code-editor/assignment.md)
+[Create a resume website using vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
 
 <!----
