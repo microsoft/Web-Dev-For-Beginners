@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var weight = parseInt(prompt("Enter  Weight KG : "));
+		var height = parseInt(prompt("Enter height CM:"));
+
+
+		function BMI(w,h)
+		{
+			// var result= weight/(height*height);
+			// document.write("Your BMI :");
+			let result= (weight / ((height * height) 
+                            / 10000)).toFixed(2);
+			
+			document.write("which show");
+
+			
+			if (result > 18 && result < 24)
+			{
+				document.write("your BMI is Normal : " +result);
+			}
+			else if (result > 24)
+			{
+				document.write("you are overweight and BMI : " +result);	
+			}
+			else
+			{
+				document.write("you are underweight and BMI : " +result);
+			}
+
+		}
+
+		BMI(weight,height);
+
+		
+
+		
+
+	</script>
+		
+		
+
+
+
+
+	
+</body>
+</html>
