@@ -23,5 +23,5 @@ https://www.amazon.com/Wareon-Halloween-Decorations-Clearance-Farmhouse/dp/B0915
     Product Dimensions	18"L x 18"W
     Brand	Wareon
     Shape	Square       
-5. Estimated Import Fees Deposit - null (located in site area/array "Shipping & Fee Details")
+5. Estimated Import Fees Deposit - null (located in site area/array "Shipping & Fee Details").
 
