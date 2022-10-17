@@ -1,0 +1,15 @@
+{
+  "name": "weather-project",
+  "version": "1.0.0",
+  "description": "Find weather of a particular place",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reetesh Tomar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
