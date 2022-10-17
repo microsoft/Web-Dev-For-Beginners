@@ -1,0 +1,300 @@
+/* Add font to the web page */
+
+@font-face {
+    font-family: Baloo Tamma Regular;
+    src: url('BalooTamma-Regular.woff');
+}
+
+:root {
+    --green-color: #008243;
+    --red-color: #B40061;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Defult body color */
+
+body {
+    background-color: var(--red-color);
+    transition: .5s;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Rounded Rectangle  */
+
+.rec {
+    position: absolute;
+    width: 65%;
+    height: 100vh;
+    left: 35%;
+    top: 0px;
+    background: #ffffff;
+    border-radius: 58px;
+}
+
+.rec2 {
+    position: absolute;
+    width: 60%;
+    height: 100vh;
+    left: 40%;
+    top: 0px;
+    background: #ffffff;
+}
+
+
+/* Words positionings and Styles */
+
+.word1 {
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    left: 2%;
+    top: 5%;
+    font-family: Baloo Tamma Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 165px;
+    color: #FFFFFF;
+}
+
+.word2 {
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    left: 9%;
+    top: 17%;
+    font-family: Baloo Tamma Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 165px;
+    color: #FFFFFF;
+}
+
+
+/* Rectangle Positioning */
+
+.polyposi1 {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    right: 50%;
+}
+
+.polyposi2 {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: 40%;
+    left: 30%
+}
+
+.poly1 {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    left: 41%;
+    top: 30%;
+}
+
+.poly2 {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    left: 29%;
+    top: 30%;
+}
+
+.poly3 {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    left: 35%;
+    top: 39%;
+}
+
+.polyStyle {
+    fill: transparent;
+    stroke: var(--red-color);
+    stroke-width: 5;
+}
+
+
+/* Custom CheckBox */
+
+.switchpos {
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.switch {
+    position: relative;
+    width: 330px;
+    height: 120px;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--red-color);
+    transition: .4s;
+    border-radius: 80px;
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.4)
+}
+
+.switch input {
+    display: none;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 100px;
+    left: 10px;
+    bottom: 10px;
+    background-color: #ffffff;
+    transition: .5s;
+    border-radius: 50px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)
+}
+
+input:checked+.slider {
+    background-color: var(--green-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(210px);
+}
+
+.eyes {
+    position: absolute;
+    right: 36px;
+    top: 38px;
+    height: 20px;
+    width: 20px;
+    border-radius: 45px;
+    background: var(--green-color);
+}
+
+.eyes2 {
+    position: absolute;
+    right: 65px;
+    top: 38px;
+    height: 20px;
+    width: 20px;
+    border-radius: 45px;
+    background: var(--green-color);
+}
+
+.halfCircle {
+    cursor: pointer;
+    transition: 2s;
+    position: absolute;
+    top: 80px;
+    right: 44px;
+    height: 15px;
+    width: 30px;
+    border-radius: 0 0 90px 90px;
+    background: var(--green-color);
+}
+
+.eyes {
+    display: none;
+}
+
+.eyes2 {
+    display: none;
+}
+
+.halfCircle {
+    display: none;
+}
+
+.eyesAfter {
+    position: absolute;
+    right: 246px;
+    top: 38px;
+    height: 20px;
+    width: 20px;
+    border-radius: 45px;
+    background: var(--red-color);
+}
+
+.eyes2After {
+    position: absolute;
+    right: 278px;
+    top: 38px;
+    height: 20px;
+    width: 20px;
+    border-radius: 45px;
+    background: var(--red-color);
+}
+
+.aftermouth {
+    position: absolute;
+    top: 80px;
+    right: 253px;
+    height: 15px;
+    width: 35px;
+    border-radius: 90px / 45px;
+    background: var(--red-color);
+}
+
+
+/* input[type=checkbox]:checked~.slider {
+    background: #008243;
+    box-shadow: 0 0 0 1200px #B40061;
+} */
+
+.greenMode {
+    background: var(--green-color);
+}
+
+.greenMode .polyStyle {
+    fill: transparent;
+    stroke: var(--green-color);
+    stroke-width: 5;
+}
+
+.greenMode .eyes {
+    display: inline;
+}
+
+.greenMode .eyes2 {
+    display: inline;
+}
+
+.greenMode .halfCircle {
+    display: inline;
+}
+
+.greenMode .eyesAfter {
+    display: none;
+}
+
+.greenMode .eyes2After {
+    display: none;
+}
+
+.greenMode .aftermouth {
+    display: none;
+}
