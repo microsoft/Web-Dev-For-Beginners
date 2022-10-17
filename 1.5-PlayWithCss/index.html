@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Load Css File-->
+    <link rel="stylesheet" href="css/index.css" />
+
+    <title>Custom Switch</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="word1">Button</div>
+        <div class="word2">Design</div>
+        <!-- Pattern Design  -->
+        <div class="rec">
+            <div class="rec2"></div>
+            <div class="polyposi1">
+                <div class="poly1">
+                    <svg height="200" width="300">
+              <polygon points="150,10 250,150 50,150" class="polyStyle" />
+            </svg>
+                </div>
+                <div class="poly2">
+                    <svg height="200" width="300">
+              <polygon points="150,10 250,150 50,150" class="polyStyle" />
+            </svg>
+                </div>
+                <div class="poly3">
+                    <svg height="200" width="300">
+              <polygon points="150,10 250,150 50,150" class="polyStyle" />
+            </svg>
+                </div>
+            </div>
+            <div class="polyposi2">
+                <div class="poly1">
+                    <svg height="200" width="300">
+              <polygon points="150,10 250,150 50,150" class="polyStyle" />
+            </svg>
+                </div>
+                <div class="poly2">
+                    <svg height="200" width="300">
+              <polygon points="150,10 250,150 50,150" class="polyStyle" />
+            </svg>
+                </div>
+                <div class="poly3">
+                    <svg height="200" width="300">
+              <polygon points="150,10 250,150 50,150 " class="polyStyle" />
+            </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- button dev -->
+        <div class="switchpos">
+            <label class="switch">
+          <input type="checkbox" onClick="changeMode()" />
+          <span class="slider"></span>
+          <div class="happy">
+            <div class="eyes"></div>
+            <div class="eyes2"></div>
+            <div class="halfCircle"></div>
+            <div class="eyesAfter"></div>
+            <div class="eyes2After"></div>
+          </div>
+          <div class="aftermouth" id="aftermouthV"></div>
+        </label>
+        </div>
+
+        <!-- Js Script  -->
+        <script>
+            function changeMode() {
+                var elem = document.body;
+                elem.classList.toggle("greenMode");
+            }
+        </script>
+    </div>
+</body>
+
+</html>
