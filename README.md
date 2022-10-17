@@ -42,11 +42,12 @@ We have chosen two pedagogical tenets while building this curriculum: ensuring t
 
 > 🎓 You can take the first few lessons in this curriculum as a [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101?WT.mc_id=academic-13441-cxa) on Microsoft Learn!
 
-By ensuring that the content aligns with projects, the process is made more engaging for students and retention of concepts will be augmented. We also wrote several starter lessons in JavaScript basics to introduce concepts, paired with video from the "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-13441-cxa)" collection of video tutorials, some of whose authors contributed to this curriculum.
+By ensuring that the content aligns with projects, the process is made more engaging for students and retention of concepts will be augmented. We also wrote several starter lessons in JavaScript basics to introduce concepts, paired with a video from the "[Beginners Series to JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-13441-cxa)" collection of video tutorials, some of whose authors contributed to this curriculum.
 
-In addition, a low-stakes quiz before a class sets the intention of the student towards learning a topic, while a second quiz after class ensures further retention. This curriculum was designed to be flexible and fun and can be taken in whole or in part. The projects start small and become increasingly complex by the end of the 12 week cycle.
+In addition, a low-stakes quiz before a class sets the intention of the student towards learning a topic, while a second quiz after class ensures further retention. This curriculum was designed to be flexible and fun and can be taken in whole or in part. The projects start small and become increasingly complex by the end of the 12-week cycle.
 
-While we have purposefully avoided introducing JavaScript frameworks so as to concentrate on the basic skills needed as a web developer before adopting a framework, a good next step to completing this curriculum would be learning about Node.js via another collection of videos: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-13441-cxa)".
+While we have purposefully avoided introducing JavaScript frameworks to concentrate on the basic skills needed as a web developer before adopting a framework, a good next step to completing this curriculum would be learning about Node.js via another collection of videos: "[Beginner Series to Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-13441-cxa)".
+
 
 > Find our [Code of Conduct](CODE_OF_CONDUCT.md), [Contributing](CONTRIBUTING.md), and [Translation](TRANSLATIONS.md) guidelines. We welcome your constructive feedback!
 
@@ -63,7 +64,7 @@ While we have purposefully avoided introducing JavaScript frameworks so as to co
 - assignment
 - post-lesson quiz
 
-> **A note about quizzes**: All quizzes are contained [in this app](https://ashy-river-0debb7803.1.azurestaticapps.net/), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
+> **A note about quizzes** All quizzes are contained [in this app](https://ashy-river-0debb7803.1.azurestaticapps.net/), for 48 total quizzes of three questions each. They are linked from within the lessons, but the quiz app can be run locally; follow the instructions in the quiz-app folder. They are gradually being localized.
 
 ## Lessons
 
@@ -94,15 +95,24 @@ While we have purposefully avoided introducing JavaScript frameworks so as to co
 | 23  |         [Banking App](/7-bank-project/solution/README.md)          |                   Methods of Fetching and Using Data                   | How data flows in and out of your app, how to fetch it, store it, and dispose of it                                                 |                                            [Data](/7-bank-project/3-data/README.md)                                            |          Yohan          |
 | 24  |         [Banking App](/7-bank-project/solution/README.md)          |                      Concepts of State Management                      | Learn how your app retains state and how to manage it programmatically                                                              |                                [State Management](/7-bank-project/4-state-management/README.md)                                |          Yohan          |
 
-## Offline access
+Offline access
 
-You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
+
+
+
+You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then type docsify serve in the root folder of this repo.The website will be served on port 3000 on your local host: localhost:3000.
+
+
+
 
 ## PDF
 
-A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
 
-## Other Curricula
+
+
+A PDF of all of the lessons can be found here. (https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
+
+## Other Curriculum
 
 Our team produces other curricula! Check out:
 
