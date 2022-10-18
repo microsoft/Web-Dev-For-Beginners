@@ -1,9 +1,11 @@
 # JavaScript Basics: Making Decisions
 
 ![JavaScript Basics - Making decisions](../../sketchnotes/webdev101-js-decisions.png)
+
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
+
 [Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
 
 Making decisions and controlling the order in which your code runs makes your code reusable and robust. This section covers the syntax for controlling data flow in JavaScript and its significance when used with Boolean data types
@@ -13,6 +15,7 @@ Making decisions and controlling the order in which your code runs makes your co
 > 🎥 Click the image above for a video about making decisions.
 
 > You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
+
 ## A Brief Recap on Booleans
 
 Booleans can be only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.
@@ -44,8 +47,8 @@ Operators are used to evaluate conditions by making comparisons that will create
 The if statement will run code in between its blocks if the condition is true.
 
 ```javascript
-if (condition){
-    //Condition was true. Code in this block will run.
+if (condition) {
+  //Condition was true. Code in this block will run.
 }
 ```
 
@@ -55,9 +58,9 @@ Logical operators are often used to form the condition.
 let currentMoney;
 let laptopPrice;
 
-if (currentMoney >= laptopPrice){
-    //Condition was true. Code in this block will run.
-    console.log("Getting a new laptop!");
+if (currentMoney >= laptopPrice) {
+  //Condition was true. Code in this block will run.
+  console.log("Getting a new laptop!");
 }
 ```
 
@@ -69,17 +72,67 @@ The `else` statement will run the code in between its blocks when the condition 
 let currentMoney;
 let laptopPrice;
 
-if (currentMoney >= laptopPrice){
-    //Condition was true. Code in this block will run.
-    console.log("Getting a new laptop!");
-}
-else{
-    //Condition was false. Code in this block will run.
-    console.log("Can't afford a new laptop, yet!");
+if (currentMoney >= laptopPrice) {
+  //Condition was true. Code in this block will run.
+  console.log("Getting a new laptop!");
+} else {
+  //Condition was false. Code in this block will run.
+  console.log("Can't afford a new laptop, yet!");
 }
 ```
 
 ✅ Test your understanding of this code and the following code by running it in a browser console. Change the values of the currentMoney and laptopPrice variables to change the returned `console.log()`.
+
+## Switch Statement
+
+The switch statement evaluates an expression, matching the expression's value against a series of 'case' clauses, and executes the first case clause with with a matching value, until a break statement is encountered.
+
+The default clause is used to command the browser, what to do when none of the cases match with the expression.
+
+Following is the syntax of using switch-case statement
+
+```javascript
+switch (expression) {
+  case value1:
+    // block of code, executed when expression matches value1
+    [break]
+  case value1:
+    // block of code, executed when expression matches value2
+    [break]
+  ...
+  case valueN:
+    // block of code, executed when expression matches valueN
+    [break]
+  [default:
+    // block of code, executed when expression doesn't matches any case.
+    [break]]
+}
+```
+
+the default clause if always executed even if any of the cases are true, so we need to break statement to explicitly skip the execution of default
+
+Let's see an example
+
+```javascript
+let runs = prompt("Enter runs ");
+runs = Number.parseInt(runs);
+switch (runs) {
+  case 50:
+    // Block executed when runs==50
+    console.log("Half Century");
+    break;
+  case 100:
+    // Block executed when runs==100
+    console.log("Century");
+    break;
+  case 200:
+    // Block executed when runs==200
+    console.log("Double Cnetury");
+    break;
+  default:
+    console.log("Score more runs");
+}
+```
 
 ## Logical Operators and Booleans
 
@@ -98,15 +151,14 @@ Logical operators can be used to form conditions in if..else statements.
 ```javascript
 let currentMoney;
 let laptopPrice;
-let laptopDiscountPrice = laptopPrice - (laptopPrice * .20) //Laptop price at 20 percent off
+let laptopDiscountPrice = laptopPrice - laptopPrice * 0.2; //Laptop price at 20 percent off
 
-if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice){
-    //Condition was true. Code in this block will run.
-    console.log("Getting a new laptop!");
-}
-else {
-    //Condition was true. Code in this block will run.
-    console.log("Can't afford a new laptop, yet!");
+if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
+  //Condition was true. Code in this block will run.
+  console.log("Getting a new laptop!");
+} else {
+  //Condition was true. Code in this block will run.
+  console.log("Can't afford a new laptop, yet!");
 }
 ```
 
@@ -134,17 +186,18 @@ Below is a more tangible example:
 
 ```javascript
 let firstNumber = 20;
-let secondNumber = 10
-let biggestNumber = firstNumber > secondNumber ? firstNumber: secondNumber;
+let secondNumber = 10;
+let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 ```
 
 ✅ Take a minute to read this code a few times. Do you understand how these operators are working?
 
-The above states that 
-- if `firstNumber` is larger than `secondNumber` 
-- then assign `firstNumber` to `biggestNumber` 
-- else assign `secondNumber`. 
-  
+The above states that
+
+- if `firstNumber` is larger than `secondNumber`
+- then assign `firstNumber` to `biggestNumber`
+- else assign `secondNumber`.
+
 The ternary expression is just a compact way of writing the code below:
 
 ```javascript
@@ -163,7 +216,9 @@ if (firstNumber > secondNumber) {
 Create a program that is written first with logical operators, and then rewrite it using a ternary expression. What's your preferred syntax?
 
 ---
+
 ## Post-Lecture Quiz
+
 [Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
 
 ## Review & Self Study
