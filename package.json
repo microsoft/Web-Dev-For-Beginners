@@ -4,7 +4,8 @@
 	"description": "Web Dev for Beginners - A Curriculum",
 	"main": "index.js",
 	"scripts": {
-		"convert": "node_modules/.bin/docsify-to-pdf"
+		"convert": "node_modules/.bin/docsify-to-pdf",
+        "start": "docsify serve "
 	},
 	"repository": {
 		"type": "git",
@@ -24,5 +25,8 @@
 	"homepage": "https://github.com/microsoft/Web-Dev-For-Beginners#readme",
 	"devDependencies": {
 		"docsify-to-pdf": "0.0.5"
+	},
+	"dependencies": {
+		"docsify": "^4.12.2"
 	}
 }
