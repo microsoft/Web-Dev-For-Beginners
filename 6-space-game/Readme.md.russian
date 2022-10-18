@@ -1,0 +1,50 @@
+Создайте космическую игру
+Космическая игра для обучения более продвинутым основам JavaScript
+
+В этом уроке вы узнаете, как создать собственную космическую игру. Если вы когда-нибудь играли в игру «Космические захватчики», то в этой игре та же самая идея: управлять космическим кораблем и стрелять по монстрам, спускающимся сверху. Вот как будет выглядеть готовая игра:
+
+Готовая игра
+
+Из этих шести уроков вы узнаете следующее:
+
+Взаимодействуйте с элементом Canvas, чтобы рисовать объекты на экране.
+Понимание декартовой системы координат
+Изучите шаблон Pub-Sub, чтобы создать звуковую игровую архитектуру, которую легче поддерживать и расширять.
+Использовать асинхронность/ожидание загрузки игровых ресурсов
+Обработка событий клавиатуры
+Обзор
+Теория
+Введение в создание игр с помощью JavaScript
+Упражняться
+Рисование на холсте
+Перемещение элементов по экрану
+Обнаружение столкновений
+Ведение счета
+Завершение и перезапуск игры
+Кредиты
+Активы, используемые для этого, были взяты с https://www.kenney.nl/. Если вы увлекаетесь созданием игр, это действительно хорошие активы, многие из которых бесплатны, а некоторые платные.
+Sozdayte kosmicheskuyu igru
+Kosmicheskaya igra dlya obucheniya boleye prodvinutym osnovam JavaScript
+
+V etom uroke vy uznayete, kak sozdat' sobstvennuyu kosmicheskuyu igru. Yesli vy kogda-nibud' igrali v igru «Kosmicheskiye zakhvatchiki», to v etoy igre ta zhe samaya ideya: upravlyat' kosmicheskim korablem i strelyat' po monstram, spuskayushchimsya sverkhu. Vot kak budet vyglyadet' gotovaya igra:
+
+Gotovaya igra
+
+Iz etikh shesti urokov vy uznayete sleduyushcheye:
+
+Vzaimodeystvuyte s elementom Canvas, chtoby risovat' ob"yekty na ekrane.
+Ponimaniye dekartovoy sistemy koordinat
+Izuchite shablon Pub-Sub, chtoby sozdat' zvukovuyu igrovuyu arkhitekturu, kotoruyu legche podderzhivat' i rasshiryat'.
+Ispol'zovat' asinkhronnost'/ozhidaniye zagruzki igrovykh resursov
+Obrabotka sobytiy klaviatury
+Obzor
+Teoriya
+Vvedeniye v sozdaniye igr s pomoshch'yu JavaScript
+Uprazhnyat'sya
+Risovaniye na kholste
+Peremeshcheniye elementov po ekranu
+Obnaruzheniye stolknoveniy
+Vedeniye scheta
+Zaversheniye i perezapusk igry
+Kredity
+Aktivy, ispol'zuyemyye dlya etogo, byli vzyaty s https://www.kenney.nl/. Yesli vy uvlekayetes' sozdaniyem igr, eto deystvitel'no khoroshiye aktivy, mnogiye iz kotorykh besplatny, a nekotoryye platnyye.
