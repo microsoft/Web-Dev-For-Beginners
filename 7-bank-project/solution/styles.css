@@ -143,7 +143,11 @@ button:focus {
 }
 
 .login-content {
-  background-color: var(--background);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  color: var(--primary); 
   padding: var(--space-sm);
 }
 
@@ -158,7 +162,7 @@ button:focus {
 .login-separator > span {
   position: relative;
   top: -0.5em;
-  background-color: var(--background);
+  color: black;
   padding: var(--space-sm);
 }
 
@@ -349,3 +353,10 @@ button:focus {
     align-self: center;
   }
 }
+.form-control {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid black;
+                  color: black; 
+
+           }
