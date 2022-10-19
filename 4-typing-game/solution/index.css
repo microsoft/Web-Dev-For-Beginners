@@ -6,3 +6,10 @@
 	background-color: lightcoral;
 	border-color: red;
 }
+
+.button{
+	padding: revert;
+    margin-top: 12px;
+    margin-left: 50px;
+}
+
