@@ -31,6 +31,14 @@ let allStudents = [
 ]
 
 let studentsWhoPass = [];
+
+allStudents.map((grades) => {
+  if (grades <= "C" || grades >= 3) {
+    studentsWhoPass.push(grades);
+  }
+});
+
+console.log(studentsWhoPass);
 ```
 
 ## Rubric
