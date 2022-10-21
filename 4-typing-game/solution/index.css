@@ -1,8 +1,138 @@
 .highlight {
-	background-color: yellow;
+	background-color: black;
 }
 
 .error {
 	background-color: lightcoral;
 	border-color: red;
 }
+.main{ 
+	color: white;
+       text-align: center;
+	   justify-content: center;
+	   align-items: center;
+		width: 700px;
+		border: 5px solid rgb(55, 76, 145);
+		padding: 50px;
+		margin: 20px;
+		margin-top: 150px;
+		margin-left: 250px;
+		border-radius: 30px;
+	    background: rgb(2,0,36);
+background: linear-gradient(151deg, rgba(2,0,36,1) 0%, rgba(5,114,255,1) 0%, rgba(29,54,59,1) 21%, rgba(33,21,122,1) 21%, rgba(37,29,74,1) 82%, rgba(49,26,255,1) 90%, rgba(28,67,75,1) 100%);
+}
+button{
+	background-color: rgb(15, 108, 247);
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	border: solid rgb(15, 108, 247);
+	color: white;
+}
+input{
+	width: 500px;
+	height: 40px;
+	font-size: large;
+	box-sizing: border-box;
+	border: solid 5px;
+	border-color: rgb(255, 142, 89);
+	box-shadow: 0 0 5px 5px rgb(231, 212, 212);
+}
+.effect5
+{
+  position: relative;
+}
+.effect5:before, .effect5:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.effect5:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+
+   
+  /* For Tablet View */
+  @media screen and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+	.main {
+	  width: 400px;
+	  height: 400px;
+	}
+  }
+   
+  /* For Mobile Portrait View */
+  @media screen and (max-device-width: 480px)
+  and (orientation: portrait) {
+	.main {
+	  width: 200px;
+	  height: 200px;
+	}
+  }
+   
+  /* For Mobile Landscape View */
+  @media screen and (max-device-width: 640px)
+  and (orientation: landscape) {
+	.main {
+	  width: 400px;
+	  height: 200px;
+	}
+  }
+   
+  /* For Mobile Phones Portrait or Landscape View */
+  @media screen and (max-device-width: 640px) {
+	.main {
+	  width: 400px;
+	  height: 200px;
+	}
+  }
+   
+  /* For iPhone 4 Portrait or Landscape View */
+  @media screen and (min-device-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.main {
+	  width: 400px;
+	  height: 400px;
+	}
+  }
+   
+  /* For iPhone 5 Portrait or Landscape View */
+  @media (device-height: 568px) and (device-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.main {
+	  width: 400px;
+	  height: 400px;
+	}
+  }
+   
+  /* For iPhone 6 and 6 plus Portrait or Landscape View */
+  @media (min-device-height: 667px) and (min-device-width: 375px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+	.main {
+	  width: 400px;
+	  height: 400px;
+	}
+  }
