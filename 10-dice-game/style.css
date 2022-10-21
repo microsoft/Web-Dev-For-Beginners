@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Silkscreen&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(5, 2, 2);
+}
+nav {
+    color: black;
+    display: flex;
+    height: 75px;
+    padding: 0 15px;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    align-items: center;
+    background: linear-gradient(to right, #66f35c,#9f18ff);
+    -webkit-text-fill-color:rgb(0, 0, 0);
+    
+}
+nav ul{
+    list-style-type: none;   
+}
+
+.head {
+    font-size: 50px;
+    font-family: 'Silkscreen', cursive;
+    font-weight: bold;
+    padding: 30px 30px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #f5ff36,#ff181c);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+   
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container img{
+    width: 15vw;
+    height: auto;
+}
+.container div h1{
+    font-size: 25px;
+    font-family: 'Silkscreen', cursive;
+    color: #ff181c;
+    margin-left: 35px;
+}
