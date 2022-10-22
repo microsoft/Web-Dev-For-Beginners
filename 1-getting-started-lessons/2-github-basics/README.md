@@ -14,14 +14,14 @@ In this lesson, we'll cover:
 
 - tracking the work you do on your machine
 - working on projects with others
-- how to contribute to open source software
+- how to contribute to open-source software
 
 ### Prerequisites
 
 Before you begin, you'll need to check if Git is installed. In the terminal type: 
 `git --version`
 
-If Git is not installed, [download Git](https://git-scm.com/downloads). Then, setup your local Git profile in the terminal:
+If Git is not installed, [download Git](https://git-scm.com/downloads). Then, set up your local Git profile in the terminal:
 * `git config --global user.name "your-name"`
 * `git config --global user.email "your-email"`
 
@@ -88,7 +88,7 @@ Let's say you have a folder locally with some code project and you want to start
    Typically a `git status` command tells you things like what files are ready to be _saved_ to the repo or has changes on it that you might want to persist.
 
 1. **Add all files for tracking**
-   This also called as staging files/ adding files to the staging area.
+   This is also called staging files/ adding files to the staging area.
 
    ```bash
    git add .
@@ -120,7 +120,7 @@ Let's say you have a folder locally with some code project and you want to start
 
    This command helps us to unstage only a particular file at once that we don't want to include for the next commit.
 
-1. **Persisting your work**. At this point you've added the files to a so called _staging area_. A place where Git is tracking your files. To make the change permanent you need to _commit_ the files. To do so you create a _commit_ with the `git commit` command. A _commit_ represents a saving point in the history of your repo. Type the following to create a _commit_:
+1. **Persisting your work**. At this point you've added the files to a so-called _staging area_. A place where Git is tracking your files. To make the change permanent you need to _commit_ the files. To do so you create a _commit_ with the `git commit` command. A _commit_ represents a saving point in the history of your repo. Type the following to create a _commit_:
 
    ```bash
    git commit -m "first commit"
