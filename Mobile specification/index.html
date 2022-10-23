@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mobile Phone Specification</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/loogoo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/mobile.png" class="mobile"> 
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/camera.png">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>50MP, Ultra Wide-angle Lens, <br>2MP Macro Lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/processor.png">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>MediaTek Dimensity 920 5G Processor</p>
+                </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/display.png">
+                    <div>
+                        <h1>Display</h1>
+                        <p>90Hz Super AMOLED Display <br> Screen size: 6.4"（16.3cm）</p>
+                </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/battery.png">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>60W SuperDart Charge</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="images/arrow.png" id="upBtn">
+            <h3>Features</h3>
+            <img src="images/arrow.png" id="downBtn">
+        </div>
+    </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform
+        var rotateSum;
+
+        upBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        downBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+
+</htmml>
