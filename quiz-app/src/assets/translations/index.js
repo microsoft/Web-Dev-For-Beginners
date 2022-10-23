@@ -13,6 +13,7 @@ import zh_cn from "./zh_cn.json";
 import zh_tw from "./zh_tw.json";
 import fr from "./fr.json";
 import ta from "./ta.json";
+import tr from "./tr.json";
 //export const defaultLocale = 'en';
 
 const messages = {
@@ -30,6 +31,7 @@ const messages = {
   zh_tw: zh_tw[0],
   fr: fr[0],
   ta: ta[0],
+  tr: tr[0],
 };
 
 export default messages;

@@ -1,0 +1,115 @@
+[
+  {
+    "title": "Yeni Başlayanlar İçin Web Geliştirimi: Testler",
+    "complete": "Tebrikler, testi tamamladınız!",
+    "error": "Üzgünüz, tekrar deneyin",
+    "quizzes": [
+      {
+        "id": 1,
+        "title": "Ders 1 - Programlama Dillerine Giriş: Ders Öncesi Testi",
+        "quiz": [
+          {
+            "questionText": "Bir program, yaratıcısı herhangi bir kod yazmadan oluşturulabilir",
+            "answerOptions": [
+              {
+                "answerText": "doğru",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "yanlış",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "Düşük seviyeli diller aşağıdakilerden hangisi için popüler bir seçimdir",
+            "answerOptions": [
+              {
+                "answerText": "Web siteleri",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Donanım",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "Video oyunu yazılımı",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "Bu araçlardan hangisinin bir web geliştiricisinin ortamında bulunması en olasıdır?",
+            "answerOptions": [
+              {
+                "answerText": "Raspberry Pi gibi bir donanım",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Tarayıcı Geliştirici Araçları (DevTools)",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "İşletim sistemi dökümantasyonu",
+                "isCorrect": "false"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Ders 1 - Programlama Dillerine Giriş: Ders Sonrası Testi",
+        "quiz": [
+          {
+            "questionText": "Bir web sitesi oluşturmak için büyük olasılıkla hangi dili kullanırdınız?",
+            "answerOptions": [
+              {
+                "answerText": "Makine Kodu",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "JavaScript",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "Bash",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "Geliştirme ortamları her geliştirici için benzersizdir",
+            "answerOptions": [
+              {
+                "answerText": "doğru",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "yanlış",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "Bir geliştirici hatalı kodu düzeltmek için ne yapar?",
+            "answerOptions": [
+              {
+                "answerText": "Sözdizimi vurgulama",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Hata ayıklama",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "Kod formatlama",
+                "isCorrect": "false"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
