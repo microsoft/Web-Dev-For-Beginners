@@ -38,3 +38,22 @@ let studentsWhoPass = [];
 | Criteria | Exemplary                      | Adequate                      | Needs Improvement               |
 | -------- | ------------------------------ | ----------------------------- | ------------------------------- |
 |          | Complete solution is presented | Partial solution is presented | Solution with bugs is presented |
+
+
+
+
+let allStudents = ["A", "B-", 1, 4, 5, 2, 5];
+let studentWhoPass = [];
+
+
+for (let i=0; i<allStudents.length; i++) 
+{
+   if (typeof allStudents[i]=='number' && allStudents[i]>=3)
+   studentWhoPass.push(allStudents[i])
+   else {
+    if (typeof allStudents[i]=='string' && allStudents[i]!="C-")
+    studentWhoPass.push(allStudents[i])
+   } 
+   
+}
+console.log(studentWhoPass);
