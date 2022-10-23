@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Display Time On Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <!-- <img src="sunset-2501729_1280.png"> -->
+        <h1 id="current-time"></h1>
+        <div class="quotes">
+            <p>TODAY'S QUOTES</p>
+            <h2>Success doesn’t come to you, you go to it.</h2>
+        </div>
+    </div>
+    <script>
+        let time = document.getElementById("current-time");
+        
+        setInterval(() =>{    
+        let d = new Date();
+        time.innerHTML = d.toLocaleTimeString();
+    },1000 )
+
+    </script>
+    </body>
+</html>
