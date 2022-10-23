@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    display: inline-block;
+    font-size: 18px;
+    padding: 24px 70px;
+    background: #ff1876;
+    color: #fff;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    transition: box-shadow 0.25s;
+    z-index: 2;
+}
+.btn:active{
+    background: #d80972;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.btn span{
+    background: #ff1876;
+    border: 1px solid #ff1876;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    transform: scale(0);
+}
+.btn span:nth-child(1){
+    top: -20%;
+    left: -10%;
+}
+.btn span:nth-child(2){
+    top: -130%;
+    left: 0;
+}
+.btn span:nth-child(3){
+    top: -50%;
+    left: 10%;
+    background: transparent;
+}
+.btn span:nth-child(5){
+    top: -90%;
+    left: 28%;
+}
+.btn span:nth-child(6){
+    top: -70%;
+    left: 42%;
+}
+.btn span:nth-child(7){
+    top: -90%;
+    left: 28%;
+    background: transparent;
+}
+.btn span:nth-child(8){
+    top: -50%;
+    left: 70%;
+}
+.btn span:nth-child(9){
+    top: -120%;
+    left: 80%;
+}
+.btn span:nth-child(10){
+    top: -70%;
+    left: 90%;
+}
+.btn span:nth-child(11){
+    top: -80%;
+    left: 100%;
+    background: transparent;
+}
+.btn span:nth-child(12){
+    top: -50%;
+    left: 110%;
+}
+.btn span:nth-child(13){
+    top: 40%;
+    left: -20%;
+}
+.btn span:nth-child(14){
+    top: 60%;
+    left: 120%;
+    background: transparent;
+}
+.btn span:nth-child(15){
+    top: 160%;
+    left: -10%;
+}
+.btn span:nth-child(16){
+    top: 120%;
+    left: 5%;
+    background: transparent;
+}
+.btn span:nth-child(17){
+    top: 180%;
+    left: 10%;
+}
+.btn span:nth-child(18){
+    top: 130%;
+    left: 20%;
+}
+.btn span:nth-child(19){
+    top: 180%;
+    left: 33%;
+    background: transparent;
+}
+.btn span:nth-child(20){
+    top: 180%;
+    left: 55%;
+}
+.btn span:nth-child(21){
+    top: 160%;
+    left: 75%;
+}
+.btn span:nth-child(22){
+    top: 130%;
+    left: 88%;
+    background: transparent;
+}
+.btn span:nth-child(23){
+    top: 140%;
+    left: 100%;
+}
+.btn span:nth-child(24){
+    top: 190%;
+    left: 120%;
+}
+/* 
+.anim{
+    animation: moving 0.5s linear reverse forwards;
+}
+@keyframes moving{
+    0%{
+        transform: scale(0);
+    }
+    10%{
+        transform: scale(1);
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+    }
+} */

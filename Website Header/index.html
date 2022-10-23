@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animated Click Effect</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="hero">
+            <button class="btn" id="btn">Click Here
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <script>
+            let btn = document.getElementById("btn");
+            let span = document.getElementByTagName("span");
+
+
+            btn.onclick = function(){
+                for(span of spans){
+                    span.classList.add("anim");
+                }
+                setTimeout(function(){for(span of spans){
+                    span.classList.add("anim");
+                }
+            },5000)
+            }
+        </script>
+    </body>
+</html>
