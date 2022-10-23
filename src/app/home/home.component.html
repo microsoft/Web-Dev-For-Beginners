@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="d-flex flex-row justify-content-between mb-3 container">
+        <h5 class="m-0 py-2">Contacts</h5>
+        <button class="btn btn-primary btn-sm py-0 px-4" (click)="addContact()">
+            <i class="fas fa-plus fa-sm"></i> Add Contact
+        </button>
+    </div>
+    <div class="container input-group form-group my-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text py-3" id="basic-addon1">
+                <span class="fas fa-search fa-lg"></span>
+            </span>
+          </div>
+        <input type="text" name="search" [(ngModel)]="test" class="form-control" placeholder="Search for contact by name..">
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    </div>
+    <div class="container">
+        <ul class="list-group" *ngFor="let contact of contactList | filter:test">
+            <li class="list-group-item d-flex flex-row justify-content-between align-items-center">
+                <div>
+                    <h5 class="m-0 pb-2">
+                        {{contact.firstName | titlecase}} {{contact.lastName | titleCase}}
+                    </h5>
+                    <p class="text-muted m-0">
+                        <i class="fas fa-phone-alt"></i> {{contact.phoneNumber}}
+                    </p>
+                </div>
+                <div>
+                    <button class="btn btn-success btn-sm mx-2" (click)="editContact(contact)">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="btn btn-danger btn-sm" (click)="deleteContact(contact)">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>   
+</div>
+

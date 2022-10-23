@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Add Contact</h2>
+    <form [formGroup]="addContactForm" (ngSubmit)="onSubmit()">
+        <div class="form-group my-2">
+            <label for="firstName">First Name:</label>
+            <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+            <div *ngIf="submitted && addContactForm.controls.firstName.errors" class="error">
+                <div class="text-danger" *ngIf="addContactForm.controls.firstName.errors.required">
+                    FirstName is required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group my-2">
+            <label for="lastName">Last Name:</label>
+            <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+            <div *ngIf="submitted && addContactForm.controls.lastName.errors" class="error">
+                <div class="text-danger" *ngIf="addContactForm.controls.lastName.errors.required">
+                    LastName is required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group my-2 mb-3">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" formControlName="phoneNumber" placeholder="Phone Number" name="phoneNumber" class="form-control" id="phoneNumber">
+            <div *ngIf="submitted && addContactForm.controls.phoneNumber.errors" class="error">
+                <div class="text-danger" *ngIf="addContactForm.controls.phoneNumber.errors.required">
+                    Phone is required
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <button class="btn btn-success">Save</button>
+            <button class="btn btn-danger mx-5" type="reset">Cancel</button>
+            <a class="btn btn-warning" href="/">Back to List</a>
+        </div>
+  </form>
+</div>
