@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: url("images(1).jpg");
+    background-color: cornsilk;
+}
+navbar{
+    background-color: darkcyan;
+}
