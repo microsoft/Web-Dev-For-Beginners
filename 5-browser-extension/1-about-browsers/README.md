@@ -67,7 +67,7 @@ CO2 Signal's API.
 - [an API key](https://www.co2signal.com/); enter your email in the box on this page and one will be sent to you
 - the [code for your region](http://api.electricitymap.org/v3/zones) corresponding to the [Electricity Map](https://www.electricitymap.org/map) (in Boston, for example, I use 'US-NEISO').
 - the [starter code](../start). Download the `start` folder; you will be completing code in this folder.
-- [NPM](https://www.npmjs.com) - NPM is a package management tool; install it locally and the packages listed in you `package.json` file will be installed for use by your web asset
+- [NPM](https://www.npmjs.com) - NPM is a package management tool; install it locally and the packages listed in your `package.json` file will be installed for use by your web asset
 
 ✅ Learn more about package management in this [excellent Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
