@@ -4,10 +4,10 @@
 
 ### विषय
 
-1. [वेरिएबल्स और डेटा प्रकार](../1-data-types/README.hi.md)
-2. [फंक्शंस और मेथड्स](../2-functions-methods/README.hi.md)
-3. [जावास्क्रिप्ट के साथ निर्णय करना](../3-making-decisions/README.hi.md)
-4. [अर्रेंज और लूप्स ](../4-arrays-loops/README.hi.md)
+1. [वेरिएबल्स और डेटा प्रकार](../1-data-types/translations/README.hi.md) 
+2. [फंक्शंस और मेथड्स](../2-functions-methods/translations/README.hi.md)
+3. [जावास्क्रिप्ट के साथ निर्णय करना](../3-making-decisions/translations/README.hi.md)
+4. [अर्रेंज और लूप्स ](../4-arrays-loops/translations/README.hi.md)
 
 ### आभार सूची
 
