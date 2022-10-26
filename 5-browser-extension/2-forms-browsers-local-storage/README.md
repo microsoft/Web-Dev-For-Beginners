@@ -6,13 +6,13 @@
 
 ### Introduction
 
-In this lesson, you'll call an API by submitting your browser extension's form and display the results in your browser extension. In addition, you'll learn about how you can store data in your browser's local storage for future reference and use.
+In this lesson, you'll call an API by submitting your browser extension's form and displaying the results in your browser extension. In addition, you'll learn about how you can store data in your browser's local storage for future reference and use.
 
 ✅ Follow the numbered segments in the appropriate files to know where to place your code
 
 ### Set up the elements to manipulate in the extension:
 
-By this time you have built the HTML for the form and results `<div>` for your browser extension. From now on, you'll need to work in the `/src/index.js` file and building your extension bit by bit. Refer to the [previous lesson](../1-about-browsers/README.md) on getting your project set up and on the build process.
+By this time you have built the HTML for the form and results `<div>` for your browser extension. From now on, you'll need to work in the `/src/index.js` file and build your extension bit by bit. Refer to the [previous lesson](../1-about-browsers/README.md) on getting your project set up and on the build process.
 
 Working in your `index.js` file, start by creating some `const` variables to hold the values associated with various fields:
 
@@ -104,7 +104,7 @@ You set your APIKey to have a string value, for example, and you can see that it
 
 ✅ Think about situations where you would NOT want to store some data in LocalStorage. In general, placing API Keys in LocalStorage is a bad idea! Can you see why? In our case, since our app is purely for learning and will not be deployed to an app store, we will use this method.
 
-Notice that you use the Web API to manipulate LocalStorage, either by using `getItem()`, `setItem()` or `removeItem()`. It's widely supported across browsers.
+Notice that you use the Web API to manipulate LocalStorage, either by using `getItem()`, `setItem()`, or `removeItem()`. It's widely supported across browsers.
 
 Before building the `displayCarbonUsage()` function that is called in `init()`, let's build the functionality to handle the initial form submission.
 
@@ -139,13 +139,13 @@ This function sets a loading message to show while the API is called. At this po
 
 ### Display Carbon Usage
 
-Finally it's time to query the API!
+Finally, it's time to query the API!
 
-Before going further, we should discuss APIs. APIs, or [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), are a critical element of a web developer's toolbox. They provide standard ways for programs to interact and interface with each other. For example, if you are building a web site that needs to query a database, someone might have created an API for you to use. While there are many types of APIs, one of the most popular is a [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Before going further, we should discuss APIs. APIs, or [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), is a critical element of a web developer's toolbox. They provide standard ways for programs to interact and interface with each other. For example, if you are building a web site that needs to query a database, someone might have created an API for you to use. While there are many types of APIs, one of the most popular is a [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
 ✅ The term 'REST' stands for 'Representational State Transfer' and features using variously-configured URLs to fetch data. Do a little research on the various types of APIs available to developers. What format appeals to you?
 
-There are important things to note about this function. First notice the [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Writing your functions so that they run asynchronously means that they wait for an action, such as data being returned, to be completed before continuing.
+There are important things to note about this function. First, notice the [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Writing your functions so that they run asynchronously means that they wait for an action, such as data being returned, to be completed before continuing.
 
 Here's a quick video about `async`:
 
@@ -195,7 +195,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 This is a big function. What's going on here?
 
-- following best practices, you use an `async` keyword to make this function behave asynchronously. The function contains a `try/catch` block as it will return a promise when the API returns data. Because you don't have control over the speed that the API will respond (it may not respond at all!), you need to handle this uncertainty by call it asynchronously. 
+- following best practices, you use an `async` keyword to make this function behave asynchronously. The function contains a `try/catch` block as it will return a promise when the API returns data. Because you don't have control over the speed that the API will respond (it may not respond at all!), you need to handle this uncertainty by calling it asynchronously. 
 - you're querying the co2signal API to get your region's data, using your API Key. To use that key, you have to use a type of authentication in your header parameters.
 - once the API responds, you assign various elements of its response data to the parts of your screen you set up to show this data.
 - if there's an error, or if there is no result, you show an error message.
@@ -216,7 +216,7 @@ We've discussed several types of API so far in these lessons. Choose a web API a
 
 ## Review & Self Study
 
-You learned about LocalStorage and APIs in this lesson, both very useful for the professional web developer. Can you think how these two things work together? Think about how you would architect a web site that would store items to be used by an API.
+You learned about LocalStorage and APIs in this lesson, both very useful for the professional web developer. Can you think about how these two things work together? Think about how you would architect a web site that would store items to be used by an API.
 
 ## Assignment
 
