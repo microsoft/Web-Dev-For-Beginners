@@ -36,6 +36,7 @@ Operators are used to evaluate conditions by making comparisons that will create
 | `>=`   | **Greater than or equal to**: Compares two values and returns the `true` Boolean data type if the value on the left side is larger than or equal to the right | `5 >= 6 // false`  |
 | `===`  | **Strict equality**: Compares two values and returns the `true` Boolean data type if values on the right and left are equal AND are the same data type.       | `5 === 6 // false` |
 | `!==`  | **Inequality**: Compares two values and returns the opposite Boolean value of what a strict equality operator would return                                    | `5 !== 6 // true`  |
+| `==`  | **equality**: Compares two values and returns the Boolean data type if values on both left and right are equal irrespective of data type | `'6' == 6 // true`  |
 
 ✅ Check your knowledge by writing some comparisons in your browser's console. Does any returned data surprise you?
 
