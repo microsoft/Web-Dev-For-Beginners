@@ -1,0 +1,181 @@
+/*css for home,about,departments,campus,election and contactus*/
+h4{
+    font-size: 50px;
+    text-align: center;
+
+}
+/*home*/
+
+.welcome-content{
+    font-size: 20px;
+    text-align:justify;
+}
+
+.scrollingcontent{
+margin-bottom: 50px;
+margin-top: 50px;
+   border-style: solid;
+   background-color:lightblue;
+   width: 900px;
+}
+.news{
+    background-color: darkslateblue;
+    color: ghostwhite;
+    padding: 10px;
+}
+.news-content{
+height:100px;
+color: red;
+}
+/*about*/
+
+.founderrow{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 50px;
+    
+
+}
+.founderimg{
+width:300px;
+height:400px;
+padding:30px;
+}
+.foundercolumn1,.foundercolumn2,.foundercolumn3{
+    text-align:justify;
+    background-color:lavender;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.ugcourse{
+    display: flex;
+    justify-content: center;
+}
+    
+.ug p{
+    
+    background-color: blue;
+    color: white;
+}
+.ugcourse div{
+    padding: 20px;
+}
+
+.company{
+    margin:20px;
+    height:100px;
+    width:500px;
+}
+/*departments*/
+.departments img{
+    width:300px;
+    height:300px;
+    padding:30px;
+}
+.cse, .eee ,.ece, .civil, .mech{
+display: flex;
+text-align: justify;
+font-size: 20px;
+border-style: solid;
+border-radius: 30px;
+margin: 20px;
+padding: 20px;
+}
+/*campus*/
+.gallery{
+
+    margin: 15px;
+
+}
+.gallery img{
+width:250px;
+height: 300px;padding: 10px;
+filter: grayscale(100);
+}
+.gallery img:hover{
+    filter: grayscale(0);
+    
+}
+.campus img{
+    width:300px;
+    height:300px;
+    padding:30px;
+}
+.college,.library,.auditorium,.hostel{
+    display: flex;
+    text-align: justify;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;  
+}
+
+/*election*/
+
+.president,.vicepresident{
+    display: flex;
+    justify-content:space-between;
+}
+
+.president img{
+    width:300px;
+    height:400px;
+    padding:30px;
+    }
+.ajith,.vijay,.suriya{
+        text-align:justify;
+        background-color: wheat;
+        font-size: 20px;
+        border-style: solid;
+        border-radius: 30px;
+        margin: 20px;
+        padding: 20px;
+        
+    }
+    .ajith:hover,.vijay:hover,.suriya:hover,.atharvaa:hover,.jyothika:hover,.harish:hover,.keerthi:hover{
+        background-color:skyblue;
+
+    }
+    .vicepresident img{
+        width:200px;
+        height:300px;
+        padding:20px;
+        }
+    .atharvaa,.jyothika,.harish,.keerthi{
+        text-align:justify;
+        background-color:wheat;
+        font-size: 20px;
+        border-style: solid;
+        border-radius: 30px;
+        margin: 10px;
+        padding: 10px;
+    }
+.vote{
+  margin: auto; width: 500px;
+  height:250px;background-color:skyblue;
+  padding: 20px;
+
+}
+.votepresident,.votevicepresident{
+    padding:10px;
+
+
+}
+#submit{
+    width:100%;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+
+
+/*contact us*/
+.location{
+    margin: 40px;
+    text-align: center;
+}

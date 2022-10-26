@@ -1,0 +1,223 @@
+/*css for adminlogin, student login and student registration form*/
+body{
+    margin: 50px;
+    font-family: sans-serif;   
+    
+}
+/*header*/
+.row1{
+    display: flex;
+    justify-content: space-between;
+}
+.column2 {
+    text-transform: uppercase;
+    text-align: center; 
+    color: navy;
+
+}
+h1{
+    
+    font-size: 65px;
+}
+.nav-links1 {
+    background-color: black;
+    text-align:center
+}
+
+.nav-links1 ul li {
+    text-transform: uppercase;
+    display: inline-flex;
+    list-style: none;
+    padding: 10px;
+margin:5px;
+width: 135px;
+   
+}
+
+.nav-links1 ul li a {
+    color: white;
+    text-decoration:none;
+
+    }
+
+.active, .nav-links1 ul li :hover{
+ background-color: orangered;
+}
+/*footer*/
+footer{
+    margin-top: 20px;
+    background-color:  navy;
+    padding: 35px;
+
+}
+.row2{
+    color: white;
+    display: flex;
+    justify-content:space-between;
+}
+h2{
+    margin-bottom: 40px;
+    padding: 5px;
+    font-size: 30px;
+    text-align:justify;
+    text-decoration:underline;
+    
+}
+.column3 div{
+    display: flex;
+    align-items:  center;
+
+}
+.fas{
+padding-right: 20px;
+}
+
+.nav-links2 ul li {
+list-style: none;
+margin-bottom: 10px;
+}
+.nav-links2 ul li a{
+ color:white;
+ text-decoration:none;
+
+}
+.nav-links2 ul li a:hover{
+    color:darkcyan;
+
+}
+.fab{
+    font-size: 40px;
+    padding: 15px;
+    color:dimgray;
+}
+
+.fab:hover{
+display:contents;
+color: white;
+
+    
+}
+
+.copyright{
+    text-align: center;
+    color: white;
+    
+}
+
+/*admin login,student login and student registration form*/
+
+.loginbody{
+    color: navy;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: rgb(216,214,214);
+    box-shadow: rgb(0,0,0) 0px 5px 15px;
+    width: 400px;
+}
+
+.headerstudent{
+    color: #fff;
+    text-align: center;
+    background-color: #2a0845;
+    padding: 20px 40px;
+    border-bottom: 2px solid #494848;
+}
+
+.form{
+    padding: 30px 40px;
+}
+
+.form-group{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input{
+    border: 2px solid #f0f0f0;
+    display: block;
+    border-radius: 4px;
+    font-size: .8rem;
+    width: 100%;
+    padding: 10px;
+}
+
+.form input::placeholder{
+    color: #2a0845;
+}
+
+.form-group i{
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    visibility: hidden;
+}
+
+.form-group span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bolder;
+    font-size: 1rem;
+    font-style: italic;
+    visibility: hidden;
+}
+
+
+.form-group.success input{
+    border-color: #2ecc71;
+}
+
+.form-group.error input{
+    border-color: #e74c3c;
+}
+
+.form-group.error span{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-group.success i.ion-ios-checkmark{
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.form-group.error i.ion-android-alert{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.form #submit{
+    background-color:coral;
+    border: none;
+    outline: none;
+    color:black;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.form #submit:hover{
+    background-color:lightyellow;
+}
+
+@media only screen and (max-width : 500px){
+    .form{
+        width: 100%;
+    }
+    .form-group span{
+        font-size: xx-small;
+    }
+}
