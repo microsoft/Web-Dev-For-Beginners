@@ -11,7 +11,7 @@ Tomar decisões e controlar a ordem do que é executado no seu código o torna r
 
 > 🎥 Clique na imagem acima para ver um video sobre tomada de decisões 
 
-> Você pode fazer essa aula em [Microsoft Learn](https://docs.microsoft.com/pt-br/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
+> Você pode fazer essa aula em [Microsoft Learn](https://docs.microsoft.com/pt-br/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Uma breve recapitulação sobre Booleanos
 

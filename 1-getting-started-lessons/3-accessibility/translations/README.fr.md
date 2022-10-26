@@ -12,7 +12,7 @@
 
 Cette citation met parfaitement l'accent sur l'importance de créer des sites Web accessibles. Une application qui ne peut pas être accessible par tous est par définition exclusionnaire. En tant que développeurs Web, nous devrions toujours avoir l'accessibilité à l'esprit. En ayant cet objectif dès le début, vous serez déjà bien lancé sur la façon de vous assurer que tout le monde peut accéder aux pages que vous créez. Dans cette leçon, vous découvrirez les outils pouvant vous aider à vous assurer que vos éléments Web sont accessibles et comment développer avec l'accessibilité à l'esprit. 
 
-> Vous pouvez accéder à cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility?WT.mc_id=academic-13441-cxa)!
+> Vous pouvez accéder à cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility?WT.mc_id=academic-77807-sagibbon)!
 
 ## Outils à utiliser
 
