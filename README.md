@@ -110,3 +110,7 @@ Our team produces other curricula! Check out:
 - [IoT for Beginners](https://aka.ms/iot-beginners/?WT.mc_id=academic-77807-sagibbon)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners/?WT.mc_id=academic-77807-sagibbon)
 - [AI for Beginners](https://aka.ms/ai-beginners/?WT.mc_id=academic-77807-sagibbon)
+
+## License
+
+This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
