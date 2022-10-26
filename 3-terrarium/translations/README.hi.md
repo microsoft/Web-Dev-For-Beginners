@@ -6,9 +6,9 @@
 
 # पाठ
 
-1. [एचटीएमएल का परिचय](../1-intro-to-html/README.hi.md)
-2. [सीएसएस का परिचय](../2-intro-to-css/README.hi.md)
-3. [डोम और जेएस क्लोजर का परिचय](../3-intro-to-DOM-and-closures/README.hi.md)
+1. [एचटीएमएल का परिचय](../1-intro-to-html/translations/README.hi.md)1-intro-to-htmlREADME.hi.md
+2. [सीएसएस का परिचय](../2-intro-to-css/translations/README.hi.md)
+3. [डोम और जेएस क्लोजर का परिचय](../3-intro-to-DOM-and-closures/translations/README.hi.md)
 
 ## आभार सूची
 
