@@ -26,7 +26,7 @@ U kunt uw terrarium op internet zetten of publiceren met Azure Static Web Apps.
 
 2. druk op deze knop
 
-[![Implementeer in Azure knop](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-13441-cxa#create/Microsoft.StaticApp)
+[![Implementeer in Azure knop](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-77807-sagibbon#create/Microsoft.StaticApp)
 
 3. Loop door de wizard om uw app te maken. Zorg ervoor dat u de app-root instelt op `/solution` of de root van uw codebase. Er zit geen API in deze app, dus maakt u geen zorgen om die toe te voegen. Er wordt een .github-map gemaakt in uw geforkte repo die Azure Static Web Apps helpt bij het bouwen van services en het publiceren van uw app naar een nieuwe URL.
 

@@ -124,7 +124,7 @@ GitHub 계정, (Visual Studio Code와 같은) 코드 에디터가 필요하며, 
    git push
    ```
 
-   > Tip, 추적하고 싶지 않은 파일이 GitHub에 표시되는 것을 방지하기 위해 `.gitignore` 파일을 채용할 수 있습니다. 동일한 폴더에 저장하지만 공개 저장소에는 존재하지 않는 노트 파일과 같습니다. `.gitignore` 파일의 템플릿은 [.gitignore templates](github.com/github/gitignore)에서 찾을 수 있습니다.
+   > Tip, 추적하고 싶지 않은 파일이 GitHub에 표시되는 것을 방지하기 위해 `.gitignore` 파일을 채용할 수 있습니다. 동일한 폴더에 저장하지만 공개 저장소에는 존재하지 않는 노트 파일과 같습니다. `.gitignore` 파일의 템플릿은 [.gitignore templates](https://github.com/github/gitignore)에서 찾을 수 있습니다.
 
 #### 커밋 메시지
 
