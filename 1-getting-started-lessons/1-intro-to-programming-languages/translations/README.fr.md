@@ -86,7 +86,7 @@ Il est possible que certaines instructions ne soient pas exécutées par un pér
 
 ✅ Vous en apprendrez plus sur ce type d'énoncé dans les leçons suivantes
 
-## Outils du métier
+## Outils métier
 
 [![Tools of the Trade](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
 
@@ -156,7 +156,7 @@ Les options de la ligne de commande varient en fonction du système d'exploitati
 - [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
 - [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-77807-sagibbon)
 
-#### Popular Command Line Tools
+#### Command Line Tools ( CLI ) populaires
 
 - [Git](https://git-scm.com/) (💻 sur la plupart des SE)
 - [NPM](https://www.npmjs.com/)
@@ -164,22 +164,22 @@ Les options de la ligne de commande varient en fonction du système d'exploitati
 
 ### Documentation
 
-Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tournera très probablement vers la documentation pour apprendre à l'utiliser. Les développeurs s'appuient souvent sur la documentation pour les guider dans la manière d'utiliser correctement les outils et les langages, et également pour acquérir une connaissance plus approfondie de son fonctionnement.
+Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tournera très probablement vers la documentation pour apprendre à l'utiliser. Les développeurs s'appuient souvent sur la documentation pour les guider pour utiliser correctement les outils et les langages, et également pour acquérir une connaissance plus approfondie de son fonctionnement.
 
-#### Documentation populaire sur le développement Web
+#### Documentations populaires sur le développement Web
 
 - [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), de Mozilla, éditeurs de [Firefox](https://www.mozilla.org/firefox/)
 - [Frontend Masters](https://frontendmasters.com/learn/)
 - [Web.dev](https://web.dev), de Google, éditeurs de [Chrome](https://www.google.com/chrome/)
 - [Documents de développeur de Microsoft](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), pour [Microsoft Edge](https://www.microsoft.com/edge)
 
-✅ Faites des recherches: maintenant que vous connaissez les bases de l'environnement d'un développeur Web, comparez-le et comparez-le à l'environnement d'un concepteur Web.
+✅ Faites des recherches: maintenant que vous connaissez les bases de l'environnement d'un développeur Web, comparez-le à l'environnement d'un concepteur Web.
 
 ---
 
 ## 🚀 Défi
 
-Comparez quelques langages de programmation. Quelles sont certaines des caractéristiques uniques de JavaScript par rapport à Java? Et COBOL vs Go?
+Comparez quelques langages de programmation. Quelles sont les caractéristiques uniques de JavaScript par rapport à Java? Et COBOL vs Go?
 
 ## Quiz de validation des connaissances
 [Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2?loc=fr)
