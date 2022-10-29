@@ -246,7 +246,7 @@ Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador y
 
 2. **Abre un Pull Request**. A continuación, abre un PR. Para hacerlo, navega al repositorio bifurcado en GitHub. Verás una indicación en GitHub donde te preguntarán si deseas crear un nuevo PR. Haz clic allí y te llevará a una interfaz donde puedes cambiar el título del mensaje de commit, asígnale una descripción más adecuada. Ahora, el mantenedor del repositorio que bifurcaste verá esta PR y _dedos cruzados_ valorarán y _fusionarán_ tu PR. Ahora eres un colaborador, ¡yay! :)
 
-3. **Limpiar**. Se considera una buena práctica _limpiar_ despuésde que tu PR fue combinada exitosamente. Limpia tanto tu rama local como la rama que enviaste a GitHub. Primero eliminémoslo localmente con el siguiente comando:
+3. **Limpiar**. Se considera una buena práctica "_limpiar_" después de que tu Pull Request fue combinado a la rama principal exitosamente. Limpia tanto tu rama local como la rama que enviaste a GitHub. Primero eliminémoslo localmente con el siguiente comando:
 
    ```bash
    git branch -d [branch-name]
