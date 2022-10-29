@@ -225,7 +225,7 @@ HTML 中还有一些狂野的'旧'标签，玩起来仍然很有趣。虽然[这
 
 HTML是 '久经考验的' 构建模块系统，它帮助构建了今天的 web 。通过研究一些旧的和新的标签来了解它的历史。你能找出为什么有些标签被弃用而有些被添加吗？未来可能引入哪些标签？
 
-要了解更多关于为 web 和移动设备建立网站的信息，请访问：[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa)。
+要了解更多关于为 web 和移动设备建立网站的信息，请访问：[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon)。
 
 
 ## 作业
