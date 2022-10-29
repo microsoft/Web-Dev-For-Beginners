@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Web Dev for Beginners</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"></head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>Dice Game</title>
+    <link rel="stylesheet" href="dice.css">
+</head>
+
 <body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: 'Web Development for Beginners: A Curriculum',
-      repo: 'https://github.com/microsoft/Web-Dev-For-Beginners',
-      relativePath: true,
-      auto2top: false,
-    }
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+	<div class="Cover">
+		<h1>READY TO WIN </h1>
+
+		<div class="dice">
+			<p class="Player1">Player 1</p>
+			<img class="img1" src="Dice6.jpg">
+		</div>
+
+		<div class="dice">
+			<p class="Player2">Player 2</p>
+			<img class="img2" src="Dice6.jpg">
+		</div>
+	</div>
+
+	<div class=" Cover bottom">
+		<button type="button" class="butn"
+			onClick="rollTheDice()">
+			Roll the Dice
+		</button>
+	</div>
+	<div class=" Cover bottom">
+		<button type="button" class="butn"
+			onClick="ChangeNames()">
+			Change Names
+		</button>
+	</div>
+    <script src="script.js"></script>
 </body>
+
 </html>

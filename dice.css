@@ -1,0 +1,55 @@
+
+	.Cover {
+		width: 70%;
+		margin: auto;
+		text-align: center;
+	}
+
+	.dice {
+		text-align: center;
+		display: inline-block;
+		margin: 10px;
+	}
+
+	body {
+		background-color: 	#3a3b5a;
+		margin: 0;
+	}
+
+	h1 {
+		margin: 30px;
+		font-family: "Lobster", cursive;
+		text-shadow: 5px 	#fffb00;
+		font-size: 4.5rem;
+		color:  	#ea00ff;
+		text-align: center;
+	}
+
+	p {
+		font-size: 2rem;
+		color: #4ecca3;
+		font-family: "Indie Flower", cursive;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.bottom {
+		padding-top: 20px;
+	}
+
+	.butn {
+		background: #4ecca3;
+		font-family: "Indie Flower", cursive;
+		border-radius: 7px;
+		color: #ffff;
+		font-size: 30px;
+		padding: 16px 25px 16px 25px;
+		text-decoration: none;
+	}
+
+	.butn:hover {
+		background: #232931;
+		text-decoration: none;
+	}
