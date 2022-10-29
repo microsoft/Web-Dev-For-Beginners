@@ -292,7 +292,7 @@ Los proyectos también pueden tener discusiones en foros, listas de correo o can
 
 ✅ Echa un vistazo a tu nuevo repositorio de GitHub y prueba algunas cosas, como editar la configuración, agregar información a tu repositorio y crear un proyecto (como un tablero Kanban). ¡Hay muchas cosas que puedes hacer!
 
-🚀 Desafío: Haz pareja con un amigo(a) para trabajar juntos en el código. Crea un proyecto de forma colaborativa, bifurca el código, crea ramas y combina los cambios.
+🚀 Desafío: Haz pareja con un amigo(a) para trabajar juntos en el código. Crea un proyecto de forma colaborativa, haz fork del proyecto, crea ramas y combina los cambios.
 
 ## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
