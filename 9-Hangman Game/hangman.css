@@ -1,0 +1,103 @@
+html,body { 
+    font-size: 1.2em;
+    font-family: 'Arvo', serif;
+    text-align: center;
+}
+
+a {
+    color: #000;
+    margin: 0.2em;
+    text-decoration: none;
+}
+
+#hangm_gameover, #hangm_victory {
+    font-size: 2em;
+}
+
+section#hangman {
+    height: 30.5em;
+    overflow: hidden;
+}
+
+#hangm {
+    text-align: center;
+}
+
+.h {
+    opacity: 0;
+}
+
+#hangm_animation {
+    height: 10em;
+    margin: 0 auto;
+    width: 11em;
+}
+
+#hangm_word, 
+#hangm_guesses {
+    letter-spacing: 1em;
+}
+
+.man_head {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px; 
+    background-color: #FFCC99;
+    position: relative;
+    bottom: 150px;
+    left: 112px;
+	/* width and height can be anything, as long as they're equal */
+}
+
+.man_upper {
+    background: #000066;
+    width: 40px;
+    height: 50px;
+    position: relative;
+    left: 112px;
+    bottom: 150px;
+}
+
+.man_lower {
+    background: #330099;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 117px;
+    bottom: 150px;
+}
+
+.pole_h {
+    background: #000;
+    width: 100px;
+    height: 8px;
+    position: relative;
+    left: 46px;
+}
+
+.pole_v {
+    width: 8px;
+    height: 150px;
+    background: #000;
+    left: 46px;
+    position: relative;
+}
+
+.pole_b {
+    border-color: transparent transparent #000000 transparent;
+    border-width: 0 50px 50px 50px;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    bottom: 10px;
+    position: relative;
+}
+
+.rope {
+    width: 6px;
+    height: 40px;
+    background-color: #996633;
+    position: relative;
+    bottom: 150px;
+    left: 130px;
+}
