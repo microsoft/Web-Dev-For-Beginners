@@ -12,7 +12,7 @@ Making decisions and controlling the order in which your code runs makes your co
 
 > 🎥 Click the image above for a video about making decisions.
 
-> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 ## A Brief Recap on Booleans
 
 Booleans can be only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.
@@ -45,7 +45,7 @@ The if statement will run code in between its blocks if the condition is true.
 
 ```javascript
 if (condition){
-    //Condition was true. Code in this block will run.
+    //Condition is true. Code in this block will run.
 }
 ```
 
@@ -56,7 +56,7 @@ let currentMoney;
 let laptopPrice;
 
 if (currentMoney >= laptopPrice){
-    //Condition was true. Code in this block will run.
+    //Condition is true. Code in this block will run.
     console.log("Getting a new laptop!");
 }
 ```
@@ -70,11 +70,11 @@ let currentMoney;
 let laptopPrice;
 
 if (currentMoney >= laptopPrice){
-    //Condition was true. Code in this block will run.
+    //Condition is true. Code in this block will run.
     console.log("Getting a new laptop!");
 }
 else{
-    //Condition was false. Code in this block will run.
+    //Condition is false. Code in this block will run.
     console.log("Can't afford a new laptop, yet!");
 }
 ```
@@ -101,11 +101,11 @@ let laptopPrice;
 let laptopDiscountPrice = laptopPrice - (laptopPrice * .20) //Laptop price at 20 percent off
 
 if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice){
-    //Condition was true. Code in this block will run.
+    //Condition is true. Code in this block will run.
     console.log("Getting a new laptop!");
 }
 else {
-    //Condition was true. Code in this block will run.
+    //Condition is true. Code in this block will run.
     console.log("Can't afford a new laptop, yet!");
 }
 ```

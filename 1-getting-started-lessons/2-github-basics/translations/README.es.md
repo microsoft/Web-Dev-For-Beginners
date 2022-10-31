@@ -244,9 +244,9 @@ Repasemos el flujo de trabajo de un colaborador. Supongamos que el colaborador y
 
    El comando anterior crea la rama en tu repositorio bifurcado.
 
-2. **Abre un PR**. A continuación, abre un PR. Para hacerlo, navega al repositorio bifurcado en GitHub. Verás una indicación en GitHub donde te preguntarán si deseas crear un nuevo PR. Haz clic allí y te llevará a una interfaz donde puedes cambiar el título del mensaje de commit, asignale una descripción más adecuada. Ahora, el mantenedor del repositorio que bifurcaste verá esta PR y _dedos cruzados_ valorarán y _fusionarán_ tu PR. Ahora eres un colaborador, yay :)
+2. **Abre un Pull Request**. A continuación, abre un PR. Para hacerlo, navega al repositorio bifurcado en GitHub. Verás una indicación en GitHub donde te preguntarán si deseas crear un nuevo PR. Haz clic allí y te llevará a una interfaz donde puedes cambiar el título del mensaje de commit, asígnale una descripción más adecuada. Ahora, el mantenedor del repositorio que bifurcaste verá esta PR y _dedos cruzados_ valorarán y _fusionarán_ tu PR. Ahora eres un colaborador, ¡yay! :)
 
-3. **Limpiar**. Se considera una buena práctica _limpiar_ despuésde que tu PR fue combinada exitosamente. Limpia tanto tu rama local como la rama que enviaste a GitHub. Primero eliminémoslo localmente con el siguiente comando:
+3. **Limpiar**. Se considera una buena práctica "_limpiar_" después de que tu Pull Request fue combinado a la rama principal exitosamente. Limpia tanto tu rama local como la rama que enviaste a GitHub. Primero eliminémoslo localmente con el siguiente comando:
 
    ```bash
    git branch -d [branch-name]
@@ -292,7 +292,7 @@ Los proyectos también pueden tener discusiones en foros, listas de correo o can
 
 ✅ Echa un vistazo a tu nuevo repositorio de GitHub y prueba algunas cosas, como editar la configuración, agregar información a tu repositorio y crear un proyecto (como un tablero Kanban). ¡Hay muchas cosas que puedes hacer!
 
-🚀 Desafío: Haz pareja con un amigo(a) para trabajar juntos en el código. Crea un proyecto de forma colaborativa, bifurca el código, crea ramas y combina los cambios.
+🚀 Desafío: Haz pareja con un amigo(a) para trabajar juntos en el código. Crea un proyecto de forma colaborativa, haz fork del proyecto, crea ramas y combina los cambios.
 
 ## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
