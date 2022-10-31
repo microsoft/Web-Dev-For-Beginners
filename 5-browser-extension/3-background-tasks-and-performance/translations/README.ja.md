@@ -22,7 +22,7 @@
 
 ![Edge profiler](../images/profiler.png)
 
-✅ Edge のパフォーマンスパネルの [Microsoft ドキュメント](https://docs.microsoft.com/ja-jp/microsoft-edge/edgehtml/?WT.mc_id=academic-13441-cxa) を参照してください。
+✅ Edge のパフォーマンスパネルの [Microsoft ドキュメント](https://docs.microsoft.com/ja-jp/microsoft-edge/edgehtml/?WT.mc_id=academic-77807-sagibbon) を参照してください。
 
 > ヒント: Web サイトの起動時間を正確に把握するには、ブラウザのキャッシュをクリアしてください。
 

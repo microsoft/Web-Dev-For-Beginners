@@ -68,7 +68,7 @@
 - [程式碼](../../start)，下載 `start` 資料夾，你需要修改裡面的程式碼檔案。
 - [NPM](https://www.npmjs.com)，NPM 是一套軟體包管理工具，在本地安裝的軟體包會被列在 `package.json` 檔案中，成為網頁利用的資源。
 
-✅ 從[這個優質的學習套件](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)中，學習更多關於軟體包管理。
+✅ 從[這個優質的學習套件](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)中，學習更多關於軟體包管理。
 
 花點時間看一下程式檔案結構
 

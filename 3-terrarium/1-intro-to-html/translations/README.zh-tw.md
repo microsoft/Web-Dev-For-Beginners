@@ -223,7 +223,7 @@ HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[
 
 HTML 是一種「行之有效」的構築系統，建立了現今的各種網頁。從標籤來學習關於 HTML 的歷史，你能了解為什麼有的標籤被排除，而有的被新增上去嗎？有什麼標籤會在未來被建立上去呢？
 
-學習更多關於建立網頁的資訊：[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa)。
+學習更多關於建立網頁的資訊：[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon)。
 
 
 ## 作業
