@@ -12,7 +12,7 @@
 
 # Web Development for Beginners - A Curriculum
 
-Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson curriculum all about JavaScript, CSS, and HTML basics. Each lesson includes pre- and post-lesson quizzes, written instructions to complete the lesson, a solution, an assignment and more. Our project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
+The Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson curriculum all about JavaScript, CSS, and HTML basics. Each lesson includes pre- and post-lesson quizzes, written instructions to complete the lesson, a solution, an assignment and more. Our project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
 
 **Hearty thanks to our authors Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, and sketchnote artist Tomomi Imura!**
 
@@ -20,14 +20,14 @@ Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson cur
 
 Get started with the following resources:
 
-- [Student Hub page](https://docs.microsoft.com/en-gb/learn/student-hub?WT.mc_id=academic-13441-cxa) In this page, you will find beginner resources, Student packs and even ways to get a free cert voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
+- [Student Hub page](https://docs.microsoft.com/en-gb/learn/student-hub?WT.mc_id=academic-13441-cxa) In this page, you will find beginner resources, student packs and even ways to get a free cert voucher. This is the page you'll want to bookmark and check from time to time as we switch out content monthly.
 - [Microsoft Student Learn ambassadors](https://studentambassadors.microsoft.com?WT.mc_id=academic-13441-cxa) Join a global community of student ambassadors. This could be your way into Microsoft
 
 # Getting Started
 
 > **Teachers**, we have [included some suggestions](for-teachers.md) on how to use this curriculum. We'd love your feedback [in our discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-> **[Students](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, to use this curriculum on your own, fork the entire repo and complete the exercises on your own, starting with a pre-lecture quiz, then reading the lecture and completing the rest of the activities. Try to create the projects by comprehending the lessons rather than copying the solution code; however, that code is available in the /solutions folders in each project-oriented lesson. Another idea would be to form a study group with friends and go through the content together. For further study, we recommend [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-77807-sagibbon) and by watching the videos mentioned below.
+> **[Students](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, to use this curriculum, fork the entire repo and complete the exercises on your own, starting with a pre-lecture quiz, then reading the lecture and completing the rest of the activities. Try to create the projects by comprehending the lessons rather than copying the solution code; however, that code is available in the /solutions folders in each project-oriented lesson. Another idea would be to form a study group with friends and go through the content together. For further study, we recommend [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-77807-sagibbon) and the videos mentioned below.
 
 [![Promo video](images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII)
 
@@ -37,7 +37,18 @@ Gif by [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
 
 ## Pedagogy
 
-We have chosen two pedagogical tenets while building this curriculum: ensuring that it is project-based and that it includes frequent quizzes. By the end of this series, students will have built a typing game, a virtual terrarium, a 'green' browser extension, a 'space invaders' type game, and a business-type banking app, and will have also learned the basics of JavaScript, HTML, and CSS along with the modern toolchain of today's web developer.
+We have chosen two pedagogical tenets while building this curriculum: 
+1. Ensuring that it is project-based and 
+2. That it includes frequent quizzes
+
+By the end of this series, students will have built:
+- a typing game
+- a virtual terrarium
+- a 'green' browser extension
+- a 'space invaders' type game
+- and a business-type banking app
+
+and will have learned the basics of JavaScript, HTML, and CSS along with the modern toolchain of today's web developer.
 
 > 🎓 You can take the first few lessons in this curriculum as a [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101?WT.mc_id=academic-77807-sagibbon) on Microsoft Learn!
 
