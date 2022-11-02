@@ -76,6 +76,8 @@ The `for` loop requires 3 parts to iterate:
 - `counter` A variable that is typically initialized with a number that counts the number of iterations
 - `condition` Expression that uses comparison operators to cause the loop to stop when `false`
 - `iteration-expression` Runs at the end of each iteration, typically used to change the counter value
+
+✅ Note: All the above mentioned three parts are optional you can skip any of them or all of them to get different results.
   
 ```javascript
 // Counting up to 10
