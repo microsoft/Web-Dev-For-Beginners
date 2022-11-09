@@ -1,0 +1,73 @@
+/* Created by Tharindu Yehan */
+
+body,button,#freqText,#audioControls{
+    font-family: 'Zen Dots', cursive;
+    }
+    #presets{
+        width:100%;
+        border:2px solid black;
+    }
+    
+    h3{
+        color:white;
+        text-align:center;
+    }
+    yl{
+        color:#ffc400ff;
+    }
+    #freqText{
+        text-align:center;
+        width:60%;
+        border-color:none;
+        border-radius:0;
+        display:block ;
+      margin-left: auto;
+      margin-right: auto;
+      font-size:30px;
+      background-color:#23272bff
+    }
+    body {
+        background-color:#303030;
+        vertical-align:center;
+        
+    }
+    #toggle{
+        font-size:45px;
+    }
+    
+    input{
+        border:none;
+        color:#ffc400ff;
+        background-color:#303030;
+        font-size:18px;
+        
+    }
+    input:hover{
+        background-color:#23272bff;
+        transition:.8;
+    }
+    #audioControls{
+        display:flex;
+        justify-content: space-between;
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #p,#m{
+        font-size:25px;
+    }
+    button{
+        width:80%;
+        color:cyan;
+        background-color:#303030;
+        height:30px;
+        font-size:auto ;
+        border:solid #00e16fff 3px;
+        display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button:hover{
+        border-color:#ffc400ff;
+        transition:.5s;
+    }
