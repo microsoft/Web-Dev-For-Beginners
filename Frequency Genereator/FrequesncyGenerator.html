@@ -1,0 +1,113 @@
+<!-- Created by Tharindu Yehan -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+</script>
+<link rel="stylesheet" type="text/css" href="FrequencyGenerator.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Frequency Generator</title>
+
+<script>
+
+var context = null;
+var usingWebAudio = true;
+if (typeof AudioContext !== 'undefined') {
+  context = new AudioContext();
+} else if (typeof webkitAudioContext !== 'undefined') {
+  context = new webkitAudioContext();
+} else {
+  usingWebAudio = false;
+}
+
+var playing = false;
+var osc = null;
+var freq = 202;
+
+
+function toggle() {
+  var button = document.getElementById("toggle");
+  if (playing && osc) {
+    playing = false;
+    osc.stop(0);
+    button.value = "▶️";
+  } else {
+    playing = true;
+    osc = context.createOscillator();
+    osc.connect(context.destination);
+    osc.frequency.value = freq;
+    osc.start(0);
+    button.value = "⏸️";
+  }
+}
+
+
+ 
+function updateFreq(newFreq) {
+  freq = newFreq;
+  if (osc) {
+    osc.frequency.value = freq;
+  }
+  var text = document.getElementById("freqText").value = freq;
+  
+ if (text > 20000) {
+ document.getElementById("freqText").value = 202;
+     alert("Please Enter value Between 1 to 20000 Hz")
+ }document.getElementById('water').onclick = function (){
+      document.getElementById('freqText').value="165";
+    osc.frequency.value = "165";
+
+  }
+  document.getElementById('memry').onclick = function (){
+     alert("Use Headphones for Better Results"); document.getElementById('freqText').value="40";
+      
+    osc.frequency.value = "40";
+    
+
+  }
+}
+
+window.onload = function() {
+  if (!usingWebAudio) {
+    document.getElementById("audioControls").innerHTML = "<p>Web audio required.</p>"
+  }
+}
+
+</script>
+</head>
+
+<body onload="script()" >
+<h3><yl>Frequency</yl> Generator <span>Hz</span></h3>
+<form>
+<input id="freqText" type="number" value="202" min="0" maxlengh="5" onchange="updateFreq(this.value)"/>
+</form>
+<br />
+  <div id="audioControls">
+  <input id="om"type="button" value="÷2" onclick="updateFreq(freq / 2)"/>
+  <input id="m"type="button" value="-1" onclick="updateFreq(freq - 1)"/>
+     <input id="toggle" type="button" value="▶️" onclick="toggle()"/>
+    <input id="p" type="button" value="+1" onclick="updateFreq(freq + 1)"/>
+    <input id="op" type="button" value="×2" onclick="updateFreq(freq * 2)"/>
+    <br>
+</div>
+<br />
+<div id="presets">
+<h1 style="color:white;"><u>Presets</u></h1>
+
+   <button id="water" onclick="updateFreq(newFreq = 165)" > Speaker Water Remover</button>
+   <br />
+   <button id="memry" onclick="updateFreq(newFreq = 40)">Memory Stimulation</button>
+    <br>
+
+   </div>
+   <div id="frequency">
+   </div>
+ <script src="https://dl.dropbox.com/s/kymfk6mlusd3npt/frequency.js?dl=0">
+</script>
+</body>
+</html>
