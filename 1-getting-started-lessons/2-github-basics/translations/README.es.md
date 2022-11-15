@@ -11,7 +11,7 @@ Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar
 
 En esta lección, cubriremos:
 
-- Seguimiento de trabajo que se realiza en su maquina.
+- Seguimiento de trabajo que se realiza en su máquina.
 - Trabajar en proyectos con otros.
 - Cómo contribuir al software de código abierto (Open Source)
 
@@ -27,11 +27,11 @@ Si Git no está instalado, [descargue Git desde aquí](https://git-scm.com/downl
 Para comprobar si Git ya está configurado, escribe:
 `git config --list`
 
-También necesitarás una cuenta de GitHub, un editor de código (como Visual Studio Code) una terminal (tambien conocida como linea de comandos o simbolo del sistema).
+También necesitarás una cuenta de GitHub, un editor de código (como Visual Studio Code) una terminal (también conocida como línea de comandos o símbolo del sistema).
 
 Ve a [GitHub.com](https://github.com/) y crea una cuenta si aún no lo has hecho, o inicia sesión y completa tu perfil.
 
-✅ GitHub no es el único lugar para almacenar codigo; hay otros, pero GitHub es el más conocido.
+✅ GitHub no es el único lugar para almacenar código; hay otros, pero GitHub es el más conocido.
 
 ### Preparación
 
@@ -113,7 +113,7 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
    git reset [nombre del archivo o carpeta]
    ```
 
-  Este comando nos ayuda a eliminar un archivo/directorio puntual, para que este no sea enviado en el proximo commit.
+  Este comando nos ayuda a eliminar un archivo/directorio puntual, para que éste no sea enviado en el próximo commit.
 
 
 1. **Persistir en tu trabajo**. En este punto, has agregado los archivos a lo que se denomina _stagin area_. Un lugar donde Git rastrea tus archivos. Para que el cambio sea permanente, debes realizar un _commit_. Para hacerlo, utilizas el siguiente commando `git commit`. Un _commit_ representa un punto en el historial de tu repositorio que estás guardando, este viene acompañado de un mensaje, el cual nos sirve para saber que cambios se hicieron dentro de ese commit. Ejecuta el siguiente comando para realizar tu primer commit.
@@ -158,7 +158,7 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
 
 Una buena línea de asunto (subject line), completa la siguiente frase: "Si se aplica, este commit hará..."
 
-Para el asunto use el imperativo, tiempo presente: "cambiar" no "cambió" ni "cambiara".
+Para el asunto use el imperativo, tiempo presente: "cambiar" no "cambió" ni "cambiará".
 Como en el asunto, en el cuerpo (opcional) también use el presente imperativo. El cuerpo debe incluir el motivo del cambio y contrastarlo con el funcionamiento previo. Estás explicando el "por qué", no el "cómo".
 
 ✅ Tómate unos minutos para navegar por GitHub. ¿Puedes encontrar un mensaje de commit realmente bueno? ¿Puedes hallar uno aún más simple? ¿Qué información crees que es la más importante y útil de transmitir en un mensaje de commit?
@@ -191,7 +191,7 @@ Los documentos de contribución ayudan a las personas a contribuir al proyecto. 
 1. **Bifurcando (forking) tu repositorio** Probablemente querrás que la gente _bifurque_ (fork) tu proyecto. Bifurcar significa crear una réplica de tu repositorio en su perfil de GitHub.
 1. **Clonar**. Desde allí, clonarán el proyecto en su máquina local.
 1. **Crear una rama**. Querrás pedirles que creen una _rama_ para su trabajo.
-1. **Concentre su cambio en un área**. Pida a los colaboradores que concentren sus contribuciones en una cosa a la vez; de esa manera, las posibilidades de _fusionar_ su trabajo son mayores. Imagínate que escriben una corrección de errores, agregan una nueva función y actualizan varias pruebas; ¿qué sucede si quieres todos los cambios o solo puedes implementar 2 de 3 o 1 de 3 cambios?
+1. **Concentre su cambio en un área**. Pida a los colaboradores que concentren sus contribuciones en una cosa a la vez; de esa manera, las posibilidades de _fusionar_ su trabajo son mayores. Imagínate que escriben una corrección de errores, agregan una nueva función y actualizan varias pruebas; ¿qué sucede si quieres todos los cambios o solo puedes implementar 2 de 3 ó 1 de 3 cambios?
 
 ✅ Imagínate una situación en la que las ramas (branches) de git son particularmente críticas para escribir y enviar buen código. ¿Qué casos de uso se te ocurren?
 
