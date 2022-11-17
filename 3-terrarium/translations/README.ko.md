@@ -26,6 +26,6 @@ Azure Static Web Apps를 사용하여 terrarium을 웹에 배포하거나 게시
 
 2. 버튼을 누릅니다
 
-[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-13441-cxa#create/Microsoft.StaticApp)
+[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-77807-sagibbon#create/Microsoft.StaticApp)
 
 3. 앱을 만드는 마법사로 안내합니다. 앱 상위를 `/solution` 또는 코드베이스의 상위로 설정했는지 확인하십시오. 이 앱에는 API가 없으므로 추가할 필요가 없습니다. Azure Static Web Apps의 빌드 서비스로 빌드하고 새 URL에 앱을 게시하는 데 도움이 되는 포크 리포지토리에 .github 폴더가 생성됩니다.

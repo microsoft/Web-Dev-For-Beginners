@@ -69,7 +69,7 @@ CO2 सिग्नल की एपीआई।
 - [स्टार्टर कोड](../start)। `start` फ़ोल्डर डाउनलोड करें; आप इस फ़ोल्डर में कोड पूरा कर लेंगे।
 - [एनपीएम](https://www.npmjs.com) -एनपीएम एक पैकेज प्रबंधन उपकरण है; इसे स्थानीय रूप से स्थापित करें और आपके वेब एसेट द्वारा उपयोग के लिए `package.json` फ़ाइल में सूचीबद्ध पैकेज इंस्टॉल किए जाएंगे
 
-✅ इस [उत्कृष्ट लर्न मॉड्यूल](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa) में पैकेज प्रबंधन के बारे में अधिक जानें
+✅ इस [उत्कृष्ट लर्न मॉड्यूल](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon) में पैकेज प्रबंधन के बारे में अधिक जानें
 
 कोडबेस के माध्यम से देखने के लिए एक मिनट लें:
 

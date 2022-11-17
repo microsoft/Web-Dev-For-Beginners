@@ -223,7 +223,7 @@ Existem algumas tags 'mais antigas' selvagens em HTML que ainda são divertidas 
 
 HTML é o sistema de blocos de construção 'testado e comprovado' que ajudou a construir a web no que ela é hoje. Aprenda um pouco sobre sua história estudando algumas tags antigas e novas. Você consegue descobrir por que algumas tags foram descontinuadas e outras adicionadas? Quais tags podem ser introduzidas no futuro?
 
-Saiba mais sobre como construir sites para a web e dispositivos móveis em [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa).
+Saiba mais sobre como construir sites para a web e dispositivos móveis em [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
 
 
 ## Atribuiçao

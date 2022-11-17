@@ -20,7 +20,7 @@ Similar to Readme's, please translate the assignments as well.
 
 **Quizzes**
 
-1. Add your translation to the quiz-app by adding a file here: https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/quiz-app/src/assets/translations, with proper naming convention (en.json, fr.json). **Please don't localize the words 'true' or 'false' however. thanks!**
+1. Add your translation to the quiz-app by adding a file [here](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/quiz-app/src/assets/translations), with proper naming convention (en.json, fr.json). **Please don't localize the words 'true' or 'false' however. thanks!**
 
 2. Add your language code to the dropdown in the quiz-app's App.vue file.
 

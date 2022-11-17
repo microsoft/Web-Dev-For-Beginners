@@ -255,7 +255,7 @@ Add a 'bubble' shine to the left bottom area of the jar to make it look more gla
 
 ![finished terrarium](./images/terrarium-final.png)
 
-To complete the post-lecture quiz, go through this Learn module: [Style your HTML app with CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
+To complete the post-lecture quiz, go through this Learn module: [Style your HTML app with CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-77807-sagibbon)
 
 ## Post-Lecture Quiz
 
