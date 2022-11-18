@@ -1,6 +1,6 @@
 # Aplicación bancaria
 
-> Solución de ejemplo para el proyecto de la aplicación bancaria, construida con HTML5 vanilla, CSS y JavaScript (sin marcos ni bibliotecas).
+> Solución de ejemplo para el proyecto de la aplicación bancaria, construida con HTML5 vanilla, CSS y JavaScript (sin entorno de trabajos ni bibliotecas).
 
 ## Ejecutando la aplicación
 
