@@ -50,7 +50,7 @@
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Documentación del Systema Operativo",
+								"answerText": "Documentación del Sistema Operativo",
 								"isCorrect": "false"
 							}
 						]
@@ -229,7 +229,7 @@
 				"title": "Lección 3: Creación de Páginas Web Accesibles: Cuestionario Previo a la Lección",
 				"quiz": [
 					{
-						"questionText": "¿Con que herramienta de navegador puedes verificar si un sitio web es accesible?",
+						"questionText": "¿Con qué herramienta de navegador puedes verificar si un sitio web es accesible?",
 						"answerOptions": [
 							{
 								"answerText": "Lighthouse",
@@ -703,7 +703,7 @@
 			},
 			{
 				"id": 14,
-				"title": "Lesson 7: JavaScript Básico - Matrices (array) y Bucles (Loops): Cuestionario Posterior a Lección",
+				"title": "Lección 7: JavaScript Básico - Matrices (array) y Bucles (Loops): Cuestionario Posterior a Lección",
 				"quiz": [
 					{
 						"questionText": "¿Qué parte de un 'for-loop' necesitarías modificar para incrementar tu iteración por 5?",
@@ -730,7 +730,7 @@
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Una declaración-while tiene un contador y una expresión de iteración, mientras que  una declaración-for (for loop) solo tiene una condición.",
+								"answerText": "Una declaración-while tiene un contador y una expresión de iteración, mientras que una declaración-for (for loop) solo tiene una condición.",
 								"isCorrect": "false"
 							},
 							{
@@ -972,7 +972,7 @@
 						]
 					},
 					{
-						"questionText": "El DOM es como un arbol.",
+						"questionText": "El DOM es como un árbol.",
 						"answerOptions": [
 							{
 								"answerText": "true",
@@ -1654,7 +1654,7 @@
 						]
 					},
 					{
-						"questionText": "You draw images onto a screen with an operation called:",
+						"questionText": "Dibujas imágenes en la pantalla con una operación llamada:",
 						"answerOptions": [
 							{
 								"answerText": "paintImage()",
@@ -1799,7 +1799,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Márqualo como muerto, solo pinta objetos no muertos la próxima vez que dibujes en la pantalla",
+								"answerText": "Marcarlo como muerto, solo pinta objetos no muertos la próxima vez que dibujes en la pantalla",
 								"isCorrect": "true"
 							},
 							{
@@ -2055,7 +2055,7 @@
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Muestre un mensaje adecuado, ofreziendo al jugador que reinicie y muestre qué tecla presionar para esa acción.",
+								"answerText": "Muestre un mensaje adecuado, ofreciendo al jugador que reinicie y muestre qué tecla presionar para esa acción.",
 								"isCorrect": "true"
 							}
 						]
