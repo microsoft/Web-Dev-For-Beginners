@@ -112,7 +112,7 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-TEl ciclo anterior se invoca cada `200` milisegundos para volver a dibujar el lienzo. Tiene la capacidad de elegir el mejor intervalo que tenga sentido para su juego.
+El ciclo anterior se invoca cada `200` milisegundos para volver a dibujar el lienzo. Tiene la capacidad de elegir el mejor intervalo que tenga sentido para su juego.
 
 ## Continuando con el juego espacial
 
