@@ -2,13 +2,13 @@
 ![JavaScript Basics - Functions](/sketchnotes/webdev101-js-functions.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-# Conceptos básicos de JavaScript: funcións y funciones
+# Conceptos básicos de JavaScript: función y funciones
 
-[![funcións y funciones](https://img.youtube.com/vi/DdCRhOQibMo/0.jpg)](https://youtube.com/watch?v=DdCRhOQibMo "funcións y funciones")
+[![función y funciones](https://img.youtube.com/vi/DdCRhOQibMo/0.jpg)](https://youtube.com/watch?v=DdCRhOQibMo "función y funciones")
 
 ## [Pre-lectura prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
 
-Cuando necesite su código para realizar una tarea, utilizará un función o una función. Analicemos las diferencias.
+Cuando necesite su código para realizar una tarea, utilizará una función. Analicemos las diferencias.
 
 ## Funciones
 
@@ -142,7 +142,7 @@ En el código anterior, se devuelve la variable `sum`.
 
 ### Invocación
 
-Cuando _invocas_ una función, la llamas con 0...N conjuntos de argumentos. Los valores de los argumentos se vinculan a los parámetros correspondientes a su posición. El función `add()` introducido se puede invocar de la siguiente manera:
+Cuando _invocas_ una función, la llamas con 0...N conjuntos de argumentos. Los valores de los argumentos se vinculan a los parámetros correspondientes a su posición. La función `add()` introducido se puede invocar de la siguiente manera:
 
 
 ```javascript
