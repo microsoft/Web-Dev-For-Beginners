@@ -5,7 +5,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz][Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/23?loc=ko)
+[Pre-lecture quiz][Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23?loc=ko)
 
 ### 소개
 
@@ -68,7 +68,7 @@
 - [starter code](../start). `start` 폴더를 다운로드하세요; 이 폴더에서 코드를 완성하게됩니다.
 - [NPM](https://www.npmjs.com) - NPM은 패키지 관리 도구입니다. 로컬에 설치하고 `package.json` 파일에 나열된 패키지를 웹 어셋에서 사용하도록 설치합니다.
 
-✅ 이 [excellent Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)에서 패키지 관리에 대해 자세히 알아보세요
+✅ 이 [excellent Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)에서 패키지 관리에 대해 자세히 알아보세요
 
 잠시 시간을 내어 코드베이스를 보세요:
 
@@ -149,7 +149,7 @@ npm install
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/24?loc=ko)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

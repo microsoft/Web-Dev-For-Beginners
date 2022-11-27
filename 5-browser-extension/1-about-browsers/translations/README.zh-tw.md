@@ -5,7 +5,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/23?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23?loc=zh_tw)
 
 ### 大綱
 
@@ -68,7 +68,7 @@
 - [程式碼](../../start)，下載 `start` 資料夾，你需要修改裡面的程式碼檔案。
 - [NPM](https://www.npmjs.com)，NPM 是一套軟體包管理工具，在本地安裝的軟體包會被列在 `package.json` 檔案中，成為網頁利用的資源。
 
-✅ 從[這個優質的學習套件](https://docs.microsoft.com/en-us/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)中，學習更多關於軟體包管理。
+✅ 從[這個優質的學習套件](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)中，學習更多關於軟體包管理。
 
 花點時間看一下程式檔案結構
 
@@ -149,13 +149,13 @@ npm install
 
 ## 課後測驗
 
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/24?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24?loc=zh_tw)
 
 ## 複習與自學
 
 這堂課中你學到了一些瀏覽器的歷史。趁這個機會閱讀更多它的歷史，學習網際網路的發明者是如何構思網路的應用。這邊有一些實用的網頁：
 
-[瀏覽器的歷史](https://www.mozilla.org/en-US/firefox/browsers/browser-history/)
+[瀏覽器的歷史](https://www.mozilla.org/firefox/browsers/browser-history/)
 
 [網路的歷史](https://webfoundation.org/about/vision/history-of-the-web/)
 

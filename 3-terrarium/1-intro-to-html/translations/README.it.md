@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15?loc=it)
 
 ### Introduzione
 
@@ -218,13 +218,13 @@ Ci sono alcuni "vecchi" selvaggi tag in HTML con cui è ancora divertente giocar
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16?loc=it)
 
 ## Revisione e Auto Apprendimento
 
 L'HTML è il sistema di blocchi costitutivi "collaudato e vero" che ha contribuito a trasformare il Web in quello che è oggi. Imparare un po' sulla sua storia studiando alcuni tag vecchi e nuovi. Si riusce a capire perché alcuni tag sono stati deprecati e altri aggiunti? Quali tag potrebbero essere introdotti in futuro?
 
-Ulteriori informazioni sulla creazione di siti per il Web e i dispositivi mobili in [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa).
+Ulteriori informazioni sulla creazione di siti per il Web e i dispositivi mobili in [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
 
 
 ## Compito

@@ -5,7 +5,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/19?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19?loc=ja)
 
 ### イントロダクション
 
@@ -201,7 +201,7 @@ function stopElementDrag() {
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/20?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20?loc=ja)
 
 ## 復習と自己学習
 

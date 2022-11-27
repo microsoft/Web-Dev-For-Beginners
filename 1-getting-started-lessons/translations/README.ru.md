@@ -4,8 +4,8 @@
 
 ### Темы
 
-1. [Введение в языки программирования и профессиональные инструменты](../1-intro-to-programming-languages/README.md)
-2. [Введение в GitHub](../2-github-basics/README.md)
+1. [Введение в языки программирования и профессиональные инструменты](../1-intro-to-programming-languages/translations/README.ru.md)
+2. [Введение в GitHub](../2-github-basics/translations/README.ru.md)
 3. [Основы доступности (Accessibility)](../3-accessibility/README.md)
 
 ### Авторы

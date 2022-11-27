@@ -6,11 +6,13 @@
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7?loc=id)
+[Kuis pra-Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7?loc=id)
 
 Pelajaran ini mencakup dasar-dasar JavaScript, bahasa yang menyediakan interaktivitas di web.
 
 [![Jenis data di JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Jenis data di JavaScript")
+
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
 
 Mari kita mulai dengan variabel dan tipe data yang mengisinya!
 
@@ -188,7 +190,7 @@ JavaScript terkenal karena cara yang mengejutkan dalam menangani tipe data pada 
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8?loc=id)
+[Kuis pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8?loc=id)
 
 ## Review & Belajar Mandiri
 

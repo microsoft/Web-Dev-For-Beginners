@@ -2,13 +2,13 @@
 
 ## 課前測驗
 
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/31?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31?loc=zh_tw)
 
 ## Canvas
 
 Canvas 是 HTML 中的元素，預設上不帶有任何內容，就如一塊白板。你需要自己彩繪上去。
 
-✅ 在 MDN 上閱讀[更多關於 Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)。
+✅ 在 MDN 上閱讀[更多關於 Canvas API](https://developer.mozilla.org/docs/Web/API/Canvas_API)。
 
 這是它典型的宣告方式，位在頁面的 body 中：
 
@@ -27,7 +27,7 @@ Canvas 是 HTML 中的元素，預設上不帶有任何內容，就如一塊白�
 Canvas 使用了笛卡爾座標系繪製圖案。因此有 x 軸與 y 軸來表達物件的所在地點。座標點 `0,0` 位在畫布的左上方；而右下方則是我們定義畫布的寬度與高度。
 
 ![畫布網格](../canvas_grid.png)
-> 圖片出自於 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+> 圖片出自於 [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 要在 Canvas 物件上繪製圖案，你需要執行下列步驟：
 
@@ -52,7 +52,7 @@ ctx.fillStyle = 'red';
 ctx.fillRect(0,0, 200, 200) // x,y,width, height
 ```
 
-✅ Canvas API 主要是處理 2D 圖形，但你也可以在網頁中繪製 3D 圖形。要完成這個需求，你可以使用 [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)。
+✅ Canvas API 主要是處理 2D 圖形，但你也可以在網頁中繪製 3D 圖形。要完成這個需求，你可以使用 [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API)。
 
 你可以使用 Canvas API 繪製出這些物件：
 
@@ -201,15 +201,15 @@ npm start
 
 ## 🚀 挑戰
 
-你已經學會繪製 2D 圖形的 Canvas API。看看 [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)，試著繪製 3D 物件。
+你已經學會繪製 2D 圖形的 Canvas API。看看 [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API)，試著繪製 3D 物件。
 
 ## 課後測驗
 
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/32?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32?loc=zh_tw)
 
 ## 複習與自學
 
-[閱讀更多資料](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)，學習更多有關 Canvas API 的用法。
+[閱讀更多資料](https://developer.mozilla.org/docs/Web/API/Canvas_API)，學習更多有關 Canvas API 的用法。
 
 ## 作業
 

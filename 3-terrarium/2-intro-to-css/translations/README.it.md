@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/17?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17?loc=it)
 
 ### Introduzione
 
@@ -248,11 +248,11 @@ Aggiungere una lucentezza a forma di bolla nell'area inferiore sinistra del bara
 
 ![terrario finito](../images/terrarium-final.png)
 
-Per completare il quiz post-lezione, seguire questo modulo di apprendimento: [Applicare uno stile al codice HTML con CSS](https://docs.microsoft.com/it-it/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
+Per completare il quiz post-lezione, seguire questo modulo di apprendimento: [Applicare uno stile al codice HTML con CSS](https://docs.microsoft.com/it-it/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-77807-sagibbon)
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/18?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18?loc=it)
 
 ## Revisione e Auto Apprendimento
 

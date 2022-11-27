@@ -2,7 +2,7 @@
 
 ## 簡介
 
-調查其中一項 DOM 的元素。造訪 MDN 關於 [DOM 介面的清單](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)挑選其中一項。在網路上找尋一個使用這項元素的網頁，並解釋如何使用它。
+調查其中一項 DOM 的元素。造訪 MDN 關於 [DOM 介面的清單](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)挑選其中一項。在網路上找尋一個使用這項元素的網頁，並解釋如何使用它。
 
 ## 學習評量
 

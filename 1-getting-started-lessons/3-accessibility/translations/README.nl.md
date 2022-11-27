@@ -4,7 +4,7 @@
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz voorafgaand aan de lezing
-[Quiz voorafgaand aan de lezing](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5)
+[Quiz voorafgaand aan de lezing](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
 
 > De kracht van het web zit in zijn universaliteit. Toegang voor iedereen, ongeacht hun handicap, is een essentieel aspect.
 >
@@ -30,7 +30,7 @@ Sommige browsers hebben ook ingebouwde tools en extensies die tekst hardop kunne
 
 ### Zoom
 
-Een ander hulpmiddel dat vaak wordt gebruikt door mensen met een visuele beperking, is zoomen. De meest basale manier van zoomen is statische zoom, bestuurd via `Control + plusteken (+)` of door de schermresolutie te verlagen. Dit type zoom zorgt ervoor dat het formaat van de hele pagina wordt aangepast, dus het gebruik van [responsive design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is belangrijk om een goede gebruikerservaring te bieden bij verhoogde zoomniveaus.
+Een ander hulpmiddel dat vaak wordt gebruikt door mensen met een visuele beperking, is zoomen. De meest basale manier van zoomen is statische zoom, bestuurd via `Control + plusteken (+)` of door de schermresolutie te verlagen. Dit type zoom zorgt ervoor dat het formaat van de hele pagina wordt aangepast, dus het gebruik van [responsive design](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) is belangrijk om een goede gebruikerservaring te bieden bij verhoogde zoomniveaus.
 
 Een ander type zoom is afhankelijk van gespecialiseerde software om een deel van het scherm te vergroten en te pannen, net zoals bij het gebruik van een echt vergrootglas. Op Windows is [Magnifier](https://support.microsoft.com/nl-nl/windows/vergrootglas-gebruiken-voor-een-betere-zichtbaarheid-op-het-scherm-414948ba-8b1c-d3bd-8615-0e5e32204198) ingebouwd en [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) is vergrotingssoftware van derden met meer functies en een groter gebruikersbestand. Zowel macOS als iOS hebben ingebouwde vergrotingssoftware genaamd [Zoom](https://www.apple.com/nl/accessibility/vision/).
 
@@ -123,7 +123,7 @@ Stelt u de volgende pagina voor:
 
 In dit voorbeeld is het zinvol om de tekst van de beschrijving en volgorde te dupliceren voor iemand die een browser gebruikt. Iemand die een schermlezer gebruikt, hoort echter alleen de woorden *beschrijving* en *volgorde* herhaald zonder context.
 
-Om dit soort scenario's te ondersteunen, ondersteunt HTML een set attributen die bekend staan als [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA). Met deze attributen kunt u aanvullende informatie verstrekken aan schermlezers.
+Om dit soort scenario's te ondersteunen, ondersteunt HTML een set attributen die bekend staan als [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA). Met deze attributen kunt u aanvullende informatie verstrekken aan schermlezers.
 
 > **OPMERKING**: Zoals veel aspecten van HTML, kan de ondersteuning van browser en schermlezer variëren. De meeste mainline-clients ondersteunen echter ARIA-attributen.
 
@@ -133,7 +133,7 @@ U kunt `aria-label` gebruiken om de link te beschrijven als het formaat van de p
 <a href="#" aria-label="Widget description">beschrijving</a>
 ```
 
-✅ Over het algemeen vervangt het gebruik van semantische opmaak zoals hierboven beschreven het gebruik van ARIA, maar soms is er geen semantisch equivalent voor verschillende HTML-widgets. Een goed voorbeeld is een boom. Er is geen HTML-equivalent voor een boomstructuur, dus identificeert u de generieke `<div>` voor dit element met een juiste rol en aria-waarden. De [MDN-documentatie over ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) bevat meer nuttige informatie.
+✅ Over het algemeen vervangt het gebruik van semantische opmaak zoals hierboven beschreven het gebruik van ARIA, maar soms is er geen semantisch equivalent voor verschillende HTML-widgets. Een goed voorbeeld is een boom. Er is geen HTML-equivalent voor een boomstructuur, dus identificeert u de generieke `<div>` voor dit element met een juiste rol en aria-waarden. De [MDN-documentatie over ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) bevat meer nuttige informatie.
 
 ```html
 <h2 id="tree-label">File Viewer</h2>
@@ -216,7 +216,7 @@ Neem deze HTML en herschrijf deze zodat deze zo toegankelijk mogelijk is, gezien
 ```
 
 ## Quiz na de lezing
-[Quiz na de lezing](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6)
+[Quiz na de lezing](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
 
 ## Beoordeling en zelfstudie
 

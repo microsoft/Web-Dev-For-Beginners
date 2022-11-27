@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/31?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31?loc=ja)
 
 ## Canvas
 
@@ -205,7 +205,7 @@ npm start
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/32?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32?loc=ja)
 
 ## 復習と自己学習
 

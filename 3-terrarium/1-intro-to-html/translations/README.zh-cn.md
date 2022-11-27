@@ -5,7 +5,7 @@
 
 ## 课前测试
 
-[课前测试](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=zh_cn)
+[课前测试](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15?loc=zh_cn)
 
 ### 介绍
 
@@ -48,13 +48,13 @@ HTML 文件的第一行就是文档类型声明。要将这一行内容放在文
 <html></html>
 ```
 
-✅ 通过设置带有查询字符串（query string）的 DocType 可以设定几种不同的模式：[怪异模式与标准模式](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)。这些模式用于支持现在非常不常用的古老浏览器(Netscape Navigator 4 和 Internet Explorer 5)。你仍可以使用标准的文档类型声明。
+✅ 通过设置带有查询字符串（query string）的 DocType 可以设定几种不同的模式：[怪异模式与标准模式](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)。这些模式用于支持现在非常不常用的古老浏览器(Netscape Navigator 4 和 Internet Explorer 5)。你仍可以使用标准的文档类型声明。
 
 ---
 
 ## 文档的 'head'（脑袋）
 
-HTML 文档中的 'head' 包含的区域有很多关于页面的重要信息，它也被称作[元数据(metadata)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)。在我们的例子中，我们告诉 web 服务器这个页面将依据哪些信息被发送进行渲染，主要是四种:
+HTML 文档中的 'head' 包含的区域有很多关于页面的重要信息，它也被称作[元数据(metadata)](https://developer.mozilla.org/docs/Web/HTML/Element/meta)。在我们的例子中，我们告诉 web 服务器这个页面将依据哪些信息被发送进行渲染，主要是四种:
 
 -   网页的标题
 -   网页的元数据，它包含：
@@ -215,17 +215,17 @@ HTML 文档中的 'head' 包含的区域有很多关于页面的重要信息，�
 
 ## 🚀 挑战
 
-HTML 中还有一些狂野的'旧'标签，玩起来仍然很有趣。虽然[这些标签](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Obsolete_and_deprecated_elements)不推荐你使用，但是，你还是可以试试，能否用 `<marquee>` 标签让 h1 标题文字变成纵向展示的吗？（如果你这么尝试了，不要忘了在后面移除它们）
+HTML 中还有一些狂野的'旧'标签，玩起来仍然很有趣。虽然[这些标签](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements)不推荐你使用，但是，你还是可以试试，能否用 `<marquee>` 标签让 h1 标题文字变成纵向展示的吗？（如果你这么尝试了，不要忘了在后面移除它们）
 
 ## 课后测试
 
-[课后测试](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=zh_cn)
+[课后测试](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16?loc=zh_cn)
 
 ## 复习 & 预习
 
 HTML是 '久经考验的' 构建模块系统，它帮助构建了今天的 web 。通过研究一些旧的和新的标签来了解它的历史。你能找出为什么有些标签被弃用而有些被添加吗？未来可能引入哪些标签？
 
-要了解更多关于为 web 和移动设备建立网站的信息，请访问：[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa)。
+要了解更多关于为 web 和移动设备建立网站的信息，请访问：[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon)。
 
 
 ## 作业

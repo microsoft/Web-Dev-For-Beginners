@@ -2,7 +2,7 @@
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/41?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41?loc=hi)
 
 ### परिचय
 
@@ -41,7 +41,7 @@
 - आपको स्क्रीन स्विच करते समय पूरे HTML को फिर से लोड करना होगा, जो धीमा हो सकता है।
 - विभिन्न स्क्रीन के बीच डेटा साझा करना मुश्किल है।
 
-एक अन्य दृष्टिकोण में केवल एक HTML फ़ाइल है, और `<template>` तत्व का उपयोग करके कई [HTML टेम्पलेट्स](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) को परिभाषित करें। एक टेम्पलेट एक पुन: प्रयोज्य HTML ब्लॉक है जो ब्राउज़र द्वारा प्रदर्शित नहीं किया जाता है, और जावास्क्रिप्ट का उपयोग करके रनटाइम पर तत्काल किया जाना चाहिए।
+एक अन्य दृष्टिकोण में केवल एक HTML फ़ाइल है, और `<template>` तत्व का उपयोग करके कई [HTML टेम्पलेट्स](https://developer.mozilla.org/docs/Web/HTML/Element/template) को परिभाषित करें। एक टेम्पलेट एक पुन: प्रयोज्य HTML ब्लॉक है जो ब्राउज़र द्वारा प्रदर्शित नहीं किया जाता है, और जावास्क्रिप्ट का उपयोग करके रनटाइम पर तत्काल किया जाना चाहिए।
 
 ### टास्क
 
@@ -106,9 +106,9 @@
 यदि आप अपनी वर्तमान HTML फ़ाइल को किसी ब्राउज़र में आज़माते हैं, तो आप देखेंगे कि यह `Loading...` को प्रदर्शित करता है। ऐसा इसलिए है क्योंकि हमें HTML टेम्प्लेट को इंस्टेंट करने और प्रदर्शित करने के लिए कुछ जावास्क्रिप्ट कोड जोड़ना होगा।
 
 एक टेम्पलेट को तत्काल बनाना आमतौर पर 3 चरणों में किया जाता है:
- 1. DOM में टेम्पलेट तत्व को पुनः प्राप्त करें, उदाहरण के लिए [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getEgetById) का उपयोग करके।
-2. टेम्पलेट तत्व को क्लोन करें, [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode) का उपयोग करके।
-3. इसे एक दृश्य तत्व के तहत DOM में संलग्न करें, उदाहरण के लिए [`appendChild`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) का उपयोग करके।
+ 1. DOM में टेम्पलेट तत्व को पुनः प्राप्त करें, उदाहरण के लिए [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getEgetById) का उपयोग करके।
+2. टेम्पलेट तत्व को क्लोन करें, [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode) का उपयोग करके।
+3. इसे एक दृश्य तत्व के तहत DOM में संलग्न करें, उदाहरण के लिए [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) का उपयोग करके।
 
 ✅ DOM को संलग्न करने से पहले हमें टेम्प्लेट को क्लोन करने की आवश्यकता क्यों है? आपको क्या लगता है कि अगर हम इस कदम को छोड़ देते तो क्या होता?
 
@@ -173,7 +173,7 @@ const routes = {
 };
 ```
 
-अब चलो `updateRoute` फ़ंक्शन को थोड़ा संशोधित करते हैं। एक तर्क के रूप में सीधे `templateId` पास करने के बजाय, हम पहले वर्तमान URL को देखकर इसे पुनः प्राप्त करना चाहते हैं, और फिर संबंधित टेम्पलेट आईडी मान प्राप्त करने के लिए हमारे मानचित्र का उपयोग करते हैं। URL से केवल पथ अनुभाग प्राप्त करने के लिए हम [`window.location.pathname`](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname) का उपयोग कर सकते हैं।
+अब चलो `updateRoute` फ़ंक्शन को थोड़ा संशोधित करते हैं। एक तर्क के रूप में सीधे `templateId` पास करने के बजाय, हम पहले वर्तमान URL को देखकर इसे पुनः प्राप्त करना चाहते हैं, और फिर संबंधित टेम्पलेट आईडी मान प्राप्त करने के लिए हमारे मानचित्र का उपयोग करते हैं। URL से केवल पथ अनुभाग प्राप्त करने के लिए हम [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) का उपयोग कर सकते हैं।
 
 ```js
 function updateRoute() {
@@ -201,9 +201,9 @@ function updateRoute() {
 
 हमने पहले ही `updateRoute` फ़ंक्शन के साथ दूसरे भाग का ध्यान रखा, इसलिए हमें यह पता लगाना होगा कि वर्तमान URL को कैसे अपडेट किया जाए।
 
-हमें जावास्क्रिप्ट और अधिक विशेष रूप से [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) का उपयोग करना होगा जो URL को अपडेट करने की अनुमति देता है HTML को पुनः लोड किए बिना, ब्राउज़िंग इतिहास में एक नई प्रविष्टि बनाएँ।
+हमें जावास्क्रिप्ट और अधिक विशेष रूप से [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) का उपयोग करना होगा जो URL को अपडेट करने की अनुमति देता है HTML को पुनः लोड किए बिना, ब्राउज़िंग इतिहास में एक नई प्रविष्टि बनाएँ।
 
-> नोट: जबकि HTML एंकर तत्व [`<a href>`] (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) का उपयोग हाइपरलिंक बनाने के लिए स्वयं किया जा सकता है विभिन्न यूआरएल, यह ब्राउज़र को डिफ़ॉल्ट रूप से HTML को फिर से लोड करेगा। क्लिक करें घटना पर preventDefault() फ़ंक्शन का उपयोग करके कस्टम जावास्क्रिप्ट के साथ रूटिंग को हैंडल करते समय इस व्यवहार को रोकना आवश्यक है।
+> नोट: जबकि HTML एंकर तत्व [`<a href>`] (https://developer.mozilla.org/docs/Web/HTML/Element/a) का उपयोग हाइपरलिंक बनाने के लिए स्वयं किया जा सकता है विभिन्न यूआरएल, यह ब्राउज़र को डिफ़ॉल्ट रूप से HTML को फिर से लोड करेगा। क्लिक करें घटना पर preventDefault() फ़ंक्शन का उपयोग करके कस्टम जावास्क्रिप्ट के साथ रूटिंग को हैंडल करते समय इस व्यवहार को रोकना आवश्यक है।
 
 ### टास्क
 
@@ -250,7 +250,7 @@ HTML में हमारे *लॉगिन* और *लॉगआउट* ल
 <a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
 
-[`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) विशेषता का उपयोग करके जावास्क्रिप्ट कोड पर `click` ईवेंट को बांधें, यहाँ `navigate()` फ़ंक्शन पर कॉल करें।
+[`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) विशेषता का उपयोग करके जावास्क्रिप्ट कोड पर `click` ईवेंट को बांधें, यहाँ `navigate()` फ़ंक्शन पर कॉल करें।
 
 इन लिंक पर क्लिक करने का प्रयास करें, अब आपको अपने ऐप के विभिन्न स्क्रीन के बीच नेविगेट करने में सक्षम होना चाहिए।
 
@@ -264,7 +264,7 @@ HTML में हमारे *लॉगिन* और *लॉगआउट* ल
 
 यदि आप कुछ बार बैक बटन पर क्लिक करने का प्रयास करते हैं, तो आप देखेंगे कि वर्तमान URL बदल जाता है और इतिहास अपडेट हो जाता है, लेकिन वही टेम्पलेट प्रदर्शित होता रहता है।
 
-ऐसा इसलिए है क्योंकि हमें नहीं पता है कि इतिहास बदलने के लिए हमें हर बार `updateRoute()` को कॉल करना होगा। यदि आप [`history.pushState` दस्तावेज़ीकरण](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) पर एक नज़र डालते हैं, तो आप देख सकते हैं कि यदि राज्य बदलता है - इसका अर्थ है कि हम एक अलग URL पर चले गए - [`popstate`] (https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) इवेंट ट्रिगर है। हम उस समस्या को ठीक करने के लिए इसका उपयोग करेंगे।
+ऐसा इसलिए है क्योंकि हमें नहीं पता है कि इतिहास बदलने के लिए हमें हर बार `updateRoute()` को कॉल करना होगा। यदि आप [`history.pushState` दस्तावेज़ीकरण](https://developer.mozilla.org/docs/Web/API/History/pushState) पर एक नज़र डालते हैं, तो आप देख सकते हैं कि यदि राज्य बदलता है - इसका अर्थ है कि हम एक अलग URL पर चले गए - [`popstate`] (https://developer.mozilla.org/docs/Web/API/Window/popstate_event) इवेंट ट्रिगर है। हम उस समस्या को ठीक करने के लिए इसका उपयोग करेंगे।
 
 ### टास्क
 
@@ -275,7 +275,7 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> नोट: हमने एक [एरो फंक्शन](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Reference/Arrow_functions) का इस्तेमाल किया है ताकि हम अपने `poopstate` ईवेंट हैंडलर को संक्षिप्तता के लिए घोषित कर सकें, लेकिन नियमित कार्य एक ही काम करेगा।
+> नोट: हमने एक [एरो फंक्शन](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Reference/Arrow_functions) का इस्तेमाल किया है ताकि हम अपने `poopstate` ईवेंट हैंडलर को संक्षिप्तता के लिए घोषित कर सकें, लेकिन नियमित कार्य एक ही काम करेगा।
 
 यहां एरो फंक्शन पर एक ताज़ा वीडियो है:
 
@@ -293,11 +293,11 @@ updateRoute();
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/42?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 
-रूटिंग वेब विकास के आश्चर्यजनक रूप से मुश्किल भागों में से एक है, विशेष रूप से वेब पेज रीफ्रेश बिहेवियर से लेकर सिंगल पेज एप्लीकेशन पेज रिफ्रेश तक चलता है। [कैसे Azure स्टेटिक वेब ऐप सेवा](https://docs.microsoft.com/en-us/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa) के बारे में थोड़ा पढ़ें रूटिंग । क्या आप बता सकते हैं कि उस दस्तावेज़ पर वर्णित कुछ निर्णय क्यों आवश्यक हैं?
+रूटिंग वेब विकास के आश्चर्यजनक रूप से मुश्किल भागों में से एक है, विशेष रूप से वेब पेज रीफ्रेश बिहेवियर से लेकर सिंगल पेज एप्लीकेशन पेज रिफ्रेश तक चलता है। [कैसे Azure स्टेटिक वेब ऐप सेवा](https://docs.microsoft.com/azure/static-web-apps/routes?WT.mc_id=academic-77807-sagibbon) के बारे में थोड़ा पढ़ें रूटिंग । क्या आप बता सकते हैं कि उस दस्तावेज़ पर वर्णित कुछ निर्णय क्यों आवश्यक हैं?
 
 ## असाइनमेंट
 

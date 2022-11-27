@@ -5,7 +5,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/23?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23?loc=ja)
 
 ### イントロダクション
 
@@ -68,7 +68,7 @@
 - [スターターコード](../../start)。`start`フォルダをダウンロードしてください。このフォルダでコードを完成させることになります。
 - [NPM](https://www.npmjs.com) - NPM はパッケージ管理ツールです。ローカルにインストールすると、`package.json` ファイルに記載されているパッケージがインストールされ、Web アセットで使用されます。
 
-✅ この[優れた Learn モジュール](https://docs.microsoft.com/ja-jp/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)では、パッケージ管理の詳細を学ぶことができます。
+✅ この[優れた Learn モジュール](https://docs.microsoft.com/ja-jp/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)では、パッケージ管理の詳細を学ぶことができます。
 
 コードベースに目を通してみてください。
 
@@ -149,7 +149,7 @@ npm install
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/24?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24?loc=ja)
 
 ## 復習と自己学習
 

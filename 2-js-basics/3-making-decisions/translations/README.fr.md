@@ -4,7 +4,7 @@
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/11?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11?loc=fr)
 
 Prendre des décisions et contrôler l'ordre dans lequel votre code s'exécute rend votre code réutilisable et robuste. Cette section couvre la syntaxe pour contrôler le flux de données dans JavaScript et sa signification lorsqu'elle est utilisée avec des types de données booléens
 
@@ -12,7 +12,7 @@ Prendre des décisions et contrôler l'ordre dans lequel votre code s'exécute r
 
 > 🎥 Cliquez sur l'image ci-dessus pour une vidéo sur la prise de décisions.
 
-> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/fr-fr/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
+> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 ## Un bref récapitulatif sur les booléens
 
 Les booléens ne peuvent avoir que deux valeurs : `true` ou `false`. Les booléens aident à prendre des décisions sur les lignes de code à exécuter lorsque certaines conditions sont remplies.
@@ -164,7 +164,7 @@ Créez un programme écrit d'abord avec des opérateurs logiques, puis réécriv
 
 ---
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissancesz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/12?loc=fr)
+[Quiz de validation des connaissancesz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12?loc=fr)
 
 ## Révision et étude personnelle
 

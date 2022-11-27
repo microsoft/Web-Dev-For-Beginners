@@ -4,7 +4,7 @@
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13?loc=fr)
 
 Cette leçon couvre les bases de JavaScript, le langage qui offre de l'interactivité sur le Web. Dans cette leçon, vous découvrirez les tableaux et les boucles, qui sont utilisés pour manipuler des données.
 
@@ -12,7 +12,7 @@ Cette leçon couvre les bases de JavaScript, le langage qui offre de l'interacti
 [![Les boucles](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Les boucles")
 > 🎥 Cliquez sur l'image ci-dessus pour une vidéo sur les tableaux et les boucles.
 
-> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!
+> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-arrays/?WT.mc_id=academic-77807-sagibbon)!
 ## Les tableaux
 
 Travailler avec des données est une tâche courante pour n'importe quel langage, et c'est une tâche beaucoup plus facile lorsque les données sont organisées dans un format structurel, tel que des tableaux. Avec les tableaux, les données sont stockées dans une structure similaire à une liste. L'un des principaux avantages des tableaux est que vous pouvez stocker différents types de données dans un seul tableau.
@@ -119,7 +119,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Il existe d'autres façons d'itérer sur des tableaux autres que les boucles for et while. Il y a [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), et [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Réécrivez votre boucle de tableau en utilisant l'une de ces techniques.
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14?loc=fr)
 
 
 ## Révision et étude personnelle

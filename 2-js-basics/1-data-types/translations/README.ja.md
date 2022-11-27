@@ -4,11 +4,13 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7?loc=ja)
 
 このレッスンでは、Web 上でインタラクティブな機能を提供する言語である JavaScript の基礎を学びます。
 
-[![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
+[![Variables](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Variables in JavaScript")
+
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
 
 
 まず、変数とそれを埋めるデータ型について説明しましょう!
@@ -185,7 +187,7 @@ let myString2 = "World";
 JavaScript は、たまにデータ型を扱う際の意外な方法で悪名高いです。これらの 'gotchas' について少し調べてみてください。例えば: 大文字小文字の区別でつまずくことがあります! コンソールで以下のようにしてみてください。`let age = 1; let Age = 2; age == Age` (解決は `false` -- なぜ?) 他にどのような gotchas があるでしょうか?
 
 ## レッスン後の小テスト
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8?loc=ja)
 
 ## 復習と自己学習
 

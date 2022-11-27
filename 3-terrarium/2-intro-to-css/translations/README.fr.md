@@ -5,7 +5,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/17?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17?loc=fr)
 
 ### Introduction
 
@@ -250,11 +250,11 @@ Ajoutez un éclat "bulle" à la partie inférieure gauche du pot pour qu'il ress
 
 ![terrarium terminé](../images/terrarium-final.png)
 
-Pour répondre au Quiz de validation des connaissances, suivez ce module d'apprentissage : [Donnez du style à votre application HTML avec CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
+Pour répondre au Quiz de validation des connaissances, suivez ce module d'apprentissage : [Donnez du style à votre application HTML avec CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-77807-sagibbon)
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/18?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18?loc=fr)
 
 ## Révision et étude personnelle
 

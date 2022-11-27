@@ -209,11 +209,11 @@
 						"questionText": "Πώς μεταβαίνετε σε έναν κλάδο;",
 						"answerOptions": [
 							{
-								"answerText": "git switch [όνομα-κλαδου]",
+								"answerText": "git checkout [όνομα-κλαδου]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [όνομα-κλαδου]",
+								"answerText": "git switch [όνομα-κλαδου]",
 								"isCorrect": "true"
 							},
 							{
@@ -241,7 +241,7 @@
 							},
 							{
 								"answerText": "Cleanhouse",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -710,7 +710,7 @@
 						"answerOptions": [
 							{
 								"answerText": "Τη συνθήκη",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							},
 							{
 								"answerText": "Το μετρητή",
@@ -718,7 +718,7 @@
 							},
 							{
 								"answerText": "Την έκφραση της επανάληψης",
-								"isCorrect": "false"
+								"isCorrect": "true"
 							}
 						]
 					},

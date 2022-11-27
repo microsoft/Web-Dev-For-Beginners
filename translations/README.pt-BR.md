@@ -8,6 +8,7 @@
 [![Forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
 [![Stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 # Desenvolvimento Web para Iniciantes - Programa de Estudos
 
@@ -24,7 +25,7 @@ Nossa pedagogia baseada em prática permite que você aprenda enquanto construi,
 > **Estudantes**, para usar esse crrículo por conta própria, faça um fork do repositório inteiro, começando por um qizz pré-aula, veja a aula e então faça o resto das atividades.
 Procure fazer os projetos baseado no que aprendeu ao invés de simplesmente copiar a solução que se encontra na pasta de soluções das atividades.
 Uma boa opção seria criar um grupo de estudos e completar todos os conteúdos juntos.
-Para estudos mais profundos, recomendamos que assista aos vídeos mencionados abaixo e procure pelo [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa).
+Para estudos mais profundos, recomendamos que assista aos vídeos mencionados abaixo e procure pelo [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-77807-sagibbon).
 
 [![Promo video](../screenshot.png)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
 
@@ -36,14 +37,14 @@ Nós escolhemos dois princípos pedagógicos enquanto criávamos este curso: Gar
 tivesse quizzes frequentes.
 Até o fim deste curso, estudantes terão construído um jogo de digitação, um terrário virtual, ums extensão de navegador 'verde' , um jogo do tipo 'space invaders', e um aplicativo bancário, e terão aprendido o básico de JavaScript, HTML, e CSS com um moderno conjunto de ferramentas do desenvolvimento web dos dias atuais 🎓 !!!
 
-> 🎓 Você pode tomar as primeiras lições nesse curso como um [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101?WT.mc_id=academic-13441-cxa) no Microsoft Learn!
+> 🎓 Você pode tomar as primeiras lições nesse curso como um [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101?WT.mc_id=academic-77807-sagibbon) no Microsoft Learn!
 
-Ao garantir que o conteúdo esteja alinhado com os projetos, o processo se torna mais envolvente para os alunos e a retenção dos conceitos será aumentada. Também escrevemos várias lições iniciais em noções básicas de JavaScript para introduzir conceitos, emparelhadas com o vídeo da coleção [accessible ici](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-13441-cxa) de vídeo-aulas, alguns de autores os quais contribuíram para este curso.
+Ao garantir que o conteúdo esteja alinhado com os projetos, o processo se torna mais envolvente para os alunos e a retenção dos conceitos será aumentada. Também escrevemos várias lições iniciais em noções básicas de JavaScript para introduzir conceitos, emparelhadas com o vídeo da coleção [accessible ici](https://www.youtube.com/playlist?list=PLb2HQ45KP0WsFop0pItGSUYl6baYjKEye) de vídeo-aulas, alguns de autores os quais contribuíram para este curso.
 
 Além disso, um teste simples antes da aula define a intenção do aluno de aprender um tópico, enquanto um segundo teste após a aula garante maior retenção. Este currículo foi projetado para ser flexível e divertido e pode ser realizado no todo ou em partes. Os projetos começam pequenos e tornam-se cada vez mais complexos no final do ciclo de 12 semanas.
 
 Embora tenhamos evitado propositadamente a introdução de frameworks JavaScript para nos concentrarmos nas habilidades básicas necessárias como desenvolvedor web antes de adotar um framework, uma próxima etapa para concluir este currículo seria aprender sobre Node.js por meio de outra coleção de vídeos:
-[Coletânea inicial sobre Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-13441-cxa)
+[Coletânea inicial sobre Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-77807-sagibbon)
 
 > Encontre nosso [código de condta](CODE_OF_CONDUCT.md), [guia para contribidores](CONTRIBUTING.md), e [o guia para traduções do curso](TRANSLATIONS.md).
 Seu Feedback contrutivo é bem vindo.
@@ -61,7 +62,7 @@ Seu Feedback contrutivo é bem vindo.
 - Exercícios
 - Quiz pós-aula
 
-> **Nota sobre os qizzes**: todos os qizzes se encontram [aqui](https://happy-mud-02d95f10f.azurestaticapps.net/), um total de 48 quizzes, com 3 questões em cada.
+> **Nota sobre os qizzes**: todos os qizzes se encontram [aqui](https://ashy-river-0debb7803.1.azurestaticapps.net/), um total de 48 quizzes, com 3 questões em cada.
 Também podem ser acessados localmente pela pasta `quiz-app`.
 
 ## Lições

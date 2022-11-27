@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## レッスン前の小テスト
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5?loc=ja)
 
 > Web の力は、その普遍性にあります。障害の有無に関わらず、誰もがアクセスできることが重要です。
 >
@@ -216,7 +216,7 @@ CSS は、ページ上のあらゆる要素の外観を完全に制御するこ�
 ```
 
 ## レッスン後の小テスト
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6?loc=ja)
 
 ## 復習と自己学習
 

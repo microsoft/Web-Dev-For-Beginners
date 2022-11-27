@@ -4,11 +4,13 @@
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7?loc=zh_tw)
 
 這堂課會講述 Javascript 的基礎 ── 一款建立互動性網頁的程式語言。
 
 [![JavaScript 的資料型態](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "JavaScript 的資料型態")
+
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
 
 讓我們從程式語言的基礎 ── 「變數」與「資料型態」開始吧！
 
@@ -177,7 +179,7 @@ let myString2 = "World";
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ 布林值 `true` 亦有廣義的 'truthy' 數值。有趣的是，在 JavaScript 中，[除非被定義為 falsy，其餘的數值都會被當作是 truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)。
+✅ 布林值 `true` 亦有廣義的 'truthy' 數值。有趣的是，在 JavaScript 中，[除非被定義為 falsy，其餘的數值都會被當作是 truthy](https://developer.mozilla.org/docs/Glossary/Truthy)。
 
 ---
 
@@ -186,7 +188,7 @@ let myString2 = "World";
 JavaScript 在處理資料結構時有許多種方法，有些場合為人詬病。在這方面做一些調查，例如：大小寫敏感性的問題！在命令欄中輸入看看： `let age = 1; let Age = 2; age == Age`，輸出結果是 `false`，為什麼? 你能找到其他問題嗎?
 
 ## 課後測驗
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8?loc=zh_tw)
 
 ## 複習與自學
 

@@ -4,7 +4,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/29?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29?loc=ja)
 
 ### ゲーム開発における継承とコンポジション
 
@@ -213,11 +213,11 @@ pub-sub パターンがどのようにゲームを盛り上げるかを考えて
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/30?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30?loc=ja)
 
 ## 復習と自己学習
 
-Pub/Sub については、[こちらを読んでみてください](https://docs.microsoft.com/ja-jp/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa)。
+Pub/Sub については、[こちらを読んでみてください](https://docs.microsoft.com/ja-jp/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-77807-sagibbon)。
 
 ## 課題
 

@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/27)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
 
 ### Introduction
 
@@ -18,11 +18,11 @@ The topic of how to make your web sites blazingly fast on all kinds of devices, 
 
 The first thing you need to do to ensure that your site is running efficiently is to gather data about its performance. The first place to do this is in the developer tools of your web browser. In Edge, you can select the "Settings and more" button (the three dots icon on the top right of the browser), then navigate to More Tools > Developer Tools and open the Performance tab. You can also use the keyboard shortcuts `Ctrl` + `Shift` + `I` on Windows, or `Option` + `Command` + `I` on Mac to open developer tools.
 
-The Performance tab contains a Profiling tool. Open a web site (try, for example, https://www.microsoft.com) and click the 'Record' button, then refresh the site. Stop the recording at any time, and you will be able to see the routines that are generated to 'script', 'render', and 'paint' the site:
+The Performance tab contains a Profiling tool. Open a web site (try, for example, [https://www.microsoft.com](https://www.microsoft.com?WT.mc_id=academic-77807-sagibbon)) and click the 'Record' button, then refresh the site. Stop the recording at any time, and you will be able to see the routines that are generated to 'script', 'render', and 'paint' the site:
 
 ![Edge profiler](./images/profiler.png)
 
-✅ Visit the [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa) on the Performance panel in Edge
+✅ Visit the [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-77807-sagibbon) on the Performance panel in Edge
 
 > Tip: to get a true reading of your web site's startup time, clear your browser's cache
 
@@ -147,7 +147,7 @@ Investigate some open source web sites have been around a long time ago, and, ba
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/28)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
 
 ## Review & Self Study
 

@@ -4,7 +4,7 @@
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/11?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11?loc=zh_tw)
 
 為程式碼做決定與控制順序以提高其重複利用性與豐富性。這堂課程提供 JavaScript 的資料流控制語法與布林資料型的重點。
 
@@ -163,11 +163,11 @@ if (firstNumber > secondNumber) {
 
 ---
 ## 課後測驗
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/12?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12?loc=zh_tw)
 
 ## 複習與自學
 
-閱讀更多可被使用的運算子：[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)。
+閱讀更多可被使用的運算子：[MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)。
 
 瀏覽 Josh Comeau 所編制的[運算子查詢表](https://joshwcomeau.com/operator-lookup/)！
 

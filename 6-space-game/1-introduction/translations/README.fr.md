@@ -4,7 +4,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/29?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29?loc=fr)
 
 ### Héritage et composition dans le développement de jeux
 
@@ -213,11 +213,11 @@ Pensez à la façon dont le modèle pub-sub peut améliorer un jeu. Quelles part
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissancesz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/30?loc=fr)
+[Quiz de validation des connaissancesz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30?loc=fr)
 
 ## Révision et étude personnelle
 
-En savoir plus sur Pub/Sub en [lisant sur ce sujet](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa).
+En savoir plus sur Pub/Sub en [lisant sur ce sujet](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-77807-sagibbon).
 
 ## Affectation
 
