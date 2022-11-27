@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/31)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
 
 ## The Canvas
 
@@ -205,7 +205,7 @@ You've learned about drawing with the 2D-focused Canvas API; take a look at the 
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/32)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
 
 ## Review & Self Study
 

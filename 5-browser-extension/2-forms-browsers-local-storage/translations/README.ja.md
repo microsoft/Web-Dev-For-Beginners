@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/25?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25?loc=ja)
 
 ### イントロダクション
 
@@ -210,7 +210,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/26?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26?loc=ja)
 
 ## 復習と自己学習
 

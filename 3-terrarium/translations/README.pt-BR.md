@@ -1,6 +1,6 @@
-# Meu Terrário: Um projeto para aprender HTML, CSS, e manipulação  DOM usando JavaScript 🌵🌱
+# Meu Terrário: Um projeto para aprender HTML, CSS, e manipulação de DOM usando JavaScript 🌵🌱
 
-Uma pequena meditação de código de arrastar e soltar. Com um pouco de HTML, JS e CSS, você pode construir uma interface web, esilizá-la, e adiconar uma interação.
+Uma pequena meditação de código de arrastar e soltar. Com um pouco de HTML, JS e CSS, você pode construir uma interface web, estilizá-la, e adicionar uma interação.
 
 ![Meu Terrário](../images/screenshot_gray.png)
 
@@ -26,6 +26,6 @@ Você pode implantar ou publicar seu terrario na web usando o Azure Static Web A
 
 2. Pressione este botão
 
-[![Implemente para  o botão Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-13441-cxa#create/Microsoft.StaticApp)
+[![Implemente para  o botão Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-77807-sagibbon#create/Microsoft.StaticApp)
 
 3. Percorra o assistente para criar seu aplicativo. Certifique-se de definir a raiz do aplicativo ou a raiz de sua base de código como `/ solution`. Não há API neste aplicativo, então não se preocupe em adicioná-la. Uma pasta .github será criada em seu repositório "forkado" que ajudará o serviço de construção de aplicativos da Web estáticos do Azure a construir e publicar seu aplicativo em uma nova URL.

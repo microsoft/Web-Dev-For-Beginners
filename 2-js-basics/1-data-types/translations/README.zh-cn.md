@@ -4,11 +4,13 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7?loc=zh_cn)
+[课前小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7?loc=zh_cn)
 
 这节课将会介绍 JavaScript 的基础知识，正是它为网页提供了可交互性。
 
-[![Data types in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "JavaScript 中的数据类型")
+[![Variables in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "JavaScript 中的数据类型")
+
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
 
 让我们从它最基础的组成部分 —— “变量”和“数据类型”学起吧！
 
@@ -184,7 +186,7 @@ let myString2 = "World";
 JavaScript 偶尔会因为其对于数据类型令人意外的处理方式而被人诟病。你可以对这些“陷阱”做一点调查，比如大小写敏感性带来的问题，在控制台中试试 `let age = 1; let Age = 2; age == Age`（结果是 `false`，为什么？）。你还能找到哪些陷阱？
 
 ## 课后小测
-[课后小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8?loc=zh_cn)
+[课后小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8?loc=zh_cn)
 
 ## 复习 & 自学
 

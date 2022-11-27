@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/43?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43?loc=fr)
 
 ### Introduction
 
@@ -290,7 +290,7 @@ Voici un exemple de ce à quoi peut ressembler la page de connexion finale aprè
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/44?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44?loc=fr)
 
 ## Révision et étude personnelle
 

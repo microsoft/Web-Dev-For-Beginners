@@ -5,7 +5,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/15?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15?loc=zh_tw)
 
 ### 大綱
 
@@ -48,13 +48,13 @@ HTML 檔案的第一行是文件型別宣告。你會訝異這一行必須存在
 <html></html>
 ```
 
-✅ 有許多不一樣的文件型別模式，你可以用 query string 做設定：[怪異模式與標準模式](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)。這些模式用來支援非常古老的瀏覽器，現在可能都不會見到的瀏覽器(Netscape Navigator 4 與 Internet Explorer 5)。 你可以觀看他們的文件型別模式宣告定義。
+✅ 有許多不一樣的文件型別模式，你可以用 query string 做設定：[怪異模式與標準模式](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)。這些模式用來支援非常古老的瀏覽器，現在可能都不會見到的瀏覽器(Netscape Navigator 4 與 Internet Explorer 5)。 你可以觀看他們的文件型別模式宣告定義。
 
 ---
 
 ## 文件的 'head'
 
-HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[元資訊(metadata)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)。我們告訴網頁伺服器我們需要哪些檔案與資訊，主要有四個：
+HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[元資訊(metadata)](https://developer.mozilla.org/docs/Web/HTML/Element/meta)。我們告訴網頁伺服器我們需要哪些檔案與資訊，主要有四個：
 
 -   網頁標題
 -   網頁元資訊，包含：
@@ -213,17 +213,17 @@ HTML 文件中 'head' 的區域包含很多網頁的重要資訊，也被稱作[
 
 ## 🚀 挑戰
 
-這邊有一些「古老」的 HTML 標籤。雖然[這些標籤](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Obsolete_and_deprecated_elements)被歸為不推薦使用的標籤，但仍值得去嘗試的。你可以用 `<marquee>` 標籤來讓 h1 標題文字變成縱向呈現嗎？實驗完後，記得要移除這些標籤喔。
+這邊有一些「古老」的 HTML 標籤。雖然[這些標籤](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements)被歸為不推薦使用的標籤，但仍值得去嘗試的。你可以用 `<marquee>` 標籤來讓 h1 標題文字變成縱向呈現嗎？實驗完後，記得要移除這些標籤喔。
 
 ## 課後測驗
 
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/16?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16?loc=zh_tw)
 
 ## 複習與自學
 
 HTML 是一種「行之有效」的構築系統，建立了現今的各種網頁。從標籤來學習關於 HTML 的歷史，你能了解為什麼有的標籤被排除，而有的被新增上去嗎？有什麼標籤會在未來被建立上去呢？
 
-學習更多關於建立網頁的資訊：[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa)。
+學習更多關於建立網頁的資訊：[Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon)。
 
 
 ## 作業

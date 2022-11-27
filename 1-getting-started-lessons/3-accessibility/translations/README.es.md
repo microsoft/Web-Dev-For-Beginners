@@ -3,7 +3,7 @@
 ![Todo sobre accesibilidad](/sketchnotes/webdev101-a11y.png)
 > Dibujo por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Cuestionario](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5)
+## [Cuestionario](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
 
 > El poder de la Web está en su universalidad. El acceso de todas las personas independientemente de su discapacidad es un aspecto fundamental.
 >
@@ -202,7 +202,7 @@ Una web accesible para algunos no es una verdadera "red mundial". La mejor maner
 </html>
 ```
 
-## [Post-lectura prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6)
+## [Post-lectura prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
 
 ## Revisión y auto-estudio
 

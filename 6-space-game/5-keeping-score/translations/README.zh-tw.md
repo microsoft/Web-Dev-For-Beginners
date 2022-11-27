@@ -2,7 +2,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/37?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37?loc=zh_tw)
 
 在這堂課中，你會學習如何為遊戲加入計分功能與計算性命數。
 
@@ -17,7 +17,7 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ 閱讀更多關於[在畫布上建立文字](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)，你可以自由地豐富你的文字！
+✅ 閱讀更多關於[在畫布上建立文字](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text)，你可以自由地豐富你的文字！
 
 ## 性命，一個遊戲概念
 
@@ -178,7 +178,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/38?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38?loc=zh_tw)
 
 ## 複習與自學
 

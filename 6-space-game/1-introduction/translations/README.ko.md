@@ -4,7 +4,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/29?loc=ko)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29?loc=ko)
 
 ### 게임 개발의 상속과 구성
 
@@ -213,11 +213,11 @@ pub-sub 패턴이 어떻게 게임을 발전시킬 수 있는지 생각해보세
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/30?loc=ko)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 
-[reading about it](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa)으로 Pub/Sub에 대해 조금 더 배워봅시다.
+[reading about it](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-77807-sagibbon)으로 Pub/Sub에 대해 조금 더 배워봅시다.
 
 ## 과제
 

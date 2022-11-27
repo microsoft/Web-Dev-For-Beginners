@@ -4,7 +4,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9?loc=zh_cn)
+[课前小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9?loc=zh_cn)
 
 当我们思考如何去写代码的时候，我们总是希望确保自己的代码是可读的。尽管听起来有些违反直觉，代码被阅读的次数会远多于它被写下的次数。**函数（function）** 正是开发者的工具箱里用于确保代码可维护的一件利器。
 
@@ -163,7 +163,7 @@ setTimeout(function() {
 
 ### 箭头函数（Fat arrow functions）
 
-在很多编程语言（包括 JavaScript）中都有一种称为**箭头**（arrow / fat arrow）函数的快捷写法。它会用到一个特殊的 `=>` 标志，看起来就像一个箭头 —— 它的名字就是这么来的！使用 `=>`，我们就可以跳过 `keyword` 关键字。
+在很多编程语言（包括 JavaScript）中都有一种称为**箭头**（arrow / fat arrow）函数的快捷写法。它会用到一个特殊的 `=>` 标志，看起来就像一个箭头 —— 它的名字就是这么来的！使用 `=>`，我们就可以跳过 `function` 关键字。
 
 让我们用箭头函数再一次重写上面的代码：
 
@@ -184,7 +184,7 @@ setTimeout(() => {
 你能用一句话清楚说明函数和方法的区别吗？试一试！
 
 ## 课后小测
-[课后小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/10?loc=zh_cn)
+[课后小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10?loc=zh_cn)
 
 ## 复习 & 自学
 

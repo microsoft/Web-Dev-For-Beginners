@@ -4,12 +4,13 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7)
+[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
 
 Pelajaran ini merangkumi asas-asas JavaScript, bahasa yang menyediakan interaktiviti di web.
 
 [![Jenis Data Dalam JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Data types in JavaScript")
 
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
 
 Marilah kita mulakan dengan pemboleh ubah dan jenis data yang mengisinya!
 
@@ -185,7 +186,7 @@ Booleans boleh hanya dua nilai: `benar` atau `salah`. Booleans dapat membantu me
 JavaScript terkenal kerana kaedahnya yang mengagumkan dalam mengendalikan jenis data sesekali. Lakukan sedikit kajian mengenai 'gotchas' ini. Contohnya: kepekaan kes boleh menggigit! Cubalah ini di konsol anda: `let age = 1; biarkan Umur = 2; age == Age` (menyelesaikan `false` - mengapa?). Apa lagi gotchas yang anda dapati?
 
 ## Kuiz Pasca Kuliah
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8)
+[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
 
 ## Mengkaji dan belajar sendiri
 

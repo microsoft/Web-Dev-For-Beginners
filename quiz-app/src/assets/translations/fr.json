@@ -209,11 +209,11 @@
 						"questionText": "Comment passer d'une branche à une autre?",
 						"answerOptions": [
 							{
-								"answerText": "git switch [nom de la branche]",
+								"answerText": "git checkout [nom de la branche]",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "git checkout [nom de la branche]",
+								"answerText": "git switch [nom de la branche]",
 								"isCorrect": "true"
 							},
 							{
@@ -241,7 +241,7 @@
 							},
 							{
 								"answerText": "Cleanhouse",
-								"isCorrect": "true"
+								"isCorrect": "false"
 							}
 						]
 					},
@@ -710,7 +710,7 @@
                         "answerOptions": [
                             {
                                 "answerText": "condition",
-                                "isCorrect": "true"
+                                "isCorrect": "false"
                             },
                             {
                                 "answerText": "compteur",
@@ -718,7 +718,7 @@
                             },
                             {
                                 "answerText": "expression d'itération",
-                                "isCorrect": "false"
+                                "isCorrect": "true"
                             }
                         ]
                     },

@@ -6,7 +6,7 @@
 >[टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा स्केचनेट
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1?loc=hi)
 
 ## परिचय
 
@@ -124,7 +124,7 @@ back add r0,r1
 
 #### लोकप्रिय ब्राउज़रों और DevTools
 
-- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium?WT.mc_id=academic-13441-cxa)
+- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium?WT.mc_id=academic-77807-sagibbon)
 - [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
 - [Firefox](https://developer.mozilla.org/docs/Tools)
 
@@ -140,22 +140,22 @@ back add r0,r1
 
 #### विंडोज
 
-- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-13441-cxa) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (also known as CMD) 💻
-- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-13441-cxa)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-77807-sagibbon) 💻
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-77807-sagibbon) (also known as CMD) 💻
+- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)
 - [mintty](https://mintty.github.io/)
   
 #### मैक ओएस
 
 - [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) 💻
 - [iTerm](https://iterm2.com/)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7?WT.mc_id=academic-13441-cxa)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7?WT.mc_id=academic-77807-sagibbon)
 
 #### लिनक्स
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
 - [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-77807-sagibbon)
 
 #### लोकप्रिय कमांड लाइन टूल्स
 
@@ -183,7 +183,7 @@ back add r0,r1
 कुछ प्रोग्रामिंग भाषाओं की तुलना करें। जावास्क्रिप्ट बनाम जावा के कुछ विशिष्ट लक्षण क्या हैं? COBOL बनाम GO के बारे मे?
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/2?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

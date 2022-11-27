@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/27?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27?loc=fr)
 
 ### Introduction
 
@@ -22,7 +22,7 @@ L'onglet Performance contient un outil de profilage. Ouvrez un site Web (essayez
 
 ![Edge profiler](../images/profiler.png)
 
-✅ Consultez la [Documentation Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa) à propos du panneau Performances dans Edge
+✅ Consultez la [Documentation Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-77807-sagibbon) à propos du panneau Performances dans Edge
 
 > Astuce : pour avoir une vraie lecture de l'heure de démarrage de votre site web, videz le cache de votre navigateur
 
@@ -148,7 +148,7 @@ Enquêtez sur certains sites Web open source qui existent depuis longtemps et, s
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/28?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28?loc=fr)
 
 ## Révision et étude personnelle
 

@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/31?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31?loc=fr)
 
 ## Le canevas
 
@@ -205,7 +205,7 @@ Vous avez appris à dessiner avec l'API Canvas axée sur la 2D ; jetez un œil �
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/32?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32?loc=fr)
 
 ## Révision et étude personnelle
 

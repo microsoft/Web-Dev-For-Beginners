@@ -4,7 +4,7 @@
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
 
 > O poder da Web está em sua universalidade. O acesso de todos, independentemente de deficiências, é um aspecto essencial. 
 >
@@ -215,7 +215,7 @@ Pegue este HTML e reescreva-o para ser o mais acessível possível, de acordo co
 ```
 
 ## Quiz Pós-Aula
-[Quiz Pós-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6)
+[Quiz Pós-Aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
 
 ## Revisão e autoestudo
 

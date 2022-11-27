@@ -6,7 +6,7 @@ This lesson covers the basics of GitHub, a platform to host and manage changes t
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ## Introduction
 
@@ -44,7 +44,12 @@ You'll need both a folder with a code project on your local machine (laptop or P
 
 Let's say you have a folder locally with some code project and you want to start tracking your progress using git - the version control system. Some people compare using git to writing a love letter to your future self. Reading your commit messages days or weeks or months later you'll be able to recall why you made a decision, or "rollback" a change - that is, when you write good "commit messages".
 
-### Task: Make a repository and commit code
+### Task: Make a repository and commit code  
+
+> Check out video
+> 
+> [![Git and GitHub basics video](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
+
 
 1. **Create repository on GitHub**. On GitHub.com, in the repositories tab, or from the navigation bar top-right, find the **new repo** button.
 
@@ -169,12 +174,16 @@ The main reason for putting things on GitHub was to make it possible to collabor
 
 ## Working on projects with others
 
+> Check out video
+>
+> [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
+
 In your repository, navigate to `Insights > Community` to see how your project compares to recommended community standards.
 
    Here are some things that can improve your GitHub repo:
    - **Description**. Did you add a description for your project?
-   - **README**. Did you add a README? GitHub provides guidance for writing a [README](https://docs.github.com/articles/about-readmes/).
-   - **Contributing guideline**. Does your project have [contributing guidelines](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/), 
+   - **README**. Did you add a README? GitHub provides guidance for writing a [README](https://docs.github.com/articles/about-readmes/?WT.mc_id=academic-77807-sagibbon).
+   - **Contributing guideline**. Does your project have [contributing guidelines](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/?WT.mc_id=academic-77807-sagibbon), 
    - **Code of Conduct**. a [Code of Conduct](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/), 
    - **License**. Perhaps most importantly, a [license](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
 
@@ -205,10 +214,10 @@ Let's go through a contributor workflow. Assume the contributor has already _for
    git branch [branch-name]
    ```
 
-1. **Switch to working branch**. Switch to the specified branch and update the working directory with `git checkout`:
+1. **Switch to working branch**. Switch to the specified branch and update the working directory with `git switch`:
 
    ```bash
-   git checkout [branch-name]
+   git switch [branch-name]
    ```
 
 1. **Do work**. At this point you want to add your changes. Don't forget to tell Git about it with the following commands:
@@ -223,14 +232,14 @@ Let's go through a contributor workflow. Assume the contributor has already _for
 1. **Combine your work with the `main` branch**. At some point you are done working and you want to combine your work with that of the `main` branch. The `main` branch might have changed meanwhile so make sure you first update it to the latest with the following commands:
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    At this point you want to make sure that any _conflicts_, situations where Git can't easily _combine_ the changes happens in your working branch. Therefore run the following commands:
 
    ```bash
-   git checkout [branch_name]
+   git switch [branch_name]
    git merge main
    ```
 
@@ -301,7 +310,7 @@ Projects might also have discussion in forums, mailing lists, or chat channels l
 Pair with a friend to work on each other's code. Create a project collaboratively, fork code, create branches, and merge changes.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
 ## Review & Self Study
 

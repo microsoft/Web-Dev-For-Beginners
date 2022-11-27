@@ -4,7 +4,7 @@
 > Esboço de [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Leitura pré-quiz
-[Leitura pré-quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/23)
+[Leitura pré-quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
 
 ### Introdução:
 
@@ -68,7 +68,7 @@ Você vai construir uma extensão de navegador que exibe a pegada de carbono da 
 - o [código de inicio](../../start). Faça o download da pasta `start`; você irá completar o código desta pasta.
 - [NPM](https://www.npmjs.com) - NPM é uma ferramenta de gerenciamento de pacotes; instale-o localmente e os pacotes listados em seu arquivo package.json serão instalados para uso por seu app da web.
 
-✅ Saiba mais sobre gerenciamento de pacotes neste [excelente módulo de aprendizagem](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)
+✅ Saiba mais sobre gerenciamento de pacotes neste [excelente módulo de aprendizagem](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
 Reserve um minuto para examinar o código base:
 
@@ -150,7 +150,7 @@ Parabéns, você deu os primeiros passos para criar uma extensão de navegador. 
 Dê uma olhada em uma loja de extensões de navegador e instale uma em seu navegador. Você pode examinar seus arquivos de maneiras interessantes. O que você descobriu?
 
 ## Quiz pós-leitura
-[Quiz pós-leitura](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/24)
+[Quiz pós-leitura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
 
 ## Revisão e auto-estudo
 
