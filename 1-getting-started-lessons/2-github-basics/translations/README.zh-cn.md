@@ -6,7 +6,7 @@
 > 涂鸦笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 课前小测
-[课前小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/3?loc=zh_cn)
+[课前小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3?loc=zh_cn)
 
 ## 大纲
 
@@ -203,10 +203,10 @@
    git branch [分支名]
    ```
 
-1. **切换到工作分支**。使用 `git checkout` 来切换到指定分支并且更新工作目录中的文件：
+1. **切换到工作分支**。使用 `git switch` 来切换到指定分支并且更新工作目录中的文件：
 
    ```bash
-   git checkout [分支名]
+   git switch [分支名]
    ```
 
 1. **干活**。现在你可以添加你的变更了，别忘了用下面的命令告诉 Git 你所做的工作：
@@ -221,14 +221,14 @@
 1. **将你的工作合入 `main` 分支**。在完成工作后，你打算将你的工作和 `main` 分支上的合并。`main` 分支可能同时有了一些新的变更，所以要先用以下命令确保将其更新至最新版本：
 
    ```bash
-   git checkout main
+   git switch main
    git pull
    ```
 
    这时你想确认是否存在 _冲突（conflicts）_，即 Git 没法简单地将这些变化 _合入_ 你的分支的情况。为此运行下面的命令：
 
    ```bash
-   git checkout [分支名]
+   git switch [分支名]
    git merge main
    ```
 
@@ -299,7 +299,7 @@ Pull Request 是一个可以用来比较和讨论一个分支引入的改动的�
 找朋友一起编辑彼此的代码。协作创建一个项目、复刻代码、创建分支，然后合并变更。
 
 ## 课后小测
-[课后小测](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/4?loc=zh_cn)
+[课后小测](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4?loc=zh_cn)
 
 ## 复习 & 自学
 

@@ -4,7 +4,7 @@
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra Kuliah
-[Kuiz Pra Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5)
+[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
 
 > Kekuatan Web berada dalam kesejagatannya. Akses oleh semua orang tanpa mengira kecacatan adalah aspek penting.
 >
@@ -207,7 +207,7 @@ Ambil HTML ini dan tulis semula agar dapat diakses semaksimum mungkin, mengingat
 ```
 
 ## Kuiz Pasca Kuliah
-[Kuiz Pasca Kuliah](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6)
+[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
 
 ## Mengkaji dan belajar sendiri
 

@@ -2,7 +2,7 @@
 
 ## Quiz préalable
 
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/41?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41?loc=fr)
 
 ### Introduction
 
@@ -41,7 +41,7 @@ Si vous souhaitez créer plusieurs écrans pour une page Web, une solution serai
 - Vous devez recharger l'intégralité du code HTML lors du changement d'écran, ce qui peut être lent.
 - Il est difficile de partager des données entre les différents écrans.
 
-Une autre approche consiste à n'avoir qu'un seul fichier HTML et à définir plusieurs [modèles HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) à l'aide de l'élément `<template>`. Un modèle est un bloc HTML réutilisable qui n'est pas affiché par le navigateur et doit être instancié lors de l'exécution à l'aide de JavaScript.
+Une autre approche consiste à n'avoir qu'un seul fichier HTML et à définir plusieurs [modèles HTML](https://developer.mozilla.org/docs/Web/HTML/Element/template) à l'aide de l'élément `<template>`. Un modèle est un bloc HTML réutilisable qui n'est pas affiché par le navigateur et doit être instancié lors de l'exécution à l'aide de JavaScript.
 
 ### Tâche
 
@@ -107,9 +107,9 @@ Si vous essayez votre fichier HTML actuel dans un navigateur, vous verrez qu'il 
 
 L'instanciation d'un modèle se fait généralement en 3 étapes :
 
-1. Récupérez l'élément du modèle dans le DOM, par exemple en utilisant [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById).
-2. Clonez l'élément de modèle à l'aide de [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode).
-3. Attachez-le au DOM sous un élément visible, par exemple en utilisant [`appendChild`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild).
+1. Récupérez l'élément du modèle dans le DOM, par exemple en utilisant [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
+2. Clonez l'élément de modèle à l'aide de [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
+3. Attachez-le au DOM sous un élément visible, par exemple en utilisant [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
 ✅ Pourquoi avons-nous besoin de cloner le modèle avant de l'attacher au DOM ? Que pensez-vous qu'il se passerait si nous sautions cette étape?
 
@@ -174,7 +174,7 @@ const routes = {
 };
 ```
 
-Modifions maintenant un peu la fonction `updateRoute`. Au lieu de passer directement le `templateId` comme argument, nous voulons le récupérer en regardant d'abord l'URL actuelle, puis en utilisant notre carte pour obtenir la valeur d'ID de modèle correspondante. Nous pouvons utiliser [`window.location.pathname`](https://developer.mozilla.org/en-US/docs/Web/API/Location/pathname) pour obtenir uniquement la section du chemin de l'URL.
+Modifions maintenant un peu la fonction `updateRoute`. Au lieu de passer directement le `templateId` comme argument, nous voulons le récupérer en regardant d'abord l'URL actuelle, puis en utilisant notre carte pour obtenir la valeur d'ID de modèle correspondante. Nous pouvons utiliser [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) pour obtenir uniquement la section du chemin de l'URL.
 
 ```js
 function updateRoute() {
@@ -202,9 +202,9 @@ La prochaine étape pour notre application consiste à ajouter la possibilité d
 
 Nous nous sommes déjà occupés de la deuxième partie avec la fonction `updateRoute`, nous devons donc trouver comment mettre à jour l'URL actuelle.
 
-Il va falloir utiliser JavaScript et plus précisément le [`history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState) qui permet de mettre à jour l'URL et créer une nouvelle entrée dans l'historique de navigation, sans recharger le code HTML.
+Il va falloir utiliser JavaScript et plus précisément le [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) qui permet de mettre à jour l'URL et créer une nouvelle entrée dans l'historique de navigation, sans recharger le code HTML.
 
-> Remarque : Bien que l'élément d'ancrage HTML [`<a href>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) puisse être utilisé seul pour créer des liens hypertexte à des URL différentes, il fera le navigateur recharger le HTML par défaut. Il est nécessaire d'empêcher ce comportement lors de la gestion du routage avec un javascript personnalisé, en utilisant la fonction preventDefault() sur l'événement click.
+> Remarque : Bien que l'élément d'ancrage HTML [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) puisse être utilisé seul pour créer des liens hypertexte à des URL différentes, il fera le navigateur recharger le HTML par défaut. Il est nécessaire d'empêcher ce comportement lors de la gestion du routage avec un javascript personnalisé, en utilisant la fonction preventDefault() sur l'événement click.
 
 ### Tâche
 
@@ -254,7 +254,7 @@ Complétons le système de navigation en ajoutant des liens à nos liens *Login*
 
 L'objet `event` ci-dessus capture l'événement `click` et le transmet à notre fonction `onLinkClick`.
 
-Utiliser l'attribut [`onclick`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) lie l'événement `click` au code JavaScript, dans ce cas via l'appel à la fonction `navigate ()`.
+Utiliser l'attribut [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) lie l'événement `click` au code JavaScript, dans ce cas via l'appel à la fonction `navigate ()`.
 
 Essayez de cliquer sur ces liens, vous devriez maintenant pouvoir naviguer entre les différents écrans de votre application.
 
@@ -268,7 +268,7 @@ L'utilisation de `history.pushState` crée de nouvelles entrées dans l'historiq
 
 Si vous essayez de cliquer plusieurs fois sur le bouton Précédent, vous verrez que l'URL actuelle change et que l'historique est mis à jour, mais le même modèle reste affiché.
 
-C'est parce que l'application ne sait pas que nous devons appeler `updateRoute()` chaque fois que l'historique change. Si vous jetez un oeil à [ `la documentation de history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState), vous pouvez voir que si l'état change - c'est que nous sommes passés à une URL différente - l'événement [ `popstate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/popstate_event) est déclenché. Nous allons l'utiliser pour résoudre ce problème.
+C'est parce que l'application ne sait pas que nous devons appeler `updateRoute()` chaque fois que l'historique change. Si vous jetez un oeil à [ `la documentation de history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), vous pouvez voir que si l'état change - c'est que nous sommes passés à une URL différente - l'événement [ `popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) est déclenché. Nous allons l'utiliser pour résoudre ce problème.
 
 ### Tâche
 
@@ -279,7 +279,7 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Remarque : nous avons utilisé une [fonction fléchée](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) ici pour déclarer notre gestionnaire d'événements `popstate` pour plus de concision, mais un la fonction normale fonctionnerait de la même manière.
+> Remarque : nous avons utilisé une [fonction fléchée](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) ici pour déclarer notre gestionnaire d'événements `popstate` pour plus de concision, mais un la fonction normale fonctionnerait de la même manière.
 
 Voici une vidéo de rappel sur les fonctions fléchées :
 
@@ -298,11 +298,11 @@ Ajoutez un nouveau modèle et une route pour une troisième page qui affiche les
 
 ## Quiz de validation des connaissances
 
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/42?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42?loc=fr)
 
 ## Révision et étude personnelle
 
-Le routage est l'une des parties étonnamment délicates du développement Web, d'autant plus que le Web passe des comportements d'actualisation des pages aux actualisations des pages d'application à page unique. En savoir plus sur [comment le service Azure Static Web App](https://docs.microsoft.com/en-us/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa) gère le routage . Pouvez-vous expliquer pourquoi certaines des décisions décrites dans ce document sont nécessaires?
+Le routage est l'une des parties étonnamment délicates du développement Web, d'autant plus que le Web passe des comportements d'actualisation des pages aux actualisations des pages d'application à page unique. En savoir plus sur [comment le service Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes?WT.mc_id=academic-77807-sagibbon) gère le routage . Pouvez-vous expliquer pourquoi certaines des décisions décrites dans ce document sont nécessaires?
 
 ## Affectation
 

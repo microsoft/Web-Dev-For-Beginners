@@ -4,7 +4,7 @@
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製
 
 ## 課前測驗
-[課前測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9?loc=zh_tw)
+[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9?loc=zh_tw)
 
 撰寫程式碼時，我們必須確保程式碼的閱讀性。聽來不太直覺，理解程式碼的時間遠比撰寫時間來的久。裡面最需要被管理的程式項目就是**函式**。
 
@@ -104,7 +104,7 @@ displayGreeting('Christopher', 'Hi');
 
 ## 回傳值(Return values)
 
-目前為止，我們的函式只能輸出字串到[console](https://developer.mozilla.org/en-US/docs/Web/API/console)上。這或許是我們希望的結果，尤其是需要呼叫其他服務的時候。萬一今天我想建立一個額外的函式負責做資料處理與運算呢?
+目前為止，我們的函式只能輸出字串到[console](https://developer.mozilla.org/docs/Web/API/console)上。這或許是我們希望的結果，尤其是需要呼叫其他服務的時候。萬一今天我想建立一個額外的函式負責做資料處理與運算呢?
 
 此時，我們可以利用**回傳值**。回傳值由函式輸出，就像變數一樣儲存像是字串或是數字的結果。
 
@@ -133,7 +133,7 @@ const greetingMessage = createGreetingMessage('Christopher');
 
 在你的程式旅程中，你會見到有函式將其他函式當作參數使用。這個俐落的手法常被用在一種情況：我們不知道 A 事件什麼時候發生與完成，但我們要在 A 事件後執行 B 事件。
 
-舉例來說，考慮函式[setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)，它會啟動計時機制，並在倒數完後執行下一個程式。我們需要告訴函式哪一個函式要在時間到後執行，一個完美的例子！
+舉例來說，考慮函式[setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)，它會啟動計時機制，並在倒數完後執行下一個程式。我們需要告訴函式哪一個函式要在時間到後執行，一個完美的例子！
 
 執行下方的程式，三秒鐘之後你會看到訊息**已經過三秒鐘**。
 
@@ -184,11 +184,11 @@ setTimeout(() => {
 你能用一句話清楚地說明這些函式與方法的差別嗎? 試試看吧！
 
 ## 課後測驗
-[課後測驗](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/10?loc=zh_tw)
+[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10?loc=zh_tw)
 
 ## 複習與自學
 
-這很值得去閱讀[關於箭頭函式的資料](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，它們越來越常被用在程式碼上。試著寫個函式，再改寫成箭頭語法。
+這很值得去閱讀[關於箭頭函式的資料](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，它們越來越常被用在程式碼上。試著寫個函式，再改寫成箭頭語法。
 
 ## 作業
 

@@ -2,7 +2,7 @@
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/27?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27?loc=hi)
 
 ### परिचय
 
@@ -22,7 +22,7 @@
 
 ![एज प्रोफाइल](../images/profiler.png)
 
-✅ किनारे पर प्रदर्शन पैनल पर [Microsoft दस्तावेज़ीकरण](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/performance?WT.mc_id=academy-13441-cxa) पर जाएँ
+✅ किनारे पर प्रदर्शन पैनल पर [Microsoft दस्तावेज़ीकरण](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academy-13441-cxa) पर जाएँ
 
 > युक्ति: अपनी वेब साइट के स्टार्टअप समय का सही पठन करने के लिए, अपने ब्राउज़र का कैश साफ़ करें
 
@@ -147,7 +147,7 @@ function drawIcon(value) {
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/28?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

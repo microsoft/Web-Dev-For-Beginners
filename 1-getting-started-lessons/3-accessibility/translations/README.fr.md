@@ -4,7 +4,7 @@
 > SketchNote par[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5?loc=fr)
 
 > La puissance du Web est dans son universalité. L'accès par tout le monde indépendamment d'invalidité est un aspect essentiel.
 >
@@ -12,7 +12,7 @@
 
 Cette citation met parfaitement l'accent sur l'importance de créer des sites Web accessibles. Une application qui ne peut pas être accessible par tous est par définition exclusionnaire. En tant que développeurs Web, nous devrions toujours avoir l'accessibilité à l'esprit. En ayant cet objectif dès le début, vous serez déjà bien lancé sur la façon de vous assurer que tout le monde peut accéder aux pages que vous créez. Dans cette leçon, vous découvrirez les outils pouvant vous aider à vous assurer que vos éléments Web sont accessibles et comment développer avec l'accessibilité à l'esprit. 
 
-> Vous pouvez accéder à cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility?WT.mc_id=academic-13441-cxa)!
+> Vous pouvez accéder à cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility?WT.mc_id=academic-77807-sagibbon)!
 
 ## Outils à utiliser
 
@@ -217,7 +217,7 @@ Prenez ce code HTML et réécrivez-le pour qu'il soit aussi accessible que possi
 ```
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6?loc=fr)
 
 ## Révision et auto-apprentissage
 

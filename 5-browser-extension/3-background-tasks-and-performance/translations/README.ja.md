@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/27?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27?loc=ja)
 
 ### イントロダクション
 
@@ -22,7 +22,7 @@
 
 ![Edge profiler](../images/profiler.png)
 
-✅ Edge のパフォーマンスパネルの [Microsoft ドキュメント](https://docs.microsoft.com/ja-jp/microsoft-edge/edgehtml/?WT.mc_id=academic-13441-cxa) を参照してください。
+✅ Edge のパフォーマンスパネルの [Microsoft ドキュメント](https://docs.microsoft.com/ja-jp/microsoft-edge/edgehtml/?WT.mc_id=academic-77807-sagibbon) を参照してください。
 
 > ヒント: Web サイトの起動時間を正確に把握するには、ブラウザのキャッシュをクリアしてください。
 
@@ -147,7 +147,7 @@ function drawIcon(value) {
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/28?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28?loc=ja)
 
 ## 復習と自己学習
 

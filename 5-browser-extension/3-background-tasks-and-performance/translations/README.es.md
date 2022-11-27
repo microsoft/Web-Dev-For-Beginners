@@ -1,6 +1,6 @@
 # Proyecto de extensión del navegador, parte 3: Más información sobre el rendimiento y las tareas en segundo plano
 
-## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/27)
+## [Pre-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
 
 ### Introducción:
 
@@ -20,7 +20,7 @@ La pestaña Rendimiento contiene una herramienta de creación de perfiles. Abra 
 
 ![Edge profiler](./images/profiler.png)
 
-✅ Visite la [Documentación de Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa) en el panel Rendimiento en Edge
+✅ Visite la [Documentación de Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-77807-sagibbon) en el panel Rendimiento en Edge
 
 > Consejo: para obtener una lectura real de la hora de inicio de su sitio web, borre la memoria caché de su navegador
 
@@ -141,7 +141,7 @@ Felicitaciones, ha creado una extensión de navegador útil y ha aprendido más 
 
 🚀 Desafío: Investigue algunos sitios web de código abierto que han existido hace mucho tiempo y, según su historial de GitHub, vea si puede determinar cómo se optimizaron a lo largo de los años para el rendimiento, si es que lo hicieron. ¿Cuál es el punto de dolor más común?
 
-## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/28)
+## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
 
 ## Revisión y autoestudio
 

@@ -1,6 +1,6 @@
 # Plantillas HTML y rutas en una aplicación web
 
-## [Pre-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/41)
+## [Pre-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
 
 ### Introducción
 
@@ -251,7 +251,7 @@ Intente hacer clic en estos botones, ahora debería poder navegar entre las dife
 
 El uso de `history.pushState` crea nuevas entradas en el historial de navegación del navegador. Puede verificar que manteniendo presionado el *botón de retroceso* de su navegador, debería mostrar algo como esto:
 
-![Captura de pantalla del historial de navegación](./history.png)
+![Captura de pantalla del historial de navegación](../history.png)
 
 Si intenta hacer clic en el botón Atrás varias veces, verá que la URL actual cambia y el historial se actualiza, pero se sigue mostrando la misma plantilla.
 
@@ -269,6 +269,10 @@ updateRoute();
 
 > Nota: utilizamos una [función de flecha](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) aquí para declarar nuestro controlador de eventos `popstate` por concisión, pero un la función regular funcionaría igual.
 
+
+[![Arrow Functions](https://img.youtube.com/vi/JiXY9wlqUxQ/0.jpg)](https://youtube.com/watch?v=JiXY9wlqUxQ "Arrow Functions")
+
+
 Ahora intente utilizar los botones de avance y retroceso de sus navegadores y compruebe que esta vez lo que se muestra está actualizado correctamente.
 
 ---
@@ -277,7 +281,7 @@ Ahora intente utilizar los botones de avance y retroceso de sus navegadores y co
 
 Agregue una nueva plantilla y ruta para una tercera página que muestre los créditos de esta aplicación.
 
-## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/42)
+## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
 
 ## Revisión y autoestudio
 

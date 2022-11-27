@@ -4,7 +4,7 @@
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
-[Quiz préalable](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9?loc=fr)
+[Quiz préalable](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9?loc=fr)
 
 Lorsque nous pensons à écrire du code, nous voulons toujours nous assurer que notre code est lisible. Bien que cela puisse paraître contre-intuitif, le code est lu bien plus souvent qu'il n'est écrit. Un outil essentiel dans la boîte à outils d'un développeur pour garantir un code maintenable est la **fonction**.
 
@@ -12,7 +12,7 @@ Lorsque nous pensons à écrire du code, nous voulons toujours nous assurer que 
 
 > 🎥 Cliquez sur l'image ci-dessus pour voir une vidéo sur les méthodes et les fonctions.
 
-> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/fr-fr/learn/modules/web-development-101-functions/?WT.mc_id=academic-13441-cxa)!
+> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Fonctions
 
@@ -185,7 +185,7 @@ Vous avez maintenant vu que nous avons trois façons de passer une fonction en p
 Pouvez-vous expliquer en une phrase la différence entre les fonctions et les méthodes ? Essayez de le faire !
 
 ## Quiz de validation des connaissances
-[Quiz de validation des connaissances](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/10?loc=fr)
+[Quiz de validation des connaissances](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10?loc=fr)
 
 ## Révision et étude personnelle
 

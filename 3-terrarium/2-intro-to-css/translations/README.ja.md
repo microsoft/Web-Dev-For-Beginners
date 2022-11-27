@@ -5,7 +5,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/17?loc=ja)
+[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17?loc=ja)
 
 ### イントロダクション
 
@@ -248,11 +248,11 @@ HTML マークアップの各植物には、id とクラスの組み合わせが
 
 ![finished terrarium](../images/terrarium-final.png)
 
-レッスン後の小テストを完成させるには、この Learn モジュールを通ってください: [HTML アプリを CSS でスタイルを整える](https://docs.microsoft.com/ja-jp/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
+レッスン後の小テストを完成させるには、この Learn モジュールを通ってください: [HTML アプリを CSS でスタイルを整える](https://docs.microsoft.com/ja-jp/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-77807-sagibbon)
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/18?loc=ja)
+[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18?loc=ja)
 
 ## 復習と自己学習
 

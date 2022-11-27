@@ -1,6 +1,6 @@
 # Introdução a Linguagens de Programação e Ferramentas
 
-Essa lição trata dos básicos de linguagens de programação. Os tópicos tratados aqui se aplicam na maioria das linguages de prorgamação modernas. Na sessão 'Ferramentas', você vai aprender sobre softwares úteis que ajudarão como uma pessoa desenvolvedora.
+Essa lição trata dos básicos de linguagens de programação. Os tópicos tratados aqui se aplicam na maioria das linguagens de programação modernas. Na sessão 'Ferramentas', você vai aprender sobre softwares úteis que ajudarão como uma pessoa desenvolvedora.
 
 ![Introdução a Programação](/sketchnotes/webdev101-programming.png)
 
@@ -8,7 +8,7 @@ Essa lição trata dos básicos de linguagens de programação. Os tópicos trat
 
 ## Quiz Pré-Lição
 
-[Quiz Pré-Lição](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/1)
+[Quiz Pré-Lição](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1)
 
 ## Introdução
 
@@ -96,7 +96,7 @@ Há uma chance de que algumas instruções não sejam executadas por um disposit
 
 ## Ferramentas
 
-[![Ferramentas](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Ferramentas")
+[![Ferramentas](https://img.youtube.com/vi/bynF1E0Hq98/0.jpg)](https://youtube.com/watch?v=bynF1E0Hq98 "Ferramentas")
 
 Nesta seção, você aprenderá sobre alguns softwares que podem ser muito úteis ao iniciar sua jornada de desenvolvimento profissional.
 
@@ -137,11 +137,11 @@ Muitos navegadores vêm com _ferramentas para desenvolvimento_ (DevTools) que co
 
 #### Navegadores Populares e DevTools
 
-- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium?WT.mc_id=academic-13441-cxa)
+- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium?WT.mc_id=academic-77807-sagibbon)
 - [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
 - [Firefox](https://developer.mozilla.org/docs/Tools)
 
-### Ferramentas da Linah de Comando
+### Ferramentas da Linha de Comando
 
 Algumas pessoas desenvolvedoras preferem uma visualização menos gráfica para suas tarefas diárias e contam com a linha de comando para fazer isso. O desenvolvimento de código requer uma quantidade significativa de digitação e algumas pessoas desenvolvedoras preferem não interromper seu fluxo no teclado e usam atalhos de teclado para alternar entre as janelas da área de trabalho, trabalhar em arquivos diferentes e usar ferramentas. 
 A maioria das tarefas pode ser concluída com um mouse, mas um benefício de usar a linha de comando é que muito pode ser feito com ferramentas de linha de comando sem a necessidade de alternar entre o mouse e o teclado. Outro benefício da linha de comando é que ela é configurável ​​e você pode salvar sua configuração personalizada, alterá-la posteriormente e também importá-la para novas máquinas de desenvolvimento. Como os ambientes de desenvolvimento são tão exclusivos para cada pessoa desenvolvedora, algumas evitam o uso da linha de comando e outras dependem dela inteiramente e existem também aquelas que preferem uma combinação dos dois.
@@ -156,22 +156,22 @@ _💻 = já vem pré-instalado no sistema operacional._
 
 #### Windows
 
-- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-13441-cxa) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (also known as CMD) 💻
-- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-13441-cxa)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-77807-sagibbon) 💻
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-77807-sagibbon) (also known as CMD) 💻
+- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)
 - [mintty](https://mintty.github.io/)
 
 #### MacOS
 
 - [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) 💻
 - [iTerm](https://iterm2.com/)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7?WT.mc_id=academic-13441-cxa)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7?WT.mc_id=academic-77807-sagibbon)
 
 #### Linux
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
 - [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-77807-sagibbon)
 
 #### Ferramentas Populares para Linha de Comando
 
@@ -203,7 +203,7 @@ Compare algumas linguagens de programação. Quais são algumas das característ
 
 ## Quiz Pós-Aula
 
-[Quiz Pós-Aula](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/2)
+[Quiz Pós-Aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
 
 ## Revisão & Autoestudo
 

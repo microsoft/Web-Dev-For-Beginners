@@ -5,7 +5,7 @@
 
 ## पूर्व व्याख्यान प्रश्नोत्तरी
 
-[पूर्व व्याख्यान प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/23?loc=hi)
+[पूर्व व्याख्यान प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23?loc=hi)
 
 ### परिचय
 
@@ -69,7 +69,7 @@ CO2 सिग्नल की एपीआई।
 - [स्टार्टर कोड](../start)। `start` फ़ोल्डर डाउनलोड करें; आप इस फ़ोल्डर में कोड पूरा कर लेंगे।
 - [एनपीएम](https://www.npmjs.com) -एनपीएम एक पैकेज प्रबंधन उपकरण है; इसे स्थानीय रूप से स्थापित करें और आपके वेब एसेट द्वारा उपयोग के लिए `package.json` फ़ाइल में सूचीबद्ध पैकेज इंस्टॉल किए जाएंगे
 
-✅ इस [उत्कृष्ट लर्न मॉड्यूल](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa) में पैकेज प्रबंधन के बारे में अधिक जानें
+✅ इस [उत्कृष्ट लर्न मॉड्यूल](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon) में पैकेज प्रबंधन के बारे में अधिक जानें
 
 कोडबेस के माध्यम से देखने के लिए एक मिनट लें:
 
@@ -150,7 +150,7 @@ npm install
 
 ## व्याख्यान उपरांत प्रश्नोत्तरी
 
-[व्याख्यान उपरांत प्रश्नोत्तरी](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/24?loc=hi)
+[व्याख्यान उपरांत प्रश्नोत्तरी](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24?loc=hi)
 
 ## समीक्षा और स्व अध्ययन
 

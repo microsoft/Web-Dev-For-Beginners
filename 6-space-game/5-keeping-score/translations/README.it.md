@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/37?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37?loc=it)
 
 In questa lezione si imparerà come aggiungere punteggi a una partita e calcolare le vite.
 
@@ -178,7 +178,7 @@ Il codice è quasi completo. Si riescono a immaginare i prossimi passi?
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/38?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38?loc=it)
 
 ## Revisione e Auto Apprendimento
 

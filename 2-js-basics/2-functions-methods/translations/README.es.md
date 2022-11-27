@@ -4,9 +4,9 @@
 
 # Conceptos básicos de JavaScript: funcións y funciones
 
-[![funcións y funciones](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "funcións y funciones")
+[![funcións y funciones](https://img.youtube.com/vi/DdCRhOQibMo/0.jpg)](https://youtube.com/watch?v=DdCRhOQibMo "funcións y funciones")
 
-## [Pre-lectura prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/9)
+## [Pre-lectura prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
 
 Cuando necesite su código para realizar una tarea, utilizará un función o una función. Analicemos las diferencias.
 
@@ -20,19 +20,19 @@ function name(param, param2, param3) { // definición de función
 }
 ```
 
-## Funciónes (Functions)
+## Funciones
 
 En esencia, una función es un bloque de código que podemos ejecutar bajo demanda. Esto es perfecto para escenarios en los que necesitamos realizar la misma tarea varias veces; en lugar de duplicar la lógica en varias ubicaciones (lo que dificultaría la actualización cuando llegue el momento), podemos centralizarla en una ubicación y llamarla cuando necesitemos que se realice la operación; ¡incluso puede llamar a funciones desde otras funciones!
 
 Igual de importante es la capacidad de nombrar una función. Si bien esto puede parecer trivial, el nombre proporciona una forma rápida de documentar una sección de código. Podría pensar en esto como una etiqueta en un botón. Si hago clic en un botón que dice "Cancelar temporizador", sé que dejará de correr el reloj.
 
-## Creating and calling a function
+## Creando y llamando a una función
 
 La sintaxis de una función se parece a la siguiente:
 
 ```javascript
-function nameOfFunction() { // function definition
- // function definition/body
+function nameOfFunction() { // definición de función
+ // Código de la función
 }
 ```
 
@@ -47,7 +47,7 @@ function displayGreeting() {
 Siempre que queremos llamar (o invocar) nuestra función, usamos el nombre de la función seguido de `()`. Vale la pena señalar el hecho de que nuestra función se puede definir antes o después de que decidamos llamarla; el compilador de JavaScript lo encontrará por usted.
 
 ```javascript
-// calling our function
+// llamando nuestra función
 displayGreeting();
 ```
 
@@ -118,7 +118,7 @@ Los parámetros se enumeran en la parte de definición entre paréntesis y está
 
 ### Parámetro
 
-Hasta ahora, la función que construimos siempre saldrá a la [consola](https://developer.mozilla.org/en-US/docs/Web/API/console). A veces, esto puede ser exactamente lo que estamos buscando, especialmente cuando creamos funciones que llamarán a otros servicios. Pero, ¿qué pasa si quiero crear una función auxiliar para realizar un cálculo y devolver el valor para poder usarlo en otro lugar?
+Hasta ahora, la función que construimos siempre saldrá a la [consola](https://developer.mozilla.org/docs/Web/API/console). A veces, esto puede ser exactamente lo que estamos buscando, especialmente cuando creamos funciones que llamarán a otros servicios. Pero, ¿qué pasa si quiero crear una función auxiliar para realizar un cálculo y devolver el valor para poder usarlo en otro lugar?
 
 Podemos hacer esto usando un **valor de retorno**. La función devuelve un valor de retorno y se puede almacenar en una variable de la misma manera que podríamos almacenar un valor literal como una cadena o un número.
 
@@ -179,11 +179,11 @@ Cualquier parámetro con valores predeterminados debe estar al final de la lista
 🚀 Desafío:
 
 
-## [Post-lecture prueba](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/10)
+## [Prueba de validación de conocimientos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
 
 ## Revisión y autoestudio
 
-Vale la pena [leer un poco más sobre las funciones de flecha](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), ya que se utilizan cada vez más en bases de código. Practique escribir una función y luego reescribirla con esta sintaxis.
+Vale la pena [leer un poco más sobre las funciones de flecha](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), ya que se utilizan cada vez más en bases de código. Practique escribir una función y luego reescribirla con esta sintaxis.
 
 **Tarea**: [Práctica de tipos de datos](assignment.es.md)
 

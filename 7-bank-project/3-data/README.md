@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/45)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
 
 ### Introduction
 
@@ -86,7 +86,7 @@ async function login() {
 
 First, as `getAccount` is an asynchronous function we need to match it with the `await` keyword to wait for the server result. As with any server request, we also have to deal with error cases. For now we'll only add a log message to display the error, and come back to it later.
 
-Then we have to store the data somewhere so we can later use it to display the dashboard informations. Since the `account` variable does not exist yet, we'll create a global variable for it at the top of our file:
+Then we have to store the data somewhere so we can later use it to display the dashboard information. Since the `account` variable does not exist yet, we'll create a global variable for it at the top of our file:
 
 ```js
 let account = null;
@@ -111,7 +111,7 @@ navigate('/dashboard');
 
 ✅ Did you know that by default, you can only call server APIs from the *same domain and port* than the web page you are viewing? This is security mechanism enforced by browsers. But wait, our web app is running on `localhost:3000` whereas the server API is running on ` localhost:5000`, why does it work? By using a technique called [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), it is possible to perform cross-origin HTTP requests if the server adds special headers to the response, allowing exceptions for specific domains.
 
-> Learn more about APIs by taking this [lesson](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-13441-cxa)
+> Learn more about APIs by taking this [lesson](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-77807-sagibbon)
 
 ## Update HTML to display data
 
@@ -225,7 +225,7 @@ First, we check that we have the account data we need before going further. Then
 
 > To make the balance display prettier, we use the method [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) to force displaying the value with 2 digits after the decimal point.
 
-Now we need to call our `updateDashboard()` function everytime the dashboard is loaded. If you already finished the [lesson 1 assignment](../1-template-route/assignment.md) this should be straightforward, otherwise you can use the following implementation.
+Now we need to call our `updateDashboard()` function every time the dashboard is loaded. If you already finished the [lesson 1 assignment](../1-template-route/assignment.md) this should be straightforward, otherwise you can use the following implementation.
 
 Add this code to the end of the `updateRoute()` function:
 
@@ -327,7 +327,7 @@ Here's an example of a styled dashboard page:
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/46)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
 
 ## Assignment
 

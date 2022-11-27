@@ -26,7 +26,7 @@
 
 2. 按下下方按鈕
 
-[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-13441-cxa#create/Microsoft.StaticApp)
+[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-77807-sagibbon#create/Microsoft.StaticApp)
 
 3. 遵循指示建立你的網頁應用。請確保你的程式根目錄為 `/solution` 或者是你自己的專案位置。這項專案並不包含任何 API，你不需要考慮額外匯入的問題。 .github 資料夾會建立在你的分叉數據庫中，它會幫助 Azure Static Web Apps 的組建服務並發布你的應用到新的網址。
 

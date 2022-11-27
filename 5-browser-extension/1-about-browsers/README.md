@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/23)
+[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
 
 ### Introduction
 
@@ -67,9 +67,9 @@ CO2 Signal's API.
 - [an API key](https://www.co2signal.com/); enter your email in the box on this page and one will be sent to you
 - the [code for your region](http://api.electricitymap.org/v3/zones) corresponding to the [Electricity Map](https://www.electricitymap.org/map) (in Boston, for example, I use 'US-NEISO').
 - the [starter code](../start). Download the `start` folder; you will be completing code in this folder.
-- [NPM](https://www.npmjs.com) - NPM is a package management tool; install it locally and the packages listed in you `package.json` file will be installed for use by your web asset
+- [NPM](https://www.npmjs.com) - NPM is a package management tool; install it locally and the packages listed in your `package.json` file will be installed for use by your web asset
 
-✅ Learn more about package management in this [excellent Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)
+✅ Learn more about package management in this [excellent Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
 Take a minute to look through the codebase:
 
@@ -150,7 +150,7 @@ Take a look at a browser extension store and install one to your browser. You ca
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/24)
+[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
 
 ## Review & Self Study
 

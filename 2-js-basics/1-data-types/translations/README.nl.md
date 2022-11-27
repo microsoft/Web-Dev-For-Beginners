@@ -4,11 +4,13 @@
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz voorafgaand aan de lezing
-[Quiz voorafgaand aan de lezing](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7)
+[Quiz voorafgaand aan de lezing](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
 
 Deze les behandelt de basisprincipes van JavaScript, de taal die voor interactiviteit op internet zorgt.
 
 [![Gegevenstypen in JavaScript](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Gegevenstypen in JavaScript")
+
+[![Data Types in JavaScript](https://img.youtube.com/vi/AWfA95eLdq8/0.jpg)](https://youtube.com/watch?v=AWfA95eLdq8 "Data Types in JavaScript")
 
 
 Laten we beginnen met variabelen en de gegevenstypen waarmee ze worden gevuld!
@@ -185,7 +187,7 @@ Booleans kunnen slechts twee waarden zijn: `true` of `false`. Booleans kunnen he
 JavaScript is berucht om zijn verrassende manieren om af en toe met gegevenstypen om te gaan. Doe een beetje onderzoek naar deze 'valstrikken'. Bijvoorbeeld: hoofdlettergevoeligheid kan bijten! Probeer dit in uw console: `let age = 1; let Age = 2; age == Age` (lost `false` op - waarom?). Welke andere valstrikken kunt u vinden?
 
 ## Quiz na de lezing
-[Quiz na de lezing](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8)
+[Quiz na de lezing](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
 
 ## Beoordeling en zelfstudie
 

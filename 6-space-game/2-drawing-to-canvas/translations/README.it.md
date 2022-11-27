@@ -2,7 +2,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/31?loc=it)
+[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31?loc=it)
 
 ## Canvas
 
@@ -205,7 +205,7 @@ Si è imparato a disegnare con l'API Canvas incentrata sul 2D; dare un'occhiata 
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/32?loc=it)
+[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32?loc=it)
 
 ## Revisione e Auto Apprendimento
 
