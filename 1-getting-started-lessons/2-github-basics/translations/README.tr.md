@@ -2,7 +2,7 @@
 
 Bu ders, kodunuzdaki değişiklikleri barındırmak ve yönetmek için bir platform olan GitHub'ın temellerini kapsar.
 
-![GitHub'a Giriş](../../sketchnotes/webdev101-github.png)
+![GitHub'a Giriş](/sketchnotes/webdev101-github.png)
 > [Tomomi Imura] tarafından hazırlanan Sketchnote(https://twitter.com/girlie_mac)
 
 ## Ders Öncesi Sınav
