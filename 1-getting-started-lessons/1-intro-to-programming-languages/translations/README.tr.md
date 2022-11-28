@@ -2,7 +2,7 @@
 
 Bu ders, programlama dillerinin temellerini kapsar. Burada ele alınan konular günümüzün çoğu modern programlama dili için geçerlidir. 'Ticaret Araçları' bölümünde, bir geliştirici olarak size yardımcı olacak faydalı yazılımlar hakkında bilgi edineceksiniz.
 
-![Programlamaya Giriş](../../sketchnotes/webdev101-programming.png)
+![Intro Programming](/sketchnotes/webdev101-programming.png)
 > [Tomomi Imura]'dan eskiz notu(https://twitter.com/girlie_mac)
 
 ## Ders Öncesi Testi
