@@ -20,15 +20,15 @@ Azure Cloud Advocates de Microsoft ont le plaisir de vous proposer un programme 
 
 Commencez avec les ressources suivantes :
 
-[La page Hub étudiants](https://docs.microsoft.com/fr-fr/learn/student-hub/?WT.mc_id=academic-13441-cxa), vous trouverez des ressources pour les débutants, packs étudiants et des méthodes pour avoir des vouchers gratuits pour des certifications. C'est une page que vous pouvez enregistrer and vérifier de temps en temps car nous modifions le contenu mensuellement.
+[La page Hub étudiants](https://docs.microsoft.com/fr-fr/learn/student-hub/?WT.mc_id=academic-77807-sagibbon), vous trouverez des ressources pour les débutants, packs étudiants et des méthodes pour avoir des vouchers gratuits pour des certifications. C'est une page que vous pouvez enregistrer and vérifier de temps en temps car nous modifions le contenu mensuellement.
 
-[Microsoft Learn Student Ambassadors](https://studentambassadors.microsoft.com/?WT.mc_id=academic-13441-cxa), rejoignez une communauté globale d'étudiants ambassadeurs, cela peut vous faire découvrir Microsoft.
+[Microsoft Learn Student Ambassadors](https://studentambassadors.microsoft.com/?WT.mc_id=academic-77807-sagibbon), rejoignez une communauté globale d'étudiants ambassadeurs, cela peut vous faire découvrir Microsoft.
 
 # Pour commencer
 
 > **Instituteurs**, nous avons [inclus quelques suggestions](for-teachers.fr.md) sur la façon d’utiliser ce programme. Nous aimerions avoir vos commentaires [dans notre forum de discussion](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-> **Elèves**, pour utiliser ce programme par vous-même, effectuer un Fork l’ensemble du dépôt et compléter les exercices par vous-même, en commençant par un quiz préalable, puis en lisant le cours et en complétant le reste des activités. Essayez de créer les projets en comprenant les leçons plutôt que de copier le code de la solution; toutefois, ce code est disponible dans les dossiers /solutions de chaque leçon orientée projet. Une autre idée serait de former un groupe d’étude avec des amis et de parcourir le contenu ensemble. Pour une étude plus approfondie, nous recommandons [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa) et en regardant les vidéos mentionnées ci-dessous.
+> **Elèves**, pour utiliser ce programme par vous-même, effectuer un Fork l’ensemble du dépôt et compléter les exercices par vous-même, en commençant par un quiz préalable, puis en lisant le cours et en complétant le reste des activités. Essayez de créer les projets en comprenant les leçons plutôt que de copier le code de la solution; toutefois, ce code est disponible dans les dossiers /solutions de chaque leçon orientée projet. Une autre idée serait de former un groupe d’étude avec des amis et de parcourir le contenu ensemble. Pour une étude plus approfondie, nous recommandons [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-77807-sagibbon) et en regardant les vidéos mentionnées ci-dessous.
 
 [![Vidéo promotionnelle](../images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Vidéo promotionnelle")
 
@@ -40,13 +40,13 @@ Gif par [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
 
 Nous avons choisi deux principes pédagogiques lors de l’élaboration de ce programme : s’assurer qu’il est basé sur des projets et qu’il comprend des quiz fréquents. À la fin de cette série, les élèves auront construit un jeu de dactylographie, un terrarium virtuel, une extension de navigateur 'verte', un jeu de type 'space invaders' et une application bancaire de type professionnel, et auront appris les bases de JavaScript, HTML et CSS ainsi que la chaîne d’outils moderne du développeur Web d’aujourd’hui.
 
-> 🎓 Vous pouvez prendre les premières leçons de ce programme en tant que [Parcours d’apprentissage](https://docs.microsoft.com/learn/paths/web-development-101?WT.mc_id=academic-13441-cxa) sur Microsoft Learn!
+> 🎓 Vous pouvez prendre les premières leçons de ce programme en tant que [Parcours d’apprentissage](https://docs.microsoft.com/learn/paths/web-development-101?WT.mc_id=academic-77807-sagibbon) sur Microsoft Learn!
 
-En veillant à ce que le contenu s’aligne sur les projets, le processus est rendu plus attrayant pour les étudiants et la rétention des concepts sera augmentée. Nous avons également écrit plusieurs leçons de démarrage sur les bases de JavaScript pour introduire des concepts, associées à une vidéo de la "[Série pour débutants à : JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-13441-cxa)" une collection de tutoriels vidéo, dont certains auteurs ont contribué à ce programme.
+En veillant à ce que le contenu s’aligne sur les projets, le processus est rendu plus attrayant pour les étudiants et la rétention des concepts sera augmentée. Nous avons également écrit plusieurs leçons de démarrage sur les bases de JavaScript pour introduire des concepts, associées à une vidéo de la "[Série pour débutants à : JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-77807-sagibbon)" une collection de tutoriels vidéo, dont certains auteurs ont contribué à ce programme.
 
 En outre, un quiz à faible enjeu avant un cours définit l’intention de l’élève d’apprendre un sujet, tandis qu’un deuxième quiz après le cours assure une rétention supplémentaire. Ce programme a été conçu pour être flexible et amusant et peut être pris en tout ou en partie. Les projets commencent petit et deviennent de plus en plus complexes à la fin du cycle de 12 semaines.
 
-Bien que nous ayons délibérément évité d’introduire des frameworks JavaScript afin de nous concentrer sur les compétences de base nécessaires en tant que développeur Web avant d’adopter un framework, une bonne prochaine étape pour compléter ce programme serait d’en apprendre davantage sur Node.js via une autre collection de vidéos: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-13441-cxa)".
+Bien que nous ayons délibérément évité d’introduire des frameworks JavaScript afin de nous concentrer sur les compétences de base nécessaires en tant que développeur Web avant d’adopter un framework, une bonne prochaine étape pour compléter ce programme serait d’en apprendre davantage sur Node.js via une autre collection de vidéos: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-77807-sagibbon)".
 
 > Trouvez nos directives de [Code de conduite](../CODE_OF_CONDUCT.md), pour [Contribuer](../CONTRIBUTING.md) et de [Traduction](../TRANSLATIONS.md). Vos commentaires constructifs sont les bienvenus!
 

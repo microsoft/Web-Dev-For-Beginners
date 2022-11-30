@@ -26,6 +26,6 @@
 1. இந்த ரெப்போவை ஃபோர்க் செய்யுங்கள்
 2. இந்த பொத்தானை அழுத்தவும்
 
-[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-13441-cxa#create/Microsoft.StaticApp)
+[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-77807-sagibbon#create/Microsoft.StaticApp)
 
 3. உங்கள் பயன்பாட்டை உருவாக்கும் வழிகாட்டி வழியாக நடக்கவும்.  பயன்பாட்டு வேர் `/solution` அல்லது உங்கள் கோட்பேஸின் வேர் என்று நீங்கள் அமைக்கிறீர்கள் என்பதை உறுதிப்படுத்தவும்.இந்த பயன்பாட்டில் ஏபிஐ இல்லை, எனவே அதை சேர்ப்பது பற்றி கவலைப்பட வேண்டாம்.உங்கள் ஃபோர்க் செய்யப்பட்ட ரெப்போவில் ஒரு கீட்ஹப் கோப்புறை உருவாக்கப்படும், இது அஸூர் ஸ்டேடிக் வெப் ஆப்ஸின் சேவையை உருவாக்கவும் உங்கள் பயன்பாட்டை ஒரு புதிய யுஆர்எல் க்கு வெளியிடவும் உதவும்.
