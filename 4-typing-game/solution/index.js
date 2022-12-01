@@ -6,6 +6,7 @@ const quotes = [
 	'What one man can invent another can discover.',
 	'Nothing clears up a case so much as stating it to another person.',
 	'Education never ends, Watson. It is a series of lessons, with the greatest for the last.',
+	'I am Slim shady yes I am the real Slim shady all you other slim shadies are just immitating.', 
 ];
 
 // array for storing the words of the current challenge
