@@ -6,7 +6,7 @@ We welcome translations for the lessons in this curriculum!
 
 There are [**translations**](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/1-getting-started-lessons/1-intro-to-programming-languages/translations) folders which contain the translated markdown files.
 
-> Note, please do not translate any code in the code sample files; the only things to translate are README, assignments, and the quizzes. Thanks!
+> Note, please do not translate any code in the code sample files; the only things to translate are README, assignments, and quizzes. Thanks!
 
 Translated files should follow this naming convention:
 
@@ -20,7 +20,7 @@ Similar to Readme's, please translate the assignments as well.
 
 **Quizzes**
 
-1. Add your translation to the quiz-app by adding a file [here](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/quiz-app/src/assets/translations), with proper naming convention (en.json, fr.json). **Please don't localize the words 'true' or 'false' however. thanks!**
+1. Add your translation to the quiz-app by adding a file [here](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/quiz-app/src/assets/translations), with the proper naming convention (en.json, fr.json). **Please don't localize the words 'true' or 'false' however. thanks!**
 
 2. Add your language code to the dropdown in the quiz-app's App.vue file.
 
