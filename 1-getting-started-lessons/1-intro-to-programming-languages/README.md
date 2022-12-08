@@ -112,9 +112,9 @@ Developers rely on editors for a few additional reasons:
 #### Popular Editors and Web Development Extensions
 
 - [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker/?WT.mc_id=academic-77807-sagibbon)
-  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack/?WT.mc_id=academic-77807-sagibbon)
-  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode/?WT.mc_id=academic-77807-sagibbon)
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Atom](https://atom.io/)
   - [spell-check](https://atom.io/packages/spell-check)
   - [teletype](https://atom.io/packages/teletype)
