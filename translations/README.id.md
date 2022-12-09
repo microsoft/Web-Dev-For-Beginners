@@ -10,11 +10,11 @@
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
-# Web Development untuk pemula - Kurikulum
+# Pengembangan Website untuk pemula - Kurikulum
 
 Azure Cloud Advocates di Microsoft dengan senang hati menawarkan kurikulum 12 minggu 24 pelajaran tentang JavaScript, CSS, dan dasar-dasar HTML. Setiap pelajaran mencakup kuis sebelum dan sesudah pelajaran, instruksi tertulis untuk menyelesaikan pelajaran, solusi, tugas, dan banyak lagi. Pedagogi berbasis proyek kami memungkinkan Anda untuk belajar sambil membangun, cara yang terbukti untuk keterampilan baru untuk 'stick'.
 
-**Terima kasih yang sebesar-besarnya kepada penulis kami Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, dan sketchnote artis Tomomi Imura!**
+**Terima kasih yang sebesar-besarnya kepada penulis kami Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, dan seniman sketchnote Tomomi Imura!**
 
 # Mulai
 
@@ -23,10 +23,10 @@ Azure Cloud Advocates di Microsoft dengan senang hati menawarkan kurikulum 12 mi
 
 [![Promo video](https://github.com/GarudaID/Web-Dev-For-Beginners/blob/main/images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
 
-Gif by [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
+Gif oleh [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
 
 > 🎥 Klik gambar di atas untuk melihat video tentang proyek dan orang-orang yang membuatnya!
-## Pedagogy
+## Pedagogi
 
 Kami telah memilih dua prinsip pedagogis saat membangun kurikulum ini: memastikan bahwa itu berbasis proyek dan termasuk kuis yang sering. Pada akhir seri ini, siswa akan membuat game mengetik, terarium virtual, ekstensi browser 'hijau', game tipe 'penyerbu ruang', dan aplikasi perbankan tipe bisnis, dan akan mempelajari dasar-dasar JavaScript , HTML, dan CSS bersama dengan rantai alat modern dari pengembang web saat ini.
 
@@ -81,13 +81,13 @@ Meskipun kami sengaja menghindari pengenalan kerangka kerja JavaScript untuk ber
 | 23  |         [Banking App](/7-bank-project/solution/README.md)          |                   Metode Mengambil dan Menggunakan Data                 | Bagaimana data mengalir masuk dan keluar dari aplikasi Anda, cara mengambilnya, menyimpannya, dan membuangnya                                         |                                            [Data](/7-bank-project/3-data/README.md)                                            |          Yohan          |
 | 24  |         [Banking App](/7-bank-project/solution/README.md)          |                      Konsep Manajemen Negara                     | Pelajari cara aplikasi Anda mempertahankan status dan cara mengelolanya secara terprogram                                                              |                                [State Management](/7-bank-project/4-state-management/README.md)                                |          Yohan          |
 
-## Akses Offline
+## Akses Luring
 
-Anda dapat menjalankan dokumentasi ini secara offline dengan menggunakan [Docsify](https://docsify.js.org/#/). Fork repo ini, [install Docsify](https://docsify.js.org/#/quickstart) di mesin lokal Anda, dan kemudian di folder root repo ini, ketik `docsify serve`. Situs web akan disajikan pada port 3000 di localhost Anda: `localhost:3000`.
+Anda dapat menjalankan dokumentasi ini secara luring dengan menggunakan [Docsify](https://docsify.js.org/#/). Fork repo ini, [install Docsify](https://docsify.js.org/#/quickstart) di mesin lokal Anda, dan kemudian di folder root repo ini, ketik `docsify serve`. Situs web akan disajikan pada port 3000 di localhost Anda: `localhost:3000`.
 
 ## PDF
 
-PDF dari semua pelajaran dapat ditemukan [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
+PDF dari semua pelajaran dapat ditemukan [di sini](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
 
 ## Kurikulum lainnya
 
