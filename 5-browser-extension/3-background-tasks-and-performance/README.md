@@ -6,7 +6,7 @@
 
 ### Introduction
 
-In the last two lessons of this module, you learned how to build a form and display area for data fetched from an API. It's a very standard way of creating web presences on the web. You even learned how to handle fetching data asynchronously. Your browser extension is very nearly complete. 
+In the last two lessons of this module, you learned how to build a form and display area for data fetched from an API. It's a very standard way of creating a web presence on the web. You even learned how to handle fetching data asynchronously. Your browser extension is very nearly complete. 
 
 It remains to manage some background tasks, including refreshing the color of the extension's icon, so this is a great time to talk about how the browser manages this kind of task. Let's think about these browser tasks in the context of the performance of your web assets as you build them.
 
@@ -14,17 +14,17 @@ It remains to manage some background tasks, including refreshing the color of th
 
 > "Website performance is about two things: how fast the page loads, and how fast the code on it runs." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
-The topic of how to make your web sites blazingly fast on all kinds of devices, for all kinds of users, in all kinds of situations, is unsurprisingly vast. Here are some points to keep in mind as you build either a standard web project or a browser extension.
+The topic of how to make your websites blazingly fast on all kinds of devices, for all kinds of users, in all kinds of situations, is unsurprisingly vast. Here are some points to keep in mind as you build either a standard web project or a browser extension.
 
-The first thing you need to do to ensure that your site is running efficiently is to gather data about its performance. The first place to do this is in the developer tools of your web browser. In Edge, you can select the "Settings and more" button (the three dots icon on the top right of the browser), then navigate to More Tools > Developer Tools and open the Performance tab. You can also use the keyboard shortcuts `Ctrl` + `Shift` + `I` on Windows, or `Option` + `Command` + `I` on Mac to open developer tools.
+The first thing you need to do to ensure that your site is running efficiently is to gather data about its performance. The first place to do this is in the developer tools of your web browser. In Edge, you can select the "Settings and more" button (the three dots icon on the top right of the browser), then navigate to More Tools > Developer Tools and open the Performance tab. You can also use the keyboard shortcuts `Ctrl` + `Shift` + `I` on Windows or `Option` + `Command` + `I` on Mac to open developer tools.
 
-The Performance tab contains a Profiling tool. Open a web site (try, for example, https://www.microsoft.com) and click the 'Record' button, then refresh the site. Stop the recording at any time, and you will be able to see the routines that are generated to 'script', 'render', and 'paint' the site:
+The Performance tab contains a Profiling tool. Open a website (try, for example, [https://www.microsoft.com](https://www.microsoft.com?WT.mc_id=academic-77807-sagibbon)) and click the 'Record' button, then refresh the site. Stop the recording at any time, and you will be able to see the routines that are generated to 'script', 'render', and 'paint' the site:
 
 ![Edge profiler](./images/profiler.png)
 
-✅ Visit the [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa) on the Performance panel in Edge
+✅ Visit the [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-77807-sagibbon) on the Performance panel in Edge
 
-> Tip: to get a true reading of your web site's startup time, clear your browser's cache
+> Tip: to get an accurate reading of your website's startup time, clear your browser's cache
 
 Select elements of the profile timeline to zoom in on events that happen while your page loads.
 
@@ -40,13 +40,13 @@ Check the Event Log pane to see if any event took longer than 15 ms:
 
 ## Profiling checks
 
-In general there are some "problem areas" that every web developer should watch for when building a site, so as to avoid nasty surprises when it's time to deploy to production.
+In general, there are some "problem areas" that every web developer should watch for when building a site to avoid nasty surprises when it's time to deploy to production.
 
 **Asset sizes**: The web has gotten 'heavier', and thus slower, over the past few years. Some of this weight has to do with the use of images.
 
 ✅ Look through the [Internet Archive](https://httparchive.org/reports/page-weight) for a historical view of page weight and more.
 
-A good practice is to ensure that your images are optimized, delivered at the right size and resolution for your users.
+A good practice is to ensure that your images are optimized and delivered at the right size and resolution for your users.
 
 **DOM traversals**: The browser has to build its Document Object Model based on the code you write, so it's in the interest of good page performance to keep your tags minimal, only using and styling what the page needs. To this point, excess CSS associated with a page could be optimized; styles that need to be used only on one page don't need to be included in the main style sheet, for example.
 
@@ -54,7 +54,7 @@ A good practice is to ensure that your images are optimized, delivered at the ri
 
 ✅ Try some sites on a [Site Speed Test website](https://www.webpagetest.org/) to learn more about the common checks that are done to determine site performance.
 
-Now that you have an idea on how the browser renders the assets you send to it, let's look at the last few things you need to do to complete your extension:
+Now that you have an idea of how the browser renders the assets you send to it, let's look at the last few things you need to do to complete your extension:
 
 ### Create a function to calculate color
 
@@ -85,7 +85,7 @@ The chrome.runtime has [an API](https://developer.chrome.com/extensions/runtime)
 
 > "Use the chrome.runtime API to retrieve the background page, return details about the manifest, and listen for and respond to events in the app or extension lifecycle. You can also use this API to convert the relative path of URLs to fully-qualified URLs."
 
-✅ If you're developing this browser extension for Edge, it might surprise you that you're using a chrome API. The newer Edge  browser versions run on the Chromium browser engine, so you can leverage these tools.
+✅ If you're developing this browser extension for Edge, it might surprise you that you're using a chrome API. The newer Edge browser versions run on the Chromium browser engine, so you can leverage these tools.
 
 > Note, if you want to profile a browser extension, launch the dev tools from within the extension itself, as it is its own separate browser instance.
 
@@ -131,7 +131,7 @@ function drawIcon(value) {
 	return context.getImageData(50, 50, 100, 100);
 }
 ```
-In this code, you are adding a listener for any messages coming to the backend task manager. If it's called 'updateIcon', then the next code is run, to draw an icon of the proper color using the Canvas API.
+In this code, you are adding a listener for any messages coming to the backend task manager. If it's called 'updateIcon', then the next code is run to draw an icon of the proper color using the Canvas API.
 
 ✅ You'll learn more about the Canvas API in the [Space Game lessons](../../6-space-game/2-drawing-to-canvas/README.md).
 
@@ -143,7 +143,7 @@ Congratulations, you've built a useful browser extension and learned more about 
 
 ## 🚀 Challenge
 
-Investigate some open source web sites have been around a long time ago, and, based on their GitHub history, see  if you can determine how they were optimized over the years for performance, if at all. What is the most common pain point?
+Investigate some open source websites that have been around a long time ago, and, based on their GitHub history, see if you can determine how they were optimized over the years for performance, if at all. What is the most common pain point?
 
 ## Post-Lecture Quiz
 
