@@ -2,7 +2,7 @@
 
 Essa lição trata dos básicos de linguagens de programação. Os tópicos tratados aqui se aplicam na maioria das linguagens de programação modernas. Na sessão 'Ferramentas', você vai aprender sobre softwares úteis que ajudarão como uma pessoa desenvolvedora.
 
-![Introdução a Programação](/sketchnotes/webdev101-programming.png)
+![Introdução à Programação](../../../sketchnotes/webdev101-programming.png)
 
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
