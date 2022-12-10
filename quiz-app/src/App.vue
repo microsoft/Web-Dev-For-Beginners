@@ -1,10 +1,20 @@
 <template>
   <div>
     <nav>
-      <router-link class="navlink" to="/">Home</router-link>
+      <router-link
+        class="navlink"
+        to="/"
+      >
+        Home
+      </router-link>
       <label for="locale">locale</label>
       <select v-model="locale">
-        <option v-for="localeName in availableLocales" :key="localeName">{{ localeName }}</option>
+        <option
+          v-for="localeName in availableLocales"
+          :key="localeName"
+        >
+          {{ localeName }}
+        </option>
       </select>
     </nav>
     <div id="app">
