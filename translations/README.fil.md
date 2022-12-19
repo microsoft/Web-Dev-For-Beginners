@@ -22,7 +22,7 @@ Ang Azure Cloud Advocates sa Microsoft ay nalulugod na mag-alok ng 12-linggo, 24
 
 > **Mga mag-aaral**, para magamit ang curriculum na ito nang mag-isa, i-fork ang buong repo at kumpletuhin ang mga pagsasanay nang mag-isa, simula sa pagsusulit bago ang lecture, pagkatapos ay basahin ang lecture at kumpletuhin ang iba pang aktibidad. Subukang lumikha ng mga proyekto sa pamamagitan ng pag-unawa sa mga aralin sa halip na pagkopya ng code ng solusyon; gayunpaman, ang code na iyon ay magagamit sa mga folder ng /solutions sa bawat aralin na nakatuon sa proyekto. Ang isa pang ideya ay ang bumuo ng isang grupo ng pag-aaral kasama ang mga kaibigan at sabay-sabay na suriin ang nilalaman. Para sa karagdagang pag-aaral, inirerekomenda namin ang [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-77807-sagibbon) and by watching the videos mentioned below.
 
-[![Promo video](../screenshot.png)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
+[![Promo video](/images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
 
 > 🎥 I-click ang larawan sa itaas para sa isang video tungkol sa proyekto at sa mga taong lumikha nito!
 
