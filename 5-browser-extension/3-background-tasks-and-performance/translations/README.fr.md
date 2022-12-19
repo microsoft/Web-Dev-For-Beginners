@@ -22,7 +22,7 @@ L'onglet Performance contient un outil de profilage. Ouvrez un site Web (essayez
 
 ![Edge profiler](../images/profiler.png)
 
-✅ Consultez la [Documentation Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-13441-cxa) à propos du panneau Performances dans Edge
+✅ Consultez la [Documentation Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance?WT.mc_id=academic-77807-sagibbon) à propos du panneau Performances dans Edge
 
 > Astuce : pour avoir une vraie lecture de l'heure de démarrage de votre site web, videz le cache de votre navigateur
 

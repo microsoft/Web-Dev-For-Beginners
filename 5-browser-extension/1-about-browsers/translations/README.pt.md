@@ -68,7 +68,7 @@ Você vai construir uma extensão de navegador que exibe a pegada de carbono da 
 - o [código de inicio](../../start). Faça o download da pasta `start`; você irá completar o código desta pasta.
 - [NPM](https://www.npmjs.com) - NPM é uma ferramenta de gerenciamento de pacotes; instale-o localmente e os pacotes listados em seu arquivo package.json serão instalados para uso por seu app da web.
 
-✅ Saiba mais sobre gerenciamento de pacotes neste [excelente módulo de aprendizagem](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-13441-cxa)
+✅ Saiba mais sobre gerenciamento de pacotes neste [excelente módulo de aprendizagem](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
 Reserve um minuto para examinar o código base:
 
