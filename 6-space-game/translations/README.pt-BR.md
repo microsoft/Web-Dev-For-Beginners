@@ -11,15 +11,15 @@ Nestas seis lições, você aprenderá o seguinte:
 - **Interaja** com o elemento Canvas para desenhar coisas em uma tela
 - **Entenda** o sistema de coordenadas cartesianas
 - **Aprenda** o padrão Pub-Sub para criar uma arquitetura de jogo de som mais fácil de manter e estender
-- **Alavancagem** Async/Await para carregar recursos do jogo
-- **Manusear** eventos de teclado
+- **Utilize** Async/Await para carregar recursos do jogo
+- **Trate** eventos de teclado
 
 ## Visão Geral
 
 - Teoria
   - [Introdução à criação de jogos com JavaScript](../1-introduction/translations/README.pt-BR.md)
 - Prática
-  - [Desenho para tela](../2-drawing-to-canvas/translations/README.pt-BR.md)
+  - [Desenhando no Canvas](../2-drawing-to-canvas/translations/README.pt-BR.md)
   - [Movendo elementos pela tela](../3-moving-elements-around/README.pt-BR.md)
   - [Detecção de colisão](../4-collision-detection/README.pt-BR.md)
   - [Mantendo a pontuação](../5-keeping-score/assignment.md/README.pt-BR.md)
@@ -27,5 +27,5 @@ Nestas seis lições, você aprenderá o seguinte:
 
 ## Créditos
 
-Os ativos utilizados para isso vieram de https://www.kenney.nl/.
-Se você gosta de construir jogos, esses são alguns ativos muito bons, muitos são gratuitos e alguns são pagos.
+Os assets utilizados para isso vieram de https://www.kenney.nl/.
+Se você gosta de construir jogos, esses são alguns assets muito bons, muitos são gratuitos e alguns são pagos.
