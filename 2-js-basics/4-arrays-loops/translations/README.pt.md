@@ -98,7 +98,7 @@ while (i < 10) {
 }
 ```
 
-✅ Porque escolheria um para loop vs. um loop de tempo? Os 17K espectadores tinham a mesma pergunta sobre o StackOverflow, e algumas das opiniões [pode ser interessante para si](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
+✅ Porque escolheria um para loop vs. um loop de tempo? Os 17K espectadores tinham a mesma pergunta sobre o StackOverflow, e algumas das opiniões [pode ser interessante para você](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
 
 ## Laços e Arrays
 
