@@ -48,6 +48,8 @@ Before you start building, take a look at the process of building and deploying 
 
 ![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](images/install-on-edge.png)
 
+> Note: Make sure to toggle on developer mode and allow extension from other stores.
+
 In essence, the process will be:
 
 - build your extension using `npm run build` 
