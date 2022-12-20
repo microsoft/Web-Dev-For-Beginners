@@ -31,4 +31,4 @@ Há muitas maneiras de fazer isso funcionar via formato de sala de aula online. 
 
 ## Por favor, nos dê sua opinião! 
 
-Nós queremos fazer este programa de estudos funcionar para você e seus estudantes. Por favor, nos de um [feedback](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u). 
+Nós queremos fazer este programa de estudos funcionar para você e seus estudantes. Por favor, nos de um [feedback](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner). 

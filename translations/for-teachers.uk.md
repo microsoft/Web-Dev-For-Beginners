@@ -30,4 +30,4 @@
 
 ## Будь ласка, висловіть нам свої думки!
 
-Ми хочемо, щоб ця навчальна програма працювала для вас і ваших учнів. Будь ласка, залиште нам [відгук](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
+Ми хочемо, щоб ця навчальна програма працювала для вас і ваших учнів. Будь ласка, залиште нам [відгук](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner).
