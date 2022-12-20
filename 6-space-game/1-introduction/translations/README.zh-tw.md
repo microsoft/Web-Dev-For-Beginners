@@ -217,7 +217,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## 複習與自學
 
-藉由[閱讀此連結](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-77807-sagibbon)來認識更多關於發布與訂閱的設計模式。
+藉由[閱讀此連結](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon)來認識更多關於發布與訂閱的設計模式。
 
 ## 作業
 

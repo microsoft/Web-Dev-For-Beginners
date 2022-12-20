@@ -32,4 +32,4 @@
 
 ## Пожалуйста, поделитесь с нами своими мыслями!
 
-Мы хотим, чтобы эта учебная программа работала на вас и ваших учеников. Пожалуйста, оставьте нам [отзыв](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
+Мы хотим, чтобы эта учебная программа работала на вас и ваших учеников. Пожалуйста, оставьте нам [отзыв](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner).

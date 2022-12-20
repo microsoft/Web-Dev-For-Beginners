@@ -30,4 +30,4 @@ Il existe de nombreuses façons de faire fonctionner cela dans un format de clas
 
 ## Veuillez nous donner votre avis!
 
-Nous voulons que ce programme fonctionne pour vous et vos étudiants. Veuillez nous donner vos [feedbacks](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
+Nous voulons que ce programme fonctionne pour vous et vos étudiants. Veuillez nous donner vos [feedbacks](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner).

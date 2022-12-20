@@ -30,4 +30,4 @@ Ci sono tanti modi per far funzionare il corso in una classe online. Facci saper
 
 ## Per favore condividi il tuo pensiero!
 
-Vogliamo che questo corso funzioni per te e per i tuoi studenti. Ti preghiamo di darci un [feedback](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
+Vogliamo che questo corso funzioni per te e per i tuoi studenti. Ti preghiamo di darci un [feedback](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner).

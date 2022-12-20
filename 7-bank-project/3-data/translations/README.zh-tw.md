@@ -113,7 +113,7 @@ navigate('/dashboard');
 
 ✅ 你知道在預設上，你只能從*同一個網域(domain)與連接埠(port)*的網頁呼叫伺服器 APIs 嗎？這是瀏覽器強制性的安全機制。但我們的網頁應用程式在 `localhost:3000` 上執行，而伺服器 API 則在 `localhost:5000` 上執行。為什麼這樣能正常運作？利用[跨來源資源共用 (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS)，只要伺服器添加特殊的標頭檔到網頁回應中，我們就可以處理跨資源的 HTTP 請求，允許特殊的網域進行呼叫。
 
-> 藉由前往[此課程](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-77807-sagibbon)學習更多有關 API 的資訊。
+> 藉由前往[此課程](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)學習更多有關 API 的資訊。
 
 ## 更新 HTML 顯示資料
 

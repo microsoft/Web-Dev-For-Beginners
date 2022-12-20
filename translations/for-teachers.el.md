@@ -33,4 +33,4 @@
 ## Παρακαλώ πείτε μας τις σκέψεις σας!
 
 Θέλουμε το πρόγραμμα αυτό να λειτουργήσει για εσας και τους μαθητές σας.
-We want to make this curriculum work for you and your students. Παρακαλώ πείτε μας [σχόλια](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
+We want to make this curriculum work for you and your students. Παρακαλώ πείτε μας [σχόλια](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner).
