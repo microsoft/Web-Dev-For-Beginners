@@ -106,6 +106,7 @@ Our team produces other curricula! Check out:
 - [IoT for Beginners](https://aka.ms/iot-beginners/?WT.mc_id=academic-77807-sagibbon)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners/?WT.mc_id=academic-77807-sagibbon)
 - [AI for Beginners](https://aka.ms/ai-beginners/?WT.mc_id=academic-77807-sagibbon)
+- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
 
 ## License
 
