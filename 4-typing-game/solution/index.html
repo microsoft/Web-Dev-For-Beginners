@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Typing</title>
-		<link rel="stylesheet" href="./index.css" />
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+    <title>Typing</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
 
-	<body>
-		<h1>Practice your typing</h1>
-		<div>Click start to have a quote displayed. Type the quote as fast as you can!</div>
+  <body>
+    <main>
+      <h1>Practice your typing</h1>
+      <div class="title">
+        Click start to have a quote displayed. Type the quote as fast as you
+        can!
+      </div>
 
-		<p id="quote"></p>
-		<p id="message"></p>
-		<div>
-			<input type="text" aria-label="current word" id="typed-value" />
-		</div>
-		<div>
-			<button id="start" type="button">Start</button>
-		</div>
-		<script src="./index.js"></script>
-	</body>
+      <p id="quote"></p>
+      <div class="win">
+        <p id="message"></p>
+      </div>
+      <div>
+        <input type="text" aria-label="current word" id="typed-value" />
+      </div>
+      <div>
+        <button id="start" type="button">Start</button>
+      </div>
+      <script src="./index.js"></script>
+    </main>
+  </body>
 </html>

@@ -1,8 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Barlow Condensed";
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #141e30, #243b55);
+}
+
+main {
+  padding: 1.2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+input {
+  font-size: 1.6rem;
+  display: block;
+  width: 100%;
+  height: 1.8rem;
+  color: #fff;
+  border: none;
+  background-color: #243b55;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: "Bungee Spice", sans-serif;
+  font-size: 3.2rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 1.2rem;
+}
+
+button {
+  width: 100%;
+  font-family: "Barlow Condensed";
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  height: 2.2rem;
+  background: linear-gradient(to top, #f12711, #f5af19);
+  color: #fff;
+  transition: all 300ms;
+  border: none;
+}
+
+button:hover,
+button:active {
+  background: linear-gradient(to top, #fc4a1a, #f7b733);
+  color: #000;
+}
+.win {
+  font-family: "Barlow Condensed";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1fae37;
+  height: 0;
+  transition: all 300ms;
+}
+#quote {
+  font-family: "Barlow Condensed";
+  font-size: 2rem;
+}
+
 .highlight {
-	background-color: yellow;
+  background-color: #f5af19;
+  transition: all 500ms;
 }
 
 .error {
-	background-color: lightcoral;
-	border-color: red;
+  background-color: lightcoral;
+  border-color: red;
 }
