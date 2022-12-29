@@ -48,16 +48,16 @@ While we have purposefully avoided introducing JavaScript frameworks to concentr
 
 ## Each lesson includes:
 
-- optional sketchnote
-- optional supplemental video
-- pre-lesson warmup quiz
-- written lesson
+- optional sketchnotes
+- an optional supplemental video
+- a pre-lesson warmup quiz
+- a written lesson
 - for project-based lessons, step-by-step guides on how to build the project
 - knowledge checks
 - a challenge
 - supplemental reading
-- assignment
-- post-lesson quiz
+- an assignment
+- a post-lesson quiz
 
 > **A note about quizzes**: All quizzes are contained [in this app](https://ashy-river-0debb7803.1.azurestaticapps.net/), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
 
