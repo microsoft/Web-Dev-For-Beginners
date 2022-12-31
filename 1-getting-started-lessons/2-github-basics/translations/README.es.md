@@ -5,7 +5,8 @@ Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar
 ![Introducción a GitHub](/sketchnotes/webdev101-github.png)
 > Dibujo de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Cuestionario](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+## Cuestionario Previo a la Clase
+[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ### Introducción
 
@@ -44,6 +45,10 @@ Necesitarás un directorio con un proyecto de código en tu máquina local (comp
 Digamos que tienes una directorio local con algún proyecto de código y deseas rastrear tu progreso usando git (sistema de control de versiones). Algunas personas comparan el uso de git con escribir una carta de amor a tu futuro. Al leer tus mensajes de confirmación días, semanas o meses después, podrás recordar por qué tomaste una decisión o "revertiste" un cambio, siempre y cuando escribas buenos mensajes a la hora de enviar un commit.
 
 ### Tarea: Hacer un repositorio git y enviar código
+
+> Revisa este video
+> 
+> [![Git and GitHub basics video](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
 
 1. **Crear repositorio en GitHub**. En GitHub.com, en la pestaña de repositorios, o en la barra de navegación superior derecha, busca el botón **nuevo repositorio**.
 
@@ -151,7 +156,7 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
    git push
    ```
 
-   > Sugerencia: es posible que también desees adoptar un archivo `.gitignore` para evitar que los archivos que no deseas rastrear aparezcan en GitHub. Puedes encontrar plantillas para archivos `.gitignore` en [.gitignore templates](github.com/github/gitignore).
+   > Sugerencia: es posible que también desees adoptar un archivo `.gitignore` para evitar que los archivos que no deseas rastrear aparezcan en GitHub. Puedes encontrar plantillas para archivos `.gitignore` en [.gitignore templates](https://github.com/github/gitignore).
 
 
 #### Confirmar mensajes
@@ -165,10 +170,13 @@ Como en el asunto, en el cuerpo (opcional) también use el presente imperativo. 
 
 ### Tarea: Colaborar
 
-
 La razón principal para poner cosas en GitHub fue hacer posible la colaboración con otros desarrolladores.
 
 ## Trabajando en proyectos con otros
+
+> Revisa este video
+>
+> [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
 En tu repositorio, ve a `Insights > Community` para ver cómo se compara tu proyecto con los estándares comunitarios recomendados.
 
@@ -270,6 +278,8 @@ Primero, busquemos un repositorio en GitHub que te interese y al que te gustarí
 
 ✅ Una buena forma de encontrar repositorios 'aptos para principiantes' es [buscar por la etiqueta `good-first-issue`](https://github.blog/2020-01-22-browse-good-first-issues-para-empezar-a-contribuir-al-código-abierto/).
 
+![Copy a repo locally](../images/clone_repo.png)
+
 Hay varias formas de copiar código. Una forma es "clonar" el contenido del repositorio, usando HTTPS, SSH o usando GitHub CLI (Interfaz de línea de comandos).
 
 Abre tu terminal y clona el repositorio así:
@@ -284,7 +294,7 @@ Por último, puedes descargar el código en un directorio comprimido.
 
 ### Algunas cosas más interesantes sobre GitHub
 
-Puede destacar, ver y / o "fork" cualquier repositorio público en GitHub. Puedes encontrar tus repositorios destacados en el menú desplegable de la parte superior derecha. Es como marcar como favorito, pero por código.
+Puede destacar, ver y/o "fork" cualquier repositorio público en GitHub. Puedes encontrar tus repositorios destacados en el menú desplegable de la parte superior derecha. Es como marcar como favorito, pero por código.
 
 Los proyectos tienen un rastreador de problemas, principalmente en GitHub en la pestaña "Issues" a menos que se indique lo contrario, donde las personas debaten los problemas relacionados con el proyecto. Y la pestaña Pull requests es donde las personas debaten y revisan los cambios que están en curso.
 
@@ -292,20 +302,27 @@ Los proyectos también pueden tener discusiones en foros, listas de correo o can
 
 ✅ Echa un vistazo a tu nuevo repositorio de GitHub y prueba algunas cosas, como editar la configuración, agregar información a tu repositorio y crear un proyecto (como un tablero Kanban). ¡Hay muchas cosas que puedes hacer!
 
-🚀 Desafío: Haz pareja con un amigo(a) para trabajar juntos en el código. Crea un proyecto de forma colaborativa, haz fork del proyecto, crea ramas y combina los cambios.
+---
 
-## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+## 🚀 Reto
 
-## Revisión y autoestudio
+Emparéjese con un amigo para trabajar en el código del otro. Cree un proyecto en colaboración, bifurque el código, cree ramas y fusione los cambios.
+
+## Cuestionario Posterior a la Clase
+[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+
+## Revisión y Autoestudio
 
 Obtén más información sobre [contribución al software de código abierto](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution).
 
 [Hoja de referencia de Git](https://training.github.com/downloads/github-git-cheat-sheet/).
 
-Práctica práctica práctica. GitHub tiene excelentes rutas de aprendizaje disponibles a través de [lab.github.com](https://lab.github.com/):
+Practica, practica, practica. GitHub tiene excelentes rutas de aprendizaje disponibles a través de [lab.github.com](https://lab.github.com/):
 
 - [Primera semana en GitHub](https://lab.github.com/githubtraining/first-week-on-github)
 
 También encontrarás laboratorios más avanzados.
 
-**Tarea**: Completa [la primera semana en el laboratorio de capacitación de GitHub](https://lab.github.com/githubtraining/first-week-on-github)
+## Asignación
+
+Completa [La Primera Semana en el Laboratorio de capacitación de GitHub](https://lab.github.com/githubtraining/first-week-on-github)
