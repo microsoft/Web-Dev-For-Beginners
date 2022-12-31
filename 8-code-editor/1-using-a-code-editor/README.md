@@ -95,7 +95,7 @@ Select a file to open it on the code area, make your changes and save.
 
 Once you are done updating your project, select the _`source control`_ icon which contains all the new changes you have made to your repository.
 
-To view the changes you made to your project, select the file(s) in the `Changes` folder in the expanded activity bar. This will open a 'Working Tree' for you to visually see the changes you made to the file. Red shows an ommission to the project, while green signifies an addition.
+To view the changes you made to your project, select the file(s) in the `Changes` folder in the expanded activity bar. This will open a 'Working Tree' for you to visually see the changes you made to the file. Red shows an omission to the project, while green signifies an addition.
 
 ![View changes](../images/working-tree.png)
 
