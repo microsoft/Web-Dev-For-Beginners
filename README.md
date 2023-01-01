@@ -14,7 +14,7 @@
 
 Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson curriculum which is all about JavaScript, CSS, and HTML basics. Each lesson includes pre- and post-lesson quizzes, written instructions to complete the lesson, a solution, an assignment and more. Our project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
 
-**Hearty thanks to our authors Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, and sketchnote artist Tomomi Imura!**
+**Many hearty thanks to our authors Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, and sketchnote artist Tomomi Imura!**
 
 ### _Are you a student?_
 
@@ -48,16 +48,16 @@ While we have purposefully avoided introducing JavaScript frameworks to concentr
 
 ## Each lesson includes:
 
-- optional sketchnote
-- optional supplemental video
-- pre-lesson warmup quiz
-- written lesson
-- for project-based lessons, step-by-step guides on how to build the project
-- knowledge checks
-- a challenge
-- supplemental reading
-- assignment
-- post-lesson quiz
+- Optional sketchnote
+- Optional supplemental video
+- Pre-lesson warmup quiz
+- Written lesson
+- For project-based lessons, step-by-step guides on how to build the project
+- Knowledge checks
+- A challenge
+- Supplemental reading
+- Assignment
+- Post-lesson quiz
 
 > **A note about quizzes**: All quizzes are contained [in this app](https://ashy-river-0debb7803.1.azurestaticapps.net/), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
 
@@ -109,4 +109,4 @@ Our team produces other curricula! Check out:
 
 ## License
 
-This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
+This repository is licensed under the [MIT license](LICENSE).
