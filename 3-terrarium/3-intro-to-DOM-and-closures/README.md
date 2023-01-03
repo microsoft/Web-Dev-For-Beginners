@@ -116,7 +116,7 @@ In addition, the terrariumElement that is passed to this function is assigned a 
 
 ## The Pointerdrag function
 
-The terrariumElement is ready to be dragged around; when the `onpointerdown` event is fired, the function pointerDrag is invoked. Add that function right under this line: `terrariumElement.onpointerdown = pointerDrag;`:
+The `terrariumElement` is ready to be dragged around; when the `onpointerdown` event is fired, the function `pointerDrag` is invoked. Add that function right under this line: `terrariumElement.onpointerdown = pointerDrag;`:
 
 ### Task 
 
