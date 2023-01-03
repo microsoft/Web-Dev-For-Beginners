@@ -1,6 +1,6 @@
 # Using a code editor
 
-This lesson covers the basics of using [VSCode.dev](https://vscode.dev) a code editor for the web so that you can make changes to your code and contribute to a project without installing anything in your computer.
+This lesson covers the basics of using [VSCode.dev](https://vscode.dev) a web-based code editor so that you can make changes to your code and contribute to a project without installing anything on your computer.
 
 <!----
 TODO: add an optional image
@@ -39,7 +39,7 @@ Once it loads, it should look similar to this image:
 
 There are three main sections, starting from the far left and moving to the right:
 
-1. The _activity bar_ which includes some icons, like the magnifying glass 🔎, the gear ⚙️  and a few others
+1. The _activity bar_ which includes some icons, like the magnifying glass 🔎, the gear ⚙️, and a few others
 1. The expanded activity bar which defaults to the _Explorer_, called the _side bar_.
 1. And finally, the code area to the right.
 
