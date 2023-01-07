@@ -308,7 +308,6 @@ Los proyectos también pueden tener discusiones en foros, listas de correo o can
 Reúnete con un amigo para trabajar en el código del otro. Crea un proyecto en colaboración, haz fork del código, crea ramas y hagan merge a los cambios.
 
 ## Cuestionario Posterior a la Clase
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
 
 ## Revisión y Autoestudio
 
