@@ -293,7 +293,7 @@ Por último, puedes descargar el código en un directorio comprimido.
 
 ### Algunas cosas más interesantes sobre GitHub
 
-Puede destacar, ver y/o "fork" cualquier repositorio público en GitHub. Puedes encontrar tus repositorios destacados en el menú desplegable de la parte superior derecha. Es como marcar como favorito, pero por código.
+Puedes destacar, ver y/o hacer "fork" cualquier repositorio público en GitHub. Asimismo, encontrar tus repositorios destacados en el menú desplegable de la parte superior derecha. Es como marcar como favorito, pero por código.
 
 Los proyectos tienen un rastreador de problemas, principalmente en GitHub en la pestaña "Issues" a menos que se indique lo contrario, donde las personas debaten los problemas relacionados con el proyecto. Y la pestaña Pull requests es donde las personas debaten y revisan los cambios que están en curso.
 
