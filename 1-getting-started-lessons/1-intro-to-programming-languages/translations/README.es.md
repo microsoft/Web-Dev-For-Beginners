@@ -185,7 +185,7 @@ Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recu
 
 Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos únicos de JavaScript frente a Java? ¿Qué hay de COBOL vs. Go?
 
-## Cuestionario Posterior a la Clase
+## [Cuestionario Posterior a la Clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
 
 ## Revisión y Autoestudio
 
