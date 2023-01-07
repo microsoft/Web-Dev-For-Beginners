@@ -322,6 +322,6 @@ Practica, practica, practica. GitHub tiene excelentes rutas de aprendizaje dispo
 
 También encontrarás laboratorios más avanzados.
 
-## Asignación
+## Tarea
 
 Completa [La Primera Semana en el Laboratorio de capacitación de GitHub](https://lab.github.com/githubtraining/first-week-on-github)
