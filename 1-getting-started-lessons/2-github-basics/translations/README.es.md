@@ -6,7 +6,6 @@ Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar
 > Dibujo de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Cuestionario Previo a la Clase
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ### Introducción
 
