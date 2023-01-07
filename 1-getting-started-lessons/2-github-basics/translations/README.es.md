@@ -277,7 +277,7 @@ Primero, busquemos un repositorio en GitHub que te interese y al que te gustarí
 
 ✅ Una buena forma de encontrar repositorios 'aptos para principiantes' es [buscar por la etiqueta `good-first-issue`](https://github.blog/2020-01-22-browse-good-first-issues-para-empezar-a-contribuir-al-código-abierto/).
 
-![Copy a repo locally](../images/clone_repo.png)
+![Copia un repositorio localmente](../images/clone_repo.png)
 
 Hay varias formas de copiar código. Una forma es "clonar" el contenido del repositorio, usando HTTPS, SSH o usando GitHub CLI (Interfaz de línea de comandos).
 
