@@ -2,9 +2,9 @@
 
 ¿Te gustaría usar este curso en tu clase? ¡Estamos encantados de ayudarte! Aquí hay algunas sugerencias para ayudarte a comenzar.
 
-De hecho, puedes usarlo dentro de GitHub mismo usando GitHub Classroom.
+De hecho, puedes usarlo dentro de GitHub usando GitHub Classroom.
 
-Para hacerlo, haz un fork de este repositorio. Necesitarás crear un repositorio para cada lección, por lo que necesitarás extraer cada carpeta en un repositorio separado. De esta manera, [GitHub Classroom](https://classroom.github.com/classrooms) puede recoger cada lección por separado.
+Para hacerlo, haz un fork de este repositorio. Necesitarás crear un repositorio para cada lección, por lo que necesitarás extraer cada carpeta en un repositorio separado. De esta manera, [GitHub Classroom](https://classroom.github.com/classrooms) puede seleccionar cada lección por separado.
 
 Estas [instrucciones](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) te darán una idea de cómo configurar tu aula.
 
@@ -20,11 +20,11 @@ Este curso funciona bien en estos Sistemas de Gestión de Aprendizaje. Usa el ar
 
 ## Usando el repositorio de la forma en que está
 
-Si desea usar este repositorio tal como está, sin usar GitHub Classroom, también se puede hacer. Deberías comunicarte con tus estudiantes sobre qué lección trabajar juntos.
+Si deseas usar este repositorio tal como está, sin usar GitHub Classroom, también lo puedes hacer. Para ello, deberías conversar con tus estudiantes sobre qué lección van a trabajar juntos.
 
-En un formato en línea (Zoom, Teams, u otro) podrías formar salas de descanso para los exámenes, y mentorizar a los estudiantes para ayudarlos a prepararse para aprender. Luego invita a los estudiantes a que participen en los exámenes y envíen sus respuestas como 'issues' a cierta hora. Podrías hacer lo mismo con las tareas, si quieres que los estudiantes trabajen de forma colaborativa en el exterior.
+En un ambiente en línea (Zoom, Teams, u otro) podrías formar _breakout rooms_ (salas de descanso) para que tus alumnos presenten sus exámenes, y ayudar a los estudiantes para prepararse a aprender. Otro ejemplo, puedes invitar a los estudiantes a que participen en los exámenes y envíen sus respuestas como 'issues' a cierta hora. Podrías hacer lo mismo con las tareas, si quieres que los estudiantes trabajen de forma colaborativa externa.
 
-Si prefiere un formato más privado, pide a tus estudiantes que hagan un fork del curso, lección por lección, a sus propios repositorios de GitHub como repositorios privados y te den acceso. Luego pueden completar los exámenes y las tareas de forma privada y enviártelas a través de "issues" en tu repositorio de aula.
+Si prefieres un ambiente más privado, pide a tus estudiantes que hagan un fork del curso, lección por lección, a sus propios repositorios de GitHub como repositorios privados y te den acceso. Luego pueden completar los exámenes y las tareas de forma privada y enviártelas a través de "issues" en tu repositorio de aula.
 
 Hay muchas formas de hacer funcionar el curso en un formato en línea. ¡Haznos saber cómo lo estás haciendo!
 
