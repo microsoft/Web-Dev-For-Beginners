@@ -193,4 +193,3 @@ Estudia un poco sobre los diferentes lenguajes disponibles para programar. Inten
 
 ## [Tarea](../../assignment.es.md)
 
-[Leer la Documentación](assignment.es.md)
