@@ -191,6 +191,6 @@ Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos 
 
 Estudia un poco sobre los diferentes lenguajes disponibles para programar. Intenta escribir una línea en un lenguaje y luego vuelve a hacerlo en otros dos. ¿Qué aprendiste?
 
-## Asignación
+## [Tarea](../../assignment.es.md)
 
 [Leer la Documentación](assignment.es.md)
