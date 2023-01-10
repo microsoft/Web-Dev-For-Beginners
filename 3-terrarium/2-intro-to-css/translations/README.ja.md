@@ -248,7 +248,7 @@ HTML マークアップの各植物には、id とクラスの組み合わせが
 
 ![finished terrarium](../images/terrarium-final.png)
 
-レッスン後の小テストを完成させるには、この Learn モジュールを通ってください: [HTML アプリを CSS でスタイルを整える](https://docs.microsoft.com/ja-jp/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
+レッスン後の小テストを完成させるには、この Learn モジュールを通ってください: [HTML アプリを CSS でスタイルを整える](https://docs.microsoft.com/ja-jp/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
 ## レッスン後の小テスト
 

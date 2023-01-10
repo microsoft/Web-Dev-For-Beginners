@@ -20,4 +20,4 @@ Istnieje wiele sposobów, aby to zadziałało w klasie online. Daj nam znać, co
 
 ## Przekaż nam swoje przemyślenia!
 
-Chcemy, aby ten program nauczania działał dla ciebie i twoich uczniów. Prześlij nam [opinię](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
+Chcemy, aby ten program nauczania działał dla ciebie i twoich uczniów. Prześlij nam [opinię](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner).

@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "توسعه وب برای مبتدیان: آزمون ها",
+		"complete": "تبریک می گویم، شما مسابقه را کامل کردید!",
+		"error": "متاسفم، دوباره سعی کنید",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "درس 1 - مقدمه ای بر زبان های برنامه نویسی: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "یک برنامه را می توان بدون نوشتن هیچ کدی از سوی سازنده ایجاد کرد",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "زبان های سطح پایین یک انتخاب محبوب هستند",
+						"answerOptions": [
+							{
+								"answerText": "وب سایت ها",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "سخت افزار",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "نرم افزار بازی های ویدیویی",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "کدام یک از این ابزارها به احتمال زیاد در محیط یک توسعه دهنده وب وجود دارد؟",
+						"answerOptions": [
+							{
+								"answerText": "سخت افزار، مانند رزبری پای",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ابزارهای توسعه دهنده مرورگر",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "مستندات سیستم عامل",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "درس 1 - مقدمه ای بر زبان های برنامه نویسی: آزمون پس از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "به احتمال زیاد از چه زبانی برای ایجاد یک وب سایت استفاده می کنید؟",
+						"answerOptions": [
+							{
+								"answerText": "کد ماشین",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "جاوا سکریپت",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "بش",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "محیط های توسعه برای هر توسعه دهنده منحصر به فرد است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "یک توسعه دهنده برای رفع اشکال باگ چه کاری انجام خواهد داد؟",
+						"answerOptions": [
+							{
+								"answerText": "سینتکس هایلایتینگ",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "دیباگینگ",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "کد فرمتینگ",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "درس 2 - مقدمه ای بر گیت هاب: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "چگونه یک مخزن گیت هاب ایجاد می کنید؟",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "git add چه می کند؟",
+						"answerOptions": [
+							{
+								"answerText": "کد شما را کامیت می کند",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "فایل های شما را برای ردیابی به یک استیجینگ ایریا اضافه می کند",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "فایل های شما را به گیت هاب اضافه می کند",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "چگونه بررسی می کنید که گیت روی رایانه شما نصب شده است؟",
+						"answerOptions": [
+							{
+								"answerText": "type git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "type git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "type git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "درس 2 - مقدمه ای بر گیت هاب: آزمون پس از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "مکانی برای مقایسه و بحث در مورد تفاوت های معرفی شده در یک شعبه با بررسی، نظرات، تست های یکپارچه و موارد دیگر عبارت است از:",
+						"answerOptions": [
+							{
+								"answerText": "گیت هاب",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "یک درخواست پول رکوست",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "یک شاخه ویژگی",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "چگونه می توانید تمام تعهدات را از یک شعبه راه دور دریافت و ادغام کنید؟",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "چگونه به شعبه تغییر می کنید؟",
+						"answerOptions": [
+							{
+								"answerText": "git checkout [branch-name]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git switch [branch-name]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [branch-name]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "درس 3 - ایجاد صفحات وب در دسترس: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "یک وب سایت قابل دسترسی را می توان در کدام ابزار مرورگر بررسی کرد",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "برای آزمایش قابلیت دسترسی برای کاربران کم بینا به یک صفحه خوان فیزیکی نیاز دارید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "دسترسی فقط در وب سایت های دولتی مهم است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "درس 3 - ایجاد صفحات وب در دسترس: آزمون پس از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "Lighthouse فقط مشکلات دسترسی را بررسی می کند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "پالت های ایمن رنگ به افراد کمک می کند",
+						"answerOptions": [
+							{
+								"answerText": "کور رنگی",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "اختلالات بینایی",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "هر دو مورد بالا",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "پیوندهای توصیفی برای وب سایت های قابل دسترس حیاتی هستند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "درس 4 - مبانی جاوا اسکریپت - انواع داده: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "Booleans یک نوع داده است که می توانید از آن برای آزمایش طول یک رشته استفاده کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "عملیات زیر می توانید بر روی یک رشته انجام دهید",
+						"answerOptions": [
+							{
+								"answerText": "concatenation",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "appending",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "splicing",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== و === قابل تعویض هستند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "درس 4 - مبانی جاوا اسکریپت - انواع داده: آزمون پس از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "ثابت ها مانند let و var برای اعلام متغیرها هستند به جز",
+						"answerOptions": [
+							{
+								"answerText": "ثابت ها باید مقداردهی اولیه شوند",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ثابت ها را می توان تغییر داد",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ثابت ها را می توان دوباره اختصاص داد",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "عدد ها و ____ اولیه جاوا اسکریپت هستند که داده های عددی را مدیریت می کنند",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "رشته ها می توانند بین هر دو نقل قول تکی و دوگانه قرار گیرند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "درس 5 - مبانی جاوا اسکریپت - روش ها و توابع: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "استدلال چیست؟",
+						"answerOptions": [
+							{
+								"answerText": "این چیزی است که شما در تعریف تابع اعلام می کنید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "این چیزی است که در زمان فراخوانی به یک تابع منتقل می کنید",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "این چیزی است که با افرادی که می شناسید دارید",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "یک تابع باید چیزی را برگرداند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "شما می توانید یک تابع را هر چیزی نامگذاری کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "true, اما باید یک نام توصیفی باشد",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "درس 5 - مبانی جاوا اسکریپت - روش ها و توابع: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "برای تمام پارامترهای یک تابع باید آرگومان ارائه شود",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "یک مقدار پیش فرض چه کاری انجام می دهد؟",
+						"answerOptions": [
+							{
+								"answerText": "مقدار صحیحی را تنظیم می کند",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "یک مقدار شروع برای یک پارامتر می دهد، بنابراین اگر یک آرگومان برای آن حذف کنید، کد شما همچنان رفتار می کند",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "هیچ کاربردی ندارد",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "عملکرد فلش چربی به شما این امکان را می دهد",
+						"answerOptions": [
+							{
+								"answerText": "ایجاد توابع سنگین",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "کلمه کلیدی تابع را حذف کنید",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "یک تابع ناشناس ایجاد کنید",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "درس 6 - مبانی جاوا اسکریپت - تصمیم گیری: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "عملگر زیر == فراخوانی می شود",
+						"answerOptions": [
+							{
+								"answerText": "برابری",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "برابری شدید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "وظیفه",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "مقایسه در جاوا اسکریپت کدام نوع را برمی گرداند؟",
+						"answerOptions": [
+							{
+								"answerText": "boolean",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "string",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "! نماد در جاوا اسکریپت به این معنی است:",
+						"answerOptions": [
+							{
+								"answerText": "منطقی نه",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "مهم",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "برابر است",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "درس 6 - مبانی جاوا اسکریپت - تصمیم گیری: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "کد زیر چه چیزی را برمی گرداند: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "کد زیر چه چیزی را برمی گرداند: '1' === 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "عملگر صحیح را برای بیان منطق "یا" انتخاب کنید",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "درس 7 - مبانی جاوا اسکریپت - آرایه ها و حلقه ها: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "برای ارجاع به یک آیتم خاص در یک آرایه، از a استفاده کنید",
+						"answerOptions": [
+							{
+								"answerText": "براکت مربع []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "فهرست مطالب",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "آکولاد {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "چگونه می توان تعداد آیتم های یک آرایه را بدست آورد؟",
+						"answerOptions": [
+							{
+								"answerText": "روش 'len(array)'",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "اندازه ویژگی روی آرایه",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ویژگی length در آرایه",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "در جاوا اسکریپت، ایندکس ها با شروع شروع می شوند",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "درس 7 - مبانی جاوا اسکریپت - آرایه ها و حلقه ها: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "چه بخشی از یک حلقه for را باید تغییر دهید تا تکرار آن 5 افزایش یابد؟",
+						"answerOptions": [
+							{
+								"answerText": "وضعیت",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "پیشخوان",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "تکرار-بیان",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "تفاوت بین while و for-loop چیست؟",
+						"answerOptions": [
+							{
+								"answerText": "یک حلقه for دارای شمارنده و تکرار-عبارت است که در آن while فقط یک شرط دارد",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A while دارای یک شمارنده و عبارت تکراری است که در آن حلقه for فقط یک شرط دارد",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "آنها یکسان هستند، فقط یک نام مستعار برای یکدیگر",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "با توجه به کد (بگذارید i=1; i < 5; i++)، چند تکرار انجام دهد؟",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "درس 8 - پروژه تراریوم - مقدمه ای بر HTML: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "HTML مخفف عبارت HyperText Mockup Language است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "همه تگ های HTML به هر دو تگ باز و بسته نیاز دارند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "استفاده از نشانه گذاری معنایی بسیار مهم است",
+						"answerOptions": [
+							{
+								"answerText": "خوانایی کد",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "صفحه خوان ها",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "maintenance",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "درس 8 - پروژه تراریوم - مقدمه ای بر HTML: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "Span ها و Div ها قابل تعویض هستند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "سر یک سند HTML می تواند شامل موارد زیر باشد:",
+						"answerOptions": [
+							{
+								"answerText": "برچسب عنوان",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "فراداده",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "همه موارد بالا",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "شما نمی توانید از برچسب های منسوخ شده در نشانه گذاری خود استفاده کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false, اما آنها به دلایل خوبی منسوخ شده اند",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "درس 9 - پروژه تراریوم - مقدمه ای بر CSS: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "عناصر HTML باید دارای یک کلاس یا یک شناسه برای استایل دهی شوند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS مخفف عبارت Complete Style Sheets است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "از CSS می توان برای ساخت انیمیشن استفاده کرد",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "درس 9 - پروژه تراریوم - مقدمه ای بر CSS: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "می توانید CSS را مستقیماً در قسمت head فایل HTML خود بنویسید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "همیشه لازم است که CSS را در برنامه خود قرار دهید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false, اما اگر می خواهید خوب به نظر برسد احتمالاً به CSS نیاز دارید",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "از کدام ابزار مرورگر می توان برای بررسی CSS استفاده کرد؟",
+						"answerOptions": [
+							{
+								"answerText": "عناصر",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "سبک ها",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "شبکه",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "درس 10 - پروژه تراریوم - دستکاری DOM و بسته شدن: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "DOM مخفف Document Object Management است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "DOM را می توان به عنوان یک درخت در نظر گرفت",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "با استفاده از Web API، می توانید DOM را دستکاری کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "درس 10 - پروژه تراریوم - دستکاری DOM و بسته شدن: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "DOM مدلی برای نمایش یک سند در وب است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "از بسته های جاوا اسکریپت برای انجام موارد زیر استفاده کنید:",
+						"answerOptions": [
+							{
+								"answerText": "توابع را در توابع بنویسید",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "DOM را محصور کنید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "بستن بلوک های اسکریپت",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "جای خالی را پر کنید: بسته شدن زمانی مفید است که یک یا چند تابع نیاز به دسترسی به یک تابع بیرونی دارند...",
+						"answerOptions": [
+							{
+								"answerText": "آرایه ها",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "محدوده",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "کارکرد",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "درس 11 - بازی تایپ: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "برنامه نویسی رویداد محور زمانی است که یک کاربر",
+						"answerOptions": [
+							{
+								"answerText": "روی یک دکمه کلیک می کند",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "یک مقدار را تغییر می دهد",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "با صفحه تعامل دارد",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "هر یک از موارد فوق",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "در برنامه نویسی رویه ای، توابع نامیده می شوند",
+						"answerOptions": [
+							{
+								"answerText": "هر زمان",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "به ترتیب خاصی",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "چپ به راست",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "روش جهانی ارائه شده در DOM برای ثبت کنترل کننده رویداد نامیده می شود",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "درس 11 - بازی تایپ: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "تقریباً هر کاری که کاربر در یک صفحه انجام می دهد، یک رویداد را مطرح می کند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "رویدادهای رایج شامل",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "همه اینها",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "می توانید از توابع ناشناس برای ایجاد کنترل کننده رویداد استفاده کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "درس 12 - پروژه توسعه مرورگر - همه چیز درباره مرورگرها: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "شما می توانید پسوندهای مرورگر را از",
+						"answerOptions": [
+							{
+								"answerText": "والمارت",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "فروشگاه افزونه مرورگر",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "فروشگاه App",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM مخفف",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "مرورگر شما می تواند صفحات وب را هم به صورت ایمن و هم ناامن ارائه دهد",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "درس 12 - پروژه توسعه مرورگر - همه چیز درباره مرورگرها: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "شبکه جهانی وب توسط اختراع شد",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "اولین مرورگر نامیده شد",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "مرورگرها می توانند تاریخچه مرور کاربر را ذخیره کنند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "درس 13 - پروژه افزونه مرورگر - فراخوانی یک API، استفاده از فضای ذخیره‌سازی محلی: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "API ها مخفف هستند",
+						"answerOptions": [
+							{
+								"answerText": "رابط های برنامه نویسی کاربردی",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "یک استنتاج برنامه نویسی",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ضد نیت های اثبات شده",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "از یک API برای تعامل استفاده کنید",
+						"answerOptions": [
+							{
+								"answerText": "یکی دیگر از دارایی های متصل به وب",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "یک پایگاه داده",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "هر یک از موارد بالا",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "هر کسی می تواند یک API ایجاد کند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "درس 13 - پروژه افزونه مرورگر - فراخوانی یک API، استفاده از فضای ذخیره‌سازی محلی: آزمون پس از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "هر بار که پنجره مرورگر را ببندید LocalStorage پاک می شود",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "هر بار که پنجره مرورگر را ببندید LocalStorage پاک می شود",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "REST در یک زمینه API مخفف آن است",
+						"answerOptions": [
+							{
+								"answerText": "انتقال دولتی نمایندگی",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "بازگشت وظایف دولت",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "رندر حالت به مرورگر",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "درس 14 - پروژه توسعه مرورگر - در مورد وظایف پس زمینه و عملکرد بیاموزید: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "عملکرد اپلیکیشن خود را تست کنید",
+						"answerOptions": [
+							{
+								"answerText": "استفاده از ابزارهای مرورگر",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "استفاده از مرورگر با استفاده از بسته های نرم افزاری جداگانه",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "به صورت دستی",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": ""عملکرد" ​​یک وب سایت تجزیه و تحلیل است",
+						"answerOptions": [
+							{
+								"answerText": "How fast it loads",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "کد روی آن چقدر سریع اجرا می شود",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "هر دو مورد بالا",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "به طور کلی، "وزن" صفحات وب در چند سال گذشته بوده است",
+						"answerOptions": [
+							{
+								"answerText": "سبک تر شد",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "سنگین تر شد",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "همینطور ماند",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "درس 14 - پروژه توسعه مرورگر - در مورد وظایف پس زمینه و عملکرد بیاموزید: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "برای اینکه دید بهتری از عملکرد سایت خود داشته باشید، حافظه پنهان آن را پاک کرده و در پروفایلر بارگذاری مجدد کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "پسوندهای مرورگر ذاتا کارایی دارند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "موارد زیر را برای تنگناهای عملکرد تجزیه و تحلیل کنید",
+						"answerOptions": [
+							{
+								"answerText": "پیمایش های DOM",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "بهینه سازی جاوا اسکریپت",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "مدیریت دارایی",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "همه موارد بالا",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "درس 15 - بازی فضایی - مقدمه: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "جاوا اسکریپت یک زبان غیرمحبوب برای ساخت بازی است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub یک الگوی ترجیحی برای مدیریت دارایی ها و جریان بازی است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "وراثت شی را می توان با استفاده از کلاس ها یا ترکیب انجام داد",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "درس 15 - بازی فضایی - مقدمه: آزمون پس از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "طبقات برای نسبت دادن به رفتارها به وراثت متکی هستند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "ترکیب، الگوی طراحی ترجیحی برای اشیاء بازی است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub مخفف:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "درس 16 - بازی فضایی - قرعه کشی قهرمان و هیولا روی بوم: مسابقه قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "عنصر Canvas چیزی است که برای ترسیم روی صفحه استفاده می کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "شما فقط می توانید اشکال هندسی ساده را با استفاده از Canvas API ترسیم کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "نقطه 0.0 در پایین سمت چپ است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "درس 16 - بازی فضایی - قرعه کشی قهرمان و هیولا روی بوم: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "می توانید عملیات طراحی را مستقیماً روی بوم انجام دهید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "شما به رویداد onload گوش می دهید تا بدانید چه زمانی یک تصویر به صورت ناهمزمان بارگیری شده است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "شما با عملیاتی به نام تصاویر را روی یک صفحه می کشید:",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "درس 17 - بازی فضایی - اضافه کردن حرکت: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "هر شی روی صفحه می تواند رویدادهای صفحه کلید را دریافت کند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "می توانید از همین روش برای گوش دادن به رویدادهای کلیدی و رویدادهای ماوس استفاده کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "برای اینکه همه چیز در یک بازه زمانی منظم اتفاق بیفتد، از چه تابعی استفاده می کنید؟",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "Lesson 17 - Space Game - Adding Motion: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "Lesson 17 - Space Game - Adding Motion: Post-Lecture Quiz",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "حلقه بازی چیست؟",
+						"answerOptions": [
+							{
+								"answerText": "عملکردی که تضمین می کند بازی می تواند دوباره راه اندازی شود",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "عملکردی که تعیین می کرد بازی چقدر باید اجرا شود",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "تابعی که در فواصل زمانی معین فراخوانی می شود و آنچه را که کاربر باید ببیند ترسیم می کند",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "یک مورد خوب برای طراحی مجدد صفحه نمایش است",
+						"answerOptions": [
+							{
+								"answerText": "یک تعامل کاربر اتفاق افتاد",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "چیزی حرکت کرده است",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "زمان گذشت",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "درس 18 - بازی فضایی - اضافه کردن لیزر و تشخیص برخورد: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "تشخیص برخورد نحوه برخورد دو چیز است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "چگونه می توانیم یک مورد را از صفحه نمایش حذف کنیم؟",
+						"answerOptions": [
+							{
+								"answerText": "با زباله جمع کن تماس بگیر",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "آن را به‌عنوان مرده علامت‌گذاری کنید، دفعه بعد که صفحه را کشیدیم فقط اشیاء مرده را رنگ کنید",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "مورد را روی یک مختصات منفی قرار دهید",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "یک راه خوب برای شبیه سازی پرتاب لیزر در جاوا اسکریپت این است:",
+						"answerOptions": [
+							{
+								"answerText": "یک عنصر بصری را به یک رویداد کلیدی پاسخ دهد",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "گیف های متحرک بسازید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "دشمنان را در فواصل زمانی منفجر کنید",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "درس 18 - بازی فضایی - اضافه کردن لیزر و تشخیص برخورد: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "در تشخیص برخورد شما دو مورد را با هم مقایسه می کنید",
+						"answerOptions": [
+							{
+								"answerText": "دایره ها و اینکه آیا آنها تلاقی می کنند یا خیر",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "مستطیل ها و اینکه آیا آنها همدیگر را قطع می کنند",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "فاصله بین دو نقطه",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "دلیل اجرای یک افکت خنک کننده به این دلیل است",
+						"answerOptions": [
+							{
+								"answerText": "بازی را سخت تر می کند زیرا نمی توانید به طور مکرر لیزر را برای از بین بردن دشمنان شلیک کنید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "جاوا اسکریپت فقط می تواند تعداد معینی رویداد را در واحد زمان تولید کند، بنابراین باید آنها را محدود کنید",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ثابت ها در کد قابل شناسایی هستند زیرا",
+						"answerOptions": [
+							{
+								"answerText": "با حروف بزرگ نوشته می شوند",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "اسامی خاصی دارند",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "به این شکل در کباب نوشته شده اند",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "درس 19 - بازی فضایی - امتیازدهی و زندگی: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "چگونه با استفاده از عنصر Canvas، متنی را بر روی صفحه می‌کشیم؟",
+						"answerOptions": [
+							{
+								"answerText": "متن را در یک عنصر div یا span قرار دهید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "() drawText را در عنصر Canvas فراخوانی کنید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "FillText() را در شیء متن فراخوانی کنید",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "چرا مفهوم "زندگی" را در یک بازی دارید؟",
+						"answerOptions": [
+							{
+								"answerText": "برای اینکه نشان دهید چقدر می توانید خسارت وارد کنید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "به طوری که بازی بلافاصله تمام نمی شود، اما قبل از پایان بازی n تعداد فرصت دارید",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "با استفاده از بوم به متن رنگ اضافه کنید",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "درس 19 - بازی فضایی - امتیازدهی و زندگی: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "یک راه سرگرم کننده برای نشان دادن چند زندگی از یک بازیکن چیست؟",
+						"answerOptions": [
+							{
+								"answerText": "تعدادی کشتی",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "یک سیستم امتیازی",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "چگونه متن را با استفاده از عنصر Canvas در وسط صفحه قرار می دهید؟",
+						"answerOptions": [
+							{
+								"answerText": "شما از Flexbox استفاده می کنید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "شما دستور می دهید که متن در مختصات x عرض پنجره مشتری رسم شود",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "شما ویژگی textAlign را روی مرکز ارزش در شیء زمینه تنظیم می کنید",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "در کد، یک زندگی مانند این را کسر کنید:",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "درس 20 - بازی فضایی - پایان و شروع مجدد: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "چه زمانی زمان مناسبی برای شروع مجدد بازی است",
+						"answerOptions": [
+							{
+								"answerText": "زمانی که یک بازیکن برنده یا می بازد",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "هر گاه",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "کی باید یک بازی تمام شود",
+						"answerOptions": [
+							{
+								"answerText": "زمانی که یک کشتی دشمن منهدم می شود",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "وقتی یک کشتی قهرمان نابود می شود",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "وقتی امتیاز جمع می شود",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "یک راه خوب برای اضافه کردن یک سطح به بازی خود این است:",
+						"answerOptions": [
+							{
+								"answerText": "مقدار امتیاز لازم برای تکمیل یک سطح مشخص را افزایش دهید",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "بازیکنان بیشتری را به بازی اضافه کنید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "گرافیک بیشتری به بازی اضافه کنید",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "درس 20 - بازی فضایی - پایان و شروع مجدد: آزمون پس از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "وقتی شرط پایان بازی برآورده شد، چه الگویی مناسب برای استفاده است؟",
+						"answerOptions": [
+							{
+								"answerText": "نمایش یک پیام مناسب",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "دست از بازی بردارید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "یک پیام مناسب را نمایش دهید، به پخش کننده پیشنهاد دهید که مجدداً راه اندازی شود، و نمایش دهید که چه کلیدی را برای آن عمل بزند",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "شما باید فقط زمانی که بازی به پایان رسیده است، راه اندازی مجدد ارائه دهید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "یک راه خوب برای پاک کردن EventEmitter هنگام پایان دادن به بازی این است:",
+						"answerOptions": [
+							{
+								"answerText": "پاک کردن شنوندگان",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "پاک کردن شنوندگان",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "بستن پنجره بازی",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "درس 21 - پروژه بانک - الگوهای HTML و مسیرها در یک برنامه وب: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "برای نمایش صفحات مختلف در یک برنامه وب باید چندین فایل HTML ایجاد کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "می‌توانید داده‌ها را به صورت محلی در یک برنامه وب ذخیره و نگهداری کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "بهترین ارائه دهنده داده برای یک برنامه وب چیست؟",
+						"answerOptions": [
+							{
+								"answerText": "یک پایگاه داده محلی",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "یک شی جاوا اسکریپت",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "سروری با JSON API",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "درس 21 - الگوهای HTML پروژه بانک و مسیرها در یک برنامه وب: آزمون پس از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "قالب های HTML به طور پیش فرض بخشی از DOM هستند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "کدام قسمت از URL برای مسیریابی مورد نیاز است؟",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "both",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "نام رویدادی که هنگام فراخوانی تابع history.pushState() راه اندازی می شود چیست؟",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "درس 22 - پروژه بانک - ساخت فرم ورود و ثبت نام: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "فرم‌های HTML به شما امکان می‌دهند ورودی کاربر را بدون استفاده از جاوا اسکریپت به سرور ارسال کنید",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "عناصر <label> برای هر کنترل فرم اجباری هستند",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "ارسال اطلاعات فرم به سرور از طریق HTTP ایمن است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "درس 22 - پروژه بانک - ساخت فرم ورود و ثبت نام: آزمون بعد از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "استفاده از عناصر <label> در فرم ها فقط برای زیبا کردن فرم است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "URL در کدام قسمت از فرم به سرور ارسال می شود؟",
+						"answerOptions": [
+							{
+								"answerText": "ویژگی عمل",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ویژگی روش",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "هر دو",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "از کدام ویژگی می توانید برای تنظیم حداکثر اندازه یک متن <ورودی> استفاده کنید؟",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "درس 23 - پروژه بانک - روش های واکشی و استفاده از داده ها: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "شما معمولاً داده ها را از یک سرور به طور همزمان در یک مرورگر دریافت می کنید",
+						"answerOptions": [
+							{
+								"answerText": "true, اما async بهترین است!",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "رایج ترین فرمت مورد استفاده برای تبادل داده در وب چیست؟",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "هیچ راهی برای جلوگیری از دسترسی یک صفحه وب به یک API سرور عمومی وجود ندارد",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "درس 23 - پروژه بانک - روش های واکشی و استفاده از داده ها: آزمون پس از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "در یک برنامه تک صفحه ای، HTML یک بار بارگذاری می شود و هرگز به روز نمی شود",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "چرا مهم است که به داده هایی که از ورودی کاربر می آیند اعتماد نکنیم؟",
+						"answerOptions": [
+							{
+								"answerText": "زیرا استفاده از کاراکترهای خاص می تواند رابط کاربری را زشت کند.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "زیرا می تواند حاوی کلمات غیر منطقی یا توهین آمیز باشد.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "زیرا می توان از آن به عنوان بردار حمله برای اجرای اسکریپت های مخرب استفاده کرد.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "نام API برای ارسال درخواست های HTTP ناهمزمان به سرور وب چیست؟",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "درس 24 - پروژه بانک - مفاهیم مدیریت دولتی: آزمون قبل از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "شیء تغییرناپذیر چیست؟",
+						"answerOptions": [
+							{
+								"answerText": "یک شی که به عنوان یک ثابت تعریف می شود",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "شیئی که پس از ایجاد آن قابل تغییر نیست",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "یک کپی از یک شی موجود",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "یک کپی از یک شی موجود",
+						"answerOptions": [
+							{
+								"answerText": "شما می توانید از هر مکانی که ایالت به روز می شود را پیگیری کنید",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "اشکال زدایی کد آسان تر است",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "همه موارد فوق",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "بهترین راه برای تداوم داده های حیاتی کاربر در جلسات مختلف چیست؟",
+						"answerOptions": [
+							{
+								"answerText": "استفاده از فایل ها",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "با استفاده از LocalStorage API مرورگر",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "در یک پایگاه داده پشت یک API سرور",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "درس 24 - پروژه بانک - مفاهیم مدیریت دولتی: آزمون پس از سخنرانی",
+				"quiz": [
+					{
+						"questionText": "به نظر شما مدیریت دولتی یعنی چه؟",
+						"answerOptions": [
+							{
+								"answerText": "اجرای قانون و نظم",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "اجرای قانون و نظم",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "تمیز نگه داشتن جریان داده های برنامه و همگام سازی رابط کاربری با داده ها",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "چگونه می توانید وضعیت جلسه کاربر را پیگیری کنید؟",
+						"answerOptions": [
+							{
+								"answerText": "کوکی های HTTP",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ذخیره سازی محلی یا جلسه",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "همه موارد فوق",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "جهش یک شی همیشه بهترین راه برای به روز رسانی آن است",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

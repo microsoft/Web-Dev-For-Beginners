@@ -20,4 +20,4 @@
 
 ## कृपया हमें अपने विचार दें!
 
-हम इस पाठ्यक्रम को आपके और आपके छात्रों के लिए काम करना चाहते हैं। कृपया हमें [प्रतिक्रिया](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u) दे । 
+हम इस पाठ्यक्रम को आपके और आपके छात्रों के लिए काम करना चाहते हैं। कृपया हमें [प्रतिक्रिया](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) दे । 

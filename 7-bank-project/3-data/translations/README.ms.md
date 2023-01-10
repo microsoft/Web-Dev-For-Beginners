@@ -111,7 +111,7 @@ navigate('/dashboard');
 
 ✅ Tahukah anda bahawa secara lalai, anda hanya dapat memanggil API pelayan dari *domain dan port yang sama* daripada halaman web yang anda lihat? Ini adalah mekanisme keselamatan yang dikuatkuasakan oleh penyemak imbas. Tetapi tunggu, aplikasi web kami berjalan di `localhost: 3000` sedangkan API pelayan berjalan di `localhost: 5000`, mengapa ia berfungsi? Dengan menggunakan teknik yang disebut [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), adalah mungkin untuk melakukan permintaan HTTP bersilang asal jika pelayan menambah tajuk khas untuk respons, yang memungkinkan pengecualian untuk domain tertentu.
 
-> Ketahui lebih lanjut mengenai API dengan mengambil [pelajaran](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-13441-cxa)
+> Ketahui lebih lanjut mengenai API dengan mengambil [pelajaran](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
 
 ## Kemas kini HTML untuk memaparkan data
 

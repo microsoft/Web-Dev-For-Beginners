@@ -4,9 +4,9 @@ Nesta seção do currículo, você será introduzida a conceitos não baseados e
 
 ### Tópicos
 
-1. [Introdução a Linguagens de Programação e Ferramentas](1-intro-to-programming-languages/README..pt.md)
-2. [GitHub Básico](2-github-basics/README.pt.md)
-3. [Acesibilidade Básica](3-accessibility/README.pt.md)
+1. [Introdução a Linguagens de Programação e Ferramentas](../1-intro-to-programming-languages/translations/README.pt.md)
+2. [GitHub Básico](../2-github-basics/translations/README.pt.md)
+3. [Acesibilidade Básica](../3-accessibility/translations/README.pt.md)
 
 ### Créditos
 

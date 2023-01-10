@@ -300,7 +300,7 @@ updateRoute();
 
 ## 複習與自學
 
-網頁路由是網頁開發中很棘手的部分，特別是將網頁切換轉變為單一頁面應用程式(Single Page Application)。閱讀關於[Azure Static Web App 提供服務的方式](https://docs.microsoft.com/azure/static-web-apps/routes?WT.mc_id=academic-13441-cxa)以處理網頁路由。你能解釋為什麼文件上的某些決定會如此重要呢？
+網頁路由是網頁開發中很棘手的部分，特別是將網頁切換轉變為單一頁面應用程式(Single Page Application)。閱讀關於[Azure Static Web App 提供服務的方式](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon)以處理網頁路由。你能解釋為什麼文件上的某些決定會如此重要呢？
 
 ## 作業
 

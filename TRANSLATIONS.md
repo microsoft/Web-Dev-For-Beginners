@@ -6,7 +6,7 @@ We welcome translations for the lessons in this curriculum!
 
 There are [**translations**](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/1-getting-started-lessons/1-intro-to-programming-languages/translations) folders which contain the translated markdown files.
 
-> Note, please do not translate any code in the code sample files; the only things to translate are README, assignments, and the quizzes. Thanks!
+> Note, please do not translate any code in the code sample files; the only things to translate are README, assignments, and quizzes. Thanks!
 
 Translated files should follow this naming convention:
 
@@ -20,13 +20,11 @@ Similar to Readme's, please translate the assignments as well.
 
 **Quizzes**
 
-1. Add your translation to the quiz-app by adding a file here: https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/quiz-app/src/assets/translations, with proper naming convention (en.json, fr.json). **Please don't localize the words 'true' or 'false' however. thanks!**
+1. Add your translation to the quiz-app by adding a file [here](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/quiz-app/src/assets/translations), with the proper naming convention (en.json, fr.json). **Please don't localize the words 'true' or 'false' however. thanks!**
 
-2. Add your language code to the dropdown in the quiz-app's App.vue file.
+2. Edit the quiz-app's [translations index.js file](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/quiz-app/src/assets/translations/index.js) to add your language.
 
-3. Edit the quiz-app's [translations index.js file](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/quiz-app/src/assets/translations/index.js) to add your language.
-
-4. Finally, edit ALL the quiz links in your translated README.md files to point directly to your translated quiz: https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1 becomes https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1?loc=id
+3. Finally, edit ALL the quiz links in your translated README.md files to point directly to your translated quiz: https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1 becomes https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1?loc=id
 
 **THANK YOU**
 

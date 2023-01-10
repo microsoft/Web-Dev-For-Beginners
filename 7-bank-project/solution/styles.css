@@ -37,7 +37,7 @@ html, body, #app {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 h2 {
@@ -57,7 +57,7 @@ form {
 input {
   margin-top: var(--space-xs);
   margin-bottom: var(--space-sm);
-  height: 40px;
+  height: 45px;
   padding: var(--space-xs) var(--space-sm);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -99,7 +99,7 @@ button:hover {
 
 button:focus {
   outline: none;
-  border: 2px solid var(--grey);
+  border: 3px solid var(--grey);
 }
 
 .error {

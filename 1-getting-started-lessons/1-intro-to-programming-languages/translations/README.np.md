@@ -17,7 +17,7 @@
 - कार्यक्रमको आधारभूत तत्वहरू
 - व्यावसायिक विकासकर्ताको लागि उपयोगी सफ्टवेयर र उपकरण
 
-> तपाईंले [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming?WT.mc_id=academic-13441-cxa) मा यो पाठ लिन सक्नुहुन्छ!
+> तपाईंले [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon) मा यो पाठ लिन सक्नुहुन्छ!
 
 ## प्रोग्रामिङ भनेको के हो?
 

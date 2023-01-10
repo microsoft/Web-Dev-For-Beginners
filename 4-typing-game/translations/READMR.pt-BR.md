@@ -23,7 +23,7 @@ Esta lição pressupõe que você esteja familiarizado com os seguintes conceito
   
 ## Lição
 
-[Criando um jogo de digitação usando programação orientada a eventos](./typing-game/README.md)
+[Criando um jogo de digitação usando programação orientada a eventos](../typing-game/README.md)
 
 ## Créditos
 
