@@ -6,9 +6,9 @@ Uma pequena reflexão de arrastar e soltar sobre o código. Com um pouco de HTML
 
 # Lições
 
-1. [Introdução ao CSS](./intro-to-css/README.md)
-2. [Introdução ao HTML](./intro-to-html/README.md)
-3. [Introdução ao DOM e JS Closures(fechamentos)](intro-to-DOM-and-js-closures/README.md)
+1. [Introdução ao HTML](../1-intro-to-html/README.md)
+2. [Introdução ao CSS](../2-intro-to-css/README.md)
+3. [Introdução ao DOM e JS Closures(fechamentos)](../3-intro-to-DOM-and-closures/README.md)
 
 ## Créditos
 

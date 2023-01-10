@@ -10,32 +10,32 @@
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
-# Web Development untuk pemula - Kurikulum
+# Pengembangan Website untuk pemula - Kurikulum
 
 Azure Cloud Advocates di Microsoft dengan senang hati menawarkan kurikulum 12 minggu 24 pelajaran tentang JavaScript, CSS, dan dasar-dasar HTML. Setiap pelajaran mencakup kuis sebelum dan sesudah pelajaran, instruksi tertulis untuk menyelesaikan pelajaran, solusi, tugas, dan banyak lagi. Pedagogi berbasis proyek kami memungkinkan Anda untuk belajar sambil membangun, cara yang terbukti untuk keterampilan baru untuk 'stick'.
 
-**Terima kasih yang sebesar-besarnya kepada penulis kami Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, dan sketchnote artis Tomomi Imura!**
+**Terima kasih yang sebesar-besarnya kepada penulis kami Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, dan seniman sketchnote Tomomi Imura!**
 
 # Mulai
 
 > **Guru**, kita punya [termasuk beberapa saran](for-teachers.md) tentang bagaimana menggunakan kurikulum ini. Kami akan menyukai tanggapan Anda [di forum diskusi kami](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
-> **Pelajar**, untuk menggunakan kurikulum ini sendiri, bagilah seluruh repo dan selesaikan latihannya sendiri, dimulai dengan kuis pra-kuliah, kemudian membaca kuliah dan menyelesaikan sisa kegiatan. Cobalah untuk membuat proyek dengan memahami pelajaran daripada menyalin kode solusi; namun kode tersebut tersedia di folder /solutions di setiap pelajaran berorientasi proyek. Ide lain adalah membentuk kelompok belajar dengan teman-teman dan membahas isinya bersama-sama. Untuk studi lebih lanjut, kami merekomendasikan [Belajar Microsoft](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-77807-sagibbon) dan dengan menonton video yang disebutkan di bawah ini.
+> **Pelajar**, untuk menggunakan kurikulum ini sendiri, bagilah seluruh repo dan selesaikan latihannya sendiri, dimulai dengan kuis pra-kuliah, kemudian membaca kuliah dan menyelesaikan sisa kegiatan. Cobalah untuk membuat proyek dengan memahami pelajaran daripada menyalin kode solusi; namun kode tersebut tersedia di folder /solutions di setiap pelajaran berorientasi proyek. Ide lain adalah membentuk kelompok belajar dengan teman-teman dan membahas isinya bersama-sama. Untuk studi lebih lanjut, kami merekomendasikan [Belajar Microsoft](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81/?WT.mc_id=academic-77807-sagibbon) dan dengan menonton video yang disebutkan di bawah ini.
 
-[![Promo video](https://github.com/GarudaID/Web-Dev-For-Beginners/blob/main/images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
+[![Promo video](/images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
 
-Gif by [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
+Gif oleh [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
 
 > 🎥 Klik gambar di atas untuk melihat video tentang proyek dan orang-orang yang membuatnya!
-## Pedagogy
+## Pedagogi
 
 Kami telah memilih dua prinsip pedagogis saat membangun kurikulum ini: memastikan bahwa itu berbasis proyek dan termasuk kuis yang sering. Pada akhir seri ini, siswa akan membuat game mengetik, terarium virtual, ekstensi browser 'hijau', game tipe 'penyerbu ruang', dan aplikasi perbankan tipe bisnis, dan akan mempelajari dasar-dasar JavaScript , HTML, dan CSS bersama dengan rantai alat modern dari pengembang web saat ini.
 
-> 🎓 Anda dapat mengambil beberapa pelajaran pertama dalam kurikulum ini sebagai [Pelajari Jalur](https://docs.microsoft.com/learn/paths/web-development-101?WT.mc_id=academic-77807-sagibbon) di Microsoft Learn!
-Dengan memastikan bahwa konten selaras dengan proyek, proses dibuat lebih menarik bagi siswa dan retensi konsep akan ditambah. Kami juga menulis beberapa pelajaran awal dalam dasar-dasar JavaScript untuk memperkenalkan konsep, dipasangkan dengan video dari "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-77807-sagibbon)" kumpulan video tutorial, yang beberapa penulisnya berkontribusi pada kurikulum ini.
+> 🎓 Anda dapat mengambil beberapa pelajaran pertama dalam kurikulum ini sebagai [Pelajari Jalur](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) di Microsoft Learn!
+Dengan memastikan bahwa konten selaras dengan proyek, proses dibuat lebih menarik bagi siswa dan retensi konsep akan ditambah. Kami juga menulis beberapa pelajaran awal dalam dasar-dasar JavaScript untuk memperkenalkan konsep, dipasangkan dengan video dari "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" kumpulan video tutorial, yang beberapa penulisnya berkontribusi pada kurikulum ini.
 
 Selain itu, kuis berisiko rendah sebelum kelas menetapkan niat siswa untuk mempelajari suatu topik, sementara kuis kedua setelah kelas memastikan retensi lebih lanjut. Kurikulum ini dirancang agar fleksibel dan menyenangkan serta dapat diambil secara keseluruhan atau sebagian. Proyek mulai kecil dan menjadi semakin kompleks pada akhir siklus 12 minggu.
 
-Meskipun kami sengaja menghindari pengenalan kerangka kerja JavaScript untuk berkonsentrasi pada keterampilan dasar yang dibutuhkan sebagai pengembang web sebelum mengadopsi kerangka kerja, langkah selanjutnya yang baik untuk menyelesaikan kurikulum ini adalah mempelajari Node.js melalui kumpulan video lainnya: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-77807-sagibbon)".
+Meskipun kami sengaja menghindari pengenalan kerangka kerja JavaScript untuk berkonsentrasi pada keterampilan dasar yang dibutuhkan sebagai pengembang web sebelum mengadopsi kerangka kerja, langkah selanjutnya yang baik untuk menyelesaikan kurikulum ini adalah mempelajari Node.js melalui kumpulan video lainnya: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
 > Temukan kami [Code of Conduct](CODE_OF_CONDUCT.md), [Contributing](CONTRIBUTING.md), dan [Translation](TRANSLATIONS.md) pedoman. Kami menyambut umpan balik konstruktif Anda!
 ## Setiap pelajaran termasuk:
@@ -81,13 +81,13 @@ Meskipun kami sengaja menghindari pengenalan kerangka kerja JavaScript untuk ber
 | 23  |         [Banking App](/7-bank-project/solution/README.md)          |                   Metode Mengambil dan Menggunakan Data                 | Bagaimana data mengalir masuk dan keluar dari aplikasi Anda, cara mengambilnya, menyimpannya, dan membuangnya                                         |                                            [Data](/7-bank-project/3-data/README.md)                                            |          Yohan          |
 | 24  |         [Banking App](/7-bank-project/solution/README.md)          |                      Konsep Manajemen Negara                     | Pelajari cara aplikasi Anda mempertahankan status dan cara mengelolanya secara terprogram                                                              |                                [State Management](/7-bank-project/4-state-management/README.md)                                |          Yohan          |
 
-## Akses Offline
+## Akses Luring
 
-Anda dapat menjalankan dokumentasi ini secara offline dengan menggunakan [Docsify](https://docsify.js.org/#/). Fork repo ini, [install Docsify](https://docsify.js.org/#/quickstart) di mesin lokal Anda, dan kemudian di folder root repo ini, ketik `docsify serve`. Situs web akan disajikan pada port 3000 di localhost Anda: `localhost:3000`.
+Anda dapat menjalankan dokumentasi ini secara luring dengan menggunakan [Docsify](https://docsify.js.org/#/). Fork repo ini, [install Docsify](https://docsify.js.org/#/quickstart) di mesin lokal Anda, dan kemudian di folder root repo ini, ketik `docsify serve`. Situs web akan disajikan pada port 3000 di localhost Anda: `localhost:3000`.
 
 ## PDF
 
-PDF dari semua pelajaran dapat ditemukan [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
+PDF dari semua pelajaran dapat ditemukan [di sini](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)
 
 ## Kurikulum lainnya
 
