@@ -18,6 +18,12 @@ Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson cur
 
 ### _Are you a student?_
 
+
+Get started with the following resources:
+
+- [Student Hub page](https://docs.microsoft.com/en-gb/learn/student-hub?WT.mc_id=academic-13441-cxa) In this page, you will find beginner resources, Student packs and even ways to get a free cert voucher. This is one page you want to bookmark and check from time to time as we switch out content at least monthly.
+- [Microsoft Student Learn ambassadors](https://studentambassadors.microsoft.com?WT.mc_id=academic-13441-cxa) Join a global community of student ambassadors, this could be your way into Microsoft.
+
 Visit [**Student Hub page**](https://docs.microsoft.com/en-gb/learn/student-hub/?WT.mc_id=academic-13441-cxa) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
 # Getting Started
@@ -106,6 +112,7 @@ Our team produces other curricula! Check out:
 - [IoT for Beginners](https://aka.ms/iot-beginners/?WT.mc_id=academic-77807-sagibbon)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners/?WT.mc_id=academic-77807-sagibbon)
 - [AI for Beginners](https://aka.ms/ai-beginners/?WT.mc_id=academic-77807-sagibbon)
+- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
 
 ## License
 

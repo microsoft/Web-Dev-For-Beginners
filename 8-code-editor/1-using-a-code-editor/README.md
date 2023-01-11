@@ -1,6 +1,6 @@
 # Using a code editor
 
-This lesson covers the basics of using [VSCode.dev](https://vscode.dev) a code editor for the web so that you can make changes to your code and contribute to a project without installing anything in your computer.
+This lesson covers the basics of using [VSCode.dev](https://vscode.dev) a web-based code editor so that you can make changes to your code and contribute to a project without installing anything on your computer.
 
 <!----
 TODO: add an optional image
@@ -39,7 +39,7 @@ Once it loads, it should look similar to this image:
 
 There are three main sections, starting from the far left and moving to the right:
 
-1. The _activity bar_ which includes some icons, like the magnifying glass 🔎, the gear ⚙️  and a few others
+1. The _activity bar_ which includes some icons, like the magnifying glass 🔎, the gear ⚙️, and a few others
 1. The expanded activity bar which defaults to the _Explorer_, called the _side bar_.
 1. And finally, the code area to the right.
 
@@ -95,7 +95,7 @@ Select a file to open it on the code area, make your changes and save.
 
 Once you are done updating your project, select the _`source control`_ icon which contains all the new changes you have made to your repository.
 
-To view the changes you made to your project, select the file(s) in the `Changes` folder in the expanded activity bar. This will open a 'Working Tree' for you to visually see the changes you made to the file. Red shows an ommission to the project, while green signifies an addition.
+To view the changes you made to your project, select the file(s) in the `Changes` folder in the expanded activity bar. This will open a 'Working Tree' for you to visually see the changes you made to the file. Red shows an omission to the project, while green signifies an addition.
 
 ![View changes](../images/working-tree.png)
 
