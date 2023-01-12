@@ -1,6 +1,6 @@
 # Using a code editor
 
-This lesson covers the basics of using [VSCode.dev](https://vscode.dev) a code editor for the web so that you can make changes to your code and contribute to a project without installing anything in your computer.
+This lesson covers the basics of using [VSCode.dev](https://vscode.dev) a web-based code editor so that you can make changes to your code and contribute to a project without installing anything on your computer.
 
 <!----
 TODO: add an optional image
@@ -23,7 +23,7 @@ In this lesson, you'll learn how to:
 
 ### Prerequisites
 
-Before you begin, you'll need to create an account with [GitHub](https://github.com). Navigate to [GtiHub](https://github.com/) and create an account if you haven't already.
+Before you begin, you'll need to create an account with [GitHub](https://github.com). Navigate to [GitHub](https://github.com/) and create an account if you haven't already.
 
 ### Introduction
 
@@ -31,7 +31,7 @@ A code editor is an essential tool for writing programs and collaborating with e
 
 ## Getting started with VSCode.dev
 
-[VSCode.dev](https://vscode.dev) is a code editor on the web. You don't need to install anything in order to use it, just like opening any other website. To get started with the editor, open the following link: [https://vscode.dev](https://vscode.dev). If you aren't signed in into [GtiHub](https://github.com/), follow the prompts to sign in or create a new account and then sign in.
+[VSCode.dev](https://vscode.dev) is a code editor on the web. You don't need to install anything in order to use it, just like opening any other website. To get started with the editor, open the following link: [https://vscode.dev](https://vscode.dev). If you aren't signed in into [GitHub](https://github.com/), follow the prompts to sign in or create a new account and then sign in.
 
 Once it loads, it should look similar to this image:
 
@@ -39,8 +39,8 @@ Once it loads, it should look similar to this image:
 
 There are three main sections, starting from the far left and moving to the right:
 
-1. The _activity bar_ which includes some icons, like the magnifying glass 🔎, the gear ⚙️  and a few others
-1. The expanded acivity bar which defaults to the _Explorer_, called the _side bar_.
+1. The _activity bar_ which includes some icons, like the magnifying glass 🔎, the gear ⚙️, and a few others
+1. The expanded activity bar which defaults to the _Explorer_, called the _side bar_.
 1. And finally, the code area to the right.
 
 Click on each of the icons to display a different menu. Once done, click on the _Explorer_ so you are back where you started.
@@ -68,7 +68,7 @@ Once the menu opens, type _open remote repository_, and then select the first op
 https://github.com/microsoft/Web-Dev-For-Beginners
 ```
 
-✅ If succesful, you'll see all files for this repository loaded in the text editor.
+✅ If successful, you'll see all files for this repository loaded in the text editor.
 
 
 ### 2. Using the URL
@@ -95,7 +95,7 @@ Select a file to open it on the code area, make your changes and save.
 
 Once you are done updating your project, select the _`source control`_ icon which contains all the new changes you have made to your repository.
 
-To view the changes you made to your project, select the file(s) in the `Changes` folder in the expanded activity bar. This will open a 'Working Tree' for you to visually see the changes you made to the file. Red shows an ommission to the project, while green signifies an addition.
+To view the changes you made to your project, select the file(s) in the `Changes` folder in the expanded activity bar. This will open a 'Working Tree' for you to visually see the changes you made to the file. Red shows an omission to the project, while green signifies an addition.
 
 ![View changes](../images/working-tree.png)
 
@@ -148,7 +148,7 @@ After installing and using your extension, vscode.dev offers options to manage y
 ---
 
 ## Assignment
-[Create a resume website using vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/vscode-dev/8-code-editor/1-using-a-code-editor/assignment.md)
+[Create a resume website using vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
 
 <!----

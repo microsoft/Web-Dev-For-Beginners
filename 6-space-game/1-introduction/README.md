@@ -217,7 +217,7 @@ Think about how the pub-sub pattern can enhance a game. Which parts should emit 
 
 ## Review & Self Study
 
-Learn more about Pub/Sub by [reading about it](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa).
+Learn more about Pub/Sub by [reading about it](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
 ## Assignment
 

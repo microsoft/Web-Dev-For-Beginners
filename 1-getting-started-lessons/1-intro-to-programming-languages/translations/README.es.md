@@ -17,16 +17,16 @@ En esta lección, cubriremos:
 
 ## ¿Qué es la programación?
 
-La programación (también conocida como codificación) es el proceso de escribir instrucciones en un dispositivo, como una computadora o un celular. Escribimos estas instrucciones con un lenguaje de programación, que luego es interpretado por el dispositivo. Este conjuntos de instrucciones pueden tener varios nombres, como *programa*, *programa de computadora*, *aplicación (app)* o *ejecutable* son algunos de los mas populares.
+La programación (también conocida como codificación) es el proceso de escribir instrucciones en un dispositivo, como una computadora o un celular. Escribimos estas instrucciones con un lenguaje de programación, que luego es interpretado por el dispositivo. Este conjuntos de instrucciones pueden tener varios nombres, como *programa*, *programa de computadora*, *aplicación (app)* o *ejecutable* son algunos de los más populares.
 
 
-Un *programa* puede ser cualquier cosa que esté escrita con código; los sitios web, los videojuegos y las aplicaciones de teléfono son programas. Si bien es posible crear un programa sin escribir código, la lógica subyacente se interpreta al dispositivo y esa lógica probablemente se escribió con código. Un programa que está *ejecutándose* o *ejecutando código* está ejecutando una serie de instrucciones. El dispositivo con el que estás leyendo esta lección está ejecutando un programa para imprimirlo en tu pantalla.
+Un *programa* puede ser cualquier cosa que esté escrita con código; los sitios web, los videojuegos y las aplicaciones de teléfono son programas. Si bien es posible crear un programa sin escribir código, la lógica subyacente se interpreta al dispositivo y esa lógica probablemente se escribió con código. Un programa que está *ejecutándose* o *ejecutando código*, está ejecutando una serie de instrucciones. El dispositivo con el que estás leyendo esta lección está ejecutando un programa para imprimirlo en tu pantalla.
 
 ✅ Investigue un poco: ¿quién se considera el primer programador(a) de computadoras del mundo?
 
 ## Lenguajes de programación
 
-Los lenguajes de programación tienen un propósito principal: que los desarrolladores creen instrucciones para enviarlas a un dispositivo. Los dispositivos solo pueden entender codigo binario (1 y 0), y para *la mayoría* de los desarrolladores, esa no es una forma muy amigable de comunicarse. Los lenguajes de programación son un vehículo para la comunicación entre los humanos y las computadoras.
+Los lenguajes de programación tienen un propósito principal: que los desarrolladores creen instrucciones para enviarlas a un dispositivo. Los dispositivos solo pueden entender código binario (1 y 0), y para *la mayoría* de los desarrolladores, esa no es una forma muy amigable de comunicarse. Los lenguajes de programación son un vehículo para la comunicación entre los humanos y las computadoras.
 
 Los lenguajes de programación vienen en diferentes formatos y tienen diferentes propósitos. Por ejemplo, JavaScript se usa principalmente para aplicaciones web, mientras que Bash se usa principalmente para sistemas operativos.
 
@@ -95,7 +95,7 @@ Un **entorno de desarrollo** es un conjunto único de herramientas y caracterís
 
 ### Editores
 
-Una de las herramientas más importantes para el desarrollo de software es el editor. Los editores son el lugar donde escribes tu código y, a veces, donde lo ejecutaras.
+Una de las herramientas más importantes para el desarrollo de software es el editor. Los editores son el lugar donde escribes tu código y, a veces, donde lo ejecutarás.
 
 Los desarrolladores confían en los editores por algunas razones adicionales:
 
@@ -116,7 +116,7 @@ Los desarrolladores confían en los editores por algunas razones adicionales:
   - [Teletype](https://atom.io/packages/teletype)
   - [atom-beautify](https://atom.io/packages/atom-beautify)
 
-* Teletype: Es una extension que nos permite colaborar en un mismo espacio de trabajo entre muchas personas.
+* Teletype: Es una extensión que nos permite colaborar en un mismo espacio de trabajo entre muchas personas.
 
 ### Navegadores
 
@@ -126,38 +126,38 @@ Muchos navegadores vienen con *herramientas para desarrolladores* (DevTools) que
 
 #### Navegadores y herramientas de desarrollo populares
 
-- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium?WT.mc_id=academic-13441-cxa)
+- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)
 - [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
 - [Firefox](https://developer.mozilla.org/docs/Tools)
 
 ### Herramientas de línea de comandos (CLI)
 
-Algunos desarrolladores prefieren una vista menos gráfica para sus tareas diarias y confían en la línea de comandos **(CLI)** para lograrlo. El desarrollo de código requiere una gran cantidad de escritura, y algunos desarrolladores prefieren no interrumpir su flujo de trabajo con el teclado es por eso que usan atajos(shortcuts) para cambiar entre ventanas de escritorio, trabajar en diferentes archivos y usar herramientas. La mayoría de las tareas se pueden completar con un mouse, pero una de las ventajas de utilizar la línea de comandos es que se pueden hacer muchas cosas sin la necesidad de cambiar entre el mouse y el teclado. Otro beneficio de esta es que son configurables, puedes guardar tu configuración personalizada, asi como tambien cambiarla más tarde o importarla a nueva máquina. Debido a que los entornos son tan exclusivos para cada desarrollador, algunos evitarán usar la línea de comandos, algunos dependerán de ella por completo asi como tambien otros pueden preferir una combinación de ambos.
+Algunos desarrolladores prefieren una vista menos gráfica para sus tareas diarias y confían en la línea de comandos **(CLI)** para lograrlo. El desarrollo de código requiere una gran cantidad de escritura, y algunos desarrolladores prefieren no interrumpir su flujo de trabajo con el teclado es por eso que usan atajos (shortcuts) para cambiar entre ventanas de escritorio, trabajar en diferentes archivos y usar herramientas. La mayoría de las tareas se pueden completar con un mouse, pero una de las ventajas de utilizar la línea de comandos es que se pueden hacer muchas cosas sin la necesidad de cambiar entre el mouse y el teclado. Otro beneficio de esta es que son configurables, puedes guardar tu configuración personalizada, asi como también cambiarla más tarde o importarla a nueva máquina. Debido a que los entornos son tan exclusivos para cada desarrollador, algunos evitarán usar la línea de comandos, algunos dependerán de ella por completo, así como también otros pueden preferir una combinación de ambos.
 
 ### Opciones de línea de comandos (CLI) populares
 
-Las opciones para la línea de comando varian según el sistema operativo que utilices.
+Las opciones para la línea de comando varían según el sistema operativo que utilices.
 
 💻 = *viene preinstalado en el sistema operativo.*
 
 #### Windows
 
-- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-13441-cxa) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (also known as CMD) 💻
-- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-13441-cxa)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7/?WT.mc_id=academic-77807-sagibbon) 💻
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (also known as CMD) 💻
+- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)
 - [Mintty](https://mintty.github.io/)
   
 #### MacOS
 
 - [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) 💻
 - [iTerm](https://iterm2.com/)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7?WT.mc_id=academic-13441-cxa)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
 
 #### Linux
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
 - [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
 
 #### Línea de comandos (CLI) Populares
 
@@ -167,7 +167,7 @@ Las opciones para la línea de comando varian según el sistema operativo que ut
 
 ### Documentación
 
-Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recurras a la documentación para aprender a usarla. Los desarrolladores a menudo confían en esta para guiarlos a través de cómo usar ciertas herramientas asi como tambien para entender como funcionan los lenguajes.
+Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recurras a la documentación para aprender a usarla. Los desarrolladores a menudo confían en ésta para guiarlos a través de cómo usar ciertas herramientas así como también para entender como funcionan los lenguajes.
 
 #### Documentación popular sobre desarrollo de web
 

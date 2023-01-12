@@ -6,7 +6,7 @@ Escribir es una de las habilidades más subestimadas de los desarrolladores. La 
 
 > Entonces, ¡construyamos un juego de mecanografía!
 
-Utilizará las habilidades de JavaScript, HTML y CSS que ha aprendido hasta ahora para crear este juego. El mismo le mostrara al jugador una cita aleatoria (estamos usando [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes) citas) y el tiempo que tarda el jugador en escribirlo con precisión.
+Utilizará las habilidades de JavaScript, HTML y CSS que ha aprendido hasta ahora para crear este juego. El mismo le mostrará al jugador una cita aleatoria (estamos usando las citas de [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes)) y el tiempo que tarda el jugador en escribirlo con precisión.
 
 ![demo](../images/demo.gif)
 

@@ -20,4 +20,4 @@
 
 ## 请告诉我们你的想法！
 
-我们希望可以让这门课程对你和你的学生有所帮助。欢迎[反馈](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u)。
+我们希望可以让这门课程对你和你的学生有所帮助。欢迎[反馈](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)。

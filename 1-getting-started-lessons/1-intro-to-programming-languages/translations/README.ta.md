@@ -17,7 +17,7 @@
 - ஒரு நிரலின் அடிப்படை கூறுகள்
 - தொழில்முறை டெவலப்பர் பயனுள்ள மென்பொருள் மற்றும் கருவி
 
-> நீங்கள் இந்த பாடத்தை [மைக்ரோசாப்ட் கற்றல்](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming?WT.mc_id=academic-13441-cxa) பற்றி எடுத்துக் கொள்ளலாம்!
+> நீங்கள் இந்த பாடத்தை [மைக்ரோசாப்ட் கற்றல்](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon) பற்றி எடுத்துக் கொள்ளலாம்!
 
 ## நிரலாக்க என்றால் என்ன??
 
@@ -129,7 +129,7 @@ back add r0,r1
 
 #### பிரபலமான உலாவிகள் மற்றும் தேவ்டூல்ஸ்
 
-- [விளிம்பு](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium?WT.mc_id=academic-13441-cxa)
+- [விளிம்பு](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)
 - [குரோம்](https://developers.google.com/web/tools/chrome-devtools/)
 - [பயர்பாக்ஸ்](https://developer.mozilla.org/docs/Tools)
 
@@ -145,22 +145,22 @@ back add r0,r1
 
 #### விண்டோஸ்
 
-- [பவர்ஷெல்](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-13441-cxa) 💻
-- [கட்டளை வரி](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (சி.எம்.டி என்றும் அழைக்கப்படுகிறது) 💻
-- [விண்டோஸ் முனையம்](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-13441-cxa)
+- [பவர்ஷெல்](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7/?WT.mc_id=academic-77807-sagibbon) 💻
+- [கட்டளை வரி](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (சி.எம்.டி என்றும் அழைக்கப்படுகிறது) 💻
+- [விண்டோஸ் முனையம்](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)
 - [புதினா](https://mintty.github.io/)
   
 #### MacOS
 
 - [முனையம்](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) 💻
 - [ஐடெர்ம்](https://iterm2.com/)
-- [பவர்ஷெல்](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7?WT.mc_id=academic-13441-cxa)
+- [பவர்ஷெல்](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos/?view=powershell-7&WT.mc_id=academic-77807-sagibbon)
 
 #### Linux
 
 - [பாஸ்](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
 - [கேடிஇ கான்சோல்](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
-- [பவர்ஷெல்](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-13441-cxa)
+- [பவர்ஷெல்](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux/?view=powershell-7&WT.mc_id=academic-77807-sagibbon)
 
 #### பிரபலமான கட்டளை வரி கருவிகள்
 

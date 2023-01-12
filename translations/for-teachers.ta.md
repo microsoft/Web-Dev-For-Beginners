@@ -30,4 +30,4 @@
 
 ## தயவுசெய்து உங்கள் எண்ணங்களை எங்களுக்குத் கொடுங்கள்!
 
-இந்த பாடத்திட்டத்தை உங்களுக்கும் உங்கள் மாணவர்களுக்கும் வேலை செய்ய விரும்புகிறோம். தயவுசெய்து எங்களுக்கு [கருத்து](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u) கொடுங்கள்
+இந்த பாடத்திட்டத்தை உங்களுக்கும் உங்கள் மாணவர்களுக்கும் வேலை செய்ய விரும்புகிறோம். தயவுசெய்து எங்களுக்கு [கருத்து](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) கொடுங்கள்

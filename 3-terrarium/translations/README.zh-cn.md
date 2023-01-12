@@ -26,7 +26,7 @@
 
 2. 点击下方的按钮
 
-[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-13441-cxa#create/Microsoft.StaticApp)
+[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-77807-sagibbon#create/Microsoft.StaticApp)
 
 3. 按照指引创建你的应用。请确保你的程序根目录为 `/solution` 或者是你自己代码项目的根目录。这个应用不需要使用任何 API，因此你不用担心需要去调用什么额外的内容。.github 目录会在你 fork 的仓库中创建，它将帮助 Azure Static Web Apps 的构建服务构建并发布你的应用到一个新的地址。
 

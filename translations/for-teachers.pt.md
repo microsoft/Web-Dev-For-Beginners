@@ -11,12 +11,12 @@ Estas [instruções completas](https://github.blog/2020-03-18-set-up-your-digita
 
 ## Usando no Moodle, Canvas ou Blackboard  
 
-Esse programa de estudos funciona bem com estes sistemas de gestão de aprendizagem (LMS)! Use o [arquivo de upload do Moodle](/teaching-files/webdev-moodle.mbz) para o conteúdo completo, ou tente o [arquivo do Common Cartridge](/teaching-files/webdev-common-cartridge.imscc) que contém parte do conteúdo. Moodle Cloud não oferece suporte à exportação completa do Common Cartidge, então é preferível usar o arquivo de download do Moodle que pode ser carregado no Canvas. Por favor, nos diga como podemos melhorar essa experiência. 
+Esse programa de estudos funciona bem com estes sistemas de gestão de aprendizagem (LMS)! Use o [arquivo de upload do Moodle](../teaching-files/webdev-moodle.mbz) para o conteúdo completo, ou tente o [arquivo do Common Cartridge](../teaching-files/webdev-common-cartridge.imscc) que contém parte do conteúdo. Moodle Cloud não oferece suporte à exportação completa do Common Cartidge, então é preferível usar o arquivo de download do Moodle que pode ser carregado no Canvas. Por favor, nos diga como podemos melhorar essa experiência. 
 
-![Moodle](/teaching-files/moodle.png)
+![Moodle](../teaching-files/moodle.png)
 > O programa de estudos no Moodle Classroom 
 
-![Canvas](/teaching-files/canvas.png)
+![Canvas](../teaching-files/canvas.png)
 > O programa de estudos no Canvas 
 
 ## Usando o repositório como está 
@@ -31,4 +31,4 @@ Há muitas maneiras de fazer isso funcionar via formato de sala de aula online. 
 
 ## Por favor, nos dê sua opinião! 
 
-Nós queremos fazer este programa de estudos funcionar para você e seus estudantes. Por favor, nos de um [feedback](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u). 
+Nós queremos fazer este programa de estudos funcionar para você e seus estudantes. Por favor, nos de um [feedback](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner). 
