@@ -114,6 +114,6 @@ Our team produces other curricula! Check out:
 - [AI for Beginners](https://aka.ms/ai-beginners/?WT.mc_id=academic-77807-sagibbon)
 - [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
 
-## License
+ ## License
 
 This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
