@@ -4,9 +4,9 @@ En esta sección del plan de estudios, se te presentarán conceptos importantes 
 
 ### Temas
 
-1. [Introducción a los lenguajes de programación y herramientas del oficio](../1-intro-to-programming-languages/README.md)
-2. [Introducción a GitHub](../2-github-basics/README.md)
-3. [Conceptos básicos de Accesibilidad](../3-accessibility/README.md)
+1. [Introducción a los lenguajes de programación y herramientas del oficio](../1-intro-to-programming-languages/translations/README.es.md)
+2. [Introducción a GitHub](../2-github-basics/translations/README.es.md)
+3. [Conceptos básicos de Accesibilidad](../3-accessibility/translations/README.es.md)
 
 ### Créditos
 
