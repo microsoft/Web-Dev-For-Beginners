@@ -1,0 +1,126 @@
+
+microsoft
+/
+Desarrollador web para principiantes
+Plantilla pública
+24 lecciones, 12 semanas, comience como desarrollador web
+
+microsoft.github.io/web-dev-para-principiantes/
+Licencia
+ licencia MIT
+ 64k estrellas 10k tenedores 
+Código
+Asuntos
+5
+Solicitudes de extracción
+87
+Discusiones
+Comportamiento
+Seguridad
+Perspectivas
+microsoft/Web-Dev-Para-principiantes
+Última confirmación
+@saragibby
+Saragibby
+…
+ayer
+Estadísticas de Git
+archivos
+LÉAME.md
+licencia GitHub Colaboradores de GitHub Problemas de GitHub Solicitudes de extracción de GitHub Bienvenida a los RR.PP.
+
+Observadores de GitHub bifurcaciones de GitHub Estrellas de GitHub
+
+Abrir en código de Visual Studio
+
+Desarrollo web para principiantes: un plan de estudios
+Los defensores de la nube de Azure en Microsoft se complacen en ofrecer un plan de estudios de 24 lecciones de 12 semanas que trata sobre los conceptos básicos de JavaScript, CSS y HTML. Cada lección incluye cuestionarios previos y posteriores a la lección, instrucciones escritas para completar la lección, una solución, una tarea y más. Nuestra pedagogía basada en proyectos le permite aprender mientras construye, una forma comprobada de que las nuevas habilidades se 'peguen'.
+
+¡Muchas gracias a nuestros autores Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees y al dibujante Tomomi Imura!
+
+¿Es usted un estudiante?
+Comience con los siguientes recursos:
+
+Página Student Hub En esta página, encontrará recursos para principiantes, paquetes para estudiantes e incluso formas de obtener un cupón de certificado gratuito. Esta es una página que desea marcar y revisar de vez en cuando, ya que cambiamos el contenido al menos una vez al mes.
+Embajadores de Microsoft Student Learn Únase a una comunidad global de estudiantes embajadores, este podría ser su camino hacia Microsoft.
+Visite la página Student Hub donde encontrará recursos para principiantes, paquetes para estudiantes e incluso formas de obtener un cupón de certificado gratuito. Esta es la página que desea marcar y revisar de vez en cuando, ya que cambiamos el contenido mensualmente.
+
+Empezando
+Maestros , hemos incluido algunas sugerencias sobre cómo usar este plan de estudios. ¡Nos encantaría recibir sus comentarios en nuestro foro de discusión !
+
+Los estudiantes , para usar este plan de estudios por su cuenta, bifurquen todo el repositorio y completen los ejercicios por su cuenta, comenzando con un cuestionario previo a la lección, luego leyendo la lección y completando el resto de las actividades. Intente crear los proyectos comprendiendo las lecciones en lugar de copiar el código de la solución; sin embargo, ese código está disponible en las carpetas /soluciones en cada lección orientada a proyectos. Otra idea sería formar un grupo de estudio con amigos y repasar el contenido juntos. Para profundizar en el estudio, recomendamos Microsoft Learn y ver los videos que se mencionan a continuación.
+
+Vídeo promocional
+
+Gif por Mohit Jaisal
+
+🎥¡Haz clic en la imagen de arriba para ver un video sobre el proyecto y las personas que lo crearon!
+
+Pedagogía
+Hemos elegido dos principios pedagógicos al construir este plan de estudios: asegurarnos de que esté basado en proyectos y que incluya cuestionarios frecuentes. Al final de esta serie, los estudiantes habrán creado un juego de mecanografía, un terrario virtual, una extensión de navegador 'verde', un juego tipo 'invasores del espacio' y una aplicación bancaria de tipo comercial, y también habrán aprendido los conceptos básicos de JavaScript, HTML y CSS junto con la moderna cadena de herramientas del desarrollador web actual.
+
+🎓¡Puede tomar las primeras lecciones de este plan de estudios como una ruta de aprendizaje en Microsoft Learn!
+
+Al garantizar que el contenido se alinee con los proyectos, el proceso se vuelve más atractivo para los estudiantes y se aumentará la retención de conceptos. También escribimos varias lecciones iniciales sobre conceptos básicos de JavaScript para introducir conceptos, junto con un video de la colección de tutoriales en video " Serie para principiantes a: JavaScript ", algunos de cuyos autores contribuyeron a este plan de estudios.
+
+Además, una prueba de bajo riesgo antes de una clase establece la intención del estudiante de aprender un tema, mientras que una segunda prueba después de la clase asegura una mayor retención. Este plan de estudios fue diseñado para ser flexible y divertido y se puede tomar en su totalidad o en parte. Los proyectos comienzan pequeños y se vuelven cada vez más complejos al final del ciclo de 12 semanas.
+
+Si bien hemos evitado deliberadamente la introducción de marcos de JavaScript para concentrarnos en las habilidades básicas necesarias como desarrollador web antes de adoptar un marco, un buen próximo paso para completar este plan de estudios sería aprender sobre Node.js a través de otra colección de videos: " Serie para principiantes para: Nodo.js ".
+
+Encuentre nuestro Código de Conducta , Contribuciones y Directrices de Traducción . ¡Agradecemos sus comentarios constructivos!
+
+Cada lección incluye:
+nota de croquis opcional
+video complementario opcional
+cuestionario de calentamiento previo a la lección
+lección escrita
+para lecciones basadas en proyectos, guías paso a paso sobre cómo construir el proyecto
+controles de conocimiento
+un reto
+lectura suplementaria
+asignación
+cuestionario posterior a la lección
+Una nota sobre las pruebas : todas las pruebas están contenidas en esta aplicación , para un total de 48 pruebas de tres preguntas cada una. Están vinculados desde dentro de las lecciones, pero la aplicación de prueba se puede ejecutar localmente; siga las instrucciones en la quiz-appcarpeta. Poco a poco se van localizando.
+
+Lecciones
+Nombre del proyecto	Conceptos enseñados	Objetivos de aprendizaje	Lección vinculada	Autor
+01	Empezando	Introducción a la programación y herramientas del oficio	Aprenda los fundamentos básicos detrás de la mayoría de los lenguajes de programación y sobre el software que ayuda a los desarrolladores profesionales a hacer su trabajo.	Introducción a los lenguajes de programación y las herramientas del oficio	Jazmín
+02	Empezando	Conceptos básicos de GitHub, incluye trabajar con un equipo	Cómo usar GitHub en su proyecto, cómo colaborar con otros en una base de código	Introducción a GitHub	Piso
+03	Empezando	Accesibilidad	Aprende los conceptos básicos de la accesibilidad web.	Fundamentos de accesibilidad	Cristóbal
+04	Conceptos básicos de JS	Tipos de datos de JavaScript	Los conceptos básicos de los tipos de datos de JavaScript	Tipos de datos	Jazmín
+05	Conceptos básicos de JS	Funciones y Métodos	Aprenda sobre funciones y métodos para administrar el flujo lógico de una aplicación	Funciones y Métodos	jazmin y cristobal
+06	Conceptos básicos de JS	Tomar decisiones con JS	Aprenda a crear condiciones en su código usando métodos de toma de decisiones	Tomando decisiones	Jazmín
+07	Conceptos básicos de JS	Matrices y bucles	Trabaje con datos utilizando matrices y bucles en JavaScript	Matrices y bucles	Jazmín
+08	terrario	HTML en la práctica	Cree el HTML para crear un terrario en línea, centrándose en crear un diseño	Introducción a HTML	Jen
+09	terrario	CSS en la práctica	Cree el CSS para diseñar el terrario en línea, centrándose en los conceptos básicos de CSS, incluida la capacidad de respuesta de la página.	Introducción a CSS	Jen
+10	terrario	Cierres de JavaScript, manipulación DOM	Cree el JavaScript para hacer que el terrario funcione como una interfaz de arrastrar y soltar, centrándose en los cierres y la manipulación DOM	Cierres de JavaScript, manipulación DOM	Jen
+11	Juego de mecanografía	Construye un juego de mecanografía	Aprenda a usar eventos de teclado para impulsar la lógica de su aplicación de JavaScript	Programación impulsada por eventos	Cristóbal
+12	Extensión de navegador verde	Trabajar con navegadores	Aprenda cómo funcionan los navegadores, su historial y cómo estructurar los primeros elementos de una extensión de navegador	Acerca de los navegadores	Jen
+13	Extensión de navegador verde	Crear un formulario, llamar a una API y almacenar variables en el almacenamiento local	Cree los elementos de JavaScript de la extensión de su navegador para llamar a una API usando variables almacenadas en el almacenamiento local	API, formularios y almacenamiento local	Jen
+14	Extensión de navegador verde	Procesos en segundo plano en el navegador, rendimiento web	Use los procesos en segundo plano del navegador para administrar el ícono de la extensión; aprender sobre el rendimiento web y algunas optimizaciones para hacer	Tareas en segundo plano y rendimiento	Jen
+15	juego espacial	Desarrollo de juegos más avanzado con JavaScript	Aprenda sobre la herencia usando clases y composición y el patrón Pub/Sub, como preparación para crear un juego.	Introducción al desarrollo avanzado de juegos	cris
+dieciséis	juego espacial	Dibujo a lienzo	Obtenga información sobre la API de Canvas, que se utiliza para dibujar elementos en una pantalla	Dibujo a lienzo	cris
+17	juego espacial	Mover elementos por la pantalla	Descubra cómo los elementos pueden ganar movimiento usando las coordenadas cartesianas y la API de Canvas	Mover elementos alrededor	cris
+18	juego espacial	Detección de colisiones	Haga que los elementos colisionen y reaccionen entre sí presionando las teclas y proporcione una función de enfriamiento para garantizar el rendimiento del juego.	Detección de colisiones	cris
+19	juego espacial	Manteniendo el marcador	Realice cálculos matemáticos basados ​​en el estado y el rendimiento del juego.	Manteniendo el marcador	cris
+20	juego espacial	Terminar y reiniciar el juego	Obtenga información sobre cómo finalizar y reiniciar el juego, incluida la limpieza de activos y el restablecimiento de valores de variables	La condición final	cris
+21	Aplicación bancaria	Plantillas HTML y rutas en una aplicación web	Aprenda a crear el andamio de la arquitectura de un sitio web de varias páginas utilizando plantillas HTML y de enrutamiento	Plantillas y rutas HTML	Yohan
+22	Aplicación bancaria	Cree un formulario de inicio de sesión y registro	Más información sobre la creación de formularios y la entrega de rutinas de validación	formularios	Yohan
+23	Aplicación bancaria	Métodos de obtención y uso de datos	Cómo entran y salen los datos de su aplicación, cómo recuperarlos, almacenarlos y deshacerse de ellos	Datos	Yohan
+24	Aplicación bancaria	Conceptos de Gestión del Estado	Aprenda cómo su aplicación retiene el estado y cómo administrarlo mediante programación	Administración del Estado	Yohan
+Acceso sin conexión
+Puede ejecutar esta documentación sin conexión mediante Docsify . Bifurque este repositorio, instale Docsify en su máquina local y luego, en la carpeta raíz de este repositorio, escriba docsify serve. El sitio web se servirá en el puerto 3000 en su servidor local: localhost:3000.
+
+PDF
+Puede encontrar un PDF de todas las lecciones aquí .
+
+Otros planes de estudio
+¡Nuestro equipo produce otros planes de estudios! Verificar:
+
+Aprendizaje automático para principiantes
+IoT para principiantes
+Ciencia de datos para principiantes
+IA para principiantes
+Desarrollo XR para principiantes
+Licencia
+Este repositorio está autorizado bajo la licencia MIT. Consulte el archivo de LICENCIA para obtener más información.
