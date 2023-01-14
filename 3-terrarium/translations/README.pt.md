@@ -6,9 +6,9 @@ Uma pequena reflexão de arrastar e soltar sobre o código. Com um pouco de HTML
 
 # Lições
 
-1. [Introdução ao CSS](./intro-to-css/README.md)
-2. [Introdução ao HTML](./intro-to-html/README.md)
-3. [Introdução ao DOM e JS Closures(fechamentos)](intro-to-DOM-and-js-closures/README.md)
+1. [Introdução ao HTML](../1-intro-to-html/README.md)
+2. [Introdução ao CSS](../2-intro-to-css/README.md)
+3. [Introdução ao DOM e JS Closures(fechamentos)](../3-intro-to-DOM-and-closures/README.md)
 
 ## Créditos
 
@@ -27,6 +27,6 @@ Você pode fazer o deploy, ou publicar seu terrário na web usando o Azure Stati
 
 2. Pressione esse botão
 
-[![Deploy no Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-13441-cxa#create/Microsoft.StaticApp)
+[![Deploy no Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-77807-sagibbon#create/Microsoft.StaticApp)
 
 3. Percorra o assistente para criar seu aplicativo. Certifique-se de definir a raiz do aplicativo para ser `/solution` ou a raiz(root) de sua base de código. Não há API neste aplicativo, então não se preocupe em adicioná-la. Uma pasta .github será criada em seu repositório bifurcado que ajudará os aplicativos da Web estáticos do Azure a construir e publicar seu aplicativo em uma nova URL.

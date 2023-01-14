@@ -6,9 +6,9 @@
 
 > **先生方**、このカリキュラムをどのように使用するか、[いくつかの提案があります](for-teachers.ja.md)。あなた自身のレッスンを作成したい場合は、[レッスンテンプレート](lesson-template/translations/README.ja.md)もご用意しています。
 
-> **学生の皆さん**、このカリキュラムを自分で使うためには、リポジトリ全体をフォークして、講義前の小テストから始めて、講義を読んで、残りのアクティビティを自分で完成させてください。解答コードは各レッスンの /solutions フォルダにありますが、解答コードをコピーするのではなく、授業を理解した上でプロジェクトを作成するようにしてください。また、友達と勉強会を作って、一緒に勉強するのもいいでしょう。さらに勉強するには、[Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-13441-cxa) や以下のビデオを見ることをお勧めします。
+> **学生の皆さん**、このカリキュラムを自分で使うためには、リポジトリ全体をフォークして、講義前の小テストから始めて、講義を読んで、残りのアクティビティを自分で完成させてください。解答コードは各レッスンの /solutions フォルダにありますが、解答コードをコピーするのではなく、授業を理解した上でプロジェクトを作成するようにしてください。また、友達と勉強会を作って、一緒に勉強するのもいいでしょう。さらに勉強するには、[Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81/?WT.mc_id=academic-77807-sagibbon) や以下のビデオを見ることをお勧めします。
 
-[![Promo video](../screenshot.png)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
+[![Promo video](/images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Promo video")
 
 > 上の画像をクリックすると、プロジェクトとそれを作成した人々についてのビデオを見ることができます。
 
@@ -16,11 +16,11 @@
 
 私たちは、このカリキュラムを構築する際に、2つの教育学的な考え方を選択しました。このシリーズが終わる頃には、学生はタイピングゲーム、バーチャルテラリウム、「グリーン」ブラウザ拡張機能、「スペースインベーダー」タイプのゲーム、ビジネスタイプの銀行アプリを作成し、JavaScript、HTML、CSS の基本を、今日の Web 開発者の最新のツールチェーンとともに学んでいることでしょう。
 
-コンテンツがプロジェクトに沿ったものであることを確認することで、プロセスは学生にとってより魅力的なものとなり、概念の定着率が向上します。また、JavaScriptの基本的な概念を紹介するために、いくつかのスターターレッスンを執筆し、その中の何人かの著者がこのカリキュラムに貢献しているビデオチュートリアルのコレクション "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-13441-cxa)" のビデオと組み合わせました。
+コンテンツがプロジェクトに沿ったものであることを確認することで、プロセスは学生にとってより魅力的なものとなり、概念の定着率が向上します。また、JavaScriptの基本的な概念を紹介するために、いくつかのスターターレッスンを執筆し、その中の何人かの著者がこのカリキュラムに貢献しているビデオチュートリアルのコレクション "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" のビデオと組み合わせました。
 
 また、授業前の小テストで学習者の学習意図を確認し、授業後に2回目の小テストを行うことで、学習の定着度を高めています。このカリキュラムは柔軟性があり、楽しく、全体的にも部分的にも受講できるように設計されています。プロジェクトは小さなものから始まり、12週間のサイクルが終わる頃には徐々に複雑なものになっていきます。
 
-フレームワークを採用する前に Web 開発者として必要とされる基本的なスキルに集中するため、JavaScript フレームワークの紹介は意図的に避けていますが、このカリキュラムを修了するための良い次のステップとして、別のビデオのコレクション "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-13441-cxa)" を通して Node.js について学ぶことができます。
+フレームワークを採用する前に Web 開発者として必要とされる基本的なスキルに集中するため、JavaScript フレームワークの紹介は意図的に避けていますが、このカリキュラムを修了するための良い次のステップとして、別のビデオのコレクション "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)" を通して Node.js について学ぶことができます。
 
 > [行動規範](./CODE_OF_CONDUCT.md)、[貢献](./CONTRIBUTING.md)、[翻訳](./TRANSLATIONS.md)のガイドラインをご覧ください。建設的なご意見をお待ちしております。
 >

@@ -250,7 +250,7 @@ Ajoutez un éclat "bulle" à la partie inférieure gauche du pot pour qu'il ress
 
 ![terrarium terminé](../images/terrarium-final.png)
 
-Pour répondre au Quiz de validation des connaissances, suivez ce module d'apprentissage : [Donnez du style à votre application HTML avec CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-13441-cxa)
+Pour répondre au Quiz de validation des connaissances, suivez ce module d'apprentissage : [Donnez du style à votre application HTML avec CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
 ## Quiz de validation des connaissances
 

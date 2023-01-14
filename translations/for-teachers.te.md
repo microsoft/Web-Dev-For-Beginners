@@ -31,4 +31,4 @@
 
 ## దయచేసి మీ ఆలోచనలను మాకు తెలియజేయండి!
 
-మేము ఈ పాఠ్యాంశాలను మీకు మరియు మీ విద్యార్థులకు పని చేయాలనుకుంటున్నాము. దయచేసి మాకు [ఫీడ్‌బ్యాక్](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u).
+మేము ఈ పాఠ్యాంశాలను మీకు మరియు మీ విద్యార్థులకు పని చేయాలనుకుంటున్నాము. దయచేసి మాకు [ఫీడ్‌బ్యాక్](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner).

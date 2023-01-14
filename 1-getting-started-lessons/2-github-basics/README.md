@@ -182,8 +182,8 @@ In your repository, navigate to `Insights > Community` to see how your project c
 
    Here are some things that can improve your GitHub repo:
    - **Description**. Did you add a description for your project?
-   - **README**. Did you add a README? GitHub provides guidance for writing a [README](https://docs.github.com/articles/about-readmes/).
-   - **Contributing guideline**. Does your project have [contributing guidelines](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/), 
+   - **README**. Did you add a README? GitHub provides guidance for writing a [README](https://docs.github.com/articles/about-readmes/?WT.mc_id=academic-77807-sagibbon).
+   - **Contributing guideline**. Does your project have [contributing guidelines](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/?WT.mc_id=academic-77807-sagibbon), 
    - **Code of Conduct**. a [Code of Conduct](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/), 
    - **License**. Perhaps most importantly, a [license](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
 
@@ -318,12 +318,12 @@ Read more about [contributing to open source software](https://opensource.guide/
 
 [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/).
 
-Practice, practice, practice. GitHub has great learning paths available via [lab.github.com](https://lab.github.com/):
+Practice, practice, practice. GitHub has great learning paths available via [skills.github.com](https://skills.github.com):
 
-- [First Week on GitHub](https://lab.github.com/githubtraining/first-week-on-github)
+- [First Week on GitHub](https://skills.github.com/#first-week-on-github)
 
-You'll also find more advanced labs. 
+You'll also find more advanced courses. 
 
 ## Assignment 
 
-Complete [the First Week on GitHub training lab](https://lab.github.com/githubtraining/first-week-on-github)
+Complete [the First Week on GitHub course](https://skills.github.com/#first-week-on-github)

@@ -217,7 +217,7 @@ Pensez à la façon dont le modèle pub-sub peut améliorer un jeu. Quelles part
 
 ## Révision et étude personnelle
 
-En savoir plus sur Pub/Sub en [lisant sur ce sujet](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber?WT.mc_id=academic-13441-cxa).
+En savoir plus sur Pub/Sub en [lisant sur ce sujet](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
 ## Affectation
 
