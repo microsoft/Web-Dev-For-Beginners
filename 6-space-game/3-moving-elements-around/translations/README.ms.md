@@ -30,7 +30,7 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Bolehkah anda memikirkan sebab mengapa menggambar semula pahlawan anda dengan banyak bingkai sesaat mungkin menambah kos prestasi? Baca mengenai [alternatif untuk corak ini](https://www.html5rocks.com/en/tutorials/canvas/performance/).
+✅ Bolehkah anda memikirkan sebab mengapa menggambar semula pahlawan anda dengan banyak bingkai sesaat mungkin menambah kos prestasi? Baca mengenai [alternatif untuk corak ini](https://web.dev/canvas-performance/).
 
 ## Mengendalikan acara papan kekunci
 

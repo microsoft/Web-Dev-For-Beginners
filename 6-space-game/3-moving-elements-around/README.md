@@ -30,7 +30,7 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Can you think of a reason why redrawing your hero many frames per second might accrue performance costs? Read about [alternatives to this pattern](https://www.html5rocks.com/en/tutorials/canvas/performance/).
+✅ Can you think of a reason why redrawing your hero many frames per second might accrue performance costs? Read about [alternatives to this pattern](https://web.dev/canvas-performance/).
 
 ## Handle keyboard events
 

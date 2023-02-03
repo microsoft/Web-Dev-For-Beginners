@@ -30,7 +30,7 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ 你能了解為什麼在同一秒內多次重新繪製英雄會影響效能的原因嗎？閱讀[其他種同目的之設計模式](https://www.html5rocks.com/en/tutorials/canvas/performance/)。
+✅ 你能了解為什麼在同一秒內多次重新繪製英雄會影響效能的原因嗎？閱讀[其他種同目的之設計模式](https://web.dev/canvas-performance/)。
 
 ## 處理鍵盤事件
 

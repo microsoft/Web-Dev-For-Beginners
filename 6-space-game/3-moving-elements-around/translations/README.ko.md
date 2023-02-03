@@ -30,7 +30,7 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ 영웅을 초당 수 많은 프레임으로 다시 그리게 될 때 성능 비용이 발생하는 이유를 알 수 있나요? [alternatives to this pattern](https://www.html5rocks.com/en/tutorials/canvas/performance/)에 대하여 읽어보세요.
+✅ 영웅을 초당 수 많은 프레임으로 다시 그리게 될 때 성능 비용이 발생하는 이유를 알 수 있나요? [alternatives to this pattern](https://web.dev/canvas-performance/)에 대하여 읽어보세요.
 
 
 ## 키보드 이벤트 제어하기

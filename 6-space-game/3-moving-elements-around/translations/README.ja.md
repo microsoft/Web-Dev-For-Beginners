@@ -30,7 +30,7 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ ヒーローを毎秒何フレームも描き直すとパフォーマンスコストが発生する理由が思いつきますか? [このパターンの代替案](https://www.html5rocks.com/ja/tutorials/canvas/performance/)を読んでみてください。
+✅ ヒーローを毎秒何フレームも描き直すとパフォーマンスコストが発生する理由が思いつきますか? [このパターンの代替案](https://web.dev/canvas-performance/)を読んでみてください。
 
 ## キーボードイベントの処理
 

@@ -30,7 +30,7 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Pouvez-vous penser à une raison pour laquelle redessiner votre héros plusieurs images par seconde pourrait entraîner des coûts de performance? Apprenez en plus sur les [alternatives à ce modèle](https://www.html5rocks.com/en/tutorials/canvas/performance/).
+✅ Pouvez-vous penser à une raison pour laquelle redessiner votre héros plusieurs images par seconde pourrait entraîner des coûts de performance? Apprenez en plus sur les [alternatives à ce modèle](https://web.dev/canvas-performance/).
 
 ## Gérer les événements du clavier
 

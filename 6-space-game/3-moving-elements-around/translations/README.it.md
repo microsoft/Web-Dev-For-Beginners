@@ -30,7 +30,7 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Si riesce a pensare a un motivo per cui ridisegnare il proprio eroe con molti fotogrammi al secondo potrebbe far aumentare i costi delle prestazioni? Leggere le [alternative a questo modello](https://www.html5rocks.com/en/tutorials/canvas/performance/).
+✅ Si riesce a pensare a un motivo per cui ridisegnare il proprio eroe con molti fotogrammi al secondo potrebbe far aumentare i costi delle prestazioni? Leggere le [alternative a questo modello](https://web.dev/canvas-performance/).
 
 ## Gestire eventi da tastiera
 

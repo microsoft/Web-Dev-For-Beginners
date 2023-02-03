@@ -30,7 +30,7 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ ¿Puedes pensar en una razón por la que volver a dibujar a tu héroe muchos fotogramas por segundo podría generar costos de rendimiento? Lea acerca de [alternativas a este patrón](https://www.html5rocks.com/en/tutorials/canvas/performance/).
+✅ ¿Puedes pensar en una razón por la que volver a dibujar a tu héroe muchos fotogramas por segundo podría generar costos de rendimiento? Lea acerca de [alternativas a este patrón](https://web.dev/canvas-performance/).
 
 ## Manejar eventos de teclado
 
