@@ -33,7 +33,7 @@
 
 > **[ছাত্ৰ-ছাত্ৰী](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, এই পাঠ্যক্ৰম নিজাববীয়াকৈ ব্যৱহাৰ কৰিবলৈ, সমগ্ৰ ৰেপো কাঁটাচামুচ আৰু আপোনাৰ ওপৰত অনুশীলন সম্পূৰ্ণ... নিজৰ, বক্তৃতাৰ পূৰ্বে কুইজৰ পৰা আৰম্ভ কৰি, তাৰ পিছত বক্তৃতা পঢ়ি বাকী কাৰ্য্যকলাপ সম্পূৰ্ণ কৰা। সমাধান ক'ড কপি নকৰি পাঠসমূহ বুজি পাই প্ৰকল্পসমূহ সৃষ্টি কৰিবলৈ চেষ্টা কৰক; কিন্তু, সেই ক'ড প্ৰতিটো প্ৰকল্প-মুখী পাঠত /solutions ফোল্ডাৰসমূহত উপলব্ধ। আন এটা ধাৰণা হ’ব বন্ধু-বান্ধৱীৰ সৈতে এটা অধ্যয়ন গোট গঠন কৰি একেলগে বিষয়বস্তুৰ মাজেৰে যোৱা। অধিক অধ্যয়নৰ বাবে আমি [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81/?WT.mc_id=academic-77807-sagibbon) আৰু তলত উল্লেখ কৰা ভিডিঅ’সমূহ চোৱাৰ পৰামৰ্শ দিওঁ।
 
-[![Promo video](images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII)
+[![Promo Video](../images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII "Promo Video")
 
 Gif by [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
 
