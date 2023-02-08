@@ -18,7 +18,7 @@ Usaremos un cierre para manipular el DOM.
 
 ![DOM tree representation](../images/dom-tree.png)
 
-> Una representación del DOM y el marcado HTML que lo hace referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+> Una representación del DOM y el marcado HTML a modo de referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
 En esta lección, completaremos nuestro proyecto de terrario interactivo creando el JavaScript que permitirá al usuario manipular las plantas en la página.
 
@@ -135,7 +135,7 @@ Suceden varias cosas. Primero, evita que ocurran los eventos predeterminados que
 
 En segundo lugar, abra `index.html` en una ventana del navegador e inspeccione la interfaz. Cuando hace clic en una planta, puede ver cómo se captura el evento 'e'. ¡Profundice en el evento para ver cuánta información recopila un evento de puntero hacia abajo!
 
-A continuación, observe cómo las variables locales `pos3` y` pos4` se establecen en e.clientX. Puede encontrar los valores de `e` en el panel de inspección. Estos valores capturan las coordenadas xey de la planta en el momento en que hace clic en ella o la toca. Necesitará un control detallado sobre el comportamiento de las plantas al hacer clic en ellas y arrastrarlas, de modo que pueda realizar un seguimiento de sus coordenadas.
+A continuación, observe cómo las variables locales `pos3` y` pos4` se establecen en e.clientX. Puede encontrar los valores de `e` en el panel de inspección. Estos valores capturan las coordenadas X e Y de la planta en el momento en que hace clic en ella o la toca. Necesitará un control detallado sobre el comportamiento de las plantas al hacer clic en ellas y arrastrarlas, de modo que pueda realizar un seguimiento de sus coordenadas.
 
 ✅ ¿Está cada vez más claro por qué toda esta aplicación está construida con un gran cierre? Si no fuera así, ¿cómo mantendría el alcance para cada una de las 14 plantas arrastrables?
 
