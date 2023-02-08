@@ -1,13 +1,13 @@
 # Terrarium Project Part 3: DOM Manipulación y cierre
 
-! [DOM y un cierre](/sketchnotes/webdev101-js.png)
+![DOM y un cierre](../../sketchnotes/webdev101-js.png)
 > Boceto de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## [Pre-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
 
 ### Introducción:
 
-Manipular el DOM, o el "Modelo de objetos de documento", es un aspecto clave del desarrollo web. Según [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "El modelo de objetos de documento (DOM) es la representación de datos de los objetos que componen la estructura y contenido de un documento en la web ". Los desafíos en torno a la manipulación de DOM en la web a menudo han sido el ímpetu detrás del uso de marcos de JavaScript en lugar de JavaScript vanilla para administrar el DOM, ¡pero lo administraremos por nuestra cuenta!
+Manipular el DOM, o el "Modelo de objetos de documento", es un aspecto clave del desarrollo web. Según [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "El modelo de objetos de documento (DOM) es la representación de datos de los objetos que componen la estructura y contenido de un documento en la web ". Los desafíos en torno a la manipulación de DOM en la web a menudo han sido el ímpetu detrás del uso de frameworks de JavaScript en lugar de JavaScript vanilla para administrar el DOM, ¡pero lo administraremos por nuestra cuenta!
 
 Además, esta lección presentará la idea de un [cierre de JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), que puede considerar como una función encerrada por otra función para que la función interna tenga acceso al alcance de la función externa.
 
