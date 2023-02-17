@@ -166,6 +166,7 @@ window.addEventListener('keyup', (evt) => {
 		eventEmitter.emit(Messages.KEY_EVENT_SPACE);
 	}
 });
+<p> hello </P>
 
 function createEnemies() {
 	const MONSTER_TOTAL = 5;
