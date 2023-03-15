@@ -25,6 +25,8 @@ assignees: ''
    - [ ] making-decisions assignment
    - [ ] arrays-loops README
    - [ ] arrays-loops assignment
+   - [ ] arrays-methods README
+   - [ ] arrays-methods assignment
 - [ ] 3-terrarium base README
    - [ ] intro-to-html README
    - [ ] intro-to-html assignment
