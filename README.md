@@ -96,6 +96,10 @@ You can run this documentation offline by using [Docsify](https://docsify.js.org
 
 A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
+## Help Wanted!
+
+If you would like to translate all or part of the curriculum, please follow our [Translations](TRANSLATIONS.md) guide.
+
 ## Other Curricula
 
 Our team produces other curricula! Check out:
