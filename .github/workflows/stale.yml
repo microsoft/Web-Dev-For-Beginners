@@ -25,3 +25,4 @@ jobs:
         stale-pr-message: 'This PR has not seen any action for a while! Closing for now, but it can be reopened at a later date.'
         stale-issue-label: 'no-issue-activity'
         stale-pr-label: 'no-pr-activity'
+        days-before-close: -1

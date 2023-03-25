@@ -217,6 +217,6 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 pub/sub[के बारे में पढ़े](https://docs.microsoft.com/azure/altecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon) और अधिक जानें .
 
-## असाइनमेंट
+## कार्यभार
 
 [एक खेल का नका](assignment.hi.md)

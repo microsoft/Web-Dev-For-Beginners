@@ -15,7 +15,15 @@ En esta lección, usaremos HTML para diseñar el 'esqueleto' de la interfaz de n
 
 En su computadora, cree una carpeta llamada 'terrario' y dentro de ella, un archivo llamado 'index.html'. Puede hacer esto en Visual Studio Code después de crear su carpeta de terrario abriendo una nueva ventana de VS Code, haciendo clic en 'abrir carpeta' y navegando a su nueva carpeta. Haga clic en el botón pequeño 'archivo' en el panel del Explorador y cree el nuevo archivo:
 
-! [explorador en VS Code](images / vs-code-index.png)
+![explorador en VS Code](../../images/vs-code-index.png)
+
+
+O use estos comandos en tu git bash:
+
+`mkdir terrarium`
+`cd terrarium`
+`touch index.html`
+`code index.html` o `nano index.html`
 
 > Los archivos index.html indican a un navegador que es el archivo predeterminado en una carpeta; Las URL como `https://anysite.com/test` se pueden construir usando una estructura de carpetas que incluya una carpeta llamada `test` con `index.html` dentro; `Index.html` no tiene que aparecer en una URL.
 
@@ -97,7 +105,7 @@ Ahora, puede comenzar a construir su página. Normalmente, usa etiquetas `<div>`
 
 Una etiqueta html que no necesita una etiqueta de cierre es la etiqueta `<img>`, porque tiene un elemento `src` que contiene toda la información que la página necesita para representar el elemento.
 
-Cree una carpeta en su aplicación llamada `images` y en ella, agregue todas las imágenes en la [carpeta del código fuente](../images); (hay 14 imágenes de plantas).
+Cree una carpeta en su aplicación llamada `images` y en ella, agregue todas las imágenes en la [carpeta del código fuente](../../solution/images); (hay 14 imágenes de plantas).
 
 ### Tarea:
 
