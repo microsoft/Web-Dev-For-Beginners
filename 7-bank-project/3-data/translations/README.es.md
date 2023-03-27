@@ -52,7 +52,7 @@ bloques de código
 
 Opcional: agregue una captura de pantalla de la interfaz de usuario de la lección completa si corresponde
 
-## [Prueba posterior a la conferencia]((https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+## [Prueba posterior a la conferencia](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
 
 ## Revisión y autoestudio
 
