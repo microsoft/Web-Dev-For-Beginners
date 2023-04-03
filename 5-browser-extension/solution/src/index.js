@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
 const init = async () => {
 	//if anything is in localStorage, pick it up
 	const storedApiKey = localStorage.getItem('apiKey');
-	const storedRegion = localStorage.getItem('regionName');
+	const storedRegion = localStorage.getItem('region');
 
 	//set icon to be generic green
 	chrome.runtime.sendMessage({
