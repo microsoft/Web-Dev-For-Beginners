@@ -19,7 +19,7 @@ Learn the fundamentals of JavaScript, CSS, and HTML with our comprehensive 12-we
 
 Get started with the following resources:
 
-- [Student Hub page](https://docs.microsoft.com/learn/student-hub?WT.mc_id=academic-77807-sagibbon) In this page, you will find beginner resources, Student packs and even ways to get a free cert voucher. This is one page you want to bookmark and check from time to time as we switch out content at least monthly.
+- [Student Hub page](https://docs.microsoft.com/learn/student-hub?WT.mc_id=academic-77807-sagibbon) On this page, you will find beginner resources, Student packs, and even ways to get a free cert voucher. This is one page you want to bookmark and check from time to time as we switch out content at least monthly.
 - [Microsoft Student Learn ambassadors](https://studentambassadors.microsoft.com?WT.mc_id=academic-77807-sagibbon) Join a global community of student ambassadors, this could be your way into Microsoft.
 
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
