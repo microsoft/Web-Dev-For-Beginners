@@ -33,7 +33,7 @@ Besuchen Sie die [**Student Hub page**](https://docs.microsoft.com/learn/student
 
 Unser Lehrplan ist auf zwei wichtige pädagogische Prinzipien ausgerichtet: projektbasiertes Lernen und häufige Quizfragen. Das Programm vermittelt die Grundlagen von JavaScript, HTML und CSS sowie die neuesten Tools und Techniken, die Webentwickler heutzutage verwenden. Die Schüler haben die Möglichkeit, praktische Erfahrungen zu sammeln, indem sie ein Tippspiel, ein virtuelles Terrarium, eine umweltfreundliche Browsererweiterung, ein Spiel im Stil eines Weltrauminvasors und eine Banking-App für Unternehmen erstellen. Am Ende der Reihe werden die Schüler ein solides Verständnis der Webentwicklung erlangt haben.
 
-> Sie können die ersten Lektionen dieses Lehrplans als [Lernpfad](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) auf Microsoft Learn!
+> Sie können die ersten Lektionen dieses Lehrplans als [Lernpfad](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) auf Microsoft Learn finden!
 
 Indem wir sicherstellen, dass der Inhalt mit den Projekten übereinstimmt, wird der Prozess für die Schüler interessanter und das Behalten der Konzepte wird verbessert. Wir haben auch mehrere Anfängerlektionen zu JavaScript-Grundlagen geschrieben, um Konzepte einzuführen, gepaart mit einem Video aus der "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" Sammlung von Video-Tutorials, von denen einige Autoren zu diesem Lehrplan beigetragen haben. Ein Quiz mit geringem Schwierigkeitsgrad vor dem Unterricht stellt die Absicht der Schüler fest, ein bestimmtes Thema zu lernen, während ein zweites Quiz nach dem Unterricht dafür sorgt, dass der Stoff noch länger im Gedächtnis bleibt. Dieser Lehrplan wurde so konzipiert, dass er flexibel ist und Spaß macht und ganz oder teilweise absolviert werden kann. Die Projekte beginnen klein und werden am Ende des 12-wöchigen Zyklus immer komplexer.
 
@@ -91,7 +91,7 @@ Sie können diese Dokumentation offline ausführen, indem Sie [Docsify](https://
 
 ## PDF
 
-Eine PDF aller Lektionen gibt es [hier](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
+Ein PDF Dokument mit allen Lektionen gibt es [hier](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
 ## Hilfe erwünscht!
 
