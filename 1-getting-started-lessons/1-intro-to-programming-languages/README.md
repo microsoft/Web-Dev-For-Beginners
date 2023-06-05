@@ -5,7 +5,7 @@ This lesson covers the basics of programming languages. The topics covered here 
 ![Intro Programming](../../sketchnotes/webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Pre-Lecture Quiz
+## Pre-Lecture Qui
 [Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1)
 
 ## Introduction
