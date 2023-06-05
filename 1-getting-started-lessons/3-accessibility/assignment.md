@@ -13,3 +13,11 @@ Your first task would be to identify this site, detail the ways in which you thi
 
 ----
 Student Report: includes paragraphs on how inaccessible the site is, the Lighthouse report captured in pdf, a list of ten points to improve, with details on how to improve it
+
+
+https://nymag.com/    
+
+
+This website is inaccessible because there isn't analtical tools and any functionalities. 
+
+How to improve it:  The UI needs to be fixed and it doesnn't look good. With analytic tools, there should a category for each news. 

@@ -48,6 +48,9 @@ In the developer tool area of your browser, you'll find the Lighthouse tool. Thi
 
 ✅ Find Lighthouse in your browser's developer tool panel and run an analysis on any site. what do you discover?
 
+Lighthouse is an open-source tool developed by Google that can be accessed through the browser's developer tool panel. It allows you to run audits on a website to assess its performance, accessibility, best practices, SEO, and more. When you run a Lighthouse analysis on a website, it provides a comprehensive report with various metrics and recommendations for improvement.
+
+
 ## Designing for accessibility
 
 Accessibility is a relatively large topic. To help you out, there are numerous resources available.
@@ -63,6 +66,8 @@ While we won't be able to cover every aspect of creating accessible sites, below
 People see the world in different ways, and this includes colors. When selecting a color scheme for your site, you should ensure it's accessible to all. One great [tool for generating color palettes is Color Safe](http://colorsafe.co/).
 
 ✅ Identify a web site that is very problematic in its use of color. Why?
+
+Color as Sole Indicator: Using color as the sole means of conveying important information or instructions can pose accessibility issues for individuals who are colorblind or have difficulty perceiving certain colors. It's important to provide alternative indicators or additional visual cues to ensure inclusivity.
 
 ### Use the correct HTML
 
@@ -109,6 +114,8 @@ Good link text briefly describes what's on the other side of the link. In the ab
 > The [little penguin](https://en.wikipedia.org/wiki/Little_penguin), sometimes known as the fairy penguin, is the smallest penguin in the world.
 
 ✅ Surf the web for a few minutes to find pages that use obscure linking strategies. Compare them with other, better-linked sites. What do you learn?
+
+Well-linked sites often use anchor text that accurately describes the destination page. This helps users understand what they can expect when they click on the link. Descriptive anchor text also benefits search engine optimization (SEO) by providing context and relevance.
 
 #### Search engine notes
 
@@ -157,6 +164,8 @@ Some users are unable to use a mouse or trackpad, instead relying on keyboard in
 
 ✅ Go to any web site and try to navigate through it using only your keyboard. What works, what doesn't work? Why?
 
+Keyboard navigation is an important accessibility feature that allows users to navigate through websites using only their keyboard, without relying on a mouse or other pointing devices. 
+
 ## Summary
 
 A web accessible to some is not a truly 'world-wide web'. The best way to ensure the sites you create are accessible is to incorporate accessibility best practices from the start. While there are extra steps involved, incorporating these skills into your workflow now will mean all pages you create will be accessible.
@@ -174,45 +183,45 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
     <title>
       Example
     </title>
-    <link href='../assets/style.css' rel='stylesheet' type='text/css'>
+    <link href="../assets/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div class="site-header">
-      <p class="site-title">Turtle Ipsum</p>
-      <p class="site-subtitle">The World's Premier Turtle Fan Club</p>
-    </div>
-    <div class="main-nav">
-      <p class="nav-header">Resources</p>
-      <div class="nav-list">
-        <p class="nav-item nav-item-bull"><a href="https://www.youtube.com/watch?v=CMNry4PE93Y">"I like turtles"</a></p>
-        <p class="nav-item nav-item-bull"><a href="https://en.wikipedia.org/wiki/Turtle">Basic Turtle Info</a></p>
-        <p class="nav-item nav-item-bull"><a href="https://en.wikipedia.org/wiki/Turtles_(chocolate)">Chocolate Turtles</a></p>
-      </div>
-    </div>
-    <div class="main-content">
+    <header>
+      <h1>Turtle Ipsum</h1>
+      <h2>The World's Premier Turtle Fan Club</h2>
+    </header>
+    <nav>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=CMNry4PE93Y">"I like turtles"</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Turtle">Basic Turtle Info</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Turtles_(chocolate)">Chocolate Turtles</a></li>
+      </ul>
+    </nav>
+    <main>
       <div>
-        <p class="page-title">Welcome to Turtle Ipsum. 
-            <a href="">Click here</a> to learn more.
+        <h1>Welcome to Turtle Ipsum.</h1>
+        <p>
+          <a href="#more-info">Learn more</a>
         </p>
-        <p class="article-text">
+        <p>
           Turtle ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         </p>
       </div>
-    </div>
-    <div class="footer">
-      <div class="footer-section">
-        <span class="button">Sign up for turtle news</span>
-      </div><div class="footer-section">
-        <p class="nav-header footer-title">
-          Internal Pages
-        </p>
-        <div class="nav-list">
-          <p class="nav-item nav-item-bull"><a href="../">Index</a></p>
-          <p class="nav-item nav-item-bull"><a href="../semantic">Semantic Example</a></p>
-        </div>
+    </main>
+    <footer>
+      <div>
+        <button aria-label="Sign up for turtle news">Sign up for turtle news</button>
       </div>
-      <p class="footer-copyright">&copy; 2016 Instrument</span>
-    </div>
+      <div>
+        <h3>Internal Pages</h3>
+        <ul>
+          <li><a href="../">Index</a></li>
+          <li><a href="../semantic">Semantic Example</a></li>
+        </ul>
+      </div>
+      <p>&copy; 2016 Instrument</p>
+    </footer>
   </body>
 </html>
 ```

@@ -168,6 +168,8 @@ As in the subject, in the body (optional) also use the imperative, present tense
 
 ✅ Take a few minutes to surf around GitHub. Can you find a really great commit message? Can you find a really minimal one? What information do you think is the most important and useful to convey in a commit message?
 
+The most important and useful information to convey in a commit message is the intention and purpose of the changes. This helps other developers understand the reasoning behind the code modifications and makes it easier to review and maintain the codebase in the future.
+
 ### Task: Collaborate
 
 The main reason for putting things on GitHub was to make it possible to collaborate with other developers.

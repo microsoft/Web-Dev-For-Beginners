@@ -27,6 +27,8 @@ A *program* can be anything that is written with code; websites, games, and phon
 
 ✅ Do a little research: who is considered to have been the world's first computer programmer?
 
+Ada Lovelace is considered to have been the world's first computer programmer. 
+
 ## Programming Languages
 
 Programming languages enable developers to write instructions for a device. Devices can only understand binary (1s and 0s), and for *most* developers that's not a very efficient way to communicate. Programming languages are the vehicle for communication between humans and computers.
@@ -185,11 +187,33 @@ When a developer wants to learn something new, they'll most likely turn to docum
 
 ✅ Do some research: Now that you know the basics of a web developer's environment, compare and contrast it with a web designer's environment.
 
+Web Developer: A web developer primarily focuses on the technical aspects of building websites or web applications. Their role involves coding, scripting, and implementing the functionality of a website. 
+
+Web Designer: A web designer focuses on the visual and interactive elements of a website. They are responsible for creating the overall look and feel, including layout, color schemes, typography, and graphical elements.
+
 ---
 
 ## 🚀 Challenge
 
 Compare some programming languages. What are some of the unique traits of JavaScript vs. Java? How about COBOL vs. Go?
+
+JavaScript is a dynamically typed scripting language primarily used for client-side web development.
+It is interpreted by web browsers and allows for interactive web pages with features like form validation, dynamic content, and interactivity.
+JavaScript has a wide range of frameworks and libraries (e.g., React, Angular, Vue.js) that facilitate front-end and full-stack development.
+
+Java is a statically typed, general-purpose programming language.
+It is compiled into bytecode and runs on the Java Virtual Machine (JVM), making it platform-independent.
+Java is known for its strong typing, extensive libraries, and high-level of security.
+It is commonly used for building large-scale enterprise applications, Android app development, and server-side programming.
+
+COBOL (Common Business-Oriented Language) is a high-level, procedural programming language developed in the 1950s.
+It was designed specifically for business applications and is still widely used in legacy systems, especially in the financial and government sectors.
+COBOL prioritizes readability and comprehensibility, using English-like syntax and structured programming constructs.
+
+Go (also known as Golang) is a statically typed, compiled programming language created by Google in 2007.
+It aims to combine the performance of low-level languages with the productivity and readability of high-level languages.
+Go has a simple and concise syntax, with built-in support for features like garbage collection, concurrency, and networking.
+It is known for its efficiency, scalability, and strong support for concurrent programming through goroutines and channels.
 
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
@@ -197,6 +221,10 @@ Compare some programming languages. What are some of the unique traits of JavaSc
 ## Review & Self Study
 
 Study a bit on the different languages available to the programmer. Try to write a line in one language, and then rewrite it in two others. What did you learn?
+
+JavaScript: 
+
+Console.log('I learned the difference between web designer and web developer. I also found out the purpose of usage each programming language')
 
 ## Assignment
 
