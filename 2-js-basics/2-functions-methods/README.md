@@ -184,6 +184,8 @@ You've now seen we have three ways to pass a function as a parameter and might b
 
 Can you articulate in one sentence the difference between functions and methods? Give it a try!
 
+nctions are standalone blocks of code that perform specific tasks, while methods are functions that are associated with objects and can access and modify their internal data.
+
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
 

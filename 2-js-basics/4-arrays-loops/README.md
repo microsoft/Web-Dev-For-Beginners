@@ -66,6 +66,25 @@ iceCreamFlavors.length; //5
 
 ✅ Try it yourself! Use your browser's console to create and manipulate an array of your own creation.
 
+```
+let myArray = [1, 2, 3, 4, 5];
+
+console.log(myArray);  // Output: [1, 2, 3, 4, 5]
+
+myArray.push(6);  // Add an element to the end of the array
+console.log(myArray);  // Output: [1, 2, 3, 4, 5, 6]
+
+myArray.pop();  // Remove the last element from the array
+console.log(myArray);  // Output: [1, 2, 3, 4, 5]
+
+myArray.splice(2, 1);  // Remove one element at index 2
+console.log(myArray);  // Output: [1, 2, 4, 5]
+
+let doubledArray = myArray.map(num => num * 2);  // Create a new array by doubling each element
+console.log(doubledArray);  // Output: [2, 4, 8, 10]
+
+```
+
 ## Loops
 
 Loops allow us to perform repetitive or **iterative** tasks, and can save a lot of time and code. Each iteration can vary in their variables, values, and conditions. There are different types of loops in JavaScript, and they all have small differences, but essentially do the same thing: loop over data.
@@ -85,6 +104,17 @@ for (let i = 0; i < 10; i++) {
 ```
 
 ✅ Run this code in a browser console. What happens when you make small changes to the counter, condition, or iteration expression? Can you make it run backwards, creating a countdown?
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
 
 ### While loop
 
@@ -120,6 +150,28 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 ## 🚀 Challenge
 
 There are other ways of looping over arrays other than for and while loops. There are [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), and [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Rewrite your array loop using one of these techniques.
+
+```
+let allStudents = [
+  'A',
+  'B-',
+  1,
+  4,
+  5,
+  2
+];
+
+let studentsWhoPass = [];
+
+allStudents.forEach(grade => {
+  if ((typeof grade === 'number' && grade >= 3) || (typeof grade === 'string' && grade !== 'C-' && grade !== 'D' && grade !== 'F')) {
+    studentsWhoPass.push(grade);
+  }
+});
+
+console.log(studentsWhoPass);
+
+```
 
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)

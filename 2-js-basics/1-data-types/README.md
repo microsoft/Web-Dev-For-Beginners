@@ -66,6 +66,8 @@ Creating and **declaring** a variable has the following syntax **[keyword] [name
 
    ✅ Try it! You can write JavaScript right in your browser. Open a browser window and navigate to Developer Tools. In the console, you will find a prompt; type `let myVariable = 123`, press return, then type `myVariable`. What happens? Note, you'll learn more about these concepts in subsequent lessons.
 
+   The value 123 will be shown in the console. 
+
 ## Constants
 
 Declaration and initialization of a constant follows the same concepts as a variable, with the exception of the `const` keyword. Constants are typically declared with all uppercase letters.
@@ -109,6 +111,12 @@ Variables can store many different types of values, like numbers and text. These
 
 ✅ Data Types are also referred to as JavaScript data primitives, as they are the lowest-level data types that are provided by the language. There are 7 primitive data types: string, number, bigint, boolean, undefined, null and symbol. Take a minute to visualize what each of these primitives might represent. What is a `zebra`? How about `0`? `true`?
 
+Zebra: A zebra is not directly related to any of the primitive data types. However, you could use a string data type to represent the word "zebra" or use an object to represent the characteristics of a zebra (e.g., color, stripes).
+
+0: The number 0 is a numeric value and can be represented using the number data type.
+
+True: True is a boolean value and can be represented using the boolean data type. It represents a logical condition or state of being true.
+
 ### Numbers
 
 In the previous section, the value of `myVariable` was a number data type.
@@ -130,6 +138,8 @@ There are several types of operators to use when performing arithmetic functions
 | `%`    | **Remainder**: Calculates the remainder from the division of two numbers | `1 % 2 //expected answer is 1`   |
 
 ✅ Try it! Try an arithmetic operation in your browser's console. Do the results surprise you?
+
+The results didn't suprise me because it is just doing simple math arithmetic operation. 
 
 ### Strings
 
@@ -159,6 +169,10 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ✅ Why does `1 + 1 = 2` in JavaScript, but `'1' + '1' = 11?` Think about it. What about `'1' + 1`?
 
+The reason behind the different outcomes in JavaScript when performing addition with different types of operands is due to the behavior of the addition operator and how it handles different data types.
+
+`'1' + 1 = `'11'`
+
 **Template literals** are another way to format strings, except instead of quotes, the backtick  is used. Anything that is not plain text must be placed inside placeholders `${ }`. This includes any variables that may be strings.
 
 ```javascript
@@ -172,6 +186,10 @@ let myString2 = "World";
 You can achieve your formatting goals with either method, but template literals will respect any spaces and line breaks.
 
 ✅ When would you use a template literal vs. a plain string?
+
+const name = 'John';
+const greeting = `Hello, ${name}!`;
+
 
 ### Booleans
 
@@ -187,6 +205,8 @@ Booleans can be only two values: `true` or `false`. Booleans can help make decis
 ## 🚀 Challenge
 
 JavaScript is notorious for its surprising ways of handling datatypes on occasion. Do a bit of research on these 'gotchas'. For example: case sensitivity can bite! Try this in your console: `let age = 1; let Age = 2; age == Age` (resolves `false` -- why?). What other gotchas can you find?
+
+It will return false because age = 1 and Age = 2. So 1 is not equal to 2. 1 != 2
 
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)

@@ -140,6 +140,8 @@ let biggestNumber = firstNumber > secondNumber ? firstNumber: secondNumber;
 
 ✅ Take a minute to read this code a few times. Do you understand how these operators are working?
 
+Yes, I do
+
 The above states that 
 - if `firstNumber` is larger than `secondNumber` 
 - then assign `firstNumber` to `biggestNumber` 
@@ -161,6 +163,38 @@ if (firstNumber > secondNumber) {
 ## 🚀 Challenge
 
 Create a program that is written first with logical operators, and then rewrite it using a ternary expression. What's your preferred syntax?
+
+
+```
+// Program using logical operators
+function checkNumber(num) {
+  if (num > 0) {
+    console.log("Positive");
+  } else if (num < 0) {
+    console.log("Negative");
+  } else {
+    console.log("Zero");
+  }
+}
+
+// Function call
+checkNumber(5);    // Output: Positive
+checkNumber(-3);   // Output: Negative
+checkNumber(0);    // Output: Zero
+```
+
+```
+// Program using ternary expression
+function checkNumber(num) {
+  var result = (num > 0) ? "Positive" : (num < 0) ? "Negative" : "Zero";
+  console.log(result);
+}
+
+// Function call
+checkNumber(5);    // Output: Positive
+checkNumber(-3);   // Output: Negative
+checkNumber(0);    // Output: Zero
+```
 
 ---
 ## Post-Lecture Quiz

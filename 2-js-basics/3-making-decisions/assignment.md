@@ -31,6 +31,16 @@ let allStudents = [
 ]
 
 let studentsWhoPass = [];
+
+for (let i = 0; i < allStudents.length; i++) {
+  let grade = allStudents[i];
+  
+  if ((typeof grade === 'number' && grade >= 3) || (typeof grade === 'string' && grade !== 'C-' && grade !== 'D' && grade !== 'F')) {
+    studentsWhoPass.push(grade);
+  }
+}
+
+console.log(studentsWhoPass);
 ```
 
 ## Rubric
