@@ -31,7 +31,7 @@ calculateColor = async (value) => {
 	chrome.runtime.sendMessage({ action: 'updateIcon', value: { color: closestColor } });
 };
 
-const displayCarbonUsage = async (apiKey, region) => {
+const displayCarbonUsage = async (apiKey, regionName) => {
 	try {
 		await axios
 			.get('https://api.co2signal.com/v1/latest', {
