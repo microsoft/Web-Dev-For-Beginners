@@ -12,7 +12,7 @@
 
 Dette citat fremhæver perfekt vigtigheden af at skabe tilgængelige hjemmesider. En applikation, der ikke kan tilgås af alle, er pr. definition ekskluderende. Som webudviklere bør vi altid have tilgængelighed i tankerne. Ved at have dette fokus fra begyndelsen vil du være godt på vej til at sikre, at alle kan få adgang til de sider, du opretter. I denne lektion lærer du om de værktøjer, der kan hjælpe dig med at sikre, at dine webaktiver er tilgængelige, og hvordan du bygger med tilgængelighed i tankerne. 
 
-> Du kan tage denne lektion på [Microsoft Learn] (https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
+> Du kan tage denne lektion på [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Værktøjer, der skal bruges
 
@@ -26,13 +26,13 @@ Helt grundlæggende vil en skærmlæser læse en side fra top til bund med lyd. 
 
 Enhver webudvikler bør gøre sig bekendt med en skærmlæser. Som fremhævet ovenfor, er det den klient, dine brugere vil bruge. På samme måde som du er bekendt med, hvordan en browser fungerer, bør du lære, hvordan en skærmlæser fungerer. Heldigvis er skærmlæsere indbygget i de fleste operativsystemer.
 
-Nogle browsere har også indbyggede værktøjer og udvidelser, der kan læse tekst højt eller endda give nogle grundlæggende navigationsfunktioner, såsom [disse tilgængelighedsfokuserede Edge-browserværktøjer] (https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features). Disse er også vigtige tilgængelighedsværktøjer, men fungerer meget forskelligt fra skærmlæsere, og de bør ikke forveksles med testværktøjer til skærmlæsere.
+Nogle browsere har også indbyggede værktøjer og udvidelser, der kan læse tekst højt eller endda give nogle grundlæggende navigationsfunktioner, såsom [disse tilgængelighedsfokuserede Edge-browserværktøjer](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features). Disse er også vigtige tilgængelighedsværktøjer, men fungerer meget forskelligt fra skærmlæsere, og de bør ikke forveksles med testværktøjer til skærmlæsere.
 
 ✅ Prøv en skærmlæser og en browsertekstlæser. På Windows er [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) inkluderet som standard, og [JAWS](https://webaim.org/articles/jaws/) og [NVDA](https://www.nvaccess.org/about-nvda/) kan også installeres. På macOS og iOS er [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) installeret som standard.
 
 ### Zoom
 
-Et andet værktøj, der ofte bruges af mennesker med synsnedsættelse, er zoom. Den mest basale form for zoom er statisk zoom, der styres med `Control + plustegn (+)` eller ved at mindske skærmopløsningen. Denne type zoom får hele siden til at ændre størrelse, så det er vigtigt at bruge [responsivt design] (https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) for at give en god brugeroplevelse ved øgede zoomniveauer.
+Et andet værktøj, der ofte bruges af mennesker med synsnedsættelse, er zoom. Den mest basale form for zoom er statisk zoom, der styres med `Control + plustegn (+)` eller ved at mindske skærmopløsningen. Denne type zoom får hele siden til at ændre størrelse, så det er vigtigt at bruge [responsivt design](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) for at give en god brugeroplevelse ved øgede zoomniveauer.
 
 En anden type zoom er afhængig af specialiseret software til at forstørre et område af skærmen og panorere, ligesom når man bruger et rigtigt forstørrelsesglas. I Windows er [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) indbygget, og [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) er et forstørrelsesprogram fra en tredjepart med flere funktioner og en større brugerbase. Både macOS og iOS har en indbygget forstørrelsessoftware kaldet [Zoom](https://www.apple.com/accessibility/mac/vision/).
 
@@ -40,7 +40,7 @@ En anden type zoom er afhængig af specialiseret software til at forstørre et o
 
 Farver på hjemmesider skal vælges med omhu for at imødekomme behovene hos farveblinde brugere eller folk, der har svært ved at se farver med lav kontrast.
 
-✅ Test et websted, du nyder at bruge, for farvebrug med en browserudvidelse som [WCAG's color checker] (https://microsoftedge.microsoft.com/addons/detail/wcag-color-contrast-check/idahaggnlnekelhgplklhfpchbfdmkjp?hl=en-US&WT.mc_id=academic-77807-sagibbon). Hvad lærer du af det?
+✅ Test et websted, du nyder at bruge, for farvebrug med en browserudvidelse som [WCAG's color checker](https://microsoftedge.microsoft.com/addons/detail/wcag-color-contrast-check/idahaggnlnekelhgplklhfpchbfdmkjp?hl=en-US&WT.mc_id=academic-77807-sagibbon). Hvad lærer du af det?
 
 ### Lighthouse
 
@@ -72,7 +72,7 @@ Med CSS og JavaScript er det muligt af omdanne alle elementer til enhver type af
 
 ### Skab et beskrivende overskriftshierarki
 
-Skærmlæserbrugere [er meget afhængige af overskrifter] (https://webaim.org/projects/screenreadersurvey8/#finding) for at finde information og navigere gennem en side. At skrive beskrivende overskriftsindhold og bruge semantiske overskriftskoder er vigtigt for at skabe en let navigerbar side for skærmlæserbrugere.
+Skærmlæserbrugere [er meget afhængige af overskrifter](https://webaim.org/projects/screenreadersurvey8/#finding) for at finde information og navigere gennem en side. At skrive beskrivende overskriftsindhold og bruge semantiske overskriftskoder er vigtigt for at skabe en let navigerbar side for skærmlæserbrugere.
 
 ### Brug gode visuelle ledetråde
 
@@ -106,7 +106,7 @@ Skærmlæsere har også mulighed for kun at læse hyperlinks på en side, på sa
 
 En god linktekst beskriver kort, hvad der er på den anden side af linket. I eksemplet ovenfor, der handler om små pingviner, er linket til Wikipedia-siden om arten. Sætningen *lille pingviner* ville være en perfekt linktekst, da den gør det klart, hvad man vil lære om, hvis man klikker på linket - små pingviner.
 
-> Den [lille pingvin] (https://en.wikipedia.org/wiki/Little_penguin), også kendt som fe-pingvinen, er den mindste pingvin i verden.
+> Den [lille pingvin](https://en.wikipedia.org/wiki/Little_penguin), også kendt som dværgpingvinen, er den mindste pingvin i verden.
 
 ✅ Surf rundt på nettet i et par minutter for at finde sider, der bruger obskure linkstrategier. Sammenlign dem med andre, bedre linkede sider. Hvad lærer du af det?
 
@@ -125,7 +125,7 @@ Forestil dig følgende side:
 
 I dette eksempel giver det mening at duplikere teksten i beskrivelse og rækkefølge for en person, der bruger en browser. Men en person, der bruger en skærmlæser, vil kun høre ordene *description* og *order* gentaget uden kontekst.
 
-For at understøtte denne type scenarier understøtter HTML et sæt attributter, der kaldes [Accessible Rich Internet Applications (ARIA)] (https://developer.mozilla.org/docs/Web/Accessibility/ARIA). Disse attributter giver dig mulighed for at give yderligere oplysninger til skærmlæsere.
+For at understøtte denne type scenarier understøtter HTML et sæt attributter, der kaldes [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA). Disse attributter giver dig mulighed for at give yderligere oplysninger til skærmlæsere.
 
 > **BEMÆRK**: Som mange andre aspekter af HTML kan understøttelsen af browsere og skærmlæsere variere. De fleste mainline-klienter understøtter dog ARIA-attributter.
 
@@ -135,7 +135,7 @@ Du kan bruge `aria-label` til at beskrive linket, når formatet på siden ikke t
 <a href="#" aria-label="Widget beskrivelse">beskrivelse</a>
 ```
 
-✅ Generelt erstatter brugen af semantisk markup som beskrevet ovenfor brugen af ARIA, men nogle gange er der ingen semantisk ækvivalent for forskellige HTML-widgets. Et godt eksempel er et træ. Der er ingen HTML-ækvivalent for et træ, så du identificerer den generiske `<div>` for dette element med en korrekt rolle og aria-værdier. [MDN-dokumentation om ARIA] (https://developer.mozilla.org/docs/Web/Accessibility/ARIA) indeholder flere nyttige oplysninger.
+✅ Generelt erstatter brugen af semantisk markup som beskrevet ovenfor brugen af ARIA, men nogle gange er der ingen semantisk ækvivalent for forskellige HTML-widgets. Et godt eksempel er et træ. Der er ingen HTML-ækvivalent for et træ, så du identificerer den generiske `<div>` for dette element med en korrekt rolle og aria-værdier. [MDN-dokumentation om ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) indeholder flere nyttige oplysninger.
 
 ```html
 <h2 id="tree-label">File Viewer</h2>
@@ -153,7 +153,7 @@ Billeder, der er rent dekorative, skal have deres `alt`-attribut sat til en tom 
 
 ## Tastaturet
 
-Nogle brugere kan ikke bruge en mus eller en trackpad og er i stedet afhængige af tastaturinteraktioner for at kunne tabbe fra et element til det næste. Det er vigtigt, at din hjemmeside præsenterer dit indhold i en logisk rækkefølge, så en tastaturbruger kan få adgang til hvert interaktivt element, når de bevæger sig ned gennem et dokument. Hvis du bygger dine websider med semantisk markup og bruger CSS til at style deres visuelle layout, bør dit site være tastatur-navigerbart, men det er vigtigt at teste dette aspekt manuelt. Læs mere om [keyboard navigation strategies] (https://webaim.org/techniques/keyboard/).
+Nogle brugere kan ikke bruge en mus eller en trackpad og er i stedet afhængige af tastaturinteraktioner for at kunne tabbe fra et element til det næste. Det er vigtigt, at din hjemmeside præsenterer dit indhold i en logisk rækkefølge, så en tastaturbruger kan få adgang til hvert interaktivt element, når de bevæger sig ned gennem et dokument. Hvis du bygger dine websider med semantisk markup og bruger CSS til at style deres visuelle layout, bør dit site være tastatur-navigerbart, men det er vigtigt at teste dette aspekt manuelt. Læs mere om [keyboard navigation strategies](https://webaim.org/techniques/keyboard/).
 
 ✅ Gå ind på et hvilket som helst websted, og prøv at navigere gennem det udelukkende ved hjælp af dit tastatur. Hvad virker, hvad virker ikke? Og hvorfor?
 
