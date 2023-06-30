@@ -4,9 +4,9 @@ I denne del af kurset vil du blive introduceret til ikke-projektbaserede koncept
 
 ### Emner
 
-1. [Introduktion til programmeringssprog og værktøjer](1-intro-to-programming-languages/README.md)
-2. [Introduktion til GitHub](2-github-basics/README.md)
-3. [Grundlæggende om tilgængelighed](3-accessibility/README.md)
+1. [Introduktion til programmeringssprog og værktøjer](../1-intro-to-programming-languages/translations/README.da.md)
+2. [Introduktion til GitHub](../2-github-basics/translations/README.da.md)
+3. [Grundlæggende om tilgængelighed](../3-accessibility/translations/README.da.md)
 
 ### Credits
 
