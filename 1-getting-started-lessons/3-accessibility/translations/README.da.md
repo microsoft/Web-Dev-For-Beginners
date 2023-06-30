@@ -1,6 +1,6 @@
 # Oprettelse af tilgængelige websider
 
-![Alt om tilgængelighed](../../sketchnotes/webdev101-a11y.png)
+![Alt om tilgængelighed](/sketchnotes/webdev101-a11y.png)
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz før undervisning
