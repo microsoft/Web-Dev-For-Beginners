@@ -12,11 +12,11 @@
 						"questionText": "Et program kan oprettes, uden at skaberen skriver nogen kode",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "false"
 							}
 						]
@@ -82,11 +82,11 @@
 						"questionText": "Udviklingsmiljøer er unikke for hver udvikler",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "false"
 							}
 						]
@@ -172,24 +172,24 @@
 				"title": "Lektion 2 - Introduktion til GitHub: Quiz efter undervisning",
 				"quiz": [
 					{
-						"questionText": "A place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more is:",
+						"questionText": "Et sted at sammenligne og diskutere de forskelle, der introduceres på en gren med anmeldelser, kommentarer, integrerede tests og mere er:",
 						"answerOptions": [
 							{
 								"answerText": "GitHub",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "A Pull Request",
+								"answerText": "En Pull Request",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "A feature branch",
+								"answerText": "En feature branch",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "How would you get and integrate all the commits from a remote branch?",
+						"questionText": "Hvordan vil du hente og integrere alle commits fra en remote branch?",
 						"answerOptions": [
 							{
 								"answerText": "git fetch",
@@ -206,7 +206,7 @@
 						]
 					},
 					{
-						"questionText": "How do you switch to a branch?",
+						"questionText": "Hvordan skifter man til en gren?",
 						"answerOptions": [
 							{
 								"answerText": "git checkout [branch-name]",
@@ -226,10 +226,10 @@
 			},
 			{
 				"id": 5,
-				"title": "Lesson 3 - Creating Accessible Webpages: Pre-Lecture Quiz",
+				"title": "Lektion 3 - Oprettelse af tilgængelige websider: Quiz før undervisning",
 				"quiz": [
 					{
-						"questionText": "An accessible web site can be checked in which browser tool",
+						"questionText": "Et tilgængeligt websted kan tjekkes i hvilket browserværktøj",
 						"answerOptions": [
 							{
 								"answerText": "Lighthouse",
@@ -246,27 +246,27 @@
 						]
 					},
 					{
-						"questionText": "You need a physical screen reader to test accessibility for visually-impaired users",
+						"questionText": "Du har brug for en fysisk skærmlæser for at teste tilgængeligheden for synshandicappede brugere",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Accessibility is only important on government web sites",
+						"questionText": "Tilgængelighed er kun vigtigt på offentlige hjemmesider",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "true"
 							}
 						]
@@ -275,47 +275,47 @@
 			},
 			{
 				"id": 6,
-				"title": "Lesson 3 - Creating Accessible Webpages: Post-Lecture Quiz",
+				"title": "Lektion 3 - Oprettelse af tilgængelige websider: Quiz efter undervisning",
 				"quiz": [
 					{
-						"questionText": "Lighthouse only checks for accessibility problems",
+						"questionText": "Lighthouse tjekker kun for tilgængelighedsproblemer",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Color-safe palettes help people with",
+						"questionText": "Farvesikre paletter hjælper folk med",
 						"answerOptions": [
 							{
-								"answerText": "color-blindness",
+								"answerText": "farveblindhed",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "visual impairments",
+								"answerText": "synshandicap",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "both the above",
+								"answerText": "begge ovenstående",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "Descriptive links are vital for accessible web sites",
+						"questionText": "Beskrivende links er afgørende for tilgængelige websteder",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "false"
 							}
 						]
@@ -324,47 +324,47 @@
 			},
 			{
 				"id": 7,
-				"title": "Lesson 4 - JavaScript Basics - Data Types: Pre-Lecture Quiz",
+				"title": "Lektion 4 - Grundlæggende om JavaScript - Datatyper: Quiz før undervisning",
 				"quiz": [
 					{
-						"questionText": "Booleans are a data type you can use to test the length of a string",
+						"questionText": "Booleans er en datatype, du kan bruge til at teste længden af en streng",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "The following is an operation you can perform on a string",
+						"questionText": "Det følgende er en operation, du kan udføre på en streng",
 						"answerOptions": [
 							{
-								"answerText": "concatenation",
+								"answerText": "concatenation (sammenkædning)",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "appending",
+								"answerText": "appending (påsætning)",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "splicing",
+								"answerText": "splicing (splejsning)",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "== and === are interchangeable",
+						"questionText": "== og === er gensidigt udskiftelige",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "true"
 							}
 						]
@@ -373,27 +373,27 @@
 			},
 			{
 				"id": 8,
-				"title": "Lesson 4 - JavaScript Basics - Data Types: Post-Lecture Quiz",
+				"title": "Lektion 4 - Grundlæggende om JavaScript - Datatyper: Quiz efter undervisning",
 				"quiz": [
 					{
-						"questionText": "Constants are the same as let and var to declare variables except",
+						"questionText": "Konstanter er det samme som let og var til at erklære variabler undtagen",
 						"answerOptions": [
 							{
-								"answerText": "Constants must be initialized",
+								"answerText": "Konstanter skal initialiseres",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Constants can be altered",
+								"answerText": "Konstanter kan ændres",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Constants can be reassigned",
+								"answerText": "Konstanter kan blive til andre datatyper",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "Numbers and ____ are JavaScript primitives that handle numeric data",
+						"questionText": "Numbers og ____ er JavaScript-primitiver, der håndterer numeriske data",
 						"answerOptions": [
 							{
 								"answerText": "bigint",
@@ -410,14 +410,14 @@
 						]
 					},
 					{
-						"questionText": "Strings can reside between both single and double quotes",
+						"questionText": "Strenge kan stå mellem både enkelt- og dobbeltcitater",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "false"
 							}
 						]
@@ -426,51 +426,51 @@
 			},
 			{
 				"id": 9,
-				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Pre-Lecture Quiz",
+				"title": "Lektion 5 - Grundlæggende JavaScript - Metoder og funktioner: Quiz før undervisning",
 				"quiz": [
 					{
-						"questionText": "What's an argument?",
+						"questionText": "Hvad er et argument?",
 						"answerOptions": [
 							{
-								"answerText": "It's something you declare in the function definition",
+								"answerText": "Det er noget, du erklærer når du definerer funktionen",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "It's something you pass into a function at invocation time",
+								"answerText": "et er noget, du sender ind i en funktion når du kalder den",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "It's something you have with people you know",
+								"answerText": "Det er noget, man har med folk, man kender",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A function must return something",
+						"questionText": "En funktion skal returnere noget",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "You can name a function anything",
+						"questionText": "Du kan give en funktion et hvilket som helst navn",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "true, but it should be a descriptive name",
+								"answerText": "Ja, men det skal være et beskrivende navn",
 								"isCorrect": "true"
 							}
 						]
@@ -479,51 +479,51 @@
 			},
 			{
 				"id": 10,
-				"title": "Lesson 5 - JavaScript Basics - Methods and Functions: Post-Lecture Quiz",
+				"title": "Lektion 5 - Grundlæggende om JavaScript - Metoder og funktioner: Quiz efter undervisning",
 				"quiz": [
 					{
-						"questionText": "Arguments must be provided for all parameters in a function",
+						"questionText": "Argumenter skal angives for alle parametre i en funktion",
 						"answerOptions": [
 							{
-								"answerText": "true",
+								"answerText": "Ja",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "false",
+								"answerText": "Nej",
 								"isCorrect": "true"
 							}
 						]
 					},
 					{
-						"questionText": "What does a default value do?",
+						"questionText": "Hvad gør en standardværdi?",
 						"answerOptions": [
 							{
-								"answerText": "Sets a correct value",
+								"answerText": "Indstiller en korrekt værdi",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Gives a starter value for a parameter so your code still behaves if you omit an argument for it",
+								"answerText": "Giver en startværdi for en parameter, så din kode stadig opfører sig, hvis du udelader et argument for den",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Has no utility",
+								"answerText": "Har ingen nytteværdi",
 								"isCorrect": "false"
 							}
 						]
 					},
 					{
-						"questionText": "A fat arrow function allows you to",
+						"questionText": "En 'fat arrow' funktion giver dig mulighed for at",
 						"answerOptions": [
 							{
-								"answerText": "Create heavy functions",
+								"answerText": "oprette tunge funktioner",
 								"isCorrect": "false"
 							},
 							{
-								"answerText": "Omit the function keyword",
+								"answerText": "udelade nøgleordet for funktionen",
 								"isCorrect": "true"
 							},
 							{
-								"answerText": "Create an anonymous function",
+								"answerText": "oprette en anonym funktion",
 								"isCorrect": "false"
 							}
 						]
