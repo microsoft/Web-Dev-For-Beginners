@@ -2,7 +2,7 @@
 
 Denne lektion dækker det grundlæggende i GitHub, en platform til at hoste og administrere ændringer i din kode.
 
-![Intro to GitHub](../../sketchnotes/webdev101-github.png)
+![Intro to GitHub](/sketchnotes/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz for undervisning
