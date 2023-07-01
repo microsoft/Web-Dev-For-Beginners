@@ -1,4 +1,4 @@
-# Getting Started with Web Development
+=# Getting Started with Web Development
 
 In this section of the curriculum, you will be introduced to non project-based concepts important to becoming a professional developer.
 
