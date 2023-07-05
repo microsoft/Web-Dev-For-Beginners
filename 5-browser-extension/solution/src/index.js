@@ -1,4 +1,4 @@
-import axios from './node_modules/axios';
+import axios from 'axios';
 
 // form fields
 const form = document.querySelector('.form-data');
