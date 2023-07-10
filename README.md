@@ -16,12 +16,6 @@ Learn the fundamentals of JavaScript, CSS, and HTML with our comprehensive 12-we
 
 ### _Are you a student?_
 
-
-Get started with the following resources:
-
-- [Student Hub page](https://docs.microsoft.com/learn/student-hub?WT.mc_id=academic-77807-sagibbon) On this page, you will find beginner resources, Student packs, and even ways to get a free cert voucher. This is one page you want to bookmark and check from time to time as we switch out content at least monthly.
-- [Microsoft Student Learn ambassadors](https://studentambassadors.microsoft.com?WT.mc_id=academic-77807-sagibbon) Join a global community of student ambassadors, this could be your way into Microsoft.
-
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
 # Getting Started
@@ -96,18 +90,14 @@ You can run this documentation offline by using [Docsify](https://docsify.js.org
 
 A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
-## Help Wanted!
-
-If you would like to translate all or part of the curriculum, please follow our [Translations](TRANSLATIONS.md) guide.
-
 ## Other Curricula
 
 Our team produces other curricula! Check out:
 
-- [Machine Learning for Beginners](https://aka.ms/ml-beginners)
-- [IoT for Beginners](https://aka.ms/iot-beginners)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners)
 - [AI for Beginners](https://aka.ms/ai-beginners)
+- [Data Science for Beginners](https://aka.ms/datascience-beginners)
+- [IoT for Beginners](https://aka.ms/iot-beginners)
+- [Machine Learning for Beginners](https://aka.ms/ml-beginners)
 - [XR Development for Beginners](https://aka.ms/xr-dev-for-beginners)
 
 ## License
