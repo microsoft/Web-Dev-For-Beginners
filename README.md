@@ -98,7 +98,11 @@ A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-
 
 ## Help Wanted!
 
-If you would like to translate all or part of the curriculum, please follow our [Translations](TRANSLATIONS.md) guide.
+We welcome contributions from anyone who wants to help us improve this curriculum. Whether you are a beginner or an expert, you can make a difference by fixing typos, adding translations, improving explanations, creating quizzes, writing code, and more.
+
+To get started, you can check out our [CONTRIBUTING.md](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/CONTRIBUTING.md) file for some guidelines and tips. You can also look for issues labeled as [Good First Issue](https://github.com/microsoft/Web-Dev-For-Beginners/issues?q=is%3Aissue+is%3Aopen+label%3A%22Good+First+Issue%22) or [Help Wanted](https://github.com/microsoft/Web-Dev-For-Beginners/issues?q=is%3Aissue+is%3Aopen+label%3A%22Help+Wanted%22) on our GitHub repository. These issues are specially designed for newcomers who want to make their first contribution.
+
+We appreciate your interest and support in making this curriculum better for everyone. Thank you!
 
 ## Other Curricula
 
