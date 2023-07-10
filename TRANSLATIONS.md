@@ -1,4 +1,10 @@
-# Contribute by translating lessons
+# Translated lessons
+
+We are currently working to revamp our translation process. 
+
+Please check back later for more information on how you can contribute to translations.
+
+<!-- # Contribute by translating lessons
 
 We welcome translations for the lessons in this curriculum!
 
@@ -28,4 +34,4 @@ Similar to Readme's, please translate the assignments as well.
 
 **THANK YOU**
 
-We truly appreciate your efforts!
+We truly appreciate your efforts! -->
