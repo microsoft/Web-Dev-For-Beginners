@@ -137,6 +137,12 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
    ```
 
    Esto crea un _remote_, o conexión, llamado "origin" que apunta al repositorio de GitHub que creaste anteriormente.
+   
+   Si tienes una conexión previa con algún "origin" y deseas cambiar la dirección puedes utilizar el siguiente comando:
+   
+   ```bash
+   git remote set-url https://github.com/USUARIO/NOMBRE DEL REPOSITORIO.git
+   ```
 
 1. **Envía archivos locales a GitHub**. Hasta ahora ha creado una _conexión_ entre el repositorio local y el repositorio de GitHub. Enviemos estos archivos a GitHub con el siguiente comando `git push`, así:
  
