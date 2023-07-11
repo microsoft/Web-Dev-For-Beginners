@@ -6,7 +6,7 @@
 
 ## El lienzo
 
-El lienzo es un elemento HTML que por defecto no tiene contenido; es una pizarra en blanco. Necesita agregarle dibujo sobre él.
+El lienzo es un elemento HTML que por defecto no tiene contenido; es una pizarra en blanco. Necesita agregarle un dibujo sobre él.
 
 ✅ Lea [más sobre la API Canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API) en MDN.
 
@@ -24,7 +24,7 @@ Arriba estamos configurando el `id`, `width` y `alto`.
 
 ## Dibujar geometría simple
 
-Canvas utiliza un sistema de coordenadas cartesiano para dibujar cosas. Por lo tanto, usa un eje xy un eje y para expresar dónde se encuentra algo. La ubicación `0,0` es la posición superior izquierda y la inferior derecha es lo que dijiste que era el ANCHO y ALTO del lienzo.
+Canvas utiliza un sistema de coordenadas cartesiano para dibujar cosas. Por lo tanto, usa un eje x y un eje y para expresar dónde se encuentra algo. La ubicación `0,0` es la posición superior izquierda y la inferior derecha es lo que se mencionó que era el ANCHO y ALTO del lienzo.
 
 ! [cuadrícula del lienzo](canvas_grid.png)
 > Imagen de [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
@@ -162,7 +162,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http: // localhost: 500
 Agregue el código necesario a `your-work/app.js` para resolver lo siguiente
 
 1. **Dibuja** un lienzo con fondo negro
-   > consejo: agregue dos líneas debajo del TODO apropiado en `/app.js`, estableciendo el elemento `ctx` en negro y las coordenadas superior / izquierda en 0,0 y la altura y el ancho para que sean iguales a los del lienzo .
+   > consejo: agregue dos líneas debajo del TODO apropiado en `/app.js`, estableciendo el elemento `ctx` en negro y las coordenadas superior / izquierda en 0,0 y la altura y el ancho para que sean iguales a los del lienzo.
 2. **Cargar** texturas
    > consejo: agregue las imágenes del jugador y del enemigo usando `await loadTexture` y pasando la ruta de la imagen. ¡Todavía no los verá en la pantalla!
 3. **Dibuja** héroe en el centro de la pantalla en la mitad inferior
