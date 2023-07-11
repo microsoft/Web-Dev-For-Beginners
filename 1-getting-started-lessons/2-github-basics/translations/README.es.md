@@ -321,12 +321,12 @@ Obtén más información sobre [contribución al software de código abierto](ht
 
 [Hoja de referencia de Git](https://training.github.com/downloads/github-git-cheat-sheet/).
 
-Practica, practica, practica. GitHub tiene excelentes rutas de aprendizaje disponibles a través de [lab.github.com](https://lab.github.com/):
+Practica, practica, practica. GitHub tiene excelentes rutas de aprendizaje disponibles a través de [skills.github.com](https://skills.github.com/):
 
-- [Primera semana en GitHub](https://lab.github.com/githubtraining/first-week-on-github)
+- [Primera semana en GitHub](https://skills.github.com/#first-week-on-github)
 
 También encontrarás laboratorios más avanzados.
 
 ## Tarea
 
-Completa [La Primera Semana en el Laboratorio de capacitación de GitHub](https://lab.github.com/githubtraining/first-week-on-github)
+Completa [La Primera Semana en el Laboratorio de capacitación de GitHub](https://skills.github.com/#first-week-on-github)
