@@ -7,5 +7,5 @@ Utilizando los ejemplos de código de la lección, escriba una representación d
 ## Rúbrica
 
 | Criterios | Ejemplar | Adecuado | Necesita mejorar |
-| -------- | -------------------------------------------------- ----- | -------------------------------------------------- --- | -------------------------------------------------- - |
+| -------- | ----- | --- | - |
 | | Se colocan tres elementos en la pantalla y se manipulan | Se colocan dos elementos en la pantalla y se manipulan | Un elemento se coloca en la pantalla y se manipula |
