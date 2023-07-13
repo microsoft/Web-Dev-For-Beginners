@@ -27,8 +27,8 @@ El concepto de tener una vida en un juego es solo un número. En el contexto de 
 
 Agreguemos lo siguiente a tu juego:
 
-- **Game score**** (Puntuación del juego): por cada barco enemigo que sea destruido, el héroe debería recibir algunos puntos, sugerimos 100 puntos por barco. La puntuación del juego debe mostrarse en la parte inferior izquierda.
-- **Life** (Vida): Tu nave tiene tres vidas. Pierdes una vida cada vez que un barco enemigo choca contigo. Se debe mostrar un puntaje de vida en la parte inferior derecha y estar compuesto por el siguiente gráfico: [life image](solution/assets/life.png)..
+- **Game score** (Puntuación del juego): por cada barco enemigo que sea destruido, el héroe debería recibir algunos puntos, sugerimos 100 puntos por barco. La puntuación del juego debe mostrarse en la parte inferior izquierda.
+- **Life** (Vida): Tu nave tiene tres vidas. Pierdes una vida cada vez que un barco enemigo choca contigo. Se debe mostrar un puntaje de vida en la parte inferior derecha y estar compuesto por el siguiente gráfico: [life image](solution/assets/life.png).
 
 ## Pasos recomendados
 
@@ -55,7 +55,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
 ### Agregar código
 
-1. **Copie los recursos necesarios** de la carpeta `solution/ assets/` a la carpeta `your-work`; agregará un activo `life.png`. Agregue el lifeImg a la función window.onload:
+1. **Copie los recursos necesarios** de la carpeta `solution/assets/` a la carpeta `your-work`; agregará un activo `life.png`. Agregue el lifeImg a la función window.onload:
 
 
     ```javascript

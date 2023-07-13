@@ -12,7 +12,7 @@ Making decisions and controlling the order in which your code runs makes your co
 
 > 🎥 Click the image above for a video about making decisions.
 
-> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 ## A Brief Recap on Booleans
 
 Booleans can be only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.
@@ -45,7 +45,7 @@ The if statement will run code in between its blocks if the condition is true.
 
 ```javascript
 if (condition){
-    //Condition was true. Code in this block will run.
+    //Condition is true. Code in this block will run.
 }
 ```
 
@@ -56,7 +56,7 @@ let currentMoney;
 let laptopPrice;
 
 if (currentMoney >= laptopPrice){
-    //Condition was true. Code in this block will run.
+    //Condition is true. Code in this block will run.
     console.log("Getting a new laptop!");
 }
 ```
@@ -70,16 +70,55 @@ let currentMoney;
 let laptopPrice;
 
 if (currentMoney >= laptopPrice){
-    //Condition was true. Code in this block will run.
+    //Condition is true. Code in this block will run.
     console.log("Getting a new laptop!");
 }
 else{
-    //Condition was false. Code in this block will run.
+    //Condition is false. Code in this block will run.
     console.log("Can't afford a new laptop, yet!");
 }
 ```
 
 ✅ Test your understanding of this code and the following code by running it in a browser console. Change the values of the currentMoney and laptopPrice variables to change the returned `console.log()`.
+
+
+## Switch Statement
+
+The `switch` statement is used to perform different actions based on different conditions.Use the `switch` statement to select one of many code blocks to be executed.
+
+```javascript
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+```
+
+```javascript
+// program using switch statement
+let a = 2;
+
+switch (a) {
+
+    case 1:
+        a = 'one';
+        break;
+    case 2:
+        a = 'two';
+        break;
+    default:
+        a = 'not found';
+        break;
+}
+console.log(`The value is ${a}`);
+```
+✅ Test your understanding of this code and the following code by running it in a browser console. Change the values of the varaiable a to change the returned `console.log()`.
+
 
 ## Logical Operators and Booleans
 
@@ -101,11 +140,11 @@ let laptopPrice;
 let laptopDiscountPrice = laptopPrice - (laptopPrice * .20) //Laptop price at 20 percent off
 
 if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice){
-    //Condition was true. Code in this block will run.
+    //Condition is true. Code in this block will run.
     console.log("Getting a new laptop!");
 }
 else {
-    //Condition was true. Code in this block will run.
+    //Condition is true. Code in this block will run.
     console.log("Can't afford a new laptop, yet!");
 }
 ```

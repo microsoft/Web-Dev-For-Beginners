@@ -267,7 +267,7 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Nota: utilizamos una [función de flecha](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) aquí para declarar nuestro controlador de eventos `popstate` por concisión, pero un la función regular funcionaría igual.
+> Nota: utilizamos una [función de flecha](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) aquí para declarar nuestro controlador de eventos `popstate` por concisión, pero la función regular funcionaría igual.
 
 
 [![Arrow Functions](https://img.youtube.com/vi/JiXY9wlqUxQ/0.jpg)](https://youtube.com/watch?v=JiXY9wlqUxQ "Arrow Functions")

@@ -106,9 +106,9 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Agregar código de reinicio** código que reinicia el juego con solo presionar un botón seleccionado.
+2. **Agregar código de reinicio**. Código que reinicia el juego con solo presionar un botón seleccionado.
 
-    1. **Escuche la tecla "Enter"**. Edite el eventListener de su ventana para escuchar esta prensa:
+    1. **Escuche la tecla "Enter"**. Edite el eventListener de su ventana para escuchar esta acción:
 
     ```javascript
      else if(evt.key === "Enter") {

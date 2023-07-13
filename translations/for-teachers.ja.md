@@ -20,4 +20,4 @@ GitHub Classroom を使わずに、このリポジトリを現状のまま使い
 
 ## 感想をお聞かせください!
 
-このカリキュラムをあなたと生徒さんのために役立てていきたいと思っています。[フィードバック](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2humCsRZhxNuI79cm6n0hRUQzRVVU9VVlU5UlFLWTRLWlkyQUxORTg5WS4u)をお願いします。
+このカリキュラムをあなたと生徒さんのために役立てていきたいと思っています。[フィードバック](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)をお願いします。

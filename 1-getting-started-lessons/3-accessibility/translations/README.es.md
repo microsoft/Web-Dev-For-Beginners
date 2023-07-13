@@ -17,13 +17,13 @@ Esta cita destaca perfectamente la importancia de crear sitios web accesibles. U
 
 Una de las herramientas de accesibilidad más conocidas son los lectores de pantalla.
 
-[Lectores de pantalla](https://en.wikipedia.org/wiki/Screen_reader) son clientes de uso común para personas con problemas de visión. A medida que dedicamos tiempo a asegurarnos de que un navegador transmita correctamente la información que deseamos compartir, también debemos asegurarnos de que un lector de pantalla haga lo mismo.
+[Lectores de pantalla](https://es.wikipedia.org/wiki/Lector_de_pantalla) son clientes de uso común para personas con problemas de visión. A medida que dedicamos tiempo a asegurarnos de que un navegador transmita correctamente la información que deseamos compartir, también debemos asegurarnos de que un lector de pantalla haga lo mismo.
 
 En su forma más básica, un lector de pantalla leerá una página de arriba a abajo de forma audible. Si la página es todo texto, el lector transmitirá la información de manera similar a un navegador. Por supuesto, las páginas web rara vez son puramente texto; contendrán enlaces, gráficos, color y otros componentes visuales. Debemos tener cuidado para garantizar que un lector de pantalla lea correctamente esta información.
 
 Todo desarrollador web debería estar familiarizado con un lector de pantalla. Como se destacó anteriormente, es el cliente que utilizarán sus usuarios. De la misma manera que estás familiarizado con el funcionamiento de un navegador, debes aprender cómo funciona un lector de pantalla. Afortunadamente, los lectores de pantalla están integrados en la mayoría de los sistemas operativos y muchos navegadores contienen extensiones para emular un lector de pantalla.
 
-✅ Prueba una extensión o herramienta del navegador de lector de pantalla. Uno que solo funciona en Windows es [JAWS](https://webaim.org/articles/jaws/). Los navegadores también tienen herramientas integradas que se pueden utilizar para este propósito; Consulta estas [herramientas de navegador Edge centradas en accesibilidad](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features).
+✅ Prueba una extensión o herramienta del navegador de lector de pantalla. Uno que solo funciona en Windows es [JAWS](https://webaim.org/articles/jaws/). Los navegadores también tienen herramientas integradas que se pueden utilizar para este propósito; consulta estas [herramientas de navegador Edge centradas en accesibilidad](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features).
 
 ### Chequear contrastes
 
@@ -136,9 +136,9 @@ Puedes usar `aria-label` para describir el enlace cuando el formato de la págin
 
 ## Imágenes
 
-No hace falta decir que los lectores de pantalla no pueden leer automáticamente lo que hay en una imagen. Asegurarse de que las imágenes sean accesibles no requiere mucho trabajo; de eso se trata el atributo ʻalt`. Todas las imágenes deben tener un ʻalt` para describir lo que son.
+No hace falta decir que los lectores de pantalla no pueden leer automáticamente lo que hay en una imagen. Asegurarse de que las imágenes sean accesibles no requiere mucho trabajo; de eso se trata el atributo `alt`. Todas las imágenes deben tener un `alt` para describir lo que son.
 
-✅ Como era de esperar, los motores de búsqueda tampoco pueden comprender qué hay en una imagen. También usan texto alternativo. Una vez más, ¡asegurarse de que su página sea accesible proporciona bonificaciones adicionales!
+✅ Como era de esperar, los motores de búsqueda tampoco pueden comprender que hay en una imagen. También usan texto alternativo. Una vez más, ¡asegurarse de que su página sea accesible proporciona bonificaciones adicionales!
 
 ## El teclado
 

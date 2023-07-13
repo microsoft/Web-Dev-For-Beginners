@@ -2,13 +2,13 @@
 ![JavaScript Basics - Functions](/sketchnotes/webdev101-js-functions.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-# Conceptos básicos de JavaScript: funcións y funciones
+# Conceptos básicos de JavaScript: función y funciones
 
-[![funcións y funciones](https://img.youtube.com/vi/DdCRhOQibMo/0.jpg)](https://youtube.com/watch?v=DdCRhOQibMo "funcións y funciones")
+[![función y funciones](https://img.youtube.com/vi/DdCRhOQibMo/0.jpg)](https://youtube.com/watch?v=DdCRhOQibMo "función y funciones")
 
 ## [Pre-lectura prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
 
-Cuando necesite su código para realizar una tarea, utilizará un función o una función. Analicemos las diferencias.
+Cuando necesite su código para realizar una tarea, utilizará una función. Analicemos las diferencias.
 
 ## Funciones
 
@@ -20,19 +20,19 @@ function name(param, param2, param3) { // definición de función
 }
 ```
 
-## Funciónes (Functions)
+## Funciones
 
 En esencia, una función es un bloque de código que podemos ejecutar bajo demanda. Esto es perfecto para escenarios en los que necesitamos realizar la misma tarea varias veces; en lugar de duplicar la lógica en varias ubicaciones (lo que dificultaría la actualización cuando llegue el momento), podemos centralizarla en una ubicación y llamarla cuando necesitemos que se realice la operación; ¡incluso puede llamar a funciones desde otras funciones!
 
 Igual de importante es la capacidad de nombrar una función. Si bien esto puede parecer trivial, el nombre proporciona una forma rápida de documentar una sección de código. Podría pensar en esto como una etiqueta en un botón. Si hago clic en un botón que dice "Cancelar temporizador", sé que dejará de correr el reloj.
 
-## Creating and calling a function
+## Creando y llamando a una función
 
 La sintaxis de una función se parece a la siguiente:
 
 ```javascript
-function nameOfFunction() { // function definition
- // function definition/body
+function nameOfFunction() { // definición de función
+ // Código de la función
 }
 ```
 
@@ -47,7 +47,7 @@ function displayGreeting() {
 Siempre que queremos llamar (o invocar) nuestra función, usamos el nombre de la función seguido de `()`. Vale la pena señalar el hecho de que nuestra función se puede definir antes o después de que decidamos llamarla; el compilador de JavaScript lo encontrará por usted.
 
 ```javascript
-// calling our function
+// llamando nuestra función
 displayGreeting();
 ```
 
@@ -142,7 +142,7 @@ En el código anterior, se devuelve la variable `sum`.
 
 ### Invocación
 
-Cuando _invocas_ una función, la llamas con 0...N conjuntos de argumentos. Los valores de los argumentos se vinculan a los parámetros correspondientes a su posición. El función `add()` introducido se puede invocar de la siguiente manera:
+Cuando _invocas_ una función, la llamas con 0...N conjuntos de argumentos. Los valores de los argumentos se vinculan a los parámetros correspondientes a su posición. La función `add()` introducido se puede invocar de la siguiente manera:
 
 
 ```javascript
@@ -179,7 +179,7 @@ Cualquier parámetro con valores predeterminados debe estar al final de la lista
 🚀 Desafío:
 
 
-## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+## [Prueba de validación de conocimientos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
 
 ## Revisión y autoestudio
 

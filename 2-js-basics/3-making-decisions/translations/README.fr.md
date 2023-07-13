@@ -12,7 +12,7 @@ Prendre des décisions et contrôler l'ordre dans lequel votre code s'exécute r
 
 > 🎥 Cliquez sur l'image ci-dessus pour une vidéo sur la prise de décisions.
 
-> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
+> Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 ## Un bref récapitulatif sur les booléens
 
 Les booléens ne peuvent avoir que deux valeurs : `true` ou `false`. Les booléens aident à prendre des décisions sur les lignes de code à exécuter lorsque certaines conditions sont remplies.
