@@ -21,7 +21,7 @@ Trabalhar com dados é uma tarefa comum para qualquer língua, e é uma tarefa m
 
 ✅ Os arrays estão à nossa volta! Consegue pensar num exemplo da vida real de uma matriz, tal como uma matriz de painéis solares?
 
-A sintaxe de uma matriz é um par de parênteses rectos.
+A sintaxe de uma matriz é um par de colchetes.
 
 ```javscript
 let myArray = [];
@@ -33,7 +33,7 @@ Esta é uma matriz vazia, mas as matrizes podem ser declaradas já povoadas com 
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 ```
 
-Aos valores da matriz é atribuído um valor único chamado **índice**, um número inteiro que é atribuído com base na sua distância desde o início da matriz. No exemplo acima, o valor da string "Chocolate" tem um índice de 0, e o índice de "Rocky Road" é 4. Use o índice com parênteses rectos para recuperar, alterar, ou inserir valores da array.
+Aos valores da matriz é atribuído um valor único chamado **índice**, um número inteiro que é atribuído com base na sua distância desde o início da matriz. No exemplo acima, o valor da string "Chocolate" tem um índice de 0, e o índice de "Rocky Road" é 4. Use o índice com colchetes para recuperar, alterar, ou inserir valores da array.
 
 ✅ Surpreende-o que as arrays comecem pelo índice zero? Em algumas linguagens de programação, os índices começam em 1. Há uma história interessante em torno disto, que pode [ler na Wikipedia](https://en.wikipedia.org/wiki/Zero-based_numbering).
 
@@ -98,7 +98,7 @@ while (i < 10) {
 }
 ```
 
-✅ Porque escolheria um para loop vs. um loop de tempo? Os 17K espectadores tinham a mesma pergunta sobre o StackOverflow, e algumas das opiniões [pode ser interessante para si](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
+✅ Porque escolheria um para loop vs. um loop de tempo? Os 17K espectadores tinham a mesma pergunta sobre o StackOverflow, e algumas das opiniões [pode ser interessante para você](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
 
 ## Laços e Arrays
 
