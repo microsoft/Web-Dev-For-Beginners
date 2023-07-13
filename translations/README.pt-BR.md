@@ -13,16 +13,16 @@
 # Desenvolvimento Web para Iniciantes - Programa de Estudos
 
 Azure Cloud Advocates da Microsoft têm o prazer de oferecer um curso de 12 semanas e 24 lições sobre o básico de JavaScript, CSS e HTML.
-Cada lição possiu qizzes pré- e pós-lição , instruções escritas para completar a lição, uma solução, uma tarefa e mais.
+Cada lição possui quizzes pré e pós-lição , instruções escritas para completar a lição, uma solução, uma tarefa e mais.
 Nossa pedagogia baseada em prática permite que você aprenda enquanto construi, uma forma de aprendizado eficaz e comprovada.
 
 **Grandes agradecimentos aos nossos autores Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, e Tomomi Imura!**
 
 # Começando
 
-> **Professores**, nós incluímos algumas [sugestões](for-teachers.pt.md) sobre como tilizar este curso. Adoraríamos o seu Feedback em nosso [fórum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Professores**, nós incluímos algumas [sugestões](for-teachers.pt.md) sobre como utilizar este curso. Adoraríamos o seu Feedback em nosso [fórum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-> **Estudantes**, para usar esse crrículo por conta própria, faça um fork do repositório inteiro, começando por um qizz pré-aula, veja a aula e então faça o resto das atividades.
+> **Estudantes**, para usar esse currículo por conta própria, faça um fork do repositório inteiro, começando por um quiz pré-aula, veja a aula e então faça o resto das atividades.
 Procure fazer os projetos baseado no que aprendeu ao invés de simplesmente copiar a solução que se encontra na pasta de soluções das atividades.
 Uma boa opção seria criar um grupo de estudos e completar todos os conteúdos juntos.
 Para estudos mais profundos, recomendamos que assista aos vídeos mencionados abaixo e procure pelo [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81/?WT.mc_id=academic-77807-sagibbon).
@@ -35,7 +35,7 @@ Para estudos mais profundos, recomendamos que assista aos vídeos mencionados ab
 
 Nós escolhemos dois princípos pedagógicos enquanto criávamos este curso: Garantir de que era baseado em práticas e que
 tivesse quizzes frequentes.
-Até o fim deste curso, estudantes terão construído um jogo de digitação, um terrário virtual, ums extensão de navegador 'verde' , um jogo do tipo 'space invaders', e um aplicativo bancário, e terão aprendido o básico de JavaScript, HTML, e CSS com um moderno conjunto de ferramentas do desenvolvimento web dos dias atuais 🎓 !!!
+Até o fim deste curso, estudantes terão construído um jogo de digitação, um terrário virtual, uma extensão de navegador 'verde' , um jogo do tipo 'space invaders', e um aplicativo bancário, e terão aprendido o básico de JavaScript, HTML, e CSS com um moderno conjunto de ferramentas do desenvolvimento web dos dias atuais 🎓 !!!
 
 > 🎓 Você pode tomar as primeiras lições nesse curso como um [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) no Microsoft Learn!
 
@@ -46,11 +46,13 @@ Além disso, um teste simples antes da aula define a intenção do aluno de apre
 Embora tenhamos evitado propositadamente a introdução de frameworks JavaScript para nos concentrarmos nas habilidades básicas necessárias como desenvolvedor web antes de adotar um framework, uma próxima etapa para concluir este currículo seria aprender sobre Node.js por meio de outra coleção de vídeos:
 [Coletânea inicial sobre Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)
 
-> Encontre nosso [código de condta](../CODE_OF_CONDUCT.md), [guia para contribidores](CONTRIBUTING.md), e [o guia para traduções do curso](../TRANSLATIONS.md).
-Seu Feedback contrutivo é bem vindo.
 
->
-## Cada lição inclui :
+> Encontre nosso [código de conduta](CODE_OF_CONDUCT.md), [guia para contribuidores](CONTRIBUTING.md), e [o guia para traduções do curso](TRANSLATIONS.md).
+Seu Feedback construtivo é bem vindo.
+
+
+
+## Cada lição inclui:
 
 - Uma folha de rascunho opcional
 - Um vídeo complementar opcional
@@ -62,7 +64,7 @@ Seu Feedback contrutivo é bem vindo.
 - Exercícios
 - Quiz pós-aula
 
-> **Nota sobre os qizzes**: todos os qizzes se encontram [aqui](https://ashy-river-0debb7803.1.azurestaticapps.net/), um total de 48 quizzes, com 3 questões em cada.
+> **Nota sobre os quizzes**: todos os quizzes se encontram [aqui](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1?loc=pt-BR), um total de 48 quizzes, com 3 questões em cada.
 Também podem ser acessados localmente pela pasta `quiz-app`.
 
 ## Lições
