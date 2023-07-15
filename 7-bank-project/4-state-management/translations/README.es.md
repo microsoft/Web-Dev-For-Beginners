@@ -24,7 +24,7 @@ curl http://localhost:5000/api
 
 ## Repensar la gestión del estado
 
-En la [lección anterior](../3-data/README.md), introdujimos un concepto básico de estado en nuestra aplicación con la variable global `account` que contiene los datos bancarios del usuario actualmente conectado. Sin embargo, nuestra implementación actual tiene algunas fallas. Intente actualizar la página cuando esté en el panel. ¿Pero qué pasa?
+En la [lección anterior](../3-data/README.md), empezamos con un concepto básico de estado en nuestra aplicación con la variable global `account` que contiene los datos bancarios del usuario actualmente conectado. Sin embargo, nuestra implementación actual tiene algunas fallas. Intente actualizar la página cuando esté en el panel. Pero ¿qué pasa?
 
 Hay 3 problemas con el código actual:
 
