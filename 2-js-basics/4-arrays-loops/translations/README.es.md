@@ -118,7 +118,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ## Revisión y autoestudio
 
-Las matrices en JavaScript tienen muchos métodos adjuntos, extremadamente útiles para la manipulación de datos. [Lea sobre estos métodos](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) y pruebe algunos de ellos (como push, pop, slice y splice) en una matriz de su creación.
+Las matrices en JavaScript tienen muchos métodos adjuntos, extremadamente útiles para la manipulación de datos. [Lee sobre estos métodos](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) y prueba algunos de ellos (como push, pop, slice y splice) en una matriz realizada por ti.
 
 ## Tarea
  [Bucle de una matriz](assignment.es.md)
