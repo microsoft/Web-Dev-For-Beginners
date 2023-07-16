@@ -114,7 +114,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 ## 🚀 Desafío 
  Hay otras formas de realizar un bucle sobre arreglos además de los bucles _for_ y _while_. Existen [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), y [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Vuelve a escribir tu bucle en la matriz utilizando una de estas técnicas.
 
-## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+## [Prueba de Conocimientos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
 
 ## Revisión y autoestudio
 
