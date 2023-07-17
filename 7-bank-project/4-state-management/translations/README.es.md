@@ -24,7 +24,7 @@ curl http://localhost:5000/api
 
 ## Repensar la gestión del estado
 
-En la [lección anterior](../3-data/README.md), introdujimos un concepto básico de estado en nuestra aplicación con la variable global `account` que contiene los datos bancarios del usuario actualmente conectado. Sin embargo, nuestra implementación actual tiene algunas fallas. Intente actualizar la página cuando esté en el panel. ¿Lo que pasa?
+En la [lección anterior](../3-data/README.md), empezamos con un concepto básico de estado en nuestra aplicación con la variable global `account` que contiene los datos bancarios del usuario actualmente conectado. Sin embargo, nuestra implementación actual tiene algunas fallas. Intente actualizar la página cuando esté en el panel. Pero ¿qué pasa?
 
 Hay 3 problemas con el código actual:
 
@@ -148,12 +148,12 @@ Cuando desee conservar los datos en su navegador, hay algunas preguntas importan
 - *¿Son los datos confidenciales?* Debe evitar almacenar datos confidenciales en el cliente, como contraseñas de usuario.
 - *¿Por cuánto tiempo necesita conservar estos datos?* ¿Planea acceder a estos datos solo para la sesión actual o desea que se almacenen para siempre?
 
-Hay varias formas de almacenar información dentro de una aplicación web, dependiendo de lo que desee lograr. Por ejemplo, puede utilizar las URL para almacenar una consulta de búsqueda y hacer que se pueda compartir entre los usuarios. También puede utilizar [cookies HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies) si los datos deben compartirse con el servidor, como [autenticación](https://en.wikipedia.org/wiki/Authentication) información.
+Hay varias formas de almacenar información dentro de una aplicación web, dependiendo de lo que desee lograr. Por ejemplo, puede utilizar las URL para almacenar una consulta de búsqueda y hacer que se pueda compartir entre los usuarios. También puede utilizar [cookies HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies) si los datos deben compartirse con el servidor, como [autenticación](https://en.wikipedia.org/wiki/Authentication) de la información.
 
 Otra opción es utilizar una de las muchas API del navegador para almacenar datos. Dos de ellos son particularmente interesantes:
 
 - [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): un [almacén de claves / valores](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) que permite conservar datos específicos del sitio web actual en diferentes sesiones. Los datos guardados en él nunca caducan.
-- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): este funciona igual que `localStorage` excepto que los datos almacenados en él son se borra cuando finaliza la sesión (cuando se cierra el navegador).
+- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): este funciona igual que `localStorage` excepto que los datos almacenados en él se borran cuando finaliza la sesión (cuando se cierra el navegador).
 
 Tenga en cuenta que estas dos API solo permiten almacenar [cadenas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String). Si desea almacenar objetos complejos, deberá serializarlos al formato [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) usando [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
 
@@ -211,7 +211,7 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Intente actualizar la página del panel en el navegador ahora. ¿Lo que pasa? ¿Ves la nueva transacción?
+Intente actualizar la página del panel en el navegador ahora. ¿Qué ocurre? ¿Ves la nueva transacción?
 
 El estado se conserva indefinidamente gracias al `localStorage`, pero eso también significa que nunca se actualiza hasta que cierre la sesión de la aplicación y vuelva a iniciarla.
 
