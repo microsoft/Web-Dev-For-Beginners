@@ -299,7 +299,7 @@ Tambahkan templat dan laluan baru untuk halaman ketiga yang menunjukkan kredit u
 
 ## Mengkaji & Belajar Sendiri
 
-Perutean adalah salah satu bahagian pengembangan web yang sangat mengejutkan, terutama ketika web beralih dari tingkah laku penyegaran halaman ke penyegaran halaman Aplikasi Halaman Tunggal. Baca sedikit mengenai [bagaimana perkhidmatan Aplikasi Web Statik Azure](https://docs.microsoft.com/azure/static-web-apps/routes?WT.mc_id=academic-77807-sagibbon) menangani penghalaan . Bolehkah anda menjelaskan mengapa beberapa keputusan yang dijelaskan pada dokumen itu diperlukan?
+Perutean adalah salah satu bahagian pengembangan web yang sangat mengejutkan, terutama ketika web beralih dari tingkah laku penyegaran halaman ke penyegaran halaman Aplikasi Halaman Tunggal. Baca sedikit mengenai [bagaimana perkhidmatan Aplikasi Web Statik Azure](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) menangani penghalaan . Bolehkah anda menjelaskan mengapa beberapa keputusan yang dijelaskan pada dokumen itu diperlukan?
 
 ## Tugasan
 

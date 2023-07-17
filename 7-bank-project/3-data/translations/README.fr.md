@@ -111,7 +111,7 @@ navigate('/dashboard');
 
 ✅ Saviez-vous que par défaut, vous ne pouvez appeler les API du serveur qu’à partir du *même domaine et port* que la page Web que vous consultez? Il s’agit d’un mécanisme de sécurité appliqué par les navigateurs. Mais attendez, notre application web s’exécute sur 'localhost:3000' alors que l’API du serveur s’exécute sur `localhost:3000`, pourquoi cela fonctionne-t-il? En utilisant une technique appelée [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), il est possible d’effectuer des requêtes HTTP inter-origines si le serveur ajoute des en-têtes spéciaux à la réponse, ce qui permet des exceptions pour des domaines spécifiques.
 
-> En savoir plus sur les API en suivant cette [leçon](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art?WT.mc_id=academic-77807-sagibbon)
+> En savoir plus sur les API en suivant cette [leçon](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
 
 ## Mettre à jour le code HTML pour afficher les données
 

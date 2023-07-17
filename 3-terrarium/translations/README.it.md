@@ -6,9 +6,9 @@ Una piccola meditazione sul codice drag and drop. Con un po' di HTML, JS e CSS, 
 
 # Lezioni
 
-1. [Introduzione a HTML](./1-intro-to-html/README.md)
-2. [Introduzione a CSS](./2-intro-to-css/README.md)
-3. [Introduzione al DOM e alle Closure JavaScript](./3-intro-to-DOM-and-closures/README.md)
+1. [Introduzione a HTML](./1-intro-to-html/translations/README.it.md)
+2. [Introduzione a CSS](./2-intro-to-css/translations/README.it.md) 
+3. [Introduzione al DOM e alle Closure JavaScript](./3-intro-to-DOM-and-closures/translations/README.it.md)
 
 ## Crediti
 

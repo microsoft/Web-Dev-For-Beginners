@@ -248,7 +248,7 @@ Aggiungere una lucentezza a forma di bolla nell'area inferiore sinistra del bara
 
 ![terrario finito](../images/terrarium-final.png)
 
-Per completare il quiz post-lezione, seguire questo modulo di apprendimento: [Applicare uno stile al codice HTML con CSS](https://docs.microsoft.com/it-it/learn/modules/build-simple-website/4-css-basics?WT.mc_id=academic-77807-sagibbon)
+Per completare il quiz post-lezione, seguire questo modulo di apprendimento: [Applicare uno stile al codice HTML con CSS](https://docs.microsoft.com/it-it/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
 ## Quiz Post-Lezione
 

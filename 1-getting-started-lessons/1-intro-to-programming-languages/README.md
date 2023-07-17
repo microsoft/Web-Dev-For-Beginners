@@ -17,7 +17,7 @@ In this lesson, we'll cover:
 - Basic elements of a program
 - Useful software and tooling for the professional developer
 
-> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming?WT.mc_id=academic-77807-sagibbon)!
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
 
 ## What is Programming?
 
@@ -76,7 +76,7 @@ back add r0,r1
 
 Believe it or not, *they're both doing the same thing*: printing a Fibonacci sequence up to 10.
 
-✅ A Fibonacci sequence is [defined](https://en.wikipedia.org/wiki/Fibonacci_number) as a set of numbers such that each number is the sum of the two preceding ones, starting from 0 and 1.
+✅ A Fibonacci sequence is [defined](https://en.wikipedia.org/wiki/Fibonacci_number) as a set of numbers such that each number is the sum of the two preceding ones, starting from 0 and 1. The first 10 numbers following the Fibonacci sequence are 0, 1, 1, 2, 3, 5, 8, 13, 21 and 34.
 
 ## Elements of a Program
 
@@ -104,7 +104,7 @@ One of the most crucial tools for software development is the editor. Editors ar
 
 Developers rely on editors for a few additional reasons:
 
-- *Debugging* helps uncover bugs and errors by stepping through the code, line by line. Some editors have debugging capabilities; they can be customized and added for specific programming languages.  
+- *Debugging* helps uncover bugs and errors by stepping through the code, line by line. Some editors have debugging capabilities; they can be customized and added for specific programming languages.
 - *Syntax highlighting* adds colors and text formatting to code, making it easier to read. Most editors allow customized syntax highlighting.
 - *Extensions and Integrations* are specialized tools for developers, by developers. These tools weren't built into the base editor. For example, many developers document their code to explain how it works. They may install a spell check extension to help find typos within the documentation. Most extensions are intended for use within a specific editor, and most editors come with a way to search for available extensions.
 - *Customization* enables developers to create a unique development environment to suit their needs. Most editors are extremely customizable and may also allow developers to create custom extensions.
@@ -112,9 +112,9 @@ Developers rely on editors for a few additional reasons:
 #### Popular Editors and Web Development Extensions
 
 - [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker/?WT.mc_id=academic-77807-sagibbon)
-  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack/?WT.mc_id=academic-77807-sagibbon)
-  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode/?WT.mc_id=academic-77807-sagibbon)
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Atom](https://atom.io/)
   - [spell-check](https://atom.io/packages/spell-check)
   - [teletype](https://atom.io/packages/teletype)
@@ -132,7 +132,7 @@ Many browsers come with *developer tools* (DevTools) that contain a set of helpf
 
 #### Popular Browsers and DevTools
 
-- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium?WT.mc_id=academic-77807-sagibbon)
+- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)
 - [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
 - [Firefox](https://developer.mozilla.org/docs/Tools)
 
@@ -148,8 +148,8 @@ Options for the command line will differ based on the operating system you use.
 
 #### Windows
 
-- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-77807-sagibbon) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-77807-sagibbon) (also known as CMD) 💻
+- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7/?WT.mc_id=academic-77807-sagibbon) 💻
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (also known as CMD) 💻
 - [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)
 - [mintty](https://mintty.github.io/)
   
@@ -157,13 +157,13 @@ Options for the command line will differ based on the operating system you use.
 
 - [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) 💻
 - [iTerm](https://iterm2.com/)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7?WT.mc_id=academic-77807-sagibbon)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
 
 #### Linux
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
 - [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-77807-sagibbon)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
 
 #### Popular Command Line Tools
 
@@ -180,7 +180,8 @@ When a developer wants to learn something new, they'll most likely turn to docum
 - [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), from Mozilla, the publishers of the [Firefox](https://www.mozilla.org/firefox/) browser
 - [Frontend Masters](https://frontendmasters.com/learn/)
 - [Web.dev](https://web.dev), from Google, publishers of [Chrome](https://www.google.com/chrome/)
-- [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers?WT.mc_id=academic-77807-sagibbon), for [Microsoft Edge](https://www.microsoft.com/edge/?WT.mc_id=academic-77807-sagibbon)
+- [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
+- [W3 Schools](https://www.w3schools.com/where_to_start.asp)
 
 ✅ Do some research: Now that you know the basics of a web developer's environment, compare and contrast it with a web designer's environment.
 

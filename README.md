@@ -12,40 +12,29 @@
 
 # Web Development for Beginners - A Curriculum
 
-Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson curriculum all about JavaScript, CSS, and HTML basics. Each lesson includes pre- and post-lesson quizzes, written instructions to complete the lesson, a solution, an assignment and more. Our project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
+Learn the fundamentals of JavaScript, CSS, and HTML with our comprehensive 12-week course, brought to you by Microsoft Cloud Advocates. Each of the 24 lessons includes pre- and post-lesson quizzes, detailed written instructions, solutions, assignments, and much more. With a project-based approach to learning, our curriculum is designed to help you develop practical skills through hands-on building. Enhance your skills and optimize your knowledge retention with our effective project-based pedagogy.
 
-**Hearty thanks to our authors Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees, and sketchnote artist Tomomi Imura!**
+### _Are you a student?_
 
-# Are you a student?
-
-Get started with the following resources:
-
-- [Student Hub page](https://docs.microsoft.com/en-gb/learn/student-hub?WT.mc_id=academic-13441-cxa) In this page, you will find beginner resources, Student packs and even ways to get a free cert voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
-- [Microsoft Student Learn ambassadors](https://studentambassadors.microsoft.com?WT.mc_id=academic-13441-cxa) Join a global community of student ambassadors. This could be your way into Microsoft
+Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
 # Getting Started
 
 > **Teachers**, we have [included some suggestions](for-teachers.md) on how to use this curriculum. We'd love your feedback [in our discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-> **[Students](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, to use this curriculum on your own, fork the entire repo and complete the exercises on your own, starting with a pre-lecture quiz, then reading the lecture and completing the rest of the activities. Try to create the projects by comprehending the lessons rather than copying the solution code; however, that code is available in the /solutions folders in each project-oriented lesson. Another idea would be to form a study group with friends and go through the content together. For further study, we recommend [Microsoft Learn](https://docs.microsoft.com/users/jenlooper-2911/collections/jg2gax8pzd6o81?WT.mc_id=academic-77807-sagibbon) and by watching the videos mentioned below.
-
-[![Promo video](images/web.gif)](https://youtube.com/watch?v=R1wrdtmBSII)
-
-Gif by [Mohit Jaisal](https://linkedin.com/in/mohitjaisal)
-
-> 🎥 Click the image above for a video about the project and the folks who created it!
+> **[Students](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, to fully benefit from this curriculum, we encourage you to fork the entire repository and engage in self-study. Start with a pre-lecture quiz and follow through with reading the lecture material and completing the various activities. Emphasize on comprehending the lessons rather than just copying the solution code. However, if needed, the solution code can be found in the */solutions folders* within each project-based lesson. Another great way to enhance your learning experience is to form a study group with your peers and work through the curriculum together. To further your education, we highly recommend exploring [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) for additional study materials..
 
 ## Pedagogy
 
-We have chosen two pedagogical tenets while building this curriculum: ensuring that it is project-based and that it includes frequent quizzes. By the end of this series, students will have built a typing game, a virtual terrarium, a 'green' browser extension, a 'space invaders' type game, and a business-type banking app, and will have also learned the basics of JavaScript, HTML, and CSS along with the modern toolchain of today's web developer.
+Our curriculum is designed with two key pedagogical principles in mind: project-based learning and frequent quizzes. The program teaches the fundamentals of JavaScript, HTML, and CSS, as well as the latest tools and techniques used by today's web developers. Students will have the opportunity to develop hands-on experience by building a typing game, virtual terrarium, eco-friendly browser extension, space-invader-style game, and a banking app for businesses. By the end of the series, students will have gained a solid understanding of web development.
 
-> 🎓 You can take the first few lessons in this curriculum as a [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101?WT.mc_id=academic-77807-sagibbon) on Microsoft Learn!
+> 🎓 You can take the first few lessons in this curriculum as a [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) on Microsoft Learn!
 
-By ensuring that the content aligns with projects, the process is made more engaging for students and retention of concepts will be augmented. We also wrote several starter lessons in JavaScript basics to introduce concepts, paired with a video from the "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=academic-77807-sagibbon)" collection of video tutorials, some of whose authors contributed to this curriculum.
+By ensuring that the content aligns with projects, the process is made more engaging for students and retention of concepts will be augmented. We also wrote several starter lessons in JavaScript basics to introduce concepts, paired with a video from the "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" collection of video tutorials, some of whose authors contributed to this curriculum.
 
-In addition, a low-stakes quiz before a class sets the intention of the student towards learning a topic, while a second quiz after class ensures further retention. This curriculum was designed to be flexible and fun and can be taken in whole or in part. The projects start small and become increasingly complex by the end of the 12 week cycle.
+In addition, a low-stakes quiz before a class sets the intention of the student towards learning a topic, while a second quiz after class ensures further retention. This curriculum was designed to be flexible and fun and can be taken in whole or in part. The projects start small and become increasingly complex by the end of the 12-week cycle.
 
-While we have purposefully avoided introducing JavaScript frameworks so as to concentrate on the basic skills needed as a web developer before adopting a framework, a good next step to completing this curriculum would be learning about Node.js via another collection of videos: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs?WT.mc_id=academic-77807-sagibbon)".
+While we have purposefully avoided introducing JavaScript frameworks to concentrate on the basic skills needed as a web developer before adopting a framework, a good next step to completing this curriculum would be learning about Node.js via another collection of videos: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
 > Find our [Code of Conduct](CODE_OF_CONDUCT.md), [Contributing](CONTRIBUTING.md), and [Translation](TRANSLATIONS.md) guidelines. We welcome your constructive feedback!
 
@@ -89,7 +78,7 @@ While we have purposefully avoided introducing JavaScript frameworks so as to co
 | 19  |           [Space Game](/6-space-game/solution/README.md)           |                             Keeping score                              | Perform math calculations based on the game's status and performance                                                                |                                    [Keeping Score](/6-space-game/5-keeping-score/README.md)                                    |          Chris          |
 | 20  |           [Space Game](/6-space-game/solution/README.md)           |                     Ending and restarting the game                     | Learn about ending and restarting the game, including cleaning up assets and resetting variable values                              |                                [The Ending Condition](/6-space-game/6-end-condition/README.md)                                 |          Chris          |
 | 21  |         [Banking App](/7-bank-project/solution/README.md)          |                 HTML Templates and Routes in a Web App                 | Learn how to create the scaffold of a multipage website's architecture using routing and HTML templates                             |                            [HTML Templates and Routes](/7-bank-project/1-template-route/README.md)                             |          Yohan          |
-| 22  |         [Banking App](/7-bank-project/solution/README.md)          |                  Build a Login and Registration Form                   | Learn about building forms and handing validation routines                                                                          |                                           [Forms](/7-bank-project/2-forms/README.md)                                           |          Yohan          |
+| 22  |         [Banking App](/7-bank-project/solution/README.md)          |                  Build a Login and Registration Form                   | Learn about building forms and handling validation routines                                                                          |                                           [Forms](/7-bank-project/2-forms/README.md)                                           |          Yohan          |
 | 23  |         [Banking App](/7-bank-project/solution/README.md)          |                   Methods of Fetching and Using Data                   | How data flows in and out of your app, how to fetch it, store it, and dispose of it                                                 |                                            [Data](/7-bank-project/3-data/README.md)                                            |          Yohan          |
 | 24  |         [Banking App](/7-bank-project/solution/README.md)          |                      Concepts of State Management                      | Learn how your app retains state and how to manage it programmatically                                                              |                                [State Management](/7-bank-project/4-state-management/README.md)                                |          Yohan          |
 
@@ -105,10 +94,11 @@ A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-
 
 Our team produces other curricula! Check out:
 
-- [Machine Learning for Beginners](https://aka.ms/ml-beginners/?WT.mc_id=academic-77807-sagibbon)
-- [IoT for Beginners](https://aka.ms/iot-beginners/?WT.mc_id=academic-77807-sagibbon)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners/?WT.mc_id=academic-77807-sagibbon)
-- [AI for Beginners](https://aka.ms/ai-beginners/?WT.mc_id=academic-77807-sagibbon)
+- [AI for Beginners](https://aka.ms/ai-beginners)
+- [Data Science for Beginners](https://aka.ms/datascience-beginners)
+- [IoT for Beginners](https://aka.ms/iot-beginners)
+- [Machine Learning for Beginners](https://aka.ms/ml-beginners)
+- [XR Development for Beginners](https://aka.ms/xr-dev-for-beginners)
 
 ## License
 

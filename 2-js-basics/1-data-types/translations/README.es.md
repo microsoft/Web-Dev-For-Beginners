@@ -99,7 +99,7 @@ Las constantes son similares a las variables, con dos excepciones:
 
       Arriba está cambiando el valor del objeto pero no la referencia en sí, lo que lo permite.
 
-   > Tenga en cuenta que `const` significa que la referencia está protegida contra la reasignación. Sin embargo, el valor no es _immutable_ y puede cambiar, especialmente si es una construcción compleja como un objeto.
+   > Tenga en cuenta que `const` significa que la referencia está protegida contra la reasignación. Sin embargo, el valor no es _inmutable_ y puede cambiar, especialmente si es una construcción compleja como un objeto.
 
 ## Tipos de datos
 

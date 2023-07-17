@@ -5,7 +5,9 @@ Esta lección cubre los conceptos básicos de los lenguajes de programación. Lo
 ![Intro Programming](/sketchnotes/webdev101-programming.png)
 > Dibujo por [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Cuestionario](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1)
+## Cuestionario Previo a la Clase
+[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1)
+
 ### Introducción
 
 En esta lección, cubriremos:
@@ -19,7 +21,6 @@ En esta lección, cubriremos:
 
 La programación (también conocida como codificación) es el proceso de escribir instrucciones en un dispositivo, como una computadora o un celular. Escribimos estas instrucciones con un lenguaje de programación, que luego es interpretado por el dispositivo. Este conjuntos de instrucciones pueden tener varios nombres, como *programa*, *programa de computadora*, *aplicación (app)* o *ejecutable* son algunos de los más populares.
 
-
 Un *programa* puede ser cualquier cosa que esté escrita con código; los sitios web, los videojuegos y las aplicaciones de teléfono son programas. Si bien es posible crear un programa sin escribir código, la lógica subyacente se interpreta al dispositivo y esa lógica probablemente se escribió con código. Un programa que está *ejecutándose* o *ejecutando código*, está ejecutando una serie de instrucciones. El dispositivo con el que estás leyendo esta lección está ejecutando un programa para imprimirlo en tu pantalla.
 
 ✅ Investigue un poco: ¿quién se considera el primer programador(a) de computadoras del mundo?
@@ -30,7 +31,7 @@ Los lenguajes de programación tienen un propósito principal: que los desarroll
 
 Los lenguajes de programación vienen en diferentes formatos y tienen diferentes propósitos. Por ejemplo, JavaScript se usa principalmente para aplicaciones web, mientras que Bash se usa principalmente para sistemas operativos.
 
-*Los idiomas de bajo nivel* normalmente requieren menos pasos que los *idiomas de alto nivel* para que un dispositivo interprete las instrucciones. Sin embargo, lo que hace que los lenguajes de alto nivel sean populares es su legibilidad y soporte. JavaScript es considerado un lenguaje de alto nivel.
+*Los lenguajes de bajo nivel* normalmente requieren menos pasos que los *lenguajes de alto nivel* para que un dispositivo interprete las instrucciones. Sin embargo, lo que hace que los lenguajes de alto nivel sean populares es su legibilidad y soporte. JavaScript es considerado un lenguaje de alto nivel.
 
 El siguiente código ilustra la diferencia entre un lenguaje de alto nivel con JavaScript y un lenguaje de bajo nivel con código Assembly ARM.
 
@@ -126,7 +127,7 @@ Muchos navegadores vienen con *herramientas para desarrolladores* (DevTools) que
 
 #### Navegadores y herramientas de desarrollo populares
 
-- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium?WT.mc_id=academic-77807-sagibbon)
+- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)
 - [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
 - [Firefox](https://developer.mozilla.org/docs/Tools)
 
@@ -142,8 +143,8 @@ Las opciones para la línea de comando varían según el sistema operativo que u
 
 #### Windows
 
-- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-77807-sagibbon) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-77807-sagibbon) (also known as CMD) 💻
+- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7/?WT.mc_id=academic-77807-sagibbon) 💻
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (also known as CMD) 💻
 - [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)
 - [Mintty](https://mintty.github.io/)
   
@@ -151,13 +152,13 @@ Las opciones para la línea de comando varían según el sistema operativo que u
 
 - [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) 💻
 - [iTerm](https://iterm2.com/)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7?WT.mc_id=academic-77807-sagibbon)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
 
 #### Linux
 
 - [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
 - [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7?WT.mc_id=academic-77807-sagibbon)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
 
 #### Línea de comandos (CLI) Populares
 
@@ -178,14 +179,17 @@ Cuando un desarrollador quiere aprender algo nuevo, lo más probable es que recu
 
 ✅ Investiga un poco: ahora que conoces los conceptos básicos del entorno de un desarrollador web, compáralo y contrasta con el entorno de un diseñador web.
 
+---
+
 ## 🚀 Reto
 
 Compara algunos lenguajes de programación. ¿Cuáles son algunos de los rasgos únicos de JavaScript frente a Java? ¿Qué hay de COBOL vs. Go?
 
-## [Prueba Post-lectura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+## [Cuestionario Posterior a la Clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
 
-## Revisión y autoestudio
+## Revisión y Autoestudio
 
 Estudia un poco sobre los diferentes lenguajes disponibles para programar. Intenta escribir una línea en un lenguaje y luego vuelve a hacerlo en otros dos. ¿Qué aprendiste?
 
-**Tarea**: [Tarea](../assignment.md)
+## [Tarea](./assignment.es.md)
+

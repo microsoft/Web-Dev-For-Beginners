@@ -5,13 +5,13 @@ Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar
 ![Introducción a GitHub](/sketchnotes/webdev101-github.png)
 > Dibujo de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## [Cuestionario](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+## [Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ### Introducción
 
 En esta lección, cubriremos:
 
-- Seguimiento de trabajo que se realiza en su maquina.
+- Seguimiento de trabajo que se realiza en su máquina.
 - Trabajar en proyectos con otros.
 - Cómo contribuir al software de código abierto (Open Source)
 
@@ -27,11 +27,11 @@ Si Git no está instalado, [descargue Git desde aquí](https://git-scm.com/downl
 Para comprobar si Git ya está configurado, escribe:
 `git config --list`
 
-También necesitarás una cuenta de GitHub, un editor de código (como Visual Studio Code) una terminal (tambien conocida como linea de comandos o simbolo del sistema).
+También necesitarás una cuenta de GitHub, un editor de código (como Visual Studio Code) una terminal (también conocida como línea de comandos o símbolo del sistema).
 
 Ve a [GitHub.com](https://github.com/) y crea una cuenta si aún no lo has hecho, o inicia sesión y completa tu perfil.
 
-✅ GitHub no es el único lugar para almacenar codigo; hay otros, pero GitHub es el más conocido.
+✅ GitHub no es el único lugar para almacenar código; hay otros, pero GitHub es el más conocido.
 
 ### Preparación
 
@@ -44,6 +44,10 @@ Necesitarás un directorio con un proyecto de código en tu máquina local (comp
 Digamos que tienes una directorio local con algún proyecto de código y deseas rastrear tu progreso usando git (sistema de control de versiones). Algunas personas comparan el uso de git con escribir una carta de amor a tu futuro. Al leer tus mensajes de confirmación días, semanas o meses después, podrás recordar por qué tomaste una decisión o "revertiste" un cambio, siempre y cuando escribas buenos mensajes a la hora de enviar un commit.
 
 ### Tarea: Hacer un repositorio git y enviar código
+
+> Revisa este video
+> 
+> [![Video de los conceptos básicos de Git y GitHub](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
 
 1. **Crear repositorio en GitHub**. En GitHub.com, en la pestaña de repositorios, o en la barra de navegación superior derecha, busca el botón **nuevo repositorio**.
 
@@ -113,7 +117,7 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
    git reset [nombre del archivo o carpeta]
    ```
 
-  Este comando nos ayuda a eliminar un archivo/directorio puntual, para que este no sea enviado en el proximo commit.
+  Este comando nos ayuda a eliminar un archivo/directorio puntual, para que éste no sea enviado en el próximo commit.
 
 
 1. **Persistir en tu trabajo**. En este punto, has agregado los archivos a lo que se denomina _stagin area_. Un lugar donde Git rastrea tus archivos. Para que el cambio sea permanente, debes realizar un _commit_. Para hacerlo, utilizas el siguiente commando `git commit`. Un _commit_ representa un punto en el historial de tu repositorio que estás guardando, este viene acompañado de un mensaje, el cual nos sirve para saber que cambios se hicieron dentro de ese commit. Ejecuta el siguiente comando para realizar tu primer commit.
@@ -133,6 +137,12 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
    ```
 
    Esto crea un _remote_, o conexión, llamado "origin" que apunta al repositorio de GitHub que creaste anteriormente.
+   
+   Si tienes una conexión previa con algún "origin" y deseas cambiar la dirección puedes utilizar el siguiente comando:
+   
+   ```bash
+   git remote set-url https://github.com/USUARIO/NOMBRE DEL REPOSITORIO.git
+   ```
 
 1. **Envía archivos locales a GitHub**. Hasta ahora ha creado una _conexión_ entre el repositorio local y el repositorio de GitHub. Enviemos estos archivos a GitHub con el siguiente comando `git push`, así:
  
@@ -151,24 +161,27 @@ Digamos que tienes una directorio local con algún proyecto de código y deseas 
    git push
    ```
 
-   > Sugerencia: es posible que también desees adoptar un archivo `.gitignore` para evitar que los archivos que no deseas rastrear aparezcan en GitHub. Puedes encontrar plantillas para archivos `.gitignore` en [.gitignore templates](github.com/github/gitignore).
+   > Sugerencia: es posible que también desees adoptar un archivo `.gitignore` para evitar que los archivos que no deseas rastrear aparezcan en GitHub. Puedes encontrar plantillas para archivos `.gitignore` en [.gitignore templates](https://github.com/github/gitignore).
 
 
 #### Confirmar mensajes
 
 Una buena línea de asunto (subject line), completa la siguiente frase: "Si se aplica, este commit hará..."
 
-Para el asunto use el imperativo, tiempo presente: "cambiar" no "cambió" ni "cambiara".
+Para el asunto use el imperativo, tiempo presente: "cambiar" no "cambió" ni "cambiará".
 Como en el asunto, en el cuerpo (opcional) también use el presente imperativo. El cuerpo debe incluir el motivo del cambio y contrastarlo con el funcionamiento previo. Estás explicando el "por qué", no el "cómo".
 
 ✅ Tómate unos minutos para navegar por GitHub. ¿Puedes encontrar un mensaje de commit realmente bueno? ¿Puedes hallar uno aún más simple? ¿Qué información crees que es la más importante y útil de transmitir en un mensaje de commit?
 
 ### Tarea: Colaborar
 
-
 La razón principal para poner cosas en GitHub fue hacer posible la colaboración con otros desarrolladores.
 
 ## Trabajando en proyectos con otros
+
+> Revisa este video
+>
+> [![Video de los conceptos básicos de Git y GitHub](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
 En tu repositorio, ve a `Insights > Community` para ver cómo se compara tu proyecto con los estándares comunitarios recomendados.
 
@@ -191,7 +204,7 @@ Los documentos de contribución ayudan a las personas a contribuir al proyecto. 
 1. **Bifurcando (forking) tu repositorio** Probablemente querrás que la gente _bifurque_ (fork) tu proyecto. Bifurcar significa crear una réplica de tu repositorio en su perfil de GitHub.
 1. **Clonar**. Desde allí, clonarán el proyecto en su máquina local.
 1. **Crear una rama**. Querrás pedirles que creen una _rama_ para su trabajo.
-1. **Concentre su cambio en un área**. Pida a los colaboradores que concentren sus contribuciones en una cosa a la vez; de esa manera, las posibilidades de _fusionar_ su trabajo son mayores. Imagínate que escriben una corrección de errores, agregan una nueva función y actualizan varias pruebas; ¿qué sucede si quieres todos los cambios o solo puedes implementar 2 de 3 o 1 de 3 cambios?
+1. **Concentre su cambio en un área**. Pida a los colaboradores que concentren sus contribuciones en una cosa a la vez; de esa manera, las posibilidades de _fusionar_ su trabajo son mayores. Imagínate que escriben una corrección de errores, agregan una nueva función y actualizan varias pruebas; ¿qué sucede si quieres todos los cambios o solo puedes implementar 2 de 3 ó 1 de 3 cambios?
 
 ✅ Imagínate una situación en la que las ramas (branches) de git son particularmente críticas para escribir y enviar buen código. ¿Qué casos de uso se te ocurren?
 
@@ -270,6 +283,8 @@ Primero, busquemos un repositorio en GitHub que te interese y al que te gustarí
 
 ✅ Una buena forma de encontrar repositorios 'aptos para principiantes' es [buscar por la etiqueta `good-first-issue`](https://github.blog/2020-01-22-browse-good-first-issues-para-empezar-a-contribuir-al-código-abierto/).
 
+![Copia un repositorio localmente](../images/clone_repo.png)
+
 Hay varias formas de copiar código. Una forma es "clonar" el contenido del repositorio, usando HTTPS, SSH o usando GitHub CLI (Interfaz de línea de comandos).
 
 Abre tu terminal y clona el repositorio así:
@@ -284,7 +299,7 @@ Por último, puedes descargar el código en un directorio comprimido.
 
 ### Algunas cosas más interesantes sobre GitHub
 
-Puede destacar, ver y / o "fork" cualquier repositorio público en GitHub. Puedes encontrar tus repositorios destacados en el menú desplegable de la parte superior derecha. Es como marcar como favorito, pero por código.
+Puedes destacar, ver y/o hacer "fork" cualquier repositorio público en GitHub. Asimismo, encontrar tus repositorios destacados en el menú desplegable de la parte superior derecha. Es como marcar como favorito, pero por código.
 
 Los proyectos tienen un rastreador de problemas, principalmente en GitHub en la pestaña "Issues" a menos que se indique lo contrario, donde las personas debaten los problemas relacionados con el proyecto. Y la pestaña Pull requests es donde las personas debaten y revisan los cambios que están en curso.
 
@@ -292,20 +307,26 @@ Los proyectos también pueden tener discusiones en foros, listas de correo o can
 
 ✅ Echa un vistazo a tu nuevo repositorio de GitHub y prueba algunas cosas, como editar la configuración, agregar información a tu repositorio y crear un proyecto (como un tablero Kanban). ¡Hay muchas cosas que puedes hacer!
 
-🚀 Desafío: Haz pareja con un amigo(a) para trabajar juntos en el código. Crea un proyecto de forma colaborativa, haz fork del proyecto, crea ramas y combina los cambios.
+---
 
-## [Post-lecture prueba](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+## 🚀 Reto
 
-## Revisión y autoestudio
+Reúnete con un amigo para trabajar en el código del otro. Crea un proyecto en colaboración, haz fork del código, crea ramas y hagan merge a los cambios.
+
+## [Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+
+## Revisión y Autoestudio
 
 Obtén más información sobre [contribución al software de código abierto](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution).
 
 [Hoja de referencia de Git](https://training.github.com/downloads/github-git-cheat-sheet/).
 
-Práctica práctica práctica. GitHub tiene excelentes rutas de aprendizaje disponibles a través de [lab.github.com](https://lab.github.com/):
+Practica, practica, practica. GitHub tiene excelentes rutas de aprendizaje disponibles a través de [skills.github.com](https://skills.github.com/):
 
-- [Primera semana en GitHub](https://lab.github.com/githubtraining/first-week-on-github)
+- [Primera semana en GitHub](https://skills.github.com/#first-week-on-github)
 
 También encontrarás laboratorios más avanzados.
 
-**Tarea**: Completa [la primera semana en el laboratorio de capacitación de GitHub](https://lab.github.com/githubtraining/first-week-on-github)
+## Tarea
+
+Completa [La Primera Semana en el Laboratorio de capacitación de GitHub](https://skills.github.com/#first-week-on-github)

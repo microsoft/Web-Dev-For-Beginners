@@ -2,7 +2,7 @@
 
 ## Instrucciones
 
-Cree un programa que enumere cada tercer número entre 1 y 20 y lo imprima en la consola.
+Cree un programa que enumere cada tercer número entre 1 y 20 e imprimalo en la consola.
 
 > SUGERENCIA: use un bucle for y modifique la expresión-iteración
 

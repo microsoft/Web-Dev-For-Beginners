@@ -318,12 +318,12 @@ Read more about [contributing to open source software](https://opensource.guide/
 
 [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/).
 
-Practice, practice, practice. GitHub has great learning paths available via [lab.github.com](https://lab.github.com/):
+Practice, practice, practice. GitHub has great learning paths available via [skills.github.com](https://skills.github.com):
 
-- [First Week on GitHub](https://lab.github.com/githubtraining/first-week-on-github)
+- [First Week on GitHub](https://skills.github.com/#first-week-on-github)
 
-You'll also find more advanced labs. 
+You'll also find more advanced courses. 
 
 ## Assignment 
 
-Complete [the First Week on GitHub training lab](https://lab.github.com/githubtraining/first-week-on-github)
+Complete [the First Week on GitHub course](https://skills.github.com/#first-week-on-github)

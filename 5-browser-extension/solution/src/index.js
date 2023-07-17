@@ -1,4 +1,4 @@
-import axios from './node_modules/axios';
+import axios from 'axios';
 
 // form fields
 const form = document.querySelector('.form-data');
@@ -67,14 +67,14 @@ const displayCarbonUsage = async (apiKey, region) => {
 };
 
 // set up api key and region
-const setUpUser = async (apiKey, regionName) => {
+const setUpUser = async (apiKey, region) => {
 	localStorage.setItem('apiKey', apiKey);
-	localStorage.setItem('regionName', regionName);
+	localStorage.setItem('region', region);
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
 	//make initial call
-	displayCarbonUsage(apiKey, regionName);
+	displayCarbonUsage(apiKey, region);
 };
 
 // handle form submission
@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
 const init = async () => {
 	//if anything is in localStorage, pick it up
 	const storedApiKey = localStorage.getItem('apiKey');
-	const storedRegion = localStorage.getItem('regionName');
+	const storedRegion = localStorage.getItem('region');
 
 	//set icon to be generic green
 	chrome.runtime.sendMessage({
@@ -116,7 +116,7 @@ const init = async () => {
 const reset = async (e) => {
 	e.preventDefault();
 	//clear local storage for region only
-	localStorage.removeItem('regionName');
+	localStorage.removeItem('region');
 	init();
 };
 

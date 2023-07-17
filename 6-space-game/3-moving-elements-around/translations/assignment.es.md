@@ -7,5 +7,5 @@ Revisa tu archivo /app.js actual en la carpeta de tu juego y busca formas de com
 ## Rúbrica
 
 | Criterios | Ejemplar | Adecuado | Necesita mejorar |
-| -------- | -------------------------------------------------- ---------------- | ------------------------------------- | -------------------------------------------------- ------------ |
+| -------- | ---------------- | ------------------------------------- | ------------ |
 | | El código `app.js` está completamente comentado y organizado en bloques lógicos | El código `app.js` está adecuadamente comentado | El código `app.js` está algo desorganizado y carece de buenos comentarios |

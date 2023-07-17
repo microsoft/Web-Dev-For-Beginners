@@ -81,6 +81,45 @@ else{
 
 ✅ Test your understanding of this code and the following code by running it in a browser console. Change the values of the currentMoney and laptopPrice variables to change the returned `console.log()`.
 
+
+## Switch Statement
+
+The `switch` statement is used to perform different actions based on different conditions.Use the `switch` statement to select one of many code blocks to be executed.
+
+```javascript
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+```
+
+```javascript
+// program using switch statement
+let a = 2;
+
+switch (a) {
+
+    case 1:
+        a = 'one';
+        break;
+    case 2:
+        a = 'two';
+        break;
+    default:
+        a = 'not found';
+        break;
+}
+console.log(`The value is ${a}`);
+```
+✅ Test your understanding of this code and the following code by running it in a browser console. Change the values of the varaiable a to change the returned `console.log()`.
+
+
 ## Logical Operators and Booleans
 
 Decisions might require more than one comparison, and can be strung together with logical operators to produce a Boolean value.

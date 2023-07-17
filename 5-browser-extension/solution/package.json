@@ -3,6 +3,10 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
+		"engines": {
+		"npm": ">=9.0.0",
+		"node": ">=18.0.0"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"watch": "webpack --watch",
@@ -13,13 +17,13 @@
 		"edge extension",
 		"carbon usage tracker"
 	],
-	"author": "Jen Looper",
+	"author": "Microsoft Cloud Advocacy Team",
 	"license": "MIT",
 	"devDependencies": {
-		"webpack": "^4.44.1",
-		"webpack-cli": "^3.3.12"
+		"webpack": "^5.88.1",
+		"webpack-cli": "^5.1.4"
 	},
 	"dependencies": {
-  		"axios": "^0.21.1"
+		"axios": "^1.4.0"
 	}
 }

@@ -6,7 +6,7 @@
 
 Primero asegúrese de tener el [servidor API](../api/README.md) en ejecución.
 
-Se puede usar cualquier servidor web para ejecutar la aplicación, pero debido a que debes de tener [Node.js](https://nodejs.org) instalado para ejecutar la API, puedes:
+Se puede usar cualquier servidor web para ejecutar la aplicación, pero dado que debe tener [Node.js](https://nodejs.org) instalado de todos modos para ejecutar la API, puede:
 
 1. Git clone este repositorio.
 2. Abra una terminal, luego ejecute `npx lite-server solution`. Iniciará un servidor web de desarrollo en el puerto `3000`
