@@ -315,7 +315,7 @@ typedValueElement.addEventListener('input', () => {
 
 ¡Haz clic en **start** y empieza a escribir! Debería parecerse un poco a la animación que vimos antes.
 
-![Animation of the game in action](../../../4-typing-game/images/demo.gif)
+![Animacion de un juego en acción](../../../4-typing-game/images/demo.gif)
 
 ---
 
