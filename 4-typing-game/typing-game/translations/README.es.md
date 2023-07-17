@@ -338,4 +338,4 @@ Lea sobre [todos los eventos disponibles](https://developer.mozilla.org/docs/Web
 
 ## Asignación
 
-[Crear un nuevo juego de teclado](assignment.es.md)
+[Crear un nuevo juego de teclado](./assignment.es.md)
