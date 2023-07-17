@@ -12,7 +12,7 @@
 
 # Desarrollo Web para Principiantes - Un Programa de Estudios
 
-Los defensores de la nube de Azure en Microsoft se complacen en ofrecer un plan de estudios de 24 lecciones de 12 semanas que trata sobre los conceptos básicos de JavaScript, CSS y HTML. Cada lección incluye cuestionarios previos y posteriores a la lección, instrucciones escritas para completar la lección, una solución, una tarea y más. Nuestra pedagogía basada en proyectos te permite aprender mientras construyes, una forma comprobada de que las nuevas habilidades se 'peguen'.
+Los Cloud Advocates de Microsoft ofrecen un plan de estudios de 24 lecciones de 12 semanas que trata sobre los conceptos básicos de JavaScript, CSS y HTML. Cada lección incluye cuestionarios previos y posteriores a la lección, instrucciones escritas para completar la lección, una solución, una tarea y más. Nuestra pedagogía basada en proyectos te permite aprender mientras construyes, una forma comprobada de que las nuevas habilidades se 'peguen'.
 
 **¡Muchas gracias a nuestros autores Jen Looper, Chris Noring, Christopher Harrison, Jasmine Greenaway, Yohan Lasorsa, Floor Drees y al dibujante Tomomi Imura!**
 
