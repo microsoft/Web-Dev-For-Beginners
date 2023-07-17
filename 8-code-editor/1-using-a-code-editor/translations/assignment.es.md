@@ -50,7 +50,7 @@ https://github.com/your-username/my-resume
 ![Create a new file](../../images/project-on-vscode.dev.png)
 
 
-**Paso 4:** Abre el archivo `index.html`, pega el código a continuación en tu área de código y guarda
+**Paso 4:** Abre el archivo `index.html`, pega el código a continuación en tu área de código y guarda los cambios.
 
 <details>
     <summary><b>HTML code responsible for the content on your resume website.</b></summary>
