@@ -325,7 +325,7 @@ Añadir más funcionalidad
 
 - Deshabilita el detector de eventos `input` al finalizar y vuelve a habilitarlo cuando se haga clic en el botón
 - Deshabilita el cuadro de texto cuando el jugador complete la cita
-- Muestra un cuadro de diálogo modal con el mensaje de éxito
+- Muestra un cuadro de diálogo modal _(modal dialog box)_ con el mensaje de éxito
 - Almacene puntajes altos usando [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
 
 ## Cuestionario posterior a la clase
