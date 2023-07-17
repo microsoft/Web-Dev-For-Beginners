@@ -238,6 +238,7 @@ Si estás satisfecho con los cambios que realizaste, coloca el cursor sobre la c
 Escribe un mensaje de confirmación _(Una descripción del cambio que has realizado en el proyecto)_ y confirma tus cambios haciendo clic en el `check`. Una vez que hayas terminado de trabajar en tu proyecto, selecciona el ícono del menú de hamburguesa en la parte superior izquierda para regresar al repositorio en GitHub.
 
 Felicidades 🎉 Acabas de crear tu sitio web de currículum utilizando vscode.dev en unos pocos pasos.
+
 ## 🚀 Desafío
 
 Abre un repositorio remoto en el que tenga permisos para realizar cambios y actualiza algunos archivos. A continuación, intenta crear una nueva rama con tus cambios y realiza un Pull Request.
