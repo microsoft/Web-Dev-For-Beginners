@@ -95,7 +95,7 @@ while (i < 10) {
 }
 ```
 
-✅ ¿Por qué elegiría un bucle for frente a un bucle while? 17K espectadores tenían la misma pregunta en StackOverflow, y algunas de las opiniones [podrían ser interesantes para usted](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
+✅ ¿Por qué elegiría un bucle _for_ en lugar de un bucle _while_? 17K espectadores tenían la misma pregunta en StackOverflow, y algunas de las opiniones [podrían ser interesantes para usted](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
 
 ## Bucles y matrices
 
