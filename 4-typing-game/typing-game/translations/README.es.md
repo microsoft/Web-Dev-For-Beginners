@@ -189,6 +189,8 @@ const typedValueElement = document.getElementById('typed-value');
 
 Tómate un minuto para ver un video sobre el uso de `const`, `let` y `var`
 
+> 🎥 Haz clic en la imagen inferior para ver un video sobre las variables.
+
 [![Types of variables](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Types of variables")
 
 > 🎥 Haga clic en la imagen de arriba para ver un video sobre las variables.
