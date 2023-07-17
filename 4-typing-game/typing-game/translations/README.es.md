@@ -311,7 +311,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## Prueba tu aplicación
 
-¡Has llegado hasta el final! El último paso es asegurarnos de que nuestra aplicación funcione. ¡Dale un tiro! No se preocupe si hay errores; **todos los desarrolladores** tienen errores. Examine los mensajes y depure según sea necesario.
+¡Has llegado hasta el final! El último paso es asegurarnos de que nuestra aplicación funcione. ¡Pruebalo! No te preocupes si hay errores; **todos los desarrolladores** cometen errores. Examina los mensajes y soluciona según sea necesario.
 
 ¡Haz clic en **start** y empieza a escribir! Debería parecerse un poco a la animación que vimos antes.
 
