@@ -45,7 +45,7 @@ _Reemplaza `your-username` con tu nombre de usuario de GitHub_
 https://github.com/your-username/my-resume
 ```
 
-✅ Si tienes éxito, verás que su proyecto y el archivo index.html se abren en el editor de texto del navegador.
+✅ Si tienes éxito, verás que tu proyecto y el archivo index.html se abren en el editor de texto del navegador.
 
 ![Create a new file](../../images/project-on-vscode.dev.png)
 
