@@ -36,7 +36,7 @@ TODO: add an optional image
 
 当编辑器加载完成，它应该看起来如下图所示:
 
-![默认 VSCode.dev](../images/default-vscode-dev.png)
+![默认 VSCode.dev](../../images/default-vscode-dev.png)
 
 其拥有三个主要部分，从左到右依次为
 
@@ -56,12 +56,12 @@ TODO: add an optional image
 
 使用编辑器打开远程存储库。在 [VSCode.dev](https://vscode.dev) 中，使用 _"打开远程存储库"_ 按钮:
 
-![打开远程存储库](../images/open-remote-repository.png)
+![打开远程存储库](../../images/open-remote-repository.png)
 
 你也可以通过命令面板来实现. 命令面板是一个输入框，你可以在其中输入部分命令或操作的名称，来找到并执行正确的命令。通过左上角的菜单，选择 _查看_ ，然后 _命令面板_ 。或通过键盘快捷键: Ctrl-Shift-P 或
 Command-Shift-P (MacOS).
 
-![命令面板](../images/palette-menu.png)
+![命令面板](../../images/palette-menu.png)
 
 在输入框中, 输入 _打开远程存储库_ , 然后选择第一个选项。这时你将会看到一些你参与的或是最近打开过的存储库可供选择。或者通过输入完整 Github URL 来选择想要的存储库。将下列URL粘贴至输入框：
 
@@ -82,20 +82,20 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 
 你可以在现存文件夹中或在根目录中创建新文件。要创建新文件，点击你想要放置文件的目录/文件夹，点击 _'新建文件 ...'_ 图标来创建文件，输入名字并按回车键保存。
 
-![新建文件](../images/create-new-file.png)
+![新建文件](../../images/create-new-file.png)
 
 ### 2. 在存储库中修改并保存文件
 
 通过 vscode.dev 你可以十分便捷的快速更新项目而不需要在本地加载。
 如需更新代码，点击 '资源管理器' 图标来显示文件夹和文件。点击想要更改的文件，其代码将显示在右侧代码区域。
 
-![修改文件](../images/edit-a-file.png)
+![修改文件](../../images/edit-a-file.png)
 
 当你完成对代码的修改，点击 _`源代码管理`_ 图标，即可看到所有你对存储库的修改。
 
 如要查看对项目的修改，点击 `更改` 栏中的文件。这将打开此文件的'工作树'来直观的展现你对此文件的修改。红色背景的代码表示被删减，而绿色背景代码表示新增。
 
-![查看更改](../images/working-tree.png)
+![查看更改](../../images/working-tree.png)
 
 如果你对之前的更改满意，将鼠标放置 `更改` 栏并点击 `+` 按钮将更改暂存。所谓暂存，简单来说就是准备将更改提交到 GitHub。
 
@@ -105,7 +105,7 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 
 当完成对项目的更改，点击左上角的 `三` 图标并选择'转到存储库'跳转到其 Github 页面。
 
-![暂存并提交更改](../images/edit-vscode.dev.gif)
+![暂存并提交更改](../../images/edit-vscode.dev.gif)
 
 ## 使用扩展
 通过在 VSCode 中安装扩展，你可以添加新的功能、自定义开发环境来改善你的工作流。这些扩展还可以帮助你添加对多种编程语言的支持，它们通常是通用扩展或特定语言专用的扩展。
@@ -113,10 +113,10 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 通过点击活动栏的 _`拓展图标`_ ，并在显示 _'在应用商店中搜索拓展'_ 输入框中输入想要使用的拓展的名字，你就可以查看所有可用的拓展。
 在所有可用的拓展中，每一个都包含 **拓展名称, 发布者名称, 用一句话概括的简介, 下载数量** 以及 **评分**.
 
-![拓展详情](../images/extension-details.png)
+![拓展详情](../../images/extension-details.png)
 你也可以通过展开 _`已安装`_ 来查看所有已安装的拓展。_`热门`_ 中展示了大部分开发者会使用的热门拓展。_`推荐`_ 展示了基于同工作区中用户所使用，或最近打开文件所推荐的拓展。
 
-![查看拓展](../images/extensions.png)
+![查看拓展](../../images/extensions.png)
 
 
 ### 1. 安装拓展
@@ -124,12 +124,12 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 
 你可以通过点击拓展旁边的 _蓝色安装按钮_ 安装。或点击拓展，在详情页中通过安装按钮安装。
 
-![安装拓展](../images/install-extension.gif)
+![安装拓展](../../images/install-extension.gif)
 
 ### 2. 自定义拓展
 在安装推展后，你需要基于你的习惯对拓展进行一些设置与自定义。要做这一步，你需要点击拓展图标，你已安装的拓展将显示在 _已安装_ 标签下，点击 _**齿轮图标**_, 并选择 _拓展设置_ 。
 
-![修改拓展设置](../images/extension-settings.png)
+![修改拓展设置](../../images/extension-settings.png)
 
 ### 3. 管理拓展
 在安装拓展后，你可以在 vscode.dev 中基于不同需求设置拓展。
