@@ -10,21 +10,21 @@
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
-# Web Development for Beginners - A Curriculum
+# 💻 Web Development for Beginners - A Curriculum
 
 Learn the fundamentals of JavaScript, CSS, and HTML with our comprehensive 12-week course, brought to you by Microsoft Cloud Advocates. Each of the 24 lessons includes pre- and post-lesson quizzes, detailed written instructions, solutions, assignments, and much more. With a project-based approach to learning, our curriculum is designed to help you develop practical skills through hands-on building. Enhance your skills and optimize your knowledge retention with our effective project-based pedagogy.
 
-### _Are you a student?_
+### 🎓 _Are you a student?_
 
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
-# Getting Started
+# 🌱 Getting Started
 
 > **Teachers**, we have [included some suggestions](for-teachers.md) on how to use this curriculum. We'd love your feedback [in our discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
 > **[Students](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, to fully benefit from this curriculum, we encourage you to fork the entire repository and engage in self-study. Start with a pre-lecture quiz and follow through with reading the lecture material and completing the various activities. Emphasize on comprehending the lessons rather than just copying the solution code. However, if needed, the solution code can be found in the */solutions folders* within each project-based lesson. Another great way to enhance your learning experience is to form a study group with your peers and work through the curriculum together. To further your education, we highly recommend exploring [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) for additional study materials..
 
-## Pedagogy
+## 🏫 Pedagogy
 
 Our curriculum is designed with two key pedagogical principles in mind: project-based learning and frequent quizzes. The program teaches the fundamentals of JavaScript, HTML, and CSS, as well as the latest tools and techniques used by today's web developers. Students will have the opportunity to develop hands-on experience by building a typing game, virtual terrarium, eco-friendly browser extension, space-invader-style game, and a banking app for businesses. By the end of the series, students will have gained a solid understanding of web development.
 
@@ -38,7 +38,7 @@ While we have purposefully avoided introducing JavaScript frameworks to concentr
 
 > Find our [Code of Conduct](CODE_OF_CONDUCT.md), [Contributing](CONTRIBUTING.md), and [Translation](TRANSLATIONS.md) guidelines. We welcome your constructive feedback!
 
-## Each lesson includes:
+## 📕 Each lesson includes:
 
 - optional sketchnote
 - optional supplemental video
@@ -53,7 +53,7 @@ While we have purposefully avoided introducing JavaScript frameworks to concentr
 
 > **A note about quizzes**: All quizzes are contained [in this app](https://ashy-river-0debb7803.1.azurestaticapps.net/), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
 
-## Lessons
+## 📚 Lessons
 
 |     |                       Project Name                       |                            Concepts Taught                             | Learning Objectives                                                                                                                 |                                                         Linked Lesson                                                          |         Author          |
 | :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
@@ -82,15 +82,15 @@ While we have purposefully avoided introducing JavaScript frameworks to concentr
 | 23  |         [Banking App](/7-bank-project/solution/README.md)          |                   Methods of Fetching and Using Data                   | How data flows in and out of your app, how to fetch it, store it, and dispose of it                                                 |                                            [Data](/7-bank-project/3-data/README.md)                                            |          Yohan          |
 | 24  |         [Banking App](/7-bank-project/solution/README.md)          |                      Concepts of State Management                      | Learn how your app retains state and how to manage it programmatically                                                              |                                [State Management](/7-bank-project/4-state-management/README.md)                                |          Yohan          |
 
-## Offline access
+## 📴 Offline access
 
 You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
 
-## PDF
+## 📋 PDF
 
 A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
-## Other Curricula
+## 📏📐 Other Curricula
 
 Our team produces other curricula! Check out:
 
@@ -100,6 +100,6 @@ Our team produces other curricula! Check out:
 - [Machine Learning for Beginners](https://aka.ms/ml-beginners)
 - [XR Development for Beginners](https://aka.ms/xr-dev-for-beginners)
 
-## License
+## © License
 
 This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
