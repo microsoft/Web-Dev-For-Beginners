@@ -87,13 +87,13 @@ While we have purposefully avoided introducing JavaScript frameworks to concentr
 You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
 
 
-This project aims to simplify and guide the way beginners make their first contribution. If you are looking to make your first contribution, follow the steps below.
 
 
 ### Fork this repository
 
 Fork this repository by clicking on the fork button on the top of this page.
 This will create a copy of this repository in your account.
+
 
 ### Clone the repository
 
@@ -113,11 +113,14 @@ git clone https://github.com/your-name/Web-Dev-For-Beginners.git
 
 where `your-name` is your GitHub username. 
 
+
+
 ### Install Docsify
 
 ```
 npm install -g docsify-cli
 ```
+
 
 ### Navigate to Repository
 Change to the repository directory on your computer (if you are not already there):
