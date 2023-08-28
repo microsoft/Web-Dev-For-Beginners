@@ -80,7 +80,7 @@ This refactoring by itself did not bring much improvements, but the idea was to 
 
 ## Track data changes
 
-Now that we have put in place the `state` object to store our data, the next step is centralize the updates. The goal is to make it easier to keep track of any changes and when they happen.
+Now that we have put in place the `state` object to store our data, the next step is to centralize the updates. The goal is to make it easier to keep track of any changes and when they happen.
 
 To avoid having changes made to the `state` object, it's also a good practice to consider it [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), meaning that it cannot be modified at all. It also means that you have to create a new state object if you want to change anything in it. By doing this, you build a protection about potentially unwanted [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)), and open up possibilities for new features in your app like implementing undo/redo, while also making it easier to debug. For example, you could log every change made to the state and keep a history of the changes to understand the source of a bug.
 
@@ -142,7 +142,7 @@ Try registering a new account, logging out and in again to check that everything
 
 ## Persist the state
 
-Most web apps needs to persist data to be able to work correctly. All the critical data is usually stored on a database and accessed via a server API, like as the user account data in our case. But sometimes, it's also interesting to persist some data on the client app that's running in your browser, for a better user experience or to improve loading performance.
+Most web apps need to persist data to be able to work correctly. All the critical data is usually stored on a database and accessed via a server API, like as the user account data in our case. But sometimes, it's also interesting to persist some data on the client app that's running in your browser, for a better user experience or to improve loading performance.
 
 When you want to persist data in your browser, there are a few important questions you should ask yourself:
 
@@ -201,7 +201,7 @@ Now login in the app and try refreshing the page. You should stay on the dashboa
 
 ## Refresh the data
 
-...But we might also have a created a new one. Oops!
+...But we might also have created a new one. Oops!
 
 Go to the dashboard using the `test` account, then run this command on a terminal to create a new transaction:
 
