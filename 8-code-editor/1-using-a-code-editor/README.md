@@ -99,7 +99,7 @@ To view the changes you made to your project, select the file(s) in the `Changes
 
 ![View changes](../images/working-tree.png)
 
-If you are safisfied with the changes you made, hover on the `Changes` folder and click the `+` button to stage the changes. Staging simply means preparing your changes to commit them to GitHub.
+If you are satisfied with the changes you made, hover on the `Changes` folder and click the `+` button to stage the changes. Staging simply means preparing your changes to commit them to GitHub.
 
 If however you are not comfortable with some changes and you want to discard them, hover on the `Changes` folder and select the `undo` icon.
 
@@ -113,7 +113,7 @@ Once done working on your project, select the `hamburger menu icon` at the top l
 Installing extensions on VSCode allows you to add new features and customized development environment options on your editor to improve your development workflow. These extensions also help you add support for multiple programming languages and are often either generic extensions or language-based extensions.
 
 To browse through the list of all available extensions, click the _`Extensions icon`_ on the activity bar and start typing the name of the extension on the text field labelled _'Search Extensions in Marketplace'_.
-You will see a list of extensions, each one containing **the extension name, publisher's name, a 1 sentense description, number of downloads** and **a star rating**.
+You will see a list of extensions, each one containing **the extension name, publisher's name, a 1 sentence description, number of downloads** and **a star rating**.
 
 ![Extension details](../images/extension-details.png)
 
