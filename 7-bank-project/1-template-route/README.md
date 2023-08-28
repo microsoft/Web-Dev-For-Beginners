@@ -36,12 +36,12 @@ On your computer, create a folder named `bank` with a file named `index.html` in
 
 ## HTML templates
 
-If you want to create multiples screens for a web page, one solution would be to create one HTML file for every screen you want to display. However, this solution comes with some inconvenience:
+If you want to create multiple screens for a web page, one solution would be to create one HTML file for every screen you want to display. However, this solution comes with some inconvenience:
 
 - You have to reload the entire HTML when switching screen, which can be slow.
 - It's difficult to share data between the different screens.
 
-Another approach is have only one HTML file, and define multiple [HTML templates](https://developer.mozilla.org/docs/Web/HTML/Element/template) using the `<template>` element. A template is a reusable HTML block that is not displayed by the browser, and needs to be instantiated at runtime using JavaScript.
+Another approach is to have only one HTML file, and define multiple [HTML templates](https://developer.mozilla.org/docs/Web/HTML/Element/template) using the `<template>` element. A template is a reusable HTML block that is not displayed by the browser, and needs to be instantiated at runtime using JavaScript.
 
 ### Task
 
@@ -103,7 +103,7 @@ Then we'll add another HTML template for the dashboard page. This page will cont
 
 ## Displaying templates with JavaScript
 
-If you try your current HTML file in a browser, you'll see that it get stuck displaying `Loading...`. That's because we need to add some JavaScript code to instantiate and display the HTML templates.
+If you try your current HTML file in a browser, you'll see that it gets stuck displaying `Loading...`. That's because we need to add some JavaScript code to instantiate and display the HTML templates.
 
 Instantiating a template is usually done in 3 steps:
 
@@ -145,7 +145,7 @@ updateRoute('login');
 
 ## Creating routes
 
-When talking about a web app, we call *Routing* the intent to map **URLs** to specific screens that should be displayed. On a web site with multiple HTML files, this is done automatically as the file paths are reflected on the URL. For example, with these files in your project folder:
+When talking about a web app, we call *Routing* the intent to map **URLs** to specific screens that should be displayed. On a website with multiple HTML files, this is done automatically as the file paths are reflected on the URL. For example, with these files in your project folder:
 
 ```
 mywebsite/index.html
