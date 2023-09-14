@@ -4,7 +4,7 @@
 ここで取り上げた特徴は、最新のプログラミング言語のほとんどに当てはまります。
 次にツールセクションでは、開発者にとって有用なソフトウェアを紹介します。
 
-![Intro Programming](/sketchnotes/webdev101-programming.png)
+![Intro Programming](../../../sketchnotes/webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 事前クイズ
