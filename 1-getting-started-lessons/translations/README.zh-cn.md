@@ -4,7 +4,7 @@
 
 ### 主题
 
-1. [编程语言概述与工具介绍](../1-intro-to-programming-languages/translations/README.zh-cn.md)
+1. [编程语言概述与工具介绍](../1-intro-to-programming-languages/README.zh-cn.md)
 2. [GitHub 基础知识](../2-github-basics/translations/README.zh-cn.md)
 3. [无障碍性基础知识](../3-accessibility/translations/README.zh-cn.md)
 
