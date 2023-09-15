@@ -28,7 +28,7 @@
       alias: {
         '/(README.(.*))': '/translations/$1',
         '#/((?!README).*)/README.(.*)': '$1/translations/README.$2',
-        '/((?!README).*)/((?!README).*)/README.(.*)': '$1/$2/translations/README.$3',
+        '/((?!README).*)/((?!README).*)/README.(.*)': '$1/$2/README.$3',
 
         // handle English, since English files isn't in translation folders
         '/(README$)': '/$1',
