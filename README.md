@@ -152,4 +152,4 @@ Our team produces other curricula! Check out:
 
 ## License
 
-This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
+This repository is licensed under the MIT license. See this [LICENSE](LICENSE) file for more information.
