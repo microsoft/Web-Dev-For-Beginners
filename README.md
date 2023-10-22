@@ -153,3 +153,25 @@ Our team produces other curricula! Check out:
 ## License
 
 This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
+
+
+---
+
+## Footer
+
+**Important Links:**
+- [About Us](https://example.com/about)
+- [Contact](https://example.com/contact)
+- [Privacy Policy](https://example.com/privacy)
+
+**Copyright Information:**
+&copy; 2023 Your Company Name. All rights reserved.
+
+**Social Media:**
+Connect with us on social media:
+- [Twitter](https://twitter.com/yourcompany)
+- [Facebook](https://facebook.com/yourcompany)
+- [LinkedIn](https://linkedin.com/company/yourcompany)
+
+---
+
