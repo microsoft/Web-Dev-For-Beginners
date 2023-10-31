@@ -14,6 +14,20 @@
 
 Learn the fundamentals of web development with our 12-week comprehensive course by Microsoft Cloud Advocates. Each of the 24 lessons dive into JavaScript, CSS, and HTML through hands-on projects like terrariums, browser extensions, and space games. Engage with quizzes, discussions, and practical assignments. Enhance your skills and optimize your knowledge retention with our effective project-based pedagogy. Start your coding journey today!
 
+## Announcement - New Curriculum on Generative AI was just released!
+
+We just released a 12 lesson curriculum on generative AI. Come learn things like:
+
+- prompting and prompt engineering
+- text and image app generation
+- search apps
+
+As usual, there's a lesson, assignments to complete, knowledge checks and challenges.
+
+Check it out:
+
+> https://github.com/microsoft/generative-ai-for-beginners
+
 #### 🧑‍🎓 _Are you a student?_ 
 
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
@@ -145,6 +159,7 @@ A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-
 Our team produces other curricula! Check out:
 
 - [AI for Beginners](https://aka.ms/ai-beginners)
+- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners)
 - [IoT for Beginners](https://aka.ms/iot-beginners)
 - [Machine Learning for Beginners](https://aka.ms/ml-beginners)
