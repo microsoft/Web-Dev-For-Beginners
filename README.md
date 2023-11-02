@@ -157,8 +157,8 @@ A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-
 Our team produces other curricula! Check out:
 
 - [AI for Beginners](https://aka.ms/ai-beginners)
-- [Generative AI for Beginners](https://aka.ms/genai-beginners))
 - [Data Science for Beginners](https://aka.ms/datascience-beginners)
+- [Generative AI for Beginners](https://aka.ms/genai-beginners))
 - [IoT for Beginners](https://aka.ms/iot-beginners)
 - [Machine Learning for Beginners](https://aka.ms/ml-beginners)
 - [XR Development for Beginners](https://aka.ms/xr-dev-for-beginners)
