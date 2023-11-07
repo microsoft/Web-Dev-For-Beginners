@@ -5,7 +5,7 @@ Denne lektion dækker det grundlæggende i GitHub, en platform til at hoste og a
 ![Intro to GitHub](/sketchnotes/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Quiz for undervisning
+## Quiz før undervisning
 [Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
 
 ## Introduktion
