@@ -1,6 +1,6 @@
 # Introduktion til programmeringssprog og værktøjer i branchen
 
-Denne lektion dækker det grundlæggende i programmeringssprog. De emner, der behandles her, gælder for de fleste moderne programmeringssprog i dag. I afsnittet 'Tools of the Trade' lærer du om nyttig software, der hjælper dig som udvikler.
+Denne lektion dækker det grundlæggende i programmeringssprog. De emner, der omtales her, gælder for de fleste moderne programmeringssprog i dag. I afsnittet 'Tools of the Trade' lærer du om nyttig software, der hjælper dig som udvikler.
 
 ![Intro Programming](/sketchnotes/webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
