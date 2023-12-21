@@ -18,7 +18,7 @@ Making decisions and controlling the order in which your code runs makes your co
 
 ## A Brief Recap on Booleans
 
-Booleans can be only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.
+Booleans can have only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.
 
 Set your boolean to be true or false like this:
 
@@ -118,7 +118,7 @@ switch (a) {
 console.log(`The value is ${a}`);
 ```
 
-✅ Test your understanding of this code and the following code by running it in a browser console. Change the values of the varaiable a to change the returned `console.log()`.
+✅ Test your understanding of this code and the following code by running it in a browser console. Change the values of the variable a to change the returned `console.log()`.
 
 ## Logical Operators and Booleans
 
@@ -150,7 +150,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Negation operator
 
-You've seen so far how if you can use an `if...else` statement to create conditional logic. Anything that goes into an `if` needs to evaluate to true/false. By using the `!` operator you can _negate_ the expression. It would look like so:
+You've seen so far how you can use an `if...else` statement to create conditional logic. Anything that goes into an `if` needs to evaluate to true/false. By using the `!` operator you can _negate_ the expression. It would look like so:
 
 ```javascript
 if (!condition) {
