@@ -15,5 +15,3 @@ Introduction to Programming Languages and Tools of the Trade was written with �
 Introduction to GitHub was written with ♥️ by [Floor Drees](https://twitter.com/floordrees)
 
 Basics of Accessibility was written with ♥️ by [Christopher Harrison](https://twitter.com/geektrainer)
-
-aa
