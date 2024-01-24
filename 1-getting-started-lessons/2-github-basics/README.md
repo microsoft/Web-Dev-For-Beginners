@@ -10,7 +10,7 @@ This lesson covers the basics of GitHub, a platform to host and manage changes t
 
 ## Introduction
 
-In this lesson, we'll cover:
+In this TEST, we'll cover:
 
 - tracking the work you do on your machine
 - working on projects with others
