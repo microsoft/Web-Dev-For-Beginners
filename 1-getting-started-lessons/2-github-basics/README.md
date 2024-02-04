@@ -120,13 +120,13 @@ Let's say you have a folder locally with some code project and you want to start
 
    This command helps us to unstage only a particular file at once that we don't want to include for the next commit.
 
-1. **Persisting your work**. At this point you've added the files to a so called _staging area_. A place where Git is tracking your files. To make the change permanent you need to _commit_ the files. To do so you create a _commit_ with the `git commit` command. A _commit_ represents a saving point in the history of your repo. Type the following to create a _commit_:
+1. **Persisting your work**. At this point you've added the files to a so called _staging area_ - a place where Git is tracking your files. To make the changes permanent you need to _commit_ the files. To do so you create a _commit_ with the `git commit` command. A _commit_ represents a saving point in the history of your repo. Type the following to create a _commit_:
 
    ```bash
    git commit -m "first commit"
    ```
 
-   This commits all of your files, adding the message "first commit". For future commit messages you will want to be more descriptive in your description to convey what type of change you've made.
+   This commits all of your files that you have staged, adding the message "first commit". For future commit messages you will want to be more descriptive in your commit message to convey what type of change you've made and why you've made it.
 
 1. **Connect your local Git repo with GitHub**. A Git repo is good on your machine but at some point you want to have backup of your files somewhere and also invite other people to work with you on your repo. One such great place to do so is GitHub. Remember we've already created a repo on GitHub so the only thing we need to do is to connect our local Git repo with GitHub. The command `git remote add` will do just that. Type the following command:
 
