@@ -178,7 +178,7 @@ The main reason for putting things on GitHub was to make it possible to collabor
 >
 > [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
-In your repository, navigate to `Insights > Community` to see how your project compares to recommended community standards.
+In your repository, navigate to `Insights > Community Standards` to see how your project compares to recommended community standards.
 
    Here are some things that can improve your GitHub repo:
    - **Description**. Did you add a description for your project?
@@ -186,6 +186,8 @@ In your repository, navigate to `Insights > Community` to see how your project c
    - **Contributing guideline**. Does your project have [contributing guidelines](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/?WT.mc_id=academic-77807-sagibbon), 
    - **Code of Conduct**. a [Code of Conduct](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/), 
    - **License**. Perhaps most importantly, a [license](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
+   - **Security policy**. Will contributors know how to report security vulnerabilities in your project?
+   - **Issue Template**. Want consistency in tracking bugs, feature requests and more? Consider adding an issue template
 
 
 All these resources will benefit onboarding new team members. And those are typically the kind of things new contributors look at before even looking at your code, to find out if your project is the right place for them to be spending their time.
