@@ -16,7 +16,7 @@ Learn the fundamentals of web development with our 12-week comprehensive course 
 
 #### 🧑‍🎓 _Are you a student?_ 
 
-Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
+Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get free or discounted academic prices for indistry-recognized certifications. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
 ### 📣 Announcement - _New Curriculum_ on Generative AI was just released!
 
