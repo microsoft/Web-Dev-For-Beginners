@@ -13,12 +13,8 @@ jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     permissions:
-      actions: read 
-      checks: write
-      contents: read
-      deployments: read
+      actions: read
       pull-requests: write
-      security-events: write
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
