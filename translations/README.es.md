@@ -53,7 +53,7 @@ Para guardar fácilmente tu trabajo, recomendamos que crees tu propia copia de e
 
 En su copia de este repositorio que ha creado, clic en el botón **Code** y selecciona **Open with Codespaces**. Esto creará un Codespace para que trabajes
 
-<img src="./images/createcodespace.png" alt="Create codespace" style="width:270px;"/>
+<img src="../images/createcodespace.png" alt="Create codespace" style="width:270px;"/>
 
 #### Corriendo el plan de estudios localmente en tu computador
 
@@ -62,42 +62,42 @@ Para correr localmente este plan de estudios en tu computador, necesitarás un e
 Nuestra recomendación es que uses [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) como tu editor de texto, que también tiene incorporado una [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Puedes descargar VSCode [aquí](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
 
-1. Clone your repository to your computer. You can do this by clicking the **Code** button and copying the URL:
+1. Clona tu repositio en tu computador. Puedes hacer esto cliqueando en el botón **Code** y copiando el URL:
 
-    <img src="./images/createcodespace.png" alt="Copy your repository URL" style="width:270px;"/>
+    <img src="../images/createcodespace.png" alt="Copy your repository URL" style="width:270px;"/>
 
-    Then, open [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) within [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) and run the following command, replacing `<your-repository-url>` with the URL you just copied:
+    Luego, abre [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) en [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) y corre el siguiente programa, reemplazando `<your-repository-url>` con el URL que copiaste:
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. Open the folder in Visual Studio Code. You can do this by clicking **File** > **Open Folder** and selecting the folder you just cloned.
+2. Abre la carpeta con Visual Studio Code. Puedes hacerlo cliqueando **File** > **Open Folder** y selecciona la carpeta que clonaste.
 
 
->  Recommended Visual Studio Code extensions:
+>  Extensiones de Visual Studio Code recomendadas:
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - to preview HTML pages within Visual Studio Code
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - to help you write code faster
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - Previsualiza tus páginas HTML en Visual Studio Code
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - Ayuda a escribir código más rápido
 
-## 📂 Each lesson includes: 
+## 📂 Cada lección incluye: 
 
 - optional sketchnote
 - optional supplemental video
-- pre-lesson warmup quiz
+- Una prueba pre-lección
 - written lesson
 - for project-based lessons, step-by-step guides on how to build the project
 - knowledge checks
-- a challenge
+- Retos
 - supplemental reading
 - assignment
-- post-lesson quiz
+- Una prueba post-lección
 
-> **A note about quizzes**: All quizzes are contained [in this app](https://ashy-river-0debb7803.1.azurestaticapps.net/), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
+> **Una nota acerca de las pruebas**: todas las pruebas están incluidas [en esta app](https://ashy-river-0debb7803.1.azurestaticapps.net/), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
 
-## 🗃️ Lessons
+## 🗃️ Lecciones
 
-|     |                       Project Name                       |                            Concepts Taught                             | Learning Objectives                                                                                                                 |                                                         Linked Lesson                                                          |         Author          |
+|     |                       Nombre del proyecto                       |                            Concepts Taught                             | Objetivos de aprendizaje                                                                                                                 |                                                         Enlaces de la lección                                                          |         Autor          |
 | :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
 | 01  |                     Getting Started                      |           Introduction to Programming and Tools of the Trade           | Learn the basic underpinnings behind most programming languages and about software that helps professional developers do their jobs | [Intro to Programming Languages and Tools of the Trade](/1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
 | 02  |                     Getting Started                      |             Basics of GitHub, includes working with a team             | How to use GitHub in your project, how to collaborate with others on a code base                                                    |                            [Intro to GitHub](/1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
@@ -141,16 +141,16 @@ In addition, a low-stakes quiz before a class sets the intention of the student 
 
 While we have purposefully avoided introducing JavaScript frameworks to concentrate on the basic skills needed as a web developer before adopting a framework, a good next step to completing this curriculum would be learning about Node.js via another collection of videos: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
-> Visit our [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.md) guidelines. We welcome your constructive feedback!
+> Visita nuestro [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.md) guidelines. We welcome your constructive feedback!
 
 
-## 🧭 Offline access 
+## 🧭 Acceso sin conexión
 
-You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
+Puedes correr esta documentación sin conexión a internet, usando [Docsify](https://docsify.js.org/#/). Haz un fork a este repositorio, [instala Docsify](https://docsify.js.org/#/quickstart) en tu computadora, luego en la carpeta raíz de este repositorio, type `docsify serve`. El sitio web estará alojado en el puerto 3000 en tu localhost: `localhost:3000`.
 
 ## 📘 PDF
 
-A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
+Un PDF con todas las lecciones puedes encontrarlo [aquí](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
 
 ## 🎒 Other Curricula
