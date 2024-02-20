@@ -1,5 +1,7 @@
 # Space 게임 제작하기 파트 1: 소개
 
+
+Chinese
 ![video](../../images/pewpew.gif)
 
 ## 강의 전 퀴즈
