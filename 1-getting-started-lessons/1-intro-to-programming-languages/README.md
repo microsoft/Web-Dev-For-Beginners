@@ -115,7 +115,7 @@ Developers rely on editors for a few additional reasons:
   - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
   - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
   - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Atom](https://atom.io/)
+- [Atom (Deprecated) Note: Atom has been deprecated, and users are encouraged to transition to alternative editors.](https://atom.io/)
   - [spell-check](https://atom.io/packages/spell-check)
   - [teletype](https://atom.io/packages/teletype)
   - [atom-beautify](https://atom.io/packages/atom-beautify)
