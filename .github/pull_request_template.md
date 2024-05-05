@@ -6,7 +6,7 @@ Fixes # (issue)
 
 ## Type of change
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] This change requires a documentation update
+- [1 #] Bug fix (non-breaking change which fixes an issue)
+- [1 #] New feature (non-breaking change which adds functionality)
+- [1 0] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ [1 #](https://github.com/microsoft/Web-Dev-For-Beginners/issues/1287)] This change requires a documentation update
