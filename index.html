@@ -1,43 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Web Development for Beginners</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-  <link rel="stylesheet" href="index.css">
-  </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
 <body>
-  <div id="app"></div>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ekxr1n6fgy");
+    <section class="container">
+        <div class="heading">
+            <img class="heading__img" src="images/lapii.jpg" alt="Image of a laptop" />
+            <h1 class="heading__title">To-Do List</h1>
+        </div>
+        <form class="form">
+            <label class="form__label" for="todo">Enter your to-do item:</label>
+            <input class="form__input" type="text" id="todo" name="to-do" size="30" required />
+            <button class="button"><span>Submit</span></button>
+        </form>
+        <div>
+            <ul class="toDoList">
+                <!-- To-do list items will be added dynamically here -->
+            </ul>
+        </div>
+    </section>
 
-    window.$docsify = {
-      loadNavbar: 'docs/_navbar.md',
-      name: 'Web Development for Beginners: A Curriculum',
-      repo: 'https://github.com/microsoft/Web-Dev-For-Beginners',
-      relativePath: true,
-      auto2top: false,
-      notFoundPage: true,
-      alias: {
-        '/(README.(.*))': '/translations/$1',
-        '#/((?!README).*)/README.(.*)': '$1/translations/README.$2',
-        '/((?!README).*)/((?!README).*)/README.(.*)': '$1/$2/translations/README.$3',
-
-        // handle English, since English files isn't in translation folders
-        '/(README$)': '/$1',
-        '#/((?!README).*)/(README$)': '$1/$2',
-        '/((?!README).*)/((?!README).*)/(README$)': '$1/$2/$3'
-      }
-    }
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
