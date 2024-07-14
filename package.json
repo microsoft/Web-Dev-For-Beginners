@@ -24,5 +24,8 @@
 	"homepage": "https://github.com/microsoft/Web-Dev-For-Beginners#readme",
 	"devDependencies": {
 		"docsify-to-pdf": "0.0.5"
+	},
+	"dependencies": {
+		"@bufferhead/nightowl": "^0.0.14"
 	}
 }
