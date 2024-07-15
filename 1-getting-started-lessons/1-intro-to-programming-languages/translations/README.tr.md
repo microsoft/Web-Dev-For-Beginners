@@ -6,7 +6,7 @@ Bu ders, programlama dillerinin temellerini kapsar. Burada ele alınan konular, 
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ders Öncesi Sınav
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1)
+[Ders Öncesi Sınav](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/1)
 
 ## Giriş
 
@@ -90,7 +90,7 @@ Bazı ifadelerin bir cihaz tarafından çalıştırılmama olasılığı vardır
 
 ## Ticaret Araçları
 
-[![Tools of the Trade](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
+[![Ticaret Araçları](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
 
 > 🎥 Araçlar hakkında bir video için yukarıdaki görüntüye tıklayın
 
@@ -112,9 +112,9 @@ Geliştiriciler, editörleri birkaç ek neden için kullanırlar:
 #### Popüler Editörler ve Web Geliştirme Eklentileri
 
 - [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
-  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  - [Kod Yazım Denetleyicisi](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+  - [Canlı Paylaşım](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+  - [Prettier - Kod biçimlendirici](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Atom](https://atom.io/)
   - [spell-check](https://atom.io/packages/spell-check)
   - [teletype](https://atom.io/packages/teletype)
@@ -124,32 +124,32 @@ Geliştiriciler, editörleri birkaç ek neden için kullanırlar:
   - [emmet](https://emmet.io/)
   - [SublimeLinter](http://www.sublimelinter.com/en/stable/)
 
-### Browsers
+### Tarayıcılar
 
-Another crucial tool is the browser. Web developers rely on the browser to see how their code runs on the web. It's also used to display the visual elements of a web page that are written in the editor, like HTML.
+Diğer önemli bir araç tarayıcıdır. Web geliştiriciler, kodlarının web üzerinde nasıl çalıştığını görmek için tarayıcıya güvenirler. Ayrıca, bir web sayfasının HTML gibi editörde yazılan görsel öğelerini görüntülemek için de kullanılır.
 
-Many browsers come with *developer tools* (DevTools) that contain a set of helpful features and information to help developers collect and capture important information about their application. For example: If a web page has errors, it's sometimes helpful to know when they occurred. DevTools in a browser can be configured to capture this information.
+Birçok tarayıcı, geliştiricilerin uygulamaları hakkında önemli bilgileri toplamasına ve yakalamasına yardımcı olan bir dizi yararlı özellik içeren geliştirici araçları (DevTools) ile birlikte gelir. Örneğin: Bir web sayfasında hatalar varsa, bunların ne zaman meydana geldiğini bilmek bazen yardımcı olabilir. Tarayıcıdaki geliştirici araçları, bu bilgileri yakalamak için yapılandırılabilir.
 
-#### Popular Browsers and DevTools
+#### Popüler Tarayıcılar ve Geliştirici Araçları
 
 - [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)
 - [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
 - [Firefox](https://developer.mozilla.org/docs/Tools)
 
-### Command Line Tools
+### Komut Satırı Araçları
 
-Some developers prefer a less graphical view for their daily tasks and rely on the command line to achieve this. Writing code requires a significant amount of typing and some developers prefer to not disrupt their flow on the keyboard. They will use keyboard shortcuts to swap between desktop windows, work on different files, and use tools. Most tasks can be completed with a mouse, but one benefit of using the command line is that a lot can be done with command line tools without the need of swapping between the mouse and keyboard. Another benefit of the command line is that they're configurable and you can save a custom configuration, change it later, and import it to other development machines. Because development environments are so unique to each developer, some will avoid using the command line, some will rely on it entirely, and some prefer a mix of the two.
+Bazı geliştiriciler, günlük görevleri için daha az grafiksel bir görünüm tercih eder ve bunu başarmak için komut satırını kullanır. Kod yazmak önemli miktarda yazı yazmayı gerektirir ve bazı geliştiriciler, klavye üzerindeki akışlarını bozmak istemezler. Farklı masaüstü pencereleri arasında geçiş yapmak, farklı dosyalar üzerinde çalışmak ve araçları kullanmak için klavye kısayollarını kullanırlar. Çoğu görev bir fare ile tamamlanabilir, ancak komut satırını kullanmanın bir faydası, klavye ve fare arasında geçiş yapmadan birçok işlemin gerçekleştirilebilmesidir. Komut satırının bir diğer avantajı, yapılandırılabilir olmaları ve özel bir yapılandırmayı kaydedip daha sonra değiştirebilmeniz ve diğer geliştirme makinelerine aktarmanızdır. Geliştirme ortamları her geliştiriciye özgü olduğundan, bazıları komut satırını kullanmaktan kaçınırken, bazıları tamamen buna güvenir ve bazıları ikisinin bir karışımını tercih eder.
 
-### Popular Command Line Options
+### Popüler Komut Satırı Seçenekleri
 
-Options for the command line will differ based on the operating system you use.
+Komut satırı seçenekleri, kullandığınız işletim sistemine bağlı olarak farklılık gösterecektir.
 
-*💻 = comes preinstalled on the operating system.*
+*💻 = işletim sisteminde önceden yüklü olarak gelir.*
 
 #### Windows
 
 - [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7/?WT.mc_id=academic-77807-sagibbon) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (also known as CMD) 💻
+- [Komut Satırı](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (also known as CMD) 💻
 - [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)
 - [mintty](https://mintty.github.io/)
   
@@ -165,39 +165,39 @@ Options for the command line will differ based on the operating system you use.
 - [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
 - [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
 
-#### Popular Command Line Tools
+#### Popüler Komut Satırı Araçları
 
 - [Git](https://git-scm.com/) (💻 on most operating systems)
 - [NPM](https://www.npmjs.com/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/cli/)
 
-### Documentation
+### Dokümantasyon
 
-When a developer wants to learn something new, they'll most likely turn to documentation to learn how to use it. Developers often rely on documentation to guide them through how to use tools and languages properly, and also to gain deeper knowledge of how it works.
+Bir geliştirici yeni bir şey öğrenmek istediğinde, bunu nasıl kullanacağını öğrenmek için büyük olasılıkla dokümantasyona başvuracaktır. Geliştiriciler, araçları ve dilleri doğru bir şekilde nasıl kullanacaklarını öğrenmek ve ayrıca nasıl çalıştığı hakkında daha derin bilgi edinmek için genellikle dokümantasyona güvenirler.
 
-#### Popular Documentation on Web Development
+#### Web Geliştirme ile İlgili Popüler Dokümantasyonlar
 
-- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), from Mozilla, the publishers of the [Firefox](https://www.mozilla.org/firefox/) browser
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), Mozilla'dan, [Firefox](https://www.mozilla.org/firefox/) tarayıcısının yayıncıları
 - [Frontend Masters](https://frontendmasters.com/learn/)
-- [Web.dev](https://web.dev), from Google, publishers of [Chrome](https://www.google.com/chrome/)
-- [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
+- [Web.dev](https://web.dev), Google'dan, [Chrome](https://www.google.com/chrome/) tarayıcısının yayıncıları
+- [Microsoft'un kendi geliştirici dokümanları](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), [Microsoft Edge](https://www.microsoft.com/edge) için
 - [W3 Schools](https://www.w3schools.com/where_to_start.asp)
 
-✅ Do some research: Now that you know the basics of a web developer's environment, compare and contrast it with a web designer's environment.
+✅ Araştırma yapın: Artık bir web geliştiricisinin ortamının temellerini bildiğinize göre, bunu bir web tasarımcısının ortamı ile karşılaştırın.
 
 ---
 
-## 🚀 Challenge
+## 🚀 Meydan Okuma
 
-Compare some programming languages. What are some of the unique traits of JavaScript vs. Java? How about COBOL vs. Go?
+Bazı programlama dillerini karşılaştırın. JavaScript ile Java'nın bazı benzersiz özellikleri nelerdir? Peki ya COBOL ile Go?
 
-## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+## Ders Sonrası Test
+[Ders Sonrası Test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
 
-## Review & Self Study
+## Gözden Geçirme ve Kendi Kendine Çalışma
 
-Study a bit on the different languages available to the programmer. Try to write a line in one language, and then rewrite it in two others. What did you learn?
+Bir programcı için mevcut olan farklı diller hakkında biraz bilgi edinin. Bir dilde bir satır yazmayı deneyin ve ardından iki diğer dilde tekrar yazın. Ne öğrendiniz?
 
-## Assignment
+## Ödev
 
-[Reading the Docs](assignment.md)
+[Dokümanları Okumak](assignment.md)
