@@ -37,8 +37,8 @@
             <input id="currency" name="currency" type="text" maxlength="5" value="$" required>
             <label for="description">Description</label>
             <input id="description" name="description" type="text" maxlength="100">
-            <label for="balance">Current balance</label>
-            <input id="balance" name="balance" type="number" value="0">
+            <label for="current-balance">Current balance</label>
+            <input id="current-balance" name="balance" type="number" value="0">
             <div id="registerError" class="error" role="alert"></div>
             <button>Register</button>
           </form>
@@ -58,11 +58,11 @@
       <div class="balance">
         <div>Balance</div>
         <span id="balance"></span>
-        <span id="currency"></span>
+        <span id="balance-currency"></span>
       </div>
       <div class="dashboard-content">
         <div class="transactions-title">
-          <h2 id="description"></h2>
+          <h2 id="transactions-description"></h2>
           <button onclick="addTransaction()">Add transaction</button>
         </div>
         <table class="transactions-table" aria-label="Transactions">
