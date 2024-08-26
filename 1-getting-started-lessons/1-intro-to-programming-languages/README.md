@@ -120,7 +120,7 @@ Developers rely on editors for a few additional reasons:
   - [teletype](https://atom.io/packages/teletype)
   - [atom-beautify](https://atom.io/packages/atom-beautify)
   
-- [www.sublimetext](https://www.sublimetext.com/)
+- [Sublimetext](https://www.sublimetext.com/)
   - [emmet](https://emmet.io/)
   - [SublimeLinter](http://www.sublimelinter.com/en/stable/)
 
