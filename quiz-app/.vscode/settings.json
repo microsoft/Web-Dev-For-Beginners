@@ -1,5 +1,5 @@
 {
-    "staticWebApps.appSubpath": "/",
-    "staticWebApps.apiSubpath": "api",
-    "staticWebApps.outputSubpath": "dist"
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  }
 }
