@@ -1,35 +1,35 @@
-# vue-project
+# Quiz app
 
-This template should help get you started developing with Vue 3 in Vite.
+This quiz app helps you display questions and answers in a quiz format. 
 
-## Recommended IDE Setup
+## Install the app
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+Run `npm install` to install the dependencies.
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Build the app
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
+To build the solution, run `npm run build`.
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Run
 
-```sh
+To run the solution, run `npm run dev`.
+
+```bash
+npm run dev
+```
+
+## Lint
+
+To ensure the code is linted, run `npm run lint`.
+
+```bash
 npm run lint
 ```
