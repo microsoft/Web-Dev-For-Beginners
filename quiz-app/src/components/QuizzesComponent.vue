@@ -8,7 +8,7 @@
 
 </style>
 <template>
-    <div class="question" v-for="q in questions">
+    <div class="question" v-for="q in questions" :key="q.id" >
       <router-link
         
         :key="q.id"
@@ -43,7 +43,7 @@
   let locale = navigator.language || navigator.userLanguage;
 
   export default {
-    name: "Home",
+    name: "QuizzesComponent",
     data() {
       return {
         file: getFileByLocale(locale),

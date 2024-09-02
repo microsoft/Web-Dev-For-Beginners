@@ -87,7 +87,7 @@
   
   
   export default {
-    name: "Quiz",
+    name: "QuizComponent",
     data() {
       return {
         currentQuestion: 0,
