@@ -1,35 +1,106 @@
 # Quiz app
 
-This quiz app helps you display questions and answers in a quiz format. 
+These quizzes are the pre- and post-lecture quizzes for the data science curriculum at https://aka.ms/webdev-beginners
 
-## Install the app
+## Run the Quiz App locally
 
-Run `npm install` to install the dependencies.
+### Prerequisites
 
-```sh
-npm install
+- A GitHub account
+- [Node.js and Git](https://nodejs.org/)
+
+### Install & Setup
+
+1. Create a repository from this [template](https://github.com/new?template_name=Web-Dev-For-Beginners&template_owner=microsoft) 
+
+1. Clone your new repository, and navigate to the quiz-app
+
+   ```bash
+   git clone https://github.com/your-github-organization/repo-name
+   cd repo-name/quiz-app
+   ```
+
+1. Install the npm packages & dependencies
+
+   ```bash
+   npm install
+   ```
+
+### Build the app
+
+1. To build the solution, run:
+
+   ```bash
+   npm run build
+   ```
+
+### Start the App
+
+1. To run the solution, run:
+
+    ```bash
+    npm run dev
+    ```
+
+### [Optional] Linting
+
+1. To ensure the code is linted, run:
+
+    ```bash
+    npm run lint
+    ```
+
+## Deploy the Quiz-app to Azure 
+
+### Prerequisites
+- An Azure Subscription. _Cost Estimate: FREE_
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.StaticApp)
+
+Once you are signed in on Azure through the link above, select a subscription and resource group then:
+
+- Static Web App details: Provide a name and select a hosting plan
+- GitHub Login: Set your deployment source as GitHub then log in and fill in the required fields on the form:
+    - *Organization* – Choose your organization.
+    - *Repository* – Select the Web Dev for Beginners curriculum repository. 
+    - *Branch* - Select a branch (main) 
+- Build Presets - Azure Static Web Apps uses a detection algorithm to detect the framework used in your application. 
+    - *App location* - ./quiz-app
+    - *Api location* -
+    - *Output location* - dist
+- Deployment: Click 'Review + Create', then 'Create'
+- Post-Deployment: After deployment is complete, click on 'Go to Deployment' then 'View app in browser'.
+
+### Example Workflow File
+
+Here’s an example of what the GitHub Actions workflow file might look like:
+name: Azure Static Web Apps CI/CD
+```
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
+jobs:
+  build_and_deploy_job:
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build And Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "quiz-app" # App source code path
+          api_location: ""API source code path optional
+          output_location: "dist" #Built app content directory - optional
 ```
 
-## Build the app
-
-To build the solution, run `npm run build`.
-
-```sh
-npm run build
-```
-
-## Run
-
-To run the solution, run `npm run dev`.
-
-```bash
-npm run dev
-```
-
-## Lint
-
-To ensure the code is linted, run `npm run lint`.
-
-```bash
-npm run lint
-```
+Once your GitHub Action is executed successfully, refresh the live page to view your application.
