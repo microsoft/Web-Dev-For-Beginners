@@ -65,16 +65,6 @@ export default messages;
 
 </details>
 
-Then, edit the dropdown in `App.vue` in this app to add your language. Match the localized abbreviation to the folder name for your language. See example:
-
-<details>
-<summary>App.vue</summary>
-TODO
-
-</details>
-
-Finally, edit all the quiz links in the translated lessons, if they exist, to include this localization as a query parameter: `?loc=fr` for example.
-
 ## Run the Quiz App locally
 
 ### Prerequisites
