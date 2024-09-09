@@ -152,17 +152,17 @@ You can run this documentation offline by using [Docsify](https://docsify.js.org
 A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
 
-## 🎒 Other Curricula
+## 🎒 Other Curriculum
 
-Our team produces other curricula! Check out:
+Our team produces other curriculum! Check out:
 
-- [AI for Beginners](https://aka.ms/ai-beginners)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners)
-- [Generative AI for Beginners](https://aka.ms/genai-beginners)
-- [**NEW** Cybersecurity for Beginners](https://github.com/microsoft/Security-101??WT.mc_id=academic-96948-sayoung)
-- [IoT for Beginners](https://aka.ms/iot-beginners)
-- [Machine Learning for Beginners](https://aka.ms/ml-beginners)
-- [XR Development for Beginners](https://aka.ms/xr-dev-for-beginners)
+- [AI for Beginners](https://microsoft.github.io/AI-For-Beginners/)
+- [Data Science for Beginners](https://microsoft.github.io/Data-Science-For-Beginners/#/)
+- [Generative AI for Beginners](https://microsoft.github.io/generative-ai-for-beginners/#/)
+- [**NEW** Cybersecurity for Beginners](https://microsoft.github.io/Security-101/#/)
+- [IoT for Beginners](https://microsoft.github.io/IoT-For-Beginners/#/)
+- [Machine Learning for Beginners](https://microsoft.github.io/ML-For-Beginners/#/)
+- [XR Development for Beginners](https://microsoft.github.io/xr-development-for-beginners/#/)
 - [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
 
 ## License
