@@ -15,10 +15,15 @@ let wordIndex = 0;
 // default value for startTime (will be set on start)
 let startTime = Date.now();
 
-// grab UI items
+// grab UI items and ensure they exist
 const quoteElement = document.getElementById('quote');
-const messageElement = document.getElementById('message')
+const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
+
+if (!quoteElement || !messageElement || !typedValueElement) {
+	console.error('Missing one or more UI elements.');
+	throw new Error('UI elements not found');
+}
 
 document.getElementById('start').addEventListener('click', function () {
 	// get a quote
@@ -31,11 +36,11 @@ document.getElementById('start').addEventListener('click', function () {
 
 	// UI updates
 	// Create an array of span elements so we can set a class
-	const spanWords = words.map(function(word) { return `<span>${word} </span>`});
+	const spanWords = words.map(function (word) { return `<span>${word}</span>`; });
 	// Convert into string and set as innerHTML on quote display
-	quoteElement.innerHTML = spanWords.join('');
+	quoteElement.innerHTML = spanWords.join(' ');
 	// Highlight the first word
-	quoteElement.childNodes[0].className = 'highlight';
+	quoteElement.children[0].className = 'highlight';
 	// Clear any prior messages
 	messageElement.innerText = '';
 
@@ -44,7 +49,6 @@ document.getElementById('start').addEventListener('click', function () {
 	typedValueElement.value = '';
 	// set focus
 	typedValueElement.focus();
-	// set the event handler
 
 	// Start the timer
 	startTime = new Date().getTime();
@@ -60,8 +64,10 @@ typedValueElement.addEventListener('input', (e) => {
 		// end of quote
 		// Display success
 		const elapsedTime = new Date().getTime() - startTime;
-		const message = `CONGRATULATIONS! You finished in ${elapsedTime / 1000} seconds.`;
+		const message = `CONGRATULATIONS! You finished in ${(elapsedTime / 1000).toFixed(2)} seconds.`;
 		messageElement.innerText = message;
+		// Disable input to prevent further typing
+		typedValueElement.disabled = true;
 	} else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
 		// end of word
 		// clear the typedValueElement for the new word
@@ -69,14 +75,13 @@ typedValueElement.addEventListener('input', (e) => {
 		// move to the next word
 		wordIndex++;
 		// reset the class name for all elements in quote
-		for (const wordElement of quoteElement.childNodes) {
+		for (const wordElement of quoteElement.children) {
 			wordElement.className = '';
 		}
 		// highlight the new word
-		quoteElement.childNodes[wordIndex].className = 'highlight';
+		quoteElement.children[wordIndex].className = 'highlight';
 	} else if (currentWord.startsWith(typedValue)) {
 		// currently correct
-		// highlight the next word
 		typedValueElement.className = '';
 	} else {
 		// error state
