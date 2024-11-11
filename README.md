@@ -49,6 +49,9 @@ This curriculum has a development environment ready to go! As you get started yo
 #### Create your repository
 For you to easily save your work, it is recommended that you create your own copy of this repository. You can do this by clicking the **Use this template** button at the top of the page. This will create a new repository in your GitHub account with a copy of the curriculum.
 
+Follow these steps:
+1. **Fork the Repository**: Click on the "Fork" button at the top-right corner of this page.
+2. **Clone the Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
 #### Running the curriculum in a Codespace
 
