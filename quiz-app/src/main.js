@@ -1,14 +1,11 @@
-import Vue from 'vue';
-import App from './App.vue';
-Vue.config.productionTip = false;
-import router from './router';
+import './assets/main.css'
 
-import VueI18n from 'vue-i18n';
-Vue.use(VueI18n);
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
 
-const i18n = new VueI18n({
-	locale: 'en',
-	fallbackLocale: 'en',
-});
+const app = createApp(App)
 
-new Vue({ i18n, router, render: (h) => h(App) }).$mount('#app');
+app.use(router)
+
+app.mount('#app')
