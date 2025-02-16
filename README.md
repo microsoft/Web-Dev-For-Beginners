@@ -175,6 +175,14 @@ Our team produces other courses! Check out:
 - [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 
+## Footer
+
+This project is maintained by Microsoft Cloud Advocates.
+Follow us on [Twitter](https://x.com/microsoft) for updates.
+Follow us on [Facebook](https://www.facebook.com/MicrosoftIndia/?brand_redir=20528438720#) for updates.
+Follow us on [LinkedIn](https://www.linkedin.com/company/microsoft/) for updates.
+Follow us on [Instagram](https://www.linkedin.com/company/microsoft/posts/?feedView=all) for updates.
+
 ## License
 
 This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
