@@ -14,7 +14,7 @@
 
 # Web Development for Beginners - A Curriculum
 
-Learn the fundamentals of web development with our 12-week comprehensive course by Microsoft Cloud Advocates. Each of the 24 lessons dive into JavaScript, CSS, and HTML through hands-on projects like terrariums, browser extensions, and space games. Engage with quizzes, discussions, and practical assignments. Enhance your skills and optimize your knowledge retention with our effective project-based pedagogy. Start your coding journey today!
+Learn the fundamentals of web development with our 12-week comprehensive course by Microsoft Cloud Advocates. Each of the 24 lessons dives into JavaScript, CSS, and HTML through hands-on projects like terrariums, browser extensions, and space games. Engage with quizzes, discussions, and practical assignments. Enhance your skills and optimize your knowledge retention with our effective project-based pedagogy. Start your coding journey today!
 
 #### 🧑‍🎓 _Are you a student?_ 
 
@@ -22,9 +22,9 @@ Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc
 
 ### 📣 Announcement - _New Curriculum_ on Generative AI was just released!
 
-Don't miss our NEW 12 lesson curriculum on generative AI!
+Don't miss our NEW 12-lesson curriculum on generative AI!
 
-Each lesson includes an assignment to complete, knowledge check and challenge to guide you on learning topics like:
+Each lesson includes an assignment to complete, a knowledge check and a challenge to guide you on learning topics like:
 - prompting and prompt engineering
 - text and image app generation
 - search apps
@@ -61,7 +61,7 @@ In your copy of this repository that you created, click the **Code** button and 
 
 #### Running the curriculum locally on your computer
 
-To run this curriculum locally on your computer, you will need a text editor, browser and command line tool. Our first lesson, [Introduction to Programming Languages and Tools of the Trade](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/1-getting-started-lessons/1-intro-to-programming-languages), will walk you through various options for each of these tools for you to select what works best for you.
+To run this curriculum locally on your computer, you will need a text editor, a browser and a command line tool. Our first lesson, [Introduction to Programming Languages and Tools of the Trade](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/1-getting-started-lessons/1-intro-to-programming-languages), will walk you through various options for each of these tools for you to select what works best for you.
 
 Our recommendation is to use [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) as your editor, which also has a built-in [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). You can download Visual Studio Code [here](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
