@@ -14,17 +14,17 @@
 
 # Web Development for Beginners - A Curriculum
 
-Learn the fundamentals of web development with our 12-week comprehensive course by Microsoft Cloud Advocates. Each of the 24 lessons dive into JavaScript, CSS, and HTML through hands-on projects like terrariums, browser extensions, and space games. Engage with quizzes, discussions, and practical assignments. Enhance your skills and optimize your knowledge retention with our effective project-based pedagogy. Start your coding journey today!
+Learn the fundamentals of web development with our 12-week comprehensive course by Microsoft Cloud Advocates. Each of the 24 lessons dives into JavaScript, CSS, and HTML through hands-on projects like terrariums, browser extensions, and space games. Engage with quizzes, discussions, and practical assignments. Enhance your skills and optimize your knowledge retention with our effective project-based pedagogy. Start your coding journey today!
 
-#### 🧑‍🎓 _Are you a student?_ 
+#### 🧑‍🎓 _Are you a student?_
 
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
 ### 📣 Announcement - _New Curriculum_ on Generative AI was just released!
 
-Don't miss our NEW 12 lesson curriculum on generative AI!
+Don't miss our NEW 12-lesson curriculum on generative AI!
 
-Each lesson includes an assignment to complete, knowledge check and challenge to guide you on learning topics like:
+Each lesson includes an assignment to complete, a knowledge check and a challenge to guide you on learning topics like:
 - prompting and prompt engineering
 - text and image app generation
 - search apps
@@ -32,7 +32,7 @@ Each lesson includes an assignment to complete, knowledge check and challenge to
 Visit [https://aka.ms/genai-beginners](https://aka.ms/genai-beginners) to get started!
 
 
-## 🌱 Getting Started 
+## 🌱 Getting Started
 
 > **Teachers**, we have [included some suggestions](for-teachers.md) on how to use this curriculum. We'd love your feedback [in our discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
@@ -42,7 +42,7 @@ To enhance your learning experience, connect with your peers to work on the proj
 
 To further your education, we highly recommend exploring [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) for additional study materials.
 
-### 📋 Setting up your environment 
+### 📋 Setting up your environment
 
 This curriculum has a development environment ready to go! As you get started you can choose to run the curriculum in a [Codespace](https://github.com/features/codespaces/) (_a browser-based, no installs needed environment_), or locally on your computer using a text editor such as [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
@@ -61,7 +61,7 @@ In your copy of this repository that you created, click the **Code** button and 
 
 #### Running the curriculum locally on your computer
 
-To run this curriculum locally on your computer, you will need a text editor, browser and command line tool. Our first lesson, [Introduction to Programming Languages and Tools of the Trade](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/1-getting-started-lessons/1-intro-to-programming-languages), will walk you through various options for each of these tools for you to select what works best for you.
+To run this curriculum locally on your computer, you will need a text editor, a browser and a command line tool. Our first lesson, [Introduction to Programming Languages and Tools of the Trade](https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/1-getting-started-lessons/1-intro-to-programming-languages), will walk you through various options for each of these tools for you to select what works best for you.
 
 Our recommendation is to use [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) as your editor, which also has a built-in [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). You can download Visual Studio Code [here](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
@@ -84,7 +84,7 @@ Our recommendation is to use [Visual Studio Code](https://code.visualstudio.com/
 > * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - to preview HTML pages within Visual Studio Code
 > * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - to help you write code faster
 
-## 📂 Each lesson includes: 
+## 📂 Each lesson includes:
 
 - optional sketchnote
 - optional supplemental video
@@ -131,7 +131,7 @@ Our recommendation is to use [Visual Studio Code](https://code.visualstudio.com/
 
 ## 🏫 Pedagogy
 
-Our curriculum is designed with two key pedagogical principles in mind: 
+Our curriculum is designed with two key pedagogical principles in mind:
 * project-based learning
 * frequent quizzes
 
@@ -148,7 +148,7 @@ While we have purposefully avoided introducing JavaScript frameworks to concentr
 > Visit our [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.md) guidelines. We welcome your constructive feedback!
 
 
-## 🧭 Offline access 
+## 🧭 Offline access
 
 You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
 
@@ -157,7 +157,7 @@ You can run this documentation offline by using [Docsify](https://docsify.js.org
 A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
 
-## 🎒 Other Courses 
+## 🎒 Other Courses
 
 Our team produces other courses! Check out:
 
@@ -167,7 +167,7 @@ Our team produces other courses! Check out:
 - [AI for Beginners](https://aka.ms/ai-beginners)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners)
 - [ML for Beginners](https://aka.ms/ml-beginners)
-- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101) 
+- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)
 - [Web Dev for Beginners](https://aka.ms/webdev-beginners)
 - [IoT for Beginners](https://aka.ms/iot-beginners)
 - [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
