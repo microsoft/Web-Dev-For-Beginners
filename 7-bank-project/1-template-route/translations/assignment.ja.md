@@ -2,13 +2,13 @@
 
 ## 説明書
 
-The routes declaration contains currently only the template ID to use. But when displaying a new page, a bit more is needed sometimes. Let's improve our routing implementation with two additional features:
+現在、ルート宣言には、使用するテンプレート ID のみが含まれています。ただし、新しいページを表示するときは、もう少し工夫が必要な場合があります。 2 つの追加機能を使用してルーティングの実装を改善しましょう。
 
-- Give titles to each template and update the window title with this new title when the template changes.
-- Add an option to run some code after the template changes. We want to print `'Dashboard is shown'` in the developer console every time the dashboard page is displayed. 
+- 各テンプレートにタイトルを付け、テンプレートが変更されたときにウィンドウのタイトルをこの新しいタイトルで更新します。
+- テンプレートの変更後にコードを実行するオプションを追加します。ダッシュボード ページが表示されるたびに、開発者コンソールに `'Dashboard is shown'` を印刷したいと考えています。
 
 ## ルーブリック
 
-| Criteria | Exemplary                                                                                                                          | Adequate                                                                                                                                                                                  | Needs Improvement                                       |
+| 基準 | 模範的                                                                                                                          | 適切                                                                                                                                                                                  | 要改善                                       |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-|          | The two features are implemented and working. Title and code addition also work for a new route added in the `routes` declaration. | The two features work, but the behavior is hardcoded and not configurable via the `routes` declaration. Adding a third route with title and code addition does not work or works partially. | One of the features is missing or not working properly. |
+|          | 2 つの機能が実装され、動作しています。タイトルとコードの追加は、`routes` 宣言 で追加された新しいルートにも機能します。 | これら 2 つの機能は動作しますが、動作はハードコーディングされており、`routes` 宣言によって構成することはできません。タイトルとコードを追加して 3 番目のルートを追加しても、機能しないか部分的に機能します。 | 機能の 1 つが欠落しているか、正しく動作していません。 |
