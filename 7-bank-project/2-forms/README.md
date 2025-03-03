@@ -6,7 +6,7 @@
 
 ### Introduction
 
-In almost all modern web apps, you can create an account to have your own private space. As multiple users can access a web app at the same time, you need a mechanism to store each user personal data separately and select which information to display information. We won't cover how to manage [user identity securely](https://en.wikipedia.org/wiki/Authentication) as it's an extensive topic on its own, but we'll make sure each user is able to create one (or more) bank account on our app.
+In almost all modern web apps, you can create an account to have your own private space. As multiple users can access a web app at the same time, you need a mechanism to store each user's personal data separately and select which information to display information. We won't cover how to manage [user identity securely](https://en.wikipedia.org/wiki/Authentication) as it's an extensive topic on its own, but we'll make sure each user is able to create one (or more) bank account on our app.
 
 In this part we'll use HTML forms to add login and registration to our web app. We'll see how to send the data to a server API programmatically, and ultimately how to define basic validation rules for user inputs.
 
@@ -34,7 +34,7 @@ curl http://localhost:5000/api
 
 The `<form>` element encapsulates a section of an HTML document where the user can input and submit data with interactive controls. There are all sorts of user interface (UI) controls that can be used within a form, the most common one being the `<input>` and the `<button>` elements.
 
-There are a lot of different [types](https://developer.mozilla.org/docs/Web/HTML/Element/input) of `<input>`, for example to create a field where the user can enter its username you can use:
+There are a lot of different [types](https://developer.mozilla.org/docs/Web/HTML/Element/input) of `<input>`, for example to create a field where the user can enter their username you can use:
 
 ```html
 <input id="username" name="username" type="text">
@@ -138,7 +138,7 @@ If everything goes well, the server should answer your request with a [JSON](htt
 
 As you probably noticed, there's a slight issue with the approach we just used: when submitting the form, we get out of our app and the browser redirects to the server URL. We're trying to avoid all page reloads with our web app, as we're making a [Single-page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
 
-To send the form data to the server without forcing a page reload, we have to use JavaScript code. Instead of putting an URL in the `action` property of a `<form>` element, you can use any JavaScript code prepended by the `javascript:` string to perform a custom action. Using this also means that you'll have to implement some tasks that were previously done automatically by the browser:
+To send the form data to the server without forcing a page reload, we have to use JavaScript code. Instead of putting a URL in the `action` property of a `<form>` element, you can use any JavaScript code prepended by the `javascript:` string to perform a custom action. Using this also means that you'll have to implement some tasks that were previously done automatically by the browser:
 
 - Retrieve the form data
 - Convert and encode the form data to a suitable format
@@ -182,7 +182,7 @@ async function createAccount(account) {
 }
 ```
 
-What's this function doing? First, notice the `async` keyword here. This means that the function contains code that will execute [**asynchronously**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). When used along the `await` keyword, it allows waiting for asynchronous code to execute - like waiting for the server response here - before continuing.
+What's this function doing? First, notice the `async` keyword here. This means that the function contains code that will execute [**asynchronously**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). When used along with the `await` keyword, it allows waiting for asynchronous code to execute - like waiting for the server response here - before continuing.
 
 Here's a quick video about `async/await` usage:
 
@@ -234,7 +234,7 @@ That was a bit long but we got there! If you open your [browser developer tools]
 
 ## Data validation
 
-If you try to register a new account without setting an username first, you can see that the server returns an error with status code [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
+If you try to register a new account without setting a username first, you can see that the server returns an error with status code [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
 Before sending data to a server it's a good practice to [validate the form data](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) beforehand when possible, to make sure you send a valid request. HTML5 forms controls provides built-in validation using various attributes:
 
