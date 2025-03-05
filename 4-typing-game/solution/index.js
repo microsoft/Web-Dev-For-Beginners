@@ -20,6 +20,11 @@ const quoteElement = document.getElementById('quote');
 const messageElement = document.getElementById('message')
 const typedValueElement = document.getElementById('typed-value');
 
+// Check if UI elements exist
+if (!quoteElement || !messageElement || !typedValueElement) {
+    console.error("One or more required elements are missing from the DOM.");
+}
+
 document.getElementById('start').addEventListener('click', function () {
 	// get a quote
 	const quoteIndex = Math.floor(Math.random() * quotes.length);
@@ -31,11 +36,11 @@ document.getElementById('start').addEventListener('click', function () {
 
 	// UI updates
 	// Create an array of span elements so we can set a class
-	const spanWords = words.map(function(word) { return `<span>${word} </span>`});
+	const spanWords = words.map(word => `<span>${word}</span>`);
 	// Convert into string and set as innerHTML on quote display
 	quoteElement.innerHTML = spanWords.join('');
 	// Highlight the first word
-	quoteElement.childNodes[0].className = 'highlight';
+	quoteElement.children[0].className = 'highlight';
 	// Clear any prior messages
 	messageElement.innerText = '';
 
@@ -62,6 +67,8 @@ typedValueElement.addEventListener('input', (e) => {
 		const elapsedTime = new Date().getTime() - startTime;
 		const message = `CONGRATULATIONS! You finished in ${elapsedTime / 1000} seconds.`;
 		messageElement.innerText = message;
+
+		typedValueElement.disabled = true;
 	} else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
 		// end of word
 		// clear the typedValueElement for the new word
@@ -69,11 +76,11 @@ typedValueElement.addEventListener('input', (e) => {
 		// move to the next word
 		wordIndex++;
 		// reset the class name for all elements in quote
-		for (const wordElement of quoteElement.childNodes) {
+		for (const wordElement of quoteElement.children) {
 			wordElement.className = '';
 		}
 		// highlight the new word
-		quoteElement.childNodes[wordIndex].className = 'highlight';
+		quoteElement.children[wordIndex].className = 'highlight';
 	} else if (currentWord.startsWith(typedValue)) {
 		// currently correct
 		// highlight the next word
