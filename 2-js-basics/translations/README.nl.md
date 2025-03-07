@@ -5,9 +5,9 @@ JavaScript is de taal van het web. In deze vier lessen leert u de basisprincipes
 ### Onderwerpen
 
 1. [Variabelen en Gegevenstypen](../1-data-types/translations/README.nl.md)
-2. [Functies en Methoden](../2-functions-methods/translations/README.nl.md)
-3. [Beslissingen nemen met JavaScript](../3-making-decisions/translations/README.nl.md)
-4. [Arrays en Lussen](../4-arrays-loops/translations/README.nl.md)
+2. [Functies en Methoden](../2-functions-methods/translations/README.es.md)
+3. [Beslissingen nemen met JavaScript](../3-making-decisions/translations/README.es.md)
+4. [Arrays en Lussen](../4-arrays-loops/translations/README.es.md)
 
 ### Credits
 
