@@ -46,6 +46,7 @@ Each lesson includes an assignment to complete, a knowledge check and a challeng
 Visit [https://aka.ms/genai-js-course]([https://aka.ms/genai-js-course) to get started!
 
 
+
 ## 🌱 Getting Started
 
 > **Teachers**, we have [included some suggestions](for-teachers.md) on how to use this curriculum. We'd love your feedback [in our discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
