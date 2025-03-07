@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "面向初学者的 Web 开发入门: 小测验",
+		"complete": "恭喜，你完成了小测验！",
+		"error": "抱歉，请再试一次",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "课程 1 - 编程语言介绍：课前小测",
+				"quiz": [
+					{
+						"questionText": "程序可以在不编写任何代码的情况下生成",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "低级语言常被用于",
+						"answerOptions": [
+							{
+								"answerText": "网页",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "硬件",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "游戏软件",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "下列哪种工具最可能出现在 Web 开发环境中？",
+						"answerOptions": [
+							{
+								"answerText": "硬件，如树莓派",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "浏览器开发者工具",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "操作系统文档",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "课程 1 - 编程语言介绍：课后小测",
+				"quiz": [
+					{
+						"questionText": "你最可能用哪种语言来创建一个网站？",
+						"answerOptions": [
+							{
+								"answerText": "机器语言",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "每位开发者的开发环境都不尽相同",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "开发者会通过什么方式修复有问题的代码？",
+						"answerOptions": [
+							{
+								"answerText": "语法高亮",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "代码调试",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "代码格式化",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "课程 2 - GitHub 介绍：课前小测",
+				"quiz": [
+					{
+						"questionText": "如何创建一个 Git 仓库？",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "git add 命令的作用是？",
+						"answerOptions": [
+							{
+								"answerText": "提交你的代码",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "将你的文件放到暂存区以追踪它们",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "将你的文件放到 GitHub",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "如何确认你的电脑上是否已经安装了 git？",
+						"answerOptions": [
+							{
+								"answerText": "输入 git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "输入 git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "输入 git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "课程 2 - GitHub 介绍：课后小测",
+				"quiz": [
+					{
+						"questionText": "有一个地方可以用来比较和讨论一个分支引入的改动，并有检查、评论代码、集成测试等功能，这个地方是？",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Pull Request",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "一个特性分支",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "你该如何从一个远程分支获取所有提交？",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "你该如何切换到一个分支？",
+						"answerOptions": [
+							{
+								"answerText": "git checkout [branch-name]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git switch [branch-name]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [branch-name]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "课程 3 - 创造无障碍网页：课前小测",
+				"quiz": [
+					{
+						"questionText": "下列哪种浏览器工具可以用于检查网站的无障碍性？",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "你必须得用一个实体的屏幕阅读器才能检查网页对视力障碍者的无障碍性",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "只有政府网站才需要关注无障碍性",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "课程 3 - 创造无障碍网页：课后小测",
+				"quiz": [
+					{
+						"questionText": "Lighthouse 只能用于检查无障碍相关问题",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "使用安全色的色板可以帮助到",
+						"answerOptions": [
+							{
+								"answerText": "色盲人群",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "视力障碍者",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上两者",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "描述性链接对于无障碍网站来说很重要",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "课程 4 - JavaScript 基础 - 数据类型：课前小测",
+				"quiz": [
+					{
+						"questionText": "布尔值是可以用来记录字符串长度的数据类型",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "你可以对字符串进行以下哪种操作？",
+						"answerOptions": [
+							{
+								"answerText": "连接（concatenation）",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "增添（appending）",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "剪接（splicing）",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== 和 === 可以互换使用",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "课程 4 - JavaScript 基础 - 数据类型：课后小测",
+				"quiz": [
+					{
+						"questionText": "在用于声明变量时，用 const 创建的常量与用 let 和 var 基本是相同的，区别在于：",
+						"answerOptions": [
+							{
+								"answerText": "常量必须被初始化",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "常量可以被修改",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "常量可以被重新赋值",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Numbers 和 ____ 是用于处理数值型数据的 JavaScript 基本类型",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "单引号和双引号都可以用来包裹字符串",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "课程 5 - JavaScript 基础 - 方法和函数：课前小测",
+				"quiz": [
+					{
+						"questionText": "参数（argument）是什么？",
+						"answerOptions": [
+							{
+								"answerText": "是你在函数定义中声明的一个东西",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "是在函数调用时你传给函数的一个东西",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "是你和熟人间共有的一个东西",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "函数必须有返回值",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "你可以随意命名一个函数",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "是，但它最好是一个描述性的名称",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "课程 5 - JavaScript 基础 - 方法和函数：课后小测",
+				"quiz": [
+					{
+						"questionText": "函数在被调用时必须提供所有参数",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "默认值是做什么用的？",
+						"answerOptions": [
+							{
+								"answerText": "设置一个正确的值",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "为参数提供一个默认值，使得在省略参数时函数仍能正常工作",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "毫无意义",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "箭头函数（fat arrow function）可以让你",
+						"answerOptions": [
+							{
+								"answerText": "创建很重（heavy）的函数",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "省略部分函数关键字（keyword）",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "创建匿名函数",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "课程 6 - JavaScript 基础 - 做出决定：课前小测",
+				"quiz": [
+					{
+						"questionText": "运算符 == 被称为",
+						"answerOptions": [
+							{
+								"answerText": "相等",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "严格相等",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "赋值",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript 中比较表达式会返回什么数据类型？",
+						"answerOptions": [
+							{
+								"answerText": "布尔值（boolean）",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "空值（null）",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "字符串（string）",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript 中 ! 符号表示：",
+						"answerOptions": [
+							{
+								"answerText": "逻辑非",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "很重要",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "等于",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "课程 6 - JavaScript 基础 - 做出决定：课后小测",
+				"quiz": [
+					{
+						"questionText": "表达式 '1' == 1 的返回值是？",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "表达式 '1' === 1 的返回值是？",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "选择一个表达逻辑“或”的运算符",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "课程 7 - JavaScript 基础 - 数组和循环：课前小测",
+				"quiz": [
+					{
+						"questionText": "要引用数组中的特定元素，你需要使用",
+						"answerOptions": [
+							{
+								"answerText": "方括号 []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "索引",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "大括号 {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "如何获取数组内元素个数？",
+						"answerOptions": [
+							{
+								"answerText": "使用 'len(array)' 方法",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "数组的 size 属性",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "数组的 length 属性",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "JavaScript 中数组的索引从多少开始？",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "课程 7 - JavaScript 基础 - 数组和循环：课后小测",
+				"quiz": [
+					{
+						"questionText": "修改 for 循环的哪一部分可以使它的迭代次数增加 5 次？",
+						"answerOptions": [
+							{
+								"answerText": "条件表达式（condition）",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "计数器（counter）",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "迭代表达式（iteration-expression）",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "while 循环和 for 循环的区别是：",
+						"answerOptions": [
+							{
+								"answerText": "for 循环有迭代表达式和计数器，而 while 循环只有条件表达式",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "while 循环有迭代表达式和计数器，而 for 循环只有条件表达式",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "它们是相同的，只是互为别称而已",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "循环表达式 for (let i=1; i < 5; i++) 会执行多少次迭代？",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "课程 8 - 玻璃养育箱项目 - HTML 介绍：课前小测",
+				"quiz": [
+					{
+						"questionText": "HTML 全称 'HyperText Mockup Language'",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "所有 HTML 标签都需要起始和闭合标签",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "使用语义化标签最重要的作用在于",
+						"answerOptions": [
+							{
+								"answerText": "代码可读性",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "屏幕阅读器",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "可维护性",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "课程 8 - 玻璃养育箱项目 - HTML 介绍：课后小测",
+				"quiz": [
+					{
+						"questionText": "Spans 和 Divs 可以互换",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "HTML 文档的 head 可以包含:",
+						"answerOptions": [
+							{
+								"answerText": "标题（title）标签",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "元数据（metadata）",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆可",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "你不能使用不被推荐使用的标签",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否，但它们不被推荐使用是有原因的",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "课程 9  - 玻璃养育箱项目 - CSS 介绍：课前小测",
+				"quiz": [
+					{
+						"questionText": "HTML 元素必须有一个 class 或者 id 属性才能被添加样式",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS 全称 'Complete Style Sheets'",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS 可以被用来创建动画",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "课程 9 - 玻璃养育箱项目 - CSS 介绍：课后小测",
+				"quiz": [
+					{
+						"questionText": "你可以在 HTML 文件的 head 部分直接写 CSS",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "CSS 在应用程序中是必须的",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否，但是为了好看你就得用 CSS",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "哪一个浏览器工具可以被用来查看 CSS？",
+						"answerOptions": [
+							{
+								"answerText": "Elements",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Styles",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Network",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "课程 10 - 玻璃养育箱项目 - DOM 操作与闭包：课前小测",
+				"quiz": [
+					{
+						"questionText": "DOM 全称 'Document Object Management'",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "DOM 可以理解为一棵树",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "你可以利用 Web API 来操作 DOM",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "课程 10 - 玻璃养育箱项目 - DOM 操作与闭包：课后小测",
+				"quiz": [
+					{
+						"questionText": "DOM 是用于表示网页文档的一个模型",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "使用 JavaScript 闭包可以做到：",
+						"answerOptions": [
+							{
+								"answerText": "在函数里写函数",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "包住 DOM",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "关闭脚本代码块",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "当一个或多个函数需要访问外部函数的 ______ 时，闭包会很有用",
+						"answerOptions": [
+							{
+								"answerText": "数组",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "作用域",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "函数",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "课程 11 - 打字游戏：课前小测",
+				"quiz": [
+					{
+						"questionText": "事件驱动程序发生在使用者 ______ 时",
+						"answerOptions": [
+							{
+								"answerText": "点击按钮",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "改变数值",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "与页面互动",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "在面向过程编程中，函数会以下列哪种方式被调用？",
+						"answerOptions": [
+							{
+								"answerText": "任何时间",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "按特定顺序",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "从左到右",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "由 DOM 暴露的用于注册事件句柄的全局方法是",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "课程 11 - 打字游戏：课后小测",
+				"quiz": [
+					{
+						"questionText": "用户在页面上的几乎所有行为都会触发事件",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "常见的事件包括",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "你可以用匿名函数来创建事件回调",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "课程 12 - 浏览器扩展程序项目 - 关于浏览器的一切：课前小测",
+				"quiz": [
+					{
+						"questionText": "你可以从下列哪一处获取浏览器扩展程序：",
+						"answerOptions": [
+							{
+								"answerText": "沃尔玛",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "浏览器扩展程序商店",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "App store",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM 全称",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "你的浏览器可以安全或非安全地提供网页服务",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "课程 12 - 浏览器扩展程序项目 - 关于浏览器的一切：课后小测",
+				"quiz": [
+					{
+						"questionText": "万维网（The World Wide Web）的发明者是",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "世界上第一款浏览器是",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "浏览器可以记录使用者的浏览记录",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "课程 13 - 浏览器扩展程序项目 - 调用 API，使用 Local Storage：课前小测",
+				"quiz": [
+					{
+						"questionText": "APIs 全称",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "API 用于和 _____ 交互",
+						"answerOptions": [
+							{
+								"answerText": "另一处网络资源",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "数据库",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆可",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "任何人都可以创建 API",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "课程 13 - 浏览器扩展程序项目 - 调用 API，使用 Local Storage：课后小测",
+				"quiz": [
+					{
+						"questionText": "LocalStorage 会在关闭浏览器窗口时清空",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "浏览器扩展程序的 LocalStorage 由浏览器主窗口负责管理",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "REST 在 API 语境下全称",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "课程 14 - 浏览器扩展程序项目 - 了解后台任务和性能：课前小测",
+				"quiz": [
+					{
+						"questionText": "你该用什么方式来测试应用程序的性能？",
+						"answerOptions": [
+							{
+								"answerText": "使用浏览器工具",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "使用独立软件包",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "手动测试",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "网站的“性能”一般指的是",
+						"answerOptions": [
+							{
+								"answerText": "加载速度有多快",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "代码运行速度有多快",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "总体来说，近年来网页的“重量”",
+						"answerOptions": [
+							{
+								"answerText": "变轻了",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "变重了",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "没怎么变",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "课程 14 - 浏览器扩展程序项目 - 了解后台任务和性能：课后小测",
+				"quiz": [
+					{
+						"questionText": "为了更好地查看你的网站的性能，应当清空网站缓存并且重新加载分析工具",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "浏览器扩展程序天然性能就不错",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "一般会在什么方面寻找性能瓶颈？",
+						"answerOptions": [
+							{
+								"answerText": "DOM 遍历",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript 优化",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "静态资源管理",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "课程 15 - 太空游戏 - 介绍：课前小测",
+				"quiz": [
+					{
+						"questionText": "JavaScript 不是常见的游戏开发语言",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "发布/订阅（Pub/Sub）管理游戏资源和流程的首选模式",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "类（classes）和组合（composition）都可以用来实现对象继承",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "课程 15 - 太空游戏 - 介绍：课后小测",
+				"quiz": [
+					{
+						"questionText": "类通过继承来合并各种行为",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "组合是游戏对象的最佳设计模式",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub/Sub 全称为:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "课程 16 - 太空游戏 - 把英雄和怪兽画到画布上：课前小测",
+				"quiz": [
+					{
+						"questionText": "你可以利用 Canvas 元素来在屏幕上绘制图案",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "你只能用 Canvas API 绘制简单的几何图形",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "坐标点 (0,0) 在画布左下角",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "课程 16 - 太空游戏 - 把英雄和怪兽画到画布上：课后小测",
+				"quiz": [
+					{
+						"questionText": "你可以直接在 Canvas 上执行绘制操作",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "你可以通过监听 onload 事件来获知一个图片是否已经异步加载完成",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "你可以通过下列哪个方法来将图片绘制在屏幕上？",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "课程 17 - 太空游戏 - 添加动作：课前小测",
+				"quiz": [
+					{
+						"questionText": "屏幕上的任何对象都可以接收键盘事件",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "你可以用相同的方式来监听鼠标事件和键盘事件",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "如果想要定期触发什么事情，你可以使用",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "课程 17 - 太空游戏 - 添加动作：课后小测",
+				"quiz": [
+					{
+						"questionText": "你总是需要完全重绘整个屏幕",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "游戏循环（game loop）是什么？",
+						"answerOptions": [
+							{
+								"answerText": "一个确保游戏可以重新开始的函数",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "一个决定游戏运行速度的函数",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "一个定期触发来绘制使用者所见内容的函数",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "下列哪一个是触发屏幕重绘的恰当时机？",
+						"answerOptions": [
+							{
+								"answerText": "使用者产生了交互",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "有东西移动了",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "时间推移",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "课程 18 - 太空游戏 - 添加激光和碰撞检测：课前小测",
+				"quiz": [
+					{
+						"questionText": "碰撞检测（Collision detection）指的是我们如何检测两个物件是否碰撞",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "如何从屏幕中移除一个物体?",
+						"answerOptions": [
+							{
+								"answerText": "调用垃圾清理程序",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "将其标记为死亡，下一次只绘制未死亡的物体",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "将物体放到负坐标位置",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "在 JavaScript 中模拟发射激光的一个好办法是：",
+						"answerOptions": [
+							{
+								"answerText": "响应键盘事件来创建一个可见元素",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "创建动态 gifs 图像",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "使敌人定期爆炸",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "课程 18 - 太空游戏 - 添加激光和碰撞检测：课后小测",
+				"quiz": [
+					{
+						"questionText": "在碰撞检测中你会对比",
+						"answerOptions": [
+							{
+								"answerText": "圆是否相交",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "矩形是否相交",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "两点间距",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "实现冷却时间的目的是",
+						"answerOptions": [
+							{
+								"answerText": "让你没法反复地开火消灭敌人，以此提高游戏难度",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript 在一定时间内只能处理有限的事件，需要进行限制",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "常量在代码中非常明显地原因是",
+						"answerOptions": [
+							{
+								"answerText": "它们全是大写字母",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "它们有特定的名称",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "它们会以 kebab-case 命名",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "课程 19 - 太空游戏 - 分数与生命数：课前小测",
+				"quiz": [
+					{
+						"questionText": "如何利用 Canvas 元素在屏幕上绘制文字？",
+						"answerOptions": [
+							{
+								"answerText": "将文字放在 div 或 span 元素中",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "在 Canvas 元素上调用 drawText() 方法",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "在 Canvas 上下文对象调用 fillText() 方法",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "为什么游戏中需要有“生命数”这一概念？",
+						"answerOptions": [
+							{
+								"answerText": "来表现玩家能抗住多少攻击",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "这样游戏就不会直接草草结束，你会有数次机会来尝试通关它",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "可以通过 _____ 来改变 Canvas 上文字的颜色",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "课程 19 - 太空游戏 - 分数与生命数：课后小测",
+				"quiz": [
+					{
+						"questionText": "怎么样有趣地展示玩家剩余生命数？",
+						"answerOptions": [
+							{
+								"answerText": "剩余舰船的数目",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "一个点数系统",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "如何让 Canvas 元素中的文字在屏幕水平居中？",
+						"answerOptions": [
+							{
+								"answerText": "用 Flexbox",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "将文字的 x 坐标设置为窗口宽度的一半",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "将上下文对象的 textAlign 属性值设置为 center",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "在代码中，用这条代码来扣除一条生命：",
+						"answerOptions": [
+							{
+								"answerText": "this.life-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.life--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.life++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "课程 20 - 太空游戏 - 结束与重新开始：课前小测",
+				"quiz": [
+					{
+						"questionText": "何时是重新开始游戏的合适时机？",
+						"answerOptions": [
+							{
+								"answerText": "当玩家胜利或失败时",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "任何时间",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "游戏何时应该结束？",
+						"answerOptions": [
+							{
+								"answerText": "当一艘敌方舰艇被击毁时",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "当一艘英雄舰艇被击毁时",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "当点数足够时",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "给游戏添加新关卡的合理方式是：",
+						"answerOptions": [
+							{
+								"answerText": "对给定关卡，提高过关所需的点数要求",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "增加更多玩家",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "增加更多图像",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "课程 20 - 太空游戏 - 结束与重新开始：课后小测",
+				"quiz": [
+					{
+						"questionText": "当触发游戏结束条件时，该以什么方式来展现？",
+						"answerOptions": [
+							{
+								"answerText": "展示一条合适的信息",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "退出游戏",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "展示一条合适的信息，询问玩家是否重来，并展示对应操作的按键",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "只有游戏结束时才应该提供重新开始功能",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "当游戏结束时，清除 EventEmitter 的合适方式是：",
+						"answerOptions": [
+							{
+								"answerText": "清除事件监听",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "清空屏幕",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "关闭游戏窗口",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "课程 21 - 银行项目 - HTML 模板和 Web 应用的路由：课前小测",
+				"quiz": [
+					{
+						"questionText": "Web 应用中需要用多个 HTML 文件才能创建多个页面",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Web 应用中可以在本地存储和保持数据",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Web 应用中数据来源的最佳选择是：",
+						"answerOptions": [
+							{
+								"answerText": "一个本地数据库",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "一个 JavaScript 对象",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "一个有 JSON API 的服务器",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "课程 21 - 银行项目 - HTML 模板和 Web 应用的路由：课后小测",
+				"quiz": [
+					{
+						"questionText": "HTML 模板默认是 DOM 的一部分",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "URL 中的哪一部分被用于路由？",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "两者皆是",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "当 history.pushState() 函数被调用时，触发的事件名为",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "课程 22 - 银行项目 - 建立登录和注册表单：课前小测",
+				"quiz": [
+					{
+						"questionText": "HTML 表单允许你不利用 JavaScript 即可将用户输入传给服务器",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "<label> 元素在每个表单控制上都是强制需要的",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "通过 HTTP 协议向服务器传输表单数据是安全的",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "课程 22 - 银行项目 - 建立登录和注册表单：课后小测",
+				"quiz": [
+					{
+						"questionText": "在表单中使用 <label> 元素只是为了让表单更好看",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "将数据传给服务器时，URL 会在表单的哪一部分？",
+						"answerOptions": [
+							{
+								"answerText": "Action 属性",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Method 属性",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "用哪个属性可以设置 <input> 标签输入文字的字数上限？",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "课程 23 - 银行项目 - 拉取和使用数据的方法：课前小测",
+				"quiz": [
+					{
+						"questionText": "在浏览器中，常通过同步（synchronously）的方式拉取服务器的数据",
+						"answerOptions": [
+							{
+								"answerText": "是，但是异步才是最好的！",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "在 Web 中最常见的数据交换格式是",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "没有办法阻止一个网页访问公开服务器的 API",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "课程 23 - 银行项目 - 拉取和使用数据的方法：课后小测",
+				"quiz": [
+					{
+						"questionText": "在单页应用中，HTML 文件只会被加载一次且不再更新",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "为什么不信任来自用户输入的数据很重要？",
+						"answerOptions": [
+							{
+								"answerText": "因为使用特定字符会让 UI 变丑。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "因为可能包含无意义或攻击性的言论。",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "因为其可被利用为执行恶意脚本进行攻击的途径。",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "发送异步 HTTP 请求到 Web 服务器的 API 名称是？",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "课程 24 - 银行项目 - 状态管理介绍：课前小测",
+				"quiz": [
+					{
+						"questionText": "什么是不可变对象（immutable object）？",
+						"answerOptions": [
+							{
+								"answerText": "定义为常量的一个对象",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "在创建后就不能再修改的对象",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "对已经存在的对象的拷贝",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "使用状态管理的益处有？",
+						"answerOptions": [
+							{
+								"answerText": "可以追踪到每一个状态发生改变的位置",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "更容易调试代码",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "以上皆是",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "在不同会话期（session）保留重要用户数据的最佳方式是？",
+						"answerOptions": [
+							{
+								"answerText": "使用文件",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "使用浏览器的 localStorage API",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "使用服务器 API 后的数据库",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "课程 24 - 银行项目 - 状态管理介绍：课后小测",
+				"quiz": [
+					{
+						"questionText": "你认为状态管理的意义是？",
+						"answerOptions": [
+							{
+								"answerText": "规则与秩序的强制性",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "随时间变化记录用户界面的状态",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "保证应用的数据流清晰可控，保持数据和用户界面的同步性",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "你该如何保持用户会话期状态的追踪？",
+						"answerOptions": [
+							{
+								"answerText": "HTTP cookies",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Local or session storage",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "两者皆可",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "直接改变一个对象总是更新它的最佳方式",
+						"answerOptions": [
+							{
+								"answerText": "是",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "否",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

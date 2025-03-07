@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Squirrel Banking</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <!-- Placeholder where we will insert our app HTML based on route -->
+  <div id="app">Loading...</div>
+
+  <!-- Login page template -->
+  <template id="login">
+    <section class="login-page">
+      <div class="login-container">
+        <div class="login-title text-center">
+          <span class="hide-xs">Squirrel</span>
+          <img class="login-logo" src="logo.svg" alt="Squirrel Banking Logo">
+          <span class="hide-xs">Banking</span>
+        </div>
+        <div class="login-content">
+          <h2 class="text-center">Login</h2>
+          <form id="loginForm" action="javascript:login()">
+            <label for="username">Username</label>
+            <input id="username" name="user" type="text" maxlength="20" required>
+            <div id="loginError" class="error" role="alert"></div>
+            <button>Login</button>
+          </form>
+          <p class="login-separator text-center"><span>OR</span></p>
+          <h2 class="text-center">Register</h2>
+          <form id="registerForm" action="javascript:register()">
+            <label for="user">Username (required)</label>
+            <input id="user" name="user" type="text" maxlength="20" required>
+            <label for="currency">Currency (required)</label>
+            <input id="currency" name="currency" type="text" maxlength="5" value="$" required>
+            <label for="description">Description</label>
+            <input id="description" name="description" type="text" maxlength="100">
+            <label for="current-balance">Current balance</label>
+            <input id="current-balance" name="balance" type="number" value="0">
+            <div id="registerError" class="error" role="alert"></div>
+            <button>Register</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <!-- Dashboard page template -->
+  <template id="dashboard">
+    <section class="dashboard-page">
+      <header class="dashboard-header">
+        <img class="dashboard-logo" src="logo.svg" alt="Squirrel Banking Logo">
+        <h1 class="dashboard-title hide-xs">Squirrel Banking</h1>
+        <button onclick="logout()">Logout</button>
+      </header>
+      <div class="balance">
+        <div>Balance</div>
+        <span id="balance"></span>
+        <span id="balance-currency"></span>
+      </div>
+      <div class="dashboard-content">
+        <div class="transactions-title">
+          <h2 id="transactions-description"></h2>
+          <button onclick="addTransaction()">Add transaction</button>
+        </div>
+        <table class="transactions-table" aria-label="Transactions">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Object</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody id="transactions"></tbody>
+        </table>
+      </div>
+    </section>
+    <section id="transactionDialog" class="dialog">
+      <div class="dialog-content">
+        <h2 class="text-center">Add transaction</h2>
+        <form id="transactionForm" action="javascript:void(0)">
+          <label for="date">Date</label> 
+          <input id="date" name="date" type="date" required>
+          <label for="object">Object</label> 
+          <input id="object" name="object" type="text" maxlength="50" required>
+          <label for="amount">Amount (use negative value for debit)</label> 
+          <input id="amount" name="amount" type="number" value="0" step="any" required>
+          <div id="transactionError" class="error" role="alert"></div>
+          <div class="dialog-buttons">
+            <button type="button" class="button-alt" formaction="javascript:cancelTransaction()" formnovalidate>Cancel</button>
+            <button formaction="javascript:confirmTransaction()">OK</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </template>
+
+  <!-- Transaction row template -->
+  <template id="transaction">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </template>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "bank-api",
+  "version": "1.0.0",
+  "description": "Bank API",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint",
+    "format": "prettier --single-quote --write *.js"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Yohan Lasorsa",
+    "url": "https://twitter.com/sinedied"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}

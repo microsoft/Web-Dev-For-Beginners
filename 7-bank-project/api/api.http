@@ -1,0 +1,34 @@
+# You need REST Client extension for VS Code to use this file
+# Download at https://aka.ms/vscode/rest-client
+
+GET http://localhost:5000/api/
+
+###
+
+POST http://localhost:5000/api/accounts/
+Content-Type: application/x-www-form-urlencoded
+
+user=sinedied&currency=$&balance=50
+
+###
+
+GET http://localhost:5000/api/accounts/sinedied
+
+###
+
+DELETE http://localhost:5000/api/accounts/sinedied
+
+###
+
+POST http://localhost:5000/api/accounts/sinedied/transactions
+Content-Type: application/json
+
+{
+  "date": "2020-07-24",
+  "object": "Bought book",
+  "amount": -20
+}
+
+###
+
+DELETE http://localhost:5000/api/accounts/sinedied/transactions/8825ff3e8331277911174fd1b73ff889

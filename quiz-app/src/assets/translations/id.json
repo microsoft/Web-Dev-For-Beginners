@@ -1,0 +1,2509 @@
+[
+	{
+		"title": "Pengembangan Web untuk Pemula: Kuis",
+		"complete": "Selamat, Anda telah menyelesaikan kuisnya!",
+		"error": "Maaf coba lagi",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "Pelajaran 1 - Pengantar Bahasa Pemrograman: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Sebuah program dapat dibuat tanpa pembuatnya menulis kode apapun",
+						"answerOptions": [
+							{
+								"answerText": "Benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bahasa tingkat rendah adalah pilihan populer untuk",
+						"answerOptions": [
+							{
+								"answerText": "Website",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hardware",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Perangkat lunak permainan video",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Manakah dari alat berikut yang kemungkinan besar ada di lingkungan pengembang web?",
+						"answerOptions": [
+							{
+								"answerText": "Hardware, like a Raspberry Pi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Browser DevTools",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Operating system documentation",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Pelajaran 1 - Pengantar Bahasa Pemrograman: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Bahasa apa yang kemungkinan besar akan Anda gunakan untuk membuat situs web?",
+						"answerOptions": [
+							{
+								"answerText": "Machine Code (Kode Mesin)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Bash",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Lingkungan pengembangan unik untuk setiap pengembang",
+						"answerOptions": [
+							{
+								"answerText": "Benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Apa yang akan dilakukan pengembang untuk memperbaiki kode buggy (mudah rusak)?",
+						"answerOptions": [
+							{
+								"answerText": "Syntax highlighting (Penyorotan sintaks)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Debugging",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Code formatting (Pemformatan kode)",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "Pelajaran 2 - Pengantar GitHub: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Bagaimana Anda membuat repo Git?",
+						"answerOptions": [
+							{
+								"answerText": "git create",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git start",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git init",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apa fungsi git add?",
+						"answerOptions": [
+							{
+								"answerText": "Commit (menyerahkan) kode Anda",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Menambahkan file Anda ke area pementasan (staging area) untuk dilacak",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Menambahkan file Anda ke GitHub",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana Anda memeriksa apakah git terinstal di komputer Anda?",
+						"answerOptions": [
+							{
+								"answerText": "ketik git --version",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ketik git --installed",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ketik git --init",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"title": "Pelajaran 2 - Pengantar GitHub: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Tempat untuk membandingkan dan mendiskusikan perbedaan yang diperkenalkan pada cabang dengan review, komentar, tes terintegrasi, dan banyak ",
+						"answerOptions": [
+							{
+								"answerText": "GitHub",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Pull Request (Permintaan Tarik)",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Feature branch (Cabang fitur)",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana Anda mendapatkan semua komit dari cabang remote (jarak jauh)?",
+						"answerOptions": [
+							{
+								"answerText": "git fetch",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git pull",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git commits -r",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana Anda beralih ke sebuah cabang (branch)?",
+						"answerOptions": [
+							{
+								"answerText": "git checkout [branch-name]",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "git switch [branch-name]",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "git load [branch-name]",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"title": "Pelajaran 3 - Membuat Halaman Web yang Dapat Diakses: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Situs web yang dapat diakses dapat diperiksa di alat browser mana",
+						"answerOptions": [
+							{
+								"answerText": "Lighthouse",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Deckhouse",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Cleanhouse",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Anda memerlukan pembaca layar fisik untuk menguji aksesibilitas bagi pengguna dengan gangguan penglihatan",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Aksesibilitas hanya penting di situs web pemerintah",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"title": "Pelajaran 3 - Membuat Halaman Web yang Dapat Diakses: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Lighthouse hanya memeriksa masalah aksesibilitas",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Palet warna aman membantu orang dengan",
+						"answerOptions": [
+							{
+								"answerText": "buta warna",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "gangguan penglihatan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "keduanya di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tautan deskriptif sangat penting untuk situs web yang dapat diakses",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"title": "Pelajaran 4 - Dasar-dasar JavaScript - Tipe Data: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Boolean adalah tipe data yang dapat Anda gunakan untuk menguji panjang string",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Berikut ini adalah operasi yang dapat Anda lakukan pada string",
+						"answerOptions": [
+							{
+								"answerText": "concatenation",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "appending",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "splicing",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "== dan === dapat dipertukarkan",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"title": "Pelajaran 4 - Dasar-dasar JavaScript - Tipe Data: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Konstanta sama dengan let dan var untuk mendeklarasikan variabel kecuali",
+						"answerOptions": [
+							{
+								"answerText": "Konstanta harus diinisialisasi",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Konstanta dapat diubah",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Konstanta dapat ditetapkan kembali",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Numbers dan ____ adalah primitif JavaScript yang menangani data numerik",
+						"answerOptions": [
+							{
+								"answerText": "bigint",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "boolean",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "star",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "String dapat berada di antara tanda kutip tunggal dan ganda",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"title": "Pelajaran 5 - Dasar-Dasar JavaScript - Metode dan Fungsi: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apa itu argumen?",
+						"answerOptions": [
+							{
+								"answerText": "Itu adalah sesuatu yang Anda deklarasikan dalam definisi fungsi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Itu adalah sesuatu yang Anda berikan ke suatu fungsi pada waktu pemanggilan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Itu adalah sesuatu yang Anda miliki dengan orang yang Anda kenal",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Suatu fungsi harus mengembalikan sesuatu",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda dapat memberi nama fungsi apa saja",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "benar, tetapi harus merupakan nama deskriptif",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"title": "Pelajaran 5 - Dasar-Dasar JavaScript - Metode dan Fungsi: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Argumen harus disediakan untuk semua parameter dalam suatu fungsi",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apa fungsi nilai default?",
+						"answerOptions": [
+							{
+								"answerText": "Menetapkan nilai yang benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Memberikan nilai awal untuk parameter sehingga kode Anda tetap berfungsi jika Anda menghilangkan argumen untuk itu",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Tidak memiliki utilitas",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Fungsi panah gemuk memungkinkan Anda melakukan",
+						"answerOptions": [
+							{
+								"answerText": "Ciptakan fungsi yang berat",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Hilangkan kata kunci function",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Membuat fungsi anonim",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "Pelajaran 6 - Dasar-dasar JavaScript - Membuat Keputusan: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Operator berikut == dipanggil",
+						"answerOptions": [
+							{
+								"answerText": "Kesetaraan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Kesetaraan yang ketat",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Penugasan",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Perbandingan dalam JavaScript mengembalikan tipe apa?",
+						"answerOptions": [
+							{
+								"answerText": "boolean",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "string",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Simbol ! dalam JavaScript artinya:",
+						"answerOptions": [
+							{
+								"answerText": "Logika Not",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Penting",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sama",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"title": "Pelajaran 6 - Dasar-dasar JavaScript - Membuat Keputusan: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apa yang akan dikembalikan kode berikut: '1' == 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Apa yang akan dikembalikan kode berikut: '1' === 1",
+						"answerOptions": [
+							{
+								"answerText": "true",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "null",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Pilih operator yang benar untuk mengekspresikan logika _or_",
+						"answerOptions": [
+							{
+								"answerText": "a | b",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "a || b",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "a or b",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"title": "Pelajaran 7 - Dasar-dasar JavaScript - Array dan Loop: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Untuk merujuk ke item tertentu dalam sebuah array, Anda akan menggunakan a",
+						"answerOptions": [
+							{
+								"answerText": "kurung siku []",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "indeks",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "kurung kurawal {}",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana Anda mendapatkan jumlah item dalam sebuah array",
+						"answerOptions": [
+							{
+								"answerText": "Metode `len(array)`",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Properti `size` pada array",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Properti `length` pada array",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Di JavaScript, indeks dimulai dari",
+						"answerOptions": [
+							{
+								"answerText": "0",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "1",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"title": "Pelajaran 7 - Dasar-dasar JavaScript - Array dan Loop: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Bagian for-loop manakah yang perlu Anda modifikasi untuk menambah iterasinya sebesar 5",
+						"answerOptions": [
+							{
+								"answerText": "kondisi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "counter",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "ekspresi-iterasi",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apa perbedaan antara while dan for-loop",
+						"answerOptions": [
+							{
+								"answerText": "Sebuah for-loop memiliki penghitung dan ekspresi-iterasi, di mana while hanya memiliki kondisi",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Sebuah while memiliki penghitung dan ekspresi-iterasi di mana for-loop hanya memiliki kondisi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Mereka sama, hanya alias untuk satu sama lain",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Diberikan kode for (let i = 1; i <5; i ++), berapa banyak iterasi yang akan dilakukan?",
+						"answerOptions": [
+							{
+								"answerText": "5",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "4",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"title": "Pelajaran 8 - Proyek Terarium - Pengantar HTML: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "HTML singkatan dari 'HyperText Mockup Language'",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Semua tag HTML membutuhkan tag pembuka dan penutup",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Penggunaan markup semantik adalah yang paling penting untuk",
+						"answerOptions": [
+							{
+								"answerText": "keterbacaan kode (code readability)",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "pembaca layar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pemeliharaan",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 16,
+				"title": "Pelajaran 8 - Proyek Terarium - Pengantar HTML: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Span dan Div dapat dipertukarkan",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Kepala (head) dokumen HTML dapat berisi:",
+						"answerOptions": [
+							{
+								"answerText": "tag title",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "metadata",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "semua di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda tidak dapat menggunakan tag yang tidak berlaku lagi di markup Anda",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah, tapi mereka sudah tidak digunakan lagi karena alasan yang baik",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 17,
+				"title": "Pelajaran 9 - Proyek Terarium - Pengantar CSS: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Elemen HTML harus memiliki class atau id untuk mendapatkan gaya",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS adalah singkatan dari 'Complete Style Sheets'",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "CSS dapat digunakan untuk membuat animasi",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 18,
+				"title": "Pelajaran 9 - Proyek Terarium - Pengantar CSS: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda dapat menulis CSS langsung di bagian kepala file HTML Anda",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Itu selalu perlu untuk menyertakan CSS di aplikasi Anda",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "false, but if you want it to look good you probably need CSS",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Alat browser mana yang dapat digunakan untuk memeriksa CSS?",
+						"answerOptions": [
+							{
+								"answerText": "Elements",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Styles",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Network",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 19,
+				"title": "Pelajaran 10 - Proyek Terarium - Manipulasi DOM dan Penutupan: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "DOM adalah singkatan dari 'Document Object Management'",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "DOM dapat dianggap sebagai pohon",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Menggunakan API Web, Anda dapat memanipulasi DOM",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 20,
+				"title": "Pelajaran 10 - Proyek Terarium - Manipulasi DOM dan Penutupan: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "DOM adalah model untuk merepresentasikan dokumen di web",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Penutupan JavaScript (JavaScript closures) untuk melakukan hal berikut:",
+						"answerOptions": [
+							{
+								"answerText": "tulis fungsi di dalam fungsi",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "menyertakan DOM",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "tutup blok script",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Isi yang kosong: Closures berguna ketika satu atau lebih fungsi perlu mengakses fungsi luar ...",
+						"answerOptions": [
+							{
+								"answerText": "array",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "scope",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "fungsi",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 21,
+				"title": "Pelajaran 11 - Game Mengetik: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Pemrograman berbasis peristiwa (Event-driven programming) adalah saat pengguna",
+						"answerOptions": [
+							{
+								"answerText": "mengklik tombol",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "mengubah nilai",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "berinteraksi dengan halaman",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah satu di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Dalam pemrograman prosedural, fungsi dipanggil",
+						"answerOptions": [
+							{
+								"answerText": "kapan saja",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "dalam urutan tertentu",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "kiri ke kanan",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Metode universal yang diekspos di DOM untuk mendaftarkan penangan kejadian (event handlers) dipanggil",
+						"answerOptions": [
+							{
+								"answerText": "addEventListener",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "addListener",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "addEvent",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 22,
+				"title": "Pelajaran 11 - Game Mengetik: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Hampir semua hal yang dilakukan pengguna di halaman akan menimbulkan peristiwa",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Event umum termasuk",
+						"answerOptions": [
+							{
+								"answerText": "click_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "select_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "input_event",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "all of these",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda bisa menggunakan fungsi anonim untuk membuat penangan kejadian",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 23,
+				"title": "Pelajaran 12 - Proyek Ekstensi Browser - Semua tentang Browser: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda bisa mendapatkan ekstensi browser dari",
+						"answerOptions": [
+							{
+								"answerText": "WalMart",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Toko ekstensi browser",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Toko Aplikasi",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "NPM adalah singkatan dari",
+						"answerOptions": [
+							{
+								"answerText": "Node Package Manager",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Netscape Primary Mix",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Natural Processing Manager",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Browser Anda dapat menyajikan halaman web dengan aman dan tidak aman",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 24,
+				"title": "Pelajaran 12 - Proyek Ekstensi Browser - Semua tentang Browser: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "World Wide Web ditemukan oleh",
+						"answerOptions": [
+							{
+								"answerText": "Tom Barnard-Loft",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tim Berners-Lee",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Trish Berth-Pool",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Browser pertama dipanggil",
+						"answerOptions": [
+							{
+								"answerText": "WorldWideWeb",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Mozilla",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Netscape",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Browser dapat menyimpan riwayat penjelajahan pengguna",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 25,
+				"title": "Pelajaran 13 - Proyek Ekstensi Browser - Panggil API, gunakan Penyimpanan Lokal: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "API singkatan dari",
+						"answerOptions": [
+							{
+								"answerText": "Application Programming Interfaces",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A Programming Inference",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anti Proven Intentions",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Menggunakan API untuk berinteraksi dengan",
+						"answerOptions": [
+							{
+								"answerText": "Aset lain yang terhubung ke web",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sebuah database",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Salah satu dari yang di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Siapapun dapat membuat API",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 26,
+				"title": "Pelajaran 13 - Proyek Ekstensi Browser - Panggil API, gunakan Penyimpanan Lokal: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "LocalStorage dihapus setiap kali Anda menutup jendela browser",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Jendela browser utama mengontrol Penyimpanan Lokal ekstensi browser",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "REST dalam konteks API adalah singkatan dari",
+						"answerOptions": [
+							{
+								"answerText": "Representational State Transfer",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Returning State Tasks",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Rendering State To Browser",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 27,
+				"title": "Pelajaran 14 - Proyek Ekstensi Browser - Pelajari tentang Tugas Latar Belakang dan Kinerja: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Uji performa aplikasi Anda",
+						"answerOptions": [
+							{
+								"answerText": "Menggunakan alat dari peramban",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Menggunakan paket perangkat lunak terpisah",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Secara manual",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "'Kinerja' situs web adalah analisis dari",
+						"answerOptions": [
+							{
+								"answerText": "Seberapa cepat itu dimuat",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Seberapa cepat kodenya berjalan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Kedua di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Secara keseluruhan, 'bobot' halaman web selama beberapa tahun terakhir telah",
+						"answerOptions": [
+							{
+								"answerText": "gotten lighter",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "gotten heavier",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "stayed the same",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 28,
+				"title": "Pelajaran 14 - Proyek Ekstensi Browser - Pelajari tentang Tugas Latar Belakang dan Kinerja: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Untuk mendapatkan gambaran yang lebih baik tentang kinerja situs Anda, kosongkan cache-nya dan muat ulang di profiler",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Ekstensi browser pada dasarnya memiliki performa yang baik",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Analisis hal-hal berikut untuk kemacetan kinerja",
+						"answerOptions": [
+							{
+								"answerText": "DOM traversals",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Pengoptimalan JavaScript",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Manajemen aset",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Semua yang di atas",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 29,
+				"title": "Pelajaran 15 - Game Luar Angkasa - Pendahuluan: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "JavaScript adalah bahasa yang tidak populer untuk membuat game",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub / Sub adalah pola yang disukai untuk mengelola aset dan aliran game",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Pewarisan objek (object inheritance) dapat ditangani baik dengan menggunakan class atau komposisi",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 30,
+				"title": "Pelajaran 15 - Game Luar Angkasa - Pendahuluan: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Class bergantung pada warisan untuk dianggap berasal dari perilaku",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Komposisi adalah pola desain yang disukai untuk objek game",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Pub / Sub adalah singkatan dari:",
+						"answerOptions": [
+							{
+								"answerText": "Publish/Subscribe",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Print/Staple",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Publish/Sanitize",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 31,
+				"title": "Pelajaran 16 - Game Luar Angkasa - Menggambar Pahlawan dan Monster ke Kanvas: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Elemen Canvas adalah apa yang Anda gunakan untuk menggambar di layar",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Anda hanya dapat menggambar bentuk geometris sederhana menggunakan Canvas API",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Titik 0,0 berada di kiri bawah",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 32,
+				"title": "Pelajaran 16 - Game Luar Angkasa - Menggambar Pahlawan dan Monster ke Kanvas: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda dapat melakukan operasi menggambar langsung di Kanvas",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda mendengarkan acara onload untuk mengetahui kapan gambar dimuat secara asinkron",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Anda menggambar gambar ke layar dengan operasi yang disebut:",
+						"answerOptions": [
+							{
+								"answerText": "paintImage()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "drawImage()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "draw()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 33,
+				"title": "Pelajaran 17 - Game Luar Angkasa - Menambahkan Gerakan: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Objek apa pun di layar dapat menerima acara keyboard",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Anda dapat menggunakan metode yang sama untuk mendengarkan peristiwa utama dan peristiwa mouse",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Untuk membuat sesuatu terjadi secara berkala, Anda menggunakan fungsi apa?",
+						"answerOptions": [
+							{
+								"answerText": "setInterval()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "setTimeout()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sleep()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 34,
+				"title": "Pelajaran 17 - Game Luar Angkasa - Menambahkan Gerakan: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda selalu perlu menggambar ulang layar",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apa itu game loop?",
+						"answerOptions": [
+							{
+								"answerText": "Sebuah fungsi yang memastikan game dapat dimulai ulang",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Fungsi yang memutuskan seberapa cepat game harus dijalankan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Fungsi yang dipanggil secara berkala dan menggambarkan apa yang seharusnya dilihat pengguna",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Kasus yang bagus untuk menggambar ulang layar adalah",
+						"answerOptions": [
+							{
+								"answerText": "Interaksi pengguna terjadi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Sesuatu telah berpindah",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Waktu telah berlalu",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 35,
+				"title": "Pelajaran 18 - Game Luar Angkasa - Menambahkan Laser dan Mendeteksi Tabrakan: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Deteksi tabrakan adalah cara kami mendeteksi jika dua benda bertabrakan",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana cara menghapus item dari layar?",
+						"answerOptions": [
+							{
+								"answerText": "Panggil pengumpul sampah",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tandai sebagai mati, hanya tampilkan bukan benda mati saat kita menggambar layar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Tempatkan item di koordinat negatif",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Cara yang baik untuk mensimulasikan penembakan laser di JavaScript adalah:",
+						"answerOptions": [
+							{
+								"answerText": "membuat elemen visual merespons peristiwa utama",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "membuat gif animasi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "membuat musuh meledak secara berkala",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 36,
+				"title": "Pelajaran 18 - Game Luar Angkasa - Menambahkan Laser dan Mendeteksi Tabrakan: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Dalam deteksi tabrakan Anda membandingkan dua",
+						"answerOptions": [
+							{
+								"answerText": "lingkaran dan apakah mereka berpotongan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "persegi panjang dan apakah mereka berpotongan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "jarak antara dua titik",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Alasan penerapan efek cooldown adalah karena",
+						"answerOptions": [
+							{
+								"answerText": "Membuat permainan lebih sulit karena Anda tidak dapat menembakkan laser berulang kali untuk menghancurkan musuh",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JavaScript hanya dapat menghasilkan sejumlah kejadian per unit waktu, jadi Anda perlu membatasinya",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Konstanta dapat diidentifikasi dalam kode karena",
+						"answerOptions": [
+							{
+								"answerText": "mereka ditulis dengan huruf kapital",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "mereka memiliki nama yang spesifik",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "mereka ditulis dalam kebab-case seperti-ini",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 37,
+				"title": "Pelajaran 19 - Game Luar Angkasa - Penilaian dan Kehidupan: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Bagaimana Anda menggambar teks di layar menggunakan elemen Canvas?",
+						"answerOptions": [
+							{
+								"answerText": "Tempatkan teks di dalam div atau elemen span",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Panggil drawText() pada elemen Canvas",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Panggil fillText() pada konteks objek",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Mengapa Anda memiliki konsep 'nyawa' dalam sebuah game?",
+						"answerOptions": [
+							{
+								"answerText": "Untuk menunjukkan seberapa banyak kerusakan yang bisa Anda terima",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Agar permainan tidak langsung berakhir, tetapi Anda memiliki sejumlah peluang sebelum permainan berakhir",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tambahkan warna ke teks di kanvas menggunakan",
+						"answerOptions": [
+							{
+								"answerText": "fillColor",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fillStyle",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "textAlign",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 38,
+				"title": "Pelajaran 19 - Game Luar Angkasa - Penilaian dan Kehidupan: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apa cara yang menyenangkan untuk menunjukkan berapa banyak nyawa yang tersisa?",
+						"answerOptions": [
+							{
+								"answerText": "jumlah kapal",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "sistem poin",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana Anda memusatkan teks di tengah layar menggunakan elemen Canvas?",
+						"answerOptions": [
+							{
+								"answerText": "Anda menggunakan Flexbox",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Anda menginstruksikan teks yang akan digambar pada koordinat x dari lebar jendela klien/2",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Anda menyetel properti textAlign ke pusat nilai pada konteks objek",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Dalam kode, kurangi nyawa seperti ini:",
+						"answerOptions": [
+							{
+								"answerText": "this.nyawa-",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "this.nyawa--",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "this.nyawa++",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 39,
+				"title": "Pelajaran 20 - Game Luar Angkasa - Akhiri dan Mulai Ulang: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Kapan waktu yang tepat untuk memulai kembali permainan",
+						"answerOptions": [
+							{
+								"answerText": "ketika seorang pemain menang atau kalah",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "kapanpun",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Kapan pertandingan harus berakhir",
+						"answerOptions": [
+							{
+								"answerText": "ketika kapal musuh dihancurkan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "saat kapal pahlawan dihancurkan",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "saat poin dikumpulkan",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Cara yang baik untuk menambahkan level ke game Anda adalah:",
+						"answerOptions": [
+							{
+								"answerText": "Meningkatkan jumlah poin yang diperlukan untuk menyelesaikan level tertentu",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Tambahkan lebih banyak pemain ke dalam game",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tambahkan lebih banyak grafik ke dalam game",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 40,
+				"title": "Pelajaran 20 - Game Luar Angkasa - Akhiri dan Mulai Ulang: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apa pola yang baik untuk digunakan ketika kondisi akhir permainan telah terpenuhi?",
+						"answerOptions": [
+							{
+								"answerText": "Tampilkan pesan yang sesuai",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Keluar dari permainan",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Tampilkan pesan yang sesuai, tawarkan pemain untuk memulai kembali, dan tampilkan tombol apa yang harus ditekan untuk tindakan itu",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda harus menawarkan restart hanya ketika permainan telah berakhir",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Cara yang baik untuk membersihkan EventEmitter saat mengakhiri permainan adalah:",
+						"answerOptions": [
+							{
+								"answerText": "membersihkan listeners",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "membersihkan layar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "menutup jendela permainan",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 41,
+				"title": "Pelajaran 21 - Proyek Bank - Template HTML dan Rute di Aplikasi Web: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda perlu membuat beberapa file HTML untuk menampilkan layar yang berbeda di web app",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Anda dapat menyimpan dan menyimpan data secara lokal di web app",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Apa penyedia data terbaik untuk web app?",
+						"answerOptions": [
+							{
+								"answerText": "Database lokal",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Objek JavaScript",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Server dengan JSON API",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 42,
+				"title": "Pelajaran 21 - Template dan Rute HTML Proyek Bank di Aplikasi Web: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Template HTML adalah bagian dari DOM secara default",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bagian mana dari URL yang diperlukan untuk perutean (routing)?",
+						"answerOptions": [
+							{
+								"answerText": "window.location.pathname",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "window.location.origin",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "both",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apa nama peristiwa yang dipicu saat memanggil fungsi history.pushState()?",
+						"answerOptions": [
+							{
+								"answerText": "pushstate",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "popstate",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "navigate",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 43,
+				"title": "Pelajaran 22 - Proyek Bank - Buat Formulir Login dan Pendaftaran: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Formulir HTML memungkinkan untuk mengirim input pengguna ke server tanpa menggunakan JavaScript",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Elemen <label> wajib untuk setiap kontrol formulir (form control)",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apakah aman untuk mengirim data formulir ke server melalui HTTP",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 44,
+				"title": "Pelajaran 22 - Proyek Bank - Buat Formulir Login dan Pendaftaran: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Menggunakan elemen <label> dalam formulir hanya untuk membuat formulir cantik",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana Anda dapat menentukan bagaimana formulir dikirim ke server?",
+						"answerOptions": [
+							{
+								"answerText": "menggunakan atribut action",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "menggunakan atribut method",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "both",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Atribut mana yang dapat Anda gunakan untuk menyetel ukuran maksimum teks <input>?",
+						"answerOptions": [
+							{
+								"answerText": "max",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "maxlength",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "pattern",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 45,
+				"title": "Pelajaran 23 - Proyek Bank - Metode Mengambil dan Menggunakan Data: Kuis Pra Kuliah",
+				"quiz": [
+					{
+						"questionText": "Anda dapat mengambil data dari server secara sinkron (synchronously) di browser",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Apa format paling umum yang digunakan untuk bertukar data di web?",
+						"answerOptions": [
+							{
+								"answerText": "HTML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "XML",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "JSON",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Tidak ada cara untuk mencegah halaman web mengakses API server publik",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 46,
+				"title": "Pelajaran 23 - Proyek Bank - Metode Mengambil dan Menggunakan Data: Kuis Pasca Kuliah",
+				"quiz": [
+					{
+						"questionText": "Dalam aplikasi satu halaman (Single-page application), HTML dimuat sekali dan tidak pernah diperbarui",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Mengapa penting untuk tidak memercayai data yang berasal dari input pengguna?",
+						"answerOptions": [
+							{
+								"answerText": "karena menggunakan karakter khusus bisa membuat UI menjadi jelek.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "karena dapat berisi kata-kata yang tidak masuk akal atau menyinggung.",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "karena dapat digunakan sebagai vektor serangan untuk mengeksekusi skrip berbahaya.",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apa nama API untuk mengirimkan permintaan HTTP asinkron ke server web?",
+						"answerOptions": [
+							{
+								"answerText": "request()",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "fetch()",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "ajax()",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 47,
+				"title": "Pelajaran 24 - Proyek Bank - Konsep Manajemen Negara: Kuis Pra-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Apa itu objek yang tidak bisa diubah (immutable object)?",
+						"answerOptions": [
+							{
+								"answerText": "Objek yang didefinisikan sebagai konstanta",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Objek yang tidak dapat diubah setelah dibuat",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Salinan objek yang sudah ada",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Manfaat apa yang Anda dapatkan dari penggunaan state management?",
+						"answerOptions": [
+							{
+								"answerText": "Anda dapat melacak setiap tempat yang statusnya diperbarui",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Lebih mudah untuk men-debug kode",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Semua yang di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Apa cara terbaik untuk mempertahankan data pengguna penting di berbagai sesi?",
+						"answerOptions": [
+							{
+								"answerText": "Menggunakan file",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Menggunakan localStorage API browser",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Dalam database di belakang API server",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 48,
+				"title": "Pelajaran 24 - Proyek Bank - Konsep Manajemen Negara: Kuis Pasca-Kuliah",
+				"quiz": [
+					{
+						"questionText": "Menurut Anda apa artinya state management?",
+						"answerOptions": [
+							{
+								"answerText": "Penegakan hukum & ketertiban",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Mencatat status antarmuka pengguna dari waktu ke waktu",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Menjaga agar data aplikasi Anda tetap bersih dan menyinkronkan antarmuka pengguna dengan data",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Bagaimana Anda dapat melacak status sesi pengguna?",
+						"answerOptions": [
+							{
+								"answerText": "Cookie HTTP",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Penyimpanan lokal atau sesi",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Semua yang di atas",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "Mutasi objek selalu merupakan cara terbaik untuk memperbaruinya",
+						"answerOptions": [
+							{
+								"answerText": "benar",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "salah",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
