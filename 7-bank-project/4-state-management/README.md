@@ -27,7 +27,7 @@ curl http://localhost:5000/api
 
 In the [previous lesson](../3-data/README.md), we introduced a basic concept of state in our app with the global `account` variable which contains the bank data for the currently logged in user. However, our current implementation has some flaws. Try refreshing the page when you're on the dashboard. What happens?
 
-There's 3 issues with the current code:
+There are 3 issues with the current code:
 
 - The state is not persisted, as a browser refresh takes you back to the login page.
 - There are multiple functions that modify the state. As the app grows, it can make it difficult to track the changes and it's easy to forget updating one.
@@ -48,7 +48,7 @@ Once you've taken care of these, any other issues you might have may either be f
 
 > We won't cover here the part where the data automatically triggers the view update, as it's tied to more advanced concepts of [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming). It's a good follow-up subject if you're up to a deep dive.
 
-✅ There are a lot of libraries out there with different approaches to state management, [Redux](https://redux.js.org) being a popular option. Take a look at the concepts and patterns used as it's often a good way to learn what potential issues you may be facing in large web apps and how it can be solved.
+✅ There are a lot of libraries out there with different approaches to state management, [Redux](https://redux.js.org) being a popular option. Take a look at the concepts and patterns used as it's often a good way to learn what potential issues you may be facing in large web apps and how they can be solved.
 
 ### Task
 
@@ -82,7 +82,7 @@ This refactoring by itself did not bring much improvements, but the idea was to 
 
 Now that we have put in place the `state` object to store our data, the next step is to centralize the updates. The goal is to make it easier to keep track of any changes and when they happen.
 
-To avoid having changes made to the `state` object, it's also a good practice to consider it [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), meaning that it cannot be modified at all. It also means that you have to create a new state object if you want to change anything in it. By doing this, you build a protection about potentially unwanted [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)), and open up possibilities for new features in your app like implementing undo/redo, while also making it easier to debug. For example, you could log every change made to the state and keep a history of the changes to understand the source of a bug.
+To avoid having changes made to the `state` object, it's also a good practice to consider it [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), meaning that it cannot be modified at all. It also means that you have to create a new state object if you want to change anything in it. By doing this, you build a protection against potentially unwanted [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)), and open up possibilities for new features in your app like implementing undo/redo, while also making it easier to debug. For example, you could log every change made to the state and keep a history of the changes to understand the source of a bug.
 
 In JavaScript, you can use [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) to create an immutable version of an object. If you try to make changes to an immutable object, an exception will be raised.
 
@@ -101,7 +101,7 @@ function updateState(property, newData) {
 }
 ```
 
-In this function, we're creating a new state object and copy data from the previous state using the [*spread (`...`) operator*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Then we override a particular property of the state object with the new data using the [bracket notation](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` for assignment. Finally, we lock the object to prevent modifications using `Object.freeze()`. We only have the `account` property stored in the state for now, but with this approach you can add as many properties as you need in the state.
+In this function, we're creating a new state object and copying data from the previous state using the [*spread (`...`) operator*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Then we override a particular property of the state object with the new data using the [bracket notation](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` for assignment. Finally, we lock the object to prevent modifications using `Object.freeze()`. We only have the `account` property stored in the state for now, but with this approach you can add as many properties as you need in the state.
 
 We'll also update the `state` initialization to make sure the initial state is frozen too:
 
@@ -142,7 +142,7 @@ Try registering a new account, logging out and in again to check that everything
 
 ## Persist the state
 
-Most web apps need to persist data to be able to work correctly. All the critical data is usually stored on a database and accessed via a server API, like as the user account data in our case. But sometimes, it's also interesting to persist some data on the client app that's running in your browser, for a better user experience or to improve loading performance.
+Most web apps need to persist data to be able to work correctly. All the critical data is usually stored on a database and accessed via a server API, like the user account data in our case. But sometimes, it's also interesting to persist some data on the client app that's running in your browser, for a better user experience or to improve loading performance.
 
 When you want to persist data in your browser, there are a few important questions you should ask yourself:
 
@@ -162,7 +162,7 @@ Note that both these APIs only allow to store [strings](https://developer.mozill
 
 ### Task
 
-We want our users stay logged in until they explicitly click on the *Logout* button, so we'll use `localStorage` to store the account data. First, let's define a key that we'll use to store our data.
+We want our users to stay logged in until they explicitly click on the *Logout* button, so we'll use `localStorage` to store the account data. First, let's define a key that we'll use to store our data.
 
 ```js
 const storageKey = 'savedAccount';
@@ -197,7 +197,7 @@ Here we retrieve the saved data, and if there's any we update the state accordin
 
 We can also make the *Dashboard* page our application default page, as we are now persisting the account data. If no data is found, the dashboard takes care of redirecting to the *Login* page anyways. In `updateRoute()`, replace the fallback `return navigate('/login');` with `return navigate('/dashboard');`.
 
-Now login in the app and try refreshing the page. You should stay on the dashboard. With that update we've taken care of all our initial issues...
+Now login to the app and try refreshing the page. You should stay on the dashboard. With that update we've taken care of all our initial issues...
 
 ## Refresh the data
 
