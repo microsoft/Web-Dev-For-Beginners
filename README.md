@@ -20,16 +20,20 @@ Learn the fundamentals of web development with our 12-week comprehensive course 
 
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
-### 📣 Announcement - _New Curriculum_ on Generative AI was just released!
+### 📣 Announcement - _New Curriculum_ on Generative AI for JavaScript was just released!
 
-Don't miss our NEW 12-lesson curriculum on generative AI!
+Don't miss our NEW 5-lesson curriculum on generative AI!
+
+- Learn about generative AI in 5 lessons from basics to RAG
+- Interact with historical characters through a companion app
+- Enjoy a fun narrative, you'll be time travelling :)
 
 Each lesson includes an assignment to complete, a knowledge check and a challenge to guide you on learning topics like:
 - prompting and prompt engineering
 - text and image app generation
 - search apps
 
-Visit [https://aka.ms/genai-beginners](https://aka.ms/genai-beginners) to get started!
+Visit [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) to get started!
 
 
 ## 🌱 Getting Started
@@ -161,9 +165,9 @@ A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-
 
 Our team produces other courses! Check out:
 
+- [Generative AI for Beginners with JavaScript](https://aka.ms/genai-js-course)
 - [Generative AI for Beginners](https://aka.ms/genai-beginners)
 - [Generative AI for Beginners .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generative AI with JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [AI for Beginners](https://aka.ms/ai-beginners)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners)
 - [ML for Beginners](https://aka.ms/ml-beginners)
