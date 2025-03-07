@@ -20,9 +20,23 @@ Learn the fundamentals of web development with our 12-week comprehensive course 
 
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
-### 📣 Announcement - _New Curriculum_ on Generative AI for JavaScript was just release
+### 📣 Announcement - _New Curriculum_ on Generative AI for JavaScript was just released
 
 Don't miss our NEW 5-lesson curriculum on generative AI!
+
+Visit [https://aka.ms/genai-js-course]([https://aka.ms/genai-js-course) to get started!
+
+<div>
+  <img src="./images/background.png" width="600px" />
+</div>
+
+- Lessons covering everything from basics to RAG.
+- Companion app that lets you interact with historical characters
+- Fun and engaging narrative, you'll be time travelling 
+
+<div>
+  <img src="./images/character.png" width="600px" />
+</div>
 
 Each lesson includes an assignment to complete, a knowledge check and a challenge to guide you on learning topics like:
 - prompting and prompt engineering
