@@ -39,9 +39,9 @@ Visit [https://aka.ms/genai-js-course]([https://aka.ms/genai-js-course) to get s
 </div>
 
 Each lesson includes an assignment to complete, a knowledge check and a challenge to guide you on learning topics like:
-- prompting and prompt engineering
-- text and image app generation
-- search apps
+- Prompting and prompt engineering
+- Text and image app generation
+- Search apps
 
 Visit [https://aka.ms/genai-js-course]([https://aka.ms/genai-js-course) to get started!
 
