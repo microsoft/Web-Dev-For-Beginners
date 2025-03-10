@@ -31,8 +31,8 @@ Visit [https://aka.ms/genai-js-course]([https://aka.ms/genai-js-course) to get s
 </div>
 
 - Lessons covering everything from basics to RAG.
-- Companion app that lets you interact with historical characters
-- Fun and engaging narrative, you'll be time travelling 
+- Interact with historical characters using GenAI and our companion app.
+- Fun and engaging narrative, you'll be time travelling!
 
 <div>
   <img src="./images/character.png" width="600px" />
