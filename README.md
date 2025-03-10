@@ -22,7 +22,7 @@ Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc
 
 ### 📣 Announcement - _New Curriculum_ on Generative AI for JavaScript was just released
 
-Don't miss our NEW 5-lesson curriculum on generative AI!
+Don't miss our new Generative AI curriculum!
 
 Visit [https://aka.ms/genai-js-course]([https://aka.ms/genai-js-course) to get started!
 
