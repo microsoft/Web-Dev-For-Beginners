@@ -24,7 +24,7 @@ Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc
 
 Don't miss our new Generative AI curriculum!
 
-Visit [https://aka.ms/genai-js-course]([https://aka.ms/genai-js-course) to get started!
+Visit [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) to get started!
 
 <div>
   <img src="./images/background.png" width="600px" />
