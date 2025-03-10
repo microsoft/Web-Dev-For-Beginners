@@ -32,7 +32,7 @@ Visit [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) to get st
 
 - Lessons covering everything from basics to RAG.
 - Interact with historical characters using GenAI and our companion app.
-- Fun and engaging narrative, you'll be time travelling!
+- Fun and engaging narrative, you'll be time traveling!
 
 <div>
   <img src="./images/character.png" width="600px" />
