@@ -25,7 +25,7 @@ curl http://localhost:5000/api
 
 ## AJAX and data fetching
 
-Traditional web sites update the content displayed when the user selects a link or submits data using a form, by reloading the full HTML page. Every time new data needs to be loaded, the web server returns a brand new HTML page that needs to be processed by the browser, interrupting the current user action and limiting interactions during the reload. This workflow is also called a *Multi-Page Application* or *MPA*.
+Traditional websites update the content displayed when the user selects a link or submits data using a form, by reloading the full HTML page. Every time new data needs to be loaded, the web server returns a brand new HTML page that needs to be processed by the browser, interrupting the current user action and limiting interactions during the reload. This workflow is also called a *Multi-Page Application* or *MPA*.
 
 ![Update workflow in a multi-page application](./images/mpa.png)
 
@@ -109,7 +109,7 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ Did you know that by default, you can only call server APIs from the *same domain and port* than the web page you are viewing? This is security mechanism enforced by browsers. But wait, our web app is running on `localhost:3000` whereas the server API is running on ` localhost:5000`, why does it work? By using a technique called [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), it is possible to perform cross-origin HTTP requests if the server adds special headers to the response, allowing exceptions for specific domains.
+✅ Did you know that by default, you can only call server APIs from the *same domain and port* than the web page you are viewing? This is a security mechanism enforced by browsers. But wait, our web app is running on `localhost:3000` whereas the server API is running on ` localhost:5000`, why does it work? By using a technique called [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), it is possible to perform cross-origin HTTP requests if the server adds special headers to the response, allowing exceptions for specific domains.
 
 > Learn more about APIs by taking this [lesson](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
 
@@ -288,7 +288,7 @@ function createTransactionRow(transaction) {
 }
 ```
 
-This function does exactly what its names implies: using the template we created earlier, it creates a new table row and fills in its contents using transaction data. We'll use this in our `updateDashboard()` function to populate the table:
+This function does exactly what its name implies: using the template we created earlier, it creates a new table row and fills in its contents using transaction data. We'll use this in our `updateDashboard()` function to populate the table:
 
 ```js
 const transactionsRows = document.createDocumentFragment();
@@ -331,4 +331,4 @@ Here's an example of a styled dashboard page:
 
 ## Assignment
 
-[Refactor and comment your code](assignment.md)
+[Refactor and comment on your code](assignment.md)

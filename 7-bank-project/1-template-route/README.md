@@ -6,9 +6,9 @@
 
 ### Introduction
 
-Since the advent of JavaScript in browsers, websites are becoming more interactive and complex than ever. Web technologies are now commonly used to create fully functional applications that runs directly into a browser that we call [web applications](https://en.wikipedia.org/wiki/Web_application). As Web apps are highly interactive, users do not want to wait for a full page reload every time an action is performed. That's why JavaScript is used to update the HTML directly using the DOM, to provide a smoother user experience.
+Since the advent of JavaScript in browsers, websites are becoming more interactive and complex than ever. Web technologies are now commonly used to create fully functional applications that run directly into a browser that we call [web applications](https://en.wikipedia.org/wiki/Web_application). As Web apps are highly interactive, users do not want to wait for a full page reload every time an action is performed. That's why JavaScript is used to update the HTML directly using the DOM, to provide a smoother user experience.
 
-In this lesson, we're going to lay out the foundations to create bank web app, using HTML templates to create multiple screens that can be displayed and updated without having to reload the entire HTML page.
+In this lesson, we're going to lay out the foundations to create a bank web app, using HTML templates to create multiple screens that can be displayed and updated without having to reload the entire HTML page.
 
 ### Prerequisite
 
@@ -38,7 +38,7 @@ On your computer, create a folder named `bank` with a file named `index.html` in
 
 If you want to create multiple screens for a web page, one solution would be to create one HTML file for every screen you want to display. However, this solution comes with some inconvenience:
 
-- You have to reload the entire HTML when switching screen, which can be slow.
+- You have to reload the entire HTML when switching screens, which can be slow.
 - It's difficult to share data between the different screens.
 
 Another approach is to have only one HTML file, and define multiple [HTML templates](https://developer.mozilla.org/docs/Web/HTML/Element/template) using the `<template>` element. A template is a reusable HTML block that is not displayed by the browser, and needs to be instantiated at runtime using JavaScript.
@@ -135,7 +135,7 @@ function updateRoute(templateId) {
 
 What we do here is exactly the 3 steps described above. We instantiate the template with the id `templateId`, and put its cloned content within our app placeholder. Note that we need to use `cloneNode(true)` to copy the entire subtree of the template.
 
-Now call this function with one of the template and look at the result.
+Now call this function with one of the templates and look at the result.
 
 ```js
 updateRoute('login');
@@ -161,7 +161,7 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-However, for our web app we are using a single HTML file containing all the screens so this default behavior won't help us. We have to create this map manually and perform update the displayed template using JavaScript.
+However, for our web app we are using a single HTML file containing all the screens so this default behavior won't help us. We have to create this map manually and perform an update on the displayed template using JavaScript.
 
 ### Task
 
