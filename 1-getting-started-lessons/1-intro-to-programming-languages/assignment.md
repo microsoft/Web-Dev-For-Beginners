@@ -1,11 +1,20 @@
-# Reading the Docs
+Araç: Web Storage API
 
-## Instructions
+Neden Kullanılır?
+Web Storage API, modern web sitelerinde istemci tarafında veri saklamak için kullanılır. Çerezlere kıyasla daha fazla veri depolama kapasitesi sunar ve her istekte sunucuya gönderilmediği için performans açısından avantaj sağlar.
 
-There are many tools that a web developer may need that are on the [MDN documentation for client-side tooling](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview). Select 3 tools not covered in the lesson, explain why a web developer would use it, and search for a tool that falls under this category and share its documentation. Do not use the same tool example on MDN docs.
+Nasıl Kullanılır?
+Web Storage API, iki temel bileşenden oluşur:
 
-## Rubric
+localStorage: Verileri tarayıcı kapansa bile saklar.
+sessionStorage: Verileri yalnızca oturum süresince saklar.
+Örneğin, bir kullanıcının gece modu tercihlerini kaydetmek için aşağıdaki kod kullanılabilir:
 
-Exemplary | Adequate | Needs Improvement
---- | --- | -- |
-|Explained why web developer would use tool| Explained how, but not why developer would use tool| Did not mention how or why a developer would use tool  |
+javascript
+localStorage.setItem("theme", "dark"); 
+let theme = localStorage.getItem("theme");  
+console.log(theme); // "dark"
+Bu sayede kullanıcı sayfayı kapatıp açtığında bile gece modu aktif kalır.
+
+MDN Belgesi:
+Web Storage API - MDN
