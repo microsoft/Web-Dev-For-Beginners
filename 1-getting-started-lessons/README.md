@@ -8,7 +8,7 @@ In this section of the curriculum, you will be introduced to non project-based c
 2. [Introduction to GitHub](2-github-basics/README.md)
 3. [Basics of Accessibility](3-accessibility/README.md)
 
-### Credits
+### Credits test change 
 
 Introduction to Programming Languages and Tools of the Trade was written with ♥️ by [Jasmine Greenaway](https://twitter.com/paladique)
 
