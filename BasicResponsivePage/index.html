@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basic website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="home"></div>
+    <div class="navbar">
+      <div class="logo">INFO<span>.com</span></div>
+
+      <ul class="navlist" id="navlist">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#category">Category</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="burger" id="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="heading">
+      <h1>Abraham Lincoln</h1>
+      <p>(1809 - 1865)</p>
+    </div>
+
+    <div class="image">
+      <a href="https://en.wikipedia.org/wiki/Abraham_Lincoln"
+        ><img
+          src="assets/Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+          alt="Abraham lincoln.jpg"
+      /></a>
+    </div>
+
+    <div class="paragraph">
+      <p>
+        Abraham Lincoln, the 16th President of the United States, is one of the
+        most revered figures in American history, known for his leadership
+        during the Civil War and his efforts to abolish slavery. Born on
+        February 12, 1809, in a humble log cabin in Kentucky, Lincoln's early
+        life was marked by hardship and limited formal education. However, he
+        was an avid reader and self-taught scholar, which led him to a career in
+        law and politics. Lincoln entered the national stage with his debates
+        against Stephen Douglas in 1858 and his firm opposition to the expansion
+        of slavery. Elected as president in 1860, his victory prompted the
+        secession of Southern states, leading to the outbreak of the Civil War
+        in 1861.
+      </p>
+      <br />
+      <p>
+        During his presidency, Lincoln faced the immense challenge of preserving
+        the Union. His leadership was marked by strategic decisions and a deep
+        moral conviction against slavery, culminating in the issuance of the
+        Emancipation Proclamation in 1863, which declared the freedom of slaves
+        in Confederate-controlled areas. This bold move not only shifted the
+        war's focus to a fight for human freedom but also paved the way for the
+        eventual passage of the 13th Amendment, which abolished slavery in the
+        United States. Despite the war's toll, Lincoln remained steadfast in his
+        vision of a united nation. Tragically, his life was cut short on April
+        14, 1865, when he was assassinated by John Wilkes Booth at Ford's
+        Theatre in Washington, D.C., just days after the war's conclusion.
+        Lincoln's legacy endures as a symbol of equality, liberty, and the
+        enduring struggle for a more just America.
+        <span
+          ><a href="https://en.wikipedia.org/wiki/Abraham_Lincoln"
+            >Learn More</a
+          ></span
+        >
+      </p>
+      
+    </div>
+    <div class="contact" id="contact">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="   enter your E-mail"
+      />
+      <button type="submit" value="submit" id="submit">submit</button>
+    </div>
+
+
+    <script>
+      const burger = document.getElementById("burger");
+      const navlist = document.getElementById("navlist");
+
+      burger.addEventListener("click", () => {
+        navlist.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
