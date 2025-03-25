@@ -6,3 +6,6 @@
 	background-color: lightcoral;
 	border-color: red;
 }
+.container{
+	display: flex;
+}
