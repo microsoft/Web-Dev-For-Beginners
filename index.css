@@ -1,3 +1,39 @@
 .app-nav ul li {
   width: max-content;
 }
+/* index.css */
+:root {
+  --bg-color: #f9fafb; /* Light mode background */
+  --text-color: #1f2937; /* Light mode text */
+}
+
+[data-theme="dark"] {
+  --bg-color: #111827; /* Dark navy blue background */
+  --text-color: #e5e7eb; /* White text in dark mode */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+}
+/* Button Styling */
+.theme-toggle {
+  position: fixed; /* Always visible */
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+#toggle-button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

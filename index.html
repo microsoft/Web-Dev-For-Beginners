@@ -9,8 +9,13 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   <link rel="stylesheet" href="index.css">
-  </head>
+</head>
 <body>
+  <div id="theme-toggle" class="theme-toggle">
+    <button id="toggle-button" class="rounded-full p-2 bg-gray-300 text-gray-800 transition duration-300">
+      🌞
+    </button>
+  </div>
   <div id="app"></div>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -37,6 +42,23 @@
         '/((?!README).*)/((?!README).*)/(README$)': '$1/$2/$3'
       }
     }
+  </script>
+  <script>
+    const toggleButton = document.getElementById('toggle-button');
+    const htmlElement = document.documentElement;
+
+    let isDarkMode = false;
+
+    toggleButton.addEventListener('click', () => {
+      isDarkMode = !isDarkMode;
+      if (isDarkMode) {
+        htmlElement.setAttribute('data-theme', 'dark');
+        toggleButton.innerHTML = '🌙';
+      } else {
+        htmlElement.removeAttribute('data-theme');
+        toggleButton.innerHTML = '🌞';
+      }
+    });
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 </body>
