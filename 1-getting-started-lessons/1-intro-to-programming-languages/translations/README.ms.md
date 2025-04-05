@@ -2,7 +2,7 @@
 
 Pelajaran ini merangkumi asas bahasa pengaturcaraan. Topik yang anda akan belajar di sini dapat mengaplikasikan untuk kebanyakan bahasa pengaturcaraan moden hari ini. Pada bahagian 'Alat Perdagangan', anda akan belajar bagaimana mengenai perisian berguna yang membantu anda sebagai pembangun.
 
-![Intro Programming](/sketchnotes/webdev101-programming.png)
+![Intro Programming](../../../sketchnotes/webdev101-programming.png)
 > Sketchnote karya [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra-Kuliah

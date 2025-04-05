@@ -2,7 +2,7 @@
 
 Cette leçon couvre les bases des langages de programmation. Les sujets abordés ici s'appliquent à la plupart des langages de programmation modernes d'aujourd'hui. Dans la section «Outils du métier», vous découvrirez des logiciels utiles qui vous aideront en tant que développeur.
 
-![Intro Programming](/sketchnotes/webdev101-programming.png)
+![Intro Programming](../../../sketchnotes/webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz préalable
