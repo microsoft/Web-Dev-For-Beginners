@@ -1,3 +1,7 @@
+body{
+	background-color: black;
+	color: white;
+}
 .highlight {
 	background-color: yellow;
 }
