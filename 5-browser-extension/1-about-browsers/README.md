@@ -73,6 +73,17 @@ CO2 Signal's API.
 
 ✅ Learn more about package management in this [excellent Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
+### Security Best Practices
+
+When working with browser extensions, it's important to follow security best practices:
+
+1. **Minimize permissions**: Request only the permissions your extension needs. Use specific host permissions instead of `<all_urls>`.
+2. **Secure API key storage**: Never store API keys or credentials in your source code. Use `chrome.storage.sync` API instead of `localStorage` for sensitive data.
+3. **Input validation**: Always validate and sanitize user input to prevent injection attacks.
+4. **Keep dependencies updated**: Regularly audit and update your dependencies to address security vulnerabilities.
+
+For more information, see [Chrome extension security practices](https://developer.chrome.com/docs/extensions/mv3/security/).
+
 Take a minute to look through the codebase:
 
 dist

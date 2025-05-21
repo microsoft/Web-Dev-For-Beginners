@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { storeApiKey, getApiKey, storeRegion, getRegion, clearStoredData } from './security.js';
 
 // form fields
 const form = document.querySelector('.form-data');
@@ -68,8 +69,8 @@ const displayCarbonUsage = async (apiKey, region) => {
 
 // set up api key and region
 const setUpUser = async (apiKey, region) => {
-	localStorage.setItem('apiKey', apiKey);
-	localStorage.setItem('region', region);
+	storeApiKey(apiKey);
+	storeRegion(region);
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
@@ -86,8 +87,8 @@ const handleSubmit = async (e) => {
 //initial checks
 const init = async () => {
 	//if anything is in localStorage, pick it up
-	const storedApiKey = localStorage.getItem('apiKey');
-	const storedRegion = localStorage.getItem('region');
+	const storedApiKey = getApiKey();
+	const storedRegion = getRegion();
 
 	//set icon to be generic green
 	chrome.runtime.sendMessage({
@@ -116,7 +117,7 @@ const init = async () => {
 const reset = async (e) => {
 	e.preventDefault();
 	//clear local storage for region only
-	localStorage.removeItem('region');
+	clearStoredData('region');
 	init();
 };
 
