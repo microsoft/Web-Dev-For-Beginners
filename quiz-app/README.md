@@ -170,6 +170,8 @@ Once you are signed in on Azure through the link above, select a subscription an
             output_location: "dist" #Built app content directory - optional
     ```
 
+    > **SECURITY NOTE**: Never print, log or expose secrets in your workflow files. Avoid hard-coding URLs and tokens. Always use GitHub Secrets for storing sensitive values and reference them using the ${{ secrets.SECRET_NAME }} syntax. For more information, see [GitHub Actions Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
+
     </details>
 
 - Post-Deployment: After deployment is complete, click on 'Go to Deployment' then 'View app in browser'.

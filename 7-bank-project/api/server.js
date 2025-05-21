@@ -27,8 +27,35 @@ const db = {
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors({ origin: /http:\/\/(127(\.\d){3}|localhost)/}));
+
+// SECURITY NOTE: In a production environment, you should specify exact origins
+// rather than allowing all localhost and 127.x.x.x addresses
+// For more information: https://owasp.org/www-project-cheat-sheets/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
+app.use(cors({ 
+  origin: /http:\/\/(127(\.\d){3}|localhost)/,
+  methods: ['GET', 'POST', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.options('*', cors());
+
+// SECURITY NOTE: In production, you should:
+// 1. Enforce HTTPS with a middleware like:
+//    app.use((req, res, next) => {
+//      if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV === 'production') {
+//        return res.redirect('https://' + req.get('host') + req.url);
+//      }
+//      next();
+//    });
+//
+// 2. Implement proper authentication with JWT, OAuth, etc.
+//    For more information: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+//
+// 3. Add rate limiting to prevent abuse:
+//    const rateLimit = require('express-rate-limit');
+//    app.use(rateLimit({
+//      windowMs: 15 * 60 * 1000, // 15 minutes
+//      max: 100 // limit each IP to 100 requests per windowMs
+//    }));
 
 // ***************************************************************************
 
@@ -121,6 +148,19 @@ router.post('/accounts/:user/transactions', (req, res) => {
   // Check mandatory requests parameters
   if (!req.body.date || !req.body.object || !req.body.amount) {
     return res.status(400).json({ error: 'Missing parameters' });
+  }
+
+  // SECURITY NOTE: In production, validate date format to prevent injection attacks
+  // Example: use a library like date-fns to validate proper date format
+  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  if (!dateRegex.test(req.body.date)) {
+    return res.status(400).json({ error: 'Invalid date format. Use YYYY-MM-DD' });
+  }
+
+  // SECURITY NOTE: In production, sanitize object field to prevent XSS
+  // Example: use a library like DOMPurify
+  if (typeof req.body.object !== 'string' || req.body.object.length > 100) {
+    return res.status(400).json({ error: 'Object must be a string with max length of 100' });
   }
 
   // Convert amount to number if needed

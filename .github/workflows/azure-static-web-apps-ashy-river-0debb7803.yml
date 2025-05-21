@@ -2,6 +2,13 @@ name: Azure Static Web Apps CI/CD
 
 on: workflow_dispatch
 
+# SECURITY NOTE: This workflow uses repository permissions to access secrets
+# Keep the scope of permissions to the minimum required for the workflow
+permissions:
+  contents: read
+  pull-requests: write  # Needed for static web app deploy comments
+  statuses: write       # Needed for status checks
+
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')

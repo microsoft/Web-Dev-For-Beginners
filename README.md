@@ -190,6 +190,23 @@ Our team produces other courses! Check out:
 - [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
 
+## Security
+
+This repository contains educational code examples which are not intended for production use. When adapting these examples for real-world applications, please follow security best practices:
+
+1. **Input Validation**: Always validate and sanitize user inputs to prevent injection attacks.
+2. **API Security**: Protect API keys and credentials using environment variables or secure storage.
+3. **HTTPS**: Enforce HTTPS for all production applications.
+4. **Authentication**: Implement proper authentication and authorization mechanisms.
+5. **Dependencies**: Regularly update and audit dependencies for vulnerabilities using tools like npm audit.
+
+For more information about security practices:
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+- [MDN Web Security](https://developer.mozilla.org/en-US/docs/Web/Security)
+- [Microsoft Security Development Lifecycle](https://www.microsoft.com/en-us/securityengineering/sdl/)
+
+See our [SECURITY.md](SECURITY.md) file for information about reporting security vulnerabilities.
+
 ## License
 
 This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.

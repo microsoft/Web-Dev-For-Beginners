@@ -2,7 +2,9 @@
 	"manifest_version": 3,
 	"name": "My Carbon Trigger",
 	"version": "0.1.0",
-	"host_permissions": ["<all_urls>"],
+	"host_permissions": [
+		"https://api.co2signal.com/v1/*"
+	],
 	"background": {
 		"service_worker": "background.js"
 	},
