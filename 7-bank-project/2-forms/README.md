@@ -16,7 +16,7 @@ You need to have completed the [HTML templates and routing](../1-template-route/
 
 **Take note**
 You will have two terminals running at the same time as listed below.
-1. For the the main bank app we built in the [HTML templates and routing](../1-template-route/README.md) lesson
+1. For the main bank app we built in the [HTML templates and routing](../1-template-route/README.md) lesson
 2. For the [Bank APP server API](../api/README.md) we just setup above.
 
 You need two of the servers up and running to follow through with the rest of the lesson. They are listening on different ports(port `3000` and port `5000`) so everything should work just fine.
@@ -70,7 +70,7 @@ Let's start by adding a form to the `login` template. We'll need a *username* fi
 </template>
 ```
 
-If you take a closer look, you can notice that we also added a `<label>` element here. `<label>` elements are used to add a name to UI controls, such as our username field. Labels are important for the readability of your forms, but also comes with additional benefits:
+If you take a closer look, you can notice that we also added a `<label>` element here. `<label>` elements are used to add a name to UI controls, such as our username field. Labels are important for the readability of your forms, but also come with additional benefits:
 
 - By associating a label to a form control, it helps users using assistive technologies (like a screen reader) to understand what data they're expected to provide.
 - You can click on the label to directly put focus on the associated input, making it easier to reach on touch-screen based devices.
@@ -193,7 +193,7 @@ Here's a quick video about `async/await` usage:
 We use the `fetch()` API to send JSON data to the server. This method takes 2 parameters:
 
 - The URL of the server, so we put back `//localhost:5000/api/accounts` here.
-- The settings of the request. That's where we set the method to `POST` and provide the `body` for the request. As we're sending JSON data to the server, we also need to set the `Content-Type` header to `application/json` so the server know how to interpret the content.
+- The settings of the request. That's where we set the method to `POST` and provide the `body` for the request. As we're sending JSON data to the server, we also need to set the `Content-Type` header to `application/json` so the server knows how to interpret the content.
 
 As the server will respond to the request with JSON, we can use `await response.json()` to parse the JSON content and return the resulting object. Note that this method is asynchronous, so we use the `await` keyword here before returning to make sure any errors during parsing are also caught.
 
@@ -274,7 +274,7 @@ Now if you press the *Register* button and a field does not respect a validation
 
 ![Screenshot showing the validation error when trying to submit the form](./images/validation-error.png)
 
-Validation like this performed *before* sending any data to the server is called **client-side** validation. But note that's it's not always possible to perform all checks without sending the data. For example, we cannot check here if an account already exists with the same username without sending a request to the server. Additional validation performed on the server is called **server-side** validation.
+Validation like this performed *before* sending any data to the server is called **client-side** validation. But note that it's not always possible to perform all checks without sending the data. For example, we cannot check here if an account already exists with the same username without sending a request to the server. Additional validation performed on the server is called **server-side** validation.
 
 Usually both need to be implemented, and while using client-side validation improves the user experience by providing instant feedback to the user, server-side validation is crucial to make sure the user data you manipulate is sound and safe.
 

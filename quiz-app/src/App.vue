@@ -1,116 +1,84 @@
-<template>
-  <div>
-    <nav>
-      <router-link
-        class="navlink"
-        to="/"
-      >
-        Home
-      </router-link>
-      <label for="locale">locale</label>
-      <select v-model="locale">
-        <option
-          v-for="localeName in availableLocales"
-          :key="localeName"
-        >
-          {{ localeName }}
-        </option>
-      </select>
-    </nav>
-    <div id="app">
-      <h1>{{ $t("title") }}</h1>
-      <router-view>
-        <Quiz />
-      </router-view>
-    </div>
-  </div>
-</template>
-
-<script>
-import Quiz from "@/components/Quiz.vue";
-import messages from "@/assets/translations";
-
-export default {
-  name: "App",
-  i18n: { messages },
-  components: {
-    Quiz,
-  },
-  data() {
-    return {
-      locale: "en",
-      availableLocales: Object.keys(messages).sort(),
-    };
-  },
-  watch: {
-    locale(val) {
-      this.$root.$i18n.locale = val;
-    },
-  },
-  created() {
-    if (this.$route.query.loc) {
-      this.locale = this.$route.query.loc;
-    }
-  },
-};
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import QuizGreeting from './components/QuizGreeting.vue'
 </script>
 
-<style>
-html {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #252d4a;
+<template>
+  <header>
+    
+    <div class="wrapper">
+      <QuizGreeting msg="Quiz app" />
+
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
+    </div>
+  </header>
+
+  <RouterView />
+</template>
+
+<style scoped>
+header {
+  line-height: 1.5;
+  max-height: 100vh;
 }
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
 nav {
-  background-color: #252d4a;
-  padding: 1em;
-  margin-bottom: 20px;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
 }
 
 nav a {
-  color: white;
-  text-align: right;
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
 }
 
-.link {
-  display: list-item;
+nav a:first-of-type {
+  border: 0;
 }
 
-h1,
-h2,
-h3,
-.message {
-  text-align: center;
-}
-.error {
-  color: red;
-}
-.card {
-  width: 60%;
-  border: #252d4a solid;
-  border-radius: 5px;
-  margin: auto;
-  padding: 1em;
-}
-.btn {
-  min-width: 50%;
-  font-size: 16px;
-  text-align: center;
-  cursor: pointer;
-  margin-bottom: 5px;
-  width: 50%;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #252d4a;
-  border-radius: 5px;
-  padding: 5px;
-  justify-content: flex-start;
-  align-items: center;
-}
-.ans-btn {
-  justify-content: center;
-  display: flex;
-  margin: 4px auto;
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 }
 </style>
