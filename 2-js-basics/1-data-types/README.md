@@ -188,6 +188,8 @@ Booleans can be only two values: `true` or `false`. Booleans can help make decis
 
 JavaScript is notorious for its surprising ways of handling datatypes on occasion. Do a bit of research on these 'gotchas'. For example: case sensitivity can bite! Try this in your console: `let age = 1; let Age = 2; age == Age` (resolves `false` -- why?). What other gotchas can you find?
 
+There is a diffrent between `var` and `let` and `cost`, it doesn't matter where you use a variable defibed by `var` syntax, but when you define a variable with keyword `let` you should use it after declaration, unless you will face undefined exception. it's called `Temporal dead zone (TDZ)` you can red more about it here: [Temporal dead zone (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz).
+
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
 
