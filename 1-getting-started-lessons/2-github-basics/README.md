@@ -1,6 +1,6 @@
-# Introduction to GitHub
+==>📘 Introduction to GitHub
 
-This lesson covers the basics of GitHub, a platform to host and manage changes to your code.
+This lesson introduces GitHub, a powerful platform for hosting, sharing, and managing code collaboratively. Whether you're working solo or with a team, GitHub helps track changes, manage issues, and contribute to open source projects.
 
 ![Intro to GitHub](../../sketchnotes/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
@@ -10,11 +10,13 @@ This lesson covers the basics of GitHub, a platform to host and manage changes t
 
 ## Introduction
 
-In this lesson, we'll cover:
+🧠 What You'll Learn:
 
-- tracking the work you do on your machine
-- working on projects with others
-- how to contribute to open source software
+-->✅ How to track and manage code changes on your local machine
+
+-->🤝 How to collaborate on projects using GitHub
+
+-->🌍 How to contribute effectively to open source repositories
 
 ### Prerequisites
 
