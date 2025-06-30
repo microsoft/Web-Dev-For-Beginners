@@ -23,6 +23,9 @@
 ## 课程
 
 [通过使用事件驱动编程创建一个打字游戏](../typing-game/translations/README.zh-tw.md)
+<!-- https://microsoft.github.io/Web-Dev-For-Beginners/#/1-getting-started-lessons/1-intro-to-programming-languages/README.zh-cn -->
+
+
 
 ## 贡献者
 
