@@ -2,7 +2,7 @@
 
 這堂課程解釋程式語言的基礎。這項主題能應用到當代多數的程式語言。關於必備工具的部分，你會學到許多實用的開發者軟體。
 
-![關於程式語言](/sketchnotes/webdev101-programming.png)
+![關於程式語言](../../../sketchnotes/webdev101-programming.png)
 > 由[Tomomi Imura](https://twitter.com/girlie_mac) 繪製。
 
 ## 課前測驗
