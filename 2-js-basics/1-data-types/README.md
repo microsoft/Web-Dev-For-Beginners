@@ -175,7 +175,7 @@ You can achieve your formatting goals with either method, but template literals 
 
 ### Booleans
 
-Booleans can be only two values: `true` or `false`. Booleans can help make decisions on which lines of code should run when certain conditions are met. In many cases, [operators](#arithmetic-operators) assist with setting the value of a Boolean and you will often notice and write variables being initialized or their values being updated with an operator.
+Booleans can have only two values: `true` or `false`. Booleans can help make decisions on which lines of code should run when certain conditions are met. In many cases, [operators](#arithmetic-operators) assist with setting the value of a Boolean and you will often notice and write variables being initialized or their values being updated with an operator.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
