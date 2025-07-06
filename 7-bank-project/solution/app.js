@@ -4,6 +4,7 @@
 
 const serverUrl = 'http://localhost:5000/api';
 const storageKey = 'savedAccount';
+const accountsKey = 'accounts'; // New key for all accounts
 
 // ---------------------------------------------------------------------------
 // Router
@@ -32,7 +33,7 @@ function updateRoute() {
   const app = document.getElementById('app');
   app.innerHTML = '';
   app.appendChild(view);
-  
+
   if (typeof route.init === 'function') {
     route.init();
   }
@@ -41,32 +42,70 @@ function updateRoute() {
 }
 
 // ---------------------------------------------------------------------------
-// API interactions
+// API interactions (replaced with localStorage logic)
 // ---------------------------------------------------------------------------
 
-async function sendRequest(api, method, body) {
-  try {
-    const response = await fetch(serverUrl + api, {
-      method: method || 'GET',
-      headers: body ? { 'Content-Type': 'application/json' } : undefined,
-      body
-    });
-    return await response.json();
-  } catch (error) {
-    return { error: error.message || 'Unknown error' };
-  }
+function getAccounts() {
+  return JSON.parse(localStorage.getItem(accountsKey) || '[]');
+}
+
+function saveAccounts(accounts) {
+  localStorage.setItem(accountsKey, JSON.stringify(accounts));
+}
+
+function findAccount(user) {
+  const accounts = getAccounts();
+  return accounts.find(acc => acc.user === user) || null;
 }
 
 async function getAccount(user) {
-  return sendRequest('/accounts/' + encodeURIComponent(user));
+  // Simulate async
+  return new Promise(resolve => {
+    setTimeout(() => {
+      const acc = findAccount(user);
+      if (!acc) resolve({ error: 'Account not found' });
+      else resolve(acc);
+    }, 100);
+  });
 }
 
-async function createAccount(account) {
-  return sendRequest('/accounts', 'POST', account);
+async function createAccount(accountJson) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      const data = JSON.parse(accountJson);
+      if (!data.user) return resolve({ error: 'Username required' });
+      if (findAccount(data.user)) return resolve({ error: 'User already exists' });
+      // Set up initial account structure
+      const newAcc = {
+        user: data.user,
+        description: data.description || '',
+        balance: 0,
+        currency: data.currency || 'USD',
+        transactions: []
+      };
+      const accounts = getAccounts();
+      accounts.push(newAcc);
+      saveAccounts(accounts);
+      resolve(newAcc);
+    }, 100);
+  });
 }
 
-async function createTransaction(user, transaction) {
-  return sendRequest('/accounts/' + user + '/transactions', 'POST', transaction);
+async function createTransaction(user, transactionJson) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      const accounts = getAccounts();
+      const idx = accounts.findIndex(acc => acc.user === user);
+      if (idx === -1) return resolve({ error: 'Account not found' });
+      const tx = JSON.parse(transactionJson);
+      tx.amount = parseFloat(tx.amount);
+      tx.date = tx.date || new Date().toISOString().slice(0, 10);
+      accounts[idx].balance += tx.amount;
+      accounts[idx].transactions.push(tx);
+      saveAccounts(accounts);
+      resolve(tx);
+    }, 100);
+  });
 }
 
 // ---------------------------------------------------------------------------
