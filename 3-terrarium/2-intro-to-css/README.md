@@ -1,11 +1,10 @@
 # Terrarium Project Part 2: Introduction to CSS
 
 ![Introduction to CSS](../../sketchnotes/webdev101-css.png)
+
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
 
 ### Introduction
 
@@ -21,7 +20,6 @@ You should have the HTML for your terrarium built and ready to be styled.
 
 > Check out video
 
-> 
 > [![Git and GitHub basics video](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
 
 ### Task
@@ -141,7 +139,7 @@ Notice that each plant in the HTML markup has a combination of ids and classes. 
 
 ```html
 <div class="plant-holder">
-	<img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
+  <img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
 </div>
 ```
 
@@ -258,8 +256,6 @@ Add a 'bubble' shine to the left bottom area of the jar to make it look more gla
 To complete the post-lecture quiz, go through this Learn module: [Style your HTML app with CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
 ## Post-Lecture Quiz
-
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
 
 ## Review & Self Study
 

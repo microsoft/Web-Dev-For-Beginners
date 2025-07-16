@@ -4,11 +4,9 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
-
 ### Inheritance and Composition in game development
 
-In earlier lessons, there was not much need to worry about the design architecture of the apps you built, as the projects were very small in scope. However, when your applications grow in size and scope, architectural decisions become a larger concern. There are two major approaches to creating larger applications in JavaScript: *composition* or *inheritance*. There are pros and cons to both but let's explain them from within the context of a game.
+In earlier lessons, there was not much need to worry about the design architecture of the apps you built, as the projects were very small in scope. However, when your applications grow in size and scope, architectural decisions become a larger concern. There are two major approaches to creating larger applications in JavaScript: _composition_ or _inheritance_. There are pros and cons to both but let's explain them from within the context of a game.
 
 ✅ One of the most famous programming books ever written has to do with [design patterns](https://en.wikipedia.org/wiki/Design_Patterns).
 
@@ -34,7 +32,6 @@ The idea is to use `classes` in conjunction with `inheritance` to accomplish add
 Expressed via code, a game object can typically look like this:
 
 ```javascript
-
 //set up the class GameObject
 class GameObject {
   constructor(x, y, type) {
@@ -46,11 +43,11 @@ class GameObject {
 
 //this class will extend the GameObject's inherent class properties
 class Movable extends GameObject {
-  constructor(x,y, type) {
-    super(x,y, type)
+  constructor(x, y, type) {
+    super(x, y, type);
   }
 
-//this movable object can be moved on the screen
+  //this movable object can be moved on the screen
   moveTo(x, y) {
     this.x = x;
     this.y = y;
@@ -59,31 +56,31 @@ class Movable extends GameObject {
 
 //this is a specific class that extends the Movable class, so it can take advantage of all the properties that it inherits
 class Hero extends Movable {
-  constructor(x,y) {
-    super(x,y, 'Hero')
+  constructor(x, y) {
+    super(x, y, "Hero");
   }
 }
 
 //this class, on the other hand, only inherits the GameObject properties
 class Tree extends GameObject {
-  constructor(x,y) {
-    super(x,y, 'Tree')
+  constructor(x, y) {
+    super(x, y, "Tree");
   }
 }
 
 //a hero can move...
 const hero = new Hero();
-hero.moveTo(5,5);
+hero.moveTo(5, 5);
 
 //but a tree cannot
 const tree = new Tree();
 ```
 
-✅ Take a few minutes to re-envision a Pac-Man hero (Inky, Pinky or Blinky, for example) and how it would be written in JavaScript. 
+✅ Take a few minutes to re-envision a Pac-Man hero (Inky, Pinky or Blinky, for example) and how it would be written in JavaScript.
 
 **Composition**
 
-A different way of handling object inheritance is by using *Composition*. Then, objects express their behavior like this:
+A different way of handling object inheritance is by using _Composition_. Then, objects express their behavior like this:
 
 ```javascript
 //create a constant gameObject
@@ -125,7 +122,7 @@ function createStatic(x, y, type) {
 const hero = createHero(10,10);
 hero.moveTo(5,5);
 //and create a static tree which only stands around
-const tree = createStatic(0,0, 'Tree'); 
+const tree = createStatic(0,0, 'Tree');
 ```
 
 **Which pattern should I use?**
@@ -143,8 +140,8 @@ Another pattern common in game development addresses the problem of handling the
 This pattern addresses the idea that the disparate parts of your application shouldn't know about one another. Why is that? It makes it a lot easier to see what's going on in general if various parts are separated. It also makes it easier to suddenly change behavior if you need to. How do we accomplish this? We do this by establishing some concepts:
 
 - **message**: A message is usually a text string accompanied by an optional payload (a piece of data that clarifies what the message is about). A typical message in a game can be `KEY_PRESSED_ENTER`.
-- **publisher**: This element *publishes* a message and sends it out to all subscribers.
-- **subscriber**: This element *listens* to specific messages and carries out some task as the result of receiving this message, such as firing a laser.
+- **publisher**: This element _publishes_ a message and sends it out to all subscribers.
+- **subscriber**: This element _listens_ to specific messages and carries out some task as the result of receiving this message, such as firing a laser.
 
 The implementation is quite small in size but it's a very powerful pattern. Here's how it can be implemented:
 
@@ -154,21 +151,20 @@ class EventEmitter {
   constructor() {
     this.listeners = {};
   }
-//when a message is received, let the listener to handle its payload
+  //when a message is received, let the listener to handle its payload
   on(message, listener) {
     if (!this.listeners[message]) {
       this.listeners[message] = [];
     }
     this.listeners[message].push(listener);
   }
-//when a message is sent, send it to a listener with some payload
+  //when a message is sent, send it to a listener with some payload
   emit(message, payload = null) {
     if (this.listeners[message]) {
-      this.listeners[message].forEach(l => l(message, payload))
+      this.listeners[message].forEach((l) => l(message, payload));
     }
   }
 }
-
 ```
 
 To use the above code we can create a very small implementation:
@@ -176,21 +172,21 @@ To use the above code we can create a very small implementation:
 ```javascript
 //set up a message structure
 const Messages = {
-  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT'
+  HERO_MOVE_LEFT: "HERO_MOVE_LEFT",
 };
 //invoke the eventEmitter you set up above
 const eventEmitter = new EventEmitter();
 //set up a hero
-const hero = createHero(0,0);
+const hero = createHero(0, 0);
 //let the eventEmitter know to watch for messages pertaining to the hero moving left, and act on it
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
+  hero.move(5, 0);
 });
 
 //set up the window to listen for the keyup event, specifically if the left arrow is hit, emit a message to move the hero left
-window.addEventListener('keyup', (evt) => {
-  if (evt.key === 'ArrowLeft') {
-    eventEmitter.emit(Messages.HERO_MOVE_LEFT)
+window.addEventListener("keyup", (evt) => {
+  if (evt.key === "ArrowLeft") {
+    eventEmitter.emit(Messages.HERO_MOVE_LEFT);
   }
 });
 ```
@@ -199,7 +195,7 @@ Above we connect a keyboard event, `ArrowLeft` and send the `HERO_MOVE_LEFT` mes
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
+  hero.move(5, 0);
 });
 ```
 
@@ -212,8 +208,6 @@ As things gets more complicated when your game grows, this pattern stays the sam
 Think about how the pub-sub pattern can enhance a game. Which parts should emit events, and how should the game react to them? Now's your chance to get creative, thinking of a new game and how its parts might behave.
 
 ## Post-Lecture Quiz
-
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
 
 ## Review & Self Study
 
