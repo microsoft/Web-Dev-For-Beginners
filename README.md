@@ -193,3 +193,4 @@ Our team produces other courses! Check out:
 ## License
 
 This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
+🧑‍💻 Contributed by Ritik Kumar – [GitHub](https://github.com/ritiks-05)
