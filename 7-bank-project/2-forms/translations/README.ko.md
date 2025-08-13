@@ -121,7 +121,7 @@ curl http://localhost:5000/api
 
 이제 이름으로 새로운 계정을 가입합니다. *Register* 버튼을 클릭하면 다음과 같은 내용이 표시됩니다:
 
-![](.././images/form-post.png)
+![폼 제출 후 서버 응답을 보여주는 스크린샷](.././images/form-post.png)
 
 모든 것이 잘 되면, 서버에 생성된 계정 데이터가 포함되어 [JSON](https://www.json.org/json-en.html)으로 응답해야 합니다.
 
