@@ -2,7 +2,7 @@
 
 Sinasaklaw ng araling ito ang mga pangunahing kaalaman sa mga programming language. Ang mga paksang sakop dito ay nalalapat sa karamihan ng mga modernong programming language ngayon. Sa seksyong 'Tools of the Trade', matututunan mo ang tungkol sa kapaki-pakinabang na software na tumutulong sa iyo bilang isang developer.
 
-![Intro Programming](/sketchnotes/webdev101-programming.png)
+![Intro Programming](../../../sketchnotes/webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pagsusulit bago ang lektura
