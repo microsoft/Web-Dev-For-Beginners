@@ -191,7 +191,7 @@ Questa piccola funzione reimposta gli eventi `onpointerup` e `onpointermove` in 
 
 Ora tsdi è completato il progetto!
 
-🥇Congratulazioni! Il meraviglioso terrario è finito![](../images/terrarium-final.png)
+🥇Congratulazioni! Il meraviglioso terrario è finito!![Terrario completato con piante disposte artisticamente](../images/terrarium-final.png)
 
 ---
 

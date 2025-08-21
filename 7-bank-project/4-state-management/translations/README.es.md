@@ -43,7 +43,7 @@ La [gestión del estado](https://en.wikipedia.org/wiki/State_management) se trat
 
 Una vez que se haya ocupado de esto, es posible que cualquier otro problema que pueda tener ya esté solucionado o que sea más fácil de solucionar. Hay muchos enfoques posibles para resolver estos problemas, pero optaremos por una solución común que consiste en **centralizar los datos y las formas de cambiarlos**. Los flujos de datos serían así:
 
-![](./images/data-flow.png)
+![Diagrama de flujo de datos mostrando la arquitectura centralizada](./images/data-flow.png)
 
 > No cubriremos aquí la parte en la que los datos activan automáticamente la actualización de la vista, ya que está vinculada a conceptos más avanzados de [Programación reactiva](https://en.wikipedia.org/wiki/Reactive_programming). Es un buen tema de seguimiento si estás preparado para una inmersión profunda.
 

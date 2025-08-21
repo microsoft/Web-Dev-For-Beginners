@@ -122,7 +122,7 @@ Agregue las propiedades `action` y `method` al formulario de registro:
 
 Ahora intente registrar una nueva cuenta con su nombre. Después de hacer clic en el botón * Registrarse *, debería ver algo como esto:
 
-![](./images/form-post.png)
+![Captura de pantalla mostrando la respuesta del servidor después de enviar el formulario](./images/form-post.png)
 
 Si todo va bien, el servidor debe responder a su solicitud con una respuesta [JSON](https://www.json.org/json-en.html) que contenga los datos de la cuenta que se creó.
 
