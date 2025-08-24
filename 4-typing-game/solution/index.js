@@ -31,7 +31,7 @@ document.getElementById('start').addEventListener('click', function () {
 
 	// UI updates
 	// Create an array of span elements so we can set a class
-	const spanWords = words.map(function(word) { return `<span>${word} </span>`});
+	const spanWords = words.map(function (word) { return `<span>${word} </span>` });
 	// Convert into string and set as innerHTML on quote display
 	quoteElement.innerHTML = spanWords.join('');
 	// Highlight the first word
@@ -83,3 +83,12 @@ typedValueElement.addEventListener('input', (e) => {
 		typedValueElement.className = 'error';
 	}
 });
+
+// Add this at the end of the file
+const messages = {
+	success: "CONGRATULATIONS! You finished in {seconds} seconds.",
+	error: "Oops! There's a mistake.",
+	start: "Start typing to begin the game."
+};
+
+export default messages;
