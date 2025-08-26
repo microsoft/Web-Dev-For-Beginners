@@ -8,21 +8,22 @@ client = OpenAI(
     api_key=os.environ["GITHUB_TOKEN"],
 )
 
-response = client.chat.completions.create(
-    messages=[
-        {
-            "role": "system",
-            "content": "",
-        },
-        {
-            "role": "user",
-            "content": "What is the capital of France?",
-        }
-    ],
-    model="openai/gpt-4o-mini",
-    temperature=1,
-    max_tokens=4096,
-    top_p=1
-)
+def call_llm(prompt: str, system_message: str):
+    response = client.chat.completions.create(
+        messages=[
+            {
+                "role": "system",
+                "content": system_message,
+            },
+            {
+                "role": "user",
+                "content": prompt,
+            }
+        ],
+        model="openai/gpt-4o-mini",
+        temperature=1,
+        max_tokens=4096,
+        top_p=1
+    )
 
-print(response.choices[0].message.content)
+    return response.choices[0].message.content
