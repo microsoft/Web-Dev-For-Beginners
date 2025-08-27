@@ -1,0 +1,210 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "b4612bbb9ace984f374fcc80e3e035ad",
+  "translation_date": "2025-08-27T20:15:10+00:00",
+  "source_file": "2-js-basics/2-functions-methods/README.md",
+  "language_code": "he"
+}
+-->
+# יסודות JavaScript: מתודות ופונקציות
+
+![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.he.png)
+> איור מאת [Tomomi Imura](https://twitter.com/girlie_mac)
+
+## חידון לפני ההרצאה
+[חידון לפני ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+
+כשאנחנו חושבים על כתיבת קוד, אנחנו תמיד רוצים לוודא שהקוד שלנו קריא. למרות שזה נשמע מנוגד לאינטואיציה, קוד נקרא הרבה יותר פעמים מאשר נכתב. אחד הכלים המרכזיים בארגז הכלים של מפתח להבטחת קוד שניתן לתחזוקה הוא **פונקציה**.
+
+[![Methods and Functions](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Methods and Functions")
+
+> 🎥 לחצו על התמונה למעלה לצפייה בסרטון על מתודות ופונקציות.
+
+> ניתן ללמוד את השיעור הזה גם ב-[Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon)!
+
+## פונקציות
+
+בבסיסן, פונקציה היא בלוק של קוד שניתן להריץ לפי דרישה. זה מושלם לתרחישים שבהם צריך לבצע את אותה משימה מספר פעמים; במקום לשכפל את הלוגיקה במיקומים שונים (מה שיהפוך את העדכון שלה למורכב יותר בעתיד), ניתן לרכז אותה במקום אחד ולקרוא לה בכל פעם שצריך לבצע את הפעולה - ואפילו ניתן לקרוא לפונקציות מתוך פונקציות אחרות!
+
+לא פחות חשוב הוא היכולת לתת שם לפונקציה. למרות שזה עשוי להיראות טריוויאלי, השם מספק דרך מהירה לתעד חלק מסוים בקוד. אפשר לחשוב על זה כמו תווית על כפתור. אם אני לוחץ על כפתור שכתוב עליו "ביטול טיימר", אני יודע שהוא יעצור את השעון.
+
+## יצירה וקריאה לפונקציה
+
+התחביר של פונקציה נראה כך:
+
+```javascript
+function nameOfFunction() { // function definition
+ // function definition/body
+}
+```
+
+אם הייתי רוצה ליצור פונקציה שמציגה ברכה, זה עשוי להיראות כך:
+
+```javascript
+function displayGreeting() {
+  console.log('Hello, world!');
+}
+```
+
+בכל פעם שנרצה לקרוא (או להפעיל) את הפונקציה שלנו, נשתמש בשם הפונקציה ואחריו `()`. שווה לציין שהפונקציה יכולה להיות מוגדרת לפני או אחרי הקריאה אליה; הקומפיילר של JavaScript ימצא אותה בשבילכם.
+
+```javascript
+// calling our function
+displayGreeting();
+```
+
+> **NOTE:** יש סוג מיוחד של פונקציה שנקרא **מתודה**, שכבר השתמשתם בו! למעשה, ראינו זאת בדוגמה שלנו למעלה כששימושנו ב-`console.log`. מה שמבדיל מתודה מפונקציה הוא שמתודה מחוברת לאובייקט (כמו `console` בדוגמה שלנו), בעוד פונקציה היא עצמאית. תיתקלו בהרבה מפתחים שמשתמשים במונחים הללו לסירוגין.
+
+### עקרונות מנחים לכתיבת פונקציות
+
+יש כמה עקרונות מנחים שכדאי לזכור כשכותבים פונקציות:
+
+- כמו תמיד, השתמשו בשמות תיאוריים כדי שתדעו מה הפונקציה עושה.
+- השתמשו ב-**camelCasing** כדי לשלב מילים.
+- שמרו על הפונקציות ממוקדות במשימה ספציפית.
+
+## העברת מידע לפונקציה
+
+כדי להפוך פונקציה לשימושית יותר, לעיתים קרובות נרצה להעביר לה מידע. אם נסתכל על הדוגמה של `displayGreeting` למעלה, היא תציג תמיד **Hello, world!**. לא הפונקציה הכי שימושית שאפשר ליצור. אם נרצה להפוך אותה לגמישה יותר, כמו לאפשר למישהו לציין את שם האדם שברצונו לברך, נוכל להוסיף **פרמטר**. פרמטר (שנקרא לפעמים גם **ארגומנט**) הוא מידע נוסף שנשלח לפונקציה.
+
+פרמטרים נכתבים בחלק ההגדרה בתוך סוגריים ומופרדים בפסיקים, כך:
+
+```javascript
+function name(param, param2, param3) {
+
+}
+```
+
+נוכל לעדכן את `displayGreeting` כך שתקבל שם ותציג אותו.
+
+```javascript
+function displayGreeting(name) {
+  const message = `Hello, ${name}!`;
+  console.log(message);
+}
+```
+
+כשנרצה לקרוא לפונקציה ולהעביר לה את הפרמטר, נציין אותו בתוך הסוגריים.
+
+```javascript
+displayGreeting('Christopher');
+// displays "Hello, Christopher!" when run
+```
+
+## ערכי ברירת מחדל
+
+נוכל להפוך את הפונקציה שלנו לגמישה עוד יותר על ידי הוספת פרמטרים נוספים. אבל מה אם לא נרצה לדרוש שכל הערכים יוגדרו? בדוגמה של הברכה, נוכל להשאיר את השם כדרישה (אנחנו צריכים לדעת את מי אנחנו מברכים), אבל נרצה לאפשר התאמה אישית של הברכה עצמה. אם מישהו לא רוצה להתאים אותה, נספק ערך ברירת מחדל במקום. כדי לספק ערך ברירת מחדל לפרמטר, נגדיר אותו באותו אופן שבו מגדירים ערך למשתנה - `parameterName = 'defaultValue'`. לדוגמה מלאה:
+
+```javascript
+function displayGreeting(name, salutation='Hello') {
+  console.log(`${salutation}, ${name}`);
+}
+```
+
+כשנקרא לפונקציה, נוכל להחליט אם להגדיר ערך עבור `salutation`.
+
+```javascript
+displayGreeting('Christopher');
+// displays "Hello, Christopher"
+
+displayGreeting('Christopher', 'Hi');
+// displays "Hi, Christopher"
+```
+
+## ערכי החזרה
+
+עד כה, הפונקציות שיצרנו תמיד פלטו ל-[console](https://developer.mozilla.org/docs/Web/API/console). לפעמים זה בדיוק מה שאנחנו מחפשים, במיוחד כשאנחנו יוצרים פונקציות שקוראות לשירותים אחרים. אבל מה אם נרצה ליצור פונקציה עוזרת שמבצעת חישוב ומחזירה את הערך כדי שנוכל להשתמש בו במקום אחר?
+
+נוכל לעשות זאת באמצעות **ערך החזרה**. ערך החזרה מוחזר על ידי הפונקציה, וניתן לאחסן אותו במשתנה בדיוק כמו ערך מילולי כגון מחרוזת או מספר.
+
+אם פונקציה מחזירה משהו, משתמשים במילת המפתח `return`. מילת המפתח `return` מצפה לערך או הפניה למה שמוחזר, כך:
+
+```javascript
+return myVariable;
+```  
+
+נוכל ליצור פונקציה שמייצרת הודעת ברכה ומחזירה את הערך למי שקורא לה.
+
+```javascript
+function createGreetingMessage(name) {
+  const message = `Hello, ${name}`;
+  return message;
+}
+```
+
+כשנקרא לפונקציה הזו, נאחסן את הערך במשתנה. זה דומה מאוד לאופן שבו נגדיר משתנה לערך סטטי (כמו `const name = 'Christopher'`).
+
+```javascript
+const greetingMessage = createGreetingMessage('Christopher');
+```
+
+## פונקציות כפרמטרים לפונקציות
+
+כשתתקדמו בקריירת התכנות שלכם, תיתקלו בפונקציות שמקבלות פונקציות כפרמטרים. הטריק הזה נפוץ במיוחד כשלא יודעים מתי משהו יקרה או יסתיים, אבל יודעים שצריך לבצע פעולה בתגובה.
+
+לדוגמה, [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), שמתחיל טיימר ומבצע קוד כשהוא מסתיים. אנחנו צריכים להגיד לו איזה קוד אנחנו רוצים שיבוצע. נשמע כמו עבודה מושלמת לפונקציה!
+
+אם תריצו את הקוד הבא, אחרי 3 שניות תראו את ההודעה **3 שניות חלפו**.
+
+```javascript
+function displayDone() {
+  console.log('3 seconds has elapsed');
+}
+// timer value is in milliseconds
+setTimeout(displayDone, 3000);
+```
+
+### פונקציות אנונימיות
+
+בואו נסתכל שוב על מה שבנינו. אנחנו יוצרים פונקציה עם שם שתשמש פעם אחת בלבד. ככל שהאפליקציה שלנו הופכת למורכבת יותר, נוכל לראות את עצמנו יוצרים הרבה פונקציות שישמשו רק פעם אחת. זה לא אידיאלי. מתברר שלא תמיד צריך לתת שם!
+
+כשאנחנו מעבירים פונקציה כפרמטר, נוכל לדלג על יצירתה מראש ולבנות אותה כחלק מהפרמטר. נשתמש באותה מילת מפתח `function`, אבל נבנה אותה כחלק מהפרמטר.
+
+בואו נשכתב את הקוד למעלה כדי להשתמש בפונקציה אנונימית:
+
+```javascript
+setTimeout(function() {
+  console.log('3 seconds has elapsed');
+}, 3000);
+```
+
+אם תריצו את הקוד החדש שלנו, תראו שנקבל את אותן תוצאות. יצרנו פונקציה, אבל לא היינו צריכים לתת לה שם!
+
+### פונקציות חץ
+
+קיצור נפוץ בהרבה שפות תכנות (כולל JavaScript) הוא היכולת להשתמש במה שנקרא **פונקציות חץ** או **פונקציות חץ שמן**. הן משתמשות בסימון מיוחד `=>`, שנראה כמו חץ - ומכאן השם! באמצעות `=>`, ניתן לדלג על מילת המפתח `function`.
+
+בואו נשכתב את הקוד שלנו פעם נוספת כדי להשתמש בפונקציית חץ:
+
+```javascript
+setTimeout(() => {
+  console.log('3 seconds has elapsed');
+}, 3000);
+```
+
+### מתי להשתמש בכל אסטרטגיה
+
+עכשיו ראיתם שיש לנו שלוש דרכים להעביר פונקציה כפרמטר, ואתם עשויים לתהות מתי להשתמש בכל אחת. אם אתם יודעים שתשתמשו בפונקציה יותר מפעם אחת, צרו אותה כרגיל. אם תשתמשו בה רק במקום אחד, בדרך כלל עדיף להשתמש בפונקציה אנונימית. הבחירה בין פונקציית חץ לבין התחביר המסורתי של `function` תלויה בכם, אבל תבחינו שרוב המפתחים המודרניים מעדיפים `=>`.
+
+---
+
+## 🚀 אתגר
+
+האם תוכלו להסביר במשפט אחד את ההבדל בין פונקציות למתודות? נסו!
+
+## חידון אחרי ההרצאה
+[חידון אחרי ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+
+## סקירה ולמידה עצמית
+
+כדאי [לקרוא עוד קצת על פונקציות חץ](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), שכן הן הופכות נפוצות יותר ויותר בקוד. תרגלו כתיבת פונקציה, ואז שכתבו אותה עם התחביר הזה.
+
+## משימה
+
+[כיף עם פונקציות](assignment.md)
+
+---
+
+**כתב ויתור**:  
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו אחראים לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
