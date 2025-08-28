@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-27T22:48:45+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-28T15:47:24+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "tl"
 }
 -->
-# Mga Batayan ng JavaScript: Paggawa ng Desisyon
+# Mga Pangunahing Kaalaman sa JavaScript: Paggawa ng Desisyon
 
-![Mga Batayan ng JavaScript - Paggawa ng Desisyon](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.tl.png)
+![Mga Pangunahing Kaalaman sa JavaScript - Paggawa ng Desisyon](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.tl.png)
 
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Ang paggawa ng desisyon at pagkontrol sa pagkakasunod-sunod ng pagtakbo ng iyong code ay nagpapalakas at nagpaparami ng gamit ng iyong code. Ang seksyong ito ay tumatalakay sa syntax para sa pagkontrol ng daloy ng data sa JavaScript at ang kahalagahan nito kapag ginamit sa Boolean na uri ng data.
+Ang paggawa ng desisyon at pagkontrol sa pagkakasunod-sunod ng pagtakbo ng iyong code ay ginagawang reusable at matibay ang iyong code. Ang seksyong ito ay tumatalakay sa syntax para sa pagkontrol ng daloy ng data sa JavaScript at ang kahalagahan nito kapag ginamit sa Boolean na uri ng data.
 
 [![Paggawa ng Desisyon](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Paggawa ng Desisyon")
 
@@ -34,22 +34,22 @@ Itakda ang iyong boolean na maging true o false tulad nito:
 `let myTrueBool = true`  
 `let myFalseBool = false`
 
-✅ Ang Booleans ay ipinangalan sa English na matematikong si George Boole (1815–1864), na isa ring pilosopo at lohiko.
+✅ Ang Booleans ay ipinangalan sa English na matematikong si George Boole (1815–1864), na isang pilosopo at lohiko.
 
 ## Mga Operator ng Paghahambing at Booleans
 
 Ang mga operator ay ginagamit upang suriin ang mga kondisyon sa pamamagitan ng paggawa ng mga paghahambing na lilikha ng Boolean na halaga. Narito ang listahan ng mga operator na madalas gamitin.
 
-| Simbolo | Paglalarawan                                                                                                                                                   | Halimbawa          |
+| Simbolo | Deskripsyon                                                                                                                                                   | Halimbawa          |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`     | **Mas mababa sa**: Inihahambing ang dalawang halaga at ibinabalik ang `true` Boolean na uri ng data kung ang halaga sa kaliwang bahagi ay mas mababa kaysa sa kanan | `5 < 6 // true`    |
-| `<=`    | **Mas mababa o katumbas sa**: Inihahambing ang dalawang halaga at ibinabalik ang `true` Boolean na uri ng data kung ang halaga sa kaliwang bahagi ay mas mababa o katumbas sa kanan | `5 <= 6 // true`   |
-| `>`     | **Mas mataas sa**: Inihahambing ang dalawang halaga at ibinabalik ang `true` Boolean na uri ng data kung ang halaga sa kaliwang bahagi ay mas mataas kaysa sa kanan | `5 > 6 // false`   |
-| `>=`    | **Mas mataas o katumbas sa**: Inihahambing ang dalawang halaga at ibinabalik ang `true` Boolean na uri ng data kung ang halaga sa kaliwang bahagi ay mas mataas o katumbas sa kanan | `5 >= 6 // false`  |
-| `===`   | **Mahigpit na pagkakapantay-pantay**: Inihahambing ang dalawang halaga at ibinabalik ang `true` Boolean na uri ng data kung ang mga halaga sa kanan at kaliwa ay magkapantay AT magkapareho ng uri ng data. | `5 === 6 // false` |
-| `!==`   | **Hindi pagkakapantay-pantay**: Inihahambing ang dalawang halaga at ibinabalik ang kabaligtaran na Boolean na halaga ng kung ano ang ibabalik ng mahigpit na pagkakapantay-pantay na operator | `5 !== 6 // true`  |
+| `<`     | **Mas mababa sa**: Kinukumpara ang dalawang halaga at nagbabalik ng `true` Boolean na uri ng data kung ang halaga sa kaliwang bahagi ay mas mababa kaysa sa kanan | `5 < 6 // true`    |
+| `<=`    | **Mas mababa o katumbas sa**: Kinukumpara ang dalawang halaga at nagbabalik ng `true` Boolean na uri ng data kung ang halaga sa kaliwang bahagi ay mas mababa o katumbas sa kanan | `5 <= 6 // true`   |
+| `>`     | **Mas mataas sa**: Kinukumpara ang dalawang halaga at nagbabalik ng `true` Boolean na uri ng data kung ang halaga sa kaliwang bahagi ay mas mataas kaysa sa kanan | `5 > 6 // false`   |
+| `>=`    | **Mas mataas o katumbas sa**: Kinukumpara ang dalawang halaga at nagbabalik ng `true` Boolean na uri ng data kung ang halaga sa kaliwang bahagi ay mas mataas o katumbas sa kanan | `5 >= 6 // false`  |
+| `===`   | **Mahigpit na pagkakapantay-pantay**: Kinukumpara ang dalawang halaga at nagbabalik ng `true` Boolean na uri ng data kung ang mga halaga sa kanan at kaliwa ay magkapantay AT magkapareho ng uri ng data. | `5 === 6 // false` |
+| `!==`   | **Hindi pagkakapantay-pantay**: Kinukumpara ang dalawang halaga at nagbabalik ng kabaligtaran na Boolean na halaga ng kung ano ang ibabalik ng mahigpit na pagkakapantay-pantay na operator | `5 !== 6 // true`  |
 
-✅ Subukan ang iyong kaalaman sa pamamagitan ng pagsusulat ng ilang mga paghahambing sa console ng iyong browser. Mayroon bang data na ibinalik na ikinagulat mo?
+✅ Subukan ang iyong kaalaman sa pamamagitan ng pagsusulat ng ilang mga paghahambing sa console ng iyong browser. Mayroon bang data na nagbalik na ikinagulat mo?
 
 ## If Statement
 
@@ -133,10 +133,10 @@ console.log(`The value is ${a}`);
 
 Ang mga desisyon ay maaaring mangailangan ng higit sa isang paghahambing, at maaaring pagsamahin gamit ang mga logical operator upang makabuo ng Boolean na halaga.
 
-| Simbolo | Paglalarawan                                                                                     | Halimbawa                                                                 |
+| Simbolo | Deskripsyon                                                                                     | Halimbawa                                                                 |
 | ------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`    | **Logical AND**: Inihahambing ang dalawang Boolean na expression. Nagbabalik ng true **lamang** kung parehong panig ay true | `(5 > 6) && (5 < 6 ) //Isang panig ay false, ang isa ay true. Nagbabalik ng false` |
-| `\|\|`  | **Logical OR**: Inihahambing ang dalawang Boolean na expression. Nagbabalik ng true kung kahit isa sa mga panig ay true     | `(5 > 6) \|\| (5 < 6) //Isang panig ay false, ang isa ay true. Nagbabalik ng true` |
+| `&&`    | **Logical AND**: Kinukumpara ang dalawang Boolean na expression. Nagbabalik ng true **lamang** kung parehong panig ay true | `(5 > 6) && (5 < 6 ) //Isang panig ay false, ang isa ay true. Nagbabalik ng false` |
+| `\|\|`  | **Logical OR**: Kinukumpara ang dalawang Boolean na expression. Nagbabalik ng true kung kahit isa sa mga panig ay true     | `(5 > 6) \|\| (5 < 6) //Isang panig ay false, ang isa ay true. Nagbabalik ng true` |
 | `!`     | **Logical NOT**: Nagbabalik ng kabaligtaran na halaga ng isang Boolean na expression                             | `!(5 > 6) // 5 ay hindi mas mataas kaysa sa 6, ngunit ang "!" ay magbabalik ng true`         |
 
 ## Mga Kondisyon at Desisyon gamit ang Logical Operators
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Negation operator
 
-Nakikita mo na kung paano mo magagamit ang isang `if...else` statement upang lumikha ng conditional logic. Ang anumang ilalagay sa isang `if` ay kailangang magresulta sa true/false. Sa pamamagitan ng paggamit ng `!` operator, maaari mong _i-negate_ ang expression. Ganito ang hitsura nito:
+Nakikita mo na kung paano mo magagamit ang isang `if...else` statement upang lumikha ng conditional logic. Anumang bagay na pumapasok sa isang `if` ay kailangang mag-evaluate sa true/false. Sa pamamagitan ng paggamit ng `!` operator, maaari mong _i-negate_ ang expression. Ganito ang magiging hitsura nito:
 
 ```javascript
 if (!condition) {
@@ -171,7 +171,7 @@ if (!condition) {
 
 ### Ternary expressions
 
-Ang `if...else` ay hindi lamang ang paraan upang ipahayag ang lohika ng desisyon. Maaari ka ring gumamit ng tinatawag na ternary operator. Ang syntax nito ay ganito:
+Ang `if...else` ay hindi lamang paraan upang ipahayag ang decision logic. Maaari ka ring gumamit ng tinatawag na ternary operator. Ang syntax nito ay ganito:
 
 ```javascript
 let variable = condition ? <return this if true> : <return this if false>
@@ -193,7 +193,7 @@ Ang nasa itaas ay nagsasaad na:
 - kung gayon, i-assign ang `firstNumber` sa `biggestNumber`
 - kung hindi, i-assign ang `secondNumber`.
 
-Ang ternary expression ay isang mas compact na paraan ng pagsulat ng code sa ibaba:
+Ang ternary expression ay isang mas compact na paraan ng pagsusulat ng code sa ibaba:
 
 ```javascript
 let biggestNumber;
@@ -220,7 +220,7 @@ Gumawa ng isang programa na unang isinulat gamit ang logical operators, at pagka
 
 Magbasa pa tungkol sa maraming operator na magagamit ng user [sa MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
-Suriin ang kahanga-hangang [operator lookup](https://joshwcomeau.com/operator-lookup/) ni Josh Comeau!
+Dumaan sa kahanga-hangang [operator lookup](https://joshwcomeau.com/operator-lookup/) ni Josh Comeau!
 
 ## Assignment
 

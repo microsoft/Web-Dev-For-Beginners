@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-27T22:03:21+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-28T15:37:39+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "tl"
 }
@@ -15,13 +15,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Panimula
 
-Sa puso ng bawat web application ay ang *data*. Ang data ay maaaring magkaroon ng iba't ibang anyo, ngunit ang pangunahing layunin nito ay magpakita ng impormasyon sa user. Habang nagiging mas interactive at kumplikado ang mga web app, ang paraan ng pag-access at pakikipag-ugnayan ng user sa impormasyon ay nagiging mahalagang bahagi ng web development.
+Sa puso ng bawat web application ay ang *data*. Ang data ay maaaring magkaroon ng iba't ibang anyo, ngunit ang pangunahing layunin nito ay palaging magpakita ng impormasyon sa user. Habang nagiging mas interactive at kumplikado ang mga web app, ang paraan ng pag-access at pakikipag-ugnayan ng user sa impormasyon ay naging mahalagang bahagi ng web development.
 
 Sa araling ito, tatalakayin natin kung paano kumuha ng data mula sa server nang asynchronous, at gamitin ang data na ito upang magpakita ng impormasyon sa isang web page nang hindi nire-reload ang HTML.
 
-### Paunang Kaalaman
+### Kinakailangan
 
-Kailangan mong natapos na ang [Login at Registration Form](../2-forms/README.md) na bahagi ng web app para sa araling ito. Kailangan mo ring mag-install ng [Node.js](https://nodejs.org) at [patakbuhin ang server API](../api/README.md) nang lokal upang makuha ang data ng account.
+Kailangan mong natapos ang [Login at Registration Form](../2-forms/README.md) na bahagi ng web app para sa araling ito. Kailangan mo ring mag-install ng [Node.js](https://nodejs.org) at [patakbuhin ang server API](../api/README.md) nang lokal upang makuha ang data ng account.
 
 Maaari mong subukan kung maayos na tumatakbo ang server sa pamamagitan ng pag-execute ng command na ito sa terminal:
 
@@ -38,17 +38,17 @@ Ang tradisyunal na mga website ay nag-a-update ng nilalaman kapag ang user ay pu
 
 ![Workflow ng pag-update sa isang multi-page application](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.tl.png)
 
-Nang magsimulang maging mas kumplikado at interactive ang mga web application, lumitaw ang bagong teknik na tinatawag na [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Ang teknik na ito ay nagpapahintulot sa mga web app na magpadala at kumuha ng data mula sa server nang asynchronous gamit ang JavaScript, nang hindi nire-reload ang HTML page, na nagreresulta sa mas mabilis na pag-update at mas maayos na interaksyon ng user. Kapag natanggap ang bagong data mula sa server, maaaring i-update ang kasalukuyang HTML page gamit ang JavaScript sa pamamagitan ng [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API. Sa paglipas ng panahon, ang approach na ito ay naging tinatawag na [*Single-Page Application* o *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+Nang magsimulang maging mas kumplikado at interactive ang mga web application, lumitaw ang isang bagong teknik na tinatawag na [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Ang teknik na ito ay nagpapahintulot sa mga web app na magpadala at kumuha ng data mula sa server nang asynchronous gamit ang JavaScript, nang hindi nire-reload ang HTML page, na nagreresulta sa mas mabilis na pag-update at mas maayos na interaksyon ng user. Kapag natanggap ang bagong data mula sa server, maaaring i-update ang kasalukuyang HTML page gamit ang JavaScript sa pamamagitan ng [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API. Sa paglipas ng panahon, ang approach na ito ay naging tinatawag na [*Single-Page Application* o *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
 
 ![Workflow ng pag-update sa isang single-page application](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.tl.png)
 
-Noong una, ang tanging API na magagamit para kumuha ng data nang asynchronous ay ang [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Ngunit ang mga modernong browser ngayon ay may mas maginhawa at mas makapangyarihang [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), na gumagamit ng promises at mas angkop para sa pag-manipula ng JSON data.
+Noong unang ipinakilala ang AJAX, ang tanging API na magagamit upang kumuha ng data nang asynchronous ay ang [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Ngunit ang mga modernong browser ngayon ay may mas maginhawa at mas makapangyarihang [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), na gumagamit ng promises at mas angkop para sa pag-manipula ng JSON data.
 
 > Bagamat sinusuportahan ng lahat ng modernong browser ang `Fetch API`, kung nais mong gumana ang iyong web application sa mga legacy o lumang browser, magandang ideya na suriin muna ang [compatibility table sa caniuse.com](https://caniuse.com/fetch).
 
 ### Gawain
 
-Sa [nakaraang aralin](../2-forms/README.md), ipinatupad natin ang registration form upang lumikha ng account. Ngayon, magdadagdag tayo ng code upang mag-login gamit ang umiiral na account, at kunin ang data nito. Buksan ang `app.js` file at magdagdag ng bagong `login` function:
+Sa [nakaraang aralin](../2-forms/README.md), ipinatupad natin ang registration form upang makagawa ng account. Ngayon, magdadagdag tayo ng code upang mag-login gamit ang umiiral na account, at kunin ang data nito. Buksan ang `app.js` file at magdagdag ng bagong `login` function:
 
 ```js
 async function login() {
@@ -72,7 +72,7 @@ async function getAccount(user) {
 }
 ```
 
-Ginagamit natin ang `fetch` API upang humiling ng data nang asynchronous mula sa server, ngunit sa pagkakataong ito, hindi na natin kailangan ng karagdagang mga parameter maliban sa URL na tatawagin, dahil nagre-request lang tayo ng data. Sa default, ang `fetch` ay lumilikha ng [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP request, na siyang kailangan natin dito.
+Ginagamit natin ang `fetch` API upang humiling ng data nang asynchronous mula sa server, ngunit sa pagkakataong ito, hindi natin kailangan ng anumang karagdagang parameter maliban sa URL na tatawagin, dahil nagku-query lang tayo ng data. Sa default, ang `fetch` ay lumilikha ng [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP request, na siyang kailangan natin dito.
 
 ✅ Ang `encodeURIComponent()` ay isang function na nag-e-escape ng mga espesyal na karakter para sa URL. Anong mga problema ang maaaring mangyari kung hindi natin tatawagin ang function na ito at direktang gamitin ang `user` value sa URL?
 
@@ -109,7 +109,7 @@ Sa wakas, kailangan nating tawagin ang ating `login` function kapag na-submit an
 <form id="loginForm" action="javascript:login()">
 ```
 
-Subukan kung maayos ang lahat sa pamamagitan ng pagrehistro ng bagong account at pagsubok na mag-login gamit ang parehong account.
+Subukan kung gumagana nang tama ang lahat sa pamamagitan ng pagrehistro ng bagong account at pagsubok na mag-login gamit ang parehong account.
 
 Bago magpatuloy sa susunod na bahagi, maaari rin nating kumpletuhin ang `register` function sa pamamagitan ng pagdaragdag nito sa ibaba ng function:
 
@@ -124,7 +124,7 @@ navigate('/dashboard');
 
 ## I-update ang HTML upang magpakita ng data
 
-Ngayon na mayroon na tayong user data, kailangan nating i-update ang umiiral na HTML upang ipakita ito. Alam na natin kung paano kunin ang isang elemento mula sa DOM gamit ang halimbawa `document.getElementById()`. Kapag mayroon ka nang base element, narito ang ilang mga API na maaari mong gamitin upang baguhin ito o magdagdag ng mga child element dito:
+Ngayon na mayroon na tayong user data, kailangan nating i-update ang umiiral na HTML upang maipakita ito. Alam na natin kung paano kunin ang isang elemento mula sa DOM gamit ang halimbawa `document.getElementById()`. Kapag mayroon ka nang base element, narito ang ilang mga API na maaari mong gamitin upang baguhin ito o magdagdag ng mga child element dito:
 
 - Gamit ang [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) property, maaari mong baguhin ang text ng isang elemento. Tandaan na ang pagbabago ng value na ito ay nag-aalis ng lahat ng mga anak ng elemento (kung mayroon man) at pinapalitan ito ng ibinigay na text. Dahil dito, ito rin ay isang epektibong paraan upang alisin ang lahat ng anak ng isang elemento sa pamamagitan ng pag-assign ng empty string `''` dito.
 
@@ -145,7 +145,7 @@ Magdagdag tayo ng placeholder element sa login form kung saan maaari nating ipak
 ...
 ```
 
-Ang `<div>` element na ito ay walang laman, ibig sabihin ay walang ipapakita sa screen hangga't hindi tayo nagdadagdag ng nilalaman dito. Binigyan din natin ito ng `id` upang madali itong makuha gamit ang JavaScript.
+Ang `<div>` element na ito ay walang laman, ibig sabihin ay walang ipapakita sa screen hangga't hindi tayo nagdadagdag ng content dito. Binigyan din natin ito ng `id` upang madali natin itong makuha gamit ang JavaScript.
 
 Bumalik sa `app.js` file at gumawa ng bagong helper function na `updateElement`:
 
@@ -168,7 +168,7 @@ Ngayon, kung susubukan mong mag-login gamit ang invalid account, makikita mo ang
 
 ![Screenshot na nagpapakita ng error message sa login](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.tl.png)
 
-Ngayon, mayroon na tayong error text na lumalabas nang visual, ngunit kung susubukan mo ito gamit ang screen reader, mapapansin mong walang naia-announce. Upang ang text na dinadagdag nang dynamic sa page ay ma-announce ng screen readers, kailangan nitong gumamit ng tinatawag na [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Dito, gagamit tayo ng isang partikular na uri ng live region na tinatawag na alert:
+Ngayon ay mayroon na tayong error text na lumalabas nang visual, ngunit kung susubukan mo ito gamit ang screen reader, mapapansin mong walang naia-announce. Upang ang text na dinadagdag nang dynamic sa page ay ma-announce ng screen readers, kailangan nitong gumamit ng tinatawag na [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Dito, gagamit tayo ng isang partikular na uri ng live region na tinatawag na alert:
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -196,7 +196,7 @@ Ganito ang hitsura ng isang account object na natanggap mula sa server:
 }
 ```
 
-> Tandaan: upang gawing mas madali ang iyong buhay, maaari mong gamitin ang pre-existing na `test` account na mayroon nang data.
+> Tandaan: upang gawing mas madali ang iyong trabaho, maaari mong gamitin ang pre-existing na `test` account na mayroon nang data.
 
 ### Gawain
 
@@ -234,7 +234,7 @@ Una, sinisiguro natin na mayroon tayong kinakailangang account data bago magpatu
 
 > Upang gawing mas maganda ang display ng balance, ginagamit natin ang method na [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) upang pilitin ang pagpapakita ng value na may 2 digits pagkatapos ng decimal point.
 
-Ngayon, kailangan nating tawagin ang `updateDashboard()` function tuwing ang dashboard ay na-load. Kung natapos mo na ang [lesson 1 assignment](../1-template-route/assignment.md), dapat itong maging madali, kung hindi, maaari mong gamitin ang sumusunod na implementasyon.
+Ngayon, kailangan nating tawagin ang `updateDashboard()` function tuwing ang dashboard ay na-load. Kung natapos mo na ang [lesson 1 assignment](../1-template-route/assignment.md), dapat itong maging simple, kung hindi, maaari mong gamitin ang sumusunod na implementasyon.
 
 Idagdag ang code na ito sa dulo ng `updateRoute()` function:
 
@@ -259,7 +259,7 @@ Sa pagbabagong ito, tuwing ang dashboard page ay ipinapakita, ang function na `u
 
 Sa [unang aralin](../1-template-route/README.md), gumamit tayo ng HTML templates kasabay ng [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) method upang ipatupad ang navigation sa ating app. Ang mga template ay maaari ring maging mas maliit at magamit upang dynamic na punan ang mga repetitive na bahagi ng page.
 
-Gagamit tayo ng katulad na approach upang ipakita ang listahan ng mga transaksyon sa HTML table.
+Gagamit tayo ng katulad na approach upang ipakita ang listahan ng mga transaction sa HTML table.
 
 ### Gawain
 
@@ -275,7 +275,7 @@ Magdagdag ng bagong template sa HTML `<body>`:
 </template>
 ```
 
-Ang template na ito ay kumakatawan sa isang table row, na may 3 column na nais nating punan: *date*, *object*, at *amount* ng isang transaksyon.
+Ang template na ito ay kumakatawan sa isang table row, na may 3 column na nais nating punan: *date*, *object*, at *amount* ng isang transaction.
 
 Pagkatapos, idagdag ang `id` property na ito sa `<tbody>` element ng table sa loob ng dashboard template upang mas madali itong mahanap gamit ang JavaScript:
 
@@ -321,17 +321,17 @@ function updateElement(id, textOrNode) {
 ```
 
 Ginagamit natin ang [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) method dahil pinapayagan nitong mag-attach ng text o [DOM Nodes](https://developer.mozilla.org/docs/Web/API/Node) sa isang parent element, na perpekto para sa lahat ng ating use cases.
-Kung susubukan mong gamitin ang `test` account para mag-login, dapat mo nang makita ang listahan ng mga transaksyon sa dashboard 🎉.
+Kung gagamitin mo ang `test` account para mag-login, makikita mo na ngayon ang listahan ng mga transaksyon sa dashboard 🎉.
 
 ---
 
 ## 🚀 Hamon
 
-Magtulungan upang gawing mukhang tunay na banking app ang dashboard page. Kung naistilo mo na ang iyong app, subukang gumamit ng [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) upang lumikha ng [responsive design](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) na maayos na gumagana sa parehong desktop at mobile devices.
+Magtulungan upang gawing mukhang tunay na banking app ang pahina ng dashboard. Kung naistilo mo na ang iyong app, subukang gumamit ng [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) upang lumikha ng [responsive design](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) na maayos gumagana sa parehong desktop at mobile devices.
 
 Narito ang isang halimbawa ng istilong dashboard page:
 
-![Screenshot ng isang halimbawa ng resulta ng dashboard pagkatapos ng pag-istilo](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.tl.png)
+![Screenshot ng isang halimbawa ng resulta ng dashboard pagkatapos istiluhin](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.tl.png)
 
 ## Post-Lecture Quiz
 
@@ -344,4 +344,4 @@ Narito ang isang halimbawa ng istilong dashboard page:
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.

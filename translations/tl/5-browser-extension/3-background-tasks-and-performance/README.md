@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f198c6b817b4b2a99749f4662e7cae98",
-  "translation_date": "2025-08-27T22:22:05+00:00",
+  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
+  "translation_date": "2025-08-28T15:42:19+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "tl"
 }
 -->
-# Browser Extension Project Part 3: Alamin ang Tungkol sa Background Tasks at Performance
+# Proyek Browser Extension Part 3: Alamin ang Tungkol sa Background Tasks at Performance
 
 ## Pre-Lecture Quiz
 
@@ -15,13 +15,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Panimula
 
-Sa huling dalawang aralin ng module na ito, natutunan mo kung paano gumawa ng form at display area para sa data na kinukuha mula sa isang API. Ito ay isang karaniwang paraan ng paglikha ng presensya sa web. Natutunan mo rin kung paano mag-handle ng asynchronous na pagkuha ng data. Halos tapos na ang iyong browser extension.
+Sa huling dalawang aralin ng module na ito, natutunan mo kung paano gumawa ng form at display area para sa data na kinukuha mula sa isang API. Ito ay isang karaniwang paraan ng paglikha ng presensya sa web. Natutunan mo rin kung paano mag-handle ng asynchronous na pagkuha ng data. Malapit nang matapos ang iyong browser extension.
 
-Ang natitira ay ang pamamahala ng ilang background tasks, kabilang ang pag-refresh ng kulay ng icon ng extension, kaya magandang pagkakataon ito upang pag-usapan kung paano pinamamahalaan ng browser ang ganitong uri ng gawain. Isipin natin ang mga browser tasks sa konteksto ng performance ng iyong web assets habang ginagawa mo ang mga ito.
+Ang natitira ay ang pamamahala ng ilang background tasks, kabilang ang pag-refresh ng kulay ng icon ng extension, kaya magandang pagkakataon ito para pag-usapan kung paano pinamamahalaan ng browser ang ganitong uri ng gawain. Isipin natin ang mga browser tasks na ito sa konteksto ng performance ng iyong web assets habang ginagawa mo ang mga ito.
 
 ## Mga Pangunahing Kaalaman sa Web Performance
 
-> "Ang performance ng website ay tungkol sa dalawang bagay: gaano kabilis mag-load ang pahina, at gaano kabilis tumakbo ang code dito." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
+> "Ang performance ng website ay tungkol sa dalawang bagay: kung gaano kabilis mag-load ang pahina, at kung gaano kabilis tumakbo ang code dito." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
 Ang paksa ng kung paano gawing napakabilis ang iyong mga website sa lahat ng uri ng device, para sa lahat ng uri ng user, sa lahat ng uri ng sitwasyon, ay hindi nakakagulat na malawak. Narito ang ilang mga punto na dapat tandaan habang gumagawa ka ng isang karaniwang web project o browser extension.
 
@@ -33,7 +33,7 @@ Ang Performance tab ay naglalaman ng Profiling tool. Buksan ang isang website (s
 
 ✅ Bisitahin ang [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) tungkol sa Performance panel sa Edge
 
-> Tip: upang makakuha ng tumpak na pagbabasa ng startup time ng iyong website, i-clear ang cache ng iyong browser
+> Tip: upang makakuha ng tumpak na pagbasa ng oras ng pagsisimula ng iyong website, i-clear ang cache ng iyong browser
 
 Piliin ang mga elemento ng profile timeline upang mag-zoom in sa mga event na nangyayari habang naglo-load ang iyong pahina.
 
@@ -45,7 +45,7 @@ Suriin ang Event Log pane upang makita kung may anumang event na tumagal ng higi
 
 ![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.tl.png)
 
-✅ Kilalanin ang iyong profiler! Buksan ang developer tools sa site na ito at tingnan kung may mga bottleneck. Ano ang pinakamabagal na asset na naglo-load? Ang pinakamabilis?
+✅ Kilalanin ang iyong profiler! Buksan ang developer tools sa site na ito at tingnan kung may mga bottleneck. Ano ang asset na pinakamabagal mag-load? Ang pinakamabilis?
 
 ## Mga Profiling Checks
 
@@ -53,21 +53,21 @@ Sa pangkalahatan, may ilang "problem areas" na dapat bantayan ng bawat web devel
 
 **Asset sizes**: Ang web ay naging 'mas mabigat', at sa gayon ay mas mabagal, sa nakalipas na ilang taon. Ang ilan sa bigat na ito ay may kinalaman sa paggamit ng mga imahe.
 
-✅ Tingnan ang [Internet Archive](https://httparchive.org/reports/page-weight) para sa isang historical na pananaw sa page weight at higit pa.
+✅ Tingnan ang [Internet Archive](https://httparchive.org/reports/page-weight) para sa isang historical view ng page weight at iba pa.
 
-Isang magandang kasanayan ang tiyakin na ang iyong mga imahe ay na-optimize at naihatid sa tamang laki at resolusyon para sa iyong mga user.
+Isang magandang kasanayan ang tiyakin na ang iyong mga imahe ay na-optimize at naihatid sa tamang laki at resolution para sa iyong mga user.
 
-**DOM traversals**: Kailangang buuin ng browser ang Document Object Model nito batay sa code na isinulat mo, kaya't nasa interes ng magandang page performance na panatilihing minimal ang iyong mga tag, gamit lamang at inaayos ang kailangan ng pahina. Sa puntong ito, ang sobrang CSS na nauugnay sa isang pahina ay maaaring ma-optimize; ang mga style na kailangang gamitin lamang sa isang pahina ay hindi kailangang isama sa pangunahing style sheet, halimbawa.
+**DOM traversals**: Kailangang buuin ng browser ang Document Object Model nito batay sa code na isinulat mo, kaya't para sa magandang performance ng pahina, panatilihing minimal ang iyong mga tag, gamit at inaayos lamang ang kailangan ng pahina. Sa puntong ito, ang sobrang CSS na nauugnay sa isang pahina ay maaaring ma-optimize; ang mga style na kailangang gamitin lamang sa isang pahina ay hindi kailangang isama sa pangunahing style sheet, halimbawa.
 
 **JavaScript**: Ang bawat JavaScript developer ay dapat magbantay para sa 'render-blocking' scripts na kailangang i-load bago ma-traverse at ma-paint ang natitirang bahagi ng DOM sa browser. Isaalang-alang ang paggamit ng `defer` sa iyong inline scripts (tulad ng ginawa sa Terrarium module).
 
-✅ Subukan ang ilang mga site sa isang [Site Speed Test website](https://www.webpagetest.org/) upang matuto nang higit pa tungkol sa mga karaniwang pagsusuri na ginagawa upang matukoy ang performance ng site.
+✅ Subukan ang ilang mga site sa isang [Site Speed Test website](https://www.webpagetest.org/) upang matuto nang higit pa tungkol sa mga karaniwang checks na ginagawa upang matukoy ang performance ng site.
 
-Ngayon na mayroon kang ideya kung paano i-render ng browser ang mga asset na ipinapadala mo dito, tingnan natin ang huling ilang bagay na kailangan mong gawin upang makumpleto ang iyong extension:
+Ngayon na mayroon kang ideya kung paano nire-render ng browser ang mga assets na ipinapadala mo dito, tingnan natin ang huling ilang bagay na kailangan mong gawin upang makumpleto ang iyong extension:
 
 ### Gumawa ng Function para Kalkulahin ang Kulay
 
-Sa `/src/index.js`, magdagdag ng function na tinatawag na `calculateColor()` pagkatapos ng serye ng mga `const` variables na itinakda mo upang makakuha ng access sa DOM:
+Sa `/src/index.js`, magdagdag ng function na tinatawag na `calculateColor()` pagkatapos ng serye ng `const` variables na itinakda mo upang makakuha ng access sa DOM:
 
 ```JavaScript
 function calculateColor(value) {
@@ -88,11 +88,11 @@ function calculateColor(value) {
 }
 ```
 
-Ano ang nangyayari dito? Ipinapasa mo ang isang value (ang carbon intensity) mula sa API call na natapos mo sa huling aralin, at pagkatapos ay kinakalkula mo kung gaano kalapit ang value nito sa index na ipinakita sa colors array. Pagkatapos ay ipinapadala mo ang pinakamalapit na color value sa chrome runtime.
+Ano ang nangyayari dito? Nagpapasa ka ng isang value (ang carbon intensity) mula sa API call na natapos mo sa huling aralin, at pagkatapos ay kinakalkula mo kung gaano kalapit ang value nito sa index na ipinakita sa colors array. Pagkatapos ay ipinapadala mo ang pinakamalapit na color value sa chrome runtime.
 
-Ang chrome.runtime ay may [API](https://developer.chrome.com/extensions/runtime) na humahawak sa lahat ng uri ng background tasks, at ang iyong extension ay ginagamit ito:
+Ang chrome.runtime ay may [API](https://developer.chrome.com/extensions/runtime) na humahawak sa lahat ng uri ng background tasks, at ginagamit ng iyong extension ang mga ito:
 
-> "Gamitin ang chrome.runtime API upang kunin ang background page, magbalik ng mga detalye tungkol sa manifest, at makinig at tumugon sa mga event sa lifecycle ng app o extension. Maaari mo ring gamitin ang API na ito upang i-convert ang relative path ng mga URL sa fully-qualified URLs."
+> "Gamitin ang chrome.runtime API upang kunin ang background page, magbalik ng mga detalye tungkol sa manifest, at makinig at tumugon sa mga event sa lifecycle ng app o extension. Maaari mo ring gamitin ang API na ito upang i-convert ang relative path ng URLs sa fully-qualified URLs."
 
 ✅ Kung dine-develop mo ang browser extension na ito para sa Edge, maaaring magulat ka na gumagamit ka ng chrome API. Ang mga mas bagong bersyon ng Edge browser ay tumatakbo sa Chromium browser engine, kaya maaari mong gamitin ang mga tool na ito.
 
@@ -148,7 +148,7 @@ Sa code na ito, nagdaragdag ka ng listener para sa anumang mga mensahe na papunt
 
 Ngayon, i-rebuild ang iyong extension (`npm run build`), i-refresh at ilunsad ang iyong extension, at panoorin ang pagbabago ng kulay. Panahon na ba para mag-ayos o maghugas ng pinggan? Ngayon alam mo na!
 
-Binabati kita, nakagawa ka ng isang kapaki-pakinabang na browser extension at natutunan ang higit pa tungkol sa kung paano gumagana ang browser at kung paano i-profile ang performance nito.
+Binabati kita, nakagawa ka ng isang kapaki-pakinabang na browser extension at natutunan mo pa ang tungkol sa kung paano gumagana ang browser at kung paano i-profile ang performance nito.
 
 ---
 
@@ -160,15 +160,15 @@ Suriin ang ilang open source websites na matagal nang umiiral, at, batay sa kani
 
 [Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/28)
 
-## Review & Self Study
+## Review at Pag-aaral sa Sarili
 
 Isaalang-alang ang pag-subscribe sa isang [performance newsletter](https://perf.email/)
 
 Suriin ang ilan sa mga paraan kung paano sinusukat ng mga browser ang web performance sa pamamagitan ng pagtingin sa performance tabs sa kanilang web tools. May nakita ka bang malalaking pagkakaiba?
 
-## Assignment
+## Takdang-Aralin
 
-[Analyze a site for performance](assignment.md)
+[Surihin ang isang site para sa performance](assignment.md)
 
 ---
 
