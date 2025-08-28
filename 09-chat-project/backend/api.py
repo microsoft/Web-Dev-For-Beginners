@@ -5,15 +5,19 @@ from llm import call_llm
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)   # *   example.com
 
 @app.route("/", methods=["GET"])
 def index():
-    return "Welcome to the Chat API!"
+    return "Welcome to this lesson"
+
+@app.route("/test", methods=["GET"])
+def test():
+    return "Test"
 
 @app.route("/hello", methods=["POST"])
 def hello():
-    # get message from request body
+    # get message from request body  { "message": "do this taks for me" }
     data = request.get_json()
     message = data.get("message", "")
 
