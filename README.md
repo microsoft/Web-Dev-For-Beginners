@@ -20,6 +20,10 @@ Learn the fundamentals of web development with our 12-week comprehensive course 
 
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
+### 📣 Announcement
+
+New AI Assistant project just added, check it out [project](./09-chat-project/README.md)
+
 ### 📣 Announcement - _New Curriculum_ on Generative AI for JavaScript was just released
 
 Don't miss our new Generative AI curriculum!
