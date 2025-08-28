@@ -33,17 +33,14 @@ Don't miss our new Generative AI curriculum!
 
 Visit [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) to get started!
 
-<div>
-  <img src="./images/background.png" width="600px" />
-</div>
+![Background](./images/background.png)
 
 - Lessons covering everything from basics to RAG.
 - Interact with historical characters using GenAI and our companion app.
 - Fun and engaging narrative, you'll be time traveling!
 
-<div>
-  <img src="./images/character.png" width="600px" />
-</div>
+![character](./images/character.png)
+
 
 Each lesson includes an assignment to complete, a knowledge check and a challenge to guide you on learning topics like:
 - Prompting and prompt engineering
@@ -79,7 +76,7 @@ Follow these steps:
 
 In your copy of this repository that you created, click the **Code** button and select **Open with Codespaces**. This will create a new Codespace for you to work in.
 
-<img src="./images/createcodespace.png" alt="Create codespace" style="width:270px;"/>
+[!Codespace]()./images/createcodespace.png)
 
 #### Running the curriculum locally on your computer
 
@@ -90,7 +87,7 @@ Our recommendation is to use [Visual Studio Code](https://code.visualstudio.com/
 
 1. Clone your repository to your computer. You can do this by clicking the **Code** button and copying the URL:
 
-    <img src="./images/createcodespace.png" alt="Copy your repository URL" style="width:270px;"/>
+    [!CodeSpace](./images/createcodespace.png)
 
     Then, open [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) within [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) and run the following command, replacing `<your-repository-url>` with the URL you just copied:
 
