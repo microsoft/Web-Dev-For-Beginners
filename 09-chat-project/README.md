@@ -337,4 +337,17 @@ Copy the content from what was instructed from above but feel free to customize 
 
 [Solution](./solution/README.md)
 
+## Bonus
+
+Try changing the personality of the AI assistant. When you call `call_llm` in *api.py* you can change the second argument to what you want, for example:
+
+```python
+call_llm(message, "You are Captain Picard")
+```
+
+Change also the CSS and text to your liking, so do changes in *index.html* and *styles.css*.
+
 ## Summary
+
+Great, you've learned from scratch how to create a personal assistant using AI. We'v done so using GitHub Models, a backend in Python and a frontend in HTML, CSS and JavaScript
+
