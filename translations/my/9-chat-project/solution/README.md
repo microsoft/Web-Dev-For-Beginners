@@ -1,0 +1,55 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "a7b7f54b13f9e6683a844d173ffdd766",
+  "translation_date": "2025-08-28T18:56:09+00:00",
+  "source_file": "9-chat-project/solution/README.md",
+  "language_code": "my"
+}
+-->
+# ကုဒ်ကို အလုပ်လုပ်စေပါ
+
+## အဆင့်ဆင့် ပြင်ဆင်ခြင်း
+
+Virtual environment တစ်ခု ဖန်တီးပါ
+
+```sh
+cd backend
+python -m venv venv
+source ./venv/bin/activate
+```
+
+## လိုအပ်သော dependencies များ ထည့်သွင်းပါ
+
+```sh
+pip install openai flask flask-cors 
+```
+
+## API ကို အလုပ်လုပ်စေပါ
+
+```sh
+python api.py
+```
+
+## Frontend ကို အလုပ်လုပ်စေပါ
+
+Frontend folder အတွင်းမှာ ရှိနေကြောင်း သေချာပါ
+
+*app.js* ကို ရှာဖွေပြီး `BASE_URL` ကို backend URL သို့ ပြောင်းပါ
+
+အလုပ်လုပ်စေပါ
+
+```
+npx http-server -p 8000
+```
+
+Chat မှာ စာသားတစ်ခု ရိုက်ထည့်ကြည့်ပါ၊ Codespace မှာ အလုပ်လုပ်နေသည်ဟု သေချာပါက သို့မဟုတ် access token ကို ပြင်ဆင်ပြီးသားဖြစ်ပါက တုံ့ပြန်မှုကို မြင်ရပါမည်။
+
+## Access token ကို ပြင်ဆင်ပါ (Codespace မှာ မလုပ်ဆောင်ပါက)
+
+[Set up PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) ကို ကြည့်ပါ
+
+---
+
+**အကြောင်းကြားချက်**:  
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါရှိနိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရ အရင်းအမြစ်အဖြစ် ရှုလေ့လာသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားယူမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။

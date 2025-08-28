@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-24T00:08:35+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-28T17:48:06+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "ja"
 }
 -->
-# 銀行アプリを作成する Part 1: HTMLテンプレートとWebアプリのルート
+# 銀行アプリを作成する Part 1: HTMLテンプレートとWebアプリのルート設定
 
 ## 講義前クイズ
 
@@ -15,17 +15,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### はじめに
 
-ブラウザでJavaScriptが登場して以来、ウェブサイトはこれまで以上にインタラクティブで複雑になっています。現在では、ブラウザ内で直接動作する完全な機能を備えたアプリケーション、いわゆる[ウェブアプリケーション](https://en.wikipedia.org/wiki/Web_application)を作成するためにウェブ技術が一般的に使用されています。ウェブアプリは非常にインタラクティブであるため、ユーザーはアクションを実行するたびにページ全体をリロードするのを待ちたくありません。そのため、JavaScriptを使用してDOMを介してHTMLを直接更新し、スムーズなユーザー体験を提供します。
+ブラウザでJavaScriptが登場して以来、ウェブサイトはこれまで以上にインタラクティブで複雑になっています。現在では、ブラウザ内で直接動作する完全な機能を備えたアプリケーション、つまり[ウェブアプリケーション](https://en.wikipedia.org/wiki/Web_application)を作成するためにウェブ技術が一般的に使用されています。ウェブアプリは非常にインタラクティブであるため、ユーザーはアクションを実行するたびにページ全体をリロードするのを待ちたくありません。そのため、JavaScriptを使用してDOMを介してHTMLを直接更新し、スムーズなユーザー体験を提供します。
 
 このレッスンでは、HTMLテンプレートを使用して複数の画面を作成し、HTMLページ全体をリロードすることなく表示および更新できる銀行ウェブアプリの基礎を構築します。
 
 ### 前提条件
 
-このレッスンで作成するウェブアプリをテストするためにローカルウェブサーバーが必要です。まだインストールしていない場合は、[Node.js](https://nodejs.org)をインストールし、プロジェクトフォルダーで`npx lite-server`コマンドを使用してください。これによりローカルウェブサーバーが作成され、ブラウザでアプリが開きます。
+このレッスンで作成するウェブアプリをテストするには、ローカルウェブサーバーが必要です。まだインストールしていない場合は、[Node.js](https://nodejs.org)をインストールし、プロジェクトフォルダーでコマンド `npx lite-server` を使用してください。これによりローカルウェブサーバーが作成され、ブラウザでアプリが開きます。
 
 ### 準備
 
-コンピューター上に`bank`という名前のフォルダーを作成し、その中に`index.html`という名前のファイルを作成してください。このHTMLの[ボイラープレート](https://en.wikipedia.org/wiki/Boilerplate_code)から始めます：
+コンピュータ上で、`bank`という名前のフォルダーを作成し、その中に`index.html`という名前のファイルを作成してください。以下のHTML[ボイラープレート](https://en.wikipedia.org/wiki/Boilerplate_code)から始めます：
 
 ```html
 <!DOCTYPE html>
@@ -47,14 +47,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 ウェブページに複数の画面を作成したい場合、1つの画面ごとにHTMLファイルを作成するという方法があります。しかし、この方法にはいくつかの不便があります：
 
-- 画面を切り替えるたびにHTML全体をリロードする必要があり、これが遅くなる可能性があります。
+- 画面を切り替えるたびにHTML全体をリロードする必要があり、これが遅い場合があります。
 - 異なる画面間でデータを共有するのが難しいです。
 
 別の方法として、1つのHTMLファイルだけを使用し、`<template>`要素を使用して複数の[HTMLテンプレート](https://developer.mozilla.org/docs/Web/HTML/Element/template)を定義する方法があります。テンプレートはブラウザによって表示されない再利用可能なHTMLブロックであり、JavaScriptを使用して実行時にインスタンス化する必要があります。
 
 ### タスク
 
-ログインページとダッシュボードの2つの画面を持つ銀行アプリを作成します。まず、HTMLのボディにアプリの異なる画面をインスタンス化するためのプレースホルダー要素を追加します：
+銀行アプリを作成し、ログインページとダッシュボードの2つの画面を用意します。まず、HTMLのボディ内にアプリの異なる画面をインスタンス化するためのプレースホルダー要素を追加します：
 
 ```html
 <div id="app">Loading...</div>
@@ -64,7 +64,7 @@ JavaScriptで後で簡単に見つけられるように`id`を付けています
 
 > ヒント：この要素の内容は置き換えられるため、アプリが読み込まれている間に表示されるローディングメッセージやインジケーターを入れることができます。
 
-次に、ログインページのHTMLテンプレートを追加します。ここではタイトルと、ナビゲーションを実行するためのリンクを含むセクションだけを入れます。
+次に、ログインページ用のHTMLテンプレートを追加します。現時点では、タイトルとナビゲーションを実行するためのリンクを含むセクションだけを入れます。
 
 ```html
 <template id="login">
@@ -75,11 +75,11 @@ JavaScriptで後で簡単に見つけられるように`id`を付けています
 </template>
 ```
 
-次に、ダッシュボードページのHTMLテンプレートを追加します。このページには以下のセクションが含まれます：
+その後、ダッシュボードページ用のHTMLテンプレートを追加します。このページには以下のセクションが含まれます：
 
 - タイトルとログアウトリンクを含むヘッダー
 - 銀行口座の現在の残高
-- トランザクションのリスト（テーブルで表示）
+- テーブルで表示される取引のリスト
 
 ```html
 <template id="dashboard">
@@ -114,11 +114,11 @@ JavaScriptで後で簡単に見つけられるように`id`を付けています
 
 現在のHTMLファイルをブラウザで試してみると、`Loading...`の表示で止まってしまいます。これは、HTMLテンプレートをインスタンス化して表示するためのJavaScriptコードが必要だからです。
 
-テンプレートのインスタンス化は通常以下の3ステップで行われます：
+テンプレートをインスタンス化する手順は通常以下の3ステップです：
 
-1. DOM内でテンプレート要素を取得する（例：[`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById)を使用）。
-2. テンプレート要素を[`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode)を使用して複製する。
-3. 表示可能な要素の下にテンプレートをDOMに追加する（例：[`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild)を使用）。
+1. DOM内でテンプレート要素を取得します（例：[`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById)を使用）。
+2. テンプレート要素を[`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode)を使用して複製します。
+3. 可視要素の下にテンプレートをDOMに追加します（例：[`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild)を使用）。
 
 ✅ なぜテンプレートをDOMに追加する前に複製する必要があるのでしょうか？このステップを省略した場合、何が起こると思いますか？
 
@@ -142,9 +142,9 @@ function updateRoute(templateId) {
 }
 ```
 
-ここで行っているのは、上記の3ステップそのものです。`templateId`を持つテンプレートをインスタンス化し、その複製された内容をアプリのプレースホルダー内に配置します。`cloneNode(true)`を使用してテンプレートのサブツリー全体をコピーする必要があることに注意してください。
+ここで行っているのは、上記の3ステップそのものです。`templateId`を持つテンプレートをインスタンス化し、その複製された内容をアプリのプレースホルダー内に配置します。テンプレート全体のサブツリーをコピーするために`cloneNode(true)`を使用する必要があります。
 
-次に、この関数をテンプレートの1つで呼び出し、結果を確認します。
+次に、この関数をテンプレートの1つで呼び出し、結果を確認してください。
 
 ```js
 updateRoute('login');
@@ -170,11 +170,11 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-しかし、今回のウェブアプリではすべての画面を含む単一のHTMLファイルを使用しているため、このデフォルトの動作は役に立ちません。これを手動でマッピングし、JavaScriptを使用して表示されるテンプレートを更新する必要があります。
+しかし、今回のウェブアプリでは、すべての画面を含む単一のHTMLファイルを使用しているため、このデフォルトの動作は役に立ちません。これを手動でマッピングし、JavaScriptを使用して表示されるテンプレートを更新する必要があります。
 
 ### タスク
 
-URLパスとテンプレートをマッピングするために、シンプルなオブジェクトを使用します。このオブジェクトを`app.js`ファイルの冒頭に追加してください。
+URLパスとテンプレートをマッピングするために、シンプルなオブジェクトを使用します。このオブジェクトを`app.js`ファイルの先頭に追加してください。
 
 ```js
 const routes = {
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-次に、`updateRoute`関数を少し変更します。直接`templateId`を引数として渡すのではなく、まず現在のURLを確認し、その後マップを使用して対応するテンプレートID値を取得します。[`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname)を使用してURLからパスセクションだけを取得できます。
+次に、`updateRoute`関数を少し変更します。引数として直接`templateId`を渡す代わりに、まず現在のURLを確認し、その後マップを使用して対応するテンプレートID値を取得します。[`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname)を使用してURLからパスセクションだけを取得できます。
 
 ```js
 function updateRoute() {
@@ -204,16 +204,16 @@ function updateRoute() {
 
 ## ナビゲーションの追加
 
-次に、URLを手動で変更することなくページ間を移動できる機能をアプリに追加します。これには以下の2つのことが含まれます：
+次に、URLを手動で変更することなくページ間を移動できるようにします。これには以下の2つのことが必要です：
 
 1. 現在のURLを更新する
 2. 新しいURLに基づいて表示されるテンプレートを更新する
 
-2番目の部分については`updateRoute`関数で既に対応済みなので、現在のURLを更新する方法を考える必要があります。
+2番目の部分については`updateRoute`関数で既に対応しているため、現在のURLを更新する方法を考える必要があります。
 
-JavaScript、特に[`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState)を使用して、HTMLをリロードせずにURLを更新し、ブラウザ履歴に新しいエントリを作成します。
+JavaScript、特に[`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState)を使用します。このメソッドは、HTMLをリロードせずにURLを更新し、ブラウザ履歴に新しいエントリを作成することができます。
 
-> 注：HTMLアンカー要素[`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a)は単独で異なるURLへのハイパーリンクを作成できますが、デフォルトではブラウザがHTMLをリロードしてしまいます。カスタムJavaScriptでルーティングを処理する際には、クリックイベントで`preventDefault()`関数を使用してこの動作を防ぐ必要があります。
+> 注：HTMLアンカー要素[`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a)は単独で異なるURLへのハイパーリンクを作成できますが、デフォルトでブラウザがHTMLをリロードしてしまいます。`preventDefault()`関数をクリックイベントで使用して、この動作を防ぐ必要があります。
 
 ### タスク
 
@@ -226,9 +226,9 @@ function navigate(path) {
 }
 ```
 
-このメソッドは、与えられたパスに基づいて現在のURLを最初に更新し、その後テンプレートを更新します。`window.location.origin`プロパティはURLのルートを返し、与えられたパスから完全なURLを再構築することができます。
+このメソッドは、与えられたパスに基づいて現在のURLを更新し、その後テンプレートを更新します。`window.location.origin`プロパティはURLのルートを返し、与えられたパスから完全なURLを再構築することができます。
 
-この関数ができたので、パスが定義されたルートに一致しない場合の問題に対処します。`updateRoute`関数を変更し、マッチが見つからない場合に既存のルートの1つにフォールバックするようにします。
+この関数ができたので、定義されたルートに一致しないパスがある場合の問題に対処します。`updateRoute`関数を変更し、マッチが見つからない場合に既存のルートの1つにフォールバックするようにします。
 
 ```js
 function updateRoute() {
@@ -265,7 +265,7 @@ function onLinkClick(event) {
 
 [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick)属性を使用して`click`イベントをJavaScriptコードにバインドします。ここでは`navigate()`関数の呼び出しです。
 
-これらのリンクをクリックしてみてください。アプリ内の異なる画面間を移動できるようになっているはずです。
+これらのリンクをクリックしてみてください。アプリの異なる画面間を移動できるようになったはずです。
 
 ✅ `history.pushState`メソッドはHTML5標準の一部であり、[すべての最新ブラウザ](https://caniuse.com/?search=pushState)で実装されています。古いブラウザ向けにウェブアプリを構築する場合、このAPIの代わりに使用できるトリックがあります：パスの前に[ハッシュ（`#`）](https://en.wikipedia.org/wiki/URI_fragment)を使用することで、通常のアンカーナビゲーションで動作し、ページをリロードしないルーティングを実装できます。このハッシュはページ内の内部リンクを作成する目的で使用されていました。
 
@@ -273,7 +273,7 @@ function onLinkClick(event) {
 
 `history.pushState`を使用すると、ブラウザのナビゲーション履歴に新しいエントリが作成されます。ブラウザの*戻るボタン*を長押しすると、以下のようなものが表示されるはずです：
 
-![ナビゲーション履歴のスクリーンショット](../../../../7-bank-project/1-template-route/history.png)
+![ナビゲーション履歴のスクリーンショット](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.ja.png)
 
 戻るボタンを数回クリックしてみると、現在のURLが変更され履歴が更新されますが、同じテンプレートが表示され続けます。
 
@@ -281,7 +281,7 @@ function onLinkClick(event) {
 
 ### タスク
 
-ブラウザ履歴が変更されたときに表示されるテンプレートが更新されるようにするため、`updateRoute()`を呼び出す新しい関数を追加します。これを`app.js`ファイルの最後に追加します：
+ブラウザ履歴が変更されたときに表示されるテンプレートが更新されるようにするため、`updateRoute()`を呼び出す新しい関数を追加します。これを`app.js`ファイルの末尾に追加します：
 
 ```js
 window.onpopstate = () => updateRoute();
@@ -290,7 +290,7 @@ updateRoute();
 
 > 注：ここでは簡潔さのために[アロー関数](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用して`popstate`イベントハンドラーを宣言しましたが、通常の関数でも同じように動作します。
 
-アロー関数についての復習動画はこちら：
+アロー関数についてのリフレッシュ動画はこちら：
 
 [![アロー関数](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "アロー関数")
 
@@ -302,7 +302,7 @@ updateRoute();
 
 ## 🚀 チャレンジ
 
-このアプリのクレジットを表示する3番目のページ用の新しいテンプレートとルートを追加してください。
+このアプリのクレジットを表示するための3番目のページ用の新しいテンプレートとルートを追加してください。
 
 ## 講義後クイズ
 
@@ -316,5 +316,7 @@ updateRoute();
 
 [ルーティングを改善する](assignment.md)
 
+---
+
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源としてお考えください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は一切の責任を負いません。
+この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源としてご参照ください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は責任を負いません。

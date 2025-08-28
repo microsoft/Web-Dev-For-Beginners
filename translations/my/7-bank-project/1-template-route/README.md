@@ -1,31 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-27T22:07:57+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-28T18:33:10+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "my"
 }
 -->
-# ဘဏ်အက်ပ်တည်ဆောက်ခြင်း အပိုင်း ၁: Web App တွင် HTML Templates နှင့် Routes
+# ဘဏ်အက်ပ်တည်ဆောက်ခြင်း အပိုင်း ၁: HTML Templates နှင့် Web App Routes
 
-## မိန့်ခွန်းမတင်မီ စမ်းမေးခွန်း
+## မိန့်ခွန်းမပြောမီ စစ်ဆေးမှု
 
-[မိန့်ခွန်းမတင်မီ စမ်းမေးခွန်း](https://ff-quizzes.netlify.app/web/quiz/41)
+[မိန့်ခွန်းမပြောမီ စစ်ဆေးမှု](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### နိဒါန်း
 
-JavaScript ကို browser တွင် အသုံးပြုလာပြီးနောက်ပိုင်းကစ၍ ဝဘ်ဆိုဒ်များသည် ယခင်ထက် ပိုမိုအကျိုးရှိပြီး ရှုပ်ထွေးလာသည်။ ယနေ့ခေတ်တွင် ဝဘ်နည်းပညာများကို browser အတွင်းမှ တိုက်ရိုက်လည်ပတ်နိုင်သော [ဝဘ်အက်ပ်](https://en.wikipedia.org/wiki/Web_application) များ ဖန်တီးရန် အသုံးပြုလေ့ရှိသည်။ ဝဘ်အက်ပ်များသည် အလွန်အကျိုးရှိသောကြောင့် အသုံးပြုသူများသည် လုပ်ဆောင်ချက်တစ်ခုစီအတွက် စာမျက်နှာတစ်ခုလုံး ပြန်လည်တင်ရန် စောင့်ဆိုင်းလိုကြခြင်းမရှိပါ။ ထို့ကြောင့် JavaScript ကို DOM ကို အသုံးပြု၍ HTML ကို တိုက်ရိုက် ပြောင်းလဲရန် အသုံးပြုပြီး အသုံးပြုသူအတွေ့အကြုံကို ပိုမိုချောမွေ့စေသည်။
+JavaScript ကို browser တွေမှာ အသုံးပြုလာတာနဲ့အတူ၊ ဝဘ်ဆိုဒ်တွေဟာ ယခင်ထက်ပိုမို အပြန်အလှန်ဆက်သွယ်နိုင်ပြီး ရှုပ်ထွေးလာပါတယ်။ Web နည်းပညာတွေကို browser ထဲမှာတင် အပြည့်အဝ လုပ်ဆောင်နိုင်တဲ့ [web applications](https://en.wikipedia.org/wiki/Web_application) တွေ ဖန်တီးဖို့ အသုံးပြုလာကြပါတယ်။ Web apps တွေဟာ အပြန်အလှန်ဆက်သွယ်မှုများစွာရှိတာကြောင့်၊ အသုံးပြုသူတွေဟာ လုပ်ဆောင်ချက်တစ်ခုစီအတွက် စာမျက်နှာတစ်ခုလုံး ပြန်လည်တင်သွင်းဖို့ စောင့်နေချင်ကြတာမဟုတ်ပါဘူး။ ဒါကြောင့် JavaScript ကို DOM ကို အသုံးပြုပြီး HTML ကို တိုက်ရိုက် update လုပ်ဖို့ အသုံးပြုကြပြီး၊ အသုံးပြုသူတွေ အဆင်ပြေစေတဲ့ အတွေ့အကြုံကို ပေးစွမ်းနိုင်ပါတယ်။
 
-ဒီသင်ခန်းစာတွင် HTML templates ကို အသုံးပြု၍ စာမျက်နှာတစ်ခုလုံး ပြန်လည်တင်ရန် မလိုဘဲ မျက်နှာပြင်များစွာ ဖန်တီးနိုင်ရန် အခြေခံအဆောက်အအုံများကို တည်ဆောက်သွားမည်ဖြစ်သည်။
+ဒီသင်ခန်းစာမှာတော့၊ HTML templates ကို အသုံးပြုပြီး စာမျက်နှာအမျိုးမျိုး ဖန်တီးကာ၊ HTML စာမျက်နှာတစ်ခုလုံး ပြန်လည်တင်သွင်းစရာမလိုဘဲ ပြသနိုင်ပြီး update လုပ်နိုင်တဲ့ ဘဏ် web app တစ်ခု ဖန်တီးဖို့ အခြေခံအဆောက်အအုံတွေကို တည်ဆောက်သွားမှာဖြစ်ပါတယ်။
 
 ### ကြိုတင်လိုအပ်ချက်
 
-ဒီသင်ခန်းစာတွင် ဖန်တီးမည့် ဝဘ်အက်ပ်ကို စမ်းသပ်ရန် သင့်တွင် ဒေသခံ web server တစ်ခု လိုအပ်ပါသည်။ သင့်တွင် မရှိသေးပါက [Node.js](https://nodejs.org) ကို ထည့်သွင်းပြီး သင့်ပရောဂျက်ဖိုလ်ဒါမှ `npx lite-server` command ကို အသုံးပြုနိုင်ပါသည်။ ၎င်းသည် ဒေသခံ web server တစ်ခု ဖန်တီးပြီး သင့်အက်ပ်ကို browser တွင် ဖွင့်ပေးမည်ဖြစ်သည်။
+ဒီသင်ခန်းစာမှာ တည်ဆောက်မယ့် web app ကို စမ်းသပ်ဖို့၊ သင့်မှာ ဒေသခံ web server တစ်ခု လိုအပ်ပါတယ်။ သင့်မှာ မရှိသေးပါက [Node.js](https://nodejs.org) ကို install လုပ်ပြီး `npx lite-server` command ကို သင့် project folder ထဲကနေ အသုံးပြုနိုင်ပါတယ်။ ဒါဟာ ဒေသခံ web server တစ်ခု ဖန်တီးပြီး သင့် app ကို browser ထဲမှာ ဖွင့်ပေးပါလိမ့်မယ်။
 
 ### ပြင်ဆင်မှု
 
-သင့်ကွန်ပျူတာတွင် `bank` ဟုအမည်ပေးထားသော ဖိုလ်ဒါတစ်ခု ဖန်တီးပြီး `index.html` ဟုအမည်ပေးထားသော ဖိုင်တစ်ခု ထည့်ပါ။ ကျွန်ုပ်တို့သည် ဒီ HTML [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) မှ စတင်ပါမည်-
+သင့်ကွန်ပျူတာမှာ `bank` လို့အမည်ပေးထားတဲ့ folder တစ်ခု ဖန်တီးပြီး၊ `index.html` လို့အမည်ပေးထားတဲ့ ဖိုင်တစ်ခု ထဲမှာ ထည့်ပါ။ အောက်ပါ HTML [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) ကို စတင်အသုံးပြုပါ။
 
 ```html
 <!DOCTYPE html>
@@ -45,26 +45,26 @@ JavaScript ကို browser တွင် အသုံးပြုလာပြ�
 
 ## HTML Templates
 
-ဝဘ်စာမျက်နှာအတွက် မျက်နှာပြင်များစွာ ဖန်တီးလိုပါက၊ မျက်နှာပြင်တစ်ခုစီအတွက် HTML ဖိုင်တစ်ခုစီ ဖန်တီးရန် သင်္ကေတတစ်ခုဖြစ်နိုင်သည်။ သို့သော်၊ ဒီနည်းလမ်းတွင် အခက်အခဲအချို့ရှိသည်-
+Web page တစ်ခုအတွက် စာမျက်နှာအမျိုးမျိုး ဖန်တီးချင်တယ်ဆိုရင်၊ အကောင်းဆုံးနည်းလမ်းတစ်ခုကတော့ ပြသလိုတဲ့ စာမျက်နှာတစ်ခုစီအတွက် HTML ဖိုင်တစ်ခုစီ ဖန်တီးတာဖြစ်ပါတယ်။ သို့သော် ဒီနည်းလမ်းမှာ အခက်အခဲအချို့ရှိပါတယ်။
 
-- မျက်နှာပြင်ပြောင်းလဲသည့်အခါ HTML အပြည့်အစုံကို ပြန်လည်တင်ရမည်ဖြစ်ပြီး၊ ၎င်းသည် နှေးကွေးနိုင်သည်။
-- မတူညီသော မျက်နှာပြင်များအကြား ဒေတာမျှဝေရန် ခက်ခဲသည်။
+- စာမျက်နှာပြောင်းတဲ့အခါ HTML တစ်ခုလုံး ပြန်လည်တင်သွင်းရတာကြောင့် နှေးကွေးနိုင်ပါတယ်။
+- စာမျက်နှာအမျိုးမျိုးအကြား ဒေတာမျှဝေရတာ ခက်ခဲပါတယ်။
 
-အခြားနည်းလမ်းတစ်ခုမှာ HTML ဖိုင်တစ်ခုသာရှိပြီး `<template>` element ကို အသုံးပြု၍ [HTML templates](https://developer.mozilla.org/docs/Web/HTML/Element/template) များစွာ သတ်မှတ်ခြင်းဖြစ်သည်။ Template သည် browser မှ မမြင်ရသော HTML block တစ်ခုဖြစ်ပြီး JavaScript ကို အသုံးပြု၍ runtime တွင် instantiate လုပ်ရန် လိုအပ်သည်။
+နောက်ထပ်နည်းလမ်းတစ်ခုကတော့ HTML ဖိုင်တစ်ခုတည်းကို အသုံးပြုပြီး၊ `<template>` element ကို အသုံးပြုကာ [HTML templates](https://developer.mozilla.org/docs/Web/HTML/Element/template) အများအပြားကို သတ်မှတ်ဖန်တီးခြင်းဖြစ်ပါတယ်။ Template တစ်ခုဟာ browser ကနေ တိုက်ရိုက်ပြသမယ့် HTML block မဟုတ်ဘဲ၊ JavaScript ကို အသုံးပြုပြီး runtime မှာ instantiate လုပ်ရမယ့် reusable HTML block တစ်ခုဖြစ်ပါတယ်။
 
-### တာဝန်
+### လုပ်ဆောင်ရန်
 
-ကျွန်ုပ်တို့သည် login စာမျက်နှာနှင့် dashboard စာမျက်နှာတို့ပါဝင်သည့် ဘဏ်အက်ပ်တစ်ခု ဖန်တီးမည်ဖြစ်သည်။ ပထမဦးစွာ၊ HTML body အတွင်း app ၏ မျက်နှာပြင်များကို instantiate လုပ်ရန် အသုံးပြုမည့် placeholder element တစ်ခု ထည့်ပါ-
+ဘဏ်အက်ပ်တစ်ခုကို login စာမျက်နှာနဲ့ dashboard စာမျက်နှာနှစ်ခုပါဝင်အောင် ဖန်တီးသွားပါမယ်။ ပထမဦးစွာ HTML body ထဲမှာ placeholder element တစ်ခု ထည့်ပါ၊ ဒါကို app ရဲ့ စာမျက်နှာအမျိုးမျိုးကို instantiate လုပ်ဖို့ အသုံးပြုသွားမှာဖြစ်ပါတယ်။
 
 ```html
 <div id="app">Loading...</div>
 ```
 
-JavaScript ဖြင့် နောက်ပိုင်းတွင် ရှာဖွေရန် လွယ်ကူစေရန် `id` တစ်ခု ပေးထားပါသည်။
+JavaScript နဲ့ အလွယ်တကူ ရှာဖွေနိုင်ဖို့ `id` တစ်ခု ပေးထားပါတယ်။
 
-> အကြံပြုချက်- ဒီ element ၏ အကြောင်းအရာကို အစားထိုးမည်ဖြစ်သောကြောင့်၊ အက်ပ်တင်နေစဉ် ပြသမည့် loading message သို့မဟုတ် indicator တစ်ခု ထည့်နိုင်ပါသည်။
+> အကြံပြုချက်: ဒီ element ရဲ့ အကြောင်းအရာကို အစားထိုးမယ့်အတွက်၊ app တင်နေစဉ် ပြသဖို့ loading message တစ်ခု သို့မဟုတ် indicator တစ်ခု ထည့်ထားနိုင်ပါတယ်။
 
-ထို့နောက် login စာမျက်နှာအတွက် HTML template ကို ထည့်ပါ။ ယာယီအားဖြင့် title တစ်ခုနှင့် navigation ပြုလုပ်ရန် အသုံးပြုမည့် link ပါဝင်သည့် section တစ်ခု ထည့်ပါမည်။
+နောက်တစ်ဆင့်မှာတော့ login စာမျက်နှာအတွက် HTML template ကို ထည့်ပါ။ အခုအချိန်မှာတော့ title တစ်ခုနဲ့ navigation လုပ်ဖို့ အသုံးပြုမယ့် link ပါဝင်တဲ့ section တစ်ခုကို ထည့်ပါမယ်။
 
 ```html
 <template id="login">
@@ -75,11 +75,11 @@ JavaScript ဖြင့် နောက်ပိုင်းတွင် ရှ�
 </template>
 ```
 
-ထို့နောက် dashboard စာမျက်နှာအတွက် HTML template တစ်ခု ထည့်ပါမည်။ ဒီစာမျက်နှာတွင် အောက်ပါ section များပါဝင်မည်-
+ထို့နောက် dashboard စာမျက်နှာအတွက် HTML template တစ်ခု ထည့်ပါမယ်။ ဒီစာမျက်နှာမှာ အောက်ပါ section တွေ ပါဝင်ပါမယ်။
 
-- title နှင့် logout link ပါဝင်သည့် header
-- ဘဏ်အကောင့်၏ လက်ရှိလက်ကျန်ငွေ
-- အပြောင်းအလဲများကို table ဖြင့် ပြသထားသော စာရင်း
+- Title နဲ့ logout link ပါဝင်တဲ့ header
+- ဘဏ်အကောင့်ရဲ့ လက်ရှိလက်ကျန်
+- Transactions တွေကို table အဖြစ် ပြသထားတဲ့ စာရင်း
 
 ```html
 <template id="dashboard">
@@ -106,31 +106,31 @@ JavaScript ဖြင့် နောက်ပိုင်းတွင် ရှ�
 </template>
 ```
 
-> အကြံပြုချက်- HTML templates ဖန်တီးစဉ်၊ ၎င်း၏ ပုံစံကို ကြည့်လိုပါက `<template>` နှင့် `</template>` ကို `<!-- -->` ဖြင့် comment ထားနိုင်သည်။
+> အကြံပြုချက်: HTML templates ဖန်တီးတဲ့အခါ၊ ဘယ်လိုပုံစံဖြစ်မလဲဆိုတာ ကြည့်ချင်ရင် `<template>` နဲ့ `</template>` ကို `<!-- -->` နဲ့ comment ထားနိုင်ပါတယ်။
 
-✅ Template များတွင် `id` attributes ကို အသုံးပြုရသည့်အကြောင်းကို သင်ထင်သလဲ။ classes တို့ကဲ့သို့ အခြားအရာများကို အသုံးပြုနိုင်မည်လား။
+✅ Template တွေမှာ `id` attribute တွေကို ဘာကြောင့် အသုံးပြုသလဲ? Classes တို့လို အခြားအရာတွေကို အသုံးပြုလို့ရမလား?
 
-## JavaScript ဖြင့် Templates ပြသခြင်း
+## JavaScript နဲ့ Templates ပြသခြင်း
 
-သင့် HTML ဖိုင်ကို browser တွင် စမ်းကြည့်ပါက `Loading...` သာ ပြသနေမည်ဖြစ်သည်။ ၎င်းသည် HTML templates များကို instantiate လုပ်ပြီး ပြသရန် JavaScript code ထည့်ရန် လိုအပ်သည့်အတွက်ဖြစ်သည်။
+HTML ဖိုင်ကို browser မှာ စမ်းကြည့်ပါက `Loading...` ဆိုပြီးပဲ ရပ်နေပါလိမ့်မယ်။ ဒါဟာ HTML templates တွေကို instantiate လုပ်ပြီး ပြသဖို့ JavaScript code ထည့်ထားရမလိုတဲ့အတွက် ဖြစ်ပါတယ်။
 
-Template တစ်ခုကို instantiate လုပ်ရန် 通常 ၃ ချက်လိုအပ်သည်-
+Template တစ်ခုကို instantiate လုပ်ဖို့ 通常 ၃ ချက်အဆင့်လိုအပ်ပါတယ်။
 
-1. DOM အတွင်းမှ template element ကို ရှာဖွေပါ၊ ဥပမာ [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById) ကို အသုံးပြုပါ။
-2. Template element ကို [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode) ဖြင့် ကူးယူပါ။
-3. ၎င်းကို DOM အတွင်း မြင်နိုင်သော element တစ်ခုအောက်တွင် [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) ဖြင့် ထည့်ပါ။
+1. DOM ထဲက template element ကို [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById) နဲ့ ရှာဖွေပါ။
+2. Template element ကို [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode) နဲ့ ကူးယူပါ။
+3. Template ကို DOM ထဲမှာ ပြသနိုင်တဲ့ element တစ်ခုအောက်မှာ [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) နဲ့ ထည့်ပါ။
 
-✅ Template ကို DOM တွင် ထည့်မီ ကူးယူရန် လိုအပ်သည့်အကြောင်းကို သင်ထင်သလဲ။ ဒီအဆင့်ကို ကျော်လွှားပါက ဘာဖြစ်မည်လဲ။
+✅ Template ကို DOM ထဲမှာ ထည့်မယ့်အခါ ကူးယူဖို့ ဘာကြောင့် လိုအပ်သလဲ? ဒီအဆင့်ကို ကျော်လိုက်ရင် ဘာဖြစ်မလဲ?
 
-### တာဝန်
+### လုပ်ဆောင်ရန်
 
-သင့် project ဖိုလ်ဒါတွင် `app.js` ဟုအမည်ပေးထားသော ဖိုင်အသစ်တစ်ခု ဖန်တီးပြီး HTML ၏ `<head>` အပိုင်းတွင် ၎င်းကို import လုပ်ပါ-
+သင့် project folder ထဲမှာ `app.js` လို့အမည်ပေးထားတဲ့ ဖိုင်တစ်ခု ဖန်တီးပြီး၊ HTML ရဲ့ `<head>` အပိုင်းထဲမှာ import လုပ်ပါ။
 
 ```html
 <script src="app.js" defer></script>
 ```
 
-ထို့နောက် `app.js` တွင် `updateRoute` ဟုအမည်ပေးထားသော function အသစ်တစ်ခု ဖန်တီးပါ-
+အခုတော့ `app.js` ထဲမှာ `updateRoute` လို့အမည်ပေးထားတဲ့ function တစ်ခု ဖန်တီးပါ။
 
 ```js
 function updateRoute(templateId) {
@@ -142,19 +142,19 @@ function updateRoute(templateId) {
 }
 ```
 
-ဒီနေရာတွင် ကျွန်ုပ်တို့သည် အထက်ဖော်ပြထားသော ၃ ချက်ကို အတိအကျ လုပ်ဆောင်ပါသည်။ `templateId` ဖြင့် id ရှိသော template ကို instantiate လုပ်ပြီး၊ ၎င်း၏ cloned content ကို app placeholder အတွင်း ထည့်ပါသည်။ `cloneNode(true)` ကို အသုံးပြု၍ template ၏ subtree အပြည့်အစုံကို ကူးယူရန် လိုအပ်သည်။
+ဒီမှာ ကျွန်တော်တို့လုပ်တာက အထက်မှာ ဖော်ပြထားတဲ့ ၃ ချက်အဆင့်အတိုင်းပါပဲ။ `templateId` နဲ့ id ရှိတဲ့ template ကို instantiate လုပ်ပြီး၊ app placeholder ထဲမှာ cloned content ကို ထည့်ထားပါတယ်။ Template ရဲ့ subtree အားလုံးကို ကူးယူဖို့ `cloneNode(true)` ကို အသုံးပြုရတာကို သတိပြုပါ။
 
-ယခု function ကို template တစ်ခုနှင့်အတူ ခေါ်ပြီး ရလဒ်ကို ကြည့်ပါ-
+အခု function ကို template တစ်ခုနဲ့ ခေါ်ပြီး ရလဒ်ကို ကြည့်ပါ။
 
 ```js
 updateRoute('login');
 ```
 
-✅ `app.innerHTML = '';` ဟုရေးထားသော code ၏ ရည်ရွယ်ချက်ကဘာလဲ။ ၎င်းမပါဘဲဖြစ်ပါက ဘာဖြစ်မည်လဲ။
+✅ ဒီ code `app.innerHTML = '';` ရဲ့ ရည်ရွယ်ချက်က ဘာလဲ? ဒါမပါဘဲဆိုရင် ဘာဖြစ်မလဲ?
 
 ## Routes ဖန်တီးခြင်း
 
-ဝဘ်အက်ပ်နှင့်ပတ်သက်၍ Routes ဆိုသည်မှာ **URLs** ကို ပြသရန် မျက်နှာပြင်များနှင့် ဆက်စပ်ရန် ရည်ရွယ်ချက်ဖြစ်သည်။ HTML ဖိုင်များစွာပါဝင်သော ဝဘ်ဆိုဒ်တွင်၊ ၎င်းကို အလိုအလျောက် ပြုလုပ်နိုင်သည်။ ဥပမာ၊ သင့် project ဖိုလ်ဒါတွင် အောက်ပါဖိုင်များရှိပါက-
+Web app တစ်ခုအတွက် Routes ဆိုတာက URL တွေကို ပြသဖို့လိုတဲ့ စာမျက်နှာတွေနဲ့ ဆက်စပ်ပေးတဲ့ ရည်ရွယ်ချက်ကို ဆိုလိုပါတယ်။ HTML ဖိုင်အများအပြားပါဝင်တဲ့ website တစ်ခုမှာတော့၊ URL mapping ကို ဖိုင်လမ်းကြောင်းတွေက အလိုအလျောက် ပြသပေးပါတယ်။ ဥပမာ၊ သင့် project folder ထဲမှာ အောက်ပါဖိုင်တွေရှိတယ်ဆိုပါစို့-
 
 ```
 mywebsite/index.html
@@ -162,7 +162,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-`mywebsite` ကို root အဖြစ် သတ်မှတ်ထားသော web server တစ်ခု ဖန်တီးပါက၊ URL mapping သည်-
+`mywebsite` ကို root အဖြစ် သတ်မှတ်ထားတဲ့ web server တစ်ခု ဖန်တီးပါက၊ URL mapping က အောက်ပါအတိုင်းဖြစ်ပါလိမ့်မယ်-
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -170,11 +170,11 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-သို့သော်၊ ကျွန်ုပ်တို့၏ ဝဘ်အက်ပ်သည် မျက်နှာပြင်အားလုံးပါဝင်သော HTML ဖိုင်တစ်ခုသာ အသုံးပြုနေသောကြောင့် ဒီ default အပြုအမူသည် အကျိုးမရှိပါ။ ကျွန်ုပ်တို့သည် ဒီ mapping ကို ကိုယ်တိုင် ဖန်တီးပြီး JavaScript ကို အသုံးပြု၍ ပြသမည့် template ကို ပြောင်းလဲရမည်ဖြစ်သည်။
+သို့သော်၊ ကျွန်တော်တို့ web app မှာ HTML ဖိုင်တစ်ခုတည်းကို အသုံးပြုပြီး စာမျက်နှာအားလုံးကို ထည့်ထားတာကြောင့် ဒီ default behavior က အကျိုးမပေးပါဘူး။ ကျွန်တော်တို့ကိုယ်တိုင် map တစ်ခု ဖန်တီးပြီး JavaScript ကို အသုံးပြုကာ ပြသမယ့် template ကို update လုပ်ရပါမယ်။
 
-### တာဝန်
+### လုပ်ဆောင်ရန်
 
-URL paths နှင့် templates များကို [map](https://en.wikipedia.org/wiki/Associative_array) တစ်ခုဖြင့် ဆက်စပ်ရန် ရိုးရှင်းသော object တစ်ခုကို `app.js` ဖိုင်၏ အပေါ်ဆုံးတွင် ထည့်ပါ။
+URL paths နဲ့ templates တွေကို [map](https://en.wikipedia.org/wiki/Associative_array) လုပ်ဖို့ object တစ်ခုကို `app.js` ဖိုင်ရဲ့ အပေါ်ဆုံးမှာ ထည့်ပါ။
 
 ```js
 const routes = {
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-ထို့နောက် `updateRoute` function ကို အနည်းငယ် ပြောင်းလဲပါ။ `templateId` ကို တိုက်ရိုက် argument အဖြစ် ပေးပို့ခြင်းမပြုဘဲ၊ လက်ရှိ URL ကို ကြည့်ပြီး၊ map ကို အသုံးပြု၍ သက်ဆိုင်ရာ template ID ကို ရယူလိုပါသည်။ [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) ကို အသုံးပြု၍ URL ၏ path အပိုင်းကိုသာ ရယူနိုင်သည်။
+အခုတော့ `updateRoute` function ကို နည်းနည်းပြင်ဆင်ပါ။ `templateId` ကို တိုက်ရိုက် argument အဖြစ် ပေးပို့မယ့်အစား၊ လက်ရှိ URL ကို ကြည့်ပြီး၊ map ကို အသုံးပြုကာ တိကျတဲ့ template ID ကို ရယူပါမယ်။ URL ရဲ့ path အပိုင်းကိုသာ ရယူဖို့ [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) ကို အသုံးပြုနိုင်ပါတယ်။
 
 ```js
 function updateRoute() {
@@ -198,26 +198,26 @@ function updateRoute() {
 }
 ```
 
-ဒီနေရာတွင် ကျွန်ုပ်တို့ သတ်မှတ်ထားသော routes များကို သက်ဆိုင်ရာ template နှင့် mapping ပြုလုပ်ထားသည်။ Browser တွင် URL ကို လက်ဖြင့် ပြောင်းလဲပြီး စမ်းကြည့်ပါ။
+ဒီမှာ ကျွန်တော်တို့ သတ်မှတ်ထားတဲ့ routes တွေကို တိကျတဲ့ template နဲ့ ဆက်စပ်ပေးထားပါတယ်။ Browser မှာ URL ကို လက်ဖြင့် ပြောင်းပြီး စမ်းကြည့်ပါ။
 
-✅ URL တွင် မသိသော path တစ်ခု ထည့်ပါက ဘာဖြစ်မည်လဲ။ ၎င်းကို ဘယ်လို ဖြေရှင်းနိုင်မည်လဲ။
+✅ URL မှာ မသိတဲ့ path တစ်ခု ထည့်လိုက်ရင် ဘာဖြစ်မလဲ? ဒီပြဿနာကို ဘယ်လို ဖြေရှင်းနိုင်မလဲ?
 
 ## Navigation ထည့်သွင်းခြင်း
 
-ကျွန်ုပ်တို့၏ app ၏ နောက်တစ်ဆင့်မှာ URL ကို လက်ဖြင့် ပြောင်းလဲရန် မလိုဘဲ စာမျက်နှာများအကြား navigation ပြုလုပ်နိုင်စေရန်ဖြစ်သည်။ ၎င်းသည် အောက်ပါ ၂ ချက်ကို အဓိကပါဝင်သည်-
+App အတွက် နောက်တစ်ဆင့်က URL ကို လက်ဖြင့် ပြောင်းစရာမလိုဘဲ စာမျက်နှာအကြား navigation လုပ်နိုင်စေဖို့ ဖြစ်ပါတယ်။ ဒါဟာ အောက်ပါအရာနှစ်ခုကို အဓိကပါဝင်စေပါတယ်-
 
-1. လက်ရှိ URL ကို ပြောင်းလဲခြင်း
-2. Template ကို အသစ်ပြောင်းလဲထားသော URL အပေါ် မူတည်၍ ပြသခြင်း
+1. လက်ရှိ URL ကို update လုပ်ခြင်း
+2. URL အသစ်အပေါ် မူတည်ပြီး ပြသမယ့် template ကို update လုပ်ခြင်း
 
-`updateRoute` function ဖြင့် ဒုတိယအပိုင်းကို ပြုလုပ်ပြီးဖြစ်သောကြောင့်၊ လက်ရှိ URL ကို ပြောင်းလဲရန်သာ လိုအပ်ပါသည်။
+`updateRoute` function နဲ့ ဒုတိယအပိုင်းကို ကျွန်တော်တို့ပြီးစီးထားပြီးဖြစ်ပါတယ်၊ ဒါကြောင့် လက်ရှိ URL ကို update လုပ်ဖို့သာ လိုအပ်ပါတယ်။
 
-JavaScript ကို အသုံးပြုရမည်ဖြစ်ပြီး၊ HTML ကို ပြန်လည်တင်ခြင်းမပြုဘဲ URL ကို ပြောင်းလဲပြီး browsing history တွင် entry အသစ်တစ်ခု ဖန်တီးရန် [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) ကို အသုံးပြုရမည်ဖြစ်သည်။
+JavaScript ကို အသုံးပြုပြီး [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) ကို အသုံးပြုကာ URL ကို update လုပ်ပြီး browsing history မှာ entry အသစ်တစ်ခု ဖန်တီးနိုင်ပါတယ်၊ HTML ကို ပြန်လည်တင်သွင်းစရာမလိုပါ။
 
-> မှတ်ချက်- HTML anchor element [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) ကို အသုံးပြု၍ URL များသို့ hyperlink ဖန်တီးနိုင်သော်လည်း၊ default အနေဖြင့် browser သည် HTML ကို ပြန်လည်တင်မည်ဖြစ်သည်။ preventDefault() function ကို click event တွင် အသုံးပြု၍ ဒီအပြုအမူကို တားဆီးရန် လိုအပ်သည်။
+> မှတ်ချက်: HTML anchor element [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) ကို URL အမျိုးမျိုးကို hyperlink ဖန်တီးဖို့ အသုံးပြုနိုင်သော်လည်း၊ default အနေဖြင့် browser က HTML ကို ပြန်လည်တင်သွင်းပါလိမ့်မယ်။ Custom JavaScript နဲ့ routing ကို handle လုပ်တဲ့အခါ ဒီ behavior ကို တားဆီးဖို့ `preventDefault()` function ကို click event မှာ အသုံးပြုရပါမယ်။
 
-### တာဝန်
+### လုပ်ဆောင်ရန်
 
-App အတွင်း navigation ပြုလုပ်ရန် အသုံးပြုနိုင်သော function အသစ်တစ်ခု ဖန်တီးပါ-
+App ထဲမှာ navigation လုပ်နိုင်ဖို့ အသုံးပြုမယ့် function အသစ်တစ်ခု ဖန်တီးပါ။
 
 ```js
 function navigate(path) {
@@ -226,9 +226,9 @@ function navigate(path) {
 }
 ```
 
-ဒီ method သည် ပေးထားသော path အပေါ်မူတည်၍ လက်ရှိ URL ကို update ပြုလုပ်ပြီး၊ template ကို update ပြုလုပ်သည်။ `window.location.origin` သည် URL root ကို ပြန်ပေးပြီး၊ ပေးထားသော path မှ URL အပြည့်အစုံကို ပြန်လည်တည်ဆောက်ရန် ခွင့်ပြုသည်။
+ဒီ method က path ကို အခြေခံပြီး လက်ရှိ URL ကို update လုပ်ပြီး၊ template ကို update လုပ်ပါတယ်။ `window.location.origin` property က URL root ကို ပြန်ပေးပြီး၊ path တစ်ခုကို အခြေခံကာ ပြည့်စုံတဲ့ URL တစ်ခု ပြန်ဖန်တီးနိုင်စေပါတယ်။
 
-ယခု function ရှိပြီးနောက်၊ path တစ်ခုသည် သတ်မှတ်ထားသော route များနှင့် မကိုက်ညီပါက ဖြစ်ပေါ်သော ပြဿနာကို ဖြေရှင်းနိုင်ပါသည်။ `updateRoute` function ကို ပြောင်းလဲပြီး၊ မကိုက်ညီသောအခါ ရှိပြီးသား route တစ်ခုသို့ fallback ပြုလုပ်ပါမည်။
+ဒီ function ရှိပြီးနောက်၊ မည်သည့် route နဲ့မကိုက်ညီတဲ့ path တစ်ခုရိုက်ထည့်လိုက်ရင် ဖြစ်တဲ့ပြဿနာကို ဖြေရှင်းနိုင်ပါပြီ။ `updateRoute` function ကို နည်းနည်းပြင်ပြီး၊ မကိုက်ညီတဲ့ path တွေအတွက် ရှိပြီးသား route တစ်ခုကို fallback အဖြစ် သတ်မှတ်ပါမယ်။
 
 ```js
 function updateRoute() {
@@ -242,9 +242,9 @@ function updateRoute() {
   ...
 ```
 
-Route တစ်ခုကို ရှာမတွေ့ပါက ယခုတွင် `login` စာမျက်နှာသို့ redirect ပြုလုပ်မည်ဖြစ်သည်။
+Route တစ်ခုကို မတွေ့ရင်၊ အခုတော့ `login` စာမျက်နှာကို ပြန်လည်သွားပါလိမ့်မယ်။
 
-Link တစ်ခုကို click ပြုလုပ်သောအခါ URL ကို ရယူပြီး browser ၏ default link အပြုအမူကို တားဆီးရန် function တစ်ခု ဖန်တီးပါ-
+Link တစ်ခုကို click လုပ်တဲ့အခါ URL ကို ရယူပြီး၊ browser ရဲ့ default link behavior ကို တားဆီးဖို့ function တစ်ခု ဖန်တီးပါ။
 
 ```js
 function onLinkClick(event) {
@@ -253,7 +253,7 @@ function onLinkClick(event) {
 }
 ```
 
-Login နှင့် Logout links များကို HTML တွင် binding ပြုလုပ်၍ navigation system ကို ပြည့်စုံစေပါမည်။
+Login နဲ့ Logout links တွေကို HTML ထဲမှာ binding လုပ်ပြီး navigation system ကို ပြည့်စုံအောင်လုပ်ပါ။
 
 ```html
 <a href="/dashboard" onclick="onLinkClick(event)">Login</a>
@@ -261,40 +261,40 @@ Login နှင့် Logout links များကို HTML တွင် bindi
 <a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
 
-အထက်ပါ `event` object သည် `click` event ကို ဖမ်းယူပြီး ၎င်းကို `onLinkClick` function သို့ ပေးပို့သည်။
+အထက်ပါ `event` object က `click` event ကို ဖမ်းပြီး၊ `onLinkClick` function ကို ပေးပို့ပါတယ်။
 
-[`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) attribute ကို အသုံးပြု၍ `click` event ကို JavaScript code (ဤနေရာတွင် `navigate()` function ကို ခေါ်ခြင်း) နှင့် bind ပြုလုပ်ပါ။
+[`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) attribute ကို အသုံးပြုပြီး `click` event ကို JavaScript code နဲ့ bind လုပ်ပါ၊ ဒီနေရာမှာတော့ `navigate()` function ကို ခေါ်ပါ။
 
-ဒီ links များကို click ပြုလုပ်ကြည့်ပါ၊ app ၏ မျက်နှာပြင်များအကြား navigation ပြုလုပ်နိုင်ရမည်ဖြစ်သည်။
+ဒီ links တွေကို click လုပ်ကြည့်ပါ၊ အခုတော့ app ရဲ့ စာမျက်နှာအမျိုးမျိုးအကြား navigation လုပ်နိုင်ပါပြီ။
 
-✅ `history.pushState` method သည် HTML5 စံနှင့်အညီဖြစ်ပြီး [ခေတ်မီ browser များအားလုံး](https://caniuse.com/?search=pushState) တွင် အကောင်အထည်ဖော်ထားသည်။ သို့သော်၊ သင်ဟောင်းနောက်ကျသော browser များအတွက် ဝဘ်အက်ပ်တစ်ခု တည်ဆောက်နေပါက၊ ဒီ API အစား အသုံးပြုနိုင်သော နည်းလမ်းတစ်ခုရှိသည်- path မတိုင်မီ [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) ကို အသုံးပြု၍ regular anchor navigation ဖြင့် ပြုလုပ်နိုင်ပြီး စာမျက်နှာကို ပြန်လည်တင်မည်မဟုတ်ပါ၊ ၎င်း၏ ရည်ရွယ်ချက်မှာ စာမျက်နှာအတွင်း internal links ဖန်တီးရန်ဖြစ်သည်။
+✅ `history.pushState` method ဟာ HTML5 standard ရဲ့ အစိတ်အပိုင်းတစ်ခုဖြစ်ပြီး [ခေတ်သစ် browser အားလုံး](https://caniuse.com/?search=pushState) မှာ အကောင်အထည်ဖော်ထားပါတယ်။ အဟောင်း browser တွေအတွက် web app တစ်ခု တည်ဆောက်နေတယ်ဆိုရင်၊ ဒီ API အစား အသုံးပြုနိုင်တဲ့ နည်းလမ်းတစ်ခုရှိပါတယ်- path ရဲ့ အရှေ့မှာ [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) ကို အသုံးပြုကာ၊ regular anchor navigation နဲ့အတူ အလုပ်လုပ်ပြီး စာမျက်နှာကို ပြန်လည်တင်သွင်းစရာမလိုတဲ့ routing ကို အကောင်အထည်ဖော်နိုင်ပါတယ်။
 
-## Browser ၏ Back နှင့် Forward Buttons ကို ကိုင်တွယ်ခြင်း
+## Browser ရဲ့ Back နဲ့ Forward Buttons ကို Handle လုပ်ခြင်း
 
-`history.pushState` ကို အသုံးပြုခြင်းဖြင့် browser ၏ navigation history တွင် entry အသစ်များ ဖန်တီးသည်။ Browser ၏ *back button* ကို ဖိထားကြည့်ပါက အောက်ပါအတိုင်း ပြသမည်ဖြစ်သည်-
+`history.pushState` ကို အသုံးပြုခြင်းက browser ရဲ့ navigation history မှာ အသစ်တစ်ခု ထည့်ပေးပါတယ်။ Browser ရဲ့ *back button* ကို ဖိထားပြီး စမ်းကြည့်ပါ၊ အောက်ပါအတိုင်း ပြသပေးပါလိမ့်မယ်-
 
-![Navigation history ၏ Screenshot](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.my.png)
+![Navigation History Screenshot](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.my.png)
 
-Back button ကို အကြိမ်အများကြိမ် click ပြုလုပ်ကြည့်ပါက၊ လက်ရှိ URL သည် ပြောင်းလဲပြီး history ကို update ပြုလုပ်မည်ဖြစ်သော်လည်း၊ template တူညီသည်ကိုသာ ပြသနေမည်ဖြစ်သည်။
+Back button ကို အကြိမ်ကြိမ် click လုပ်ကြည့်ပါ၊ လက်ရှိ URL က ပြောင်းသွားပြီး history က update လုပ်ပေမယ့်၊ တူညီတဲ့ template ပဲ ပြသနေပါလိမ့်မယ်။
 
-၎င်းသည် state ပြောင်းလဲမှု - URL တစ်ခုမှ တစ်ခုသို့ ရွှေ့ပြောင်းမှု - ဖြစ်ပေါ်ပါက [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) event ကို trigger ပြုလုပ်သည်ဟု [`history.pushState` documentation](https://developer.mozilla.org/docs/Web/API/History/pushState) တွင် ဖော်ပြထားသည်။ ဒီပြဿနာကို ဖြေရှင်းရန် ၎င်းကို အသုံးပြုမည်ဖြစ်သည်။
+ဒါဟာ application က history ပြောင်းလဲမှုကို updateRoute() ကို ခေါ်ဖို့ မသိတဲ့အတွက် ဖြစ်ပါတယ်။ [`history.pushState` documentation](https://developer.mozilla.org/docs/Web/API/History/pushState) ကို ကြည့်ပါက၊ state ပြောင်းလဲမှုဖြစ်ရင် - URL တစ်ခုကို ပြောင်းလဲသွားပြီဆိုတာ - [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) event တစ်ခု trigger လုပ်တယ်ဆိုတာ တွေ့ရပါမယ်။ ဒီအရာကို အသုံးပြုပြီး ပြဿနာကို ဖြေရှင်းသွားပါမယ်။
 
-### တာဝန်
+### လုပ်ဆောင်ရန်
 
-Browser history ပြောင်းလဲမှုအခါတွင် ပြသထားသော template ကို update ပြုလုပ်ရန် `updateRoute()` ကို ခေါ်သည့် function အသစ်တစ်ခုကို `app.js` ဖိုင်၏ အောက်ဆုံးတွင် ထည့်ပါ-
+Browser history ပြောင်းလဲမှုဖြစ်တဲ့အခါ ပြသမယ့် template ကို update လုပ်စေရန် `updateRoute()` ကို ခေါ်တဲ့ function အသစ်တစ်ခုကို `app.js` ဖိုင်ရဲ့ အောက်ဆုံးမှာ ထည့်ပါ။
 
 ```js
 window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> မှတ်ချက်- ဒီနေရာတွင် `popstate` event handler ကို ရှင်းလင်းစွာ ဖော်ပြရန် [arrow function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) ကို အသုံးပြုထားသော်လည်း၊ ပုံမှန် function တစ်ခုလည်း အလားတူအလုပ်လုပ်မည်ဖြစ်သည်။
+> မှတ်ချက်: ဒီမှာ `popstate` event handler ကို ကြောင်းတိုအောင် [arrow function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) ကို အသုံးပြုပြီး သတ်မှတ်ထားပါတယ်၊ သို့သော် regular function တစ်ခုလည်း အလားတူအလုပ်လုပ်ပါလိမ့်မယ်။
 
-Arrow functions အကြောင်း refresher video-
+Arrow functions အကြောင်း refresher video တစ်ခု-
 
-[![Arrow Functions](https://img.youtube.com/vi/OP6eEbOj2sc/0
+[![Arrow Functions](https://img.youtube.com/vi/OP6eEbOj2
 
 ---
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူရင်းဘာသာစကားဖြင့် အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် ရှုလေ့လာသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်မှု ဝန်ဆောင်မှုကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွတ်များ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူရင်းဘာသာစကားဖြင့် အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် ရှုယူသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွတ်များ သို့မဟုတ် အနားယူမှားမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
