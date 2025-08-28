@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्री-लेक्चर क्विज़
 
-[प्री-लेक्चर क्विज़](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[प्री-लेक्चर क्विज़](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### गेम डेवलपमेंट में इनहेरिटेंस और कंपोज़िशन
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## पोस्ट-लेक्चर क्विज़
 
-[पोस्ट-लेक्चर क्विज़](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[पोस्ट-लेक्चर क्विज़](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## समीक्षा और स्व-अध्ययन
 

@@ -5,7 +5,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/15)
 
 
 > Check out video
@@ -223,7 +223,7 @@ There are some wild 'older' tags in HTML that are still fun to play with, though
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Review & Self Study
 

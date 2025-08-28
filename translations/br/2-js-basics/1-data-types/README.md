@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula
-[Quiz pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Quiz pré-aula](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Esta lição aborda os fundamentos do JavaScript, a linguagem que proporciona interatividade na web.
 
@@ -199,7 +199,7 @@ Booleanos podem ter apenas dois valores: `true` ou `false`. Booleanos ajudam a t
 JavaScript é notório por suas formas surpreendentes de lidar com tipos de dados ocasionalmente. Faça uma pesquisa sobre esses 'pegadinhas'. Por exemplo: a sensibilidade a maiúsculas e minúsculas pode te pegar! Experimente isso no seu console: `let age = 1; let Age = 2; age == Age` (resolve como `false` -- por quê?). Que outras pegadinhas você consegue encontrar?
 
 ## Quiz Pós-Aula
-[Quiz pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Quiz pós-aula](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Revisão e Autoestudo
 

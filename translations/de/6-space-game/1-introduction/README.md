@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Vorlesung
 
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Vererbung und Komposition in der Spieleentwicklung
 
@@ -222,7 +222,7 @@ Wenn dein Spiel wächst und komplexer wird, bleibt dieses Muster gleich in seine
 
 ## Quiz nach der Vorlesung
 
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Rückblick & Selbststudium
 

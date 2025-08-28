@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz avant le cours
 
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Dans cette leçon, vous apprendrez à tirer des lasers avec JavaScript ! Nous allons ajouter deux éléments à notre jeu :
 
@@ -295,7 +295,7 @@ Ajoutez une explosion ! Consultez les ressources du jeu dans [le dépôt Space A
 
 ## Quiz après le cours
 
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Révision et étude personnelle
 

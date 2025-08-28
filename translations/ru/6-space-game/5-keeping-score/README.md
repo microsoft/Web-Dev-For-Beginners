@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Викторина перед лекцией
 
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/37)
 
 В этом уроке вы узнаете, как добавить подсчет очков в игру и рассчитать жизни.
 
@@ -187,7 +187,7 @@ npm start
 
 ## Викторина после лекции
 
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Обзор и самостоятельное изучение
 

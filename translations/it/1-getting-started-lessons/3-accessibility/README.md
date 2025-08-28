@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lettura
-[Quiz pre-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Quiz pre-lettura](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > La forza del Web sta nella sua universalità. L'accesso da parte di tutti, indipendentemente dalla disabilità, è un aspetto essenziale.
 >
@@ -227,7 +227,7 @@ Prendi questo HTML e riscrivilo per renderlo il più accessibile possibile, util
 ```
 
 ## Quiz Post-Lettura
-[Quiz post-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Quiz post-lettura](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Revisione e Studio Autonomo
 Molti governi hanno leggi riguardanti i requisiti di accessibilità. Informati sulle leggi di accessibilità del tuo paese. Cosa è coperto e cosa no? Un esempio è [questo sito web governativo](https://accessibility.blog.gov.uk/).

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 스케치노트: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > 웹의 힘은 보편성에 있습니다. 장애와 상관없이 모든 사람이 접근할 수 있는 것이 필수적인 요소입니다.
 >
@@ -227,7 +227,7 @@ CSS는 페이지의 모든 요소의 모양을 완전히 제어할 수 있습니
 ```
 
 ## 강의 후 퀴즈
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## 복습 및 자기 학습
 많은 정부가 접근성 요구 사항에 관한 법률을 가지고 있습니다. 여러분의 국가에서 시행 중인 접근성 관련 법률에 대해 조사해 보세요. 어떤 내용이 포함되어 있고, 어떤 내용이 포함되어 있지 않은지 확인하세요. 예를 들어, [이 정부 웹사이트](https://accessibility.blog.gov.uk/)를 참고할 수 있습니다.

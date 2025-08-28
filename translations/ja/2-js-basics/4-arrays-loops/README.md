@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 講義前クイズ
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/13)
 
 このレッスンでは、ウェブ上でインタラクティブ性を提供する言語であるJavaScriptの基礎を学びます。このレッスンでは、データを操作するために使用される配列とループについて学びます。
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 forやwhileループ以外にも配列をループする方法があります。[forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of)、[map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map) などです。これらの技術の1つを使って、配列ループを書き直してみましょう。
 
 ## 講義後クイズ
-[講義後クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## 復習と自己学習
 

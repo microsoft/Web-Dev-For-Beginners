@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## لیکچر سے پہلے کا کوئز
 
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/33)
 
 گیمز تب تک زیادہ مزے کے نہیں ہوتے جب تک اسکرین پر ایلینز حرکت نہ کر رہے ہوں! اس گیم میں ہم دو قسم کی حرکتوں کا استعمال کریں گے:
 
@@ -386,7 +386,7 @@ npm start
 
 ## لیکچر کے بعد کا کوئز
 
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## جائزہ اور خود مطالعہ
 

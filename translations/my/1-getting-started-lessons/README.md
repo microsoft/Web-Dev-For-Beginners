@@ -1,0 +1,31 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "04683f4cfa46004179b0404b89a3065c",
+  "translation_date": "2025-08-27T22:46:11+00:00",
+  "source_file": "1-getting-started-lessons/README.md",
+  "language_code": "my"
+}
+-->
+# ဝဘ်ဖွံ့ဖြိုးမှုနှင့် စတင်ခြင်း
+
+ဒီသင်ခန်းစာအပိုင်းမှာ ပရော်ဖက်ရှင်နယ် Developer ဖြစ်ဖို့အတွက် အရေးကြီးတဲ့ Non Project-based အကြောင်းအရာတွေကို မိတ်ဆက်ပေးမှာ ဖြစ်ပါတယ်။
+
+### ခေါင်းစဉ်များ
+
+1. [Programming Languages နဲ့ Tools of the Trade အကြောင်းမိတ်ဆက်](1-intro-to-programming-languages/README.md)
+2. [GitHub အကြောင်းမိတ်ဆက်](2-github-basics/README.md)
+3. [Accessibility အခြေခံများ](3-accessibility/README.md)
+
+### အကျိုးတူ
+
+Programming Languages နဲ့ Tools of the Trade အကြောင်းမိတ်ဆက်ကို [Jasmine Greenaway](https://twitter.com/paladique) မှ ♥️ နဲ့ရေးသားထားပါတယ်။
+
+GitHub အကြောင်းမိတ်ဆက်ကို [Floor Drees](https://twitter.com/floordrees) မှ ♥️ နဲ့ရေးသားထားပါတယ်။
+
+Accessibility အခြေခံများကို [Christopher Harrison](https://twitter.com/geektrainer) မှ ♥️ နဲ့ရေးသားထားပါတယ်။
+
+---
+
+**အကြောင်းကြားချက်**:  
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူရင်းဘာသာစကားဖြင့် အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် ရှုယူသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။

@@ -19,7 +19,7 @@ TODO : ajouter une image optionnelle
 
 <!---
 ## Quiz avant la leçon
-[Quiz avant la leçon](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Quiz avant la leçon](https://ff-quizzes.netlify.app/web/quiz/3)
 ---->
 
 ## Objectifs
@@ -250,7 +250,7 @@ Ouvrez un dépôt distant sur lequel vous avez les permissions pour apporter des
 
 <!----
 ## Quiz après la leçon
-[Quiz après la leçon](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Quiz après la leçon](https://ff-quizzes.netlify.app/web/quiz/4)
 ---->
 
 ## Révision & Auto-apprentissage

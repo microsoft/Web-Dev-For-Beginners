@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lettura
 
-[Quiz pre-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Quiz pre-lettura](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Introduzione
 
@@ -296,7 +296,7 @@ Ecco un esempio di come potrebbe apparire la pagina di login finale dopo un po' 
 
 ## Quiz post-lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Revisione e studio autonomo
 

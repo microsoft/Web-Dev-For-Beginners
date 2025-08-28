@@ -15,7 +15,7 @@ Diese Lektion behandelt die Grundlagen von GitHub, einer Plattform zum Hosten un
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz vor der Vorlesung
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Einführung
 
@@ -315,7 +315,7 @@ Projekte können auch Diskussionen in Foren, Mailinglisten oder Chat-Kanälen wi
 Arbeiten Sie mit einem Freund zusammen an den Codes des jeweils anderen. Erstellen Sie gemeinsam ein Projekt, forken Sie Code, erstellen Sie Branches und führen Sie Änderungen zusammen.
 
 ## Quiz nach der Vorlesung
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Überprüfung & Selbststudium
 

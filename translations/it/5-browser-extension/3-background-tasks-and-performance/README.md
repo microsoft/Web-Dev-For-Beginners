@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Introduzione
 
@@ -158,7 +158,7 @@ Esamina alcuni siti web open source che esistono da molto tempo e, basandoti sul
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Revisione e Studio Autonomo
 

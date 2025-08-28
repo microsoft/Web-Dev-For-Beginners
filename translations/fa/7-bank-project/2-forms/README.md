@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### مقدمه
 
@@ -296,7 +296,7 @@ async function register() {
 
 ## آزمون پس از درس
 
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## مرور و مطالعه شخصی
 

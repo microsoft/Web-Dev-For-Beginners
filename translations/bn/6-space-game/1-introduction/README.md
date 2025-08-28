@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## প্রাক-লেকচার কুইজ
 
-[প্রাক-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[প্রাক-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### গেম ডেভেলপমেন্টে ইনহেরিটেন্স এবং কম্পোজিশন
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## পোস্ট-লেকচার কুইজ
 
-[পোস্ট-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[পোস্ট-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## পর্যালোচনা এবং স্ব-অধ্যয়ন
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## لیکچر سے پہلے کا کوئز
 
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### تعارف
 
@@ -306,7 +306,7 @@ updateRoute();
 
 ## لیکچر کے بعد کا کوئز
 
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## جائزہ اور خود مطالعہ
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## اختبار ما قبل المحاضرة
 
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/33)
 
 الألعاب ليست ممتعة كثيرًا حتى تبدأ الكائنات الفضائية بالتحرك على الشاشة! في هذه اللعبة، سنستخدم نوعين من الحركات:
 
@@ -386,7 +386,7 @@ npm start
 
 ## اختبار ما بعد المحاضرة
 
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## المراجعة والدراسة الذاتية
 

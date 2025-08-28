@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 講義前クイズ
 
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > 動画をチェック
 
@@ -231,7 +231,7 @@ HTMLにはまだ遊べる「古い」タグがいくつかありますが、[こ
 
 ## 講義後クイズ
 
-[講義後クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## 復習と自己学習
 

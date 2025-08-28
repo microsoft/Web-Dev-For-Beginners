@@ -15,7 +15,7 @@ Esta lección cubre los conceptos básicos de GitHub, una plataforma para alojar
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Cuestionario previo a la lección
-[Cuestionario previo a la lección](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Cuestionario previo a la lección](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Introducción
 
@@ -315,7 +315,7 @@ Los proyectos también pueden tener discusiones en foros, listas de correo o can
 Trabaja en pareja con un amigo para trabajar en el código del otro. Crea un proyecto de manera colaborativa, bifurca código, crea ramas y fusiona cambios.
 
 ## Cuestionario posterior a la clase  
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Revisión y autoestudio
 

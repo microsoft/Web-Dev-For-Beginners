@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Giriş
 
@@ -306,7 +306,7 @@ Bu uygulama için kredileri gösteren üçüncü bir sayfa için yeni bir şablo
 
 ## Ders Sonrası Test
 
-[Ders sonrası test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## İnceleme ve Kendi Kendine Çalışma
 

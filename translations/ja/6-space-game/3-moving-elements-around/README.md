@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 講義前クイズ
 
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/33)
 
 ゲームは、画面上でエイリアンが動き回るようになって初めて面白くなります！このゲームでは、以下の2種類の動きを使用します：
 
@@ -386,7 +386,7 @@ npm start
 
 ## 講義後クイズ
 
-[講義後クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## 復習と自己学習
 

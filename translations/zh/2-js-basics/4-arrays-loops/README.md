@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 绘制的手绘笔记
 
 ## 课前测验
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/13)
 
 本课程介绍了 JavaScript 的基础知识，这是一种为网页提供交互功能的语言。在本课程中，您将学习数组和循环，它们用于操作数据。
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 除了 for 和 while 循环，还有其他方法可以遍历数组。例如 [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) 和 [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。尝试使用这些技术之一重写您的数组循环。
 
 ## 课后测验
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## 复习与自学
 

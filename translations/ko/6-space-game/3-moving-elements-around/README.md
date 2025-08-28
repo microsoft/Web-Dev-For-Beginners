@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 강의 전 퀴즈
 
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/33)
 
 게임은 화면에 외계인이 돌아다니기 시작해야 재미있어집니다! 이번 게임에서는 두 가지 움직임을 사용할 것입니다:
 
@@ -386,7 +386,7 @@ npm start
 
 ## 강의 후 퀴즈
 
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## 복습 및 자기 학습
 

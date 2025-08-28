@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਪੂਰਵ-ਵਿਆਖਿਆ ਪ੍ਰਸ਼ਨਾਵਲੀ
 
-[ਪੂਰਵ-ਵਿਆਖਿਆ ਪ੍ਰਸ਼ਨਾਵਲੀ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[ਪੂਰਵ-ਵਿਆਖਿਆ ਪ੍ਰਸ਼ਨਾਵਲੀ](https://ff-quizzes.netlify.app/web/quiz/35)
 
 ਇਸ ਪਾਠ ਵਿੱਚ ਤੁਸੀਂ ਜਾਵਾਸਕ੍ਰਿਪਟ ਦੀ ਮਦਦ ਨਾਲ ਲੇਜ਼ਰ ਚਲਾਉਣ ਦੇ ਤਰੀਕੇ ਸਿੱਖੋਗੇ! ਅਸੀਂ ਆਪਣੇ ਗੇਮ ਵਿੱਚ ਦੋ ਚੀਜ਼ਾਂ ਜੋੜਾਂਗੇ:
 
@@ -295,7 +295,7 @@ npm start
 
 ## ਪਾਠ-ਪ੍ਰਸ਼ਨਾਵਲੀ
 
-[ਪਾਠ-ਪ੍ਰਸ਼ਨਾਵਲੀ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[ਪਾਠ-ਪ੍ਰਸ਼ਨਾਵਲੀ](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਸਵੈ-ਅਧਿਐਨ
 

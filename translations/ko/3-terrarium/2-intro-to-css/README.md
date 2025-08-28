@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 강의 전 퀴즈
 
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### 소개
 
@@ -266,7 +266,7 @@ HTML 마크업의 각 식물에는 ID와 클래스가 조합되어 있습니다.
 
 ## 강의 후 퀴즈
 
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## 복습 및 자습
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### 简介
 
@@ -278,7 +278,7 @@ const routes = {
 尝试一起修改代码，将 `localStorage` 中保存和加载的数据仅限于应用程序正常运行所需的内容。
 
 ## 课后测验
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## 作业
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼
 
-[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## ਇਵੈਂਟ ਡ੍ਰਿਵਨ ਪ੍ਰੋਗਰਾਮਿੰਗ
 
@@ -211,7 +211,7 @@ const typedValueElement = document.getElementById('typed-value');
 
 ## ਲੈਕਚਰ ਬਾਅਦ ਕਵਿਜ਼
 
-[ਲੈਕਚਰ ਬਾਅਦ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[ਲੈਕਚਰ ਬਾਅਦ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਖੁਦ ਅਧਿਐਨ
 

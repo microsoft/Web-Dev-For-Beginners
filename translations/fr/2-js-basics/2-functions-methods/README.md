@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz avant le cours
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Quand on pense à écrire du code, on veut toujours s'assurer qu'il soit lisible. Bien que cela puisse sembler contre-intuitif, le code est lu bien plus souvent qu'il n'est écrit. Un outil essentiel dans la boîte à outils d'un développeur pour garantir un code maintenable est la **fonction**.
 
@@ -194,7 +194,7 @@ Vous avez maintenant vu que nous avons trois façons de passer une fonction comm
 Pouvez-vous expliquer en une phrase la différence entre les fonctions et les méthodes ? Essayez !
 
 ## Quiz après le cours
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Révision et auto-apprentissage
 

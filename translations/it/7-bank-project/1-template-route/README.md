@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introduzione
 
@@ -306,7 +306,7 @@ Aggiungi un nuovo template e una rotta per una terza pagina che mostri i crediti
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Revisione e Studio Autonomo
 

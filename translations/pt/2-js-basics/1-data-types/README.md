@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Questionário Pré-Aula
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Esta lição aborda os fundamentos do JavaScript, a linguagem que proporciona interatividade na web.
 
@@ -199,7 +199,7 @@ Booleans podem ter apenas dois valores: `true` ou `false`. Booleans ajudam a tom
 JavaScript é conhecido pelas suas formas surpreendentes de lidar com tipos de dados ocasionalmente. Faça uma pesquisa sobre estes 'gotchas'. Por exemplo: a sensibilidade a maiúsculas pode ser traiçoeira! Experimente isto no seu console: `let age = 1; let Age = 2; age == Age` (resolve `false` -- por quê?). Que outros gotchas consegue encontrar?
 
 ## Questionário Pós-Aula
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Revisão & Autoestudo
 

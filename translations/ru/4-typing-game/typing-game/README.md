@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Викторина перед лекцией
 
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Программирование, основанное на событиях
 
@@ -337,7 +337,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## Викторина после лекции
 
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Обзор и самостоятельное изучение
 

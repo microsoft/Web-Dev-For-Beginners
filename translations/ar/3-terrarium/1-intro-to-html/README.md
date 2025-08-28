@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## اختبار ما قبل المحاضرة
 
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > شاهد الفيديو
 
@@ -231,7 +231,7 @@ HTML، أو لغة ترميز النصوص التشعبية، هي "الهيكل
 
 ## اختبار ما بعد المحاضرة
 
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## المراجعة والدراسة الذاتية
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### ارث‌بری و ترکیب در توسعه بازی
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## آزمون پس از درس
 
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## مرور و مطالعه شخصی
 

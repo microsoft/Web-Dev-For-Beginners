@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## पूर्व-व्याख्यान प्रश्नमंजूषा
 
-[पूर्व-व्याख्यान प्रश्नमंजूषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[पूर्व-व्याख्यान प्रश्नमंजूषा](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### गेम डेव्हलपमेंटमध्ये इनहेरिटन्स आणि कंपोझिशन
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## व्याख्यानानंतरची प्रश्नमंजूषा
 
-[व्याख्यानानंतरची प्रश्नमंजूषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[व्याख्यानानंतरची प्रश्नमंजूषा](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > اسکیچ نوٹ از [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## لیکچر سے پہلے کا کوئز
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > ویب کی طاقت اس کی عالمگیریت میں ہے۔ معذوری سے قطع نظر ہر کسی کے لیے رسائی ایک لازمی پہلو ہے۔
 >

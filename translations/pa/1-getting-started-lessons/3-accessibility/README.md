@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > ਸਕੈਚਨੋਟ [Tomomi Imura](https://twitter.com/girlie_mac) ਵੱਲੋਂ
 
 ## ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼
-[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > ਵੈੱਬ ਦੀ ਤਾਕਤ ਇਸ ਦੀ ਵਿਸ਼ਵਵਿਆਪਕਤਾ ਵਿੱਚ ਹੈ। ਅਪੰਗਤਾ ਤੋਂ ਬਿਨਾਂ ਹਰ ਕਿਸੇ ਲਈ ਪਹੁੰਚ ਇੱਕ ਅਹਿਮ ਪਹਲੂ ਹੈ।
 >

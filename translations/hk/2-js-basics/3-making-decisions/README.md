@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 課前測驗
 
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/11)
 
 作出決策並控制程式碼執行的順序可以讓你的程式碼更具可重用性和穩健性。本節將介紹在 JavaScript 中控制資料流的語法，以及它在使用布林值時的重要性。
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## 課後測驗
 
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## 回顧與自學
 

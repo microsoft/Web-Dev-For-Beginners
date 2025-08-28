@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz avant le cours
 
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Introduction
 
@@ -278,7 +278,7 @@ Maintenant que nous rechargeons les données du compte chaque fois que le tablea
 Essayez de travailler ensemble pour modifier ce qui est enregistré et chargé depuis `localStorage` afin d'inclure uniquement ce qui est absolument nécessaire au fonctionnement de l'application.
 
 ## Quiz après le cours
-[Quiz après la conférence](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Quiz après la conférence](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Devoir
 

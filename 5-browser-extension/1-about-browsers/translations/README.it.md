@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23?loc=it)
+[Quiz Pre-Lezione](https://ff-quizzes.netlify.app/web/quiz/23?loc=it)
 
 ### Introduzione
 
@@ -152,7 +152,7 @@ Si dia un'occhiata alle estensioni del browser in uno store e se ne installi una
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24?loc=it)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/24?loc=it)
 
 ## Revisione e Auto Apprendimento
 

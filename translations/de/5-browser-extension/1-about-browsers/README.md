@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Vorlesung
 
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Einführung
 
@@ -160,7 +160,7 @@ Schau dir einen Browser-Erweiterungsstore an und installiere eine Erweiterung in
 
 ## Quiz nach der Vorlesung
 
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Überprüfung & Selbststudium
 

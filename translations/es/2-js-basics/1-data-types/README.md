@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Cuestionario Previo a la Clase
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Esta lección cubre los conceptos básicos de JavaScript, el lenguaje que proporciona interactividad en la web.
 
@@ -199,7 +199,7 @@ Los booleanos solo pueden tener dos valores: `true` o `false`. Los booleanos pue
 JavaScript es famoso por sus formas sorprendentes de manejar tipos de datos en ocasiones. Investiga un poco sobre estos 'problemas'. Por ejemplo: ¡la sensibilidad a mayúsculas y minúsculas puede ser un problema! Intenta esto en tu consola: `let age = 1; let Age = 2; age == Age` (resuelve `false` -- ¿por qué?). ¿Qué otros problemas puedes encontrar?
 
 ## Cuestionario Posterior a la Clase
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Repaso y Estudio Personal
 

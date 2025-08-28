@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## व्याख्यानपूर्व प्रश्नमंजुषा
 
-[व्याख्यानपूर्व प्रश्नमंजुषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[व्याख्यानपूर्व प्रश्नमंजुषा](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > व्हिडिओ पहा
 
@@ -231,7 +231,7 @@ HTML मध्ये काही जुन्या 'मजेशीर' टॅ
 
 ## व्याख्यानानंतरची प्रश्नमंजुषा
 
-[व्याख्यानानंतरची प्रश्नमंजुषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[व्याख्यानानंतरची प्रश्नमंजुषा](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Vorlesung
 
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Einführung
 
@@ -306,7 +306,7 @@ Füge eine neue Vorlage und Route für eine dritte Seite hinzu, die die Credits 
 
 ## Quiz nach der Vorlesung
 
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Rückblick & Selbststudium
 

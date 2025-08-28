@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Викторина перед лекцией
 
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/35)
 
 В этом уроке вы научитесь стрелять лазерами с помощью JavaScript! Мы добавим две вещи в нашу игру:
 
@@ -295,7 +295,7 @@ npm start
 
 ## Викторина после лекции
 
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Обзор и самостоятельное изучение
 

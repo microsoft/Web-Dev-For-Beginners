@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## প্রি-লেকচার কুইজ
 
-[প্রি-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[প্রি-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/37)
 
 এই পাঠে, আপনি শিখবেন কীভাবে একটি গেমে স্কোর যোগ করতে হয় এবং লাইফ গণনা করতে হয়।
 
@@ -187,7 +187,7 @@ npm start
 
 ## পোস্ট-লেকচার কুইজ
 
-[পোস্ট-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[পোস্ট-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## পর্যালোচনা এবং স্ব-অধ্যয়ন
 

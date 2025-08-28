@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pré-Aula
 
-[Quiz pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Quiz pré-aula](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Introdução
 
@@ -210,7 +210,7 @@ Adicione um novo manipulador de eventos ao seu closure para fazer algo mais com 
 
 ## Quiz Pós-Aula
 
-[Quiz pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Quiz pós-aula](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Revisão e Autoestudo
 

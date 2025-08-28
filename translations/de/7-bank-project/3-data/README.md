@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Vorlesung
 
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Einführung
 
@@ -335,7 +335,7 @@ Hier ist ein Beispiel für eine gestaltete Dashboard-Seite:
 
 ## Quiz nach der Vorlesung
 
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Aufgabe
 

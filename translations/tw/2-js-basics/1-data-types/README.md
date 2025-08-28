@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 繪圖筆記由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
 
 ## 課前測驗
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/7)
 
 本課程涵蓋 JavaScript 的基礎知識，這是一種為網頁提供互動性的語言。
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 JavaScript 因其在處理資料型別時偶爾令人驚訝的方式而聞名。進行一些研究，了解這些「陷阱」。例如：大小寫敏感可能會讓你吃虧！在主控台中試試看：`let age = 1; let Age = 2; age == Age`（結果為 `false`——為什麼？）。你還能找到哪些其他的陷阱？
 
 ## 課後測驗
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## 複習與自學
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 스케치노트: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/7)
 
 이 강의에서는 웹에서 상호작용을 가능하게 하는 언어인 JavaScript의 기초를 다룹니다.
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 JavaScript는 때때로 데이터 타입을 다루는 놀라운 방식으로 악명이 높습니다. 이러한 '함정'에 대해 조금 조사해 보세요. 예를 들어, 대소문자 구분이 문제를 일으킬 수 있습니다! 콘솔에서 다음을 시도해 보세요: `let age = 1; let Age = 2; age == Age` (결과는 `false` -- 왜 그럴까요?). 또 어떤 함정을 찾을 수 있나요?
 
 ## 강의 후 퀴즈
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## 복습 및 자기 학습
 

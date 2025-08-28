@@ -201,7 +201,7 @@ Wenn ein:e Entwickler:in etwas Neues lernen möchte, wird er:sie sich höchstwah
 Vergleiche einige Programmiersprachen. Was sind einige der einzigartigen Merkmale von JavaScript im Vergleich zu Java? Wie sieht es mit COBOL im Vergleich zu Go aus?
 
 ## Quiz nach der Vorlesung
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Wiederholung & Selbststudium
 

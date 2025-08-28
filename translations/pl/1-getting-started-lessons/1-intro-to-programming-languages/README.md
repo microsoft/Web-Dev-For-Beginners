@@ -201,7 +201,7 @@ Kiedy programista chce nauczyć się czegoś nowego, najprawdopodobniej sięgnie
 Porównaj kilka języków programowania. Jakie są unikalne cechy JavaScript w porównaniu do Javy? A jak wygląda porównanie COBOL z Go?
 
 ## Quiz po wykładzie
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Przegląd i samodzielna nauka
 

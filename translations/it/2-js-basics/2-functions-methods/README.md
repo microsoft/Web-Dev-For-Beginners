@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Quando pensiamo a scrivere codice, vogliamo sempre assicurarci che sia leggibile. Anche se può sembrare controintuitivo, il codice viene letto molte più volte di quante venga scritto. Uno strumento fondamentale nella cassetta degli attrezzi di uno sviluppatore per garantire un codice manutenibile è la **funzione**.
 
@@ -194,7 +194,7 @@ Ora hai visto che abbiamo tre modi per passare una funzione come parametro e pot
 Riesci a spiegare in una frase la differenza tra funzioni e metodi? Prova!
 
 ## Quiz Post-Lezione
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Revisione e Studio Autonomo
 

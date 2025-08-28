@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## لیکچر سے پہلے کا کوئز
 
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### تعارف
 
@@ -160,7 +160,7 @@ npm install
 
 ## لیکچر کے بعد کا کوئز
 
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## جائزہ اور خود مطالعہ
 

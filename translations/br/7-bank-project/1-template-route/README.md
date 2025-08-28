@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Questionário Pré-Aula
 
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introdução
 
@@ -306,7 +306,7 @@ Adicione um novo template e rota para uma terceira página que mostre os crédit
 
 ## Questionário Pós-Aula
 
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Revisão e Autoestudo
 

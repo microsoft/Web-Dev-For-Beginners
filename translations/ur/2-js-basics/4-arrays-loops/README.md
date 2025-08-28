@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > اسکیچ نوٹ از [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## لیکچر سے پہلے کا کوئز
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/13)
 
 یہ سبق جاوا اسکرپٹ کی بنیادی باتوں کا احاطہ کرتا ہے، وہ زبان جو ویب پر انٹرایکٹیویٹی فراہم کرتی ہے۔ اس سبق میں، آپ Arrays اور Loops کے بارے میں سیکھیں گے، جو ڈیٹا کو منظم کرنے کے لیے استعمال ہوتے ہیں۔
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Arrays پر loop کرنے کے دیگر طریقے بھی ہیں، جیسے for اور while loops کے علاوہ۔ [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)، [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of)، اور [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)۔ اپنے Array loop کو ان تکنیکوں میں سے کسی ایک کا استعمال کرتے ہوئے دوبارہ لکھیں۔
 
 ## لیکچر کے بعد کا کوئز
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## جائزہ اور خود مطالعہ
 

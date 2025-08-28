@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼
 
-[ਪ੍ਰੀ-ਲੈਕਚਰ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[ਪ੍ਰੀ-ਲੈਕਚਰ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### ਪਰਿਚਯ
 
@@ -160,7 +160,7 @@ npm install
 
 ## ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵੀਜ਼
 
-[ਪੋਸਟ-ਲੈਕਚਰ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[ਪੋਸਟ-ਲੈਕਚਰ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਸਵੈ ਅਧਿਐਨ
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Викторина перед лекцией
 
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Введение
 
@@ -224,7 +224,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## Викторина после лекции
 
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Обзор и самостоятельное изучение
 

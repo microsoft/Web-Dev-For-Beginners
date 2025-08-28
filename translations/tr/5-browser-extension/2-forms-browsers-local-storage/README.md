@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Giriş
 
@@ -224,7 +224,7 @@ Bu derslerde şimdiye kadar birkaç API türünü tartıştık. Bir web API'si s
 
 ## Ders Sonrası Test
 
-[Ders sonrası test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

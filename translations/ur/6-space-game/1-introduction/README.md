@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## لیکچر سے پہلے کا کوئز
 
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### گیم ڈیولپمنٹ میں انہرٹنس اور کمپوزیشن
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## لیکچر کے بعد کا کوئز
 
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## جائزہ اور خود مطالعہ
 

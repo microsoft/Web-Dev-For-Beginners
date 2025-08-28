@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### 简介
 
@@ -210,7 +210,7 @@ function stopElementDrag() {
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## 复习与自学
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Vorlesung
 
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Einführung
 
@@ -278,7 +278,7 @@ Da wir die Kontodaten jedes Mal neu laden, wenn das Dashboard geladen wird, denk
 Versuche gemeinsam zu erarbeiten, was in `localStorage` gespeichert und geladen werden sollte, um nur das zu enthalten, was absolut notwendig ist, damit die App funktioniert.
 
 ## Quiz nach der Vorlesung
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Aufgabe
 

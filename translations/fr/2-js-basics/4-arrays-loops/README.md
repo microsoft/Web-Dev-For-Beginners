@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz avant le cours  
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Cette leçon couvre les bases de JavaScript, le langage qui permet d'ajouter de l'interactivité sur le web. Dans cette leçon, vous apprendrez à utiliser les tableaux et les boucles, qui servent à manipuler des données.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Il existe d'autres façons de parcourir des tableaux en dehors des boucles for et while. Découvrez [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), et [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Réécrivez votre boucle de tableau en utilisant l'une de ces techniques.
 
 ## Quiz après le cours  
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Révision et Étude personnelle
 

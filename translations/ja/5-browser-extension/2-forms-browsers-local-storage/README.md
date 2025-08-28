@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 講義前クイズ
 
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### はじめに
 
@@ -224,7 +224,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## 講義後クイズ
 
-[講義後クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## 復習と自己学習
 

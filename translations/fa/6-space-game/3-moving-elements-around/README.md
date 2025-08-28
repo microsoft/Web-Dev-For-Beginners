@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/33)
 
 بازی‌ها تا زمانی که بیگانگان روی صفحه حرکت نکنند، خیلی جذاب نیستند! در این بازی، از دو نوع حرکت استفاده خواهیم کرد:
 
@@ -386,7 +386,7 @@ npm start
 
 ## آزمون پس از درس
 
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## مرور و مطالعه شخصی
 

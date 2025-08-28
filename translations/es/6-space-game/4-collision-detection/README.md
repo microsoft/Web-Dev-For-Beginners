@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Lección
 
-[Cuestionario previo a la lección](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Cuestionario previo a la lección](https://ff-quizzes.netlify.app/web/quiz/35)
 
 En esta lección aprenderás a disparar láseres con JavaScript. Añadiremos dos cosas a nuestro juego:
 
@@ -295,7 +295,7 @@ En este punto, ¡tu juego tiene algo de funcionalidad! Puedes navegar con las te
 
 ## Cuestionario Posterior a la Lección
 
-[Cuestionario posterior a la lección](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Cuestionario posterior a la lección](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Revisión y Autoestudio
 

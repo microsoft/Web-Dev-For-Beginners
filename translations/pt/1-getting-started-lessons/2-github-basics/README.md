@@ -15,7 +15,7 @@ Esta lição aborda os conceitos básicos do GitHub, uma plataforma para hospeda
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Questionário Pré-Aula
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Introdução
 
@@ -315,7 +315,7 @@ Os projetos também podem ter discussões em fóruns, listas de e-mails ou canai
 Trabalhe em equipa com um amigo no código um do outro. Criem um projeto colaborativamente, bifurquem código, criem branches e integrem alterações.
 
 ## Questionário Pós-Aula
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Revisão e Autoestudo
 

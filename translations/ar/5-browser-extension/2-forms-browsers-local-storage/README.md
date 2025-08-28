@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## اختبار ما قبل المحاضرة
 
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### المقدمة
 
@@ -224,7 +224,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## اختبار ما بعد المحاضرة
 
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## المراجعة والدراسة الذاتية
 

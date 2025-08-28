@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### 简介
 
@@ -160,7 +160,7 @@ npm install
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## 复习与自学
 

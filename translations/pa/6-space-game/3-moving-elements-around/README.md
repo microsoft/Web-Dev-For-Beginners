@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਪ੍ਰੀ-ਲੈਕਚਰ ਕਵਿਜ਼
 
-[ਪ੍ਰੀ-ਲੈਕਚਰ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[ਪ੍ਰੀ-ਲੈਕਚਰ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/33)
 
 ਗੇਮਾਂ ਤਦ ਤੱਕ ਮਜ਼ੇਦਾਰ ਨਹੀਂ ਹੁੰਦੀਆਂ ਜਦ ਤੱਕ ਸਕਰੀਨ 'ਤੇ ਐਲੀਅਨ ਦੌੜਦੇ ਨਹੀਂ। ਇਸ ਗੇਮ ਵਿੱਚ, ਅਸੀਂ ਦੋ ਕਿਸਮ ਦੇ ਮੋਸ਼ਨ ਵਰਤਾਂਗੇ:
 
@@ -384,7 +384,7 @@ npm start
 
 ## ਪੋਸਟ-ਲੈਕਚਰ ਕਵਿਜ਼
 
-[ਪੋਸਟ-ਲੈਕਚਰ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[ਪੋਸਟ-ਲੈਕਚਰ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਸਵੈ ਅਧਿਐਨ
 

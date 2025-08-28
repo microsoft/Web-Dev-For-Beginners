@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## اختبار ما قبل المحاضرة  
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > قوة الويب تكمن في عالميته. الوصول للجميع بغض النظر عن الإعاقة هو جانب أساسي.  
 > \- السير تيموثي بيرنرز لي، مدير W3C ومخترع شبكة الويب العالمية  
@@ -226,7 +226,7 @@ CO_OP_TRANSLATOR_METADATA:
 ```
 
 ## اختبار ما بعد المحاضرة  
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## المراجعة والدراسة الذاتية
 تضع العديد من الحكومات قوانين تتعلق بمتطلبات الوصول. قم بالاطلاع على قوانين الوصول في بلدك. ما الذي يتم تغطيته، وما الذي لا يتم تغطيته؟ مثال على ذلك هو [هذا الموقع الحكومي](https://accessibility.blog.gov.uk/).

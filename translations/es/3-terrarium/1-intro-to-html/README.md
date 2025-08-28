@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Mira el video
 
@@ -231,7 +231,7 @@ Existen algunas etiquetas 'antiguas' en HTML que todavía son divertidas de usar
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Revisión y Autoestudio
 

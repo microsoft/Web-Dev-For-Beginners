@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introducción
 
@@ -335,7 +335,7 @@ Aquí tienes un ejemplo de una página de panel de control estilizada:
 
 ## Cuestionario posterior a la clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Tarea
 

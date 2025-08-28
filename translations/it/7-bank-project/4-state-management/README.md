@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Introduzione
 
@@ -278,7 +278,7 @@ Ora che ricarichiamo i dati dell'account ogni volta che la dashboard viene caric
 Prova a lavorare insieme per modificare ciò che viene salvato e caricato da `localStorage` per includere solo ciò che è assolutamente necessario per il funzionamento dell'app.
 
 ## Quiz Post-Lezione
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Compito
 

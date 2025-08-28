@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Викторина перед лекцией
 
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Введение
 
@@ -278,7 +278,7 @@ const routes = {
 Попробуйте вместе изменить то, что сохраняется и загружается из `localStorage`, чтобы включать только то, что абсолютно необходимо для работы приложения.
 
 ## Викторина после лекции
-[Тест после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Тест после лекции](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Задание
 

@@ -15,7 +15,7 @@ Questa lezione copre le basi di GitHub, una piattaforma per ospitare e gestire l
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lettura
-[Quiz pre-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Quiz pre-lettura](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Introduzione
 
@@ -315,7 +315,7 @@ I progetti potrebbero anche avere discussioni in forum, mailing list o canali di
 Lavora in coppia con un amico sul codice dell'altro. Create un progetto collaborativo, forkate il codice, create branch e unite le modifiche.
 
 ## Quiz post-lezione  
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Revisione e studio autonomo
 

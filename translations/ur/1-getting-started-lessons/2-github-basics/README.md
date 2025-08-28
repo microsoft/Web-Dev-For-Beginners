@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > اسکیچ نوٹ از [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## لیکچر سے پہلے کا کوئز
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## تعارف
 
@@ -311,7 +311,7 @@ CO_OP_TRANSLATOR_METADATA:
 کسی دوست کے ساتھ جوڑی بنائیں اور ایک دوسرے کے کوڈ پر کام کریں۔ ایک پروجیکٹ مل کر بنائیں، کوڈ فورک کریں، برانچز بنائیں، اور تبدیلیوں کو مرج کریں۔
 
 ## لیکچر کے بعد کا کوئز
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## جائزہ اور خود مطالعہ
 

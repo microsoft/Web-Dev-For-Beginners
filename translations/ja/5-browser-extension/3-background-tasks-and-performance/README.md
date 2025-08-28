@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 講義前クイズ
 
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### はじめに
 
@@ -158,7 +158,7 @@ function drawIcon(value) {
 
 ## 講義後クイズ
 
-[講義後クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## 復習と自己学習
 

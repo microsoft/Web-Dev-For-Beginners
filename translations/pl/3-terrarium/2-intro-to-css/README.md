@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Wprowadzenie
 
@@ -268,7 +268,7 @@ Aby ukończyć quiz po wykładzie, przejdź przez ten moduł Learn: [Stylizuj sw
 
 ## Quiz po wykładzie
 
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Przegląd i samodzielna nauka
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ders Öncesi Test
-[Ders öncesi test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Bu ders, webde etkileşim sağlayan JavaScript dilinin temellerini kapsar. Bu derste, verileri manipüle etmek için kullanılan diziler ve döngüler hakkında bilgi edineceksiniz.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Diziler üzerinde döngü yapmanın for ve while döngülerinden başka yolları da vardır. [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) ve [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map) gibi yöntemler vardır. Dizi döngünüzü bu tekniklerden biriyle yeniden yazın.
 
 ## Ders Sonrası Test
-[Ders sonrası test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

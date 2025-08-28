@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Tuval (Canvas)
 
@@ -214,7 +214,7 @@ Lütfen önce kendiniz çözmeyi deneyin, ancak takılırsanız bir [çözüme](
 
 ## Ders Sonrası Test
 
-[Ders sonrası testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

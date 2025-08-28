@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Quiz
 
-[Ders öncesi quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Ders öncesi quiz](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Oyunlar, ekranda uzaylılar dolaşmadıkça pek eğlenceli olmaz! Bu oyunda iki tür hareket kullanacağız:
 
@@ -386,7 +386,7 @@ Gördüğünüz gibi, kodunuz işlevler, değişkenler ve sınıflar eklemeye ba
 
 ## Ders Sonrası Quiz
 
-[Ders sonrası quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Ders sonrası quiz](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

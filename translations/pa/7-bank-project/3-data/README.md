@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਪੜ੍ਹਾਈ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼
 
-[ਪੜ੍ਹਾਈ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[ਪੜ੍ਹਾਈ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### ਪਰਿਚਯ
 
@@ -183,7 +183,7 @@ if (data.error) {
 
 ## ਲੈਕਚਰ ਬਾਅਦ ਕਵੀਜ਼
 
-[ਲੈਕਚਰ ਬਾਅਦ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[ਲੈਕਚਰ ਬਾਅਦ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## ਅਸਾਈਨਮੈਂਟ
 

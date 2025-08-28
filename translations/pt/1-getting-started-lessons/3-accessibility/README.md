@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Questionário Pré-Aula  
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > O poder da Web está na sua universalidade. O acesso por todos, independentemente de deficiência, é um aspeto essencial.  
 >
@@ -227,7 +227,7 @@ Pega neste HTML e reescreve-o para ser o mais acessível possível, usando as es
 ```
 
 ## Questionário Pós-Aula  
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Revisão & Autoestudo
 Muitos governos têm leis relacionadas aos requisitos de acessibilidade. Informe-se sobre as leis de acessibilidade do seu país. O que está coberto e o que não está? Um exemplo é [este site governamental](https://accessibility.blog.gov.uk/).

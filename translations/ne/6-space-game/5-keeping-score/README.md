@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्रि-लेक्चर क्विज
 
-[प्रि-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[प्रि-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/37)
 
 यस पाठमा, तपाईंले खेलमा स्कोर थप्ने र जीवन गणना गर्ने तरिका सिक्नुहुनेछ।
 
@@ -187,7 +187,7 @@ npm start
 
 ## पोस्ट-लेक्चर क्विज
 
-[पोस्ट-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[पोस्ट-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## समीक्षा र आत्म-अध्ययन
 

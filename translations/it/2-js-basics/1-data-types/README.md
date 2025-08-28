@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Questa lezione copre i fondamenti di JavaScript, il linguaggio che fornisce interattività sul web.
 
@@ -199,7 +199,7 @@ I booleani possono avere solo due valori: `true` o `false`. I booleani possono a
 JavaScript è noto per i suoi modi sorprendenti di gestire i tipi di dati in alcune occasioni. Fai un po' di ricerca su questi 'gotchas'. Ad esempio: la sensibilità alle maiuscole può essere insidiosa! Prova questo nella tua console: `let age = 1; let Age = 2; age == Age` (risolve `false` -- perché?). Quali altri gotchas riesci a trovare?
 
 ## Quiz Post-Lezione
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Revisione & Studio Autonomo
 

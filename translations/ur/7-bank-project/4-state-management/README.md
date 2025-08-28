@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## لیکچر سے پہلے کا کوئز
 
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### تعارف
 
@@ -278,7 +278,7 @@ const routes = {
 مل کر کام کرنے کی کوشش کریں تاکہ `localStorage` سے محفوظ اور لوڈ کیے جانے والے ڈیٹا کو صرف وہی شامل کیا جائے جو ایپ کے کام کرنے کے لیے بالکل ضروری ہے۔
 
 ## لیکچر کے بعد کا کوئز
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## اسائنمنٹ
 

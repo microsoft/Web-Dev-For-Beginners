@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Wprowadzenie
 
@@ -278,7 +278,7 @@ Teraz, gdy za każdym razem, gdy ładowany jest pulpit nawigacyjny, ponownie ła
 Spróbujcie wspólnie zmienić to, co jest zapisywane i ładowane z `localStorage`, aby obejmowało tylko to, co jest absolutnie niezbędne do działania aplikacji.
 
 ## Quiz po wykładzie
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Zadanie
 

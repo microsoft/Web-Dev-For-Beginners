@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Introducción
 
@@ -210,7 +210,7 @@ Agrega un nuevo controlador de eventos a tu closure para hacer algo más con las
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Revisión y Autoestudio
 

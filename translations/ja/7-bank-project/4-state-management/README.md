@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 講義前クイズ
 
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### はじめに
 
@@ -276,7 +276,7 @@ const routes = {
 ダッシュボードが読み込まれるたびにアカウントデータを再読み込みするようになった今、*すべてのアカウントデータ*を永続化する必要がまだあると思いますか？
 
 アプリが動作するために絶対に必要なものだけを`localStorage`に保存および読み込むように変更してみてください。
-[講義後のクイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[講義後のクイズ](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## 課題
 

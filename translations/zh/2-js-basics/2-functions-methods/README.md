@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > [Tomomi Imura](https://twitter.com/girlie_mac) 的手绘笔记
 
 ## 课前测验
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/9)
 
 在编写代码时，我们总是希望代码具有良好的可读性。虽然这听起来有些反直觉，但代码被阅读的次数远远多于被编写的次数。开发者工具箱中的一个核心工具就是 **函数**，它能帮助我们确保代码的可维护性。
 
@@ -194,7 +194,7 @@ setTimeout(() => {
 你能用一句话说明函数和方法的区别吗？试试看！
 
 ## 课后测验
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## 复习与自学
 

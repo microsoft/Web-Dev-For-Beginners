@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz avant le cours
 
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introduction
 
@@ -306,7 +306,7 @@ Ajoutez un nouveau modèle et une route pour une troisième page qui affiche les
 
 ## Quiz après le cours
 
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Révision et étude personnelle
 

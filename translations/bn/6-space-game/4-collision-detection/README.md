@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## প্রাক-লেকচার কুইজ
 
-[প্রাক-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[প্রাক-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/35)
 
 এই পাঠে আপনি শিখবেন কিভাবে জাভাস্ক্রিপ্ট ব্যবহার করে লেজার ছোড়া যায়! আমরা আমাদের গেমে দুটি জিনিস যোগ করব:
 
@@ -295,7 +295,7 @@ npm start
 
 ## পোস্ট-লেকচার কুইজ
 
-[পোস্ট-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[পোস্ট-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## পর্যালোচনা ও স্ব-অধ্যয়ন
 

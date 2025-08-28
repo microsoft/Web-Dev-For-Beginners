@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Wprowadzenie
 
@@ -335,7 +335,7 @@ Oto przykład wystylizowanej strony pulpitu:
 
 ## Quiz po wykładzie
 
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Zadanie
 

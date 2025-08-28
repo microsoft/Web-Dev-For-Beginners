@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lettura
 
-[Quiz pre-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Quiz pre-lettura](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Ci sono diversi modi per esprimere una *condizione di fine* in un gioco. Sta a te, come creatore del gioco, decidere perché il gioco è terminato. Ecco alcune ragioni, supponendo che stiamo parlando del gioco spaziale che hai costruito finora:
 
@@ -220,7 +220,7 @@ Aggiungi un suono! Riesci ad aggiungere un suono per migliorare il gameplay, mag
 
 ## Quiz Post-Lettura
 
-[Quiz post-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Quiz post-lettura](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Revisione & Studio Autonomo
 

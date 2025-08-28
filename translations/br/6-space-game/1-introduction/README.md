@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pré-Aula
 
-[Quiz pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Quiz pré-aula](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Herança e Composição no desenvolvimento de jogos
 
@@ -222,7 +222,7 @@ Pense em como o padrão pub-sub pode melhorar um jogo. Quais partes devem emitir
 
 ## Quiz Pós-Aula
 
-[Quiz pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Quiz pós-aula](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Revisão e Autoestudo
 

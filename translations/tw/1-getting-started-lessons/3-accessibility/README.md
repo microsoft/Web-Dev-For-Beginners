@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製的手繪筆記
 
 ## 課前測驗  
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > 網路的力量在於它的普及性。無論是否有障礙，讓每個人都能使用是其核心要素。  
 >  
@@ -227,7 +227,7 @@ CSS 提供了對頁面上任何元素外觀的完全控制。你可以創建沒�
 ```
 
 ## 課後測驗  
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## 複習與自學
 許多政府對於無障礙需求有相關法律。請了解您所在國家的無障礙法律。哪些內容被涵蓋，哪些未被涵蓋？例如：[這個政府網站](https://accessibility.blog.gov.uk/)。

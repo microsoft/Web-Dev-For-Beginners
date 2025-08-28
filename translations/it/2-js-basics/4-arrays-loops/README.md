@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pre-Lezione
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Questa lezione copre i fondamenti di JavaScript, il linguaggio che fornisce interattività sul web. In questa lezione imparerai gli array e i cicli, che vengono utilizzati per manipolare i dati.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Esistono altri modi per iterare sugli array oltre ai cicli for e while. Ci sono [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), e [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Riscrivi il tuo ciclo sull'array utilizzando una di queste tecniche.
 
 ## Quiz Post-Lezione
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Revisione e Studio Autonomo
 

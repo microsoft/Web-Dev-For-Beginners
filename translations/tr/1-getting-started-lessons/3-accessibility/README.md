@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ders Öncesi Test
-[Ders öncesi testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Web'in gücü evrenselliğinde yatar. Engellilik durumuna bakılmaksızın herkesin erişimi temel bir unsurdur.
 >
@@ -227,7 +227,7 @@ Bu HTML'yi alın ve öğrendiğiniz stratejilere göre mümkün olduğunca eriş
 ```
 
 ## Ders Sonrası Test
-[Ders sonrası testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 Birçok hükümetin erişilebilirlik gereksinimlerine ilişkin yasaları vardır. Kendi ülkenizin erişilebilirlik yasalarını araştırın. Neler kapsanıyor, neler kapsam dışı bırakılıyor? Bir örnek olarak [bu hükümet web sitesi](https://accessibility.blog.gov.uk/) gösterilebilir.

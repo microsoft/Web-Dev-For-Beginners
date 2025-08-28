@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼
 
-[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### ਗੇਮ ਡਿਵੈਲਪਮੈਂਟ ਵਿੱਚ ਇਨਹੈਰਿਟੈਂਸ ਅਤੇ ਕੰਪੋਜ਼ੀਸ਼ਨ
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵੀਜ਼
 
-[ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਸਵੈ ਅਧਿਐਨ
 

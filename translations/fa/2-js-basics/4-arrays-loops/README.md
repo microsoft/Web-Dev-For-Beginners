@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > یادداشت تصویری توسط [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## آزمون پیش از درس
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/13)
 
 این درس اصول اولیه جاوااسکریپت، زبانی که تعامل در وب را فراهم می‌کند، پوشش می‌دهد. در این درس، درباره آرایه‌ها و حلقه‌ها که برای دستکاری داده‌ها استفاده می‌شوند، یاد خواهید گرفت.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 راه‌های دیگری برای حلقه زدن روی آرایه‌ها وجود دارد به جز حلقه‌های for و while. روش‌هایی مانند [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)، [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of)، و [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map) وجود دارند. حلقه آرایه خود را با استفاده از یکی از این تکنیک‌ها بازنویسی کنید.
 
 ## آزمون پس از درس
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## مرور و مطالعه شخصی
 

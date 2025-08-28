@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > 查看视频
 
@@ -231,7 +231,7 @@ HTML 中有一些有趣的“旧”标签，虽然不建议使用已弃用的标
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## 复习与自学
 

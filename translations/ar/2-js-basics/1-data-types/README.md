@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## اختبار ما قبل المحاضرة
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/7)
 
 تغطي هذه الدرس أساسيات JavaScript، اللغة التي تضيف التفاعل إلى الويب.
 
@@ -200,7 +200,7 @@ let myString2 = "World";
 JavaScript مشهورة بطرقها المفاجئة في التعامل مع أنواع البيانات في بعض الأحيان. قم ببعض البحث حول هذه "المفاجآت". على سبيل المثال: حساسية حالة الأحرف قد تكون مشكلة! جرب هذا في وحدة التحكم الخاصة بك: `let age = 1; let Age = 2; age == Age` (يُظهر `false` -- لماذا؟). ما المفاجآت الأخرى التي يمكنك العثور عليها؟
 
 ## اختبار ما بعد المحاضرة
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## المراجعة والدراسة الذاتية
 

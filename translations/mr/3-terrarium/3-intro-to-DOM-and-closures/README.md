@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्री-लेक्चर क्विझ
 
-[प्री-लेक्चर क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[प्री-लेक्चर क्विझ](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### परिचय
 
@@ -210,7 +210,7 @@ function stopElementDrag() {
 
 ## पोस्ट-लेक्चर क्विझ
 
-[पोस्ट-लेक्चर क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[पोस्ट-लेक्चर क्विझ](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

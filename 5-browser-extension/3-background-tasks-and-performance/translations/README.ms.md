@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Kuiz Pra Kuliah](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Pengenalan
 
@@ -147,7 +147,7 @@ Selidiki beberapa laman web sumber terbuka telah lama wujud, dan, berdasarkan se
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Kuiz Pasca Kuliah](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Mengkaji & Belajar Sendiri
 

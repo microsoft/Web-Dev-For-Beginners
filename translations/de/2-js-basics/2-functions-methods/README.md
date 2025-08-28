@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz vor der Vorlesung
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Wenn wir über das Schreiben von Code nachdenken, möchten wir immer sicherstellen, dass unser Code lesbar ist. Auch wenn das zunächst widersprüchlich klingt, wird Code viel häufiger gelesen als geschrieben. Ein zentrales Werkzeug im Werkzeugkasten eines Entwicklers, um wartbaren Code zu gewährleisten, ist die **Funktion**.
 
@@ -194,7 +194,7 @@ Sie haben nun gesehen, dass wir drei Möglichkeiten haben, eine Funktion als Par
 Können Sie in einem Satz den Unterschied zwischen Funktionen und Methoden erklären? Versuchen Sie es!
 
 ## Quiz nach der Vorlesung
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Überprüfung & Selbststudium
 

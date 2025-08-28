@@ -19,7 +19,7 @@ TODO: isteğe bağlı bir görsel ekle
 
 <!---
 ## Ders Öncesi Test
-[Ders öncesi test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/3)
 ---->
 
 ## Öğrenme hedefleri
@@ -157,7 +157,7 @@ Uzantıyı yükledikten ve kullandıktan sonra, vscode.dev farklı ihtiyaçlara 
 
 <!----
 ## Ders Sonrası Test
-[Ders sonrası test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/4)
 ---->
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma

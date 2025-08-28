@@ -5,7 +5,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Kuiz Pra Kuliah](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Pengenalan
 
@@ -201,7 +201,7 @@ Tambahkan pengendali acara (event handler) baharu ke penutupan anda untuk melaku
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Kuiz Pasca Kuliah](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Mengkaji & Belajar Sendiri
 

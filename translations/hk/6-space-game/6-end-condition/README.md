@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 課前測驗
 
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/39)
 
 在遊戲中，有多種方式來表達*結束條件*。作為遊戲的創作者，由你來決定遊戲為什麼會結束。如果我們假設你正在建立的太空遊戲，以下是一些可能的原因：
 
@@ -220,7 +220,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## 回顧與自學
 

@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼
 
-[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/11)
 
 ਫੈਸਲੇ ਲੈਣ ਅਤੇ ਆਪਣੇ ਕੋਡ ਦੇ ਚਲਣ ਦੇ ਕ੍ਰਮ ਨੂੰ ਨਿਯੰਤਰਿਤ ਕਰਨ ਨਾਲ ਤੁਹਾਡਾ ਕੋਡ ਦੁਬਾਰਾ ਵਰਤਣਯੋਗ ਅਤੇ ਮਜ਼ਬੂਤ ਬਣਦਾ ਹੈ। ਇਸ ਭਾਗ ਵਿੱਚ ਜਾਵਾਸਕ੍ਰਿਪਟ ਵਿੱਚ ਡਾਟਾ ਫਲੋ ਨੂੰ ਨਿਯੰਤਰਿਤ ਕਰਨ ਲਈ ਸਿੰਟੈਕਸ ਅਤੇ ਬੂਲੀਅਨ ਡਾਟਾ ਟਾਈਪਸ ਨਾਲ ਇਸਦੇ ਮਹੱਤਵ ਬਾਰੇ ਚਰਚਾ ਕੀਤੀ ਗਈ ਹੈ।
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼
 
-[ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਸਵੈ-ਅਧਿਐਨ
 

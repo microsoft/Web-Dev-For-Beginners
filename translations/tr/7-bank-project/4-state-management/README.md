@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Giriş
 
@@ -278,7 +278,7 @@ Artık gösterge paneli her yüklendiğinde hesap verilerini yeniden yüklüyoru
 Uygulamanın çalışması için kesinlikle gerekli olan verileri `localStorage`'da saklamak ve yüklemek için neyi değiştirebileceğinizi birlikte çalışarak deneyin.
 
 ## Ders Sonrası Test
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Ödev
 

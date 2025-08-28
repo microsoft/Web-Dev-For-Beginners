@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## पूर्व-व्याख्यान क्विझ
 
-[पूर्व-व्याख्यान क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[पूर्व-व्याख्यान क्विझ](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### परिचय
 
@@ -306,7 +306,7 @@ updateRoute();
 
 ## व्याख्यानानंतरचा क्विझ
 
-[व्याख्यानानंतरचा क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[व्याख्यानानंतरचा क्विझ](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

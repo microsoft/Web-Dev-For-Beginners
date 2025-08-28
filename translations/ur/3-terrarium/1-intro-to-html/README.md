@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## لیکچر سے پہلے کا کوئز
 
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > ویڈیو دیکھیں
 
@@ -231,7 +231,7 @@ HTML میں کچھ پرانے 'وائلڈ' ٹیگز ہیں جو اب بھی کھ
 
 ## لیکچر کے بعد کا کوئز
 
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## جائزہ اور خود مطالعہ
 

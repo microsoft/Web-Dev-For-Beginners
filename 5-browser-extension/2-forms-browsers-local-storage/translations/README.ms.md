@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Kuiz Pra Kuliah](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Pengenalan
 
@@ -210,7 +210,7 @@ Kami telah membincangkan beberapa jenis API setakat ini dalam pelajaran ini. Pil
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Kuiz Pasca Kuliah](https://ff-quizzes.netlify.app/web/quiz/26)
 
 
 ## Mengkaji & Belajar Sendiri

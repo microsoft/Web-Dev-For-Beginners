@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 绘制的速记笔记
 
 ## 课前测验
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/7)
 
 本课程介绍 JavaScript 的基础知识，这是一种为网页提供交互功能的语言。
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 JavaScript 因其处理数据类型的意外方式而闻名。研究一下这些“陷阱”。例如：大小写敏感可能会让你吃亏！在控制台中试试这个：`let age = 1; let Age = 2; age == Age`（结果是 `false` —— 为什么？）。你还能发现哪些其他陷阱？
 
 ## 课后测验
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## 复习与自学
 

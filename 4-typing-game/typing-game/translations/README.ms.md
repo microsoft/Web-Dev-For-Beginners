@@ -2,7 +2,7 @@
 
 ## Kuiz Pra Kuliah
 
-[Kuiz Pra Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Kuiz Pra Kuliah](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Pengaturcaraan berdasarkan acara
 
@@ -328,7 +328,7 @@ Tambahkan lebih banyak fungsi
 
 ## Kuiz Pasca Kuliah
 
-[Kuiz Pasca Kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Kuiz Pasca Kuliah](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Mengkaji & Belajar Sendiri
 

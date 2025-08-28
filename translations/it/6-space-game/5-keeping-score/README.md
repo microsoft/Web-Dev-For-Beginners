@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lettura
 
-[Quiz pre-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Quiz pre-lettura](https://ff-quizzes.netlify.app/web/quiz/37)
 
 In questa lezione, imparerai come aggiungere un punteggio a un gioco e calcolare le vite.
 
@@ -187,7 +187,7 @@ Il tuo codice è quasi completo. Riesci a immaginare i prossimi passi?
 
 ## Quiz Post-Lettura
 
-[Quiz post-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Quiz post-lettura](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Revisione e Studio Autonomo
 

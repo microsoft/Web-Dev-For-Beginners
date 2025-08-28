@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introducción
 
@@ -306,7 +306,7 @@ Añade una nueva plantilla y ruta para una tercera página que muestre los créd
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Repaso y Autoestudio
 

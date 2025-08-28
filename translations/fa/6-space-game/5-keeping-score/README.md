@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/37)
 
 در این درس، یاد می‌گیرید که چگونه به بازی امتیاز اضافه کنید و جان‌ها را محاسبه کنید.
 
@@ -187,7 +187,7 @@ npm start
 
 ## آزمون پس از درس
 
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## مرور و مطالعه شخصی
 

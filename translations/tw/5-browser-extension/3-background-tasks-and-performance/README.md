@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 課前測驗
 
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### 簡介
 
@@ -158,7 +158,7 @@ function drawIcon(value) {
 
 ## 課後測驗
 
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## 回顧與自學
 

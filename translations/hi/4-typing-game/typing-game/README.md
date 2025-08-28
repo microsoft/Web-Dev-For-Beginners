@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्री-लेक्चर क्विज़
 
-[प्री-लेक्चर क्विज़](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[प्री-लेक्चर क्विज़](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## इवेंट-ड्रिवन प्रोग्रामिंग
 
@@ -337,7 +337,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## व्याख्यान के बाद क्विज़
 
-[व्याख्यान के बाद क्विज़](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[व्याख्यान के बाद क्विज़](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## समीक्षा और स्व-अध्ययन
 

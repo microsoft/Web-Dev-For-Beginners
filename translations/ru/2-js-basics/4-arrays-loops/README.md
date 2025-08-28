@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скетчноут от [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Викторина перед лекцией
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Этот урок охватывает основы JavaScript — языка, который обеспечивает интерактивность в интернете. В этом уроке вы узнаете о массивах и циклах, которые используются для работы с данными.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Существуют и другие способы перебора массивов, помимо циклов for и while. Это [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) и [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Перепишите ваш цикл для массива, используя один из этих методов.
 
 ## Викторина после лекции
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Обзор и самостоятельное изучение
 

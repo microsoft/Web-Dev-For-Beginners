@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Questionário pré-aula
 
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Programação orientada a eventos
 
@@ -337,7 +337,7 @@ Adicione mais funcionalidades:
 
 ## Questionário Pós-Aula
 
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Revisão e Autoestudo
 

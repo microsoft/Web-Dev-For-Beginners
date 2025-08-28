@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 課前測驗
 
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > 觀看影片
 
@@ -231,7 +231,7 @@ HTML 中有一些有趣的「舊」標籤，雖然不應在標記中使用已棄
 
 ## 課後測驗
 
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## 回顧與自學
 

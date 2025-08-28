@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### مقدمه
 
@@ -282,7 +282,7 @@ const routes = {
 سعی کنید با هم کار کنید تا آنچه را که از `localStorage` ذخیره و بارگذاری می‌شود، تغییر دهید تا فقط شامل مواردی باشد که برای عملکرد اپلیکیشن کاملاً ضروری هستند.
 
 ## آزمون پس از درس
-[پرسشنامه پس از سخنرانی](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[پرسشنامه پس از سخنرانی](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## تکلیف
 

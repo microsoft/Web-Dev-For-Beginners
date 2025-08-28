@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼
 
-[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### ਪਰਿਚਯ
 

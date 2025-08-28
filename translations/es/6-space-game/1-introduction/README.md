@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Herencia y Composición en el desarrollo de juegos
 
@@ -222,7 +222,7 @@ Piensa en cómo el patrón pub-sub puede mejorar un juego. ¿Qué partes deberí
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Repaso y Estudio Personal
 

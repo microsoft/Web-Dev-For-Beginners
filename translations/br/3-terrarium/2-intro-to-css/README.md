@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Questionário Pré-Aula
 
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Introdução
 
@@ -268,7 +268,7 @@ Para completar o questionário pós-aula, passe por este módulo do Learn: [Esti
 
 ## Questionário Pós-Aula
 
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Revisão e Autoestudo
 

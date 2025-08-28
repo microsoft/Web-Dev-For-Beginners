@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/37)
 
 En esta lección, aprenderás cómo agregar puntuación a un juego y calcular vidas.
 
@@ -187,7 +187,7 @@ Tu código está casi completo. ¿Puedes imaginar tus próximos pasos?
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Repaso y Estudio Personal
 

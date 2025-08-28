@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Przed Lekcją  
-[Quiz przed lekcją](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Quiz przed lekcją](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Siła internetu tkwi w jego uniwersalności. Dostęp dla każdego, niezależnie od niepełnosprawności, jest kluczowym aspektem.  
 >  

@@ -201,7 +201,7 @@ Cuando un desarrollador quiere aprender algo nuevo, probablemente recurrirá a l
 Compara algunos lenguajes de programación. ¿Cuáles son algunas de las características únicas de JavaScript frente a Java? ¿Qué hay de COBOL frente a Go?
 
 ## Cuestionario Posterior a la Clase
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Revisión y Autoestudio
 

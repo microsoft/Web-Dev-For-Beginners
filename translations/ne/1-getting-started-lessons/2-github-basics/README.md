@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > [Tomomi Imura](https://twitter.com/girlie_mac) द्वारा बनाइएको स्केच नोट
 
 ## पाठ अघि क्विज
-[पाठ अघि क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[पाठ अघि क्विज](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## परिचय
 
@@ -304,7 +304,7 @@ GitHub मा रहेको सम्बन्धित रिमोट ब्
 साथीसँग जोडी बनाएर एक-अर्काको कोडमा काम गर्नुहोस्। सहकार्यात्मक रूपमा प्रोजेक्ट सिर्जना गर्नुहोस्, कोड fork गर्नुहोस्, ब्रान्चहरू सिर्जना गर्नुहोस्, र परिवर्तनहरू मर्ज गर्नुहोस्।
 
 ## पोस्ट-लेक्चर क्विज
-[पोस्ट-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[पोस्ट-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## समीक्षा र आत्म-अध्ययन
 

@@ -201,7 +201,7 @@ back add r0,r1
 केही प्रोग्रामिङ भाषाहरू तुलना गर्नुहोस्। JavaScript र Java का केही अनौठा विशेषताहरू के हुन्? COBOL र Go को बारेमा के भन्न सकिन्छ?
 
 ## पोस्ट-लेक्चर क्विज
-[पोस्ट-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[पोस्ट-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## समीक्षा र आत्म अध्ययन
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## প্রাক-লেকচার কুইজ
 
-[প্রাক-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[প্রাক-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## ইভেন্ট চালিত প্রোগ্রামিং
 
@@ -337,7 +337,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## লেকচার-পরবর্তী কুইজ
 
-[লেকচার-পরবর্তী কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[লেকচার-পরবর্তী কুইজ](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## পর্যালোচনা ও স্ব-অধ্যয়ন
 

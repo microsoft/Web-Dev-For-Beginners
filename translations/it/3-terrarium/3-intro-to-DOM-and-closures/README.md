@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Introduzione
 
@@ -210,7 +210,7 @@ Aggiungi un nuovo gestore di eventi alla tua closure per fare qualcosa di più c
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Revisione e Studio Autonomo
 

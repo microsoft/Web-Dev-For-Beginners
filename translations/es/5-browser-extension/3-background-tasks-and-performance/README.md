@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Introducción
 
@@ -158,7 +158,7 @@ Investiga algunos sitios web de código abierto que han existido durante mucho t
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Revisión y Autoestudio
 

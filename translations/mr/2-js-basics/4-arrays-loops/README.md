@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) यांच्याकडून
 
 ## व्याख्यानपूर्व क्विझ
-[व्याख्यानपूर्व क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[व्याख्यानपूर्व क्विझ](https://ff-quizzes.netlify.app/web/quiz/13)
 
 या धड्यात जावास्क्रिप्टच्या मूलभूत गोष्टींचा समावेश आहे, ही ती भाषा आहे जी वेबवर संवादक्षमतेसाठी वापरली जाते. या धड्यात तुम्ही अरेज आणि लूप्सबद्दल शिकाल, जे डेटा हाताळण्यासाठी वापरले जातात.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 फॉर आणि व्हाईल लूप्स व्यतिरिक्त अरेजवर लूपिंग करण्याचे इतर मार्ग आहेत. [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), आणि [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map) यांचा समावेश आहे. तुमचा अरेज लूप यापैकी कोणत्याही तंत्राचा वापर करून पुन्हा लिहा.
 
 ## व्याख्यानानंतरची क्विझ
-[व्याख्यानानंतरची क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[व्याख्यानानंतरची क्विझ](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

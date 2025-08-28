@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## اختبار ما قبل المحاضرة
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## المقدمة
 
@@ -315,7 +315,7 @@ CO_OP_TRANSLATOR_METADATA:
 تعاون مع صديق للعمل على كود بعضكما البعض. أنشئ مشروعًا بشكل تعاوني، قم بتشعب الكود، أنشئ فروعًا، وادمج التغييرات.
 
 ## اختبار ما بعد المحاضرة
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## المراجعة والدراسة الذاتية
 

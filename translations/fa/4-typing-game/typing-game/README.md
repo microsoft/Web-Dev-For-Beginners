@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## برنامه‌نویسی مبتنی بر رویداد
 
@@ -337,7 +337,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## آزمون پس از درس
 
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## مرور و مطالعه شخصی
 

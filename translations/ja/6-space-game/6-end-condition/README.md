@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 講義前クイズ
 
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/39)
 
 ゲームにおける「終了条件」を表現する方法はいくつかあります。ゲームの制作者であるあなたが、ゲームが終了する理由を決めることができます。これまで作成してきた宇宙ゲームを例にすると、以下のような理由が考えられます：
 
@@ -220,7 +220,7 @@ npm start
 
 ## 講義後クイズ
 
-[講義後クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## 復習と自己学習
 

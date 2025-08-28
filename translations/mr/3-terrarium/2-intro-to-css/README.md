@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## पूर्व-व्याख्यान प्रश्नमंजुषा
 
-[पूर्व-व्याख्यान प्रश्नमंजुषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[पूर्व-व्याख्यान प्रश्नमंजुषा](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### परिचय
 
@@ -268,7 +268,7 @@ Relative पोझिशन केलेले घटक CSS च्या नि
 
 ## पोस्ट-व्याख्यान प्रश्नमंजुषा
 
-[पोस्ट-व्याख्यान प्रश्नमंजुषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[पोस्ट-व्याख्यान प्रश्नमंजुषा](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

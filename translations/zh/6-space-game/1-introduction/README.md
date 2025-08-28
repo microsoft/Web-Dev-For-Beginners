@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### 游戏开发中的继承与组合
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## 复习与自学
 

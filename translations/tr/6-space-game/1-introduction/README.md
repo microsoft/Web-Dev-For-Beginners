@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Oyun Geliştirmede Kalıtım ve Kompozisyon
 
@@ -222,7 +222,7 @@ Pub-sub deseninin bir oyunu nasıl geliştirebileceğini düşünün. Hangi böl
 
 ## Ders Sonrası Test
 
-[Ders sonrası testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

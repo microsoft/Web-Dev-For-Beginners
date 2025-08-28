@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > یادداشت تصویری توسط [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## آزمون پیش از درس
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/7)
 
 این درس اصول اولیه جاوااسکریپت را پوشش می‌دهد، زبانی که تعامل در وب را فراهم می‌کند.
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 جاوااسکریپت به دلیل روش‌های شگفت‌انگیز خود در برخورد با انواع داده‌ها گاهی اوقات بدنام است. کمی تحقیق کنید درباره این "مشکلات". به عنوان مثال: حساسیت به حروف بزرگ و کوچک می‌تواند مشکل‌ساز باشد! این را در کنسول خود امتحان کنید: `let age = 1; let Age = 2; age == Age` (نتیجه `false` -- چرا؟). چه مشکلات دیگری می‌توانید پیدا کنید؟
 
 ## آزمون پس از درس
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## مرور و مطالعه شخصی
 

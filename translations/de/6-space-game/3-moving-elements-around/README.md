@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Lektion
 
-[Quiz vor der Lektion](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Quiz vor der Lektion](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Spiele machen erst dann richtig Spaß, wenn Aliens über den Bildschirm laufen! In diesem Spiel werden wir zwei Arten von Bewegungen nutzen:
 
@@ -386,7 +386,7 @@ Wie du sehen kannst, kann dein Code zu einem "Spaghetti-Code" werden, wenn du Fu
 
 ## Quiz nach der Lektion
 
-[Quiz nach der Lektion](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Quiz nach der Lektion](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Überprüfung & Selbststudium
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Olay Tabanlı Programlama
 
@@ -337,7 +337,7 @@ Daha fazla işlevsellik ekleyin:
 
 ## Ders Sonrası Test
 
-[Ders sonrası testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

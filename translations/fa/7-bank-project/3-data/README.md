@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### مقدمه
 
@@ -335,7 +335,7 @@ function updateElement(id, textOrNode) {
 
 ## آزمون پس از درس
 
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## تکلیف
 

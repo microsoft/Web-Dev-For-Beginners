@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/11)
 
 做出决策并控制代码的执行顺序可以让代码更具复用性和健壮性。本节将介绍在 JavaScript 中控制数据流的语法，以及它在与布尔数据类型结合使用时的重要性。
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## 复习与自学
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Questionário Pré-Aula
 
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Nesta lição, você aprenderá a disparar lasers com JavaScript! Vamos adicionar dois elementos ao nosso jogo:
 
@@ -295,7 +295,7 @@ Adicione uma explosão! Dê uma olhada nos ativos do jogo no [repositório Space
 
 ## Questionário Pós-Aula
 
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Revisão e Autoestudo
 

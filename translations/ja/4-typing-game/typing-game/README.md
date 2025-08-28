@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 講義前クイズ
 
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## イベント駆動型プログラミング
 
@@ -337,7 +337,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## 講義後のクイズ
 
-[講義後のクイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[講義後のクイズ](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## 復習と自己学習
 

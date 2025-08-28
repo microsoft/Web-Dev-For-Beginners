@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## पूर्व-व्याख्यान प्रश्नमंजुषा
 
-[पूर्व-व्याख्यान प्रश्नमंजुषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[पूर्व-व्याख्यान प्रश्नमंजुषा](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### परिचय
 
@@ -325,7 +325,7 @@ updateElement('transactions', transactionsRows);
 
 ## व्याख्यानानंतरचा प्रश्नमंजूषा
 
-[व्याख्यानानंतरचा प्रश्नमंजूषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[व्याख्यानानंतरचा प्रश्नमंजूषा](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## असाइनमेंट
 

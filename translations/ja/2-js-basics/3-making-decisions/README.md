@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 講義前のクイズ
 
-[講義前のクイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[講義前のクイズ](https://ff-quizzes.netlify.app/web/quiz/11)
 
 判断を行い、コードの実行順序を制御することで、コードを再利用可能で堅牢なものにすることができます。このセクションでは、JavaScriptでデータフローを制御するための構文と、Booleanデータ型と組み合わせた際の重要性について説明します。
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## 講義後のクイズ
 
-[講義後のクイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[講義後のクイズ](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## 復習と自己学習
 

@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Викторина перед лекцией
 
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Введение
 
@@ -160,7 +160,7 @@ npm install
 
 ## Викторина после лекции
 
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Обзор и самостоятельное изучение
 

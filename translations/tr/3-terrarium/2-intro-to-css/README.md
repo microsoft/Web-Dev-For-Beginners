@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Giriş
 
@@ -268,7 +268,7 @@ Ders sonrası testi tamamlamak için şu Learn modülünü inceleyin: [HTML uygu
 
 ## Ders Sonrası Test
 
-[Ders sonrası test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

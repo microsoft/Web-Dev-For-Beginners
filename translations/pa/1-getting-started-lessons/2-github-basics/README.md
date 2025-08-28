@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > ਸਕੈਚਨੋਟ [Tomomi Imura](https://twitter.com/girlie_mac) ਦੁਆਰਾ
 
 ## ਪਾਠ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼
-[ਪਾਠ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[ਪਾਠ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## ਪਰਚੇਅ
 
@@ -255,7 +255,7 @@ GitHub 'ਤੇ ਚੀਜ਼ਾਂ ਪਾਉਣ ਦਾ ਮੁੱਖ ਕਾਰਨ 
 ਇੱਕ ਦੋਸਤ ਨਾਲ ਜੋੜ ਬਣਾਓ ਅਤੇ ਇੱਕ-ਦੂਜੇ ਦੇ ਕੋਡ 'ਤੇ ਕੰਮ ਕਰੋ। ਸਾਂਝੇ ਤੌਰ 'ਤੇ ਇੱਕ ਪ੍ਰੋਜੈਕਟ ਬਣਾਓ, ਕੋਡ ਫੋਰਕ ਕਰੋ, ਬ੍ਰਾਂਚ ਬਣਾਓ, ਅਤੇ ਬਦਲਾਅ ਨੂੰ ਮਿਲਾਓ।
 
 ## ਪੋਸਟ-ਲੈਕਚਰ ਕਵਿਜ਼
-[ਪੋਸਟ-ਲੈਕਚਰ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[ਪੋਸਟ-ਲੈਕਚਰ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਸਵੈ ਅਧਿਐਨ
 

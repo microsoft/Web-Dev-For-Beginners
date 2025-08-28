@@ -200,7 +200,7 @@ Bir geliştirici yeni bir şey öğrenmek istediğinde, büyük olasılıkla bun
 Bazı programlama dillerini karşılaştırın. JavaScript ile Java'nın benzersiz özellikleri nelerdir? Peki ya COBOL ile Go?
 
 ## Ders Sonrası Testi  
-[Ders sonrası testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

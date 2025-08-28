@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## لیکچر سے پہلے کا کوئز
 
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### تعارف
 
@@ -213,7 +213,7 @@ function stopElementDrag() {
 
 ## لیکچر کے بعد کا کوئز
 
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## جائزہ اور خود مطالعہ
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Викторина перед лекцией
 
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Наследование и композиция в разработке игр
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## Викторина после лекции
 
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Обзор и самостоятельное изучение
 

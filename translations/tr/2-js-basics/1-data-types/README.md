@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ders Öncesi Test
-[Ders öncesi test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Bu ders, webde etkileşim sağlayan dil olan JavaScript'in temellerini kapsar.
 
@@ -199,7 +199,7 @@ Booleans yalnızca iki değere sahip olabilir: `true` veya `false`. Booleans, be
 JavaScript, zaman zaman veri türlerini ele alış biçimiyle şaşırtıcıdır. Bu 'tuzaklar' hakkında biraz araştırma yapın. Örneğin: büyük/küçük harf duyarlılığı sizi zorlayabilir! Konsolunuzda şunu deneyin: `let age = 1; let Age = 2; age == Age` (sonuç `false` -- neden?). Başka hangi tuzakları bulabilirsiniz?
 
 ## Ders Sonrası Test
-[Ders sonrası test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

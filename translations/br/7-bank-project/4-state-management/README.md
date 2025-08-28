@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Questionário Pré-Aula
 
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Introdução
 
@@ -278,7 +278,7 @@ Agora que recarregamos os dados da conta toda vez que o painel é carregado, voc
 Trabalhem juntos para alterar o que é salvo e carregado do `localStorage` para incluir apenas o que é absolutamente necessário para o app funcionar.
 
 ## Questionário Pós-Aula
-[Quiz pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Quiz pós-aula](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Tarefa
 

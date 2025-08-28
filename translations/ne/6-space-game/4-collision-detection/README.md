@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्रि-लेक्चर क्विज
 
-[प्रि-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[प्रि-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/35)
 
 यस पाठमा तपाईंले JavaScript प्रयोग गरेर लेजर कसरी प्रहार गर्ने सिक्नुहुनेछ! हामी हाम्रो खेलमा दुई कुरा थप्नेछौं:
 
@@ -295,7 +295,7 @@ npm start
 
 ## पोस्ट-लेक्चर क्विज
 
-[पोस्ट-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[पोस्ट-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## समीक्षा र आत्म-अध्ययन
 

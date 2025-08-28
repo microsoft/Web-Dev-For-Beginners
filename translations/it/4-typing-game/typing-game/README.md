@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz pre-lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Programmazione basata su eventi
 
@@ -337,7 +337,7 @@ Aggiungi più funzionalità
 
 ## Quiz post-lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Revisione e studio autonomo
 
