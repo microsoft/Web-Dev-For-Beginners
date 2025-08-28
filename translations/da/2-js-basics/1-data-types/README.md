@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz før lektionen
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Denne lektion dækker det grundlæggende i JavaScript, sproget der giver interaktivitet på nettet.
 
@@ -198,7 +198,7 @@ Booleans kan kun have to værdier: `true` eller `false`. Booleans kan hjælpe me
 JavaScript er berygtet for sine overraskende måder at håndtere datatyper på fra tid til anden. Undersøg lidt om disse 'gotchas'. For eksempel: case sensitivity kan drille! Prøv dette i din konsol: `let age = 1; let Age = 2; age == Age` (resulterer i `false` -- hvorfor?). Hvilke andre gotchas kan du finde?
 
 ## Quiz efter lektionen
-[Quiz efter lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Gennemgang & Selvstudie
 

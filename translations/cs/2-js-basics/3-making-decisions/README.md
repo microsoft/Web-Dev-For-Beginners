@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před lekcí
 
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Rozhodování a řízení pořadí, ve kterém váš kód běží, činí váš kód znovupoužitelným a robustním. Tato sekce pokrývá syntaxi pro řízení toku dat v JavaScriptu a její význam při použití s datovými typy Boolean.
 
@@ -214,7 +214,7 @@ Vytvořte program, který je nejprve napsán s logickými operátory, a poté ho
 
 ## Kvíz po lekci
 
-[Kvíz po lekci](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Přehled & Samostudium
 

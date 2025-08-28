@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## မိန့်ခွန်းမပြောမီ စမ်းမေးခွန်း
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/9)
 
 ကိုယ်ရေးသားတဲ့ကုဒ်ကို စဉ်ဆက်မပြတ်ဖတ်ရလွယ်အောင်လုပ်ဖို့ Developer တစ်ဦးအနေနဲ့ အမြဲလိုအပ်ပါတယ်။ ကုဒ်ကိုရေးတာထက် ဖတ်တာပိုများတယ်ဆိုတာ အနည်းငယ်ဆန့်ကျင်ဘက်ဖြစ်ပေမယ့် အမှန်တရားပါ။ **Function** ဆိုတာကတော့ Developer တွေရဲ့ ကုဒ်ကို ထိန်းသိမ်းဖို့အတွက် အရေးကြီးတဲ့ Tools တစ်ခုဖြစ်ပါတယ်။
 
@@ -180,7 +180,7 @@ Function ကို တစ်ကြိမ်ထက်ပိုသုံးမယ�
 Function နဲ့ Method တို့ရဲ့ ကွာခြားချက်ကို စာကြောင်းတစ်ကြောင်းနဲ့ ရှင်းပြနိုင်မလား? ကြိုးစားကြည့်ပါ။
 
 ## မိန့်ခွန်းပြီးနောက် စမ်းမေးခွန်း
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

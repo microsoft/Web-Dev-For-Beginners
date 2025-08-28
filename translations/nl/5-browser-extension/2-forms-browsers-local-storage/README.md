@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vóór de les
 
-[Quiz vóór de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Quiz vóór de les](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Introductie
 
@@ -224,7 +224,7 @@ We hebben in deze lessen verschillende soorten API's besproken. Kies een web-API
 
 ## Quiz na de les
 
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Herhaling & Zelfstudie
 

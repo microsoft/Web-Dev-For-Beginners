@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote 由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
 
 ## 課前測驗
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/9)
 
 當我們考慮撰寫程式碼時，總是希望程式碼具有可讀性。雖然這聽起來有些違背直覺，但程式碼被閱讀的次數遠多於被撰寫的次數。開發者工具箱中的一個核心工具就是 **函數**，它能幫助我們確保程式碼的可維護性。
 
@@ -194,7 +194,7 @@ setTimeout(() => {
 你能用一句話說明函數與方法的區別嗎？試試看！
 
 ## 課後測驗
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## 複習與自學
 

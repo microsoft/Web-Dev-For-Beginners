@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Bevezetés
 
@@ -224,7 +224,7 @@ curl --request POST \
 Most próbáld meg frissíteni az irányítópult oldalt a böngészőben. Mi történik? Látod az új tranzakciót?
 
 Az állapot a `localStorage`-nak köszönhetően határozatlan ideig megmarad, de ez azt is jelenti, hogy soha nem frissül, amíg ki nem jelentkezel az alkalmazás
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Feladat
 

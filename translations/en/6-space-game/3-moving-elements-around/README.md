@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Games become more engaging when objects like aliens start moving on the screen! In this lesson, we’ll explore two types of movement:
 
@@ -386,7 +386,7 @@ As you’ve seen, adding functions, variables, and classes can lead to ‘spaghe
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Review & Self Study
 

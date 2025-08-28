@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predavanje: Kratek kviz
 
-[Predavanje: Kratek kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Predavanje: Kratek kviz](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Uvod
 
@@ -210,7 +210,7 @@ Dodajte nov obdelovalec dogodkov v svoje zaprtje, da naredite nekaj več z rastl
 
 ## Po predavanju: Kviz
 
-[Po predavanju: Kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Po predavanju: Kviz](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Pregled in samostojno učenje
 

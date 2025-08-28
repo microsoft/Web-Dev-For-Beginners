@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## প্রি-লেকচার কুইজ
 
-[প্রি-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[প্রি-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### ভূমিকা
 
@@ -290,7 +290,7 @@ async function register() {
 
 ## পোস্ট-লেকচার কুইজ
 
-[পোস্ট-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[পোস্ট-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## পর্যালোচনা ও স্ব-অধ্যয়ন
 

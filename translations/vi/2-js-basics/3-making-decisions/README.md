@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Trước Bài Giảng
 
-[Quiz trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Quiz trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Việc ra quyết định và kiểm soát thứ tự chạy của mã giúp mã của bạn có thể tái sử dụng và mạnh mẽ hơn. Phần này sẽ giới thiệu cú pháp để kiểm soát luồng dữ liệu trong JavaScript và tầm quan trọng của nó khi sử dụng với kiểu dữ liệu Boolean.
 
@@ -214,7 +214,7 @@ Tạo một chương trình được viết trước tiên với các toán tử
 
 ## Quiz Sau Bài Giảng
 
-[Quiz sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Quiz sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Ôn Tập & Tự Học
 

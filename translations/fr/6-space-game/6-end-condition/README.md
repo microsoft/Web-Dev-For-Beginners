@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz avant le cours
 
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Il existe différentes façons d'exprimer une *condition de fin* dans un jeu. En tant que créateur du jeu, c'est à vous de décider pourquoi le jeu se termine. Voici quelques raisons, en supposant que nous parlons du jeu spatial que vous avez construit jusqu'à présent :
 
@@ -220,7 +220,7 @@ Ajoutez un son ! Pouvez-vous ajouter un son pour améliorer l'expérience de jeu
 
 ## Quiz après le cours
 
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Révision et étude personnelle
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Κουίζ πριν το μάθημα
 
-[Κουίζ πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Κουίζ πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Ο Καμβάς
 
@@ -214,7 +214,7 @@ npm start
 
 ## Κουίζ μετά το μάθημα
 
-[Κουίζ μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Κουίζ μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Ανασκόπηση & Αυτομελέτη
 

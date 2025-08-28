@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > สเก็ตโน้ตโดย [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## แบบทดสอบก่อนเรียน
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/13)
 
 บทเรียนนี้ครอบคลุมพื้นฐานของ JavaScript ซึ่งเป็นภาษาที่ช่วยเพิ่มความสามารถในการโต้ตอบบนเว็บ ในบทเรียนนี้ คุณจะได้เรียนรู้เกี่ยวกับอาเรย์และลูป ซึ่งใช้ในการจัดการข้อมูล
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 มีวิธีอื่นในการวนซ้ำอาเรย์นอกเหนือจาก for และ while loop เช่น [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), และ [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map) ลองเขียนลูปอาเรย์ของคุณใหม่โดยใช้เทคนิคเหล่านี้
 
 ## แบบทดสอบหลังเรียน
-[แบบทดสอบหลังเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[แบบทดสอบหลังเรียน](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## ทบทวนและศึกษาด้วยตัวเอง
 

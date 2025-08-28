@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## חידון לפני ההרצאה
 
-[חידון לפני ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[חידון לפני ההרצאה](https://ff-quizzes.netlify.app/web/quiz/39)
 
 יש דרכים שונות להגדיר *תנאי סיום* במשחק. זה תלוי בך, כיוצר המשחק, להחליט מדוע המשחק מסתיים. הנה כמה סיבות, בהנחה שאנחנו מדברים על משחק החלל שבנית עד כה:
 
@@ -220,7 +220,7 @@ npm start
 
 ## חידון אחרי ההרצאה
 
-[חידון אחרי ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[חידון אחרי ההרצאה](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## סקירה ולמידה עצמית
 

@@ -2,7 +2,7 @@
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Event driven programming
 
@@ -328,7 +328,7 @@ Add more functionality
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Review & Self Study
 

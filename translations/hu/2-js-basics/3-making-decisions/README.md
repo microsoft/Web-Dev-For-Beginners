@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/11)
 
 A döntéshozatal és a kód futási sorrendjének irányítása újrahasznosíthatóvá és robusztussá teszi a kódot. Ez a rész bemutatja a JavaScript adatfolyamának irányításához szükséges szintaxist, valamint annak jelentőségét a Boolean adattípusokkal való használat során.
 
@@ -214,7 +214,7 @@ Hozz létre egy programot, amelyet először logikai operátorokkal írsz meg, m
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Áttekintés és önálló tanulás
 

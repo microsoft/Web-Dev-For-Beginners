@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote sukūrė [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Klausimai prieš paskaitą
-[Klausimai prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Ši pamoka apima JavaScript pagrindus – kalbą, kuri suteikia interaktyvumo internete.
 
@@ -199,7 +199,7 @@ Buliai gali turėti tik dvi reikšmes: `true` arba `false`. Buliai gali padėti 
 JavaScript garsėja savo netikėtais būdais kartais tvarkyti duomenų tipus. Šiek tiek pasidomėkite šiais 'netikėtumais'. Pavyzdžiui: didžiųjų ir mažųjų raidžių jautrumas gali sukelti problemų! Išbandykite tai savo konsolėje: `let age = 1; let Age = 2; age == Age` (rezultatas `false` – kodėl?). Kokius kitus netikėtumus galite rasti?
 
 ## Klausimai po paskaitos
-[Klausimai po paskaitos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Apžvalga ir savarankiškas mokymasis
 

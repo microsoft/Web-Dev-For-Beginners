@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pré-Aula
 
-[Quiz pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Quiz pré-aula](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Existem diferentes maneiras de expressar uma *condição de término* em um jogo. Cabe a você, como criador do jogo, decidir por que o jogo terminou. Aqui estão algumas razões, assumindo que estamos falando sobre o jogo espacial que você tem construído até agora:
 
@@ -220,7 +220,7 @@ Adicione um som! Você consegue adicionar um som para melhorar a experiência do
 
 ## Quiz Pós-Aula
 
-[Quiz pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Quiz pós-aula](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Revisão e Autoestudo
 

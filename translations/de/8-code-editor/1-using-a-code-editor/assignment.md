@@ -19,7 +19,7 @@ TODO: ein optionales Bild hinzufügen
 
 <!---
 ## Quiz vor der Vorlesung
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/3)
 ---->
 
 ## Lernziele
@@ -250,7 +250,7 @@ Herzlichen Glückwunsch 🎉 Du hast gerade in wenigen Schritten deine Lebenslau
 
 <!----
 ## Quiz nach der Vorlesung
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/4)
 ---->
 
 ## Wiederholung & Selbststudium

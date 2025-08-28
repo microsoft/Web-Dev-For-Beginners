@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Тест перед лекцією
 
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Ігри стають цікавішими, коли на екрані з'являються інопланетяни! У цій грі ми використаємо два типи руху:
 
@@ -386,7 +386,7 @@ npm start
 
 ## Тест після лекції
 
-[Тест після лекції](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Тест після лекції](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Огляд і самостійне навчання
 

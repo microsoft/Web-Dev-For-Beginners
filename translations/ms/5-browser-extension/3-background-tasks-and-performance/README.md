@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Pengenalan
 
@@ -158,7 +158,7 @@ Selidiki beberapa laman web sumber terbuka yang telah wujud sejak lama dahulu, d
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Ulasan & Kajian Kendiri
 

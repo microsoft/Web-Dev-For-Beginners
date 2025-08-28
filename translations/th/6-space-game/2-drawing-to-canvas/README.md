@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## แบบทดสอบก่อนเรียน
 
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas
 
@@ -214,7 +214,7 @@ npm start
 
 ## แบบทดสอบหลังเรียน
 
-[แบบทดสอบหลังเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[แบบทดสอบหลังเรียน](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## ทบทวนและศึกษาด้วยตัวเอง
 

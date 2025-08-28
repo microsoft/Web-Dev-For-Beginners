@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Предварителен Тест
 
-[Предварителен тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Предварителен тест](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Въведение
 
@@ -306,7 +306,7 @@ updateRoute();
 
 ## Финален Тест
 
-[Финален тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Финален тест](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Преглед и Самостоятелно Обучение
 

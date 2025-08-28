@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Introducción
 
@@ -297,7 +297,7 @@ Aquí tienes un ejemplo de cómo podría verse la página de inicio de sesión f
 
 ## Cuestionario posterior a la clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Revisión y autoestudio
 

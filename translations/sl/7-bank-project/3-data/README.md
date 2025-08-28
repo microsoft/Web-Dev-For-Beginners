@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Uvod
 
@@ -335,7 +335,7 @@ Tukaj je primer oblikovane strani nadzorne plošče:
 
 ## Kviz po predavanju
 
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Naloga
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz avant le cours
 
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Les jeux ne sont pas très amusants tant que vous n'avez pas des aliens qui se déplacent à l'écran ! Dans ce jeu, nous allons utiliser deux types de mouvements :
 
@@ -386,7 +386,7 @@ Comme vous pouvez le constater, votre code peut devenir un "code spaghetti" lors
 
 ## Quiz après le cours
 
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Révision et étude personnelle
 

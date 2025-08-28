@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz før lektionen
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Når vi tænker på at skrive kode, vil vi altid sikre, at vores kode er læsbar. Selvom det kan lyde kontraintuitivt, bliver kode læst mange flere gange, end den bliver skrevet. Et af de vigtigste værktøjer i en udviklers værktøjskasse for at sikre vedligeholdelig kode er **funktionen**.
 
@@ -194,7 +194,7 @@ Du har nu set, at vi har tre måder at sende en funktion som en parameter og und
 Kan du formulere forskellen mellem funktioner og metoder i én sætning? Giv det et forsøg!
 
 ## Quiz efter lektionen
-[Quiz efter lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Gennemgang & Selvstudie
 

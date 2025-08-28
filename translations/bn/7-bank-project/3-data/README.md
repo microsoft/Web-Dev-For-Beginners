@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## প্রাক-লেকচার কুইজ
 
-[প্রাক-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[প্রাক-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### ভূমিকা
 
@@ -325,7 +325,7 @@ updateElement('transactions', transactionsRows);
 
 ## লেকচার-পরবর্তী কুইজ
 
-[লেকচার-পরবর্তী কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[লেকচার-পরবর্তী কুইজ](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## অ্যাসাইনমেন্ট
 

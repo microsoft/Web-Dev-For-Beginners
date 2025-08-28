@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Pengenalan
 
@@ -210,7 +210,7 @@ Tambahkan pengendali acara baru kepada penutupan anda untuk melakukan sesuatu ya
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Ulasan & Kajian Kendiri
 

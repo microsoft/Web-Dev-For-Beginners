@@ -118,9 +118,9 @@ Chúng tôi khuyến nghị sử dụng [Visual Studio Code](https://code.visual
 - Một thử thách  
 - Đọc thêm tài liệu bổ sung  
 - Bài tập  
-- [Bài kiểm tra sau bài học](https://ff-quizzes.netlify.app/)  
+- [Bài kiểm tra sau bài học](https://ff-quizzes.netlify.app/web/)  
 
-> **Lưu ý về bài kiểm tra**: Tất cả các bài kiểm tra được chứa trong thư mục Quiz-app, tổng cộng 48 bài kiểm tra với ba câu hỏi mỗi bài. Chúng có sẵn [tại đây](https://ff-quizzes.netlify.app/) và ứng dụng kiểm tra có thể được chạy cục bộ hoặc triển khai lên Azure; làm theo hướng dẫn trong thư mục `quiz-app`.  
+> **Lưu ý về bài kiểm tra**: Tất cả các bài kiểm tra được chứa trong thư mục Quiz-app, tổng cộng 48 bài kiểm tra với ba câu hỏi mỗi bài. Chúng có sẵn [tại đây](https://ff-quizzes.netlify.app/web/) và ứng dụng kiểm tra có thể được chạy cục bộ hoặc triển khai lên Azure; làm theo hướng dẫn trong thư mục `quiz-app`.  
 
 ## 🗃️ Các bài học  
 

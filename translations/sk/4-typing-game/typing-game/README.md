@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz pred prednáškou
 
-[Kvíz pred prednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Programovanie riadené udalosťami
 
@@ -337,7 +337,7 @@ Pridajte viac funkcií
 
 ## Kvíz po prednáške
 
-[Kvíz po prednáške](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Prehľad a samostatné štúdium
 

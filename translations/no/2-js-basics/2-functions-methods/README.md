@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz før forelesning
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Når vi skriver kode, ønsker vi alltid å sørge for at koden er lesbar. Selv om dette kan virke motstridende, blir kode lest mange flere ganger enn den blir skrevet. Et av de viktigste verktøyene i en utviklers verktøykasse for å sikre vedlikeholdbar kode er **funksjonen**.
 
@@ -194,7 +194,7 @@ Du har nå sett at vi har tre måter å sende en funksjon som en parameter på, 
 Kan du forklare forskjellen mellom funksjoner og metoder i én setning? Prøv!
 
 ## Quiz etter forelesning
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Gjennomgang og selvstudium
 

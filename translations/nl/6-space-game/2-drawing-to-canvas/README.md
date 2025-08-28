@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Het Canvas
 
@@ -214,7 +214,7 @@ Je hebt geleerd over tekenen met de 2D-georiënteerde Canvas API; bekijk de [Web
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Review & Zelfstudie
 

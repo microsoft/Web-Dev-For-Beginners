@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Inheritance and Composition in game development
 
@@ -222,7 +222,7 @@ Consider how the pub-sub pattern could improve a game. Which components should e
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Review & Self Study
 

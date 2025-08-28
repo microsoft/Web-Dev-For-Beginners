@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar Pre-Lecție
 
-[Chestionar pre-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Introducere
 
@@ -224,7 +224,7 @@ Am discutat despre mai multe tipuri de API până acum în aceste lecții. Alege
 
 ## Chestionar Post-Lecție
 
-[Chestionar post-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Recapitulare și Studiu Individual
 

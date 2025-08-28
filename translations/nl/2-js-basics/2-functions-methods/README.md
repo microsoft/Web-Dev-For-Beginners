@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Les Quiz
-[Pre-les quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Pre-les quiz](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Wanneer we nadenken over het schrijven van code, willen we altijd zorgen dat onze code leesbaar is. Hoewel dit misschien tegenstrijdig klinkt, wordt code veel vaker gelezen dan geschreven. Een belangrijk hulpmiddel in de gereedschapskist van een ontwikkelaar om onderhoudbare code te garanderen, is de **functie**.
 
@@ -194,7 +194,7 @@ Je hebt nu gezien dat we drie manieren hebben om een functie als parameter door 
 Kun je in één zin het verschil tussen functies en methoden uitleggen? Probeer het eens!
 
 ## Post-Les Quiz
-[Post-les quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Post-les quiz](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Review & Zelfstudie
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 강의 전 퀴즈
 
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### 소개
 
@@ -335,7 +335,7 @@ function updateElement(id, textOrNode) {
 
 ## 강의 후 퀴즈
 
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## 과제
 

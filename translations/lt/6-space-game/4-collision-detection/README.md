@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Prieš paskaitą: testas
 
-[Prieš paskaitą: testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Prieš paskaitą: testas](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Šioje pamokoje išmoksite šaudyti lazeriais naudodami JavaScript! Į žaidimą pridėsime du dalykus:
 
@@ -295,7 +295,7 @@ Pridėkite sprogimą! Pažvelkite į žaidimo resursus [Space Art repo](../../..
 
 ## Po paskaitos: testas
 
-[Po paskaitos: testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Po paskaitos: testas](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Apžvalga ir savarankiškas mokymasis
 

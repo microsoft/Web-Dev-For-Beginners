@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## व्याख्यानपूर्व प्रश्नमंजुषा
 
-[व्याख्यानपूर्व प्रश्नमंजुषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[व्याख्यानपूर्व प्रश्नमंजुषा](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### परिचय
 
@@ -158,7 +158,7 @@ function drawIcon(value) {
 
 ## व्याख्यानानंतरची प्रश्नमंजुषा
 
-[व्याख्यानानंतरची प्रश्नमंजुषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[व्याख्यानानंतरची प्रश्नमंजुषा](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတိုင်မီ စစ်တမ်း
 
-[မိန့်ခွန်းမတိုင်မီ စစ်တမ်း](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[မိန့်ခွန်းမတိုင်မီ စစ်တမ်း](https://ff-quizzes.netlify.app/web/quiz/35)
 
 ဒီသင်ခန်းစာမှာ JavaScript ကို အသုံးပြုပြီး လေဆာပစ်ပေါက်နည်းကို သင်ယူပါမည်။ ဂိမ်းမှာ အောက်ပါအရာ ၂ ခုကို ထည့်သွင်းပါမည်-
 
@@ -295,7 +295,7 @@ npm start
 
 ## မိန့်ခွန်းပြီးနောက် စစ်တမ်း
 
-[မိန့်ခွန်းပြီးနောက် စစ်တမ်း](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[မိန့်ခွန်းပြီးနောက် စစ်တမ်း](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

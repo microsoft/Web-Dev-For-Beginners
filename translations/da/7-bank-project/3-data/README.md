@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelæsning
 
-[Quiz før forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Quiz før forelæsning](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introduktion
 
@@ -335,7 +335,7 @@ Her er et eksempel på en stylet dashboard-side:
 
 ## Quiz efter forelæsning
 
-[Quiz efter forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Quiz efter forelæsning](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Opgave
 

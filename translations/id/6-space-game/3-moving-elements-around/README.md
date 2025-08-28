@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Game tidak akan seru sampai ada alien yang bergerak di layar! Dalam game ini, kita akan menggunakan dua jenis gerakan:
 
@@ -386,7 +386,7 @@ Seperti yang Anda lihat, kode Anda dapat berubah menjadi 'kode spaghetti' ketika
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Tinjauan & Studi Mandiri
 

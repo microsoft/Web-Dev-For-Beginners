@@ -201,7 +201,7 @@ Când un dezvoltator dorește să învețe ceva nou, cel mai probabil va apela l
 Compară câteva limbaje de programare. Care sunt unele dintre trăsăturile unice ale JavaScript față de Java? Dar COBOL față de Go?
 
 ## Chestionar Post-Lecție
-[Chestionar post-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Recapitulare și Studiu Individual
 

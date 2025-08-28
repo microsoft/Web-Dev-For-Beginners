@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Gry stają się ciekawsze, gdy na ekranie pojawiają się poruszające się obiekty, takie jak kosmici! W tej grze wykorzystamy dwa rodzaje ruchu:
 
@@ -386,7 +386,7 @@ Jak widzisz, Twój kod może zamienić się w "spaghetti", gdy zaczynasz dodawa�
 
 ## Quiz po wykładzie
 
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Przegląd i samodzielna nauka
 

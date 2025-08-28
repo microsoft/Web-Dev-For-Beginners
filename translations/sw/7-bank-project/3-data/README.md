@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Jaribio la Kabla ya Somo
 
-[Jaribio la kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Utangulizi
 
@@ -335,7 +335,7 @@ Hapa kuna mfano wa ukurasa wa dashibodi uliowekwa mtindo:
 
 ## Maswali Baada ya Somo
 
-[Maswali baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Maswali baada ya somo](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Kazi ya Nyumbani
 

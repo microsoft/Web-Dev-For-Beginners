@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਪੜ੍ਹਾਈ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼
 
-[ਪੜ੍ਹਾਈ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[ਪੜ੍ਹਾਈ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### ਪਰਿਚਯ
 
@@ -224,7 +224,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## ਪੜ੍ਹਾਈ ਤੋਂ ਬਾਅਦ ਕਵੀਜ਼
 
-[ਪੜ੍ਹਾਈ ਤੋਂ ਬਾਅਦ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[ਪੜ੍ਹਾਈ ਤੋਂ ਬਾਅਦ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਖੁਦ ਅਧਿਐਨ
 

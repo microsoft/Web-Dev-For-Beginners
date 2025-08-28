@@ -201,7 +201,7 @@ back add r0,r1
 قارن بين بعض لغات البرمجة. ما هي السمات الفريدة لـ JavaScript مقابل Java؟ ماذا عن COBOL مقابل Go؟
 
 ## اختبار ما بعد المحاضرة
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## المراجعة والدراسة الذاتية
 

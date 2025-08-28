@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > ਸਕੈਚਨੋਟ [Tomomi Imura](https://twitter.com/girlie_mac) ਵੱਲੋਂ
 
 ## ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼
-[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/13)
 
 ਇਹ ਪਾਠ ਜਾਵਾਸਕ੍ਰਿਪਟ ਦੀਆਂ ਬੁਨਿਆਦੀਆਂ ਨੂੰ ਕਵਰ ਕਰਦਾ ਹੈ, ਜੋ ਵੈੱਬ 'ਤੇ ਇੰਟਰਐਕਟਿਵਿਟੀ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ। ਇਸ ਪਾਠ ਵਿੱਚ, ਤੁਸੀਂ ਐਰੇਜ਼ ਅਤੇ ਲੂਪਸ ਬਾਰੇ ਸਿੱਖੋਗੇ, ਜੋ ਡਾਟਾ ਨੂੰ ਮੈਨੇਜ ਕਰਨ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਹਨ।
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 ਐਰੇਜ਼ 'ਤੇ ਲੂਪ ਕਰਨ ਦੇ ਹੋਰ ਤਰੀਕੇ ਹਨ ਜਿਵੇਂ ਕਿ for ਅਤੇ while ਲੂਪਸ ਤੋਂ ਇਲਾਵਾ। [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), ਅਤੇ [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)। ਆਪਣੇ ਐਰੇ ਲੂਪ ਨੂੰ ਇਨ੍ਹਾਂ ਤਕਨੀਕਾਂ ਵਿੱਚੋਂ ਇੱਕ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਦੁਬਾਰਾ ਲਿਖੋ।
 
 ## ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼
-[ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਖੁਦ ਪੜ੍ਹਾਈ
 

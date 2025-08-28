@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## 画布
 
@@ -214,7 +214,7 @@ npm start
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## 复习与自学
 

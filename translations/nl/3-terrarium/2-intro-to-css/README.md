@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz voorafgaand aan de les
 
-[Quiz voorafgaand aan de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Introductie
 
@@ -268,7 +268,7 @@ Om de quiz na de les te voltooien, doorloop deze Learn-module: [Stijl je HTML-ap
 
 ## Quiz na de les
 
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Herziening & Zelfstudie
 

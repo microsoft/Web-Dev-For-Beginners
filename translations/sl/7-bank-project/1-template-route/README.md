@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Uvod
 
@@ -306,7 +306,7 @@ Dodajte novo predlogo in pot za tretjo stran, ki prikazuje zasluge za to aplikac
 
 ## Kviz po predavanju
 
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Pregled in samostojno učenje
 

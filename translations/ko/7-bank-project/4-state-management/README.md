@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 강의 전 퀴즈
 
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### 소개
 
@@ -278,7 +278,7 @@ const routes = {
 팀원들과 함께 작업하여 `localStorage`에 저장하고 로드하는 데이터를 앱이 작동하는 데 절대적으로 필요한 데이터만 포함하도록 변경해보세요.
 
 ## 강의 후 퀴즈
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## 과제
 

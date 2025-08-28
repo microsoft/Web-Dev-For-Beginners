@@ -201,7 +201,7 @@ Kai kūrėjas nori išmokti kažką naujo, jis greičiausiai kreipsis į dokumen
 Palyginkite kelias programavimo kalbas. Kokie yra unikalūs JavaScript ir Java bruožai? O kaip COBOL ir Go?
 
 ## Po paskaitos: testas
-[Po paskaitos: testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Po paskaitos: testas](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Apžvalga ir savarankiškas mokymasis
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## แบบทดสอบก่อนเรียน
 
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### บทนำ
 
@@ -335,7 +335,7 @@ function updateElement(id, textOrNode) {
 
 ## แบบทดสอบหลังการบรรยาย
 
-[แบบทดสอบหลังการบรรยาย](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[แบบทดสอบหลังการบรรยาย](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## งานที่ได้รับมอบหมาย
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Jaribio Kabla ya Somo
 
-[Jaribio kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Jaribio kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Uprogramishaji Unaotegemea Matukio
 
@@ -337,7 +337,7 @@ Ongeza utendakazi zaidi
 
 ## Jaribio Baada ya Somo
 
-[Jaribio baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Jaribio baada ya somo](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Mapitio na Kujisomea
 

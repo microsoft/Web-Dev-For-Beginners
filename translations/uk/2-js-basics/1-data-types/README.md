@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скетчноут від [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Тест перед лекцією
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Цей урок охоплює основи JavaScript — мови, яка забезпечує інтерактивність у вебі.
 
@@ -200,7 +200,7 @@ let myString2 = "World";
 JavaScript відомий своїми несподіваними способами обробки типів даних час від часу. Проведіть невелике дослідження цих "підводних каменів". Наприклад: чутливість до регістру може вас здивувати! Спробуйте це у вашій консолі: `let age = 1; let Age = 2; age == Age` (результат `false` — чому?). Які ще підводні камені ви можете знайти?
 
 ## Тест після лекції
-[Тест після лекції](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Тест після лекції](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Огляд і самостійне навчання
 

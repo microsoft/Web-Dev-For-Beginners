@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar înainte de lecție
 
-[Chestionar înainte de lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Chestionar înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Programare bazată pe evenimente
 
@@ -337,7 +337,7 @@ Adaugă mai multă funcționalitate
 
 ## Test de verificare după curs
 
-[Test de verificare după curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Test de verificare după curs](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Recapitulare și Studiu Individual
 

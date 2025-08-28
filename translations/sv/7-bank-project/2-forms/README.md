@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förhandsquiz
 
-[Förhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Introduktion
 
@@ -296,7 +296,7 @@ Här är ett exempel på hur den slutliga inloggningssidan kan se ut efter lite 
 
 ## Quiz efter föreläsningen
 
-[Quiz efter föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Granskning & Självstudier
 

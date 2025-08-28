@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Videoyu izleyin
 
@@ -231,7 +231,7 @@ HTML'de hala eğlenceli olan bazı 'eski' etiketler var, ancak [bu etiketler](ht
 
 ## Ders Sonrası Test
 
-[Ders sonrası testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před přednáškou
 
-[Kvíz před přednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Kvíz před přednáškou](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Hry nejsou moc zábavné, dokud se na obrazovce nezačnou pohybovat mimozemšťané! V této hře využijeme dva typy pohybu:
 
@@ -386,7 +386,7 @@ Jak vidíte, váš kód se může proměnit v "špagetový kód", když začnete
 
 ## Kvíz po přednášce
 
-[Kvíz po přednášce](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Přehled a samostudium
 

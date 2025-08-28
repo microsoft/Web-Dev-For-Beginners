@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Questionário Pré-Aula
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Quando pensamos em escrever código, queremos sempre garantir que ele seja legível. Embora isso possa parecer contraintuitivo, o código é lido muitas mais vezes do que é escrito. Uma ferramenta essencial no arsenal de um programador para garantir um código sustentável é a **função**.
 
@@ -194,7 +194,7 @@ Agora viu que temos três formas de passar uma função como parâmetro e pode e
 Consegue articular numa frase a diferença entre funções e métodos? Experimente!
 
 ## Questionário Pós-Aula
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Revisão e Autoestudo
 

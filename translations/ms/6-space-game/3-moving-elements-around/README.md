@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Permainan tidak begitu menyeronokkan sehingga anda mempunyai makhluk asing bergerak di skrin! Dalam permainan ini, kita akan menggunakan dua jenis pergerakan:
 
@@ -386,7 +386,7 @@ Seperti yang anda lihat, kod anda boleh menjadi 'kod spaghetti' apabila anda mul
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Kajian & Pembelajaran Kendiri
 

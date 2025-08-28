@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Terdapat pelbagai cara untuk menyatakan *keadaan tamat* dalam permainan. Sebagai pencipta permainan, terpulang kepada anda untuk menentukan sebab permainan berakhir. Berikut adalah beberapa sebab, jika kita mengandaikan kita bercakap tentang permainan angkasa yang anda bina setakat ini:
 
@@ -220,7 +220,7 @@ Tambah bunyi! Bolehkah anda menambah bunyi untuk meningkatkan pengalaman permain
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Ulasan & Kajian Kendiri
 

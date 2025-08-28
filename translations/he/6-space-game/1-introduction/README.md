@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## שאלון לפני ההרצאה
 
-[שאלון לפני ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[שאלון לפני ההרצאה](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### ירושה והרכבה בפיתוח משחקים
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## שאלון אחרי ההרצאה
 
-[שאלון אחרי ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[שאלון אחרי ההרצאה](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## סקירה ולימוד עצמי
 

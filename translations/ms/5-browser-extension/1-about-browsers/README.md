@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Pengenalan
 
@@ -160,7 +160,7 @@ Lihat kedai sambungan pelayar dan pasang satu ke pelayar anda. Anda boleh memeri
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Ulasan & Kajian Kendiri
 

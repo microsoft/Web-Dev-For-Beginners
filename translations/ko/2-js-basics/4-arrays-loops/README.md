@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 스케치노트 제공: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/13)
 
 이 강의에서는 웹에서 상호작용을 제공하는 언어인 JavaScript의 기초를 다룹니다. 이번 강의에서는 데이터를 조작하는 데 사용되는 배열과 반복문에 대해 배웁니다.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 배열을 반복하는 방법은 for와 while 반복문 외에도 여러 가지가 있습니다. [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)과 같은 방법을 사용해 배열 반복문을 다시 작성해보세요.
 
 ## 강의 후 퀴즈
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## 복습 및 자기 학습
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Tapahtumapohjainen ohjelmointi
 
@@ -337,7 +337,7 @@ Lisää toiminnallisuutta
 
 ## Luentojälkeinen kysely
 
-[Luentojälkeinen kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Kertaus ja itseopiskelu
 

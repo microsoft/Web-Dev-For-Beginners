@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Pelajaran
 
-[Kuis pra-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Pendahuluan
 
@@ -306,7 +306,7 @@ Tambahkan template dan rute baru untuk halaman ketiga yang menampilkan kredit un
 
 ## Kuis Pasca-Pelajaran
 
-[Kuis pasca-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Tinjauan & Studi Mandiri
 

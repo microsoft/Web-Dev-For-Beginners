@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote autor [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kviz prije predavanja
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Snaga weba leži u njegovoj univerzalnosti. Pristup svima, bez obzira na invaliditet, ključni je aspekt.
 >
@@ -227,7 +227,7 @@ Uzmite ovaj HTML i prepišite ga kako bi bio što pristupačniji, koristeći str
 ```
 
 ## Kviz nakon predavanja
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Pregled i samostalno učenje
 Mnoge vlade imaju zakone koji se odnose na zahtjeve za pristupačnost. Informirajte se o zakonima o pristupačnosti u svojoj zemlji. Što je obuhvaćeno, a što nije? Primjer je [ova vladina web stranica](https://accessibility.blog.gov.uk/).

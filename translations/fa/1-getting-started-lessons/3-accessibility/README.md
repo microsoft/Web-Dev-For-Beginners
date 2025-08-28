@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > طراحی توسط [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## آزمون پیش از درس
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > قدرت وب در جهانی بودن آن است. دسترسی برای همه، بدون توجه به معلولیت، یک جنبه ضروری است.
 >
@@ -227,7 +227,7 @@ CSS کنترل کامل بر ظاهر هر عنصر در یک صفحه را ار
 ```
 
 ## آزمون پس از درس
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## مرور و مطالعه خود
 بسیاری از دولت‌ها قوانینی در مورد الزامات دسترس‌پذیری دارند. درباره قوانین دسترس‌پذیری کشور خود تحقیق کنید. چه مواردی پوشش داده می‌شوند و چه مواردی پوشش داده نمی‌شوند؟ به عنوان مثال، [این وب‌سایت دولتی](https://accessibility.blog.gov.uk/) را ببینید.

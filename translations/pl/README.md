@@ -118,9 +118,9 @@ Naszą rekomendacją jest użycie [Visual Studio Code](https://code.visualstudio
 - wyzwanie  
 - dodatkowe materiały do przeczytania  
 - zadanie  
-- [quiz po lekcji](https://ff-quizzes.netlify.app/)  
+- [quiz po lekcji](https://ff-quizzes.netlify.app/web/)  
 
-> **Informacja o quizach**: Wszystkie quizy znajdują się w folderze Quiz-app, łącznie 48 quizów po trzy pytania każdy. Są dostępne [tutaj](https://ff-quizzes.netlify.app/). Aplikację quizową można uruchomić lokalnie lub wdrożyć w Azure; instrukcje znajdują się w folderze `quiz-app`.
+> **Informacja o quizach**: Wszystkie quizy znajdują się w folderze Quiz-app, łącznie 48 quizów po trzy pytania każdy. Są dostępne [tutaj](https://ff-quizzes.netlify.app/web/). Aplikację quizową można uruchomić lokalnie lub wdrożyć w Azure; instrukcje znajdują się w folderze `quiz-app`.
 
 ## 🗃️ Lekcje
 

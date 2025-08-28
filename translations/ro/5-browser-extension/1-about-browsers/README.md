@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar Pre-Lecție
 
-[Chestionar pre-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Introducere
 
@@ -160,7 +160,7 @@ Aruncă o privire într-un magazin de extensii pentru browser și instalează un
 
 ## Chestionar Post-Lecție
 
-[Chestionar post-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Recapitulare & Studiu Individual
 

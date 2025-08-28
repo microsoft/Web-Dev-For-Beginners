@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скетч от [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Предварителен тест  
-[Предварителен тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Предварителен тест](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Силата на уеб е в неговата универсалност. Достъпът за всеки, независимо от уврежданията, е съществен аспект.  
 >

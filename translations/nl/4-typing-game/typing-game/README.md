@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz voor de les
 
-[Quiz voor de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Quiz voor de les](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Event-driven programmeren
 
@@ -337,7 +337,7 @@ Voeg meer functionaliteit toe
 
 ## Quiz na de les
 
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Herhaling & Zelfstudie
 

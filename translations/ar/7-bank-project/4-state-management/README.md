@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## اختبار ما قبل المحاضرة
 
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### المقدمة
 
@@ -278,7 +278,7 @@ const routes = {
 حاول العمل معًا لتغيير ما يتم حفظه وتحميله من `localStorage` ليشمل فقط ما هو ضروري تمامًا لعمل التطبيق.
 
 ## اختبار ما بعد المحاضرة
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## المهمة
 

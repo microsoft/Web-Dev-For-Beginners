@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Membuat keputusan dan mengawal urutan kod anda dijalankan menjadikan kod anda boleh digunakan semula dan kukuh. Bahagian ini merangkumi sintaks untuk mengawal aliran data dalam JavaScript dan kepentingannya apabila digunakan dengan jenis data Boolean.
 
@@ -214,7 +214,7 @@ Cipta program yang ditulis terlebih dahulu dengan operator logik, dan kemudian t
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Ulasan & Kajian Kendiri
 

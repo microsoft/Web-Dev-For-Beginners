@@ -15,7 +15,7 @@ Pelajaran ini mencakup dasar-dasar GitHub, sebuah platform untuk menyimpan dan m
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Sebelum Pelajaran
-[Kuis sebelum pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Kuis sebelum pelajaran](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Pengantar
 
@@ -315,7 +315,7 @@ Proyek mungkin juga memiliki diskusi di forum, daftar email, atau saluran obrola
 Berkolaborasi dengan seorang teman untuk bekerja pada kode satu sama lain. Buat proyek secara kolaboratif, fork kode, buat cabang, dan gabungkan perubahan.
 
 ## Kuis Pasca-Kuliah
-[Kuis pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Tinjauan & Belajar Mandiri
 

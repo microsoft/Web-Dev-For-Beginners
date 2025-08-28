@@ -15,7 +15,7 @@ Ta lekcija zajema osnove GitHuba, platforme za gostovanje in upravljanje spremem
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Predhodni kviz
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Uvod
 
@@ -315,7 +315,7 @@ Projekti imajo lahko tudi razprave v forumih, poštnih seznamih ali klepetalnih 
 Sodeluj s prijateljem pri delu na kodi drug drugega. Ustvari projekt skupaj, forkaj kodo, ustvari veje in združi spremembe.
 
 ## Kviz po predavanju
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Pregled in samostojno učenje
 

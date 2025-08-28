@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိမိသင်ခန်းစာမတိုင်မီ စမ်းမေးခွန်း
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### အကျဉ်းချုပ်
 
@@ -212,7 +212,7 @@ function stopElementDrag() {
 
 ## မိမိသင်ခန်းစာပြီးနောက် စမ်းမေးခွန်း
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

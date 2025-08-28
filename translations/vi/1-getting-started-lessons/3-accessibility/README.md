@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Câu Hỏi Trước Bài Giảng
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Sức mạnh của Web nằm ở tính phổ quát của nó. Khả năng tiếp cận bởi tất cả mọi người, bất kể khuyết tật, là một khía cạnh thiết yếu.
 >
@@ -227,7 +227,7 @@ Hãy lấy đoạn HTML này và viết lại nó để dễ tiếp cận nhất
 ```
 
 ## Câu Hỏi Sau Bài Giảng
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Ôn Tập & Tự Học
 Nhiều chính phủ có các luật liên quan đến yêu cầu về khả năng tiếp cận. Hãy tìm hiểu về các luật khả năng tiếp cận của quốc gia bạn. Những gì được bao gồm và những gì không được bao gồm? Một ví dụ là [trang web của chính phủ này](https://accessibility.blog.gov.uk/).

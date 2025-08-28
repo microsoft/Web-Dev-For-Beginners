@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz vor der Lektion
-[Quiz vor der Lektion](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Quiz vor der Lektion](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Diese Lektion behandelt die Grundlagen von JavaScript, der Sprache, die Interaktivität im Web ermöglicht. In dieser Lektion lernst du Arrays und Schleifen kennen, die zur Datenmanipulation verwendet werden.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Es gibt andere Möglichkeiten, über Arrays zu iterieren, außer mit for- und while-Schleifen. Es gibt [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) und [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Schreibe deine Array-Schleife mit einer dieser Techniken um.
 
 ## Quiz nach der Lektion
-[Quiz nach der Lektion](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Quiz nach der Lektion](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Wiederholung & Selbststudium
 

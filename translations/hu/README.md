@@ -118,9 +118,9 @@ Ajánlásunk a [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=acad
 - egy kihívás  
 - kiegészítő olvasmány  
 - feladat  
-- [utólagos kvíz](https://ff-quizzes.netlify.app/)  
+- [utólagos kvíz](https://ff-quizzes.netlify.app/web/)  
 
-> **Megjegyzés a kvízekről**: Minden kvíz a Quiz-app mappában található, összesen 48 darab, mindegyik három kérdéssel. Ezek elérhetők [itt](https://ff-quizzes.netlify.app/), a kvíz alkalmazás helyileg is futtatható vagy Azure-ra telepíthető; kövesd az utasításokat a `quiz-app` mappában.  
+> **Megjegyzés a kvízekről**: Minden kvíz a Quiz-app mappában található, összesen 48 darab, mindegyik három kérdéssel. Ezek elérhetők [itt](https://ff-quizzes.netlify.app/web/), a kvíz alkalmazás helyileg is futtatható vagy Azure-ra telepíthető; kövesd az utasításokat a `quiz-app` mappában.  
 
 ## 🗃️ Leckék  
 

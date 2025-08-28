@@ -201,7 +201,7 @@ Quando uno sviluppatore vuole imparare qualcosa di nuovo, probabilmente si rivol
 Confronta alcuni linguaggi di programmazione. Quali sono alcune delle caratteristiche uniche di JavaScript rispetto a Java? E di COBOL rispetto a Go?
 
 ## Quiz Post-Lezione
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Revisione e Studio Autonomo
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скетч од [Томоми Имура](https://twitter.com/girlie_mac)
 
 ## Квиз пре предавања  
-[Квиз пре предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Квиз пре предавања](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Моћ Веба је у његовој универзалности. Приступ за све, без обзира на инвалидитет, је суштински аспект.  
 >  

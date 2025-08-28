@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ερωτηματολόγιο Πριν το Μάθημα
 
-[Ερωτηματολόγιο πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Ερωτηματολόγιο πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Εισαγωγή
 
@@ -270,7 +270,7 @@ const routes = {
 
 ## Κουίζ μετά τη διάλεξη
 
-[Κουίζ μετά τη διάλεξη](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Κουίζ μετά τη διάλεξη](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Εργασία
 

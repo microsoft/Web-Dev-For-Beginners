@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Vorlesung
 
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Es gibt verschiedene Möglichkeiten, eine *Endbedingung* in einem Spiel auszudrücken. Es liegt an dir als Ersteller des Spiels zu entscheiden, warum das Spiel endet. Hier sind einige Gründe, wenn wir davon ausgehen, dass wir über das Weltraumspiel sprechen, das du bisher gebaut hast:
 
@@ -220,7 +220,7 @@ Füge einen Sound hinzu! Kannst du einen Sound hinzufügen, um dein Spielerlebni
 
 ## Quiz nach der Vorlesung
 
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Überprüfung & Selbststudium
 

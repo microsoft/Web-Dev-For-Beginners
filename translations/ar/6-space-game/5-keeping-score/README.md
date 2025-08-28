@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## اختبار ما قبل المحاضرة
 
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/37)
 
 في هذا الدرس، ستتعلم كيفية إضافة النقاط إلى اللعبة وحساب الأرواح.
 
@@ -187,7 +187,7 @@ npm start
 
 ## اختبار ما بعد المحاضرة
 
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## المراجعة والدراسة الذاتية
 

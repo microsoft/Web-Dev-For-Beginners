@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## חידון לפני השיעור
 
-[חידון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[חידון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/37)
 
 בשיעור זה תלמד כיצד להוסיף ניקוד למשחק ולחשב חיים.
 
@@ -187,7 +187,7 @@ npm start
 
 ## חידון לאחר השיעור
 
-[חידון לאחר השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[חידון לאחר השיעור](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## סקירה ולמידה עצמית
 

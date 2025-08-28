@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 講義前クイズ
 
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/37)
 
 このレッスンでは、ゲームにスコアを追加し、ライフを計算する方法を学びます。
 
@@ -187,7 +187,7 @@ npm start
 
 ## 講義後クイズ
 
-[講義後クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## 復習と自己学習
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Wprowadzenie
 
@@ -296,7 +296,7 @@ Oto przykład, jak może wyglądać finalna strona logowania po dodaniu stylów:
 
 ## Quiz po wykładzie
 
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Przegląd i samodzielna nauka
 

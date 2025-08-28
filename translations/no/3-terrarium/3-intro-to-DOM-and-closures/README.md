@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Introduksjon
 
@@ -210,7 +210,7 @@ Legg til en ny hendelseshåndterer i closuren din for å gjøre noe mer med plan
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Gjennomgang og selvstudium
 

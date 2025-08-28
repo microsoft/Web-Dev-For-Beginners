@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Questionário Pré-Aula
 
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Tomar decisões e controlar a ordem em que o seu código é executado torna-o reutilizável e robusto. Esta secção aborda a sintaxe para controlar o fluxo de dados em JavaScript e a sua importância quando usado com tipos de dados Booleanos.
 
@@ -214,7 +214,7 @@ Crie um programa que seja escrito primeiro com operadores lógicos e, em seguida
 
 ## Questionário Pós-Aula
 
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Revisão e Autoestudo
 

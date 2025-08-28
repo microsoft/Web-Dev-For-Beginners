@@ -118,9 +118,9 @@ Pendekezo letu ni kutumia [Visual Studio Code](https://code.visualstudio.com/?WT
 - changamoto  
 - usomaji wa ziada  
 - kazi  
-- [jaribio la baada ya somo](https://ff-quizzes.netlify.app/)  
+- [jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/)  
 
-> **Kuhusu maswali**: Maswali yote yamejumuishwa katika folda ya Quiz-app, maswali 48 ya jumla yenye maswali matatu kila moja. Yanapatikana [hapa](https://ff-quizzes.netlify.app/) programu ya maswali inaweza kuendeshwa kwa ndani au kupelekwa Azure; fuata maelekezo katika folda ya `quiz-app`.  
+> **Kuhusu maswali**: Maswali yote yamejumuishwa katika folda ya Quiz-app, maswali 48 ya jumla yenye maswali matatu kila moja. Yanapatikana [hapa](https://ff-quizzes.netlify.app/web/) programu ya maswali inaweza kuendeshwa kwa ndani au kupelekwa Azure; fuata maelekezo katika folda ya `quiz-app`.  
 
 ## 🗃️ Masomo  
 

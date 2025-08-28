@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Existen diferentes maneras de expresar una *condición de finalización* en un juego. Depende de ti, como creador del juego, decidir por qué el juego ha terminado. Aquí tienes algunas razones, suponiendo que estamos hablando del juego espacial que has estado construyendo hasta ahora:
 
@@ -220,7 +220,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Revisión y Autoestudio
 

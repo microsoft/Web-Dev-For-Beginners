@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 課前測驗
 
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## 事件驅動程式設計
 
@@ -337,7 +337,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## 課後測驗
 
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## 回顧與自學
 

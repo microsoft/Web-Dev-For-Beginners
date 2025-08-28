@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnotka autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz przed wykładem
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Kiedy myślimy o pisaniu kodu, zawsze chcemy, aby był on czytelny. Choć może to brzmieć paradoksalnie, kod jest czytany znacznie częściej niż pisany. Jednym z podstawowych narzędzi w zestawie programisty, które pomaga w tworzeniu łatwego do utrzymania kodu, jest **funkcja**.
 
@@ -194,7 +194,7 @@ Widziałeś teraz trzy sposoby przekazywania funkcji jako parametru i możesz si
 Czy potrafisz w jednym zdaniu wyjaśnić różnicę między funkcjami a metodami? Spróbuj!
 
 ## Quiz po wykładzie
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Przegląd i samodzielna nauka
 

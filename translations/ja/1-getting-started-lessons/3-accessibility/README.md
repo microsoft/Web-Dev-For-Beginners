@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 講義前のクイズ  
-[講義前のクイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[講義前のクイズ](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > ウェブの力はその普遍性にあります。障害の有無にかかわらず、誰もがアクセスできることが重要です。  
 >  

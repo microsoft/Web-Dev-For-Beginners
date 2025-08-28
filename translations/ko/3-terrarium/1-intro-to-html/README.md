@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 강의 전 퀴즈
 
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > 비디오를 확인하세요
 
@@ -231,7 +231,7 @@ HTML에는 여전히 재미있게 사용할 수 있는 '오래된' 태그들이 
 
 ## 강의 후 퀴즈
 
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## 복습 및 자기 학습
 

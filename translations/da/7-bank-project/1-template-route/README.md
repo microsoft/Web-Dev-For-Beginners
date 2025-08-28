@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før lektionen
 
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introduktion
 
@@ -306,7 +306,7 @@ Tilføj en ny skabelon og rute til en tredje side, der viser credits for denne a
 
 ## Quiz efter lektionen
 
-[Quiz efter lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Gennemgang & Selvstudie
 

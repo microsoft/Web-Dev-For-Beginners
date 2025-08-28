@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 繪製的筆記圖
 
 ## 課前測驗  
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/13)
 
 本課程涵蓋 JavaScript 的基礎知識，這是一種為網頁提供互動性的語言。在這堂課中，你將學習如何使用陣列與迴圈來操作資料。
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 除了 `for` 和 `while` 迴圈之外，還有其他方式可以遍歷陣列，例如 [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) 和 [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。試著用這些技術之一重寫你的陣列迴圈。
 
 ## 課後測驗  
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## 複習與自學
 

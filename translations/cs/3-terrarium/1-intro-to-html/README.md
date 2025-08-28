@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před lekcí
 
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Podívejte se na video
 
@@ -231,7 +231,7 @@ Existují některé „divoké“ starší značky v HTML, které je stále záb
 
 ## Kvíz po lekci
 
-[Kvíz po lekci](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Přehled & Samostudium
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Sebelum Pelajaran
-[Kuis sebelum pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Kuis sebelum pelajaran](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Pelajaran ini mencakup dasar-dasar JavaScript, bahasa yang memberikan interaktivitas pada web.
 
@@ -199,7 +199,7 @@ Boolean hanya dapat memiliki dua nilai: `true` atau `false`. Boolean dapat memba
 JavaScript terkenal dengan cara-cara mengejutkannya dalam menangani tipe data pada beberapa kesempatan. Lakukan sedikit riset tentang 'jebakan' ini. Misalnya: sensitivitas huruf besar/kecil bisa menjadi masalah! Cobalah ini di konsol Anda: `let age = 1; let Age = 2; age == Age` (menghasilkan `false` -- mengapa?). Jebakan lain apa yang dapat Anda temukan?
 
 ## Kuis Setelah Pelajaran
-[Kuis setelah pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Kuis setelah pelajaran](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Tinjauan & Belajar Mandiri
 

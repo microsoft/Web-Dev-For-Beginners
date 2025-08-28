@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Questionário Pré-Aula
 
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introdução
 
@@ -335,7 +335,7 @@ Aqui está um exemplo de uma página de painel estilizada:
 
 ## Questionário Pós-Aula
 
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Tarefa
 

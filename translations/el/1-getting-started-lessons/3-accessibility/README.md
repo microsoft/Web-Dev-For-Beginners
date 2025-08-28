@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Σκίτσο από [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ερωτηματολόγιο πριν το μάθημα
-[Ερωτηματολόγιο πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Ερωτηματολόγιο πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Η δύναμη του Ιστού βρίσκεται στην καθολικότητά του. Η πρόσβαση από όλους, ανεξαρτήτως αναπηρίας, είναι μια ουσιώδης πτυχή.
 >

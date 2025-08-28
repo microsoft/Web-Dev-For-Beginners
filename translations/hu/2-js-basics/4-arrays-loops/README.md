@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote készítette: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Előadás előtti kvíz
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Ez a lecke a JavaScript alapjait tárgyalja, amely a weben az interaktivitást biztosítja. Ebben a leckében megtanulod a tömbök és ciklusok használatát, amelyek az adatok kezelésére szolgálnak.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 A tömbök iterálására más módszerek is léteznek a for és while ciklusokon kívül. Ilyenek például a [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), és [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Írd át a tömb iterációdat ezek egyikének használatával.
 
 ## Előadás utáni kvíz
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Áttekintés és Önálló Tanulás
 

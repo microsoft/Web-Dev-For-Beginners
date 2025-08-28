@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Eseményvezérelt programozás
 
@@ -316,7 +316,7 @@ Nézzük meg részletesen a kódot! Először lekérjük az aktuális szót és 
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Áttekintés és önálló tanulás
 

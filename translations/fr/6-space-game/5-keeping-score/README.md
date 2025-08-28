@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz avant le cours
 
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Dans cette leçon, vous apprendrez à ajouter un système de score à un jeu et à calculer les vies.
 
@@ -187,7 +187,7 @@ Votre code est presque complet. Pouvez-vous imaginer les prochaines étapes ?
 
 ## Quiz après le cours
 
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Révision et auto-apprentissage
 

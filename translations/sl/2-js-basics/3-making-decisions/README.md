@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Sprejemanje odločitev in nadzor nad vrstnim redom izvajanja kode omogočata, da je vaša koda ponovno uporabna in robustna. Ta razdelek zajema sintakso za nadzor pretoka podatkov v JavaScriptu ter njen pomen pri uporabi z Boolean podatkovnimi tipi.
 
@@ -214,7 +214,7 @@ Ustvarite program, ki je najprej napisan z logičnimi operatorji, nato pa ga pre
 
 ## Kviz po predavanju
 
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Pregled in samostojno učenje
 

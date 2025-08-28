@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## اختبار ما قبل المحاضرة
 
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/11)
 
 اتخاذ القرارات والتحكم في ترتيب تشغيل الكود يجعل الكود قابلاً لإعادة الاستخدام وقويًا. يغطي هذا القسم بناء الجملة الخاص بالتحكم في تدفق البيانات في JavaScript وأهميته عند استخدامه مع أنواع البيانات المنطقية (Boolean).
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## اختبار ما بعد المحاضرة
 
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## المراجعة والدراسة الذاتية
 

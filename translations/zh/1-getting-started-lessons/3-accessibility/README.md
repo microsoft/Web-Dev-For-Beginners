@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 由 [Tomomi Imura](https://twitter.com/girlie_mac) 绘制的速记图
 
 ## 课前测验  
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Web 的力量在于它的普遍性。无论是否有残疾，每个人都能访问是其核心要素。  
 >  
@@ -227,7 +227,7 @@ CSS 提供了对页面上任何元素外观的完全控制。您可以创建没�
 ```
 
 ## 课后测验  
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## 复习与自学
 许多国家政府都有关于无障碍要求的法律。了解一下你所在国家的无障碍法律。哪些内容被涵盖了，哪些没有？一个例子是[这个政府网站](https://accessibility.blog.gov.uk/)。

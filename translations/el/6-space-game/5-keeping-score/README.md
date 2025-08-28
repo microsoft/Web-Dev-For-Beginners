@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ερωτηματολόγιο Πριν το Μάθημα
 
-[Ερωτηματολόγιο πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Ερωτηματολόγιο πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Σε αυτό το μάθημα, θα μάθετε πώς να προσθέσετε βαθμολογία σε ένα παιχνίδι και να υπολογίσετε ζωές.
 
@@ -187,7 +187,7 @@ npm start
 
 ## Ερωτηματολόγιο Μετά το Μάθημα
 
-[Ερωτηματολόγιο μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Ερωτηματολόγιο μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Ανασκόπηση & Αυτομελέτη
 

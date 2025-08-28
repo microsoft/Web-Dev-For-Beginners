@@ -201,7 +201,7 @@ back add r0,r1
 Сравнете някои програмни езици. Какви са уникалните характеристики на JavaScript спрямо Java? А какво ще кажете за COBOL спрямо Go?
 
 ## Тест след лекцията
-[Тест след лекцията](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Тест след лекцията](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Преглед и самостоятелно обучение
 

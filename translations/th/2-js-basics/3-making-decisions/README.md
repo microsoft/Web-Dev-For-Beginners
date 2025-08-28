@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## แบบทดสอบก่อนเรียน
 
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/11)
 
 การตัดสินใจและการควบคุมลำดับการทำงานของโค้ดช่วยให้โค้ดของคุณนำกลับมาใช้ใหม่ได้และมีความแข็งแกร่ง บทนี้จะครอบคลุมไวยากรณ์สำหรับการควบคุมการไหลของข้อมูลใน JavaScript และความสำคัญเมื่อใช้ร่วมกับประเภทข้อมูล Boolean
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## แบบทดสอบหลังเรียน
 
-[แบบทดสอบหลังเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[แบบทดสอบหลังเรียน](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## ทบทวนและศึกษาด้วยตนเอง
 

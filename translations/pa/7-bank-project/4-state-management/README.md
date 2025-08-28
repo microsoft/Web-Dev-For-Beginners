@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼
 
-[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### ਪਰਿਚਯ
 
@@ -92,7 +92,7 @@ const account = state.account;
 ਹੁਣ ਜਦੋਂ ਅਸੀਂ ਸਟੇਟ ਆਬਜੈਕਟ ਨੂੰ ਸਟੋਰ ਕਰਨ ਲਈ ਰੱਖਿਆ ਹੈ, ਅਗਲਾ ਕਦਮ ਅਪਡੇਟਸ ਨੂੰ ਕੇਂਦਰੀਕ੍ਰਿਤ ਕਰਨਾ ਹੈ। ਮਕਸਦ ਇਹ ਹੈ ਕਿ ਕਿਸੇ ਵੀ ਬਦਲਾਅ ਅਤੇ ਇਹ ਕਦੋਂ ਹੁੰਦੇ ਹਨ, ਇਸਨੂੰ ਟ੍ਰੈਕ ਕਰਨਾ ਸੌਖਾ ਬਣਾਇਆ ਜਾਵੇ।
 
 ਸਟੇਟ ਆਬਜੈਕਟ ਵਿੱਚ ਬਦਲਾਅ ਕਰਨ ਤੋਂ ਬਚਣ ਲਈ, ਇਸਨੂੰ [*immutable*](https://en.wikipedia.org/wiki/Immutable_object) ਮੰਨਣਾ ਵੀ ਇੱਕ ਵਧੀਆ ਅਭਿਆਸ ਹੈ, ਜਿਸਦਾ ਮਤਲਬ ਹੈ ਕਿ ਇਸਨੂੰ ਬਿਲਕੁਲ ਵੀ ਬਦਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ।
-[ਪੋਸਟ-ਲੈਕਚਰ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[ਪੋਸਟ-ਲੈਕਚਰ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## ਅਸਾਈਨਮੈਂਟ
 

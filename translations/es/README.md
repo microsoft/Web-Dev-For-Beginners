@@ -118,9 +118,9 @@ Nuestra recomendación es usar [Visual Studio Code](https://code.visualstudio.co
 - un desafío  
 - lectura complementaria  
 - tarea  
-- [cuestionario posterior a la lección](https://ff-quizzes.netlify.app/)  
+- [cuestionario posterior a la lección](https://ff-quizzes.netlify.app/web/)  
 
-> **Una nota sobre los cuestionarios**: Todos los cuestionarios están contenidos en la carpeta Quiz-app, 48 cuestionarios en total con tres preguntas cada uno. Están disponibles [aquí](https://ff-quizzes.netlify.app/) y la aplicación de cuestionarios puede ejecutarse localmente o desplegarse en Azure; sigue las instrucciones en la carpeta `quiz-app`.  
+> **Una nota sobre los cuestionarios**: Todos los cuestionarios están contenidos en la carpeta Quiz-app, 48 cuestionarios en total con tres preguntas cada uno. Están disponibles [aquí](https://ff-quizzes.netlify.app/web/) y la aplicación de cuestionarios puede ejecutarse localmente o desplegarse en Azure; sigue las instrucciones en la carpeta `quiz-app`.  
 
 ## 🗃️ Lecciones  
 

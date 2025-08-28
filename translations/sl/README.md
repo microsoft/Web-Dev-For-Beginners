@@ -118,9 +118,9 @@ Naše priporočilo je uporaba [Visual Studio Code](https://code.visualstudio.com
 - izziv  
 - dopolnilno branje  
 - nalogo  
-- [kviz po lekciji](https://ff-quizzes.netlify.app/)  
+- [kviz po lekciji](https://ff-quizzes.netlify.app/web/)  
 
-> **Opomba o kvizih**: Vsi kvizi so v mapi Quiz-app, skupaj 48 kvizov s po tremi vprašanji. Na voljo so [tukaj](https://ff-quizzes.netlify.app/), aplikacijo za kvize pa lahko zaženete lokalno ali jo namestite na Azure; sledite navodilom v mapi `quiz-app`.  
+> **Opomba o kvizih**: Vsi kvizi so v mapi Quiz-app, skupaj 48 kvizov s po tremi vprašanji. Na voljo so [tukaj](https://ff-quizzes.netlify.app/web/), aplikacijo za kvize pa lahko zaženete lokalno ali jo namestite na Azure; sledite navodilom v mapi `quiz-app`.  
 
 ## 🗃️ Lekcije  
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Tässä osiossa opit ampumaan lasereita JavaScriptillä! Lisäämme peliimme kaksi asiaa:
 
@@ -295,7 +295,7 @@ Lisää räjähdys! Katso pelin omaisuuksia [Space Art -repo](../../../../6-spac
 
 ## Jälkikysely
 
-[Jälkikysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Kertaus ja itseopiskelu
 

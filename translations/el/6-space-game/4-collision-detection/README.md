@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Κουίζ Πριν το Μάθημα
 
-[Κουίζ πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Κουίζ πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Σε αυτό το μάθημα θα μάθετε πώς να πυροβολείτε λέιζερ με JavaScript! Θα προσθέσουμε δύο πράγματα στο παιχνίδι μας:
 
@@ -295,7 +295,7 @@ npm start
 
 ## Κουίζ Μετά το Μάθημα
 
-[Κουίζ μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Κουίζ μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Ανασκόπηση & Αυτομελέτη
 

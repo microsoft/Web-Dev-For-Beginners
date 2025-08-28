@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Questionário Pré-Aula
 
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Veja o vídeo
 
@@ -231,7 +231,7 @@ Existem algumas tags 'antigas' no HTML que ainda são divertidas de usar, embora
 
 ## Questionário Pós-Aula
 
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Revisão & Autoestudo
 

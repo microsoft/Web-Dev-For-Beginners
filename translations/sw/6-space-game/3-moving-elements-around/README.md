@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Jaribio la Kabla ya Somo
 
-[Jaribio la kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Michezo haiwi ya kufurahisha sana hadi pale unapokuwa na viumbe wa kigeni wakizunguka kwenye skrini! Katika mchezo huu, tutatumia aina mbili za mwendo:
 
@@ -386,7 +386,7 @@ Kama unavyoona, msimbo wako unaweza kuwa 'msimbo wa tambi' unapoongeza kazi, vig
 
 ## Jaribio la Baada ya Somo
 
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Mapitio na Kujisomea
 

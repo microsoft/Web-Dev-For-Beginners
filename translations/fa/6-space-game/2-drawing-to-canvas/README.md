@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## بوم
 
@@ -214,7 +214,7 @@ npm start
 
 ## آزمون پس از درس
 
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## مرور و مطالعه شخصی
 

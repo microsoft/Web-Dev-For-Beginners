@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Kapag iniisip natin ang pagsusulat ng code, palagi nating nais tiyakin na ang ating code ay madaling basahin. Bagamat parang kontra-intuwitibo ito, mas madalas basahin ang code kaysa isulat. Isa sa mga pangunahing kasangkapan ng isang developer upang masiguro ang maayos na code ay ang **function**.
 
@@ -194,7 +194,7 @@ Ngayon ay nakita mo na mayroon tayong tatlong paraan upang magpasa ng function b
 Maaari mo bang ipaliwanag sa isang pangungusap ang pagkakaiba ng mga function at metodo? Subukan mo!
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Review at Pag-aaral sa Sarili
 

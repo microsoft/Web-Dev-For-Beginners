@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Тест перед лекцією
 
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/37)
 
 У цьому уроці ви навчитеся додавати очки до гри та розраховувати життя.
 
@@ -187,7 +187,7 @@ npm start
 
 ## Тест після лекції
 
-[Тест після лекції](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Тест після лекції](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Огляд і самостійне навчання
 

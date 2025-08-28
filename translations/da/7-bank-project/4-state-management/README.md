@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før Forelæsning
 
-[Quiz før forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Quiz før forelæsning](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Introduktion
 
@@ -278,7 +278,7 @@ Nu hvor vi genindlæser kontodataene, hver gang dashboardet indlæses, tror du s
 Prøv at arbejde sammen om at ændre, hvad der gemmes og indlæses fra `localStorage`, så det kun inkluderer det, der absolut er nødvendigt for, at appen fungerer.
 
 ## Quiz efter Forelæsning
-[Quiz efter forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Quiz efter forelæsning](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Opgave
 

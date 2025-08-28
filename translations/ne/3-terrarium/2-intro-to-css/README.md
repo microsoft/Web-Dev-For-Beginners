@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्रि-लेक्चर क्विज
 
-[प्रि-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[प्रि-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### परिचय
 
@@ -268,7 +268,7 @@ Relative पोजिसन गरिएको तत्वहरू CSS को 
 
 ## पोस्ट-लेक्चर क्विज
 
-[पोस्ट-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[पोस्ट-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## समीक्षा र आत्म-अध्ययन
 

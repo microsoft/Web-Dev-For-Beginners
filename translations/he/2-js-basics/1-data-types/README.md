@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > סקיצה מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## שאלון לפני השיעור
-[שאלון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[שאלון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/7)
 
 השיעור הזה מכסה את יסודות JavaScript, השפה שמספקת אינטראקטיביות באינטרנט.
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 JavaScript ידועה בדרכים המפתיעות שלה לטפל בסוגי נתונים מדי פעם. בצעו מעט מחקר על ה'מלכודות' הללו. לדוגמה: רגישות לאותיות יכולה להפתיע! נסו זאת בקונסולה שלכם: `let age = 1; let Age = 2; age == Age` (מתקבל `false` -- מדוע?). אילו מלכודות נוספות תוכלו למצוא?
 
 ## שאלון לאחר השיעור
-[שאלון לאחר השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[שאלון לאחר השיעור](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## סקירה ולימוד עצמי
 

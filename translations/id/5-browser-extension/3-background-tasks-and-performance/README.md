@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Pelajaran
 
-[Kuis pra-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Pendahuluan
 
@@ -158,7 +158,7 @@ Selidiki beberapa situs web open source yang telah ada sejak lama, dan, berdasar
 
 ## Kuis Pasca-Pelajaran
 
-[Kuis pasca-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Tinjauan & Studi Mandiri
 

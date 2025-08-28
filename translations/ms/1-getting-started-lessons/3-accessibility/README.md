@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra-Kuliah
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Kuasa Web terletak pada sifat sejagatnya. Akses oleh semua orang tanpa mengira kecacatan adalah aspek penting.
 >
@@ -227,7 +227,7 @@ Ambil HTML ini dan tulis semula untuk menjadi seakses mungkin, berdasarkan strat
 ```
 
 ## Kuiz Pasca-Kuliah
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Ulasan & Kajian Kendiri
 Banyak kerajaan mempunyai undang-undang berkaitan keperluan kebolehaksesan. Ketahui lebih lanjut tentang undang-undang kebolehaksesan di negara asal anda. Apa yang diliputi, dan apa yang tidak? Contohnya ialah [laman web kerajaan ini](https://accessibility.blog.gov.uk/).

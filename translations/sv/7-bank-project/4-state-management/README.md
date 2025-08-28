@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förhandsquiz
 
-[Förhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Introduktion
 
@@ -278,7 +278,7 @@ Nu när vi laddar om kontodatan varje gång instrumentpanelen laddas, tror du at
 Försök att arbeta tillsammans för att ändra vad som sparas och laddas från `localStorage` till att endast inkludera det som absolut krävs för att appen ska fungera.
 
 ## Efterhandsquiz
-[Post-föreläsningsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Post-föreläsningsquiz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Uppgift
 

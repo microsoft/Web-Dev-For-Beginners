@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## แบบทดสอบก่อนเรียน
 
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### การสืบทอดและการประกอบในพัฒนาเกม
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## แบบทดสอบหลังเรียน
 
-[แบบทดสอบหลังเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[แบบทดสอบหลังเรียน](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## ทบทวนและศึกษาด้วยตัวเอง
 

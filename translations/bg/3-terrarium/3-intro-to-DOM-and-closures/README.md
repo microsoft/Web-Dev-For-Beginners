@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Предварителен тест
 
-[Предварителен тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Предварителен тест](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Въведение
 
@@ -210,7 +210,7 @@ function stopElementDrag() {
 
 ## Тест след лекцията
 
-[Тест след лекцията](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Тест след лекцията](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Преглед и самостоятелно обучение
 

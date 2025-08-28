@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar înainte de curs
 
-[Chestionar înainte de curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Chestionar înainte de curs](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Moștenire și Compoziție în dezvoltarea jocurilor
 
@@ -222,7 +222,7 @@ Gândește-te cum modelul pub-sub poate îmbunătăți un joc. Ce părți ar tre
 
 ## Chestionar după curs
 
-[Chestionar după curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Chestionar după curs](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Recapitulare și Studiu Individual
 

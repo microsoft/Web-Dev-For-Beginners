@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Uvod
 
@@ -335,7 +335,7 @@ Evo primjera stilizirane stranice nadzorne ploče:
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Zadatak
 

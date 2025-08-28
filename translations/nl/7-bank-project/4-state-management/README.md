@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Introductie
 
@@ -278,7 +278,7 @@ Nu we de accountgegevens elke keer dat het dashboard wordt geladen opnieuw laden
 Probeer samen te werken om te veranderen wat wordt opgeslagen en geladen vanuit `localStorage`, zodat alleen wordt opgenomen wat absoluut nodig is voor de app om te werken.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Opdracht
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Передлекційна вікторина
 
-[Передлекційна вікторина](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Передлекційна вікторина](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Вступ
 
@@ -306,7 +306,7 @@ updateRoute();
 
 ## Післялекційна вікторина
 
-[Післялекційна вікторина](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Післялекційна вікторина](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Огляд і самостійне навчання
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Johdanto
 
@@ -278,7 +278,7 @@ Nyt kun lataamme tilitiedot uudelleen aina, kun hallintapaneeli ladataan, luulet
 Yrittäkää yhdessä muuttaa, mitä tallennetaan ja ladataan `localStoragesta`, niin että mukana on vain se, mikä on ehdottoman välttämätöntä sovelluksen toiminnan kannalta.
 
 ## Jälkikysely
-[Luennon jälkeinen kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Luennon jälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Tehtävä
 

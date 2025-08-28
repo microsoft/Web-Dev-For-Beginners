@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Tatalakayin sa araling ito ang mga pangunahing kaalaman sa JavaScript, ang wika na nagbibigay ng interaktibidad sa web.
 
@@ -199,7 +199,7 @@ Ang mga Boolean ay maaari lamang magkaroon ng dalawang halaga: `true` o `false`.
 Ang JavaScript ay kilala sa mga nakakagulat nitong paraan ng paghawak ng mga uri ng data paminsan-minsan. Mag-research tungkol sa mga 'gotchas' na ito. Halimbawa: ang case sensitivity ay maaaring magdulot ng problema! Subukan ito sa iyong console: `let age = 1; let Age = 2; age == Age` (nagbibigay ng `false` -- bakit?). Ano pang ibang mga gotchas ang maaari mong mahanap?
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Review at Pag-aaral sa Sarili
 

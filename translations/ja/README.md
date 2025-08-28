@@ -123,9 +123,9 @@ Microsoft Cloud Advocatesによる12週間の包括的なコースでウェブ�
 - チャレンジ  
 - 補足資料  
 - 課題  
-- [レッスン後のクイズ](https://ff-quizzes.netlify.app/)  
+- [レッスン後のクイズ](https://ff-quizzes.netlify.app/web/)  
 
-> **クイズについての注意**: すべてのクイズはQuiz-appフォルダに含まれており、合計48個のクイズが各3問ずつあります。[こちら](https://ff-quizzes.netlify.app/)で利用可能です。クイズアプリはローカルで実行するか、Azureにデプロイできます。`quiz-app`フォルダ内の指示に従ってください。  
+> **クイズについての注意**: すべてのクイズはQuiz-appフォルダに含まれており、合計48個のクイズが各3問ずつあります。[こちら](https://ff-quizzes.netlify.app/web/)で利用可能です。クイズアプリはローカルで実行するか、Azureにデプロイできます。`quiz-app`フォルダ内の指示に従ってください。  
 
 ## 🗃️ レッスン  
 

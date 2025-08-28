@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kvíz před lekcí
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Tato lekce se zabývá základy JavaScriptu, jazyka, který zajišťuje interaktivitu na webu. V této lekci se naučíte o polích a cyklech, které se používají k manipulaci s daty.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Existují i jiné způsoby procházení polí než pomocí for a while cyklů. Jsou to [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) a [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Přepište svůj cyklus pole pomocí jedné z těchto technik.
 
 ## Kvíz po lekci
-[Kvíz po lekci](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Přehled a samostudium
 

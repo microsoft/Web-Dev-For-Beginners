@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Тест перед лекцією
 
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Наслідування та композиція в розробці ігор
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## Тест після лекції
 
-[Тест після лекції](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Тест після лекції](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Огляд і самостійне навчання
 

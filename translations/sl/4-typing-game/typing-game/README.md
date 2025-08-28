@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Programiranje, ki temelji na dogodkih
 
@@ -337,7 +337,7 @@ Dodajte več funkcionalnosti
 
 ## Kviz po predavanju
 
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Pregled in samostojno učenje
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Uvod
 
@@ -278,7 +278,7 @@ Sada kada ponovno učitavamo podatke o računu svaki put kada se učita nadzorna
 Pokušajte zajedno raditi na promjeni onoga što se sprema i učitava iz `localStorage` kako biste uključili samo ono što je apsolutno potrebno za rad aplikacije.
 
 ## Kviz nakon predavanja
-[Post-predavanje kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Post-predavanje kviz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Zadatak
 

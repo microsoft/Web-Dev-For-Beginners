@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ερωτηματολόγιο Πριν το Μάθημα
 
-[Ερωτηματολόγιο πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Ερωτηματολόγιο πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Εισαγωγή
 
@@ -306,7 +306,7 @@ updateRoute();
 
 ## Ερωτηματολόγιο Μετά το Μάθημα
 
-[Ερωτηματολόγιο μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Ερωτηματολόγιο μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ##
 

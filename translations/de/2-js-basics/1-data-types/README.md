@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz vor der Lektion
-[Quiz vor der Lektion](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Quiz vor der Lektion](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Diese Lektion behandelt die Grundlagen von JavaScript, der Sprache, die Interaktivität im Web ermöglicht.
 
@@ -199,7 +199,7 @@ Booleans können nur zwei Werte haben: `true` oder `false`. Booleans können hel
 JavaScript ist berüchtigt für seine gelegentlich überraschenden Arten, Datentypen zu behandeln. Recherchiere ein wenig über diese 'Fallstricke'. Zum Beispiel: Groß- und Kleinschreibung kann problematisch sein! Probiere dies in deiner Konsole: `let age = 1; let Age = 2; age == Age` (ergibt `false` -- warum?). Welche anderen Fallstricke kannst du finden?
 
 ## Quiz nach der Lektion
-[Quiz nach der Lektion](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Quiz nach der Lektion](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Wiederholung & Selbststudium
 

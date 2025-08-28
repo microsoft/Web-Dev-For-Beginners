@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Тест перед лекцією
 
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Прийняття рішень і контроль порядку виконання вашого коду робить його багаторазовим і надійним. У цьому розділі розглядається синтаксис для управління потоком даних у JavaScript і його важливість при використанні з булевими типами даних.
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## Тест після лекції
 
-[Тест після лекції](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Тест після лекції](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Огляд і самостійне навчання
 

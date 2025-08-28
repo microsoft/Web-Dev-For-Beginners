@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før lektionen
 
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Introduktion
 
@@ -210,7 +210,7 @@ Tilføj en ny event handler til din closure for at gøre noget mere med plantern
 
 ## Quiz efter lektionen
 
-[Quiz efter lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Gennemgang & Selvstudie
 

@@ -15,7 +15,7 @@ Somo hili linashughulikia misingi ya GitHub, jukwaa la kuhifadhi na kusimamia ma
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Jaribio Kabla ya Somo
-[Jaribio kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Jaribio kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Utangulizi
 
@@ -315,7 +315,7 @@ Miradi inaweza pia kuwa na majadiliano kwenye majukwaa, orodha za barua pepe, au
 Shirikiana na rafiki kufanya kazi kwenye code ya kila mmoja. Unda mradi kwa pamoja, fanya fork ya code, unda matawi, na changanya mabadiliko.
 
 ## Jaribio la Baada ya Somo
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Mapitio na Kujisomea
 

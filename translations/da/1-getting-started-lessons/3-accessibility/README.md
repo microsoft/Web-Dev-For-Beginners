@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz før lektionen
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Webben er stærk på grund af dens universelle karakter. Adgang for alle, uanset handicap, er en essentiel del.
 >
@@ -227,7 +227,7 @@ Tag denne HTML og omskriv den, så den er så tilgængelig som muligt, givet de 
 ```
 
 ## Quiz efter lektionen
-[Quiz efter lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Gennemgang & Selvstudie
 Mange regeringer har love om krav til tilgængelighed. Undersøg tilgængelighedslovgivningen i dit hjemland. Hvad er dækket, og hvad er ikke? Et eksempel er [denne regeringswebside](https://accessibility.blog.gov.uk/).

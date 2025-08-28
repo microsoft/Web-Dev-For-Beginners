@@ -200,7 +200,7 @@ Khi một nhà phát triển muốn học điều gì đó mới, họ thường
 So sánh một số ngôn ngữ lập trình. Những đặc điểm độc đáo của JavaScript so với Java là gì? Còn COBOL so với Go thì sao?
 
 ## Câu hỏi sau bài giảng  
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Ôn tập & Tự học
 

@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Pogledajte video
 
@@ -231,7 +231,7 @@ Postoje neki zanimljivi 'stariji' tagovi u HTML-u koji su još uvijek zabavni za
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Pregled i samostalno učenje
 

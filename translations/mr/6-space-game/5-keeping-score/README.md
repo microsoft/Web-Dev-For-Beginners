@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्री-लेक्चर क्विझ
 
-[प्री-लेक्चर क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[प्री-लेक्चर क्विझ](https://ff-quizzes.netlify.app/web/quiz/37)
 
 या धड्यात, तुम्ही गेममध्ये स्कोअर कसे जोडायचे आणि लाइफ्स कसे मोजायचे हे शिकाल.
 
@@ -187,7 +187,7 @@ npm start
 
 ## पोस्ट-लेक्चर क्विझ
 
-[पोस्ट-लेक्चर क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[पोस्ट-लेक्चर क्विझ](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

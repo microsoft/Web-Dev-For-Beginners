@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Квиз пре предавања
 
-[Квиз пре предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Квиз пре предавања](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Игре нису баш забавне док немате ванземаљце који се крећу по екрану! У овој игри ћемо користити две врсте кретања:
 
@@ -386,7 +386,7 @@ npm start
 
 ## Квиз након предавања
 
-[Квиз након предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Квиз након предавања](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Преглед и самостално учење
 

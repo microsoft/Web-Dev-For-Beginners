@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Предварителен тест
 
-[Предварителен тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Предварителен тест](https://ff-quizzes.netlify.app/web/quiz/35)
 
 В този урок ще научите как да стреляте с лазери с помощта на JavaScript! Ще добавим две неща към нашата игра:
 
@@ -295,7 +295,7 @@ npm start
 
 ## Финален тест
 
-[Финален тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Финален тест](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Преглед и самостоятелно обучение
 

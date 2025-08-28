@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kviz pred predavanjem  
-[Kviz pred predavanjem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Kviz pred predavanjem](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Ta lekcija pokriva osnove JavaScripta, jezika, ki omogoča interaktivnost na spletu.
 
@@ -199,7 +199,7 @@ Logične vrednosti so lahko le dve: `true` ali `false`. Logične vrednosti pomag
 JavaScript je znan po svojih presenetljivih načinih obravnave podatkovnih tipov. Raziščite te 'pasti'. Na primer: občutljivost na velike in male črke vas lahko preseneti! Poskusite to v svoji konzoli: `let age = 1; let Age = 2; age == Age` (rezultat je `false` -- zakaj?). Katere druge pasti lahko najdete?
 
 ## Kviz po predavanju  
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Pregled in samostojno učenje
 

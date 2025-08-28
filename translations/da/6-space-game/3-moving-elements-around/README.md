@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelæsning
 
-[Quiz før forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Quiz før forelæsning](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Spil er ikke særlig sjove, før du har rumvæsener, der bevæger sig rundt på skærmen! I dette spil vil vi gøre brug af to typer bevægelser:
 
@@ -386,7 +386,7 @@ Som du kan se, kan din kode blive til 'spaghettikode', når du begynder at tilf�
 
 ## Quiz efter forelæsning
 
-[Quiz efter forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Quiz efter forelæsning](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Gennemgang & Selvstudie
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Bevezetés
 
@@ -224,7 +224,7 @@ Eddig többféle API-t tárgyaltunk ezekben a leckékben. Válassz egy webes API
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Áttekintés és önálló tanulás
 

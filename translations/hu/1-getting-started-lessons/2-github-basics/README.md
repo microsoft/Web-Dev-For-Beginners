@@ -15,7 +15,7 @@ Ez a lecke a GitHub alapjait ismerteti, amely egy platform a kód tárolására 
 > Sketchnote készítette: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Előzetes kvíz
-[Előzetes kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Előzetes kvíz](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Bevezetés
 
@@ -309,7 +309,7 @@ A projekteknek lehetnek fórumai, levelezőlistái vagy csevegőcsatornái, pél
 Dolgozz együtt egy barátoddal egymás kódján. Hozzatok létre egy közös projektet, forkoljatok kódot, hozzatok létre ágakat, és egyesítsétek a változtatásokat.
 
 ## Utólagos kvíz
-[Utólagos kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Utólagos kvíz](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Áttekintés és önálló tanulás
 

@@ -201,7 +201,7 @@ back add r0,r1
 เปรียบเทียบภาษาโปรแกรมบางภาษา อะไรคือคุณลักษณะเฉพาะของ JavaScript เทียบกับ Java? แล้ว COBOL เทียบกับ Go ล่ะ?
 
 ## แบบทดสอบหลังเรียน
-[แบบทดสอบหลังเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[แบบทดสอบหลังเรียน](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## ทบทวนและศึกษาด้วยตนเอง
 

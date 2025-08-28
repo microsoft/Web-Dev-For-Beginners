@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတိုင်မီ မေးခွန်းများ
 
-[မိန့်ခွန်းမတိုင်မီ မေးခွန်းများ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[မိန့်ခွန်းမတိုင်မီ မေးခွန်းများ](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### အကျဉ်းချုပ်
 
@@ -203,7 +203,7 @@ init();
 ```
 
 ဒီနေရာတွင် သိမ်းဆည်းထားသော ဒေတာကို ပြန်လည်ရ
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## အလုပ်ပေးချက်
 

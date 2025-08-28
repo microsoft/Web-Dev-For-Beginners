@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Có nhiều cách để biểu thị *điều kiện kết thúc* trong một trò chơi. Là người tạo ra trò chơi, bạn có quyền quyết định lý do tại sao trò chơi kết thúc. Dưới đây là một số lý do, nếu chúng ta giả định đang nói về trò chơi không gian mà bạn đã xây dựng cho đến nay:
 
@@ -220,7 +220,7 @@ Thêm âm thanh! Bạn có thể thêm âm thanh để tăng cường trải ngh
 
 ## Câu hỏi sau bài giảng
 
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Ôn tập & Tự học
 

@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förkunskapstest
 
-[Förkunskapstest](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Förkunskapstest](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Introduktion
 
@@ -268,7 +268,7 @@ För att slutföra efterföreläsningstestet, gå igenom denna Learn-modul: [Sty
 
 ## Efterföreläsningstest
 
-[Efterföreläsningstest](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Efterföreläsningstest](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Granskning & Självstudier
 

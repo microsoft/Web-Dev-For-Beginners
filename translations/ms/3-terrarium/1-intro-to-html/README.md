@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/15)
 
 
 > Tonton video
@@ -232,7 +232,7 @@ Terdapat beberapa tag 'lama' dalam HTML yang masih seronok untuk dicuba, walaupu
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Ulasan & Kajian Kendiri
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Pelajaran
 
-[Kuis pra-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Pendahuluan
 
@@ -297,7 +297,7 @@ Berikut adalah contoh tampilan halaman login setelah ditambahkan sedikit gaya:
 
 ## Kuis Pasca-Pelajaran
 
-[Kuis pasca-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Tinjauan & Studi Mandiri
 

@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Pendahuluan
 
@@ -210,7 +210,7 @@ Tambahkan event handler baru ke closure Anda untuk melakukan sesuatu yang lebih 
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Tinjauan & Studi Mandiri
 

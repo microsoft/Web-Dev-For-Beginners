@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förkunskapstest
 
-[Förkunskapstest](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Förkunskapstest](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Introduktion
 
@@ -210,7 +210,7 @@ Lägg till en ny händelsehanterare till din slutna funktion för att göra någ
 
 ## Efterkunskapstest
 
-[Efterkunskapstest](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Efterkunskapstest](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Granskning & Självstudier
 

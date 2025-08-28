@@ -114,9 +114,9 @@ Our recommendation is to use [Visual Studio Code](https://code.visualstudio.com/
 - a challenge
 - supplemental reading
 - assignment
-- [post-lesson quiz](https://ff-quizzes.netlify.app/)
+- [post-lesson quiz](https://ff-quizzes.netlify.app/web/)
 
-> **A note about quizzes**: All quizzes are contained in the Quiz-app folder, 48 total quizzes of three questions each. They are available [here](https://ff-quizzes.netlify.app/) the quiz app can be run locally or deployed to Azure; follow the instruction in the `quiz-app` folder.
+> **A note about quizzes**: All quizzes are contained in the Quiz-app folder, 48 total quizzes of three questions each. They are available [here](https://ff-quizzes.netlify.app/web/) the quiz app can be run locally or deployed to Azure; follow the instruction in the `quiz-app` folder.
 
 ## 🗃️ Lessons
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote sukūrė [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Klausimai prieš paskaitą
-[Klausimai prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Rašydami kodą visada norime užtikrinti, kad jis būtų lengvai skaitomas. Nors tai gali atrodyti nelogiška, kodas yra skaitomas daug dažniau nei rašomas. Vienas pagrindinių įrankių, padedančių kurti lengvai prižiūrimą kodą, yra **funkcija**.
 
@@ -194,7 +194,7 @@ Dabar matėte, kad turime tris būdus perduoti funkciją kaip parametrą ir galb
 Ar galite vienu sakiniu paaiškinti skirtumą tarp funkcijų ir metodų? Pabandykite!
 
 ## Klausimai po paskaitos
-[Klausimai po paskaitos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Apžvalga ir savarankiškas mokymasis
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Jaribio la Kabla ya Somo
 
-[Jaribio la kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Urithi na Muundo katika Utengenezaji wa Michezo
 
@@ -222,7 +222,7 @@ Fikiria jinsi muundo wa pub-sub unavyoweza kuboresha mchezo. Ni sehemu zipi zina
 
 ## Jaribio la Baada ya Somo
 
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Mapitio na Kujisomea
 

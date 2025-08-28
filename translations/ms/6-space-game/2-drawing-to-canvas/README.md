@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Kanvas
 
@@ -214,7 +214,7 @@ Anda telah belajar tentang melukis dengan API Kanvas yang berfokuskan 2D; lihat 
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Kajian & Pembelajaran Kendiri
 

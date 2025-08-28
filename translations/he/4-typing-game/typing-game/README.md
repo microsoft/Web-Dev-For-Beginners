@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## שאלון לפני ההרצאה
 
-[שאלון לפני ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[שאלון לפני ההרצאה](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## תכנות מונחה אירועים
 
@@ -337,7 +337,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## מבחן לאחר ההרצאה
 
-[מבחן לאחר ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[מבחן לאחר ההרצאה](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## סקירה ולימוד עצמי
 

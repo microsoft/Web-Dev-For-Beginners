@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Giới thiệu
 
@@ -210,7 +210,7 @@ Thêm trình xử lý sự kiện mới vào closure của bạn để làm đi�
 
 ## Câu hỏi sau bài giảng
 
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Ôn tập & Tự học
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Maswali ya Awali ya Somo
 
-[Maswali ya awali ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Kuna njia tofauti za kuonyesha *hali ya mwisho* katika mchezo. Ni juu yako kama mtengenezaji wa mchezo kuamua ni kwa nini mchezo umeisha. Hapa kuna sababu kadhaa, tukizingatia tunazungumzia mchezo wa anga ambao umekuwa ukijenga hadi sasa:
 
@@ -220,7 +220,7 @@ Ongeza sauti! Je, unaweza kuongeza sauti ili kuboresha uchezaji wa mchezo wako, 
 
 ## Maswali ya Baada ya Somo
 
-[Maswali ya baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Mapitio na Kujisomea
 

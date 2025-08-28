@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्रि-लेक्चर क्विज
 
-[प्रि-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[प्रि-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### परिचय
 
@@ -278,7 +278,7 @@ const routes = {
 सँगै काम गरेर `localStorage` मा बचत गरिएको र लोड गरिएको कुरालाई एप काम गर्न आवश्यक पर्ने कुरामा मात्र सीमित गर्न प्रयास गर्नुहोस्।
 
 ## पोस्ट-लेक्चर क्विज
-[पोस्ट-व्याख्यान क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[पोस्ट-व्याख्यान क्विज](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## असाइनमेन्ट
 

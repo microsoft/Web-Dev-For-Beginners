@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra-Kuliah
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Apabila kita memikirkan tentang menulis kod, kita sentiasa mahu memastikan kod kita mudah dibaca. Walaupun ini mungkin kedengaran bertentangan, kod dibaca lebih banyak kali daripada ia ditulis. Salah satu alat utama dalam kotak peralatan pembangun untuk memastikan kod yang boleh diselenggara ialah **fungsi**.
 
@@ -194,7 +194,7 @@ Anda kini telah melihat kita mempunyai tiga cara untuk menyampaikan fungsi sebag
 Bolehkah anda menjelaskan dalam satu ayat perbezaan antara fungsi dan kaedah? Cuba!
 
 ## Kuiz Pasca-Kuliah
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Ulasan & Kajian Kendiri
 

@@ -201,7 +201,7 @@ Wakati msanidi programu anataka kujifunza kitu kipya, mara nyingi atageukia nyar
 Linganisheni baadhi ya lugha za programu. Ni sifa gani za kipekee za JavaScript dhidi ya Java? Na vipi kuhusu COBOL dhidi ya Go?
 
 ## Maswali Baada ya Somo
-[Maswali baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Maswali baada ya somo](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Mapitio na Kujisomea
 

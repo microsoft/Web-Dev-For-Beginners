@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennen luentoa -kysely
 
-[Ennen luentoa -kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Ennen luentoa -kysely](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas
 
@@ -214,7 +214,7 @@ Olet oppinut piirtämään 2D-keskeisellä Canvas API:lla; tutustu [WebGL API:ii
 
 ## Luentojälkeinen kysely
 
-[Luentojälkeinen kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Kertaus ja itseopiskelu
 

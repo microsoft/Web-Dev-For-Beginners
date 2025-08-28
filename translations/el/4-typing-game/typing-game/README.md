@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ερωτηματολόγιο πριν το μάθημα
 
-[Ερωτηματολόγιο πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Ερωτηματολόγιο πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Προγραμματισμός με βάση τα γεγονότα
 
@@ -309,7 +309,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## Κουίζ μετά το μάθημα
 
-[Κουίζ μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Κουίζ μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Ανασκόπηση & Αυτομελέτη
 

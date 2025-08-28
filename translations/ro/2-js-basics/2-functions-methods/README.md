@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Chestionar înainte de curs
-[Chestionar înainte de curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Chestionar înainte de curs](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Când ne gândim la scrierea codului, vrem mereu să ne asigurăm că acesta este ușor de citit. Deși poate suna contraintuitiv, codul este citit de multe ori mai des decât este scris. Un instrument esențial în trusa unui dezvoltator pentru a asigura un cod ușor de întreținut este **funcția**.
 
@@ -194,7 +194,7 @@ Acum ai văzut că avem trei moduri de a transmite o funcție ca parametru și t
 Poți explica într-o singură propoziție diferența dintre funcții și metode? Încearcă!
 
 ## Chestionar după curs
-[Chestionar după curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Chestionar după curs](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Recapitulare și studiu individual
 

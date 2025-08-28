@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/33)
 
 ¡Los juegos no son muy divertidos hasta que tienes alienígenas moviéndose por la pantalla! En este juego, utilizaremos dos tipos de movimientos:
 
@@ -386,7 +386,7 @@ Como puedes ver, tu código puede convertirse en 'código espagueti' cuando comi
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Revisión y Estudio Personal
 

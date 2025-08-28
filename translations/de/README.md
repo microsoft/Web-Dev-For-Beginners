@@ -118,9 +118,9 @@ Unsere Empfehlung ist die Verwendung von [Visual Studio Code](https://code.visua
 - eine Herausforderung  
 - ergänzende Lektüre  
 - Aufgabe  
-- [Quiz nach der Lektion](https://ff-quizzes.netlify.app/)  
+- [Quiz nach der Lektion](https://ff-quizzes.netlify.app/web/)  
 
-> **Hinweis zu den Quizfragen**: Alle Quizfragen befinden sich im Ordner Quiz-app, insgesamt 48 Quizfragen mit jeweils drei Fragen. Sie sind [hier](https://ff-quizzes.netlify.app/) verfügbar. Die Quiz-App kann lokal ausgeführt oder auf Azure bereitgestellt werden; folgen Sie den Anweisungen im `quiz-app`-Ordner.  
+> **Hinweis zu den Quizfragen**: Alle Quizfragen befinden sich im Ordner Quiz-app, insgesamt 48 Quizfragen mit jeweils drei Fragen. Sie sind [hier](https://ff-quizzes.netlify.app/web/) verfügbar. Die Quiz-App kann lokal ausgeführt oder auf Azure bereitgestellt werden; folgen Sie den Anweisungen im `quiz-app`-Ordner.  
 
 ## 🗃️ Lektionen  
 

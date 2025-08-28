@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ερωτηματολόγιο Πριν το Μάθημα
 
-[Ερωτηματολόγιο πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Ερωτηματολόγιο πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Κληρονομικότητα και Σύνθεση στην ανάπτυξη παιχνιδιών
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## Ερωτηματολόγιο Μετά το Μάθημα
 
-[Ερωτηματολόγιο μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Ερωτηματολόγιο μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Ανασκόπηση & Αυτομελέτη
 

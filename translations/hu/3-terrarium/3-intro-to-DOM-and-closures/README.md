@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás Előtti Kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Bevezetés
 
@@ -210,7 +210,7 @@ Adj új eseménykezelőt a zárványodhoz, hogy valami mást is csináljon a nö
 
 ## Előadás Utáni Kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Áttekintés és Önálló Tanulás
 

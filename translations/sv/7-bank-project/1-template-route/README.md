@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förhandsquiz
 
-[Förhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introduktion
 
@@ -306,7 +306,7 @@ Lägg till en ny mall och rutt för en tredje sida som visar krediterna för den
 
 ## Efterföreläsningsquiz
 
-[Efterföreläsningsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Efterföreläsningsquiz](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Granskning och självstudier
 

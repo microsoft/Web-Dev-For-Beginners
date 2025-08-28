@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) द्वारा
 
 ## प्री-लेक्चर क्विज़
-[प्री-लेक्चर क्विज़](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[प्री-लेक्चर क्विज़](https://ff-quizzes.netlify.app/web/quiz/13)
 
 यह पाठ जावास्क्रिप्ट की बुनियादी बातों को कवर करता है, जो वेब पर इंटरएक्टिविटी प्रदान करता है। इस पाठ में, आप ऐरे और लूप्स के बारे में जानेंगे, जो डेटा को मैनेज करने के लिए उपयोग किए जाते हैं।
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 ऐरे पर लूपिंग करने के अन्य तरीके भी हैं, जैसे कि [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), और [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)। अपने ऐरे लूप को इन तकनीकों में से किसी एक का उपयोग करके फिर से लिखें।
 
 ## पोस्ट-लेक्चर क्विज़
-[पोस्ट-लेक्चर क्विज़](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[पोस्ट-लेक्चर क्विज़](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## समीक्षा और स्व-अध्ययन
 

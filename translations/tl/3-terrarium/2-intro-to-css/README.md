@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Panimula
 
@@ -268,7 +268,7 @@ Upang makumpleto ang post-lecture quiz, dumaan sa Learn module na ito: [Style yo
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Review & Self Study
 

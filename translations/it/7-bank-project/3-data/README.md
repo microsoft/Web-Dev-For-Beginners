@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introduzione
 
@@ -335,7 +335,7 @@ Ecco un esempio di una pagina dashboard stilizzata:
 
 ## Quiz post-lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Compito
 

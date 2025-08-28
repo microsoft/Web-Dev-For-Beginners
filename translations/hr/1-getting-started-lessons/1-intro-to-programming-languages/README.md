@@ -200,7 +200,7 @@ Kada programer želi naučiti nešto novo, najvjerojatnije će se obratiti dokum
 Usporedite neke programske jezike. Koje su jedinstvene karakteristike JavaScripta u usporedbi s Javom? A što je s COBOL-om u usporedbi s Go-om?
 
 ## Kviz nakon predavanja  
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Pregled i samostalno učenje
 

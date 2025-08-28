@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Introducción
 
@@ -268,7 +268,7 @@ Para completar el cuestionario posterior a la clase, revisa este módulo de Lear
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Revisión y Estudio Personal
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Jaribio la Kabla ya Somo  
-[Jaribio la kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Somo hili linashughulikia misingi ya JavaScript, lugha inayowezesha mwingiliano kwenye wavuti.
 
@@ -199,7 +199,7 @@ Booleans zinaweza kuwa na thamani mbili tu: `true` au `false`. Booleans zinaweza
 JavaScript inajulikana kwa njia zake za kushangaza za kushughulikia aina za data mara kwa mara. Fanya utafiti kidogo kuhusu 'mambo ya kushangaza' haya. Kwa mfano: usikivu wa herufi kubwa na ndogo unaweza kukusumbua! Jaribu hili kwenye console yako: `let age = 1; let Age = 2; age == Age` (linatoa `false` -- kwa nini?). Ni mambo gani mengine ya kushangaza unaweza kupata?
 
 ## Jaribio la Baada ya Somo  
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Mapitio na Kujisomea
 

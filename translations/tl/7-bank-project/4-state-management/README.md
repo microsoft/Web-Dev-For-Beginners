@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Panimula
 
@@ -278,7 +278,7 @@ Ngayon na nire-reload natin ang account data tuwing ang dashboard ay na-load, sa
 Subukang magtulungan upang baguhin kung ano ang sine-save at niloload mula sa `localStorage` upang isama lamang ang mga bagay na talagang kinakailangan para gumana ang app.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Takdang-Aralin
 

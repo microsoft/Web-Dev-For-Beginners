@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz pred prednáškou
 
-[Kvíz pred prednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Dedičnosť a kompozícia vo vývoji hier
 
@@ -222,7 +222,7 @@ Premýšľajte o tom, ako môže vzor pub-sub zlepšiť hru. Ktoré časti by ma
 
 ## Kvíz po prednáške
 
-[Kvíz po prednáške](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Prehľad a samoštúdium
 

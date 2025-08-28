@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz pred prednáškou
 
-[Kvíz pred prednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Úvod
 
@@ -306,7 +306,7 @@ Pridajte novú šablónu a trasu pre tretiu stránku, ktorá zobrazí kredity pr
 
 ## Kvíz po prednáške
 
-[Kvíz po prednáške](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Prehľad a samoštúdium
 

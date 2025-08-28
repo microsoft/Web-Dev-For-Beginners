@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Wprowadzenie
 
@@ -158,7 +158,7 @@ Zbadaj kilka stron internetowych open source, które istnieją od dawna, i na po
 
 ## Quiz po wykładzie
 
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Przegląd i samodzielna nauka
 

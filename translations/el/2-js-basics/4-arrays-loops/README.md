@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Σκίτσο από την [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Κουίζ πριν το μάθημα
-[Κουίζ πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Κουίζ πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Αυτό το μάθημα καλύπτει τα βασικά της JavaScript, της γλώσσας που προσφέρει διαδραστικότητα στον ιστό. Σε αυτό το μάθημα, θα μάθετε για τους πίνακες και τους βρόχους, που χρησιμοποιούνται για τη διαχείριση δεδομένων.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Υπάρχουν και άλλοι τρόποι επανάληψης πινάκων εκτός από τους βρόχους for και while. Υπάρχουν οι [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), και [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Ξαναγράψτε τον βρόχο του πίνακά σας χρησιμοποιώντας μία από αυτές τις τεχνικές.
 
 ## Κουίζ μετά το μάθημα
-[Κουίζ μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Κουίζ μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Ανασκόπηση & Αυτομελέτη
 

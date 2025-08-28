@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## اختبار ما قبل المحاضرة
 
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### الوراثة والتركيب في تطوير الألعاب
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## اختبار ما بعد المحاضرة
 
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## المراجعة والدراسة الذاتية
 

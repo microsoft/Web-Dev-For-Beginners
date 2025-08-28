@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ερωτηματολόγιο πριν το μάθημα
 
-[Ερωτηματολόγιο πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Ερωτηματολόγιο πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Δείτε το βίντεο
 
@@ -231,7 +231,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ερωτηματολόγιο μετά το μάθημα
 
-[Ερωτηματολόγιο μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Ερωτηματολόγιο μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Ανασκόπηση & Αυτομελέτη
 

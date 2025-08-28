@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > สเก็ตโน้ตโดย [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## แบบทดสอบก่อนเรียน
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > พลังของเว็บอยู่ที่ความเป็นสากล การเข้าถึงโดยทุกคนไม่ว่าจะมีความพิการหรือไม่ถือเป็นสิ่งสำคัญ
 >

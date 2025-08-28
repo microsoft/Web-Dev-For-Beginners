@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før lektionen
 
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Introduktion
 
@@ -224,7 +224,7 @@ Vi har diskuteret flere typer API'er indtil videre i disse lektioner. Vælg en w
 
 ## Quiz efter lektionen
 
-[Quiz efter lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Gennemgang & Selvstudie
 

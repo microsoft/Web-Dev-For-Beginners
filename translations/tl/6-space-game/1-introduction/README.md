@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Inheritance at Composition sa paggawa ng laro
 
@@ -222,7 +222,7 @@ Pag-isipan kung paano mapapahusay ng pub-sub pattern ang isang laro. Aling mga b
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Review at Pag-aaral sa Sarili
 

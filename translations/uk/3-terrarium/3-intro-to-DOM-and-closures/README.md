@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Передлекційна вікторина
 
-[Передлекційна вікторина](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Передлекційна вікторина](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Вступ
 
@@ -211,7 +211,7 @@ function stopElementDrag() {
 
 ## Післялекційна вікторина
 
-[Післялекційна вікторина](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Післялекційна вікторина](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Огляд і самостійне навчання
 

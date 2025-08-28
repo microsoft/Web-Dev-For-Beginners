@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Introduzione
 
@@ -160,7 +160,7 @@ Dai un'occhiata a uno store di estensioni del browser e installane una sul tuo b
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Revisione e Studio Autonomo
 

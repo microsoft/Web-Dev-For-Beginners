@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förhandsquiz
 
-[Förhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Spel blir inte särskilt roliga förrän du har utomjordingar som rör sig på skärmen! I det här spelet kommer vi att använda två typer av rörelser:
 
@@ -386,7 +386,7 @@ Som du kan se kan din kod bli "spagettikod" när du börjar lägga till funktion
 
 ## Efterhandsquiz
 
-[Efterhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Efterhandsquiz](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Granskning & självstudier
 

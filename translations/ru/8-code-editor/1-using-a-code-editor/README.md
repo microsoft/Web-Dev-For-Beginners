@@ -19,7 +19,7 @@ TODO: добавить необязательное изображение
 
 <!---
 ## Викторина перед лекцией
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/3)
 ---->
 
 ## Цели обучения
@@ -159,7 +159,7 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 
 <!----
 ## Викторина после лекции
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/4)
 ---->
 
 ## Обзор и самостоятельное изучение

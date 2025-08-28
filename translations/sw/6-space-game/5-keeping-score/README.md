@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Maswali ya Awali ya Somo
 
-[Maswali ya awali ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Katika somo hili, utajifunza jinsi ya kuongeza alama kwenye mchezo na kuhesabu maisha.
 
@@ -187,7 +187,7 @@ Msimbo wako karibu umekamilika. Je, unaweza kufikiria hatua zako zinazofuata?
 
 ## Maswali ya Baada ya Somo
 
-[Maswali ya baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Mapitio na Kujisomea
 

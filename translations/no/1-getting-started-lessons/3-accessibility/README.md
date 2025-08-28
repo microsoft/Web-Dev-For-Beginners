@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz før forelesning
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Kraften i nettet ligger i dets universalitet. Tilgang for alle, uavhengig av funksjonsnedsettelse, er en essensiell del.
 >
@@ -227,7 +227,7 @@ Ta denne HTML-en og skriv den om for å være så tilgjengelig som mulig, gitt s
 ```
 
 ## Quiz etter forelesning
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Gjennomgang og selvstudium
 Mange regjeringer har lover om tilgjengelighetskrav. Les deg opp på tilgjengelighetslovene i ditt hjemland. Hva dekkes, og hva dekkes ikke? Et eksempel er [denne offentlige nettsiden](https://accessibility.blog.gov.uk/).

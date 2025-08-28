@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## แบบทดสอบก่อนการบรรยาย
 
-[แบบทดสอบก่อนการบรรยาย](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[แบบทดสอบก่อนการบรรยาย](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## การเขียนโปรแกรมแบบขับเคลื่อนด้วยเหตุการณ์
 
@@ -337,7 +337,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## แบบทดสอบหลังการบรรยาย
 
-[แบบทดสอบหลังการบรรยาย](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[แบบทดสอบหลังการบรรยาย](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## ทบทวนและศึกษาด้วยตนเอง
 

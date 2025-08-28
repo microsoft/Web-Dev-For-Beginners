@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > [Tomomi Imura](https://twitter.com/girlie_mac)의 스케치노트
 
 ## 강의 전 퀴즈
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## 소개
 
@@ -315,7 +315,7 @@ GitHub에서 모든 공개 저장소를 별표 표시(star), 구독(watch) 및 "
 친구와 짝을 이루어 서로의 코드를 작업하세요. 협력적으로 프로젝트를 생성하고, 코드를 포크하고, 브랜치를 생성하고, 변경 사항을 병합하세요.
 
 ## 강의 후 퀴즈
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## 복습 및 자기 학습
 

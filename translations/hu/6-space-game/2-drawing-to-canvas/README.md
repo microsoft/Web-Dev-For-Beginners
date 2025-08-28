@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## A vászon (Canvas)
 
@@ -214,7 +214,7 @@ Megtanultál rajzolni a 2D-re fókuszáló Canvas API-val; nézd meg a [WebGL AP
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Áttekintés és önálló tanulás
 

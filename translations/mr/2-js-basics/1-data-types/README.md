@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) यांनी तयार केले आहे
 
 ## प्री-लेक्चर क्विझ
-[प्री-लेक्चर क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[प्री-लेक्चर क्विझ](https://ff-quizzes.netlify.app/web/quiz/7)
 
 या धड्यात JavaScript च्या मूलभूत गोष्टींचा समावेश आहे, ही भाषा वेबवर संवाद साधण्यासाठी वापरली जाते.
 
@@ -199,7 +199,7 @@ Booleans फक्त दोन मूल्ये असू शकतात: `t
 JavaScript कधीकधी डेटा प्रकार हाताळण्याच्या आश्चर्यकारक पद्धतींसाठी कुप्रसिद्ध आहे. या 'gotchas' बद्दल थोडे संशोधन करा. उदाहरणार्थ: केस सेन्सिटिव्हिटी त्रास देऊ शकते! तुमच्या कन्सोलमध्ये हे करून पहा: `let age = 1; let Age = 2; age == Age` (उत्तर `false` -- का?). तुम्हाला आणखी कोणते gotchas सापडतात?
 
 ## पोस्ट-लेक्चर क्विझ
-[पोस्ट-लेक्चर क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[पोस्ट-लेक्चर क्विझ](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ennakkokysely
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Tässä oppitunnissa käsitellään JavaScriptin perusteita, kieltä, joka tuo interaktiivisuutta verkkoon. Opit taulukoista ja silmukoista, joita käytetään datan käsittelyyn.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Taulukoiden silmukoimiseen on muitakin tapoja kuin for- ja while-silmukat. Esimerkiksi [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) ja [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Kirjoita taulukkosilmukkasi uudelleen käyttäen yhtä näistä tekniikoista.
 
 ## Jälkikysely
-[Jälkikysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Kertaus ja itseopiskelu
 

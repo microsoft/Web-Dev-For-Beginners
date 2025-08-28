@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) यांच्याकडून
 
 ## व्याख्यानपूर्व प्रश्नमंजुषा
-[व्याख्यानपूर्व प्रश्नमंजुषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[व्याख्यानपूर्व प्रश्नमंजुषा](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > वेबची ताकद त्याच्या सार्वत्रिकतेत आहे. अपंगत्व असो वा नसो, प्रत्येकासाठी प्रवेश हा एक आवश्यक पैलू आहे.
 >

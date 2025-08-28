@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 課前測驗
 
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/33)
 
 遊戲中有外星人在螢幕上移動才會更有趣！在這個遊戲中，我們將使用兩種移動方式：
 
@@ -386,7 +386,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## 回顧與自學
 

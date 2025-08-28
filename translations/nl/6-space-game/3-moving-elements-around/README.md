@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Voorafgaand aan de Les
 
-[Quiz voorafgaand aan de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Games worden pas echt leuk als er aliens over het scherm bewegen! In dit spel maken we gebruik van twee soorten bewegingen:
 
@@ -386,7 +386,7 @@ Zoals je kunt zien, kan je code veranderen in 'spaghetticode' wanneer je functie
 
 ## Quiz Na de Les
 
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Herziening & Zelfstudie
 

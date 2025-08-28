@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Hendelsesdrevet programmering
 
@@ -337,7 +337,7 @@ Legg til mer funksjonalitet
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Gjennomgang og selvstudium
 

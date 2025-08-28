@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Öröklődés és kompozíció a játékfejlesztésben
 
@@ -222,7 +222,7 @@ Gondold át, hogyan javíthatja a pub-sub minta egy játékot. Mely részeknek k
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Áttekintés és önálló tanulás
 

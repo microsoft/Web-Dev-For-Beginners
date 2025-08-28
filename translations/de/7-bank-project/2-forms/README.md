@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Lektion
 
-[Quiz vor der Lektion](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Quiz vor der Lektion](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Einführung
 
@@ -296,7 +296,7 @@ Hier ist ein Beispiel, wie die endgültige Login-Seite nach ein wenig Styling au
 
 ## Quiz nach der Vorlesung
 
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Überprüfung & Selbststudium
 

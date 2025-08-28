@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > স্কেচনোট করেছেন [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## প্রাক-লেকচার কুইজ
-[প্রাক-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[প্রাক-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/7)
 
 এই পাঠে জাভাস্ক্রিপ্টের বেসিক বিষয়গুলো আলোচনা করা হয়েছে, যা ওয়েবের ইন্টারঅ্যাকটিভিটি প্রদান করে।
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 জাভাস্ক্রিপ্ট মাঝে মাঝে ডেটা টাইপস পরিচালনার অপ্রত্যাশিত উপায়গুলোর জন্য কুখ্যাত। এই 'gotchas' সম্পর্কে একটু গবেষণা করুন। উদাহরণস্বরূপ: কেস সেনসিটিভিটি সমস্যার কারণ হতে পারে! এটি আপনার কনসোলে চেষ্টা করুন: `let age = 1; let Age = 2; age == Age` (ফলাফল `false` -- কেন?)। আপনি আর কী কী gotchas খুঁজে পেতে পারেন?
 
 ## পোস্ট-লেকচার কুইজ
-[পোস্ট-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[পোস্ট-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## পর্যালোচনা ও স্ব-অধ্যয়ন
 

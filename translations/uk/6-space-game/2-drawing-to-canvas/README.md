@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Передлекційний тест
 
-[Передлекційний тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Передлекційний тест](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas
 
@@ -214,7 +214,7 @@ npm start
 
 ## Післялекційний тест
 
-[Післялекційний тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Післялекційний тест](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Огляд і самостійне навчання
 

@@ -117,9 +117,9 @@ We recommend using [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=
 - A challenge  
 - Supplemental reading  
 - Assignment  
-- [Post-lesson quiz](https://ff-quizzes.netlify.app/)  
+- [Post-lesson quiz](https://ff-quizzes.netlify.app/web/)  
 
-> **A note about quizzes**: All quizzes are located in the Quiz-app folder, with 48 quizzes of three questions each. They are available [here](https://ff-quizzes.netlify.app/). The quiz app can be run locally or deployed to Azure; follow the instructions in the `quiz-app` folder.  
+> **A note about quizzes**: All quizzes are located in the Quiz-app folder, with 48 quizzes of three questions each. They are available [here](https://ff-quizzes.netlify.app/web/). The quiz app can be run locally or deployed to Azure; follow the instructions in the `quiz-app` folder.  
 
 ## 🗃️ Lessons  
 

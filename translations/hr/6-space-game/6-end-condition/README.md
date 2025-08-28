@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Postoji mnogo načina za izražavanje *uvjeta završetka* u igri. Na vama kao kreatoru igre je da odredite zašto je igra završila. Evo nekoliko razloga, pod pretpostavkom da govorimo o svemirskoj igri koju ste do sada gradili:
 
@@ -220,7 +220,7 @@ Dodajte zvuk! Možete li dodati zvuk kako biste poboljšali igranje, možda kada
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Pregled i samostalno učenje
 

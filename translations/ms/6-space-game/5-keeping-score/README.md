@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Dalam pelajaran ini, anda akan belajar cara menambah skor dalam permainan dan mengira nyawa.
 
@@ -187,7 +187,7 @@ Kod anda hampir siap. Bolehkah anda membayangkan langkah seterusnya?
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Ulasan & Kajian Kendiri
 

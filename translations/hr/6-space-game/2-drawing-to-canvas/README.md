@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Platno
 
@@ -214,7 +214,7 @@ Naučili ste o crtanju s Canvas API-jem fokusiranim na 2D; pogledajte [WebGL API
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Pregled i samostalno učenje
 

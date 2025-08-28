@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kvíz před lekcí
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Tato lekce pokrývá základy JavaScriptu, jazyka, který zajišťuje interaktivitu na webu.
 
@@ -199,7 +199,7 @@ Booleovské hodnoty mohou mít pouze dvě hodnoty: `true` nebo `false`. Booleovs
 JavaScript je známý svými překvapivými způsoby, jak občas zacházet s datovými typy. Proveďte trochu výzkumu o těchto 'záludnostech'. Například: citlivost na velikost písmen může být zrádná! Vyzkoušejte toto ve své konzoli: `let age = 1; let Age = 2; age == Age` (vyhodnotí `false` -- proč?). Jaké další záludnosti můžete najít?
 
 ## Kvíz po lekci
-[Kvíz po lekci](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Přehled & Samostudium
 

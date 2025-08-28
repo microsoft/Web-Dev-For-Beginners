@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/13)
 
 This lesson introduces the fundamentals of JavaScript, the programming language that adds interactivity to websites. You'll learn about arrays and loops, which are essential for working with and manipulating data.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 There are other ways to loop over arrays besides `for` and `while` loops. Explore [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), and [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Rewrite your array loop using one of these methods.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Review & Self Study
 

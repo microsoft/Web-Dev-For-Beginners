@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скетчноут від [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Тест перед лекцією
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Вступ
 
@@ -315,7 +315,7 @@ Pull request — це місце для порівняння та обговор
 Попрацюйте разом із другом над кодом один одного. Створіть проєкт спільно, форкніть код, створіть гілки та об'єднайте зміни.
 
 ## Післялекційний тест
-[Післялекційний тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Післялекційний тест](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Огляд і самостійне навчання
 

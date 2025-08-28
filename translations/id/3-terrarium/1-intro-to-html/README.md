@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Pelajaran
 
-[Kuis pra-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Tonton video
 
@@ -231,7 +231,7 @@ Ada beberapa tag 'lama' yang menarik di HTML yang masih menyenangkan untuk dimai
 
 ## Kuis Pasca-Pelajaran
 
-[Kuis pasca-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Tinjauan & Studi Mandiri
 

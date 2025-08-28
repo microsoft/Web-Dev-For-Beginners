@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Тест перед лекцією
 
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Перегляньте відео
 
@@ -231,7 +231,7 @@ HTML, або HyperText Markup Language, — це "скелет" вебу. Якщ
 
 ## Тест після лекції
 
-[Тест після лекції](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Тест після лекції](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Огляд і самостійне навчання
 

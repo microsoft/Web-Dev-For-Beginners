@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## แบบทดสอบก่อนเรียน
 
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### บทนำ
 
@@ -92,7 +92,7 @@ const account = state.account;
 ตอนนี้เราได้ตั้งค่าออบเจ็กต์ `state` เพื่อเก็บข้อมูลของเราแล้ว ขั้นตอนต่อไปคือการรวมศูนย์การอัปเดต เป้าหมายคือทำให้การติดตามการเปลี่ยนแปลงและเวลาที่เกิดขึ้นง่ายขึ้น
 
 เพื่อหลีกเลี่ยงการเปลี่ยนแปลงที่เกิดขึ้นกับออบเจ็กต์ `state` การพิจารณาให้มันเป็น [*immutable*](https://en.wikipedia.org/wiki/Immutable_object) หรือไม่สามารถแก้ไขได้เลยก็เป็นแนวปฏิบัติที่ดี
-[แบบทดสอบหลังการบรรยาย](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[แบบทดสอบหลังการบรรยาย](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## งานที่ได้รับมอบหมาย
 

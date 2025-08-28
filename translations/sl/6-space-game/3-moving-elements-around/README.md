@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Igre niso prav zabavne, dokler se po zaslonu ne začnejo premikati vesoljci! V tej igri bomo uporabili dve vrsti gibanja:
 
@@ -386,7 +386,7 @@ Kot lahko vidite, se vaša koda lahko spremeni v 'špagetno kodo', ko začnete d
 
 ## Zaključni kviz
 
-[Zaključni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Zaključni kviz](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Pregled in samostojno učenje
 

@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 강의 전 퀴즈
 
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### 소개
 
@@ -210,7 +210,7 @@ function stopElementDrag() {
 
 ## 강의 후 퀴즈
 
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## 복습 및 자습
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Pengenalan
 
@@ -278,7 +278,7 @@ Sekarang kita memuat semula data akaun setiap kali papan pemuka dimuatkan, adaka
 Cuba bekerjasama untuk mengubah apa yang disimpan dan dimuatkan dari `localStorage` untuk hanya memasukkan apa yang benar-benar diperlukan untuk aplikasi berfungsi.
 
 ## Kuiz Pasca-Kuliah
-[Kuiz selepas kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Kuiz selepas kuliah](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Tugasan
 

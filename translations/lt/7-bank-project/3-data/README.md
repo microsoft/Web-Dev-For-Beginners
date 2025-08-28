@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Klausimynas prieš paskaitą
 
-[Klausimynas prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Klausimynas prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Įvadas
 
@@ -325,7 +325,7 @@ Dirbkite kartu, kad prietaisų skydelio puslapis atrodytų kaip tikra bankininky
 
 ## Po paskaitos testas
 
-[Po paskaitos testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Po paskaitos testas](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Užduotis
 

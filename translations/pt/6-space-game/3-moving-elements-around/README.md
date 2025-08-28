@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Questionário Pré-Aula
 
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Os jogos não são muito divertidos até que tenhamos alienígenas a movimentar-se no ecrã! Neste jogo, vamos utilizar dois tipos de movimentos:
 
@@ -386,7 +386,7 @@ Como podes ver, o teu código pode transformar-se em 'código espaguete' quando 
 
 ## Questionário Pós-Aula
 
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Revisão & Autoestudo
 

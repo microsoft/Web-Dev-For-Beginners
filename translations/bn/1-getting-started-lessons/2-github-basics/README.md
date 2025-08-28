@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > স্কেচনোট: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## প্রাক-পাঠ কুইজ
-[প্রাক-পাঠ কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[প্রাক-পাঠ কুইজ](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## পরিচিতি
 
@@ -315,7 +315,7 @@ Ensure you go the GitHub page for the forked repo next and remove the remote bra
 একজন বন্ধুর সাথে জুটি বাঁধুন এবং একে অপরের কোডে কাজ করুন। একটি প্রকল্প যৌথভাবে তৈরি করুন, কোড fork করুন, branch তৈরি করুন, এবং পরিবর্তনগুলো merge করুন।
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## পর্যালোচনা এবং স্ব-অধ্যয়ন
 

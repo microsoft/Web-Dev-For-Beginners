@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Bevezetés
 
@@ -306,7 +306,7 @@ Adj hozzá egy új sablont és útvonalat egy harmadik oldalhoz, amely az alkalm
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Áttekintés és önálló tanulás
 

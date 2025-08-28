@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Jaribio la Kabla ya Somo  
-[Jaribio la kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Tunapofikiria kuhusu kuandika msimbo, tunapaswa kuhakikisha kuwa msimbo wetu unasomeka. Ingawa hili linaweza kuonekana kinyume na matarajio, msimbo husomwa mara nyingi zaidi kuliko unavyoandikwa. Chombo kimoja muhimu katika kisanduku cha zana cha msanidi programu kuhakikisha msimbo unaoweza kudumishwa ni **kazi**.
 
@@ -194,7 +194,7 @@ Sasa umeona tuna njia tatu za kupitisha kazi kama kigezo na unaweza kuwa unajiul
 Je, unaweza kuelezea kwa sentensi moja tofauti kati ya kazi na mbinu? Jaribu!
 
 ## Jaribio la Baada ya Somo  
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Mapitio na Kujisomea
 

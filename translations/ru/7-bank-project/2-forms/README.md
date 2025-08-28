@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Вопросы перед лекцией
 
-[Вопросы перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Вопросы перед лекцией](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Введение
 
@@ -296,7 +296,7 @@ async function register() {
 
 ## Викторина после лекции
 
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Обзор и самостоятельное изучение
 

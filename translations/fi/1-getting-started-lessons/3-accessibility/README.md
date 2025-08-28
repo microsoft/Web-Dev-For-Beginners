@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ennakkokysely
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Verkon voima on sen universaalisuudessa. Pääsy kaikille, riippumatta vammaisuudesta, on olennainen osa.
 >
@@ -227,7 +227,7 @@ Ota tämä HTML ja kirjoita se uudelleen mahdollisimman saavutettavaksi käyttä
 ```
 
 ## Jälkikysely
-[Jälkikysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Kertaus ja itseopiskelu
 Monilla hallituksilla on lakeja, jotka koskevat saavutettavuusvaatimuksia. Tutustu oman maasi saavutettavuuslakeihin. Mitä ne kattavat ja mitä eivät? Esimerkkinä on [tämä hallituksen verkkosivusto](https://accessibility.blog.gov.uk/).

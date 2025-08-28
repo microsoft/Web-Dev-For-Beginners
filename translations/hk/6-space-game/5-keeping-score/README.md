@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 課前測驗
 
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/37)
 
 在這一課中，你將學習如何在遊戲中加入分數計算以及生命值。
 
@@ -187,7 +187,7 @@ npm start
 
 ## 課後測驗
 
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## 回顧與自學
 

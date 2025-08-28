@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Квиз пре предавања
 
-[Квиз пре предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Квиз пре предавања](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Програмирање засновано на догађајима
 
@@ -335,7 +335,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## Квиз након предавања
 
-[Квиз након предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Квиз након предавања](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Преглед и самостално учење
 

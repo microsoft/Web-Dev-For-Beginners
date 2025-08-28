@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Предварителен тест
 
-[Предварителен тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Предварителен тест](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas
 
@@ -214,7 +214,7 @@ npm start
 
 ## Последващ тест
 
-[Последващ тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Последващ тест](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Преглед и самостоятелно обучение
 

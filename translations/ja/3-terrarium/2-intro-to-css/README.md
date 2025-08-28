@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 講義前クイズ
 
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### はじめに
 
@@ -267,7 +267,7 @@ HTMLマークアップ内の各植物には、IDとクラスの組み合わせ�
 
 ## 講義後クイズ
 
-[講義後クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## 復習と自己学習
 

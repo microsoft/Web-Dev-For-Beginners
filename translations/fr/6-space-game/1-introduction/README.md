@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz avant le cours
 
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Héritage et composition dans le développement de jeux
 
@@ -222,7 +222,7 @@ Réfléchissez à la manière dont le modèle pub-sub peut améliorer un jeu. Qu
 
 ## Quiz après le cours
 
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Révision et étude personnelle
 

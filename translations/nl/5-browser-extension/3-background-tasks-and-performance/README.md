@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-lezing Quiz
 
-[Pre-lezing quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Pre-lezing quiz](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Introductie
 
@@ -158,7 +158,7 @@ Onderzoek enkele open source websites die al lang bestaan, en kijk op basis van 
 
 ## Post-lezing Quiz
 
-[Post-lezing quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Post-lezing quiz](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Review & Zelfstudie
 

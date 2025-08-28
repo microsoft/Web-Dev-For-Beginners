@@ -201,7 +201,7 @@ Når en utvikler ønsker å lære noe nytt, vil de mest sannsynlig vende seg til
 Sammenlign noen programmeringsspråk. Hva er noen av de unike egenskapene til JavaScript vs. Java? Hva med COBOL vs. Go?
 
 ## Quiz etter leksjonen
-[Quiz etter leksjonen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Quiz etter leksjonen](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Gjennomgang og selvstudium
 

@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Iliustracija: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Klausimynas prieš paskaitą
-[Klausimynas prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Klausimynas prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Įvadas
 
@@ -311,7 +311,7 @@ Projektai taip pat gali turėti diskusijas forumuose, el. pašto sąrašuose arb
 Dirbkite poroje su draugu prie vienas kito kodo. Sukurkite projektą kartu, forkinkite kodą, kurkite šakas ir sujunkite pakeitimus.
 
 ## Po paskaitos testas
-[Po paskaitos testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Po paskaitos testas](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Peržiūra ir savarankiškas mokymasis
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## שאלון לפני השיעור
 
-[שאלון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[שאלון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/35)
 
 בשיעור הזה תלמדו איך לירות לייזרים באמצעות JavaScript! נוסיף שני דברים למשחק שלנו:
 
@@ -295,7 +295,7 @@ npm start
 
 ## שאלון אחרי השיעור
 
-[שאלון אחרי השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[שאלון אחרי השיעור](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## סקירה ולימוד עצמי
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Квиз пре предавања
 
-[Квиз пре предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Квиз пре предавања](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Увод
 
@@ -325,7 +325,7 @@ updateElement('transactions', transactionsRows);
 
 ## Квиз након предавања
 
-[Квиз након предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Квиз након предавања](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Задатак
 

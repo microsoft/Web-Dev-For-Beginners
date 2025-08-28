@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Donošenje odluka i kontroliranje redoslijeda izvršavanja koda čini vaš kod ponovno upotrebljivim i robusnim. Ovaj dio pokriva sintaksu za kontrolu toka podataka u JavaScriptu i njegovu važnost kada se koristi s Boolean tipovima podataka.
 
@@ -214,7 +214,7 @@ Napravite program koji je prvo napisan s logičkim operatorima, a zatim ga prepi
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Pregled i samostalno učenje
 

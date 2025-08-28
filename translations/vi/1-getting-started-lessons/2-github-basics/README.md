@@ -15,7 +15,7 @@ Bài học này sẽ giới thiệu những kiến thức cơ bản về GitHub,
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Câu hỏi trước bài học
-[Câu hỏi trước bài học](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Câu hỏi trước bài học](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Giới thiệu
 
@@ -315,7 +315,7 @@ Các dự án cũng có thể có các cuộc thảo luận trong diễn đàn, 
 Hợp tác với một người bạn để làm việc trên mã của nhau. Tạo một dự án cùng nhau, fork mã, tạo nhánh, và hợp nhất các thay đổi.
 
 ## Câu hỏi sau bài giảng
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Ôn tập & Tự học
 

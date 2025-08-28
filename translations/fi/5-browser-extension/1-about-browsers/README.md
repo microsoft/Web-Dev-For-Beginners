@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Johdanto
 
@@ -160,7 +160,7 @@ Tutustu selaimen laajennuskauppaan ja asenna yksi selaimeesi. Voit tarkastella s
 
 ## Jälkikysely
 
-[Jälkikysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Kertaus ja itseopiskelu
 

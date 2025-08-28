@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скетчнот від [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Тест перед лекцією
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Сила вебу полягає в його універсальності. Доступ для всіх, незалежно від обмежень, є важливим аспектом.
 >

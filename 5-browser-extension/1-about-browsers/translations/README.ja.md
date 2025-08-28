@@ -5,7 +5,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23?loc=ja)
+[レッスン前の小テスト](https://ff-quizzes.netlify.app/web/quiz/23?loc=ja)
 
 ### イントロダクション
 
@@ -149,7 +149,7 @@ npm install
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24?loc=ja)
+[レッスン後の小テスト](https://ff-quizzes.netlify.app/web/quiz/24?loc=ja)
 
 ## 復習と自己学習
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar Pre-Lecție
 
-[Chestionar pre-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Jocurile nu sunt prea distractive până când nu ai extratereștri care se mișcă pe ecran! În acest joc, vom folosi două tipuri de mișcări:
 
@@ -386,7 +386,7 @@ După cum poți vedea, codul tău poate deveni un "cod spaghetti" atunci când �
 
 ## Chestionar Post-Lecție
 
-[Chestionar post-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Recapitulare și Studiu Individual
 

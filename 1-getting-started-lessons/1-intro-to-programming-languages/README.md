@@ -192,7 +192,7 @@ When a developer wants to learn something new, they'll most likely turn to docum
 Compare some programming languages. What are some of the unique traits of JavaScript vs. Java? How about COBOL vs. Go?
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/)
 
 ## Review & Self Study
 

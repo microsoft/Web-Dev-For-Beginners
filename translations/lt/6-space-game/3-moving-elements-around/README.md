@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Prieš paskaitą testas
 
-[Prieš paskaitą testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Prieš paskaitą testas](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Žaidimai nėra labai smagūs, kol ekrane nesimato judančių ateivių! Šiame žaidime naudosime dviejų tipų judesius:
 
@@ -386,7 +386,7 @@ Kaip matote, jūsų kodas gali tapti „spagečių kodu“, kai pradedate pridė
 
 ## Po paskaitos testas
 
-[Po paskaitos testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Po paskaitos testas](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Peržiūra ir savarankiškas mokymasis
 

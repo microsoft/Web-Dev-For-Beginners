@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## חידון לפני ההרצאה
 
-[חידון לפני ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[חידון לפני ההרצאה](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### מבוא
 
@@ -268,7 +268,7 @@ h1 {
 
 ## חידון לאחר ההרצאה
 
-[חידון לאחר ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[חידון לאחר ההרצאה](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## סקירה ולמידה עצמית
 

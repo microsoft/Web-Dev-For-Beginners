@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Maswali ya Kabla ya Somo
 
-[Maswali ya kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Maswali ya kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Utangulizi
 
@@ -268,7 +268,7 @@ Ili kukamilisha maswali ya baada ya somo, pitia moduli hii ya Kujifunza: [Weka m
 
 ## Maswali ya Baada ya Somo
 
-[Maswali ya baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Mapitio na Kujisomea
 

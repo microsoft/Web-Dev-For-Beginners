@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## প্রাক-লেকচার কুইজ
 
-[প্রাক-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[প্রাক-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/33)
 
 গেম তখনই মজার হয় যখন পর্দায় এলিয়েনরা ঘুরে বেড়ায়! এই গেমে আমরা দুটি ধরণের গতি ব্যবহার করব:
 
@@ -386,7 +386,7 @@ npm start
 
 ## পোস্ট-লেকচার কুইজ
 
-[পোস্ট-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[পোস্ট-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## পর্যালোচনা ও স্ব-অধ্যয়ন
 

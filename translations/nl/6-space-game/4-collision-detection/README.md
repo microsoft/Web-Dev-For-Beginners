@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/35)
 
 In deze les leer je hoe je lasers kunt afvuren met JavaScript! We voegen twee dingen toe aan ons spel:
 
@@ -295,7 +295,7 @@ Voeg een explosie toe! Bekijk de spelassets in [de Space Art-repo](../../../../6
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Review & Zelfstudie
 

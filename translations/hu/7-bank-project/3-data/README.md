@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Bevezetés
 
@@ -296,7 +296,7 @@ Dolgozzatok együtt azon, hogy a vezérlőpult oldal úgy nézzen ki, mint egy v
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Feladat
 

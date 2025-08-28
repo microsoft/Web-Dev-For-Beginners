@@ -123,9 +123,9 @@ Microsoft Cloud Advocates가 제공하는 12주간의 종합 코스를 통해 �
 - 챌린지  
 - 보충 읽기 자료  
 - 과제  
-- [사후 레슨 퀴즈](https://ff-quizzes.netlify.app/)  
+- [사후 레슨 퀴즈](https://ff-quizzes.netlify.app/web/)  
 
-> **퀴즈에 대한 참고 사항**: 모든 퀴즈는 Quiz-app 폴더에 포함되어 있으며, 총 48개의 퀴즈가 각 3문제로 구성되어 있습니다. [여기](https://ff-quizzes.netlify.app/)에서 이용 가능하며, 로컬에서 실행하거나 Azure에 배포할 수 있습니다. `quiz-app` 폴더의 지침을 따르세요.  
+> **퀴즈에 대한 참고 사항**: 모든 퀴즈는 Quiz-app 폴더에 포함되어 있으며, 총 48개의 퀴즈가 각 3문제로 구성되어 있습니다. [여기](https://ff-quizzes.netlify.app/web/)에서 이용 가능하며, 로컬에서 실행하거나 Azure에 배포할 수 있습니다. `quiz-app` 폴더의 지침을 따르세요.  
 
 ## 🗃️ 레슨  
 

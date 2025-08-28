@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Oglejte si video
 
@@ -231,7 +231,7 @@ Obstajajo nekateri 'starejši' elementi v HTML, ki so še vedno zabavni za upora
 
 ## Zaključni kviz
 
-[Zaključni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Zaključni kviz](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Pregled in samostojno učenje
 

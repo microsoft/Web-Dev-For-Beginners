@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/35)
 
 In this lesson, you'll learn how to shoot lasers using JavaScript! We'll add two new features to our game:
 
@@ -295,7 +295,7 @@ Add an explosion! Check out the game assets in [the Space Art repo](../../../../
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Review & Self Study
 

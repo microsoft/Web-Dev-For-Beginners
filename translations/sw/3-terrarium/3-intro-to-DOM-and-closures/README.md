@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Jaribio la Kabla ya Somo
 
-[Jaribio la kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Utangulizi
 
@@ -210,7 +210,7 @@ Ongeza mdhibiti mpya wa tukio kwenye closure yako ili kufanya jambo zaidi kwa mi
 
 ## Jaribio la Baada ya Somo
 
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Mapitio na Kujisomea
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förhandsquiz
 
-[Förhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/35)
 
 I den här lektionen kommer du att lära dig hur man skjuter laser med JavaScript! Vi kommer att lägga till två saker i vårt spel:
 
@@ -295,7 +295,7 @@ Lägg till en explosion! Ta en titt på spelresurserna i [Space Art-repot](../..
 
 ## Efterhandsquiz
 
-[Efterhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Efterhandsquiz](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Granskning & Självstudier
 

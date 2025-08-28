@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/33)
 
 游戏只有在屏幕上有外星人跑来跑去时才会变得有趣！在这个游戏中，我们将使用两种类型的运动：
 
@@ -386,7 +386,7 @@ npm start
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## 复习与自学
 

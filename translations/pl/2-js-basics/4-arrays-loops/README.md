@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz przed wykładem
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Ta lekcja obejmuje podstawy JavaScript, języka, który zapewnia interaktywność w sieci. W tej lekcji nauczysz się o tablicach i pętlach, które są używane do manipulacji danymi.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Istnieją inne sposoby iterowania po tablicach niż pętle for i while. Są to [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) oraz [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Przepisz swoją pętlę tablicową, używając jednej z tych technik.
 
 ## Quiz po wykładzie
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Przegląd i samodzielna nauka
 

@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Uvod
 
@@ -160,7 +160,7 @@ Pogledajte trgovinu proširenja preglednika i instalirajte jedno u svoj pregledn
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Pregled i samostalno učenje
 

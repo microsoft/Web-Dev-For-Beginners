@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Uvod
 
@@ -268,7 +268,7 @@ Za dokončanje kviza po predavanju pojdite skozi ta modul Learn: [Oblikujte svoj
 
 ## Kviz po predavanju
 
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Pregled in samostojno učenje
 

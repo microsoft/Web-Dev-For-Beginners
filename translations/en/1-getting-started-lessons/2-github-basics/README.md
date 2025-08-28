@@ -15,7 +15,7 @@ This lesson introduces the basics of GitHub, a platform for hosting and managing
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Introduction
 
@@ -314,7 +314,7 @@ Projects may also have discussions in forums, mailing lists, or chat platforms l
 Pair up with a friend to work on each other's code. Create a project together, fork code, create branches, and merge changes.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Review & Self Study
 

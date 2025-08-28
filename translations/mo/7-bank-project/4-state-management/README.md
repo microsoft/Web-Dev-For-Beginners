@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 課前測驗
 
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### 簡介
 
@@ -278,7 +278,7 @@ const routes = {
 試著一起合作，修改 `localStorage` 中保存和加載的內容，使其僅包含應用程式正常運作所需的數據。
 
 ## 課後測驗
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## 作業
 

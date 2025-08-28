@@ -118,9 +118,9 @@ Nossa recomendação é usar o [Visual Studio Code](https://code.visualstudio.co
 - Um desafio  
 - Leituras complementares  
 - Tarefa  
-- [Quiz pós-aula](https://ff-quizzes.netlify.app/)  
+- [Quiz pós-aula](https://ff-quizzes.netlify.app/web/)  
 
-> **Uma observação sobre os quizzes**: Todos os quizzes estão contidos na pasta Quiz-app, totalizando 48 quizzes com três perguntas cada. Eles estão disponíveis [aqui](https://ff-quizzes.netlify.app/). O aplicativo de quiz pode ser executado localmente ou implantado no Azure; siga as instruções na pasta `quiz-app`.  
+> **Uma observação sobre os quizzes**: Todos os quizzes estão contidos na pasta Quiz-app, totalizando 48 quizzes com três perguntas cada. Eles estão disponíveis [aqui](https://ff-quizzes.netlify.app/web/). O aplicativo de quiz pode ser executado localmente ou implantado no Azure; siga as instruções na pasta `quiz-app`.  
 
 ## 🗃️ Aulas  
 

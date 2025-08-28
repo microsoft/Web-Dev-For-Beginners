@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Introduction
 
@@ -215,7 +215,7 @@ Add a new event handler to your closure to add more functionality to the plants.
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Review & Self Study
 

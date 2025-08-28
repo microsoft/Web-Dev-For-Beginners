@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Vorlesung
 
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Ereignisgesteuerte Programmierung
 
@@ -337,7 +337,7 @@ Fügen Sie weitere Funktionen hinzu:
 
 ## Quiz nach der Vorlesung
 
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Überprüfung & Selbststudium
 

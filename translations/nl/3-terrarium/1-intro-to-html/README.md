@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Les Quiz
 
-[Pre-les quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Pre-les quiz](https://ff-quizzes.netlify.app/web/quiz/15)
 
 
 > Bekijk de video
@@ -232,7 +232,7 @@ Er zijn enkele 'oude' tags in HTML die nog steeds leuk zijn om mee te spelen, ho
 
 ## Post-Les Quiz
 
-[Post-les quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Post-les quiz](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Review & Zelfstudie
 

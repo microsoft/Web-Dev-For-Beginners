@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förhandsquiz
 
-[Förhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/15)
 
 
 > Titta på videon
@@ -232,7 +232,7 @@ Det finns några gamla 'äldre' taggar i HTML som fortfarande är roliga att lek
 
 ## Efterhandsquiz
 
-[Efterhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Efterhandsquiz](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Granskning & Självstudier
 

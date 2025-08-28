@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Jaribio la Kabla ya Somo  
-[Jaribio la kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Somo hili linashughulikia misingi ya JavaScript, lugha inayowezesha mwingiliano kwenye wavuti. Katika somo hili, utajifunza kuhusu arrays na loops, ambavyo hutumika kudhibiti data.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Kuna njia nyingine za kurudia arrays zaidi ya for na while loops. Kuna [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), na [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Andika upya loop yako ya array ukitumia mojawapo ya mbinu hizi.
 
 ## Jaribio la Baada ya Somo  
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Mapitio na Kujisomea
 

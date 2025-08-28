@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скица од [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Квиз пре предавања  
-[Квиз пре предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Квиз пре предавања](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Ова лекција покрива основе JavaScript-а, језика који омогућава интерактивност на вебу. У овој лекцији ћете научити о низовима и петљама, који се користе за манипулацију подацима.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Постоје и други начини проласка кроз низове осим for и while петљи. Постоје [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), и [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Препишите вашу петљу кроз низ користећи једну од ових техника.
 
 ## Квиз након предавања  
-[Квиз након предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Квиз након предавања](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Преглед и самостално учење
 

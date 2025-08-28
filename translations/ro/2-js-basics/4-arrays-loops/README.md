@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Chestionar înainte de curs
-[Chestionar înainte de curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Chestionar înainte de curs](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Această lecție acoperă elementele de bază ale JavaScript, limbajul care oferă interactivitate pe web. În această lecție, vei învăța despre tablouri și bucle, care sunt utilizate pentru a manipula datele.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Există și alte moduri de a parcurge tablourile, în afară de buclele for și while. Există [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) și [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Rescrie bucla tabloului tău folosind una dintre aceste tehnici.
 
 ## Chestionar după curs
-[Chestionar după curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Chestionar după curs](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Recapitulare și Studiu Individual
 

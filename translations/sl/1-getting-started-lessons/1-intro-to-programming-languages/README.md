@@ -201,7 +201,7 @@ Ko želi razvijalec izvedeti nekaj novega, se najverjetneje obrne na dokumentaci
 Primerjajte nekaj programskih jezikov. Katere so nekatere edinstvene značilnosti JavaScripta v primerjavi z Javo? Kaj pa COBOL v primerjavi z Go?
 
 ## Kviz po predavanju
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Pregled in samostojno učenje
 

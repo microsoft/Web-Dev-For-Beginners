@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài học
 
-[Câu hỏi trước bài học](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Câu hỏi trước bài học](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Giới thiệu
 
@@ -224,7 +224,7 @@ Chúng ta đã thảo luận về một số loại API trong các bài học n�
 
 ## Câu hỏi sau bài học
 
-[Câu hỏi sau bài học](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Câu hỏi sau bài học](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Ôn tập & Tự học
 

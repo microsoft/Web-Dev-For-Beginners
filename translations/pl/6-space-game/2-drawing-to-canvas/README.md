@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Płótno (Canvas)
 
@@ -214,7 +214,7 @@ Nauczyłeś się rysować za pomocą Canvas API skoncentrowanego na 2D; zapoznaj
 
 ## Quiz po wykładzie
 
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Przegląd i samodzielna nauka
 

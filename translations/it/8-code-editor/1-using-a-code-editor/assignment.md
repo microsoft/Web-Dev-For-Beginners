@@ -19,7 +19,7 @@ TODO: aggiungere un'immagine opzionale
 
 <!---
 ## Quiz Pre-Lettura
-[Quiz pre-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Quiz pre-lettura](https://ff-quizzes.netlify.app/web/quiz/3)
 ---->
 
 ## Obiettivi
@@ -250,7 +250,7 @@ Apri un repository remoto su cui hai i permessi per apportare modifiche e aggior
 
 <!----
 ## Quiz Post-Lettura
-[Quiz post-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Quiz post-lettura](https://ff-quizzes.netlify.app/web/quiz/4)
 ---->
 
 ## Revisione & Studio Autonomo

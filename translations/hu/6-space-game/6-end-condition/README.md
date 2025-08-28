@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Számos módja van annak, hogy kifejezzük egy játék *befejezési feltételét*. A játék készítőjeként rajtad múlik, hogy meghatározd, miért ér véget a játék. Íme néhány ok, ha feltételezzük, hogy az eddig épített űrjátékról van szó:
 
@@ -220,7 +220,7 @@ Adj hozzá hangot! Tudsz hangot hozzáadni, hogy fokozd a játékélményt, pél
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Áttekintés és önálló tanulás
 

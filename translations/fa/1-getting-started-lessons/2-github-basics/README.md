@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > اسکیچ‌نوت توسط [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## آزمون پیش از درس  
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## مقدمه
 
@@ -315,7 +315,7 @@ CO_OP_TRANSLATOR_METADATA:
 با یک دوست همکاری کنید و روی کد یکدیگر کار کنید. یک پروژه به صورت مشترک ایجاد کنید، کد را فورک کنید، شاخه ایجاد کنید و تغییرات را ادغام کنید.
 
 ## آزمون پس از درس
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## مرور و مطالعه شخصی
 

@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Maswali ya Awali ya Somo
 
-[Maswali ya awali ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Utangulizi
 
@@ -160,7 +160,7 @@ Angalia duka la viendelezi vya kivinjari na usakinishe kimoja kwenye kivinjari c
 
 ## Maswali ya Baada ya Somo
 
-[Maswali ya baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Mapitio na Kujisomea
 

@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Vorlesung
 
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Entscheidungen zu treffen und die Reihenfolge zu kontrollieren, in der dein Code ausgeführt wird, macht deinen Code wiederverwendbar und robust. In diesem Abschnitt geht es um die Syntax zur Steuerung des Datenflusses in JavaScript und deren Bedeutung im Zusammenhang mit Booleschen Datentypen.
 
@@ -214,7 +214,7 @@ Erstelle ein Programm, das zuerst mit logischen Operatoren geschrieben wird und 
 
 ## Quiz nach der Vorlesung
 
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Überprüfung & Selbststudium
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před lekcí
 
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/37)
 
 V této lekci se naučíte, jak přidat skóre do hry a počítat životy.
 
@@ -187,7 +187,7 @@ Váš kód je téměř hotový. Dokážete si představit své další kroky?
 
 ## Kvíz po lekci
 
-[Kvíz po lekci](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Přehled a samostudium
 

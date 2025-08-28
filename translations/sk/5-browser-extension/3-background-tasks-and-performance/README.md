@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz pred prednáškou
 
-[Kvíz pred prednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Úvod
 
@@ -158,7 +158,7 @@ Preskúmajte niektoré open source webové stránky, ktoré existujú už dlho, 
 
 ## Kvíz po prednáške
 
-[Kvíz po prednáške](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Prehľad a samostatné štúdium
 

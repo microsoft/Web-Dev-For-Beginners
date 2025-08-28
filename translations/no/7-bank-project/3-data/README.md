@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introduksjon
 
@@ -335,7 +335,7 @@ Her er et eksempel på en stylet dashbord-side:
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Oppgave
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## แบบทดสอบก่อนเรียน
 
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### บทนำ
 
@@ -297,7 +297,7 @@ async function register() {
 
 ## แบบทดสอบหลังการบรรยาย
 
-[แบบทดสอบหลังการบรรยาย](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[แบบทดสอบหลังการบรรยาย](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## ทบทวนและศึกษาด้วยตนเอง
 

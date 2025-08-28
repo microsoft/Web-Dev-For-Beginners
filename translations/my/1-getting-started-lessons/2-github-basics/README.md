@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > [Tomomi Imura](https://twitter.com/girlie_mac) ရဲ့ Sketchnote
 
 ## သင်ခန်းစာမတိုင်မီ စမ်းမေးခွန်း
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## မိတ်ဆက်
 
@@ -292,7 +292,7 @@ Projects တွေမှာ forum, mailing list, သို့မဟုတ် Sla
 မိတ်ဆွေတစ်ယောက်နဲ့တွဲဖက်ပြီး တစ်ဦးရဲ့ code ပေါ်မှာအလုပ်လုပ်ပါ။ Project တစ်ခုကိုပူးတွဲဖန်တီးပြီး, code ကို fork လုပ်ပါ, branch တွေဖန်တီးပြီး ပြောင်းလဲမှုတွေကိုပေါင်းစည်းပါ။
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

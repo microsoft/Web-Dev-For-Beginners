@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Introducción
 
@@ -224,7 +224,7 @@ Hemos discutido varios tipos de APIs hasta ahora en estas lecciones. Elige una A
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Repaso y Estudio Personal
 

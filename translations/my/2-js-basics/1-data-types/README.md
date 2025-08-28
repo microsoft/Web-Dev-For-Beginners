@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## မိန့်ခွန်းမပြောမီ စမ်းမေးခွန်း
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/7)
 
 ဒီသင်ခန်းစာမှာ JavaScript အခြေခံများကို လေ့လာပါမယ်။ JavaScript က ဝဘ်ဆိုဒ်မှာ အပြန်အလှန်လုပ်ဆောင်မှုများကို ပေးစွမ်းတဲ့ programming language ဖြစ်ပါတယ်။
 
@@ -199,7 +199,7 @@ Booleans တွေဟာ `true` သို့မဟုတ် `false` ဆိုတ
 JavaScript ဟာ တစ်ခါတစ်လေ ဒေတာအမျိုးအစားတွေကို handle လုပ်တဲ့နည်းလမ်းတွေကြောင့် အံ့ဩစရာများဖြစ်တတ်ပါတယ်။ ဒီ 'gotchas' တွေကို သုတေသနလုပ်ကြည့်ပါ။ ဥပမာ - case sensitivity က အခက်အခဲဖြစ်နိုင်ပါတယ်! Console မှာ ဒီလိုစမ်းကြည့်ပါ: `let age = 1; let Age = 2; age == Age` (ရလဒ် `false` -- ဘာကြောင့်လဲ?) အခြား gotchas တွေကို ရှာဖွေကြည့်ပါ။
 
 ## မိန့်ခွန်းပြီးနောက် စမ်းမေးခွန်း
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

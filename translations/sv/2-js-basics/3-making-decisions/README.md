@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz före föreläsningen
 
-[Quiz före föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Quiz före föreläsningen](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Att fatta beslut och kontrollera ordningen i vilken din kod körs gör din kod återanvändbar och robust. Den här sektionen täcker syntaxen för att kontrollera dataflödet i JavaScript och dess betydelse när det används med Booleska datatyper.
 
@@ -214,7 +214,7 @@ Skapa ett program som först skrivs med logiska operatorer och sedan skrivs om m
 
 ## Quiz efter föreläsningen
 
-[Quiz efter föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Granskning & Självstudier
 

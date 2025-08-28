@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Pengenalan
 
@@ -296,7 +296,7 @@ Berikut adalah contoh bagaimana halaman log masuk akhir boleh kelihatan selepas 
 
 ## Kuiz Selepas Kuliah
 
-[Kuiz selepas kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Kuiz selepas kuliah](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Ulasan & Kajian Kendiri
 

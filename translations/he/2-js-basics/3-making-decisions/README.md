@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## חידון לפני ההרצאה
 
-[חידון לפני ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[חידון לפני ההרצאה](https://ff-quizzes.netlify.app/web/quiz/11)
 
 קבלת החלטות ושליטה בסדר שבו הקוד שלך רץ הופכים את הקוד שלך לשימושי ועמיד יותר. חלק זה מכסה את התחביר לשליטה בזרימת הנתונים ב-JavaScript ואת החשיבות שלו בשימוש עם סוגי נתונים בוליאניים.
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## חידון לאחר ההרצאה
 
-[חידון לאחר ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[חידון לאחר ההרצאה](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## סקירה ולימוד עצמי
 

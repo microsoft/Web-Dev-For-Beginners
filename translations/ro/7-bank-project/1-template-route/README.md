@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar înainte de curs
 
-[Chestionar înainte de curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Chestionar înainte de curs](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introducere
 
@@ -306,7 +306,7 @@ Adaugă un nou șablon și o rută pentru o a treia pagină care afișează cred
 
 ## Chestionar după curs
 
-[Chestionar după curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Chestionar după curs](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Recapitulare și studiu individual
 

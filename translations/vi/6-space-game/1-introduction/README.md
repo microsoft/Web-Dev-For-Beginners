@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi kiểm tra trước bài học
 
-[Bài kiểm tra trước bài học](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Bài kiểm tra trước bài học](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Kế thừa và Thành phần trong phát triển trò chơi
 
@@ -222,7 +222,7 @@ Hãy suy nghĩ về cách mẫu pub-sub có thể cải thiện một trò chơi
 
 ## Câu hỏi kiểm tra sau bài học
 
-[Bài kiểm tra sau bài học](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Bài kiểm tra sau bài học](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Ôn tập & Tự học
 

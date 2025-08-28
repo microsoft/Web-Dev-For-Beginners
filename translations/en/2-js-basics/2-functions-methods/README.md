@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/9)
 
 When writing code, it's important to prioritize readability. While it may seem counterintuitive, code is read far more often than it is written. One essential tool in a developer's toolkit for creating maintainable code is the **function**.
 
@@ -194,7 +194,7 @@ Now that you've seen three ways to pass a function as a parameter, you might won
 Can you explain the difference between functions and methods in one sentence? Give it a try!
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Review & Self Study
 

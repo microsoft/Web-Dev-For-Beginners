@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Introduksjon
 
@@ -224,7 +224,7 @@ Vi har diskutert flere typer API-er så langt i disse leksjonene. Velg en web-AP
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Gjennomgang og selvstudium
 

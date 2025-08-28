@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kvíz pred prednáškou
-[Kvíz pred prednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Sila webu spočíva v jeho univerzálnosti. Prístup pre každého, bez ohľadu na zdravotné postihnutie, je nevyhnutným aspektom.
 >

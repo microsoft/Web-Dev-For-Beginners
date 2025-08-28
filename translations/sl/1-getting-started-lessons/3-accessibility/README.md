@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kviz pred predavanjem
-[Kviz pred predavanjem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Kviz pred predavanjem](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Moč spleta je v njegovi univerzalnosti. Dostop za vse, ne glede na invalidnost, je bistven vidik.
 >
@@ -227,7 +227,7 @@ Vzemite ta HTML in ga prepišite tako, da bo čim bolj dostopen, glede na strate
 ```
 
 ## Kviz po predavanju
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Pregled in samostojno učenje
 Mnoge vlade imajo zakone glede zahtev za dostopnost. Preberite zakone o dostopnosti v svoji državi. Kaj je zajeto in kaj ni? Primer je [ta vladna spletna stran](https://accessibility.blog.gov.uk/).

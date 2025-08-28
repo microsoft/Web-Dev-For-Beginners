@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## שאלון לפני השיעור
 
-[שאלון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[שאלון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### הקדמה
 
@@ -278,7 +278,7 @@ const routes = {
 נסו לעבוד יחד כדי לשנות מה נשמר ומה נטען מ-`localStorage` כך שיכלול רק את מה שדרוש באופן מוחלט כדי שהאפליקציה תעבוד.
 
 ## שאלון אחרי השיעור
-[שאלון לאחר ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[שאלון לאחר ההרצאה](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## משימה
 

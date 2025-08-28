@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar Pre-Lecție
 
-[Chestionar pre-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/37)
 
 În această lecție, vei învăța cum să adaugi un sistem de scor într-un joc și cum să calculezi viețile.
 
@@ -187,7 +187,7 @@ Codul tău este aproape complet. Poți să-ți imaginezi următorii pași?
 
 ## Chestionar Post-Lecție
 
-[Chestionar post-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Recapitulare și Studiu Individual
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote sukūrė [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Klausimai prieš paskaitą
-[Klausimai prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Ši pamoka apima JavaScript pagrindus – kalbą, kuri suteikia interaktyvumo internete. Šioje pamokoje sužinosite apie masyvus ir ciklus, kurie naudojami duomenims manipuliuoti.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Yra ir kitų būdų iteruoti per masyvus, be for ir while ciklų. Yra [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) ir [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Pakeiskite savo masyvo ciklą naudodami vieną iš šių metodų.
 
 ## Klausimai po paskaitos
-[Klausimai po paskaitos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Apžvalga ir savarankiškas mokymasis
 

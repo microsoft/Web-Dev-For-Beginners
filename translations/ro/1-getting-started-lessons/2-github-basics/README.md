@@ -15,7 +15,7 @@ Această lecție acoperă elementele de bază ale GitHub, o platformă pentru g�
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Chestionar înainte de lecție
-[Chestionar înainte de lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Chestionar înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Introducere
 
@@ -315,7 +315,7 @@ Proiectele pot avea, de asemenea, discuții în forumuri, liste de e-mail sau ca
 Fă echipă cu un prieten pentru a lucra pe codul celuilalt. Creați un proiect colaborativ, fork-uiți codul, creați ramuri și îmbinați modificările.
 
 ## Chestionar post-lectură
-[Chestionar post-lectură](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Chestionar post-lectură](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Recapitulare și studiu individual
 

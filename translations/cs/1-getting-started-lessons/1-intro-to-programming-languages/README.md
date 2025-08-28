@@ -201,7 +201,7 @@ Když se vývojář chce naučit něco nového, pravděpodobně se obrátí na d
 Porovnejte některé programovací jazyky. Jaké jsou jedinečné vlastnosti JavaScriptu oproti Javě? A co třeba COBOL oproti Go?
 
 ## Kvíz po lekci
-[Kvíz po lekci](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Přehled a samostudium
 

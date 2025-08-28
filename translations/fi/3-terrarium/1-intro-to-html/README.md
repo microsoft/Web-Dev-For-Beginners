@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Katso video
 
@@ -231,7 +231,7 @@ HTML:ssä on joitakin vanhoja "villikortti"-tageja, joita on edelleen hauska kok
 
 ## Jälkikysely
 
-[Jälkikysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Kertaus ja itseopiskelu
 

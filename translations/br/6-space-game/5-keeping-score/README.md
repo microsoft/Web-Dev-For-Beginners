@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pré-Aula
 
-[Quiz pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Quiz pré-aula](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Nesta lição, você aprenderá como adicionar pontuação a um jogo e calcular vidas.
 
@@ -187,7 +187,7 @@ Seu código está quase completo. Consegue imaginar os próximos passos?
 
 ## Quiz Pós-Aula
 
-[Quiz pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Quiz pós-aula](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Revisão e Autoestudo
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Pengenalan
 
@@ -306,7 +306,7 @@ Tambahkan templat dan laluan baru untuk halaman ketiga yang menunjukkan kredit u
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Ulasan & Kajian Kendiri
 

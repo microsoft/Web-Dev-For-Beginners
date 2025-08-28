@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Chestionar Pre-Lecție
-[Chestionar pre-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Această lecție acoperă bazele JavaScript, limbajul care oferă interactivitate pe web.
 
@@ -198,7 +198,7 @@ Booleenii pot avea doar două valori: `true` sau `false`. Booleenii pot ajuta la
 JavaScript este cunoscut pentru modurile sale surprinzătoare de a gestiona tipurile de date uneori. Fă puțină cercetare despre aceste 'capcane'. De exemplu: sensibilitatea la majuscule poate fi problematică! Încearcă asta în consola ta: `let age = 1; let Age = 2; age == Age` (rezultă `false` -- de ce?). Ce alte capcane poți găsi?
 
 ## Chestionar Post-Lecție
-[Chestionar post-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Recapitulare & Studiu Individual
 

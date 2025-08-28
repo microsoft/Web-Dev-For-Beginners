@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скетчноут от [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Викторина перед лекцией
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Введение
 
@@ -315,7 +315,7 @@ Pull request — это место для сравнения и обсужден
 Работайте в паре с другом над кодом друг друга. Создайте проект совместно, форкните код, создайте ветки и объедините изменения.
 
 ## Викторина после лекции
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Обзор и самостоятельное изучение
 

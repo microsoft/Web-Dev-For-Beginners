@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/37)
 
 In this lesson, you'll learn how to add scoring to a game and manage lives.
 
@@ -187,7 +187,7 @@ Your code is nearly finished. What do you think your next steps should be?
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Review & Self Study
 

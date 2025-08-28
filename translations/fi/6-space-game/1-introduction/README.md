@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakko-oppituntivisa
 
-[Ennakko-oppituntivisa](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Ennakko-oppituntivisa](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Periytyminen ja koostaminen pelikehityksess채
 
@@ -222,7 +222,7 @@ Mieti, kuinka pub-sub-malli voi parantaa peli채. Mitk채 osat pit채isi l채hett채�
 
 ## Oppitunnin j채lkeinen visa
 
-[Oppitunnin j채lkeinen visa](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Oppitunnin j채lkeinen visa](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Kertaus ja itseopiskelu
 

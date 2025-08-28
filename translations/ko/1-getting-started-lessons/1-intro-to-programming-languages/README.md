@@ -201,7 +201,7 @@ back add r0,r1
 프로그래밍 언어를 비교해보세요. JavaScript와 Java의 독특한 특징은 무엇인가요? COBOL과 Go는 어떤 차이가 있나요?
 
 ## 강의 후 퀴즈
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## 복습 및 자기 학습
 

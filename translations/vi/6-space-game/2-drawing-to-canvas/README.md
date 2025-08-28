@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas
 
@@ -214,7 +214,7 @@ Bạn đã học về vẽ với Canvas API tập trung vào 2D; hãy xem [WebGL
 
 ## Câu hỏi sau bài giảng
 
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Ôn tập & Tự học
 

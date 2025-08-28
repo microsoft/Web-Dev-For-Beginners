@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelæsning
 
-[Quiz før forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Quiz før forelæsning](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas
 
@@ -214,7 +214,7 @@ Du har lært om at tegne med det 2D-fokuserede Canvas API; tag et kig på [WebGL
 
 ## Quiz efter forelæsning
 
-[Quiz efter forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Quiz efter forelæsning](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Gennemgang & Selvstudie
 

@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Квиз пре предавања
 
-[Квиз пре предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Квиз пре предавања](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Доношење одлука и контрола редоследа извршавања кода чини ваш код поново употребљивим и робусним. Овај одељак покрива синтаксу за контролу тока података у JavaScript-у и њен значај када се користи са Буловим типовима података.
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## Квиз након предавања
 
-[Квиз након предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Квиз након предавања](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Преглед и самостално учење
 

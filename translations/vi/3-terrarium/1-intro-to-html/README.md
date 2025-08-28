@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Xem video
 
@@ -231,7 +231,7 @@ Có một số thẻ 'cũ' trong HTML vẫn thú vị để thử nghiệm, mặ
 
 ## Câu hỏi sau bài giảng
 
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Ôn tập & Tự học
 

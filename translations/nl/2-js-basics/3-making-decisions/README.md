@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Voorafgaand aan de Les
 
-[Quiz voorafgaand aan de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Beslissingen nemen en de volgorde waarin je code wordt uitgevoerd beheersen, maakt je code herbruikbaar en robuust. Dit gedeelte behandelt de syntax voor het beheersen van de gegevensstroom in JavaScript en het belang ervan bij het gebruik met Booleaanse gegevenstypen.
 
@@ -214,7 +214,7 @@ Maak een programma dat eerst wordt geschreven met logische operatoren en herschr
 
 ## Quiz Na de Les
 
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Herziening & Zelfstudie
 

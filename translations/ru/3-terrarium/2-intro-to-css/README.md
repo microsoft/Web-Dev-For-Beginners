@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Тест перед лекцией
 
-[Тест перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Тест перед лекцией](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Введение
 
@@ -268,7 +268,7 @@ h1 {
 
 ## Тест после лекции
 
-[Тест после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Тест после лекции](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Обзор и самостоятельное изучение
 

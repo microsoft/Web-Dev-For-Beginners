@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > ਸਕੈਚਨੋਟ [Tomomi Imura](https://twitter.com/girlie_mac) ਵੱਲੋਂ
 
 ## ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼
-[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/7)
 
 ਇਸ ਪਾਠ ਵਿੱਚ ਜਾਵਾਸਕ੍ਰਿਪਟ ਦੀ ਬੁਨਿਆਦੀਆਂ ਨੂੰ ਕਵਰ ਕੀਤਾ ਗਿਆ ਹੈ, ਜੋ ਵੈੱਬ 'ਤੇ ਇੰਟਰਐਕਟਿਵਿਟੀ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ।
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 ਜਾਵਾਸਕ੍ਰਿਪਟ ਕਈ ਵਾਰ ਡਾਟਾ ਟਾਈਪਸ ਨੂੰ ਸੰਭਾਲਣ ਦੇ ਹੈਰਾਨੀਜਨਕ ਤਰੀਕਿਆਂ ਲਈ ਮਸ਼ਹੂਰ ਹੈ। ਇਹਨਾਂ 'gotchas' ਬਾਰੇ ਕੁਝ ਖੋਜ ਕਰੋ। ਉਦਾਹਰਣ ਲਈ: ਕੇਸ ਸੈਂਸਿਟਿਵਿਟੀ ਤੁਹਾਨੂੰ ਮੁਸੀਬਤ ਵਿੱਚ ਪਾ ਸਕਦੀ ਹੈ! ਆਪਣੇ ਕਨਸੋਲ ਵਿੱਚ ਇਹ ਅਜ਼ਮਾਓ: `let age = 1; let Age = 2; age == Age` (ਇਹ `false` ਰਿਜ਼ਾਲਟ ਕਰਦਾ ਹੈ -- ਕਿਉਂ?). ਹੋਰ ਕਿਹੜੇ gotchas ਤੁਸੀਂ ਲੱਭ ਸਕਦੇ ਹੋ?
 
 ## ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼
-[ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[ਲੈਕਚਰ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਸਵੈ ਅਧਿਐਨ
 

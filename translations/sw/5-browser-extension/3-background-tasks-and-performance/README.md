@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Maswali ya Awali ya Somo
 
-[Maswali ya awali ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Utangulizi
 
@@ -158,7 +158,7 @@ Chunguza baadhi ya tovuti za chanzo huria ambazo zimekuwepo kwa muda mrefu, na, 
 
 ## Maswali ya Baada ya Somo
 
-[Maswali ya baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Mapitio na Kujisomea
 

@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Johdanto
 
@@ -210,7 +210,7 @@ Lisää uusi tapahtumankäsittelijä sulkeumaasi tekemään jotain muuta kasveil
 
 ## Jälkikysely
 
-[Jälkikysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Kertaus ja itseopiskelu
 

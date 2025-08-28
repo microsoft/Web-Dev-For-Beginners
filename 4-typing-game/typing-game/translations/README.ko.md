@@ -2,7 +2,7 @@
 
 ## 강의 전 퀴즈
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21?loc=ko)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/21?loc=ko)
 
 ## 이벤트 기반 프로그래밍
 
@@ -327,7 +327,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## 강의 후 퀴즈
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22?loc=ko)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/22?loc=ko)
 
 ## 리뷰 & 자기주도 학습
 

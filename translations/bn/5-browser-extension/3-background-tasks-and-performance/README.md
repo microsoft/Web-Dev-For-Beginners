@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## প্রাক-লেকচার কুইজ
 
-[প্রাক-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[প্রাক-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### ভূমিকা
 
@@ -158,7 +158,7 @@ function drawIcon(value) {
 
 ## পোস্ট-লেকচার কুইজ
 
-[পোস্ট-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[পোস্ট-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## পর্যালোচনা ও স্ব-অধ্যয়ন
 

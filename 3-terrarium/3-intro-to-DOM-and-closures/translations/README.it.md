@@ -5,7 +5,7 @@
 
 ## Quiz Pre-Lezione
 
-[Quiz Pre-Lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19?loc=it)
+[Quiz Pre-Lezione](https://ff-quizzes.netlify.app/web/quiz/19?loc=it)
 
 ### Introduzione
 
@@ -201,7 +201,7 @@ Aggiungere un nuovo gestore di eventi alla closure per fare qualcosa di più con
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20?loc=it)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/20?loc=it)
 
 ## Revisione e Auto Apprendimento
 

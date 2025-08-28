@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Klausimynas prieš paskaitą
 
-[Klausimynas prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Klausimynas prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Įvadas
 
@@ -186,7 +186,7 @@ Rodykite klaidos pranešimą HTML, jei vartotojas jau egzistuoja.
 
 ## Po paskaitos testas
 
-[Po paskaitos testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Po paskaitos testas](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Apžvalga ir savarankiškas mokymasis
 

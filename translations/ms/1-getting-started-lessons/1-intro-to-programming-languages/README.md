@@ -201,7 +201,7 @@ Apabila seorang pembangun ingin mempelajari sesuatu yang baru, mereka kemungkina
 Bandingkan beberapa bahasa pengaturcaraan. Apakah ciri unik JavaScript berbanding Java? Bagaimana pula dengan COBOL berbanding Go?
 
 ## Kuiz Pasca-Kuliah
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Ulasan & Kajian Kendiri
 

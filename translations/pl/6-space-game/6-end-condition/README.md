@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Istnieje wiele sposobów na określenie *warunku zakończenia* w grze. To od Ciebie, jako twórcy gry, zależy, dlaczego gra się kończy. Oto kilka powodów, zakładając, że mówimy o grze kosmicznej, którą budujesz:
 
@@ -220,7 +220,7 @@ Dodaj dźwięk! Czy możesz dodać dźwięk, aby poprawić rozgrywkę, na przyk�
 
 ## Quiz po wykładzie
 
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Przegląd i samodzielna nauka
 

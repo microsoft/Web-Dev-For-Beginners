@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Klausimai prieš paskaitą
 
-[Klausimai prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Šioje pamokoje sužinosite, kaip pridėti taškų skaičiavimą žaidime ir apskaičiuoti gyvybes.
 
@@ -187,7 +187,7 @@ Jūsų kodas beveik baigtas. Ar galite įsivaizduoti kitus žingsnius?
 
 ## Klausimai po paskaitos
 
-[Klausimai po paskaitos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Apžvalga ir savarankiškas mokymasis
 

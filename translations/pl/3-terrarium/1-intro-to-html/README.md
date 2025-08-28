@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Obejrzyj wideo
 
@@ -231,7 +231,7 @@ Istnieją pewne 'starsze' tagi w HTML, które wciąż są zabawne do eksperyment
 
 ## Quiz po wykładzie
 
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Przegląd i samodzielna nauka
 

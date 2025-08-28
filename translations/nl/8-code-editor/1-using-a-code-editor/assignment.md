@@ -19,7 +19,7 @@ TODO: voeg een optionele afbeelding toe
 
 <!---
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/3)
 ---->
 
 ## Doelstellingen
@@ -250,7 +250,7 @@ Open een remote repository waar je toestemming hebt om wijzigingen aan te brenge
 
 <!----
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/4)
 ---->
 
 ## Review & Zelfstudie

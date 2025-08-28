@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Klausimynas prieš paskaitą
 
-[Klausimynas prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Klausimynas prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Įvadas
 
@@ -158,7 +158,7 @@ Ištirkite kai kurias atvirojo kodo svetaines, kurios egzistuoja jau ilgą laik�
 
 ## Klausimynas po paskaitos
 
-[Klausimynas po paskaitos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Klausimynas po paskaitos](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Apžvalga ir savarankiškas mokymasis
 

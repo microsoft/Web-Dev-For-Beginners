@@ -118,9 +118,9 @@ Mūsų rekomendacija yra naudoti [Visual Studio Code](https://code.visualstudio.
 - iššūkį  
 - papildomą skaitymą  
 - užduotį  
-- [viktoriną po pamokos](https://ff-quizzes.netlify.app/)  
+- [viktoriną po pamokos](https://ff-quizzes.netlify.app/web/)  
 
-> **Pastaba apie viktorinas**: Visos viktorinos yra Quiz-app aplanke, iš viso 48 viktorinos po tris klausimus. Jas galite rasti [čia](https://ff-quizzes.netlify.app/), viktorinų programėlę galima vykdyti vietoje arba įdiegti Azure; sekite instrukcijas `quiz-app` aplanke.  
+> **Pastaba apie viktorinas**: Visos viktorinos yra Quiz-app aplanke, iš viso 48 viktorinos po tris klausimus. Jas galite rasti [čia](https://ff-quizzes.netlify.app/web/), viktorinų programėlę galima vykdyti vietoje arba įdiegti Azure; sekite instrukcijas `quiz-app` aplanke.  
 
 ## 🗃️ Pamokos  
 

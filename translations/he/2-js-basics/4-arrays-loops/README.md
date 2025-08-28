@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > איור מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## חידון לפני השיעור  
-[חידון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[חידון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/13)
 
 השיעור הזה עוסק ביסודות של JavaScript, השפה שמוסיפה אינטראקטיביות לאינטרנט. בשיעור זה תלמדו על מערכים ולולאות, המשמשים לעיבוד נתונים.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 ישנן דרכים נוספות לעבור על מערכים מלבד לולאות for ו-while. ישנן [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), ו-[map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). שכתבו את הלולאה שלכם על מערך באמצעות אחת מהשיטות הללו.
 
 ## חידון אחרי השיעור  
-[חידון אחרי השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[חידון אחרי השיעור](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## חזרה ולימוד עצמי
 

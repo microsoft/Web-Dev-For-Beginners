@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## חידון לפני ההרצאה
 
-[חידון לפני ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[חידון לפני ההרצאה](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## הקנבס
 
@@ -214,7 +214,7 @@ npm start
 
 ## חידון לאחר ההרצאה
 
-[חידון לאחר ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[חידון לאחר ההרצאה](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## סקירה ולמידה עצמית
 

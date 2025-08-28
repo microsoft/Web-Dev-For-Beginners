@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/7)
 
 This lesson introduces the fundamentals of JavaScript, the language that brings interactivity to the web.
 
@@ -199,7 +199,7 @@ Booleans have only two possible values: `true` or `false`. They are useful for m
 JavaScript is known for its surprising behavior with data types. Research some of these quirks. For example: case sensitivity can be tricky! Try this in your console: `let age = 1; let Age = 2; age == Age` (returns `false` -- why?). What other quirks can you discover?
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Review & Self Study
 

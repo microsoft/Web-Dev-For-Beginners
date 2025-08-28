@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Les Quiz
-[Pre-les quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Pre-les quiz](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Deze les behandelt de basis van JavaScript, de taal die interactiviteit op het web mogelijk maakt. In deze les leer je over arrays en lussen, die worden gebruikt om gegevens te manipuleren.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Er zijn andere manieren om over arrays te herhalen dan for- en while-lussen. Er zijn [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), en [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Herschrijf je array-lus met een van deze technieken.
 
 ## Post-Les Quiz
-[Post-les quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Post-les quiz](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Herhaling & Zelfstudie
 

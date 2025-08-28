@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > สเก็ตโน้ตโดย [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## แบบทดสอบก่อนเรียน
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/7)
 
 บทเรียนนี้ครอบคลุมพื้นฐานของ JavaScript ซึ่งเป็นภาษาที่ช่วยเพิ่มความสามารถในการโต้ตอบบนเว็บ
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 JavaScript มีชื่อเสียงในเรื่องวิธีการจัดการประเภทข้อมูลที่น่าประหลาดใจในบางครั้ง ลองค้นคว้าเกี่ยวกับ 'gotchas' เหล่านี้ ตัวอย่างเช่น ความไวต่อตัวพิมพ์ใหญ่-เล็กอาจทำให้เกิดปัญหา! ลองทำสิ่งนี้ในคอนโซลของคุณ: `let age = 1; let Age = 2; age == Age` (ผลลัพธ์คือ `false` -- ทำไม?) คุณพบ gotchas อื่น ๆ อะไรบ้าง?
 
 ## แบบทดสอบหลังเรียน
-[แบบทดสอบหลังเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[แบบทดสอบหลังเรียน](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## ทบทวนและศึกษาด้วยตนเอง
 

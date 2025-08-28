@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## لیکچر سے پہلے کا کوئز
 
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/35)
 
 اس سبق میں آپ جاوا اسکرپٹ کے ذریعے لیزر فائر کرنا سیکھیں گے! ہم اپنے گیم میں دو چیزیں شامل کریں گے:
 
@@ -295,7 +295,7 @@ npm start
 
 ## لیکچر کے بعد کا کوئز
 
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## جائزہ اور خود مطالعہ
 

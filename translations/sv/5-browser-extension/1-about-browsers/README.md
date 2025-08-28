@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förhandsquiz
 
-[Förhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Introduktion
 
@@ -160,7 +160,7 @@ Ta en titt på en webbläsartilläggsbutik och installera ett tillägg i din web
 
 ## Efterhandsquiz
 
-[Efterhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Efterhandsquiz](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Granskning & Självstudier
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > स्केच नोट [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा
 
 ## प्रि-लेक्चर क्विज
-[प्रि-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[प्रि-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > वेबको शक्ति यसको सर्वव्यापकतामा छ। अपाङ्गता भए पनि सबैले पहुँच पाउनु यसको एक महत्वपूर्ण पक्ष हो।
 >

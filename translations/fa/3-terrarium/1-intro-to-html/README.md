@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > مشاهده ویدیو
 
@@ -231,7 +231,7 @@ HTML یا زبان نشانه‌گذاری فرامتن، «اسکلت» وب ا
 
 ## آزمون پس از درس
 
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## مرور و مطالعه شخصی
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတင်မီ စမ်းမေးခွန်း
 
-[မိန့်ခွန်းမတင်မီ စမ်းမေးခွန်း](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[မိန့်ခွန်းမတင်မီ စမ်းမေးခွန်း](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### နိဒါန်း
 

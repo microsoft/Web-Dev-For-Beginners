@@ -175,7 +175,7 @@ Developer တစ်ဦးအနေနဲ့ အသစ်တစ်ခုကို
 Programming Language တချို့ကို နှိုင်းယှဉ်ကြည့်ပါ။ JavaScript နဲ့ Java ရဲ့ ထူးခြားချက်တွေက ဘာတွေလဲ? COBOL နဲ့ Go ရဲ့ ကွာခြားချက်တွေက ဘာတွေလဲ?
 
 ## သင်ခန်းစာပြီးနောက် စမ်းမေးခွန်း
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

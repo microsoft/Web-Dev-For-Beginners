@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài học
 
-[Câu hỏi trước bài học](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Câu hỏi trước bài học](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Trong bài học này, bạn sẽ học cách bắn tia laser bằng JavaScript! Chúng ta sẽ thêm hai yếu tố vào trò chơi:
 
@@ -295,7 +295,7 @@ Thêm hiệu ứng nổ! Hãy xem các tài nguyên trò chơi trong [kho Space 
 
 ## Câu hỏi sau bài học
 
-[Câu hỏi sau bài học](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Câu hỏi sau bài học](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Ôn tập & Tự học
 

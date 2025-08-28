@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar Pre-Lecție
 
-[Chestionar pre-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas-ul
 
@@ -214,7 +214,7 @@ Ai învățat despre desenarea cu API-ul Canvas concentrat pe 2D; aruncă o priv
 
 ## Chestionar Post-Lecție
 
-[Chestionar post-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Recapitulare și Studiu Individual
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Pendahuluan
 
@@ -278,7 +278,7 @@ Sekarang kita memuat ulang data akun setiap kali dashboard dimuat, apakah menuru
 Cobalah bekerja sama untuk mengubah apa yang disimpan dan dimuat dari `localStorage` agar hanya mencakup apa yang benar-benar diperlukan untuk aplikasi berfungsi.
 
 ## Kuis Pasca-Kuliah
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Tugas
 

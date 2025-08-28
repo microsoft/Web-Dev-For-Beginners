@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kviz pred predavanjem
-[Kviz pred predavanjem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Kviz pred predavanjem](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Ta lekcija pokriva osnove JavaScripta, jezika, ki omogoča interaktivnost na spletu. V tej lekciji se boste naučili o tabelah in zankah, ki se uporabljajo za manipulacijo podatkov.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Obstajajo tudi drugi načini iteracije skozi tabele, poleg zank for in while. Obstajajo [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) in [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Prepišite svojo zanko skozi tabelo z eno od teh tehnik.
 
 ## Kviz po predavanju
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Pregled in samostojno učenje
 

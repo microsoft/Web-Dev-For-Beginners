@@ -200,7 +200,7 @@ back add r0,r1
 השוו בין שפות תכנות. מהם המאפיינים הייחודיים של JavaScript לעומת Java? ומה לגבי COBOL לעומת Go?
 
 ## חידון לאחר השיעור  
-[חידון לאחר השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[חידון לאחר השיעור](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## סקירה ולימוד עצמי
 

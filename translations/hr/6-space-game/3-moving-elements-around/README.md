@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Igre nisu baš zabavne dok nemate vanzemaljce koji se kreću po ekranu! U ovoj igri koristit ćemo dvije vrste kretanja:
 
@@ -386,7 +386,7 @@ Kao što možete vidjeti, vaš kod može postati 'spaghetti kod' kada počnete d
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Pregled i samostalno učenje
 

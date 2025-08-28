@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Förkunskapsquiz
-[Quiz före föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Quiz före föreläsningen](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Webben är kraftfull tack vare sin universalitet. Tillgång för alla, oavsett funktionsnedsättning, är en grundläggande aspekt.
 >
@@ -227,7 +227,7 @@ Ta denna HTML och skriv om den för att göra den så tillgänglig som möjligt,
 ```
 
 ## Quiz efter föreläsningen
-[Quiz efter föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Granskning & Självstudier
 Många regeringar har lagar om tillgänglighetskrav. Läs på om tillgänglighetslagarna i ditt hemland. Vad täcks, och vad täcks inte? Ett exempel är [denna regeringswebbplats](https://accessibility.blog.gov.uk/).

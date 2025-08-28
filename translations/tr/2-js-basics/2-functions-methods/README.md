@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ders Öncesi Quiz
-[Ders öncesi quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Ders öncesi quiz](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Kod yazmayı düşündüğümüzde, her zaman kodumuzun okunabilir olmasını sağlamayı hedefleriz. Bu kulağa ters gelebilir, ancak kod yazıldığından çok daha fazla okunur. Geliştiricilerin sürdürülebilir kod yazmasını sağlayan temel araçlardan biri **fonksiyon**dur.
 
@@ -194,7 +194,7 @@ Artık bir fonksiyonu parametre olarak geçmek için üç yol gördünüz ve her
 Fonksiyonlar ve metotlar arasındaki farkı bir cümleyle açıklayabilir misiniz? Bir deneyin!
 
 ## Ders Sonrası Quiz
-[Ders sonrası quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Ders sonrası quiz](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

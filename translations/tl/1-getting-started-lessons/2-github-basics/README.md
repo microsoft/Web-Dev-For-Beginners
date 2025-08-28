@@ -15,7 +15,7 @@ Ang araling ito ay tumatalakay sa mga pangunahing kaalaman tungkol sa GitHub, is
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Panimula
 
@@ -315,7 +315,7 @@ Ang mga proyekto ay maaaring may diskusyon sa forums, mailing lists, o chat chan
 Makipag-partner sa isang kaibigan para magtrabaho sa code ng isa't isa. Gumawa ng proyekto nang magkasama, mag-fork ng code, gumawa ng mga branch, at mag-merge ng mga pagbabago.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Review at Pag-aaral sa Sarili
 

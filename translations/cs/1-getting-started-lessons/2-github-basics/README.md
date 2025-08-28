@@ -15,7 +15,7 @@ Tato lekce pokrývá základy GitHubu, platformy pro hostování a správu změn
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kvíz před lekcí
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Úvod
 
@@ -315,7 +315,7 @@ Projekty mohou mít také diskuse ve fórech, mailing listech nebo chatovacích 
 Spojte se s kamarádem a pracujte na kódu toho druhého. Vytvořte projekt společně, forkněte kód, vytvořte větve a sloučte změny.
 
 ## Kvíz po přednášce
-[Kvíz po přednášce](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Přehled & Samostudium
 

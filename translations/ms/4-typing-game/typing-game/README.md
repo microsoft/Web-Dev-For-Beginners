@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Pengaturcaraan berasaskan acara
 
@@ -337,7 +337,7 @@ Tambahkan lebih banyak fungsi
 
 ## Kuiz Selepas Kuliah
 
-[Kuiz selepas kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Kuiz selepas kuliah](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Ulasan & Kajian Kendiri
 

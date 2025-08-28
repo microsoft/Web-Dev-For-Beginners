@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## لیکچر سے پہلے کا کوئز
 
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### تعارف
 
@@ -335,7 +335,7 @@ function updateElement(id, textOrNode) {
 
 ## لیکچر کے بعد کا کوئز
 
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## اسائنمنٹ
 

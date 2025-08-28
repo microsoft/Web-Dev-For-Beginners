@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्री-लेक्चर क्विझ
 
-[प्री-लेक्चर क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[प्री-लेक्चर क्विझ](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### परिचय
 
@@ -160,7 +160,7 @@ npm install
 
 ## पोस्ट-लेक्चर क्विझ
 
-[पोस्ट-लेक्चर क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[पोस्ट-लेक्चर क्विझ](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

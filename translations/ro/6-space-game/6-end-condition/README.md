@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar Pre-Lecție
 
-[Chestionar pre-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Există diferite moduri de a exprima o *condiție de final* într-un joc. Depinde de tine, ca creator al jocului, să decizi de ce jocul se termină. Iată câteva motive, presupunând că vorbim despre jocul spațial pe care l-ai construit până acum:
 
@@ -220,7 +220,7 @@ Adaugă un sunet! Poți adăuga un sunet pentru a îmbunătăți experiența de 
 
 ## Chestionar Post-Lecție
 
-[Chestionar post-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Recapitulare și Studiu Individual
 

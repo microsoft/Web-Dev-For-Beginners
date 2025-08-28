@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Klausimai prieš paskaitą
 
-[Klausimai prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Yra įvairių būdų, kaip žaidime išreikšti *pabaigos sąlygą*. Jūs, kaip žaidimo kūrėjas, nusprendžiate, kodėl žaidimas baigiasi. Štai keletas priežasčių, jei kalbame apie kosminį žaidimą, kurį kūrėte iki šiol:
 
@@ -220,7 +220,7 @@ Pridėkite garsą! Ar galite pridėti garsą, kad pagerintumėte žaidimo patirt
 
 ## Klausimai po paskaitos
 
-[Klausimai po paskaitos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Apžvalga ir savarankiškas mokymasis
 

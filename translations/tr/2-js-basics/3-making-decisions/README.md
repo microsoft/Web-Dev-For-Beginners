@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Karar verme ve kodunuzun hangi sırayla çalışacağını kontrol etme, kodunuzu yeniden kullanılabilir ve sağlam hale getirir. Bu bölüm, JavaScript'te veri akışını kontrol etme sözdizimini ve bunun Boolean veri türleriyle kullanıldığında önemini kapsar.
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## Ders Sonrası Test
 
-[Ders sonrası testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

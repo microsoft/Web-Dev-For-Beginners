@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/15)
 
 
 > Se video
@@ -232,7 +232,7 @@ Det finnes noen morsomme 'eldre' tagger i HTML som fortsatt er morsomme å leke 
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Gjennomgang og selvstudium
 

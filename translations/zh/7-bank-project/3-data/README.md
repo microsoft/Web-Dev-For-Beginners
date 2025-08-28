@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### 简介
 
@@ -335,7 +335,7 @@ function updateElement(id, textOrNode) {
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## 作业
 

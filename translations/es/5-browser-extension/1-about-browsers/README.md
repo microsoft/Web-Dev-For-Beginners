@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Introducción
 
@@ -160,7 +160,7 @@ Echa un vistazo a una tienda de extensiones de navegador e instala una en tu nav
 
 ## Cuestionario Posterior a la Clase
 
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Repaso y Estudio Personal
 

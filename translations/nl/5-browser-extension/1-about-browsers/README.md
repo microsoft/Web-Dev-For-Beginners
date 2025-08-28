@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Les Quiz
 
-[Pre-les quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Pre-les quiz](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Introductie
 
@@ -160,7 +160,7 @@ Bekijk een browserextensiewinkel en installeer er een in je browser. Je kunt de 
 
 ## Post-Les Quiz
 
-[Post-les quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Post-les quiz](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Review & Zelfstudie
 

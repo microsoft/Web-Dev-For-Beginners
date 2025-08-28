@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Sa araling ito, matututo kang magpaputok ng laser gamit ang JavaScript! Magdaragdag tayo ng dalawang bagay sa ating laro:
 
@@ -295,7 +295,7 @@ Magdagdag ng pagsabog! Tingnan ang mga game asset sa [the Space Art repo](../../
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Review at Pag-aaral sa Sarili
 

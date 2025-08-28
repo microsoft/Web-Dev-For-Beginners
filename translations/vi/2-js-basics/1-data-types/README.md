@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Câu Hỏi Trước Bài Giảng
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Bài học này giới thiệu những kiến thức cơ bản về JavaScript, ngôn ngữ mang lại tính tương tác cho web.
 
@@ -199,7 +199,7 @@ Booleans chỉ có thể có hai giá trị: `true` hoặc `false`. Booleans có
 JavaScript nổi tiếng với những cách xử lý kiểu dữ liệu gây bất ngờ. Hãy nghiên cứu một chút về những 'bất ngờ' này. Ví dụ: phân biệt chữ hoa chữ thường có thể gây rắc rối! Thử điều này trong bảng điều khiển của bạn: `let age = 1; let Age = 2; age == Age` (kết quả là `false` -- tại sao?). Bạn có thể tìm thấy những bất ngờ nào khác?
 
 ## Câu Hỏi Sau Bài Giảng
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Ôn Tập & Tự Học
 

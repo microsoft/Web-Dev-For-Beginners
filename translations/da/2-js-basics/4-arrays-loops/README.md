@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz før lektionen
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Denne lektion dækker det grundlæggende i JavaScript, sproget der giver interaktivitet på nettet. I denne lektion lærer du om arrays og løkker, som bruges til at manipulere data.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Der er andre måder at løkke over arrays end for- og while-løkker. Der er [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) og [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Skriv din array-løkke om ved hjælp af en af disse teknikker.
 
 ## Quiz efter lektionen
-[Quiz efter lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Gennemgang & Selvstudie
 

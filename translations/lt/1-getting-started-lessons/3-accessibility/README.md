@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote sukūrė [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Klausimynas prieš paskaitą
-[Klausimynas prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Klausimynas prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Interneto galia slypi jo universalume. Prieinamumas visiems, nepaisant negalios, yra esminis aspektas.
 >

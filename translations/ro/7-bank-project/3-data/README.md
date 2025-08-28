@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar înainte de curs
 
-[Chestionar înainte de curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Chestionar înainte de curs](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introducere
 
@@ -335,7 +335,7 @@ Iată un exemplu de pagină de tabloul de bord stilizată:
 
 ## Quiz de după lecție
 
-[Quiz de după lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Quiz de după lecție](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Temă
 

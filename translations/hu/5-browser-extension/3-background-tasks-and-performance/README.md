@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Bevezetés
 
@@ -158,7 +158,7 @@ Vizsgálj meg néhány nyílt forráskódú weboldalt, amelyek már régóta lé
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Áttekintés és önálló tanulás
 

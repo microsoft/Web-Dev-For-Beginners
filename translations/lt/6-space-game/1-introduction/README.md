@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Prieš paskaitą: testas
 
-[Prieš paskaitą: testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Prieš paskaitą: testas](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Paveldėjimas ir kompozicija žaidimų kūrime
 
@@ -222,7 +222,7 @@ Pagalvokite, kaip pub-sub šablonas gali pagerinti žaidimą. Kurios dalys turė
 
 ## Po paskaitos: testas
 
-[Po paskaitos: testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Po paskaitos: testas](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Apžvalga ir savarankiškas mokymasis
 

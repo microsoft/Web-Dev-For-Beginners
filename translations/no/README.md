@@ -118,9 +118,9 @@ Vår anbefaling er å bruke [Visual Studio Code](https://code.visualstudio.com/?
 - en utfordring  
 - tilleggslesing  
 - oppgave  
-- [quiz etter leksjonen](https://ff-quizzes.netlify.app/)  
+- [quiz etter leksjonen](https://ff-quizzes.netlify.app/web/)  
 
-> **En merknad om quizzer**: Alle quizzer er inkludert i Quiz-app-mappen, totalt 48 quizzer med tre spørsmål hver. De er tilgjengelige [her](https://ff-quizzes.netlify.app/) og quiz-appen kan kjøres lokalt eller distribueres til Azure; følg instruksjonene i `quiz-app`-mappen.  
+> **En merknad om quizzer**: Alle quizzer er inkludert i Quiz-app-mappen, totalt 48 quizzer med tre spørsmål hver. De er tilgjengelige [her](https://ff-quizzes.netlify.app/web/) og quiz-appen kan kjøres lokalt eller distribueres til Azure; følg instruksjonene i `quiz-app`-mappen.  
 
 ## 🗃️ Leksjoner  
 

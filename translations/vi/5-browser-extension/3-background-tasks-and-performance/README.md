@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Giới thiệu
 
@@ -158,7 +158,7 @@ Khám phá một số trang web mã nguồn mở đã tồn tại từ lâu, và
 
 ## Câu hỏi sau bài giảng
 
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Ôn tập & Tự học
 

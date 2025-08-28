@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Test înainte de lecție
 
-[Test înainte de lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Test înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Luarea deciziilor și controlul ordinii în care rulează codul tău fac ca acesta să fie reutilizabil și robust. Această secțiune acoperă sintaxa pentru controlul fluxului de date în JavaScript și semnificația sa atunci când este utilizată cu tipurile de date Boolean.
 
@@ -214,7 +214,7 @@ Creează un program care este scris mai întâi cu operatori logici, apoi rescri
 
 ## Test după lecție
 
-[Test după lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Test după lecție](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Recapitulare și studiu individual
 

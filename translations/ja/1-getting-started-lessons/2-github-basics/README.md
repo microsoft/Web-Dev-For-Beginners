@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 講義前のクイズ
-[講義前のクイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[講義前のクイズ](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## はじめに
 
@@ -315,7 +315,7 @@ GitHub 上の公開リポジトリは、スターを付けたり、ウォッチ�
 友達とペアを組んでお互いのコードに取り組みましょう。共同でプロジェクトを作成し、コードをフォークし、ブランチを作成し、変更をマージしてください。
 
 ## 講義後のクイズ
-[講義後のクイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[講義後のクイズ](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## 復習と自己学習
 

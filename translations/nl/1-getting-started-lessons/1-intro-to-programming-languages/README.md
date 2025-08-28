@@ -201,7 +201,7 @@ Wanneer een ontwikkelaar iets nieuws wil leren, zal hij of zij waarschijnlijk na
 Vergelijk enkele programmeertalen. Wat zijn enkele unieke eigenschappen van JavaScript versus Java? En hoe zit het met COBOL versus Go?
 
 ## Quiz na de les
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Herziening & Zelfstudie
 

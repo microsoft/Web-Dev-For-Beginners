@@ -15,7 +15,7 @@ Deze les behandelt de basisprincipes van GitHub, een platform om je code te host
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Introductie
 
@@ -318,7 +318,7 @@ Projecten kunnen ook discussies hebben in forums, mailinglijsten of chatkanalen 
 Werk samen met een vriend om aan elkaars code te werken. Maak samen een project, fork code, maak branches en voeg wijzigingen samen.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Review & Zelfstudie
 

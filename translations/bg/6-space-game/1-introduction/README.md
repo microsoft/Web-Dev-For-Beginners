@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Предварителен тест
 
-[Предварителен тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Предварителен тест](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Наследяване и композиция в разработката на игри
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## Финален тест
 
-[Финален тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Финален тест](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Преглед и самостоятелно обучение
 

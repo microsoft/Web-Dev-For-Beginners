@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Bir oyunda *bitirme koşulunu* ifade etmenin farklı yolları vardır. Oyunun yaratıcısı olarak, oyunun neden sona erdiğini belirlemek size bağlıdır. Şimdiye kadar geliştirdiğiniz uzay oyunu bağlamında, işte bazı nedenler:
 
@@ -220,7 +220,7 @@ Bir ses ekleyin! Oyun deneyiminizi geliştirmek için bir ses ekleyebilir misini
 
 ## Ders Sonrası Test
 
-[Ders sonrası testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

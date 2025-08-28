@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz voor de les
-[Quiz voor de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Quiz voor de les](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Deze les behandelt de basis van JavaScript, de taal die interactiviteit op het web mogelijk maakt.
 
@@ -199,7 +199,7 @@ Booleans kunnen slechts twee waarden hebben: `true` of `false`. Booleans kunnen 
 JavaScript staat bekend om zijn verrassende manieren van omgaan met gegevenstypen. Doe wat onderzoek naar deze 'valkuilen'. Bijvoorbeeld: hoofdlettergevoeligheid kan je verrassen! Probeer dit in je console: `let age = 1; let Age = 2; age == Age` (resultaat `false` -- waarom?). Welke andere valkuilen kun je vinden?
 
 ## Quiz na de les
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Herhaling & Zelfstudie
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ennen luentoa - Kysely
-[Ennen luentoa - kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Ennen luentoa - kysely](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Kun ajattelemme koodin kirjoittamista, haluamme aina varmistaa, että koodi on luettavaa. Vaikka tämä kuulostaa vastoin intuitiota, koodia luetaan paljon useammin kuin sitä kirjoitetaan. Yksi keskeinen työkalu kehittäjän työkalupakissa ylläpidettävän koodin varmistamiseksi on **funktio**.
 
@@ -194,7 +194,7 @@ Olet nyt nähnyt kolme tapaa välittää funktio parametrina ja saatat miettiä,
 Osaatko selittää yhdessä lauseessa eron funktioiden ja metodien välillä? Kokeile!
 
 ## Luentojälkeinen kysely
-[Luentojälkeinen kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Kertaus ja itseopiskelu
 

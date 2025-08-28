@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Sebelum Kuliah
 
-[Kuis sebelum kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Kuis sebelum kuliah](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Membuat keputusan dan mengontrol urutan kode yang dijalankan membuat kode Anda dapat digunakan kembali dan tangguh. Bagian ini membahas sintaks untuk mengontrol alur data dalam JavaScript dan pentingnya saat digunakan dengan tipe data Boolean.
 
@@ -214,7 +214,7 @@ Buat program yang ditulis pertama dengan operator logika, lalu tulis ulang mengg
 
 ## Kuis Setelah Kuliah
 
-[Kuis setelah kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Kuis setelah kuliah](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Tinjauan & Studi Mandiri
 

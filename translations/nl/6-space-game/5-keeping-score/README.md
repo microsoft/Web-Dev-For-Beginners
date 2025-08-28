@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/37)
 
 In deze les leer je hoe je een score toevoegt aan een spel en levens berekent.
 
@@ -187,7 +187,7 @@ Je code is bijna compleet. Kun je je volgende stappen bedenken?
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Review & Zelfstudie
 

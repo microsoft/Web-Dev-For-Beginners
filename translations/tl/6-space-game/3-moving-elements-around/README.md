@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Hindi masyadong masaya ang mga laro kung walang mga alien na gumagalaw sa screen! Sa larong ito, gagamit tayo ng dalawang uri ng galaw:
 
@@ -386,7 +386,7 @@ Tulad ng nakikita mo, ang iyong code ay maaaring maging 'spaghetti code' kapag n
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Review & Self Study
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Dedovanje in kompozicija pri razvoju iger
 
@@ -222,7 +222,7 @@ Razmislite, kako lahko vzorec pub-sub izboljša igro. Kateri deli naj oddajajo d
 
 ## Zaključni kviz
 
-[Zaključni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Zaključni kviz](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Pregled in samostojno učenje
 

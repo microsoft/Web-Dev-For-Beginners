@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတင်မီ မေးခွန်းများ
 
-[မိန့်ခွန်းမတင်မီ မေးခွန်းများ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[မိန့်ခွန်းမတင်မီ မေးခွန်းများ](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### အကျဉ်းချုပ်
 
@@ -291,7 +291,7 @@ User ရှိပြီးသားဆိုရင် HTML မှာ error messa
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Review & Self Study
 

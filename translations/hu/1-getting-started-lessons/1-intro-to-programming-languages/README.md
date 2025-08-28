@@ -182,7 +182,7 @@ A fejlesztők gyakran dokumentációhoz fordulnak, hogy új dolgokat tanuljanak 
 Hasonlíts össze néhány programozási nyelvet. Milyen egyedi jellemzői vannak a JavaScriptnek a Javához képest? És mi a helyzet a COBOL és a Go esetében?
 
 ## Előadás utáni kvíz
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Áttekintés és önálló tanulás
 

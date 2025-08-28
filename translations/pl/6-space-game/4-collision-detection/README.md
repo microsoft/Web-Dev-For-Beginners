@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed lekcją
 
-[Quiz przed lekcją](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Quiz przed lekcją](https://ff-quizzes.netlify.app/web/quiz/35)
 
 W tej lekcji nauczysz się strzelać laserami za pomocą JavaScriptu! Dodamy dwie rzeczy do naszej gry:
 
@@ -295,7 +295,7 @@ Dodaj eksplozję! Sprawdź zasoby gry w [repozytorium Space Art](../../../../6-s
 
 ## Quiz po lekcji
 
-[Quiz po lekcji](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Quiz po lekcji](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Przegląd i samodzielna nauka
 

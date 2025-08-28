@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > [Tomomi Imura](https://twitter.com/girlie_mac) မှ Sketchnote
 
 ## သင်ခန်းစာမတိုင်မီ မေးခွန်း
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > ဝက်ဘ်၏ အားသာချက်မှာ ၎င်း၏ အထွေထွေသုံးနိုင်မှုတွင် ရှိသည်။ မသန်စွမ်းမှုရှိသူများပါဝင်နိုင်မှုသည် အရေးပါသော အချက်တစ်ခုဖြစ်သည်။
 >

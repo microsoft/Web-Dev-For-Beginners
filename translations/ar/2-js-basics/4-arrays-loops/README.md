@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## اختبار ما قبل المحاضرة
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/13)
 
 تغطي هذه الدرس أساسيات JavaScript، اللغة التي تضيف التفاعلية إلى الويب. في هذا الدرس، ستتعلم عن المصفوفات والحلقات، والتي تُستخدم لمعالجة البيانات.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 هناك طرق أخرى للتكرار على المصفوفات غير الحلقات for وwhile. هناك [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)، [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of)، و[map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). أعد كتابة حلقة المصفوفة الخاصة بك باستخدام واحدة من هذه التقنيات.
 
 ## اختبار ما بعد المحاضرة
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## المراجعة والدراسة الذاتية
 

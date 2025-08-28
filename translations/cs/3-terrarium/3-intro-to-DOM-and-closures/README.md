@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před lekcí
 
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Úvod
 
@@ -210,7 +210,7 @@ Přidejte nový obslužný program událostí do svého uzávěru, aby rostliny 
 
 ## Kvíz po lekci
 
-[Kvíz po lekci](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Přehled a samostudium
 

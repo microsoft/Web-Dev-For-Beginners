@@ -201,7 +201,7 @@ Ketika seorang pengembang ingin mempelajari sesuatu yang baru, mereka kemungkina
 Bandingkan beberapa bahasa pemrograman. Apa saja ciri khas JavaScript vs. Java? Bagaimana dengan COBOL vs. Go?
 
 ## Kuis Pasca-Pelajaran
-[Kuis pasca-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Tinjauan & Studi Mandiri
 

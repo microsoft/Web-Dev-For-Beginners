@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Pra-Pelajaran
-[Kuis pra-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Pelajaran ini mencakup dasar-dasar JavaScript, bahasa yang memberikan interaktivitas pada web. Dalam pelajaran ini, Anda akan mempelajari tentang array dan loop, yang digunakan untuk memanipulasi data.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Ada cara lain untuk mengulang array selain menggunakan for dan while loop. Ada [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), dan [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Ulangi loop array Anda menggunakan salah satu teknik ini.
 
 ## Kuis Pasca-Pelajaran
-[Kuis pasca-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Tinjauan & Belajar Mandiri
 

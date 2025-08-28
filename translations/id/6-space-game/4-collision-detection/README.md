@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Pelajaran
 
-[Kuis pra-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Dalam pelajaran ini, Anda akan belajar cara menembakkan laser menggunakan JavaScript! Kita akan menambahkan dua hal ke dalam game kita:
 
@@ -295,7 +295,7 @@ Tambahkan ledakan! Lihat aset game di [repo Space Art](../../../../6-space-game/
 
 ## Kuis Pasca-Pelajaran
 
-[Kuis pasca-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Tinjauan & Belajar Mandiri
 

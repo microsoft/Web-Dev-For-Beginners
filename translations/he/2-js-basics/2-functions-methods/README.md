@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > איור מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## חידון לפני ההרצאה
-[חידון לפני ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[חידון לפני ההרצאה](https://ff-quizzes.netlify.app/web/quiz/9)
 
 כשאנחנו חושבים על כתיבת קוד, אנחנו תמיד רוצים לוודא שהקוד שלנו קריא. למרות שזה נשמע מנוגד לאינטואיציה, קוד נקרא הרבה יותר פעמים מאשר נכתב. אחד הכלים המרכזיים בארגז הכלים של מפתח להבטחת קוד שניתן לתחזוקה הוא **פונקציה**.
 
@@ -194,7 +194,7 @@ setTimeout(() => {
 האם תוכלו להסביר במשפט אחד את ההבדל בין פונקציות למתודות? נסו!
 
 ## חידון אחרי ההרצאה
-[חידון אחרי ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[חידון אחרי ההרצאה](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## סקירה ולמידה עצמית
 

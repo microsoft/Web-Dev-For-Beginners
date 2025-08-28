@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Det finnes ulike måter å uttrykke en *sluttbetingelse* i et spill. Det er opp til deg som skaper av spillet å definere hvorfor spillet har tatt slutt. Her er noen grunner, hvis vi antar at vi snakker om romspillet du har bygget så langt:
 
@@ -220,7 +220,7 @@ Legg til lyd! Kan du legge til lyd for å forbedre spillopplevelsen, kanskje nå
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Gjennomgang og selvstudium
 

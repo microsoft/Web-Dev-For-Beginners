@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Prieš paskaitą: testas
 
-[Prieš paskaitą: testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Prieš paskaitą: testas](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Įvadas
 
@@ -210,7 +210,7 @@ Pridėkite naują įvykio tvarkytuvą savo uždaroje funkcijoje, kad augalai atl
 
 ## Po paskaitos: testas
 
-[Po paskaitos: testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Po paskaitos: testas](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Apžvalga ir savarankiškas mokymasis
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ennakkokysely
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Tässä oppitunnissa käsitellään JavaScriptin perusteita, kieltä, joka tuo verkkosivuille vuorovaikutteisuutta.
 
@@ -199,7 +199,7 @@ Totuusarvot voivat olla vain kaksi arvoa: `true` tai `false`. Totuusarvot auttav
 JavaScript on tunnettu yllättävistä tavoistaan käsitellä tietotyyppejä. Tee hieman tutkimusta näistä "ansakohdista". Esimerkiksi: kirjainkoolla on merkitystä! Kokeile tätä konsolissasi: `let age = 1; let Age = 2; age == Age` (tulos on `false` -- miksi?). Mitä muita ansakohtia löydät?
 
 ## Oppitunnin jälkeinen kysely
-[Oppitunnin jälkeinen kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Oppitunnin jälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Kertaus ja itseopiskelu
 

@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Σκίτσο από [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ερωτηματολόγιο πριν το μάθημα
-[Ερωτηματολόγιο πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Ερωτηματολόγιο πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Εισαγωγή
 
@@ -292,7 +292,7 @@ CO_OP_TRANSLATOR_METADATA:
 Συνεργαστείτε με έναν φίλο για να εργαστείτε στον κώδικα του άλλου. Δημιουργήστε ένα έργο συνεργατικά, κάντε fork τον κώδικα, δημιουργήστε κλάδους και συγχωνεύστε αλλαγές.
 
 ## Κουίζ μετά το μάθημα
-[Κουίζ μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Κουίζ μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Ανασκόπηση & Αυτομελέτη
 

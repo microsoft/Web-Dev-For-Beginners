@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelæsning
 
-[Quiz før forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Quiz før forelæsning](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Der er forskellige måder at udtrykke en *slutbetingelse* i et spil. Det er op til dig som spillets skaber at definere, hvorfor spillet er slut. Her er nogle mulige grunde, hvis vi antager, at vi taler om det rumspil, du har bygget indtil videre:
 
@@ -220,7 +220,7 @@ Tilføj en lyd! Kan du tilføje en lyd for at forbedre din spiloplevelse, måske
 
 ## Quiz efter forelæsning
 
-[Quiz efter forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Quiz efter forelæsning](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Gennemgang & Selvstudie
 

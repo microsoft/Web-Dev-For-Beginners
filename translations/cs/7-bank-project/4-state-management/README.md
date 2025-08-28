@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před lekcí
 
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Úvod
 
@@ -278,7 +278,7 @@ Nyní, když znovu načítáme data účtu pokaždé, když je přehled načten,
 Zkuste společně změnit, co je uloženo a načítáno z `localStorage`, aby zahrnovalo pouze to, co je pro fungování aplikace absolutně nezbytné.
 
 ## Kvíz po lekci
-[Post-přednáškový kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Post-přednáškový kvíz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Úkol
 

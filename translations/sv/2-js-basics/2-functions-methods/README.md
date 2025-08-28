@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz före föreläsning
-[Quiz före föreläsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Quiz före föreläsning](https://ff-quizzes.netlify.app/web/quiz/9)
 
 När vi tänker på att skriva kod vill vi alltid säkerställa att vår kod är läsbar. Även om det kan låta motsägelsefullt, läses kod många fler gånger än den skrivs. Ett av de viktigaste verktygen i en utvecklares verktygslåda för att säkerställa underhållbar kod är **funktionen**.
 
@@ -194,7 +194,7 @@ Du har nu sett att vi har tre sätt att skicka en funktion som en parameter och 
 Kan du formulera skillnaden mellan funktioner och metoder i en mening? Försök!
 
 ## Quiz efter föreläsning
-[Quiz efter föreläsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Quiz efter föreläsning](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Granskning & Självstudier
 

@@ -15,7 +15,7 @@ Pelajaran ini merangkumi asas GitHub, sebuah platform untuk menghos dan mengurus
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra-Kuliah
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Pengenalan
 
@@ -316,7 +316,7 @@ Projek mungkin juga mempunyai perbincangan dalam forum, senarai mel, atau salura
 Berpasangan dengan rakan untuk bekerja pada kod masing-masing. Cipta projek secara kolaboratif, fork kod, cipta cawangan, dan gabungkan perubahan.
 
 ## Kuiz Selepas Kuliah
-[Kuiz selepas kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Kuiz selepas kuliah](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Ulasan & Kajian Kendiri
 

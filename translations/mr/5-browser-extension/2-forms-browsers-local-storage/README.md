@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्री-लेक्चर क्विझ
 
-[प्री-लेक्चर क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[प्री-लेक्चर क्विझ](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### परिचय
 
@@ -224,7 +224,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## पोस्ट-लेक्चर क्विझ
 
-[पोस्ट-लेक्चर क्विझ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[पोस्ट-लेक्चर क्विझ](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

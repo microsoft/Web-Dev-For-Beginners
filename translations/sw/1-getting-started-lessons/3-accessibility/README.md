@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Maswali ya Awali ya Somo
-[Maswali ya awali ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Nguvu ya Wavuti iko katika ulimwengu wake wote. Ufikiaji kwa kila mtu bila kujali ulemavu ni kipengele muhimu.
 >
@@ -228,7 +228,7 @@ Chukua HTML hii na uandike upya ili iweze kufikiwa zaidi, kwa kuzingatia mikakat
 ```
 
 ## Maswali ya Baada ya Somo
-[Maswali ya baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Mapitio na Kujisomea
 Serikali nyingi zina sheria kuhusu mahitaji ya upatikanaji. Soma kuhusu sheria za upatikanaji za nchi yako. Ni nini kinachojumuishwa, na nini hakijajumuishwa? Mfano ni [tovuti hii ya serikali](https://accessibility.blog.gov.uk/).

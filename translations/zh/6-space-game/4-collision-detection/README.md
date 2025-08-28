@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/35)
 
 在本课中，你将学习如何使用 JavaScript 发射激光！我们将为游戏添加以下两项内容：
 
@@ -295,7 +295,7 @@ npm start
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## 复习与自学
 

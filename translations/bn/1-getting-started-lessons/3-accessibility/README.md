@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > স্কেচনোট: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## লেকচারের আগে কুইজ
-[লেকচারের আগে কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[লেকচারের আগে কুইজ](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > ওয়েবের শক্তি এর সার্বজনীনতায়। প্রতিবন্ধকতা নির্বিশেষে সবার জন্য অ্যাক্সেস নিশ্চিত করাই এর একটি গুরুত্বপূর্ণ দিক।
 >

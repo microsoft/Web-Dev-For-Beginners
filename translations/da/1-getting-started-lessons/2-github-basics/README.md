@@ -15,7 +15,7 @@ Denne lektion dækker det grundlæggende i GitHub, en platform til at hoste og a
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz før lektionen
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Introduktion
 
@@ -315,7 +315,7 @@ Projekter kan også have diskussioner i fora, mailinglister eller chatkanaler so
 Samarbejd med en ven om at arbejde på hinandens kode. Opret et projekt i fællesskab, fork kode, opret branches og flet ændringer.
 
 ## Quiz efter forelæsning
-[Quiz efter forelæsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Quiz efter forelæsning](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Gennemgang & Selvstudie
 

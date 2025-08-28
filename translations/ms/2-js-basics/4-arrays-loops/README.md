@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra-Kuliah
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Pelajaran ini merangkumi asas JavaScript, bahasa yang memberikan interaktiviti di web. Dalam pelajaran ini, anda akan mempelajari tentang array dan gelung, yang digunakan untuk memanipulasi data.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Terdapat cara lain untuk mengulangi array selain gelung for dan while. Terdapat [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), dan [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Tulis semula gelung array anda menggunakan salah satu teknik ini.
 
 ## Kuiz Pasca-Kuliah
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Ulasan & Kajian Kendiri
 

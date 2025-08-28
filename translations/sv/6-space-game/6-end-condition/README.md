@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förhandsquiz
 
-[Förhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Det finns olika sätt att uttrycka ett *slutvillkor* i ett spel. Det är upp till dig som skapare av spelet att bestämma varför spelet ska ta slut. Här är några anledningar, om vi antar att vi pratar om rymdspelet du har byggt hittills:
 
@@ -220,7 +220,7 @@ Lägg till ett ljud! Kan du lägga till ett ljud för att förbättra spelupplev
 
 ## Efterhandsquiz
 
-[Efterhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Efterhandsquiz](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Granskning & Självstudier
 

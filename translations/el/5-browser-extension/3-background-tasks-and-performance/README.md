@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ερωτηματολόγιο Πριν το Μάθημα
 
-[Ερωτηματολόγιο πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Ερωτηματολόγιο πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Εισαγωγή
 
@@ -158,7 +158,7 @@ function drawIcon(value) {
 
 ## Ερωτηματολόγιο Μετά το Μάθημα
 
-[Ερωτηματολόγιο μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Ερωτηματολόγιο μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Ανασκόπηση & Αυτομελέτη
 

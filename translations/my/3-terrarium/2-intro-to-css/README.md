@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတင်မီ စစ်ဆေးမှု
 
-[မိန့်ခွန်းမတင်မီ စစ်ဆေးမှု](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[မိန့်ခွန်းမတင်မီ စစ်ဆေးမှု](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### မိတ်ဆက်
 
@@ -268,7 +268,7 @@ Post-lecture quiz ကို ပြီးမြောက်စေရန်၊ ဒ
 
 ## မိန့်ခွန်းပြီးနောက် စစ်ဆေးမှု
 
-[မိန့်ခွန်းပြီးနောက် စစ်ဆေးမှု](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[မိန့်ခွန်းပြီးနောက် စစ်ဆေးမှု](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## ပြန်လည်သုံးသပ်မှုနှင့် ကိုယ်တိုင်လေ့လာမှု
 

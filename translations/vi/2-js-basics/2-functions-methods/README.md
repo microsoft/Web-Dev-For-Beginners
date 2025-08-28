@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Câu hỏi trước bài giảng
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Khi chúng ta nghĩ về việc viết mã, chúng ta luôn muốn đảm bảo rằng mã của mình dễ đọc. Mặc dù điều này nghe có vẻ ngược đời, nhưng mã được đọc nhiều lần hơn rất nhiều so với khi nó được viết. Một công cụ cốt lõi trong bộ công cụ của nhà phát triển để đảm bảo mã dễ bảo trì chính là **hàm**.
 
@@ -194,7 +194,7 @@ Bây giờ bạn đã thấy chúng ta có ba cách để truyền một hàm l�
 Bạn có thể giải thích trong một câu sự khác biệt giữa hàm và phương thức không? Hãy thử nhé!
 
 ## Câu hỏi sau bài giảng
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Ôn tập & Tự học
 

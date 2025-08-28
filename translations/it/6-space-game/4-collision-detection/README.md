@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/35)
 
 In questa lezione imparerai a sparare laser con JavaScript! Aggiungeremo due elementi al nostro gioco:
 
@@ -295,7 +295,7 @@ Aggiungi un'esplosione! Dai un'occhiata alle risorse del gioco nel [repo Space A
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Revisione & Studio Autonomo
 

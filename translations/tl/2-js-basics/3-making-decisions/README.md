@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Ang paggawa ng desisyon at pagkontrol sa pagkakasunod-sunod ng pagtakbo ng iyong code ay nagpapalakas at nagpaparami ng gamit ng iyong code. Ang seksyong ito ay tumatalakay sa syntax para sa pagkontrol ng daloy ng data sa JavaScript at ang kahalagahan nito kapag ginamit sa Boolean na uri ng data.
 
@@ -214,7 +214,7 @@ Gumawa ng isang programa na unang isinulat gamit ang logical operators, at pagka
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Review & Self Study
 

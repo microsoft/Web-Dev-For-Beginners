@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## חידון לפני השיעור
 
-[חידון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[חידון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/33)
 
 משחקים לא ממש מהנים עד שיש חייזרים שמתרוצצים על המסך! במשחק הזה נשתמש בשני סוגי תנועות:
 
@@ -386,7 +386,7 @@ npm start
 
 ## חידון אחרי השיעור
 
-[חידון אחרי השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[חידון אחרי השיעור](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## סקירה ולימוד עצמי
 

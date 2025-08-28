@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz voorafgaand aan de les
 
-[Quiz voorafgaand aan de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Introductie
 
@@ -296,7 +296,7 @@ Hier is een voorbeeld van hoe de uiteindelijke inlogpagina eruit kan zien na wat
 
 ## Quiz na de les
 
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Review & Zelfstudie
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) द्वारा
 
 ## प्री-लेक्चर क्विज
-[प्री-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[प्री-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/7)
 
 यह पाठ जावास्क्रिप्ट की मूल बातें कवर करता है, जो वेब पर इंटरएक्टिविटी प्रदान करता है।
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 जावास्क्रिप्ट अपने डेटा प्रकारों को संभालने के आश्चर्यजनक तरीकों के लिए कुख्यात है। इन 'gotchas' पर थोड़ा शोध करें। उदाहरण: केस सेंसिटिविटी आपको परेशान कर सकती है! इसे अपने कंसोल में आजमाएं: `let age = 1; let Age = 2; age == Age` (यह `false` देता है -- क्यों?)। आप और कौन से gotchas ढूंढ सकते हैं?
 
 ## पोस्ट-लेक्चर क्विज
-[पोस्ट-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[पोस्ट-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## समीक्षा और स्व-अध्ययन
 

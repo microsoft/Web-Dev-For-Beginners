@@ -15,7 +15,7 @@ Tässä oppitunnissa käsitellään GitHubin perusteita, joka on alusta koodin i
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ennakkokysely
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Johdanto
 
@@ -315,7 +315,7 @@ Projekteilla voi myös olla keskusteluja foorumeilla, postituslistoilla tai kesk
 Työskentele yhdessä ystävän kanssa toistenne koodin parissa. Luo projekti yhteistyössä, forkkaa koodi, luo haaroja ja yhdistä muutoksia.
 
 ## Luentojälkeinen kysely
-[Luentojälkeinen kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Kertaus ja itseopiskelu
 

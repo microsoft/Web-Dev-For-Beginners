@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennen luentoa -kysely
 
-[Ennen luentoa -kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Ennen luentoa -kysely](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Pelit eivät ole kovin hauskoja, ennen kuin ruudulla alkaa liikkua avaruusolentoja! Tässä pelissä käytämme kahta erilaista liikettä:
 
@@ -386,7 +386,7 @@ Kuten huomaat, koodisi voi muuttua "spagettikoodiksi", kun alat lisätä funktio
 
 ## Luentojälkeinen kysely
 
-[Luentojälkeinen kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Kertaus ja itseopiskelu
 

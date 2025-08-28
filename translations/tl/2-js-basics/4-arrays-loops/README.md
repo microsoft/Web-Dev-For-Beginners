@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Tatalakayin sa araling ito ang mga pangunahing kaalaman sa JavaScript, ang wika na nagbibigay ng interaktibidad sa web. Sa araling ito, matututuhan mo ang tungkol sa arrays at loops, na ginagamit upang manipulahin ang data.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 May iba pang mga paraan ng pag-loop sa arrays bukod sa for at while loops. Mayroong [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), at [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Isulat muli ang iyong array loop gamit ang isa sa mga teknik na ito.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Review at Pag-aaral sa Sarili
 

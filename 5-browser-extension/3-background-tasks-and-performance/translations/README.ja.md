@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27?loc=ja)
+[レッスン前の小テスト](https://ff-quizzes.netlify.app/web/quiz/27?loc=ja)
 
 ### イントロダクション
 
@@ -147,7 +147,7 @@ function drawIcon(value) {
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28?loc=ja)
+[レッスン後の小テスト](https://ff-quizzes.netlify.app/web/quiz/28?loc=ja)
 
 ## 復習と自己学習
 

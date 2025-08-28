@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před přednáškou
 
-[Kvíz před přednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Kvíz před přednáškou](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Plátno
 
@@ -214,7 +214,7 @@ Naučili jste se kreslit pomocí Canvas API zaměřeného na 2D; podívejte se n
 
 ## Kvíz po přednášce
 
-[Kvíz po přednášce](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Přehled a samostudium
 

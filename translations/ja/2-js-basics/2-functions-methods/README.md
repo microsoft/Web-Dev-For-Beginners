@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 講義前クイズ
-[講義前クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/9)
 
 コードを書くとき、常にコードが読みやすいことを意識する必要があります。一見矛盾しているように思えるかもしれませんが、コードは書かれる回数よりも読む回数の方が圧倒的に多いのです。開発者がメンテナンスしやすいコードを書くための重要なツールの1つが**関数**です。
 
@@ -194,7 +194,7 @@ setTimeout(() => {
 関数とメソッドの違いを1文で説明できますか？挑戦してみてください！
 
 ## 講義後クイズ
-[講義後クイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## 復習と自己学習
 

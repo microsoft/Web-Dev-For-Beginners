@@ -19,7 +19,7 @@ TODO: adicionar uma imagem opcional
 
 <!---
 ## Questionário Pré-Lição
-[Questionário pré-lição](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Questionário pré-lição](https://ff-quizzes.netlify.app/web/quiz/3)
 ---->
 
 ## Objetivos de aprendizagem
@@ -161,7 +161,7 @@ Depois de instalar e usar a sua extensão, o vscode.dev oferece opções para ge
 
 <!----
 ## Questionário Pós-Lição
-[Questionário pós-lição](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Questionário pós-lição](https://ff-quizzes.netlify.app/web/quiz/4)
 ---->
 
 ## Revisão & Autoestudo

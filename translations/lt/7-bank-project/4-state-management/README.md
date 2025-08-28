@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Prieš paskaitą: testas
 
-[Prieš paskaitą: testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Prieš paskaitą: testas](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Įvadas
 
@@ -259,7 +259,7 @@ async function refresh() {
 ```
 
 Ši funkcija atnaujina paskyros duomenis, tada pasirūpina prietaisų skydelio puslapio HTML atnaujinimu. Tai yra tai, ką reikia iškviesti, kai įkeliamas prietaisų skydelio maršrutas. Atnaujinkite maršruto
-[Po paskaitos testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Po paskaitos testas](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Užduotis
 

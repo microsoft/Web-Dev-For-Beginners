@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz avant le cours
 
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/15)
 
 
 > Regardez la vidéo
@@ -232,7 +232,7 @@ Il existe des balises 'anciennes' amusantes en HTML qui sont encore intéressant
 
 ## Quiz après le cours
 
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Révision et auto-apprentissage
 

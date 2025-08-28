@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz avant le cours
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Cette leçon couvre les bases de JavaScript, le langage qui permet d'ajouter de l'interactivité sur le web.
 
@@ -199,7 +199,7 @@ Les booléens ne peuvent avoir que deux valeurs : `true` ou `false`. Les boolée
 JavaScript est connu pour ses façons surprenantes de gérer les types de données à l'occasion. Faites quelques recherches sur ces 'pièges'. Par exemple : la sensibilité à la casse peut poser problème ! Essayez ceci dans votre console : `let age = 1; let Age = 2; age == Age` (résout `false` -- pourquoi ?). Quels autres pièges pouvez-vous trouver ?
 
 ## Quiz après le cours
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Révision et étude personnelle
 

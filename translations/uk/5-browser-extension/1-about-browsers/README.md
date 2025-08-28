@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Тест перед лекцією
 
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Вступ
 
@@ -160,7 +160,7 @@ npm install
 
 ## Тест після лекції
 
-[Тест після лекції](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Тест після лекції](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Огляд та самостійне навчання
 

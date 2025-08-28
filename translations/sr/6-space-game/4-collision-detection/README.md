@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Квиз пре предавања
 
-[Квиз пре предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Квиз пре предавања](https://ff-quizzes.netlify.app/web/quiz/35)
 
 У овој лекцији ћете научити како да пуцате ласере помоћу JavaScript-а! Додаћемо две ствари у нашу игру:
 
@@ -295,7 +295,7 @@ npm start
 
 ## Квиз после предавања
 
-[Квиз после предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Квиз после предавања](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Преглед и самостално учење
 

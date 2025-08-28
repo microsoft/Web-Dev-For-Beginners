@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Prendere decisioni e controllare l'ordine in cui il tuo codice viene eseguito rende il codice riutilizzabile e robusto. Questa sezione copre la sintassi per controllare il flusso dei dati in JavaScript e la sua importanza quando viene utilizzata con i tipi di dati Booleani.
 
@@ -214,7 +214,7 @@ Crea un programma scritto prima con operatori logici, e poi riscrivilo utilizzan
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Revisione e studio autonomo
 

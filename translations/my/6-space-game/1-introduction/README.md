@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတိုင်မီ စမ်းမေးခွန်း
 
-[မိန့်ခွန်းမတိုင်မီ စမ်းမေးခွန်း](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[မိန့်ခွန်းမတိုင်မီ စမ်းမေးခွန်း](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### ဂိမ်းဖွံ့ဖြိုးရေးအတွက် Inheritance နှင့် Composition
 
@@ -222,7 +222,7 @@ Pub-sub pattern သည် ဂိမ်းတစ်ခုကို ဘယ်လ�
 
 ## မိန့်ခွန်းပြီးနောက် စမ်းမေးခွန်း
 
-[မိန့်ခွန်းပြီးနောက် စမ်းမေးခွန်း](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[မိန့်ခွန်းပြီးနောက် စမ်းမေးခွန်း](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

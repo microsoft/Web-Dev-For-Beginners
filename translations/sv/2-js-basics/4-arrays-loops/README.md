@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz före föreläsningen
-[Quiz före föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Quiz före föreläsningen](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Den här lektionen täcker grunderna i JavaScript, språket som ger interaktivitet på webben. I den här lektionen kommer du att lära dig om arrayer och loopar, som används för att manipulera data.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Det finns andra sätt att loopa över arrayer än for- och while-loopar. Det finns [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) och [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Skriv om din array-loop med en av dessa tekniker.
 
 ## Quiz efter föreläsningen
-[Quiz efter föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Granskning & Självstudier
 

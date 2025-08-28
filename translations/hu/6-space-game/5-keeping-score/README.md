@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Ebben a leckében megtanulod, hogyan adj pontszámot a játékhoz, és hogyan számold az életeket.
 
@@ -187,7 +187,7 @@ A kódod majdnem kész. El tudod képzelni, mik lehetnek a következő lépések
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Áttekintés és önálló tanulás
 

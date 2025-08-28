@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Предварительный тест
 
-[Предварительный тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Предварительный тест](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Посмотрите видео
 
@@ -231,7 +231,7 @@ HTML, или язык гипертекстовой разметки, — это 
 
 ## Тест после лекции
 
-[Тест после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Тест после лекции](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Обзор и самостоятельное изучение
 

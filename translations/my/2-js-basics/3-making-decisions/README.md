@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတင်မီ စမ်းမေးခွန်း
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/11)
 
 ဆုံးဖြတ်ချက်များချခြင်းနှင့် သင့်ကုဒ်ကို အစီအစဉ်တကျ လည်ပတ်စေခြင်းသည် သင့်ကုဒ်ကို ပြန်လည်အသုံးပြုနိုင်စေပြီး ခိုင်မာစေပါသည်။ ဤအပိုင်းတွင် JavaScript တွင် ဒေတာလှည့်ပတ်မှုကို ထိန်းချုပ်ရန် syntax နှင့် Boolean ဒေတာအမျိုးအစားများနှင့် တွဲဖက်အသုံးပြုသောအခါ ၎င်း၏ အရေးပါမှုကို ဖော်ပြထားသည်။
 
@@ -214,7 +214,7 @@ Logical operator များကို အသုံးပြု၍ ရေးသ�
 
 ## မိန့်ခွန်းပြီးနောက် စမ်းမေးခွန်း
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

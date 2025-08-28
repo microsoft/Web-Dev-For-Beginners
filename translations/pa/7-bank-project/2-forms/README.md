@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਪੂਰਵ-ਵਿਆਖਿਆਨ ਕਵਿਜ਼
 
-[ਪੂਰਵ-ਵਿਆਖਿਆਨ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[ਪੂਰਵ-ਵਿਆਖਿਆਨ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### ਪਰਿਚਯ
 
@@ -236,7 +236,7 @@ async function createAccount(account) {
 
 ## ਲੈਕਚਰ ਬਾਅਦ ਕਵੀਜ਼
 
-[ਲੈਕਚਰ ਬਾਅਦ ਕਵੀਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[ਲੈਕਚਰ ਬਾਅਦ ਕਵੀਜ਼](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਸਵੈ ਅਧਿਐਨ
 

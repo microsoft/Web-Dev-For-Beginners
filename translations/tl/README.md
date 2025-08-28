@@ -118,9 +118,9 @@ Ang aming rekomendasyon ay gamitin ang [Visual Studio Code](https://code.visuals
 - isang hamon  
 - supplemental reading  
 - assignment  
-- [post-lesson quiz](https://ff-quizzes.netlify.app/)  
+- [post-lesson quiz](https://ff-quizzes.netlify.app/web/)  
 
-> **Tungkol sa mga pagsusulit**: Ang lahat ng pagsusulit ay nasa Quiz-app folder, kabuuang 48 na pagsusulit na may tig-tatlong tanong bawat isa. Available ang mga ito [dito](https://ff-quizzes.netlify.app/) at maaaring patakbuhin ang quiz app lokal o i-deploy sa Azure; sundin ang mga tagubilin sa `quiz-app` folder.  
+> **Tungkol sa mga pagsusulit**: Ang lahat ng pagsusulit ay nasa Quiz-app folder, kabuuang 48 na pagsusulit na may tig-tatlong tanong bawat isa. Available ang mga ito [dito](https://ff-quizzes.netlify.app/web/) at maaaring patakbuhin ang quiz app lokal o i-deploy sa Azure; sundin ang mga tagubilin sa `quiz-app` folder.  
 
 ## 🗃️ Mga Aralin  
 

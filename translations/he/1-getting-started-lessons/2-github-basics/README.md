@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > איור מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## שאלון לפני השיעור
-[שאלון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[שאלון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## מבוא
 
@@ -315,7 +315,7 @@ Pull request הוא המקום להשוות ולדון בהבדלים שהוכנ
 שתף פעולה עם חבר כדי לעבוד על הקוד אחד של השני. צור פרויקט באופן משותף, מזלג קוד, צור ענפים ומזג שינויים.
 
 ## חידון לאחר ההרצאה
-[חידון לאחר ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[חידון לאחר ההרצאה](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## סקירה ולימוד עצמי
 

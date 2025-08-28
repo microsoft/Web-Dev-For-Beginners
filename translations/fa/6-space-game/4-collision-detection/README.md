@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/35)
 
 در این درس یاد می‌گیرید که چگونه با استفاده از جاوااسکریپت لیزر شلیک کنید! ما دو ویژگی به بازی خود اضافه خواهیم کرد:
 
@@ -295,7 +295,7 @@ npm start
 
 ## آزمون پس از درس
 
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## مرور و مطالعه شخصی
 

@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar înainte de lecție
 
-[Chestionar înainte de lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Chestionar înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Introducere
 
@@ -268,7 +268,7 @@ Pentru a finaliza chestionarul post-lecție, parcurge acest modul Learn: [Stiliz
 
 ## Chestionar post-lecție
 
-[Chestionar post-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Recapitulare și studiu individual
 

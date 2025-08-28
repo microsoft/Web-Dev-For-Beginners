@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Jaribio la Kabla ya Somo
 
-[Jaribio la kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Utangulizi
 
@@ -278,7 +278,7 @@ Sasa kwa kuwa tunapakia tena data za akaunti kila wakati dashibodi inapopakuliwa
 Jaribu kufanya kazi pamoja kubadilisha kile kinachohifadhiwa na kupakiwa kutoka `localStorage` ili kujumuisha tu kile kinachohitajika kabisa kwa programu kufanya kazi.
 
 ## Jaribio la Baada ya Somo
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Kazi
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## ਪਾਠ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼
 
-[ਪਾਠ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[ਪਾਠ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/37)
 
 ਇਸ ਪਾਠ ਵਿੱਚ, ਤੁਸੀਂ ਸਿੱਖੋਗੇ ਕਿ ਗੇਮ ਵਿੱਚ ਸਕੋਰਿੰਗ ਕਿਵੇਂ ਸ਼ਾਮਲ ਕਰਨੀ ਹੈ ਅਤੇ ਜ਼ਿੰਦਗੀਆਂ ਦੀ ਗਿਣਤੀ ਕਿਵੇਂ ਕਰਨੀ ਹੈ।
 
@@ -187,7 +187,7 @@ npm start
 
 ## ਪਾਠ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼
 
-[ਪਾਠ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[ਪਾਠ ਤੋਂ ਬਾਅਦ ਕਵਿਜ਼](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## ਸਮੀਖਿਆ ਅਤੇ ਖੁਦ ਅਧਿਐਨ
 

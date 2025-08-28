@@ -118,9 +118,9 @@ Cadangan kami adalah menggunakan [Visual Studio Code](https://code.visualstudio.
 - cabaran  
 - bacaan tambahan  
 - tugasan  
-- [kuiz pasca-pelajaran](https://ff-quizzes.netlify.app/)  
+- [kuiz pasca-pelajaran](https://ff-quizzes.netlify.app/web/)  
 
-> **Nota tentang kuiz**: Semua kuiz terdapat dalam folder Quiz-app, 48 kuiz keseluruhan dengan tiga soalan setiap satu. Ia boleh didapati [di sini](https://ff-quizzes.netlify.app/) dan aplikasi kuiz boleh dijalankan secara tempatan atau dideploy ke Azure; ikuti arahan dalam folder `quiz-app`.  
+> **Nota tentang kuiz**: Semua kuiz terdapat dalam folder Quiz-app, 48 kuiz keseluruhan dengan tiga soalan setiap satu. Ia boleh didapati [di sini](https://ff-quizzes.netlify.app/web/) dan aplikasi kuiz boleh dijalankan secara tempatan atau dideploy ke Azure; ikuti arahan dalam folder `quiz-app`.  
 
 ## 🗃️ Pelajaran  
 

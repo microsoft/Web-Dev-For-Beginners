@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/39)
 
 在游戏中有多种方式可以表达“结束条件”。作为游戏的创作者，你可以决定游戏为何结束。以下是一些可能的原因，假设我们正在讨论你迄今为止构建的太空游戏：
 
@@ -220,7 +220,7 @@ npm start
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## 复习与自学
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/37)
 
 U ovoj lekciji naučit ćete kako dodati bodovanje u igru i izračunati živote.
 
@@ -187,7 +187,7 @@ Vaš kod je gotovo dovršen. Možete li zamisliti svoje sljedeće korake?
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Pregled i samostalno učenje
 

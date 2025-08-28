@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Uvod
 
@@ -224,7 +224,7 @@ V teh lekcijah smo obravnavali več vrst API-jev. Izberite spletni API in podrob
 
 ## Zaključni kviz
 
-[Zaključni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Zaključni kviz](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Pregled in samostojno učenje
 

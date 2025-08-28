@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Câu hỏi trước bài giảng
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Bài học này giới thiệu những kiến thức cơ bản về JavaScript, ngôn ngữ mang lại tính tương tác cho web. Trong bài học này, bạn sẽ tìm hiểu về mảng và vòng lặp, những công cụ được sử dụng để xử lý dữ liệu.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Có những cách khác để lặp qua mảng ngoài vòng lặp for và while. Có [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), và [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Viết lại vòng lặp mảng của bạn bằng một trong những kỹ thuật này.
 
 ## Câu hỏi sau bài giảng
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Ôn tập & Tự học
 

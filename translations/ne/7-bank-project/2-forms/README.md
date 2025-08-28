@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्रि-लेक्चर क्विज
 
-[प्रि-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[प्रि-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### परिचय
 
@@ -290,7 +290,7 @@ async function register() {
 
 ## पोस्ट-व्याख्यान क्विज
 
-[पोस्ट-व्याख्यान क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[पोस्ट-व्याख्यान क्विज](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## समीक्षा र आत्म-अध्ययन
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/39)
 
 May iba't ibang paraan upang ipahayag ang *kondisyon ng pagtatapos* sa isang laro. Nasa iyo bilang tagalikha ng laro kung bakit ito magtatapos. Narito ang ilang mga dahilan, kung iisipin natin ang tungkol sa space game na ginagawa mo:
 
@@ -220,7 +220,7 @@ Magdagdag ng tunog! Kaya mo bang magdagdag ng tunog upang mapaganda ang gameplay
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Review at Pag-aaral sa Sarili
 

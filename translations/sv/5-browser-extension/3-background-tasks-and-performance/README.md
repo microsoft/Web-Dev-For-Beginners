@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förkunskapstest
 
-[Förkunskapstest](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Förkunskapstest](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Introduktion
 
@@ -158,7 +158,7 @@ Undersök några öppna källkodssajter som har funnits länge, och baserat på 
 
 ## Efterföreläsningstest
 
-[Efterföreläsningstest](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Efterföreläsningstest](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Granskning & Självstudier
 

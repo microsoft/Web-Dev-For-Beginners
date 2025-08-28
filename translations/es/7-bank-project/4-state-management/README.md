@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Cuestionario Previo a la Clase
 
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Introducción
 
@@ -278,7 +278,7 @@ Ahora que recargamos los datos de la cuenta cada vez que se carga el tablero, ¿
 Intenta trabajar en equipo para cambiar lo que se guarda y se carga desde `localStorage` para incluir solo lo que sea absolutamente necesario para que la aplicación funcione.
 
 ## Cuestionario Posterior a la Clase
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Tarea
 

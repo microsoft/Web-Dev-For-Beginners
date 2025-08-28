@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Cuestionario previo a la lección
-[Cuestionario previo a la lección](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Cuestionario previo a la lección](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Esta lección cubre los conceptos básicos de JavaScript, el lenguaje que proporciona interactividad en la web. En esta lección, aprenderás sobre arrays y bucles, que se utilizan para manipular datos.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Existen otras formas de recorrer arrays además de los bucles for y while. Hay [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) y [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Reescribe tu bucle de array utilizando una de estas técnicas.
 
 ## Cuestionario posterior a la lección
-[Cuestionario posterior a la lección](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Cuestionario posterior a la lección](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Repaso y autoestudio
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 講義前のクイズ
-[講義前のクイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[講義前のクイズ](https://ff-quizzes.netlify.app/web/quiz/7)
 
 このレッスンでは、ウェブ上でインタラクティブ性を提供する言語であるJavaScriptの基本を学びます。
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 JavaScriptは時折データ型を扱う際に驚くべき挙動を示すことで有名です。これらの「落とし穴」について少し調べてみましょう。例えば: 大文字小文字の区別に注意！コンソールで次を試してみてください: `let age = 1; let Age = 2; age == Age` (結果は`false` -- なぜでしょう？)。他にどんな落とし穴が見つかりますか？
 
 ## 講義後のクイズ
-[講義後のクイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[講義後のクイズ](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## 復習と自己学習
 

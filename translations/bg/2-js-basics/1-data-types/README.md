@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скица от [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Тест преди лекцията
-[Тест преди лекцията](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Тест преди лекцията](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Тази лекция обхваща основите на JavaScript, езикът, който осигурява интерактивност в уеб.
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 JavaScript е известен със своите изненадващи начини за обработка на типове данни понякога. Направете малко проучване за тези 'изненади'. Например: чувствителността към главни и малки букви може да ви изненада! Опитайте това в конзолата си: `let age = 1; let Age = 2; age == Age` (резултатът е `false` -- защо?). Какви други изненади можете да откриете?
 
 ## Тест след лекцията
-[Тест след лекцията](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Тест след лекцията](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Преглед и самостоятелно обучение
 

@@ -118,9 +118,9 @@ Bu müfredatı bilgisayarınızda yerel olarak çalıştırmak için bir metin e
 - bir meydan okuma  
 - ek okuma materyalleri  
 - ödev  
-- [ders sonrası quiz](https://ff-quizzes.netlify.app/)  
+- [ders sonrası quiz](https://ff-quizzes.netlify.app/web/)  
 
-> **Quizler hakkında bir not**: Tüm quizler Quiz-app klasöründe yer alır, toplamda üçer sorudan oluşan 48 quiz vardır. Quizler [burada](https://ff-quizzes.netlify.app/) mevcuttur. Quiz uygulaması yerel olarak çalıştırılabilir veya Azure'a dağıtılabilir; `quiz-app` klasöründeki talimatları takip edin.  
+> **Quizler hakkında bir not**: Tüm quizler Quiz-app klasöründe yer alır, toplamda üçer sorudan oluşan 48 quiz vardır. Quizler [burada](https://ff-quizzes.netlify.app/web/) mevcuttur. Quiz uygulaması yerel olarak çalıştırılabilir veya Azure'a dağıtılabilir; `quiz-app` klasöründeki talimatları takip edin.  
 
 ## 🗃️ Dersler  
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Schiță realizată de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Chestionar înainte de curs
-[Chestionar înainte de curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Chestionar înainte de curs](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Puterea Web-ului constă în universalitatea sa. Accesul pentru toată lumea, indiferent de dizabilitate, este un aspect esențial.
 >
@@ -227,7 +227,7 @@ Luați acest HTML și rescrieți-l pentru a fi cât mai accesibil posibil, avân
 ```
 
 ## Chestionar după curs
-[Chestionar după curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Chestionar după curs](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Recapitulare și Studiu Individual
 Multe guverne au legi referitoare la cerințele de accesibilitate. Documentează-te despre legile privind accesibilitatea din țara ta. Ce este acoperit și ce nu este? Un exemplu este [acest site web guvernamental](https://accessibility.blog.gov.uk/).

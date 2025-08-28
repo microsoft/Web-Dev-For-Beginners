@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote autorice [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kviz prije predavanja  
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Ova lekcija pokriva osnove JavaScripta, jezika koji omogućuje interaktivnost na webu.
 
@@ -200,7 +200,7 @@ Booleovi mogu imati samo dvije vrijednosti: `true` ili `false`. Booleovi mogu po
 JavaScript je poznat po svojim iznenađujućim načinima rukovanja tipovima podataka. Istražite malo o ovim 'zamkama'. Na primjer: osjetljivost na velika i mala slova može vas zavarati! Isprobajte ovo u svojoj konzoli: `let age = 1; let Age = 2; age == Age` (rezultat je `false` -- zašto?). Koje još zamke možete pronaći?
 
 ## Kviz nakon predavanja  
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Pregled i samostalno učenje
 

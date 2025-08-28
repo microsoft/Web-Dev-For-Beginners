@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## اختبار ما قبل المحاضرة
 
-[اختبار ما قبل المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[اختبار ما قبل المحاضرة](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## البرمجة القائمة على الأحداث
 
@@ -337,7 +337,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## اختبار ما بعد المحاضرة
 
-[اختبار ما بعد المحاضرة](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[اختبار ما بعد المحاضرة](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## المراجعة والدراسة الذاتية
 

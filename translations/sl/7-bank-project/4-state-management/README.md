@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Uvod
 
@@ -278,7 +278,7 @@ Zdaj, ko vsakič, ko se naloži nadzorna plošča, ponovno naložimo podatke o r
 Poskusite skupaj spremeniti, kaj se shrani in naloži iz `localStorage`, tako da vključuje samo tisto, kar je absolutno potrebno za delovanje aplikacije.
 
 ## Kviz po predavanju
-[Post-predavanje kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Post-predavanje kviz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Naloga
 

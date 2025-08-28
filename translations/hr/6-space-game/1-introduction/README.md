@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Nasljeđivanje i kompozicija u razvoju igara
 
@@ -222,7 +222,7 @@ Razmislite o tome kako pub-sub obrazac može unaprijediti igru. Koji dijelovi bi
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Pregled i samostalno učenje
 

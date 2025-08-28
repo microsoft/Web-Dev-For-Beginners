@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Questionário Pré-Aula
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Esta lição aborda os fundamentos do JavaScript, a linguagem que proporciona interatividade na web. Nesta lição, vais aprender sobre arrays e ciclos, que são usados para manipular dados.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Existem outras formas de iterar sobre arrays além dos ciclos for e while. Existem [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), e [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Reescreve o teu ciclo de array utilizando uma destas técnicas.
 
 ## Questionário Pós-Aula
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Revisão e Autoestudo
 

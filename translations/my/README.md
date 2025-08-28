@@ -110,9 +110,9 @@ Generative AI သင်ရိုးအသစ်ကို လက်မလွှ�
 - စိန်ခေါ်မှု  
 - အပိုစာဖတ်ရန်  
 - အလုပ်ပေးစာ  
-- [Post-lesson Quiz](https://ff-quizzes.netlify.app/)  
+- [Post-lesson Quiz](https://ff-quizzes.netlify.app/web/)  
 
-> **Quiz များအကြောင်းမှတ်ချက်**: Quiz များအားလုံးကို Quiz-app Folder တွင် ထည့်သွင်းထားပြီး၊ 48 ခုရှိသည်။ Quiz တစ်ခုစီတွင် 3 မေးခွန်းပါဝင်သည်။ [ဤနေရာတွင်](https://ff-quizzes.netlify.app/) ရရှိနိုင်ပြီး၊ Quiz App ကို Local တွင် သို့မဟုတ် Azure တွင် တင်နိုင်ပါသည်။ `quiz-app` Folder တွင် လမ်းညွှန်ချက်များကို လိုက်နာပါ။  
+> **Quiz များအကြောင်းမှတ်ချက်**: Quiz များအားလုံးကို Quiz-app Folder တွင် ထည့်သွင်းထားပြီး၊ 48 ခုရှိသည်။ Quiz တစ်ခုစီတွင် 3 မေးခွန်းပါဝင်သည်။ [ဤနေရာတွင်](https://ff-quizzes.netlify.app/web/) ရရှိနိုင်ပြီး၊ Quiz App ကို Local တွင် သို့မဟုတ် Azure တွင် တင်နိုင်ပါသည်။ `quiz-app` Folder တွင် လမ်းညွှန်ချက်များကို လိုက်နာပါ။  
 
 ## 🗃️ သင်ခန်းစာများ  
 

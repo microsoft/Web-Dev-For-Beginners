@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før lektionen
 
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Introduktion
 
@@ -160,7 +160,7 @@ Tag et kig på en browserudvidelsesbutik, og installer en udvidelse i din browse
 
 ## Quiz efter lektionen
 
-[Quiz efter lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Gennemgang & Selvstudie
 

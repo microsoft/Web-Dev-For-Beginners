@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Pelajaran
 
-[Kuis pra-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Dalam pelajaran ini, Anda akan belajar cara menambahkan skor ke dalam game dan menghitung nyawa.
 
@@ -187,7 +187,7 @@ Kode Anda hampir selesai. Bisakah Anda membayangkan langkah berikutnya?
 
 ## Kuis Pasca-Pelajaran
 
-[Kuis pasca-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Tinjauan & Studi Mandiri
 

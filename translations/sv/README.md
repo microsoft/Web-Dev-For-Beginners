@@ -118,9 +118,9 @@ Vår rekommendation är att använda [Visual Studio Code](https://code.visualstu
 - en utmaning  
 - kompletterande läsning  
 - uppgift  
-- [quiz efter lektionen](https://ff-quizzes.netlify.app/)  
+- [quiz efter lektionen](https://ff-quizzes.netlify.app/web/)  
 
-> **En notering om quiz**: Alla quiz finns i mappen Quiz-app, totalt 48 quiz med tre frågor vardera. De är tillgängliga [här](https://ff-quizzes.netlify.app/) och quiz-appen kan köras lokalt eller distribueras till Azure; följ instruktionerna i mappen `quiz-app`.  
+> **En notering om quiz**: Alla quiz finns i mappen Quiz-app, totalt 48 quiz med tre frågor vardera. De är tillgängliga [här](https://ff-quizzes.netlify.app/web/) och quiz-appen kan köras lokalt eller distribueras till Azure; följ instruktionerna i mappen `quiz-app`.  
 
 ## 🗃️ Lektioner  
 

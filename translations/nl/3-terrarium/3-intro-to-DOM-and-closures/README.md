@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Introductie
 
@@ -210,7 +210,7 @@ Voeg een nieuwe event handler toe aan je closure om iets extra's met de planten 
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Review & Zelfstudie
 

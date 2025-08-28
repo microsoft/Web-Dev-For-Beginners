@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Κουίζ πριν το μάθημα
 
-[Κουίζ πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Κουίζ πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Εισαγωγή
 
@@ -281,7 +281,7 @@ async function register() {
 
 ## Κουίζ μετά το μάθημα
 
-[Κουίζ μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Κουίζ μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Ανασκόπηση & Αυτομελέτη
 

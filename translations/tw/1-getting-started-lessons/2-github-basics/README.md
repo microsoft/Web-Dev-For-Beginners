@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > [Tomomi Imura](https://twitter.com/girlie_mac) 的手繪筆記
 
 ## 課前測驗
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## 簡介
 
@@ -315,7 +315,7 @@ CO_OP_TRANSLATOR_METADATA:
 與朋友配對，共同合作彼此的程式碼。一起創建專案，fork 程式碼，創建分支並合併更改。
 
 ## 課後測驗
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## 回顧與自學
 

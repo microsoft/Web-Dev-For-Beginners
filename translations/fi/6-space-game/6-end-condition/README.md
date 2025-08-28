@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkoquiz
 
-[Ennakkoquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Ennakkoquiz](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Pelissä on erilaisia tapoja ilmaista *lopetusehto*. Pelin luojana sinun tehtäväsi on määrittää, miksi peli päättyy. Tässä muutamia syitä, olettaen että puhumme avaruuspelistä, jota olet tähän mennessä rakentanut:
 
@@ -220,7 +220,7 @@ Lisää ääni! Voitko lisätä äänen parantaaksesi pelikokemusta, esimerkiksi
 
 ## Jälkiquiz
 
-[Jälkiquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Jälkiquiz](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Kertaus ja itseopiskelu
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Викторина перед лекцией
 
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Введение
 
@@ -158,7 +158,7 @@ function drawIcon(value) {
 
 ## Викторина после лекции
 
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Обзор и самостоятельное изучение
 

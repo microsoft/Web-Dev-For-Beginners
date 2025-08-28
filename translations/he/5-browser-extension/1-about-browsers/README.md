@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## שאלון לפני השיעור
 
-[שאלון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[שאלון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### הקדמה
 
@@ -160,7 +160,7 @@ npm install
 
 ## שאלון אחרי השיעור
 
-[שאלון אחרי השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[שאלון אחרי השיעור](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## סקירה ולימוד עצמי
 

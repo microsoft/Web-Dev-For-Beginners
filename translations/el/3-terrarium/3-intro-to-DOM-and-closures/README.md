@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Κουίζ Πριν το Μάθημα
 
-[Κουίζ πριν το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Κουίζ πριν το μάθημα](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Εισαγωγή
 
@@ -210,7 +210,7 @@ function stopElementDrag() {
 
 ## Κουίζ Μετά το Μάθημα
 
-[Κουίζ μετά το μάθημα](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Κουίζ μετά το μάθημα](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Ανασκόπηση & Αυτομελέτη
 

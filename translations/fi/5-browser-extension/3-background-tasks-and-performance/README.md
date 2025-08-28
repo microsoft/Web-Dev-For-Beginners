@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Johdanto
 
@@ -158,7 +158,7 @@ Tutki joitakin avoimen lähdekoodin verkkosivustoja, jotka ovat olleet olemassa 
 
 ## Jälkikysely
 
-[Jälkikysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Kertaus ja itseopiskelu
 

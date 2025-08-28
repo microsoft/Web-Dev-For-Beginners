@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## שאלון לפני השיעור
 
-[שאלון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[שאלון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### מבוא
 
@@ -224,7 +224,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## שאלון אחרי השיעור
 
-[שאלון אחרי השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[שאלון אחרי השיעור](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## סקירה ולימוד עצמי
 

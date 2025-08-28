@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Ebben a leckében megtanulod, hogyan lőj lézereket JavaScript segítségével! Két dolgot fogunk hozzáadni a játékhoz:
 
@@ -295,7 +295,7 @@ Adj hozzá egy robbanást! Nézd meg a játék eszközeit a [Space Art repo](../
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Áttekintés és önálló tanulás
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 繪圖筆記由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
 
 ## 課前測驗
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/9)
 
 在撰寫程式碼時，我們總是希望程式碼易於閱讀。雖然這聽起來有些矛盾，但事實上程式碼被閱讀的次數遠多於被撰寫的次數。開發者工具箱中的一個核心工具就是 **函式**，它能幫助我們確保程式碼的可維護性。
 
@@ -194,7 +194,7 @@ setTimeout(() => {
 您能否用一句話說明函式與方法的區別？試試看！
 
 ## 課後測驗
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## 複習與自學
 

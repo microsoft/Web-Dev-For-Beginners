@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Передлекційна вікторина
 
-[Передлекційна вікторина](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Передлекційна вікторина](https://ff-quizzes.netlify.app/web/quiz/35)
 
 У цьому уроці ви навчитеся стріляти лазерами за допомогою JavaScript! Ми додамо до нашої гри дві речі:
 
@@ -295,7 +295,7 @@ npm start
 
 ## Післялекційна вікторина
 
-[Післялекційна вікторина](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Післялекційна вікторина](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Огляд і самостійне навчання
 

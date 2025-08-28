@@ -201,7 +201,7 @@ Quando um programador quer aprender algo novo, ele provavelmente recorrerá à d
 Compara algumas linguagens de programação. Quais são algumas das características únicas do JavaScript em comparação com o Java? E do COBOL em comparação com o Go?
 
 ## Questionário Pós-Aula
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Revisão e Autoestudo
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Maswali ya Awali ya Somo
 
-[Maswali ya awali ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Utangulizi
 
@@ -297,7 +297,7 @@ Hapa kuna mfano wa jinsi ukurasa wa kuingia wa mwisho unaweza kuonekana baada ya
 
 ## Jaribio la Baada ya Somo
 
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Mapitio na Kujisomea
 

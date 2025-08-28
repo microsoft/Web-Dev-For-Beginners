@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introductie
 
@@ -306,7 +306,7 @@ Voeg een nieuw sjabloon en een route toe voor een derde pagina die de credits vo
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Review & Zelfstudie
 

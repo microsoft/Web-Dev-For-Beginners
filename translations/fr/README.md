@@ -118,9 +118,9 @@ Notre recommandation est d'utiliser [Visual Studio Code](https://code.visualstud
 - un défi  
 - des lectures complémentaires  
 - un devoir  
-- [un quiz post-leçon](https://ff-quizzes.netlify.app/)  
+- [un quiz post-leçon](https://ff-quizzes.netlify.app/web/)  
 
-> **Une note sur les quiz** : Tous les quiz sont contenus dans le dossier Quiz-app, 48 quiz au total avec trois questions chacun. Ils sont disponibles [ici](https://ff-quizzes.netlify.app/) et l'application de quiz peut être exécutée localement ou déployée sur Azure ; suivez les instructions dans le dossier `quiz-app`.  
+> **Une note sur les quiz** : Tous les quiz sont contenus dans le dossier Quiz-app, 48 quiz au total avec trois questions chacun. Ils sont disponibles [ici](https://ff-quizzes.netlify.app/web/) et l'application de quiz peut être exécutée localement ou déployée sur Azure ; suivez les instructions dans le dossier `quiz-app`.  
 
 ## 🗃️ Leçons  
 

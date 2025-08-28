@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Тест перед лекцією
 
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Програмування, кероване подіями
 
@@ -337,7 +337,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## Тест після лекції
 
-[Тест після лекції](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Тест після лекції](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Огляд і самостійне навчання
 

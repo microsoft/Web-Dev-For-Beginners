@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## שאלון לפני השיעור
 
-[שאלון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[שאלון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### הקדמה
 
@@ -158,7 +158,7 @@ function drawIcon(value) {
 
 ## שאלון אחרי השיעור
 
-[שאלון אחרי השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[שאלון אחרי השיעור](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## סקירה ולימוד עצמי
 

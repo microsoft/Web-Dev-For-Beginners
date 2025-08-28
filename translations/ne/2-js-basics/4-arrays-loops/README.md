@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) द्वारा
 
 ## प्रि-लेक्चर क्विज
-[प्रि-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[प्रि-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/13)
 
 यो पाठले जाभास्क्रिप्टको आधारभूत कुराहरू समेट्छ, जुन वेबमा अन्तरक्रियात्मकता प्रदान गर्ने भाषा हो। यस पाठमा, तपाईंले एरे र लूपहरूको बारेमा सिक्नुहुनेछ, जसले डाटालाई हेरफेर गर्न प्रयोग गरिन्छ।
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 for र while लूपहरू बाहेक एरेहरूमा लूप गर्न अन्य तरिकाहरू पनि छन्। [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), र [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map) जस्ता तरिकाहरू छन्। आफ्नो एरे लूपलाई यी प्रविधिहरू मध्ये कुनै एक प्रयोग गरेर पुनःलेखन गर्नुहोस्।
 
 ## पोस्ट-लेक्चर क्विज
-[पोस्ट-लेक्चर क्विज](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[पोस्ट-लेक्चर क्विज](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## समीक्षा र आत्म-अध्ययन
 

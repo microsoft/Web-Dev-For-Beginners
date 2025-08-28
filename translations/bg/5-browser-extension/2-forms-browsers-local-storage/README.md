@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Предварителен тест
 
-[Предварителен тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Предварителен тест](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Въведение
 
@@ -224,7 +224,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## Финален тест
 
-[Финален тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Финален тест](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Преглед и самостоятелно обучение
 

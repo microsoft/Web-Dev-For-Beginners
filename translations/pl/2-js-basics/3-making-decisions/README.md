@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Podejmowanie decyzji i kontrolowanie kolejności wykonywania kodu sprawia, że Twój kod staje się bardziej uniwersalny i solidny. Ta sekcja omawia składnię kontrolowania przepływu danych w JavaScript oraz jej znaczenie w połączeniu z typami danych Boolean.
 
@@ -214,7 +214,7 @@ Napisz program, który najpierw używa operatorów logicznych, a następnie prze
 
 ## Quiz po wykładzie
 
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Przegląd i samodzielna nauka
 

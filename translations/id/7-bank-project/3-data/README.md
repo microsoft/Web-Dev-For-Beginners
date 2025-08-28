@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Pendahuluan
 
@@ -335,7 +335,7 @@ Berikut adalah contoh halaman dashboard yang sudah ditata:
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Tugas
 

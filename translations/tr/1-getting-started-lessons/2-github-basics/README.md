@@ -15,7 +15,7 @@ Bu ders, kodunuzu barındırmak ve değişiklikleri yönetmek için kullanılan 
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ders Öncesi Test
-[Ders öncesi testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Giriş
 
@@ -315,7 +315,7 @@ Projelerde ayrıca forumlar, e-posta listeleri veya Slack, Discord veya IRC gibi
 Bir arkadaşınızla eşleşerek birbirinizin kodu üzerinde çalışın. Ortak bir proje oluşturun, kodu fork yapın, dallar oluşturun ve değişiklikleri birleştirin.
 
 ## Ders Sonrası Test
-[Ders sonrası test](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 

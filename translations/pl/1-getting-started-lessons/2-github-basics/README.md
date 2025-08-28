@@ -15,7 +15,7 @@ Ta lekcja obejmuje podstawy GitHub, platformy do hostowania i zarządzania zmian
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz przed wykładem
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Wprowadzenie
 
@@ -315,7 +315,7 @@ Projekty mogą również mieć dyskusje na forach, listach mailingowych lub kana
 Połącz siły z przyjacielem, aby pracować nad swoim kodem nawzajem. Stwórzcie projekt wspólnie, rozwidlajcie kod, twórzcie gałęzie i scalajcie zmiany.
 
 ## Quiz po wykładzie
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Przegląd i samodzielna nauka
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Maswali ya Awali ya Somo
 
-[Maswali ya awali ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Katika somo hili utajifunza jinsi ya kurusha laser kwa kutumia JavaScript! Tutaongeza vitu viwili kwenye mchezo wetu:
 
@@ -295,7 +295,7 @@ Ongeza mlipuko! Angalia mali za mchezo katika [repo ya Space Art](../../../../6-
 
 ## Maswali ya Baada ya Somo
 
-[Maswali ya baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Mapitio na Kujisomea
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Pra-Pelajaran
-[Kuis pra-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Ketika kita berpikir tentang menulis kode, kita selalu ingin memastikan kode kita mudah dibaca. Meskipun terdengar berlawanan, kode lebih sering dibaca daripada ditulis. Salah satu alat utama dalam kotak alat pengembang untuk memastikan kode yang dapat dipelihara adalah **fungsi**.
 
@@ -194,7 +194,7 @@ Anda sekarang telah melihat bahwa kita memiliki tiga cara untuk memberikan fungs
 Bisakah Anda menjelaskan dalam satu kalimat perbedaan antara fungsi dan metode? Cobalah!
 
 ## Kuis Pasca-Pelajaran
-[Kuis pasca-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Tinjauan & Studi Mandiri
 

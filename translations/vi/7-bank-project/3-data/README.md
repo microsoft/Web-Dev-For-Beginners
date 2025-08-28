@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Giới thiệu
 
@@ -335,7 +335,7 @@ Dưới đây là một ví dụ về trang bảng điều khiển đã được
 
 ## Câu hỏi sau bài giảng
 
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Bài tập
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Sebelum Kuliah
 
-[Kuis sebelum kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Kuis sebelum kuliah](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Pewarisan dan Komposisi dalam Pengembangan Game
 
@@ -222,7 +222,7 @@ Pikirkan tentang bagaimana pola pub-sub dapat meningkatkan sebuah game. Bagian m
 
 ## Kuis Setelah Kuliah
 
-[Kuis setelah kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Kuis setelah kuliah](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Tinjauan & Studi Mandiri
 

@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Klausimai prieš paskaitą
 
-[Klausimai prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Sprendimų priėmimas ir kodo vykdymo eigos valdymas padaro jūsų kodą pakartotinai naudojamą ir patikimą. Šiame skyriuje aptariama, kaip valdyti duomenų srautą JavaScript'e ir kodėl tai svarbu, ypač naudojant Boolean duomenų tipus.
 
@@ -214,7 +214,7 @@ Sukurkite programą, kuri pirmiausia būtų parašyta naudojant loginius operato
 
 ## Klausimai po paskaitos
 
-[Klausimai po paskaitos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Apžvalga ir savarankiškas mokymasis
 

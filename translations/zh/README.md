@@ -118,9 +118,9 @@ CO_OP_TRANSLATOR_METADATA:
 - 挑战  
 - 补充阅读材料  
 - 作业  
-- [课后测验](https://ff-quizzes.netlify.app/)  
+- [课后测验](https://ff-quizzes.netlify.app/web/)  
 
-> **关于测验的说明**：所有测验都包含在 Quiz-app 文件夹中，共48个测验，每个测验有三个问题。测验可在[这里](https://ff-quizzes.netlify.app/)访问，可以在本地运行或部署到 Azure；请按照 `quiz-app` 文件夹中的说明操作。  
+> **关于测验的说明**：所有测验都包含在 Quiz-app 文件夹中，共48个测验，每个测验有三个问题。测验可在[这里](https://ff-quizzes.netlify.app/web/)访问，可以在本地运行或部署到 Azure；请按照 `quiz-app` 文件夹中的说明操作。  
 
 ## 🗃️ 课程  
 

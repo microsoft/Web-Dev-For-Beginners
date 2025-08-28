@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > 스케치노트 제공: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 강의 전 퀴즈
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/9)
 
 코드를 작성할 때, 항상 코드가 읽기 쉬운지 확인하는 것이 중요합니다. 이 말이 직관적이지 않게 들릴 수 있지만, 코드는 작성되는 것보다 읽히는 경우가 훨씬 더 많습니다. 개발자가 유지보수 가능한 코드를 작성하기 위해 사용하는 핵심 도구 중 하나가 바로 **함수**입니다.
 
@@ -194,7 +194,7 @@ setTimeout(() => {
 함수와 메서드의 차이를 한 문장으로 설명할 수 있나요? 시도해보세요!
 
 ## 강의 후 퀴즈
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## 복습 및 자기 학습
 

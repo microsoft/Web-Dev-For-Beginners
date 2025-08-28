@@ -118,9 +118,9 @@ Suosituksemme on käyttää [Visual Studio Code](https://code.visualstudio.com/?
 - haaste  
 - lisälukemista  
 - tehtävä  
-- [jälkivisa](https://ff-quizzes.netlify.app/)  
+- [jälkivisa](https://ff-quizzes.netlify.app/web/)  
 
-> **Huomio visoista**: Kaikki visat löytyvät Quiz-app-kansiosta, yhteensä 48 visaa, joissa on kolme kysymystä kussakin. Ne ovat saatavilla [täällä](https://ff-quizzes.netlify.app/), ja visailusovelluksen voi suorittaa paikallisesti tai julkaista Azureen; seuraa ohjeita `quiz-app`-kansiossa.  
+> **Huomio visoista**: Kaikki visat löytyvät Quiz-app-kansiosta, yhteensä 48 visaa, joissa on kolme kysymystä kussakin. Ne ovat saatavilla [täällä](https://ff-quizzes.netlify.app/web/), ja visailusovelluksen voi suorittaa paikallisesti tai julkaista Azureen; seuraa ohjeita `quiz-app`-kansiossa.  
 
 ## 🗃️ Oppitunnit  
 

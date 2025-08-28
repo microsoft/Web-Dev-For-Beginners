@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz avant le cours
 
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introduction
 
@@ -335,7 +335,7 @@ Voici un exemple de page de tableau de bord stylisée :
 
 ## Quiz après le cours
 
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Devoir
 

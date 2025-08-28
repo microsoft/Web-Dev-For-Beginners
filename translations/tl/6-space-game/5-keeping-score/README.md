@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Sa araling ito, matututuhan mo kung paano magdagdag ng puntos sa laro at magtala ng buhay.
 
@@ -187,7 +187,7 @@ Halos tapos na ang iyong code. Ano ang nakikita mong susunod na hakbang?
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Review & Self Study
 

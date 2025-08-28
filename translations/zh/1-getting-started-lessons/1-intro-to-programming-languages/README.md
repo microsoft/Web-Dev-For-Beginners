@@ -200,7 +200,7 @@ back add r0,r1
 比较一些编程语言。JavaScript 和 Java 有哪些独特的特性？COBOL 和 Go 又如何？
 
 ## 课后测验  
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## 复习与自学
 

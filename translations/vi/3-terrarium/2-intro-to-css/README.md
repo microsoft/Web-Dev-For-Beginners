@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Giới thiệu
 
@@ -268,7 +268,7 @@ Thêm một 'bong bóng' sáng bóng ở khu vực dưới bên trái của lọ
 
 ## Câu hỏi sau bài giảng
 
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Ôn tập & Tự học
 

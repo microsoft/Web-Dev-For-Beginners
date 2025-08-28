@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Päätöksenteko ja koodin suoritusjärjestyksen hallinta tekevät koodistasi uudelleenkäytettävää ja luotettavaa. Tässä osiossa käsitellään JavaScriptin tietovirran hallinnan syntaksia ja sen merkitystä, erityisesti Boolean-tietotyyppien kanssa.
 
@@ -214,7 +214,7 @@ Luo ohjelma, joka kirjoitetaan ensin loogisilla operaattoreilla ja sitten uudell
 
 ## Jälkikysely
 
-[Jälkikysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Kertaus ja itseopiskelu
 

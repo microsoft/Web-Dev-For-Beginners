@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/35)
 
 Dalam pelajaran ini, anda akan belajar cara menembak laser menggunakan JavaScript! Kita akan menambah dua perkara dalam permainan kita:
 
@@ -295,7 +295,7 @@ Tambah letupan! Lihat aset permainan dalam [repositori Seni Angkasa](../../../..
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Ulasan & Kajian Kendiri
 

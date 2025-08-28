@@ -118,9 +118,9 @@ Recomandarea noastră este să utilizați [Visual Studio Code](https://code.visu
 - o provocare  
 - lectură suplimentară  
 - temă  
-- [quiz de după lecție](https://ff-quizzes.netlify.app/)  
+- [quiz de după lecție](https://ff-quizzes.netlify.app/web/)  
 
-> **O notă despre quiz-uri**: Toate quiz-urile sunt conținute în folderul Quiz-app, 48 de quiz-uri în total, fiecare cu trei întrebări. Acestea sunt disponibile [aici](https://ff-quizzes.netlify.app/) și aplicația de quiz poate fi rulată local sau implementată pe Azure; urmați instrucțiunile din folderul `quiz-app`.  
+> **O notă despre quiz-uri**: Toate quiz-urile sunt conținute în folderul Quiz-app, 48 de quiz-uri în total, fiecare cu trei întrebări. Acestea sunt disponibile [aici](https://ff-quizzes.netlify.app/web/) și aplicația de quiz poate fi rulată local sau implementată pe Azure; urmați instrucțiunile din folderul `quiz-app`.  
 
 ## 🗃️ Lecții  
 

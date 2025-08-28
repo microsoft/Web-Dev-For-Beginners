@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før lektionen
 
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Introduktion
 
@@ -158,7 +158,7 @@ Undersøg nogle open source-websteder, der har eksisteret i lang tid, og baseret
 
 ## Quiz efter lektionen
 
-[Quiz efter lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Gennemgang & Selvstudie
 

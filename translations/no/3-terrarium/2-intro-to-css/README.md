@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Introduksjon
 
@@ -268,7 +268,7 @@ For å fullføre quiz etter forelesning, gå gjennom dette Learn-modulet: [Style
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Gjennomgang og selvstudium
 

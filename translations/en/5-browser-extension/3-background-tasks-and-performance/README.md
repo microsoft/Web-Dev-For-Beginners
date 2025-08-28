@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Introduction
 
@@ -158,7 +158,7 @@ Explore some open-source websites that have been around for a long time. Using t
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Review & Self Study
 

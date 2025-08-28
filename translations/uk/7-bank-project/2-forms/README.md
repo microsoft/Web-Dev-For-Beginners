@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Передлекційний тест
 
-[Передлекційний тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Передлекційний тест](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Вступ
 
@@ -296,7 +296,7 @@ async function register() {
 
 ## Післялекційний тест
 
-[Післялекційний тест](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Післялекційний тест](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Огляд і самостійне навчання
 

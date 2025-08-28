@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## প্রাক-লেকচার কুইজ
 
-[প্রাক-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[প্রাক-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### ভূমিকা
 
@@ -278,7 +278,7 @@ const routes = {
 একসাথে কাজ করে `localStorage` থেকে কী সংরক্ষণ করা এবং লোড করা উচিত তা পরিবর্তন করার চেষ্টা করুন যাতে অ্যাপটি কাজ করার জন্য শুধুমাত্র যা একেবারে প্রয়োজন তা অন্তর্ভুক্ত থাকে।
 
 ## পোস্ট-লেকচার কুইজ
-[পোস্ট-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[পোস্ট-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## অ্যাসাইনমেন্ট
 

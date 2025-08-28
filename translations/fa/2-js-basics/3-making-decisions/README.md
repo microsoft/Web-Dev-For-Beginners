@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## آزمون پیش از درس
 
-[آزمون پیش از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[آزمون پیش از درس](https://ff-quizzes.netlify.app/web/quiz/11)
 
 تصمیم‌گیری و کنترل ترتیب اجرای کد باعث می‌شود کد شما قابل استفاده مجدد و قوی‌تر باشد. این بخش به بررسی سینتکس کنترل جریان داده در جاوااسکریپت و اهمیت آن در استفاده با انواع داده بولی می‌پردازد.
 
@@ -214,7 +214,7 @@ if (firstNumber > secondNumber) {
 
 ## آزمون پس از درس
 
-[آزمون پس از درس](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[آزمون پس از درس](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## مرور و مطالعه شخصی
 

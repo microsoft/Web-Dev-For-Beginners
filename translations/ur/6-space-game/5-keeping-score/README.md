@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## لیکچر سے پہلے کا کوئز
 
-[لیکچر سے پہلے کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[لیکچر سے پہلے کا کوئز](https://ff-quizzes.netlify.app/web/quiz/37)
 
 اس سبق میں، آپ سیکھیں گے کہ گیم میں اسکورنگ کیسے شامل کی جائے اور زندگیاں کیسے شمار کی جائیں۔
 
@@ -187,7 +187,7 @@ npm start
 
 ## لیکچر کے بعد کا کوئز
 
-[لیکچر کے بعد کا کوئز](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[لیکچر کے بعد کا کوئز](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## جائزہ اور خود مطالعہ
 

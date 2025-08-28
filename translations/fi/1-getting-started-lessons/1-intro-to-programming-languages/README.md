@@ -200,7 +200,7 @@ Kun kehittäjä haluaa oppia jotain uutta, hän todennäköisesti kääntyy doku
 Vertaa joitakin ohjelmointikieliä. Mitkä ovat JavaScriptin ja Javan ainutlaatuiset piirteet? Entä COBOL ja Go?
 
 ## Oppitunnin jälkeinen kysely
-[Jälkikysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Kertaus ja itseopiskelu
 

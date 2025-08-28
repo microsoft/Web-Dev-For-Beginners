@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Cuestionario previo a la clase
-[Cuestionario previo a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Cuando pensamos en escribir código, siempre queremos asegurarnos de que sea legible. Aunque suene contradictorio, el código se lee muchas más veces de lo que se escribe. Una herramienta clave en el arsenal de un desarrollador para garantizar un código mantenible es la **función**.
 
@@ -194,7 +194,7 @@ Ahora has visto que tenemos tres formas de pasar una función como parámetro y 
 ¿Puedes articular en una oración la diferencia entre funciones y métodos? ¡Inténtalo!
 
 ## Cuestionario posterior a la clase
-[Cuestionario posterior a la clase](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Repaso y autoestudio
 

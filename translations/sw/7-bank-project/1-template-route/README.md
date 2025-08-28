@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Maswali ya Kabla ya Somo
 
-[Jaribio la kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Utangulizi
 
@@ -306,7 +306,7 @@ Ongeza kiolezo kipya na njia kwa ukurasa wa tatu unaoonyesha sifa za programu hi
 
 ## Maswali ya Baada ya Somo
 
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Mapitio na Kujisomea
 

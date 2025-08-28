@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## မိန့်ခွန်းမပြောမီ Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/13)
 
 ဒီသင်ခန်းစာမှာ JavaScript အခြေခံများကို လေ့လာပါမည်။ JavaScript သည် ဝဘ်ပေါ်တွင် အပြန်အလှန်လုပ်ဆောင်မှုများကို ပေးစွမ်းသော ဘာသာစကားဖြစ်သည်။ ဒီသင်ခန်းစာတွင် သင်သည် ဒေတာများကို စီမံခန့်ခွဲရန် အသုံးပြုသော arrays နှင့် loops အကြောင်းကို လေ့လာပါမည်။
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 For နှင့် while loops များအပြင် arrays ကို loop လုပ်ရန် နည်းလမ်းများရှိသည်။ [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map) ကဲ့သို့သော နည်းလမ်းများကို အသုံးပြု၍ သင်၏ array loop ကို ပြန်ရေးပါ။
 
 ## မိန့်ခွန်းပြီးနောက် Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

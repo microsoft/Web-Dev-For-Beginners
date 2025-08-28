@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před přednáškou
 
-[Kvíz před přednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Kvíz před přednáškou](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Existuje několik způsobů, jak vyjádřit *konečný stav* ve hře. Je na vás jako na tvůrci hry, abyste určili, proč hra skončila. Zde jsou některé důvody, pokud předpokládáme, že mluvíme o vesmírné hře, kterou jste dosud vytvářeli:
 
@@ -220,7 +220,7 @@ Přidejte zvuk! Dokážete přidat zvuk, který zlepší herní zážitek, třeb
 
 ## Kvíz po přednášce
 
-[Kvíz po přednášce](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Přehled a samostudium
 

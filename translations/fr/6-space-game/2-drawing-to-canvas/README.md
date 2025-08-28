@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz avant le cours
 
-[Quiz avant le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Le Canvas
 
@@ -214,7 +214,7 @@ Vous avez appris à dessiner avec l'API Canvas orientée 2D ; jetez un œil à l
 
 ## Quiz après le cours
 
-[Quiz après le cours](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Révision et étude personnelle
 

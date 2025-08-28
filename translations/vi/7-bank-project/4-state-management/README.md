@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Giới thiệu
 
@@ -278,7 +278,7 @@ Bây giờ chúng ta tải lại dữ liệu tài khoản mỗi khi bảng đi�
 Hãy thử làm việc cùng nhau để thay đổi những gì được lưu và tải từ `localStorage` chỉ bao gồm những gì thực sự cần thiết để ứng dụng hoạt động.
 
 ## Câu hỏi sau bài giảng
-[Quiz sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Quiz sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Bài tập
 

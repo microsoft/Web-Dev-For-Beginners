@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introduksjon
 
@@ -306,7 +306,7 @@ Legg til en ny mal og rute for en tredje side som viser kreditering for denne ap
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Gjennomgang og selvstudium
 

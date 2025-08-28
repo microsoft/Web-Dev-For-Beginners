@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Jaribio la Kabla ya Somo
 
-[Jaribio la kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas
 
@@ -214,7 +214,7 @@ Umejifunza kuhusu kuchora ukitumia Canvas API inayozingatia 2D; angalia [WebGL A
 
 ## Jaribio la Baada ya Somo
 
-[Jaribio la baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Mapitio na Kujisomea
 

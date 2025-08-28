@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## חידון לפני השיעור
 
-[חידון לפני השיעור](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[חידון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### מבוא
 
@@ -335,7 +335,7 @@ function updateElement(id, textOrNode) {
 
 ## שאלון לאחר ההרצאה
 
-[שאלון לאחר ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[שאלון לאחר ההרצאה](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## משימה
 

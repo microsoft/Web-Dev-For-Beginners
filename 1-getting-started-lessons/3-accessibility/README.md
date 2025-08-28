@@ -4,7 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/)
 
 > The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
 >
@@ -218,7 +218,7 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
 ```
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/en/)
 
 ## Review & Self Study
 

@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 > [Tomomi Imura](https://twitter.com/girlie_mac) 的手绘笔记
 
 ## 课前测验
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## 简介
 
@@ -315,7 +315,7 @@ CO_OP_TRANSLATOR_METADATA:
 与朋友配对，共同处理彼此的代码。协作创建一个项目，派生代码，创建分支并合并更改。
 
 ## 课后测验
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## 复习与自学
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz före föreläsning
 
-[Quiz före föreläsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Quiz före föreläsning](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Arv och komposition inom spelutveckling
 
@@ -222,7 +222,7 @@ Fundera på hur pub-sub-mönstret kan förbättra ett spel. Vilka delar bör ski
 
 ## Quiz efter föreläsning
 
-[Quiz efter föreläsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Quiz efter föreläsning](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Granskning & Självstudier
 

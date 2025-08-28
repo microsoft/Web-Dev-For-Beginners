@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar Pre-Lecție
 
-[Chestionar pre-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/35)
 
 În această lecție vei învăța cum să tragi cu lasere folosind JavaScript! Vom adăuga două lucruri în jocul nostru:
 
@@ -295,7 +295,7 @@ Adaugă o explozie! Uită-te la resursele jocului din [repo-ul Space Art](../../
 
 ## Chestionar Post-Lecție
 
-[Chestionar post-lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Recapitulare și Studiu Individual
 

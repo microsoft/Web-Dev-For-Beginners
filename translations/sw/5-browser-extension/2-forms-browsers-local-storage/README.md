@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Jaribio Kabla ya Somo
 
-[Jaribio kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Jaribio kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Utangulizi
 
@@ -224,7 +224,7 @@ Tumeelezea aina kadhaa za API hadi sasa katika masomo haya. Chagua API ya wavuti
 
 ## Jaribio Baada ya Somo
 
-[Jaribio baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Jaribio baada ya somo](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Mapitio na Kujisomea
 

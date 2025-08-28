@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Lập trình hướng sự kiện
 
@@ -337,7 +337,7 @@ Thêm nhiều chức năng hơn
 
 ## Câu hỏi sau bài giảng
 
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Ôn tập & Tự học
 

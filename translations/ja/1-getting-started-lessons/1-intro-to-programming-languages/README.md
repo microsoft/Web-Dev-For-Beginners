@@ -201,7 +201,7 @@ back add r0,r1
 いくつかのプログラミング言語を比較してみましょう。JavaScriptとJavaのユニークな特徴は何ですか？COBOLとGoではどうでしょう？
 
 ## 講義後のクイズ
-[講義後のクイズ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[講義後のクイズ](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## 復習と自己学習
 

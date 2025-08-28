@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတိုင်မီ Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/27)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### အကျဉ်းချုပ်
 
@@ -158,7 +158,7 @@ function drawIcon(value) {
 
 ## မိန့်ခွန်းပြီးနောက် Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/28)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

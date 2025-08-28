@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote autorice [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kviz prije predavanja  
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Ova lekcija pokriva osnove JavaScripta, jezika koji omogućuje interaktivnost na webu. U ovoj lekciji naučit ćete o nizovima i petljama, koji se koriste za manipulaciju podacima.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Postoje i drugi načini prolaska kroz nizove osim for i while petlji. Postoje [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) i [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Prepišite svoju petlju kroz niz koristeći jednu od ovih tehnika.
 
 ## Kviz nakon predavanja  
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Pregled i Samostalno Učenje
 

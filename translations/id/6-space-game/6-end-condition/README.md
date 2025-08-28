@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Ada berbagai cara untuk menentukan *kondisi akhir* dalam sebuah game. Sebagai pembuat game, Anda yang menentukan alasan mengapa game berakhir. Berikut beberapa alasan, jika kita mengacu pada game luar angkasa yang telah Anda bangun sejauh ini:
 
@@ -220,7 +220,7 @@ Tambahkan suara! Bisakah Anda menambahkan suara untuk meningkatkan pengalaman be
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Tinjauan & Studi Mandiri
 

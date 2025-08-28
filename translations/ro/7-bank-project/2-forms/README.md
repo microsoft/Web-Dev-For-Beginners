@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar înainte de lecție
 
-[Chestionar înainte de lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Chestionar înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Introducere
 
@@ -297,7 +297,7 @@ Iată un exemplu de cum poate arăta pagina finală de autentificare după puți
 
 ## Chestionar post-lectură
 
-[Chestionar post-lectură](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Chestionar post-lectură](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Recapitulare și studiu individual
 

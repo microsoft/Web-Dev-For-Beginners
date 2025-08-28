@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Spill er ikke særlig morsomme før du har romvesener som beveger seg rundt på skjermen! I dette spillet skal vi bruke to typer bevegelser:
 
@@ -386,7 +386,7 @@ Som du ser, kan koden din bli til 'spagettikode' når du begynner å legge til f
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Gjennomgang og selvstudium
 

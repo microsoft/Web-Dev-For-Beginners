@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote készítette: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Előadás előtti kvíz
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Ez a lecke a JavaScript alapjait tárgyalja, amely a webes interaktivitást biztosítja.
 
@@ -199,7 +199,7 @@ A Booleans csak két értéket vehet fel: `true` vagy `false`. A Booleans segít
 A JavaScript hírhedt a meglepő módjairól, ahogyan néha kezeli az adattípusokat. Kutass egy kicsit ezekről a "csapdákról". Például: az érzékenység a kis- és nagybetűkre problémát okozhat! Próbáld ki ezt a konzolban: `let age = 1; let Age = 2; age == Age` (eredmény: `false` -- miért?). Milyen más csapdákat találsz?
 
 ## Előadás utáni kvíz
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Áttekintés és önálló tanulás
 

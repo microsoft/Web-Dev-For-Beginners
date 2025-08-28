@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Klausimai prieš paskaitą
 
-[Klausimai prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Drobė
 
@@ -214,7 +214,7 @@ Jūs išmokote piešti su 2D orientuota Canvas API; pažiūrėkite į [WebGL API
 
 ## Klausimai po paskaitos
 
-[Klausimai po paskaitos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Apžvalga ir savarankiškas mokymasis
 

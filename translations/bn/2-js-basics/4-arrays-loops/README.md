@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > স্কেচনোট: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## প্রাক-লেকচার কুইজ
-[প্রাক-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[প্রাক-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/13)
 
 এই পাঠে জাভাস্ক্রিপ্টের বুনিয়াদি আলোচনা করা হয়েছে, যা ওয়েবের ইন্টারঅ্যাক্টিভিটি প্রদান করে। এই পাঠে আপনি অ্যারে এবং লুপ সম্পর্কে শিখবেন, যা ডেটা পরিচালনার জন্য ব্যবহৃত হয়।
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 ফর এবং হোয়াইল লুপ ছাড়াও অ্যারের উপর লুপ করার অন্যান্য উপায় রয়েছে। যেমন [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), এবং [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)। আপনার অ্যারে লুপটি এই কৌশলগুলোর একটি ব্যবহার করে পুনরায় লিখুন।
 
 ## পোস্ট-লেকচার কুইজ
-[পোস্ট-লেকচার কুইজ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[পোস্ট-লেকচার কুইজ](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## পর্যালোচনা এবং স্ব-অধ্যয়ন
 

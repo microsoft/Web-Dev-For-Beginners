@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတင်မီ Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/15)
 
 
 > ဗီဒီယိုကိုကြည့်ပါ
@@ -232,7 +232,7 @@ HTML တွင် 'အဟောင်း' tag များရှိပြီး 
 
 ## မိန့်ခွန်းပြီး Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

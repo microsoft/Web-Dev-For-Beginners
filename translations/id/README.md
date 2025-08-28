@@ -118,9 +118,9 @@ Rekomendasi kami adalah menggunakan [Visual Studio Code](https://code.visualstud
 - tantangan  
 - bacaan tambahan  
 - tugas  
-- [kuis pasca-pelajaran](https://ff-quizzes.netlify.app/)  
+- [kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/)  
 
-> **Catatan tentang kuis**: Semua kuis terdapat di folder Quiz-app, total 48 kuis dengan masing-masing tiga pertanyaan. Kuis tersedia [di sini](https://ff-quizzes.netlify.app/) dan aplikasi kuis dapat dijalankan secara lokal atau di-deploy ke Azure; ikuti instruksi di folder `quiz-app`.  
+> **Catatan tentang kuis**: Semua kuis terdapat di folder Quiz-app, total 48 kuis dengan masing-masing tiga pertanyaan. Kuis tersedia [di sini](https://ff-quizzes.netlify.app/web/) dan aplikasi kuis dapat dijalankan secara lokal atau di-deploy ke Azure; ikuti instruksi di folder `quiz-app`.  
 
 ## 🗃️ Pelajaran  
 

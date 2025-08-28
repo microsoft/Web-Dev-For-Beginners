@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скетч од [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Квиз пре предавања  
-[Квиз пре предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Квиз пре предавања](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Ова лекција покрива основе JavaScript-а, језика који омогућава интерактивност на вебу.
 
@@ -199,7 +199,7 @@ let myString2 = "World";
 JavaScript је познат по својим изненађујућим начинима руковања типовима података у одређеним ситуацијама. Истражите мало о овим 'замкама'. На пример: осетљивост на велика и мала слова може вас изненадити! Пробајте ово у вашој конзоли: `let age = 1; let Age = 2; age == Age` (резултат је `false` -- зашто?). Које друге замке можете пронаћи?
 
 ## Квиз након предавања  
-[Квиз након предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Квиз након предавања](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Преглед и самостално учење
 

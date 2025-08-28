@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Test înainte de lecție
 
-[Test înainte de lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Test înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Vizionați videoclipul
 
@@ -231,7 +231,7 @@ Există câteva taguri 'mai vechi' în HTML care sunt încă distractive de util
 
 ## Test după lecție
 
-[Test după lecție](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Test după lecție](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Recapitulare și studiu individual
 

@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lettura
 
-[Quiz pre-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Quiz pre-lettura](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Ereditarietà e Composizione nello sviluppo di giochi
 
@@ -222,7 +222,7 @@ Pensa a come il pattern pub-sub può migliorare un gioco. Quali parti dovrebbero
 
 ## Quiz Post-Lettura
 
-[Quiz post-lettura](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Quiz post-lettura](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Revisione e Studio Autonomo
 

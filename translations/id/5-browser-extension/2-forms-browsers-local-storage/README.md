@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Pelajaran
 
-[Kuis pra-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Pendahuluan
 
@@ -224,7 +224,7 @@ Kita telah membahas beberapa jenis API sejauh ini dalam pelajaran ini. Pilih seb
 
 ## Kuis Pasca-Pelajaran
 
-[Kuis pasca-pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Tinjauan & Studi Mandiri
 

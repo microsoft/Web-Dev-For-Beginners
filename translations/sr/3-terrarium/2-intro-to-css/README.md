@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Квиз пре предавања
 
-[Квиз пре предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Квиз пре предавања](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Увод
 
@@ -268,7 +268,7 @@ h1 {
 
 ## Квиз након предавања
 
-[Квиз након предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Квиз након предавања](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Преглед и самостално учење
 

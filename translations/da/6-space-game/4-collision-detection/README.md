@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før lektionen
 
-[Quiz før lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/35)
 
 I denne lektion lærer du, hvordan du skyder med laser ved hjælp af JavaScript! Vi vil tilføje to ting til vores spil:
 
@@ -295,7 +295,7 @@ Tilføj en eksplosion! Tag et kig på spilassets i [Space Art-repoet](../../../.
 
 ## Quiz efter lektionen
 
-[Quiz efter lektionen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Gennemgang & Selvstudie
 

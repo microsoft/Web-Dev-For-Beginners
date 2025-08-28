@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Prieš paskaitą – testas
 
-[Prieš paskaitą – testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Prieš paskaitą – testas](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Įvadas
 
@@ -306,7 +306,7 @@ Pridėkite naują šabloną ir maršrutą trečiam puslapiui, kuris rodo šios p
 
 ## Po paskaitos – testas
 
-[Po paskaitos – testas](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Po paskaitos – testas](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Apžvalga ir savarankiškas mokymasis
 

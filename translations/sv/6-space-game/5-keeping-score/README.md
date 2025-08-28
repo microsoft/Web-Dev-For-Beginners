@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz före föreläsningen
 
-[Quiz före föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Quiz före föreläsningen](https://ff-quizzes.netlify.app/web/quiz/37)
 
 I den här lektionen kommer du att lära dig hur man lägger till poäng i ett spel och beräknar liv.
 
@@ -187,7 +187,7 @@ Din kod är nästan klar. Kan du föreställa dig dina nästa steg?
 
 ## Quiz efter föreläsningen
 
-[Quiz efter föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Granskning & Självstudier
 

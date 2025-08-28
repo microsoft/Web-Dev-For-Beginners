@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## แบบทดสอบก่อนเรียน
 
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/33)
 
 เกมจะไม่สนุกเลยถ้าไม่มีเอเลี่ยนวิ่งไปมาบนหน้าจอ! ในเกมนี้ เราจะใช้การเคลื่อนไหวสองประเภท:
 
@@ -386,7 +386,7 @@ npm start
 
 ## แบบทดสอบหลังเรียน
 
-[แบบทดสอบหลังเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[แบบทดสอบหลังเรียน](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## ทบทวนและศึกษาด้วยตนเอง
 

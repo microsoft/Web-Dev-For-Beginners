@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài học
 
-[Câu hỏi trước bài học](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/41)
+[Câu hỏi trước bài học](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Giới thiệu
 
@@ -306,7 +306,7 @@ Thêm một mẫu và định tuyến mới cho một trang thứ ba hiển th�
 
 ## Câu hỏi sau bài học
 
-[Câu hỏi sau bài học](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/42)
+[Câu hỏi sau bài học](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Ôn tập & Tự học
 

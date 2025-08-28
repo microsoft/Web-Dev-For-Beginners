@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Скетчноут від [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Тест перед лекцією
-[Тест перед лекцією](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/13)
+[Тест перед лекцією](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Цей урок охоплює основи JavaScript — мови, яка забезпечує інтерактивність у вебі. У цьому уроці ви дізнаєтеся про масиви та цикли, які використовуються для обробки даних.
 
@@ -131,7 +131,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 Існують інші способи проходження через масиви, окрім циклів for і while. Це [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) і [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Перепишіть ваш цикл масиву, використовуючи один із цих методів.
 
 ## Тест після лекції
-[Тест після лекції](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/14)
+[Тест після лекції](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Огляд та Самостійне Вивчення
 

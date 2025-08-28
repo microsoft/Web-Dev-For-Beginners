@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kvíz před přednáškou
-[Kvíz před přednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Kvíz před přednáškou](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Když přemýšlíme o psaní kódu, vždy chceme zajistit, aby byl náš kód čitelný. I když to může znít paradoxně, kód se čte mnohem častěji, než se píše. Jedním ze základních nástrojů v arzenálu vývojáře pro zajištění udržovatelného kódu je **funkce**.
 
@@ -194,7 +194,7 @@ Nyní jste viděli, že máme tři způsoby, jak předat funkci jako parametr, a
 Dokážete jednou větou vysvětlit rozdíl mezi funkcemi a metodami? Zkuste to!
 
 ## Kvíz po přednášce
-[Kvíz po přednášce](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Přehled a samostudium
 

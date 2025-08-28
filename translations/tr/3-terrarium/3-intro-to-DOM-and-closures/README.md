@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Giriş
 
@@ -210,7 +210,7 @@ Closure'ınıza bitkilerle ilgili başka bir şey yapmak için yeni bir olay iş
 
 ## Ders Sonrası Test
 
-[Ders sonrası testi](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## İnceleme ve Kendi Kendine Çalışma
 

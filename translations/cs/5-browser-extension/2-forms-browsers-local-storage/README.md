@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před lekcí
 
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Úvod
 
@@ -221,7 +221,7 @@ Diskutovali jsme o několika typech API v těchto lekcích. Vyberte webové API 
 
 ## Kvíz po lekci
 
-[Kvíz po lekci](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Přehled a samostudium
 

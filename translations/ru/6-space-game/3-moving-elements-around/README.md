@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Викторина перед лекцией
 
-[Викторина перед лекцией](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Викторина перед лекцией](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Игры становятся интересными, когда на экране начинают двигаться пришельцы! В этой игре мы будем использовать два типа движений:
 
@@ -386,7 +386,7 @@ npm start
 
 ## Викторина после лекции
 
-[Викторина после лекции](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Викторина после лекции](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Обзор и самостоятельное изучение
 

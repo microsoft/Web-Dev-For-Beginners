@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz przed wykładem
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Ta lekcja obejmuje podstawy JavaScript, języka, który zapewnia interaktywność w sieci.
 
@@ -199,7 +199,7 @@ Booleany mogą przyjmować tylko dwie wartości: `true` lub `false`. Booleany po
 JavaScript jest znany ze swoich zaskakujących sposobów obsługi typów danych. Poszukaj informacji o tych 'pułapkach'. Na przykład: wrażliwość na wielkość liter może być problematyczna! Wypróbuj to w konsoli: `let age = 1; let Age = 2; age == Age` (rezultatem jest `false` -- dlaczego?). Jakie inne pułapki możesz znaleźć?
 
 ## Quiz po wykładzie
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Przegląd i samodzielna nauka
 

@@ -5,7 +5,7 @@
 
 ## 課前測驗
 
-[課前測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19?loc=zh_tw)
+[課前測驗](https://ff-quizzes.netlify.app/web/quiz/19?loc=zh_tw)
 
 ### 大綱
 
@@ -203,7 +203,7 @@ function stopElementDrag() {
 
 ## 課後測驗
 
-[課後測驗](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20?loc=zh_tw)
+[課後測驗](https://ff-quizzes.netlify.app/web/quiz/20?loc=zh_tw)
 
 ## 複習與自學
 

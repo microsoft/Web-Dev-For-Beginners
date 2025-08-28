@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz vor der Vorlesung
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Die Stärke des Webs liegt in seiner Universalität. Der Zugang für alle, unabhängig von Behinderung, ist ein wesentlicher Aspekt.
 >
@@ -226,7 +226,7 @@ Nehmen Sie dieses HTML und schreiben Sie es so um, dass es so barrierefrei wie m
 ```
 
 ## Quiz nach der Vorlesung
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Überprüfung & Selbststudium
 Viele Regierungen haben Gesetze zu Barrierefreiheitsanforderungen. Informiere dich über die Barrierefreiheitsgesetze in deinem Heimatland. Was wird abgedeckt und was nicht? Ein Beispiel ist [diese Regierungswebseite](https://accessibility.blog.gov.uk/).

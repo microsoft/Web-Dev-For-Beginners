@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/35)
 
 U ovoj lekciji naučit ćete kako pucati lasere pomoću JavaScripta! Dodati ćemo dvije stvari u našu igru:
 
@@ -295,7 +295,7 @@ Dodajte eksploziju! Pogledajte resurse igre u [repozitoriju Space Art](../../../
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Pregled i samostalno učenje
 

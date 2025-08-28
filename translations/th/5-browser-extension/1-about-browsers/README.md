@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## แบบทดสอบก่อนเรียน
 
-[แบบทดสอบก่อนเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[แบบทดสอบก่อนเรียน](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### บทนำ
 
@@ -160,7 +160,7 @@ npm install
 
 ## แบบทดสอบหลังเรียน
 
-[แบบทดสอบหลังเรียน](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[แบบทดสอบหลังเรียน](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## ทบทวนและศึกษาด้วยตนเอง
 

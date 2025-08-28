@@ -15,7 +15,7 @@ Denne leksjonen dekker det grunnleggende om GitHub, en plattform for å lagre og
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Forhåndsquiz
-[Forhåndsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Forhåndsquiz](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Introduksjon
 
@@ -315,7 +315,7 @@ Prosjekter kan også ha diskusjoner i forum, e-postlister eller chattekanaler so
 Samarbeid med en venn for å jobbe med hverandres kode. Opprett et prosjekt sammen, fork kode, opprett grener og slå sammen endringer.
 
 ## Quiz etter forelesning
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Gjennomgang & Selvstudium
 

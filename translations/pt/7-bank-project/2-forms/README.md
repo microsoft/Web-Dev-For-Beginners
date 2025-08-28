@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Questionário Pré-Aula
 
-[Questionário pré-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Introdução
 
@@ -297,7 +297,7 @@ Aqui está um exemplo de como a página de login final pode parecer após um pou
 
 ## Questionário Pós-Aula
 
-[Questionário pós-aula](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Revisão e Autoestudo
 

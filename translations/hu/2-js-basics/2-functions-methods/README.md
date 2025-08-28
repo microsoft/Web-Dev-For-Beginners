@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote készítette: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Előadás előtti kvíz
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Amikor kódot írunk, mindig arra törekszünk, hogy az olvasható legyen. Bár ez elsőre ellentmondásosnak tűnhet, a kódot sokkal többször olvassák, mint írják. Az egyik alapvető eszköz a fejlesztők számára az olvasható és karbantartható kód biztosításához a **függvény**.
 
@@ -194,7 +194,7 @@ Most láttad, hogy három módja van annak, hogy függvényt adjunk át paramét
 Meg tudod fogalmazni egy mondatban a különbséget a függvények és a metódusok között? Próbáld meg!
 
 ## Előadás utáni kvíz
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Áttekintés és önálló tanulás
 

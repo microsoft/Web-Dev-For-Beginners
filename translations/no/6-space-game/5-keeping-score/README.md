@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/37)
 
 I denne leksjonen vil du lære hvordan du legger til poeng i et spill og beregner liv.
 
@@ -187,7 +187,7 @@ Koden din er nesten ferdig. Kan du se for deg neste steg?
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Gjennomgang og selvstudie
 

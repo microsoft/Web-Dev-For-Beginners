@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 강의 전 퀴즈
 
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/35)
 
 이번 강의에서는 JavaScript를 사용해 레이저를 발사하는 방법을 배웁니다! 게임에 두 가지를 추가할 것입니다:
 
@@ -295,7 +295,7 @@ npm start
 
 ## 강의 후 퀴즈
 
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## 복습 및 자기 학습
 

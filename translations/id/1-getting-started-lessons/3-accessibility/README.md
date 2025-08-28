@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuis Sebelum Pelajaran
-[Kuis sebelum pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Kuis sebelum pelajaran](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Kekuatan Web terletak pada universalitasnya. Akses oleh semua orang, terlepas dari disabilitas, adalah aspek yang penting.
 >
@@ -227,7 +227,7 @@ Ambil HTML ini dan tulis ulang agar dapat diakses semaksimal mungkin, berdasarka
 ```
 
 ## Kuis Setelah Pelajaran
-[Kuis setelah pelajaran](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Kuis setelah pelajaran](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Tinjauan & Studi Mandiri
 Banyak pemerintah memiliki undang-undang terkait persyaratan aksesibilitas. Pelajari undang-undang aksesibilitas di negara asal Anda. Apa saja yang tercakup, dan apa yang tidak? Contohnya adalah [situs web pemerintah ini](https://accessibility.blog.gov.uk/).

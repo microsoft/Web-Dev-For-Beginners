@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz pred prednáškou
 
-[Kvíz pred prednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/35)
 
 V tejto lekcii sa naučíte, ako strieľať lasery pomocou JavaScriptu! Do našej hry pridáme dve veci:
 
@@ -295,7 +295,7 @@ Pridajte explóziu! Pozrite sa na herné aktíva v [repozitári Space Art](../..
 
 ## Kvíz po prednáške
 
-[Kvíz po prednáške](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Prehľad a samostatné štúdium
 

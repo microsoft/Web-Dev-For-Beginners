@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## प्री-लेक्चर क्विज़
 
-[प्री-लेक्चर क्विज़](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[प्री-लेक्चर क्विज़](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > वीडियो देखें
 
@@ -231,7 +231,7 @@ HTML में कुछ पुराने 'वाइल्ड' टैग्स
 
 ## पोस्ट-लेक्चर क्विज़
 
-[पोस्ट-लेक्चर क्विज़](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[पोस्ट-लेक्चर क्विज़](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## समीक्षा और स्व-अध्ययन
 

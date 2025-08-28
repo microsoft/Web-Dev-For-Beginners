@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > איור מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## חידון לפני ההרצאה
-[חידון לפני ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[חידון לפני ההרצאה](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > הכוח של האינטרנט טמון באוניברסליות שלו. גישה לכולם, ללא קשר למוגבלות, היא היבט חיוני.
 >
@@ -195,7 +195,7 @@ CSS מציע שליטה מלאה על המראה של כל אלמנט בדף. נ
 ```
 
 ## חידון לאחר ההרצאה
-[חידון לאחר ההרצאה](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[חידון לאחר ההרצאה](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## סקירה ולימוד עצמי
 לממשלות רבות יש חוקים הנוגעים לדרישות נגישות. קראו על חוקי הנגישות במדינתכם. מה נכלל בהם ומה לא? דוגמה לכך היא [אתר ממשלתי זה](https://accessibility.blog.gov.uk/).

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před lekcí
 
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Úvod
 
@@ -297,7 +297,7 @@ Zde je příklad, jak může vypadat finální přihlašovací stránka po troš
 
 ## Kvíz po přednášce
 
-[Kvíz po přednášce](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Přehled & Samostudium
 

@@ -2,7 +2,7 @@
 
 ## レッスン前の小テスト
 
-[レッスン前の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21?loc=ja)
+[レッスン前の小テスト](https://ff-quizzes.netlify.app/web/quiz/21?loc=ja)
 
 ## イベント駆動型プログラミング
 
@@ -326,7 +326,7 @@ typedValueElement.addEventListener('input', () => {
 
 ## レッスン後の小テスト
 
-[レッスン後の小テスト](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22?loc=ja)
+[レッスン後の小テスト](https://ff-quizzes.netlify.app/web/quiz/22?loc=ja)
 
 ## 復習と自己学習
 

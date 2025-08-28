@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz pred prednáškou
 
-[Kvíz pred prednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/37)
 
 V tejto lekcii sa naučíte, ako pridať bodovanie do hry a počítať životy.
 
@@ -187,7 +187,7 @@ Váš kód je takmer hotový. Dokážete si predstaviť svoje ďalšie kroky?
 
 ## Kvíz po prednáške
 
-[Kvíz po prednáške](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Prehľad a samoštúdium
 

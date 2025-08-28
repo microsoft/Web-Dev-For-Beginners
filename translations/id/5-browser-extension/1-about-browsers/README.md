@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuis Pra-Kuliah
 
-[Kuis pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Pendahuluan
 
@@ -160,7 +160,7 @@ Lihat toko ekstensi browser dan instal salah satu ke browser Anda. Anda dapat me
 
 ## Kuis Pasca-Kuliah
 
-[Kuis pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## Tinjauan & Studi Mandiri
 

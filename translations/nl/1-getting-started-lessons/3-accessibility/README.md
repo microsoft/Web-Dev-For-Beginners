@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Voorafgaand aan de Les
-[Quiz voorafgaand aan de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > De kracht van het web ligt in zijn universaliteit. Toegang voor iedereen, ongeacht een beperking, is een essentieel aspect.
 >
@@ -227,7 +227,7 @@ Neem deze HTML en herschrijf deze om zo toegankelijk mogelijk te zijn, gegeven d
 ```
 
 ## Quiz Na de Les
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Herziening & Zelfstudie
 Veel overheden hebben wetten met betrekking tot toegankelijkheidseisen. Lees de toegankelijkheidswetten van jouw eigen land door. Wat wordt er gedekt, en wat niet? Een voorbeeld is [deze overheidswebsite](https://accessibility.blog.gov.uk/).

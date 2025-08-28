@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Trò chơi sẽ không thú vị nếu không có người ngoài hành tinh di chuyển trên màn hình! Trong trò chơi này, chúng ta sẽ sử dụng hai loại chuyển động:
 
@@ -386,7 +386,7 @@ Như bạn có thể thấy, mã của bạn có thể trở thành 'mã spaghet
 
 ## Câu hỏi sau bài giảng
 
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Ôn tập & Tự học
 

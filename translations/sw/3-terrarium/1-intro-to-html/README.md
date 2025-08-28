@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Maswali ya Awali ya Somo
 
-[Maswali ya awali ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Tazama video
 
@@ -231,7 +231,7 @@ Kuna lebo za 'zamani' za HTML ambazo bado ni za kufurahisha kucheza nazo, ingawa
 
 ## Maswali ya Baada ya Somo
 
-[Maswali ya baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Mapitio na Kujifunza Mwenyewe
 

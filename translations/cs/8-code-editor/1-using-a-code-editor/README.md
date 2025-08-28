@@ -19,7 +19,7 @@ TODO: přidat volitelný obrázek
 
 <!---
 ## Kvíz před lekcí
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/3)
 ---->
 
 ## Cíle učení
@@ -161,7 +161,7 @@ Po instalaci a používání rozšíření nabízí vscode.dev možnosti správy
 
 <!----
 ## Kvíz po lekci
-[Kvíz po lekci](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/4)
 ---->
 
 ## Přehled a samostudium

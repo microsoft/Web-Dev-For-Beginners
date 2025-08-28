@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Ang kapangyarihan ng Web ay nasa pagiging unibersal nito. Ang pag-access ng lahat, anuman ang kapansanan, ay isang mahalagang aspeto.
 >
@@ -227,7 +227,7 @@ Kunin ang HTML na ito at isulat muli ito upang maging mas accessible hangga't ma
 ```
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/6)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/6)
 
 ## Review at Pag-aaral ng Sarili
 Maraming gobyerno ang may mga batas tungkol sa mga kinakailangan sa accessibility. Alamin ang mga batas sa accessibility sa iyong sariling bansa. Ano ang saklaw nito, at ano ang hindi? Isang halimbawa ay [ang web site ng gobyernong ito](https://accessibility.blog.gov.uk/).

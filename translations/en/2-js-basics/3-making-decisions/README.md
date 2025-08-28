@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Making decisions and controlling the flow of your code makes it reusable and reliable. This section explains the syntax for managing data flow in JavaScript and its importance when working with Boolean data types.
 
@@ -213,7 +213,7 @@ Write a program using logical operators, then rewrite it using a ternary express
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Review & Self Study
 

@@ -19,7 +19,7 @@ TODO: 添加一张可选图片
 
 <!---
 ## 课前测验
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/3)
 ---->
 
 ## 学习目标
@@ -161,7 +161,7 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 
 <!----
 ## 课后测验
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/4)
 ---->
 
 ## 复习与自学

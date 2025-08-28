@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Tässä oppitunnissa opit lisäämään pisteytyksen peliin ja laskemaan elämiä.
 
@@ -187,7 +187,7 @@ Koodisi on melkein valmis. Voitko kuvitella seuraavat askeleesi?
 
 ## Jälkikysely
 
-[Jälkikysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Kertaus ja itseopiskelu
 

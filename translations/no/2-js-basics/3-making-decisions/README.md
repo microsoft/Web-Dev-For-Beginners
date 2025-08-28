@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz før forelesning
 
-[Quiz før forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Å ta beslutninger og kontrollere rekkefølgen på hvordan koden din kjører gjør koden din gjenbrukbar og robust. Denne delen dekker syntaksen for å kontrollere dataflyt i JavaScript og dens betydning når den brukes med boolske datatyper.
 
@@ -214,7 +214,7 @@ Lag et program som først er skrevet med logiske operatorer, og skriv det derett
 
 ## Quiz etter forelesning
 
-[Quiz etter forelesning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Gjennomgang & Selvstudium
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Chestionar înainte de curs
 
-[Chestionar înainte de curs](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/47)
+[Chestionar înainte de curs](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ### Introducere
 
@@ -278,7 +278,7 @@ Acum că reîncărcăm datele contului de fiecare dată când tabloul de bord es
 Încearcă să lucrați împreună pentru a modifica ceea ce este salvat și încărcat din `localStorage` astfel încât să includă doar ceea ce este absolut necesar pentru ca aplicația să funcționeze.
 
 ## Chestionar după curs
-[Chestionar post-lectură](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/48)
+[Chestionar post-lectură](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Temă
 

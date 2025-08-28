@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förkunskapstest
 
-[Förkunskapstest](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/21)
+[Förkunskapstest](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Händelsestyrd programmering
 
@@ -337,7 +337,7 @@ Lägg till mer funktionalitet
 
 ## Quiz efter föreläsningen
 
-[Quiz efter föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/22)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Granskning & Självstudier
 

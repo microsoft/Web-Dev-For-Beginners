@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Квиз пре предавања
 
-[Квиз пре предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Квиз пре предавања](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Наслеђивање и композиција у развоју игара
 
@@ -222,7 +222,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## Квиз после предавања
 
-[Квиз после предавања](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Квиз после предавања](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Преглед и самостално учење
 

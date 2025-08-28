@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Тест преди лекцията
 
-[Тест преди лекцията](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Тест преди лекцията](https://ff-quizzes.netlify.app/web/quiz/37)
 
 В този урок ще научите как да добавите точки към играта и как да изчислявате животи.
 
@@ -187,7 +187,7 @@ npm start
 
 ## Тест след лекцията
 
-[Тест след лекцията](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Тест след лекцията](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Преглед и самостоятелно обучение
 

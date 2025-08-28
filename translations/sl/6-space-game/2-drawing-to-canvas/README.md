@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/31)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Platno
 
@@ -214,7 +214,7 @@ Naučili ste se risanja z API-jem za platno, ki je osredotočen na 2D; poglejte 
 
 ## Zaključni kviz
 
-[Zaključni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/32)
+[Zaključni kviz](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Pregled in samostojno učenje
 

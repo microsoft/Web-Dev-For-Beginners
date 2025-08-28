@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förhandsquiz
 
-[Förhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Introduktion
 
@@ -224,7 +224,7 @@ Vi har diskuterat flera typer av API:er hittills i dessa lektioner. Välj en web
 
 ## Efterhandsquiz
 
-[Efterhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Efterhandsquiz](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Granskning & Självstudier
 

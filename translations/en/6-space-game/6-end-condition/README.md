@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/39)
 
 There are various ways to define an *end condition* in a game. As the creator, it's up to you to decide why the game ends. Here are some possible reasons, assuming we're talking about the space game you've been building:
 
@@ -220,7 +220,7 @@ Add sound effects! Can you enhance your gameplay by adding sounds, such as when 
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Review & Self Study
 

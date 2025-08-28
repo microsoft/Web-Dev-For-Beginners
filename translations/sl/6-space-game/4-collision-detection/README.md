@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/35)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/35)
 
 V tej lekciji se boste naučili, kako streljati laserje z JavaScriptom! V igro bomo dodali dve stvari:
 
@@ -295,7 +295,7 @@ Dodajte eksplozijo! Oglejte si vire igre v [repozitoriju Space Art](../../../../
 
 ## Zaključni kviz
 
-[Zaključni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/36)
+[Zaključni kviz](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Pregled in samostojno učenje
 

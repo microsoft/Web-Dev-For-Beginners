@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Förhandsquiz
 
-[Förhandsquiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introduktion
 
@@ -335,7 +335,7 @@ Här är ett exempel på en stylad instrumentpanelsida:
 
 ## Quiz efter föreläsningen
 
-[Quiz efter föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Uppgift
 

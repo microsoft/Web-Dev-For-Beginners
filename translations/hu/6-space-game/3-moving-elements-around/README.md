@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Előadás előtti kvíz
 
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/33)
 
 A játékok nem igazán szórakoztatóak, amíg nem látunk ide-oda mozgó idegeneket a képernyőn! Ebben a játékban kétféle mozgást fogunk használni:
 
@@ -384,7 +384,7 @@ Ahogy láthatod, a kódod könnyen "spagetti kóddá" válhat, amikor elkezdesz 
 
 ## Előadás utáni kvíz
 
-[Előadás utáni kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Áttekintés és önálló tanulás
 

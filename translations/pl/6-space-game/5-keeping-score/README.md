@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed lekcją
 
-[Quiz przed lekcją](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Quiz przed lekcją](https://ff-quizzes.netlify.app/web/quiz/37)
 
 W tej lekcji dowiesz się, jak dodać system punktacji do gry oraz jak obliczać życia.
 
@@ -187,7 +187,7 @@ Twój kod jest prawie gotowy. Czy potrafisz wyobrazić sobie kolejne kroki?
 
 ## Quiz po lekcji
 
-[Quiz po lekcji](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Quiz po lekcji](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Przegląd i samodzielna nauka
 

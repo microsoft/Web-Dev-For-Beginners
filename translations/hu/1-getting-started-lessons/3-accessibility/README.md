@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote készítette: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Előadás előtti kvíz
-[Előadás előtti kvíz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/5)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/5)
 
 > Az internet ereje az egyetemességében rejlik. Az akadálymentes hozzáférés mindenki számára, a fogyatékosságtól függetlenül, alapvető fontosságú.
 >

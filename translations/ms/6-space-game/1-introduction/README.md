@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kuiz Pra-Kuliah
 
-[Kuiz pra-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Pewarisan dan Komposisi dalam pembangunan permainan
 
@@ -222,7 +222,7 @@ Fikirkan tentang bagaimana corak pub-sub boleh meningkatkan permainan. Bahagian 
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Ulasan & Kajian Kendiri
 

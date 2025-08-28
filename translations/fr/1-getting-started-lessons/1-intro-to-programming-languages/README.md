@@ -200,7 +200,7 @@ Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tourne
 Comparez quelques langages de programmation. Quelles sont les caractéristiques uniques de JavaScript par rapport à Java ? Et de COBOL par rapport à Go ?
 
 ## Quiz après la leçon  
-[Quiz après la leçon](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Quiz après la leçon](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Révision et auto-apprentissage
 

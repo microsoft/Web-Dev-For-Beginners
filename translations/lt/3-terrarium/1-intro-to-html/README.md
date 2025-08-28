@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Klausimynas prieš paskaitą
 
-[Klausimynas prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Klausimynas prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/15)
 
 > Peržiūrėkite vaizdo įrašą
 
@@ -231,7 +231,7 @@ HTML yra keletas senų „laukinės“ išvaizdos žymių, kurios vis dar smagio
 
 ## Klausimynas po paskaitos
 
-[Klausimynas po paskaitos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Klausimynas po paskaitos](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Apžvalga ir savarankiškas mokymasis
 

@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz před lekcí
 
-[Kvíz před lekcí](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Úvod
 
@@ -268,7 +268,7 @@ Pro dokončení kvízu po lekci projděte tento modul Learn: [Stylování HTML a
 
 ## Kvíz po lekci
 
-[Kvíz po lekci](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Recenze a samostudium
 

@@ -200,7 +200,7 @@ Kapag nais matuto ng isang developer ng bago, malamang na babaling sila sa dokum
 Ihambing ang ilang wika sa programming. Ano ang mga natatanging katangian ng JavaScript kumpara sa Java? Paano naman ang COBOL kumpara sa Go?
 
 ## Post-Lecture Quiz  
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/2)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/2)
 
 ## Review at Pag-aaral sa Sarili
 

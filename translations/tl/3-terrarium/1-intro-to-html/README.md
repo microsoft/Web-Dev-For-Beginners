@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Lecture Quiz
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/15)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/15)
 
 
 > Panoorin ang video
@@ -232,7 +232,7 @@ May ilang kakaibang 'lumang' tags sa HTML na masaya pa ring gamitin, bagama't hi
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/16)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Review & Self Study
 

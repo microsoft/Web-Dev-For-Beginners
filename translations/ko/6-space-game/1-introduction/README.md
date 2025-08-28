@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 강의 전 퀴즈
 
-[강의 전 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[강의 전 퀴즈](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### 게임 개발에서의 상속과 구성
 
@@ -222,7 +222,7 @@ Pub/Sub 패턴이 게임을 어떻게 향상시킬 수 있을지 생각해 보�
 
 ## 강의 후 퀴즈
 
-[강의 후 퀴즈](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[강의 후 퀴즈](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## 복습 및 자기 학습
 

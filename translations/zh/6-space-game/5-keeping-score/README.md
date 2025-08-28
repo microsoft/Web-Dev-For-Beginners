@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 课前测验
 
-[课前测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[课前测验](https://ff-quizzes.netlify.app/web/quiz/37)
 
 在本课中，你将学习如何为游戏添加得分功能以及计算生命值。
 
@@ -187,7 +187,7 @@ npm start
 
 ## 课后测验
 
-[课后测验](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[课后测验](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## 复习与自学
 

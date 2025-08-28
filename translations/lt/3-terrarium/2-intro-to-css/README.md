@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Klausimynas prieš paskaitą
 
-[Klausimynas prieš paskaitą](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/17)
+[Klausimynas prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Įvadas
 
@@ -268,7 +268,7 @@ Norėdami užbaigti klausimyną po paskaitos, peržiūrėkite šį mokymosi modu
 
 ## Klausimynas po paskaitos
 
-[Klausimynas po paskaitos](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/18)
+[Klausimynas po paskaitos](https://ff-quizzes.netlify.app/web/quiz/18)
 
 ## Apžvalga ir savarankiškas mokymasis
 

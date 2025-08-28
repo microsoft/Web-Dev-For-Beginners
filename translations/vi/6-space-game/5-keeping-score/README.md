@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/37)
 
 Trong bài học này, bạn sẽ học cách thêm điểm số vào trò chơi và tính toán mạng sống.
 
@@ -187,7 +187,7 @@ Mã của bạn gần hoàn thành. Bạn có thể hình dung bước tiếp th
 
 ## Câu hỏi sau bài giảng
 
-[Câu hỏi sau bài giảng](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Ôn tập & Tự học
 

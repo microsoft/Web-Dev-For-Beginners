@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Vorlesung
 
-[Quiz vor der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Einführung
 
@@ -213,7 +213,7 @@ Fügen Sie Ihrer Closure einen neuen Event-Handler hinzu, um den Pflanzen zusät
 
 ## Quiz nach der Vorlesung
 
-[Quiz nach der Vorlesung](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Überprüfung & Selbststudium
 

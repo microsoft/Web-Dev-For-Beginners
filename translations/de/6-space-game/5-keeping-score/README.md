@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz vor der Lektion
 
-[Quiz vor der Lektion](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Quiz vor der Lektion](https://ff-quizzes.netlify.app/web/quiz/37)
 
 In dieser Lektion lernst du, wie man Punkte zu einem Spiel hinzufügt und Leben berechnet.
 
@@ -187,7 +187,7 @@ Dein Code ist fast fertig. Kannst du dir die nächsten Schritte vorstellen?
 
 ## Quiz nach der Lektion
 
-[Quiz nach der Lektion](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Quiz nach der Lektion](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Überprüfung & Selbststudium
 

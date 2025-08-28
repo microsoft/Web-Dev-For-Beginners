@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတင်မီ စစ်ဆေးမှု
 
-[မိန့်ခွန်းမတင်မီ စစ်ဆေးမှု](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[မိန့်ခွန်းမတင်မီ စစ်ဆေးမှု](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### နိဒါန်း
 
@@ -224,7 +224,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 ## မိန့်ခွန်းပြီးနောက် စစ်ဆေးမှု
 
-[မိန့်ခွန်းပြီးနောက် စစ်ဆေးမှု](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[မိန့်ခွန်းပြီးနောက် စစ်ဆေးမှု](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 

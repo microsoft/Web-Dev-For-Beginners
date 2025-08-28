@@ -118,9 +118,9 @@ Odporúčame použiť [Visual Studio Code](https://code.visualstudio.com/?WT.mc_
 - výzvu  
 - doplnkové čítanie  
 - úlohu  
-- [kvíz po lekcii](https://ff-quizzes.netlify.app/)  
+- [kvíz po lekcii](https://ff-quizzes.netlify.app/web/)  
 
-> **Poznámka o kvízoch**: Všetky kvízy sú obsiahnuté v priečinku Quiz-app, celkovo 48 kvízov, každý s tromi otázkami. Sú dostupné [tu](https://ff-quizzes.netlify.app/). Aplikáciu kvízov je možné spustiť lokálne alebo nasadiť na Azure; postupujte podľa pokynov v priečinku `quiz-app`.
+> **Poznámka o kvízoch**: Všetky kvízy sú obsiahnuté v priečinku Quiz-app, celkovo 48 kvízov, každý s tromi otázkami. Sú dostupné [tu](https://ff-quizzes.netlify.app/web/). Aplikáciu kvízov je možné spustiť lokálne alebo nasadiť na Azure; postupujte podľa pokynov v priečinku `quiz-app`.
 
 ## 🗃️ Lekcie
 

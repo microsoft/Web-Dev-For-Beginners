@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/37)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/37)
 
 V tej lekciji se boste naučili, kako dodati točkovanje v igro in izračunati življenja.
 
@@ -187,7 +187,7 @@ Vaša koda je skoraj končana. Ali lahko predvidite naslednje korake?
 
 ## Zaključni kviz
 
-[Zaključni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/38)
+[Zaključni kviz](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Pregled in samostojno učenje
 

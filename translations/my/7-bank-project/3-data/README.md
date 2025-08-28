@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိန့်ခွန်းမတိုင်မီမေးခွန်းများ
 
-[မိန့်ခွန်းမတိုင်မီမေးခွန်းများ](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[မိန့်ခွန်းမတိုင်မီမေးခွန်းများ](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### အကျဉ်းချုပ်
 
@@ -292,7 +292,7 @@ Dashboard template ရဲ့ `<tbody>` element မှာ JavaScript ဖြင့
 
 ## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## အိမ်စာ
 

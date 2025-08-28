@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## पूर्व-व्याख्यान प्रश्नमंजुषा
 
-[पूर्व-व्याख्यान प्रश्नमंजुषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[पूर्व-व्याख्यान प्रश्नमंजुषा](https://ff-quizzes.netlify.app/web/quiz/33)
 
 गेम्स मजेदार होण्यासाठी स्क्रीनवर एलियन्स फिरणे आवश्यक आहे! या गेममध्ये आपण दोन प्रकारच्या हालचालींचा वापर करू:
 
@@ -386,7 +386,7 @@ npm start
 
 ## व्याख्यानानंतर प्रश्नमंजुषा
 
-[व्याख्यानानंतर प्रश्नमंजुषा](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[व्याख्यानानंतर प्रश्नमंजुषा](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## पुनरावलोकन आणि स्व-अभ्यास
 

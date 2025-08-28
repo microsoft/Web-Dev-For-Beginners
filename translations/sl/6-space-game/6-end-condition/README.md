@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Predhodni kviz
 
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Obstajajo različni načini, kako izraziti *konec igre*. Kot ustvarjalec igre se odločite, zakaj se igra konča. Tukaj je nekaj razlogov, če predpostavimo, da govorimo o vesoljski igri, ki ste jo do zdaj gradili:
 
@@ -220,7 +220,7 @@ Dodajte zvok! Ali lahko dodate zvok, da izboljšate igranje, morda ob zadetku z 
 
 ## Zaključni kviz
 
-[Zaključni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Zaključni kviz](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Pregled in samostojno učenje
 

@@ -118,9 +118,9 @@ Onze aanbeveling is om [Visual Studio Code](https://code.visualstudio.com/?WT.mc
 - een uitdaging  
 - aanvullende lectuur  
 - opdracht  
-- [quiz na de les](https://ff-quizzes.netlify.app/)  
+- [quiz na de les](https://ff-quizzes.netlify.app/web/)  
 
-> **Een opmerking over quizzen**: Alle quizzen zijn opgenomen in de Quiz-app map, in totaal 48 quizzen van elk drie vragen. Ze zijn beschikbaar [hier](https://ff-quizzes.netlify.app/) en de quiz-app kan lokaal worden uitgevoerd of worden gedeployed naar Azure; volg de instructies in de `quiz-app` map.  
+> **Een opmerking over quizzen**: Alle quizzen zijn opgenomen in de Quiz-app map, in totaal 48 quizzen van elk drie vragen. Ze zijn beschikbaar [hier](https://ff-quizzes.netlify.app/web/) en de quiz-app kan lokaal worden uitgevoerd of worden gedeployed naar Azure; volg de instructies in de `quiz-app` map.  
 
 ## 🗃️ Lessen  
 

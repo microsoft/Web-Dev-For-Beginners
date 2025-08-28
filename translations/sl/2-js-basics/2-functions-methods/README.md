@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Predhodni kviz
-[Predhodni kviz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/9)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/9)
 
 Ko razmišljamo o pisanju kode, si vedno želimo zagotoviti, da je naša koda berljiva. Čeprav se to morda sliši nenavadno, je koda prebrana veliko večkrat, kot je napisana. Eden ključnih orodij v razvijalčevem naboru za zagotavljanje vzdržljive kode je **funkcija**.
 
@@ -194,7 +194,7 @@ Zdaj ste videli tri načine za posredovanje funkcije kot parametra in se morda s
 Ali lahko v enem stavku razložite razliko med funkcijami in metodami? Poskusite!
 
 ## Kviz po predavanju
-[Kviz po predavanju](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/10)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/10)
 
 ## Pregled in samostojno učenje
 

@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Maswali ya Kabla ya Somo
 
-[Maswali ya kabla ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/11)
+[Maswali ya kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Kufanya maamuzi na kudhibiti mpangilio wa jinsi msimbo wako unavyoendeshwa hufanya msimbo wako uweze kutumika tena na kuwa imara. Sehemu hii inashughulikia sintaksia ya kudhibiti mtiririko wa data katika JavaScript na umuhimu wake unapotumika na aina ya data ya Boolean.
 
@@ -214,7 +214,7 @@ Unda programu ambayo imeandikwa kwanza kwa waendeshaji wa mantiki, kisha iandike
 
 ## Maswali ya Baada ya Somo
 
-[Maswali ya baada ya somo](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/12)
+[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Mapitio na Kujisomea
 

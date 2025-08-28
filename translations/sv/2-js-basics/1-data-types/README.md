@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz före föreläsning
-[Quiz före föreläsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/7)
+[Quiz före föreläsning](https://ff-quizzes.netlify.app/web/quiz/7)
 
 Den här lektionen täcker grunderna i JavaScript, språket som ger interaktivitet på webben.
 
@@ -198,7 +198,7 @@ Booleans kan bara ha två värden: `true` eller `false`. Booleans kan hjälpa ti
 JavaScript är känt för sina överraskande sätt att hantera datatyper ibland. Gör lite research om dessa 'gotchas'. Till exempel: skiftlägeskänslighet kan ställa till det! Testa detta i din konsol: `let age = 1; let Age = 2; age == Age` (resulterar i `false` -- varför?). Vilka andra gotchas kan du hitta?
 
 ## Quiz efter föreläsning
-[Quiz efter föreläsning](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/8)
+[Quiz efter föreläsning](https://ff-quizzes.netlify.app/web/quiz/8)
 
 ## Granskning & Självstudier
 

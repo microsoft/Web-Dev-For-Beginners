@@ -15,7 +15,7 @@ Den här lektionen täcker grunderna i GitHub, en plattform för att hosta och h
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Förkunskapstest
-[Förkunskapstest](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/3)
+[Förkunskapstest](https://ff-quizzes.netlify.app/web/quiz/3)
 
 ## Introduktion
 
@@ -315,7 +315,7 @@ Projekt kan också ha diskussioner i forum, e-postlistor eller chattkanaler som 
 Arbeta tillsammans med en vän på varandras kod. Skapa ett projekt gemensamt, forka kod, skapa grenar och slå ihop ändringar.
 
 ## Quiz efter föreläsningen
-[Quiz efter föreläsningen](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/4)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/4)
 
 ## Granskning & Självstudier
 

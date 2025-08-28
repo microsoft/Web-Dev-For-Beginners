@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Johdanto
 
@@ -335,7 +335,7 @@ Tässä esimerkki muotoillusta hallintapaneelisivusta:
 
 ## Luentojälkeinen visailu
 
-[Luentojälkeinen visailu](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Luentojälkeinen visailu](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Tehtävä
 

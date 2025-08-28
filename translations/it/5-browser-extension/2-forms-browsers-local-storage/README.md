@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/25)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Introduzione
 
@@ -224,7 +224,7 @@ Abbiamo discusso di diversi tipi di API finora in queste lezioni. Scegli un'API 
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/26)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Revisione e Studio Autonomo
 

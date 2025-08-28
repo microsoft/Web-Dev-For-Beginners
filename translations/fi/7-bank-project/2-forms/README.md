@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ennakkokysely
 
-[Ennakkokysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/43)
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Johdanto
 
@@ -290,7 +290,7 @@ Tässä on esimerkki siitä, miltä lopullinen kirjautumissivu voi näyttää pi
 
 ## Luentojälkeinen Kysely
 
-[Luentojälkeinen kysely](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/44)
+[Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Kertaus & Itseopiskelu
 

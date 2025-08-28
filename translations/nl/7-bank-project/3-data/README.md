@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pre-Les Quiz
 
-[Pre-les quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/45)
+[Pre-les quiz](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introductie
 
@@ -335,7 +335,7 @@ Hier is een voorbeeld van een gestylede dashboardpagina:
 
 ## Quiz na de les
 
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/46)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Opdracht
 

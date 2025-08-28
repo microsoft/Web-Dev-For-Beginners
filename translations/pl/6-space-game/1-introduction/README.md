@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz przed wykładem
 
-[Quiz przed wykładem](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/29)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Dziedziczenie i kompozycja w tworzeniu gier
 
@@ -222,7 +222,7 @@ Pomyśl, jak wzorzec pub-sub może ulepszyć grę. Które części powinny emito
 
 ## Quiz po wykładzie
 
-[Quiz po wykładzie](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/30)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Przegląd i samodzielna nauka
 

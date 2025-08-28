@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## မိမိကိုယ်ကိုစစ်မေးရန်မေးခွန်းများ
 
-[Pre-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/23)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### အကျဉ်းချုပ်
 
@@ -160,7 +160,7 @@ Browser Extension Store တစ်ခုကိုကြည့်ရှုပြ�
 
 ## မိမိကိုယ်ကိုစစ်မေးရန်မေးခွန်းများ
 
-[Post-lecture quiz](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/24)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့်ကိုယ်တိုင်လေ့လာခြင်း
 

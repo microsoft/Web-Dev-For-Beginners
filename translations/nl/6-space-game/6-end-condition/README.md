@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz voor de les
 
-[Quiz voor de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/39)
+[Quiz voor de les](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Er zijn verschillende manieren om een *eindconditie* in een spel uit te drukken. Het is aan jou als maker van het spel om te bepalen waarom het spel eindigt. Hier zijn enkele redenen, ervan uitgaande dat we het hebben over het ruimtespel dat je tot nu toe hebt gebouwd:
 
@@ -220,7 +220,7 @@ Voeg een geluid toe! Kun je een geluid toevoegen om je spelervaring te verbetere
 
 ## Quiz na de les
 
-[Quiz na de les](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/40)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Review & Zelfstudie
 

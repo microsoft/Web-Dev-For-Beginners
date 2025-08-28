@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Quiz Pre-Lezione
 
-[Quiz pre-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/33)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/33)
 
 I giochi non sono molto divertenti finché non ci sono alieni che si muovono sullo schermo! In questo gioco, utilizzeremo due tipi di movimenti:
 
@@ -386,7 +386,7 @@ Come puoi vedere, il tuo codice può trasformarsi in 'codice spaghetti' quando i
 
 ## Quiz Post-Lezione
 
-[Quiz post-lezione](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/34)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Revisione & Studio Autonomo
 

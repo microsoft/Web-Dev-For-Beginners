@@ -14,7 +14,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz pred prednáškou
 
-[Kvíz pred prednáškou](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/19)
+[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### Úvod
 
@@ -210,7 +210,7 @@ Pridajte nový obslužný program udalostí do svojho uzáveru, aby ste s rastli
 
 ## Kvíz po prednáške
 
-[Kvíz po prednáške](https://ashy-river-0debb7803.1.azurestaticapps.net/quiz/20)
+[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## Prehľad a samoštúdium
 
