@@ -4,7 +4,9 @@ This chat project shows how to build a Chat Assistant using GitHub Models.
 
 Here's what the finished project looks like:
 
-![Chat app](./assets/screenshot.png)
+<div>
+  <img src="./assets/screenshot.png" alt="Chat app" width="600">
+</div>
 
 Some context, building Chat assistants using generative AI is a great way to start learning about AI. What you'll learn is to integrate generative AI into a web app throughout this lesson, let's begin.
 
@@ -12,11 +14,16 @@ Some context, building Chat assistants using generative AI is a great way to sta
 
 For the backend, we're using GitHub Models. It's a great service that enables you to use AI for free. Go to its playground and grab code that corresponds to your chosen backend language. Here's what it looks like at [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-![Playground](./assets/playground.png)
+<div>
+  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
+</div>
+
 
 As we said, select the "Code" tab and your chosen runtime. 
 
-![Playground choice](./assets/playground-choice.png)
+<div>
+  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
+</div>
 
 In this case we select Python, which will mean we pick this code:
 
@@ -81,7 +88,7 @@ def call_llm(prompt: str, system_message: str):
 
 With this function `call_llm` we can now take a prompt and a system prompt and the function ends up returning the result.
 
-### customize
+### Customize AI Assistant
 
 If you want to customize the AI assistant you can specify how you want it to behave by populating the system prompt like so:
 
@@ -161,7 +168,7 @@ To integrate *llm.py* here's what we need to do:
 
 Great, now we have done what we need.
 
-### cors
+### Configure Cors
 
 We should call out that we set up something like CORS, cross-origin resource sharing. This means that because our backend and frontend will ron on different ports, we need to allow the frontend to call into the backend. There's a piece of code in *api.py* that sets this up:
 
@@ -174,7 +181,7 @@ CORS(app)   # *   example.com
 
 Right now it's been set up to allow "*" which is all origins and that's a bit unsafe, we should restrict it once we go to production.
 
-## all together
+## Run your project
 
 Ok, so we have *llm.py* and *api.py*, how can we make this work with a backend? Well, there's two things we need to do:
 
@@ -208,7 +215,7 @@ app.js
 styles.css
 ```
 
-Let's start with *index.html*:
+Let's start with **index.html**:
 
 ```html
 <html>
@@ -227,6 +234,8 @@ Let's start with *index.html*:
 ```
 
 This above is the absolute minimum you need to support a chat window, as it consists of a textarea where messages will be rendered, an input for where to type the message and a button for sending your message to the backend. Let's look at the JavaScript next in *app.js*
+
+**app.js**
 
 ```js
 // app.js
@@ -304,12 +313,14 @@ Let's look at styling next, here's where you can go really crazy and make it loo
     background: blue;
 }
 
-.message: assistant: grey;
+.message.assistant {
+    background: grey;
+} 
 ```
 
-With these three classes, you will style messages different depending on where they come from an assistant or you as a user. If you want to be inspired, check out the `frontend/` folder.
+With these three classes, you will style messages different depending on where they come from an assistant or you as a user. If you want to be inspired, check out the `solution/frontend/styles.css` folder.
 
-### base url
+### Change Base Url
 
 There was one thing here we didn't set and that was `BASE_URL`, this is not known until your backend is started. To set it:
 
@@ -322,13 +333,13 @@ Create your own folder *project* with content like so:
 
 ```text
 project/
-frontend/
-  index.html
-  app.js
-  styles.css
-backend/
-  api.py
-  llm.py
+  frontend/
+    index.html
+    app.js
+    styles.css
+  backend/
+    api.py
+    llm.py
 ```
 
 Copy the content from what was instructed from above but feel free to customize to your liking
@@ -349,5 +360,5 @@ Change also the CSS and text to your liking, so do changes in *index.html* and *
 
 ## Summary
 
-Great, you've learned from scratch how to create a personal assistant using AI. We'v done so using GitHub Models, a backend in Python and a frontend in HTML, CSS and JavaScript
+Great, you've learned from scratch how to create a personal assistant using AI. We've done so using GitHub Models, a backend in Python and a frontend in HTML, CSS and JavaScript
 
