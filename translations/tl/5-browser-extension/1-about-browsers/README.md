@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0bb55e0b98600afab801eea115228873",
-  "translation_date": "2025-08-27T22:18:03+00:00",
+  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
+  "translation_date": "2025-08-28T15:41:08+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "tl"
 }
@@ -22,9 +22,9 @@ Ang mga browser extension ay nagdadagdag ng karagdagang functionality sa isang b
 
 ### Tungkol sa Browser
 
-Sa serye ng mga araling ito, matututuhan mong gumawa ng browser extension na gagana sa Chrome, Firefox, at Edge browsers. Sa bahaging ito, matutuklasan mo kung paano gumagana ang mga browser at bubuuin ang mga elemento ng browser extension.
+Sa serye ng mga araling ito, matututuhan mong gumawa ng browser extension na gagana sa Chrome, Firefox, at Edge browsers. Sa bahaging ito, malalaman mo kung paano gumagana ang mga browser at bubuuin ang mga elemento ng browser extension.
 
-Ngunit ano nga ba ang browser? Isa itong software application na nagbibigay-daan sa end user na ma-access ang nilalaman mula sa isang server at maipakita ito sa mga web page.
+Ngunit ano nga ba ang isang browser? Isa itong software application na nagbibigay-daan sa end user na ma-access ang nilalaman mula sa isang server at maipakita ito sa mga web page.
 
 ✅ Kaunting kasaysayan: ang unang browser ay tinawag na 'WorldWideWeb' at nilikha ni Sir Timothy Berners-Lee noong 1990.
 
@@ -35,11 +35,11 @@ Kapag ang isang user ay kumonekta sa internet gamit ang isang URL (Uniform Resou
 
 Sa puntong ito, ang rendering engine ng browser ang nagpapakita nito sa device ng user, maaaring ito ay isang mobile phone, desktop, o laptop.
 
-May kakayahan din ang mga browser na mag-cache ng nilalaman upang hindi na ito kailangang kunin mula sa server sa bawat pagkakataon. Maaari rin nilang i-record ang kasaysayan ng browsing activity ng user, mag-imbak ng 'cookies', na maliliit na piraso ng data na naglalaman ng impormasyon para sa pag-iimbak ng aktibidad ng user, at marami pang iba.
+May kakayahan din ang mga browser na mag-cache ng nilalaman upang hindi na ito kailangang kunin mula sa server sa bawat pagkakataon. Maaari rin nilang i-record ang kasaysayan ng browsing activity ng user, mag-imbak ng 'cookies', na maliliit na piraso ng data na naglalaman ng impormasyon para sa aktibidad ng user, at marami pang iba.
 
-Isang mahalagang bagay na dapat tandaan tungkol sa mga browser ay hindi lahat ng mga ito ay pareho! Ang bawat browser ay may kani-kaniyang lakas at kahinaan, at mahalaga para sa isang propesyonal na web developer na maunawaan kung paano gawing mahusay ang performance ng mga web page sa iba't ibang browser. Kasama rito ang paghawak sa maliliit na viewports tulad ng sa isang mobile phone, pati na rin ang user na offline.
+Isang mahalagang bagay na dapat tandaan tungkol sa mga browser ay hindi lahat ng mga ito ay pareho! Ang bawat browser ay may kani-kaniyang kalakasan at kahinaan, at mahalaga para sa isang propesyonal na web developer na maunawaan kung paano gawing mahusay ang performance ng mga web page sa iba't ibang browser. Kasama rito ang pag-aangkop sa maliliit na viewports tulad ng sa mobile phone, pati na rin ang user na offline.
 
-Isang kapaki-pakinabang na website na dapat mong i-bookmark sa kahit anong browser na ginagamit mo ay ang [caniuse.com](https://www.caniuse.com). Kapag gumagawa ka ng mga web page, napakahalaga na gamitin ang mga listahan ng mga suportadong teknolohiya ng caniuse upang mas mahusay mong masuportahan ang iyong mga user.
+Isang kapaki-pakinabang na website na dapat mong i-bookmark sa kahit anong browser na ginagamit mo ay ang [caniuse.com](https://www.caniuse.com). Kapag gumagawa ka ng mga web page, malaking tulong ang mga listahan ng mga suportadong teknolohiya ng caniuse upang mas mahusay mong masuportahan ang iyong mga user.
 
 ✅ Paano mo malalaman kung aling mga browser ang pinakapopular sa mga gumagamit ng iyong website? Tingnan ang iyong analytics - maaari kang mag-install ng iba't ibang analytics packages bilang bahagi ng iyong proseso ng web development, at ipapakita nito kung aling mga browser ang pinakaginagamit ng mga user.
 
@@ -47,9 +47,9 @@ Isang kapaki-pakinabang na website na dapat mong i-bookmark sa kahit anong brows
 
 Bakit mo gugustuhing gumawa ng browser extension? Kapaki-pakinabang ito para sa mabilisang pag-access sa mga gawain na madalas mong inuulit. Halimbawa, kung madalas mong kailangang suriin ang mga kulay sa iba't ibang web page na iyong ginagamit, maaari kang mag-install ng color-picker browser extension. Kung nahihirapan kang tandaan ang mga password, maaari kang gumamit ng password-management browser extension.
 
-Masaya ring gumawa ng browser extensions. Karaniwan, ang mga ito ay nagma-manage ng limitadong bilang ng mga gawain na mahusay nilang nagagawa.
+Masaya ring gumawa ng browser extensions. Karaniwan, ang mga ito ay may limitadong bilang ng mga gawain na mahusay nilang nagagawa.
 
-✅ Ano ang mga paborito mong browser extension? Anong mga gawain ang ginagawa ng mga ito?
+✅ Ano ang iyong mga paboritong browser extension? Anong mga gawain ang kanilang ginagawa?
 
 ### Pag-install ng Extensions
 
@@ -57,20 +57,20 @@ Bago ka magsimulang gumawa, tingnan ang proseso ng paggawa at pag-deploy ng isan
 
 ![screenshot ng Edge browser na nagpapakita ng bukas na edge://extensions page at bukas na settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.tl.png)
 
-> Note: Siguraduhing i-toggle ang developer mode at payagan ang extension mula sa ibang mga tindahan.
+> Tandaan: Siguraduhing i-toggle ang developer mode at payagan ang extension mula sa ibang mga tindahan.
 
 Sa esensya, ang proseso ay:
 
 - gawin ang iyong extension gamit ang `npm run build` 
 - mag-navigate sa browser papunta sa extensions pane gamit ang "Settings and more" button (ang `...` icon) sa kanang itaas
 - kung ito ay bagong installation, piliin ang `load unpacked` upang i-upload ang bagong extension mula sa build folder nito (sa ating kaso ito ay `/dist`) 
-- o, i-click ang `reload` kung nire-reload mo ang dati nang naka-install na extension
+- o, i-click ang `reload` kung nire-reload mo ang extension na na-install na
 
-✅ Ang mga tagubiling ito ay para sa mga extension na ikaw mismo ang gumawa; upang mag-install ng mga extension na nailabas na sa browser extension store ng bawat browser, dapat kang mag-navigate sa mga [store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) at i-install ang extension na gusto mo.
+✅ Ang mga tagubiling ito ay para sa mga extension na ikaw mismo ang gumawa; upang mag-install ng mga extension na nailabas na sa browser extension store ng bawat browser, dapat kang mag-navigate sa mga [store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) at i-install ang extension na iyong napili.
 
-### Magsimula Na
+### Magsimula
 
-Gagawa ka ng browser extension na nagpapakita ng carbon footprint ng iyong rehiyon, ipinapakita ang paggamit ng enerhiya ng iyong rehiyon at ang pinagmulan ng enerhiya. Ang extension ay magkakaroon ng form na nangongolekta ng API key upang ma-access mo ang API ng CO2 Signal.
+Gagawa ka ng browser extension na nagpapakita ng carbon footprint ng iyong rehiyon, kabilang ang paggamit ng enerhiya at pinagmulan ng enerhiya. Ang extension ay magkakaroon ng form na nangongolekta ng API key upang ma-access mo ang API ng CO2 Signal.
 
 **Kailangan mo ng:**
 
@@ -84,7 +84,7 @@ Gagawa ka ng browser extension na nagpapakita ng carbon footprint ng iyong rehiy
 Maglaan ng oras upang tingnan ang codebase:
 
 dist
-    -|manifest.json (dito naka-set ang mga default)
+    -|manifest.json (dito nakatakda ang mga default)
     -|index.html (dito ang front-end HTML markup)
     -|background.js (dito ang background JS)
     -|main.js (built JS)
@@ -93,11 +93,11 @@ src
 
 ✅ Kapag nakuha mo na ang iyong API key at Region code, itabi ang mga ito sa isang tala para sa hinaharap na paggamit.
 
-### Gumawa ng HTML para sa Extension
+### Gawin ang HTML para sa Extension
 
 Ang extension na ito ay may dalawang view. Isa para mangolekta ng API key at region code:
 
-![screenshot ng kumpletong extension na bukas sa browser, nagpapakita ng form na may mga input para sa pangalan ng rehiyon at API key.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.tl.png)
+![screenshot ng kumpletong extension na bukas sa browser, nagpapakita ng form na may mga input para sa region name at API key.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.tl.png)
 
 At ang pangalawa para ipakita ang carbon usage ng rehiyon:
 
@@ -105,7 +105,7 @@ At ang pangalawa para ipakita ang carbon usage ng rehiyon:
 
 Magsimula tayo sa paggawa ng HTML para sa form at pag-style nito gamit ang CSS.
 
-Sa folder na `/dist`, gagawa ka ng form at isang result area. Sa file na `index.html`, punan ang delineated form area:
+Sa `/dist` folder, gagawa ka ng form at isang result area. Sa `index.html` file, punan ang delineated form area:
 
 ```HTML
 <form class="form-data" autocomplete="on">
@@ -140,23 +140,23 @@ Susunod, gumawa ng results area; sa ilalim ng final form tag, magdagdag ng ilang
 	<button class="clear-btn">Change region</button>
 </div>
 ```
-Sa puntong ito, maaari kang mag-try ng build. Siguraduhing i-install ang mga package dependencies ng extension na ito:
+Sa puntong ito, maaari kang mag-try ng build. Siguraduhing i-install ang package dependencies ng extension na ito:
 
 ```
 npm install
 ```
 
-Ang command na ito ay gagamit ng npm, ang Node Package Manager, upang i-install ang webpack para sa build process ng iyong extension. Makikita mo ang output ng prosesong ito sa pamamagitan ng pagtingin sa `/dist/main.js` - makikita mo na ang code ay na-bundle na.
+Ang command na ito ay gagamit ng npm, ang Node Package Manager, upang i-install ang webpack para sa build process ng iyong extension. Makikita mo ang output ng prosesong ito sa pamamagitan ng pagtingin sa `/dist/main.js` - makikita mong na-bundle na ang code.
 
-Sa ngayon, dapat mag-build ang extension at, kung ide-deploy mo ito sa Edge bilang isang extension, makikita mo ang isang form na maayos na naka-display.
+Sa ngayon, dapat mag-build ang extension at, kung ide-deploy mo ito sa Edge bilang extension, makikita mo ang isang maayos na form na naka-display.
 
-Binabati kita, nagawa mo na ang unang hakbang sa paggawa ng isang browser extension. Sa mga susunod na aralin, gagawin mo itong mas functional at kapaki-pakinabang.
+Binabati kita, nagawa mo na ang unang hakbang sa paggawa ng browser extension. Sa mga susunod na aralin, gagawin mo itong mas functional at kapaki-pakinabang.
 
 ---
 
 ## 🚀 Hamon
 
-Tingnan ang isang browser extension store at mag-install ng isa sa iyong browser. Maaari mong suriin ang mga file nito sa mga kawili-wiling paraan. Ano ang natuklasan mo?
+Tingnan ang isang browser extension store at mag-install ng isa sa iyong browser. Maaari mong suriin ang mga file nito sa mga kawili-wiling paraan. Ano ang iyong natuklasan?
 
 ## Post-Lecture Quiz
 
@@ -179,4 +179,4 @@ Sa araling ito, natutunan mo ang kaunti tungkol sa kasaysayan ng web browser; sa
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.

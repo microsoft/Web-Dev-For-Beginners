@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-27T22:35:07+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-28T15:44:43+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "tl"
 }
@@ -13,11 +13,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/37)
 
-Sa araling ito, matututuhan mo kung paano magdagdag ng puntos sa laro at magtala ng buhay.
+Sa araling ito, matututunan mo kung paano magdagdag ng puntos sa laro at kalkulahin ang buhay.
 
 ## Maglagay ng teksto sa screen
 
-Upang maipakita ang puntos ng laro sa screen, kailangan mong malaman kung paano maglagay ng teksto sa screen. Ang sagot ay sa pamamagitan ng paggamit ng `fillText()` method sa canvas object. Maaari mo ring kontrolin ang iba pang aspeto tulad ng font na gagamitin, kulay ng teksto, at maging ang alignment nito (kaliwa, kanan, gitna). Narito ang isang halimbawa ng code na naglalagay ng teksto sa screen.
+Upang maipakita ang puntos ng laro sa screen, kailangan mong malaman kung paano maglagay ng teksto sa screen. Ang sagot ay gamit ang `fillText()` method sa canvas object. Maaari mo ring kontrolin ang iba pang aspeto tulad ng font na gagamitin, kulay ng teksto, at maging ang alignment nito (kaliwa, kanan, gitna). Narito ang isang code na naglalagay ng teksto sa screen.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -28,20 +28,20 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ✅ Basahin pa ang tungkol sa [kung paano magdagdag ng teksto sa canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), at huwag mag-atubiling gawing mas maganda ang iyong disenyo!
 
-## Buhay, bilang konsepto sa laro
+## Buhay, bilang konsepto ng laro
 
-Ang konsepto ng buhay sa laro ay simpleng numero lamang. Sa konteksto ng isang space game, karaniwang naglalaan ng ilang buhay na nababawasan isa-isa kapag nasira ang iyong barko. Maganda kung maaari kang magpakita ng graphical na representasyon nito tulad ng maliliit na barko o puso sa halip na numero.
+Ang konsepto ng pagkakaroon ng buhay sa laro ay isang numero lamang. Sa konteksto ng isang space game, karaniwang nag-aassign ng set ng buhay na nababawasan isa-isa kapag nasira ang iyong barko. Maganda kung maaari kang magpakita ng graphical na representasyon nito tulad ng maliliit na barko o puso sa halip na numero.
 
 ## Ano ang gagawin
 
-Idagdag ang mga sumusunod sa iyong laro:
+Magdagdag ng mga sumusunod sa iyong laro:
 
-- **Puntos ng Laro**: Para sa bawat barko ng kalaban na masisira, dapat bigyan ang bayani ng ilang puntos, iminumungkahi namin ang 100 puntos bawat barko. Ang puntos ng laro ay dapat ipakita sa ibabang kaliwa.
-- **Buhay**: Ang iyong barko ay may tatlong buhay. Mawawalan ka ng isang buhay tuwing may kalabang barko na babangga sa iyo. Ang bilang ng buhay ay dapat ipakita sa ibabang kanan gamit ang sumusunod na graphic ![life image](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.tl.png).
+- **Puntos ng laro**: Para sa bawat barko ng kalaban na nasira, ang bida ay dapat makatanggap ng puntos, iminumungkahi namin ang 100 puntos bawat barko. Ang puntos ng laro ay dapat ipakita sa ibabang kaliwa.
+- **Buhay**: Ang iyong barko ay may tatlong buhay. Mawawala ang isang buhay tuwing may barko ng kalaban na bumangga sa iyo. Ang bilang ng buhay ay dapat ipakita sa ibabang kanan gamit ang sumusunod na graphic ![life image](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.tl.png).
 
 ## Mga Inirerekomendang Hakbang
 
-Hanapin ang mga file na nilikha para sa iyo sa sub-folder na `your-work`. Dapat itong maglaman ng mga sumusunod:
+Hanapin ang mga file na ginawa para sa iyo sa folder na `your-work`. Dapat itong maglaman ng mga sumusunod:
 
 ```bash
 -| assets
@@ -53,14 +53,14 @@ Hanapin ang mga file na nilikha para sa iyo sa sub-folder na `your-work`. Dapat 
 -| package.json
 ```
 
-Simulan ang iyong proyekto sa folder na `your_work` sa pamamagitan ng pag-type ng:
+Simulan ang iyong proyekto sa folder na `your_work` sa pamamagitan ng pag-type:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5000`. Buksan ang browser at ilagay ang address na iyon. Sa ngayon, dapat nitong ipakita ang bayani at lahat ng kalaban, at kapag pinindot mo ang kaliwa at kanang arrow, gumagalaw ang bayani at maaaring barilin ang mga kalaban.
+Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5000`. Buksan ang browser at ilagay ang address na iyon, sa ngayon dapat nitong ipakita ang bida at lahat ng kalaban, at kapag pinindot mo ang kaliwa at kanang arrow, gumagalaw ang bida at maaaring barilin ang mga kalaban.
 
 ### Magdagdag ng code
 
@@ -80,9 +80,9 @@ Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5
     eventEmitter = new EventEmitter();
     ```
   
-2. **Magdagdag ng mga variable**. Magdagdag ng code na kumakatawan sa kabuuang puntos (0) at natitirang buhay (3), at ipakita ang mga ito sa screen.
+2. **Magdagdag ng mga variable**. Magdagdag ng code na kumakatawan sa kabuuang puntos (0) at natitirang buhay (3), ipakita ang mga puntos na ito sa screen.
 
-3. **Palawakin ang `updateGameObjects()` function**. Palawakin ang `updateGameObjects()` function upang hawakan ang mga banggaan ng kalaban:
+3. **Palawakin ang `updateGameObjects()` function**. Palawakin ang `updateGameObjects()` function upang pamahalaan ang mga banggaan ng kalaban:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -93,15 +93,15 @@ Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5
       })
     ```
 
-4. **Idagdag ang `buhay` at `puntos`**. 
-   1. **I-initialize ang mga variable**. Sa ilalim ng `this.cooldown = 0` sa `Hero` class, itakda ang buhay at puntos:
+4. **Magdagdag ng `life` at `points`**. 
+   1. **I-initialize ang mga variable**. Sa ilalim ng `this.cooldown = 0` sa `Hero` class, itakda ang life at points:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Ipakita ang mga variable sa screen**. Ipakita ang mga halagang ito sa screen:
+   1. **Ipakita ang mga variable sa screen**. Ipakita ang mga value na ito sa screen:
 
         ```javascript
         function drawLife() {
@@ -128,7 +128,7 @@ Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5
 
         ```
 
-   1. **Idagdag ang mga method sa Game loop**. Siguraduhing idagdag ang mga function na ito sa iyong window.onload function sa ilalim ng `updateGameObjects()`:
+   1. **Magdagdag ng mga method sa Game loop**. Siguraduhing idagdag ang mga function na ito sa iyong window.onload function sa ilalim ng `updateGameObjects()`:
 
         ```javascript
         drawPoints();
@@ -137,7 +137,7 @@ Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5
 
 1. **Ipatupad ang mga patakaran ng laro**. Ipatupad ang mga sumusunod na patakaran ng laro:
 
-   1. **Para sa bawat banggaan ng bayani at kalaban**, bawasan ang isang buhay.
+   1. **Para sa bawat banggaan ng bida at kalaban**, bawasan ang isang buhay.
    
       Palawakin ang `Hero` class upang gawin ang pagbawas na ito:
 
@@ -152,7 +152,7 @@ Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5
 
    2. **Para sa bawat laser na tumama sa kalaban**, dagdagan ang puntos ng laro ng 100 puntos.
 
-      Palawakin ang Hero class upang gawin ang pagtaas na ito:
+      Palawakin ang Hero class upang gawin ang pagdagdag na ito:
     
         ```javascript
           incrementPoints() {
@@ -191,13 +191,13 @@ Halos tapos na ang iyong code. Ano ang nakikita mong susunod na hakbang?
 
 ## Review & Self Study
 
-Mag-research ng ilang paraan kung paano mo maaring dagdagan o bawasan ang puntos at buhay sa laro. May mga kawili-wiling game engine tulad ng [PlayFab](https://playfab.com). Paano makakatulong ang paggamit ng isa sa mga ito upang mapahusay ang iyong laro?
+Mag-research ng ilang paraan kung paano mo maaring dagdagan o bawasan ang puntos ng laro at buhay. May mga kawili-wiling game engines tulad ng [PlayFab](https://playfab.com). Paano kaya makakatulong ang paggamit ng isa sa mga ito upang mapahusay ang iyong laro?
 
-## Takdang-Aralin
+## Assignment
 
 [Build a Scoring Game](assignment.md)
 
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

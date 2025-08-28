@@ -1,38 +1,38 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-27T22:37:59+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-28T15:45:01+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "tl"
 }
 -->
-# Gumawa ng Space Game Bahagi 4: Pagdaragdag ng Laser at Pagtukoy ng Banggaan
+# Gumawa ng Space Game Bahagi 4: Magdagdag ng Laser at Mag-detect ng Banggaan
 
 ## Pre-Lecture Quiz
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/35)
 
-Sa araling ito, matututo kang magpaputok ng laser gamit ang JavaScript! Magdaragdag tayo ng dalawang bagay sa ating laro:
+Sa araling ito, matututuhan mong magpaputok ng laser gamit ang JavaScript! Magdadagdag tayo ng dalawang bagay sa ating laro:
 
-- **Isang laser**: ang laser na ito ay ipuputok mula sa barko ng iyong bayani at pataas nang patayo
-- **Pagtukoy ng banggaan**, bilang bahagi ng pagpapatupad ng kakayahang *magpaputok*, magdaragdag din tayo ng ilang magagandang patakaran sa laro:
-   - **Laser tumama sa kalaban**: Mamamatay ang kalaban kapag tinamaan ng laser
-   - **Laser tumama sa itaas na bahagi ng screen**: Masisira ang laser kapag tumama ito sa itaas na bahagi ng screen
-   - **Banggaan ng kalaban at bayani**: Masisira ang kalaban at ang bayani kapag nagbanggaan sila
-   - **Kalaban tumama sa ibaba ng screen**: Masisira ang kalaban at ang bayani kapag tumama ang kalaban sa ibaba ng screen
+- **Isang laser**: ang laser na ito ay ipuputok mula sa barko ng iyong bayani at pataas nang patayo.
+- **Pag-detect ng banggaan**, bilang bahagi ng pagpapatupad ng kakayahang *magpaputok*, magdadagdag din tayo ng ilang magagandang patakaran sa laro:
+   - **Laser tumama sa kalaban**: Mamamatay ang kalaban kapag tinamaan ng laser.
+   - **Laser tumama sa itaas ng screen**: Mawawala ang laser kapag tumama ito sa itaas na bahagi ng screen.
+   - **Banggaan ng kalaban at bayani**: Mawawala ang kalaban at ang bayani kapag nagbanggaan sila.
+   - **Kalaban tumama sa ibaba ng screen**: Mawawala ang kalaban at ang bayani kapag tumama ang kalaban sa ibaba ng screen.
 
 Sa madaling salita, ikaw -- *ang bayani* -- ay kailangang tamaan ang lahat ng kalaban gamit ang laser bago sila makarating sa ibaba ng screen.
 
-✅ Mag-research ng kaunti tungkol sa pinakaunang computer game na kailanman naisulat. Ano ang functionality nito?
+✅ Mag-research ng kaunti tungkol sa pinakaunang computer game na kailanman ay ginawa. Ano ang functionality nito?
 
 Maging bayani tayo nang magkasama!
 
-## Pagtukoy ng Banggaan
+## Pag-detect ng Banggaan
 
-Paano natin gagawin ang pagtukoy ng banggaan? Kailangan nating isipin ang ating mga game object bilang mga parihaba na gumagalaw. Bakit, tanong mo? Dahil ang imahe na ginagamit upang iguhit ang isang game object ay isang parihaba: mayroon itong `x`, `y`, `width`, at `height`.
+Paano natin gagawin ang pag-detect ng banggaan? Kailangan nating isipin ang ating mga game object bilang mga parihaba na gumagalaw. Bakit, tanong mo? Dahil ang imahe na ginagamit upang iguhit ang isang game object ay isang parihaba: mayroon itong `x`, `y`, `width`, at `height`.
 
-Kung ang dalawang parihaba, halimbawa ang bayani at kalaban, ay *magkasalubong*, may banggaan. Ano ang dapat mangyari pagkatapos ay nakadepende sa mga patakaran ng laro. Upang maipatupad ang pagtukoy ng banggaan, kakailanganin mo ang mga sumusunod:
+Kapag ang dalawang parihaba, halimbawa ang bayani at kalaban, ay *nagkasalubong*, may banggaan. Ano ang dapat mangyari pagkatapos ay depende sa mga patakaran ng laro. Upang maipatupad ang pag-detect ng banggaan, kailangan mo ng mga sumusunod:
 
 1. Isang paraan upang makuha ang representasyon ng parihaba ng isang game object, tulad nito:
 
@@ -58,32 +58,32 @@ Kung ang dalawang parihaba, halimbawa ang bayani at kalaban, ay *magkasalubong*,
    }
    ```
 
-## Paano natin sisirain ang mga bagay
+## Paano Mawawala ang mga Bagay
 
-Upang sirain ang mga bagay sa laro, kailangan mong ipaalam sa laro na hindi na dapat ipinta ang item na ito sa game loop na nagti-trigger sa isang tiyak na interval. Isang paraan upang gawin ito ay markahan ang isang game object bilang *patay* kapag may nangyari, tulad nito:
+Upang mawala ang mga bagay sa laro, kailangan mong ipaalam sa laro na hindi na nito dapat ipinta ang item na ito sa game loop na nagti-trigger sa isang tiyak na interval. Isang paraan upang gawin ito ay markahan ang isang game object bilang *patay* kapag may nangyari, tulad nito:
 
 ```javascript
 // collision happened
 enemy.dead = true
 ```
 
-Pagkatapos, maaari mong alisin ang mga *patay* na object bago muling ipinta ang screen, tulad nito:
+Pagkatapos, maaari mong ayusin ang mga *patay* na object bago muling ipinta ang screen, tulad nito:
 
 ```javascript
 gameObjects = gameObject.filter(go => !go.dead);
 ```
 
-## Paano magpaputok ng laser
+## Paano Magpaputok ng Laser
 
-Ang pagpapaputok ng laser ay nangangahulugan ng pagtugon sa isang key-event at paglikha ng isang object na gumagalaw sa isang tiyak na direksyon. Kaya, kailangan nating gawin ang mga sumusunod na hakbang:
+Ang pagpapaputok ng laser ay nangangahulugan ng pagtugon sa isang key-event at paggawa ng isang object na gumagalaw sa isang tiyak na direksyon. Kaya kailangan nating gawin ang mga sumusunod na hakbang:
 
-1. **Lumikha ng laser object**: mula sa itaas ng barko ng iyong bayani, na sa sandaling malikha ay magsisimulang gumalaw pataas patungo sa itaas ng screen.
-2. **Mag-attach ng code sa isang key event**: kailangan nating pumili ng key sa keyboard na kumakatawan sa pagpapaputok ng laser ng manlalaro.
-3. **Lumikha ng game object na mukhang laser** kapag pinindot ang key.
+1. **Gumawa ng laser object**: mula sa itaas ng barko ng ating bayani, na sa sandaling malikha ay magsisimulang gumalaw pataas patungo sa itaas ng screen.
+2. **Mag-attach ng code sa isang key event**: kailangan nating pumili ng key sa keyboard na kumakatawan sa player na nagpapaputok ng laser.
+3. **Gumawa ng game object na mukhang laser** kapag pinindot ang key.
 
-## Cooldown para sa ating laser
+## Cooldown para sa Laser
 
-Kailangang magpaputok ang laser tuwing pinipindot mo ang isang key, halimbawa *space*. Upang maiwasan ang laro na makagawa ng sobrang daming laser sa maikling panahon, kailangan nating ayusin ito. Ang solusyon ay sa pamamagitan ng pagpapatupad ng tinatawag na *cooldown*, isang timer, na nagsisiguro na ang laser ay maaari lamang magpaputok sa tiyak na agwat. Maaari mo itong ipatupad sa ganitong paraan:
+Kailangang magpaputok ang laser tuwing pinipindot mo ang isang key, tulad ng *space* halimbawa. Upang maiwasan ang laro na gumawa ng sobrang daming laser sa maikling panahon, kailangan nating ayusin ito. Ang solusyon ay sa pamamagitan ng pagpapatupad ng tinatawag na *cooldown*, isang timer, na tinitiyak na ang laser ay maaari lamang magpaputok sa tamang agwat. Maaari mo itong ipatupad sa ganitong paraan:
 
 ```javascript
 class Cooldown {
@@ -111,21 +111,21 @@ class Weapon {
 
 ✅ Balikan ang aralin 1 sa serye ng space game upang maalala ang tungkol sa *cooldowns*.
 
-## Ano ang itatayo
+## Ano ang Itatayo
 
-Kukunin mo ang umiiral na code (na dapat mo nang nalinis at inayos) mula sa nakaraang aralin, at palalawakin ito. Maaaring magsimula sa code mula sa Bahagi II o gamitin ang code sa [Part III- starter](../../../../../../../../../your-work).
+Kukunin mo ang umiiral na code (na dapat mo nang nalinis at na-refactor) mula sa nakaraang aralin, at palawakin ito. Maaaring magsimula sa code mula sa bahagi II o gamitin ang code sa [Part III- starter](../../../../../../../../../your-work).
 
-> tip: ang laser na gagamitin mo ay nasa iyong assets folder na at naka-reference na sa iyong code
+> tip: ang laser na gagamitin mo ay nasa iyong assets folder na at naka-refer na sa iyong code
 
-- **Magdagdag ng pagtukoy ng banggaan**, kapag ang laser ay tumama sa isang bagay, ang mga sumusunod na patakaran ay dapat ipatupad:
-   1. **Laser tumama sa kalaban**: mamamatay ang kalaban kapag tinamaan ng laser
-   2. **Laser tumama sa itaas na bahagi ng screen**: Masisira ang laser kapag tumama ito sa itaas na bahagi ng ating screen
-   3. **Banggaan ng kalaban at bayani**: masisira ang kalaban at ang bayani kapag nagbanggaan sila
-   4. **Kalaban tumama sa ibaba ng screen**: Masisira ang kalaban at ang bayani kapag tumama ang kalaban sa ibaba ng screen
+- **Magdagdag ng pag-detect ng banggaan**, kapag ang laser ay tumama sa isang bagay, ang mga sumusunod na patakaran ay dapat ipatupad:
+   1. **Laser tumama sa kalaban**: mamamatay ang kalaban kapag tinamaan ng laser.
+   2. **Laser tumama sa itaas ng screen**: Mawawala ang laser kapag tumama ito sa itaas na bahagi ng screen.
+   3. **Banggaan ng kalaban at bayani**: Mawawala ang kalaban at ang bayani kapag nagbanggaan sila.
+   4. **Kalaban tumama sa ibaba ng screen**: Mawawala ang kalaban at ang bayani kapag tumama ang kalaban sa ibaba ng screen.
 
-## Mga Inirerekomendang Hakbang
+## Mga Rekomendadong Hakbang
 
-Hanapin ang mga file na nilikha para sa iyo sa sub-folder na `your-work`. Dapat itong maglaman ng mga sumusunod:
+Hanapin ang mga file na ginawa para sa iyo sa sub-folder na `your-work`. Dapat itong maglaman ng mga sumusunod:
 
 ```bash
 -| assets
@@ -137,14 +137,14 @@ Hanapin ang mga file na nilikha para sa iyo sa sub-folder na `your-work`. Dapat 
 -| package.json
 ```
 
-Simulan ang iyong proyekto sa folder na `your_work` sa pamamagitan ng pag-type:
+Simulan ang iyong proyekto sa folder na `your_work` sa pamamagitan ng pag-type ng:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Ang nasa itaas ay magpapasimula ng isang HTTP Server sa address na `http://localhost:5000`. Buksan ang isang browser at ilagay ang address na iyon, sa ngayon dapat nitong ipakita ang bayani at lahat ng kalaban, ngunit wala pang gumagalaw :).
+Ang nasa itaas ay magsisimula ng HTTP Server sa address na `http://localhost:5000`. Buksan ang isang browser at ilagay ang address na iyon, sa ngayon dapat nitong ipakita ang bayani at lahat ng kalaban, ngunit wala pang gumagalaw :).
 
 ### Magdagdag ng Code
 
@@ -161,7 +161,7 @@ Ang nasa itaas ay magpapasimula ng isang HTTP Server sa address na `http://local
       }
     ```
 
-2. **Magdagdag ng code na sumusuri ng banggaan** Ito ay magiging isang bagong function na sumusubok kung ang dalawang parihaba ay nagkasalubong:
+2. **Magdagdag ng code na nagche-check ng banggaan** Ito ay magiging isang bagong function na sumusubok kung ang dalawang parihaba ay nagkasalubong:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -175,7 +175,7 @@ Ang nasa itaas ay magpapasimula ng isang HTTP Server sa address na `http://local
     ```
 
 3. **Magdagdag ng kakayahang magpaputok ng laser**
-   1. **Magdagdag ng key-event message**. Ang *space* key ay dapat lumikha ng laser sa itaas ng barko ng bayani. Magdagdag ng tatlong constants sa Messages object:
+   1. **Magdagdag ng key-event message**. Ang *space* key ay dapat lumikha ng laser sa itaas lamang ng barko ng bayani. Magdagdag ng tatlong constants sa Messages object:
 
        ```javascript
         KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
@@ -200,7 +200,7 @@ Ang nasa itaas ay magpapasimula ng isang HTTP Server sa address na `http://local
         }
        ```
 
-       at magdagdag ng bagong `eventEmitter.on()` function upang matiyak ang tamang behavior kapag ang kalaban ay tumama sa laser:
+       at magdagdag ng bagong `eventEmitter.on()` function upang matiyak ang behavior kapag ang kalaban ay tumama sa laser:
 
           ```javascript
           eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -209,8 +209,8 @@ Ang nasa itaas ay magpapasimula ng isang HTTP Server sa address na `http://local
           })
           ```
 
-   1. **Paggalaw ng object**, Tiyakin na ang laser ay gumagalaw pataas sa screen nang paunti-unti. Lilikha ka ng bagong Laser class na mag-e-extend sa `GameObject`, tulad ng dati:
-
+   1. **Gumalaw ang object**, Tiyakin na ang laser ay gumagalaw pataas sa screen nang paunti-unti. Gagawa ka ng bagong Laser class na mag-e-extend sa `GameObject`, tulad ng ginawa mo dati: 
+   
       ```javascript
         class Laser extends GameObject {
         constructor(x, y) {
@@ -252,9 +252,9 @@ Ang nasa itaas ay magpapasimula ng isang HTTP Server sa address na `http://local
       }  
       ```
 
-      Tiyaking idagdag ang `updateGameObjects()` sa iyong game loop sa `window.onload`.
+      Siguraduhing idagdag ang `updateGameObjects()` sa iyong game loop sa `window.onload`.
 
-   4. **Ipatupad ang cooldown** sa laser, upang ito ay maaari lamang magpaputok sa tiyak na agwat.
+   4. **Ipatupad ang cooldown** sa laser, upang ito ay maaari lamang magpaputok sa tamang agwat.
 
       Sa wakas, i-edit ang Hero class upang magkaroon ito ng cooldown:
 
@@ -285,7 +285,7 @@ Ang nasa itaas ay magpapasimula ng isang HTTP Server sa address na `http://local
       }
       ```
 
-Sa puntong ito, ang iyong laro ay may ilang functionality na! Maaari kang mag-navigate gamit ang iyong arrow keys, magpaputok ng laser gamit ang space bar, at nawawala ang mga kalaban kapag tinamaan mo sila. Magaling!
+Sa puntong ito, ang iyong laro ay may ilang functionality na! Maaari kang mag-navigate gamit ang iyong arrow keys, magpaputok ng laser gamit ang iyong space bar, at nawawala ang mga kalaban kapag tinamaan mo sila. Magaling!
 
 ---
 
@@ -301,7 +301,7 @@ Magdagdag ng pagsabog! Tingnan ang mga game asset sa [the Space Art repo](../../
 
 Eksperimentuhin ang mga interval sa iyong laro sa ngayon. Ano ang mangyayari kapag binago mo ang mga ito? Magbasa pa tungkol sa [JavaScript timing events](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
-## Takdang Aralin
+## Takdang-Aralin
 
 [Pag-aralan ang mga banggaan](assignment.md)
 

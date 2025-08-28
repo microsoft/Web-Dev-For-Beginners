@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "05666cecb8983a72cf0ce1d18932b5b7",
-  "translation_date": "2025-08-27T23:22:27+00:00",
+  "original_hash": "361249da70432ddfd4741c917d1a6f50",
+  "translation_date": "2025-08-28T15:55:01+00:00",
   "source_file": "1-getting-started-lessons/2-github-basics/README.md",
   "language_code": "tl"
 }
 -->
 # Panimula sa GitHub
 
-Ang araling ito ay tumatalakay sa mga pangunahing kaalaman tungkol sa GitHub, isang platform para mag-host at mag-manage ng mga pagbabago sa iyong code.
+Ang araling ito ay tumatalakay sa mga pangunahing kaalaman ng GitHub, isang platform para mag-host at mag-manage ng mga pagbabago sa iyong code.
 
 ![Panimula sa GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f947909b4f9d343e2a23778aa716ca6b9d71df7174ee5009ac.tl.png)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/3)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app)
 
 ## Panimula
 
@@ -27,7 +27,7 @@ Sa araling ito, tatalakayin natin ang:
 
 ### Mga Kinakailangan
 
-Bago magsimula, kailangan mong tiyakin kung naka-install na ang Git. Sa terminal, i-type:  
+Bago magsimula, kailangang tiyakin kung naka-install na ang Git. Sa terminal, i-type: 
 `git --version`
 
 Kung hindi pa naka-install ang Git, [i-download ang Git](https://git-scm.com/downloads). Pagkatapos, i-setup ang iyong lokal na Git profile sa terminal:
@@ -37,7 +37,7 @@ Kung hindi pa naka-install ang Git, [i-download ang Git](https://git-scm.com/dow
 Para suriin kung naka-configure na ang Git, maaari mong i-type:
 `git config --list`
 
-Kailangan mo rin ng GitHub account, isang code editor (tulad ng Visual Studio Code), at kailangan mong buksan ang iyong terminal (o: command prompt).
+Kailangan mo rin ng GitHub account, isang code editor (tulad ng Visual Studio Code), at kailangang buksan ang iyong terminal (o: command prompt).
 
 Pumunta sa [github.com](https://github.com/) at gumawa ng account kung wala ka pa, o mag-login at punan ang iyong profile.
 
@@ -51,20 +51,20 @@ Kailangan mo ng folder na may code project sa iyong lokal na makina (laptop o PC
 
 ## Pamamahala ng Code
 
-Halimbawa, mayroon kang folder sa iyong lokal na makina na may code project at gusto mong simulan ang pagsubaybay sa iyong progreso gamit ang git - ang version control system. Ang iba ay ikinukumpara ang paggamit ng git sa pagsusulat ng love letter para sa iyong hinaharap na sarili. Sa pagbabasa ng iyong mga commit message makalipas ang ilang araw, linggo, o buwan, maaalala mo kung bakit mo ginawa ang isang desisyon, o "i-rollback" ang isang pagbabago - iyon ay, kung nagsusulat ka ng magagandang "commit messages."
+Halimbawa, mayroon kang folder sa lokal na makina na may code project at nais mong simulan ang pagsubaybay sa iyong progreso gamit ang git - ang version control system. Inihahambing ng ilan ang paggamit ng git sa pagsusulat ng love letter para sa iyong hinaharap na sarili. Sa pagbabasa ng iyong mga commit message makalipas ang ilang araw, linggo, o buwan, maaalala mo kung bakit mo ginawa ang isang desisyon, o "i-rollback" ang isang pagbabago - iyon ay, kung nagsusulat ka ng magagandang "commit messages".
 
 ### Gawain: Gumawa ng repository at mag-commit ng code  
 
-> Panoorin ang video
+> Tingnan ang video
 > 
 > [![Git at GitHub basics video](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
 
 1. **Gumawa ng repository sa GitHub**. Sa GitHub.com, sa tab ng repositories, o mula sa navigation bar sa kanang itaas, hanapin ang **new repo** button.
 
-   1. Bigyan ng pangalan ang iyong repository (folder).
+   1. Bigyan ng pangalan ang iyong repository (folder)
    1. Piliin ang **create repository**.
 
-1. **Pumunta sa iyong working folder**. Sa iyong terminal, lumipat sa folder (kilala rin bilang directory) na gusto mong simulan ang pagsubaybay. I-type:
+1. **Pumunta sa iyong working folder**. Sa iyong terminal, lumipat sa folder (kilala rin bilang directory) na nais mong simulan ang pagsubaybay. I-type:
 
    ```bash
    cd [name of your folder]
@@ -93,10 +93,10 @@ Halimbawa, mayroon kang folder sa iyong lokal na makina na may code project at g
         modified:   file2.txt
    ```
 
-   Karaniwan, ang `git status` command ay nagsasabi ng mga bagay tulad ng kung anong mga file ang handa nang _i-save_ sa repo o may mga pagbabago na maaaring gusto mong i-persist.
+   Karaniwan, ang `git status` command ay nagsasabi ng mga bagay tulad ng kung anong mga file ang handa nang _i-save_ sa repo o may mga pagbabago na maaaring nais mong i-persist.
 
-1. **Idagdag ang lahat ng file para sa pagsubaybay**  
-   Tinatawag din itong staging files/ pagdaragdag ng mga file sa staging area.
+1. **Idagdag ang lahat ng file para sa pagsubaybay**
+   Tinatawag din itong pag-stage ng mga file/pagdaragdag ng mga file sa staging area.
 
    ```bash
    git add .
@@ -110,7 +110,7 @@ Halimbawa, mayroon kang folder sa iyong lokal na makina na may code project at g
    git add [file or folder name]
    ```
 
-   Nakakatulong ito para idagdag lamang ang mga napiling file sa staging area kapag ayaw mong i-commit ang lahat ng file nang sabay-sabay.
+   Nakakatulong ito upang idagdag lamang ang mga napiling file sa staging area kapag ayaw mong i-commit ang lahat ng file nang sabay-sabay.
 
 1. **I-unstage ang lahat ng file**
 
@@ -118,15 +118,15 @@ Halimbawa, mayroon kang folder sa iyong lokal na makina na may code project at g
    git reset
    ```
 
-   Ang command na ito ay nakakatulong para i-unstage ang lahat ng file nang sabay-sabay.
+   Ang command na ito ay tumutulong upang i-unstage ang lahat ng file nang sabay-sabay.
 
-1. **I-unstage ang partikular na file**
+1. **I-unstage ang isang partikular na file**
 
    ```bash
    git reset [file or folder name]
    ```
 
-   Ang command na ito ay nakakatulong para i-unstage lamang ang isang partikular na file na ayaw mong isama sa susunod na commit.
+   Ang command na ito ay tumutulong upang i-unstage lamang ang isang partikular na file na ayaw mong isama sa susunod na commit.
 
 1. **I-persist ang iyong trabaho**. Sa puntong ito, naidagdag mo na ang mga file sa tinatawag na _staging area_. Isang lugar kung saan sinusubaybayan ng Git ang iyong mga file. Para gawing permanente ang pagbabago, kailangan mong _i-commit_ ang mga file. Para gawin ito, gumawa ng _commit_ gamit ang `git commit` command. Ang _commit_ ay kumakatawan sa isang saving point sa kasaysayan ng iyong repo. I-type ang sumusunod para gumawa ng _commit_:
 
@@ -134,11 +134,11 @@ Halimbawa, mayroon kang folder sa iyong lokal na makina na may code project at g
    git commit -m "first commit"
    ```
 
-   Iko-commit nito ang lahat ng iyong file, na may mensaheng "first commit". Para sa mga susunod na commit message, mas mainam na maging mas detalyado sa iyong paglalarawan upang maipahayag kung anong uri ng pagbabago ang ginawa mo.
+   Iko-commit nito ang lahat ng iyong mga file, na may mensaheng "first commit". Para sa mga susunod na commit message, mas mabuting maging mas detalyado sa iyong paglalarawan upang maipakita kung anong uri ng pagbabago ang ginawa mo.
 
-1. **Ikonekta ang iyong lokal na Git repo sa GitHub**. Ang Git repo ay maganda sa iyong makina ngunit sa isang punto, gusto mong magkaroon ng backup ng iyong mga file sa ibang lugar at mag-imbita ng ibang tao na makipagtulungan sa iyong repo. Ang isang mahusay na lugar para gawin ito ay ang GitHub. Tandaan na gumawa na tayo ng repo sa GitHub kaya ang tanging kailangan nating gawin ay ikonekta ang lokal na Git repo sa GitHub. Ang command na `git remote add` ang gagawa nito. I-type ang sumusunod na command:
+1. **Ikonekta ang iyong lokal na Git repo sa GitHub**. Ang Git repo ay maganda sa iyong makina ngunit sa isang punto, nais mong magkaroon ng backup ng iyong mga file sa ibang lugar at mag-imbita ng ibang tao na makipagtulungan sa iyong repo. Ang isang mahusay na lugar para gawin ito ay ang GitHub. Tandaan na gumawa na tayo ng repo sa GitHub kaya ang tanging kailangan nating gawin ay ikonekta ang lokal na Git repo sa GitHub. Ang command na `git remote add` ang gagawa nito. I-type ang sumusunod na command:
 
-   > Tandaan, bago i-type ang command, pumunta sa iyong GitHub repo page para hanapin ang repository URL. Gagamitin mo ito sa command sa ibaba. Palitan ang ```https://github.com/username/repository_name.git``` ng iyong GitHub URL.
+   > Tandaan, bago i-type ang command, pumunta sa iyong GitHub repo page upang hanapin ang repository URL. Gagamitin mo ito sa command sa ibaba. Palitan ang ```https://github.com/username/repository_name.git``` ng iyong GitHub URL.
 
    ```bash
    git remote add origin https://github.com/username/repository_name.git
@@ -146,8 +146,8 @@ Halimbawa, mayroon kang folder sa iyong lokal na makina na may code project at g
 
    Gumagawa ito ng _remote_, o koneksyon, na pinangalanang "origin" na tumuturo sa GitHub repository na ginawa mo kanina.
 
-1. **Ipadala ang mga lokal na file sa GitHub**. Sa ngayon, gumawa ka ng _connection_ sa pagitan ng lokal na repo at ng GitHub repo. Ipadala natin ang mga file na ito sa GitHub gamit ang sumusunod na command na `git push`, ganito: 
-
+1. **Ipadala ang mga lokal na file sa GitHub**. Sa ngayon, gumawa ka ng _connection_ sa pagitan ng lokal na repo at ng GitHub repo. Ipadala ang mga file na ito sa GitHub gamit ang sumusunod na command na `git push`, ganito: 
+   
    > Tandaan, maaaring iba ang pangalan ng iyong branch sa default na ```main```.
 
    ```bash
@@ -156,7 +156,7 @@ Halimbawa, mayroon kang folder sa iyong lokal na makina na may code project at g
 
    Ipinapadala nito ang iyong mga commit sa iyong "main" branch sa GitHub.
 
-2. **Magdagdag ng higit pang mga pagbabago**. Kung gusto mong magpatuloy sa paggawa ng mga pagbabago at i-push ang mga ito sa GitHub, kakailanganin mo lang gamitin ang sumusunod na tatlong command:
+2. **Magdagdag ng higit pang mga pagbabago**. Kung nais mong magpatuloy sa paggawa ng mga pagbabago at i-push ang mga ito sa GitHub, kakailanganin mo lamang gamitin ang sumusunod na tatlong command:
 
    ```bash
    git add .
@@ -164,17 +164,17 @@ Halimbawa, mayroon kang folder sa iyong lokal na makina na may code project at g
    git push
    ```
 
-   > Tip, Maaaring gusto mo ring gumamit ng `.gitignore` file para maiwasan ang mga file na ayaw mong i-track na lumitaw sa GitHub - tulad ng notes file na iniimbak mo sa parehong folder ngunit walang lugar sa pampublikong repository. Makakahanap ka ng mga template para sa `.gitignore` files sa [.gitignore templates](https://github.com/github/gitignore).
+   > Tip, Maaaring nais mo ring gumamit ng `.gitignore` file upang maiwasan ang mga file na ayaw mong i-track na lumitaw sa GitHub - tulad ng notes file na iniimbak mo sa parehong folder ngunit walang lugar sa pampublikong repository. Maaari kang makahanap ng mga template para sa `.gitignore` files sa [.gitignore templates](https://github.com/github/gitignore).
 
 #### Mga Commit Message
 
-Ang isang mahusay na Git commit subject line ay kumukumpleto sa sumusunod na pangungusap:  
-Kung maipapatupad, ang commit na ito ay <ang iyong subject line dito>
+Ang isang mahusay na Git commit subject line ay kumukumpleto sa sumusunod na pangungusap:
+Kung ilalapat, ang commit na ito ay <ang iyong subject line dito>
 
-Para sa subject, gamitin ang imperative, present tense: "change" hindi "changed" o "changes".  
+Para sa subject, gamitin ang imperative, present tense: "change" hindi "changed" o "changes". 
 Tulad ng sa subject, sa body (opsyonal) ay gamitin din ang imperative, present tense. Ang body ay dapat maglaman ng motibasyon para sa pagbabago at ikumpara ito sa nakaraang behavior. Ipinaliwanag mo ang `bakit`, hindi ang `paano`.
 
-✅ Maglaan ng ilang minuto para mag-surf sa GitHub. Makakakita ka ba ng isang mahusay na commit message? Makakakita ka ba ng isang napaka-minimal na mensahe? Anong impormasyon ang sa tingin mo ay pinakamahalaga at kapaki-pakinabang na ipahayag sa isang commit message?
+✅ Maglaan ng ilang minuto upang mag-surf sa GitHub. Makakakita ka ba ng isang talagang mahusay na commit message? Makakakita ka ba ng isang talagang minimal na mensahe? Anong impormasyon ang sa tingin mo ay pinakamahalaga at kapaki-pakinabang na ipahayag sa isang commit message?
 
 ### Gawain: Makipagtulungan
 
@@ -182,39 +182,39 @@ Ang pangunahing dahilan ng paglalagay ng mga bagay sa GitHub ay upang gawing pos
 
 ## Pagtatrabaho sa mga proyekto kasama ang iba
 
-> Panoorin ang video
+> Tingnan ang video
 >
 > [![Git at GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
-Sa iyong repository, pumunta sa `Insights > Community` para makita kung paano ikinukumpara ang iyong proyekto sa mga inirerekomendang pamantayan ng komunidad.
+Sa iyong repository, pumunta sa `Insights > Community` upang makita kung paano ikinukumpara ang iyong proyekto sa mga inirerekomendang pamantayan ng komunidad.
 
-Narito ang ilang bagay na maaaring magpabuti sa iyong GitHub repo:
-- **Description**. Nagdagdag ka ba ng description para sa iyong proyekto?
-- **README**. Nagdagdag ka ba ng README? Nagbibigay ang GitHub ng gabay para sa pagsusulat ng [README](https://docs.github.com/articles/about-readmes/?WT.mc_id=academic-77807-sagibbon).
-- **Contributing guideline**. Mayroon bang [contributing guidelines](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/?WT.mc_id=academic-77807-sagibbon) ang iyong proyekto?  
-- **Code of Conduct**. Mayroon bang [Code of Conduct](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/)?  
-- **License**. Marahil ang pinakamahalaga, mayroon bang [license](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
+   Narito ang ilang bagay na maaaring magpabuti sa iyong GitHub repo:
+   - **Description**. Nagdagdag ka ba ng description para sa iyong proyekto?
+   - **README**. Nagdagdag ka ba ng README? Nagbibigay ang GitHub ng gabay para sa pagsusulat ng [README](https://docs.github.com/articles/about-readmes/?WT.mc_id=academic-77807-sagibbon).
+   - **Contributing guideline**. Mayroon bang [contributing guidelines](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/?WT.mc_id=academic-77807-sagibbon) ang iyong proyekto? 
+   - **Code of Conduct**. Mayroon bang [Code of Conduct](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/)? 
+   - **License**. Marahil ang pinakamahalaga, isang [license](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
 
-Ang lahat ng mga resource na ito ay makakatulong sa onboarding ng mga bagong miyembro ng team. At ang mga ito ay karaniwang ang mga bagay na tinitingnan ng mga bagong contributor bago pa man tingnan ang iyong code, upang malaman kung ang iyong proyekto ay ang tamang lugar para sa kanila na gugulin ang kanilang oras.
+Ang lahat ng mga resource na ito ay makakatulong sa onboarding ng mga bagong miyembro ng team. At ang mga ito ay karaniwang ang uri ng mga bagay na tinitingnan ng mga bagong contributor bago pa man tingnan ang iyong code, upang malaman kung ang iyong proyekto ay ang tamang lugar para sa kanila upang gugulin ang kanilang oras.
 
-✅ Ang mga README file, bagama't nangangailangan ng oras upang ihanda, ay madalas na napapabayaan ng mga abalang maintainer. Makakakita ka ba ng halimbawa ng isang partikular na detalyadong README? Tandaan: may ilang [tools para tumulong gumawa ng magagandang README](https://www.makeareadme.com/) na maaaring gusto mong subukan.
+✅ Ang mga README file, bagama't nangangailangan ng oras upang ihanda, ay madalas na napapabayaan ng mga abalang maintainer. Makakakita ka ba ng halimbawa ng isang partikular na deskriptibong README? Tandaan: may ilang [tools para tumulong gumawa ng magagandang README](https://www.makeareadme.com/) na maaaring gusto mong subukan.
 
 ### Gawain: Mag-merge ng code
 
-Ang mga contributing docs ay tumutulong sa mga tao na mag-ambag sa proyekto. Ipinaliwanag nito kung anong uri ng mga kontribusyon ang hinahanap mo at kung paano gumagana ang proseso. Ang mga contributor ay kailangang dumaan sa isang serye ng mga hakbang upang makapag-ambag sa iyong repo sa GitHub:
+Ang mga contributing docs ay tumutulong sa mga tao na mag-ambag sa proyekto. Ipinaliwanag nito kung anong uri ng mga kontribusyon ang hinahanap mo at kung paano gumagana ang proseso. Kailangang dumaan ang mga contributor sa isang serye ng mga hakbang upang makapag-ambag sa iyong repo sa GitHub:
 
-1. **Forking ng iyong repo**. Malamang gusto mong ipa-fork ang iyong proyekto sa mga tao. Ang forking ay nangangahulugan ng paggawa ng replika ng iyong repository sa kanilang GitHub profile.
-1. **Clone**. Mula doon, i-clone nila ang proyekto sa kanilang lokal na makina.
-1. **Gumawa ng branch**. Gusto mong hilingin sa kanila na gumawa ng _branch_ para sa kanilang trabaho.
-1. **Mag-focus sa isang lugar**. Hilingin sa mga contributor na ituon ang kanilang kontribusyon sa isang bagay lamang sa bawat pagkakataon - sa ganitong paraan, mas mataas ang tsansa na ma-merge ang kanilang trabaho. Halimbawa, nagsulat sila ng bug fix, nagdagdag ng bagong feature, at nag-update ng ilang test - paano kung gusto mo, o maaari mo lamang i-implement ang 2 sa 3, o 1 sa 3 pagbabago?
+1. **Forking ng iyong repo**. Malamang na nais mong ipa-fork ang iyong proyekto sa mga tao. Ang forking ay nangangahulugan ng paggawa ng replika ng iyong repository sa kanilang GitHub profile.
+1. **Clone**. Mula doon, i-clone nila ang proyekto sa kanilang lokal na makina. 
+1. **Gumawa ng branch**. Nais mong hilingin sa kanila na gumawa ng _branch_ para sa kanilang trabaho. 
+1. **Mag-focus sa isang lugar ng pagbabago**. Hilingin sa mga contributor na ituon ang kanilang kontribusyon sa isang bagay lamang sa bawat pagkakataon - sa ganitong paraan, mas mataas ang tsansa na ma-merge ang kanilang trabaho. Halimbawa, gumawa sila ng bug fix, magdagdag ng bagong feature, at mag-update ng ilang tests - paano kung nais mo, o maaari lamang i-implement ang 2 sa 3, o 1 sa 3 pagbabago?
 
 ✅ Mag-isip ng sitwasyon kung saan ang mga branch ay partikular na mahalaga sa pagsusulat at pagpapadala ng magandang code. Anong mga use case ang naiisip mo?
 
-> Tandaan, maging ang pagbabago na gusto mong makita sa mundo, at gumawa ng mga branch para sa iyong sariling trabaho. Ang anumang mga commit na gagawin mo ay gagawin sa branch na kasalukuyan mong "checked out". Gamitin ang `git status` para makita kung aling branch iyon.
+> Tandaan, maging ang pagbabago na nais mong makita sa mundo, at gumawa ng mga branch para sa iyong sariling trabaho. Ang anumang mga commit na gagawin mo ay gagawin sa branch na kasalukuyan mong "checked out". Gamitin ang `git status` upang makita kung aling branch iyon.
 
-Dumaan tayo sa workflow ng isang contributor. Ipagpalagay na ang contributor ay naka-fork at naka-clone na ang repo kaya mayroon silang Git repo na handa nang trabahuin, sa kanilang lokal na makina:
+Dumaan tayo sa workflow ng isang contributor. Ipagpalagay na ang contributor ay na-fork at na-clone na ang repo kaya mayroon silang Git repo na handang trabahuin, sa kanilang lokal na makina:
 
-1. **Gumawa ng branch**. Gamitin ang command na `git branch` para gumawa ng branch na maglalaman ng mga pagbabago na balak nilang i-ambag:
+1. **Gumawa ng branch**. Gamitin ang command na `git branch` upang gumawa ng branch na maglalaman ng mga pagbabago na nais nilang i-ambag:
 
    ```bash
    git branch [branch-name]
@@ -226,23 +226,23 @@ Dumaan tayo sa workflow ng isang contributor. Ipagpalagay na ang contributor ay 
    git switch [branch-name]
    ```
 
-1. **Gumawa ng trabaho**. Sa puntong ito, gusto mong idagdag ang iyong mga pagbabago. Huwag kalimutang ipaalam ito sa Git gamit ang mga sumusunod na command:
+1. **Gumawa ng trabaho**. Sa puntong ito, nais mong idagdag ang iyong mga pagbabago. Huwag kalimutang ipaalam ito sa Git gamit ang mga sumusunod na command:
 
    ```bash
    git add .
    git commit -m "my changes"
    ```
 
-   Siguraduhing bigyan ang iyong commit ng magandang pangalan, para sa iyong kapakanan pati na rin sa maintainer ng repo na tinutulungan mo.
+   Tiyaking bigyan ang iyong commit ng magandang pangalan, para sa iyong kapakanan pati na rin sa maintainer ng repo na iyong tinutulungan.
 
-1. **Pagsamahin ang iyong trabaho sa `main` branch**. Sa isang punto, tapos ka na sa paggawa at gusto mong pagsamahin ang iyong trabaho sa `main` branch. Ang `main` branch ay maaaring nagbago sa pagitan kaya siguraduhing i-update muna ito sa pinakabago gamit ang mga sumusunod na command:
+1. **Pagsamahin ang iyong trabaho sa `main` branch**. Sa isang punto, tapos ka na sa paggawa at nais mong pagsamahin ang iyong trabaho sa `main` branch. Ang `main` branch ay maaaring nagbago sa pagitan kaya tiyaking i-update muna ito sa pinakabago gamit ang mga sumusunod na command:
 
    ```bash
    git switch main
    git pull
    ```
 
-   Sa puntong ito, siguraduhing ang anumang _conflicts_, mga sitwasyon kung saan hindi madaling ma-combine ng Git ang mga pagbabago, ay nangyayari sa iyong working branch. Kaya't patakbuhin ang mga sumusunod na command:
+   Sa puntong ito, nais mong tiyakin na ang anumang _conflicts_, mga sitwasyon kung saan hindi madaling ma-_combine_ ng Git ang mga pagbabago, ay mangyayari sa iyong working branch. Kaya't patakbuhin ang mga sumusunod na command:
 
    ```bash
    git switch [branch_name]
@@ -259,63 +259,63 @@ Dumaan tayo sa workflow ng isang contributor. Ipagpalagay na ang contributor ay 
 
    Ang command sa itaas ay lumilikha ng branch sa iyong forked repo.
 
-1. **Magbukas ng PR**. Susunod, gusto mong magbukas ng PR. Gawin ito sa pamamagitan ng pagpunta sa forked repo sa GitHub. Makikita mo ang indikasyon sa GitHub kung saan tinatanong kung gusto mong gumawa ng bagong PR, i-click mo iyon at dadalhin ka sa interface kung saan maaari mong baguhin ang commit message title, bigyan ito ng mas angkop na paglalarawan. Ngayon makikita ng maintainer ng repo na na-fork mo ang PR na ito at _fingers crossed_ maa-appreciate nila at _merge_ ang iyong PR. Isa ka nang contributor, yay :)
+1. **Magbukas ng PR**. Susunod, nais mong magbukas ng PR. Gawin ito sa pamamagitan ng pagpunta sa forked repo sa GitHub. Makikita mo ang indikasyon sa GitHub kung saan tinatanong kung nais mong gumawa ng bagong PR, i-click mo iyon at dadalhin ka sa interface kung saan maaari mong baguhin ang commit message title, bigyan ito ng mas angkop na paglalarawan. Ngayon makikita ng maintainer ng repo na iyong na-fork ang PR na ito at _fingers crossed_ maa-appreciate nila at _merge_ ang iyong PR. Isa ka nang contributor, yay :)
 
-1. **Linisin ang mga file**. Itinuturing na magandang kasanayan ang _linisin_ ang iyong mga file pagkatapos mong matagumpay na ma-merge ang isang PR. Gusto mong linisin ang parehong lokal na branch at ang branch na na-push mo sa GitHub. Una, tanggalin ito nang lokal gamit ang sumusunod na command:
+1. **Linisin ang trabaho**. Itinuturing na magandang kasanayan ang _linisin_ ang iyong trabaho pagkatapos mong matagumpay na ma-merge ang isang PR. Nais mong linisin ang parehong lokal na branch at ang branch na iyong na-push sa GitHub. Una, tanggalin ito nang lokal gamit ang sumusunod na command:
 
    ```bash
    git branch -d [branch-name]
    ```
-Siguraduhing pumunta ka sa GitHub page ng forked repo at tanggalin ang remote branch na kakapush mo lang dito.
 
-Ang `Pull request` ay tila nakakatawang termino dahil ang gusto mo talagang gawin ay i-push ang mga pagbabago mo sa proyekto. Ngunit ang maintainer (may-ari ng proyekto) o core team ay kailangang suriin ang mga pagbabago mo bago ito i-merge sa "main" branch ng proyekto, kaya't talagang humihiling ka ng desisyon sa pagbabago mula sa maintainer.
+   Tiyaking pumunta sa GitHub page ng forked repo at tanggalin ang remote branch na iyong na-push dito.
+`Pull request` ay tila isang nakakatawang termino dahil sa totoo lang, nais mong i-push ang iyong mga pagbabago sa proyekto. Ngunit kailangang suriin ng maintainer (may-ari ng proyekto) o core team ang iyong mga pagbabago bago ito pagsamahin sa "main" branch ng proyekto, kaya't sa esensya, humihiling ka ng desisyon mula sa maintainer tungkol sa iyong pagbabago.
 
-Ang pull request ay lugar kung saan maikukumpara at mapag-uusapan ang mga pagkakaiba na ipinakilala sa isang branch gamit ang mga review, komento, integrated tests, at iba pa. Ang isang mahusay na pull request ay sumusunod sa halos parehong mga patakaran tulad ng isang commit message. Maaari kang magdagdag ng reference sa isang isyu sa issue tracker, halimbawa kung ang trabaho mo ay nag-aayos ng isang isyu. Ginagawa ito gamit ang `#` na sinusundan ng numero ng isyu. Halimbawa, `#97`.
+Ang pull request ay isang lugar kung saan maaaring ikumpara at talakayin ang mga pagkakaiba na ipinakilala sa isang branch gamit ang mga review, komento, integrated tests, at iba pa. Ang isang mahusay na pull request ay sumusunod sa halos parehong mga patakaran tulad ng isang commit message. Maaari kang magdagdag ng reference sa isang isyu sa issue tracker, halimbawa kung ang iyong trabaho ay nag-aayos ng isang isyu. Ginagawa ito gamit ang `#` na sinusundan ng numero ng iyong isyu. Halimbawa: `#97`.
 
-🤞Sana lahat ng checks ay pumasa at i-merge ng may-ari ng proyekto ang mga pagbabago mo sa proyekto🤞
+🤞Sana'y pumasa ang lahat ng pagsusuri at ma-merge ng may-ari ng proyekto ang iyong mga pagbabago sa proyekto🤞
 
-I-update ang kasalukuyang lokal na working branch mo gamit ang lahat ng bagong commits mula sa kaukulang remote branch sa GitHub:
+I-update ang kasalukuyang lokal na working branch gamit ang lahat ng bagong commit mula sa kaukulang remote branch sa GitHub:
 
 `git pull`
 
 ## Paano mag-ambag sa open source
 
-Una, maghanap ng repository (o **repo**) sa GitHub na interesado ka at gusto mong magdagdag ng pagbabago. Kakailanganin mong kopyahin ang mga nilalaman nito sa iyong makina.
+Una, maghanap ng repository (o **repo**) sa GitHub na interesado ka at nais mong ambagan ng pagbabago. Kakailanganin mong kopyahin ang nilalaman nito sa iyong makina.
 
-✅ Isang magandang paraan para makahanap ng mga 'beginner-friendly' na repo ay ang [maghanap gamit ang tag na 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
+✅ Isang magandang paraan upang makahanap ng mga 'beginner-friendly' na repo ay ang [maghanap gamit ang tag na 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Kopyahin ang repo sa lokal](../../../../translated_images/clone_repo.5085c48d666ead57664f050d806e325d7f883be6838c821e08bc823ab7c66665.tl.png)
+![Kopyahin ang isang repo nang lokal](../../../../translated_images/clone_repo.5085c48d666ead57664f050d806e325d7f883be6838c821e08bc823ab7c66665.tl.png)
 
-May ilang paraan para kopyahin ang code. Isa sa mga paraan ay ang "clone" ng mga nilalaman ng repository, gamit ang HTTPS, SSH, o ang GitHub CLI (Command Line Interface).
+May ilang paraan upang makopya ang code. Isa sa mga ito ay ang "i-clone" ang nilalaman ng repository gamit ang HTTPS, SSH, o ang GitHub CLI (Command Line Interface).
 
-Buksan ang terminal mo at i-clone ang repository tulad nito:
+Buksan ang iyong terminal at i-clone ang repository tulad nito:
 `git clone https://github.com/ProjectURL`
 
-Para magtrabaho sa proyekto, lumipat sa tamang folder:
+Upang magtrabaho sa proyekto, lumipat sa tamang folder:
 `cd ProjectURL`
 
 Maaari mo ring buksan ang buong proyekto gamit ang [Codespaces](https://github.com/features/codespaces), ang embedded code editor / cloud development environment ng GitHub, o [GitHub Desktop](https://desktop.github.com/).
 
-Sa huli, maaari mong i-download ang code sa isang zipped folder.
+Sa huli, maaari mo ring i-download ang code sa isang naka-zip na folder.
 
 ### Ilang mga kawili-wiling bagay tungkol sa GitHub
 
-Maaari kang mag-star, mag-watch, at/o "fork" ng anumang pampublikong repository sa GitHub. Makikita mo ang mga starred repositories mo sa drop-down menu sa kanang itaas. Para itong pag-bookmark, pero para sa code.
+Maaari kang mag-star, mag-watch, at/o "fork" ng anumang pampublikong repository sa GitHub. Makikita mo ang iyong mga starred repository sa drop-down menu sa kanang-itaas. Para itong pag-bookmark, pero para sa code.
 
-Ang mga proyekto ay may issue tracker, kadalasan sa GitHub sa tab na "Issues" maliban kung may ibang indikasyon, kung saan pinag-uusapan ng mga tao ang mga isyu na may kaugnayan sa proyekto. At ang Pull Requests tab ay kung saan pinag-uusapan at nire-review ang mga pagbabago na nasa proseso.
+Ang mga proyekto ay may issue tracker, kadalasan sa GitHub sa tab na "Issues" maliban kung may ibang indikasyon, kung saan tinatalakay ng mga tao ang mga isyung may kaugnayan sa proyekto. At ang tab na Pull Requests ay kung saan tinatalakay at nire-review ang mga pagbabagong ginagawa.
 
-Ang mga proyekto ay maaaring may diskusyon sa forums, mailing lists, o chat channels tulad ng Slack, Discord, o IRC.
+Ang mga proyekto ay maaaring may mga talakayan sa forums, mailing lists, o chat channels tulad ng Slack, Discord, o IRC.
 
-✅ Tingnan ang paligid ng bagong GitHub repo mo at subukan ang ilang bagay, tulad ng pag-edit ng mga setting, pagdaragdag ng impormasyon sa repo mo, at paglikha ng proyekto (tulad ng Kanban board). Maraming magagawa!
+✅ Maglibot sa iyong bagong GitHub repo at subukan ang ilang bagay, tulad ng pag-edit ng mga setting, pagdaragdag ng impormasyon sa iyong repo, at paggawa ng proyekto (tulad ng isang Kanban board). Maraming magagawa!
 
 ---
 
 ## 🚀 Hamon
 
-Makipag-partner sa isang kaibigan para magtrabaho sa code ng isa't isa. Gumawa ng proyekto nang magkasama, mag-fork ng code, gumawa ng mga branch, at mag-merge ng mga pagbabago.
+Makipag-partner sa isang kaibigan upang magtrabaho sa code ng isa't isa. Gumawa ng proyekto nang magkasama, mag-fork ng code, gumawa ng mga branch, at mag-merge ng mga pagbabago.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/4)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/en/)
 
 ## Review at Pag-aaral sa Sarili
 
@@ -323,17 +323,17 @@ Magbasa pa tungkol sa [pag-aambag sa open source software](https://opensource.gu
 
 [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/).
 
-Magpraktis, magpraktis, magpraktis. Ang GitHub ay may magagandang learning paths na makikita sa [skills.github.com](https://skills.github.com):
+Practice, practice, practice. May mga mahusay na learning paths ang GitHub na makikita sa [skills.github.com](https://skills.github.com):
 
 - [First Week on GitHub](https://skills.github.com/#first-week-on-github)
 
-Makakakita ka rin ng mas advanced na mga kurso.
+Makakahanap ka rin ng mas advanced na mga kurso.
 
 ## Takdang-Aralin
 
-Kumpletuhin ang [First Week on GitHub course](https://skills.github.com/#first-week-on-github).
+Kumpletuhin ang [First Week on GitHub course](https://skills.github.com/#first-week-on-github)
 
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
