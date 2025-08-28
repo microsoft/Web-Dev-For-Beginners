@@ -27,6 +27,10 @@ Learn the fundamentals of web development with our 12-week comprehensive course 
 
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
+### 📣 Announcement - _New Project to build using Generative AI_ 
+
+New AI Assistant project just added, check it out [project](./09-chat-project/README.md)
+
 ### 📣 Announcement - _New Curriculum_ on Generative AI for JavaScript was just released
 
 Don't miss our new Generative AI curriculum!
@@ -146,6 +150,7 @@ Our recommendation is to use [Visual Studio Code](https://code.visualstudio.com/
 | 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  Build a Login and Registration Form                   | Learn about building forms and handling validation routines                                                                          |                                           [Forms](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
 | 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   Methods of Fetching and Using Data                   | How data flows in and out of your app, how to fetch it, store it, and dispose of it                                                 |                                            [Data](./7-bank-project/3-data/README.md)                                            |          Yohan          |
 | 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      Concepts of State Management                      | Learn how your app retains state and how to manage it programmatically                                                              |                                [State Management](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
+| 25 | [AI Assistant project](./09-chat-project/README.md) | Working with AI | Learn how to build your own AI assistant | | Chris |
 
 
 ## 🏫 Pedagogy
