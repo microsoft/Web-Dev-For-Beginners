@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "30f8903a1f290e3d438dc2c70fe60259",
-  "translation_date": "2025-08-27T22:39:14+00:00",
+  "original_hash": "61c14b27044861e5e69db35dd52c4403",
+  "translation_date": "2025-08-28T18:45:03+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "my"
 }
@@ -12,46 +12,46 @@ CO_OP_TRANSLATOR_METADATA:
 ![DOM and a closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.my.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## မိမိသင်ခန်းစာမတိုင်မီ စမ်းမေးခွန်း
+## မိမိကိုယ်ကို စမ်းမေးခွန်း
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/19)
 
 ### အကျဉ်းချုပ်
 
-DOM (Document Object Model) ကိုပြောင်းလဲခြင်းသည် ဝဘ်ဖွံ့ဖြိုးတိုးတက်မှုတွင် အရေးပါသောအပိုင်းတစ်ခုဖြစ်သည်။ [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction) အဆိုအရ "Document Object Model (DOM) သည် ဝဘ်ပေါ်တွင် စာရွက်တစ်ရွက်၏ ဖွဲ့စည်းပုံနှင့် အကြောင်းအရာကို ဖော်ပြထားသော အရာများ၏ ဒေတာကို ကိုယ်စားပြုခြင်းဖြစ်သည်။" DOM ကို JavaScript frameworks များဖြင့် စီမံခန့်ခွဲရန်အစား သာမန် JavaScript ကို အသုံးပြု၍ စီမံခန့်ခွဲရန် အခက်အခဲများသည် အဓိကအကြောင်းရင်းဖြစ်လာခဲ့သည်။ သို့သော် ကျွန်ုပ်တို့သည် ကိုယ်တိုင် စီမံခန့်ခွဲမည်။
+DOM (Document Object Model) ကို ပြောင်းလဲခြင်းသည် ဝဘ်ဖွံ့ဖြိုးတိုးတက်မှုတွင် အရေးပါသော အပိုင်းတစ်ခုဖြစ်သည်။ [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction) အဆိုအရ "Document Object Model (DOM) သည် ဝဘ်ပေါ်တွင် စာရွက်၏ ဖွဲ့စည်းပုံနှင့် အကြောင်းအရာကို ဖော်ပြထားသော အရာများ၏ ဒေတာကို ကိုယ်စားပြုခြင်းဖြစ်သည်။" DOM ကို JavaScript ဖြင့် စီမံခန့်ခွဲရာတွင် အခက်အခဲများကြောင့် JavaScript frameworks များကို အသုံးပြုရန် အကြောင်းဖန်တီးခဲ့သည်။ သို့သော် ဒီသင်ခန်းစာတွင် ကျွန်ုပ်တို့သည် ကိုယ်တိုင် စီမံခန့်ခွဲသွားမည်ဖြစ်သည်။
 
-ထို့အပြင်၊ ဒီသင်ခန်းစာတွင် [JavaScript closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures) ၏ အကြောင်းအရာကို မိတ်ဆက်ပေးမည်ဖြစ်ပြီး၊ ၎င်းကို အပြင်ဘက် function ၏ scope ကို အတွင်း function မှ access လုပ်နိုင်ရန် function တစ်ခုကို အခြား function တစ်ခုဖြင့် ပတ်လည်ဖုံးအုပ်ထားသောအဖြစ် စဉ်းစားနိုင်သည်။
+ထို့အပြင် ဒီသင်ခန်းစာတွင် [JavaScript closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures) ၏ အကြောင်းကို မိတ်ဆက်ပေးမည်ဖြစ်ပြီး၊ closure ကို အပြင် function တစ်ခု၏ scope ကို အတွင်း function တစ်ခုမှ access လုပ်နိုင်ရန် ဖန်တီးထားသော function တစ်ခုအဖြစ် စဉ်းစားနိုင်သည်။
 
-> JavaScript closures သည် ကျယ်ပြန့်ပြီး ရှုပ်ထွေးသောအကြောင်းအရာဖြစ်သည်။ ဒီသင်ခန်းစာသည် terrarium ၏ code တွင် closure တစ်ခုကို တွေ့နိုင်မည့် အခြေခံအကြောင်းအရာကိုသာ ထိတွေ့သည်။ ၎င်းသည် အတွင်း function နှင့် အပြင် function တစ်ခုကို အတွင်း function သည် အပြင် function ၏ scope ကို access လုပ်နိုင်ရန် ဖွဲ့စည်းထားသောပုံစံဖြစ်သည်။ ၎င်းအကြောင်းအရာကို နားလည်ရန် [ကျယ်ကျယ်ပြန့်ပြန့်သော documentation](https://developer.mozilla.org/docs/Web/JavaScript/Closures) ကို သွားရောက်လေ့လာပါ။
+> JavaScript closures သည် ကျယ်ပြန့်ပြီး ရှုပ်ထွေးသော အကြောင်းအရာဖြစ်သည်။ ဒီသင်ခန်းစာတွင် terrarium ရဲ့ code အတွင်းရှိ closure ၏ အခြေခံအကြောင်းအရာကိုသာ ထိတွေ့မည်ဖြစ်သည်။ အတွင်း function နှင့် အပြင် function တစ်ခုကို ဖန်တီးထားပြီး အတွင်း function သည် အပြင် function ၏ scope ကို access လုပ်နိုင်ရန် ဖန်တီးထားသည်။ ဒီအကြောင်းအရာကို ပိုမိုနားလည်ရန် [အကျယ်အဝန်းရှိသော documentation](https://developer.mozilla.org/docs/Web/JavaScript/Closures) ကို သွားလေ့လာပါ။
 
-ကျွန်ုပ်တို့သည် DOM ကို ပြောင်းလဲရန် closure ကို အသုံးပြုမည်။
+ကျွန်ုပ်တို့သည် closure ကို အသုံးပြု၍ DOM ကို ပြောင်းလဲမည်ဖြစ်သည်။
 
-DOM ကို ဝဘ်စာရွက်စာတမ်းကို ပြောင်းလဲနိုင်သော နည်းလမ်းများကို ကိုယ်စားပြုသော သစ်ပင်တစ်ပင်အဖြစ် စဉ်းစားပါ။ ဝဘ်စာရွက်စာတမ်းကို access လုပ်ပြီး ပြင်ဆင်၊ ပြောင်းလဲ၊ ပြန်လည်စီစဉ်ခြင်းနှင့် အခြားစီမံခန့်ခွဲမှုများကို ပြုလုပ်နိုင်ရန် အမျိုးမျိုးသော API (Application Program Interfaces) များကို ရေးသားထားသည်။
+DOM ကို သစ်ပင်တစ်ပင်အဖြစ် စဉ်းစားပါ၊ ၎င်းသည် ဝဘ်စာရွက်ကို ပြောင်းလဲနိုင်သော နည်းလမ်းများအားလုံးကို ကိုယ်စားပြုသည်။ ဝဘ်စာရွက်ကို access လုပ်ပြီး ပြင်ဆင်၊ ပြောင်းလဲ၊ ပြန်လည်စီမံခြင်းနှင့် စီမံခန့်ခွဲနိုင်ရန် အမျိုးမျိုးသော API များကို ဖန်တီးထားသည်။
 
 ![DOM tree representation](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.my.png)
 
 > DOM နှင့် ၎င်းကို ကိုးကားထားသော HTML markup ၏ ကိုယ်စားပြုမှု။ [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites) မှ
 
-ဒီသင်ခန်းစာတွင် ကျွန်ုပ်တို့၏ interactive terrarium project ကို ပြီးစီးရန် JavaScript ကို ဖန်တီးပြီး ဝဘ်စာမျက်နှာပေါ်တွင် အပင်များကို ပြောင်းလဲနိုင်ရန် အသုံးပြုမည်။
+ဒီသင်ခန်းစာတွင် ကျွန်ုပ်တို့သည် interactive terrarium project ကို JavaScript ဖြင့် ပြီးစီးအောင်လုပ်ပြီး၊ အသုံးပြုသူများသည် စာမျက်နှာပေါ်တွင် အပင်များကို ပြောင်းလဲနိုင်ရန် ဖန်တီးမည်ဖြစ်သည်။
 
 ### ကြိုတင်လိုအပ်ချက်
 
-သင်၏ terrarium အတွက် HTML နှင့် CSS ကို ဖန်တီးပြီးဖြစ်ရမည်။ ဒီသင်ခန်းစာအဆုံးတွင် သင်သည် အပင်များကို drag လုပ်၍ terrarium ထဲသို့ ထည့်ခြင်းနှင့် ထုတ်ခြင်းကို ပြုလုပ်နိုင်မည်ဖြစ်သည်။
+သင်၏ terrarium အတွက် HTML နှင့် CSS ကို ဖန်တီးပြီးထားရမည်။ ဒီသင်ခန်းစာအဆုံးတွင် သင်သည် အပင်များကို terrarium အတွင်းသို့ နှင့် အပြင်သို့ ဆွဲထုတ်နိုင်မည်ဖြစ်သည်။
 
 ### လုပ်ဆောင်ရန်
 
-သင်၏ terrarium folder တွင် `script.js` ဟုခေါ်သော ဖိုင်အသစ်တစ်ခု ဖန်တီးပါ။ ၎င်းကို `<head>` အပိုင်းတွင် import လုပ်ပါ။
+သင်၏ terrarium folder အတွင်း `script.js` ဆိုသော ဖိုင်အသစ်တစ်ခု ဖန်တီးပါ။ ၎င်းကို `<head>` အပိုင်းတွင် import လုပ်ပါ။
 
 ```html
 	<script src="./script.js" defer></script>
 ```
 
-> Note: HTML ဖိုင်ကို အပြည့်အစုံ load ပြီးနောက်မှ JavaScript ကို run ဖို့ `defer` ကို အသုံးပြုပါ။ `async` attribute ကိုလည်း အသုံးပြုနိုင်ပြီး၊ ၎င်းသည် HTML ဖိုင်ကို parsing လုပ်နေစဉ် script ကို run လုပ်နိုင်စေသည်။ သို့သော် ကျွန်ုပ်တို့၏အခြေအနေတွင် drag script ကို run လုပ်မီ HTML elements အားလုံးကို ပြည့်စုံစွာ အသုံးပြုနိုင်ရန်လိုအပ်သည်။
+> Note: HTML ဖိုင်အားလုံး load ပြီးဆုံးမှ JavaScript ကို run လုပ်ရန် `defer` attribute ကို အသုံးပြုပါ။ `async` attribute ကိုလည်း အသုံးပြုနိုင်ပြီး၊ HTML ဖိုင် parsing ဖြစ်နေစဉ် script ကို run လုပ်နိုင်သည်။ သို့သော် ဒီအခါတွင် drag script ကို run လုပ်မည်မတိုင်မီ HTML elements အားလုံးကို ပြင်ဆင်ထားရန် အရေးကြီးသည်။
 ---
 
 ## DOM elements
 
-DOM တွင် ပြောင်းလဲလိုသော elements များကို reference ဖန်တီးရန် အရေးကြီးသည်။ ကျွန်ုပ်တို့၏အခြေအနေတွင်၊ ၎င်းတို့သည် side bars တွင်ရှိသော 14 ခုသော အပင်များဖြစ်သည်။
+ပထမဆုံး သင်သည် DOM အတွင်းရှိ ပြောင်းလဲလိုသော elements များကို reference လုပ်ရန် လိုအပ်သည်။ ကျွန်ုပ်တို့၏ အခါတွင် ၎င်းတို့သည် side bars အတွင်းရှိ 14 ခုသော အပင်များဖြစ်သည်။
 
 ### လုပ်ဆောင်ရန်
 
@@ -72,7 +72,7 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-ဒီမှာ ဘာဖြစ်နေလဲ? သင်သည် document ကို reference လုပ်ပြီး DOM တွင် Id တစ်ခုရှိသော element ကို ရှာဖွေနေသည်။ HTML သင်ခန်းစာပထမပိုင်းတွင် အပင်ပုံရိပ်တစ်ခုစီကို individual Ids (`id="plant1"`) ပေးခဲ့သည်ကို သတိရပါ။ အခုတော့ ၎င်းကို အသုံးပြုမည်။ Element တစ်ခုကို identify ပြီးနောက်၊ ၎င်းကို `dragElement` ဟုခေါ်သော function သို့ pass လုပ်သည်။ သင်မကြာမီ ဖန်တီးမည့် function ဖြစ်သည်။ ထို့ကြောင့် HTML ၏ element သည် drag-enabled ဖြစ်လာသည်။
+ဒီမှာ ဘာဖြစ်နေလဲ? သင်သည် document ကို reference လုပ်ပြီး DOM အတွင်းရှိ particular Id ရှိသော element ကို ရှာဖွေနေသည်။ HTML lesson ပထမပိုင်းတွင် သင်သည် အပင် image တစ်ခုစီကို individual Ids (`id="plant1"`) ပေးခဲ့သည်ကို သတိရပါ။ အခုတော့ ၎င်းကို အသုံးပြုမည်ဖြစ်သည်။ Element တစ်ခုစီကို identify လုပ်ပြီး `dragElement` ဆိုသော function သို့ pass လုပ်သည်။ ဒီ function ကို မကြာမီ ဖန်တီးမည်ဖြစ်သည်။ ထို့ကြောင့် HTML အတွင်းရှိ element သည် drag-enabled ဖြစ်လာမည်။
 
 ✅ အဘယ်ကြောင့် elements များကို Id ဖြင့် reference လုပ်သနည်း? CSS class ဖြင့် reference မလုပ်ဘဲ အဘယ်ကြောင့်?
 
@@ -80,9 +80,9 @@ dragElement(document.getElementById('plant14'));
 
 ## Closure
 
-အခုတော့ သင်သည် dragElement closure ကို ဖန်တီးရန် ပြင်ဆင်ပြီးဖြစ်သည်။ ၎င်းသည် အတွင်း function (သို့) functions များကို ပတ်လည်ဖုံးအုပ်ထားသော အပြင် function တစ်ခုဖြစ်သည်။ (ကျွန်ုပ်တို့၏အခြေအနေတွင် သုံးခုရှိမည်)
+အခုတော့ သင်သည် dragElement closure ကို ဖန်တီးရန် ပြင်ဆင်ပြီးဖြစ်သည်။ ၎င်းသည် အတွင်း function (သို့မဟုတ် functions) ကို enclosure လုပ်ထားသော အပြင် function တစ်ခုဖြစ်သည်။ 
 
-Closures သည် function တစ်ခု (သို့) function များသည် အပြင် function ၏ scope ကို access လုပ်ရန် အသုံးဝင်သည်။ ဥပမာအားဖြင့်:
+Closures သည် function တစ်ခု (သို့မဟုတ် functions များ) အပြင် function ၏ scope ကို access လုပ်ရန် အသုံးဝင်သည်။ ဥပမာအားဖြင့်:
 
 ```javascript
 function displayCandy(){
@@ -96,13 +96,13 @@ displayCandy();
 console.log(candy)
 ```
 
-ဒီဥပမာတွင် `displayCandy` function သည် candy အမျိုးအစားအသစ်ကို array ထဲသို့ push လုပ်သော function ကို ပတ်လည်ဖုံးအုပ်ထားသည်။ ဒီ code ကို run လုပ်ပါက `candy` array သည် undefined ဖြစ်မည်။ ၎င်းသည် closure ၏ local variable ဖြစ်သောကြောင့်ဖြစ်သည်။
+ဒီဥပမာတွင် displayCandy function သည် array တစ်ခုရှိပြီး candy type အသစ်ကို push လုပ်သော function ကို enclosure လုပ်ထားသည်။ ဒီ code ကို run လုပ်ပါက `candy` array သည် undefined ဖြစ်မည်၊ ၎င်းသည် closure ၏ local variable ဖြစ်သောကြောင့်ဖြစ်သည်။
 
-✅ `candy` array ကို accessible ဖြစ်စေရန် ဘာလုပ်ရမလဲ? ၎င်းကို closure အပြင်ဘက်သို့ ရွှေ့ပါ။ ဒီနည်းဖြင့် array သည် global ဖြစ်ပြီး closure ၏ local scope တွင်သာ ရှိနေမည်မဟုတ်တော့။
+✅ `candy` array ကို accessible ဖြစ်စေရန် ဘာလုပ်ရမလဲ? ၎င်းကို closure အပြင်သို့ ရွှေ့ပါ။ ဒီနည်းဖြင့် array သည် global ဖြစ်လာပြီး closure ၏ local scope အတွင်းသာ မကျန်ရှိတော့ပါ။
 
 ### လုပ်ဆောင်ရန်
 
-`script.js` တွင် element declarations အောက်တွင် function တစ်ခု ဖန်တီးပါ။
+`script.js` အတွင်း element declarations အောက်တွင် function တစ်ခု ဖန်တီးပါ။
 
 ```javascript
 function dragElement(terrariumElement) {
@@ -115,19 +115,19 @@ function dragElement(terrariumElement) {
 }
 ```
 
-`dragElement` သည် ၎င်း၏ `terrariumElement` object ကို script အပေါ်ပိုင်းတွင်ရှိ declarations မှရရှိသည်။ ထို့နောက်၊ object ကို function ထဲသို့ pass လုပ်ပြီး local positions ကို `0` သတ်မှတ်သည်။ ၎င်းသည် drag နှင့် drop functionality ကို element တစ်ခုစီတွင် ထည့်သွင်းသောအခါ ပြောင်းလဲရန် local variables ဖြစ်သည်။ Terrarium သည် drag လုပ်ထားသော elements များဖြင့် ပြည့်စုံမည်ဖြစ်သောကြောင့် application သည် ၎င်းတို့ကိုထားရှိထားသောနေရာကို စောင့်ကြည့်ရန်လိုအပ်သည်။
+`dragElement` သည် `terrariumElement` object ကို script ရဲ့ အပေါ်ပိုင်းရှိ declarations မှ ရယူသည်။ ထို့နောက် object ကို pass လုပ်ပြီး local positions ကို `0` သတ်မှတ်သည်။ ဒီ local variables များသည် drag နှင့် drop functionality ကို element တစ်ခုစီတွင် ထည့်သွင်းသည့်အခါ ပြောင်းလဲမည်ဖြစ်သည်။ Terrarium သည် drag လုပ်ထားသော elements များဖြင့် ပြည့်စုံလာမည်ဖြစ်ပြီး၊ application သည် ၎င်းတို့၏ placement ကို စောင့်ကြည့်ထားရန် လိုအပ်သည်။
 
-ထို့အပြင်၊ function သို့ pass လုပ်ထားသော terrariumElement သည် `pointerdown` event ကို assign လုပ်ထားသည်။ ၎င်းသည် DOM management အတွက် [web APIs](https://developer.mozilla.org/docs/Web/API) ၏ အစိတ်အပိုင်းဖြစ်သည်။ `onpointerdown` သည် button ကို push လုပ်သောအခါ (သို့) draggable element ကို touch လုပ်သောအခါ fired ဖြစ်သည်။ ဒီ event handler သည် [web နှင့် mobile browsers](https://caniuse.com/?search=onpointerdown) နှစ်ခုစလုံးတွင် အလုပ်လုပ်သည်။
+ထို့အပြင် `terrariumElement` ကို `pointerdown` event သတ်မှတ်ထားသည်။ ၎င်းသည် [web APIs](https://developer.mozilla.org/docs/Web/API) ၏ အစိတ်အပိုင်းဖြစ်ပြီး DOM ကို စီမံခန့်ခွဲရန် အထောက်အကူပြုသည်။ `onpointerdown` သည် button ကို push လုပ်သောအခါ (သို့မဟုတ် drag လုပ်နိုင်သော element ကို touch လုပ်သောအခါ) ဖွင့်လှစ်သည်။ ဒီ event handler သည် [web နှင့် mobile browsers](https://caniuse.com/?search=onpointerdown) နှစ်ခုလုံးတွင် အလုပ်လုပ်သည်။
 
-✅ [event handler `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) သည် browser များတွင် support ပိုများသည်။ ဒီနေရာတွင် မသုံးသင့်သောအကြောင်းရင်းကို စဉ်းစားပါ။
+✅ [event handler `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) သည် browser support ပိုမိုများသည်။ ဒီနေရာတွင် မသုံးသင့်သော အကြောင်းရင်းကို စဉ်းစားပါ။
 
 ---
 
 ## Pointerdrag function
 
-`terrariumElement` သည် drag လုပ်ရန် ပြင်ဆင်ပြီးဖြစ်သည်။ `onpointerdown` event fired ဖြစ်သောအခါ `pointerDrag` function ကို invoke လုပ်သည်။ ဒီလိုင်းအောက်တွင် function ကို ထည့်ပါ။ `terrariumElement.onpointerdown = pointerDrag;`:
+`terrariumElement` သည် drag လုပ်ရန် ပြင်ဆင်ပြီးဖြစ်သည်။ `onpointerdown` event ကို fire လုပ်သောအခါ `pointerDrag` function ကို invoke လုပ်သည်။ ဒီလိုင်းအောက်တွင် function ကို ထည့်သွင်းပါ။ `terrariumElement.onpointerdown = pointerDrag;`:
 
-### လုပ်ဆောင်ရန်
+### လုပ်ဆောင်ရန် 
 
 ```javascript
 function pointerDrag(e) {
@@ -138,32 +138,31 @@ function pointerDrag(e) {
 }
 ```
 
-အရာများစွာဖြစ်ပျက်သည်။ ပထမဦးစွာ၊ `e.preventDefault();` ကို အသုံးပြု၍ pointerdown တွင် ဖြစ်ပျက်သည့် default events များကို မဖြစ်အောင်တားဆီးသည်။ ဒီနည်းဖြင့် interface ၏ အပြုအမူကို ပိုမိုထိန်းချုပ်နိုင်သည်။
+အရာများစွာဖြစ်ပျက်သည်။ ပထမဆုံး သင်သည် `e.preventDefault();` ကို အသုံးပြု၍ pointerdown တွင် ဖြစ်ပျက်သည့် default events များကို မဖြစ်ပျက်စေရန် ကာကွယ်သည်။ ဒီနည်းဖြင့် interface ၏ အပြုအမူကို ပိုမိုထိန်းချုပ်နိုင်သည်။
 
-> script ဖိုင်ကို အပြည့်အစုံဖန်တီးပြီးနောက် `e.preventDefault()` မပါဘဲ run လုပ်ကြည့်ပါ။ ဘာဖြစ်သနည်း?
+> script ဖိုင်အားလုံးကို ဖန်တီးပြီးဆုံးသောအခါ ဒီလိုင်းကို ပြန်လာကြည့်ပြီး `e.preventDefault()` မပါဘဲ စမ်းကြည့်ပါ။ ဘာဖြစ်သနည်း?
 
-ဒုတိယအနေနှင့် `index.html` ကို browser window တွင်ဖွင့်ပြီး interface ကို inspect လုပ်ပါ။ အပင်ကို click လုပ်သောအခါ၊ 'e' event ကို capture လုပ်ပုံကို မြင်နိုင်သည်။ event ကို အနက်ရှိုင်းစွာကြည့်ပြီး pointer down event တစ်ခုမှ အချက်အလက်များကို ဘယ်လောက်များစုဆောင်းထားသည်ကို ကြည့်ပါ။
+ဒုတိယအနေနှင့် `index.html` ကို browser window တွင် ဖွင့်ပြီး interface ကို inspect လုပ်ပါ။ အပင်တစ်ခုကို click လုပ်သောအခါ 'e' event ကို capture လုပ်ပုံကို မြင်နိုင်သည်။ event ကို inspect လုပ်ပြီး pointer down event တစ်ခုမှ သိမ်းဆည်းထားသော အချက်အလက်များကို ကြည့်ပါ။
 
-ထို့နောက်၊ local variables `pos3` နှင့် `pos4` ကို e.clientX သို့ set လုပ်ထားပုံကို သတိပြုပါ။ inspection pane တွင် `e` values ကို တွေ့နိုင်သည်။ ဒီ values များသည် အပင်ကို click (သို့) touch လုပ်သောအချိန်တွင် ၎င်း၏ x နှင့် y coordinates ကို capture လုပ်သည်။ အပင်များကို click နှင့် drag လုပ်သောအခါ၎င်းတို့၏အပြုအမူကို စိတ်ကြိုက်ထိန်းချုပ်ရန် ၎င်းတို့၏ coordinates ကို စောင့်ကြည့်ထားသည်။
+ထို့နောက် local variables `pos3` နှင့် `pos4` ကို e.clientX နှင့် e.clientY သတ်မှတ်ထားပုံကို သတိပြုပါ။ ဒီ values များသည် သင် click (သို့မဟုတ် touch) လုပ်သောအခါ အပင်၏ x နှင့် y coordinates ကို capture လုပ်သည်။ အပင်များကို click နှင့် drag လုပ်သောအခါ ၎င်းတို့၏ coordinates ကို စောင့်ကြည့်ရန် fine-grained control လိုအပ်သည်။
 
-✅ ဒီ app ကို closure တစ်ခုဖြင့် ဖန်တီးထားရသည့်အကြောင်းရင်း ပိုမိုရှင်းလင်းလာပါသလား? မဟုတ်ပါက၊ draggable plants 14 ခုစီ၏ scope ကို ဘယ်လိုထိန်းသိမ်းမလဲ?
+✅ ဒီ app အားလုံးကို closure တစ်ခုဖြင့် ဖန်တီးထားရသည့် အကြောင်းရင်း ပိုမိုရှင်းလင်းလာပါသလား? ၎င်းမဟုတ်ပါက 14 ခုသော draggable plants တစ်ခုစီ၏ scope ကို ဘယ်လိုထိန်းသိမ်းမလဲ?
 
-`pos4 = e.clientY` အောက်တွင် pointer event manipulations နှစ်ခုကို ထည့်ပါ။
+`pos4 = e.clientY` အောက်တွင် pointer event manipulations နှစ်ခုကို ထည့်သွင်းပြီး initial function ကို ပြီးစီးပါ။
 
 ```html
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
-
-အခုတော့ pointer နှင့် plant ကို drag လုပ်သောအခါ၊ drag လုပ်မှု gesture ကို deselect လုပ်သောအခါ ရပ်တန့်ရန် သတ်မှတ်ထားသည်။ `onpointermove` နှင့် `onpointerup` သည် `onpointerdown` API ၏ အစိတ်အပိုင်းများဖြစ်သည်။ interface သည် error များကို throw လုပ်မည်။ ၎င်းသည် `elementDrag` နှင့် `stopElementDrag` functions များကို မသတ်မှတ်ရသေးသောကြောင့်ဖြစ်သည်။ function များကို နောက်တစ်ဆင့်တွင် ဖန်တီးပါ။
+အခုတော့ သင်သည် pointer နှင့်အတူ အပင်ကို drag လုပ်လိုသည်ကို ဖော်ပြထားပြီး၊ အပင်ကို deselect လုပ်သောအခါ dragging gesture ကို ရပ်လိုသည်ကို ဖော်ပြထားသည်။ `onpointermove` နှင့် `onpointerup` သည် `onpointerdown` နှင့် တူသော API ၏ အစိတ်အပိုင်းများဖြစ်သည်။ interface သည် errors များကို throw လုပ်မည်၊ အကြောင်းမှာ `elementDrag` နှင့် `stopElementDrag` functions မဖန်တီးရသေးသောကြောင့်ဖြစ်သည်။ အခုတော့ ၎င်းတို့ကို ဖန်တီးပါ။
 
 ## elementDrag နှင့် stopElementDrag functions
 
-သင်၏ closure ကို ပြီးစီးရန် အပင်ကို drag လုပ်သောအခါနှင့် drag လုပ်မှုကို ရပ်တန့်သောအခါ ဖြစ်ပျက်မည့်အရာများကို စီမံခန့်ခွဲမည့် internal functions နှစ်ခုကို ထည့်သွင်းမည်။ သင်လိုချင်သော behavior သည် အပင်တစ်ခုစီကို မည်သည့်အချိန်တွင်မဆို drag လုပ်နိုင်ပြီး screen ပေါ်တွင် မည်သည့်နေရာတွင်မဆိုထားနိုင်ရန်ဖြစ်သည်။ ဒီ interface သည် drop zone မပါသော un-opinionated ဖြစ်သည်။ သင်၏ terrarium ကို စိတ်ကြိုက်ဒီဇိုင်းဆွဲနိုင်ရန် အပင်များကို ထည့်သွင်း၊ ဖယ်ရှား၊ ပြန်လည်ထားရှိနိုင်သည်။
+သင်၏ closure ကို ပြီးစီးရန် drag လုပ်သောအခါနှင့် drag ရပ်သောအခါ ဖြစ်ပျက်မည့်အရာများကို စီမံခန့်ခွဲမည့် internal functions နှစ်ခုကို ထည့်သွင်းပါ။ သင်လိုချင်သော behavior သည် အပင်တစ်ခုစီကို မည်သည့်အချိန်တွင်မဆို drag လုပ်နိုင်ပြီး screen ပေါ်တွင် မည်သည့်နေရာတွင်မဆိုထားနိုင်ရန် ဖြစ်သည်။ ဒီ interface သည် drop zone မပါသောကြောင့် သင့် terrarium ကို အပင်များထည့်၊ ဖယ်ရှား၊ ပြန်လည်တည်နေရာချထားခြင်းဖြင့် မိမိစိတ်ကြိုက် ဖန်တီးနိုင်သည်။
 
 ### လုပ်ဆောင်ရန်
 
-`pointerDrag` ၏ closing curly bracket အောက်တွင် `elementDrag` function ကို ထည့်ပါ။
+`pointerDrag` ၏ closing curly bracket အောက်တွင် `elementDrag` function ကို ထည့်သွင်းပါ။
 
 ```javascript
 function elementDrag(e) {
@@ -176,18 +175,17 @@ function elementDrag(e) {
 	terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
 }
 ```
+ဒီ function အတွင်း သင်သည် initial positions 1-4 ကို ပြင်ဆင်ထားသည်။ ဒီမှာ ဘာဖြစ်နေလဲ?
 
-ဒီ function တွင် သင်သည် အစပိုင်းတွင် local variables 1-4 ကို ပြင်ဆင်ထားသည်။ ဒီမှာ ဘာဖြစ်နေလဲ?
+Drag လုပ်သောအခါ `pos1` ကို `pos3` (သင်အရင်က `e.clientX` အဖြစ် သတ်မှတ်ထားသည်) နှင့် လက်ရှိ `e.clientX` တန်ဖိုးကို လျော့ချခြင်းဖြင့် ပြန်လည် assign လုပ်သည်။ `pos2` ကိုလည်း အတူတူလုပ်ဆောင်သည်။ ထို့နောက် `pos3` နှင့် `pos4` ကို element ၏ X နှင့် Y coordinates အသစ်များသို့ ပြန်လည်သတ်မှတ်သည်။ ဒီပြောင်းလဲမှုများကို console တွင် drag လုပ်နေစဉ် ကြည့်နိုင်သည်။ ထို့နောက် `pos1` နှင့် `pos2` ၏ positions အသစ်များကို အပင်၏ css style ကို ပြောင်းလဲခြင်းဖြင့် top နှင့် left X နှင့် Y coordinates ကို သတ်မှတ်သည်။
 
-Drag လုပ်သောအခါ၊ `pos1` ကို `pos3` (အရင်က `e.clientX` အဖြစ် set လုပ်ထားသည်) နှင့် လက်ရှိ `e.clientX` တန်ဖိုးကို လျှော့ချခြင်းဖြင့် ပြန်လည် assign လုပ်သည်။ `pos2` ကိုလည်း အတူတူလုပ်ဆောင်သည်။ ထို့နောက်၊ `pos3` နှင့် `pos4` ကို element ၏ X နှင့် Y coordinates အသစ်များသို့ ပြန်လည် reset လုပ်သည်။ drag လုပ်နေစဉ်၊ console တွင် ဒီပြောင်းလဲမှုများကို ကြည့်နိုင်သည်။ ထို့နောက်၊ plant ၏ css style ကို ပြောင်းလဲပြီး၊ `pos1` နှင့် `pos2` ၏ တန်ဖိုးအသစ်များအပေါ်မူတည်၍ top နှင့် left X နှင့် Y coordinates ကို သတ်မှတ်သည်။
+> `offsetTop` နှင့် `offsetLeft` သည် element ၏ parent position ကို အခြေခံ၍ position ကို သတ်မှတ်သော CSS properties ဖြစ်သည်။
 
-> `offsetTop` နှင့် `offsetLeft` သည် element ၏ parent ၏ position အပေါ်မူတည်၍ position ကို သတ်မှတ်သော CSS properties ဖြစ်သည်။ parent သည် `static` မဟုတ်သော position ဖြစ်နိုင်သည်။
+ဒီ positioning ကို ပြန်လည်တွက်ချက်ခြင်းအားလုံးသည် terrarium နှင့် ၎င်း၏ အပင်များ၏ behavior ကို စနစ်တကျ ပြုလုပ်ရန် အထောက်အကူပြုသည်။
 
-ဒီ position များကို ပြန်လည်တွက်ချက်ခြင်းသည် terrarium နှင့် ၎င်း၏ plants ၏ behavior ကို စိတ်ကြိုက်ပြုလုပ်ရန် ခွင့်ပြုသည်။
+### လုပ်ဆောင်ရန် 
 
-### လုပ်ဆောင်ရန်
-
-interface ကို ပြီးစီးရန် နောက်ဆုံးလုပ်ဆောင်ရန်မှာ `elementDrag` ၏ closing curly bracket အောက်တွင် `stopElementDrag` function ကို ထည့်သွင်းပါ။
+interface ကို ပြီးစီးရန် `elementDrag` ၏ closing curly bracket အောက်တွင် `stopElementDrag` function ကို ထည့်သွင်းပါ။
 
 ```javascript
 function stopElementDrag() {
@@ -196,35 +194,37 @@ function stopElementDrag() {
 }
 ```
 
-ဒီ function သေးငယ်သည် `onpointerup` နှင့် `onpointermove` events များကို reset လုပ်သည်။ ၎င်းသည် သင်၏ plant ၏ progress ကို ပြန်လည်စတင်ရန် (သို့) အပင်အသစ်ကို drag လုပ်ရန် ခွင့်ပြုသည်။
+ဒီ function သေးငယ်သည် `onpointerup` နှင့် `onpointermove` events များကို reset လုပ်ပြီး၊ သင်၏ အပင်၏ progress ကို ပြန်လည်စတင်ရန် သို့မဟုတ် အပင်အသစ်ကို drag လုပ်ရန် စတင်နိုင်သည်။
 
-✅ ဒီ events များကို null သို့ set မလုပ်ပါက ဘာဖြစ်မည်?
+✅ ဒီ events များကို null သတ်မှတ်မထားပါက ဘာဖြစ်မည်?
 
-အခုတော့ သင်၏ project ကို ပြီးစီးပါပြီ!
+အခုတော့ သင်၏ project ကို ပြီးစီးခဲ့ပါပြီ!
 
-🥇ဂုဏ်ယူပါတယ်! သင်၏လှပသော terrarium ကို ပြီးစီးပါပြီ။ ![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.my.png)
+🥇ဂုဏ်ယူပါတယ်! သင်၏လှပသော terrarium ကို ပြီးစီးခဲ့ပါပြီ။ ![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.my.png)
 
 ---
 
 ## 🚀စိန်ခေါ်မှု
 
-သင်၏ closure တွင် event handler အသစ်ထည့်သွင်းပြီး အပင်များအပေါ် အခြားအရာများပြုလုပ်ပါ။ ဥပမာအားဖြင့်၊ အပင်ကို double-click လုပ်ပြီး အပင်ကို အရှေ့ဘက်သို့ ရောက်စေပါ။ စိတ်ဖန်တီးမှုရှိပါစေ!
+သင်၏ closure အတွင်း event handler အသစ်ထည့်သွင်းပြီး အပင်များအပေါ် အပိုလုပ်ဆောင်မှုများပြုလုပ်ပါ။ ဥပမာအားဖြင့် အပင်ကို double-click လုပ်ပြီး အပင်ကို အရှေ့ဘက်သို့ ရောက်စေပါ။ ဖန်တီးမှုအတွက် စိတ်ကြိုက်လုပ်ဆောင်ပါ!
 
-## မိမိသင်ခန်းစာပြီးနောက် စမ်းမေးခွန်း
+## မိမိကိုယ်ကို စမ်းမေးခွန်း
 
 [Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/20)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 
-Element များကို screen ပေါ်တွင် drag လုပ်ခြင်းသည် ရိုးရှင်းသည့်အရာဖြစ်သော်လည်း၊ ၎င်းကို ပြုလုပ်ရန် နည်းလမ်းများစွာရှိပြီး၊ သင်လိုချင်သော effect အပေါ်မူတည်၍ အခက်အခဲများစွာရှိနိုင်သည်။ အမှန်တကယ် [drag and drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) တစ်ခုလုံးရှိသည်။ ဒီ module တွင် ကျွန်ုပ်တို့မသုံးခဲ့သောကြောင့်၊ ကျွန်ုပ်တို့လိုချင်သော effect သည် ကွဲပြားနေသည်။ သို့သော်၊ သင်၏ project တွင် ဒီ API ကို စမ်းသုံးပြီး ဘာတွေပြုလုပ်နိုင်သည်ကို ကြည့်ပါ။
+Elements များကို screen ပေါ်တွင် drag လုပ်ခြင်းသည် ရိုးရှင်းသော်လည်း၊ ၎င်းကို ပြုလုပ်ရန် နည်းလမ်းများစွာရှိပြီး၊ သင်လိုချင်သော effect အပေါ်မူတည်၍ အခက်အခဲများရှိနိုင်သည်။ အမှန်တကယ် [drag and drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) တစ်ခုလုံးရှိသည်။ ဒီ module တွင် ၎င်းကို မသုံးခဲ့ရသည့်အကြောင်းမှာ ကျွန်ုပ်တို့လိုချင်သော effect သည် ကွဲပြားခြားနားသောကြောင့်ဖြစ်သည်။ သို့သော် သင်၏ကိုယ်ပိုင် project တွင် API ကို စမ်းသုံးပြီး ဘာတွေ ပြုလုပ်နိုင်သည်ကို ကြည့်ပါ။
 
 Pointer events အကြောင်းကို [W3C docs](https://www.w3.org/TR/pointerevents1/) နှင့် [MDN web docs](https://developer.mozilla.org/docs/Web/API/Pointer_events) တွင် ပိုမိုလေ့လာပါ။
 
 Browser capabilities ကို [CanIUse.com](https://caniuse.com/) တွင် အမြဲစစ်ဆေးပါ။
 
+## လုပ်ဆောင်ရန်
 
+[DOM နှင့် ပိုမိုလုပ်ဆောင်ပါ](assignment.md)
 
 ---
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါရှိနိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရ အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူလဘာသာစကားဖြင့် အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။

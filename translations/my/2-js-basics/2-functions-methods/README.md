@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4612bbb9ace984f374fcc80e3e035ad",
-  "translation_date": "2025-08-27T22:28:44+00:00",
+  "original_hash": "92e136090efc4341b1d51c37924c1802",
+  "translation_date": "2025-08-28T18:41:24+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "my"
 }
@@ -12,26 +12,26 @@ CO_OP_TRANSLATOR_METADATA:
 ![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.my.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## မိန့်ခွန်းမပြောမီ စမ်းမေးခွန်း
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/9)
+## မိန့်ခွန်းမပြောမီ Quiz
+[Pre-lecture quiz](https://ff-quizzes.netlify.app)
 
-ကိုယ်ရေးသားတဲ့ကုဒ်ကို စဉ်ဆက်မပြတ်ဖတ်ရလွယ်အောင်လုပ်ဖို့ Developer တစ်ဦးအနေနဲ့ အမြဲလိုအပ်ပါတယ်။ ကုဒ်ကိုရေးတာထက် ဖတ်တာပိုများတယ်ဆိုတာ အနည်းငယ်ဆန့်ကျင်ဘက်ဖြစ်ပေမယ့် အမှန်တရားပါ။ **Function** ဆိုတာကတော့ Developer တွေရဲ့ ကုဒ်ကို ထိန်းသိမ်းဖို့အတွက် အရေးကြီးတဲ့ Tools တစ်ခုဖြစ်ပါတယ်။
+Code ရေးသားတဲ့အခါမှာ အမြဲတမ်း code ကိုဖတ်ရလွယ်အောင်လုပ်ဖို့လိုအပ်ပါတယ်။ ဒါဟာ အနည်းငယ်ဆန့်ကျင်ဖွယ်ရှိပေမယ့် code ကိုရေးသားတာထက် ဖတ်တာပိုများပါတယ်။ Developer တွေရဲ့ toolbox မှာ code ကို maintain လုပ်ဖို့အတွက် အရေးကြီးတဲ့ tool တစ်ခုက **function** ဖြစ်ပါတယ်။
 
 [![Methods and Functions](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Methods and Functions")
 
-> 🎥 အထက်ကပုံကိုနှိပ်ပြီး methods နဲ့ functions အကြောင်း ဗီဒီယိုကြည့်ပါ။
+> 🎥 အထက်ပါပုံကို click လုပ်ပြီး methods နှင့် functions အကြောင်း video ကြည့်ပါ။
 
-> ဒီသင်ခန်းစာကို [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon) မှာလည်း လေ့လာနိုင်ပါတယ်။
+> Microsoft Learn မှာ ဒီသင်ခန်းစာကို [ယူနိုင်ပါတယ်](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Functions
 
-Function ဆိုတာက အဓိကအားဖြင့် လိုအပ်တဲ့အချိန်မှာ ပြန်ခေါ်သုံးနိုင်တဲ့ ကုဒ်တစ်ပိုင်းဖြစ်ပါတယ်။ တစ်ခုတည်းသောအလုပ်ကို မကြိမ်ကြိမ်လုပ်ဖို့လိုတဲ့အခါမှာ Function က အလွန်အသုံးဝင်ပါတယ်။ Function ကိုတစ်နေရာတည်းမှာ စုစည်းထားပြီး လိုအပ်တဲ့အချိန်မှာ ခေါ်သုံးနိုင်ပါတယ်။ Function တစ်ခုက Function တစ်ခုကိုပါ ခေါ်သုံးနိုင်ပါတယ်။
+Function ဆိုတာ အခြေခံအားဖြင့် လိုအပ်တဲ့အခါမှာ run လုပ်နိုင်တဲ့ code block တစ်ခုဖြစ်ပါတယ်။ ဒီဟာက တစ်ခါထက်မက အလုပ်တစ်ခုကိုလုပ်ဖို့လိုအပ်တဲ့အခါ အထူးသင့်တော်ပါတယ်။ Logic ကိုနေရာတစ်ခုထက်မကမှာ ထပ်တူရေးသားမယ်ဆိုရင် (နောက်ပိုင်းမှာ update လုပ်ဖို့ခက်ခဲနိုင်ပါတယ်) function ကိုတစ်နေရာမှာ centralized လုပ်ပြီး လိုအပ်တဲ့အခါမှာ call လုပ်နိုင်ပါတယ်။ Function တွေကို function အခြား function တွေထဲကနေပါ call လုပ်နိုင်ပါတယ်။
 
-Function ကိုအမည်ပေးနိုင်ခြင်းလည်း အရေးကြီးပါတယ်။ Function အမည်က ကုဒ်တစ်ပိုင်းကို အလွယ်တကူ နားလည်နိုင်စေပါတယ်။ ဥပမာ - "Cancel timer" ဆိုတဲ့ Button ကိုနှိပ်လိုက်ရင် Timer ရပ်မယ်ဆိုတာ သိနိုင်ပါတယ်။
+Function ကိုနာမည်ပေးနိုင်ခြင်းလည်း အရေးကြီးပါတယ်။ ဒါဟာ အနည်းငယ်အရေးမကြီးသလိုထင်ရပေမယ့် နာမည်က code ရဲ့အပိုင်းတစ်ခုကို documentation လုပ်ဖို့အတွက် အလွယ်တကူနည်းလမ်းပေးပါတယ်။ Button ရဲ့ label တစ်ခုလိုပဲ။ "Cancel timer" ဆိုတဲ့ button ကို click လုပ်ရင် timer ကိုရပ်မယ်ဆိုတာသိနိုင်ပါတယ်။
 
-## Function တစ်ခုကို ဖန်တီးခြင်းနှင့် ခေါ်သုံးခြင်း
+## Function တစ်ခုကိုဖန်တီးခြင်းနှင့် call လုပ်ခြင်း
 
-Function ရဲ့ Syntax က အောက်ပါအတိုင်းဖြစ်ပါတယ်-
+Function ရဲ့ syntax က အောက်ပါအတိုင်းဖြစ်ပါတယ်-
 
 ```javascript
 function nameOfFunction() { // function definition
@@ -39,7 +39,7 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Greeting ပြသဖို့ Function တစ်ခု ဖန်တီးချင်တယ်ဆိုရင်-
+Greeting ပြသဖို့ function တစ်ခုဖန်တီးချင်တယ်ဆိုရင် အောက်ပါအတိုင်းဖြစ်နိုင်ပါတယ်-
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +47,28 @@ function displayGreeting() {
 }
 ```
 
-Function ကိုခေါ်သုံးချင်တဲ့အခါမှာ Function နာမည်နဲ့ `()` ကိုသုံးရပါတယ်။ Function ကို ဖန်တီးထားတဲ့နေရာက အစဉ်အတိုင်းမဟုတ်ရင်တောင် JavaScript Compiler က Function ကိုရှာပေးပါလိမ့်မယ်။
+Function ကို call (invoke) လုပ်ချင်တဲ့အခါ function ရဲ့နာမည်နောက်မှာ `()` သုံးပါ။ Function ကို define လုပ်တာက call လုပ်တာမတိုင်မီလည်းဖြစ်နိုင်ပါတယ်၊ call လုပ်ပြီးနောက်မှာလည်းဖြစ်နိုင်ပါတယ်။ JavaScript compiler က function ကိုရှာပေးပါလိမ့်မယ်။
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** Function ရဲ့ အထူးအမျိုးအစားတစ်ခုကို **Method** လို့ခေါ်ပါတယ်။ ဥပမာ - `console.log` ကို သုံးတဲ့အခါမှာ Method ကိုသုံးနေပါတယ်။ Method က Object တစ်ခု (`console`) နဲ့ ပတ်သက်ပြီးရှိတာဖြစ်ပြီး Function ကတော့ လွတ်လပ်ပါတယ်။ Developer အများစုက Method နဲ့ Function ဆိုတာကို အလွယ်တကူ အစားထိုးသုံးတတ်ကြပါတယ်။
+> **NOTE:** Function ရဲ့အထူးအမျိုးအစားတစ်ခုကို **method** လို့ခေါ်ပါတယ်၊ ဒါကိုသင်ပြီးသားသုံးနေပါတယ်! ဥပမာအားဖြင့် `console.log` ကိုသုံးတဲ့အခါမှာ method ကိုသုံးနေပါတယ်။ Method က object (`console` က ဥပမာ) တစ်ခုနဲ့ပတ်သက်ပြီးရှိပါတယ်၊ function ကတော့ independent ဖြစ်ပါတယ်။ Developer အများစုက method နဲ့ function ဆိုတာကို အတူတူသုံးတတ်ပါတယ်။
 
-### Function ဖန်တီးရာမှာ အကောင်းဆုံးအကြံပြုချက်များ
+### Function ရေးသားရာမှာအကောင်းဆုံးနည်းလမ်းများ
 
-Function ဖန်တီးရာမှာ အောက်ပါအချက်များကို သတိပြုပါ-
+Function ဖန်တီးတဲ့အခါမှာ အောက်ပါအချက်များကိုသတိထားပါ-
 
-- အမြဲတမ်း ဖော်ပြချက်ပေးတဲ့ နာမည်များကို သုံးပါ။
-- စကားလုံးများကို ပေါင်းစပ်ရာမှာ **camelCasing** ကိုသုံးပါ။
-- Function တစ်ခုကို အထူးအလုပ်တစ်ခုအတွက်သာ အာရုံစိုက်ပါ။
+- အမြဲတမ်း နာမည်ကိုရှင်းလင်းပြီး function ရဲ့လုပ်ဆောင်မှုကိုသိနိုင်အောင်ရေးပါ
+- **camelCasing** ကိုအသုံးပြုပြီး စကားလုံးများကိုပေါင်းစည်းပါ
+- Function ကို အထူးလုပ်ဆောင်မှုတစ်ခုအပေါ်အာရုံစိုက်အောင်ထားပါ
 
-## Function ကို အချက်အလက်များဖြင့် ဖြည့်စွက်ခြင်း
+## Function ကိုသို့မဟုတ် parameter ထည့်ခြင်း
 
-Function တစ်ခုကို ပိုမိုအသုံးဝင်စေဖို့ အချက်အလက်များ (parameters) ကို ဖြည့်စွက်နိုင်ပါတယ်။ ဥပမာ - `displayGreeting` Function က **Hello, world!** ကိုသာ ပြသနိုင်ပါတယ်။ Function ကို ပိုမိုပြောင်းလွယ်ပြုလွယ်စေဖို့ အမည်တစ်ခုကို parameter အနေနဲ့ ထည့်သွင်းနိုင်ပါတယ်။
+Function ကိုပိုပြီးအသုံးဝင်အောင်လုပ်ဖို့ parameter ထည့်သွင်းတတ်ရပါမယ်။ ဥပမာအားဖြင့် `displayGreeting` function က **Hello, world!** ကိုသာပြသနိုင်ပါတယ်။ Function ကိုပိုပြီး flexible ဖြစ်အောင်လုပ်ချင်ရင် parameter (sometimes called **argument**) ထည့်သွင်းနိုင်ပါတယ်။
 
-Parameter တွေကို Function ရဲ့ parenthesis အတွင်းမှာ comma ဖြင့် ခွဲပြီး သတ်မှတ်ရပါတယ်-
+Parameter တွေကို parenthesis အတွင်းမှာ comma ဖြင့်ခွဲပြီးရေးပါ-
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +76,7 @@ function name(param, param2, param3) {
 }
 ```
 
-`displayGreeting` Function ကို အမည်တစ်ခုကို parameter အနေနဲ့ ထည့်သွင်းပြီး ပြောင်းလဲနိုင်ပါတယ်။
+`displayGreeting` ကို update လုပ်ပြီး name ကိုပြသနိုင်အောင်လုပ်ပါ။
 
 ```javascript
 function displayGreeting(name) {
@@ -85,7 +85,7 @@ function displayGreeting(name) {
 }
 ```
 
-Function ကိုခေါ်သုံးတဲ့အခါမှာ parameter ကို parenthesis အတွင်းမှာ သတ်မှတ်ရပါတယ်။
+Function ကို call လုပ်ပြီး parameter ထည့်ချင်ရင် parenthesis အတွင်းမှာရေးပါ။
 
 ```javascript
 displayGreeting('Christopher');
@@ -94,7 +94,7 @@ displayGreeting('Christopher');
 
 ## Default values
 
-Function ကို ပိုမိုပြောင်းလွယ်ပြုလွယ်စေဖို့ parameter တွေကို ပိုထည့်နိုင်ပါတယ်။ သို့သော် parameter တစ်ခုချင်းစီကို မလိုအပ်လျှင် Default Value ကို သတ်မှတ်နိုင်ပါတယ်။ ဥပမာ - Greeting ကို Default Value အဖြစ် သတ်မှတ်နိုင်ပါတယ်။
+Function ကိုပိုပြီး flexible ဖြစ်အောင် parameter တွေထပ်ထည့်နိုင်ပါတယ်။ ဒါပေမယ့် parameter တစ်ခုစီကိုမဖြည့်ရမယ်ဆိုရင် default value ကိုပေးနိုင်ပါတယ်။ ဥပမာအားဖြင့် name ကိုလိုအပ်တဲ့ parameter အဖြစ်ထားပြီး salutation ကို optional default value ပေးနိုင်ပါတယ်။
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +102,7 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Function ကိုခေါ်သုံးတဲ့အခါမှာ `salutation` ကို သတ်မှတ်မလား မသတ်မှတ်ဘူးဆိုတာ ဆုံးဖြတ်နိုင်ပါတယ်။
+Function ကို call လုပ်တဲ့အခါ salutation ကိုပေးမလားမပေးမလားဆုံးဖြတ်နိုင်ပါတယ်။
 
 ```javascript
 displayGreeting('Christopher');
@@ -114,15 +114,15 @@ displayGreeting('Christopher', 'Hi');
 
 ## Return values
 
-ယခင် Function တွေက console မှာ output ပြသဖို့သာ ရည်ရွယ်ထားပါတယ်။ သို့သော် Calculation လုပ်ပြီး အဖြေကို ပြန်ပေးစေချင်ရင် **return value** ကို သုံးနိုင်ပါတယ်။
+Function တွေဟာ console output ပေးနိုင်ပါတယ်။ ဒါဟာတစ်ခါတစ်ရံမှာလိုအပ်တဲ့အရာဖြစ်နိုင်ပါတယ်။ ဒါပေမယ့် calculation လုပ်ပြီး value ကိုပြန်ပေးချင်ရင် return value ကိုအသုံးပြုနိုင်ပါတယ်။
 
-Function တစ်ခုက value တစ်ခုကို return လုပ်မယ်ဆိုရင် `return` keyword ကို သုံးရပါတယ်။
+Function တစ်ခု return value ပေးမယ်ဆိုရင် `return` keyword ကိုအသုံးပြုပါ။ `return` keyword က value သို့မဟုတ် reference ကိုပြန်ပေးပါမယ်။
 
 ```javascript
 return myVariable;
 ```  
 
-Greeting message တစ်ခုကို ဖန်တီးပြီး value ကို ပြန်ပေးတဲ့ Function တစ်ခုကို ဖန်တီးနိုင်ပါတယ်။
+Greeting message တစ်ခုဖန်တီးပြီး value ကိုပြန်ပေးတဲ့ function ကိုဖန်တီးနိုင်ပါတယ်-
 
 ```javascript
 function createGreetingMessage(name) {
@@ -131,7 +131,7 @@ function createGreetingMessage(name) {
 }
 ```
 
-Function ကိုခေါ်သုံးတဲ့အခါမှာ value ကို variable တစ်ခုထဲမှာ သိမ်းဆည်းနိုင်ပါတယ်။
+Function ကို call လုပ်တဲ့အခါ value ကို variable ထဲမှာသိမ်းနိုင်ပါတယ်။
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
@@ -139,7 +139,9 @@ const greetingMessage = createGreetingMessage('Christopher');
 
 ## Functions as parameters for functions
 
-Programming လောကမှာ Function တစ်ခုကို Function တစ်ခုရဲ့ parameter အဖြစ် သုံးရတဲ့အခါတွေ ရှိတတ်ပါတယ်။ ဥပမာ - [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) က Timer တစ်ခုကို စတင်ပြီး အချိန်ကုန်လို့ ပြီးဆုံးတဲ့အခါမှာ Function တစ်ခုကို ခေါ်သုံးစေပါတယ်။
+Programming အတတ်ပညာမှာ function တွေကို parameter အဖြစ်အသုံးပြုနိုင်ပါတယ်။ ဥပမာအားဖြင့် [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) က timer ကိုစပြီး timer ပြီးတဲ့အခါ code ကို run လုပ်ပါမယ်။
+
+Code ကို run လုပ်ပါက ၃ စက္ကန့်အကြာမှာ **3 seconds has elapsed** ဆိုတဲ့ message ကိုတွေ့ပါမယ်။
 
 ```javascript
 function displayDone() {
@@ -151,7 +153,7 @@ setTimeout(displayDone, 3000);
 
 ### Anonymous functions
 
-Function တစ်ခုကို တစ်ကြိမ်သာ သုံးမယ်ဆိုရင် အမည်မပေးဘဲ Anonymous Function အဖြစ် ဖန်တီးနိုင်ပါတယ်။
+Function တစ်ခုကိုနာမည်ပေးပြီး တစ်ခါသာအသုံးပြုမယ်ဆိုရင် anonymous function ကိုအသုံးပြုနိုင်ပါတယ်။
 
 ```javascript
 setTimeout(function() {
@@ -161,7 +163,7 @@ setTimeout(function() {
 
 ### Fat arrow functions
 
-JavaScript မှာ `=>` ကို သုံးပြီး Fat Arrow Function ကို ဖန်တီးနိုင်ပါတယ်။ 
+Fat arrow function သည် `=>` ကိုအသုံးပြုပြီး function ကိုရေးသားနိုင်ပါတယ်။
 
 ```javascript
 setTimeout(() => {
@@ -169,28 +171,28 @@ setTimeout(() => {
 }, 3000);
 ```
 
-### ဘယ်အခါမှာ ဘယ်နည်းကို သုံးမလဲ
+### Strategy အသုံးပြုရန်အချိန်
 
-Function ကို တစ်ကြိမ်ထက်ပိုသုံးမယ်ဆိုရင် ပုံမှန် Function အဖြစ် ဖန်တီးပါ။ တစ်နေရာတည်းမှာသာ သုံးမယ်ဆိုရင် Anonymous Function သုံးပါ။ Fat Arrow Function သို့မဟုတ် ပုံမှန် Syntax ကို သုံးမယ်ဆိုတာ သင့်ရွေးချယ်မှုပါ။
+Function ကိုတစ်ခါထက်မကအသုံးပြုမယ်ဆိုရင် နာမည်ပေးပြီးဖန်တီးပါ။ တစ်ခါသာအသုံးပြုမယ်ဆိုရင် anonymous function ကိုသုံးပါ။ Fat arrow function သို့မဟုတ် traditional syntax ကိုသုံးမယ်ဆိုတာ developer ရဲ့ရွေးချယ်မှုဖြစ်ပါတယ်။
 
 ---
 
 ## 🚀 စိန်ခေါ်မှု
 
-Function နဲ့ Method တို့ရဲ့ ကွာခြားချက်ကို စာကြောင်းတစ်ကြောင်းနဲ့ ရှင်းပြနိုင်မလား? ကြိုးစားကြည့်ပါ။
+Function နဲ့ method ရဲ့ကွာခြားချက်ကို တစ်ကြောင်းစာနဲ့ရှင်းပြနိုင်ပါသလား?
 
-## မိန့်ခွန်းပြီးနောက် စမ်းမေးခွန်း
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/10)
+## မိန့်ခွန်းပြီး Quiz
+[Post-lecture quiz](https://ff-quizzes.netlify.app)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 
-[Arrow functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) အကြောင်း ပိုမိုလေ့လာဖို့ တန်ဖိုးရှိပါတယ်။ Function တစ်ခုကိုရေးပြီး Arrow Function နဲ့ ပြန်ရေးကြည့်ပါ။
+[Arrow functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) အကြောင်းပိုမိုလေ့လာပါ။ Function တစ်ခုရေးပြီး arrow syntax နဲ့ပြန်ရေးပါ။
 
-## လုပ်ငန်းတာဝန်
+## အိမ်စာ
 
 [Fun with Functions](assignment.md)
 
 ---
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာရှိသော ရင်းမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွတ်များ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူရင်းဘာသာစကားဖြင့် အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်မှုကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွတ်များ သို့မဟုတ် အနားယူမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။

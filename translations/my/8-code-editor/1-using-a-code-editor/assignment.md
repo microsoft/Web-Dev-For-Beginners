@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-27T22:42:32+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-28T18:46:58+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "my"
 }
 -->
-# vscode.dev ကို အသုံးပြု၍ ရှုထောင့်ဝက်ဘ်ဆိုက် တစ်ခု ဖန်တီးပါ
+# vscode.dev ကို အသုံးပြု၍ ရှင်းလင်းသော CV-Website တစ်ခု ဖန်တီးခြင်း
 
-_သင့်ကို အလုပ်အကိုင်ရှာဖွေရေးအရာရှိက သင့်ရဲ့ ရှုထောင့်ကို တောင်းလိုက်တဲ့အခါ၊ URL တစ်ခုပေးလိုက်တာ ဘယ်လောက်အေးမြလဲ?_ 😎
+_အလုပ်ရှင်တစ်ဦးက သင့် CV ကို တောင်းလိုက်တဲ့အခါ URL တစ်ခုပေးလိုက်တာ ဘယ်လောက်အေးမြလဲ?_ 😎
 
 ## ရည်မှန်းချက်များ
 
-ဒီအလုပ်ကို လုပ်ပြီးဆုံးတဲ့အခါ၊ သင်သည် အောက်ပါအရာများကို သင်ယူနိုင်ပါမည်-
+ဒီအလုပ်ကိုပြီးစီးပြီးနောက်မှာ သင်တစ်ဦးတည်းဖြင့်:
 
-- သင့်ရဲ့ ရှုထောင့်ကို ပြသနိုင်မည့် ဝက်ဘ်ဆိုက်တစ်ခု ဖန်တီးခြင်း
+- သင့် CV ကို ပြသနိုင်မည့် website တစ်ခု ဖန်တီးနိုင်မည်
 
 ### လိုအပ်ချက်များ
 
@@ -25,15 +25,15 @@ _သင့်ကို အလုပ်အကိုင်ရှာဖွေရေ
 
 **အဆင့် ၁:** GitHub Repository အသစ်တစ်ခု ဖန်တီးပြီး `my-resume` ဟု အမည်ပေးပါ။
 
-**အဆင့် ၂:** သင့် repository တွင် `index.html` ဖိုင်တစ်ခု ဖန်တီးပါ။ github.com တွင် အနည်းဆုံး ဖိုင်တစ်ခု ထည့်ရန်လိုအပ်သည်၊ အကြောင်းမူကား vscode.dev တွင် အလွတ် repository မဖွင့်နိုင်ပါ။
+**အဆင့် ၂:** သင့် repository တွင် `index.html` ဖိုင်တစ်ခု ဖန်တီးပါ။ github.com တွင် ဖိုင်တစ်ခုထည့်ရန်လိုအပ်သည်၊ အကြောင်းမူမူဟာ vscode.dev တွင် အလွတ် repository မဖွင့်နိုင်ပါ။
 
-`creating a new file` လင့်ခ်ကို နှိပ်ပြီး `index.html` ဟု အမည်ပေးပါ၊ ထို့နောက် `Commit new file` ခလုတ်ကို ရွေးပါ။
+`creating a new file` လင့်ကို နှိပ်ပြီး `index.html` ဟု အမည်ပေးပါ၊ ထို့နောက် `Commit new file` ခလုတ်ကို နှိပ်ပါ။
 
-![github.com တွင် ဖိုင်အသစ်တစ်ခု ဖန်တီးပါ](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.my.png)
+![github.com တွင် ဖိုင်အသစ်တစ်ခု ဖန်တီးခြင်း](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.my.png)
 
 **အဆင့် ၃:** [VSCode.dev](https://vscode.dev) ကို ဖွင့်ပြီး `Open Remote Repository` ခလုတ်ကို ရွေးပါ။
 
-သင့်ရဲ့ ရှုထောင့်ဆိုက်အတွက် ဖန်တီးထားသော repository ၏ URL ကို ကူးယူပြီး input box တွင် ထည့်ပါ-
+သင့် CV site အတွက် ဖန်တီးထားသော repository ၏ URL ကို ကူးယူပြီး input box တွင် ထည့်ပါ။
 
 _`your-username` ကို သင့် GitHub username ဖြင့် အစားထိုးပါ_
 
@@ -41,14 +41,14 @@ _`your-username` ကို သင့် GitHub username ဖြင့် အစ�
 https://github.com/your-username/my-resume
 ```
 
-✅ အောင်မြင်ပါက သင့် project နှင့် index.html ဖိုင်ကို browser တွင်ရှိသော text editor တွင် ဖွင့်ထားသည်ကို မြင်ရပါမည်။
+✅ အောင်မြင်ပါက သင့် project နှင့် index.html ဖိုင်ကို browser တွင်ရှိသော text editor တွင် ဖွင့်ထားသည်ကို မြင်ရမည်။
 
-![ဖိုင်အသစ်တစ်ခု ဖန်တီးပါ](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.my.png)
+![ဖိုင်အသစ်တစ်ခု ဖန်တီးခြင်း](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.my.png)
 
-**အဆင့် ၄:** `index.html` ဖိုင်ကို ဖွင့်ပြီး အောက်ပါ code ကို သင့် code area တွင် ကူးထည့်ပြီး သိမ်းဆည်းပါ။
+**အဆင့် ၄:** `index.html` ဖိုင်ကို ဖွင့်ပြီး အောက်ပါ code ကို သင့် code အပိုင်းတွင် ကူးထည့်ပြီး သိမ်းပါ။
 
 <details>
-    <summary><b>သင့်ရဲ့ ရှုထောင့်ဝက်ဘ်ဆိုက်၏ အကြောင်းအရာကို တာဝန်ယူသော HTML code</b></summary>
+    <summary><b>သင့် CV website အတွက် HTML code</b></summary>
     
         <html>
 
@@ -59,7 +59,7 @@ https://github.com/your-username/my-resume
             </head>
             <body>
                 <header id="header">
-                    <!-- ရှုထောင့် header သင့်နာမည်နှင့် အလုပ်အကိုင် -->
+                    <!-- CV header သင့်နာမည်နှင့် အလုပ်အကိုင် -->
                     <h1>သင့်နာမည်ကို ဒီမှာရေးပါ!</h1>
                     <hr>
                     သင့်အလုပ်အကိုင်!
@@ -69,10 +69,10 @@ https://github.com/your-username/my-resume
                     <article id="mainLeft">
                         <section>
                             <h2>ဆက်သွယ်ရန်</h2>
-                            <!-- ဆက်သွယ်ရန် အချက်အလက်များ -->
+                            <!-- ဆက်သွယ်ရန်အချက်အလက်များ -->
                             <p>
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <a href="mailto:username@domain.top-level domain">သင့်အီးမေးလ်ကို ဒီမှာရေးပါ</a>
+                                <a href="mailto:username@domain.top-level domain">သင့် email ကို ဒီမှာရေးပါ</a>
                             </p>
                             <p>
                                 <i class="fab fa-github" aria-hidden="true"></i>
@@ -96,20 +96,20 @@ https://github.com/your-username/my-resume
                         <section>
                             <h2>ပညာရေး</h2>
                             <!-- သင့်ပညာရေး -->
-                            <h3>သင်ယူခဲ့သော ဘာသာရပ်ကို ဒီမှာရေးပါ!</h3>
+                            <h3>သင်ယူခဲ့သောဘာသာရပ်ကို ဒီမှာရေးပါ!</h3>
                             <p>
-                                သင်ယူခဲ့သော သင်တန်းကျောင်းကို ဒီမှာရေးပါ!
+                                သင်တက်ခဲ့သောကျောင်း/တက္ကသိုလ်ကို ဒီမှာရေးပါ!
                             </p>
                             <p>
-                                စတင်နှစ် - ပြီးဆုံးနှစ်
+                                စတင်နှင့်ပြီးဆုံးသည့်ရက်စွဲ
                             </p>
                         </section>            
                     </article>
                     <article id="mainRight">
                         <section>
-                            <h2>အကြောင်းအရာ</h2>
+                            <h2>ကိုယ်ရေးအကျဉ်း</h2>
                             <!-- သင့်အကြောင်း -->
-                            <p>သင့်အကြောင်းကို အတိုချုပ်ရေးပါ!</p>
+                            <p>သင့်ကိုယ်ရေးအကျဉ်းကို ဒီမှာရေးပါ!</p>
                         </section>
                         <section>
                             <h2>အလုပ်အတွေ့အကြုံ</h2>
@@ -121,7 +121,7 @@ https://github.com/your-username/my-resume
                             <ul>
                                     <li>တာဝန် ၁ - သင်လုပ်ခဲ့တာရေးပါ!</li>
                                     <li>တာဝန် ၂ - သင်လုပ်ခဲ့တာရေးပါ!</li>
-                                    <li>သင့်ရဲ့ အလုပ်အကျိုးသက်ရောက်မှုကိုရေးပါ</li>
+                                    <li>သင့်လုပ်ဆောင်မှု၏ရလဒ်/သက်ရောက်မှုကိုရေးပါ</li>
                                     
                             </ul>
                             <h3>အလုပ်အမည် ၂</h3>
@@ -131,7 +131,7 @@ https://github.com/your-username/my-resume
                             <ul>
                                     <li>တာဝန် ၁ - သင်လုပ်ခဲ့တာရေးပါ!</li>
                                     <li>တာဝန် ၂ - သင်လုပ်ခဲ့တာရေးပါ!</li>
-                                    <li>သင့်ရဲ့ အလုပ်အကျိုးသက်ရောက်မှုကိုရေးပါ</li>
+                                    <li>သင့်လုပ်ဆောင်မှု၏ရလဒ်/သက်ရောက်မှုကိုရေးပါ</li>
                                     
                             </ul>
                         </section>
@@ -141,14 +141,14 @@ https://github.com/your-username/my-resume
         </html>
 </details>
 
-HTML code တွင် _placeholder text_ များကို သင့်ရဲ့ ရှုထောင့်အချက်အလက်များဖြင့် အစားထိုးပါ။
+HTML code တွင် _placeholder text_ များကို သင့် CV အချက်အလက်များဖြင့် အစားထိုးပါ။
 
-**အဆင့် ၅:** My-Resume folder တွင် `New File ...` icon ကို နှိပ်ပြီး သင့် project တွင် `style.css` နှင့် `codeswing.json` ဖိုင် ၂ ခု ဖန်တီးပါ။
+**အဆင့် ၅:** My-Resume folder တွင် `New File ...` icon ကို နှိပ်ပြီး `style.css` နှင့် `codeswing.json` ဖိုင် ၂ ခု ဖန်တီးပါ။
 
-**အဆင့် ၆:** `style.css` ဖိုင်ကို ဖွင့်ပြီး အောက်ပါ code ကို ကူးထည့်ပြီး သိမ်းဆည်းပါ။
+**အဆင့် ၆:** `style.css` ဖိုင်ကို ဖွင့်ပြီး အောက်ပါ code ကို ကူးထည့်ပြီး သိမ်းပါ။
 
 <details>
-        <summary><b>ဝက်ဘ်ဆိုက် layout ကို ဖော်ပြရန် CSS code</b></summary>
+        <summary><b>Website layout အတွက် CSS code</b></summary>
             
             body {
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -210,32 +210,28 @@ HTML code တွင် _placeholder text_ များကို သင့်ရ�
             
 </details>
 
-**အဆင့် ၆:** `codeswing.json` ဖိုင်ကို ဖွင့်ပြီး အောက်ပါ code ကို ကူးထည့်ပြီး သိမ်းဆည်းပါ။
+**အဆင့် ၇:** `codeswing.json` ဖိုင်ကို ဖွင့်ပြီး အောက်ပါ code ကို ကူးထည့်ပြီး သိမ်းပါ။
 
     {
     "scripts": [],
     "styles": []
     }
 
-**အဆင့် ၇:** `Codeswing extension` ကို install လုပ်ပြီး code area တွင် ရှုထောင့်ဝက်ဘ်ဆိုက်ကို ကြည့်ရှုပါ။
+**အဆင့် ၈:** `Codeswing extension` ကို install လုပ်ပြီး resume website ကို preview လုပ်ပါ။
 
-Activity bar တွင် _`Extensions`_ icon ကို နှိပ်ပြီး Codeswing ဟု ရိုက်ထည့်ပါ။ Expanded activity bar တွင် _blue install button_ ကို နှိပ်၍ install လုပ်ပါ၊ သို့မဟုတ် extension ကို ရွေးပြီး install button ကို အသုံးပြုပါ။ Extension install ပြီးချိန်တွင် သင့် project တွင် ပြောင်းလဲမှုများကို ကြည့်ရှုနိုင်ပါမည် 😃
+`Extensions` icon ကို နှိပ်ပြီး Codeswing ဟု ရိုက်ထည့်ပါ။ Install ခလုတ်ကို နှိပ်ပြီး extension ကို install လုပ်ပါ။ Install ပြီးပါက သင့် project တွင် ပြောင်းလဲမှုများကို မြင်ရမည် 😃
 
 ![Extensions install](../../../../8-code-editor/images/install-extension.gif)
 
-Extension install ပြီးနောက် သင့် screen တွင် အောက်ပါအတိုင်း မြင်ရပါမည်။
+သင့် project တွင် ပြောင်းလဲမှုများကို စိတ်ကျေနပ်ပါက `Changes` folder တွင် `+` ခလုတ်ကို နှိပ်ပြီး ပြောင်းလဲမှုများကို stage လုပ်ပါ။
 
-![Codeswing extension in action](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.my.png)
+ပြောင်းလဲမှုအတွက် commit message ရိုက်ထည့်ပြီး `check` ခလုတ်ကို နှိပ်ပါ။ Project အလုပ်ပြီးပါက GitHub repository သို့ ပြန်သွားရန် အပေါ်ဘက်လက်ဝဲရှိ hamburger menu icon ကို နှိပ်ပါ။
 
-ပြောင်းလဲမှုများကို စိတ်ကျေနပ်ပါက `Changes` folder တွင် `+` button ကို နှိပ်ပြီး ပြောင်းလဲမှုများကို stage လုပ်ပါ။
-
-ပြောင်းလဲမှုအကြောင်းဖော်ပြသော commit message ရိုက်ထည့်ပြီး `check` ကို နှိပ်ပါ။ Project အလုပ်ပြီးဆုံးပါက GitHub repository သို့ ပြန်သွားရန် အပေါ်ဘက် ဘယ်ဖက်ရှိ hamburger menu icon ကို ရွေးပါ။
-
-ဂုဏ်ယူပါတယ် 🎉 သင်သည် vscode.dev ကို အသုံးပြု၍ ရှုထောင့်ဝက်ဘ်ဆိုက်တစ်ခုကို အဆင့်အနည်းငယ်ဖြင့် ဖန်တီးပြီးပါပြီ။
+ဂုဏ်ယူပါတယ် 🎉 သင်သည် vscode.dev ကို အသုံးပြု၍ သင့် CV website ကို အဆင့်အဆင့် ဖန်တီးပြီးပါပြီ။
 
 ## 🚀 စိန်ခေါ်မှု
 
-သင့်တွင် ပြောင်းလဲမှုများလုပ်ခွင့်ရှိသော remote repository တစ်ခု ဖွင့်ပြီး ဖိုင်များကို update လုပ်ပါ။ ထို့နောက် သင့်ပြောင်းလဲမှုများနှင့်အတူ branch အသစ်တစ်ခု ဖန်တီးပြီး Pull Request တင်ကြည့်ပါ။
+သင့်တွင် ပြင်ဆင်ခွင့်ရှိသော remote repository တစ်ခု ဖွင့်ပြီး ဖိုင်များကို update လုပ်ပါ။ ထို့နောက် သင့်ပြောင်းလဲမှုများနှင့် branch အသစ်တစ်ခု ဖန်တီးပြီး Pull Request တင်ပါ။
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 
@@ -244,4 +240,4 @@ Extension install ပြီးနောက် သင့် screen တွင် �
 ---
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရားရှိသော ရင်းမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွဲအချော်များ သို့မဟုတ် အနားယူမှားမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရ အရင်းအမြစ်အဖြစ် ရှုလေ့လာသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များကို အသုံးပြု၍ ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွတ်များ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
