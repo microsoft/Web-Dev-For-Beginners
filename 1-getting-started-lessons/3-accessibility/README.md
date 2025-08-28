@@ -211,7 +211,7 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
           <p class="nav-item nav-item-bull"><a href="../semantic">Semantic Example</a></p>
         </div>
       </div>
-      <p class="footer-copyright">&copy; 2016 Instrument</span>
+      <p class="footer-copyright">&copy; 2016 Instrument</p>
     </div>
   </body>
 </html>
