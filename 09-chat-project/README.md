@@ -212,16 +212,129 @@ Let's start with *index.html*:
 
 ```html
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
     <body>
       <form>
-        <input type="text">  
+        <textarea id="messages"></textarea>
+        <input id="input" type="text" />
+        <button type="submit" id="sendBtn">Send</button>  
       </form>  
-
+      <script src="app.js" />
     </body>
 </html>    
 ```
 
+This above is the absolute minimum you need to support a chat window, as it consists of a textarea where messages will be rendered, an input for where to type the message and a button for sending your message to the backend. Let's look at the JavaScript next in *app.js*
+
+```js
+// app.js
+
+(function(){
+  // 1. set up elements  
+  const messages = document.getElementById("messages");
+  const form = document.getElementById("form");
+  const input = document.getElementById("input");
+
+  const BASE_URL = "change this";
+  const API_ENDPOINT = `${BASE_URL}/hello`;
+
+  // 2. create a function that talks to our backend
+  async function callApi(text) {
+    const response = await fetch(API_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: text })
+    });
+    let json = await response.json();
+    return json.response;
+  }
+
+  // 3. add response to our textarea
+  function appendMessage(text, role) {
+    const el = document.createElement("div");
+    el.className = `message ${role}`;
+    el.innerHTML = text;
+    messages.appendChild(el);
+  }
+
+  // 4. listen to submit events
+  form.addEventListener("submit", async(e) => {
+    e.preventDefault();
+   // someone clicked the button in the form
+   
+   // get input
+   const text = input.value.trim();
+
+   appendMessage(text, "user")
+
+   // reset it
+   input.value = '';
+
+   const reply = await callApi(text);
+
+   // add to messages
+   appendMessage(reply, "assistant");
+
+  })
+})();
+```
+
+Let's go through the code per section:
+
+- 1) Here we get a reference to all our elements we will refer to later in the code
+- 2) In this section, we create a function that uses the built-in `fetch` method that calls our backend
+- 3) `appendMessage` helps add responses as well as what you as a user type.
+- 4) Here we listen to the submit event and we end up reading the input field, place the user's message in the text area, call the API, render that respond in the text area.
+
+Let's look at styling next, here's where you can go really crazy and make it look like you want, but here's some suggestions:
+
+**styles.css**
+
+```
+.message {
+    background: #222;
+    box-shadow: 0 0 0 10px orange;
+    padding: 10px:
+    margin: 5px;
+}
+
+.message.user {
+    background: blue;
+}
+
+.message: assistant: grey;
+```
+
+With these three classes, you will style messages different depending on where they come from an assistant or you as a user. If you want to be inspired, check out the `frontend/` folder.
+
 ### base url
 
-## summary
+There was one thing here we didn't set and that was `BASE_URL`, this is not known until your backend is started. To set it:
+
+- If you run API locally, it should be set to something like `http://localhost:5000`.
+- If run in a Codespaces, it should look something like "[name]app.github.dev".
+
+## Assignment
+
+Create your own folder *project* with content like so:
+
+```text
+project/
+frontend/
+  index.html
+  app.js
+  styles.css
+backend/
+  api.py
+  llm.py
+```
+
+Copy the content from what was instructed from above but feel free to customize to your liking
+
+## Solution
+
+[Solution](./solution/README.md)
+
+## Summary
