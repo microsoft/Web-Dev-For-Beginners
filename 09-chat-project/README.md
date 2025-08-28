@@ -362,3 +362,15 @@ Change also the CSS and text to your liking, so do changes in *index.html* and *
 
 Great, you've learned from scratch how to create a personal assistant using AI. We've done so using GitHub Models, a backend in Python and a frontend in HTML, CSS and JavaScript
 
+## Set up with Codespaces
+
+- Navigate to: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Create from a template (make sure you're logged in to GitHub) in top-right corner:
+
+    ![Create from template](./assets/template.png)
+
+- Once in your repo, create a Codespace:
+
+    ![Create codespace](./assets/codespace.png)
+
+    This should start an environment you can now work with.
