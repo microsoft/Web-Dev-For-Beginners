@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-25T22:31:45+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-28T23:53:41+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "br"
 }
 -->
-# Construindo um Jogo Espacial Parte 1: Introdução
+# Crie um Jogo Espacial Parte 1: Introdução
 
 ![video](../../../../6-space-game/images/pewpew.gif)
 
@@ -17,16 +17,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Herança e Composição no desenvolvimento de jogos
 
-Nas lições anteriores, não havia muita necessidade de se preocupar com a arquitetura de design dos aplicativos que você criou, já que os projetos eram muito pequenos em escopo. No entanto, à medida que suas aplicações crescem em tamanho e complexidade, as decisões arquiteturais se tornam uma preocupação maior. Existem duas abordagens principais para criar aplicações maiores em JavaScript: *composição* ou *herança*. Ambas têm prós e contras, mas vamos explicá-las no contexto de um jogo.
+Em aulas anteriores, não havia muita necessidade de se preocupar com a arquitetura dos aplicativos que você criou, já que os projetos eram muito pequenos em escopo. No entanto, à medida que suas aplicações crescem em tamanho e complexidade, as decisões arquiteturais se tornam uma preocupação maior. Existem duas abordagens principais para criar aplicações maiores em JavaScript: *composição* ou *herança*. Ambas têm prós e contras, mas vamos explicá-las no contexto de um jogo.
 
-✅ Um dos livros de programação mais famosos já escritos trata de [padrões de design](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Um dos livros de programação mais famosos já escritos trata de [design patterns](https://en.wikipedia.org/wiki/Design_Patterns).
 
-Em um jogo, você tem `objetos do jogo`, que são objetos que existem em uma tela. Isso significa que eles têm uma localização em um sistema de coordenadas cartesianas, caracterizado por ter uma coordenada `x` e `y`. À medida que você desenvolve um jogo, perceberá que todos os seus objetos do jogo possuem uma propriedade padrão, comum a todos os jogos que você cria, ou seja, elementos que são:
+Em um jogo, você tem `objetos do jogo`, que são objetos que existem na tela. Isso significa que eles têm uma localização em um sistema de coordenadas cartesianas, caracterizada por ter uma coordenada `x` e `y`. À medida que você desenvolve um jogo, perceberá que todos os seus objetos do jogo têm propriedades padrão, comuns a qualquer jogo que você criar, ou seja, elementos que são:
 
-- **baseados em localização** A maioria, se não todos, os elementos do jogo são baseados em localização. Isso significa que eles têm uma localização, um `x` e um `y`.
-- **móveis** Esses são objetos que podem se mover para uma nova localização. Normalmente, é um herói, um monstro ou um NPC (personagem não jogável), mas não, por exemplo, um objeto estático como uma árvore.
-- **autodestrutivos** Esses objetos existem apenas por um período de tempo definido antes de se prepararem para exclusão. Geralmente, isso é representado por um booleano `morto` ou `destruído` que sinaliza ao motor do jogo que esse objeto não deve mais ser renderizado.
-- **tempo de recarga** 'Tempo de recarga' é uma propriedade típica entre objetos de curta duração. Um exemplo típico é um pedaço de texto ou efeito gráfico, como uma explosão, que deve ser visto apenas por alguns milissegundos.
+- **baseados em localização**: A maioria, se não todos, os elementos do jogo são baseados em localização. Isso significa que eles têm uma localização, um `x` e um `y`.
+- **móveis**: São objetos que podem se mover para uma nova localização. Normalmente, isso inclui um herói, um monstro ou um NPC (personagem não jogável), mas não, por exemplo, um objeto estático como uma árvore.
+- **autodestrutíveis**: Esses objetos existem apenas por um período de tempo definido antes de serem marcados para exclusão. Geralmente, isso é representado por um booleano `dead` ou `destroyed` que sinaliza ao motor do jogo que esse objeto não deve mais ser renderizado.
+- **com tempo de espera**: 'Tempo de espera' é uma propriedade típica entre objetos de curta duração. Um exemplo típico é um pedaço de texto ou efeito gráfico, como uma explosão, que deve ser visto apenas por alguns milissegundos.
 
 ✅ Pense em um jogo como Pac-Man. Você consegue identificar os quatro tipos de objetos listados acima nesse jogo?
 
@@ -40,7 +40,7 @@ A ideia é usar `classes` em conjunto com `herança` para adicionar um determina
 
 ✅ Herança é um conceito importante para entender. Saiba mais no [artigo da MDN sobre herança](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Expressado em código, um objeto do jogo pode tipicamente se parecer com isso:
+Expressado em código, um objeto do jogo pode ser algo assim:
 
 ```javascript
 
@@ -88,7 +88,7 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Tire alguns minutos para imaginar um herói do Pac-Man (Inky, Pinky ou Blinky, por exemplo) e como ele seria escrito em JavaScript.
+✅ Reserve alguns minutos para imaginar como seria um herói do Pac-Man (Inky, Pinky ou Blinky, por exemplo) escrito em JavaScript.
 
 **Composição**
 
@@ -149,13 +149,13 @@ Outro padrão comum no desenvolvimento de jogos aborda o problema de gerenciar a
 
 ✅ Pub/Sub significa 'publicar-assinar'
 
-Esse padrão aborda a ideia de que as partes distintas da sua aplicação não devem saber umas das outras. Por quê? Isso torna muito mais fácil entender o que está acontecendo em geral se as várias partes estiverem separadas. Também facilita mudar o comportamento repentinamente, se necessário. Como fazemos isso? Estabelecendo alguns conceitos:
+Esse padrão aborda a ideia de que as partes distintas da sua aplicação não devem saber umas das outras. Por quê? Isso facilita muito a visualização geral do que está acontecendo se as várias partes estiverem separadas. Também facilita mudar o comportamento repentinamente, se necessário. Como fazemos isso? Estabelecendo alguns conceitos:
 
-- **mensagem**: Uma mensagem geralmente é uma string de texto acompanhada de uma carga útil opcional (um dado que esclarece sobre o que é a mensagem). Uma mensagem típica em um jogo pode ser `KEY_PRESSED_ENTER`.
+- **mensagem**: Uma mensagem geralmente é uma string de texto acompanhada de uma carga opcional (um dado que esclarece sobre o que é a mensagem). Uma mensagem típica em um jogo pode ser `KEY_PRESSED_ENTER`.
 - **publicador**: Este elemento *publica* uma mensagem e a envia para todos os assinantes.
 - **assinante**: Este elemento *ouve* mensagens específicas e executa alguma tarefa como resultado de receber essa mensagem, como disparar um laser.
 
-A implementação é bem pequena em tamanho, mas é um padrão muito poderoso. Veja como pode ser implementado:
+A implementação é bem pequena, mas é um padrão muito poderoso. Veja como pode ser implementado:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Acima, conectamos um evento de teclado, `ArrowLeft`, e enviamos a mensagem `HERO_MOVE_LEFT`. Ouvimos essa mensagem e movemos o `herói` como resultado. A força desse padrão é que o ouvinte de eventos e o herói não sabem um do outro. Você pode remapear o `ArrowLeft` para a tecla `A`. Além disso, seria possível fazer algo completamente diferente no `ArrowLeft` fazendo algumas edições na função `on` do eventEmitter:
+No exemplo acima, conectamos um evento de teclado, `ArrowLeft`, e enviamos a mensagem `HERO_MOVE_LEFT`. Escutamos essa mensagem e movemos o `herói` como resultado. A força desse padrão é que o listener de eventos e o herói não sabem um do outro. Você pode remapear o `ArrowLeft` para a tecla `A`. Além disso, seria possível fazer algo completamente diferente no `ArrowLeft` fazendo algumas edições na função `on` do eventEmitter:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -218,7 +218,7 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 
 ## 🚀 Desafio
 
-Pense em como o padrão pub-sub pode melhorar um jogo. Quais partes devem emitir eventos e como o jogo deve reagir a eles? Agora é sua chance de ser criativo, pensando em um novo jogo e como suas partes podem se comportar.
+Pense em como o padrão pub-sub pode melhorar um jogo. Quais partes deveriam emitir eventos e como o jogo deveria reagir a eles? Agora é sua chance de ser criativo, pensando em um novo jogo e como suas partes poderiam se comportar.
 
 ## Quiz Pós-Aula
 
@@ -231,6 +231,8 @@ Saiba mais sobre Pub/Sub [lendo sobre o assunto](https://docs.microsoft.com/azur
 ## Tarefa
 
 [Crie um protótipo de jogo](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

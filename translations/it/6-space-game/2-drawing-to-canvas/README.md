@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-25T22:19:02+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T00:08:27+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "it"
 }
 -->
-# Costruire un Gioco Spaziale Parte 2: Disegna Eroe e Mostri sul Canvas
+# Costruire un Gioco Spaziale Parte 2: Disegnare Eroe e Mostri sul Canvas
 
-## Quiz Pre-Lettura
+## Quiz Pre-Lezione
 
-[Quiz pre-lettura](https://ff-quizzes.netlify.app/web/quiz/31)
+[Quiz pre-lezione](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Il Canvas
 
-Il canvas è un elemento HTML che di default non ha contenuto; è una tela bianca. Devi aggiungere contenuti disegnandoci sopra.
+Il canvas è un elemento HTML che di default non ha contenuto; è una tela bianca. Devi aggiungere contenuto disegnandoci sopra.
 
 ✅ Leggi [di più sull'API Canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API) su MDN.
 
@@ -33,7 +33,7 @@ Sopra stiamo impostando `id`, `width` e `height`.
 
 ## Disegnare geometrie semplici
 
-Il Canvas utilizza un sistema di coordinate cartesiane per disegnare gli oggetti. Pertanto, utilizza un asse x e un asse y per esprimere dove si trova qualcosa. La posizione `0,0` è l'angolo in alto a sinistra e l'angolo in basso a destra corrisponde alla larghezza e altezza che hai impostato per il canvas.
+Il Canvas utilizza un sistema di coordinate cartesiane per disegnare gli oggetti. Quindi utilizza un asse x e un asse y per esprimere dove si trova qualcosa. La posizione `0,0` è l'angolo in alto a sinistra, mentre l'angolo in basso a destra corrisponde ai valori di WIDTH e HEIGHT del canvas.
 
 ![la griglia del canvas](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.it.png)  
 > Immagine da [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
@@ -41,8 +41,8 @@ Il Canvas utilizza un sistema di coordinate cartesiane per disegnare gli oggetti
 Per disegnare sul canvas, devi seguire i seguenti passaggi:
 
 1. **Ottenere un riferimento** all'elemento Canvas.
-1. **Ottenere un riferimento** all'elemento Context che si trova sul canvas.
-1. **Eseguire un'operazione di disegno** utilizzando l'elemento Context.
+2. **Ottenere un riferimento** al Context che si trova sull'elemento Canvas.
+3. **Eseguire un'operazione di disegno** utilizzando il Context.
 
 Il codice per i passaggi sopra solitamente appare così:
 
@@ -63,19 +63,19 @@ ctx.fillRect(0,0, 200, 200) // x,y,width, height
 
 ✅ L'API Canvas si concentra principalmente su forme 2D, ma puoi anche disegnare elementi 3D su un sito web; per questo, potresti utilizzare l'[API WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
-Puoi disegnare ogni tipo di oggetto con l'API Canvas, come:
+Con l'API Canvas puoi disegnare ogni tipo di oggetto, come:
 
 - **Forme geometriche**, abbiamo già mostrato come disegnare un rettangolo, ma c'è molto altro che puoi disegnare.
 - **Testo**, puoi disegnare un testo con qualsiasi font e colore desideri.
 - **Immagini**, puoi disegnare un'immagine basata su un asset come un file .jpg o .png, per esempio.
 
-✅ Prova! Sai come disegnare un rettangolo, riesci a disegnare un cerchio su una pagina? Dai un'occhiata ad alcuni disegni interessanti su Canvas su CodePen. Ecco un [esempio particolarmente impressionante](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Prova! Ora che sai come disegnare un rettangolo, riesci a disegnare un cerchio su una pagina? Dai un'occhiata ad alcuni disegni interessanti realizzati con il Canvas su CodePen. Ecco un [esempio particolarmente impressionante](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Caricare e disegnare un asset immagine
+## Caricare e disegnare un'immagine
 
-Puoi caricare un asset immagine creando un oggetto `Image` e impostando la sua proprietà `src`. Poi ascolti l'evento `load` per sapere quando è pronto per essere utilizzato. Il codice appare così:
+Puoi caricare un'immagine creando un oggetto `Image` e impostando la sua proprietà `src`. Poi ascolti l'evento `load` per sapere quando è pronta per essere utilizzata. Il codice appare così:
 
-### Caricare un asset
+### Caricare un'immagine
 
 ```javascript
 const img = new Image();
@@ -85,9 +85,9 @@ img.onload = () => {
 }
 ```
 
-### Pattern per caricare un asset
+### Pattern per caricare un'immagine
 
-Si consiglia di racchiudere il codice sopra in una struttura come questa, così è più facile da usare e puoi manipolarlo solo quando è completamente caricato:
+Si consiglia di incapsulare il codice sopra in una struttura come questa, così è più facile da usare e puoi manipolarlo solo quando è completamente caricato:
 
 ```javascript
 function loadAsset(path) {
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-Per disegnare gli asset di gioco su uno schermo, il tuo codice apparirà così:
+Per disegnare gli asset di gioco sullo schermo, il tuo codice apparirà così:
 
 ```javascript
 async function run() {
@@ -153,29 +153,29 @@ Trova i file che sono stati creati per te nella sottocartella `your-work`. Dovre
 
 Apri la copia di questa cartella in Visual Studio Code. Devi avere un ambiente di sviluppo locale configurato, preferibilmente con Visual Studio Code con NPM e Node installati. Se non hai `npm` configurato sul tuo computer, [ecco come farlo](https://www.npmjs.com/get-npm).
 
-Avvia il tuo progetto navigando nella cartella `your_work`:
+Inizia il tuo progetto navigando nella cartella `your_work`:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Quanto sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri un browser e inserisci quell'indirizzo. È una pagina vuota al momento, ma cambierà.
+Il comando sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri un browser e inserisci quell'indirizzo. Al momento è una pagina vuota, ma cambierà.
 
-> Nota: per vedere le modifiche sullo schermo, aggiorna il browser.
+> Nota: per vedere i cambiamenti sullo schermo, aggiorna il browser.
 
 ### Aggiungi codice
 
 Aggiungi il codice necessario a `your-work/app.js` per risolvere quanto segue:
 
 1. **Disegna** un canvas con sfondo nero  
-   > suggerimento: aggiungi due righe sotto il TODO appropriato in `/app.js`, impostando l'elemento `ctx` su nero e le coordinate in alto/sinistra su 0,0 e l'altezza e larghezza uguali a quelle del canvas.
+   > suggerimento: aggiungi due righe sotto il TODO appropriato in `/app.js`, impostando l'elemento `ctx` su nero e le coordinate in alto/sinistra su 0,0, con altezza e larghezza uguali a quelle del canvas.
 2. **Carica** le texture  
    > suggerimento: aggiungi le immagini del giocatore e del nemico utilizzando `await loadTexture` e passando il percorso dell'immagine. Non le vedrai ancora sullo schermo!
 3. **Disegna** l'eroe al centro dello schermo nella metà inferiore  
-   > suggerimento: usa l'API `drawImage` per disegnare heroImg sullo schermo, impostando `canvas.width / 2 - 45` e `canvas.height - canvas.height / 4)`.
+   > suggerimento: usa l'API `drawImage` per disegnare `heroImg` sullo schermo, impostando `canvas.width / 2 - 45` e `canvas.height - canvas.height / 4)`.
 4. **Disegna** 5*5 mostri  
-   > suggerimento: ora puoi decommentare il codice per disegnare i nemici sullo schermo. Successivamente, vai alla funzione `createEnemies` e completala.
+   > suggerimento: ora puoi decommentare il codice per disegnare i nemici sullo schermo. Poi, vai alla funzione `createEnemies` e completala.
 
    Per prima cosa, imposta alcune costanti:
 
@@ -204,7 +204,7 @@ Il risultato finale dovrebbe apparire così:
 
 ## Soluzione
 
-Prova a risolverlo da solo prima, ma se ti blocchi, dai un'occhiata a una [soluzione](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
+Prova a risolverlo da solo prima, ma se rimani bloccato, dai un'occhiata a una [soluzione](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
 
 ---
 
@@ -212,11 +212,11 @@ Prova a risolverlo da solo prima, ma se ti blocchi, dai un'occhiata a una [soluz
 
 Hai imparato a disegnare con l'API Canvas focalizzata sul 2D; dai un'occhiata all'[API WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API) e prova a disegnare un oggetto 3D.
 
-## Quiz Post-Lettura
+## Quiz Post-Lezione
 
-[Quiz post-lettura](https://ff-quizzes.netlify.app/web/quiz/32)
+[Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/32)
 
-## Revisione & Studio Autonomo
+## Revisione e Studio Autonomo
 
 Scopri di più sull'API Canvas [leggendo a riguardo](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
@@ -224,5 +224,7 @@ Scopri di più sull'API Canvas [leggendo a riguardo](https://developer.mozilla.o
 
 [Gioca con l'API Canvas](assignment.md)
 
-**Disclaimer (Avvertenza)**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatizzate potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+---
+
+**Disclaimer**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-27T20:41:38+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T01:03:15+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "nl"
 }
@@ -34,11 +34,11 @@ Na deze opdracht leer je hoe je:
 
 ## Stappen
 
-**Stap 1:** Maak een nieuwe GitHub-repository en geef deze de naam `my-resume`
+**Stap 1:** Maak een nieuwe GitHub-repository en geef deze de naam `my-resume`.
 
-**Stap 2** Maak een `index.html`-bestand in je repository. We voegen ten minste één bestand toe terwijl we nog op github.com zijn, omdat je geen lege repository kunt openen op vscode.dev.
+**Stap 2:** Maak een `index.html`-bestand in je repository. We voegen minstens één bestand toe terwijl we nog op github.com zijn, omdat je geen lege repository kunt openen op vscode.dev.
 
-Klik op de link `creating a new file`, typ de naam `index.html` en selecteer de knop `Commit new file`.
+Klik op de link `creating a new file`, typ de naam `index.html` in en selecteer de knop `Commit new file`.
 
 ![Maak een nieuw bestand op github.com](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.nl.png)
 
@@ -46,7 +46,7 @@ Klik op de link `creating a new file`, typ de naam `index.html` en selecteer de 
 
 Kopieer de url van de repository die je zojuist hebt gemaakt voor je cv-website en plak deze in het invoerveld:
 
-_Vervang `your-username` door je GitHub-gebruikersnaam_
+_Vervang `your-username` door je GitHub-gebruikersnaam._
 
 ```
 https://github.com/your-username/my-resume
@@ -120,7 +120,7 @@ https://github.com/your-username/my-resume
                         <section>
                             <h2>OVER</h2>
                             <!-- over jou -->
-                            <p>Schrijf een korte tekst over jezelf!</p>
+                            <p>Schrijf een stukje over jezelf!</p>
                         </section>
                         <section>
                             <h2>WERKERVARING</h2>
@@ -154,7 +154,7 @@ https://github.com/your-username/my-resume
 
 Vervang de _placeholdertekst_ in de html-code door je cv-details.
 
-**Stap 5:** Beweeg over de My-Resume-map, klik op het `New File ...`-icoon en maak 2 nieuwe bestanden in je project: `style.css` en `codeswing.json`.
+**Stap 5:** Beweeg over de My-Resume-map, klik op het pictogram `New File ...` en maak 2 nieuwe bestanden in je project: `style.css` en `codeswing.json`.
 
 **Stap 6:** Open het `style.css`-bestand, plak de onderstaande code en sla op.
 
@@ -230,23 +230,23 @@ Vervang de _placeholdertekst_ in de html-code door je cv-details.
 
 **Stap 7:** Installeer de `Codeswing-extensie` om de cv-website te visualiseren in het codegebied.
 
-Klik op het _`Extensions`_-icoon in de activiteitenbalk en typ Codeswing. Klik op de _blauwe install-knop_ in de uitgebreide activiteitenbalk om te installeren of gebruik de install-knop die verschijnt in het codegebied zodra je de extensie selecteert om aanvullende informatie te laden. Direct na het installeren van de extensie zie je veranderingen in je project 😃
+Klik op het pictogram _`Extensions`_ in de activiteitenbalk en typ Codeswing. Klik op de _blauwe install-knop_ in de uitgebreide activiteitenbalk om te installeren of gebruik de install-knop die verschijnt in het codegebied zodra je de extensie selecteert om aanvullende informatie te laden. Direct na het installeren van de extensie zie je veranderingen in je project 😃.
 
 ![Extensies installeren](../../../../8-code-editor/images/install-extension.gif)
 
-Dit is wat je ziet op je scherm nadat je de extensie hebt geïnstalleerd.
+Dit is wat je op je scherm ziet nadat je de extensie hebt geïnstalleerd.
 
 ![Codeswing-extensie in actie](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.nl.png)
 
-Als je tevreden bent met de veranderingen die je hebt aangebracht, beweeg over de `Changes`-map en klik op de `+`-knop om de veranderingen te stage-en.
+Als je tevreden bent met de veranderingen die je hebt aangebracht, beweeg over de map `Changes` en klik op de `+`-knop om de veranderingen te stage.
 
-Typ een commit-bericht _(Een beschrijving van de verandering die je hebt aangebracht in het project)_ en commit je veranderingen door op de `check` te klikken. Zodra je klaar bent met je project, selecteer je het hamburgermenu-icoon linksboven om terug te keren naar de repository op GitHub.
+Typ een commitbericht _(Een beschrijving van de verandering die je hebt aangebracht in het project)_ en commit je veranderingen door op de `check` te klikken. Zodra je klaar bent met je project, selecteer je het hamburgermenu-icoon linksboven om terug te keren naar de repository op GitHub.
 
 Gefeliciteerd 🎉 Je hebt zojuist je cv-website gemaakt met vscode.dev in een paar stappen.
 
 ## 🚀 Uitdaging
 
-Open een remote repository waar je toestemming hebt om wijzigingen aan te brengen en werk enkele bestanden bij. Probeer vervolgens een nieuwe branch te maken met je wijzigingen en maak een Pull Request.
+Open een externe repository waar je toestemming hebt om wijzigingen aan te brengen en werk enkele bestanden bij. Probeer vervolgens een nieuwe branch te maken met je wijzigingen en maak een Pull Request.
 
 <!----
 ## Post-Lecture Quiz
@@ -255,9 +255,9 @@ Open een remote repository waar je toestemming hebt om wijzigingen aan te brenge
 
 ## Review & Zelfstudie
 
-Lees meer over [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) en enkele van de andere functies ervan.
+Lees meer over [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) en enkele van de andere functies.
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

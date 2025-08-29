@@ -1,25 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-25T23:21:57+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-28T23:42:14+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "mo"
 }
 -->
 # 使用 vscode.dev 建立履歷網站
 
-_當面試官要求你的履歷時，你能直接給他一個網址，這是不是很酷？_ 😎
+_當面試官要求你的履歷時，你可以直接給他們一個網址，這有多酷呢？_ 😎
 
 ## 目標
 
-完成這個作業後，你將學會：
+完成這個任務後，你將學會：
 
 - 建立一個網站來展示你的履歷
 
 ### 先決條件
 
-1. 一個 GitHub 帳號。如果你還沒有帳號，請前往 [GitHub](https://github.com/) 註冊。
+1. 一個 GitHub 帳號。如果你還沒有，請前往 [GitHub](https://github.com/) 註冊一個帳號。
 
 ## 步驟
 
@@ -33,7 +33,7 @@ _當面試官要求你的履歷時，你能直接給他一個網址，這是不�
 
 **步驟 3：** 開啟 [VSCode.dev](https://vscode.dev)，選擇 `Open Remote Repository` 按鈕。
 
-複製你剛剛為履歷網站建立的儲存庫網址，並將其貼到輸入框中：
+複製剛剛為你的履歷網站建立的儲存庫網址，並將其貼到輸入框中：
 
 _將 `your-username` 替換為你的 GitHub 使用者名稱_
 
@@ -43,26 +43,26 @@ https://github.com/your-username/my-resume
 
 ✅ 如果成功，你將在瀏覽器中的文字編輯器看到你的專案和 `index.html` 檔案。
 
-![在 vscode.dev 中開啟專案](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.mo.png)
+![建立新檔案](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.mo.png)
 
 **步驟 4：** 開啟 `index.html` 檔案，將以下程式碼貼到你的編輯區域並儲存。
 
 <details>
-    <summary><b>HTML 程式碼負責履歷網站的內容。</b></summary>
+    <summary><b>負責履歷網站內容的 HTML 程式碼。</b></summary>
     
         <html>
 
             <head>
                 <link href="style.css" rel="stylesheet">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-                <title>你的名字在這裡！</title>
+                <title>Your Name Goes Here!</title>
             </head>
             <body>
                 <header id="header">
                     <!-- 履歷標題，包含你的名字和職稱 -->
-                    <h1>你的名字在這裡！</h1>
+                    <h1>Your Name Goes Here!</h1>
                     <hr>
-                    你的角色！
+                    Your Role!
                     <hr>
                 </header>
                 <main>
@@ -98,25 +98,25 @@ https://github.com/your-username/my-resume
                             <!-- 你的教育背景 -->
                             <h3>在這裡填寫你的課程！</h3>
                             <p>
-                                在這裡填寫你的學校！
+                                在這裡填寫你的學校名稱！
                             </p>
                             <p>
-                                開始日期 - 結束日期
+                                開始 - 結束日期
                             </p>
                         </section>            
                     </article>
                     <article id="mainRight">
                         <section>
                             <h2>關於我</h2>
-                            <!-- 關於你的簡介 -->
+                            <!-- 關於你 -->
                             <p>在這裡寫一段關於自己的簡介！</p>
                         </section>
                         <section>
-                            <h2>工作經歷</h2>
-                            <!-- 你的工作經歷 -->
+                            <h2>工作經驗</h2>
+                            <!-- 你的工作經驗 -->
                             <h3>職位名稱</h3>
                             <p>
-                                公司名稱在這裡 | 開始月份 – 結束月份
+                                在這裡填寫組織名稱 | 開始月份 – 結束月份
                             </p>
                             <ul>
                                     <li>任務 1 - 描述你做了什麼！</li>
@@ -126,7 +126,7 @@ https://github.com/your-username/my-resume
                             </ul>
                             <h3>職位名稱 2</h3>
                             <p>
-                                公司名稱在這裡 | 開始月份 – 結束月份
+                                在這裡填寫組織名稱 | 開始月份 – 結束月份
                             </p>
                             <ul>
                                     <li>任務 1 - 描述你做了什麼！</li>
@@ -143,12 +143,12 @@ https://github.com/your-username/my-resume
 
 將你的履歷細節替換掉 HTML 程式碼中的 _佔位文字_。
 
-**步驟 5：** 將滑鼠移到 My-Resume 資料夾上，點擊 `New File ...` 圖示，並在專案中建立兩個新檔案：`style.css` 和 `codeswing.json`。
+**步驟 5：** 將滑鼠移到 My-Resume 資料夾上，點擊 `New File ...` 圖示，並在你的專案中建立兩個新檔案：`style.css` 和 `codeswing.json`。
 
 **步驟 6：** 開啟 `style.css` 檔案，將以下程式碼貼上並儲存。
 
 <details>
-        <summary><b>CSS 程式碼負責網站的版面設計。</b></summary>
+        <summary><b>用於格式化網站佈局的 CSS 程式碼。</b></summary>
             
             body {
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -217,17 +217,17 @@ https://github.com/your-username/my-resume
     "styles": []
     }
 
-**步驟 7：** 安裝 `Codeswing extension` 來在程式碼區域中預覽履歷網站。
+**步驟 7：** 安裝 `Codeswing extension` 以在編輯區域中預覽履歷網站。
 
-點擊活動欄上的 _`Extensions`_ 圖示，輸入 Codeswing。點擊展開活動欄上的 _藍色安裝按鈕_ 或在選擇擴展後出現的安裝按鈕來安裝。安裝完成後，觀察你的程式碼區域，看看專案的變化 😃
+點擊活動欄上的 _`Extensions`_ 圖示，輸入 Codeswing。點擊展開活動欄上的 _藍色安裝按鈕_ 或在選擇擴展後於編輯區域出現的安裝按鈕進行安裝。安裝完成後，觀察你的編輯區域，看看專案的變化 😃。
 
 ![安裝擴展](../../../../8-code-editor/images/install-extension.gif)
 
-安裝擴展後，你的螢幕上會看到以下內容。
+安裝擴展後，你的畫面應該會顯示如下。
 
 ![Codeswing 擴展運作中](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.mo.png)
 
-如果你對所做的更改感到滿意，將滑鼠移到 `Changes` 資料夾上，點擊 `+` 按鈕來暫存更改。
+如果你對所做的更改感到滿意，將滑鼠移到 `Changes` 資料夾上，點擊 `+` 按鈕以暫存更改。
 
 輸入提交訊息 _(描述你對專案所做的更改)_，然後點擊 `check` 提交更改。完成專案後，選擇左上角的漢堡選單圖示返回 GitHub 上的儲存庫。
 
@@ -235,11 +235,13 @@ https://github.com/your-username/my-resume
 
 ## 🚀 挑戰
 
-開啟一個你有權限修改的遠端儲存庫，更新一些檔案。接著，嘗試建立一個包含更改的新分支並發起 Pull Request。
+開啟一個你有權限進行更改的遠端儲存庫，更新一些檔案。接下來，嘗試建立一個包含更改的新分支並提交 Pull Request。
 
 ## 回顧與自學
 
-閱讀更多關於 [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) 的內容以及它的其他功能。
+閱讀更多關於 [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) 及其其他功能的資訊。
+
+---
 
 **免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。

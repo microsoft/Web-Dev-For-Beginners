@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-26T00:25:32+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-28T23:47:32+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "br"
 }
@@ -93,7 +93,7 @@ async function login() {
 }
 ```
 
-Primeiro, como `getAccount` é uma função assíncrona, precisamos combiná-la com a palavra-chave `await` para esperar pelo resultado do servidor. Como em qualquer solicitação ao servidor, também temos que lidar com casos de erro. Por enquanto, adicionaremos apenas uma mensagem de log para exibir o erro e voltaremos a isso mais tarde.
+Primeiro, como `getAccount` é uma função assíncrona, precisamos combiná-la com a palavra-chave `await` para aguardar o resultado do servidor. Como em qualquer solicitação ao servidor, também precisamos lidar com casos de erro. Por enquanto, adicionaremos apenas uma mensagem de log para exibir o erro e voltaremos a isso mais tarde.
 
 Depois, precisamos armazenar os dados em algum lugar para que possamos usá-los posteriormente para exibir as informações do painel. Como a variável `account` ainda não existe, criaremos uma variável global para ela no topo do nosso arquivo:
 
@@ -134,7 +134,7 @@ Agora que temos os dados do usuário, precisamos atualizar o HTML existente para
 
 ### Tarefa
 
-Antes de avançar para a tela do *dashboard*, há mais uma coisa que devemos fazer na página de *login*. Atualmente, se você tentar fazer login com um nome de usuário que não existe, uma mensagem é exibida no console, mas para um usuário comum nada muda e você não sabe o que está acontecendo.
+Antes de avançar para a tela do painel, há mais uma coisa que devemos fazer na página de *login*. Atualmente, se você tentar fazer login com um nome de usuário que não existe, uma mensagem é exibida no console, mas para um usuário comum nada muda e você não sabe o que está acontecendo.
 
 Vamos adicionar um elemento de espaço reservado no formulário de login onde podemos exibir uma mensagem de erro, se necessário. Um bom lugar seria logo antes do botão de login `<button>`:
 
@@ -147,7 +147,7 @@ Vamos adicionar um elemento de espaço reservado no formulário de login onde po
 
 Este elemento `<div>` está vazio, o que significa que nada será exibido na tela até adicionarmos algum conteúdo a ele. Também damos a ele um `id` para que possamos recuperá-lo facilmente com JavaScript.
 
-Volte ao arquivo `app.js` e crie uma nova função auxiliar `updateElement`:
+Volte para o arquivo `app.js` e crie uma nova função auxiliar `updateElement`:
 
 ```js
 function updateElement(id, text) {
@@ -156,7 +156,7 @@ function updateElement(id, text) {
 }
 ```
 
-Esta função é bastante simples: dado um *id* de elemento e um *texto*, ela atualizará o conteúdo de texto do elemento DOM com o `id` correspondente. Vamos usar este método no lugar da mensagem de erro anterior na função `login`:
+Esta função é bastante simples: dado um *id* de elemento e um *texto*, ela atualizará o conteúdo de texto do elemento DOM correspondente ao `id`. Vamos usar este método no lugar da mensagem de erro anterior na função `login`:
 
 ```js
 if (data.error) {
@@ -164,7 +164,7 @@ if (data.error) {
 }
 ```
 
-Agora, se você tentar fazer login com uma conta inválida, verá algo assim:
+Agora, se você tentar fazer login com uma conta inválida, deverá ver algo assim:
 
 ![Captura de tela mostrando a mensagem de erro exibida durante o login](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.br.png)
 
@@ -176,11 +176,11 @@ Agora temos um texto de erro que aparece visualmente, mas se você tentar com um
 
 Implemente o mesmo comportamento para os erros da função `register` (não se esqueça de atualizar o HTML).
 
-## Exibir informações no dashboard
+## Exibir informações no painel
 
-Usando as mesmas técnicas que acabamos de ver, também cuidaremos de exibir as informações da conta na página do dashboard.
+Usando as mesmas técnicas que acabamos de ver, também cuidaremos de exibir as informações da conta na página do painel.
 
-Este é o que um objeto de conta recebido do servidor parece:
+Este é o formato de um objeto de conta recebido do servidor:
 
 ```json
 {
@@ -200,7 +200,7 @@ Este é o que um objeto de conta recebido do servidor parece:
 
 ### Tarefa
 
-Vamos começar substituindo a seção "Balance" no HTML para adicionar elementos de espaço reservado:
+Vamos começar substituindo a seção "Saldo" no HTML para adicionar elementos de espaço reservado:
 
 ```html
 <section>
@@ -214,9 +214,9 @@ Também adicionaremos uma nova seção logo abaixo para exibir a descrição da 
 <h2 id="description"></h2>
 ```
 
-✅ Como a descrição da conta funciona como um título para o conteúdo abaixo dela, ela é marcada semanticamente como um cabeçalho. Saiba mais sobre como [estrutura de cabeçalhos](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) é importante para acessibilidade e analise criticamente a página para determinar o que mais poderia ser um cabeçalho.
+✅ Como a descrição da conta funciona como um título para o conteúdo abaixo dela, ela é marcada semanticamente como um cabeçalho. Saiba mais sobre como a [estrutura de cabeçalhos](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) é importante para acessibilidade e analise criticamente a página para determinar o que mais poderia ser um cabeçalho.
 
-Em seguida, criaremos uma nova função em `app.js` para preencher o espaço reservado:
+Em seguida, criaremos uma nova função no `app.js` para preencher o espaço reservado:
 
 ```js
 function updateDashboard() {
@@ -232,9 +232,9 @@ function updateDashboard() {
 
 Primeiro, verificamos se temos os dados da conta necessários antes de prosseguir. Em seguida, usamos a função `updateElement()` que criamos anteriormente para atualizar o HTML.
 
-> Para tornar a exibição do saldo mais bonita, usamos o método [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) para forçar a exibição do valor com 2 dígitos após o ponto decimal.
+> Para deixar a exibição do saldo mais bonita, usamos o método [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) para forçar a exibição do valor com 2 dígitos após o ponto decimal.
 
-Agora precisamos chamar nossa função `updateDashboard()` toda vez que a página do dashboard for carregada. Se você já terminou a [lição 1](../1-template-route/assignment.md), isso deve ser simples, caso contrário, você pode usar a seguinte implementação.
+Agora precisamos chamar nossa função `updateDashboard()` toda vez que a página do painel for carregada. Se você já terminou a [tarefa da lição 1](../1-template-route/assignment.md), isso deve ser simples, caso contrário, você pode usar a seguinte implementação.
 
 Adicione este código ao final da função `updateRoute()`:
 
@@ -253,7 +253,7 @@ const routes = {
 };
 ```
 
-Com esta alteração, toda vez que a página do dashboard for exibida, a função `updateDashboard()` será chamada. Após um login, você deve então conseguir ver o saldo da conta, a moeda e a descrição.
+Com esta alteração, toda vez que a página do painel for exibida, a função `updateDashboard()` será chamada. Após um login, você deverá então ver o saldo da conta, a moeda e a descrição.
 
 ## Criar linhas de tabela dinamicamente com templates HTML
 
@@ -277,7 +277,7 @@ Adicione um novo template no `<body>` do HTML:
 
 Este template representa uma única linha de tabela, com as 3 colunas que queremos preencher: *data*, *objeto* e *quantia* de uma transação.
 
-Em seguida, adicione esta propriedade `id` ao elemento `<tbody>` da tabela dentro do template do dashboard para facilitar a localização usando JavaScript:
+Em seguida, adicione esta propriedade `id` ao elemento `<tbody>` da tabela dentro do template do painel para facilitar a localização usando JavaScript:
 
 ```html
 <tbody id="transactions"></tbody>
@@ -340,6 +340,8 @@ Aqui está um exemplo de uma página de painel estilizada:
 ## Tarefa
 
 [Refatore e comente seu código](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

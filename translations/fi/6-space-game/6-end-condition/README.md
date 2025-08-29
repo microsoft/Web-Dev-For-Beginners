@@ -1,28 +1,28 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-27T20:29:17+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T00:41:55+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "fi"
 }
 -->
-# Rakenna avaruuspeli Osa 6: Lopetus ja uudelleenkäynnistys
+# Rakenna avaruuspeli Osa 6: Loppu ja uudelleenkäynnistys
 
-## Ennakkoquiz
+## Esiluennon kysely
 
-[Ennakkoquiz](https://ff-quizzes.netlify.app/web/quiz/39)
+[Esiluennon kysely](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Pelissä on erilaisia tapoja ilmaista *lopetusehto*. Pelin luojana sinun tehtäväsi on määrittää, miksi peli päättyy. Tässä muutamia syitä, olettaen että puhumme avaruuspelistä, jota olet tähän mennessä rakentanut:
 
 - **`N` Vihollisalusta on tuhottu**: On melko yleistä, että peli jaetaan eri tasoihin, joissa sinun täytyy tuhota `N` vihollisalusta päästäksesi tasosta läpi.
-- **Aluksesi on tuhottu**: On pelejä, joissa häviät pelin, jos aluksesi tuhoutuu. Toinen yleinen lähestymistapa on elämien käsite. Joka kerta kun aluksesi tuhoutuu, menetät yhden elämän. Kun kaikki elämät on menetetty, peli päättyy.
-- **Olet kerännyt `N` pistettä**: Toinen yleinen lopetusehto on pisteiden kerääminen. Miten pisteitä kerätään, on sinun päätettävissäsi, mutta on melko yleistä antaa pisteitä erilaisista toiminnoista, kuten vihollisaluksen tuhoamisesta tai esineiden keräämisestä, joita tuhotut esineet *pudottavat*.
-- **Taso on suoritettu**: Tämä voi sisältää useita ehtoja, kuten `X` vihollisalusta tuhottu, `Y` pistettä kerätty tai ehkä tietty esine on kerätty.
+- **Aluksesi on tuhottu**: On olemassa pelejä, joissa häviät pelin, jos aluksesi tuhoutuu. Toinen yleinen lähestymistapa on elämien käsite. Joka kerta kun aluksesi tuhoutuu, menetät yhden elämän. Kun kaikki elämät on menetetty, peli päättyy.
+- **Olet kerännyt `N` pistettä**: Toinen yleinen lopetusehto on pisteiden kerääminen. Miten pisteitä kerätään, on sinun päätettävissäsi, mutta on melko yleistä antaa pisteitä erilaisista toiminnoista, kuten vihollisaluksen tuhoamisesta tai esineiden keräämisestä, joita esineet *pudottavat* tuhoutessaan.
+- **Tason suorittaminen**: Tämä voi sisältää useita ehtoja, kuten `X` vihollisalusta tuhottu, `Y` pistettä kerätty tai ehkä tietty esine on kerätty.
 
 ## Uudelleenkäynnistys
 
-Jos ihmiset pitävät pelistäsi, he todennäköisesti haluavat pelata sen uudelleen. Kun peli päättyy mistä tahansa syystä, sinun tulisi tarjota vaihtoehto käynnistää peli uudelleen.
+Jos ihmiset pitävät pelistäsi, he todennäköisesti haluavat pelata sitä uudelleen. Kun peli päättyy mistä tahansa syystä, sinun tulisi tarjota vaihtoehto aloittaa peli uudelleen.
 
 ✅ Mieti hetki, millä ehdoilla peli mielestäsi päättyy ja miten sinua kehotetaan käynnistämään peli uudelleen.
 
@@ -31,7 +31,7 @@ Jos ihmiset pitävät pelistäsi, he todennäköisesti haluavat pelata sen uudel
 Lisäät nämä säännöt peliisi:
 
 1. **Pelin voittaminen**. Kun kaikki vihollisalukset on tuhottu, voitat pelin. Lisäksi näytä jonkinlainen voittoviesti.
-1. **Uudelleenkäynnistys**. Kun kaikki elämät on menetetty tai peli on voitettu, sinun tulisi tarjota tapa käynnistää peli uudelleen. Muista! Sinun täytyy alustaa peli uudelleen ja tyhjentää edellinen pelitila.
+1. **Uudelleenkäynnistys**. Kun kaikki elämäsi on menetetty tai peli on voitettu, sinun tulisi tarjota tapa käynnistää peli uudelleen. Muista! Sinun täytyy alustaa peli uudelleen ja tyhjentää edellinen pelitila.
 
 ## Suositellut vaiheet
 
@@ -48,7 +48,7 @@ Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansiossa. Sen pitäisi si
 -| package.json
 ```
 
-Käynnistä projektisi `your_work`-kansiossa kirjoittamalla:
+Aloitat projektisi `your_work`-kansiossa kirjoittamalla:
 
 ```bash
 cd your-work
@@ -74,7 +74,7 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
     }
     ```
 
-1. **Lisää logiikkaa viestinkäsittelijöihin**. Muokkaa `eventEmitter` käsittelemään näitä ehtoja:
+1. **Lisää logiikkaa viestinkäsittelijöihin**. Muokkaa `eventEmitter`-objektia käsittelemään näitä ehtoja:
 
     ```javascript
     eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -117,7 +117,7 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
 
 2. **Lisää uudelleenkäynnistyskoodi**, joka käynnistää pelin uudelleen valitun painikkeen painalluksella.
 
-   1. **Kuuntele Enter-näppäimen painallusta**. Muokkaa ikkunasi eventListeneria kuuntelemaan tätä painallusta:
+   1. **Kuuntele Enter-painallusta**. Muokkaa ikkunasi eventListeneria kuuntelemaan tätä painallusta:
 
     ```javascript
      else if(evt.key === "Enter") {
@@ -216,11 +216,11 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
 
 ## 🚀 Haaste
 
-Lisää ääni! Voitko lisätä äänen parantaaksesi pelikokemusta, esimerkiksi kun laser osuu, sankari kuolee tai voittaa? Tutustu tähän [sandboxiin](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) oppiaksesi, miten ääntä toistetaan JavaScriptillä.
+Lisää ääni! Voitko lisätä äänen parantaaksesi pelikokemusta, esimerkiksi kun laser osuu, sankari kuolee tai voittaa? Katso tämä [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) oppiaksesi, miten ääntä toistetaan JavaScriptillä.
 
-## Jälkiquiz
+## Jälkiluennon kysely
 
-[Jälkiquiz](https://ff-quizzes.netlify.app/web/quiz/40)
+[Jälkiluennon kysely](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Kertaus ja itseopiskelu
 

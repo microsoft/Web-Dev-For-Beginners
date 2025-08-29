@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-25T22:25:30+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T00:24:38+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "tr"
 }
@@ -16,23 +16,23 @@ CO_OP_TRANSLATOR_METADATA:
 Bu derste JavaScript ile lazer nasıl ateşlenir öğreneceksiniz! Oyunumuzda iki şey ekleyeceğiz:
 
 - **Bir lazer**: Bu lazer kahramanınızın gemisinden yukarı doğru ateşlenir.
-- **Çarpışma algılama**, ateş etme yeteneğini uygulamanın bir parçası olarak bazı güzel oyun kuralları ekleyeceğiz:
+- **Çarpışma algılama**: Ateş etme yeteneğini uygulamanın bir parçası olarak bazı güzel oyun kuralları ekleyeceğiz:
    - **Lazer düşmana çarpar**: Lazer bir düşmana çarptığında düşman yok olur.
    - **Lazer ekranın üst kısmına çarpar**: Lazer ekranın üst kısmına çarptığında yok olur.
    - **Düşman ve kahraman çarpışması**: Düşman ve kahraman birbirine çarptığında yok olur.
-   - **Düşman ekranın altına çarpar**: Düşman ekranın altına çarptığında düşman ve kahraman yok olur.
+   - **Düşman ekranın altına ulaşır**: Düşman ekranın altına ulaştığında hem düşman hem kahraman yok olur.
 
 Kısacası, siz -- *kahraman* -- düşmanlar ekranın altına ulaşmadan önce hepsini lazerle vurmalısınız.
 
-✅ İlk yazılan bilgisayar oyunu hakkında biraz araştırma yapın. İşlevselliği neydi?
+✅ İlk yazılan bilgisayar oyunu hakkında biraz araştırma yapın. İşlevi neydi?
 
-Haydi kahramanca olalım!
+Haydi kahramanca bir şeyler yapalım!
 
 ## Çarpışma Algılama
 
 Çarpışma algılamayı nasıl yaparız? Oyun nesnelerimizi hareket eden dikdörtgenler olarak düşünmemiz gerekiyor. Neden mi? Çünkü bir oyun nesnesini çizmek için kullanılan görüntü bir dikdörtgendir: `x`, `y`, `genişlik` ve `yükseklik` değerlerine sahiptir.
 
-Eğer iki dikdörtgen, yani bir kahraman ve bir düşman *kesişirse*, bir çarpışma meydana gelir. Bu durumda ne olacağı oyun kurallarına bağlıdır. Çarpışma algılamayı uygulamak için şu adımlara ihtiyacınız var:
+Eğer iki dikdörtgen, yani bir kahraman ve bir düşman *kesişirse*, bir çarpışma meydana gelir. Bu durumda ne olacağı oyunun kurallarına bağlıdır. Çarpışma algılamayı uygulamak için şu adımlara ihtiyacınız var:
 
 1. Bir oyun nesnesinin dikdörtgen temsilini elde etme yöntemi, şöyle bir şey:
 
@@ -60,14 +60,14 @@ Eğer iki dikdörtgen, yani bir kahraman ve bir düşman *kesişirse*, bir çarp
 
 ## Nesneleri Nasıl Yok Ederiz
 
-Bir oyunda nesneleri yok etmek için oyuna bu nesnenin artık belirli bir aralıkta tetiklenen oyun döngüsünde çizilmemesi gerektiğini bildirmeniz gerekir. Bunun bir yolu, bir olay meydana geldiğinde bir oyun nesnesini *ölü* olarak işaretlemektir, şöyle:
+Bir oyunda nesneleri yok etmek için oyuna artık bu nesneyi belirli bir aralıkta tetiklenen oyun döngüsünde çizmeyeceğini söylemeniz gerekir. Bunun bir yolu, bir olay meydana geldiğinde bir oyun nesnesini *ölü* olarak işaretlemektir, şöyle:
 
 ```javascript
 // collision happened
 enemy.dead = true
 ```
 
-Sonrasında ekranı yeniden çizerken *ölü* nesneleri ayıklayabilirsiniz, şöyle:
+Sonrasında ekranı yeniden çizmeye başlamadan önce *ölü* nesneleri ayıklayabilirsiniz, şöyle:
 
 ```javascript
 gameObjects = gameObject.filter(go => !go.dead);
@@ -79,11 +79,11 @@ Lazer ateşlemek, bir tuş olayına yanıt vermek ve belirli bir yönde hareket 
 
 1. **Bir lazer nesnesi oluşturun**: Kahraman geminizin üst kısmından, oluşturulduğu anda ekranın üst kısmına doğru hareket etmeye başlar.
 2. **Bir tuş olayına kod ekleyin**: Lazer ateşlemeyi temsil eden bir klavye tuşu seçmemiz gerekiyor.
-3. **Bir lazer gibi görünen bir oyun nesnesi oluşturun**: Tuş basıldığında.
+3. **Bir lazer gibi görünen bir oyun nesnesi oluşturun** tuş basıldığında.
 
 ## Lazer İçin Bekleme Süresi
 
-Lazer, örneğin *boşluk* tuşuna her basıldığında ateşlenmelidir. Oyunun kısa sürede çok fazla lazer üretmesini önlemek için bunu düzeltmemiz gerekiyor. Bu düzeltme, bir lazerin yalnızca belirli aralıklarla ateşlenmesini sağlayan bir *bekleme süresi* (cooldown) uygulayarak yapılabilir. Bunu şu şekilde uygulayabilirsiniz:
+Lazer, örneğin *boşluk* tuşuna bastığınızda her seferinde ateşlenmelidir. Ancak oyunun çok kısa sürede çok fazla lazer üretmesini önlemek için bunu düzeltmemiz gerekiyor. Bu düzeltme, bir lazerin yalnızca belirli aralıklarla ateşlenmesini sağlayan bir *bekleme süresi* (cooldown) uygulayarak yapılır. Bunu şu şekilde uygulayabilirsiniz:
 
 ```javascript
 class Cooldown {
@@ -111,7 +111,7 @@ class Weapon {
 
 ✅ Uzay oyunu serisinin 1. dersine göz atarak *bekleme süreleri* hakkında kendinizi hatırlatın.
 
-## Ne Yapılacak
+## Ne Yapacağız
 
 Önceki dersten aldığınız kodu (temizlenmiş ve yeniden düzenlenmiş olmalı) alıp genişleteceksiniz. İsterseniz II. bölümden kodla başlayabilir veya [III. Bölüm başlangıç kodu](../../../../../../../../../your-work) kullanabilirsiniz.
 
@@ -121,7 +121,7 @@ class Weapon {
    1. **Lazer düşmana çarpar**: lazer bir düşmana çarptığında düşman yok olur.
    2. **Lazer ekranın üst kısmına çarpar**: lazer ekranın üst kısmına çarptığında yok olur.
    3. **Düşman ve kahraman çarpışması**: düşman ve kahraman birbirine çarptığında yok olur.
-   4. **Düşman ekranın altına çarpar**: düşman ekranın altına çarptığında düşman ve kahraman yok olur.
+   4. **Düşman ekranın altına ulaşır**: düşman ekranın altına ulaştığında hem düşman hem kahraman yok olur.
 
 ## Önerilen Adımlar
 
@@ -137,7 +137,7 @@ class Weapon {
 -| package.json
 ```
 
-Projenizi `your_work` klasöründe şu komutla başlatın:
+Projenizi `your_work` klasöründe başlatmak için şu komutu yazın:
 
 ```bash
 cd your-work
@@ -209,8 +209,8 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
           })
           ```
 
-   1. **Nesneyi hareket ettirin**, Lazerin ekranın üst kısmına doğru kademeli olarak hareket etmesini sağlayın. Daha önce yaptığınız gibi `GameObject` sınıfını genişleten yeni bir Laser sınıfı oluşturacaksınız: 
-   
+   1. **Nesneyi hareket ettirin**, Lazerin ekranın üst kısmına doğru kademeli olarak hareket ettiğinden emin olun. Daha önce yaptığınız gibi `GameObject` sınıfını genişleten yeni bir Laser sınıfı oluşturacaksınız:
+
       ```javascript
         class Laser extends GameObject {
         constructor(x, y) {
@@ -285,13 +285,13 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
       }
       ```
 
-Bu noktada oyununuzda bazı işlevsellikler var! Ok tuşlarıyla hareket edebilir, boşluk tuşuyla lazer ateşleyebilir ve düşmanlara vurduğunuzda yok olmalarını sağlayabilirsiniz. Tebrikler!
+Bu noktada oyununuzda bazı işlevler olacak! Ok tuşlarıyla hareket edebilir, boşluk tuşuyla lazer ateşleyebilir ve düşmanları vurduğunuzda yok edebilirsiniz. Tebrikler!
 
 ---
 
 ## 🚀 Meydan Okuma
 
-Bir patlama ekleyin! [Uzay Sanatı deposundaki](../../../../6-space-game/solution/spaceArt/readme.txt) oyun varlıklarına göz atın ve bir lazer bir uzaylıya çarptığında bir patlama eklemeyi deneyin.
+Bir patlama ekleyin! [Uzay Sanatı deposundaki](../../../../6-space-game/solution/spaceArt/readme.txt) oyun varlıklarına göz atın ve lazer bir uzaylıya çarptığında bir patlama eklemeyi deneyin.
 
 ## Ders Sonrası Test
 
@@ -305,5 +305,7 @@ Bir patlama ekleyin! [Uzay Sanatı deposundaki](../../../../6-space-game/solutio
 
 [Çarpışmaları keşfedin](assignment.md)
 
+---
+
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul edilmez.

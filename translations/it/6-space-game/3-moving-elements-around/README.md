@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-25T22:13:22+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T00:07:05+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "it"
 }
 -->
-# Costruire un Gioco Spaziale Parte 3: Aggiungere Movimento
+# Costruire un Gioco Spaziale Parte 3: Aggiungere il Movimento
 
 ## Quiz Pre-Lezione
 
@@ -20,10 +20,10 @@ I giochi non sono molto divertenti finché non ci sono alieni che si muovono sul
 
 Quindi, come facciamo a muovere le cose sullo schermo? Tutto si basa sulle coordinate cartesiane: cambiamo la posizione (x, y) dell'oggetto e poi ridisegniamo lo schermo.
 
-Tipicamente, per ottenere il *movimento* sullo schermo, sono necessari i seguenti passaggi:
+Tipicamente, sono necessari i seguenti passaggi per ottenere il *movimento* sullo schermo:
 
-1. **Impostare una nuova posizione** per un oggetto; questo è necessario per percepire l'oggetto come se si fosse mosso.
-2. **Pulire lo schermo**, lo schermo deve essere pulito tra un disegno e l'altro. Possiamo farlo disegnando un rettangolo riempito con un colore di sfondo.
+1. **Impostare una nuova posizione** per un oggetto; questo è necessario per percepire che l'oggetto si è spostato.
+2. **Pulire lo schermo**, lo schermo deve essere ripulito tra un disegno e l'altro. Possiamo farlo disegnando un rettangolo riempito con un colore di sfondo.
 3. **Ridisegnare l'oggetto** nella nuova posizione. In questo modo riusciamo finalmente a spostare l'oggetto da una posizione all'altra.
 
 Ecco come potrebbe apparire in codice:
@@ -41,11 +41,11 @@ ctx.drawImage(heroImg, hero.x, hero.y);
 
 ✅ Riesci a pensare a un motivo per cui ridisegnare il tuo eroe molte volte al secondo potrebbe comportare costi di prestazioni? Leggi di più su [alternative a questo schema](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
-## Gestire eventi della tastiera
+## Gestire gli eventi della tastiera
 
-Gli eventi vengono gestiti collegando specifici eventi al codice. Gli eventi della tastiera vengono attivati sull'intera finestra, mentre gli eventi del mouse, come un `click`, possono essere collegati al clic su un elemento specifico. Utilizzeremo eventi della tastiera per tutto il progetto.
+Gli eventi vengono gestiti collegando eventi specifici al codice. Gli eventi della tastiera vengono attivati sull'intera finestra, mentre eventi del mouse come un `click` possono essere collegati al clic su un elemento specifico. Utilizzeremo eventi della tastiera in tutto questo progetto.
 
-Per gestire un evento, è necessario utilizzare il metodo `addEventListener()` della finestra e fornire due parametri di input. Il primo parametro è il nome dell'evento, ad esempio `keyup`. Il secondo parametro è la funzione che dovrebbe essere invocata quando l'evento si verifica.
+Per gestire un evento, è necessario utilizzare il metodo `addEventListener()` della finestra e fornirgli due parametri di input. Il primo parametro è il nome dell'evento, ad esempio `keyup`. Il secondo parametro è la funzione che dovrebbe essere invocata quando l'evento si verifica.
 
 Ecco un esempio:
 
@@ -60,14 +60,14 @@ window.addEventListener('keyup', (evt) => {
 
 Per gli eventi della tastiera ci sono due proprietà sull'evento che puoi utilizzare per vedere quale tasto è stato premuto:
 
-- `key`, questa è una rappresentazione in stringa del tasto premuto, ad esempio `ArrowUp`.
-- `keyCode`, questa è una rappresentazione numerica, ad esempio `37`, corrisponde a `ArrowLeft`.
+- `key`, questa è una rappresentazione in stringa del tasto premuto, ad esempio `ArrowUp`
+- `keyCode`, questa è una rappresentazione numerica, ad esempio `37`, che corrisponde a `ArrowLeft`.
 
-✅ La manipolazione degli eventi della tastiera è utile anche al di fuori dello sviluppo di giochi. Quali altri utilizzi riesci a immaginare per questa tecnica?
+✅ La manipolazione degli eventi della tastiera è utile anche al di fuori dello sviluppo di giochi. A quali altri usi puoi pensare per questa tecnica?
 
 ### Tasti speciali: una nota importante
 
-Ci sono alcuni *tasti speciali* che influenzano la finestra. Ciò significa che se stai ascoltando un evento `keyup` e utilizzi questi tasti speciali per muovere il tuo eroe, si verificherà anche uno scorrimento orizzontale. Per questo motivo potresti voler *disattivare* questo comportamento predefinito del browser mentre sviluppi il tuo gioco. Ti serve un codice come questo:
+Ci sono alcuni tasti *speciali* che influenzano la finestra. Ciò significa che se stai ascoltando un evento `keyup` e utilizzi questi tasti speciali per muovere il tuo eroe, si verificherà anche uno scorrimento orizzontale. Per questo motivo potresti voler *disattivare* questo comportamento predefinito del browser mentre sviluppi il tuo gioco. Ti serve un codice come questo:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -88,11 +88,11 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Il codice sopra garantirà che i tasti freccia e la barra spaziatrice abbiano il loro comportamento *predefinito* disattivato. Il meccanismo di *disattivazione* avviene quando chiamiamo `e.preventDefault()`.
+Il codice sopra assicurerà che i tasti freccia e la barra spaziatrice abbiano il loro comportamento *predefinito* disattivato. Il meccanismo di *disattivazione* avviene quando chiamiamo `e.preventDefault()`.
 
 ## Movimento indotto dal gioco
 
-Possiamo far muovere gli oggetti autonomamente utilizzando timer come le funzioni `setTimeout()` o `setInterval()` che aggiornano la posizione dell'oggetto a ogni intervallo di tempo. Ecco come potrebbe apparire:
+Possiamo far muovere le cose autonomamente utilizzando timer come le funzioni `setTimeout()` o `setInterval()` che aggiornano la posizione dell'oggetto a ogni intervallo di tempo. Ecco come potrebbe apparire:
 
 ```javascript
 let id = setInterval(() => {
@@ -103,7 +103,7 @@ let id = setInterval(() => {
 
 ## Il ciclo del gioco
 
-Il ciclo del gioco è un concetto che consiste essenzialmente in una funzione che viene invocata a intervalli regolari. Si chiama ciclo del gioco perché tutto ciò che dovrebbe essere visibile all'utente viene disegnato nel ciclo. Il ciclo del gioco utilizza tutti gli oggetti del gioco che fanno parte del gioco, disegnandoli tutti a meno che, per qualche motivo, non facciano più parte del gioco. Ad esempio, se un oggetto è un nemico colpito da un laser e esplode, non fa più parte del ciclo del gioco corrente (imparerai di più su questo nelle lezioni successive).
+Il ciclo del gioco è un concetto che consiste essenzialmente in una funzione invocata a intervalli regolari. Si chiama ciclo del gioco perché tutto ciò che dovrebbe essere visibile all'utente viene disegnato all'interno del ciclo. Il ciclo del gioco utilizza tutti gli oggetti di gioco che fanno parte del gioco, disegnandoli tutti a meno che, per qualche motivo, non debbano più farne parte. Ad esempio, se un oggetto è un nemico colpito da un laser e viene distrutto, non fa più parte del ciclo del gioco corrente (imparerai di più su questo nelle lezioni successive).
 
 Ecco come potrebbe apparire un ciclo del gioco, espresso in codice:
 
@@ -119,13 +119,13 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-Il ciclo sopra viene invocato ogni `200` millisecondi per ridisegnare il canvas. Hai la possibilità di scegliere l'intervallo migliore che ha senso per il tuo gioco.
+Il ciclo sopra viene invocato ogni `200` millisecondi per ridisegnare il canvas. Hai la possibilità di scegliere l'intervallo migliore per il tuo gioco.
 
 ## Continuare il Gioco Spaziale
 
 Prenderai il codice esistente e lo estenderai. Puoi iniziare con il codice che hai completato durante la parte I o utilizzare il codice in [Parte II - starter](../../../../6-space-game/3-moving-elements-around/your-work).
 
-- **Muovere l'eroe**: aggiungerai codice per assicurarti di poter muovere l'eroe utilizzando i tasti freccia.
+- **Muovere l'eroe**: aggiungerai codice per assicurarti di poter muovere l'eroe usando i tasti freccia.
 - **Muovere i nemici**: dovrai anche aggiungere codice per assicurarti che i nemici si muovano dall'alto verso il basso a una velocità definita.
 
 ## Passaggi consigliati
@@ -148,15 +148,15 @@ cd your-work
 npm start
 ```
 
-Il comando sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri un browser e inserisci quell'indirizzo, al momento dovrebbe mostrare l'eroe e tutti i nemici; nulla si muove - ancora!
+Il comando sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri un browser e inserisci quell'indirizzo; al momento dovrebbe mostrare l'eroe e tutti i nemici, ma nulla si muove - ancora!
 
-### Aggiungere codice
+### Aggiungi codice
 
-1. **Aggiungi oggetti dedicati** per `hero`, `enemy` e `game object`, che dovrebbero avere proprietà `x` e `y`. (Ricorda la parte su [Ereditarietà o composizione](../README.md)).
+1. **Aggiungi oggetti dedicati** per `hero`, `enemy` e `game object`, che dovrebbero avere proprietà `x` e `y`. (Ricorda la sezione su [Ereditarietà o composizione](../README.md)).
 
    *SUGGERIMENTO*: `game object` dovrebbe essere quello con `x` e `y` e la capacità di disegnarsi su un canvas.
 
-   > suggerimento: inizia aggiungendo una nuova classe GameObject con il suo costruttore delineato come segue, e poi disegnalo sul canvas:
+   >suggerimento: inizia aggiungendo una nuova classe GameObject con il suo costruttore delineato come segue, e poi disegnala sul canvas:
   
     ```javascript
         
@@ -205,11 +205,11 @@ Il comando sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. 
     }
     ```
 
-2. **Aggiungi gestori di eventi per i tasti** per gestire la navigazione (muovi l'eroe su/giù sinistra/destra).
+2. **Aggiungi gestori di eventi per i tasti** per gestire la navigazione tramite tasti (muovi l'eroe su/giù, sinistra/destra).
 
-   *RICORDA*: è un sistema cartesiano, in alto a sinistra è `0,0`. Ricorda anche di aggiungere codice per interrompere il *comportamento predefinito*.
+   *RICORDA*: è un sistema cartesiano, l'angolo in alto a sinistra è `0,0`. Ricorda anche di aggiungere codice per fermare il *comportamento predefinito*.
 
-   > suggerimento: crea la tua funzione onKeyDown e collegala alla finestra:
+   >suggerimento: crea la tua funzione onKeyDown e collegala alla finestra:
 
    ```javascript
     let onKeyDown = function (e) {
@@ -223,7 +223,7 @@ Il comando sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. 
     
    Controlla la console del tuo browser a questo punto e osserva i tasti premuti che vengono registrati.
 
-3. **Implementa** il [modello Pub/Sub](../README.md), questo manterrà il tuo codice pulito mentre segui le parti rimanenti.
+3. **Implementa** il [modello Pub-Sub](../README.md), questo manterrà il tuo codice pulito mentre segui le parti rimanenti.
 
    Per fare quest'ultima parte, puoi:
 
@@ -368,7 +368,7 @@ Il comando sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. 
     }
     ```
 
-    e infine, aggiungi una funzione `drawGameObjects()` per iniziare il disegno:
+    infine, aggiungi una funzione `drawGameObjects()` per iniziare il disegno:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -382,19 +382,21 @@ Il comando sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. 
 
 ## 🚀 Sfida
 
-Come puoi vedere, il tuo codice può trasformarsi in 'codice spaghetti' quando inizi ad aggiungere funzioni, variabili e classi. Come puoi organizzare meglio il tuo codice in modo che sia più leggibile? Disegna un sistema per organizzare il tuo codice, anche se risiede ancora in un unico file.
+Come puoi vedere, il tuo codice può trasformarsi in un "codice spaghetti" quando inizi ad aggiungere funzioni, variabili e classi. Come puoi organizzare meglio il tuo codice in modo che sia più leggibile? Disegna un sistema per organizzare il tuo codice, anche se risiede ancora in un unico file.
 
 ## Quiz Post-Lezione
 
 [Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/34)
 
-## Revisione & Studio Autonomo
+## Revisione e Studio Autonomo
 
-Anche se stiamo scrivendo il nostro gioco senza utilizzare framework, ci sono molti framework basati su JavaScript per lo sviluppo di giochi con canvas. Prenditi del tempo per fare [letture su questi](https://github.com/collections/javascript-game-engines).
+Anche se stiamo scrivendo il nostro gioco senza utilizzare framework, esistono molti framework basati su JavaScript per lo sviluppo di giochi con canvas. Dedica del tempo a fare [ricerche su questi](https://github.com/collections/javascript-game-engines).
 
 ## Compito
 
 [Commenta il tuo codice](assignment.md)
 
-**Disclaimer (Avvertenza)**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+---
+
+**Disclaimer**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.

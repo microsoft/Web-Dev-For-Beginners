@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-27T20:59:09+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-29T00:52:23+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "nl"
 }
 -->
 # Bouw een Bankapp Deel 3: Methoden voor het Ophalen en Gebruiken van Gegevens
 
-## Pre-Les Quiz
+## Pre-Lecture Quiz
 
-[Pre-les quiz](https://ff-quizzes.netlify.app/web/quiz/45)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introductie
 
-Aan de kern van elke webapplicatie staat *data*. Data kan vele vormen aannemen, maar het hoofddoel is altijd om informatie aan de gebruiker te tonen. Met webapps die steeds interactiever en complexer worden, is hoe de gebruiker toegang krijgt tot en interactie heeft met informatie een belangrijk onderdeel van webontwikkeling.
+Aan de kern van elke webapplicatie staat *data*. Data kan vele vormen aannemen, maar het hoofddoel is altijd om informatie aan de gebruiker te tonen. Nu webapps steeds interactiever en complexer worden, is de manier waarop gebruikers toegang krijgen tot en omgaan met informatie een belangrijk onderdeel van webontwikkeling.
 
-In deze les gaan we bekijken hoe we gegevens asynchroon van een server kunnen ophalen en deze gegevens kunnen gebruiken om informatie op een webpagina weer te geven zonder de HTML opnieuw te laden.
+In deze les gaan we zien hoe we gegevens asynchroon van een server kunnen ophalen en deze gegevens kunnen gebruiken om informatie op een webpagina weer te geven zonder de HTML opnieuw te laden.
 
 ### Vereisten
 
@@ -38,7 +38,7 @@ Traditionele websites werken de weergegeven inhoud bij wanneer de gebruiker een 
 
 ![Update workflow in een multi-page application](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.nl.png)
 
-Toen webapplicaties complexer en interactiever begonnen te worden, ontstond een nieuwe techniek genaamd [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Deze techniek stelt webapps in staat om gegevens asynchroon van een server te verzenden en op te halen met JavaScript, zonder de HTML-pagina opnieuw te laden, wat resulteert in snellere updates en soepelere gebruikersinteracties. Wanneer nieuwe gegevens van de server worden ontvangen, kan de huidige HTML-pagina ook worden bijgewerkt met JavaScript via de [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API. In de loop van de tijd is deze aanpak geëvolueerd tot wat nu een [*Single-Page Application* of *SPA*](https://en.wikipedia.org/wiki/Single-page_application) wordt genoemd.
+Toen webapplicaties complexer en interactiever begonnen te worden, ontstond een nieuwe techniek genaamd [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Deze techniek stelt webapps in staat om gegevens asynchroon van een server te verzenden en op te halen met JavaScript, zonder de HTML-pagina opnieuw te laden, wat resulteert in snellere updates en soepelere gebruikersinteracties. Wanneer nieuwe gegevens van de server worden ontvangen, kan de huidige HTML-pagina ook worden bijgewerkt met JavaScript via de [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API. Na verloop van tijd is deze aanpak geëvolueerd tot wat nu een [*Single-Page Application* of *SPA*](https://en.wikipedia.org/wiki/Single-page_application) wordt genoemd.
 
 ![Update workflow in een single-page application](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.nl.png)
 
@@ -59,7 +59,7 @@ async function login() {
 
 Hier beginnen we met het ophalen van het formulier-element met `getElementById()`, en vervolgens halen we de gebruikersnaam op uit de invoer met `loginForm.user.value`. Elk formuliercontrole-element kan worden benaderd via zijn naam (ingesteld in de HTML met het `name`-attribuut) als een eigenschap van het formulier.
 
-Net zoals we deden voor de registratie, maken we een andere functie om een serververzoek uit te voeren, maar deze keer om de accountgegevens op te halen:
+Net zoals we deden voor de registratie, maken we een andere functie om een serveraanvraag uit te voeren, maar deze keer om de accountgegevens op te halen:
 
 ```js
 async function getAccount(user) {
@@ -72,7 +72,7 @@ async function getAccount(user) {
 }
 ```
 
-We gebruiken de `fetch` API om de gegevens asynchroon van de server op te halen, maar deze keer hebben we geen extra parameters nodig behalve de URL die we willen aanroepen, omdat we alleen gegevens opvragen. Standaard maakt `fetch` een [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP-verzoek, wat precies is wat we hier nodig hebben.
+We gebruiken de `fetch` API om de gegevens asynchroon van de server op te halen, maar deze keer hebben we geen extra parameters nodig behalve de URL die we willen aanroepen, omdat we alleen gegevens opvragen. Standaard maakt `fetch` een [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP-aanvraag, wat precies is wat we hier nodig hebben.
 
 ✅ `encodeURIComponent()` is een functie die speciale tekens voor een URL ontsnapt. Welke problemen zouden we kunnen tegenkomen als we deze functie niet aanroepen en de `user`-waarde direct in de URL gebruiken?
 
@@ -93,9 +93,9 @@ async function login() {
 }
 ```
 
-Omdat `getAccount` een asynchrone functie is, moeten we deze combineren met het `await`-keyword om te wachten op het serverresultaat. Zoals bij elk serververzoek, moeten we ook omgaan met foutgevallen. Voor nu voegen we alleen een logbericht toe om de fout weer te geven en komen we hier later op terug.
+Omdat `getAccount` een asynchrone functie is, moeten we deze combineren met het `await`-keyword om te wachten op het serverresultaat. Zoals bij elke serveraanvraag, moeten we ook omgaan met foutgevallen. Voor nu voegen we alleen een logbericht toe om de fout weer te geven en komen we hier later op terug.
 
-Vervolgens moeten we de gegevens ergens opslaan zodat we ze later kunnen gebruiken om de dashboardinformatie weer te geven. Omdat de `account`-variabele nog niet bestaat, maken we een globale variabele bovenaan ons bestand:
+Vervolgens moeten we de gegevens ergens opslaan zodat we deze later kunnen gebruiken om de dashboardinformatie weer te geven. Aangezien de variabele `account` nog niet bestaat, maken we een globale variabele bovenaan ons bestand:
 
 ```js
 let account = null;
@@ -118,7 +118,7 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ Wist je dat je standaard alleen server-API's kunt aanroepen vanaf hetzelfde domein en dezelfde poort als de webpagina die je bekijkt? Dit is een beveiligingsmechanisme dat door browsers wordt afgedwongen. Maar wacht, onze webapp draait op `localhost:3000` terwijl de server-API draait op `localhost:5000`, waarom werkt het dan? Door gebruik te maken van een techniek genaamd [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), is het mogelijk om cross-origin HTTP-verzoeken uit te voeren als de server speciale headers toevoegt aan de respons, waardoor uitzonderingen voor specifieke domeinen worden toegestaan.
+✅ Wist je dat je standaard alleen server-API's kunt aanroepen vanaf hetzelfde domein en dezelfde poort als de webpagina die je bekijkt? Dit is een beveiligingsmechanisme dat door browsers wordt afgedwongen. Maar wacht, onze webapp draait op `localhost:3000` terwijl de server-API draait op `localhost:5000`, waarom werkt het dan? Door gebruik te maken van een techniek genaamd [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), is het mogelijk om cross-origin HTTP-aanvragen uit te voeren als de server speciale headers toevoegt aan de respons, waardoor uitzonderingen voor specifieke domeinen worden toegestaan.
 
 > Leer meer over API's door deze [les](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon) te volgen.
 
@@ -130,11 +130,11 @@ Nu we de gebruikersgegevens hebben, moeten we de bestaande HTML bijwerken om dez
 
 - Met [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) in combinatie met de [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-methode kun je een of meer nieuwe kindelementen maken en toevoegen.
 
-✅ Met de [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML)-eigenschap van een element is het ook mogelijk om de HTML-inhoud te wijzigen, maar deze moet worden vermeden omdat het kwetsbaar is voor [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting)-aanvallen.
+✅ Met de [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML)-eigenschap van een element is het ook mogelijk om de HTML-inhoud ervan te wijzigen, maar deze moet worden vermeden omdat het kwetsbaar is voor [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting)-aanvallen.
 
 ### Taak
 
-Voordat we verder gaan met het dashboard-scherm, moeten we nog iets doen op de *login*-pagina. Momenteel, als je probeert in te loggen met een gebruikersnaam die niet bestaat, wordt er een bericht weergegeven in de console, maar voor een normale gebruiker verandert er niets en weet je niet wat er aan de hand is.
+Voordat we verder gaan met het dashboard-scherm, is er nog iets dat we moeten doen op de *login*-pagina. Op dit moment, als je probeert in te loggen met een gebruikersnaam die niet bestaat, wordt er een bericht weergegeven in de console, maar voor een normale gebruiker verandert er niets en weet je niet wat er aan de hand is.
 
 Laten we een placeholder-element toevoegen in het loginformulier waar we indien nodig een foutmelding kunnen weergeven. Een goede plek zou net voor de login-`<button>` zijn:
 
@@ -178,7 +178,7 @@ Implementeer hetzelfde gedrag voor de fouten in de `register`-functie (vergeet n
 
 ## Informatie weergeven op het dashboard
 
-Met dezelfde technieken die we zojuist hebben gezien, gaan we ook de accountinformatie weergeven op de dashboardpagina.
+Met dezelfde technieken die we zojuist hebben gezien, gaan we ook de accountinformatie op het dashboard weergeven.
 
 Dit is hoe een accountobject dat van de server wordt ontvangen eruitziet:
 
@@ -214,7 +214,7 @@ We voegen ook een nieuwe sectie toe net eronder om de accountbeschrijving weer t
 <h2 id="description"></h2>
 ```
 
-✅ Omdat de accountbeschrijving functioneert als een titel voor de inhoud eronder, is deze semantisch gemarkeerd als een heading. Leer meer over hoe [heading-structuur](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) belangrijk is voor toegankelijkheid, en bekijk de pagina kritisch om te bepalen wat nog meer een heading zou kunnen zijn.
+✅ Omdat de accountbeschrijving functioneert als een titel voor de inhoud eronder, wordt deze semantisch gemarkeerd als een heading. Leer meer over hoe [heading-structuur](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) belangrijk is voor toegankelijkheid, en bekijk de pagina kritisch om te bepalen wat nog meer een heading zou kunnen zijn.
 
 Vervolgens maken we een nieuwe functie in `app.js` om de placeholder in te vullen:
 
@@ -297,7 +297,7 @@ function createTransactionRow(transaction) {
 }
 ```
 
-Deze functie doet precies wat de naam impliceert: met behulp van de sjabloon die we eerder hebben gemaakt, maakt het een nieuwe tabelrij en vult het de inhoud in met transactiegegevens. We gaan dit gebruiken in onze `updateDashboard()`-functie om de tabel in te vullen:
+Deze functie doet precies wat de naam aangeeft: met behulp van de sjabloon die we eerder hebben gemaakt, maakt het een nieuwe tabelrij en vult deze in met transactiegegevens. We gaan dit gebruiken in onze `updateDashboard()`-functie om de tabel in te vullen:
 
 ```js
 const transactionsRows = document.createDocumentFragment();
@@ -320,7 +320,7 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-We gebruiken de [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-methode omdat deze het mogelijk maakt om zowel tekst als [DOM Nodes](https://developer.mozilla.org/docs/Web/API/Node) aan een ouderelement toe te voegen, wat perfect is voor al onze gebruiksscenario's.
+We gebruiken de [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-methode omdat deze het mogelijk maakt om zowel tekst als [DOM Nodes](https://developer.mozilla.org/docs/Web/API/Node) aan een ouderelement te koppelen, wat perfect is voor al onze gebruiksscenario's.
 Als je probeert in te loggen met het `test` account, zou je nu een transactielijst op het dashboard moeten zien 🎉.
 
 ---
@@ -344,4 +344,4 @@ Hier is een voorbeeld van een gestylede dashboardpagina:
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

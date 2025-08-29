@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-27T20:09:59+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T00:45:07+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "fi"
 }
 -->
-# Terrarium-projekti, osa 2: Johdatus CSS:ään
+# Terrarium-projekti Osa 2: Johdatus CSS:ään
 
-![Johdatus CSS:ään](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.fi.png)  
+![Johdatus CSS:ään](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.fi.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ennakkokysely
@@ -18,20 +18,20 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Johdanto
 
-CSS eli Cascading Style Sheets ratkaisee tärkeän ongelman verkkokehityksessä: miten saada verkkosivustosi näyttämään hyvältä. Sovellusten tyylittely tekee niistä käytettävämpiä ja visuaalisesti miellyttävämpiä; CSS:ää voidaan myös käyttää luomaan responsiivista verkkosuunnittelua (Responsive Web Design, RWD), jolloin sovellukset näyttävät hyviltä riippumatta siitä, minkä kokoisella näytöllä niitä käytetään. CSS ei ole pelkästään ulkonäön parantamista varten; sen määrittely sisältää myös animaatioita ja muunnoksia, jotka mahdollistavat kehittyneitä vuorovaikutuksia sovelluksissasi. CSS Working Group ylläpitää nykyisiä CSS-määrittelyjä; voit seurata heidän työtään [World Wide Web Consortiumin sivustolla](https://www.w3.org/Style/CSS/members).
+CSS eli Cascading Style Sheets ratkaisee tärkeän ongelman verkkosivujen kehityksessä: miten saada verkkosivusto näyttämään hyvältä. Sovellusten tyylittely tekee niistä käytettävämpiä ja visuaalisesti miellyttävämpiä; CSS:ää voidaan myös käyttää luomaan responsiivista verkkosuunnittelua (RWD), jolloin sovellukset näyttävät hyviltä riippumatta näytön koosta. CSS ei ole pelkästään ulkoasun parantamista varten; sen määrittely sisältää animaatioita ja muunnoksia, jotka mahdollistavat kehittyneitä vuorovaikutuksia sovelluksille. CSS Working Group ylläpitää nykyisiä CSS-määrittelyjä; voit seurata heidän työtään [World Wide Web Consortiumin sivustolla](https://www.w3.org/Style/CSS/members).
 
-> Huomaa, että CSS on kieli, joka kehittyy kuten kaikki muutkin verkkoteknologiat, eikä kaikki selaimet tue uusimpia määrittelyn osia. Tarkista aina toteutuksesi [CanIUse.com](https://caniuse.com)-sivustolta.
+> Huomaa, että CSS on kehittyvä kieli, kuten kaikki verkkoteknologiat, eikä kaikki selaimet tue uusimpia määrittelyjä. Tarkista aina toteutuksesi [CanIUse.com](https://caniuse.com) -sivustolta.
 
-Tässä oppitunnissa lisäämme tyylejä verkkoterrariumiimme ja opimme lisää useista CSS-käsitteistä: kaskadista, periytymisestä sekä valitsimien, asemoinnin ja CSS:n avulla tehtävien asettelujen käytöstä. Samalla rakennamme terrariumin asettelun ja luomme itse terrariumin.
+Tässä oppitunnissa lisäämme tyylejä verkkoterrariumiimme ja opimme lisää useista CSS-konsepteista: kaskadista, periytymisestä sekä valitsimien, asemoinnin ja CSS:n käytöstä asettelujen rakentamiseen. Samalla asetamme terrariumin ja luomme itse terrariumin.
 
-### Esitiedot
+### Esitietovaatimukset
 
-Sinulla tulisi olla terrariumisi HTML valmiina tyylittelyä varten.
+Sinulla tulisi olla HTML-tiedosto terrariumillesi valmiina tyyliteltäväksi.
 
 > Katso video
 
 > 
-> [![Git- ja GitHub-perusteet -video](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
+> [![Git ja GitHub perusteet -video](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
 
 ### Tehtävä
 
@@ -45,11 +45,11 @@ Luo terrarium-kansioosi uusi tiedosto nimeltä `style.css`. Tuo tämä tiedosto 
 
 ## Kaskadi
 
-Cascading Style Sheets sisältää ajatuksen siitä, että tyylit "kaskadoituvat", eli tyylin soveltaminen määräytyy sen prioriteetin mukaan. Verkkosivuston tekijän määrittämät tyylit ovat etusijalla selaimen oletustyyleihin nähden. "Inline"-tyylit ovat etusijalla ulkoisessa tyylitiedostossa määritettyihin tyyleihin nähden.
+Cascading Style Sheets sisältää ajatuksen, että tyylit "kaskadoituvat", jolloin tyylin soveltaminen määräytyy sen prioriteetin mukaan. Verkkosivuston tekijän määrittämät tyylit ovat etusijalla selaimen määrittämiin tyyleihin nähden. "Inline"-tyylit ovat etusijalla ulkoisessa tyylitiedostossa määritettyihin tyyleihin nähden.
 
 ### Tehtävä
 
-Lisää "inline"-tyyli "color: red" `<h1>`-tagiisi:
+Lisää "inline"-tyyli "color: red" `<h1>`-tunnisteeseesi:
 
 ```HTML
 <h1 style="color: red">My Terrarium</h1>
@@ -63,17 +63,17 @@ h1 {
 }
 ```
 
-✅ Mikä väri näkyy verkkosovelluksessasi? Miksi? Voitko löytää tavan ohittaa tyylit? Milloin haluaisit tehdä näin, tai miksi et?
+✅ Mikä väri näkyy verkkosovelluksessasi? Miksi? Voitko löytää tavan ohittaa tyylit? Milloin haluaisit tehdä tämän, tai miksi et?
 
 ---
 
 ## Periytyminen
 
-Tyylit periytyvät esivanhemmalta jälkeläiselle, eli sisäkkäiset elementit perivät vanhempiensa tyylit.
+Tyylit periytyvät esivanhemmalta jälkeläiselle, jolloin sisäkkäiset elementit perivät vanhempiensa tyylit.
 
 ### Tehtävä
 
-Aseta bodylle tietty fontti ja tarkista, periytyykö fontti sisäkkäiselle elementille:
+Aseta body-tunnisteen fontti tiettyyn fonttiin ja tarkista sisäkkäisen elementin fontti:
 
 ```CSS
 body {
@@ -81,7 +81,7 @@ body {
 }
 ```
 
-Avaa selaimesi konsolista 'Elements'-välilehti ja tarkkaile H1:n fonttia. Se perii fonttinsa bodysta, kuten selain ilmoittaa:
+Avaa selaimesi konsoli ja siirry 'Elements'-välilehteen. Tarkkaile H1:n fonttia. Se perii fonttinsa body-tunnisteesta, kuten selaimessa ilmoitetaan:
 
 ![peritty fontti](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.fi.png)
 
@@ -91,9 +91,9 @@ Avaa selaimesi konsolista 'Elements'-välilehti ja tarkkaile H1:n fonttia. Se pe
 
 ## CSS-valitsimet
 
-### Tagit
+### Tunnisteet
 
-Tähän mennessä `style.css`-tiedostossasi on vain muutama tagi tyyliteltynä, ja sovellus näyttää melko oudolta:
+Tähän mennessä `style.css`-tiedostossasi on vain muutama tunniste tyyliteltynä, ja sovellus näyttää melko oudolta:
 
 ```CSS
 body {
@@ -106,11 +106,11 @@ h1 {
 }
 ```
 
-Tällä tavalla tagin tyylittely antaa sinulle hallinnan yksittäisiin elementteihin, mutta sinun täytyy hallita monien kasvien tyylejä terrariumissasi. Tätä varten sinun täytyy hyödyntää CSS-valitsimia.
+Tämä tapa tyylitellä tunniste antaa sinulle hallinnan yksittäisiin elementteihin, mutta sinun täytyy hallita monien kasvien tyylejä terrariumissasi. Tätä varten sinun täytyy hyödyntää CSS-valitsimia.
 
 ### Id:t
 
-Lisää tyyliä asettelemaan vasen ja oikea säilö. Koska merkinnässä on vain yksi vasen säilö ja yksi oikea säilö, niille on annettu id:t. Tyylittele niitä käyttämällä `#`:
+Lisää tyyliä vasemman ja oikean säiliön asetteluun. Koska on vain yksi vasen säiliö ja yksi oikea säiliö, niille annetaan id:t merkinnässä. Tyylittele niitä käyttämällä `#`:
 
 ```CSS
 #left-container {
@@ -134,9 +134,9 @@ Lisää tyyliä asettelemaan vasen ja oikea säilö. Koska merkinnässä on vain
 }
 ```
 
-Tässä olet asettanut nämä säilöt absoluuttisella asemoinnilla aivan näytön vasempaan ja oikeaan reunaan ja käyttänyt prosentteja niiden leveydelle, jotta ne voivat mukautua pienille mobiilinäytöille.
+Tässä olet sijoittanut nämä säiliöt absoluuttisella asemoinnilla näytön vasempaan ja oikeaan reunaan ja käyttänyt prosentteja niiden leveydessä, jotta ne voivat skaalautua pienille mobiilinäytöille.
 
-✅ Tämä koodi on melko toistuvaa, joten se ei ole "DRY" (Don't Repeat Yourself); voitko löytää paremman tavan tyylitellä näitä id:itä, ehkä yhdistämällä id:n ja luokan? Sinun täytyisi muuttaa merkintää ja refaktoroida CSS:
+✅ Tämä koodi on melko toistuva, eikä siis "DRY" (Don't Repeat Yourself); voitko löytää paremman tavan tyylitellä näitä id:itä, ehkä id:n ja luokan avulla? Sinun täytyisi muuttaa merkintää ja refaktoroida CSS:
 
 ```html
 <div id="left-container" class="container"></div>
@@ -144,9 +144,9 @@ Tässä olet asettanut nämä säilöt absoluuttisella asemoinnilla aivan näyt�
 
 ### Luokat
 
-Yllä olevassa esimerkissä tyylittelit kahta ainutlaatuista elementtiä näytöllä. Jos haluat tyylien koskevan monia elementtejä näytöllä, voit käyttää CSS-luokkia. Tee näin asettelemaan kasvit vasemmassa ja oikeassa säilössä.
+Yllä olevassa esimerkissä tyylittelit kaksi yksittäistä elementtiä näytöllä. Jos haluat tyylien koskevan monia elementtejä näytöllä, voit käyttää CSS-luokkia. Tee tämä asettaaksesi kasvit vasemman ja oikean säiliön sisälle.
 
-Huomaa, että jokaisella kasvilla HTML-merkinnässä on yhdistelmä id:itä ja luokkia. Id:tä käytetään tässä myöhemmin lisättävän JavaScriptin avulla manipuloimaan terrariumin kasvien sijoittelua. Luokat taas antavat kaikille kasveille tietyn tyylin.
+Huomaa, että jokaisella kasvilla HTML-merkinnässä on yhdistelmä id:itä ja luokkia. Id:t tässä käytetään myöhemmin lisättävän JavaScriptin avulla manipuloimaan terrariumin kasvien sijoittelua. Luokat taas antavat kaikille kasveille tietyn tyylin.
 
 ```html
 <div class="plant-holder">
@@ -171,35 +171,35 @@ Lisää seuraava `style.css`-tiedostoosi:
 }
 ```
 
-Tässä koodinpätkässä on huomionarvoista suhteellisen ja absoluuttisen asemoinnin yhdistelmä, jota käsitellään seuraavassa osiossa. Tarkastele tapaa, jolla korkeuksia käsitellään prosentteina:
+Huomionarvoista tässä koodissa on suhteellisen ja absoluuttisen asemoinnin sekoittaminen, jota käsitellään seuraavassa osiossa. Tarkastele tapaa, jolla korkeudet käsitellään prosentteina:
 
-Olet asettanut kasvien säilön korkeudeksi 13 %, mikä on hyvä luku varmistaaksesi, että kaikki kasvit näkyvät pystysuorassa säilössä ilman tarvetta vierittää.
+Asetat kasvien pidikkeen korkeudeksi 13 %, mikä on hyvä luku, jotta kaikki kasvit näkyvät pystysuorassa säiliössä ilman tarvetta vierittää.
 
-Olet siirtänyt kasvien säilöä vasemmalle, jotta kasvit olisivat paremmin keskitettyjä säilöönsä. Kuvilla on paljon läpinäkyvää taustaa, jotta ne olisivat helpommin vedettäviä, joten ne täytyy siirtää vasemmalle, jotta ne sopivat paremmin näytölle.
+Kasvien pidike siirretään vasemmalle, jotta kasvit ovat paremmin keskitettyinä säiliön sisällä. Kuvilla on suuri määrä läpinäkyvää taustaa, jotta ne ovat helpommin vedettäviä, joten ne täytyy siirtää vasemmalle, jotta ne sopivat paremmin näytölle.
 
-Kasville itselleen on annettu enimmäisleveys 150 %. Tämä mahdollistaa sen skaalautumisen alaspäin selaimen pienentyessä. Kokeile muuttaa selaimesi kokoa; kasvit pysyvät säilöissään mutta skaalautuvat sopimaan.
+Kasville itselleen annetaan enimmäisleveys 150 %. Tämä mahdollistaa sen skaalautumisen alas, kun selain skaalautuu alas. Kokeile muuttaa selaimesi kokoa; kasvit pysyvät säiliöissään mutta skaalautuvat alas sopimaan.
 
-Huomionarvoista on myös z-indeksin käyttö, joka hallitsee elementin suhteellista korkeutta (jotta kasvit istuvat säilön päällä ja näyttävät olevan terrariumin sisällä).
+Huomionarvoista on myös z-indeksin käyttö, joka hallitsee elementin suhteellista korkeutta (jotta kasvit istuvat säiliön päällä ja näyttävät olevan terrariumin sisällä).
 
-✅ Miksi tarvitset sekä kasvien säilön että kasvin CSS-valitsimen?
+✅ Miksi tarvitset sekä kasvien pidikkeen että kasvin CSS-valitsimen?
 
 ## CSS-asemointi
 
-Eri asemointiominaisuuksien (staattinen, suhteellinen, kiinteä, absoluuttinen ja tahmea asemointi) yhdistäminen voi olla hieman hankalaa, mutta kun se tehdään oikein, se antaa sinulle hyvän hallinnan sivujesi elementteihin.
+Eri asemointiominaisuuksien (staattinen, suhteellinen, kiinteä, absoluuttinen ja tahmea asemointi) yhdistäminen voi olla hieman hankalaa, mutta kun se tehdään oikein, se antaa hyvän hallinnan elementteihin sivuillasi.
 
-Absoluuttisesti asemoidut elementit asemoidaan lähimpään asemoituun esivanhempaansa nähden, ja jos sellaista ei ole, ne asemoidaan dokumentin runkoon nähden.
+Absoluuttisesti asemoidut elementit asemoidaan lähimpään asemoituun esivanhempaan, ja jos sellaista ei ole, ne asemoidaan asiakirjan runkoon.
 
-Suhteellisesti asemoidut elementit asemoidaan CSS:n ohjeiden mukaan siirtymään pois alkuperäisestä sijainnistaan.
+Suhteellisesti asemoidut elementit asemoidaan CSS:n ohjeiden mukaan siirtämään niiden sijoittelua pois alkuperäisestä sijainnistaan.
 
-Esimerkissämme `plant-holder` on suhteellisesti asemoitu elementti, joka on asemoitu absoluuttisesti asemoidun säilön sisällä. Tuloksena on, että sivupalkkisäilöt on kiinnitetty vasemmalle ja oikealle, ja `plant-holder` on sisäkkäinen, mukautuen sivupalkkien sisällä ja antaen tilaa kasvien sijoittamiselle pystysuoraan riviin.
+Esimerkissämme `plant-holder` on suhteellisesti asemoitu elementti, joka asemoidaan absoluuttisesti asemoidun säiliön sisälle. Tuloksena on, että sivupalkkisäiliöt kiinnitetään vasemmalle ja oikealle, ja `plant-holder` on sisäkkäinen, mukautuen sivupalkkien sisälle ja antaen tilaa kasvien sijoittamiselle pystysuoraan riviin.
 
-> Itse `plant` on myös absoluuttisesti asemoitu, mikä on tarpeen sen vedettävyyden mahdollistamiseksi, kuten huomaat seuraavassa oppitunnissa.
+> `plant` itse on myös absoluuttisesti asemoitu, mikä on välttämätöntä sen vedettävyyden kannalta, kuten huomaat seuraavassa oppitunnissa.
 
-✅ Kokeile vaihtaa sivusäilöjen ja `plant-holder`-elementin asemointityyppejä. Mitä tapahtuu?
+✅ Kokeile vaihtaa sivusäiliöiden ja kasvien pidikkeen asemointityyppejä. Mitä tapahtuu?
 
 ## CSS-asettelut
 
-Nyt käytät oppimaasi rakentaaksesi itse terrariumin, täysin CSS:n avulla!
+Nyt käytät oppimaasi rakentaaksesi terrariumin kokonaan CSS:n avulla!
 
 Tyylittele ensin `.terrarium`-divin lapset pyöristetyksi suorakulmioksi CSS:n avulla:
 
@@ -250,9 +250,9 @@ Tyylittele ensin `.terrarium`-divin lapset pyöristetyksi suorakulmioksi CSS:n a
 }
 ```
 
-Huomaa prosenttien käyttö tässä. Jos pienennät selaintasi, näet, kuinka purkki skaalautuu. Huomaa myös purkkielementtien leveys- ja korkeuspisteet sekä se, kuinka jokainen elementti on absoluuttisesti asemoitu keskelle ja kiinnitetty näkymän alareunaan.
+Huomaa prosenttien käyttö tässä. Jos pienennät selaintasi, näet kuinka purkki skaalautuu myös. Huomaa myös purkin elementtien leveys- ja korkeuspisteet sekä kuinka kukin elementti asemoidaan absoluuttisesti keskelle ja kiinnitetään näkymän alareunaan.
 
-Käytämme myös `rem`-yksikköä border-radius-ominaisuudessa, joka on fonttiin suhteutettu mitta. Lue lisää tästä suhteellisesta mittayksiköstä [CSS-määrittelystä](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
+Käytämme myös `rem`-yksikköä border-radiusissa, joka on fonttiin suhteutettu mitta. Lue lisää tästä suhteellisesta mittayksiköstä [CSS-määrittelyssä](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
 ✅ Kokeile muuttaa purkin värejä ja läpinäkyvyyttä verrattuna maahan. Mitä tapahtuu? Miksi?
 
@@ -260,7 +260,7 @@ Käytämme myös `rem`-yksikköä border-radius-ominaisuudessa, joka on fonttiin
 
 ## 🚀Haaste
 
-Lisää "kuplamainen" kiilto purkin vasempaan alareunaan, jotta se näyttäisi lasimaisemmalta. Tyylittele `.jar-glossy-long` ja `.jar-glossy-short` näyttämään heijastavalta kiillolta. Tässä on esimerkki lopputuloksesta:
+Lisää 'kupla'-kiilto purkin vasempaan alareunaan, jotta se näyttää lasimaisemmalta. Tyylittele `.jar-glossy-long` ja `.jar-glossy-short` näyttämään heijastavalta kiillolta. Tässä on esimerkkikuva:
 
 ![valmis terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.fi.png)
 
@@ -272,7 +272,7 @@ Suorita jälkikysely käymällä läpi tämä Learn-moduuli: [Tyylittele HTML-so
 
 ## Kertaus ja itseopiskelu
 
-CSS vaikuttaa petollisen yksinkertaiselta, mutta täydellisen sovelluksen tyylittely kaikille selaimille ja kaikille näytön kokoille voi olla haastavaa. CSS-Grid ja Flexbox ovat työkaluja, jotka on kehitetty tekemään työstä hieman rakenteellisempaa ja luotettavampaa. Opi näistä työkaluista pelaamalla [Flexbox Froggy](https://flexboxfroggy.com/) ja [Grid Garden](https://codepip.com/games/grid-garden/).
+CSS vaikuttaa petollisen yksinkertaiselta, mutta sovelluksen täydellinen tyylittely kaikille selaimille ja näytön kokoille voi olla haastavaa. CSS-Grid ja Flexbox ovat työkaluja, jotka on kehitetty tekemään työstä hieman rakenteellisempaa ja luotettavampaa. Tutustu näihin työkaluihin pelaamalla [Flexbox Froggy](https://flexboxfroggy.com/) ja [Grid Garden](https://codepip.com/games/grid-garden/).
 
 ## Tehtävä
 
@@ -281,4 +281,4 @@ CSS vaikuttaa petollisen yksinkertaiselta, mutta täydellisen sovelluksen tyylit
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

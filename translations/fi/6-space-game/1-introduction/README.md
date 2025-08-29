@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-27T20:28:00+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T00:42:15+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "fi"
 }
@@ -11,34 +11,34 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![video](../../../../6-space-game/images/pewpew.gif)
 
-## Ennakko-oppituntivisa
+## Ennakkotesti
 
-[Ennakko-oppituntivisa](https://ff-quizzes.netlify.app/web/quiz/29)
+[Ennakkotesti](https://ff-quizzes.netlify.app/web/quiz/29)
 
-### Periytyminen ja koostaminen pelikehityksessä
+### Perintä ja koostaminen pelikehityksessä
 
-Aiemmissa oppitunneissa ei ollut juurikaan tarvetta huolehtia sovellusten suunnitteluarkkitehtuurista, koska projektit olivat hyvin pienimuotoisia. Kuitenkin, kun sovelluksesi kasvavat kooltaan ja laajuudeltaan, arkkitehtuuriset päätökset tulevat tärkeämmiksi. JavaScriptissä on kaksi pääasiallista lähestymistapaa suurempien sovellusten luomiseen: *koostaminen* tai *periytyminen*. Molemmilla on omat hyvät ja huonot puolensa, mutta selitetään ne pelin kontekstissa.
+Aiemmissa oppitunneissa ei ollut juurikaan tarvetta huolehtia sovellusten suunnitteluarkkitehtuurista, koska projektit olivat hyvin pienimuotoisia. Kuitenkin, kun sovelluksesi kasvavat kooltaan ja laajuudeltaan, arkkitehtuuriset päätökset tulevat tärkeämmiksi. JavaScriptissä on kaksi pääasiallista lähestymistapaa suurempien sovellusten luomiseen: *koostaminen* tai *perintä*. Molemmilla on omat hyvät ja huonot puolensa, mutta selitetään ne pelin kontekstissa.
 
-✅ Yksi kuuluisimmista ohjelmointikirjoista käsittelee [suunnittelumalleja](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Yksi tunnetuimmista ohjelmointikirjoista käsittelee [suunnittelumalleja](https://en.wikipedia.org/wiki/Design_Patterns).
 
-Pelissä sinulla on `pelin objektit`, jotka ovat näytöllä näkyviä objekteja. Tämä tarkoittaa, että niillä on sijainti kartesisessa koordinaatistossa, joka määritellään `x`- ja `y`-koordinaateilla. Kun kehität peliä, huomaat, että kaikilla pelin objekteilla on yhteinen ominaisuus, joka on standardi jokaisessa pelissä, nimittäin elementit, jotka ovat:
+Pelissä sinulla on `pelin objektit`, jotka ovat objekteja, jotka näkyvät näytöllä. Tämä tarkoittaa, että niillä on sijainti koordinaatistossa, joka määritellään `x`- ja `y`-koordinaateilla. Kun kehität peliä, huomaat, että kaikilla pelin objekteilla on tiettyjä yhteisiä ominaisuuksia, jotka ovat yleisiä kaikille peleille, kuten:
 
-- **sijaintiin perustuvia** Useimmat, ellei kaikki, pelin elementit perustuvat sijaintiin. Tämä tarkoittaa, että niillä on sijainti, `x` ja `y`.
-- **liikkuvia** Nämä ovat objekteja, jotka voivat siirtyä uuteen sijaintiin. Tyypillisesti tämä on sankari, hirviö tai NPC (ei-pelaajahahmo), mutta ei esimerkiksi staattinen objekti kuten puu.
-- **itse tuhoutuvia** Nämä objektit ovat olemassa vain tietyn ajan ennen kuin ne asettavat itsensä poistettaviksi. Yleensä tämä esitetään `kuollut` tai `tuhottu` boolean-arvolla, joka ilmoittaa pelimoottorille, että tätä objektia ei enää pitäisi renderöidä.
-- **viiveellä katoavia** 'Viive' on tyypillinen ominaisuus lyhytikäisille objekteille. Tyypillinen esimerkki on tekstinpätkä tai graafinen efekti, kuten räjähdys, joka näkyy vain muutaman millisekunnin ajan.
+- **sijaintipohjaisia** Suurin osa, ellei kaikki, pelin elementit perustuvat sijaintiin. Tämä tarkoittaa, että niillä on sijainti, `x` ja `y`.
+- **liikkuvia** Nämä ovat objekteja, jotka voivat siirtyä uuteen sijaintiin. Tyypillisesti tämä on sankari, hirviö tai NPC (ei-pelaajahahmo), mutta ei esimerkiksi staattinen objekti, kuten puu.
+- **itse tuhoutuvia** Nämä objektit ovat olemassa vain tietyn ajan ennen kuin ne merkitään poistettaviksi. Yleensä tämä esitetään `dead`- tai `destroyed`-booleanilla, joka ilmoittaa pelimoottorille, että tätä objektia ei enää tarvitse renderöidä.
+- **viiveellä** 'Viive' on tyypillinen ominaisuus lyhytikäisille objekteille. Tyypillinen esimerkki on teksti tai graafinen efekti, kuten räjähdys, joka näkyy vain muutaman millisekunnin ajan.
 
-✅ Mieti peliä kuten Pac-Man. Voitko tunnistaa yllä mainitut neljä objektityyppiä tässä pelissä?
+✅ Mieti peliä, kuten Pac-Man. Voitko tunnistaa yllä mainitut neljä objektityyppiä tässä pelissä?
 
 ### Käyttäytymisen ilmaiseminen
 
-Kaikki yllä kuvattu ovat pelin objektien käyttäytymistä. Kuinka siis koodata nämä? Voimme ilmaista tämän käyttäytymisen metodeina, jotka liittyvät joko luokkiin tai objekteihin.
+Kaikki edellä mainitut ovat käyttäytymisiä, joita pelin objektit voivat omata. Mutta miten nämä koodataan? Voimme ilmaista nämä käyttäytymiset metodeina, jotka liittyvät joko luokkiin tai objekteihin.
 
 **Luokat**
 
-Ajatus on käyttää `luokkia` yhdessä `periytymisen` kanssa tietyn käyttäytymisen lisäämiseksi luokkaan.
+Ajatuksena on käyttää `luokkia` yhdessä `perinnän` kanssa lisätäksemme tiettyä käyttäytymistä luokkaan.
 
-✅ Periytyminen on tärkeä käsite ymmärtää. Lue lisää [MDN:n artikkelista periytymisestä](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+✅ Perintä on tärkeä käsite ymmärtää. Lue lisää [MDN:n artikkelista perinnästä](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 Koodilla ilmaistuna pelin objekti voi tyypillisesti näyttää tältä:
 
@@ -88,11 +88,11 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Käytä muutama minuutti miettiäksesi, kuinka Pac-Manin sankari (esimerkiksi Inky, Pinky tai Blinky) kirjoitettaisiin JavaScriptissä.
+✅ Käytä muutama minuutti miettiäksesi, miten Pac-Manin sankari (esimerkiksi Inky, Pinky tai Blinky) kirjoitettaisiin JavaScriptillä.
 
 **Koostaminen**
 
-Toinen tapa käsitellä objektien periytymistä on käyttää *koostamista*. Tällöin objektit ilmaisevat käyttäytymisensä näin:
+Toinen tapa käsitellä objektien perintää on käyttää *koostamista*. Tällöin objektit ilmaisevat käyttäytymisensä näin:
 
 ```javascript
 //create a constant gameObject
@@ -143,17 +143,17 @@ Valinta on sinun. JavaScript tukee molempia paradigmoja.
 
 --
 
-Toinen pelikehityksessä yleinen malli käsittelee pelin käyttäjäkokemuksen ja suorituskyvyn hallintaa.
+Toinen pelikehityksessä yleinen malli käsittelee pelin käyttökokemuksen ja suorituskyvyn hallintaa.
 
 ## Pub/sub-malli
 
 ✅ Pub/Sub tarkoittaa 'julkaise-tilaa'
 
-Tämä malli käsittelee ajatusta, että sovelluksesi eri osien ei pitäisi tietää toisistaan. Miksi näin? Se tekee yleiskuvan hahmottamisesta paljon helpompaa, jos eri osat ovat erillisiä. Se myös helpottaa käyttäytymisen äkillistä muuttamista tarvittaessa. Kuinka tämä saavutetaan? Tämä tehdään luomalla seuraavat käsitteet:
+Tämä malli käsittelee ajatusta, että sovelluksesi eri osien ei pitäisi tietää toisistaan. Miksi näin? Tämä tekee yleiskuvan hahmottamisesta helpompaa, jos eri osat ovat erillään. Se myös helpottaa käyttäytymisen muuttamista tarvittaessa. Miten tämä saavutetaan? Tämä tehdään ottamalla käyttöön seuraavat käsitteet:
 
 - **viesti**: Viesti on yleensä tekstijono, johon voi liittyä valinnainen lisätieto (data, joka selventää, mistä viestissä on kyse). Tyypillinen viesti pelissä voi olla `KEY_PRESSED_ENTER`.
 - **julkaisija**: Tämä elementti *julkaisee* viestin ja lähettää sen kaikille tilaajille.
-- **tilaaja**: Tämä elementti *kuuntelee* tiettyjä viestejä ja suorittaa jonkin tehtävän viestin vastaanottamisen seurauksena, kuten laserin ampumisen.
+- **tilaaja**: Tämä elementti *kuuntelee* tiettyjä viestejä ja suorittaa jonkin tehtävän vastaanotettuaan viestin, kuten esimerkiksi laserin ampumisen.
 
 Toteutus on kooltaan melko pieni, mutta se on erittäin tehokas malli. Näin se voidaan toteuttaa:
 
@@ -212,17 +212,17 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-Kun pelisi kasvaa monimutkaisemmaksi, tämä malli pysyy yhtä yksinkertaisena ja koodisi pysyy siistinä. On todella suositeltavaa omaksua tämä malli.
+Kun pelisi kasvaa monimutkaisemmaksi, tämä malli pysyy yhtä yksinkertaisena ja koodisi pysyy siistinä. On erittäin suositeltavaa omaksua tämä malli.
 
 ---
 
 ## 🚀 Haaste
 
-Mieti, kuinka pub-sub-malli voi parantaa peliä. Mitkä osat pitäisi lähettää tapahtumia, ja kuinka pelin pitäisi reagoida niihin? Nyt on tilaisuutesi olla luova ja miettiä uutta peliä ja sen osien käyttäytymistä.
+Mieti, miten pub-sub-malli voi parantaa peliä. Mitkä osat lähettäisivät tapahtumia, ja miten pelin tulisi reagoida niihin? Nyt on tilaisuutesi olla luova ja miettiä uutta peliä ja sen osien käyttäytymistä.
 
-## Oppitunnin jälkeinen visa
+## Jälkitesti
 
-[Oppitunnin jälkeinen visa](https://ff-quizzes.netlify.app/web/quiz/30)
+[Jälkitesti](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Kertaus ja itseopiskelu
 
@@ -230,7 +230,7 @@ Lue lisää Pub/Sub-mallista [tutustumalla siihen](https://docs.microsoft.com/az
 
 ## Tehtävä
 
-[Luonnostele peli](assignment.md)
+[Suunnittele peli](assignment.md)
 
 ---
 

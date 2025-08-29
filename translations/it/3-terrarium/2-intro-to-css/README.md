@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-25T21:27:51+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T00:11:37+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "it"
 }
@@ -20,9 +20,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 CSS, o Cascading Style Sheets, risolve un problema importante nello sviluppo web: come rendere il tuo sito web esteticamente gradevole. Dare uno stile alle tue app le rende più usabili e visivamente accattivanti; inoltre, puoi utilizzare CSS per creare un Responsive Web Design (RWD) - permettendo alle tue app di adattarsi bene a qualsiasi dimensione dello schermo. CSS non serve solo a migliorare l'aspetto della tua app; le sue specifiche includono animazioni e trasformazioni che possono abilitare interazioni sofisticate per le tue app. Il CSS Working Group aiuta a mantenere aggiornate le specifiche di CSS; puoi seguire il loro lavoro sul [sito del World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
 
-> Nota, CSS è un linguaggio in evoluzione, come tutto ciò che riguarda il web, e non tutti i browser supportano le parti più recenti delle specifiche. Controlla sempre le tue implementazioni consultando [CanIUse.com](https://caniuse.com).
+> Nota, CSS è un linguaggio in continua evoluzione, come tutto ciò che riguarda il web, e non tutti i browser supportano le parti più recenti delle specifiche. Controlla sempre le tue implementazioni consultando [CanIUse.com](https://caniuse.com).
 
-In questa lezione, aggiungeremo stili al nostro terrarium online e impareremo di più su diversi concetti di CSS: la cascata, l'ereditarietà, l'uso dei selettori, il posizionamento e l'uso di CSS per creare layout. Durante il processo, creeremo il layout del terrarium e costruiremo il terrarium stesso.
+In questa lezione, aggiungeremo stili al nostro terrarium online e approfondiremo diversi concetti di CSS: la cascata, l'ereditarietà, l'uso dei selettori, il posizionamento e l'utilizzo di CSS per creare layout. Durante il processo, organizzeremo il layout del terrarium e creeremo il terrarium vero e proprio.
 
 ### Prerequisiti
 
@@ -45,7 +45,7 @@ Nella tua cartella del terrarium, crea un nuovo file chiamato `style.css`. Impor
 
 ## La Cascata
 
-I Fogli di Stile a Cascata incorporano l'idea che gli stili "cascano", in modo che l'applicazione di uno stile sia guidata dalla sua priorità. Gli stili impostati da un autore di un sito web hanno priorità su quelli impostati da un browser. Gli stili impostati "inline" hanno priorità su quelli definiti in un foglio di stile esterno.
+I Fogli di Stile a Cascata incorporano l'idea che gli stili "cascano", in modo che l'applicazione di uno stile sia guidata dalla sua priorità. Gli stili definiti dall'autore di un sito web hanno priorità su quelli impostati da un browser. Gli stili definiti "inline" hanno priorità su quelli definiti in un foglio di stile esterno.
 
 ### Compito
 
@@ -106,11 +106,11 @@ h1 {
 }
 ```
 
-Questo modo di stilizzare un tag ti dà controllo su elementi unici, ma hai bisogno di controllare gli stili di molte piante nel tuo terrarium. Per farlo, devi sfruttare i selettori CSS.
+Questo modo di stilizzare un tag ti dà il controllo su elementi unici, ma hai bisogno di controllare gli stili di molte piante nel tuo terrarium. Per farlo, devi sfruttare i selettori CSS.
 
 ### Id
 
-Aggiungi uno stile per disporre i contenitori sinistro e destro. Poiché c'è solo un contenitore sinistro e uno destro, vengono assegnati id nel markup. Per stilizzarli, usa `#`:
+Aggiungi uno stile per organizzare i contenitori sinistro e destro. Poiché c'è solo un contenitore sinistro e uno destro, a loro sono stati assegnati id nel markup. Per stilizzarli, usa `#`:
 
 ```CSS
 #left-container {
@@ -134,9 +134,9 @@ Aggiungi uno stile per disporre i contenitori sinistro e destro. Poiché c'è so
 }
 ```
 
-Qui, hai posizionato questi contenitori con posizionamento assoluto ai lati sinistro e destro dello schermo, e hai usato percentuali per la loro larghezza in modo che possano adattarsi agli schermi mobili più piccoli.
+Qui, hai posizionato questi contenitori con un posizionamento assoluto ai margini sinistro e destro dello schermo, e hai utilizzato percentuali per la loro larghezza in modo che possano adattarsi agli schermi mobili più piccoli.
 
-✅ Questo codice è piuttosto ripetitivo, quindi non è "DRY" (Don't Repeat Yourself); riesci a trovare un modo migliore per stilizzare questi id, magari con un id e una classe? Dovresti modificare il markup e rifattorizzare il CSS:
+✅ Questo codice è piuttosto ripetitivo, quindi non segue il principio "DRY" (Don't Repeat Yourself); riesci a trovare un modo migliore per stilizzare questi id, magari utilizzando un id e una classe? Dovresti modificare il markup e rifattorizzare il CSS:
 
 ```html
 <div id="left-container" class="container"></div>
@@ -144,9 +144,9 @@ Qui, hai posizionato questi contenitori con posizionamento assoluto ai lati sini
 
 ### Classi
 
-Nell'esempio sopra, hai stilizzato due elementi unici sullo schermo. Se vuoi che gli stili si applichino a molti elementi sullo schermo, puoi usare le classi CSS. Fai questo per disporre le piante nei contenitori sinistro e destro.
+Nell'esempio sopra, hai stilizzato due elementi unici sullo schermo. Se vuoi che gli stili si applichino a molti elementi sullo schermo, puoi utilizzare le classi CSS. Fai questo per organizzare le piante nei contenitori sinistro e destro.
 
-Nota che ogni pianta nel markup HTML ha una combinazione di id e classi. Gli id qui sono usati dal JavaScript che aggiungerai in seguito per manipolare il posizionamento delle piante nel terrarium. Le classi, invece, danno a tutte le piante uno stile specifico.
+Nota che ogni pianta nel markup HTML ha una combinazione di id e classi. Gli id qui sono utilizzati dal JavaScript che aggiungerai in seguito per manipolare il posizionamento delle piante nel terrarium. Le classi, invece, danno a tutte le piante uno stile specifico.
 
 ```html
 <div class="plant-holder">
@@ -171,9 +171,9 @@ Aggiungi il seguente codice al tuo file `style.css`:
 }
 ```
 
-Degno di nota in questo snippet è il mix di posizionamento relativo e assoluto, che approfondiremo nella prossima sezione. Dai un'occhiata al modo in cui le altezze sono gestite con percentuali:
+Degno di nota in questo frammento è il mix di posizionamento relativo e assoluto, che approfondiremo nella prossima sezione. Dai un'occhiata al modo in cui le altezze sono gestite con le percentuali:
 
-Hai impostato l'altezza del contenitore delle piante al 13%, un buon valore per assicurarti che tutte le piante siano visualizzate in ogni contenitore verticale senza bisogno di scorrimento.
+Hai impostato l'altezza del contenitore delle piante al 13%, un valore adeguato per garantire che tutte le piante siano visualizzate in ogni contenitore verticale senza bisogno di scorrimento.
 
 Hai spostato il contenitore delle piante verso sinistra per permettere alle piante di essere più centrate all'interno del loro contenitore. Le immagini hanno un ampio sfondo trasparente per renderle più trascinabili, quindi devono essere spostate a sinistra per adattarsi meglio allo schermo.
 
@@ -187,11 +187,11 @@ Degno di nota è anche l'uso di z-index, che controlla l'altitudine relativa di 
 
 Mescolare le proprietà di posizionamento (ci sono posizioni statiche, relative, fisse, assolute e sticky) può essere un po' complicato, ma se fatto correttamente ti dà un buon controllo sugli elementi delle tue pagine.
 
-Gli elementi posizionati in modo assoluto sono posizionati rispetto ai loro antenati posizionati più vicini, e se non ce ne sono, sono posizionati rispetto al corpo del documento.
+Gli elementi posizionati in modo assoluto sono posizionati rispetto ai loro antenati posizionati, e se non ce ne sono, sono posizionati rispetto al corpo del documento.
 
-Gli elementi posizionati in modo relativo sono posizionati in base alle indicazioni del CSS per regolare la loro posizione rispetto alla loro posizione iniziale.
+Gli elementi posizionati in modo relativo sono posizionati in base alle indicazioni del CSS per regolare il loro posizionamento rispetto alla loro posizione iniziale.
 
-Nel nostro esempio, il `plant-holder` è un elemento posizionato in modo relativo che è posizionato all'interno di un contenitore posizionato in modo assoluto. Il comportamento risultante è che i contenitori della barra laterale sono fissati a sinistra e a destra, e il `plant-holder` è annidato, regolando se stesso all'interno delle barre laterali, dando spazio per posizionare le piante in una fila verticale.
+Nel nostro esempio, il `plant-holder` è un elemento posizionato in modo relativo che è posizionato all'interno di un contenitore posizionato in modo assoluto. Il comportamento risultante è che i contenitori laterali sono fissati a sinistra e a destra, e il `plant-holder` è annidato, regolando se stesso all'interno delle barre laterali, dando spazio per posizionare le piante in una fila verticale.
 
 > La `plant` stessa ha anche un posizionamento assoluto, necessario per renderla trascinabile, come scoprirai nella prossima lezione.
 
@@ -199,9 +199,9 @@ Nel nostro esempio, il `plant-holder` è un elemento posizionato in modo relativ
 
 ## Layout CSS
 
-Ora userai ciò che hai imparato per costruire il terrarium stesso, tutto usando CSS!
+Ora utilizzerai ciò che hai imparato per costruire il terrarium stesso, tutto utilizzando CSS!
 
-Per prima cosa, stila i figli del div `.terrarium` come un rettangolo arrotondato usando CSS:
+Per prima cosa, stila i figli del div `.terrarium` come un rettangolo arrotondato utilizzando CSS:
 
 ```CSS
 .jar-walls {
@@ -250,9 +250,9 @@ Per prima cosa, stila i figli del div `.terrarium` come un rettangolo arrotondat
 }
 ```
 
-Nota l'uso delle percentuali qui. Se ridimensioni il tuo browser, puoi vedere come anche il barattolo si ridimensiona. Nota anche le percentuali di larghezza e altezza per gli elementi del barattolo e come ogni elemento è posizionato assolutamente al centro, fissato in basso nella finestra.
+Nota l'uso delle percentuali qui. Se ridimensioni il tuo browser, puoi vedere come il barattolo si ridimensiona anch'esso. Nota anche le percentuali di larghezza e altezza per gli elementi del barattolo e come ogni elemento è posizionato in modo assoluto al centro, fissato in basso rispetto alla finestra.
 
-Stiamo anche usando `rem` per il border-radius, una lunghezza relativa al font. Leggi di più su questo tipo di misura relativa nelle [specifiche CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
+Stiamo anche utilizzando `rem` per il border-radius, una lunghezza relativa al font. Leggi di più su questo tipo di misura relativa nelle [specifiche CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
 ✅ Prova a cambiare i colori e l'opacità del barattolo rispetto a quelli della terra. Cosa succede? Perché?
 
@@ -260,7 +260,7 @@ Stiamo anche usando `rem` per il border-radius, una lunghezza relativa al font. 
 
 ## 🚀Sfida
 
-Aggiungi un riflesso "a bolla" nella parte inferiore sinistra del barattolo per farlo sembrare più simile al vetro. Stilerai `.jar-glossy-long` e `.jar-glossy-short` per farli sembrare un riflesso. Ecco come dovrebbe apparire:
+Aggiungi un riflesso a forma di "bolla" nella parte inferiore sinistra del barattolo per farlo sembrare più simile al vetro. Stilerai `.jar-glossy-long` e `.jar-glossy-short` per farle sembrare un riflesso. Ecco come dovrebbe apparire:
 
 ![terrarium finito](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.it.png)
 
@@ -272,11 +272,13 @@ Per completare il quiz post-lezione, segui questo modulo Learn: [Dai stile alla 
 
 ## Revisione e Studio Autonomo
 
-CSS sembra ingannevolmente semplice, ma ci sono molte sfide quando si cerca di stilizzare un'app perfettamente per tutti i browser e tutte le dimensioni dello schermo. CSS-Grid e Flexbox sono strumenti sviluppati per rendere il lavoro un po' più strutturato e affidabile. Impara a usare questi strumenti giocando a [Flexbox Froggy](https://flexboxfroggy.com/) e [Grid Garden](https://codepip.com/games/grid-garden/).
+CSS sembra ingannevolmente semplice, ma ci sono molte sfide quando si cerca di stilizzare perfettamente un'app per tutti i browser e tutte le dimensioni dello schermo. CSS-Grid e Flexbox sono strumenti sviluppati per rendere il lavoro un po' più strutturato e affidabile. Impara a utilizzare questi strumenti giocando a [Flexbox Froggy](https://flexboxfroggy.com/) e [Grid Garden](https://codepip.com/games/grid-garden/).
 
 ## Compito
 
 [Refactoring CSS](assignment.md)
 
-**Disclaimer (Avvertenza)**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+---
+
+**Disclaimer**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.

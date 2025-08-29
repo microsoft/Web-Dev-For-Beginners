@@ -1,56 +1,56 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e982871b8388c59c22a41b73b5fca70f",
-  "translation_date": "2025-08-26T01:09:07+00:00",
+  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
+  "translation_date": "2025-08-29T00:30:24+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "tr"
 }
 -->
-# Olayları Kullanarak Bir Oyun Oluşturma
+# Oyun Oluşturma: Olaylar Kullanarak
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/21)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Olay Tabanlı Programlama
 
-Bir tarayıcı tabanlı uygulama oluştururken, kullanıcıların oluşturduğumuz şeyle etkileşim kurması için bir grafiksel kullanıcı arayüzü (GUI) sağlarız. Tarayıcıyla etkileşim kurmanın en yaygın yolu, çeşitli öğelere tıklamak ve yazı yazmaktır. Ancak bir geliştirici olarak karşılaştığımız zorluk, kullanıcıların bu işlemleri ne zaman gerçekleştireceğini bilmememizdir!
+Tarayıcı tabanlı bir uygulama oluştururken, kullanıcıların oluşturduğumuz şeyle etkileşim kurması için bir grafik kullanıcı arayüzü (GUI) sağlarız. Tarayıcıyla etkileşim kurmanın en yaygın yolu, çeşitli öğelere tıklamak ve yazı yazmaktır. Ancak bir geliştirici olarak karşılaştığımız zorluk, bu işlemleri ne zaman gerçekleştireceklerini bilmememizdir!
 
-[Olay tabanlı programlama](https://en.wikipedia.org/wiki/Event-driven_programming), GUI'mizi oluşturmak için yapmamız gereken programlama türünün adıdır. Bu ifadeyi biraz açarsak, burada anahtar kelimenin **olay** olduğunu görürüz. Merriam-Webster'a göre [olay](https://www.merriam-webster.com/dictionary/event), "bir şeyin olması" olarak tanımlanır. Bu, durumumuzu mükemmel bir şekilde açıklar. Bir şeyin olacağını ve buna yanıt olarak bir kod çalıştırmak istediğimizi biliyoruz, ancak bunun ne zaman gerçekleşeceğini bilmiyoruz.
+[Olay tabanlı programlama](https://en.wikipedia.org/wiki/Event-driven_programming), GUI'mizi oluşturmak için yapmamız gereken programlama türünün adıdır. Bu ifadeyi biraz daha açarsak, burada anahtar kelimenin **olay** olduğunu görürüz. Merriam-Webster'a göre [olay](https://www.merriam-webster.com/dictionary/event), "bir şeyin gerçekleşmesi" olarak tanımlanır. Bu, durumumuzu mükemmel bir şekilde açıklar. Bir şeyin gerçekleşeceğini ve buna yanıt olarak bir kod çalıştırmak istediğimizi biliyoruz, ancak bunun ne zaman olacağını bilmiyoruz.
 
-Çalıştırmak istediğimiz bir kod bölümünü işaretlemenin yolu bir fonksiyon oluşturmaktır. [Prosedürel programlama](https://en.wikipedia.org/wiki/Procedural_programming) hakkında düşündüğümüzde, fonksiyonlar belirli bir sırayla çağrılır. Olay tabanlı programlamada da aynı şey geçerlidir. Fark, fonksiyonların **nasıl** çağrılacağıdır.
+Bir kod bölümünü çalıştırmak istediğimizi belirtmek için bir fonksiyon oluştururuz. [Prosedürel programlama](https://en.wikipedia.org/wiki/Procedural_programming) hakkında düşündüğümüzde, fonksiyonlar belirli bir sırayla çağrılır. Olay tabanlı programlamada da aynı şey geçerli olacak. Fark, fonksiyonların **nasıl** çağrılacağıdır.
 
-Olayları (düğmeye tıklama, yazı yazma vb.) işlemek için **olay dinleyicileri** kaydederiz. Bir olay dinleyici, bir olayın gerçekleşmesini bekleyen ve buna yanıt olarak çalışan bir fonksiyondur. Olay dinleyicileri, kullanıcı arayüzünü güncelleyebilir, sunucuya çağrılar yapabilir veya kullanıcının eylemine yanıt olarak yapılması gereken başka şeyleri gerçekleştirebilir. Bir olay dinleyiciyi [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) kullanarak ve çalıştırılacak bir fonksiyon sağlayarak ekleriz.
+Olayları (butona tıklama, yazı yazma vb.) işlemek için **olay dinleyicileri** kaydederiz. Olay dinleyicisi, bir olayın gerçekleşmesini bekleyen ve buna yanıt olarak çalışan bir fonksiyondur. Olay dinleyicileri, kullanıcı arayüzünü güncelleyebilir, sunucuya çağrılar yapabilir veya kullanıcının eylemine yanıt olarak yapılması gereken başka şeyleri gerçekleştirebilir. Bir olay dinleyiciyi [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) kullanarak ve çalıştırılacak bir fonksiyon sağlayarak ekleriz.
 
-> **NOT:** Olay dinleyicileri oluşturmanın birçok yolu olduğunu belirtmekte fayda var. Anonim fonksiyonlar kullanabilir veya adlandırılmış olanları oluşturabilirsiniz. `click` özelliğini ayarlamak veya `addEventListener` kullanmak gibi çeşitli kısayollar kullanabilirsiniz. Egzersizimizde, web geliştiricilerinin muhtemelen en yaygın kullandığı teknik olduğu için `addEventListener` ve anonim fonksiyonlara odaklanacağız. Ayrıca `addEventListener`, tüm olaylar için çalıştığı ve olay adının bir parametre olarak sağlanabildiği için en esnek yöntemdir.
+> **NOTE:** Olay dinleyicileri oluşturmanın birçok yolu olduğunu belirtmekte fayda var. Anonim fonksiyonlar kullanabilir veya adlandırılmış fonksiyonlar oluşturabilirsiniz. `click` özelliğini ayarlamak veya `addEventListener` kullanmak gibi çeşitli kısayollar kullanabilirsiniz. Egzersizimizde, web geliştiricilerinin en yaygın kullandığı teknik olduğu için `addEventListener` ve anonim fonksiyonlara odaklanacağız. Ayrıca `addEventListener` tüm olaylar için çalıştığı ve olay adı bir parametre olarak sağlanabildiği için en esnek yöntemdir.
 
 ### Yaygın Olaylar
 
-Bir uygulama oluştururken dinleyebileceğiniz [birçok olay](https://developer.mozilla.org/docs/Web/Events) vardır. Temelde bir kullanıcının bir sayfada yaptığı her şey bir olay tetikler, bu da onlara istediğiniz deneyimi sunma konusunda size büyük bir güç verir. Neyse ki, genellikle yalnızca birkaç olaya ihtiyacınız olur. İşte birkaç yaygın olay (oyunumuzu oluştururken kullanacağımız iki olay dahil):
+Bir uygulama oluştururken dinleyebileceğiniz [birçok olay](https://developer.mozilla.org/docs/Web/Events) vardır. Temelde bir kullanıcının bir sayfada yaptığı her şey bir olay oluşturur, bu da istediğiniz deneyimi sunmak için size büyük bir güç sağlar. Neyse ki, genellikle yalnızca birkaç olay yeterli olur. İşte yaygın olanlardan bazıları (oyunumuzu oluştururken kullanacağımız iki olay dahil):
 
-- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Kullanıcı bir şeye, genellikle bir düğmeye veya bağlantıya tıkladı
-- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Kullanıcı sağ fare düğmesine tıkladı
+- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Kullanıcı bir şeye tıkladı, genellikle bir düğme veya bağlantı
+- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Kullanıcı sağ fare tuşuna tıkladı
 - [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Kullanıcı bir metni seçti
 - [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Kullanıcı bir metin girdi
 
 ## Oyunu Oluşturma
 
-JavaScript'teki olayların nasıl çalıştığını keşfetmek için bir oyun oluşturacağız. Oyunumuz, bir oyuncunun yazma becerisini test edecek; bu, tüm geliştiricilerin sahip olması gereken en az değer verilen becerilerden biridir. Hepimiz yazma pratiği yapmalıyız! Oyunun genel akışı şu şekilde olacak:
+Olayların JavaScript'te nasıl çalıştığını keşfetmek için bir oyun oluşturacağız. Oyunumuz, bir oyuncunun yazma becerisini test edecek, ki bu tüm geliştiricilerin sahip olması gereken en az değer verilen becerilerden biridir. Hepimiz yazma pratiği yapmalıyız! Oyunun genel akışı şu şekilde olacak:
 
-- Oyuncu başlat düğmesine tıklar ve yazması için bir alıntı sunulur
-- Oyuncu, alıntıyı bir metin kutusuna olabildiğince hızlı bir şekilde yazar
-  - Her kelime tamamlandığında, bir sonraki kelime vurgulanır
+- Oyuncu başlat düğmesine tıklar ve yazması gereken bir alıntı ile karşılaşır
+- Oyuncu alıntıyı bir metin kutusunda olabildiğince hızlı bir şekilde yazar
+  - Her kelime tamamlandığında bir sonraki kelime vurgulanır
   - Oyuncu bir yazım hatası yaparsa, metin kutusu kırmızıya döner
-  - Oyuncu alıntıyı tamamladığında, geçen süreyle birlikte bir başarı mesajı görüntülenir
+  - Oyuncu alıntıyı tamamladığında, geçen süre ile bir başarı mesajı görüntülenir
 
-Hadi oyunumuzu oluşturalım ve olaylar hakkında bilgi edinelim!
+Haydi oyunumuzu oluşturalım ve olaylar hakkında bilgi edinelim!
 
 ### Dosya Yapısı
 
-Toplamda üç dosyaya ihtiyacımız olacak: **index.html**, **script.js** ve **style.css**. İşimizi biraz daha kolaylaştırmak için bunları ayarlayarak başlayalım.
+Toplamda üç dosyaya ihtiyacımız olacak: **index.html**, **script.js** ve **style.css**. İşimizi kolaylaştırmak için bunları ayarlayarak başlayalım.
 
-- Bir konsol veya terminal penceresi açarak ve aşağıdaki komutu girerek çalışmanız için yeni bir klasör oluşturun:
+- Bir konsol veya terminal penceresi açarak aşağıdaki komutu girerek çalışmanız için yeni bir klasör oluşturun:
 
 ```bash
 # Linux or macOS
@@ -73,14 +73,14 @@ code .
 
 ## Kullanıcı Arayüzünü Oluşturma
 
-Gereksinimleri incelersek, HTML sayfamızda birkaç öğeye ihtiyacımız olacağını biliyoruz. Bu, bir tarif gibi, bazı malzemelere ihtiyacımız var:
+Gereksinimleri incelersek, HTML sayfamızda birkaç öğeye ihtiyacımız olduğunu biliyoruz. Bu, bir tarif gibi, bazı malzemelere ihtiyacımız var:
 
-- Kullanıcının yazması için alıntıyı görüntülemek için bir yer
-- Başarı mesajı gibi mesajları görüntülemek için bir yer
+- Kullanıcının yazması gereken alıntıyı göstermek için bir yer
+- Başarı mesajı gibi mesajları göstermek için bir yer
 - Yazı yazmak için bir metin kutusu
-- Bir başlat düğmesi
+- Başlat düğmesi
 
-Her biri, JavaScript'te onlarla çalışabilmemiz için kimliklere ihtiyaç duyacak. Ayrıca oluşturacağımız CSS ve JavaScript dosyalarına referanslar ekleyeceğiz.
+Her biri için JavaScript'te çalışabilmemiz için kimlikler ekleyeceğiz. Ayrıca oluşturacağımız CSS ve JavaScript dosyalarına referanslar ekleyeceğiz.
 
 **index.html** adında yeni bir dosya oluşturun. Aşağıdaki HTML'yi ekleyin:
 
@@ -107,18 +107,18 @@ Her biri, JavaScript'te onlarla çalışabilmemiz için kimliklere ihtiyaç duya
 
 ### Uygulamayı Başlatma
 
-Her zaman iteratif olarak geliştirmek ve şeylerin nasıl göründüğünü görmek en iyisidir. Hadi uygulamamızı başlatalım. Visual Studio Code için harika bir uzantı olan [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), uygulamanızı yerel olarak barındırır ve her kaydettiğinizde tarayıcıyı yeniler.
+Her zaman iteratif olarak geliştirmek ve şeylerin nasıl göründüğünü görmek en iyisidir. Uygulamamızı başlatalım. Visual Studio Code için harika bir uzantı olan [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), uygulamanızı yerel olarak barındırır ve her kaydettiğinizde tarayıcıyı yeniler.
 
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon)'ı yükleyin. Bağlantıyı takip edip **Install** düğmesine tıklayın
-  - Tarayıcı tarafından Visual Studio Code'u açmanız istenecek, ardından Visual Studio Code tarafından yükleme işlemini gerçekleştirmeniz istenecek
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) uzantısını yükleyin. Bağlantıyı takip ederek **Install** düğmesine tıklayın.
+  - Tarayıcı sizi Visual Studio Code'u açmaya yönlendirecek, ardından Visual Studio Code uzantıyı yüklemenizi isteyecek
   - Gerekirse Visual Studio Code'u yeniden başlatın
-- Yüklendikten sonra, Visual Studio Code'da Ctrl-Shift-P (veya Cmd-Shift-P) tuşlarına basarak komut paletini açın
+- Yükleme tamamlandıktan sonra, Visual Studio Code'da Ctrl-Shift-P (veya Cmd-Shift-P) tuşlarına basarak komut paletini açın
 - **Live Server: Open with Live Server** yazın
   - Live Server uygulamanızı barındırmaya başlayacak
 - Bir tarayıcı açın ve **https://localhost:5500** adresine gidin
 - Artık oluşturduğunuz sayfayı görmelisiniz!
 
-Hadi biraz işlevsellik ekleyelim.
+Haydi biraz işlevsellik ekleyelim.
 
 ## CSS Ekleme
 
@@ -138,7 +138,7 @@ HTML'mizi oluşturduktan sonra, temel stil için CSS ekleyelim. Oyuncunun yazmas
 }
 ```
 
-✅ CSS söz konusu olduğunda, sayfanızı istediğiniz gibi düzenleyebilirsiniz. Biraz zaman ayırın ve sayfayı daha çekici hale getirin:
+✅ CSS söz konusu olduğunda, sayfanızı istediğiniz gibi düzenleyebilirsiniz. Sayfayı daha çekici hale getirmek için biraz zaman ayırın:
 
 - Farklı bir yazı tipi seçin
 - Başlıkları renklendirin
@@ -146,28 +146,28 @@ HTML'mizi oluşturduktan sonra, temel stil için CSS ekleyelim. Oyuncunun yazmas
 
 ## JavaScript
 
-Kullanıcı arayüzümüzü oluşturduktan sonra, mantığı sağlayacak olan JavaScript'e odaklanma zamanı. Bunu birkaç adıma böleceğiz:
+Kullanıcı arayüzümüzü oluşturduktan sonra, mantığı sağlayacak JavaScript'e odaklanma zamanı. Bunu birkaç adıma böleceğiz:
 
-- [Sabitleri oluşturun](../../../../4-typing-game/typing-game)
-- [Oyunu başlatmak için olay dinleyici ekleyin](../../../../4-typing-game/typing-game)
-- [Yazma için olay dinleyici ekleyin](../../../../4-typing-game/typing-game)
+- [Sabitleri oluştur](../../../../4-typing-game/typing-game)
+- [Oyunu başlatmak için olay dinleyici ekle](../../../../4-typing-game/typing-game)
+- [Yazma işlemi için olay dinleyici ekle](../../../../4-typing-game/typing-game)
 
 Ama önce, **script.js** adında yeni bir dosya oluşturun.
 
-### Sabitleri Ekleyin
+### Sabitleri Ekle
 
 Programlamayı kolaylaştırmak için birkaç öğeye ihtiyacımız olacak. Yine, bir tarif gibi, işte ihtiyacımız olanlar:
 
 - Tüm alıntıların listesini içeren bir dizi
-- Geçerli alıntının tüm kelimelerini saklamak için boş bir dizi
-- Oyuncunun şu anda yazdığı kelimenin dizinini saklamak için bir alan
-- Oyuncunun başlat düğmesine tıkladığı zamanı saklamak için bir alan
+- Mevcut alıntının tüm kelimelerini depolamak için boş bir dizi
+- Oyuncunun şu anda yazdığı kelimenin dizinini depolamak için bir alan
+- Oyuncunun başlat düğmesine tıkladığı zamanı depolamak için bir alan
 
-Ayrıca kullanıcı arayüzü öğelerine referanslar da isteyeceğiz:
+Ayrıca kullanıcı arayüzü öğelerine referanslar eklemek isteyeceğiz:
 
 - Metin kutusu (**typed-value**)
-- Alıntı görüntüleme alanı (**quote**)
-- Mesaj alanı (**message**)
+- Alıntı gösterimi (**quote**)
+- Mesaj (**message**)
 
 ```javascript
 // inside script.js
@@ -194,19 +194,19 @@ const typedValueElement = document.getElementById('typed-value');
 
 ✅ Oyununuza daha fazla alıntı ekleyin
 
-> **NOT:** `document.getElementById` kullanarak öğeleri istediğimiz zaman kodda alabiliriz. Bu öğelere düzenli olarak başvuracağımız için, sabitler kullanarak dize hatalarını önleyeceğiz. [Vue.js](https://vuejs.org/) veya [React](https://reactjs.org/) gibi çerçeveler, kodunuzu merkezileştirmeyi daha iyi yönetmenize yardımcı olabilir.
+> **NOTE:** `document.getElementById` kullanarak öğeleri istediğimiz zaman kodda alabiliriz. Bu öğelere düzenli olarak başvuracağımız için, string literal hatalarını önlemek adına sabitler kullanacağız. [Vue.js](https://vuejs.org/) veya [React](https://reactjs.org/) gibi frameworkler, kodunuzu merkezileştirme konusunda size yardımcı olabilir.
 
-`const`, `let` ve `var` kullanımı hakkında bir video izlemek için bir dakikanızı ayırın:
+`const`, `let` ve `var` kullanımı hakkında bir video izlemek için bir dakika ayırın.
 
-[![Değişken Türleri](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Değişken Türleri")
+[![Değişken türleri](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Değişken türleri")
 
-> 🎥 Değişkenler hakkında bir video için yukarıdaki görsele tıklayın.
+> 🎥 Yukarıdaki görüntüye tıklayarak değişkenler hakkında bir video izleyin.
 
-### Başlatma Mantığını Ekleyin
+### Başlatma Mantığını Ekle
 
-Oyuna başlamak için oyuncu başlat düğmesine tıklayacak. Tabii ki, başlat düğmesine ne zaman tıklayacaklarını bilmiyoruz. İşte burada bir [olay dinleyici](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) devreye giriyor. Bir olay dinleyici, bir şeyin gerçekleşmesini (bir olayı) dinlememize ve buna yanıt olarak kod çalıştırmamıza olanak tanır. Bizim durumumuzda, kullanıcı başlat düğmesine tıkladığında kod çalıştırmak istiyoruz.
+Oyuna başlamak için oyuncu başlat düğmesine tıklayacak. Tabii ki, ne zaman başlat düğmesine tıklayacaklarını bilmiyoruz. İşte burada bir [olay dinleyici](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) devreye giriyor. Bir olay dinleyici, bir şeyin gerçekleşmesini (bir olay) dinlememize ve buna yanıt olarak kod çalıştırmamıza olanak tanır. Bizim durumumuzda, kullanıcı başlat düğmesine tıkladığında kod çalıştırmak istiyoruz.
 
-Kullanıcı **başlat** düğmesine tıkladığında, bir alıntı seçmemiz, kullanıcı arayüzünü ayarlamamız ve mevcut kelime ve zamanlama için izleme yapmamız gerekiyor. Aşağıda eklemeniz gereken JavaScript yer alıyor; kod bloğunun ardından açıklamalarını yapacağız.
+Kullanıcı **başlat** düğmesine tıkladığında, bir alıntı seçmemiz, kullanıcı arayüzünü ayarlamamız ve mevcut kelime ve zamanlama için izleme ayarlarını yapmamız gerekiyor. Aşağıda eklemeniz gereken JavaScript bulunuyor; kod bloğunun ardından açıklıyoruz.
 
 ```javascript
 // at the end of script.js
@@ -241,27 +241,27 @@ document.getElementById('start').addEventListener('click', () => {
 });
 ```
 
-Kodu parçalayalım!
+Kodun detaylarını inceleyelim!
 
-- Kelime takibini ayarlayın
+- Kelime takibini ayarlama
   - [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) ve [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) kullanarak `quotes` dizisinden rastgele bir alıntı seçiyoruz
   - `quote`'u bir `words` dizisine dönüştürerek oyuncunun şu anda yazdığı kelimeyi takip edebiliyoruz
-  - Oyuncu ilk kelimeyle başlayacağı için `wordIndex` 0 olarak ayarlanır
-- Kullanıcı arayüzünü ayarlayın
-  - `spanWords` adlı bir dizi oluşturun, bu dizi her kelimeyi bir `span` öğesi içinde içerir
-    - Bu, ekrandaki kelimeyi vurgulamamıza olanak tanır
-  - Diziyi bir dizeye dönüştürmek için `join` kullanarak `quoteElement`'in `innerHTML`'ini güncelleriz
-    - Bu, alıntıyı oyuncuya gösterir
-  - İlk `span` öğesinin `className`'ini `highlight` olarak ayarlayarak sarı renkle vurgularız
-  - `messageElement`'i temizlemek için `innerText`'i `''` olarak ayarlarız
-- Metin kutusunu ayarlayın
-  - `typedValueElement` üzerindeki mevcut `value`'yi temizleyin
-  - `typedValueElement`'e `focus` ayarlayın
-- Zamanlayıcıyı başlatmak için `getTime` çağrısı yapın
+  - Oyuncu ilk kelimeyle başlayacağı için `wordIndex` 0 olarak ayarlanıyor
+- Kullanıcı arayüzünü ayarlama
+  - Her kelimeyi bir `span` öğesi içinde içeren bir `spanWords` dizisi oluşturuyoruz
+    - Bu, ekranda kelimeyi vurgulamamıza olanak tanır
+  - `quoteElement`'in `innerHTML`'ini güncellemek için diziyi `join` ile bir string haline getiriyoruz
+    - Bu, alıntıyı oyuncuya gösterecek
+  - İlk `span` öğesinin `className`'ini `highlight` olarak ayarlayarak onu sarı olarak vurguluyoruz
+  - `messageElement`'i temizlemek için `innerText`'i `''` olarak ayarlıyoruz
+- Metin kutusunu ayarlama
+  - `typedValueElement` üzerindeki mevcut `value`'yi temizliyoruz
+  - `typedValueElement`'e `focus` ayarlıyoruz
+- Zamanlayıcıyı `getTime` çağırarak başlatıyoruz
 
-### Yazma Mantığını Ekleyin
+### Yazma Mantığını Ekle
 
-Oyuncu yazarken bir `input` olayı tetiklenir. Bu olay dinleyici, oyuncunun kelimeyi doğru yazıp yazmadığını kontrol edecek ve oyunun mevcut durumunu yönetecek. **script.js** dosyasına dönerek aşağıdaki kodu sona ekleyin. Ardından açıklamalarını yapacağız.
+Oyuncu yazarken bir `input` olayı tetiklenir. Bu olay dinleyici, oyuncunun kelimeyi doğru yazıp yazmadığını kontrol edecek ve oyunun mevcut durumunu yönetecek. **script.js** dosyasına dönerek aşağıdaki kodu sona ekleyin. Ardından detaylarını açıklayacağız.
 
 ```javascript
 // at the end of script.js
@@ -300,27 +300,27 @@ typedValueElement.addEventListener('input', () => {
 });
 ```
 
-Kodu parçalayalım! Öncelikle mevcut kelimeyi ve oyuncunun şu ana kadar yazdığı değeri alıyoruz. Daha sonra, alıntının tamamlanıp tamamlanmadığını, kelimenin tamamlanıp tamamlanmadığını, kelimenin doğru yazılıp yazılmadığını veya (son olarak) bir hata olup olmadığını kontrol eden bir mantık sıralaması izliyoruz.
+Kodun detaylarını inceleyelim! Öncelikle mevcut kelimeyi ve oyuncunun şu ana kadar yazdığı değeri alıyoruz. Ardından, mantık sıralı bir şekilde ilerliyor: alıntı tamamlandı mı, kelime tamamlandı mı, kelime doğru mu, yoksa bir hata mı var.
 
-- Alıntı tamamlanmışsa, bu `typedValue`'nin `currentWord`'e eşit olması ve `wordIndex`'in `words`'un `length`'inden bir eksik olmasıyla belirtilir
-  - `elapsedTime`'i, `startTime`'dan mevcut zamanı çıkararak hesaplayın
-  - `elapsedTime`'i 1.000'e bölerek milisaniyeden saniyeye dönüştürün
-  - Bir başarı mesajı görüntüleyin
-- Kelime tamamlanmışsa, bu `typedValue`'nin bir boşlukla bitmesi (bir kelimenin sonu) ve `typedValue`'nin `currentWord`'e eşit olmasıyla belirtilir
-  - Bir sonraki kelimenin yazılmasına izin vermek için `typedElement` üzerindeki `value`'yi `''` olarak ayarlayın
-  - Bir sonraki kelimeye geçmek için `wordIndex`'i artırın
-  - `quoteElement`'in tüm `childNodes`'ları arasında döngü yaparak `className`'i `''` olarak ayarlayın ve varsayılan görünüme geri dönün
-  - Şu anki kelimenin `className`'ini `highlight` olarak ayarlayın ve yazılacak bir sonraki kelimeyi işaretleyin
-- Kelime şu anda doğru yazılmışsa (ancak tamamlanmamışsa), bu `currentWord`'ün `typedValue` ile başlamasıyla belirtilir
-  - `typedValueElement`'in varsayılan olarak görüntülenmesini sağlamak için `className`'i temizleyin
+- Alıntı tamamlandı, `typedValue`'nin `currentWord`'e eşit olması ve `wordIndex`'in `words`'un `length`'inden bir eksik olmasıyla belirtilir
+  - `elapsedTime`'i `startTime`'dan mevcut zamanı çıkararak hesaplıyoruz
+  - `elapsedTime`'i 1.000'e bölerek milisaniyeden saniyeye dönüştürüyoruz
+  - Bir başarı mesajı görüntülüyoruz
+- Kelime tamamlandı, `typedValue`'nin bir boşlukla bitmesi (kelimenin sonu) ve `typedValue`'nin `currentWord`'e eşit olmasıyla belirtilir
+  - Bir sonraki kelimeyi yazabilmek için `typedElement` üzerindeki `value`'yi `''` olarak ayarlıyoruz
+  - Bir sonraki kelimeye geçmek için `wordIndex`'i artırıyoruz
+  - `quoteElement`'in tüm `childNodes` öğelerini döngüye alarak `className`'i `''` olarak ayarlıyoruz ve varsayılan görünüme dönüyoruz
+  - Şu anda yazılması gereken kelimenin `className`'ini `highlight` olarak ayarlıyoruz
+- Kelime şu anda doğru yazılmış (ancak tamamlanmamış), `currentWord`'ün `typedValue` ile başlamasıyla belirtilir
+  - `typedValueElement`'in varsayılan olarak görüntülenmesini sağlamak için `className`'i temizliyoruz
 - Eğer buraya kadar geldiysek, bir hata var
-  - `typedValueElement` üzerindeki `className`'i `error` olarak ayarlayın
+  - `typedValueElement` üzerindeki `className`'i `error` olarak ayarlıyoruz
 
 ## Uygulamanızı Test Edin
 
-Sonuna geldiniz! Son adım, uygulamanızın çalıştığından emin olmaktır. Bir deneyin! Hatalar varsa endişelenmeyin; **tüm geliştiriciler** hata yapar. Mesajları inceleyin ve gerektiğinde hata ayıklayın.
+Sonuna geldiniz! Son adım, uygulamanızın çalıştığından emin olmaktır. Bir deneyin! Hatalar konusunda endişelenmeyin; **tüm geliştiriciler** hata yapar. Mesajları inceleyin ve gerektiğinde hata ayıklayın.
 
-**Başlat** düğmesine tıklayın ve yazmaya başlayın! Daha önce gördüğümüz animasyona benzer bir şey gibi görünmelidir.
+**Başlat** düğmesine tıklayın ve yazmaya başlayın! Önceden gördüğümüz animasyona benzer bir şey görmelisiniz.
 
 ![Oyunun çalışırken animasyonu](../../../../4-typing-game/images/demo.gif)
 
@@ -328,24 +328,25 @@ Sonuna geldiniz! Son adım, uygulamanızın çalıştığından emin olmaktır. 
 
 ## 🚀 Zorluk
 
-Daha fazla işlevsellik ekleyin:
+Daha fazla işlevsellik ekleyin
 
-- Tamamlandığında `input` olay dinleyicisini devre dışı bırakın ve düğmeye tıklandığında yeniden etkinleştirin
+- Alıntı tamamlandığında `input` olay dinleyicisini devre dışı bırakın ve düğme tıklandığında yeniden etkinleştirin
 - Oyuncu alıntıyı tamamladığında metin kutusunu devre dışı bırakın
 - Başarı mesajını içeren bir modal diyalog kutusu görüntüleyin
-- [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) kullanarak yüksek puanları saklayın
+- [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) kullanarak yüksek skorları saklayın
+## Ders Sonrası Quiz
 
-## Ders Sonrası Test
-
-[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/22)
+[Ders sonrası quiz](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
-Web tarayıcısı aracılığıyla geliştiricinin kullanabileceği [tüm etkinlikler](https://developer.mozilla.org/docs/Web/Events) hakkında bilgi edinin ve her birini hangi senaryolarda kullanacağınızı düşünün.
+Web tarayıcısı aracılığıyla geliştiricilere sunulan [tüm etkinlikleri](https://developer.mozilla.org/docs/Web/Events) okuyun ve her birini kullanacağınız senaryoları düşünün.
 
 ## Ödev
 
 [Yeni bir klavye oyunu oluşturun](assignment.md)
 
+---
+
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.

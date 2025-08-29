@@ -1,26 +1,26 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-25T22:36:53+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-28T23:53:22+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "br"
 }
 -->
-# Construindo um Jogo Espacial Parte 6: Final e Reinício
+# Construir um Jogo Espacial Parte 6: Finalizar e Reiniciar
 
-## Quiz Pré-Aula
+## Questionário Pré-Aula
 
-[Quiz pré-aula](https://ff-quizzes.netlify.app/web/quiz/39)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/39)
 
 Existem diferentes maneiras de expressar uma *condição de término* em um jogo. Cabe a você, como criador do jogo, decidir por que o jogo terminou. Aqui estão algumas razões, assumindo que estamos falando sobre o jogo espacial que você tem construído até agora:
 
 - **`N` Naves inimigas foram destruídas**: É bastante comum, se você dividir um jogo em diferentes níveis, que seja necessário destruir `N` naves inimigas para completar um nível.
-- **Sua nave foi destruída**: Existem jogos em que você perde se sua nave for destruída. Outra abordagem comum é o conceito de vidas. Cada vez que sua nave é destruída, uma vida é deduzida. Quando todas as vidas forem perdidas, você perde o jogo.
-- **Você coletou `N` pontos**: Outra condição comum de término é coletar pontos. Como você ganha pontos depende de você, mas é bastante comum atribuir pontos a várias atividades, como destruir uma nave inimiga ou coletar itens que caem quando são destruídos.
+- **Sua nave foi destruída**: Existem jogos em que você perde se sua nave for destruída. Outra abordagem comum é o conceito de vidas. Cada vez que sua nave é destruída, uma vida é deduzida. Quando todas as vidas são perdidas, o jogo termina.
+- **Você coletou `N` pontos**: Outra condição comum de término é coletar pontos. Como você ganha pontos depende de você, mas é comum atribuir pontos a várias atividades, como destruir uma nave inimiga ou coletar itens que são *soltos* quando destruídos.
 - **Completar um nível**: Isso pode envolver várias condições, como destruir `X` naves inimigas, coletar `Y` pontos ou talvez coletar um item específico.
 
-## Reinício
+## Reiniciar
 
 Se as pessoas gostarem do seu jogo, é provável que queiram jogá-lo novamente. Quando o jogo termina, por qualquer motivo, você deve oferecer uma alternativa para reiniciá-lo.
 
@@ -33,7 +33,7 @@ Você adicionará estas regras ao seu jogo:
 1. **Vencer o jogo**. Quando todas as naves inimigas forem destruídas, você vence o jogo. Além disso, exiba algum tipo de mensagem de vitória.
 1. **Reiniciar**. Quando todas as suas vidas forem perdidas ou o jogo for vencido, você deve oferecer uma maneira de reiniciar o jogo. Lembre-se! Você precisará reinicializar o jogo e limpar o estado anterior.
 
-## Passos recomendados
+## Etapas recomendadas
 
 Localize os arquivos que foram criados para você na subpasta `your-work`. Ela deve conter o seguinte:
 
@@ -48,7 +48,7 @@ Localize os arquivos que foram criados para você na subpasta `your-work`. Ela d
 -| package.json
 ```
 
-Você inicia seu projeto na pasta `your_work` digitando:
+Inicie seu projeto na pasta `your_work` digitando:
 
 ```bash
 cd your-work
@@ -61,7 +61,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
 ### Adicionar código
 
-1. **Rastrear condição de término**. Adicione código que rastreie o número de inimigos ou se a nave do herói foi destruída, adicionando estas duas funções:
+1. **Acompanhar a condição de término**. Adicione código que acompanhe o número de inimigos ou se a nave do herói foi destruída, adicionando estas duas funções:
 
     ```javascript
     function isHeroDead() {
@@ -115,9 +115,9 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Adicionar código de reinício** que reinicia o jogo ao pressionar um botão selecionado.
+2. **Adicionar código de reinício** que reinicie o jogo ao pressionar um botão selecionado.
 
-   1. **Ouvir a tecla `Enter`**. Edite o eventListener da janela para ouvir essa tecla:
+   1. **Ouvir a tecla `Enter`**. Edite o eventListener da sua janela para ouvir essa tecla:
 
     ```javascript
      else if(evt.key === "Enter") {
@@ -171,7 +171,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
         }
         ```
 
-   1. **Lógica de reinício**. Quando todas as vidas forem perdidas ou o jogador vencer o jogo, exiba que o jogo pode ser reiniciado. Além disso, reinicie o jogo quando a tecla de *reinício* for pressionada (você pode decidir qual tecla será mapeada para reinício).
+   1. **Lógica de reinício**. Quando todas as vidas forem perdidas ou o jogador vencer o jogo, exiba que o jogo pode ser reiniciado. Além disso, reinicie o jogo quando a tecla de *reinício* for pressionada (você pode decidir qual tecla será mapeada para reiniciar).
 
       1. Crie a função `resetGame()`:
 
@@ -216,11 +216,11 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
 ## 🚀 Desafio
 
-Adicione um som! Você consegue adicionar um som para melhorar a experiência do jogo, talvez quando houver um disparo de laser, ou quando o herói morrer ou vencer? Confira este [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) para aprender como tocar som usando JavaScript.
+Adicione um som! Você consegue adicionar um som para melhorar a experiência do jogo? Talvez quando houver um disparo de laser, ou quando o herói morrer ou vencer? Dê uma olhada neste [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) para aprender como tocar som usando JavaScript.
 
-## Quiz Pós-Aula
+## Questionário Pós-Aula
 
-[Quiz pós-aula](https://ff-quizzes.netlify.app/web/quiz/40)
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Revisão e Autoestudo
 
@@ -229,6 +229,8 @@ Sua tarefa é criar um novo jogo de exemplo, então explore alguns jogos interes
 ## Tarefa
 
 [Crie um Jogo de Exemplo](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

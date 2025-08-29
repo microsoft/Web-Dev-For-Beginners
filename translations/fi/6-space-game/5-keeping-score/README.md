@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-27T20:20:57+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T00:40:45+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "fi"
 }
 -->
-# Rakenna avaruuspeli Osa 5: Pisteet ja elämät
+# Rakenna avaruuspeli, osa 5: Pisteet ja elämät
 
 ## Ennakkokysely
 
@@ -17,7 +17,7 @@ Tässä oppitunnissa opit lisäämään pisteytyksen peliin ja laskemaan elämi�
 
 ## Piirrä teksti ruudulle
 
-Jotta pelin pisteet voidaan näyttää ruudulla, sinun täytyy tietää, miten teksti sijoitetaan ruudulle. Vastaus on käyttämällä `fillText()`-metodia canvas-objektissa. Voit myös hallita muita ominaisuuksia, kuten mitä fonttia käytetään, tekstin väriä ja sen kohdistusta (vasen, oikea, keskitetty). Alla on koodia, joka piirtää tekstiä ruudulle.
+Jotta voit näyttää pelin pisteet ruudulla, sinun täytyy tietää, miten teksti sijoitetaan ruudulle. Ratkaisu on käyttää `fillText()`-metodia canvas-objektissa. Voit myös hallita muita ominaisuuksia, kuten fonttia, tekstin väriä ja sen kohdistusta (vasen, oikea, keskitetty). Alla on koodia, joka piirtää tekstiä ruudulle.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,22 +26,22 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Lue lisää [tekstin lisäämisestä canvasille](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), ja voit halutessasi tehdä omasta versiostasi näyttävämmän!
+✅ Lue lisää [tekstin lisäämisestä canvasille](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), ja voit halutessasi tehdä omastasi näyttävämmän!
 
 ## Elämä pelikonseptina
 
-Elämä pelissä on vain numero. Avaruuspeliä ajatellen on yleistä antaa tietty määrä elämiä, jotka vähenevät yksi kerrallaan, kun aluksesi ottaa vahinkoa. On mukavaa, jos voit näyttää graafisen esityksen tästä, kuten pienet alukset tai sydämet numeron sijaan.
+Elämä pelissä on vain numero. Avaruuspeliä ajatellen on yleistä antaa tietty määrä elämiä, jotka vähenevät yksi kerrallaan, kun aluksesi ottaa vahinkoa. On mukavaa, jos voit näyttää tämän graafisesti, esimerkiksi pienillä aluksilla tai sydämillä numeron sijaan.
 
 ## Mitä rakennetaan
 
 Lisätään peliin seuraavat ominaisuudet:
 
-- **Pelin pisteet**: Jokaisesta tuhotusta vihollisaluksesta sankarille tulisi antaa pisteitä, esimerkiksi 100 pistettä per alus. Pelin pisteet tulisi näyttää vasemmassa alakulmassa.
-- **Elämä**: Aluksellasi on kolme elämää. Menetät yhden elämän aina, kun vihollisalus törmää sinuun. Elämäpisteet tulisi näyttää oikeassa alakulmassa ja niiden tulisi koostua seuraavasta grafiikasta ![elämäkuva](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.fi.png).
+- **Pelipisteet**: Jokaisesta tuhotusta vihollisaluksesta sankari saa pisteitä, esimerkiksi 100 pistettä per alus. Pelipisteet tulisi näyttää vasemmassa alakulmassa.
+- **Elämät**: Aluksellasi on kolme elämää. Menetät yhden elämän aina, kun vihollisalus törmää sinuun. Elämät tulisi näyttää oikeassa alakulmassa ja niiden tulisi koostua seuraavasta graafisesta elementistä ![elämäkuva](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.fi.png).
 
 ## Suositellut vaiheet
 
-Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansiossa. Sen pitäisi sisältää seuraavat:
+Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansioon. Sen pitäisi sisältää seuraavat:
 
 ```bash
 -| assets
@@ -53,14 +53,14 @@ Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansiossa. Sen pitäisi si
 -| package.json
 ```
 
-Aloita projektisi `your_work`-kansiossa kirjoittamalla:
+Aloitat projektisi `your_work`-kansiosta kirjoittamalla:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. Avaa selain ja syötä kyseinen osoite. Tällä hetkellä sen pitäisi näyttää sankari ja kaikki viholliset, ja kun painat vasenta ja oikeaa nuolinäppäintä, sankari liikkuu ja voi ampua vihollisia.
+Yllä oleva komento käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. Avaa selain ja syötä tämä osoite. Tällä hetkellä sen pitäisi näyttää sankari ja kaikki viholliset, ja kun painat vasenta ja oikeaa nuolinäppäintä, sankari liikkuu ja voi ampua vihollisia.
 
 ### Lisää koodia
 
@@ -80,7 +80,7 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
     eventEmitter = new EventEmitter();
     ```
   
-2. **Lisää muuttujia**. Lisää koodi, joka edustaa kokonaispisteitä (0) ja jäljellä olevia elämiä (3), ja näytä nämä pisteet ruudulla.
+2. **Lisää muuttujia**. Lisää koodi, joka edustaa kokonaispisteitäsi (0) ja jäljellä olevia elämiä (3), ja näytä nämä arvot ruudulla.
 
 3. **Laajenna `updateGameObjects()`-funktiota**. Laajenna `updateGameObjects()`-funktiota käsittelemään vihollisten törmäyksiä:
 
@@ -93,8 +93,8 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
       })
     ```
 
-4. **Lisää elämä ja pisteet**. 
-   1. **Alusta muuttujat**. Aseta elämä ja pisteet `this.cooldown = 0`-kohdan alle `Hero`-luokassa:
+4. **Lisää `life` ja `points`**. 
+   1. **Alusta muuttujat**. Lisää `this.cooldown = 0`-kohdan alle `Hero`-luokassa elämät ja pisteet:
 
         ```javascript
         this.life = 3;
@@ -150,9 +150,9 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
         }
         ```
 
-   2. **Jokaisesta laserista, joka osuu viholliseen**, lisää pelin pisteisiin 100 pistettä.
+   2. **Jokaisesta laserista, joka osuu viholliseen**, lisää pelipisteisiin 100 pistettä.
 
-      Laajenna Hero-luokkaa tekemään tämä lisäys:
+      Laajenna `Hero`-luokkaa tekemään tämä lisäys:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +160,7 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
           }
         ```
 
-        Lisää nämä funktiot törmäystapahtumien lähettäjiin:
+        Lisää nämä funktiot törmäystapahtumien käsittelijöihin:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,15 +175,15 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
         });
         ```
 
-✅ Tee hieman tutkimusta ja selvitä, mitä muita pelejä on luotu JavaScriptillä/Canvasilla. Mitkä ovat niiden yhteiset piirteet?
+✅ Tee hieman tutkimusta ja selvitä, mitä muita pelejä on luotu JavaScriptillä ja Canvasilla. Mitkä ovat niiden yhteiset piirteet?
 
-Kun olet saanut tämän työn valmiiksi, sinun pitäisi nähdä pienet "elämä"-alukset oikeassa alakulmassa, pisteet vasemmassa alakulmassa, ja sinun pitäisi nähdä elämäsi vähenevän, kun törmäät vihollisiin, sekä pisteiden kasvavan, kun ammut vihollisia. Hyvä työ! Pelisi on melkein valmis.
+Kun olet saanut tämän valmiiksi, sinun pitäisi nähdä pienet "elämä"-alukset oikeassa alakulmassa, pisteet vasemmassa alakulmassa, ja elämien määrä vähenee, kun törmäät vihollisiin, ja pisteet kasvavat, kun ammut vihollisia. Hienoa työtä! Pelisi on melkein valmis.
 
 ---
 
 ## 🚀 Haaste
 
-Koodisi on melkein valmis. Voitko kuvitella seuraavat askeleesi?
+Koodisi on melkein valmis. Mitä seuraavaksi voisit tehdä?
 
 ## Jälkikysely
 
@@ -191,7 +191,7 @@ Koodisi on melkein valmis. Voitko kuvitella seuraavat askeleesi?
 
 ## Kertaus ja itseopiskelu
 
-Tutki tapoja, joilla voit lisätä ja vähentää pelin pisteitä ja elämiä. On olemassa mielenkiintoisia pelimoottoreita, kuten [PlayFab](https://playfab.com). Miten yhden näistä käyttö voisi parantaa peliäsi?
+Tutki tapoja, joilla voit lisätä ja vähentää pelipisteitä ja elämiä. On olemassa mielenkiintoisia pelimoottoreita, kuten [PlayFab](https://playfab.com). Miten tällaisen moottorin käyttö voisi parantaa peliäsi?
 
 ## Tehtävä
 
@@ -200,4 +200,4 @@ Tutki tapoja, joilla voit lisätä ja vähentää pelin pisteitä ja elämiä. O
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

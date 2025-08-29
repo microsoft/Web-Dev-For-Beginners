@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-25T23:24:20+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-28T23:57:29+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "br"
 }
 -->
 # Crie um site de currículo usando vscode.dev
 
-_Que incrível seria se um recrutador pedisse seu currículo e você enviasse um URL?_ 😎
+_Que incrível seria se um recrutador pedisse seu currículo e você enviasse um link?_ 😎
 
 ## Objetivos
 
@@ -19,13 +19,13 @@ Após esta tarefa, você aprenderá a:
 
 ### Pré-requisitos
 
-1. Uma conta no GitHub. Acesse [GitHub](https://github.com/) e crie uma conta, caso ainda não tenha.
+1. Uma conta no GitHub. Acesse [GitHub](https://github.com/) e crie uma conta, caso ainda não tenha uma.
 
 ## Passos
 
-**Passo 1:** Crie um novo repositório no GitHub e dê a ele o nome `my-resume`
+**Passo 1:** Crie um novo repositório no GitHub e dê a ele o nome `my-resume`.
 
-**Passo 2:** Crie um arquivo `index.html` no seu repositório. Vamos adicionar pelo menos um arquivo diretamente no github.com, pois você não pode abrir um repositório vazio no vscode.dev.
+**Passo 2:** Crie um arquivo `index.html` no seu repositório. Vamos adicionar pelo menos um arquivo diretamente no github.com, pois não é possível abrir um repositório vazio no vscode.dev.
 
 Clique no link `creating a new file`, digite o nome `index.html` e selecione o botão `Commit new file`.
 
@@ -33,15 +33,15 @@ Clique no link `creating a new file`, digite o nome `index.html` e selecione o b
 
 **Passo 3:** Abra [VSCode.dev](https://vscode.dev) e selecione o botão `Open Remote Repository`.
 
-Copie a URL do repositório que você acabou de criar para o site do seu currículo e cole na caixa de entrada:
+Copie a URL do repositório que você acabou de criar para o site do currículo e cole na caixa de entrada:
 
-_Substitua `your-username` pelo seu nome de usuário do GitHub_
+_Substitua `your-username` pelo seu nome de usuário do GitHub._
 
 ```
 https://github.com/your-username/my-resume
 ```
 
-✅ Se for bem-sucedido, você verá seu projeto e o arquivo index.html abertos no editor de texto no navegador.
+✅ Se tudo der certo, você verá seu projeto e o arquivo index.html abertos no editor de texto no navegador.
 
 ![Criar um novo arquivo](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.br.png)
 
@@ -95,7 +95,7 @@ https://github.com/your-username/my-resume
                         </section>
                         <section>
                             <h2>EDUCAÇÃO</h2>
-                            <!-- sua formação -->
+                            <!-- sua formação acadêmica -->
                             <h3>Escreva seu curso aqui!</h3>
                             <p>
                                 Escreva sua instituição aqui!
@@ -114,7 +114,7 @@ https://github.com/your-username/my-resume
                         <section>
                             <h2>EXPERIÊNCIA PROFISSIONAL</h2>
                             <!-- sua experiência profissional -->
-                            <h3>Cargo</h3>
+                            <h3>Título do Cargo</h3>
                             <p>
                                 Nome da Organização Aqui | Mês de Início – Mês de Término
                             </p>
@@ -124,7 +124,7 @@ https://github.com/your-username/my-resume
                                     <li>Escreva os resultados/impacto da sua contribuição</li>
                                     
                             </ul>
-                            <h3>Cargo 2</h3>
+                            <h3>Título do Cargo 2</h3>
                             <p>
                                 Nome da Organização Aqui | Mês de Início – Mês de Término
                             </p>
@@ -141,7 +141,7 @@ https://github.com/your-username/my-resume
         </html>
 </details>
 
-Adicione os detalhes do seu currículo para substituir o _texto de exemplo_ no código HTML.
+Adicione os detalhes do seu currículo substituindo o _texto de exemplo_ no código HTML.
 
 **Passo 5:** Passe o mouse sobre a pasta My-Resume, clique no ícone `New File ...` e crie 2 novos arquivos no seu projeto: `style.css` e `codeswing.json`.
 
@@ -227,9 +227,9 @@ Isso é o que você verá na sua tela após instalar a extensão.
 
 ![Extensão Codeswing em ação](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.br.png)
 
-Se estiver satisfeito com as mudanças feitas, passe o mouse sobre a pasta `Changes` e clique no botão `+` para preparar as alterações.
+Se estiver satisfeito com as alterações feitas, passe o mouse sobre a pasta `Changes` e clique no botão `+` para preparar as alterações.
 
-Digite uma mensagem de commit _(Uma descrição da mudança que você fez no projeto)_ e confirme suas alterações clicando no `check`. Quando terminar de trabalhar no projeto, selecione o ícone do menu hambúrguer no canto superior esquerdo para retornar ao repositório no GitHub.
+Digite uma mensagem de commit _(Uma descrição das alterações feitas no projeto)_ e confirme suas alterações clicando no `check`. Quando terminar de trabalhar no projeto, selecione o ícone de menu hambúrguer no canto superior esquerdo para retornar ao repositório no GitHub.
 
 Parabéns 🎉 Você acabou de criar seu site de currículo usando vscode.dev em poucos passos.
 
@@ -239,7 +239,9 @@ Abra um repositório remoto no qual você tenha permissões para fazer alteraç�
 
 ## Revisão e Autoestudo
 
-Leia mais sobre [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) e alguns de seus outros recursos.
+Leia mais sobre [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) e algumas de suas outras funcionalidades.
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

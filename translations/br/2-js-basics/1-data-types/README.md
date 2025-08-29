@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-25T21:55:47+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-28T23:54:48+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "br"
 }
@@ -13,9 +13,9 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz Pré-Aula
-[Quiz pré-aula](https://ff-quizzes.netlify.app/web/quiz/7)
+[Quiz pré-aula](https://ff-quizzes.netlify.app/web/)
 
-Esta lição aborda os fundamentos do JavaScript, a linguagem que proporciona interatividade na web.
+Esta lição aborda os fundamentos do JavaScript, a linguagem que traz interatividade para a web.
 
 > Você pode fazer esta lição no [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-variables/?WT.mc_id=academic-77807-sagibbon)!
 
@@ -36,7 +36,7 @@ Criar e **declarar** uma variável segue a seguinte sintaxe **[palavra-chave] [n
 - **Palavra-chave**. As palavras-chave podem ser `let` ou `var`.  
 
 ✅ A palavra-chave `let` foi introduzida no ES6 e dá à sua variável um chamado _escopo de bloco_. É recomendado usar `let` em vez de `var`. Vamos abordar escopos de bloco mais detalhadamente em partes futuras.
-- **O nome da variável**, que é um nome que você escolhe.
+- **O nome da variável**, que é um nome escolhido por você.
 
 ### Tarefa - Trabalhando com variáveis
 
@@ -46,7 +46,7 @@ Criar e **declarar** uma variável segue a seguinte sintaxe **[palavra-chave] [n
     let myVariable;
     ```
 
-   `myVariable` foi declarada agora usando a palavra-chave `let`. Atualmente, ela não possui um valor.
+   `myVariable` foi declarada usando a palavra-chave `let`. Atualmente, ela não possui um valor.
 
 1. **Atribua um valor**. Armazene um valor em uma variável com o operador `=`, seguido do valor esperado.
 
@@ -64,7 +64,7 @@ Criar e **declarar** uma variável segue a seguinte sintaxe **[palavra-chave] [n
     let myVariable = 123;
     ```
 
-    O exemplo acima é chamado de _inicialização explícita_ quando uma variável é declarada e recebe um valor ao mesmo tempo.
+    O exemplo acima é chamado de _inicialização explícita_, quando uma variável é declarada e recebe um valor ao mesmo tempo.
 
 1. **Altere o valor da variável**. Altere o valor da variável da seguinte forma:
 
@@ -74,7 +74,7 @@ Criar e **declarar** uma variável segue a seguinte sintaxe **[palavra-chave] [n
 
    Uma vez que uma variável é declarada, você pode alterar seu valor a qualquer momento no seu código com o operador `=` e o novo valor.
 
-   ✅ Experimente! Você pode escrever JavaScript diretamente no seu navegador. Abra uma janela do navegador e acesse as Ferramentas de Desenvolvedor. No console, você encontrará um prompt; digite `let myVariable = 123`, pressione Enter, e depois digite `myVariable`. O que acontece? Observe que você aprenderá mais sobre esses conceitos em lições subsequentes.
+   ✅ Experimente! Você pode escrever JavaScript diretamente no seu navegador. Abra uma janela do navegador e vá para as Ferramentas de Desenvolvedor. No console, você encontrará um prompt; digite `let myVariable = 123`, pressione Enter, depois digite `myVariable`. O que acontece? Observe que você aprenderá mais sobre esses conceitos em lições subsequentes.
 
 ## Constantes
 
@@ -86,8 +86,8 @@ const MY_VARIABLE = 123;
 
 Constantes são semelhantes às variáveis, com duas exceções:
 
-- **Devem ter um valor**. Constantes devem ser inicializadas, ou ocorrerá um erro ao executar o código.
-- **A referência não pode ser alterada**. A referência de uma constante não pode ser alterada após ser inicializada, ou ocorrerá um erro ao executar o código. Vamos analisar dois exemplos:
+- **Devem ter um valor**. Constantes precisam ser inicializadas, ou um erro ocorrerá ao executar o código.
+- **A referência não pode ser alterada**. A referência de uma constante não pode ser alterada após ser inicializada, ou um erro ocorrerá ao executar o código. Vamos ver dois exemplos:
    - **Valor simples**. O seguinte NÃO é permitido:
    
       ```javascript
@@ -132,12 +132,12 @@ Variáveis podem armazenar todos os tipos de números, incluindo decimais ou nú
 Existem vários tipos de operadores para usar ao realizar funções aritméticas, e alguns estão listados aqui:
 
 | Símbolo | Descrição                                                              | Exemplo                          |
-| ------ | ---------------------------------------------------------------------- | -------------------------------- |
-| `+`    | **Adição**: Calcula a soma de dois números                              | `1 + 2 //resposta esperada é 3`   |
-| `-`    | **Subtração**: Calcula a diferença entre dois números                   | `1 - 2 //resposta esperada é -1`  |
-| `*`    | **Multiplicação**: Calcula o produto de dois números                    | `1 * 2 //resposta esperada é 2`   |
-| `/`    | **Divisão**: Calcula o quociente de dois números                        | `1 / 2 //resposta esperada é 0.5` |
-| `%`    | **Resto**: Calcula o resto da divisão de dois números                   | `1 % 2 //resposta esperada é 1`   |
+| ------- | ---------------------------------------------------------------------- | -------------------------------- |
+| `+`     | **Adição**: Calcula a soma de dois números                             | `1 + 2 //resposta esperada é 3`  |
+| `-`     | **Subtração**: Calcula a diferença entre dois números                  | `1 - 2 //resposta esperada é -1` |
+| `*`     | **Multiplicação**: Calcula o produto de dois números                   | `1 * 2 //resposta esperada é 2`  |
+| `/`     | **Divisão**: Calcula o quociente de dois números                       | `1 / 2 //resposta esperada é 0.5`|
+| `%`     | **Resto**: Calcula o resto da divisão de dois números                  | `1 % 2 //resposta esperada é 1`  |
 
 ✅ Experimente! Tente uma operação aritmética no console do seu navegador. Os resultados te surpreendem?
 
@@ -167,7 +167,7 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ```
 
-✅ Por que `1 + 1 = 2` em JavaScript, mas `'1' + '1' = 11?` Pense nisso. E `'1' + 1`?
+✅ Por que `1 + 1 = 2` em JavaScript, mas `'1' + '1' = 11`? Pense nisso. E `'1' + 1`?
 
 **Template literals** são outra forma de formatar strings, mas, em vez de aspas, usa-se o acento grave. Qualquer coisa que não seja texto simples deve ser colocada dentro de placeholders `${ }`. Isso inclui quaisquer variáveis que possam ser strings.
 
@@ -196,18 +196,20 @@ Booleanos podem ter apenas dois valores: `true` ou `false`. Booleanos ajudam a t
 
 ## 🚀 Desafio
 
-JavaScript é notório por suas formas surpreendentes de lidar com tipos de dados ocasionalmente. Faça uma pesquisa sobre esses 'pegadinhas'. Por exemplo: a sensibilidade a maiúsculas e minúsculas pode te pegar! Experimente isso no seu console: `let age = 1; let Age = 2; age == Age` (resolve como `false` -- por quê?). Que outras pegadinhas você consegue encontrar?
+JavaScript é famoso por suas maneiras surpreendentes de lidar com tipos de dados ocasionalmente. Faça uma pesquisa sobre esses 'pegadinhas'. Por exemplo: a sensibilidade a maiúsculas e minúsculas pode te pegar! Experimente isso no seu console: `let age = 1; let Age = 2; age == Age` (resolve para `false` -- por quê?). Que outras pegadinhas você consegue encontrar?
 
 ## Quiz Pós-Aula
-[Quiz pós-aula](https://ff-quizzes.netlify.app/web/quiz/8)
+[Quiz pós-aula](https://ff-quizzes.netlify.app)
 
-## Revisão e Autoestudo
+## Revisão & Autoestudo
 
 Dê uma olhada nesta [lista de exercícios de JavaScript](https://css-tricks.com/snippets/javascript/) e tente um. O que você aprendeu?
 
 ## Tarefa
 
 [Prática de Tipos de Dados](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-25T23:24:47+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T00:13:21+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "it"
 }
 -->
-# Crea un sito web per il curriculum usando vscode.dev
+# Crea un sito web per il tuo curriculum usando vscode.dev
 
 _Quanto sarebbe fantastico se un recruiter ti chiedesse il curriculum e tu gli inviassi un URL?_ 😎
 
@@ -36,7 +36,7 @@ Dopo questo compito, imparerai a:
 
 **Passaggio 1:** Crea un nuovo repository GitHub e assegnagli il nome `my-resume`
 
-**Passaggio 2:** Crea un file `index.html` nel tuo repository. Aggiungeremo almeno un file direttamente su github.com perché non puoi aprire un repository vuoto su vscode.dev.
+**Passaggio 2:** Crea un file `index.html` nel tuo repository. Aggiungeremo almeno un file direttamente su github.com perché non è possibile aprire un repository vuoto su vscode.dev.
 
 Clicca sul link `creating a new file`, digita il nome `index.html` e seleziona il pulsante `Commit new file`.
 
@@ -130,8 +130,8 @@ https://github.com/your-username/my-resume
                                 Nome dell'organizzazione | Mese di inizio – Mese di fine
                             </p>
                             <ul>
-                                    <li>Compito 1 - Scrivi cosa hai fatto!</li>
-                                    <li>Compito 2 - Scrivi cosa hai fatto!</li>
+                                    <li>Attività 1 - Scrivi cosa hai fatto!</li>
+                                    <li>Attività 2 - Scrivi cosa hai fatto!</li>
                                     <li>Scrivi i risultati/impatti del tuo contributo</li>
                                     
                             </ul>
@@ -140,8 +140,8 @@ https://github.com/your-username/my-resume
                                 Nome dell'organizzazione | Mese di inizio – Mese di fine
                             </p>
                             <ul>
-                                    <li>Compito 1 - Scrivi cosa hai fatto!</li>
-                                    <li>Compito 2 - Scrivi cosa hai fatto!</li>
+                                    <li>Attività 1 - Scrivi cosa hai fatto!</li>
+                                    <li>Attività 2 - Scrivi cosa hai fatto!</li>
                                     <li>Scrivi i risultati/impatti del tuo contributo</li>
                                     
                             </ul>
@@ -238,7 +238,7 @@ Questo è ciò che vedrai sullo schermo dopo aver installato l'estensione.
 
 ![Estensione Codeswing in azione](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.it.png)
 
-Se sei soddisfatto delle modifiche apportate, passa con il mouse sulla cartella `Changes` e clicca sul pulsante `+` per mettere in stage le modifiche.
+Se sei soddisfatto delle modifiche che hai apportato, passa con il mouse sulla cartella `Changes` e clicca sul pulsante `+` per mettere in stage le modifiche.
 
 Digita un messaggio di commit _(Una descrizione delle modifiche apportate al progetto)_ e conferma le modifiche cliccando sul `check`. Una volta terminato il lavoro sul progetto, seleziona l'icona del menu hamburger in alto a sinistra per tornare al repository su GitHub.
 
@@ -253,9 +253,11 @@ Apri un repository remoto su cui hai i permessi per apportare modifiche e aggior
 [Quiz post-lettura](https://ff-quizzes.netlify.app/web/quiz/4)
 ---->
 
-## Revisione & Studio Autonomo
+## Revisione e Studio Autonomo
 
 Leggi di più su [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) e alcune delle sue altre funzionalità.
 
+---
+
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

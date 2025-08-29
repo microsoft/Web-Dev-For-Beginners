@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-27T21:01:12+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T00:37:43+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "fi"
 }
@@ -15,17 +15,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Johdanto
 
-JavaScriptin tulon myötä selaimiin, verkkosivustot ovat muuttuneet entistä interaktiivisemmiksi ja monimutkaisemmiksi. Verkkoteknologioita käytetään nykyään yleisesti täysin toimivien sovellusten luomiseen, jotka toimivat suoraan selaimessa ja joita kutsumme [verkkosovelluksiksi](https://en.wikipedia.org/wiki/Web_application). Koska verkkosovellukset ovat erittäin interaktiivisia, käyttäjät eivät halua odottaa koko sivun latautumista jokaisen toiminnon jälkeen. Siksi JavaScriptiä käytetään päivittämään HTML suoraan DOM:n avulla, jotta käyttäjäkokemus olisi sujuvampi.
+JavaScriptin tulon myötä selaimiin verkkosivustoista on tullut entistä vuorovaikutteisempia ja monimutkaisempia. Verkkoteknologioita käytetään nykyään yleisesti täysin toimivien sovellusten luomiseen, jotka toimivat suoraan selaimessa. Näitä kutsutaan [verkkosovelluksiksi](https://en.wikipedia.org/wiki/Web_application). Koska verkkosovellukset ovat erittäin vuorovaikutteisia, käyttäjät eivät halua odottaa koko sivun uudelleenlatausta jokaisen toiminnon yhteydessä. Siksi JavaScriptiä käytetään päivittämään HTML suoraan DOM:n avulla, jotta käyttäjäkokemus olisi sujuvampi.
 
-Tässä oppitunnissa luomme perustan pankkisovelluksen rakentamiselle, käyttämällä HTML-malleja useiden näyttöjen luomiseen, jotka voidaan näyttää ja päivittää ilman, että koko HTML-sivua tarvitsee ladata uudelleen.
+Tässä oppitunnissa luomme perustan pankkisovelluksen rakentamiselle käyttämällä HTML-malleja useiden näyttöjen luomiseen, joita voidaan näyttää ja päivittää ilman koko HTML-sivun uudelleenlatausta.
 
-### Esivaatimukset
+### Esitiedot
 
-Tarvitset paikallisen verkkopalvelimen testataksesi verkkosovellusta, jonka rakennamme tässä oppitunnissa. Jos sinulla ei ole sellaista, voit asentaa [Node.js:n](https://nodejs.org) ja käyttää komentoa `npx lite-server` projektikansiossasi. Tämä luo paikallisen verkkopalvelimen ja avaa sovelluksesi selaimessa.
+Tarvitset paikallisen verkkopalvelimen testataksesi verkkosovellusta, jonka rakennamme tällä oppitunnilla. Jos sinulla ei ole sellaista, voit asentaa [Node.js:n](https://nodejs.org) ja käyttää komentoa `npx lite-server` projektikansiostasi. Tämä luo paikallisen verkkopalvelimen ja avaa sovelluksesi selaimessa.
 
 ### Valmistelu
 
-Luo tietokoneellesi kansio nimeltä `bank` ja sen sisälle tiedosto nimeltä `index.html`. Aloitamme tästä HTML-[pohjakoodista](https://en.wikipedia.org/wiki/Boilerplate_code):
+Luo tietokoneellesi kansio nimeltä `bank` ja sen sisälle tiedosto nimeltä `index.html`. Aloitamme tästä HTML-[pohjasta](https://en.wikipedia.org/wiki/Boilerplate_code):
 
 ```html
 <!DOCTYPE html>
@@ -45,26 +45,26 @@ Luo tietokoneellesi kansio nimeltä `bank` ja sen sisälle tiedosto nimeltä `in
 
 ## HTML-mallit
 
-Jos haluat luoda useita näyttöjä verkkosivulle, yksi ratkaisu olisi luoda yksi HTML-tiedosto jokaiselle näytölle, jonka haluat näyttää. Tämä ratkaisu tuo kuitenkin mukanaan joitakin haittoja:
+Jos haluat luoda verkkosivulle useita näyttöjä, yksi ratkaisu olisi luoda yksi HTML-tiedosto jokaiselle näytölle. Tämä ratkaisu tuo kuitenkin mukanaan joitakin haittoja:
 
-- Koko HTML täytyy ladata uudelleen näytön vaihdon yhteydessä, mikä voi olla hidasta.
+- Koko HTML täytyy ladata uudelleen näytön vaihtuessa, mikä voi olla hidasta.
 - Tietojen jakaminen eri näyttöjen välillä on vaikeaa.
 
-Toinen lähestymistapa on käyttää vain yhtä HTML-tiedostoa ja määritellä useita [HTML-malleja](https://developer.mozilla.org/docs/Web/HTML/Element/template) käyttämällä `<template>`-elementtiä. Malli on uudelleenkäytettävä HTML-lohko, jota selain ei näytä, ja joka täytyy luoda ajonaikaisesti JavaScriptin avulla.
+Toinen lähestymistapa on käyttää vain yhtä HTML-tiedostoa ja määritellä useita [HTML-malleja](https://developer.mozilla.org/docs/Web/HTML/Element/template) `<template>`-elementin avulla. Malli on uudelleenkäytettävä HTML-lohko, jota selain ei näytä, ja se täytyy ottaa käyttöön ajonaikaisesti JavaScriptin avulla.
 
 ### Tehtävä
 
-Luomme pankkisovelluksen, jossa on kaksi näyttöä: kirjautumissivu ja hallintapaneeli. Aloitetaan lisäämällä HTML-runkoon paikkamerkkielementti, jota käytämme sovelluksemme eri näyttöjen luomiseen:
+Luomme pankkisovelluksen, jossa on kaksi näyttöä: kirjautumissivu ja hallintapaneeli. Aloitetaan lisäämällä HTML-runkoon paikkamerkki, jota käytämme sovelluksemme eri näyttöjen näyttämiseen:
 
 ```html
 <div id="app">Loading...</div>
 ```
 
-Annamme sille `id`-tunnisteen, jotta sen löytäminen JavaScriptillä olisi helpompaa myöhemmin.
+Annamme sille `id`-tunnisteen, jotta se on helpompi löytää JavaScriptillä myöhemmin.
 
-> Vinkki: Koska tämän elementin sisältö korvataan, voimme laittaa siihen latausviestin tai -ilmaisimen, joka näytetään sovelluksen latautuessa.
+> Vinkki: Koska tämän elementin sisältö korvataan, voimme laittaa siihen latausviestin tai -indikaattorin, joka näkyy sovelluksen latautuessa.
 
-Seuraavaksi lisätään HTML-malli kirjautumissivulle. Laitamme siihen toistaiseksi vain otsikon ja osion, joka sisältää linkin navigointia varten.
+Seuraavaksi lisätään HTML-malli kirjautumissivulle. Toistaiseksi laitamme siihen vain otsikon ja osion, joka sisältää linkin navigointia varten.
 
 ```html
 <template id="login">
@@ -77,9 +77,9 @@ Seuraavaksi lisätään HTML-malli kirjautumissivulle. Laitamme siihen toistaise
 
 Lisätään sitten toinen HTML-malli hallintapaneelisivulle. Tämä sivu sisältää eri osioita:
 
-- Otsikon, jossa on otsikko ja uloskirjautumislinkki
-- Pankkitilin nykyisen saldon
-- Tapahtumaluettelon, joka näytetään taulukossa
+- Otsikko, jossa on otsikko ja uloskirjautumislinkki
+- Pankkitilin nykyinen saldo
+- Tapahtumaluettelo, joka näytetään taulukossa
 
 ```html
 <template id="dashboard">
@@ -106,21 +106,21 @@ Lisätään sitten toinen HTML-malli hallintapaneelisivulle. Tämä sivu sisält
 </template>
 ```
 
-> Vinkki: Kun luot HTML-malleja, jos haluat nähdä miltä ne näyttävät, voit kommentoida `<template>` ja `</template>`-rivien ympärille `<!-- -->`.
+> Vinkki: Kun luot HTML-malleja, jos haluat nähdä, miltä ne näyttävät, voit kommentoida `<template>`- ja `</template>`-rivien ympärille `<!-- -->`.
 
-✅ Miksi käytämme `id`-attribuutteja malleissa? Voisimmeko käyttää jotain muuta, kuten luokkia?
+✅ Miksi luulet, että käytämme `id`-attribuutteja malleissa? Voisimmeko käyttää jotain muuta, kuten luokkia?
 
 ## Mallien näyttäminen JavaScriptillä
 
-Jos kokeilet nykyistä HTML-tiedostoasi selaimessa, näet, että se jää näyttämään `Loading...`. Tämä johtuu siitä, että meidän täytyy lisätä JavaScript-koodia mallien luomiseksi ja näyttämiseksi.
+Jos kokeilet nykyistä HTML-tiedostoasi selaimessa, huomaat, että se jää näyttämään `Loading...`. Tämä johtuu siitä, että meidän täytyy lisätä JavaScript-koodia mallien käyttöönottoon ja näyttämiseen.
 
-Mallin luominen tapahtuu yleensä kolmessa vaiheessa:
+Mallin käyttöönotto tehdään yleensä kolmessa vaiheessa:
 
 1. Haetaan mallielementti DOM:sta, esimerkiksi käyttämällä [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
-2. Kopioidaan mallielementti, käyttämällä [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
+2. Kopioidaan mallielementti käyttämällä [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
 3. Liitetään se DOM:iin näkyvän elementin alle, esimerkiksi käyttämällä [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
-✅ Miksi meidän täytyy kopioida malli ennen sen liittämistä DOM:iin? Mitä luulet tapahtuvan, jos jättäisimme tämän vaiheen väliin?
+✅ Miksi meidän täytyy kopioida malli ennen sen liittämistä DOM:iin? Mitä luulet tapahtuvan, jos ohitamme tämän vaiheen?
 
 ### Tehtävä
 
@@ -142,7 +142,7 @@ function updateRoute(templateId) {
 }
 ```
 
-Tässä teemme juuri yllä kuvatut kolme vaihetta. Luomme mallin, jonka `id` on `templateId`, ja laitamme sen kopioidun sisällön sovelluksemme paikkamerkkiin. Huomaa, että meidän täytyy käyttää `cloneNode(true)` kopioidaksemme koko mallin alipuuston.
+Tässä teemme juuri yllä kuvatut kolme vaihetta. Otamme käyttöön mallin, jonka `id` on `templateId`, ja laitamme sen kopioidun sisällön sovelluksemme paikkamerkkiin. Huomaa, että meidän täytyy käyttää `cloneNode(true)` kopioidaksemme koko mallin alipuusto.
 
 Kutsu nyt tätä funktiota yhdellä mallilla ja katso tulosta.
 
@@ -150,7 +150,7 @@ Kutsu nyt tätä funktiota yhdellä mallilla ja katso tulosta.
 updateRoute('login');
 ```
 
-✅ Mikä on tämän koodin tarkoitus `app.innerHTML = '';`? Mitä tapahtuu ilman sitä?
+✅ Mikä on tämän koodin `app.innerHTML = '';` tarkoitus? Mitä tapahtuu ilman sitä?
 
 ## Reittien luominen
 
@@ -162,7 +162,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-Jos luot verkkopalvelimen, jonka juurena on `mywebsite`, URL-reititys on:
+Jos luot verkkopalvelimen, jonka juurena on `mywebsite`, URL-yhdistykset ovat:
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -174,7 +174,7 @@ Kuitenkin verkkosovelluksessamme käytämme yhtä HTML-tiedostoa, joka sisältä
 
 ### Tehtävä
 
-Käytämme yksinkertaista objektia toteuttaaksemme [kartan](https://en.wikipedia.org/wiki/Associative_array) URL-polkujen ja malliemme välillä. Lisää tämä objekti `app.js`-tiedoston alkuun.
+Käytämme yksinkertaista objektia toteuttamaan [kartan](https://en.wikipedia.org/wiki/Associative_array) URL-polkujen ja malliemme välillä. Lisää tämä objekti `app.js`-tiedostosi alkuun.
 
 ```js
 const routes = {
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-Muokataan nyt hieman `updateRoute`-funktiota. Sen sijaan, että välittäisimme suoraan `templateId`-argumentin, haluamme hakea sen ensin nykyisestä URL-osoitteesta ja käyttää sitten karttaamme saadaksemme vastaavan mallin `id`-arvon. Voimme käyttää [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) saadaksemme vain polkuosan URL-osoitteesta.
+Muokataan nyt hieman `updateRoute`-funktiota. Sen sijaan, että välittäisimme suoraan `templateId`:n argumenttina, haluamme hakea sen ensin nykyisestä URL-osoitteesta ja käyttää sitten karttaamme saadaksemme vastaavan mallin `id`:n arvon. Voimme käyttää [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) saadaksemme vain polkuosan URL-osoitteesta.
 
 ```js
 function updateRoute() {
@@ -198,22 +198,22 @@ function updateRoute() {
 }
 ```
 
-Tässä kartoitimme määritetyt reitit vastaaviin malleihin. Voit kokeilla, että tämä toimii oikein muuttamalla URL-osoitetta selaimessasi.
+Tässä yhdistimme määritellyt reitit vastaaviin malleihin. Voit kokeilla, että tämä toimii oikein, muuttamalla URL-osoitetta selaimessasi manuaalisesti.
 
-✅ Mitä tapahtuu, jos syötät tuntemattoman polun URL-osoitteeseen? Miten voisimme ratkaista tämän?
+✅ Mitä tapahtuu, jos syötät tuntemattoman polun URL-osoitteeseen? Kuinka voisimme ratkaista tämän?
 
 ## Navigoinnin lisääminen
 
-Sovelluksemme seuraava askel on lisätä mahdollisuus navigoida sivujen välillä ilman, että URL-osoitetta täytyy muuttaa manuaalisesti. Tämä tarkoittaa kahta asiaa:
+Seuraava askel sovelluksessamme on lisätä mahdollisuus navigoida sivujen välillä ilman, että URL-osoitetta tarvitsee muuttaa manuaalisesti. Tämä tarkoittaa kahta asiaa:
 
 1. Päivitetään nykyinen URL-osoite
 2. Päivitetään näytettävä malli uuden URL-osoitteen perusteella
 
-Olemme jo huolehtineet toisesta osasta `updateRoute`-funktiolla, joten meidän täytyy selvittää, miten päivittää nykyinen URL-osoite.
+Olemme jo huolehtineet toisesta osasta `updateRoute`-funktion avulla, joten meidän täytyy selvittää, kuinka päivittää nykyinen URL-osoite.
 
-Meidän täytyy käyttää JavaScriptiä ja tarkemmin [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), joka mahdollistaa URL-osoitteen päivittämisen ja uuden merkinnän luomisen selaimen historiassa ilman HTML:n uudelleenlatausta.
+Meidän täytyy käyttää JavaScriptiä ja tarkemmin sanottuna [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), joka mahdollistaa URL-osoitteen päivittämisen ja uuden merkinnän luomisen selaushistoriaan ilman HTML:n uudelleenlatausta.
 
-> Huomio: Vaikka HTML:n ankkurielementti [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) voidaan käyttää itsenäisesti hyperlinkkien luomiseen eri URL-osoitteisiin, se lataa HTML:n uudelleen oletuksena. Tämä käyttäytyminen täytyy estää, kun käsitellään reititystä mukautetulla JavaScriptillä, käyttämällä preventDefault()-funktiota klikkaustapahtumassa.
+> Huom: Vaikka HTML-ankkurielementti [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) voidaan käyttää itsenäisesti luomaan hyperlinkkejä eri URL-osoitteisiin, se lataa oletuksena HTML:n uudelleen. Tämä käyttäytyminen täytyy estää, kun käsittelemme reititystä mukautetulla JavaScriptillä, käyttämällä `preventDefault()`-funktiota klikkaustapahtumassa.
 
 ### Tehtävä
 
@@ -226,9 +226,9 @@ function navigate(path) {
 }
 ```
 
-Tämä metodi päivittää ensin nykyisen URL-osoitteen annetun polun perusteella, sitten päivittää mallin. Ominaisuus `window.location.origin` palauttaa URL-juuren, mikä mahdollistaa täydellisen URL-osoitteen rakentamisen annetusta polusta.
+Tämä metodi päivittää ensin nykyisen URL-osoitteen annetun polun perusteella ja sitten päivittää mallin. Ominaisuus `window.location.origin` palauttaa URL-osoitteen juuren, mikä mahdollistaa täydellisen URL-osoitteen uudelleenrakentamisen annetusta polusta.
 
-Nyt kun meillä on tämä funktio, voimme huolehtia ongelmasta, joka meillä on, jos polku ei vastaa mitään määritettyä reittiä. Muokkaamme `updateRoute`-funktiota lisäämällä varasuunnitelman yhteen olemassa olevista reiteistä, jos emme löydä vastaavuutta.
+Nyt kun meillä on tämä funktio, voimme huolehtia ongelmasta, joka ilmenee, jos polku ei vastaa mitään määriteltyä reittiä. Muokkaamme `updateRoute`-funktiota lisäämällä varasuunnitelman yhteen olemassa olevista reiteistä, jos emme löydä vastaavuutta.
 
 ```js
 function updateRoute() {
@@ -263,32 +263,32 @@ Viimeistellään navigointijärjestelmä lisäämällä sidonnat HTML:n *Login*-
 
 Yllä oleva `event`-objekti tallentaa `click`-tapahtuman ja välittää sen `onLinkClick`-funktiollemme.
 
-Käyttämällä [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick)-attribuuttia sidotaan `click`-tapahtuma JavaScript-koodiin, tässä `navigate()`-funktion kutsuun.
+Käyttämällä [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick)-attribuuttia sidomme `click`-tapahtuman JavaScript-koodiin, tässä tapauksessa `navigate()`-funktion kutsuun.
 
-Kokeile klikkaamalla näitä linkkejä, sinun pitäisi nyt pystyä navigoimaan sovelluksesi eri näyttöjen välillä.
+Kokeile klikata näitä linkkejä, sinun pitäisi nyt pystyä navigoimaan sovelluksesi eri näyttöjen välillä.
 
-✅ `history.pushState`-metodi on osa HTML5-standardia ja toteutettu [kaikissa moderneissa selaimissa](https://caniuse.com/?search=pushState). Jos rakennat verkkosovellusta vanhemmille selaimille, voit käyttää tämän API:n sijasta kikkaa: käyttämällä [hash-merkkiä (`#`)](https://en.wikipedia.org/wiki/URI_fragment) ennen polkua voit toteuttaa reitityksen, joka toimii tavallisella ankkurinavigoinnilla eikä lataa sivua uudelleen, koska sen tarkoitus oli luoda sisäisiä linkkejä sivun sisällä.
+✅ `history.pushState`-metodi on osa HTML5-standardia ja toteutettu [kaikissa moderneissa selaimissa](https://caniuse.com/?search=pushState). Jos rakennat verkkosovellusta vanhemmille selaimille, voit käyttää tämän API:n sijasta kikkaa: käyttämällä [hash-merkkiä (`#`)](https://en.wikipedia.org/wiki/URI_fragment) ennen polkua voit toteuttaa reitityksen, joka toimii tavallisella ankkurinavigoinnilla eikä lataa sivua uudelleen, sillä sen tarkoitus oli luoda sisäisiä linkkejä sivun sisällä.
 
 ## Selaimen takaisin- ja eteenpäin-painikkeiden käsittely
 
-`history.pushState`-käyttö luo uusia merkintöjä selaimen navigointihistoriaan. Voit tarkistaa tämän pitämällä selaimesi *takaisin-painiketta* painettuna, sen pitäisi näyttää jotain tällaista:
+`history.pushState` luo uusia merkintöjä selaimen navigointihistoriaan. Voit tarkistaa tämän pitämällä selaimen *takaisin-painiketta* painettuna, jolloin sen pitäisi näyttää jotain tällaista:
 
 ![Navigointihistorian kuvakaappaus](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.fi.png)
 
-Jos yrität klikata takaisin-painiketta muutaman kerran, näet, että nykyinen URL-osoite muuttuu ja historia päivittyy, mutta sama malli pysyy näytettynä.
+Jos yrität klikata takaisin-painiketta muutaman kerran, huomaat, että nykyinen URL-osoite muuttuu ja historia päivittyy, mutta sama malli pysyy näytöllä.
 
-Tämä johtuu siitä, että sovellus ei tiedä, että meidän täytyy kutsua `updateRoute()` joka kerta, kun historia muuttuu. Jos katsot [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState)-dokumentaatiota, näet, että jos tila muuttuu - eli siirryimme eri URL-osoitteeseen - [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event)-tapahtuma laukaistaan. Käytämme tätä korjataksemme ongelman.
+Tämä johtuu siitä, että sovellus ei tiedä, että meidän täytyy kutsua `updateRoute()` aina, kun historia muuttuu. Jos katsot [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState)-dokumentaatiota, huomaat, että jos tila muuttuu - eli siirrymme eri URL-osoitteeseen - [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event)-tapahtuma laukaistaan. Käytämme tätä ongelman korjaamiseen.
 
 ### Tehtävä
 
-Varmistaaksemme, että näytettävä malli päivitetään, kun selaimen historia muuttuu, liitämme uuden funktion, joka kutsuu `updateRoute()`. Teemme tämän `app.js`-tiedoston lopussa:
+Jotta varmistamme, että näytettävä malli päivittyy, kun selaimen historia muuttuu, liitämme uuden funktion, joka kutsuu `updateRoute()`. Teemme tämän `app.js`-tiedoston lopussa:
 
 ```js
 window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Huomio: Käytimme [nuolifunktiota](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) tässä `popstate`-tapahtumankäsittelijän määrittämiseen lyhyyden vuoksi, mutta tavallinen funktio toimisi samalla tavalla.
+> Huom: Käytimme tässä [nuolifunktiota](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) määrittämään `popstate`-tapahtumakäsittelijämme tiiviisti, mutta tavallinen funktio toimisi samalla tavalla.
 
 Tässä on kertausvideo nuolifunktioista:
 
@@ -296,7 +296,7 @@ Tässä on kertausvideo nuolifunktioista:
 
 > 🎥 Klikkaa yllä olevaa kuvaa katsoaksesi videon nuolifunktioista.
 
-Kokeile nyt selaimesi takaisin- ja eteenpäin-painikkeita ja tarkista, että näytettävä reitti päivittyy oikein tällä kertaa.
+Kokeile nyt käyttää selaimen takaisin- ja eteenpäin-painikkeita ja tarkista, että näytettävä reitti päivittyy oikein tällä kertaa.
 
 ---
 
@@ -310,7 +310,7 @@ Lisää uusi malli ja reitti kolmannelle sivulle, joka näyttää tämän sovell
 
 ## Kertaus ja itseopiskelu
 
-Reititys on yksi yllättävän hankalista osista verkkokehityksessä, erityisesti kun verkkosivut siirtyvät sivun uudelleenlatauskäyttäytymisestä yhden sivun sovellusten sivun päivityksiin. Lue hieman [miten Azure Static Web App -palvelu](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) käsittelee reititystä. Voitko selittää, miksi jotkut dokumentissa kuvatut päätökset ovat välttämättömiä?
+Reititys on yksi yllättävän haastavista osista verkkokehityksessä, erityisesti kun verkko siirtyy sivun uudelleenlatauskäyttäytymisestä yhden sivun sovellusten päivityksiin. Lue hieman siitä, [kuinka Azure Static Web App -palvelu](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) käsittelee reititystä. Voitko selittää, miksi jotkin kyseisessä dokumentissa kuvatut päätökset ovat tarpeellisia?
 
 ## Tehtävä
 
@@ -319,4 +319,4 @@ Reititys on yksi yllättävän hankalista osista verkkokehityksessä, erityisest
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä johtuvista väärinkäsityksistä tai virhetulkinnoista.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

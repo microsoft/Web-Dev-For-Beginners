@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b667b7d601e2ee19acb5aa9d102dc9f3",
-  "translation_date": "2025-08-26T00:14:20+00:00",
+  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
+  "translation_date": "2025-08-28T23:48:11+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "br"
 }
 -->
-# Construindo um App Bancário Parte 2: Criando um Formulário de Login e Registro
+# Construir um App Bancário Parte 2: Criar um Formulário de Login e Registro
 
 ## Quiz Pré-Aula
 
@@ -26,7 +26,7 @@ Você precisa ter concluído a etapa de [templates HTML e roteamento](../1-templ
 **Atenção**
 Você terá dois terminais rodando ao mesmo tempo, conforme listado abaixo:
 1. Para o aplicativo bancário principal que construímos na lição de [templates HTML e roteamento](../1-template-route/README.md)
-2. Para a [API do servidor do App Bancário](../api/README.md) que acabamos de configurar acima.
+2. Para a [API do servidor do aplicativo bancário](../api/README.md) que acabamos de configurar acima.
 
 Você precisa que os dois servidores estejam funcionando para seguir o restante da lição. Eles escutam em portas diferentes (porta `3000` e porta `5000`), então tudo deve funcionar perfeitamente.
 
@@ -41,7 +41,7 @@ curl http://localhost:5000/api
 
 ## Formulário e controles
 
-O elemento `<form>` encapsula uma seção de um documento HTML onde o usuário pode inserir e enviar dados com controles interativos. Existem vários tipos de controles de interface de usuário (UI) que podem ser usados dentro de um formulário, sendo os mais comuns os elementos `<input>` e `<button>`.
+O elemento `<form>` encapsula uma seção de um documento HTML onde o usuário pode inserir e enviar dados usando controles interativos. Existem vários tipos de controles de interface de usuário (UI) que podem ser usados dentro de um formulário, sendo os mais comuns os elementos `<input>` e `<button>`.
 
 Há muitos [tipos](https://developer.mozilla.org/docs/Web/HTML/Element/input) diferentes de `<input>`. Por exemplo, para criar um campo onde o usuário pode inserir seu nome de usuário, você pode usar:
 
@@ -53,13 +53,13 @@ O atributo `name` será usado como o nome da propriedade quando os dados do form
 
 > Confira a lista completa de [tipos de `<input>`](https://developer.mozilla.org/docs/Web/HTML/Element/input) e [outros controles de formulário](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls) para ter uma ideia de todos os elementos nativos de UI que você pode usar ao construir sua interface.
 
-✅ Note que `<input>` é um [elemento vazio](https://developer.mozilla.org/docs/Glossary/Empty_element) no qual você *não* deve adicionar uma tag de fechamento correspondente. No entanto, você pode usar a notação de auto-fechamento `<input/>`, mas isso não é obrigatório.
+✅ Note que `<input>` é um [elemento vazio](https://developer.mozilla.org/docs/Glossary/Empty_element) no qual você *não* deve adicionar uma tag de fechamento correspondente. Você pode, no entanto, usar a notação de auto-fechamento `<input/>`, mas isso não é obrigatório.
 
 O elemento `<button>` dentro de um formulário é um pouco especial. Se você não especificar seu atributo `type`, ele automaticamente enviará os dados do formulário ao servidor quando pressionado. Aqui estão os valores possíveis para o atributo `type`:
 
 - `submit`: O padrão dentro de um `<form>`, o botão aciona a ação de envio do formulário.
 - `reset`: O botão redefine todos os controles do formulário para seus valores iniciais.
-- `button`: Não atribui um comportamento padrão ao botão quando pressionado. Você pode então atribuir ações personalizadas a ele usando JavaScript.
+- `button`: Não atribui um comportamento padrão ao botão quando pressionado. Você pode então atribuir ações personalizadas usando JavaScript.
 
 ### Tarefa
 
@@ -84,7 +84,7 @@ Se você observar mais de perto, perceberá que também adicionamos um elemento 
 - Ao associar um label a um controle de formulário, ele ajuda usuários que utilizam tecnologias assistivas (como leitores de tela) a entender quais dados são esperados.
 - Você pode clicar no label para colocar o foco diretamente no controle associado, facilitando o acesso em dispositivos com tela sensível ao toque.
 
-> [Acessibilidade](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) na web é um tópico muito importante que muitas vezes é negligenciado. Graças aos [elementos semânticos HTML](https://developer.mozilla.org/docs/Learn/Accessibility/HTML), não é difícil criar conteúdo acessível se você os usar corretamente. Você pode [ler mais sobre acessibilidade](https://developer.mozilla.org/docs/Web/Accessibility) para evitar erros comuns e se tornar um desenvolvedor responsável.
+> [Acessibilidade](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) na web é um tópico muito importante que frequentemente é negligenciado. Graças aos [elementos semânticos HTML](https://developer.mozilla.org/docs/Learn/Accessibility/HTML), não é difícil criar conteúdo acessível se você os usar corretamente. Você pode [ler mais sobre acessibilidade](https://developer.mozilla.org/docs/Web/Accessibility) para evitar erros comuns e se tornar um desenvolvedor responsável.
 
 Agora vamos adicionar um segundo formulário para o registro, logo abaixo do anterior:
 
@@ -104,9 +104,9 @@ Agora vamos adicionar um segundo formulário para o registro, logo abaixo do ant
 </form>
 ```
 
-Usando o atributo `value`, podemos definir um valor padrão para um determinado campo de entrada. Note também que o campo de entrada para `balance` tem o tipo `number`. Ele parece diferente dos outros campos? Experimente interagir com ele.
+Usando o atributo `value`, podemos definir um valor padrão para um determinado input. Note também que o input para `balance` tem o tipo `number`. Ele parece diferente dos outros inputs? Experimente interagir com ele.
 
-✅ Você consegue navegar e interagir com os formulários usando apenas o teclado? Como você faria isso?
+✅ Você consegue navegar e interagir com os formulários usando apenas o teclado? Como faria isso?
 
 ## Enviando dados para o servidor
 
@@ -119,8 +119,8 @@ Você notou a mudança na seção de URL do navegador?
 A ação padrão de um `<form>` é enviar os dados do formulário para o URL atual do servidor usando o [método GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), anexando os dados do formulário diretamente ao URL. No entanto, esse método tem algumas limitações:
 
 - Os dados enviados são muito limitados em tamanho (cerca de 2000 caracteres)
-- Os dados são visíveis diretamente no URL (não é ideal para senhas)
-- Não funciona com upload de arquivos
+- Os dados são diretamente visíveis no URL (não é ideal para senhas)
+- Não funciona com uploads de arquivos
 
 Por isso, você pode alterá-lo para usar o [método POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5), que envia os dados do formulário para o servidor no corpo da requisição HTTP, sem as limitações anteriores.
 
@@ -134,9 +134,9 @@ Adicione as propriedades `action` e `method` ao formulário de registro:
 <form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
 ```
 
-Agora tente registrar uma nova conta com seu nome. Após clicar no botão *Register*, você deve ver algo assim:
+Agora tente registrar uma nova conta com seu nome. Após clicar no botão *Register*, você deve ver algo como isto:
 
-![Uma janela do navegador no endereço localhost:5000/api/accounts, mostrando uma string JSON com os dados do usuário](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.br.png)
+![Janela do navegador no endereço localhost:5000/api/accounts, mostrando uma string JSON com os dados do usuário](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.br.png)
 
 Se tudo correr bem, o servidor deve responder à sua requisição com uma resposta [JSON](https://www.json.org/json-en.html) contendo os dados da conta que foi criada.
 
@@ -190,13 +190,13 @@ async function createAccount(account) {
 }
 ```
 
-O que essa função está fazendo? Primeiro, observe a palavra-chave `async` aqui. Isso significa que a função contém código que será executado [**assincronamente**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Quando usada junto com a palavra-chave `await`, ela permite esperar que o código assíncrono seja executado - como esperar pela resposta do servidor aqui - antes de continuar.
+O que essa função faz? Primeiro, note a palavra-chave `async` aqui. Isso significa que a função contém código que será executado [**assincronamente**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Quando usada junto com a palavra-chave `await`, permite esperar que o código assíncrono seja executado - como esperar pela resposta do servidor aqui - antes de continuar.
 
 Aqui está um vídeo rápido sobre o uso de `async/await`:
 
 [![Async e Await para gerenciar promessas](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async e Await para gerenciar promessas")
 
-> 🎥 Clique na imagem acima para assistir a um vídeo sobre async/await.
+> 🎥 Clique na imagem acima para assistir ao vídeo sobre async/await.
 
 Usamos a API `fetch()` para enviar dados JSON ao servidor. Este método recebe 2 parâmetros:
 
@@ -217,7 +217,7 @@ Como usamos a palavra-chave `await` aqui, precisamos adicionar a palavra-chave `
 async function register() {
 ```
 
-Por fim, vamos adicionar alguns logs para verificar o resultado. A função final deve se parecer com esta:
+Por fim, vamos adicionar alguns logs para verificar o resultado. A função final deve se parecer com isto:
 
 ```js
 async function register() {
@@ -244,14 +244,14 @@ Foi um pouco longo, mas chegamos lá! Se você abrir as [ferramentas de desenvol
 
 Se você tentar registrar uma nova conta sem definir um nome de usuário primeiro, verá que o servidor retorna um erro com o código de status [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
-Antes de enviar dados a um servidor, é uma boa prática [validar os dados do formulário](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) previamente, sempre que possível, para garantir que você está enviando uma requisição válida. Os controles de formulário HTML5 fornecem validação integrada usando vários atributos:
+Antes de enviar dados para um servidor, é uma boa prática [validar os dados do formulário](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) previamente, sempre que possível, para garantir que você envie uma requisição válida. Os controles de formulário HTML5 fornecem validação embutida usando vários atributos:
 
 - `required`: o campo precisa ser preenchido, caso contrário o formulário não pode ser enviado.
-- `minlength` e `maxlength`: definem o número mínimo e máximo de caracteres em campos de texto.
-- `min` e `max`: definem o valor mínimo e máximo de um campo numérico.
-- `type`: define o tipo de dado esperado, como `number`, `email`, `file` ou [outros tipos integrados](https://developer.mozilla.org/docs/Web/HTML/Element/input). Este atributo também pode alterar a renderização visual do controle de formulário.
+- `minlength` e `maxlength`: define o número mínimo e máximo de caracteres em campos de texto.
+- `min` e `max`: define o valor mínimo e máximo de um campo numérico.
+- `type`: define o tipo de dado esperado, como `number`, `email`, `file` ou [outros tipos embutidos](https://developer.mozilla.org/docs/Web/HTML/Element/input). Este atributo também pode alterar a renderização visual do controle de formulário.
 - `pattern`: permite definir um padrão de [expressão regular](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) para testar se os dados inseridos são válidos ou não.
-Dica: você pode personalizar a aparência dos seus controles de formulário dependendo se eles são válidos ou não, utilizando as pseudo-classes CSS `:valid` e `:invalid`.
+Dica: você pode personalizar a aparência dos controles do seu formulário dependendo se eles são válidos ou não, utilizando as pseudo-classes CSS `:valid` e `:invalid`.
 ### Tarefa
 
 Existem 2 campos obrigatórios para criar uma nova conta válida: o nome de usuário e a moeda. Os outros campos são opcionais. Atualize o HTML do formulário, utilizando tanto o atributo `required` quanto o texto no rótulo do campo para que:
@@ -264,7 +264,7 @@ Existem 2 campos obrigatórios para criar uma nova conta válida: o nome de usu�
 <input id="currency" name="currency" type="text" value="$" required>
 ```
 
-Embora esta implementação específica do servidor não imponha limites específicos no comprimento máximo dos campos, é sempre uma boa prática definir limites razoáveis para qualquer entrada de texto do usuário.
+Embora esta implementação específica do servidor não imponha limites específicos para o comprimento máximo dos campos, é sempre uma boa prática definir limites razoáveis para qualquer entrada de texto do usuário.
 
 Adicione um atributo `maxlength` aos campos de texto:
 
@@ -280,9 +280,9 @@ Agora, se você pressionar o botão *Registrar* e algum campo não atender a uma
 
 ![Captura de tela mostrando o erro de validação ao tentar enviar o formulário](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.br.png)
 
-A validação como esta, realizada *antes* de enviar qualquer dado para o servidor, é chamada de validação **do lado do cliente**. Mas observe que nem sempre é possível realizar todas as verificações sem enviar os dados. Por exemplo, não podemos verificar aqui se já existe uma conta com o mesmo nome de usuário sem enviar uma solicitação ao servidor. Validações adicionais realizadas no servidor são chamadas de validação **do lado do servidor**.
+A validação como esta, realizada *antes* de enviar qualquer dado para o servidor, é chamada de validação **do lado do cliente**. Mas observe que nem sempre é possível realizar todas as verificações sem enviar os dados. Por exemplo, não podemos verificar aqui se já existe uma conta com o mesmo nome de usuário sem enviar uma solicitação ao servidor. A validação adicional realizada no servidor é chamada de validação **do lado do servidor**.
 
-Normalmente, ambas precisam ser implementadas, e enquanto a validação do lado do cliente melhora a experiência do usuário ao fornecer feedback instantâneo, a validação do lado do servidor é crucial para garantir que os dados do usuário que você manipula sejam consistentes e seguros.
+Geralmente, ambas precisam ser implementadas, e enquanto a validação do lado do cliente melhora a experiência do usuário ao fornecer feedback instantâneo, a validação do lado do servidor é crucial para garantir que os dados do usuário que você manipula sejam confiáveis e seguros.
 
 ---
 
@@ -305,6 +305,8 @@ Os desenvolvedores têm sido muito criativos em seus esforços para criar formul
 ## Tarefa
 
 [Estilize seu aplicativo bancário](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

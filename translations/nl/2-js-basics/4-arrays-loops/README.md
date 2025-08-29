@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-27T20:16:23+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T01:00:54+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "nl"
 }
@@ -27,9 +27,9 @@ Deze les behandelt de basis van JavaScript, de taal die interactiviteit op het w
 
 ## Arrays
 
-Werken met gegevens is een veelvoorkomende taak in elke programmeertaal, en het is een stuk eenvoudiger wanneer gegevens zijn georganiseerd in een structureel formaat, zoals arrays. Met arrays worden gegevens opgeslagen in een structuur die lijkt op een lijst. Een groot voordeel van arrays is dat je verschillende soorten gegevens in één array kunt opslaan.
+Werken met gegevens is een veelvoorkomende taak in elke programmeertaal, en het is een stuk eenvoudiger wanneer gegevens zijn georganiseerd in een gestructureerd formaat, zoals arrays. Met arrays worden gegevens opgeslagen in een structuur die lijkt op een lijst. Een groot voordeel van arrays is dat je verschillende soorten gegevens in één array kunt opslaan.
 
-✅ Arrays zijn overal om ons heen! Kun je een voorbeeld bedenken van een array in het echte leven, zoals een zonnepaneel-array?
+✅ Arrays zijn overal om ons heen! Kun je een voorbeeld bedenken van een array in het echte leven, zoals een array van zonnepanelen?
 
 De syntax voor een array is een paar vierkante haken.
 
@@ -43,7 +43,7 @@ Dit is een lege array, maar arrays kunnen ook worden gedeclareerd met al ingevul
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 ```
 
-De waarden in een array krijgen een unieke waarde genaamd de **index**, een geheel getal dat wordt toegewezen op basis van de afstand vanaf het begin van de array. In het bovenstaande voorbeeld heeft de stringwaarde "Chocolate" een index van 0, en de index van "Rocky Road" is 4. Gebruik de index met vierkante haken om arraywaarden op te halen, te wijzigen of toe te voegen.
+De waarden in een array krijgen een unieke waarde genaamd de **index**, een geheel getal dat wordt toegewezen op basis van de afstand vanaf het begin van de array. In het bovenstaande voorbeeld heeft de stringwaarde "Chocolate" een index van 0, en de index van "Rocky Road" is 4. Gebruik de index met vierkante haken om arraywaarden op te halen, te wijzigen of in te voegen.
 
 ✅ Verrast het je dat arrays beginnen bij index nul? In sommige programmeertalen beginnen indexen bij 1. Er is een interessante geschiedenis hierover, die je kunt [lezen op Wikipedia](https://en.wikipedia.org/wiki/Zero-based_numbering).
 
@@ -58,7 +58,7 @@ Je kunt de index gebruiken om een waarde te wijzigen, zoals dit:
 iceCreamFlavors[4] = "Butter Pecan"; //Changed "Rocky Road" to "Butter Pecan"
 ```
 
-En je kunt een nieuwe waarde toevoegen op een bepaalde index zoals dit:
+En je kunt een nieuwe waarde invoegen op een bepaalde index zoals dit:
 
 ```javascript
 iceCreamFlavors[5] = "Cookie Dough"; //Added "Cookie Dough"
@@ -77,13 +77,13 @@ iceCreamFlavors.length; //5
 
 ## Lussen
 
-Lussen stellen ons in staat om repetitieve of **iteratieve** taken uit te voeren, en kunnen veel tijd en code besparen. Elke iteratie kan variëren in variabelen, waarden en voorwaarden. Er zijn verschillende soorten lussen in JavaScript, en ze hebben allemaal kleine verschillen, maar doen in essentie hetzelfde: herhalen over gegevens.
+Lussen stellen ons in staat om herhalende of **iteratieve** taken uit te voeren, en kunnen veel tijd en code besparen. Elke iteratie kan variëren in variabelen, waarden en voorwaarden. Er zijn verschillende soorten lussen in JavaScript, en ze hebben allemaal kleine verschillen, maar doen in wezen hetzelfde: herhalen over gegevens.
 
 ### For-lus
 
 De `for`-lus vereist 3 onderdelen om te itereren:
 - `counter` Een variabele die meestal wordt geïnitialiseerd met een getal dat het aantal iteraties telt
-- `condition` Een expressie die gebruikmaakt van vergelijkingsoperators om de lus te stoppen wanneer deze `false` wordt
+- `condition` Een expressie die gebruik maakt van vergelijkingsoperators om de lus te stoppen wanneer deze `false` wordt
 - `iteration-expression` Wordt uitgevoerd aan het einde van elke iteratie, meestal gebruikt om de waarde van de teller te wijzigen
   
 ```javascript
@@ -133,7 +133,7 @@ Er zijn andere manieren om over arrays te herhalen dan for- en while-lussen. Er 
 ## Post-Les Quiz
 [Post-les quiz](https://ff-quizzes.netlify.app/web/quiz/14)
 
-## Herhaling & Zelfstudie
+## Review & Zelfstudie
 
 Arrays in JavaScript hebben veel methoden die eraan gekoppeld zijn, die uiterst handig zijn voor gegevensmanipulatie. [Lees meer over deze methoden](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) en probeer er een paar uit (zoals push, pop, slice en splice) op een array die je zelf hebt gemaakt.
 
@@ -144,4 +144,4 @@ Arrays in JavaScript hebben veel methoden die eraan gekoppeld zijn, die uiterst 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

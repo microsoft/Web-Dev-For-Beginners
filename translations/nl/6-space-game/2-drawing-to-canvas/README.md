@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-27T20:24:58+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T00:58:33+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "nl"
 }
 -->
 # Bouw een Ruimtespel Deel 2: Teken Held en Monsters op Canvas
 
-## Pre-Lecture Quiz
+## Pre-Les Quiz
 
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/31)
+[Pre-les quiz](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Het Canvas
 
@@ -35,14 +35,14 @@ Hierboven stellen we de `id`, `width` en `height` in.
 
 Het canvas gebruikt een cartesiaans coördinatensysteem om dingen te tekenen. Het gebruikt dus een x-as en y-as om uit te drukken waar iets zich bevindt. De locatie `0,0` is de positie linksboven en rechtsonder is wat je hebt ingesteld als de BREEDTE en HOOGTE van het canvas.
 
-![het raster van het canvas](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.nl.png)  
+![het raster van het canvas](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.nl.png)
 > Afbeelding van [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Om op het canvas-element te tekenen, moet je de volgende stappen doorlopen:
 
-1. **Verkrijg een referentie** naar het Canvas-element.  
-2. **Verkrijg een referentie** naar het Context-element dat op het canvas-element zit.  
-3. **Voer een tekenoperatie uit** met behulp van het context-element.  
+1. **Verkrijg een referentie** naar het Canvas-element.
+1. **Verkrijg een referentie** naar het Context-element dat op het canvas-element zit.
+1. **Voer een tekenoperatie uit** met behulp van het context-element.
 
 De code voor bovenstaande stappen ziet er meestal zo uit:
 
@@ -65,15 +65,15 @@ ctx.fillRect(0,0, 200, 200) // x,y,width, height
 
 Je kunt allerlei dingen tekenen met de Canvas API, zoals:
 
-- **Geometrische vormen**, we hebben al laten zien hoe je een rechthoek tekent, maar er is nog veel meer dat je kunt tekenen.  
-- **Tekst**, je kunt tekst tekenen met elk gewenst lettertype en kleur.  
-- **Afbeeldingen**, je kunt een afbeelding tekenen op basis van een afbeeldingsbestand zoals een .jpg of .png.  
+- **Geometrische vormen**, we hebben al laten zien hoe je een rechthoek tekent, maar er is nog veel meer dat je kunt tekenen.
+- **Tekst**, je kunt tekst tekenen met elk gewenst lettertype en kleur.
+- **Afbeeldingen**, je kunt een afbeelding tekenen op basis van een afbeeldingsbestand zoals een .jpg of .png.
 
-✅ Probeer het! Je weet hoe je een rechthoek tekent, kun je een cirkel tekenen op een pagina? Bekijk enkele interessante Canvas-tekeningen op CodePen. Hier is een [bijzonder indrukwekkend voorbeeld](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Probeer het! Je weet hoe je een rechthoek tekent, kun je een cirkel op een pagina tekenen? Bekijk enkele interessante Canvas-tekeningen op CodePen. Hier is een [bijzonder indrukwekkend voorbeeld](https://codepen.io/dissimulate/pen/KrAwx).
 
 ## Een afbeeldingsbestand laden en tekenen
 
-Je laadt een afbeeldingsbestand door een `Image`-object te maken en de `src`-eigenschap in te stellen. Vervolgens luister je naar het `load`-event om te weten wanneer het klaar is om te worden gebruikt. De code ziet er als volgt uit:
+Je laadt een afbeeldingsbestand door een `Image`-object te maken en de `src`-eigenschap in te stellen. Vervolgens luister je naar het `load`-event om te weten wanneer het klaar is om te worden gebruikt. De code ziet er zo uit:
 
 ### Bestand laden
 
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-Om spelassets op een scherm te tekenen, zou je code er als volgt uitzien:
+Om spelassets op een scherm te tekenen, zou je code er zo uitzien:
 
 ```javascript
 async function run() {
@@ -128,13 +128,13 @@ async function run() {
 
 ### Wat te bouwen
 
-Je gaat een webpagina bouwen met een Canvas-element. Het moet een zwart scherm renderen van `1024*768`. We hebben je twee afbeeldingen gegeven:
+Je gaat een webpagina bouwen met een Canvas-element. Het moet een zwart scherm van `1024*768` weergeven. We hebben je twee afbeeldingen gegeven:
 
-- Heldenschip  
+- Heldenschip
 
    ![Heldenschip](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.nl.png)
 
-- 5*5 monster  
+- 5*5 monster
 
    ![Monsterschip](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.nl.png)
 
@@ -168,14 +168,14 @@ Hiermee wordt een HTTP-server gestart op het adres `http://localhost:5000`. Open
 
 Voeg de benodigde code toe aan `your-work/app.js` om het onderstaande op te lossen:
 
-1. **Teken** een canvas met zwarte achtergrond  
-   > tip: voeg twee regels toe onder de juiste TODO in `/app.js`, waarbij je het `ctx`-element instelt op zwart en de boven/links-coördinaten op 0,0 en de hoogte en breedte gelijk aan die van het canvas.  
-2. **Laad** texturen  
-   > tip: voeg de speler- en vijandafbeeldingen toe met behulp van `await loadTexture` en geef het afbeeldingspad door. Je ziet ze nog niet op het scherm!  
-3. **Teken** de held in het midden van het scherm in de onderste helft  
-   > tip: gebruik de `drawImage` API om heroImg op het scherm te tekenen, waarbij je `canvas.width / 2 - 45` en `canvas.height - canvas.height / 4)` instelt.  
-4. **Teken** 5*5 monsters  
-   > tip: Nu kun je de code om vijanden op het scherm te tekenen deblokkeren. Ga vervolgens naar de functie `createEnemies` en bouw deze uit.  
+1. **Teken** een canvas met zwarte achtergrond
+   > tip: voeg twee regels toe onder de juiste TODO in `/app.js`, waarbij je het `ctx`-element instelt op zwart en de boven/links-coördinaten op 0,0 en de hoogte en breedte gelijk aan die van het canvas.
+2. **Laad** texturen
+   > tip: voeg de speler- en vijandafbeeldingen toe met behulp van `await loadTexture` en geef het afbeeldingspad door. Je zult ze nog niet op het scherm zien!
+3. **Teken** de held in het midden van het scherm in de onderste helft
+   > tip: gebruik de `drawImage` API om heroImg op het scherm te tekenen, waarbij je `canvas.width / 2 - 45` en `canvas.height - canvas.height / 4)` instelt.
+4. **Teken** 5*5 monsters
+   > tip: Nu kun je de code om vijanden op het scherm te tekenen deblokkeren. Ga vervolgens naar de functie `createEnemies` en bouw deze uit.
 
    Stel eerst enkele constanten in:
 
@@ -198,7 +198,7 @@ Voeg de benodigde code toe aan `your-work/app.js` om het onderstaande op te loss
 
 ## Resultaat
 
-Het eindresultaat zou er als volgt uit moeten zien:
+Het eindresultaat zou er zo uit moeten zien:
 
 ![Zwart scherm met een held en 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.nl.png)
 
@@ -210,11 +210,11 @@ Probeer het eerst zelf op te lossen, maar als je vastloopt, bekijk dan een [oplo
 
 ## 🚀 Uitdaging
 
-Je hebt geleerd over tekenen met de 2D-georiënteerde Canvas API; bekijk de [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) en probeer een 3D-object te tekenen.
+Je hebt geleerd over tekenen met de 2D-gerichte Canvas API; bekijk de [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) en probeer een 3D-object te tekenen.
 
-## Post-Lecture Quiz
+## Post-Les Quiz
 
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/32)
+[Post-les quiz](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Review & Zelfstudie
 
@@ -227,4 +227,4 @@ Leer meer over de Canvas API door [erover te lezen](https://developer.mozilla.or
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

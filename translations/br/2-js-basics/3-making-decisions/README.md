@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-25T21:36:23+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-28T23:54:29+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "br"
 }
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Quiz pré-aula](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Tomar decisões e controlar a ordem em que seu código é executado torna seu código reutilizável e robusto. Esta seção aborda a sintaxe para controlar o fluxo de dados em JavaScript e sua importância ao ser usada com tipos de dados Booleanos.
+Tomar decisões e controlar a ordem em que seu código é executado torna seu código reutilizável e robusto. Esta seção aborda a sintaxe para controlar o fluxo de dados em JavaScript e sua importância ao ser usado com tipos de dados Booleanos.
 
 [![Tomando Decisões](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Tomando Decisões")
 
@@ -34,7 +34,7 @@ Defina seu booleano como verdadeiro ou falso assim:
 `let myTrueBool = true`  
 `let myFalseBool = false`
 
-✅ Booleanos são nomeados em homenagem ao matemático, filósofo e lógico inglês George Boole (1815–1864).
+✅ Booleanos foram nomeados em homenagem ao matemático, filósofo e lógico inglês George Boole (1815–1864).
 
 ## Operadores de Comparação e Booleanos
 
@@ -46,7 +46,7 @@ Operadores são usados para avaliar condições fazendo comparações que geram 
 | `<=`    | **Menor ou igual a**: Compara dois valores e retorna o tipo de dado Booleano `true` se o valor do lado esquerdo for menor ou igual ao do lado direito       | `5 <= 6 // true`   |
 | `>`     | **Maior que**: Compara dois valores e retorna o tipo de dado Booleano `true` se o valor do lado esquerdo for maior que o do lado direito                    | `5 > 6 // false`   |
 | `>=`    | **Maior ou igual a**: Compara dois valores e retorna o tipo de dado Booleano `true` se o valor do lado esquerdo for maior ou igual ao do lado direito       | `5 >= 6 // false`  |
-| `===`   | **Igualdade estrita**: Compara dois valores e retorna o tipo de dado Booleano `true` se os valores do lado direito e esquerdo forem iguais E do mesmo tipo  | `5 === 6 // false` |
+| `===`   | **Igualdade estrita**: Compara dois valores e retorna o tipo de dado Booleano `true` se os valores do lado direito e esquerdo forem iguais E do mesmo tipo. | `5 === 6 // false` |
 | `!==`   | **Desigualdade**: Compara dois valores e retorna o valor Booleano oposto ao que um operador de igualdade estrita retornaria                                | `5 !== 6 // true`  |
 
 ✅ Teste seu conhecimento escrevendo algumas comparações no console do navegador. Algum dado retornado te surpreendeu?
@@ -141,7 +141,7 @@ Decisões podem exigir mais de uma comparação e podem ser encadeadas com opera
 
 ## Condições e Decisões com Operadores Lógicos
 
-Operadores lógicos podem ser usados para formar condições em declarações `if..else`.
+Operadores lógicos podem ser usados para formar condições em declarações if..else.
 
 ```javascript
 let currentMoney;
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Operador de Negação
 
-Você já viu até agora como usar uma declaração `if...else` para criar lógica condicional. Qualquer coisa que vá dentro de um `if` precisa ser avaliada como verdadeiro ou falso. Usando o operador `!`, você pode _negar_ a expressão. Ficaria assim:
+Você já viu como usar uma declaração `if...else` para criar lógica condicional. Qualquer coisa que vá dentro de um `if` precisa ser avaliada como verdadeiro/falso. Usando o operador `!`, você pode _negar_ a expressão. Ficaria assim:
 
 ```javascript
 if (!condition) {
@@ -225,6 +225,8 @@ Explore o incrível [guia de operadores](https://joshwcomeau.com/operator-lookup
 ## Tarefa
 
 [Operadores](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

@@ -1,29 +1,29 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e10f168beac4e7b05e30e0eb5c92bf11",
-  "translation_date": "2025-08-27T20:44:37+00:00",
+  "original_hash": "a7587943d38d095de8613e1b508609f5",
+  "translation_date": "2025-08-29T00:56:58+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "nl"
 }
 -->
 # Browserextensieproject Deel 2: Een API aanroepen, gebruik maken van Local Storage
 
-## Quiz vóór de les
+## Pre-Lecture Quiz
 
-[Quiz vóór de les](https://ff-quizzes.netlify.app/web/quiz/25)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Introductie
 
-In deze les leer je hoe je een API aanroept door het formulier van je browserextensie in te vullen en de resultaten in je extensie weer te geven. Daarnaast leer je hoe je gegevens kunt opslaan in de lokale opslag van je browser voor toekomstig gebruik.
+In deze les leer je hoe je een API kunt aanroepen door het formulier van je browserextensie in te dienen en de resultaten in je extensie weer te geven. Daarnaast leer je hoe je gegevens kunt opslaan in de lokale opslag van je browser voor toekomstig gebruik en referentie.
 
-✅ Volg de genummerde segmenten in de betreffende bestanden om te weten waar je je code moet plaatsen.
+✅ Volg de genummerde segmenten in de juiste bestanden om te weten waar je je code moet plaatsen.
 
 ### Stel de elementen in die je in de extensie wilt manipuleren:
 
-Tegen deze tijd heb je de HTML gebouwd voor het formulier en de `<div>` voor de resultaten van je browserextensie. Vanaf nu werk je in het bestand `/src/index.js` en bouw je je extensie stap voor stap verder uit. Raadpleeg de [vorige les](../1-about-browsers/README.md) om je project op te zetten en meer te leren over het bouwproces.
+Op dit punt heb je de HTML gebouwd voor het formulier en de resultaten `<div>` van je browserextensie. Vanaf nu werk je in het bestand `/src/index.js` en bouw je je extensie stap voor stap. Raadpleeg de [vorige les](../1-about-browsers/README.md) over het opzetten van je project en het bouwproces.
 
-Werkend in je `index.js`-bestand, begin je met het aanmaken van enkele `const`-variabelen om de waarden vast te houden die horen bij verschillende velden:
+Werkend in je `index.js`-bestand, begin je met het maken van enkele `const`-variabelen om de waarden te bewaren die gekoppeld zijn aan verschillende velden:
 
 ```JavaScript
 // form fields
@@ -41,11 +41,11 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Al deze velden worden gerefereerd via hun CSS-class, zoals je hebt ingesteld in de HTML in de vorige les.
+Al deze velden worden gerefereerd via hun CSS-klasse, zoals je hebt ingesteld in de HTML in de vorige les.
 
-### Voeg event listeners toe
+### Voeg listeners toe
 
-Voeg vervolgens event listeners toe aan het formulier en de resetknop die het formulier reset, zodat er iets gebeurt als een gebruiker het formulier indient of op de resetknop klikt. Voeg ook de aanroep toe om de app te initialiseren onderaan het bestand:
+Voeg vervolgens event listeners toe aan het formulier en de knop om het formulier te wissen, zodat er iets gebeurt wanneer een gebruiker het formulier indient of op die resetknop klikt. Voeg ook de aanroep toe om de app te initialiseren onderaan het bestand:
 
 ```JavaScript
 form.addEventListener('submit', (e) => handleSubmit(e));
@@ -53,7 +53,7 @@ clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Let op de verkorte notatie die wordt gebruikt om te luisteren naar een submit- of klikgebeurtenis, en hoe de gebeurtenis wordt doorgegeven aan de functies handleSubmit of reset. Kun je het equivalent van deze verkorte notatie in een langere vorm schrijven? Welke vorm heeft jouw voorkeur?
+✅ Let op de verkorte notatie die wordt gebruikt om te luisteren naar een submit- of klikgebeurtenis, en hoe de gebeurtenis wordt doorgegeven aan de functies handleSubmit of reset. Kun je de equivalente langere versie van deze verkorte notatie schrijven? Welke versie heeft jouw voorkeur?
 
 ### Bouw de init()-functie en de reset()-functie uit:
 
@@ -93,34 +93,34 @@ function reset(e) {
 
 ```
 
-In deze functie zit interessante logica. Als je het doorleest, kun je zien wat er gebeurt?
+In deze functie zit interessante logica. Kun je zien wat er gebeurt?
 
-- Twee `const` worden ingesteld om te controleren of de gebruiker een APIKey en regiocode heeft opgeslagen in de lokale opslag.
-- Als een van deze null is, wordt het formulier weergegeven door de stijl ervan in te stellen op 'block'.
-- De resultaten, de laadindicator en de resetknop worden verborgen en eventuele foutmeldingen worden leeggemaakt.
-- Als er een sleutel en regio bestaan, wordt een routine gestart om:
+- Twee `const` worden ingesteld om te controleren of de gebruiker een APIKey en regio-code heeft opgeslagen in de lokale opslag.
+- Als een van deze null is, wordt het formulier weergegeven door de stijl ervan te veranderen naar 'block'.
+- Verberg de resultaten, de laadindicator en de clearBtn en stel eventuele foutmeldingen in op een lege string.
+- Als er een sleutel en regio bestaan, start een routine om:
   - De API aan te roepen om gegevens over koolstofgebruik op te halen.
   - Het resultatengebied te verbergen.
   - Het formulier te verbergen.
   - De resetknop weer te geven.
 
-Voordat je verdergaat, is het handig om meer te leren over een belangrijk concept dat beschikbaar is in browsers: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage is een handige manier om strings op te slaan in de browser als een `key-value`-paar. Dit type webopslag kan worden gemanipuleerd met JavaScript om gegevens in de browser te beheren. LocalStorage verloopt niet, terwijl SessionStorage, een ander soort webopslag, wordt gewist wanneer de browser wordt gesloten. De verschillende soorten opslag hebben hun eigen voor- en nadelen.
+Voordat je verder gaat, is het handig om meer te leren over een belangrijk concept dat beschikbaar is in browsers: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage is een handige manier om strings in de browser op te slaan als een `key-value`-paar. Dit type webopslag kan worden gemanipuleerd door JavaScript om gegevens in de browser te beheren. LocalStorage verloopt niet, terwijl SessionStorage, een ander soort webopslag, wordt gewist wanneer de browser wordt gesloten. De verschillende soorten opslag hebben hun eigen voor- en nadelen.
 
-> Opmerking - je browserextensie heeft zijn eigen lokale opslag; het hoofdvenster van de browser is een andere instantie en werkt afzonderlijk.
+> Opmerking - je browserextensie heeft zijn eigen lokale opslag; het hoofdvenster van de browser is een andere instantie en gedraagt zich afzonderlijk.
 
-Je stelt bijvoorbeeld je APIKey in met een stringwaarde, en je kunt zien dat deze is ingesteld in Edge door een webpagina te "inspecteren" (je kunt met de rechtermuisknop op een browser klikken om te inspecteren) en naar het tabblad Toepassingen te gaan om de opslag te bekijken.
+Je stelt je APIKey in met een stringwaarde, bijvoorbeeld, en je kunt zien dat deze is ingesteld in Edge door een webpagina te "inspecteren" (je kunt met de rechtermuisknop op een browser klikken om te inspecteren) en naar het tabblad Toepassingen te gaan om de opslag te bekijken.
 
 ![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.nl.png)
 
-✅ Denk na over situaties waarin je bepaalde gegevens NIET in LocalStorage zou willen opslaan. Over het algemeen is het een slecht idee om API-sleutels in LocalStorage op te slaan! Kun je zien waarom? In ons geval, omdat onze app puur bedoeld is om te leren en niet zal worden gepubliceerd in een app store, gebruiken we deze methode.
+✅ Denk na over situaties waarin je bepaalde gegevens NIET in LocalStorage zou willen opslaan. Over het algemeen is het een slecht idee om API-sleutels in LocalStorage te plaatsen! Kun je zien waarom? In ons geval, omdat onze app puur bedoeld is om te leren en niet zal worden gepubliceerd in een app store, gebruiken we deze methode.
 
-Merk op dat je de Web API gebruikt om LocalStorage te manipuleren, ofwel met `getItem()`, `setItem()` of `removeItem()`. Het wordt breed ondersteund in browsers.
+Merk op dat je de Web API gebruikt om LocalStorage te manipuleren, door gebruik te maken van `getItem()`, `setItem()`, of `removeItem()`. Het wordt breed ondersteund in browsers.
 
-Voordat je de functie `displayCarbonUsage()` bouwt die wordt aangeroepen in `init()`, laten we de functionaliteit bouwen om de initiële formulierindiening af te handelen.
+Voordat je de functie `displayCarbonUsage()` bouwt die wordt aangeroepen in `init()`, laten we de functionaliteit bouwen om de initiële formulierinzending te verwerken.
 
-### Verwerk de formulierindiening
+### Verwerk de formulierinzending
 
-Maak een functie genaamd `handleSubmit` die een gebeurtenisargument `(e)` accepteert. Stop de gebeurtenis van propagatie (in dit geval willen we voorkomen dat de browser ververst) en roep een nieuwe functie aan, `setUpUser`, waarbij je de argumenten `apiKey.value` en `region.value` doorgeeft. Op deze manier gebruik je de twee waarden die via het initiële formulier worden ingevoerd wanneer de betreffende velden zijn ingevuld.
+Maak een functie genaamd `handleSubmit` die een event-argument `(e)` accepteert. Stop de gebeurtenis van propagatie (in dit geval willen we voorkomen dat de browser ververst) en roep een nieuwe functie aan, `setUpUser`, waarbij je de argumenten `apiKey.value` en `region.value` doorgeeft. Op deze manier gebruik je de twee waarden die via het initiële formulier worden binnengebracht wanneer de juiste velden zijn ingevuld.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -129,11 +129,11 @@ function handleSubmit(e) {
 }
 ```
 
-✅ Verfris je geheugen - de HTML die je in de vorige les hebt ingesteld, heeft twee invoervelden waarvan de `values` worden vastgelegd via de `const` die je bovenaan het bestand hebt ingesteld, en ze zijn beide `required`, zodat de browser voorkomt dat gebruikers null-waarden invoeren.
+✅ Verfris je geheugen - de HTML die je in de vorige les hebt ingesteld, heeft twee invoervelden waarvan de `values` worden vastgelegd via de `const` die je bovenaan het bestand hebt ingesteld, en ze zijn beide `required`, zodat de browser gebruikers stopt van het invoeren van null-waarden.
 
 ### Stel de gebruiker in
 
-Ga verder met de functie `setUpUser`, waar je de waarden voor apiKey en regionName in de lokale opslag instelt. Voeg een nieuwe functie toe:
+Ga verder met de functie `setUpUser`, hier stel je de waarden voor lokale opslag in voor apiKey en regionName. Voeg een nieuwe functie toe:
 
 ```JavaScript
 function setUpUser(apiKey, regionName) {
@@ -147,17 +147,17 @@ function setUpUser(apiKey, regionName) {
 }
 ```
 
-Deze functie stelt een laadbericht in dat wordt weergegeven terwijl de API wordt aangeroepen. Op dit punt ben je aangekomen bij het maken van de belangrijkste functie van deze browserextensie!
+Deze functie stelt een laadbericht in om te tonen terwijl de API wordt aangeroepen. Op dit punt ben je aangekomen bij het maken van de belangrijkste functie van deze browserextensie!
 
 ### Toon koolstofgebruik
 
-Eindelijk is het tijd om de API aan te roepen!
+Eindelijk is het tijd om de API te raadplegen!
 
-Voordat we verder gaan, moeten we het hebben over API's. API's, of [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), zijn een cruciaal onderdeel van de gereedschapskist van een webontwikkelaar. Ze bieden standaardmanieren voor programma's om met elkaar te communiceren en te integreren. Als je bijvoorbeeld een website bouwt die een database moet raadplegen, kan iemand een API hebben gemaakt die je kunt gebruiken. Hoewel er veel soorten API's zijn, is een van de populairste een [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Voordat we verder gaan, moeten we APIs bespreken. APIs, of [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), zijn een cruciaal onderdeel van de gereedschapskist van een webontwikkelaar. Ze bieden standaard manieren voor programma's om met elkaar te communiceren en te interfacen. Bijvoorbeeld, als je een website bouwt die een database moet raadplegen, heeft iemand mogelijk een API gemaakt die je kunt gebruiken. Hoewel er veel soorten APIs zijn, is een van de meest populaire een [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
-✅ De term 'REST' staat voor 'Representational State Transfer' en maakt gebruik van verschillende geconfigureerde URL's om gegevens op te halen. Doe wat onderzoek naar de verschillende soorten API's die beschikbaar zijn voor ontwikkelaars. Welke vorm spreekt jou het meest aan?
+✅ De term 'REST' staat voor 'Representational State Transfer' en maakt gebruik van verschillende geconfigureerde URLs om gegevens op te halen. Doe wat onderzoek naar de verschillende soorten APIs die beschikbaar zijn voor ontwikkelaars. Welk formaat spreekt jou aan?
 
-Er zijn belangrijke dingen om op te merken over deze functie. Ten eerste, let op het [`async`-sleutelwoord](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Door je functies asynchroon te schrijven, zorg je ervoor dat ze wachten op een actie, zoals het retourneren van gegevens, voordat ze doorgaan.
+Er zijn belangrijke dingen om op te merken over deze functie. Ten eerste, let op het [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Door je functies zo te schrijven dat ze asynchroon werken, wachten ze op een actie, zoals het retourneren van gegevens, voordat ze doorgaan.
 
 Hier is een korte video over `async`:
 
@@ -165,7 +165,7 @@ Hier is een korte video over `async`:
 
 > 🎥 Klik op de afbeelding hierboven voor een video over async/await.
 
-Maak een nieuwe functie om de C02Signal API aan te roepen:
+Maak een nieuwe functie om de C02Signal API te raadplegen:
 
 ```JavaScript
 import axios from '../node_modules/axios';
@@ -207,28 +207,28 @@ async function displayCarbonUsage(apiKey, region) {
 
 Dit is een grote functie. Wat gebeurt hier?
 
-- Volgens best practices gebruik je het `async`-sleutelwoord om deze functie asynchroon te laten werken. De functie bevat een `try/catch`-blok omdat deze een belofte retourneert wanneer de API gegevens retourneert. Omdat je geen controle hebt over de snelheid waarmee de API reageert (of helemaal niet reageert!), moet je met deze onzekerheid omgaan door deze asynchroon aan te roepen.
-- Je roept de co2signal API aan om gegevens van je regio op te halen, met behulp van je API-sleutel. Om die sleutel te gebruiken, moet je een vorm van authenticatie gebruiken in je headerparameters.
+- Volgens best practices gebruik je een `async` keyword om deze functie asynchroon te laten werken. De functie bevat een `try/catch`-blok omdat het een belofte zal retourneren wanneer de API gegevens retourneert. Omdat je geen controle hebt over de snelheid waarmee de API zal reageren (het kan helemaal niet reageren!), moet je deze onzekerheid asynchroon afhandelen.
+- Je raadpleegt de co2signal API om gegevens over je regio op te halen, met behulp van je API-sleutel. Om die sleutel te gebruiken, moet je een soort authenticatie gebruiken in je headerparameters.
 - Zodra de API reageert, wijs je verschillende elementen van de responsgegevens toe aan de delen van je scherm die je hebt ingesteld om deze gegevens weer te geven.
 - Als er een fout is, of als er geen resultaat is, toon je een foutmelding.
 
-✅ Het gebruik van asynchrone programmeerpatronen is een andere zeer nuttige vaardigheid in je gereedschapskist. Lees [over de verschillende manieren](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) waarop je dit type code kunt configureren.
+✅ Het gebruik van asynchrone programmeerpatronen is een andere zeer nuttige tool in je gereedschapskist. Lees [over de verschillende manieren](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) waarop je dit type code kunt configureren.
 
-Gefeliciteerd! Als je je extensie bouwt (`npm run build`) en deze vernieuwt in je extensiepaneel, heb je een werkende extensie! Het enige dat nog niet werkt, is het pictogram, en dat los je op in de volgende les.
+Gefeliciteerd! Als je je extensie bouwt (`npm run build`) en deze ververst in je extensiepaneel, heb je een werkende extensie! Het enige dat nog niet werkt, is het pictogram, en dat fix je in de volgende les.
 
 ---
 
 ## 🚀 Uitdaging
 
-We hebben in deze lessen verschillende soorten API's besproken. Kies een web-API en onderzoek in detail wat deze biedt. Kijk bijvoorbeeld naar API's die beschikbaar zijn binnen browsers, zoals de [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Wat maakt volgens jou een goede API?
+We hebben tot nu toe verschillende soorten APIs besproken in deze lessen. Kies een web-API en onderzoek in detail wat deze biedt. Bekijk bijvoorbeeld de APIs die beschikbaar zijn binnen browsers, zoals de [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Wat maakt volgens jou een geweldige API?
 
-## Quiz na de les
+## Post-Lecture Quiz
 
-[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/26)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/26)
 
-## Herhaling & Zelfstudie
+## Review & Zelfstudie
 
-In deze les heb je geleerd over LocalStorage en API's, beide zeer nuttig voor de professionele webontwikkelaar. Kun je bedenken hoe deze twee dingen samenwerken? Denk na over hoe je een website zou ontwerpen die items opslaat om te worden gebruikt door een API.
+Je hebt in deze les geleerd over LocalStorage en APIs, beide zeer nuttig voor de professionele webontwikkelaar. Kun je bedenken hoe deze twee dingen samenwerken? Denk na over hoe je een website zou ontwerpen die items opslaat om te worden gebruikt door een API.
 
 ## Opdracht
 
