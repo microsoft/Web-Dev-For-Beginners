@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-26T21:49:49+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T08:37:13+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "no"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz før forelesning
-[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/7)
+[Quiz før forelesning](https://ff-quizzes.netlify.app/web/)
 
 Denne leksjonen dekker det grunnleggende i JavaScript, språket som gir interaktivitet på nettet.
 
@@ -57,7 +57,7 @@ Variabler lagrer verdier som kan brukes og endres gjennom koden din.
 
    `myVariable` er nå *initialisert* med verdien 123.
 
-1. **Refaktorer**. Erstatt koden din med følgende uttalelse.
+1. **Refaktorer**. Erstatt koden din med følgende utsagn.
 
     ```javascript
     let myVariable = 123;
@@ -73,7 +73,7 @@ Variabler lagrer verdier som kan brukes og endres gjennom koden din.
 
    Når en variabel er deklarert, kan du endre verdien når som helst i koden din med operatoren `=` og den nye verdien.
 
-   ✅ Prøv det! Du kan skrive JavaScript direkte i nettleseren din. Åpne et nettleservindu og naviger til Developer Tools. I konsollen finner du en prompt; skriv `let myVariable = 123`, trykk enter, og skriv deretter `myVariable`. Hva skjer? Merk, du vil lære mer om disse konseptene i senere leksjoner.
+   ✅ Prøv det! Du kan skrive JavaScript direkte i nettleseren din. Åpne et nettleservindu og naviger til utviklerverktøy. I konsollen finner du en prompt; skriv `let myVariable = 123`, trykk enter, og skriv deretter `myVariable`. Hva skjer? Merk, du vil lære mer om disse konseptene i påfølgende leksjoner.
 
 ## Konstanter
 
@@ -110,11 +110,11 @@ Konstanter ligner på variabler, med to unntak:
 
       Ovenfor endrer du verdien til objektet, men ikke selve referansen, noe som gjør det tillatt.
 
-   > Merk, en `const` betyr at referansen er beskyttet mot omtilordning. Verdien er derimot ikke _uforanderlig_ og kan endres, spesielt hvis det er en kompleks konstruksjon som et objekt.
+   > Merk, en `const` betyr at referansen er beskyttet mot reassignment. Verdien er derimot ikke _uforanderlig_ og kan endres, spesielt hvis det er en kompleks konstruksjon som et objekt.
 
 ## Datatyper
 
-Variabler kan lagre mange forskjellige typer verdier, som tall og tekst. Disse ulike typene verdier er kjent som **datatyper**. Datatyper er en viktig del av programvareutvikling fordi det hjelper utviklere med å ta beslutninger om hvordan koden skal skrives og hvordan programvaren skal fungere. Videre har noen datatyper unike funksjoner som hjelper til med å transformere eller hente ut tilleggsinformasjon fra en verdi.
+Variabler kan lagre mange forskjellige typer verdier, som tall og tekst. Disse ulike typene verdier er kjent som **datatyper**. Datatyper er en viktig del av programvareutvikling fordi de hjelper utviklere med å ta beslutninger om hvordan koden skal skrives og hvordan programvaren skal fungere. Videre har noen datatyper unike funksjoner som hjelper med å transformere eller hente ut tilleggsinformasjon fra en verdi.
 
 ✅ Datatyper kalles også JavaScript-dataprimitiver, da de er de laveste nivåene av datatyper som tilbys av språket. Det finnes 7 primitive datatyper: string, number, bigint, boolean, undefined, null og symbol. Ta et øyeblikk til å visualisere hva hver av disse primitivene kan representere. Hva er en `zebra`? Hva med `0`? `true`?
 
@@ -128,21 +128,21 @@ Variabler kan lagre alle typer tall, inkludert desimaltall eller negative tall. 
 
 ### Aritmetiske operatorer
 
-Det finnes flere typer operatorer som kan brukes når du utfører aritmetiske funksjoner, og noen er listet her:
+Det finnes flere typer operatorer som kan brukes når man utfører aritmetiske funksjoner, og noen er listet her:
 
-| Symbol | Beskrivelse                                                             | Eksempel                          |
-| ------ | ----------------------------------------------------------------------- | --------------------------------- |
-| `+`    | **Addisjon**: Beregner summen av to tall                               | `1 + 2 //forventet svar er 3`     |
-| `-`    | **Subtraksjon**: Beregner differansen mellom to tall                    | `1 - 2 //forventet svar er -1`    |
-| `*`    | **Multiplikasjon**: Beregner produktet av to tall                       | `1 * 2 //forventet svar er 2`     |
-| `/`    | **Divisjon**: Beregner kvotienten av to tall                           | `1 / 2 //forventet svar er 0.5`   |
-| `%`    | **Rest**: Beregner resten fra divisjonen av to tall                    | `1 % 2 //forventet svar er 1`     |
+| Symbol | Beskrivelse                                                              | Eksempel                          |
+| ------ | ------------------------------------------------------------------------ | --------------------------------- |
+| `+`    | **Addisjon**: Beregner summen av to tall                                | `1 + 2 //forventet svar er 3`     |
+| `-`    | **Subtraksjon**: Beregner differansen mellom to tall                     | `1 - 2 //forventet svar er -1`    |
+| `*`    | **Multiplikasjon**: Beregner produktet av to tall                        | `1 * 2 //forventet svar er 2`     |
+| `/`    | **Divisjon**: Beregner kvotienten av to tall                             | `1 / 2 //forventet svar er 0.5`   |
+| `%`    | **Rest**: Beregner resten fra divisjonen av to tall                      | `1 % 2 //forventet svar er 1`     |
 
 ✅ Prøv det! Prøv en aritmetisk operasjon i nettleserens konsoll. Overrasker resultatene deg?
 
 ### Strenger
 
-Strenger er sett med tegn som ligger mellom enkelt- eller dobbeltanførselstegn.
+Strenger er sett med tegn som befinner seg mellom enkle eller doble anførselstegn.
 
 - `'Dette er en streng'`
 - `"Dette er også en streng"`
@@ -154,7 +154,7 @@ Husk å bruke anførselstegn når du skriver en streng, ellers vil JavaScript an
 
 Strenger er tekstuelle og vil kreve formatering fra tid til annen.
 
-For å **konkatenere** to eller flere strenger, eller sette dem sammen, bruk operatoren `+`.
+For å **konkatenere** to eller flere strenger, eller slå dem sammen, bruk operatoren `+`.
 
 ```javascript
 let myString1 = "Hello";
@@ -166,9 +166,9 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ```
 
-✅ Hvorfor er `1 + 1 = 2` i JavaScript, men `'1' + '1' = 11?` Tenk på det. Hva med `'1' + 1`?
+✅ Hvorfor er `1 + 1 = 2` i JavaScript, men `'1' + '1' = 11?` Tenk over det. Hva med `'1' + 1`?
 
-**Template literals** er en annen måte å formatere strenger på, bortsett fra at baktegn brukes i stedet for anførselstegn. Alt som ikke er ren tekst må plasseres inne i plassholdere `${ }`. Dette inkluderer eventuelle variabler som kan være strenger.
+**Template literals** er en annen måte å formatere strenger på, bortsett fra at man bruker backticks i stedet for anførselstegn. Alt som ikke er ren tekst må plasseres inne i plassholdere `${ }`. Dette inkluderer eventuelle variabler som kan være strenger.
 
 ```javascript
 let myString1 = "Hello";
@@ -178,13 +178,13 @@ let myString2 = "World";
 `${myString1}, ${myString2}!` //Hello, World!
 ```
 
-Du kan oppnå formateringsmålene dine med begge metoder, men template literals vil respektere eventuelle mellomrom og linjeskift.
+Du kan oppnå formateringsmålene dine med begge metodene, men template literals vil respektere eventuelle mellomrom og linjeskift.
 
 ✅ Når ville du brukt en template literal kontra en vanlig streng?
 
 ### Booleans
 
-Booleans kan bare ha to verdier: `true` eller `false`. Booleans kan hjelpe med å ta beslutninger om hvilke linjer med kode som skal kjøres når visse betingelser er oppfylt. I mange tilfeller hjelper [operatorer](../../../../2-js-basics/1-data-types) med å sette verdien til en Boolean, og du vil ofte legge merke til og skrive variabler som blir initialisert eller deres verdier som blir oppdatert med en operator.
+Booleans kan kun ha to verdier: `true` eller `false`. Booleans kan hjelpe med å ta beslutninger om hvilke linjer med kode som skal kjøres når visse betingelser er oppfylt. I mange tilfeller hjelper [operatorer](../../../../2-js-basics/1-data-types) med å sette verdien til en Boolean, og du vil ofte legge merke til og skrive variabler som blir initialisert eller deres verdier oppdatert med en operator.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
@@ -195,20 +195,20 @@ Booleans kan bare ha to verdier: `true` eller `false`. Booleans kan hjelpe med �
 
 ## 🚀 Utfordring
 
-JavaScript er kjent for sine overraskende måter å håndtere datatyper på av og til. Gjør litt research på disse 'gotchas'. For eksempel: små og store bokstaver kan skape problemer! Prøv dette i konsollen din: `let age = 1; let Age = 2; age == Age` (gir `false` -- hvorfor?). Hvilke andre gotchas kan du finne?
+JavaScript er kjent for sine overraskende måter å håndtere datatyper på av og til. Gjør litt research på disse 'gotchas'. For eksempel: små og store bokstaver kan skape problemer! Prøv dette i konsollen: `let age = 1; let Age = 2; age == Age` (gir `false` -- hvorfor?). Hvilke andre gotchas kan du finne?
 
 ## Quiz etter forelesning
-[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/8)
+[Quiz etter forelesning](https://ff-quizzes.netlify.app)
 
 ## Gjennomgang & Selvstudium
 
-Ta en titt på [denne listen over JavaScript-øvelser](https://css-tricks.com/snippets/javascript/) og prøv en. Hva lærte du?
+Ta en titt på [denne listen med JavaScript-øvelser](https://css-tricks.com/snippets/javascript/) og prøv en. Hva lærte du?
 
 ## Oppgave
 
-[Øv på datatyper](assignment.md)
+[Øvelse med datatyper](assignment.md)
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

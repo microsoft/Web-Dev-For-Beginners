@@ -1,37 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-26T22:08:58+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T08:35:35+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "no"
 }
 -->
-# Bygg et romspill del 6: Slutt og restart
+# Bygg et Romspill Del 6: Avslutning og Restart
 
 ## Quiz før forelesning
 
 [Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Det finnes ulike måter å uttrykke en *sluttbetingelse* i et spill. Det er opp til deg som skaper av spillet å definere hvorfor spillet har tatt slutt. Her er noen grunner, hvis vi antar at vi snakker om romspillet du har bygget så langt:
+Det finnes ulike måter å uttrykke en *sluttbetingelse* i et spill. Det er opp til deg som skaper av spillet å bestemme hvorfor spillet avsluttes. Her er noen mulige grunner, hvis vi antar at vi snakker om romspillet du har bygget så langt:
 
-- **`N` fiendtlige skip er blitt ødelagt**: Det er ganske vanlig, hvis du deler opp et spill i ulike nivåer, at du må ødelegge `N` fiendtlige skip for å fullføre et nivå.
-- **Ditt skip er blitt ødelagt**: Det finnes definitivt spill hvor du taper hvis skipet ditt blir ødelagt. En annen vanlig tilnærming er å ha et livsystem. Hver gang skipet ditt blir ødelagt, mister du et liv. Når alle liv er brukt opp, taper du spillet.
-- **Du har samlet `N` poeng**: En annen vanlig sluttbetingelse er at du samler poeng. Hvordan du får poeng er opp til deg, men det er ganske vanlig å tildele poeng for ulike aktiviteter, som å ødelegge et fiendtlig skip eller samle gjenstander som *slippes* når de blir ødelagt.
-- **Fullfør et nivå**: Dette kan innebære flere betingelser, som `X` fiendtlige skip ødelagt, `Y` poeng samlet, eller kanskje at en spesifikk gjenstand er blitt samlet.
+- **`N` fiendtlige skip er ødelagt**: Det er ganske vanlig i spill som er delt opp i nivåer at du må ødelegge `N` fiendtlige skip for å fullføre et nivå.
+- **Skipet ditt er ødelagt**: Det finnes definitivt spill hvor du taper hvis skipet ditt blir ødelagt. En annen vanlig tilnærming er å ha et konsept med liv. Hver gang skipet ditt blir ødelagt, mister du et liv. Når alle liv er brukt opp, taper du spillet.
+- **Du har samlet `N` poeng**: En annen vanlig sluttbetingelse er at du samler poeng. Hvordan du får poeng er opp til deg, men det er vanlig å tildele poeng for ulike aktiviteter, som å ødelegge et fiendtlig skip eller samle gjenstander som *slippes* når de ødelegges.
+- **Fullfør et nivå**: Dette kan innebære flere betingelser, som at `X` fiendtlige skip er ødelagt, `Y` poeng er samlet, eller kanskje at en spesifikk gjenstand er samlet inn.
 
 ## Restart
 
-Hvis folk liker spillet ditt, vil de sannsynligvis ønske å spille det igjen. Når spillet tar slutt av en eller annen grunn, bør du tilby en mulighet til å starte på nytt.
+Hvis folk liker spillet ditt, vil de sannsynligvis ønske å spille det igjen. Når spillet avsluttes, uansett grunn, bør du tilby en mulighet til å starte på nytt.
 
-✅ Tenk litt på under hvilke betingelser du opplever at et spill tar slutt, og hvordan du blir bedt om å starte på nytt.
+✅ Tenk litt over under hvilke betingelser du opplever at et spill avsluttes, og hvordan du blir oppfordret til å starte på nytt.
 
 ## Hva du skal bygge
 
-Du skal legge til disse reglene i spillet ditt:
+Du skal legge til følgende regler i spillet ditt:
 
-1. **Vinne spillet**. Når alle fiendtlige skip er ødelagt, vinner du spillet. I tillegg skal du vise en slags seiersmelding.
-1. **Restart**. Når alle liv er brukt opp eller spillet er vunnet, skal du tilby en måte å starte spillet på nytt. Husk! Du må reinitialisere spillet, og den tidligere spilltilstanden skal ryddes.
+1. **Vinne spillet**. Når alle fiendtlige skip er ødelagt, vinner du spillet. I tillegg skal det vises en slags seiersmelding.
+1. **Restart**. Når alle liv er brukt opp eller spillet er vunnet, skal du tilby en måte å starte spillet på nytt. Husk! Du må reinitialisere spillet, og den forrige spilltilstanden skal slettes.
 
 ## Anbefalte steg
 
@@ -48,20 +48,20 @@ Finn filene som er opprettet for deg i undermappen `your-work`. Den skal innehol
 -| package.json
 ```
 
-Start prosjektet ditt i mappen `your_work` ved å skrive:
+Start prosjektet ditt i `your_work`-mappen ved å skrive:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en nettleser og skriv inn den adressen. Spillet ditt skal være i en spillbar tilstand.
+Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en nettleser og skriv inn denne adressen. Spillet ditt skal være i en spillbar tilstand.
 
-> tips: for å unngå advarsler i Visual Studio Code, rediger funksjonen `window.onload` til å kalle `gameLoopId` som den er (uten `let`), og deklarer `gameLoopId` øverst i filen, uavhengig: `let gameLoopId;`
+> tips: For å unngå advarsler i Visual Studio Code, rediger `window.onload`-funksjonen slik at den kaller `gameLoopId` som den er (uten `let`), og deklarer `gameLoopId` øverst i filen, uavhengig: `let gameLoopId;`
 
 ### Legg til kode
 
-1. **Spor sluttbetingelse**. Legg til kode som holder oversikt over antall fiender, eller om helteskipet er blitt ødelagt ved å legge til disse to funksjonene:
+1. **Spor sluttbetingelse**. Legg til kode som holder oversikt over antall fiender, eller om helteskipet er ødelagt, ved å legge til disse to funksjonene:
 
     ```javascript
     function isHeroDead() {
@@ -108,16 +108,16 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
     });
     ```
 
-1. **Legg til nye meldingstyper**. Legg til disse meldingene i constants-objektet:
+1. **Legg til nye meldingstyper**. Legg til disse meldingene i konstantobjektet:
 
     ```javascript
     GAME_END_LOSS: "GAME_END_LOSS",
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Legg til restart-kode** som starter spillet på nytt ved trykk på en valgt knapp.
+2. **Legg til restart-kode** som starter spillet på nytt ved å trykke på en valgt knapp.
 
-   1. **Lytt til tastetrykk `Enter`**. Rediger vinduets eventListener til å lytte etter dette tastetrykket:
+   1. **Lytt til tastetrykk `Enter`**. Rediger vinduets eventListener for å lytte etter dette tastetrykket:
 
     ```javascript
      else if(evt.key === "Enter") {
@@ -125,7 +125,7 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
       }
     ```
 
-   1. **Legg til restart-melding**. Legg til denne meldingen i Messages-objektet:
+   1. **Legg til restart-melding**. Legg til denne meldingen i meldingskonstanten din:
 
         ```javascript
         KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
@@ -135,7 +135,7 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
 
    1. **Spillerens vinnbetingelse**. Når alle fiendtlige skip er ødelagt, vis en seiersmelding.
 
-      1. Først, opprett en funksjon `displayMessage()`:
+      1. Først, opprett en `displayMessage()`-funksjon:
 
         ```javascript
         function displayMessage(message, color = "red") {
@@ -146,7 +146,7 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
         }
         ```
 
-      1. Opprett en funksjon `endGame()`:
+      1. Opprett en `endGame()`-funksjon:
 
         ```javascript
         function endGame(win) {
@@ -171,9 +171,9 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
         }
         ```
 
-   1. **Restart-logikk**. Når alle liv er brukt opp eller spilleren har vunnet spillet, vis at spillet kan startes på nytt. I tillegg skal spillet restartes når restart-tasten trykkes (du kan bestemme hvilken tast som skal brukes til restart).
+   1. **Restart-logikk**. Når alle liv er brukt opp eller spilleren har vunnet spillet, vis at spillet kan startes på nytt. Start også spillet på nytt når *restart*-tasten trykkes (du kan bestemme hvilken tast som skal brukes til restart).
 
-      1. Opprett funksjonen `resetGame()`:
+      1. Opprett `resetGame()`-funksjonen:
 
         ```javascript
         function resetGame() {
@@ -194,7 +194,7 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
         }
         ```
 
-     1. Legg til et kall til `eventEmitter` for å resette spillet i `initGame()`:
+     1. Legg til et kall til `eventEmitter` for å tilbakestille spillet i `initGame()`:
 
         ```javascript
         eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
@@ -210,13 +210,13 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
         }
         ```
 
-👽 💥 🚀 Gratulerer, kaptein! Spillet ditt er ferdig! Godt jobbet! 🚀 💥 👽
+👽 💥 🚀 Gratulerer, Kaptein! Spillet ditt er komplett! Godt jobbet! 🚀 💥 👽
 
 ---
 
 ## 🚀 Utfordring
 
-Legg til lyd! Kan du legge til lyd for å forbedre spillopplevelsen, kanskje når det er et laser-treff, eller helten dør eller vinner? Ta en titt på denne [sandboxen](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) for å lære hvordan du spiller av lyd med JavaScript.
+Legg til en lyd! Kan du legge til en lyd for å forbedre spillopplevelsen, kanskje når det er et laserskudd, eller når helten dør eller vinner? Ta en titt på denne [sandkassen](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) for å lære hvordan du spiller av lyd med JavaScript.
 
 ## Quiz etter forelesning
 
@@ -224,7 +224,7 @@ Legg til lyd! Kan du legge til lyd for å forbedre spillopplevelsen, kanskje nå
 
 ## Gjennomgang og selvstudium
 
-Oppgaven din er å lage et nytt eksempelspill, så utforsk noen interessante spill der ute for å se hva slags spill du kan bygge.
+Oppgaven din er å lage et nytt eksempelspill, så utforsk noen interessante spill der ute for å se hva slags spill du kan lage.
 
 ## Oppgave
 
@@ -233,4 +233,4 @@ Oppgaven din er å lage et nytt eksempelspill, så utforsk noen interessante spi
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

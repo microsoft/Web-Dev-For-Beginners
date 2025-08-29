@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-27T22:52:20+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T09:14:00+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "id"
 }
@@ -21,13 +21,13 @@ Pelajaran ini mencakup dasar-dasar JavaScript, bahasa yang memberikan interaktiv
 
 [![Loop](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loop")
 
-> 🎥 Klik gambar di atas untuk menonton video tentang array dan loop.
+> 🎥 Klik gambar di atas untuk video tentang array dan loop.
 
 > Anda dapat mengikuti pelajaran ini di [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-arrays/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Array
 
-Bekerja dengan data adalah tugas umum dalam bahasa pemrograman, dan tugas ini menjadi jauh lebih mudah ketika data diorganisasi dalam format struktural seperti array. Dengan array, data disimpan dalam struktur yang mirip dengan daftar. Salah satu keuntungan utama dari array adalah Anda dapat menyimpan berbagai jenis data dalam satu array.
+Bekerja dengan data adalah tugas umum dalam bahasa pemrograman, dan tugas ini menjadi lebih mudah ketika data diorganisasi dalam format struktural seperti array. Dengan array, data disimpan dalam struktur yang mirip dengan daftar. Salah satu keuntungan utama array adalah Anda dapat menyimpan berbagai jenis data dalam satu array.
 
 ✅ Array ada di sekitar kita! Bisakah Anda memikirkan contoh nyata dari array, seperti susunan panel surya?
 
@@ -81,7 +81,7 @@ Loop memungkinkan kita melakukan tugas berulang atau **iteratif**, dan dapat men
 
 ### For Loop
 
-`for` loop membutuhkan 3 bagian untuk melakukan iterasi:
+`for` loop membutuhkan 3 bagian untuk iterasi:
 - `counter` Variabel yang biasanya diinisialisasi dengan angka yang menghitung jumlah iterasi
 - `condition` Ekspresi yang menggunakan operator perbandingan untuk menghentikan loop ketika bernilai `false`
 - `iteration-expression` Dijalankan di akhir setiap iterasi, biasanya digunakan untuk mengubah nilai counter
@@ -97,7 +97,7 @@ for (let i = 0; i < 10; i++) {
 
 ### While Loop
 
-Berbeda dengan sintaks `for` loop, `while` loop hanya membutuhkan kondisi yang akan menghentikan loop ketika kondisinya menjadi `false`. Kondisi dalam loop biasanya bergantung pada nilai lain seperti counter, dan harus dikelola selama loop berlangsung. Nilai awal untuk counter harus dibuat di luar loop, dan ekspresi apa pun untuk memenuhi kondisi, termasuk mengubah counter, harus dipertahankan di dalam loop.
+Berbeda dengan sintaks `for` loop, `while` loop hanya membutuhkan kondisi yang akan menghentikan loop ketika kondisinya menjadi `false`. Kondisi dalam loop biasanya bergantung pada nilai lain seperti counter, dan harus dikelola selama loop berlangsung. Nilai awal untuk counter harus dibuat di luar loop, dan ekspresi apa pun untuk memenuhi kondisi, termasuk mengubah counter, harus dikelola di dalam loop.
 
 ```javascript
 //Counting up to 10
@@ -128,7 +128,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ## 🚀 Tantangan
 
-Ada cara lain untuk mengulang array selain menggunakan for dan while loop. Ada [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), dan [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Ulangi loop array Anda menggunakan salah satu teknik ini.
+Ada cara lain untuk mengulang array selain menggunakan for dan while loop. Ada [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), dan [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Tulis ulang loop array Anda menggunakan salah satu teknik ini.
 
 ## Kuis Pasca-Pelajaran
 [Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/14)
@@ -144,4 +144,4 @@ Array dalam JavaScript memiliki banyak metode yang sangat berguna untuk manipula
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemah manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

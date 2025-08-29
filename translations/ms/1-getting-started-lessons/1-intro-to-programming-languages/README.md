@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c63675cfaf1d223b37bb9fecbfe7c252",
-  "translation_date": "2025-08-27T23:14:17+00:00",
+  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
+  "translation_date": "2025-08-29T09:36:13+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "ms"
 }
 -->
-# Pengenalan kepada Bahasa Pengaturcaraan dan Alat-Alat Penting
+# Pengenalan kepada Bahasa Pengaturcaraan dan Alat yang Digunakan
 
-Pelajaran ini merangkumi asas-asas bahasa pengaturcaraan. Topik yang dibincangkan di sini terpakai kepada kebanyakan bahasa pengaturcaraan moden hari ini. Dalam bahagian 'Alat-Alat Penting', anda akan mempelajari perisian berguna yang membantu anda sebagai seorang pembangun.
+Pelajaran ini merangkumi asas-asas bahasa pengaturcaraan. Topik yang dibincangkan di sini terpakai kepada kebanyakan bahasa pengaturcaraan moden hari ini. Dalam bahagian 'Alat yang Digunakan', anda akan mempelajari tentang perisian berguna yang membantu anda sebagai seorang pembangun.
 
 ![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.ms.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
@@ -24,13 +24,13 @@ Dalam pelajaran ini, kita akan membincangkan:
 - Apa itu pengaturcaraan?
 - Jenis-jenis bahasa pengaturcaraan
 - Elemen asas dalam program
-- Perisian dan alat berguna untuk pembangun profesional
+- Perisian dan alat yang berguna untuk pembangun profesional
 
 > Anda boleh mengikuti pelajaran ini di [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Apa itu Pengaturcaraan?
 
-Pengaturcaraan (juga dikenali sebagai pengekodan) adalah proses menulis arahan untuk peranti seperti komputer atau peranti mudah alih. Kita menulis arahan ini menggunakan bahasa pengaturcaraan, yang kemudiannya ditafsirkan oleh peranti. Set arahan ini mungkin dirujuk dengan pelbagai nama, tetapi *program*, *program komputer*, *aplikasi (app)*, dan *executable* adalah beberapa nama yang popular.
+Pengaturcaraan (juga dikenali sebagai pengekodan) adalah proses menulis arahan untuk peranti seperti komputer atau peranti mudah alih. Kita menulis arahan ini menggunakan bahasa pengaturcaraan, yang kemudiannya ditafsirkan oleh peranti. Set arahan ini mungkin dirujuk dengan pelbagai nama, tetapi *program*, *program komputer*, *aplikasi (app)*, dan *boleh laku (executable)* adalah beberapa nama yang popular.
 
 Sebuah *program* boleh menjadi apa sahaja yang ditulis dengan kod; laman web, permainan, dan aplikasi telefon adalah program. Walaupun mungkin untuk mencipta program tanpa menulis kod, logik asasnya ditafsirkan oleh peranti dan logik itu kemungkinan besar ditulis dengan kod. Program yang *berjalan* atau *melaksanakan* kod sedang melaksanakan arahan. Peranti yang anda gunakan untuk membaca pelajaran ini sedang menjalankan program untuk memaparkannya di skrin anda.
 
@@ -38,13 +38,13 @@ Sebuah *program* boleh menjadi apa sahaja yang ditulis dengan kod; laman web, pe
 
 ## Bahasa Pengaturcaraan
 
-Bahasa pengaturcaraan membolehkan pembangun menulis arahan untuk peranti. Peranti hanya memahami binari (1 dan 0), dan bagi *kebanyakan* pembangun, itu bukan cara komunikasi yang efisien. Bahasa pengaturcaraan adalah medium komunikasi antara manusia dan komputer.
+Bahasa pengaturcaraan membolehkan pembangun menulis arahan untuk peranti. Peranti hanya memahami binari (1 dan 0), dan bagi *kebanyakan* pembangun, itu bukan cara yang efisien untuk berkomunikasi. Bahasa pengaturcaraan adalah medium komunikasi antara manusia dan komputer.
 
-Bahasa pengaturcaraan hadir dalam pelbagai format dan mungkin berfungsi untuk tujuan yang berbeza. Sebagai contoh, JavaScript digunakan terutamanya untuk aplikasi web, manakala Bash digunakan terutamanya untuk sistem operasi.
+Bahasa pengaturcaraan hadir dalam pelbagai format dan mungkin mempunyai tujuan yang berbeza. Sebagai contoh, JavaScript digunakan terutamanya untuk aplikasi web, manakala Bash digunakan terutamanya untuk sistem operasi.
 
 *Bahasa aras rendah* biasanya memerlukan langkah yang lebih sedikit berbanding *bahasa aras tinggi* untuk peranti mentafsirkan arahan. Walau bagaimanapun, apa yang menjadikan bahasa aras tinggi popular adalah kebolehbacaan dan sokongannya. JavaScript dianggap sebagai bahasa aras tinggi.
 
-Kod berikut menggambarkan perbezaan antara bahasa aras tinggi dengan JavaScript dan bahasa aras rendah dengan kod perhimpunan ARM.
+Kod berikut menggambarkan perbezaan antara bahasa aras tinggi dengan JavaScript dan bahasa aras rendah dengan kod pemasangan ARM.
 
 ```javascript
 let number = 10
@@ -85,38 +85,38 @@ back add r0,r1
 
 Percaya atau tidak, *kedua-duanya melakukan perkara yang sama*: mencetak jujukan Fibonacci sehingga 10.
 
-✅ Jujukan Fibonacci [didefinisikan](https://en.wikipedia.org/wiki/Fibonacci_number) sebagai satu set nombor di mana setiap nombor adalah jumlah dua nombor sebelumnya, bermula dari 0 dan 1. Sepuluh nombor pertama dalam jujukan Fibonacci adalah 0, 1, 1, 2, 3, 5, 8, 13, 21, dan 34.
+✅ Jujukan Fibonacci [didefinisikan](https://en.wikipedia.org/wiki/Fibonacci_number) sebagai satu set nombor di mana setiap nombor adalah jumlah daripada dua nombor sebelumnya, bermula dari 0 dan 1. Sepuluh nombor pertama dalam jujukan Fibonacci ialah 0, 1, 1, 2, 3, 5, 8, 13, 21, dan 34.
 
 ## Elemen dalam Program
 
-Satu arahan tunggal dalam program dipanggil *penyata* dan biasanya mempunyai watak atau jarak baris yang menandakan di mana arahan itu berakhir, atau *berhenti*. Cara program berhenti berbeza mengikut bahasa.
+Satu arahan tunggal dalam program dipanggil *penyata* dan biasanya mempunyai watak atau jarak baris yang menandakan di mana arahan itu berakhir, atau *berhenti*. Cara program berhenti berbeza mengikut setiap bahasa.
 
-Penyata dalam program mungkin bergantung pada data yang disediakan oleh pengguna atau dari tempat lain untuk melaksanakan arahan. Data boleh mengubah cara program berfungsi, jadi bahasa pengaturcaraan dilengkapi dengan cara untuk menyimpan data sementara supaya ia boleh digunakan kemudian. Ini dipanggil *pembolehubah*. Pembolehubah adalah penyata yang mengarahkan peranti untuk menyimpan data dalam memorinya. Pembolehubah dalam program adalah serupa dengan pembolehubah dalam algebra, di mana ia mempunyai nama unik dan nilainya mungkin berubah dari semasa ke semasa.
+Penyata dalam program mungkin bergantung pada data yang disediakan oleh pengguna atau sumber lain untuk melaksanakan arahan. Data boleh mengubah cara program berfungsi, jadi bahasa pengaturcaraan dilengkapi dengan cara untuk menyimpan data buat sementara waktu supaya ia boleh digunakan kemudian. Ini dipanggil *pembolehubah*. Pembolehubah adalah penyata yang mengarahkan peranti untuk menyimpan data dalam memorinya. Pembolehubah dalam program adalah serupa dengan pembolehubah dalam algebra, di mana ia mempunyai nama unik dan nilainya mungkin berubah dari semasa ke semasa.
 
-Ada kemungkinan bahawa beberapa penyata tidak akan dilaksanakan oleh peranti. Ini biasanya direka oleh pembangun atau secara tidak sengaja apabila ralat yang tidak dijangka berlaku. Kawalan jenis ini ke atas aplikasi menjadikannya lebih mantap dan mudah diselenggara. Biasanya, perubahan kawalan ini berlaku apabila syarat tertentu dipenuhi. Satu penyata biasa yang digunakan dalam pengaturcaraan moden untuk mengawal cara program berjalan adalah penyata `if..else`.
+Ada kemungkinan bahawa beberapa penyata tidak akan dilaksanakan oleh peranti. Ini biasanya direka oleh pembangun atau secara tidak sengaja apabila ralat yang tidak dijangka berlaku. Kawalan jenis ini ke atas aplikasi menjadikannya lebih mantap dan mudah diselenggara. Biasanya, perubahan kawalan ini berlaku apabila syarat tertentu dipenuhi. Penyata biasa yang digunakan dalam pengaturcaraan moden untuk mengawal cara program berjalan ialah penyata `if..else`.
 
 ✅ Anda akan mempelajari lebih lanjut tentang jenis penyata ini dalam pelajaran seterusnya.
 
-## Alat-Alat Penting
+## Alat yang Digunakan
 
 [![Tools of the Trade](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
 
-> 🎥 Klik imej di atas untuk video tentang alat-alat
+> 🎥 Klik imej di atas untuk video tentang alat
 
-Dalam bahagian ini, anda akan mempelajari beberapa perisian yang mungkin anda dapati sangat berguna semasa memulakan perjalanan pembangunan profesional anda.
+Dalam bahagian ini, anda akan mempelajari tentang beberapa perisian yang mungkin anda dapati sangat berguna semasa memulakan perjalanan pembangunan profesional anda.
 
 **Persekitaran pembangunan** adalah satu set alat dan ciri unik yang sering digunakan oleh pembangun semasa menulis perisian. Beberapa alat ini telah disesuaikan untuk keperluan khusus pembangun, dan mungkin berubah dari semasa ke semasa jika pembangun itu mengubah keutamaan dalam kerja, projek peribadi, atau apabila mereka menggunakan bahasa pengaturcaraan yang berbeza. Persekitaran pembangunan adalah unik seperti pembangun yang menggunakannya.
 
 ### Editor
 
-Salah satu alat yang paling penting untuk pembangunan perisian adalah editor. Editor adalah tempat anda menulis kod anda dan kadang-kadang tempat anda menjalankan kod anda.
+Salah satu alat yang paling penting untuk pembangunan perisian ialah editor. Editor adalah tempat anda menulis kod anda dan kadangkala tempat anda menjalankan kod anda.
 
-Pembangun bergantung pada editor untuk beberapa sebab tambahan:
+Pembangun bergantung pada editor atas beberapa sebab tambahan:
 
 - *Debugging* membantu mengenal pasti pepijat dan ralat dengan meneliti kod, baris demi baris. Sesetengah editor mempunyai keupayaan debugging; ia boleh disesuaikan dan ditambah untuk bahasa pengaturcaraan tertentu.
-- *Penyorotan sintaks* menambah warna dan pemformatan teks pada kod, menjadikannya lebih mudah dibaca. Kebanyakan editor membenarkan penyorotan sintaks yang disesuaikan.
-- *Sambungan dan Integrasi* adalah alat khusus untuk pembangun, oleh pembangun. Alat ini tidak dibina dalam editor asas. Sebagai contoh, ramai pembangun mendokumentasikan kod mereka untuk menjelaskan cara ia berfungsi. Mereka mungkin memasang sambungan pemeriksa ejaan untuk membantu mencari kesalahan ejaan dalam dokumentasi. Kebanyakan sambungan bertujuan untuk digunakan dalam editor tertentu, dan kebanyakan editor dilengkapi dengan cara untuk mencari sambungan yang tersedia.
-- *Penyesuaian* membolehkan pembangun mencipta persekitaran pembangunan unik untuk memenuhi keperluan mereka. Kebanyakan editor sangat boleh disesuaikan dan juga mungkin membenarkan pembangun mencipta sambungan tersuai.
+- *Penyorotan sintaks* menambah warna dan pemformatan teks pada kod, menjadikannya lebih mudah dibaca. Kebanyakan editor membenarkan penyesuaian penyorotan sintaks.
+- *Sambungan dan Integrasi* adalah alat khusus untuk pembangun, oleh pembangun. Alat ini tidak dibina dalam editor asas. Sebagai contoh, ramai pembangun mendokumentasikan kod mereka untuk menerangkan cara ia berfungsi. Mereka mungkin memasang sambungan pemeriksa ejaan untuk membantu mencari kesalahan ejaan dalam dokumentasi. Kebanyakan sambungan bertujuan untuk digunakan dalam editor tertentu, dan kebanyakan editor dilengkapi dengan cara untuk mencari sambungan yang tersedia.
+- *Penyesuaian* membolehkan pembangun mencipta persekitaran pembangunan unik yang sesuai dengan keperluan mereka. Kebanyakan editor sangat boleh disesuaikan dan juga mungkin membenarkan pembangun mencipta sambungan tersuai.
 
 #### Editor Popular dan Sambungan Pembangunan Web
 
@@ -135,9 +135,9 @@ Pembangun bergantung pada editor untuk beberapa sebab tambahan:
 
 ### Pelayar
 
-Alat penting lain adalah pelayar. Pembangun web bergantung pada pelayar untuk melihat bagaimana kod mereka berjalan di web. Ia juga digunakan untuk memaparkan elemen visual halaman web yang ditulis dalam editor, seperti HTML.
+Alat penting lain ialah pelayar. Pembangun web bergantung pada pelayar untuk melihat bagaimana kod mereka berjalan di web. Ia juga digunakan untuk memaparkan elemen visual halaman web yang ditulis dalam editor, seperti HTML.
 
-Banyak pelayar dilengkapi dengan *alat pembangun* (DevTools) yang mengandungi satu set ciri dan maklumat berguna untuk membantu pembangun mengumpul dan menangkap maklumat penting tentang aplikasi mereka. Sebagai contoh: Jika halaman web mempunyai ralat, kadang-kadang berguna untuk mengetahui bila ia berlaku. DevTools dalam pelayar boleh dikonfigurasikan untuk menangkap maklumat ini.
+Banyak pelayar dilengkapi dengan *alat pembangun* (DevTools) yang mengandungi satu set ciri dan maklumat berguna untuk membantu pembangun mengumpul dan menangkap maklumat penting tentang aplikasi mereka. Sebagai contoh: Jika halaman web mempunyai ralat, kadangkala berguna untuk mengetahui bila ia berlaku. DevTools dalam pelayar boleh dikonfigurasikan untuk menangkap maklumat ini.
 
 #### Pelayar Popular dan DevTools
 
@@ -147,7 +147,7 @@ Banyak pelayar dilengkapi dengan *alat pembangun* (DevTools) yang mengandungi sa
 
 ### Alat Baris Perintah
 
-Sesetengah pembangun lebih suka pandangan yang kurang grafik untuk tugas harian mereka dan bergantung pada baris perintah untuk mencapainya. Menulis kod memerlukan banyak menaip dan sesetengah pembangun lebih suka tidak mengganggu aliran mereka pada papan kekunci. Mereka akan menggunakan pintasan papan kekunci untuk bertukar antara tetingkap desktop, bekerja pada fail yang berbeza, dan menggunakan alat. Kebanyakan tugas boleh diselesaikan dengan tetikus, tetapi satu kelebihan menggunakan baris perintah ialah banyak yang boleh dilakukan dengan alat baris perintah tanpa perlu bertukar antara tetikus dan papan kekunci. Satu lagi kelebihan baris perintah ialah ia boleh dikonfigurasikan dan anda boleh menyimpan konfigurasi tersuai, mengubahnya kemudian, dan mengimportnya ke mesin pembangunan lain. Oleh kerana persekitaran pembangunan sangat unik kepada setiap pembangun, ada yang akan mengelak menggunakan baris perintah, ada yang bergantung sepenuhnya padanya, dan ada yang lebih suka gabungan kedua-duanya.
+Sesetengah pembangun lebih suka pandangan yang kurang grafik untuk tugas harian mereka dan bergantung pada baris perintah untuk mencapainya. Menulis kod memerlukan banyak menaip dan sesetengah pembangun lebih suka tidak mengganggu aliran mereka pada papan kekunci. Mereka akan menggunakan pintasan papan kekunci untuk bertukar antara tetingkap desktop, bekerja pada fail yang berbeza, dan menggunakan alat. Kebanyakan tugas boleh diselesaikan dengan tetikus, tetapi satu kelebihan menggunakan baris perintah ialah banyak perkara boleh dilakukan dengan alat baris perintah tanpa perlu bertukar antara tetikus dan papan kekunci. Satu lagi kelebihan baris perintah ialah ia boleh dikonfigurasikan dan anda boleh menyimpan konfigurasi tersuai, mengubahnya kemudian, dan mengimportnya ke mesin pembangunan lain. Oleh kerana persekitaran pembangunan sangat unik kepada setiap pembangun, ada yang akan mengelak menggunakan baris perintah, ada yang bergantung sepenuhnya padanya, dan ada yang lebih suka gabungan kedua-duanya.
 
 ### Pilihan Baris Perintah Popular
 
@@ -201,7 +201,7 @@ Apabila seorang pembangun ingin mempelajari sesuatu yang baru, mereka kemungkina
 Bandingkan beberapa bahasa pengaturcaraan. Apakah ciri unik JavaScript berbanding Java? Bagaimana pula dengan COBOL berbanding Go?
 
 ## Kuiz Pasca-Kuliah
-[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/2)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/)
 
 ## Ulasan & Kajian Kendiri
 

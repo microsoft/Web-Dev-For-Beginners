@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-27T22:13:57+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T09:24:16+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "ms"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Pengenalan
 
-Sejak kemunculan JavaScript dalam pelayar, laman web menjadi lebih interaktif dan kompleks berbanding sebelumnya. Teknologi web kini sering digunakan untuk mencipta aplikasi yang berfungsi sepenuhnya dan berjalan terus dalam pelayar, yang kita panggil [aplikasi web](https://en.wikipedia.org/wiki/Web_application). Oleh kerana aplikasi web sangat interaktif, pengguna tidak mahu menunggu keseluruhan halaman dimuat semula setiap kali tindakan dilakukan. Oleh itu, JavaScript digunakan untuk mengemas kini HTML secara langsung menggunakan DOM, bagi memberikan pengalaman pengguna yang lebih lancar.
+Sejak kemunculan JavaScript dalam pelayar, laman web menjadi lebih interaktif dan kompleks berbanding sebelumnya. Teknologi web kini sering digunakan untuk mencipta aplikasi yang berfungsi sepenuhnya yang berjalan terus dalam pelayar, yang kita panggil [aplikasi web](https://en.wikipedia.org/wiki/Web_application). Oleh kerana aplikasi web sangat interaktif, pengguna tidak mahu menunggu pemuatan semula halaman penuh setiap kali tindakan dilakukan. Oleh itu, JavaScript digunakan untuk mengemas kini HTML secara langsung menggunakan DOM, bagi memberikan pengalaman pengguna yang lebih lancar.
 
 Dalam pelajaran ini, kita akan membina asas untuk mencipta aplikasi perbankan web, menggunakan templat HTML untuk mencipta pelbagai skrin yang boleh dipaparkan dan dikemas kini tanpa perlu memuat semula keseluruhan halaman HTML.
 
@@ -50,11 +50,11 @@ Jika anda ingin mencipta pelbagai skrin untuk satu halaman web, satu penyelesaia
 - Anda perlu memuat semula keseluruhan HTML apabila menukar skrin, yang boleh menjadi perlahan.
 - Sukar untuk berkongsi data antara skrin yang berbeza.
 
-Pendekatan lain adalah dengan hanya mempunyai satu fail HTML, dan mendefinisikan pelbagai [templat HTML](https://developer.mozilla.org/docs/Web/HTML/Element/template) menggunakan elemen `<template>`. Templat adalah blok HTML yang boleh digunakan semula, tidak dipaparkan oleh pelayar, dan perlu diaktifkan semasa runtime menggunakan JavaScript.
+Pendekatan lain adalah dengan hanya mempunyai satu fail HTML, dan mentakrifkan pelbagai [templat HTML](https://developer.mozilla.org/docs/Web/HTML/Element/template) menggunakan elemen `<template>`. Templat ialah blok HTML yang boleh digunakan semula, yang tidak dipaparkan oleh pelayar, dan perlu diwujudkan semasa runtime menggunakan JavaScript.
 
 ### Tugasan
 
-Kita akan mencipta aplikasi bank dengan dua skrin: halaman log masuk dan papan pemuka. Pertama, tambahkan elemen pemegang tempat dalam badan HTML yang akan kita gunakan untuk mengaktifkan pelbagai skrin aplikasi kita:
+Kita akan mencipta aplikasi perbankan dengan dua skrin: halaman log masuk dan papan pemuka. Pertama, mari tambahkan dalam badan HTML elemen pemegang tempat yang akan kita gunakan untuk mewujudkan pelbagai skrin aplikasi kita:
 
 ```html
 <div id="app">Loading...</div>
@@ -62,9 +62,9 @@ Kita akan mencipta aplikasi bank dengan dua skrin: halaman log masuk dan papan p
 
 Kita memberikan `id` untuk memudahkan pencarian dengan JavaScript nanti.
 
-> Tip: kerana kandungan elemen ini akan digantikan, kita boleh meletakkan mesej atau penunjuk pemuatan yang akan dipaparkan semasa aplikasi sedang dimuat.
+> Petua: kerana kandungan elemen ini akan digantikan, kita boleh meletakkan mesej atau penunjuk pemuatan yang akan dipaparkan semasa aplikasi sedang dimuatkan.
 
-Seterusnya, tambahkan templat HTML untuk halaman log masuk di bawahnya. Buat masa ini, kita hanya akan meletakkan tajuk dan bahagian yang mengandungi pautan yang akan kita gunakan untuk navigasi.
+Seterusnya, mari tambahkan templat HTML untuk halaman log masuk di bawahnya. Buat masa ini, kita hanya akan meletakkan tajuk dan seksyen yang mengandungi pautan yang akan kita gunakan untuk navigasi.
 
 ```html
 <template id="login">
@@ -75,9 +75,9 @@ Seterusnya, tambahkan templat HTML untuk halaman log masuk di bawahnya. Buat mas
 </template>
 ```
 
-Kemudian tambahkan satu lagi templat HTML untuk halaman papan pemuka. Halaman ini akan mengandungi pelbagai bahagian:
+Kemudian kita akan menambah satu lagi templat HTML untuk halaman papan pemuka. Halaman ini akan mengandungi pelbagai seksyen:
 
-- Tajuk dengan tajuk utama dan pautan log keluar
+- Header dengan tajuk dan pautan log keluar
 - Baki semasa akaun bank
 - Senarai transaksi, dipaparkan dalam jadual
 
@@ -106,15 +106,15 @@ Kemudian tambahkan satu lagi templat HTML untuk halaman papan pemuka. Halaman in
 </template>
 ```
 
-> Tip: semasa mencipta templat HTML, jika anda ingin melihat bagaimana rupanya, anda boleh mengulas baris `<template>` dan `</template>` dengan menyelubunginya menggunakan `<!-- -->`.
+> Petua: semasa mencipta templat HTML, jika anda ingin melihat bagaimana rupanya, anda boleh mengulas baris `<template>` dan `</template>` dengan menyelubunginya dengan `<!-- -->`.
 
 ✅ Mengapa anda fikir kita menggunakan atribut `id` pada templat? Bolehkah kita menggunakan sesuatu yang lain seperti kelas?
 
 ## Memaparkan templat dengan JavaScript
 
-Jika anda mencuba fail HTML semasa anda dalam pelayar, anda akan melihat bahawa ia terhenti pada paparan `Loading...`. Ini kerana kita perlu menambah kod JavaScript untuk mengaktifkan dan memaparkan templat HTML.
+Jika anda mencuba fail HTML semasa anda dalam pelayar, anda akan melihat bahawa ia terhenti pada paparan `Loading...`. Ini kerana kita perlu menambah beberapa kod JavaScript untuk mewujudkan dan memaparkan templat HTML.
 
-Mengaktifkan templat biasanya dilakukan dalam 3 langkah:
+Mewujudkan templat biasanya dilakukan dalam 3 langkah:
 
 1. Dapatkan elemen templat dalam DOM, contohnya menggunakan [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
 2. Klon elemen templat, menggunakan [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
@@ -142,7 +142,7 @@ function updateRoute(templateId) {
 }
 ```
 
-Apa yang kita lakukan di sini adalah tepat seperti 3 langkah yang diterangkan di atas. Kita mengaktifkan templat dengan `id` `templateId`, dan meletakkan kandungan yang telah diklon dalam pemegang tempat aplikasi kita. Perhatikan bahawa kita perlu menggunakan `cloneNode(true)` untuk menyalin keseluruhan subpokok templat.
+Apa yang kita lakukan di sini adalah tepat seperti 3 langkah yang diterangkan di atas. Kita mewujudkan templat dengan `id` `templateId`, dan meletakkan kandungan klonnya dalam pemegang tempat aplikasi kita. Perhatikan bahawa kita perlu menggunakan `cloneNode(true)` untuk menyalin keseluruhan subpokok templat.
 
 Sekarang panggil fungsi ini dengan salah satu templat dan lihat hasilnya.
 
@@ -162,7 +162,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-Jika anda mencipta pelayan web dengan `mywebsite` sebagai akar, pemetaan URL akan menjadi:
+Jika anda mencipta pelayan web dengan `mywebsite` sebagai root, pemetaan URL akan menjadi:
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -170,7 +170,7 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-Walau bagaimanapun, untuk aplikasi web kita yang menggunakan satu fail HTML yang mengandungi semua skrin, tingkah laku lalai ini tidak akan membantu kita. Kita perlu mencipta peta ini secara manual dan mengemas kini templat yang dipaparkan menggunakan JavaScript.
+Walau bagaimanapun, untuk aplikasi web kita, kita menggunakan satu fail HTML yang mengandungi semua skrin, jadi tingkah laku lalai ini tidak akan membantu kita. Kita perlu mencipta peta ini secara manual dan mengemas kini templat yang dipaparkan menggunakan JavaScript.
 
 ### Tugasan
 
@@ -198,22 +198,22 @@ function updateRoute() {
 }
 ```
 
-Di sini kita memetakan laluan yang kita nyatakan kepada templat yang sepadan. Anda boleh mencuba bahawa ia berfungsi dengan betul dengan menukar URL secara manual dalam pelayar anda.
+Di sini kita memetakan laluan yang kita isytiharkan kepada templat yang sepadan. Anda boleh mencuba bahawa ia berfungsi dengan betul dengan menukar URL secara manual dalam pelayar anda.
 
-✅ Apa yang berlaku jika anda memasukkan laluan yang tidak dikenali dalam URL? Bagaimana kita boleh menyelesaikan ini?
+✅ Apa yang berlaku jika anda memasukkan laluan yang tidak diketahui dalam URL? Bagaimana kita boleh menyelesaikan ini?
 
 ## Menambah navigasi
 
-Langkah seterusnya untuk aplikasi kita adalah menambah kemungkinan untuk menavigasi antara halaman tanpa perlu menukar URL secara manual. Ini melibatkan dua perkara:
+Langkah seterusnya untuk aplikasi kita adalah menambah keupayaan untuk menavigasi antara halaman tanpa perlu menukar URL secara manual. Ini melibatkan dua perkara:
 
 1. Mengemas kini URL semasa
 2. Mengemas kini templat yang dipaparkan berdasarkan URL baru
 
-Kita sudah menyelesaikan bahagian kedua dengan fungsi `updateRoute`, jadi kita perlu memikirkan cara untuk mengemas kini URL semasa.
+Kita sudah menyelesaikan bahagian kedua dengan fungsi `updateRoute`, jadi kita perlu mencari cara untuk mengemas kini URL semasa.
 
 Kita perlu menggunakan JavaScript dan lebih khusus lagi [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) yang membolehkan kita mengemas kini URL dan mencipta entri baru dalam sejarah pelayaran, tanpa memuat semula HTML.
 
-> Nota: Walaupun elemen sauh HTML [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) boleh digunakan sendiri untuk mencipta pautan hiper ke URL yang berbeza, ia akan membuat pelayar memuat semula HTML secara lalai. Adalah perlu untuk menghalang tingkah laku ini apabila mengendalikan laluan dengan JavaScript tersuai, menggunakan fungsi preventDefault() pada acara klik.
+> Nota: Walaupun elemen sauh HTML [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) boleh digunakan sendiri untuk mencipta pautan ke URL yang berbeza, ia akan menyebabkan pelayar memuat semula HTML secara lalai. Adalah perlu untuk menghalang tingkah laku ini apabila mengendalikan laluan dengan JavaScript tersuai, menggunakan fungsi `preventDefault()` pada acara klik.
 
 ### Tugasan
 
@@ -226,7 +226,7 @@ function navigate(path) {
 }
 ```
 
-Kaedah ini pertama-tama mengemas kini URL semasa berdasarkan laluan yang diberikan, kemudian mengemas kini templat. Sifat `window.location.origin` mengembalikan akar URL, membolehkan kita membina semula URL lengkap dari laluan yang diberikan.
+Kaedah ini pertama kali mengemas kini URL semasa berdasarkan laluan yang diberikan, kemudian mengemas kini templat. Sifat `window.location.origin` mengembalikan root URL, membolehkan kita membina semula URL lengkap dari laluan yang diberikan.
 
 Sekarang kita mempunyai fungsi ini, kita boleh menyelesaikan masalah yang kita hadapi jika laluan tidak sepadan dengan mana-mana laluan yang ditentukan. Kita akan mengubah fungsi `updateRoute` dengan menambah laluan lalai kepada salah satu laluan yang sedia ada jika kita tidak dapat mencari padanan.
 
@@ -242,7 +242,7 @@ function updateRoute() {
   ...
 ```
 
-Jika laluan tidak dapat ditemui, kita kini akan mengarahkan semula ke halaman `login`.
+Jika laluan tidak dapat ditemui, kita kini akan mengalihkan ke halaman `login`.
 
 Sekarang mari kita cipta fungsi untuk mendapatkan URL apabila pautan diklik, dan untuk menghalang tingkah laku lalai pautan pelayar:
 
@@ -265,7 +265,7 @@ Objek `event` di atas menangkap acara `click` dan menghantarnya ke fungsi `onLin
 
 Menggunakan atribut [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick), ikat acara `click` kepada kod JavaScript, di sini panggilan kepada fungsi `navigate()`.
 
-Cuba klik pada pautan ini, anda sepatutnya kini boleh menavigasi antara pelbagai skrin aplikasi anda.
+Cuba klik pada pautan ini, anda sepatutnya kini boleh menavigasi antara skrin yang berbeza dalam aplikasi anda.
 
 ✅ Kaedah `history.pushState` adalah sebahagian daripada standard HTML5 dan dilaksanakan dalam [semua pelayar moden](https://caniuse.com/?search=pushState). Jika anda membina aplikasi web untuk pelayar lama, terdapat helah yang boleh anda gunakan sebagai ganti API ini: menggunakan [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) sebelum laluan, anda boleh melaksanakan laluan yang berfungsi dengan navigasi sauh biasa dan tidak memuat semula halaman, kerana tujuannya adalah untuk mencipta pautan dalaman dalam halaman.
 
@@ -308,9 +308,9 @@ Tambahkan templat dan laluan baru untuk halaman ketiga yang menunjukkan kredit u
 
 [Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/42)
 
-## Ulasan & Kajian Kendiri
+## Kajian Semula & Kajian Kendiri
 
-Routing adalah salah satu bahagian yang mengejutkan sukar dalam pembangunan web, terutamanya apabila web bergerak dari tingkah laku penyegaran halaman kepada penyegaran halaman Aplikasi Halaman Tunggal. Baca sedikit tentang [bagaimana perkhidmatan Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) mengendalikan routing. Bolehkah anda terangkan mengapa beberapa keputusan yang diterangkan dalam dokumen itu diperlukan?
+Routing adalah salah satu bahagian pembangunan web yang mengejutkan sukar, terutamanya apabila web bergerak dari tingkah laku pemuatan semula halaman kepada pemuatan semula halaman Aplikasi Halaman Tunggal. Baca sedikit tentang [bagaimana perkhidmatan Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) mengendalikan routing. Bolehkah anda jelaskan mengapa beberapa keputusan yang diterangkan dalam dokumen itu diperlukan?
 
 ## Tugasan
 
@@ -319,4 +319,4 @@ Routing adalah salah satu bahagian yang mengejutkan sukar dalam pembangunan web,
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

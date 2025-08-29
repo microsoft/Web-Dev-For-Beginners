@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-26T21:48:52+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T07:57:14+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "sv"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz före föreläsning
-[Quiz före föreläsning](https://ff-quizzes.netlify.app/web/quiz/7)
+[Quiz före föreläsning](https://ff-quizzes.netlify.app/web/)
 
 Den här lektionen täcker grunderna i JavaScript, språket som ger interaktivitet på webben.
 
@@ -34,12 +34,12 @@ Att skapa och **deklarera** en variabel har följande syntax **[nyckelord] [namn
 
 - **Nyckelord**. Nyckelord kan vara `let` eller `var`.  
 
-✅ Nyckelordet `let` introducerades i ES6 och ger din variabel en så kallad _blockscope_. Det rekommenderas att du använder `let` istället för `var`. Vi kommer att gå djupare in på blockscopes i framtida delar.
-- **Variabelnamnet**, detta är ett namn du själv väljer.
+✅ Nyckelordet `let` introducerades i ES6 och ger din variabel en så kallad _blockscope_. Det rekommenderas att du använder `let` istället för `var`. Vi kommer att gå igenom blockscope mer ingående i framtida delar.
+- **Variabelnamnet**, detta är ett namn du väljer själv.
 
 ### Uppgift - arbeta med variabler
 
-1. **Deklarera en variabel**. Låt oss deklarera en variabel med hjälp av nyckelordet `let`:
+1. **Deklarera en variabel**. Låt oss deklarera en variabel med nyckelordet `let`:
 
     ```javascript
     let myVariable;
@@ -47,7 +47,7 @@ Att skapa och **deklarera** en variabel har följande syntax **[nyckelord] [namn
 
    `myVariable` har nu deklarerats med nyckelordet `let`. Den har för närvarande inget värde.
 
-1. **Tilldela ett värde**. Lagra ett värde i en variabel med operatorn `=`, följt av det förväntade värdet.
+1. **Tilldela ett värde**. Lagra ett värde i en variabel med operatorn `=` följt av det förväntade värdet.
 
     ```javascript
     myVariable = 123;
@@ -57,7 +57,7 @@ Att skapa och **deklarera** en variabel har följande syntax **[nyckelord] [namn
 
    `myVariable` har nu *initierats* med värdet 123.
 
-1. **Refaktorera**. Ersätt din kod med följande uttalande.
+1. **Refaktorisera**. Ersätt din kod med följande uttalande.
 
     ```javascript
     let myVariable = 123;
@@ -73,11 +73,11 @@ Att skapa och **deklarera** en variabel har följande syntax **[nyckelord] [namn
 
    När en variabel har deklarerats kan du ändra dess värde när som helst i din kod med operatorn `=` och det nya värdet.
 
-   ✅ Prova! Du kan skriva JavaScript direkt i din webbläsare. Öppna ett webbläsarfönster och navigera till Utvecklarverktyg. I konsolen hittar du en prompt; skriv `let myVariable = 123`, tryck på retur och skriv sedan `myVariable`. Vad händer? Observera att du kommer att lära dig mer om dessa koncept i kommande lektioner.
+   ✅ Prova! Du kan skriva JavaScript direkt i din webbläsare. Öppna ett webbläsarfönster och navigera till Developer Tools. I konsolen hittar du en prompt; skriv `let myVariable = 123`, tryck på retur och skriv sedan `myVariable`. Vad händer? Obs, du kommer att lära dig mer om dessa koncept i efterföljande lektioner.
 
 ## Konstanter
 
-Deklaration och initiering av en konstant följer samma koncept som en variabel, med undantag för nyckelordet `const`. Konstanter deklareras vanligtvis med stora bokstäver.
+Deklaration och initiering av en konstant följer samma koncept som en variabel, med undantag för nyckelordet `const`. Konstanter deklareras vanligtvis med enbart versaler.
 
 ```javascript
 const MY_VARIABLE = 123;
@@ -86,7 +86,7 @@ const MY_VARIABLE = 123;
 Konstanter liknar variabler, med två undantag:
 
 - **Måste ha ett värde**. Konstanter måste initieras, annars uppstår ett fel när koden körs.
-- **Referensen kan inte ändras**. Referensen för en konstant kan inte ändras när den väl har initierats, annars uppstår ett fel när koden körs. Låt oss titta på två exempel:
+- **Referensen kan inte ändras**. Referensen för en konstant kan inte ändras efter initiering, annars uppstår ett fel när koden körs. Låt oss titta på två exempel:
    - **Enkelt värde**. Följande är INTE tillåtet:
    
       ```javascript
@@ -114,13 +114,13 @@ Konstanter liknar variabler, med två undantag:
 
 ## Datatyper
 
-Variabler kan lagra många olika typer av värden, som siffror och text. Dessa olika typer av värden kallas för **datatyper**. Datatyper är en viktig del av mjukvaruutveckling eftersom de hjälper utvecklare att fatta beslut om hur koden ska skrivas och hur mjukvaran ska köras. Dessutom har vissa datatyper unika egenskaper som hjälper till att omvandla eller extrahera ytterligare information från ett värde.
+Variabler kan lagra många olika typer av värden, som siffror och text. Dessa olika typer av värden kallas **datatyper**. Datatyper är en viktig del av mjukvaruutveckling eftersom de hjälper utvecklare att fatta beslut om hur koden ska skrivas och hur mjukvaran ska köras. Dessutom har vissa datatyper unika egenskaper som hjälper till att transformera eller extrahera ytterligare information från ett värde.
 
 ✅ Datatyper kallas också för JavaScript-dataprimitiver, eftersom de är de mest grundläggande datatyperna som tillhandahålls av språket. Det finns 7 primitiva datatyper: string, number, bigint, boolean, undefined, null och symbol. Ta en minut och visualisera vad var och en av dessa primitiva typer kan representera. Vad är en `zebra`? Hur är det med `0`? `true`?
 
-### Nummer
+### Siffror
 
-I föregående avsnitt var värdet av `myVariable` en nummerdatatyp.
+I föregående avsnitt var värdet av `myVariable` en datatyp för siffror.
 
 `let myVariable = 123;`
 
@@ -138,21 +138,21 @@ Det finns flera typer av operatorer att använda när man utför aritmetiska fun
 | `/`    | **Division**: Beräknar kvoten av två tal                                 | `1 / 2 //förväntat svar är 0.5`  |
 | `%`    | **Rest**: Beräknar resten från divisionen av två tal                     | `1 % 2 //förväntat svar är 1`    |
 
-✅ Prova! Testa en aritmetisk operation i din webbläsares konsol. Överraskar resultaten dig?
+✅ Prova! Testa en aritmetisk operation i din webbläsares konsol. Förvånar resultaten dig?
 
 ### Strängar
 
-Strängar är uppsättningar av tecken som finns mellan enkla eller dubbla citattecken.
+Strängar är uppsättningar av tecken som ligger mellan enkla eller dubbla citattecken.
 
-- `'Detta är en sträng'`
-- `"Detta är också en sträng"`
-- `let myString = 'Detta är ett strängvärde lagrat i en variabel';`
+- `'Det här är en sträng'`
+- `"Det här är också en sträng"`
+- `let myString = 'Det här är ett strängvärde lagrat i en variabel';`
 
 Kom ihåg att använda citattecken när du skriver en sträng, annars antar JavaScript att det är ett variabelnamn.
 
 ### Formatering av strängar
 
-Strängar är textuella och behöver ibland formateras.
+Strängar är textbaserade och behöver ibland formateras.
 
 För att **konkatenera** två eller fler strängar, eller slå ihop dem, använd operatorn `+`.
 
@@ -168,7 +168,7 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ✅ Varför är `1 + 1 = 2` i JavaScript, men `'1' + '1' = 11?` Fundera på det. Vad händer med `'1' + 1`?
 
-**Mallsträngar** är ett annat sätt att formatera strängar, men istället för citattecken används backtick. Allt som inte är vanlig text måste placeras inom platshållare `${ }`. Detta inkluderar alla variabler som kan vara strängar.
+**Mallsträngar** är ett annat sätt att formatera strängar, förutom citattecken används backtick. Allt som inte är vanlig text måste placeras inom platshållare `${ }`. Detta inkluderar alla variabler som kan vara strängar.
 
 ```javascript
 let myString1 = "Hello";
@@ -180,29 +180,29 @@ let myString2 = "World";
 
 Du kan uppnå dina formateringsmål med båda metoderna, men mallsträngar respekterar alla mellanslag och radbrytningar.
 
-✅ När skulle du använda en mallsträng istället för en vanlig sträng?
+✅ När skulle du använda en mallsträng jämfört med en vanlig sträng?
 
 ### Booleans
 
-Booleans kan bara ha två värden: `true` eller `false`. Booleans kan hjälpa till att fatta beslut om vilka kodrader som ska köras när vissa villkor är uppfyllda. I många fall hjälper [operatorer](../../../../2-js-basics/1-data-types) till att sätta värdet på en Boolean, och du kommer ofta att märka och skriva variabler som initieras eller vars värden uppdateras med en operator.
+Booleans kan bara ha två värden: `true` eller `false`. Booleans kan hjälpa till att fatta beslut om vilka rader av kod som ska köras när vissa villkor är uppfyllda. I många fall hjälper [operatorer](../../../../2-js-basics/1-data-types) till med att sätta värdet på en Boolean, och du kommer ofta att märka och skriva variabler som initieras eller vars värden uppdateras med en operator.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ En variabel kan betraktas som 'truthy' om den utvärderas till en boolean `true`. Intressant nog är [alla värden truthy om de inte definieras som falsy](https://developer.mozilla.org/docs/Glossary/Truthy) i JavaScript.
+✅ En variabel kan anses vara 'truthy' om den utvärderas till en boolean `true`. Intressant nog är [alla värden truthy om de inte definieras som falsy](https://developer.mozilla.org/docs/Glossary/Truthy) i JavaScript.
 
 ---
 
 ## 🚀 Utmaning
 
-JavaScript är känt för sina överraskande sätt att hantera datatyper ibland. Gör lite research om dessa 'gotchas'. Till exempel: skiftlägeskänslighet kan ställa till det! Testa detta i din konsol: `let age = 1; let Age = 2; age == Age` (resulterar i `false` -- varför?). Vilka andra gotchas kan du hitta?
+JavaScript är känt för sina överraskande sätt att hantera datatyper ibland. Gör lite research om dessa 'gotchas'. Till exempel: skiftlägeskänslighet kan ställa till det! Testa detta i din konsol: `let age = 1; let Age = 2; age == Age` (ger `false` -- varför?). Vilka andra gotchas kan du hitta?
 
 ## Quiz efter föreläsning
-[Quiz efter föreläsning](https://ff-quizzes.netlify.app/web/quiz/8)
+[Quiz efter föreläsning](https://ff-quizzes.netlify.app)
 
 ## Granskning & Självstudier
 
-Ta en titt på [denna lista med JavaScript-övningar](https://css-tricks.com/snippets/javascript/) och prova en. Vad lärde du dig?
+Ta en titt på [den här listan med JavaScript-övningar](https://css-tricks.com/snippets/javascript/) och prova en. Vad lärde du dig?
 
 ## Uppgift
 
@@ -211,4 +211,4 @@ Ta en titt på [denna lista med JavaScript-övningar](https://css-tricks.com/sni
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiska översättningar kan innehålla fel eller inexaktheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

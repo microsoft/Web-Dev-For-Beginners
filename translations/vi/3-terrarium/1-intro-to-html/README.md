@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46a0639e719b9cf1dfd062aa24cad639",
-  "translation_date": "2025-08-27T22:56:14+00:00",
+  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
+  "translation_date": "2025-08-29T08:57:06+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "vi"
 }
@@ -47,9 +47,9 @@ Sử dụng các lệnh này trên git bash:
 
 ## DocType và thẻ html
 
-Dòng đầu tiên của một tệp HTML là doctype của nó. Điều này có thể hơi bất ngờ khi bạn cần phải có dòng này ở đầu tệp, nhưng nó cho các trình duyệt cũ biết rằng trình duyệt cần hiển thị trang theo chế độ tiêu chuẩn, tuân theo đặc tả HTML hiện tại.
+Dòng đầu tiên của một tệp HTML là doctype của nó. Điều này hơi bất ngờ khi bạn cần có dòng này ở đầu tệp, nhưng nó cho các trình duyệt cũ biết rằng trình duyệt cần hiển thị trang theo chế độ tiêu chuẩn, tuân theo đặc tả HTML hiện tại.
 
-> Mẹo: trong VS Code, bạn có thể di chuột qua một thẻ và nhận thông tin về cách sử dụng của nó từ các hướng dẫn tham khảo MDN.
+> Mẹo: trong VS Code, bạn có thể di chuột qua một thẻ và nhận thông tin về cách sử dụng nó từ các hướng dẫn tham khảo của MDN.
 
 Dòng thứ hai nên là thẻ mở `<html>`, ngay sau đó là thẻ đóng `</html>`. Các thẻ này là các phần tử gốc của giao diện của bạn.
 
@@ -62,7 +62,7 @@ Thêm các dòng này ở đầu tệp `index.html` của bạn:
 <html></html>
 ```
 
-✅ Có một số chế độ khác nhau có thể được xác định bằng cách đặt DocType với một chuỗi truy vấn: [Quirks Mode và Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Các chế độ này từng hỗ trợ các trình duyệt rất cũ mà hiện nay không thường được sử dụng (Netscape Navigator 4 và Internet Explorer 5). Bạn có thể sử dụng khai báo doctype tiêu chuẩn.
+✅ Có một vài chế độ khác nhau có thể được xác định bằng cách thiết lập DocType với một chuỗi truy vấn: [Quirks Mode và Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Các chế độ này từng hỗ trợ các trình duyệt rất cũ mà hiện nay không thường được sử dụng (Netscape Navigator 4 và Internet Explorer 5). Bạn có thể sử dụng khai báo doctype tiêu chuẩn.
 
 ---
 
@@ -74,7 +74,7 @@ Khu vực 'head' của tài liệu HTML bao gồm thông tin quan trọng về t
 -   metadata của trang bao gồm:
     -   'character set', cho biết mã hóa ký tự nào được sử dụng trong trang
     -   thông tin trình duyệt, bao gồm `x-ua-compatible` chỉ ra rằng trình duyệt IE=edge được hỗ trợ
-    -   thông tin về cách viewport nên hoạt động khi nó được tải. Đặt viewport có tỷ lệ ban đầu là 1 kiểm soát mức độ zoom khi trang được tải lần đầu.
+    -   thông tin về cách viewport nên hoạt động khi nó được tải. Thiết lập viewport có scale ban đầu là 1 kiểm soát mức độ zoom khi trang được tải lần đầu.
 
 ### Nhiệm vụ
 
@@ -89,11 +89,11 @@ Thêm một khối 'head' vào tài liệu của bạn giữa thẻ mở và th�
 </head>
 ```
 
-✅ Điều gì sẽ xảy ra nếu bạn đặt thẻ meta viewport như thế này: `<meta name="viewport" content="width=600">`? Đọc thêm về [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
+✅ Điều gì sẽ xảy ra nếu bạn thiết lập thẻ meta viewport như thế này: `<meta name="viewport" content="width=600">`? Đọc thêm về [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ---
 
-## 'body' của tài liệu
+## `body` của tài liệu
 
 ### Thẻ HTML
 
@@ -189,7 +189,7 @@ Mỗi hình ảnh có văn bản thay thế sẽ xuất hiện ngay cả khi b�
 
 ## Đánh dấu ngữ nghĩa
 
-Nói chung, việc sử dụng 'ngữ nghĩa' có ý nghĩa khi viết HTML là điều được ưu tiên. Điều đó có nghĩa là bạn sử dụng các thẻ HTML để đại diện cho loại dữ liệu hoặc tương tác mà chúng được thiết kế cho. Ví dụ, văn bản tiêu đề chính trên một trang nên sử dụng thẻ `<h1>`.
+Nói chung, việc sử dụng 'ngữ nghĩa' có ý nghĩa khi viết HTML là điều được ưu tiên. Điều đó có nghĩa là gì? Nó có nghĩa là bạn sử dụng các thẻ HTML để đại diện cho loại dữ liệu hoặc tương tác mà chúng được thiết kế cho. Ví dụ, văn bản tiêu đề chính trên một trang nên sử dụng thẻ `<h1>`.
 
 Thêm dòng sau ngay bên dưới thẻ mở `<body>` của bạn:
 
@@ -197,9 +197,9 @@ Thêm dòng sau ngay bên dưới thẻ mở `<body>` của bạn:
 <h1>My Terrarium</h1>
 ```
 
-Sử dụng đánh dấu ngữ nghĩa như việc có các tiêu đề là `<h1>` và danh sách không được sắp xếp được hiển thị dưới dạng `<ul>` giúp trình đọc màn hình điều hướng qua một trang. Nói chung, các nút nên được viết dưới dạng `<button>` và danh sách nên là `<li>`. Mặc dù _có thể_ sử dụng các phần tử `<span>` được định kiểu đặc biệt với các trình xử lý click để giả lập nút, nhưng tốt hơn cho người dùng khuyết tật là sử dụng công nghệ để xác định vị trí của một nút trên trang và tương tác với nó, nếu phần tử xuất hiện dưới dạng nút. Vì lý do này, hãy cố gắng sử dụng đánh dấu ngữ nghĩa càng nhiều càng tốt.
+Sử dụng đánh dấu ngữ nghĩa như việc có tiêu đề là `<h1>` và danh sách không được sắp xếp được hiển thị dưới dạng `<ul>` giúp trình đọc màn hình điều hướng qua một trang. Nói chung, các nút nên được viết dưới dạng `<button>` và danh sách nên là `<li>`. Mặc dù _có thể_ sử dụng các phần tử `<span>` được định kiểu đặc biệt với các trình xử lý click để giả lập nút, nhưng tốt hơn cho người dùng khuyết tật là sử dụng công nghệ để xác định vị trí của một nút trên trang và tương tác với nó, nếu phần tử xuất hiện dưới dạng nút. Vì lý do này, hãy cố gắng sử dụng đánh dấu ngữ nghĩa càng nhiều càng tốt.
 
-✅ Xem trình đọc màn hình và [cách nó tương tác với một trang web](https://www.youtube.com/watch?v=OUDV1gqs9GA). Bạn có thấy tại sao việc sử dụng đánh dấu không ngữ nghĩa có thể làm người dùng khó chịu không?
+✅ Xem trình đọc màn hình và [cách nó tương tác với một trang web](https://www.youtube.com/watch?v=OUDV1gqs9GA). Bạn có thấy tại sao việc không sử dụng đánh dấu ngữ nghĩa có thể làm người dùng khó chịu không?
 
 ## Terrarium
 
@@ -235,13 +235,13 @@ Có một số thẻ 'cũ' trong HTML vẫn thú vị để thử nghiệm, mặ
 
 ## Ôn tập & Tự học
 
-HTML là hệ thống xây dựng 'đã được kiểm chứng' giúp xây dựng web thành những gì nó có ngày nay. Tìm hiểu một chút về lịch sử của nó bằng cách nghiên cứu một số thẻ cũ và mới. Bạn có thể tìm ra lý do tại sao một số thẻ bị loại bỏ và một số được thêm vào không? Những thẻ nào có thể được giới thiệu trong tương lai?
+HTML là hệ thống xây dựng 'đã được thử nghiệm và chứng minh' giúp xây dựng web thành những gì nó là ngày nay. Tìm hiểu một chút về lịch sử của nó bằng cách nghiên cứu một số thẻ cũ và mới. Bạn có thể tìm ra lý do tại sao một số thẻ bị loại bỏ và một số được thêm vào không? Những thẻ nào có thể được giới thiệu trong tương lai?
 
 Tìm hiểu thêm về việc xây dựng các trang web cho web và thiết bị di động tại [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
 
 ## Bài tập
 
-[Luyện tập HTML của bạn: Xây dựng một mô hình blog](assignment.md)
+[Luyện tập HTML của bạn: Tạo một mô hình blog](assignment.md)
 
 ---
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-26T23:01:35+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-29T08:06:10+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "da"
 }
@@ -15,13 +15,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introduktion
 
-Kernen i enhver webapplikation er *data*. Data kan have mange former, men dens hovedformål er altid at vise information til brugeren. Med webapps, der bliver stadig mere interaktive og komplekse, er måden, brugeren tilgår og interagerer med information på, nu en vigtig del af webudvikling.
+Kernen i enhver webapplikation er *data*. Data kan tage mange former, men dens hovedformål er altid at vise information til brugeren. Med webapps, der bliver stadig mere interaktive og komplekse, er måden, hvorpå brugeren tilgår og interagerer med information, nu en nøglekomponent i webudvikling.
 
 I denne lektion vil vi se, hvordan man henter data fra en server asynkront og bruger disse data til at vise information på en webside uden at genindlæse HTML'en.
 
 ### Forudsætninger
 
-Du skal have bygget [Login- og Registreringsformularen](../2-forms/README.md) som en del af webappen for denne lektion. Du skal også installere [Node.js](https://nodejs.org) og [køre server-API'et](../api/README.md) lokalt, så du kan få kontodata.
+Du skal have bygget [Login- og Registreringsformularen](../2-forms/README.md) som en del af webappen for denne lektion. Du skal også installere [Node.js](https://nodejs.org) og [køre server-API'et](../api/README.md) lokalt, så du får kontodata.
 
 Du kan teste, om serveren kører korrekt, ved at udføre denne kommando i en terminal:
 
@@ -36,11 +36,11 @@ curl http://localhost:5000/api
 
 Traditionelle websites opdaterer det viste indhold, når brugeren vælger et link eller sender data via en formular, ved at genindlæse hele HTML-siden. Hver gang nye data skal indlæses, returnerer webserveren en helt ny HTML-side, som skal behandles af browseren, hvilket afbryder den aktuelle brugerhandling og begrænser interaktioner under genindlæsningen. Denne arbejdsgang kaldes også en *Multi-Page Application* eller *MPA*.
 
-![Opdateringsarbejdsgang i en multi-page applikation](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.da.png)
+![Opdateringsarbejdsgang i en multi-side applikation](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.da.png)
 
 Da webapplikationer begyndte at blive mere komplekse og interaktive, opstod en ny teknik kaldet [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Denne teknik gør det muligt for webapps at sende og hente data fra en server asynkront ved hjælp af JavaScript, uden at skulle genindlæse HTML-siden, hvilket resulterer i hurtigere opdateringer og mere glidende brugerinteraktioner. Når nye data modtages fra serveren, kan den aktuelle HTML-side også opdateres med JavaScript ved hjælp af [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)-API'en. Over tid har denne tilgang udviklet sig til det, der nu kaldes en [*Single-Page Application* eller *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
 
-![Opdateringsarbejdsgang i en single-page applikation](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.da.png)
+![Opdateringsarbejdsgang i en single-side applikation](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.da.png)
 
 Da AJAX først blev introduceret, var den eneste API tilgængelig for asynkron datahentning [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Men moderne browsere implementerer nu også den mere praktiske og kraftfulde [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), som bruger promises og er bedre egnet til at manipulere JSON-data.
 
@@ -72,9 +72,9 @@ async function getAccount(user) {
 }
 ```
 
-Vi bruger `fetch`-API'et til at anmode om data asynkront fra serveren, men denne gang behøver vi ikke andre parametre end URL'en, da vi kun forespørger data. Som standard opretter `fetch` en [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP-forespørgsel, hvilket er det, vi søger her.
+Vi bruger `fetch`-API'et til at anmode om data asynkront fra serveren, men denne gang behøver vi ikke andre parametre end URL'en, da vi kun forespørger data. Som standard opretter `fetch` en [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET)-HTTP-forespørgsel, hvilket er præcis, hvad vi har brug for her.
 
-✅ `encodeURIComponent()` er en funktion, der undgår specialtegn i en URL. Hvilke problemer kunne vi muligvis få, hvis vi ikke kalder denne funktion og bruger `user`-værdien direkte i URL'en?
+✅ `encodeURIComponent()` er en funktion, der undgår specialtegn i en URL. Hvilke problemer kunne vi muligvis have, hvis vi ikke kalder denne funktion og bruger `user`-værdien direkte i URL'en?
 
 Lad os nu opdatere vores `login`-funktion til at bruge `getAccount`:
 
@@ -95,7 +95,7 @@ async function login() {
 
 Først, da `getAccount` er en asynkron funktion, skal vi matche den med nøgleordet `await` for at vente på serverresultatet. Som med enhver serverforespørgsel skal vi også håndtere fejltilfælde. For nu vil vi kun tilføje en logbesked for at vise fejlen og vende tilbage til det senere.
 
-Derefter skal vi gemme dataene et sted, så vi senere kan bruge dem til at vise dashboard-information. Da variablen `account` endnu ikke eksisterer, opretter vi en global variabel til den øverst i vores fil:
+Derefter skal vi gemme dataene et sted, så vi senere kan bruge dem til at vise dashboard-informationen. Da variablen `account` endnu ikke eksisterer, opretter vi en global variabel til den øverst i vores fil:
 
 ```js
 let account = null;
@@ -118,7 +118,7 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ Vidste du, at du som standard kun kan kalde server-API'er fra *samme domæne og port* som den webside, du ser? Dette er en sikkerhedsmekanisme, der håndhæves af browsere. Men vent, vores webapp kører på `localhost:3000`, mens server-API'et kører på `localhost:5000`. Hvorfor virker det? Ved at bruge en teknik kaldet [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) er det muligt at udføre cross-origin HTTP-forespørgsler, hvis serveren tilføjer specielle headers til svaret, der tillader undtagelser for specifikke domæner.
+✅ Vidste du, at du som standard kun kan kalde server-API'er fra *samme domæne og port* som den webside, du ser? Dette er en sikkerhedsmekanisme, der håndhæves af browsere. Men vent, vores webapp kører på `localhost:3000`, mens server-API'et kører på `localhost:5000`. Hvorfor virker det? Ved at bruge en teknik kaldet [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) er det muligt at udføre cross-origin HTTP-forespørgsler, hvis serveren tilføjer særlige headers til svaret, der tillader undtagelser for specifikke domæner.
 
 > Lær mere om API'er ved at tage denne [lektion](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
 
@@ -126,11 +126,11 @@ navigate('/dashboard');
 
 Nu hvor vi har brugerdataene, skal vi opdatere den eksisterende HTML for at vise dem. Vi ved allerede, hvordan man henter et element fra DOM'en, for eksempel ved hjælp af `document.getElementById()`. Når du har et baseelement, er her nogle API'er, du kan bruge til at ændre det eller tilføje underordnede elementer til det:
 
-- Ved hjælp af egenskaben [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) kan du ændre teksten i et element. Bemærk, at ændring af denne værdi fjerner alle elementets underordnede (hvis der er nogen) og erstatter det med den angivne tekst. Som sådan er det også en effektiv metode til at fjerne alle underordnede elementer af et givet element ved at tildele en tom streng `''` til det.
+- Ved at bruge egenskaben [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) kan du ændre teksten i et element. Bemærk, at ændring af denne værdi fjerner alle elementets underordnede (hvis der er nogen) og erstatter det med den angivne tekst. Som sådan er det også en effektiv metode til at fjerne alle underordnede af et givet element ved at tildele en tom streng `''` til det.
 
-- Ved hjælp af [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) sammen med metoden [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) kan du oprette og vedhæfte et eller flere nye underordnede elementer.
+- Ved at bruge [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) sammen med metoden [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) kan du oprette og vedhæfte et eller flere nye underordnede elementer.
 
-✅ Ved hjælp af egenskaben [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) for et element er det også muligt at ændre dets HTML-indhold, men denne bør undgås, da den er sårbar over for [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting)-angreb.
+✅ Ved at bruge egenskaben [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) for et element er det også muligt at ændre dets HTML-indhold, men denne metode bør undgås, da den er sårbar over for [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting)-angreb.
 
 ### Opgave
 
@@ -156,7 +156,7 @@ function updateElement(id, text) {
 }
 ```
 
-Denne er ret ligetil: givet et element-*id* og *tekst*, vil den opdatere tekstindholdet i DOM-elementet med det matchende `id`. Lad os bruge denne metode i stedet for den tidligere fejlmeddelelse i `login`-funktionen:
+Denne funktion er ret ligetil: givet et element-*id* og *tekst* vil den opdatere tekstindholdet i DOM-elementet med det matchende `id`. Lad os bruge denne metode i stedet for den tidligere fejlmeddelelse i `login`-funktionen:
 
 ```js
 if (data.error) {
@@ -200,7 +200,7 @@ Sådan ser et kontoobjekt modtaget fra serveren ud:
 
 ### Opgave
 
-Lad os starte med at erstatte sektionen "Balance" i HTML for at tilføje pladsholderelementer:
+Lad os starte med at erstatte sektionen "Balance" i HTML'en for at tilføje pladsholderelementer:
 
 ```html
 <section>
@@ -230,9 +230,9 @@ function updateDashboard() {
 }
 ```
 
-Først tjekker vi, at vi har de kontodata, vi har brug for, før vi går videre. Derefter bruger vi funktionen `updateElement()`, som vi oprettede tidligere, til at opdatere HTML'en.
+Først tjekker vi, at vi har de nødvendige kontodata, før vi går videre. Derefter bruger vi funktionen `updateElement()`, som vi oprettede tidligere, til at opdatere HTML'en.
 
-> For at gøre balancevisningen pænere bruger vi metoden [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) for at sikre, at værdien vises med 2 decimaler.
+> For at gøre balancevisningen pænere bruger vi metoden [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) til at tvinge visning af værdien med 2 decimaler.
 
 Nu skal vi kalde vores `updateDashboard()`-funktion hver gang dashboardet indlæses. Hvis du allerede har afsluttet [lektion 1-opgaven](../1-template-route/assignment.md), bør dette være ligetil, ellers kan du bruge følgende implementering.
 
@@ -297,7 +297,7 @@ function createTransactionRow(transaction) {
 }
 ```
 
-Denne funktion gør præcis, hvad dens navn antyder: ved hjælp af skabelonen, vi oprettede tidligere, opretter den en ny tabelrække og udfylder dens indhold med transaktionsdata. Vi vil bruge denne i vores `updateDashboard()`-funktion til at udfylde tabellen:
+Denne funktion gør præcis, hvad dens navn antyder: ved hjælp af den skabelon, vi oprettede tidligere, opretter den en ny tabelrække og udfylder dens indhold med transaktionsdata. Vi vil bruge denne i vores `updateDashboard()`-funktion til at udfylde tabellen:
 
 ```js
 const transactionsRows = document.createDocumentFragment();
@@ -308,9 +308,9 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-Her bruger vi metoden [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment), der opretter et nyt DOM-fragment, som vi kan arbejde på, før vi endelig vedhæfter det til vores HTML-tabel.
+Her bruger vi metoden [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment), der opretter et nyt DOM-fragment, som vi kan arbejde på, før det endelig vedhæftes til vores HTML-tabel.
 
-Der er stadig én ting, vi skal gøre, før denne kode kan fungere, da vores `updateElement()`-funktion i øjeblikket kun understøtter tekstindhold. Lad os ændre dens kode en smule:
+Der er stadig én ting, vi skal gøre, før denne kode kan fungere, da vores `updateElement()`-funktion i øjeblikket kun understøtter tekstindhold. Lad os ændre dens kode lidt:
 
 ```js
 function updateElement(id, textOrNode) {
@@ -321,7 +321,7 @@ function updateElement(id, textOrNode) {
 ```
 
 Vi bruger metoden [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append), da den gør det muligt at vedhæfte enten tekst eller [DOM Nodes](https://developer.mozilla.org/docs/Web/API/Node) til et overordnet element, hvilket er perfekt til alle vores anvendelser.
-Hvis du prøver at bruge `test`-kontoen til at logge ind, bør du nu se en transaktionsliste på dashboardet 🎉.
+Hvis du prøver at logge ind med `test`-kontoen, bør du nu se en transaktionsliste på dashboardet 🎉.
 
 ---
 
@@ -331,7 +331,7 @@ Arbejd sammen om at få dashboard-siden til at ligne en rigtig bankapp. Hvis du 
 
 Her er et eksempel på en stylet dashboard-side:
 
-![Skærmbillede af et eksempelresultat af dashboardet efter styling](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.da.png)
+![Skærmbillede af et eksempel på dashboardet efter styling](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.da.png)
 
 ## Quiz efter forelæsning
 
@@ -344,4 +344,4 @@ Her er et eksempel på en stylet dashboard-side:
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

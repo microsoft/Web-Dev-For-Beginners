@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-26T22:03:34+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T08:34:47+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "no"
 }
@@ -15,16 +15,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 I denne leksjonen skal du lære hvordan du skyter lasere med JavaScript! Vi skal legge til to ting i spillet vårt:
 
-- **En laser**: denne laseren skytes fra helteskipet ditt og beveger seg vertikalt oppover.
-- **Kollisjonsdeteksjon**, som en del av implementeringen av skytefunksjonen vil vi også legge til noen fine spillregler:
+- **En laser**: denne laseren skytes fra helten din sitt skip og beveger seg vertikalt oppover.
+- **Kollisjonsdeteksjon**, som en del av implementeringen av skytefunksjonen skal vi også legge til noen fine spillregler:
    - **Laser treffer fiende**: Fienden dør hvis den blir truffet av en laser.
    - **Laser treffer toppen av skjermen**: En laser blir ødelagt hvis den treffer den øverste delen av skjermen.
-   - **Fiende og helt kolliderer**: En fiende og helten blir ødelagt hvis de treffer hverandre.
+   - **Fiende og helt kolliderer**: En fiende og helten blir ødelagt hvis de kolliderer med hverandre.
    - **Fiende treffer bunnen av skjermen**: En fiende og helten blir ødelagt hvis fienden treffer bunnen av skjermen.
 
 Kort sagt, du -- *helten* -- må treffe alle fiendene med en laser før de klarer å bevege seg til bunnen av skjermen.
 
-✅ Gjør litt research på det aller første dataspillet som noen gang ble laget. Hva var funksjonaliteten?
+✅ Gjør litt research om det aller første dataspillet som ble laget. Hva var funksjonaliteten?
 
 La oss være heroiske sammen!
 
@@ -32,9 +32,9 @@ La oss være heroiske sammen!
 
 Hvordan oppdager vi kollisjoner? Vi må tenke på spillobjektene våre som rektangler som beveger seg rundt. Hvorfor det, spør du kanskje? Vel, bildet som brukes til å tegne et spillobjekt er et rektangel: det har en `x`, `y`, `bredde` og `høyde`.
 
-Hvis to rektangler, for eksempel en helt og en fiende, *overlapper*, har du en kollisjon. Hva som skal skje da, avhenger av spillreglene. For å implementere kollisjonsdeteksjon trenger du derfor følgende:
+Hvis to rektangler, altså en helt og en fiende, *krysser hverandre*, har du en kollisjon. Hva som skal skje da, avhenger av spillreglene. For å implementere kollisjonsdeteksjon trenger du derfor følgende:
 
-1. En måte å få en rektangulær representasjon av et spillobjekt, noe som dette:
+1. En måte å få en rektangelrepresentasjon av et spillobjekt, noe som dette:
 
    ```javascript
    rectFromGameObject() {
@@ -60,7 +60,7 @@ Hvis to rektangler, for eksempel en helt og en fiende, *overlapper*, har du en k
 
 ## Hvordan ødelegger vi ting
 
-For å ødelegge ting i et spill må du la spillet vite at det ikke lenger skal tegne dette elementet i spill-loopen som trigges med jevne mellomrom. En måte å gjøre dette på er å markere et spillobjekt som *dødt* når noe skjer, slik som dette:
+For å ødelegge ting i et spill må du informere spillet om at det ikke lenger skal tegne dette objektet i spill-loopen som utløses med jevne mellomrom. En måte å gjøre dette på er å markere et spillobjekt som *dødt* når noe skjer, slik som dette:
 
 ```javascript
 // collision happened
@@ -75,10 +75,10 @@ gameObjects = gameObject.filter(go => !go.dead);
 
 ## Hvordan skyter vi en laser
 
-Å skyte en laser betyr å reagere på en tastetrykk-hendelse og opprette et objekt som beveger seg i en bestemt retning. Vi må derfor utføre følgende trinn:
+Å skyte en laser innebærer å reagere på en tastetrykk-hendelse og opprette et objekt som beveger seg i en bestemt retning. Vi må derfor utføre følgende trinn:
 
-1. **Opprett et laserobjekt**: fra toppen av helteskipet ditt, som ved opprettelse begynner å bevege seg oppover mot toppen av skjermen.
-2. **Koble kode til en tastetrykk-hendelse**: vi må velge en tast på tastaturet som representerer at spilleren skyter laseren.
+1. **Opprett et laserobjekt**: fra toppen av helten sitt skip, som ved opprettelse begynner å bevege seg oppover mot toppen av skjermen.
+2. **Knytt kode til en tastetrykk-hendelse**: vi må velge en tast på tastaturet som representerer spilleren som skyter laseren.
 3. **Opprett et spillobjekt som ser ut som en laser** når tasten trykkes.
 
 ## Cooldown på laseren
@@ -109,23 +109,23 @@ class Weapon {
 }
 ```
 
-✅ Se tilbake på leksjon 1 i romspillsserien for å minne deg selv på *cooldowns*.
+✅ Se tilbake på leksjon 1 i romspillsserien for å minne deg selv om *cooldowns*.
 
 ## Hva skal bygges
 
-Du skal ta den eksisterende koden (som du burde ha ryddet opp i og refaktorert) fra forrige leksjon, og utvide den. Enten start med koden fra del II eller bruk koden fra [Del III - startkode](../../../../../../../../../your-work).
+Du skal ta den eksisterende koden (som du burde ha ryddet opp i og refaktorert) fra forrige leksjon og utvide den. Enten start med koden fra del II eller bruk koden fra [Del III - startkode](../../../../../../../../../your-work).
 
-> tips: laseren du skal jobbe med er allerede i assets-mappen din og referert i koden din.
+> tips: laseren du skal jobbe med er allerede i ressursmappen din og referert i koden din.
 
 - **Legg til kollisjonsdeteksjon**, når en laser kolliderer med noe skal følgende regler gjelde:
    1. **Laser treffer fiende**: fienden dør hvis den blir truffet av en laser.
    2. **Laser treffer toppen av skjermen**: En laser blir ødelagt hvis den treffer den øverste delen av skjermen.
-   3. **Fiende og helt kolliderer**: en fiende og helten blir ødelagt hvis de treffer hverandre.
+   3. **Fiende og helt kolliderer**: en fiende og helten blir ødelagt hvis de kolliderer med hverandre.
    4. **Fiende treffer bunnen av skjermen**: En fiende og helten blir ødelagt hvis fienden treffer bunnen av skjermen.
 
 ## Anbefalte trinn
 
-Finn filene som er opprettet for deg i `your-work`-undermappen. Den skal inneholde følgende:
+Finn filene som er opprettet for deg i undermappen `your-work`. Den skal inneholde følgende:
 
 ```bash
 -| assets
@@ -137,18 +137,18 @@ Finn filene som er opprettet for deg i `your-work`-undermappen. Den skal innehol
 -| package.json
 ```
 
-Start prosjektet ditt i `your_work`-mappen ved å skrive:
+Du starter prosjektet ditt i `your_work`-mappen ved å skrive:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en nettleser og skriv inn den adressen, akkurat nå skal den vise helten og alle fiendene, men ingenting beveger seg - ennå :).
+Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en nettleser og skriv inn den adressen, akkurat nå skal den vise helten og alle fiendene, ingenting beveger seg - enda :).
 
 ### Legg til kode
 
-1. **Sett opp en rektangulær representasjon av spillobjektene dine for å håndtere kollisjoner** Koden nedenfor lar deg få en rektangulær representasjon av et `GameObject`. Rediger GameObject-klassen din for å utvide den:
+1. **Sett opp en rektangelrepresentasjon av spillobjektet ditt for å håndtere kollisjoner** Koden nedenfor lar deg få en rektangelrepresentasjon av et `GameObject`. Rediger GameObject-klassen din for å utvide den:
 
     ```javascript
     rectFromGameObject() {
@@ -161,7 +161,7 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
       }
     ```
 
-2. **Legg til kode som sjekker kollisjoner** Dette vil være en ny funksjon som tester om to rektangler overlapper:
+2. **Legg til kode som sjekker kollisjoner** Dette vil være en ny funksjon som tester om to rektangler krysser hverandre:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -174,8 +174,8 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
     }
     ```
 
-3. **Legg til muligheten til å skyte laser**
-   1. **Legg til tastetrykk-melding**. *Mellomrom*-tasten skal opprette en laser rett over helteskipet. Legg til tre konstanter i Messages-objektet:
+3. **Legg til laser-skytefunksjonalitet**
+   1. **Legg til tastetrykk-melding**. *Mellomrom*-tasten skal opprette en laser rett over helten sitt skip. Legg til tre konstanter i Messages-objektet:
 
        ```javascript
         KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
@@ -183,7 +183,7 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
         COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
        ```
 
-   1. **Håndter mellomromstasten**. Rediger `window.addEventListener` keyup-funksjonen for å håndtere mellomrom:
+   1. **Håndter mellomrom-tasten**. Rediger `window.addEventListener`-keyup-funksjonen for å håndtere mellomrom:
 
       ```javascript
         } else if(evt.keyCode === 32) {
@@ -209,7 +209,7 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
           })
           ```
 
-   1. **Beveg objekt**, Sørg for at laseren beveger seg gradvis til toppen av skjermen. Du vil opprette en ny Laser-klasse som utvider `GameObject`, som du har gjort før: 
+   1. **Beveg objekt**, Sørg for at laseren beveger seg gradvis mot toppen av skjermen. Du skal opprette en ny Laser-klasse som utvider `GameObject`, som du har gjort før: 
    
       ```javascript
         class Laser extends GameObject {
@@ -285,7 +285,7 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
       }
       ```
 
-På dette tidspunktet har spillet ditt fått litt funksjonalitet! Du kan navigere med piltastene, skyte en laser med mellomromstasten, og fiender forsvinner når du treffer dem. Bra jobbet!
+På dette punktet har spillet ditt fått litt funksjonalitet! Du kan navigere med piltastene, skyte en laser med mellomromstasten, og fiender forsvinner når du treffer dem. Bra jobbet!
 
 ---
 
@@ -297,7 +297,7 @@ Legg til en eksplosjon! Ta en titt på spillressursene i [Space Art-repoet](../.
 
 [Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/36)
 
-## Gjennomgang og selvstudium
+## Gjennomgang og selvstudie
 
 Eksperimenter med intervallene i spillet ditt så langt. Hva skjer når du endrer dem? Les mer om [JavaScript timing events](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
@@ -308,4 +308,4 @@ Eksperimenter med intervallene i spillet ditt så langt. Hva skjer når du endre
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

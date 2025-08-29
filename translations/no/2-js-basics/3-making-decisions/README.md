@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-26T21:41:32+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T08:36:51+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "no"
 }
@@ -38,18 +38,18 @@ Sett din boolean til å være true eller false slik:
 
 ## Sammenligningsoperatorer og Booleans
 
-Operatorer brukes til å evaluere betingelser ved å gjøre sammenligninger som vil skape en boolsk verdi. Følgende er en liste over operatorer som ofte brukes.
+Operatorer brukes til å evaluere betingelser ved å gjøre sammenligninger som vil skape en boolsk verdi. Følgende er en liste over ofte brukte operatorer.
 
 | Symbol | Beskrivelse                                                                                                                                                   | Eksempel           |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`    | **Mindre enn**: Sammenligner to verdier og returnerer den boolske verdien `true` hvis verdien på venstre side er mindre enn høyre                              | `5 < 6 // true`    |
-| `<=`   | **Mindre enn eller lik**: Sammenligner to verdier og returnerer den boolske verdien `true` hvis verdien på venstre side er mindre enn eller lik høyre          | `5 <= 6 // true`   |
-| `>`    | **Større enn**: Sammenligner to verdier og returnerer den boolske verdien `true` hvis verdien på venstre side er større enn høyre                             | `5 > 6 // false`   |
-| `>=`   | **Større enn eller lik**: Sammenligner to verdier og returnerer den boolske verdien `true` hvis verdien på venstre side er større enn eller lik høyre          | `5 >= 6 // false`  |
-| `===`  | **Strict likhet**: Sammenligner to verdier og returnerer den boolske verdien `true` hvis verdiene på høyre og venstre er like OG har samme datatype            | `5 === 6 // false` |
-| `!==`  | **Ulikhet**: Sammenligner to verdier og returnerer den motsatte boolske verdien av hva en strict likhetsoperator ville returnere                              | `5 !== 6 // true`  |
+| `<`    | **Mindre enn**: Sammenligner to verdier og returnerer `true` hvis verdien på venstre side er mindre enn høyre                                                 | `5 < 6 // true`    |
+| `<=`   | **Mindre enn eller lik**: Sammenligner to verdier og returnerer `true` hvis verdien på venstre side er mindre enn eller lik høyre                             | `5 <= 6 // true`   |
+| `>`    | **Større enn**: Sammenligner to verdier og returnerer `true` hvis verdien på venstre side er større enn høyre                                                 | `5 > 6 // false`   |
+| `>=`   | **Større enn eller lik**: Sammenligner to verdier og returnerer `true` hvis verdien på venstre side er større enn eller lik høyre                             | `5 >= 6 // false`  |
+| `===`  | **Strict likhet**: Sammenligner to verdier og returnerer `true` hvis verdiene på høyre og venstre er like OG har samme datatype                               | `5 === 6 // false` |
+| `!==`  | **Ulikhet**: Sammenligner to verdier og returnerer det motsatte boolske verdien av hva en strict likhetsoperator ville returnere                              | `5 !== 6 // true`  |
 
-✅ Test kunnskapen din ved å skrive noen sammenligninger i nettleserens konsoll. Overrasker noen av de returnerte dataene deg?
+✅ Test kunnskapen din ved å skrive noen sammenligninger i nettleserens konsoll. Overrasker noen av de returnerte verdiene deg?
 
 ## If-Setning
 
@@ -90,7 +90,7 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-✅ Test forståelsen din av denne koden og den følgende koden ved å kjøre den i en nettleserkonsoll. Endre verdiene til variablene currentMoney og laptopPrice for å endre den returnerte `console.log()`.
+✅ Test forståelsen din av denne koden og den følgende koden ved å kjøre den i nettleserens konsoll. Endre verdiene til variablene currentMoney og laptopPrice for å endre den returnerte `console.log()`.
 
 ## Switch-Setning
 
@@ -127,7 +127,7 @@ switch (a) {
 console.log(`The value is ${a}`);
 ```
 
-✅ Test forståelsen din av denne koden og den følgende koden ved å kjøre den i en nettleserkonsoll. Endre verdiene til variabelen a for å endre den returnerte `console.log()`.
+✅ Test forståelsen din av denne koden og den følgende koden ved å kjøre den i nettleserens konsoll. Endre verdiene til variabelen a for å endre den returnerte `console.log()`.
 
 ## Logiske Operatorer og Booleans
 
@@ -135,8 +135,8 @@ Beslutninger kan kreve mer enn én sammenligning, og kan kobles sammen med logis
 
 | Symbol | Beskrivelse                                                                                     | Eksempel                                                                 |
 | ------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **Logisk OG**: Sammenligner to boolske uttrykk. Returnerer true **kun** hvis begge sider er true | `(5 > 6) && (5 < 6 ) //Én side er falsk, den andre er sann. Returnerer false` |
-| `\|\|` | **Logisk ELLER**: Sammenligner to boolske uttrykk. Returnerer true hvis minst én side er sann   | `(5 > 6) \|\| (5 < 6) //Én side er falsk, den andre er sann. Returnerer true` |
+| `&&`   | **Logisk OG**: Sammenligner to boolske uttrykk. Returnerer true **kun** hvis begge sider er true | `(5 > 6) && (5 < 6 ) //En side er falsk, den andre er sann. Returnerer false` |
+| `\|\|` | **Logisk ELLER**: Sammenligner to boolske uttrykk. Returnerer true hvis minst én side er sann   | `(5 > 6) \|\| (5 < 6) //En side er falsk, den andre er sann. Returnerer true` |
 | `!`    | **Logisk IKKE**: Returnerer den motsatte verdien av et boolsk uttrykk                           | `!(5 > 6) // 5 er ikke større enn 6, men "!" vil returnere true`         |
 
 ## Betingelser og Beslutninger med Logiske Operatorer
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Negasjonsoperator
 
-Du har så langt sett hvordan du kan bruke en `if...else`-setning for å lage betinget logikk. Alt som går inn i en `if` må evalueres til true/false. Ved å bruke `!`-operatoren kan du _nekte_ uttrykket. Det vil se slik ut:
+Du har hittil sett hvordan du kan bruke en `if...else`-setning til å lage betinget logikk. Alt som går inn i en `if` må evalueres til true/false. Ved å bruke `!`-operatoren kan du _nekte_ uttrykket. Det vil se slik ut:
 
 ```javascript
 if (!condition) {
@@ -218,7 +218,7 @@ Lag et program som først er skrevet med logiske operatorer, og skriv det derett
 
 ## Gjennomgang & Selvstudium
 
-Les mer om de mange operatorene som er tilgjengelige for brukeren [på MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
+Les mer om de mange tilgjengelige operatorene [på MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
 Gå gjennom Josh Comeaus fantastiske [operator lookup](https://joshwcomeau.com/operator-lookup/)!
 
@@ -229,4 +229,4 @@ Gå gjennom Josh Comeaus fantastiske [operator lookup](https://joshwcomeau.com/o
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

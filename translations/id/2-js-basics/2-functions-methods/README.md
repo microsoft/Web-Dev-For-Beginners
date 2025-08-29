@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4612bbb9ace984f374fcc80e3e035ad",
-  "translation_date": "2025-08-27T22:45:51+00:00",
+  "original_hash": "92e136090efc4341b1d51c37924c1802",
+  "translation_date": "2025-08-29T09:12:29+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "id"
 }
@@ -12,10 +12,10 @@ CO_OP_TRANSLATOR_METADATA:
 ![Dasar-Dasar JavaScript - Fungsi](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.id.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Kuis Pra-Pelajaran
-[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/9)
+## Kuis Sebelum Pelajaran
+[Kuis sebelum pelajaran](https://ff-quizzes.netlify.app)
 
-Ketika kita berpikir tentang menulis kode, kita selalu ingin memastikan kode kita mudah dibaca. Meskipun terdengar berlawanan, kode lebih sering dibaca daripada ditulis. Salah satu alat utama dalam kotak alat pengembang untuk memastikan kode yang dapat dipelihara adalah **fungsi**.
+Ketika kita berpikir tentang menulis kode, kita selalu ingin memastikan kode kita mudah dibaca. Meskipun terdengar berlawanan, kode lebih sering dibaca daripada ditulis. Salah satu alat utama dalam kotak alat pengembang untuk memastikan kode yang mudah dipelihara adalah **fungsi**.
 
 [![Metode dan Fungsi](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Metode dan Fungsi")
 
@@ -25,7 +25,7 @@ Ketika kita berpikir tentang menulis kode, kita selalu ingin memastikan kode kit
 
 ## Fungsi
 
-Pada intinya, fungsi adalah blok kode yang dapat kita eksekusi sesuai permintaan. Ini sangat cocok untuk skenario di mana kita perlu melakukan tugas yang sama berulang kali; daripada menduplikasi logika di beberapa lokasi (yang akan sulit diperbarui saat waktunya tiba), kita dapat memusatkannya di satu lokasi, dan memanggilnya kapan pun kita membutuhkan operasi tersebut - bahkan Anda dapat memanggil fungsi dari fungsi lainnya!
+Pada intinya, fungsi adalah blok kode yang dapat kita eksekusi sesuai kebutuhan. Ini sangat cocok untuk situasi di mana kita perlu melakukan tugas yang sama berulang kali; daripada menduplikasi logika di beberapa lokasi (yang akan membuatnya sulit diperbarui saat waktunya tiba), kita dapat memusatkannya di satu lokasi, dan memanggilnya kapan pun kita membutuhkan operasi tersebut - bahkan Anda dapat memanggil fungsi dari fungsi lainnya!
 
 Yang tidak kalah penting adalah kemampuan untuk memberi nama pada fungsi. Meskipun ini mungkin terlihat sepele, nama memberikan cara cepat untuk mendokumentasikan bagian kode. Anda bisa menganggapnya seperti label pada tombol. Jika saya mengklik tombol yang bertuliskan "Batalkan timer", saya tahu itu akan menghentikan jam yang berjalan.
 
@@ -39,7 +39,7 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Jika saya ingin membuat fungsi untuk menampilkan salam, itu mungkin terlihat seperti ini:
+Jika saya ingin membuat fungsi untuk menampilkan salam, mungkin akan terlihat seperti ini:
 
 ```javascript
 function displayGreeting() {
@@ -114,9 +114,9 @@ displayGreeting('Christopher', 'Hi');
 
 ## Nilai Kembali
 
-Hingga saat ini, fungsi yang kita buat akan selalu menghasilkan output ke [console](https://developer.mozilla.org/docs/Web/API/console). Kadang-kadang ini bisa menjadi apa yang kita cari, terutama ketika kita membuat fungsi yang akan memanggil layanan lain. Tetapi bagaimana jika saya ingin membuat fungsi pembantu untuk melakukan perhitungan dan memberikan nilai kembali sehingga saya dapat menggunakannya di tempat lain?
+Hingga saat ini, fungsi yang kita buat selalu menghasilkan output ke [console](https://developer.mozilla.org/docs/Web/API/console). Kadang-kadang ini bisa menjadi apa yang kita cari, terutama ketika kita membuat fungsi yang akan memanggil layanan lain. Tetapi bagaimana jika saya ingin membuat fungsi pembantu untuk melakukan perhitungan dan memberikan nilai kembali sehingga saya dapat menggunakannya di tempat lain?
 
-Kita dapat melakukan ini dengan menggunakan **nilai kembali**. Nilai kembali dikembalikan oleh fungsi, dan dapat disimpan dalam variabel sama seperti kita dapat menyimpan nilai literal seperti string atau angka.
+Kita dapat melakukan ini dengan menggunakan **nilai kembali**. Nilai kembali dikembalikan oleh fungsi, dan dapat disimpan dalam variabel seperti kita menyimpan nilai literal seperti string atau angka.
 
 Jika sebuah fungsi mengembalikan sesuatu, maka kata kunci `return` digunakan. Kata kunci `return` mengharapkan nilai atau referensi dari apa yang dikembalikan seperti ini:
 
@@ -124,7 +124,7 @@ Jika sebuah fungsi mengembalikan sesuatu, maka kata kunci `return` digunakan. Ka
 return myVariable;
 ```  
 
-Kita dapat membuat fungsi untuk membuat pesan salam dan mengembalikan nilainya kepada pemanggil.
+Kita bisa membuat fungsi untuk membuat pesan salam dan mengembalikan nilainya kepada pemanggil.
 
 ```javascript
 function createGreetingMessage(name) {
@@ -133,7 +133,7 @@ function createGreetingMessage(name) {
 }
 ```
 
-Ketika memanggil fungsi ini, kita akan menyimpan nilainya dalam variabel. Ini sama seperti cara kita menetapkan variabel ke nilai statis (seperti `const name = 'Christopher'`).
+Ketika memanggil fungsi ini, kita akan menyimpan nilainya dalam variabel. Ini mirip seperti cara kita menetapkan variabel ke nilai statis (seperti `const name = 'Christopher'`).
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
@@ -159,7 +159,7 @@ setTimeout(displayDone, 3000);
 
 Mari kita lihat lagi apa yang telah kita buat. Kita membuat fungsi dengan nama yang akan digunakan satu kali. Saat aplikasi kita menjadi lebih kompleks, kita dapat melihat diri kita membuat banyak fungsi yang hanya akan dipanggil sekali. Ini tidak ideal. Ternyata, kita tidak selalu perlu memberikan nama!
 
-Ketika kita memberikan fungsi sebagai parameter, kita dapat melewati pembuatan fungsi sebelumnya dan sebagai gantinya membuatnya sebagai bagian dari parameter. Kita menggunakan kata kunci `function` yang sama, tetapi kita membuatnya sebagai parameter.
+Ketika kita memberikan fungsi sebagai parameter, kita dapat melewati pembuatan fungsi sebelumnya dan malah membuatnya sebagai bagian dari parameter. Kita menggunakan kata kunci `function` yang sama, tetapi kita membangunnya sebagai parameter.
 
 Mari kita tulis ulang kode di atas untuk menggunakan fungsi anonim:
 
@@ -173,7 +173,7 @@ Jika Anda menjalankan kode baru kita, Anda akan melihat hasil yang sama. Kita te
 
 ### Fungsi Fat Arrow
 
-Salah satu jalan pintas yang umum dalam banyak bahasa pemrograman (termasuk JavaScript) adalah kemampuan untuk menggunakan apa yang disebut sebagai fungsi **arrow** atau **fat arrow**. Ini menggunakan indikator khusus `=>`, yang terlihat seperti panah - sehingga dinamakan demikian! Dengan menggunakan `=>`, kita dapat melewati kata kunci `function`.
+Salah satu jalan pintas yang umum dalam banyak bahasa pemrograman (termasuk JavaScript) adalah kemampuan untuk menggunakan apa yang disebut **arrow** atau **fat arrow** function. Ini menggunakan indikator khusus `=>`, yang terlihat seperti panah - sehingga dinamakan demikian! Dengan menggunakan `=>`, kita dapat melewati kata kunci `function`.
 
 Mari kita tulis ulang kode kita sekali lagi untuk menggunakan fungsi fat arrow:
 
@@ -185,7 +185,7 @@ setTimeout(() => {
 
 ### Kapan Menggunakan Setiap Strategi
 
-Anda sekarang telah melihat bahwa kita memiliki tiga cara untuk memberikan fungsi sebagai parameter dan mungkin bertanya-tanya kapan menggunakan masing-masing. Jika Anda tahu Anda akan menggunakan fungsi lebih dari sekali, buatlah seperti biasa. Jika Anda hanya akan menggunakannya untuk satu lokasi, umumnya lebih baik menggunakan fungsi anonim. Apakah Anda menggunakan fungsi fat arrow atau sintaks `function` yang lebih tradisional terserah Anda, tetapi Anda akan melihat sebagian besar pengembang modern lebih memilih `=>`.
+Anda sekarang telah melihat bahwa kita memiliki tiga cara untuk memberikan fungsi sebagai parameter dan mungkin bertanya-tanya kapan menggunakan masing-masing. Jika Anda tahu Anda akan menggunakan fungsi lebih dari sekali, buatlah seperti biasa. Jika Anda hanya akan menggunakannya untuk satu lokasi, biasanya lebih baik menggunakan fungsi anonim. Apakah Anda menggunakan fungsi fat arrow atau sintaks `function` yang lebih tradisional terserah Anda, tetapi Anda akan melihat sebagian besar pengembang modern lebih memilih `=>`.
 
 ---
 
@@ -193,12 +193,12 @@ Anda sekarang telah melihat bahwa kita memiliki tiga cara untuk memberikan fungs
 
 Bisakah Anda menjelaskan dalam satu kalimat perbedaan antara fungsi dan metode? Cobalah!
 
-## Kuis Pasca-Pelajaran
-[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/10)
+## Kuis Setelah Pelajaran
+[Kuis setelah pelajaran](https://ff-quizzes.netlify.app)
 
 ## Tinjauan & Studi Mandiri
 
-Ada baiknya [membaca lebih lanjut tentang fungsi arrow](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), karena mereka semakin sering digunakan dalam basis kode. Latihlah menulis fungsi, lalu tulis ulang dengan sintaks ini.
+Ada baiknya [membaca lebih lanjut tentang fungsi fat arrow](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), karena mereka semakin sering digunakan dalam basis kode. Latihlah menulis fungsi, lalu tulis ulang dengan sintaks ini.
 
 ## Tugas
 
@@ -207,4 +207,4 @@ Ada baiknya [membaca lebih lanjut tentang fungsi arrow](https://developer.mozill
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemah manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

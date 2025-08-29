@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0bb55e0b98600afab801eea115228873",
-  "translation_date": "2025-08-27T22:17:07+00:00",
+  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
+  "translation_date": "2025-08-29T09:08:20+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "id"
 }
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Pendahuluan
 
-Ekstensi browser menambahkan fungsionalitas tambahan ke browser. Namun sebelum Anda membuatnya, Anda perlu mempelajari sedikit tentang bagaimana browser bekerja.
+Ekstensi browser menambahkan fungsionalitas tambahan ke browser. Namun sebelum Anda membuatnya, Anda perlu mempelajari sedikit tentang cara kerja browser.
 
 ### Tentang Browser
 
@@ -33,27 +33,27 @@ Tapi apa sebenarnya browser itu? Browser adalah aplikasi perangkat lunak yang me
 
 Ketika seorang pengguna terhubung ke internet menggunakan alamat URL (Uniform Resource Locator), biasanya menggunakan Hypertext Transfer Protocol melalui alamat `http` atau `https`, browser berkomunikasi dengan server web dan mengambil halaman web.
 
-Pada titik ini, mesin rendering browser menampilkannya di perangkat pengguna, yang bisa berupa ponsel, desktop, atau laptop.
+Pada titik ini, mesin perenderan browser menampilkannya di perangkat pengguna, yang bisa berupa ponsel, desktop, atau laptop.
 
-Browser juga memiliki kemampuan untuk menyimpan cache konten sehingga tidak perlu diambil dari server setiap saat. Mereka dapat mencatat riwayat aktivitas penelusuran pengguna, menyimpan 'cookie', yaitu potongan data kecil yang berisi informasi untuk menyimpan aktivitas pengguna, dan banyak lagi.
+Browser juga memiliki kemampuan untuk menyimpan cache konten sehingga tidak perlu diambil dari server setiap saat. Mereka dapat merekam riwayat aktivitas penelusuran pengguna, menyimpan 'cookie', yaitu potongan data kecil yang berisi informasi untuk menyimpan aktivitas pengguna, dan banyak lagi.
 
 Hal yang sangat penting untuk diingat tentang browser adalah bahwa mereka tidak semuanya sama! Setiap browser memiliki kelebihan dan kekurangannya, dan seorang pengembang web profesional perlu memahami cara membuat halaman web bekerja dengan baik di berbagai browser. Ini termasuk menangani tampilan kecil seperti ponsel, serta pengguna yang sedang offline.
 
 Sebuah situs web yang sangat berguna dan mungkin perlu Anda tandai di browser favorit Anda adalah [caniuse.com](https://www.caniuse.com). Saat Anda membuat halaman web, sangat membantu untuk menggunakan daftar teknologi yang didukung oleh caniuse agar Anda dapat mendukung pengguna Anda dengan lebih baik.
 
-✅ Bagaimana Anda bisa mengetahui browser mana yang paling populer di antara basis pengguna situs web Anda? Periksa analitik Anda - Anda dapat menginstal berbagai paket analitik sebagai bagian dari proses pengembangan web Anda, dan mereka akan memberi tahu Anda browser mana yang paling sering digunakan oleh pengguna.
+✅ Bagaimana Anda bisa mengetahui browser apa yang paling populer di antara basis pengguna situs web Anda? Periksa analitik Anda - Anda dapat menginstal berbagai paket analitik sebagai bagian dari proses pengembangan web Anda, dan mereka akan memberi tahu Anda browser apa yang paling sering digunakan oleh pengguna.
 
 ## Ekstensi Browser
 
 Mengapa Anda ingin membuat ekstensi browser? Ekstensi adalah alat yang berguna untuk ditambahkan ke browser Anda ketika Anda membutuhkan akses cepat ke tugas-tugas yang sering Anda ulangi. Misalnya, jika Anda sering memeriksa warna pada berbagai halaman web yang Anda kunjungi, Anda mungkin menginstal ekstensi browser pemilih warna. Jika Anda kesulitan mengingat kata sandi, Anda mungkin menggunakan ekstensi pengelola kata sandi.
 
-Membuat ekstensi browser juga menyenangkan. Ekstensi biasanya menangani sejumlah tugas tertentu yang mereka lakukan dengan baik.
+Membuat ekstensi browser juga menyenangkan. Biasanya, ekstensi ini mengelola sejumlah tugas tertentu yang dilakukan dengan baik.
 
 ✅ Apa ekstensi browser favorit Anda? Tugas apa yang mereka lakukan?
 
 ### Menginstal Ekstensi
 
-Sebelum Anda mulai membuat, lihat proses membangun dan menerapkan ekstensi browser. Meskipun setiap browser memiliki sedikit perbedaan dalam cara mereka mengelola tugas ini, prosesnya serupa di Chrome dan Firefox seperti pada contoh di Edge:
+Sebelum Anda mulai membuat, lihat proses membangun dan menerapkan ekstensi browser. Meskipun setiap browser memiliki sedikit perbedaan dalam cara mereka mengelola tugas ini, prosesnya serupa di Chrome dan Firefox seperti contoh di Edge:
 
 ![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.id.png)
 
@@ -68,7 +68,7 @@ Secara garis besar, prosesnya adalah:
 
 ✅ Instruksi ini berlaku untuk ekstensi yang Anda buat sendiri; untuk menginstal ekstensi yang telah dirilis ke toko ekstensi browser masing-masing, Anda harus menavigasi ke [toko-toko tersebut](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) dan menginstal ekstensi pilihan Anda.
 
-### Memulai
+### Mulai
 
 Anda akan membuat ekstensi browser yang menampilkan jejak karbon wilayah Anda, menunjukkan penggunaan energi wilayah Anda dan sumber energinya. Ekstensi ini akan memiliki formulir yang mengumpulkan kunci API sehingga Anda dapat mengakses API CO2 Signal.
 
@@ -91,9 +91,9 @@ dist
 src
     -|index.js (kode JS Anda di sini)
 
-✅ Setelah Anda memiliki kunci API dan kode wilayah Anda, simpan di suatu tempat dalam catatan untuk penggunaan di masa depan.
+✅ Setelah Anda memiliki kunci API dan kode wilayah Anda, simpan di suatu tempat untuk digunakan di masa depan.
 
-### Membuat HTML untuk Ekstensi
+### Bangun HTML untuk Ekstensi
 
 Ekstensi ini memiliki dua tampilan. Satu untuk mengumpulkan kunci API dan kode wilayah:
 
@@ -103,7 +103,7 @@ Dan yang kedua untuk menampilkan penggunaan karbon wilayah:
 
 ![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.id.png)
 
-Mari kita mulai dengan membuat HTML untuk formulir dan menatanya dengan CSS.
+Mari kita mulai dengan membangun HTML untuk formulir dan menatanya dengan CSS.
 
 Di folder `/dist`, Anda akan membuat formulir dan area hasil. Dalam file `index.html`, isi area formulir yang telah ditentukan:
 
@@ -164,7 +164,7 @@ Lihat toko ekstensi browser dan instal salah satu ke browser Anda. Anda dapat me
 
 ## Tinjauan & Studi Mandiri
 
-Dalam pelajaran ini Anda belajar sedikit tentang sejarah browser web; manfaatkan kesempatan ini untuk mempelajari bagaimana para penemu World Wide Web membayangkan penggunaannya dengan membaca lebih lanjut tentang sejarahnya. Beberapa situs yang berguna meliputi:
+Dalam pelajaran ini, Anda mempelajari sedikit tentang sejarah browser web; manfaatkan kesempatan ini untuk mempelajari bagaimana para penemu World Wide Web membayangkan penggunaannya dengan membaca lebih lanjut tentang sejarahnya. Beberapa situs yang berguna meliputi:
 
 [The History of Web Browsers](https://www.mozilla.org/firefox/browsers/browser-history/)
 
@@ -179,4 +179,4 @@ Dalam pelajaran ini Anda belajar sedikit tentang sejarah browser web; manfaatkan
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-26T22:02:39+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T07:54:42+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "sv"
 }
 -->
 # Bygg ett Rymdspel Del 4: Lägga till en Laser och Upptäcka Kollisioner
 
-## Förhandsquiz
+## Quiz före föreläsningen
 
-[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/35)
+[Quiz före föreläsningen](https://ff-quizzes.netlify.app/web/quiz/35)
 
 I den här lektionen kommer du att lära dig hur man skjuter laser med JavaScript! Vi kommer att lägga till två saker i vårt spel:
 
@@ -32,7 +32,7 @@ Låt oss vara heroiska tillsammans!
 
 Hur gör vi kollisionsdetektion? Vi behöver tänka på våra spelobjekt som rektanglar som rör sig runt. Varför det, kanske du undrar? Jo, bilden som används för att rita ett spelobjekt är en rektangel: den har ett `x`, `y`, `bredd` och `höjd`.
 
-Om två rektanglar, t.ex. en hjälte och en fiende, *korsar varandra*, har du en kollision. Vad som ska hända då beror på spelets regler. För att implementera kollisionsdetektion behöver du därför följande:
+Om två rektanglar, dvs en hjälte och en fiende, *korsar varandra*, har du en kollision. Vad som ska hända då beror på spelets regler. För att implementera kollisionsdetektion behöver du därför följande:
 
 1. Ett sätt att få en rektangulär representation av ett spelobjekt, något i stil med detta:
 
@@ -60,7 +60,7 @@ Om två rektanglar, t.ex. en hjälte och en fiende, *korsar varandra*, har du en
 
 ## Hur förstör vi saker
 
-För att förstöra saker i ett spel måste du låta spelet veta att det inte längre ska rita detta objekt i spel-loopen som triggas vid ett visst intervall. Ett sätt att göra detta är att markera ett spelobjekt som *dött* när något händer, så här:
+För att förstöra saker i ett spel måste du låta spelet veta att det inte längre ska rita detta objekt i spel-loopen som triggas med ett visst intervall. Ett sätt att göra detta är att markera ett spelobjekt som *dött* när något händer, så här:
 
 ```javascript
 // collision happened
@@ -83,7 +83,7 @@ Att skjuta en laser innebär att svara på ett tangenttryck och skapa ett objekt
 
 ## Cooldown för vår laser
 
-Lasern behöver skjutas varje gång du trycker på en tangent, till exempel *mellanslag*. För att förhindra att spelet skapar alldeles för många lasrar på kort tid behöver vi fixa detta. Lösningen är att implementera en så kallad *cooldown*, en timer, som säkerställer att en laser bara kan skjutas med vissa intervall. Du kan implementera det på följande sätt:
+Lasern behöver skjutas varje gång du trycker på en tangent, till exempel *mellanslag*. För att förhindra att spelet skapar alldeles för många lasrar på kort tid måste vi fixa detta. Lösningen är att implementera en så kallad *cooldown*, en timer, som säkerställer att en laser bara kan skjutas med vissa intervall. Du kan implementera det på följande sätt:
 
 ```javascript
 class Cooldown {
@@ -115,7 +115,7 @@ class Weapon {
 
 Du kommer att ta den befintliga koden (som du borde ha städat upp och refaktorerat) från föregående lektion och utöka den. Antingen börjar du med koden från del II eller använder koden från [Del III - startkod](../../../../../../../../../your-work).
 
-> tips: lasern som du ska arbeta med finns redan i din assets-mapp och refereras av din kod
+> tips: lasern som du ska arbeta med finns redan i din assets-mapp och refereras i din kod
 
 - **Lägg till kollisionsdetektion**, när en laser kolliderar med något ska följande regler gälla:
    1. **Laser träffar fiende**: fienden dör om den träffas av en laser
@@ -137,7 +137,7 @@ Leta upp filerna som har skapats åt dig i undermappen `your-work`. Den bör inn
 -| package.json
 ```
 
-Starta ditt projekt i mappen `your_work` genom att skriva:
+Du startar ditt projekt i mappen `your_work` genom att skriva:
 
 ```bash
 cd your-work
@@ -293,13 +293,13 @@ Vid det här laget har ditt spel fått viss funktionalitet! Du kan navigera med 
 
 Lägg till en explosion! Ta en titt på spelresurserna i [Space Art-repot](../../../../6-space-game/solution/spaceArt/readme.txt) och försök lägga till en explosion när lasern träffar en alien.
 
-## Efterhandsquiz
+## Quiz efter föreläsningen
 
-[Efterhandsquiz](https://ff-quizzes.netlify.app/web/quiz/36)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Granskning & Självstudier
 
-Experimentera med intervallen i ditt spel hittills. Vad händer när du ändrar dem? Läs mer om [JavaScript-timinghändelser](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
+Experimentera med intervallen i ditt spel hittills. Vad händer när du ändrar dem? Läs mer om [JavaScript timing events](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
 ## Uppgift
 
@@ -308,4 +308,4 @@ Experimentera med intervallen i ditt spel hittills. Vad händer när du ändrar 
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

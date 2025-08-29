@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0bb55e0b98600afab801eea115228873",
-  "translation_date": "2025-08-26T22:39:25+00:00",
+  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
+  "translation_date": "2025-08-29T08:09:51+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "da"
 }
@@ -24,7 +24,7 @@ Browserudvidelser tilføjer ekstra funktionalitet til en browser. Men før du by
 
 I denne lektionsserie lærer du, hvordan du bygger en browserudvidelse, der fungerer på Chrome, Firefox og Edge. I denne del vil du opdage, hvordan browsere fungerer, og hvordan du opbygger elementerne i en browserudvidelse.
 
-Men hvad er en browser egentlig? Det er en softwareapplikation, der giver en slutbruger mulighed for at få adgang til indhold fra en server og vise det på websider.
+Men hvad er en browser egentlig? Det er en softwareapplikation, der gør det muligt for en slutbruger at få adgang til indhold fra en server og vise det på websider.
 
 ✅ Lidt historie: Den første browser hed 'WorldWideWeb' og blev skabt af Sir Timothy Berners-Lee i 1990.
 
@@ -37,11 +37,11 @@ På dette tidspunkt viser browserens rendering-motor siden på brugerens enhed, 
 
 Browsere har også evnen til at cache indhold, så det ikke behøver at blive hentet fra serveren hver gang. De kan registrere en brugers browserhistorik, gemme 'cookies', som er små datastykker, der indeholder information om brugerens aktivitet, og meget mere.
 
-En vigtig ting at huske om browsere er, at de ikke alle er ens! Hver browser har sine styrker og svagheder, og en professionel webudvikler skal forstå, hvordan man får websider til at fungere godt på tværs af browsere. Dette inkluderer at håndtere små skærmstørrelser som en mobiltelefons samt en bruger, der er offline.
+En vigtig ting at huske om browsere er, at de ikke alle er ens! Hver browser har sine styrker og svagheder, og en professionel webudvikler skal forstå, hvordan man får websider til at fungere godt på tværs af browsere. Dette inkluderer at håndtere små skærmstørrelser som en mobiltelefons samt brugere, der er offline.
 
-En virkelig nyttig hjemmeside, som du sandsynligvis bør bogmærke i den browser, du foretrækker at bruge, er [caniuse.com](https://www.caniuse.com). Når du bygger websider, er det meget nyttigt at bruge caniuse's lister over understøttede teknologier, så du bedst kan støtte dine brugere.
+En virkelig nyttig hjemmeside, som du sandsynligvis bør bogmærke i den browser, du foretrækker at bruge, er [caniuse.com](https://www.caniuse.com). Når du bygger websider, er det meget hjælpsomt at bruge caniuse's lister over understøttede teknologier, så du bedst kan støtte dine brugere.
 
-✅ Hvordan kan du finde ud af, hvilke browsere der er mest populære blandt brugerne af din hjemmeside? Tjek din analyse - du kan installere forskellige analyseværktøjer som en del af din webudviklingsproces, og de vil fortælle dig, hvilke browsere der bruges mest af de forskellige populære browsere.
+✅ Hvordan kan du finde ud af, hvilke browsere der er mest populære blandt brugerne af din hjemmeside? Tjek din analytics - du kan installere forskellige analyseværktøjer som en del af din webudviklingsproces, og de vil fortælle dig, hvilke browsere der bruges mest af de forskellige populære browsere.
 
 ## Browserudvidelser
 
@@ -70,18 +70,18 @@ I det væsentlige vil processen være:
 
 ### Kom i gang
 
-Du skal bygge en browserudvidelse, der viser dit områdes CO2-aftryk, herunder energiforbrug og energikilde. Udvidelsen vil have en formular, der indsamler en API-nøgle, så du kan få adgang til CO2 Signal's API.
+Du skal bygge en browserudvidelse, der viser din regions CO2-aftryk, herunder energiforbrug og energikilde. Udvidelsen vil have en formular, der indsamler en API-nøgle, så du kan få adgang til CO2 Signal's API.
 
 **Du skal bruge:**
 
 - [en API-nøgle](https://www.co2signal.com/); indtast din e-mail i boksen på denne side, og en nøgle vil blive sendt til dig
-- koden for dit område fra [Electricity Map](http://api.electricitymap.org/v3/zones) (for eksempel bruger jeg 'US-NEISO' i Boston)
+- koden for din region fra [Electricity Map](http://api.electricitymap.org/v3/zones) (for eksempel bruger jeg 'US-NEISO' i Boston)
 - [startkoden](../../../../5-browser-extension/start). Download `start`-mappen; du skal færdiggøre koden i denne mappe.
-- [NPM](https://www.npmjs.com) - NPM er et værktøj til pakkehåndtering; installer det lokalt, og pakkerne, der er angivet i din `package.json`-fil, vil blive installeret til brug i dine webaktiver
+- [NPM](https://www.npmjs.com) - NPM er et værktøj til pakkehåndtering; installer det lokalt, og de pakker, der er angivet i din `package.json`-fil, vil blive installeret til brug i dit webprojekt
 
 ✅ Lær mere om pakkehåndtering i dette [fremragende Learn-modul](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
-Tag et øjeblik til at gennemgå kodebasen:
+Tag et øjeblik til at kigge på kodebasen:
 
 dist
     -|manifest.json (standardindstillinger her)
@@ -91,17 +91,17 @@ dist
 src
     -|index.js (din JS-kode går her)
 
-✅ Når du har din API-nøgle og områdekode klar, skal du gemme dem et sted som en note til fremtidig brug.
+✅ Når du har din API-nøgle og regionskode klar, skal du gemme dem et sted som en note til senere brug.
 
 ### Byg HTML til udvidelsen
 
-Denne udvidelse har to visninger. En til at indsamle API-nøglen og områdekoden:
+Denne udvidelse har to visninger. En til at indsamle API-nøglen og regionskoden:
 
-![skærmbillede af den færdige udvidelse åbnet i en browser, der viser en formular med inputfelter til områdenavn og API-nøgle.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.da.png)
+![skærmbillede af den færdige udvidelse åbnet i en browser, der viser en formular med inputfelter til regionsnavn og API-nøgle.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.da.png)
 
-Og den anden til at vise områdets CO2-forbrug:
+Og den anden til at vise regionens CO2-forbrug:
 
-![skærmbillede af den færdige udvidelse, der viser værdier for CO2-forbrug og procentdelen af fossile brændstoffer for US-NEISO-området.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.da.png)
+![skærmbillede af den færdige udvidelse, der viser værdier for CO2-forbrug og procentdelen af fossile brændstoffer for regionen US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.da.png)
 
 Lad os starte med at bygge HTML til formularen og style den med CSS.
 
@@ -125,7 +125,7 @@ I `/dist`-mappen skal du bygge en formular og et resultatområde. I `index.html`
 ```
 Dette er formularen, hvor dine gemte oplysninger vil blive indtastet og gemt i lokal lagring.
 
-Opret derefter resultatområdet; under den sidste form-tag skal du tilføje nogle divs:
+Dernæst skal du oprette resultatområdet; under den sidste form-tag skal du tilføje nogle divs:
 
 ```HTML
 <div class="result">
@@ -140,13 +140,13 @@ Opret derefter resultatområdet; under den sidste form-tag skal du tilføje nogl
 	<button class="clear-btn">Change region</button>
 </div>
 ```
-På dette tidspunkt kan du prøve at bygge. Sørg for at installere udvidelsens pakkeafhængigheder:
+På dette tidspunkt kan du prøve at bygge. Sørg for at installere pakkeafhængighederne for denne udvidelse:
 
 ```
 npm install
 ```
 
-Denne kommando vil bruge npm, Node Package Manager, til at installere webpack til din udvidelses byggeproces. Du kan se outputtet af denne proces ved at kigge i `/dist/main.js` - du vil se, at koden er blevet bundlet.
+Denne kommando vil bruge npm, Node Package Manager, til at installere webpack til din udvidelses byggeproces. Webpack er en bundler, der håndterer kompilering af kode. Du kan se outputtet af denne proces ved at kigge i `/dist/main.js` - du vil se, at koden er blevet bundlet.
 
 For nu bør udvidelsen bygge, og hvis du implementerer den i Edge som en udvidelse, vil du se en pænt vist formular.
 
@@ -164,7 +164,7 @@ Tag et kig på en browserudvidelsesbutik, og installer en udvidelse i din browse
 
 ## Gennemgang & Selvstudie
 
-I denne lektion lærte du lidt om webbrowserens historie; benyt lejligheden til at lære om, hvordan opfinderne af World Wide Web forestillede sig dens brug, ved at læse mere om dens historie. Nogle nyttige sider inkluderer:
+I denne lektion lærte du lidt om webbrowserens historie; brug denne mulighed til at lære om, hvordan opfinderne af World Wide Web forestillede sig dens brug ved at læse mere om dens historie. Nogle nyttige sider inkluderer:
 
 [Historien om webbrowsere](https://www.mozilla.org/firefox/browsers/browser-history/)
 
@@ -179,4 +179,4 @@ I denne lektion lærte du lidt om webbrowserens historie; benyt lejligheden til 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-26T21:41:08+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T08:16:35+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "da"
 }
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/11)
 
-At træffe beslutninger og kontrollere rækkefølgen, hvori din kode kører, gør din kode genanvendelig og robust. Dette afsnit dækker syntaksen for at kontrollere dataflow i JavaScript og dens betydning, når den bruges med Booleske datatyper.
+At træffe beslutninger og kontrollere rækkefølgen, hvori din kode kører, gør din kode genanvendelig og robust. Denne sektion dækker syntaksen for at kontrollere dataflow i JavaScript og dens betydning, når den bruges med Booleske datatyper.
 
 [![At Træffe Beslutninger](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "At Træffe Beslutninger")
 
@@ -27,9 +27,9 @@ At træffe beslutninger og kontrollere rækkefølgen, hvori din kode kører, gø
 
 ## En Kort Genopfriskning af Booleans
 
-Booleans kan kun have to værdier: `true` eller `false`. Booleans hjælper med at træffe beslutninger om, hvilke linjer kode der skal køres, når bestemte betingelser er opfyldt.
+Booleans kan kun have to værdier: `true` eller `false`. Booleans hjælper med at træffe beslutninger om, hvilke linjer kode der skal køres, når visse betingelser er opfyldt.
 
-Sæt din boolean til at være sand eller falsk som dette:
+Sæt din boolean til at være true eller false sådan her:
 
 `let myTrueBool = true`  
 `let myFalseBool = false`
@@ -38,22 +38,22 @@ Sæt din boolean til at være sand eller falsk som dette:
 
 ## Sammenligningsoperatorer og Booleans
 
-Operatorer bruges til at evaluere betingelser ved at lave sammenligninger, der skaber en Boolesk værdi. Følgende er en liste over ofte anvendte operatorer.
+Operatorer bruges til at evaluere betingelser ved at lave sammenligninger, der skaber en Boolean-værdi. Følgende er en liste over ofte anvendte operatorer.
 
 | Symbol | Beskrivelse                                                                                                                                                   | Eksempel           |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`    | **Mindre end**: Sammenligner to værdier og returnerer den Booleske datatype `true`, hvis værdien på venstre side er mindre end højre                          | `5 < 6 // true`    |
-| `<=`   | **Mindre end eller lig med**: Sammenligner to værdier og returnerer den Booleske datatype `true`, hvis værdien på venstre side er mindre end eller lig med højre | `5 <= 6 // true`   |
-| `>`    | **Større end**: Sammenligner to værdier og returnerer den Booleske datatype `true`, hvis værdien på venstre side er større end højre                          | `5 > 6 // false`   |
-| `>=`   | **Større end eller lig med**: Sammenligner to værdier og returnerer den Booleske datatype `true`, hvis værdien på venstre side er større end eller lig med højre | `5 >= 6 // false`  |
-| `===`  | **Streng lighed**: Sammenligner to værdier og returnerer den Booleske datatype `true`, hvis værdierne på højre og venstre er ens OG har samme datatype.        | `5 === 6 // false` |
-| `!==`  | **Ulighed**: Sammenligner to værdier og returnerer den modsatte Booleske værdi af, hvad en streng lighedsoperator ville returnere                             | `5 !== 6 // true`  |
+| `<`    | **Mindre end**: Sammenligner to værdier og returnerer `true` Boolean-datatype, hvis værdien på venstre side er mindre end højre                               | `5 < 6 // true`    |
+| `<=`   | **Mindre end eller lig med**: Sammenligner to værdier og returnerer `true` Boolean-datatype, hvis værdien på venstre side er mindre end eller lig med højre   | `5 <= 6 // true`   |
+| `>`    | **Større end**: Sammenligner to værdier og returnerer `true` Boolean-datatype, hvis værdien på venstre side er større end højre                              | `5 > 6 // false`   |
+| `>=`   | **Større end eller lig med**: Sammenligner to værdier og returnerer `true` Boolean-datatype, hvis værdien på venstre side er større end eller lig med højre  | `5 >= 6 // false`  |
+| `===`  | **Streng lighed**: Sammenligner to værdier og returnerer `true` Boolean-datatype, hvis værdierne på højre og venstre er ens OG har samme datatype.           | `5 === 6 // false` |
+| `!==`  | **Ulighed**: Sammenligner to værdier og returnerer den modsatte Boolean-værdi af, hvad en streng lighedsoperator ville returnere                             | `5 !== 6 // true`  |
 
-✅ Test din viden ved at skrive nogle sammenligninger i din browsers konsol. Overrasker nogen af de returnerede data dig?
+✅ Test din viden ved at skrive nogle sammenligninger i din browsers konsol. Er der noget af det returnerede data, der overrasker dig?
 
-## If-sætning
+## If-Sætning
 
-If-sætningen kører koden mellem dens blokke, hvis betingelsen er sand.
+If-sætningen vil køre kode mellem sine blokke, hvis betingelsen er sand.
 
 ```javascript
 if (condition) {
@@ -73,9 +73,9 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-## If..Else-sætning
+## If..Else-Sætning
 
-`else`-sætningen kører koden mellem dens blokke, når betingelsen er falsk. Den er valgfri med en `if`-sætning.
+`else`-sætningen vil køre koden mellem sine blokke, når betingelsen er falsk. Den er valgfri med en `if`-sætning.
 
 ```javascript
 let currentMoney;
@@ -90,9 +90,9 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-✅ Test din forståelse af denne kode og den følgende kode ved at køre den i en browserkonsol. Ændr værdierne af variablerne `currentMoney` og `laptopPrice` for at ændre den returnerede `console.log()`.
+✅ Test din forståelse af denne kode og den følgende kode ved at køre den i en browserkonsol. Ændr værdierne af variablerne currentMoney og laptopPrice for at ændre den returnerede `console.log()`.
 
-## Switch-sætning
+## Switch-Sætning
 
 `switch`-sætningen bruges til at udføre forskellige handlinger baseret på forskellige betingelser. Brug `switch`-sætningen til at vælge en af mange kodeblokke, der skal udføres.
 
@@ -127,17 +127,17 @@ switch (a) {
 console.log(`The value is ${a}`);
 ```
 
-✅ Test din forståelse af denne kode og den følgende kode ved at køre den i en browserkonsol. Ændr værdierne af variablen `a` for at ændre den returnerede `console.log()`.
+✅ Test din forståelse af denne kode og den følgende kode ved at køre den i en browserkonsol. Ændr værdierne af variablen a for at ændre den returnerede `console.log()`.
 
 ## Logiske Operatorer og Booleans
 
-Beslutninger kan kræve mere end én sammenligning og kan kædes sammen med logiske operatorer for at producere en Boolesk værdi.
+Beslutninger kan kræve mere end én sammenligning og kan kædes sammen med logiske operatorer for at producere en Boolean-værdi.
 
 | Symbol | Beskrivelse                                                                                     | Eksempel                                                                 |
 | ------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **Logisk OG**: Sammenligner to Booleske udtryk. Returnerer true **kun**, hvis begge sider er sande | `(5 > 6) && (5 < 6 ) //Den ene side er falsk, den anden er sand. Returnerer false` |
-| `\|\|` | **Logisk ELLER**: Sammenligner to Booleske udtryk. Returnerer true, hvis mindst én side er sand  | `(5 > 6) \|\| (5 < 6) //Den ene side er falsk, den anden er sand. Returnerer true` |
-| `!`    | **Logisk IKKE**: Returnerer den modsatte værdi af et Boolesk udtryk                             | `!(5 > 6) // 5 er ikke større end 6, men "!" vil returnere true`         |
+| `&&`   | **Logisk OG**: Sammenligner to Boolean-udtryk. Returnerer true **kun** hvis begge sider er true | `(5 > 6) && (5 < 6 ) //En side er falsk, den anden er sand. Returnerer false` |
+| `\|\|` | **Logisk ELLER**: Sammenligner to Boolean-udtryk. Returnerer true, hvis mindst én side er true  | `(5 > 6) \|\| (5 < 6) //En side er falsk, den anden er sand. Returnerer true` |
+| `!`    | **Logisk IKKE**: Returnerer den modsatte værdi af et Boolean-udtryk                             | `!(5 > 6) // 5 er ikke større end 6, men "!" vil returnere true`         |
 
 ## Betingelser og Beslutninger med Logiske Operatorer
 
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Negationsoperator
 
-Du har indtil videre set, hvordan du kan bruge en `if...else`-sætning til at skabe betinget logik. Alt, der går ind i en `if`, skal evaluere til sandt/falsk. Ved at bruge `!`-operatoren kan du _negere_ udtrykket. Det vil se sådan ud:
+Du har indtil videre set, hvordan du kan bruge en `if...else`-sætning til at skabe betinget logik. Alt, der går ind i en `if`, skal evaluere til true/false. Ved at bruge `!`-operatoren kan du _negere_ udtrykket. Det ville se sådan ud:
 
 ```javascript
 if (!condition) {
@@ -169,7 +169,7 @@ if (!condition) {
 }
 ```
 
-### Ternære udtryk
+### Ternære Udtryk
 
 `if...else` er ikke den eneste måde at udtrykke beslutningslogik på. Du kan også bruge noget, der kaldes en ternær operator. Syntaksen for den ser sådan ud:
 
@@ -193,7 +193,7 @@ Ovenstående siger, at
 - så tildel `firstNumber` til `biggestNumber`
 - ellers tildel `secondNumber`.
 
-Den ternære udtryksform er blot en kompakt måde at skrive koden nedenfor på:
+Det ternære udtryk er blot en kompakt måde at skrive koden nedenfor på:
 
 ```javascript
 let biggestNumber;
@@ -220,7 +220,7 @@ Lav et program, der først er skrevet med logiske operatorer, og omskriv det der
 
 Læs mere om de mange operatorer, der er tilgængelige for brugeren [på MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
-Gå igennem Josh Comeaus fantastiske [operatoropslag](https://joshwcomeau.com/operator-lookup/)!
+Gå igennem Josh Comeaus fantastiske [operator-opslag](https://joshwcomeau.com/operator-lookup/)!
 
 ## Opgave
 
@@ -229,4 +229,4 @@ Gå igennem Josh Comeaus fantastiske [operatoropslag](https://joshwcomeau.com/op
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at opnå nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.

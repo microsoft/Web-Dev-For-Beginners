@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-27T23:06:28+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T08:59:24+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "vi"
 }
@@ -11,13 +11,19 @@ CO_OP_TRANSLATOR_METADATA:
 
 _Làm thế nào để gây ấn tượng khi nhà tuyển dụng yêu cầu sơ yếu lý lịch của bạn và bạn gửi cho họ một đường dẫn?_ 😎
 
+<!----
+TODO: thêm một hình ảnh tùy chọn
+![Sử dụng trình soạn thảo mã](../../../../translated_images/webdev101-vscode-dev.f53c14e8dad231ea09d9e07a2db4a01551d2dc6cdf21225038389e11156af023.vi.png)
+> Sketchnote bởi [Tên tác giả](https://example.com)
+---->
+
 ## Mục tiêu
 
-Sau bài tập này, bạn sẽ học cách:
+Sau bài tập này, bạn sẽ học được cách:
 
 - Tạo một trang web để giới thiệu sơ yếu lý lịch của bạn
 
-### Điều kiện tiên quyết
+### Yêu cầu trước
 
 1. Một tài khoản GitHub. Truy cập [GitHub](https://github.com/) và tạo tài khoản nếu bạn chưa có.
 
@@ -25,7 +31,7 @@ Sau bài tập này, bạn sẽ học cách:
 
 **Bước 1:** Tạo một kho lưu trữ GitHub mới và đặt tên là `my-resume`
 
-**Bước 2:** Tạo một tệp `index.html` trong kho lưu trữ của bạn. Chúng ta sẽ thêm ít nhất một tệp trong khi vẫn ở trên github.com vì bạn không thể mở một kho lưu trữ trống trên vscode.dev.
+**Bước 2:** Tạo một tệp `index.html` trong kho lưu trữ của bạn. Chúng ta sẽ thêm ít nhất một tệp khi vẫn đang ở github.com vì bạn không thể mở một kho lưu trữ trống trên vscode.dev.
 
 Nhấp vào liên kết `creating a new file`, nhập tên `index.html` và chọn nút `Commit new file`.
 
@@ -55,14 +61,14 @@ https://github.com/your-username/my-resume
             <head>
                 <link href="style.css" rel="stylesheet">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-                <title>Your Name Goes Here!</title>
+                <title>Tên của bạn ở đây!</title>
             </head>
             <body>
                 <header id="header">
                     <!-- tiêu đề sơ yếu lý lịch với tên và chức danh của bạn -->
-                    <h1>Your Name Goes Here!</h1>
+                    <h1>Tên của bạn ở đây!</h1>
                     <hr>
-                    Your Role!
+                    Vai trò của bạn!
                     <hr>
                 </header>
                 <main>
@@ -219,7 +225,7 @@ Thêm chi tiết sơ yếu lý lịch của bạn để thay thế _văn bản g
 
 **Bước 7:** Cài đặt `Codeswing extension` để xem trước trang web sơ yếu lý lịch trên khu vực mã.
 
-Nhấp vào biểu tượng _`Extensions`_ trên thanh hoạt động và nhập Codeswing. Nhấp vào nút _màu xanh cài đặt_ trên thanh hoạt động mở rộng để cài đặt hoặc sử dụng nút cài đặt xuất hiện trên khu vực mã khi bạn chọn tiện ích mở rộng để tải thêm thông tin. Ngay sau khi cài đặt tiện ích mở rộng, quan sát khu vực mã của bạn để xem các thay đổi trong dự án 😃.
+Nhấp vào biểu tượng _`Extensions`_ trên thanh hoạt động và nhập Codeswing. Nhấp vào nút _cài đặt màu xanh_ trên thanh hoạt động mở rộng để cài đặt hoặc sử dụng nút cài đặt xuất hiện trên khu vực mã khi bạn chọn tiện ích mở rộng để tải thêm thông tin. Ngay sau khi cài đặt tiện ích mở rộng, quan sát khu vực mã của bạn để xem các thay đổi trong dự án 😃.
 
 ![Cài đặt tiện ích mở rộng](../../../../8-code-editor/images/install-extension.gif)
 
@@ -231,7 +237,7 @@ Nếu bạn hài lòng với các thay đổi đã thực hiện, di chuột qua
 
 Nhập một thông điệp commit _(Mô tả thay đổi bạn đã thực hiện đối với dự án)_ và commit các thay đổi của bạn bằng cách nhấp vào `check`. Sau khi hoàn thành công việc trên dự án, chọn biểu tượng menu hamburger ở góc trên bên trái để quay lại kho lưu trữ trên GitHub.
 
-Chúc mừng 🎉 Bạn vừa tạo trang web sơ yếu lý lịch của mình bằng vscode.dev chỉ trong vài bước.
+Chúc mừng 🎉 Bạn vừa tạo xong trang web sơ yếu lý lịch của mình bằng vscode.dev chỉ trong vài bước.
 
 ## 🚀 Thử thách
 
@@ -244,4 +250,4 @@ Mở một kho lưu trữ từ xa mà bạn có quyền chỉnh sửa và cập 
 ---
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

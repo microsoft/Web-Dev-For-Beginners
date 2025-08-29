@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-27T22:43:39+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T09:12:06+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "id"
 }
@@ -11,28 +11,28 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![video](../../../../6-space-game/images/pewpew.gif)
 
-## Kuis Sebelum Kuliah
+## Kuis Pra-Kuliah
 
-[Kuis sebelum kuliah](https://ff-quizzes.netlify.app/web/quiz/29)
+[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Pewarisan dan Komposisi dalam Pengembangan Game
 
-Dalam pelajaran sebelumnya, Anda tidak terlalu perlu memikirkan arsitektur desain aplikasi yang Anda buat, karena proyeknya sangat kecil. Namun, ketika aplikasi Anda berkembang dalam ukuran dan cakupan, keputusan arsitektur menjadi lebih penting. Ada dua pendekatan utama untuk membuat aplikasi yang lebih besar dalam JavaScript: *komposisi* atau *pewarisan*. Keduanya memiliki kelebihan dan kekurangan, tetapi mari kita jelaskan dalam konteks sebuah game.
+Dalam pelajaran sebelumnya, Anda mungkin tidak terlalu memikirkan arsitektur desain aplikasi yang Anda buat, karena proyek-proyek tersebut memiliki cakupan yang sangat kecil. Namun, ketika aplikasi Anda tumbuh dalam ukuran dan cakupan, keputusan arsitektur menjadi perhatian yang lebih besar. Ada dua pendekatan utama untuk membuat aplikasi yang lebih besar dalam JavaScript: *komposisi* atau *pewarisan*. Keduanya memiliki kelebihan dan kekurangan, tetapi mari kita jelaskan dalam konteks sebuah game.
 
 ✅ Salah satu buku pemrograman paling terkenal yang pernah ditulis berkaitan dengan [pola desain](https://en.wikipedia.org/wiki/Design_Patterns).
 
-Dalam sebuah game, Anda memiliki `objek game`, yaitu objek yang ada di layar. Ini berarti mereka memiliki lokasi dalam sistem koordinat kartesius, yang ditandai dengan memiliki koordinat `x` dan `y`. Saat Anda mengembangkan game, Anda akan menyadari bahwa semua objek game Anda memiliki properti standar, yang umum untuk setiap game yang Anda buat, yaitu elemen-elemen yang:
+Dalam sebuah game, Anda memiliki `objek game`, yaitu objek-objek yang ada di layar. Ini berarti mereka memiliki lokasi pada sistem koordinat kartesius, yang ditandai dengan memiliki koordinat `x` dan `y`. Saat Anda mengembangkan sebuah game, Anda akan menyadari bahwa semua objek game Anda memiliki properti standar yang umum untuk setiap game yang Anda buat, yaitu elemen-elemen yang:
 
 - **berbasis lokasi** Sebagian besar, jika tidak semua, elemen game berbasis lokasi. Ini berarti mereka memiliki lokasi, yaitu `x` dan `y`.
-- **dapat bergerak** Ini adalah objek yang dapat berpindah ke lokasi baru. Biasanya ini adalah pahlawan, monster, atau NPC (karakter non-pemain), tetapi bukan, misalnya, objek statis seperti pohon.
-- **menghancurkan diri sendiri** Objek-objek ini hanya ada untuk jangka waktu tertentu sebelum mereka siap untuk dihapus. Biasanya ini diwakili oleh boolean `dead` atau `destroyed` yang memberi sinyal kepada mesin game bahwa objek ini tidak perlu lagi dirender.
-- **cool-down** 'Cool-down' adalah properti khas di antara objek yang berumur pendek. Contoh khasnya adalah sepotong teks atau efek grafis seperti ledakan yang hanya terlihat selama beberapa milidetik.
+- **dapat bergerak** Ini adalah objek-objek yang dapat berpindah ke lokasi baru. Biasanya ini adalah pahlawan, monster, atau NPC (karakter non-pemain), tetapi bukan, misalnya, objek statis seperti pohon.
+- **menghancurkan diri sendiri** Objek-objek ini hanya ada untuk jangka waktu tertentu sebelum mereka menandai diri mereka untuk dihapus. Biasanya ini direpresentasikan oleh boolean `dead` atau `destroyed` yang memberi sinyal kepada mesin game bahwa objek ini tidak perlu dirender lagi.
+- **cool-down** 'Cool-down' adalah properti khas di antara objek-objek yang berumur pendek. Contoh khasnya adalah sepotong teks atau efek grafis seperti ledakan yang hanya terlihat selama beberapa milidetik.
 
 ✅ Pikirkan tentang game seperti Pac-Man. Bisakah Anda mengidentifikasi empat jenis objek yang disebutkan di atas dalam game ini?
 
 ### Mengekspresikan Perilaku
 
-Semua yang dijelaskan di atas adalah perilaku yang dapat dimiliki oleh objek game. Jadi bagaimana kita mengkodekan perilaku tersebut? Kita dapat mengekspresikan perilaku ini sebagai metode yang terkait dengan kelas atau objek.
+Semua yang kita jelaskan di atas adalah perilaku yang dapat dimiliki oleh objek game. Jadi, bagaimana kita mengkodekan perilaku tersebut? Kita dapat mengekspresikan perilaku ini sebagai metode yang terkait dengan kelas atau objek.
 
 **Kelas**
 
@@ -40,7 +40,7 @@ Idenya adalah menggunakan `kelas` bersama dengan `pewarisan` untuk menambahkan p
 
 ✅ Pewarisan adalah konsep penting untuk dipahami. Pelajari lebih lanjut di [artikel MDN tentang pewarisan](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Dalam kode, objek game biasanya dapat terlihat seperti ini:
+Jika diekspresikan melalui kode, sebuah objek game biasanya terlihat seperti ini:
 
 ```javascript
 
@@ -92,7 +92,7 @@ const tree = new Tree();
 
 **Komposisi**
 
-Cara lain untuk menangani pewarisan objek adalah dengan menggunakan *Komposisi*. Kemudian, objek mengekspresikan perilaku mereka seperti ini:
+Cara lain untuk menangani pewarisan objek adalah dengan menggunakan *Komposisi*. Kemudian, objek-objek mengekspresikan perilaku mereka seperti ini:
 
 ```javascript
 //create a constant gameObject
@@ -139,23 +139,23 @@ const tree = createStatic(0,0, 'Tree');
 
 **Pola mana yang harus saya gunakan?**
 
-Terserah Anda untuk memilih pola mana yang akan digunakan. JavaScript mendukung kedua paradigma ini.
+Terserah Anda pola mana yang Anda pilih. JavaScript mendukung kedua paradigma ini.
 
 --
 
-Pola lain yang umum dalam pengembangan game adalah menangani pengalaman pengguna dan kinerja game.
+Pola lain yang umum dalam pengembangan game adalah pola yang menangani pengalaman pengguna dan kinerja game.
 
 ## Pola Pub/Sub
 
 ✅ Pub/Sub adalah singkatan dari 'publish-subscribe'
 
-Pola ini membahas gagasan bahwa bagian-bagian yang berbeda dari aplikasi Anda tidak perlu saling mengetahui. Mengapa demikian? Ini membuat lebih mudah untuk melihat apa yang sedang terjadi secara umum jika berbagai bagian dipisahkan. Ini juga membuat lebih mudah untuk tiba-tiba mengubah perilaku jika diperlukan. Bagaimana cara kita mencapainya? Kita melakukannya dengan menetapkan beberapa konsep:
+Pola ini menangani ide bahwa bagian-bagian yang berbeda dari aplikasi Anda tidak perlu saling mengetahui. Mengapa demikian? Ini membuat lebih mudah untuk melihat apa yang sedang terjadi secara umum jika berbagai bagian dipisahkan. Ini juga membuat lebih mudah untuk tiba-tiba mengubah perilaku jika diperlukan. Bagaimana kita mencapainya? Kita melakukannya dengan menetapkan beberapa konsep:
 
-- **pesan**: Pesan biasanya berupa string teks yang disertai dengan payload opsional (sepotong data yang menjelaskan tentang apa pesan tersebut). Pesan khas dalam game bisa berupa `KEY_PRESSED_ENTER`.
-- **publisher**: Elemen ini *menerbitkan* pesan dan mengirimkannya ke semua subscriber.
-- **subscriber**: Elemen ini *mendengarkan* pesan tertentu dan melakukan tugas tertentu sebagai hasil dari menerima pesan tersebut, seperti menembakkan laser.
+- **pesan**: Pesan biasanya berupa string teks yang disertai dengan payload opsional (sepotong data yang memperjelas tentang apa pesan tersebut). Pesan khas dalam sebuah game bisa berupa `KEY_PRESSED_ENTER`.
+- **penerbit**: Elemen ini *menerbitkan* pesan dan mengirimkannya ke semua pelanggan.
+- **pelanggan**: Elemen ini *mendengarkan* pesan tertentu dan melakukan tugas tertentu sebagai hasil dari menerima pesan ini, seperti menembakkan laser.
 
-Implementasinya cukup kecil dalam ukuran tetapi merupakan pola yang sangat kuat. Berikut adalah cara implementasinya:
+Implementasinya cukup kecil dalam ukuran tetapi ini adalah pola yang sangat kuat. Berikut cara mengimplementasikannya:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Di atas, kita menghubungkan event keyboard, `ArrowLeft`, dan mengirimkan pesan `HERO_MOVE_LEFT`. Kita mendengarkan pesan tersebut dan menggerakkan `hero` sebagai hasilnya. Kekuatan pola ini adalah bahwa event listener dan hero tidak saling mengetahui. Anda dapat memetakan ulang `ArrowLeft` ke tombol `A`. Selain itu, Anda dapat melakukan sesuatu yang sama sekali berbeda pada `ArrowLeft` dengan membuat beberapa pengeditan pada fungsi `on` eventEmitter:
+Di atas, kita menghubungkan sebuah event keyboard, `ArrowLeft`, dan mengirimkan pesan `HERO_MOVE_LEFT`. Kita mendengarkan pesan tersebut dan menggerakkan `hero` sebagai hasilnya. Kekuatan pola ini adalah bahwa pendengar event dan hero tidak saling mengetahui. Anda dapat memetakan ulang `ArrowLeft` ke tombol `A`. Selain itu, Anda dapat melakukan sesuatu yang sama sekali berbeda pada `ArrowLeft` dengan membuat beberapa pengeditan pada fungsi `on` milik eventEmitter:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,17 +212,17 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-Saat hal-hal menjadi lebih rumit ketika game Anda berkembang, pola ini tetap sama dalam kompleksitas dan kode Anda tetap bersih. Sangat disarankan untuk mengadopsi pola ini.
+Saat hal-hal menjadi lebih rumit seiring pertumbuhan game Anda, pola ini tetap sama dalam tingkat kompleksitasnya dan kode Anda tetap bersih. Sangat disarankan untuk mengadopsi pola ini.
 
 ---
 
 ## 🚀 Tantangan
 
-Pikirkan tentang bagaimana pola pub-sub dapat meningkatkan sebuah game. Bagian mana yang harus mengirimkan event, dan bagaimana game harus bereaksi terhadapnya? Sekarang adalah kesempatan Anda untuk menjadi kreatif, memikirkan sebuah game baru dan bagaimana bagian-bagiannya mungkin berperilaku.
+Pikirkan bagaimana pola pub-sub dapat meningkatkan sebuah game. Bagian mana yang harus memancarkan event, dan bagaimana game harus bereaksi terhadapnya? Sekarang adalah kesempatan Anda untuk menjadi kreatif, memikirkan sebuah game baru dan bagaimana bagian-bagiannya mungkin berperilaku.
 
-## Kuis Setelah Kuliah
+## Kuis Pasca-Kuliah
 
-[Kuis setelah kuliah](https://ff-quizzes.netlify.app/web/quiz/30)
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Tinjauan & Studi Mandiri
 

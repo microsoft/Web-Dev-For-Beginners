@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-26T22:00:31+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T08:35:12+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "no"
 }
@@ -33,16 +33,16 @@ Ovenfor setter vi `id`, `width` og `height`.
 
 ## Tegne enkel geometri
 
-Lerretet bruker et kartesisk koordinatsystem for å tegne ting. Det bruker derfor en x-akse og y-akse for å uttrykke hvor noe er plassert. Plasseringen `0,0` er øverst til venstre, og nederst til høyre er det du har angitt som BREDDE og HØYDE på lerretet.
+Lerretet bruker et kartesisk koordinatsystem for å tegne ting. Det bruker derfor en x-akse og y-akse for å uttrykke hvor noe er plassert. Plasseringen `0,0` er øverst til venstre, og nederst til høyre er det du har angitt som lerretets BREDDE og HØYDE.
 
-![lerretets rutenett](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.no.png)  
+![lerretets rutenett](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.no.png)
 > Bilde fra [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 For å tegne på lerretet må du gå gjennom følgende steg:
 
-1. **Få en referanse** til lerret-elementet.  
-2. **Få en referanse** til Context-elementet som ligger på lerret-elementet.  
-3. **Utfør en tegneoperasjon** ved hjelp av Context-elementet.  
+1. **Få en referanse** til lerret-elementet.
+1. **Få en referanse** til Context-elementet som ligger på lerret-elementet.
+1. **Utfør en tegneoperasjon** ved hjelp av Context-elementet.
 
 Kode for de ovennevnte stegene ser vanligvis slik ut:
 
@@ -65,9 +65,9 @@ ctx.fillRect(0,0, 200, 200) // x,y,width, height
 
 Du kan tegne mange forskjellige ting med Canvas API, som:
 
-- **Geometriske former**, vi har allerede vist hvordan man tegner et rektangel, men det er mye mer du kan tegne.  
-- **Tekst**, du kan tegne tekst med hvilken som helst font og farge du ønsker.  
-- **Bilder**, du kan tegne et bilde basert på en bildefil som f.eks. en .jpg eller .png.  
+- **Geometriske former**, vi har allerede vist hvordan man tegner et rektangel, men det er mye mer du kan tegne.
+- **Tekst**, du kan tegne tekst med hvilken som helst font og farge du ønsker.
+- **Bilder**, du kan tegne et bilde basert på en bildefil som f.eks. en .jpg eller .png.
 
 ✅ Prøv det! Du vet hvordan du tegner et rektangel, kan du tegne en sirkel på en side? Ta en titt på noen interessante Canvas-tegninger på CodePen. Her er et [særlig imponerende eksempel](https://codepen.io/dissimulate/pen/KrAwx).
 
@@ -85,9 +85,9 @@ img.onload = () => {
 }
 ```
 
-### Mønster for å laste inn bilder
+### Mønster for bildeinnlasting
 
-Det anbefales å pakke det ovennevnte inn i en konstruksjon som dette, slik at det er enklere å bruke og du kun prøver å manipulere det når det er fullstendig lastet inn:
+Det anbefales å pakke det ovennevnte inn i en konstruksjon som denne, slik at det er enklere å bruke og du kun prøver å manipulere det når det er fullstendig lastet inn:
 
 ```javascript
 function loadAsset(path) {
@@ -128,19 +128,19 @@ async function run() {
 
 ### Hva du skal bygge
 
-Du skal bygge en nettside med et lerret-element. Det skal vise en svart skjerm `1024*768`. Vi har gitt deg to bilder:
+Du skal lage en nettside med et lerret-element. Det skal vise en svart skjerm `1024*768`. Vi har gitt deg to bilder:
 
-- Helteskip  
+- Helteskip
 
    ![Helteskip](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.no.png)
 
-- 5*5 monster  
+- 5*5 monster
 
    ![Monsterskip](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.no.png)
 
 ### Anbefalte steg for å starte utviklingen
 
-Finn filene som er opprettet for deg i `your-work`-undermappen. Den skal inneholde følgende:
+Finn filene som er opprettet for deg i undermappen `your-work`. Den skal inneholde følgende:
 
 ```bash
 -| assets
@@ -151,7 +151,7 @@ Finn filene som er opprettet for deg i `your-work`-undermappen. Den skal innehol
 -| package.json
 ```
 
-Åpne en kopi av denne mappen i Visual Studio Code. Du må ha et lokalt utviklingsmiljø satt opp, helst med Visual Studio Code med NPM og Node installert. Hvis du ikke har `npm` satt opp på datamaskinen din, [her er hvordan du gjør det](https://www.npmjs.com/get-npm).
+Åpne en kopi av denne mappen i Visual Studio Code. Du må ha et lokalt utviklingsmiljø satt opp, helst med Visual Studio Code med NPM og Node installert. Hvis du ikke har `npm` satt opp på datamaskinen din, [slik gjør du det](https://www.npmjs.com/get-npm).
 
 Start prosjektet ditt ved å navigere til `your_work`-mappen:
 
@@ -160,7 +160,7 @@ cd your-work
 npm start
 ```
 
-Ovennevnte vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en nettleser og skriv inn den adressen. Det er en blank side akkurat nå, men det vil endre seg.
+Ovennevnte vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en nettleser og skriv inn den adressen. Det er en tom side akkurat nå, men det vil endre seg.
 
 > Merk: for å se endringer på skjermen, oppdater nettleseren din.
 
@@ -168,14 +168,14 @@ Ovennevnte vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne
 
 Legg til nødvendig kode i `your-work/app.js` for å løse følgende:
 
-1. **Tegn** et lerret med svart bakgrunn  
-   > tips: legg til to linjer under den passende TODO i `/app.js`, og sett `ctx`-elementet til å være svart med topp/venstre koordinater på 0,0 og høyde og bredde lik lerretet.  
-2. **Last inn** teksturer  
-   > tips: legg til spiller- og fiendebilder ved hjelp av `await loadTexture` og send inn bildefilen. Du vil ikke se dem på skjermen ennå!  
-3. **Tegn** helten i midten av skjermen i den nederste halvdelen  
-   > tips: bruk `drawImage`-APIet for å tegne heroImg på skjermen, og sett `canvas.width / 2 - 45` og `canvas.height - canvas.height / 4)`.  
-4. **Tegn** 5*5 monstre  
-   > tips: Nå kan du fjerne kommentaren på koden for å tegne fiender på skjermen. Deretter går du til `createEnemies`-funksjonen og bygger den ut.  
+1. **Tegn** et lerret med svart bakgrunn
+   > tips: legg til to linjer under den passende TODO i `/app.js`, og sett `ctx`-elementet til å være svart med topp/venstre koordinater på 0,0 og høyde og bredde lik lerretet.
+2. **Last inn** teksturer
+   > tips: legg til spiller- og fiendebildene ved å bruke `await loadTexture` og sende inn bildefilen. Du vil ikke se dem på skjermen ennå!
+3. **Tegn** helten i midten av skjermen i den nederste halvdelen
+   > tips: bruk `drawImage`-APIet for å tegne heroImg på skjermen, og sett `canvas.width / 2 - 45` og `canvas.height - canvas.height / 4)`;
+4. **Tegn** 5*5 monstre
+   > tips: Nå kan du fjerne kommentaren på koden for å tegne fiender på skjermen. Deretter går du til `createEnemies`-funksjonen og bygger den ut.
 
    Først, sett opp noen konstanter:
 
@@ -227,4 +227,4 @@ Lær mer om Canvas API ved å [lese om det](https://developer.mozilla.org/docs/W
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-26T22:06:07+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T07:55:57+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "sv"
 }
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Arv och komposition inom spelutveckling
 
-I tidigare lektioner behövde du inte tänka så mycket på designarkitekturen för de appar du byggde, eftersom projekten var väldigt små. Men när dina applikationer växer i storlek och omfattning blir arkitektoniska beslut en större fråga. Det finns två huvudsakliga tillvägagångssätt för att skapa större applikationer i JavaScript: *komposition* eller *arv*. Båda har sina för- och nackdelar, men låt oss förklara dem inom kontexten av ett spel.
+I tidigare lektioner behövde du inte tänka så mycket på designarkitekturen för de appar du byggde, eftersom projekten var mycket små. Men när dina applikationer växer i storlek och omfattning blir arkitektoniska beslut en större fråga. Det finns två huvudsakliga tillvägagångssätt för att skapa större applikationer i JavaScript: *komposition* eller *arv*. Båda har sina för- och nackdelar, men låt oss förklara dem inom kontexten av ett spel.
 
 ✅ En av de mest kända programmeringsböckerna någonsin handlar om [designmönster](https://en.wikipedia.org/wiki/Design_Patterns).
 
@@ -26,7 +26,7 @@ I ett spel har du `spelobjekt`, vilket är objekt som existerar på en skärm. D
 - **platsbaserade** De flesta, om inte alla, spelelement är platsbaserade. Detta innebär att de har en plats, en `x` och `y`.
 - **rörliga** Dessa är objekt som kan flytta till en ny plats. Det är vanligtvis en hjälte, ett monster eller en NPC (en icke-spelbar karaktär), men inte till exempel ett statiskt objekt som ett träd.
 - **självförstörande** Dessa objekt existerar bara under en viss tidsperiod innan de förbereder sig för att tas bort. Vanligtvis representeras detta av en `död` eller `förstörd` boolean som signalerar till spelmotorn att detta objekt inte längre ska renderas.
-- **nedkylningsperiod** 'Nedkylningsperiod' är en typisk egenskap hos kortlivade objekt. Ett typiskt exempel är en textbit eller en grafisk effekt som en explosion som bara ska synas under några millisekunder.
+- **nedkylningsperiod** 'Nedkylningsperiod' är en typisk egenskap bland kortlivade objekt. Ett typiskt exempel är en textbit eller en grafisk effekt som en explosion som bara ska synas under några millisekunder.
 
 ✅ Tänk på ett spel som Pac-Man. Kan du identifiera de fyra objekttyperna som nämns ovan i detta spel?
 
@@ -143,17 +143,17 @@ Det är upp till dig vilket mönster du väljer. JavaScript stödjer båda dessa
 
 --
 
-Ett annat mönster som är vanligt inom spelutveckling hanterar problemet med att hantera spelets användarupplevelse och prestanda.
+Ett annat mönster som är vanligt inom spelutveckling handlar om att hantera spelets användarupplevelse och prestanda.
 
 ## Pub/sub-mönster
 
 ✅ Pub/Sub står för 'publish-subscribe'
 
-Detta mönster hanterar idén att de olika delarna av din applikation inte ska känna till varandra. Varför är det så? Det gör det mycket enklare att förstå vad som händer i allmänhet om olika delar är separerade. Det gör det också enklare att plötsligt ändra beteende om det behövs. Hur uppnår vi detta? Vi gör det genom att etablera några koncept:
+Detta mönster handlar om idén att de olika delarna av din applikation inte ska känna till varandra. Varför är det så? Det gör det mycket enklare att förstå vad som händer i allmänhet om olika delar är separerade. Det gör det också enklare att plötsligt ändra beteende om det behövs. Hur uppnår vi detta? Vi gör det genom att etablera några koncept:
 
 - **meddelande**: Ett meddelande är vanligtvis en textsträng åtföljd av en valfri nyttolast (en bit data som förtydligar vad meddelandet handlar om). Ett typiskt meddelande i ett spel kan vara `KEY_PRESSED_ENTER`.
 - **utgivare**: Detta element *publicerar* ett meddelande och skickar det till alla prenumeranter.
-- **prenumerant**: Detta element *lyssnar* på specifika meddelanden och utför en uppgift som resultat av att ha mottagit detta meddelande, som att skjuta en laser.
+- **prenumerant**: Detta element *lyssnar* på specifika meddelanden och utför en uppgift som resultat av att ha mottagit detta meddelande, som att avfyra en laser.
 
 Implementationen är ganska liten i storlek men det är ett mycket kraftfullt mönster. Så här kan det implementeras:
 
@@ -235,4 +235,4 @@ Lär dig mer om Pub/Sub genom att [läsa om det](https://docs.microsoft.com/azur
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e10f168beac4e7b05e30e0eb5c92bf11",
-  "translation_date": "2025-08-26T22:34:09+00:00",
+  "original_hash": "a7587943d38d095de8613e1b508609f5",
+  "translation_date": "2025-08-29T07:53:19+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "sv"
 }
@@ -53,9 +53,9 @@ clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Notera den förkortade syntaxen som används för att lyssna på ett submit- eller klick-event, och hur eventet skickas till funktionerna handleSubmit eller reset. Kan du skriva motsvarigheten till denna förkortning i ett längre format? Vilket föredrar du?
+✅ Notera den förkortade syntaxen som används för att lyssna på ett submit- eller klick-event, och hur eventet skickas till funktionerna handleSubmit eller reset. Kan du skriva motsvarigheten till denna förkortning i ett längre format? Vilken föredrar du?
 
-### Bygg ut init()-funktionen och reset()-funktionen:
+### Bygg init()-funktionen och reset()-funktionen:
 
 Nu ska du bygga funktionen som initierar tillägget, kallad init():
 
@@ -92,7 +92,6 @@ function reset(e) {
 }
 
 ```
-
 I denna funktion finns det intressant logik. När du läser igenom den, kan du se vad som händer?
 
 - Två `const` sätts upp för att kontrollera om användaren har lagrat en API-nyckel och regionskod i lokal lagring.
@@ -104,23 +103,23 @@ I denna funktion finns det intressant logik. När du läser igenom den, kan du s
   - Dölj formuläret.
   - Visa återställningsknappen.
 
-Innan du går vidare är det användbart att lära sig om ett mycket viktigt koncept som finns tillgängligt i webbläsare: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage är ett användbart sätt att lagra strängar i webbläsaren som ett `key-value`-par. Denna typ av webblagring kan manipuleras med JavaScript för att hantera data i webbläsaren. LocalStorage upphör inte att gälla, medan SessionStorage, en annan typ av webblagring, rensas när webbläsaren stängs. De olika typerna av lagring har för- och nackdelar med sin användning.
+Innan du går vidare är det användbart att lära sig om ett mycket viktigt koncept som finns tillgängligt i webbläsare: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage är ett användbart sätt att lagra strängar i webbläsaren som ett `key-value`-par. Denna typ av webblagring kan manipuleras med JavaScript för att hantera data i webbläsaren. LocalStorage löper inte ut, medan SessionStorage, en annan typ av webblagring, rensas när webbläsaren stängs. De olika typerna av lagring har för- och nackdelar med sin användning.
 
-> Observera - ditt webbläsartillägg har sin egen lokala lagring; huvudwebbläsarfönstret är en separat instans och beter sig oberoende.
+> Notera - ditt webbläsartillägg har sin egen lokala lagring; huvudwebbläsarfönstret är en separat instans och beter sig annorlunda.
 
-Du ställer in din API-nyckel för att ha ett strängvärde, till exempel, och du kan se att den är inställd i Edge genom att "inspektera" en webbsida (du kan högerklicka på en webbläsare för att inspektera) och gå till fliken Applications för att se lagringen.
+Du ställer in din API-nyckel med ett strängvärde, till exempel, och du kan se att den är inställd i Edge genom att "inspektera" en webbsida (du kan högerklicka på en webbläsare för att inspektera) och gå till fliken Applications för att se lagringen.
 
 ![Panel för lokal lagring](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.sv.png)
 
 ✅ Fundera på situationer där du INTE skulle vilja lagra viss data i LocalStorage. Generellt sett är det en dålig idé att placera API-nycklar i LocalStorage! Kan du se varför? I vårt fall, eftersom vår app är enbart för lärande och inte kommer att distribueras till en appbutik, kommer vi att använda denna metod.
 
-Observera att du använder Web API för att manipulera LocalStorage, antingen genom att använda `getItem()`, `setItem()` eller `removeItem()`. Det stöds brett över webbläsare.
+Notera att du använder Web API för att manipulera LocalStorage, antingen genom att använda `getItem()`, `setItem()` eller `removeItem()`. Det stöds brett över webbläsare.
 
 Innan du bygger funktionen `displayCarbonUsage()` som anropas i `init()`, låt oss bygga funktionaliteten för att hantera den initiala formulärinlämningen.
 
 ### Hantera formulärinlämningen
 
-Skapa en funktion kallad `handleSubmit` som accepterar ett event-argument `(e)`. Stoppa eventet från att propagera (i detta fall vill vi stoppa webbläsaren från att uppdatera) och anropa en ny funktion, `setUpUser`, med argumenten `apiKey.value` och `region.value`. På detta sätt använder du de två värdena som hämtas via det initiala formuläret när de relevanta fälten är ifyllda.
+Skapa en funktion kallad `handleSubmit` som accepterar ett event-argument `(e)`. Stoppa eventet från att spridas (i detta fall vill vi stoppa webbläsaren från att uppdatera) och anropa en ny funktion, `setUpUser`, med argumenten `apiKey.value` och `region.value`. På detta sätt använder du de två värdena som hämtas via det initiala formuläret när de relevanta fälten är ifyllda.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -128,7 +127,6 @@ function handleSubmit(e) {
 	setUpUser(apiKey.value, region.value);
 }
 ```
-
 ✅ Fräscha upp ditt minne - HTML:en du ställde in i förra lektionen har två inmatningsfält vars `values` fångas via `const` du ställde in högst upp i filen, och de är båda `required` så att webbläsaren hindrar användare från att mata in null-värden.
 
 ### Ställ in användaren
@@ -146,8 +144,7 @@ function setUpUser(apiKey, regionName) {
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
-
-Denna funktion ställer in ett laddningsmeddelande som visas medan API:t anropas. Vid denna punkt har du kommit till att skapa den viktigaste funktionen i detta webbläsartillägg!
+Denna funktion visar ett laddningsmeddelande medan API:t anropas. Vid denna punkt har du kommit fram till att skapa den viktigaste funktionen i detta webbläsartillägg!
 
 ### Visa koldioxidanvändning
 
@@ -208,7 +205,7 @@ async function displayCarbonUsage(apiKey, region) {
 Detta är en stor funktion. Vad händer här?
 
 - Enligt bästa praxis använder du nyckelordet `async` för att få denna funktion att bete sig asynkront. Funktionen innehåller ett `try/catch`-block eftersom den kommer att returnera ett löfte när API:t returnerar data. Eftersom du inte har kontroll över hastigheten som API:t svarar (det kanske inte svarar alls!), behöver du hantera denna osäkerhet genom att anropa det asynkront.
-- Du frågar co2signal API för att få din regions data, med din API-nyckel. För att använda den nyckeln måste du använda en typ av autentisering i dina header-parametrar.
+- Du frågar co2signal API för att få data om din regions koldioxidanvändning, med din API-nyckel. För att använda den nyckeln måste du använda en typ av autentisering i dina header-parametrar.
 - När API:t svarar tilldelar du olika element av dess svar till de delar av din skärm som du ställde in för att visa denna data.
 - Om det finns ett fel, eller om det inte finns något resultat, visar du ett felmeddelande.
 
@@ -220,15 +217,15 @@ Grattis! Om du bygger ditt tillägg (`npm run build`) och uppdaterar det i din t
 
 ## 🚀 Utmaning
 
-Vi har diskuterat flera typer av API:er hittills i dessa lektioner. Välj en web-API och undersök i detalj vad det erbjuder. Till exempel, titta på API:er som finns tillgängliga inom webbläsare, såsom [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Vad gör en API bra enligt dig?
+Vi har diskuterat flera typer av API:er hittills i dessa lektioner. Välj en web-API och undersök i detalj vad det erbjuder. Till exempel, ta en titt på API:er som finns tillgängliga i webbläsare såsom [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Vad gör ett API bra enligt dig?
 
-## Efterhandsquiz
+## Efterföreläsningsquiz
 
-[Efterhandsquiz](https://ff-quizzes.netlify.app/web/quiz/26)
+[Efterföreläsningsquiz](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Granskning & Självstudier
 
-Du lärde dig om LocalStorage och API:er i denna lektion, båda mycket användbara för den professionella webbutvecklaren. Kan du tänka på hur dessa två saker fungerar tillsammans? Fundera på hur du skulle designa en webbplats som lagrar objekt som ska användas av en API.
+Du lärde dig om LocalStorage och API:er i denna lektion, båda mycket användbara för den professionella webbutvecklaren. Kan du tänka på hur dessa två saker fungerar tillsammans? Fundera på hur du skulle designa en webbplats som lagrar objekt för att användas av en API.
 
 ## Uppgift
 
@@ -237,4 +234,4 @@ Du lärde dig om LocalStorage och API:er i denna lektion, båda mycket användba
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

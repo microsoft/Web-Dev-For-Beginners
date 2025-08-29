@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0bb55e0b98600afab801eea115228873",
-  "translation_date": "2025-08-27T22:17:35+00:00",
+  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
+  "translation_date": "2025-08-29T09:24:58+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "ms"
 }
@@ -22,7 +22,7 @@ Sambungan pelayar menambah fungsi tambahan kepada pelayar. Tetapi sebelum anda m
 
 ### Tentang pelayar
 
-Dalam siri pelajaran ini, anda akan belajar cara membina sambungan pelayar yang boleh digunakan pada pelayar Chrome, Firefox, dan Edge. Dalam bahagian ini, anda akan meneroka bagaimana pelayar berfungsi dan merangka elemen sambungan pelayar.
+Dalam siri pelajaran ini, anda akan belajar cara membina sambungan pelayar yang boleh digunakan pada pelayar Chrome, Firefox, dan Edge. Dalam bahagian ini, anda akan mengetahui bagaimana pelayar berfungsi dan menyusun elemen sambungan pelayar.
 
 Tetapi apa sebenarnya pelayar? Ia adalah aplikasi perisian yang membolehkan pengguna akhir mengakses kandungan dari pelayan dan memaparkannya pada halaman web.
 
@@ -35,13 +35,13 @@ Apabila pengguna menyambung ke internet menggunakan alamat URL (Uniform Resource
 
 Pada ketika ini, enjin rendering pelayar memaparkannya pada peranti pengguna, yang mungkin telefon bimbit, desktop, atau komputer riba.
 
-Pelayar juga mempunyai keupayaan untuk menyimpan cache kandungan supaya ia tidak perlu diambil dari pelayan setiap kali. Ia boleh merekod sejarah aktiviti pelayaran pengguna, menyimpan 'cookies', iaitu data kecil yang mengandungi maklumat untuk menyimpan aktiviti pengguna, dan banyak lagi.
+Pelayar juga mempunyai keupayaan untuk menyimpan kandungan supaya ia tidak perlu diambil dari pelayan setiap kali. Ia boleh merekod sejarah aktiviti pelayaran pengguna, menyimpan 'cookies', iaitu data kecil yang mengandungi maklumat untuk menyimpan aktiviti pengguna, dan banyak lagi.
 
-Satu perkara yang sangat penting untuk diingati tentang pelayar ialah ia tidak semuanya sama! Setiap pelayar mempunyai kekuatan dan kelemahan masing-masing, dan seorang pembangun web profesional perlu memahami cara membuat halaman web berfungsi dengan baik merentas pelayar. Ini termasuk menangani paparan kecil seperti telefon bimbit, serta pengguna yang berada di luar talian.
+Perkara yang sangat penting untuk diingat tentang pelayar ialah ia tidak semuanya sama! Setiap pelayar mempunyai kekuatan dan kelemahan masing-masing, dan seorang pembangun web profesional perlu memahami cara membuat halaman web berfungsi dengan baik merentas pelayar. Ini termasuk menangani paparan kecil seperti telefon bimbit, serta pengguna yang berada di luar talian.
 
-Satu laman web yang sangat berguna yang anda mungkin ingin tandakan dalam pelayar pilihan anda ialah [caniuse.com](https://www.caniuse.com). Apabila anda membina halaman web, sangat membantu untuk menggunakan senarai teknologi yang disokong oleh caniuse supaya anda dapat menyokong pengguna anda dengan sebaik mungkin.
+Satu laman web yang sangat berguna yang anda mungkin patut tandakan dalam pelayar pilihan anda ialah [caniuse.com](https://www.caniuse.com). Apabila anda membina halaman web, sangat membantu untuk menggunakan senarai teknologi yang disokong oleh caniuse supaya anda dapat menyokong pengguna anda dengan sebaik mungkin.
 
-✅ Bagaimana anda boleh mengetahui pelayar mana yang paling popular di kalangan pengguna laman web anda? Periksa analitik anda - anda boleh memasang pelbagai pakej analitik sebagai sebahagian daripada proses pembangunan web anda, dan ia akan memberitahu anda pelayar mana yang paling banyak digunakan oleh pengguna.
+✅ Bagaimana anda boleh mengetahui pelayar mana yang paling popular di kalangan pengguna laman web anda? Periksa analitik anda - anda boleh memasang pelbagai pakej analitik sebagai sebahagian daripada proses pembangunan web anda, dan ia akan memberitahu anda pelayar mana yang paling banyak digunakan oleh pelayar popular.
 
 ## Sambungan pelayar
 
@@ -75,7 +75,7 @@ Anda akan membina sambungan pelayar yang memaparkan jejak karbon kawasan anda, m
 **Anda perlukan:**
 
 - [kunci API](https://www.co2signal.com/); masukkan e-mel anda dalam kotak di halaman ini dan satu akan dihantar kepada anda
-- [kod untuk kawasan anda](http://api.electricitymap.org/v3/zones) yang sepadan dengan [Peta Elektrik](https://www.electricitymap.org/map) (contohnya, di Boston, saya menggunakan 'US-NEISO').
+- [kod untuk kawasan anda](http://api.electricitymap.org/v3/zones) yang sepadan dengan [Peta Elektrik](https://www.electricitymap.org/map) (contohnya di Boston, saya menggunakan 'US-NEISO').
 - [kod permulaan](../../../../5-browser-extension/start). Muat turun folder `start`; anda akan melengkapkan kod dalam folder ini.
 - [NPM](https://www.npmjs.com) - NPM adalah alat pengurusan pakej; pasang secara tempatan dan pakej yang disenaraikan dalam fail `package.json` anda akan dipasang untuk digunakan oleh aset web anda
 
@@ -164,7 +164,7 @@ Lihat kedai sambungan pelayar dan pasang satu ke pelayar anda. Anda boleh memeri
 
 ## Ulasan & Kajian Kendiri
 
-Dalam pelajaran ini, anda belajar sedikit tentang sejarah pelayar web; ambil peluang ini untuk belajar tentang bagaimana pencipta World Wide Web membayangkan penggunaannya dengan membaca lebih lanjut tentang sejarahnya. Beberapa laman yang berguna termasuk:
+Dalam pelajaran ini, anda belajar sedikit tentang sejarah pelayar web; ambil peluang ini untuk belajar tentang bagaimana pencipta World Wide Web membayangkan penggunaannya dengan membaca lebih lanjut tentang sejarahnya. Beberapa laman web yang berguna termasuk:
 
 [Sejarah Pelayar Web](https://www.mozilla.org/firefox/browsers/browser-history/)
 
@@ -179,4 +179,4 @@ Dalam pelajaran ini, anda belajar sedikit tentang sejarah pelayar web; ambil pel
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b667b7d601e2ee19acb5aa9d102dc9f3",
-  "translation_date": "2025-08-26T22:55:57+00:00",
+  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
+  "translation_date": "2025-08-29T08:07:06+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "da"
 }
@@ -15,9 +15,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introduktion
 
-I næsten alle moderne webapps kan du oprette en konto for at få dit eget private område. Da flere brugere kan tilgå en webapp samtidig, har du brug for en mekanisme til at gemme hver brugers personlige data separat og vælge, hvilken information der skal vises. Vi vil ikke dække, hvordan man [håndterer brugeridentitet sikkert](https://en.wikipedia.org/wiki/Authentication), da det er et omfattende emne i sig selv, men vi vil sikre, at hver bruger kan oprette en (eller flere) bankkonti i vores app.
+I næsten alle moderne webapps kan du oprette en konto for at få din egen private plads. Da flere brugere kan tilgå en webapp samtidig, har du brug for en mekanisme til at gemme hver brugers personlige data separat og vælge, hvilken information der skal vises. Vi vil ikke dække, hvordan man [håndterer brugeridentitet sikkert](https://en.wikipedia.org/wiki/Authentication), da det er et omfattende emne i sig selv, men vi vil sikre, at hver bruger kan oprette en (eller flere) bankkonti i vores app.
 
-I denne del vil vi bruge HTML-formularer til at tilføje login og registrering til vores webapp. Vi vil se, hvordan man sender data til en server-API programmæssigt, og til sidst hvordan man definerer grundlæggende valideringsregler for brugerinput.
+I denne del vil vi bruge HTML-formularer til at tilføje login og registrering til vores webapp. Vi vil se, hvordan man sender data til en server-API programmatisk, og til sidst hvordan man definerer grundlæggende valideringsregler for brugerinput.
 
 ### Forudsætninger
 
@@ -41,9 +41,9 @@ curl http://localhost:5000/api
 
 ## Formular og kontroller
 
-`<form>`-elementet indkapsler en sektion af et HTML-dokument, hvor brugeren kan indtaste og indsende data med interaktive kontroller. Der findes alle mulige brugergrænseflade (UI)-kontroller, der kan bruges inden for en formular, hvor de mest almindelige er `<input>`- og `<button>`-elementerne.
+`<form>`-elementet indkapsler en sektion af et HTML-dokument, hvor brugeren kan indtaste og indsende data med interaktive kontroller. Der findes alle mulige brugergrænseflade (UI)-kontroller, der kan bruges inden for en formular, hvor de mest almindelige er `<input>` og `<button>`-elementerne.
 
-Der er mange forskellige [typer](https://developer.mozilla.org/docs/Web/HTML/Element/input) af `<input>`. For eksempel kan du oprette et felt, hvor brugeren kan indtaste sit brugernavn, ved at bruge:
+Der er mange forskellige [typer](https://developer.mozilla.org/docs/Web/HTML/Element/input) af `<input>`. For eksempel, for at oprette et felt, hvor brugeren kan indtaste sit brugernavn, kan du bruge:
 
 ```html
 <input id="username" name="username" type="text">
@@ -55,7 +55,7 @@ Der er mange forskellige [typer](https://developer.mozilla.org/docs/Web/HTML/Ele
 
 ✅ Bemærk, at `<input>` er et [tomt element](https://developer.mozilla.org/docs/Glossary/Empty_element), som du *ikke* bør tilføje en matchende afsluttende tag til. Du kan dog bruge den selv-lukkende `<input/>`-notation, men det er ikke nødvendigt.
 
-`<button>`-elementet inden for en formular er lidt specielt. Hvis du ikke angiver dets `type`-attribut, vil det automatisk indsende formularens data til serveren, når det trykkes. Her er de mulige `type`-værdier:
+`<button>`-elementet inden for en formular er lidt specielt. Hvis du ikke angiver dens `type`-attribut, vil den automatisk indsende formularens data til serveren, når den trykkes. Her er de mulige `type`-værdier:
 
 - `submit`: Standard inden for en `<form>`, knappen udløser formularens indsendelseshandling.
 - `reset`: Knappen nulstiller alle formularens kontroller til deres oprindelige værdier.
@@ -79,7 +79,7 @@ Lad os starte med at tilføje en formular til `login`-skabelonen. Vi skal bruge 
 </template>
 ```
 
-Hvis du ser nærmere på, kan du bemærke, at vi også har tilføjet et `<label>`-element her. `<label>`-elementer bruges til at tilføje et navn til UI-kontroller, såsom vores brugernavnfelt. Labels er vigtige for læsbarheden af dine formularer, men de har også yderligere fordele:
+Hvis du ser nærmere på, kan du bemærke, at vi også har tilføjet et `<label>`-element her. `<label>`-elementer bruges til at tilføje et navn til UI-kontroller, såsom vores brugernavnsfelt. Labels er vigtige for læsbarheden af dine formularer, men kommer også med yderligere fordele:
 
 - Ved at associere en label med en formularkontrol hjælper det brugere, der bruger hjælpemidler (som en skærmlæser), med at forstå, hvilke data de forventes at indtaste.
 - Du kan klikke på labelen for direkte at sætte fokus på den tilknyttede input, hvilket gør det lettere at nå på enheder med berøringsskærm.
@@ -105,13 +105,13 @@ Nu tilføjer vi en anden formular til registrering, lige under den forrige:
 ```
 
 Ved hjælp af `value`-attributten kan vi definere en standardværdi for en given input.
-Bemærk også, at input for `balance` har typen `number`. Ser det anderledes ud end de andre inputs? Prøv at interagere med det.
+Bemærk også, at inputtet for `balance` har typen `number`. Ser det anderledes ud end de andre inputs? Prøv at interagere med det.
 
-✅ Kan du navigere og interagere med formularerne ved hjælp af kun et tastatur? Hvordan ville du gøre det?
+✅ Kan du navigere og interagere med formularerne ved kun at bruge et tastatur? Hvordan ville du gøre det?
 
 ## Indsendelse af data til serveren
 
-Nu hvor vi har en funktionel brugergrænseflade, er næste skridt at sende dataene videre til vores server. Lad os lave en hurtig test med vores nuværende kode: hvad sker der, hvis du klikker på *Login*- eller *Register*-knappen?
+Nu hvor vi har en funktionel brugergrænseflade, er næste skridt at sende data til vores server. Lad os lave en hurtig test med vores nuværende kode: hvad sker der, hvis du klikker på *Login*- eller *Register*-knappen?
 
 Bemærkede du ændringen i browserens URL-sektion?
 
@@ -125,7 +125,7 @@ Standardhandlingen for en `<form>` er at indsende formularen til den aktuelle se
 
 Derfor kan du ændre det til at bruge [POST-metoden](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5), som sender formularens data til serveren i HTTP-anmodningens body, uden nogen af de tidligere begrænsninger.
 
-> Selvom POST er den mest almindeligt anvendte metode til at sende data, [i nogle specifikke scenarier](https://www.w3.org/2001/tag/doc/whenToUseGet.html) er det bedre at bruge GET-metoden, for eksempel når man implementerer et søgefelt.
+> Selvom POST er den mest almindeligt anvendte metode til at sende data, [kan det i nogle specifikke scenarier](https://www.w3.org/2001/tag/doc/whenToUseGet.html) være bedre at bruge GET-metoden, f.eks. når man implementerer et søgefelt.
 
 ### Opgave
 
@@ -147,7 +147,7 @@ Hvis alt går godt, bør serveren svare på din anmodning med et [JSON](https://
 
 Som du sikkert har bemærket, er der et lille problem med den tilgang, vi lige brugte: når formularen indsendes, forlader vi vores app, og browseren omdirigerer til serverens URL. Vi forsøger at undgå alle sidegenindlæsninger med vores webapp, da vi laver en [Single-page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
 
-For at sende formularens data til serveren uden at tvinge en sidegenindlæsning skal vi bruge JavaScript-kode. I stedet for at sætte en URL i `action`-egenskaben for et `<form>`-element, kan du bruge enhver JavaScript-kode, der er foranstillet med `javascript:`-strengen, til at udføre en brugerdefineret handling. Ved at bruge dette betyder det også, at du skal implementere nogle opgaver, som tidligere blev udført automatisk af browseren:
+For at sende formularens data til serveren uden at tvinge en sidegenindlæsning, skal vi bruge JavaScript-kode. I stedet for at sætte en URL i `action`-egenskaben for et `<form>`-element, kan du bruge enhver JavaScript-kode, der begynder med `javascript:`-strengen, til at udføre en brugerdefineret handling. Ved at bruge dette betyder det også, at du skal implementere nogle opgaver, som tidligere blev gjort automatisk af browseren:
 
 - Hente formularens data
 - Konvertere og kode formularens data til et passende format
@@ -191,7 +191,7 @@ async function createAccount(account) {
 }
 ```
 
-Hvad gør denne funktion? Bemærk først `async`-nøgleordet her. Det betyder, at funktionen indeholder kode, der vil blive udført [**asynkront**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Når det bruges sammen med `await`-nøgleordet, giver det mulighed for at vente på, at asynkron kode udføres - som at vente på serverens svar her - før man fortsætter.
+Hvad gør denne funktion? Først, bemærk `async`-nøgleordet her. Det betyder, at funktionen indeholder kode, der vil blive udført [**asynkront**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Når det bruges sammen med `await`-nøgleordet, giver det mulighed for at vente på, at asynkron kode udføres - som at vente på serverens svar her - før man fortsætter.
 
 Her er en kort video om brugen af `async/await`:
 
@@ -201,12 +201,12 @@ Her er en kort video om brugen af `async/await`:
 
 Vi bruger `fetch()`-API'en til at sende JSON-data til serveren. Denne metode tager 2 parametre:
 
-- Serverens URL, så vi sætter `//localhost:5000/api/accounts` her igen.
+- Serverens URL, så vi sætter `//localhost:5000/api/accounts` her.
 - Indstillingerne for anmodningen. Det er her, vi sætter metoden til `POST` og angiver `body` for anmodningen. Da vi sender JSON-data til serveren, skal vi også sætte `Content-Type`-headeren til `application/json`, så serveren ved, hvordan den skal fortolke indholdet.
 
-Da serveren vil svare på anmodningen med JSON, kan vi bruge `await response.json()` til at analysere JSON-indholdet og returnere det resulterende objekt. Bemærk, at denne metode er asynkron, så vi bruger `await`-nøgleordet her før returnering for at sikre, at eventuelle fejl under analysen også fanges.
+Da serveren vil svare på anmodningen med JSON, kan vi bruge `await response.json()` til at analysere JSON-indholdet og returnere det resulterende objekt. Bemærk, at denne metode er asynkron, så vi bruger `await`-nøgleordet her før returneringen for at sikre, at eventuelle fejl under analysen også fanges.
 
-Tilføj nu noget kode til `register`-funktionen for at kalde `createAccount()`:
+Nu tilføjer vi noget kode til `register`-funktionen for at kalde `createAccount()`:
 
 ```js
 const result = await createAccount(jsonData);
@@ -245,14 +245,14 @@ Det var lidt langt, men vi kom i mål! Hvis du åbner dine [browserudviklerværk
 
 Hvis du prøver at registrere en ny konto uden først at angive et brugernavn, kan du se, at serveren returnerer en fejl med statuskode [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
-Før du sender data til en server, er det en god praksis at [validere formularens data](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) på forhånd, når det er muligt, for at sikre, at du sender en gyldig anmodning. HTML5-formularkontroller tilbyder indbygget validering ved hjælp af forskellige attributter:
+Før du sender data til en server, er det en god praksis at [validere formularens data](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) på forhånd, når det er muligt, for at sikre, at du sender en gyldig anmodning. HTML5-formularkontroller giver indbygget validering ved hjælp af forskellige attributter:
 
 - `required`: Feltet skal udfyldes, ellers kan formularen ikke indsendes.
 - `minlength` og `maxlength`: Definerer det minimale og maksimale antal tegn i tekstfelter.
 - `min` og `max`: Definerer den minimale og maksimale værdi for et numerisk felt.
 - `type`: Definerer den type data, der forventes, såsom `number`, `email`, `file` eller [andre indbyggede typer](https://developer.mozilla.org/docs/Web/HTML/Element/input). Denne attribut kan også ændre den visuelle rendering af formularens kontrol.
-- `pattern`: Tillader at definere et [regulært udtryk](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) mønster for at teste, om de indtastede data er gyldige eller ej.
-> Tip: du kan tilpasse udseendet af dine formularkontroller afhængigt af, om de er gyldige eller ej, ved at bruge CSS-pseudoklasserne `:valid` og `:invalid`.
+- `pattern`: Tillader at definere et [regulært udtryk](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions)-mønster for at teste, om de indtastede data er gyldige eller ej.
+> Tip: Du kan tilpasse udseendet af dine formularfelter afhængigt af, om de er gyldige eller ej, ved at bruge CSS-pseudoklasserne `:valid` og `:invalid`.
 ### Opgave
 
 Der er 2 obligatoriske felter for at oprette en gyldig ny konto: brugernavn og valuta. De øvrige felter er valgfrie. Opdater formularens HTML ved at bruge både attributten `required` og tekst i feltets label, så det ser sådan ud:
@@ -265,7 +265,7 @@ Der er 2 obligatoriske felter for at oprette en gyldig ny konto: brugernavn og v
 <input id="currency" name="currency" type="text" value="$" required>
 ```
 
-Selvom denne specifikke serverimplementering ikke håndhæver specifikke grænser for felternes maksimale længde, er det altid en god praksis at definere rimelige grænser for enhver tekstindtastning fra brugeren.
+Selvom denne specifikke serverimplementering ikke håndhæver specifikke grænser for felternes maksimale længde, er det altid en god praksis at definere rimelige grænser for enhver brugerindtastning.
 
 Tilføj attributten `maxlength` til tekstfelterne:
 
@@ -277,19 +277,19 @@ Tilføj attributten `maxlength` til tekstfelterne:
 <input id="description" name="description" type="text" maxlength="100">
 ```
 
-Hvis du nu trykker på *Registrer* knappen, og et felt ikke overholder en valideringsregel, vi har defineret, vil du se noget som dette:
+Hvis du nu trykker på *Registrer* knappen, og et felt ikke overholder en af de valideringsregler, vi har defineret, vil du se noget som dette:
 
 ![Skærmbillede, der viser valideringsfejl ved forsøg på at indsende formularen](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.da.png)
 
-Validering som denne, der udføres *før* data sendes til serveren, kaldes **klient-side** validering. Men bemærk, at det ikke altid er muligt at udføre alle tjek uden at sende data. For eksempel kan vi her ikke kontrollere, om en konto allerede eksisterer med samme brugernavn, uden at sende en forespørgsel til serveren. Yderligere validering, der udføres på serveren, kaldes **server-side** validering.
+Validering som denne, der udføres *før* nogen data sendes til serveren, kaldes **klient-side** validering. Men bemærk, at det ikke altid er muligt at udføre alle tjek uden at sende data. For eksempel kan vi her ikke tjekke, om en konto allerede eksisterer med samme brugernavn, uden at sende en forespørgsel til serveren. Yderligere validering, der udføres på serveren, kaldes **server-side** validering.
 
-Normalt skal begge implementeres, og mens brugen af klient-side validering forbedrer brugeroplevelsen ved at give øjeblikkelig feedback til brugeren, er server-side validering afgørende for at sikre, at de brugerdata, du arbejder med, er korrekte og sikre.
+Normalt skal begge implementeres, og selvom brugen af klient-side validering forbedrer brugeroplevelsen ved at give øjeblikkelig feedback til brugeren, er server-side validering afgørende for at sikre, at de brugerdata, du arbejder med, er korrekte og sikre.
 
 ---
 
 ## 🚀 Udfordring
 
-Vis en fejlmeddelelse i HTML, hvis brugeren allerede eksisterer.
+Vis en fejlmeddelelse i HTML'en, hvis brugeren allerede eksisterer.
 
 Her er et eksempel på, hvordan den endelige login-side kan se ud efter lidt styling:
 
@@ -310,4 +310,4 @@ Udviklere er blevet meget kreative med deres formularopbygning, især når det g
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at opnå nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

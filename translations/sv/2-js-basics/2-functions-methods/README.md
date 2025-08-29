@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4612bbb9ace984f374fcc80e3e035ad",
-  "translation_date": "2025-08-26T21:43:38+00:00",
+  "original_hash": "92e136090efc4341b1d51c37924c1802",
+  "translation_date": "2025-08-29T07:56:16+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "sv"
 }
 -->
-# JavaScript Grunder: Metoder och Funktioner
+# JavaScript-grunder: Metoder och Funktioner
 
-![JavaScript Grunder - Funktioner](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.sv.png)
+![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.sv.png)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz före föreläsning
-[Quiz före föreläsning](https://ff-quizzes.netlify.app/web/quiz/9)
+[Quiz före föreläsning](https://ff-quizzes.netlify.app)
 
 När vi tänker på att skriva kod vill vi alltid säkerställa att vår kod är läsbar. Även om det kan låta motsägelsefullt, läses kod många fler gånger än den skrivs. Ett av de viktigaste verktygen i en utvecklares verktygslåda för att säkerställa underhållbar kod är **funktionen**.
 
@@ -25,7 +25,7 @@ När vi tänker på att skriva kod vill vi alltid säkerställa att vår kod är
 
 ## Funktioner
 
-I grunden är en funktion ett kodblock som vi kan köra på begäran. Detta är perfekt för scenarier där vi behöver utföra samma uppgift flera gånger; istället för att duplicera logiken på flera platser (vilket skulle göra det svårt att uppdatera när det behövs), kan vi centralisera den på ett ställe och anropa den när vi behöver utföra operationen – du kan till och med anropa funktioner från andra funktioner!
+I grunden är en funktion ett kodblock som vi kan köra på begäran. Detta är perfekt för scenarier där vi behöver utföra samma uppgift flera gånger; istället för att duplicera logiken på flera ställen (vilket skulle göra det svårt att uppdatera när det behövs), kan vi centralisera den på ett ställe och anropa den när vi behöver utföra operationen – du kan till och med anropa funktioner från andra funktioner!
 
 Lika viktigt är möjligheten att namnge en funktion. Även om det kan verka trivialt, ger namnet ett snabbt sätt att dokumentera en kodsektion. Du kan tänka på det som en etikett på en knapp. Om jag klickar på en knapp som det står "Avbryt timer" på, vet jag att den kommer att stoppa klockan.
 
@@ -39,7 +39,7 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Om jag ville skapa en funktion för att visa en hälsning, skulle den kunna se ut så här:
+Om jag ville skapa en funktion för att visa en hälsning, skulle det kunna se ut så här:
 
 ```javascript
 function displayGreeting() {
@@ -54,7 +54,7 @@ När vi vill anropa (eller köra) vår funktion använder vi namnet på funktion
 displayGreeting();
 ```
 
-> **NOTE:** Det finns en speciell typ av funktion som kallas för en **metod**, som du redan har använt! Faktum är att vi såg detta i vårt exempel ovan när vi använde `console.log`. Det som skiljer en metod från en funktion är att en metod är kopplad till ett objekt (som `console` i vårt exempel), medan en funktion är fristående. Många utvecklare använder dessa termer omväxlande.
+> **NOTE:** Det finns en speciell typ av funktion som kallas för en **metod**, som du redan har använt! Faktum är att vi såg detta i vårt exempel ovan när vi använde `console.log`. Det som skiljer en metod från en funktion är att en metod är kopplad till ett objekt (`console` i vårt exempel), medan en funktion är fristående. Många utvecklare använder dessa termer omväxlande.
 
 ### Bästa praxis för funktioner
 
@@ -68,7 +68,7 @@ Det finns några bästa praxis att tänka på när du skapar funktioner:
 
 För att göra en funktion mer återanvändbar vill du ofta skicka information till den. Om vi tittar på vårt exempel `displayGreeting` ovan, kommer det bara att visa **Hello, world!**. Inte den mest användbara funktionen man kan skapa. Om vi vill göra den lite mer flexibel, som att låta någon specificera namnet på personen som ska hälsas, kan vi lägga till en **parameter**. En parameter (ibland kallad ett **argument**) är ytterligare information som skickas till en funktion.
 
-Parametrar listas i definitionsdelen inom parentes och är kommaseparerade, som så här:
+Parametrar listas i definitionsdelen inom parentes och är kommaseparerade enligt följande:
 
 ```javascript
 function name(param, param2, param3) {
@@ -85,7 +85,7 @@ function displayGreeting(name) {
 }
 ```
 
-När vi vill anropa vår funktion och skicka in parametern, specificerar vi den inom parentes.
+När vi vill anropa vår funktion och skicka in parametern specificerar vi den inom parentes.
 
 ```javascript
 displayGreeting('Christopher');
@@ -94,7 +94,7 @@ displayGreeting('Christopher');
 
 ## Standardvärden
 
-Vi kan göra vår funktion ännu mer flexibel genom att lägga till fler parametrar. Men vad händer om vi inte vill kräva att varje värde anges? Om vi fortsätter med vårt hälsningsexempel kan vi låta namnet vara obligatoriskt (vi behöver veta vem vi hälsar på), men vi vill tillåta att själva hälsningen anpassas vid behov. Om någon inte vill anpassa den, tillhandahåller vi ett standardvärde istället. För att tilldela ett standardvärde till en parameter, sätter vi det på samma sätt som vi tilldelar ett värde till en variabel - `parameterName = 'defaultValue'`. För att se ett fullständigt exempel:
+Vi kan göra vår funktion ännu mer flexibel genom att lägga till fler parametrar. Men vad händer om vi inte vill kräva att varje värde specificeras? Om vi fortsätter med vårt hälsningsexempel kan vi låta namnet vara obligatoriskt (vi behöver veta vem vi hälsar på), men vi vill tillåta att själva hälsningen anpassas vid behov. Om någon inte vill anpassa den, tillhandahåller vi ett standardvärde istället. För att tilldela ett standardvärde till en parameter, sätter vi det på samma sätt som vi tilldelar ett värde till en variabel - `parameterName = 'defaultValue'`. För att se ett fullständigt exempel:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -118,7 +118,7 @@ Hittills har funktionen vi byggt alltid skickat utdata till [konsolen](https://d
 
 Vi kan göra detta genom att använda ett **returvärde**. Ett returvärde returneras av funktionen och kan lagras i en variabel precis som vi kan lagra ett bokstavligt värde som en sträng eller ett nummer.
 
-Om en funktion returnerar något används nyckelordet `return`. Nyckelordet `return` förväntar sig ett värde eller en referens till det som returneras, som så här:
+Om en funktion returnerar något används nyckelordet `return`. Nyckelordet `return` förväntar sig ett värde eller en referens till vad som returneras enligt följande:
 
 ```javascript
 return myVariable;
@@ -157,9 +157,9 @@ setTimeout(displayDone, 3000);
 
 ### Anonyma funktioner
 
-Låt oss titta närmare på vad vi har byggt. Vi skapar en funktion med ett namn som bara kommer att användas en gång. När vår applikation blir mer komplex kan vi se oss själva skapa många funktioner som bara kommer att anropas en gång. Detta är inte idealiskt. Som det visar sig behöver vi inte alltid ge ett namn!
+Låt oss titta närmare på vad vi har byggt. Vi skapar en funktion med ett namn som kommer att användas en gång. När vår applikation blir mer komplex kan vi se oss själva skapa många funktioner som bara kommer att anropas en gång. Detta är inte idealiskt. Som det visar sig behöver vi inte alltid ge ett namn!
 
-När vi skickar en funktion som en parameter kan vi hoppa över att skapa en i förväg och istället bygga en som en del av parametern. Vi använder samma nyckelord `function`, men bygger den som en parameter.
+När vi skickar en funktion som en parameter kan vi hoppa över att skapa en i förväg och istället bygga en som en del av parametern. Vi använder samma nyckelord `function`, men istället bygger vi den som en parameter.
 
 Låt oss skriva om koden ovan för att använda en anonym funktion:
 
@@ -171,11 +171,11 @@ setTimeout(function() {
 
 Om du kör vår nya kod kommer du att märka att vi får samma resultat. Vi har skapat en funktion, men behövde inte ge den ett namn!
 
-### Fet-pil-funktioner
+### Fetpilfunktioner
 
-En genväg som är vanlig i många programmeringsspråk (inklusive JavaScript) är möjligheten att använda det som kallas en **pil** eller **fet-pil**-funktion. Den använder en speciell indikator `=>`, som ser ut som en pil - därav namnet! Genom att använda `=>` kan vi hoppa över nyckelordet `function`.
+En genväg som är vanlig i många programmeringsspråk (inklusive JavaScript) är möjligheten att använda det som kallas en **arrow** eller **fetpil**-funktion. Den använder en speciell indikator `=>`, som ser ut som en pil - därav namnet! Genom att använda `=>` kan vi hoppa över nyckelordet `function`.
 
-Låt oss skriva om vår kod en gång till för att använda en fet-pil-funktion:
+Låt oss skriva om vår kod en gång till för att använda en fetpilfunktion:
 
 ```javascript
 setTimeout(() => {
@@ -183,18 +183,18 @@ setTimeout(() => {
 }, 3000);
 ```
 
-### När ska man använda varje strategi
+### När ska man använda vilken strategi
 
-Du har nu sett att vi har tre sätt att skicka en funktion som en parameter och kanske undrar när du ska använda vilket. Om du vet att du kommer att använda funktionen mer än en gång, skapa den som vanligt. Om du bara kommer att använda den på ett ställe är det generellt bäst att använda en anonym funktion. Om du ska använda en fet-pil-funktion eller den mer traditionella `function`-syntaxen är upp till dig, men du kommer att märka att de flesta moderna utvecklare föredrar `=>`.
+Du har nu sett att vi har tre sätt att skicka en funktion som en parameter och kanske undrar när man ska använda vilken. Om du vet att du kommer att använda funktionen mer än en gång, skapa den som vanligt. Om du bara kommer att använda den på ett ställe är det generellt bäst att använda en anonym funktion. Om du ska använda en fetpilfunktion eller den mer traditionella `function`-syntaxen är upp till dig, men du kommer att märka att de flesta moderna utvecklare föredrar `=>`.
 
 ---
 
 ## 🚀 Utmaning
 
-Kan du formulera skillnaden mellan funktioner och metoder i en mening? Försök!
+Kan du förklara skillnaden mellan funktioner och metoder i en mening? Försök!
 
 ## Quiz efter föreläsning
-[Quiz efter föreläsning](https://ff-quizzes.netlify.app/web/quiz/10)
+[Quiz efter föreläsning](https://ff-quizzes.netlify.app)
 
 ## Granskning & Självstudier
 
@@ -207,4 +207,4 @@ Det är värt att [läsa lite mer om pilfunktioner](https://developer.mozilla.or
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

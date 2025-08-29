@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-27T22:59:25+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T09:14:54+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "id"
 }
@@ -18,11 +18,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Pengantar
 
-CSS, atau Cascading Style Sheets, menyelesaikan masalah penting dalam pengembangan web: bagaimana membuat situs web Anda terlihat menarik. Memberikan gaya pada aplikasi Anda membuatnya lebih mudah digunakan dan terlihat lebih bagus; Anda juga dapat menggunakan CSS untuk menciptakan Desain Web Responsif (RWD) - memungkinkan aplikasi Anda terlihat baik di berbagai ukuran layar. CSS tidak hanya tentang membuat aplikasi Anda terlihat menarik; spesifikasinya mencakup animasi dan transformasi yang dapat memungkinkan interaksi yang canggih untuk aplikasi Anda. Kelompok Kerja CSS membantu menjaga spesifikasi CSS terkini; Anda dapat mengikuti pekerjaan mereka di [situs World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
+CSS, atau Cascading Style Sheets, menyelesaikan masalah penting dalam pengembangan web: bagaimana membuat situs web Anda terlihat menarik. Memberikan gaya pada aplikasi Anda membuatnya lebih mudah digunakan dan lebih menarik; Anda juga dapat menggunakan CSS untuk menciptakan Desain Web Responsif (RWD) - memungkinkan aplikasi Anda terlihat bagus tidak peduli ukuran layar tempat mereka ditampilkan. CSS tidak hanya tentang membuat aplikasi Anda terlihat menarik; spesifikasinya mencakup animasi dan transformasi yang dapat memungkinkan interaksi canggih untuk aplikasi Anda. Kelompok Kerja CSS membantu menjaga spesifikasi CSS terkini; Anda dapat mengikuti pekerjaan mereka di [situs World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
 
 > Perlu diingat, CSS adalah bahasa yang terus berkembang, seperti halnya semua hal di web, dan tidak semua browser mendukung bagian spesifikasi yang lebih baru. Selalu periksa implementasi Anda dengan berkonsultasi di [CanIUse.com](https://caniuse.com).
 
-Dalam pelajaran ini, kita akan menambahkan gaya pada terrarium online kita dan mempelajari lebih lanjut tentang beberapa konsep CSS: cascade, inheritance, penggunaan selector, positioning, dan menggunakan CSS untuk membangun tata letak. Dalam proses ini, kita akan membuat tata letak terrarium dan menciptakan terrarium itu sendiri.
+Dalam pelajaran ini, kita akan menambahkan gaya pada terrarium online kita dan mempelajari lebih lanjut tentang beberapa konsep CSS: cascade, inheritance, serta penggunaan selector, positioning, dan menggunakan CSS untuk membangun tata letak. Dalam proses ini, kita akan membuat tata letak terrarium dan membangun terrarium itu sendiri.
 
 ### Prasyarat
 
@@ -31,7 +31,7 @@ Anda harus memiliki HTML untuk terrarium Anda yang sudah dibuat dan siap untuk d
 > Tonton video
 
 > 
-> [![Video dasar Git dan GitHub](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
+> [![Video dasar-dasar Git dan GitHub](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
 
 ### Tugas
 
@@ -45,11 +45,11 @@ Di folder terrarium Anda, buat file baru bernama `style.css`. Impor file tersebu
 
 ## Cascade
 
-Cascading Style Sheets menggabungkan ide bahwa gaya 'mengalir' sehingga penerapan gaya dipandu oleh prioritasnya. Gaya yang ditetapkan oleh penulis situs web memiliki prioritas lebih tinggi daripada yang ditetapkan oleh browser. Gaya yang ditetapkan 'inline' memiliki prioritas lebih tinggi daripada yang ditetapkan dalam file gaya eksternal.
+Cascading Style Sheets menggabungkan ide bahwa gaya 'mengalir' sedemikian rupa sehingga penerapan gaya dipandu oleh prioritasnya. Gaya yang ditetapkan oleh pembuat situs web memiliki prioritas lebih tinggi daripada yang ditetapkan oleh browser. Gaya yang ditetapkan 'inline' memiliki prioritas lebih tinggi daripada yang ditetapkan dalam file gaya eksternal.
 
 ### Tugas
 
-Tambahkan gaya inline "color: red" pada tag `<h1>` Anda:
+Tambahkan gaya inline "color: red" ke tag `<h1>` Anda:
 
 ```HTML
 <h1 style="color: red">My Terrarium</h1>
@@ -69,7 +69,7 @@ h1 {
 
 ## Inheritance
 
-Gaya diwarisi dari gaya leluhur ke keturunan, sehingga elemen yang bersarang mewarisi gaya dari elemen induknya.
+Gaya diwarisi dari gaya leluhur ke keturunan, sehingga elemen yang bersarang mewarisi gaya dari induknya.
 
 ### Tugas
 
@@ -106,7 +106,7 @@ h1 {
 }
 ```
 
-Cara memberi gaya pada tag ini memberi Anda kontrol atas elemen unik, tetapi Anda perlu mengontrol gaya banyak tanaman di terrarium Anda. Untuk melakukannya, Anda perlu memanfaatkan selector CSS.
+Cara memberi gaya pada tag ini memberi Anda kontrol atas elemen unik, tetapi Anda perlu mengontrol gaya banyak tanaman di terrarium Anda. Untuk melakukan itu, Anda perlu memanfaatkan selector CSS.
 
 ### Ids
 
@@ -134,7 +134,7 @@ Tambahkan beberapa gaya untuk menata kontainer kiri dan kanan. Karena hanya ada 
 }
 ```
 
-Di sini, Anda telah menempatkan kontainer ini dengan positioning absolut di sisi kiri dan kanan layar, dan menggunakan persentase untuk lebar mereka sehingga mereka dapat menyesuaikan untuk layar ponsel kecil.
+Di sini, Anda telah menempatkan kontainer ini dengan posisi absolut di sisi kiri dan kanan layar, dan menggunakan persentase untuk lebar mereka sehingga mereka dapat menyesuaikan untuk layar ponsel kecil.
 
 ✅ Kode ini cukup berulang, sehingga tidak "DRY" (Don't Repeat Yourself); bisakah Anda menemukan cara yang lebih baik untuk memberi gaya pada id ini, mungkin dengan id dan class? Anda perlu mengubah markup dan merombak CSS:
 
@@ -171,17 +171,17 @@ Tambahkan kode berikut ke file `style.css` Anda:
 }
 ```
 
-Yang perlu diperhatikan dalam cuplikan ini adalah campuran positioning relatif dan absolut, yang akan kita bahas di bagian berikutnya. Perhatikan cara tinggi ditangani dengan persentase:
+Yang perlu diperhatikan dalam cuplikan ini adalah campuran posisi relatif dan absolut, yang akan kita bahas di bagian berikutnya. Perhatikan cara tinggi ditangani dengan persentase:
 
 Anda menetapkan tinggi pemegang tanaman ke 13%, angka yang baik untuk memastikan semua tanaman ditampilkan di setiap kontainer vertikal tanpa perlu menggulir.
 
-Anda mengatur pemegang tanaman untuk bergerak ke kiri agar tanaman lebih terpusat dalam kontainer mereka. Gambar memiliki latar belakang transparan yang besar sehingga membuatnya lebih mudah untuk diseret, sehingga perlu didorong ke kiri agar lebih pas di layar.
+Anda mengatur pemegang tanaman untuk bergerak ke kiri agar tanaman lebih terpusat di dalam kontainer mereka. Gambar memiliki latar belakang transparan yang besar sehingga membuatnya lebih mudah untuk diseret, sehingga perlu didorong ke kiri agar lebih pas di layar.
 
-Kemudian, tanaman itu sendiri diberi lebar maksimum 150%. Ini memungkinkan tanaman untuk mengecil saat browser mengecil. Cobalah mengubah ukuran browser Anda; tanaman tetap berada di kontainer mereka tetapi mengecil untuk menyesuaikan.
+Kemudian, tanaman itu sendiri diberi lebar maksimum 150%. Ini memungkinkan tanaman untuk menyesuaikan ukurannya saat browser menyesuaikan ukurannya. Cobalah mengubah ukuran browser Anda; tanaman tetap berada di kontainer mereka tetapi menyesuaikan ukurannya agar pas.
 
-Yang juga perlu diperhatikan adalah penggunaan z-index, yang mengontrol ketinggian relatif elemen (sehingga tanaman duduk di atas kontainer dan tampak berada di dalam terrarium).
+Yang juga perlu diperhatikan adalah penggunaan z-index, yang mengontrol ketinggian relatif suatu elemen (sehingga tanaman duduk di atas kontainer dan tampak berada di dalam terrarium).
 
-✅ Mengapa Anda membutuhkan pemegang tanaman dan selector CSS tanaman?
+✅ Mengapa Anda membutuhkan selector CSS untuk pemegang tanaman dan tanaman?
 
 ## CSS Positioning
 
@@ -191,11 +191,11 @@ Elemen yang diposisikan secara absolut diposisikan relatif terhadap leluhur yang
 
 Elemen yang diposisikan secara relatif diposisikan berdasarkan arahan CSS untuk menyesuaikan penempatannya dari posisi awalnya.
 
-Dalam contoh kita, `plant-holder` adalah elemen yang diposisikan secara relatif yang diposisikan dalam kontainer yang diposisikan secara absolut. Perilaku yang dihasilkan adalah bahwa kontainer bilah sisi dipasang di kiri dan kanan, dan `plant-holder` bersarang, menyesuaikan dirinya dalam bilah sisi, memberikan ruang untuk tanaman ditempatkan dalam baris vertikal.
+Dalam contoh kita, `plant-holder` adalah elemen yang diposisikan secara relatif yang diposisikan di dalam kontainer yang diposisikan secara absolut. Perilaku yang dihasilkan adalah bahwa kontainer bilah sisi dipasang di kiri dan kanan, dan `plant-holder` bersarang, menyesuaikan dirinya di dalam bilah sisi, memberikan ruang untuk tanaman ditempatkan dalam baris vertikal.
 
-> Tanaman itu sendiri juga memiliki positioning absolut, yang diperlukan untuk membuatnya dapat diseret, seperti yang akan Anda temukan dalam pelajaran berikutnya.
+> Tanaman itu sendiri juga memiliki posisi absolut, yang diperlukan untuk membuatnya dapat diseret, seperti yang akan Anda temukan dalam pelajaran berikutnya.
 
-✅ Cobalah bereksperimen dengan mengubah jenis positioning kontainer samping dan `plant-holder`. Apa yang terjadi?
+✅ Bereksperimenlah dengan mengganti jenis posisi kontainer samping dan `plant-holder`. Apa yang terjadi?
 
 ## CSS Layouts
 
@@ -250,9 +250,9 @@ Pertama, beri gaya pada anak-anak div `.terrarium` sebagai persegi panjang melen
 }
 ```
 
-Perhatikan penggunaan persentase di sini. Jika Anda mengecilkan browser Anda, Anda dapat melihat bagaimana toples juga mengecil. Perhatikan juga persentase lebar dan tinggi untuk elemen toples dan bagaimana setiap elemen diposisikan secara absolut di tengah, dipasang ke bagian bawah viewport.
+Perhatikan penggunaan persentase di sini. Jika Anda mengubah ukuran browser Anda, Anda dapat melihat bagaimana toples juga menyesuaikan ukurannya. Perhatikan juga persentase lebar dan tinggi untuk elemen toples dan bagaimana setiap elemen diposisikan secara absolut di tengah, dipasang di bagian bawah viewport.
 
-Kami juga menggunakan `rem` untuk border-radius, panjang relatif font. Baca lebih lanjut tentang jenis pengukuran relatif ini di [spesifikasi CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
+Kami juga menggunakan `rem` untuk border-radius, panjang yang relatif terhadap font. Baca lebih lanjut tentang jenis pengukuran relatif ini di [spesifikasi CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
 ✅ Cobalah mengubah warna dan opasitas toples dibandingkan dengan tanah. Apa yang terjadi? Mengapa?
 
@@ -260,7 +260,7 @@ Kami juga menggunakan `rem` untuk border-radius, panjang relatif font. Baca lebi
 
 ## 🚀Tantangan
 
-Tambahkan 'gelembung' kilau ke area bawah kiri toples untuk membuatnya terlihat lebih seperti kaca. Anda akan memberi gaya pada `.jar-glossy-long` dan `.jar-glossy-short` agar terlihat seperti kilau yang terpantul. Berikut tampilannya:
+Tambahkan kilau 'bubble' di area kiri bawah toples untuk membuatnya terlihat lebih seperti kaca. Anda akan memberi gaya pada `.jar-glossy-long` dan `.jar-glossy-short` agar terlihat seperti kilau yang terpantul. Berikut tampilannya:
 
 ![terrarium selesai](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.id.png)
 
@@ -281,4 +281,4 @@ CSS tampaknya sederhana, tetapi ada banyak tantangan saat mencoba memberikan gay
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

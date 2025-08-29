@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e10f168beac4e7b05e30e0eb5c92bf11",
-  "translation_date": "2025-08-26T22:36:04+00:00",
+  "original_hash": "a7587943d38d095de8613e1b508609f5",
+  "translation_date": "2025-08-29T08:33:15+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "no"
 }
@@ -21,9 +21,9 @@ I denne leksjonen skal du kalle en API ved å sende inn skjemaet til nettleserut
 
 ### Sett opp elementene som skal manipuleres i utvidelsen:
 
-På dette tidspunktet har du laget HTML-en for skjemaet og `<div>`-elementet for resultatene i nettleserutvidelsen din. Fra nå av må du jobbe i `/src/index.js`-filen og bygge utvidelsen din steg for steg. Se [forrige leksjon](../1-about-browsers/README.md) for å sette opp prosjektet ditt og byggeprosessen.
+På dette tidspunktet har du laget HTML-en for skjemaet og `<div>`-elementet for resultatene i nettleserutvidelsen din. Fra nå av må du jobbe i `/src/index.js`-filen og bygge utvidelsen din steg for steg. Se tilbake på [forrige leksjon](../1-about-browsers/README.md) for å sette opp prosjektet ditt og lære om byggeprosessen.
 
-Jobb i `index.js`-filen din, og start med å opprette noen `const`-variabler for å holde verdiene som er knyttet til ulike felt:
+Jobb i `index.js`-filen din, og start med å opprette noen `const`-variabler for å holde verdiene knyttet til ulike felt:
 
 ```JavaScript
 // form fields
@@ -45,7 +45,7 @@ Alle disse feltene refereres til via deres CSS-klasser, slik du satte det opp i 
 
 ### Legg til lyttere
 
-Deretter legger du til event-lyttere for skjemaet og tilbakestillingsknappen som nullstiller skjemaet, slik at noe skjer når en bruker sender inn skjemaet eller klikker på tilbakestillingsknappen. Legg også til kallet for å initialisere appen nederst i filen:
+Deretter legger du til event-lyttere for skjemaet og tilbakestillingsknappen som nullstiller skjemaet. Dette sikrer at noe skjer når en bruker sender inn skjemaet eller klikker på tilbakestillingsknappen. Legg også til kallet for å initialisere appen nederst i filen:
 
 ```JavaScript
 form.addEventListener('submit', (e) => handleSubmit(e));
@@ -97,22 +97,22 @@ I denne funksjonen er det noe interessant logikk. Når du leser gjennom den, kan
 
 - To `const` opprettes for å sjekke om brukeren har lagret en APIKey og regionkode i lokal lagring.
 - Hvis en av disse er null, vis skjemaet ved å endre stilen til 'block'.
-- Skjul resultatene, lastingen og clearBtn, og sett eventuelle feilmeldinger til en tom streng.
+- Skjul resultatene, lasteskjermen og clearBtn, og sett eventuell feilmeldingstekst til en tom streng.
 - Hvis det finnes en nøkkel og en region, start en rutine for å:
   - Kalle API-en for å hente data om karbonbruk.
   - Skjule resultatområdet.
   - Skjule skjemaet.
   - Vise tilbakestillingsknappen.
 
-Før du går videre, er det nyttig å lære om et veldig viktig konsept som er tilgjengelig i nettlesere: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage er en nyttig måte å lagre strenger i nettleseren som et `key-value`-par. Denne typen nettlagring kan manipuleres av JavaScript for å håndtere data i nettleseren. LocalStorage utløper ikke, mens SessionStorage, en annen type nettlagring, tømmes når nettleseren lukkes. De ulike typene lagring har fordeler og ulemper.
+Før du går videre, er det nyttig å lære om et veldig viktig konsept som er tilgjengelig i nettlesere: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage er en nyttig måte å lagre strenger i nettleseren som et `key-value`-par. Denne typen nettlagring kan manipuleres med JavaScript for å håndtere data i nettleseren. LocalStorage utløper ikke, mens SessionStorage, en annen type nettlagring, tømmes når nettleseren lukkes. De ulike typene lagring har fordeler og ulemper.
 
-> Merk - nettleserutvidelsen din har sin egen lokale lagring; hovedvinduet i nettleseren er en annen instans og oppfører seg separat.
+> Merk - nettleserutvidelsen din har sin egen lokale lagring; hovednettleservinduet er en annen instans og oppfører seg separat.
 
-Du setter APIKey til å ha en strengverdi, for eksempel, og du kan se at den er satt i Edge ved å "inspisere" en nettside (du kan høyreklikke i nettleseren for å inspisere) og gå til Applikasjoner-fanen for å se lagringen.
+Du setter APIKey til å ha en strengverdi, for eksempel, og du kan se at den er satt i Edge ved å "inspisere" en nettside (høyreklikk i nettleseren for å inspisere) og gå til Applikasjoner-fanen for å se lagringen.
 
 ![Local storage-panelet](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.no.png)
 
-✅ Tenk på situasjoner der du IKKE vil lagre noen data i LocalStorage. Generelt er det en dårlig idé å plassere API-nøkler i LocalStorage! Kan du se hvorfor? I vårt tilfelle, siden appen vår kun er for læring og ikke vil bli distribuert til en app-butikk, vil vi bruke denne metoden.
+✅ Tenk på situasjoner der du IKKE vil lagre noen data i LocalStorage. Generelt er det en dårlig idé å plassere API-nøkler i LocalStorage! Kan du se hvorfor? I vårt tilfelle, siden appen vår kun er for læring og ikke skal distribueres til en appbutikk, vil vi bruke denne metoden.
 
 Legg merke til at du bruker Web API for å manipulere LocalStorage, enten ved å bruke `getItem()`, `setItem()` eller `removeItem()`. Det støttes bredt på tvers av nettlesere.
 
@@ -129,7 +129,7 @@ function handleSubmit(e) {
 }
 ```
 
-✅ Frisk opp hukommelsen - HTML-en du satte opp i forrige leksjon har to input-felt hvis `values` fanges opp via `const`-ene du satte opp øverst i filen, og de er begge `required`, slik at nettleseren hindrer brukere i å legge inn nullverdier.
+✅ Frisk opp hukommelsen - HTML-en du satte opp i forrige leksjon har to input-felt hvis `values` fanges opp via `const`-variablene du satte opp øverst i filen, og de er begge `required`, slik at nettleseren hindrer brukere i å legge inn nullverdier.
 
 ### Sett opp brukeren
 
@@ -153,7 +153,7 @@ Denne funksjonen viser en lastemelding mens API-en kalles. På dette tidspunktet
 
 Endelig er det tid for å spørre API-en!
 
-Før vi går videre, bør vi diskutere API-er. API-er, eller [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), er et kritisk element i verktøykassen til en webutvikler. De gir standardiserte måter for programmer å samhandle og grensesnitt med hverandre. For eksempel, hvis du bygger et nettsted som trenger å spørre en database, kan det hende at noen har laget en API for deg å bruke. Selv om det finnes mange typer API-er, er en av de mest populære en [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Før vi går videre, bør vi diskutere API-er. API-er, eller [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), er et kritisk element i verktøykassen til en webutvikler. De gir standardiserte måter for programmer å samhandle og grensesnitt med hverandre. For eksempel, hvis du bygger et nettsted som trenger å spørre en database, kan noen ha laget en API for deg å bruke. Selv om det finnes mange typer API-er, er en av de mest populære en [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
 ✅ Begrepet 'REST' står for 'Representational State Transfer' og innebærer bruk av ulike konfigurerte URL-er for å hente data. Gjør litt research på de ulike typene API-er som er tilgjengelige for utviklere. Hvilket format appellerer til deg?
 
@@ -220,7 +220,7 @@ Gratulerer! Hvis du bygger utvidelsen din (`npm run build`) og oppdaterer den i 
 
 ## 🚀 Utfordring
 
-Vi har diskutert flere typer API-er så langt i disse leksjonene. Velg en web-API og undersøk i dybden hva den tilbyr. For eksempel, ta en titt på API-er som er tilgjengelige i nettlesere, som [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Hva mener du gjør en API god?
+Vi har diskutert flere typer API-er så langt i disse leksjonene. Velg en web-API og undersøk i dybden hva den tilbyr. For eksempel, ta en titt på API-er som er tilgjengelige i nettlesere, som [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Hva mener du kjennetegner en god API?
 
 ## Quiz etter forelesning
 
@@ -228,7 +228,7 @@ Vi har diskutert flere typer API-er så langt i disse leksjonene. Velg en web-AP
 
 ## Gjennomgang og selvstudium
 
-Du lærte om LocalStorage og API-er i denne leksjonen, begge veldig nyttige for profesjonelle webutviklere. Kan du tenke på hvordan disse to tingene fungerer sammen? Tenk på hvordan du ville arkitektet et nettsted som lagrer elementer som skal brukes av en API.
+Du lærte om LocalStorage og API-er i denne leksjonen, begge svært nyttige for profesjonelle webutviklere. Kan du tenke på hvordan disse to tingene fungerer sammen? Tenk på hvordan du ville arkitektet et nettsted som lagrer elementer som skal brukes av en API.
 
 ## Oppgave
 
@@ -237,4 +237,4 @@ Du lærte om LocalStorage og API-er i denne leksjonen, begge veldig nyttige for 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

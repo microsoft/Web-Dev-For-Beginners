@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-26T23:02:14+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-29T08:27:03+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "no"
 }
 -->
-# Bygg en bankapp del 3: Metoder for å hente og bruke data
+# Bygg en bankapp del 3: Metoder for henting og bruk av data
 
 ## Quiz før forelesning
 
@@ -17,13 +17,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 Kjernen i enhver webapplikasjon er *data*. Data kan ha mange former, men hovedformålet er alltid å vise informasjon til brukeren. Etter hvert som webapplikasjoner blir mer interaktive og komplekse, har måten brukeren får tilgang til og interagerer med informasjon blitt en viktig del av webutvikling.
 
-I denne leksjonen skal vi se hvordan vi kan hente data asynkront fra en server og bruke disse dataene til å vise informasjon på en nettside uten å laste HTML på nytt.
+I denne leksjonen skal vi se hvordan man henter data fra en server asynkront og bruker disse dataene til å vise informasjon på en nettside uten å laste HTML på nytt.
 
 ### Forutsetninger
 
-Du må ha bygget [innloggings- og registreringsskjemaet](../2-forms/README.md) som en del av webapplikasjonen for denne leksjonen. Du må også installere [Node.js](https://nodejs.org) og [kjøre server-APIet](../api/README.md) lokalt for å få kontodata.
+Du må ha bygget [innloggings- og registreringsskjemaet](../2-forms/README.md) som en del av webappen for denne leksjonen. Du må også installere [Node.js](https://nodejs.org) og [kjøre server-APIet](../api/README.md) lokalt for å få kontodata.
 
-Du kan teste at serveren kjører riktig ved å utføre denne kommandoen i terminalen:
+Du kan teste at serveren kjører riktig ved å utføre denne kommandoen i en terminal:
 
 ```sh
 curl http://localhost:5000/api
@@ -38,7 +38,7 @@ Tradisjonelle nettsteder oppdaterer innholdet som vises når brukeren velger en 
 
 ![Oppdateringsflyt i en fler-sides applikasjon](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.no.png)
 
-Da webapplikasjoner begynte å bli mer komplekse og interaktive, dukket en ny teknikk opp kalt [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Denne teknikken lar webapplikasjoner sende og hente data fra en server asynkront ved hjelp av JavaScript, uten å laste HTML-siden på nytt, noe som resulterer i raskere oppdateringer og jevnere brukerinteraksjoner. Når nye data mottas fra serveren, kan den nåværende HTML-siden også oppdateres med JavaScript ved hjelp av [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)-APIet. Over tid har denne tilnærmingen utviklet seg til det som nå kalles en [*Single-Page Application* eller *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+Da webapplikasjoner begynte å bli mer komplekse og interaktive, dukket en ny teknikk opp kalt [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Denne teknikken lar webapper sende og hente data fra en server asynkront ved hjelp av JavaScript, uten å laste HTML-siden på nytt, noe som resulterer i raskere oppdateringer og jevnere brukerinteraksjoner. Når nye data mottas fra serveren, kan den nåværende HTML-siden også oppdateres med JavaScript ved hjelp av [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)-APIet. Over tid har denne tilnærmingen utviklet seg til det som nå kalles en [*Single-Page Application* eller *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
 
 ![Oppdateringsflyt i en enkelt-sides applikasjon](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.no.png)
 
@@ -48,7 +48,7 @@ Da AJAX først ble introdusert, var det eneste APIet tilgjengelig for å hente d
 
 ### Oppgave
 
-I [forrige leksjon](../2-forms/README.md) implementerte vi registreringsskjemaet for å opprette en konto. Nå skal vi legge til kode for å logge inn med en eksisterende konto og hente dataene til denne kontoen. Åpne `app.js`-filen og legg til en ny `login`-funksjon:
+I [forrige leksjon](../2-forms/README.md) implementerte vi registreringsskjemaet for å opprette en konto. Nå skal vi legge til kode for å logge inn med en eksisterende konto og hente dens data. Åpne `app.js`-filen og legg til en ny `login`-funksjon:
 
 ```js
 async function login() {
@@ -57,7 +57,7 @@ async function login() {
 }
 ```
 
-Her starter vi med å hente skjemaelementet med `getElementById()`, og deretter henter vi brukernavnet fra input-feltet med `loginForm.user.value`. Hvert skjemakontroll kan nås via navnet (satt i HTML med `name`-attributtet) som en egenskap av skjemaet.
+Her starter vi med å hente skjemaelementet med `getElementById()`, og deretter henter vi brukernavnet fra input-feltet med `loginForm.user.value`. Hvert skjemaelement kan nås via sitt navn (angitt i HTML med `name`-attributtet) som en egenskap av skjemaet.
 
 På samme måte som vi gjorde for registreringen, skal vi lage en annen funksjon for å utføre en serverforespørsel, men denne gangen for å hente kontodata:
 
@@ -74,7 +74,7 @@ async function getAccount(user) {
 
 Vi bruker `fetch`-APIet for å hente data asynkront fra serveren, men denne gangen trenger vi ingen ekstra parametere annet enn URLen vi skal kalle, siden vi kun henter data. Som standard oppretter `fetch` en [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET)-HTTP-forespørsel, som er det vi ønsker her.
 
-✅ `encodeURIComponent()` er en funksjon som rømmer spesialtegn for URL. Hvilke problemer kan vi få hvis vi ikke kaller denne funksjonen og bruker `user`-verdien direkte i URLen?
+✅ `encodeURIComponent()` er en funksjon som rømmer spesialtegn for URL. Hvilke problemer kan vi få hvis vi ikke kaller denne funksjonen og bruker verdien `user` direkte i URLen?
 
 La oss nå oppdatere `login`-funksjonen vår til å bruke `getAccount`:
 
@@ -95,7 +95,7 @@ async function login() {
 
 Først, siden `getAccount` er en asynkron funksjon, må vi bruke `await`-nøkkelordet for å vente på serverresultatet. Som med enhver serverforespørsel, må vi også håndtere feiltilfeller. Foreløpig legger vi bare til en loggmelding for å vise feilen, og kommer tilbake til dette senere.
 
-Deretter må vi lagre dataene et sted slik at vi senere kan bruke dem til å vise informasjon på dashbordet. Siden `account`-variabelen ikke eksisterer ennå, oppretter vi en global variabel for den øverst i filen vår:
+Deretter må vi lagre dataene et sted slik at vi senere kan bruke dem til å vise informasjonen på dashbordet. Siden variabelen `account` ikke eksisterer ennå, oppretter vi en global variabel for den øverst i filen vår:
 
 ```js
 let account = null;
@@ -118,7 +118,7 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ Visste du at som standard kan du bare kalle server-APIer fra *samme domene og port* som nettsiden du ser på? Dette er en sikkerhetsmekanisme som håndheves av nettlesere. Men vent, webappen vår kjører på `localhost:3000` mens server-APIet kjører på `localhost:5000`, hvorfor fungerer det? Ved å bruke en teknikk kalt [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), er det mulig å utføre cross-origin HTTP-forespørsler hvis serveren legger til spesielle headere i responsen, som tillater unntak for spesifikke domener.
+✅ Visste du at som standard kan du kun kalle server-APIer fra *samme domene og port* som nettsiden du ser på? Dette er en sikkerhetsmekanisme som håndheves av nettlesere. Men vent, webappen vår kjører på `localhost:3000` mens server-APIet kjører på `localhost:5000`, hvorfor fungerer det? Ved å bruke en teknikk kalt [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), er det mulig å utføre HTTP-forespørsler på tvers av opprinnelse hvis serveren legger til spesielle headere i responsen, som tillater unntak for spesifikke domener.
 
 > Lær mer om APIer ved å ta denne [leksjonen](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
 
@@ -136,7 +136,7 @@ Nå som vi har brukerdataene, må vi oppdatere den eksisterende HTMLen for å vi
 
 Før vi går videre til dashbordskjermen, er det én ting vi bør gjøre på *login*-siden. For øyeblikket, hvis du prøver å logge inn med et brukernavn som ikke eksisterer, vises en melding i konsollen, men for en vanlig bruker endres ingenting, og du vet ikke hva som skjer.
 
-La oss legge til et plassholderelement i innloggingsskjemaet der vi kan vise en feilmelding hvis nødvendig. Et godt sted ville være rett før innloggings-`<button>`:
+La oss legge til et plassholderelement i innloggingsskjemaet der vi kan vise en feilmelding hvis nødvendig. Et godt sted vil være rett før innloggings-`<button>`:
 
 ```html
 ...
@@ -234,7 +234,7 @@ Først sjekker vi at vi har kontodataene vi trenger før vi går videre. Derette
 
 > For å gjøre saldoen mer lesbar bruker vi metoden [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) for å vise verdien med 2 desimaler.
 
-Nå må vi kalle `updateDashboard()`-funksjonen vår hver gang dashbordet lastes. Hvis du allerede har fullført [leksjon 1-oppgaven](../1-template-route/assignment.md), bør dette være enkelt, ellers kan du bruke følgende implementering.
+Nå må vi kalle `updateDashboard()`-funksjonen vår hver gang dashbordet lastes. Hvis du allerede har fullført [oppgaven i leksjon 1](../1-template-route/assignment.md), bør dette være enkelt, ellers kan du bruke følgende implementering.
 
 Legg til denne koden på slutten av `updateRoute()`-funksjonen:
 
@@ -244,7 +244,7 @@ if (typeof route.init === 'function') {
 }
 ```
 
-Og oppdater rute-definisjonen med:
+Og oppdater rutedefinisjonen med:
 
 ```js
 const routes = {
@@ -257,7 +257,7 @@ Med denne endringen vil `updateDashboard()`-funksjonen kalles hver gang dashbord
 
 ## Opprett tabellrader dynamisk med HTML-maler
 
-I [første leksjon](../1-template-route/README.md) brukte vi HTML-maler sammen med [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild)-metoden for å implementere navigasjonen i appen vår. Maler kan også være mindre og brukes til å dynamisk fylle repetitive deler av en side.
+I [første leksjon](../1-template-route/README.md) brukte vi HTML-maler sammen med [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild)-metoden for å implementere navigasjonen i appen vår. Maler kan også være mindre og brukes til å dynamisk fylle ut repeterende deler av en side.
 
 Vi skal bruke en lignende tilnærming for å vise listen over transaksjoner i HTML-tabellen.
 
@@ -275,7 +275,7 @@ Legg til en ny mal i HTML-`<body>`:
 </template>
 ```
 
-Denne malen representerer en enkelt tabellrad med de 3 kolonnene vi ønsker å fylle: *dato*, *objekt* og *beløp* for en transaksjon.
+Denne malen representerer en enkelt tabellrad med de 3 kolonnene vi vil fylle ut: *dato*, *objekt* og *beløp* for en transaksjon.
 
 Deretter legger vi til denne `id`-egenskapen til `<tbody>`-elementet i tabellen innenfor dashbordmalen for å gjøre det enklere å finne med JavaScript:
 
@@ -297,7 +297,7 @@ function createTransactionRow(transaction) {
 }
 ```
 
-Denne funksjonen gjør akkurat det navnet antyder: ved å bruke malen vi opprettet tidligere, oppretter den en ny tabellrad og fyller inn innholdet ved hjelp av transaksjonsdata. Vi skal bruke denne i `updateDashboard()`-funksjonen for å fylle tabellen:
+Denne funksjonen gjør akkurat det navnet antyder: ved å bruke malen vi opprettet tidligere, lager den en ny tabellrad og fyller inn innholdet ved hjelp av transaksjonsdata. Vi skal bruke denne i `updateDashboard()`-funksjonen for å fylle ut tabellen:
 
 ```js
 const transactionsRows = document.createDocumentFragment();
@@ -310,7 +310,7 @@ updateElement('transactions', transactionsRows);
 
 Her bruker vi metoden [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) som oppretter et nytt DOM-fragment som vi kan jobbe med, før vi til slutt legger det til HTML-tabellen vår.
 
-Det er fortsatt én ting vi må gjøre før denne koden kan fungere, da `updateElement()`-funksjonen vår for øyeblikket kun støtter tekstinnhold. La oss endre koden litt:
+Det er fortsatt én ting vi må gjøre før denne koden kan fungere, siden `updateElement()`-funksjonen vår for øyeblikket kun støtter tekstinnhold. La oss endre koden litt:
 
 ```js
 function updateElement(id, textOrNode) {
@@ -321,17 +321,17 @@ function updateElement(id, textOrNode) {
 ```
 
 Vi bruker [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-metoden, da den lar oss legge til enten tekst eller [DOM Nodes](https://developer.mozilla.org/docs/Web/API/Node) til et overordnet element, noe som er perfekt for alle våre brukstilfeller.
-Hvis du prøver å bruke `test`-kontoen for å logge inn, bør du nå se en transaksjonsliste på dashbordet 🎉.
+Hvis du prøver å logge inn med `test`-kontoen, bør du nå se en transaksjonsliste på dashbordet 🎉.
 
 ---
 
 ## 🚀 Utfordring
 
-Jobb sammen for å få dashbord-siden til å se ut som en ekte bankapp. Hvis du allerede har stylet appen din, prøv å bruke [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) for å lage et [responsivt design](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) som fungerer godt både på desktop og mobile enheter.
+Jobb sammen for å få dashbord-siden til å se ut som en ekte bankapp. Hvis du allerede har stylet appen din, prøv å bruke [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) for å lage et [responsivt design](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) som fungerer godt både på skrivebord og mobile enheter.
 
 Her er et eksempel på en stylet dashbord-side:
 
-![Skjermbilde av et eksempelresultat for dashbordet etter styling](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.no.png)
+![Skjermbilde av et eksempel på resultatet av dashbordet etter styling](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.no.png)
 
 ## Quiz etter forelesning
 
