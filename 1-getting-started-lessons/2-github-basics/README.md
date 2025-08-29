@@ -146,7 +146,7 @@ Let's say you have a folder locally with some code project and you want to start
    git push -u origin main
    ```
 
-   This sends your commits in your "main" branch to GitHub.
+   This sends your commits in your "main" branch to GitHub. Setting the `upstream` branch including `-u` in the command establishes a link between your local branch and the remote branch, so you can simply use git push or git pull without specifying the branch name in the future. Git will automatically use the upstream branch and  ou you won't need to specify the branch name explicitly in future commands.
 
 2. **To add more changes**. If you want to continue making changes and pushing them to GitHub you’ll just need to use the following three commands:
 
@@ -242,6 +242,17 @@ Let's go through a contributor workflow. Assume the contributor has already _for
    git switch [branch_name]
    git merge main
    ```
+
+   The user can also follow this command to switch to new branch:
+   ```bash
+   git checkout [branch_name]
+   ```
+
+   Alternatively, you can create and switch to branch in one step:
+   ```bash
+   git checkout -b [branch_name]
+   ```
+   The command will create a new branch and immediately switch to the new branch
 
    This will bring in all changes from `main` into your branch and hopefully you can just continue. If not, VS Code will tell you where Git is _confused_ and you just alter the affected files to say which content is the most accurate.
 
