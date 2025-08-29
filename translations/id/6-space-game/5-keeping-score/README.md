@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-27T22:34:33+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T09:10:40+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "id"
 }
@@ -17,7 +17,7 @@ Dalam pelajaran ini, Anda akan belajar cara menambahkan skor ke dalam game dan m
 
 ## Menampilkan teks di layar
 
-Untuk dapat menampilkan skor game di layar, Anda perlu tahu cara meletakkan teks di layar. Caranya adalah dengan menggunakan metode `fillText()` pada objek canvas. Anda juga dapat mengontrol aspek lain seperti font yang digunakan, warna teks, dan bahkan perataan teks (kiri, kanan, tengah). Berikut adalah beberapa kode untuk menggambar teks di layar.
+Untuk dapat menampilkan skor game di layar, Anda perlu tahu cara meletakkan teks di layar. Caranya adalah dengan menggunakan metode `fillText()` pada objek canvas. Anda juga dapat mengontrol aspek lain seperti font yang digunakan, warna teks, dan bahkan perataan teks (kiri, kanan, tengah). Berikut adalah kode untuk menampilkan teks di layar.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -30,14 +30,14 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ## Nyawa, sebagai konsep dalam game
 
-Konsep memiliki nyawa dalam game hanyalah sebuah angka. Dalam konteks game luar angkasa, biasanya diberikan sejumlah nyawa yang berkurang satu per satu saat kapal Anda terkena serangan. Akan lebih menarik jika Anda dapat menampilkan representasi grafis seperti kapal kecil atau hati daripada hanya angka.
+Konsep nyawa dalam game hanyalah sebuah angka. Dalam konteks game luar angkasa, biasanya diberikan sejumlah nyawa yang akan berkurang satu per satu saat kapal Anda terkena serangan. Akan lebih menarik jika Anda dapat menampilkan representasi grafis seperti kapal kecil atau hati daripada hanya angka.
 
 ## Apa yang akan dibuat
 
-Mari tambahkan hal-hal berikut ke dalam game Anda:
+Mari tambahkan hal berikut ke dalam game Anda:
 
-- **Skor game**: Untuk setiap kapal musuh yang dihancurkan, pemain utama harus mendapatkan poin, kami menyarankan 100 poin per kapal. Skor game harus ditampilkan di bagian kiri bawah.
-- **Nyawa**: Kapal Anda memiliki tiga nyawa. Anda kehilangan satu nyawa setiap kali kapal musuh bertabrakan dengan Anda. Skor nyawa harus ditampilkan di bagian kanan bawah dan dibuat dari grafik berikut ![gambar nyawa](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.id.png).
+- **Skor game**: Untuk setiap kapal musuh yang dihancurkan, pemain akan mendapatkan poin. Kami menyarankan 100 poin per kapal. Skor game harus ditampilkan di bagian kiri bawah.
+- **Nyawa**: Kapal Anda memiliki tiga nyawa. Anda kehilangan satu nyawa setiap kali kapal musuh bertabrakan dengan Anda. Skor nyawa harus ditampilkan di bagian kanan bawah dan menggunakan grafik berikut ![gambar nyawa](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.id.png).
 
 ## Langkah yang disarankan
 
@@ -60,11 +60,11 @@ cd your-work
 npm start
 ```
 
-Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka browser dan masukkan alamat tersebut, saat ini seharusnya menampilkan pemain utama dan semua musuh, dan saat Anda menekan tombol panah kiri dan kanan, pemain utama bergerak dan dapat menembak musuh.
+Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka browser dan masukkan alamat tersebut. Saat ini, Anda seharusnya dapat melihat hero dan semua musuh, dan saat Anda menekan tombol panah kiri dan kanan, hero akan bergerak dan dapat menembak musuh.
 
 ### Tambahkan kode
 
-1. **Salin aset yang diperlukan** dari folder `solution/assets/` ke folder `your-work`; Anda akan menambahkan aset `life.png`. Tambahkan lifeImg ke fungsi window.onload:
+1. **Salin aset yang diperlukan** dari folder `solution/assets/` ke folder `your-work`; Anda akan menambahkan aset `life.png`. Tambahkan `lifeImg` ke fungsi window.onload: 
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
@@ -80,7 +80,7 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
     eventEmitter = new EventEmitter();
     ```
   
-2. **Tambahkan variabel**. Tambahkan kode yang merepresentasikan total skor (0) dan nyawa yang tersisa (3), tampilkan skor ini di layar.
+2. **Tambahkan variabel**. Tambahkan kode yang merepresentasikan total skor (0) dan nyawa yang tersisa (3), lalu tampilkan skor ini di layar.
 
 3. **Perluas fungsi `updateGameObjects()`**. Perluas fungsi `updateGameObjects()` untuk menangani tabrakan dengan musuh:
 
@@ -128,7 +128,7 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
 
         ```
 
-   1. **Tambahkan metode ke Game loop**. Pastikan Anda menambahkan fungsi-fungsi ini ke fungsi window.onload di bawah `updateGameObjects()`:
+   1. **Tambahkan metode ke Game loop**. Pastikan Anda menambahkan fungsi ini ke fungsi window.onload di bawah `updateGameObjects()`:
 
         ```javascript
         drawPoints();
@@ -137,7 +137,7 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
 
 1. **Terapkan aturan game**. Terapkan aturan game berikut:
 
-   1. **Untuk setiap tabrakan antara pemain utama dan musuh**, kurangi satu nyawa.
+   1. **Untuk setiap tabrakan antara hero dan musuh**, kurangi satu nyawa.
    
       Perluas kelas `Hero` untuk melakukan pengurangan ini:
 
@@ -160,7 +160,7 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
           }
         ```
 
-        Tambahkan fungsi-fungsi ini ke Collision Event Emitters:
+        Tambahkan fungsi ini ke Collision Event Emitters:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,9 +175,9 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
         });
         ```
 
-✅ Lakukan sedikit riset untuk menemukan game lain yang dibuat menggunakan JavaScript/Canvas. Apa saja ciri-ciri umum mereka?
+✅ Lakukan sedikit penelitian untuk menemukan game lain yang dibuat menggunakan JavaScript/Canvas. Apa saja ciri-ciri umum mereka?
 
-Pada akhir pekerjaan ini, Anda seharusnya dapat melihat kapal kecil 'nyawa' di bagian kanan bawah, poin di bagian kiri bawah, dan Anda akan melihat jumlah nyawa berkurang saat Anda bertabrakan dengan musuh serta poin bertambah saat Anda menembak musuh. Bagus sekali! Game Anda hampir selesai.
+Pada akhir pekerjaan ini, Anda seharusnya dapat melihat kapal kecil 'nyawa' di bagian kanan bawah, poin di bagian kiri bawah, dan Anda akan melihat jumlah nyawa berkurang saat Anda bertabrakan dengan musuh serta poin bertambah saat Anda menembak musuh. Kerja bagus! Game Anda hampir selesai.
 
 ---
 
@@ -200,4 +200,4 @@ Teliti beberapa cara untuk menambah dan mengurangi skor game serta nyawa. Ada be
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

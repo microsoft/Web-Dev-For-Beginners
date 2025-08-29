@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46a0639e719b9cf1dfd062aa24cad639",
-  "translation_date": "2025-08-27T22:57:04+00:00",
+  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
+  "translation_date": "2025-08-29T09:32:20+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "ms"
 }
@@ -16,7 +16,6 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/15)
 
-
 > Tonton video
 
 > 
@@ -26,17 +25,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 HTML, atau HyperText Markup Language, adalah 'rangka' web. Jika CSS 'menghias' HTML anda dan JavaScript menghidupkannya, HTML adalah tubuh aplikasi web anda. Sintaks HTML mencerminkan idea ini, kerana ia termasuk tag "head", "body", dan "footer".
 
-Dalam pelajaran ini, kita akan menggunakan HTML untuk menyusun 'rangka' antara muka terrarium maya kita. Ia akan mempunyai tajuk dan tiga lajur: lajur kanan dan kiri di mana tumbuhan yang boleh diseret berada, dan kawasan tengah yang akan menjadi terrarium kaca. Pada akhir pelajaran ini, anda akan dapat melihat tumbuhan dalam lajur, tetapi antara muka akan kelihatan agak pelik; jangan risau, dalam bahagian seterusnya anda akan menambah gaya CSS untuk menjadikan antara muka kelihatan lebih baik.
+Dalam pelajaran ini, kita akan menggunakan HTML untuk menyusun 'rangka' antara muka terrarium maya kita. Ia akan mempunyai tajuk dan tiga lajur: lajur kanan dan kiri di mana tumbuhan yang boleh diseret berada, dan kawasan tengah yang akan menjadi terrarium yang kelihatan seperti kaca. Pada akhir pelajaran ini, anda akan dapat melihat tumbuhan dalam lajur, tetapi antara muka akan kelihatan agak pelik; jangan risau, dalam bahagian seterusnya anda akan menambah gaya CSS pada antara muka untuk menjadikannya kelihatan lebih baik.
 
 ### Tugasan
 
-Di komputer anda, buat folder bernama 'terrarium' dan di dalamnya, fail bernama 'index.html'. Anda boleh melakukannya dalam Visual Studio Code selepas anda membuat folder terrarium dengan membuka tetingkap VS Code baru, klik 'open folder', dan navigasi ke folder baru anda. Klik butang 'file' kecil di panel Explorer dan buat fail baru:
+Pada komputer anda, buat folder bernama 'terrarium' dan di dalamnya, fail bernama 'index.html'. Anda boleh melakukannya dalam Visual Studio Code selepas anda membuat folder terrarium dengan membuka tetingkap VS Code baru, klik 'open folder', dan navigasi ke folder baru anda. Klik butang 'file' kecil dalam panel Explorer dan buat fail baru:
 
 ![explorer dalam VS Code](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.ms.png)
 
 Atau
 
-Gunakan arahan ini pada git bash anda:
+Gunakan arahan ini pada git bash:
 * `mkdir terrarium`
 * `cd terrarium`
 * `touch index.html`
@@ -50,7 +49,7 @@ Gunakan arahan ini pada git bash anda:
 
 Baris pertama fail HTML adalah doctype-nya. Agak mengejutkan bahawa anda perlu mempunyai baris ini di bahagian atas fail, tetapi ia memberitahu pelayar lama bahawa pelayar perlu memaparkan halaman dalam mod standard, mengikut spesifikasi html semasa.
 
-> Tip: dalam VS Code, anda boleh melayangkan tetikus ke atas tag dan mendapatkan maklumat tentang penggunaannya daripada panduan Rujukan MDN.
+> Tip: dalam VS Code, anda boleh melayang di atas tag dan mendapatkan maklumat tentang penggunaannya daripada panduan Rujukan MDN.
 
 Baris kedua sepatutnya menjadi tag pembuka `<html>`, diikuti dengan tag penutupnya `</html>`. Tag ini adalah elemen akar antara muka anda.
 
@@ -69,17 +68,17 @@ Tambahkan baris ini di bahagian atas fail `index.html` anda:
 
 ## 'Head' dokumen
 
-Bahagian 'head' dokumen HTML termasuk maklumat penting tentang halaman web anda, juga dikenali sebagai [metadata](https://developer.mozilla.org/docs/Web/HTML/Element/meta). Dalam kes kita, kita memberitahu pelayan web yang akan menerima halaman ini untuk dipaparkan, empat perkara ini:
+Kawasan 'head' dokumen HTML termasuk maklumat penting tentang halaman web anda, juga dikenali sebagai [metadata](https://developer.mozilla.org/docs/Web/HTML/Element/meta). Dalam kes kita, kita memberitahu pelayan web yang akan menerima halaman ini untuk dipaparkan, empat perkara ini:
 
 -   tajuk halaman
 -   metadata halaman termasuk:
     -   'character set', memberitahu tentang pengekodan watak yang digunakan dalam halaman
     -   maklumat pelayar, termasuk `x-ua-compatible` yang menunjukkan bahawa pelayar IE=edge disokong
-    -   maklumat tentang bagaimana viewport harus bertindak apabila ia dimuatkan. Menetapkan viewport untuk mempunyai skala awal 1 mengawal tahap zum apabila halaman pertama kali dimuatkan.
+    -   maklumat tentang bagaimana viewport harus berkelakuan apabila ia dimuatkan. Menetapkan viewport untuk mempunyai skala awal 1 mengawal tahap zum apabila halaman pertama kali dimuatkan.
 
 ### Tugasan
 
-Tambahkan blok 'head' ke dokumen anda di antara tag pembuka dan penutup `<html>`.
+Tambahkan blok 'head' pada dokumen anda di antara tag pembuka dan penutup `<html>`.
 
 ```html
 <head>
@@ -98,7 +97,7 @@ Tambahkan blok 'head' ke dokumen anda di antara tag pembuka dan penutup `<html>`
 
 ### Tag HTML
 
-Dalam HTML, anda menambah tag ke fail .html anda untuk mencipta elemen halaman web. Setiap tag biasanya mempunyai tag pembuka dan penutup, seperti ini: `<p>hello</p>` untuk menunjukkan perenggan. Buat badan antara muka anda dengan menambah satu set tag `<body>` di dalam pasangan tag `<html>`; markup anda kini kelihatan seperti ini:
+Dalam HTML, anda menambah tag pada fail .html anda untuk mencipta elemen halaman web. Setiap tag biasanya mempunyai tag pembuka dan penutup, seperti ini: `<p>hello</p>` untuk menunjukkan perenggan. Cipta badan antara muka anda dengan menambah satu set tag `<body>` di dalam pasangan tag `<html>`; markup anda kini kelihatan seperti ini:
 
 ### Tugasan
 
@@ -182,7 +181,7 @@ Tambahkan imej tumbuhan tersebut ke dalam dua lajur di antara tag `<body></body>
 
 Dengan markup ini, tumbuhan kini muncul di skrin. Ia kelihatan agak buruk, kerana ia belum lagi digayakan menggunakan CSS, dan kita akan melakukannya dalam pelajaran seterusnya.
 
-Setiap imej mempunyai teks alt yang akan muncul walaupun anda tidak dapat melihat atau memaparkan imej. Ini adalah atribut penting untuk disertakan demi kebolehaksesan. Ketahui lebih lanjut tentang kebolehaksesan dalam pelajaran akan datang; buat masa ini, ingat bahawa atribut alt menyediakan maklumat alternatif untuk imej jika pengguna atas sebab tertentu tidak dapat melihatnya (kerana sambungan perlahan, ralat dalam atribut src, atau jika pengguna menggunakan pembaca skrin).
+Setiap imej mempunyai teks alt yang akan muncul walaupun anda tidak dapat melihat atau memaparkan imej. Ini adalah atribut penting untuk disertakan bagi kebolehaksesan. Ketahui lebih lanjut tentang kebolehaksesan dalam pelajaran masa depan; buat masa ini, ingat bahawa atribut alt menyediakan maklumat alternatif untuk imej jika pengguna atas sebab tertentu tidak dapat melihatnya (kerana sambungan perlahan, ralat dalam atribut src, atau jika pengguna menggunakan pembaca skrin).
 
 ✅ Adakah anda perasan bahawa setiap imej mempunyai tag alt yang sama? Adakah ini amalan yang baik? Mengapa atau mengapa tidak? Bolehkah anda memperbaiki kod ini?
 
@@ -198,7 +197,7 @@ Tambahkan baris berikut betul-betul di bawah tag pembuka `<body>` anda:
 <h1>My Terrarium</h1>
 ```
 
-Menggunakan markup semantik seperti mempunyai tajuk `<h1>` dan senarai tidak teratur yang dipaparkan sebagai `<ul>` membantu pembaca skrin menavigasi melalui halaman. Secara umum, butang sepatutnya ditulis sebagai `<button>` dan senarai sepatutnya `<li>`. Walaupun _mungkin_ menggunakan elemen `<span>` yang digayakan khas dengan pengendali klik untuk meniru butang, adalah lebih baik untuk pengguna kurang upaya menggunakan teknologi untuk menentukan di mana pada halaman butang berada, dan berinteraksi dengannya, jika elemen itu muncul sebagai butang. Atas sebab ini, cuba gunakan markup semantik sebanyak mungkin.
+Menggunakan markup semantik seperti mempunyai tajuk `<h1>` dan senarai tidak berurutan yang dipaparkan sebagai `<ul>` membantu pembaca skrin menavigasi melalui halaman. Secara umum, butang sepatutnya ditulis sebagai `<button>` dan senarai sepatutnya `<li>`. Walaupun _mungkin_ menggunakan elemen `<span>` yang digayakan khas dengan pengendali klik untuk meniru butang, adalah lebih baik untuk pengguna kurang upaya menggunakan teknologi untuk menentukan di mana pada halaman butang berada, dan berinteraksi dengannya, jika elemen itu muncul sebagai butang. Atas sebab ini, cuba gunakan markup semantik sebanyak mungkin.
 
 ✅ Lihat pembaca skrin dan [bagaimana ia berinteraksi dengan halaman web](https://www.youtube.com/watch?v=OUDV1gqs9GA). Bolehkah anda melihat mengapa mempunyai markup tidak semantik mungkin mengecewakan pengguna?
 
@@ -228,7 +227,7 @@ Tambahkan markup ini di atas tag `</div>` terakhir:
 
 ## 🚀Cabaran
 
-Terdapat beberapa tag 'lama' dalam HTML yang masih seronok untuk dicuba, walaupun anda tidak sepatutnya menggunakan tag yang telah ditamatkan seperti [tag ini](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) dalam markup anda. Namun, bolehkah anda menggunakan tag lama `<marquee>` untuk membuat tajuk h1 bergerak secara mendatar? (jika anda melakukannya, jangan lupa untuk menghapusnya selepas itu)
+Terdapat beberapa tag 'lama' dalam HTML yang masih seronok untuk dimainkan, walaupun anda tidak sepatutnya menggunakan tag yang tidak lagi digunakan seperti [tag ini](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) dalam markup anda. Namun, bolehkah anda menggunakan tag lama `<marquee>` untuk membuat tajuk h1 bergerak secara mendatar? (jika anda melakukannya, jangan lupa untuk menghapusnya selepas itu)
 
 ## Kuiz Pasca-Kuliah
 
@@ -236,10 +235,9 @@ Terdapat beberapa tag 'lama' dalam HTML yang masih seronok untuk dicuba, walaupu
 
 ## Ulasan & Kajian Kendiri
 
-HTML adalah sistem blok binaan 'teruji dan benar' yang telah membantu membina web menjadi seperti sekarang. Ketahui sedikit tentang sejarahnya dengan mengkaji beberapa tag lama dan baru. Bolehkah anda mengetahui mengapa beberapa tag telah ditamatkan dan beberapa ditambah? Apakah tag yang mungkin diperkenalkan pada masa depan?
+HTML adalah sistem blok binaan 'teruji dan benar' yang telah membantu membina web menjadi seperti sekarang. Ketahui sedikit tentang sejarahnya dengan mengkaji beberapa tag lama dan baru. Bolehkah anda mengetahui mengapa beberapa tag tidak lagi digunakan dan beberapa ditambah? Apakah tag yang mungkin diperkenalkan pada masa depan?
 
 Ketahui lebih lanjut tentang membina laman web untuk web dan peranti mudah alih di [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
-
 
 ## Tugasan
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "30f8903a1f290e3d438dc2c70fe60259",
-  "translation_date": "2025-08-27T23:01:46+00:00",
+  "original_hash": "61c14b27044861e5e69db35dd52c4403",
+  "translation_date": "2025-08-29T09:15:29+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "id"
 }
@@ -16,17 +16,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/19)
 
-### Pendahuluan
+### Pengantar
 
 Manipulasi DOM, atau "Document Object Model", adalah aspek penting dalam pengembangan web. Menurut [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "Document Object Model (DOM) adalah representasi data dari objek-objek yang membentuk struktur dan konten dokumen di web." Tantangan dalam manipulasi DOM di web sering kali menjadi alasan utama penggunaan framework JavaScript daripada JavaScript murni untuk mengelola DOM, tetapi kita akan mencoba melakukannya sendiri!
 
-Selain itu, pelajaran ini akan memperkenalkan konsep [closure JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), yang dapat Anda pikirkan sebagai fungsi yang dikelilingi oleh fungsi lain sehingga fungsi dalam memiliki akses ke lingkup fungsi luar.
+Selain itu, pelajaran ini akan memperkenalkan konsep [closure JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), yang dapat Anda pikirkan sebagai fungsi yang terbungkus oleh fungsi lain sehingga fungsi dalam memiliki akses ke lingkup fungsi luar.
 
-> Closure JavaScript adalah topik yang luas dan kompleks. Pelajaran ini hanya menyentuh ide dasar bahwa dalam kode terrarium ini, Anda akan menemukan closure: fungsi dalam dan fungsi luar yang dibangun sedemikian rupa sehingga fungsi dalam memiliki akses ke lingkup fungsi luar. Untuk informasi lebih lanjut tentang cara kerjanya, silakan kunjungi [dokumentasi yang ekstensif](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
+> Closure JavaScript adalah topik yang luas dan kompleks. Pelajaran ini hanya menyentuh ide dasar bahwa dalam kode terrarium ini, Anda akan menemukan closure: fungsi dalam dan fungsi luar yang dibangun sedemikian rupa sehingga fungsi dalam memiliki akses ke lingkup fungsi luar. Untuk informasi lebih lanjut tentang cara kerja ini, silakan kunjungi [dokumentasi yang ekstensif](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
 
 Kita akan menggunakan closure untuk memanipulasi DOM.
 
-Pikirkan DOM sebagai pohon, yang mewakili semua cara dokumen halaman web dapat dimanipulasi. Berbagai API (Application Program Interfaces) telah dibuat sehingga programmer, menggunakan bahasa pemrograman pilihan mereka, dapat mengakses DOM dan mengedit, mengubah, menyusun ulang, dan mengelolanya.
+Pikirkan DOM sebagai pohon, yang mewakili semua cara dokumen halaman web dapat dimanipulasi. Berbagai API (Application Program Interfaces) telah ditulis sehingga programmer, menggunakan bahasa pemrograman pilihan mereka, dapat mengakses DOM dan mengedit, mengubah, menyusun ulang, dan mengelolanya.
 
 ![Representasi pohon DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.id.png)
 
@@ -72,15 +72,15 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-Apa yang terjadi di sini? Anda merujuk dokumen dan mencari melalui DOM-nya untuk menemukan elemen dengan Id tertentu. Ingat dalam pelajaran pertama tentang HTML bahwa Anda memberikan Id individual untuk setiap gambar tanaman (`id="plant1"`)? Sekarang Anda akan memanfaatkan upaya tersebut. Setelah mengidentifikasi setiap elemen, Anda meneruskan item tersebut ke fungsi bernama `dragElement` yang akan Anda buat sebentar lagi. Dengan demikian, elemen dalam HTML sekarang dapat diseret, atau akan segera bisa.
+Apa yang terjadi di sini? Anda merujuk dokumen dan mencari melalui DOM-nya untuk menemukan elemen dengan Id tertentu. Ingat dalam pelajaran pertama tentang HTML bahwa Anda memberikan Id individual untuk setiap gambar tanaman (`id="plant1"`)? Sekarang Anda akan memanfaatkan usaha tersebut. Setelah mengidentifikasi setiap elemen, Anda meneruskan item tersebut ke fungsi bernama `dragElement` yang akan Anda buat sebentar lagi. Dengan demikian, elemen dalam HTML sekarang dapat diseret, atau akan segera bisa.
 
-✅ Mengapa kita merujuk elemen berdasarkan Id? Mengapa tidak berdasarkan kelas CSS mereka? Anda mungkin ingin merujuk pelajaran sebelumnya tentang CSS untuk menjawab pertanyaan ini.
+✅ Mengapa kita merujuk elemen berdasarkan Id? Mengapa tidak berdasarkan kelas CSS? Anda mungkin ingin merujuk pelajaran sebelumnya tentang CSS untuk menjawab pertanyaan ini.
 
 ---
 
 ## Closure
 
-Sekarang Anda siap membuat closure `dragElement`, yang merupakan fungsi luar yang mengelilingi fungsi dalam atau beberapa fungsi (dalam kasus kita, kita akan memiliki tiga).
+Sekarang Anda siap membuat closure `dragElement`, yang merupakan fungsi luar yang membungkus fungsi dalam atau beberapa fungsi (dalam kasus kita, akan ada tiga).
 
 Closure berguna ketika satu atau lebih fungsi perlu mengakses lingkup fungsi luar. Berikut adalah contohnya:
 
@@ -96,9 +96,9 @@ displayCandy();
 console.log(candy)
 ```
 
-Dalam contoh ini, fungsi displayCandy mengelilingi fungsi yang menambahkan jenis permen baru ke dalam array yang sudah ada dalam fungsi. Jika Anda menjalankan kode ini, array `candy` akan tidak terdefinisi, karena itu adalah variabel lokal (lokal untuk closure).
+Dalam contoh ini, fungsi displayCandy mengelilingi fungsi yang menambahkan jenis permen baru ke dalam array yang sudah ada di fungsi. Jika Anda menjalankan kode ini, array `candy` akan tidak terdefinisi, karena itu adalah variabel lokal (lokal untuk closure).
 
-✅ Bagaimana Anda dapat membuat array `candy` dapat diakses? Cobalah memindahkannya ke luar closure. Dengan cara ini, array menjadi global, daripada hanya tersedia di lingkup lokal closure.
+✅ Bagaimana Anda bisa membuat array `candy` dapat diakses? Cobalah memindahkannya ke luar closure. Dengan cara ini, array menjadi global, bukan hanya tersedia di lingkup lokal closure.
 
 ### Tugas
 
@@ -115,7 +115,7 @@ function dragElement(terrariumElement) {
 }
 ```
 
-`dragElement` mendapatkan objek `terrariumElement` dari deklarasi di bagian atas skrip. Kemudian, Anda menetapkan beberapa posisi lokal pada `0` untuk objek yang diteruskan ke fungsi. Ini adalah variabel lokal yang akan dimanipulasi untuk setiap elemen saat Anda menambahkan fungsionalitas drag and drop dalam closure ke setiap elemen. Terrarium akan diisi oleh elemen-elemen yang diseret ini, sehingga aplikasi perlu melacak di mana mereka ditempatkan.
+`dragElement` mendapatkan objek `terrariumElement` dari deklarasi di bagian atas skrip. Kemudian, Anda menetapkan beberapa posisi lokal pada `0` untuk objek yang diteruskan ke fungsi. Ini adalah variabel lokal yang akan dimanipulasi untuk setiap elemen saat Anda menambahkan fungsi drag and drop dalam closure ke setiap elemen. Terrarium akan diisi oleh elemen-elemen yang diseret ini, sehingga aplikasi perlu melacak di mana mereka ditempatkan.
 
 Selain itu, `terrariumElement` yang diteruskan ke fungsi ini diberikan event `pointerdown`, yang merupakan bagian dari [web APIs](https://developer.mozilla.org/docs/Web/API) yang dirancang untuk membantu pengelolaan DOM. `onpointerdown` dipicu saat tombol ditekan, atau dalam kasus kita, elemen yang dapat diseret disentuh. Event handler ini bekerja di [browser web dan mobile](https://caniuse.com/?search=onpointerdown), dengan beberapa pengecualian.
 
@@ -142,7 +142,7 @@ Beberapa hal terjadi. Pertama, Anda mencegah event default yang biasanya terjadi
 
 > Kembali ke baris ini setelah Anda membangun file skrip sepenuhnya dan coba tanpa `e.preventDefault()` - apa yang terjadi?
 
-Kedua, buka `index.html` di jendela browser, dan inspeksi antarmuka. Ketika Anda mengklik sebuah tanaman, Anda dapat melihat bagaimana event 'e' ditangkap. Telusuri event tersebut untuk melihat seberapa banyak informasi yang dikumpulkan oleh satu event pointer down!  
+Kedua, buka `index.html` di jendela browser, dan inspeksi antarmuka. Ketika Anda mengklik tanaman, Anda dapat melihat bagaimana event 'e' ditangkap. Telusuri event tersebut untuk melihat seberapa banyak informasi yang dikumpulkan oleh satu event pointer down!  
 
 Selanjutnya, perhatikan bagaimana variabel lokal `pos3` dan `pos4` diatur ke e.clientX. Anda dapat menemukan nilai `e` di panel inspeksi. Nilai-nilai ini menangkap koordinat x dan y tanaman pada saat Anda mengklik atau menyentuhnya. Anda akan membutuhkan kontrol yang sangat rinci atas perilaku tanaman saat Anda mengklik dan menyeretnya, sehingga Anda melacak koordinatnya.
 
@@ -154,7 +154,7 @@ Selesaikan fungsi awal dengan menambahkan dua manipulasi event pointer lagi di b
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
-Sekarang Anda menunjukkan bahwa Anda ingin tanaman diseret bersama pointer saat Anda memindahkannya, dan untuk gerakan menyeret berhenti saat Anda tidak lagi memilih tanaman. `onpointermove` dan `onpointerup` semuanya adalah bagian dari API yang sama seperti `onpointerdown`. Antarmuka akan melemparkan error sekarang karena Anda belum mendefinisikan fungsi `elementDrag` dan `stopElementDrag`, jadi buatlah fungsi tersebut selanjutnya.
+Sekarang Anda menunjukkan bahwa Anda ingin tanaman diseret bersama pointer saat Anda memindahkannya, dan untuk gerakan menyeret berhenti saat Anda tidak lagi memilih tanaman. `onpointermove` dan `onpointerup` semuanya adalah bagian dari API yang sama dengan `onpointerdown`. Antarmuka akan melemparkan error sekarang karena Anda belum mendefinisikan fungsi `elementDrag` dan `stopElementDrag`, jadi buatlah fungsi tersebut selanjutnya.
 
 ## Fungsi elementDrag dan stopElementDrag
 
@@ -175,13 +175,13 @@ function elementDrag(e) {
 	terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
 }
 ```
-Dalam fungsi ini, Anda melakukan banyak pengeditan pada posisi awal 1-4 yang Anda tetapkan sebagai variabel lokal dalam fungsi luar. Apa yang terjadi di sini?
+Dalam fungsi ini, Anda banyak mengedit posisi awal 1-4 yang Anda tetapkan sebagai variabel lokal dalam fungsi luar. Apa yang terjadi di sini?
 
 Saat Anda menyeret, Anda menetapkan ulang `pos1` dengan membuatnya sama dengan `pos3` (yang Anda tetapkan sebelumnya sebagai `e.clientX`) dikurangi nilai `e.clientX` saat ini. Anda melakukan operasi serupa pada `pos2`. Kemudian, Anda menetapkan ulang `pos3` dan `pos4` ke koordinat X dan Y baru dari elemen tersebut. Anda dapat melihat perubahan ini di konsol saat Anda menyeret. Kemudian, Anda memanipulasi gaya CSS tanaman untuk menetapkan posisinya yang baru berdasarkan posisi baru `pos1` dan `pos2`, menghitung koordinat X dan Y atas dan kiri tanaman berdasarkan perbandingan offset-nya dengan posisi baru ini.
 
 > `offsetTop` dan `offsetLeft` adalah properti CSS yang menetapkan posisi elemen berdasarkan posisi induknya; induknya bisa berupa elemen apa saja yang tidak diposisikan sebagai `static`. 
 
-Semua perhitungan ulang posisi ini memungkinkan Anda untuk menyempurnakan perilaku terrarium dan tanamannya.
+Semua perhitungan ulang posisi ini memungkinkan Anda menyempurnakan perilaku terrarium dan tanamannya.
 
 ### Tugas 
 
@@ -200,7 +200,7 @@ Fungsi kecil ini menetapkan ulang event `onpointerup` dan `onpointermove` sehing
 
 Sekarang Anda telah menyelesaikan proyek Anda!
 
-🥇Selamat! Anda telah menyelesaikan terrarium yang indah. ![terrarium selesai](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.id.png)
+🥇Selamat! Anda telah menyelesaikan terrarium indah Anda. ![terrarium selesai](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.id.png)
 
 ---
 
@@ -214,7 +214,7 @@ Tambahkan event handler baru ke closure Anda untuk melakukan sesuatu yang lebih 
 
 ## Tinjauan & Studi Mandiri
 
-Meskipun menyeret elemen di layar tampak sepele, ada banyak cara untuk melakukannya dan banyak jebakan, tergantung pada efek yang Anda cari. Faktanya, ada [API drag and drop](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) yang dapat Anda coba. Kami tidak menggunakannya dalam modul ini karena efek yang kami inginkan agak berbeda, tetapi coba API ini pada proyek Anda sendiri dan lihat apa yang dapat Anda capai.
+Meskipun menyeret elemen di layar tampak sepele, ada banyak cara untuk melakukannya dan banyak jebakan, tergantung pada efek yang Anda cari. Faktanya, ada seluruh [API drag and drop](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) yang dapat Anda coba. Kami tidak menggunakannya dalam modul ini karena efek yang kami inginkan agak berbeda, tetapi cobalah API ini pada proyek Anda sendiri dan lihat apa yang dapat Anda capai.
 
 Temukan lebih banyak informasi tentang event pointer di [dokumen W3C](https://www.w3.org/TR/pointerevents1/) dan di [dokumen web MDN](https://developer.mozilla.org/docs/Web/API/Pointer_events).
 
@@ -227,4 +227,4 @@ Selalu periksa kemampuan browser menggunakan [CanIUse.com](https://caniuse.com/)
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

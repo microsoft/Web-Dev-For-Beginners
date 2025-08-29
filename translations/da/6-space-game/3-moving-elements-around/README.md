@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-26T21:57:14+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T08:12:45+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "da"
 }
@@ -15,10 +15,10 @@ CO_OP_TRANSLATOR_METADATA:
 
 Spil er ikke særlig sjove, før du har rumvæsener, der bevæger sig rundt på skærmen! I dette spil vil vi gøre brug af to typer bevægelser:
 
-- **Tastatur/mus bevægelse**: når brugeren interagerer med tastaturet eller musen for at flytte et objekt på skærmen.
+- **Tastatur/mus-bevægelse**: når brugeren interagerer med tastaturet eller musen for at flytte et objekt på skærmen.
 - **Spilinduceret bevægelse**: når spillet flytter et objekt med et bestemt tidsinterval.
 
-Så hvordan flytter vi ting på en skærm? Det handler alt sammen om kartesiske koordinater: vi ændrer objektets placering (x,y) og tegner derefter skærmen igen.
+Så hvordan flytter vi ting på en skærm? Det handler alt sammen om kartesiske koordinater: vi ændrer objektets placering (x, y) og tegner derefter skærmen igen.
 
 Typisk har du brug for følgende trin for at opnå *bevægelse* på en skærm:
 
@@ -39,7 +39,7 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Kan du komme i tanke om en grund til, at det kan medføre ydeevneomkostninger at tegne din helt mange gange i sekundet? Læs om [alternativer til dette mønster](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+✅ Kan du tænke på en grund til, at det kan medføre ydeevneomkostninger at tegne din helt mange gange i sekundet? Læs om [alternativer til dette mønster](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Håndtering af tastaturhændelser
 
@@ -58,16 +58,16 @@ window.addEventListener('keyup', (evt) => {
 })
 ```
 
-For tastaturhændelser er der to egenskaber på hændelsen, du kan bruge til at se, hvilken tast der blev trykket:
+For tastaturhændelser er der to egenskaber på hændelsen, du kan bruge til at se, hvilken tast der blev trykket på:
 
 - `key`, dette er en strengrepræsentation af den trykkede tast, for eksempel `ArrowUp`.
 - `keyCode`, dette er en numerisk repræsentation, for eksempel `37`, som svarer til `ArrowLeft`.
 
 ✅ Manipulation af tastaturhændelser er nyttig uden for spiludvikling. Hvilke andre anvendelser kan du komme i tanke om for denne teknik?
 
-### Specialtaster: en advarsel
+### Specielle taster: en advarsel
 
-Der er nogle *specialtaster*, der påvirker vinduet. Det betyder, at hvis du lytter til en `keyup`-hændelse og bruger disse specialtaster til at flytte din helt, vil det også udføre horisontal rulning. Af den grund vil du måske *slå fra* denne indbyggede browseradfærd, mens du bygger dit spil. Du har brug for kode som denne:
+Der er nogle *specielle* taster, der påvirker vinduet. Det betyder, at hvis du lytter til en `keyup`-hændelse og bruger disse specielle taster til at flytte din helt, vil det også udføre horisontal rulning. Af den grund vil du måske *slå fra* denne indbyggede browseradfærd, mens du bygger dit spil. Du har brug for kode som denne:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -92,7 +92,7 @@ Koden ovenfor sikrer, at piletasterne og mellemrumstasten får deres *standard* 
 
 ## Spilinduceret bevægelse
 
-Vi kan få ting til at bevæge sig af sig selv ved at bruge timere som `setTimeout()` eller `setInterval()`-funktionen, der opdaterer objektets placering ved hver tik eller tidsinterval. Sådan kan det se ud:
+Vi kan få ting til at bevæge sig af sig selv ved at bruge timere som funktionerne `setTimeout()` eller `setInterval()`, der opdaterer objektets placering ved hvert tick eller tidsinterval. Sådan kan det se ud:
 
 ```javascript
 let id = setInterval(() => {
@@ -123,7 +123,7 @@ Loopet ovenfor kaldes hvert `200` millisekund for at tegne lærredet igen. Du ha
 
 ## Fortsættelse af rumspillet
 
-Du vil tage den eksisterende kode og udvide den. Enten start med den kode, du færdiggjorde under del I, eller brug koden i [Del II - startkode](../../../../6-space-game/3-moving-elements-around/your-work).
+Du vil tage den eksisterende kode og udvide den. Enten start med den kode, du færdiggjorde under del I, eller brug koden i [Del II - starter](../../../../6-space-game/3-moving-elements-around/your-work).
 
 - **Flyt helten**: du vil tilføje kode for at sikre, at du kan flytte helten ved hjælp af piletasterne.
 - **Flyt fjender**: du skal også tilføje kode for at sikre, at fjenderne bevæger sig fra top til bund med en given hastighed.
@@ -148,13 +148,13 @@ cd your-work
 npm start
 ```
 
-Ovenstående starter en HTTP-server på adressen `http://localhost:5000`. Åbn en browser og indtast den adresse, lige nu bør den vise helten og alle fjenderne; intet bevæger sig - endnu!
+Ovenstående starter en HTTP-server på adressen `http://localhost:5000`. Åbn en browser og indtast den adresse. Lige nu bør den vise helten og alle fjenderne; intet bevæger sig - endnu!
 
 ### Tilføj kode
 
-1. **Tilføj dedikerede objekter** for `hero`, `enemy` og `game object`, de skal have `x` og `y` egenskaber. (Husk afsnittet om [Arv eller komposition](../README.md)).
+1. **Tilføj dedikerede objekter** for `hero`, `enemy` og `game object`, de skal have `x`- og `y`-egenskaber. (Husk afsnittet om [Arv eller komposition](../README.md)).
 
-   *TIP* `game object` bør være det objekt, der har `x` og `y` og evnen til at tegne sig selv på et lærred.
+   *TIP* `game object` bør være det, der har `x` og `y` og evnen til at tegne sig selv på et lærred.
 
    >tip: start med at tilføje en ny GameObject-klasse med dens constructor defineret som nedenfor, og tegn den derefter på lærredet:
   
@@ -205,7 +205,7 @@ Ovenstående starter en HTTP-server på adressen `http://localhost:5000`. Åbn e
     }
     ```
 
-2. **Tilføj tastaturhændelses-håndterere** for at håndtere navigation med taster (flyt helten op/ned venstre/højre).
+2. **Tilføj tastaturhændelses-håndterere** for at håndtere navigation med taster (flyt helten op/ned, venstre/højre).
 
    *HUSK* det er et kartesisk system, øverst til venstre er `0,0`. Husk også at tilføje kode for at stoppe *standardadfærd*.
 
@@ -223,7 +223,7 @@ Ovenstående starter en HTTP-server på adressen `http://localhost:5000`. Åbn e
     
    Tjek din browsers konsol på dette tidspunkt, og se tastetrykkene blive logget.
 
-3. **Implementer** [Pub sub-mønsteret](../README.md), dette vil holde din kode ren, mens du følger de resterende dele.
+3. **Implementer** [Pub-sub-mønsteret](../README.md), dette vil holde din kode ren, mens du følger de resterende dele.
 
    For at gøre denne sidste del kan du:
 
@@ -313,7 +313,7 @@ Ovenstående starter en HTTP-server på adressen `http://localhost:5000`. Åbn e
 
 1. **Opsæt spil-loopet**
 
-   Refaktorer window.onload-funktionen for at initialisere spillet og opsætte et spil-loop med et passende interval. Du tilføjer også en laserstråle:
+   Refaktorer window.onload-funktionen for at initialisere spillet og opsætte et spil-loop med et passende interval. Du vil også tilføje en laserstråle:
 
     ```javascript
     window.onload = async () => {
@@ -368,7 +368,7 @@ Ovenstående starter en HTTP-server på adressen `http://localhost:5000`. Åbn e
     }
     ```
 
-    og til sidst, tilføj en `drawGameObjects()`-funktion for at starte tegningen:
+    og til sidst tilføj en `drawGameObjects()`-funktion for at starte tegningen:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -382,7 +382,7 @@ Ovenstående starter en HTTP-server på adressen `http://localhost:5000`. Åbn e
 
 ## 🚀 Udfordring
 
-Som du kan se, kan din kode blive til 'spaghettikode', når du begynder at tilføje funktioner, variabler og klasser. Hvordan kan du bedre organisere din kode, så den er mere læsbar? Skitser et system til at organisere din kode, selvom den stadig befinder sig i én fil.
+Som du kan se, kan din kode blive til 'spaghetti-kode', når du begynder at tilføje funktioner, variabler og klasser. Hvordan kan du bedre organisere din kode, så den er mere læsbar? Skitser et system til at organisere din kode, selvom den stadig befinder sig i én fil.
 
 ## Quiz efter forelæsning
 
@@ -399,4 +399,4 @@ Mens vi skriver vores spil uden at bruge frameworks, findes der mange JavaScript
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

@@ -1,31 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-26T23:05:07+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T07:51:17+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "sv"
 }
 -->
-# Bygg en bankapp Del 1: HTML-mallar och rutter i en webbapp
+# Bygg en bankapp Del 1: HTML-mallar och rutter i en webbapplikation
 
-## Förhandsquiz
+## Förföreläsningsquiz
 
-[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/41)
+[Förföreläsningsquiz](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introduktion
 
-Sedan JavaScript introducerades i webbläsare har webbplatser blivit mer interaktiva och komplexa än någonsin. Webbteknologier används nu ofta för att skapa fullt fungerande applikationer som körs direkt i en webbläsare, vilket vi kallar [webbapplikationer](https://en.wikipedia.org/wiki/Web_application). Eftersom webbappar är mycket interaktiva vill användare inte vänta på att hela sidan laddas om varje gång en åtgärd utförs. Därför används JavaScript för att uppdatera HTML direkt via DOM, vilket ger en smidigare användarupplevelse.
+Sedan JavaScript introducerades i webbläsare har webbplatser blivit mer interaktiva och komplexa än någonsin. Webbteknologier används nu ofta för att skapa fullt fungerande applikationer som körs direkt i en webbläsare, vilket vi kallar [webbapplikationer](https://en.wikipedia.org/wiki/Web_application). Eftersom webbapplikationer är mycket interaktiva vill användare inte vänta på att hela sidan ska laddas om varje gång en åtgärd utförs. Därför används JavaScript för att uppdatera HTML direkt via DOM, vilket ger en smidigare användarupplevelse.
 
-I den här lektionen ska vi lägga grunden för att skapa en bankwebbapp, genom att använda HTML-mallar för att skapa flera skärmar som kan visas och uppdateras utan att hela HTML-sidan behöver laddas om.
+I denna lektion ska vi lägga grunden för att skapa en bankapplikation, med HTML-mallar för att skapa flera skärmar som kan visas och uppdateras utan att hela HTML-sidan behöver laddas om.
 
 ### Förkunskaper
 
-Du behöver en lokal webbserver för att testa webbappen vi bygger i den här lektionen. Om du inte har en, kan du installera [Node.js](https://nodejs.org) och använda kommandot `npx lite-server` från din projektmapp. Det skapar en lokal webbserver och öppnar din app i en webbläsare.
+Du behöver en lokal webbserver för att testa webbapplikationen vi ska bygga i denna lektion. Om du inte har en, kan du installera [Node.js](https://nodejs.org) och använda kommandot `npx lite-server` från din projektmapp. Det skapar en lokal webbserver och öppnar din app i en webbläsare.
 
 ### Förberedelse
 
-På din dator, skapa en mapp som heter `bank` med en fil som heter `index.html` inuti. Vi börjar med denna HTML-[mall](https://en.wikipedia.org/wiki/Boilerplate_code):
+På din dator, skapa en mapp som heter `bank` med en fil som heter `index.html` inuti. Vi börjar med denna HTML [grundstruktur](https://en.wikipedia.org/wiki/Boilerplate_code):
 
 ```html
 <!DOCTYPE html>
@@ -45,16 +45,16 @@ På din dator, skapa en mapp som heter `bank` med en fil som heter `index.html` 
 
 ## HTML-mallar
 
-Om du vill skapa flera skärmar för en webbsida kan en lösning vara att skapa en HTML-fil för varje skärm du vill visa. Denna lösning har dock vissa nackdelar:
+Om du vill skapa flera skärmar för en webbsida kan en lösning vara att skapa en HTML-fil för varje skärm du vill visa. Men denna lösning har vissa nackdelar:
 
 - Du måste ladda om hela HTML-filen när du byter skärm, vilket kan vara långsamt.
 - Det är svårt att dela data mellan de olika skärmarna.
 
-Ett annat tillvägagångssätt är att ha endast en HTML-fil och definiera flera [HTML-mallar](https://developer.mozilla.org/docs/Web/HTML/Element/template) med hjälp av `<template>`-elementet. En mall är ett återanvändbart HTML-block som inte visas av webbläsaren och som måste instansieras vid körning med JavaScript.
+Ett annat tillvägagångssätt är att ha endast en HTML-fil och definiera flera [HTML-mallar](https://developer.mozilla.org/docs/Web/HTML/Element/template) med hjälp av `<template>`-elementet. En mall är ett återanvändbart HTML-block som inte visas av webbläsaren och måste instansieras vid körning med JavaScript.
 
 ### Uppgift
 
-Vi ska skapa en bankapp med två skärmar: inloggningssidan och instrumentpanelen. Först lägger vi till ett platshållarelement i HTML-kroppen som vi kommer att använda för att instansiera de olika skärmarna i vår app:
+Vi ska skapa en bankapplikation med två skärmar: inloggningssidan och instrumentpanelen. Först lägger vi till ett platshållarelement i HTML-kroppen som vi ska använda för att instansiera de olika skärmarna i vår app:
 
 ```html
 <div id="app">Loading...</div>
@@ -62,9 +62,9 @@ Vi ska skapa en bankapp med två skärmar: inloggningssidan och instrumentpanele
 
 Vi ger det ett `id` för att göra det enklare att hitta det med JavaScript senare.
 
-> Tips: Eftersom innehållet i detta element kommer att ersättas kan vi lägga in ett laddningsmeddelande eller en indikator som visas medan appen laddas.
+> Tips: Eftersom innehållet i detta element kommer att ersättas kan vi lägga till ett laddningsmeddelande eller indikator som visas medan appen laddas.
 
-Därefter lägger vi till HTML-mallen för inloggningssidan nedanför. För tillfället lägger vi bara till en titel och en sektion som innehåller en länk som vi kommer att använda för navigering.
+Därefter lägger vi till HTML-mallen för inloggningssidan. För tillfället lägger vi bara till en titel och en sektion som innehåller en länk som vi ska använda för navigering.
 
 ```html
 <template id="login">
@@ -79,7 +79,7 @@ Sedan lägger vi till en annan HTML-mall för instrumentpanelsidan. Denna sida k
 
 - En header med en titel och en utloggningslänk
 - Det aktuella saldot på bankkontot
-- En lista över transaktioner, visad i en tabell
+- En lista över transaktioner, visade i en tabell
 
 ```html
 <template id="dashboard">
@@ -106,7 +106,7 @@ Sedan lägger vi till en annan HTML-mall för instrumentpanelsidan. Denna sida k
 </template>
 ```
 
-> Tips: När du skapar HTML-mallar, om du vill se hur de kommer att se ut, kan du kommentera ut `<template>` och `</template>`-raderna genom att omge dem med `<!-- -->`.
+> Tips: När du skapar HTML-mallar, om du vill se hur de kommer att se ut, kan du kommentera ut `<template>` och `</template>`-raderna genom att omsluta dem med `<!-- -->`.
 
 ✅ Varför tror du att vi använder `id`-attribut på mallarna? Skulle vi kunna använda något annat, som klasser?
 
@@ -130,7 +130,7 @@ Skapa en ny fil som heter `app.js` i din projektmapp och importera den filen i `
 <script src="app.js" defer></script>
 ```
 
-Nu i `app.js` skapar vi en ny funktion `updateRoute`:
+Nu i `app.js` ska vi skapa en ny funktion `updateRoute`:
 
 ```js
 function updateRoute(templateId) {
@@ -142,7 +142,7 @@ function updateRoute(templateId) {
 }
 ```
 
-Det vi gör här är exakt de tre stegen som beskrivs ovan. Vi instansierar mallen med `id` `templateId` och placerar dess klonade innehåll i vår app-platshållare. Observera att vi behöver använda `cloneNode(true)` för att kopiera hela underträdet av mallen.
+Det vi gör här är exakt de tre stegen som beskrivs ovan. Vi instansierar mallen med `id` `templateId` och placerar dess klonade innehåll inom vår app-platshållare. Observera att vi behöver använda `cloneNode(true)` för att kopiera hela underträdet av mallen.
 
 Anropa nu denna funktion med en av mallarna och titta på resultatet.
 
@@ -150,11 +150,11 @@ Anropa nu denna funktion med en av mallarna och titta på resultatet.
 updateRoute('login');
 ```
 
-✅ Vad är syftet med koden `app.innerHTML = '';`? Vad händer utan den?
+✅ Vad är syftet med denna kod `app.innerHTML = '';`? Vad händer utan den?
 
 ## Skapa rutter
 
-När vi pratar om en webbapp kallar vi *Routing* för avsikten att koppla **URL:er** till specifika skärmar som ska visas. På en webbplats med flera HTML-filer görs detta automatiskt eftersom filvägarna återspeglas i URL:en. Till exempel, med dessa filer i din projektmapp:
+När vi pratar om en webbapplikation kallar vi *Routing* för avsikten att koppla **URL:er** till specifika skärmar som ska visas. På en webbplats med flera HTML-filer görs detta automatiskt eftersom filvägarna återspeglas i URL:en. Till exempel, med dessa filer i din projektmapp:
 
 ```
 mywebsite/index.html
@@ -162,7 +162,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-Om du skapar en webbserver med `mywebsite` som rot, kommer URL-mappningen att vara:
+Om du skapar en webbserver med `mywebsite` som rot kommer URL-mappningen att vara:
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -170,11 +170,11 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-Men för vår webbapp använder vi en enda HTML-fil som innehåller alla skärmar, så detta standardbeteende hjälper oss inte. Vi måste skapa denna mappning manuellt och uppdatera den visade mallen med JavaScript.
+Men för vår webbapplikation använder vi en enda HTML-fil som innehåller alla skärmar, så detta standardbeteende hjälper oss inte. Vi måste skapa denna karta manuellt och uppdatera den visade mallen med JavaScript.
 
 ### Uppgift
 
-Vi använder ett enkelt objekt för att implementera en [mappning](https://en.wikipedia.org/wiki/Associative_array) mellan URL-vägar och våra mallar. Lägg till detta objekt högst upp i din `app.js`-fil.
+Vi ska använda ett enkelt objekt för att implementera en [karta](https://en.wikipedia.org/wiki/Associative_array) mellan URL-vägar och våra mallar. Lägg till detta objekt högst upp i din `app.js`-fil.
 
 ```js
 const routes = {
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-Nu ska vi modifiera funktionen `updateRoute` lite. Istället för att direkt skicka `templateId` som ett argument vill vi hämta det genom att först titta på den aktuella URL:en och sedan använda vår mappning för att få motsvarande mall-ID-värde. Vi kan använda [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) för att få endast sökvägsdelen från URL:en.
+Nu ska vi modifiera funktionen `updateRoute` lite. Istället för att direkt skicka `templateId` som ett argument vill vi hämta det genom att först titta på den aktuella URL:en och sedan använda vår karta för att få motsvarande `templateId`-värde. Vi kan använda [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) för att endast få sökvägsdelen från URL:en.
 
 ```js
 function updateRoute() {
@@ -198,7 +198,7 @@ function updateRoute() {
 }
 ```
 
-Här mappade vi de rutter vi deklarerade till motsvarande mall. Du kan testa att det fungerar korrekt genom att ändra URL:en manuellt i din webbläsare.
+Här har vi kopplat de deklarerade rutterna till motsvarande mall. Du kan testa att det fungerar korrekt genom att ändra URL:en manuellt i din webbläsare.
 
 ✅ Vad händer om du anger en okänd sökväg i URL:en? Hur skulle vi kunna lösa detta?
 
@@ -206,12 +206,12 @@ Här mappade vi de rutter vi deklarerade till motsvarande mall. Du kan testa att
 
 Nästa steg för vår app är att lägga till möjligheten att navigera mellan sidor utan att behöva ändra URL:en manuellt. Detta innebär två saker:
 
-1. Uppdatera den aktuella URL:en  
-2. Uppdatera den visade mallen baserat på den nya URL:en  
+1. Uppdatera den aktuella URL:en
+2. Uppdatera den visade mallen baserat på den nya URL:en
 
-Vi har redan tagit hand om den andra delen med funktionen `updateRoute`, så vi måste lista ut hur vi uppdaterar den aktuella URL:en.
+Vi har redan tagit hand om den andra delen med funktionen `updateRoute`, så vi måste lista ut hur vi ska uppdatera den aktuella URL:en.
 
-Vi måste använda JavaScript och mer specifikt [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), som gör det möjligt att uppdatera URL:en och skapa en ny post i webbläsarens historik utan att ladda om HTML.
+Vi måste använda JavaScript och mer specifikt [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), som tillåter att uppdatera URL:en och skapa en ny post i webbläsarens historik utan att ladda om HTML.
 
 > Obs: Även om HTML-ankarelementet [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) kan användas på egen hand för att skapa hyperlänkar till olika URL:er, kommer det som standard att få webbläsaren att ladda om HTML. Det är nödvändigt att förhindra detta beteende när man hanterar routing med anpassad JavaScript, genom att använda funktionen `preventDefault()` på klickhändelsen.
 
@@ -226,9 +226,9 @@ function navigate(path) {
 }
 ```
 
-Denna metod uppdaterar först den aktuella URL:en baserat på den angivna sökvägen och uppdaterar sedan mallen. Egenskapen `window.location.origin` returnerar URL-rot, vilket gör att vi kan återskapa en komplett URL från en given sökväg.
+Denna metod uppdaterar först den aktuella URL:en baserat på den angivna sökvägen och uppdaterar sedan mallen. Egenskapen `window.location.origin` returnerar URL-roten, vilket gör att vi kan återskapa en komplett URL från en given sökväg.
 
-Nu när vi har denna funktion kan vi ta itu med problemet vi har om en sökväg inte matchar någon definierad rutt. Vi modifierar funktionen `updateRoute` genom att lägga till en fallback till en av de befintliga rutterna om vi inte hittar en matchning.
+Nu när vi har denna funktion kan vi ta hand om problemet vi har om en sökväg inte matchar någon definierad rutt. Vi ska modifiera funktionen `updateRoute` genom att lägga till en fallback till en av de befintliga rutterna om vi inte kan hitta en matchning.
 
 ```js
 function updateRoute() {
@@ -242,9 +242,9 @@ function updateRoute() {
   ...
 ```
 
-Om en rutt inte kan hittas omdirigerar vi nu till `login`-sidan.
+Om en rutt inte kan hittas kommer vi nu att omdirigera till inloggningssidan.
 
-Låt oss nu skapa en funktion för att få URL:en när en länk klickas och för att förhindra webbläsarens standardbeteende för länkar:
+Nu ska vi skapa en funktion för att få URL:en när en länk klickas och för att förhindra webbläsarens standardbeteende för länkar:
 
 ```js
 function onLinkClick(event) {
@@ -261,54 +261,54 @@ Låt oss slutföra navigeringssystemet genom att lägga till bindningar till vå
 <a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
 
-Objektet `event` ovan fångar `click`-händelsen och skickar den till vår funktion `onLinkClick`.
+Objektet `event` ovan fångar klickhändelsen och skickar den till vår funktion `onLinkClick`.
 
-Genom att använda attributet [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) binder vi `click`-händelsen till JavaScript-kod, här anropet till funktionen `navigate()`.
+Använd attributet [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) för att binda klickhändelsen till JavaScript-kod, här anropet till funktionen `navigate()`.
 
-Prova att klicka på dessa länkar, du bör nu kunna navigera mellan de olika skärmarna i din app.
+Testa att klicka på dessa länkar, du bör nu kunna navigera mellan de olika skärmarna i din app.
 
-✅ Metoden `history.pushState` är en del av HTML5-standarden och implementerad i [alla moderna webbläsare](https://caniuse.com/?search=pushState). Om du bygger en webbapp för äldre webbläsare finns det ett knep du kan använda istället för detta API: genom att använda en [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) före sökvägen kan du implementera routing som fungerar med vanliga ankarnavigeringar och inte laddar om sidan, eftersom dess syfte var att skapa interna länkar inom en sida.
+✅ Metoden `history.pushState` är en del av HTML5-standarden och implementerad i [alla moderna webbläsare](https://caniuse.com/?search=pushState). Om du bygger en webbapplikation för äldre webbläsare finns det ett knep du kan använda istället för detta API: genom att använda en [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) före sökvägen kan du implementera routing som fungerar med vanliga ankarnavigeringar och inte laddar om sidan, eftersom dess syfte var att skapa interna länkar inom en sida.
 
-## Hantera webbläsarens fram- och bakåtknappar
+## Hantera webbläsarens bakåt- och framåtknappar
 
-Användning av `history.pushState` skapar nya poster i webbläsarens navigeringshistorik. Du kan kontrollera det genom att hålla ned *bakåtknappen* i din webbläsare, det bör visa något liknande detta:
+Att använda `history.pushState` skapar nya poster i webbläsarens navigeringshistorik. Du kan kontrollera det genom att hålla ned *bakåtknappen* i din webbläsare, det bör visa något liknande detta:
 
 ![Skärmdump av navigeringshistorik](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.sv.png)
 
 Om du försöker klicka på bakåtknappen några gånger kommer du att se att den aktuella URL:en ändras och historiken uppdateras, men samma mall fortsätter att visas.
 
-Detta beror på att applikationen inte vet att vi behöver anropa `updateRoute()` varje gång historiken ändras. Om du tittar på dokumentationen för [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) kan du se att om tillståndet ändras - vilket betyder att vi flyttade till en annan URL - triggas händelsen [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event). Vi kommer att använda detta för att lösa problemet.
+Det beror på att applikationen inte vet att vi behöver anropa `updateRoute()` varje gång historiken ändras. Om du tittar på dokumentationen för [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) kan du se att om tillståndet ändras - vilket innebär att vi flyttade till en annan URL - triggas händelsen [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event). Vi ska använda det för att åtgärda detta problem.
 
 ### Uppgift
 
-För att säkerställa att den visade mallen uppdateras när webbläsarens historik ändras, kommer vi att bifoga en ny funktion som anropar `updateRoute()`. Vi gör detta längst ner i vår `app.js`-fil:
+För att säkerställa att den visade mallen uppdateras när webbläsarens historik ändras ska vi bifoga en ny funktion som anropar `updateRoute()`. Vi gör det längst ner i vår `app.js`-fil:
 
 ```js
 window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Obs: Vi använde en [pilsfunktion](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) här för att deklarera vår `popstate`-händelsehanterare för korthetens skull, men en vanlig funktion skulle fungera lika bra.
+> Obs: Vi använde en [arrow function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) här för att deklarera vår `popstate`-händelsehanterare för korthet, men en vanlig funktion skulle fungera lika bra.
 
-Här är en uppfräschande video om pilsfunktioner:
+Här är en uppfriskningsvideo om arrow functions:
 
-[![Pilsfunktioner](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Pilsfunktioner")
+[![Arrow Functions](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Arrow Functions")
 
-> 🎥 Klicka på bilden ovan för en video om pilsfunktioner.
+> 🎥 Klicka på bilden ovan för en video om arrow functions.
 
-Prova nu att använda bakåt- och framåtknapparna i din webbläsare och kontrollera att den visade rutten uppdateras korrekt denna gång.
+Testa nu att använda bakåt- och framåtknapparna i din webbläsare och kontrollera att den visade rutten uppdateras korrekt denna gång.
 
 ---
 
 ## 🚀 Utmaning
 
-Lägg till en ny mall och rutt för en tredje sida som visar krediterna för denna app.
+Lägg till en ny mall och rutt för en tredje sida som visar krediter för denna app.
 
 ## Efterföreläsningsquiz
 
 [Efterföreläsningsquiz](https://ff-quizzes.netlify.app/web/quiz/42)
 
-## Granskning och självstudier
+## Granskning & Självstudier
 
 Routing är en av de överraskande knepiga delarna av webbutveckling, särskilt när webben går från siduppdateringsbeteenden till Single Page Application-uppdateringar. Läs lite om [hur Azure Static Web App-tjänsten](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) hanterar routing. Kan du förklara varför några av de beslut som beskrivs i det dokumentet är nödvändiga?
 
@@ -319,4 +319,4 @@ Routing är en av de överraskande knepiga delarna av webbutveckling, särskilt 
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiska översättningar kan innehålla fel eller inexaktheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

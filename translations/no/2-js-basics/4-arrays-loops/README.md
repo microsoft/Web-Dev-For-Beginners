@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-26T21:46:59+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T08:37:43+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "no"
 }
@@ -27,23 +27,23 @@ Denne leksjonen dekker det grunnleggende i JavaScript, språket som gir interakt
 
 ## Arrays
 
-Å jobbe med data er en vanlig oppgave i alle programmeringsspråk, og det blir mye enklere når data er organisert i en strukturert form, som arrays. Med arrays lagres data i en struktur som ligner en liste. En stor fordel med arrays er at du kan lagre ulike typer data i én array.
+Å jobbe med data er en vanlig oppgave i ethvert programmeringsspråk, og det blir mye enklere når data er organisert i en strukturert form, som arrays. Med arrays lagres data i en struktur som ligner en liste. En stor fordel med arrays er at du kan lagre ulike typer data i én og samme array.
 
-✅ Arrays finnes overalt! Kan du komme på et eksempel fra virkeligheten, som et solcellepanel-array?
+✅ Arrays finnes overalt rundt oss! Kan du komme på et eksempel fra virkeligheten, som et solcellepanel-array?
 
-Syntaksen for en array er et par med firkantede klammer.
+Syntaksen for en array er et par med hakeparenteser.
 
 ```javascript
 let myArray = [];
 ```
 
-Dette er en tom array, men arrays kan også deklareres med data allerede lagt inn. Flere verdier i en array skilles med komma.
+Dette er en tom array, men arrays kan også deklareres med data allerede fylt inn. Flere verdier i en array skilles med komma.
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 ```
 
-Verdiene i en array tildeles en unik verdi kalt **indeks**, et heltall som tildeles basert på avstanden fra starten av arrayen. I eksempelet over har strengverdien "Chocolate" en indeks på 0, og indeksen til "Rocky Road" er 4. Bruk indeksen med firkantede klammer for å hente, endre eller legge til verdier i en array.
+Verdiene i en array tildeles en unik verdi kalt **indeks**, et heltall som tildeles basert på avstanden fra starten av arrayen. I eksempelet over har strengverdien "Chocolate" en indeks på 0, og indeksen til "Rocky Road" er 4. Bruk indeksen med hakeparenteser for å hente, endre eller sette inn verdier i en array.
 
 ✅ Er det overraskende for deg at arrays starter på indeks null? I noen programmeringsspråk starter indekser på 1. Det finnes en interessant historie bak dette, som du kan [lese om på Wikipedia](https://en.wikipedia.org/wiki/Zero-based_numbering).
 
@@ -58,22 +58,22 @@ Du kan bruke indeksen til å endre en verdi, slik som dette:
 iceCreamFlavors[4] = "Butter Pecan"; //Changed "Rocky Road" to "Butter Pecan"
 ```
 
-Og du kan legge til en ny verdi på en gitt indeks slik som dette:
+Og du kan sette inn en ny verdi på en gitt indeks slik som dette:
 
 ```javascript
 iceCreamFlavors[5] = "Cookie Dough"; //Added "Cookie Dough"
 ```
 
-✅ En mer vanlig måte å legge til verdier i en array på er ved å bruke array-operatører som array.push()
+✅ En mer vanlig måte å legge til verdier i en array på, er ved å bruke array-operatører som array.push().
 
-For å finne ut hvor mange elementer som er i en array, bruk `length`-egenskapen.
+For å finne ut hvor mange elementer som finnes i en array, bruk `length`-egenskapen.
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 iceCreamFlavors.length; //5
 ```
 
-✅ Prøv det selv! Bruk nettleserens konsoll til å lage og manipulere en array du selv finner på.
+✅ Prøv det selv! Bruk konsollen i nettleseren din til å opprette og manipulere en array du lager selv.
 
 ## Løkker
 
@@ -81,10 +81,10 @@ Løkker lar oss utføre repeterende eller **iterative** oppgaver, og kan spare m
 
 ### For-løkke
 
-`for`-løkker krever 3 deler for å iterere:
+`for`-løkker krever tre deler for å iterere:
 - `counter` En variabel som vanligvis initialiseres med et tall som teller antall iterasjoner
 - `condition` Et uttrykk som bruker sammenligningsoperatorer for å stoppe løkken når det blir `false`
-- `iteration-expression` Kjøres på slutten av hver iterasjon, vanligvis brukt til å endre verdien av telleren
+- `iteration-expression` Kjøres på slutten av hver iterasjon, vanligvis brukt til å endre verdien av counter
   
 ```javascript
 // Counting up to 10
@@ -93,11 +93,11 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-✅ Kjør denne koden i nettleserens konsoll. Hva skjer når du gjør små endringer i telleren, betingelsen eller iterasjonsuttrykket? Kan du få den til å kjøre baklengs, som en nedtelling?
+✅ Kjør denne koden i nettleserens konsoll. Hva skjer når du gjør små endringer i counter, condition eller iteration-expression? Kan du få den til å kjøre baklengs, som en nedtelling?
 
 ### While-løkke
 
-I motsetning til syntaksen for `for`-løkker, krever `while`-løkker kun en betingelse som stopper løkken når betingelsen blir `false`. Betingelser i løkker avhenger vanligvis av andre verdier som tellere, og må håndteres under løkken. Startverdier for tellere må opprettes utenfor løkken, og alle uttrykk for å oppfylle en betingelse, inkludert endring av telleren, må håndteres inne i løkken.
+I motsetning til syntaksen for `for`-løkker, krever `while`-løkker kun en betingelse som stopper løkken når betingelsen blir `false`. Betingelser i løkker avhenger vanligvis av andre verdier som tellere, og må håndteres underveis i løkken. Startverdier for tellere må opprettes utenfor løkken, og alle uttrykk for å oppfylle en betingelse, inkludert endring av telleren, må håndteres inne i løkken.
 
 ```javascript
 //Counting up to 10
@@ -112,7 +112,7 @@ while (i < 10) {
 
 ## Løkker og Arrays
 
-Arrays brukes ofte sammen med løkker fordi de fleste betingelser krever lengden av arrayen for å stoppe løkken, og indeksen kan også være telleren.
+Arrays brukes ofte sammen med løkker fordi de fleste betingelser krever lengden på arrayen for å stoppe løkken, og indeksen kan også være verdien til telleren.
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
@@ -122,20 +122,20 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 } //Ends when all flavors are printed
 ```
 
-✅ Eksperimenter med å iterere over en array du selv lager i nettleserens konsoll.
+✅ Eksperimenter med å iterere over en array du lager selv i nettleserens konsoll.
 
 ---
 
 ## 🚀 Utfordring
 
-Det finnes andre måter å iterere over arrays på enn for- og while-løkker. Det finnes [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), og [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Skriv om array-løkken din ved å bruke en av disse teknikkene.
+Det finnes andre måter å iterere over arrays på enn for- og while-løkker. Det finnes [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) og [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Skriv om array-løkken din ved å bruke en av disse teknikkene.
 
 ## Quiz etter forelesning
 [Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Gjennomgang og Selvstudium
 
-Arrays i JavaScript har mange metoder knyttet til seg, som er svært nyttige for datamanipulering. [Les om disse metodene](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) og prøv noen av dem (som push, pop, slice og splice) på en array du selv lager.
+Arrays i JavaScript har mange metoder knyttet til seg, som er svært nyttige for datamanipulering. [Les om disse metodene](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) og prøv noen av dem (som push, pop, slice og splice) på en array du lager selv.
 
 ## Oppgave
 
@@ -144,4 +144,4 @@ Arrays i JavaScript har mange metoder knyttet til seg, som er svært nyttige for
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

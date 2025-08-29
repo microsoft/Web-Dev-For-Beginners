@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46a0639e719b9cf1dfd062aa24cad639",
-  "translation_date": "2025-08-26T21:30:22+00:00",
+  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
+  "translation_date": "2025-08-29T08:18:35+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "da"
 }
@@ -20,13 +20,13 @@ CO_OP_TRANSLATOR_METADATA:
 > Se videoen
 
 > 
-> [![Video om Git og GitHub grundlæggende](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
+> [![Git og GitHub grundlæggende video](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
 
 ### Introduktion
 
 HTML, eller HyperText Markup Language, er 'skelettet' på nettet. Hvis CSS 'klæder' din HTML på, og JavaScript giver det liv, så er HTML kroppen i din webapplikation. HTML's syntaks afspejler endda denne idé, da den inkluderer "head", "body" og "footer" tags.
 
-I denne lektion skal vi bruge HTML til at opbygge 'skelettet' af vores virtuelle terrariums interface. Det vil have en titel og tre kolonner: en højre og en venstre kolonne, hvor de trækbare planter befinder sig, og et midterområde, som vil være det egentlige glaslignende terrarium. Når vi er færdige med denne lektion, vil du kunne se planterne i kolonnerne, men interfacet vil se lidt mærkeligt ud; bare rolig, i næste sektion tilføjer vi CSS-stilarter til interfacet for at få det til at se bedre ud.
+I denne lektion skal vi bruge HTML til at opbygge 'skelettet' af vores virtuelle terrariums interface. Det vil have en titel og tre kolonner: en højre og en venstre kolonne, hvor de trækbare planter befinder sig, og et midterområde, som vil være det glaslignende terrarium. Ved slutningen af denne lektion vil du kunne se planterne i kolonnerne, men interfacet vil se lidt mærkeligt ud; bare rolig, i næste sektion vil du tilføje CSS-stilarter til interfacet for at få det til at se bedre ud.
 
 ### Opgave
 
@@ -42,7 +42,7 @@ Brug disse kommandoer i din git bash:
 * `touch index.html`
 * `code index.html` eller `nano index.html`
 
-> index.html-filer angiver for en browser, at det er standardfilen i en mappe; URL'er som `https://anysite.com/test` kan være bygget ved hjælp af en mappestruktur, der inkluderer en mappe kaldet `test` med `index.html` indeni; `index.html` behøver ikke at vises i en URL.
+> index.html-filer angiver til en browser, at det er standardfilen i en mappe; URL'er som `https://anysite.com/test` kan være bygget ved hjælp af en mappestruktur, der inkluderer en mappe kaldet `test` med `index.html` indeni; `index.html` behøver ikke at vises i en URL.
 
 ---
 
@@ -52,7 +52,7 @@ Den første linje i en HTML-fil er dens doctype. Det er lidt overraskende, at du
 
 > Tip: I VS Code kan du holde musen over et tag og få information om dets brug fra MDN Reference guides.
 
-Den anden linje skal være `<html>`-taggets åbningstag, efterfulgt af dets lukketag `</html>`. Disse tags er roden af dit interface.
+Den anden linje skal være `<html>`-taggets åbningstag, efterfulgt af dets lukningstag `</html>`. Disse tags er roden af dit interface.
 
 ### Opgave
 
@@ -63,7 +63,7 @@ Tilføj disse linjer øverst i din `index.html`-fil:
 <html></html>
 ```
 
-✅ Der er nogle forskellige tilstande, der kan bestemmes ved at sætte DocType med en forespørgselsstreng: [Quirks Mode og Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Disse tilstande blev brugt til at understøtte virkelig gamle browsere, som normalt ikke bruges i dag (Netscape Navigator 4 og Internet Explorer 5). Du kan holde dig til standard doctype-deklarationen.
+✅ Der er et par forskellige tilstande, der kan bestemmes ved at sætte DocType med en forespørgselsstreng: [Quirks Mode og Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Disse tilstande blev brugt til at understøtte virkelig gamle browsere, som normalt ikke bruges i dag (Netscape Navigator 4 og Internet Explorer 5). Du kan holde dig til standard doctype-deklarationen.
 
 ---
 
@@ -72,10 +72,10 @@ Tilføj disse linjer øverst i din `index.html`-fil:
 'Head'-området i HTML-dokumentet inkluderer vigtig information om din webside, også kendt som [metadata](https://developer.mozilla.org/docs/Web/HTML/Element/meta). I vores tilfælde fortæller vi webserveren, som denne side vil blive sendt til for at blive gengivet, disse fire ting:
 
 -   sidens titel
--   metadata om siden, herunder:
+-   sidens metadata, herunder:
     -   'character set', som fortæller, hvilken tegnkodning der bruges på siden
     -   browserinformation, herunder `x-ua-compatible`, som angiver, at IE=edge-browseren understøttes
-    -   information om, hvordan viewporten skal opføre sig, når den indlæses. Ved at sætte viewporten til at have en initial scale på 1 kontrolleres zoomniveauet, når siden først indlæses.
+    -   information om, hvordan viewporten skal opføre sig, når den indlæses. At sætte viewporten til at have en initial scale på 1 kontrollerer zoomniveauet, når siden først indlæses.
 
 ### Opgave
 
@@ -98,7 +98,7 @@ Tilføj et 'head'-blok til dit dokument mellem åbning og lukning af `<html>`-ta
 
 ### HTML-tags
 
-I HTML tilføjer du tags til din .html-fil for at oprette elementer på en webside. Hvert tag har normalt et åbningstag og et lukketag, som dette: `<p>hello</p>` for at angive et afsnit. Opret kroppens interface ved at tilføje et sæt `<body>`-tags inden for `<html>`-tagparret; din markup ser nu sådan ud:
+I HTML tilføjer du tags til din .html-fil for at oprette elementer på en webside. Hvert tag har normalt et åbningstag og et lukningstag, som dette: `<p>hej</p>` for at angive et afsnit. Opret kroppens interface ved at tilføje et sæt `<body>`-tags inde i `<html>`-tagparret; din markup ser nu sådan ud:
 
 ### Opgave
 
@@ -119,7 +119,7 @@ Nu kan du begynde at opbygge din side. Normalt bruger du `<div>`-tags til at opr
 
 ### Billeder
 
-Et HTML-tag, der ikke behøver et lukketag, er `<img>`-tagget, fordi det har et `src`-element, der indeholder al den information, siden har brug for til at gengive elementet.
+Et HTML-tag, der ikke behøver et lukningstag, er `<img>`-tagget, fordi det har et `src`-element, der indeholder al den information, siden har brug for til at gengive elementet.
 
 Opret en mappe i din app kaldet `images`, og tilføj alle billederne fra [source code folder](../../../../3-terrarium/solution/images); (der er 14 billeder af planter).
 
@@ -198,7 +198,7 @@ Tilføj følgende linje lige under dit åbningstag `<body>`:
 <h1>My Terrarium</h1>
 ```
 
-At bruge semantisk markup, som at have overskrifter som `<h1>` og uordnede lister som `<ul>`, hjælper skærmlæsere med at navigere gennem en side. Generelt bør knapper skrives som `<button>`, og lister bør være `<li>`. Selvom det _er muligt_ at bruge specielt stylet `<span>`-elementer med klik-håndterere til at efterligne knapper, er det bedre for handicappede brugere at bruge teknologier til at bestemme, hvor på en side en knap befinder sig, og interagere med den, hvis elementet vises som en knap. Af denne grund bør du forsøge at bruge semantisk markup så meget som muligt.
+At bruge semantisk markup, som at have overskrifter som `<h1>` og uordnede lister som `<ul>`, hjælper skærmlæsere med at navigere gennem en side. Generelt bør knapper skrives som `<button>`, og lister bør være `<li>`. Selvom det _er muligt_ at bruge specielt stylet `<span>`-elementer med klikfunktioner til at efterligne knapper, er det bedre for handicappede brugere at bruge teknologier til at bestemme, hvor på en side en knap findes, og interagere med den, hvis elementet vises som en knap. Af denne grund bør du forsøge at bruge semantisk markup så meget som muligt.
 
 ✅ Tag et kig på en skærmlæser og [hvordan den interagerer med en webside](https://www.youtube.com/watch?v=OUDV1gqs9GA). Kan du se, hvorfor ikke-semantisk markup kan frustrere brugeren?
 
@@ -222,7 +222,7 @@ Tilføj denne markup over det sidste `</div>`-tag:
 </div>
 ```
 
-✅ Selvom du har tilføjet denne markup til skærmen, ser du absolut intet blive gengivet. Hvorfor?
+✅ Selvom du tilføjede denne markup til skærmen, ser du absolut intet blive gengivet. Hvorfor?
 
 ---
 
@@ -240,7 +240,6 @@ HTML er det 'prøvede og sande' byggesystem, der har hjulpet med at opbygge nett
 
 Lær mere om at bygge sider til nettet og mobile enheder på [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
 
-
 ## Opgave
 
 [Øv dig i HTML: Byg en blogmockup](assignment.md)
@@ -248,4 +247,4 @@ Lær mere om at bygge sider til nettet og mobile enheder på [Microsoft Learn](h
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at opnå nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvaret for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

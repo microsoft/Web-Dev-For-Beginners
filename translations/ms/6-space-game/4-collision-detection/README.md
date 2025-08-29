@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-27T22:37:38+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T09:28:55+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "ms"
 }
@@ -13,18 +13,18 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/35)
 
-Dalam pelajaran ini, anda akan belajar cara menembak laser menggunakan JavaScript! Kita akan menambah dua perkara dalam permainan kita:
+Dalam pelajaran ini, anda akan belajar cara menembak laser menggunakan JavaScript! Kita akan menambah dua perkara ke dalam permainan kita:
 
-- **Laser**: laser ini ditembak dari kapal wira anda dan bergerak secara menegak ke atas
+- **Laser**: laser ini ditembak dari kapal angkasa wira anda dan bergerak secara menegak ke atas
 - **Pengesanan perlanggaran**, sebagai sebahagian daripada pelaksanaan keupayaan untuk *menembak*, kita juga akan menambah beberapa peraturan permainan yang menarik:
    - **Laser mengenai musuh**: Musuh akan mati jika terkena laser
    - **Laser mengenai bahagian atas skrin**: Laser akan dimusnahkan jika terkena bahagian atas skrin
    - **Perlanggaran musuh dan wira**: Musuh dan wira akan dimusnahkan jika mereka bertembung
-   - **Musuh mengenai bahagian bawah skrin**: Musuh dan wira akan dimusnahkan jika musuh mengenai bahagian bawah skrin
+   - **Musuh mengenai bahagian bawah skrin**: Musuh dan wira akan dimusnahkan jika musuh sampai ke bahagian bawah skrin
 
-Secara ringkas, anda -- *si wira* -- perlu memusnahkan semua musuh dengan laser sebelum mereka berjaya bergerak ke bahagian bawah skrin.
+Secara ringkas, anda -- *wira* -- perlu memusnahkan semua musuh dengan laser sebelum mereka sempat sampai ke bahagian bawah skrin.
 
-✅ Lakukan sedikit penyelidikan tentang permainan komputer pertama yang pernah ditulis. Apakah fungsinya?
+✅ Lakukan sedikit penyelidikan tentang permainan komputer pertama yang pernah dicipta. Apakah fungsinya?
 
 Mari jadi wira bersama!
 
@@ -32,7 +32,7 @@ Mari jadi wira bersama!
 
 Bagaimana kita melakukan pengesanan perlanggaran? Kita perlu menganggap objek permainan kita sebagai segi empat tepat yang bergerak. Kenapa begitu, anda mungkin bertanya? Ini kerana imej yang digunakan untuk melukis objek permainan adalah segi empat tepat: ia mempunyai `x`, `y`, `width` dan `height`.
 
-Jika dua segi empat tepat, iaitu wira dan musuh *bertembung*, anda mempunyai perlanggaran. Apa yang perlu berlaku selepas itu bergantung kepada peraturan permainan. Untuk melaksanakan pengesanan perlanggaran, anda memerlukan perkara berikut:
+Jika dua segi empat tepat, iaitu wira dan musuh *bersilang*, maka terdapat perlanggaran. Apa yang perlu berlaku selepas itu bergantung kepada peraturan permainan. Untuk melaksanakan pengesanan perlanggaran, anda memerlukan perkara berikut:
 
 1. Cara untuk mendapatkan representasi segi empat tepat bagi objek permainan, seperti ini:
 
@@ -58,9 +58,9 @@ Jika dua segi empat tepat, iaitu wira dan musuh *bertembung*, anda mempunyai per
    }
    ```
 
-## Bagaimana untuk memusnahkan sesuatu
+## Bagaimana Memusnahkan Objek
 
-Untuk memusnahkan sesuatu dalam permainan, anda perlu memberitahu permainan bahawa ia tidak lagi perlu melukis item tersebut dalam gelung permainan yang dicetuskan pada selang tertentu. Salah satu cara untuk melakukannya adalah dengan menandakan objek permainan sebagai *mati* apabila sesuatu berlaku, seperti ini:
+Untuk memusnahkan objek dalam permainan, anda perlu memberitahu permainan bahawa objek tersebut tidak lagi perlu dilukis dalam gelung permainan yang dicetuskan pada selang tertentu. Salah satu cara untuk melakukannya adalah dengan menandakan objek permainan sebagai *mati* apabila sesuatu berlaku, seperti ini:
 
 ```javascript
 // collision happened
@@ -73,17 +73,17 @@ Kemudian anda boleh mengasingkan objek *mati* sebelum melukis semula skrin, sepe
 gameObjects = gameObject.filter(go => !go.dead);
 ```
 
-## Bagaimana untuk menembak laser
+## Bagaimana Menembak Laser
 
-Menembak laser bermaksud bertindak balas terhadap acara kekunci dan mencipta objek yang bergerak dalam arah tertentu. Oleh itu, kita perlu melaksanakan langkah-langkah berikut:
+Menembak laser bermaksud bertindak balas terhadap peristiwa kekunci dan mencipta objek yang bergerak dalam arah tertentu. Oleh itu, kita perlu melaksanakan langkah-langkah berikut:
 
-1. **Cipta objek laser**: dari bahagian atas kapal wira kita, yang akan mula bergerak ke atas menuju bahagian atas skrin sebaik sahaja dicipta.
-2. **Lampirkan kod kepada acara kekunci**: kita perlu memilih kekunci pada papan kekunci yang mewakili pemain menembak laser.
+1. **Cipta objek laser**: dari bahagian atas kapal wira anda, yang akan mula bergerak ke atas skrin sebaik sahaja dicipta.
+2. **Lampirkan kod kepada peristiwa kekunci**: kita perlu memilih kekunci pada papan kekunci yang mewakili pemain menembak laser.
 3. **Cipta objek permainan yang kelihatan seperti laser** apabila kekunci ditekan.
 
-## Tempoh Penyejukan Laser
+## Penyejukan Laser
 
-Laser perlu ditembak setiap kali anda menekan kekunci, seperti *space* contohnya. Untuk mengelakkan permainan menghasilkan terlalu banyak laser dalam masa yang singkat, kita perlu memperbaikinya. Penyelesaiannya adalah dengan melaksanakan apa yang dipanggil *tempoh penyejukan*, iaitu pemasa, yang memastikan laser hanya boleh ditembak pada selang tertentu. Anda boleh melaksanakannya dengan cara berikut:
+Laser perlu ditembak setiap kali anda menekan kekunci, seperti *space* contohnya. Untuk mengelakkan permainan menghasilkan terlalu banyak laser dalam masa yang singkat, kita perlu memperbaikinya. Penyelesaiannya adalah dengan melaksanakan apa yang dipanggil *cooldown*, iaitu pemasa, yang memastikan laser hanya boleh ditembak pada selang masa tertentu. Anda boleh melaksanakannya seperti berikut:
 
 ```javascript
 class Cooldown {
@@ -109,23 +109,23 @@ class Weapon {
 }
 ```
 
-✅ Rujuk pelajaran 1 dalam siri permainan angkasa untuk mengingatkan diri anda tentang *tempoh penyejukan*.
+✅ Rujuk pelajaran 1 dalam siri permainan angkasa untuk mengingatkan diri anda tentang *cooldowns*.
 
-## Apa yang perlu dibina
+## Apa yang Akan Dibina
 
-Anda akan mengambil kod sedia ada (yang sepatutnya telah anda bersihkan dan refaktor) daripada pelajaran sebelumnya, dan meluaskannya. Sama ada mulakan dengan kod dari bahagian II atau gunakan kod di [Bahagian III - permulaan](../../../../../../../../../your-work).
+Anda akan mengambil kod sedia ada (yang sepatutnya telah anda kemas kini dan refactor) daripada pelajaran sebelumnya, dan memperluaskannya. Sama ada mulakan dengan kod dari bahagian II atau gunakan kod di [Bahagian III - permulaan](../../../../../../../../../your-work).
 
 > tip: laser yang akan anda gunakan sudah ada dalam folder aset anda dan dirujuk oleh kod anda
 
 - **Tambah pengesanan perlanggaran**, apabila laser bertembung dengan sesuatu, peraturan berikut harus digunakan:
-   1. **Laser mengenai musuh**: musuh akan mati jika terkena laser
-   2. **Laser mengenai bahagian atas skrin**: Laser akan dimusnahkan jika terkena bahagian atas skrin
-   3. **Perlanggaran musuh dan wira**: musuh dan wira akan dimusnahkan jika mereka bertembung
-   4. **Musuh mengenai bahagian bawah skrin**: musuh dan wira akan dimusnahkan jika musuh mengenai bahagian bawah skrin
+   1. **Laser mengenai musuh**: musuh mati jika terkena laser
+   2. **Laser mengenai bahagian atas skrin**: Laser dimusnahkan jika terkena bahagian atas skrin
+   3. **Perlanggaran musuh dan wira**: musuh dan wira dimusnahkan jika mereka bertembung
+   4. **Musuh mengenai bahagian bawah skrin**: musuh dan wira dimusnahkan jika musuh sampai ke bahagian bawah skrin
 
 ## Langkah yang Disyorkan
 
-Cari fail yang telah dicipta untuk anda dalam sub folder `your-work`. Ia sepatutnya mengandungi perkara berikut:
+Cari fail yang telah dicipta untuk anda dalam subfolder `your-work`. Ia sepatutnya mengandungi perkara berikut:
 
 ```bash
 -| assets
@@ -144,11 +144,11 @@ cd your-work
 npm start
 ```
 
-Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. Buka pelayar dan masukkan alamat tersebut, buat masa ini ia sepatutnya memaparkan wira dan semua musuh, tetapi tiada apa yang bergerak - lagi :).
+Perintah di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. Buka pelayar dan masukkan alamat tersebut, buat masa ini ia sepatutnya memaparkan wira dan semua musuh, tetapi tiada apa yang bergerak - lagi :).
 
-### Tambah kod
+### Tambah Kod
 
-1. **Sediakan representasi segi empat tepat bagi objek permainan anda, untuk mengendalikan perlanggaran** Kod di bawah membolehkan anda mendapatkan representasi segi empat tepat bagi `GameObject`. Edit kelas GameObject anda untuk meluaskannya:
+1. **Sediakan representasi segi empat tepat untuk objek permainan anda, untuk mengendalikan perlanggaran** Kod di bawah membolehkan anda mendapatkan representasi segi empat tepat bagi `GameObject`. Edit kelas GameObject anda untuk memperluaskannya:
 
     ```javascript
     rectFromGameObject() {
@@ -161,7 +161,7 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
       }
     ```
 
-2. **Tambah kod yang memeriksa perlanggaran** Ini akan menjadi fungsi baru yang menguji sama ada dua segi empat tepat bertembung:
+2. **Tambah kod yang memeriksa perlanggaran** Ini akan menjadi fungsi baru yang menguji sama ada dua segi empat tepat bersilang:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -175,7 +175,7 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
     ```
 
 3. **Tambah keupayaan menembak laser**
-   1. **Tambah mesej acara kekunci**. Kekunci *space* sepatutnya mencipta laser tepat di atas kapal wira. Tambah tiga pemalar dalam objek Messages:
+   1. **Tambah mesej peristiwa kekunci**. Kekunci *space* sepatutnya mencipta laser tepat di atas kapal wira. Tambah tiga pemalar dalam objek Messages:
 
        ```javascript
         KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
@@ -209,7 +209,7 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
           })
           ```
 
-   1. **Gerakkan objek**, Pastikan laser bergerak ke bahagian atas skrin secara beransur-ansur. Anda akan mencipta kelas Laser baru yang meluaskan `GameObject`, seperti yang telah anda lakukan sebelum ini: 
+   1. **Gerakkan objek**, Pastikan laser bergerak ke atas skrin secara beransur-ansur. Anda akan mencipta kelas Laser baru yang memperluaskan `GameObject`, seperti yang anda lakukan sebelum ini: 
    
       ```javascript
         class Laser extends GameObject {
@@ -230,7 +230,7 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
       }
       ```
 
-   1. **Kendalikan perlanggaran**, Laksanakan peraturan perlanggaran untuk laser. Tambah fungsi `updateGameObjects()` yang menguji objek yang bertembung untuk terkena
+   1. **Kendalikan perlanggaran**, Laksanakan peraturan perlanggaran untuk laser. Tambah fungsi `updateGameObjects()` yang menguji objek bertembung untuk perlanggaran:
 
       ```javascript
       function updateGameObjects() {
@@ -254,9 +254,9 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
 
       Pastikan untuk menambah `updateGameObjects()` ke dalam gelung permainan anda dalam `window.onload`.
 
-   4. **Laksanakan tempoh penyejukan** pada laser, supaya ia hanya boleh ditembak pada selang tertentu.
+   4. **Laksanakan cooldown** pada laser, supaya ia hanya boleh ditembak pada selang tertentu.
 
-      Akhir sekali, edit kelas Hero supaya ia boleh mempunyai tempoh penyejukan:
+      Akhir sekali, edit kelas Hero supaya ia boleh melaksanakan cooldown:
 
        ```javascript
       class Hero extends GameObject {
@@ -285,13 +285,13 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
       }
       ```
 
-Pada tahap ini, permainan anda mempunyai beberapa fungsi! Anda boleh menavigasi dengan kekunci anak panah, menembak laser dengan kekunci space, dan musuh akan hilang apabila anda mengenainya. Syabas!
+Pada tahap ini, permainan anda sudah mempunyai beberapa fungsi! Anda boleh bergerak menggunakan kekunci anak panah, menembak laser dengan kekunci space, dan musuh akan hilang apabila anda mengenainya. Syabas!
 
 ---
 
 ## 🚀 Cabaran
 
-Tambah letupan! Lihat aset permainan dalam [repositori Seni Angkasa](../../../../6-space-game/solution/spaceArt/readme.txt) dan cuba tambah letupan apabila laser mengenai alien.
+Tambah letupan! Lihat aset permainan dalam [repositori Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) dan cuba tambahkan letupan apabila laser mengenai alien.
 
 ## Kuiz Pasca-Kuliah
 
@@ -299,7 +299,7 @@ Tambah letupan! Lihat aset permainan dalam [repositori Seni Angkasa](../../../..
 
 ## Ulasan & Kajian Kendiri
 
-Eksperimen dengan selang masa dalam permainan anda setakat ini. Apa yang berlaku apabila anda mengubahnya? Baca lebih lanjut tentang [acara masa JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
+Cuba ubah selang masa dalam permainan anda setakat ini. Apa yang berlaku apabila anda mengubahnya? Baca lebih lanjut tentang [peristiwa masa dalam JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
 ## Tugasan
 
@@ -308,4 +308,4 @@ Eksperimen dengan selang masa dalam permainan anda setakat ini. Apa yang berlaku
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

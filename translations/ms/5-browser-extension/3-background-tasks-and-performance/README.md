@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f198c6b817b4b2a99749f4662e7cae98",
-  "translation_date": "2025-08-27T22:21:08+00:00",
+  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
+  "translation_date": "2025-08-29T09:26:09+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "ms"
 }
@@ -15,19 +15,19 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Pengenalan
 
-Dalam dua pelajaran terakhir modul ini, anda telah belajar cara membina borang dan kawasan paparan untuk data yang diambil daripada API. Ini adalah cara yang sangat standard untuk mencipta kehadiran web di web. Anda juga telah belajar cara mengendalikan pengambilan data secara asinkron. Sambungan pelayar anda hampir siap.
+Dalam dua pelajaran terakhir modul ini, anda telah belajar cara membina borang dan kawasan paparan untuk data yang diambil dari API. Ini adalah cara yang sangat standard untuk mencipta kehadiran web di web. Anda juga telah belajar cara mengendalikan pengambilan data secara asinkron. Sambungan pelayar anda hampir siap sepenuhnya.
 
-Yang tinggal adalah menguruskan beberapa tugas latar belakang, termasuk menyegarkan warna ikon sambungan, jadi ini adalah masa yang sesuai untuk membincangkan bagaimana pelayar menguruskan jenis tugas ini. Mari kita fikirkan tentang tugas-tugas pelayar ini dalam konteks prestasi aset web anda semasa anda membinanya.
+Masih ada tugas latar belakang yang perlu diuruskan, termasuk menyegarkan warna ikon sambungan, jadi ini adalah masa yang sesuai untuk membincangkan bagaimana pelayar menguruskan jenis tugas ini. Mari kita fikirkan tentang tugas pelayar ini dalam konteks prestasi aset web anda semasa anda membinanya.
 
 ## Asas Prestasi Web
 
-> "Prestasi laman web adalah tentang dua perkara: seberapa cepat halaman dimuat, dan seberapa cepat kod di dalamnya berjalan." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
+> "Prestasi laman web berkisar pada dua perkara: seberapa cepat halaman dimuat, dan seberapa cepat kod di dalamnya berjalan." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
-Topik tentang cara menjadikan laman web anda sangat pantas pada semua jenis peranti, untuk semua jenis pengguna, dalam semua jenis situasi, sememangnya luas. Berikut adalah beberapa perkara yang perlu diingat semasa anda membina projek web standard atau sambungan pelayar.
+Topik tentang cara membuat laman web anda sangat pantas pada semua jenis peranti, untuk semua jenis pengguna, dalam semua jenis situasi, adalah sangat luas. Berikut adalah beberapa perkara yang perlu diingat semasa anda membina projek web standard atau sambungan pelayar.
 
-Perkara pertama yang perlu anda lakukan untuk memastikan laman anda berjalan dengan cekap adalah mengumpulkan data tentang prestasinya. Tempat pertama untuk melakukannya adalah dalam alat pembangun pelayar web anda. Dalam Edge, anda boleh memilih butang "Tetapan dan lagi" (ikon tiga titik di bahagian atas kanan pelayar), kemudian navigasi ke Alat Lain > Alat Pembangun dan buka tab Prestasi. Anda juga boleh menggunakan pintasan papan kekunci `Ctrl` + `Shift` + `I` pada Windows atau `Option` + `Command` + `I` pada Mac untuk membuka alat pembangun.
+Perkara pertama yang perlu anda lakukan untuk memastikan laman web anda berjalan dengan cekap adalah mengumpulkan data tentang prestasinya. Tempat pertama untuk melakukannya adalah dalam alat pembangun pelayar web anda. Dalam Edge, anda boleh memilih butang "Tetapan dan banyak lagi" (ikon tiga titik di bahagian atas kanan pelayar), kemudian navigasi ke Alat Lain > Alat Pembangun dan buka tab Prestasi. Anda juga boleh menggunakan pintasan papan kekunci `Ctrl` + `Shift` + `I` pada Windows atau `Option` + `Command` + `I` pada Mac untuk membuka alat pembangun.
 
-Tab Prestasi mengandungi alat Profiling. Buka laman web (cuba, sebagai contoh, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) dan klik butang 'Record', kemudian segarkan laman tersebut. Hentikan rakaman pada bila-bila masa, dan anda akan dapat melihat rutin yang dihasilkan untuk 'script', 'render', dan 'paint' laman tersebut:
+Tab Prestasi mengandungi alat Profiling. Buka laman web (cuba, sebagai contoh, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) dan klik butang 'Record', kemudian segarkan laman web tersebut. Hentikan rakaman pada bila-bila masa, dan anda akan dapat melihat rutin yang dihasilkan untuk 'script', 'render', dan 'paint' laman web:
 
 ![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.ms.png)
 
@@ -37,7 +37,7 @@ Tab Prestasi mengandungi alat Profiling. Buka laman web (cuba, sebagai contoh, [
 
 Pilih elemen garis masa profil untuk mengezum masuk pada acara yang berlaku semasa halaman anda dimuat.
 
-Dapatkan gambaran prestasi halaman anda dengan memilih sebahagian daripada garis masa profil dan melihat panel ringkasan:
+Dapatkan gambaran prestasi halaman anda dengan memilih bahagian garis masa profil dan melihat panel ringkasan:
 
 ![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.ms.png)
 
@@ -45,29 +45,29 @@ Periksa panel Log Acara untuk melihat jika ada acara yang mengambil masa lebih d
 
 ![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.ms.png)
 
-✅ Kenali alat profiler anda! Buka alat pembangun di laman ini dan lihat jika terdapat sebarang halangan. Apakah aset yang paling lambat dimuat? Yang paling pantas?
+✅ Kenali profiler anda! Buka alat pembangun di laman ini dan lihat jika ada halangan. Apakah aset yang paling lambat dimuat? Yang paling pantas?
 
 ## Pemeriksaan Profiling
 
-Secara umum, terdapat beberapa "kawasan masalah" yang setiap pembangun web harus perhatikan semasa membina laman untuk mengelakkan kejutan yang tidak menyenangkan apabila tiba masa untuk melancarkan ke pengeluaran.
+Secara umum, terdapat beberapa "kawasan masalah" yang setiap pembangun web harus perhatikan semasa membina laman web untuk mengelakkan kejutan yang tidak menyenangkan apabila tiba masa untuk melancarkan ke produksi.
 
-**Saiz aset**: Web telah menjadi lebih 'berat', dan dengan itu lebih perlahan, dalam beberapa tahun kebelakangan ini. Sebahagian daripada berat ini berkaitan dengan penggunaan imej.
+**Saiz aset**: Web telah menjadi lebih 'berat', dan dengan itu lebih lambat, dalam beberapa tahun kebelakangan ini. Sebahagian daripada berat ini berkaitan dengan penggunaan imej.
 
 ✅ Lihat melalui [Internet Archive](https://httparchive.org/reports/page-weight) untuk pandangan sejarah tentang berat halaman dan banyak lagi.
 
-Amalan yang baik adalah memastikan bahawa imej anda dioptimumkan dan dihantar pada saiz dan resolusi yang betul untuk pengguna anda.
+Amalan yang baik adalah memastikan imej anda dioptimumkan dan dihantar pada saiz dan resolusi yang sesuai untuk pengguna anda.
 
 **Traversals DOM**: Pelayar perlu membina Model Objek Dokumen berdasarkan kod yang anda tulis, jadi demi prestasi halaman yang baik, pastikan tag anda minimum, hanya menggunakan dan menggayakan apa yang diperlukan oleh halaman. Untuk perkara ini, CSS berlebihan yang dikaitkan dengan halaman boleh dioptimumkan; gaya yang hanya perlu digunakan pada satu halaman tidak perlu dimasukkan dalam helaian gaya utama, sebagai contoh.
 
-**JavaScript**: Setiap pembangun JavaScript harus memerhatikan skrip 'render-blocking' yang mesti dimuat sebelum DOM lain dapat dilalui dan dilukis ke pelayar. Pertimbangkan untuk menggunakan `defer` dengan skrip sebaris anda (seperti yang dilakukan dalam modul Terrarium).
+**JavaScript**: Setiap pembangun JavaScript harus memerhatikan skrip 'render-blocking' yang mesti dimuat sebelum DOM yang lain dapat dilalui dan dilukis ke pelayar. Pertimbangkan untuk menggunakan `defer` dengan skrip inline anda (seperti yang dilakukan dalam modul Terrarium).
 
-✅ Cuba beberapa laman di [Laman Ujian Kelajuan Laman](https://www.webpagetest.org/) untuk mengetahui lebih lanjut tentang pemeriksaan biasa yang dilakukan untuk menentukan prestasi laman.
+✅ Cuba beberapa laman web di laman [Ujian Kelajuan Laman Web](https://www.webpagetest.org/) untuk mengetahui lebih lanjut tentang pemeriksaan biasa yang dilakukan untuk menentukan prestasi laman web.
 
 Sekarang anda mempunyai idea tentang bagaimana pelayar memaparkan aset yang anda hantar kepadanya, mari kita lihat beberapa perkara terakhir yang perlu anda lakukan untuk melengkapkan sambungan anda:
 
 ### Cipta fungsi untuk mengira warna
 
-Bekerja dalam `/src/index.js`, tambahkan fungsi yang dipanggil `calculateColor()` selepas siri pembolehubah `const` yang anda tetapkan untuk mendapatkan akses kepada DOM:
+Bekerja dalam `/src/index.js`, tambahkan fungsi bernama `calculateColor()` selepas siri pembolehubah `const` yang anda tetapkan untuk mendapatkan akses kepada DOM:
 
 ```JavaScript
 function calculateColor(value) {
@@ -88,15 +88,15 @@ function calculateColor(value) {
 }
 ```
 
-Apa yang berlaku di sini? Anda menghantar nilai (keamatan karbon) daripada panggilan API yang anda selesaikan dalam pelajaran terakhir, dan kemudian anda mengira sejauh mana nilainya dengan indeks yang dibentangkan dalam array warna. Kemudian anda menghantar nilai warna terdekat itu ke runtime chrome.
+Apa yang berlaku di sini? Anda menghantar nilai (intensiti karbon) dari panggilan API yang anda selesaikan dalam pelajaran terakhir, dan kemudian anda mengira sejauh mana nilainya dengan indeks yang disajikan dalam array warna. Kemudian anda menghantar nilai warna terdekat itu ke runtime chrome.
 
-Chrome.runtime mempunyai [API](https://developer.chrome.com/extensions/runtime) yang mengendalikan semua jenis tugas latar belakang, dan sambungan anda memanfaatkan itu:
+Runtime chrome mempunyai [API](https://developer.chrome.com/extensions/runtime) yang mengendalikan pelbagai jenis tugas latar belakang, dan sambungan anda memanfaatkan itu:
 
 > "Gunakan API chrome.runtime untuk mendapatkan halaman latar belakang, mengembalikan butiran tentang manifest, dan mendengar serta bertindak balas terhadap acara dalam kitaran hayat aplikasi atau sambungan. Anda juga boleh menggunakan API ini untuk menukar laluan relatif URL kepada URL yang sepenuhnya layak."
 
-✅ Jika anda membangunkan sambungan pelayar ini untuk Edge, mungkin mengejutkan anda bahawa anda menggunakan API chrome. Versi pelayar Edge yang lebih baru berjalan pada enjin pelayar Chromium, jadi anda boleh memanfaatkan alat ini.
+✅ Jika anda sedang membangunkan sambungan pelayar ini untuk Edge, mungkin mengejutkan anda bahawa anda menggunakan API chrome. Versi pelayar Edge yang lebih baru berjalan pada enjin pelayar Chromium, jadi anda boleh memanfaatkan alat ini.
 
-> Nota, jika anda ingin memprofilkan sambungan pelayar, lancarkan alat pembangun dari dalam sambungan itu sendiri, kerana ia adalah contoh pelayar yang berasingan.
+> Nota, jika anda ingin memprofil sambungan pelayar, lancarkan alat pembangun dari dalam sambungan itu sendiri, kerana ia adalah instance pelayar yang berasingan.
 
 ### Tetapkan warna ikon lalai
 
@@ -142,35 +142,35 @@ function drawIcon(value) {
 }
 ```
 
-Dalam kod ini, anda menambah pendengar untuk sebarang mesej yang datang kepada pengurus tugas latar belakang. Jika ia dipanggil 'updateIcon', maka kod seterusnya dijalankan untuk melukis ikon warna yang betul menggunakan API Canvas.
+Dalam kod ini, anda menambah pendengar untuk sebarang mesej yang datang kepada pengurus tugas latar belakang. Jika ia dipanggil 'updateIcon', maka kod seterusnya dijalankan untuk melukis ikon dengan warna yang sesuai menggunakan API Canvas.
 
 ✅ Anda akan belajar lebih lanjut tentang API Canvas dalam [pelajaran Permainan Angkasa](../../6-space-game/2-drawing-to-canvas/README.md).
 
 Sekarang, bina semula sambungan anda (`npm run build`), segarkan dan lancarkan sambungan anda, dan perhatikan perubahan warna. Adakah ini masa yang sesuai untuk menjalankan tugas atau mencuci pinggan? Sekarang anda tahu!
 
-Tahniah, anda telah membina sambungan pelayar yang berguna dan belajar lebih lanjut tentang bagaimana pelayar berfungsi dan cara memprofilkan prestasinya.
+Tahniah, anda telah membina sambungan pelayar yang berguna dan belajar lebih lanjut tentang bagaimana pelayar berfungsi dan cara memprofil prestasinya.
 
 ---
 
 ## 🚀 Cabaran
 
-Selidiki beberapa laman web sumber terbuka yang telah wujud sejak lama dahulu, dan, berdasarkan sejarah GitHub mereka, lihat jika anda dapat menentukan bagaimana mereka dioptimumkan selama bertahun-tahun untuk prestasi, jika ada. Apakah titik sakit yang paling biasa?
+Selidiki beberapa laman web sumber terbuka yang telah wujud sejak lama dahulu, dan, berdasarkan sejarah GitHub mereka, lihat jika anda dapat menentukan bagaimana mereka dioptimumkan selama bertahun-tahun untuk prestasi, jika ada. Apakah titik kesakitan yang paling biasa?
 
 ## Kuiz Pasca-Kuliah
 
 [Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/28)
 
-## Ulasan & Kajian Kendiri
+## Kajian & Pembelajaran Kendiri
 
-Pertimbangkan untuk mendaftar ke [surat berita prestasi](https://perf.email/)
+Pertimbangkan untuk mendaftar [buletin prestasi](https://perf.email/)
 
-Selidiki beberapa cara pelayar mengukur prestasi web dengan melihat melalui tab prestasi dalam alat web mereka. Adakah anda menemui sebarang perbezaan utama?
+Selidiki beberapa cara pelayar mengukur prestasi web dengan melihat melalui tab prestasi dalam alat web mereka. Adakah anda menemui sebarang perbezaan besar?
 
 ## Tugasan
 
-[Analisis laman untuk prestasi](assignment.md)
+[Analisis laman web untuk prestasi](assignment.md)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

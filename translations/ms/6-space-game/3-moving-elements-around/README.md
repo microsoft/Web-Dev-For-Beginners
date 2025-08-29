@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-27T22:33:03+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T09:28:08+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "ms"
 }
@@ -18,13 +18,13 @@ Permainan tidak begitu menyeronokkan sehingga anda mempunyai makhluk asing berge
 - **Pergerakan Papan Kekunci/Tetikus**: apabila pengguna berinteraksi dengan papan kekunci atau tetikus untuk menggerakkan objek di skrin.
 - **Pergerakan yang Dihasilkan Permainan**: apabila permainan menggerakkan objek dengan selang masa tertentu.
 
-Jadi bagaimana kita menggerakkan sesuatu di skrin? Ia semua berkaitan dengan koordinat kartesian: kita mengubah lokasi (x,y) objek dan kemudian melukis semula skrin.
+Jadi, bagaimana kita menggerakkan sesuatu di skrin? Ia semua berkaitan dengan koordinat kartesian: kita mengubah lokasi (x,y) objek dan kemudian melukis semula skrin.
 
 Biasanya anda memerlukan langkah-langkah berikut untuk mencapai *pergerakan* di skrin:
 
-1. **Tetapkan lokasi baru** untuk objek; ini diperlukan untuk melihat objek seolah-olah telah bergerak.
-2. **Kosongkan skrin**, skrin perlu dikosongkan di antara lukisan. Kita boleh mengosongkannya dengan melukis segi empat tepat yang kita isi dengan warna latar belakang.
-3. **Lukis semula objek** di lokasi baru. Dengan melakukan ini, kita akhirnya berjaya menggerakkan objek dari satu lokasi ke lokasi lain.
+1. **Tetapkan lokasi baharu** untuk objek; ini diperlukan untuk melihat objek seolah-olah telah bergerak.
+2. **Kosongkan skrin**, skrin perlu dikosongkan di antara lukisan. Kita boleh mengosongkannya dengan melukis segi empat tepat yang diisi dengan warna latar belakang.
+3. **Lukis semula objek** di lokasi baharu. Dengan melakukan ini, kita akhirnya berjaya menggerakkan objek dari satu lokasi ke lokasi lain.
 
 Berikut adalah bagaimana ia boleh kelihatan dalam kod:
 
@@ -41,7 +41,7 @@ ctx.drawImage(heroImg, hero.x, hero.y);
 
 ✅ Bolehkah anda memikirkan sebab mengapa melukis semula wira anda banyak bingkai sesaat mungkin menyebabkan kos prestasi? Baca tentang [alternatif kepada corak ini](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
-## Mengendalikan acara papan kekunci
+## Mengendalikan Acara Papan Kekunci
 
 Anda mengendalikan acara dengan melampirkan acara tertentu kepada kod. Acara papan kekunci dicetuskan pada keseluruhan tetingkap manakala acara tetikus seperti `click` boleh disambungkan kepada klik pada elemen tertentu. Kita akan menggunakan acara papan kekunci sepanjang projek ini.
 
@@ -58,14 +58,14 @@ window.addEventListener('keyup', (evt) => {
 })
 ```
 
-Untuk acara papan kekunci, terdapat dua sifat pada acara yang boleh anda gunakan untuk melihat kekunci yang ditekan:
+Untuk acara kekunci, terdapat dua sifat pada acara yang boleh anda gunakan untuk melihat kekunci yang ditekan:
 
-- `key`, ini adalah representasi string bagi kekunci yang ditekan, contohnya `ArrowUp`
+- `key`, ini adalah representasi string kekunci yang ditekan, contohnya `ArrowUp`
 - `keyCode`, ini adalah representasi nombor, contohnya `37`, bersamaan dengan `ArrowLeft`.
 
 ✅ Manipulasi acara kekunci berguna di luar pembangunan permainan. Apakah kegunaan lain yang boleh anda fikirkan untuk teknik ini?
 
-### Kekunci khas: satu peringatan
+### Kekunci Khas: Satu Peringatan
 
 Terdapat beberapa *kekunci khas* yang mempengaruhi tetingkap. Ini bermakna jika anda mendengar acara `keyup` dan anda menggunakan kekunci khas ini untuk menggerakkan wira anda, ia juga akan melakukan penatalan mendatar. Oleh itu, anda mungkin mahu *mematikan* tingkah laku lalai penyemak imbas ini semasa anda membina permainan anda. Anda memerlukan kod seperti ini:
 
@@ -101,9 +101,9 @@ let id = setInterval(() => {
 })
 ```
 
-## Gelung permainan
+## Gelung Permainan
 
-Gelung permainan adalah konsep yang pada dasarnya adalah fungsi yang dipanggil pada selang masa tetap. Ia dipanggil gelung permainan kerana segala-galanya yang sepatutnya kelihatan kepada pengguna dilukis ke dalam gelung. Gelung permainan menggunakan semua objek permainan yang merupakan sebahagian daripada permainan, melukis semuanya kecuali atas sebab tertentu tidak sepatutnya menjadi sebahagian daripada permainan lagi. Contohnya, jika objek adalah musuh yang terkena laser dan meletup, ia tidak lagi menjadi sebahagian daripada gelung permainan semasa (anda akan belajar lebih lanjut tentang ini dalam pelajaran seterusnya).
+Gelung permainan adalah konsep yang pada dasarnya adalah fungsi yang dipanggil pada selang masa tetap. Ia dipanggil gelung permainan kerana segala sesuatu yang sepatutnya kelihatan kepada pengguna dilukis ke dalam gelung. Gelung permainan menggunakan semua objek permainan yang merupakan sebahagian daripada permainan, melukis semuanya kecuali atas sebab tertentu tidak lagi menjadi sebahagian daripada permainan. Contohnya, jika objek adalah musuh yang terkena laser dan meletup, ia tidak lagi menjadi sebahagian daripada gelung permainan semasa (anda akan belajar lebih lanjut tentang ini dalam pelajaran seterusnya).
 
 Berikut adalah bagaimana gelung permainan biasanya kelihatan, dinyatakan dalam kod:
 
@@ -141,7 +141,7 @@ Cari fail yang telah dibuat untuk anda dalam sub folder `your-work`. Ia sepatutn
 -| package.json
 ```
 
-Anda memulakan projek anda dalam folder `your_work` dengan menaip:
+Mulakan projek anda dalam folder `your_work` dengan menaip:
 
 ```bash
 cd your-work
@@ -150,13 +150,13 @@ npm start
 
 Yang di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. Buka penyemak imbas dan masukkan alamat itu, sekarang ia sepatutnya memaparkan wira dan semua musuh; tiada apa yang bergerak - lagi!
 
-### Tambah kod
+### Tambah Kod
 
 1. **Tambah objek khusus** untuk `hero` dan `enemy` dan `game object`, mereka sepatutnya mempunyai sifat `x` dan `y`. (Ingat bahagian tentang [Pewarisan atau komposisi](../README.md)).
 
-   *PETUNJUK* `game object` sepatutnya menjadi yang mempunyai `x` dan `y` dan keupayaan untuk melukis dirinya ke kanvas.
+   *PETUNJUK* `game object` sepatutnya menjadi yang mempunyai `x` dan `y` serta keupayaan untuk melukis dirinya ke kanvas.
 
-   >tip: mulakan dengan menambah kelas GameObject baharu dengan pembinaannya seperti di bawah, dan kemudian lukis ke kanvas:
+   >tip: mulakan dengan menambah kelas GameObject baharu dengan pembinaannya seperti di bawah, dan kemudian lukisnya ke kanvas:
   
     ```javascript
         
@@ -209,7 +209,7 @@ Yang di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. Buk
 
    *INGAT* ia adalah sistem kartesian, kiri atas ialah `0,0`. Juga ingat untuk menambah kod untuk menghentikan *tingkah laku lalai*
 
-   >tip: cipta fungsi onKeyDown anda dan lampirkan pada tetingkap:
+   >tip: cipta fungsi onKeyDown anda dan lampirkan kepada tetingkap:
 
    ```javascript
     let onKeyDown = function (e) {
@@ -221,7 +221,7 @@ Yang di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. Buk
     window.addEventListener("keydown", onKeyDown);
    ```
     
-   Semak konsol penyemak imbas anda pada ketika ini, dan lihat kekunci yang ditekan sedang direkodkan.
+   Periksa konsol penyemak imbas anda pada ketika ini, dan lihat kekunci yang ditekan sedang direkodkan. 
 
 3. **Laksanakan** [Corak Pub sub](../README.md), ini akan memastikan kod anda bersih semasa anda mengikuti bahagian yang tinggal.
 
@@ -382,13 +382,13 @@ Yang di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. Buk
 
 ## 🚀 Cabaran
 
-Seperti yang anda lihat, kod anda boleh menjadi 'kod spaghetti' apabila anda mula menambah fungsi, pembolehubah dan kelas. Bagaimana anda boleh mengatur kod anda dengan lebih baik supaya ia lebih mudah dibaca? Lakarkan sistem untuk mengatur kod anda, walaupun ia masih berada dalam satu fail.
+Seperti yang anda lihat, kod anda boleh menjadi 'kod spaghetti' apabila anda mula menambah fungsi, pembolehubah, dan kelas. Bagaimana anda boleh mengatur kod anda dengan lebih baik supaya ia lebih mudah dibaca? Lakarkan sistem untuk mengatur kod anda, walaupun ia masih berada dalam satu fail.
 
 ## Kuiz Pasca-Kuliah
 
 [Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/34)
 
-## Kajian & Pembelajaran Kendiri
+## Ulasan & Kajian Kendiri
 
 Walaupun kita menulis permainan kita tanpa menggunakan kerangka kerja, terdapat banyak kerangka kerja kanvas berasaskan JavaScript untuk pembangunan permainan. Luangkan masa untuk melakukan [pembacaan tentang ini](https://github.com/collections/javascript-game-engines).
 

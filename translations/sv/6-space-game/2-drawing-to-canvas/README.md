@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-26T21:59:46+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T07:55:10+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "sv"
 }
 -->
-# Bygg ett rymdspel del 2: Rita hjälten och monster på canvasen
+# Bygg ett rymdspel del 2: Rita hjälte och monster på Canvas
 
-## Quiz före föreläsningen
+## Quiz före föreläsning
 
-[Quiz före föreläsningen](https://ff-quizzes.netlify.app/web/quiz/31)
+[Quiz före föreläsning](https://ff-quizzes.netlify.app/web/quiz/31)
 
-## Canvasen
+## Canvas
 
-Canvasen är ett HTML-element som som standard inte har något innehåll; det är en tom yta. Du måste lägga till innehåll genom att rita på den.
+Canvas är ett HTML-element som som standard inte har något innehåll; det är en tom yta. Du måste lägga till innehåll genom att rita på det.
 
 ✅ Läs [mer om Canvas API](https://developer.mozilla.org/docs/Web/API/Canvas_API) på MDN.
 
@@ -33,18 +33,18 @@ Ovan ställer vi in `id`, `width` och `height`.
 
 ## Rita enkel geometri
 
-Canvasen använder ett kartesiskt koordinatsystem för att rita saker. Det använder alltså en x-axel och y-axel för att uttrycka var något är placerat. Positionen `0,0` är det övre vänstra hörnet och det nedre högra är det du har angett som bredd och höjd för canvasen.
+Canvas använder ett kartesiskt koordinatsystem för att rita saker. Det använder alltså en x-axel och en y-axel för att uttrycka var något är placerat. Platsen `0,0` är det övre vänstra hörnet och det nedre högra hörnet är det som du har angett som bredden och höjden på canvasen.
 
 ![canvasens rutnät](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.sv.png)
 > Bild från [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-För att rita på canvas-elementet måste du gå igenom följande steg:
+För att rita på canvas-elementet behöver du gå igenom följande steg:
 
-1. **Få en referens** till canvas-elementet.
-1. **Få en referens** till Context-elementet som sitter på canvas-elementet.
-1. **Utför en ritoperation** med hjälp av Context-elementet.
+1. **Få en referens** till Canvas-elementet.
+2. **Få en referens** till Context-elementet som ligger på Canvas-elementet.
+3. **Utför en ritoperation** med hjälp av Context-elementet.
 
-Kod för ovanstående steg ser vanligtvis ut så här:
+Koden för ovanstående steg ser vanligtvis ut så här:
 
 ```javascript
 // draws a red rectangle
@@ -67,15 +67,15 @@ Du kan rita alla möjliga saker med Canvas API, som:
 
 - **Geometriska former**, vi har redan visat hur man ritar en rektangel, men det finns mycket mer du kan rita.
 - **Text**, du kan rita text med valfritt typsnitt och färg.
-- **Bilder**, du kan rita en bild baserad på en bildfil, som en .jpg eller .png till exempel.
+- **Bilder**, du kan rita en bild baserat på en bildresurs som en .jpg eller .png till exempel.
 
-✅ Prova! Du vet hur man ritar en rektangel, kan du rita en cirkel på en sida? Ta en titt på några intressanta Canvas-ritningar på CodePen. Här är ett [särskilt imponerande exempel](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Testa! Du vet hur man ritar en rektangel, kan du rita en cirkel på en sida? Ta en titt på några intressanta Canvas-ritningar på CodePen. Här är ett [särskilt imponerande exempel](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Ladda och rita en bildfil
+## Ladda och rita en bildresurs
 
-Du laddar en bildfil genom att skapa ett `Image`-objekt och ställa in dess `src`-egenskap. Sedan lyssnar du på `load`-händelsen för att veta när den är redo att användas. Koden ser ut så här:
+Du laddar en bildresurs genom att skapa ett `Image`-objekt och ställa in dess `src`-egenskap. Sedan lyssnar du på `load`-händelsen för att veta när den är redo att användas. Koden ser ut så här:
 
-### Ladda fil
+### Ladda resurs
 
 ```javascript
 const img = new Image();
@@ -85,9 +85,9 @@ img.onload = () => {
 }
 ```
 
-### Mönster för att ladda fil
+### Mönster för att ladda resurs
 
-Det rekommenderas att omsluta ovanstående i en konstruktion som denna, så att det blir enklare att använda och du bara försöker manipulera det när det är helt laddat:
+Det rekommenderas att omsluta ovanstående i en konstruktion som denna, så att det blir enklare att använda och du bara försöker manipulera den när den är helt laddad:
 
 ```javascript
 function loadAsset(path) {
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-För att rita spelobjekt på en skärm skulle din kod se ut så här:
+För att rita spelresurser på en skärm skulle din kod se ut så här:
 
 ```javascript
 async function run() {
@@ -160,21 +160,21 @@ cd your-work
 npm start
 ```
 
-Ovanstående startar en HTTP-server på adressen `http://localhost:5000`. Öppna en webbläsare och skriv in den adressen. Det är en tom sida just nu, men det kommer att ändras.
+Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:5000`. Öppna en webbläsare och ange den adressen. Det är en tom sida just nu, men det kommer att ändras.
 
-> Obs: för att se ändringar på din skärm, uppdatera din webbläsare.
+> Obs: för att se ändringar på skärmen, uppdatera din webbläsare.
 
 ### Lägg till kod
 
 Lägg till den nödvändiga koden i `your-work/app.js` för att lösa följande:
 
-1. **Rita** en canvas med svart bakgrund
-   > tips: lägg till två rader under den lämpliga TODO i `/app.js`, ställ in `ctx`-elementet till svart och topp/vänster-koordinaterna till 0,0 och höjden och bredden till att motsvara canvasens mått.
-2. **Ladda** texturer
-   > tips: lägg till spelaren och fiendens bilder med hjälp av `await loadTexture` och skicka in bildens sökväg. Du kommer inte att se dem på skärmen än!
-3. **Rita** hjälten i mitten av skärmen i den nedre halvan
-   > tips: använd `drawImage`-API:t för att rita heroImg på skärmen, ställ in `canvas.width / 2 - 45` och `canvas.height - canvas.height / 4)`;
-4. **Rita** 5*5 monster
+1. **Rita** en canvas med svart bakgrund  
+   > tips: lägg till två rader under lämplig TODO i `/app.js`, där du ställer in `ctx`-elementet till svart och topp/vänster-koordinaterna till 0,0 samt höjden och bredden till att motsvara canvasens.
+2. **Ladda** texturer  
+   > tips: lägg till spelare och fiendebilder med hjälp av `await loadTexture` och ange bildens sökväg. Du kommer inte att se dem på skärmen än!
+3. **Rita** hjälten i mitten av skärmen i den nedre halvan  
+   > tips: använd `drawImage`-API:et för att rita heroImg på skärmen, med inställningarna `canvas.width / 2 - 45` och `canvas.height - canvas.height / 4)`;
+4. **Rita** 5*5 monster  
    > tips: Nu kan du avkommentera koden för att rita fiender på skärmen. Gå sedan till funktionen `createEnemies` och bygg ut den.
 
    Börja med att ställa in några konstanter:
@@ -186,7 +186,7 @@ Lägg till den nödvändiga koden i `your-work/app.js` för att lösa följande:
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    sedan, skapa en loop för att rita arrayen av monster på skärmen:
+   Skapa sedan en loop för att rita arrayen av monster på skärmen:
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {
@@ -204,19 +204,19 @@ Det färdiga resultatet bör se ut så här:
 
 ## Lösning
 
-Försök att lösa det själv först, men om du fastnar, ta en titt på en [lösning](../../../../6-space-game/2-drawing-to-canvas/solution/app.js)
+Försök lösa det själv först, men om du fastnar kan du titta på en [lösning](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
 
 ---
 
 ## 🚀 Utmaning
 
-Du har lärt dig att rita med det 2D-fokuserade Canvas API:t; ta en titt på [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) och försök att rita ett 3D-objekt.
+Du har lärt dig att rita med det 2D-fokuserade Canvas API; ta en titt på [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) och försök rita ett 3D-objekt.
 
-## Quiz efter föreläsningen
+## Quiz efter föreläsning
 
-[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/32)
+[Quiz efter föreläsning](https://ff-quizzes.netlify.app/web/quiz/32)
 
-## Granskning & Självstudier
+## Granskning och självstudier
 
 Lär dig mer om Canvas API genom att [läsa om det](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-27T22:59:49+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T09:33:00+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "ms"
 }
@@ -18,15 +18,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Pengenalan
 
-CSS, atau Cascading Style Sheets, menyelesaikan masalah penting dalam pembangunan web: bagaimana untuk menjadikan laman web anda kelihatan menarik. Menyediakan gaya kepada aplikasi anda menjadikannya lebih mudah digunakan dan kelihatan lebih menarik; anda juga boleh menggunakan CSS untuk mencipta Rekabentuk Web Responsif (RWD) - membolehkan aplikasi anda kelihatan baik tidak kira saiz skrin yang digunakan. CSS bukan sahaja untuk menjadikan aplikasi anda kelihatan menarik; spesifikasinya termasuk animasi dan transformasi yang boleh membolehkan interaksi yang canggih untuk aplikasi anda. Kumpulan Kerja CSS membantu mengekalkan spesifikasi CSS semasa; anda boleh mengikuti kerja mereka di [laman World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
+CSS, atau Cascading Style Sheets, menyelesaikan masalah penting dalam pembangunan web: bagaimana untuk menjadikan laman web anda kelihatan menarik. Penggayaan aplikasi anda menjadikannya lebih mudah digunakan dan kelihatan lebih menarik; anda juga boleh menggunakan CSS untuk mencipta Rekabentuk Web Responsif (RWD) - membolehkan aplikasi anda kelihatan baik tidak kira saiz skrin yang digunakan. CSS bukan sahaja tentang menjadikan aplikasi anda kelihatan menarik; spesifikasinya termasuk animasi dan transformasi yang boleh membolehkan interaksi yang canggih untuk aplikasi anda. Kumpulan Kerja CSS membantu mengekalkan spesifikasi CSS semasa; anda boleh mengikuti kerja mereka di [laman World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
 
-> Nota, CSS adalah bahasa yang berkembang, seperti segala-galanya di web, dan tidak semua pelayar menyokong bahagian spesifikasi yang lebih baru. Sentiasa semak implementasi anda dengan merujuk [CanIUse.com](https://caniuse.com).
+> Nota, CSS adalah bahasa yang berkembang, seperti segala sesuatu di web, dan tidak semua pelayar menyokong bahagian spesifikasi yang lebih baru. Sentiasa semak pelaksanaan anda dengan merujuk [CanIUse.com](https://caniuse.com).
 
-Dalam pelajaran ini, kita akan menambah gaya kepada terrarium dalam talian kita dan mempelajari lebih lanjut tentang beberapa konsep CSS: kaskad, pewarisan, penggunaan pemilih, kedudukan, dan menggunakan CSS untuk membina susun atur. Dalam proses ini, kita akan menyusun terrarium dan mencipta terrarium itu sendiri.
+Dalam pelajaran ini, kita akan menambah gaya kepada terrarium dalam talian kita dan mempelajari lebih lanjut tentang beberapa konsep CSS: kaskad, pewarisan, dan penggunaan pemilih, kedudukan, serta menggunakan CSS untuk membina susun atur. Dalam proses ini, kita akan menyusun terrarium dan mencipta terrarium itu sendiri.
 
 ### Prasyarat
 
-Anda sepatutnya telah membina HTML untuk terrarium anda dan bersedia untuk menambah gaya.
+Anda sepatutnya telah membina HTML untuk terrarium anda dan bersedia untuk digayakan.
 
 > Tonton video
 
@@ -45,7 +45,7 @@ Dalam folder terrarium anda, buat fail baru bernama `style.css`. Import fail ter
 
 ## Kaskad
 
-Cascading Style Sheets menggabungkan idea bahawa gaya 'mengalir' sedemikian rupa sehingga aplikasi gaya dipandu oleh keutamaannya. Gaya yang ditetapkan oleh pengarang laman web mempunyai keutamaan berbanding yang ditetapkan oleh pelayar. Gaya yang ditetapkan 'inline' mempunyai keutamaan berbanding yang ditetapkan dalam lembaran gaya luaran.
+Cascading Style Sheets menggabungkan idea bahawa gaya 'mengalir' sedemikian rupa sehingga penerapan gaya dipandu oleh keutamaannya. Gaya yang ditetapkan oleh pengarang laman web mempunyai keutamaan berbanding yang ditetapkan oleh pelayar. Gaya yang ditetapkan 'inline' mempunyai keutamaan berbanding yang ditetapkan dalam lembaran gaya luaran.
 
 ### Tugasan
 
@@ -63,7 +63,7 @@ h1 {
 }
 ```
 
-✅ Warna mana yang dipaparkan dalam aplikasi web anda? Kenapa? Bolehkah anda mencari cara untuk mengatasi gaya? Bilakah anda ingin melakukan ini, atau kenapa tidak?
+✅ Warna apa yang dipaparkan dalam aplikasi web anda? Kenapa? Bolehkah anda mencari cara untuk mengatasi gaya? Bilakah anda ingin melakukan ini, atau kenapa tidak?
 
 ---
 
@@ -175,17 +175,17 @@ Yang ketara dalam snippet ini adalah campuran kedudukan relatif dan mutlak, yang
 
 Anda menetapkan ketinggian pemegang tumbuhan kepada 13%, nombor yang baik untuk memastikan semua tumbuhan dipaparkan dalam setiap kontena menegak tanpa perlu menatal.
 
-Anda menetapkan pemegang tumbuhan untuk bergerak ke kiri supaya tumbuhan lebih terpusat dalam kontena mereka. Imej mempunyai latar belakang yang besar dan telus supaya ia lebih mudah untuk diseret, jadi perlu ditolak ke kiri untuk muat lebih baik pada skrin.
+Anda menetapkan pemegang tumbuhan untuk bergerak ke kiri supaya tumbuhan lebih terpusat dalam kontena mereka. Imej mempunyai sejumlah besar latar belakang yang telus supaya ia lebih mudah untuk diseret, jadi perlu ditolak ke kiri untuk muat lebih baik pada skrin.
 
 Kemudian, tumbuhan itu sendiri diberikan lebar maksimum 150%. Ini membolehkan ia berskala turun apabila pelayar berskala turun. Cuba ubah saiz pelayar anda; tumbuhan kekal dalam kontena mereka tetapi berskala turun untuk muat.
 
-Juga ketara adalah penggunaan z-index, yang mengawal ketinggian relatif elemen (supaya tumbuhan duduk di atas kontena dan kelihatan duduk di dalam terrarium).
+Yang juga ketara adalah penggunaan z-index, yang mengawal ketinggian relatif elemen (supaya tumbuhan duduk di atas kontena dan kelihatan duduk di dalam terrarium).
 
 ✅ Kenapa anda memerlukan kedua-dua pemilih CSS pemegang tumbuhan dan tumbuhan?
 
 ## Kedudukan CSS
 
-Mencampurkan sifat kedudukan (terdapat kedudukan statik, relatif, tetap, mutlak, dan melekit) boleh menjadi agak rumit, tetapi apabila dilakukan dengan betul ia memberi anda kawalan yang baik ke atas elemen pada halaman anda.
+Mencampurkan sifat kedudukan (terdapat kedudukan statik, relatif, tetap, mutlak, dan melekit) boleh menjadi agak rumit, tetapi apabila dilakukan dengan betul ia memberikan anda kawalan yang baik ke atas elemen pada halaman anda.
 
 Elemen yang diposisikan secara mutlak diposisikan relatif kepada nenek moyang yang diposisikan terdekat, dan jika tiada, ia diposisikan mengikut badan dokumen.
 
@@ -250,9 +250,9 @@ Pertama, gayakan anak-anak div `.terrarium` sebagai segi empat tepat bulat mengg
 }
 ```
 
-Perhatikan penggunaan peratusan di sini. Jika anda mengurangkan skala pelayar anda, anda boleh melihat bagaimana balang juga berskala. Juga perhatikan lebar dan ketinggian peratusan untuk elemen balang dan bagaimana setiap elemen diposisikan secara mutlak di tengah, dipin ke bahagian bawah viewport.
+Perhatikan penggunaan peratusan di sini. Jika anda mengurangkan skala pelayar anda, anda boleh melihat bagaimana balang juga berskala. Juga perhatikan peratusan lebar dan ketinggian untuk elemen balang dan bagaimana setiap elemen diposisikan secara mutlak di tengah, dipin ke bahagian bawah viewport.
 
-Kami juga menggunakan `rem` untuk border-radius, panjang relatif fon. Baca lebih lanjut tentang jenis ukuran relatif ini dalam [spesifikasi CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
+Kami juga menggunakan `rem` untuk radius sempadan, panjang relatif fon. Baca lebih lanjut tentang jenis ukuran relatif ini dalam [spesifikasi CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
 ✅ Cuba ubah warna balang dan kelegapan berbanding warna tanah. Apa yang berlaku? Kenapa?
 
@@ -260,11 +260,11 @@ Kami juga menggunakan `rem` untuk border-radius, panjang relatif fon. Baca lebih
 
 ## 🚀Cabaran
 
-Tambahkan 'gelembung' kilauan ke bahagian bawah kiri balang untuk menjadikannya kelihatan lebih seperti kaca. Anda akan menggayakan `.jar-glossy-long` dan `.jar-glossy-short` untuk kelihatan seperti kilauan pantulan. Beginilah rupanya:
+Tambahkan 'gelembung' kilauan ke kawasan bawah kiri balang untuk menjadikannya kelihatan lebih seperti kaca. Anda akan menggayakan `.jar-glossy-long` dan `.jar-glossy-short` untuk kelihatan seperti kilauan pantulan. Inilah rupa akhirnya:
 
 ![terrarium siap](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.ms.png)
 
-Untuk melengkapkan kuiz pasca-kuliah, lalui modul Learn ini: [Gaya aplikasi HTML anda dengan CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+Untuk melengkapkan kuiz pasca-kuliah, lalui modul Learn ini: [Gayakan aplikasi HTML anda dengan CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
 ## Kuiz Pasca-Kuliah
 
@@ -272,7 +272,7 @@ Untuk melengkapkan kuiz pasca-kuliah, lalui modul Learn ini: [Gaya aplikasi HTML
 
 ## Ulasan & Kajian Kendiri
 
-CSS kelihatan mudah difahami, tetapi terdapat banyak cabaran apabila cuba menggayakan aplikasi dengan sempurna untuk semua pelayar dan semua saiz skrin. CSS-Grid dan Flexbox adalah alat yang telah dibangunkan untuk menjadikan kerja ini lebih terstruktur dan lebih boleh dipercayai. Pelajari tentang alat ini dengan bermain [Flexbox Froggy](https://flexboxfroggy.com/) dan [Grid Garden](https://codepip.com/games/grid-garden/).
+CSS kelihatan mudah difahami, tetapi terdapat banyak cabaran apabila cuba menggayakan aplikasi dengan sempurna untuk semua pelayar dan semua saiz skrin. CSS-Grid dan Flexbox adalah alat yang telah dibangunkan untuk menjadikan tugas ini lebih terstruktur dan lebih boleh dipercayai. Pelajari tentang alat ini dengan bermain [Flexbox Froggy](https://flexboxfroggy.com/) dan [Grid Garden](https://codepip.com/games/grid-garden/).
 
 ## Tugasan
 

@@ -1,27 +1,27 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-27T22:01:46+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-29T09:05:31+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "id"
 }
 -->
 # Membangun Aplikasi Perbankan Bagian 3: Metode Mengambil dan Menggunakan Data
 
-## Kuis Pra-Kuliah
+## Kuis Pra-Pelajaran
 
-[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/45)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Pendahuluan
 
-Di inti setiap aplikasi web terdapat *data*. Data dapat berbentuk berbagai macam, tetapi tujuan utamanya selalu untuk menampilkan informasi kepada pengguna. Dengan aplikasi web yang semakin interaktif dan kompleks, cara pengguna mengakses dan berinteraksi dengan informasi kini menjadi bagian penting dari pengembangan web.
+Di inti setiap aplikasi web terdapat *data*. Data dapat berbentuk berbagai macam, tetapi tujuan utamanya selalu untuk menampilkan informasi kepada pengguna. Dengan aplikasi web yang semakin interaktif dan kompleks, bagaimana pengguna mengakses dan berinteraksi dengan informasi kini menjadi bagian penting dari pengembangan web.
 
 Dalam pelajaran ini, kita akan melihat cara mengambil data dari server secara asinkron, dan menggunakan data ini untuk menampilkan informasi di halaman web tanpa memuat ulang HTML.
 
 ### Prasyarat
 
-Anda perlu telah membangun bagian [Formulir Login dan Registrasi](../2-forms/README.md) dari aplikasi web untuk pelajaran ini. Anda juga perlu menginstal [Node.js](https://nodejs.org) dan [menjalankan API server](../api/README.md) secara lokal agar Anda mendapatkan data akun.
+Anda perlu telah membangun bagian [Formulir Login dan Registrasi](../2-forms/README.md) dari aplikasi web untuk pelajaran ini. Anda juga perlu menginstal [Node.js](https://nodejs.org) dan [menjalankan server API](../api/README.md) secara lokal agar Anda mendapatkan data akun.
 
 Anda dapat menguji apakah server berjalan dengan benar dengan menjalankan perintah ini di terminal:
 
@@ -32,7 +32,7 @@ curl http://localhost:5000/api
 
 ---
 
-## AJAX dan pengambilan data
+## AJAX dan Pengambilan Data
 
 Situs web tradisional memperbarui konten yang ditampilkan ketika pengguna memilih tautan atau mengirimkan data menggunakan formulir, dengan memuat ulang seluruh halaman HTML. Setiap kali data baru perlu dimuat, server web mengembalikan halaman HTML baru yang harus diproses oleh browser, mengganggu tindakan pengguna saat ini dan membatasi interaksi selama pemuatan ulang. Alur kerja ini juga disebut sebagai *Multi-Page Application* atau *MPA*.
 
@@ -72,9 +72,9 @@ async function getAccount(user) {
 }
 ```
 
-Kita menggunakan `fetch` API untuk meminta data secara asinkron dari server, tetapi kali ini kita tidak memerlukan parameter tambahan selain URL yang dipanggil, karena kita hanya mengambil data. Secara default, `fetch` membuat permintaan HTTP [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET), yang sesuai dengan kebutuhan kita di sini.
+Kita menggunakan `fetch` API untuk meminta data secara asinkron dari server, tetapi kali ini kita tidak memerlukan parameter tambahan selain URL yang akan dipanggil, karena kita hanya mengambil data. Secara default, `fetch` membuat permintaan HTTP [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET), yang sesuai dengan kebutuhan kita di sini.
 
-✅ `encodeURIComponent()` adalah fungsi yang melarikan karakter khusus untuk URL. Masalah apa yang mungkin terjadi jika kita tidak memanggil fungsi ini dan langsung menggunakan nilai `user` dalam URL?
+✅ `encodeURIComponent()` adalah fungsi yang menghindari karakter khusus untuk URL. Masalah apa yang mungkin terjadi jika kita tidak memanggil fungsi ini dan langsung menggunakan nilai `user` dalam URL?
 
 Sekarang mari kita perbarui fungsi `login` kita untuk menggunakan `getAccount`:
 
@@ -95,7 +95,7 @@ async function login() {
 
 Pertama, karena `getAccount` adalah fungsi asinkron, kita perlu mencocokkannya dengan kata kunci `await` untuk menunggu hasil server. Seperti halnya permintaan server, kita juga harus menangani kasus kesalahan. Untuk saat ini kita hanya akan menambahkan pesan log untuk menampilkan kesalahan, dan kembali ke sana nanti.
 
-Kemudian kita harus menyimpan data di suatu tempat sehingga kita dapat menggunakannya nanti untuk menampilkan informasi dashboard. Karena variabel `account` belum ada, kita akan membuat variabel global untuk itu di bagian atas file kita:
+Kemudian kita harus menyimpan data di suatu tempat agar kita dapat menggunakannya nanti untuk menampilkan informasi dashboard. Karena variabel `account` belum ada, kita akan membuat variabel global untuk itu di bagian atas file kita:
 
 ```js
 let account = null;
@@ -118,19 +118,19 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ Tahukah Anda bahwa secara default, Anda hanya dapat memanggil API server dari *domain dan port yang sama* dengan halaman web yang Anda lihat? Ini adalah mekanisme keamanan yang diberlakukan oleh browser. Tapi tunggu, aplikasi web kita berjalan di `localhost:3000` sedangkan API server berjalan di `localhost:5000`, mengapa ini berfungsi? Dengan menggunakan teknik yang disebut [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), dimungkinkan untuk melakukan permintaan HTTP lintas domain jika server menambahkan header khusus ke respons, memungkinkan pengecualian untuk domain tertentu.
+✅ Tahukah Anda bahwa secara default, Anda hanya dapat memanggil API server dari *domain dan port yang sama* dengan halaman web yang Anda lihat? Ini adalah mekanisme keamanan yang diberlakukan oleh browser. Tapi tunggu, aplikasi web kita berjalan di `localhost:3000` sedangkan server API berjalan di `localhost:5000`, mengapa ini berfungsi? Dengan menggunakan teknik yang disebut [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), dimungkinkan untuk melakukan permintaan HTTP lintas asal jika server menambahkan header khusus ke respons, memungkinkan pengecualian untuk domain tertentu.
 
 > Pelajari lebih lanjut tentang API dengan mengikuti [pelajaran ini](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
 
-## Memperbarui HTML untuk menampilkan data
+## Memperbarui HTML untuk Menampilkan Data
 
 Sekarang kita memiliki data pengguna, kita harus memperbarui HTML yang ada untuk menampilkannya. Kita sudah tahu cara mengambil elemen dari DOM menggunakan misalnya `document.getElementById()`. Setelah Anda memiliki elemen dasar, berikut adalah beberapa API yang dapat Anda gunakan untuk memodifikasi atau menambahkan elemen anak ke dalamnya:
 
-- Menggunakan properti [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) Anda dapat mengubah teks dari sebuah elemen. Perhatikan bahwa mengubah nilai ini akan menghapus semua anak elemen (jika ada) dan menggantinya dengan teks yang diberikan. Dengan demikian, ini juga merupakan metode yang efisien untuk menghapus semua anak elemen dari elemen tertentu dengan menetapkan string kosong `''` padanya.
+- Dengan menggunakan properti [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent), Anda dapat mengubah teks dari sebuah elemen. Perhatikan bahwa mengubah nilai ini akan menghapus semua anak elemen (jika ada) dan menggantinya dengan teks yang diberikan. Dengan demikian, ini juga merupakan metode yang efisien untuk menghapus semua anak elemen dari elemen tertentu dengan menetapkan string kosong `''` padanya.
 
-- Menggunakan [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) bersama dengan metode [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) Anda dapat membuat dan melampirkan satu atau lebih elemen anak baru.
+- Dengan menggunakan [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) bersama dengan metode [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append), Anda dapat membuat dan melampirkan satu atau lebih elemen anak baru.
 
-✅ Menggunakan properti [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) dari sebuah elemen juga memungkinkan untuk mengubah konten HTML-nya, tetapi ini sebaiknya dihindari karena rentan terhadap serangan [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting).
+✅ Dengan menggunakan properti [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) dari sebuah elemen, juga dimungkinkan untuk mengubah konten HTML-nya, tetapi ini sebaiknya dihindari karena rentan terhadap serangan [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting).
 
 ### Tugas
 
@@ -145,7 +145,7 @@ Mari kita tambahkan elemen placeholder di formulir login tempat kita dapat menam
 ...
 ```
 
-Elemen `<div>` ini kosong, artinya tidak ada yang akan ditampilkan di layar sampai kita menambahkan konten ke dalamnya. Kita juga memberinya `id` sehingga kita dapat mengambilnya dengan mudah menggunakan JavaScript.
+Elemen `<div>` ini kosong, artinya tidak ada yang akan ditampilkan di layar sampai kita menambahkan konten ke dalamnya. Kita juga memberikan `id` agar mudah diambil menggunakan JavaScript.
 
 Kembali ke file `app.js` dan buat fungsi pembantu baru `updateElement`:
 
@@ -168,7 +168,7 @@ Sekarang jika Anda mencoba login dengan akun yang tidak valid, Anda akan melihat
 
 ![Tangkapan layar yang menunjukkan pesan kesalahan saat login](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.id.png)
 
-Sekarang kita memiliki teks kesalahan yang muncul secara visual, tetapi jika Anda mencobanya dengan pembaca layar, Anda akan melihat bahwa tidak ada yang diumumkan. Agar teks yang ditambahkan secara dinamis ke halaman diumumkan oleh pembaca layar, teks tersebut perlu menggunakan sesuatu yang disebut [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Di sini kita akan menggunakan jenis live region tertentu yang disebut alert:
+Sekarang kita memiliki teks kesalahan yang muncul secara visual, tetapi jika Anda mencobanya dengan pembaca layar, Anda akan melihat bahwa tidak ada yang diumumkan. Agar teks yang ditambahkan secara dinamis ke halaman dapat diumumkan oleh pembaca layar, teks tersebut perlu menggunakan sesuatu yang disebut [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Di sini kita akan menggunakan jenis live region tertentu yang disebut alert:
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -176,9 +176,9 @@ Sekarang kita memiliki teks kesalahan yang muncul secara visual, tetapi jika And
 
 Terapkan perilaku yang sama untuk kesalahan fungsi `register` (jangan lupa untuk memperbarui HTML).
 
-## Menampilkan informasi di dashboard
+## Menampilkan Informasi di Dashboard
 
-Menggunakan teknik yang baru saja kita lihat, kita juga akan menangani penampilan informasi akun di halaman dashboard.
+Dengan menggunakan teknik yang baru saja kita lihat, kita juga akan menangani penampilan informasi akun di halaman dashboard.
 
 Berikut adalah seperti apa objek akun yang diterima dari server:
 
@@ -232,9 +232,9 @@ function updateDashboard() {
 
 Pertama, kita memeriksa bahwa kita memiliki data akun yang kita butuhkan sebelum melangkah lebih jauh. Kemudian kita menggunakan fungsi `updateElement()` yang kita buat sebelumnya untuk memperbarui HTML.
 
-> Untuk membuat tampilan saldo lebih menarik, kita menggunakan metode [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) untuk memaksa menampilkan nilai dengan 2 digit setelah titik desimal.
+> Untuk membuat tampilan saldo lebih rapi, kita menggunakan metode [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) untuk memaksa menampilkan nilai dengan 2 digit setelah titik desimal.
 
-Sekarang kita perlu memanggil fungsi `updateDashboard()` kita setiap kali halaman dashboard dimuat. Jika Anda sudah menyelesaikan [tugas pelajaran 1](../1-template-route/assignment.md) ini seharusnya mudah, jika tidak Anda dapat menggunakan implementasi berikut.
+Sekarang kita perlu memanggil fungsi `updateDashboard()` kita setiap kali halaman dashboard dimuat. Jika Anda sudah menyelesaikan [tugas pelajaran 1](../1-template-route/assignment.md), ini seharusnya mudah, jika tidak, Anda dapat menggunakan implementasi berikut.
 
 Tambahkan kode ini di akhir fungsi `updateRoute()`:
 
@@ -255,11 +255,11 @@ const routes = {
 
 Dengan perubahan ini, setiap kali halaman dashboard ditampilkan, fungsi `updateDashboard()` dipanggil. Setelah login, Anda seharusnya dapat melihat saldo akun, mata uang, dan deskripsi.
 
-## Membuat baris tabel secara dinamis dengan template HTML
+## Membuat Baris Tabel Secara Dinamis dengan Template HTML
 
-Dalam [pelajaran pertama](../1-template-route/README.md) kita menggunakan template HTML bersama dengan metode [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) untuk mengimplementasikan navigasi di aplikasi kita. Template juga bisa lebih kecil dan digunakan untuk mengisi bagian halaman yang berulang secara dinamis.
+Dalam [pelajaran pertama](../1-template-route/README.md), kita menggunakan template HTML bersama dengan metode [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) untuk mengimplementasikan navigasi dalam aplikasi kita. Template juga dapat lebih kecil dan digunakan untuk mengisi bagian halaman yang berulang secara dinamis.
 
-Kita akan menggunakan pendekatan serupa untuk menampilkan daftar transaksi di tabel HTML.
+Kita akan menggunakan pendekatan serupa untuk menampilkan daftar transaksi dalam tabel HTML.
 
 ### Tugas
 
@@ -310,7 +310,7 @@ updateElement('transactions', transactionsRows);
 
 Di sini kita menggunakan metode [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) yang membuat fragmen DOM baru yang dapat kita kerjakan, sebelum akhirnya melampirkannya ke tabel HTML kita.
 
-Masih ada satu hal lagi yang harus kita lakukan sebelum kode ini dapat bekerja, karena fungsi `updateElement()` kita saat ini hanya mendukung konten teks. Mari kita ubah kodenya sedikit:
+Masih ada satu hal lagi yang harus kita lakukan sebelum kode ini dapat bekerja, karena fungsi `updateElement()` kita saat ini hanya mendukung konten teks. Mari kita ubah sedikit kodenya:
 
 ```js
 function updateElement(id, textOrNode) {
@@ -327,15 +327,15 @@ Jika Anda mencoba menggunakan akun `test` untuk login, Anda sekarang seharusnya 
 
 ## 🚀 Tantangan
 
-Bekerja sama untuk membuat halaman dashboard terlihat seperti aplikasi perbankan yang nyata. Jika Anda sudah menata aplikasi Anda, coba gunakan [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) untuk menciptakan [desain responsif](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) yang berfungsi dengan baik di perangkat desktop maupun mobile.
+Bekerja sama untuk membuat halaman dashboard terlihat seperti aplikasi perbankan yang nyata. Jika Anda sudah menata aplikasi Anda, cobalah menggunakan [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) untuk menciptakan [desain responsif](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) yang berfungsi dengan baik di perangkat desktop maupun mobile.
 
 Berikut adalah contoh halaman dashboard yang sudah ditata:
 
 ![Screenshot dari contoh hasil dashboard setelah ditata](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.id.png)
 
-## Kuis Pasca-Kuliah
+## Kuis Setelah Kuliah
 
-[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/46)
+[Kuis setelah kuliah](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Tugas
 
@@ -344,4 +344,4 @@ Berikut adalah contoh halaman dashboard yang sudah ditata:
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa terjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

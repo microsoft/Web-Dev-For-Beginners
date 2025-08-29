@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-26T21:40:48+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T07:56:50+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "sv"
 }
@@ -23,13 +23,13 @@ Att fatta beslut och kontrollera ordningen i vilken din kod körs gör din kod �
 
 > 🎥 Klicka på bilden ovan för en video om att fatta beslut.
 
-> Du kan ta denna lektion på [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
+> Du kan ta den här lektionen på [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 
 ## En kort återblick på Booleans
 
 Booleans kan bara ha två värden: `true` eller `false`. Booleans hjälper till att fatta beslut om vilka kodrader som ska köras när vissa villkor är uppfyllda.
 
-Sätt din boolean till att vara true eller false så här:
+Ställ in din boolean till att vara true eller false så här:
 
 `let myTrueBool = true`  
 `let myFalseBool = false`
@@ -38,22 +38,22 @@ Sätt din boolean till att vara true eller false så här:
 
 ## Jämförelseoperatorer och Booleans
 
-Operatorer används för att utvärdera villkor genom att göra jämförelser som skapar ett Boolean-värde. Följande är en lista över ofta använda operatorer.
+Operatorer används för att utvärdera villkor genom att göra jämförelser som skapar ett Booleskt värde. Följande är en lista över ofta använda operatorer.
 
 | Symbol | Beskrivning                                                                                                                                                   | Exempel            |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`    | **Mindre än**: Jämför två värden och returnerar `true` om värdet på vänster sida är mindre än det på höger                                                    | `5 < 6 // true`    |
-| `<=`   | **Mindre än eller lika med**: Jämför två värden och returnerar `true` om värdet på vänster sida är mindre än eller lika med det på höger                      | `5 <= 6 // true`   |
-| `>`    | **Större än**: Jämför två värden och returnerar `true` om värdet på vänster sida är större än det på höger                                                    | `5 > 6 // false`   |
-| `>=`   | **Större än eller lika med**: Jämför två värden och returnerar `true` om värdet på vänster sida är större än eller lika med det på höger                      | `5 >= 6 // false`  |
-| `===`  | **Strikt likhet**: Jämför två värden och returnerar `true` om värdena på höger och vänster är lika OCH har samma datatyp                                      | `5 === 6 // false` |
-| `!==`  | **Olikhet**: Jämför två värden och returnerar motsatsen till vad en strikt likhetsoperator skulle returnera                                                  | `5 !== 6 // true`  |
+| `<`    | **Mindre än**: Jämför två värden och returnerar Booleska värdet `true` om värdet på vänster sida är mindre än det på höger                                     | `5 < 6 // true`    |
+| `<=`   | **Mindre än eller lika med**: Jämför två värden och returnerar Booleska värdet `true` om värdet på vänster sida är mindre än eller lika med det på höger       | `5 <= 6 // true`   |
+| `>`    | **Större än**: Jämför två värden och returnerar Booleska värdet `true` om värdet på vänster sida är större än det på höger                                     | `5 > 6 // false`   |
+| `>=`   | **Större än eller lika med**: Jämför två värden och returnerar Booleska värdet `true` om värdet på vänster sida är större än eller lika med det på höger       | `5 >= 6 // false`  |
+| `===`  | **Strikt likhet**: Jämför två värden och returnerar Booleska värdet `true` om värdena på höger och vänster är lika OCH har samma datatyp                       | `5 === 6 // false` |
+| `!==`  | **Olikhet**: Jämför två värden och returnerar motsatt Booleskt värde jämfört med vad en strikt likhetsoperator skulle returnera                                | `5 !== 6 // true`  |
 
 ✅ Testa din kunskap genom att skriva några jämförelser i din webbläsares konsol. Överraskar något av de returnerade värdena dig?
 
 ## If-sats
 
-If-satsen kör koden mellan sina block om villkoret är sant.
+If-satsen kör kod mellan sina block om villkoret är sant.
 
 ```javascript
 if (condition) {
@@ -131,13 +131,13 @@ console.log(`The value is ${a}`);
 
 ## Logiska operatorer och Booleans
 
-Beslut kan kräva mer än en jämförelse och kan kopplas ihop med logiska operatorer för att producera ett Boolean-värde.
+Beslut kan kräva mer än en jämförelse och kan kopplas ihop med logiska operatorer för att producera ett Booleskt värde.
 
 | Symbol | Beskrivning                                                                                     | Exempel                                                                 |
 | ------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **Logisk OCH**: Jämför två Booleska uttryck. Returnerar true **endast** om båda sidor är sanna   | `(5 > 6) && (5 < 6 ) //En sida är falsk, den andra är sann. Returnerar falskt` |
-| `\|\|` | **Logisk ELLER**: Jämför två Booleska uttryck. Returnerar true om minst en sida är sann          | `(5 > 6) \|\| (5 < 6) //En sida är falsk, den andra är sann. Returnerar sant` |
-| `!`    | **Logisk INTE**: Returnerar motsatt värde av ett Booleskt uttryck                               | `!(5 > 6) // 5 är inte större än 6, men "!" kommer att returnera sant`         |
+| `&&`   | **Logisk OCH**: Jämför två Booleska uttryck. Returnerar true **endast** om båda sidor är sanna   | `(5 > 6) && (5 < 6 ) //En sida är falsk, den andra är sann. Returnerar false` |
+| `\|\|` | **Logisk ELLER**: Jämför två Booleska uttryck. Returnerar true om minst en sida är sann          | `(5 > 6) \|\| (5 < 6) //En sida är falsk, den andra är sann. Returnerar true` |
+| `!`    | **Logisk INTE**: Returnerar motsatt värde av ett Booleskt uttryck                               | `!(5 > 6) // 5 är inte större än 6, men "!" kommer att returnera true`         |
 
 ## Villkor och beslut med logiska operatorer
 
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Negationsoperator
 
-Du har hittills sett hur du kan använda en `if...else`-sats för att skapa logik baserad på villkor. Allt som går in i en `if` måste utvärderas till sant/falskt. Genom att använda `!`-operatorn kan du _negera_ uttrycket. Det skulle se ut så här:
+Du har hittills sett hur du kan använda en `if...else`-sats för att skapa villkorlig logik. Allt som går in i en `if` måste utvärderas till sant/falskt. Genom att använda `!`-operatorn kan du _negera_ uttrycket. Det skulle se ut så här:
 
 ```javascript
 if (!condition) {
@@ -171,7 +171,7 @@ if (!condition) {
 
 ### Ternära uttryck
 
-`if...else` är inte det enda sättet att uttrycka logik baserad på villkor. Du kan också använda något som kallas en ternär operator. Syntaxen för den ser ut så här:
+`if...else` är inte det enda sättet att uttrycka beslutslogik. Du kan också använda något som kallas en ternär operator. Syntaxen för den ser ut så här:
 
 ```javascript
 let variable = condition ? <return this if true> : <return this if false>
@@ -229,4 +229,4 @@ Gå igenom Josh Comeaus fantastiska [operator lookup](https://joshwcomeau.com/op
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som kan uppstå vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

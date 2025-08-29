@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46a0639e719b9cf1dfd062aa24cad639",
-  "translation_date": "2025-08-27T22:56:41+00:00",
+  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
+  "translation_date": "2025-08-29T09:14:23+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "id"
 }
@@ -12,9 +12,10 @@ CO_OP_TRANSLATOR_METADATA:
 ![Pengantar HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.id.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Kuis Pra-Pelajaran
+## Kuis Sebelum Kuliah
 
-[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/15)
+[Kuis sebelum kuliah](https://ff-quizzes.netlify.app/web/quiz/15)
+
 
 > Tonton video
 
@@ -23,9 +24,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Pengantar
 
-HTML, atau HyperText Markup Language, adalah 'kerangka' dari web. Jika CSS 'mendandani' HTML Anda dan JavaScript memberikan kehidupan, maka HTML adalah tubuh dari aplikasi web Anda. Sintaks HTML bahkan mencerminkan ide ini, karena mencakup tag "head", "body", dan "footer".
+HTML, atau HyperText Markup Language, adalah 'kerangka' dari web. Jika CSS 'mendandani' HTML Anda dan JavaScript memberikan kehidupan, maka HTML adalah tubuh dari aplikasi web Anda. Sintaks HTML bahkan mencerminkan ide tersebut, karena mencakup tag "head", "body", dan "footer".
 
-Dalam pelajaran ini, kita akan menggunakan HTML untuk membuat kerangka antarmuka terrarium virtual kita. Antarmuka ini akan memiliki judul dan tiga kolom: kolom kanan dan kiri tempat tanaman yang dapat diseret berada, serta area tengah yang akan menjadi terrarium yang terlihat seperti kaca. Pada akhir pelajaran ini, Anda akan dapat melihat tanaman di kolom-kolom tersebut, tetapi antarmuka akan terlihat sedikit aneh; jangan khawatir, di bagian berikutnya Anda akan menambahkan gaya CSS ke antarmuka untuk membuatnya terlihat lebih baik.
+Dalam pelajaran ini, kita akan menggunakan HTML untuk membuat kerangka antarmuka terrarium virtual kita. Antarmuka ini akan memiliki judul dan tiga kolom: kolom kanan dan kiri tempat tanaman yang dapat digeser berada, serta area tengah yang akan menjadi terrarium yang terlihat seperti kaca. Pada akhir pelajaran ini, Anda akan dapat melihat tanaman di kolom-kolom tersebut, tetapi antarmuka akan terlihat agak aneh; jangan khawatir, di bagian berikutnya Anda akan menambahkan gaya CSS ke antarmuka untuk membuatnya terlihat lebih baik.
 
 ### Tugas
 
@@ -51,7 +52,7 @@ Baris pertama dari file HTML adalah doctype-nya. Agak mengejutkan bahwa Anda per
 
 > Tip: di VS Code, Anda dapat mengarahkan kursor ke tag dan mendapatkan informasi tentang penggunaannya dari panduan Referensi MDN.
 
-Baris kedua harus berupa tag pembuka `<html>`, diikuti oleh tag penutupnya `</html>`. Tag ini adalah elemen root dari antarmuka Anda.
+Baris kedua harus berupa tag pembuka `<html>`, diikuti langsung oleh tag penutupnya `</html>`. Tag ini adalah elemen root dari antarmuka Anda.
 
 ### Tugas
 
@@ -62,7 +63,7 @@ Tambahkan baris-baris ini di bagian atas file `index.html` Anda:
 <html></html>
 ```
 
-✅ Ada beberapa mode berbeda yang dapat ditentukan dengan mengatur DocType menggunakan query string: [Quirks Mode dan Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Mode ini dulu mendukung browser yang sangat lama yang biasanya tidak digunakan lagi saat ini (Netscape Navigator 4 dan Internet Explorer 5). Anda dapat tetap menggunakan deklarasi doctype standar.
+✅ Ada beberapa mode berbeda yang dapat ditentukan dengan mengatur DocType menggunakan string kueri: [Quirks Mode dan Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Mode ini dulu mendukung browser yang sangat lama yang biasanya tidak digunakan lagi saat ini (Netscape Navigator 4 dan Internet Explorer 5). Anda dapat tetap menggunakan deklarasi doctype standar.
 
 ---
 
@@ -118,7 +119,7 @@ Sekarang, Anda dapat mulai membangun halaman Anda. Biasanya, Anda menggunakan ta
 
 ### Gambar
 
-Satu tag html yang tidak memerlukan tag penutup adalah tag `<img>`, karena memiliki elemen `src` yang berisi semua informasi yang dibutuhkan halaman untuk merender item.
+Satu tag html yang tidak membutuhkan tag penutup adalah tag `<img>`, karena memiliki elemen `src` yang berisi semua informasi yang dibutuhkan halaman untuk merender item.
 
 Buat folder di aplikasi Anda bernama `images` dan di dalamnya, tambahkan semua gambar di [folder kode sumber](../../../../3-terrarium/solution/images); (ada 14 gambar tanaman).
 
@@ -181,7 +182,7 @@ Tambahkan gambar-gambar tanaman tersebut ke dalam dua kolom di antara tag `<body
 
 Dengan markup ini, tanaman sekarang muncul di layar. Tampaknya cukup buruk, karena mereka belum diberi gaya menggunakan CSS, dan kita akan melakukannya di pelajaran berikutnya.
 
-Setiap gambar memiliki teks alternatif yang akan muncul bahkan jika Anda tidak dapat melihat atau merender gambar. Ini adalah atribut penting untuk disertakan demi aksesibilitas. Pelajari lebih lanjut tentang aksesibilitas di pelajaran mendatang; untuk saat ini, ingatlah bahwa atribut alt memberikan informasi alternatif untuk gambar jika pengguna karena alasan tertentu tidak dapat melihatnya (karena koneksi lambat, kesalahan dalam atribut src, atau jika pengguna menggunakan pembaca layar).
+Setiap gambar memiliki teks alt yang akan muncul bahkan jika Anda tidak dapat melihat atau merender gambar. Ini adalah atribut penting untuk disertakan demi aksesibilitas. Pelajari lebih lanjut tentang aksesibilitas di pelajaran mendatang; untuk saat ini, ingatlah bahwa atribut alt memberikan informasi alternatif untuk gambar jika pengguna karena suatu alasan tidak dapat melihatnya (karena koneksi lambat, kesalahan dalam atribut src, atau jika pengguna menggunakan pembaca layar).
 
 ✅ Apakah Anda memperhatikan bahwa setiap gambar memiliki tag alt yang sama? Apakah ini praktik yang baik? Mengapa atau mengapa tidak? Bisakah Anda memperbaiki kode ini?
 
@@ -189,7 +190,7 @@ Setiap gambar memiliki teks alternatif yang akan muncul bahkan jika Anda tidak d
 
 ## Markup semantik
 
-Secara umum, lebih baik menggunakan 'semantik' yang bermakna saat menulis HTML. Apa artinya? Artinya Anda menggunakan tag HTML untuk mewakili jenis data atau interaksi yang dirancang untuk mereka. Misalnya, teks judul utama di halaman harus menggunakan tag `<h1>`.
+Secara umum, lebih baik menggunakan 'semantik' yang bermakna saat menulis HTML. Apa artinya itu? Artinya Anda menggunakan tag HTML untuk mewakili jenis data atau interaksi yang dirancang untuk mereka. Misalnya, teks judul utama di halaman harus menggunakan tag `<h1>`.
 
 Tambahkan baris berikut tepat di bawah tag pembuka `<body>` Anda:
 
@@ -197,9 +198,9 @@ Tambahkan baris berikut tepat di bawah tag pembuka `<body>` Anda:
 <h1>My Terrarium</h1>
 ```
 
-Menggunakan markup semantik seperti memiliki header sebagai `<h1>` dan daftar tidak berurutan sebagai `<ul>` membantu pembaca layar menavigasi melalui halaman. Secara umum, tombol harus ditulis sebagai `<button>` dan daftar harus `<li>`. Meskipun _mungkin_ menggunakan elemen `<span>` yang dirancang khusus dengan pengendali klik untuk meniru tombol, lebih baik bagi pengguna yang memiliki keterbatasan untuk menggunakan teknologi untuk menentukan di mana tombol berada di halaman, dan berinteraksi dengannya, jika elemen tersebut muncul sebagai tombol. Untuk alasan ini, cobalah menggunakan markup semantik sebanyak mungkin.
+Menggunakan markup semantik seperti memiliki header sebagai `<h1>` dan daftar tidak berurutan sebagai `<ul>` membantu pembaca layar menavigasi melalui halaman. Secara umum, tombol harus ditulis sebagai `<button>` dan daftar harus berupa `<li>`. Meskipun _mungkin_ menggunakan elemen `<span>` yang dirancang khusus dengan pengendali klik untuk meniru tombol, lebih baik bagi pengguna yang memiliki disabilitas untuk menggunakan teknologi untuk menentukan di mana tombol berada di halaman, dan berinteraksi dengannya, jika elemen tersebut muncul sebagai tombol. Untuk alasan ini, cobalah menggunakan markup semantik sebanyak mungkin.
 
-✅ Lihatlah pembaca layar dan [bagaimana ia berinteraksi dengan halaman web](https://www.youtube.com/watch?v=OUDV1gqs9GA). Bisakah Anda melihat mengapa memiliki markup non-semantik dapat membuat pengguna frustrasi?
+✅ Lihatlah pembaca layar dan [bagaimana ia berinteraksi dengan halaman web](https://www.youtube.com/watch?v=OUDV1gqs9GA). Bisakah Anda melihat mengapa memiliki markup non-semantik mungkin membuat pengguna frustrasi?
 
 ## Terrarium
 
@@ -229,15 +230,16 @@ Tambahkan markup ini di atas tag `</div>` terakhir:
 
 Ada beberapa tag 'lama' yang menarik di HTML yang masih menyenangkan untuk dimainkan, meskipun Anda sebaiknya tidak menggunakan tag yang sudah usang seperti [tag-tag ini](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) dalam markup Anda. Namun, bisakah Anda menggunakan tag lama `<marquee>` untuk membuat judul h1 bergulir secara horizontal? (jika Anda melakukannya, jangan lupa untuk menghapusnya setelahnya)
 
-## Kuis Pasca-Pelajaran
+## Kuis Setelah Kuliah
 
-[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/16)
+[Kuis setelah kuliah](https://ff-quizzes.netlify.app/web/quiz/16)
 
 ## Tinjauan & Studi Mandiri
 
 HTML adalah sistem blok bangunan 'teruji dan benar' yang telah membantu membangun web menjadi seperti sekarang ini. Pelajari sedikit tentang sejarahnya dengan mempelajari beberapa tag lama dan baru. Bisakah Anda memahami mengapa beberapa tag dihapus dan beberapa ditambahkan? Tag apa yang mungkin diperkenalkan di masa depan?
 
 Pelajari lebih lanjut tentang membangun situs untuk web dan perangkat seluler di [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
+
 
 ## Tugas
 
@@ -246,4 +248,4 @@ Pelajari lebih lanjut tentang membangun situs untuk web dan perangkat seluler di
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

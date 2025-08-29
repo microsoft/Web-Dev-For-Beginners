@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b667b7d601e2ee19acb5aa9d102dc9f3",
-  "translation_date": "2025-08-26T22:55:09+00:00",
+  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
+  "translation_date": "2025-08-29T07:49:00+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "sv"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introduktion
 
-I nästan alla moderna webbappar kan du skapa ett konto för att få din egen privata plats. Eftersom flera användare kan använda en webbapp samtidigt behöver du en mekanism för att lagra varje användares personliga data separat och välja vilken information som ska visas. Vi kommer inte att gå igenom hur man hanterar [användaridentitet säkert](https://en.wikipedia.org/wiki/Authentication) eftersom det är ett omfattande ämne i sig, men vi kommer att se till att varje användare kan skapa ett (eller flera) bankkonto i vår app.
+I nästan alla moderna webbappar kan du skapa ett konto för att få din egen privata plats. Eftersom flera användare kan använda en webbapp samtidigt behöver du en mekanism för att lagra varje användares personliga data separat och välja vilken information som ska visas. Vi kommer inte att gå igenom hur man hanterar [användaridentitet säkert](https://en.wikipedia.org/wiki/Authentication) eftersom det är ett omfattande ämne i sig, men vi kommer att se till att varje användare kan skapa ett (eller flera) bankkonton i vår app.
 
 I den här delen kommer vi att använda HTML-formulär för att lägga till inloggning och registrering i vår webbapp. Vi kommer att se hur man skickar data till en server-API programmatiskt och slutligen hur man definierar grundläggande valideringsregler för användarinmatningar.
 
@@ -28,7 +28,7 @@ Du kommer att ha två terminaler igång samtidigt enligt listan nedan:
 1. För huvudbankappen vi byggde i lektionen [HTML-mallar och routing](../1-template-route/README.md)
 2. För [Bank APP server-API:t](../api/README.md) som vi just satte upp ovan.
 
-Du behöver ha båda servrarna igång för att följa resten av lektionen. De lyssnar på olika portar (port `3000` och port `5000`) så allt bör fungera utan problem.
+Du behöver ha båda servrarna igång för att kunna följa resten av lektionen. De lyssnar på olika portar (port `3000` och port `5000`) så allt bör fungera utan problem.
 
 Du kan testa att servern körs korrekt genom att köra detta kommando i en terminal:
 
@@ -53,11 +53,11 @@ Attributet `name` kommer att användas som egenskapsnamn när formulärdata skic
 
 > Ta en titt på hela listan över [`<input>`-typer](https://developer.mozilla.org/docs/Web/HTML/Element/input) och [andra formulärkontroller](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls) för att få en idé om alla inbyggda UI-element du kan använda när du bygger ditt gränssnitt.
 
-✅ Observera att `<input>` är ett [tomt element](https://developer.mozilla.org/docs/Glossary/Empty_element) som du *inte* bör lägga till en matchande avslutande tagg på. Du kan dock använda den självstängande `<input/>`-notationen, men det är inte nödvändigt.
+✅ Observera att `<input>` är ett [tomt element](https://developer.mozilla.org/docs/Glossary/Empty_element) som du *inte* ska lägga till en matchande sluttagg på. Du kan dock använda den självstängande `<input/>`-notationen, men det är inte nödvändigt.
 
-Elementet `<button>` inom ett formulär är lite speciellt. Om du inte anger dess attribut `type` kommer det automatiskt att skicka formulärdata till servern när det trycks. Här är de möjliga värdena för `type`:
+Elementet `<button>` inom ett formulär är lite speciellt. Om du inte anger dess `type`-attribut kommer det automatiskt att skicka formulärdata till servern när det trycks. Här är de möjliga värdena för `type`:
 
-- `submit`: Standard inom ett `<form>`, knappen utlöser formulärets skicka-åtgärd.
+- `submit`: Standard inom ett `<form>`, knappen triggar formulärens skicka-åtgärd.
 - `reset`: Knappen återställer alla formulärkontroller till deras ursprungliga värden.
 - `button`: Tilldelar ingen standardbeteende när knappen trycks. Du kan sedan tilldela anpassade åtgärder med JavaScript.
 
@@ -79,7 +79,7 @@ Låt oss börja med att lägga till ett formulär till `login`-mallen. Vi behöv
 </template>
 ```
 
-Om du tittar närmare kan du märka att vi också har lagt till ett `<label>`-element här. `<label>`-element används för att lägga till ett namn till UI-kontroller, såsom vårt användarnamnsfält. Etiketter är viktiga för läsbarheten av dina formulär, men har också ytterligare fördelar:
+Om du tittar noga kan du märka att vi också har lagt till ett `<label>`-element här. `<label>`-element används för att lägga till ett namn till UI-kontroller, såsom vårt användarnamnsfält. Etiketter är viktiga för läsbarheten av dina formulär, men har också ytterligare fördelar:
 
 - Genom att associera en etikett med en formulärkontroll hjälper det användare som använder hjälpmedelstekniker (som skärmläsare) att förstå vilken data de förväntas ange.
 - Du kan klicka på etiketten för att direkt sätta fokus på den associerade inmatningen, vilket gör det enklare att nå på pekskärmsbaserade enheter.
@@ -104,22 +104,23 @@ Nu ska vi lägga till ett andra formulär för registrering, precis under det f�
 </form>
 ```
 
-Med attributet `value` kan vi definiera ett standardvärde för en given inmatning. Observera också att inmatningen för `balance` har typen `number`. Ser det annorlunda ut än de andra inmatningarna? Prova att interagera med det.
+Med attributet `value` kan vi definiera ett standardvärde för en given inmatning.
+Observera också att inmatningen för `balance` har typen `number`. Ser det annorlunda ut än de andra inmatningarna? Prova att interagera med det.
 
 ✅ Kan du navigera och interagera med formulären med bara ett tangentbord? Hur skulle du göra det?
 
 ## Skicka data till servern
 
-Nu när vi har ett funktionellt gränssnitt är nästa steg att skicka data till vår server. Låt oss göra ett snabbt test med vår nuvarande kod: vad händer om du klickar på knappen *Logga in* eller *Registrera*?
+Nu när vi har ett fungerande gränssnitt är nästa steg att skicka data till vår server. Låt oss göra ett snabbt test med vår nuvarande kod: vad händer om du klickar på knappen *Logga in* eller *Registrera*?
 
 Märkte du förändringen i webbläsarens URL-sektion?
 
-![Skärmdump av webbläsarens URL-förändring efter att ha klickat på knappen Registrera](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.sv.png)
+![Skärmdump av webbläsarens URL-förändring efter att ha klickat på Registrera-knappen](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.sv.png)
 
-Standardåtgärden för ett `<form>` är att skicka formuläret till den aktuella server-URL:en med [GET-metoden](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), och lägga till formulärdata direkt till URL:en. Denna metod har dock vissa begränsningar:
+Standardåtgärden för ett `<form>` är att skicka formuläret till den aktuella server-URL:en med [GET-metoden](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), och lägga till formulärdata direkt i URL:en. Denna metod har dock vissa begränsningar:
 
-- Den data som skickas är mycket begränsad i storlek (cirka 2000 tecken)
-- Data är direkt synlig i URL:en (inte bra för lösenord)
+- Den skickade datan är mycket begränsad i storlek (cirka 2000 tecken)
+- Datan är direkt synlig i URL:en (inte bra för lösenord)
 - Det fungerar inte med filuppladdningar
 
 Därför kan du ändra det till att använda [POST-metoden](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) som skickar formulärdata till servern i HTTP-förfrågans kropp, utan några av de tidigare begränsningarna.
@@ -128,25 +129,25 @@ Därför kan du ändra det till att använda [POST-metoden](https://www.w3.org/P
 
 ### Uppgift
 
-Lägg till egenskaperna `action` och `method` till registreringsformuläret:
+Lägg till `action` och `method`-egenskaper till registreringsformuläret:
 
 ```html
 <form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
 ```
 
-Prova nu att registrera ett nytt konto med ditt namn. Efter att ha klickat på knappen *Registrera* bör du se något som detta:
+Försök nu att registrera ett nytt konto med ditt namn. Efter att ha klickat på knappen *Registrera* bör du se något som detta:
 
-![En webbläsarfönster på adressen localhost:5000/api/accounts, som visar en JSON-sträng med användardata](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.sv.png)
+![Ett webbläsarfönster på adressen localhost:5000/api/accounts, som visar en JSON-sträng med användardata](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.sv.png)
 
 Om allt går bra bör servern svara på din begäran med ett [JSON](https://www.json.org/json-en.html)-svar som innehåller kontodata som skapades.
 
-✅ Försök registrera igen med samma namn. Vad händer?
+✅ Försök att registrera igen med samma namn. Vad händer?
 
 ## Skicka data utan att ladda om sidan
 
 Som du förmodligen märkte finns det ett litet problem med det tillvägagångssätt vi just använde: när vi skickar formuläret lämnar vi vår app och webbläsaren omdirigerar till serverns URL. Vi försöker undvika alla sidomladdningar med vår webbapp, eftersom vi skapar en [Single-page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
 
-För att skicka formulärdata till servern utan att tvinga en sidomladdning måste vi använda JavaScript-kod. Istället för att lägga en URL i egenskapen `action` för ett `<form>`-element kan du använda JavaScript-kod som föregås av strängen `javascript:` för att utföra en anpassad åtgärd. Genom att använda detta innebär det också att du måste implementera vissa uppgifter som tidigare gjordes automatiskt av webbläsaren:
+För att skicka formulärdata till servern utan att tvinga en sidomladdning måste vi använda JavaScript-kod. Istället för att sätta en URL i `action`-egenskapen för ett `<form>`-element kan du använda valfri JavaScript-kod som föregås av strängen `javascript:` för att utföra en anpassad åtgärd. Genom att använda detta innebär det också att du måste implementera vissa uppgifter som tidigare gjordes automatiskt av webbläsaren:
 
 - Hämta formulärdata
 - Konvertera och koda formulärdata till ett lämpligt format
@@ -171,9 +172,9 @@ function register() {
 }
 ```
 
-Här hämtar vi formulärelementet med `getElementById()` och använder hjälparen [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) för att extrahera värdena från formulärkontroller som en uppsättning nyckel/värde-par. Sedan konverterar vi data till ett vanligt objekt med [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) och slutligen serialiserar vi data till [JSON](https://www.json.org/json-en.html), ett format som ofta används för att utbyta data på webben.
+Här hämtar vi formulärelementet med `getElementById()` och använder hjälpen [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) för att extrahera värdena från formulärkontroller som en uppsättning nyckel/värde-par. Sedan konverterar vi datan till ett vanligt objekt med [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) och slutligen serialiserar datan till [JSON](https://www.json.org/json-en.html), ett format som ofta används för att utbyta data på webben.
 
-Data är nu redo att skickas till servern. Skapa en ny funktion som heter `createAccount`:
+Datan är nu redo att skickas till servern. Skapa en ny funktion som heter `createAccount`:
 
 ```js
 async function createAccount(account) {
@@ -190,7 +191,7 @@ async function createAccount(account) {
 }
 ```
 
-Vad gör denna funktion? Först, observera nyckelordet `async` här. Detta innebär att funktionen innehåller kod som kommer att exekveras [**asynkront**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). När det används tillsammans med nyckelordet `await` tillåter det att vänta på att asynkron kod ska exekveras - som att vänta på serverns svar här - innan den fortsätter.
+Vad gör denna funktion? Först, observera nyckelordet `async` här. Detta innebär att funktionen innehåller kod som kommer att köras [**asynkront**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). När det används tillsammans med nyckelordet `await` tillåter det att vänta på att asynkron kod ska köras - som att vänta på serverns svar här - innan det fortsätter.
 
 Här är en snabb video om användning av `async/await`:
 
@@ -200,7 +201,7 @@ Här är en snabb video om användning av `async/await`:
 
 Vi använder `fetch()`-API:t för att skicka JSON-data till servern. Denna metod tar 2 parametrar:
 
-- Serverns URL, så vi lägger tillbaka `//localhost:5000/api/accounts` här.
+- Serverns URL, så vi sätter tillbaka `//localhost:5000/api/accounts` här.
 - Inställningarna för begäran. Det är där vi ställer in metoden till `POST` och tillhandahåller `body` för begäran. Eftersom vi skickar JSON-data till servern måste vi också ställa in `Content-Type`-headern till `application/json` så att servern vet hur man tolkar innehållet.
 
 Eftersom servern kommer att svara på begäran med JSON kan vi använda `await response.json()` för att analysera JSON-innehållet och returnera det resulterande objektet. Observera att denna metod är asynkron, så vi använder nyckelordet `await` här innan vi returnerar för att säkerställa att eventuella fel under analysen också fångas.
@@ -234,11 +235,11 @@ async function register() {
 }
 ```
 
-Det var lite långt men vi kom dit! Om du öppnar [webbläsarens utvecklarverktyg](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools) och försöker registrera ett nytt konto, bör du inte se någon förändring på webbsidan men ett meddelande kommer att visas i konsolen som bekräftar att allt fungerar.
+Det var lite långt men vi kom dit! Om du öppnar dina [webbläsarutvecklingsverktyg](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools) och försöker registrera ett nytt konto bör du inte se någon förändring på webbsidan, men ett meddelande kommer att visas i konsolen som bekräftar att allt fungerar.
 
 ![Skärmdump som visar loggmeddelande i webbläsarkonsolen](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.sv.png)
 
-✅ Tror du att data skickas till servern säkert? Vad händer om någon lyckas avlyssna begäran? Du kan läsa om [HTTPS](https://en.wikipedia.org/wiki/HTTPS) för att lära dig mer om säker datakommunikation.
+✅ Tror du att datan skickas till servern säkert? Vad händer om någon lyckas avlyssna begäran? Du kan läsa om [HTTPS](https://en.wikipedia.org/wiki/HTTPS) för att lära dig mer om säker datakommunikation.
 
 ## Datavalidering
 
@@ -247,8 +248,8 @@ Om du försöker registrera ett nytt konto utan att ange ett användarnamn förs
 Innan du skickar data till en server är det en bra praxis att [validera formulärdata](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) i förväg när det är möjligt, för att säkerställa att du skickar en giltig begäran. HTML5-formulärkontroller tillhandahåller inbyggd validering med olika attribut:
 
 - `required`: fältet måste fyllas i, annars kan formuläret inte skickas.
-- `minlength` och `maxlength`: definierar det minsta och maximala antalet tecken i textfält.
-- `min` och `max`: definierar det minsta och maximala värdet för ett numeriskt fält.
+- `minlength` och `maxlength`: definierar det minsta och största antalet tecken i textfält.
+- `min` och `max`: definierar det minsta och största värdet för ett numeriskt fält.
 - `type`: definierar vilken typ av data som förväntas, som `number`, `email`, `file` eller [andra inbyggda typer](https://developer.mozilla.org/docs/Web/HTML/Element/input). Detta attribut kan också ändra den visuella renderingen av formulärkontrollen.
 - `pattern`: tillåter att definiera ett [reguljärt uttryck](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions)-mönster för att testa om den angivna datan är giltig eller inte.
 > Tips: du kan anpassa utseendet på dina formulärkontroller beroende på om de är giltiga eller ogiltiga genom att använda CSS-pseudoklasserna `:valid` och `:invalid`.
@@ -300,7 +301,7 @@ Här är ett exempel på hur den slutliga inloggningssidan kan se ut efter lite 
 
 ## Granskning & Självstudier
 
-Utvecklare har blivit mycket kreativa när det gäller att bygga formulär, särskilt när det handlar om valideringsstrategier. Lär dig om olika formulärflöden genom att titta på [CodePen](https://codepen.com); kan du hitta några intressanta och inspirerande formulär?
+Utvecklare har blivit mycket kreativa när det gäller att bygga formulär, särskilt när det handlar om valideringsstrategier. Lär dig om olika formulärflöden genom att titta igenom [CodePen](https://codepen.com); kan du hitta några intressanta och inspirerande formulär?
 
 ## Uppgift
 
@@ -309,4 +310,4 @@ Utvecklare har blivit mycket kreativa när det gäller att bygga formulär, sär
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller inexaktheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på sitt ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e982871b8388c59c22a41b73b5fca70f",
-  "translation_date": "2025-08-27T23:08:57+00:00",
+  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
+  "translation_date": "2025-08-29T09:00:02+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "vi"
 }
@@ -15,28 +15,28 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Lập trình hướng sự kiện
 
-Khi tạo một ứng dụng dựa trên trình duyệt, chúng ta cung cấp giao diện đồ họa (GUI) để người dùng tương tác với những gì chúng ta đã xây dựng. Cách phổ biến nhất để tương tác với trình duyệt là thông qua việc nhấp chuột và nhập liệu vào các phần tử khác nhau. Thách thức mà chúng ta đối mặt với tư cách là nhà phát triển là chúng ta không biết khi nào người dùng sẽ thực hiện những thao tác này!
+Khi tạo một ứng dụng dựa trên trình duyệt, chúng ta cung cấp giao diện đồ họa người dùng (GUI) để người dùng tương tác với những gì chúng ta đã xây dựng. Cách phổ biến nhất để tương tác với trình duyệt là thông qua việc nhấp chuột và nhập liệu vào các phần tử khác nhau. Thách thức mà chúng ta gặp phải với tư cách là nhà phát triển là chúng ta không biết khi nào người dùng sẽ thực hiện những thao tác này!
 
-[Lập trình hướng sự kiện](https://en.wikipedia.org/wiki/Event-driven_programming) là tên gọi của loại lập trình mà chúng ta cần thực hiện để tạo GUI. Nếu phân tích cụm từ này, chúng ta thấy từ cốt lõi ở đây là **sự kiện**. [Sự kiện](https://www.merriam-webster.com/dictionary/event), theo Merriam-Webster, được định nghĩa là "một điều gì đó xảy ra". Điều này mô tả hoàn hảo tình huống của chúng ta. Chúng ta biết điều gì đó sẽ xảy ra mà chúng ta muốn thực thi một đoạn mã để phản hồi, nhưng chúng ta không biết khi nào nó sẽ diễn ra.
+[Lập trình hướng sự kiện](https://en.wikipedia.org/wiki/Event-driven_programming) là tên gọi của loại lập trình mà chúng ta cần thực hiện để tạo GUI. Nếu phân tích cụm từ này, chúng ta thấy từ cốt lõi ở đây là **sự kiện**. [Sự kiện](https://www.merriam-webster.com/dictionary/event), theo định nghĩa của Merriam-Webster, là "một điều gì đó xảy ra". Điều này mô tả hoàn hảo tình huống của chúng ta. Chúng ta biết rằng sẽ có điều gì đó xảy ra mà chúng ta muốn thực thi một đoạn mã để phản hồi, nhưng chúng ta không biết khi nào điều đó sẽ diễn ra.
 
-Cách chúng ta đánh dấu một đoạn mã mà chúng ta muốn thực thi là tạo một hàm. Khi nghĩ về [lập trình thủ tục](https://en.wikipedia.org/wiki/Procedural_programming), các hàm được gọi theo một thứ tự cụ thể. Điều này cũng đúng với lập trình hướng sự kiện. Sự khác biệt nằm ở **cách** các hàm được gọi.
+Cách chúng ta đánh dấu một đoạn mã muốn thực thi là bằng cách tạo một hàm. Khi nghĩ về [lập trình thủ tục](https://en.wikipedia.org/wiki/Procedural_programming), các hàm được gọi theo một thứ tự cụ thể. Điều này cũng đúng với lập trình hướng sự kiện. Sự khác biệt nằm ở **cách** các hàm được gọi.
 
-Để xử lý các sự kiện (nhấp chuột, nhập liệu, v.v.), chúng ta đăng ký **trình lắng nghe sự kiện**. Trình lắng nghe sự kiện là một hàm lắng nghe khi một sự kiện xảy ra và thực thi để phản hồi. Trình lắng nghe sự kiện có thể cập nhật giao diện người dùng, thực hiện các cuộc gọi đến máy chủ, hoặc bất kỳ điều gì khác cần làm để phản hồi hành động của người dùng. Chúng ta thêm một trình lắng nghe sự kiện bằng cách sử dụng [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) và cung cấp một hàm để thực thi.
+Để xử lý các sự kiện (nhấp chuột, nhập liệu, v.v.), chúng ta đăng ký **trình lắng nghe sự kiện**. Trình lắng nghe sự kiện là một hàm lắng nghe khi một sự kiện xảy ra và thực thi để phản hồi. Trình lắng nghe sự kiện có thể cập nhật giao diện người dùng, thực hiện các cuộc gọi đến máy chủ, hoặc bất kỳ điều gì cần thiết để phản hồi hành động của người dùng. Chúng ta thêm một trình lắng nghe sự kiện bằng cách sử dụng [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) và cung cấp một hàm để thực thi.
 
-> **NOTE:** Đáng chú ý là có nhiều cách để tạo trình lắng nghe sự kiện. Bạn có thể sử dụng các hàm ẩn danh hoặc tạo các hàm có tên. Bạn có thể sử dụng các phím tắt khác nhau, như thiết lập thuộc tính `click`, hoặc sử dụng `addEventListener`. Trong bài tập này, chúng ta sẽ tập trung vào `addEventListener` và các hàm ẩn danh, vì đây có lẽ là kỹ thuật phổ biến nhất mà các nhà phát triển web sử dụng. Nó cũng là cách linh hoạt nhất, vì `addEventListener` hoạt động với tất cả các sự kiện, và tên sự kiện có thể được cung cấp dưới dạng tham số.
+> **NOTE:** Đáng chú ý là có nhiều cách để tạo trình lắng nghe sự kiện. Bạn có thể sử dụng các hàm ẩn danh hoặc tạo các hàm có tên. Bạn có thể sử dụng các phím tắt khác nhau, như thiết lập thuộc tính `click`, hoặc sử dụng `addEventListener`. Trong bài tập này, chúng ta sẽ tập trung vào `addEventListener` và các hàm ẩn danh, vì đây có lẽ là kỹ thuật phổ biến nhất mà các nhà phát triển web sử dụng. Đây cũng là cách linh hoạt nhất, vì `addEventListener` hoạt động với tất cả các sự kiện và tên sự kiện có thể được cung cấp dưới dạng tham số.
 
 ### Các sự kiện phổ biến
 
-Có [hàng tá sự kiện](https://developer.mozilla.org/docs/Web/Events) mà bạn có thể lắng nghe khi tạo một ứng dụng. Hầu như bất kỳ điều gì người dùng làm trên trang đều kích hoạt một sự kiện, điều này mang lại cho bạn rất nhiều quyền lực để đảm bảo họ có được trải nghiệm như mong muốn. May mắn thay, bạn thường chỉ cần một số ít sự kiện. Dưới đây là một vài sự kiện phổ biến (bao gồm hai sự kiện chúng ta sẽ sử dụng khi tạo trò chơi):
+Có [hàng tá sự kiện](https://developer.mozilla.org/docs/Web/Events) mà bạn có thể lắng nghe khi tạo ứng dụng. Về cơ bản, bất kỳ điều gì người dùng làm trên trang đều tạo ra một sự kiện, điều này mang lại cho bạn rất nhiều quyền kiểm soát để đảm bảo họ có trải nghiệm như mong muốn. May mắn thay, bạn thường chỉ cần một số ít sự kiện. Dưới đây là một vài sự kiện phổ biến (bao gồm hai sự kiện chúng ta sẽ sử dụng khi tạo trò chơi):
 
-- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Người dùng nhấp vào một thứ gì đó, thường là một nút hoặc liên kết
+- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Người dùng nhấp vào một thứ gì đó, thường là nút hoặc liên kết
 - [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Người dùng nhấp chuột phải
 - [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Người dùng bôi đen một đoạn văn bản
-- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Người dùng nhập một đoạn văn bản
+- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Người dùng nhập văn bản
 
 ## Tạo trò chơi
 
-Chúng ta sẽ tạo một trò chơi để khám phá cách các sự kiện hoạt động trong JavaScript. Trò chơi của chúng ta sẽ kiểm tra kỹ năng gõ phím của người chơi, một trong những kỹ năng bị đánh giá thấp nhất mà tất cả các nhà phát triển nên có. Chúng ta nên luyện tập gõ phím thường xuyên! Quy trình chung của trò chơi sẽ như sau:
+Chúng ta sẽ tạo một trò chơi để khám phá cách các sự kiện hoạt động trong JavaScript. Trò chơi của chúng ta sẽ kiểm tra kỹ năng gõ của người chơi, một trong những kỹ năng bị đánh giá thấp nhất mà tất cả các nhà phát triển nên có. Chúng ta đều nên luyện tập kỹ năng gõ của mình! Quy trình tổng quát của trò chơi sẽ như sau:
 
 - Người chơi nhấp vào nút bắt đầu và được hiển thị một câu trích dẫn để gõ
 - Người chơi gõ câu trích dẫn nhanh nhất có thể trong một hộp văn bản
@@ -48,7 +48,7 @@ Hãy cùng xây dựng trò chơi và tìm hiểu về các sự kiện!
 
 ### Cấu trúc tệp
 
-Chúng ta sẽ cần tổng cộng ba tệp: **index.html**, **script.js** và **style.css**. Hãy bắt đầu bằng cách thiết lập chúng để làm cho công việc dễ dàng hơn.
+Chúng ta sẽ cần tổng cộng ba tệp: **index.html**, **script.js** và **style.css**. Hãy bắt đầu bằng cách thiết lập chúng để công việc của chúng ta dễ dàng hơn.
 
 - Tạo một thư mục mới cho công việc của bạn bằng cách mở cửa sổ console hoặc terminal và thực hiện lệnh sau:
 
@@ -73,11 +73,11 @@ code .
 
 ## Tạo giao diện người dùng
 
-Nếu chúng ta xem xét các yêu cầu, chúng ta biết rằng chúng ta sẽ cần một số phần tử trên trang HTML của mình. Điều này giống như một công thức, nơi chúng ta cần một số nguyên liệu:
+Nếu chúng ta xem xét các yêu cầu, chúng ta biết rằng chúng ta sẽ cần một số phần tử trên trang HTML. Điều này giống như một công thức, nơi chúng ta cần một số nguyên liệu:
 
 - Một nơi để hiển thị câu trích dẫn cho người dùng gõ
 - Một nơi để hiển thị bất kỳ thông báo nào, như thông báo thành công
-- Một hộp văn bản để nhập liệu
+- Một hộp văn bản để gõ
 - Một nút bắt đầu
 
 Mỗi phần tử này sẽ cần ID để chúng ta có thể làm việc với chúng trong JavaScript. Chúng ta cũng sẽ thêm tham chiếu đến các tệp CSS và JavaScript mà chúng ta sẽ tạo.
@@ -146,20 +146,20 @@ Tạo một tệp mới có tên **style.css** và thêm cú pháp sau.
 
 ## JavaScript
 
-Với giao diện người dùng đã được tạo, giờ là lúc tập trung vào JavaScript, phần sẽ cung cấp logic. Chúng ta sẽ chia nhỏ thành một số bước:
+Với giao diện người dùng đã được tạo, giờ là lúc tập trung vào JavaScript để cung cấp logic. Chúng ta sẽ chia nhỏ điều này thành một số bước:
 
 - [Tạo các hằng số](../../../../4-typing-game/typing-game)
 - [Trình lắng nghe sự kiện để bắt đầu trò chơi](../../../../4-typing-game/typing-game)
-- [Trình lắng nghe sự kiện để nhập liệu](../../../../4-typing-game/typing-game)
+- [Trình lắng nghe sự kiện để gõ](../../../../4-typing-game/typing-game)
 
-Nhưng trước tiên, hãy tạo một tệp mới có tên **script.js**.
+Nhưng trước tiên, tạo một tệp mới có tên **script.js**.
 
 ### Thêm các hằng số
 
 Chúng ta sẽ cần một số mục để làm cho việc lập trình dễ dàng hơn. Một lần nữa, giống như một công thức, đây là những gì chúng ta sẽ cần:
 
-- Mảng chứa danh sách tất cả các câu trích dẫn
-- Mảng trống để lưu trữ tất cả các từ của câu trích dẫn hiện tại
+- Một mảng chứa danh sách tất cả các câu trích dẫn
+- Một mảng trống để lưu trữ tất cả các từ của câu trích dẫn hiện tại
 - Không gian để lưu trữ chỉ số của từ mà người chơi hiện đang gõ
 - Thời gian người chơi nhấp vào bắt đầu
 
@@ -194,7 +194,7 @@ const typedValueElement = document.getElementById('typed-value');
 
 ✅ Hãy thêm nhiều câu trích dẫn hơn vào trò chơi của bạn
 
-> **NOTE:** Chúng ta có thể truy xuất các phần tử bất cứ khi nào chúng ta muốn trong mã bằng cách sử dụng `document.getElementById`. Vì chúng ta sẽ tham chiếu đến các phần tử này thường xuyên, chúng ta sẽ tránh lỗi chính tả với chuỗi ký tự bằng cách sử dụng các hằng số. Các framework như [Vue.js](https://vuejs.org/) hoặc [React](https://reactjs.org/) có thể giúp bạn quản lý mã tập trung tốt hơn.
+> **NOTE:** Chúng ta có thể truy xuất các phần tử bất cứ khi nào chúng ta muốn trong mã bằng cách sử dụng `document.getElementById`. Vì chúng ta sẽ thường xuyên tham chiếu đến các phần tử này, chúng ta sẽ tránh lỗi chính tả với các chuỗi bằng cách sử dụng hằng số. Các framework như [Vue.js](https://vuejs.org/) hoặc [React](https://reactjs.org/) có thể giúp bạn quản lý mã tập trung tốt hơn.
 
 Dành một phút để xem video về cách sử dụng `const`, `let` và `var`
 
@@ -204,7 +204,7 @@ Dành một phút để xem video về cách sử dụng `const`, `let` và `var
 
 ### Thêm logic bắt đầu
 
-Để bắt đầu trò chơi, người chơi sẽ nhấp vào nút bắt đầu. Tất nhiên, chúng ta không biết khi nào họ sẽ nhấp vào nút bắt đầu. Đây là lúc một [trình lắng nghe sự kiện](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) phát huy tác dụng. Trình lắng nghe sự kiện sẽ cho phép chúng ta lắng nghe một điều gì đó xảy ra (một sự kiện) và thực thi mã để phản hồi. Trong trường hợp của chúng ta, chúng ta muốn thực thi mã khi người dùng nhấp vào bắt đầu.
+Để bắt đầu trò chơi, người chơi sẽ nhấp vào nút bắt đầu. Tất nhiên, chúng ta không biết khi nào họ sẽ nhấp vào bắt đầu. Đây là lúc một [trình lắng nghe sự kiện](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) phát huy tác dụng. Trình lắng nghe sự kiện sẽ cho phép chúng ta lắng nghe điều gì đó xảy ra (một sự kiện) và thực thi mã để phản hồi. Trong trường hợp của chúng ta, chúng ta muốn thực thi mã khi người dùng nhấp vào bắt đầu.
 
 Khi người dùng nhấp vào **bắt đầu**, chúng ta cần chọn một câu trích dẫn, thiết lập giao diện người dùng và thiết lập theo dõi từ hiện tại và thời gian. Dưới đây là JavaScript bạn cần thêm; chúng ta sẽ thảo luận sau đoạn mã.
 
@@ -241,27 +241,27 @@ document.getElementById('start').addEventListener('click', () => {
 });
 ```
 
-Hãy phân tích mã!
+Hãy phân tích đoạn mã!
 
 - Thiết lập theo dõi từ
   - Sử dụng [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) và [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) để chọn ngẫu nhiên một câu trích dẫn từ mảng `quotes`
   - Chuyển đổi `quote` thành một mảng `words` để chúng ta có thể theo dõi từ mà người chơi hiện đang gõ
-  - `wordIndex` được đặt thành 0, vì người chơi sẽ bắt đầu từ từ đầu tiên
+  - Đặt `wordIndex` là 0, vì người chơi sẽ bắt đầu từ từ đầu tiên
 - Thiết lập giao diện người dùng
   - Tạo một mảng `spanWords`, chứa mỗi từ bên trong một phần tử `span`
     - Điều này sẽ cho phép chúng ta làm nổi bật từ trên màn hình
   - `join` mảng để tạo một chuỗi mà chúng ta có thể sử dụng để cập nhật `innerHTML` trên `quoteElement`
     - Điều này sẽ hiển thị câu trích dẫn cho người chơi
-  - Đặt `className` của phần tử `span` đầu tiên thành `highlight` để làm nổi bật nó màu vàng
+  - Đặt `className` của phần tử `span` đầu tiên thành `highlight` để làm nổi bật nó bằng màu vàng
   - Làm sạch `messageElement` bằng cách đặt `innerText` thành `''`
 - Thiết lập hộp văn bản
-  - Xóa `value` hiện tại trên `typedValueElement`
+  - Xóa giá trị hiện tại trên `typedValueElement`
   - Đặt `focus` vào `typedValueElement`
 - Bắt đầu bộ đếm thời gian bằng cách gọi `getTime`
 
-### Thêm logic nhập liệu
+### Thêm logic gõ
 
-Khi người chơi gõ, một sự kiện `input` sẽ được kích hoạt. Trình lắng nghe sự kiện này sẽ kiểm tra để đảm bảo người chơi đang gõ đúng từ và xử lý trạng thái hiện tại của trò chơi. Quay lại **script.js**, thêm mã sau vào cuối. Chúng ta sẽ phân tích sau đó.
+Khi người chơi gõ, một sự kiện `input` sẽ được kích hoạt. Trình lắng nghe sự kiện này sẽ kiểm tra để đảm bảo người chơi đang gõ đúng từ và xử lý trạng thái hiện tại của trò chơi. Quay lại **script.js**, thêm đoạn mã sau vào cuối. Chúng ta sẽ phân tích sau đó.
 
 ```javascript
 // at the end of script.js
@@ -300,20 +300,20 @@ typedValueElement.addEventListener('input', () => {
 });
 ```
 
-Hãy phân tích mã! Chúng ta bắt đầu bằng cách lấy từ hiện tại và giá trị mà người chơi đã gõ cho đến thời điểm này. Sau đó, chúng ta có logic dạng thác nước, nơi chúng ta kiểm tra xem câu trích dẫn đã hoàn thành, từ đã hoàn thành, từ đúng hay (cuối cùng), nếu có lỗi.
+Hãy phân tích đoạn mã! Chúng ta bắt đầu bằng cách lấy từ hiện tại và giá trị mà người chơi đã gõ cho đến thời điểm này. Sau đó, chúng ta có logic dạng thác nước, nơi chúng ta kiểm tra xem câu trích dẫn đã hoàn thành, từ đã hoàn thành, từ đúng hay (cuối cùng) có lỗi.
 
-- Câu trích dẫn đã hoàn thành, được chỉ ra bởi `typedValue` bằng với `currentWord`, và `wordIndex` bằng với một ít hơn `length` của `words`
-  - Tính `elapsedTime` bằng cách trừ `startTime` khỏi thời gian hiện tại
+- Câu trích dẫn đã hoàn thành, được chỉ ra bởi `typedValue` bằng với `currentWord` và `wordIndex` bằng với một giá trị nhỏ hơn `length` của `words`
+  - Tính toán `elapsedTime` bằng cách trừ `startTime` khỏi thời gian hiện tại
   - Chia `elapsedTime` cho 1.000 để chuyển đổi từ mili giây sang giây
   - Hiển thị thông báo thành công
-- Từ đã hoàn thành, được chỉ ra bởi `typedValue` kết thúc bằng một khoảng trắng (kết thúc của một từ) và `typedValue` bằng với `currentWord`
+- Từ đã hoàn thành, được chỉ ra bởi `typedValue` kết thúc bằng dấu cách (kết thúc của một từ) và `typedValue` bằng với `currentWord`
   - Đặt `value` trên `typedElement` thành `''` để cho phép gõ từ tiếp theo
   - Tăng `wordIndex` để chuyển sang từ tiếp theo
   - Lặp qua tất cả `childNodes` của `quoteElement` để đặt `className` thành `''` để trở về hiển thị mặc định
   - Đặt `className` của từ hiện tại thành `highlight` để đánh dấu nó là từ tiếp theo cần gõ
 - Từ hiện tại được gõ đúng (nhưng chưa hoàn thành), được chỉ ra bởi `currentWord` bắt đầu bằng `typedValue`
   - Đảm bảo `typedValueElement` được hiển thị mặc định bằng cách xóa `className`
-- Nếu chúng ta đến đây, có một lỗi
+- Nếu chúng ta đến được đây, có một lỗi
   - Đặt `className` trên `typedValueElement` thành `error`
 
 ## Kiểm tra ứng dụng của bạn
@@ -334,7 +334,6 @@ Thêm nhiều chức năng hơn
 - Vô hiệu hóa hộp văn bản khi người chơi hoàn thành câu trích dẫn
 - Hiển thị hộp thoại modal với thông báo thành công
 - Lưu điểm cao bằng cách sử dụng [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
-
 ## Câu hỏi sau bài giảng
 
 [Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/22)
@@ -350,4 +349,4 @@ Tìm hiểu về [tất cả các sự kiện có sẵn](https://developer.mozil
 ---
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

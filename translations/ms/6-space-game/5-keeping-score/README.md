@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-27T22:34:50+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T09:28:36+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "ms"
 }
@@ -17,7 +17,7 @@ Dalam pelajaran ini, anda akan belajar cara menambah skor dalam permainan dan me
 
 ## Paparkan teks di skrin
 
-Untuk memaparkan skor permainan di skrin, anda perlu tahu cara meletakkan teks di skrin. Jawapannya adalah dengan menggunakan kaedah `fillText()` pada objek kanvas. Anda juga boleh mengawal aspek lain seperti jenis fon yang digunakan, warna teks, dan penjajaran (kiri, kanan, tengah). Di bawah adalah kod untuk memaparkan teks di skrin.
+Untuk memaparkan skor permainan di skrin, anda perlu tahu cara meletakkan teks di skrin. Jawapannya adalah dengan menggunakan kaedah `fillText()` pada objek kanvas. Anda juga boleh mengawal aspek lain seperti jenis fon yang digunakan, warna teks, dan penjajaran teks (kiri, kanan, tengah). Di bawah adalah kod untuk melukis teks di skrin.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -30,18 +30,18 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ## Nyawa, sebagai konsep permainan
 
-Konsep nyawa dalam permainan hanyalah satu nombor. Dalam konteks permainan angkasa, adalah biasa untuk menetapkan beberapa nyawa yang akan berkurang satu demi satu apabila kapal anda mengalami kerosakan. Adalah lebih menarik jika anda boleh memaparkan representasi grafik seperti kapal kecil atau hati berbanding hanya nombor.
+Konsep mempunyai nyawa dalam permainan hanyalah satu nombor. Dalam konteks permainan angkasa, adalah biasa untuk memberikan sejumlah nyawa yang akan berkurang satu demi satu apabila kapal anda mengalami kerosakan. Lebih menarik jika anda boleh menunjukkan representasi grafik seperti kapal kecil atau hati berbanding nombor.
 
 ## Apa yang perlu dibina
 
-Mari tambahkan perkara berikut ke dalam permainan anda:
+Mari tambahkan perkara berikut ke permainan anda:
 
-- **Skor permainan**: Untuk setiap kapal musuh yang dimusnahkan, wira anda sepatutnya mendapat mata, kami mencadangkan 100 mata untuk setiap kapal. Skor permainan perlu dipaparkan di bahagian bawah kiri.
-- **Nyawa**: Kapal anda mempunyai tiga nyawa. Anda akan kehilangan satu nyawa setiap kali kapal musuh bertembung dengan anda. Skor nyawa perlu dipaparkan di bahagian bawah kanan dan menggunakan grafik berikut ![imej nyawa](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.ms.png).
+- **Skor permainan**: Untuk setiap kapal musuh yang dimusnahkan, wira harus diberikan beberapa mata, kami mencadangkan 100 mata setiap kapal. Skor permainan harus dipaparkan di bahagian bawah kiri.
+- **Nyawa**: Kapal anda mempunyai tiga nyawa. Anda kehilangan satu nyawa setiap kali kapal musuh bertembung dengan anda. Skor nyawa harus dipaparkan di bahagian bawah kanan dan dibuat daripada grafik berikut ![imej nyawa](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.ms.png).
 
 ## Langkah yang disyorkan
 
-Cari fail-fail yang telah disediakan untuk anda dalam sub folder `your-work`. Ia sepatutnya mengandungi perkara berikut:
+Cari fail yang telah dibuat untuk anda dalam sub folder `your-work`. Ia sepatutnya mengandungi perkara berikut:
 
 ```bash
 -| assets
@@ -60,7 +60,7 @@ cd your-work
 npm start
 ```
 
-Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. Buka pelayar dan masukkan alamat tersebut, buat masa ini ia sepatutnya memaparkan wira dan semua musuh, dan apabila anda menekan anak panah kiri dan kanan, wira akan bergerak dan boleh menembak musuh.
+Perintah di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. Buka pelayar dan masukkan alamat tersebut, buat masa ini ia sepatutnya memaparkan wira dan semua musuh, dan apabila anda menekan anak panah kiri dan kanan, wira bergerak dan boleh menembak musuh.
 
 ### Tambah kod
 
@@ -94,7 +94,7 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
     ```
 
 4. **Tambah `life` dan `points`**. 
-   1. **Inisialisasi pembolehubah**. Di bawah `this.cooldown = 0` dalam kelas `Hero`, tetapkan life dan points:
+   1. **Inisialisasi pembolehubah**. Di bawah `this.cooldown = 0` dalam kelas `Hero`, tetapkan nyawa dan mata:
 
         ```javascript
         this.life = 3;
@@ -128,7 +128,7 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
 
         ```
 
-   1. **Tambah kaedah ke Gelung Permainan**. Pastikan anda menambah fungsi-fungsi ini ke fungsi window.onload di bawah `updateGameObjects()`:
+   1. **Tambah kaedah ke gelung permainan**. Pastikan anda menambah fungsi ini ke fungsi window.onload di bawah `updateGameObjects()`:
 
         ```javascript
         drawPoints();
@@ -139,7 +139,7 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
 
    1. **Untuk setiap perlanggaran wira dan musuh**, tolak satu nyawa.
    
-      Kembangkan kelas `Hero` untuk melaksanakan pengurangan ini:
+      Kembangkan kelas `Hero` untuk melakukan pengurangan ini:
 
         ```javascript
         decrementLife() {
@@ -150,9 +150,9 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
         }
         ```
 
-   2. **Untuk setiap laser yang mengenai musuh**, tambahkan 100 mata ke skor permainan.
+   2. **Untuk setiap laser yang mengenai musuh**, tambah skor permainan sebanyak 100 mata.
 
-      Kembangkan kelas Hero untuk melaksanakan penambahan ini:
+      Kembangkan kelas Hero untuk melakukan penambahan ini:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +160,7 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
           }
         ```
 
-        Tambahkan fungsi-fungsi ini ke Collision Event Emitters anda:
+        Tambahkan fungsi ini ke Pemancar Acara Perlanggaran:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,23 +175,23 @@ Arahan di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. B
         });
         ```
 
-✅ Lakukan sedikit penyelidikan untuk mengetahui permainan lain yang dicipta menggunakan JavaScript/Canvas. Apakah ciri-ciri umum mereka?
+✅ Lakukan sedikit penyelidikan untuk mengetahui permainan lain yang dibuat menggunakan JavaScript/Canvas. Apakah ciri-ciri umum mereka?
 
-Pada akhir kerja ini, anda sepatutnya dapat melihat kapal kecil 'nyawa' di bahagian bawah kanan, mata di bahagian bawah kiri, dan anda akan melihat jumlah nyawa berkurang apabila anda bertembung dengan musuh dan mata bertambah apabila anda menembak musuh. Syabas! Permainan anda hampir siap.
+Pada akhir kerja ini, anda sepatutnya melihat kapal kecil 'nyawa' di bahagian bawah kanan, mata di bahagian bawah kiri, dan anda sepatutnya melihat kiraan nyawa anda berkurang apabila anda bertembung dengan musuh dan mata anda bertambah apabila anda menembak musuh. Syabas! Permainan anda hampir siap.
 
 ---
 
 ## 🚀 Cabaran
 
-Kod anda hampir siap. Bolehkah anda membayangkan langkah seterusnya?
+Kod anda hampir siap. Bolehkah anda bayangkan langkah seterusnya?
 
 ## Kuiz Pasca-Kuliah
 
 [Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/38)
 
-## Ulasan & Kajian Kendiri
+## Kajian & Pembelajaran Kendiri
 
-Selidik beberapa cara untuk menambah dan mengurangkan skor permainan dan nyawa. Terdapat beberapa enjin permainan menarik seperti [PlayFab](https://playfab.com). Bagaimana penggunaan salah satu daripadanya dapat meningkatkan permainan anda?
+Selidik beberapa cara untuk menambah dan mengurangkan skor permainan dan nyawa. Terdapat beberapa enjin permainan yang menarik seperti [PlayFab](https://playfab.com). Bagaimana menggunakan salah satu daripadanya dapat meningkatkan permainan anda?
 
 ## Tugasan
 
@@ -200,4 +200,4 @@ Selidik beberapa cara untuk menambah dan mengurangkan skor permainan dan nyawa. 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

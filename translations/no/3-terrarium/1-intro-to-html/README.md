@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46a0639e719b9cf1dfd062aa24cad639",
-  "translation_date": "2025-08-26T21:30:54+00:00",
+  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
+  "translation_date": "2025-08-29T08:38:07+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "no"
 }
@@ -26,11 +26,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 HTML, eller HyperText Markup Language, er 'skjelettet' til nettet. Hvis CSS 'kler opp' HTML-en din og JavaScript gir den liv, er HTML kroppen til din webapplikasjon. HTMLs syntaks reflekterer til og med denne ideen, da den inkluderer "head", "body" og "footer"-tagger.
 
-I denne leksjonen skal vi bruke HTML til å lage 'skjelettet' til grensesnittet for vårt virtuelle terrarium. Det vil ha en tittel og tre kolonner: en høyre og en venstre kolonne hvor de flyttbare plantene befinner seg, og et midtområde som vil være det faktiske glassaktige terrariet. Ved slutten av denne leksjonen vil du kunne se plantene i kolonnene, men grensesnittet vil se litt rart ut; ikke bekymre deg, i neste seksjon vil du legge til CSS-stiler for å gjøre grensesnittet penere.
+I denne leksjonen skal vi bruke HTML til å lage 'skjelettet' til grensesnittet for vårt virtuelle terrarium. Det vil ha en tittel og tre kolonner: en høyre og en venstre kolonne hvor de flyttbare plantene befinner seg, og et midtområde som vil være det glassaktige terrariet. Ved slutten av denne leksjonen vil du kunne se plantene i kolonnene, men grensesnittet vil se litt rart ut; ikke bekymre deg, i neste seksjon vil du legge til CSS-stiler for å gjøre grensesnittet penere.
 
 ### Oppgave
 
-På datamaskinen din, opprett en mappe kalt 'terrarium' og inni den en fil kalt 'index.html'. Du kan gjøre dette i Visual Studio Code etter at du har opprettet terrarium-mappen ved å åpne et nytt VS Code-vindu, klikke på 'open folder', og navigere til den nye mappen din. Klikk på den lille 'file'-knappen i Explorer-panelet og opprett den nye filen:
+På datamaskinen din, opprett en mappe kalt 'terrarium' og inni den, en fil kalt 'index.html'. Du kan gjøre dette i Visual Studio Code etter at du har opprettet terrarium-mappen ved å åpne et nytt VS Code-vindu, klikke på 'open folder', og navigere til den nye mappen din. Klikk på den lille 'file'-knappen i Explorer-panelet og opprett den nye filen:
 
 ![Explorer i VS Code](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.no.png)
 
@@ -48,7 +48,7 @@ Bruk disse kommandoene i git bash:
 
 ## DocType og html-tagger
 
-Den første linjen i en HTML-fil er dens doctype. Det er litt overraskende at du må ha denne linjen helt øverst i filen, men den forteller eldre nettlesere at siden skal gjengis i standardmodus, i henhold til gjeldende HTML-spesifikasjon.
+Den første linjen i en HTML-fil er dens doctype. Det er litt overraskende at du må ha denne linjen helt øverst i filen, men den forteller eldre nettlesere at siden må gjengis i standardmodus, i henhold til gjeldende HTML-spesifikasjon.
 
 > Tips: I VS Code kan du holde musepekeren over en tagg og få informasjon om bruken fra MDN Reference-guidene.
 
@@ -72,10 +72,10 @@ Legg til disse linjene øverst i `index.html`-filen din:
 'Head'-området i HTML-dokumentet inkluderer viktig informasjon om nettsiden din, også kjent som [metadata](https://developer.mozilla.org/docs/Web/HTML/Element/meta). I vårt tilfelle forteller vi webserveren som denne siden skal sendes til for å bli gjengitt, disse fire tingene:
 
 -   sidens tittel
--   metadata om siden, inkludert:
+-   metadata for siden, inkludert:
     -   'character set', som forteller hvilken tegnkoding som brukes på siden
     -   nettleserinformasjon, inkludert `x-ua-compatible` som indikerer at IE=edge-nettleseren støttes
-    -   informasjon om hvordan visningsområdet skal oppføre seg når det lastes. Å sette visningsområdet til å ha en initial skala på 1 kontrollerer zoomnivået når siden først lastes.
+    -   informasjon om hvordan visningsområdet skal oppføre seg når det lastes inn. Å sette visningsområdet til å ha en initial skala på 1 kontrollerer zoomnivået når siden først lastes inn.
 
 ### Oppgave
 
@@ -115,13 +115,13 @@ I HTML legger du til tagger i .html-filen din for å lage elementer på en netts
 </html>
 ```
 
-Nå kan du begynne å bygge ut siden din. Vanligvis bruker du `<div>`-tagger for å lage de separate elementene på en side. Vi skal lage en serie med `<div>`-elementer som vil inneholde bilder.
+Nå kan du begynne å bygge ut siden din. Vanligvis bruker du `<div>`-tagger for å lage de separate elementene på en side. Vi skal lage en serie `<div>`-elementer som vil inneholde bilder.
 
 ### Bilder
 
 En HTML-tagg som ikke trenger en lukketagg er `<img>`-taggen, fordi den har et `src`-element som inneholder all informasjonen siden trenger for å gjengi elementet.
 
-Opprett en mappe i appen din kalt `images` og legg til alle bildene i [kildekode-mappen](../../../../3-terrarium/solution/images); (det er 14 bilder av planter).
+Opprett en mappe i appen din kalt `images` og legg i den alle bildene fra [kildekode-mappen](../../../../3-terrarium/solution/images); (det er 14 bilder av planter).
 
 ### Oppgave
 
@@ -184,7 +184,7 @@ Med denne markeringen vises plantene nå på skjermen. Det ser ganske dårlig ut
 
 Hvert bilde har alternativ tekst som vil vises selv om du ikke kan se eller gjengi et bilde. Dette er en viktig attributt å inkludere for tilgjengelighet. Lær mer om tilgjengelighet i fremtidige leksjoner; for nå, husk at alt-attributtet gir alternativ informasjon for et bilde hvis en bruker av en eller annen grunn ikke kan se det (på grunn av treg tilkobling, en feil i src-attributtet, eller hvis brukeren bruker en skjermleser).
 
-✅ La du merke til at hvert bilde har samme alt-tekst? Er dette god praksis? Hvorfor eller hvorfor ikke? Kan du forbedre denne koden?
+✅ La du merke til at hvert bilde har samme alt-tagg? Er dette god praksis? Hvorfor eller hvorfor ikke? Kan du forbedre denne koden?
 
 ---
 
@@ -228,7 +228,7 @@ Legg til denne markeringen over den siste `</div>`-taggen:
 
 ## 🚀Utfordring
 
-Det finnes noen morsomme 'eldre' tagger i HTML som fortsatt er morsomme å leke med, selv om du ikke bør bruke utdaterte tagger som [disse taggene](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) i markeringen din. Likevel, kan du bruke den gamle `<marquee>`-taggen for å få h1-tittelen til å rulle horisontalt? (hvis du gjør det, ikke glem å fjerne den etterpå)
+Det finnes noen ville 'eldre' tagger i HTML som fortsatt er morsomme å leke med, selv om du ikke bør bruke utdaterte tagger som [disse taggene](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) i markeringen din. Likevel, kan du bruke den gamle `<marquee>`-taggen for å få h1-tittelen til å rulle horisontalt? (hvis du gjør det, ikke glem å fjerne den etterpå)
 
 ## Quiz etter forelesning
 
@@ -238,8 +238,7 @@ Det finnes noen morsomme 'eldre' tagger i HTML som fortsatt er morsomme å leke 
 
 HTML er det 'prøvde og sanne' byggesystemet som har hjulpet til med å bygge nettet til det det er i dag. Lær litt om historien ved å studere noen gamle og nye tagger. Kan du finne ut hvorfor noen tagger ble utdaterte og noen lagt til? Hvilke tagger kan bli introdusert i fremtiden?
 
-Lær mer om å bygge nettsteder for nettet og mobile enheter på [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
-
+Lær mer om å bygge nettsteder for web og mobile enheter på [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
 
 ## Oppgave
 
@@ -248,4 +247,4 @@ Lær mer om å bygge nettsteder for nettet og mobile enheter på [Microsoft Lear
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

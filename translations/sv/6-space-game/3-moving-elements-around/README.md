@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-26T21:56:48+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T07:53:48+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "sv"
 }
 -->
-# Bygg ett rymdspel del 3: Lägga till rörelse
+# Bygg ett Rymdspel Del 3: Lägga till Rörelse
 
 ## Förhandsquiz
 
@@ -18,13 +18,13 @@ Spel blir inte särskilt roliga förrän du har utomjordingar som rör sig på s
 - **Tangentbords-/musrörelse**: när användaren interagerar med tangentbordet eller musen för att flytta ett objekt på skärmen.
 - **Spelinducerad rörelse**: när spelet flyttar ett objekt med ett visst tidsintervall.
 
-Så hur flyttar vi saker på en skärm? Det handlar om kartesiska koordinater: vi ändrar objektets position (x,y) och ritar sedan om skärmen.
+Så hur flyttar vi saker på en skärm? Det handlar om kartesiska koordinater: vi ändrar objektets position (x, y) och ritar sedan om skärmen.
 
 Vanligtvis behöver du följande steg för att uppnå *rörelse* på en skärm:
 
-1. **Ställ in en ny position** för ett objekt; detta behövs för att uppfatta objektet som att det har flyttat sig.
+1. **Ställ in en ny position** för ett objekt; detta behövs för att uppfatta att objektet har flyttats.
 2. **Rensa skärmen**, skärmen måste rensas mellan varje ritning. Vi kan rensa den genom att rita en rektangel som vi fyller med en bakgrundsfärg.
-3. **Rita om objektet** på den nya positionen. Genom att göra detta lyckas vi slutligen flytta objektet från en position till en annan.
+3. **Rita om objektet** på den nya positionen. Genom att göra detta uppnår vi slutligen att flytta objektet från en plats till en annan.
 
 Så här kan det se ut i kod:
 
@@ -43,9 +43,9 @@ ctx.drawImage(heroImg, hero.x, hero.y);
 
 ## Hantera tangentbordshändelser
 
-Du hanterar händelser genom att koppla specifika händelser till kod. Tangentbordshändelser triggas på hela fönstret, medan mushändelser som en `click` kan kopplas till att klicka på ett specifikt element. Vi kommer att använda tangentbordshändelser genom hela detta projekt.
+Du hanterar händelser genom att koppla specifika händelser till kod. Tangentbordshändelser triggas på hela fönstret medan mushändelser som en `click` kan kopplas till att klicka på ett specifikt element. Vi kommer att använda tangentbordshändelser genom hela detta projekt.
 
-För att hantera en händelse behöver du använda fönstrets `addEventListener()`-metod och ge den två inparametrar. Den första parametern är namnet på händelsen, till exempel `keyup`. Den andra parametern är funktionen som ska anropas som ett resultat av att händelsen inträffar.
+För att hantera en händelse behöver du använda fönstrets `addEventListener()`-metod och ge den två indata. Den första parametern är namnet på händelsen, till exempel `keyup`. Den andra parametern är funktionen som ska anropas när händelsen inträffar.
 
 Här är ett exempel:
 
@@ -61,13 +61,13 @@ window.addEventListener('keyup', (evt) => {
 För tangentbordshändelser finns det två egenskaper på händelsen som du kan använda för att se vilken tangent som trycktes:
 
 - `key`, detta är en strängrepresentation av den tryckta tangenten, till exempel `ArrowUp`.
-- `keyCode`, detta är en numerisk representation, till exempel `37`, motsvarar `ArrowLeft`.
+- `keyCode`, detta är en numerisk representation, till exempel `37`, som motsvarar `ArrowLeft`.
 
-✅ Manipulation av tangentbordshändelser är användbart utanför spelutveckling. Vilka andra användningsområden kan du tänka dig för denna teknik?
+✅ Manipulering av tangentbordshändelser är användbart även utanför spelutveckling. Vilka andra användningsområden kan du tänka dig för denna teknik?
 
 ### Specialtangenter: en varning
 
-Det finns vissa *specialtangenter* som påverkar fönstret. Det betyder att om du lyssnar på en `keyup`-händelse och använder dessa specialtangenter för att flytta din hjälte, kommer det också att utföra horisontell scrollning. Av den anledningen kanske du vill *stänga av* detta inbyggda webbläsarbeteende när du bygger ditt spel. Du behöver kod som denna:
+Det finns vissa *specialtangenter* som påverkar fönstret. Det betyder att om du lyssnar på en `keyup`-händelse och använder dessa specialtangenter för att flytta din hjälte, kommer det också att utföra horisontell rullning. Av den anledningen kanske du vill *stänga av* detta inbyggda webbläsarbeteende när du bygger ditt spel. Du behöver kod som denna:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -88,11 +88,11 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Koden ovan säkerställer att piltangenterna och mellanslagstangenten har sitt *standardbeteende* avstängt. Mekanismen för att *stänga av* sker när vi anropar `e.preventDefault()`.
+Koden ovan säkerställer att piltangenterna och mellanslagstangenten får sitt *standardbeteende* avstängt. *Avstängningsmekanismen* sker när vi anropar `e.preventDefault()`.
 
 ## Spelinducerad rörelse
 
-Vi kan få saker att röra sig av sig själva genom att använda timers som funktionerna `setTimeout()` eller `setInterval()` som uppdaterar objektets position vid varje tick, eller tidsintervall. Så här kan det se ut:
+Vi kan få saker att röra sig själva genom att använda timers som funktionerna `setTimeout()` eller `setInterval()` som uppdaterar objektets position vid varje tick, eller tidsintervall. Så här kan det se ut:
 
 ```javascript
 let id = setInterval(() => {
@@ -103,7 +103,7 @@ let id = setInterval(() => {
 
 ## Spelloopen
 
-Spelloopen är ett koncept som i grunden är en funktion som anropas med jämna mellanrum. Den kallas spelloopen eftersom allt som ska vara synligt för användaren ritas in i loopen. Spelloopen använder alla spelobjekt som är en del av spelet och ritar dem, såvida de inte av någon anledning inte längre ska vara en del av spelet. Till exempel om ett objekt är en fiende som träffades av en laser och exploderar, är det inte längre en del av den aktuella spelloopen (du kommer att lära dig mer om detta i senare lektioner).
+Spelloopen är ett koncept som i grunden är en funktion som anropas med jämna mellanrum. Den kallas spelloopen eftersom allt som ska vara synligt för användaren ritas i loopen. Spelloopen använder alla spelobjekt som är en del av spelet och ritar alla, såvida de inte av någon anledning inte längre ska vara en del av spelet. Till exempel, om ett objekt är en fiende som träffades av en laser och exploderar, är det inte längre en del av den aktuella spelloopen (du kommer att lära dig mer om detta i kommande lektioner).
 
 Så här kan en spelloop typiskt se ut, uttryckt i kod:
 
@@ -119,9 +119,9 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-Loopen ovan anropas var `200` millisekund för att rita om canvasen. Du har möjlighet att välja det bästa intervallet som passar för ditt spel.
+Loopen ovan anropas var `200` millisekund för att rita om canvasen. Du kan välja det intervall som passar bäst för ditt spel.
 
-## Fortsättning på rymdspelet
+## Fortsättning på Rymdspelet
 
 Du kommer att ta den befintliga koden och bygga vidare på den. Antingen börjar du med koden som du slutförde under del I eller använder koden i [Del II - startkod](../../../../6-space-game/3-moving-elements-around/your-work).
 
@@ -148,7 +148,7 @@ cd your-work
 npm start
 ```
 
-Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:5000`. Öppna en webbläsare och ange den adressen, just nu bör den rendera hjälten och alla fiender; ingenting rör sig - än!
+Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:5000`. Öppna en webbläsare och ange den adressen, just nu bör den visa hjälten och alla fiender; inget rör sig - ännu!
 
 ### Lägg till kod
 
@@ -156,7 +156,7 @@ Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:500
 
    *TIPS* `game object` bör vara det som har `x` och `y` och förmågan att rita sig själv på en canvas.
 
-   >tips: börja med att lägga till en ny GameObject-klass med dess konstruktor definierad som nedan och rita den sedan på canvasen:
+   >tips: börja med att lägga till en ny GameObject-klass med dess konstruktor definierad som nedan, och rita sedan den på canvasen:
   
     ```javascript
         
@@ -177,7 +177,7 @@ Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:500
     }
     ```
 
-    Nu, utöka denna GameObject för att skapa Hero och Enemy.
+    Utöka nu denna GameObject för att skapa Hero och Enemy.
     
     ```javascript
     class Hero extends GameObject {
@@ -205,7 +205,7 @@ Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:500
     }
     ```
 
-2. **Lägg till tangentbordshändelsehanterare** för att hantera navigering med tangenter (flytta hjälten upp/ner vänster/höger).
+2. **Lägg till tangentbordshändelsehanterare** för att hantera tangentnavigering (flytta hjälten upp/ner vänster/höger).
 
    *KOM IHÅG* det är ett kartesiskt system, övre vänstra hörnet är `0,0`. Kom också ihåg att lägga till kod för att stoppa *standardbeteende*.
 
@@ -266,7 +266,7 @@ Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:500
         }
         ```
 
-    1. **Lägg till konstanter** och sätt upp EventEmitter:
+    1. **Lägg till konstanter** och konfigurera EventEmitter:
 
         ```javascript
         const Messages = {
@@ -313,7 +313,7 @@ Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:500
 
 1. **Ställ in spelloopen**
 
-   Refaktorisera window.onload-funktionen för att initiera spelet och ställa in en spelloop med ett bra intervall. Du kommer också att lägga till en laserstråle:
+   Refaktorera funktionen window.onload för att initiera spelet och ställa in en spelloop med ett bra intervall. Du kommer också att lägga till en laserstråle:
 
     ```javascript
     window.onload = async () => {
@@ -334,9 +334,9 @@ Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:500
     };
     ```
 
-5. **Lägg till kod** för att flytta fiender med ett visst intervall
+5. **Lägg till kod** för att flytta fiender med ett visst intervall.
 
-    Refaktorisera funktionen `createEnemies()` för att skapa fienderna och lägga till dem i den nya gameObjects-klassen:
+    Refaktorera funktionen `createEnemies()` för att skapa fienderna och lägga till dem i den nya gameObjects-klassen:
 
     ```javascript
     function createEnemies() {
@@ -355,7 +355,7 @@ Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:500
     }
     ```
     
-    och lägg till en `createHero()`-funktion för att göra en liknande process för hjälten.
+    och lägg till en funktion `createHero()` för att göra en liknande process för hjälten.
     
     ```javascript
     function createHero() {
@@ -368,7 +368,7 @@ Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:500
     }
     ```
 
-    och slutligen, lägg till en `drawGameObjects()`-funktion för att starta ritningen:
+    och slutligen, lägg till en funktion `drawGameObjects()` för att börja rita:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -376,7 +376,7 @@ Ovanstående kommer att starta en HTTP-server på adressen `http://localhost:500
     }
     ```
 
-    Dina fiender bör börja avancera mot ditt hjälteskepp!
+    Dina fiender bör börja avancera mot ditt rymdskepp!
 
 ---
 
@@ -388,7 +388,7 @@ Som du kan se kan din kod bli "spagettikod" när du börjar lägga till funktion
 
 [Efterhandsquiz](https://ff-quizzes.netlify.app/web/quiz/34)
 
-## Granskning & självstudier
+## Granskning & Självstudier
 
 Även om vi skriver vårt spel utan att använda ramverk, finns det många JavaScript-baserade canvasramverk för spelutveckling. Ta lite tid att [läsa om dessa](https://github.com/collections/javascript-game-engines).
 
@@ -399,4 +399,4 @@ Som du kan se kan din kod bli "spagettikod" när du börjar lägga till funktion
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

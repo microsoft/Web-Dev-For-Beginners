@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c63675cfaf1d223b37bb9fecbfe7c252",
-  "translation_date": "2025-08-27T23:13:46+00:00",
+  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
+  "translation_date": "2025-08-29T09:17:50+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "id"
 }
 -->
 # Pengantar Bahasa Pemrograman dan Alat yang Digunakan
 
-Pelajaran ini membahas dasar-dasar bahasa pemrograman. Topik yang dibahas di sini berlaku untuk sebagian besar bahasa pemrograman modern saat ini. Pada bagian 'Alat yang Digunakan', Anda akan mempelajari perangkat lunak yang berguna bagi pengembang.
+Pelajaran ini membahas dasar-dasar bahasa pemrograman. Topik yang dibahas di sini berlaku untuk sebagian besar bahasa pemrograman modern saat ini. Pada bagian 'Alat yang Digunakan', Anda akan mempelajari perangkat lunak yang berguna untuk membantu Anda sebagai pengembang.
 
 ![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.id.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
@@ -24,7 +24,7 @@ Dalam pelajaran ini, kita akan membahas:
 - Apa itu pemrograman?
 - Jenis-jenis bahasa pemrograman
 - Elemen dasar dari sebuah program
-- Perangkat lunak dan alat yang berguna bagi pengembang profesional
+- Perangkat lunak dan alat yang berguna untuk pengembang profesional
 
 > Anda dapat mengikuti pelajaran ini di [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
 
@@ -32,7 +32,7 @@ Dalam pelajaran ini, kita akan membahas:
 
 Pemrograman (juga dikenal sebagai coding) adalah proses menulis instruksi untuk perangkat seperti komputer atau perangkat seluler. Kita menulis instruksi ini menggunakan bahasa pemrograman, yang kemudian diinterpretasikan oleh perangkat. Kumpulan instruksi ini dapat disebut dengan berbagai nama, seperti *program*, *program komputer*, *aplikasi (app)*, dan *eksekusi*.
 
-Sebuah *program* bisa berupa apa saja yang ditulis dengan kode; situs web, permainan, dan aplikasi ponsel adalah program. Meskipun memungkinkan untuk membuat program tanpa menulis kode, logika dasarnya diinterpretasikan oleh perangkat, dan logika tersebut kemungkinan besar ditulis dengan kode. Program yang *berjalan* atau *mengeksekusi* kode sedang menjalankan instruksi. Perangkat yang Anda gunakan untuk membaca pelajaran ini sedang menjalankan program untuk menampilkan pelajaran ini di layar Anda.
+Sebuah *program* bisa berupa apa saja yang ditulis dengan kode; situs web, permainan, dan aplikasi ponsel adalah program. Meskipun memungkinkan untuk membuat program tanpa menulis kode, logika dasarnya diinterpretasikan oleh perangkat, dan logika tersebut kemungkinan besar ditulis dengan kode. Program yang sedang *berjalan* atau *mengeksekusi* kode sedang menjalankan instruksi. Perangkat yang Anda gunakan untuk membaca pelajaran ini sedang menjalankan program untuk menampilkan pelajaran ini di layar Anda.
 
 ✅ Lakukan sedikit penelitian: siapa yang dianggap sebagai programmer komputer pertama di dunia?
 
@@ -40,7 +40,7 @@ Sebuah *program* bisa berupa apa saja yang ditulis dengan kode; situs web, perma
 
 Bahasa pemrograman memungkinkan pengembang menulis instruksi untuk perangkat. Perangkat hanya dapat memahami biner (1s dan 0s), dan bagi *kebanyakan* pengembang, itu bukan cara yang efisien untuk berkomunikasi. Bahasa pemrograman adalah sarana komunikasi antara manusia dan komputer.
 
-Bahasa pemrograman hadir dalam berbagai format dan dapat melayani tujuan yang berbeda. Misalnya, JavaScript terutama digunakan untuk aplikasi web, sedangkan Bash terutama digunakan untuk sistem operasi.
+Bahasa pemrograman hadir dalam berbagai format dan dapat melayani tujuan yang berbeda. Misalnya, JavaScript terutama digunakan untuk aplikasi web, sementara Bash terutama digunakan untuk sistem operasi.
 
 *Bahasa tingkat rendah* biasanya membutuhkan lebih sedikit langkah dibandingkan *bahasa tingkat tinggi* bagi perangkat untuk menginterpretasikan instruksi. Namun, yang membuat bahasa tingkat tinggi populer adalah keterbacaan dan dukungannya. JavaScript dianggap sebagai bahasa tingkat tinggi.
 
@@ -89,7 +89,7 @@ Percaya atau tidak, *keduanya melakukan hal yang sama*: mencetak urutan Fibonacc
 
 ## Elemen Program
 
-Satu instruksi dalam program disebut *pernyataan* dan biasanya memiliki karakter atau spasi baris yang menandai di mana instruksi berakhir, atau *berhenti*. Cara program berhenti bervariasi tergantung pada setiap bahasa.
+Satu instruksi dalam program disebut *pernyataan* dan biasanya memiliki karakter atau spasi baris yang menandai di mana instruksi berakhir, atau *berhenti*. Cara program berhenti bervariasi untuk setiap bahasa.
 
 Pernyataan dalam program mungkin bergantung pada data yang diberikan oleh pengguna atau sumber lain untuk menjalankan instruksi. Data dapat mengubah cara program berperilaku, sehingga bahasa pemrograman dilengkapi dengan cara untuk menyimpan data sementara agar dapat digunakan nanti. Ini disebut *variabel*. Variabel adalah pernyataan yang menginstruksikan perangkat untuk menyimpan data dalam memorinya. Variabel dalam program mirip dengan variabel dalam aljabar, di mana mereka memiliki nama unik dan nilainya dapat berubah seiring waktu.
 
@@ -151,7 +151,7 @@ Beberapa pengembang lebih memilih tampilan yang kurang grafis untuk tugas sehari
 
 ### Opsi Baris Perintah Populer
 
-Opsi untuk baris perintah akan berbeda tergantung pada sistem operasi yang Anda gunakan.
+Opsi untuk baris perintah akan berbeda berdasarkan sistem operasi yang Anda gunakan.
 
 *💻 = sudah terinstal di sistem operasi.*
 
@@ -176,7 +176,7 @@ Opsi untuk baris perintah akan berbeda tergantung pada sistem operasi yang Anda 
 
 #### Alat Baris Perintah Populer
 
-- [Git](https://git-scm.com/) (💻 pada sebagian besar sistem operasi)
+- [Git](https://git-scm.com/) (💻 di sebagian besar sistem operasi)
 - [NPM](https://www.npmjs.com/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/cli/)
 
@@ -198,10 +198,10 @@ Ketika seorang pengembang ingin mempelajari sesuatu yang baru, mereka kemungkina
 
 ## 🚀 Tantangan
 
-Bandingkan beberapa bahasa pemrograman. Apa saja ciri khas JavaScript vs. Java? Bagaimana dengan COBOL vs. Go?
+Bandingkan beberapa bahasa pemrograman. Apa saja ciri khas JavaScript dibandingkan Java? Bagaimana dengan COBOL dibandingkan Go?
 
 ## Kuis Pasca-Pelajaran
-[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/2)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/)
 
 ## Tinjauan & Studi Mandiri
 
@@ -214,4 +214,4 @@ Pelajari sedikit tentang berbagai bahasa yang tersedia untuk programmer. Cobalah
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

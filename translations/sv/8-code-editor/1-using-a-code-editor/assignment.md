@@ -1,15 +1,26 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-26T22:29:14+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T08:00:22+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "sv"
 }
 -->
-# Skapa en CV-webbplats med vscode.dev
+# Skapa en CV-webbplats med hjälp av vscode.dev
 
-_Hur coolt vore det inte om en rekryterare bad om ditt CV och du skickade en url?_ 😎
+_Hur coolt vore det inte om en rekryterare bad om ditt CV och du skickade dem en URL?_ 😎
+
+<!----
+TODO: lägg till en valfri bild
+![Använda en kodredigerare](../../../../translated_images/webdev101-vscode-dev.f53c14e8dad231ea09d9e07a2db4a01551d2dc6cdf21225038389e11156af023.sv.png)
+> Sketchnote av [Författarens namn](https://example.com)
+---->
+
+<!---
+## Förkunskapstest
+[Förkunskapstest](https://ff-quizzes.netlify.app/web/quiz/3)
+---->
 
 ## Mål
 
@@ -33,7 +44,7 @@ Klicka på länken `creating a new file`, skriv in namnet `index.html` och välj
 
 **Steg 3:** Öppna [VSCode.dev](https://vscode.dev) och välj knappen `Open Remote Repository`.
 
-Kopiera url:en till det repository du just skapade för din CV-webbplats och klistra in den i inmatningsfältet:
+Kopiera URL:en till det repository du just skapade för din CV-webbplats och klistra in den i inmatningsrutan:
 
 _Ersätt `your-username` med ditt GitHub-användarnamn_
 
@@ -85,23 +96,23 @@ https://github.com/your-username/my-resume
                         </section>
                         <section>
                             <h2>KOMPETENSER</h2>
-                            <!-- dina kompetenser -->
+                            <!-- dina färdigheter -->
                             <ul>
-                                <li>Kompetens 1!</li>
-                                <li>Kompetens 2!</li>
-                                <li>Kompetens 3!</li>
-                                <li>Kompetens 4!</li>
+                                <li>Färdighet 1!</li>
+                                <li>Färdighet 2!</li>
+                                <li>Färdighet 3!</li>
+                                <li>Färdighet 4!</li>
                             </ul>
                         </section>
                         <section>
                             <h2>UTBILDNING</h2>
                             <!-- din utbildning -->
-                            <h3>Skriv din kurs här!</h3>
+                            <h3>Skriv din utbildning här!</h3>
                             <p>
                                 Skriv din institution här!
                             </p>
                             <p>
-                                Start - Slutdatum
+                                Startdatum - Slutdatum
                             </p>
                         </section>            
                     </article>
@@ -217,9 +228,9 @@ Lägg till dina CV-detaljer för att ersätta _platshållartexten_ i HTML-koden.
     "styles": []
     }
 
-**Steg 7:** Installera `Codeswing extension` för att visualisera CV-webbplatsen i kodområdet.
+**Steg 7:** Installera tillägget `Codeswing` för att visualisera CV-webbplatsen i kodområdet.
 
-Klicka på ikonen _`Extensions`_ i aktivitetsfältet och skriv in Codeswing. Klicka antingen på den _blå installationsknappen_ i det utökade aktivitetsfältet för att installera eller använd installationsknappen som visas i kodområdet när du väljer tillägget för att ladda ytterligare information. Direkt efter installationen av tillägget, observera kodområdet för att se ändringarna i ditt projekt 😃.
+Klicka på ikonen _`Extensions`_ i aktivitetsfältet och skriv in Codeswing. Klicka antingen på den _blå installationsknappen_ i det utökade aktivitetsfältet för att installera eller använd installationsknappen som visas i kodområdet när du väljer tillägget för att ladda ytterligare information. Direkt efter att du har installerat tillägget, observera kodområdet för att se ändringarna i ditt projekt 😃.
 
 ![Installera tillägg](../../../../8-code-editor/images/install-extension.gif)
 
@@ -227,15 +238,20 @@ Detta är vad du kommer att se på din skärm efter att du har installerat till�
 
 ![Codeswing-tillägg i aktion](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.sv.png)
 
-Om du är nöjd med de ändringar du gjort, hovra över mappen `Changes` och klicka på knappen `+` för att lägga till ändringarna.
+Om du är nöjd med de ändringar du gjort, hovra över mappen `Changes` och klicka på `+`-knappen för att lägga till ändringarna.
 
-Skriv ett commit-meddelande _(En beskrivning av ändringen du gjort i projektet)_ och commit:a dina ändringar genom att klicka på `check`. När du är klar med ditt projekt, välj hamburgermenyn längst upp till vänster för att återgå till repositoryn på GitHub.
+Skriv ett commit-meddelande _(En beskrivning av de ändringar du gjort i projektet)_ och commit dina ändringar genom att klicka på `check`. När du är klar med ditt projekt, välj hamburgermenyn längst upp till vänster för att återgå till repositoryt på GitHub.
 
-Grattis 🎉 Du har just skapat din CV-webbplats med vscode.dev på några få steg.
+Grattis 🎉 Du har just skapat din CV-webbplats med hjälp av vscode.dev på några få steg.
 
 ## 🚀 Utmaning
 
-Öppna ett fjärrrepository som du har behörighet att göra ändringar i och uppdatera några filer. Försök sedan skapa en ny branch med dina ändringar och gör en Pull Request.
+Öppna ett fjärrrepository som du har behörighet att göra ändringar i och uppdatera några filer. Försök sedan skapa en ny gren med dina ändringar och gör en Pull Request.
+
+<!----
+## Efterföreläsningstest
+[Efterföreläsningstest](https://ff-quizzes.netlify.app/web/quiz/4)
+---->
 
 ## Granskning & Självstudier
 
@@ -244,4 +260,4 @@ Läs mer om [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller inexaktheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

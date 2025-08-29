@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-27T22:01:01+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-29T08:45:45+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "vi"
 }
 -->
-# Xây dựng ứng dụng ngân hàng Phần 3: Các phương pháp lấy và sử dụng dữ liệu
+# Xây dựng ứng dụng ngân hàng Phần 3: Phương pháp lấy và sử dụng dữ liệu
 
 ## Câu hỏi trước bài giảng
 
@@ -15,13 +15,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Giới thiệu
 
-Cốt lõi của mọi ứng dụng web là *dữ liệu*. Dữ liệu có thể có nhiều dạng, nhưng mục đích chính của nó luôn là hiển thị thông tin cho người dùng. Với các ứng dụng web ngày càng trở nên tương tác và phức tạp, cách người dùng truy cập và tương tác với thông tin giờ đây là một phần quan trọng của phát triển web.
+Cốt lõi của mọi ứng dụng web là *dữ liệu*. Dữ liệu có thể có nhiều hình thức, nhưng mục đích chính của nó luôn là hiển thị thông tin cho người dùng. Với các ứng dụng web ngày càng trở nên tương tác và phức tạp, cách người dùng truy cập và tương tác với thông tin giờ đây là một phần quan trọng của phát triển web.
 
 Trong bài học này, chúng ta sẽ tìm hiểu cách lấy dữ liệu từ máy chủ một cách bất đồng bộ và sử dụng dữ liệu này để hiển thị thông tin trên trang web mà không cần tải lại HTML.
 
 ### Điều kiện tiên quyết
 
-Bạn cần đã xây dựng [Biểu mẫu Đăng nhập và Đăng ký](../2-forms/README.md) của ứng dụng web cho bài học này. Bạn cũng cần cài đặt [Node.js](https://nodejs.org) và [chạy API máy chủ](../api/README.md) cục bộ để lấy dữ liệu tài khoản.
+Bạn cần hoàn thành phần [Biểu mẫu Đăng nhập và Đăng ký](../2-forms/README.md) của ứng dụng web cho bài học này. Bạn cũng cần cài đặt [Node.js](https://nodejs.org) và [chạy API máy chủ](../api/README.md) cục bộ để lấy dữ liệu tài khoản.
 
 Bạn có thể kiểm tra xem máy chủ có hoạt động đúng không bằng cách thực hiện lệnh này trong terminal:
 
@@ -34,11 +34,11 @@ curl http://localhost:5000/api
 
 ## AJAX và lấy dữ liệu
 
-Các trang web truyền thống cập nhật nội dung hiển thị khi người dùng chọn một liên kết hoặc gửi dữ liệu qua biểu mẫu bằng cách tải lại toàn bộ trang HTML. Mỗi lần cần tải dữ liệu mới, máy chủ web trả về một trang HTML hoàn toàn mới cần được trình duyệt xử lý, làm gián đoạn hành động hiện tại của người dùng và hạn chế tương tác trong quá trình tải lại. Quy trình này còn được gọi là *Ứng dụng Nhiều Trang* hoặc *MPA*.
+Các trang web truyền thống cập nhật nội dung hiển thị khi người dùng chọn một liên kết hoặc gửi dữ liệu qua biểu mẫu bằng cách tải lại toàn bộ trang HTML. Mỗi lần cần tải dữ liệu mới, máy chủ web sẽ trả về một trang HTML hoàn toàn mới cần được trình duyệt xử lý, làm gián đoạn hành động hiện tại của người dùng và hạn chế tương tác trong quá trình tải lại. Quy trình này còn được gọi là *Ứng dụng nhiều trang* hoặc *MPA*.
 
 ![Quy trình cập nhật trong ứng dụng nhiều trang](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.vi.png)
 
-Khi các ứng dụng web bắt đầu trở nên phức tạp và tương tác hơn, một kỹ thuật mới gọi là [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) đã xuất hiện. Kỹ thuật này cho phép các ứng dụng web gửi và nhận dữ liệu từ máy chủ một cách bất đồng bộ bằng JavaScript mà không cần tải lại trang HTML, dẫn đến các cập nhật nhanh hơn và tương tác mượt mà hơn. Khi dữ liệu mới được nhận từ máy chủ, trang HTML hiện tại cũng có thể được cập nhật bằng JavaScript sử dụng API [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model). Theo thời gian, cách tiếp cận này đã phát triển thành cái mà ngày nay được gọi là [*Ứng dụng Một Trang* hoặc *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+Khi các ứng dụng web bắt đầu trở nên phức tạp và tương tác hơn, một kỹ thuật mới gọi là [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) đã xuất hiện. Kỹ thuật này cho phép các ứng dụng web gửi và nhận dữ liệu từ máy chủ một cách bất đồng bộ bằng JavaScript mà không cần tải lại trang HTML, dẫn đến cập nhật nhanh hơn và tương tác mượt mà hơn. Khi dữ liệu mới được nhận từ máy chủ, trang HTML hiện tại cũng có thể được cập nhật bằng JavaScript sử dụng API [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model). Theo thời gian, cách tiếp cận này đã phát triển thành cái mà ngày nay được gọi là [*Ứng dụng một trang* hoặc *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
 
 ![Quy trình cập nhật trong ứng dụng một trang](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.vi.png)
 
@@ -72,9 +72,9 @@ async function getAccount(user) {
 }
 ```
 
-Chúng ta sử dụng API `fetch` để yêu cầu dữ liệu một cách bất đồng bộ từ máy chủ, nhưng lần này chúng ta không cần bất kỳ tham số bổ sung nào ngoài URL để gọi, vì chúng ta chỉ đang truy vấn dữ liệu. Theo mặc định, `fetch` tạo một yêu cầu HTTP [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET), đây là điều chúng ta đang tìm kiếm.
+Chúng ta sử dụng API `fetch` để yêu cầu dữ liệu từ máy chủ một cách bất đồng bộ, nhưng lần này chúng ta không cần bất kỳ tham số nào ngoài URL để gọi, vì chúng ta chỉ đang truy vấn dữ liệu. Theo mặc định, `fetch` tạo một yêu cầu HTTP [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET), đây là điều chúng ta cần.
 
-✅ `encodeURIComponent()` là một hàm thoát các ký tự đặc biệt cho URL. Những vấn đề nào chúng ta có thể gặp phải nếu không gọi hàm này và sử dụng trực tiếp giá trị `user` trong URL?
+✅ `encodeURIComponent()` là một hàm thoát các ký tự đặc biệt cho URL. Những vấn đề nào có thể xảy ra nếu chúng ta không gọi hàm này và sử dụng trực tiếp giá trị `user` trong URL?
 
 Bây giờ hãy cập nhật hàm `login` của chúng ta để sử dụng `getAccount`:
 
@@ -111,20 +111,20 @@ Cuối cùng, chúng ta cần gọi hàm `login` của mình khi biểu mẫu đ
 
 Kiểm tra xem mọi thứ có hoạt động đúng không bằng cách đăng ký một tài khoản mới và thử đăng nhập bằng tài khoản đó.
 
-Trước khi chuyển sang phần tiếp theo, chúng ta cũng có thể hoàn thành hàm `register` bằng cách thêm đoạn này vào cuối hàm:
+Trước khi chuyển sang phần tiếp theo, chúng ta cũng có thể hoàn thành hàm `register` bằng cách thêm đoạn mã này vào cuối hàm:
 
 ```js
 account = result;
 navigate('/dashboard');
 ```
 
-✅ Bạn có biết rằng theo mặc định, bạn chỉ có thể gọi API máy chủ từ *cùng miền và cổng* với trang web bạn đang xem? Đây là cơ chế bảo mật được trình duyệt thực thi. Nhưng khoan đã, ứng dụng web của chúng ta đang chạy trên `localhost:3000` trong khi API máy chủ đang chạy trên `localhost:5000`, tại sao nó hoạt động? Bằng cách sử dụng một kỹ thuật gọi là [Chia sẻ Tài nguyên Chéo (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), có thể thực hiện các yêu cầu HTTP chéo miền nếu máy chủ thêm các tiêu đề đặc biệt vào phản hồi, cho phép ngoại lệ cho các miền cụ thể.
+✅ Bạn có biết rằng theo mặc định, bạn chỉ có thể gọi API máy chủ từ *cùng miền và cổng* với trang web bạn đang xem? Đây là cơ chế bảo mật được trình duyệt thực thi. Nhưng khoan đã, ứng dụng web của chúng ta đang chạy trên `localhost:3000` trong khi API máy chủ đang chạy trên `localhost:5000`, tại sao nó hoạt động? Bằng cách sử dụng một kỹ thuật gọi là [Chia sẻ tài nguyên chéo (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), có thể thực hiện các yêu cầu HTTP chéo miền nếu máy chủ thêm các tiêu đề đặc biệt vào phản hồi, cho phép ngoại lệ cho các miền cụ thể.
 
 > Tìm hiểu thêm về API bằng cách tham gia [bài học này](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
 
 ## Cập nhật HTML để hiển thị dữ liệu
 
-Bây giờ chúng ta đã có dữ liệu người dùng, chúng ta phải cập nhật HTML hiện có để hiển thị nó. Chúng ta đã biết cách lấy một phần tử từ DOM bằng cách sử dụng ví dụ `document.getElementById()`. Sau khi có một phần tử cơ sở, đây là một số API bạn có thể sử dụng để sửa đổi nó hoặc thêm các phần tử con vào:
+Bây giờ chúng ta đã có dữ liệu người dùng, chúng ta phải cập nhật HTML hiện có để hiển thị nó. Chúng ta đã biết cách lấy một phần tử từ DOM bằng cách sử dụng ví dụ `document.getElementById()`. Sau khi có phần tử cơ sở, đây là một số API bạn có thể sử dụng để sửa đổi hoặc thêm các phần tử con vào nó:
 
 - Sử dụng thuộc tính [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent), bạn có thể thay đổi văn bản của một phần tử. Lưu ý rằng việc thay đổi giá trị này sẽ xóa tất cả các phần tử con của phần tử (nếu có) và thay thế bằng văn bản được cung cấp. Vì vậy, đây cũng là một phương pháp hiệu quả để xóa tất cả các phần tử con của một phần tử bằng cách gán một chuỗi rỗng `''` cho nó.
 
@@ -145,7 +145,7 @@ Hãy thêm một phần tử giữ chỗ trong biểu mẫu đăng nhập nơi c
 ...
 ```
 
-Phần tử `<div>` này trống, nghĩa là không có gì sẽ được hiển thị trên màn hình cho đến khi chúng ta thêm nội dung vào nó. Chúng ta cũng đặt `id` cho nó để có thể dễ dàng lấy nó bằng JavaScript.
+Phần tử `<div>` này trống, nghĩa là không có gì sẽ được hiển thị trên màn hình cho đến khi chúng ta thêm nội dung vào nó. Chúng ta cũng gán cho nó một `id` để có thể dễ dàng lấy nó bằng JavaScript.
 
 Quay lại tệp `app.js` và tạo một hàm trợ giúp mới `updateElement`:
 
@@ -168,7 +168,7 @@ Bây giờ nếu bạn cố gắng đăng nhập bằng tài khoản không hợ
 
 ![Ảnh chụp màn hình hiển thị thông báo lỗi trong quá trình đăng nhập](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.vi.png)
 
-Bây giờ chúng ta có văn bản lỗi hiển thị trực quan, nhưng nếu bạn thử với trình đọc màn hình, bạn sẽ nhận thấy rằng không có gì được thông báo. Để văn bản được thêm động vào trang được thông báo bởi trình đọc màn hình, nó sẽ cần sử dụng một thứ gọi là [Vùng Trực tiếp (Live Region)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Ở đây chúng ta sẽ sử dụng một loại vùng trực tiếp cụ thể gọi là cảnh báo:
+Bây giờ chúng ta có văn bản lỗi hiển thị trực quan, nhưng nếu bạn thử với trình đọc màn hình, bạn sẽ nhận thấy rằng không có gì được thông báo. Để văn bản được thêm động vào trang được thông báo bởi trình đọc màn hình, nó sẽ cần sử dụng một thứ gọi là [Vùng trực tiếp (Live Region)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Ở đây chúng ta sẽ sử dụng một loại vùng trực tiếp cụ thể gọi là cảnh báo:
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -196,7 +196,7 @@ Sử dụng các kỹ thuật chúng ta vừa thấy, chúng ta cũng sẽ xử 
 }
 ```
 
-> Lưu ý: để làm cho công việc của bạn dễ dàng hơn, bạn có thể sử dụng tài khoản `test` đã được điền sẵn dữ liệu.
+> Lưu ý: để dễ dàng hơn, bạn có thể sử dụng tài khoản `test` đã được điền sẵn dữ liệu.
 
 ### Nhiệm vụ
 
@@ -214,7 +214,7 @@ Chúng ta cũng sẽ thêm một phần mới ngay bên dưới để hiển th�
 <h2 id="description"></h2>
 ```
 
-✅ Vì mô tả tài khoản hoạt động như một tiêu đề cho nội dung bên dưới nó, nó được đánh dấu ngữ nghĩa như một tiêu đề. Tìm hiểu thêm về cách [cấu trúc tiêu đề](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) quan trọng đối với khả năng truy cập và xem xét kỹ lưỡng trang để xác định những gì khác có thể là tiêu đề.
+✅ Vì mô tả tài khoản hoạt động như một tiêu đề cho nội dung bên dưới nó, nó được đánh dấu một cách ngữ nghĩa như một tiêu đề. Tìm hiểu thêm về cách [cấu trúc tiêu đề](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) quan trọng đối với khả năng truy cập và xem xét kỹ lưỡng trang để xác định những gì khác có thể là tiêu đề.
 
 Tiếp theo, chúng ta sẽ tạo một hàm mới trong `app.js` để điền vào phần giữ chỗ:
 
@@ -244,7 +244,7 @@ if (typeof route.init === 'function') {
 }
 ```
 
-Và cập nhật định nghĩa các tuyến với:
+Và cập nhật định nghĩa các tuyến đường với:
 
 ```js
 const routes = {
@@ -257,13 +257,13 @@ Với thay đổi này, mỗi khi trang bảng điều khiển được hiển t
 
 ## Tạo các hàng bảng động với mẫu HTML
 
-Trong [bài học đầu tiên](../1-template-route/README.md), chúng ta đã sử dụng các mẫu HTML cùng với phương thức [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) để triển khai điều hướng trong ứng dụng của chúng ta. Các mẫu cũng có thể nhỏ hơn và được sử dụng để điền động các phần lặp lại của trang.
+Trong [bài học đầu tiên](../1-template-route/README.md), chúng ta đã sử dụng các mẫu HTML cùng với phương thức [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) để triển khai điều hướng trong ứng dụng của mình. Các mẫu cũng có thể nhỏ hơn và được sử dụng để điền động các phần lặp lại của trang.
 
 Chúng ta sẽ sử dụng cách tiếp cận tương tự để hiển thị danh sách các giao dịch trong bảng HTML.
 
 ### Nhiệm vụ
 
-Thêm một mẫu mới trong `<body>` của HTML:
+Thêm một mẫu mới vào `<body>` của HTML:
 
 ```html
 <template id="transaction">
@@ -344,4 +344,4 @@ Dưới đây là một ví dụ về trang bảng điều khiển đã được
 ---
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-26T23:06:26+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T08:30:12+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "no"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introduksjon
 
-Siden JavaScript ble introdusert i nettlesere, har nettsteder blitt mer interaktive og komplekse enn noen gang. Webteknologier brukes nå ofte til å lage fullt funksjonelle applikasjoner som kjører direkte i en nettleser, og som vi kaller [webapplikasjoner](https://en.wikipedia.org/wiki/Web_application). Siden webapplikasjoner er svært interaktive, ønsker ikke brukerne å vente på at hele siden skal lastes inn på nytt hver gang en handling utføres. Derfor brukes JavaScript til å oppdatere HTML direkte via DOM, for å gi en smidigere brukeropplevelse.
+Siden JavaScript kom til nettlesere, har nettsteder blitt mer interaktive og komplekse enn noen gang. Webteknologier brukes nå ofte til å lage fullt funksjonelle applikasjoner som kjører direkte i en nettleser, og som vi kaller [webapplikasjoner](https://en.wikipedia.org/wiki/Web_application). Siden webapper er svært interaktive, ønsker ikke brukerne å vente på at hele siden skal lastes inn på nytt hver gang en handling utføres. Derfor brukes JavaScript til å oppdatere HTML direkte via DOM, for å gi en smidigere brukeropplevelse.
 
 I denne leksjonen skal vi legge grunnlaget for å lage en bankapp ved å bruke HTML-maler for å lage flere skjermer som kan vises og oppdateres uten å måtte laste inn hele HTML-siden på nytt.
 
@@ -25,7 +25,7 @@ Du trenger en lokal webserver for å teste webappen vi skal bygge i denne leksjo
 
 ### Forberedelse
 
-På datamaskinen din, opprett en mappe kalt `bank` med en fil som heter `index.html` inni. Vi starter med denne HTML-[grunnstrukturen](https://en.wikipedia.org/wiki/Boilerplate_code):
+På datamaskinen din, opprett en mappe som heter `bank` med en fil som heter `index.html` inni. Vi starter med denne HTML-[grunnstrukturen](https://en.wikipedia.org/wiki/Boilerplate_code):
 
 ```html
 <!DOCTYPE html>
@@ -50,7 +50,7 @@ Hvis du ønsker å lage flere skjermer for en nettside, kan en løsning være å
 - Du må laste inn hele HTML-en på nytt når du bytter skjerm, noe som kan være tregt.
 - Det er vanskelig å dele data mellom de forskjellige skjermene.
 
-En annen tilnærming er å ha kun én HTML-fil og definere flere [HTML-maler](https://developer.mozilla.org/docs/Web/HTML/Element/template) ved hjelp av `<template>`-elementet. En mal er en gjenbrukbar HTML-blokk som ikke vises av nettleseren, og som må opprettes dynamisk ved hjelp av JavaScript.
+En annen tilnærming er å ha kun én HTML-fil og definere flere [HTML-maler](https://developer.mozilla.org/docs/Web/HTML/Element/template) ved å bruke `<template>`-elementet. En mal er en gjenbrukbar HTML-blokk som ikke vises i nettleseren, og som må opprettes dynamisk ved hjelp av JavaScript.
 
 ### Oppgave
 
@@ -106,18 +106,18 @@ Så legger vi til en annen HTML-mal for dashbordet. Denne siden vil inneholde fo
 </template>
 ```
 
-> Tips: Når du lager HTML-maler, kan du kommentere ut `<template>`- og `</template>`-linjene med `<!-- -->` for å se hvordan det vil se ut.
+> Tips: Når du lager HTML-maler, hvis du vil se hvordan de ser ut, kan du kommentere ut `<template>` og `</template>`-linjene ved å omslutte dem med `<!-- -->`.
 
 ✅ Hvorfor tror du vi bruker `id`-attributter på malene? Kunne vi brukt noe annet, som klasser?
 
 ## Vise maler med JavaScript
 
-Hvis du prøver den nåværende HTML-filen i en nettleser, vil du se at den stopper opp med å vise `Loading...`. Det er fordi vi må legge til litt JavaScript-kode for å opprette og vise HTML-malene.
+Hvis du prøver den nåværende HTML-filen i en nettleser, vil du se at den blir stående på `Loading...`. Det er fordi vi må legge til litt JavaScript-kode for å opprette og vise HTML-malene.
 
 Å opprette en mal gjøres vanligvis i tre trinn:
 
 1. Hent mal-elementet i DOM, for eksempel ved å bruke [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
-2. Klon mal-elementet ved hjelp av [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
+2. Klon mal-elementet ved å bruke [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
 3. Fest det til DOM under et synlig element, for eksempel ved å bruke [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
 ✅ Hvorfor må vi klone malen før vi fester den til DOM? Hva tror du ville skjedd hvis vi hoppet over dette trinnet?
@@ -150,11 +150,11 @@ Nå kan du kalle denne funksjonen med en av malene og se resultatet.
 updateRoute('login');
 ```
 
-✅ Hva er hensikten med koden `app.innerHTML = '';`? Hva skjer uten den?
+✅ Hva er hensikten med denne koden `app.innerHTML = '';`? Hva skjer uten den?
 
 ## Opprette ruter
 
-Når vi snakker om en webapp, kaller vi *Routing* intensjonen om å knytte **URL-er** til spesifikke skjermer som skal vises. På et nettsted med flere HTML-filer gjøres dette automatisk, ettersom filbanene reflekteres i URL-en. For eksempel, med disse filene i prosjektmappen din:
+Når vi snakker om en webapp, kaller vi *routing* intensjonen om å knytte **URL-er** til spesifikke skjermer som skal vises. På et nettsted med flere HTML-filer gjøres dette automatisk, ettersom filbanene reflekteres i URL-en. For eksempel, med disse filene i prosjektmappen din:
 
 ```
 mywebsite/index.html
@@ -170,7 +170,7 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-Men for vår webapp bruker vi en enkelt HTML-fil som inneholder alle skjermene, så denne standardatferden vil ikke hjelpe oss. Vi må opprette dette kartet manuelt og oppdatere den viste malen ved hjelp av JavaScript.
+Men for vår webapp bruker vi en enkelt HTML-fil som inneholder alle skjermene, så denne standardoppførselen vil ikke hjelpe oss. Vi må opprette dette kartet manuelt og oppdatere den viste malen ved hjelp av JavaScript.
 
 ### Oppgave
 
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-Nå skal vi endre litt på `updateRoute`-funksjonen. I stedet for å sende `templateId` direkte som et argument, vil vi hente det ved først å se på den nåværende URL-en, og deretter bruke kartet vårt for å få tilsvarende mal-ID.
+Nå skal vi endre litt på `updateRoute`-funksjonen. I stedet for å sende `templateId` direkte som et argument, ønsker vi å hente det ved først å se på den nåværende URL-en, og deretter bruke kartet vårt til å få den tilsvarende verdien for mal-ID. Vi kan bruke [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) for å få kun bane-delen fra URL-en.
 
 ```js
 function updateRoute() {
@@ -198,7 +198,7 @@ function updateRoute() {
 }
 ```
 
-Her kartla vi rutene vi erklærte til de tilsvarende malene. Du kan teste at det fungerer riktig ved å endre URL-en manuelt i nettleseren din.
+Her kartla vi rutene vi erklærte til den tilsvarende malen. Du kan teste at det fungerer riktig ved å endre URL-en manuelt i nettleseren din.
 
 ✅ Hva skjer hvis du skriver inn en ukjent bane i URL-en? Hvordan kunne vi løst dette?
 
@@ -211,9 +211,9 @@ Neste steg for appen vår er å legge til muligheten til å navigere mellom side
 
 Vi har allerede tatt oss av den andre delen med `updateRoute`-funksjonen, så vi må finne ut hvordan vi oppdaterer den nåværende URL-en.
 
-Vi må bruke JavaScript og mer spesifikt [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), som lar oss oppdatere URL-en og opprette en ny oppføring i nettleserens historikk uten å laste inn HTML-en på nytt.
+Vi må bruke JavaScript, og mer spesifikt [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), som lar oss oppdatere URL-en og opprette en ny oppføring i nettleserens historikk uten å laste inn HTML-en på nytt.
 
-> Merk: Selv om HTML-anker-elementet [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) kan brukes alene til å lage hyperlenker til forskjellige URL-er, vil det som standard få nettleseren til å laste inn HTML-en på nytt. Det er nødvendig å forhindre denne oppførselen når man håndterer ruting med egendefinert JavaScript, ved å bruke `preventDefault()`-funksjonen på klikkhendelsen.
+> Merk: Selv om HTML-anker-elementet [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) kan brukes alene til å lage hyperlenker til forskjellige URL-er, vil det som standard få nettleseren til å laste inn HTML-en på nytt. Det er nødvendig å forhindre denne oppførselen når man håndterer routing med egendefinert JavaScript, ved å bruke funksjonen `preventDefault()` på klikkhendelsen.
 
 ### Oppgave
 
@@ -253,7 +253,7 @@ function onLinkClick(event) {
 }
 ```
 
-La oss fullføre navigasjonssystemet ved å legge til bindinger til *Login*- og *Logout*-lenkene i HTML-en.
+La oss fullføre navigasjonssystemet ved å legge til bindinger til *Logg inn*- og *Logg ut*-lenkene i HTML-en.
 
 ```html
 <a href="/dashboard" onclick="onLinkClick(event)">Login</a>
@@ -261,21 +261,21 @@ La oss fullføre navigasjonssystemet ved å legge til bindinger til *Login*- og 
 <a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
 
-`event`-objektet ovenfor fanger opp `click`-hendelsen og sender den til `onLinkClick`-funksjonen vår.
+`event`-objektet ovenfor fanger opp `click`-hendelsen og sender den til vår `onLinkClick`-funksjon.
 
 Ved å bruke [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick)-attributtet binder vi `click`-hendelsen til JavaScript-koden, her kallet til `navigate()`-funksjonen.
 
 Prøv å klikke på disse lenkene, du skal nå kunne navigere mellom de forskjellige skjermene i appen din.
 
-✅ Metoden `history.pushState` er en del av HTML5-standarden og implementert i [alle moderne nettlesere](https://caniuse.com/?search=pushState). Hvis du bygger en webapp for eldre nettlesere, finnes det et triks du kan bruke i stedet for dette API-et: ved å bruke en [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) før banen kan du implementere ruting som fungerer med vanlige ankerlenker og ikke laster inn siden på nytt, siden formålet var å lage interne lenker i en side.
+✅ Metoden `history.pushState` er en del av HTML5-standarden og implementert i [alle moderne nettlesere](https://caniuse.com/?search=pushState). Hvis du lager en webapp for eldre nettlesere, finnes det et triks du kan bruke i stedet for dette API-et: ved å bruke en [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) før banen kan du implementere routing som fungerer med vanlige ankerlenker og ikke laster inn siden på nytt, siden formålet var å lage interne lenker i en side.
 
 ## Håndtere nettleserens tilbake- og fremoverknapper
 
-Bruken av `history.pushState` oppretter nye oppføringer i nettleserens navigasjonshistorikk. Du kan sjekke dette ved å holde inne *tilbakeknappen* i nettleseren din, det skal vise noe som dette:
+Bruken av `history.pushState` oppretter nye oppføringer i nettleserens navigasjonshistorikk. Du kan sjekke dette ved å holde inne *tilbake-knappen* i nettleseren din, det skal vise noe som dette:
 
 ![Skjermbilde av navigasjonshistorikk](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.no.png)
 
-Hvis du prøver å klikke på tilbakeknappen noen ganger, vil du se at den nåværende URL-en endres og historikken oppdateres, men den samme malen fortsetter å vises.
+Hvis du prøver å klikke på tilbake-knappen noen ganger, vil du se at den nåværende URL-en endres og historikken oppdateres, men den samme malen fortsetter å vises.
 
 Dette er fordi applikasjonen ikke vet at vi må kalle `updateRoute()` hver gang historikken endres. Hvis du ser på dokumentasjonen for [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), kan du se at hvis tilstanden endres - det vil si at vi flyttet til en annen URL - utløses [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event)-hendelsen. Vi skal bruke dette for å fikse problemet.
 
@@ -288,7 +288,7 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Merk: Vi brukte en [piltfunksjon](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) her for å erklære vår `popstate`-hendelseshåndterer for kortfattethet, men en vanlig funksjon ville fungert på samme måte.
+> Merk: Vi brukte en [piltfunksjon](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) her for å erklære vår `popstate`-hendelseshåndterer for korthetens skyld, men en vanlig funksjon ville fungert på samme måte.
 
 Her er en oppfriskningsvideo om piltfunksjoner:
 
@@ -310,13 +310,13 @@ Legg til en ny mal og rute for en tredje side som viser kreditering for denne ap
 
 ## Gjennomgang og selvstudium
 
-Ruting er en av de overraskende vanskelige delene av webutvikling, spesielt ettersom nettet beveger seg fra sideoppdateringsatferd til Single Page Application-sideoppdateringer. Les litt om [hvordan Azure Static Web App-tjenesten](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) håndterer ruting. Kan du forklare hvorfor noen av beslutningene som er beskrevet i det dokumentet er nødvendige?
+Routing er en av de overraskende vanskelige delene av webutvikling, spesielt ettersom nettet beveger seg fra sideoppdateringsatferd til Single Page Application-oppdateringer. Les litt om [hvordan Azure Static Web App-tjenesten](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) håndterer routing. Kan du forklare hvorfor noen av beslutningene som er beskrevet i det dokumentet er nødvendige?
 
 ## Oppgave
 
-[Forbedre rutingen](assignment.md)
+[Forbedre routingen](assignment.md)
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

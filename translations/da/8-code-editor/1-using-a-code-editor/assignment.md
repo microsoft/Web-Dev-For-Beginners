@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-26T22:29:41+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T08:21:22+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "da"
 }
 -->
-# Opret en CV-hjemmeside ved hjælp af vscode.dev
+# Opret et CV-website ved hjælp af vscode.dev
 
-_Hvor sejt ville det ikke være, hvis en rekrutterer bad om dit CV, og du sendte dem et link?_ 😎
+_Hvor fedt ville det ikke være, hvis en rekrutterer bad om dit CV, og du sendte dem et link?_ 😎
 
 ## Mål
 
 Efter denne opgave vil du lære at:
 
-- Oprette en hjemmeside til at fremvise dit CV
+- Oprette et website til at fremvise dit CV
 
 ### Forudsætninger
 
@@ -25,7 +25,7 @@ Efter denne opgave vil du lære at:
 
 **Trin 1:** Opret et nyt GitHub-repository og giv det navnet `my-resume`
 
-**Trin 2** Opret en `index.html`-fil i dit repository. Vi tilføjer mindst én fil direkte på github.com, da du ikke kan åbne et tomt repository på vscode.dev.
+**Trin 2:** Opret en `index.html`-fil i dit repository. Vi tilføjer mindst én fil direkte på github.com, da du ikke kan åbne et tomt repository på vscode.dev.
 
 Klik på linket `creating a new file`, skriv navnet `index.html`, og vælg knappen `Commit new file`.
 
@@ -33,7 +33,7 @@ Klik på linket `creating a new file`, skriv navnet `index.html`, og vælg knapp
 
 **Trin 3:** Åbn [VSCode.dev](https://vscode.dev) og vælg knappen `Open Remote Repository`.
 
-Kopier URL'en til det repository, du lige har oprettet til din CV-hjemmeside, og indsæt det i inputfeltet:
+Kopier URL'en til det repository, du lige har oprettet til dit CV-website, og indsæt det i inputfeltet:
 
 _Erstat `your-username` med dit GitHub-brugernavn_
 
@@ -41,14 +41,14 @@ _Erstat `your-username` med dit GitHub-brugernavn_
 https://github.com/your-username/my-resume
 ```
 
-✅ Hvis det lykkes, vil du se dit projekt og index.html-filen åbne i teksteditoren i browseren.
+✅ Hvis det lykkes, vil du se dit projekt og `index.html`-filen åbne i teksteditoren i browseren.
 
 ![Opret en ny fil](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.da.png)
 
-**Trin 4:** Åbn `index.html`-filen, indsæt koden nedenfor i dit kodeområde, og gem.
+**Trin 4:** Åbn `index.html`-filen, indsæt koden nedenfor i kodeområdet, og gem.
 
 <details>
-    <summary><b>HTML-kode, der styrer indholdet på din CV-hjemmeside.</b></summary>
+    <summary><b>HTML-kode, der styrer indholdet på dit CV-website.</b></summary>
     
         <html>
 
@@ -143,12 +143,12 @@ https://github.com/your-username/my-resume
 
 Tilføj dine CV-oplysninger for at erstatte _pladsholderteksten_ i HTML-koden.
 
-**Trin 5:** Hold musen over My-Resume-mappen, klik på ikonet `New File ...`, og opret 2 nye filer i dit projekt: `style.css` og `codeswing.json`.
+**Trin 5:** Hold musen over mappen `My-Resume`, klik på ikonet `New File ...`, og opret 2 nye filer i dit projekt: `style.css` og `codeswing.json`.
 
 **Trin 6:** Åbn `style.css`-filen, indsæt koden nedenfor, og gem.
 
 <details>
-        <summary><b>CSS-kode til at formatere layoutet på siden.</b></summary>
+        <summary><b>CSS-kode til at formatere layoutet på websitet.</b></summary>
             
             body {
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -217,9 +217,9 @@ Tilføj dine CV-oplysninger for at erstatte _pladsholderteksten_ i HTML-koden.
     "styles": []
     }
 
-**Trin 7:** Installer `Codeswing-udvidelsen` for at visualisere CV-hjemmesiden i kodeområdet.
+**Trin 7:** Installer `Codeswing-udvidelsen` for at visualisere CV-websitet i kodeområdet.
 
-Klik på _`Extensions`_-ikonet på aktivitetslinjen, og skriv Codeswing. Klik enten på den _blå installeringsknap_ på den udvidede aktivitetslinje for at installere eller brug installeringsknappen, der vises i kodeområdet, når du vælger udvidelsen for at indlæse yderligere oplysninger. Umiddelbart efter installationen af udvidelsen, observer ændringerne i dit projekt i kodeområdet 😃
+Klik på ikonet _`Extensions`_ på aktivitetslinjen, og skriv Codeswing. Klik enten på den _blå installer-knap_ på den udvidede aktivitetslinje for at installere eller brug installer-knappen, der vises i kodeområdet, når du vælger udvidelsen for at indlæse yderligere oplysninger. Umiddelbart efter installationen af udvidelsen skal du observere ændringerne i dit projekt i kodeområdet 😃
 
 ![Installer udvidelser](../../../../8-code-editor/images/install-extension.gif)
 
@@ -227,15 +227,15 @@ Dette er, hvad du vil se på din skærm, efter du har installeret udvidelsen.
 
 ![Codeswing-udvidelse i aktion](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.da.png)
 
-Hvis du er tilfreds med de ændringer, du har lavet, skal du holde musen over `Changes`-mappen og klikke på `+`-knappen for at stage ændringerne.
+Hvis du er tilfreds med de ændringer, du har lavet, skal du holde musen over mappen `Changes` og klikke på `+`-knappen for at stage ændringerne.
 
-Skriv en commit-besked _(En beskrivelse af de ændringer, du har lavet i projektet)_, og commit dine ændringer ved at klikke på `check`. Når du er færdig med at arbejde på dit projekt, skal du vælge hamburger-menuikonet øverst til venstre for at vende tilbage til repository'et på GitHub.
+Skriv en commit-besked _(En beskrivelse af de ændringer, du har lavet i projektet)_, og commit dine ændringer ved at klikke på `check`. Når du er færdig med at arbejde på dit projekt, skal du vælge hamburgerikonet øverst til venstre for at vende tilbage til repositoryet på GitHub.
 
-Tillykke 🎉 Du har lige oprettet din CV-hjemmeside ved hjælp af vscode.dev i få trin.
+Tillykke 🎉 Du har lige oprettet dit CV-website ved hjælp af vscode.dev i få trin.
 
 ## 🚀 Udfordring
 
-Åbn et fjernrepository, som du har tilladelse til at foretage ændringer i, og opdater nogle filer. Prøv derefter at oprette en ny branch med dine ændringer og lave en Pull Request.
+Åbn et eksternt repository, som du har tilladelse til at foretage ændringer i, og opdater nogle filer. Prøv derefter at oprette en ny gren med dine ændringer og lave en Pull Request.
 
 ## Gennemgang & Selvstudie
 
@@ -244,4 +244,4 @@ Læs mere om [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?W
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

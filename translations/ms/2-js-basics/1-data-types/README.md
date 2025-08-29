@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-27T22:50:37+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T09:31:24+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "ms"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kuiz Pra-Kuliah
-[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/7)
+[Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/)
 
 Pelajaran ini merangkumi asas JavaScript, bahasa yang memberikan interaktiviti pada web.
 
@@ -35,7 +35,7 @@ Mencipta dan **mengisytiharkan** pembolehubah mempunyai sintaks berikut **[kata 
 
 - **Kata kunci**. Kata kunci boleh menjadi `let` atau `var`.  
 
-✅ Kata kunci `let` diperkenalkan dalam ES6 dan memberikan pembolehubah anda skop _blok_. Adalah disyorkan untuk menggunakan `let` berbanding `var`. Kita akan membincangkan skop blok dengan lebih mendalam dalam bahagian seterusnya.
+✅ Kata kunci `let` diperkenalkan dalam ES6 dan memberikan pembolehubah anda _skop blok_. Adalah disyorkan untuk menggunakan `let` berbanding `var`. Kita akan membincangkan skop blok dengan lebih mendalam dalam bahagian seterusnya.
 - **Nama pembolehubah**, ini adalah nama yang anda pilih sendiri.
 
 ### Tugasan - bekerja dengan pembolehubah
@@ -46,9 +46,9 @@ Mencipta dan **mengisytiharkan** pembolehubah mempunyai sintaks berikut **[kata 
     let myVariable;
     ```
 
-   `myVariable` kini telah diisytiharkan menggunakan kata kunci `let`. Ia belum mempunyai nilai.
+   `myVariable` kini telah diisytiharkan menggunakan kata kunci `let`. Ia buat masa ini tidak mempunyai nilai.
 
-1. **Tetapkan nilai**. Simpan nilai dalam pembolehubah dengan operator `=`, diikuti oleh nilai yang diharapkan.
+1. **Tetapkan nilai**. Simpan nilai dalam pembolehubah dengan operator `=` diikuti oleh nilai yang diharapkan.
 
     ```javascript
     myVariable = 123;
@@ -76,18 +76,18 @@ Mencipta dan **mengisytiharkan** pembolehubah mempunyai sintaks berikut **[kata 
 
    ✅ Cuba! Anda boleh menulis JavaScript terus di pelayar anda. Buka tetingkap pelayar dan navigasi ke Alat Pembangun. Dalam konsol, anda akan menemui prompt; taip `let myVariable = 123`, tekan enter, kemudian taip `myVariable`. Apa yang berlaku? Nota, anda akan mempelajari lebih lanjut tentang konsep ini dalam pelajaran seterusnya.
 
-## Konstanta
+## Pemalar
 
-Pengisytiharan dan inisialisasi konstanta mengikuti konsep yang sama seperti pembolehubah, kecuali penggunaan kata kunci `const`. Konstanta biasanya diisytiharkan dengan huruf besar semua.
+Pengisytiharan dan inisialisasi pemalar mengikuti konsep yang sama seperti pembolehubah, kecuali penggunaan kata kunci `const`. Pemalar biasanya diisytiharkan dengan huruf besar semua.
 
 ```javascript
 const MY_VARIABLE = 123;
 ```
 
-Konstanta serupa dengan pembolehubah, dengan dua pengecualian:
+Pemalar serupa dengan pembolehubah, dengan dua pengecualian:
 
-- **Mesti mempunyai nilai**. Konstanta mesti diinisialisasi, atau ralat akan berlaku semasa kod dijalankan.
-- **Rujukan tidak boleh diubah**. Rujukan konstanta tidak boleh diubah setelah diinisialisasi, atau ralat akan berlaku semasa kod dijalankan. Mari kita lihat dua contoh:
+- **Mesti mempunyai nilai**. Pemalar mesti diinisialisasi, atau ralat akan berlaku semasa kod dijalankan.
+- **Rujukan tidak boleh diubah**. Rujukan pemalar tidak boleh diubah setelah diinisialisasi, atau ralat akan berlaku semasa kod dijalankan. Mari kita lihat dua contoh:
    - **Nilai mudah**. Yang berikut TIDAK dibenarkan:
    
       ```javascript
@@ -111,13 +111,13 @@ Konstanta serupa dengan pembolehubah, dengan dua pengecualian:
 
       Di atas anda mengubah nilai objek tetapi bukan rujukan itu sendiri, yang menjadikannya dibenarkan.
 
-   > Nota, `const` bermaksud rujukan dilindungi daripada penugasan semula. Walau bagaimanapun, nilai tidak _tidak boleh diubah_ dan boleh berubah, terutamanya jika ia adalah struktur kompleks seperti objek.
+   > Nota, `const` bermaksud rujukan dilindungi daripada penugasan semula. Walau bagaimanapun, nilai itu sendiri tidak _tidak boleh diubah_ dan boleh berubah, terutamanya jika ia adalah struktur kompleks seperti objek.
 
 ## Jenis Data
 
 Pembolehubah boleh menyimpan pelbagai jenis nilai, seperti nombor dan teks. Pelbagai jenis nilai ini dikenali sebagai **jenis data**. Jenis data adalah bahagian penting dalam pembangunan perisian kerana ia membantu pembangun membuat keputusan tentang cara kod harus ditulis dan bagaimana perisian harus dijalankan. Selain itu, beberapa jenis data mempunyai ciri unik yang membantu mengubah atau mengekstrak maklumat tambahan dalam nilai.
 
-✅ Jenis Data juga dirujuk sebagai primitif data JavaScript, kerana ia adalah jenis data peringkat terendah yang disediakan oleh bahasa. Terdapat 7 jenis data primitif: string, number, bigint, boolean, undefined, null dan symbol. Luangkan masa untuk membayangkan apa yang mungkin diwakili oleh setiap primitif ini. Apa itu `zebra`? Bagaimana pula dengan `0`? `true`?
+✅ Jenis Data juga dirujuk sebagai primitif data JavaScript, kerana ia adalah jenis data tahap terendah yang disediakan oleh bahasa. Terdapat 7 jenis data primitif: string, number, bigint, boolean, undefined, null dan symbol. Luangkan masa untuk membayangkan apa yang mungkin diwakili oleh setiap primitif ini. Apakah `zebra`? Bagaimana pula dengan `0`? `true`?
 
 ### Nombor
 
@@ -125,19 +125,19 @@ Dalam bahagian sebelumnya, nilai `myVariable` adalah jenis data nombor.
 
 `let myVariable = 123;`
 
-Pembolehubah boleh menyimpan semua jenis nombor, termasuk nombor perpuluhan atau nombor negatif. Nombor juga boleh digunakan dengan operator aritmetik, yang dibincangkan dalam [bahagian seterusnya](../../../../2-js-basics/1-data-types).
+Pembolehubah boleh menyimpan semua jenis nombor, termasuk nombor perpuluhan atau nombor negatif. Nombor juga boleh digunakan dengan operator aritmetik, yang akan dibincangkan dalam [bahagian seterusnya](../../../../2-js-basics/1-data-types).
 
 ### Operator Aritmetik
 
 Terdapat beberapa jenis operator untuk digunakan semasa melakukan fungsi aritmetik, dan beberapa disenaraikan di sini:
 
 | Simbol | Penerangan                                                              | Contoh                          |
-| ------ | ----------------------------------------------------------------------- | ------------------------------- |
-| `+`    | **Penambahan**: Mengira jumlah dua nombor                               | `1 + 2 //jawapan yang dijangka adalah 3`   |
-| `-`    | **Penolakan**: Mengira perbezaan dua nombor                             | `1 - 2 //jawapan yang dijangka adalah -1`  |
-| `*`    | **Pendaraban**: Mengira hasil darab dua nombor                          | `1 * 2 //jawapan yang dijangka adalah 2`   |
-| `/`    | **Pembahagian**: Mengira hasil bahagi dua nombor                        | `1 / 2 //jawapan yang dijangka adalah 0.5` |
-| `%`    | **Baki**: Mengira baki daripada pembahagian dua nombor                  | `1 % 2 //jawapan yang dijangka adalah 1`   |
+| ------ | ----------------------------------------------------------------------- | -------------------------------- |
+| `+`    | **Penambahan**: Mengira jumlah dua nombor                               | `1 + 2 //jawapan yang dijangka ialah 3`   |
+| `-`    | **Penolakan**: Mengira perbezaan dua nombor                             | `1 - 2 //jawapan yang dijangka ialah -1`  |
+| `*`    | **Pendaraban**: Mengira hasil darab dua nombor                          | `1 * 2 //jawapan yang dijangka ialah 2`   |
+| `/`    | **Pembahagian**: Mengira hasil bahagi dua nombor                        | `1 / 2 //jawapan yang dijangka ialah 0.5` |
+| `%`    | **Baki**: Mengira baki daripada pembahagian dua nombor                  | `1 % 2 //jawapan yang dijangka ialah 1`   |
 
 ✅ Cuba! Cuba operasi aritmetik dalam konsol pelayar anda. Adakah hasilnya mengejutkan anda?
 
@@ -146,12 +146,12 @@ Terdapat beberapa jenis operator untuk digunakan semasa melakukan fungsi aritmet
 String adalah set aksara yang berada di antara tanda petik tunggal atau berganda.
 
 - `'Ini adalah string'`
-- `"Ini juga adalah string"`
+- `"Ini juga string"`
 - `let myString = 'Ini adalah nilai string yang disimpan dalam pembolehubah';`
 
 Ingat untuk menggunakan tanda petik semasa menulis string, jika tidak, JavaScript akan menganggapnya sebagai nama pembolehubah.
 
-### Memformat String
+### Pemformatan String
 
 String adalah teks, dan kadangkala memerlukan pemformatan.
 
@@ -169,7 +169,7 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ✅ Mengapa `1 + 1 = 2` dalam JavaScript, tetapi `'1' + '1' = 11?` Fikirkan mengenainya. Bagaimana pula dengan `'1' + 1`?
 
-**Template literals** adalah cara lain untuk memformat string, kecuali bukannya tanda petik, backtick digunakan. Apa sahaja yang bukan teks biasa mesti diletakkan di dalam placeholder `${ }`. Ini termasuk mana-mana pembolehubah yang mungkin string.
+**Template literals** adalah cara lain untuk memformat string, kecuali bukannya tanda petik, backtick digunakan. Apa sahaja yang bukan teks biasa mesti diletakkan di dalam placeholder `${ }`. Ini termasuk sebarang pembolehubah yang mungkin string.
 
 ```javascript
 let myString1 = "Hello";
@@ -190,7 +190,7 @@ Boolean hanya boleh mempunyai dua nilai: `true` atau `false`. Boolean membantu m
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ Pembolehubah boleh dianggap 'truthy' jika ia menilai kepada boolean `true`. Menariknya, dalam JavaScript, [semua nilai adalah truthy kecuali ditakrifkan sebagai falsy](https://developer.mozilla.org/docs/Glossary/Truthy).
+✅ Pembolehubah boleh dianggap 'truthy' jika ia dinilai sebagai boolean `true`. Menariknya, dalam JavaScript, [semua nilai adalah truthy kecuali ditakrifkan sebagai falsy](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 ---
 
@@ -199,9 +199,9 @@ Boolean hanya boleh mempunyai dua nilai: `true` atau `false`. Boolean membantu m
 JavaScript terkenal dengan cara yang mengejutkan dalam mengendalikan jenis data pada masa tertentu. Lakukan sedikit penyelidikan tentang 'perangkap' ini. Sebagai contoh: kepekaan huruf besar boleh menjadi masalah! Cuba ini dalam konsol anda: `let age = 1; let Age = 2; age == Age` (menyelesaikan `false` -- mengapa?). Apakah perangkap lain yang anda temui?
 
 ## Kuiz Pasca-Kuliah
-[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/8)
+[Kuiz pasca-kuliah](https://ff-quizzes.netlify.app)
 
-## Kajian & Pembelajaran Kendiri
+## Ulasan & Kajian Kendiri
 
 Lihat [senarai latihan JavaScript ini](https://css-tricks.com/snippets/javascript/) dan cuba satu. Apa yang anda pelajari?
 
@@ -212,4 +212,4 @@ Lihat [senarai latihan JavaScript ini](https://css-tricks.com/snippets/javascrip
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

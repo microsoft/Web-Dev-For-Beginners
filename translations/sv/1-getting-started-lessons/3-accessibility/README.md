@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e4cd5b1faed4adab5acf720f82798003",
-  "translation_date": "2025-08-26T22:19:03+00:00",
+  "original_hash": "f0c88c3e2cefa8952d356f802b1e47ca",
+  "translation_date": "2025-08-29T08:02:37+00:00",
   "source_file": "1-getting-started-lessons/3-accessibility/README.md",
   "language_code": "sv"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Förkunskapsquiz
-[Quiz före föreläsningen](https://ff-quizzes.netlify.app/web/quiz/5)
+[Quiz före föreläsningen](https://ff-quizzes.netlify.app/web/)
 
 > Webben är kraftfull tack vare sin universalitet. Tillgång för alla, oavsett funktionsnedsättning, är en grundläggande aspekt.
 >
@@ -31,19 +31,19 @@ Ett av de mest kända tillgänglighetsverktygen är skärmläsare.
 
 [Skärmläsare](https://en.wikipedia.org/wiki/Screen_reader) är vanliga hjälpmedel för personer med synnedsättningar. När vi lägger tid på att säkerställa att en webbläsare korrekt förmedlar den information vi vill dela, måste vi också säkerställa att en skärmläsare gör detsamma.
 
-I sin enklaste form läser en skärmläsare en sida från topp till botten med ljud. Om din sida bara innehåller text kommer läsaren att förmedla informationen på ett liknande sätt som en webbläsare. Självklart är webbsidor sällan enbart text; de innehåller länkar, grafik, färger och andra visuella komponenter. Det är viktigt att säkerställa att denna information läses korrekt av en skärmläsare.
+I sin enklaste form läser en skärmläsare en sida från topp till botten med ljud. Om din sida bara innehåller text kommer läsaren att förmedla informationen på ett liknande sätt som en webbläsare. Självklart är webbsidor sällan enbart text; de innehåller länkar, grafik, färger och andra visuella komponenter. Det är viktigt att se till att denna information läses korrekt av en skärmläsare.
 
-Varje webbutvecklare bör bekanta sig med en skärmläsare. Som nämnts ovan är det klienten dina användare kommer att använda. På samma sätt som du är bekant med hur en webbläsare fungerar, bör du lära dig hur en skärmläsare fungerar. Lyckligtvis är skärmläsare inbyggda i de flesta operativsystem.
+Varje webbutvecklare bör bekanta sig med en skärmläsare. Som nämnts ovan är det verktyget dina användare kommer att använda. På samma sätt som du är bekant med hur en webbläsare fungerar, bör du lära dig hur en skärmläsare fungerar. Lyckligtvis är skärmläsare inbyggda i de flesta operativsystem.
 
-Vissa webbläsare har också inbyggda verktyg och tillägg som kan läsa text högt eller tillhandahålla grundläggande navigeringsfunktioner, som [dessa tillgänglighetsfokuserade verktyg för Edge-webbläsaren](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features). Dessa är också viktiga tillgänglighetsverktyg, men fungerar mycket annorlunda än skärmläsare och bör inte förväxlas med testverktyg för skärmläsare.
+Vissa webbläsare har också inbyggda verktyg och tillägg som kan läsa text högt eller tillhandahålla grundläggande navigeringsfunktioner, såsom [dessa tillgänglighetsfokuserade verktyg för Edge-webbläsaren](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features). Dessa är också viktiga tillgänglighetsverktyg, men fungerar mycket annorlunda än skärmläsare och bör inte förväxlas med testverktyg för skärmläsare.
 
-✅ Prova en skärmläsare och webbläsarens textläsare. På Windows är [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) inkluderad som standard, och [JAWS](https://webaim.org/articles/jaws/) och [NVDA](https://www.nvaccess.org/about-nvda/) kan också installeras. På macOS och iOS är [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) installerad som standard.
+✅ Prova en skärmläsare och webbläsarens textläsare. På Windows är [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) inkluderad som standard, och [JAWS](https://webaim.org/articles/jaws/) och [NVDA](https://www.nvaccess.org/about-nvda/) kan också installeras. På macOS och iOS är [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) förinstallerad.
 
 ### Zoom
 
-Ett annat verktyg som ofta används av personer med synnedsättningar är zoomning. Den mest grundläggande typen av zoomning är statisk zoom, som styrs genom `Control + plustecken (+)` eller genom att minska skärmupplösningen. Denna typ av zoom gör att hela sidan ändrar storlek, så att använda [responsiv design](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) är viktigt för att ge en bra användarupplevelse vid högre zoomnivåer.
+Ett annat verktyg som ofta används av personer med synnedsättningar är zoomning. Den mest grundläggande typen av zoomning är statisk zoom, som styrs med `Control + plustecken (+)` eller genom att minska skärmupplösningen. Denna typ av zoomning gör att hela sidan ändrar storlek, så att använda [responsiv design](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) är viktigt för att ge en bra användarupplevelse vid högre zoomnivåer.
 
-En annan typ av zoomning använder specialiserad programvara för att förstora ett område på skärmen och panorera, ungefär som att använda ett riktigt förstoringsglas. På Windows är [Förstoringsglas](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) inbyggt, och [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) är en tredjepartsförstoringsprogramvara med fler funktioner och en större användarbas. Både macOS och iOS har en inbyggd förstoringsprogramvara som heter [Zoom](https://www.apple.com/accessibility/mac/vision/).
+En annan typ av zoomning använder specialiserad programvara för att förstora ett område på skärmen och panorera, ungefär som att använda ett förstoringsglas. På Windows är [Förstoringsglas](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) inbyggt, och [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) är en tredjepartsförstoringsprogramvara med fler funktioner och en större användarbas. Både macOS och iOS har en inbyggd förstoringsprogramvara som heter [Zoom](https://www.apple.com/accessibility/mac/vision/).
 
 ### Kontrastkontroller
 
@@ -75,9 +75,9 @@ Människor ser världen på olika sätt, och detta inkluderar färger. När du v
 
 ### Använd korrekt HTML
 
-Med CSS och JavaScript är det möjligt att få vilket element som helst att se ut som vilken typ av kontroll som helst. `<span>` kan användas för att skapa en `<button>`, och `<b>` kan bli en hyperlänk. Även om detta kan anses vara enklare att styla, förmedlar det ingenting till en skärmläsare. Använd lämplig HTML när du skapar kontroller på en sida. Om du vill ha en hyperlänk, använd `<a>`. Att använda rätt HTML för rätt kontroll kallas att använda Semantisk HTML.
+Med CSS och JavaScript är det möjligt att få vilket element som helst att se ut som vilken typ av kontroll som helst. `<span>` kan användas för att skapa en `<button>`, och `<b>` kan bli en hyperlänk. Även om detta kan anses vara enklare att styla, förmedlar det ingenting till en skärmläsare. Använd lämplig HTML när du skapar kontroller på en sida. Om du vill ha en hyperlänk, använd `<a>`. Att använda rätt HTML för rätt kontroll kallas att använda semantisk HTML.
 
-✅ Gå till en webbplats och se om designers och utvecklare använder HTML korrekt. Kan du hitta en knapp som borde vara en länk? Tips: högerklicka och välj 'Visa sidkälla' i din webbläsare för att titta på underliggande kod.
+✅ Gå till valfri webbplats och se om designers och utvecklare använder HTML korrekt. Kan du hitta en knapp som borde vara en länk? Tips: högerklicka och välj 'Visa sidkälla' i din webbläsare för att titta på underliggande kod.
 
 ### Skapa en beskrivande rubrikhierarki
 
@@ -109,11 +109,11 @@ Skärmläsare läser texten. Om en URL visas i texten kommer skärmläsaren att 
 
 ### Problemet med "klicka här"
 
-Skärmläsare har också möjlighet att läsa endast hyperlänkarna på en sida, ungefär som en seende person skulle skanna en sida efter länkar. Om länktexten alltid är "klicka här" kommer användaren bara att höra "klicka här, klicka här, klicka här, klicka här, klicka här, ..." Alla länkar är nu oskiljbara från varandra.
+Skärmläsare har också möjlighet att läsa endast hyperlänkarna på en sida, ungefär som en seende person skulle skanna en sida efter länkar. Om länktexten alltid är "klicka här" kommer användaren bara att höra "klicka här, klicka här, klicka här, klicka här, klicka här, ..." Alla länkar blir nu oskiljbara från varandra.
 
 ### Bra länktext
 
-Bra länktext beskriver kortfattat vad som finns på andra sidan länken. I exemplet ovan som handlar om små pingviner går länken till Wikipedias sida om arten. Frasen *små pingviner* skulle vara perfekt länktext eftersom det tydligt anger vad någon kommer att lära sig om om de klickar på länken - små pingviner.
+Bra länktext beskriver kort vad som finns på andra sidan länken. I exemplet ovan som handlar om små pingviner går länken till Wikipedias sida om arten. Frasen *små pingviner* skulle vara perfekt länktext eftersom det tydligt anger vad någon kommer att lära sig om om de klickar på länken - små pingviner.
 
 > Den [lilla pingvinen](https://en.wikipedia.org/wiki/Little_penguin), ibland kallad älvpingvinen, är den minsta pingvinen i världen.
 
@@ -138,7 +138,7 @@ För att stödja dessa typer av scenarier stöder HTML en uppsättning attribut 
 
 > **NOTE**: Precis som många aspekter av HTML kan stöd för webbläsare och skärmläsare variera. Men de flesta huvudklienter stöder ARIA-attribut.
 
-Du kan använda `aria-label` för att beskriva länken när sidans format inte tillåter det. Beskrivningen för widgeten kan ställas in som
+Du kan använda `aria-label` för att beskriva länken när sidans format inte tillåter det. Beskrivningen för widget kan ställas in som
 
 ``` html
 <a href="#" aria-label="Widget description">description</a>
@@ -158,23 +158,23 @@ Du kan använda `aria-label` för att beskriva länken när sidans format inte t
 Det säger sig självt att skärmläsare inte automatiskt kan läsa vad som finns i en bild. Att säkerställa att bilder är tillgängliga kräver inte mycket arbete - det är vad `alt`-attributet handlar om. Alla meningsfulla bilder bör ha ett `alt` som beskriver vad de är.  
 Bilder som är rent dekorativa bör ha sitt `alt`-attribut inställt på en tom sträng: `alt=""`. Detta förhindrar att skärmläsare onödigt annonserar den dekorativa bilden.
 
-✅ Som du kanske förväntar dig kan sökmotorer inte heller förstå vad som finns i en bild. De använder också alt-text. Så återigen, att säkerställa att din sida är tillgänglig ger ytterligare fördelar!
+✅ Som du kanske förväntar dig kan sökmotorer inte heller förstå vad som finns i en bild. De använder också alt-text. Så återigen ger det extra fördelar att säkerställa att din sida är tillgänglig!
 
 ## Tangentbordet
 
 Vissa användare kan inte använda en mus eller pekplatta, utan förlitar sig istället på tangentbordsinteraktioner för att tabba från ett element till nästa. Det är viktigt att din webbplats presenterar ditt innehåll i logisk ordning så att en tangentbordsanvändare kan komma åt varje interaktivt element när de rör sig nedåt i dokumentet. Om du bygger dina webbsidor med semantisk markup och använder CSS för att styla deras visuella layout, bör din webbplats vara tangentbordsnavigerbar, men det är viktigt att testa denna aspekt manuellt. Läs mer om [strategier för tangentbordsnavigering](https://webaim.org/techniques/keyboard/).
 
-✅ Gå till en webbplats och försök navigera genom den med endast ditt tangentbord. Vad fungerar, vad fungerar inte? Varför?
+✅ Gå till valfri webbplats och försök navigera genom den med endast tangentbordet. Vad fungerar, vad fungerar inte? Varför?
 
 ## Sammanfattning
 
-En webb som är tillgänglig för vissa är inte en verkligt 'världsomspännande webb'. Det bästa sättet att säkerställa att de webbplatser du skapar är tillgängliga är att införliva bästa praxis för tillgänglighet från början. Även om det innebär extra steg, kommer det att innebära att alla sidor du skapar blir tillgängliga om du införlivar dessa färdigheter i ditt arbetsflöde nu.
+En webb som bara är tillgänglig för vissa är inte en verkligt "världsomspännande webb". Det bästa sättet att säkerställa att de webbplatser du skapar är tillgängliga är att integrera bästa praxis för tillgänglighet från början. Även om det innebär extra steg, kommer det att innebära att alla sidor du skapar blir tillgängliga om du införlivar dessa färdigheter i ditt arbetsflöde nu.
 
 ---
 
 ## 🚀 Utmaning
 
-Ta denna HTML och skriv om den för att göra den så tillgänglig som möjligt, med hjälp av de strategier du har lärt dig.
+Ta denna HTML och skriv om den för att vara så tillgänglig som möjligt, med hjälp av de strategier du lärt dig.
 
 ```html
 <!DOCTYPE html>
@@ -220,25 +220,25 @@ Ta denna HTML och skriv om den för att göra den så tillgänglig som möjligt,
           <p class="nav-item nav-item-bull"><a href="../semantic">Semantic Example</a></p>
         </div>
       </div>
-      <p class="footer-copyright">&copy; 2016 Instrument</span>
+      <p class="footer-copyright">&copy; 2016 Instrument</p>
     </div>
   </body>
 </html>
 ```
 
 ## Quiz efter föreläsningen
-[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/6)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/en/)
 
 ## Granskning & Självstudier
-Många regeringar har lagar om tillgänglighetskrav. Läs på om tillgänglighetslagarna i ditt hemland. Vad täcks, och vad täcks inte? Ett exempel är [denna regeringswebbplats](https://accessibility.blog.gov.uk/).
+Många regeringar har lagar om tillgänglighetskrav. Läs på om ditt hemlands lagar kring tillgänglighet. Vad täcks, och vad täcks inte? Ett exempel är [denna regeringswebbplats](https://accessibility.blog.gov.uk/).
 
 ## Uppgift
 
-[Analysera en icke-tillgänglig webbplats](assignment.md)
+[Analysera en otillgänglig webbplats](assignment.md)
 
-Krediter: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) av Instrument
+Källor: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) av Instrument
 
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

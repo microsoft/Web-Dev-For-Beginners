@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-26T22:06:25+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T08:15:12+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "da"
 }
 -->
-# Byg et rumspil del 1: Introduktion
+# Byg et Rumspil Del 1: Introduktion
 
 ![video](../../../../6-space-game/images/pewpew.gif)
 
@@ -15,24 +15,24 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Quiz før forelæsning](https://ff-quizzes.netlify.app/web/quiz/29)
 
-### Arv og komposition i spiludvikling
+### Arv og Komposition i spiludvikling
 
-I tidligere lektioner var der ikke meget behov for at bekymre sig om designarkitekturen i de apps, du byggede, da projekterne var meget små i omfang. Men når dine applikationer vokser i størrelse og omfang, bliver arkitektoniske beslutninger en større bekymring. Der er to hovedtilgange til at skabe større applikationer i JavaScript: *komposition* eller *arv*. Begge har fordele og ulemper, men lad os forklare dem inden for konteksten af et spil.
+I tidligere lektioner var der ikke meget behov for at bekymre sig om designarkitekturen i de apps, du byggede, da projekterne var meget små i omfang. Men når dine applikationer vokser i størrelse og kompleksitet, bliver arkitektoniske beslutninger en større bekymring. Der er to hovedtilgange til at skabe større applikationer i JavaScript: *komposition* eller *arv*. Begge har deres fordele og ulemper, men lad os forklare dem i konteksten af et spil.
 
 ✅ En af de mest berømte programmeringsbøger nogensinde handler om [designmønstre](https://en.wikipedia.org/wiki/Design_Patterns).
 
-I et spil har du `spilobjekter`, som er objekter, der findes på en skærm. Det betyder, at de har en placering i et kartesisk koordinatsystem, karakteriseret ved at have en `x` og `y` koordinat. Når du udvikler et spil, vil du bemærke, at alle dine spilobjekter har en standardegenskab, fælles for hvert spil, du skaber, nemlig elementer, der er:
+I et spil har du `spilobjekter`, som er objekter, der eksisterer på en skærm. Det betyder, at de har en placering i et kartesisk koordinatsystem, karakteriseret ved at have en `x`- og `y`-koordinat. Når du udvikler et spil, vil du bemærke, at alle dine spilobjekter har en standardegenskab, som er fælles for hvert spil, du skaber, nemlig elementer, der er:
 
 - **positionsbaserede** De fleste, hvis ikke alle, spilelementer er positionsbaserede. Det betyder, at de har en placering, en `x` og `y`.
-- **bevægelige** Dette er objekter, der kan flytte sig til en ny placering. Typisk er det en helt, et monster eller en NPC (en ikke-spilbar karakter), men ikke for eksempel et statisk objekt som et træ.
-- **selvdestruerende** Disse objekter eksisterer kun i en bestemt periode, før de sætter sig selv op til sletning. Normalt er dette repræsenteret af en `dead` eller `destroyed` boolean, der signalerer til spilmotoren, at dette objekt ikke længere skal vises.
-- **nedkøling** 'Nedkøling' er en typisk egenskab blandt kortvarige objekter. Et typisk eksempel er et stykke tekst eller en grafisk effekt som en eksplosion, der kun skal ses i nogle få millisekunder.
+- **bevægelige** Dette er objekter, der kan flytte sig til en ny placering. Typisk er det en helt, et monster eller en NPC (en ikke-spiller karakter), men ikke for eksempel et statisk objekt som et træ.
+- **selvdestruerende** Disse objekter eksisterer kun i en bestemt periode, før de markerer sig selv til sletning. Normalt repræsenteres dette af en `dead` eller `destroyed` boolean, der signalerer til spilmotoren, at dette objekt ikke længere skal vises.
+- **cool-down** 'Cool-down' er en typisk egenskab blandt kortlivede objekter. Et typisk eksempel er et stykke tekst eller en grafisk effekt som en eksplosion, der kun skal ses i nogle få millisekunder.
 
 ✅ Tænk på et spil som Pac-Man. Kan du identificere de fire objekttyper, der er nævnt ovenfor, i dette spil?
 
-### Udtryk adfærd
+### Udtryk af adfærd
 
-Alt det, vi beskrev ovenfor, er adfærd, som spilobjekter kan have. Så hvordan koder vi dem? Vi kan udtrykke denne adfærd som metoder, der er knyttet til enten klasser eller objekter.
+Alt det, vi har beskrevet ovenfor, er adfærd, som spilobjekter kan have. Så hvordan koder vi det? Vi kan udtrykke denne adfærd som metoder, der er knyttet til enten klasser eller objekter.
 
 **Klasser**
 
@@ -88,7 +88,7 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Brug et par minutter på at forestille dig en Pac-Man helt (Inky, Pinky eller Blinky, for eksempel) og hvordan det ville blive skrevet i JavaScript.
+✅ Brug et par minutter på at forestille dig en Pac-Man-helt (Inky, Pinky eller Blinky, for eksempel) og hvordan den ville blive skrevet i JavaScript.
 
 **Komposition**
 
@@ -149,9 +149,9 @@ Et andet mønster, der er almindeligt i spiludvikling, adresserer problemet med 
 
 ✅ Pub/Sub står for 'publish-subscribe'
 
-Dette mønster adresserer ideen om, at de forskellige dele af din applikation ikke bør kende til hinanden. Hvorfor er det sådan? Det gør det meget lettere at se, hvad der generelt foregår, hvis de forskellige dele er adskilt. Det gør det også lettere pludselig at ændre adfærd, hvis du har brug for det. Hvordan opnår vi dette? Vi gør det ved at etablere nogle begreber:
+Dette mønster adresserer ideen om, at de forskellige dele af din applikation ikke bør kende til hinanden. Hvorfor det? Det gør det meget lettere at få et overblik, hvis de forskellige dele er adskilt. Det gør det også lettere at ændre adfærd, hvis det er nødvendigt. Hvordan opnår vi dette? Vi gør det ved at etablere nogle begreber:
 
-- **besked**: En besked er normalt en tekststreng ledsaget af en valgfri payload (et stykke data, der præciserer, hvad beskeden handler om). En typisk besked i et spil kan være `KEY_PRESSED_ENTER`.
+- **besked**: En besked er normalt en tekststreng ledsaget af en valgfri nyttelast (et stykke data, der præciserer, hvad beskeden handler om). En typisk besked i et spil kan være `KEY_PRESSED_ENTER`.
 - **udgiver**: Dette element *udgiver* en besked og sender den ud til alle abonnenter.
 - **abonnent**: Dette element *lytter* til specifikke beskeder og udfører en opgave som resultat af at modtage denne besked, såsom at affyre en laser.
 
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Ovenfor forbinder vi en tastaturhændelse, `ArrowLeft`, og sender beskeden `HERO_MOVE_LEFT`. Vi lytter til den besked og flytter `hero` som resultat. Styrken ved dette mønster er, at event listeneren og helten ikke kender til hinanden. Du kan omdanne `ArrowLeft` til `A`-tasten. Derudover ville det være muligt at gøre noget helt andet på `ArrowLeft` ved at lave nogle få ændringer i eventEmitter's `on`-funktion:
+Ovenfor forbinder vi en tastaturhændelse, `ArrowLeft`, og sender beskeden `HERO_MOVE_LEFT`. Vi lytter til den besked og flytter `hero` som resultat. Styrken ved dette mønster er, at event listeneren og helten ikke kender til hinanden. Du kan ommappe `ArrowLeft` til `A`-tasten. Derudover ville det være muligt at gøre noget helt andet på `ArrowLeft` ved at lave nogle få ændringer i eventEmitter's `on`-funktion:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,13 +212,13 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-Efterhånden som tingene bliver mere komplicerede, når dit spil vokser, forbliver dette mønster det samme i kompleksitet, og din kode forbliver ren. Det anbefales virkelig at adoptere dette mønster.
+Når tingene bliver mere komplekse, efterhånden som dit spil vokser, forbliver dette mønster det samme i kompleksitet, og din kode forbliver ren. Det anbefales virkelig at adoptere dette mønster.
 
 ---
 
 ## 🚀 Udfordring
 
-Tænk over, hvordan pub-sub-mønsteret kan forbedre et spil. Hvilke dele bør udsende hændelser, og hvordan bør spillet reagere på dem? Nu har du chancen for at være kreativ og tænke på et nyt spil og hvordan dets dele kunne opføre sig.
+Tænk over, hvordan pub-sub-mønsteret kan forbedre et spil. Hvilke dele bør udsende hændelser, og hvordan skal spillet reagere på dem? Nu har du chancen for at være kreativ og tænke på et nyt spil og hvordan dets dele kunne opføre sig.
 
 ## Quiz efter forelæsning
 
@@ -230,9 +230,9 @@ Lær mere om Pub/Sub ved at [læse om det](https://docs.microsoft.com/azure/arch
 
 ## Opgave
 
-[Mock et spil](assignment.md)
+[Mock et spil op](assignment.md)
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.

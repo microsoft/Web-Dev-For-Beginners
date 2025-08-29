@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e982871b8388c59c22a41b73b5fca70f",
-  "translation_date": "2025-08-26T23:18:23+00:00",
+  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
+  "translation_date": "2025-08-29T08:40:57+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "no"
 }
@@ -15,32 +15,32 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Hendelsesdrevet programmering
 
-Når vi lager en nettleserbasert applikasjon, gir vi brukeren en grafisk brukergrensesnitt (GUI) som de kan bruke for å samhandle med det vi har bygget. Den vanligste måten å samhandle med nettleseren på er gjennom å klikke og skrive i ulike elementer. Utfordringen vi står overfor som utviklere er at vi ikke vet når de kommer til å utføre disse handlingene!
+Når vi lager en nettleserbasert applikasjon, gir vi brukeren et grafisk brukergrensesnitt (GUI) som de kan bruke for å interagere med det vi har bygget. Den vanligste måten å interagere med nettleseren på er gjennom å klikke og skrive i ulike elementer. Utfordringen vi står overfor som utviklere er at vi ikke vet når brukeren kommer til å utføre disse handlingene!
 
-[Hendelsesdrevet programmering](https://en.wikipedia.org/wiki/Event-driven_programming) er navnet på den typen programmering vi må bruke for å lage vårt GUI. Hvis vi bryter ned dette uttrykket litt, ser vi at kjernen her er **hendelse**. [Hendelse](https://www.merriam-webster.com/dictionary/event), ifølge Merriam-Webster, er definert som "noe som skjer". Dette beskriver situasjonen vår perfekt. Vi vet at noe kommer til å skje som vi ønsker å utføre kode som svar på, men vi vet ikke når det vil skje.
+[Hendelsesdrevet programmering](https://en.wikipedia.org/wiki/Event-driven_programming) er navnet på den typen programmering vi trenger for å lage vårt GUI. Hvis vi bryter ned dette uttrykket litt, ser vi at kjernen her er **hendelse**. [Hendelse](https://www.merriam-webster.com/dictionary/event), ifølge Merriam-Webster, er definert som "noe som skjer". Dette beskriver situasjonen vår perfekt. Vi vet at noe kommer til å skje som vi ønsker å utføre kode som respons på, men vi vet ikke når det vil skje.
 
-Måten vi markerer en del av koden vi ønsker å utføre på, er ved å lage en funksjon. Når vi tenker på [prosedyreorientert programmering](https://en.wikipedia.org/wiki/Procedural_programming), kalles funksjoner i en spesifikk rekkefølge. Det samme gjelder for hendelsesdrevet programmering. Forskjellen er **hvordan** funksjonene kalles.
+Måten vi markerer en seksjon av kode vi ønsker å utføre, er ved å lage en funksjon. Når vi tenker på [prosedyreorientert programmering](https://en.wikipedia.org/wiki/Procedural_programming), kalles funksjoner i en spesifikk rekkefølge. Det samme gjelder for hendelsesdrevet programmering. Forskjellen er **hvordan** funksjonene kalles.
 
-For å håndtere hendelser (knappeklikk, skriving osv.), registrerer vi **hendelseslyttere**. En hendelseslytter er en funksjon som lytter etter at en hendelse oppstår og utfører noe som svar. Hendelseslyttere kan oppdatere brukergrensesnittet, gjøre kall til serveren, eller hva som helst annet som må gjøres som svar på brukerens handling. Vi legger til en hendelseslytter ved å bruke [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) og gi en funksjon som skal utføres.
+For å håndtere hendelser (knappeklikk, skriving osv.), registrerer vi **hendelseslyttere**. En hendelseslytter er en funksjon som lytter etter at en hendelse inntreffer og utfører noe som respons. Hendelseslyttere kan oppdatere brukergrensesnittet, gjøre kall til serveren, eller hva som helst annet som må gjøres som respons på brukerens handling. Vi legger til en hendelseslytter ved å bruke [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) og gi en funksjon som skal utføres.
 
-> **NOTE:** Det er verdt å merke seg at det finnes mange måter å lage hendelseslyttere på. Du kan bruke anonyme funksjoner eller lage navngitte. Du kan bruke ulike snarveier, som å sette `click`-egenskapen, eller bruke `addEventListener`. I vår øvelse skal vi fokusere på `addEventListener` og anonyme funksjoner, da dette sannsynligvis er den mest brukte teknikken blant webutviklere. Det er også den mest fleksible, siden `addEventListener` fungerer for alle hendelser, og hendelsesnavnet kan gis som en parameter.
+> **NOTE:** Det er verdt å merke seg at det finnes mange måter å lage hendelseslyttere på. Du kan bruke anonyme funksjoner eller lage navngitte funksjoner. Du kan bruke ulike snarveier, som å sette `click`-egenskapen, eller bruke `addEventListener`. I vår øvelse skal vi fokusere på `addEventListener` og anonyme funksjoner, da dette sannsynligvis er den mest brukte teknikken blant webutviklere. Det er også den mest fleksible, siden `addEventListener` fungerer for alle hendelser, og hendelsesnavnet kan gis som en parameter.
 
 ### Vanlige hendelser
 
 Det finnes [dusiner av hendelser](https://developer.mozilla.org/docs/Web/Events) du kan lytte til når du lager en applikasjon. I utgangspunktet utløser alt en bruker gjør på en side en hendelse, noe som gir deg mye makt til å sikre at de får den opplevelsen du ønsker. Heldigvis trenger du vanligvis bare et lite utvalg av hendelser. Her er noen vanlige (inkludert de to vi skal bruke når vi lager spillet vårt):
 
-- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Brukeren klikket på noe, vanligvis en knapp eller hyperkobling
+- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Brukeren klikket på noe, vanligvis en knapp eller en lenke
 - [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Brukeren klikket med høyre museknapp
 - [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Brukeren markerte noe tekst
 - [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Brukeren skrev inn noe tekst
 
 ## Lage spillet
 
-Vi skal lage et spill for å utforske hvordan hendelser fungerer i JavaScript. Spillet vårt skal teste spillerens skriveferdigheter, som er en av de mest undervurderte ferdighetene alle utviklere bør ha. Vi bør alle øve på skrivingen vår! Den generelle flyten i spillet vil se slik ut:
+Vi skal lage et spill for å utforske hvordan hendelser fungerer i JavaScript. Spillet vårt skal teste spillerens skriveferdigheter, som er en av de mest undervurderte ferdighetene alle utviklere bør ha. Vi bør alle øve på å skrive! Den generelle flyten i spillet vil se slik ut:
 
 - Spilleren klikker på startknappen og får presentert et sitat å skrive
 - Spilleren skriver sitatet så raskt som mulig i en tekstboks
-  - Når hvert ord er fullført, blir det neste uthevet
+  - Etter hvert som hvert ord fullføres, blir det neste ordet markert
   - Hvis spilleren gjør en skrivefeil, blir tekstboksen rød
   - Når spilleren fullfører sitatet, vises en suksessmelding med den brukte tiden
 
@@ -73,14 +73,14 @@ code .
 
 ## Lag brukergrensesnittet
 
-Hvis vi ser på kravene, vet vi at vi trenger noen få elementer på HTML-siden vår. Dette er litt som en oppskrift, der vi trenger noen ingredienser:
+Hvis vi ser på kravene, vet vi at vi trenger noen få elementer på HTML-siden vår. Dette er litt som en oppskrift, hvor vi trenger noen ingredienser:
 
 - Et sted å vise sitatet som brukeren skal skrive
 - Et sted å vise meldinger, som en suksessmelding
 - En tekstboks for skriving
 - En startknapp
 
-Hvert av disse trenger ID-er slik at vi kan jobbe med dem i JavaScript. Vi vil også legge til referanser til CSS- og JavaScript-filene vi skal lage.
+Hvert av disse elementene trenger ID-er slik at vi kan jobbe med dem i JavaScript. Vi vil også legge til referanser til CSS- og JavaScript-filene vi skal lage.
 
 Opprett en ny fil med navnet **index.html**. Legg til følgende HTML:
 
@@ -107,7 +107,7 @@ Opprett en ny fil med navnet **index.html**. Legg til følgende HTML:
 
 ### Start applikasjonen
 
-Det er alltid best å utvikle iterativt for å se hvordan ting ser ut. La oss starte applikasjonen vår. Det finnes en flott utvidelse for Visual Studio Code kalt [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) som både vil hoste applikasjonen din lokalt og oppdatere nettleseren hver gang du lagrer.
+Det er alltid best å utvikle iterativt for å se hvordan ting ser ut. La oss starte applikasjonen. Det finnes en flott utvidelse for Visual Studio Code kalt [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) som både vil hoste applikasjonen din lokalt og oppdatere nettleseren hver gang du lagrer.
 
 - Installer [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) ved å følge lenken og klikke **Install**
   - Du vil bli bedt av nettleseren om å åpne Visual Studio Code, og deretter av Visual Studio Code om å utføre installasjonen
@@ -122,7 +122,7 @@ La oss legge til litt funksjonalitet.
 
 ## Legg til CSS
 
-Med HTML-en vår opprettet, la oss legge til CSS for grunnleggende styling. Vi trenger å utheve ordet spilleren skal skrive, og fargelegge tekstboksen hvis det de har skrevet er feil. Vi gjør dette med to klasser.
+Med HTML-en vår opprettet, la oss legge til CSS for grunnleggende styling. Vi trenger å markere ordet spilleren skal skrive, og fargelegge tekstboksen hvis det de har skrevet er feil. Vi gjør dette med to klasser.
 
 Opprett en ny fil med navnet **style.css** og legg til følgende syntaks.
 
@@ -156,7 +156,7 @@ Men først, opprett en ny fil med navnet **script.js**.
 
 ### Opprett konstantene
 
-Vi trenger noen få elementer for å gjøre programmeringen enklere. Igjen, som en oppskrift, her er hva vi trenger:
+Vi trenger noen elementer for å gjøre programmeringen enklere. Igjen, som en oppskrift, her er hva vi trenger:
 
 - En array med listen over alle sitater
 - En tom array for å lagre alle ordene i det nåværende sitatet
@@ -204,7 +204,7 @@ Ta et øyeblikk til å se en video om bruk av `const`, `let` og `var`.
 
 ### Legg til startlogikk
 
-For å starte spillet, vil spilleren klikke på start. Selvfølgelig vet vi ikke når de kommer til å klikke på start. Dette er hvor en [hendelseslytter](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) kommer inn i bildet. En hendelseslytter lar oss lytte etter at noe skjer (en hendelse) og utføre kode som svar. I vårt tilfelle ønsker vi å utføre kode når brukeren klikker på start.
+For å starte spillet, vil spilleren klikke på start. Selvfølgelig vet vi ikke når de kommer til å klikke på start. Dette er hvor en [hendelseslytter](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) kommer inn i bildet. En hendelseslytter lar oss lytte etter at noe skjer (en hendelse) og utføre kode som respons. I vårt tilfelle ønsker vi å utføre kode når brukeren klikker på start.
 
 Når brukeren klikker på **start**, må vi velge et sitat, sette opp brukergrensesnittet og sette opp sporing for det nåværende ordet og tiden. Nedenfor er JavaScript-koden du trenger å legge til; vi diskuterer den rett etter kodeblokken.
 
@@ -249,10 +249,10 @@ La oss bryte ned koden!
   - `wordIndex` settes til 0, siden spilleren starter på det første ordet
 - Sett opp brukergrensesnittet
   - Opprett en array av `spanWords`, som inneholder hvert ord inne i et `span`-element
-    - Dette lar oss utheve ordet på skjermen
+    - Dette lar oss markere ordet på skjermen
   - `join` arrayen for å lage en streng som vi kan bruke til å oppdatere `innerHTML` på `quoteElement`
-    - Dette vil vise sitatet til spilleren
-  - Sett `className` til det første `span`-elementet til `highlight` for å utheve det som gult
+    - Dette viser sitatet til spilleren
+  - Sett `className` til det første `span`-elementet til `highlight` for å markere det som gult
   - Rens `messageElement` ved å sette `innerText` til `''`
 - Sett opp tekstboksen
   - Tøm den nåværende `value` på `typedValueElement`
@@ -261,7 +261,7 @@ La oss bryte ned koden!
 
 ### Legg til skrive-logikk
 
-Når spilleren skriver, vil en `input`-hendelse utløses. Denne hendelseslytteren vil sjekke at spilleren skriver ordet riktig og håndtere spillets nåværende status. Gå tilbake til **script.js** og legg til følgende kode på slutten. Vi vil bryte den ned etterpå.
+Når spilleren skriver, vil en `input`-hendelse utløses. Denne hendelseslytteren vil sjekke at spilleren skriver ordet riktig og håndtere spillets nåværende status. Gå tilbake til **script.js** og legg til følgende kode på slutten. Vi bryter den ned etterpå.
 
 ```javascript
 // at the end of script.js
@@ -302,15 +302,15 @@ typedValueElement.addEventListener('input', () => {
 
 La oss bryte ned koden! Vi starter med å hente det nåværende ordet og verdien spilleren har skrevet så langt. Deretter har vi en "vannfallslogikk", hvor vi sjekker om sitatet er fullført, ordet er fullført, ordet er riktig, eller (til slutt) om det er en feil.
 
-- Sitatet er fullført, indikert ved at `typedValue` er lik `currentWord`, og `wordIndex` er lik én mindre enn `length` av `words`
+- Sitatet er fullført, indikert ved at `typedValue` er lik `currentWord`, og `wordIndex` er lik én mindre enn `length` på `words`
   - Beregn `elapsedTime` ved å trekke `startTime` fra nåværende tid
   - Del `elapsedTime` på 1 000 for å konvertere fra millisekunder til sekunder
   - Vis en suksessmelding
 - Ordet er fullført, indikert ved at `typedValue` slutter med et mellomrom (slutten av et ord) og `typedValue` er lik `currentWord`
   - Sett `value` på `typedElement` til `''` for å tillate at neste ord kan skrives
   - Øk `wordIndex` for å gå til neste ord
-  - Gå gjennom alle `childNodes` av `quoteElement` for å sette `className` til `''` for å tilbakestille til standardvisning
-  - Sett `className` til det nåværende ordet til `highlight` for å markere det som neste ord som skal skrives
+  - Gå gjennom alle `childNodes` på `quoteElement` for å sette `className` til `''` for å tilbakestille til standardvisning
+  - Sett `className` på det nåværende ordet til `highlight` for å markere det som neste ord som skal skrives
 - Ordet er riktig skrevet (men ikke fullført), indikert ved at `currentWord` starter med `typedValue`
   - Sørg for at `typedValueElement` vises som standard ved å tømme `className`
 - Hvis vi har kommet så langt, har vi en feil
@@ -318,7 +318,7 @@ La oss bryte ned koden! Vi starter med å hente det nåværende ordet og verdien
 
 ## Test applikasjonen din
 
-Du har kommet til slutten! Det siste trinnet er å sørge for at applikasjonen vår fungerer. Prøv det! Ikke bekymre deg hvis det er feil; **alle utviklere** opplever feil. Undersøk meldingene og feilsøk etter behov.
+Du har kommet til slutten! Det siste trinnet er å sørge for at applikasjonen fungerer. Prøv det! Ikke bekymre deg hvis det er feil; **alle utviklere** har feil. Undersøk meldingene og feilsøk etter behov.
 
 Klikk på **start**, og begynn å skrive! Det skal se litt ut som animasjonen vi så tidligere.
 
@@ -333,15 +333,14 @@ Legg til mer funksjonalitet
 - Deaktiver `input`-hendelseslytteren når spillet er fullført, og aktiver den igjen når knappen klikkes
 - Deaktiver tekstboksen når spilleren fullfører sitatet
 - Vis en modal dialogboks med suksessmeldingen
-- Lagre høye poengsummer ved å bruke [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
-
+- Lagre høye poengsummer ved hjelp av [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
 ## Quiz etter forelesning
 
 [Quiz etter forelesning](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Gjennomgang og selvstudium
 
-Les om [alle tilgjengelige hendelser](https://developer.mozilla.org/docs/Web/Events) for utviklere via nettleseren, og vurder scenariene der du ville brukt hver av dem.
+Les om [alle tilgjengelige hendelser](https://developer.mozilla.org/docs/Web/Events) som utviklere kan bruke via nettleseren, og tenk over situasjonene der hver av dem kan være nyttige.
 
 ## Oppgave
 
@@ -350,4 +349,4 @@ Les om [alle tilgjengelige hendelser](https://developer.mozilla.org/docs/Web/Eve
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

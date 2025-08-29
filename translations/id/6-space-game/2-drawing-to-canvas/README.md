@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-27T22:39:46+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T09:11:23+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "id"
 }
 -->
 # Membangun Game Luar Angkasa Bagian 2: Gambar Hero dan Monster ke Canvas
 
-## Kuis Pra-Kuliah
+## Kuis Sebelum Kuliah
 
-[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/31)
+[Kuis sebelum kuliah](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas
 
-Canvas adalah elemen HTML yang secara default tidak memiliki konten; ini adalah kanvas kosong. Anda perlu menambahkan konten dengan menggambar di atasnya.
+Canvas adalah elemen HTML yang secara default tidak memiliki konten; ini adalah kanvas kosong. Anda perlu menambahkan sesuatu ke dalamnya dengan menggambar di atasnya.
 
 ✅ Baca [lebih lanjut tentang Canvas API](https://developer.mozilla.org/docs/Web/API/Canvas_API) di MDN.
 
@@ -27,13 +27,13 @@ Berikut adalah cara biasanya dideklarasikan, sebagai bagian dari body halaman:
 
 Di atas, kita menetapkan `id`, `width`, dan `height`.
 
-- `id`: tetapkan ini agar Anda dapat memperoleh referensi saat Anda perlu berinteraksi dengannya.
+- `id`: tetapkan ini agar Anda dapat memperoleh referensi saat perlu berinteraksi dengannya.
 - `width`: ini adalah lebar elemen.
 - `height`: ini adalah tinggi elemen.
 
 ## Menggambar Geometri Sederhana
 
-Canvas menggunakan sistem koordinat kartesian untuk menggambar sesuatu. Oleh karena itu, ia menggunakan sumbu x dan sumbu y untuk mengekspresikan lokasi sesuatu. Lokasi `0,0` adalah posisi kiri atas, dan kanan bawah adalah apa yang Anda tetapkan sebagai WIDTH dan HEIGHT dari canvas.
+Canvas menggunakan sistem koordinat kartesius untuk menggambar sesuatu. Oleh karena itu, ia menggunakan sumbu x dan sumbu y untuk menunjukkan lokasi sesuatu. Lokasi `0,0` adalah posisi kiri atas, dan kanan bawah adalah apa yang Anda tetapkan sebagai LEBAR dan TINGGI dari canvas.
 
 ![grid canvas](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.id.png)
 > Gambar dari [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
@@ -41,8 +41,8 @@ Canvas menggunakan sistem koordinat kartesian untuk menggambar sesuatu. Oleh kar
 Untuk menggambar di elemen canvas, Anda perlu melalui langkah-langkah berikut:
 
 1. **Dapatkan referensi** ke elemen Canvas.
-1. **Dapatkan referensi** ke elemen Context yang berada di elemen Canvas.
-1. **Lakukan operasi menggambar** menggunakan elemen Context.
+2. **Dapatkan referensi** ke elemen Context yang ada di elemen Canvas.
+3. **Lakukan operasi menggambar** menggunakan elemen Context.
 
 Kode untuk langkah-langkah di atas biasanya terlihat seperti ini:
 
@@ -63,13 +63,13 @@ ctx.fillRect(0,0, 200, 200) // x,y,width, height
 
 ✅ Canvas API sebagian besar berfokus pada bentuk 2D, tetapi Anda juga dapat menggambar elemen 3D ke situs web; untuk ini, Anda mungkin menggunakan [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
-Anda dapat menggambar berbagai hal dengan Canvas API seperti:
+Anda dapat menggambar berbagai macam hal dengan Canvas API seperti:
 
-- **Bentuk geometris**, kita sudah menunjukkan cara menggambar persegi panjang, tetapi ada banyak lagi yang bisa Anda gambar.
+- **Bentuk geometris**, kita sudah menunjukkan cara menggambar persegi panjang, tetapi masih banyak lagi yang bisa Anda gambar.
 - **Teks**, Anda dapat menggambar teks dengan font dan warna apa pun yang Anda inginkan.
 - **Gambar**, Anda dapat menggambar gambar berdasarkan aset gambar seperti .jpg atau .png, misalnya.
 
-✅ Coba! Anda sudah tahu cara menggambar persegi panjang, bisakah Anda menggambar lingkaran di halaman? Lihat beberapa gambar menarik menggunakan Canvas di CodePen. Berikut adalah [contoh yang sangat mengesankan](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Coba sendiri! Anda sudah tahu cara menggambar persegi panjang, bisakah Anda menggambar lingkaran di halaman? Lihat beberapa gambar menarik menggunakan Canvas di CodePen. Berikut adalah [contoh yang sangat mengesankan](https://codepen.io/dissimulate/pen/KrAwx).
 
 ## Memuat dan Menggambar Aset Gambar
 
@@ -87,7 +87,7 @@ img.onload = () => {
 
 ### Pola Memuat Aset
 
-Disarankan untuk membungkus kode di atas dalam sebuah konstruksi seperti ini, sehingga lebih mudah digunakan dan Anda hanya mencoba memanipulasinya saat sudah sepenuhnya dimuat:
+Disarankan untuk membungkus kode di atas dalam konstruksi seperti ini, sehingga lebih mudah digunakan dan Anda hanya mencoba memanipulasinya saat sudah sepenuhnya dimuat:
 
 ```javascript
 function loadAsset(path) {
@@ -124,7 +124,7 @@ async function run() {
 }
 ```
 
-## Sekarang Saatnya Mulai Membangun Game Anda
+## Sekarang Saatnya Memulai Membangun Game Anda
 
 ### Apa yang Akan Dibangun
 
@@ -134,13 +134,13 @@ Anda akan membangun halaman web dengan elemen Canvas. Halaman ini harus menampil
 
    ![Kapal Hero](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.id.png)
 
-- Kapal Monster 5*5
+- 5*5 monster
 
    ![Kapal Monster](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.id.png)
 
 ### Langkah-Langkah yang Direkomendasikan untuk Memulai Pengembangan
 
-Temukan file yang telah dibuat untuk Anda di subfolder `your-work`. Folder ini harus berisi:
+Temukan file yang telah dibuat untuk Anda di sub-folder `your-work`. Folder ini harus berisi:
 
 ```bash
 -| assets
@@ -160,24 +160,24 @@ cd your-work
 npm start
 ```
 
-Kode di atas akan memulai HTTP Server di alamat `http://localhost:5000`. Buka browser dan masukkan alamat tersebut. Halaman ini masih kosong sekarang, tetapi itu akan berubah.
+Kode di atas akan memulai HTTP Server di alamat `http://localhost:5000`. Buka browser dan masukkan alamat tersebut. Halaman masih kosong sekarang, tetapi itu akan berubah.
 
-> Catatan: untuk melihat perubahan di layar Anda, segarkan browser Anda.
+> Catatan: untuk melihat perubahan di layar, segarkan browser Anda.
 
 ### Tambahkan Kode
 
-Tambahkan kode yang diperlukan ke `your-work/app.js` untuk menyelesaikan langkah-langkah berikut:
+Tambahkan kode yang diperlukan ke `your-work/app.js` untuk menyelesaikan tugas berikut:
 
 1. **Gambar** canvas dengan latar belakang hitam  
-   > tip: tambahkan dua baris di bawah TODO yang sesuai di `/app.js`, tetapkan elemen `ctx` menjadi hitam dan koordinat atas/kiri ke 0,0 serta tinggi dan lebar sesuai dengan canvas.
+   > petunjuk: tambahkan dua baris di bawah TODO yang sesuai di `/app.js`, atur elemen `ctx` menjadi hitam dan koordinat atas/kiri ke 0,0 serta tinggi dan lebar sama dengan canvas.
 2. **Muat** tekstur  
-   > tip: tambahkan gambar pemain dan musuh menggunakan `await loadTexture` dan masukkan jalur gambar. Anda belum akan melihatnya di layar!
+   > petunjuk: tambahkan gambar pemain dan musuh menggunakan `await loadTexture` dan masukkan jalur gambar. Anda belum akan melihatnya di layar!
 3. **Gambar** hero di tengah layar di bagian bawah  
-   > tip: gunakan API `drawImage` untuk menggambar heroImg ke layar, tetapkan `canvas.width / 2 - 45` dan `canvas.height - canvas.height / 4)`.
-4. **Gambar** monster 5*5  
-   > tip: Sekarang Anda dapat menghapus komentar kode untuk menggambar musuh di layar. Selanjutnya, pergi ke fungsi `createEnemies` dan bangun fungsinya.
+   > petunjuk: gunakan API `drawImage` untuk menggambar heroImg ke layar, atur `canvas.width / 2 - 45` dan `canvas.height - canvas.height / 4)`;
+4. **Gambar** 5*5 monster  
+   > petunjuk: Sekarang Anda dapat menghapus komentar kode untuk menggambar musuh di layar. Selanjutnya, buka fungsi `createEnemies` dan bangun fungsinya.
 
-   Pertama, tetapkan beberapa konstanta:
+   Pertama, atur beberapa konstanta:
 
     ```javascript
     const MONSTER_TOTAL = 5;
@@ -186,7 +186,7 @@ Tambahkan kode yang diperlukan ke `your-work/app.js` untuk menyelesaikan langkah
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    kemudian, buat loop untuk menggambar array monster ke layar:
+   kemudian, buat loop untuk menggambar array monster ke layar:
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {
@@ -198,9 +198,9 @@ Tambahkan kode yang diperlukan ke `your-work/app.js` untuk menyelesaikan langkah
 
 ## Hasil
 
-Hasil akhir harus terlihat seperti ini:
+Hasil akhirnya harus terlihat seperti ini:
 
-![Layar hitam dengan hero dan monster 5*5](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.id.png)
+![Layar hitam dengan hero dan 5*5 monster](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.id.png)
 
 ## Solusi
 
@@ -210,11 +210,11 @@ Cobalah menyelesaikannya sendiri terlebih dahulu, tetapi jika Anda mengalami kes
 
 ## 🚀 Tantangan
 
-Anda telah belajar tentang menggambar dengan Canvas API yang berfokus pada 2D; lihat [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API), dan coba gambar objek 3D.
+Anda telah mempelajari tentang menggambar dengan Canvas API yang berfokus pada 2D; lihat [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API), dan coba gambar objek 3D.
 
-## Kuis Pasca-Kuliah
+## Kuis Setelah Kuliah
 
-[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/32)
+[Kuis setelah kuliah](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Tinjauan & Studi Mandiri
 
@@ -227,4 +227,4 @@ Pelajari lebih lanjut tentang Canvas API dengan [membacanya](https://developer.m
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

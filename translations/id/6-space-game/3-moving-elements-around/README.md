@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-27T22:32:40+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T09:10:10+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "id"
 }
@@ -13,17 +13,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/33)
 
-Game tidak akan seru sampai ada alien yang bergerak di layar! Dalam game ini, kita akan menggunakan dua jenis gerakan:
+Game tidak akan seru sampai Anda memiliki alien yang bergerak di layar! Dalam game ini, kita akan menggunakan dua jenis gerakan:
 
 - **Gerakan Keyboard/Mouse**: ketika pengguna berinteraksi dengan keyboard atau mouse untuk menggerakkan objek di layar.
-- **Gerakan yang diinduksi oleh game**: ketika game menggerakkan objek dengan interval waktu tertentu.
+- **Gerakan yang Diinduksi Game**: ketika game menggerakkan objek dengan interval waktu tertentu.
 
-Jadi, bagaimana cara kita menggerakkan sesuatu di layar? Semuanya berkaitan dengan koordinat kartesian: kita mengubah lokasi (x,y) objek dan kemudian menggambar ulang layar.
+Jadi, bagaimana cara kita menggerakkan sesuatu di layar? Semuanya berkaitan dengan koordinat kartesius: kita mengubah lokasi (x, y) dari objek dan kemudian menggambar ulang layar.
 
 Biasanya, Anda memerlukan langkah-langkah berikut untuk mencapai *gerakan* di layar:
 
 1. **Tetapkan lokasi baru** untuk sebuah objek; ini diperlukan agar objek terlihat seperti bergerak.
-2. **Bersihkan layar**, layar perlu dibersihkan di antara proses menggambar. Kita bisa membersihkannya dengan menggambar sebuah persegi panjang yang diisi dengan warna latar belakang.
+2. **Bersihkan layar**, layar perlu dibersihkan di antara penggambaran ulang. Kita dapat membersihkannya dengan menggambar sebuah persegi panjang yang diisi dengan warna latar belakang.
 3. **Gambar ulang objek** di lokasi baru. Dengan melakukan ini, kita akhirnya berhasil memindahkan objek dari satu lokasi ke lokasi lainnya.
 
 Berikut adalah contoh kode yang menggambarkan proses tersebut:
@@ -39,13 +39,13 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Bisakah Anda memikirkan alasan mengapa menggambar ulang karakter Anda beberapa frame per detik dapat menyebabkan biaya kinerja? Baca tentang [alternatif untuk pola ini](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+✅ Bisakah Anda memikirkan alasan mengapa menggambar ulang pahlawan Anda beberapa frame per detik dapat menyebabkan biaya kinerja? Baca tentang [alternatif untuk pola ini](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Menangani Event Keyboard
 
-Anda menangani event dengan menambahkan event tertentu ke dalam kode. Event keyboard dipicu di seluruh jendela, sedangkan event mouse seperti `click` dapat dikaitkan dengan klik pada elemen tertentu. Kita akan menggunakan event keyboard sepanjang proyek ini.
+Anda menangani event dengan melampirkan event tertentu ke kode. Event keyboard dipicu di seluruh jendela, sedangkan event mouse seperti `click` dapat dihubungkan ke elemen tertentu. Kita akan menggunakan event keyboard sepanjang proyek ini.
 
-Untuk menangani sebuah event, Anda perlu menggunakan metode `addEventListener()` pada jendela dan memberikannya dua parameter input. Parameter pertama adalah nama event, misalnya `keyup`. Parameter kedua adalah fungsi yang harus dipanggil sebagai hasil dari event tersebut terjadi.
+Untuk menangani sebuah event, Anda perlu menggunakan metode `addEventListener()` pada window dan memberikannya dua parameter input. Parameter pertama adalah nama event, misalnya `keyup`. Parameter kedua adalah fungsi yang harus dipanggil sebagai hasil dari event tersebut.
 
 Berikut adalah contohnya:
 
@@ -58,16 +58,16 @@ window.addEventListener('keyup', (evt) => {
 })
 ```
 
-Untuk event keyboard, ada dua properti pada event yang dapat Anda gunakan untuk melihat tombol mana yang ditekan:
+Untuk event key, ada dua properti pada event yang dapat Anda gunakan untuk melihat tombol apa yang ditekan:
 
-- `key`, ini adalah representasi string dari tombol yang ditekan, misalnya `ArrowUp`.
+- `key`, ini adalah representasi string dari tombol yang ditekan, misalnya `ArrowUp`
 - `keyCode`, ini adalah representasi angka, misalnya `37`, yang sesuai dengan `ArrowLeft`.
 
-✅ Manipulasi event keyboard berguna di luar pengembangan game. Apa kegunaan lain yang dapat Anda pikirkan untuk teknik ini?
+✅ Manipulasi event key berguna di luar pengembangan game. Apa kegunaan lain yang dapat Anda pikirkan untuk teknik ini?
 
-### Tombol Khusus: Catatan Penting
+### Tombol Khusus: Sebuah Catatan
 
-Ada beberapa tombol *khusus* yang memengaruhi jendela. Artinya, jika Anda mendengarkan event `keyup` dan menggunakan tombol-tombol khusus ini untuk menggerakkan karakter Anda, itu juga akan melakukan pengguliran horizontal. Oleh karena itu, Anda mungkin ingin *mematikan* perilaku bawaan browser ini saat Anda membangun game Anda. Anda memerlukan kode seperti ini:
+Ada beberapa tombol *khusus* yang memengaruhi jendela. Artinya, jika Anda mendengarkan event `keyup` dan menggunakan tombol khusus ini untuk menggerakkan pahlawan Anda, itu juga akan melakukan pengguliran horizontal. Oleh karena itu, Anda mungkin ingin *mematikan* perilaku bawaan browser ini saat Anda membangun game Anda. Anda memerlukan kode seperti ini:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -88,9 +88,9 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Kode di atas akan memastikan bahwa tombol panah dan tombol spasi memiliki perilaku *default* yang dimatikan. Mekanisme *mematikan* terjadi ketika kita memanggil `e.preventDefault()`.
+Kode di atas akan memastikan bahwa tombol panah dan tombol spasi memiliki perilaku *default* mereka dimatikan. Mekanisme *mematikan* terjadi ketika kita memanggil `e.preventDefault()`.
 
-## Gerakan yang Diinduksi oleh Game
+## Gerakan yang Diinduksi Game
 
 Kita dapat membuat objek bergerak sendiri dengan menggunakan timer seperti fungsi `setTimeout()` atau `setInterval()` yang memperbarui lokasi objek pada setiap tick, atau interval waktu. Berikut adalah contohnya:
 
@@ -103,7 +103,7 @@ let id = setInterval(() => {
 
 ## Loop Game
 
-Loop game adalah konsep yang pada dasarnya merupakan fungsi yang dipanggil secara berkala. Disebut loop game karena semua yang seharusnya terlihat oleh pengguna digambar dalam loop tersebut. Loop game menggunakan semua objek game yang menjadi bagian dari game, menggambar semuanya kecuali untuk beberapa alasan tidak lagi menjadi bagian dari game. Misalnya, jika sebuah objek adalah musuh yang terkena laser dan meledak, itu tidak lagi menjadi bagian dari loop game saat ini (Anda akan mempelajari lebih lanjut tentang ini di pelajaran berikutnya).
+Loop game adalah konsep yang pada dasarnya merupakan fungsi yang dipanggil pada interval reguler. Disebut loop game karena semua yang harus terlihat oleh pengguna digambar dalam loop ini. Loop game memanfaatkan semua objek game yang menjadi bagian dari game, menggambar semuanya kecuali untuk beberapa alasan tidak lagi menjadi bagian dari game. Misalnya, jika sebuah objek adalah musuh yang terkena laser dan meledak, itu tidak lagi menjadi bagian dari loop game saat ini (Anda akan mempelajari lebih lanjut tentang ini di pelajaran berikutnya).
 
 Berikut adalah contoh loop game yang biasanya diekspresikan dalam kode:
 
@@ -125,12 +125,12 @@ Loop di atas dipanggil setiap `200` milidetik untuk menggambar ulang kanvas. And
 
 Anda akan mengambil kode yang ada dan memperluasnya. Mulailah dengan kode yang telah Anda selesaikan selama bagian I atau gunakan kode di [Bagian II - starter](../../../../6-space-game/3-moving-elements-around/your-work).
 
-- **Menggerakkan karakter utama**: Anda akan menambahkan kode untuk memastikan Anda dapat menggerakkan karakter utama menggunakan tombol panah.
+- **Menggerakkan pahlawan**: Anda akan menambahkan kode untuk memastikan Anda dapat menggerakkan pahlawan menggunakan tombol panah.
 - **Menggerakkan musuh**: Anda juga perlu menambahkan kode untuk memastikan musuh bergerak dari atas ke bawah pada kecepatan tertentu.
 
 ## Langkah yang Direkomendasikan
 
-Temukan file yang telah dibuat untuk Anda di sub folder `your-work`. Folder tersebut harus berisi:
+Temukan file yang telah dibuat untuk Anda di sub-folder `your-work`. Folder ini harus berisi:
 
 ```bash
 -| assets
@@ -148,15 +148,15 @@ cd your-work
 npm start
 ```
 
-Kode di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka browser dan masukkan alamat tersebut, saat ini seharusnya menampilkan karakter utama dan semua musuh; tidak ada yang bergerak - belum!
+Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka browser dan masukkan alamat tersebut, saat ini seharusnya menampilkan pahlawan dan semua musuh; belum ada yang bergerak!
 
 ### Tambahkan Kode
 
-1. **Tambahkan objek khusus** untuk `hero`, `enemy`, dan `game object`, mereka harus memiliki properti `x` dan `y`. (Ingat bagian tentang [Inheritance atau komposisi](../README.md)).
+1. **Tambahkan objek khusus** untuk `hero`, `enemy`, dan `game object`, mereka harus memiliki properti `x` dan `y`. (Ingat bagian tentang [Inheritance atau composition](../README.md)).
 
-   *PETUNJUK* `game object` harus menjadi objek yang memiliki properti `x` dan `y` serta kemampuan untuk menggambar dirinya sendiri ke kanvas.
+   *PETUNJUK*: `game object` harus menjadi objek dengan properti `x` dan `y` serta kemampuan untuk menggambar dirinya sendiri ke kanvas.
 
-   >tip: mulailah dengan menambahkan kelas GameObject baru dengan konstruktor seperti di bawah ini, lalu gambarlah ke kanvas:
+   >tip: mulai dengan menambahkan kelas GameObject baru dengan konstruktor seperti di bawah ini, lalu gambar ke kanvas:
   
     ```javascript
         
@@ -205,11 +205,11 @@ Kode di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka 
     }
     ```
 
-2. **Tambahkan handler event keyboard** untuk menangani navigasi tombol (menggerakkan karakter utama ke atas/bawah kiri/kanan).
+2. **Tambahkan handler event key** untuk menangani navigasi tombol (gerakkan pahlawan ke atas/bawah kiri/kanan).
 
-   *INGAT* ini adalah sistem kartesian, kiri atas adalah `0,0`. Juga ingat untuk menambahkan kode untuk menghentikan *perilaku default*.
+   *INGAT*: ini adalah sistem kartesius, kiri atas adalah `0,0`. Juga ingat untuk menambahkan kode untuk menghentikan *perilaku default*.
 
-   >tip: buat fungsi onKeyDown Anda dan tambahkan ke jendela:
+   >tip: buat fungsi onKeyDown Anda dan lampirkan ke window:
 
    ```javascript
     let onKeyDown = function (e) {
@@ -221,13 +221,13 @@ Kode di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka 
     window.addEventListener("keydown", onKeyDown);
    ```
     
-   Periksa konsol browser Anda pada titik ini, dan lihat tombol yang ditekan sedang dicatat.
+   Periksa konsol browser Anda pada titik ini, dan lihat penekanan tombol yang dicatat.
 
-3. **Implementasikan** [Pola Pub Sub](../README.md), ini akan menjaga kode Anda tetap bersih saat Anda mengikuti bagian-bagian berikutnya.
+3. **Implementasikan** [Pola Pub Sub](../README.md), ini akan menjaga kode Anda tetap bersih saat Anda melanjutkan bagian lainnya.
 
    Untuk melakukan bagian terakhir ini, Anda dapat:
 
-   1. **Tambahkan event listener** pada jendela:
+   1. **Tambahkan event listener** pada window:
 
        ```javascript
         window.addEventListener("keyup", (evt) => {
@@ -266,7 +266,7 @@ Kode di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka 
         }
         ```
 
-    1. **Tambahkan konstanta** dan siapkan EventEmitter:
+    1. **Tambahkan konstanta** dan atur EventEmitter:
 
         ```javascript
         const Messages = {
@@ -313,7 +313,7 @@ Kode di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka 
 
 1. **Siapkan loop game**
 
-   Refactor fungsi window.onload untuk menginisialisasi game dan menyiapkan loop game pada interval yang baik. Anda juga akan menambahkan sinar laser:
+   Refactor fungsi window.onload untuk menginisialisasi game dan menyiapkan loop game pada interval yang baik. Anda juga akan menambahkan laser beam:
 
     ```javascript
     window.onload = async () => {
@@ -355,7 +355,7 @@ Kode di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka 
     }
     ```
     
-    dan tambahkan fungsi `createHero()` untuk melakukan proses serupa untuk karakter utama.
+    dan tambahkan fungsi `createHero()` untuk melakukan proses serupa untuk pahlawan.
     
     ```javascript
     function createHero() {
@@ -368,7 +368,7 @@ Kode di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka 
     }
     ```
 
-    dan terakhir, tambahkan fungsi `drawGameObjects()` untuk mulai menggambar:
+    dan terakhir, tambahkan fungsi `drawGameObjects()` untuk memulai penggambaran:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -376,13 +376,13 @@ Kode di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka 
     }
     ```
 
-    Musuh Anda seharusnya mulai maju menuju pesawat luar angkasa karakter utama Anda!
+    Musuh Anda seharusnya mulai maju ke arah pesawat luar angkasa pahlawan Anda!
 
 ---
 
 ## 🚀 Tantangan
 
-Seperti yang Anda lihat, kode Anda dapat berubah menjadi 'kode spaghetti' ketika Anda mulai menambahkan fungsi, variabel, dan kelas. Bagaimana Anda dapat mengatur kode Anda dengan lebih baik sehingga lebih mudah dibaca? Buatlah sketsa sistem untuk mengatur kode Anda, bahkan jika masih berada dalam satu file.
+Seperti yang Anda lihat, kode Anda dapat berubah menjadi 'kode spaghetti' ketika Anda mulai menambahkan fungsi, variabel, dan kelas. Bagaimana Anda dapat mengatur kode Anda dengan lebih baik sehingga lebih mudah dibaca? Buatlah sketsa sistem untuk mengatur kode Anda, bahkan jika semuanya masih berada dalam satu file.
 
 ## Kuis Pasca-Kuliah
 
@@ -390,7 +390,7 @@ Seperti yang Anda lihat, kode Anda dapat berubah menjadi 'kode spaghetti' ketika
 
 ## Tinjauan & Studi Mandiri
 
-Meskipun kita menulis game kita tanpa menggunakan framework, ada banyak framework berbasis JavaScript untuk pengembangan game dengan canvas. Luangkan waktu untuk [membaca tentang ini](https://github.com/collections/javascript-game-engines).
+Meskipun kita menulis game kita tanpa menggunakan framework, ada banyak framework berbasis JavaScript untuk pengembangan kanvas game. Luangkan waktu untuk [membaca tentang ini](https://github.com/collections/javascript-game-engines).
 
 ## Tugas
 
@@ -399,4 +399,4 @@ Meskipun kita menulis game kita tanpa menggunakan framework, ada banyak framewor
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

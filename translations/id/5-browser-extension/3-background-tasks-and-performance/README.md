@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f198c6b817b4b2a99749f4662e7cae98",
-  "translation_date": "2025-08-27T22:20:14+00:00",
+  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
+  "translation_date": "2025-08-29T09:09:11+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "id"
 }
 -->
 # Proyek Ekstensi Browser Bagian 3: Pelajari Tentang Tugas Latar Belakang dan Performa
 
-## Kuis Pra-Pelajaran
+## Kuis Sebelum Pelajaran
 
-[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/27)
+[Kuis sebelum pelajaran](https://ff-quizzes.netlify.app/web/quiz/27)
 
-### Pendahuluan
+### Pengantar
 
 Dalam dua pelajaran terakhir dari modul ini, Anda telah belajar cara membuat formulir dan area tampilan untuk data yang diambil dari API. Ini adalah cara yang sangat standar untuk menciptakan kehadiran web di internet. Anda bahkan telah belajar cara menangani pengambilan data secara asinkron. Ekstensi browser Anda hampir selesai.
 
@@ -25,13 +25,13 @@ Yang tersisa adalah mengelola beberapa tugas latar belakang, termasuk menyegarka
 
 Topik tentang cara membuat situs web Anda sangat cepat di berbagai jenis perangkat, untuk berbagai jenis pengguna, dalam berbagai situasi, tentu saja sangat luas. Berikut adalah beberapa poin yang perlu diingat saat Anda membangun proyek web standar atau ekstensi browser.
 
-Hal pertama yang perlu Anda lakukan untuk memastikan situs Anda berjalan dengan efisien adalah mengumpulkan data tentang performanya. Tempat pertama untuk melakukannya adalah di alat pengembang browser web Anda. Di Edge, Anda dapat memilih tombol "Settings and more" (ikon tiga titik di kanan atas browser), lalu navigasikan ke More Tools > Developer Tools dan buka tab Performance. Anda juga dapat menggunakan pintasan keyboard `Ctrl` + `Shift` + `I` di Windows atau `Option` + `Command` + `I` di Mac untuk membuka alat pengembang.
+Hal pertama yang perlu Anda lakukan untuk memastikan situs Anda berjalan dengan efisien adalah mengumpulkan data tentang performanya. Tempat pertama untuk melakukannya adalah di alat pengembang browser web Anda. Di Edge, Anda dapat memilih tombol "Pengaturan dan lainnya" (ikon tiga titik di kanan atas browser), lalu navigasikan ke Alat Lainnya > Alat Pengembang dan buka tab Performa. Anda juga dapat menggunakan pintasan keyboard `Ctrl` + `Shift` + `I` di Windows atau `Option` + `Command` + `I` di Mac untuk membuka alat pengembang.
 
-Tab Performance berisi alat Profiling. Buka sebuah situs web (coba, misalnya, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) dan klik tombol 'Record', lalu segarkan situs tersebut. Hentikan rekaman kapan saja, dan Anda akan dapat melihat rutinitas yang dihasilkan untuk 'script', 'render', dan 'paint' situs tersebut:
+Tab Performa berisi alat Profiling. Buka sebuah situs web (coba, misalnya, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) dan klik tombol 'Record', lalu segarkan situs tersebut. Hentikan rekaman kapan saja, dan Anda akan dapat melihat rutinitas yang dihasilkan untuk 'script', 'render', dan 'paint' situs tersebut:
 
 ![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.id.png)
 
-✅ Kunjungi [Dokumentasi Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) tentang panel Performance di Edge
+✅ Kunjungi [Dokumentasi Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) tentang panel Performa di Edge
 
 > Tip: untuk mendapatkan pembacaan yang akurat tentang waktu startup situs web Anda, kosongkan cache browser Anda
 
@@ -41,7 +41,7 @@ Dapatkan snapshot performa halaman Anda dengan memilih bagian dari garis waktu p
 
 ![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.id.png)
 
-Periksa panel Event Log untuk melihat apakah ada peristiwa yang memakan waktu lebih dari 15 ms:
+Periksa panel Log Peristiwa untuk melihat apakah ada peristiwa yang memakan waktu lebih dari 15 ms:
 
 ![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.id.png)
 
@@ -49,7 +49,7 @@ Periksa panel Event Log untuk melihat apakah ada peristiwa yang memakan waktu le
 
 ## Pemeriksaan Profiling
 
-Secara umum, ada beberapa "area masalah" yang harus diperhatikan setiap pengembang web saat membangun situs untuk menghindari kejutan buruk saat tiba waktunya untuk menerapkan ke produksi.
+Secara umum, ada beberapa "area masalah" yang harus diperhatikan setiap pengembang web saat membangun situs untuk menghindari kejutan buruk saat tiba waktunya untuk diterapkan ke produksi.
 
 **Ukuran aset**: Web menjadi lebih 'berat', dan dengan demikian lebih lambat, selama beberapa tahun terakhir. Sebagian dari berat ini berkaitan dengan penggunaan gambar.
 
@@ -57,13 +57,13 @@ Secara umum, ada beberapa "area masalah" yang harus diperhatikan setiap pengemba
 
 Praktik yang baik adalah memastikan bahwa gambar Anda dioptimalkan dan disampaikan pada ukuran dan resolusi yang tepat untuk pengguna Anda.
 
-**Traversals DOM**: Browser harus membangun Document Object Model berdasarkan kode yang Anda tulis, jadi demi performa halaman yang baik, penting untuk menjaga tag seminimal mungkin, hanya menggunakan dan menata apa yang dibutuhkan halaman. Dalam hal ini, CSS berlebih yang terkait dengan halaman dapat dioptimalkan; gaya yang hanya perlu digunakan di satu halaman tidak perlu dimasukkan dalam lembar gaya utama, misalnya.
+**Traversals DOM**: Browser harus membangun Model Objek Dokumen berdasarkan kode yang Anda tulis, jadi demi performa halaman yang baik, penting untuk menjaga tag seminimal mungkin, hanya menggunakan dan menata apa yang dibutuhkan halaman. Dalam hal ini, CSS berlebih yang terkait dengan halaman dapat dioptimalkan; gaya yang hanya perlu digunakan pada satu halaman tidak perlu dimasukkan dalam lembar gaya utama, misalnya.
 
 **JavaScript**: Setiap pengembang JavaScript harus memperhatikan skrip 'render-blocking' yang harus dimuat sebelum sisa DOM dapat ditelusuri dan di-paint ke browser. Pertimbangkan untuk menggunakan `defer` dengan skrip inline Anda (seperti yang dilakukan dalam modul Terrarium).
 
 ✅ Coba beberapa situs di [Situs Uji Kecepatan](https://www.webpagetest.org/) untuk mempelajari lebih lanjut tentang pemeriksaan umum yang dilakukan untuk menentukan performa situs.
 
-Sekarang Anda memiliki gambaran tentang bagaimana browser merender aset yang Anda kirimkan kepadanya, mari kita lihat beberapa hal terakhir yang perlu Anda lakukan untuk menyelesaikan ekstensi Anda:
+Sekarang Anda memiliki gambaran tentang bagaimana browser merender aset yang Anda kirimkan, mari kita lihat beberapa hal terakhir yang perlu Anda lakukan untuk menyelesaikan ekstensi Anda:
 
 ### Buat fungsi untuk menghitung warna
 
@@ -144,9 +144,9 @@ function drawIcon(value) {
 
 Dalam kode ini, Anda menambahkan pendengar untuk pesan apa pun yang datang ke pengelola tugas latar belakang. Jika disebut 'updateIcon', maka kode berikut dijalankan untuk menggambar ikon dengan warna yang sesuai menggunakan Canvas API.
 
-✅ Anda akan belajar lebih banyak tentang Canvas API di [pelajaran Space Game](../../6-space-game/2-drawing-to-canvas/README.md).
+✅ Anda akan belajar lebih banyak tentang Canvas API di [pelajaran Game Luar Angkasa](../../6-space-game/2-drawing-to-canvas/README.md).
 
-Sekarang, bangun ulang ekstensi Anda (`npm run build`), segarkan dan luncurkan ekstensi Anda, dan perhatikan perubahan warna. Apakah ini waktu yang tepat untuk menjalankan tugas atau mencuci piring? Sekarang Anda tahu!
+Sekarang, bangun kembali ekstensi Anda (`npm run build`), segarkan dan luncurkan ekstensi Anda, dan lihat perubahan warna. Apakah ini waktu yang tepat untuk menjalankan tugas atau mencuci piring? Sekarang Anda tahu!
 
 Selamat, Anda telah membangun ekstensi browser yang berguna dan belajar lebih banyak tentang cara kerja browser serta cara memprofil performanya.
 
@@ -154,11 +154,11 @@ Selamat, Anda telah membangun ekstensi browser yang berguna dan belajar lebih ba
 
 ## 🚀 Tantangan
 
-Selidiki beberapa situs web open source yang telah ada sejak lama, dan, berdasarkan sejarah GitHub mereka, lihat apakah Anda dapat menentukan bagaimana mereka dioptimalkan selama bertahun-tahun untuk performa, jika ada. Apa titik masalah yang paling umum?
+Selidiki beberapa situs web open source yang telah ada sejak lama, dan, berdasarkan riwayat GitHub mereka, lihat apakah Anda dapat menentukan bagaimana mereka dioptimalkan selama bertahun-tahun untuk performa, jika ada. Apa titik masalah yang paling umum?
 
-## Kuis Pasca-Pelajaran
+## Kuis Setelah Pelajaran
 
-[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/28)
+[Kuis setelah pelajaran](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Tinjauan & Studi Mandiri
 
@@ -173,4 +173,4 @@ Selidiki beberapa cara browser mengukur performa web dengan melihat melalui tab 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa terjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
