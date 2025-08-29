@@ -72,7 +72,12 @@ async function getAccount(user) {
 async function createAccount(accountJson) {
   return new Promise(resolve => {
     setTimeout(() => {
-      const data = JSON.parse(accountJson);
+      let data;
+      try {
+        data = JSON.parse(accountJson);
+      } catch (e) {
+        return resolve({ error: 'Malformed account data' });
+      }
       if (!data.user) return resolve({ error: 'Username required' });
       if (findAccount(data.user)) return resolve({ error: 'User already exists' });
       // Set up initial account structure
