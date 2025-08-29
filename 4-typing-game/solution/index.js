@@ -8,78 +8,96 @@ const quotes = [
 	'Education never ends, Watson. It is a series of lessons, with the greatest for the last.',
 ];
 
-// array for storing the words of the current challenge
+// Game state
 let words = [];
-// stores the index of the word the player is currently typing
 let wordIndex = 0;
-// default value for startTime (will be set on start)
 let startTime = Date.now();
+let timerId = null;
+let timeLeft = 30;
+let gameActive = false;
 
-// grab UI items
+// UI elements
 const quoteElement = document.getElementById('quote');
-const messageElement = document.getElementById('message')
+const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
+const timerElement = document.getElementById('timer');
+const startButton = document.getElementById('start');
 
-document.getElementById('start').addEventListener('click', function () {
-	// get a quote
+// 🕒 Start Timer
+function startTimer() {
+	timeLeft = 30;
+	timerElement.textContent = `Time left: ${timeLeft}s`;
+
+	timerId = setInterval(() => {
+		timeLeft--;
+		timerElement.textContent = `Time left: ${timeLeft}s`;
+
+		if (timeLeft <= 0) {
+			clearInterval(timerId);
+			endGame(false); // time out
+		}
+	}, 1000);
+}
+
+// 🔚 End Game
+function endGame(success) {
+	gameActive = false;
+	clearInterval(timerId);
+	typedValueElement.disabled = true;
+
+	if (success) {
+		const elapsedTime = new Date().getTime() - startTime;
+		messageElement.innerText = `🎉 CONGRATULATIONS! You finished in ${elapsedTime / 1000} seconds.`;
+	} else {
+		messageElement.innerText = '⏰ Time is up! Try again.';
+	}
+}
+
+// 🟢 Start Button Click
+startButton.addEventListener('click', function () {
+	// Pick a random quote
 	const quoteIndex = Math.floor(Math.random() * quotes.length);
 	const quote = quotes[quoteIndex];
-	// Put the quote into an array of words
+
+	// Prepare game state
 	words = quote.split(' ');
-	// reset the word index for tracking
 	wordIndex = 0;
-
-	// UI updates
-	// Create an array of span elements so we can set a class
-	const spanWords = words.map(function(word) { return `<span>${word} </span>`});
-	// Convert into string and set as innerHTML on quote display
-	quoteElement.innerHTML = spanWords.join('');
-	// Highlight the first word
-	quoteElement.childNodes[0].className = 'highlight';
-	// Clear any prior messages
-	messageElement.innerText = '';
-
-	// Setup the textbox
-	// Clear the textbox
+	typedValueElement.disabled = false;
 	typedValueElement.value = '';
-	// set focus
 	typedValueElement.focus();
-	// set the event handler
+	messageElement.innerText = '';
+	gameActive = true;
 
-	// Start the timer
+	// Setup quote
+	const spanWords = words.map(word => `<span>${word} </span>`);
+	quoteElement.innerHTML = spanWords.join('');
+	quoteElement.childNodes[0].className = 'highlight';
+
+	// Start game logic
 	startTime = new Date().getTime();
+	startTimer();
 });
 
-typedValueElement.addEventListener('input', (e) => {
-	// Get the current word
+// 🎯 Typing Handler
+typedValueElement.addEventListener('input', () => {
+	if (!gameActive) return;
+
 	const currentWord = words[wordIndex];
-	// get the current value
 	const typedValue = typedValueElement.value;
 
 	if (typedValue === currentWord && wordIndex === words.length - 1) {
-		// end of quote
-		// Display success
-		const elapsedTime = new Date().getTime() - startTime;
-		const message = `CONGRATULATIONS! You finished in ${elapsedTime / 1000} seconds.`;
-		messageElement.innerText = message;
+		endGame(true);
 	} else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
-		// end of word
-		// clear the typedValueElement for the new word
 		typedValueElement.value = '';
-		// move to the next word
 		wordIndex++;
-		// reset the class name for all elements in quote
+
 		for (const wordElement of quoteElement.childNodes) {
 			wordElement.className = '';
 		}
-		// highlight the new word
 		quoteElement.childNodes[wordIndex].className = 'highlight';
 	} else if (currentWord.startsWith(typedValue)) {
-		// currently correct
-		// highlight the next word
 		typedValueElement.className = '';
 	} else {
-		// error state
 		typedValueElement.className = 'error';
 	}
 });
