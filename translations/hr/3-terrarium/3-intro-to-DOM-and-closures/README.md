@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "30f8903a1f290e3d438dc2c70fe60259",
-  "translation_date": "2025-08-27T22:50:06+00:00",
+  "original_hash": "61c14b27044861e5e69db35dd52c4403",
+  "translation_date": "2025-08-29T12:38:05+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "hr"
 }
 -->
-# Projekt Terarij, 3. dio: Manipulacija DOM-a i Zatvaranje (Closure)
+# Projekt Terarij, 3. dio: Manipulacija DOM-om i zatvaranje (closure)
 
 ![DOM i zatvaranje](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.hr.png)
 > Sketchnote autorice [Tomomi Imura](https://twitter.com/girlie_mac)
@@ -18,25 +18,25 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Uvod
 
-Manipulacija DOM-a, ili "Document Object Model-a", ključni je aspekt razvoja weba. Prema [MDN-u](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "Document Object Model (DOM) je podatkovna reprezentacija objekata koji čine strukturu i sadržaj dokumenta na webu." Izazovi vezani uz manipulaciju DOM-a često su bili razlog za korištenje JavaScript okvira umjesto čistog JavaScripta za upravljanje DOM-om, ali mi ćemo se snaći sami!
+Manipulacija DOM-om, ili "Modelom objekata dokumenta", ključni je aspekt razvoja weba. Prema [MDN-u](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "Model objekata dokumenta (DOM) je podatkovna reprezentacija objekata koji čine strukturu i sadržaj dokumenta na webu." Izazovi vezani uz manipulaciju DOM-om često su bili razlog korištenja JavaScript okvira umjesto čistog JavaScripta za upravljanje DOM-om, ali mi ćemo se snaći sami!
 
-Osim toga, ovaj će vas sat upoznati s idejom [JavaScript zatvaranja (closure)](https://developer.mozilla.org/docs/Web/JavaScript/Closures), što možete zamisliti kao funkciju unutar druge funkcije, gdje unutarnja funkcija ima pristup opsegu vanjske funkcije.
+Osim toga, ovaj će vas sat upoznati s idejom [JavaScript zatvaranja (closure)](https://developer.mozilla.org/docs/Web/JavaScript/Closures), koje možete zamisliti kao funkciju unutar druge funkcije, tako da unutarnja funkcija ima pristup opsegu vanjske funkcije.
 
-> JavaScript zatvaranja su široka i složena tema. Ovaj sat dotiče se osnovne ideje da ćete u kodu ovog terarija pronaći zatvaranje: unutarnju funkciju i vanjsku funkciju konstruirane na način da unutarnja funkcija ima pristup opsegu vanjske funkcije. Za mnogo više informacija o tome kako ovo funkcionira, posjetite [opsežnu dokumentaciju](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
+> JavaScript zatvaranja su široka i složena tema. Ovaj sat dotiče se osnovne ideje da ćete u kodu ovog terarija pronaći zatvaranje: unutarnju funkciju i vanjsku funkciju konstruirane na način koji omogućuje unutarnjoj funkciji pristup opsegu vanjske funkcije. Za mnogo više informacija o tome kako ovo funkcionira, posjetite [opsežnu dokumentaciju](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
 
 Koristit ćemo zatvaranje za manipulaciju DOM-om.
 
-Zamislite DOM kao stablo koje predstavlja sve načine na koje se dokument web stranice može manipulirati. Razni API-ji (Application Program Interfaces) napisani su kako bi programeri, koristeći svoj omiljeni programski jezik, mogli pristupiti DOM-u i uređivati, mijenjati, preuređivati i na druge načine njime upravljati.
+Zamislite DOM kao stablo koje predstavlja sve načine na koje se dokument web stranice može manipulirati. Razni API-ji (sučelja za programske aplikacije) napisani su kako bi programeri, koristeći svoj programski jezik po izboru, mogli pristupiti DOM-u i uređivati, mijenjati, preuređivati i na druge načine njime upravljati.
 
 ![Reprezentacija DOM stabla](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.hr.png)
 
-> Reprezentacija DOM-a i HTML oznaka koje ga referenciraju. Autorica [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+> Reprezentacija DOM-a i HTML oznaka koje ga referenciraju. Izvor: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
-U ovom ćemo satu dovršiti naš interaktivni projekt terarija stvaranjem JavaScripta koji će omogućiti korisniku manipulaciju biljkama na stranici.
+U ovom satu dovršit ćemo naš interaktivni projekt terarija stvaranjem JavaScripta koji će omogućiti korisniku manipulaciju biljkama na stranici.
 
 ### Preduvjet
 
-Trebali biste imati izrađene HTML i CSS datoteke za svoj terarij. Do kraja ovog sata moći ćete premještati biljke u i izvan terarija povlačenjem.
+Trebali biste imati izrađen HTML i CSS za svoj terarij. Do kraja ovog sata moći ćete premještati biljke u i izvan terarija povlačenjem.
 
 ### Zadatak
 
@@ -46,7 +46,7 @@ U svojoj mapi terarija stvorite novu datoteku pod nazivom `script.js`. Uvezite t
 	<script src="./script.js" defer></script>
 ```
 
-> Napomena: koristite `defer` prilikom uvoza vanjske JavaScript datoteke u HTML datoteku kako bi se JavaScript izvršio tek nakon što se HTML datoteka u potpunosti učita. Također možete koristiti atribut `async`, koji omogućuje izvršavanje skripte dok se HTML datoteka još parsira, ali u našem slučaju važno je da HTML elementi budu potpuno dostupni za povlačenje prije nego što omogućimo izvršavanje skripte za povlačenje.
+> Napomena: koristite `defer` prilikom uvoza vanjske JavaScript datoteke u HTML datoteku kako bi se JavaScript izvršio tek nakon što se HTML datoteka potpuno učita. Također možete koristiti atribut `async`, koji omogućuje izvršavanje skripte dok se HTML datoteka još uvijek parsira, ali u našem slučaju važno je da HTML elementi budu potpuno dostupni za povlačenje prije nego što omogućimo izvršavanje skripte za povlačenje.
 ---
 
 ## DOM elementi
@@ -72,7 +72,7 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-Što se ovdje događa? Referencirate dokument i pretražujete njegov DOM kako biste pronašli element s određenim Id-om. Sjetite se da ste u prvom satu o HTML-u dali pojedinačne Id-ove svakoj slici biljke (`id="plant1"`)? Sada ćete iskoristiti taj trud. Nakon što identificirate svaki element, prosljeđujete taj element funkciji pod nazivom `dragElement` koju ćete uskoro izraditi. Tako je element u HTML-u sada omogućen za povlačenje, ili će to uskoro biti.
+Što se ovdje događa? Referencirate dokument i pretražujete njegov DOM kako biste pronašli element s određenim Id-om. Sjetite se da ste u prvom satu o HTML-u dali pojedinačne Id-ove svakoj slici biljke (`id="plant1"`)? Sada ćete iskoristiti taj trud. Nakon što identificirate svaki element, prosljeđujete taj element funkciji pod nazivom `dragElement` koju ćete uskoro izraditi. Tako je element u HTML-u sada omogućen za povlačenje ili će to uskoro biti.
 
 ✅ Zašto referenciramo elemente prema Id-u? Zašto ne prema njihovoj CSS klasi? Možete se prisjetiti prethodnog sata o CSS-u kako biste odgovorili na ovo pitanje.
 
@@ -96,13 +96,13 @@ displayCandy();
 console.log(candy)
 ```
 
-U ovom primjeru, funkcija `displayCandy` okružuje funkciju koja dodaje novu vrstu slatkiša u niz koji već postoji u funkciji. Ako biste pokrenuli ovaj kod, niz `candy` bio bi nedefiniran jer je lokalna varijabla (lokalna za zatvaranje).
+U ovom primjeru, funkcija `displayCandy` obuhvaća funkciju koja dodaje novu vrstu slatkiša u niz koji već postoji u funkciji. Ako biste pokrenuli ovaj kod, niz `candy` bio bi nedefiniran jer je to lokalna varijabla (lokalna za zatvaranje).
 
 ✅ Kako možete učiniti niz `candy` dostupnim? Pokušajte ga premjestiti izvan zatvaranja. Na taj način niz postaje globalan, umjesto da ostane dostupan samo lokalnom opsegu zatvaranja.
 
 ### Zadatak
 
-Ispod deklaracija elemenata u `script.js` stvorite funkciju:
+Ispod deklaracija elemenata u `script.js`, stvorite funkciju:
 
 ```javascript
 function dragElement(terrariumElement) {
@@ -115,11 +115,11 @@ function dragElement(terrariumElement) {
 }
 ```
 
-`dragElement` dobiva svoj objekt `terrariumElement` iz deklaracija na vrhu skripte. Zatim postavljate neke lokalne pozicije na `0` za objekt proslijeđen u funkciju. To su lokalne varijable koje će se manipulirati za svaki element dok dodajete funkcionalnost povlačenja i ispuštanja unutar zatvaranja za svaki element. Terarij će biti popunjen ovim povučenim elementima, pa aplikacija mora pratiti gdje su postavljeni.
+`dragElement` dobiva svoj objekt `terrariumElement` iz deklaracija na vrhu skripte. Zatim postavljate neke lokalne pozicije na `0` za objekt proslijeđen funkciji. Ovo su lokalne varijable koje će se manipulirati za svaki element dok dodajete funkcionalnost povlačenja i ispuštanja unutar zatvaranja za svaki element. Terarij će biti popunjen ovim povučenim elementima, pa aplikacija mora pratiti gdje su postavljeni.
 
-Osim toga, `terrariumElement` koji se prosljeđuje ovoj funkciji dodjeljuje se događaj `pointerdown`, koji je dio [web API-ja](https://developer.mozilla.org/docs/Web/API) dizajniranih za pomoć pri upravljanju DOM-om. `onpointerdown` se aktivira kada se pritisne gumb ili, u našem slučaju, dodirne element koji se može povući. Ovaj rukovatelj događajima radi i na [web i mobilnim preglednicima](https://caniuse.com/?search=onpointerdown), uz nekoliko iznimaka.
+Osim toga, `terrariumElement` koji se prosljeđuje ovoj funkciji dodjeljuje se događaj `pointerdown`, koji je dio [web API-ja](https://developer.mozilla.org/docs/Web/API) dizajniranih za pomoć pri upravljanju DOM-om. `onpointerdown` se aktivira kada se pritisne gumb ili, u našem slučaju, kada se dodirne element koji se može povući. Ovaj rukovatelj događajima radi i na [web i mobilnim preglednicima](https://caniuse.com/?search=onpointerdown), uz nekoliko iznimaka.
 
-✅ [Rukovatelj događajima `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) ima mnogo veću podršku među preglednicima; zašto ga ovdje ne biste koristili? Razmislite o točnoj vrsti interakcije na ekranu koju pokušavate stvoriti.
+✅ [Rukovatelj događajima `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) ima mnogo veću podršku među preglednicima; zašto ga ovdje ne biste koristili? Razmislite o točnoj vrsti interakcije sa zaslonom koju pokušavate stvoriti.
 
 ---
 
@@ -138,15 +138,15 @@ function pointerDrag(e) {
 }
 ```
 
-Događa se nekoliko stvari. Prvo, sprječavate zadane događaje koji se obično događaju na `pointerdown` pomoću `e.preventDefault();`. Na taj način imate veću kontrolu nad ponašanjem sučelja.
+Događa se nekoliko stvari. Prvo, sprječavate da se zadani događaji koji se obično događaju na `pointerdown` dogode pomoću `e.preventDefault();`. Na taj način imate veću kontrolu nad ponašanjem sučelja.
 
 > Vratite se na ovu liniju kada potpuno izgradite datoteku skripte i pokušajte bez `e.preventDefault()` - što se događa?
 
-Drugo, otvorite `index.html` u prozoru preglednika i pregledajte sučelje. Kada kliknete na biljku, možete vidjeti kako se bilježi događaj 'e'. Istražite događaj kako biste vidjeli koliko se informacija prikuplja jednim događajem pointer down!  
+Drugo, otvorite `index.html` u prozoru preglednika i pregledajte sučelje. Kada kliknete na biljku, možete vidjeti kako se bilježi događaj 'e'. Istražite događaj kako biste vidjeli koliko se informacija prikuplja jednim događajem pointerdown!  
 
-Zatim, obratite pažnju na to kako se lokalne varijable `pos3` i `pos4` postavljaju na e.clientX. Te vrijednosti možete pronaći u inspekcijskom prozoru. Ove vrijednosti bilježe x i y koordinate biljke u trenutku kada je kliknete ili dodirnete. Trebat će vam precizna kontrola nad ponašanjem biljaka dok ih klikate i povlačite, pa pratite njihove koordinate.
+Zatim, primijetite kako su lokalne varijable `pos3` i `pos4` postavljene na e.clientX. Vrijednosti `e` možete pronaći u inspekcijskom prozoru. Ove vrijednosti bilježe x i y koordinate biljke u trenutku kada je kliknete ili dodirnete. Trebat će vam precizna kontrola nad ponašanjem biljaka dok ih klikate i povlačite, pa pratite njihove koordinate.
 
-✅ Postaje li jasnije zašto je cijela aplikacija izgrađena s jednim velikim zatvaranjem? Da nije, kako biste održavali opseg za svaku od 14 biljaka koje se mogu povući?
+✅ Postaje li jasnije zašto je cijela aplikacija izgrađena s jednim velikim zatvaranjem? Da nije, kako biste održavali opseg za svaku od 14 biljaka koje se mogu povlačiti?
 
 Dovršite početnu funkciju dodavanjem još dvije manipulacije događajima pokazivača ispod `pos4 = e.clientY`:
 
@@ -154,11 +154,11 @@ Dovršite početnu funkciju dodavanjem još dvije manipulacije događajima pokaz
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
-Sada naznačujete da želite da se biljka povlači zajedno s pokazivačem dok ga pomičete, i da se gesta povlačenja zaustavi kada prestanete odabirati biljku. `onpointermove` i `onpointerup` dio su istog API-ja kao i `onpointerdown`. Sučelje će sada bacati pogreške jer još niste definirali funkcije `elementDrag` i `stopElementDrag`, pa ih izradite sljedeće.
+Sada naznačujete da želite da se biljka povlači zajedno s pokazivačem dok ga pomičete i da se gesta povlačenja zaustavi kada poništite odabir biljke. `onpointermove` i `onpointerup` dio su istog API-ja kao i `onpointerdown`. Sučelje će sada bacati pogreške jer još niste definirali funkcije `elementDrag` i `stopElementDrag`, pa ih sljedeće izradite.
 
 ## Funkcije elementDrag i stopElementDrag
 
-Dovršit ćete svoje zatvaranje dodavanjem još dvije unutarnje funkcije koje će upravljati onim što se događa kada povučete biljku i prestanete je povlačiti. Ponašanje koje želite jest da možete povući bilo koju biljku u bilo kojem trenutku i postaviti je bilo gdje na ekranu. Ovo sučelje je prilično neograničeno (nema zone ispuštanja, na primjer) kako biste mogli dizajnirati svoj terarij točno onako kako želite dodavanjem, uklanjanjem i premještanjem biljaka.
+Dovršit ćete svoje zatvaranje dodavanjem još dvije unutarnje funkcije koje će upravljati onim što se događa kada povučete biljku i prestanete je povlačiti. Ponašanje koje želite jest da možete povući bilo koju biljku u bilo kojem trenutku i postaviti je bilo gdje na zaslonu. Ovo sučelje je prilično neograničeno (nema zone ispuštanja, na primjer) kako biste mogli dizajnirati svoj terarij točno onako kako želite dodavanjem, uklanjanjem i premještanjem biljaka.
 
 ### Zadatak
 
@@ -177,11 +177,11 @@ function elementDrag(e) {
 ```
 U ovoj funkciji puno uređujete početne pozicije 1-4 koje ste postavili kao lokalne varijable u vanjskoj funkciji. Što se ovdje događa?
 
-Dok povlačite, ponovno dodjeljujete `pos1` tako da bude jednak `pos3` (koji ste ranije postavili kao `e.clientX`) minus trenutna vrijednost `e.clientX`. Sličnu operaciju radite i za `pos2`. Zatim ponovno postavljate `pos3` i `pos4` na nove X i Y koordinate elementa. Možete pratiti ove promjene u konzoli dok povlačite. Zatim manipulirate CSS stilom biljke kako biste postavili njezinu novu poziciju na temelju novih pozicija `pos1` i `pos2`, računajući gornje i lijeve X i Y koordinate biljke na temelju usporedbe njezinog pomaka s tim novim pozicijama.
+Dok povlačite, ponovno dodjeljujete `pos1` tako da bude jednak `pos3` (koji ste ranije postavili kao `e.clientX`) minus trenutna vrijednost `e.clientX`. Sličnu operaciju radite za `pos2`. Zatim ponovno postavljate `pos3` i `pos4` na nove X i Y koordinate elementa. Možete pratiti ove promjene u konzoli dok povlačite. Zatim manipulirate CSS stilom biljke kako biste postavili njezin novi položaj na temelju novih pozicija `pos1` i `pos2`, računajući X i Y koordinate biljke na temelju usporedbe njezina pomaka s tim novim pozicijama.
 
-> `offsetTop` i `offsetLeft` su CSS svojstva koja postavljaju poziciju elementa na temelju pozicije njegovog roditelja; roditelj može biti bilo koji element koji nije pozicioniran kao `static`. 
+> `offsetTop` i `offsetLeft` su CSS svojstva koja postavljaju položaj elementa na temelju položaja njegovog roditelja; roditelj može biti bilo koji element koji nije postavljen kao `static`. 
 
-Sve ovo ponovno izračunavanje pozicija omogućuje vam fino podešavanje ponašanja terarija i njegovih biljaka.
+Sve ovo ponovno izračunavanje položaja omogućuje vam fino podešavanje ponašanja terarija i njegovih biljaka.
 
 ### Zadatak 
 
@@ -194,19 +194,19 @@ function stopElementDrag() {
 }
 ```
 
-Ova mala funkcija resetira događaje `onpointerup` i `onpointermove` kako biste mogli ponovno započeti povlačenje biljke ili započeti povlačenje nove biljke.
+Ova mala funkcija resetira događaje `onpointerup` i `onpointermove` tako da možete ili ponovno započeti povlačenje biljke ili započeti povlačenje nove biljke.
 
 ✅ Što se događa ako ne postavite ove događaje na null?
 
 Sada ste dovršili svoj projekt!
 
-🥇Čestitamo! Završili ste svoj prekrasni terarij. ![završeni terarij](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.hr.png)
+🥇Čestitamo! Završili ste svoj prekrasan terarij. ![završeni terarij](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.hr.png)
 
 ---
 
 ## 🚀Izazov
 
-Dodajte novi rukovatelj događajima svom zatvaranju kako biste učinili nešto više s biljkama; na primjer, dvaput kliknite biljku kako biste je premjestili u prvi plan. Budite kreativni!
+Dodajte novi rukovatelj događajima svom zatvaranju kako biste učinili nešto više s biljkama; na primjer, dvostrukim klikom na biljku dovedite je u prvi plan. Budite kreativni!
 
 ## Kviz nakon predavanja
 
@@ -214,7 +214,7 @@ Dodajte novi rukovatelj događajima svom zatvaranju kako biste učinili nešto v
 
 ## Pregled i samostalno učenje
 
-Iako povlačenje elemenata po ekranu izgleda trivijalno, postoji mnogo načina za to i mnogo zamki, ovisno o efektu koji želite postići. Zapravo, postoji cijeli [API za povlačenje i ispuštanje](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) koji možete isprobati. Nismo ga koristili u ovom modulu jer je efekt koji smo željeli bio nešto drugačiji, ali isprobajte ovaj API na vlastitom projektu i vidite što možete postići.
+Iako povlačenje elemenata po zaslonu izgleda trivijalno, postoji mnogo načina za to i mnogo zamki, ovisno o efektu koji želite postići. Zapravo, postoji cijeli [API za povlačenje i ispuštanje](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) koji možete isprobati. Nismo ga koristili u ovom modulu jer je efekt koji smo željeli bio nešto drugačiji, ali isprobajte ovaj API na vlastitom projektu i pogledajte što možete postići.
 
 Pronađite više informacija o događajima pokazivača na [W3C dokumentaciji](https://www.w3.org/TR/pointerevents1/) i na [MDN web dokumentaciji](https://developer.mozilla.org/docs/Web/API/Pointer_events).
 
@@ -227,4 +227,4 @@ Uvijek provjerite mogućnosti preglednika koristeći [CanIUse.com](https://caniu
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7aa6e4f270d38d9cb17f2b5bd86b863d",
-  "translation_date": "2025-08-27T22:52:50+00:00",
+  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
+  "translation_date": "2025-08-29T12:38:45+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "hr"
 }
@@ -13,23 +13,23 @@ Ova lekcija pokriva osnove korištenja [VSCode.dev](https://vscode.dev), web-baz
 
 ## Ciljevi učenja
 
-U ovoj lekciji naučit ćete kako:
+U ovoj lekciji naučit ćete:
 
-- Koristiti uređivač koda u projektu
-- Pratiti promjene pomoću verzioniranja
-- Prilagoditi uređivač za razvoj
+- Kako koristiti uređivač koda u projektu
+- Kako pratiti promjene pomoću verzioniranja
+- Kako prilagoditi uređivač za razvoj
 
 ### Preduvjeti
 
-Prije nego što započnete, trebate kreirati račun na [GitHub](https://github.com). Posjetite [GitHub](https://github.com/) i kreirajte račun ako ga već nemate.
+Prije nego što počnete, trebate kreirati račun na [GitHub](https://github.com). Posjetite [GitHub](https://github.com/) i kreirajte račun ako ga već nemate.
 
 ### Uvod
 
-Uređivač koda je ključni alat za pisanje programa i suradnju na postojećim projektima. Kada razumijete osnove uređivača i kako koristiti njegove značajke, moći ćete ih primijeniti pri pisanju koda.
+Uređivač koda je ključni alat za pisanje programa i suradnju na postojećim projektima kodiranja. Kada razumijete osnove uređivača i kako koristiti njegove značajke, moći ćete ih primijeniti pri pisanju koda.
 
 ## Početak rada s VSCode.dev
 
-[VSCode.dev](https://vscode.dev) je uređivač koda na webu. Ne trebate instalirati ništa da biste ga koristili, baš kao da otvarate bilo koju drugu web stranicu. Za početak, otvorite sljedeći link: [https://vscode.dev](https://vscode.dev). Ako niste prijavljeni na [GitHub](https://github.com/), slijedite upute za prijavu ili kreiranje novog računa, a zatim se prijavite.
+[VSCode.dev](https://vscode.dev) je uređivač koda na webu. Ne trebate instalirati ništa da biste ga koristili, baš kao da otvarate bilo koju drugu web stranicu. Za početak rada s uređivačem, otvorite sljedeći link: [https://vscode.dev](https://vscode.dev). Ako niste prijavljeni na [GitHub](https://github.com/), slijedite upute za prijavu ili kreiranje novog računa, a zatim se prijavite.
 
 Kada se učita, trebao bi izgledati slično ovoj slici:
 
@@ -37,13 +37,13 @@ Kada se učita, trebao bi izgledati slično ovoj slici:
 
 Postoje tri glavna dijela, počevši od krajnje lijeve strane prema desno:
 
-1. _Aktivna traka_ koja uključuje neke ikone, poput povećala 🔎, zupčanika ⚙️ i nekoliko drugih.
-2. Proširena aktivna traka koja prema zadanim postavkama prikazuje _Explorer_, nazvana _bočna traka_.
-3. I na kraju, područje koda na desnoj strani.
+1. _Traka aktivnosti_ koja uključuje neke ikone, poput povećala 🔎, zupčanika ⚙️ i nekoliko drugih.
+2. Proširena traka aktivnosti koja prema zadanim postavkama prikazuje _Explorer_, nazvana _bočna traka_.
+3. I na kraju, područje koda s desne strane.
 
 Kliknite na svaku od ikona kako biste prikazali različite izbornike. Kada završite, kliknite na _Explorer_ kako biste se vratili na početnu točku.
 
-Kada počnete stvarati kod ili mijenjati postojeći kod, to će se događati u najvećem području na desnoj strani. Ovo područje koristit ćete i za pregled postojećeg koda, što ćete učiniti sljedeće.
+Kada počnete stvarati kod ili mijenjati postojeći kod, to će se događati u najvećem području s desne strane. Ovo područje koristit ćete i za vizualizaciju postojećeg koda, što ćete učiniti sljedeće.
 
 ## Otvaranje GitHub repozitorija
 
@@ -55,47 +55,47 @@ Koristite sam uređivač za otvaranje udaljenog repozitorija. Ako odete na [VSCo
 
 ![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.hr.png)
 
-Također možete koristiti paletu naredbi. Paleta naredbi je okvir za unos u koji možete upisati bilo koju riječ koja je dio naredbe ili radnje kako biste pronašli odgovarajuću naredbu za izvršenje. Koristite izbornik u gornjem lijevom kutu, zatim odaberite _View_, a potom _Command Palette_, ili koristite sljedeću tipkovničku prečicu: Ctrl-Shift-P (na MacOS-u bi to bilo Command-Shift-P).
+Također možete koristiti paletu naredbi. Paleta naredbi je okvir za unos u koji možete upisati bilo koju riječ koja je dio naredbe ili akcije kako biste pronašli odgovarajuću naredbu za izvršenje. Koristite izbornik u gornjem lijevom kutu, zatim odaberite _View_, a potom _Command Palette_, ili koristite sljedeću tipkovničku prečicu: Ctrl-Shift-P (na MacOS-u bi to bilo Command-Shift-P).
 
 ![Palette Menu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.hr.png)
 
-Kada se izbornik otvori, upišite _open remote repository_, a zatim odaberite prvu opciju. Pojavit će se više repozitorija u kojima sudjelujete ili koje ste nedavno otvorili. Također možete koristiti puni GitHub URL za odabir jednog. Koristite sljedeći URL i zalijepite ga u okvir:
+Kada se izbornik otvori, upišite _open remote repository_, a zatim odaberite prvu opciju. Više repozitorija u kojima sudjelujete ili koje ste nedavno otvorili će se prikazati. Također možete koristiti puni GitHub URL za odabir jednog. Koristite sljedeći URL i zalijepite ga u okvir:
 
 ```
 https://github.com/microsoft/Web-Dev-For-Beginners
 ```
 
-✅ Ako je uspješno, vidjet ćete sve datoteke za ovaj repozitorij učitane u uređivaču teksta.
+✅ Ako je uspješno, vidjet ćete sve datoteke tog repozitorija učitane u uređivaču teksta.
 
 ### 2. Korištenjem URL-a
 
-Možete koristiti i URL izravno za učitavanje repozitorija. Na primjer, puni URL za trenutni repozitorij je [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), ali možete zamijeniti GitHub domenu s `VSCode.dev/github` i učitati repozitorij izravno. Rezultirajući URL bio bi [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Također možete koristiti URL izravno za učitavanje repozitorija. Na primjer, puni URL za trenutni repozitorij je [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), ali možete zamijeniti GitHub domenu s `VSCode.dev/github` i učitati repozitorij izravno. Rezultirajući URL bio bi [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
 
 ## Uređivanje datoteka
 
-Nakon što ste otvorili repozitorij u pregledniku/vscode.dev, sljedeći korak je napraviti ažuriranja ili promjene u projektu.
+Kada otvorite repozitorij u pregledniku/vscode.dev, sljedeći korak je ažuriranje ili izmjena projekta.
 
 ### 1. Kreiranje nove datoteke
 
-Možete kreirati datoteku unutar postojećeg foldera ili je kreirati u glavnom direktoriju/folderu. Za kreiranje nove datoteke, otvorite lokaciju/direktorij u koji želite spremiti datoteku, odaberite ikonu _'New file ...'_ na aktivnoj traci _(lijevo)_, dodijelite joj ime i pritisnite enter.
+Možete kreirati datoteku unutar postojećeg foldera ili je kreirati u glavnom direktoriju/folderu. Za kreiranje nove datoteke, otvorite lokaciju/direktorij u koji želite spremiti datoteku i odaberite ikonu _'New file ...'_ na traci aktivnosti _(lijevo)_, dodijelite joj ime i pritisnite enter.
 
 ![Create a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.hr.png)
 
-### 2. Uređivanje i spremanje datoteke u repozitorij
+### 2. Uređivanje i spremanje datoteke u repozitoriju
 
-Korištenje vscode.dev je korisno kad želite brzo ažurirati svoj projekt bez potrebe za lokalnim učitavanjem softvera.  
-Za ažuriranje koda, kliknite na ikonu 'Explorer', također smještenu na aktivnoj traci, kako biste pregledali datoteke i foldere u repozitoriju.  
+Korištenje vscode.dev je korisno kad god želite brzo ažurirati svoj projekt bez potrebe za lokalnim učitavanjem softvera.  
+Za ažuriranje koda, kliknite na ikonu 'Explorer', također smještenu na traci aktivnosti, kako biste vidjeli datoteke i foldere u repozitoriju.  
 Odaberite datoteku kako biste je otvorili u području koda, napravite promjene i spremite.
 
 ![Edit a file](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.hr.png)
 
-Kada završite s ažuriranjem projekta, odaberite ikonu _`source control`_ koja sadrži sve nove promjene koje ste napravili u repozitoriju.
+Kada završite s ažuriranjem projekta, odaberite ikonu _`source control`_ koja sadrži sve nove promjene koje ste napravili u svom repozitoriju.
 
-Za pregled promjena koje ste napravili u projektu, odaberite datoteku(e) u folderu `Changes` na proširenoj aktivnoj traci. Ovo će otvoriti 'Working Tree' kako biste vizualno vidjeli promjene koje ste napravili u datoteci. Crvena boja označava uklanjanje iz projekta, dok zelena označava dodavanje.
+Za pregled promjena koje ste napravili u projektu, odaberite datoteku(e) u folderu `Changes` na proširenoj traci aktivnosti. Ovo će otvoriti 'Working Tree' kako biste vizualno vidjeli promjene koje ste napravili u datoteci. Crvena boja označava uklanjanje iz projekta, dok zelena označava dodavanje.
 
 ![View changes](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.hr.png)
 
-Ako ste zadovoljni promjenama koje ste napravili, zadržite pokazivač na folderu `Changes` i kliknite gumb `+` kako biste pripremili promjene za predaju. Priprema znači da ste spremni predati promjene na GitHub.
+Ako ste zadovoljni promjenama koje ste napravili, zadržite pokazivač na folderu `Changes` i kliknite gumb `+` kako biste pripremili promjene za predaju. Priprema znači pripremanje vaših promjena za predaju na GitHub.
 
 Ako, međutim, niste zadovoljni nekim promjenama i želite ih odbaciti, zadržite pokazivač na folderu `Changes` i odaberite ikonu `undo`.
 
@@ -107,9 +107,9 @@ Kada završite s radom na projektu, odaberite ikonu `hamburger menu` u gornjem l
 
 ## Korištenje ekstenzija
 
-Instaliranje ekstenzija na VSCode omogućuje dodavanje novih značajki i prilagodbu opcija za razvojno okruženje u uređivaču kako biste poboljšali tijek rada. Ove ekstenzije također pomažu dodati podršku za više programskih jezika i često su generičke ili specifične za određeni jezik.
+Instaliranje ekstenzija na VSCode omogućuje dodavanje novih značajki i prilagodbu opcija razvojnog okruženja u uređivaču kako biste poboljšali tijek rada. Ove ekstenzije također pomažu dodati podršku za više programskih jezika i često su generičke ili specifične za određeni jezik.
 
-Za pregled popisa svih dostupnih ekstenzija, kliknite na ikonu _`Extensions`_ na aktivnoj traci i počnite upisivati ime ekstenzije u tekstualno polje označeno _'Search Extensions in Marketplace'_.  
+Za pregled popisa svih dostupnih ekstenzija, kliknite na ikonu _`Extensions`_ na traci aktivnosti i počnite upisivati ime ekstenzije u tekstualno polje označeno _'Search Extensions in Marketplace'_.  
 Vidjet ćete popis ekstenzija, od kojih svaka sadrži **ime ekstenzije, ime izdavača, kratki opis, broj preuzimanja** i **ocjenu zvjezdicama**.
 
 ![Extension details](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.hr.png)
@@ -120,9 +120,9 @@ Također možete pregledati sve prethodno instalirane ekstenzije proširivanjem 
 
 ### 1. Instaliranje ekstenzija
 
-Za instaliranje ekstenzije, upišite ime ekstenzije u polje za pretraživanje i kliknite na nju kako biste vidjeli dodatne informacije o ekstenziji u području koda kada se pojavi na proširenoj aktivnoj traci.
+Za instaliranje ekstenzije, upišite ime ekstenzije u polje za pretraživanje i kliknite na nju kako biste vidjeli dodatne informacije o ekstenziji u području koda kada se pojavi na proširenoj traci aktivnosti.
 
-Možete kliknuti _plavi gumb za instalaciju_ na proširenoj aktivnoj traci za instalaciju ili koristiti gumb za instalaciju koji se pojavljuje u području koda kada odaberete ekstenziju za učitavanje dodatnih informacija.
+Možete kliknuti _plavi gumb za instalaciju_ na proširenoj traci aktivnosti za instalaciju ili koristiti gumb za instalaciju koji se pojavljuje u području koda kada odaberete ekstenziju za učitavanje dodatnih informacija.
 
 ![Install extensions](../../../../8-code-editor/images/install-extension.gif)
 
@@ -138,9 +138,9 @@ Nakon instaliranja i korištenja ekstenzije, vscode.dev nudi opcije za upravljan
 
 - **Onemogućiti:** _(Privremeno onemogućite ekstenziju kada vam više nije potrebna, ali je ne želite potpuno deinstalirati)_
 
-    Odaberite instaliranu ekstenziju na proširenoj aktivnoj traci > kliknite ikonu zupčanika > odaberite 'Disable' ili 'Disable (Workspace)' **ILI** otvorite ekstenziju u području koda i kliknite plavi gumb Disable.
+    Odaberite instaliranu ekstenziju na proširenoj traci aktivnosti > kliknite ikonu zupčanika > odaberite 'Disable' ili 'Disable (Workspace)' **ILI** otvorite ekstenziju u području koda i kliknite plavi gumb Disable.
 
-- **Deinstalirati:** Odaberite instaliranu ekstenziju na proširenoj aktivnoj traci > kliknite ikonu zupčanika > odaberite 'Uninstall' **ILI** otvorite ekstenziju u području koda i kliknite plavi gumb Uninstall.
+- **Deinstalirati:** Odaberite instaliranu ekstenziju na proširenoj traci aktivnosti > kliknite ikonu zupčanika > odaberite 'Uninstall' **ILI** otvorite ekstenziju u području koda i kliknite plavi gumb Uninstall.
 
 ---
 
@@ -155,4 +155,4 @@ Pročitajte više o [VSCode.dev](https://code.visualstudio.com/docs/editor/vscod
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.

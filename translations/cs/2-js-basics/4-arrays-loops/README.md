@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-28T04:10:34+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T10:54:39+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "cs"
 }
@@ -27,7 +27,7 @@ Tato lekce se zabývá základy JavaScriptu, jazyka, který zajišťuje interakt
 
 ## Pole
 
-Práce s daty je běžným úkolem v každém programovacím jazyce, a je mnohem jednodušší, když jsou data organizována ve strukturovaném formátu, jako jsou pole. V polích jsou data uložena ve struktuře podobné seznamu. Jednou z hlavních výhod polí je, že můžete uložit různé typy dat do jednoho pole.
+Práce s daty je běžný úkol v každém programovacím jazyce, a je mnohem jednodušší, když jsou data organizována ve strukturovaném formátu, jako jsou pole. V polích jsou data uložena ve struktuře podobné seznamu. Jednou z hlavních výhod polí je, že můžete uložit různé typy dat do jednoho pole.
 
 ✅ Pole jsou všude kolem nás! Dokážete si představit příklad pole z reálného života, například pole solárních panelů?
 
@@ -43,9 +43,9 @@ Toto je prázdné pole, ale pole mohou být deklarována již naplněná daty. V
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 ```
 
-Hodnotám v poli je přiřazena jedinečná hodnota nazývaná **index**, což je celé číslo, které je přiřazeno na základě jeho vzdálenosti od začátku pole. V příkladu výše má řetězcová hodnota "Chocolate" index 0 a index "Rocky Road" je 4. Pomocí indexu a hranatých závorek můžete získat, změnit nebo vložit hodnoty pole.
+Hodnotám v poli je přiřazena jedinečná hodnota nazývaná **index**, což je celé číslo, které je přiřazeno na základě jeho vzdálenosti od začátku pole. V příkladu výše má řetězcová hodnota "Chocolate" index 0 a index "Rocky Road" je 4. Použijte index s hranatými závorkami k získání, změně nebo vložení hodnot pole.
 
-✅ Překvapuje vás, že pole začínají na indexu nula? V některých programovacích jazycích začínají indexy na 1. Je za tím zajímavá historie, kterou si můžete [přečíst na Wikipedii](https://en.wikipedia.org/wiki/Zero-based_numbering).
+✅ Překvapuje vás, že pole začínají na indexu nula? V některých programovacích jazycích začínají indexy na 1. Existuje zajímavá historie kolem tohoto, kterou si můžete [přečíst na Wikipedii](https://en.wikipedia.org/wiki/Zero-based_numbering).
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
@@ -81,9 +81,9 @@ Cykly nám umožňují provádět opakující se nebo **iterativní** úkoly a m
 
 ### For cyklus
 
-Cyklus `for` vyžaduje 3 části pro iteraci:
-- `counter` Proměnná, která je obvykle inicializována číslem a počítá počet iterací
-- `condition` Výraz, který používá operátory porovnání a způsobí zastavení cyklu, když je `false`
+Cyklus `for` vyžaduje 3 části k iteraci:
+- `counter` Proměnná, která je obvykle inicializována číslem, které počítá počet iterací
+- `condition` Výraz, který používá operátory porovnání k zastavení cyklu, když je `false`
 - `iteration-expression` Spouští se na konci každé iterace, obvykle se používá ke změně hodnoty counteru
   
 ```javascript
@@ -93,7 +93,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-✅ Spusťte tento kód v konzoli prohlížeče. Co se stane, když provedete malé změny v counteru, podmínce nebo výrazu iterace? Dokážete ho spustit pozpátku, vytvořit odpočítávání?
+✅ Spusťte tento kód v konzoli prohlížeče. Co se stane, když provedete malé změny v counteru, podmínce nebo iterativním výrazu? Dokážete ho spustit pozpátku, vytvořit odpočítávání?
 
 ### While cyklus
 
@@ -128,12 +128,12 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ## 🚀 Výzva
 
-Existují i jiné způsoby procházení polí než pomocí for a while cyklů. Jsou to [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) a [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Přepište svůj cyklus pole pomocí jedné z těchto technik.
+Existují i jiné způsoby procházení polí než pomocí for a while cyklů. Existují [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) a [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Přepište svůj cyklus pole pomocí jedné z těchto technik.
 
 ## Kvíz po lekci
 [Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/14)
 
-## Přehled a samostudium
+## Přehled & Samostudium
 
 Pole v JavaScriptu mají mnoho metod, které jsou velmi užitečné pro manipulaci s daty. [Přečtěte si o těchto metodách](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) a vyzkoušejte některé z nich (jako push, pop, slice a splice) na poli podle svého návrhu.
 
@@ -144,4 +144,4 @@ Pole v JavaScriptu mají mnoho metod, které jsou velmi užitečné pro manipula
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádné nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.

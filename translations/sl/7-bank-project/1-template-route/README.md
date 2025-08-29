@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-27T22:11:14+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T12:46:33+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "sl"
 }
@@ -21,11 +21,11 @@ V tej lekciji bomo postavili temelje za ustvarjanje bančne spletne aplikacije, 
 
 ### Predpogoji
 
-Za testiranje spletne aplikacije, ki jo bomo ustvarili v tej lekciji, potrebujete lokalni spletni strežnik. Če ga nimate, lahko namestite [Node.js](https://nodejs.org) in uporabite ukaz `npx lite-server` iz vaše projektne mape. Ta ukaz bo ustvaril lokalni spletni strežnik in odprl vašo aplikacijo v brskalniku.
+Za testiranje spletne aplikacije, ki jo bomo ustvarili v tej lekciji, potrebujete lokalni spletni strežnik. Če ga nimate, lahko namestite [Node.js](https://nodejs.org) in uporabite ukaz `npx lite-server` iz svoje projektne mape. Ta ukaz bo ustvaril lokalni spletni strežnik in odprl vašo aplikacijo v brskalniku.
 
 ### Priprava
 
-Na svojem računalniku ustvarite mapo z imenom `bank` in v njej datoteko z imenom `index.html`. Začeli bomo s tem HTML [osnovnim kodnim vzorcem](https://en.wikipedia.org/wiki/Boilerplate_code):
+Na svojem računalniku ustvarite mapo z imenom `bank` in v njej datoteko z imenom `index.html`. Začeli bomo s tem HTML [osnovnim kodnim ogrodjem](https://en.wikipedia.org/wiki/Boilerplate_code):
 
 ```html
 <!DOCTYPE html>
@@ -50,7 +50,7 @@ Na svojem računalniku ustvarite mapo z imenom `bank` in v njej datoteko z imeno
 - Ob preklopu zaslona morate ponovno naložiti celoten HTML, kar je lahko počasno.
 - Težko je deliti podatke med različnimi zasloni.
 
-Drugi pristop je uporaba ene same HTML datoteke, v kateri definirate več [HTML predlog](https://developer.mozilla.org/docs/Web/HTML/Element/template) z uporabo elementa `<template>`. Predloga je ponovno uporaben HTML blok, ki ga brskalnik ne prikaže, in ga je treba ustvariti med izvajanjem z uporabo JavaScripta.
+Drugi pristop je, da imate samo eno HTML datoteko in definirate več [HTML predlog](https://developer.mozilla.org/docs/Web/HTML/Element/template) z uporabo elementa `<template>`. Predloga je ponovno uporabljiv HTML blok, ki ga brskalnik ne prikaže, in ga je treba obdelati med izvajanjem z uporabo JavaScripta.
 
 ### Naloga
 
@@ -64,7 +64,7 @@ Dodelili smo mu `id`, da ga bomo kasneje lažje našli z JavaScriptom.
 
 > Nasvet: Ker bo vsebina tega elementa zamenjana, lahko vanj postavimo sporočilo ali indikator nalaganja, ki bo prikazan med nalaganjem aplikacije.
 
-Nato dodajmo spodaj HTML predlogo za stran za prijavo. Za zdaj bomo vanjo postavili samo naslov in razdelek, ki vsebuje povezavo za navigacijo.
+Nato dodajmo spodaj HTML predlogo za stran za prijavo. Za zdaj bomo vanjo postavili samo naslov in razdelek, ki bo vseboval povezavo za navigacijo.
 
 ```html
 <template id="login">
@@ -106,19 +106,19 @@ Potem dodajmo še eno HTML predlogo za stran nadzorne plošče. Ta stran bo vseb
 </template>
 ```
 
-> Nasvet: Ko ustvarjate HTML predloge, lahko, če želite videti, kako bodo videti, zakomentirate vrstice `<template>` in `</template>` z uporabo `<!-- -->`.
+> Nasvet: Če želite videti, kako bo izgledala HTML predloga, lahko vrstice `<template>` in `</template>` zakomentirate z uporabo `<!-- -->`.
 
-✅ Zakaj menite, da uporabljamo `id` atribute na predlogah? Ali bi lahko uporabili kaj drugega, kot so razredi?
+✅ Zakaj menite, da uporabljamo `id` atribut na predlogah? Ali bi lahko uporabili kaj drugega, kot so razredi?
 
 ## Prikazovanje predlog z JavaScriptom
 
-Če poskusite trenutno HTML datoteko v brskalniku, boste videli, da ostane prikazano sporočilo `Loading...`. To je zato, ker moramo dodati nekaj JavaScript kode za ustvarjanje in prikaz HTML predlog.
+Če poskusite trenutno HTML datoteko v brskalniku, boste videli, da ostane na `Loading...`. To je zato, ker moramo dodati nekaj JavaScript kode za obdelavo in prikaz HTML predlog.
 
-Ustvarjanje predloge običajno poteka v 3 korakih:
+Obdelava predloge običajno poteka v 3 korakih:
 
-1. Pridobitev elementa predloge v DOM-u, na primer z uporabo [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
+1. Pridobitev elementa predloge v DOM-u, na primer z [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
 2. Kloniranje elementa predloge z uporabo [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
-3. Priključitev na DOM pod vidnim elementom, na primer z uporabo [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
+3. Priključitev na DOM pod vidnim elementom, na primer z [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
 ✅ Zakaj moramo klonirati predlogo, preden jo priključimo na DOM? Kaj mislite, da bi se zgodilo, če bi ta korak preskočili?
 
@@ -142,7 +142,7 @@ function updateRoute(templateId) {
 }
 ```
 
-Tukaj izvajamo točno 3 korake, opisane zgoraj. Ustvarimo predlogo z `id` atributom `templateId` in njeno klonirano vsebino postavimo v naš element za aplikacijo. Upoštevajte, da moramo uporabiti `cloneNode(true)`, da kopiramo celotno drevesno strukturo predloge.
+Tukaj izvajamo točno 3 korake, opisane zgoraj. Obdelamo predlogo z `id`-jem `templateId` in njeno klonirano vsebino postavimo v naš element za aplikacijo. Upoštevajte, da moramo uporabiti `cloneNode(true)`, da kopiramo celotno drevo predloge.
 
 Zdaj pokličite to funkcijo z eno od predlog in si oglejte rezultat.
 
@@ -154,7 +154,7 @@ updateRoute('login');
 
 ## Ustvarjanje poti
 
-Ko govorimo o spletni aplikaciji, imenujemo *usmerjanje* namen mapiranja **URL-jev** na določene zaslone, ki naj bi bili prikazani. Na spletni strani z več HTML datotekami se to izvaja samodejno, saj se poti datotek odražajo v URL-ju. Na primer, z naslednjimi datotekami v vaši projektni mapi:
+Ko govorimo o spletni aplikaciji, imenujemo *usmerjanje* namero za preslikavo **URL-jev** na določene zaslone, ki naj bi bili prikazani. Na spletni strani z več HTML datotekami se to zgodi samodejno, saj se poti datotek odražajo v URL-ju. Na primer, z naslednjimi datotekami v vaši projektni mapi:
 
 ```
 mywebsite/index.html
@@ -162,7 +162,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-Če ustvarite spletni strežnik z `mywebsite` kot korenom, bo mapiranje URL-jev naslednje:
+Če ustvarite spletni strežnik z `mywebsite` kot koren, bo preslikava URL-jev naslednja:
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -170,11 +170,11 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-Vendar pa za našo spletno aplikacijo uporabljamo eno samo HTML datoteko, ki vsebuje vse zaslone, zato nam to privzeto vedenje ne bo pomagalo. To mapiranje moramo ustvariti ročno in posodobiti prikazano predlogo z uporabo JavaScripta.
+Vendar pa za našo spletno aplikacijo uporabljamo eno samo HTML datoteko, ki vsebuje vse zaslone, zato nam to privzeto vedenje ne bo pomagalo. To preslikavo moramo ustvariti ročno in posodobiti prikazano predlogo z uporabo JavaScripta.
 
 ### Naloga
 
-Uporabili bomo preprost objekt za implementacijo [zemljevida](https://en.wikipedia.org/wiki/Associative_array) med URL potmi in našimi predlogami. Dodajte ta objekt na vrh datoteke `app.js`.
+Uporabili bomo preprost objekt za implementacijo [preslikave](https://en.wikipedia.org/wiki/Associative_array) med URL potmi in našimi predlogami. Dodajte ta objekt na vrh svoje datoteke `app.js`.
 
 ```js
 const routes = {
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-Zdaj nekoliko spremenimo funkcijo `updateRoute`. Namesto da neposredno podamo `templateId` kot argument, ga želimo pridobiti tako, da najprej pogledamo trenutni URL, nato pa uporabimo naš zemljevid za pridobitev ustrezne vrednosti `templateId`. Uporabimo lahko [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) za pridobitev samo dela poti iz URL-ja.
+Zdaj nekoliko spremenimo funkcijo `updateRoute`. Namesto da neposredno podamo `templateId` kot argument, ga želimo pridobiti tako, da najprej pogledamo trenutni URL, nato pa uporabimo našo preslikavo za pridobitev ustrezne vrednosti `templateId`. Uporabimo lahko [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) za pridobitev samo dela poti iz URL-ja.
 
 ```js
 function updateRoute() {
@@ -198,16 +198,16 @@ function updateRoute() {
 }
 ```
 
-Tukaj smo mapirali poti, ki smo jih deklarirali, na ustrezne predloge. Preverite, ali deluje pravilno, tako da ročno spremenite URL v brskalniku.
+Tukaj smo preslikali poti, ki smo jih deklarirali, na ustrezne predloge. Preverite, ali deluje pravilno, tako da ročno spremenite URL v brskalniku.
 
 ✅ Kaj se zgodi, če vnesete neznano pot v URL? Kako bi to lahko rešili?
 
 ## Dodajanje navigacije
 
-Naslednji korak za našo aplikacijo je dodajanje možnosti za navigacijo med stranmi brez ročnega spreminjanja URL-ja. To vključuje dve stvari:
+Naslednji korak za našo aplikacijo je dodajanje možnosti za navigacijo med stranmi, ne da bi morali ročno spreminjati URL. To vključuje dve stvari:
 
-1. Posodabljanje trenutnega URL-ja
-2. Posodabljanje prikazane predloge glede na nov URL
+1. Posodobitev trenutnega URL-ja
+2. Posodobitev prikazane predloge glede na nov URL
 
 Drugi del smo že obravnavali s funkcijo `updateRoute`, zato moramo ugotoviti, kako posodobiti trenutni URL.
 
@@ -253,7 +253,7 @@ function onLinkClick(event) {
 }
 ```
 
-Dokončajmo navigacijski sistem z dodajanjem povezav za naše povezave *Prijava* in *Odjava* v HTML.
+Dokončajmo navigacijski sistem z dodajanjem povezav za naše *Prijava* in *Odjava* povezave v HTML-ju.
 
 ```html
 <a href="/dashboard" onclick="onLinkClick(event)">Login</a>
@@ -271,17 +271,17 @@ Poskusite klikniti te povezave, zdaj bi morali biti sposobni navigirati med razl
 
 ## Obvladovanje gumbov za nazaj in naprej v brskalniku
 
-Uporaba `history.pushState` ustvari nove vnose v zgodovini navigacije brskalnika. To lahko preverite tako, da držite *gumb za nazaj* v brskalniku, prikazati bi se moralo nekaj takega:
+Uporaba `history.pushState` ustvari nove vnose v zgodovini brskanja brskalnika. To lahko preverite tako, da držite *gumb za nazaj* v brskalniku, prikazati bi se moralo nekaj takega:
 
 ![Posnetek zaslona zgodovine navigacije](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.sl.png)
 
 Če poskusite večkrat klikniti gumb za nazaj, boste videli, da se trenutni URL spremeni in zgodovina se posodobi, vendar se ista predloga še naprej prikazuje.
 
-To je zato, ker aplikacija ne ve, da moramo poklicati `updateRoute()` vsakič, ko se zgodovina spremeni. Če si ogledate [dokumentacijo za `history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), lahko vidite, da če se stanje spremeni - kar pomeni, da smo se premaknili na drug URL - se sproži dogodek [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event). To bomo uporabili za odpravo te težave.
+To je zato, ker aplikacija ne ve, da moramo poklicati `updateRoute()` vsakič, ko se zgodovina spremeni. Če si ogledate dokumentacijo [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), lahko vidite, da če se stanje spremeni - kar pomeni, da smo se premaknili na drug URL - se sproži dogodek [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event). To bomo uporabili za odpravo te težave.
 
 ### Naloga
 
-Da zagotovimo, da se prikazana predloga posodobi, ko se zgodovina brskalnika spremeni, bomo dodali novo funkcijo, ki kliče `updateRoute()`. To bomo storili na dnu datoteke `app.js`:
+Da zagotovimo, da se prikazana predloga posodobi, ko se zgodovina brskalnika spremeni, bomo dodali novo funkcijo, ki kliče `updateRoute()`. To bomo storili na dnu naše datoteke `app.js`:
 
 ```js
 window.onpopstate = () => updateRoute();
@@ -296,7 +296,7 @@ Tukaj je osvežitveni video o puščičnih funkcijah:
 
 > 🎥 Kliknite zgornjo sliko za video o puščičnih funkcijah.
 
-Zdaj poskusite uporabiti gumbe za nazaj in naprej v brskalniku ter preverite, ali se prikazana pot pravilno posodobi tokrat.
+Zdaj poskusite uporabiti gumbe za nazaj in naprej v brskalniku ter preverite, ali se prikazana pot tokrat pravilno posodobi.
 
 ---
 
@@ -304,13 +304,13 @@ Zdaj poskusite uporabiti gumbe za nazaj in naprej v brskalniku ter preverite, al
 
 Dodajte novo predlogo in pot za tretjo stran, ki prikazuje zasluge za to aplikacijo.
 
-## Kviz po predavanju
+## Zaključni kviz
 
-[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/42)
+[Zaključni kviz](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Pregled in samostojno učenje
 
-Usmerjanje je eden od presenetljivo zahtevnih delov spletnega razvoja, še posebej, ko se splet premika od vedenja osveževanja strani k osveževanju strani v aplikacijah z eno stranjo. Preberite nekaj o tem, [kako storitev Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) obravnava usmerjanje. Ali lahko razložite, zakaj so nekatere odločitve, opisane v tem dokumentu, potrebne?
+Usmerjanje je eden od presenetljivo zahtevnih delov spletnega razvoja, zlasti ko se splet premika od vedenja osveževanja strani k osveževanju strani v enostranskih aplikacijah. Preberite nekaj o tem, [kako storitev Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) obravnava usmerjanje. Ali lahko razložite, zakaj so nekatere odločitve, opisane v tem dokumentu, potrebne?
 
 ## Naloga
 
@@ -319,4 +319,4 @@ Usmerjanje je eden od presenetljivo zahtevnih delov spletnega razvoja, še poseb
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna napačna razumevanja ali napačne interpretacije, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da se zavedate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo strokovno človeško prevajanje. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

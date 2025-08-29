@@ -1,37 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-28T04:00:23+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T10:06:40+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "sw"
 }
 -->
-# Jenga Mchezo wa Anga Sehemu ya 6: Mwisho na Kuanzisha Tena
+# Jenga Mchezo wa Anga Sehemu ya 6: Mwisho na Kuanza Tena
 
-## Maswali ya Awali ya Somo
+## Maswali ya Kabla ya Somo
 
-[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/39)
+[Maswali ya kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Kuna njia tofauti za kuonyesha *hali ya mwisho* katika mchezo. Ni juu yako kama mtengenezaji wa mchezo kuamua ni kwa nini mchezo umeisha. Hapa kuna sababu kadhaa, tukizingatia tunazungumzia mchezo wa anga ambao umekuwa ukijenga hadi sasa:
+Kuna njia tofauti za kuelezea *hali ya mwisho* katika mchezo. Ni jukumu lako kama mtengenezaji wa mchezo kuamua ni kwa nini mchezo umeisha. Hapa kuna sababu kadhaa, tukizingatia tunazungumzia mchezo wa anga ambao umekuwa ukijenga hadi sasa:
 
 - **`N` Meli za maadui zimeharibiwa**: Ni jambo la kawaida ikiwa unagawanya mchezo katika viwango tofauti kwamba unahitaji kuharibu `N` meli za maadui ili kukamilisha kiwango.
 - **Meli yako imeharibiwa**: Kuna michezo ambapo unapoteza mchezo ikiwa meli yako imeharibiwa. Njia nyingine ya kawaida ni kuwa na dhana ya maisha. Kila wakati meli yako inaharibiwa, inapunguza maisha. Mara maisha yote yanapopotea, basi unapoteza mchezo.
-- **Umekusanya `N` alama**: Hali nyingine ya kawaida ya mwisho ni kukusanya alama. Jinsi unavyopata alama ni juu yako, lakini ni jambo la kawaida kupeana alama kwa shughuli mbalimbali kama kuharibu meli ya adui au labda kukusanya vitu ambavyo vinaweza *kuanguka* wakati vinaharibiwa.
-- **Kukamilisha kiwango**: Hii inaweza kuhusisha masharti kadhaa kama `X` meli za maadui zimeharibiwa, `Y` alama zimekusanywa au labda kwamba kipengele maalum kimekusanywa.
+- **Umekusanya `N` alama**: Hali nyingine ya kawaida ya mwisho ni kukusanya alama. Jinsi unavyopata alama ni juu yako, lakini ni jambo la kawaida kupeana alama kwa shughuli mbalimbali kama kuharibu meli ya adui au labda kukusanya vitu ambavyo vinaanguka wakati vinaharibiwa.
+- **Kukamilisha kiwango**: Hii inaweza kuhusisha masharti kadhaa kama `X` meli za maadui zimeharibiwa, `Y` alama zimekusanywa, au labda kipengee maalum kimekusanywa.
 
-## Kuanzisha Tena
+## Kuanza Tena
 
-Ikiwa watu wanapenda mchezo wako, kuna uwezekano wa kutaka kuucheza tena. Mara mchezo unapomalizika kwa sababu yoyote, unapaswa kutoa chaguo la kuanzisha tena.
+Ikiwa watu wanapenda mchezo wako, kuna uwezekano mkubwa watataka kuucheza tena. Mara mchezo unapomalizika kwa sababu yoyote, unapaswa kutoa chaguo la kuanza tena.
 
-✅ Fikiria kidogo kuhusu masharti ambayo unadhani mchezo unamalizika, na kisha jinsi unavyohimizwa kuanzisha tena.
+✅ Fikiria kidogo kuhusu hali gani unadhani mchezo unamalizika, na kisha jinsi unavyohimizwa kuanza tena.
 
 ## Kitu cha Kujenga
 
 Utakuwa unaongeza sheria hizi kwenye mchezo wako:
 
 1. **Kushinda mchezo**. Mara meli zote za maadui zinapoharibiwa, unashinda mchezo. Zaidi ya hayo, onyesha ujumbe wa ushindi.
-1. **Kuanzisha tena**. Mara maisha yako yote yanapopotea au mchezo unashinda, unapaswa kutoa njia ya kuanzisha tena mchezo. Kumbuka! Utahitaji kuanzisha upya mchezo na hali ya awali ya mchezo inapaswa kufutwa.
+1. **Kuanza tena**. Mara maisha yako yote yanapopotea au mchezo unashindwa, unapaswa kutoa njia ya kuanza tena mchezo. Kumbuka! Utahitaji kuanzisha upya mchezo na hali ya awali ya mchezo inapaswa kufutwa.
 
 ## Hatua Zinazopendekezwa
 
@@ -55,7 +55,7 @@ cd your-work
 npm start
 ```
 
-Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinjari na ingiza anwani hiyo. Mchezo wako unapaswa kuwa katika hali inayoweza kuchezwa.
+Hii itaanzisha seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinjari na weka anwani hiyo. Mchezo wako unapaswa kuwa katika hali inayoweza kuchezwa.
 
 > kidokezo: ili kuepuka maonyo katika Visual Studio Code, hariri kazi ya `window.onload` ili kuita `gameLoopId` kama ilivyo (bila `let`), na tangaza `gameLoopId` juu ya faili, kwa kujitegemea: `let gameLoopId;`
 
@@ -74,7 +74,7 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
     }
     ```
 
-1. **Ongeza mantiki kwa wahandaji wa ujumbe**. Hariri `eventEmitter` kushughulikia hali hizi:
+1. **Ongeza mantiki kwa watunzaji wa ujumbe**. Hariri `eventEmitter` kushughulikia hali hizi:
 
     ```javascript
     eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -115,9 +115,9 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Ongeza msimbo wa kuanzisha tena** msimbo unaoanzisha tena mchezo kwa kubonyeza kitufe kilichochaguliwa.
+2. **Ongeza msimbo wa kuanza tena** msimbo unaoanzisha tena mchezo kwa kubonyeza kitufe kilichochaguliwa.
 
-   1. **Sikiliza bonyeza kitufe `Enter`**. Hariri msikilizaji wa tukio la dirisha lako ili kusikiliza bonyeza hili:
+   1. **Sikiliza bonyezo la kitufe `Enter`**. Hariri msikilizaji wa tukio la dirisha lako ili kusikiliza bonyezo hili:
 
     ```javascript
      else if(evt.key === "Enter") {
@@ -125,7 +125,7 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
       }
     ```
 
-   1. **Ongeza ujumbe wa kuanzisha tena**. Ongeza Ujumbe huu kwenye constants ya Ujumbe wako:
+   1. **Ongeza ujumbe wa kuanza tena**. Ongeza Ujumbe huu kwenye constants ya Ujumbe wako:
 
         ```javascript
         KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
@@ -171,7 +171,7 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
         }
         ```
 
-   1. **Mantiki ya kuanzisha tena**. Wakati maisha yote yanapopotea au mchezaji ameshinda mchezo, onyesha kwamba mchezo unaweza kuanzishwa tena. Zaidi ya hayo, anzisha tena mchezo wakati kitufe cha *kuanzisha tena* kinapobonyezwa (unaweza kuamua ni kitufe gani kinapaswa kuhusishwa na kuanzisha tena).
+   1. **Mantiki ya kuanza tena**. Wakati maisha yote yanapopotea au mchezaji ameshinda mchezo, onyesha kwamba mchezo unaweza kuanzishwa tena. Zaidi ya hayo, anzisha tena mchezo wakati kitufe cha *kuanza tena* kinapobonyezwa (unaweza kuamua ni kitufe gani kinapaswa kuhusishwa na kuanza tena).
 
       1. Unda kazi ya `resetGame()`:
 
@@ -216,7 +216,7 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
 
 ## 🚀 Changamoto
 
-Ongeza sauti! Je, unaweza kuongeza sauti ili kuboresha uchezaji wa mchezo wako, labda wakati kuna pigo la leza, au shujaa anakufa au kushinda? Angalia [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) ili kujifunza jinsi ya kucheza sauti kwa kutumia JavaScript.
+Ongeza sauti! Je, unaweza kuongeza sauti ili kuboresha uchezaji wa mchezo wako, labda wakati kuna pigo la laser, au shujaa anakufa au kushinda? Angalia [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) ili kujifunza jinsi ya kucheza sauti kwa kutumia JavaScript.
 
 ## Maswali ya Baada ya Somo
 

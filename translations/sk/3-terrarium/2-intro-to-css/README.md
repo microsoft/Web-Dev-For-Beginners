@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-27T22:47:29+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T11:15:34+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "sk"
 }
@@ -18,15 +18,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Úvod
 
-CSS, alebo Kaskádové štýly (Cascading Style Sheets), rieši dôležitý problém webového vývoja: ako spraviť váš web pekným. Štýlovanie vašich aplikácií ich robí nielen krajšími, ale aj používateľsky prívetivejšími. CSS môžete použiť aj na vytvorenie responzívneho webového dizajnu (RWD) – vďaka tomu budú vaše aplikácie vyzerať dobre bez ohľadu na veľkosť obrazovky, na ktorej sa zobrazujú. CSS však nie je len o vzhľade; jeho špecifikácia zahŕňa aj animácie a transformácie, ktoré umožňujú sofistikované interakcie vo vašich aplikáciách. CSS pracovná skupina pomáha udržiavať aktuálne špecifikácie CSS; ich prácu môžete sledovať na [stránke World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
+CSS, alebo Kaskádové štýly (Cascading Style Sheets), rieši dôležitý problém webového vývoja: ako spraviť váš web pekným. Štylizovanie vašich aplikácií ich robí použiteľnejšími a vizuálne príťažlivejšími; CSS môžete tiež použiť na vytvorenie responzívneho webového dizajnu (RWD) – umožňujúceho, aby vaše aplikácie vyzerali dobre bez ohľadu na veľkosť obrazovky, na ktorej sú zobrazené. CSS nie je len o tom, aby vaša aplikácia vyzerala pekne; jeho špecifikácia zahŕňa animácie a transformácie, ktoré umožňujú sofistikované interakcie pre vaše aplikácie. CSS pracovná skupina pomáha udržiavať aktuálne špecifikácie CSS; ich prácu môžete sledovať na [stránke World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
 
-> Poznámka: CSS je jazyk, ktorý sa vyvíja, rovnako ako všetko na webe, a nie všetky prehliadače podporujú novšie časti špecifikácie. Vždy si overte svoje implementácie na stránke [CanIUse.com](https://caniuse.com).
+> Poznámka: CSS je jazyk, ktorý sa vyvíja, rovnako ako všetko na webe, a nie všetky prehliadače podporujú novšie časti špecifikácie. Vždy si overte svoje implementácie konzultáciou na [CanIUse.com](https://caniuse.com).
 
-V tejto lekcii pridáme štýly do nášho online terrária a naučíme sa viac o niekoľkých konceptoch CSS: kaskáde, dedičnosti, používaní selektorov, pozicionovaní a využití CSS na tvorbu rozložení. Počas tohto procesu navrhneme rozloženie terrária a vytvoríme samotné terrárium.
+V tejto lekcii pridáme štýly do nášho online terrária a naučíme sa viac o niekoľkých konceptoch CSS: kaskáde, dedičnosti, použití selektorov, pozicionovaní a využití CSS na tvorbu rozložení. Počas tohto procesu rozložíme terrárium a vytvoríme samotné terrárium.
 
 ### Predpoklady
 
-Mali by ste mať pripravený HTML súbor pre vaše terrárium, ktorý je pripravený na štýlovanie.
+Mali by ste mať HTML pre vaše terrárium pripravené na štylizovanie.
 
 > Pozrite si video
 
@@ -35,7 +35,7 @@ Mali by ste mať pripravený HTML súbor pre vaše terrárium, ktorý je priprav
 
 ### Úloha
 
-V priečinku s vaším terráriom vytvorte nový súbor s názvom `style.css`. Importujte tento súbor do sekcie `<head>`:
+V priečinku vášho terrária vytvorte nový súbor s názvom `style.css`. Importujte tento súbor do sekcie `<head>`:
 
 ```html
 <link rel="stylesheet" href="./style.css" />
@@ -45,11 +45,11 @@ V priečinku s vaším terráriom vytvorte nový súbor s názvom `style.css`. I
 
 ## Kaskáda
 
-Kaskádové štýly zahŕňajú myšlienku, že štýly „kaskádujú“, čo znamená, že aplikácia štýlu je riadená jeho prioritou. Štýly nastavené autorom webovej stránky majú prednosť pred tými, ktoré nastaví prehliadač. Štýly nastavené „inline“ majú prednosť pred tými, ktoré sú nastavené v externom štýlovom súbore.
+Kaskádové štýly zahŕňajú myšlienku, že štýly „kaskádujú“, takže aplikácia štýlu je riadená jeho prioritou. Štýly nastavené autorom webovej stránky majú prednosť pred tými, ktoré nastaví prehliadač. Štýly nastavené „inline“ majú prednosť pred tými, ktoré sú nastavené v externom štýlovom súbore.
 
 ### Úloha
 
-Pridajte inline štýl „color: red“ do vášho `<h1>` tagu:
+Pridajte inline štýl "color: red" do vášho `<h1>` tagu:
 
 ```HTML
 <h1 style="color: red">My Terrarium</h1>
@@ -73,7 +73,7 @@ h1 {
 
 ### Úloha
 
-Nastavte font tela stránky na určitý font a skontrolujte, či vnorený prvok zdedí tento font:
+Nastavte font tela na daný font a skontrolujte, či font vnoreného prvku:
 
 ```CSS
 body {
@@ -81,19 +81,19 @@ body {
 }
 ```
 
-Otvorte konzolu prehliadača na karte „Elements“ a pozorujte font H1. Dedia svoj font z tela stránky, ako je uvedené v prehliadači:
+Otvorte konzolu prehliadača na karte 'Elements' a pozorujte font H1. Dedia svoj font z tela, ako je uvedené v prehliadači:
 
 ![zdedený font](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.sk.png)
 
-✅ Dokážete nastaviť vnorený štýl tak, aby zdedil inú vlastnosť?
+✅ Dokážete spraviť, aby vnorený štýl zdedil inú vlastnosť?
 
 ---
 
-## Selektory CSS
+## CSS Selektory
 
 ### Tagy
 
-Doteraz váš súbor `style.css` obsahuje len niekoľko štýlov pre tagy a aplikácia vyzerá dosť zvláštne:
+Doteraz váš súbor `style.css` obsahuje iba niekoľko štýlov pre tagy a aplikácia vyzerá dosť zvláštne:
 
 ```CSS
 body {
@@ -106,11 +106,11 @@ h1 {
 }
 ```
 
-Tento spôsob štýlovania tagu vám dáva kontrolu nad unikátnymi prvkami, ale potrebujete kontrolovať štýly viacerých rastlín vo vašom terráriu. Na to musíte využiť selektory CSS.
+Tento spôsob štylizovania tagu vám dáva kontrolu nad unikátnymi prvkami, ale potrebujete kontrolovať štýly mnohých rastlín vo vašom terráriu. Na to potrebujete využiť CSS selektory.
 
 ### Ids
 
-Pridajte štýl na rozloženie ľavého a pravého kontajnera. Keďže existuje len jeden ľavý a jeden pravý kontajner, v značkovaní im boli priradené id. Na ich štýlovanie použite `#`:
+Pridajte štýl na rozloženie ľavých a pravých kontajnerov. Keďže existuje iba jeden ľavý kontajner a jeden pravý kontajner, v označení im boli priradené id. Na ich štylizovanie použite `#`:
 
 ```CSS
 #left-container {
@@ -134,9 +134,9 @@ Pridajte štýl na rozloženie ľavého a pravého kontajnera. Keďže existuje 
 }
 ```
 
-Tu ste umiestnili tieto kontajnery s absolútnym pozicionovaním na krajnú ľavú a pravú stranu obrazovky a použili ste percentá pre ich šírku, aby sa mohli prispôsobiť malým mobilným obrazovkám.
+Tu ste umiestnili tieto kontajnery s absolútnym pozicionovaním na úplne ľavú a pravú stranu obrazovky a použili ste percentá pre ich šírku, aby sa mohli prispôsobiť malým mobilným obrazovkám.
 
-✅ Tento kód je dosť opakujúci sa, teda nie je „DRY“ (Don't Repeat Yourself); dokážete nájsť lepší spôsob, ako štýlovať tieto id, možno pomocou id a triedy? Bude potrebné zmeniť značkovanie a refaktorovať CSS:
+✅ Tento kód je dosť opakovaný, teda nie je „DRY“ (Don't Repeat Yourself); dokážete nájsť lepší spôsob, ako štylizovať tieto id, možno s použitím id a triedy? Bude potrebné zmeniť označenie a refaktorovať CSS:
 
 ```html
 <div id="left-container" class="container"></div>
@@ -144,9 +144,9 @@ Tu ste umiestnili tieto kontajnery s absolútnym pozicionovaním na krajnú ľav
 
 ### Triedy
 
-V predchádzajúcom príklade ste štýlovali dva unikátne prvky na obrazovke. Ak chcete, aby sa štýly aplikovali na viacero prvkov na obrazovke, môžete použiť triedy CSS. Urobte to pre rozloženie rastlín v ľavom a pravom kontajneri.
+V predchádzajúcom príklade ste štylizovali dva unikátne prvky na obrazovke. Ak chcete, aby sa štýly aplikovali na mnoho prvkov na obrazovke, môžete použiť CSS triedy. Urobte to pre rozloženie rastlín v ľavých a pravých kontajneroch.
 
-Všimnite si, že každá rastlina v HTML značkovaní má kombináciu id a tried. Id sú tu použité JavaScriptom, ktorý pridáte neskôr, na manipuláciu s umiestnením rastlín v terráriu. Triedy však dávajú všetkým rastlinám určitý štýl.
+Všimnite si, že každá rastlina v HTML označení má kombináciu id a tried. Id sú tu použité JavaScriptom, ktorý pridáte neskôr na manipuláciu s umiestnením rastlín v terráriu. Triedy však dávajú všetkým rastlinám daný štýl.
 
 ```html
 <div class="plant-holder">
@@ -154,7 +154,7 @@ Všimnite si, že každá rastlina v HTML značkovaní má kombináciu id a trie
 </div>
 ```
 
-Pridajte nasledujúci kód do vášho súboru `style.css`:
+Pridajte nasledujúce do vášho súboru `style.css`:
 
 ```CSS
 .plant-holder {
@@ -171,37 +171,37 @@ Pridajte nasledujúci kód do vášho súboru `style.css`:
 }
 ```
 
-Pozoruhodné v tomto úryvku je miešanie relatívneho a absolútneho pozicionovania, o ktorom sa budeme baviť v ďalšej časti. Pozrite sa na spôsob, akým sú výšky spracované pomocou percent:
+Pozoruhodné v tomto úryvku je miešanie relatívneho a absolútneho pozicionovania, ktoré si preberieme v ďalšej sekcii. Pozrite sa na spôsob, akým sú výšky spracované pomocou percent:
 
-Nastavili ste výšku držiaka rastlín na 13 %, čo je dobré číslo na zabezpečenie toho, aby sa všetky rastliny zobrazili v každom vertikálnom kontajneri bez potreby posúvania.
+Nastavili ste výšku držiaka rastlín na 13 %, čo je dobré číslo na zabezpečenie, že všetky rastliny budú zobrazené v každom vertikálnom kontajneri bez potreby posúvania.
 
-Držiak rastlín ste posunuli doľava, aby boli rastliny viac vycentrované v ich kontajneri. Obrázky majú veľké množstvo priehľadného pozadia, aby boli ľahšie presúvateľné, takže ich treba posunúť doľava, aby lepšie zapadli na obrazovku.
+Držiak rastlín ste posunuli doľava, aby boli rastliny viac centrované v ich kontajneri. Obrázky majú veľké množstvo priehľadného pozadia, aby boli ľahšie presúvateľné, takže je potrebné ich posunúť doľava, aby lepšie zapadli na obrazovku.
 
-Potom samotná rastlina dostala maximálnu šírku 150 %. To umožňuje, aby sa zmenšila, keď sa prehliadač zmenší. Skúste zmeniť veľkosť prehliadača; rastliny zostanú vo svojich kontajneroch, ale zmenšia sa, aby sa zmestili.
+Potom je samotnej rastline daná maximálna šírka 150 %. To jej umožňuje zmenšiť sa, keď sa prehliadač zmenšuje. Skúste zmeniť veľkosť prehliadača; rastliny zostanú vo svojich kontajneroch, ale zmenšia sa, aby sa zmestili.
 
-Pozoruhodné je aj použitie z-indexu, ktorý ovláda relatívnu výšku prvku (takže rastliny sedia na vrchu kontajnera a vyzerajú, akoby boli vo vnútri terrária).
+Pozoruhodné je aj použitie z-indexu, ktorý kontroluje relatívnu výšku prvku (takže rastliny sedia na vrchu kontajnera a zdajú sa byť vo vnútri terrária).
 
 ✅ Prečo potrebujete selektor CSS pre držiak rastlín aj pre samotnú rastlinu?
 
-## Pozicionovanie CSS
+## CSS Pozicionovanie
 
-Miešanie vlastností pozicionovania (existujú statické, relatívne, fixné, absolútne a sticky pozície) môže byť trochu zložité, ale ak sa to urobí správne, poskytuje to dobrú kontrolu nad prvkami na vašich stránkach.
+Miešanie vlastností pozicionovania (existujú statické, relatívne, fixné, absolútne a lepkavé pozície) môže byť trochu zložité, ale ak sa to urobí správne, poskytuje vám dobrú kontrolu nad prvkami na vašich stránkach.
 
-Absolútne pozicionované prvky sú umiestnené vzhľadom na ich najbližších pozicionovaných predkov, a ak žiadni nie sú, sú umiestnené podľa tela dokumentu.
+Absolútne pozicionované prvky sú pozicionované vzhľadom na ich najbližších pozicionovaných predkov, a ak žiadni nie sú, sú pozicionované podľa tela dokumentu.
 
-Relatívne pozicionované prvky sú umiestnené na základe pokynov CSS na úpravu ich umiestnenia od ich pôvodnej pozície.
+Relatívne pozicionované prvky sú pozicionované na základe pokynov CSS na úpravu ich umiestnenia od ich pôvodnej pozície.
 
-V našom príklade je `plant-holder` relatívne pozicionovaný prvok, ktorý je umiestnený v absolútne pozicionovanom kontajneri. Výsledné správanie je, že bočné kontajnery sú pripnuté naľavo a napravo, a `plant-holder` je vnorený, prispôsobujúc sa v rámci bočných kontajnerov, čím vytvára priestor na umiestnenie rastlín do vertikálneho radu.
+V našom príklade je `plant-holder` relatívne pozicionovaný prvok, ktorý je pozicionovaný v absolútne pozicionovanom kontajneri. Výsledné správanie je, že bočné kontajnery sú pripnuté vľavo a vpravo, a `plant-holder` je vnorený, upravuje sa v rámci bočných kontajnerov, čím vytvára priestor pre rastliny, aby boli umiestnené vo vertikálnom rade.
 
 > Samotná `plant` má tiež absolútne pozicionovanie, čo je nevyhnutné na to, aby bola presúvateľná, ako zistíte v ďalšej lekcii.
 
-✅ Experimentujte so zmenou typov pozicionovania bočných kontajnerov a `plant-holder`. Čo sa stane?
+✅ Experimentujte s prepínaním typov pozicionovania bočných kontajnerov a `plant-holder`. Čo sa stane?
 
-## Rozloženia CSS
+## CSS Rozloženia
 
 Teraz použijete to, čo ste sa naučili, na vytvorenie samotného terrária, a to všetko pomocou CSS!
 
-Najprv naštýlujte deti divu `.terrarium` ako zaoblený obdĺžnik pomocou CSS:
+Najprv štylizujte deti divu `.terrarium` ako zaoblený obdĺžnik pomocou CSS:
 
 ```CSS
 .jar-walls {
@@ -250,35 +250,35 @@ Najprv naštýlujte deti divu `.terrarium` ako zaoblený obdĺžnik pomocou CSS:
 }
 ```
 
-Všimnite si použitie percent tu. Ak zmenšíte svoj prehliadač, môžete vidieť, ako sa nádoba tiež prispôsobuje. Tiež si všimnite šírky a výšky v percentách pre prvky nádoby a ako je každý prvok absolútne pozicionovaný v strede, pripnutý na spodok výhľadu.
+Všimnite si použitie percent tu. Ak zmenšíte svoj prehliadač, môžete vidieť, ako sa nádoba tiež prispôsobuje. Tiež si všimnite šírky a výškové percentá pre prvky nádoby a ako je každý prvok absolútne pozicionovaný v strede, pripnutý na spodok výrezu.
 
-Používame aj `rem` pre border-radius, čo je dĺžka relatívna k fontu. Prečítajte si viac o tomto type relatívneho merania v [CSS špecifikácii](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
+Používame tiež `rem` pre border-radius, čo je dĺžka relatívna k fontu. Prečítajte si viac o tomto type relatívneho merania v [CSS špecifikácii](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
-✅ Skúste zmeniť farby nádoby a nepriehľadnosť oproti tým, ktoré má zem. Čo sa stane? Prečo?
+✅ Skúste zmeniť farby nádoby a priehľadnosť oproti tým pre hlinu. Čo sa stane? Prečo?
 
 ---
 
 ## 🚀Výzva
 
-Pridajte „bublinkový“ lesk do ľavej dolnej časti nádoby, aby vyzerala viac ako sklo. Budete štýlovať `.jar-glossy-long` a `.jar-glossy-short`, aby vyzerali ako odraz lesku. Takto by to malo vyzerať:
+Pridajte „bublinkový“ lesk do ľavej dolnej časti nádoby, aby vyzerala viac ako sklo. Budete štylizovať `.jar-glossy-long` a `.jar-glossy-short`, aby vyzerali ako odrazený lesk. Takto by to malo vyzerať:
 
 ![hotové terrárium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.sk.png)
 
-Na dokončenie kvízu po prednáške prejdite tento modul Learn: [Štýlovanie HTML aplikácie pomocou CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+Na dokončenie kvízu po prednáške prejdite tento modul Learn: [Štylizujte svoju HTML aplikáciu pomocou CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
 ## Kvíz po prednáške
 
 [Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/18)
 
-## Recenzia a samoštúdium
+## Recenzia a samostatné štúdium
 
-CSS sa môže zdať klamlivo jednoduché, ale pri snahe dokonale naštýlovať aplikáciu pre všetky prehliadače a všetky veľkosti obrazoviek sa objavujú mnohé výzvy. CSS-Grid a Flexbox sú nástroje, ktoré boli vyvinuté na to, aby túto prácu urobili štruktúrovanejšou a spoľahlivejšou. Naučte sa o týchto nástrojoch hraním hier [Flexbox Froggy](https://flexboxfroggy.com/) a [Grid Garden](https://codepip.com/games/grid-garden/).
+CSS sa môže zdať klamlivo jednoduché, ale existuje mnoho výziev pri snahe dokonale štylizovať aplikáciu pre všetky prehliadače a všetky veľkosti obrazoviek. CSS-Grid a Flexbox sú nástroje, ktoré boli vyvinuté na to, aby bola práca trochu štruktúrovanejšia a spoľahlivejšia. Naučte sa o týchto nástrojoch hraním [Flexbox Froggy](https://flexboxfroggy.com/) a [Grid Garden](https://codepip.com/games/grid-garden/).
 
 ## Zadanie
 
-[Refaktorovanie CSS](assignment.md)
+[CSS Refaktoring](assignment.md)
 
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

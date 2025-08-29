@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-27T22:31:20+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T11:11:42+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "sk"
 }
 -->
-# Vytvorenie vesmírnej hry, časť 2: Kreslenie hrdinu a príšer na plátno
+# Vytvorenie vesmírnej hry, časť 2: Kreslenie hrdinu a monštier na plátno
 
 ## Kvíz pred prednáškou
 
@@ -27,22 +27,22 @@ Takto sa zvyčajne deklaruje ako súčasť tela stránky:
 
 Vyššie nastavujeme `id`, `width` a `height`.
 
-- `id`: nastavte ho, aby ste mohli získať referenciu, keď s ním budete potrebovať pracovať.
+- `id`: nastavte ho, aby ste mohli získať referenciu, keď budete potrebovať s plátnom pracovať.
 - `width`: šírka elementu.
 - `height`: výška elementu.
 
-## Kreslenie jednoduchých geometrických tvarov
+## Kreslenie jednoduchej geometrie
 
 Plátno používa kartézsky súradnicový systém na kreslenie objektov. Používa os x a os y na vyjadrenie polohy objektu. Poloha `0,0` je v ľavom hornom rohu a pravý dolný roh je určený hodnotami WIDTH a HEIGHT plátna.
 
-![mriežka plátna](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.sk.png)  
+![mriežka plátna](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.sk.png)
 > Obrázok z [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Na kreslenie na plátno musíte prejsť nasledujúcimi krokmi:
 
 1. **Získať referenciu** na element plátna.
-2. **Získať referenciu** na element Context, ktorý sa nachádza na plátne.
-3. **Vykonať kresliacu operáciu** pomocou elementu Context.
+1. **Získať referenciu** na kontextový element, ktorý sa nachádza na plátne.
+1. **Vykonať kresliacu operáciu** pomocou kontextového elementu.
 
 Kód pre vyššie uvedené kroky zvyčajne vyzerá takto:
 
@@ -61,12 +61,12 @@ ctx.fillStyle = 'red';
 ctx.fillRect(0,0, 200, 200) // x,y,width, height
 ```
 
-✅ Canvas API sa zameriava hlavne na 2D tvary, ale môžete kresliť aj 3D objekty na webovú stránku; na to môžete použiť [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
+✅ Canvas API sa zameriava hlavne na 2D tvary, ale môžete tiež kresliť 3D objekty na webovú stránku; na to môžete použiť [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
 S Canvas API môžete kresliť rôzne veci, ako napríklad:
 
 - **Geometrické tvary**, už sme ukázali, ako nakresliť obdĺžnik, ale môžete kresliť oveľa viac.
-- **Text**, môžete kresliť text s akýmkoľvek fontom a farbou, ktorú si zvolíte.
+- **Text**, môžete kresliť text s akýmkoľvek fontom a farbou, akú si želáte.
 - **Obrázky**, môžete kresliť obrázky na základe obrazových súborov, ako napríklad .jpg alebo .png.
 
 ✅ Skúste to! Už viete, ako nakresliť obdĺžnik, dokážete nakresliť kruh na stránku? Pozrite si niektoré zaujímavé kresby na plátne na CodePen. Tu je [obzvlášť pôsobivý príklad](https://codepen.io/dissimulate/pen/KrAwx).
@@ -87,7 +87,7 @@ img.onload = () => {
 
 ### Vzor načítania súboru
 
-Odporúča sa obaliť vyššie uvedené do konštruktu, ako je tento, aby sa to ľahšie používalo a aby ste sa pokúsili manipulovať s objektom až vtedy, keď je úplne načítaný:
+Odporúča sa obaliť vyššie uvedený kód do konštruktu, aby sa s ním ľahšie pracovalo a aby ste sa pokúsili manipulovať s ním iba vtedy, keď je úplne načítaný:
 
 ```javascript
 function loadAsset(path) {
@@ -124,7 +124,7 @@ async function run() {
 }
 ```
 
-## Teraz je čas začať budovať vašu hru
+## Teraz je čas začať budovať svoju hru
 
 ### Čo vytvoriť
 
@@ -134,9 +134,9 @@ Vytvoríte webovú stránku s elementom plátna. Mala by zobrazovať čiernu obr
 
    ![Loď hrdinu](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.sk.png)
 
-- 5*5 príšer
+- 5*5 monštrum
 
-   ![Loď príšer](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.sk.png)
+   ![Loď monštra](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.sk.png)
 
 ### Odporúčané kroky na začatie vývoja
 
@@ -151,7 +151,7 @@ Nájdite súbory, ktoré boli pre vás vytvorené v podpriečinku `your-work`. M
 -| package.json
 ```
 
-Otvorte kópiu tohto priečinka vo Visual Studio Code. Mali by ste mať nastavené lokálne vývojové prostredie, najlepšie s Visual Studio Code, NPM a Node. Ak nemáte na počítači nastavený `npm`, [tu je návod, ako to urobiť](https://www.npmjs.com/get-npm).
+Otvorte kópiu tohto priečinka vo Visual Studio Code. Mali by ste mať nastavené lokálne vývojové prostredie, ideálne s Visual Studio Code, NPM a Node. Ak nemáte na svojom počítači nastavený `npm`, [tu je návod, ako to urobiť](https://www.npmjs.com/get-npm).
 
 Začnite svoj projekt navigáciou do priečinka `your_work`:
 
@@ -168,13 +168,13 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
 
 Pridajte potrebný kód do `your-work/app.js`, aby ste vyriešili nasledujúce:
 
-1. **Nakreslite** plátno s čiernym pozadím  
+1. **Nakreslite** plátno s čiernym pozadím
    > tip: pridajte dva riadky pod príslušný TODO v `/app.js`, nastavte element `ctx` na čiernu farbu a horné/ľavé súradnice na 0,0, pričom výška a šírka budú rovnaké ako plátno.
-2. **Načítajte** textúry  
+2. **Načítajte** textúry
    > tip: pridajte obrázky hráča a nepriateľa pomocou `await loadTexture` a odovzdajte cestu k obrázku. Zatiaľ ich na obrazovke neuvidíte!
-3. **Nakreslite** hrdinu do stredu obrazovky v dolnej polovici  
-   > tip: použite API `drawImage` na nakreslenie heroImg na obrazovku, nastavte `canvas.width / 2 - 45` a `canvas.height - canvas.height / 4)`.
-4. **Nakreslite** 5*5 príšer  
+3. **Nakreslite** hrdinu do stredu obrazovky v dolnej polovici
+   > tip: použite API `drawImage` na nakreslenie heroImg na obrazovku, nastavte `canvas.width / 2 - 45` a `canvas.height - canvas.height / 4)`;
+4. **Nakreslite** 5*5 monštier
    > tip: Teraz môžete odkomentovať kód na kreslenie nepriateľov na obrazovku. Potom prejdite do funkcie `createEnemies` a doplňte ju.
 
    Najskôr nastavte niektoré konštanty:
@@ -186,7 +186,7 @@ Pridajte potrebný kód do `your-work/app.js`, aby ste vyriešili nasledujúce:
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    potom vytvorte slučku na nakreslenie poľa príšer na obrazovku:
+    potom vytvorte slučku na nakreslenie poľa monštier na obrazovku:
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {
@@ -200,7 +200,7 @@ Pridajte potrebný kód do `your-work/app.js`, aby ste vyriešili nasledujúce:
 
 Hotový výsledok by mal vyzerať takto:
 
-![Čierna obrazovka s hrdinom a 5*5 príšerami](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.sk.png)
+![Čierna obrazovka s hrdinom a 5*5 monštrami](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.sk.png)
 
 ## Riešenie
 
@@ -210,13 +210,13 @@ Najskôr sa pokúste vyriešiť úlohu sami, ale ak sa zaseknete, pozrite si [ri
 
 ## 🚀 Výzva
 
-Naučili ste sa kresliť pomocou Canvas API zameraného na 2D; pozrite sa na [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) a skúste nakresliť 3D objekt.
+Naučili ste sa kresliť pomocou Canvas API zameraného na 2D; pozrite si [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) a skúste nakresliť 3D objekt.
 
 ## Kvíz po prednáške
 
 [Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/32)
 
-## Prehľad a samoštúdium
+## Prehľad a samostatné štúdium
 
 Dozviete sa viac o Canvas API [čítaním o ňom](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
@@ -227,4 +227,4 @@ Dozviete sa viac o Canvas API [čítaním o ňom](https://developer.mozilla.org/
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

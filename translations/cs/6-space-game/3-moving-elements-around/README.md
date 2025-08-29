@@ -1,30 +1,30 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-28T03:53:34+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T10:50:18+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "cs"
 }
 -->
-# Vytvořte vesmírnou hru, část 3: Přidání pohybu
+# Vytvoření vesmírné hry, část 3: Přidání pohybu
 
-## Kvíz před přednáškou
+## Kvíz před lekcí
 
-[Kvíz před přednáškou](https://ff-quizzes.netlify.app/web/quiz/33)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Hry nejsou moc zábavné, dokud se na obrazovce nezačnou pohybovat mimozemšťané! V této hře využijeme dva typy pohybu:
 
-- **Pohyb pomocí klávesnice/myši**: když uživatel interaguje s klávesnicí nebo myší, aby přesunul objekt na obrazovce.
-- **Pohyb vyvolaný hrou**: když hra pohybuje objektem v určitém časovém intervalu.
+- **Pohyb pomocí klávesnice/myši**: když uživatel interaguje s klávesnicí nebo myší, aby pohyboval objektem na obrazovce.
+- **Pohyb řízený hrou**: když hra pohybuje objektem v určitých časových intervalech.
 
-Jak tedy pohybujeme objekty na obrazovce? Vše je o kartézských souřadnicích: změníme polohu (x, y) objektu a poté obrazovku znovu vykreslíme.
+Jak tedy pohybujeme objekty na obrazovce? Vše je o kartézských souřadnicích: změníme polohu objektu (x, y) a poté obrazovku překreslíme.
 
-Obvykle potřebujete následující kroky k dosažení *pohybu* na obrazovce:
+Obvykle potřebujete následující kroky, abyste dosáhli *pohybu* na obrazovce:
 
-1. **Nastavit novou polohu** objektu; to je nutné, aby se objekt jevil jako pohybující se.
-2. **Vyčistit obrazovku**, obrazovka musí být mezi jednotlivými vykresleními vyčištěna. Můžeme ji vyčistit vykreslením obdélníku, který vyplníme barvou pozadí.
-3. **Znovu vykreslit objekt** na nové poloze. Tímto konečně dosáhneme přesunu objektu z jednoho místa na druhé.
+1. **Nastavte novou polohu** objektu; to je nutné, aby se zdálo, že se objekt pohybuje.
+2. **Vymažte obrazovku**, obrazovka musí být mezi jednotlivými vykresleními vymazána. Toho dosáhneme vykreslením obdélníku, který vyplníme barvou pozadí.
+3. **Znovu vykreslete objekt** na nové poloze. Tímto způsobem nakonec dosáhneme pohybu objektu z jednoho místa na druhé.
 
 Takto to může vypadat v kódu:
 
@@ -39,15 +39,15 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Dokážete si představit důvod, proč by opakované vykreslování vašeho hrdiny mnohokrát za sekundu mohlo způsobit výkonové problémy? Přečtěte si o [alternativách k tomuto vzoru](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+✅ Dokážete si představit, proč by překreslování vašeho hrdiny mnohokrát za sekundu mohlo způsobit výkonové problémy? Přečtěte si o [alternativách k tomuto vzoru](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Zpracování událostí klávesnice
 
-Události zpracováváte tak, že kódu připojíte konkrétní události. Události klávesnice se spouštějí na celém okně, zatímco události myši, jako je `click`, mohou být připojeny ke kliknutí na konkrétní prvek. V tomto projektu budeme používat události klávesnice.
+Události zpracováváte připojením konkrétních událostí ke kódu. Události klávesnice se spouštějí na celém okně, zatímco události myši, jako je `click`, mohou být spojeny s kliknutím na konkrétní prvek. V tomto projektu budeme používat události klávesnice.
 
-Pro zpracování události musíte použít metodu `addEventListener()` okna a poskytnout jí dva vstupní parametry. Prvním parametrem je název události, například `keyup`. Druhým parametrem je funkce, která by měla být vyvolána v důsledku proběhnutí události.
+Pro zpracování události musíte použít metodu `addEventListener()` okna a poskytnout jí dva vstupní parametry. Prvním parametrem je název události, například `keyup`. Druhým parametrem je funkce, která by měla být vyvolána v důsledku události.
 
-Příklad:
+Zde je příklad:
 
 ```javascript
 window.addEventListener('keyup', (evt) => {
@@ -58,16 +58,16 @@ window.addEventListener('keyup', (evt) => {
 })
 ```
 
-Pro události klávesnice existují dvě vlastnosti na události, které můžete použít k zjištění, která klávesa byla stisknuta:
+Pro události kláves existují dvě vlastnosti události, které můžete použít k určení, která klávesa byla stisknuta:
 
-- `key`, což je textová reprezentace stisknuté klávesy, například `ArrowUp`.
+- `key`, což je textová reprezentace stisknuté klávesy, například `ArrowUp`
 - `keyCode`, což je číselná reprezentace, například `37`, odpovídá `ArrowLeft`.
 
-✅ Manipulace s událostmi klávesnice je užitečná i mimo vývoj her. Jaké další využití této techniky vás napadá?
+✅ Manipulace s událostmi kláves je užitečná i mimo vývoj her. Jaké další využití této techniky vás napadají?
 
 ### Speciální klávesy: upozornění
 
-Existují některé *speciální* klávesy, které ovlivňují okno. To znamená, že pokud posloucháte událost `keyup` a použijete tyto speciální klávesy k pohybu svého hrdiny, provede se také horizontální posouvání. Z tohoto důvodu možná budete chtít *vypnout* toto vestavěné chování prohlížeče při vytváření své hry. Potřebujete kód jako tento:
+Existují některé *speciální* klávesy, které ovlivňují okno. To znamená, že pokud posloucháte událost `keyup` a použijete tyto speciální klávesy k pohybu svého hrdiny, dojde také k horizontálnímu posouvání. Z tohoto důvodu možná budete chtít *vypnout* toto vestavěné chování prohlížeče při vytváření své hry. Potřebujete kód jako tento:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -88,11 +88,11 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Výše uvedený kód zajistí, že šipkové klávesy a mezerník budou mít své *výchozí* chování vypnuté. Mechanismus *vypnutí* se provede, když zavoláme `e.preventDefault()`.
+Výše uvedený kód zajistí, že šipky a mezerník budou mít své *výchozí* chování vypnuté. Mechanismus *vypnutí* nastane, když zavoláme `e.preventDefault()`.
 
-## Pohyb vyvolaný hrou
+## Pohyb řízený hrou
 
-Můžeme nechat objekty pohybovat se samy pomocí časovačů, jako jsou funkce `setTimeout()` nebo `setInterval()`, které aktualizují polohu objektu při každém tiknutí nebo časovém intervalu. Takto to může vypadat:
+Objekty se mohou pohybovat samy pomocí časovačů, jako jsou funkce `setTimeout()` nebo `setInterval()`, které aktualizují polohu objektu při každém tiknutí nebo časovém intervalu. Takto to může vypadat:
 
 ```javascript
 let id = setInterval(() => {
@@ -103,9 +103,9 @@ let id = setInterval(() => {
 
 ## Herní smyčka
 
-Herní smyčka je koncept, který je v podstatě funkcí vyvolávanou v pravidelných intervalech. Nazývá se herní smyčka, protože vše, co by mělo být viditelné pro uživatele, je vykresleno v této smyčce. Herní smyčka využívá všechny herní objekty, které jsou součástí hry, a vykresluje je, pokud z nějakého důvodu již nejsou součástí hry. Například pokud je objekt nepřítel, který byl zasažen laserem a explodoval, již není součástí aktuální herní smyčky (o tom se dozvíte více v dalších lekcích).
+Herní smyčka je koncept, který v podstatě představuje funkci vyvolávanou v pravidelných intervalech. Říká se jí herní smyčka, protože vše, co by mělo být viditelné pro uživatele, je vykresleno v této smyčce. Herní smyčka využívá všechny herní objekty, které jsou součástí hry, a vykresluje je, pokud z nějakého důvodu již nejsou součástí hry. Například pokud je objekt nepřítel, který byl zasažen laserem a exploduje, již není součástí aktuální herní smyčky (o tom se dozvíte více v dalších lekcích).
 
-Takto může typická herní smyčka vypadat, vyjádřená v kódu:
+Takto může typická herní smyčka vypadat v kódu:
 
 ```javascript
 let gameLoopId = setInterval(() =>
@@ -119,18 +119,18 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-Výše uvedená smyčka je vyvolávána každých `200` milisekund, aby znovu vykreslila plátno. Máte možnost zvolit nejlepší interval, který dává smysl pro vaši hru.
+Výše uvedená smyčka je vyvolávána každých `200` milisekund, aby překreslila plátno. Máte možnost zvolit nejlepší interval, který dává smysl pro vaši hru.
 
-## Pokračování vesmírné hry
+## Pokračování ve vesmírné hře
 
-Vezmete existující kód a rozšíříte ho. Buď začněte s kódem, který jste dokončili během části I, nebo použijte kód z [části II - startovací](../../../../6-space-game/3-moving-elements-around/your-work).
+Vezmete existující kód a rozšíříte ho. Buď začněte s kódem, který jste dokončili během části I, nebo použijte kód z [části II - startér](../../../../6-space-game/3-moving-elements-around/your-work).
 
-- **Pohyb hrdiny**: přidáte kód, který zajistí, že můžete hrdinu pohybovat pomocí šipek.
-- **Pohyb nepřátel**: také budete muset přidat kód, který zajistí, že se nepřátelé pohybují shora dolů v daném tempu.
+- **Pohyb hrdiny**: přidáte kód, který zajistí, že můžete pohybovat hrdinou pomocí šipek.
+- **Pohyb nepřátel**: budete také muset přidat kód, který zajistí, že se nepřátelé pohybují shora dolů v daném tempu.
 
 ## Doporučené kroky
 
-Najděte soubory, které byly vytvořeny pro vás ve složce `your-work`. Měla by obsahovat následující:
+Najděte soubory, které byly vytvořeny pro vás ve složce `your-work`. Měly by obsahovat následující:
 
 ```bash
 -| assets
@@ -141,23 +141,21 @@ Najděte soubory, které byly vytvořeny pro vás ve složce `your-work`. Měla 
 -| package.json
 ```
 
-Svůj projekt spustíte ve složce `your_work` zadáním:
+Spusťte svůj projekt ve složce `your_work` zadáním:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Výše uvedené spustí HTTP server na adrese `http://localhost:5000`. Otevřete prohlížeč a zadejte tuto adresu, právě teď by měl zobrazit hrdinu a všechny nepřátele; zatím se nic nepohybuje!
+Výše uvedené spustí HTTP server na adrese `http://localhost:5000`. Otevřete prohlížeč a zadejte tuto adresu, aktuálně by měl zobrazit hrdinu a všechny nepřátele; zatím se nic nehýbe!
 
 ### Přidání kódu
 
 1. **Přidejte dedikované objekty** pro `hero`, `enemy` a `game object`, měly by mít vlastnosti `x` a `y`. (Pamatujte na část o [dědičnosti nebo kompozici](../README.md)).
 
-   *TIP* `game object` by měl být ten, který má `x` a `y` a schopnost vykreslit se na plátno.
+   *TIP*: Začněte přidáním nové třídy GameObject s jejím konstruktorem, jak je uvedeno níže, a poté ji vykreslete na plátno:
 
-   >tip: začněte přidáním nové třídy GameObject s jejím konstruktorem, jak je uvedeno níže, a poté ji vykreslete na plátno:
-  
     ```javascript
         
     class GameObject {
@@ -177,8 +175,8 @@ Výše uvedené spustí HTTP server na adrese `http://localhost:5000`. Otevřete
     }
     ```
 
-    Nyní rozšiřte tento GameObject, abyste vytvořili Hero a Enemy.
-    
+    Nyní rozšiřte tento GameObject a vytvořte Hero a Enemy.
+
     ```javascript
     class Hero extends GameObject {
       constructor(x, y) {
@@ -205,9 +203,9 @@ Výše uvedené spustí HTTP server na adrese `http://localhost:5000`. Otevřete
     }
     ```
 
-2. **Přidejte zpracování událostí kláves** pro navigaci (pohyb hrdiny nahoru/dolů vlevo/vpravo)
+2. **Přidejte obslužné funkce událostí kláves** pro navigaci (pohyb hrdiny nahoru/dolů, vlevo/vpravo).
 
-   *PAMATUJTE* je to kartézský systém, levý horní roh je `0,0`. Také nezapomeňte přidat kód pro zastavení *výchozího chování*.
+   *PAMATUJTE*: Jde o kartézský systém, levý horní roh je `0,0`. Také nezapomeňte přidat kód pro zastavení *výchozího chování*.
 
    >tip: vytvořte svou funkci onKeyDown a připojte ji k oknu:
 
@@ -221,9 +219,9 @@ Výše uvedené spustí HTTP server na adrese `http://localhost:5000`. Otevřete
     window.addEventListener("keydown", onKeyDown);
    ```
     
-   Zkontrolujte konzoli svého prohlížeče v tomto bodě a sledujte zaznamenané stisky kláves.
+   Zkontrolujte konzoli prohlížeče a sledujte, jak se zaznamenávají stisky kláves.
 
-3. **Implementujte** [Pub sub pattern](../README.md), což udrží váš kód čistý, jak budete pokračovat v dalších částech.
+3. **Implementujte** [Pub-sub vzor](../README.md), který udrží váš kód čistý, jak budete pokračovat v dalších částech.
 
    Pro tuto poslední část můžete:
 
@@ -311,9 +309,9 @@ Výše uvedené spustí HTTP server na adrese `http://localhost:5000`. Otevřete
     }
     ```
 
-1. **Nastavit herní smyčku**
+1. **Nastavte herní smyčku**
 
-   Refaktorujte funkci window.onload, aby inicializovala hru a nastavila herní smyčku na vhodný interval. Také přidáte laserový paprsek:
+   Refaktorujte funkci window.onload tak, aby inicializovala hru a nastavila herní smyčku na vhodný interval. Přidáte také laserový paprsek:
 
     ```javascript
     window.onload = async () => {
@@ -334,7 +332,7 @@ Výše uvedené spustí HTTP server na adrese `http://localhost:5000`. Otevřete
     };
     ```
 
-5. **Přidejte kód** pro pohyb nepřátel v určitém intervalu
+5. **Přidejte kód** pro pohyb nepřátel v určitém intervalu.
 
     Refaktorujte funkci `createEnemies()`, aby vytvořila nepřátele a přidala je do nové třídy gameObjects:
 
@@ -376,27 +374,27 @@ Výše uvedené spustí HTTP server na adrese `http://localhost:5000`. Otevřete
     }
     ```
 
-    Vaši nepřátelé by měli začít postupovat na vaši vesmírnou loď!
+    Vaši nepřátelé by měli začít postupovat směrem k vaší vesmírné lodi!
 
 ---
 
 ## 🚀 Výzva
 
-Jak vidíte, váš kód se může proměnit v "špagetový kód", když začnete přidávat funkce, proměnné a třídy. Jak můžete lépe organizovat svůj kód, aby byl čitelnější? Navrhněte systém pro organizaci svého kódu, i když stále zůstává v jednom souboru.
+Jak vidíte, váš kód se může stát „špagetovým kódem“, když začnete přidávat funkce, proměnné a třídy. Jak můžete lépe organizovat svůj kód, aby byl čitelnější? Navrhněte systém pro organizaci svého kódu, i když stále zůstává v jednom souboru.
 
-## Kvíz po přednášce
+## Kvíz po lekci
 
-[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/34)
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/34)
 
-## Přehled a samostudium
+## Recenze a samostudium
 
-I když píšeme naši hru bez použití frameworků, existuje mnoho JavaScriptových frameworků pro vývoj her na plátně. Udělejte si čas na [čtení o těchto](https://github.com/collections/javascript-game-engines).
+I když píšeme naši hru bez použití frameworků, existuje mnoho JavaScriptových frameworků pro vývoj her na plátně. Věnujte nějaký čas [čtení o těchto](https://github.com/collections/javascript-game-engines).
 
-## Úkol
+## Zadání
 
 [Okomentujte svůj kód](assignment.md)
 
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádné nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Za autoritativní zdroj by měl být považován původní dokument v jeho původním jazyce. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.

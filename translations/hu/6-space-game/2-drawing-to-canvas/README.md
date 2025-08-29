@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-28T03:59:10+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T10:28:56+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "hu"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## A vászon (Canvas)
 
-A vászon egy HTML elem, amely alapértelmezetten nem tartalmaz semmilyen tartalmat; egy üres lap. Neked kell tartalommal megtöltened, azaz rajzolnod rá.
+A vászon egy HTML elem, amely alapértelmezés szerint nem tartalmaz semmilyen tartalmat; egy üres lap. Rajzolással kell tartalmat hozzáadni.
 
 ✅ Olvass [többet a Canvas API-ról](https://developer.mozilla.org/docs/Web/API/Canvas_API) az MDN-en.
 
@@ -31,9 +31,9 @@ A fenti példában beállítjuk az `id`, `width` és `height` értékeket.
 - `width`: ez az elem szélessége.
 - `height`: ez az elem magassága.
 
-## Egyszerű geometriai alakzatok rajzolása
+## Egyszerű geometriai formák rajzolása
 
-A vászon egy derékszögű koordináta-rendszert használ a rajzoláshoz. Ezért x- és y-tengelyeket használ annak kifejezésére, hogy valami hol helyezkedik el. A `0,0` hely a bal felső sarok, míg a jobb alsó sarok az, amit a vászon SZÉLESSÉGÉNEK és MAGASSÁGÁNAK állítottál be.
+A vászon egy derékszögű koordináta-rendszert használ a rajzoláshoz. Ezért x- és y-tengelyt használ annak kifejezésére, hogy valami hol helyezkedik el. A `0,0` hely a bal felső sarok, míg a jobb alsó sarok az, amit a vászon SZÉLESSÉGÉNEK és MAGASSÁGÁNAK állítottál be.
 
 ![a vászon rácsa](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.hu.png)  
 > Kép forrása: [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
@@ -41,7 +41,7 @@ A vászon egy derékszögű koordináta-rendszert használ a rajzoláshoz. Ezér
 Ahhoz, hogy rajzolni tudj a vászon elemre, a következő lépéseket kell végrehajtanod:
 
 1. **Szerezz egy hivatkozást** a vászon elemre.
-2. **Szerezz egy hivatkozást** a vászon elemhez tartozó kontextus elemre.
+2. **Szerezz egy hivatkozást** a vászon elemhez tartozó Kontextus elemre.
 3. **Hajts végre egy rajzolási műveletet** a kontextus elem segítségével.
 
 A fenti lépésekhez tartozó kód általában így néz ki:
@@ -61,19 +61,19 @@ ctx.fillStyle = 'red';
 ctx.fillRect(0,0, 200, 200) // x,y,width, height
 ```
 
-✅ A Canvas API főként 2D alakzatokra fókuszál, de 3D elemeket is rajzolhatsz egy weboldalra; ehhez például a [WebGL API-t](https://developer.mozilla.org/docs/Web/API/WebGL_API) használhatod.
+✅ A Canvas API főként 2D formákra összpontosít, de 3D elemeket is rajzolhatsz egy weboldalra; ehhez használhatod a [WebGL API-t](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
-A Canvas API-val rengeteg dolgot rajzolhatsz, például:
+A Canvas API-val különféle dolgokat rajzolhatsz, például:
 
-- **Geometriai alakzatokat**: már megmutattuk, hogyan lehet téglalapot rajzolni, de ennél sokkal többet is lehet.
-- **Szöveget**: bármilyen betűtípussal és színnel rajzolhatsz szöveget.
-- **Képeket**: például .jpg vagy .png formátumú képeket is megjeleníthetsz.
+- **Geometriai formák**, már megmutattuk, hogyan lehet téglalapot rajzolni, de ennél sokkal többet is lehet.
+- **Szöveg**, bármilyen betűtípussal és színnel rajzolhatsz szöveget.
+- **Képek**, például .jpg vagy .png formátumú képeket is megjeleníthetsz.
 
-✅ Próbáld ki! Már tudod, hogyan kell téglalapot rajzolni, meg tudsz rajzolni egy kört is az oldalon? Nézd meg néhány érdekes Canvas rajzot a CodePen-en. Itt van egy [különösen lenyűgöző példa](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Próbáld ki! Tudod, hogyan kell téglalapot rajzolni, meg tudsz rajzolni egy kört is az oldalon? Nézd meg néhány érdekes Canvas rajzot a CodePen-en. Itt van egy [különösen lenyűgöző példa](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Kép eszköz betöltése és megjelenítése
+## Kép eszköz betöltése és rajzolása
 
-Egy kép eszközt úgy tölthetsz be, hogy létrehozol egy `Image` objektumot, és beállítod a `src` tulajdonságát. Ezután figyelned kell a `load` eseményt, hogy tudd, mikor áll készen a használatra. A kód így néz ki:
+Egy kép eszközt úgy tölthetsz be, hogy létrehozol egy `Image` objektumot, és beállítod a `src` tulajdonságát. Ezután figyelned kell a `load` eseményt, hogy tudd, mikor használható. A kód így néz ki:
 
 ### Eszköz betöltése
 
@@ -87,7 +87,7 @@ img.onload = () => {
 
 ### Eszköz betöltési minta
 
-Ajánlott a fentieket egy olyan szerkezetbe csomagolni, mint az alábbi, hogy könnyebb legyen használni, és csak akkor próbálj manipulálni vele, amikor teljesen betöltődött:
+Ajánlott a fentieket egy ilyen szerkezetbe csomagolni, hogy könnyebb legyen használni, és csak akkor próbálj manipulálni vele, amikor teljesen betöltődött:
 
 ```javascript
 function loadAsset(path) {
@@ -128,7 +128,7 @@ async function run() {
 
 ### Mit kell építeni
 
-Egy weboldalt kell készítened egy vászon elemmel. A vászonnak egy fekete képernyőt kell megjelenítenie `1024*768` méretben. Két képet biztosítottunk számodra:
+Egy weboldalt kell készítened egy vászon elemmel. Egy fekete képernyőt kell megjelenítenie `1024*768` méretben. Két képet biztosítottunk számodra:
 
 - Hős hajó
 
@@ -160,7 +160,7 @@ cd your-work
 npm start
 ```
 
-A fenti parancs egy HTTP szervert indít el a `http://localhost:5000` címen. Nyiss meg egy böngészőt, és írd be ezt a címet. Egyelőre egy üres oldal jelenik meg, de ez hamarosan megváltozik.
+A fenti parancs elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy böngészőt, és írd be ezt a címet. Jelenleg egy üres oldal jelenik meg, de ez hamarosan megváltozik.
 
 > Megjegyzés: a képernyőn történő változások megtekintéséhez frissítsd a böngészőt.
 
@@ -171,8 +171,8 @@ Add hozzá a szükséges kódot a `your-work/app.js` fájlhoz az alábbiak megol
 1. **Rajzolj** egy vásznat fekete háttérrel  
    > Tipp: adj hozzá két sort a megfelelő TODO alá az `/app.js` fájlban, beállítva a `ctx` elemet feketére, a bal felső koordinátákat 0,0-ra, a magasságot és szélességet pedig a vászon méretéhez igazítva.
 2. **Töltsd be** a textúrákat  
-   > Tipp: add hozzá a játékos és az ellenség képeit az `await loadTexture` használatával, és add meg a kép elérési útját. Egyelőre még nem fogod látni őket a képernyőn!
-3. **Rajzold meg** a hőst a képernyő közepén, az alsó felében  
+   > Tipp: add hozzá a játékos és az ellenség képeit az `await loadTexture` használatával, és add meg a kép elérési útját. Még nem fogod látni őket a képernyőn!
+3. **Rajzold meg** a hőst a képernyő közepére, az alsó felében  
    > Tipp: használd a `drawImage` API-t a heroImg képernyőre rajzolásához, beállítva a `canvas.width / 2 - 45` és `canvas.height - canvas.height / 4)` értékeket.
 4. **Rajzolj** 5*5 szörnyet  
    > Tipp: Most már kikommentelheted a kódot, hogy az ellenségeket a képernyőre rajzolja. Ezután menj a `createEnemies` függvényhez, és építsd ki.
@@ -198,7 +198,7 @@ Add hozzá a szükséges kódot a `your-work/app.js` fájlhoz az alábbiak megol
 
 ## Eredmény
 
-A kész eredménynek így kell kinéznie:
+A kész eredmény így kell kinézzen:
 
 ![Fekete képernyő hőssel és 5*5 szörnnyel](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.hu.png)
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-27T22:27:43+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T12:32:59+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "hr"
 }
@@ -13,11 +13,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/37)
 
-U ovoj lekciji naučit ćete kako dodati bodovanje u igru i izračunati živote.
+U ovoj lekciji naučit ćete kako dodati bodove u igru i izračunavati živote.
 
 ## Iscrtavanje teksta na ekranu
 
-Kako biste mogli prikazati rezultat igre na ekranu, trebate znati kako postaviti tekst na ekran. Odgovor je korištenje metode `fillText()` na objektu canvas. Također možete kontrolirati druge aspekte poput fonta, boje teksta pa čak i poravnanja (lijevo, desno, centrirano). Ispod je primjer koda koji iscrtava tekst na ekranu.
+Kako biste mogli prikazati rezultat igre na ekranu, trebate znati kako postaviti tekst na ekran. Odgovor je korištenje metode `fillText()` na objektu canvas. Također možete kontrolirati i druge aspekte poput fonta, boje teksta pa čak i poravnanja (lijevo, desno, centrirano). Ispod je primjer koda koji iscrtava tekst na ekranu.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -30,14 +30,14 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ## Život kao koncept u igri
 
-Koncept života u igri je samo broj. U kontekstu svemirske igre, uobičajeno je dodijeliti određeni broj života koji se smanjuju jedan po jedan kada vaš brod pretrpi štetu. Lijepo je ako možete prikazati grafičku reprezentaciju toga, poput malih brodova ili srca, umjesto broja.
+Koncept života u igri je samo broj. U kontekstu svemirske igre, uobičajeno je dodijeliti određeni broj života koji se smanjuju jedan po jedan kada vaš brod pretrpi štetu. Lijepo je ako možete prikazati grafičku reprezentaciju toga, poput malih brodova ili srca, umjesto samog broja.
 
-## Što izraditi
+## Što ćemo izgraditi
 
-Dodajte sljedeće u svoju igru:
+Dodajmo sljedeće u vašu igru:
 
-- **Rezultat igre**: Za svaki neprijateljski brod koji uništite, heroj bi trebao dobiti bodove, predlažemo 100 bodova po brodu. Rezultat igre trebao bi biti prikazan u donjem lijevom kutu.
-- **Životi**: Vaš brod ima tri života. Gubite jedan život svaki put kada neprijateljski brod udari u vas. Broj života trebao bi biti prikazan u donjem desnom kutu i sastojati se od sljedeće grafike ![slika života](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.hr.png).
+- **Rezultat igre**: Za svaki neprijateljski brod koji uništite, heroj bi trebao dobiti određeni broj bodova, predlažemo 100 bodova po brodu. Rezultat igre trebao bi biti prikazan u donjem lijevom kutu.
+- **Životi**: Vaš brod ima tri života. Gubite jedan život svaki put kada se neprijateljski brod sudari s vama. Broj života trebao bi biti prikazan u donjem desnom kutu i sastojati se od sljedeće grafike ![slika života](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.hr.png).
 
 ## Preporučeni koraci
 
@@ -60,7 +60,7 @@ cd your-work
 npm start
 ```
 
-Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`. Otvorite preglednik i unesite tu adresu. Trenutno bi se trebao prikazati heroj i svi neprijatelji, a pritiskom na lijevu i desnu strelicu heroj se pomiče i može pucati na neprijatelje.
+Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`. Otvorite preglednik i unesite tu adresu. Trenutno bi trebala prikazivati heroja i sve neprijatelje, a pritiskom na lijevu i desnu strelicu heroj se pomiče i može pucati na neprijatelje.
 
 ### Dodavanje koda
 
@@ -137,7 +137,7 @@ Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`.
 
 1. **Implementirajte pravila igre**. Implementirajte sljedeća pravila igre:
 
-   1. **Za svaki sudar heroja i neprijatelja**, oduzmite jedan život.
+   1. **Za svaku koliziju heroja i neprijatelja**, oduzmite jedan život.
    
       Proširite klasu `Hero` kako biste to omogućili:
 
@@ -175,7 +175,7 @@ Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`.
         });
         ```
 
-✅ Istražite druge igre koje su izrađene pomoću JavaScript/Canvas tehnologije. Koje su njihove zajedničke karakteristike?
+✅ Istražite druge igre koje su izrađene pomoću JavaScript/Canvas. Koje su njihove zajedničke karakteristike?
 
 Na kraju ovog zadatka trebali biste vidjeti male brodove za živote u donjem desnom kutu, bodove u donjem lijevom kutu, te biste trebali vidjeti kako se broj života smanjuje kada se sudarite s neprijateljima, a bodovi povećavaju kada pucate na neprijatelje. Bravo! Vaša igra je gotovo gotova.
 
@@ -200,4 +200,4 @@ Istražite načine na koje možete povećavati i smanjivati bodove i živote u i
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.

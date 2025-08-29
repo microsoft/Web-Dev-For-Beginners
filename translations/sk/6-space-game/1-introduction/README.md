@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-27T22:34:25+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T11:12:28+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "sk"
 }
@@ -17,26 +17,26 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Dedičnosť a kompozícia vo vývoji hier
 
-V predchádzajúcich lekciách nebolo potrebné príliš riešiť architektúru aplikácií, pretože projekty boli veľmi malé. Avšak, keď vaše aplikácie narastú na veľkosti a rozsahu, architektonické rozhodnutia sa stávajú dôležitejšími. Existujú dva hlavné prístupy k vytváraniu väčších aplikácií v JavaScripte: *kompozícia* alebo *dedičnosť*. Obe majú svoje výhody a nevýhody, ale poďme si ich vysvetliť v kontexte hry.
+V predchádzajúcich lekciách nebolo potrebné venovať veľkú pozornosť návrhovej architektúre aplikácií, ktoré ste vytvorili, pretože projekty boli veľmi malé. Avšak, keď vaše aplikácie narastú vo veľkosti a rozsahu, rozhodnutia o architektúre sa stávajú dôležitejšími. Existujú dva hlavné prístupy k vytváraniu väčších aplikácií v JavaScripte: *kompozícia* alebo *dedičnosť*. Obe majú svoje výhody a nevýhody, ale poďme si ich vysvetliť v kontexte hry.
 
-✅ Jedna z najslávnejších kníh o programovaní sa zaoberá [návrhovými vzormi](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Jedna z najznámejších kníh o programovaní sa zaoberá [návrhovými vzormi](https://en.wikipedia.org/wiki/Design_Patterns).
 
-V hre máte `herné objekty`, ktoré sú objekty existujúce na obrazovke. To znamená, že majú polohu v karteziánskom súradnicovom systéme, charakterizovanú súradnicami `x` a `y`. Pri vývoji hry si všimnete, že všetky vaše herné objekty majú štandardné vlastnosti, ktoré sú spoločné pre každú hru, ktorú vytvoríte, konkrétne prvky, ktoré sú:
+V hre máte `herné objekty`, ktoré sú objekty existujúce na obrazovke. To znamená, že majú polohu v karteziánskom súradnicovom systéme, charakterizovanú súradnicami `x` a `y`. Pri vývoji hry si všimnete, že všetky vaše herné objekty majú štandardné vlastnosti, spoločné pre každú hru, ktorú vytvoríte, konkrétne prvky, ktoré sú:
 
 - **založené na polohe** Väčšina, ak nie všetky, herné prvky sú založené na polohe. To znamená, že majú polohu, `x` a `y`.
-- **pohyblivé** Ide o objekty, ktoré sa môžu presunúť na nové miesto. Typicky ide o hrdinu, monštrum alebo NPC (nehrateľnú postavu), ale nie napríklad o statický objekt ako strom.
-- **samodeštrukčné** Tieto objekty existujú iba určitý čas, kým sa nenastavia na odstránenie. Zvyčajne je to reprezentované booleanom `dead` alebo `destroyed`, ktorý signalizuje hernému enginu, že tento objekt by sa už nemal vykresľovať.
-- **s časovým obmedzením** 'Časové obmedzenie' je typická vlastnosť krátkodobých objektov. Typickým príkladom je text alebo grafický efekt, ako je explózia, ktorý by mal byť viditeľný iba niekoľko milisekúnd.
+- **pohyblivé** Sú to objekty, ktoré sa môžu presunúť na nové miesto. Typicky ide o hrdinu, monštrum alebo NPC (nehráčsku postavu), ale nie napríklad o statický objekt ako strom.
+- **samodeštrukčné** Tieto objekty existujú len určitý čas, kým sa nenastavia na vymazanie. Zvyčajne je to reprezentované booleanom `dead` alebo `destroyed`, ktorý signalizuje hernému enginu, že tento objekt by sa už nemal vykresľovať.
+- **s časovým obmedzením** 'Časové obmedzenie' je typická vlastnosť krátkodobých objektov. Typickým príkladom je text alebo grafický efekt, ako je explózia, ktorý by mal byť viditeľný len niekoľko milisekúnd.
 
 ✅ Premýšľajte o hre ako Pac-Man. Dokážete identifikovať štyri vyššie uvedené typy objektov v tejto hre?
 
 ### Vyjadrenie správania
 
-Všetko, čo sme vyššie popísali, sú správania, ktoré môžu herné objekty mať. Ako ich teda zakódujeme? Toto správanie môžeme vyjadriť ako metódy priradené buď triedam alebo objektom.
+Všetko, čo sme vyššie opísali, sú správania, ktoré môžu mať herné objekty. Ako ich teda zakódujeme? Toto správanie môžeme vyjadriť ako metódy priradené buď ku triedam alebo objektom.
 
 **Triedy**
 
-Myšlienkou je použiť `triedy` v spojení s `dedičnosťou`, aby sme pridali určité správanie do triedy.
+Myšlienka je použiť `triedy` v kombinácii s `dedičnosťou`, aby sme pridali určité správanie do triedy.
 
 ✅ Dedičnosť je dôležitý koncept na pochopenie. Viac sa dozviete v [článku MDN o dedičnosti](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
@@ -139,11 +139,11 @@ const tree = createStatic(0,0, 'Tree');
 
 **Ktorý vzor by som mal použiť?**
 
-Je na vás, ktorý vzor si vyberiete. JavaScript podporuje oba tieto prístupy.
+Je na vás, ktorý vzor si vyberiete. JavaScript podporuje oba tieto paradigmy.
 
 --
 
-Ďalší vzor, ktorý je bežný vo vývoji hier, rieši problém správy používateľského zážitku a výkonu hry.
+Ďalší vzor, bežný vo vývoji hier, rieši problém správy používateľského zážitku a výkonu hry.
 
 ## Vzor Pub/Sub
 
@@ -155,7 +155,7 @@ Tento vzor rieši myšlienku, že rôzne časti vašej aplikácie by o sebe nema
 - **vydavateľ**: Tento prvok *publikuje* správu a posiela ju všetkým odberateľom.
 - **odberateľ**: Tento prvok *počúva* konkrétne správy a vykonáva určitú úlohu ako výsledok prijatia tejto správy, napríklad vystrelenie lasera.
 
-Implementácia je pomerne malá, ale ide o veľmi silný vzor. Takto to môže byť implementované:
+Implementácia je pomerne malá, ale ide o veľmi silný vzor. Tu je, ako môže byť implementovaný:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Vyššie sme prepojili udalosť klávesnice, `ArrowLeft`, a poslali správu `HERO_MOVE_LEFT`. Počúvame túto správu a ako výsledok presunieme `hrdinu`. Silou tohto vzoru je, že event listener a hrdina o sebe nevedia. Môžete premapovať `ArrowLeft` na kláves `A`. Okrem toho by bolo možné urobiť niečo úplne iné na `ArrowLeft` jednoduchými úpravami funkcie `on` v eventEmitteri:
+Vyššie sme pripojili udalosť klávesnice, `ArrowLeft`, a poslali správu `HERO_MOVE_LEFT`. Počúvame túto správu a ako výsledok presunieme `hrdinu`. Silou tohto vzoru je, že poslucháč udalostí a hrdina o sebe nevedia. Môžete premapovať `ArrowLeft` na kláves `A`. Navyše by bolo možné urobiť niečo úplne iné na `ArrowLeft` jednoduchými úpravami funkcie `on` v eventEmitteri:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,13 +212,13 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-Keď sa veci skomplikujú s rastom vašej hry, tento vzor zostáva rovnako jednoduchý a váš kód zostáva čistý. Je skutočne odporúčané prijať tento vzor.
+Keď sa veci komplikujú, keď vaša hra rastie, tento vzor zostáva rovnako zložitý a váš kód zostáva čistý. Je naozaj odporúčané prijať tento vzor.
 
 ---
 
 ## 🚀 Výzva
 
-Premýšľajte o tom, ako môže vzor pub-sub zlepšiť hru. Ktoré časti by mali vysielať udalosti a ako by na ne mala hra reagovať? Teraz máte šancu byť kreatívni, premýšľajúc o novej hre a o tom, ako by sa jej časti mohli správať.
+Premýšľajte o tom, ako môže vzor pub-sub zlepšiť hru. Ktoré časti by mali vysielať udalosti a ako by na ne mala hra reagovať? Teraz máte šancu byť kreatívni a premýšľať o novej hre a o tom, ako by sa jej časti mohli správať.
 
 ## Kvíz po prednáške
 
@@ -226,7 +226,7 @@ Premýšľajte o tom, ako môže vzor pub-sub zlepšiť hru. Ktoré časti by ma
 
 ## Prehľad a samoštúdium
 
-Dozviete sa viac o Pub/Sub [čítaním o tom](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
+Dozviete sa viac o Pub/Sub [čítaním o ňom](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
 ## Zadanie
 
@@ -235,4 +235,4 @@ Dozviete sa viac o Pub/Sub [čítaním o tom](https://docs.microsoft.com/azure/a
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

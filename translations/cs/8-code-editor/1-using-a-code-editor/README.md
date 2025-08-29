@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7aa6e4f270d38d9cb17f2b5bd86b863d",
-  "translation_date": "2025-08-28T04:23:29+00:00",
+  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
+  "translation_date": "2025-08-29T10:57:18+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "cs"
 }
 -->
 # Používání editoru kódu
 
-Tato lekce pokrývá základy používání [VSCode.dev](https://vscode.dev), webového editoru kódu, abyste mohli upravovat svůj kód a přispívat do projektu, aniž byste museli cokoli instalovat na svůj počítač.
+Tato lekce se zabývá základy používání [VSCode.dev](https://vscode.dev), webového editoru kódu, který vám umožní upravovat kód a přispívat do projektu bez nutnosti instalace čehokoli na váš počítač.
 
 <!----
 TODO: přidat volitelný obrázek
@@ -40,7 +40,7 @@ Editor kódu je nezbytný nástroj pro psaní programů a spolupráci na existuj
 
 ## Začínáme s VSCode.dev
 
-[VSCode.dev](https://vscode.dev) je editor kódu na webu. Nemusíte nic instalovat, stačí ho otevřít jako jakoukoli jinou webovou stránku. Chcete-li začít s editorem, otevřete následující odkaz: [https://vscode.dev](https://vscode.dev). Pokud nejste přihlášeni na [GitHub](https://github.com/), postupujte podle pokynů k přihlášení nebo vytvoření nového účtu a poté se přihlaste.
+[VSCode.dev](https://vscode.dev) je editor kódu na webu. Nemusíte nic instalovat, stačí ho otevřít jako jakoukoli jinou webovou stránku. Chcete-li začít, otevřete následující odkaz: [https://vscode.dev](https://vscode.dev). Pokud nejste přihlášeni na [GitHub](https://github.com/), postupujte podle pokynů k přihlášení nebo vytvoření nového účtu a poté se přihlaste.
 
 Po načtení by měl editor vypadat podobně jako na tomto obrázku:
 
@@ -54,11 +54,11 @@ Existují tři hlavní sekce, od levé strany směrem doprava:
 
 Klikněte na každou z ikon, abyste zobrazili různé nabídky. Po dokončení klikněte na _Průzkumník_, abyste se vrátili na výchozí obrazovku.
 
-Když začnete vytvářet kód nebo upravovat existující kód, bude se to odehrávat v největší oblasti napravo. Tuto oblast budete také používat k vizualizaci existujícího kódu, což si vyzkoušíte v další části.
+Když začnete vytvářet nebo upravovat kód, bude se to odehrávat v největší oblasti napravo. Tuto oblast budete také používat k vizualizaci existujícího kódu, což si vyzkoušíte v další části.
 
 ## Otevření GitHub repozitáře
 
-První věc, kterou budete potřebovat, je otevřít GitHub repozitář. Existuje několik způsobů, jak repozitář otevřít. V této sekci si ukážeme dva různé způsoby, jak můžete repozitář otevřít a začít pracovat na změnách.
+Prvním krokem je otevření GitHub repozitáře. Existuje několik způsobů, jak repozitář otevřít. V této sekci se podíváme na dva různé způsoby, jak začít pracovat na změnách.
 
 ### 1. Pomocí editoru
 
@@ -66,17 +66,17 @@ Použijte samotný editor k otevření vzdáleného repozitáře. Pokud přejdet
 
 ![Otevřít vzdálený repozitář](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.cs.png)
 
-Můžete také použít příkazovou paletu. Příkazová paleta je vstupní pole, do kterého můžete zadat libovolné slovo, které je součástí příkazu nebo akce, abyste našli správný příkaz k provedení. Použijte nabídku vlevo nahoře, poté vyberte _View_ a následně _Command Palette_, nebo použijte následující klávesovou zkratku: Ctrl-Shift-P (na MacOS Command-Shift-P).
+Můžete také použít příkazovou paletu. Příkazová paleta je vstupní pole, do kterého můžete zadat libovolné slovo, které je součástí příkazu nebo akce, abyste našli správný příkaz k provedení. Použijte nabídku vlevo nahoře, poté vyberte _View_ a následně _Command Palette_, nebo použijte klávesovou zkratku: Ctrl-Shift-P (na MacOS Command-Shift-P).
 
 ![Nabídka palety](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.cs.png)
 
-Jakmile se nabídka otevře, napište _open remote repository_ a poté vyberte první možnost. Zobrazí se vám seznam repozitářů, kterých jste součástí nebo které jste nedávno otevřeli. Můžete také použít úplnou URL adresu GitHubu k výběru jednoho z nich. Použijte následující URL a vložte ji do pole:
+Jakmile se nabídka otevře, napište _open remote repository_ a vyberte první možnost. Zobrazí se seznam repozitářů, kterých jste součástí nebo které jste nedávno otevřeli. Můžete také použít úplnou URL adresu GitHubu k výběru jednoho z nich. Použijte následující URL a vložte ji do pole:
 
 ```
 https://github.com/microsoft/Web-Dev-For-Beginners
 ```
 
-✅ Pokud bylo úspěšné, uvidíte všechny soubory tohoto repozitáře načtené v textovém editoru.
+✅ Pokud se vše podaří, uvidíte všechny soubory tohoto repozitáře načtené v textovém editoru.
 
 ### 2. Použití URL
 
@@ -84,25 +84,25 @@ Repozitář můžete také načíst přímo pomocí URL. Například úplná URL
 
 ## Úprava souborů
 
-Jakmile máte repozitář otevřený v prohlížeči/vscode.dev, dalším krokem bude provádění aktualizací nebo změn projektu.
+Jakmile máte repozitář otevřený v prohlížeči/vscode.dev, dalším krokem je provádění aktualizací nebo změn projektu.
 
 ### 1. Vytvoření nového souboru
 
-Můžete vytvořit soubor buď uvnitř existující složky, nebo v kořenovém adresáři/složce. Chcete-li vytvořit nový soubor, otevřete umístění/složku, do které chcete soubor uložit, a vyberte ikonu _'New file ...'_ na panelu aktivit _(vlevo)_, pojmenujte ho a stiskněte Enter.
+Soubor můžete vytvořit buď uvnitř existující složky, nebo v kořenovém adresáři/složce. Chcete-li vytvořit nový soubor, otevřete umístění/složku, kam chcete soubor uložit, a vyberte ikonu _'New file ...'_ na panelu aktivit _(vlevo)_, pojmenujte ho a stiskněte Enter.
 
 ![Vytvoření nového souboru](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.cs.png)
 
 ### 2. Úprava a uložení souboru v repozitáři
 
-Používání vscode.dev je užitečné, kdykoli chcete rychle aktualizovat svůj projekt, aniž byste museli načítat jakýkoli software lokálně.  
-Chcete-li aktualizovat svůj kód, klikněte na ikonu 'Explorer', která se také nachází na panelu aktivit, abyste zobrazili soubory a složky v repozitáři.  
-Vyberte soubor, který chcete otevřít v oblasti kódu, proveďte změny a uložte.
+Používání vscode.dev je užitečné, kdykoli chcete rychle aktualizovat svůj projekt bez nutnosti načítání jakéhokoli softwaru lokálně. 
+
+Chcete-li aktualizovat svůj kód, klikněte na ikonu 'Explorer', která se také nachází na panelu aktivit, abyste zobrazili soubory a složky v repozitáři. Vyberte soubor, který chcete otevřít v oblasti kódu, proveďte změny a uložte.
 
 ![Úprava souboru](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.cs.png)
 
 Jakmile dokončíte aktualizaci projektu, vyberte ikonu _`source control`_, která obsahuje všechny nové změny, které jste provedli v repozitáři.
 
-Chcete-li zobrazit změny, které jste provedli ve svém projektu, vyberte soubor(y) ve složce `Changes` na rozšířeném panelu aktivit. Tím se otevře 'Working Tree', kde vizuálně uvidíte změny, které jste provedli v souboru. Červená barva označuje vynechání projektu, zatímco zelená značí přidání.
+Chcete-li zobrazit změny, které jste provedli, vyberte soubor(y) ve složce `Changes` na rozšířeném panelu aktivit. Tím se otevře 'Working Tree', kde vizuálně uvidíte změny, které jste provedli v souboru. Červená barva označuje odstranění z projektu, zatímco zelená značí přidání.
 
 ![Zobrazení změn](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.cs.png)
 
@@ -110,7 +110,7 @@ Pokud jste spokojeni se změnami, které jste provedli, najeďte na složku `Cha
 
 Pokud však nejste spokojeni s některými změnami a chcete je zrušit, najeďte na složku `Changes` a vyberte ikonu `undo`.
 
-Poté zadejte `commit message` _(popis změny, kterou jste provedli v projektu)_, klikněte na ikonu `check`, abyste změny commitovali a odeslali.
+Poté napište `commit message` _(popis změny, kterou jste provedli v projektu)_, klikněte na ikonu `check`, abyste změny commitovali a odeslali.
 
 Jakmile dokončíte práci na projektu, vyberte ikonu `hamburger menu` vlevo nahoře, abyste se vrátili do repozitáře na github.com.
 
@@ -118,10 +118,10 @@ Jakmile dokončíte práci na projektu, vyberte ikonu `hamburger menu` vlevo nah
 
 ## Používání rozšíření
 
-Instalace rozšíření na VSCode vám umožňuje přidávat nové funkce a možnosti přizpůsobení vývojového prostředí ve vašem editoru, což zlepšuje váš vývojový proces. Tato rozšíření také pomáhají přidávat podporu pro různé programovací jazyky a často jsou buď obecná, nebo zaměřená na konkrétní jazyk.
+Instalace rozšíření ve VSCode vám umožní přidat nové funkce a možnosti přizpůsobení vývojového prostředí v editoru, což zlepší váš pracovní postup. Tato rozšíření také pomáhají přidat podporu pro různé programovací jazyky a často jsou buď obecná, nebo zaměřená na konkrétní jazyk.
 
-Chcete-li procházet seznam všech dostupných rozšíření, klikněte na ikonu _`Extensions`_ na panelu aktivit a začněte psát název rozšíření do textového pole označeného _'Search Extensions in Marketplace'_.  
-Uvidíte seznam rozšíření, z nichž každé obsahuje **název rozšíření, jméno vydavatele, jednovětný popis, počet stažení** a **hodnocení hvězdičkami**.
+Chcete-li procházet seznam všech dostupných rozšíření, klikněte na ikonu _`Extensions`_ na panelu aktivit a začněte psát název rozšíření do textového pole označeného _'Search Extensions in Marketplace'_.
+Zobrazí se seznam rozšíření, z nichž každé obsahuje **název rozšíření, jméno vydavatele, jednovětný popis, počet stažení** a **hodnocení hvězdičkami**.
 
 ![Detaily rozšíření](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.cs.png)
 
@@ -151,12 +151,12 @@ Po instalaci a používání rozšíření nabízí vscode.dev možnosti správy
 
     Vyberte nainstalované rozšíření na rozšířeném panelu aktivit > klikněte na ikonu ozubeného kolečka > vyberte 'Disable' nebo 'Disable (Workspace)' **NEBO** otevřete rozšíření v oblasti kódu a klikněte na modré tlačítko Disable.
 
+   
 - **Odinstalovat:** Vyberte nainstalované rozšíření na rozšířeném panelu aktivit > klikněte na ikonu ozubeného kolečka > vyberte 'Uninstall' **NEBO** otevřete rozšíření v oblasti kódu a klikněte na modré tlačítko Uninstall.
 
 ---
 
 ## Zadání
-
 [Vytvořte webovou stránku životopisu pomocí vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
 <!----
@@ -170,5 +170,5 @@ Přečtěte si více o [VSCode.dev](https://code.visualstudio.com/docs/editor/vs
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+**Upozornění**:  
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-28T08:01:28+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T11:33:02+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "ro"
 }
@@ -11,28 +11,28 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![video](../../../../6-space-game/images/pewpew.gif)
 
-## Chestionar înainte de curs
+## Test înainte de lecție
 
-[Chestionar înainte de curs](https://ff-quizzes.netlify.app/web/quiz/29)
+[Test înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Moștenire și Compoziție în dezvoltarea jocurilor
 
-În lecțiile anterioare, nu a fost nevoie să te preocupi prea mult de arhitectura aplicațiilor pe care le-ai construit, deoarece proiectele erau de dimensiuni mici. Totuși, pe măsură ce aplicațiile tale cresc în dimensiune și complexitate, deciziile arhitecturale devin mai importante. Există două abordări majore pentru crearea aplicațiilor mai mari în JavaScript: *compoziția* sau *moștenirea*. Ambele au avantaje și dezavantaje, dar să le explicăm în contextul unui joc.
+În lecțiile anterioare, nu a fost nevoie să te preocupi prea mult de arhitectura aplicațiilor pe care le-ai construit, deoarece proiectele erau foarte mici ca amploare. Totuși, pe măsură ce aplicațiile tale cresc în dimensiune și complexitate, deciziile arhitecturale devin mai importante. Există două abordări majore pentru crearea aplicațiilor mai mari în JavaScript: *compoziția* sau *moștenirea*. Ambele au avantaje și dezavantaje, dar să le explicăm în contextul unui joc.
 
-✅ Una dintre cele mai faimoase cărți de programare scrise vreodată are legătură cu [modelele de design](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Una dintre cele mai faimoase cărți de programare scrise vreodată are legătură cu [design patterns](https://en.wikipedia.org/wiki/Design_Patterns).
 
-Într-un joc ai `obiecte de joc`, care sunt obiecte ce există pe un ecran. Asta înseamnă că au o locație într-un sistem de coordonate cartezian, caracterizată printr-o coordonată `x` și `y`. Pe măsură ce dezvolți un joc, vei observa că toate obiectele de joc au o proprietate standard, comună pentru fiecare joc pe care îl creezi, și anume elemente care sunt:
+Într-un joc, ai `obiecte de joc`, care sunt obiecte ce există pe ecran. Asta înseamnă că au o locație într-un sistem de coordonate cartezian, caracterizată printr-o coordonată `x` și `y`. Pe măsură ce dezvolți un joc, vei observa că toate obiectele de joc au o proprietate standard, comună pentru fiecare joc pe care îl creezi, și anume elemente care sunt:
 
 - **bazate pe locație** Majoritatea, dacă nu toate, elementele de joc sunt bazate pe locație. Asta înseamnă că au o locație, un `x` și un `y`.
-- **mobile** Acestea sunt obiecte care se pot deplasa într-o locație nouă. De obicei, acestea sunt un erou, un monstru sau un NPC (personaj non-jucător), dar nu, de exemplu, un obiect static precum un copac.
-- **autodistructive** Aceste obiecte există doar pentru o perioadă de timp determinată înainte de a se pregăti pentru ștergere. De obicei, acest lucru este reprezentat printr-un boolean `dead` sau `destroyed` care semnalează motorului de joc că acest obiect nu ar mai trebui să fie redat.
-- **cu timp de răcire** 'Timpul de răcire' este o proprietate tipică pentru obiectele de scurtă durată. Un exemplu tipic este un text sau un efect grafic, cum ar fi o explozie, care ar trebui să fie vizibil doar pentru câteva milisecunde.
+- **mobile** Acestea sunt obiecte care se pot deplasa într-o nouă locație. De obicei, acestea sunt un erou, un monstru sau un NPC (personaj non-jucător), dar nu, de exemplu, un obiect static precum un copac.
+- **autodistructive** Aceste obiecte există doar pentru o perioadă de timp înainte de a se pregăti pentru ștergere. De obicei, acest lucru este reprezentat printr-un boolean `dead` sau `destroyed` care semnalează motorului de joc că acest obiect nu ar trebui să mai fie redat.
+- **cu timp de răcire** 'Timp de răcire' este o proprietate tipică printre obiectele de scurtă durată. Un exemplu tipic este un text sau un efect grafic, cum ar fi o explozie, care ar trebui să fie vizibil doar pentru câteva milisecunde.
 
 ✅ Gândește-te la un joc precum Pac-Man. Poți identifica cele patru tipuri de obiecte enumerate mai sus în acest joc?
 
 ### Exprimarea comportamentului
 
-Tot ce am descris mai sus reprezintă comportamente pe care obiectele de joc le pot avea. Deci, cum codificăm aceste comportamente? Putem exprima acest comportament ca metode asociate fie claselor, fie obiectelor.
+Tot ceea ce am descris mai sus reprezintă comportamente pe care obiectele de joc le pot avea. Deci, cum codificăm aceste comportamente? Putem exprima aceste comportamente ca metode asociate fie claselor, fie obiectelor.
 
 **Clase**
 
@@ -88,7 +88,7 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Petrece câteva minute imaginându-ți un erou din Pac-Man (de exemplu, Inky, Pinky sau Blinky) și cum ar fi scris în JavaScript.
+✅ Ia câteva minute pentru a reimagina un erou din Pac-Man (de exemplu, Inky, Pinky sau Blinky) și cum ar fi scris în JavaScript.
 
 **Compoziție**
 
@@ -143,19 +143,19 @@ Depinde de tine ce model alegi. JavaScript suportă ambele paradigme.
 
 --
 
-Un alt model comun în dezvoltarea jocurilor abordează problema gestionării experienței utilizatorului și a performanței jocului.
+Un alt model comun în dezvoltarea jocurilor abordează problema gestionării experienței utilizatorului și performanței jocului.
 
 ## Modelul Pub/Sub
 
-✅ Pub/Sub înseamnă 'publish-subscribe' (publicare-abonare)
+✅ Pub/Sub înseamnă 'publish-subscribe'
 
-Acest model abordează ideea că părțile disparate ale aplicației tale nu ar trebui să știe una despre cealaltă. De ce? Face mult mai ușor să vezi ce se întâmplă în general dacă diversele părți sunt separate. De asemenea, face mai ușor să schimbi brusc comportamentul dacă este necesar. Cum realizăm acest lucru? Stabilim câteva concepte:
+Acest model abordează ideea că părțile disparate ale aplicației tale nu ar trebui să știe una despre cealaltă. De ce? Este mult mai ușor să vezi ce se întâmplă în general dacă diversele părți sunt separate. De asemenea, devine mai ușor să schimbi brusc comportamentul dacă este necesar. Cum realizăm acest lucru? Facem acest lucru prin stabilirea unor concepte:
 
-- **mesaj**: Un mesaj este de obicei un șir de text însoțit de o sarcină opțională (o bucată de date care clarifică despre ce este vorba în mesaj). Un mesaj tipic într-un joc poate fi `KEY_PRESSED_ENTER`.
+- **mesaj**: Un mesaj este de obicei un șir de text însoțit de un payload opțional (o bucată de date care clarifică despre ce este mesajul). Un mesaj tipic într-un joc poate fi `KEY_PRESSED_ENTER`.
 - **publisher**: Acest element *publică* un mesaj și îl trimite tuturor abonaților.
-- **subscriber**: Acest element *ascultă* mesaje specifice și execută o anumită sarcină ca rezultat al primirii acestui mesaj, cum ar fi lansarea unui laser.
+- **subscriber**: Acest element *ascultă* mesaje specifice și execută o sarcină ca rezultat al primirii acestui mesaj, cum ar fi lansarea unui laser.
 
-Implementarea este destul de mică, dar este un model foarte puternic. Iată cum poate fi implementat:
+Implementarea este destul de mică ca dimensiune, dar este un model foarte puternic. Iată cum poate fi implementat:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Mai sus conectăm un eveniment de tastatură, `ArrowLeft`, și trimitem mesajul `HERO_MOVE_LEFT`. Ascultăm acest mesaj și mutăm `eroul` ca rezultat. Punctul forte al acestui model este că ascultătorul de evenimente și eroul nu știu unul despre celălalt. Poți remapa `ArrowLeft` la tasta `A`. În plus, ar fi posibil să faci ceva complet diferit pe `ArrowLeft` făcând câteva modificări funcției `on` a eventEmitter-ului:
+Mai sus conectăm un eveniment de tastatură, `ArrowLeft`, și trimitem mesajul `HERO_MOVE_LEFT`. Ascultăm acel mesaj și mutăm `hero` ca rezultat. Puterea acestui model constă în faptul că listener-ul de evenimente și eroul nu știu unul despre celălalt. Poți remapa `ArrowLeft` la tasta `A`. În plus, ar fi posibil să faci ceva complet diferit pe `ArrowLeft` prin câteva modificări ale funcției `on` a eventEmitter-ului:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -218,21 +218,21 @@ Pe măsură ce lucrurile devin mai complicate pe măsură ce jocul tău crește,
 
 ## 🚀 Provocare
 
-Gândește-te cum modelul pub-sub poate îmbunătăți un joc. Ce părți ar trebui să emită evenimente și cum ar trebui să reacționeze jocul la acestea? Acum ai șansa să fii creativ, gândindu-te la un joc nou și la cum ar putea funcționa părțile sale.
+Gândește-te cum modelul pub-sub poate îmbunătăți un joc. Ce părți ar trebui să emită evenimente și cum ar trebui să reacționeze jocul la acestea? Acum ai șansa să fii creativ, gândindu-te la un joc nou și la modul în care părțile sale ar putea să se comporte.
 
-## Chestionar după curs
+## Test după lecție
 
-[Chestionar după curs](https://ff-quizzes.netlify.app/web/quiz/30)
+[Test după lecție](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Recapitulare și Studiu Individual
 
-Află mai multe despre Pub/Sub [citind despre acest subiect](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
+Află mai multe despre Pub/Sub [citind despre el](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
 ## Temă
 
-[Crează un prototip de joc](assignment.md)
+[Simulează un joc](assignment.md)
 
 ---
 
 **Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

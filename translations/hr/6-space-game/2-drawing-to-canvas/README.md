@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-27T22:31:41+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T12:33:52+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "hr"
 }
@@ -27,7 +27,7 @@ Evo kako se obično deklarira, kao dio tijela stranice:
 
 Gore postavljamo `id`, `width` i `height`.
 
-- `id`: postavite ovo kako biste mogli dobiti referencu kada trebate interakciju s njim.
+- `id`: postavite ovo kako biste mogli dobiti referencu kada trebate raditi s njim.
 - `width`: ovo je širina elementa.
 - `height`: ovo je visina elementa.
 
@@ -35,14 +35,14 @@ Gore postavljamo `id`, `width` i `height`.
 
 Platno koristi kartezijanski koordinatni sustav za crtanje. Dakle, koristi x-os i y-os za izražavanje gdje se nešto nalazi. Lokacija `0,0` je gornji lijevi kut, a donji desni kut je ono što ste postavili kao ŠIRINU i VISINU platna.
 
-![mreža platna](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.hr.png)  
+![mreža platna](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.hr.png)
 > Slika s [MDN-a](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-Da biste crtali na elementu platna, morate proći kroz sljedeće korake:
+Da biste crtali na elementu platna, trebate proći kroz sljedeće korake:
 
 1. **Dobiti referencu** na element platna.
-2. **Dobiti referencu** na element konteksta koji se nalazi na elementu platna.
-3. **Izvršiti operaciju crtanja** koristeći element konteksta.
+1. **Dobiti referencu** na element konteksta koji se nalazi na elementu platna.
+1. **Izvršiti operaciju crtanja** koristeći element konteksta.
 
 Kod za gore navedene korake obično izgleda ovako:
 
@@ -63,19 +63,19 @@ ctx.fillRect(0,0, 200, 200) // x,y,width, height
 
 ✅ Canvas API uglavnom se fokusira na 2D oblike, ali možete crtati i 3D elemente na web stranici; za to možete koristiti [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
-Možete crtati razne stvari pomoću Canvas API-ja, poput:
+Možete crtati razne stvari pomoću Canvas API-ja, kao što su:
 
-- **Geometrijskih oblika**, već smo pokazali kako nacrtati pravokutnik, ali postoji mnogo više što možete nacrtati.
-- **Teksta**, možete nacrtati tekst s bilo kojim fontom i bojom koju želite.
-- **Slika**, možete nacrtati sliku na temelju slikovne datoteke, poput .jpg ili .png.
+- **Geometrijski oblici**, već smo pokazali kako nacrtati pravokutnik, ali postoji mnogo više što možete nacrtati.
+- **Tekst**, možete nacrtati tekst s bilo kojim fontom i bojom koju želite.
+- **Slike**, možete nacrtati sliku na temelju slikovne datoteke, poput .jpg ili .png.
 
 ✅ Isprobajte! Znate kako nacrtati pravokutnik, možete li nacrtati krug na stranici? Pogledajte neke zanimljive crteže na platnu na CodePenu. Evo [posebno impresivnog primjera](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Učitavanje i crtanje slikovnih datoteka
+## Učitavanje i crtanje slikovnog resursa
 
-Slikovnu datoteku učitavate stvaranjem objekta `Image` i postavljanjem njegove `src` vrijednosti. Zatim slušate događaj `load` kako biste znali kada je spreman za korištenje. Kod izgleda ovako:
+Slikovni resurs učitavate stvaranjem objekta `Image` i postavljanjem njegove `src` svojstva. Zatim slušate događaj `load` kako biste znali kada je spreman za korištenje. Kod izgleda ovako:
 
-### Učitavanje datoteke
+### Učitavanje resursa
 
 ```javascript
 const img = new Image();
@@ -85,9 +85,9 @@ img.onload = () => {
 }
 ```
 
-### Uzorak učitavanja datoteke
+### Uzorak učitavanja resursa
 
-Preporučuje se da gore navedeno omotate u konstrukciju poput ove, kako bi bilo lakše za korištenje i kako biste manipulirali slikom tek kad je potpuno učitana:
+Preporučuje se da gore navedeno omotate u konstrukciju poput ove, kako bi bilo lakše koristiti i kako biste ga manipulirali tek kad je potpuno učitan:
 
 ```javascript
 function loadAsset(path) {
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-Da biste nacrtali elemente igre na ekranu, vaš kod bi izgledao ovako:
+Da biste nacrtali resurse igre na ekranu, vaš kod bi izgledao ovako:
 
 ```javascript
 async function run() {
@@ -128,19 +128,19 @@ async function run() {
 
 ### Što izgraditi
 
-Izgradit ćete web stranicu s Canvas elementom. Trebala bi prikazivati crni ekran `1024*768`. Dostavili smo vam dvije slike:
+Izgradit ćete web stranicu s elementom platna. Trebala bi prikazivati crni ekran `1024*768`. Osigurali smo vam dvije slike:
 
 - Herojski brod
 
    ![Herojski brod](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.hr.png)
 
-- 5*5 čudovišta
+- 5*5 čudovište
 
    ![Brod čudovišta](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.hr.png)
 
 ### Preporučeni koraci za početak razvoja
 
-Pronađite datoteke koje su stvorene za vas u podmapi `your-work`. Trebala bi sadržavati sljedeće:
+Pronađite datoteke koje su kreirane za vas u podmapi `your-work`. Trebala bi sadržavati sljedeće:
 
 ```bash
 -| assets
@@ -166,16 +166,16 @@ Gore navedeno će pokrenuti HTTP server na adresi `http://localhost:5000`. Otvor
 
 ### Dodavanje koda
 
-Dodajte potrebni kod u `your-work/app.js` kako biste riješili sljedeće:
+Dodajte potreban kod u `your-work/app.js` kako biste riješili sljedeće:
 
-1. **Nacrtajte** platno s crnom pozadinom  
-   > savjet: dodajte dvije linije ispod odgovarajućeg TODO u `/app.js`, postavljajući `ctx` element da bude crn, a gornje/lijeve koordinate na 0,0 te visinu i širinu da budu jednake onima platna.
-2. **Učitajte** teksture  
+1. **Nacrtajte** platno s crnom pozadinom
+   > savjet: dodajte dvije linije ispod odgovarajućeg TODO-a u `/app.js`, postavljajući element `ctx` da bude crn, a gornje/lijeve koordinate na 0,0, dok visina i širina trebaju odgovarati platnu.
+2. **Učitajte** teksture
    > savjet: dodajte slike igrača i neprijatelja koristeći `await loadTexture` i prosljeđujući put slike. Još ih nećete vidjeti na ekranu!
-3. **Nacrtajte** heroja u sredini ekrana u donjoj polovici  
-   > savjet: koristite `drawImage` API za crtanje heroImg na ekranu, postavljajući `canvas.width / 2 - 45` i `canvas.height - canvas.height / 4)`.
-4. **Nacrtajte** 5*5 čudovišta  
-   > savjet: sada možete otkomentirati kod za crtanje neprijatelja na ekranu. Zatim idite na funkciju `createEnemies` i izradite je.
+3. **Nacrtajte** heroja u sredini ekrana u donjoj polovici
+   > savjet: koristite API `drawImage` za crtanje heroImg na ekranu, postavljajući `canvas.width / 2 - 45` i `canvas.height - canvas.height / 4)`;
+4. **Nacrtajte** 5*5 čudovišta
+   > savjet: Sada možete otkomentirati kod za crtanje neprijatelja na ekranu. Zatim idite na funkciju `createEnemies` i izradite je.
 
    Prvo, postavite neke konstante:
 
@@ -186,7 +186,7 @@ Dodajte potrebni kod u `your-work/app.js` kako biste riješili sljedeće:
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    zatim, stvorite petlju za crtanje niza čudovišta na ekranu:
+    zatim, kreirajte petlju za crtanje niza čudovišta na ekranu:
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {

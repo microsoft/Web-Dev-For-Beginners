@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "30f8903a1f290e3d438dc2c70fe60259",
-  "translation_date": "2025-08-28T08:15:48+00:00",
+  "original_hash": "61c14b27044861e5e69db35dd52c4403",
+  "translation_date": "2025-08-29T11:36:21+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "ro"
 }
@@ -18,11 +18,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introducere
 
-Manipularea DOM-ului, sau "Document Object Model", este un aspect cheie al dezvoltării web. Conform [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "Document Object Model (DOM) este reprezentarea datelor obiectelor care alcătuiesc structura și conținutul unui document pe web." Provocările legate de manipularea DOM-ului pe web au fost adesea motivul utilizării framework-urilor JavaScript în locul JavaScript-ului simplu pentru gestionarea DOM-ului, dar ne vom descurca singuri!
+Manipularea DOM-ului, sau "Modelul Obiectului Document", este un aspect esențial al dezvoltării web. Conform [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "Modelul Obiectului Document (DOM) este reprezentarea datelor obiectelor care alcătuiesc structura și conținutul unui document pe web." Provocările legate de manipularea DOM-ului pe web au fost adesea motivul utilizării framework-urilor JavaScript în locul JavaScript-ului simplu pentru gestionarea DOM-ului, dar ne vom descurca pe cont propriu!
 
-În plus, această lecție va introduce ideea unei [închideri JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), pe care o puteți considera ca o funcție închisă de o altă funcție, astfel încât funcția interioară să aibă acces la domeniul funcției exterioare.
+În plus, această lecție va introduce ideea unei [închideri JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), pe care o puteți considera ca o funcție închisă de o altă funcție, astfel încât funcția interioară are acces la domeniul funcției exterioare.
 
-> Închiderile JavaScript sunt un subiect vast și complex. Această lecție abordează cea mai simplă idee: în codul acestui terrarium, veți găsi o închidere: o funcție interioară și o funcție exterioară construite astfel încât funcția interioară să aibă acces la domeniul funcției exterioare. Pentru mult mai multe informații despre cum funcționează acest lucru, vizitați [documentația extinsă](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
+> Închiderile JavaScript sunt un subiect vast și complex. Această lecție abordează cea mai simplă idee: în codul acestui terrarium, veți găsi o închidere: o funcție interioară și o funcție exterioară construite astfel încât funcția interioară să aibă acces la domeniul funcției exterioare. Pentru mult mai multe informații despre cum funcționează acest lucru, vă rugăm să vizitați [documentația extinsă](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
 
 Vom folosi o închidere pentru a manipula DOM-ul.
 
@@ -36,7 +36,7 @@ Gândiți-vă la DOM ca la un arbore, care reprezintă toate modurile în care u
 
 ### Prerechizite
 
-Ar trebui să aveți HTML-ul și CSS-ul pentru terrarium-ul vostru construite. Până la sfârșitul acestei lecții, veți putea muta plantele în și din terrarium prin tragere.
+Ar trebui să aveți HTML-ul și CSS-ul pentru terrarium-ul vostru construite. Până la sfârșitul acestei lecții, veți putea muta plantele în și din terrarium prin tragerea lor.
 
 ### Sarcină
 
@@ -46,7 +46,7 @@ Ar trebui să aveți HTML-ul și CSS-ul pentru terrarium-ul vostru construite. P
 	<script src="./script.js" defer></script>
 ```
 
-> Notă: folosiți `defer` atunci când importați un fișier JavaScript extern în fișierul HTML pentru a permite executarea JavaScript-ului doar după ce fișierul HTML a fost complet încărcat. De asemenea, puteți folosi atributul `async`, care permite scriptului să se execute în timp ce fișierul HTML este analizat, dar în cazul nostru, este important ca elementele HTML să fie complet disponibile pentru tragere înainte de a permite executarea scriptului de tragere.
+> Notă: folosiți `defer` atunci când importați un fișier JavaScript extern în fișierul HTML pentru a permite executarea JavaScript-ului doar după ce fișierul HTML a fost complet încărcat. De asemenea, puteți folosi atributul `async`, care permite scriptului să se execute în timp ce fișierul HTML este analizat, dar în cazul nostru, este important să avem elementele HTML complet disponibile pentru tragere înainte de a permite executarea scriptului de tragere.
 ---
 
 ## Elementele DOM
@@ -80,7 +80,7 @@ Ce se întâmplă aici? Referențiați documentul și căutați în DOM-ul său 
 
 ## Închiderea
 
-Acum sunteți gata să creați închiderea `dragElement`, care este o funcție exterioară ce închide o funcție interioară sau funcții (în cazul nostru, vom avea trei).
+Acum sunteți gata să creați închiderea `dragElement`, care este o funcție exterioară ce închide o funcție sau funcții interioare (în cazul nostru, vom avea trei).
 
 Închiderile sunt utile atunci când una sau mai multe funcții trebuie să acceseze domeniul funcției exterioare. Iată un exemplu:
 
@@ -117,7 +117,7 @@ function dragElement(terrariumElement) {
 
 `dragElement` primește obiectul său `terrariumElement` din declarațiile de la începutul scriptului. Apoi, setați câteva poziții locale la `0` pentru obiectul transmis funcției. Acestea sunt variabilele locale care vor fi manipulate pentru fiecare element pe măsură ce adăugați funcționalitatea de tragere și plasare în închidere pentru fiecare element. Terrarium-ul va fi populat de aceste elemente trase, astfel încât aplicația trebuie să țină evidența locului unde sunt plasate.
 
-În plus, elementul terrarium transmis acestei funcții este atribuit unui eveniment `pointerdown`, care face parte din [web APIs](https://developer.mozilla.org/docs/Web/API) concepute pentru a ajuta la gestionarea DOM-ului. `onpointerdown` se declanșează atunci când un buton este apăsat sau, în cazul nostru, un element care poate fi tras este atins. Acest handler de evenimente funcționează atât pe [navigatoare web cât și mobile](https://caniuse.com/?search=onpointerdown), cu câteva excepții.
+În plus, elementul terrariumElement transmis acestei funcții este atribuit unui eveniment `pointerdown`, care face parte din [web APIs](https://developer.mozilla.org/docs/Web/API) concepute pentru a ajuta la gestionarea DOM-ului. `onpointerdown` se declanșează atunci când un buton este apăsat sau, în cazul nostru, un element care poate fi tras este atins. Acest handler de evenimente funcționează atât pe [navigatoare web cât și mobile](https://caniuse.com/?search=onpointerdown), cu câteva excepții.
 
 ✅ [Handler-ul de evenimente `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) are mult mai mult suport cross-browser; de ce nu l-ați folosi aici? Gândiți-vă la tipul exact de interacțiune pe ecran pe care încercați să o creați aici.
 
@@ -138,13 +138,13 @@ function pointerDrag(e) {
 }
 ```
 
-Se întâmplă mai multe lucruri. Mai întâi, preveniți evenimentele implicite care se întâmplă în mod normal la pointerdown folosind `e.preventDefault();`. În acest fel aveți mai mult control asupra comportamentului interfeței.
+Se întâmplă mai multe lucruri. În primul rând, preveniți evenimentele implicite care se întâmplă în mod normal la pointerdown să aibă loc folosind `e.preventDefault();`. În acest fel aveți mai mult control asupra comportamentului interfeței.
 
 > Reveniți la această linie după ce ați construit complet fișierul script și încercați fără `e.preventDefault()` - ce se întâmplă?
 
 În al doilea rând, deschideți `index.html` într-o fereastră de browser și inspectați interfața. Când faceți clic pe o plantă, puteți vedea cum evenimentul 'e' este capturat. Explorați evenimentul pentru a vedea cât de multe informații sunt colectate de un singur eveniment pointer down!  
 
-Apoi, observați cum variabilele locale `pos3` și `pos4` sunt setate la e.clientX. Puteți găsi valorile `e` în panoul de inspecție. Aceste valori capturează coordonatele x și y ale plantei în momentul în care faceți clic pe ea sau o atingeți. Veți avea nevoie de un control fin asupra comportamentului plantelor pe măsură ce faceți clic și le trageți, astfel încât să țineți evidența coordonatelor lor.
+Apoi, observați cum variabilele locale `pos3` și `pos4` sunt setate la e.clientX. Puteți găsi valorile `e` în panoul de inspecție. Aceste valori capturează coordonatele x și y ale plantei în momentul în care faceți clic pe ea sau o atingeți. Veți avea nevoie de control detaliat asupra comportamentului plantelor pe măsură ce le faceți clic și le trageți, astfel încât să țineți evidența coordonatelor lor.
 
 ✅ Devine mai clar de ce această aplicație este construită cu o închidere mare? Dacă nu ar fi, cum ați menține domeniul pentru fiecare dintre cele 14 plante care pot fi trase?
 
@@ -158,7 +158,7 @@ Acum indicați că doriți ca planta să fie trasă împreună cu pointerul pe m
 
 ## Funcțiile elementDrag și stopElementDrag
 
-Veți completa închiderea adăugând două funcții interne suplimentare care vor gestiona ce se întâmplă atunci când trageți o plantă și opriți tragerea acesteia. Comportamentul dorit este ca să puteți trage orice plantă în orice moment și să o plasați oriunde pe ecran. Această interfață este destul de neimpusă (nu există o zonă de plasare, de exemplu) pentru a vă permite să proiectați terrarium-ul exact așa cum doriți, adăugând, eliminând și repoziționând plantele.
+Veți completa închiderea adăugând două funcții interne suplimentare care vor gestiona ce se întâmplă atunci când trageți o plantă și opriți tragerea ei. Comportamentul dorit este ca să puteți trage orice plantă în orice moment și să o plasați oriunde pe ecran. Această interfață este destul de neimpusă (nu există o zonă de plasare, de exemplu) pentru a vă permite să proiectați terrarium-ul exact așa cum doriți, adăugând, eliminând și repoziționând plantele.
 
 ### Sarcină
 
@@ -185,7 +185,7 @@ Toate aceste recalculări ale poziționării vă permit să ajustați fin compor
 
 ### Sarcină 
 
-Ultima sarcină pentru a completa interfața este să adăugați funcția `stopElementDrag` după acolada de închidere a `elementDrag`:
+Ultima sarcină pentru a finaliza interfața este să adăugați funcția `stopElementDrag` după acolada de închidere a `elementDrag`:
 
 ```javascript
 function stopElementDrag() {
@@ -194,11 +194,11 @@ function stopElementDrag() {
 }
 ```
 
-Această funcție mică resetează evenimentele `onpointerup` și `onpointermove`, astfel încât să puteți relua progresul plantei începând să o trageți din nou sau să începeți să trageți o plantă nouă.
+Această funcție mică resetează evenimentele `onpointerup` și `onpointermove` astfel încât să puteți relua progresul plantei voastre începând să o trageți din nou sau să începeți să trageți o plantă nouă.
 
 ✅ Ce se întâmplă dacă nu setați aceste evenimente la null?
 
-Acum ați finalizat proiectul!
+Acum ați finalizat proiectul vostru!
 
 🥇Felicitări! Ați terminat terrarium-ul vostru frumos! ![terrarium finalizat](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.ro.png)
 
@@ -212,13 +212,13 @@ Adăugați un nou handler de evenimente în închiderea voastră pentru a face c
 
 [Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/20)
 
-## Recapitulare & Studiu Individual
+## Recapitulare și Studiu Individual
 
 Deși tragerea elementelor pe ecran pare trivială, există multe moduri de a face acest lucru și multe capcane, în funcție de efectul pe care îl căutați. De fapt, există un întreg [API de tragere și plasare](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) pe care îl puteți încerca. Nu l-am folosit în acest modul deoarece efectul dorit era oarecum diferit, dar încercați acest API pe propriul proiect și vedeți ce puteți realiza.
 
 Găsiți mai multe informații despre evenimentele pointer pe [documentația W3C](https://www.w3.org/TR/pointerevents1/) și pe [documentația web MDN](https://developer.mozilla.org/docs/Web/API/Pointer_events).
 
-Verificați întotdeauna capabilitățile browserului folosind [CanIUse.com](https://caniuse.com/).
+Verificați întotdeauna capacitățile browserului folosind [CanIUse.com](https://caniuse.com/).
 
 ## Temă
 
@@ -226,5 +226,5 @@ Verificați întotdeauna capabilitățile browserului folosind [CanIUse.com](htt
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

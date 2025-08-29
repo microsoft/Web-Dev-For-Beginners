@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-28T04:08:54+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T10:54:01+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "cs"
 }
@@ -13,9 +13,9 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kvíz před lekcí
-[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/7)
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/)
 
-Tato lekce pokrývá základy JavaScriptu, jazyka, který zajišťuje interaktivitu na webu.
+Tato lekce pokrývá základy JavaScriptu, jazyka, který přidává interaktivitu na web.
 
 > Tuto lekci si můžete projít na [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-variables/?WT.mc_id=academic-77807-sagibbon)!
 
@@ -29,13 +29,13 @@ Začněme s proměnnými a datovými typy, které je naplňují!
 
 ## Proměnné
 
-Proměnné uchovávají hodnoty, které lze používat a měnit v průběhu vašeho kódu.
+Proměnné ukládají hodnoty, které lze používat a měnit v průběhu vašeho kódu.
 
 Vytvoření a **deklarace** proměnné má následující syntaxi **[klíčové slovo] [název]**. Skládá se ze dvou částí:
 
 - **Klíčové slovo**. Klíčová slova mohou být `let` nebo `var`.  
 
-✅ Klíčové slovo `let` bylo zavedeno v ES6 a poskytuje proměnné tzv. _blokový rozsah_. Doporučuje se používat `let` místo `var`. Blokové rozsahy probereme podrobněji v dalších částech.
+✅ Klíčové slovo `let` bylo představeno v ES6 a dává vaší proměnné tzv. _blokový rozsah_. Doporučuje se používat `let` místo `var`. Blokové rozsahy probereme podrobněji v dalších částech.
 - **Název proměnné**, což je název, který si sami zvolíte.
 
 ### Úkol - práce s proměnnými
@@ -72,13 +72,13 @@ Vytvoření a **deklarace** proměnné má následující syntaxi **[klíčové 
    myVariable = 321;
    ```
 
-   Jakmile je proměnná deklarována, můžete její hodnotu kdykoli změnit ve svém kódu pomocí operátoru `=` a nové hodnoty.
+   Jakmile je proměnná deklarována, můžete její hodnotu kdykoli ve svém kódu změnit pomocí operátoru `=` a nové hodnoty.
 
-   ✅ Vyzkoušejte to! Můžete psát JavaScript přímo ve svém prohlížeči. Otevřete okno prohlížeče a přejděte do Nástrojů pro vývojáře. V konzoli najdete výzvu; napište `let myVariable = 123`, stiskněte Enter, poté napište `myVariable`. Co se stane? Poznámka: o těchto konceptech se dozvíte více v následujících lekcích.
+   ✅ Vyzkoušejte to! Můžete psát JavaScript přímo ve svém prohlížeči. Otevřete okno prohlížeče a přejděte do Nástrojů pro vývojáře. V konzoli najdete výzvu; napište `let myVariable = 123`, stiskněte Enter a poté napište `myVariable`. Co se stane? Poznámka: o těchto konceptech se dozvíte více v následujících lekcích.
 
 ## Konstanty
 
-Deklarace a inicializace konstanty se řídí stejnými principy jako u proměnné, s výjimkou klíčového slova `const`. Konstanty se obvykle deklarují velkými písmeny.
+Deklarace a inicializace konstanty se řídí stejnými principy jako u proměnných, s výjimkou klíčového slova `const`. Konstanty se obvykle deklarují velkými písmeny.
 
 ```javascript
 const MY_VARIABLE = 123;
@@ -87,7 +87,7 @@ const MY_VARIABLE = 123;
 Konstanty jsou podobné proměnným, s dvěma výjimkami:
 
 - **Musí mít hodnotu**. Konstanty musí být inicializovány, jinak při spuštění kódu dojde k chybě.
-- **Referenci nelze změnit**. Referenci konstanty nelze po inicializaci změnit, jinak při spuštění kódu dojde k chybě. Podívejme se na dva příklady:
+- **Odkaz nelze změnit**. Odkaz konstanty nelze po inicializaci změnit, jinak při spuštění kódu dojde k chybě. Podívejme se na dva příklady:
    - **Jednoduchá hodnota**. Následující NENÍ povoleno:
    
       ```javascript
@@ -95,7 +95,7 @@ Konstanty jsou podobné proměnným, s dvěma výjimkami:
       PI = 4; // not allowed
       ```
  
-   - **Reference objektu je chráněna**. Následující NENÍ povoleno.
+   - **Odkaz na objekt je chráněn**. Následující NENÍ povoleno.
    
       ```javascript
       const obj = { a: 3 };
@@ -109,15 +109,15 @@ Konstanty jsou podobné proměnným, s dvěma výjimkami:
       obj.a = 5;  // allowed
       ```
 
-      Výše měníte hodnotu objektu, ale ne samotnou referenci, což je povoleno.
+      Výše měníte hodnotu objektu, ale ne samotný odkaz, což je povoleno.
 
-   > Poznámka: `const` znamená, že reference je chráněna před přepisem. Hodnota však není _neměnná_ a může se změnit, zejména pokud jde o složitou strukturu, jako je objekt.
+   > Poznámka: `const` znamená, že odkaz je chráněn před přepisem. Hodnota však není _neměnná_ a může se změnit, zejména pokud jde o složitou strukturu, jako je objekt.
 
 ## Datové typy
 
-Proměnné mohou uchovávat mnoho různých typů hodnot, jako jsou čísla a text. Tyto různé typy hodnot jsou známé jako **datový typ**. Datové typy jsou důležitou součástí vývoje softwaru, protože pomáhají vývojářům rozhodovat, jak by měl být kód napsán a jak by měl software fungovat. Navíc některé datové typy mají jedinečné vlastnosti, které pomáhají transformovat nebo extrahovat další informace z hodnoty.
+Proměnné mohou ukládat různé typy hodnot, jako jsou čísla a text. Tyto různé typy hodnot jsou známé jako **datové typy**. Datové typy jsou důležitou součástí vývoje softwaru, protože pomáhají vývojářům rozhodovat, jak by měl být kód napsán a jak by měl software fungovat. Navíc některé datové typy mají jedinečné vlastnosti, které pomáhají transformovat nebo extrahovat další informace z hodnoty.
 
-✅ Datové typy jsou také označovány jako primitivní datové typy JavaScriptu, protože jsou nejnižší úrovní datových typů poskytovaných jazykem. Existuje 7 primitivních datových typů: string, number, bigint, boolean, undefined, null a symbol. Udělejte si chvíli na představu, co každý z těchto primitivů může představovat. Co je `zebra`? A co `0`? `true`?
+✅ Datové typy jsou také označovány jako primitiva JavaScriptu, protože jsou to nejnižší úrovně datových typů poskytovaných jazykem. Existuje 7 primitivních datových typů: string, number, bigint, boolean, undefined, null a symbol. Zkuste si představit, co každý z těchto primitiv může představovat. Co je `zebra`? A co `0`? `true`?
 
 ### Čísla
 
@@ -125,11 +125,11 @@ V předchozí části byla hodnota `myVariable` datového typu číslo.
 
 `let myVariable = 123;`
 
-Proměnné mohou uchovávat všechny typy čísel, včetně desetinných nebo záporných čísel. Čísla lze také používat s aritmetickými operátory, které jsou popsány v [další části](../../../../2-js-basics/1-data-types).
+Proměnné mohou ukládat všechny typy čísel, včetně desetinných nebo záporných čísel. Čísla lze také používat s aritmetickými operátory, které jsou popsány v [další části](../../../../2-js-basics/1-data-types).
 
 ### Aritmetické operátory
 
-Existuje několik typů operátorů, které lze použít při provádění aritmetických funkcí, a některé z nich jsou uvedeny zde:
+Existuje několik typů operátorů pro provádění aritmetických funkcí, některé z nich jsou uvedeny zde:
 
 | Symbol | Popis                                                                   | Příklad                          |
 | ------ | ----------------------------------------------------------------------- | -------------------------------- |
@@ -139,7 +139,7 @@ Existuje několik typů operátorů, které lze použít při provádění aritm
 | `/`    | **Dělení**: Vypočítá podíl dvou čísel                                   | `1 / 2 //očekávaný výsledek je 0.5` |
 | `%`    | **Zbytek**: Vypočítá zbytek z dělení dvou čísel                         | `1 % 2 //očekávaný výsledek je 1`   |
 
-✅ Vyzkoušejte to! Vyzkoušejte aritmetickou operaci v konzoli svého prohlížeče. Překvapily vás výsledky?
+✅ Vyzkoušejte to! Zkuste aritmetickou operaci v konzoli vašeho prohlížeče. Překvapily vás výsledky?
 
 ### Řetězce
 
@@ -167,9 +167,9 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ```
 
-✅ Proč v JavaScriptu `1 + 1 = 2`, ale `'1' + '1' = 11?` Zamyslete se nad tím. A co `'1' + 1`?
+✅ Proč `1 + 1 = 2` v JavaScriptu, ale `'1' + '1' = 11?` Zamyslete se nad tím. A co `'1' + 1`?
 
-**Šablonové literály** jsou další způsob formátování řetězců, kromě uvozovek se používá zpětný apostrof. Cokoli, co není prostý text, musí být umístěno do zástupných symbolů `${ }`. To zahrnuje jakékoli proměnné, které mohou být řetězce.
+**Šablonové literály** jsou další způsob, jak formátovat řetězce, kromě uvozovek se však používají zpětné apostrofy. Cokoli, co není prostý text, musí být umístěno do zástupců `${ }`. To zahrnuje jakékoli proměnné, které mohou být řetězce.
 
 ```javascript
 let myString1 = "Hello";
@@ -179,13 +179,13 @@ let myString2 = "World";
 `${myString1}, ${myString2}!` //Hello, World!
 ```
 
-Svých formátovacích cílů můžete dosáhnout oběma způsoby, ale šablonové literály budou respektovat jakékoli mezery a zalomení řádků.
+Svých formátovacích cílů můžete dosáhnout oběma způsoby, ale šablonové literály budou respektovat mezery a zalomení řádků.
 
 ✅ Kdy byste použili šablonový literál místo prostého řetězce?
 
 ### Booleovské hodnoty
 
-Booleovské hodnoty mohou mít pouze dvě hodnoty: `true` nebo `false`. Booleovské hodnoty mohou pomoci rozhodnout, které řádky kódu by se měly spustit, když jsou splněny určité podmínky. V mnoha případech [operátory](../../../../2-js-basics/1-data-types) pomáhají nastavit hodnotu booleovské hodnoty a často si všimnete a napíšete proměnné, které jsou inicializovány nebo jejich hodnoty aktualizovány pomocí operátoru.
+Booleovské hodnoty mohou mít pouze dvě hodnoty: `true` nebo `false`. Booleovské hodnoty mohou pomoci rozhodnout, které řádky kódu by se měly spustit, když jsou splněny určité podmínky. V mnoha případech [operátory](../../../../2-js-basics/1-data-types) pomáhají nastavit hodnotu booleovské proměnné a často si všimnete a napíšete proměnné, které jsou inicializovány nebo jejichž hodnoty jsou aktualizovány pomocí operátoru.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
@@ -196,12 +196,12 @@ Booleovské hodnoty mohou mít pouze dvě hodnoty: `true` nebo `false`. Booleovs
 
 ## 🚀 Výzva
 
-JavaScript je známý svými překvapivými způsoby, jak občas zacházet s datovými typy. Proveďte trochu výzkumu o těchto 'záludnostech'. Například: citlivost na velikost písmen může být zrádná! Vyzkoušejte toto ve své konzoli: `let age = 1; let Age = 2; age == Age` (vyhodnotí `false` -- proč?). Jaké další záludnosti můžete najít?
+JavaScript je známý svými překvapivými způsoby, jak občas zachází s datovými typy. Proveďte trochu výzkumu o těchto 'zádrhelech'. Například: citlivost na velikost písmen vás může zaskočit! Zkuste toto ve své konzoli: `let age = 1; let Age = 2; age == Age` (výsledek `false` -- proč?). Jaké další zádrhele můžete najít?
 
 ## Kvíz po lekci
-[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/8)
+[Kvíz po lekci](https://ff-quizzes.netlify.app)
 
-## Přehled & Samostudium
+## Přehled a samostudium
 
 Podívejte se na [tento seznam cvičení v JavaScriptu](https://css-tricks.com/snippets/javascript/) a zkuste jedno. Co jste se naučili?
 
@@ -212,4 +212,4 @@ Podívejte se na [tento seznam cvičení v JavaScriptu](https://css-tricks.com/s
 ---
 
 **Upozornění**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nezodpovídáme za jakékoli nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Za autoritativní zdroj by měl být považován původní dokument v jeho původním jazyce. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.

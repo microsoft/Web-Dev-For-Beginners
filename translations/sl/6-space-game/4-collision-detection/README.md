@@ -1,36 +1,36 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-27T22:30:05+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T12:50:42+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "sl"
 }
 -->
-# Ustvari vesoljsko igro, 4. del: Dodajanje laserja in zaznavanje trkov
+# Zgradite vesoljsko igro, 4. del: Dodajanje laserja in zaznavanje trkov
 
-## Predhodni kviz
+## Kviz pred predavanjem
 
-[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/35)
+[Kviz pred predavanjem](https://ff-quizzes.netlify.app/web/quiz/35)
 
 V tej lekciji se boste naučili, kako streljati laserje z JavaScriptom! V igro bomo dodali dve stvari:
 
-- **Laser**: ta laser se izstreli iz ladje junaka in leti navpično navzgor
-- **Zaznavanje trkov**, kot del implementacije streljanja bomo dodali tudi nekaj pravil igre:
+- **Laser**: laser, ki ga izstreli ladja vašega junaka in se premika navpično navzgor
+- **Zaznavanje trkov**, kot del implementacije sposobnosti *streljanja* bomo dodali nekaj pravil igre:
    - **Laser zadene sovražnika**: Sovražnik umre, če ga zadene laser
    - **Laser zadene zgornji del zaslona**: Laser se uniči, če zadene zgornji del zaslona
-   - **Trk sovražnika in junaka**: Sovražnik in junak se uničita, če trčita drug v drugega
+   - **Trk med sovražnikom in junakom**: Sovražnik in junak se uničita, če trčita drug v drugega
    - **Sovražnik zadene spodnji del zaslona**: Sovražnik in junak se uničita, če sovražnik doseže spodnji del zaslona
 
-Skratka, vi -- *junak* -- morate zadeti vse sovražnike z laserjem, preden se ti premaknejo na dno zaslona.
+Na kratko, vi -- *junak* -- morate zadeti vse sovražnike z laserjem, preden se premaknejo na spodnji del zaslona.
 
-✅ Naredite malo raziskave o prvi računalniški igri, ki je bila kdaj napisana. Kakšna je bila njena funkcionalnost?
+✅ Raziskujte o prvi računalniški igri, ki je bila kdaj napisana. Kakšna je bila njena funkcionalnost?
 
 Bodimo junaki skupaj!
 
 ## Zaznavanje trkov
 
-Kako zaznamo trke? Na naše igralne objekte moramo gledati kot na pravokotnike, ki se premikajo. Zakaj, se morda sprašujete? No, slika, ki jo uporabimo za risanje igralnega objekta, je pravokotnik: ima `x`, `y`, `širino` in `višino`.
+Kako zaznamo trke? Na naše igralne objekte moramo gledati kot na pravokotnike, ki se premikajo. Zakaj, se morda sprašujete? No, slika, ki jo uporabljamo za risanje igralnega objekta, je pravokotnik: ima `x`, `y`, `širino` in `višino`.
 
 Če se dva pravokotnika, npr. junak in sovražnik, *prekrivata*, imamo trk. Kaj se zgodi potem, je odvisno od pravil igre. Za implementacijo zaznavanja trkov potrebujete naslednje:
 
@@ -47,7 +47,7 @@ Kako zaznamo trke? Na naše igralne objekte moramo gledati kot na pravokotnike, 
    }
    ```
 
-2. Funkcijo za primerjavo, ki lahko izgleda takole:
+2. Primerjalno funkcijo, ki lahko izgleda takole:
 
    ```javascript
    function intersectRect(r1, r2) {
@@ -60,7 +60,7 @@ Kako zaznamo trke? Na naše igralne objekte moramo gledati kot na pravokotnike, 
 
 ## Kako uničimo stvari
 
-Za uničenje stvari v igri morate igri sporočiti, da tega predmeta ne sme več risati v zanki igre, ki se sproži v določenem intervalu. To lahko storite tako, da označite igralni objekt kot *mrtev*, ko se nekaj zgodi, na primer:
+Za uničenje stvari v igri morate igri sporočiti, da določenega predmeta ne sme več risati v zanki igre, ki se sproži v določenem intervalu. To lahko storite tako, da označite igralni objekt kot *mrtvega*, ko se zgodi nekaj, na primer:
 
 ```javascript
 // collision happened
@@ -77,13 +77,13 @@ gameObjects = gameObject.filter(go => !go.dead);
 
 Izstrelitev laserja pomeni odziv na dogodek pritiska tipke in ustvarjanje objekta, ki se premika v določeni smeri. Zato moramo izvesti naslednje korake:
 
-1. **Ustvarite objekt laserja**: iz vrha ladje junaka, ki se ob ustvarjanju začne premikati navzgor proti vrhu zaslona.
-2. **Povežite kodo z dogodkom pritiska tipke**: izberemo tipko na tipkovnici, ki predstavlja streljanje laserja.
+1. **Ustvarite objekt laserja**: iz vrha ladje našega junaka, ki se ob ustvarjanju začne premikati navzgor proti vrhu zaslona.
+2. **Pripnite kodo na dogodek tipke**: izberemo tipko na tipkovnici, ki predstavlja igralčevo streljanje laserja.
 3. **Ustvarite igralni objekt, ki izgleda kot laser**, ko je tipka pritisnjena.
 
 ## Časovna omejitev za laser
 
-Laser se mora sprožiti vsakič, ko pritisnete tipko, na primer *preslednico*. Da preprečimo, da bi igra v kratkem času ustvarila preveč laserjev, moramo to popraviti. Popravek izvedemo z implementacijo tako imenovane *časovne omejitve*, časovnika, ki zagotavlja, da se laser lahko sproži le v določenih intervalih. To lahko implementirate na naslednji način:
+Laser mora biti izstreljen vsakič, ko pritisnete tipko, na primer *preslednico*. Da preprečimo, da bi igra v kratkem času ustvarila preveč laserjev, moramo to popraviti. Popravek je izveden z implementacijo tako imenovane *časovne omejitve*, časovnika, ki zagotavlja, da se laser lahko izstreli le ob določenih intervalih. To lahko implementirate na naslednji način:
 
 ```javascript
 class Cooldown {
@@ -113,14 +113,14 @@ class Weapon {
 
 ## Kaj bomo zgradili
 
-Vzemite obstoječo kodo (ki ste jo morali očistiti in preoblikovati) iz prejšnje lekcije in jo razširite. Lahko začnete s kodo iz drugega dela ali uporabite kodo iz [3. dela - začetna koda](../../../../../../../../../your-work).
+Vzemite obstoječo kodo (ki ste jo morali očistiti in preoblikovati) iz prejšnje lekcije in jo razširite. Lahko začnete s kodo iz 2. dela ali uporabite kodo iz [3. dela - začetna koda](../../../../../../../../../your-work).
 
-> nasvet: laser, s katerim boste delali, je že v vaši mapi z viri in je referenciran v vaši kodi
+> nasvet: laser, s katerim boste delali, je že v vaši mapi z viri in ga koda že referencira
 
-- **Dodajte zaznavanje trkov**, ko laser trči z nečim, naj veljajo naslednja pravila:
+- **Dodajte zaznavanje trkov**, ko laser trči v nekaj, naj veljajo naslednja pravila:
    1. **Laser zadene sovražnika**: sovražnik umre, če ga zadene laser
    2. **Laser zadene zgornji del zaslona**: laser se uniči, če zadene zgornji del zaslona
-   3. **Trk sovražnika in junaka**: sovražnik in junak se uničita, če trčita drug v drugega
+   3. **Trk med sovražnikom in junakom**: sovražnik in junak se uničita, če trčita drug v drugega
    4. **Sovražnik zadene spodnji del zaslona**: sovražnik in junak se uničita, če sovražnik doseže spodnji del zaslona
 
 ## Priporočeni koraki
@@ -137,18 +137,18 @@ Poiščite datoteke, ki so bile ustvarjene za vas v podmapi `your-work`. Vsebuje
 -| package.json
 ```
 
-Svoj projekt začnete v mapi `your_work` z vnosom:
+Projekt začnete v mapi `your_work` tako, da vnesete:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprite brskalnik in vnesite ta naslov. Trenutno bi morali videti junaka in vse sovražnike, vendar se še nič ne premika :).
+Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprite brskalnik in vnesite ta naslov, trenutno bi moral prikazati junaka in vse sovražnike, nič se še ne premika :).
 
 ### Dodajte kodo
 
-1. **Nastavite pravokotno predstavitev svojega igralnega objekta za obravnavo trkov**. Spodnja koda omogoča pridobitev pravokotne predstavitve `GameObject`. Uredite svoj razred GameObject, da ga razširite:
+1. **Nastavite pravokotno predstavitev vašega igralnega objekta za zaznavanje trkov** Spodnja koda omogoča pridobitev pravokotne predstavitve `GameObject`. Uredite razred GameObject, da ga razširite:
 
     ```javascript
     rectFromGameObject() {
@@ -161,7 +161,7 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
       }
     ```
 
-2. **Dodajte kodo za preverjanje trkov**. To bo nova funkcija, ki preverja, ali se dva pravokotnika prekrivata:
+2. **Dodajte kodo za preverjanje trkov** To bo nova funkcija, ki preverja, ali se dva pravokotnika prekrivata:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -174,8 +174,8 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
     }
     ```
 
-3. **Dodajte možnost streljanja laserja**
-   1. **Dodajte sporočilo za dogodek pritiska tipke**. Tipka *preslednica* naj ustvari laser tik nad ladjo junaka. Dodajte tri konstante v objekt Messages:
+3. **Dodajte sposobnost streljanja laserja**
+   1. **Dodajte sporočilo za dogodek tipke**. Tipka *preslednica* naj ustvari laser tik nad ladjo junaka. Dodajte tri konstante v objekt Messages:
 
        ```javascript
         KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
@@ -183,7 +183,7 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
         COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
        ```
 
-   1. **Obravnavajte tipko preslednica**. Uredite funkcijo `window.addEventListener` za dogodek `keyup`, da obravnava preslednico:
+   1. **Obdelajte tipko preslednica**. Uredite funkcijo `window.addEventListener` za dogodek `keyup`, da obdelate preslednico:
 
       ```javascript
         } else if(evt.keyCode === 32) {
@@ -209,7 +209,7 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
           })
           ```
 
-   1. **Premikajte objekt**, zagotovite, da se laser postopoma premika proti vrhu zaslona. Ustvarili boste nov razred Laser, ki razširja `GameObject`, kot ste to storili prej: 
+   1. **Premik objekta**, Poskrbite, da se laser postopoma premika proti vrhu zaslona. Ustvarili boste nov razred Laser, ki razširja `GameObject`, kot ste to že storili prej: 
    
       ```javascript
         class Laser extends GameObject {
@@ -230,7 +230,7 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
       }
       ```
 
-   1. **Obravnavajte trke**, implementirajte pravila trkov za laser. Dodajte funkcijo `updateGameObjects()`, ki preverja trke med objekti:
+   1. **Obdelajte trke**, Implementirajte pravila trkov za laser. Dodajte funkcijo `updateGameObjects()`, ki preverja trke med objekti:
 
       ```javascript
       function updateGameObjects() {
@@ -252,9 +252,9 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
       }  
       ```
 
-      Poskrbite, da dodate `updateGameObjects()` v svojo zanko igre v `window.onload`.
+      Poskrbite, da dodate `updateGameObjects()` v zanko igre v `window.onload`.
 
-   4. **Implementirajte časovno omejitev** za laser, da se lahko sproži le v določenih intervalih.
+   4. **Implementirajte časovno omejitev** za laser, da se lahko izstreli le ob določenih intervalih.
 
       Na koncu uredite razred Hero, da omogočite časovno omejitev:
 
@@ -285,21 +285,21 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
       }
       ```
 
-Na tej točki ima vaša igra nekaj funkcionalnosti! Premikate se lahko s puščičnimi tipkami, streljate laser s preslednico, in sovražniki izginejo, ko jih zadete. Odlično opravljeno!
+Na tej točki ima vaša igra nekaj funkcionalnosti! Lahko se premikate s puščičnimi tipkami, streljate laser s preslednico, in sovražniki izginejo, ko jih zadete. Odlično opravljeno!
 
 ---
 
 ## 🚀 Izziv
 
-Dodajte eksplozijo! Oglejte si vire igre v [repozitoriju Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) in poskusite dodati eksplozijo, ko laser zadene tujca.
+Dodajte eksplozijo! Oglejte si igralne vire v [repozitoriju Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) in poskusite dodati eksplozijo, ko laser zadene vesoljca.
 
-## Zaključni kviz
+## Kviz po predavanju
 
-[Zaključni kviz](https://ff-quizzes.netlify.app/web/quiz/36)
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Pregled in samostojno učenje
 
-Eksperimentirajte z intervali v svoji igri do zdaj. Kaj se zgodi, ko jih spremenite? Preberite več o [časovnih dogodkih v JavaScriptu](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
+Eksperimentirajte z intervali v vaši igri do sedaj. Kaj se zgodi, ko jih spremenite? Preberite več o [časovnih dogodkih v JavaScriptu](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
 ## Naloga
 
@@ -308,4 +308,4 @@ Eksperimentirajte z intervali v svoji igri do zdaj. Kaj se zgodi, ko jih spremen
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna napačna razumevanja ali napačne interpretacije, ki bi nastale zaradi uporabe tega prevoda.

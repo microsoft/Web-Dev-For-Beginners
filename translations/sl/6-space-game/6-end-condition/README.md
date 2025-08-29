@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-27T22:33:20+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T12:51:29+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "sl"
 }
@@ -13,25 +13,25 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Obstajajo različni načini, kako izraziti *konec igre*. Kot ustvarjalec igre se odločite, zakaj se igra konča. Tukaj je nekaj razlogov, če predpostavimo, da govorimo o vesoljski igri, ki ste jo do zdaj gradili:
+Obstajajo različni načini za izražanje *končnega pogoja* v igri. Kot ustvarjalec igre se sami odločite, zakaj se igra konča. Tukaj je nekaj razlogov, če predpostavimo, da govorimo o vesoljski igri, ki ste jo do zdaj gradili:
 
 - **Uničenih je `N` sovražnih ladij**: Pogosto je v igrah, ki so razdeljene na različne nivoje, potrebno uničiti `N` sovražnih ladij, da dokončate nivo.
 - **Vaša ladja je uničena**: Obstajajo igre, kjer izgubite, če je vaša ladja uničena. Pogost pristop je tudi koncept življenj. Vsakič, ko je vaša ladja uničena, izgubite eno življenje. Ko so vsa življenja izgubljena, izgubite igro.
-- **Zbrali ste `N` točk**: Pogost pogoj za konec igre je zbiranje točk. Kako pridobite točke, je odvisno od vas, vendar je pogosto, da točke dodelite različnim dejavnostim, kot je uničenje sovražne ladje ali zbiranje predmetov, ki jih sovražniki *izpustijo*, ko so uničeni.
+- **Zbrali ste `N` točk**: Drug pogost končni pogoj je zbiranje točk. Kako pridobivate točke, je odvisno od vas, vendar je pogosto, da se točke dodelijo za različne aktivnosti, kot je uničenje sovražne ladje ali zbiranje predmetov, ki jih sovražniki *izpustijo*, ko so uničeni.
 - **Dokončanje nivoja**: To lahko vključuje več pogojev, kot so uničenje `X` sovražnih ladij, zbiranje `Y` točk ali morda zbiranje določenega predmeta.
 
 ## Ponovni začetek
 
-Če ljudje uživajo v vaši igri, bodo verjetno želeli igrati znova. Ko se igra konča, ne glede na razlog, bi morali ponuditi možnost za ponovni začetek.
+Če ljudje uživajo v vaši igri, bodo verjetno želeli igrati znova. Ko se igra konča iz kakršnega koli razloga, bi morali ponuditi možnost za ponovni začetek.
 
-✅ Razmislite, pod kakšnimi pogoji se igra konča in kako vas igra pozove k ponovnemu začetku.
+✅ Premislite, pod kakšnimi pogoji se igra konča in kako vas igra pozove k ponovnemu začetku.
 
 ## Kaj boste zgradili
 
-Dodali boste naslednja pravila v svojo igro:
+Dodali boste naslednja pravila svoji igri:
 
 1. **Zmagovanje igre**. Ko so vse sovražne ladje uničene, zmagate. Poleg tega prikažite sporočilo o zmagi.
-1. **Ponovni začetek**. Ko izgubite vsa življenja ali zmagate v igri, bi morali ponuditi možnost za ponovni začetek. Ne pozabite! Ponovno boste morali inicializirati igro, pri čemer se mora prejšnje stanje igre izbrisati.
+1. **Ponovni začetek**. Ko izgubite vsa življenja ali zmagate v igri, bi morali ponuditi možnost za ponovni začetek. Ne pozabite! Ponovno boste morali inicializirati igro in počistiti prejšnje stanje igre.
 
 ## Priporočeni koraki
 
@@ -57,11 +57,11 @@ npm start
 
 Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprite brskalnik in vnesite ta naslov. Vaša igra bi morala biti v stanju, ki ga je mogoče igrati.
 
-> nasvet: da se izognete opozorilom v Visual Studio Code, uredite funkcijo `window.onload`, da pokliče `gameLoopId` takšno, kot je (brez `let`), in deklarirajte `gameLoopId` na vrhu datoteke, ločeno: `let gameLoopId;`
+> nasvet: da se izognete opozorilom v Visual Studio Code, uredite funkcijo `window.onload`, da pokliče `gameLoopId` takšnega, kot je (brez `let`), in deklarirajte `gameLoopId` na vrhu datoteke, ločeno: `let gameLoopId;`
 
 ### Dodajte kodo
 
-1. **Spremljajte pogoje za konec igre**. Dodajte kodo, ki spremlja število sovražnikov ali če je junakova ladja uničena, z dodajanjem teh dveh funkcij:
+1. **Spremljajte končni pogoj**. Dodajte kodo, ki spremlja število sovražnikov ali če je junakova ladja uničena, tako da dodate ti dve funkciji:
 
     ```javascript
     function isHeroDead() {
@@ -115,7 +115,7 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Dodajte kodo za ponovni začetek**. Dodajte kodo, ki omogoča ponovni začetek igre ob pritisku izbrane tipke.
+2. **Dodajte kodo za ponovni začetek**. Dodajte kodo, ki omogoča ponovni začetek igre s pritiskom na izbrano tipko.
 
    1. **Poslušajte pritisk tipke `Enter`**. Uredite `eventListener` okna, da posluša ta pritisk:
 
@@ -171,7 +171,7 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
         }
         ```
 
-   1. **Logika za ponovni začetek**. Ko so vsa življenja izgubljena ali igralec zmaga, prikažite, da je mogoče igro ponovno začeti. Poleg tega ponovno zaženite igro, ko pritisnete tipko za ponovni začetek (lahko sami določite, katera tipka bo dodeljena za ponovni začetek).
+   1. **Logika za ponovni začetek**. Ko so vsa življenja izgubljena ali igralec zmaga, prikažite, da je mogoče igro ponovno začeti. Poleg tega ponovno zaženite igro, ko je pritisnjena *restart* tipka (lahko se odločite, katera tipka bo dodeljena za ponovni začetek).
 
       1. Ustvarite funkcijo `resetGame()`:
 
@@ -194,7 +194,7 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
         }
         ```
 
-     1. Dodajte klic na `eventEmitter` za ponovni začetek igre v `initGame()`:
+     1. Dodajte klic `eventEmitter` za ponovni začetek igre v `initGame()`:
 
         ```javascript
         eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
@@ -224,7 +224,7 @@ Dodajte zvok! Ali lahko dodate zvok, da izboljšate igranje, morda ob zadetku z 
 
 ## Pregled in samostojno učenje
 
-Vaša naloga je ustvariti novo vzorčno igro, zato raziščite nekaj zanimivih iger, da vidite, kakšno igro bi lahko ustvarili.
+Vaša naloga je ustvariti nov vzorčni primer igre, zato raziščite nekaj zanimivih iger, da vidite, kakšno igro bi lahko ustvarili.
 
 ## Naloga
 
@@ -233,4 +233,4 @@ Vaša naloga je ustvariti novo vzorčno igro, zato raziščite nekaj zanimivih i
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna napačna razumevanja ali napačne interpretacije, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da se zavedate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo strokovni prevod s strani človeka. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-27T22:00:32+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-29T11:04:27+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "sk"
 }
@@ -34,17 +34,17 @@ curl http://localhost:5000/api
 
 ## AJAX a získavanie dát
 
-Tradičné webové stránky aktualizujú zobrazovaný obsah, keď používateľ vyberie odkaz alebo odošle dáta prostredníctvom formulára, opätovným načítaním celej HTML stránky. Pri každom načítaní nových dát webový server vráti úplne novú HTML stránku, ktorú musí prehliadač spracovať, čím sa preruší aktuálna akcia používateľa a obmedzia interakcie počas načítania. Tento pracovný postup sa tiež nazýva *viacstránková aplikácia* alebo *MPA*.
+Tradičné webové stránky aktualizujú zobrazovaný obsah, keď používateľ vyberie odkaz alebo odošle dáta prostredníctvom formulára, opätovným načítaním celej HTML stránky. Pri každom načítaní nových dát webový server vráti úplne novú HTML stránku, ktorú musí prehliadač spracovať, čím sa preruší aktuálna akcia používateľa a obmedzia interakcie počas načítania. Tento pracovný postup sa tiež nazýva *Multi-Page Application* alebo *MPA*.
 
-![Pracovný postup aktualizácie vo viacstránkovej aplikácii](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.sk.png)
+![Pracovný postup aktualizácie v aplikácii s viacerými stránkami](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.sk.png)
 
-Keď sa webové aplikácie začali stávať komplexnejšími a interaktívnejšími, objavila sa nová technika nazývaná [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Táto technika umožňuje webovým aplikáciám asynchrónne odosielať a získavať dáta zo servera pomocou JavaScriptu bez nutnosti opätovného načítania HTML stránky, čo vedie k rýchlejším aktualizáciám a plynulejším interakciám používateľa. Keď sú nové dáta prijaté zo servera, aktuálna HTML stránka môže byť aktualizovaná pomocou JavaScriptu prostredníctvom [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API. Postupom času sa tento prístup vyvinul do toho, čo sa dnes nazýva [*jednostránková aplikácia* alebo *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+Keď sa webové aplikácie začali stávať komplexnejšími a interaktívnejšími, objavila sa nová technika nazývaná [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Táto technika umožňuje webovým aplikáciám asynchrónne odosielať a získavať dáta zo servera pomocou JavaScriptu bez nutnosti opätovného načítania HTML stránky, čo vedie k rýchlejším aktualizáciám a plynulejším interakciám používateľa. Keď sú nové dáta prijaté zo servera, aktuálna HTML stránka môže byť aktualizovaná pomocou JavaScriptu a [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API. Postupom času sa tento prístup vyvinul do toho, čo sa dnes nazýva [*Single-Page Application* alebo *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
 
-![Pracovný postup aktualizácie v jednostránkovej aplikácii](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.sk.png)
+![Pracovný postup aktualizácie v aplikácii s jednou stránkou](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.sk.png)
 
 Keď bol AJAX prvýkrát predstavený, jediným dostupným API na asynchrónne získavanie dát bolo [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Moderné prehliadače však teraz implementujú pohodlnejšie a výkonnejšie [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), ktoré používa promises a je lepšie prispôsobené na manipuláciu s JSON dátami.
 
-> Hoci všetky moderné prehliadače podporujú `Fetch API`, ak chcete, aby vaša webová aplikácia fungovala na starších prehliadačoch, vždy je dobré najskôr skontrolovať [tabuľku kompatibility na caniuse.com](https://caniuse.com/fetch).
+> Hoci všetky moderné prehliadače podporujú `Fetch API`, ak chcete, aby vaša webová aplikácia fungovala na starších prehliadačoch, je vždy dobré najskôr skontrolovať [tabuľku kompatibility na caniuse.com](https://caniuse.com/fetch).
 
 ### Úloha
 
@@ -57,9 +57,9 @@ async function login() {
 }
 ```
 
-Začíname získaním elementu formulára pomocou `getElementById()` a následne získame používateľské meno z inputu pomocou `loginForm.user.value`. Každý ovládací prvok formulára je možné pristupovať podľa jeho názvu (nastaveného v HTML pomocou atribútu `name`) ako vlastnosť formulára.
+Tu začíname získaním elementu formulára pomocou `getElementById()` a následne získame používateľské meno z inputu pomocou `loginForm.user.value`. Každý ovládací prvok formulára je možné pristupovať ako vlastnosť formulára podľa jeho názvu (nastaveného v HTML pomocou atribútu `name`).
 
-Podobne ako sme to urobili pri registrácii, vytvoríme ďalšiu funkciu na vykonanie požiadavky na server, tentokrát na získanie údajov o účte:
+Podobne ako sme to urobili pri registrácii, vytvoríme ďalšiu funkciu na vykonanie požiadavky na server, tentokrát na získanie dát účtu:
 
 ```js
 async function getAccount(user) {
@@ -72,7 +72,7 @@ async function getAccount(user) {
 }
 ```
 
-Používame `fetch` API na asynchrónne získanie dát zo servera, ale tentokrát nepotrebujeme žiadne ďalšie parametre okrem URL, ktorú voláme, pretože iba dotazujeme dáta. Predvolene `fetch` vytvára [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP požiadavku, čo je presne to, čo tu potrebujeme.
+Používame `fetch` API na asynchrónne získanie dát zo servera, ale tentokrát nepotrebujeme žiadne ďalšie parametre okrem URL, ktorú chceme zavolať, pretože iba dotazujeme dáta. Predvolene `fetch` vytvára [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP požiadavku, čo je presne to, čo tu potrebujeme.
 
 ✅ `encodeURIComponent()` je funkcia, ktorá uniká špeciálne znaky pre URL. Aké problémy by mohli nastať, ak by sme túto funkciu nevolali a použili priamo hodnotu `user` v URL?
 
@@ -93,15 +93,15 @@ async function login() {
 }
 ```
 
-Keďže `getAccount` je asynchrónna funkcia, musíme ju spárovať s kľúčovým slovom `await`, aby sme počkali na výsledok zo servera. Ako pri každej požiadavke na server, musíme sa vysporiadať s chybovými prípadmi. Zatiaľ pridáme iba logovaciu správu na zobrazenie chyby a neskôr sa k tomu vrátime.
+Keďže `getAccount` je asynchrónna funkcia, musíme ju spárovať s kľúčovým slovom `await`, aby sme počkali na výsledok zo servera. Ako pri každej požiadavke na server, musíme sa zaoberať aj chybovými prípadmi. Zatiaľ pridáme iba logovaciu správu na zobrazenie chyby a neskôr sa k tomu vrátime.
 
-Potom musíme uložiť dáta niekde, aby sme ich mohli neskôr použiť na zobrazenie informácií na dashboarde. Keďže premenná `account` zatiaľ neexistuje, vytvoríme globálnu premennú na začiatku nášho súboru:
+Potom musíme uložiť dáta niekam, aby sme ich mohli neskôr použiť na zobrazenie informácií na dashboarde. Keďže premenná `account` zatiaľ neexistuje, vytvoríme globálnu premennú na začiatku nášho súboru:
 
 ```js
 let account = null;
 ```
 
-Po uložení údajov používateľa do premennej môžeme prejsť zo stránky *login* na *dashboard* pomocou funkcie `navigate()`, ktorú už máme.
+Po uložení používateľských dát do premennej môžeme prejsť zo stránky *login* na *dashboard* pomocou funkcie `navigate()`, ktorú už máme.
 
 Nakoniec musíme zavolať našu funkciu `login`, keď je formulár na prihlásenie odoslaný, úpravou HTML:
 
@@ -124,7 +124,7 @@ navigate('/dashboard');
 
 ## Aktualizácia HTML na zobrazenie dát
 
-Teraz, keď máme údaje používateľa, musíme aktualizovať existujúce HTML, aby ich zobrazovalo. Už vieme, ako získať element z DOM pomocou napríklad `document.getElementById()`. Po získaní základného elementu, tu sú niektoré API, ktoré môžete použiť na jeho úpravu alebo pridanie podriadených elementov:
+Teraz, keď máme používateľské dáta, musíme aktualizovať existujúce HTML, aby ich zobrazilo. Už vieme, ako získať element z DOM pomocou napríklad `document.getElementById()`. Po získaní základného elementu, tu sú niektoré API, ktoré môžete použiť na jeho úpravu alebo pridanie podriadených elementov:
 
 - Pomocou vlastnosti [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) môžete zmeniť text elementu. Upozorňujeme, že zmena tejto hodnoty odstráni všetky podriadené elementy (ak nejaké existujú) a nahradí ich poskytnutým textom. Preto je to tiež efektívna metóda na odstránenie všetkých podriadených elementov daného elementu priradením prázdneho reťazca `''`.
 
@@ -166,9 +166,9 @@ if (data.error) {
 
 Teraz, ak sa pokúsite prihlásiť s neplatným účtom, mali by ste vidieť niečo takéto:
 
-![Snímka obrazovky zobrazujúca chybovú správu počas prihlásenia](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.sk.png)
+![Screenshot zobrazujúci chybovú správu počas prihlásenia](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.sk.png)
 
-Teraz máme chybový text, ktorý sa vizuálne zobrazí, ale ak to skúsite s čítačkou obrazovky, všimnete si, že nič nie je oznámené. Aby text, ktorý je dynamicky pridaný na stránku, bol oznámený čítačkami obrazovky, bude potrebné použiť niečo nazývané [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Tu použijeme špecifický typ live region nazývaný alert:
+Teraz máme chybový text, ktorý sa vizuálne zobrazí, ale ak to skúsite s čítačkou obrazovky, všimnete si, že sa nič neoznámi. Aby text, ktorý je dynamicky pridaný na stránku, bol oznámený čítačkami obrazovky, bude potrebné použiť niečo nazývané [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Tu použijeme špecifický typ live region nazývaný alert:
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -196,7 +196,7 @@ Takto vyzerá objekt účtu prijatý zo servera:
 }
 ```
 
-> Poznámka: aby ste si uľahčili prácu, môžete použiť predvytvorený účet `test`, ktorý už obsahuje dáta.
+> Poznámka: aby ste si uľahčili prácu, môžete použiť preddefinovaný účet `test`, ktorý už obsahuje dáta.
 
 ### Úloha
 
@@ -208,7 +208,7 @@ Začnime nahradením sekcie "Balance" v HTML, aby sme pridali zástupné element
 </section>
 ```
 
-Pridáme tiež novú sekciu tesne pod ňu na zobrazenie popisu účtu:
+Tiež pridáme novú sekciu tesne pod ňu na zobrazenie popisu účtu:
 
 ```html
 <h2 id="description"></h2>
@@ -230,11 +230,11 @@ function updateDashboard() {
 }
 ```
 
-Najprv skontrolujeme, či máme potrebné údaje o účte, predtým než budeme pokračovať. Potom použijeme funkciu `updateElement()`, ktorú sme vytvorili skôr, na aktualizáciu HTML.
+Najprv skontrolujeme, či máme potrebné dáta účtu, predtým než budeme pokračovať. Potom použijeme funkciu `updateElement()`, ktorú sme vytvorili skôr, na aktualizáciu HTML.
 
-> Aby bol zobrazený zostatok krajší, používame metódu [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), aby sme vynútili zobrazenie hodnoty s 2 desatinnými miestami.
+> Aby bol zobrazený zostatok krajší, použijeme metódu [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), aby sme vynútili zobrazenie hodnoty s 2 desatinnými miestami.
 
-Teraz musíme zavolať našu funkciu `updateDashboard()` vždy, keď sa načíta stránka dashboardu. Ak ste už dokončili [úlohu z lekcie 1](../1-template-route/assignment.md), toto by malo byť jednoduché, inak môžete použiť nasledujúcu implementáciu.
+Teraz musíme zavolať našu funkciu `updateDashboard()` vždy, keď sa dashboard načíta. Ak ste už dokončili [úlohu z lekcie 1](../1-template-route/assignment.md), toto by malo byť jednoduché, inak môžete použiť nasledujúcu implementáciu.
 
 Pridajte tento kód na koniec funkcie `updateRoute()`:
 
@@ -263,7 +263,7 @@ Použijeme podobný prístup na zobrazenie zoznamu transakcií v HTML tabuľke.
 
 ### Úloha
 
-Pridajte novú šablónu do `<body>` HTML:
+Pridajte novú šablónu do HTML `<body>`:
 
 ```html
 <template id="transaction">
@@ -277,7 +277,7 @@ Pridajte novú šablónu do `<body>` HTML:
 
 Táto šablóna predstavuje jeden riadok tabuľky s 3 stĺpcami, ktoré chceme vyplniť: *dátum*, *objekt* a *suma* transakcie.
 
-Potom pridajte túto vlastnosť `id` do `<tbody>` elementu tabuľky v šablóne dashboardu, aby bolo jednoduchšie ho nájsť pomocou JavaScriptu:
+Potom pridajte túto vlastnosť `id` do `<tbody>` elementu tabuľky v rámci šablóny dashboardu, aby bolo jednoduchšie ho nájsť pomocou JavaScriptu:
 
 ```html
 <tbody id="transactions"></tbody>
@@ -297,7 +297,7 @@ function createTransactionRow(transaction) {
 }
 ```
 
-Táto funkcia robí presne to, čo naznačuje jej názov: pomocou šablóny, ktorú sme vytvorili skôr, vytvára nový riadok tabuľky a vyplní jeho obsah pomocou údajov o transakcii. Použijeme ju vo funkcii `updateDashboard()` na vyplnenie tabuľky:
+Táto funkcia robí presne to, čo naznačuje jej názov: pomocou šablóny, ktorú sme vytvorili skôr, vytvára nový riadok tabuľky a vyplní jeho obsah pomocou dát transakcie. Použijeme ju vo funkcii `updateDashboard()` na vyplnenie tabuľky:
 
 ```js
 const transactionsRows = document.createDocumentFragment();
@@ -327,11 +327,11 @@ Ak sa pokúsite prihlásiť pomocou účtu `test`, mali by ste teraz vidieť zoz
 
 ## 🚀 Výzva
 
-Spolupracujte na tom, aby stránka hlavného panela vyzerala ako skutočná banková aplikácia. Ak ste už svoju aplikáciu naformátovali, skúste použiť [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) na vytvorenie [responzívneho dizajnu](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks), ktorý bude dobre fungovať na stolných počítačoch aj mobilných zariadeniach.
+Spolupracujte na tom, aby stránka hlavného panela vyzerala ako skutočná banková aplikácia. Ak ste už svoju aplikáciu naštýlovali, skúste použiť [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) na vytvorenie [responzívneho dizajnu](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks), ktorý bude dobre fungovať na stolných počítačoch aj mobilných zariadeniach.
 
-Tu je príklad naformátovanej stránky hlavného panela:
+Tu je príklad naštýlovanej stránky hlavného panela:
 
-![Snímka obrazovky s príkladom výsledku hlavného panela po naformátovaní](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.sk.png)
+![Snímka obrazovky s príkladom výsledku hlavného panela po naštýlovaní](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.sk.png)
 
 ## Kvíz po prednáške
 
@@ -344,4 +344,4 @@ Tu je príklad naformátovanej stránky hlavného panela:
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za záväzný zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

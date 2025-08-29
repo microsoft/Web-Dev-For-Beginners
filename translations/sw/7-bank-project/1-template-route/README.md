@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-28T03:35:55+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T10:01:00+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "sw"
 }
 -->
 # Jenga Programu ya Benki Sehemu ya 1: Violezo vya HTML na Njia katika Programu ya Wavuti
 
-## Maswali ya Kabla ya Somo
+## Jaribio la Kabla ya Somo
 
 [Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Utangulizi
 
-Tangu kuanzishwa kwa JavaScript kwenye vivinjari, tovuti zimekuwa za mwingiliano zaidi na ngumu zaidi kuliko hapo awali. Teknolojia za wavuti sasa zinatumika sana kuunda programu kamili zinazofanya kazi moja kwa moja kwenye kivinjari, tunazoziita [programu za wavuti](https://en.wikipedia.org/wiki/Web_application). Kwa kuwa programu za wavuti ni za mwingiliano wa hali ya juu, watumiaji hawataki kusubiri upakiaji wa ukurasa mzima kila wakati kitendo kinapofanywa. Ndiyo maana JavaScript inatumika kusasisha HTML moja kwa moja kwa kutumia DOM, ili kutoa uzoefu laini wa mtumiaji.
+Tangu kuanzishwa kwa JavaScript kwenye vivinjari, tovuti zimekuwa za mwingiliano zaidi na ngumu kuliko hapo awali. Teknolojia za wavuti sasa zinatumika sana kuunda programu kamili zinazofanya kazi moja kwa moja kwenye kivinjari, tunazoziita [programu za wavuti](https://en.wikipedia.org/wiki/Web_application). Kwa kuwa programu za wavuti ni za mwingiliano wa hali ya juu, watumiaji hawataki kusubiri upakiaji wa ukurasa mzima kila wakati kitendo kinapofanywa. Ndiyo maana JavaScript hutumika kusasisha HTML moja kwa moja kwa kutumia DOM, ili kutoa uzoefu laini wa mtumiaji.
 
 Katika somo hili, tutaweka misingi ya kuunda programu ya benki ya wavuti, kwa kutumia violezo vya HTML kuunda skrini nyingi ambazo zinaweza kuonyeshwa na kusasishwa bila kupakia upya ukurasa mzima wa HTML.
 
@@ -60,11 +60,11 @@ Tutaunda programu ya benki yenye skrini mbili: ukurasa wa kuingia na dashibodi. 
 <div id="app">Loading...</div>
 ```
 
-Tunatoa kipengele hiki `id` ili iwe rahisi kukipata kwa JavaScript baadaye.
+Tunampa `id` ili iwe rahisi kuipata kwa JavaScript baadaye.
 
-> Kidokezo: kwa kuwa maudhui ya kipengele hiki yatabadilishwa, tunaweza kuweka ujumbe wa kupakia au kiashiria ambacho kitaonyeshwa wakati programu inajipakia.
+> Kidokezo: kwa kuwa maudhui ya kipengele hiki yatabadilishwa, tunaweza kuweka ujumbe wa kupakia au kiashiria kitakachoonyeshwa wakati programu inapopakia.
 
-Kisha, ongeza kiolezo cha HTML kwa ukurasa wa kuingia. Kwa sasa tutaweka tu kichwa na sehemu yenye kiungo ambacho tutatumia kufanya urambazaji.
+Kisha, ongeza kiolezo cha HTML kwa ukurasa wa kuingia. Kwa sasa tutaweka tu kichwa na sehemu yenye kiungo tutakachotumia kufanya urambazaji.
 
 ```html
 <template id="login">
@@ -78,7 +78,7 @@ Kisha, ongeza kiolezo cha HTML kwa ukurasa wa kuingia. Kwa sasa tutaweka tu kich
 Halafu tutaongeza kiolezo kingine cha HTML kwa ukurasa wa dashibodi. Ukurasa huu utakuwa na sehemu tofauti:
 
 - Kichwa chenye jina na kiungo cha kutoka
-- Mizania ya sasa ya akaunti ya benki
+- Salio la sasa la akaunti ya benki
 - Orodha ya miamala, inayoonyeshwa kwenye jedwali
 
 ```html
@@ -114,7 +114,7 @@ Halafu tutaongeza kiolezo kingine cha HTML kwa ukurasa wa dashibodi. Ukurasa huu
 
 Ukijaribu faili yako ya sasa ya HTML kwenye kivinjari, utaona kwamba inakwama ikionyesha `Loading...`. Hii ni kwa sababu tunahitaji kuongeza msimbo wa JavaScript ili kuanzisha na kuonyesha violezo vya HTML.
 
-Kuanzisha kiolezo kawaida hufanywa kwa hatua 3:
+Kuanzisha kiolezo kawaida hufanyika kwa hatua 3:
 
 1. Pata kipengele cha kiolezo kwenye DOM, kwa mfano kwa kutumia [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
 2. Nakili kipengele cha kiolezo, kwa kutumia [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
@@ -124,7 +124,7 @@ Kuanzisha kiolezo kawaida hufanywa kwa hatua 3:
 
 ### Kazi
 
-Tengeneza faili mpya inayoitwa `app.js` kwenye folda ya mradi wako na uingize faili hiyo kwenye sehemu ya `<head>` ya HTML yako:
+Tengeneza faili mpya inayoitwa `app.js` kwenye folda yako ya mradi na uingize faili hiyo kwenye sehemu ya `<head>` ya HTML yako:
 
 ```html
 <script src="app.js" defer></script>
@@ -152,9 +152,9 @@ updateRoute('login');
 
 ✅ Madhumuni ya msimbo huu `app.innerHTML = '';` ni nini? Nini hutokea bila hiyo?
 
-## Kuunda njia
+## Kuunda Njia
 
-Tunapozungumzia programu ya wavuti, tunaita *Urambazaji* nia ya kuoanisha **URLs** na skrini maalum ambazo zinapaswa kuonyeshwa. Katika tovuti yenye faili nyingi za HTML, hii hufanyika kiotomatiki kwa kuwa njia za faili zinaonyeshwa kwenye URL. Kwa mfano, ukiwa na faili hizi kwenye folda ya mradi wako:
+Tunapozungumzia programu ya wavuti, tunaita *Urambazaji* nia ya kuoanisha **URLs** na skrini maalum ambazo zinapaswa kuonyeshwa. Katika tovuti yenye faili nyingi za HTML, hili hufanyika kiotomatiki kwa kuwa njia za faili zinaonyeshwa kwenye URL. Kwa mfano, ukiwa na faili hizi kwenye folda yako ya mradi:
 
 ```
 mywebsite/index.html
@@ -162,7 +162,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-Ukiunda seva ya wavuti na `mywebsite` kama mzizi, ulinganifu wa URL utakuwa:
+Ukiunda seva ya wavuti na `mywebsite` kama mzizi, uoanishaji wa URL utakuwa:
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -170,7 +170,7 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-Hata hivyo, kwa programu yetu ya wavuti tunatumia faili moja ya HTML iliyo na skrini zote, kwa hivyo tabia hii ya msingi haitatusaidia. Tunapaswa kuunda ramani hii kwa mikono na kusasisha kiolezo kinachoonyeshwa kwa kutumia JavaScript.
+Hata hivyo, kwa programu yetu ya wavuti tunatumia faili moja ya HTML iliyo na skrini zote, kwa hivyo tabia hii ya chaguo-msingi haitatusaidia. Tunapaswa kuunda ramani hii kwa mikono na kusasisha kiolezo kinachoonyeshwa kwa kutumia JavaScript.
 
 ### Kazi
 
@@ -202,7 +202,7 @@ Hapa tumeoanisha njia tulizotangaza na kiolezo kinacholingana. Unaweza kujaribu 
 
 ✅ Nini hutokea ukiingiza njia isiyojulikana kwenye URL? Tunawezaje kutatua hili?
 
-## Kuongeza urambazaji
+## Kuongeza Urambazaji
 
 Hatua inayofuata kwa programu yetu ni kuongeza uwezekano wa kuvinjari kati ya kurasa bila kubadilisha URL kwa mikono. Hii inajumuisha mambo mawili:
 
@@ -211,9 +211,9 @@ Hatua inayofuata kwa programu yetu ni kuongeza uwezekano wa kuvinjari kati ya ku
 
 Tayari tulishughulikia sehemu ya pili na kazi ya `updateRoute`, kwa hivyo tunapaswa kufikiria jinsi ya kusasisha URL ya sasa.
 
-Tutahitaji kutumia JavaScript na hasa [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) ambayo inaruhusu kusasisha URL na kuunda ingizo jipya kwenye historia ya kuvinjari, bila kupakia upya HTML.
+Tutatumia JavaScript na hasa [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) ambayo inaruhusu kusasisha URL na kuunda ingizo jipya kwenye historia ya kuvinjari, bila kupakia upya HTML.
 
-> Kidokezo: Ingawa kipengele cha HTML cha nanga [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) kinaweza kutumika peke yake kuunda viungo vya URL tofauti, kitafanya kivinjari kipakie upya HTML kwa chaguo-msingi. Ni muhimu kuzuia tabia hii wakati wa kushughulikia urambazaji kwa JavaScript maalum, kwa kutumia kazi ya `preventDefault()` kwenye tukio la kubofya.
+> Kumbuka: Ingawa kipengele cha HTML cha nanga [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) kinaweza kutumika peke yake kuunda viungo vya URL tofauti, kitafanya kivinjari kipakie upya HTML kwa chaguo-msingi. Ni muhimu kuzuia tabia hii wakati wa kushughulikia urambazaji kwa JavaScript maalum, kwa kutumia kazi ya `preventDefault()` kwenye tukio la kubofya.
 
 ### Kazi
 
@@ -226,9 +226,9 @@ function navigate(path) {
 }
 ```
 
-Njia hii kwanza inasasisha URL ya sasa kulingana na njia iliyotolewa, kisha inasasisha kiolezo. Sifa ya `window.location.origin` inarudisha mzizi wa URL, ikituruhusu kuunda URL kamili kutoka kwa njia iliyotolewa.
+Njia hii kwanza inasasisha URL ya sasa kulingana na njia iliyotolewa, halafu inasasisha kiolezo. Sifa `window.location.origin` inarudisha mzizi wa URL, ikituruhusu kuunda URL kamili kutoka kwa njia iliyotolewa.
 
-Sasa kwa kuwa tuna kazi hii, tunaweza kushughulikia tatizo tulilonalo ikiwa njia haifanani na njia yoyote iliyofafanuliwa. Tutabadilisha kazi ya `updateRoute` kwa kuongeza njia ya kurudi kwa moja ya njia zilizopo ikiwa hatuwezi kupata mechi.
+Sasa kwa kuwa tuna kazi hii, tunaweza kushughulikia tatizo tunalopata ikiwa njia haifanani na njia yoyote iliyofafanuliwa. Tutabadilisha kazi ya `updateRoute` kwa kuongeza njia ya kurudi kwa moja ya njia zilizopo ikiwa hatuwezi kupata mechi.
 
 ```js
 function updateRoute() {
@@ -253,7 +253,7 @@ function onLinkClick(event) {
 }
 ```
 
-Wacha tukamilishe mfumo wa urambazaji kwa kuongeza viungo kwenye viungo vyetu vya *Login* na *Logout* kwenye HTML.
+Tukamilishe mfumo wa urambazaji kwa kuongeza viungo kwenye viungo vyetu vya *Login* na *Logout* kwenye HTML.
 
 ```html
 <a href="/dashboard" onclick="onLinkClick(event)">Login</a>
@@ -267,11 +267,11 @@ Kwa kutumia sifa ya [`onclick`](https://developer.mozilla.org/docs/Web/API/Globa
 
 Jaribu kubofya viungo hivi, sasa unapaswa kuwa na uwezo wa kuvinjari kati ya skrini tofauti za programu yako.
 
-✅ Njia ya `history.pushState` ni sehemu ya kiwango cha HTML5 na kutekelezwa katika [vivinjari vyote vya kisasa](https://caniuse.com/?search=pushState). Ikiwa unajenga programu ya wavuti kwa vivinjari vya zamani, kuna mbinu unaweza kutumia badala ya API hii: kutumia [alama ya reli (`#`)](https://en.wikipedia.org/wiki/URI_fragment) kabla ya njia unaweza kutekeleza urambazaji unaofanya kazi na urambazaji wa kawaida wa nanga na haupakii upya ukurasa, kwani lengo lake lilikuwa kuunda viungo vya ndani ndani ya ukurasa.
+✅ Njia ya `history.pushState` ni sehemu ya kiwango cha HTML5 na imetekelezwa katika [vivinjari vyote vya kisasa](https://caniuse.com/?search=pushState). Ikiwa unajenga programu ya wavuti kwa vivinjari vya zamani, kuna mbinu unaweza kutumia badala ya API hii: kutumia [alama ya reli (`#`)](https://en.wikipedia.org/wiki/URI_fragment) kabla ya njia unaweza kutekeleza urambazaji unaofanya kazi na urambazaji wa kawaida wa nanga na haupakii upya ukurasa, kwani lengo lake lilikuwa kuunda viungo vya ndani ndani ya ukurasa.
 
-## Kushughulikia vitufe vya nyuma na mbele vya kivinjari
+## Kushughulikia Vitufe vya Nyuma na Mbele vya Kivinjari
 
-Kutumia `history.pushState` huunda ingizo mpya kwenye historia ya urambazaji wa kivinjari. Unaweza kuangalia hilo kwa kushikilia *kitufe cha nyuma* cha kivinjari chako, kinapaswa kuonyesha kitu kama hiki:
+Kutumia `history.pushState` huunda ingizo mpya kwenye historia ya urambazaji ya kivinjari. Unaweza kuangalia hilo kwa kushikilia *kitufe cha nyuma* cha kivinjari chako, kinapaswa kuonyesha kitu kama hiki:
 
 ![Picha ya historia ya urambazaji](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.sw.png)
 
@@ -281,14 +281,14 @@ Hii ni kwa sababu programu haijui kwamba tunahitaji kuita `updateRoute()` kila w
 
 ### Kazi
 
-Ili kuhakikisha kiolezo kinachoonyeshwa kinasasishwa wakati historia ya kivinjari inabadilika, tutaambatisha kazi mpya inayoiita `updateRoute()`. Tutafanya hivyo mwishoni mwa faili yetu ya `app.js`:
+Ili kuhakikisha kiolezo kinachoonyeshwa kinasasishwa wakati historia ya kivinjari inabadilika, tutaunganisha kazi mpya inayoiita `updateRoute()`. Tutafanya hivyo mwishoni mwa faili yetu ya `app.js`:
 
 ```js
 window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Kidokezo: tumetumia [kazi ya mshale](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) hapa kutangaza mshughulikiaji wa tukio la `popstate` kwa ufupi, lakini kazi ya kawaida ingefanya kazi sawa.
+> Kumbuka: tumetumia [kazi ya mshale](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) hapa kutangaza mshughulikiaji wa tukio la `popstate` kwa ufupi, lakini kazi ya kawaida ingefanya kazi sawa.
 
 Hapa kuna video ya kukumbusha kuhusu kazi za mshale:
 
@@ -296,7 +296,7 @@ Hapa kuna video ya kukumbusha kuhusu kazi za mshale:
 
 > 🎥 Bofya picha hapo juu kwa video kuhusu kazi za mshale.
 
-Sasa jaribu kutumia vitufe vya nyuma na mbele vya kivinjari chako, na angalia kwamba njia inayoonyeshwa inasasishwa kwa usahihi wakati huu.
+Sasa jaribu kutumia vitufe vya nyuma na mbele vya kivinjari chako, na uhakikishe kwamba njia inayoonyeshwa inasasishwa kwa usahihi wakati huu.
 
 ---
 
@@ -304,7 +304,7 @@ Sasa jaribu kutumia vitufe vya nyuma na mbele vya kivinjari chako, na angalia kw
 
 Ongeza kiolezo kipya na njia kwa ukurasa wa tatu unaoonyesha sifa za programu hii.
 
-## Maswali ya Baada ya Somo
+## Jaribio la Baada ya Somo
 
 [Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/42)
 
@@ -319,4 +319,4 @@ Urambazaji ni moja ya sehemu za kushangaza ngumu za maendeleo ya wavuti, hasa wa
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

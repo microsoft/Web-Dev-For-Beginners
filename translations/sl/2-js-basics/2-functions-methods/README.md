@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4612bbb9ace984f374fcc80e3e035ad",
-  "translation_date": "2025-08-27T22:37:00+00:00",
+  "original_hash": "92e136090efc4341b1d51c37924c1802",
+  "translation_date": "2025-08-29T12:52:09+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "sl"
 }
@@ -13,9 +13,9 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Predhodni kviz
-[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/9)
+[Predhodni kviz](https://ff-quizzes.netlify.app)
 
-Ko razmišljamo o pisanju kode, si vedno želimo zagotoviti, da je naša koda berljiva. Čeprav se to morda sliši nenavadno, je koda prebrana veliko večkrat, kot je napisana. Eden ključnih orodij v razvijalčevem naboru za zagotavljanje vzdržljive kode je **funkcija**.
+Ko razmišljamo o pisanju kode, si vedno želimo, da je naša koda berljiva. Čeprav se to morda sliši nelogično, je koda veliko večkrat prebrana kot napisana. Eden ključnih orodij v razvijalčevem naboru za zagotavljanje vzdržljive kode je **funkcija**.
 
 [![Metode in funkcije](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Metode in funkcije")
 
@@ -25,9 +25,9 @@ Ko razmišljamo o pisanju kode, si vedno želimo zagotoviti, da je naša koda be
 
 ## Funkcije
 
-V svojem bistvu je funkcija blok kode, ki ga lahko izvedemo po potrebi. To je idealno za scenarije, kjer moramo večkrat opraviti isto nalogo; namesto da bi logiko podvajali na več mestih (kar bi otežilo posodobitve), jo lahko centraliziramo na enem mestu in jo pokličemo, kadar koli potrebujemo izvedbo operacije – funkcije lahko celo kličete iz drugih funkcij!
+V svojem bistvu je funkcija blok kode, ki ga lahko izvedemo na zahtevo. To je idealno za primere, ko moramo večkrat opraviti isto nalogo; namesto da logiko podvajamo na več mestih (kar bi otežilo posodobitve, ko bo to potrebno), jo lahko centraliziramo na enem mestu in jo pokličemo, kadar potrebujemo izvedbo operacije - funkcije lahko celo kličete iz drugih funkcij!
 
-Prav tako pomembno je poimenovanje funkcije. Čeprav se to morda zdi nepomembno, ime zagotavlja hiter način dokumentiranja dela kode. To si lahko predstavljate kot nalepko na gumbu. Če kliknem na gumb z napisom "Prekliči časovnik", vem, da bo ustavil delovanje ure.
+Prav tako pomembna je možnost poimenovanja funkcije. Čeprav se to morda zdi trivialno, ime funkcije zagotavlja hiter način dokumentiranja dela kode. Lahko si to predstavljate kot nalepko na gumbu. Če kliknem na gumb z napisom "Prekliči časovnik", vem, da bo ustavil delovanje ure.
 
 ## Ustvarjanje in klicanje funkcije
 
@@ -39,7 +39,7 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Če bi želel ustvariti funkcijo za prikaz pozdrava, bi to izgledalo takole:
+Če bi želel ustvariti funkcijo za prikaz pozdrava, bi to lahko izgledalo takole:
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +47,28 @@ function displayGreeting() {
 }
 ```
 
-Kadar koli želimo poklicati (ali sprožiti) našo funkcijo, uporabimo ime funkcije, ki mu sledi `()`. Omeniti velja, da je naša funkcija lahko definirana pred ali po tem, ko jo pokličemo; JavaScript prevajalnik jo bo našel namesto vas.
+Kadar želimo poklicati (ali izvesti) našo funkcijo, uporabimo ime funkcije, ki mu sledi `()`. Pomembno je omeniti, da lahko funkcijo definiramo pred ali po tem, ko se odločimo, da jo pokličemo; JavaScript prevajalnik jo bo našel za vas.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** Obstaja posebna vrsta funkcije, znana kot **metoda**, ki ste jo že uporabljali! Pravzaprav smo to videli v naši zgornji predstavitvi, ko smo uporabili `console.log`. Kar razlikuje metodo od funkcije, je to, da je metoda povezana z objektom (v našem primeru `console`), medtem ko je funkcija prosto lebdeča. Veliko razvijalcev te izraze uporablja izmenično.
+> **NOTE:** Obstaja posebna vrsta funkcije, imenovana **metoda**, ki ste jo že uporabljali! Pravzaprav smo to videli v naši zgornji predstavitvi, ko smo uporabili `console.log`. Kar razlikuje metodo od funkcije je, da je metoda povezana z objektom (`console` v našem primeru), medtem ko je funkcija samostojna. Veliko razvijalcev te izraze uporablja izmenično.
 
 ### Najboljše prakse za funkcije
 
 Pri ustvarjanju funkcij je dobro upoštevati nekaj najboljših praks:
 
-- Kot vedno, uporabljajte opisna imena, da veste, kaj funkcija počne
-- Uporabljajte **camelCasing** za združevanje besed
-- Naj bodo vaše funkcije osredotočene na določeno nalogo
+- Kot vedno, uporabite opisna imena, da veste, kaj funkcija počne
+- Uporabite **camelCasing** za združevanje besed
+- Osredotočite svoje funkcije na specifično nalogo
 
 ## Posredovanje informacij funkciji
 
-Da bi funkcija postala bolj uporabna, ji boste pogosto želeli posredovati informacije. Če pogledamo naš primer `displayGreeting`, bo prikazal le **Hello, world!**. To ni najbolj uporabna funkcija, ki bi jo lahko ustvarili. Če jo želimo narediti nekoliko bolj prilagodljivo, na primer omogočiti nekomu, da določi ime osebe, ki jo pozdravljamo, lahko dodamo **parameter**. Parameter (včasih imenovan tudi **argument**) je dodatna informacija, poslana funkciji.
+Da bi funkcijo naredili bolj uporabno, ji pogosto želimo posredovati informacije. Če pogledamo naš primer `displayGreeting`, bo prikazal le **Hello, world!**. Ni najbolj uporabna funkcija, ki bi jo lahko ustvarili. Če jo želimo narediti nekoliko bolj prilagodljivo, na primer omogočiti nekomu, da določi ime osebe, ki jo pozdravljamo, lahko dodamo **parameter**. Parameter (včasih imenovan tudi **argument**) je dodatna informacija, poslana funkciji.
 
-Parametri so navedeni v definiciji znotraj oklepajev in so ločeni z vejicami, kot sledi:
+Parametri so navedeni v definicijskem delu znotraj oklepajev in so ločeni z vejicami, kot sledi:
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +76,7 @@ function name(param, param2, param3) {
 }
 ```
 
-Našo funkcijo `displayGreeting` lahko posodobimo tako, da sprejme ime in ga prikaže.
+Naš `displayGreeting` lahko posodobimo tako, da sprejme ime in ga prikaže.
 
 ```javascript
 function displayGreeting(name) {
@@ -85,7 +85,7 @@ function displayGreeting(name) {
 }
 ```
 
-Ko želimo poklicati našo funkcijo in posredovati parameter, ga določimo v oklepajih.
+Ko želimo poklicati funkcijo in ji posredovati parameter, ga določimo v oklepajih.
 
 ```javascript
 displayGreeting('Christopher');
@@ -94,7 +94,7 @@ displayGreeting('Christopher');
 
 ## Privzete vrednosti
 
-Našo funkcijo lahko naredimo še bolj prilagodljivo z dodajanjem več parametrov. Kaj pa, če ne želimo, da je vsaka vrednost obvezna? Če ostanemo pri našem primeru pozdrava, lahko ime pustimo kot obvezno (potrebujemo vedeti, koga pozdravljamo), vendar želimo omogočiti, da se pozdrav prilagodi po želji. Če nekdo ne želi prilagoditi pozdrava, zagotovimo privzeto vrednost. Privzeto vrednost parametru določimo na podoben način, kot določimo vrednost spremenljivki - `parameterName = 'defaultValue'`. Celoten primer:
+Našo funkcijo lahko naredimo še bolj prilagodljivo z dodajanjem več parametrov. Kaj pa, če ne želimo, da je vsaka vrednost obvezna? Če ostanemo pri našem primeru pozdrava, bi lahko ime ostalo obvezno (potrebujemo vedeti, koga pozdravljamo), vendar želimo omogočiti, da se pozdrav prilagodi po želji. Če nekdo ne želi prilagoditi pozdrava, zagotovimo privzeto vrednost. Privzeto vrednost parametru določimo na podoben način, kot določimo vrednost spremenljivki - `parameterName = 'defaultValue'`. Celoten primer:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -112,11 +112,11 @@ displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
 ```
 
-## Vračanje vrednosti
+## Vrnitev vrednosti
 
-Do zdaj bo funkcija, ki smo jo ustvarili, vedno izpisovala v [konzolo](https://developer.mozilla.org/docs/Web/API/console). Včasih je to točno tisto, kar iščemo, še posebej, ko ustvarjamo funkcije, ki bodo klicale druge storitve. Kaj pa, če želim ustvariti pomožno funkcijo za izvedbo izračuna in vrniti vrednost, da jo lahko uporabim drugje?
+Do sedaj bo funkcija, ki smo jo ustvarili, vedno izpisovala v [konzolo](https://developer.mozilla.org/docs/Web/API/console). Včasih je to lahko točno tisto, kar iščemo, še posebej, ko ustvarjamo funkcije, ki bodo klicale druge storitve. Kaj pa, če želim ustvariti pomožno funkcijo za izvedbo izračuna in vrniti vrednost nazaj, da jo lahko uporabim drugje?
 
-To lahko storimo z uporabo **vrnjene vrednosti**. Vrnjena vrednost je vrnjena s funkcijo in jo lahko shranimo v spremenljivko na enak način, kot bi shranili dobesedno vrednost, kot je niz ali število.
+To lahko storimo z uporabo **vrnjene vrednosti**. Vrnjena vrednost je vrnjena s funkcijo in jo lahko shranimo v spremenljivko na enak način, kot bi shranili literalno vrednost, kot je niz ali število.
 
 Če funkcija nekaj vrne, se uporabi ključna beseda `return`. Ključna beseda `return` pričakuje vrednost ali referenco tistega, kar se vrača, kot sledi:
 
@@ -124,7 +124,7 @@ To lahko storimo z uporabo **vrnjene vrednosti**. Vrnjena vrednost je vrnjena s 
 return myVariable;
 ```  
 
-Lahko ustvarimo funkcijo za ustvarjanje sporočila pozdrava in vrnemo vrednost klicatelju.
+Lahko ustvarimo funkcijo za ustvarjanje sporočila pozdrava in vrnemo vrednost nazaj klicatelju.
 
 ```javascript
 function createGreetingMessage(name) {
@@ -141,9 +141,9 @@ const greetingMessage = createGreetingMessage('Christopher');
 
 ## Funkcije kot parametri za funkcije
 
-Ko boste napredovali v svoji programerski karieri, boste naleteli na funkcije, ki sprejemajo funkcije kot parametre. Ta zanimiv trik se pogosto uporablja, ko ne vemo, kdaj se bo nekaj zgodilo ali zaključilo, vendar vemo, da moramo izvesti operacijo kot odziv.
+Ko napredujete v svoji programerski karieri, boste naleteli na funkcije, ki sprejemajo funkcije kot parametre. Ta zanimiv trik se pogosto uporablja, ko ne vemo, kdaj se bo nekaj zgodilo ali zaključilo, vendar vemo, da moramo izvesti operacijo kot odziv.
 
-Kot primer si oglejmo [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), ki začne časovnik in bo izvedel kodo, ko se časovnik zaključi. Povedati mu moramo, katero kodo želimo izvesti. Zveni kot popolna naloga za funkcijo!
+Na primer, razmislite o [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), ki začne časovnik in bo izvedel kodo, ko se časovnik zaključi. Povedati mu moramo, katero kodo želimo izvesti. Zveni kot popolna naloga za funkcijo!
 
 Če zaženete spodnjo kodo, boste po 3 sekundah videli sporočilo **3 sekunde so pretekle**.
 
@@ -157,7 +157,7 @@ setTimeout(displayDone, 3000);
 
 ### Anonimne funkcije
 
-Poglejmo še enkrat, kaj smo zgradili. Ustvarjamo funkcijo z imenom, ki bo uporabljena samo enkrat. Ko naša aplikacija postane bolj zapletena, si lahko predstavljamo, da bomo ustvarili veliko funkcij, ki bodo uporabljene samo enkrat. To ni idealno. Kot se izkaže, imena vedno ni treba podati!
+Poglejmo še enkrat, kaj smo ustvarili. Ustvarjamo funkcijo z imenom, ki bo uporabljena samo enkrat. Ko naša aplikacija postane bolj zapletena, si lahko predstavljamo, da bomo ustvarili veliko funkcij, ki bodo uporabljene samo enkrat. To ni idealno. Kot se izkaže, nam ni vedno treba zagotoviti imena!
 
 Ko funkcijo posredujemo kot parameter, lahko preskočimo njeno predhodno ustvarjanje in jo namesto tega zgradimo kot del parametra. Uporabimo isto ključno besedo `function`, vendar jo zgradimo kot parameter.
 
@@ -171,11 +171,11 @@ setTimeout(function() {
 
 Če zaženete našo novo kodo, boste opazili, da dobimo enake rezultate. Ustvarili smo funkcijo, vendar ji nismo morali dati imena!
 
-### Fat arrow funkcije
+### Funkcije z debelo puščico
 
-Ena od bližnjic, ki je pogosta v mnogih programskih jezikih (vključno z JavaScriptom), je možnost uporabe tako imenovane **arrow** ali **fat arrow** funkcije. Uporablja poseben indikator `=>`, ki izgleda kot puščica - od tod tudi ime! Z uporabo `=>` lahko preskočimo ključno besedo `function`.
+Ena bližnjica, ki je pogosta v številnih programskih jezikih (vključno z JavaScriptom), je možnost uporabe tako imenovane **puščice** ali **funkcije z debelo puščico**. Uporablja poseben indikator `=>`, ki izgleda kot puščica - od tod ime! Z uporabo `=>` lahko preskočimo ključno besedo `function`.
 
-Prepišimo našo kodo še enkrat, da uporabimo fat arrow funkcijo:
+Prepišimo našo kodo še enkrat, da uporabimo funkcijo z debelo puščico:
 
 ```javascript
 setTimeout(() => {
@@ -185,20 +185,20 @@ setTimeout(() => {
 
 ### Kdaj uporabiti katero strategijo
 
-Zdaj ste videli tri načine za posredovanje funkcije kot parametra in se morda sprašujete, kdaj uporabiti katerega. Če veste, da boste funkcijo uporabili več kot enkrat, jo ustvarite na običajen način. Če jo boste uporabili samo na enem mestu, je običajno najbolje uporabiti anonimno funkcijo. Ali boste uporabili fat arrow funkcijo ali bolj tradicionalno sintakso `function`, je odvisno od vas, vendar boste opazili, da večina sodobnih razvijalcev raje uporablja `=>`.
+Zdaj ste videli, da imamo tri načine za posredovanje funkcije kot parametra, in se morda sprašujete, kdaj uporabiti katerega. Če veste, da boste funkcijo uporabljali več kot enkrat, jo ustvarite na običajen način. Če jo boste uporabljali samo na enem mestu, je na splošno najbolje uporabiti anonimno funkcijo. Ali boste uporabili funkcijo z debelo puščico ali bolj tradicionalno sintakso `function`, je odvisno od vas, vendar boste opazili, da večina sodobnih razvijalcev raje uporablja `=>`.
 
 ---
 
 ## 🚀 Izziv
 
-Ali lahko v enem stavku razložite razliko med funkcijami in metodami? Poskusite!
+Ali lahko v eni povedi razložite razliko med funkcijami in metodami? Poskusite!
 
 ## Kviz po predavanju
-[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/10)
+[Kviz po predavanju](https://ff-quizzes.netlify.app)
 
 ## Pregled in samostojno učenje
 
-Vredno je [prebrati več o fat arrow funkcijah](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), saj se vse pogosteje uporabljajo v kodnih bazah. Vadite pisanje funkcije in jo nato prepišite s to sintakso.
+Vredno je [prebrati več o funkcijah z debelo puščico](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), saj se vse pogosteje uporabljajo v kodnih bazah. Vadite pisanje funkcije in nato njeno prepisovanje s to sintakso.
 
 ## Naloga
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b667b7d601e2ee19acb5aa9d102dc9f3",
-  "translation_date": "2025-08-27T22:04:23+00:00",
+  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
+  "translation_date": "2025-08-29T11:05:20+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "sk"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Úvod
 
-Takmer vo všetkých moderných webových aplikáciách si môžete vytvoriť účet, aby ste mali svoj vlastný súkromný priestor. Keďže webovú aplikáciu môže naraz používať viacero používateľov, potrebujete mechanizmus na oddelené ukladanie osobných údajov každého používateľa a výber informácií, ktoré sa majú zobraziť. Nebudeme sa zaoberať tým, ako [bezpečne spravovať identitu používateľa](https://en.wikipedia.org/wiki/Authentication), pretože je to rozsiahla téma sama o sebe, ale zabezpečíme, aby si každý používateľ mohol vytvoriť jeden (alebo viac) bankových účtov v našej aplikácii.
+Takmer vo všetkých moderných webových aplikáciách si môžete vytvoriť účet, aby ste mali vlastný súkromný priestor. Keďže webovú aplikáciu môže naraz používať viacero používateľov, potrebujete mechanizmus na oddelené ukladanie osobných údajov každého používateľa a výber informácií, ktoré sa majú zobraziť. Nebudeme sa zaoberať tým, ako [bezpečne spravovať identitu používateľa](https://en.wikipedia.org/wiki/Authentication), pretože je to rozsiahla téma sama o sebe, ale zabezpečíme, aby si každý používateľ mohol vytvoriť jeden (alebo viac) bankových účtov v našej aplikácii.
 
 V tejto časti použijeme HTML formuláre na pridanie prihlasovania a registrácie do našej webovej aplikácie. Ukážeme si, ako programovo odosielať údaje na serverovú API, a nakoniec, ako definovať základné pravidlá validácie pre vstupy používateľa.
 
@@ -41,7 +41,7 @@ curl http://localhost:5000/api
 
 ## Formulár a ovládacie prvky
 
-Element `<form>` obklopuje sekciu HTML dokumentu, kde používateľ môže zadávať a odosielať údaje pomocou interaktívnych ovládacích prvkov. Existuje množstvo rôznych používateľských rozhraní (UI) ovládacích prvkov, ktoré sa dajú použiť vo formulári, najbežnejšie sú elementy `<input>` a `<button>`.
+Element `<form>` obklopuje sekciu HTML dokumentu, kde používateľ môže zadávať a odosielať údaje pomocou interaktívnych ovládacích prvkov. Existuje množstvo rôznych ovládacích prvkov používateľského rozhrania (UI), ktoré je možné použiť vo formulári, najbežnejšie sú elementy `<input>` a `<button>`.
 
 Existuje veľa rôznych [typov](https://developer.mozilla.org/docs/Web/HTML/Element/input) `<input>`, napríklad na vytvorenie poľa, kde používateľ môže zadať svoje používateľské meno, môžete použiť:
 
@@ -49,9 +49,9 @@ Existuje veľa rôznych [typov](https://developer.mozilla.org/docs/Web/HTML/Elem
 <input id="username" name="username" type="text">
 ```
 
-Atribút `name` sa použije ako názov vlastnosti, keď sa údaje formulára odošlú. Atribút `id` sa používa na priradenie `<label>` k ovládaciemu prvku formulára.
+Atribút `name` bude použitý ako názov vlastnosti, keď budú údaje formulára odoslané. Atribút `id` sa používa na priradenie `<label>` k ovládaciemu prvku formulára.
 
-> Pozrite si celý zoznam [`<input>` typov](https://developer.mozilla.org/docs/Web/HTML/Element/input) a [iných ovládacích prvkov formulára](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls), aby ste získali predstavu o všetkých natívnych UI elementoch, ktoré môžete použiť pri vytváraní svojho rozhrania.
+> Pozrite si celý zoznam [`<input>` typov](https://developer.mozilla.org/docs/Web/HTML/Element/input) a [iných ovládacích prvkov formulára](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls), aby ste získali predstavu o všetkých natívnych UI elementoch, ktoré môžete použiť pri tvorbe svojho rozhrania.
 
 ✅ Všimnite si, že `<input>` je [prázdny element](https://developer.mozilla.org/docs/Glossary/Empty_element), ku ktorému by ste *nemali* pridávať zodpovedajúci zatvárací tag. Môžete však použiť samo-uzatvárací zápis `<input/>`, ale nie je to povinné.
 
@@ -111,13 +111,13 @@ Všimnite si tiež, že vstup pre `balance` má typ `number`. Vyzerá inak ako o
 
 ## Odosielanie údajov na server
 
-Teraz, keď máme funkčné UI, ďalším krokom je odoslanie údajov na náš server. Urobme rýchly test pomocou nášho aktuálneho kódu: čo sa stane, keď kliknete na tlačidlo *Prihlásiť sa* alebo *Registrovať*?
+Teraz, keď máme funkčné UI, ďalším krokom je odoslanie údajov na server. Urobme rýchly test pomocou nášho aktuálneho kódu: čo sa stane, keď kliknete na tlačidlo *Prihlásiť sa* alebo *Registrovať*?
 
 Všimli ste si zmenu v sekcii URL vášho prehliadača?
 
 ![Screenshot zmeny URL prehliadača po kliknutí na tlačidlo Registrovať](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.sk.png)
 
-Predvolená akcia pre `<form>` je odoslať formulár na aktuálnu URL servera pomocou [metódy GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), pričom údaje formulára sa pripoja priamo k URL. Táto metóda má však určité nedostatky:
+Predvolená akcia pre `<form>` je odoslať formulár na aktuálnu URL servera pomocou [metódy GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), pričom údaje formulára sa pripoja priamo k URL. Táto metóda má však určité nevýhody:
 
 - Odoslané údaje sú veľmi obmedzené veľkosťou (asi 2000 znakov)
 - Údaje sú priamo viditeľné v URL (nie je ideálne pre heslá)
@@ -139,15 +139,15 @@ Teraz sa pokúste zaregistrovať nový účet so svojím menom. Po kliknutí na 
 
 ![Okno prehliadača na adrese localhost:5000/api/accounts, zobrazujúce JSON reťazec s údajmi používateľa](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.sk.png)
 
-Ak všetko prebehne správne, server by mal odpovedať na vašu požiadavku s [JSON](https://www.json.org/json-en.html) odpoveďou obsahujúcou údaje účtu, ktorý bol vytvorený.
+Ak všetko prebehne správne, server by mal odpovedať na vašu požiadavku s [JSON](https://www.json.org/json-en.html) odpoveďou obsahujúcou údaje o vytvorenom účte.
 
 ✅ Skúste sa zaregistrovať znova s rovnakým menom. Čo sa stane?
 
 ## Odosielanie údajov bez načítania stránky
 
-Ako ste si pravdepodobne všimli, existuje malý problém s prístupom, ktorý sme práve použili: pri odosielaní formulára sa dostaneme mimo našej aplikácie a prehliadač presmeruje na URL servera. Snažíme sa vyhnúť všetkým načítaniam stránok v našej webovej aplikácii, pretože vytvárame [jednostránkovú aplikáciu (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
+Ako ste si pravdepodobne všimli, existuje malý problém s prístupom, ktorý sme práve použili: pri odoslaní formulára sa dostaneme mimo našej aplikácie a prehliadač presmeruje na URL servera. Snažíme sa vyhnúť všetkým načítaniam stránok v našej webovej aplikácii, pretože vytvárame [jednostránkovú aplikáciu (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
 
-Aby sme mohli odoslať údaje formulára na server bez núteného načítania stránky, musíme použiť JavaScriptový kód. Namiesto zadania URL do vlastnosti `action` elementu `<form>` môžete použiť akýkoľvek JavaScriptový kód predchádzajúci reťazcom `javascript:`, aby ste vykonali vlastnú akciu. Použitie tohto znamená, že budete musieť implementovať niektoré úlohy, ktoré predtým automaticky vykonával prehliadač:
+Aby sme mohli odoslať údaje formulára na server bez núteného načítania stránky, musíme použiť JavaScriptový kód. Namiesto zadania URL do vlastnosti `action` elementu `<form>` môžete použiť akýkoľvek JavaScriptový kód predchádzajúci reťazcom `javascript:`, aby ste vykonali vlastnú akciu. Použitie tohto prístupu tiež znamená, že budete musieť implementovať niektoré úlohy, ktoré predtým automaticky vykonával prehliadač:
 
 - Získať údaje formulára
 - Konvertovať a zakódovať údaje formulára do vhodného formátu
@@ -201,10 +201,10 @@ Tu je krátke video o používaní `async/await`:
 
 Používame API `fetch()` na odoslanie JSON údajov na server. Táto metóda má 2 parametre:
 
-- URL servera, takže tu zadáme `//localhost:5000/api/accounts`.
-- Nastavenia požiadavky. Tu nastavíme metódu na `POST` a poskytneme `body` požiadavky. Keďže odosielame JSON údaje na server, musíme tiež nastaviť hlavičku `Content-Type` na `application/json`, aby server vedel, ako interpretovať obsah.
+- URL servera, takže tu opäť zadáme `//localhost:5000/api/accounts`.
+- Nastavenia požiadavky. Tu nastavíme metódu na `POST` a poskytneme `body` požiadavky. Keďže na server odosielame JSON údaje, musíme tiež nastaviť hlavičku `Content-Type` na `application/json`, aby server vedel, ako interpretovať obsah.
 
-Keďže server odpovie na požiadavku s JSON, môžeme použiť `await response.json()` na analýzu obsahu JSON a vrátenie výsledného objektu. Všimnite si, že táto metóda je asynchrónna, takže tu používame kľúčové slovo `await`, aby sme sa uistili, že sa zachytia aj chyby počas analýzy.
+Keďže server odpovie na požiadavku s JSON, môžeme použiť `await response.json()` na analýzu JSON obsahu a vrátenie výsledného objektu. Všimnite si, že táto metóda je asynchrónna, takže tu používame kľúčové slovo `await`, aby sme sa uistili, že akékoľvek chyby počas analýzy sú tiež zachytené.
 
 Teraz pridajte nejaký kód do funkcie `register`, aby zavolala `createAccount()`:
 
@@ -245,14 +245,14 @@ To bolo trochu dlhé, ale dostali sme sa tam! Ak otvoríte [nástroje pre vývoj
 
 Ak sa pokúsite zaregistrovať nový účet bez nastavenia používateľského mena, môžete vidieť, že server vráti chybu so status kódom [400 (Zlá požiadavka)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
-Pred odoslaním údajov na server je dobrým zvykom [validovať údaje formulára](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) vopred, keď je to možné, aby ste sa uistili, že odosielate platnú požiadavku. HTML5 ovládacie prvky formulára poskytujú vstavanú validáciu pomocou rôznych atribútov:
+Pred odoslaním údajov na server je dobrým zvykom [validovať údaje formulára](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) vopred, keď je to možné, aby ste sa uistili, že odosielate platnú požiadavku. HTML5 ovládacie prvky formulára poskytujú zabudovanú validáciu pomocou rôznych atribútov:
 
 - `required`: pole musí byť vyplnené, inak formulár nemôže byť odoslaný.
-- `minlength` a `maxlength`: definujú minimálny a maximálny počet znakov v textových poliach.
-- `min` a `max`: definujú minimálnu a maximálnu hodnotu číselného poľa.
-- `type`: definuje druh očakávaných údajov, ako `number`, `email`, `file` alebo [iné vstavané typy](https://developer.mozilla.org/docs/Web/HTML/Element/input). Tento atribút môže tiež zmeniť vizuálne zobrazenie ovládacieho prvku formulára.
-- `pattern`: umožňuje definovať [regulárny výraz](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) na testovanie, či sú zadané údaje platné alebo nie.
-Tip: môžete prispôsobiť vzhľad ovládacích prvkov formulára podľa toho, či sú platné alebo neplatné, pomocou pseudo-tried CSS `:valid` a `:invalid`.
+- `minlength` a `maxlength`: definuje minimálny a maximálny počet znakov v textových poliach.
+- `min` a `max`: definuje minimálnu a maximálnu hodnotu číselného poľa.
+- `type`: definuje druh očakávaných údajov, ako napríklad `number`, `email`, `file` alebo [iné zabudované typy](https://developer.mozilla.org/docs/Web/HTML/Element/input). Tento atribút môže tiež zmeniť vizuálne zobrazenie ovládacieho prvku formulára.
+- `pattern`: umožňuje definovať [regulárny výraz](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) na testovanie, či zadané údaje sú platné alebo nie.
+> Tip: vzhľad ovládacích prvkov formulára môžete prispôsobiť podľa toho, či sú platné alebo neplatné, pomocou pseudo-tried CSS `:valid` a `:invalid`.
 ### Úloha
 
 Na vytvorenie platného nového účtu sú potrebné dve povinné polia: používateľské meno a mena. Ostatné polia sú voliteľné. Aktualizujte HTML formulára tak, aby ste použili atribút `required` a text v označení poľa:
@@ -281,9 +281,9 @@ Ak teraz stlačíte tlačidlo *Registrovať* a niektoré pole nespĺňa pravidlo
 
 ![Snímka obrazovky zobrazujúca chybu validácie pri pokuse o odoslanie formulára](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.sk.png)
 
-Validácia, ktorá sa vykonáva *pred* odoslaním akýchkoľvek údajov na server, sa nazýva **validácia na strane klienta**. Ale všimnite si, že nie je vždy možné vykonať všetky kontroly bez odoslania údajov. Napríklad tu nemôžeme overiť, či už existuje účet s rovnakým používateľským menom, bez odoslania požiadavky na server. Ďalšia validácia vykonaná na serveri sa nazýva **validácia na strane servera**.
+Validácia, ktorá sa vykonáva *pred* odoslaním akýchkoľvek údajov na server, sa nazýva **validácia na strane klienta**. Je však dôležité si uvedomiť, že nie je vždy možné vykonať všetky kontroly bez odoslania údajov. Napríklad tu nemôžeme overiť, či už existuje účet s rovnakým používateľským menom, bez odoslania požiadavky na server. Ďalšia validácia vykonaná na serveri sa nazýva **validácia na strane servera**.
 
-Zvyčajne je potrebné implementovať obe, a zatiaľ čo validácia na strane klienta zlepšuje používateľskú skúsenosť tým, že poskytuje okamžitú spätnú väzbu používateľovi, validácia na strane servera je nevyhnutná na zabezpečenie toho, aby údaje používateľa, s ktorými pracujete, boli správne a bezpečné.
+Zvyčajne je potrebné implementovať obe. Používanie validácie na strane klienta zlepšuje používateľskú skúsenosť tým, že poskytuje okamžitú spätnú väzbu používateľovi, zatiaľ čo validácia na strane servera je nevyhnutná na zabezpečenie toho, aby údaje, ktoré spracovávate, boli správne a bezpečné.
 
 ---
 
@@ -291,7 +291,7 @@ Zvyčajne je potrebné implementovať obe, a zatiaľ čo validácia na strane kl
 
 Zobrazte chybovú správu v HTML, ak používateľ už existuje.
 
-Tu je príklad, ako môže vyzerať konečná prihlasovacia stránka po troche štýlovania:
+Tu je príklad, ako môže vyzerať finálna prihlasovacia stránka po troche štýlovania:
 
 ![Snímka obrazovky prihlasovacej stránky po pridaní štýlov CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.sk.png)
 
@@ -310,4 +310,4 @@ Vývojári sa stali veľmi kreatívnymi pri vytváraní formulárov, najmä poki
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie odporúčame profesionálny ľudský preklad. Nezodpovedáme za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

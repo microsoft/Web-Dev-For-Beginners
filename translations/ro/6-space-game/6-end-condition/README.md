@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-28T07:59:59+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T11:32:41+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "ro"
 }
@@ -13,11 +13,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Există diferite moduri de a exprima o *condiție de final* într-un joc. Depinde de tine, ca creator al jocului, să decizi de ce jocul se termină. Iată câteva motive, presupunând că vorbim despre jocul spațial pe care l-ai construit până acum:
+Există diferite moduri de a exprima o *condiție de final* într-un joc. Depinde de tine, ca creator al jocului, să decizi de ce jocul s-a terminat. Iată câteva motive, presupunând că vorbim despre jocul spațial pe care l-ai construit până acum:
 
 - **Au fost distruse `N` nave inamice**: Este destul de comun ca, dacă împarți un joc în diferite niveluri, să fie necesar să distrugi `N` nave inamice pentru a completa un nivel.
 - **Nava ta a fost distrusă**: Există cu siguranță jocuri în care pierzi dacă nava ta este distrusă. O altă abordare comună este conceptul de vieți. De fiecare dată când nava ta este distrusă, pierzi o viață. Odată ce toate viețile sunt pierdute, pierzi jocul.
-- **Ai colectat `N` puncte**: O altă condiție comună de final este să colectezi puncte. Modul în care obții punctele depinde de tine, dar este destul de obișnuit să atribui puncte diferitelor activități, cum ar fi distrugerea unei nave inamice sau colectarea unor obiecte care *cad* atunci când sunt distruse.
+- **Ai colectat `N` puncte**: O altă condiție comună de final este să colectezi puncte. Modul în care obții punctele depinde de tine, dar este destul de comun să atribui puncte diferitelor activități, cum ar fi distrugerea unei nave inamice sau colectarea unor obiecte care *cad* atunci când sunt distruse.
 - **Completează un nivel**: Acest lucru poate implica mai multe condiții, cum ar fi distrugerea a `X` nave inamice, colectarea a `Y` puncte sau poate colectarea unui obiect specific.
 
 ## Restart
@@ -35,7 +35,7 @@ Vei adăuga aceste reguli jocului tău:
 
 ## Pași recomandați
 
-Găsește fișierele care au fost create pentru tine în subfolderul `your-work`. Acesta ar trebui să conțină următoarele:
+Localizează fișierele care au fost create pentru tine în subfolderul `your-work`. Acesta ar trebui să conțină următoarele:
 
 ```bash
 -| assets
@@ -55,9 +55,9 @@ cd your-work
 npm start
 ```
 
-Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. Deschide un browser și introdu această adresă. Jocul tău ar trebui să fie într-o stare jucabilă.
+Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. Deschide un browser și introdu acea adresă. Jocul tău ar trebui să fie într-o stare jucabilă.
 
-> sfat: pentru a evita avertismentele în Visual Studio Code, editează funcția `window.onload` pentru a apela `gameLoopId` așa cum este (fără `let`) și declară `gameLoopId` în partea de sus a fișierului, independent: `let gameLoopId;`
+> sfat: pentru a evita avertismentele în Visual Studio Code, editează funcția `window.onload` pentru a apela `gameLoopId` așa cum este (fără `let`), și declară `gameLoopId` în partea de sus a fișierului, independent: `let gameLoopId;`
 
 ### Adaugă cod
 
@@ -115,7 +115,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Adaugă cod pentru restart** care repornește jocul la apăsarea unui buton selectat.
+2. **Adaugă cod pentru restart**. Adaugă cod care repornește jocul la apăsarea unui buton selectat.
 
    1. **Ascultă apăsarea tastei `Enter`**. Editează eventListener-ul ferestrei pentru a asculta această apăsare:
 
@@ -131,7 +131,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
         KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
         ```
 
-1. **Implementează regulile jocului**. Implementează următoarele reguli:
+1. **Implementează regulile jocului**. Implementează următoarele reguli ale jocului:
 
    1. **Condiția de câștig a jucătorului**. Când toate navele inamice sunt distruse, afișează un mesaj de victorie.
 
@@ -224,13 +224,13 @@ Adaugă un sunet! Poți adăuga un sunet pentru a îmbunătăți experiența de 
 
 ## Recapitulare și Studiu Individual
 
-Sarcina ta este să creezi un joc nou, așa că explorează câteva jocuri interesante pentru a vedea ce tip de joc ai putea construi.
+Sarcina ta este să creezi un joc nou, așa că explorează câteva dintre jocurile interesante existente pentru a vedea ce tip de joc ai putea construi.
 
 ## Temă
 
-[Construiește un Joc Exemplu](assignment.md)
+[Construiește un Joc Nou](assignment.md)
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

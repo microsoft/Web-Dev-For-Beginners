@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-28T04:06:57+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T10:53:37+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "cs"
 }
@@ -13,9 +13,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Kvíz před lekcí
+## Kvíz před přednáškou
 
-[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/11)
+[Kvíz před přednáškou](https://ff-quizzes.netlify.app/web/quiz/11)
 
 Rozhodování a řízení pořadí, ve kterém váš kód běží, činí váš kód znovupoužitelným a robustním. Tato sekce pokrývá syntaxi pro řízení toku dat v JavaScriptu a její význam při použití s datovými typy Boolean.
 
@@ -42,12 +42,12 @@ Operátory se používají k vyhodnocení podmínek porovnáním, které vytvoř
 
 | Symbol | Popis                                                                                                                                                        | Příklad            |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ |
-| `<`    | **Menší než**: Porovná dvě hodnoty a vrátí hodnotu `true`, pokud je hodnota na levé straně menší než na pravé                                                | `5 < 6 // true`    |
-| `<=`   | **Menší nebo rovno**: Porovná dvě hodnoty a vrátí hodnotu `true`, pokud je hodnota na levé straně menší nebo rovna pravé                                     | `5 <= 6 // true`   |
-| `>`    | **Větší než**: Porovná dvě hodnoty a vrátí hodnotu `true`, pokud je hodnota na levé straně větší než na pravé                                                | `5 > 6 // false`   |
-| `>=`   | **Větší nebo rovno**: Porovná dvě hodnoty a vrátí hodnotu `true`, pokud je hodnota na levé straně větší nebo rovna pravé                                     | `5 >= 6 // false`  |
-| `===`  | **Striktní rovnost**: Porovná dvě hodnoty a vrátí hodnotu `true`, pokud jsou hodnoty na pravé a levé straně stejné A mají stejný datový typ                  | `5 === 6 // false` |
-| `!==`  | **Nerovnost**: Porovná dvě hodnoty a vrátí opačnou hodnotu Boolean, než by vrátil operátor striktní rovnosti                                                | `5 !== 6 // true`  |
+| `<`    | **Menší než**: Porovná dvě hodnoty a vrátí hodnotu Boolean `true`, pokud je hodnota na levé straně menší než na pravé                                         | `5 < 6 // true`    |
+| `<=`   | **Menší nebo rovno**: Porovná dvě hodnoty a vrátí hodnotu Boolean `true`, pokud je hodnota na levé straně menší nebo rovna pravé                             | `5 <= 6 // true`   |
+| `>`    | **Větší než**: Porovná dvě hodnoty a vrátí hodnotu Boolean `true`, pokud je hodnota na levé straně větší než na pravé                                        | `5 > 6 // false`   |
+| `>=`   | **Větší nebo rovno**: Porovná dvě hodnoty a vrátí hodnotu Boolean `true`, pokud je hodnota na levé straně větší nebo rovna pravé                             | `5 >= 6 // false`  |
+| `===`  | **Striktní rovnost**: Porovná dvě hodnoty a vrátí hodnotu Boolean `true`, pokud jsou hodnoty na pravé a levé straně stejné A mají stejný datový typ          | `5 === 6 // false` |
+| `!==`  | **Nerovnost**: Porovná dvě hodnoty a vrátí opačnou hodnotu Boolean, než by vrátil operátor striktní rovnosti                                                 | `5 !== 6 // true`  |
 
 ✅ Ověřte si své znalosti tím, že napíšete několik porovnání do konzole vašeho prohlížeče. Překvapí vás některá vrácená data?
 
@@ -135,8 +135,8 @@ Rozhodování může vyžadovat více než jedno porovnání a může být spoje
 
 | Symbol | Popis                                                                                     | Příklad                                                                 |
 | ------ | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **Logické AND**: Porovná dvě Boolean výrazy. Vrátí true **pouze**, pokud jsou obě strany pravdivé | `(5 > 6) && (5 < 6 ) //Jedna strana je nepravdivá, druhá je pravdivá. Vrací false` |
-| `\|\|` | **Logické OR**: Porovná dvě Boolean výrazy. Vrátí true, pokud je alespoň jedna strana pravdivá | `(5 > 6) \|\| (5 < 6) //Jedna strana je nepravdivá, druhá je pravdivá. Vrací true` |
+| `&&`   | **Logické AND**: Porovná dvě Boolean výrazy. Vrátí true **pouze**, pokud jsou obě strany pravdivé | `(5 > 6) && (5 < 6 ) //Jedna strana je nepravdivá, druhá je pravdivá. Vrátí false` |
+| `\|\|` | **Logické OR**: Porovná dvě Boolean výrazy. Vrátí true, pokud je alespoň jedna strana pravdivá | `(5 > 6) \|\| (5 < 6) //Jedna strana je nepravdivá, druhá je pravdivá. Vrátí true` |
 | `!`    | **Logické NOT**: Vrátí opačnou hodnotu Boolean výrazu                                   | `!(5 > 6) // 5 není větší než 6, ale "!" vrátí true`                   |
 
 ## Podmínky a rozhodování s logickými operátory
@@ -185,7 +185,7 @@ let secondNumber = 10;
 let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 ```
 
-✅ Věnujte chvíli čtení tohoto kódu několikrát. Rozumíte tomu, jak tyto operátory fungují?
+✅ Udělejte si chvíli na přečtení tohoto kódu několikrát. Rozumíte tomu, jak tyto operátory fungují?
 
 Výše uvedené říká:
 
@@ -208,19 +208,19 @@ if (firstNumber > secondNumber) {
 
 ## 🚀 Výzva
 
-Vytvořte program, který je nejprve napsán s logickými operátory, a poté ho přepište pomocí ternárního výrazu. Která syntaxe vám vyhovuje více?
+Vytvořte program, který je nejprve napsán s logickými operátory, a poté ho přepište pomocí ternárního výrazu. Jaká syntaxe vám vyhovuje více?
 
 ---
 
-## Kvíz po lekci
+## Kvíz po přednášce
 
-[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/12)
+[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/12)
 
 ## Přehled & Samostudium
 
 Přečtěte si více o mnoha operátorech dostupných uživateli [na MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
-Projděte si skvělý [přehled operátorů](https://joshwcomeau.com/operator-lookup/) od Joshe Comeaua!
+Projděte si skvělý [operator lookup](https://joshwcomeau.com/operator-lookup/) od Joshe Comeaua!
 
 ## Úkol
 
@@ -229,4 +229,4 @@ Projděte si skvělý [přehled operátorů](https://joshwcomeau.com/operator-lo
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádné nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

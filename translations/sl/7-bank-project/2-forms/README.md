@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b667b7d601e2ee19acb5aa9d102dc9f3",
-  "translation_date": "2025-08-27T22:06:00+00:00",
+  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
+  "translation_date": "2025-08-29T12:44:56+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "sl"
 }
 -->
 # Izdelava bančne aplikacije, 2. del: Prijavni in registracijski obrazec
 
-## Predhodni kviz pred predavanjem
+## Predhodni kviz
 
 [Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/43)
 
@@ -51,11 +51,11 @@ Obstaja veliko različnih [tipov](https://developer.mozilla.org/docs/Web/HTML/El
 
 Atribut `name` bo uporabljen kot ime lastnosti, ko bodo podatki obrazca poslani. Atribut `id` pa se uporablja za povezavo `<label>` z obrazcem.
 
-> Oglejte si celoten seznam [tipov `<input>`](https://developer.mozilla.org/docs/Web/HTML/Element/input) in [drugih kontrolnikov obrazca](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls), da dobite predstavo o vseh UI elementih, ki jih lahko uporabite pri gradnji uporabniškega vmesnika.
+> Oglejte si celoten seznam [tipov `<input>`](https://developer.mozilla.org/docs/Web/HTML/Element/input) in [drugih kontrolnikov obrazca](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls), da dobite predstavo o vseh vgrajenih UI elementih, ki jih lahko uporabite pri gradnji svojega vmesnika.
 
-✅ Upoštevajte, da je `<input>` [prazni element](https://developer.mozilla.org/docs/Glossary/Empty_element), ki mu *ne* smete dodati ustrezne zapiralne oznake. Lahko pa uporabite samozapiralno oznako `<input/>`, vendar to ni obvezno.
+✅ Upoštevajte, da je `<input>` [prazni element](https://developer.mozilla.org/docs/Glossary/Empty_element), pri katerem *ne* smete dodati ustrezne zapiralne oznake. Lahko pa uporabite samozapiralno oznako `<input/>`, vendar to ni obvezno.
 
-Element `<button>` znotraj obrazca je nekoliko poseben. Če ne določite atributa `type`, bo samodejno poslal podatke obrazca strežniku, ko ga pritisnete. Tukaj so možne vrednosti atributa `type`:
+Element `<button>` znotraj obrazca je nekoliko poseben. Če ne določite atributa `type`, bo samodejno poslal podatke obrazca na strežnik, ko ga pritisnete. Tukaj so možne vrednosti atributa `type`:
 
 - `submit`: Privzeto znotraj `<form>`, gumb sproži dejanje pošiljanja obrazca.
 - `reset`: Gumb ponastavi vse kontrolnike obrazca na njihove začetne vrednosti.
@@ -81,12 +81,12 @@ Začnimo z dodajanjem obrazca v predlogo `login`. Potrebovali bomo polje za *upo
 
 Če si podrobneje ogledate, lahko opazite, da smo tukaj dodali tudi element `<label>`. Elementi `<label>` se uporabljajo za dodajanje imena UI kontrolnikom, kot je naše polje za uporabniško ime. Oznake so pomembne za berljivost obrazcev, poleg tega pa prinašajo dodatne koristi:
 
-- Povezava oznake z kontrolnikom obrazca pomaga uporabnikom, ki uporabljajo pripomočke za dostopnost (npr. bralnik zaslona), da razumejo, katere podatke morajo vnesti.
+- Z asociacijo oznake z obrazcem pomagajo uporabnikom, ki uporabljajo pripomočke za dostop (npr. bralnik zaslona), da razumejo, katere podatke morajo vnesti.
 - Klik na oznako neposredno postavi fokus na povezano polje, kar olajša dostop na napravah z zaslonom na dotik.
 
 > [Dostopnost](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) na spletu je zelo pomembna tema, ki je pogosto spregledana. Zahvaljujoč [semantičnim HTML elementom](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) ni težko ustvariti dostopne vsebine, če jih pravilno uporabljate. Več o dostopnosti lahko preberete [tukaj](https://developer.mozilla.org/docs/Web/Accessibility), da se izognete pogostim napakam in postanete odgovoren razvijalec.
 
-Zdaj bomo dodali drugi obrazec za registracijo, takoj pod prejšnjim:
+Sedaj bomo dodali drugi obrazec za registracijo, tik pod prejšnjim:
 
 ```html
 <hr/>
@@ -109,21 +109,21 @@ Opazite tudi, da ima polje za `balance` tip `number`. Ali izgleda drugače kot o
 
 ✅ Ali lahko obrazce uporabljate in se po njih premikate samo s tipkovnico? Kako bi to storili?
 
-## Pošiljanje podatkov strežniku
+## Pošiljanje podatkov na strežnik
 
-Zdaj, ko imamo funkcionalni UI, je naslednji korak pošiljanje podatkov strežniku. Naredimo hiter test z našo trenutno kodo: kaj se zgodi, če kliknete na gumb *Prijava* ali *Registracija*?
+Sedaj, ko imamo funkcionalni UI, je naslednji korak pošiljanje podatkov na strežnik. Naredimo hiter test z našo trenutno kodo: kaj se zgodi, če kliknete na gumb *Prijava* ali *Registracija*?
 
 Ste opazili spremembo v URL-ju vašega brskalnika?
 
 ![Posnetek zaslona spremembe URL-ja brskalnika po kliku na gumb Registracija](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.sl.png)
 
-Privzeto dejanje za `<form>` je pošiljanje obrazca na trenutni URL strežnika z uporabo [GET metode](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), pri čemer se podatki obrazca dodajo neposredno v URL. Ta metoda ima nekaj pomanjkljivosti:
+Privzeto dejanje za `<form>` je pošiljanje obrazca na trenutni URL strežnika z uporabo [GET metode](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), pri čemer se podatki obrazca neposredno dodajo URL-ju. Ta metoda ima nekaj pomanjkljivosti:
 
 - Poslani podatki so zelo omejeni po velikosti (približno 2000 znakov)
 - Podatki so neposredno vidni v URL-ju (ni idealno za gesla)
 - Ne deluje z nalaganjem datotek
 
-Zato lahko spremenite metodo na [POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5), ki pošlje podatke obrazca strežniku v telo HTTP zahteve, brez prejšnjih omejitev.
+Zato lahko spremenite metodo na [POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5), ki pošlje podatke obrazca na strežnik v telesu HTTP zahteve, brez prejšnjih omejitev.
 
 > Čeprav je POST najpogosteje uporabljena metoda za pošiljanje podatkov, je [v nekaterih specifičnih scenarijih](https://www.w3.org/2001/tag/doc/whenToUseGet.html) bolje uporabiti metodo GET, na primer pri implementaciji iskalnega polja.
 
@@ -135,9 +135,9 @@ Dodajte lastnosti `action` in `method` obrazcu za registracijo:
 <form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
 ```
 
-Zdaj poskusite registrirati nov račun z vašim imenom. Po kliku na gumb *Registracija* bi morali videti nekaj takega:
+Sedaj poskusite registrirati nov račun z vašim imenom. Po kliku na gumb *Registracija* bi morali videti nekaj takega:
 
-![Okno brskalnika na naslovu localhost:5000/api/accounts, ki prikazuje JSON niz z uporabniškimi podatki](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.sl.png)
+![Okno brskalnika na naslovu localhost:5000/api/accounts, ki prikazuje JSON niz s podatki uporabnika](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.sl.png)
 
 Če gre vse po načrtih, bi moral strežnik odgovoriti na vašo zahtevo z [JSON](https://www.json.org/json-en.html) odzivom, ki vsebuje podatke o ustvarjenem računu.
 
@@ -147,11 +147,11 @@ Zdaj poskusite registrirati nov račun z vašim imenom. Po kliku na gumb *Regist
 
 Kot ste verjetno opazili, je pri pristopu, ki smo ga pravkar uporabili, majhna težava: ob pošiljanju obrazca zapustimo našo aplikacijo in brskalnik preusmeri na URL strežnika. Poskušamo se izogniti vsem osvežitvam strani v naši spletni aplikaciji, saj izdelujemo [enostransko aplikacijo (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
 
-Za pošiljanje podatkov obrazca strežniku brez prisilnega osveževanja strani moramo uporabiti JavaScript kodo. Namesto da v lastnost `action` elementa `<form>` vnesete URL, lahko uporabite katero koli JavaScript kodo, ki ji predhodite z nizom `javascript:`, da izvedete prilagojeno dejanje. Uporaba tega pomeni tudi, da boste morali sami implementirati nekatere naloge, ki jih je prej samodejno opravil brskalnik:
+Da pošljemo podatke obrazca na strežnik brez prisilnega osveževanja strani, moramo uporabiti JavaScript kodo. Namesto da v lastnost `action` elementa `<form>` vnesemo URL, lahko uporabimo katerokoli JavaScript kodo, ki ji predhodimo z nizom `javascript:`, da izvedemo prilagojeno dejanje. Uporaba tega pomeni, da boste morali sami implementirati nekatere naloge, ki jih je prej samodejno opravil brskalnik:
 
 - Pridobitev podatkov obrazca
 - Pretvorba in kodiranje podatkov obrazca v ustrezen format
-- Ustvarjanje HTTP zahteve in pošiljanje strežniku
+- Ustvarjanje HTTP zahteve in pošiljanje na strežnik
 
 ### Naloga
 
@@ -172,9 +172,9 @@ function register() {
 }
 ```
 
-Tukaj pridobimo element obrazca z uporabo `getElementById()` in uporabimo pripomoček [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) za pridobitev vrednosti iz kontrolnikov obrazca kot niz ključ/vrednost. Nato podatke pretvorimo v običajen objekt z [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) in jih na koncu serializiramo v [JSON](https://www.json.org/json-en.html), format, ki se pogosto uporablja za izmenjavo podatkov na spletu.
+Tukaj pridobimo element obrazca z uporabo `getElementById()` in uporabimo pripomoček [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) za pridobitev vrednosti iz kontrolnikov obrazca kot nabor ključ/vrednost parov. Nato podatke pretvorimo v običajen objekt z uporabo [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) in jih na koncu serializiramo v [JSON](https://www.json.org/json-en.html), format, ki se pogosto uporablja za izmenjavo podatkov na spletu.
 
-Podatki so zdaj pripravljeni za pošiljanje strežniku. Ustvarite novo funkcijo z imenom `createAccount`:
+Podatki so sedaj pripravljeni za pošiljanje na strežnik. Ustvarite novo funkcijo z imenom `createAccount`:
 
 ```js
 async function createAccount(account) {
@@ -191,7 +191,7 @@ async function createAccount(account) {
 }
 ```
 
-Kaj počne ta funkcija? Najprej opazite ključni besedi `async`. To pomeni, da funkcija vsebuje kodo, ki se bo izvajala [**asinhrono**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Ko jo uporabimo skupaj s ključnimi besedami `await`, omogoča čakanje na izvajanje asinhrone kode - na primer čakanje na odgovor strežnika - preden nadaljujemo.
+Kaj počne ta funkcija? Najprej opazite ključni besedi `async` tukaj. To pomeni, da funkcija vsebuje kodo, ki se bo izvajala [**asinhrono**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Ko jo uporabimo skupaj s ključnimi besedami `await`, omogoča čakanje na izvajanje asinhrone kode - na primer čakanje na odgovor strežnika - preden nadaljujemo.
 
 Tukaj je kratek video o uporabi `async/await`:
 
@@ -199,14 +199,14 @@ Tukaj je kratek video o uporabi `async/await`:
 
 > 🎥 Kliknite zgornjo sliko za video o async/await.
 
-Uporabimo API `fetch()` za pošiljanje JSON podatkov strežniku. Ta metoda sprejme 2 parametra:
+Uporabimo API `fetch()` za pošiljanje JSON podatkov na strežnik. Ta metoda sprejme 2 parametra:
 
 - URL strežnika, zato tukaj ponovno vnesemo `//localhost:5000/api/accounts`.
-- Nastavitve zahteve. Tukaj nastavimo metodo na `POST` in zagotovimo `body` zahteve. Ker pošiljamo JSON podatke strežniku, moramo nastaviti tudi glavo `Content-Type` na `application/json`, da strežnik ve, kako interpretirati vsebino.
+- Nastavitve zahteve. Tukaj nastavimo metodo na `POST` in zagotovimo `body` za zahtevo. Ker pošiljamo JSON podatke na strežnik, moramo nastaviti tudi glavo `Content-Type` na `application/json`, da strežnik ve, kako interpretirati vsebino.
 
-Ker bo strežnik odgovoril na zahtevo z JSON, lahko uporabimo `await response.json()` za razčlenitev JSON vsebine in vrnitev rezultirajočega objekta. Upoštevajte, da je ta metoda asinhrona, zato tukaj uporabimo ključni besedi `await`, da zagotovimo, da se morebitne napake med razčlenitvijo ujamejo.
+Ker bo strežnik odgovoril na zahtevo z JSON, lahko uporabimo `await response.json()` za razčlenitev JSON vsebine in vrnitev rezultirajočega objekta. Upoštevajte, da je ta metoda asinhrona, zato tukaj uporabimo ključni besedi `await`, da zagotovimo, da so morebitne napake med razčlenitvijo tudi zajete.
 
-Zdaj dodajte nekaj kode funkciji `register`, da pokliče `createAccount()`:
+Sedaj dodajte nekaj kode v funkcijo `register`, da pokličete `createAccount()`:
 
 ```js
 const result = await createAccount(jsonData);
@@ -239,13 +239,13 @@ To je bilo nekoliko daljše, vendar smo prišli do cilja! Če odprete [orodja za
 
 ![Posnetek zaslona, ki prikazuje sporočilo v konzoli brskalnika](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.sl.png)
 
-✅ Ali menite, da so podatki varno poslani strežniku? Kaj če bi nekdo lahko prestregel zahtevo? Več o [HTTPS](https://en.wikipedia.org/wiki/HTTPS) lahko preberete, da se naučite več o varni komunikaciji podatkov.
+✅ Ali menite, da so podatki poslani na strežnik varno? Kaj če bi nekdo prestregel zahtevo? Več o [HTTPS](https://en.wikipedia.org/wiki/HTTPS) lahko preberete, da se naučite več o varni komunikaciji podatkov.
 
 ## Validacija podatkov
 
 Če poskusite registrirati nov račun brez vnosa uporabniškega imena, lahko vidite, da strežnik vrne napako s statusno kodo [400 (Slaba zahteva)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
-Pred pošiljanjem podatkov strežniku je dobra praksa, da [validirate podatke obrazca](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) vnaprej, kadar je to mogoče, da zagotovite, da pošljete veljavno zahtevo. HTML5 kontrolniki obrazcev omogočajo vgrajeno validacijo z uporabo različnih atributov:
+Pred pošiljanjem podatkov na strežnik je dobra praksa, da [validirate podatke obrazca](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) vnaprej, kadar je to mogoče, da zagotovite, da pošiljate veljavno zahtevo. HTML5 kontrolniki obrazcev omogočajo vgrajeno validacijo z uporabo različnih atributov:
 
 - `required`: polje mora biti izpolnjeno, sicer obrazca ni mogoče poslati.
 - `minlength` in `maxlength`: določata minimalno in maksimalno število znakov v besedilnih poljih.
@@ -255,7 +255,7 @@ Pred pošiljanjem podatkov strežniku je dobra praksa, da [validirate podatke ob
 Namig: videz kontrolnikov obrazca lahko prilagodite glede na to, ali so veljavni ali ne, z uporabo CSS psevdo-razredov `:valid` in `:invalid`.
 ### Naloga
 
-Za ustvarjanje veljavnega novega računa sta obvezni polji uporabniško ime in valuta, ostala polja so neobvezna. Posodobite HTML obrazca tako, da uporabite atribut `required` in besedilo v oznaki polja, da:
+Za ustvarjanje veljavnega novega računa sta potrebni 2 obvezni polji: uporabniško ime in valuta, ostala polja so neobvezna. Posodobite HTML obrazca z uporabo atributa `required` in besedila v oznaki polja, da:
 
 ```html
 <label for="user">Username (required)</label>
@@ -265,7 +265,7 @@ Za ustvarjanje veljavnega novega računa sta obvezni polji uporabniško ime in v
 <input id="currency" name="currency" type="text" value="$" required>
 ```
 
-Čeprav ta posebna implementacija strežnika ne uveljavlja specifičnih omejitev glede največje dolžine polj, je vedno dobra praksa določiti razumne omejitve za vnos besedila uporabnika.
+Čeprav ta specifična implementacija strežnika ne uveljavlja posebnih omejitev glede največje dolžine polj, je vedno dobra praksa določiti razumne omejitve za vnos besedila uporabnika.
 
 Dodajte atribut `maxlength` v besedilna polja:
 
@@ -281,7 +281,7 @@ Zdaj, če pritisnete gumb *Registriraj* in polje ne upošteva pravila validacije
 
 ![Posnetek zaslona, ki prikazuje napako validacije pri poskusu oddaje obrazca](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.sl.png)
 
-Validacija, ki se izvede *preden* se podatki pošljejo na strežnik, se imenuje **validacija na strani odjemalca**. Vendar pa ni vedno mogoče izvesti vseh preverjanj brez pošiljanja podatkov. Na primer, tukaj ne moremo preveriti, ali račun z istim uporabniškim imenom že obstaja, ne da bi poslali zahtevo strežniku. Dodatna validacija, ki se izvede na strežniku, se imenuje **validacija na strani strežnika**.
+Validacija, ki se izvede *preden* se podatki pošljejo na strežnik, se imenuje **validacija na strani odjemalca**. Vendar pa ni vedno mogoče izvesti vseh preverjanj brez pošiljanja podatkov. Na primer, tukaj ne moremo preveriti, ali račun z istim uporabniškim imenom že obstaja, ne da bi poslali zahtevo na strežnik. Dodatna validacija, ki se izvede na strežniku, se imenuje **validacija na strani strežnika**.
 
 Običajno je treba implementirati obe vrsti validacije, in čeprav validacija na strani odjemalca izboljša uporabniško izkušnjo z zagotavljanjem takojšnjih povratnih informacij uporabniku, je validacija na strani strežnika ključna za zagotavljanje, da so podatki uporabnika, s katerimi delate, zanesljivi in varni.
 
@@ -301,7 +301,7 @@ Tukaj je primer, kako lahko končna stran za prijavo izgleda po nekaj oblikovanj
 
 ## Pregled in samostojno učenje
 
-Razvijalci so postali zelo ustvarjalni pri oblikovanju obrazcev, še posebej pri strategijah validacije. Spoznajte različne tokove obrazcev z raziskovanjem [CodePen](https://codepen.com); ali lahko najdete zanimive in navdihujoče obrazce?
+Razvijalci so postali zelo ustvarjalni pri svojih prizadevanjih za gradnjo obrazcev, še posebej glede strategij validacije. Spoznajte različne tokove obrazcev z raziskovanjem [CodePen](https://codepen.com); ali lahko najdete zanimive in navdihujoče obrazce?
 
 ## Naloga
 
@@ -310,4 +310,4 @@ Razvijalci so postali zelo ustvarjalni pri oblikovanju obrazcev, še posebej pri
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.

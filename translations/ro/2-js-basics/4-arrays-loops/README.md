@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-28T08:08:41+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T11:35:00+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "ro"
 }
 -->
 # Bazele JavaScript: Tablouri și Bucle
 
-![Bazele JavaScript - Tablouri](../../../../translated_images/webdev101-js-arrays.439d7528b8a294558d0e4302e448d193f8ad7495cc407539cc81f1afe904b470.ro.png)
+![Bazele JavaScript - Tablouri](../../../../translated_images/webdev101-js-arrays.439d7528b8a294558d0e4302e448d193f8ad7495cc407539cc81f1afe904b470.ro.png)  
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Chestionar înainte de curs
-[Chestionar înainte de curs](https://ff-quizzes.netlify.app/web/quiz/13)
+## Chestionar Pre-Lecție  
+[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/13)
 
 Această lecție acoperă elementele de bază ale JavaScript, limbajul care oferă interactivitate pe web. În această lecție, vei învăța despre tablouri și bucle, care sunt utilizate pentru a manipula datele.
 
@@ -27,7 +27,7 @@ Această lecție acoperă elementele de bază ale JavaScript, limbajul care ofer
 
 ## Tablouri
 
-Lucrul cu date este o sarcină comună în orice limbaj, iar aceasta devine mult mai ușoară atunci când datele sunt organizate într-un format structurat, cum ar fi tablourile. Cu tablourile, datele sunt stocate într-o structură similară unei liste. Un mare avantaj al tablourilor este că poți stoca diferite tipuri de date într-un singur tablou.
+Lucrul cu date este o sarcină comună în orice limbaj, iar aceasta devine mult mai ușoară atunci când datele sunt organizate într-un format structural, cum ar fi tablourile. Cu tablourile, datele sunt stocate într-o structură similară unei liste. Un mare avantaj al tablourilor este că poți stoca diferite tipuri de date într-un singur tablou.
 
 ✅ Tablourile sunt peste tot în jurul nostru! Poți să te gândești la un exemplu din viața reală al unui tablou, cum ar fi un ansamblu de panouri solare?
 
@@ -43,9 +43,9 @@ Acesta este un tablou gol, dar tablourile pot fi declarate deja populate cu date
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 ```
 
-Valorile din tablou primesc o valoare unică numită **index**, un număr întreg care este atribuit pe baza distanței față de începutul tabloului. În exemplul de mai sus, valoarea de tip șir "Chocolate" are indexul 0, iar indexul pentru "Rocky Road" este 4. Folosește indexul împreună cu parantezele pătrate pentru a prelua, schimba sau insera valori în tablou.
+Valorile din tablou primesc o valoare unică numită **index**, un număr întreg care este atribuit pe baza distanței sale față de începutul tabloului. În exemplul de mai sus, valoarea de tip șir "Chocolate" are indexul 0, iar indexul pentru "Rocky Road" este 4. Folosește indexul împreună cu paranteze pătrate pentru a prelua, schimba sau insera valori în tablou.
 
-✅ Te surprinde faptul că indexurile încep de la zero? În unele limbaje de programare, indexurile încep de la 1. Există o istorie interesantă în spatele acestui lucru, pe care o poți [citi pe Wikipedia](https://en.wikipedia.org/wiki/Zero-based_numbering).
+✅ Te surprinde faptul că tablourile încep de la indexul zero? În unele limbaje de programare, indexurile încep de la 1. Există o istorie interesantă în spatele acestui lucru, pe care o poți [citi pe Wikipedia](https://en.wikipedia.org/wiki/Zero-based_numbering).
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
@@ -58,7 +58,7 @@ Poți folosi indexul pentru a schimba o valoare, astfel:
 iceCreamFlavors[4] = "Butter Pecan"; //Changed "Rocky Road" to "Butter Pecan"
 ```
 
-Și poți insera o valoare nouă la un anumit index astfel:
+Și poți insera o valoare nouă la un index dat astfel:
 
 ```javascript
 iceCreamFlavors[5] = "Cookie Dough"; //Added "Cookie Dough"
@@ -77,15 +77,15 @@ iceCreamFlavors.length; //5
 
 ## Bucle
 
-Buclele ne permit să efectuăm sarcini repetitive sau **iterative** și pot economisi mult timp și cod. Fiecare iterație poate varia în ceea ce privește variabilele, valorile și condițiile. Există diferite tipuri de bucle în JavaScript, iar acestea au mici diferențe, dar în esență fac același lucru: parcurg datele.
+Buclele ne permit să efectuăm sarcini repetitive sau **iterative** și pot economisi mult timp și cod. Fiecare iterație poate varia în variabilele, valorile și condițiile sale. Există diferite tipuri de bucle în JavaScript, și toate au mici diferențe, dar în esență fac același lucru: parcurg datele.
 
-### Bucle For
+### Bucla For
 
-Buclele `for` necesită 3 părți pentru a itera:
-- `counter` O variabilă care este de obicei inițializată cu un număr ce contorizează numărul de iterații
-- `condition` O expresie care folosește operatori de comparație pentru a opri bucla atunci când devine `false`
-- `iteration-expression` Se execută la sfârșitul fiecărei iterații, de obicei folosită pentru a schimba valoarea contorului
-  
+Bucla `for` necesită 3 părți pentru a itera:  
+- `counter` O variabilă care este de obicei inițializată cu un număr ce contorizează numărul de iterații  
+- `condition` O expresie care folosește operatori de comparație pentru a opri bucla atunci când devine `false`  
+- `iteration-expression` Se execută la sfârșitul fiecărei iterații, de obicei folosită pentru a schimba valoarea contorului  
+
 ```javascript
 // Counting up to 10
 for (let i = 0; i < 10; i++) {
@@ -95,7 +95,7 @@ for (let i = 0; i < 10; i++) {
 
 ✅ Rulează acest cod în consola browserului. Ce se întâmplă când faci mici modificări la contor, condiție sau expresia de iterație? Poți face să ruleze invers, creând un numărătoare inversă?
 
-### Bucle While
+### Bucla While
 
 Spre deosebire de sintaxa buclei `for`, buclele `while` necesită doar o condiție care va opri bucla atunci când condiția devine `false`. Condițiile din bucle se bazează de obicei pe alte valori, cum ar fi contoarele, și trebuie gestionate în timpul buclei. Valorile inițiale pentru contoare trebuie create în afara buclei, iar orice expresii pentru a îndeplini o condiție, inclusiv schimbarea contorului, trebuie menținute în interiorul buclei.
 
@@ -122,7 +122,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 } //Ends when all flavors are printed
 ```
 
-✅ Experimentează cu parcurgerea unui tablou propriu în consola browserului.
+✅ Experimentează parcurgând un tablou propriu în consola browserului.
 
 ---
 
@@ -130,12 +130,12 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 Există și alte moduri de a parcurge tablourile, în afară de buclele for și while. Există [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) și [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Rescrie bucla tabloului tău folosind una dintre aceste tehnici.
 
-## Chestionar după curs
-[Chestionar după curs](https://ff-quizzes.netlify.app/web/quiz/14)
+## Chestionar Post-Lecție  
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Recapitulare și Studiu Individual
 
-Tablourile în JavaScript au multe metode atașate, care sunt extrem de utile pentru manipularea datelor. [Citește despre aceste metode](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) și încearcă câteva dintre ele (cum ar fi push, pop, slice și splice) pe un tablou creat de tine.
+Tablourile în JavaScript au multe metode atașate, care sunt extrem de utile pentru manipularea datelor. [Citește despre aceste metode](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) și încearcă unele dintre ele (cum ar fi push, pop, slice și splice) pe un tablou creat de tine.
 
 ## Temă
 
@@ -144,4 +144,4 @@ Tablourile în JavaScript au multe metode atașate, care sunt extrem de utile pe
 ---
 
 **Declinarea responsabilității**:  
-Acest document a fost tradus utilizând serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

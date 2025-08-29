@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-28T08:13:38+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T11:35:52+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "ro"
 }
@@ -12,15 +12,15 @@ CO_OP_TRANSLATOR_METADATA:
 ![Introducere în CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.ro.png)
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Chestionar înainte de lecție
+## Test înainte de lecție
 
-[Chestionar înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/17)
+[Test înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Introducere
 
-CSS, sau Cascading Style Sheets, rezolvă o problemă importantă în dezvoltarea web: cum să faci ca site-ul tău să arate bine. Stilizarea aplicațiilor le face mai ușor de utilizat și mai plăcute vizual; de asemenea, poți folosi CSS pentru a crea Design Web Responsiv (RWD) - permițând aplicațiilor tale să arate bine indiferent de dimensiunea ecranului pe care sunt afișate. CSS nu este doar despre aspect; specificațiile sale includ animații și transformări care pot permite interacțiuni sofisticate pentru aplicațiile tale. Grupul de lucru CSS ajută la menținerea specificațiilor CSS actuale; poți urmări activitatea lor pe [site-ul World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
+CSS, sau Cascading Style Sheets, rezolvă o problemă importantă în dezvoltarea web: cum să faci ca site-ul tău să arate bine. Stilizarea aplicațiilor le face mai ușor de utilizat și mai plăcute vizual; de asemenea, poți folosi CSS pentru a crea Design Web Responsiv (RWD) - permițând aplicațiilor tale să arate bine indiferent de dimensiunea ecranului pe care sunt afișate. CSS nu este doar despre aspect; specificațiile sale includ animații și transformări care pot permite interacțiuni sofisticate pentru aplicațiile tale. Grupul de Lucru CSS ajută la menținerea specificațiilor CSS actuale; poți urmări activitatea lor pe [site-ul World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
 
-> Notă: CSS este un limbaj care evoluează, la fel ca tot ce ține de web, și nu toate browserele suportă cele mai noi părți ale specificației. Verifică întotdeauna implementările consultând [CanIUse.com](https://caniuse.com).
+> Notă, CSS este o limbă care evoluează, la fel ca tot ce ține de web, și nu toate browserele suportă cele mai noi părți ale specificației. Verifică întotdeauna implementările consultând [CanIUse.com](https://caniuse.com).
 
 În această lecție, vom adăuga stiluri la terrarium-ul nostru online și vom învăța mai multe despre câteva concepte CSS: cascada, moștenirea, utilizarea selectorilor, poziționarea și utilizarea CSS pentru a construi layout-uri. În proces, vom crea layout-ul terrarium-ului și vom construi efectiv terrarium-ul.
 
@@ -45,7 +45,7 @@ Ar trebui să ai HTML-ul pentru terrarium-ul tău construit și pregătit pentru
 
 ## Cascada
 
-Cascading Style Sheets încorporează ideea că stilurile "cascadă", astfel încât aplicarea unui stil este ghidată de prioritatea sa. Stilurile setate de un autor de site web au prioritate față de cele setate de un browser. Stilurile setate "inline" au prioritate față de cele setate într-un fișier de stil extern.
+Cascading Style Sheets încorporează ideea că stilurile 'cascadă', astfel încât aplicarea unui stil este ghidată de prioritatea sa. Stilurile setate de autorul unui site web au prioritate față de cele setate de un browser. Stilurile setate 'inline' au prioritate față de cele setate într-un fișier de stil extern.
 
 ### Sarcină
 
@@ -63,7 +63,7 @@ h1 {
 }
 ```
 
-✅ Ce culoare se afișează în aplicația ta web? De ce? Poți găsi o modalitate de a suprascrie stilurile? Când ai vrea să faci acest lucru sau de ce nu?
+✅ Ce culoare se afișează în aplicația ta web? De ce? Poți găsi o modalitate de a suprascrie stilurile? Când ai vrea să faci asta sau de ce nu?
 
 ---
 
@@ -81,7 +81,7 @@ body {
 }
 ```
 
-Deschide consola browserului la tab-ul 'Elements' și observă fontul H1. Acesta moștenește fontul de la corp, așa cum este indicat în browser:
+Deschide consola browserului la tab-ul 'Elements' și observă fontul H1. Acesta moștenește fontul de la body, așa cum este indicat în browser:
 
 ![font moștenit](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.ro.png)
 
@@ -106,11 +106,11 @@ h1 {
 }
 ```
 
-Acest mod de a stiliza un tag îți oferă control asupra elementelor unice, dar ai nevoie să controlezi stilurile multor plante din terrarium-ul tău. Pentru a face acest lucru, trebuie să folosești selectorii CSS.
+Acest mod de a stiliza un tag îți oferă control asupra elementelor unice, dar ai nevoie să controlezi stilurile multor plante din terrarium-ul tău. Pentru a face asta, trebuie să folosești selectorii CSS.
 
 ### Id-uri
 
-Adaugă un stil pentru a aranja containerele din stânga și dreapta. Deoarece există doar un container stânga și doar un container dreapta, acestea au id-uri în markup. Pentru a le stiliza, folosește `#`:
+Adaugă un stil pentru a aranja containerele din stânga și dreapta. Deoarece există doar un container stânga și doar un container dreapta, acestea au primit id-uri în markup. Pentru a le stiliza, folosește `#`:
 
 ```CSS
 #left-container {
@@ -134,7 +134,7 @@ Adaugă un stil pentru a aranja containerele din stânga și dreapta. Deoarece e
 }
 ```
 
-Aici, ai plasat aceste containere cu poziționare absolută la extremitățile stânga și dreapta ale ecranului și ai folosit procente pentru lățimea lor, astfel încât să se poată adapta la ecrane mici de mobil.
+Aici, ai plasat aceste containere cu poziționare absolută la extremitățile stânga și dreapta ale ecranului și ai folosit procente pentru lățimea lor astfel încât să se poată adapta la ecrane mici de mobil.
 
 ✅ Acest cod este destul de repetitiv, deci nu este "DRY" (Don't Repeat Yourself); poți găsi o modalitate mai bună de a stiliza aceste id-uri, poate cu un id și o clasă? Ar trebui să schimbi markup-ul și să refactorizezi CSS-ul:
 
@@ -144,7 +144,7 @@ Aici, ai plasat aceste containere cu poziționare absolută la extremitățile s
 
 ### Clase
 
-În exemplul de mai sus, ai stilizat două elemente unice pe ecran. Dacă vrei ca stilurile să se aplice la mai multe elemente pe ecran, poți folosi clase CSS. Fă acest lucru pentru a aranja plantele în containerele din stânga și dreapta.
+În exemplul de mai sus, ai stilizat două elemente unice pe ecran. Dacă vrei ca stilurile să se aplice la mai multe elemente pe ecran, poți folosi clase CSS. Fă asta pentru a aranja plantele în containerele din stânga și dreapta.
 
 Observă că fiecare plantă din markup-ul HTML are o combinație de id-uri și clase. Id-urile aici sunt folosite de JavaScript-ul pe care îl vei adăuga mai târziu pentru a manipula plasarea plantelor în terrarium. Clasele, însă, oferă tuturor plantelor un stil dat.
 
@@ -173,15 +173,15 @@ Adaugă următorul cod în fișierul tău `style.css`:
 
 Notabil în acest fragment este amestecul de poziționare relativă și absolută, pe care îl vom acoperi în secțiunea următoare. Uită-te la modul în care înălțimile sunt gestionate prin procente:
 
-Ai setat înălțimea suportului pentru plante la 13%, un număr bun pentru a te asigura că toate plantele sunt afișate în fiecare container vertical fără a fi nevoie de derulare.
+Ai setat înălțimea suportului pentru plante la 13%, un număr bun pentru a te asigura că toate plantele sunt afișate în fiecare container vertical fără a fi nevoie de scroll.
 
-Ai setat suportul pentru plante să se deplaseze spre stânga pentru a permite plantelor să fie mai centrate în containerul lor. Imaginile au o cantitate mare de fundal transparent pentru a le face mai ușor de mutat, așa că trebuie să fie împinse spre stânga pentru a se potrivi mai bine pe ecran.
+Ai setat suportul pentru plante să se deplaseze spre stânga pentru a permite plantelor să fie mai centrate în containerul lor. Imaginile au o cantitate mare de fundal transparent pentru a le face mai ușor de mutat, așa că trebuie împinse spre stânga pentru a se potrivi mai bine pe ecran.
 
-Apoi, planta în sine are o lățime maximă de 150%. Acest lucru îi permite să se micșoreze pe măsură ce browserul se micșorează. Încearcă să redimensionezi browserul; plantele rămân în containerele lor, dar se micșorează pentru a se potrivi.
+Apoi, planta în sine a primit o lățime maximă de 150%. Acest lucru îi permite să se micșoreze pe măsură ce browserul se micșorează. Încearcă să redimensionezi browserul; plantele rămân în containerele lor, dar se micșorează pentru a se potrivi.
 
 De asemenea, este notabilă utilizarea z-index, care controlează altitudinea relativă a unui element (astfel încât plantele să stea deasupra containerului și să pară că sunt în interiorul terrarium-ului).
 
-✅ De ce ai nevoie de un selector CSS pentru suportul plantei și unul pentru plantă?
+✅ De ce ai nevoie atât de un selector CSS pentru suportul plantei, cât și pentru plantă?
 
 ## Poziționarea CSS
 
@@ -189,7 +189,7 @@ Amestecarea proprietăților de poziționare (există poziții statice, relative
 
 Elementele poziționate absolut sunt poziționate relativ față de cei mai apropiați strămoși poziționați, iar dacă nu există niciunul, sunt poziționate conform corpului documentului.
 
-Elementele poziționate relativ sunt poziționate pe baza direcțiilor CSS pentru a-și ajusta plasarea față de poziția lor inițială.
+Elementele poziționate relativ sunt poziționate pe baza direcțiilor CSS pentru a ajusta plasarea lor față de poziția inițială.
 
 În exemplul nostru, `plant-holder` este un element poziționat relativ care este poziționat în interiorul unui container poziționat absolut. Comportamentul rezultat este că barele laterale sunt fixate la stânga și dreapta, iar `plant-holder` este imbricat, ajustându-se în interiorul barelor laterale, oferind spațiu pentru ca plantele să fie plasate într-un rând vertical.
 
@@ -199,7 +199,7 @@ Elementele poziționate relativ sunt poziționate pe baza direcțiilor CSS pentr
 
 ## Layout-uri CSS
 
-Acum vei folosi ceea ce ai învățat pentru a construi terrarium-ul, totul folosind CSS!
+Acum vei folosi ceea ce ai învățat pentru a construi terrarium-ul propriu-zis, totul folosind CSS!
 
 Mai întâi, stilizează copiii div-ului `.terrarium` ca un dreptunghi rotunjit folosind CSS:
 
@@ -250,7 +250,7 @@ Mai întâi, stilizează copiii div-ului `.terrarium` ca un dreptunghi rotunjit 
 }
 ```
 
-Observă utilizarea procentelor aici. Dacă micșorezi browserul, poți vedea cum borcanul se adaptează. De asemenea, observă procentele pentru lățimile și înălțimile elementelor borcanului și cum fiecare element este poziționat absolut în centru, fixat la partea de jos a viewport-ului.
+Observă utilizarea procentelor aici. Dacă micșorezi browserul, poți vedea cum borcanul se adaptează. De asemenea, observă procentele pentru lățimile și înălțimile elementelor borcanului și modul în care fiecare element este poziționat absolut în centru, fixat la partea de jos a viewport-ului.
 
 Folosim și `rem` pentru border-radius, o lungime relativă la font. Citește mai multe despre acest tip de măsurare relativă în [specificația CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
@@ -260,17 +260,17 @@ Folosim și `rem` pentru border-radius, o lungime relativă la font. Citește ma
 
 ## 🚀Provocare
 
-Adaugă o strălucire de tip "bulă" în zona din stânga jos a borcanului pentru a-l face să arate mai asemănător cu sticla. Vei stiliza `.jar-glossy-long` și `.jar-glossy-short` pentru a arăta ca o strălucire reflectată. Iată cum ar arăta:
+Adaugă o strălucire 'bubble' în zona din stânga jos a borcanului pentru a-l face să arate mai asemănător cu sticla. Vei stiliza `.jar-glossy-long` și `.jar-glossy-short` pentru a arăta ca o strălucire reflectată. Iată cum ar arăta:
 
 ![terrarium finalizat](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.ro.png)
 
-Pentru a finaliza chestionarul post-lecție, parcurge acest modul Learn: [Stilizează aplicația HTML cu CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+Pentru a finaliza testul de după lecție, parcurge acest modul Learn: [Stilizează aplicația ta HTML cu CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
-## Chestionar post-lecție
+## Test după lecție
 
-[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/18)
+[Test după lecție](https://ff-quizzes.netlify.app/web/quiz/18)
 
-## Recapitulare și studiu individual
+## Recapitulare și Studiu Individual
 
 CSS pare înșelător de simplu, dar există multe provocări atunci când încerci să stilizezi o aplicație perfect pentru toate browserele și toate dimensiunile ecranului. CSS-Grid și Flexbox sunt instrumente care au fost dezvoltate pentru a face munca puțin mai structurată și mai fiabilă. Învață despre aceste instrumente jucând [Flexbox Froggy](https://flexboxfroggy.com/) și [Grid Garden](https://codepip.com/games/grid-garden/).
 

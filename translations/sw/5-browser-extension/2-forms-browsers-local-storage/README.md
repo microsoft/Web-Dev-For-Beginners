@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e10f168beac4e7b05e30e0eb5c92bf11",
-  "translation_date": "2025-08-28T03:49:31+00:00",
+  "original_hash": "a7587943d38d095de8613e1b508609f5",
+  "translation_date": "2025-08-29T10:03:59+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "sw"
 }
 -->
-# Mradi wa Kiongezi cha Kivinjari Sehemu ya 2: Kuita API, kutumia Hifadhi ya Ndani
+# Mradi wa Kiendelezi cha Kivinjari Sehemu ya 2: Kuita API, kutumia Hifadhi ya Ndani
 
 ## Jaribio Kabla ya Somo
 
@@ -15,15 +15,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Utangulizi
 
-Katika somo hili, utaita API kwa kuwasilisha fomu ya kiongezi chako cha kivinjari na kuonyesha matokeo kwenye kiongezi chako. Zaidi ya hayo, utajifunza jinsi ya kuhifadhi data kwenye hifadhi ya ndani ya kivinjari chako kwa matumizi ya baadaye.
+Katika somo hili, utaita API kwa kuwasilisha fomu ya kiendelezi cha kivinjari chako na kuonyesha matokeo ndani ya kiendelezi chako. Zaidi ya hayo, utajifunza jinsi ya kuhifadhi data katika hifadhi ya ndani ya kivinjari chako kwa marejeleo na matumizi ya baadaye.
 
-✅ Fuata sehemu zilizo na namba kwenye faili husika ili ujue wapi pa kuweka msimbo wako.
+✅ Fuata sehemu zilizoorodheshwa kwa namba katika faili husika ili kujua wapi pa kuweka msimbo wako.
 
-### Sanidi vipengele vya kudhibiti kwenye kiongezi:
+### Sanidi vipengele vya kudhibiti katika kiendelezi:
 
-Kufikia wakati huu, umeshajenga HTML ya fomu na `<div>` ya matokeo kwa ajili ya kiongezi chako cha kivinjari. Kuanzia sasa, utahitaji kufanya kazi kwenye faili `/src/index.js` na kujenga kiongezi chako hatua kwa hatua. Rejelea [somo lililopita](../1-about-browsers/README.md) kuhusu jinsi ya kusanidi mradi wako na mchakato wa ujenzi.
+Hadi kufikia sasa, umeshajenga HTML ya fomu na `<div>` ya matokeo kwa kiendelezi chako cha kivinjari. Kuanzia sasa, utahitaji kufanya kazi katika faili ya `/src/index.js` na kujenga kiendelezi chako hatua kwa hatua. Rejelea [somo la awali](../1-about-browsers/README.md) kuhusu jinsi ya kusanidi mradi wako na mchakato wa ujenzi.
 
-Ukifanya kazi kwenye faili yako ya `index.js`, anza kwa kuunda baadhi ya vigezo vya `const` kushikilia thamani zinazohusiana na sehemu mbalimbali:
+Ukifanya kazi katika faili yako ya `index.js`, anza kwa kuunda baadhi ya `const` za kushikilia thamani zinazohusiana na sehemu mbalimbali:
 
 ```JavaScript
 // form fields
@@ -41,11 +41,11 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Sehemu hizi zote zinarejelewa kwa darasa lao la CSS, kama ulivyoweka kwenye HTML katika somo lililopita.
+Sehemu zote hizi zinarejelewa kwa darasa la css, kama ulivyoiweka katika HTML kwenye somo la awali.
 
-### Ongeza wasikilizaji
+### Ongeza wasikilizaji wa matukio
 
-Kisha, ongeza wasikilizaji wa matukio kwenye fomu na kitufe cha kufuta ambacho kinaseti upya fomu, ili kwamba mtumiaji akiwakilisha fomu au kubofya kitufe hicho cha kufuta, kitu fulani kitokee, na ongeza mwito wa kuanzisha programu mwishoni mwa faili:
+Kisha, ongeza wasikilizaji wa matukio kwenye fomu na kitufe cha kufuta ambacho kinaseti upya fomu, ili kwamba mtumiaji akiwakilisha fomu au kubonyeza kitufe hicho cha kufuta, kitu fulani kitokee, na ongeza mwito wa kuanzisha programu mwishoni mwa faili:
 
 ```JavaScript
 form.addEventListener('submit', (e) => handleSubmit(e));
@@ -53,11 +53,11 @@ clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Angalia njia fupi inayotumika kusikiliza tukio la kuwasilisha au kubofya, na jinsi tukio linavyopitishwa kwa kazi ya `handleSubmit` au `reset`. Je, unaweza kuandika njia sawa ya njia fupi hii kwa muundo mrefu? Unapendelea ipi?
+✅ Angalia njia fupi inayotumika kusikiliza tukio la kuwasilisha au kubonyeza, na jinsi tukio linavyopitishwa kwa kazi ya `handleSubmit` au `reset`. Je, unaweza kuandika sawa na njia hii fupi kwa muundo mrefu? Unapendelea ipi?
 
-### Jenga kazi ya init() na kazi ya reset():
+### Jenga kazi ya `init()` na `reset()`:
 
-Sasa utaenda kujenga kazi inayowasha kiongezi, inayoitwa init():
+Sasa utaenda kujenga kazi inayozindua kiendelezi, ambayo inaitwa `init()`:
 
 ```JavaScript
 function init() {
@@ -93,34 +93,34 @@ function reset(e) {
 
 ```
 
-Katika kazi hii, kuna mantiki ya kuvutia. Ukiisoma, unaweza kuona nini kinatokea?
+Katika kazi hii, kuna mantiki ya kuvutia. Ukiisoma, unaweza kuona kinachotokea?
 
-- `const` mbili zimewekwa ili kuangalia kama mtumiaji ameweka APIKey na msimbo wa eneo kwenye hifadhi ya ndani.
+- `const` mbili zinatengenezwa ili kuangalia kama mtumiaji ameweka APIKey na msimbo wa eneo katika hifadhi ya ndani.
 - Ikiwa mojawapo ya hizo ni `null`, onyesha fomu kwa kubadilisha mtindo wake kuwa 'block'.
-- Ficha matokeo, kipakiaji, na `clearBtn` na weka maandishi yoyote ya kosa kuwa kamba tupu.
+- Ficha matokeo, kipakiaji, na `clearBtn` na weka maandishi ya kosa kuwa tupu.
 - Ikiwa kuna ufunguo na eneo, anza utaratibu wa:
-  - kuita API kupata data ya matumizi ya kaboni
-  - ficha eneo la matokeo
-  - ficha fomu
-  - onyesha kitufe cha kuweka upya
+  - kuita API ili kupata data ya matumizi ya kaboni.
+  - ficha eneo la matokeo.
+  - ficha fomu.
+  - onyesha kitufe cha kuweka upya.
 
-Kabla ya kuendelea, ni muhimu kujifunza kuhusu dhana muhimu inayopatikana kwenye vivinjari: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage ni njia muhimu ya kuhifadhi kamba kwenye kivinjari kama jozi ya `key-value`. Aina hii ya hifadhi ya wavuti inaweza kudhibitiwa na JavaScript ili kusimamia data kwenye kivinjari. LocalStorage haimaliziki muda wake, wakati SessionStorage, aina nyingine ya hifadhi ya wavuti, husafishwa kivinjari kinapofungwa. Aina mbalimbali za hifadhi zina faida na hasara katika matumizi yao.
+Kabla ya kuendelea, ni muhimu kujifunza kuhusu dhana muhimu sana inayopatikana katika vivinjari: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage ni njia muhimu ya kuhifadhi maandishi katika kivinjari kama jozi ya `key-value`. Aina hii ya hifadhi ya wavuti inaweza kudhibitiwa na JavaScript ili kusimamia data katika kivinjari. LocalStorage haimaliziki muda wake, wakati SessionStorage, aina nyingine ya hifadhi ya wavuti, inafutwa kivinjari kinapofungwa. Aina mbalimbali za hifadhi zina faida na hasara katika matumizi yao.
 
-> Kumbuka - kiongezi chako cha kivinjari kina hifadhi yake ya ndani; dirisha kuu la kivinjari ni mfano tofauti na linafanya kazi kando.
+> Kumbuka - kiendelezi chako cha kivinjari kina hifadhi yake ya ndani; dirisha kuu la kivinjari ni mfano tofauti na linafanya kazi kando.
 
-Unaweka APIKey yako kuwa na thamani ya kamba, kwa mfano, na unaweza kuona kwamba imewekwa kwenye Edge kwa "kukagua" ukurasa wa wavuti (unaweza kubofya kulia kivinjari ili kukagua) na kwenda kwenye kichupo cha Programu ili kuona hifadhi.
+Unaweka APIKey yako kuwa na thamani ya maandishi, kwa mfano, na unaweza kuona kuwa imewekwa kwenye Edge kwa "kukagua" ukurasa wa wavuti (unaweza kubonyeza kulia kivinjari kukagua) na kwenda kwenye kichupo cha Programu ili kuona hifadhi.
 
 ![Eneo la hifadhi ya ndani](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.sw.png)
 
-✅ Fikiria kuhusu hali ambapo usingependa kuhifadhi data fulani kwenye LocalStorage. Kwa ujumla, kuweka API Keys kwenye LocalStorage ni wazo mbaya! Unaweza kuona kwa nini? Katika kesi yetu, kwa kuwa programu yetu ni ya kujifunza tu na haitachapishwa kwenye duka la programu, tutatumia njia hii.
+✅ Fikiria hali ambapo usingependa kuhifadhi data fulani katika LocalStorage. Kwa ujumla, kuweka API Keys katika LocalStorage ni wazo mbaya! Unaweza kuona kwa nini? Katika kesi yetu, kwa kuwa programu yetu ni ya kujifunza tu na haitachapishwa kwenye duka la programu, tutatumia njia hii.
 
-Angalia kwamba unatumia Web API kudhibiti LocalStorage, ama kwa kutumia `getItem()`, `setItem()`, au `removeItem()`. Inasaidiwa sana kwenye vivinjari.
+Angalia kuwa unatumia Web API kudhibiti LocalStorage, ama kwa kutumia `getItem()`, `setItem()`, au `removeItem()`. Inasaidiwa sana katika vivinjari vyote.
 
-Kabla ya kujenga kazi ya `displayCarbonUsage()` inayoitwa kwenye `init()`, hebu tujenge utendaji wa kushughulikia uwasilishaji wa fomu ya awali.
+Kabla ya kujenga kazi ya `displayCarbonUsage()` ambayo inaitwa katika `init()`, hebu tujenge utendaji wa kushughulikia kuwasilisha fomu ya awali.
 
-### Shughulikia uwasilishaji wa fomu
+### Shughulikia kuwasilisha fomu
 
-Unda kazi inayoitwa `handleSubmit` inayokubali hoja ya tukio `(e)`. Zuia tukio lisiendelee (katika kesi hii, tunataka kuzuia kivinjari kisirejeshe upya) na uite kazi mpya, `setUpUser`, ukipitisha hoja `apiKey.value` na `region.value`. Kwa njia hii, unatumia thamani mbili zinazopatikana kupitia fomu ya awali wakati sehemu husika zimejazwa.
+Unda kazi inayoitwa `handleSubmit` inayokubali hoja ya tukio `(e)`. Zuia tukio kuenea (katika kesi hii, tunataka kuzuia kivinjari kisifanye upya) na uite kazi mpya, `setUpUser`, ukipitisha hoja `apiKey.value` na `region.value`. Kwa njia hii, unatumia thamani mbili zinazotolewa kupitia fomu ya awali wakati sehemu husika zimejazwa.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -129,7 +129,7 @@ function handleSubmit(e) {
 }
 ```
 
-✅ Kumbuka - HTML uliyoiweka kwenye somo lililopita ina sehemu mbili za kuingiza ambazo `values` zake zinakamatwa kupitia `const` ulizoweka juu ya faili, na zote ni `required` hivyo kivinjari kinazuia watumiaji kuingiza thamani tupu.
+✅ Kumbuka - HTML uliyoiweka katika somo la mwisho ina sehemu mbili za ingizo ambazo `values` zake zinakamatwa kupitia `const` ulizozitengeneza mwanzoni mwa faili, na zote ni `required` hivyo kivinjari kinazuia watumiaji kuingiza thamani tupu.
 
 ### Sanidi mtumiaji
 
@@ -147,23 +147,23 @@ function setUpUser(apiKey, regionName) {
 }
 ```
 
-Kazi hii inaweka ujumbe wa kupakia kuonyesha wakati API inaitwa. Kufikia hatua hii, umefika kwenye hatua ya kuunda kazi muhimu zaidi ya kiongezi hiki cha kivinjari!
+Kazi hii inaonyesha ujumbe wa kupakia ili kuonyesha wakati API inaitwa. Kufikia hatua hii, umefika kwenye uundaji wa kazi muhimu zaidi ya kiendelezi hiki cha kivinjari!
 
 ### Onyesha Matumizi ya Kaboni
 
 Hatimaye, ni wakati wa kuuliza API!
 
-Kabla ya kuendelea zaidi, tunapaswa kujadili API. API, au [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), ni kipengele muhimu katika zana ya msanidi wa wavuti. Zinatoa njia za kawaida kwa programu kuingiliana na kuwasiliana. Kwa mfano, ikiwa unajenga tovuti inayohitaji kuuliza hifadhidata, mtu anaweza kuwa ameunda API kwa ajili yako kutumia. Ingawa kuna aina nyingi za API, moja ya maarufu zaidi ni [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Kabla ya kuendelea zaidi, tunapaswa kujadili API. API, au [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), ni kipengele muhimu katika zana ya msanidi wa wavuti. Zinatoa njia za kawaida kwa programu kuingiliana na kuwasiliana. Kwa mfano, ikiwa unajenga tovuti inayohitaji kuuliza hifadhidata, mtu anaweza kuwa ameunda API kwa ajili yako kutumia. Ingawa kuna aina nyingi za API, moja ya maarufu ni [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
-✅ Neno 'REST' linamaanisha 'Representational State Transfer' na lina sifa ya kutumia URL zilizosanidiwa kwa njia mbalimbali kupata data. Fanya utafiti kidogo juu ya aina mbalimbali za API zinazopatikana kwa wasanidi. Ni muundo gani unakuvutia?
+✅ Neno 'REST' linamaanisha 'Representational State Transfer' na linahusisha kutumia URL zilizosanidiwa kwa njia mbalimbali ili kupata data. Fanya utafiti kidogo kuhusu aina mbalimbali za API zinazopatikana kwa wasanidi. Ni muundo gani unakuvutia?
 
-Kuna mambo muhimu ya kuzingatia kuhusu kazi hii. Kwanza, angalia neno [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Kuandika kazi zako ili zifanye kazi kwa njia isiyo ya moja kwa moja inamaanisha kwamba zinasubiri hatua fulani, kama vile data kurudishwa, kukamilika kabla ya kuendelea.
+Kuna mambo muhimu ya kuzingatia kuhusu kazi hii. Kwanza, angalia neno [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Kuandika kazi zako ili zifanye kazi kwa njia isiyo ya moja kwa moja inamaanisha kuwa zinangoja hatua fulani, kama vile data kurudishwa, kukamilika kabla ya kuendelea.
 
 Hapa kuna video fupi kuhusu `async`:
 
 [![Async na Await kwa kudhibiti ahadi](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async na Await kwa kudhibiti ahadi")
 
-> 🎥 Bofya picha hapo juu kwa video kuhusu async/await.
+> 🎥 Bonyeza picha hapo juu kwa video kuhusu async/await.
 
 Unda kazi mpya ya kuuliza API ya C02Signal:
 
@@ -207,20 +207,20 @@ async function displayCarbonUsage(apiKey, region) {
 
 Hii ni kazi kubwa. Nini kinaendelea hapa?
 
-- Ukifuata mbinu bora, unatumia neno `async` kufanya kazi hii ifanye kazi kwa njia isiyo ya moja kwa moja. Kazi hiyo ina kizuizi cha `try/catch` kwani itarudisha ahadi wakati API inarudisha data. Kwa sababu huna udhibiti wa kasi ambayo API itajibu (inaweza isijibu kabisa!), unahitaji kushughulikia hali hii kwa kuiita kwa njia isiyo ya moja kwa moja.
-- Unauliza API ya co2signal kupata data ya eneo lako, ukitumia API Key yako. Ili kutumia ufunguo huo, lazima utumie aina ya uthibitishaji kwenye vigezo vya kichwa.
-- Mara API inapojibu, unapeleka vipengele mbalimbali vya data yake ya majibu kwenye sehemu za skrini yako ulizoweka kuonyesha data hii.
+- Kwa kufuata mbinu bora, unatumia neno `async` kufanya kazi hii ifanye kazi kwa njia isiyo ya moja kwa moja. Kazi hiyo ina kizuizi cha `try/catch` kwa kuwa itarudisha ahadi wakati API inarudisha data. Kwa sababu huna udhibiti wa kasi ambayo API itajibu (inaweza isijibu kabisa!), unahitaji kushughulikia hali hii kwa kuiita kwa njia isiyo ya moja kwa moja.
+- Unauliza API ya co2signal kupata data ya eneo lako, ukitumia API Key yako. Ili kutumia ufunguo huo, unahitaji kutumia aina ya uthibitisho katika vigezo vya kichwa.
+- Mara API inapojibu, unapeleka vipengele mbalimbali vya data yake ya majibu kwenye sehemu za skrini yako ulizozitengeneza kuonyesha data hii.
 - Ikiwa kuna kosa, au ikiwa hakuna matokeo, unaonyesha ujumbe wa kosa.
 
-✅ Kutumia mifumo ya programu isiyo ya moja kwa moja ni zana nyingine muhimu sana kwenye zana yako. Soma [kuhusu njia mbalimbali](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) unazoweza kusanidi aina hii ya msimbo.
+✅ Kutumia mifumo ya programu isiyo ya moja kwa moja ni zana nyingine muhimu sana katika zana yako. Soma [mbinu mbalimbali](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) unazoweza kutumia kusanidi aina hii ya msimbo.
 
-Hongera! Ukijenga kiongezi chako (`npm run build`) na kukisasisha kwenye paneli ya viongezi, unayo kiongezi kinachofanya kazi! Kitu pekee ambacho hakifanyi kazi ni ikoni, na utarekebisha hilo kwenye somo lijalo.
+Hongera! Ukijenga kiendelezi chako (`npm run build`) na kukifanyia upya katika paneli ya viendelezi vyako, una kiendelezi kinachofanya kazi! Kitu pekee ambacho hakifanyi kazi ni ikoni, na utarekebisha hilo katika somo lijalo.
 
 ---
 
 ## 🚀 Changamoto
 
-Tumeelezea aina kadhaa za API hadi sasa katika masomo haya. Chagua API ya wavuti na utafiti kwa kina kile inachotoa. Kwa mfano, angalia API zinazopatikana ndani ya vivinjari kama [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Kwa maoni yako, ni nini kinachofanya API kuwa bora?
+Tumeelezea aina kadhaa za API hadi sasa katika masomo haya. Chagua API ya wavuti na fanya utafiti wa kina kuhusu kile inachotoa. Kwa mfano, angalia API zinazopatikana ndani ya vivinjari kama [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Kwa maoni yako, ni nini kinachofanya API kuwa bora?
 
 ## Jaribio Baada ya Somo
 
@@ -228,7 +228,7 @@ Tumeelezea aina kadhaa za API hadi sasa katika masomo haya. Chagua API ya wavuti
 
 ## Mapitio na Kujisomea
 
-Umejifunza kuhusu LocalStorage na API katika somo hili, vyote ni muhimu sana kwa msanidi wa wavuti wa kitaalamu. Je, unaweza kufikiria jinsi vitu hivi viwili vinavyofanya kazi pamoja? Fikiria jinsi unavyoweza kuunda tovuti ambayo ingeweza kuhifadhi vitu vya kutumiwa na API.
+Umejifunza kuhusu LocalStorage na API katika somo hili, vyote ni muhimu sana kwa msanidi wa wavuti wa kitaalamu. Je, unaweza kufikiria jinsi vitu hivi viwili vinavyofanya kazi pamoja? Fikiria jinsi unavyoweza kubuni tovuti inayohifadhi vitu vya kutumiwa na API.
 
 ## Kazi
 
@@ -237,4 +237,4 @@ Umejifunza kuhusu LocalStorage na API katika somo hili, vyote ni muhimu sana kwa
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

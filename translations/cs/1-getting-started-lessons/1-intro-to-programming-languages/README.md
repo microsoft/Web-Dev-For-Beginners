@@ -1,36 +1,36 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c63675cfaf1d223b37bb9fecbfe7c252",
-  "translation_date": "2025-08-28T04:30:40+00:00",
+  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
+  "translation_date": "2025-08-29T10:59:23+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "cs"
 }
 -->
 # Úvod do programovacích jazyků a nástrojů
 
-Tato lekce pokrývá základy programovacích jazyků. Témata zde uvedená se vztahují na většinu moderních programovacích jazyků. V části "Nástroje" se naučíte o užitečném softwaru, který vám jako vývojáři pomůže.
+Tato lekce pokrývá základy programovacích jazyků. Témata zde uvedená platí pro většinu moderních programovacích jazyků. V části „Nástroje“ se naučíte o užitečném softwaru, který vám jako vývojáři pomůže.
 
-![Úvod do programování](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.cs.png)
+![Úvod do programování](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.cs.png)  
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Kvíz před lekcí
+## Kvíz před lekcí  
 [Kvíz před lekcí](https://forms.office.com/r/dru4TE0U9n?origin=lprLink)
 
 ## Úvod
 
 V této lekci se budeme zabývat:
 
-- Co je programování?
-- Typy programovacích jazyků
-- Základní prvky programu
-- Užitečný software a nástroje pro profesionálního vývojáře
+- Co je programování?  
+- Typy programovacích jazyků  
+- Základní prvky programu  
+- Užitečný software a nástroje pro profesionální vývojáře  
 
 > Tuto lekci si můžete projít na [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Co je programování?
 
-Programování (také známé jako kódování) je proces psaní instrukcí pro zařízení, jako je počítač nebo mobilní zařízení. Tyto instrukce píšeme pomocí programovacího jazyka, který je následně interpretován zařízením. Tyto sady instrukcí mohou být označovány různými názvy, například *program*, *počítačový program*, *aplikace (app)* nebo *spustitelný soubor*.
+Programování (také známé jako kódování) je proces psaní instrukcí pro zařízení, jako je počítač nebo mobilní zařízení. Tyto instrukce píšeme pomocí programovacího jazyka, který zařízení následně interpretuje. Tyto sady instrukcí mohou být označovány různými názvy, například *program*, *počítačový program*, *aplikace (app)* nebo *spustitelný soubor*.
 
 *Program* může být cokoliv, co je napsáno pomocí kódu; webové stránky, hry a mobilní aplikace jsou programy. I když je možné vytvořit program bez psaní kódu, základní logika je interpretována zařízením a tato logika byla s největší pravděpodobností napsána pomocí kódu. Program, který *běží* nebo *provádí* kód, vykonává instrukce. Zařízení, na kterém čtete tuto lekci, právě spouští program, aby ji zobrazilo na vaší obrazovce.
 
@@ -42,9 +42,9 @@ Programovací jazyky umožňují vývojářům psát instrukce pro zařízení. 
 
 Programovací jazyky mají různé formáty a mohou sloužit různým účelům. Například JavaScript se primárně používá pro webové aplikace, zatímco Bash se používá hlavně pro operační systémy.
 
-*Nízké úrovně jazyků* obvykle vyžadují méně kroků pro interpretaci instrukcí zařízením než *vysoké úrovně jazyků*. Co však činí vysoké úrovně jazyků populárními, je jejich čitelnost a podpora. JavaScript je považován za jazyk vysoké úrovně.
+*Nízké úrovně jazyků* obvykle vyžadují méně kroků, aby zařízení interpretovalo instrukce, než *vysoké úrovně jazyků*. Co však činí vysoké úrovně jazyků populárními, je jejich čitelnost a podpora. JavaScript je považován za jazyk vysoké úrovně.
 
-Následující kód ukazuje rozdíl mezi jazykem vysoké úrovně (JavaScript) a jazykem nízké úrovně (ARM assembler).
+Následující kód ilustruje rozdíl mezi jazykem vysoké úrovně (JavaScript) a jazykem nízké úrovně (ARM assembly).
 
 ```javascript
 let number = 10
@@ -91,9 +91,9 @@ Věřte nebo ne, *oba dělají totéž*: tisknou Fibonacciho posloupnost až do 
 
 Jednotlivá instrukce v programu se nazývá *příkaz* a obvykle má znak nebo mezeru, která označuje, kde příkaz končí, nebo *končí*. Způsob, jakým program končí, se liší podle jazyka.
 
-Příkazy v programu mohou záviset na datech poskytnutých uživatelem nebo z jiného zdroje, aby mohly vykonávat instrukce. Data mohou změnit chování programu, a proto programovací jazyky obsahují způsob, jak data dočasně uložit, aby mohla být použita později. Tyto způsoby se nazývají *proměnné*. Proměnné jsou příkazy, které zařízení instruují, aby uložilo data do své paměti. Proměnné v programech jsou podobné proměnným v algebře, kde mají jedinečný název a jejich hodnota se může časem měnit.
+Příkazy v programu mohou záviset na datech poskytnutých uživatelem nebo jiným zdrojem, aby mohly vykonat instrukce. Data mohou změnit chování programu, a proto programovací jazyky obsahují způsob, jak dočasně ukládat data, aby mohla být použita později. Tyto se nazývají *proměnné*. Proměnné jsou příkazy, které zařízení instruují, aby uložilo data do své paměti. Proměnné v programech jsou podobné proměnným v algebře, kde mají jedinečný název a jejich hodnota se může časem měnit.
 
-Existuje možnost, že některé příkazy nebudou zařízením vykonány. To je obvykle záměrné, když je to napsáno vývojářem, nebo náhodné, když dojde k neočekávané chybě. Tento typ kontroly nad aplikací ji činí robustnější a lépe udržovatelnou. Tyto změny v řízení obvykle nastávají, když jsou splněny určité podmínky. Běžným příkazem používaným v moderním programování k řízení běhu programu je příkaz `if..else`.
+Existuje možnost, že některé příkazy nebudou zařízením vykonány. To je obvykle záměrně napsáno vývojářem nebo náhodou, když dojde k neočekávané chybě. Tento typ kontroly nad aplikací ji činí robustnější a udržovatelnější. Tyto změny v řízení obvykle nastávají, když jsou splněny určité podmínky. Běžným příkazem používaným v moderním programování k řízení běhu programu je příkaz `if..else`.
 
 ✅ O tomto typu příkazu se dozvíte více v následujících lekcích.
 
@@ -103,51 +103,50 @@ Existuje možnost, že některé příkazy nebudou zařízením vykonány. To je
 
 > 🎥 Klikněte na obrázek výše pro video o nástrojích
 
-V této části se dozvíte o některém softwaru, který může být velmi užitečný, když začínáte svou profesionální vývojářskou cestu.
+V této části se dozvíte o některém softwaru, který byste mohli považovat za velmi užitečný na začátku své profesionální vývojářské cesty.
 
-**Vývojové prostředí** je jedinečná sada nástrojů a funkcí, které vývojář často používá při psaní softwaru. Některé z těchto nástrojů byly přizpůsobeny specifickým potřebám vývojáře a mohou se časem měnit, pokud vývojář změní priority v práci, osobních projektech nebo při používání jiného programovacího jazyka. Vývojová prostředí jsou tak jedinečná jako vývojáři, kteří je používají.
+**Vývojové prostředí** je jedinečná sada nástrojů a funkcí, které vývojář často používá při psaní softwaru. Některé z těchto nástrojů byly přizpůsobeny specifickým potřebám vývojáře a mohou se časem měnit, pokud vývojář změní priority v práci, osobních projektech nebo při používání jiného programovacího jazyka. Vývojová prostředí jsou stejně jedinečná jako vývojáři, kteří je používají.
 
 ### Editory
 
-Jedním z nejdůležitějších nástrojů pro vývoj softwaru je editor. Editory jsou místem, kde píšete svůj kód a někdy i spouštíte svůj kód.
+Jedním z nejdůležitějších nástrojů pro vývoj softwaru je editor. Editory jsou místem, kde píšete svůj kód a někdy i místem, kde jej spouštíte.
 
 Vývojáři spoléhají na editory z několika dalších důvodů:
 
-- *Ladění* pomáhá odhalit chyby a problémy tím, že prochází kód řádek po řádku. Některé editory mají schopnosti ladění; mohou být přizpůsobeny a přidány pro specifické programovací jazyky.
-- *Zvýraznění syntaxe* přidává barvy a formátování textu do kódu, což usnadňuje jeho čtení. Většina editorů umožňuje přizpůsobené zvýraznění syntaxe.
-- *Rozšíření a integrace* jsou specializované nástroje pro vývojáře, vytvořené vývojáři. Tyto nástroje nebyly součástí základního editoru. Například mnoho vývojářů dokumentuje svůj kód, aby vysvětlili, jak funguje. Mohou nainstalovat rozšíření pro kontrolu pravopisu, které pomáhá najít překlepy v dokumentaci. Většina rozšíření je určena pro použití v konkrétním editoru a většina editorů má způsob, jak vyhledávat dostupná rozšíření.
-- *Přizpůsobení* umožňuje vývojářům vytvořit jedinečné vývojové prostředí, které vyhovuje jejich potřebám. Většina editorů je extrémně přizpůsobitelná a může také umožnit vývojářům vytvářet vlastní rozšíření.
+- *Ladění* pomáhá odhalit chyby a problémy tím, že prochází kód řádek po řádku. Některé editory mají schopnosti ladění; mohou být přizpůsobeny a přidány pro specifické programovací jazyky.  
+- *Zvýraznění syntaxe* přidává barvy a formátování textu do kódu, což usnadňuje jeho čtení. Většina editorů umožňuje přizpůsobené zvýraznění syntaxe.  
+- *Rozšíření a integrace* jsou specializované nástroje pro vývojáře, vytvořené vývojáři. Tyto nástroje nejsou součástí základního editoru. Například mnoho vývojářů dokumentuje svůj kód, aby vysvětlili, jak funguje. Mohou si nainstalovat rozšíření pro kontrolu pravopisu, které pomáhá najít překlepy v dokumentaci. Většina rozšíření je určena pro použití v konkrétním editoru a většina editorů umožňuje vyhledávání dostupných rozšíření.  
+- *Přizpůsobení* umožňuje vývojářům vytvořit jedinečné vývojové prostředí, které vyhovuje jejich potřebám. Většina editorů je extrémně přizpůsobitelná a může také umožnit vývojářům vytvářet vlastní rozšíření.  
 
 #### Populární editory a rozšíření pro webový vývoj
 
-- [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
-  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Atom](https://atom.io/)
-  - [spell-check](https://atom.io/packages/spell-check)
-  - [teletype](https://atom.io/packages/teletype)
-  - [atom-beautify](https://atom.io/packages/atom-beautify)
-  
-- [Sublimetext](https://www.sublimetext.com/)
-  - [emmet](https://emmet.io/)
-  - [SublimeLinter](http://www.sublimelinter.com/en/stable/)
+- [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)  
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)  
+  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)  
+  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)  
+- [Atom](https://atom.io/)  
+  - [spell-check](https://atom.io/packages/spell-check)  
+  - [teletype](https://atom.io/packages/teletype)  
+  - [atom-beautify](https://atom.io/packages/atom-beautify)  
+- [Sublimetext](https://www.sublimetext.com/)  
+  - [emmet](https://emmet.io/)  
+  - [SublimeLinter](http://www.sublimelinter.com/en/stable/)  
 
 ### Prohlížeče
 
-Dalším klíčovým nástrojem je prohlížeč. Weboví vývojáři spoléhají na prohlížeč, aby viděli, jak jejich kód běží na webu. Prohlížeč se také používá k zobrazení vizuálních prvků webové stránky, které jsou napsány v editoru, jako je HTML.
+Dalším klíčovým nástrojem je prohlížeč. Weboví vývojáři spoléhají na prohlížeč, aby viděli, jak jejich kód běží na webu. Prohlížeč se také používá k zobrazení vizuálních prvků webové stránky napsaných v editoru, jako je HTML.
 
-Mnoho prohlížečů obsahuje *nástroje pro vývojáře* (DevTools), které obsahují sadu užitečných funkcí a informací, jež pomáhají vývojářům shromažďovat a zachytávat důležité informace o jejich aplikaci. Například: Pokud má webová stránka chyby, je někdy užitečné vědět, kdy k nim došlo. DevTools v prohlížeči mohou být nakonfigurovány tak, aby tyto informace zachytily.
+Mnoho prohlížečů obsahuje *nástroje pro vývojáře* (DevTools), které obsahují sadu užitečných funkcí a informací, jež pomáhají vývojářům shromažďovat a zachytávat důležité informace o jejich aplikaci. Například: Pokud má webová stránka chyby, je někdy užitečné vědět, kdy k nim došlo. DevTools v prohlížeči lze nakonfigurovat tak, aby tyto informace zachytily.
 
 #### Populární prohlížeče a DevTools
 
-- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)
-- [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
-- [Firefox](https://developer.mozilla.org/docs/Tools)
+- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)  
+- [Chrome](https://developers.google.com/web/tools/chrome-devtools/)  
+- [Firefox](https://developer.mozilla.org/docs/Tools)  
 
 ### Nástroje příkazového řádku
 
-Někteří vývojáři preferují méně grafické prostředí pro své každodenní úkoly a spoléhají na příkazový řádek. Psaní kódu vyžaduje značné množství psaní a někteří vývojáři preferují nepřerušovat svůj tok na klávesnici. Používají klávesové zkratky pro přepínání mezi okny na ploše, práci na různých souborech a používání nástrojů. Většinu úkolů lze provést myší, ale jednou z výhod příkazového řádku je, že mnoho věcí lze provést bez nutnosti přepínání mezi myší a klávesnicí. Další výhodou příkazového řádku je, že je konfigurovatelný a můžete uložit vlastní konfiguraci, později ji změnit a importovat ji do jiných vývojových strojů. Protože vývojová prostředí jsou tak jedinečná pro každého vývojáře, někteří se příkazovému řádku vyhýbají, někteří na něm zcela spoléhají a někteří preferují kombinaci obojího.
+Někteří vývojáři preferují méně grafický pohled na své každodenní úkoly a spoléhají na příkazový řádek. Psaní kódu vyžaduje značné množství psaní a někteří vývojáři preferují nepřerušovat svůj tok na klávesnici. Používají klávesové zkratky pro přepínání mezi okny na ploše, práci na různých souborech a používání nástrojů. Většinu úkolů lze provést pomocí myši, ale jednou z výhod příkazového řádku je, že mnoho věcí lze provést bez nutnosti přepínání mezi myší a klávesnicí. Další výhodou příkazového řádku je, že je konfigurovatelný a můžete uložit vlastní konfiguraci, později ji změnit a importovat do jiných vývojových strojů. Protože vývojová prostředí jsou tak jedinečná pro každého vývojáře, někteří se příkazovému řádku vyhýbají, jiní na něm zcela spoléhají a někteří preferují kombinaci obojího.
 
 ### Populární možnosti příkazového řádku
 
@@ -157,28 +156,28 @@ Možnosti příkazového řádku se liší podle operačního systému, který p
 
 #### Windows
 
-- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7/?WT.mc_id=academic-77807-sagibbon) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (také známý jako CMD) 💻
-- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)
-- [mintty](https://mintty.github.io/)
-  
+- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7/?WT.mc_id=academic-77807-sagibbon) 💻  
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (také známý jako CMD) 💻  
+- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)  
+- [mintty](https://mintty.github.io/)  
+
 #### MacOS
 
-- [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) 💻
-- [iTerm](https://iterm2.com/)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
+- [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) 💻  
+- [iTerm](https://iterm2.com/)  
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)  
 
 #### Linux
 
-- [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
-- [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
-- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
+- [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻  
+- [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)  
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)  
 
 #### Populární nástroje příkazového řádku
 
-- [Git](https://git-scm.com/) (💻 na většině operačních systémů)
-- [NPM](https://www.npmjs.com/)
-- [Yarn](https://classic.yarnpkg.com/en/docs/cli/)
+- [Git](https://git-scm.com/) (💻 na většině operačních systémů)  
+- [NPM](https://www.npmjs.com/)  
+- [Yarn](https://classic.yarnpkg.com/en/docs/cli/)  
 
 ### Dokumentace
 
@@ -186,32 +185,32 @@ Když se vývojář chce naučit něco nového, pravděpodobně se obrátí na d
 
 #### Populární dokumentace o webovém vývoji
 
-- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), od Mozilly, vydavatele prohlížeče [Firefox](https://www.mozilla.org/firefox/)
-- [Frontend Masters](https://frontendmasters.com/learn/)
-- [Web.dev](https://web.dev), od Googlu, vydavatele [Chrome](https://www.google.com/chrome/)
-- [Microsoftova vlastní dokumentace pro vývojáře](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), pro [Microsoft Edge](https://www.microsoft.com/edge)
-- [W3 Schools](https://www.w3schools.com/where_to_start.asp)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), od Mozilly, vydavatele prohlížeče [Firefox](https://www.mozilla.org/firefox/)  
+- [Frontend Masters](https://frontendmasters.com/learn/)  
+- [Web.dev](https://web.dev), od Googlu, vydavatele [Chrome](https://www.google.com/chrome/)  
+- [Microsoftova vlastní dokumentace pro vývojáře](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), pro [Microsoft Edge](https://www.microsoft.com/edge)  
+- [W3 Schools](https://www.w3schools.com/where_to_start.asp)  
 
-✅ Udělejte si průzkum: Nyní, když znáte základy prostředí webového vývojáře, porovnejte a kontrastujte je s prostředím webového designéra.
+✅ Udělejte si průzkum: Nyní, když znáte základy prostředí webového vývojáře, porovnejte a kontrastujte jej s prostředím webového designéra.
 
 ---
 
 ## 🚀 Výzva
 
-Porovnejte některé programovací jazyky. Jaké jsou jedinečné vlastnosti JavaScriptu oproti Javě? A co třeba COBOL oproti Go?
+Porovnejte některé programovací jazyky. Jaké jsou některé jedinečné vlastnosti JavaScriptu oproti Javě? A co COBOL oproti Go?
 
-## Kvíz po lekci
-[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/2)
+## Kvíz po lekci  
+[Kvíz po lekci](https://ff-quizzes.netlify.app/web/)
 
-## Přehled a samostudium
+## Opakování a samostudium
 
-Prostudujte si různé jazyky dostupné pro programátora. Zkuste napsat jeden řádek v jednom jazyce a poté jej přepište do dvou dalších. Co jste se naučili?
+Prostudujte si různé jazyky dostupné programátorům. Zkuste napsat jeden řádek v jednom jazyce a poté jej přepište do dvou dalších. Co jste se naučili?
 
 ## Zadání
 
-[Čtení dokumentace](assignment.md)
+[Čtení dokumentace](assignment.md)  
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádné nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+**Upozornění**:  
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.

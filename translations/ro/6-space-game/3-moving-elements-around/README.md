@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-28T07:53:25+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T11:30:42+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "ro"
 }
@@ -18,7 +18,7 @@ Jocurile nu sunt prea distractive până când nu ai extratereștri care se miș
 - **Mișcare prin tastatură/mouse**: când utilizatorul interacționează cu tastatura sau mouse-ul pentru a muta un obiect pe ecran.
 - **Mișcare indusă de joc**: când jocul mută un obiect la un anumit interval de timp.
 
-Deci, cum mutăm lucrurile pe un ecran? Totul se rezumă la coordonatele carteziene: schimbăm locația (x, y) a obiectului și apoi redesenăm ecranul.
+Deci, cum mutăm lucrurile pe un ecran? Totul se bazează pe coordonatele carteziene: schimbăm locația (x, y) a obiectului și apoi redesenăm ecranul.
 
 De obicei, ai nevoie de următorii pași pentru a realiza *mișcarea* pe un ecran:
 
@@ -39,13 +39,13 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Poți să te gândești la un motiv pentru care redesenarea eroului de mai multe cadre pe secundă ar putea genera costuri de performanță? Citește despre [alternative la acest model](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+✅ Te poți gândi la un motiv pentru care redesenarea eroului de mai multe cadre pe secundă ar putea genera costuri de performanță? Citește despre [alternative la acest model](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Gestionarea evenimentelor de tastatură
 
 Gestionezi evenimentele atașând evenimente specifice la cod. Evenimentele de tastatură sunt declanșate pe întreaga fereastră, în timp ce evenimentele de mouse, cum ar fi un `click`, pot fi conectate la clicul pe un element specific. Vom folosi evenimente de tastatură pe tot parcursul acestui proiect.
 
-Pentru a gestiona un eveniment, trebuie să folosești metoda `addEventListener()` a ferestrei și să îi oferi doi parametri de intrare. Primul parametru este numele evenimentului, de exemplu `keyup`. Al doilea parametru este funcția care ar trebui să fie invocată ca rezultat al producerii evenimentului.
+Pentru a gestiona un eveniment, trebuie să folosești metoda `addEventListener()` a ferestrei și să îi furnizezi doi parametri de intrare. Primul parametru este numele evenimentului, de exemplu `keyup`. Al doilea parametru este funcția care ar trebui să fie invocată ca rezultat al producerii evenimentului.
 
 Iată un exemplu:
 
@@ -60,14 +60,14 @@ window.addEventListener('keyup', (evt) => {
 
 Pentru evenimentele de tastatură, există două proprietăți pe eveniment pe care le poți folosi pentru a vedea ce tastă a fost apăsată:
 
-- `key`, aceasta este o reprezentare sub formă de șir a tastei apăsate, de exemplu `ArrowUp`
-- `keyCode`, aceasta este o reprezentare numerică, de exemplu `37`, corespunde cu `ArrowLeft`.
+- `key`, aceasta este o reprezentare sub formă de șir a tastei apăsate, de exemplu `ArrowUp`.
+- `keyCode`, aceasta este o reprezentare numerică, de exemplu `37`, care corespunde cu `ArrowLeft`.
 
 ✅ Manipularea evenimentelor de tastatură este utilă și în afara dezvoltării de jocuri. La ce alte utilizări te poți gândi pentru această tehnică?
 
 ### Taste speciale: un avertisment
 
-Există unele taste *speciale* care afectează fereastra. Asta înseamnă că, dacă asculți un eveniment `keyup` și folosești aceste taste speciale pentru a muta eroul, se va efectua și o derulare orizontală. Din acest motiv, s-ar putea să vrei să *dezactivezi* acest comportament implicit al browserului pe măsură ce îți dezvolți jocul. Ai nevoie de un cod ca acesta:
+Există unele taste *speciale* care afectează fereastra. Asta înseamnă că, dacă asculți un eveniment `keyup` și folosești aceste taste speciale pentru a muta eroul, se va efectua și o derulare orizontală. Din acest motiv, s-ar putea să vrei să *dezactivezi* acest comportament implicit al browserului pe măsură ce îți construiești jocul. Ai nevoie de un cod ca acesta:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -92,7 +92,7 @@ Codul de mai sus va asigura că tastele săgeți și tasta spațiu au comportame
 
 ## Mișcare indusă de joc
 
-Putem face lucrurile să se miște singure folosind temporizatoare precum funcțiile `setTimeout()` sau `setInterval()` care actualizează locația obiectului la fiecare tic, sau interval de timp. Iată cum poate arăta acest lucru:
+Putem face lucrurile să se miște singure folosind temporizatoare, cum ar fi funcțiile `setTimeout()` sau `setInterval()`, care actualizează locația obiectului la fiecare tic sau interval de timp. Iată cum poate arăta acest lucru:
 
 ```javascript
 let id = setInterval(() => {
@@ -123,7 +123,7 @@ Bucla de mai sus este invocată la fiecare `200` de milisecunde pentru a redesen
 
 ## Continuarea Jocului Spațial
 
-Vei lua codul existent și îl vei extinde. Poți începe fie cu codul pe care l-ai finalizat în partea I, fie să folosești codul din [Partea II - starter](../../../../6-space-game/3-moving-elements-around/your-work).
+Vei lua codul existent și îl vei extinde. Poți începe fie cu codul pe care l-ai finalizat în partea I, fie cu codul din [Partea II - starter](../../../../6-space-game/3-moving-elements-around/your-work).
 
 - **Mutarea eroului**: vei adăuga cod pentru a te asigura că poți muta eroul folosind tastele săgeți.
 - **Mutarea inamicilor**: va trebui, de asemenea, să adaugi cod pentru a te asigura că inamicii se mișcă de sus în jos la un anumit ritm.
@@ -154,9 +154,9 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
 
 1. **Adaugă obiecte dedicate** pentru `hero`, `enemy` și `game object`, acestea ar trebui să aibă proprietăți `x` și `y`. (Amintește-ți secțiunea despre [Moștenire sau compoziție](../README.md)).
 
-   *INDICIU* `game object` ar trebui să fie cel care are `x` și `y` și abilitatea de a se desena pe un canvas.
+   *INDICIU*: `game object` ar trebui să fie cel care are `x` și `y` și abilitatea de a se desena pe un canvas.
 
-   >sfat: începe prin a adăuga o nouă clasă GameObject cu constructorul său definit astfel, și apoi desenează-l pe canvas:
+   >sfat: începe prin a adăuga o nouă clasă GameObject cu constructorul său definit astfel, apoi desenează-l pe canvas:
   
     ```javascript
         
@@ -207,7 +207,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
 
 2. **Adaugă gestionari de evenimente pentru taste** pentru a gestiona navigarea cu tastele (mută eroul sus/jos/stânga/dreapta).
 
-   *AMINTEȘTE-ȚI* că este un sistem cartezian, colțul din stânga sus este `0,0`. De asemenea, amintește-ți să adaugi cod pentru a opri *comportamentul implicit*.
+   *AMINTEȘTE-ȚI*: este un sistem cartezian, colțul din stânga sus este `0,0`. De asemenea, amintește-ți să adaugi cod pentru a opri *comportamentul implicit*.
 
    >sfat: creează funcția ta onKeyDown și atașeaz-o la fereastră:
 
@@ -223,7 +223,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
     
    Verifică consola browserului în acest moment și urmărește tastele apăsate care sunt înregistrate.
 
-3. **Implementează** [Modelul Pub-Sub](../README.md), acesta va menține codul tău curat pe măsură ce urmezi părțile rămase.
+3. **Implementează** [Modelul Pub-Sub](../README.md), acest lucru va menține codul tău curat pe măsură ce urmezi părțile rămase.
 
    Pentru a face această ultimă parte, poți:
 
@@ -313,7 +313,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
 
 1. **Configurează bucla jocului**
 
-   Refactorizează funcția window.onload pentru a inițializa jocul și a configura o buclă de joc la un interval potrivit. Vei adăuga și o rază laser:
+   Refactorizează funcția window.onload pentru a inițializa jocul și a configura o buclă de joc la un interval potrivit. Vei adăuga, de asemenea, o rază laser:
 
     ```javascript
     window.onload = async () => {
@@ -382,7 +382,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
 
 ## 🚀 Provocare
 
-După cum poți vedea, codul tău poate deveni un "cod spaghetti" atunci când începi să adaugi funcții, variabile și clase. Cum poți organiza mai bine codul astfel încât să fie mai ușor de citit? Schițează un sistem pentru a-ți organiza codul, chiar dacă acesta rămâne într-un singur fișier.
+După cum poți vedea, codul tău poate deveni un „cod spaghetti” atunci când începi să adaugi funcții, variabile și clase. Cum îți poți organiza mai bine codul astfel încât să fie mai ușor de citit? Schițează un sistem pentru a-ți organiza codul, chiar dacă acesta rămâne într-un singur fișier.
 
 ## Chestionar Post-Lecție
 
@@ -398,5 +398,5 @@ Deși scriem jocul nostru fără a folosi framework-uri, există multe framework
 
 ---
 
-**Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinarea responsabilității**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

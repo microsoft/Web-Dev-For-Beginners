@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0bb55e0b98600afab801eea115228873",
-  "translation_date": "2025-08-27T22:13:46+00:00",
+  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
+  "translation_date": "2025-08-29T12:47:11+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "sl"
 }
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Uvod
 
-Razširitve brskalnika dodajo dodatno funkcionalnost brskalniku. Preden pa začnete graditi svojo, se morate naučiti nekaj o tem, kako brskalniki delujejo.
+Razširitve brskalnika dodajajo dodatno funkcionalnost brskalniku. Preden začnete graditi svojo razširitev, se je dobro naučiti nekaj o tem, kako brskalniki delujejo.
 
 ### O brskalniku
 
@@ -33,19 +33,19 @@ Kaj pa sploh je brskalnik? To je programska aplikacija, ki omogoča končnemu up
 
 Ko se uporabnik poveže z internetom z uporabo URL (Uniform Resource Locator) naslova, običajno prek protokola Hypertext Transfer Protocol z naslovom `http` ali `https`, brskalnik komunicira s spletnim strežnikom in pridobi spletno stran.
 
-Na tej točki brskalnikov pogon za upodabljanje prikaže stran na napravi uporabnika, ki je lahko mobilni telefon, namizni računalnik ali prenosnik.
+Na tej točki brskalnikov mehanizem za upodabljanje prikaže stran na uporabnikovi napravi, ki je lahko mobilni telefon, namizni računalnik ali prenosnik.
 
-Brskalniki imajo tudi sposobnost predpomnjenja vsebine, da je ni treba vsakič znova pridobiti s strežnika. Lahko beležijo zgodovino uporabnikovega brskanja, shranjujejo 'piškotke', ki so majhni delci podatkov, ki vsebujejo informacije o uporabnikovi aktivnosti, in še več.
+Brskalniki imajo tudi sposobnost shranjevanja vsebine v predpomnilnik, da je ni treba vsakič znova pridobiti s strežnika. Lahko beležijo zgodovino uporabnikovega brskanja, shranjujejo 'piškotke', ki so majhni delci podatkov, ki vsebujejo informacije o uporabnikovi aktivnosti, in še več.
 
 Pomembno je vedeti, da vsi brskalniki niso enaki! Vsak brskalnik ima svoje prednosti in slabosti, profesionalni spletni razvijalec pa mora razumeti, kako narediti spletne strani, ki dobro delujejo v različnih brskalnikih. To vključuje obravnavo majhnih zaslonov, kot je mobilni telefon, pa tudi uporabnika, ki je brez povezave.
 
-Zelo uporabna spletna stran, ki jo verjetno želite dodati med zaznamke v brskalniku, ki ga uporabljate, je [caniuse.com](https://www.caniuse.com). Ko gradite spletne strani, je zelo koristno uporabiti sezname podprtih tehnologij na caniuse, da lahko najbolje podprete svoje uporabnike.
+Zelo uporabna spletna stran, ki jo je dobro shraniti med zaznamke v brskalniku, ki ga uporabljate, je [caniuse.com](https://www.caniuse.com). Ko gradite spletne strani, je zelo koristno uporabiti sezname podprtih tehnologij na caniuse, da najbolje podprete svoje uporabnike.
 
-✅ Kako lahko ugotovite, kateri brskalniki so najbolj priljubljeni med uporabniki vaše spletne strani? Preverite svojo analitiko - različni analitični paketi, ki jih lahko namestite kot del svojega procesa spletnega razvoja, vam bodo povedali, kateri brskalniki so najbolj uporabljeni.
+✅ Kako lahko ugotovite, kateri brskalniki so najbolj priljubljeni med uporabniki vaše spletne strani? Preverite svojo analitiko - lahko namestite različne analitične pakete kot del svojega procesa spletnega razvoja, ki vam bodo povedali, kateri brskalniki so najbolj uporabljeni.
 
 ## Razširitve brskalnika
 
-Zakaj bi želeli zgraditi razširitev brskalnika? To je priročna stvar, ki jo lahko dodate brskalniku, ko potrebujete hiter dostop do nalog, ki jih pogosto ponavljate. Na primer, če pogosto preverjate barve na različnih spletnih straneh, ki jih uporabljate, lahko namestite razširitev za izbiro barv. Če imate težave z zapomnitvijo gesel, lahko uporabite razširitev za upravljanje gesel.
+Zakaj bi želeli zgraditi razširitev brskalnika? To je priročno orodje, ki ga lahko dodate brskalniku, ko potrebujete hiter dostop do nalog, ki jih pogosto ponavljate. Na primer, če pogosto preverjate barve na različnih spletnih straneh, ki jih uporabljate, lahko namestite razširitev za izbiro barv. Če imate težave z zapomnitvijo gesel, lahko uporabite razširitev za upravljanje gesel.
 
 Razširitve brskalnika so tudi zabavne za razvoj. Običajno obvladujejo omejeno število nalog, ki jih opravljajo zelo dobro.
 
@@ -53,7 +53,7 @@ Razširitve brskalnika so tudi zabavne za razvoj. Običajno obvladujejo omejeno 
 
 ### Namestitev razširitev
 
-Preden začnete graditi, si oglejte postopek gradnje in uvajanja razširitve brskalnika. Čeprav se vsak brskalnik nekoliko razlikuje v načinu upravljanja tega postopka, je postopek na Chrome in Firefox podoben temu primeru na Edge:
+Preden začnete graditi, si oglejte postopek gradnje in uvajanja razširitve brskalnika. Čeprav se vsak brskalnik nekoliko razlikuje v tem, kako upravlja ta postopek, je postopek na Chrome in Firefox podoben temu primeru na Edge:
 
 ![posnetek zaslona brskalnika Edge, ki prikazuje odprto stran edge://extensions in odprt meni nastavitev](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.sl.png)
 
@@ -66,7 +66,7 @@ V bistvu bo postopek takšen:
 - če gre za novo namestitev, izberite `load unpacked`, da naložite novo razširitev iz njene mape za gradnjo (v našem primeru je to `/dist`) 
 - ali pa kliknite `reload`, če ponovno nalagate že nameščeno razširitev
 
-✅ Ta navodila se nanašajo na razširitve, ki jih zgradite sami; za namestitev razširitev, ki so bile objavljene v trgovini razširitev brskalnika, se pomaknite na te [trgovine](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) in namestite razširitev po svoji izbiri.
+✅ Ta navodila se nanašajo na razširitve, ki jih sami zgradite; za namestitev razširitev, ki so bile objavljene v trgovini razširitev brskalnika, se pomaknite na te [trgovine](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) in namestite razširitev po svoji izbiri.
 
 ### Začnite
 
@@ -75,17 +75,17 @@ Zgradili boste razširitev brskalnika, ki prikazuje ogljični odtis vaše regije
 **Potrebujete:**
 
 - [ključ API](https://www.co2signal.com/); vnesite svoj e-poštni naslov v polje na tej strani in poslali vam ga bodo
-- [kodo za vašo regijo](http://api.electricitymap.org/v3/zones), ki ustreza [zemljevidu električne energije](https://www.electricitymap.org/map) (v Bostonu na primer uporabljam 'US-NEISO').
+- [kodo za vašo regijo](http://api.electricitymap.org/v3/zones), ki ustreza [Electricity Map](https://www.electricitymap.org/map) (v Bostonu, na primer, uporabljam 'US-NEISO').
 - [začetno kodo](../../../../5-browser-extension/start). Prenesite mapo `start`; v tej mapi boste dokončali kodo.
 - [NPM](https://www.npmjs.com) - NPM je orodje za upravljanje paketov; namestite ga lokalno in paketi, navedeni v vaši datoteki `package.json`, bodo nameščeni za uporabo pri vašem spletnem projektu
 
-✅ Več o upravljanju paketov se naučite v tem [odličnem modulu za učenje](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+✅ Več o upravljanju paketov se naučite v tem [odličnem modulu Learn](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
 Vzemite si trenutek in si oglejte osnovno kodo:
 
 dist
     -|manifest.json (privzete nastavitve tukaj)
-    -|index.html (HTML oznake za sprednji del tukaj)
+    -|index.html (HTML označevanje sprednjega dela tukaj)
     -|background.js (ozadje JS tukaj)
     -|main.js (zgrajen JS)
 src
@@ -95,15 +95,15 @@ src
 
 ### Zgradite HTML za razširitev
 
-Ta razširitev ima dva pogleda. Enega za zbiranje ključa API in kode regije:
+Ta razširitev ima dva pogleda. Prvi za zbiranje ključa API in kode regije:
 
 ![posnetek zaslona dokončane razširitve, odprte v brskalniku, ki prikazuje obrazec z vnosnimi polji za ime regije in ključ API.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.sl.png)
 
-In drugega za prikaz ogljične porabe regije:
+In drugi za prikaz ogljične porabe regije:
 
 ![posnetek zaslona dokončane razširitve, ki prikazuje vrednosti za ogljično porabo in odstotek fosilnih goriv za regijo US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.sl.png)
 
-Začnimo z gradnjo HTML-ja za obrazec in njegovim oblikovanjem s CSS.
+Začnimo z gradnjo HTML-ja za obrazec in oblikovanjem s CSS.
 
 V mapi `/dist` boste zgradili obrazec in območje za rezultate. V datoteki `index.html` zapolnite označeno območje obrazca:
 
@@ -146,11 +146,11 @@ Na tej točki lahko poskusite zgraditi. Prepričajte se, da ste namestili odvisn
 npm install
 ```
 
-Ta ukaz bo uporabil npm, upravitelja paketov Node, za namestitev webpacka za proces gradnje vaše razširitve. Webpack je orodje za združevanje, ki obravnava prevajanje kode. Rezultat tega procesa si lahko ogledate v `/dist/main.js` - videli boste, da je koda združena.
+Ta ukaz bo uporabil npm, upravitelja paketov Node, za namestitev webpacka za proces gradnje vaše razširitve. Izid tega procesa si lahko ogledate v `/dist/main.js` - videli boste, da je koda združena.
 
 Za zdaj bi se morala razširitev zgraditi, in če jo uvedete v Edge kot razširitev, boste videli lepo prikazan obrazec.
 
-Čestitke, naredili ste prve korake k gradnji razširitve brskalnika. V naslednjih lekcijah jo boste naredili bolj funkcionalno in uporabno.
+Čestitamo, naredili ste prve korake k gradnji razširitve brskalnika. V naslednjih lekcijah jo boste naredili bolj funkcionalno in uporabno.
 
 ---
 
@@ -179,4 +179,4 @@ V tej lekciji ste se naučili nekaj o zgodovini spletnega brskalnika; izkoristit
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni prevod s strani človeka. Ne prevzemamo odgovornosti za morebitna napačna razumevanja ali napačne interpretacije, ki bi nastale zaradi uporabe tega prevoda.

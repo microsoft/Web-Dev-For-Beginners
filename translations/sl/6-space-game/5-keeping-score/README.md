@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-27T22:28:01+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T12:50:24+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "sl"
 }
@@ -36,8 +36,8 @@ Koncept življenja v igri je zgolj številka. V kontekstu vesoljske igre je obi�
 
 Dodajmo naslednje elemente v vašo igro:
 
-- **Rezultat igre**: Za vsako uničeno sovražno ladjo naj junak prejme nekaj točk, predlagamo 100 točk na ladjo. Rezultat igre naj bo prikazan v spodnjem levem kotu.
-- **Življenje**: Vaša ladja ima tri življenja. Izgubite življenje vsakič, ko sovražna ladja trči v vas. Število življenj naj bo prikazano v spodnjem desnem kotu in naj bo sestavljeno iz naslednje grafike ![slika življenja](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.sl.png).
+- **Rezultat igre**: Za vsako sovražno ladjo, ki jo uničite, naj junak prejme nekaj točk, predlagamo 100 točk na ladjo. Rezultat igre naj bo prikazan v spodnjem levem kotu.
+- **Življenje**: Vaša ladja ima tri življenja. Izgubite eno življenje vsakič, ko sovražna ladja trči v vas. Število življenj naj bo prikazano v spodnjem desnem kotu in naj bo sestavljeno iz naslednje grafike ![slika življenja](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.sl.png).
 
 ## Priporočeni koraki
 
@@ -60,11 +60,11 @@ cd your-work
 npm start
 ```
 
-Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprite brskalnik in vnesite ta naslov. Trenutno bi moral prikazati junaka in vse sovražnike, ter ob pritisku na levo in desno puščico junak premika in lahko strelja sovražnike.
+Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprite brskalnik in vnesite ta naslov. Trenutno bi moral prikazati junaka in vse sovražnike, ter omogočiti premikanje junaka z levo in desno puščico ter streljanje na sovražnike.
 
 ### Dodajanje kode
 
-1. **Kopirajte potrebne vire** iz mape `solution/assets/` v mapo `your-work`; dodali boste datoteko `life.png`. Dodajte `lifeImg` v funkcijo window.onload:
+1. **Kopirajte potrebne vire** iz mape `solution/assets/` v mapo `your-work`; dodali boste datoteko `life.png`. Dodajte `lifeImg` v funkcijo `window.onload`: 
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
@@ -128,14 +128,14 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
 
         ```
 
-   1. **Dodajte metode v zanko igre**. Poskrbite, da dodate te funkcije v funkcijo window.onload pod `updateGameObjects()`:
+   1. **Dodajte metode v zanko igre**. Poskrbite, da dodate te funkcije v funkcijo `window.onload` pod `updateGameObjects()`:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Implementirajte pravila igre**. Implementirajte naslednja pravila igre:
+1. **Uvedite pravila igre**. Uvedite naslednja pravila igre:
 
    1. **Za vsak trk junaka in sovražnika** odštejte eno življenje.
    
@@ -160,7 +160,7 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
           }
         ```
 
-        Dodajte te funkcije v vaše sprožilce dogodkov trkov:
+        Dodajte te funkcije v sprožilce dogodkov za trke:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,15 +175,15 @@ Zgornji ukaz bo zagnal HTTP strežnik na naslovu `http://localhost:5000`. Odprit
         });
         ```
 
-✅ Raziskujte in odkrijte druge igre, ki so ustvarjene z uporabo JavaScript/Canvas. Kakšne so njihove skupne značilnosti?
+✅ Raziskujte, da odkrijete druge igre, ki so ustvarjene z uporabo JavaScript/Canvas. Kakšne so njihove skupne značilnosti?
 
-Ko zaključite delo, bi morali videti majhne ladje 'življenja' v spodnjem desnem kotu, točke v spodnjem levem kotu, ter opaziti, kako se število življenj zmanjšuje ob trkih s sovražniki in točke povečujejo ob streljanju sovražnikov. Odlično! Vaša igra je skoraj končana.
+Ko zaključite delo, bi morali videti majhne ladje 'življenja' v spodnjem desnem kotu, točke v spodnjem levem kotu, ter opaziti zmanjšanje števila življenj ob trkih s sovražniki in povečanje točk ob streljanju na sovražnike. Odlično! Vaša igra je skoraj končana.
 
 ---
 
 ## 🚀 Izziv
 
-Vaša koda je skoraj končana. Ali lahko predvidite naslednje korake?
+Vaša koda je skoraj končana. Ali si lahko zamislite naslednje korake?
 
 ## Zaključni kviz
 
@@ -200,4 +200,4 @@ Raziskujte načine, kako lahko povečujete in zmanjšujete rezultate igre ter ž
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo strokovno človeško prevajanje. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna napačna razumevanja ali napačne interpretacije, ki bi nastale zaradi uporabe tega prevoda.

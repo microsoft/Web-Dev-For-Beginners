@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-28T03:55:08+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T10:50:52+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "cs"
 }
@@ -17,7 +17,7 @@ V této lekci se naučíte, jak přidat skóre do hry a počítat životy.
 
 ## Zobrazení textu na obrazovce
 
-Abyste mohli zobrazit skóre hry na obrazovce, musíte vědět, jak umístit text na plátno. Odpovědí je použití metody `fillText()` na objektu canvas. Můžete také ovládat další aspekty, jako je použití konkrétního fontu, barvy textu nebo jeho zarovnání (vlevo, vpravo, na střed). Níže je ukázka kódu, který vykresluje text na obrazovce.
+Abyste mohli zobrazit skóre hry na obrazovce, musíte vědět, jak umístit text na plátno. Odpovědí je použití metody `fillText()` na objektu canvas. Můžete také ovládat další aspekty, jako je výběr fontu, barva textu a jeho zarovnání (vlevo, vpravo, na střed). Níže je ukázka kódu, který vykresluje text na obrazovce.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,22 +26,22 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Přečtěte si více o [přidávání textu na plátno](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) a klidně si svůj text upravte, aby vypadal lépe!
+✅ Přečtěte si více o [přidávání textu na plátno](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) a klidně si svůj text udělejte ještě hezčí!
 
 ## Život jako herní koncept
 
-Koncept života ve hře je pouze číslo. V kontextu vesmírné hry je běžné přiřadit určitý počet životů, které se odečítají jeden po druhém, když vaše loď utrpí poškození. Je hezké, pokud můžete zobrazit grafickou reprezentaci, například malé lodě nebo srdce, místo pouhého čísla.
+Koncept života ve hře je pouze číslo. V kontextu vesmírné hry je běžné přiřadit určitý počet životů, které se odečítají jeden po druhém, když vaše loď utrpí poškození. Je skvělé, pokud můžete zobrazit grafickou reprezentaci, například malé lodě nebo srdíčka, místo pouhého čísla.
 
 ## Co vytvořit
 
 Přidejte do své hry následující:
 
 - **Herní skóre**: Za každou zničenou nepřátelskou loď by měl hrdina získat body, doporučujeme 100 bodů za loď. Herní skóre by mělo být zobrazeno vlevo dole.
-- **Životy**: Vaše loď má tři životy. Ztratíte jeden život pokaždé, když do vás narazí nepřátelská loď. Počet životů by měl být zobrazen vpravo dole a měl by být tvořen následující grafikou ![obrázek života](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.cs.png).
+- **Životy**: Vaše loď má tři životy. O život přijdete pokaždé, když do vás narazí nepřátelská loď. Počet životů by měl být zobrazen vpravo dole a měl by být tvořen následující grafikou ![obrázek života](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.cs.png).
 
 ## Doporučené kroky
 
-Najděte soubory, které byly vytvořeny pro vás ve složce `your-work`. Měly by obsahovat následující:
+Najděte soubory, které byly vytvořeny pro vás ve složce `your-work`. Měla by obsahovat následující:
 
 ```bash
 -| assets
@@ -60,17 +60,17 @@ cd your-work
 npm start
 ```
 
-Tím se spustí HTTP server na adrese `http://localhost:5000`. Otevřete prohlížeč a zadejte tuto adresu. V tuto chvíli by se měl zobrazit hrdina a všichni nepřátelé, a když stisknete šipky vlevo a vpravo, hrdina se pohybuje a může sestřelovat nepřátele.
+Výše uvedený příkaz spustí HTTP server na adrese `http://localhost:5000`. Otevřete prohlížeč a zadejte tuto adresu. V tuto chvíli by se měl zobrazit hrdina a všichni nepřátelé. Jakmile stisknete šipky vlevo a vpravo, hrdina se pohybuje a může sestřelovat nepřátele.
 
 ### Přidání kódu
 
-1. **Zkopírujte potřebné soubory** ze složky `solution/assets/` do složky `your-work`; přidáte soubor `life.png`. Přidejte `lifeImg` do funkce `window.onload`:
+1. **Zkopírujte potřebné prostředky** ze složky `solution/assets/` do složky `your-work`; přidáte grafiku `life.png`. Přidejte `lifeImg` do funkce `window.onload`:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
     ```
 
-1. Přidejte `lifeImg` do seznamu aktiv:
+1. Přidejte `lifeImg` do seznamu prostředků:
 
     ```javascript
     let heroImg,
@@ -82,7 +82,7 @@ Tím se spustí HTTP server na adrese `http://localhost:5000`. Otevřete prohlí
   
 2. **Přidejte proměnné**. Přidejte kód, který reprezentuje vaše celkové skóre (0) a zbývající životy (3), a zobrazte tyto hodnoty na obrazovce.
 
-3. **Rozšiřte funkci `updateGameObjects()`**. Rozšiřte funkci `updateGameObjects()`, aby zpracovávala kolize s nepřáteli:
+3. **Rozšiřte funkci `updateGameObjects()`**. Rozšiřte funkci `updateGameObjects()` tak, aby zpracovávala kolize s nepřáteli:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -183,21 +183,21 @@ Na konci této práce byste měli vidět malé lodě symbolizující životy vpr
 
 ## 🚀 Výzva
 
-Váš kód je téměř hotový. Dokážete si představit své další kroky?
+Váš kód je téměř hotový. Dokážete si představit další kroky?
 
 ## Kvíz po lekci
 
 [Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/38)
 
-## Přehled a samostudium
+## Recenze a samostudium
 
-Prozkoumejte způsoby, jak můžete zvyšovat a snižovat herní skóre a životy. Existují zajímavé herní enginy, jako je [PlayFab](https://playfab.com). Jak by použití jednoho z nich mohlo vylepšit vaši hru?
+Prozkoumejte způsoby, jak můžete zvyšovat a snižovat herní skóre a životy. Existují zajímavé herní enginy, jako například [PlayFab](https://playfab.com). Jak by použití jednoho z nich mohlo vylepšit vaši hru?
 
 ## Zadání
 
-[Postavte hru se skóre](assignment.md)
+[Vytvořte hru se skórováním](assignment.md)
 
 ---
 
-**Prohlášení**:  
+**Upozornění**:  
 Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
