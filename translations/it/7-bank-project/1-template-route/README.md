@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-26T00:36:13+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T00:04:12+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "it"
 }
 -->
-# Crea un'app bancaria Parte 1: Template HTML e Rotte in un'app web
+# Creare un'App Bancaria Parte 1: Template HTML e Rotte in un'App Web
 
 ## Quiz Pre-Lezione
 
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introduzione
 
-Dall'avvento di JavaScript nei browser, i siti web sono diventati più interattivi e complessi che mai. Le tecnologie web sono ora comunemente utilizzate per creare applicazioni completamente funzionali che girano direttamente nel browser, chiamate [applicazioni web](https://it.wikipedia.org/wiki/Web_application). Poiché le app web sono altamente interattive, gli utenti non vogliono attendere il ricaricamento completo della pagina ogni volta che viene eseguita un'azione. Per questo motivo, JavaScript viene utilizzato per aggiornare direttamente l'HTML tramite il DOM, offrendo un'esperienza utente più fluida.
+Dall'avvento di JavaScript nei browser, i siti web sono diventati più interattivi e complessi che mai. Le tecnologie web sono ora comunemente utilizzate per creare applicazioni completamente funzionali che girano direttamente nel browser, chiamate [applicazioni web](https://en.wikipedia.org/wiki/Web_application). Poiché le app web sono altamente interattive, gli utenti non vogliono attendere il ricaricamento completo della pagina ogni volta che viene eseguita un'azione. Per questo motivo, JavaScript viene utilizzato per aggiornare direttamente l'HTML tramite il DOM, offrendo un'esperienza utente più fluida.
 
 In questa lezione, getteremo le basi per creare un'app bancaria web, utilizzando template HTML per creare più schermate che possono essere visualizzate e aggiornate senza dover ricaricare l'intera pagina HTML.
 
@@ -25,7 +25,7 @@ Hai bisogno di un server web locale per testare l'app web che costruiremo in que
 
 ### Preparazione
 
-Sul tuo computer, crea una cartella chiamata `bank` con un file chiamato `index.html` al suo interno. Partiremo da questo [boilerplate HTML](https://it.wikipedia.org/wiki/Boilerplate_code):
+Sul tuo computer, crea una cartella chiamata `bank` con un file chiamato `index.html` al suo interno. Partiremo da questo [boilerplate HTML](https://en.wikipedia.org/wiki/Boilerplate_code):
 
 ```html
 <!DOCTYPE html>
@@ -60,7 +60,7 @@ Creeremo un'app bancaria con due schermate: la pagina di login e la dashboard. P
 <div id="app">Loading...</div>
 ```
 
-Gli assegniamo un `id` per renderlo più facile da individuare con JavaScript in seguito.
+Gli diamo un `id` per renderlo più facile da individuare con JavaScript in seguito.
 
 > Suggerimento: poiché il contenuto di questo elemento verrà sostituito, possiamo inserire un messaggio o un indicatore di caricamento che verrà mostrato mentre l'app si sta caricando.
 
@@ -75,7 +75,7 @@ Successivamente, aggiungiamo sotto il template HTML per la pagina di login. Per 
 </template>
 ```
 
-Poi aggiungeremo un altro template HTML per la pagina della dashboard. Questa pagina conterrà diverse sezioni:
+Poi aggiungiamo un altro template HTML per la pagina della dashboard. Questa pagina conterrà diverse sezioni:
 
 - Un'intestazione con un titolo e un link per il logout
 - Il saldo corrente del conto bancario
@@ -154,7 +154,7 @@ updateRoute('login');
 
 ## Creare le rotte
 
-Quando si parla di un'app web, chiamiamo *Routing* l'intento di mappare gli **URL** a specifiche schermate che devono essere visualizzate. Su un sito web con più file HTML, questo avviene automaticamente poiché i percorsi dei file si riflettono sull'URL. Ad esempio, con questi file nella tua cartella di progetto:
+Quando si parla di un'app web, chiamiamo *Routing* l'intento di mappare **URL** a schermate specifiche che devono essere visualizzate. Su un sito web con più file HTML, questo avviene automaticamente poiché i percorsi dei file si riflettono sull'URL. Ad esempio, con questi file nella tua cartella di progetto:
 
 ```
 mywebsite/index.html
@@ -174,7 +174,7 @@ Tuttavia, per la nostra app web stiamo utilizzando un singolo file HTML contenen
 
 ### Compito
 
-Utilizzeremo un semplice oggetto per implementare una [mappa](https://it.wikipedia.org/wiki/Array_associativo) tra i percorsi URL e i nostri template. Aggiungi questo oggetto all'inizio del tuo file `app.js`.
+Utilizzeremo un semplice oggetto per implementare una [mappa](https://en.wikipedia.org/wiki/Associative_array) tra i percorsi URL e i nostri template. Aggiungi questo oggetto all'inizio del tuo file `app.js`:
 
 ```js
 const routes = {
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-Ora modifichiamo un po' la funzione `updateRoute`. Invece di passare direttamente il `templateId` come argomento, vogliamo recuperarlo prima guardando l'URL corrente e poi utilizzare la nostra mappa per ottenere il valore corrispondente del template ID. Possiamo usare [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) per ottenere solo la sezione del percorso dall'URL.
+Ora modifichiamo un po' la funzione `updateRoute`. Invece di passare direttamente il `templateId` come argomento, vogliamo recuperarlo prima guardando l'URL corrente e poi utilizzando la nostra mappa per ottenere il valore corrispondente del template ID. Possiamo usare [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) per ottenere solo la sezione del percorso dall'URL.
 
 ```js
 function updateRoute() {
@@ -198,7 +198,7 @@ function updateRoute() {
 }
 ```
 
-Qui abbiamo mappato le rotte che abbiamo dichiarato al template corrispondente. Puoi verificare che funzioni correttamente cambiando manualmente l'URL nel tuo browser.
+Qui abbiamo mappato le rotte dichiarate al template corrispondente. Puoi verificare che funzioni correttamente cambiando manualmente l'URL nel tuo browser.
 
 ✅ Cosa succede se inserisci un percorso sconosciuto nell'URL? Come potremmo risolvere questo problema?
 
@@ -206,14 +206,14 @@ Qui abbiamo mappato le rotte che abbiamo dichiarato al template corrispondente. 
 
 Il passo successivo per la nostra app è aggiungere la possibilità di navigare tra le pagine senza dover cambiare manualmente l'URL. Questo implica due cose:
 
-  1. Aggiornare l'URL corrente
-  2. Aggiornare il template visualizzato in base al nuovo URL
+1. Aggiornare l'URL corrente
+2. Aggiornare il template visualizzato in base al nuovo URL
 
-Abbiamo già affrontato la seconda parte con la funzione `updateRoute`, quindi dobbiamo capire come aggiornare l'URL corrente.
+Abbiamo già gestito la seconda parte con la funzione `updateRoute`, quindi dobbiamo capire come aggiornare l'URL corrente.
 
 Dovremo utilizzare JavaScript e, più specificamente, [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), che consente di aggiornare l'URL e creare una nuova voce nella cronologia di navigazione, senza ricaricare l'HTML.
 
-> Nota: Sebbene l'elemento HTML di ancoraggio [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) possa essere utilizzato da solo per creare collegamenti ipertestuali a diversi URL, farà ricaricare l'HTML al browser per impostazione predefinita. È necessario impedire questo comportamento quando si gestisce il routing con JavaScript personalizzato, utilizzando la funzione `preventDefault()` sull'evento click.
+> Nota: Sebbene l'elemento HTML di ancoraggio [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) possa essere utilizzato da solo per creare collegamenti ipertestuali a diversi URL, farà ricaricare l'HTML al browser per impostazione predefinita. È necessario impedire questo comportamento quando si gestisce il routing con JavaScript personalizzato, utilizzando la funzione `preventDefault()` sull'evento di clic.
 
 ### Compito
 
@@ -244,7 +244,7 @@ function updateRoute() {
 
 Se non è possibile trovare una rotta, ora verremo reindirizzati alla pagina di `login`.
 
-Ora creiamo una funzione per ottenere l'URL quando viene cliccato un link e per impedire il comportamento predefinito del browser per i link:
+Ora creiamo una funzione per ottenere l'URL quando viene cliccato un link e per impedire il comportamento predefinito del browser:
 
 ```js
 function onLinkClick(event) {
@@ -267,15 +267,15 @@ Utilizzando l'attributo [`onclick`](https://developer.mozilla.org/docs/Web/API/G
 
 Prova a cliccare su questi link, ora dovresti essere in grado di navigare tra le diverse schermate della tua app.
 
-✅ Il metodo `history.pushState` fa parte dello standard HTML5 ed è implementato in [tutti i browser moderni](https://caniuse.com/?search=pushState). Se stai costruendo un'app web per browser più vecchi, c'è un trucco che puoi utilizzare al posto di questa API: usando un [hash (`#`)](https://it.wikipedia.org/wiki/URI_fragment) prima del percorso, puoi implementare un routing che funziona con la normale navigazione tramite ancore e non ricarica la pagina, poiché il suo scopo era creare collegamenti interni all'interno di una pagina.
+✅ Il metodo `history.pushState` fa parte dello standard HTML5 ed è implementato in [tutti i browser moderni](https://caniuse.com/?search=pushState). Se stai costruendo un'app web per browser più vecchi, c'è un trucco che puoi utilizzare al posto di questa API: usando un [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) prima del percorso, puoi implementare un routing che funziona con la normale navigazione tramite ancore e non ricarica la pagina, poiché il suo scopo era creare collegamenti interni all'interno di una pagina.
 
-## Gestire i pulsanti indietro e avanti del browser
+## Gestire i pulsanti Indietro e Avanti del browser
 
-L'utilizzo di `history.pushState` crea nuove voci nella cronologia di navigazione del browser. Puoi verificarlo tenendo premuto il *pulsante indietro* del tuo browser, dovrebbe mostrare qualcosa del genere:
+L'utilizzo di `history.pushState` crea nuove voci nella cronologia di navigazione del browser. Puoi verificarlo tenendo premuto il *pulsante Indietro* del tuo browser, dovrebbe mostrare qualcosa del genere:
 
 ![Screenshot della cronologia di navigazione](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.it.png)
 
-Se provi a cliccare più volte sul pulsante indietro, vedrai che l'URL corrente cambia e la cronologia viene aggiornata, ma lo stesso template continua a essere visualizzato.
+Se provi a cliccare sul pulsante Indietro alcune volte, vedrai che l'URL corrente cambia e la cronologia viene aggiornata, ma lo stesso template continua a essere visualizzato.
 
 Questo perché l'applicazione non sa che dobbiamo chiamare `updateRoute()` ogni volta che la cronologia cambia. Se dai un'occhiata alla [documentazione di `history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), puoi vedere che se lo stato cambia - cioè ci spostiamo su un URL diverso - viene attivato l'evento [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event). Lo utilizzeremo per risolvere questo problema.
 
@@ -296,7 +296,7 @@ Ecco un video di ripasso sulle funzioni freccia:
 
 > 🎥 Clicca sull'immagine sopra per un video sulle funzioni freccia.
 
-Ora prova a utilizzare i pulsanti indietro e avanti del tuo browser e verifica che la rotta visualizzata venga aggiornata correttamente questa volta.
+Ora prova a utilizzare i pulsanti Indietro e Avanti del tuo browser e verifica che la rotta visualizzata venga aggiornata correttamente questa volta.
 
 ---
 
@@ -310,11 +310,13 @@ Aggiungi un nuovo template e una rotta per una terza pagina che mostri i crediti
 
 ## Revisione e Studio Autonomo
 
-Il routing è una delle parti sorprendentemente complesse dello sviluppo web, soprattutto man mano che il web si sposta dai comportamenti di aggiornamento della pagina alle applicazioni a pagina singola (SPA). Leggi un po' su [come il servizio Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) gestisce il routing. Riesci a spiegare perché alcune delle decisioni descritte in quel documento sono necessarie?
+Il routing è una delle parti sorprendentemente complesse dello sviluppo web, soprattutto man mano che il web si sposta dai comportamenti di aggiornamento della pagina alle applicazioni a pagina singola (SPA). Leggi un po' su [come il servizio Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) gestisce il routing. Puoi spiegare perché alcune delle decisioni descritte in quel documento sono necessarie?
 
 ## Compito
 
 [Migliora il routing](assignment.md)
 
+---
+
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.

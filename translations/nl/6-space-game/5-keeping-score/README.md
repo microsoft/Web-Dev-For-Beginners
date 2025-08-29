@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-27T20:21:15+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T00:57:47+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "nl"
 }
 -->
 # Bouw een Ruimtespel Deel 5: Score en Levens
 
-## Pre-Lecture Quiz
+## Pre-Les Quiz
 
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/37)
+[Pre-les quiz](https://ff-quizzes.netlify.app/web/quiz/37)
 
 In deze les leer je hoe je een score toevoegt aan een spel en levens berekent.
 
 ## Tekst op het scherm weergeven
 
-Om een spelscore op het scherm te tonen, moet je weten hoe je tekst op het scherm plaatst. Het antwoord is het gebruik van de `fillText()`-methode op het canvas-object. Je kunt ook andere aspecten regelen, zoals welk lettertype je gebruikt, de kleur van de tekst en zelfs de uitlijning (links, rechts, midden). Hieronder staat wat code die tekst op het scherm tekent.
+Om een spelscore op het scherm te kunnen weergeven, moet je weten hoe je tekst op het scherm plaatst. Het antwoord is het gebruik van de methode `fillText()` op het canvas-object. Je kunt ook andere aspecten aanpassen, zoals welk lettertype je wilt gebruiken, de kleur van de tekst en zelfs de uitlijning (links, rechts, midden). Hieronder staat wat code die tekst op het scherm tekent.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,13 +26,13 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Lees meer over [hoe je tekst toevoegt aan een canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), en voel je vrij om het er mooier uit te laten zien!
+✅ Lees meer over [hoe je tekst toevoegt aan een canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), en maak jouw versie gerust wat mooier!
 
-## Leven, als spelconcept
+## Levens, als spelconcept
 
-Het concept van een leven in een spel is simpelweg een getal. In de context van een ruimtespel is het gebruikelijk om een aantal levens toe te wijzen die één voor één worden afgetrokken wanneer je schip schade oploopt. Het is leuk als je dit grafisch kunt weergeven, bijvoorbeeld met mini-schepen of hartjes in plaats van een getal.
+Het concept van levens in een spel is simpelweg een getal. In de context van een ruimtespel is het gebruikelijk om een aantal levens toe te wijzen die één voor één worden afgetrokken wanneer je schip schade oploopt. Het is leuk als je een grafische weergave hiervan kunt tonen, zoals kleine scheepjes of hartjes in plaats van een getal.
 
-## Wat gaan we bouwen
+## Wat gaan we bouwen?
 
 Laten we het volgende aan je spel toevoegen:
 
@@ -60,11 +60,11 @@ cd your-work
 npm start
 ```
 
-Hiermee start je een HTTP-server op het adres `http://localhost:5000`. Open een browser en voer dat adres in. Op dit moment zou het de held en alle vijanden moeten weergeven, en als je op de linker- en rechterpijltjes drukt, beweegt de held en kan hij vijanden neerschieten.
+Bovenstaande start een HTTP-server op het adres `http://localhost:5000`. Open een browser en voer dat adres in. Op dit moment zou het de held en alle vijanden moeten weergeven, en als je op de linker- en rechterpijltjes drukt, beweegt de held en kan hij vijanden neerschieten.
 
 ### Code toevoegen
 
-1. **Kopieer de benodigde assets** van de map `solution/assets/` naar de map `your-work`; je voegt een `life.png`-asset toe. Voeg de lifeImg toe aan de window.onload-functie:
+1. **Kopieer de benodigde assets** van de map `solution/assets/` naar de map `your-work`; je voegt een `life.png` asset toe. Voeg de lifeImg toe aan de window.onload functie:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
@@ -80,9 +80,9 @@ Hiermee start je een HTTP-server op het adres `http://localhost:5000`. Open een 
     eventEmitter = new EventEmitter();
     ```
   
-2. **Voeg variabelen toe**. Voeg code toe die je totale score (0) en resterende levens (3) vertegenwoordigt, en toon deze scores op het scherm.
+2. **Voeg variabelen toe**. Voeg code toe die je totale score (0) en resterende levens (3) vertegenwoordigt, en geef deze scores weer op het scherm.
 
-3. **Breid de `updateGameObjects()`-functie uit**. Breid de `updateGameObjects()`-functie uit om vijandelijke botsingen af te handelen:
+3. **Breid de functie `updateGameObjects()` uit**. Breid de functie `updateGameObjects()` uit om vijandelijke botsingen af te handelen:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -93,15 +93,15 @@ Hiermee start je een HTTP-server op het adres `http://localhost:5000`. Open een 
       })
     ```
 
-4. **Voeg `life` en `points` toe**. 
-   1. **Initialiseer variabelen**. Onder `this.cooldown = 0` in de `Hero`-klasse, stel life en points in:
+4. **Voeg levens en punten toe**. 
+   1. **Initialiseer variabelen**. Onder `this.cooldown = 0` in de `Hero`-klasse, stel levens en punten in:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Teken variabelen op het scherm**. Teken deze waarden op het scherm:
+   1. **Teken variabelen op het scherm**. Geef deze waarden weer op het scherm:
 
         ```javascript
         function drawLife() {
@@ -128,7 +128,7 @@ Hiermee start je een HTTP-server op het adres `http://localhost:5000`. Open een 
 
         ```
 
-   1. **Voeg methoden toe aan de gameloop**. Zorg ervoor dat je deze functies toevoegt aan je window.onload-functie onder `updateGameObjects()`:
+   1. **Voeg methoden toe aan de gameloop**. Zorg ervoor dat je deze functies toevoegt aan je window.onload functie onder `updateGameObjects()`:
 
         ```javascript
         drawPoints();
@@ -177,7 +177,7 @@ Hiermee start je een HTTP-server op het adres `http://localhost:5000`. Open een 
 
 ✅ Doe wat onderzoek naar andere spellen die zijn gemaakt met JavaScript/Canvas. Wat zijn hun gemeenschappelijke kenmerken?
 
-Aan het einde van dit werk zou je de kleine 'leven'-schepen rechtsonder moeten zien, punten linksonder, en je zou je levensaantal moeten zien afnemen wanneer je met vijanden botst en je punten zien toenemen wanneer je vijanden neerschiet. Goed gedaan! Je spel is bijna klaar.
+Aan het einde van dit werk zou je de kleine 'leven'-scheepjes rechtsonder moeten zien, punten linksonder, en je zou moeten zien dat je levens afnemen wanneer je met vijanden botst en je punten toenemen wanneer je vijanden neerschiet. Goed gedaan! Je spel is bijna klaar.
 
 ---
 
@@ -185,9 +185,9 @@ Aan het einde van dit werk zou je de kleine 'leven'-schepen rechtsonder moeten z
 
 Je code is bijna compleet. Kun je je volgende stappen bedenken?
 
-## Post-Lecture Quiz
+## Post-Les Quiz
 
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/38)
+[Post-les quiz](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Review & Zelfstudie
 
@@ -195,9 +195,9 @@ Onderzoek enkele manieren waarop je spelscores en levens kunt verhogen en verlag
 
 ## Opdracht
 
-[Bouw een Scoringsspel](assignment.md)
+[Bouw een Scoring Game](assignment.md)
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

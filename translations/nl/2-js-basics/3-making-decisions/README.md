@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-27T20:13:05+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T00:59:56+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "nl"
 }
@@ -13,11 +13,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Quiz Voorafgaand aan de Les
+## Pre-Lecture Quiz
 
-[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/11)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Beslissingen nemen en de volgorde waarin je code wordt uitgevoerd beheersen, maakt je code herbruikbaar en robuust. Dit gedeelte behandelt de syntax voor het beheersen van de gegevensstroom in JavaScript en het belang ervan bij het gebruik met Booleaanse gegevenstypen.
+Beslissingen nemen en de volgorde waarin je code wordt uitgevoerd beheersen, maakt je code herbruikbaar en robuust. Dit gedeelte behandelt de syntaxis voor het beheersen van de gegevensstroom in JavaScript en het belang ervan bij gebruik met Booleaanse datatypes.
 
 [![Beslissingen Nemen](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Beslissingen Nemen")
 
@@ -41,15 +41,15 @@ Stel je boolean in op true of false zoals dit:
 Operatoren worden gebruikt om voorwaarden te evalueren door vergelijkingen te maken die een Booleaanse waarde opleveren. Hieronder staat een lijst van veelgebruikte operatoren.
 
 | Symbool | Beschrijving                                                                                                                                                   | Voorbeeld          |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`     | **Kleiner dan**: Vergelijkt twee waarden en retourneert het Booleaanse gegevenstype `true` als de waarde aan de linkerkant kleiner is dan die aan de rechterkant | `5 < 6 // true`    |
-| `<=`    | **Kleiner dan of gelijk aan**: Vergelijkt twee waarden en retourneert het Booleaanse gegevenstype `true` als de waarde aan de linkerkant kleiner dan of gelijk is aan de rechterkant | `5 <= 6 // true`   |
-| `>`     | **Groter dan**: Vergelijkt twee waarden en retourneert het Booleaanse gegevenstype `true` als de waarde aan de linkerkant groter is dan die aan de rechterkant  | `5 > 6 // false`   |
-| `>=`    | **Groter dan of gelijk aan**: Vergelijkt twee waarden en retourneert het Booleaanse gegevenstype `true` als de waarde aan de linkerkant groter dan of gelijk is aan de rechterkant | `5 >= 6 // false`  |
-| `===`   | **Strikte gelijkheid**: Vergelijkt twee waarden en retourneert het Booleaanse gegevenstype `true` als de waarden aan de rechter- en linkerkant gelijk zijn EN hetzelfde gegevenstype hebben | `5 === 6 // false` |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `<`     | **Kleiner dan**: Vergelijkt twee waarden en retourneert het Booleaanse datatype `true` als de waarde aan de linkerkant kleiner is dan die aan de rechterkant    | `5 < 6 // true`    |
+| `<=`    | **Kleiner dan of gelijk aan**: Vergelijkt twee waarden en retourneert het Booleaanse datatype `true` als de waarde aan de linkerkant kleiner dan of gelijk is   | `5 <= 6 // true`   |
+| `>`     | **Groter dan**: Vergelijkt twee waarden en retourneert het Booleaanse datatype `true` als de waarde aan de linkerkant groter is dan die aan de rechterkant      | `5 > 6 // false`   |
+| `>=`    | **Groter dan of gelijk aan**: Vergelijkt twee waarden en retourneert het Booleaanse datatype `true` als de waarde aan de linkerkant groter dan of gelijk is     | `5 >= 6 // false`  |
+| `===`   | **Strikte gelijkheid**: Vergelijkt twee waarden en retourneert het Booleaanse datatype `true` als de waarden aan beide kanten gelijk zijn EN hetzelfde datatype | `5 === 6 // false` |
 | `!==`   | **Ongelijkheid**: Vergelijkt twee waarden en retourneert de tegenovergestelde Booleaanse waarde van wat een strikte gelijkheidsoperator zou retourneren         | `5 !== 6 // true`  |
 
-✅ Test je kennis door enkele vergelijkingen in de console van je browser te schrijven. Verrast een van de geretourneerde gegevens je?
+✅ Test je kennis door enkele vergelijkingen te schrijven in de console van je browser. Verrast een van de geretourneerde gegevens je?
 
 ## If Statement
 
@@ -90,7 +90,7 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-✅ Test je begrip van deze code en de volgende code door deze in een browserconsole uit te voeren. Verander de waarden van de variabelen `currentMoney` en `laptopPrice` om de geretourneerde `console.log()` te wijzigen.
+✅ Test je begrip van deze code en de volgende code door deze uit te voeren in een browserconsole. Verander de waarden van de variabelen `currentMoney` en `laptopPrice` om de geretourneerde `console.log()` te wijzigen.
 
 ## Switch Statement
 
@@ -127,7 +127,7 @@ switch (a) {
 console.log(`The value is ${a}`);
 ```
 
-✅ Test je begrip van deze code en de volgende code door deze in een browserconsole uit te voeren. Verander de waarden van de variabele `a` om de geretourneerde `console.log()` te wijzigen.
+✅ Test je begrip van deze code en de volgende code door deze uit te voeren in een browserconsole. Verander de waarde van de variabele `a` om de geretourneerde `console.log()` te wijzigen.
 
 ## Logische Operatoren en Booleans
 
@@ -135,7 +135,7 @@ Beslissingen kunnen meer dan één vergelijking vereisen en kunnen worden gecomb
 
 | Symbool | Beschrijving                                                                                     | Voorbeeld                                                                 |
 | ------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`    | **Logische EN**: Vergelijkt twee Booleaanse expressies. Retourneert true **alleen** als beide kanten waar zijn | `(5 > 6) && (5 < 6 ) //Eén kant is onwaar, de andere is waar. Retourneert false` |
+| `&&`    | **Logische EN**: Vergelijkt twee Booleaanse expressies. Retourneert true **alleen** als beide waar zijn | `(5 > 6) && (5 < 6 ) //Eén kant is onwaar, de andere is waar. Retourneert false` |
 | `\|\|`  | **Logische OF**: Vergelijkt twee Booleaanse expressies. Retourneert true als minstens één kant waar is | `(5 > 6) \|\| (5 < 6) //Eén kant is onwaar, de andere is waar. Retourneert true` |
 | `!`     | **Logische NIET**: Retourneert de tegenovergestelde waarde van een Booleaanse expressie          | `!(5 > 6) // 5 is niet groter dan 6, maar "!" retourneert true`         |
 
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Negatie-operator
 
-Je hebt tot nu toe gezien hoe je een `if...else`-statement kunt gebruiken om conditionele logica te creëren. Alles wat in een `if` gaat, moet evalueren naar true/false. Door de `!`-operator te gebruiken kun je de expressie _negatief maken_. Het zou er zo uitzien:
+Je hebt tot nu toe gezien hoe je een `if...else`-statement kunt gebruiken om conditionele logica te creëren. Alles wat in een `if` gaat, moet evalueren naar true/false. Door de `!`-operator te gebruiken kun je de expressie _negeren_. Het zou er zo uitzien:
 
 ```javascript
 if (!condition) {
@@ -171,7 +171,7 @@ if (!condition) {
 
 ### Ternaire expressies
 
-`if...else` is niet de enige manier om beslissingslogica uit te drukken. Je kunt ook iets gebruiken dat een ternaire operator wordt genoemd. De syntax ziet er als volgt uit:
+`if...else` is niet de enige manier om beslissingslogica uit te drukken. Je kunt ook iets gebruiken dat een ternaire operator wordt genoemd. De syntaxis ziet er als volgt uit:
 
 ```javascript
 let variable = condition ? <return this if true> : <return this if false>
@@ -185,7 +185,7 @@ let secondNumber = 10;
 let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 ```
 
-✅ Neem een minuut om deze code een paar keer door te lezen. Begrijp je hoe deze operatoren werken?
+✅ Neem een minuut om deze code een paar keer te lezen. Begrijp je hoe deze operatoren werken?
 
 Het bovenstaande stelt dat:
 
@@ -208,15 +208,15 @@ if (firstNumber > secondNumber) {
 
 ## 🚀 Uitdaging
 
-Maak een programma dat eerst wordt geschreven met logische operatoren en herschrijf het vervolgens met een ternaire expressie. Wat is jouw favoriete syntax?
+Maak een programma dat eerst wordt geschreven met logische operatoren en herschrijf het vervolgens met een ternaire expressie. Wat is jouw favoriete syntaxis?
 
 ---
 
-## Quiz Na de Les
+## Post-Lecture Quiz
 
-[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/12)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/12)
 
-## Herziening & Zelfstudie
+## Herhaling & Zelfstudie
 
 Lees meer over de vele operatoren die beschikbaar zijn voor de gebruiker [op MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
@@ -229,4 +229,4 @@ Bekijk Josh Comeau's geweldige [operator lookup](https://joshwcomeau.com/operato
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

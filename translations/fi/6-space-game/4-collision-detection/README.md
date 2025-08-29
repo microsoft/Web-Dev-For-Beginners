@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-27T20:25:59+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T00:41:05+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "fi"
 }
@@ -15,24 +15,24 @@ CO_OP_TRANSLATOR_METADATA:
 
 Tässä osiossa opit ampumaan lasereita JavaScriptillä! Lisäämme peliimme kaksi asiaa:
 
-- **Laser**: tämä laser ammutaan sankarisi aluksesta pystysuoraan ylöspäin
-- **Törmäyksen tunnistus**, osana ampumisen toteutusta lisäämme myös seuraavat pelisäännöt:
-   - **Laser osuu viholliseen**: Vihollinen tuhoutuu, jos laser osuu siihen
-   - **Laser osuu ruudun yläreunaan**: Laser tuhoutuu, jos se osuu ruudun yläosaan
-   - **Vihollinen ja sankari törmäävät**: Vihollinen ja sankari tuhoutuvat, jos ne törmäävät toisiinsa
-   - **Vihollinen osuu ruudun alareunaan**: Vihollinen ja sankari tuhoutuvat, jos vihollinen osuu ruudun alareunaan
+- **Laserin**: tämä laser ammutaan sankarisi aluksesta pystysuoraan ylöspäin.
+- **Törmäyksen tunnistuksen**: osana ampumistoiminnon toteutusta lisäämme myös seuraavat pelisäännöt:
+   - **Laser osuu viholliseen**: Vihollinen tuhoutuu, jos laser osuu siihen.
+   - **Laser osuu ruudun yläreunaan**: Laser tuhoutuu, jos se osuu ruudun yläosaan.
+   - **Vihollinen ja sankari törmäävät**: Vihollinen ja sankari tuhoutuvat, jos ne törmäävät toisiinsa.
+   - **Vihollinen osuu ruudun alareunaan**: Vihollinen ja sankari tuhoutuvat, jos vihollinen saavuttaa ruudun alareunan.
 
-Lyhyesti sanottuna, sinä -- *sankari* -- sinun täytyy tuhota kaikki viholliset laserilla ennen kuin ne ehtivät liikkua ruudun alareunaan.
+Lyhyesti sanottuna, sinun -- *sankarin* -- täytyy tuhota kaikki viholliset laserilla ennen kuin ne ehtivät ruudun alareunaan.
 
-✅ Tee hieman tutkimusta ensimmäisestä koskaan kirjoitetusta tietokonepelistä. Mitä toiminnallisuuksia siinä oli?
+✅ Tee hieman tutkimusta ensimmäisestä koskaan kirjoitetusta tietokonepelistä. Millainen sen toiminnallisuus oli?
 
-Ollaan sankarillisia yhdessä!
+Ollaan sankareita yhdessä!
 
 ## Törmäyksen tunnistus
 
-Miten toteutamme törmäyksen tunnistuksen? Meidän täytyy ajatella pelin objekteja suorakulmioina, jotka liikkuvat ympäriinsä. Miksi näin, saatat kysyä? No, pelin objektin piirtämiseen käytetty kuva on suorakulmio: sillä on `x`, `y`, `leveys` ja `korkeus`.
+Miten tunnistamme törmäykset? Meidän täytyy ajatella pelin objekteja suorakulmioina, jotka liikkuvat ympäriinsä. Miksi näin, saatat kysyä? No, kuva, jota käytetään pelin objektin piirtämiseen, on suorakulmio: sillä on `x`, `y`, `leveys` ja `korkeus`.
 
-Jos kaksi suorakulmiota, esimerkiksi sankari ja vihollinen, *leikkaavat* toisiaan, tapahtuu törmäys. Mitä sen jälkeen tapahtuu, riippuu pelin säännöistä. Törmäyksen tunnistuksen toteuttamiseen tarvitset seuraavat asiat:
+Jos kaksi suorakulmiota, esimerkiksi sankari ja vihollinen, *leikkaavat* toisiaan, tapahtuu törmäys. Mitä sen jälkeen tapahtuu, riippuu pelin säännöistä. Törmäyksen tunnistuksen toteuttamiseksi tarvitset seuraavat asiat:
 
 1. Tavan saada pelin objektista suorakulmion esitys, esimerkiksi näin:
 
@@ -60,14 +60,14 @@ Jos kaksi suorakulmiota, esimerkiksi sankari ja vihollinen, *leikkaavat* toisiaa
 
 ## Miten tuhoamme asioita
 
-Asioiden tuhoaminen pelissä tarkoittaa, että pelille kerrotaan, ettei sen enää tarvitse piirtää kyseistä objektia pelisilmukassa, joka käynnistyy tietyin väliajoin. Tämän voi tehdä merkitsemällä pelin objektin *kuolleeksi*, kun jotain tapahtuu, esimerkiksi näin:
+Asioiden tuhoaminen pelissä tarkoittaa, että pelille kerrotaan, ettei sen enää tarvitse piirtää kyseistä objektia pelisilmukassa, joka käynnistyy tietyin väliajoin. Tämä voidaan tehdä merkitsemällä pelin objekti *kuolleeksi*, kun jotain tapahtuu, esimerkiksi näin:
 
 ```javascript
 // collision happened
 enemy.dead = true
 ```
 
-Sen jälkeen voit poistaa *kuolleet* objektit ennen ruudun uudelleenpiirtämistä, esimerkiksi näin:
+Sen jälkeen voit käsitellä *kuolleet* objektit ennen ruudun uudelleenpiirtämistä, esimerkiksi näin:
 
 ```javascript
 gameObjects = gameObject.filter(go => !go.dead);
@@ -75,7 +75,7 @@ gameObjects = gameObject.filter(go => !go.dead);
 
 ## Miten ammutaan laser
 
-Laserin ampuminen tarkoittaa näppäintapahtumaan reagoimista ja objektin luomista, joka liikkuu tiettyyn suuntaan. Meidän täytyy siis suorittaa seuraavat vaiheet:
+Laserin ampuminen tarkoittaa näppäintapahtumaan reagoimista ja objektin luomista, joka liikkuu tiettyyn suuntaan. Meidän täytyy suorittaa seuraavat vaiheet:
 
 1. **Luo laser-objekti**: sankarisi aluksen yläosasta, joka alkaa liikkua ylöspäin kohti ruudun yläosaa heti luomisen jälkeen.
 2. **Liitä koodi näppäintapahtumaan**: meidän täytyy valita näppäin, joka edustaa pelaajan laserin ampumista.
@@ -83,7 +83,7 @@ Laserin ampuminen tarkoittaa näppäintapahtumaan reagoimista ja objektin luomis
 
 ## Laserin viive
 
-Laserin täytyy ampua joka kerta, kun painat näppäintä, esimerkiksi *välilyöntiä*. Jotta peli ei tuottaisi liian monta laseria lyhyessä ajassa, meidän täytyy korjata tämä. Korjaus tehdään toteuttamalla niin sanottu *viive*, ajastin, joka varmistaa, että laser voidaan ampua vain tietyn ajan välein. Voit toteuttaa sen seuraavasti:
+Laserin täytyy ampua aina, kun painat näppäintä, esimerkiksi *välilyöntiä*. Jotta peli ei tuottaisi liian monta laseria lyhyessä ajassa, meidän täytyy korjata tämä. Korjaus tehdään toteuttamalla niin sanottu *viive*, ajastin, joka varmistaa, että laser voidaan ampua vain tietyn ajan välein. Voit toteuttaa sen seuraavasti:
 
 ```javascript
 class Cooldown {
@@ -113,15 +113,15 @@ class Weapon {
 
 ## Mitä rakennetaan
 
-Otat käyttöön olemassa olevan koodin (jonka olet siivonnut ja refaktoroinut) edellisestä osasta ja laajennat sitä. Voit joko aloittaa osan II koodista tai käyttää koodia [Osa III - aloitus](../../../../../../../../../your-work).
+Otat olemassa olevan koodin (jonka olet siivonnut ja refaktoroinut) edellisestä osasta ja laajennat sitä. Voit joko aloittaa osan II koodista tai käyttää koodia kohdasta [Osa III - aloitus](../../../../../../../../../your-work).
 
-> vinkki: laser, jonka kanssa työskentelet, on jo omaisuuskansiossasi ja viitattu koodissasi
+> vinkki: laser, jonka kanssa työskentelet, on jo assets-kansiossasi ja viitattu koodissasi
 
-- **Lisää törmäyksen tunnistus**, kun laser törmää johonkin, seuraavat säännöt pätevät:
-   1. **Laser osuu viholliseen**: vihollinen tuhoutuu, jos laser osuu siihen
-   2. **Laser osuu ruudun yläreunaan**: laser tuhoutuu, jos se osuu ruudun yläosaan
-   3. **Vihollinen ja sankari törmäävät**: vihollinen ja sankari tuhoutuvat, jos ne törmäävät toisiinsa
-   4. **Vihollinen osuu ruudun alareunaan**: vihollinen ja sankari tuhoutuvat, jos vihollinen osuu ruudun alareunaan
+- **Lisää törmäyksen tunnistus**, kun laser osuu johonkin, seuraavien sääntöjen tulisi päteä:
+   1. **Laser osuu viholliseen**: vihollinen tuhoutuu, jos laser osuu siihen.
+   2. **Laser osuu ruudun yläreunaan**: laser tuhoutuu, jos se osuu ruudun yläosaan.
+   3. **Vihollinen ja sankari törmäävät**: vihollinen ja sankari tuhoutuvat, jos ne törmäävät toisiinsa.
+   4. **Vihollinen osuu ruudun alareunaan**: vihollinen ja sankari tuhoutuvat, jos vihollinen saavuttaa ruudun alareunan.
 
 ## Suositellut vaiheet
 
@@ -144,11 +144,11 @@ cd your-work
 npm start
 ```
 
-Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. Avaa selain ja syötä kyseinen osoite, tällä hetkellä sen pitäisi näyttää sankari ja kaikki viholliset, mutta mikään ei vielä liiku :).
+Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. Avaa selain ja syötä kyseinen osoite. Tällä hetkellä sen pitäisi näyttää sankari ja kaikki viholliset, mutta mikään ei vielä liiku :).
 
-### Lisää koodia
+### Lisää koodi
 
-1. **Määritä pelin objektin suorakulmion esitys törmäyksen käsittelyä varten** Alla oleva koodi mahdollistaa suorakulmion esityksen `GameObject`-luokasta. Muokkaa GameObject-luokkaasi laajentaaksesi sitä:
+1. **Määritä pelin objektin suorakulmion esitys törmäyksen käsittelyä varten** Alla oleva koodi mahdollistaa suorakulmion esityksen saamisen `GameObject`-objektista. Muokkaa GameObject-luokkaasi laajentaaksesi sitä:
 
     ```javascript
     rectFromGameObject() {
@@ -161,7 +161,7 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
       }
     ```
 
-2. **Lisää koodi, joka tarkistaa törmäyksen** Tämä on uusi funktio, joka testaa, leikkaavatko kaksi suorakulmiota toisiaan:
+2. **Lisää koodi, joka tarkistaa törmäykset** Tämä on uusi funktio, joka testaa, leikkaavatko kaksi suorakulmiota toisiaan:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -175,7 +175,7 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
     ```
 
 3. **Lisää laserin ampumiskyky**
-   1. **Lisää näppäintapahtuman viesti**. *Välilyönti*-näppäimen pitäisi luoda laser juuri sankarialuksen yläpuolelle. Lisää kolme vakioarvoa Messages-objektiin:
+   1. **Lisää näppäintapahtumaviesti**. *Välilyönti*-näppäimen pitäisi luoda laser juuri sankarialuksen yläpuolelle. Lisää kolme vakioarvoa Messages-objektiin:
 
        ```javascript
         KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
@@ -230,7 +230,7 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
       }
       ```
 
-   1. **Käsittele törmäykset**, Toteuta laserin törmäyssäännöt. Lisää `updateGameObjects()`-funktio, joka testaa törmäävät objektit:
+   1. **Käsittele törmäykset**, Toteuta laserin törmäyssäännöt. Lisää `updateGameObjects()`-funktio, joka testaa törmäyksiä:
 
       ```javascript
       function updateGameObjects() {
@@ -252,7 +252,7 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
       }  
       ```
 
-      Varmista, että lisäät `updateGameObjects()`-funktion pelisilmukkaan `window.onload`-kohdassa.
+      Varmista, että lisäät `updateGameObjects()`-funktion pelisilmukkaasi `window.onload`-kohdassa.
 
    4. **Toteuta viive** laserille, jotta sitä voidaan ampua vain tietyn ajan välein.
 
@@ -285,13 +285,13 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
       }
       ```
 
-Tässä vaiheessa pelissäsi on joitakin toiminnallisuuksia! Voit liikkua nuolinäppäimillä, ampua laserin välilyöntinäppäimellä, ja viholliset katoavat, kun osut niihin. Hyvin tehty!
+Tässä vaiheessa pelissäsi on joitakin toiminnallisuuksia! Voit liikkua nuolinäppäimillä, ampua laserin välilyönnillä, ja viholliset katoavat, kun osut niihin. Hyvin tehty!
 
 ---
 
 ## 🚀 Haaste
 
-Lisää räjähdys! Katso pelin omaisuuksia [Space Art -repo](../../../../6-space-game/solution/spaceArt/readme.txt) ja yritä lisätä räjähdys, kun laser osuu avaruusolioon.
+Lisää räjähdys! Tutustu pelin assetteihin [Space Art -repo](../../../../6-space-game/solution/spaceArt/readme.txt) -kohdassa ja yritä lisätä räjähdys, kun laser osuu viholliseen.
 
 ## Jälkikysely
 
@@ -308,4 +308,4 @@ Kokeile pelisi aikavälejä tähän mennessä. Mitä tapahtuu, kun muutat niitä
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

@@ -1,33 +1,33 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e982871b8388c59c22a41b73b5fca70f",
-  "translation_date": "2025-08-27T21:08:53+00:00",
+  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
+  "translation_date": "2025-08-29T01:03:37+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "nl"
 }
 -->
 # Een spel maken met behulp van events
 
-## Quiz voor de les
+## Quiz voorafgaand aan de les
 
-[Quiz voor de les](https://ff-quizzes.netlify.app/web/quiz/21)
+[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Event-driven programmeren
 
 Bij het maken van een browsergebaseerde applicatie bieden we een grafische gebruikersinterface (GUI) aan waarmee de gebruiker kan interageren met wat we hebben gebouwd. De meest gebruikelijke manier om met de browser te interageren is door te klikken en te typen in verschillende elementen. De uitdaging voor ons als ontwikkelaars is dat we niet weten wanneer ze deze acties gaan uitvoeren!
 
-[Event-driven programmeren](https://en.wikipedia.org/wiki/Event-driven_programming) is de naam voor het type programmeren dat we nodig hebben om onze GUI te maken. Als we deze term een beetje ontleden, zien we dat het kernwoord hier **event** is. [Event](https://www.merriam-webster.com/dictionary/event), volgens Merriam-Webster, wordt gedefinieerd als "iets dat gebeurt". Dit beschrijft onze situatie perfect. We weten dat er iets gaat gebeuren waarvoor we code willen uitvoeren als reactie, maar we weten niet wanneer het zal plaatsvinden.
+[Event-driven programmeren](https://en.wikipedia.org/wiki/Event-driven_programming) is de naam voor het type programmeren dat we moeten gebruiken om onze GUI te maken. Als we deze term een beetje ontleden, zien we dat het kernwoord hier **event** is. [Event](https://www.merriam-webster.com/dictionary/event), volgens Merriam-Webster, wordt gedefinieerd als "iets dat gebeurt". Dit beschrijft onze situatie perfect. We weten dat er iets gaat gebeuren waarvoor we code willen uitvoeren als reactie, maar we weten niet wanneer het zal plaatsvinden.
 
 De manier waarop we een stuk code markeren dat we willen uitvoeren, is door een functie te maken. Als we denken aan [procedureel programmeren](https://en.wikipedia.org/wiki/Procedural_programming), worden functies in een specifieke volgorde aangeroepen. Ditzelfde geldt voor event-driven programmeren. Het verschil zit in **hoe** de functies worden aangeroepen.
 
-Om events (knopklikken, typen, enz.) te verwerken, registreren we **event listeners**. Een event listener is een functie die luistert naar een event dat plaatsvindt en code uitvoert als reactie. Event listeners kunnen de UI bijwerken, serveraanroepen doen of wat er verder nodig is als reactie op de actie van de gebruiker. We voegen een event listener toe met behulp van [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) en geven een functie op om uit te voeren.
+Om events te verwerken (knopklikken, typen, enz.), registreren we **event listeners**. Een event listener is een functie die luistert naar een event dat plaatsvindt en code uitvoert als reactie. Event listeners kunnen de UI bijwerken, serveraanroepen doen, of wat er ook nodig is als reactie op de actie van de gebruiker. We voegen een event listener toe met behulp van [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) en geven een functie op die moet worden uitgevoerd.
 
-> **NOTE:** Het is belangrijk om te benadrukken dat er verschillende manieren zijn om event listeners te maken. Je kunt anonieme functies gebruiken of benoemde functies maken. Je kunt verschillende snelkoppelingen gebruiken, zoals het instellen van de `click`-eigenschap of het gebruik van `addEventListener`. In onze oefening gaan we ons richten op `addEventListener` en anonieme functies, omdat dit waarschijnlijk de meest gebruikelijke techniek is die webontwikkelaars gebruiken. Het is ook de meest flexibele, omdat `addEventListener` werkt voor alle events en de eventnaam als parameter kan worden opgegeven.
+> **NOTE:** Het is belangrijk om te benadrukken dat er verschillende manieren zijn om event listeners te maken. Je kunt anonieme functies gebruiken of benoemde functies maken. Je kunt verschillende snelkoppelingen gebruiken, zoals het instellen van de `click`-eigenschap of het gebruik van `addEventListener`. In onze oefening gaan we ons richten op `addEventListener` en anonieme functies, omdat dit waarschijnlijk de meest gebruikte techniek is onder webontwikkelaars. Het is ook de meest flexibele, omdat `addEventListener` werkt voor alle events en de eventnaam als parameter kan worden opgegeven.
 
 ### Veelvoorkomende events
 
-Er zijn [tientallen events](https://developer.mozilla.org/docs/Web/Events) beschikbaar om naar te luisteren bij het maken van een applicatie. Eigenlijk roept alles wat een gebruiker op een pagina doet een event op, wat je veel macht geeft om ervoor te zorgen dat ze de ervaring krijgen die je wenst. Gelukkig heb je meestal maar een klein aantal events nodig. Hier zijn een paar veelvoorkomende (inclusief de twee die we gaan gebruiken bij het maken van ons spel):
+Er zijn [tientallen events](https://developer.mozilla.org/docs/Web/Events) beschikbaar die je kunt gebruiken bij het maken van een applicatie. In principe roept alles wat een gebruiker op een pagina doet een event op, wat je veel mogelijkheden geeft om ervoor te zorgen dat ze de ervaring krijgen die je wenst. Gelukkig heb je meestal maar een klein aantal events nodig. Hier zijn een paar veelvoorkomende (inclusief de twee die we gaan gebruiken bij het maken van ons spel):
 
 - [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): De gebruiker heeft ergens op geklikt, meestal een knop of hyperlink
 - [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): De gebruiker heeft met de rechtermuisknop geklikt
@@ -36,11 +36,11 @@ Er zijn [tientallen events](https://developer.mozilla.org/docs/Web/Events) besch
 
 ## Het spel maken
 
-We gaan een spel maken om te ontdekken hoe events werken in JavaScript. Ons spel gaat de typevaardigheid van een speler testen, wat een van de meest onderschatte vaardigheden is die alle ontwikkelaars zouden moeten hebben. We zouden allemaal onze typevaardigheid moeten oefenen! De algemene flow van het spel ziet er als volgt uit:
+We gaan een spel maken om te ontdekken hoe events werken in JavaScript. Ons spel zal de typevaardigheid van een speler testen, wat een van de meest onderschatte vaardigheden is die alle ontwikkelaars zouden moeten hebben. We zouden allemaal onze typevaardigheid moeten oefenen! De algemene flow van het spel ziet er als volgt uit:
 
-- De speler klikt op de startknop en krijgt een quote om te typen
+- De speler klikt op de startknop en krijgt een quote te zien om te typen
 - De speler typt de quote zo snel mogelijk in een tekstvak
-  - Zodra een woord is voltooid, wordt het volgende woord gemarkeerd
+  - Elke keer dat een woord is voltooid, wordt het volgende woord gemarkeerd
   - Als de speler een typefout maakt, wordt het tekstvak rood
   - Wanneer de speler de quote voltooit, wordt een succesbericht weergegeven met de verstreken tijd
 
@@ -48,7 +48,7 @@ Laten we ons spel bouwen en meer leren over events!
 
 ### Bestandsstructuur
 
-We hebben in totaal drie bestanden nodig: **index.html**, **script.js** en **style.css**. Laten we die instellen om het onszelf wat makkelijker te maken.
+We hebben in totaal drie bestanden nodig: **index.html**, **script.js** en **style.css**. Laten we die opzetten om het onszelf wat makkelijker te maken.
 
 - Maak een nieuwe map voor je werk door een console- of terminalvenster te openen en het volgende commando uit te voeren:
 
@@ -71,7 +71,7 @@ code .
   - script.js
   - style.css
 
-## Maak de gebruikersinterface
+## De gebruikersinterface maken
 
 Als we de vereisten bekijken, weten we dat we een aantal elementen nodig hebben op onze HTML-pagina. Dit is een beetje zoals een recept, waarbij we enkele ingrediënten nodig hebben:
 
@@ -105,7 +105,7 @@ Maak een nieuw bestand genaamd **index.html**. Voeg de volgende HTML toe:
 </html>
 ```
 
-### Start de applicatie
+### De applicatie starten
 
 Het is altijd het beste om iteratief te ontwikkelen om te zien hoe dingen eruitzien. Laten we onze applicatie starten. Er is een geweldige extensie voor Visual Studio Code genaamd [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) die zowel je applicatie lokaal host als de browser ververst elke keer dat je opslaat.
 
@@ -138,7 +138,7 @@ Maak een nieuw bestand genaamd **style.css** en voeg de volgende syntax toe.
 }
 ```
 
-✅ Als het gaat om CSS kun je je pagina indelen zoals je wilt. Neem even de tijd om de pagina er aantrekkelijker uit te laten zien:
+✅ Als het gaat om CSS kun je je pagina indelen zoals je wilt. Neem wat tijd om de pagina aantrekkelijker te maken:
 
 - Kies een ander lettertype
 - Geef de koppen een kleur
@@ -146,7 +146,7 @@ Maak een nieuw bestand genaamd **style.css** en voeg de volgende syntax toe.
 
 ## JavaScript
 
-Met onze UI gemaakt, is het tijd om onze aandacht te richten op de JavaScript die de logica zal bieden. We gaan dit opsplitsen in een aantal stappen:
+Met onze UI gemaakt, is het tijd om ons te richten op de JavaScript die de logica zal bieden. We gaan dit opsplitsen in een aantal stappen:
 
 - [Maak de constanten](../../../../4-typing-game/typing-game)
 - [Event listener om het spel te starten](../../../../4-typing-game/typing-game)
@@ -154,9 +154,9 @@ Met onze UI gemaakt, is het tijd om onze aandacht te richten op de JavaScript di
 
 Maar eerst, maak een nieuw bestand genaamd **script.js**.
 
-### Maak de constanten
+### Voeg de constanten toe
 
-We hebben een paar items nodig om ons leven wat makkelijker te maken bij het programmeren. Opnieuw, vergelijkbaar met een recept, hier is wat we nodig hebben:
+We hebben een paar items nodig om het programmeren wat makkelijker te maken. Opnieuw, vergelijkbaar met een recept, hier is wat we nodig hebben:
 
 - Een array met de lijst van alle quotes
 - Een lege array om alle woorden van de huidige quote op te slaan
@@ -166,7 +166,7 @@ We hebben een paar items nodig om ons leven wat makkelijker te maken bij het pro
 We willen ook verwijzingen naar de UI-elementen:
 
 - Het tekstvak (**typed-value**)
-- De quote-weergave (**quote**)
+- De quoteweergave (**quote**)
 - Het bericht (**message**)
 
 ```javascript
@@ -196,7 +196,7 @@ const typedValueElement = document.getElementById('typed-value');
 
 > **NOTE:** We kunnen de elementen altijd ophalen in de code door `document.getElementById` te gebruiken. Omdat we regelmatig naar deze elementen gaan verwijzen, vermijden we typefouten met string literals door constanten te gebruiken. Frameworks zoals [Vue.js](https://vuejs.org/) of [React](https://reactjs.org/) kunnen je helpen bij het beter beheren van het centraliseren van je code.
 
-Neem een minuut om een video te bekijken over het gebruik van `const`, `let` en `var`
+Neem een minuut om een video te bekijken over het gebruik van `const`, `let` en `var`.
 
 [![Soorten variabelen](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Soorten variabelen")
 
@@ -206,7 +206,7 @@ Neem een minuut om een video te bekijken over het gebruik van `const`, `let` en 
 
 Om het spel te beginnen, klikt de speler op start. Natuurlijk weten we niet wanneer ze op start gaan klikken. Dit is waar een [event listener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) van pas komt. Een event listener stelt ons in staat om te luisteren naar iets dat gebeurt (een event) en code uit te voeren als reactie. In ons geval willen we code uitvoeren wanneer de gebruiker op start klikt.
 
-Wanneer de gebruiker op **start** klikt, moeten we een quote selecteren, de gebruikersinterface instellen en tracking instellen voor het huidige woord en de timing. Hieronder staat de JavaScript die je moet toevoegen; we bespreken het direct na het scriptblok.
+Wanneer de gebruiker op **start** klikt, moeten we een quote selecteren, de gebruikersinterface instellen en de tracking voor het huidige woord en de timing instellen. Hieronder staat de JavaScript die je moet toevoegen; we bespreken het direct na het scriptblok.
 
 ```javascript
 // at the end of script.js
@@ -300,18 +300,18 @@ typedValueElement.addEventListener('input', () => {
 });
 ```
 
-Laten we de code opsplitsen! We beginnen met het ophalen van het huidige woord en de waarde die de speler tot nu toe heeft getypt. Vervolgens hebben we waterval-logica, waarbij we controleren of de quote compleet is, het woord compleet is, het woord correct is, of (ten slotte) of er een fout is.
+Laten we de code opsplitsen! We beginnen met het ophalen van het huidige woord en de waarde die de speler tot nu toe heeft getypt. Vervolgens hebben we een watervallogica, waarbij we controleren of de quote compleet is, het woord compleet is, het woord correct is, of (ten slotte) of er een fout is.
 
-- De quote is compleet, aangegeven door `typedValue` gelijk aan `currentWord` en `wordIndex` gelijk aan één minder dan de `length` van `words`
+- De quote is compleet, aangegeven door `typedValue` gelijk te zijn aan `currentWord` en `wordIndex` gelijk te zijn aan één minder dan de `length` van `words`
   - Bereken `elapsedTime` door `startTime` af te trekken van de huidige tijd
   - Deel `elapsedTime` door 1.000 om van milliseconden naar seconden te converteren
   - Toon een succesbericht
-- Het woord is compleet, aangegeven door `typedValue` eindigend met een spatie (het einde van een woord) en `typedValue` gelijk aan `currentWord`
+- Het woord is compleet, aangegeven door `typedValue` te eindigen met een spatie (het einde van een woord) en `typedValue` gelijk te zijn aan `currentWord`
   - Stel `value` op `typedElement` in op `''` om het volgende woord te kunnen typen
   - Verhoog `wordIndex` om naar het volgende woord te gaan
   - Loop door alle `childNodes` van `quoteElement` om `className` in te stellen op `''` om terug te keren naar de standaardweergave
   - Stel `className` van het huidige woord in op `highlight` om het te markeren als het volgende woord om te typen
-- Het woord is momenteel correct getypt (maar niet compleet), aangegeven door `currentWord` beginnend met `typedValue`
+- Het woord is momenteel correct getypt (maar niet compleet), aangegeven door `currentWord` te beginnen met `typedValue`
   - Zorg ervoor dat `typedValueElement` wordt weergegeven als standaard door `className` te wissen
 - Als we zover zijn gekomen, is er een fout
   - Stel `className` op `typedValueElement` in op `error`
@@ -320,7 +320,7 @@ Laten we de code opsplitsen! We beginnen met het ophalen van het huidige woord e
 
 Je bent aan het einde gekomen! De laatste stap is om ervoor te zorgen dat onze applicatie werkt. Probeer het uit! Maak je geen zorgen als er fouten zijn; **alle ontwikkelaars** hebben fouten. Onderzoek de berichten en debug indien nodig.
 
-Klik op **start** en begin te typen! Het zou een beetje moeten lijken op de animatie die we eerder zagen.
+Klik op **start** en begin met typen! Het zou een beetje moeten lijken op de animatie die we eerder zagen.
 
 ![Animatie van het spel in actie](../../../../4-typing-game/images/demo.gif)
 
@@ -330,18 +330,17 @@ Klik op **start** en begin te typen! Het zou een beetje moeten lijken op de anim
 
 Voeg meer functionaliteit toe
 
-- Schakel de `input`-event listener uit bij voltooiing en schakel deze opnieuw in wanneer op de knop wordt geklikt
+- Schakel de `input`-event listener uit bij voltooiing en schakel deze opnieuw in wanneer de knop wordt ingedrukt
 - Schakel het tekstvak uit wanneer de speler de quote voltooit
 - Toon een modaal dialoogvenster met het succesbericht
-- Sla hoge scores op met behulp van [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
-
+- Sla topscores op met behulp van [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
 ## Quiz na de les
 
 [Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Herhaling & Zelfstudie
 
-Lees meer over [alle beschikbare events](https://developer.mozilla.org/docs/Web/Events) voor de ontwikkelaar via de webbrowser, en denk na over de scenario's waarin je elk event zou gebruiken.
+Lees meer over [alle beschikbare events](https://developer.mozilla.org/docs/Web/Events) voor ontwikkelaars via de webbrowser, en denk na over de scenario's waarin je elk event zou gebruiken.
 
 ## Opdracht
 
@@ -350,4 +349,4 @@ Lees meer over [alle beschikbare events](https://developer.mozilla.org/docs/Web/
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertaalservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

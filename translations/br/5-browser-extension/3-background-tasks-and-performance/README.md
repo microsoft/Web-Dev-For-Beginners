@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f198c6b817b4b2a99749f4662e7cae98",
-  "translation_date": "2025-08-25T23:47:28+00:00",
+  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
+  "translation_date": "2025-08-28T23:50:45+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "br"
 }
@@ -15,15 +15,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introdução
 
-Nas duas últimas lições deste módulo, você aprendeu como criar um formulário e uma área de exibição para dados obtidos de uma API. Essa é uma maneira muito comum de criar uma presença na web. Você até aprendeu como lidar com a obtenção de dados de forma assíncrona. Sua extensão para navegador está quase completa.
+Nas duas últimas lições deste módulo, você aprendeu a criar um formulário e uma área de exibição para dados obtidos de uma API. Essa é uma maneira bastante comum de criar uma presença na web. Você até aprendeu a lidar com a obtenção de dados de forma assíncrona. Sua extensão para navegador está quase completa.
 
-Resta gerenciar algumas tarefas em segundo plano, incluindo atualizar a cor do ícone da extensão. Este é um ótimo momento para falar sobre como o navegador gerencia esse tipo de tarefa. Vamos pensar nessas tarefas do navegador no contexto do desempenho dos seus recursos web enquanto você os desenvolve.
+Resta gerenciar algumas tarefas em segundo plano, incluindo a atualização da cor do ícone da extensão. Este é um ótimo momento para falar sobre como o navegador gerencia esse tipo de tarefa. Vamos pensar nessas tarefas do navegador no contexto do desempenho dos seus recursos web enquanto você os desenvolve.
 
 ## Noções Básicas de Desempenho na Web
 
-> "O desempenho de um site se resume a duas coisas: quão rápido a página carrega e quão rápido o código nela é executado." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
+> "O desempenho de um site envolve duas coisas: quão rápido a página carrega e quão rápido o código nela é executado." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
-O tema de como tornar seus sites incrivelmente rápidos em todos os tipos de dispositivos, para todos os tipos de usuários, em todas as situações, é, sem surpresa, vasto. Aqui estão alguns pontos a serem considerados ao criar um projeto web padrão ou uma extensão para navegador.
+O tema de como tornar seus sites extremamente rápidos em todos os tipos de dispositivos, para todos os tipos de usuários, em todas as situações, é, sem surpresa, vasto. Aqui estão alguns pontos a serem considerados ao criar um projeto web padrão ou uma extensão para navegador.
 
 A primeira coisa que você precisa fazer para garantir que seu site esteja funcionando de forma eficiente é coletar dados sobre seu desempenho. O primeiro lugar para fazer isso é nas ferramentas de desenvolvedor do seu navegador. No Edge, você pode selecionar o botão "Configurações e mais" (o ícone de três pontos no canto superior direito do navegador), depois navegar até Mais Ferramentas > Ferramentas do Desenvolvedor e abrir a aba de Desempenho. Você também pode usar os atalhos de teclado `Ctrl` + `Shift` + `I` no Windows ou `Option` + `Command` + `I` no Mac para abrir as ferramentas de desenvolvedor.
 
@@ -41,17 +41,17 @@ Obtenha um instantâneo do desempenho da sua página selecionando uma parte da l
 
 ![Instantâneo do perfilador do Edge](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.br.png)
 
-Verifique o painel de Registro de Eventos para ver se algum evento demorou mais de 15 ms:
+Verifique o painel de Log de Eventos para ver se algum evento demorou mais de 15 ms:
 
-![Registro de eventos do Edge](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.br.png)
+![Log de eventos do Edge](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.br.png)
 
 ✅ Familiarize-se com seu perfilador! Abra as ferramentas de desenvolvedor neste site e veja se há gargalos. Qual é o recurso que carrega mais lentamente? E o mais rápido?
 
 ## Verificações de Perfilação
 
-De forma geral, existem algumas "áreas problemáticas" que todo desenvolvedor web deve observar ao criar um site para evitar surpresas desagradáveis na hora de implantar em produção.
+De modo geral, existem algumas "áreas problemáticas" que todo desenvolvedor web deve observar ao criar um site para evitar surpresas desagradáveis na hora de implantar em produção.
 
-**Tamanhos de recursos**: A web ficou mais "pesada" e, portanto, mais lenta, nos últimos anos. Parte desse peso está relacionada ao uso de imagens.
+**Tamanhos de recursos**: A web ficou mais "pesada" e, portanto, mais lenta nos últimos anos. Parte desse peso está relacionada ao uso de imagens.
 
 ✅ Consulte o [Internet Archive](https://httparchive.org/reports/page-weight) para uma visão histórica do peso das páginas e mais.
 
@@ -94,13 +94,13 @@ O chrome.runtime possui [uma API](https://developer.chrome.com/extensions/runtim
 
 > "Use a API chrome.runtime para recuperar a página de segundo plano, retornar detalhes sobre o manifesto e ouvir e responder a eventos no ciclo de vida do aplicativo ou extensão. Você também pode usar essa API para converter o caminho relativo de URLs em URLs totalmente qualificados."
 
-✅ Se você está desenvolvendo esta extensão para o Edge, pode ser surpreendente que esteja usando uma API do Chrome. As versões mais recentes do navegador Edge são baseadas no mecanismo do navegador Chromium, então você pode aproveitar essas ferramentas.
+✅ Se você está desenvolvendo esta extensão para o Edge, pode se surpreender ao descobrir que está usando uma API do Chrome. As versões mais recentes do navegador Edge são baseadas no mecanismo do navegador Chromium, então você pode aproveitar essas ferramentas.
 
 > Nota: se você quiser perfilar uma extensão para navegador, abra as ferramentas de desenvolvedor dentro da própria extensão, pois ela é uma instância separada do navegador.
 
 ### Definir uma cor padrão para o ícone
 
-Agora, na função `init()`, defina o ícone para ser um verde genérico inicialmente, chamando novamente a ação `updateIcon` do Chrome:
+Agora, na função `init()`, defina o ícone como um verde genérico para começar, chamando novamente a ação `updateIcon` do Chrome:
 
 ```JavaScript
 chrome.runtime.sendMessage({
@@ -142,7 +142,7 @@ function drawIcon(value) {
 }
 ```
 
-Neste código, você está adicionando um listener para quaisquer mensagens que chegam ao gerenciador de tarefas em segundo plano. Se for chamada 'updateIcon', o próximo código será executado para desenhar um ícone da cor apropriada usando a API Canvas.
+Neste código, você está adicionando um listener para quaisquer mensagens que chegam ao gerenciador de tarefas em segundo plano. Se for chamado 'updateIcon', o próximo código será executado para desenhar um ícone da cor apropriada usando a API Canvas.
 
 ✅ Você aprenderá mais sobre a API Canvas nas [lições do Jogo Espacial](../../6-space-game/2-drawing-to-canvas/README.md).
 
@@ -169,6 +169,8 @@ Investigue algumas das maneiras como os navegadores avaliam o desempenho da web,
 ## Tarefa
 
 [Analise um site para desempenho](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

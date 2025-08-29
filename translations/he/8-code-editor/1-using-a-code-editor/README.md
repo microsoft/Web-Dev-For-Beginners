@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7aa6e4f270d38d9cb17f2b5bd86b863d",
-  "translation_date": "2025-08-27T20:40:47+00:00",
+  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
+  "translation_date": "2025-08-29T01:19:26+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "he"
 }
@@ -23,13 +23,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 לפני שתתחילו, תצטרכו ליצור חשבון ב-[GitHub](https://github.com). גשו ל-[GitHub](https://github.com/) וצרו חשבון אם עדיין אין לכם אחד.
 
-### הקדמה
+### מבוא
 
 עורך קוד הוא כלי חיוני לכתיבת תוכניות ולשיתוף פעולה בפרויקטים קיימים. ברגע שתבינו את הבסיס של עורך קוד וכיצד להשתמש בתכונותיו, תוכלו ליישם זאת בעת כתיבת קוד.
 
 ## התחלת עבודה עם VSCode.dev
 
-[VSCode.dev](https://vscode.dev) הוא עורך קוד מבוסס אינטרנט. אין צורך להתקין שום דבר כדי להשתמש בו, בדיוק כמו פתיחת כל אתר אחר. כדי להתחיל לעבוד עם העורך, פתחו את הקישור הבא: [https://vscode.dev](https://vscode.dev). אם אינכם מחוברים ל-[GitHub](https://github.com/), עקבו אחר ההנחיות להתחבר או ליצור חשבון חדש ואז התחברו.
+[VSCode.dev](https://vscode.dev) הוא עורך קוד מבוסס אינטרנט. אין צורך להתקין שום דבר כדי להשתמש בו, בדיוק כמו פתיחת כל אתר אחר. כדי להתחיל לעבוד עם העורך, פתחו את הקישור הבא: [https://vscode.dev](https://vscode.dev). אם אינכם מחוברים ל-[GitHub](https://github.com/), עקבו אחר ההנחיות להתחברות או יצירת חשבון חדש ולאחר מכן התחברו.
 
 לאחר טעינת העורך, הוא אמור להיראות דומה לתמונה הזו:
 
@@ -37,13 +37,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ישנם שלושה חלקים עיקריים, מהשמאל לימין:
 
-1. **סרגל הפעילות** הכולל כמה אייקונים, כמו זכוכית מגדלת 🔎, גלגל שיניים ⚙️, ועוד כמה.
-2. **סרגל הצד** שמתרחב כברירת מחדל ל-**Explorer**.
-3. **אזור הקוד** בצד ימין.
+1. _סרגל הפעילות_, הכולל כמה אייקונים כמו זכוכית מגדלת 🔎, גלגל שיניים ⚙️ ועוד כמה.
+2. סרגל הפעילות המורחב, שמוגדר כברירת מחדל ל-_Explorer_, ונקרא _סרגל הצד_.
+3. ולבסוף, אזור הקוד בצד ימין.
 
-לחצו על כל אחד מהאייקונים כדי להציג תפריט שונה. לאחר מכן, לחצו על **Explorer** כדי לחזור לנקודת ההתחלה.
+לחצו על כל אחד מהאייקונים כדי להציג תפריט שונה. לאחר מכן, לחצו על _Explorer_ כדי לחזור לנקודת ההתחלה.
 
-כאשר תתחילו ליצור קוד או לשנות קוד קיים, זה יקרה באזור הגדול בצד ימין. תשתמשו באזור הזה גם כדי לצפות בקוד קיים, כפי שתעשו בהמשך.
+כשאתם מתחילים ליצור קוד או לשנות קוד קיים, זה יקרה באזור הגדול בצד ימין. תשתמשו באזור הזה גם כדי לצפות בקוד קיים, כפי שתעשו בהמשך.
 
 ## פתיחת מאגר GitHub
 
@@ -51,15 +51,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 1. באמצעות העורך
 
-השתמשו בעורך עצמו כדי לפתוח מאגר מרוחק. אם תלכו ל-[VSCode.dev](https://vscode.dev), תראו כפתור **"Open Remote Repository"**:
+השתמשו בעורך עצמו כדי לפתוח מאגר מרוחק. אם תלכו ל-[VSCode.dev](https://vscode.dev), תראו כפתור _"Open Remote Repository"_:
 
 ![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.he.png)
 
-ניתן גם להשתמש ב-Command Palette. ה-Command Palette הוא תיבת קלט שבה ניתן להקליד כל מילה שהיא חלק מפעולה או פקודה כדי למצוא את הפקודה המתאימה לביצוע. השתמשו בתפריט בפינה השמאלית העליונה, בחרו **View**, ואז בחרו **Command Palette**, או השתמשו בקיצור המקלדת: Ctrl-Shift-P (ב-MacOS זה יהיה Command-Shift-P).
+ניתן גם להשתמש ב-Command Palette. ה-Command Palette הוא תיבת קלט שבה ניתן להקליד כל מילה שהיא חלק מפעולה או פקודה כדי למצוא את הפקודה המתאימה לביצוע. השתמשו בתפריט בפינה השמאלית העליונה, בחרו _View_, ואז בחרו _Command Palette_, או השתמשו בקיצור המקלדת הבא: Ctrl-Shift-P (ב-MacOS זה יהיה Command-Shift-P).
 
 ![Palette Menu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.he.png)
 
-לאחר פתיחת התפריט, הקלידו **open remote repository**, ואז בחרו באפשרות הראשונה. מאגרים רבים שאתם חלק מהם או שפתחתם לאחרונה יופיעו. ניתן גם להשתמש בכתובת URL מלאה של GitHub כדי לבחור אחד. השתמשו בכתובת הבאה והדביקו אותה בתיבה:
+לאחר פתיחת התפריט, הקלידו _open remote repository_, ואז בחרו באפשרות הראשונה. מאגרים רבים שאתם חלק מהם או שפתחתם לאחרונה יופיעו. ניתן גם להשתמש בכתובת URL מלאה של GitHub כדי לבחור אחד. השתמשו בכתובת ה-URL הבאה והדביקו אותה בתיבה:
 
 ```
 https://github.com/microsoft/Web-Dev-For-Beginners
@@ -69,79 +69,77 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 
 ### 2. באמצעות כתובת URL
 
-ניתן גם להשתמש בכתובת URL ישירות כדי לטעון מאגר. לדוגמה, הכתובת המלאה של המאגר הנוכחי היא [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), אך ניתן להחליף את הדומיין של GitHub ב-`VSCode.dev/github` ולטעון את המאגר ישירות. הכתובת שתתקבל תהיה [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+ניתן גם להשתמש בכתובת URL ישירות כדי לטעון מאגר. לדוגמה, הכתובת המלאה של המאגר הנוכחי היא [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), אבל ניתן להחליף את הדומיין של GitHub ב-`VSCode.dev/github` ולטעון את המאגר ישירות. הכתובת שתתקבל תהיה [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
 
 ## עריכת קבצים
 
-לאחר שפתחתם את המאגר בדפדפן/VSCode.dev, השלב הבא יהיה לבצע עדכונים או שינויים בפרויקט.
+לאחר שפתחתם את המאגר בדפדפן או ב-vscode.dev, השלב הבא יהיה לבצע עדכונים או שינויים בפרויקט.
 
 ### 1. יצירת קובץ חדש
 
-ניתן ליצור קובץ בתוך תיקייה קיימת או בתיקיית השורש. כדי ליצור קובץ חדש, פתחו מיקום/תיקייה שבה תרצו לשמור את הקובץ ובחרו באייקון **'New file ...'** בסרגל הפעילות _(שמאל)_, תנו לו שם ולחצו Enter.
+ניתן ליצור קובץ בתוך תיקייה קיימת או בתיקיית השורש. כדי ליצור קובץ חדש, פתחו מיקום/תיקייה שבה תרצו לשמור את הקובץ ובחרו באייקון _'New file ...'_ בסרגל הפעילות _(שמאל)_, תנו לו שם ולחצו Enter.
 
 ![Create a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.he.png)
 
-### 2. עריכה ושמירת קובץ במאגר
+### 2. עריכה ושמירה של קובץ במאגר
 
-שימוש ב-VSCode.dev הוא מועיל כאשר רוצים לבצע עדכונים מהירים לפרויקט מבלי לטעון תוכנה מקומית.  
-כדי לעדכן את הקוד שלכם, לחצו על אייקון **Explorer**, שנמצא גם הוא בסרגל הפעילות, כדי לצפות בקבצים ובתיקיות במאגר.  
-בחרו קובץ כדי לפתוח אותו באזור הקוד, בצעו את השינויים ושמרו.
+שימוש ב-vscode.dev מועיל כאשר אתם רוצים לבצע עדכונים מהירים לפרויקט שלכם מבלי לטעון תוכנה מקומית.
+
+כדי לעדכן את הקוד שלכם, לחצו על אייקון 'Explorer', שנמצא גם הוא בסרגל הפעילות, כדי לצפות בקבצים ובתיקיות במאגר. בחרו קובץ כדי לפתוח אותו באזור הקוד, בצעו את השינויים ושמרו.
 
 ![Edit a file](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.he.png)
 
-לאחר שסיימתם לעדכן את הפרויקט, בחרו באייקון **`source control`**, שמכיל את כל השינויים החדשים שביצעתם במאגר.
+לאחר שסיימתם לעדכן את הפרויקט שלכם, בחרו באייקון _`source control`_, שמכיל את כל השינויים החדשים שביצעתם במאגר שלכם.
 
-כדי לצפות בשינויים שביצעתם בפרויקט, בחרו בקובץ/ים בתיקיית `Changes` בסרגל הצד המורחב. זה יפתח **'Working Tree'** שבו תוכלו לראות באופן חזותי את השינויים שביצעתם בקובץ. אדום מציין הסרה מהפרויקט, בעוד ירוק מציין תוספת.
+כדי לצפות בשינויים שביצעתם בפרויקט, בחרו בקובץ/ים בתיקיית `Changes` בסרגל הפעילות המורחב. זה יפתח 'עץ עבודה' שבו תוכלו לראות באופן חזותי את השינויים שביצעתם בקובץ. אדום מציין הסרה מהפרויקט, בעוד ירוק מציין תוספת.
 
 ![View changes](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.he.png)
 
-אם אתם מרוצים מהשינויים שביצעתם, רחפו מעל תיקיית `Changes` ולחצו על כפתור `+` כדי לשלב את השינויים. שילוב פירושו הכנת השינויים שלכם להתחייבות ל-GitHub.
+אם אתם מרוצים מהשינויים שביצעתם, רחפו מעל תיקיית `Changes` ולחצו על כפתור `+` כדי לשלב את השינויים. שילוב פשוט אומר הכנת השינויים שלכם להתחייבות ל-GitHub.
 
 אם אינכם מרוצים מחלק מהשינויים ורוצים לבטל אותם, רחפו מעל תיקיית `Changes` ובחרו באייקון `undo`.
 
-לאחר מכן, הקלידו **הודעת התחייבות** _(תיאור של השינוי שביצעתם בפרויקט)_, לחצו על אייקון ה-`check` כדי להתחייב ולדחוף את השינויים.
+לאחר מכן, הקלידו _הודעת התחייבות_ _(תיאור של השינוי שביצעתם בפרויקט)_, לחצו על אייקון ה-`check` כדי להתחייב ולדחוף את השינויים שלכם.
 
-לאחר שסיימתם לעבוד על הפרויקט, בחרו באייקון **תפריט ההמבורגר** בפינה השמאלית העליונה כדי לחזור למאגר ב-github.com.
+לאחר שסיימתם לעבוד על הפרויקט שלכם, בחרו באייקון תפריט ההמבורגר בפינה השמאלית העליונה כדי לחזור למאגר ב-github.com.
 
 ![Stage & commit changes](../../../../8-code-editor/images/edit-vscode.dev.gif)
 
 ## שימוש בתוספים
 
-התקנת תוספים ב-VSCode מאפשרת לכם להוסיף תכונות חדשות ואפשרויות התאמה אישית לסביבת הפיתוח שלכם בעורך, כדי לשפר את זרימת העבודה שלכם. תוספים אלו גם עוזרים להוסיף תמיכה בשפות תכנות שונות ולעיתים הם תוספים כלליים או מבוססי שפה.
+התקנת תוספים ב-VSCode מאפשרת לכם להוסיף תכונות חדשות ואפשרויות התאמה אישית לסביבת הפיתוח שלכם בעורך, כדי לשפר את זרימת העבודה שלכם. תוספים אלו גם עוזרים לכם להוסיף תמיכה בשפות תכנות שונות ולעיתים הם תוספים כלליים או מבוססי שפה.
 
-כדי לעיין ברשימת כל התוספים הזמינים, לחצו על אייקון **`Extensions`** בסרגל הפעילות והתחילו להקליד את שם התוסף בשדה הטקסט המסומן **'Search Extensions in Marketplace'**.  
-תראו רשימה של תוספים, שכל אחד מהם מכיל **שם התוסף, שם המפרסם, תיאור קצר, מספר הורדות** ו-**דירוג כוכבים**.
+כדי לעיין ברשימת כל התוספים הזמינים, לחצו על אייקון _`Extensions`_ בסרגל הפעילות והתחילו להקליד את שם התוסף בשדה הטקסט המסומן _'Search Extensions in Marketplace'_. תראו רשימה של תוספים, שכל אחד מהם מכיל **שם התוסף, שם המפרסם, תיאור קצר, מספר הורדות** ו-**דירוג כוכבים**.
 
 ![Extension details](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.he.png)
 
-ניתן גם לצפות בכל התוספים שהותקנו בעבר על ידי הרחבת תיקיית **`Installed`**, תוספים פופולריים שמשתמשים בהם רוב המפתחים בתיקיית **`Popular`**, ותוספים מומלצים עבורכם על סמך משתמשים באותו סביבת עבודה או קבצים שפתחתם לאחרונה בתיקיית **`Recommended`**.
+ניתן גם לצפות בכל התוספים שהותקנו בעבר על ידי הרחבת תיקיית _`Installed`_, תוספים פופולריים שמשתמשים בהם רוב המפתחים בתיקיית _`Popular`_, ותוספים מומלצים עבורכם על סמך משתמשים באותו סביבת עבודה או קבצים שפתחתם לאחרונה בתיקיית _`Recommended`_.
 
 ![View extensions](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.he.png)
 
 ### 1. התקנת תוספים
 
-כדי להתקין תוסף, הקלידו את שם התוסף בשדה החיפוש ולחצו עליו כדי לצפות במידע נוסף על התוסף באזור הקוד לאחר שהוא מופיע בסרגל הצד המורחב.
+כדי להתקין תוסף, הקלידו את שם התוסף בשדה החיפוש ולחצו עליו כדי לצפות במידע נוסף על התוסף באזור הקוד לאחר שהוא מופיע בסרגל הפעילות המורחב.
 
-ניתן ללחוץ על **כפתור ההתקנה הכחול** בסרגל הצד המורחב כדי להתקין או להשתמש בכפתור ההתקנה שמופיע באזור הקוד לאחר שבחרתם בתוסף לצפייה במידע נוסף.
+ניתן ללחוץ על _כפתור ההתקנה הכחול_ בסרגל הפעילות המורחב כדי להתקין או להשתמש בכפתור ההתקנה שמופיע באזור הקוד לאחר שבחרתם בתוסף כדי לטעון מידע נוסף.
 
 ![Install extensions](../../../../8-code-editor/images/install-extension.gif)
 
 ### 2. התאמת תוספים
 
-לאחר התקנת התוסף, ייתכן שתצטרכו לשנות את ההתנהגות שלו ולהתאים אותו להעדפותיכם.  
-לשם כך, בחרו באייקון **Extensions**, והפעם התוסף שלכם יופיע בתיקיית **Installed**, לחצו על **אייקון הגלגל** ועברו ל-**Extensions Setting**.
+לאחר התקנת התוסף, ייתכן שתצטרכו לשנות את ההתנהגות שלו ולהתאים אותו להעדפות שלכם. כדי לעשות זאת, בחרו באייקון התוספים, והפעם התוסף שלכם יופיע בתיקיית _Installed_, לחצו על _אייקון הגלגל_ ונווטו ל-_Extensions Setting_.
 
 ![Modify extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.he.png)
 
 ### 3. ניהול תוספים
 
-לאחר התקנה ושימוש בתוסף, VSCode.dev מציע אפשרויות לניהול התוסף בהתאם לצרכים שונים. לדוגמה, תוכלו לבחור:
+לאחר התקנה ושימוש בתוסף, vscode.dev מציע אפשרויות לניהול התוסף בהתאם לצרכים שונים. לדוגמה, תוכלו לבחור:
 
 - **השבתה:** _(ניתן להשבית תוסף באופן זמני כאשר אינכם זקוקים לו אך אינכם רוצים להסיר אותו לחלוטין)_
 
-    בחרו בתוסף המותקן בסרגל הצד המורחב > לחצו על אייקון הגלגל > בחרו 'Disable' או 'Disable (Workspace)' **או** פתחו את התוסף באזור הקוד ולחצו על כפתור ההשבתה הכחול.
+    בחרו בתוסף המותקן בסרגל הפעילות המורחב > לחצו על אייקון הגלגל > בחרו 'Disable' או 'Disable (Workspace)' **או** פתחו את התוסף באזור הקוד ולחצו על כפתור ההשבתה הכחול.
 
-- **הסרה:** בחרו בתוסף המותקן בסרגל הצד המורחב > לחצו על אייקון הגלגל > בחרו 'Uninstall' **או** פתחו את התוסף באזור הקוד ולחצו על כפתור ההסרה הכחול.
+- **הסרה:** בחרו בתוסף המותקן בסרגל הפעילות המורחב > לחצו על אייקון הגלגל > בחרו 'Uninstall' **או** פתחו את התוסף באזור הקוד ולחצו על כפתור ההסרה הכחול.
 
 ---
 
@@ -156,4 +154,4 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 ---
 
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית נחשב למקור הסמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי מתרגם אנושי. איננו נושאים באחריות לכל אי-הבנה או פרשנות שגויה הנובעת משימוש בתרגום זה.

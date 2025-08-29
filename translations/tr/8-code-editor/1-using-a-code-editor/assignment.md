@@ -1,19 +1,30 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-25T23:25:12+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T00:30:00+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "tr"
 }
 -->
-# vscode.dev kullanarak bir özgeçmiş-web sitesi oluşturun
+# VSCode.dev kullanarak bir özgeçmiş web sitesi oluşturun
 
-_Bir işe alım uzmanının sizden özgeçmişinizi istemesi ve sizin ona bir URL göndermeniz ne kadar havalı olurdu?_ 😎
+_Bir işe alım uzmanının özgeçmişinizi istemesi ve sizin ona bir URL göndermeniz ne kadar havalı olurdu?_ 😎
+
+<!----
+TODO: isteğe bağlı bir resim ekle
+![Bir kod editörü kullanma](../../../../translated_images/webdev101-vscode-dev.f53c14e8dad231ea09d9e07a2db4a01551d2dc6cdf21225038389e11156af023.tr.png)
+> Sketchnote by [Author name](https://example.com)
+---->
+
+<!---
+## Ders Öncesi Quiz
+[Ders öncesi quiz](https://ff-quizzes.netlify.app/web/quiz/3)
+---->
 
 ## Amaçlar
 
-Bu görevi tamamladıktan sonra şunları öğreneceksiniz:
+Bu ödevi tamamladıktan sonra şunları öğreneceksiniz:
 
 - Özgeçmişinizi sergilemek için bir web sitesi oluşturma
 
@@ -23,27 +34,27 @@ Bu görevi tamamladıktan sonra şunları öğreneceksiniz:
 
 ## Adımlar
 
-**Adım 1:** Yeni bir GitHub Deposu oluşturun ve ona `my-resume` adını verin.
+**Adım 1:** Yeni bir GitHub deposu oluşturun ve ona `my-resume` adını verin.
 
-**Adım 2:** Depoda bir `index.html` dosyası oluşturun. github.com üzerinde en az bir dosya ekleyeceğiz çünkü vscode.dev üzerinde boş bir depoyu açamazsınız.
+**Adım 2:** Depoda bir `index.html` dosyası oluşturun. github.com üzerinde en az bir dosya ekleyeceğiz çünkü vscode.dev üzerinde boş bir depo açamazsınız.
 
-`Yeni bir dosya oluştur` bağlantısına tıklayın, `index.html` adını yazın ve `Yeni dosyayı işleme al` düğmesini seçin.
+`Yeni bir dosya oluşturma` bağlantısına tıklayın, `index.html` adını yazın ve `Yeni dosyayı kaydet` düğmesini seçin.
 
-![github.com üzerinde yeni bir dosya oluşturun](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.tr.png)
+![github.com üzerinde yeni bir dosya oluşturma](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.tr.png)
 
 **Adım 3:** [VSCode.dev](https://vscode.dev) adresini açın ve `Uzaktan Depo Aç` düğmesini seçin.
 
-Özgeçmiş siteniz için az önce oluşturduğunuz deponun URL'sini kopyalayın ve giriş kutusuna yapıştırın:
+Özgeçmiş siteniz için yeni oluşturduğunuz deponun URL'sini kopyalayın ve giriş kutusuna yapıştırın:
 
-_GitHub kullanıcı adınızı `your-username` ile değiştirin._
+_`your-username` kısmını GitHub kullanıcı adınızla değiştirin._
 
 ```
 https://github.com/your-username/my-resume
 ```
 
-✅ Başarılı olursanız, projenizi ve metin düzenleyicide tarayıcıda açılan index.html dosyasını göreceksiniz.
+✅ Başarılı olursa, projenizi ve metin editöründe tarayıcıda açılan `index.html` dosyasını göreceksiniz.
 
-![Yeni bir dosya oluşturun](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.tr.png)
+![Yeni bir dosya oluşturma](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.tr.png)
 
 **Adım 4:** `index.html` dosyasını açın, aşağıdaki kodu kod alanınıza yapıştırın ve kaydedin.
 
@@ -69,10 +80,10 @@ https://github.com/your-username/my-resume
                     <article id="mainLeft">
                         <section>
                             <h2>İLETİŞİM</h2>
-                            <!-- iletişim bilgileri, sosyal medya dahil -->
+                            <!-- sosyal medya dahil iletişim bilgileri -->
                             <p>
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <a href="mailto:username@domain.top-level domain">E-postanızı buraya yazın</a>
+                                <a href="mailto:username@domain.top-level domain">E-posta adresinizi buraya yazın</a>
                             </p>
                             <p>
                                 <i class="fab fa-github" aria-hidden="true"></i>
@@ -95,7 +106,7 @@ https://github.com/your-username/my-resume
                         </section>
                         <section>
                             <h2>EĞİTİM</h2>
-                            <!-- eğitiminiz -->
+                            <!-- eğitim bilgileriniz -->
                             <h3>Kursunuzu buraya yazın!</h3>
                             <p>
                                 Kurumunuzu buraya yazın!
@@ -113,7 +124,7 @@ https://github.com/your-username/my-resume
                         </section>
                         <section>
                             <h2>İŞ DENEYİMİ</h2>
-                            <!-- iş deneyiminiz -->
+                            <!-- iş deneyimleriniz -->
                             <h3>İş Unvanı</h3>
                             <p>
                                 Kurum Adı Buraya Gelecek | Başlangıç Ayı – Bitiş Ayı
@@ -143,7 +154,7 @@ https://github.com/your-username/my-resume
 
 HTML kodundaki _yer tutucu metni_ değiştirerek özgeçmiş bilgilerinizi ekleyin.
 
-**Adım 5:** My-Resume klasörünün üzerine gelin, `Yeni Dosya ...` simgesine tıklayın ve projenize 2 yeni dosya oluşturun: `style.css` ve `codeswing.json`.
+**Adım 5:** My-Resume klasörünün üzerine gelin, `Yeni Dosya ...` simgesine tıklayın ve projenizde 2 yeni dosya oluşturun: `style.css` ve `codeswing.json` dosyaları.
 
 **Adım 6:** `style.css` dosyasını açın, aşağıdaki kodu yapıştırın ve kaydedin.
 
@@ -219,27 +230,34 @@ HTML kodundaki _yer tutucu metni_ değiştirerek özgeçmiş bilgilerinizi ekley
 
 **Adım 7:** Özgeçmiş web sitesini kod alanında görselleştirmek için `Codeswing uzantısını` yükleyin.
 
-Etkinlik çubuğundaki _`Uzantılar`_ simgesine tıklayın ve Codeswing yazın. Genişletilmiş etkinlik çubuğundaki _mavi yükleme düğmesine_ tıklayarak yükleyin veya uzantıyı seçtikten sonra kod alanında beliren yükleme düğmesini kullanarak ek bilgileri yükleyin. Uzantıyı yükledikten hemen sonra, projenizdeki değişiklikleri gözlemleyin 😃.
+Etkinlik çubuğundaki _`Uzantılar`_ simgesine tıklayın ve Codeswing yazın. Uzantıyı yüklemek için genişletilmiş etkinlik çubuğundaki _mavi yükleme düğmesine_ tıklayın veya uzantıyı seçtiğinizde kod alanında görünen yükleme düğmesini kullanın. Uzantıyı yükledikten hemen sonra, projenizdeki değişiklikleri kod alanında gözlemleyin 😃
 
-![Uzantıları yükleyin](../../../../8-code-editor/images/install-extension.gif)
+![Uzantıları yükleme](../../../../8-code-editor/images/install-extension.gif)
 
-Uzantıyı yükledikten sonra ekranınızda göreceğiniz şey bu.
+Uzantıyı yükledikten sonra ekranınızda göreceğiniz şey budur.
 
 ![Codeswing uzantısı çalışırken](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.tr.png)
 
-Yaptığınız değişikliklerden memnunsanız, `Değişiklikler` klasörünün üzerine gelin ve değişiklikleri sahnelemek için `+` düğmesine tıklayın.
+Yaptığınız değişikliklerden memnunsanız, `Değişiklikler` klasörünün üzerine gelin ve değişiklikleri aşamalandırmak için `+` düğmesine tıklayın.
 
-Bir işlem mesajı yazın _(Projede yaptığınız değişikliğin açıklaması)_ ve değişikliklerinizi `onay işareti`ne tıklayarak işleyin. Projenizde çalışmayı bitirdiğinizde, GitHub'daki depoya dönmek için sol üstteki hamburger menü simgesini seçin.
+Bir commit mesajı yazın _(Projede yaptığınız değişikliğin açıklaması)_ ve değişikliklerinizi `onay işareti`ne tıklayarak kaydedin. Projenizde çalışmayı tamamladıktan sonra, GitHub'daki depoya geri dönmek için sol üstteki hamburger menü simgesini seçin.
 
-Tebrikler 🎉 vscode.dev kullanarak birkaç adımda özgeçmiş web sitenizi oluşturdunuz.
+Tebrikler 🎉 Sadece birkaç adımda vscode.dev kullanarak özgeçmiş web sitenizi oluşturdunuz.
 
 ## 🚀 Meydan Okuma
 
-Değişiklik yapma izniniz olan bir uzak depoyu açın ve bazı dosyaları güncelleyin. Ardından, değişikliklerinizle yeni bir dal oluşturmayı ve bir Çekme İsteği yapmayı deneyin.
+Değişiklik yapma izniniz olan bir uzak depo açın ve bazı dosyaları güncelleyin. Ardından, değişikliklerinizle yeni bir dal oluşturmayı ve bir Pull Request yapmayı deneyin.
+
+<!----
+## Ders Sonrası Quiz
+[Ders sonrası quiz](https://ff-quizzes.netlify.app/web/quiz/4)
+---->
 
 ## İnceleme ve Kendi Kendine Çalışma
 
-[VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) hakkında ve diğer özelliklerinden daha fazlasını okuyun.
+[VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) ve diğer özellikleri hakkında daha fazla bilgi edinin.
+
+---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.

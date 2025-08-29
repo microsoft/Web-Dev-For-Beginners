@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-25T22:05:17+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-28T23:52:25+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "br"
 }
@@ -17,7 +17,7 @@ Nesta lição, você aprenderá como adicionar pontuação a um jogo e calcular 
 
 ## Exibir texto na tela
 
-Para exibir a pontuação do jogo na tela, você precisará saber como posicionar texto. A resposta é usar o método `fillText()` no objeto canvas. Você também pode controlar outros aspectos, como qual fonte usar, a cor do texto e até mesmo seu alinhamento (esquerda, direita, centro). Abaixo está um código que desenha texto na tela.
+Para exibir a pontuação do jogo na tela, você precisará saber como colocar texto na tela. A resposta é usar o método `fillText()` no objeto canvas. Você também pode controlar outros aspectos, como qual fonte usar, a cor do texto e até mesmo seu alinhamento (esquerda, direita, centro). Abaixo está um código que desenha texto na tela.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -30,14 +30,14 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ## Vida, como um conceito de jogo
 
-O conceito de ter vidas em um jogo é apenas um número. No contexto de um jogo espacial, é comum atribuir um conjunto de vidas que são reduzidas uma a uma quando sua nave sofre dano. É interessante mostrar uma representação gráfica disso, como mini-naves ou corações, em vez de apenas um número.
+O conceito de ter vidas em um jogo é apenas um número. No contexto de um jogo espacial, é comum atribuir um conjunto de vidas que são deduzidas uma a uma quando sua nave sofre dano. É interessante mostrar uma representação gráfica disso, como mini-naves ou corações, em vez de apenas um número.
 
 ## O que construir
 
 Vamos adicionar o seguinte ao seu jogo:
 
 - **Pontuação do jogo**: Para cada nave inimiga destruída, o herói deve ganhar alguns pontos. Sugerimos 100 pontos por nave. A pontuação do jogo deve ser exibida no canto inferior esquerdo.
-- **Vida**: Sua nave tem três vidas. Você perde uma vida toda vez que uma nave inimiga colide com você. A pontuação de vidas deve ser exibida no canto inferior direito e ser composta pelo seguinte gráfico ![imagem de vida](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.br.png).
+- **Vidas**: Sua nave tem três vidas. Você perde uma vida toda vez que uma nave inimiga colide com você. A contagem de vidas deve ser exibida no canto inferior direito e ser composta pelo seguinte gráfico ![imagem de vida](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.br.png).
 
 ## Passos recomendados
 
@@ -64,7 +64,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
 ### Adicionar código
 
-1. **Copie os recursos necessários** da pasta `solution/assets/` para a pasta `your-work`; você adicionará o recurso `life.png`. Adicione o `lifeImg` à função `window.onload`:
+1. **Copie os recursos necessários** da pasta `solution/assets/` para a pasta `your-work`; você adicionará o recurso `life.png`. Adicione o `lifeImg` à função window.onload:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
@@ -82,7 +82,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
   
 2. **Adicione variáveis**. Adicione código que represente sua pontuação total (0) e vidas restantes (3), exibindo essas pontuações na tela.
 
-3. **Estenda a função `updateGameObjects()`**. Estenda a função `updateGameObjects()` para lidar com colisões com inimigos:
+3. **Estenda a função `updateGameObjects()`**. Estenda a função `updateGameObjects()` para lidar com colisões de inimigos:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -93,8 +93,8 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
       })
     ```
 
-4. **Adicione `vida` e `pontos`**. 
-   1. **Inicialize variáveis**. Sob `this.cooldown = 0` na classe `Hero`, defina vida e pontos:
+4. **Adicione `vidas` e `pontos`**. 
+   1. **Inicialize variáveis**. Sob `this.cooldown = 0` na classe `Hero`, defina vidas e pontos:
 
         ```javascript
         this.life = 3;
@@ -128,14 +128,14 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
         ```
 
-   1. **Adicione métodos ao loop do jogo**. Certifique-se de adicionar essas funções à sua função `window.onload` sob `updateGameObjects()`:
+   1. **Adicione métodos ao loop do jogo**. Certifique-se de adicionar essas funções à sua função window.onload sob `updateGameObjects()`:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Implemente as regras do jogo**. Implemente as seguintes regras:
+1. **Implemente as regras do jogo**. Implemente as seguintes regras do jogo:
 
    1. **Para cada colisão entre herói e inimigo**, deduza uma vida.
    
@@ -152,7 +152,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
    2. **Para cada laser que atinge um inimigo**, aumente a pontuação do jogo em 100 pontos.
 
-      Estenda a classe `Hero` para realizar esse incremento:
+      Estenda a classe Hero para realizar esse incremento:
     
         ```javascript
           incrementPoints() {
@@ -177,7 +177,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
 ✅ Faça uma pequena pesquisa para descobrir outros jogos criados usando JavaScript/Canvas. Quais são suas características comuns?
 
-Ao final deste trabalho, você deverá ver as pequenas naves de "vida" no canto inferior direito, os pontos no canto inferior esquerdo, e deverá ver sua contagem de vidas diminuir ao colidir com inimigos e seus pontos aumentarem ao atirar nos inimigos. Muito bem! Seu jogo está quase completo.
+Ao final deste trabalho, você deverá ver as pequenas naves de 'vida' no canto inferior direito, os pontos no canto inferior esquerdo, e deverá ver sua contagem de vidas diminuir conforme colide com inimigos e sua pontuação aumentar ao atirar nos inimigos. Muito bem! Seu jogo está quase completo.
 
 ---
 
@@ -196,6 +196,8 @@ Pesquise algumas maneiras de incrementar e decrementar pontuações e vidas em j
 ## Tarefa
 
 [Construa um Jogo de Pontuação](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

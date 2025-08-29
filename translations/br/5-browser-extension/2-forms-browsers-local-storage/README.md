@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e10f168beac4e7b05e30e0eb5c92bf11",
-  "translation_date": "2025-08-25T23:31:51+00:00",
+  "original_hash": "a7587943d38d095de8613e1b508609f5",
+  "translation_date": "2025-08-28T23:51:35+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "br"
 }
@@ -15,13 +15,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introdução
 
-Nesta lição, você chamará uma API enviando o formulário da extensão do navegador e exibirá os resultados na extensão. Além disso, você aprenderá como armazenar dados no armazenamento local do navegador para referência e uso futuros.
+Nesta lição, você chamará uma API enviando o formulário da sua extensão para navegador e exibirá os resultados na extensão. Além disso, você aprenderá como armazenar dados no armazenamento local do navegador para referência e uso futuros.
 
 ✅ Siga os segmentos numerados nos arquivos apropriados para saber onde colocar seu código.
 
 ### Configure os elementos para manipular na extensão:
 
-Até agora, você já criou o HTML para o formulário e o `<div>` de resultados da sua extensão. A partir de agora, você precisará trabalhar no arquivo `/src/index.js` e construir sua extensão passo a passo. Consulte a [lição anterior](../1-about-browsers/README.md) para configurar seu projeto e entender o processo de build.
+Até agora, você já criou o HTML para o formulário e o `<div>` de resultados da sua extensão para navegador. A partir de agora, você precisará trabalhar no arquivo `/src/index.js` e construir sua extensão passo a passo. Consulte a [lição anterior](../1-about-browsers/README.md) para configurar seu projeto e entender o processo de build.
 
 Trabalhando no arquivo `index.js`, comece criando algumas variáveis `const` para armazenar os valores associados a vários campos:
 
@@ -53,11 +53,11 @@ clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Observe a forma abreviada usada para escutar eventos de envio ou clique e como o evento é passado para as funções handleSubmit ou reset. Você consegue escrever o equivalente dessa forma abreviada em um formato mais longo? Qual você prefere?
+✅ Observe a forma abreviada usada para ouvir eventos de envio ou clique e como o evento é passado para as funções `handleSubmit` ou `reset`. Você consegue escrever o equivalente dessa forma abreviada em um formato mais longo? Qual você prefere?
 
 ### Construa as funções init() e reset():
 
-Agora você vai construir a função que inicializa a extensão, chamada init():
+Agora você vai construir a função que inicializa a extensão, chamada `init()`:
 
 ```JavaScript
 function init() {
@@ -95,32 +95,32 @@ function reset(e) {
 
 Nesta função, há uma lógica interessante. Lendo-a, você consegue entender o que acontece?
 
-- Dois `const` são configurados para verificar se o usuário armazenou uma APIKey e um código de região no armazenamento local.
-- Se qualquer um deles for nulo, exiba o formulário alterando seu estilo para 'block'.
-- Oculte os resultados, o carregamento e o clearBtn, e defina qualquer texto de erro como uma string vazia.
+- Duas variáveis `const` são configuradas para verificar se o usuário armazenou uma APIKey e um código de região no armazenamento local.
+- Se qualquer uma delas for nula, exiba o formulário alterando seu estilo para 'block'.
+- Oculte os resultados, o carregamento e o botão de limpar, e defina qualquer texto de erro como uma string vazia.
 - Se houver uma chave e uma região, inicie uma rotina para:
   - Chamar a API para obter dados de uso de carbono.
   - Ocultar a área de resultados.
   - Ocultar o formulário.
   - Exibir o botão de redefinição.
 
-Antes de prosseguir, é útil aprender sobre um conceito muito importante disponível nos navegadores: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). O LocalStorage é uma maneira útil de armazenar strings no navegador como um par `chave-valor`. Esse tipo de armazenamento pode ser manipulado por JavaScript para gerenciar dados no navegador. O LocalStorage não expira, enquanto o SessionStorage, outro tipo de armazenamento, é limpo quando o navegador é fechado. Os diferentes tipos de armazenamento têm prós e contras em seu uso.
+Antes de prosseguir, é útil aprender sobre um conceito muito importante disponível nos navegadores: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). O LocalStorage é uma maneira útil de armazenar strings no navegador como um par `chave-valor`. Esse tipo de armazenamento pode ser manipulado por JavaScript para gerenciar dados no navegador. O LocalStorage não expira, enquanto o SessionStorage, outro tipo de armazenamento, é limpo quando o navegador é fechado. Cada tipo de armazenamento tem prós e contras em seu uso.
 
-> Nota - sua extensão de navegador tem seu próprio armazenamento local; a janela principal do navegador é uma instância diferente e se comporta separadamente.
+> Nota - sua extensão para navegador tem seu próprio armazenamento local; a janela principal do navegador é uma instância diferente e se comporta separadamente.
 
-Você define sua APIKey para ter um valor de string, por exemplo, e pode ver que ela é configurada no Edge ao "inspecionar" uma página da web (você pode clicar com o botão direito no navegador para inspecionar) e ir para a guia Applications para ver o armazenamento.
+Você define sua APIKey para ter um valor de string, por exemplo, e pode ver que ela está configurada no Edge ao "inspecionar" uma página da web (você pode clicar com o botão direito do mouse no navegador para inspecionar) e ir para a aba Applications para ver o armazenamento.
 
 ![Painel de armazenamento local](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.br.png)
 
-✅ Pense em situações em que você NÃO gostaria de armazenar alguns dados no LocalStorage. Em geral, colocar API Keys no LocalStorage é uma má ideia! Consegue entender por quê? No nosso caso, como nosso aplicativo é puramente para aprendizado e não será publicado em uma loja de aplicativos, usaremos esse método.
+✅ Pense em situações em que você NÃO gostaria de armazenar alguns dados no LocalStorage. Em geral, colocar chaves de API no LocalStorage é uma má ideia! Consegue entender por quê? No nosso caso, como nosso aplicativo é puramente para aprendizado e não será publicado em uma loja de aplicativos, usaremos esse método.
 
 Observe que você usa a Web API para manipular o LocalStorage, seja usando `getItem()`, `setItem()` ou `removeItem()`. É amplamente suportado em navegadores.
 
-Antes de construir a função `displayCarbonUsage()` que é chamada em `init()`, vamos construir a funcionalidade para lidar com o envio inicial do formulário.
+Antes de construir a função `displayCarbonUsage()` que é chamada em `init()`, vamos criar a funcionalidade para lidar com o envio inicial do formulário.
 
-### Lidar com o envio do formulário
+### Lide com o envio do formulário
 
-Crie uma função chamada `handleSubmit` que aceita um argumento de evento `(e)`. Pare a propagação do evento (neste caso, queremos impedir que o navegador atualize) e chame uma nova função, `setUpUser`, passando os argumentos `apiKey.value` e `region.value`. Dessa forma, você usa os dois valores que são trazidos pelo formulário inicial quando os campos apropriados são preenchidos.
+Crie uma função chamada `handleSubmit` que aceita um argumento de evento `(e)`. Interrompa a propagação do evento (neste caso, queremos impedir que o navegador atualize) e chame uma nova função, `setUpUser`, passando os argumentos `apiKey.value` e `region.value`. Dessa forma, você usa os dois valores que são trazidos pelo formulário inicial quando os campos apropriados são preenchidos.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -129,7 +129,7 @@ function handleSubmit(e) {
 }
 ```
 
-✅ Refresque sua memória - o HTML que você configurou na última lição tem dois campos de entrada cujos `values` são capturados via os `const` que você configurou no início do arquivo, e ambos são `required`, então o navegador impede que os usuários insiram valores nulos.
+✅ Refresque sua memória - o HTML que você configurou na última lição tem dois campos de entrada cujos `values` são capturados pelas `const` que você configurou no início do arquivo, e ambos são `required`, então o navegador impede que os usuários insiram valores nulos.
 
 ### Configure o usuário
 
@@ -147,17 +147,17 @@ function setUpUser(apiKey, regionName) {
 }
 ```
 
-Essa função exibe uma mensagem de carregamento enquanto a API é chamada. Neste ponto, você chegou à criação da função mais importante desta extensão de navegador!
+Essa função define uma mensagem de carregamento para exibir enquanto a API é chamada. Neste ponto, você chegou à criação da função mais importante desta extensão para navegador!
 
-### Exibir Uso de Carbono
+### Exiba o Uso de Carbono
 
 Finalmente, é hora de consultar a API!
 
-Antes de prosseguir, devemos discutir APIs. APIs, ou [Interfaces de Programação de Aplicações](https://www.webopedia.com/TERM/A/API.html), são um elemento crítico na caixa de ferramentas de um desenvolvedor web. Elas fornecem maneiras padrão para programas interagirem e se conectarem. Por exemplo, se você está construindo um site que precisa consultar um banco de dados, alguém pode ter criado uma API para você usar. Embora existam muitos tipos de APIs, uma das mais populares é uma [API REST](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Antes de prosseguir, devemos discutir APIs. APIs, ou [Interfaces de Programação de Aplicações](https://www.webopedia.com/TERM/A/API.html), são um elemento crítico na caixa de ferramentas de um desenvolvedor web. Elas fornecem maneiras padrão para programas interagirem e se conectarem. Por exemplo, se você está criando um site que precisa consultar um banco de dados, alguém pode ter criado uma API para você usar. Embora existam muitos tipos de APIs, uma das mais populares é uma [API REST](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
-✅ O termo 'REST' significa 'Transferência de Estado Representacional' e utiliza URLs configurados de várias maneiras para buscar dados. Faça uma pequena pesquisa sobre os vários tipos de APIs disponíveis para desenvolvedores. Qual formato mais te atrai?
+✅ O termo 'REST' significa 'Transferência de Estado Representacional' e utiliza URLs configurados de várias maneiras para buscar dados. Faça uma pequena pesquisa sobre os vários tipos de APIs disponíveis para desenvolvedores. Qual formato mais lhe agrada?
 
-Há coisas importantes a serem observadas sobre esta função. Primeiro, observe a palavra-chave [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Escrever suas funções para que elas sejam executadas de forma assíncrona significa que elas esperam por uma ação, como o retorno de dados, ser concluída antes de continuar.
+Há coisas importantes a serem observadas sobre esta função. Primeiro, observe a palavra-chave [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Escrever suas funções para que elas sejam executadas de forma assíncrona significa que elas esperam uma ação, como o retorno de dados, ser concluída antes de continuar.
 
 Aqui está um vídeo rápido sobre `async`:
 
@@ -207,7 +207,7 @@ async function displayCarbonUsage(apiKey, region) {
 
 Esta é uma função grande. O que está acontecendo aqui?
 
-- Seguindo as melhores práticas, você usa a palavra-chave `async` para fazer essa função se comportar de forma assíncrona. A função contém um bloco `try/catch`, pois retornará uma promessa quando a API retornar dados. Como você não tem controle sobre a velocidade com que a API responderá (ela pode nem responder!), você precisa lidar com essa incerteza chamando-a de forma assíncrona.
+- Seguindo as melhores práticas, você usa a palavra-chave `async` para fazer com que esta função se comporte de forma assíncrona. A função contém um bloco `try/catch`, pois retornará uma promessa quando a API retornar dados. Como você não tem controle sobre a velocidade com que a API responderá (ela pode nem responder!), você precisa lidar com essa incerteza chamando-a de forma assíncrona.
 - Você está consultando a API co2signal para obter os dados da sua região, usando sua API Key. Para usar essa chave, você precisa usar um tipo de autenticação nos parâmetros do cabeçalho.
 - Assim que a API responder, você atribui vários elementos dos dados de resposta às partes da tela que você configurou para exibir esses dados.
 - Se houver um erro ou se não houver resultado, você exibe uma mensagem de erro.
@@ -220,7 +220,7 @@ Parabéns! Se você construir sua extensão (`npm run build`) e atualizá-la no 
 
 ## 🚀 Desafio
 
-Discutimos vários tipos de API até agora nestas lições. Escolha uma API da web e pesquise em profundidade o que ela oferece. Por exemplo, dê uma olhada nas APIs disponíveis nos navegadores, como a [API de Arrastar e Soltar do HTML](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). O que faz uma API ser excelente, na sua opinião?
+Discutimos vários tipos de API até agora nestas lições. Escolha uma API da web e pesquise em profundidade o que ela oferece. Por exemplo, dê uma olhada nas APIs disponíveis nos navegadores, como a [API de Arrastar e Soltar em HTML](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). O que, na sua opinião, faz uma API ser excelente?
 
 ## Questionário Pós-Aula
 
@@ -233,6 +233,8 @@ Você aprendeu sobre LocalStorage e APIs nesta lição, ambos muito úteis para 
 ## Tarefa
 
 [Adote uma API](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

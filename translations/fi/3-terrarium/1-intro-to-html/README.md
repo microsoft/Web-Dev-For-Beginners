@@ -1,20 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46a0639e719b9cf1dfd062aa24cad639",
-  "translation_date": "2025-08-27T20:05:09+00:00",
+  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
+  "translation_date": "2025-08-29T00:44:31+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "fi"
 }
 -->
 # Terrarium-projekti Osa 1: Johdatus HTML:ään
 
-![Johdatus HTML:ään](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.fi.png)  
+![Johdatus HTML:ään](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.fi.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ennakkokysely
 
 [Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/15)
+
 
 > Katso video
 
@@ -25,7 +26,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 HTML eli HyperText Markup Language on verkkosivujen "luuranko". Jos CSS "pukee" HTML:n ja JavaScript tuo sen eloon, HTML on verkkosovelluksesi runko. HTML:n syntaksi heijastaa tätä ajatusta, sillä se sisältää "head"-, "body"- ja "footer"-tagit.
 
-Tässä oppitunnissa käytämme HTML:ää rakentaaksemme virtuaalisen terraariomme käyttöliittymän "luurangon". Siinä on otsikko ja kolme saraketta: oikea ja vasen sarake, joissa siirrettävät kasvit sijaitsevat, sekä keskialue, joka toimii lasimaisena terraariona. Tämän oppitunnin lopussa näet kasvit sarakkeissa, mutta käyttöliittymä näyttää hieman oudolta; älä huoli, seuraavassa osiossa lisäät CSS-tyylejä, jotta käyttöliittymä näyttää paremmalta.
+Tässä oppitunnissa käytämme HTML:ää rakentaaksemme virtuaalisen terraariomme käyttöliittymän "luurangon". Siinä on otsikko ja kolme saraketta: oikea ja vasen sarake, joissa sijaitsevat vedettävät kasvit, sekä keskialue, joka toimii lasimaisena terraariona. Oppitunnin lopussa näet kasvit sarakkeissa, mutta käyttöliittymä näyttää hieman oudolta; älä huoli, seuraavassa osiossa lisäät CSS-tyylejä, jotta käyttöliittymä näyttää paremmalta.
 
 ### Tehtävä
 
@@ -35,23 +36,23 @@ Luo tietokoneellesi kansio nimeltä 'terrarium' ja sen sisälle tiedosto nimelt�
 
 Tai
 
-Käytä näitä komentoja git bashissa:  
-* `mkdir terrarium`  
-* `cd terrarium`  
-* `touch index.html`  
+Käytä näitä komentoja git bashissa:
+* `mkdir terrarium`
+* `cd terrarium`
+* `touch index.html`
 * `code index.html` tai `nano index.html`
 
-> index.html-tiedostot kertovat selaimelle, että kyseessä on kansion oletustiedosto; URL-osoitteet, kuten `https://anysite.com/test`, voivat perustua kansiorakenteeseen, jossa on kansio nimeltä `test` ja sen sisällä `index.html`; `index.html` ei välttämättä näy URL-osoitteessa.
+> index.html-tiedostot kertovat selaimelle, että kyseessä on kansion oletustiedosto; esimerkiksi URL-osoitteet kuten `https://anysite.com/test` voivat perustua kansiorakenteeseen, jossa on kansio nimeltä `test` ja sen sisällä `index.html`; `index.html` ei välttämättä näy URL-osoitteessa.
 
 ---
 
 ## DocType ja html-tagit
 
-HTML-tiedoston ensimmäinen rivi on sen doctype. On hieman yllättävää, että tämä rivi täytyy olla aivan tiedoston yläosassa, mutta se kertoo vanhemmille selaimille, että sivu täytyy renderöidä standarditilassa nykyisen HTML-spesifikaation mukaisesti.
+HTML-tiedoston ensimmäinen rivi on sen doctype. On hieman yllättävää, että tämä rivi täytyy olla aivan tiedoston yläosassa, mutta se kertoo vanhemmille selaimille, että sivu tulee renderöidä standarditilassa nykyisen HTML-spesifikaation mukaisesti.
 
 > Vinkki: VS Codessa voit viedä hiiren tagin päälle ja saada tietoa sen käytöstä MDN Reference -oppaista.
 
-Toinen rivi on `<html>`-tagin avaus, jota seuraa sen sulkeva tagi `</html>`. Nämä tagit ovat käyttöliittymäsi juurielementit.
+Toinen rivi tulisi olla `<html>`-tagin avaus, jota seuraa sen sulkeva tagi `</html>`. Nämä tagit ovat käyttöliittymäsi juurielementit.
 
 ### Tehtävä
 
@@ -62,23 +63,23 @@ Lisää nämä rivit `index.html`-tiedostosi alkuun:
 <html></html>
 ```
 
-✅ On olemassa muutamia eri tiloja, jotka voidaan määrittää asettamalla DocType kyselymerkkijonolla: [Quirks Mode ja Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Näitä tiloja käytettiin tukemaan todella vanhoja selaimia, joita ei nykyään juuri käytetä (kuten Netscape Navigator 4 ja Internet Explorer 5). Voit pysyä standardin doctype-määrittelyn käytössä.
+✅ On olemassa muutamia eri tiloja, jotka voidaan määrittää asettamalla DocType kyselymerkkijonolla: [Quirks Mode ja Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Näitä tiloja käytettiin tukemaan todella vanhoja selaimia, joita ei nykyään juuri käytetä (kuten Netscape Navigator 4 ja Internet Explorer 5). Voit pysytellä standardin mukaisessa doctype-määrittelyssä.
 
 ---
 
 ## Dokumentin 'head'
 
-HTML-dokumentin 'head'-alue sisältää tärkeitä tietoja verkkosivustasi, joita kutsutaan myös [metatiedoiksi](https://developer.mozilla.org/docs/Web/HTML/Element/meta). Meidän tapauksessamme kerromme verkkopalvelimelle, jolle tämä sivu lähetetään renderöitäväksi, nämä neljä asiaa:
+HTML-dokumentin 'head'-alue sisältää tärkeää tietoa verkkosivustasi, jota kutsutaan myös [metatiedoiksi](https://developer.mozilla.org/docs/Web/HTML/Element/meta). Meidän tapauksessamme kerromme verkkopalvelimelle, jolle tämä sivu lähetetään renderöitäväksi, seuraavat neljä asiaa:
 
--   sivun otsikko  
--   sivun metatiedot, mukaan lukien:  
-    -   'merkistö', joka kertoo, mitä merkistökoodausta sivulla käytetään  
-    -   selaintiedot, mukaan lukien `x-ua-compatible`, joka osoittaa, että IE=edge-selain on tuettu  
-    -   tietoa siitä, miten näkymäportin tulisi käyttäytyä, kun se ladataan. Näkymäportin asettaminen alkuperäiseen mittakaavaan 1 hallitsee zoomaustasoa, kun sivu ladataan ensimmäisen kerran.
+-   sivun otsikko
+-   metatiedot, mukaan lukien:
+    -   'merkistö', joka kertoo, mitä merkistökoodausta sivulla käytetään
+    -   selaintiedot, mukaan lukien `x-ua-compatible`, joka osoittaa, että IE=edge-selain on tuettu
+    -   tietoa siitä, miten näkymäportin tulisi käyttäytyä, kun se ladataan. Näkymäportin asettaminen alkuasteikolle 1 hallitsee zoomaustasoa, kun sivu ladataan ensimmäisen kerran.
 
 ### Tehtävä
 
-Lisää 'head'-lohko dokumenttiisi `<html>`-tagien väliin.
+Lisää 'head'-lohko dokumenttiisi `<html>`-tagien avaus- ja sulkutagien väliin.
 
 ```html
 <head>
@@ -97,7 +98,7 @@ Lisää 'head'-lohko dokumenttiisi `<html>`-tagien väliin.
 
 ### HTML-tagit
 
-HTML:ssä lisäät tageja .html-tiedostoosi luodaksesi verkkosivun elementtejä. Jokaisella tagilla on yleensä avaus- ja sulkutagi, kuten tämä: `<p>hello</p>` kappaleen merkitsemiseksi. Luo käyttöliittymäsi runko lisäämällä `<body>`-tagit `<html>`-tagiparin sisään; merkintäsi näyttää nyt tältä:
+HTML:ssä lisäät tageja .html-tiedostoosi luodaksesi verkkosivun elementtejä. Jokaisella tagilla on yleensä avaus- ja sulkutagi, kuten `<p>hello</p>` kappaleen merkitsemiseksi. Luo käyttöliittymäsi runko lisäämällä `<body>`-tagit `<html>`-tagiparin sisälle; merkintäsi näyttää nyt tältä:
 
 ### Tehtävä
 
@@ -120,7 +121,7 @@ Nyt voit alkaa rakentaa sivuasi. Yleensä käytät `<div>`-tageja luodaksesi eri
 
 Yksi HTML-tagi, joka ei tarvitse sulkutagia, on `<img>`-tagi, koska sillä on `src`-elementti, joka sisältää kaiken tarvittavan tiedon kohteen renderöimiseksi.
 
-Luo sovellukseesi kansio nimeltä `images` ja lisää siihen kaikki kuvat [lähdekoodikansiosta](../../../../3-terrarium/solution/images); (siellä on 14 kasvikuvan tiedostoa).
+Luo sovellukseesi kansio nimeltä `images` ja lisää siihen kaikki kuvat [lähdekoodikansiosta](../../../../3-terrarium/solution/images); (kansiossa on 14 kasvikuvan tiedostoa).
 
 ### Tehtävä
 
@@ -179,9 +180,9 @@ Lisää nämä kasvikuvat kahteen sarakkeeseen `<body></body>`-tagien väliin:
 
 > Huom: Spanit vs. Divit. Divit ovat 'block'-elementtejä, ja Spanit ovat 'inline'-elementtejä. Mitä tapahtuisi, jos muuttaisit nämä divit spaneiksi?
 
-Näillä merkinnöillä kasvit näkyvät nyt ruudulla. Ne näyttävät melko huonoilta, koska niitä ei ole vielä tyylitelty CSS:llä, mutta teemme sen seuraavassa oppitunnissa.
+Tällä merkinnällä kasvit näkyvät nyt näytöllä. Se näyttää melko huonolta, koska niitä ei ole vielä tyylitelty CSS:llä, mutta teemme sen seuraavassa oppitunnissa.
 
-Jokaisella kuvalla on alt-teksti, joka näkyy, vaikka et voisi nähdä tai renderöidä kuvaa. Tämä on tärkeä ominaisuus saavutettavuuden kannalta. Opit lisää saavutettavuudesta tulevissa oppitunneissa; toistaiseksi muista, että alt-attribuutti tarjoaa vaihtoehtoista tietoa kuvalle, jos käyttäjä ei jostain syystä voi nähdä sitä (hitaan yhteyden, src-attribuutin virheen tai ruudunlukijan käytön vuoksi).
+Jokaisella kuvalla on alt-teksti, joka näkyy, vaikka et voisi nähdä tai renderöidä kuvaa. Tämä on tärkeä ominaisuus saavutettavuuden kannalta. Opit lisää saavutettavuudesta tulevissa oppitunneissa; toistaiseksi muista, että alt-attribuutti tarjoaa vaihtoehtoista tietoa kuvasta, jos käyttäjä ei jostain syystä voi nähdä sitä (hitaan yhteyden, src-attribuutin virheen tai ruudunlukijan käytön vuoksi).
 
 ✅ Huomasitko, että jokaisella kuvalla on sama alt-tagi? Onko tämä hyvä käytäntö? Miksi tai miksi ei? Voitko parantaa tätä koodia?
 
@@ -189,7 +190,7 @@ Jokaisella kuvalla on alt-teksti, joka näkyy, vaikka et voisi nähdä tai rende
 
 ## Semanttinen merkintä
 
-Yleisesti ottaen on suositeltavaa käyttää merkityksellistä 'semantiikkaa', kun kirjoitat HTML:ää. Mitä tämä tarkoittaa? Se tarkoittaa, että käytät HTML-tageja edustamaan sitä tietotyyppiä tai vuorovaikutusta, johon ne on suunniteltu. Esimerkiksi sivun pääotsikkotekstin tulisi käyttää `<h1>`-tagia.
+Yleisesti ottaen on suositeltavaa käyttää merkityksellistä 'semantiikkaa' HTML:ää kirjoittaessa. Mitä tämä tarkoittaa? Se tarkoittaa, että käytät HTML-tageja edustamaan sitä tietotyyppiä tai vuorovaikutusta, jota varten ne on suunniteltu. Esimerkiksi sivun pääotsikon tekstin tulisi käyttää `<h1>`-tagia.
 
 Lisää seuraava rivi heti avaus-`<body>`-tagisi alle:
 
@@ -197,9 +198,9 @@ Lisää seuraava rivi heti avaus-`<body>`-tagisi alle:
 <h1>My Terrarium</h1>
 ```
 
-Semanttisen merkinnän käyttäminen, kuten otsikoiden merkitseminen `<h1>`-tageilla ja järjestämättömien listojen merkitseminen `<ul>`-tageilla, auttaa ruudunlukijoita navigoimaan sivulla. Yleisesti ottaen painikkeet tulisi kirjoittaa `<button>`-tageina ja listat `<li>`-tageina. Vaikka on _mahdollista_ käyttää erityisesti tyyliteltyjä `<span>`-elementtejä klikkaustoimintojen kanssa painikkeiden jäljittelemiseksi, on parempi, että vammaiset käyttäjät voivat käyttää teknologioita määrittämään, missä painike sijaitsee sivulla ja vuorovaikuttamaan sen kanssa, jos elementti näkyy painikkeena. Tästä syystä yritä käyttää semanttista merkintää mahdollisimman paljon.
+Semanttisen merkinnän käyttäminen, kuten otsikoiden merkitseminen `<h1>`-tageilla ja järjestämättömien listojen renderöiminen `<ul>`-tageilla, auttaa ruudunlukijoita navigoimaan sivulla. Yleisesti ottaen painikkeet tulisi kirjoittaa `<button>`-tageina ja listat `<li>`-tageina. Vaikka on _mahdollista_ käyttää erityisesti tyyliteltyjä `<span>`-elementtejä klikkauskäsittelijöillä painikkeiden jäljittelemiseksi, on parempi, että vammaiset käyttäjät voivat käyttää teknologioita määrittämään, missä painike sijaitsee sivulla, ja olla vuorovaikutuksessa sen kanssa, jos elementti näkyy painikkeena. Tästä syystä yritä käyttää semanttista merkintää mahdollisimman paljon.
 
-✅ Katso ruudunlukijaa ja [miten se vuorovaikuttaa verkkosivun kanssa](https://www.youtube.com/watch?v=OUDV1gqs9GA). Näetkö, miksi epäsemanttinen merkintä saattaisi turhauttaa käyttäjää?
+✅ Tutustu ruudunlukijaan ja [sen vuorovaikutukseen verkkosivun kanssa](https://www.youtube.com/watch?v=OUDV1gqs9GA). Näetkö, miksi epäsemanttinen merkintä saattaisi turhauttaa käyttäjää?
 
 ## Terraario
 
@@ -221,13 +222,13 @@ Lisää tämä merkintä viimeisen `</div>`-tagin yläpuolelle:
 </div>
 ```
 
-✅ Vaikka lisäsit tämän merkinnän ruudulle, et näe mitään renderöityvän. Miksi?
+✅ Vaikka lisäsit tämän merkinnän näytölle, et näe mitään renderöityvän. Miksi?
 
 ---
 
 ## 🚀Haaste
 
-HTML:ssä on joitakin vanhoja "villikortti"-tageja, joita on edelleen hauska kokeilla, vaikka sinun ei pitäisi käyttää vanhentuneita tageja, kuten [näitä tageja](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) merkinnöissäsi. Voitko käyttää vanhaa `<marquee>`-tagia saadaksesi h1-otsikon vierimään vaakasuunnassa? (jos teet sen, muista poistaa se myöhemmin)
+HTML:ssä on joitakin vanhoja "villikortti"-tageja, joita on edelleen hauska kokeilla, vaikka sinun ei pitäisi käyttää vanhentuneita tageja, kuten [näitä tageja](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements), merkinnässäsi. Voitko käyttää vanhaa `<marquee>`-tagia saadaksesi h1-otsikon vierimään vaakasuunnassa? (jos teet niin, muista poistaa se myöhemmin)
 
 ## Jälkikysely
 
@@ -235,9 +236,9 @@ HTML:ssä on joitakin vanhoja "villikortti"-tageja, joita on edelleen hauska kok
 
 ## Kertaus ja itseopiskelu
 
-HTML on "koeteltu ja hyväksi havaittu" rakennusjärjestelmä, joka on auttanut rakentamaan verkon sellaiseksi kuin se on tänään. Opi hieman sen historiasta tutkimalla vanhoja ja uusia tageja. Voitko selvittää, miksi jotkut tagit vanhentuivat ja toiset lisättiin? Mitä tageja voisi tulla tulevaisuudessa?
+HTML on "hyväksi havaittu" rakennusjärjestelmä, joka on auttanut rakentamaan verkon sellaiseksi kuin se on tänään. Opi hieman sen historiasta tutkimalla vanhoja ja uusia tageja. Voitko selvittää, miksi jotkut tagit poistettiin käytöstä ja toiset lisättiin? Mitä tageja voisi tulla tulevaisuudessa?
 
-Lisätietoja verkkosivustojen ja mobiililaitteille suunnattujen sivustojen rakentamisesta löydät [Microsoft Learnista](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
+Lisätietoja verkkosivustojen ja mobiililaitteille tarkoitettujen sivustojen rakentamisesta löydät [Microsoft Learnista](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
 
 ## Tehtävä
 
@@ -246,4 +247,4 @@ Lisätietoja verkkosivustojen ja mobiililaitteille suunnattujen sivustojen raken
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä johtuvista väärinkäsityksistä tai virhetulkinnoista.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntäjää. Emme ole vastuussa tämän käännöksen käytöstä johtuvista väärinkäsityksistä tai virhetulkinnoista.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-27T20:24:36+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T00:41:32+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "fi"
 }
@@ -19,7 +19,7 @@ Canvas on HTML-elementti, joka oletuksena ei sisällä mitään sisältöä; se 
 
 ✅ Lue [lisää Canvas API:sta](https://developer.mozilla.org/docs/Web/API/Canvas_API) MDN:ssä.
 
-Näin se yleensä määritellään osana sivun body-elementtiä:
+Näin se yleensä määritellään osana sivun runkoa:
 
 ```html
 <canvas id="myCanvas" width="200" height="100"></canvas>
@@ -27,22 +27,22 @@ Näin se yleensä määritellään osana sivun body-elementtiä:
 
 Yllä asetamme `id`, `width` ja `height`.
 
-- `id`: määritä tämä, jotta voit viitata siihen, kun tarvitset vuorovaikutusta sen kanssa.
+- `id`: aseta tämä, jotta voit viitata siihen, kun tarvitset vuorovaikutusta sen kanssa.
 - `width`: tämä on elementin leveys.
 - `height`: tämä on elementin korkeus.
 
 ## Yksinkertaisen geometrian piirtäminen
 
-Canvas käyttää kartesiolaista koordinaatistoa asioiden piirtämiseen. Se käyttää x- ja y-akselia ilmaistakseen, missä jokin sijaitsee. Sijainti `0,0` on vasen yläkulma, ja oikea alakulma on se, mitä määritit CANVAS-elementin leveys- ja korkeusasetuksiksi.
+Canvas käyttää kartesiolaista koordinaatistojärjestelmää asioiden piirtämiseen. Se käyttää x- ja y-akselia ilmaisemaan, missä jokin sijaitsee. Sijainti `0,0` on vasen yläkulma, ja oikea alakulma on se, mitä määritit CANVASIN leveys- ja korkeusasetuksiksi.
 
-![Canvasin ruudukko](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.fi.png)  
+![Canvasin ruudukko](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.fi.png)
 > Kuva [MDN:stä](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Piirtääksesi canvas-elementtiin sinun täytyy käydä läpi seuraavat vaiheet:
 
 1. **Hanki viittaus** Canvas-elementtiin.
-2. **Hanki viittaus** Context-elementtiin, joka sijaitsee Canvas-elementissä.
-3. **Suorita piirto-operaatio** käyttäen Context-elementtiä.
+1. **Hanki viittaus** Context-elementtiin, joka sijaitsee Canvas-elementissä.
+1. **Suorita piirtotoiminto** käyttämällä Context-elementtiä.
 
 Yllä olevien vaiheiden koodi näyttää yleensä tältä:
 
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-Piirtääksesi pelin elementtejä ruudulle, koodisi näyttäisi tältä:
+Piirtääksesi pelin elementtejä näytölle, koodisi näyttäisi tältä:
 
 ```javascript
 async function run() {
@@ -128,13 +128,13 @@ async function run() {
 
 ### Mitä rakentaa
 
-Rakennat verkkosivun, jossa on Canvas-elementti. Sen pitäisi näyttää musta ruutu, jonka koko on `1024*768`. Olemme antaneet sinulle kaksi kuvaa:
+Rakennat verkkosivun, jossa on Canvas-elementti. Sen tulisi näyttää musta ruutu `1024*768`. Olemme toimittaneet sinulle kaksi kuvaa:
 
 - Sankarialus
 
    ![Sankarialus](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.fi.png)
 
-- 5*5 hirviöalus
+- 5*5 hirviö
 
    ![Hirviöalus](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.fi.png)
 
@@ -151,7 +151,7 @@ Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansiossa. Sen pitäisi si
 -| package.json
 ```
 
-Avaa tämän kansion kopio Visual Studio Codessa. Sinulla pitäisi olla paikallinen kehitysympäristö asennettuna, mieluiten Visual Studio Code, NPM ja Node asennettuna. Jos sinulla ei ole `npm`-asetuksia tietokoneellasi, [tässä ohjeet sen asentamiseen](https://www.npmjs.com/get-npm).
+Avaa tämän kansion kopio Visual Studio Codessa. Sinulla tulisi olla paikallinen kehitysympäristö asennettuna, mieluiten Visual Studio Code, jossa on NPM ja Node asennettuna. Jos sinulla ei ole `npm`-asetuksia tietokoneellasi, [tässä ohjeet sen asentamiseen](https://www.npmjs.com/get-npm).
 
 Aloita projektisi siirtymällä `your_work`-kansioon:
 
@@ -160,22 +160,22 @@ cd your-work
 npm start
 ```
 
-Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. Avaa selain ja syötä tämä osoite. Se on tällä hetkellä tyhjä sivu, mutta se muuttuu.
+Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. Avaa selain ja syötä tämä osoite. Tällä hetkellä sivu on tyhjä, mutta se muuttuu.
 
-> Huom: nähdäksesi muutokset ruudulla, päivitä selaimesi.
+> Huom: nähdäksesi muutokset näytöllä, päivitä selaimesi.
 
 ### Lisää koodi
 
-Lisää tarvittava koodi `your-work/app.js`-tiedostoon ratkaistaksesi alla olevat tehtävät:
+Lisää tarvittava koodi `your-work/app.js`-tiedostoon ratkaistaksesi alla olevat tehtävät.
 
-1. **Piirrä** canvas mustalla taustalla  
-   > vinkki: lisää kaksi riviä oikean TODO-kohdan alle `/app.js`-tiedostossa, asettaen `ctx`-elementin mustaksi ja ylä-/vasen koordinaatit 0,0 sekä korkeus ja leveys vastaamaan canvasin kokoa.
-2. **Lataa** tekstuurit  
-   > vinkki: lisää pelaajan ja vihollisen kuvat käyttämällä `await loadTexture` ja välittämällä kuvan polku. Et näe niitä vielä ruudulla!
-3. **Piirrä** sankari ruudun keskelle alaosaan  
-   > vinkki: käytä `drawImage`-API:a piirtääksesi heroImg ruudulle, asettaen `canvas.width / 2 - 45` ja `canvas.height - canvas.height / 4)`.
-4. **Piirrä** 5*5 hirviöt  
-   > vinkki: nyt voit poistaa kommentit koodista, joka piirtää viholliset ruudulle. Seuraavaksi siirry `createEnemies`-funktioon ja rakenna se.
+1. **Piirrä** canvas mustalla taustalla
+   > vinkki: lisää kaksi riviä sopivan TODO-kohdan alle `/app.js`-tiedostossa, asettaen `ctx`-elementin mustaksi ja ylä-/vasen koordinaatit 0,0 sekä korkeus ja leveys vastaamaan canvasin kokoa.
+2. **Lataa** tekstuurit
+   > vinkki: lisää pelaajan ja vihollisen kuvat käyttämällä `await loadTexture` ja välittämällä kuvan polku. Et näe niitä vielä näytöllä!
+3. **Piirrä** sankari näytön keskelle alaosaan
+   > vinkki: käytä `drawImage`-API:a piirtääksesi heroImg näytölle, asettaen `canvas.width / 2 - 45` ja `canvas.height - canvas.height / 4)`.
+4. **Piirrä** 5*5 hirviöt
+   > vinkki: Nyt voit poistaa kommentit koodista, joka piirtää viholliset näytölle. Seuraavaksi siirry `createEnemies`-funktioon ja rakenna se.
 
    Ensin, määritä joitakin vakioita:
 
@@ -186,7 +186,7 @@ Lisää tarvittava koodi `your-work/app.js`-tiedostoon ratkaistaksesi alla oleva
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    sitten, luo silmukka, joka piirtää hirviöiden taulukon ruudulle:
+    sitten, luo silmukka, joka piirtää hirviöiden taulukon näytölle:
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {
@@ -204,7 +204,7 @@ Valmis tulos näyttää tältä:
 
 ## Ratkaisu
 
-Yritä ratkaista tehtävä itse ensin, mutta jos jäät jumiin, katso [ratkaisu](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
+Yritä ratkaista itse ensin, mutta jos jäät jumiin, katso [ratkaisu](../../../../6-space-game/2-drawing-to-canvas/solution/app.js)
 
 ---
 
@@ -218,7 +218,7 @@ Olet oppinut piirtämään 2D-keskeisellä Canvas API:lla; tutustu [WebGL API:ii
 
 ## Kertaus ja itseopiskelu
 
-Lue lisää Canvas API:sta [tutustumalla siihen](https://developer.mozilla.org/docs/Web/API/Canvas_API).
+Opi lisää Canvas API:sta [lukemalla siitä](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
 ## Tehtävä
 
@@ -227,4 +227,4 @@ Lue lisää Canvas API:sta [tutustumalla siihen](https://developer.mozilla.org/d
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmisen tekemää käännöstä. Emme ole vastuussa tämän käännöksen käytöstä johtuvista väärinkäsityksistä tai virhetulkinnoista.

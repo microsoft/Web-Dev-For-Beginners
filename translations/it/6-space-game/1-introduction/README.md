@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-25T22:32:04+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T00:09:09+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "it"
 }
@@ -19,18 +19,18 @@ CO_OP_TRANSLATOR_METADATA:
 
 Nelle lezioni precedenti, non c'era molta necessità di preoccuparsi dell'architettura del design delle app che hai creato, poiché i progetti erano molto piccoli. Tuttavia, quando le tue applicazioni crescono in dimensioni e complessità, le decisioni architettoniche diventano una preoccupazione maggiore. Ci sono due approcci principali per creare applicazioni più grandi in JavaScript: *composizione* o *ereditarietà*. Entrambi hanno vantaggi e svantaggi, ma spieghiamoli nel contesto di un gioco.
 
-✅ Uno dei libri di programmazione più famosi mai scritti riguarda i [design patterns](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Uno dei libri di programmazione più famosi mai scritti riguarda i [design pattern](https://en.wikipedia.org/wiki/Design_Patterns).
 
-In un gioco hai `oggetti di gioco`, che sono oggetti che esistono su uno schermo. Questo significa che hanno una posizione su un sistema di coordinate cartesiane, caratterizzata da una coordinata `x` e una `y`. Mentre sviluppi un gioco, noterai che tutti i tuoi oggetti di gioco hanno una proprietà standard, comune a ogni gioco che crei, ovvero elementi che sono:
+In un gioco hai `oggetti di gioco`, che sono oggetti che esistono su uno schermo. Questo significa che hanno una posizione su un sistema di coordinate cartesiane, caratterizzata da una coordinata `x` e `y`. Mentre sviluppi un gioco, noterai che tutti i tuoi oggetti di gioco hanno una proprietà standard, comune a ogni gioco che crei, ovvero elementi che sono:
 
 - **basati sulla posizione** La maggior parte, se non tutti, gli elementi di gioco sono basati sulla posizione. Questo significa che hanno una posizione, un `x` e un `y`.
 - **mobili** Questi sono oggetti che possono spostarsi in una nuova posizione. Tipicamente un eroe, un mostro o un NPC (un personaggio non giocante), ma non, ad esempio, un oggetto statico come un albero.
-- **auto-distruttivi** Questi oggetti esistono solo per un periodo di tempo determinato prima di prepararsi per la cancellazione. Di solito questo è rappresentato da un booleano `dead` o `destroyed` che segnala al motore di gioco che questo oggetto non dovrebbe più essere renderizzato.
+- **auto-distruttivi** Questi oggetti esistono solo per un periodo di tempo limitato prima di prepararsi per la cancellazione. Di solito questo è rappresentato da un booleano `dead` o `destroyed` che segnala al motore di gioco che questo oggetto non dovrebbe più essere renderizzato.
 - **tempo di recupero** 'Tempo di recupero' è una proprietà tipica tra gli oggetti di breve durata. Un esempio tipico è un pezzo di testo o un effetto grafico come un'esplosione che dovrebbe essere visibile solo per pochi millisecondi.
 
 ✅ Pensa a un gioco come Pac-Man. Riesci a identificare i quattro tipi di oggetti elencati sopra in questo gioco?
 
-### Espressione del comportamento
+### Esprimere il comportamento
 
 Tutto ciò che abbiamo descritto sopra è un comportamento che gli oggetti di gioco possono avere. Quindi, come lo codifichiamo? Possiamo esprimere questo comportamento come metodi associati a classi o oggetti.
 
@@ -151,11 +151,11 @@ Un altro pattern comune nello sviluppo di giochi affronta il problema di gestire
 
 Questo pattern affronta l'idea che le parti disparate della tua applicazione non dovrebbero conoscersi tra loro. Perché? Rende molto più facile capire cosa sta succedendo in generale se le varie parti sono separate. Inoltre, rende più semplice cambiare improvvisamente il comportamento se necessario. Come lo realizziamo? Lo facciamo stabilendo alcuni concetti:
 
-- **messaggio**: Un messaggio è solitamente una stringa di testo accompagnata da un payload opzionale (un pezzo di dati che chiarisce di cosa tratta il messaggio). Un tipico messaggio in un gioco può essere `KEY_PRESSED_ENTER`.
+- **messaggio**: Un messaggio è solitamente una stringa di testo accompagnata da un payload opzionale (un pezzo di dati che chiarisce di cosa tratta il messaggio). Un messaggio tipico in un gioco può essere `KEY_PRESSED_ENTER`.
 - **publisher**: Questo elemento *pubblica* un messaggio e lo invia a tutti i subscriber.
-- **subscriber**: Questo elemento *ascolta* messaggi specifici ed esegue un'azione come risultato della ricezione di questo messaggio, come sparare un laser.
+- **subscriber**: Questo elemento *ascolta* messaggi specifici e svolge un compito come risultato della ricezione di questo messaggio, come sparare un laser.
 
-L'implementazione è piuttosto piccola in termini di dimensioni, ma è un pattern molto potente. Ecco come può essere implementato:
+L'implementazione è abbastanza piccola in termini di dimensioni, ma è un pattern molto potente. Ecco come può essere implementato:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -232,5 +232,7 @@ Scopri di più sul Pub/Sub [leggendo a riguardo](https://docs.microsoft.com/azur
 
 [Progetta un gioco](assignment.md)
 
+---
+
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.

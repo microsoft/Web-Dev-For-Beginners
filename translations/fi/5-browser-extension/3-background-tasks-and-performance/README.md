@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f198c6b817b4b2a99749f4662e7cae98",
-  "translation_date": "2025-08-27T20:48:51+00:00",
+  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
+  "translation_date": "2025-08-29T00:39:18+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "fi"
 }
 -->
-# Selaimen laajennusprojekti, osa 3: Taustatehtävät ja suorituskyky
+# Selaimen laajennusprojekti Osa 3: Taustatehtävät ja suorituskyky
 
 ## Ennakkokysely
 
@@ -15,59 +15,59 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Johdanto
 
-Moduulin kahdessa viimeisessä oppitunnissa opit rakentamaan lomakkeen ja näyttöalueen API:sta haetuille tiedoille. Tämä on hyvin yleinen tapa luoda verkkosivusto. Opit myös käsittelemään tietojen asynkronista hakua. Selaimen laajennuksesi on melkein valmis.
+Edellisissä kahdessa oppitunnissa opit rakentamaan lomakkeen ja näyttöalueen API:sta haetuille tiedoille. Tämä on hyvin yleinen tapa luoda verkkosivuston läsnäolo verkossa. Opit myös käsittelemään tietojen hakemista asynkronisesti. Selaimen laajennuksesi on melkein valmis.
 
-Jäljellä on vielä taustatehtävien hallinta, kuten laajennuksen kuvakkeen värin päivittäminen. Tämä on hyvä hetki keskustella siitä, miten selain hallitsee tällaisia tehtäviä. Pohditaan näitä selaimen tehtäviä verkkosivustosi suorituskyvyn näkökulmasta.
+Jäljellä on taustatehtävien hallinta, mukaan lukien laajennuksen kuvakkeen värin päivittäminen. Tämä on hyvä hetki keskustella siitä, miten selain hallitsee tällaisia tehtäviä. Tarkastellaan näitä selaimen tehtäviä verkkosivustosi suorituskyvyn näkökulmasta, kun rakennat niitä.
 
 ## Verkkosuorituskyvyn perusteet
 
-> "Verkkosivuston suorituskyky tarkoittaa kahta asiaa: kuinka nopeasti sivu latautuu ja kuinka nopeasti sen koodi suoritetaan." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
+> "Verkkosivuston suorituskyky liittyy kahteen asiaan: kuinka nopeasti sivu latautuu ja kuinka nopeasti sen koodi toimii." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
-Se, miten verkkosivustot saadaan toimimaan salamannopeasti kaikenlaisilla laitteilla, kaikenlaisille käyttäjille ja kaikenlaisissa tilanteissa, on laaja aihe. Tässä muutamia huomioitavia asioita, kun rakennat joko tavallista verkkoprojektia tai selaimen laajennusta.
+Se, miten verkkosivustot saadaan salamannopeiksi kaikilla laitteilla, kaikille käyttäjille ja kaikissa tilanteissa, on odotetusti laaja aihe. Tässä muutamia huomioitavia asioita, kun rakennat joko tavallista verkkoprojektia tai selaimen laajennusta.
 
-Ensimmäinen asia, joka sinun tulee tehdä varmistaaksesi sivustosi tehokkuuden, on kerätä tietoa sen suorituskyvystä. Ensimmäinen paikka, jossa voit tehdä tämän, on verkkoselaimesi kehittäjätyökalut. Edgessä voit valita "Asetukset ja muuta" -painikkeen (kolmen pisteen kuvake selaimen oikeassa yläkulmassa), siirtyä kohtaan Lisää työkaluja > Kehittäjätyökalut ja avata Suorituskyky-välilehden. Voit myös käyttää pikanäppäimiä `Ctrl` + `Shift` + `I` Windowsilla tai `Option` + `Command` + `I` Macilla avataksesi kehittäjätyökalut.
+Ensimmäinen asia, joka sinun täytyy tehdä varmistaaksesi, että sivustosi toimii tehokkaasti, on kerätä tietoa sen suorituskyvystä. Ensimmäinen paikka tehdä tämä on verkkoselaimesi kehittäjätyökalut. Edgessä voit valita "Asetukset ja lisää" -painikkeen (kolmen pisteen kuvake selaimen oikeassa yläkulmassa), siirtyä kohtaan Lisää työkaluja > Kehittäjätyökalut ja avata Suorituskyky-välilehden. Voit myös käyttää pikanäppäimiä `Ctrl` + `Shift` + `I` Windowsissa tai `Option` + `Command` + `I` Macissa avataksesi kehittäjätyökalut.
 
-Suorituskyky-välilehdellä on Profilointi-työkalu. Avaa verkkosivusto (kokeile esimerkiksi [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) ja napsauta 'Tallenna'-painiketta, sitten päivitä sivu. Voit lopettaa tallennuksen milloin tahansa, ja näet rutiinit, jotka liittyvät sivuston 'skriptaamiseen', 'renderöintiin' ja 'maalaamiseen':
+Suorituskyky-välilehdellä on Profilointi-työkalu. Avaa verkkosivusto (kokeile esimerkiksi [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) ja napsauta 'Tallenna'-painiketta, sitten päivitä sivusto. Voit lopettaa tallennuksen milloin tahansa, ja näet rutiinit, jotka on luotu 'script', 'render' ja 'paint' -toimintoja varten:
 
-![Edge-profilointi](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.fi.png)
+![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.fi.png)
 
 ✅ Tutustu [Microsoftin dokumentaatioon](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) Edgen Suorituskyky-paneelista.
 
-> Vinkki: saadaksesi tarkat lukemat sivustosi käynnistysajasta, tyhjennä selaimesi välimuisti.
+> Vinkki: saadaksesi tarkat lukemat verkkosivustosi käynnistysajasta, tyhjennä selaimesi välimuisti.
 
-Valitse profiilin aikajanasta elementtejä zoomataksesi tapahtumiin, jotka tapahtuvat sivusi latautuessa.
+Valitse profiilin aikajanan elementtejä zoomataksesi tapahtumiin, jotka tapahtuvat sivusi latautuessa.
 
 Saat yleiskuvan sivusi suorituskyvystä valitsemalla osan profiilin aikajanasta ja tarkastelemalla yhteenvetopaneelia:
 
-![Edge-profiloinnin yhteenveto](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.fi.png)
+![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.fi.png)
 
 Tarkista Tapahtumaloki-paneeli nähdäksesi, kestikö jokin tapahtuma yli 15 ms:
 
-![Edge-tapahtumaloki](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.fi.png)
+![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.fi.png)
 
-✅ Tutustu profilointityökaluun! Avaa tämän sivuston kehittäjätyökalut ja katso, onko siellä pullonkauloja. Mikä on hitain latautuva resurssi? Entä nopein?
+✅ Tutustu profilointityökaluun! Avaa kehittäjätyökalut tällä sivustolla ja katso, onko pullonkauloja. Mikä on hitaimmin latautuva resurssi? Nopein?
 
 ## Profilointitarkistukset
 
-Yleisesti ottaen on olemassa joitakin "ongelma-alueita", joita jokaisen verkkokehittäjän tulisi tarkkailla rakentaessaan sivustoa, jotta vältytään ikäviltä yllätyksiltä tuotantoon siirryttäessä.
+Yleisesti ottaen on olemassa joitakin "ongelma-alueita", joita jokaisen verkkokehittäjän tulisi tarkkailla rakentaessaan sivustoa välttääkseen ikäviä yllätyksiä, kun on aika julkaista tuotantoon.
 
 **Resurssien koot**: Verkkosivustot ovat viime vuosina "raskautuneet" ja siten hidastuneet. Osa tästä painosta liittyy kuvien käyttöön.
 
-✅ Tutustu [Internet-arkistoon](https://httparchive.org/reports/page-weight) saadaksesi historiallista näkökulmaa sivustojen painoon ja muihin tietoihin.
+✅ Tutustu [Internet-arkistoon](https://httparchive.org/reports/page-weight) saadaksesi historiallisen näkymän sivustojen painosta ja muusta.
 
 Hyvä käytäntö on varmistaa, että kuvasi ovat optimoituja ja toimitetaan oikeassa koossa ja resoluutiossa käyttäjillesi.
 
-**DOM-läpikäynnit**: Selaimen on rakennettava dokumenttiobjektimalli (DOM) kirjoittamasi koodin perusteella, joten hyvän suorituskyvyn kannalta on tärkeää pitää tagit minimissä ja käyttää vain sitä, mitä sivu tarvitsee. Esimerkiksi ylimääräinen CSS, joka liittyy sivuun, voidaan optimoida; tyylit, joita tarvitaan vain yhdellä sivulla, eivät tarvitse olla mukana päätyylitiedostossa.
+**DOM-läpikäynnit**: Selaimen täytyy rakentaa Dokumenttiobjektimalli (DOM) kirjoittamasi koodin perusteella, joten hyvän sivuston suorituskyvyn kannalta on tärkeää pitää tagit minimissä, käyttäen ja tyylittäen vain sitä, mitä sivu tarvitsee. Tässä yhteydessä ylimääräinen CSS, joka liittyy sivuun, voitaisiin optimoida; tyylit, joita tarvitaan vain yhdellä sivulla, eivät tarvitse olla mukana päätyylitiedostossa.
 
-**JavaScript**: Jokaisen JavaScript-kehittäjän tulisi tarkkailla 'renderöintiä estäviä' skriptejä, jotka on ladattava ennen kuin muu DOM voidaan käydä läpi ja maalata selaimeen. Harkitse `defer`-attribuutin käyttöä sisäisissä skripteissäsi (kuten tehtiin Terrarium-moduulissa).
+**JavaScript**: Jokaisen JavaScript-kehittäjän tulisi tarkkailla 'render-blocking' -skriptejä, jotka täytyy ladata ennen kuin DOM voidaan käydä läpi ja piirtää selaimeen. Harkitse `defer`-attribuutin käyttöä inline-skripteissäsi (kuten Terrarium-moduulissa tehdään).
 
 ✅ Kokeile joitakin sivustoja [Site Speed Test -sivustolla](https://www.webpagetest.org/) oppiaksesi lisää yleisistä tarkistuksista, joita tehdään sivuston suorituskyvyn määrittämiseksi.
 
-Nyt kun sinulla on käsitys siitä, miten selain renderöi lähettämäsi resurssit, katsotaan viimeiset asiat, jotka sinun täytyy tehdä laajennuksesi viimeistelemiseksi:
+Nyt kun sinulla on käsitys siitä, miten selain renderöi lähettämäsi resurssit, tarkastellaan viimeisiä asioita, jotka sinun täytyy tehdä laajennuksesi viimeistelemiseksi:
 
 ### Luo funktio värin laskemiseen
 
-Työskentele tiedostossa `/src/index.js` ja lisää funktio nimeltä `calculateColor()` niiden `const`-muuttujien jälkeen, jotka määrittelit saadaksesi pääsyn DOM:iin:
+Työskentele tiedostossa `/src/index.js` ja lisää funktio nimeltä `calculateColor()` niiden `const`-muuttujien jälkeen, jotka asetit saadaksesi pääsyn DOM:iin:
 
 ```JavaScript
 function calculateColor(value) {
@@ -88,19 +88,19 @@ function calculateColor(value) {
 }
 ```
 
-Mitä tässä tapahtuu? Annat funktion parametriksi arvon (hiili-intensiteetti), joka saadaan API-kutsusta, jonka teit edellisessä oppitunnissa, ja sitten lasket, kuinka lähellä sen arvo on värien taulukossa esitettyä indeksiä. Tämän jälkeen lähetät lähimmän värin arvon Chrome-runtimeen.
+Mitä tässä tapahtuu? Syötät arvon (hiili-intensiteetti) API-kutsusta, jonka teit edellisessä oppitunnissa, ja sitten lasket, kuinka lähellä sen arvo on värien taulukossa esitettyä indeksiä. Sitten lähetät lähimmän värin arvon chrome runtimeen.
 
 Chrome.runtime sisältää [API:n](https://developer.chrome.com/extensions/runtime), joka käsittelee kaikenlaisia taustatehtäviä, ja laajennuksesi hyödyntää sitä:
 
 > "Käytä chrome.runtime API:a hakeaksesi taustasivun, saadaksesi tietoja manifestista ja kuunnellaksesi sekä vastataksesi sovelluksen tai laajennuksen elinkaaren tapahtumiin. Voit myös käyttää tätä API:a muuntaaksesi URL-osoitteiden suhteelliset polut täysin määritellyiksi URL-osoitteiksi."
 
-✅ Jos kehität tätä selaimen laajennusta Edgelle, saatat yllättyä siitä, että käytät Chrome-API:a. Uudemmat Edge-selaimen versiot toimivat Chromium-selainmoottorilla, joten voit hyödyntää näitä työkaluja.
+✅ Jos kehität tätä selaimen laajennusta Edgelle, voi olla yllättävää, että käytät chrome API:a. Uudemmat Edge-selaimen versiot toimivat Chromium-selainmoottorilla, joten voit hyödyntää näitä työkaluja.
 
-> Huomaa, että jos haluat profiloida selaimen laajennusta, avaa kehittäjätyökalut suoraan laajennuksesta, sillä se toimii omana erillisenä selaininstanssinaan.
+> Huomaa, että jos haluat profiloida selaimen laajennusta, käynnistä kehittäjätyökalut laajennuksen sisältä, koska se on oma erillinen selaininstanssinsa.
 
-### Aseta oletusväri kuvakkeelle
+### Aseta oletuskuvakkeen väri
 
-Nyt, `init()`-funktiossa, aseta kuvakkeen väriksi aluksi yleinen vihreä kutsumalla jälleen Chromen `updateIcon`-toimintoa:
+Nyt, `init()`-funktiossa, aseta kuvake aluksi yleiseksi vihreäksi kutsumalla jälleen chromen `updateIcon`-toimintoa:
 
 ```JavaScript
 chrome.runtime.sendMessage({
@@ -111,7 +111,7 @@ chrome.runtime.sendMessage({
 });
 ```
 
-### Kutsu funktio ja suorita kutsu
+### Kutsu funktio, suorita kutsu
 
 Seuraavaksi kutsu juuri luomasi funktio lisäämällä se C02Signal API:n palauttamaan lupaukseen:
 
@@ -142,19 +142,19 @@ function drawIcon(value) {
 }
 ```
 
-Tässä koodissa lisäät kuuntelijan kaikille viesteille, jotka tulevat taustatehtävien hallintaan. Jos viestin nimi on 'updateIcon', seuraava koodi suoritetaan, ja oikean värinen kuvake piirretään Canvas API:n avulla.
+Tässä koodissa lisäät kuuntelijan kaikille viesteille, jotka tulevat taustatehtävien hallintaan. Jos viesti on nimeltään 'updateIcon', seuraava koodi suoritetaan piirtämään oikean värinen kuvake Canvas API:n avulla.
 
 ✅ Opit lisää Canvas API:sta [Avaruuspeli-oppitunneilla](../../6-space-game/2-drawing-to-canvas/README.md).
 
-Nyt, rakenna laajennuksesi uudelleen (`npm run build`), päivitä ja käynnistä laajennuksesi, ja katso värin muuttuvan. Onko hyvä hetki käydä asioilla tai tiskata? Nyt tiedät!
+Nyt, rakenna laajennuksesi uudelleen (`npm run build`), päivitä ja käynnistä laajennuksesi ja katso värin muuttuvan. Onko hyvä hetki käydä asioilla tai tiskata? Nyt tiedät!
 
-Onnittelut, olet rakentanut hyödyllisen selaimen laajennuksen ja oppinut lisää siitä, miten selain toimii ja miten sen suorituskykyä voidaan profiloida.
+Onnittelut, olet rakentanut hyödyllisen selaimen laajennuksen ja oppinut lisää siitä, miten selain toimii ja miten sen suorituskykyä profiloidaan.
 
 ---
 
 ## 🚀 Haaste
 
-Tutki joitakin avoimen lähdekoodin verkkosivustoja, jotka ovat olleet olemassa jo pitkään, ja selvitä niiden GitHub-historian perusteella, onko niiden suorituskykyä optimoitu vuosien varrella. Mikä on yleisin ongelmakohta?
+Tutki joitakin avoimen lähdekoodin verkkosivustoja, jotka ovat olleet olemassa pitkään, ja yritä GitHub-historian perusteella selvittää, miten niitä on optimoitu vuosien varrella suorituskyvyn osalta, jos ollenkaan. Mikä on yleisin ongelmakohta?
 
 ## Jälkikysely
 
@@ -162,15 +162,15 @@ Tutki joitakin avoimen lähdekoodin verkkosivustoja, jotka ovat olleet olemassa 
 
 ## Kertaus ja itseopiskelu
 
-Harkitse liittymistä [suorituskykyuutiskirjeen](https://perf.email/) tilaajaksi.
+Harkitse [suorituskykyuutiskirjeen](https://perf.email/) tilaamista.
 
-Tutki, miten selaimet arvioivat verkkosivustojen suorituskykyä tarkastelemalla niiden kehittäjätyökalujen suorituskyky-välilehtiä. Löydätkö merkittäviä eroja?
+Tutki joitakin tapoja, joilla selaimet arvioivat verkkosuorituskykyä tarkastelemalla niiden verkkotyökalujen suorituskyky-välilehtiä. Löydätkö merkittäviä eroja?
 
 ## Tehtävä
 
-[Analysoi sivuston suorituskyky](assignment.md)
+[Analysoi sivuston suorituskykyä](assignment.md)
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

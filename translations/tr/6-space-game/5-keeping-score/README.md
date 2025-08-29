@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-25T22:05:47+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T00:24:17+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "tr"
 }
@@ -11,13 +11,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/37)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/37)
 
-Bu derste, bir oyuna puan eklemeyi ve can hesaplamayı öğreneceksiniz.
+Bu derste, bir oyuna nasıl puanlama ekleyeceğinizi ve canları nasıl hesaplayacağınızı öğreneceksiniz.
 
-## Ekrana metin çizmek
+## Ekrana Metin Çizme
 
-Ekranda bir oyun puanını gösterebilmek için, metni ekrana nasıl yerleştireceğinizi bilmeniz gerekir. Bunun cevabı, canvas nesnesi üzerinde `fillText()` metodunu kullanmaktır. Ayrıca hangi fontun kullanılacağı, metnin rengi ve hizalaması (sol, sağ, merkez) gibi diğer özellikleri de kontrol edebilirsiniz. Aşağıda ekrana metin çizen bir kod örneği bulunmaktadır.
+Ekranda bir oyun puanını gösterebilmek için, metni ekrana nasıl yerleştireceğinizi bilmeniz gerekir. Bunun cevabı, canvas nesnesi üzerinde `fillText()` yöntemini kullanmaktır. Ayrıca hangi yazı tipini kullanacağınızı, metnin rengini ve hizalamasını (sol, sağ, merkez) kontrol edebilirsiniz. Aşağıda ekrana metin çizen bir kod örneği bulunmaktadır.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -28,20 +28,20 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ✅ [Canvas'a nasıl metin eklenir](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) hakkında daha fazla bilgi edinin ve kendi tasarımınızı daha şık hale getirmekten çekinmeyin!
 
-## Oyun konsepti olarak can
+## Oyun Kavramı Olarak Can
 
-Bir oyunda can sahibi olma konsepti sadece bir sayıdan ibarettir. Uzay oyunu bağlamında, geminiz hasar aldığında birer birer azalan belirli bir can seti atamak yaygındır. Bu, bir sayı yerine minigemi veya kalp gibi grafiksel bir temsil göstermek hoş bir dokunuş olabilir.
+Bir oyunda can sahibi olma kavramı sadece bir sayıdır. Uzay oyunu bağlamında, geminiz hasar aldığında birer birer eksilen belirli bir can sayısı atamak yaygındır. Bu sayıyı bir sayı yerine minyatür gemiler veya kalpler gibi grafiksel bir temsil ile göstermek güzel olur.
 
-## Ne yapılacak?
+## Ne Yapacağız?
 
-Oyununuzda aşağıdakileri ekleyelim:
+Oyununuza aşağıdakileri ekleyelim:
 
 - **Oyun puanı**: Yok edilen her düşman gemisi için kahramana puan verilmelidir. Gemi başına 100 puan öneriyoruz. Oyun puanı ekranın sol alt köşesinde gösterilmelidir.
-- **Can**: Geminizin üç canı vardır. Her düşman gemisi sizinle çarpıştığında bir can kaybedersiniz. Can puanı ekranın sağ alt köşesinde gösterilmeli ve aşağıdaki grafikle oluşturulmalıdır: ![can görseli](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.tr.png).
+- **Can**: Geminizin üç canı vardır. Her düşman gemisiyle çarpıştığınızda bir can kaybedersiniz. Can puanı ekranın sağ alt köşesinde gösterilmeli ve aşağıdaki grafikle oluşturulmalıdır: ![can görseli](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.tr.png).
 
-## Önerilen adımlar
+## Önerilen Adımlar
 
-`your-work` alt klasöründe sizin için oluşturulmuş dosyaları bulun. Şunları içermelidir:
+`your-work` alt klasöründe sizin için oluşturulmuş dosyaları bulun. Şu dosyaları içermelidir:
 
 ```bash
 -| assets
@@ -60,11 +60,11 @@ cd your-work
 npm start
 ```
 
-Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatacaktır. Bir tarayıcı açın ve bu adresi girin. Şu anda kahramanı ve tüm düşmanları görmelisiniz. Sol ve sağ ok tuşlarına bastığınızda kahraman hareket eder ve düşmanları vurabilir.
+Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatacaktır. Bir tarayıcı açın ve bu adresi girin. Şu anda kahramanı ve tüm düşmanları görmelisiniz ve sol ve sağ ok tuşlarına bastığınızda kahraman hareket eder ve düşmanları vurabilir.
 
-### Kod ekleme
+### Kod Ekleme
 
-1. **Gerekli varlıkları kopyalayın**. `solution/assets/` klasöründen `your-work` klasörüne `life.png` varlığını ekleyin. `lifeImg`'i `window.onload` fonksiyonuna ekleyin:
+1. **Gerekli varlıkları kopyalayın**. `solution/assets/` klasöründen `your-work` klasörüne gerekli varlıkları kopyalayın; bir `life.png` varlığı ekleyeceksiniz. `lifeImg`'i window.onload fonksiyonuna ekleyin:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
@@ -80,7 +80,7 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     eventEmitter = new EventEmitter();
     ```
   
-2. **Değişkenler ekleyin**. Toplam puanı (0) ve kalan canları (3) temsil eden kod ekleyin, bu puanları ekranda gösterin.
+2. **Değişkenler ekleyin**. Toplam puanınızı (0) ve kalan canlarınızı (3) temsil eden kod ekleyin, bu puanları ekranda gösterin.
 
 3. **`updateGameObjects()` fonksiyonunu genişletin**. Düşman çarpışmalarını işlemek için `updateGameObjects()` fonksiyonunu genişletin:
 
@@ -94,7 +94,7 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     ```
 
 4. **Can ve puan ekleyin**. 
-   1. **Değişkenleri başlatın**. `Hero` sınıfında `this.cooldown = 0` altında can ve puan ayarlayın:
+   1. **Değişkenleri başlatın**. `Hero` sınıfında `this.cooldown = 0` altına can ve puan değişkenlerini ekleyin:
 
         ```javascript
         this.life = 3;
@@ -128,14 +128,14 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
 
         ```
 
-   1. **Oyun döngüsüne metotlar ekleyin**. Bu fonksiyonları `updateGameObjects()` altında `window.onload` fonksiyonuna eklediğinizden emin olun:
+   1. **Oyun döngüsüne yöntemler ekleyin**. Bu fonksiyonları `updateGameObjects()` altında window.onload fonksiyonuna eklediğinizden emin olun:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Oyun kurallarını uygulayın**. Aşağıdaki oyun kurallarını uygulayın:
+1. **Oyun kurallarını uygulayın**. Şu oyun kurallarını uygulayın:
 
    1. **Her kahraman ve düşman çarpışması için**, bir can eksiltin.
    
@@ -150,9 +150,9 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
         }
         ```
 
-   2. **Her lazer düşmana çarptığında**, oyun puanını 100 puan artırın.
+   2. **Her lazer bir düşmana çarptığında**, oyun puanını 100 puan artırın.
 
-      Kahraman sınıfını bu artırmayı yapmak için genişletin:
+      Kahraman sınıfını bu artırımı yapmak için genişletin:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +160,7 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
           }
         ```
 
-        Bu fonksiyonları Çarpışma Olayı Emitters'a ekleyin:
+        Bu fonksiyonları Çarpışma Olayı Yayıcılarına ekleyin:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -177,25 +177,27 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
 
 ✅ JavaScript/Canvas kullanılarak oluşturulan diğer oyunları keşfetmek için biraz araştırma yapın. Ortak özellikleri nelerdir?
 
-Bu çalışmanın sonunda, sağ alt köşede küçük 'can' gemilerini, sol alt köşede puanları görmelisiniz. Düşmanlarla çarpıştığınızda can sayınız azalmalı ve düşmanları vurduğunuzda puanlarınız artmalı. Tebrikler! Oyununuz neredeyse tamamlandı.
+Bu çalışmanın sonunda, sağ alt köşede küçük 'can' gemilerini, sol alt köşede puanları görebilmelisiniz ve düşmanlarla çarpıştıkça can sayınız azalmalı, düşmanları vurdukça puanlarınız artmalıdır. Harika iş çıkardınız! Oyununuz neredeyse tamamlandı.
 
 ---
 
-## 🚀 Meydan Okuma
+## 🚀 Zorluk
 
 Kodunuz neredeyse tamamlandı. Bir sonraki adımlarınızı hayal edebiliyor musunuz?
 
 ## Ders Sonrası Test
 
-[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/38)
+[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
-Oyun puanlarını ve canları artırmanın ve azaltmanın yollarını araştırın. [PlayFab](https://playfab.com) gibi ilginç oyun motorları var. Bunlardan birini kullanmak oyununuzu nasıl geliştirebilir?
+Oyun puanlarını ve canları artırmanın ve azaltmanın yollarını araştırın. [PlayFab](https://playfab.com) gibi ilginç oyun motorları vardır. Bunlardan birini kullanmak oyununuzu nasıl geliştirebilir?
 
 ## Ödev
 
-[Puanlama Oyunu Yap](assignment.md)
+[Puanlama Oyunu Yapın](assignment.md)
+
+---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.

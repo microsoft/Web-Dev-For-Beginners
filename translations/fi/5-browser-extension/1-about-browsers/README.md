@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0bb55e0b98600afab801eea115228873",
-  "translation_date": "2025-08-27T20:46:46+00:00",
+  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
+  "translation_date": "2025-08-29T00:38:24+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "fi"
 }
@@ -20,11 +20,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 Selaimen laajennukset lisäävät selaimeen lisätoimintoja. Ennen kuin alat rakentaa sellaista, sinun kannattaa oppia hieman siitä, miten selaimet toimivat.
 
-### Selaimista
+### Selaimesta
 
-Tässä oppituntisarjassa opit rakentamaan selaimen laajennuksen, joka toimii Chrome-, Firefox- ja Edge-selaimissa. Tässä osassa tutustut siihen, miten selaimet toimivat, ja hahmottelet selaimen laajennuksen osat.
+Tässä oppituntisarjassa opit rakentamaan selaimen laajennuksen, joka toimii Chrome-, Firefox- ja Edge-selaimissa. Tässä osassa tutustut siihen, miten selaimet toimivat, ja hahmottelet selaimen laajennuksen elementtejä.
 
-Mutta mitä selain oikeastaan on? Se on ohjelmistosovellus, joka mahdollistaa käyttäjän pääsyn palvelimen sisältöön ja sen näyttämisen verkkosivuilla.
+Mutta mitä selain oikeastaan on? Se on ohjelmistosovellus, joka mahdollistaa loppukäyttäjän pääsyn palvelimen sisältöön ja sen näyttämisen verkkosivuilla.
 
 ✅ Pieni historia: ensimmäinen selain oli nimeltään 'WorldWideWeb', ja sen loi Sir Timothy Berners-Lee vuonna 1990.
 
@@ -37,34 +37,34 @@ Tässä vaiheessa selaimen renderöintimoottori näyttää sen käyttäjän lait
 
 Selaimet voivat myös välimuistittaa sisältöä, jotta sitä ei tarvitse hakea palvelimelta joka kerta. Ne voivat tallentaa käyttäjän selaushistorian, säilyttää 'evästeitä', jotka ovat pieniä tietopaloja käyttäjän toiminnan tallentamiseen, ja paljon muuta.
 
-On erittäin tärkeää muistaa, että kaikki selaimet eivät ole samanlaisia! Jokaisella selaimella on omat vahvuutensa ja heikkoutensa, ja ammattimaisen web-kehittäjän täytyy ymmärtää, miten verkkosivut saadaan toimimaan hyvin eri selaimilla. Tämä sisältää pienet näyttökoot, kuten matkapuhelimen näytön, sekä käyttäjän, joka on offline-tilassa.
+On erittäin tärkeää muistaa, että kaikki selaimet eivät ole samanlaisia! Jokaisella selaimella on omat vahvuutensa ja heikkoutensa, ja ammattimaisen web-kehittäjän täytyy ymmärtää, miten verkkosivut saadaan toimimaan hyvin eri selaimissa. Tämä sisältää pienet näyttökoot, kuten matkapuhelimen, sekä käyttäjän, joka on offline-tilassa.
 
-Hyödyllinen verkkosivusto, joka kannattaa lisätä kirjanmerkkeihin käyttämässäsi selaimessa, on [caniuse.com](https://www.caniuse.com). Kun rakennat verkkosivuja, caniuse-sivuston tukemien teknologioiden listat auttavat sinua tukemaan käyttäjiäsi parhaalla mahdollisella tavalla.
+Todella hyödyllinen verkkosivusto, joka kannattaa lisätä kirjanmerkkeihin käyttämässäsi selaimessa, on [caniuse.com](https://www.caniuse.com). Kun rakennat verkkosivuja, caniuse-sivuston tukemien teknologioiden listat auttavat sinua tukemaan käyttäjiäsi parhaalla mahdollisella tavalla.
 
-✅ Miten voit selvittää, mitkä selaimet ovat suosituimpia verkkosivustosi käyttäjien keskuudessa? Tarkista analytiikkasi - voit asentaa erilaisia analytiikkatyökaluja osana verkkokehitysprosessia, ja ne kertovat, mitä selaimia käytetään eniten.
+✅ Miten voit selvittää, mitkä selaimet ovat suosituimpia verkkosivustosi käyttäjäkunnan keskuudessa? Tarkista analytiikkasi - voit asentaa erilaisia analytiikkapaketteja osana verkkokehitysprosessiasi, ja ne kertovat, mitä selaimia käytetään eniten.
 
 ## Selaimen laajennukset
 
-Miksi haluaisit rakentaa selaimen laajennuksen? Se on kätevä lisä selaimeen, kun tarvitset nopean pääsyn tehtäviin, joita toistat usein. Esimerkiksi, jos sinun täytyy tarkistaa värejä eri verkkosivuilla, joita käytät, voit asentaa värinvalitsimen selaimen laajennuksen. Jos sinulla on vaikeuksia muistaa salasanoja, voit käyttää salasanojen hallintaan tarkoitettua selaimen laajennusta.
+Miksi haluaisit rakentaa selaimen laajennuksen? Se on kätevä lisä selaimeen, kun tarvitset nopean pääsyn toistuviin tehtäviin. Esimerkiksi, jos sinun täytyy usein tarkistaa värejä eri verkkosivuilla, voit asentaa värinvalitsimen selaimen laajennuksen. Jos sinulla on vaikeuksia muistaa salasanoja, voit käyttää salasanojen hallintalaajennusta.
 
-Selaimen laajennusten kehittäminen on myös hauskaa. Ne keskittyvät yleensä rajattuun määrään tehtäviä, jotka ne suorittavat hyvin.
+Selaimen laajennusten kehittäminen on myös hauskaa. Ne keskittyvät rajattuun määrään tehtäviä, jotka ne suorittavat hyvin.
 
 ✅ Mitkä ovat suosikkiselaimen laajennuksesi? Mitä tehtäviä ne suorittavat?
 
 ### Laajennusten asentaminen
 
-Ennen kuin alat rakentaa, tutustu selaimen laajennuksen rakentamisen ja käyttöönoton prosessiin. Vaikka jokainen selain hallinnoi tätä tehtävää hieman eri tavalla, prosessi on samankaltainen Chromessa ja Firefoxissa kuin tässä Edge-esimerkissä:
+Ennen kuin alat rakentaa, tutustu selaimen laajennuksen rakentamisen ja käyttöönoton prosessiin. Vaikka jokainen selain hallinnoi tätä tehtävää hieman eri tavalla, prosessi on samankaltainen Chrome- ja Firefox-selaimissa kuin tässä Edge-esimerkissä:
 
 ![kuvakaappaus Edge-selaimesta, jossa näkyy avoin edge://extensions-sivu ja avoin asetusten valikko](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.fi.png)
 
 > Huomio: Varmista, että kehittäjätila on kytketty päälle ja salli laajennukset muista kaupoista.
 
-Yksinkertaisuudessaan prosessi on seuraava:
+Yleisesti ottaen prosessi on seuraava:
 
 - rakenna laajennuksesi käyttämällä `npm run build` 
 - siirry selaimessa laajennusten paneeliin käyttämällä "Asetukset ja lisää" -painiketta (kolmen pisteen kuvake) oikeassa yläkulmassa
 - jos kyseessä on uusi asennus, valitse `load unpacked` ladataksesi uuden laajennuksen sen rakennuskansiosta (meidän tapauksessamme se on `/dist`) 
-- tai, napsauta `reload`, jos olet lataamassa jo asennettua laajennusta uudelleen
+- tai, napsauta `reload`, jos lataat uudelleen jo asennettua laajennusta
 
 ✅ Nämä ohjeet koskevat itse rakentamiasi laajennuksia; jos haluat asentaa laajennuksia, jotka on julkaistu selaimen laajennuskauppaan, sinun tulee siirtyä näihin [kauppoihin](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) ja asentaa haluamasi laajennus.
 
@@ -75,13 +75,13 @@ Rakennat selaimen laajennuksen, joka näyttää alueesi hiilijalanjäljen, energ
 **Tarvitset:**
 
 - [API-avain](https://www.co2signal.com/); syötä sähköpostiosoitteesi sivuston laatikkoon, ja avain lähetetään sinulle
-- [aluekoodi](http://api.electricitymap.org/v3/zones), joka vastaa [Electricity Map](https://www.electricitymap.org/map) -karttaa (esimerkiksi Bostonissa käytän 'US-NEISO').
+- [aluekoodi](http://api.electricitymap.org/v3/zones), joka vastaa [Electricity Map](https://www.electricitymap.org/map) -karttaa (esimerkiksi Bostonissa käytän 'US-NEISO')
 - [aloituskoodi](../../../../5-browser-extension/start). Lataa `start`-kansio; täydennät koodia tässä kansiossa.
 - [NPM](https://www.npmjs.com) - NPM on pakettienhallintatyökalu; asenna se paikallisesti, ja `package.json`-tiedostossa luetellut paketit asennetaan verkkovarojesi käyttöön
 
 ✅ Lue lisää pakettienhallinnasta tästä [erinomaisesta oppimismoduulista](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
-Tutustu koodikantaan:
+Käy hetki läpi koodikanta:
 
 dist
     -|manifest.json (oletusasetukset täällä)
@@ -95,7 +95,7 @@ src
 
 ### Rakenna HTML laajennukselle
 
-Tässä laajennuksessa on kaksi näkymää. Yksi API-avaimen ja aluekoodin keräämiseen:
+Tällä laajennuksella on kaksi näkymää. Yksi API-avaimen ja aluekoodin keräämiseen:
 
 ![kuvakaappaus valmiista laajennuksesta avoinna selaimessa, jossa näkyy lomake alueen nimen ja API-avaimen syöttämiseen.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.fi.png)
 
@@ -105,7 +105,7 @@ Ja toinen alueen hiilidioksidipäästöjen näyttämiseen:
 
 Aloitetaan rakentamalla HTML lomakkeelle ja muotoilemalla se CSS:llä.
 
-`/dist`-kansiossa rakennat lomakkeen ja tulosalueen. `index.html`-tiedostossa täytä lomakealue:
+`/dist`-kansiossa rakennat lomakkeen ja tulosalueen. `index.html`-tiedostossa täytä rajattu lomakealue:
 
 ```HTML
 <form class="form-data" autocomplete="on">
@@ -125,7 +125,7 @@ Aloitetaan rakentamalla HTML lomakkeelle ja muotoilemalla se CSS:llä.
 ```
 Tämä on lomake, jossa tallennettu tieto syötetään ja tallennetaan paikalliseen muistiin.
 
-Seuraavaksi luo tulosalue; lisää lopullisen lomaketagin alle joitakin div-elementtejä:
+Seuraavaksi luo tulosalue; lisää joitakin div-elementtejä viimeisen lomaketagin alle:
 
 ```HTML
 <div class="result">
@@ -148,9 +148,9 @@ npm install
 
 Tämä komento käyttää npm:ää, Node Package Manageria, laajennuksen rakennusprosessin webpackin asentamiseen. Webpack on niputtaja, joka käsittelee koodin kokoamista. Voit nähdä tämän prosessin tuloksen katsomalla `/dist/main.js` -tiedostoa - näet, että koodi on niputettu.
 
-Tällä hetkellä laajennuksen pitäisi rakentua, ja jos otat sen käyttöön Edgessä laajennuksena, näet siististi näytetyn lomakkeen.
+Tällä hetkellä laajennuksen pitäisi rakentua, ja jos otat sen käyttöön Edgessä laajennuksena, näet lomakkeen siististi näytettynä.
 
-Onnittelut, olet ottanut ensimmäiset askeleet selaimen laajennuksen rakentamisessa. Seuraavissa oppitunneissa teet siitä toimivamman ja hyödyllisemmän.
+Onnittelut, olet ottanut ensimmäiset askeleet kohti selaimen laajennuksen rakentamista. Seuraavissa oppitunneissa teet siitä toimivamman ja hyödyllisemmän.
 
 ---
 
@@ -164,7 +164,7 @@ Tutustu selaimen laajennuskauppaan ja asenna yksi selaimeesi. Voit tarkastella s
 
 ## Kertaus ja itseopiskelu
 
-Tässä oppitunnissa opit hieman verkkoselaimen historiasta; käytä tilaisuutta hyväksesi ja opi lisää World Wide Webin keksijöiden visioista lukemalla sen historiasta. Joitakin hyödyllisiä sivustoja ovat:
+Tässä oppitunnissa opit hieman verkkoselaimen historiasta; käytä tämä tilaisuus oppiaksesi lisää World Wide Webin keksijöiden visioista lukemalla sen historiasta. Joitakin hyödyllisiä sivustoja ovat:
 
 [Verkkoselainten historia](https://www.mozilla.org/firefox/browsers/browser-history/)
 
@@ -179,4 +179,4 @@ Tässä oppitunnissa opit hieman verkkoselaimen historiasta; käytä tilaisuutta
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

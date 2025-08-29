@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-25T22:25:05+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T00:07:56+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "it"
 }
@@ -15,24 +15,24 @@ CO_OP_TRANSLATOR_METADATA:
 
 In questa lezione imparerai a sparare laser con JavaScript! Aggiungeremo due elementi al nostro gioco:
 
-- **Un laser**: questo laser viene sparato dalla nave del tuo eroe e si muove verticalmente verso l'alto.
+- **Un laser**: questo laser viene sparato dalla nave del tuo eroe verso l'alto
 - **Rilevamento delle collisioni**, come parte dell'implementazione della capacità di *sparare*, aggiungeremo anche alcune regole di gioco interessanti:
-   - **Il laser colpisce il nemico**: il nemico muore se colpito da un laser.
-   - **Il laser colpisce la parte superiore dello schermo**: un laser viene distrutto se colpisce la parte superiore dello schermo.
-   - **Collisione tra nemico ed eroe**: un nemico e l'eroe vengono distrutti se si scontrano.
-   - **Il nemico colpisce il fondo dello schermo**: un nemico e l'eroe vengono distrutti se il nemico raggiunge il fondo dello schermo.
+   - **Il laser colpisce un nemico**: il nemico muore se colpito da un laser
+   - **Il laser colpisce la parte superiore dello schermo**: un laser viene distrutto se colpisce la parte superiore dello schermo
+   - **Collisione tra nemico ed eroe**: un nemico e l'eroe vengono distrutti se si scontrano
+   - **Il nemico raggiunge il fondo dello schermo**: un nemico e l'eroe vengono distrutti se il nemico raggiunge il fondo dello schermo
 
 In breve, tu -- *l'eroe* -- devi colpire tutti i nemici con un laser prima che riescano a raggiungere il fondo dello schermo.
 
-✅ Fai una piccola ricerca sul primissimo gioco per computer mai scritto. Qual era la sua funzionalità?
+✅ Fai una piccola ricerca sul primissimo videogioco mai creato. Qual era la sua funzionalità?
 
 Diventiamo eroici insieme!
 
 ## Rilevamento delle collisioni
 
-Come facciamo a rilevare le collisioni? Dobbiamo pensare agli oggetti del nostro gioco come rettangoli in movimento. Perché, potresti chiedere? Beh, l'immagine utilizzata per disegnare un oggetto di gioco è un rettangolo: ha un `x`, `y`, `larghezza` e `altezza`.
+Come facciamo a rilevare le collisioni? Dobbiamo pensare ai nostri oggetti di gioco come a rettangoli in movimento. Perché, ti chiederai? Beh, l'immagine usata per disegnare un oggetto di gioco è un rettangolo: ha un `x`, `y`, `width` e `height`.
 
-Se due rettangoli, cioè un eroe e un nemico, si *intersecano*, si verifica una collisione. Cosa dovrebbe accadere dipende dalle regole del gioco. Per implementare il rilevamento delle collisioni, quindi, hai bisogno di quanto segue:
+Se due rettangoli, ad esempio un eroe e un nemico, *si intersecano*, hai una collisione. Cosa dovrebbe succedere in quel caso dipende dalle regole del gioco. Per implementare il rilevamento delle collisioni, hai bisogno di quanto segue:
 
 1. Un modo per ottenere una rappresentazione rettangolare di un oggetto di gioco, qualcosa del genere:
 
@@ -47,7 +47,7 @@ Se due rettangoli, cioè un eroe e un nemico, si *intersecano*, si verifica una 
    }
    ```
 
-2. Una funzione di confronto, questa funzione può essere simile a questa:
+2. Una funzione di confronto, che può avere questo aspetto:
 
    ```javascript
    function intersectRect(r1, r2) {
@@ -60,14 +60,14 @@ Se due rettangoli, cioè un eroe e un nemico, si *intersecano*, si verifica una 
 
 ## Come distruggere gli oggetti
 
-Per distruggere gli oggetti in un gioco, devi far sapere al gioco che non dovrebbe più dipingere quell'elemento nel ciclo di gioco che si attiva a intervalli regolari. Un modo per farlo è contrassegnare un oggetto di gioco come *morto* quando accade qualcosa, come segue:
+Per distruggere oggetti in un gioco, devi far sapere al gioco che non deve più disegnare quell'oggetto nel ciclo di gioco che si attiva a un certo intervallo. Un modo per farlo è contrassegnare un oggetto di gioco come *morto* quando succede qualcosa, come segue:
 
 ```javascript
 // collision happened
 enemy.dead = true
 ```
 
-Poi puoi procedere a eliminare gli oggetti *morti* prima di ridisegnare lo schermo, come segue:
+Poi puoi procedere a escludere gli oggetti *morti* prima di ridisegnare lo schermo, come segue:
 
 ```javascript
 gameObjects = gameObject.filter(go => !go.dead);
@@ -83,7 +83,7 @@ Sparare un laser significa rispondere a un evento di pressione di un tasto e cre
 
 ## Cooldown del laser
 
-Il laser deve sparare ogni volta che premi un tasto, come *spazio* per esempio. Per evitare che il gioco produca troppi laser in un breve periodo di tempo, dobbiamo risolvere questo problema. La soluzione consiste nell'implementare un cosiddetto *cooldown*, un timer, che garantisce che un laser possa essere sparato solo a intervalli regolari. Puoi implementarlo nel seguente modo:
+Il laser deve essere sparato ogni volta che premi un tasto, ad esempio *spazio*. Per evitare che il gioco produca troppi laser in un breve periodo, dobbiamo risolvere questo problema. La soluzione consiste nell'implementare un cosiddetto *cooldown*, un timer, che garantisce che un laser possa essere sparato solo a intervalli regolari. Puoi implementarlo in questo modo:
 
 ```javascript
 class Cooldown {
@@ -109,19 +109,19 @@ class Weapon {
 }
 ```
 
-✅ Consulta la lezione 1 della serie di giochi spaziali per ricordarti dei *cooldown*.
+✅ Consulta la lezione 1 della serie sul gioco spaziale per ricordarti dei *cooldown*.
 
 ## Cosa costruire
 
-Prenderai il codice esistente (che dovresti aver pulito e refattorizzato) dalla lezione precedente e lo estenderai. Puoi iniziare con il codice della parte II o utilizzare il codice in [Parte III - starter](../../../../../../../../../your-work).
+Prenderai il codice esistente (che dovresti aver ripulito e rifattorizzato) dalla lezione precedente e lo estenderai. Puoi iniziare con il codice della parte II o utilizzare il codice in [Parte III - starter](../../../../../../../../../your-work).
 
-> suggerimento: il laser con cui lavorerai è già nella tua cartella delle risorse ed è referenziato dal tuo codice.
+> Suggerimento: il laser con cui lavorerai è già nella tua cartella delle risorse ed è referenziato dal tuo codice.
 
-- **Aggiungi il rilevamento delle collisioni**, quando un laser collide con qualcosa, dovrebbero applicarsi le seguenti regole:
-   1. **Il laser colpisce il nemico**: il nemico muore se colpito da un laser.
-   2. **Il laser colpisce la parte superiore dello schermo**: un laser viene distrutto se colpisce la parte superiore dello schermo.
-   3. **Collisione tra nemico ed eroe**: un nemico e l'eroe vengono distrutti se si scontrano.
-   4. **Il nemico colpisce il fondo dello schermo**: un nemico e l'eroe vengono distrutti se il nemico raggiunge il fondo dello schermo.
+- **Aggiungi il rilevamento delle collisioni**, quando un laser collide con qualcosa, devono essere applicate le seguenti regole:
+   1. **Il laser colpisce un nemico**: il nemico muore se colpito da un laser
+   2. **Il laser colpisce la parte superiore dello schermo**: un laser viene distrutto se colpisce la parte superiore dello schermo
+   3. **Collisione tra nemico ed eroe**: un nemico e l'eroe vengono distrutti se si scontrano
+   4. **Il nemico raggiunge il fondo dello schermo**: un nemico e l'eroe vengono distrutti se il nemico raggiunge il fondo dello schermo
 
 ## Passaggi consigliati
 
@@ -144,11 +144,11 @@ cd your-work
 npm start
 ```
 
-Quanto sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri un browser e inserisci quell'indirizzo, al momento dovrebbe mostrare l'eroe e tutti i nemici, nulla si muove - ancora :).
+Il comando sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri un browser e inserisci quell'indirizzo, al momento dovrebbe mostrare l'eroe e tutti i nemici, ma nulla si muove - ancora :).
 
 ### Aggiungi codice
 
-1. **Configura una rappresentazione rettangolare del tuo oggetto di gioco per gestire le collisioni** Il codice seguente ti consente di ottenere una rappresentazione rettangolare di un `GameObject`. Modifica la tua classe GameObject per estenderla:
+1. **Configura una rappresentazione rettangolare del tuo oggetto di gioco per gestire le collisioni**. Il codice seguente ti consente di ottenere una rappresentazione rettangolare di un `GameObject`. Modifica la tua classe GameObject per estenderla:
 
     ```javascript
     rectFromGameObject() {
@@ -161,7 +161,7 @@ Quanto sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri
       }
     ```
 
-2. **Aggiungi codice che verifica le collisioni** Questa sarà una nuova funzione che testa se due rettangoli si intersecano:
+2. **Aggiungi codice che controlla le collisioni**. Questa sarà una nuova funzione che verifica se due rettangoli si intersecano:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -183,7 +183,7 @@ Quanto sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri
         COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
        ```
 
-   1. **Gestisci il tasto spazio**. Modifica la funzione `window.addEventListener` keyup per gestire il tasto spazio:
+   1. **Gestisci il tasto spazio**. Modifica la funzione `window.addEventListener` per il keyup per gestire il tasto spazio:
 
       ```javascript
         } else if(evt.keyCode === 32) {
@@ -191,7 +191,7 @@ Quanto sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri
         }
       ```
 
-    1. **Aggiungi listener**. Modifica la funzione `initGame()` per garantire che l'eroe possa sparare quando viene premuto il tasto spazio:
+    1. **Aggiungi listener**. Modifica la funzione `initGame()` per assicurarti che l'eroe possa sparare quando viene premuto il tasto spazio:
 
        ```javascript
        eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
@@ -209,7 +209,7 @@ Quanto sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri
           })
           ```
 
-   1. **Muovi l'oggetto**, Assicurati che il laser si muova gradualmente verso la parte superiore dello schermo. Creerai una nuova classe Laser che estende `GameObject`, come hai fatto prima: 
+   1. **Muovi l'oggetto**, assicurati che il laser si muova gradualmente verso la parte superiore dello schermo. Creerai una nuova classe Laser che estende `GameObject`, come hai fatto in precedenza: 
    
       ```javascript
         class Laser extends GameObject {
@@ -230,7 +230,7 @@ Quanto sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri
       }
       ```
 
-   1. **Gestisci le collisioni**, Implementa le regole di collisione per il laser. Aggiungi una funzione `updateGameObjects()` che testa gli oggetti in collisione:
+   1. **Gestisci le collisioni**, implementa le regole di collisione per il laser. Aggiungi una funzione `updateGameObjects()` che verifica gli oggetti in collisione:
 
       ```javascript
       function updateGameObjects() {
@@ -254,7 +254,7 @@ Quanto sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri
 
       Assicurati di aggiungere `updateGameObjects()` nel tuo ciclo di gioco in `window.onload`.
 
-   4. **Implementa il cooldown** sul laser, in modo che possa essere sparato solo a intervalli regolari.
+   4. **Implementa il cooldown** per il laser, in modo che possa essere sparato solo a intervalli regolari.
 
       Infine, modifica la classe Hero in modo che possa gestire il cooldown:
 
@@ -285,25 +285,27 @@ Quanto sopra avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri
       }
       ```
 
-A questo punto, il tuo gioco ha un po' di funzionalità! Puoi navigare con i tasti freccia, sparare un laser con la barra spaziatrice e i nemici scompaiono quando li colpisci. Ben fatto!
+A questo punto, il tuo gioco ha una certa funzionalità! Puoi navigare con i tasti freccia, sparare un laser con la barra spaziatrice e i nemici scompaiono quando li colpisci. Ben fatto!
 
 ---
 
 ## 🚀 Sfida
 
-Aggiungi un'esplosione! Dai un'occhiata alle risorse del gioco nel [repo Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) e prova ad aggiungere un'esplosione quando il laser colpisce un alieno.
+Aggiungi un'esplosione! Dai un'occhiata alle risorse di gioco nel [repo Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) e prova ad aggiungere un'esplosione quando il laser colpisce un alieno.
 
 ## Quiz Post-Lezione
 
 [Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/36)
 
-## Revisione & Studio Autonomo
+## Revisione e Studio Autonomo
 
-Sperimenta con gli intervalli nel tuo gioco fino ad ora. Cosa succede quando li cambi? Leggi di più sugli [eventi di temporizzazione in JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
+Sperimenta con gli intervalli nel tuo gioco fino a questo punto. Cosa succede quando li cambi? Leggi di più sugli [eventi di temporizzazione in JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
 ## Compito
 
 [Esplora le collisioni](assignment.md)
+
+---
 
 **Disclaimer**:  
 Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

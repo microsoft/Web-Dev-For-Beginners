@@ -1,30 +1,30 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-25T22:13:46+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T00:23:51+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "tr"
 }
 -->
-# Uzay Oyunu Yapımı Bölüm 3: Hareket Eklemek
+# Uzay Oyunu Bölüm 3: Hareket Eklemek
 
-## Ders Öncesi Quiz
+## Ders Öncesi Test
 
-[Ders öncesi quiz](https://ff-quizzes.netlify.app/web/quiz/33)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/33)
 
 Oyunlar, ekranda uzaylılar dolaşmadıkça pek eğlenceli olmaz! Bu oyunda iki tür hareket kullanacağız:
 
-- **Klavye/Fare hareketi**: Kullanıcı, ekrandaki bir nesneyi hareket ettirmek için klavye veya fare ile etkileşimde bulunduğunda.
+- **Klavye/Fare hareketi**: Kullanıcı, klavye veya fare ile ekrandaki bir nesneyi hareket ettirdiğinde.
 - **Oyun kaynaklı hareket**: Oyun, belirli bir zaman aralığında bir nesneyi hareket ettirdiğinde.
 
-Peki ekranda nesneleri nasıl hareket ettiririz? Her şey kartezyen koordinatlarla ilgilidir: nesnenin konumunu (x,y) değiştiririz ve ardından ekranı yeniden çizeriz.
+Peki, ekrandaki nesneleri nasıl hareket ettiririz? Her şey kartezyen koordinatlarla ilgilidir: nesnenin konumunu (x, y) değiştiririz ve ardından ekranı yeniden çizeriz.
 
 Ekranda *hareket* gerçekleştirmek için genellikle şu adımlara ihtiyacınız olur:
 
 1. **Yeni bir konum belirleyin**: Nesnenin hareket ettiğini algılamak için bu gereklidir.
 2. **Ekranı temizleyin**: Çizimler arasında ekranın temizlenmesi gerekir. Bunu, arka plan rengiyle doldurduğumuz bir dikdörtgen çizerek yapabiliriz.
-3. **Nesneyi yeni konumda yeniden çizin**: Bunu yaparak, nesneyi bir konumdan diğerine taşıma işlemini tamamlamış oluruz.
+3. **Nesneyi yeni konumda yeniden çizin**: Bunu yaparak, nesneyi bir konumdan diğerine taşımayı başarırız.
 
 Kodda bunun nasıl görünebileceği aşağıda verilmiştir:
 
@@ -39,15 +39,15 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Kahramanınızı saniyede birçok karede yeniden çizmenin performans maliyetlerini artırabileceği bir neden düşünebilir misiniz? [Bu desene alternatifler](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas) hakkında okuyun.
+✅ Kahramanınızı saniyede birçok kez yeniden çizmenin performans maliyetlerini artırabileceği bir neden düşünebilir misiniz? [Bu desene alternatifler](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas) hakkında okuyun.
 
 ## Klavye olaylarını yönetmek
 
-Olayları yönetmek için belirli olayları koda bağlarsınız. Klavye olayları tüm pencere üzerinde tetiklenirken, fare olayları (örneğin `click`) belirli bir öğeye tıklamaya bağlanabilir. Bu projede klavye olaylarını kullanacağız.
+Olayları yönetmek için belirli olayları koda bağlamanız gerekir. Klavye olayları tüm pencere üzerinde tetiklenirken, fare olayları (örneğin `click`) belirli bir öğeye tıklamaya bağlanabilir. Bu projede klavye olaylarını kullanacağız.
 
 Bir olayı yönetmek için pencerenin `addEventListener()` metodunu kullanmanız ve ona iki giriş parametresi sağlamanız gerekir. İlk parametre olayın adıdır, örneğin `keyup`. İkinci parametre ise olay gerçekleştiğinde çağrılması gereken fonksiyondur.
 
-İşte bir örnek:
+Bir örnek:
 
 ```javascript
 window.addEventListener('keyup', (evt) => {
@@ -58,12 +58,12 @@ window.addEventListener('keyup', (evt) => {
 })
 ```
 
-Anahtar olayları için, hangi tuşa basıldığını görmek için olay üzerinde kullanabileceğiniz iki özellik vardır:
+Klavye olayları için, hangi tuşa basıldığını görmek için olay üzerinde kullanabileceğiniz iki özellik vardır:
 
 - `key`: Basılan tuşun string temsili, örneğin `ArrowUp`.
 - `keyCode`: Sayısal temsili, örneğin `37`, bu `ArrowLeft` ile eşleşir.
 
-✅ Anahtar olay manipülasyonu oyun geliştirme dışında da faydalıdır. Bu tekniğin başka hangi kullanım alanlarını düşünebilirsiniz?
+✅ Klavye olaylarını manipüle etmek oyun geliştirme dışında da faydalıdır. Bu tekniğin başka hangi kullanım alanlarını düşünebilirsiniz?
 
 ### Özel tuşlar: bir uyarı
 
@@ -88,11 +88,11 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Yukarıdaki kod, ok tuşlarının ve boşluk tuşunun *varsayılan* davranışını kapatmasını sağlar. *Kapatma* mekanizması, `e.preventDefault()` çağrıldığında gerçekleşir.
+Yukarıdaki kod, ok tuşlarının ve boşluk tuşunun *varsayılan* davranışını kapatacaktır. *Kapatma* mekanizması, `e.preventDefault()` çağrıldığında gerçekleşir.
 
 ## Oyun kaynaklı hareket
 
-Nesneleri kendiliğinden hareket ettirebiliriz, bunu her bir zaman aralığında nesnenin konumunu güncelleyen `setTimeout()` veya `setInterval()` fonksiyonları kullanarak yapabiliriz. İşte bunun nasıl görünebileceği:
+Nesneleri kendiliğinden hareket ettirebiliriz, bunu `setTimeout()` veya `setInterval()` gibi zamanlayıcılar kullanarak yaparız. Bu fonksiyonlar, her zaman aralığında nesnenin konumunu günceller. Bunun kodda nasıl görünebileceği aşağıda verilmiştir:
 
 ```javascript
 let id = setInterval(() => {
@@ -103,7 +103,7 @@ let id = setInterval(() => {
 
 ## Oyun döngüsü
 
-Oyun döngüsü, düzenli aralıklarla çağrılan bir fonksiyon olan bir kavramdır. Oyun döngüsü olarak adlandırılır çünkü kullanıcıya görünmesi gereken her şey döngüye çizilir. Oyun döngüsü, oyunun bir parçası olan tüm oyun nesnelerini kullanır ve bir şekilde artık oyunun bir parçası olmaması gereken nesneler hariç tutulur. Örneğin, bir düşman bir lazerle vurulup patlarsa, artık mevcut oyun döngüsünün bir parçası değildir (bunun hakkında daha fazla bilgiyi sonraki derslerde öğreneceksiniz).
+Oyun döngüsü, düzenli aralıklarla çağrılan bir fonksiyon kavramıdır. Oyun döngüsü, kullanıcıya görünmesi gereken her şeyi döngüye çizer. Oyun döngüsü, oyunun bir parçası olan tüm oyun nesnelerini kullanır ve bir şekilde artık oyunun bir parçası olmaması gereken nesneleri çizmez. Örneğin, bir nesne bir düşmansa ve bir lazer tarafından vurulup patlıyorsa, artık mevcut oyun döngüsünün bir parçası değildir (bunun hakkında daha fazla bilgiyi sonraki derslerde öğreneceksiniz).
 
 Bir oyun döngüsünün kodda tipik olarak nasıl görünebileceği aşağıda verilmiştir:
 
@@ -119,14 +119,14 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-Yukarıdaki döngü, tuvali yeniden çizmek için her `200` milisaniyede bir çağrılır. Oyununuz için en uygun aralığı seçme yeteneğine sahipsiniz.
+Yukarıdaki döngü, her `200` milisaniyede bir tuvali yeniden çizer. Oyununuz için en uygun aralığı seçme özgürlüğüne sahipsiniz.
 
-## Uzay Oyunu Devamı
+## Uzay Oyununa Devam Etmek
 
 Mevcut kodu alıp genişleteceksiniz. Ya Bölüm I sırasında tamamladığınız kodla başlayın ya da [Bölüm II - başlangıç](../../../../6-space-game/3-moving-elements-around/your-work) kodunu kullanın.
 
-- **Kahramanı hareket ettirme**: Kahramanı ok tuşlarını kullanarak hareket ettirebilmenizi sağlayacak kod ekleyeceksiniz.
-- **Düşmanları hareket ettirme**: Ayrıca düşmanların belirli bir hızda yukarıdan aşağıya hareket etmesini sağlayacak kod eklemeniz gerekecek.
+- **Kahramanı hareket ettirme**: Ok tuşlarını kullanarak kahramanı hareket ettirebilmeniz için kod ekleyeceksiniz.
+- **Düşmanları hareket ettirme**: Düşmanların belirli bir hızda yukarıdan aşağıya hareket etmesini sağlamak için kod eklemeniz gerekecek.
 
 ## Önerilen adımlar
 
@@ -152,11 +152,11 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
 
 ### Kod ekleme
 
-1. **Kahraman**, **düşman** ve **oyun nesnesi** için özel nesneler ekleyin, bunlar `x` ve `y` özelliklerine sahip olmalıdır. ([Kalıtım veya kompozisyon](../README.md) bölümünü hatırlayın).
+1. **Kahraman**, **düşman** ve **oyun nesnesi** için özel nesneler ekleyin, bunlar `x` ve `y` özelliklerine sahip olmalıdır. ([Kalıtım veya bileşim](../README.md) bölümünü hatırlayın).
 
-   *İPUCU* `oyun nesnesi`, `x` ve `y` özelliklerine ve kendisini bir tuvale çizebilme yeteneğine sahip olan nesne olmalıdır.
+   *İPUCU*: `oyun nesnesi`, `x` ve `y` özelliklerine ve kendini bir tuvale çizebilme yeteneğine sahip olan nesne olmalıdır.
 
-   >ipucu: aşağıda belirtilen şekilde bir yapıcıya sahip yeni bir GameObject sınıfı ekleyerek başlayın ve ardından tuvale çizin:
+   >ipucu: aşağıda belirtilen şekilde bir yapıcıya sahip yeni bir GameObject sınıfı ekleyerek başlayın ve ardından bunu tuvale çizin:
   
     ```javascript
         
@@ -205,11 +205,11 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     }
     ```
 
-2. **Anahtar olay işleyicileri ekleyin**: Kahramanı yukarı/aşağı, sola/sağa hareket ettirmek için anahtar navigasyonunu yönetin.
+2. **Tuş olay işleyicileri ekleyin**: Kahramanı yukarı/aşağı, sola/sağa hareket ettirmek için tuş navigasyonunu yönetin.
 
-   *UNUTMAYIN* bu bir kartezyen sistemdir, sol üst `0,0`'dır. Ayrıca *varsayılan davranışı* durdurmak için kod eklemeyi unutmayın.
+   *UNUTMAYIN*: Bu bir kartezyen sistemdir, sol üst köşe `0,0`'dır. Ayrıca *varsayılan davranışı* durdurmak için kod eklemeyi unutmayın.
 
-   >ipucu: kendi onKeyDown fonksiyonunuzu oluşturun ve pencereye bağlayın:
+   >ipucu: onKeyDown fonksiyonunuzu oluşturun ve pencereye bağlayın:
 
    ```javascript
     let onKeyDown = function (e) {
@@ -223,7 +223,7 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     
    Bu noktada tarayıcı konsolunuzu kontrol edin ve tuş vuruşlarının kaydedildiğini izleyin.
 
-3. **[Pub sub deseni](../README.md) uygulayın**, bu kodunuzu temiz tutmanıza yardımcı olacaktır.
+3. **[Pub sub desenini](../README.md) uygulayın**, bu kodunuzu temiz tutmanıza yardımcı olacaktır.
 
    Bunu yapmak için:
 
@@ -243,7 +243,7 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
         });
         ```
 
-    1. **Bir EventEmitter sınıfı oluşturun**: Mesajları yayınlamak ve abone olmak için.
+    1. **Mesajları yayınlamak ve abone olmak için bir EventEmitter sınıfı oluşturun**:
 
         ```javascript
         class EventEmitter {
@@ -382,19 +382,21 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
 
 ## 🚀 Meydan Okuma
 
-Gördüğünüz gibi, kodunuz işlevler, değişkenler ve sınıflar eklemeye başladığınızda 'spagetti koduna' dönüşebilir. Kodunuzu daha okunabilir hale getirmek için nasıl daha iyi organize edebilirsiniz? Kodunuzu organize etmek için bir sistem tasarlayın, hatta hala tek bir dosyada olsa bile.
+Gördüğünüz gibi, fonksiyonlar, değişkenler ve sınıflar eklemeye başladığınızda kodunuz 'spagetti koduna' dönüşebilir. Kodunuzu daha okunabilir hale getirmek için nasıl daha iyi organize edebilirsiniz? Kodunuzu organize etmek için bir sistem tasarlayın, hatta hala tek bir dosyada olsa bile.
 
-## Ders Sonrası Quiz
+## Ders Sonrası Test
 
-[Ders sonrası quiz](https://ff-quizzes.netlify.app/web/quiz/34)
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
-Oyunlarımızı framework kullanmadan yazıyor olsak da, oyun geliştirme için birçok JavaScript tabanlı tuval framework'ü bulunmaktadır. Bunlar hakkında biraz [okuma yapın](https://github.com/collections/javascript-game-engines).
+Oyunlarımızı framework kullanmadan yazıyor olsak da, oyun geliştirme için birçok JavaScript tabanlı tuval framework'ü bulunmaktadır. [Bunlar hakkında okumak](https://github.com/collections/javascript-game-engines) için biraz zaman ayırın.
 
 ## Ödev
 
 [Kodunuzu yorumlayın](assignment.md)
 
+---
+
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.

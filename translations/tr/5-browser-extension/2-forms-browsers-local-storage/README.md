@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e10f168beac4e7b05e30e0eb5c92bf11",
-  "translation_date": "2025-08-25T23:32:48+00:00",
+  "original_hash": "a7587943d38d095de8613e1b508609f5",
+  "translation_date": "2025-08-29T00:23:20+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "tr"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Giriş
 
-Bu derste, tarayıcı eklentinizin formunu göndererek bir API çağıracak ve sonuçları tarayıcı eklentinizde görüntüleyeceksiniz. Ayrıca, gelecekteki referanslar ve kullanım için verileri tarayıcınızın yerel deposunda nasıl saklayabileceğinizi öğreneceksiniz.
+Bu derste, tarayıcı eklentinizin formunu kullanarak bir API çağıracak ve sonuçları tarayıcı eklentinizde görüntüleyeceksiniz. Ayrıca, gelecekteki referanslar ve kullanım için verileri tarayıcınızın yerel deposunda nasıl saklayabileceğinizi öğreneceksiniz.
 
 ✅ Kodunuzu nereye yerleştireceğinizi öğrenmek için ilgili dosyalardaki numaralandırılmış bölümleri takip edin.
 
@@ -45,7 +45,7 @@ Bu alanların tümü, önceki derste HTML'de ayarladığınız CSS sınıflarıy
 
 ### Dinleyiciler ekleyin
 
-Sonraki adımda, form ve formu sıfırlayan temizleme düğmesi için olay dinleyicileri ekleyin. Böylece bir kullanıcı formu gönderdiğinde veya sıfırlama düğmesine tıkladığında bir şeyler olur. Ayrıca dosyanın en altına uygulamayı başlatma çağrısını ekleyin:
+Sonraki adımda, formu ve formu sıfırlayan temizleme düğmesini dinleyen olay dinleyicileri ekleyin. Böylece bir kullanıcı formu gönderdiğinde veya sıfırlama düğmesine tıkladığında bir şeyler olur. Ayrıca dosyanın altına uygulamayı başlatma çağrısını ekleyin:
 
 ```JavaScript
 form.addEventListener('submit', (e) => handleSubmit(e));
@@ -57,7 +57,7 @@ init();
 
 ### init() ve reset() fonksiyonlarını oluşturun:
 
-Şimdi, eklentiyi başlatan ve init() olarak adlandırılan fonksiyonu oluşturacaksınız:
+Şimdi, eklentiyi başlatan init() fonksiyonunu oluşturacaksınız:
 
 ```JavaScript
 function init() {
@@ -97,14 +97,14 @@ Bu fonksiyonda ilginç bir mantık var. Okuyarak neler olduğunu görebiliyor mu
 
 - Kullanıcının bir APIKey ve bölge kodunu yerel depolamada saklayıp saklamadığını kontrol etmek için iki `const` ayarlanır.
 - Eğer bunlardan biri null ise, formu 'block' olarak görüntüleyerek gösterin.
-- Sonuçları, yükleme durumunu ve clearBtn'i gizleyin ve herhangi bir hata metnini boş bir dizeye ayarlayın.
+- Sonuçları, yükleme durumunu ve clearBtn'i gizleyin ve hata metnini boş bir dizeye ayarlayın.
 - Eğer bir anahtar ve bölge varsa, şu rutini başlatın:
   - API'yi çağırarak karbon kullanım verilerini alın.
   - Sonuçlar alanını gizleyin.
   - Formu gizleyin.
   - Sıfırlama düğmesini gösterin.
 
-Devam etmeden önce, tarayıcılarda mevcut olan çok önemli bir kavramı öğrenmek faydalı olacaktır: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage, tarayıcıda `anahtar-değer` çifti olarak dizeleri saklamak için kullanışlı bir yöntemdir. Bu tür bir web depolama, tarayıcıda verileri yönetmek için JavaScript tarafından manipüle edilebilir. LocalStorage süresiz olarak saklanırken, başka bir tür web depolama olan SessionStorage, tarayıcı kapatıldığında temizlenir. Depolama türlerinin kullanımına göre avantajları ve dezavantajları vardır.
+Devam etmeden önce, tarayıcılarda mevcut olan çok önemli bir kavramı öğrenmek faydalı olacaktır: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage, tarayıcıda `anahtar-değer` çifti olarak dizeleri saklamak için kullanışlı bir yöntemdir. Bu tür bir web depolama, tarayıcıdaki verileri yönetmek için JavaScript tarafından manipüle edilebilir. LocalStorage süresiz olarak saklanırken, başka bir tür web depolama olan SessionStorage, tarayıcı kapatıldığında temizlenir. Depolama türlerinin kullanımına göre avantajları ve dezavantajları vardır.
 
 > Not - tarayıcı eklentinizin kendi yerel deposu vardır; ana tarayıcı penceresi farklı bir örnektir ve ayrı davranır.
 
@@ -114,13 +114,13 @@ APIKey'inizi bir dize değeri olarak ayarlayın ve bunun Edge'de nasıl ayarland
 
 ✅ Yerel Depolama'da hangi durumlarda veri saklamak istemeyeceğinizi düşünün. Genel olarak, API Anahtarlarını Yerel Depolama'da saklamak kötü bir fikirdir! Nedenini görebiliyor musunuz? Bizim durumumuzda, uygulamamız tamamen öğrenme amaçlı olduğu ve bir uygulama mağazasında dağıtılmayacağı için bu yöntemi kullanacağız.
 
-Yerel Depolama'yı manipüle etmek için Web API'sini `getItem()`, `setItem()` veya `removeItem()` kullanarak nasıl kullandığınıza dikkat edin. Bu yöntemler tarayıcılar arasında geniş bir destek alır.
+Yerel Depolama'yı manipüle etmek için Web API'sini `getItem()`, `setItem()` veya `removeItem()` kullanarak kullandığınızı unutmayın. Bu yöntemler tarayıcılar arasında geniş bir destek görmektedir.
 
-`init()` içinde çağrılan `displayCarbonUsage()` fonksiyonunu oluşturmadan önce, ilk form gönderimini işlemek için işlevselliği oluşturalım.
+`displayCarbonUsage()` fonksiyonunu oluşturmadan önce, ilk form gönderimini işlemek için işlevselliği oluşturalım.
 
 ### Form gönderimini işleyin
 
-Bir olay argümanını `(e)` kabul eden `handleSubmit` adlı bir fonksiyon oluşturun. Olayın yayılmasını durdurun (bu durumda, tarayıcının yenilenmesini durdurmak istiyoruz) ve `setUpUser` adlı yeni bir fonksiyonu çağırarak `apiKey.value` ve `region.value` argümanlarını iletin. Bu şekilde, uygun alanlar doldurulduğunda ilk form aracılığıyla getirilen iki değeri kullanırsınız.
+Bir `(e)` olay argümanını kabul eden `handleSubmit` adlı bir fonksiyon oluşturun. Olayın yayılmasını durdurun (bu durumda, tarayıcının yenilenmesini durdurmak istiyoruz) ve `setUpUser` adlı yeni bir fonksiyonu çağırarak `apiKey.value` ve `region.value` argümanlarını iletin. Bu şekilde, uygun alanlar doldurulduğunda ilk form aracılığıyla getirilen iki değeri kullanırsınız.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -129,7 +129,7 @@ function handleSubmit(e) {
 }
 ```
 
-✅ Hafızanızı tazeleyin - Son derste ayarladığınız HTML, `const` ile yakalanan iki giriş alanına sahiptir ve her ikisi de `required` olarak ayarlandığından tarayıcı, kullanıcıların null değerler girmesini engeller.
+✅ Hafızanızı tazeleyin - Son derste ayarladığınız HTML, `const` ile dosyanın üst kısmında yakalanan iki giriş alanına sahiptir ve her ikisi de `required` olarak ayarlanmıştır, böylece tarayıcı kullanıcıların null değerler girmesini engeller.
 
 ### Kullanıcıyı ayarlayın
 
@@ -153,11 +153,11 @@ Bu fonksiyon, API çağrılırken bir yükleme mesajı gösterir. Bu noktada, bu
 
 Sonunda API'yi sorgulama zamanı geldi!
 
-Daha ileri gitmeden önce, API'leri tartışmalıyız. API'ler veya [Uygulama Programlama Arayüzleri](https://www.webopedia.com/TERM/A/API.html), bir web geliştiricisinin araç kutusunun kritik bir unsurudur. Programların birbirleriyle etkileşimde bulunması ve arayüz oluşturması için standart yollar sağlarlar. Örneğin, bir veritabanını sorgulaması gereken bir web sitesi oluşturuyorsanız, sizin için bir API oluşturulmuş olabilir. Birçok API türü olmasına rağmen, en popüler olanlardan biri [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)’dir.
+Daha ileri gitmeden önce, API'leri tartışmalıyız. API'ler veya [Uygulama Programlama Arayüzleri](https://www.webopedia.com/TERM/A/API.html), bir web geliştiricisinin araç kutusunun kritik bir unsurudur. Programların birbirleriyle etkileşimde bulunması ve arayüz oluşturması için standart yollar sağlarlar. Örneğin, bir veritabanını sorgulaması gereken bir web sitesi oluşturuyorsanız, birisi sizin için bir API oluşturmuş olabilir. Birçok API türü olmasına rağmen, en popüler olanlardan biri [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)’dir.
 
 ✅ 'REST' terimi 'Temsili Durum Transferi' anlamına gelir ve veri almak için çeşitli şekilde yapılandırılmış URL'ler kullanmayı içerir. Geliştiriciler için mevcut olan çeşitli API türleri hakkında biraz araştırma yapın. Hangi format size daha çekici geliyor?
 
-Bu fonksiyonla ilgili önemli noktalar var. İlk olarak, [`async` anahtar kelimesine](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) dikkat edin. Fonksiyonlarınızı asenkron olarak çalışacak şekilde yazmak, bir eylemin (örneğin, verilerin döndürülmesi) tamamlanmasını beklemeden devam etmelerini sağlar.
+Bu fonksiyonla ilgili önemli noktalar var. İlk olarak, [`async` anahtar kelimesine](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) dikkat edin. Fonksiyonlarınızı asenkron çalışacak şekilde yazmak, bir eylemin (örneğin, verilerin döndürülmesi) tamamlanmasını beklemeden devam etmelerini sağlar.
 
 `async` hakkında hızlı bir video:
 
@@ -208,9 +208,9 @@ async function displayCarbonUsage(apiKey, region) {
 Bu büyük bir fonksiyon. Burada neler oluyor?
 
 - En iyi uygulamaları takip ederek, bu fonksiyonun asenkron davranmasını sağlamak için bir `async` anahtar kelimesi kullanıyorsunuz. Fonksiyon, API veri döndürdüğünde bir vaat döndüreceği için bir `try/catch` bloğu içerir. API'nin yanıt verme hızını kontrol edemediğinizden (hiç yanıt vermeyebilir!), bu belirsizliği asenkron olarak çağırarak ele almanız gerekir.
-- co2signal API'sini sorgulayarak bölgenizin verilerini alıyorsunuz ve API Anahtarınızı kullanıyorsunuz. Bu anahtarı kullanmak için, başlık parametrelerinizde bir tür kimlik doğrulama yapmanız gerekir.
-- API yanıt verdiğinde, yanıt verilerinin çeşitli öğelerini ekranınızın bu verileri göstermek için ayarladığınız bölümlerine atarsınız.
-- Bir hata varsa veya sonuç yoksa, bir hata mesajı gösterirsiniz.
+- co2signal API'sini sorgulayarak bölgenizin verilerini alıyorsunuz ve API Anahtarınızı kullanıyorsunuz. Bu anahtarı kullanmak için, başlık parametrelerinizde bir tür kimlik doğrulama yapmanız gerekiyor.
+- API yanıt verdiğinde, yanıt verilerinin çeşitli öğelerini ekranınızda bu verileri göstermek için ayarladığınız bölümlere atıyorsunuz.
+- Bir hata varsa veya sonuç yoksa, bir hata mesajı gösteriyorsunuz.
 
 ✅ Asenkron programlama desenlerini kullanmak, araç kutunuzda çok faydalı bir başka araçtır. Bu tür kodu yapılandırmanın [çeşitli yolları](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) hakkında bilgi edinin.
 
@@ -234,5 +234,7 @@ Bu derste Yerel Depolama ve API'ler hakkında bilgi edindiniz, her ikisi de prof
 
 [Bir API Benimseyin](assignment.md)
 
+---
+
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.

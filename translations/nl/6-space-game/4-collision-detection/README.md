@@ -1,26 +1,26 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-27T20:26:27+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T00:58:06+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "nl"
 }
 -->
 # Bouw een Ruimtespel Deel 4: Een Laser Toevoegen en Botsingen Detecteren
 
-## Pre-Lecture Quiz
+## Quiz Voorafgaand aan de Les
 
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/35)
+[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/35)
 
 In deze les leer je hoe je lasers kunt afvuren met JavaScript! We voegen twee dingen toe aan ons spel:
 
 - **Een laser**: deze laser wordt afgevuurd vanuit het ruimteschip van de held en beweegt verticaal omhoog.
-- **Botsingsdetectie**, als onderdeel van het implementeren van de mogelijkheid om te *schieten* voegen we ook enkele leuke spelregels toe:
-   - **Laser raakt vijand**: Vijand sterft als hij wordt geraakt door een laser.
+- **Botsingsdetectie**: als onderdeel van het implementeren van de mogelijkheid om te *schieten*, voegen we ook enkele leuke spelregels toe:
+   - **Laser raakt vijand**: Een vijand sterft als hij wordt geraakt door een laser.
    - **Laser raakt bovenkant scherm**: Een laser wordt vernietigd als hij de bovenkant van het scherm raakt.
    - **Botsing tussen vijand en held**: Een vijand en de held worden vernietigd als ze elkaar raken.
-   - **Vijand raakt onderkant scherm**: Een vijand en de held worden vernietigd als de vijand de onderkant van het scherm raakt.
+   - **Vijand raakt onderkant scherm**: Een vijand en de held worden vernietigd als de vijand de onderkant van het scherm bereikt.
 
 Kortom, jij -- *de held* -- moet alle vijanden raken met een laser voordat ze de onderkant van het scherm bereiken.
 
@@ -32,7 +32,7 @@ Laten we samen heldhaftig zijn!
 
 Hoe doen we botsingsdetectie? We moeten onze spelobjecten zien als rechthoeken die bewegen. Waarom, vraag je je misschien af? Nou, de afbeelding die wordt gebruikt om een spelobject te tekenen is een rechthoek: het heeft een `x`, `y`, `breedte` en `hoogte`.
 
-Als twee rechthoeken, bijvoorbeeld een held en een vijand, *overlappen*, heb je een botsing. Wat er dan moet gebeuren, hangt af van de spelregels. Om botsingsdetectie te implementeren, heb je het volgende nodig:
+Als twee rechthoeken, bijvoorbeeld een held en een vijand, elkaar *snijden*, heb je een botsing. Wat er dan moet gebeuren, hangt af van de regels van het spel. Om botsingsdetectie te implementeren, heb je het volgende nodig:
 
 1. Een manier om een rechthoekrepresentatie van een spelobject te krijgen, zoals dit:
 
@@ -47,7 +47,7 @@ Als twee rechthoeken, bijvoorbeeld een held en een vijand, *overlappen*, heb je 
    }
    ```
 
-2. Een vergelijkingsfunctie, deze functie kan er als volgt uitzien:
+2. Een vergelijkingsfunctie, deze functie kan er zo uitzien:
 
    ```javascript
    function intersectRect(r1, r2) {
@@ -60,7 +60,7 @@ Als twee rechthoeken, bijvoorbeeld een held en een vijand, *overlappen*, heb je 
 
 ## Hoe vernietigen we dingen
 
-Om dingen in een spel te vernietigen, moet je het spel laten weten dat het dit object niet langer moet tekenen in de spelcyclus die op een bepaald interval wordt geactiveerd. Een manier om dit te doen is door een spelobject als *dood* te markeren wanneer er iets gebeurt, zoals dit:
+Om dingen in een spel te vernietigen, moet je het spel laten weten dat het dit object niet langer moet tekenen in de gameloop die op een bepaald interval wordt geactiveerd. Een manier om dit te doen is door een spelobject als *dood* te markeren wanneer er iets gebeurt, zoals dit:
 
 ```javascript
 // collision happened
@@ -113,15 +113,15 @@ class Weapon {
 
 ## Wat te bouwen
 
-Je neemt de bestaande code (die je zou moeten hebben opgeschoond en gerefactord) van de vorige les en breidt deze uit. Begin met de code van deel II of gebruik de code bij [Deel III - starter](../../../../../../../../../your-work).
+Je gaat de bestaande code (die je zou moeten hebben opgeschoond en gerefactord) van de vorige les uitbreiden. Begin met de code van deel II of gebruik de code van [Deel III - starter](../../../../../../../../../your-work).
 
 > tip: de laser waarmee je gaat werken bevindt zich al in je assets-map en wordt door je code verwezen.
 
 - **Voeg botsingsdetectie toe**, wanneer een laser iets raakt, moeten de volgende regels gelden:
    1. **Laser raakt vijand**: vijand sterft als hij wordt geraakt door een laser.
-   2. **Laser raakt bovenkant scherm**: Een laser wordt vernietigd als hij de bovenkant van ons scherm raakt.
+   2. **Laser raakt bovenkant scherm**: Een laser wordt vernietigd als hij de bovenkant van het scherm raakt.
    3. **Botsing tussen vijand en held**: een vijand en de held worden vernietigd als ze elkaar raken.
-   4. **Vijand raakt onderkant scherm**: Een vijand en de held worden vernietigd als de vijand de onderkant van het scherm raakt.
+   4. **Vijand raakt onderkant scherm**: Een vijand en de held worden vernietigd als de vijand de onderkant van het scherm bereikt.
 
 ## Aanbevolen stappen
 
@@ -144,7 +144,7 @@ cd your-work
 npm start
 ```
 
-Hiermee wordt een HTTP-server gestart op adres `http://localhost:5000`. Open een browser en voer dat adres in, op dit moment zou het de held en alle vijanden moeten weergeven, maar er beweegt nog niets :).
+Hiermee wordt een HTTP-server gestart op het adres `http://localhost:5000`. Open een browser en voer dat adres in. Op dit moment zou het de held en alle vijanden moeten weergeven, maar er beweegt nog niets :).
 
 ### Code toevoegen
 
@@ -161,7 +161,7 @@ Hiermee wordt een HTTP-server gestart op adres `http://localhost:5000`. Open een
       }
     ```
 
-2. **Voeg code toe die botsingen controleert**. Dit wordt een nieuwe functie die test of twee rechthoeken elkaar overlappen:
+2. **Voeg code toe die botsingen controleert**. Dit wordt een nieuwe functie die test of twee rechthoeken elkaar snijden:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -174,8 +174,8 @@ Hiermee wordt een HTTP-server gestart op adres `http://localhost:5000`. Open een
     }
     ```
 
-3. **Voeg de mogelijkheid toe om een laser af te vuren**
-   1. **Voeg een toetsgebeurtenis toe**. De *spatiebalk* moet een laser creëren net boven het ruimteschip van de held. Voeg drie constanten toe in het Messages-object:
+3. **Voeg de mogelijkheid toe om lasers af te vuren**
+   1. **Voeg een toetsgebeurtenis toe**. De *spatiebalk* moet een laser creëren net boven het ruimteschip van de held. Voeg drie constanten toe aan het Messages-object:
 
        ```javascript
         KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
@@ -252,7 +252,7 @@ Hiermee wordt een HTTP-server gestart op adres `http://localhost:5000`. Open een
       }  
       ```
 
-      Zorg ervoor dat je `updateGameObjects()` toevoegt aan je spelcyclus in `window.onload`.
+      Zorg ervoor dat je `updateGameObjects()` toevoegt aan je gameloop in `window.onload`.
 
    4. **Implementeer cooldown** voor de laser, zodat deze slechts met een bepaalde frequentie kan worden afgevuurd.
 
@@ -285,7 +285,7 @@ Hiermee wordt een HTTP-server gestart op adres `http://localhost:5000`. Open een
       }
       ```
 
-Op dit punt heeft je spel enige functionaliteit! Je kunt navigeren met je pijltjestoetsen, een laser afvuren met je spatiebalk en vijanden verdwijnen wanneer je ze raakt. Goed gedaan!
+Op dit punt heeft je spel al wat functionaliteit! Je kunt navigeren met je pijltjestoetsen, een laser afvuren met je spatiebalk, en vijanden verdwijnen wanneer je ze raakt. Goed gedaan!
 
 ---
 
@@ -293,9 +293,9 @@ Op dit punt heeft je spel enige functionaliteit! Je kunt navigeren met je pijltj
 
 Voeg een explosie toe! Bekijk de spelassets in [de Space Art-repo](../../../../6-space-game/solution/spaceArt/readme.txt) en probeer een explosie toe te voegen wanneer de laser een alien raakt.
 
-## Post-Lecture Quiz
+## Quiz Na de Les
 
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/36)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Review & Zelfstudie
 
@@ -303,9 +303,9 @@ Experimenteer met de intervallen in je spel tot nu toe. Wat gebeurt er als je ze
 
 ## Opdracht
 
-[Ontdek botsingen](assignment.md)
+[Verken botsingen](assignment.md)
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

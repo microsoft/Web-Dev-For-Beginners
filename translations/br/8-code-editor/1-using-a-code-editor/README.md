@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7aa6e4f270d38d9cb17f2b5bd86b863d",
-  "translation_date": "2025-08-25T23:19:18+00:00",
+  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
+  "translation_date": "2025-08-28T23:57:03+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "br"
 }
@@ -25,7 +25,7 @@ Antes de começar, você precisará criar uma conta no [GitHub](https://github.c
 
 ### Introdução
 
-Um editor de código é uma ferramenta essencial para escrever programas e colaborar em projetos de programação existentes. Depois de entender os conceitos básicos de um editor e como aproveitar seus recursos, você poderá aplicá-los ao escrever código.
+Um editor de código é uma ferramenta essencial para escrever programas e colaborar em projetos de programação existentes. Assim que você entender os conceitos básicos de um editor e como aproveitar seus recursos, poderá aplicá-los ao escrever código.
 
 ## Começando com o VSCode.dev
 
@@ -35,7 +35,7 @@ Depois de carregar, ele deve se parecer com esta imagem:
 
 ![VSCode.dev padrão](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.br.png)
 
-Há três seções principais, da esquerda para a direita:
+Existem três seções principais, da esquerda para a direita:
 
 1. A _barra de atividades_, que inclui alguns ícones, como a lupa 🔎, a engrenagem ⚙️ e outros.
 2. A barra de atividades expandida, que por padrão exibe o _Explorador_, chamada de _barra lateral_.
@@ -43,19 +43,19 @@ Há três seções principais, da esquerda para a direita:
 
 Clique em cada um dos ícones para exibir um menu diferente. Quando terminar, clique no _Explorador_ para voltar ao ponto de partida.
 
-Quando você começar a criar ou modificar código, isso acontecerá na maior área à direita. Você também usará essa área para visualizar o código existente, o que fará a seguir.
+Quando você começar a criar ou modificar código existente, isso acontecerá na maior área à direita. Você também usará essa área para visualizar o código existente, o que será feito a seguir.
 
 ## Abrir um repositório do GitHub
 
 A primeira coisa que você precisará fazer é abrir um repositório do GitHub. Existem várias maneiras de abrir um repositório. Nesta seção, você verá duas formas diferentes de abrir um repositório para começar a trabalhar nas alterações.
 
-### 1. Pelo editor
+### 1. Com o editor
 
 Use o próprio editor para abrir um repositório remoto. Se você acessar [VSCode.dev](https://vscode.dev), verá um botão _"Open Remote Repository"_:
 
 ![Abrir repositório remoto](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.br.png)
 
-Você também pode usar a paleta de comandos. A paleta de comandos é uma caixa de entrada onde você pode digitar qualquer palavra que faça parte de um comando ou ação para encontrar o comando certo a ser executado. Use o menu no canto superior esquerdo, selecione _View_ e, em seguida, escolha _Command Palette_, ou use o atalho de teclado: Ctrl-Shift-P (no MacOS seria Command-Shift-P).
+Você também pode usar a paleta de comandos. A paleta de comandos é uma caixa de entrada onde você pode digitar qualquer palavra que faça parte de um comando ou ação para encontrar o comando correto a ser executado. Use o menu no canto superior esquerdo, selecione _View_ e, em seguida, escolha _Command Palette_, ou use o atalho de teclado: Ctrl-Shift-P (no MacOS seria Command-Shift-P).
 
 ![Menu da Paleta](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.br.png)
 
@@ -89,7 +89,7 @@ Selecione um arquivo para abri-lo na área de código, faça suas alterações e
 
 ![Editar um arquivo](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.br.png)
 
-Depois de concluir as atualizações no seu projeto, selecione o ícone _`source control`_, que contém todas as novas alterações feitas no repositório.
+Depois de terminar de atualizar seu projeto, selecione o ícone _`source control`_, que contém todas as novas alterações feitas no repositório.
 
 Para visualizar as alterações feitas no projeto, selecione o(s) arquivo(s) na pasta `Changes` na barra de atividades expandida. Isso abrirá um 'Working Tree' para você visualizar as alterações feitas no arquivo. Vermelho indica uma exclusão no projeto, enquanto verde indica uma adição.
 
@@ -97,11 +97,11 @@ Para visualizar as alterações feitas no projeto, selecione o(s) arquivo(s) na 
 
 Se estiver satisfeito com as alterações feitas, passe o mouse sobre a pasta `Changes` e clique no botão `+` para preparar as alterações. Preparar significa simplesmente preparar suas alterações para enviá-las ao GitHub.
 
-Se, no entanto, você não estiver confortável com algumas alterações e quiser descartá-las, passe o mouse sobre a pasta `Changes` e selecione o ícone `undo`.
+Se, no entanto, você não estiver confortável com algumas alterações e quiser descartá-las, passe o mouse sobre a pasta `Changes` e selecione o ícone de `desfazer`.
 
 Depois, digite uma `mensagem de commit` _(uma descrição das alterações feitas no projeto)_, clique no ícone de `check` para confirmar e enviar suas alterações.
 
-Quando terminar de trabalhar no projeto, selecione o `ícone do menu hambúrguer` no canto superior esquerdo para retornar ao repositório no github.com.
+Quando terminar de trabalhar no projeto, selecione o `ícone de menu hambúrguer` no canto superior esquerdo para retornar ao repositório no github.com.
 
 ![Preparar e confirmar alterações](../../../../8-code-editor/images/edit-vscode.dev.gif)
 
@@ -109,7 +109,7 @@ Quando terminar de trabalhar no projeto, selecione o `ícone do menu hambúrguer
 
 Instalar extensões no VSCode permite adicionar novos recursos e opções de personalização ao ambiente de desenvolvimento no editor, melhorando seu fluxo de trabalho. Essas extensões também ajudam a adicionar suporte para várias linguagens de programação e geralmente são genéricas ou específicas para uma linguagem.
 
-Para navegar pela lista de todas as extensões disponíveis, clique no _`ícone de Extensões`_ na barra de atividades e comece a digitar o nome da extensão no campo de texto rotulado como _'Search Extensions in Marketplace'_.  
+Para navegar pela lista de todas as extensões disponíveis, clique no ícone _`Extensions`_ na barra de atividades e comece a digitar o nome da extensão no campo de texto rotulado como _'Search Extensions in Marketplace'_.  
 Você verá uma lista de extensões, cada uma contendo **o nome da extensão, o nome do publicador, uma descrição de uma frase, o número de downloads** e **uma classificação por estrelas**.
 
 ![Detalhes da extensão](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.br.png)
@@ -118,7 +118,7 @@ Você também pode visualizar todas as extensões previamente instaladas expandi
 
 ![Visualizar extensões](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.br.png)
 
-### 1. Instalar Extensões
+### 1. Instalar extensões
 
 Para instalar uma extensão, digite o nome da extensão no campo de busca e clique nela para visualizar informações adicionais na área de código assim que ela aparecer na barra de atividades expandida.
 
@@ -126,15 +126,15 @@ Você pode clicar no _botão azul de instalar_ na barra de atividades expandida 
 
 ![Instalar extensões](../../../../8-code-editor/images/install-extension.gif)
 
-### 2. Personalizar Extensões
+### 2. Personalizar extensões
 
-Depois de instalar a extensão, talvez seja necessário modificar seu comportamento e personalizá-la de acordo com suas preferências. Para fazer isso, selecione o ícone de Extensões e, desta vez, sua extensão aparecerá na pasta _Installed_. Clique no _**ícone de engrenagem**_ e navegue até _Extensions Setting_.
+Depois de instalar a extensão, talvez seja necessário modificar seu comportamento e personalizá-la de acordo com suas preferências. Para fazer isso, selecione o ícone Extensions e, desta vez, sua extensão aparecerá na pasta _Installed_. Clique no _**ícone de engrenagem**_ e navegue até _Extensions Setting_.
 
 ![Modificar configurações da extensão](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.br.png)
 
-### 3. Gerenciar Extensões
+### 3. Gerenciar extensões
 
-Depois de instalar e usar sua extensão, o vscode.dev oferece opções para gerenciar a extensão com base em diferentes necessidades. Por exemplo, você pode:
+Depois de instalar e usar sua extensão, o vscode.dev oferece opções para gerenciá-la com base em diferentes necessidades. Por exemplo, você pode:
 
 - **Desativar:** _(Você pode desativar temporariamente uma extensão quando não precisar mais dela, mas não quiser desinstalá-la completamente)_
 
@@ -152,5 +152,7 @@ Depois de instalar e usar sua extensão, o vscode.dev oferece opções para gere
 
 Leia mais sobre o [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) e alguns de seus outros recursos.
 
+---
+
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

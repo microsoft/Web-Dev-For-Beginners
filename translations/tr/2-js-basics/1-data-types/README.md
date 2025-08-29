@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-25T21:56:39+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T00:26:54+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "tr"
 }
@@ -12,8 +12,8 @@ CO_OP_TRANSLATOR_METADATA:
 ![JavaScript Temelleri - Veri Türleri](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c756480d3ffa46507f746e5975ebf80f99fdaaf1cff09a7f4.tr.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Ders Öncesi Test
-[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/7)
+## Ders Öncesi Quiz
+[Ders öncesi quiz](https://ff-quizzes.netlify.app/web/)
 
 Bu ders, webde etkileşim sağlayan dil olan JavaScript'in temellerini kapsar.
 
@@ -74,7 +74,7 @@ Bir değişken oluşturmak ve **tanımlamak** şu sözdizimine sahiptir: **[anah
 
    Bir değişken tanımlandıktan sonra, kodunuzun herhangi bir noktasında `=` operatörü ve yeni değerle değiştirilebilir.
 
-   ✅ Deneyin! Tarayıcınızda JavaScript yazabilirsiniz. Bir tarayıcı penceresi açın ve Geliştirici Araçları'na gidin. Konsolda bir istem bulacaksınız; `let myVariable = 123` yazın, enter tuşuna basın, ardından `myVariable` yazın. Ne oluyor? Bu kavramları ilerleyen derslerde daha fazla öğreneceksiniz.
+   ✅ Deneyin! Tarayıcınızda JavaScript yazabilirsiniz. Bir tarayıcı penceresi açın ve Geliştirici Araçları'na gidin. Konsolda bir istem bulacaksınız; `let myVariable = 123` yazın, enter tuşuna basın, ardından `myVariable` yazın. Ne oluyor? Bu kavramları sonraki derslerde daha fazla öğreneceksiniz.
 
 ## Sabitler
 
@@ -95,7 +95,7 @@ Sabitler, değişkenlere benzer, ancak iki istisna vardır:
       PI = 4; // not allowed
       ```
  
-   - **Nesne referansı korunur**. Aşağıdaki işlem İZİN VERİLMEZ.
+   - **Nesne referansı korunur**. Aşağıdaki işlem İZİN VERİLMEZ:
    
       ```javascript
       const obj = { a: 3 };
@@ -111,13 +111,13 @@ Sabitler, değişkenlere benzer, ancak iki istisna vardır:
 
       Yukarıda, nesnenin değerini değiştiriyorsunuz ancak referansını değil, bu nedenle izin verilir.
 
-   > Not, bir `const` referansın yeniden atanmasını korur. Ancak değer _değişmez_ değildir ve özellikle bir nesne gibi karmaşık bir yapıysa değişebilir.
+   > Not: Bir `const`, referansın yeniden atanmasını korur. Ancak değer _değişmez_ değildir ve özellikle bir nesne gibi karmaşık bir yapıysa değişebilir.
 
 ## Veri Türleri
 
-Değişkenler, sayılar ve metinler gibi birçok farklı türde değer saklayabilir. Bu çeşitli değer türlerine **veri türü** denir. Veri türleri, yazılım geliştirmede önemli bir rol oynar çünkü geliştiricilerin kodun nasıl yazılması ve yazılımın nasıl çalışması gerektiği konusunda kararlar almasına yardımcı olur. Ayrıca, bazı veri türleri, bir değerde ek bilgi dönüştürmeye veya çıkarmaya yardımcı olan benzersiz özelliklere sahiptir.
+Değişkenler, sayılar ve metinler gibi birçok farklı türde değer saklayabilir. Bu çeşitli değer türlerine **veri türü** denir. Veri türleri, yazılım geliştirmede önemli bir rol oynar çünkü geliştiricilere kodun nasıl yazılması ve yazılımın nasıl çalışması gerektiği konusunda kararlar aldırır. Ayrıca, bazı veri türleri, bir değerde ek bilgi dönüştürmeye veya çıkarmaya yardımcı olan benzersiz özelliklere sahiptir.
 
-✅ Veri Türleri, JavaScript veri ilkel türleri olarak da adlandırılır, çünkü bunlar dil tarafından sağlanan en düşük seviyeli veri türleridir. 7 ilkel veri türü vardır: string, number, bigint, boolean, undefined, null ve symbol. Bu ilkel türlerin her birinin neyi temsil edebileceğini bir dakikalığına hayal edin. Bir `zebra` nedir? Peki ya `0`? `true`?
+✅ Veri Türleri, JavaScript veri ilkeleri olarak da adlandırılır, çünkü bunlar dil tarafından sağlanan en düşük seviyeli veri türleridir. 7 temel veri türü vardır: string, number, bigint, boolean, undefined, null ve symbol. Bu ilkel türlerin her birinin neyi temsil edebileceğini bir dakikalığına hayal edin. Bir `zebra` nedir? Peki ya `0`? `true`?
 
 ### Sayılar
 
@@ -155,7 +155,7 @@ Bir string yazarken tırnak kullanmayı unutmayın, aksi takdirde JavaScript bun
 
 Stringler metinseldir ve zaman zaman biçimlendirme gerektirir.
 
-İki veya daha fazla stringi **birleştirmek** veya bir araya getirmek için `+` operatörünü kullanın.
+İki veya daha fazla stringi **birleştirmek** ya da bir araya getirmek için `+` operatörünü kullanın.
 
 ```javascript
 let myString1 = "Hello";
@@ -190,16 +190,16 @@ Booleans yalnızca iki değere sahip olabilir: `true` veya `false`. Booleans, be
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ Bir değişken, Boolean `true` olarak değerlendiriliyorsa 'doğru' olarak kabul edilebilir. İlginç bir şekilde, JavaScript'te [tüm değerler, tanımlanmadıkça doğru kabul edilir](https://developer.mozilla.org/docs/Glossary/Truthy).
+✅ Bir değişken, bir boolean `true` olarak değerlendiriliyorsa 'doğru' olarak kabul edilebilir. İlginç bir şekilde, JavaScript'te [tüm değerler, tanımlanmadıkça doğru kabul edilir](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 ---
 
 ## 🚀 Meydan Okuma
 
-JavaScript, zaman zaman veri türlerini ele alış biçimiyle şaşırtıcıdır. Bu 'tuzaklar' hakkında biraz araştırma yapın. Örneğin: büyük/küçük harf duyarlılığı sizi zorlayabilir! Konsolunuzda şunu deneyin: `let age = 1; let Age = 2; age == Age` (sonuç `false` -- neden?). Başka hangi tuzakları bulabilirsiniz?
+JavaScript, zaman zaman veri türlerini ele alış biçimiyle şaşırtıcıdır. Bu 'tuzaklar' hakkında biraz araştırma yapın. Örneğin: büyük/küçük harf duyarlılığı sizi yanıltabilir! Konsolda şunu deneyin: `let age = 1; let Age = 2; age == Age` (sonuç `false` -- neden?). Başka hangi tuzakları bulabilirsiniz?
 
-## Ders Sonrası Test
-[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/8)
+## Ders Sonrası Quiz
+[Ders sonrası quiz](https://ff-quizzes.netlify.app)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
@@ -209,5 +209,7 @@ JavaScript, zaman zaman veri türlerini ele alış biçimiyle şaşırtıcıdır
 
 [Veri Türleri Alıştırması](assignment.md)
 
+---
+
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.

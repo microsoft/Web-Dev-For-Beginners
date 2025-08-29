@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-25T21:36:42+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T00:09:56+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "it"
 }
 -->
-# Concetti di base di JavaScript: Prendere decisioni
+# Fondamenti di JavaScript: Prendere Decisioni
 
-![Concetti di base di JavaScript - Prendere decisioni](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.it.png)
+![Fondamenti di JavaScript - Prendere decisioni](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.it.png)
 
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
@@ -19,13 +19,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 Prendere decisioni e controllare l'ordine in cui il tuo codice viene eseguito rende il codice riutilizzabile e robusto. Questa sezione copre la sintassi per controllare il flusso dei dati in JavaScript e la sua importanza quando viene utilizzata con i tipi di dati Booleani.
 
-[![Prendere decisioni](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Prendere decisioni")
+[![Prendere Decisioni](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Prendere Decisioni")
 
 > 🎥 Clicca sull'immagine sopra per un video su come prendere decisioni.
 
 > Puoi seguire questa lezione su [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 
-## Un breve riepilogo sui Booleani
+## Un Breve Ripasso sui Booleani
 
 I Booleani possono avere solo due valori: `true` o `false`. I Booleani aiutano a decidere quali righe di codice devono essere eseguite quando vengono soddisfatte determinate condizioni.
 
@@ -36,22 +36,22 @@ Imposta il tuo booleano su true o false in questo modo:
 
 ✅ I Booleani prendono il nome dal matematico, filosofo e logico inglese George Boole (1815–1864).
 
-## Operatori di confronto e Booleani
+## Operatori di Confronto e Booleani
 
-Gli operatori vengono utilizzati per valutare condizioni facendo confronti che generano un valore Booleano. Di seguito è riportato un elenco di operatori frequentemente utilizzati.
+Gli operatori vengono utilizzati per valutare condizioni facendo confronti che generano un valore Booleano. Ecco un elenco di operatori frequentemente utilizzati.
 
 | Simbolo | Descrizione                                                                                                                                                   | Esempio            |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`     | **Minore di**: Confronta due valori e restituisce il valore Booleano `true` se il valore a sinistra è minore di quello a destra                               | `5 < 6 // true`    |
-| `<=`    | **Minore o uguale a**: Confronta due valori e restituisce il valore Booleano `true` se il valore a sinistra è minore o uguale a quello a destra               | `5 <= 6 // true`   |
-| `>`     | **Maggiore di**: Confronta due valori e restituisce il valore Booleano `true` se il valore a sinistra è maggiore di quello a destra                          | `5 > 6 // false`   |
-| `>=`    | **Maggiore o uguale a**: Confronta due valori e restituisce il valore Booleano `true` se il valore a sinistra è maggiore o uguale a quello a destra          | `5 >= 6 // false`  |
-| `===`   | **Uguaglianza stretta**: Confronta due valori e restituisce il valore Booleano `true` se i valori a destra e a sinistra sono uguali E dello stesso tipo       | `5 === 6 // false` |
+| `<`     | **Minore di**: Confronta due valori e restituisce il tipo di dato Booleano `true` se il valore a sinistra è minore di quello a destra                         | `5 < 6 // true`    |
+| `<=`    | **Minore o uguale a**: Confronta due valori e restituisce il tipo di dato Booleano `true` se il valore a sinistra è minore o uguale a quello a destra         | `5 <= 6 // true`   |
+| `>`     | **Maggiore di**: Confronta due valori e restituisce il tipo di dato Booleano `true` se il valore a sinistra è maggiore di quello a destra                     | `5 > 6 // false`   |
+| `>=`    | **Maggiore o uguale a**: Confronta due valori e restituisce il tipo di dato Booleano `true` se il valore a sinistra è maggiore o uguale a quello a destra     | `5 >= 6 // false`  |
+| `===`   | **Uguaglianza stretta**: Confronta due valori e restituisce il tipo di dato Booleano `true` se i valori a destra e a sinistra sono uguali E dello stesso tipo | `5 === 6 // false` |
 | `!==`   | **Diversità**: Confronta due valori e restituisce il valore Booleano opposto a quello che restituirebbe un operatore di uguaglianza stretta                   | `5 !== 6 // true`  |
 
 ✅ Metti alla prova le tue conoscenze scrivendo alcuni confronti nella console del tuo browser. Qualche dato restituito ti sorprende?
 
-## Istruzione If
+## If Statement
 
 L'istruzione `if` eseguirà il codice tra i suoi blocchi se la condizione è vera.
 
@@ -73,7 +73,7 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-## Istruzione If..Else
+## If..Else Statement
 
 L'istruzione `else` eseguirà il codice tra i suoi blocchi quando la condizione è falsa. È opzionale con un'istruzione `if`.
 
@@ -90,9 +90,9 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-✅ Metti alla prova la tua comprensione di questo codice e del codice seguente eseguendolo nella console di un browser. Cambia i valori delle variabili `currentMoney` e `laptopPrice` per modificare il risultato di `console.log()`.
+✅ Metti alla prova la tua comprensione di questo codice e del codice seguente eseguendolo nella console del browser. Cambia i valori delle variabili `currentMoney` e `laptopPrice` per modificare il valore restituito da `console.log()`.
 
-## Istruzione Switch
+## Switch Statement
 
 L'istruzione `switch` viene utilizzata per eseguire azioni diverse in base a condizioni diverse. Usa l'istruzione `switch` per selezionare uno dei tanti blocchi di codice da eseguire.
 
@@ -127,19 +127,19 @@ switch (a) {
 console.log(`The value is ${a}`);
 ```
 
-✅ Metti alla prova la tua comprensione di questo codice e del codice seguente eseguendolo nella console di un browser. Cambia i valori della variabile `a` per modificare il risultato di `console.log()`.
+✅ Metti alla prova la tua comprensione di questo codice e del codice seguente eseguendolo nella console del browser. Cambia i valori della variabile `a` per modificare il valore restituito da `console.log()`.
 
-## Operatori logici e Booleani
+## Operatori Logici e Booleani
 
 Le decisioni potrebbero richiedere più di un confronto e possono essere concatenate con operatori logici per produrre un valore Booleano.
 
 | Simbolo | Descrizione                                                                                     | Esempio                                                                 |
 | ------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`    | **AND logico**: Confronta due espressioni Booleane. Restituisce true **solo** se entrambe sono vere | `(5 > 6) && (5 < 6 ) //Una parte è falsa, l'altra è vera. Restituisce false` |
-| `\|\|`  | **OR logico**: Confronta due espressioni Booleane. Restituisce true se almeno una parte è vera     | `(5 > 6) \|\| (5 < 6) //Una parte è falsa, l'altra è vera. Restituisce true` |
-| `!`     | **NOT logico**: Restituisce il valore opposto di un'espressione Booleana                          | `!(5 > 6) // 5 non è maggiore di 6, ma "!" restituirà true`             |
+| `&&`    | **AND logico**: Confronta due espressioni Booleane. Restituisce true **solo** se entrambi i lati sono veri | `(5 > 6) && (5 < 6 ) //Un lato è falso, l'altro è vero. Restituisce false` |
+| `\|\|`  | **OR logico**: Confronta due espressioni Booleane. Restituisce true se almeno un lato è vero     | `(5 > 6) \|\| (5 < 6) //Un lato è falso, l'altro è vero. Restituisce true` |
+| `!`     | **NOT logico**: Restituisce il valore opposto di un'espressione Booleana                        | `!(5 > 6) // 5 non è maggiore di 6, ma "!" restituirà true`             |
 
-## Condizioni e decisioni con operatori logici
+## Condizioni e Decisioni con Operatori Logici
 
 Gli operatori logici possono essere utilizzati per formare condizioni in istruzioni if..else.
 
@@ -157,9 +157,9 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 }
 ```
 
-### Operatore di negazione
+### Operatore di Negazione
 
-Finora hai visto come puoi usare un'istruzione `if...else` per creare logica condizionale. Qualsiasi cosa inserita in un `if` deve valutarsi come true/false. Utilizzando l'operatore `!` puoi _negare_ l'espressione. Sarebbe così:
+Finora hai visto come puoi utilizzare un'istruzione `if...else` per creare logica condizionale. Qualsiasi cosa inserita in un `if` deve valutarsi come true/false. Utilizzando l'operatore `!` puoi _negare_ l'espressione. Sarebbe così:
 
 ```javascript
 if (!condition) {
@@ -169,7 +169,7 @@ if (!condition) {
 }
 ```
 
-### Espressioni ternarie
+### Espressioni Ternarie
 
 `if...else` non è l'unico modo per esprimere la logica decisionale. Puoi anche utilizzare qualcosa chiamato operatore ternario. La sintassi è la seguente:
 
@@ -208,7 +208,7 @@ if (firstNumber > secondNumber) {
 
 ## 🚀 Sfida
 
-Crea un programma scritto prima con operatori logici, e poi riscrivilo utilizzando un'espressione ternaria. Qual è la tua sintassi preferita?
+Crea un programma scritto prima con operatori logici, e poi riscrivilo utilizzando un'espressione ternaria. Quale sintassi preferisci?
 
 ---
 
@@ -216,7 +216,7 @@ Crea un programma scritto prima con operatori logici, e poi riscrivilo utilizzan
 
 [Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/12)
 
-## Revisione e studio autonomo
+## Revisione e Studio Autonomo
 
 Leggi di più sui numerosi operatori disponibili per l'utente [su MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
@@ -226,5 +226,7 @@ Consulta il fantastico [operator lookup](https://joshwcomeau.com/operator-lookup
 
 [Operatori](assignment.md)
 
+---
+
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

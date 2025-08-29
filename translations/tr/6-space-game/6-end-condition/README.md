@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-25T22:37:23+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T00:25:22+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "tr"
 }
@@ -13,11 +13,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Bir oyunda *bitirme koşulunu* ifade etmenin farklı yolları vardır. Oyunun yaratıcısı olarak, oyunun neden sona erdiğini belirlemek size bağlıdır. Şimdiye kadar geliştirdiğiniz uzay oyunu bağlamında, işte bazı nedenler:
+Bir oyunda *bitirme koşulunu* ifade etmenin farklı yolları vardır. Oyunun yaratıcısı olarak, oyunun neden sona erdiğini belirlemek size bağlıdır. Şimdiye kadar inşa ettiğiniz uzay oyunu bağlamında, işte bazı nedenler:
 
-- **`N` Düşman gemisi yok edildi**: Oyunu farklı seviyelere böldüğünüzde, bir seviyeyi tamamlamak için `N` düşman gemisini yok etmeniz gerekmesi oldukça yaygındır.
-- **Geminiz yok edildi**: Geminiz yok edildiğinde oyunu kaybettiğiniz oyunlar kesinlikle vardır. Bir diğer yaygın yaklaşım ise "can" kavramını kullanmaktır. Geminiz her yok edildiğinde bir can eksilir. Tüm canlar tükendiğinde oyunu kaybedersiniz.
-- **`N` puan topladınız**: Bir diğer yaygın bitirme koşulu, belirli bir miktar puan toplamaktır. Puanları nasıl kazanacağınız size bağlıdır, ancak genellikle düşman gemilerini yok etmek veya yok edilen gemilerden düşen eşyaları toplamak gibi çeşitli aktivitelere puan atanır.
+- **`N` düşman gemisi yok edildi**: Oyunu farklı seviyelere böldüğünüzde, bir seviyeyi tamamlamak için `N` düşman gemisini yok etmeniz gerekmesi oldukça yaygındır.
+- **Geminiz yok edildi**: Geminiz yok edilirse oyunu kaybettiğiniz oyunlar kesinlikle vardır. Bir diğer yaygın yaklaşım ise "can" kavramını kullanmaktır. Geminiz her yok edildiğinde bir can eksilir. Tüm canlar tükendiğinde oyunu kaybedersiniz.
+- **`N` puan topladınız**: Bir diğer yaygın bitirme koşulu, belirli bir puan toplamaktır. Puanları nasıl kazanacağınız size bağlıdır, ancak genellikle düşman gemilerini yok etmek veya yok edilen gemilerden düşen eşyaları toplamak gibi çeşitli aktivitelere puan atanır.
 - **Bir seviyeyi tamamladınız**: Bu, `X` düşman gemisinin yok edilmesi, `Y` puanın toplanması veya belirli bir eşyanın toplanması gibi birkaç koşulu içerebilir.
 
 ## Yeniden Başlatma
@@ -28,10 +28,10 @@ Eğer insanlar oyununuzu beğenirse, tekrar oynamak isteyeceklerdir. Oyun herhan
 
 ## Ne Yapılacak
 
-Oyununuzda şu kuralları ekleyeceksiniz:
+Oyununuz için şu kuralları ekleyeceksiniz:
 
 1. **Oyunu kazanma**. Tüm düşman gemileri yok edildiğinde oyunu kazanırsınız. Ayrıca bir zafer mesajı görüntüleyin.
-2. **Yeniden başlatma**. Tüm canlarınızı kaybettiğinizde veya oyunu kazandığınızda, oyunu yeniden başlatma seçeneği sunmalısınız. Unutmayın! Oyunu yeniden başlatmanız ve önceki oyun durumunu temizlemeniz gerekecek.
+2. **Yeniden başlatma**. Tüm canlarınız tükendiğinde veya oyunu kazandığınızda, oyunu yeniden başlatma seçeneği sunmalısınız. Unutmayın! Oyunu yeniden başlatmanız ve önceki oyun durumunu temizlemeniz gerekecek.
 
 ## Önerilen Adımlar
 
@@ -61,7 +61,7 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
 
 ### Kod Ekleme
 
-1. **Bitirme koşulunu takip et**. Düşman sayısını veya kahraman gemisinin yok edilip edilmediğini takip eden şu iki fonksiyonu ekleyin:
+1. **Bitirme koşulunu takip edin**. Düşman sayısını veya kahraman gemisinin yok edilip edilmediğini takip eden şu iki fonksiyonu ekleyin:
 
     ```javascript
     function isHeroDead() {
@@ -74,7 +74,7 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     }
     ```
 
-1. **Mesaj işleyicilere mantık ekle**. `eventEmitter`'ı şu koşulları ele alacak şekilde düzenleyin:
+1. **Mesaj işleyicilere mantık ekleyin**. `eventEmitter`'ı şu koşulları işlemek için düzenleyin:
 
     ```javascript
     eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -108,16 +108,16 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     });
     ```
 
-1. **Yeni mesaj türleri ekle**. Bu mesajları constants nesnesine ekleyin:
+1. **Yeni mesaj türleri ekleyin**. Bu mesajları constants nesnesine ekleyin:
 
     ```javascript
     GAME_END_LOSS: "GAME_END_LOSS",
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Yeniden başlatma kodu ekle**. Seçilen bir tuşa basıldığında oyunu yeniden başlatacak kodu ekleyin.
+2. **Yeniden başlatma kodu ekleyin**. Seçilen bir tuşa basıldığında oyunu yeniden başlatacak kodu ekleyin.
 
-   1. **`Enter` tuşuna basmayı dinle**. Pencerenizin eventListener'ını bu tuşu dinleyecek şekilde düzenleyin:
+   1. **`Enter` tuşuna basmayı dinleyin**. Pencerenizin eventListener'ını bu tuşu dinleyecek şekilde düzenleyin:
 
     ```javascript
      else if(evt.key === "Enter") {
@@ -125,13 +125,13 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
       }
     ```
 
-   1. **Yeniden başlatma mesajı ekle**. Bu mesajı Messages sabitine ekleyin:
+   1. **Yeniden başlatma mesajı ekleyin**. Bu mesajı Messages sabitine ekleyin:
 
         ```javascript
         KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
         ```
 
-1. **Oyun kurallarını uygula**. Şu oyun kurallarını uygulayın:
+1. **Oyun kurallarını uygulayın**. Şu oyun kurallarını uygulayın:
 
    1. **Oyuncu kazanma koşulu**. Tüm düşman gemileri yok edildiğinde bir zafer mesajı görüntüleyin.
 
@@ -171,7 +171,7 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
         }
         ```
 
-   1. **Yeniden başlatma mantığı**. Tüm canlar kaybedildiğinde veya oyuncu oyunu kazandığında, oyunun yeniden başlatılabileceğini gösterin. Ayrıca, *yeniden başlatma* tuşuna basıldığında oyunu yeniden başlatın (hangi tuşun yeniden başlatmaya atanacağına siz karar verebilirsiniz).
+   1. **Yeniden başlatma mantığı**. Tüm canlar tükendiğinde veya oyuncu oyunu kazandığında, oyunun yeniden başlatılabileceğini gösterin. Ayrıca, *yeniden başlatma* tuşuna basıldığında oyunu yeniden başlatın (hangi tuşun yeniden başlatmaya atanacağına siz karar verebilirsiniz).
 
       1. `resetGame()` fonksiyonunu oluşturun:
 
@@ -224,11 +224,13 @@ Bir ses ekleyin! Oyun deneyiminizi geliştirmek için bir ses ekleyebilir misini
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
-Göreviniz, yeni bir örnek oyun oluşturmaktır, bu yüzden ilginç oyunlardan bazılarını keşfederek ne tür bir oyun yapabileceğinizi görün.
+Göreviniz, yeni bir örnek oyun oluşturmaktır, bu yüzden inşa edebileceğiniz oyun türlerini görmek için ilginç oyunları keşfedin.
 
 ## Ödev
 
-[Bir Örnek Oyun Yapın](assignment.md)
+[Örnek Bir Oyun Yapın](assignment.md)
+
+---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.

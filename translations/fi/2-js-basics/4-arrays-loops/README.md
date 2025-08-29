@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-27T20:15:58+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T00:44:09+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "fi"
 }
@@ -10,12 +10,12 @@ CO_OP_TRANSLATOR_METADATA:
 # JavaScriptin perusteet: Taulukot ja silmukat
 
 ![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a294558d0e4302e448d193f8ad7495cc407539cc81f1afe904b470.fi.png)
-> Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
+> Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Ennakkokysely
 [Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/13)
 
-Tässä oppitunnissa käsitellään JavaScriptin perusteita, kieltä, joka tuo interaktiivisuutta verkkoon. Opit taulukoista ja silmukoista, joita käytetään datan käsittelyyn.
+Tämä oppitunti käsittelee JavaScriptin perusteita, kieltä, joka tuo interaktiivisuutta verkkoon. Tässä oppitunnissa opit taulukoista ja silmukoista, joita käytetään datan käsittelyyn.
 
 [![Arrays](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Arrays")
 
@@ -37,22 +37,22 @@ Taulukon syntaksi koostuu hakasuluista.
 let myArray = [];
 ```
 
-Tämä on tyhjä taulukko, mutta taulukot voidaan määritellä jo valmiiksi datalla täytettyinä. Taulukon arvot erotetaan toisistaan pilkulla.
+Tämä on tyhjä taulukko, mutta taulukot voidaan määritellä jo valmiiksi datalla täytettyinä. Useat arvot taulukossa erotetaan toisistaan pilkulla.
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 ```
 
-Taulukon arvoille annetaan yksilöllinen arvo, jota kutsutaan **indeksiksi**. Indeksi on kokonaisluku, joka määritetään sen etäisyyden perusteella taulukon alusta. Yllä olevassa esimerkissä merkkijonoarvolla "Chocolate" on indeksi 0, ja "Rocky Road" -arvon indeksi on 4. Käytä indeksiä hakasulkeiden kanssa arvojen hakemiseen, muuttamiseen tai lisäämiseen.
+Taulukon arvoille annetaan yksilöllinen arvo, jota kutsutaan **indeksiksi**, kokonaisluvuksi, joka määritetään sen etäisyyden perusteella taulukon alusta. Yllä olevassa esimerkissä merkkijonoarvolla "Chocolate" on indeksi 0, ja "Rocky Road" -arvon indeksi on 4. Käytä indeksiä hakasulkeiden kanssa hakeaksesi, muuttaaksesi tai lisätäksesi taulukon arvoja.
 
-✅ Yllättääkö sinua, että taulukot alkavat indeksistä nolla? Joissakin ohjelmointikielissä indeksit alkavat ykkösestä. Tällä on mielenkiintoinen historia, josta voit [lukea Wikipediassa](https://en.wikipedia.org/wiki/Zero-based_numbering).
+✅ Yllättääkö sinua, että taulukot alkavat nollasta? Joissakin ohjelmointikielissä indeksit alkavat 1:stä. Tällä on mielenkiintoinen historia, josta voit [lukea Wikipediassa](https://en.wikipedia.org/wiki/Zero-based_numbering).
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 iceCreamFlavors[2]; //"Vanilla"
 ```
 
-Voit käyttää indeksiä arvon muuttamiseen, kuten tässä:
+Voit käyttää indeksiä muuttaaksesi arvoa, kuten tässä:
 
 ```javascript
 iceCreamFlavors[4] = "Butter Pecan"; //Changed "Rocky Road" to "Butter Pecan"
@@ -77,14 +77,14 @@ iceCreamFlavors.length; //5
 
 ## Silmukat
 
-Silmukoiden avulla voimme suorittaa toistuvia tai **iteratiivisia** tehtäviä, mikä säästää paljon aikaa ja koodia. Jokainen iteraatio voi vaihdella muuttujien, arvojen ja ehtojen osalta. JavaScriptissä on erilaisia silmukoita, joilla on pieniä eroja, mutta ne tekevät pohjimmiltaan saman asian: käyvät dataa läpi.
+Silmukat mahdollistavat toistuvien tai **iteratiivisten** tehtävien suorittamisen ja voivat säästää paljon aikaa ja koodia. Jokainen iteraatio voi vaihdella muuttujien, arvojen ja ehtojen osalta. JavaScriptissä on erilaisia silmukoita, joilla on pieniä eroja, mutta ne tekevät pohjimmiltaan saman asian: käyvät dataa läpi.
 
 ### For-silmukka
 
 `for`-silmukka vaatii kolme osaa iteraatioon:
 - `counter` Muuttuja, joka yleensä alustetaan numerolla ja laskee iteraatioiden määrän
 - `condition` Lauseke, joka käyttää vertailuoperaattoreita ja pysäyttää silmukan, kun se on `false`
-- `iteration-expression` Suoritetaan jokaisen iteraation lopussa, yleensä laskurin arvon muuttamiseen
+- `iteration-expression` Suoritetaan jokaisen iteraation lopussa, yleensä käytetään muuttamaan laskurin arvoa
   
 ```javascript
 // Counting up to 10
@@ -97,7 +97,7 @@ for (let i = 0; i < 10; i++) {
 
 ### While-silmukka
 
-Toisin kuin `for`-silmukan syntaksi, `while`-silmukka vaatii vain ehdon, joka pysäyttää silmukan, kun ehto muuttuu `false`. Silmukoiden ehdot yleensä riippuvat muista arvoista, kuten laskureista, ja niitä on hallittava silmukan aikana. Laskureiden alkuarvot on luotava silmukan ulkopuolella, ja kaikki lausekkeet, jotka täyttävät ehdon, mukaan lukien laskurin muuttaminen, on ylläpidettävä silmukan sisällä.
+Toisin kuin `for`-silmukan syntaksi, `while`-silmukka vaatii vain ehdon, joka pysäyttää silmukan, kun ehto muuttuu `false`:ksi. Silmukoiden ehdot yleensä riippuvat muista arvoista, kuten laskureista, ja niitä täytyy hallita silmukan aikana. Laskureiden alkuarvot täytyy luoda silmukan ulkopuolella, ja kaikki lausekkeet, jotka täyttävät ehdon, mukaan lukien laskurin muuttaminen, täytyy ylläpitää silmukan sisällä.
 
 ```javascript
 //Counting up to 10
@@ -108,7 +108,7 @@ while (i < 10) {
 }
 ```
 
-✅ Miksi valitsisit for-silmukan vs. while-silmukan? 17 000 katsojaa pohti samaa kysymystä StackOverflowssa, ja jotkut mielipiteet [voivat olla mielenkiintoisia sinulle](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
+✅ Miksi valitsisit for-silmukan vs. while-silmukan? 17 000 katsojaa pohti samaa kysymystä StackOverflow'ssa, ja jotkut mielipiteet [voivat olla mielenkiintoisia sinulle](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
 
 ## Silmukat ja taulukot
 
@@ -122,16 +122,16 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 } //Ends when all flavors are printed
 ```
 
-✅ Kokeile silmukoida oma taulukkosi selaimesi konsolissa.
+✅ Kokeile silmukoida omaa taulukkoasi selaimesi konsolissa. 
 
 ---
 
 ## 🚀 Haaste
 
-Taulukoiden silmukoimiseen on muitakin tapoja kuin for- ja while-silmukat. Esimerkiksi [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) ja [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Kirjoita taulukkosilmukkasi uudelleen käyttäen yhtä näistä tekniikoista.
+On olemassa muita tapoja silmukoida taulukoita kuin for- ja while-silmukat. Näitä ovat [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) ja [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Kirjoita taulukkosilmukkasi uudelleen käyttäen yhtä näistä tekniikoista.
 
-## Jälkikysely
-[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/14)
+## Oppitunnin jälkeinen kysely
+[Oppitunnin jälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Kertaus ja itseopiskelu
 
@@ -144,4 +144,4 @@ JavaScriptin taulukoilla on monia menetelmiä, jotka ovat erittäin hyödyllisi�
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinkäsityksistä tai virhetulkinnoista.

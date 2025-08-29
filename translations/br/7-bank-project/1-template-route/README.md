@@ -1,27 +1,27 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-26T00:35:38+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-28T23:49:31+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "br"
 }
 -->
 # Construindo um App Bancário Parte 1: Templates HTML e Rotas em um Aplicativo Web
 
-## Questionário Pré-Aula
+## Quiz Pré-Aula
 
-[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/41)
+[Quiz pré-aula](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Introdução
 
-Desde o surgimento do JavaScript nos navegadores, os sites estão se tornando mais interativos e complexos do que nunca. As tecnologias web agora são comumente usadas para criar aplicativos totalmente funcionais que rodam diretamente no navegador, conhecidos como [aplicativos web](https://en.wikipedia.org/wiki/Web_application). Como os aplicativos web são altamente interativos, os usuários não querem esperar por um recarregamento completo da página toda vez que uma ação é realizada. Por isso, o JavaScript é usado para atualizar o HTML diretamente através do DOM, proporcionando uma experiência de usuário mais fluida.
+Desde o surgimento do JavaScript nos navegadores, os sites estão se tornando mais interativos e complexos do que nunca. As tecnologias web agora são comumente usadas para criar aplicativos totalmente funcionais que rodam diretamente no navegador, chamados de [aplicativos web](https://en.wikipedia.org/wiki/Web_application). Como os aplicativos web são altamente interativos, os usuários não querem esperar por um recarregamento completo da página toda vez que uma ação é realizada. É por isso que o JavaScript é usado para atualizar o HTML diretamente usando o DOM, proporcionando uma experiência mais fluida para o usuário.
 
-Nesta lição, vamos estabelecer as bases para criar um aplicativo bancário web, utilizando templates HTML para criar múltiplas telas que podem ser exibidas e atualizadas sem a necessidade de recarregar toda a página HTML.
+Nesta lição, vamos estabelecer as bases para criar um aplicativo bancário web, utilizando templates HTML para criar múltiplas telas que podem ser exibidas e atualizadas sem precisar recarregar toda a página HTML.
 
 ### Pré-requisitos
 
-Você precisará de um servidor web local para testar o aplicativo web que construiremos nesta lição. Caso não tenha um, você pode instalar o [Node.js](https://nodejs.org) e usar o comando `npx lite-server` a partir da pasta do seu projeto. Isso criará um servidor web local e abrirá seu aplicativo em um navegador.
+Você precisa de um servidor web local para testar o aplicativo web que construiremos nesta lição. Se você não tiver um, pode instalar o [Node.js](https://nodejs.org) e usar o comando `npx lite-server` na pasta do seu projeto. Isso criará um servidor web local e abrirá seu aplicativo em um navegador.
 
 ### Preparação
 
@@ -45,22 +45,22 @@ No seu computador, crie uma pasta chamada `bank` com um arquivo chamado `index.h
 
 ## Templates HTML
 
-Se você quiser criar múltiplas telas para uma página web, uma solução seria criar um arquivo HTML para cada tela que deseja exibir. No entanto, essa solução apresenta alguns inconvenientes:
+Se você quiser criar múltiplas telas para uma página web, uma solução seria criar um arquivo HTML para cada tela que deseja exibir. No entanto, essa solução traz algumas inconveniências:
 
-- É necessário recarregar todo o HTML ao alternar entre telas, o que pode ser lento.
+- Você precisa recarregar todo o HTML ao trocar de tela, o que pode ser lento.
 - É difícil compartilhar dados entre as diferentes telas.
 
 Outra abordagem é ter apenas um arquivo HTML e definir múltiplos [templates HTML](https://developer.mozilla.org/docs/Web/HTML/Element/template) usando o elemento `<template>`. Um template é um bloco HTML reutilizável que não é exibido pelo navegador e precisa ser instanciado em tempo de execução usando JavaScript.
 
 ### Tarefa
 
-Vamos criar um aplicativo bancário com duas telas: a página de login e o painel (dashboard). Primeiro, vamos adicionar no corpo do HTML um elemento placeholder que usaremos para instanciar as diferentes telas do nosso aplicativo:
+Vamos criar um aplicativo bancário com duas telas: a página de login e o painel de controle. Primeiro, vamos adicionar no corpo do HTML um elemento placeholder que usaremos para instanciar as diferentes telas do nosso aplicativo:
 
 ```html
 <div id="app">Loading...</div>
 ```
 
-Estamos atribuindo um `id` a ele para facilitar sua localização com JavaScript mais tarde.
+Estamos dando a ele um `id` para facilitar sua localização com JavaScript mais tarde.
 
 > Dica: como o conteúdo deste elemento será substituído, podemos colocar uma mensagem ou indicador de carregamento que será exibido enquanto o aplicativo está carregando.
 
@@ -75,9 +75,9 @@ Em seguida, vamos adicionar abaixo o template HTML para a página de login. Por 
 </template>
 ```
 
-Depois, adicionaremos outro template HTML para a página do painel. Esta página conterá diferentes seções:
+Depois, adicionaremos outro template HTML para a página do painel de controle. Esta página conterá diferentes seções:
 
-- Um cabeçalho com um título e um link para logout
+- Um cabeçalho com um título e um link de logout
 - O saldo atual da conta bancária
 - Uma lista de transações, exibida em uma tabela
 
@@ -106,13 +106,13 @@ Depois, adicionaremos outro template HTML para a página do painel. Esta página
 </template>
 ```
 
-> Dica: ao criar templates HTML, se você quiser ver como eles ficarão, pode comentar as linhas `<template>` e `</template>` envolvendo-as com `<!-- -->`.
+> Dica: ao criar templates HTML, se você quiser ver como eles ficarão, pode comentar as linhas `<template>` e `</template>` usando `<!-- -->`.
 
 ✅ Por que você acha que usamos atributos `id` nos templates? Poderíamos usar algo como classes?
 
 ## Exibindo templates com JavaScript
 
-Se você tentar abrir seu arquivo HTML atual em um navegador, verá que ele fica travado exibindo `Loading...`. Isso acontece porque precisamos adicionar algum código JavaScript para instanciar e exibir os templates HTML.
+Se você testar seu arquivo HTML atual em um navegador, verá que ele fica preso exibindo `Loading...`. Isso acontece porque precisamos adicionar algum código JavaScript para instanciar e exibir os templates HTML.
 
 Instanciar um template geralmente é feito em 3 etapas:
 
@@ -142,7 +142,7 @@ function updateRoute(templateId) {
 }
 ```
 
-O que fazemos aqui são exatamente os 3 passos descritos acima. Instanciamos o template com o `id` `templateId` e colocamos seu conteúdo clonado dentro do nosso placeholder do aplicativo. Note que precisamos usar `cloneNode(true)` para copiar toda a subárvore do template.
+O que fazemos aqui são exatamente as 3 etapas descritas acima. Instanciamos o template com o id `templateId` e colocamos seu conteúdo clonado dentro do nosso placeholder do aplicativo. Note que precisamos usar `cloneNode(true)` para copiar toda a subárvore do template.
 
 Agora chame essa função com um dos templates e veja o resultado.
 
@@ -154,7 +154,7 @@ updateRoute('login');
 
 ## Criando rotas
 
-Quando falamos de um aplicativo web, chamamos de *Roteamento* a intenção de mapear **URLs** para telas específicas que devem ser exibidas. Em um site com múltiplos arquivos HTML, isso é feito automaticamente, pois os caminhos dos arquivos são refletidos na URL. Por exemplo, com esses arquivos na pasta do seu projeto:
+Ao falar sobre um aplicativo web, chamamos de *Roteamento* a intenção de mapear **URLs** para telas específicas que devem ser exibidas. Em um site com múltiplos arquivos HTML, isso é feito automaticamente, pois os caminhos dos arquivos são refletidos na URL. Por exemplo, com esses arquivos na pasta do seu projeto:
 
 ```
 mywebsite/index.html
@@ -162,7 +162,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-Se você criar um servidor web com `mywebsite` como raiz, o mapeamento de URLs será:
+Se você criar um servidor web com `mywebsite` como raiz, o mapeamento de URL será:
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -170,7 +170,7 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-No entanto, para nosso aplicativo web, estamos usando um único arquivo HTML contendo todas as telas, então esse comportamento padrão não nos ajudará. Precisamos criar esse mapeamento manualmente e atualizar o template exibido usando JavaScript.
+No entanto, para nosso aplicativo web, estamos usando um único arquivo HTML contendo todas as telas, então esse comportamento padrão não nos ajudará. Precisamos criar esse mapa manualmente e atualizar a tela exibida usando JavaScript.
 
 ### Tarefa
 
@@ -213,7 +213,7 @@ Já cuidamos da segunda parte com a função `updateRoute`, então precisamos de
 
 Teremos que usar JavaScript e, mais especificamente, o [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), que permite atualizar a URL e criar uma nova entrada no histórico de navegação, sem recarregar o HTML.
 
-> Nota: Embora o elemento âncora HTML [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) possa ser usado sozinho para criar hiperlinks para diferentes URLs, ele fará o navegador recarregar o HTML por padrão. É necessário evitar esse comportamento ao lidar com roteamento usando JavaScript personalizado, utilizando a função `preventDefault()` no evento de clique.
+> Nota: Embora o elemento âncora HTML [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) possa ser usado sozinho para criar hiperlinks para diferentes URLs, ele fará o navegador recarregar o HTML por padrão. É necessário evitar esse comportamento ao lidar com roteamento usando JavaScript personalizado, utilizando a função preventDefault() no evento de clique.
 
 ### Tarefa
 
@@ -228,7 +228,7 @@ function navigate(path) {
 
 Este método primeiro atualiza a URL atual com base no caminho fornecido e, em seguida, atualiza o template. A propriedade `window.location.origin` retorna a raiz da URL, permitindo-nos reconstruir uma URL completa a partir de um caminho fornecido.
 
-Agora que temos essa função, podemos resolver o problema que temos se um caminho não corresponder a nenhuma rota definida. Vamos modificar a função `updateRoute` adicionando um fallback para uma das rotas existentes caso não consigamos encontrar uma correspondência.
+Agora que temos essa função, podemos resolver o problema que temos se um caminho não corresponder a nenhuma rota definida. Vamos modificar a função `updateRoute` adicionando um fallback para uma das rotas existentes caso não possamos encontrar uma correspondência.
 
 ```js
 function updateRoute() {
@@ -244,7 +244,7 @@ function updateRoute() {
 
 Se uma rota não puder ser encontrada, agora redirecionaremos para a página de `login`.
 
-Agora vamos criar uma função para obter a URL quando um link for clicado e evitar o comportamento padrão do navegador para links:
+Agora vamos criar uma função para obter a URL quando um link for clicado e evitar o comportamento padrão de links do navegador:
 
 ```js
 function onLinkClick(event) {
@@ -263,21 +263,21 @@ Vamos completar o sistema de navegação adicionando vinculações aos links de 
 
 O objeto `event` acima captura o evento de `click` e o passa para nossa função `onLinkClick`.
 
-Usando o atributo [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick), vinculamos o evento de `click` ao código JavaScript, aqui a chamada para a função `navigate()`.
+Usando o atributo [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick), vincule o evento de `click` ao código JavaScript, aqui a chamada para a função `navigate()`.
 
 Tente clicar nesses links, agora você deve ser capaz de navegar entre as diferentes telas do seu aplicativo.
 
-✅ O método `history.pushState` faz parte do padrão HTML5 e é implementado em [todos os navegadores modernos](https://caniuse.com/?search=pushState). Se você estiver criando um aplicativo web para navegadores mais antigos, há um truque que pode usar no lugar dessa API: utilizando um [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) antes do caminho, você pode implementar um roteamento que funciona com navegação de âncoras regulares e não recarrega a página, já que seu propósito era criar links internos dentro de uma página.
+✅ O método `history.pushState` faz parte do padrão HTML5 e é implementado em [todos os navegadores modernos](https://caniuse.com/?search=pushState). Se você estiver criando um aplicativo web para navegadores mais antigos, há um truque que pode usar no lugar dessa API: utilizando um [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) antes do caminho, você pode implementar roteamento que funciona com navegação regular de âncoras e não recarrega a página, já que seu propósito era criar links internos dentro de uma página.
 
 ## Lidando com os botões de voltar e avançar do navegador
 
-Usar o `history.pushState` cria novas entradas no histórico de navegação do navegador. Você pode verificar isso segurando o *botão de voltar* do navegador, ele deve exibir algo como isto:
+Usar o `history.pushState` cria novas entradas no histórico de navegação do navegador. Você pode verificar isso segurando o botão *voltar* do navegador, ele deve exibir algo como isto:
 
 ![Captura de tela do histórico de navegação](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.br.png)
 
-Se você tentar clicar no botão de voltar algumas vezes, verá que a URL atual muda e o histórico é atualizado, mas o mesmo template continua sendo exibido.
+Se você tentar clicar no botão voltar algumas vezes, verá que a URL atual muda e o histórico é atualizado, mas o mesmo template continua sendo exibido.
 
-Isso acontece porque o aplicativo não sabe que precisamos chamar `updateRoute()` toda vez que o histórico muda. Se você der uma olhada na [documentação do `history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), verá que, se o estado mudar - ou seja, se nos movermos para uma URL diferente - o evento [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) é acionado. Vamos usar isso para corrigir o problema.
+Isso acontece porque o aplicativo não sabe que precisamos chamar `updateRoute()` toda vez que o histórico muda. Se você olhar a documentação do [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), verá que, se o estado mudar - ou seja, se nos movemos para uma URL diferente - o evento [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) é acionado. Vamos usar isso para corrigir o problema.
 
 ### Tarefa
 
@@ -294,7 +294,7 @@ Aqui está um vídeo de revisão sobre funções arrow:
 
 [![Funções Arrow](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Funções Arrow")
 
-> 🎥 Clique na imagem acima para assistir a um vídeo sobre funções arrow.
+> 🎥 Clique na imagem acima para um vídeo sobre funções arrow.
 
 Agora tente usar os botões de voltar e avançar do navegador e verifique se a rota exibida é atualizada corretamente desta vez.
 
@@ -304,17 +304,19 @@ Agora tente usar os botões de voltar e avançar do navegador e verifique se a r
 
 Adicione um novo template e rota para uma terceira página que mostre os créditos deste aplicativo.
 
-## Questionário Pós-Aula
+## Quiz Pós-Aula
 
-[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/42)
+[Quiz pós-aula](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Revisão e Autoestudo
 
-O roteamento é uma das partes surpreendentemente complicadas do desenvolvimento web, especialmente à medida que a web se move de comportamentos de atualização de página para atualizações de página em Aplicativos de Página Única (SPA). Leia um pouco sobre [como o serviço Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) lida com roteamento. Você consegue explicar por que algumas das decisões descritas nesse documento são necessárias?
+O roteamento é uma das partes surpreendentemente complicadas do desenvolvimento web, especialmente à medida que a web se move de comportamentos de atualização de página para atualizações de página em Aplicativos de Página Única. Leia um pouco sobre [como o serviço Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) lida com roteamento. Você consegue explicar por que algumas das decisões descritas nesse documento são necessárias?
 
 ## Tarefa
 
 [Melhore o roteamento](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

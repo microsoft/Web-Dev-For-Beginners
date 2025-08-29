@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-25T22:24:41+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-28T23:52:39+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "br"
 }
@@ -16,11 +16,11 @@ CO_OP_TRANSLATOR_METADATA:
 Nesta lição, você aprenderá a disparar lasers com JavaScript! Vamos adicionar dois elementos ao nosso jogo:
 
 - **Um laser**: este laser será disparado da nave do herói e seguirá verticalmente para cima.
-- **Detecção de colisões**, como parte da implementação da habilidade de *atirar*, também adicionaremos algumas regras interessantes ao jogo:
-   - **Laser atinge inimigo**: O inimigo é destruído se for atingido por um laser.
-   - **Laser atinge o topo da tela**: O laser é destruído se atingir a parte superior da tela.
-   - **Colisão entre inimigo e herói**: Tanto o inimigo quanto o herói são destruídos se colidirem.
-   - **Inimigo atinge a parte inferior da tela**: Tanto o inimigo quanto o herói são destruídos se o inimigo atingir a parte inferior da tela.
+- **Detecção de colisões**: como parte da implementação da habilidade de *atirar*, também adicionaremos algumas regras interessantes ao jogo:
+   - **Laser atinge inimigo**: o inimigo é destruído se for atingido por um laser.
+   - **Laser atinge o topo da tela**: o laser é destruído se atingir a parte superior da tela.
+   - **Colisão entre inimigo e herói**: o inimigo e o herói são destruídos se colidirem.
+   - **Inimigo atinge a parte inferior da tela**: o inimigo e o herói são destruídos se o inimigo atingir a parte inferior da tela.
 
 Resumindo, você -- *o herói* -- precisa atingir todos os inimigos com um laser antes que eles consigam chegar à parte inferior da tela.
 
@@ -58,9 +58,9 @@ Se dois retângulos, ou seja, um herói e um inimigo, *se cruzarem*, temos uma c
    }
    ```
 
-## Como destruir objetos
+## Como destruir coisas
 
-Para destruir objetos em um jogo, você precisa informar ao jogo que ele não deve mais desenhar esse item no loop do jogo que é acionado em um determinado intervalo. Uma maneira de fazer isso é marcar um objeto do jogo como *morto* quando algo acontece, assim:
+Para destruir coisas em um jogo, você precisa informar ao jogo que ele não deve mais desenhar esse item no loop do jogo que é acionado em um determinado intervalo. Uma maneira de fazer isso é marcar um objeto do jogo como *morto* quando algo acontece, assim:
 
 ```javascript
 // collision happened
@@ -75,15 +75,15 @@ gameObjects = gameObject.filter(go => !go.dead);
 
 ## Como disparar um laser
 
-Disparar um laser significa responder a um evento de tecla e criar um objeto que se move em uma determinada direção. Precisamos realizar os seguintes passos:
+Disparar um laser significa responder a um evento de tecla e criar um objeto que se move em uma determinada direção. Precisamos, portanto, realizar os seguintes passos:
 
-1. **Criar um objeto laser**: que parte do topo da nave do herói e, ao ser criado, começa a se mover para cima em direção ao topo da tela.
+1. **Criar um objeto laser**: a partir do topo da nave do herói, que ao ser criado começa a se mover para cima em direção ao topo da tela.
 2. **Vincular código a um evento de tecla**: precisamos escolher uma tecla no teclado que represente o jogador disparando o laser.
-3. **Criar um objeto do jogo que pareça um laser** quando a tecla for pressionada.
+3. **Criar um objeto do jogo que se pareça com um laser** quando a tecla for pressionada.
 
 ## Tempo de recarga do laser
 
-O laser precisa ser disparado toda vez que você pressionar uma tecla, como a barra de espaço, por exemplo. Para evitar que o jogo produza lasers em excesso em um curto período, precisamos corrigir isso. A solução é implementar um chamado *tempo de recarga*, um temporizador que garante que o laser só possa ser disparado em intervalos específicos. Você pode implementar isso da seguinte forma:
+O laser precisa ser disparado toda vez que você pressionar uma tecla, como *espaço*, por exemplo. Para evitar que o jogo produza lasers em excesso em um curto período de tempo, precisamos corrigir isso. A solução é implementar um chamado *tempo de recarga*, um temporizador, que garante que um laser só possa ser disparado em intervalos específicos. Você pode implementar isso da seguinte forma:
 
 ```javascript
 class Cooldown {
@@ -113,7 +113,7 @@ class Weapon {
 
 ## O que construir
 
-Você usará o código existente (que deve ter sido limpo e refatorado) da lição anterior e o estenderá. Comece com o código da parte II ou use o código em [Parte III - inicial](../../../../../../../../../your-work).
+Você usará o código existente (que você deve ter organizado e refatorado) da lição anterior e o estenderá. Comece com o código da parte II ou use o código em [Parte III - inicial](../../../../../../../../../your-work).
 
 > dica: o laser com o qual você trabalhará já está na sua pasta de ativos e referenciado pelo seu código.
 
@@ -183,7 +183,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
         COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
        ```
 
-   1. **Manipule a tecla espaço**. Edite a função `window.addEventListener` para lidar com a tecla espaço:
+   1. **Manipule a tecla espaço**. Edite a função `window.addEventListener` keyup para lidar com espaços:
 
       ```javascript
         } else if(evt.keyCode === 32) {
@@ -191,7 +191,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
         }
       ```
 
-    1. **Adicione ouvintes de eventos**. Edite a função `initGame()` para garantir que o herói possa disparar quando a barra de espaço for pressionada:
+    1. **Adicione ouvintes**. Edite a função `initGame()` para garantir que o herói possa disparar quando a barra de espaço for pressionada:
 
        ```javascript
        eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
@@ -230,7 +230,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
       }
       ```
 
-   1. **Manipule colisões**, Implemente as regras de colisão para o laser. Adicione uma função `updateGameObjects()` que testa objetos colidindo:
+   1. **Manipule colisões**, Implemente as regras de colisão para o laser. Adicione uma função `updateGameObjects()` que testa objetos colidindo para detectar impactos:
 
       ```javascript
       function updateGameObjects() {
@@ -304,6 +304,8 @@ Experimente os intervalos no seu jogo até agora. O que acontece quando você os
 ## Tarefa
 
 [Explore colisões](assignment.md)
+
+---
 
 **Aviso Legal**:  
 Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.

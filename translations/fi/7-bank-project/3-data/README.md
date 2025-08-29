@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-27T20:58:15+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-29T00:34:58+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "fi"
 }
@@ -15,13 +15,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Johdanto
 
-Jokaisen verkkosovelluksen ytimessä on *data*. Data voi esiintyä monessa muodossa, mutta sen pääasiallinen tarkoitus on aina näyttää tietoa käyttäjälle. Verkkosovellusten tullessa yhä vuorovaikutteisemmiksi ja monimutkaisemmiksi, siitä, miten käyttäjä pääsee käsiksi tietoon ja käyttää sitä, on tullut keskeinen osa verkkokehitystä.
+Jokaisen verkkosovelluksen ytimessä on *data*. Data voi esiintyä monessa muodossa, mutta sen pääasiallinen tarkoitus on aina esittää tietoa käyttäjälle. Verkkosovellusten muuttuessa yhä vuorovaikutteisemmiksi ja monimutkaisemmiksi, siitä, miten käyttäjä pääsee käsiksi tietoon ja käyttää sitä, on tullut keskeinen osa verkkokehitystä.
 
-Tässä oppitunnissa opimme, miten dataa haetaan palvelimelta asynkronisesti ja miten sitä käytetään tietojen näyttämiseen verkkosivulla ilman HTML:n uudelleenlatausta.
+Tässä oppitunnissa opimme hakemaan dataa palvelimelta asynkronisesti ja käyttämään tätä dataa tiedon näyttämiseen verkkosivulla ilman HTML-sivun uudelleenlatausta.
 
 ### Esitiedot
 
-Sinun tulee olla rakentanut [kirjautumis- ja rekisteröintilomake](../2-forms/README.md) osana verkkosovellusta ennen tämän oppitunnin aloittamista. Sinun tulee myös asentaa [Node.js](https://nodejs.org) ja [ajaa palvelin-API](../api/README.md) paikallisesti, jotta saat tilitiedot.
+Sinun tulee olla rakentanut [Kirjautumis- ja rekisteröintilomake](../2-forms/README.md) -osio verkkosovelluksesta ennen tämän oppitunnin aloittamista. Sinun tulee myös asentaa [Node.js](https://nodejs.org) ja [käynnistää palvelin-API](../api/README.md) paikallisesti, jotta saat tilitietoja.
 
 Voit testata, että palvelin toimii oikein suorittamalla tämän komennon terminaalissa:
 
@@ -34,21 +34,21 @@ curl http://localhost:5000/api
 
 ## AJAX ja datan hakeminen
 
-Perinteiset verkkosivustot päivittävät näytettävän sisällön, kun käyttäjä valitsee linkin tai lähettää tietoja lomakkeella, lataamalla koko HTML-sivun uudelleen. Joka kerta, kun uutta dataa täytyy ladata, verkkopalvelin palauttaa täysin uuden HTML-sivun, joka selaimen täytyy käsitellä. Tämä keskeyttää käyttäjän nykyisen toiminnan ja rajoittaa vuorovaikutusta latauksen aikana. Tätä työnkulkua kutsutaan myös nimellä *Multi-Page Application* eli *MPA*.
+Perinteiset verkkosivustot päivittävät näytettävää sisältöä, kun käyttäjä valitsee linkin tai lähettää tietoja lomakkeella, lataamalla koko HTML-sivun uudelleen. Joka kerta, kun uutta dataa täytyy ladata, verkkopalvelin palauttaa täysin uuden HTML-sivun, joka selaimen täytyy käsitellä. Tämä keskeyttää käyttäjän nykyisen toiminnon ja rajoittaa vuorovaikutusta latauksen aikana. Tätä työnkulkua kutsutaan myös *monisivusovellukseksi* tai *MPA:ksi*.
 
-![Päivitysprosessi monisivuisessa sovelluksessa](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.fi.png)
+![Päivitystyönkulku monisivusovelluksessa](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.fi.png)
 
-Kun verkkosovellukset alkoivat muuttua monimutkaisemmiksi ja vuorovaikutteisemmiksi, syntyi uusi tekniikka nimeltä [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Tämä tekniikka mahdollistaa datan lähettämisen ja hakemisen palvelimelta asynkronisesti JavaScriptin avulla ilman HTML-sivun uudelleenlatausta, mikä johtaa nopeampiin päivityksiin ja sujuvampaan käyttäjäkokemukseen. Kun palvelimelta saadaan uutta dataa, nykyistä HTML-sivua voidaan päivittää JavaScriptin avulla käyttämällä [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)-rajapintaa. Ajan myötä tämä lähestymistapa on kehittynyt siihen, mitä nykyään kutsutaan [*Single-Page Application* eli *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+Kun verkkosovellukset alkoivat muuttua monimutkaisemmiksi ja vuorovaikutteisemmiksi, syntyi uusi tekniikka nimeltä [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Tämä tekniikka mahdollistaa verkkosovellusten lähettää ja vastaanottaa dataa palvelimelta asynkronisesti JavaScriptin avulla ilman HTML-sivun uudelleenlatausta, mikä johtaa nopeampiin päivityksiin ja sujuvampaan käyttäjäkokemukseen. Kun uutta dataa saadaan palvelimelta, nykyistä HTML-sivua voidaan myös päivittää JavaScriptin avulla käyttäen [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)-rajapintaa. Ajan myötä tämä lähestymistapa on kehittynyt siihen, mitä nykyään kutsutaan [*yksisivusovellukseksi* tai *SPA:ksi*](https://en.wikipedia.org/wiki/Single-page_application).
 
-![Päivitysprosessi yksisivuisessa sovelluksessa](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.fi.png)
+![Päivitystyönkulku yksisivusovelluksessa](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.fi.png)
 
-Kun AJAX esiteltiin ensimmäisen kerran, ainoa käytettävissä oleva API datan asynkroniseen hakemiseen oli [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Nykyään modernit selaimet tukevat myös kätevämpää ja tehokkaampaa [`Fetch` APIa](https://developer.mozilla.org/docs/Web/API/Fetch_API), joka käyttää promiseja ja soveltuu paremmin JSON-datan käsittelyyn.
+Kun AJAX esiteltiin ensimmäisen kerran, ainoa käytettävissä oleva rajapinta datan asynkroniseen hakemiseen oli [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Modernit selaimet tukevat kuitenkin nykyään myös kätevämpää ja tehokkaampaa [`Fetch` APIa](https://developer.mozilla.org/docs/Web/API/Fetch_API), joka käyttää promiseja ja soveltuu paremmin JSON-datan käsittelyyn.
 
-> Vaikka kaikki modernit selaimet tukevat `Fetch APIa`, jos haluat verkkosovelluksesi toimivan vanhoissa selaimissa, on aina hyvä idea tarkistaa [yhteensopivuustaulukko caniuse.com-sivustolta](https://caniuse.com/fetch).
+> Vaikka kaikki modernit selaimet tukevat `Fetch APIa`, jos haluat verkkosovelluksesi toimivan vanhoissa selaimissa, on aina hyvä tarkistaa [yhteensopivuustaulukko caniuse.com-sivustolta](https://caniuse.com/fetch).
 
 ### Tehtävä
 
-[Edellisessä oppitunnissa](../2-forms/README.md) toteutimme rekisteröintilomakkeen tilin luomista varten. Nyt lisäämme koodia kirjautumiseen olemassa olevaa tiliä käyttäen ja datan hakemiseen. Avaa `app.js`-tiedosto ja lisää uusi `login`-funktio:
+[Edellisessä oppitunnissa](../2-forms/README.md) toteutimme rekisteröintilomakkeen tilin luomista varten. Nyt lisäämme koodia kirjautumiseen olemassa olevalla tilillä ja datan hakemiseen. Avaa `app.js`-tiedosto ja lisää uusi `login`-funktio:
 
 ```js
 async function login() {
@@ -57,7 +57,7 @@ async function login() {
 }
 ```
 
-Aloitamme hakemalla lomake-elementin `getElementById()`-metodilla ja saamme käyttäjänimen syötteestä `loginForm.user.value`. Jokainen lomakekenttä voidaan hakea sen nimen (asetettu HTML:ssä `name`-attribuutilla) avulla lomakkeen ominaisuutena.
+Aloitamme hakemalla lomake-elementin `getElementById()`-metodilla ja saamme sitten käyttäjänimen syötteestä `loginForm.user.value` avulla. Jokainen lomakekontrolli on saatavilla sen nimen (asetettu HTML:ssä `name`-attribuutilla) perusteella lomakkeen ominaisuutena.
 
 Samalla tavalla kuin rekisteröinnissä, luomme toisen funktion palvelinpyyntöä varten, mutta tällä kertaa tilitietojen hakemiseen:
 
@@ -72,9 +72,9 @@ async function getAccount(user) {
 }
 ```
 
-Käytämme `fetch` APIa datan asynkroniseen hakemiseen palvelimelta, mutta tällä kertaa emme tarvitse muita parametreja kuin kutsuttavan URL-osoitteen, koska haemme vain dataa. Oletuksena `fetch` luo [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET)-HTTP-pyynnön, mikä on juuri se, mitä tarvitsemme tässä.
+Käytämme `fetch`-APIa pyytääksemme dataa asynkronisesti palvelimelta, mutta tällä kertaa emme tarvitse muita parametreja kuin kutsuttavan URL-osoitteen, koska haemme vain dataa. Oletuksena `fetch` luo [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET)-HTTP-pyynnön, mikä on juuri se, mitä tarvitsemme tässä.
 
-✅ `encodeURIComponent()` on funktio, joka koodaa erikoismerkit URL-osoitteeseen. Mitä ongelmia voisi ilmetä, jos emme kutsuisi tätä funktiota ja käyttäisimme suoraan `user`-arvoa URL-osoitteessa?
+✅ `encodeURIComponent()` on funktio, joka koodaa erikoismerkit URL-osoitetta varten. Mitä ongelmia voisi ilmetä, jos emme kutsu tätä funktiota ja käytämme suoraan `user`-arvoa URL-osoitteessa?
 
 Päivitetään nyt `login`-funktiomme käyttämään `getAccount`-funktiota:
 
@@ -101,7 +101,7 @@ Seuraavaksi meidän täytyy tallentaa data johonkin, jotta voimme käyttää sit
 let account = null;
 ```
 
-Kun käyttäjätiedot on tallennettu muuttujaan, voimme siirtyä *kirjautumissivulta* *kojelaudalle* käyttämällä `navigate()`-funktiota, joka meillä jo on.
+Kun käyttäjätiedot on tallennettu muuttujaan, voimme siirtyä *kirjautumissivulta* *kojelaudalle* käyttämällä olemassa olevaa `navigate()`-funktiota.
 
 Lopuksi meidän täytyy kutsua `login`-funktiota, kun kirjautumislomake lähetetään, muokkaamalla HTML:ää:
 
@@ -109,7 +109,7 @@ Lopuksi meidän täytyy kutsua `login`-funktiota, kun kirjautumislomake lähetet
 <form id="loginForm" action="javascript:login()">
 ```
 
-Testaa, että kaikki toimii oikein rekisteröimällä uusi tili ja yrittämällä kirjautua sisään samalla tilillä.
+Testaa, että kaikki toimii oikein, rekisteröimällä uusi tili ja yrittämällä kirjautua sisään samalla tilillä.
 
 Ennen kuin siirrymme seuraavaan osaan, voimme myös täydentää `register`-funktiota lisäämällä tämän funktion loppuun:
 
@@ -118,23 +118,23 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ Tiesitkö, että oletuksena voit kutsua palvelin-APIa vain *samasta domainista ja portista*, josta katsot verkkosivua? Tämä on selainten pakottama tietoturvamekanismi. Mutta hetkinen, verkkosovelluksemme pyörii `localhost:3000`-osoitteessa, kun taas palvelin-API pyörii `localhost:5000`-osoitteessa. Miksi se toimii? Käyttämällä tekniikkaa nimeltä [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) on mahdollista suorittaa cross-origin HTTP-pyyntöjä, jos palvelin lisää erityisiä otsikoita vastaukseen, sallien poikkeuksia tietyille domaineille.
+✅ Tiesitkö, että oletuksena voit kutsua palvelin-APIa vain *samasta domainista ja portista*, josta katsot verkkosivua? Tämä on selainten asettama turvallisuusmekanismi. Mutta hetkinen, verkkosovelluksemme pyörii osoitteessa `localhost:3000`, kun taas palvelin-API pyörii osoitteessa `localhost:5000`. Miksi se toimii? Käyttämällä tekniikkaa nimeltä [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) on mahdollista suorittaa ristiin-origin HTTP-pyyntöjä, jos palvelin lisää erityisiä otsikoita vastaukseen, sallien poikkeukset tietyille domaineille.
 
-> Opi lisää APIsta tämän [oppitunnin](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon) avulla.
+> Opi lisää APIsta suorittamalla tämä [oppitunti](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
 
 ## Päivitä HTML näyttämään dataa
 
-Nyt kun meillä on käyttäjätiedot, meidän täytyy päivittää olemassa oleva HTML näyttämään ne. Tiedämme jo, miten elementti haetaan DOMista esimerkiksi `document.getElementById()`-metodilla. Kun sinulla on peruselementti, tässä on joitakin rajapintoja, joita voit käyttää sen muokkaamiseen tai lapsielementtien lisäämiseen:
+Nyt kun meillä on käyttäjätiedot, meidän täytyy päivittää olemassa oleva HTML näyttämään ne. Tiedämme jo, miten hakea elementti DOM:sta esimerkiksi `document.getElementById()`-metodilla. Kun sinulla on peruselementti, tässä on joitakin rajapintoja, joita voit käyttää sen muokkaamiseen tai lapsielementtien lisäämiseen:
 
 - [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent)-ominaisuutta käyttämällä voit muuttaa elementin tekstiä. Huomaa, että tämän arvon muuttaminen poistaa kaikki elementin lapset (jos niitä on) ja korvaa ne annetulla tekstillä. Näin ollen se on myös tehokas tapa poistaa kaikki annetun elementin lapset asettamalla arvoksi tyhjä merkkijono `''`.
 
-- [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement)-metodia yhdessä [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-metodin kanssa käyttämällä voit luoda ja liittää yhden tai useamman uuden lapsielementin.
+- [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement)-metodia yhdessä [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-metodin kanssa voit käyttää uusien lapsielementtien luomiseen ja liittämiseen.
 
 ✅ [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML)-ominaisuutta käyttämällä on myös mahdollista muuttaa elementin HTML-sisältöä, mutta tätä tulisi välttää, koska se on altis [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting)-hyökkäyksille.
 
 ### Tehtävä
 
-Ennen kuin siirrymme kojelautanäkymään, meidän täytyy tehdä vielä yksi asia kirjautumissivulla. Tällä hetkellä, jos yrität kirjautua käyttäjänimellä, jota ei ole olemassa, viesti näytetään konsolissa, mutta tavalliselle käyttäjälle ei tapahdu mitään, eikä hän tiedä, mitä tapahtuu.
+Ennen kuin siirrymme kojelautanäkymään, meidän täytyy tehdä vielä yksi asia *kirjautumissivulla*. Tällä hetkellä, jos yrität kirjautua käyttäjänimellä, jota ei ole olemassa, viesti näytetään konsolissa, mutta tavalliselle käyttäjälle ei tapahdu mitään, eikä hän tiedä, mitä tapahtuu.
 
 Lisätään paikkamerkki-elementti kirjautumislomakkeeseen, jossa voimme näyttää virheilmoituksen tarvittaessa. Hyvä paikka olisi juuri ennen kirjautumis-`<button>`-elementtiä:
 
@@ -156,7 +156,9 @@ function updateElement(id, text) {
 }
 ```
 
-Tämä on melko suoraviivainen: annettuaan elementin *id*:n ja *tekstin*, se päivittää vastaavan DOM-elementin tekstisisällön. Käytetään tätä metodia aiemman virheilmoituksen tilalla `login`-funktiossa:
+Tämä funktio on melko suoraviivainen: annettuna elementin *id* ja *teksti*, se päivittää vastaavan DOM-elementin tekstisisällön.
+
+Käytetään tätä metodia aiemman virheilmoituksen tilalla `login`-funktiossa:
 
 ```js
 if (data.error) {
@@ -164,11 +166,11 @@ if (data.error) {
 }
 ```
 
-Nyt, jos yrität kirjautua virheellisellä tilillä, sinun pitäisi nähdä jotain tällaista:
+Nyt, jos yrität kirjautua sisään virheellisellä tilillä, sinun pitäisi nähdä jotain tällaista:
 
-![Näyttökuva, jossa virheilmoitus näkyy kirjautumisen aikana](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.fi.png)
+![Kuvakaappaus, jossa virheilmoitus näytetään kirjautumisen aikana](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.fi.png)
 
-Nyt meillä on visuaalisesti näkyvä virheteksti, mutta jos kokeilet sitä ruudunlukijalla, huomaat, että mitään ei ilmoiteta. Jotta dynaamisesti lisätty teksti sivulle ilmoitettaisiin ruudunlukijoilla, sen täytyy käyttää jotain, jota kutsutaan [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)-alueeksi. Tässä käytämme erityistä live-aluetta nimeltä alert:
+Nyt meillä on visuaalisesti näkyvä virheteksti, mutta jos kokeilet sitä ruudunlukijalla, huomaat, että mitään ei ilmoiteta. Jotta dynaamisesti lisätty teksti sivulle ilmoitettaisiin ruudunlukijoilla, sen täytyy käyttää jotain, jota kutsutaan [Live Regioniksi](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Tässä käytämme erityistä live-alueen tyyppiä nimeltä alert:
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -178,7 +180,7 @@ Toteuta sama toiminnallisuus myös `register`-funktion virheille (älä unohda p
 
 ## Näytä tietoja kojelaudalla
 
-Käyttämällä samoja tekniikoita, joita olemme juuri nähneet, huolehdimme myös tilitietojen näyttämisestä kojelautasivulla.
+Käyttämällä samoja tekniikoita, joita juuri opimme, huolehdimme myös tilitietojen näyttämisestä kojelautasivulla.
 
 Tältä palvelimelta saatu tilitieto-objekti näyttää:
 
@@ -196,7 +198,7 @@ Tältä palvelimelta saatu tilitieto-objekti näyttää:
 }
 ```
 
-> Huom: elämän helpottamiseksi voit käyttää valmiiksi luotua `test`-tiliä, joka on jo täytetty tiedoilla.
+> Huom: elämän helpottamiseksi voit käyttää olemassa olevaa `test`-tiliä, joka on jo täytetty tiedoilla.
 
 ### Tehtävä
 
@@ -208,15 +210,15 @@ Aloitetaan korvaamalla "Saldo"-osio HTML:ssä lisäämällä paikkamerkki-elemen
 </section>
 ```
 
-Lisätään myös uusi osio heti tämän alapuolelle tilin kuvauksen näyttämistä varten:
+Lisäämme myös uuden osion juuri tämän alapuolelle tilin kuvauksen näyttämistä varten:
 
 ```html
 <h2 id="description"></h2>
 ```
 
-✅ Koska tilin kuvaus toimii otsikkona sen alapuolella olevalle sisällölle, se on merkitty semanttisesti otsikoksi. Opi lisää, miksi [otsikkorakenne](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) on tärkeä saavutettavuuden kannalta, ja tarkastele kriittisesti sivua päättääksesi, mitä muuta voisi olla otsikko.
+✅ Koska tilin kuvaus toimii otsikkona sen alapuolella olevalle sisällölle, se on merkitty semanttisesti otsikoksi. Opi lisää siitä, miksi [otsikkorakenne](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) on tärkeä saavutettavuuden kannalta, ja tarkastele kriittisesti sivua määrittääksesi, mitä muuta voisi olla otsikko.
 
-Seuraavaksi luomme uuden funktion `app.js`-tiedostoon paikkamerkkien täyttämiseksi:
+Seuraavaksi luomme uuden funktion `app.js`-tiedostoon paikkamerkin täyttämiseksi:
 
 ```js
 function updateDashboard() {
@@ -230,7 +232,7 @@ function updateDashboard() {
 }
 ```
 
-Ensin tarkistamme, että meillä on tarvittavat tilitiedot ennen kuin jatkamme eteenpäin. Sitten käytämme aiemmin luomaamme `updateElement()`-funktiota HTML:n päivittämiseen.
+Ensiksi tarkistamme, että meillä on tarvittavat tilitiedot ennen kuin jatkamme eteenpäin. Sitten käytämme aiemmin luomaamme `updateElement()`-funktiota HTML:n päivittämiseen.
 
 > Jotta saldon näyttö olisi siistimpi, käytämme metodia [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) pakottaaksemme arvon näyttämään kaksi desimaalia.
 
@@ -244,7 +246,7 @@ if (typeof route.init === 'function') {
 }
 ```
 
-Ja päivitä reittimäärittelyt seuraavasti:
+Ja päivitä reittien määrittely seuraavasti:
 
 ```js
 const routes = {
@@ -255,9 +257,9 @@ const routes = {
 
 Tämän muutoksen myötä aina, kun kojelautasivu näytetään, `updateDashboard()`-funktio kutsutaan. Kirjautumisen jälkeen sinun pitäisi nähdä tilin saldo, valuutta ja kuvaus.
 
-## Luo taulukkorivejä dynaamisesti HTML-mallien avulla
+## Luo taulukon rivit dynaamisesti HTML-mallien avulla
 
-[Ensimmäisessä oppitunnissa](../1-template-route/README.md) käytimme HTML-malleja yhdessä [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild)-metodin kanssa toteuttaaksemme sovelluksen navigoinnin. Mallit voivat olla myös pienempiä ja niitä voidaan käyttää dynaamisesti toistuvien osien täyttämiseen sivulla.
+[Ensimmäisessä oppitunnissa](../1-template-route/README.md) käytimme HTML-malleja yhdessä [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild)-metodin kanssa navigoinnin toteuttamiseen sovelluksessamme. Mallit voivat olla myös pienempiä ja niitä voidaan käyttää dynaamisesti toistuvien osien täyttämiseen sivulla.
 
 Käytämme samanlaista lähestymistapaa näyttääksemme tapahtumaluettelon HTML-taulukossa.
 
@@ -275,9 +277,9 @@ Lisää uusi malli HTML-`<body>`-osioon:
 </template>
 ```
 
-Tämä malli edustaa yksittäistä taulukkoriviä, jossa on kolme saraketta: tapahtuman *päivämäärä*, *kohde* ja *summa*.
+Tämä malli edustaa yksittäistä taulukkoriviä, jossa on kolme saraketta: *päivämäärä*, *kohde* ja *summa* tapahtumasta.
 
-Lisää sitten tämä `id`-ominaisuus taulukon `<tbody>`-elementtiin kojelautamallin sisällä, jotta se on helpompi löytää JavaScriptillä:
+Lisää sitten tämä `id`-ominaisuus kojelaudan taulukon `<tbody>`-elementtiin, jotta se on helpompi löytää JavaScriptillä:
 
 ```html
 <tbody id="transactions"></tbody>
@@ -320,22 +322,22 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-Käytämme [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-metodia, koska sen avulla voimme liittää joko tekstiä tai [DOM Nodeja](https://developer.mozilla.org/docs/Web/API/Node) vanhempaan elementtiin, mikä sopii täydellisesti kaikkiin käyttötapauksiimme.
+Käytämme [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-metodia, koska sen avulla voimme liittää joko tekstiä tai [DOM-solmuja](https://developer.mozilla.org/docs/Web/API/Node) vanhempaan elementtiin, mikä sopii täydellisesti kaikkiin käyttötapauksiimme.
 Jos yrität kirjautua sisään käyttämällä `test`-tiliä, sinun pitäisi nyt nähdä tapahtumaluettelo hallintapaneelissa 🎉.
 
 ---
 
 ## 🚀 Haaste
 
-Työskennelkää yhdessä saadaksenne hallintapaneelisivun näyttämään oikealta pankkisovellukselta. Jos olet jo muotoillut sovelluksesi, yritä käyttää [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) -ominaisuutta luodaksesi [responsiivisen suunnittelun](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks), joka toimii hyvin sekä työpöytä- että mobiililaitteilla.
+Työskennelkää yhdessä, jotta hallintapaneelisivusta saadaan näyttämään oikealta pankkisovellukselta. Jos olet jo muotoillut sovelluksesi, yritä käyttää [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) -ominaisuutta luodaksesi [responsiivisen suunnittelun](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks), joka toimii hyvin sekä työpöytä- että mobiililaitteilla.
 
 Tässä esimerkki muotoillusta hallintapaneelisivusta:
 
-![Esimerkkikuva hallintapaneelin ulkoasusta muotoilun jälkeen](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.fi.png)
+![Esimerkkikuva hallintapaneelista muotoilun jälkeen](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.fi.png)
 
-## Luentojälkeinen visailu
+## Luentojälkeinen kysely
 
-[Luentojälkeinen visailu](https://ff-quizzes.netlify.app/web/quiz/46)
+[Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/46)
 
 ## Tehtävä
 
@@ -344,4 +346,4 @@ Tässä esimerkki muotoillusta hallintapaneelisivusta:
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

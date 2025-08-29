@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-25T22:19:26+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T00:25:02+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "tr"
 }
@@ -11,38 +11,38 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/31)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Tuval (Canvas)
 
-Tuval, varsayılan olarak içeriği olmayan bir HTML öğesidir; boş bir tuval gibidir. Üzerine çizim yaparak içerik eklemeniz gerekir.
+Tuval, varsayılan olarak içeriği olmayan bir HTML öğesidir; boş bir zemin gibidir. Üzerine çizim yaparak içerik eklemeniz gerekir.
 
 ✅ MDN'de [Canvas API hakkında daha fazla bilgi edinin](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
-Genellikle sayfanın gövdesinin bir parçası olarak şu şekilde tanımlanır:
+Genellikle sayfanın gövdesinde şu şekilde tanımlanır:
 
 ```html
 <canvas id="myCanvas" width="200" height="100"></canvas>
 ```
 
-Yukarıda, `id`, `width` ve `height` ayarlarını yapıyoruz.
+Yukarıda `id`, `width` ve `height` ayarlarını yapıyoruz.
 
-- `id`: Tuvale etkileşimde bulunmanız gerektiğinde bir referans alabilmek için bunu ayarlayın.
+- `id`: Tuval ile etkileşim kurmanız gerektiğinde bir referans alabilmek için bunu ayarlayın.
 - `width`: Bu, öğenin genişliğidir.
 - `height`: Bu, öğenin yüksekliğidir.
 
 ## Basit Geometri Çizimi
 
-Tuval, bir şeyleri çizmek için Kartezyen koordinat sistemini kullanır. Bu nedenle, bir şeyin nerede olduğunu ifade etmek için x ve y eksenlerini kullanır. `0,0` konumu sol üst köşeyi temsil eder ve sağ alt köşe, tuvalin GENİŞLİK ve YÜKSEKLİK değerleriyle belirlenir.
+Tuval, bir şeyleri çizmek için kartezyen koordinat sistemini kullanır. Bu nedenle bir şeyin nerede bulunduğunu ifade etmek için x ve y eksenlerini kullanır. `0,0` konumu sol üst pozisyondur ve sağ alt köşe, tuvalin genişlik ve yüksekliği olarak belirttiğiniz değerdir.
 
 ![tuvalin ızgarası](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.tr.png)  
 > Görsel [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) kaynağından alınmıştır.
 
-Tuval öğesi üzerine çizim yapmak için şu adımları izlemelisiniz:
+Tuval öğesi üzerine çizim yapmak için aşağıdaki adımları takip etmeniz gerekir:
 
-1. Tuval öğesine bir **referans alın**.
-2. Tuval öğesi üzerinde yer alan Bağlam (Context) öğesine bir **referans alın**.
-3. Bağlam öğesini kullanarak bir **çizim işlemi gerçekleştirin**.
+1. **Tuval öğesine bir referans alın.**
+2. **Tuval öğesi üzerinde bulunan Context öğesine bir referans alın.**
+3. **Context öğesini kullanarak bir çizim işlemi gerçekleştirin.**
 
 Yukarıdaki adımların kodu genellikle şu şekilde görünür:
 
@@ -65,15 +65,15 @@ ctx.fillRect(0,0, 200, 200) // x,y,width, height
 
 Canvas API ile şunları çizebilirsiniz:
 
-- **Geometrik şekiller**: Dikdörtgen çizmenin nasıl yapıldığını gösterdik, ancak daha fazlasını da çizebilirsiniz.
-- **Metin**: İstediğiniz yazı tipi ve renkte metin çizebilirsiniz.
-- **Görseller**: Örneğin bir .jpg veya .png gibi bir görsel varlığını temel alarak görseller çizebilirsiniz.
+- **Geometrik şekiller**, dikdörtgen çizmenin nasıl yapıldığını gösterdik, ancak çizebileceğiniz çok daha fazla şey var.
+- **Metin**, istediğiniz yazı tipi ve renkle metin çizebilirsiniz.
+- **Görseller**, bir .jpg veya .png gibi bir görsel varlığından görsel çizebilirsiniz.
 
-✅ Deneyin! Dikdörtgen çizmeyi öğrendiniz, bir sayfaya bir daire çizebilir misiniz? CodePen'deki bazı ilginç Canvas çizimlerine göz atın. İşte [özellikle etkileyici bir örnek](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Deneyin! Dikdörtgen çizmeyi biliyorsunuz, bir sayfaya daire çizebilir misiniz? CodePen'deki bazı ilginç Canvas çizimlerine göz atın. İşte [özellikle etkileyici bir örnek](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Bir Görsel Varlığı Yükleme ve Çizme
+## Görsel Varlık Yükleme ve Çizme
 
-Bir görsel varlığı yüklemek için bir `Image` nesnesi oluşturur ve `src` özelliğini ayarlarsınız. Daha sonra, kullanılmaya hazır olduğunu bilmek için `load` olayını dinlersiniz. Kod şu şekilde görünür:
+Bir görsel varlığı yüklemek için bir `Image` nesnesi oluşturup `src` özelliğini ayarlarsınız. Ardından, kullanıma hazır olduğunu bilmek için `load` olayını dinlersiniz. Kod şu şekilde görünür:
 
 ### Varlık Yükleme
 
@@ -87,7 +87,7 @@ img.onload = () => {
 
 ### Varlık Yükleme Deseni
 
-Yukarıdaki işlemi şu şekilde bir yapı içinde sarmalamanız önerilir, böylece kullanımı daha kolay olur ve yalnızca tamamen yüklendiğinde işlem yaparsınız:
+Yukarıdaki işlemi şu şekilde bir yapı içinde sarmalamanız önerilir, böylece kullanımı daha kolay olur ve yalnızca tamamen yüklendiğinde işlem yapmaya çalışırsınız:
 
 ```javascript
 function loadAsset(path) {
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-Ekrana oyun varlıklarını çizmek için kodunuz şu şekilde görünür:
+Oyun varlıklarını ekrana çizmek için kodunuz şu şekilde görünür:
 
 ```javascript
 async function run() {
@@ -124,11 +124,11 @@ async function run() {
 }
 ```
 
-## Şimdi Oyununuzu Yapmaya Başlama Zamanı
+## Artık Oyununuzu Yapmaya Başlama Zamanı
 
 ### Ne Yapılacak
 
-Bir Canvas öğesi içeren bir web sayfası oluşturacaksınız. Bu öğe `1024*768` boyutlarında siyah bir ekran gösterecek. Size iki görsel sağladık:
+Bir Canvas öğesi içeren bir web sayfası yapacaksınız. `1024*768` boyutlarında siyah bir ekran oluşturulmalı. Size iki görsel sağladık:
 
 - Kahraman gemisi
 
@@ -151,7 +151,7 @@ Bir Canvas öğesi içeren bir web sayfası oluşturacaksınız. Bu öğe `1024*
 -| package.json
 ```
 
-Bu klasörün bir kopyasını Visual Studio Code'da açın. Yerel bir geliştirme ortamı kurulu olmalıdır, tercihen Visual Studio Code ile birlikte NPM ve Node yüklü olmalıdır. Bilgisayarınızda `npm` kurulu değilse, [bunu nasıl yapacağınızı buradan öğrenebilirsiniz](https://www.npmjs.com/get-npm).
+Bu klasörün bir kopyasını Visual Studio Code'da açın. Yerel bir geliştirme ortamı kurulu olmalı, tercihen Visual Studio Code ile NPM ve Node yüklü. Bilgisayarınızda `npm` kurulu değilse, [işte nasıl yapılacağı](https://www.npmjs.com/get-npm).
 
 Projenize `your_work` klasörüne giderek başlayın:
 
@@ -160,7 +160,7 @@ cd your-work
 npm start
 ```
 
-Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatacaktır. Bir tarayıcı açın ve bu adresi girin. Şu anda boş bir sayfa göreceksiniz, ancak bu değişecek.
+Yukarıdaki işlem, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatacaktır. Bir tarayıcı açın ve bu adresi girin. Şu anda boş bir sayfa görünecek, ancak bu değişecek.
 
 > Not: Ekrandaki değişiklikleri görmek için tarayıcınızı yenileyin.
 
@@ -168,16 +168,16 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
 
 Aşağıdaki görevleri çözmek için `your-work/app.js` dosyasına gerekli kodu ekleyin:
 
-1. **Bir tuval çizin** ve arka planı siyah yapın  
+1. **Tuvali** siyah bir arka planla çizin  
    > ipucu: `/app.js` dosyasındaki uygun TODO'nun altına iki satır ekleyin, `ctx` öğesini siyah olarak ayarlayın ve üst/sol koordinatları 0,0 olarak, yükseklik ve genişliği tuvalin boyutlarına eşit olarak ayarlayın.
-2. **Doku yükleyin**  
-   > ipucu: Görüntüleri `await loadTexture` kullanarak ve görüntü yolunu geçirerek ekleyin. Henüz ekranda görünmeyecekler!
-3. **Kahramanı ekranın alt yarısının ortasına çizin**  
-   > ipucu: `drawImage` API'sini kullanarak heroImg'yi ekrana çizin, `canvas.width / 2 - 45` ve `canvas.height - canvas.height / 4)` ayarlarını yapın.
-4. **5*5 canavar çizin**  
-   > ipucu: Şimdi düşmanları ekrana çizmek için kodu yorumdan çıkarabilirsiniz. Ardından, `createEnemies` fonksiyonuna gidin ve onu tamamlayın.
+2. **Dokuları** yükleyin  
+   > ipucu: Görselleri `await loadTexture` kullanarak ve görsel yolunu geçirerek ekleyin. Henüz ekranda görünmeyecekler!
+3. **Kahramanı** ekranın alt yarısının ortasına çizin  
+   > ipucu: Kahraman görselini ekrana çizmek için `drawImage` API'sini kullanın, `canvas.width / 2 - 45` ve `canvas.height - canvas.height / 4)` ayarlarını yapın.
+4. **5*5 canavarları** çizin  
+   > ipucu: Şimdi canavarları ekrana çizmek için kodu yorumdan çıkarabilirsiniz. Ardından `createEnemies` fonksiyonuna gidin ve onu oluşturun.
 
-   İlk olarak, bazı sabitler ayarlayın:
+   Öncelikle bazı sabitler ayarlayın:
 
     ```javascript
     const MONSTER_TOTAL = 5;
@@ -200,29 +200,31 @@ Aşağıdaki görevleri çözmek için `your-work/app.js` dosyasına gerekli kod
 
 Tamamlanmış sonuç şu şekilde görünmelidir:
 
-![Siyah ekran, bir kahraman ve 5*5 canavar](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.tr.png)
+![Siyah ekran, kahraman ve 5*5 canavarlar](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.tr.png)
 
 ## Çözüm
 
-Lütfen önce kendiniz çözmeyi deneyin, ancak takılırsanız bir [çözüme](../../../../6-space-game/2-drawing-to-canvas/solution/app.js) göz atabilirsiniz.
+Önce kendiniz çözmeyi deneyin, ancak takılırsanız [çözüme](../../../../6-space-game/2-drawing-to-canvas/solution/app.js) göz atabilirsiniz.
 
 ---
 
 ## 🚀 Meydan Okuma
 
-2D odaklı Canvas API ile çizim yapmayı öğrendiniz; [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API)'ye bir göz atın ve bir 3D nesne çizmeyi deneyin.
+2D odaklı Canvas API ile çizim yapmayı öğrendiniz; [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API)'ye bir göz atın ve 3D bir nesne çizmeyi deneyin.
 
 ## Ders Sonrası Test
 
-[Ders sonrası testi](https://ff-quizzes.netlify.app/web/quiz/32)
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
-Canvas API hakkında daha fazla bilgi edinmek için [bunu okuyun](https://developer.mozilla.org/docs/Web/API/Canvas_API).
+Canvas API hakkında daha fazla bilgi edinmek için [okuyun](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
 ## Ödev
 
 [Canvas API ile oynayın](assignment.md)
 
+---
+
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.

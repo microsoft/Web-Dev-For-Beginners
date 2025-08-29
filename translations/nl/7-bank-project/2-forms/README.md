@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b667b7d601e2ee19acb5aa9d102dc9f3",
-  "translation_date": "2025-08-27T20:56:29+00:00",
+  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
+  "translation_date": "2025-08-29T00:53:05+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "nl"
 }
 -->
 # Bouw een Bankapp Deel 2: Maak een Login- en Registratieformulier
 
-## Quiz voorafgaand aan de les
+## Pre-Lecture Quiz
 
-[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/43)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/43)
 
 ### Introductie
 
-In bijna alle moderne webapps kun je een account aanmaken om je eigen privéruimte te hebben. Omdat meerdere gebruikers tegelijkertijd toegang kunnen hebben tot een webapp, heb je een mechanisme nodig om de persoonlijke gegevens van elke gebruiker afzonderlijk op te slaan en te bepalen welke informatie wordt weergegeven. We zullen niet behandelen hoe je [gebruikersidentiteit veilig beheert](https://en.wikipedia.org/wiki/Authentication), omdat dit een uitgebreid onderwerp op zich is, maar we zorgen ervoor dat elke gebruiker één (of meer) bankrekeningen kan aanmaken in onze app.
+In bijna alle moderne webapps kun je een account aanmaken om je eigen privéruimte te hebben. Aangezien meerdere gebruikers tegelijkertijd toegang kunnen hebben tot een webapp, heb je een mechanisme nodig om de persoonlijke gegevens van elke gebruiker afzonderlijk op te slaan en te bepalen welke informatie wordt weergegeven. We zullen niet behandelen hoe je [gebruikersidentiteit veilig beheert](https://en.wikipedia.org/wiki/Authentication), omdat dit een uitgebreid onderwerp op zich is, maar we zorgen ervoor dat elke gebruiker één (of meer) bankrekeningen kan aanmaken in onze app.
 
-In dit deel gebruiken we HTML-formulieren om login en registratie toe te voegen aan onze webapp. We zullen zien hoe we gegevens programmatisch naar een server-API kunnen sturen en uiteindelijk hoe we basisvalidatieregels voor gebruikersinvoer kunnen definiëren.
+In dit deel gebruiken we HTML-formulieren om login en registratie toe te voegen aan onze webapp. We zullen zien hoe we de gegevens programmatisch naar een server-API kunnen sturen en uiteindelijk hoe we basisvalidatieregels voor gebruikersinvoer kunnen definiëren.
 
 ### Vereisten
 
@@ -26,9 +26,9 @@ Je moet het onderdeel [HTML-sjablonen en routing](../1-template-route/README.md)
 **Let op**
 Je hebt twee terminals nodig die tegelijkertijd draaien, zoals hieronder vermeld:
 1. Voor de hoofd-bankapp die we hebben gebouwd in de les [HTML-sjablonen en routing](../1-template-route/README.md)
-2. Voor de [Bankapp-server-API](../api/README.md) die we zojuist hebben opgezet.
+2. Voor de [Bank APP server-API](../api/README.md) die we hierboven hebben ingesteld.
 
-Je moet beide servers draaiende hebben om de rest van de les te kunnen volgen. Ze luisteren op verschillende poorten (poort `3000` en poort `5000`), dus alles zou goed moeten werken.
+Je moet beide servers actief hebben om de rest van de les te kunnen volgen. Ze luisteren op verschillende poorten (poort `3000` en poort `5000`), dus alles zou prima moeten werken.
 
 Je kunt testen of de server correct draait door dit commando in een terminal uit te voeren:
 
@@ -41,7 +41,7 @@ curl http://localhost:5000/api
 
 ## Formulier en besturingselementen
 
-Het `<form>`-element omvat een sectie van een HTML-document waarin de gebruiker gegevens kan invoeren en indienen met interactieve besturingselementen. Er zijn allerlei soorten gebruikersinterface (UI)-besturingselementen die binnen een formulier kunnen worden gebruikt, waarvan de meest voorkomende de `<input>`- en `<button>`-elementen zijn.
+Het `<form>`-element omvat een sectie van een HTML-document waarin de gebruiker gegevens kan invoeren en verzenden met interactieve besturingselementen. Er zijn allerlei soorten gebruikersinterface (UI)-besturingselementen die binnen een formulier kunnen worden gebruikt, waarvan de meest voorkomende de `<input>`- en `<button>`-elementen zijn.
 
 Er zijn veel verschillende [typen](https://developer.mozilla.org/docs/Web/HTML/Element/input) `<input>`. Om bijvoorbeeld een veld te maken waarin de gebruiker zijn gebruikersnaam kan invoeren, kun je dit gebruiken:
 
@@ -55,9 +55,9 @@ Het `name`-attribuut wordt gebruikt als de eigenschapsnaam wanneer de formulierg
 
 ✅ Merk op dat `<input>` een [leeg element](https://developer.mozilla.org/docs/Glossary/Empty_element) is waarop je *geen* bijbehorend sluitend tag moet toevoegen. Je kunt echter de zelfsluitende `<input/>`-notatie gebruiken, maar dit is niet verplicht.
 
-Het `<button>`-element binnen een formulier is een beetje speciaal. Als je het `type`-attribuut niet specificeert, zal het automatisch de formuliergegevens naar de server verzenden wanneer erop wordt gedrukt. Hier zijn de mogelijke `type`-waarden:
+Het `<button>`-element binnen een formulier is een beetje speciaal. Als je het `type`-attribuut niet specificeert, verzendt het automatisch de formuliergegevens naar de server wanneer erop wordt gedrukt. Hier zijn de mogelijke `type`-waarden:
 
-- `submit`: De standaardwaarde binnen een `<form>`, de knop activeert de formulierverzendactie.
+- `submit`: De standaard binnen een `<form>`, de knop triggert de formulierverzendactie.
 - `reset`: De knop reset alle formulierbesturingselementen naar hun oorspronkelijke waarden.
 - `button`: Wijs geen standaardgedrag toe wanneer op de knop wordt gedrukt. Je kunt er vervolgens aangepaste acties aan toewijzen met JavaScript.
 
@@ -79,14 +79,14 @@ Laten we beginnen met het toevoegen van een formulier aan de `login`-sjabloon. W
 </template>
 ```
 
-Als je goed kijkt, zie je dat we hier ook een `<label>`-element hebben toegevoegd. `<label>`-elementen worden gebruikt om een naam toe te voegen aan UI-besturingselementen, zoals ons gebruikersnaamveld. Labels zijn belangrijk voor de leesbaarheid van je formulieren, maar bieden ook extra voordelen:
+Als je goed kijkt, kun je zien dat we hier ook een `<label>`-element hebben toegevoegd. `<label>`-elementen worden gebruikt om een naam toe te voegen aan UI-besturingselementen, zoals ons gebruikersnaamveld. Labels zijn belangrijk voor de leesbaarheid van je formulieren, maar bieden ook extra voordelen:
 
-- Door een label te koppelen aan een formulierbesturingselement, helpt het gebruikers die gebruik maken van hulpmiddelen (zoals een schermlezer) te begrijpen welke gegevens ze moeten invoeren.
-- Je kunt op het label klikken om direct de focus op het gekoppelde invoerveld te plaatsen, wat het gemakkelijker maakt om te gebruiken op apparaten met een touchscreen.
+- Door een label te koppelen aan een formulierbesturingselement, helpt het gebruikers die assistieve technologieën gebruiken (zoals een schermlezer) te begrijpen welke gegevens ze moeten invoeren.
+- Je kunt op het label klikken om direct de focus op het bijbehorende invoerveld te plaatsen, wat het gemakkelijker maakt om te gebruiken op apparaten met een touchscreen.
 
 > [Toegankelijkheid](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) op het web is een zeer belangrijk onderwerp dat vaak over het hoofd wordt gezien. Dankzij [semantische HTML-elementen](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) is het niet moeilijk om toegankelijke inhoud te maken als je ze correct gebruikt. Je kunt [meer lezen over toegankelijkheid](https://developer.mozilla.org/docs/Web/Accessibility) om veelgemaakte fouten te vermijden en een verantwoordelijke ontwikkelaar te worden.
 
-Nu voegen we een tweede formulier toe voor de registratie, direct onder het vorige:
+Nu voegen we een tweede formulier toe voor de registratie, net onder het vorige:
 
 ```html
 <hr/>
@@ -104,9 +104,9 @@ Nu voegen we een tweede formulier toe voor de registratie, direct onder het vori
 </form>
 ```
 
-Met het `value`-attribuut kunnen we een standaardwaarde definiëren voor een bepaald invoerveld. Merk ook op dat het invoerveld voor `balance` het type `number` heeft. Ziet het er anders uit dan de andere invoervelden? Probeer ermee te werken.
+Met het `value`-attribuut kunnen we een standaardwaarde definiëren voor een bepaald invoerveld. Merk ook op dat het invoerveld voor `balance` het type `number` heeft. Ziet het er anders uit dan de andere invoervelden? Probeer ermee te interageren.
 
-✅ Kun je navigeren en werken met de formulieren met alleen een toetsenbord? Hoe zou je dat doen?
+✅ Kun je navigeren en interageren met de formulieren met alleen een toetsenbord? Hoe zou je dat doen?
 
 ## Gegevens naar de server verzenden
 
@@ -114,7 +114,7 @@ Nu we een functionele UI hebben, is de volgende stap om de gegevens naar onze se
 
 Merkte je de verandering in de URL-sectie van je browser op?
 
-![Screenshot van de URL-verandering in de browser na het klikken op de knop Register](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.nl.png)
+![Screenshot van de URL-verandering in de browser na het klikken op de Register-knop](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.nl.png)
 
 De standaardactie voor een `<form>` is om het formulier naar de huidige server-URL te verzenden met behulp van de [GET-methode](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), waarbij de formuliergegevens direct aan de URL worden toegevoegd. Deze methode heeft echter enkele nadelen:
 
@@ -134,7 +134,7 @@ Voeg `action`- en `method`-eigenschappen toe aan het registratieformulier:
 <form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
 ```
 
-Probeer nu een nieuw account te registreren met je naam. Na het klikken op de *Register*-knop zou je iets als dit moeten zien:
+Probeer nu een nieuw account te registreren met je naam. Na het klikken op de *Register*-knop zou je iets moeten zien zoals dit:
 
 ![Een browservenster op het adres localhost:5000/api/accounts, met een JSON-string met gebruikersgegevens](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.nl.png)
 
@@ -144,9 +144,9 @@ Als alles goed gaat, zou de server je verzoek moeten beantwoorden met een [JSON]
 
 ## Gegevens verzenden zonder de pagina te herladen
 
-Zoals je waarschijnlijk hebt gemerkt, is er een klein probleem met de aanpak die we zojuist hebben gebruikt: bij het indienen van het formulier verlaten we onze app en wordt de browser doorgestuurd naar de server-URL. We proberen alle paginareloads te vermijden met onze webapp, omdat we een [Single-page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application) maken.
+Zoals je waarschijnlijk hebt gemerkt, is er een klein probleem met de aanpak die we zojuist hebben gebruikt: bij het verzenden van het formulier verlaten we onze app en wordt de browser doorgestuurd naar de server-URL. We proberen alle paginaherlaadacties te vermijden met onze webapp, omdat we een [Single-page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application) maken.
 
-Om de formuliergegevens naar de server te sturen zonder een paginareload af te dwingen, moeten we JavaScript gebruiken. In plaats van een URL in de `action`-eigenschap van een `<form>`-element te plaatsen, kun je elke JavaScript-code gebruiken voorafgegaan door de string `javascript:` om een aangepaste actie uit te voeren. Dit betekent ook dat je enkele taken moet implementeren die eerder automatisch door de browser werden uitgevoerd:
+Om de formuliergegevens naar de server te sturen zonder een paginaherlaadactie af te dwingen, moeten we JavaScript-code gebruiken. In plaats van een URL in de `action`-eigenschap van een `<form>`-element te plaatsen, kun je elke JavaScript-code gebruiken voorafgegaan door de string `javascript:` om een aangepaste actie uit te voeren. Dit betekent ook dat je enkele taken moet implementeren die eerder automatisch door de browser werden uitgevoerd:
 
 - De formuliergegevens ophalen.
 - De formuliergegevens converteren en coderen naar een geschikt formaat.
@@ -160,7 +160,7 @@ Vervang de `action` van het registratieformulier door:
 <form id="registerForm" action="javascript:register()">
 ```
 
-Open `app.js` en voeg een nieuwe functie toe genaamd `register`:
+Open `app.js` en voeg een nieuwe functie genaamd `register` toe:
 
 ```js
 function register() {
@@ -171,7 +171,7 @@ function register() {
 }
 ```
 
-Hier halen we het formulier-element op met behulp van `getElementById()` en gebruiken we de [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData)-helper om de waarden uit formulierbesturingselementen te halen als een set sleutel/waarde-paren. Vervolgens converteren we de gegevens naar een regulier object met [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) en serialiseren we de gegevens uiteindelijk naar [JSON](https://www.json.org/json-en.html), een formaat dat vaak wordt gebruikt voor gegevensuitwisseling op het web.
+Hier halen we het formulier-element op met behulp van `getElementById()` en gebruiken we de [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData)-helper om de waarden uit de formulierbesturingselementen te extraheren als een set sleutel/waarde-paren. Vervolgens converteren we de gegevens naar een regulier object met [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) en serialiseren we de gegevens uiteindelijk naar [JSON](https://www.json.org/json-en.html), een formaat dat vaak wordt gebruikt voor gegevensuitwisseling op het web.
 
 De gegevens zijn nu klaar om naar de server te worden verzonden. Maak een nieuwe functie genaamd `createAccount`:
 
@@ -190,7 +190,7 @@ async function createAccount(account) {
 }
 ```
 
-Wat doet deze functie? Merk eerst het `async`-trefwoord op. Dit betekent dat de functie code bevat die [**asynchroon**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) wordt uitgevoerd. Wanneer het samen met het `await`-trefwoord wordt gebruikt, kun je wachten tot asynchrone code wordt uitgevoerd - zoals wachten op de serverreactie hier - voordat je verdergaat.
+Wat doet deze functie? Merk eerst het `async`-trefwoord hier op. Dit betekent dat de functie code bevat die [**asynchroon**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) wordt uitgevoerd. Wanneer het samen met het `await`-trefwoord wordt gebruikt, kun je wachten tot asynchrone code wordt uitgevoerd - zoals wachten op de serverrespons hier - voordat je verdergaat.
 
 Hier is een korte video over het gebruik van `async/await`:
 
@@ -201,9 +201,9 @@ Hier is een korte video over het gebruik van `async/await`:
 We gebruiken de `fetch()`-API om JSON-gegevens naar de server te sturen. Deze methode neemt 2 parameters:
 
 - De URL van de server, dus we plaatsen hier `//localhost:5000/api/accounts`.
-- De instellingen van het verzoek. Hier stellen we de methode in op `POST` en geven we de `body` van het verzoek op. Omdat we JSON-gegevens naar de server sturen, moeten we ook de `Content-Type`-header instellen op `application/json`, zodat de server weet hoe de inhoud moet worden geïnterpreteerd.
+- De instellingen van het verzoek. Daar stellen we de methode in op `POST` en geven we de `body` voor het verzoek op. Omdat we JSON-gegevens naar de server sturen, moeten we ook de `Content-Type`-header instellen op `application/json`, zodat de server weet hoe de inhoud moet worden geïnterpreteerd.
 
-Omdat de server zal reageren op het verzoek met JSON, kunnen we `await response.json()` gebruiken om de JSON-inhoud te parseren en het resulterende object terug te geven. Merk op dat deze methode asynchroon is, dus we gebruiken hier het `await`-trefwoord voordat we verdergaan om ervoor te zorgen dat eventuele fouten tijdens het parseren ook worden opgevangen.
+Omdat de server zal reageren op het verzoek met JSON, kunnen we `await response.json()` gebruiken om de JSON-inhoud te parseren en het resulterende object terug te geven. Merk op dat deze methode asynchroon is, dus we gebruiken hier het `await`-trefwoord voordat we terugkeren om ervoor te zorgen dat eventuele fouten tijdens het parsen ook worden opgevangen.
 
 Voeg nu wat code toe aan de `register`-functie om `createAccount()` aan te roepen:
 
@@ -217,7 +217,7 @@ Omdat we hier het `await`-trefwoord gebruiken, moeten we het `async`-trefwoord t
 async function register() {
 ```
 
-Tot slot voegen we wat logs toe om het resultaat te controleren. De uiteindelijke functie zou er zo uit moeten zien:
+Laten we ten slotte wat logs toevoegen om het resultaat te controleren. De uiteindelijke functie zou er zo uit moeten zien:
 
 ```js
 async function register() {
@@ -242,7 +242,7 @@ Dat was een beetje lang, maar we zijn er! Als je de [ontwikkelaarstools van je b
 
 ## Gegevensvalidatie
 
-Als je probeert een nieuw account te registreren zonder eerst een gebruikersnaam in te stellen, zie je dat de server een fout retourneert met statuscode [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
+Als je probeert een nieuw account te registreren zonder eerst een gebruikersnaam in te stellen, kun je zien dat de server een fout retourneert met statuscode [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
 Voordat je gegevens naar een server stuurt, is het een goede gewoonte om [de formuliergegevens te valideren](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) wanneer mogelijk, om ervoor te zorgen dat je een geldig verzoek verzendt. HTML5-formulierbesturingselementen bieden ingebouwde validatie met behulp van verschillende attributen:
 
@@ -250,8 +250,8 @@ Voordat je gegevens naar een server stuurt, is het een goede gewoonte om [de for
 - `minlength` en `maxlength`: definieert het minimum- en maximumaantal tekens in tekstvelden.
 - `min` en `max`: definieert de minimum- en maximumwaarde van een numeriek veld.
 - `type`: definieert het soort gegevens dat wordt verwacht, zoals `number`, `email`, `file` of [andere ingebouwde typen](https://developer.mozilla.org/docs/Web/HTML/Element/input). Dit attribuut kan ook de visuele weergave van het formulierbesturingselement veranderen.
-- `pattern`: stelt je in staat om een [regular expression](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions)-patroon te definiëren om te testen of de ingevoerde gegevens geldig zijn of niet.
-> Tip: je kunt de uitstraling van je formulierbesturingselementen aanpassen afhankelijk van of ze geldig of ongeldig zijn door gebruik te maken van de CSS-pseudoklassen `:valid` en `:invalid`.
+- `pattern`: maakt het mogelijk om een [reguliere expressie](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions)-patroon te definiëren om te testen of de ingevoerde gegevens geldig zijn of niet.
+> Tip: je kunt het uiterlijk van je formulierbesturingselementen aanpassen, afhankelijk van of ze geldig of ongeldig zijn, met behulp van de CSS-pseudoklassen `:valid` en `:invalid`.
 ### Taak
 
 Er zijn 2 verplichte velden nodig om een geldig nieuw account aan te maken: de gebruikersnaam en valuta. De andere velden zijn optioneel. Werk de HTML van het formulier bij door zowel het `required` attribuut als tekst in het label van het veld toe te voegen zodat:
@@ -280,7 +280,7 @@ Als je nu op de knop *Registreren* drukt en een veld voldoet niet aan een valida
 
 ![Screenshot die de validatiefout toont bij het proberen te verzenden van het formulier](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.nl.png)
 
-Validatie zoals deze, die wordt uitgevoerd *voordat* gegevens naar de server worden verzonden, wordt **client-side** validatie genoemd. Maar let op dat het niet altijd mogelijk is om alle controles uit te voeren zonder de gegevens te verzenden. Bijvoorbeeld, we kunnen hier niet controleren of er al een account bestaat met dezelfde gebruikersnaam zonder een verzoek naar de server te sturen. Extra validatie die op de server wordt uitgevoerd, wordt **server-side** validatie genoemd.
+Validatie zoals deze, die wordt uitgevoerd *voordat* er gegevens naar de server worden verzonden, wordt **client-side** validatie genoemd. Maar let op dat het niet altijd mogelijk is om alle controles uit te voeren zonder de gegevens te verzenden. Bijvoorbeeld, we kunnen hier niet controleren of er al een account bestaat met dezelfde gebruikersnaam zonder een verzoek naar de server te sturen. Extra validatie die op de server wordt uitgevoerd, wordt **server-side** validatie genoemd.
 
 Meestal moeten beide worden geïmplementeerd, en hoewel het gebruik van client-side validatie de gebruikerservaring verbetert door directe feedback te geven, is server-side validatie cruciaal om ervoor te zorgen dat de gebruikersgegevens die je verwerkt betrouwbaar en veilig zijn.
 
@@ -300,7 +300,7 @@ Hier is een voorbeeld van hoe de uiteindelijke inlogpagina eruit kan zien na wat
 
 ## Review & Zelfstudie
 
-Ontwikkelaars zijn erg creatief geworden in hun inspanningen om formulieren te bouwen, vooral wat betreft validatiestrategieën. Leer meer over verschillende formulierstromen door te kijken op [CodePen](https://codepen.com); kun je interessante en inspirerende formulieren vinden?
+Ontwikkelaars zijn erg creatief geworden in hun inspanningen om formulieren te bouwen, vooral wat betreft validatiestrategieën. Leer meer over verschillende formulierflows door te kijken op [CodePen](https://codepen.com); kun je interessante en inspirerende formulieren vinden?
 
 ## Opdracht
 
@@ -309,4 +309,4 @@ Ontwikkelaars zijn erg creatief geworden in hun inspanningen om formulieren te b
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

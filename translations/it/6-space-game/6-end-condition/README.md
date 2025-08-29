@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-25T22:37:08+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T00:08:51+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "it"
 }
@@ -16,22 +16,22 @@ CO_OP_TRANSLATOR_METADATA:
 Ci sono diversi modi per esprimere una *condizione di fine* in un gioco. Sta a te, come creatore del gioco, decidere perché il gioco è terminato. Ecco alcune ragioni, supponendo che stiamo parlando del gioco spaziale che hai costruito finora:
 
 - **Distrutti `N` navi nemiche**: È abbastanza comune, se dividi un gioco in diversi livelli, che tu debba distruggere `N` navi nemiche per completare un livello.
-- **La tua nave è stata distrutta**: Ci sono sicuramente giochi in cui perdi se la tua nave viene distrutta. Un altro approccio comune è avere il concetto di vite. Ogni volta che la tua nave viene distrutta, si perde una vita. Una volta perse tutte le vite, il gioco termina.
-- **Hai raccolto `N` punti**: Un'altra condizione di fine comune è raccogliere punti. Come ottieni i punti dipende da te, ma è abbastanza comune assegnare punti a varie attività, come distruggere una nave nemica o raccogliere oggetti che vengono *lasciati cadere* quando vengono distrutti.
+- **La tua nave è stata distrutta**: Ci sono sicuramente giochi in cui perdi se la tua nave viene distrutta. Un altro approccio comune è il concetto di vite. Ogni volta che la tua nave viene distrutta, si perde una vita. Una volta che tutte le vite sono esaurite, perdi il gioco.
+- **Hai raccolto `N` punti**: Un'altra condizione di fine comune è raccogliere punti. Come ottieni punti dipende da te, ma è abbastanza comune assegnare punti a varie attività, come distruggere una nave nemica o raccogliere oggetti che vengono *lasciati cadere* quando vengono distrutti.
 - **Completare un livello**: Questo potrebbe coinvolgere diverse condizioni, come `X` navi nemiche distrutte, `Y` punti raccolti o magari un oggetto specifico raccolto.
 
 ## Riavvio
 
 Se le persone apprezzano il tuo gioco, è probabile che vogliano rigiocarlo. Una volta che il gioco termina per qualsiasi motivo, dovresti offrire un'opzione per riavviarlo.
 
-✅ Pensa un po' alle condizioni in cui trovi che un gioco termina e poi a come ti viene chiesto di riavviarlo.
+✅ Pensa un po' alle condizioni in cui trovi che un gioco termina e a come ti viene chiesto di riavviarlo.
 
 ## Cosa costruire
 
 Aggiungerai queste regole al tuo gioco:
 
-1. **Vincere il gioco**. Una volta distrutte tutte le navi nemiche, vinci il gioco. Inoltre, mostra un messaggio di vittoria.
-1. **Riavvio**. Una volta perse tutte le vite o vinto il gioco, dovresti offrire un modo per riavviare il gioco. Ricorda! Dovrai re-inizializzare il gioco e cancellare lo stato precedente del gioco.
+1. **Vincere il gioco**. Una volta che tutte le navi nemiche sono state distrutte, vinci il gioco. Inoltre, mostra un messaggio di vittoria.
+1. **Riavvio**. Una volta che tutte le vite sono perse o il gioco è stato vinto, dovresti offrire un modo per riavviare il gioco. Ricorda! Dovrai reinizializzare il gioco e cancellare lo stato precedente del gioco.
 
 ## Passaggi consigliati
 
@@ -57,7 +57,7 @@ npm start
 
 Questo avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri un browser e inserisci quell'indirizzo. Il tuo gioco dovrebbe essere in uno stato giocabile.
 
-> suggerimento: per evitare avvisi in Visual Studio Code, modifica la funzione `window.onload` per chiamare `gameLoopId` così com'è (senza `let`), e dichiara `gameLoopId` all'inizio del file, indipendentemente: `let gameLoopId;`
+> suggerimento: per evitare avvisi in Visual Studio Code, modifica la funzione `window.onload` per chiamare `gameLoopId` così com'è (senza `let`), e dichiara `gameLoopId` in cima al file, indipendentemente: `let gameLoopId;`
 
 ### Aggiungi codice
 
@@ -216,7 +216,7 @@ Questo avvierà un server HTTP all'indirizzo `http://localhost:5000`. Apri un br
 
 ## 🚀 Sfida
 
-Aggiungi un suono! Riesci ad aggiungere un suono per migliorare il gameplay, magari quando c'è un colpo laser, o l'eroe muore o vince? Dai un'occhiata a questo [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) per imparare come riprodurre suoni usando JavaScript.
+Aggiungi un suono! Puoi aggiungere un suono per migliorare il gameplay, magari quando c'è un colpo laser, o l'eroe muore o vince? Dai un'occhiata a questo [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) per imparare a riprodurre suoni usando JavaScript.
 
 ## Quiz Post-Lettura
 
@@ -230,5 +230,7 @@ Il tuo compito è creare un nuovo gioco di esempio, quindi esplora alcuni dei gi
 
 [Costruisci un Gioco di Esempio](assignment.md)
 
+---
+
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di tenere presente che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un esperto umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.
