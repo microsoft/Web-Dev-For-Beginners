@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f198c6b817b4b2a99749f4662e7cae98",
-  "translation_date": "2025-08-28T07:44:02+00:00",
+  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
+  "translation_date": "2025-08-29T11:29:10+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "ro"
 }
@@ -33,7 +33,7 @@ Fila Performanță conține un instrument de Profilare. Deschide un site web (î
 
 ✅ Vizitează [Documentația Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) despre panoul Performanță în Edge
 
-> Sfat: pentru a obține o citire precisă a timpului de pornire al site-ului tău, golește memoria cache a browserului
+> Sfat: pentru a obține o citire precisă a timpului de pornire al site-ului tău, golește memoria cache a browserului tău.
 
 Selectează elemente din cronologia profilului pentru a mări evenimentele care se întâmplă în timp ce pagina ta se încarcă.
 
@@ -45,29 +45,29 @@ Verifică panoul Jurnal de Evenimente pentru a vedea dacă vreun eveniment a dur
 
 ![Jurnal de evenimente Edge](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.ro.png)
 
-✅ Familiarizează-te cu instrumentul de profilare! Deschide instrumentele de dezvoltare pe acest site și vezi dacă există blocaje. Care este resursa care se încarcă cel mai încet? Dar cea mai rapidă?
+✅ Familiarizează-te cu instrumentul de profilare! Deschide instrumentele de dezvoltare pe acest site și vezi dacă există blocaje. Care este resursa care se încarcă cel mai lent? Dar cea mai rapidă?
 
 ## Verificări de profilare
 
-În general, există câteva "zone problematice" pe care fiecare dezvoltator web ar trebui să le urmărească atunci când construiește un site pentru a evita surprizele neplăcute în momentul lansării în producție.
+În general, există câteva "zone problematice" pe care fiecare dezvoltator web ar trebui să le urmărească atunci când construiește un site pentru a evita surprizele neplăcute în momentul în care este gata de lansare în producție.
 
-**Dimensiunile resurselor**: Web-ul a devenit mai 'greu' și, prin urmare, mai lent, în ultimii ani. O parte din această greutate are legătură cu utilizarea imaginilor.
+**Dimensiunile resurselor**: Web-ul a devenit mai 'greu' și, astfel, mai lent, în ultimii ani. O parte din această greutate are legătură cu utilizarea imaginilor.
 
-✅ Consultă [Arhiva Internetului](https://httparchive.org/reports/page-weight) pentru o perspectivă istorică asupra greutății paginilor și multe altele.
+✅ Răsfoiește [Arhiva Internetului](https://httparchive.org/reports/page-weight) pentru o perspectivă istorică asupra greutății paginilor și multe altele.
 
 O practică bună este să te asiguri că imaginile tale sunt optimizate și livrate la dimensiunea și rezoluția potrivită pentru utilizatorii tăi.
 
-**Traversări DOM**: Browserul trebuie să construiască Modelul Obiectului Documentului (DOM) pe baza codului pe care îl scrii, așa că este în interesul unei performanțe bune a paginii să păstrezi etichetele la minim, folosind și stilizând doar ceea ce este necesar pentru pagină. În acest sens, CSS-ul excesiv asociat unei pagini ar putea fi optimizat; stilurile care trebuie utilizate doar pe o singură pagină nu trebuie incluse în foaia de stil principală, de exemplu.
+**Traversări DOM**: Browserul trebuie să construiască Modelul Obiectului Documentului (DOM) pe baza codului pe care îl scrii, așa că este în interesul unei performanțe bune a paginii să păstrezi etichetele la minim, folosind și stilizând doar ceea ce pagina are nevoie. În acest sens, CSS-ul excesiv asociat unei pagini ar putea fi optimizat; stilurile care trebuie utilizate doar pe o singură pagină nu trebuie incluse în foaia de stil principală, de exemplu.
 
 **JavaScript**: Fiecare dezvoltator JavaScript ar trebui să fie atent la scripturile care blochează randarea și care trebuie încărcate înainte ca restul DOM-ului să poată fi traversat și afișat în browser. Ia în considerare utilizarea `defer` cu scripturile tale inline (așa cum se face în modulul Terrarium).
 
-✅ Încearcă câteva site-uri pe un [site de testare a vitezei](https://www.webpagetest.org/) pentru a afla mai multe despre verificările comune care se fac pentru a determina performanța site-ului.
+✅ Încearcă câteva site-uri pe un [site de testare a vitezei](https://www.webpagetest.org/) pentru a afla mai multe despre verificările comune care se fac pentru a determina performanța unui site.
 
-Acum că ai o idee despre cum browserul afișează resursele pe care le trimiți, să analizăm ultimele câteva lucruri pe care trebuie să le faci pentru a finaliza extensia:
+Acum că ai o idee despre cum browserul afișează resursele pe care le trimiți, să analizăm ultimele câteva lucruri pe care trebuie să le faci pentru a finaliza extensia ta:
 
 ### Creează o funcție pentru calcularea culorii
 
-Lucrând în `/src/index.js`, adaugă o funcție numită `calculateColor()` după seria de variabile `const` pe care le-ai setat pentru a avea acces la DOM:
+Lucrând în `/src/index.js`, adaugă o funcție numită `calculateColor()` după seria de variabile `const` pe care le-ai setat pentru a obține acces la DOM:
 
 ```JavaScript
 function calculateColor(value) {
@@ -88,19 +88,19 @@ function calculateColor(value) {
 }
 ```
 
-Ce se întâmplă aici? Transmiți o valoare (intensitatea carbonului) din apelul API pe care l-ai finalizat în lecția anterioară, iar apoi calculezi cât de aproape este valoarea sa de indexul prezentat în array-ul de culori. Apoi trimiți acea valoare de culoare cea mai apropiată către runtime-ul Chrome.
+Ce se întâmplă aici? Transmiți o valoare (intensitatea carbonului) din apelul API pe care l-ai finalizat în lecția anterioară, iar apoi calculezi cât de aproape este valoarea sa de indexul prezentat în array-ul de culori. Apoi trimiți acea valoare de culoare cea mai apropiată către runtime-ul chrome.
 
-Runtime-ul Chrome are [un API](https://developer.chrome.com/extensions/runtime) care gestionează tot felul de sarcini de fundal, iar extensia ta profită de acest lucru:
+Runtime-ul chrome are [un API](https://developer.chrome.com/extensions/runtime) care gestionează tot felul de sarcini de fundal, iar extensia ta profită de acest lucru:
 
 > "Folosește API-ul chrome.runtime pentru a prelua pagina de fundal, a returna detalii despre manifest și a asculta și răspunde la evenimentele din ciclul de viață al aplicației sau extensiei. De asemenea, poți folosi acest API pentru a converti calea relativă a URL-urilor în URL-uri complet calificate."
 
-✅ Dacă dezvolți această extensie de browser pentru Edge, s-ar putea să te surprindă faptul că folosești un API Chrome. Versiunile mai noi ale browserului Edge rulează pe motorul browserului Chromium, așa că poți profita de aceste instrumente.
+✅ Dacă dezvolți această extensie de browser pentru Edge, s-ar putea să te surprindă faptul că folosești un API chrome. Versiunile mai noi ale browserului Edge rulează pe motorul browserului Chromium, așa că poți profita de aceste instrumente.
 
-> Notă: dacă vrei să profilezi o extensie de browser, lansează instrumentele de dezvoltare din interiorul extensiei, deoarece aceasta este propria instanță separată de browser.
+> Notă: dacă vrei să profilezi o extensie de browser, lansează instrumentele de dezvoltare din interiorul extensiei, deoarece aceasta este o instanță separată a browserului.
 
 ### Setează o culoare implicită pentru pictogramă
 
-Acum, în funcția `init()`, setează pictograma să fie generic verde la început, apelând din nou acțiunea `updateIcon` a Chrome:
+Acum, în funcția `init()`, setează pictograma să fie generică verde la început, apelând din nou acțiunea `updateIcon` a chrome:
 
 ```JavaScript
 chrome.runtime.sendMessage({
@@ -144,11 +144,11 @@ function drawIcon(value) {
 
 În acest cod, adaugi un ascultător pentru orice mesaje care ajung la managerul de sarcini de fundal. Dacă este numit 'updateIcon', atunci următorul cod este rulat pentru a desena o pictogramă de culoarea corespunzătoare folosind API-ul Canvas.
 
-✅ Vei învăța mai multe despre API-ul Canvas în [lecțiile despre Jocul Spațial](../../6-space-game/2-drawing-to-canvas/README.md).
+✅ Vei învăța mai multe despre API-ul Canvas în lecțiile [Space Game](../../6-space-game/2-drawing-to-canvas/README.md).
 
-Acum, reconstruiește extensia ta (`npm run build`), reîmprospătează și lansează extensia, și urmărește cum se schimbă culoarea. Este un moment bun să faci o plimbare sau să speli vasele? Acum știi!
+Acum, reconstruiește extensia ta (`npm run build`), reîmprospătează și lansează extensia ta și urmărește cum se schimbă culoarea. Este un moment bun să faci o plimbare sau să speli vasele? Acum știi!
 
-Felicitări, ai construit o extensie de browser utilă și ai învățat mai multe despre cum funcționează browserul și cum să profilezi performanța acestuia.
+Felicitări, ai construit o extensie de browser utilă și ai învățat mai multe despre cum funcționează browserul și cum să-i profilezi performanța.
 
 ---
 
@@ -164,7 +164,7 @@ Investighează câteva site-uri open source care există de mult timp și, pe ba
 
 Ia în considerare abonarea la un [newsletter despre performanță](https://perf.email/)
 
-Investighează câteva dintre modurile în care browserele evaluează performanța web uitându-te prin filele de performanță din instrumentele lor web. Găsești diferențe majore?
+Investighează câteva dintre modurile în care browserele evaluează performanța web uitându-te prin filele de performanță din instrumentele lor web. Găsești vreo diferență majoră?
 
 ## Temă
 
@@ -172,5 +172,5 @@ Investighează câteva dintre modurile în care browserele evaluează performan�
 
 ---
 
-**Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinarea responsabilității**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

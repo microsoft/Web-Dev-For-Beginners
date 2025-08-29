@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e982871b8388c59c22a41b73b5fca70f",
-  "translation_date": "2025-08-27T22:57:17+00:00",
+  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
+  "translation_date": "2025-08-29T12:56:52+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "sl"
 }
@@ -15,30 +15,30 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Programiranje, ki temelji na dogodkih
 
-Pri ustvarjanju aplikacije za brskalnik uporabniku omogočimo grafični uporabniški vmesnik (GUI), ki ga uporablja za interakcijo z našim izdelkom. Najpogostejši način interakcije z brskalnikom je prek klikanja in tipkanja v različnih elementih. Izziv, s katerim se soočamo kot razvijalci, je, da ne vemo, kdaj bo uporabnik izvedel te operacije!
+Ko ustvarjamo aplikacijo za brskalnik, uporabniku omogočimo grafični uporabniški vmesnik (GUI), ki ga uporablja za interakcijo z našim izdelkom. Najpogostejši način interakcije z brskalnikom je s klikom in vnosom besedila v različne elemente. Izziv, s katerim se soočamo kot razvijalci, je, da ne vemo, kdaj bo uporabnik izvedel te operacije!
 
-[Programiranje, ki temelji na dogodkih](https://en.wikipedia.org/wiki/Event-driven_programming) je ime za vrsto programiranja, ki ga potrebujemo za ustvarjanje našega GUI-ja. Če nekoliko razčlenimo ta izraz, vidimo, da je ključna beseda tukaj **dogodek**. [Dogodek](https://www.merriam-webster.com/dictionary/event), po definiciji Merriam-Webster, pomeni "nekaj, kar se zgodi". To popolnoma opisuje našo situacijo. Vemo, da se bo nekaj zgodilo, zaradi česar želimo izvesti določeno kodo kot odziv, vendar ne vemo, kdaj se bo to zgodilo.
+[Programiranje, ki temelji na dogodkih](https://en.wikipedia.org/wiki/Event-driven_programming) je ime za vrsto programiranja, ki ga potrebujemo za ustvarjanje našega GUI-ja. Če nekoliko razčlenimo ta izraz, vidimo, da je ključna beseda tukaj **dogodek**. [Dogodek](https://www.merriam-webster.com/dictionary/event), po definiciji Merriam-Webster, pomeni "nekaj, kar se zgodi". To popolnoma opisuje našo situacijo. Vemo, da se bo nekaj zgodilo, za kar želimo izvesti kodo kot odziv, vendar ne vemo, kdaj se bo to zgodilo.
 
 Način, kako označimo del kode, ki ga želimo izvesti, je z ustvarjanjem funkcije. Ko razmišljamo o [proceduralnem programiranju](https://en.wikipedia.org/wiki/Procedural_programming), se funkcije kličejo v določenem vrstnem redu. Enako velja za programiranje, ki temelji na dogodkih. Razlika je v tem, **kako** se funkcije kličejo.
 
-Za obravnavo dogodkov (klikanje gumbov, tipkanje itd.) registriramo **poslušalce dogodkov**. Poslušalec dogodkov je funkcija, ki posluša, da se zgodi dogodek, in se nato izvede kot odziv. Poslušalci dogodkov lahko posodobijo uporabniški vmesnik, pokličejo strežnik ali opravijo karkoli drugega, kar je potrebno kot odziv na dejanje uporabnika. Poslušalca dogodkov dodamo z uporabo [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) in podamo funkcijo za izvedbo.
+Za obravnavo dogodkov (klik na gumb, vnos besedila itd.) registriramo **poslušalce dogodkov**. Poslušalec dogodkov je funkcija, ki posluša, da se zgodi dogodek, in se nato izvede kot odziv. Poslušalci dogodkov lahko posodobijo uporabniški vmesnik, opravijo klice na strežnik ali karkoli drugega, kar je potrebno kot odziv na dejanje uporabnika. Poslušalca dogodkov dodamo z uporabo [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) in podamo funkcijo za izvedbo.
 
 > **NOTE:** Pomembno je poudariti, da obstaja veliko načinov za ustvarjanje poslušalcev dogodkov. Uporabite lahko anonimne funkcije ali ustvarite poimenovane. Uporabite lahko različne bližnjice, kot je nastavitev lastnosti `click` ali uporaba `addEventListener`. V naši vaji se bomo osredotočili na `addEventListener` in anonimne funkcije, saj je to verjetno najpogostejša tehnika, ki jo uporabljajo spletni razvijalci. Prav tako je najbolj prilagodljiva, saj `addEventListener` deluje za vse dogodke, ime dogodka pa lahko podamo kot parameter.
 
 ### Pogosti dogodki
 
-Na voljo je [na desetine dogodkov](https://developer.mozilla.org/docs/Web/Events), ki jih lahko poslušate pri ustvarjanju aplikacije. V bistvu karkoli uporabnik naredi na strani sproži dogodek, kar vam daje veliko moč, da zagotovite želeno izkušnjo. Na srečo boste običajno potrebovali le nekaj dogodkov. Tukaj je nekaj pogostih (vključno z dvema, ki ju bomo uporabili pri ustvarjanju naše igre):
+Na voljo je [na desetine dogodkov](https://developer.mozilla.org/docs/Web/Events), ki jih lahko poslušate pri ustvarjanju aplikacije. V bistvu vse, kar uporabnik naredi na strani, sproži dogodek, kar vam daje veliko moč, da zagotovite želeno izkušnjo. Na srečo boste običajno potrebovali le nekaj dogodkov. Tukaj je nekaj pogostih (vključno z dvema, ki ju bomo uporabili pri ustvarjanju naše igre):
 
 - [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Uporabnik je kliknil nekaj, običajno gumb ali hiperpovezavo
 - [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Uporabnik je kliknil z desnim gumbom miške
-- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Uporabnik je označil nekaj besedila
-- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Uporabnik je vnesel nekaj besedila
+- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Uporabnik je označil besedilo
+- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Uporabnik je vnesel besedilo
 
 ## Ustvarjanje igre
 
 Ustvarili bomo igro, da raziščemo, kako dogodki delujejo v JavaScriptu. Naša igra bo preizkusila tipkarske spretnosti igralca, kar je ena najbolj podcenjenih spretnosti, ki bi jo moral imeti vsak razvijalec. Vsi bi morali vaditi tipkanje! Splošen potek igre bo videti takole:
 
-- Igralec klikne gumb za začetek in mu je prikazan citat za tipkanje
+- Igralec klikne gumb za začetek in dobi citat za tipkanje
 - Igralec čim hitreje vtipka citat v besedilno polje
   - Ko dokonča vsako besedo, se naslednja beseda označi
   - Če igralec naredi tipkarsko napako, se besedilno polje obarva rdeče
@@ -73,14 +73,14 @@ code .
 
 ## Ustvarite uporabniški vmesnik
 
-Če preučimo zahteve, vemo, da bomo na naši HTML strani potrebovali nekaj elementov. To je nekako kot recept, kjer potrebujemo nekaj sestavin:
+Če preučimo zahteve, vemo, da bomo na naši HTML strani potrebovali nekaj elementov. To je podobno receptu, kjer potrebujemo nekaj sestavin:
 
 - Prostor za prikaz citata, ki ga mora uporabnik vtipkati
 - Prostor za prikaz sporočil, kot je sporočilo o uspehu
 - Besedilno polje za tipkanje
 - Gumb za začetek
 
-Vsak od teh elementov bo potreboval ID-je, da bomo lahko z njimi delali v našem JavaScriptu. Dodali bomo tudi reference na datoteke CSS in JavaScript, ki jih bomo ustvarili.
+Vsak od teh elementov bo potreboval ID, da bomo lahko z njimi delali v našem JavaScriptu. Dodali bomo tudi reference na datoteke CSS in JavaScript, ki jih bomo ustvarili.
 
 Ustvarite novo datoteko z imenom **index.html**. Dodajte naslednji HTML:
 
@@ -105,7 +105,7 @@ Ustvarite novo datoteko z imenom **index.html**. Dodajte naslednji HTML:
 </html>
 ```
 
-### Zaženite aplikacijo
+### Zagon aplikacije
 
 Vedno je najbolje razvijati iterativno, da vidimo, kako stvari izgledajo. Zaženimo našo aplikacijo. Obstaja čudovita razširitev za Visual Studio Code, imenovana [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), ki bo gostila vašo aplikacijo lokalno in osvežila brskalnik vsakič, ko shranite.
 
@@ -122,7 +122,7 @@ Dodajmo nekaj funkcionalnosti.
 
 ## Dodajte CSS
 
-Ko smo ustvarili naš HTML, dodajmo CSS za osnovno oblikovanje. Moramo označiti besedo, ki jo mora igralec vtipkati, in obarvati besedilno polje, če je vneseno besedilo napačno. To bomo storili z dvema razredoma.
+Ko smo ustvarili HTML, dodajmo CSS za osnovno oblikovanje. Moramo označiti besedo, ki jo mora igralec vtipkati, in obarvati besedilno polje, če je vneseno besedilo napačno. To bomo storili z dvema razredoma.
 
 Ustvarite novo datoteko z imenom **style.css** in dodajte naslednjo sintakso.
 
@@ -138,7 +138,7 @@ Ustvarite novo datoteko z imenom **style.css** in dodajte naslednjo sintakso.
 }
 ```
 
-✅ Pri CSS-ju lahko postavite svojo stran, kakor želite. Vzemite si nekaj časa in naredite stran bolj privlačno:
+✅ Ko gre za CSS, lahko svojo stran oblikujete, kakor želite. Vzemite si nekaj časa in naredite stran bolj privlačno:
 
 - Izberite drugačno pisavo
 - Obarvajte naslove
@@ -146,7 +146,7 @@ Ustvarite novo datoteko z imenom **style.css** in dodajte naslednjo sintakso.
 
 ## JavaScript
 
-Ko smo ustvarili naš uporabniški vmesnik, se osredotočimo na JavaScript, ki bo zagotovil logiko. Razdelili bomo to na nekaj korakov:
+Ko smo ustvarili uporabniški vmesnik, se osredotočimo na JavaScript, ki bo zagotovil logiko. Razdelili bomo to na nekaj korakov:
 
 - [Ustvarite konstante](../../../../4-typing-game/typing-game)
 - [Poslušalec dogodkov za začetek igre](../../../../4-typing-game/typing-game)
@@ -194,7 +194,7 @@ const typedValueElement = document.getElementById('typed-value');
 
 ✅ Dodajte več citatov v svojo igro
 
-> **NOTE:** Elemente lahko kadar koli pridobimo v kodi z uporabo `document.getElementById`. Ker bomo te elemente redno uporabljali, se bomo izognili tipkarskim napakam z uporabo konstant. Okviri, kot sta [Vue.js](https://vuejs.org/) ali [React](https://reactjs.org/), vam lahko pomagajo bolje upravljati centralizacijo vaše kode.
+> **NOTE:** Elemente lahko kadar koli pridobimo v kodi z uporabo `document.getElementById`. Ker bomo te elemente redno uporabljali, se bomo izognili tipkarskim napakam z uporabo konstant. Okviri, kot sta [Vue.js](https://vuejs.org/) ali [React](https://reactjs.org/), vam lahko pomagajo bolje upravljati centralizacijo kode.
 
 Vzemite si minuto in si oglejte video o uporabi `const`, `let` in `var`.
 
@@ -244,7 +244,7 @@ document.getElementById('start').addEventListener('click', () => {
 Razčlenimo kodo!
 
 - Nastavitev sledenja besedam
-  - Uporaba [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) in [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) nam omogoča naključno izbiro citata iz tabele `quotes`
+  - Z uporabo [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) in [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) naključno izberemo citat iz tabele `quotes`
   - `quote` pretvorimo v tabelo `words`, da lahko sledimo besedi, ki jo igralec trenutno tipka
   - `wordIndex` nastavimo na 0, saj bo igralec začel z prvo besedo
 - Nastavitev uporabniškega vmesnika
@@ -253,11 +253,11 @@ Razčlenimo kodo!
   - `join` tabelo, da ustvarimo niz, ki ga lahko uporabimo za posodobitev `innerHTML` na `quoteElement`
     - To bo prikazalo citat igralcu
   - Nastavimo `className` prvega elementa `span` na `highlight`, da ga označimo kot rumenega
-  - Očistimo `messageElement` tako, da nastavimo `innerText` na `''`
+  - Počistimo `messageElement` tako, da nastavimo `innerText` na `''`
 - Nastavitev besedilnega polja
   - Počistimo trenutno `value` na `typedValueElement`
   - Nastavimo `focus` na `typedValueElement`
-- Zaženemo časovnik z uporabo `getTime`
+- Začnemo časovnik z uporabo `getTime`
 
 ### Dodajte logiko za tipkanje
 
@@ -304,15 +304,15 @@ Razčlenimo kodo! Začnemo z zajemom trenutne besede in vrednosti, ki jo je igra
 
 - Citat je dokončan, kar je označeno z `typedValue`, ki je enak `currentWord`, in `wordIndex`, ki je enak enemu manj kot `length` tabele `words`
   - Izračunamo `elapsedTime` tako, da od trenutnega časa odštejemo `startTime`
-  - `elapsedTime` delimo z 1.000, da ga pretvorimo iz milisekund v sekunde
+  - `elapsedTime` delimo z 1.000, da pretvorimo iz milisekund v sekunde
   - Prikažemo sporočilo o uspehu
-- Beseda je dokončana, kar je označeno z `typedValue`, ki se konča s presledkom (konec besede) in `typedValue`, ki je enak `currentWord`
-  - Nastavimo `value` na `typedElement` na `''`, da omogočimo tipkanje naslednje besede
+- Beseda je dokončana, kar je označeno z `typedValue`, ki se konča s presledkom (konec besede), in `typedValue`, ki je enak `currentWord`
+  - Nastavimo `value` na `typedElement` na `''`, da omogočimo vnos naslednje besede
   - Povečamo `wordIndex`, da preidemo na naslednjo besedo
   - Prehodimo vse `childNodes` elementa `quoteElement`, da nastavimo `className` na `''`, da se vrnemo na privzeti prikaz
   - Nastavimo `className` trenutne besede na `highlight`, da jo označimo kot naslednjo besedo za tipkanje
 - Beseda je trenutno pravilno vtipkana (a ni dokončana), kar je označeno z `currentWord`, ki se začne z `typedValue`
-  - Poskrbimo, da je `typedValueElement` prikazan kot privzet tako, da počistimo `className`
+  - Poskrbimo, da je `typedValueElement` prikazan kot privzet, tako da počistimo `className`
 - Če smo prišli do sem, imamo napako
   - Nastavimo `className` na `typedValueElement` na `error`
 
@@ -333,15 +333,14 @@ Dodajte več funkcionalnosti
 - Onemogočite poslušalca dogodkov `input` ob zaključku in ga znova omogočite, ko je gumb kliknjen
 - Onemogočite besedilno polje, ko igralec dokonča citat
 - Prikažite modalno okno s sporočilom o uspehu
-- Shranite najvišje rezultate z uporabo [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
-
+- Shranite najboljše rezultate z uporabo [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
 ## Kviz po predavanju
 
 [Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Pregled in samostojno učenje
 
-Preberite več o [vseh dogodkih, ki so na voljo](https://developer.mozilla.org/docs/Web/Events) razvijalcem prek spletnega brskalnika, in razmislite o scenarijih, v katerih bi uporabili posameznega.
+Preberite si [vse dogodke, ki so na voljo](https://developer.mozilla.org/docs/Web/Events) razvijalcem prek spletnega brskalnika, in razmislite o scenarijih, v katerih bi uporabili posameznega.
 
 ## Naloga
 
@@ -350,4 +349,4 @@ Preberite več o [vseh dogodkih, ki so na voljo](https://developer.mozilla.org/d
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo strokovno človeško prevajanje. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-27T22:34:46+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T12:34:45+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "hr"
 }
@@ -19,14 +19,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 U prethodnim lekcijama nije bilo potrebe za razmišljanjem o arhitekturi aplikacija koje ste gradili, jer su projekti bili vrlo malog opsega. Međutim, kako vaše aplikacije rastu u veličini i složenosti, arhitektonske odluke postaju važnije. Postoje dva glavna pristupa za stvaranje većih aplikacija u JavaScriptu: *kompozicija* ili *nasljeđivanje*. Oba pristupa imaju svoje prednosti i nedostatke, ali objasnit ćemo ih u kontekstu igre.
 
-✅ Jedna od najpoznatijih knjiga o programiranju bavi se [dizajnerskim obrascima](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Jedna od najpoznatijih knjiga o programiranju ikada napisanih bavi se [dizajnerskim obrascima](https://en.wikipedia.org/wiki/Design_Patterns).
 
 U igri imate `objekte igre`, koji su objekti koji postoje na ekranu. To znači da imaju lokaciju u kartezijanskom koordinatnom sustavu, definiranu `x` i `y` koordinatama. Dok razvijate igru, primijetit ćete da svi vaši objekti igre imaju standardna svojstva, zajednička za svaku igru koju kreirate, a to su elementi koji su:
 
-- **temeljeni na lokaciji** Većina, ako ne i svi, elementi igre temelje se na lokaciji. To znači da imaju lokaciju, `x` i `y`.
+- **temeljeni na lokaciji** Većina, ako ne i svi elementi igre, temelje se na lokaciji. To znači da imaju lokaciju, `x` i `y`.
 - **pokretni** To su objekti koji se mogu premjestiti na novu lokaciju. To je obično heroj, čudovište ili NPC (lik koji nije igrač), ali ne, na primjer, statični objekt poput stabla.
 - **samouništavajući** Ovi objekti postoje samo određeno vrijeme prije nego što se postave za brisanje. Obično je to predstavljeno s `dead` ili `destroyed` booleanom koji signalizira mehanizmu igre da se taj objekt više ne treba prikazivati.
-- **s odgodom** 'Odgoda' je tipično svojstvo među kratkotrajnih objekata. Tipičan primjer je komad teksta ili grafički efekt poput eksplozije koji bi trebao biti vidljiv samo nekoliko milisekundi.
+- **s vremenskim ograničenjem** 'Vremensko ograničenje' je tipično svojstvo kratkotrajnih objekata. Tipičan primjer je komad teksta ili grafički efekt poput eksplozije koji bi trebao biti vidljiv samo nekoliko milisekundi.
 
 ✅ Razmislite o igri poput Pac-Mana. Možete li identificirati četiri gore navedene vrste objekata u ovoj igri?
 
@@ -40,7 +40,7 @@ Ideja je koristiti `klase` u kombinaciji s `nasljeđivanjem` kako bismo dodali o
 
 ✅ Nasljeđivanje je važan koncept za razumijevanje. Saznajte više u [MDN-ovom članku o nasljeđivanju](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Izraženo putem koda, objekt igre obično izgleda ovako:
+Izraženo putem koda, objekt igre obično može izgledati ovako:
 
 ```javascript
 
@@ -88,7 +88,7 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Odvojite nekoliko minuta da zamislite Pac-Man heroja (na primjer, Inky, Pinky ili Blinky) i kako bi bio napisan u JavaScriptu.
+✅ Odvojite nekoliko minuta i zamislite kako bi heroj iz Pac-Mana (npr. Inky, Pinky ili Blinky) bio napisan u JavaScriptu.
 
 **Kompozicija**
 
@@ -155,7 +155,7 @@ Ovaj obrazac se bavi idejom da različiti dijelovi vaše aplikacije ne bi trebal
 - **objavitelj**: Ovaj element *objavljuje* poruku i šalje je svim pretplatnicima.
 - **pretplatnik**: Ovaj element *sluša* određene poruke i izvršava neki zadatak kao rezultat primanja te poruke, poput ispaljivanja lasera.
 
-Implementacija je prilično mala, ali je vrlo moćan obrazac. Evo kako se može implementirati:
+Implementacija je vrlo mala, ali je vrlo moćan obrazac. Evo kako se može implementirati:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Gore povezujemo događaj tipkovnice, `ArrowLeft`, i šaljemo poruku `HERO_MOVE_LEFT`. Slušamo tu poruku i kao rezultat pomičemo `heroja`. Snaga ovog obrasca je u tome što slušatelj događaja i heroj ne znaju jedan za drugoga. Možete premapirati `ArrowLeft` na tipku `A`. Osim toga, bilo bi moguće učiniti nešto potpuno drugačije na `ArrowLeft` uz nekoliko izmjena u funkciji `on` eventEmittera:
+Gore povezujemo događaj tipkovnice, `ArrowLeft`, i šaljemo poruku `HERO_MOVE_LEFT`. Slušamo tu poruku i kao rezultat pomičemo `heroja`. Snaga ovog obrasca je u tome što event listener i heroj ne znaju jedan za drugog. Možete premapirati `ArrowLeft` na tipku `A`. Osim toga, bilo bi moguće učiniti nešto potpuno drugačije na `ArrowLeft` uz nekoliko izmjena u funkciji `on` eventEmittera:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,13 +212,13 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-Kako stvari postaju složenije kako vaša igra raste, ovaj obrazac ostaje isti u složenosti, a vaš kod ostaje čist. Preporučuje se usvojiti ovaj obrazac.
+Kako stvari postaju složenije kako vaša igra raste, ovaj obrazac ostaje iste složenosti, a vaš kod ostaje čist. Preporučuje se usvojiti ovaj obrazac.
 
 ---
 
 ## 🚀 Izazov
 
-Razmislite o tome kako pub-sub obrazac može unaprijediti igru. Koji dijelovi bi trebali emitirati događaje, a kako bi igra trebala reagirati na njih? Sada je vaša prilika da budete kreativni, osmislite novu igru i kako bi se njeni dijelovi mogli ponašati.
+Razmislite o tome kako pub-sub obrazac može unaprijediti igru. Koji bi dijelovi trebali emitirati događaje, a kako bi igra trebala reagirati na njih? Sada je vaša prilika da budete kreativni, osmislite novu igru i kako bi se njezini dijelovi mogli ponašati.
 
 ## Kviz nakon predavanja
 

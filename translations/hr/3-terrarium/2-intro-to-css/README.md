@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-27T22:48:02+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T12:37:30+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "hr"
 }
 -->
 # Projekt Terarij, 2. dio: Uvod u CSS
 
-![Uvod u CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.hr.png)  
+![Uvod u CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.hr.png)
 > Sketchnote autorice [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kviz prije predavanja
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Uvod
 
-CSS, ili kaskadni stilovi (Cascading Style Sheets), rješava važan problem u razvoju weba: kako učiniti da vaša web stranica izgleda lijepo. Stiliziranje vaših aplikacija čini ih upotrebljivijima i vizualno privlačnijima; CSS također omogućuje stvaranje responzivnog web dizajna (RWD) - omogućujući vašim aplikacijama da izgledaju dobro bez obzira na veličinu zaslona na kojem se prikazuju. CSS nije samo za uljepšavanje aplikacija; njegova specifikacija uključuje animacije i transformacije koje omogućuju sofisticirane interakcije u vašim aplikacijama. CSS radna grupa održava trenutne specifikacije CSS-a; njihov rad možete pratiti na [web stranici World Wide Web konzorcija](https://www.w3.org/Style/CSS/members).
+CSS, ili kaskadni stilovi (Cascading Style Sheets), rješava važan problem web razvoja: kako učiniti da vaša web stranica izgleda lijepo. Stiliziranje vaših aplikacija čini ih upotrebljivijima i vizualno privlačnijima; također možete koristiti CSS za stvaranje responzivnog web dizajna (RWD) - omogućujući vašim aplikacijama da izgledaju dobro bez obzira na veličinu zaslona na kojem se prikazuju. CSS nije samo za uljepšavanje aplikacija; njegova specifikacija uključuje animacije i transformacije koje omogućuju sofisticirane interakcije u vašim aplikacijama. CSS radna grupa održava trenutne CSS specifikacije; njihov rad možete pratiti na [web stranici World Wide Web konzorcija](https://www.w3.org/Style/CSS/members).
 
 > Napomena: CSS je jezik koji se razvija, kao i sve na webu, i nisu svi preglednici podržali novije dijelove specifikacije. Uvijek provjerite svoje implementacije konzultirajući [CanIUse.com](https://caniuse.com).
 
@@ -26,16 +26,16 @@ U ovoj lekciji dodat ćemo stilove našem online terariju i naučiti više o nek
 
 ### Preduvjet
 
-HTML za vaš terarij trebao bi biti izrađen i spreman za stiliziranje.
+Trebali biste imati HTML za svoj terarij izrađen i spreman za stiliziranje.
 
 > Pogledajte video
 
 > 
-> [![Video o osnovama Gita i GitHuba](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
+> [![Osnove Gita i GitHuba video](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
 
 ### Zadatak
 
-U svojoj mapi za terarij stvorite novu datoteku pod nazivom `style.css`. Uvezite tu datoteku u odjeljak `<head>`:
+U svojoj mapi terarija, stvorite novu datoteku pod nazivom `style.css`. Uvezite tu datoteku u odjeljak `<head>`:
 
 ```html
 <link rel="stylesheet" href="./style.css" />
@@ -45,7 +45,7 @@ U svojoj mapi za terarij stvorite novu datoteku pod nazivom `style.css`. Uvezite
 
 ## Kaskada
 
-Kaskadni stilovi uključuju ideju da se stilovi 'kaskadno' primjenjuju prema prioritetu. Stilovi koje postavi autor web stranice imaju prioritet nad onima koje postavi preglednik. Stilovi postavljeni 'inline' imaju prioritet nad onima postavljenima u vanjskoj datoteci sa stilovima.
+Kaskadni stilovi uključuju ideju da se stilovi 'kaskadno' primjenjuju prema prioritetu. Stilovi koje postavi autor web stranice imaju prednost nad onima koje postavi preglednik. Stilovi postavljeni 'inline' imaju prednost nad onima postavljenima u vanjskoj datoteci sa stilovima.
 
 ### Zadatak
 
@@ -69,7 +69,7 @@ h1 {
 
 ## Nasljeđivanje
 
-Stilovi se nasljeđuju od roditeljskog elementa prema potomcima, tako da ugniježđeni elementi nasljeđuju stilove svojih roditelja.
+Stilovi se nasljeđuju od roditeljskog stila prema potomcima, tako da ugniježđeni elementi nasljeđuju stilove svojih roditelja.
 
 ### Zadatak
 
@@ -89,7 +89,7 @@ Otvorite konzolu preglednika na kartici 'Elements' i promatrajte font H1 element
 
 ---
 
-## CSS selektori
+## CSS Selektori
 
 ### Tagovi
 
@@ -106,11 +106,11 @@ h1 {
 }
 ```
 
-Ovaj način stiliziranja taga daje vam kontrolu nad jedinstvenim elementima, ali trebate kontrolirati stilove mnogih biljaka u svom terariju. Da biste to učinili, trebate iskoristiti CSS selektore.
+Ovaj način stiliziranja taga daje vam kontrolu nad jedinstvenim elementima, ali trebate kontrolirati stilove mnogih biljaka u svom terariju. Da biste to učinili, trebate koristiti CSS selektore.
 
 ### Id-ovi
 
-Dodajte malo stila za postavljanje lijevih i desnih spremnika. Budući da postoji samo jedan lijevi i jedan desni spremnik, u oznaci su im dodijeljeni id-ovi. Da biste ih stilizirali, koristite `#`:
+Dodajte malo stila za postavljanje lijevih i desnih spremnika. Budući da postoji samo jedan lijevi i jedan desni spremnik, u oznaci su im dodijeljeni id-ovi. Za njihovo stiliziranje koristite `#`:
 
 ```CSS
 #left-container {
@@ -144,7 +144,7 @@ Ovdje ste postavili ove spremnike s apsolutnim pozicioniranjem na krajnju lijevu
 
 ### Klase
 
-U gornjem primjeru stilizirali ste dva jedinstvena elementa na zaslonu. Ako želite da se stilovi primjenjuju na više elemenata na zaslonu, možete koristiti CSS klase. Učinite to za postavljanje biljaka u lijeve i desne spremnike.
+U gornjem primjeru stilizirali ste dva jedinstvena elementa na zaslonu. Ako želite da se stilovi primjenjuju na mnoge elemente na zaslonu, možete koristiti CSS klase. Učinite to za postavljanje biljaka u lijeve i desne spremnike.
 
 Primijetite da svaka biljka u HTML oznaci ima kombinaciju id-ova i klasa. Id-ovi se ovdje koriste za JavaScript koji ćete kasnije dodati kako biste manipulirali postavljanjem biljaka u terariju. Klase, međutim, daju svim biljkama određeni stil.
 
@@ -171,19 +171,19 @@ Dodajte sljedeće u svoju datoteku `style.css`:
 }
 ```
 
-Značajno u ovom isječku je miješanje relativnog i apsolutnog pozicioniranja, o čemu ćemo govoriti u sljedećem odjeljku. Pogledajte kako su visine obrađene pomoću postotaka:
+Značajno u ovom isječku je miješanje relativnog i apsolutnog pozicioniranja, što ćemo obraditi u sljedećem odjeljku. Pogledajte kako su visine obrađene pomoću postotaka:
 
 Postavili ste visinu držača biljaka na 13%, što je dobar broj kako bi se sve biljke prikazale u svakom vertikalnom spremniku bez potrebe za pomicanjem.
 
 Držač biljaka pomaknut je ulijevo kako bi biljke bile više centrirane unutar spremnika. Slike imaju veliku količinu prozirne pozadine kako bi bile lakše za povlačenje, pa ih je potrebno pomaknuti ulijevo kako bi bolje pristajale na zaslon.
 
-Zatim, sama biljka ima maksimalnu širinu od 150%. To joj omogućuje da se smanji kako se preglednik smanjuje. Pokušajte promijeniti veličinu preglednika; biljke ostaju u svojim spremnicima, ali se smanjuju kako bi stale.
+Zatim, sama biljka dobiva maksimalnu širinu od 150%. To joj omogućuje da se smanji kako se preglednik smanjuje. Pokušajte promijeniti veličinu preglednika; biljke ostaju u svojim spremnicima, ali se smanjuju kako bi stale.
 
-Također je značajna upotreba z-indeksa, koji kontrolira relativnu visinu elementa (tako da biljke sjede iznad spremnika i izgledaju kao da su unutar terarija).
+Također je značajna upotreba z-indexa, koji kontrolira relativnu visinu elementa (tako da biljke sjede na vrhu spremnika i izgledaju kao da su unutar terarija).
 
 ✅ Zašto su vam potrebni i selektor za držač biljaka i selektor za biljke?
 
-## CSS pozicioniranje
+## CSS Pozicioniranje
 
 Miješanje svojstava pozicioniranja (postoje statična, relativna, fiksna, apsolutna i ljepljiva pozicioniranja) može biti malo nezgodno, ali kada se pravilno koristi, daje vam dobru kontrolu nad elementima na vašim stranicama.
 
@@ -193,13 +193,13 @@ Relativno pozicionirani elementi pozicionirani su na temelju CSS-ovih uputa za p
 
 U našem primjeru, `plant-holder` je relativno pozicionirani element koji je pozicioniran unutar apsolutno pozicioniranog spremnika. Rezultirajuće ponašanje je da su bočni spremnici pričvršćeni lijevo i desno, a `plant-holder` je ugniježđen, prilagođavajući se unutar bočnih spremnika, ostavljajući prostor za biljke koje će biti postavljene u vertikalni red.
 
-> Sama `plant` također ima apsolutno pozicioniranje, što je potrebno kako bi bila povlačiva, kao što ćete otkriti u sljedećoj lekciji.
+> Sama `plant` također ima apsolutno pozicioniranje, što je potrebno kako bi bila povlačiva, što ćete otkriti u sljedećoj lekciji.
 
-✅ Eksperimentirajte s promjenom vrsta pozicioniranja bočnih spremnika i `plant-holdera`. Što se događa?
+✅ Eksperimentirajte s promjenom vrsta pozicioniranja bočnih spremnika i držača biljaka. Što se događa?
 
-## CSS izgledi
+## CSS Izgledi
 
-Sada ćete koristiti ono što ste naučili kako biste izradili sam terarij, koristeći samo CSS!
+Sada ćete koristiti ono što ste naučili kako biste izradili sam terarij, sve koristeći CSS!
 
 Prvo, stilizirajte `.terrarium` div djecu kao zaobljeni pravokutnik koristeći CSS:
 
@@ -250,9 +250,9 @@ Prvo, stilizirajte `.terrarium` div djecu kao zaobljeni pravokutnik koristeći C
 }
 ```
 
-Primijetite upotrebu postotaka ovdje. Ako smanjite preglednik, možete vidjeti kako se staklenka također smanjuje. Također primijetite postotke širina i visina za elemente staklenke i kako je svaki element apsolutno pozicioniran u središtu, pričvršćen na dno prikaza.
+Primijetite upotrebu postotaka ovdje. Ako smanjite preglednik, možete vidjeti kako se staklenka također smanjuje. Također primijetite širine i visine postotaka za elemente staklenke i kako je svaki element apsolutno pozicioniran u središtu, pričvršćen na dno prikaza.
 
-Također koristimo `rem` za zaobljeni rub (border-radius), duljinu relativnu na font. Pročitajte više o ovoj vrsti relativnog mjerenja u [CSS specifikaciji](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
+Također koristimo `rem` za border-radius, duljinu relativnu na font. Pročitajte više o ovoj vrsti relativnog mjerenja u [CSS specifikaciji](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
 ✅ Pokušajte promijeniti boje i prozirnost staklenke u odnosu na zemlju. Što se događa? Zašto?
 
@@ -264,7 +264,7 @@ Dodajte 'mjehurićasti' sjaj na donji lijevi dio staklenke kako bi izgledala vi�
 
 ![završeni terarij](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.hr.png)
 
-Za dovršetak kviza nakon predavanja, prođite kroz ovaj Learn modul: [Stilizirajte svoju HTML aplikaciju pomoću CSS-a](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+Za dovršetak kviza nakon predavanja, prođite kroz ovaj modul učenja: [Stilizirajte svoju HTML aplikaciju pomoću CSS-a](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
 ## Kviz nakon predavanja
 
@@ -281,4 +281,4 @@ CSS se čini obmanjujuće jednostavnim, ali postoje mnogi izazovi kada pokušava
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.

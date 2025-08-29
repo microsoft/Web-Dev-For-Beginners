@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c63675cfaf1d223b37bb9fecbfe7c252",
-  "translation_date": "2025-08-27T22:58:55+00:00",
+  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
+  "translation_date": "2025-08-29T11:19:06+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "sk"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Táto lekcia pokrýva základy programovacích jazykov. Témy, ktoré sú tu uvedené, sa vzťahujú na väčšinu moderných programovacích jazykov. V sekcii „Nástroje pre vývojárov“ sa dozviete o užitočnom softvéri, ktorý vám ako vývojárovi pomôže.
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.sk.png)  
+![Úvod do programovania](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.sk.png)  
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kvíz pred prednáškou  
@@ -93,7 +93,7 @@ Jedna inštrukcia v programe sa nazýva *príkaz* a zvyčajne má znak alebo med
 
 Príkazy v programe môžu závisieť od údajov poskytnutých používateľom alebo iným zdrojom na vykonanie inštrukcií. Údaje môžu zmeniť správanie programu, preto programovacie jazyky obsahujú spôsob, ako dočasne ukladať údaje, aby sa mohli použiť neskôr. Tieto sa nazývajú *premenné*. Premenné sú príkazy, ktoré inštruujú zariadenie, aby uložilo údaje do svojej pamäte. Premenné v programoch sú podobné premenným v algebre, kde majú jedinečný názov a ich hodnota sa môže časom meniť.
 
-Existuje možnosť, že niektoré príkazy nebudú zariadením vykonané. Zvyčajne je to zámer autora programu alebo náhodou, keď nastane neočakávaná chyba. Tento typ kontroly nad aplikáciou ju robí robustnejšou a udržiavateľnejšou. Typicky k týmto zmenám v kontrole dochádza, keď sú splnené určité podmienky. Bežným príkazom používaným v modernom programovaní na kontrolu behu programu je príkaz `if..else`.
+Existuje možnosť, že niektoré príkazy nebudú zariadením vykonané. To je zvyčajne zámer autora programu alebo dôsledok neočakávanej chyby. Tento typ kontroly nad aplikáciou ju robí robustnejšou a udržiavateľnejšou. Tieto zmeny v kontrole sa zvyčajne dejú, keď sú splnené určité podmienky. Bežným príkazom používaným v modernom programovaní na kontrolu behu programu je príkaz `if..else`.
 
 ✅ O tomto type príkazu sa dozviete viac v nasledujúcich lekciách.
 
@@ -103,7 +103,7 @@ Existuje možnosť, že niektoré príkazy nebudú zariadením vykonané. Zvyča
 
 > 🎥 Kliknite na obrázok vyššie pre video o nástrojoch
 
-V tejto sekcii sa dozviete o niektorom softvéri, ktorý môže byť veľmi užitočný na začiatku vašej profesionálnej vývojárskej cesty.
+V tejto sekcii sa dozviete o niektorom softvéri, ktorý môže byť veľmi užitočný, keď začínate svoju profesionálnu vývojársku cestu.
 
 **Vývojové prostredie** je jedinečná sada nástrojov a funkcií, ktoré vývojár často používa pri písaní softvéru. Niektoré z týchto nástrojov boli prispôsobené špecifickým potrebám vývojára a môžu sa časom meniť, ak vývojár zmení priority v práci, osobných projektoch alebo ak používa iný programovací jazyk. Vývojové prostredia sú také jedinečné ako vývojári, ktorí ich používajú.
 
@@ -114,9 +114,9 @@ Jedným z najdôležitejších nástrojov pre vývoj softvéru je editor. Editor
 Vývojári sa spoliehajú na editory z niekoľkých ďalších dôvodov:
 
 - *Ladenie* pomáha odhaliť chyby a problémy prechádzaním kódu riadok po riadku. Niektoré editory majú schopnosti ladenia; môžu byť prispôsobené a doplnené pre konkrétne programovacie jazyky.  
-- *Zvýrazňovanie syntaxe* pridáva farby a formátovanie textu do kódu, čo ho robí ľahšie čitateľným. Väčšina editorov umožňuje prispôsobené zvýrazňovanie syntaxe.  
-- *Rozšírenia a integrácie* sú špecializované nástroje pre vývojárov, vytvorené vývojármi. Tieto nástroje neboli súčasťou základného editora. Napríklad mnohí vývojári dokumentujú svoj kód, aby vysvetlili, ako funguje. Môžu si nainštalovať rozšírenie na kontrolu pravopisu, aby našli preklepy v dokumentácii. Väčšina rozšírení je určená na použitie v konkrétnom editore a väčšina editorov obsahuje spôsob, ako vyhľadať dostupné rozšírenia.  
-- *Prispôsobenie* umožňuje vývojárom vytvoriť jedinečné vývojové prostredie, ktoré vyhovuje ich potrebám. Väčšina editorov je extrémne prispôsobiteľná a môže tiež umožniť vývojárom vytvárať vlastné rozšírenia.  
+- *Zvýrazňovanie syntaxe* pridáva farby a formátovanie textu do kódu, čo uľahčuje jeho čítanie. Väčšina editorov umožňuje prispôsobené zvýrazňovanie syntaxe.  
+- *Rozšírenia a integrácie* sú špecializované nástroje pre vývojárov, vytvorené vývojármi. Tieto nástroje neboli súčasťou základného editora. Napríklad mnohí vývojári dokumentujú svoj kód, aby vysvetlili, ako funguje. Môžu si nainštalovať rozšírenie na kontrolu pravopisu, aby našli preklepy v dokumentácii. Väčšina rozšírení je určená na použitie v konkrétnom editore a väčšina editorov obsahuje spôsob, ako vyhľadávať dostupné rozšírenia.  
+- *Prispôsobenie* umožňuje vývojárom vytvoriť jedinečné vývojové prostredie, ktoré vyhovuje ich potrebám. Väčšina editorov je extrémne prispôsobiteľná a môže tiež umožniť vývojárom vytvárať vlastné rozšírenia.
 
 #### Populárne editory a rozšírenia pre webový vývoj
 
@@ -134,9 +134,9 @@ Vývojári sa spoliehajú na editory z niekoľkých ďalších dôvodov:
 
 ### Prehliadače
 
-Ďalším kľúčovým nástrojom je prehliadač. Weboví vývojári sa spoliehajú na prehliadač, aby videli, ako ich kód funguje na webe. Prehliadač sa tiež používa na zobrazenie vizuálnych prvkov webovej stránky, ktoré sú napísané v editore, ako je HTML.
+Ďalším kľúčovým nástrojom je prehliadač. Weboví vývojári sa spoliehajú na prehliadač, aby videli, ako ich kód funguje na webe. Prehliadač sa tiež používa na zobrazovanie vizuálnych prvkov webovej stránky, ktoré sú napísané v editore, ako je HTML.
 
-Mnohé prehliadače obsahujú *nástroje pre vývojárov* (DevTools), ktoré obsahujú sadu užitočných funkcií a informácií na pomoc vývojárom pri zhromažďovaní a zachytávaní dôležitých informácií o ich aplikácii. Napríklad: Ak má webová stránka chyby, niekedy je užitočné vedieť, kedy k nim došlo. DevTools v prehliadači môžu byť nakonfigurované na zachytenie týchto informácií.
+Mnohé prehliadače obsahujú *nástroje pre vývojárov* (DevTools), ktoré obsahujú sadu užitočných funkcií a informácií na pomoc vývojárom pri zhromažďovaní a zachytávaní dôležitých informácií o ich aplikácii. Napríklad: Ak má webová stránka chyby, niekedy je užitočné vedieť, kedy k nim došlo. DevTools v prehliadači môžu byť nakonfigurované na zachytávanie týchto informácií.
 
 #### Populárne prehliadače a DevTools
 
@@ -146,7 +146,7 @@ Mnohé prehliadače obsahujú *nástroje pre vývojárov* (DevTools), ktoré obs
 
 ### Nástroje príkazového riadku
 
-Niektorí vývojári preferujú menej grafický pohľad na svoje každodenné úlohy a spoliehajú sa na príkazový riadok. Písanie kódu si vyžaduje značné množstvo písania a niektorí vývojári preferujú neprerušovať svoj tok na klávesnici. Používajú klávesové skratky na prepínanie medzi oknami na pracovnej ploche, prácu na rôznych súboroch a používanie nástrojov. Väčšinu úloh je možné vykonať pomocou myši, ale jednou z výhod príkazového riadku je, že veľa vecí sa dá urobiť bez potreby prepínania medzi myšou a klávesnicou. Ďalšou výhodou príkazového riadku je, že je konfigurovateľný a môžete si uložiť vlastnú konfiguráciu, neskôr ju zmeniť a importovať do iných vývojových zariadení. Pretože vývojové prostredia sú také jedinečné pre každého vývojára, niektorí sa príkazovému riadku vyhýbajú, iní sa naň úplne spoliehajú a niektorí preferujú kombináciu oboch.
+Niektorí vývojári preferujú menej grafický pohľad na svoje každodenné úlohy a spoliehajú sa na príkazový riadok. Písanie kódu si vyžaduje značné množstvo písania a niektorí vývojári preferujú neprerušovať svoj tok práce na klávesnici. Používajú klávesové skratky na prepínanie medzi oknami na pracovnej ploche, prácu na rôznych súboroch a používanie nástrojov. Väčšinu úloh je možné vykonať pomocou myši, ale jednou z výhod príkazového riadku je, že veľa vecí sa dá urobiť bez potreby prepínania medzi myšou a klávesnicou. Ďalšou výhodou príkazového riadku je, že je konfigurovateľný a môžete si uložiť vlastnú konfiguráciu, neskôr ju zmeniť a importovať do iných vývojových zariadení. Pretože vývojové prostredia sú také jedinečné pre každého vývojára, niektorí sa príkazovému riadku vyhýbajú, iní sa naň úplne spoliehajú a niektorí preferujú kombináciu oboch.
 
 ### Populárne možnosti príkazového riadku
 
@@ -181,14 +181,14 @@ Možnosti príkazového riadku sa líšia v závislosti od operačného systému
 
 ### Dokumentácia
 
-Keď sa vývojár chce naučiť niečo nové, pravdepodobne sa obráti na dokumentáciu, aby sa naučil, ako to používať. Vývojári sa často spoliehajú na dokumentáciu, ktorá ich prevedie správnym používaním nástrojov a jazykov, a tiež na získanie hlbšieho pochopenia ich fungovania.
+Keď sa vývojár chce naučiť niečo nové, pravdepodobne sa obráti na dokumentáciu, aby sa naučil, ako to používať. Vývojári sa často spoliehajú na dokumentáciu, ktorá ich vedie, ako správne používať nástroje a jazyky, a tiež na získanie hlbšieho pochopenia ich fungovania.
 
 #### Populárna dokumentácia o webovom vývoji
 
 - [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), od Mozilly, vydavateľov prehliadača [Firefox](https://www.mozilla.org/firefox/)  
 - [Frontend Masters](https://frontendmasters.com/learn/)  
 - [Web.dev](https://web.dev), od Googlu, vydavateľov prehliadača [Chrome](https://www.google.com/chrome/)  
-- [Microsoftova dokumentácia pre vývojárov](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), pre [Microsoft Edge](https://www.microsoft.com/edge)  
+- [Microsoftova vlastná dokumentácia pre vývojárov](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), pre [Microsoft Edge](https://www.microsoft.com/edge)  
 - [W3 Schools](https://www.w3schools.com/where_to_start.asp)  
 
 ✅ Urobte si prieskum: Teraz, keď poznáte základy prostredia webového vývojára, porovnajte ho s prostredím webového dizajnéra.
@@ -200,7 +200,7 @@ Keď sa vývojár chce naučiť niečo nové, pravdepodobne sa obráti na dokume
 Porovnajte niektoré programovacie jazyky. Aké sú niektoré jedinečné vlastnosti JavaScriptu oproti Jave? A čo COBOL oproti Go?
 
 ## Kvíz po prednáške  
-[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/2)
+[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/)
 
 ## Prehľad a samoštúdium
 
@@ -213,4 +213,4 @@ Porovnajte niektoré programovacie jazyky. Aké sú niektoré jedinečné vlastn
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Za autoritatívny zdroj by sa mal považovať pôvodný dokument v jeho pôvodnom jazyku. Pre dôležité informácie odporúčame profesionálny preklad vykonaný človekom. Nezodpovedáme za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

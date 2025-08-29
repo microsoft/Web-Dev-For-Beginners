@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0bb55e0b98600afab801eea115228873",
-  "translation_date": "2025-08-28T07:41:44+00:00",
+  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
+  "translation_date": "2025-08-29T11:27:50+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "ro"
 }
@@ -29,19 +29,19 @@ Dar ce este exact un browser? Este o aplicație software care permite unui utili
 ✅ Un pic de istorie: primul browser s-a numit 'WorldWideWeb' și a fost creat de Sir Timothy Berners-Lee în 1990.
 
 ![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.ro.jpg)
-> Unele browsere timpurii, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
+> Unele dintre primele browsere, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 Când un utilizator se conectează la internet folosind o adresă URL (Uniform Resource Locator), de obicei utilizând Hypertext Transfer Protocol printr-o adresă `http` sau `https`, browserul comunică cu un server web și preia o pagină web.
 
-În acest moment, motorul de redare al browserului o afișează pe dispozitivul utilizatorului, care poate fi un telefon mobil, un desktop sau un laptop.
+În acest moment, motorul de randare al browserului o afișează pe dispozitivul utilizatorului, care poate fi un telefon mobil, un desktop sau un laptop.
 
-Browserele au, de asemenea, capacitatea de a memora în cache conținutul, astfel încât să nu fie necesar să fie preluat de pe server de fiecare dată. Ele pot înregistra istoricul activității de navigare a utilizatorului, pot stoca 'cookies', care sunt mici fragmente de date ce conțin informații utilizate pentru a înregistra activitatea utilizatorului, și multe altele.
+Browserele au, de asemenea, capacitatea de a memora în cache conținutul, astfel încât să nu fie necesar să fie preluat de pe server de fiecare dată. Ele pot înregistra istoricul activității de navigare a utilizatorului, pot stoca 'cookies', care sunt mici fragmente de date ce conțin informații utilizate pentru a păstra activitatea utilizatorului, și multe altele.
 
-Un lucru foarte important de reținut despre browsere este că nu toate sunt la fel! Fiecare browser are punctele sale forte și slabe, iar un dezvoltator web profesionist trebuie să înțeleagă cum să facă paginile web să funcționeze bine pe diferite browsere. Acest lucru include gestionarea ecranelor mici, cum ar fi cele ale telefoanelor mobile, precum și a utilizatorilor care sunt offline.
+Un lucru foarte important de reținut despre browsere este că nu toate sunt la fel! Fiecare browser are punctele sale forte și slăbiciuni, iar un dezvoltator web profesionist trebuie să înțeleagă cum să facă paginile web să funcționeze bine pe mai multe browsere. Acest lucru include gestionarea ecranelor mici, cum ar fi cele ale telefoanelor mobile, precum și a utilizatorilor care sunt offline.
 
-Un site web foarte util pe care ar trebui să-l salvezi în marcajele browserului tău preferat este [caniuse.com](https://www.caniuse.com). Când construiești pagini web, este foarte util să folosești listele de tehnologii suportate de caniuse pentru a-ți sprijini cât mai bine utilizatorii.
+Un site web foarte util pe care probabil ar trebui să-l salvezi în browserul tău preferat este [caniuse.com](https://www.caniuse.com). Când construiești pagini web, este foarte util să folosești listele de tehnologii suportate de caniuse pentru a sprijini cât mai bine utilizatorii tăi.
 
-✅ Cum poți afla ce browsere sunt cele mai populare în rândul utilizatorilor site-ului tău web? Verifică analizele - poți instala diverse pachete de analiză ca parte a procesului tău de dezvoltare web, iar acestea îți vor spune ce browsere sunt cele mai utilizate de utilizatorii diferitelor browsere populare.
+✅ Cum poți afla ce browsere sunt cele mai populare printre utilizatorii site-ului tău? Verifică analizele - poți instala diverse pachete de analiză ca parte a procesului tău de dezvoltare web, iar acestea îți vor spune ce browsere sunt cele mai utilizate.
 
 ## Extensii pentru browser
 
@@ -62,20 +62,20 @@ Extensiile pentru browser sunt și distractiv de dezvoltat. Ele tind să gestion
 În esență, procesul va fi:
 
 - construiește extensia folosind `npm run build` 
-- navighează în browser la panoul de extensii folosind butonul "Settings and more" (pictograma `...`) din colțul din dreapta sus
+- navighează în browser la panoul de extensii folosind butonul "Setări și altele" (pictograma `...`) din colțul din dreapta sus
 - dacă este o instalare nouă, alege `load unpacked` pentru a încărca o extensie nouă din folderul său de build (în cazul nostru este `/dist`) 
 - sau, apasă `reload` dacă reîncarci extensia deja instalată
 
-✅ Aceste instrucțiuni se referă la extensiile pe care le construiești tu; pentru a instala extensii care au fost lansate în magazinul de extensii asociat fiecărui browser, ar trebui să navighezi la acele [magazine](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) și să instalezi extensia dorită.
+✅ Aceste instrucțiuni se referă la extensiile pe care le construiești tu; pentru a instala extensii care au fost publicate în magazinul de extensii asociat fiecărui browser, ar trebui să navighezi la acele [magazine](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) și să instalezi extensia dorită.
 
 ### Începe
 
-Vei construi o extensie pentru browser care afișează amprenta de carbon a regiunii tale, arătând consumul de energie al regiunii tale și sursa energiei. Extensia va avea un formular care colectează o cheie API pentru a putea accesa API-ul CO2 Signal.
+Vei construi o extensie pentru browser care afișează amprenta de carbon a regiunii tale, arătând consumul de energie al regiunii și sursa energiei. Extensia va avea un formular care colectează o cheie API pentru a putea accesa API-ul CO2 Signal.
 
 **Ai nevoie de:**
 
 - [o cheie API](https://www.co2signal.com/); introdu adresa ta de email în caseta de pe această pagină și vei primi una
-- [codul regiunii tale](http://api.electricitymap.org/v3/zones) corespunzător [Electricity Map](https://www.electricitymap.org/map) (în Boston, de exemplu, folosesc 'US-NEISO').
+- [codul regiunii tale](http://api.electricitymap.org/v3/zones) corespunzător [Electricity Map](https://www.electricitymap.org/map) (de exemplu, în Boston folosesc 'US-NEISO').
 - [codul de început](../../../../5-browser-extension/start). Descarcă folderul `start`; vei completa codul în acest folder.
 - [NPM](https://www.npmjs.com) - NPM este un instrument de gestionare a pachetelor; instalează-l local și pachetele listate în fișierul tău `package.json` vor fi instalate pentru a fi utilizate de activele tale web
 
@@ -101,9 +101,9 @@ Această extensie are două vizualizări. Una pentru a colecta cheia API și cod
 
 Și a doua pentru a afișa consumul de carbon al regiunii:
 
-![captură de ecran a extensiei finalizate afișând valorile pentru consumul de carbon și procentajul combustibililor fosili pentru regiunea US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.ro.png)
+![captură de ecran a extensiei finalizate afișând valorile pentru consumul de carbon și procentajul de combustibili fosili pentru regiunea US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.ro.png)
 
-Să începem prin a construi HTML-ul pentru formular și să-l stilizăm cu CSS.
+Să începem prin a construi HTML-ul pentru formular și a-l stiliza cu CSS.
 
 În folderul `/dist`, vei construi un formular și o zonă de rezultate. În fișierul `index.html`, completează zona de formular delimitată:
 
@@ -125,7 +125,7 @@ Să începem prin a construi HTML-ul pentru formular și să-l stilizăm cu CSS.
 ```
 Acesta este formularul unde informațiile salvate vor fi introduse și salvate în stocarea locală.
 
-Apoi, creează zona de rezultate; sub ultimul tag de formular, adaugă câteva div-uri:
+Apoi, creează zona de rezultate; sub eticheta finală a formularului, adaugă câteva div-uri:
 
 ```HTML
 <div class="result">
@@ -166,9 +166,9 @@ Aruncă o privire într-un magazin de extensii pentru browser și instalează un
 
 În această lecție ai învățat puțin despre istoria browserului web; profită de această ocazie pentru a învăța despre cum au imaginat inventatorii World Wide Web utilizarea sa citind mai multe despre istoria sa. Unele site-uri utile includ:
 
-[Istoria Browserelor Web](https://www.mozilla.org/firefox/browsers/browser-history/)
+[Istoria browserelor web](https://www.mozilla.org/firefox/browsers/browser-history/)
 
-[Istoria Web-ului](https://webfoundation.org/about/vision/history-of-the-web/)
+[Istoria web-ului](https://webfoundation.org/about/vision/history-of-the-web/)
 
 [Un interviu cu Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)
 
@@ -178,5 +178,5 @@ Aruncă o privire într-un magazin de extensii pentru browser și instalează un
 
 ---
 
-**Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinarea responsabilității**:  
+Acest document a fost tradus utilizând serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

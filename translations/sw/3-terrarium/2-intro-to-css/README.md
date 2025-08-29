@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-28T04:15:50+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T10:10:24+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "sw"
 }
@@ -12,17 +12,17 @@ CO_OP_TRANSLATOR_METADATA:
 ![Utangulizi wa CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.sw.png)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Maswali ya Kabla ya Somo
+## Maswali ya Awali ya Somo
 
-[Maswali ya kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/17)
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Utangulizi
 
-CSS, au Cascading Style Sheets, hutatua tatizo muhimu katika ukuzaji wa wavuti: jinsi ya kufanya tovuti yako ionekane vizuri. Kuweka mitindo kwenye programu zako hufanya ziwe rahisi kutumia na kuvutia zaidi; unaweza pia kutumia CSS kuunda Muundo wa Wavuti Unaotikia (Responsive Web Design - RWD) - kuruhusu programu zako zionekane vizuri bila kujali ukubwa wa skrini zinapoonyeshwa. CSS si tu kuhusu kufanya programu yako ionekane vizuri; vipengele vyake vinajumuisha michoro na mabadiliko ambayo yanaweza kuwezesha mwingiliano wa hali ya juu kwa programu zako. Kikundi cha Kazi cha CSS husaidia kudumisha vipengele vya sasa vya CSS; unaweza kufuatilia kazi yao kwenye [tovuti ya World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
+CSS, au Cascading Style Sheets, hutatua tatizo muhimu katika ukuzaji wa wavuti: jinsi ya kufanya tovuti yako ionekane vizuri. Kuweka mitindo kwenye programu zako hufanya ziwe rahisi kutumia na kuvutia zaidi; unaweza pia kutumia CSS kuunda Muundo wa Wavuti Unaobadilika (RWD) - kuruhusu programu zako zionekane vizuri bila kujali ukubwa wa skrini zinapoonyeshwa. CSS si tu kuhusu kufanya programu yako ionekane vizuri; vipengele vyake vinajumuisha michoro na mabadiliko ambayo yanaweza kuwezesha mwingiliano wa hali ya juu kwa programu zako. Kikundi cha CSS Working Group husaidia kudumisha vipengele vya sasa vya CSS; unaweza kufuatilia kazi yao kwenye [tovuti ya World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
 
-> Kumbuka, CSS ni lugha inayobadilika, kama kila kitu kwenye wavuti, na si vivinjari vyote vinavyounga mkono vipengele vipya vya vipimo. Daima hakikisha utekelezaji wako kwa kushauriana na [CanIUse.com](https://caniuse.com).
+> Kumbuka, CSS ni lugha inayobadilika, kama kila kitu kwenye wavuti, na si vivinjari vyote vinavyounga mkono sehemu mpya za vipengele. Daima hakikisha utekelezaji wako kwa kushauriana na [CanIUse.com](https://caniuse.com).
 
-Katika somo hili, tutaongeza mitindo kwenye terrarium yetu ya mtandaoni na kujifunza zaidi kuhusu dhana kadhaa za CSS: mfululizo, urithi, na matumizi ya vichagua, upangaji, na kutumia CSS kujenga miundo. Katika mchakato huo tutapanga terrarium na kuunda terrarium yenyewe.
+Katika somo hili, tutaongeza mitindo kwenye terrarium yetu ya mtandaoni na kujifunza zaidi kuhusu dhana kadhaa za CSS: cascade, urithi, na matumizi ya selectors, upangaji, na kutumia CSS kujenga miundo. Katika mchakato huo tutapanga terrarium na kuunda terrarium yenyewe.
 
 ### Mahitaji ya Awali
 
@@ -43,9 +43,9 @@ Katika folda yako ya terrarium, unda faili mpya inayoitwa `style.css`. Ingiza fa
 
 ---
 
-## Mfululizo
+## Cascade
 
-Cascading Style Sheets zinajumuisha wazo kwamba mitindo 'inafuatana' kwa namna kwamba matumizi ya mtindo yanaongozwa na kipaumbele chake. Mitindo iliyowekwa na mwandishi wa tovuti ina kipaumbele juu ya ile iliyowekwa na kivinjari. Mitindo iliyowekwa 'inline' ina kipaumbele juu ya ile iliyowekwa katika karatasi ya mitindo ya nje.
+Cascading Style Sheets zinajumuisha wazo kwamba mitindo 'inaporomoka' ili kwamba matumizi ya mtindo yanaongozwa na kipaumbele chake. Mitindo iliyowekwa na mwandishi wa tovuti ina kipaumbele juu ya ile iliyowekwa na kivinjari. Mitindo iliyowekwa 'inline' ina kipaumbele juu ya ile iliyowekwa katika faili ya nje ya mitindo.
 
 ### Kazi
 
@@ -63,13 +63,13 @@ h1 {
 }
 ```
 
-✅ Ni rangi gani inaonyeshwa kwenye programu yako ya wavuti? Kwa nini? Je, unaweza kupata njia ya kuondoa mitindo? Ni lini ungependa kufanya hivi, au kwa nini usifanye?
+✅ Ni rangi gani inaonyeshwa kwenye programu yako ya wavuti? Kwa nini? Je, unaweza kupata njia ya kuondoa mitindo? Ni lini ungependa kufanya hivyo, au kwa nini usifanye?
 
 ---
 
 ## Urithi
 
-Mitindo inarithiwa kutoka kwa mtindo wa babu kwenda kwa mzao, kwa namna kwamba vipengele vilivyowekwa ndani vinarithii mitindo ya wazazi wao.
+Mitindo inarithiwa kutoka kwa mtindo wa mzazi hadi kwa mtoto, ili kwamba vipengele vilivyowekwa ndani virithi mitindo ya wazazi wao.
 
 ### Kazi
 
@@ -81,7 +81,7 @@ body {
 }
 ```
 
-Fungua koni ya kivinjari chako kwenye kichupo cha 'Elements' na angalia fonti ya H1. Inarithii fonti yake kutoka kwa mwili, kama ilivyoelezwa ndani ya kivinjari:
+Fungua console ya kivinjari chako kwenye tabo ya 'Elements' na angalia fonti ya H1. Inarithiwa fonti yake kutoka kwa mwili, kama ilivyoonyeshwa ndani ya kivinjari:
 
 ![fonti iliyorithiwa](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.sw.png)
 
@@ -89,7 +89,7 @@ Fungua koni ya kivinjari chako kwenye kichupo cha 'Elements' na angalia fonti ya
 
 ---
 
-## Vichagua vya CSS
+## CSS Selectors
 
 ### Tagi
 
@@ -106,11 +106,11 @@ h1 {
 }
 ```
 
-Njia hii ya kuweka mtindo kwenye tagi inakupa udhibiti wa vipengele vya kipekee, lakini unahitaji kudhibiti mitindo ya mimea mingi katika terrarium yako. Ili kufanya hivyo, unahitaji kutumia vichagua vya CSS.
+Njia hii ya kuweka mtindo kwenye tagi inakupa udhibiti wa vipengele vya kipekee, lakini unahitaji kudhibiti mitindo ya mimea mingi katika terrarium yako. Ili kufanya hivyo, unahitaji kutumia selectors za CSS.
 
 ### Ids
 
-Ongeza mtindo wa kupanga vyombo vya kushoto na kulia. Kwa kuwa kuna chombo kimoja tu cha kushoto na kimoja cha kulia, vimepewa ids katika markup. Ili kuweka mitindo yao, tumia `#`:
+Ongeza mtindo wa kupanga vyombo vya kushoto na kulia. Kwa kuwa kuna chombo kimoja tu cha kushoto na chombo kimoja tu cha kulia, vimepewa ids katika markup. Ili kuweka mitindo yao, tumia `#`:
 
 ```CSS
 #left-container {
@@ -134,7 +134,7 @@ Ongeza mtindo wa kupanga vyombo vya kushoto na kulia. Kwa kuwa kuna chombo kimoj
 }
 ```
 
-Hapa, umeweka vyombo hivi kwa upangaji wa kabisa kwenye upande wa kushoto na kulia wa skrini, na umetumia asilimia kwa upana wao ili viweze kupanuka kwa skrini ndogo za simu.
+Hapa, umeweka vyombo hivi kwa nafasi ya absolute upande wa kushoto na kulia wa skrini, na umetumia asilimia kwa upana wao ili viweze kubadilika kwa skrini ndogo za simu.
 
 ✅ Msimbo huu unarudiwa sana, hivyo si "DRY" (Don't Repeat Yourself); je, unaweza kupata njia bora ya kuweka mitindo ya ids hizi, labda kwa id na darasa? Ungehitaji kubadilisha markup na kurekebisha CSS:
 
@@ -142,11 +142,11 @@ Hapa, umeweka vyombo hivi kwa upangaji wa kabisa kwenye upande wa kushoto na kul
 <div id="left-container" class="container"></div>
 ```
 
-### Madarasa
+### Darasa
 
-Katika mfano hapo juu, uliweka mitindo kwa vipengele viwili vya kipekee kwenye skrini. Ikiwa unataka mitindo itumike kwa vipengele vingi kwenye skrini, unaweza kutumia madarasa ya CSS. Fanya hivi kupanga mimea katika vyombo vya kushoto na kulia.
+Katika mfano hapo juu, uliweka mitindo kwa vipengele viwili vya kipekee kwenye skrini. Ikiwa unataka mitindo itumike kwa vipengele vingi kwenye skrini, unaweza kutumia darasa za CSS. Fanya hivi kupanga mimea katika vyombo vya kushoto na kulia.
 
-Angalia kwamba kila mmea katika markup ya HTML una mchanganyiko wa ids na madarasa. Ids hapa zinatumiwa na JavaScript ambayo utaongeza baadaye kudhibiti uwekaji wa mimea ya terrarium. Madarasa, hata hivyo, yanatoa mitindo fulani kwa mimea yote.
+Angalia kwamba kila mmea katika markup ya HTML una mchanganyiko wa ids na darasa. Ids hapa zinatumiwa na JavaScript ambayo utaongeza baadaye kudhibiti uwekaji wa mimea ya terrarium. Darasa, hata hivyo, yanatoa mitindo fulani kwa mimea yote.
 
 ```html
 <div class="plant-holder">
@@ -171,29 +171,29 @@ Ongeza yafuatayo kwenye faili yako ya `style.css`:
 }
 ```
 
-Jambo la muhimu katika kipande hiki ni mchanganyiko wa upangaji wa jamaa na kabisa, ambao tutajadili katika sehemu inayofuata. Angalia jinsi urefu unavyoshughulikiwa kwa asilimia:
+Jambo la muhimu katika kipande hiki ni mchanganyiko wa nafasi ya relative na absolute, ambayo tutajadili katika sehemu inayofuata. Angalia jinsi urefu unavyoshughulikiwa kwa asilimia:
 
-Umeweka urefu wa mmiliki wa mmea kuwa 13%, namba nzuri kuhakikisha kwamba mimea yote inaonyeshwa katika kila chombo cha wima bila hitaji la kusogeza.
+Umeweka urefu wa mmiliki wa mmea kwa 13%, namba nzuri kuhakikisha kwamba mimea yote inaonyeshwa katika kila chombo cha wima bila hitaji la kusogeza.
 
 Umeweka mmiliki wa mmea kusogea kushoto ili kuruhusu mimea kuwa katikati zaidi ndani ya chombo chao. Picha zina kiasi kikubwa cha mandharinyuma ya uwazi ili kufanya ziweze kuburuzwa zaidi, hivyo zinahitaji kusukumwa kushoto ili zitoshe vizuri kwenye skrini.
 
-Kisha, mmea wenyewe umepewa upana wa juu wa 150%. Hii inaruhusu kupungua kadri kivinjari kinavyopungua. Jaribu kupunguza kivinjari chako; mimea inabaki katika vyombo vyake lakini inapungua ili kutoshea.
+Kisha, mmea wenyewe umepewa upana wa juu wa 150%. Hii inaruhusu kupungua kadri kivinjari kinavyopungua. Jaribu kubadilisha ukubwa wa kivinjari chako; mimea inabaki katika vyombo vyao lakini inapungua ili kutoshea.
 
-Jambo lingine la muhimu ni matumizi ya z-index, ambayo inadhibiti urefu wa jamaa wa kipengele (ili mimea ikae juu ya chombo na ionekane kuwa ndani ya terrarium).
+Pia muhimu ni matumizi ya z-index, ambayo inadhibiti urefu wa jamaa wa kipengele (ili mimea ikae juu ya chombo na ionekane kuwa ndani ya terrarium).
 
-✅ Kwa nini unahitaji mmiliki wa mmea na kichagua cha mmea cha CSS?
+✅ Kwa nini unahitaji selector ya CSS ya mmiliki wa mmea na selector ya mmea?
 
 ## Upangaji wa CSS
 
-Kuchanganya mali za nafasi (kuna nafasi za static, relative, fixed, absolute, na sticky) kunaweza kuwa changamoto kidogo, lakini ukifanywa vizuri hukupa udhibiti mzuri wa vipengele kwenye kurasa zako.
+Kuchanganya mali za nafasi (kuna static, relative, fixed, absolute, na sticky positions) kunaweza kuwa changamoto kidogo, lakini ukifanywa vizuri hukupa udhibiti mzuri wa vipengele kwenye kurasa zako.
 
-Vipengele vilivyowekwa kabisa vinapangwa kulingana na babu zao walio na nafasi, na ikiwa hakuna, vinapangwa kulingana na mwili wa hati.
+Vipengele vilivyowekwa kwa nafasi ya absolute vinapangwa kulingana na mababu zao walio na nafasi, na ikiwa hakuna, vinapangwa kulingana na mwili wa hati.
 
-Vipengele vilivyowekwa jamaa vinapangwa kulingana na maelekezo ya CSS ya kurekebisha nafasi yake kutoka nafasi yake ya awali.
+Vipengele vilivyowekwa kwa nafasi ya relative vinapangwa kulingana na maelekezo ya CSS ya kurekebisha nafasi yake kutoka kwa nafasi yake ya awali.
 
-Katika mfano wetu, `plant-holder` ni kipengele kilichowekwa jamaa ambacho kimepangwa ndani ya chombo kilichowekwa kabisa. Tabia inayotokana ni kwamba vyombo vya upande vimewekwa kushoto na kulia, na `plant-holder` imewekwa ndani, ikijirekebisha ndani ya vyombo vya upande, ikitoa nafasi kwa mimea kuwekwa katika safu ya wima.
+Katika mfano wetu, `plant-holder` ni kipengele kilichowekwa kwa nafasi ya relative ambacho kimepangwa ndani ya chombo kilichowekwa kwa nafasi ya absolute. Tabia inayotokana ni kwamba vyombo vya upande vimewekwa kushoto na kulia, na `plant-holder` imewekwa ndani, ikijirekebisha ndani ya vyombo vya upande, ikitoa nafasi kwa mimea kuwekwa katika safu ya wima.
 
-> `plant` yenyewe pia ina nafasi ya kabisa, muhimu kwa kuifanya iweze kuburuzwa, kama utakavyogundua katika somo lijalo.
+> Mmea wenyewe pia una nafasi ya absolute, muhimu kwa kuufanya uweze kuburuzwa, kama utakavyogundua katika somo lijalo.
 
 ✅ Jaribu kubadilisha aina za nafasi za vyombo vya upande na `plant-holder`. Nini kinatokea?
 
@@ -250,9 +250,9 @@ Kwanza, weka mitindo kwa watoto wa div ya `.terrarium` kama mstatili wa mviringo
 }
 ```
 
-Angalia matumizi ya asilimia hapa. Ukipunguza kivinjari chako, unaweza kuona jinsi jar inavyopungua pia. Pia angalia upana na urefu wa asilimia kwa vipengele vya jar na jinsi kila kipengele kinavyowekwa kabisa katikati, kikiwa kimewekwa chini ya viewport.
+Angalia matumizi ya asilimia hapa. Ukipunguza kivinjari chako, unaweza kuona jinsi jar inavyopungua pia. Pia angalia asilimia za upana na urefu wa vipengele vya jar na jinsi kila kipengele kinavyowekwa kwa nafasi ya absolute katikati, kikiwa kimewekwa chini ya viewport.
 
-Tunatumia `rem` kwa border-radius, kipimo kinachohusiana na fonti. Soma zaidi kuhusu aina hii ya kipimo cha jamaa katika [vipimo vya CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
+Pia tunatumia `rem` kwa border-radius, urefu unaohusiana na fonti. Soma zaidi kuhusu aina hii ya kipimo cha jamaa katika [vipengele vya CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
 ✅ Jaribu kubadilisha rangi za jar na uwazi dhidi ya zile za udongo. Nini kinatokea? Kwa nini?
 
@@ -260,11 +260,11 @@ Tunatumia `rem` kwa border-radius, kipimo kinachohusiana na fonti. Soma zaidi ku
 
 ## 🚀Changamoto
 
-Ongeza 'bubble' ya mwangaza kwenye eneo la chini kushoto la jar ili ionekane kama kioo. Utakuwa unaweka mitindo kwa `.jar-glossy-long` na `.jar-glossy-short` ili ionekane kama mwangaza unaoakisiwa. Hivi ndivyo itakavyokuwa:
+Ongeza 'bubble' ya mng'ao kwenye eneo la chini kushoto la jar ili ionekane kama kioo. Utakuwa ukipanga `.jar-glossy-long` na `.jar-glossy-short` ionekane kama mng'ao unaoakisi. Hivi ndivyo itakavyokuwa:
 
 ![terrarium iliyokamilika](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.sw.png)
 
-Ili kukamilisha maswali ya baada ya somo, pitia moduli hii ya Kujifunza: [Weka mitindo kwa programu yako ya HTML kwa CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+Ili kukamilisha maswali ya baada ya somo, pitia moduli hii ya Kujifunza: [Panga programu yako ya HTML kwa CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
 ## Maswali ya Baada ya Somo
 
@@ -272,11 +272,11 @@ Ili kukamilisha maswali ya baada ya somo, pitia moduli hii ya Kujifunza: [Weka m
 
 ## Mapitio na Kujisomea
 
-CSS inaonekana rahisi, lakini kuna changamoto nyingi wakati wa kujaribu kuweka mitindo ya programu kikamilifu kwa vivinjari vyote na ukubwa wote wa skrini. CSS-Grid na Flexbox ni zana ambazo zimetengenezwa kufanya kazi iwe na muundo zaidi na ya kuaminika. Jifunze kuhusu zana hizi kwa kucheza [Flexbox Froggy](https://flexboxfroggy.com/) na [Grid Garden](https://codepip.com/games/grid-garden/).
+CSS inaonekana rahisi, lakini kuna changamoto nyingi wakati wa kujaribu kupanga programu kikamilifu kwa vivinjari vyote na ukubwa wote wa skrini. CSS-Grid na Flexbox ni zana ambazo zimeundwa kufanya kazi iwe na muundo zaidi na ya kuaminika zaidi. Jifunze kuhusu zana hizi kwa kucheza [Flexbox Froggy](https://flexboxfroggy.com/) na [Grid Garden](https://codepip.com/games/grid-garden/).
 
 ## Kazi
 
-[Urekebishaji wa CSS](assignment.md)
+[CSS Refactoring](assignment.md)
 
 ---
 

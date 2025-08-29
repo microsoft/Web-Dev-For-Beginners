@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-28T07:55:15+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T11:31:23+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "ro"
 }
 -->
 # Construiește un Joc Spațial Partea 5: Scor și Vieți
 
-## Chestionar Pre-Lecție
+## Test înainte de lecție
 
-[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/37)
+[Test înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/37)
 
-În această lecție, vei învăța cum să adaugi un sistem de scor într-un joc și cum să calculezi viețile.
+În această lecție, vei învăța cum să adaugi un sistem de scor în joc și să calculezi viețile.
 
-## Afișarea textului pe ecran
+## Desenează text pe ecran
 
-Pentru a putea afișa scorul jocului pe ecran, trebuie să știi cum să plasezi text pe ecran. Răspunsul este utilizarea metodei `fillText()` pe obiectul canvas. De asemenea, poți controla alte aspecte, cum ar fi fontul utilizat, culoarea textului și chiar alinierea acestuia (stânga, dreapta, centru). Mai jos este un exemplu de cod care afișează text pe ecran.
+Pentru a putea afișa scorul jocului pe ecran, trebuie să știi cum să plasezi text pe ecran. Răspunsul este utilizarea metodei `fillText()` pe obiectul canvas. De asemenea, poți controla alte aspecte, cum ar fi fontul utilizat, culoarea textului și chiar alinierea acestuia (stânga, dreapta, centru). Mai jos este un exemplu de cod care desenează text pe ecran.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,18 +26,18 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Citește mai multe despre [cum să adaugi text pe un canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) și simte-te liber să-l faci să arate mai interesant!
+✅ Citește mai multe despre [cum să adaugi text pe un canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) și simte-te liber să-l faci să arate mai elegant!
 
 ## Viața, ca un concept de joc
 
-Conceptul de viață într-un joc este doar un număr. În contextul unui joc spațial, este obișnuit să atribui un set de vieți care sunt scăzute una câte una atunci când nava ta suferă daune. Este plăcut să poți arăta o reprezentare grafică a acestora, cum ar fi mini-nave sau inimi, în loc de un număr.
+Conceptul de a avea vieți într-un joc este doar un număr. În contextul unui joc spațial, este obișnuit să atribui un set de vieți care sunt scăzute una câte una atunci când nava ta suferă daune. Este plăcut dacă poți afișa o reprezentare grafică a acestora, cum ar fi mini-nave sau inimioare, în loc de un număr.
 
 ## Ce să construiești
 
-Adaugă următoarele în jocul tău:
+Hai să adăugăm următoarele în jocul tău:
 
-- **Scorul jocului**: Pentru fiecare navă inamică distrusă, eroul ar trebui să primească puncte, sugerăm 100 de puncte per navă. Scorul jocului ar trebui să fie afișat în colțul din stânga jos.
-- **Viață**: Nava ta are trei vieți. Pierzi o viață de fiecare dată când o navă inamică se ciocnește de tine. Scorul vieții ar trebui să fie afișat în colțul din dreapta jos și să fie reprezentat grafic prin următoarea imagine ![imagine viață](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.ro.png).
+- **Scorul jocului**: Pentru fiecare navă inamică distrusă, eroul ar trebui să primească puncte. Sugestia noastră este 100 de puncte per navă. Scorul jocului ar trebui să fie afișat în colțul din stânga jos.
+- **Vieți**: Nava ta are trei vieți. Pierzi o viață de fiecare dată când o navă inamică se ciocnește de tine. Scorul vieților ar trebui să fie afișat în colțul din dreapta jos și să fie format din următoarea grafică ![imagine viață](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.ro.png).
 
 ## Pași recomandați
 
@@ -53,18 +53,18 @@ Localizează fișierele care au fost create pentru tine în subfolderul `your-wo
 -| package.json
 ```
 
-Pornește proiectul tău din folderul `your_work` tastând:
+Pornește proiectul din folderul `your_work` tastând:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. Deschide un browser și introdu această adresă; în acest moment ar trebui să afișeze eroul și toți inamicii, iar când apeși săgețile stânga și dreapta, eroul se mișcă și poate doborî inamicii.
+Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. Deschide un browser și introdu acea adresă. În acest moment, ar trebui să vezi eroul și toți inamicii, iar când apeși săgețile stânga și dreapta, eroul se mișcă și poate doborî inamicii.
 
 ### Adaugă cod
 
-1. **Copiază resursele necesare** din folderul `solution/assets/` în folderul `your-work`; vei adăuga resursa `life.png`. Adaugă `lifeImg` în funcția `window.onload`: 
+1. **Copiază resursele necesare** din folderul `solution/assets/` în folderul `your-work`; vei adăuga resursa `life.png`. Adaugă `lifeImg` în funcția window.onload:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
@@ -80,7 +80,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
     eventEmitter = new EventEmitter();
     ```
   
-2. **Adaugă variabile**. Adaugă cod care să reprezinte scorul total (0) și viețile rămase (3), afișează aceste scoruri pe ecran.
+2. **Adaugă variabile**. Adaugă cod care reprezintă scorul total (0) și viețile rămase (3), afișează aceste scoruri pe ecran.
 
 3. **Extinde funcția `updateGameObjects()`**. Extinde funcția `updateGameObjects()` pentru a gestiona coliziunile cu inamicii:
 
@@ -101,7 +101,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
         this.points = 0;
         ```
 
-   1. **Afișează variabilele pe ecran**. Desenează aceste valori pe ecran:
+   1. **Desenează variabilele pe ecran**. Afișează aceste valori pe ecran:
 
         ```javascript
         function drawLife() {
@@ -128,14 +128,14 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
 
         ```
 
-   1. **Adaugă metode în bucla jocului**. Asigură-te că adaugi aceste funcții în funcția `window.onload` sub `updateGameObjects()`:
+   1. **Adaugă metode în bucla jocului**. Asigură-te că adaugi aceste funcții în funcția window.onload sub `updateGameObjects()`:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Implementează regulile jocului**. Implementează următoarele reguli:
+1. **Implementează regulile jocului**. Implementează următoarele reguli ale jocului:
 
    1. **Pentru fiecare coliziune între erou și inamic**, scade o viață.
    
@@ -152,7 +152,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
 
    2. **Pentru fiecare laser care lovește un inamic**, crește scorul jocului cu 100 de puncte.
 
-      Extinde clasa `Hero` pentru a face această creștere:
+      Extinde clasa Hero pentru a face această creștere:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +160,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
           }
         ```
 
-        Adaugă aceste funcții în emițătoarele de evenimente pentru coliziuni:
+        Adaugă aceste funcții în Emitatorii de Evenimente de Coliziune:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -177,7 +177,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
 
 ✅ Fă puțină cercetare pentru a descoperi alte jocuri create folosind JavaScript/Canvas. Care sunt trăsăturile lor comune?
 
-La finalul acestei lucrări, ar trebui să vezi micile nave 'viață' în colțul din dreapta jos, punctele în colțul din stânga jos și ar trebui să vezi cum numărul de vieți scade când te ciocnești cu inamicii și cum punctele cresc când dobori inamicii. Bravo! Jocul tău este aproape complet.
+La finalul acestei lucrări, ar trebui să vezi micile nave 'viață' în colțul din dreapta jos, punctele în colțul din stânga jos, și ar trebui să vezi cum numărul de vieți scade pe măsură ce te ciocnești cu inamicii și punctele cresc când dobori inamicii. Bravo! Jocul tău este aproape complet.
 
 ---
 
@@ -185,13 +185,13 @@ La finalul acestei lucrări, ar trebui să vezi micile nave 'viață' în colțu
 
 Codul tău este aproape complet. Poți să-ți imaginezi următorii pași?
 
-## Chestionar Post-Lecție
+## Test după lecție
 
-[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/38)
+[Test după lecție](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Recapitulare și Studiu Individual
 
-Cercetează câteva modalități prin care poți crește sau scădea scorurile și viețile în jocuri. Există câteva motoare de joc interesante, cum ar fi [PlayFab](https://playfab.com). Cum ar putea utilizarea unuia dintre acestea să îmbunătățească jocul tău?
+Cercetează câteva moduri prin care poți crește și scădea scorurile și viețile în joc. Există câteva motoare de joc interesante, cum ar fi [PlayFab](https://playfab.com). Cum ar putea utilizarea unuia dintre acestea să îmbunătățească jocul tău?
 
 ## Temă
 
@@ -200,4 +200,4 @@ Cercetează câteva modalități prin care poți crește sau scădea scorurile �
 ---
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

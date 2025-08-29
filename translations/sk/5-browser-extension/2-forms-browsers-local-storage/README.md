@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e10f168beac4e7b05e30e0eb5c92bf11",
-  "translation_date": "2025-08-27T22:22:14+00:00",
+  "original_hash": "a7587943d38d095de8613e1b508609f5",
+  "translation_date": "2025-08-29T11:09:39+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "sk"
 }
@@ -15,15 +15,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Úvod
 
-V tejto lekcii budete volať API odoslaním formulára vášho rozšírenia prehliadača a zobrazíte výsledky v rozšírení. Okrem toho sa naučíte, ako môžete ukladať údaje do lokálneho úložiska prehliadača na budúce použitie.
+V tejto lekcii budete volať API prostredníctvom odoslania formulára vášho rozšírenia prehliadača a zobrazovať výsledky v rozšírení. Okrem toho sa naučíte, ako ukladať údaje do lokálneho úložiska prehliadača na budúce použitie.
 
 ✅ Postupujte podľa očíslovaných segmentov v príslušných súboroch, aby ste vedeli, kam umiestniť svoj kód.
 
 ### Nastavenie prvkov na manipuláciu v rozšírení:
 
-Do tohto momentu ste vytvorili HTML pre formulár a `<div>` pre výsledky vášho rozšírenia prehliadača. Odteraz budete pracovať v súbore `/src/index.js` a postupne budovať svoje rozšírenie. Odkážte sa na [predchádzajúcu lekciu](../1-about-browsers/README.md) o nastavení projektu a procese zostavovania.
+Do tejto chvíle ste vytvorili HTML pre formulár a výsledkový `<div>` pre vaše rozšírenie prehliadača. Odteraz budete pracovať v súbore `/src/index.js` a postupne budovať svoje rozšírenie. Odkážte na [predchádzajúcu lekciu](../1-about-browsers/README.md) o nastavení projektu a procese zostavovania.
 
-Pracujte vo svojom súbore `index.js` a začnite vytvorením niekoľkých premenných `const`, ktoré budú obsahovať hodnoty spojené s rôznymi poľami:
+Pracujte vo svojom súbore `index.js` a začnite vytvorením niekoľkých `const` premenných na uchovanie hodnôt spojených s rôznymi poliami:
 
 ```JavaScript
 // form fields
@@ -53,11 +53,11 @@ clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Všimnite si skrátený zápis použitý na počúvanie udalostí odoslania alebo kliknutia a ako sa udalosť odovzdáva funkciám `handleSubmit` alebo `reset`. Dokážete napísať ekvivalent tohto skráteného zápisu v dlhšom formáte? Ktorý preferujete?
+✅ Všimnite si skrátený zápis použitý na počúvanie udalostí odoslania alebo kliknutia a spôsob, akým sa udalosť odovzdáva funkciám handleSubmit alebo reset. Dokážete napísať ekvivalent tohto skráteného zápisu v dlhšom formáte? Ktorý preferujete?
 
-### Vytvorenie funkcií `init()` a `reset()`:
+### Vytvorenie funkcií init() a reset():
 
-Teraz vytvoríte funkciu, ktorá inicializuje rozšírenie, nazývanú `init()`:
+Teraz vytvoríte funkciu, ktorá inicializuje rozšírenie, nazývanú init():
 
 ```JavaScript
 function init() {
@@ -93,34 +93,34 @@ function reset(e) {
 
 ```
 
-V tejto funkcii je zaujímavá logika. Pri čítaní si všimnite, čo sa deje:
+V tejto funkcii je zaujímavá logika. Pri jej čítaní dokážete pochopiť, čo sa deje?
 
-- sú nastavené dve `const`, ktoré kontrolujú, či používateľ uložil APIKey a kód regiónu do lokálneho úložiska.
-- ak je niektorá z týchto hodnôt `null`, zobrazí sa formulár zmenou jeho štýlu na 'block'.
-- skryjú sa výsledky, načítavanie a tlačidlo `clearBtn` a akýkoľvek text chyby sa nastaví na prázdny reťazec.
-- ak existuje kľúč a región, spustí sa rutina na:
-  - volanie API na získanie údajov o uhlíkovej stope,
+- sú nastavené dve `const`, ktoré kontrolujú, či používateľ uložil APIKey a regionálny kód do lokálneho úložiska.
+- ak je niektorá z týchto hodnôt null, zobrazte formulár zmenou jeho štýlu na 'block'.
+- skryte výsledky, načítanie a clearBtn a nastavte akýkoľvek text chyby na prázdny reťazec.
+- ak existuje kľúč a región, spustite rutinu na:
+  - volanie API na získanie údajov o uhlíkovej spotrebe,
   - skrytie oblasti výsledkov,
   - skrytie formulára,
   - zobrazenie tlačidla reset.
 
-Pred pokračovaním je užitočné naučiť sa o veľmi dôležitom koncepte dostupnom v prehliadačoch: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage je užitočný spôsob, ako ukladať reťazce v prehliadači ako páry `kľúč-hodnota`. Tento typ webového úložiska môže byť manipulovaný pomocou JavaScriptu na správu údajov v prehliadači. LocalStorage nevyprší, zatiaľ čo SessionStorage, iný typ webového úložiska, sa vymaže pri zatvorení prehliadača. Rôzne typy úložiska majú svoje výhody a nevýhody.
+Pred pokračovaním je užitočné naučiť sa o veľmi dôležitom koncepte dostupnom v prehliadačoch: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage je užitočný spôsob ukladania reťazcov v prehliadači ako `key-value` pár. Tento typ webového úložiska môže byť manipulovaný pomocou JavaScriptu na správu údajov v prehliadači. LocalStorage nevyprší, zatiaľ čo SessionStorage, iný typ webového úložiska, sa vymaže pri zatvorení prehliadača. Rôzne typy úložiska majú svoje výhody a nevýhody.
 
 > Poznámka - vaše rozšírenie prehliadača má svoje vlastné lokálne úložisko; hlavné okno prehliadača je iná inštancia a správa sa samostatne.
 
-Nastavte hodnotu APIKey ako reťazec, napríklad, a môžete vidieť, že je nastavená v Edge tým, že "skontrolujete" webovú stránku (môžete kliknúť pravým tlačidlom myši na prehliadač a zvoliť možnosť skontrolovať) a prejdete na kartu Aplikácie, aby ste videli úložisko.
+Nastavíte hodnotu APIKey ako reťazec, napríklad, a môžete vidieť, že je nastavená v Edge prostredníctvom "inšpekcie" webovej stránky (môžete kliknúť pravým tlačidlom myši na prehliadač a zvoliť inšpekciu) a prejsť na kartu Aplikácie, aby ste videli úložisko.
 
 ![Panel lokálneho úložiska](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.sk.png)
 
 ✅ Premýšľajte o situáciách, kedy by ste NECHCELI ukladať niektoré údaje do LocalStorage. Vo všeobecnosti je umiestnenie API kľúčov do LocalStorage zlý nápad! Vidíte prečo? V našom prípade, keďže naša aplikácia je čisto na učenie a nebude nasadená do obchodu s aplikáciami, použijeme túto metódu.
 
-Všimnite si, že na manipuláciu s LocalStorage používate Web API, buď pomocou `getItem()`, `setItem()` alebo `removeItem()`. Je široko podporované vo všetkých prehliadačoch.
+Všimnite si, že používate Web API na manipuláciu s LocalStorage, buď pomocou `getItem()`, `setItem()`, alebo `removeItem()`. Je široko podporované naprieč prehliadačmi.
 
 Pred vytvorením funkcie `displayCarbonUsage()`, ktorá je volaná v `init()`, vytvorme funkciu na spracovanie počiatočného odoslania formulára.
 
 ### Spracovanie odoslania formulára
 
-Vytvorte funkciu nazvanú `handleSubmit`, ktorá prijíma argument udalosti `(e)`. Zastavte šírenie udalosti (v tomto prípade chceme zastaviť obnovenie prehliadača) a zavolajte novú funkciu `setUpUser`, pričom odovzdáte argumenty `apiKey.value` a `region.value`. Týmto spôsobom použijete dve hodnoty, ktoré sú získané prostredníctvom počiatočného formulára, keď sú príslušné polia vyplnené.
+Vytvorte funkciu nazvanú `handleSubmit`, ktorá prijíma argument udalosti `(e)`. Zastavte šírenie udalosti (v tomto prípade chceme zastaviť prehliadač od obnovenia) a zavolajte novú funkciu `setUpUser`, pričom odovzdáte argumenty `apiKey.value` a `region.value`. Týmto spôsobom použijete dve hodnoty, ktoré sú prinesené prostredníctvom počiatočného formulára, keď sú príslušné polia vyplnené.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -129,11 +129,11 @@ function handleSubmit(e) {
 }
 ```
 
-✅ Osviežte si pamäť - HTML, ktoré ste nastavili v poslednej lekcii, má dve vstupné polia, ktorých `hodnoty` sú zachytené prostredníctvom `const`, ktoré ste nastavili na začiatku súboru, a obe sú `povinné`, takže prehliadač zabráni používateľom zadať prázdne hodnoty.
+✅ Osviežte si pamäť - HTML, ktoré ste nastavili v poslednej lekcii, má dve vstupné polia, ktorých `hodnoty` sú zachytené prostredníctvom `const`, ktoré ste nastavili na začiatku súboru, a obe sú `required`, takže prehliadač zastaví používateľov od zadania null hodnôt.
 
 ### Nastavenie používateľa
 
-Pokračujeme funkciou `setUpUser`, kde nastavíte hodnoty lokálneho úložiska pre apiKey a regionName. Pridajte novú funkciu:
+Pokračujeme funkciou `setUpUser`, tu nastavíte hodnoty lokálneho úložiska pre apiKey a regionName. Pridajte novú funkciu:
 
 ```JavaScript
 function setUpUser(apiKey, regionName) {
@@ -147,17 +147,17 @@ function setUpUser(apiKey, regionName) {
 }
 ```
 
-Táto funkcia nastaví načítavaciu správu, ktorá sa zobrazí počas volania API. V tomto bode ste sa dostali k vytvoreniu najdôležitejšej funkcie tohto rozšírenia prehliadača!
+Táto funkcia nastaví načítavaciu správu, ktorá sa zobrazí počas volania API. V tomto bode ste dosiahli vytvorenie najdôležitejšej funkcie tohto rozšírenia prehliadača!
 
-### Zobrazenie uhlíkovej stopy
+### Zobrazenie uhlíkovej spotreby
 
 Nakoniec je čas na dotazovanie API!
 
-Predtým, ako budeme pokračovať, mali by sme diskutovať o API. API, alebo [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), sú kritickým prvkom nástrojov webového vývojára. Poskytujú štandardné spôsoby, ako programy môžu navzájom komunikovať a rozhranie. Napríklad, ak vytvárate webovú stránku, ktorá potrebuje dotazovať databázu, niekto mohol vytvoriť API, ktoré môžete použiť. Hoci existuje mnoho typov API, jedným z najpopulárnejších je [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Pred pokračovaním by sme mali diskutovať o API. API, alebo [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), sú kritickým prvkom nástrojov webového vývojára. Poskytujú štandardné spôsoby, ako programy interagujú a rozhrania medzi sebou. Napríklad, ak vytvárate webovú stránku, ktorá potrebuje dotazovať databázu, niekto mohol vytvoriť API, ktoré môžete použiť. Hoci existuje mnoho typov API, jedným z najpopulárnejších je [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
-✅ Termín 'REST' znamená 'Representational State Transfer' a zahŕňa používanie rôzne nakonfigurovaných URL na získanie údajov. Urobte si malý prieskum o rôznych typoch API dostupných pre vývojárov. Ktorý formát vás oslovuje?
+✅ Termín 'REST' znamená 'Representational State Transfer' a zahŕňa používanie rôzne konfigurovaných URL na získanie údajov. Urobte si malý prieskum o rôznych typoch API dostupných pre vývojárov. Ktorý formát vás oslovuje?
 
-V tejto funkcii je niekoľko dôležitých vecí. Najprv si všimnite kľúčové slovo [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Písanie vašich funkcií tak, aby bežali asynchrónne, znamená, že čakajú na dokončenie akcie, ako je vrátenie údajov, pred pokračovaním.
+Existujú dôležité veci, ktoré si treba všimnúť o tejto funkcii. Po prvé, všimnite si [`async` kľúčové slovo](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Písanie vašich funkcií tak, aby fungovali asynchrónne, znamená, že čakajú na dokončenie akcie, ako je vrátenie údajov, pred pokračovaním.
 
 Tu je krátke video o `async`:
 
@@ -165,7 +165,7 @@ Tu je krátke video o `async`:
 
 > 🎥 Kliknite na obrázok vyššie pre video o async/await.
 
-Vytvorte novú funkciu na dotazovanie API C02Signal:
+Vytvorte novú funkciu na dotazovanie C02Signal API:
 
 ```JavaScript
 import axios from '../node_modules/axios';
@@ -207,34 +207,34 @@ async function displayCarbonUsage(apiKey, region) {
 
 Toto je veľká funkcia. Čo sa tu deje?
 
-- podľa najlepších praktík používate kľúčové slovo `async`, aby sa táto funkcia správala asynchrónne. Funkcia obsahuje blok `try/catch`, pretože vráti sľub, keď API vráti údaje. Keďže nemáte kontrolu nad rýchlosťou, akou API odpovie (môže neodpovedať vôbec!), musíte túto neistotu riešiť volaním asynchrónne.
-- dotazujete API co2signal na získanie údajov o vašom regióne, pomocou vášho API kľúča. Na použitie tohto kľúča musíte použiť typ autentifikácie v parametroch hlavičky.
+- podľa najlepších praktík používate `async` kľúčové slovo, aby sa táto funkcia správala asynchrónne. Funkcia obsahuje blok `try/catch`, pretože vráti sľub, keď API vráti údaje. Keďže nemáte kontrolu nad rýchlosťou, akou API odpovie (môže neodpovedať vôbec!), musíte túto neistotu riešiť volaním asynchrónne.
+- dotazujete API co2signal na získanie údajov o vašom regióne, pomocou vášho API kľúča. Na použitie tohto kľúča musíte použiť typ autentifikácie vo svojich hlavičkových parametroch.
 - keď API odpovie, priradíte rôzne prvky jeho odpovedí k častiam obrazovky, ktoré ste nastavili na zobrazenie týchto údajov.
-- ak dôjde k chybe alebo ak neexistuje žiadny výsledok, zobrazíte chybovú správu.
+- ak nastane chyba alebo neexistuje výsledok, zobrazíte chybovú správu.
 
-✅ Používanie asynchrónnych programovacích vzorov je ďalším veľmi užitočným nástrojom vo vašej vývojárskej výbave. Prečítajte si [o rôznych spôsoboch](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), ako môžete nakonfigurovať tento typ kódu.
+✅ Používanie asynchrónnych programovacích vzorov je ďalším veľmi užitočným nástrojom vo vašej vývojárskej výbave. Prečítajte si [o rôznych spôsoboch](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), ako môžete konfigurovať tento typ kódu.
 
-Gratulujeme! Ak zostavíte svoje rozšírenie (`npm run build`) a obnovíte ho na paneli rozšírení, máte funkčné rozšírenie! Jediná vec, ktorá nefunguje, je ikona, a to opravíte v ďalšej lekcii.
+Gratulujeme! Ak zostavíte svoje rozšírenie (`npm run build`) a obnovíte ho v paneli rozšírení, máte funkčné rozšírenie! Jediná vec, ktorá nefunguje, je ikona, a tú opravíte v ďalšej lekcii.
 
 ---
 
 ## 🚀 Výzva
 
-V týchto lekciách sme diskutovali o niekoľkých typoch API. Vyberte si webové API a preskúmajte podrobne, čo ponúka. Napríklad sa pozrite na API dostupné v prehliadačoch, ako je [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Čo podľa vás robí API skvelým?
+Diskutovali sme o niekoľkých typoch API v týchto lekciách. Vyberte si webové API a preskúmajte podrobne, čo ponúka. Napríklad sa pozrite na API dostupné v prehliadačoch, ako je [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Čo podľa vás robí API skvelým?
 
 ## Kvíz po prednáške
 
 [Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/26)
 
-## Prehľad a samoštúdium
+## Prehľad a samostatné štúdium
 
 V tejto lekcii ste sa naučili o LocalStorage a API, oboch veľmi užitočných pre profesionálneho webového vývojára. Dokážete premýšľať o tom, ako tieto dve veci spolupracujú? Premýšľajte o tom, ako by ste navrhli webovú stránku, ktorá by ukladala položky na použitie API.
 
 ## Zadanie
 
-[Prijmite API](assignment.md)
+[Adoptujte API](assignment.md)
 
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

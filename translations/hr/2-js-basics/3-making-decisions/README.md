@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-27T22:38:13+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T12:35:44+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "hr"
 }
@@ -34,7 +34,7 @@ Postavite svoj Boolean na true ili false ovako:
 `let myTrueBool = true`  
 `let myFalseBool = false`
 
-✅ Booleani su dobili ime po engleskom matematičaru, filozofu i logičaru Georgeu Booleu (1815–1864).
+✅ Booleani su dobili ime po engleskom matematičaru, filozofu i logičaru Georgeu Booleu (1815.–1864.).
 
 ## Operatori usporedbe i Booleani
 
@@ -43,13 +43,13 @@ Operatori se koriste za procjenu uvjeta usporedbom koja će stvoriti Boolean vri
 | Simbol | Opis                                                                                                                                                          | Primjer            |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
 | `<`    | **Manje od**: Uspoređuje dvije vrijednosti i vraća Boolean vrijednost `true` ako je vrijednost na lijevoj strani manja od vrijednosti na desnoj               | `5 < 6 // true`    |
-| `<=`   | **Manje ili jednako**: Uspoređuje dvije vrijednosti i vraća Boolean vrijednost `true` ako je vrijednost na lijevoj strani manja ili jednaka desnoj            | `5 <= 6 // true`   |
-| `>`    | **Veće od**: Uspoređuje dvije vrijednosti i vraća Boolean vrijednost `true` ako je vrijednost na lijevoj strani veća od vrijednosti na desnoj                | `5 > 6 // false`   |
-| `>=`   | **Veće ili jednako**: Uspoređuje dvije vrijednosti i vraća Boolean vrijednost `true` ako je vrijednost na lijevoj strani veća ili jednaka desnoj             | `5 >= 6 // false`  |
+| `<=`   | **Manje ili jednako**: Uspoređuje dvije vrijednosti i vraća Boolean vrijednost `true` ako je vrijednost na lijevoj strani manja ili jednaka vrijednosti na desnoj | `5 <= 6 // true`   |
+| `>`    | **Veće od**: Uspoređuje dvije vrijednosti i vraća Boolean vrijednost `true` ako je vrijednost na lijevoj strani veća od vrijednosti na desnoj                 | `5 > 6 // false`   |
+| `>=`   | **Veće ili jednako**: Uspoređuje dvije vrijednosti i vraća Boolean vrijednost `true` ako je vrijednost na lijevoj strani veća ili jednaka vrijednosti na desnoj | `5 >= 6 // false`  |
 | `===`  | **Stroga jednakost**: Uspoređuje dvije vrijednosti i vraća Boolean vrijednost `true` ako su vrijednosti na lijevoj i desnoj strani jednake I istog tipa podataka | `5 === 6 // false` |
 | `!==`  | **Nejednakost**: Uspoređuje dvije vrijednosti i vraća suprotnu Boolean vrijednost od one koju bi vratio operator stroge jednakosti                           | `5 !== 6 // true`  |
 
-✅ Provjerite svoje znanje pisanjem nekoliko usporedbi u konzoli vašeg preglednika. Iznenađuje li vas neki vraćeni podatak?
+✅ Provjerite svoje znanje pisanjem nekoliko usporedbi u konzoli preglednika. Iznenađuje li vas neki vraćeni podatak?
 
 ## If naredba
 
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Operator negacije
 
-Do sada ste vidjeli kako možete koristiti `if...else` naredbu za stvaranje uvjetne logike. Sve što ide u `if` mora se procijeniti kao true/false. Korištenjem operatora `!` možete _negirati_ izraz. To bi izgledalo ovako:
+Do sada ste vidjeli kako možete koristiti `if...else` naredbu za stvaranje uvjetne logike. Sve što ide u `if` mora se procijeniti kao true/false. Korištenjem operatora `!` možete _negirati_ izraz. Izgledalo bi ovako:
 
 ```javascript
 if (!condition) {
@@ -171,7 +171,7 @@ if (!condition) {
 
 ### Ternarni izrazi
 
-`if...else` nije jedini način izražavanja logike odluke. Također možete koristiti nešto što se zove ternarni operator. Sintaksa za njega izgleda ovako:
+`if...else` nije jedini način izražavanja logike odluke. Također možete koristiti nešto što se zove ternarni operator. Sintaksa izgleda ovako:
 
 ```javascript
 let variable = condition ? <return this if true> : <return this if false>
@@ -193,7 +193,7 @@ Gore navedeno kaže:
 - tada dodijelite `firstNumber` varijabli `biggestNumber`
 - inače dodijelite `secondNumber`.
 
-Ternarni izraz je samo kompaktan način pisanja koda ispod:
+Ternarni izraz samo je kompaktan način pisanja koda ispod:
 
 ```javascript
 let biggestNumber;
@@ -220,7 +220,7 @@ Napravite program koji je prvo napisan s logičkim operatorima, a zatim ga prepi
 
 Pročitajte više o mnogim operatorima dostupnim korisniku [na MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
-Prođite kroz sjajan [operator lookup](https://joshwcomeau.com/operator-lookup/) Josha Comeaua!
+Prođite kroz sjajan [pregled operatora](https://joshwcomeau.com/operator-lookup/) od Josha Comeaua!
 
 ## Zadatak
 
@@ -229,4 +229,4 @@ Prođite kroz sjajan [operator lookup](https://joshwcomeau.com/operator-lookup/)
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za nesporazume ili pogrešne interpretacije koje mogu proizaći iz korištenja ovog prijevoda.

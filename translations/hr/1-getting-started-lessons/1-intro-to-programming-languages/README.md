@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c63675cfaf1d223b37bb9fecbfe7c252",
-  "translation_date": "2025-08-27T22:59:44+00:00",
+  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
+  "translation_date": "2025-08-29T12:40:24+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "hr"
 }
@@ -38,11 +38,11 @@ Programiranje (poznato i kao kodiranje) je proces pisanja uputa za uređaj poput
 
 ## Programska jezici
 
-Programski jezici omogućuju programerima pisanje uputa za uređaje. Uređaji mogu razumjeti samo binarni kod (1 i 0), a za *većinu* programera to nije učinkovit način komunikacije. Programski jezici služe kao most između ljudi i računala.
+Programski jezici omogućuju programerima pisanje uputa za uređaj. Uređaji mogu razumjeti samo binarni kod (1 i 0), a za *većinu* programera to nije učinkovit način komunikacije. Programski jezici služe kao most između ljudi i računala.
 
 Programski jezici dolaze u različitim formatima i mogu služiti različitim svrhama. Na primjer, JavaScript se uglavnom koristi za web aplikacije, dok se Bash uglavnom koristi za operativne sustave.
 
-*Niskorazinski jezici* obično zahtijevaju manje koraka nego *visokorazinski jezici* kako bi uređaj interpretirao upute. Međutim, ono što visokorazinske jezike čini popularnima je njihova čitljivost i podrška. JavaScript se smatra visokorazinskim jezikom.
+*Niskorazinski jezici* obično zahtijevaju manje koraka nego *visokorazinski jezici* za interpretaciju uputa na uređaju. Međutim, ono što visokorazinske jezike čini popularnima je njihova čitljivost i podrška. JavaScript se smatra visokorazinskim jezikom.
 
 Sljedeći kod ilustrira razliku između visokorazinskog jezika (JavaScript) i niskorazinskog jezika (ARM assembly kod).
 
@@ -85,15 +85,15 @@ back add r0,r1
 
 Vjerovali ili ne, *oba rade istu stvar*: ispisuju Fibonaccijev niz do 10.
 
-✅ Fibonaccijev niz [definiran je](https://en.wikipedia.org/wiki/Fibonacci_number) kao skup brojeva gdje je svaki broj zbroj prethodna dva, počevši od 0 i 1. Prvih 10 brojeva u Fibonaccijevom nizu su 0, 1, 1, 2, 3, 5, 8, 13, 21 i 34.
+✅ Fibonaccijev niz je [definiran](https://en.wikipedia.org/wiki/Fibonacci_number) kao niz brojeva gdje je svaki broj zbroj prethodna dva, počevši od 0 i 1. Prvih 10 brojeva u Fibonaccijevom nizu su 0, 1, 1, 2, 3, 5, 8, 13, 21 i 34.
 
 ## Elementi programa
 
-Jedna uputa u programu naziva se *izjava* i obično ima znak ili razmak koji označava gdje uputa završava, odnosno *završava*. Način na koji program završava razlikuje se ovisno o jeziku.
+Jedna uputa u programu naziva se *izjava* i obično ima znak ili razmak koji označava gdje uputa završava, odnosno *terminira*. Način na koji program terminira razlikuje se ovisno o jeziku.
 
-Izjave unutar programa mogu se oslanjati na podatke koje pruža korisnik ili neki drugi izvor kako bi izvršile upute. Podaci mogu promijeniti ponašanje programa, pa programski jezici dolaze s načinom privremenog pohranjivanja podataka kako bi se mogli koristiti kasnije. To se naziva *varijablama*. Varijable su izjave koje uređaju daju uputu da pohrani podatke u svoju memoriju. Varijable u programima slične su varijablama u algebri, gdje imaju jedinstveno ime, a njihova se vrijednost može mijenjati tijekom vremena.
+Izjave unutar programa mogu se oslanjati na podatke koje pruža korisnik ili neki drugi izvor kako bi izvršile upute. Podaci mogu promijeniti ponašanje programa, pa programski jezici dolaze s načinom privremenog pohranjivanja podataka za kasniju upotrebu. To se naziva *varijablama*. Varijable su izjave koje uređaju daju uputu da pohrani podatke u svoju memoriju. Varijable u programima slične su varijablama u algebri, gdje imaju jedinstveno ime, a njihova se vrijednost može mijenjati tijekom vremena.
 
-Postoji mogućnost da neke izjave neće biti izvršene od strane uređaja. To je obično namjerno kada ih napiše programer ili slučajno kada se dogodi neočekivana pogreška. Ova vrsta kontrole nad aplikacijom čini je robusnijom i lakšom za održavanje. Tipično, ove promjene u kontroli događaju se kada su ispunjeni određeni uvjeti. U modernom programiranju često se koristi izjava `if..else` za kontrolu načina na koji program radi.
+Postoji mogućnost da neke izjave neće biti izvršene od strane uređaja. To je obično namjerno, kada ih programer tako napiše, ili slučajno, kada se dogodi neočekivana pogreška. Ova vrsta kontrole nad aplikacijom čini je robusnijom i lakšom za održavanje. Tipično, ove promjene u kontroli događaju se kada su ispunjeni određeni uvjeti. U modernom programiranju često se koristi izjava `if..else` za kontrolu toka programa.
 
 ✅ O ovoj vrsti izjave naučit ćete više u sljedećim lekcijama.
 
@@ -105,7 +105,7 @@ Postoji mogućnost da neke izjave neće biti izvršene od strane uređaja. To je
 
 U ovom odjeljku naučit ćete o nekim softverima koji vam mogu biti vrlo korisni dok započinjete svoj profesionalni razvojni put.
 
-**Razvojno okruženje** jedinstven je skup alata i značajki koje programer često koristi pri pisanju softvera. Neki od tih alata prilagođeni su specifičnim potrebama programera i mogu se mijenjati tijekom vremena ako programer promijeni prioritete u radu, osobnim projektima ili kada koristi drugi programski jezik. Razvojna okruženja su jedinstvena kao i sami programeri koji ih koriste.
+**Razvojno okruženje** je jedinstveni skup alata i značajki koje programer često koristi pri pisanju softvera. Neki od tih alata prilagođeni su specifičnim potrebama programera i mogu se mijenjati tijekom vremena ako programer promijeni prioritete u radu, osobnim projektima ili kada koristi drugi programski jezik. Razvojna okruženja su jedinstvena kao i sami programeri koji ih koriste.
 
 ### Uređivači
 
@@ -115,7 +115,7 @@ Programeri se oslanjaju na uređivače iz nekoliko dodatnih razloga:
 
 - *Otklanjanje pogrešaka* pomaže otkriti greške i pogreške korak po korak kroz kod, liniju po liniju. Neki uređivači imaju mogućnosti otklanjanja pogrešaka; mogu se prilagoditi i dodati za specifične programske jezike.  
 - *Isticanje sintakse* dodaje boje i formatiranje tekstu koda, čineći ga lakšim za čitanje. Većina uređivača omogućuje prilagodbu isticanja sintakse.  
-- *Proširenja i integracije* su specijalizirani alati za programere, od strane programera. Ovi alati nisu ugrađeni u osnovni uređivač. Na primjer, mnogi programeri dokumentiraju svoj kod kako bi objasnili kako radi. Mogu instalirati proširenje za provjeru pravopisa kako bi pronašli tipfelere unutar dokumentacije. Većina proširenja namijenjena je za korištenje unutar specifičnog uređivača, a većina uređivača dolazi s načinom pretraživanja dostupnih proširenja.  
+- *Proširenja i integracije* su specijalizirani alati za programere, koje su izradili programeri. Ovi alati nisu ugrađeni u osnovni uređivač. Na primjer, mnogi programeri dokumentiraju svoj kod kako bi objasnili kako radi. Mogu instalirati proširenje za provjeru pravopisa kako bi pronašli tipfelere u dokumentaciji. Većina proširenja namijenjena je za upotrebu unutar određenog uređivača, a većina uređivača dolazi s načinom pretraživanja dostupnih proširenja.  
 - *Prilagodba* omogućuje programerima stvaranje jedinstvenog razvojnog okruženja koje odgovara njihovim potrebama. Većina uređivača je izuzetno prilagodljiva i također može omogućiti programerima stvaranje vlastitih proširenja.
 
 #### Popularni uređivači i proširenja za web razvoj
@@ -146,7 +146,7 @@ Mnogi preglednici dolaze s *razvojnim alatima* (DevTools) koji sadrže skup kori
 
 ### Alati naredbenog retka
 
-Neki programeri preferiraju manje grafički prikaz za svoje svakodnevne zadatke i oslanjaju se na naredbeni redak kako bi to postigli. Pisanje koda zahtijeva značajnu količinu tipkanja i neki programeri preferiraju ne prekidati svoj tok na tipkovnici. Koriste tipkovničke prečace za prebacivanje između prozora, rad na različitim datotekama i korištenje alata. Većinu zadataka moguće je obaviti mišem, ali jedna od prednosti korištenja naredbenog retka je što se puno toga može obaviti bez potrebe za prebacivanjem između miša i tipkovnice. Još jedna prednost naredbenog retka je što je prilagodljiv i možete spremiti prilagođenu konfiguraciju, promijeniti je kasnije i uvesti na druge razvojne strojeve. Budući da su razvojna okruženja tako jedinstvena za svakog programera, neki će izbjegavati korištenje naredbenog retka, neki će se u potpunosti oslanjati na njega, a neki preferiraju kombinaciju oboje.
+Neki programeri preferiraju manje grafički prikaz za svoje svakodnevne zadatke i oslanjaju se na naredbeni redak kako bi to postigli. Pisanje koda zahtijeva značajnu količinu tipkanja i neki programeri preferiraju ne prekidati svoj tok na tipkovnici. Koriste tipkovničke prečace za prebacivanje između prozora, rad na različitim datotekama i korištenje alata. Većina zadataka može se obaviti mišem, ali jedna od prednosti korištenja naredbenog retka je što se puno toga može obaviti bez potrebe za prebacivanjem između miša i tipkovnice. Još jedna prednost naredbenog retka je što je prilagodljiv i možete spremiti prilagođenu konfiguraciju, kasnije je promijeniti i uvesti na druge razvojne strojeve. Budući da su razvojna okruženja tako jedinstvena za svakog programera, neki će izbjegavati korištenje naredbenog retka, neki će se u potpunosti oslanjati na njega, a neki preferiraju kombinaciju oboje.
 
 ### Popularne opcije naredbenog retka
 
@@ -188,7 +188,7 @@ Kada programer želi naučiti nešto novo, najvjerojatnije će se obratiti dokum
 - [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), od Mozille, izdavača preglednika [Firefox](https://www.mozilla.org/firefox/)  
 - [Frontend Masters](https://frontendmasters.com/learn/)  
 - [Web.dev](https://web.dev), od Googlea, izdavača [Chrome](https://www.google.com/chrome/)  
-- [Microsoftova dokumentacija za programere](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), za [Microsoft Edge](https://www.microsoft.com/edge)  
+- [Microsoftova vlastita dokumentacija za programere](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), za [Microsoft Edge](https://www.microsoft.com/edge)  
 - [W3 Schools](https://www.w3schools.com/where_to_start.asp)  
 
 ✅ Istražite: Sada kada znate osnove okruženja web programera, usporedite ga s okruženjem web dizajnera.
@@ -197,10 +197,10 @@ Kada programer želi naučiti nešto novo, najvjerojatnije će se obratiti dokum
 
 ## 🚀 Izazov
 
-Usporedite neke programske jezike. Koje su jedinstvene karakteristike JavaScripta u usporedbi s Javom? A što je s COBOL-om u usporedbi s Go-om?
+Usporedite neke programske jezike. Koje su jedinstvene karakteristike JavaScripta u odnosu na Javu? A što je s COBOL-om u odnosu na Go?
 
 ## Kviz nakon predavanja  
-[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/2)
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/)
 
 ## Pregled i samostalno učenje
 
@@ -213,4 +213,4 @@ Proučite različite jezike dostupne programerima. Pokušajte napisati jednu lin
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.

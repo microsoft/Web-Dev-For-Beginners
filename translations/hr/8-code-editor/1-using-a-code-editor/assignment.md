@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-27T22:54:21+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T12:39:14+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "hr"
 }
@@ -13,13 +13,13 @@ _Kako bi bilo cool da vas regruter zatraži vaš životopis, a vi mu pošaljete 
 
 ## Ciljevi
 
-Nakon ovog zadatka, naučit ćete kako:
+Nakon ovog zadatka naučit ćete:
 
 - Kreirati web-stranicu za prikaz vašeg životopisa
 
 ### Preduvjeti
 
-1. GitHub račun. Posjetite [GitHub](https://github.com/) i kreirajte račun ako ga već nemate.
+1. GitHub račun. Idite na [GitHub](https://github.com/) i kreirajte račun ako ga već nemate.
 
 ## Koraci
 
@@ -33,9 +33,9 @@ Kliknite na poveznicu `creating a new file`, upišite ime `index.html` i odaberi
 
 **Korak 3:** Otvorite [VSCode.dev](https://vscode.dev) i odaberite gumb `Open Remote Repository`.
 
-Kopirajte URL repozitorija koji ste upravo kreirali za svoju stranicu životopisa i zalijepite ga u polje za unos:
+Kopirajte URL repozitorija koji ste upravo kreirali za svoju web-stranicu životopisa i zalijepite ga u polje za unos:
 
-_Zamijenite `your-username` svojim GitHub korisničkim imenom._
+_Zamijenite `your-username` svojim GitHub korisničkim imenom_
 
 ```
 https://github.com/your-username/my-resume
@@ -219,7 +219,7 @@ Dodajte detalje svog životopisa kako biste zamijenili _tekst rezerviranog mjest
 
 **Korak 7:** Instalirajte ekstenziju `Codeswing` kako biste vizualizirali web-stranicu životopisa u kodnom prostoru.
 
-Kliknite ikonu _`Extensions`_ na traci aktivnosti i upišite Codeswing. Kliknite _plavi gumb za instalaciju_ na proširenoj traci aktivnosti za instalaciju ili koristite gumb za instalaciju koji se pojavljuje u kodnom prostoru nakon što odaberete ekstenziju za učitavanje dodatnih informacija. Odmah nakon instalacije ekstenzije, promatrajte promjene u svom projektu 😃
+Kliknite ikonu _`Extensions`_ na traci aktivnosti i upišite Codeswing. Kliknite _plavi gumb za instalaciju_ na proširenoj traci aktivnosti za instalaciju ili koristite gumb za instalaciju koji se pojavljuje u kodnom prostoru nakon što odaberete ekstenziju za učitavanje dodatnih informacija. Odmah nakon instalacije ekstenzije, pogledajte svoj kodni prostor kako biste vidjeli promjene u projektu 😃.
 
 ![Instalirajte ekstenzije](../../../../8-code-editor/images/install-extension.gif)
 
@@ -244,4 +244,4 @@ Pročitajte više o [VSCode.dev](https://code.visualstudio.com/docs/editor/vscod
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.

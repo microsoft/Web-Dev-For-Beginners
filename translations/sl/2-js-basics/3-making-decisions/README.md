@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-27T22:38:32+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T12:52:39+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "sl"
 }
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Sprejemanje odločitev in nadzor nad vrstnim redom izvajanja kode omogočata, da je vaša koda ponovno uporabna in robustna. Ta razdelek zajema sintakso za nadzor pretoka podatkov v JavaScriptu ter njen pomen pri uporabi z Boolean podatkovnimi tipi.
+Sprejemanje odločitev in nadzor nad tem, v kakšnem vrstnem redu se izvaja vaša koda, naredi kodo ponovno uporabno in robustno. Ta razdelek zajema sintakso za nadzor pretoka podatkov v JavaScriptu in njen pomen pri uporabi z Boolean podatkovnimi tipi.
 
 [![Sprejemanje odločitev](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Sprejemanje odločitev")
 
@@ -27,7 +27,7 @@ Sprejemanje odločitev in nadzor nad vrstnim redom izvajanja kode omogočata, da
 
 ## Kratek povzetek o Booleanih
 
-Booleani imajo lahko le dve vrednosti: `true` ali `false`. Booleani pomagajo pri sprejemanju odločitev, katere vrstice kode naj se izvedejo, ko so določeni pogoji izpolnjeni.
+Booleani imajo lahko le dve vrednosti: `true` ali `false`. Booleani pomagajo pri sprejemanju odločitev, katere vrstice kode naj se izvedejo, ko so izpolnjeni določeni pogoji.
 
 Boolean nastavite na true ali false takole:
 
@@ -38,7 +38,7 @@ Boolean nastavite na true ali false takole:
 
 ## Primerjalni operatorji in Booleani
 
-Operatorji se uporabljajo za ocenjevanje pogojev z primerjavami, ki ustvarijo Boolean vrednost. Spodaj je seznam pogosto uporabljenih operatorjev.
+Operatorji se uporabljajo za ocenjevanje pogojev z primerjanjem, ki ustvarijo Boolean vrednost. Spodaj je seznam pogosto uporabljenih operatorjev.
 
 | Simbol | Opis                                                                                                                                                   | Primer             |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
@@ -49,7 +49,7 @@ Operatorji se uporabljajo za ocenjevanje pogojev z primerjavami, ki ustvarijo Bo
 | `===`  | **Stroga enakost**: Primerja dve vrednosti in vrne Boolean vrednost `true`, če sta vrednosti na desni in levi strani enaki IN sta istega podatkovnega tipa | `5 === 6 // false` |
 | `!==`  | **Neenakost**: Primerja dve vrednosti in vrne nasprotno Boolean vrednost od tiste, ki bi jo vrnil operator stroge enakosti                              | `5 !== 6 // true`  |
 
-✅ Preverite svoje znanje tako, da napišete nekaj primerjav v konzoli brskalnika. Vas je kakšen vrnjen podatek presenetil?
+✅ Preverite svoje znanje tako, da napišete nekaj primerjav v konzoli brskalnika. Vas kakšni vrnjeni podatki presenetijo?
 
 ## If stavek
 
@@ -75,7 +75,7 @@ if (currentMoney >= laptopPrice) {
 
 ## If..Else stavek
 
-`else` stavek bo izvedel kodo med svojimi bloki, ko je pogoj neresničen. Je opcijski pri `if` stavku.
+Else stavek bo izvedel kodo med svojimi bloki, ko je pogoj neresničen. Je opcijski pri if stavku.
 
 ```javascript
 let currentMoney;
@@ -94,7 +94,7 @@ if (currentMoney >= laptopPrice) {
 
 ## Switch stavek
 
-`switch` stavek se uporablja za izvajanje različnih dejanj na podlagi različnih pogojev. Uporabite `switch` stavek za izbiro enega izmed mnogih blokov kode, ki naj se izvedejo.
+Switch stavek se uporablja za izvajanje različnih dejanj na podlagi različnih pogojev. Uporabite switch stavek za izbiro enega od mnogih blokov kode, ki naj se izvedejo.
 
 ```javascript
 switch (expression) {
@@ -131,13 +131,13 @@ console.log(`The value is ${a}`);
 
 ## Logični operatorji in Booleani
 
-Odločitve lahko zahtevajo več kot eno primerjavo, ki jih lahko povežete z logičnimi operatorji, da ustvarite Boolean vrednost.
+Odločitve lahko zahtevajo več kot eno primerjavo, ki jih je mogoče povezati z logičnimi operatorji za ustvarjanje Boolean vrednosti.
 
 | Simbol | Opis                                                                                     | Primer                                                                  |
 | ------ | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **Logični IN**: Primerja dve Boolean izraza. Vrne true **samo**, če sta obe strani resnični | `(5 > 6) && (5 < 6 ) //Ena stran je neresnična, druga resnična. Vrne false` |
-| `\|\|` | **Logični ALI**: Primerja dve Boolean izraza. Vrne true, če je vsaj ena stran resnična     | `(5 > 6) \|\| (5 < 6) //Ena stran je neresnična, druga resnična. Vrne true` |
-| `!`    | **Logični NE**: Vrne nasprotno vrednost Boolean izraza                                    | `!(5 > 6) // 5 ni večje od 6, vendar "!" bo vrnil true`                 |
+| `&&`   | **Logični AND**: Primerja dva Boolean izraza. Vrne true **samo**, če sta obe strani resnični | `(5 > 6) && (5 < 6 ) //Ena stran je neresnična, druga resnična. Vrne false` |
+| `\|\|` | **Logični OR**: Primerja dva Boolean izraza. Vrne true, če je vsaj ena stran resnična     | `(5 > 6) \|\| (5 < 6) //Ena stran je neresnična, druga resnična. Vrne true` |
+| `!`    | **Logični NOT**: Vrne nasprotno vrednost Boolean izraza                                   | `!(5 > 6) // 5 ni večji od 6, ampak "!" bo vrnil true`                  |
 
 ## Pogoji in odločitve z logičnimi operatorji
 
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Operator negacije
 
-Do sedaj ste videli, kako lahko uporabite `if...else` stavek za ustvarjanje pogojne logike. Vse, kar gre v `if`, mora biti ovrednoteno kot true/false. Z uporabo operatorja `!` lahko _negirate_ izraz. Videti bi bilo takole:
+Do sedaj ste videli, kako lahko uporabite if...else stavek za ustvarjanje pogojne logike. Vse, kar gre v if, mora biti ocenjeno kot true/false. Z uporabo operatorja `!` lahko _negirate_ izraz. Videti bi bilo takole:
 
 ```javascript
 if (!condition) {
@@ -171,7 +171,7 @@ if (!condition) {
 
 ### Ternarni izrazi
 
-`if...else` ni edini način za izražanje logike odločanja. Uporabite lahko tudi nekaj, kar se imenuje ternarni operator. Sintaksa za to je videti takole:
+If...else ni edini način za izražanje logike odločanja. Uporabite lahko tudi nekaj, kar se imenuje ternarni operator. Sintaksa za to je videti takole:
 
 ```javascript
 let variable = condition ? <return this if true> : <return this if false>
@@ -190,8 +190,8 @@ let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 Zgornje pravi:
 
 - če je `firstNumber` večji od `secondNumber`
-- potem dodelite `firstNumber` spremenljivki `biggestNumber`
-- sicer dodelite `secondNumber`.
+- potem dodeli `firstNumber` spremenljivki `biggestNumber`
+- sicer dodeli `secondNumber`.
 
 Ternarni izraz je le kompaktni način pisanja spodnje kode:
 
@@ -220,7 +220,7 @@ Ustvarite program, ki je najprej napisan z logičnimi operatorji, nato pa ga pre
 
 Preberite več o številnih operatorjih, ki so na voljo uporabniku, [na MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
-Prebrskajte čudovit [priročnik za operatorje](https://joshwcomeau.com/operator-lookup/) Josha Comeaua!
+Prebrskajte čudovit [pregled operatorjev](https://joshwcomeau.com/operator-lookup/) Josha Comeaua!
 
 ## Naloga
 
@@ -229,4 +229,4 @@ Prebrskajte čudovit [priročnik za operatorje](https://joshwcomeau.com/operator
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni prevod s strani človeka. Ne prevzemamo odgovornosti za morebitna napačna razumevanja ali napačne interpretacije, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da se zavedate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo strokovno človeško prevajanje. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

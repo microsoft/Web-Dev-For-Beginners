@@ -1,27 +1,27 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-27T22:10:39+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T12:29:21+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "hr"
 }
 -->
-# Izrada bankovne aplikacije, 1. dio: HTML predlošci i rute u web aplikaciji
+# Izrada Bankovne Aplikacije, 1. dio: HTML Predlošci i Rute u Web Aplikaciji
 
-## Kviz prije predavanja
+## Pred-lezioni kviz
 
-[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/41)
+[Pred-lezioni kviz](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Uvod
 
-Od pojave JavaScripta u preglednicima, web stranice postaju interaktivnije i složenije nego ikad. Web tehnologije se sada često koriste za stvaranje potpuno funkcionalnih aplikacija koje se pokreću izravno u pregledniku, a nazivamo ih [web aplikacijama](https://en.wikipedia.org/wiki/Web_application). Budući da su web aplikacije vrlo interaktivne, korisnici ne žele čekati potpuno ponovno učitavanje stranice svaki put kada se izvrši neka radnja. Zato se JavaScript koristi za ažuriranje HTML-a izravno putem DOM-a, kako bi se pružilo glatko korisničko iskustvo.
+Od pojave JavaScripta u preglednicima, web stranice postaju interaktivnije i složenije nego ikad. Web tehnologije sada se često koriste za stvaranje potpuno funkcionalnih aplikacija koje se pokreću izravno u pregledniku, a nazivamo ih [web aplikacijama](https://en.wikipedia.org/wiki/Web_application). Budući da su web aplikacije vrlo interaktivne, korisnici ne žele čekati potpuno ponovno učitavanje stranice svaki put kad se izvrši neka radnja. Zbog toga se JavaScript koristi za ažuriranje HTML-a izravno putem DOM-a, kako bi se osiguralo glatko korisničko iskustvo.
 
 U ovoj lekciji postavit ćemo temelje za izradu bankovne web aplikacije, koristeći HTML predloške za stvaranje više ekrana koji se mogu prikazivati i ažurirati bez potrebe za ponovnim učitavanjem cijele HTML stranice.
 
 ### Preduvjeti
 
-Trebat će vam lokalni web poslužitelj za testiranje web aplikacije koju ćemo izraditi u ovoj lekciji. Ako ga nemate, možete instalirati [Node.js](https://nodejs.org) i koristiti naredbu `npx lite-server` iz mape vašeg projekta. To će stvoriti lokalni web poslužitelj i otvoriti vašu aplikaciju u pregledniku.
+Potrebno vam je lokalni web poslužitelj za testiranje web aplikacije koju ćemo izraditi u ovoj lekciji. Ako ga nemate, možete instalirati [Node.js](https://nodejs.org) i koristiti naredbu `npx lite-server` iz mape vašeg projekta. To će stvoriti lokalni web poslužitelj i otvoriti vašu aplikaciju u pregledniku.
 
 ### Priprema
 
@@ -47,10 +47,10 @@ Na svom računalu stvorite mapu pod nazivom `bank` s datotekom `index.html` unut
 
 Ako želite stvoriti više ekrana za web stranicu, jedno rješenje bi bilo stvoriti jednu HTML datoteku za svaki ekran koji želite prikazati. Međutim, ovo rješenje dolazi s nekim neugodnostima:
 
-- Morate ponovno učitati cijeli HTML prilikom promjene ekrana, što može biti sporo.
+- Morate ponovno učitati cijeli HTML prilikom prebacivanja ekrana, što može biti sporo.
 - Teško je dijeliti podatke između različitih ekrana.
 
-Drugi pristup je imati samo jednu HTML datoteku i definirati više [HTML predložaka](https://developer.mozilla.org/docs/Web/HTML/Element/template) koristeći element `<template>`. Predložak je višekratni HTML blok koji preglednik ne prikazuje i koji se mora instancirati u vrijeme izvođenja pomoću JavaScripta.
+Drugi pristup je imati samo jednu HTML datoteku i definirati više [HTML predložaka](https://developer.mozilla.org/docs/Web/HTML/Element/template) koristeći element `<template>`. Predložak je višekratni HTML blok koji preglednik ne prikazuje, a mora se instancirati u vrijeme izvođenja pomoću JavaScripta.
 
 ### Zadatak
 
@@ -64,7 +64,7 @@ Dodijelili smo mu `id` kako bismo ga kasnije lakše pronašli pomoću JavaScript
 
 > Savjet: budući da će sadržaj ovog elementa biti zamijenjen, možemo staviti poruku ili indikator učitavanja koji će se prikazivati dok se aplikacija učitava.
 
-Zatim, dodajmo ispod HTML predložak za stranicu za prijavu. Za sada ćemo tamo staviti samo naslov i odjeljak koji sadrži poveznicu koju ćemo koristiti za navigaciju.
+Zatim, dodajmo ispod HTML predložak za stranicu za prijavu. Za sada ćemo tamo staviti samo naslov i sekciju koja sadrži poveznicu koju ćemo koristiti za navigaciju.
 
 ```html
 <template id="login">
@@ -75,11 +75,11 @@ Zatim, dodajmo ispod HTML predložak za stranicu za prijavu. Za sada ćemo tamo 
 </template>
 ```
 
-Zatim ćemo dodati još jedan HTML predložak za stranicu nadzorne ploče. Ova stranica će sadržavati različite odjeljke:
+Zatim ćemo dodati drugi HTML predložak za stranicu nadzorne ploče. Ova stranica će sadržavati različite sekcije:
 
 - Zaglavlje s naslovom i poveznicom za odjavu
 - Trenutni saldo bankovnog računa
-- Popis transakcija prikazan u tablici
+- Popis transakcija, prikazan u tablici
 
 ```html
 <template id="dashboard">
@@ -112,15 +112,15 @@ Zatim ćemo dodati još jedan HTML predložak za stranicu nadzorne ploče. Ova s
 
 ## Prikazivanje predložaka pomoću JavaScripta
 
-Ako pokušate otvoriti trenutnu HTML datoteku u pregledniku, vidjet ćete da se zaglavilo na prikazu `Loading...`. To je zato što trebamo dodati JavaScript kod za instanciranje i prikazivanje HTML predložaka.
+Ako pokušate otvoriti trenutnu HTML datoteku u pregledniku, vidjet ćete da ostaje prikazana poruka `Loading...`. To je zato što moramo dodati JavaScript kod za instanciranje i prikazivanje HTML predložaka.
 
 Instanciranje predloška obično se radi u 3 koraka:
 
 1. Dohvatite element predloška u DOM-u, na primjer pomoću [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
-2. Klonirajte element predloška pomoću [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
-3. Priključite ga na DOM ispod vidljivog elementa, na primjer pomoću [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
+2. Klonirajte element predloška, koristeći [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
+3. Priložite ga DOM-u ispod vidljivog elementa, na primjer pomoću [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
-✅ Zašto trebamo klonirati predložak prije nego ga priključimo na DOM? Što mislite da bi se dogodilo ako preskočimo ovaj korak?
+✅ Zašto moramo klonirati predložak prije nego ga priložimo DOM-u? Što mislite da bi se dogodilo ako preskočimo ovaj korak?
 
 ### Zadatak
 
@@ -142,7 +142,7 @@ function updateRoute(templateId) {
 }
 ```
 
-Ovdje radimo upravo 3 koraka opisana gore. Instanciramo predložak s `id`-om `templateId` i stavljamo njegov klonirani sadržaj unutar našeg rezerviranog mjesta aplikacije. Napominjemo da trebamo koristiti `cloneNode(true)` kako bismo kopirali cijelo podstablo predloška.
+Ovdje radimo upravo 3 koraka opisana gore. Instanciramo predložak s `id`-om `templateId` i stavljamo njegov klonirani sadržaj unutar našeg rezerviranog mjesta aplikacije. Napominjemo da moramo koristiti `cloneNode(true)` kako bismo kopirali cijelo podstablo predloška.
 
 Sada pozovite ovu funkciju s jednim od predložaka i pogledajte rezultat.
 
@@ -154,7 +154,7 @@ updateRoute('login');
 
 ## Stvaranje ruta
 
-Kada govorimo o web aplikaciji, nazivamo *Routing* namjeru mapiranja **URL-ova** na određene ekrane koji bi se trebali prikazati. Na web stranici s više HTML datoteka, to se automatski radi jer se putovi datoteka odražavaju na URL. Na primjer, s ovim datotekama u mapi vašeg projekta:
+Kada govorimo o web aplikaciji, *Routing* označava namjeru mapiranja **URL-ova** na određene ekrane koji bi trebali biti prikazani. Na web stranici s više HTML datoteka, ovo se automatski radi jer se putovi datoteka odražavaju na URL-u. Na primjer, s ovim datotekama u mapi vašeg projekta:
 
 ```
 mywebsite/index.html
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-Sada malo izmijenimo funkciju `updateRoute`. Umjesto da izravno prosljeđujemo `templateId` kao argument, želimo ga dohvatiti prvo gledajući trenutni URL, a zatim koristiti našu mapu za dobivanje odgovarajuće vrijednosti `templateId`. Možemo koristiti [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) za dobivanje samo dijela puta iz URL-a.
+Sada malo izmijenimo funkciju `updateRoute`. Umjesto da izravno prosljeđujemo `templateId` kao argument, želimo ga dohvatiti prvo gledajući trenutni URL, a zatim koristiti našu mapu za dobivanje odgovarajuće vrijednosti `templateId`. Možemo koristiti [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) za dohvaćanje samo dijela puta iz URL-a.
 
 ```js
 function updateRoute() {
@@ -209,11 +209,11 @@ Sljedeći korak za našu aplikaciju je dodavanje mogućnosti navigacije između 
 1. Ažuriranje trenutnog URL-a
 2. Ažuriranje prikazanog predloška na temelju novog URL-a
 
-Drugi dio smo već riješili s funkcijom `updateRoute`, pa moramo smisliti kako ažurirati trenutni URL.
+Drugi dio već smo riješili funkcijom `updateRoute`, pa moramo smisliti kako ažurirati trenutni URL.
 
 Morat ćemo koristiti JavaScript, a posebno [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) koji omogućuje ažuriranje URL-a i stvaranje novog unosa u povijesti pregledavanja, bez ponovnog učitavanja HTML-a.
 
-> Napomena: Iako se HTML element sidra [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) može koristiti samostalno za stvaranje hiperveza na različite URL-ove, on će po zadanom učiniti da preglednik ponovno učita HTML. Potrebno je spriječiti ovo ponašanje prilikom rukovanja rutama pomoću prilagođenog JavaScripta, koristeći funkciju `preventDefault()` na događaju klika.
+> Napomena: Iako se HTML element sidra [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) može koristiti samostalno za stvaranje hiperlinkova na različite URL-ove, on će po zadanom učiniti da preglednik ponovno učita HTML. Potrebno je spriječiti ovo ponašanje prilikom rukovanja rutama pomoću prilagođenog JavaScripta, koristeći funkciju preventDefault() na događaju klika.
 
 ### Zadatak
 
@@ -226,7 +226,7 @@ function navigate(path) {
 }
 ```
 
-Ova metoda prvo ažurira trenutni URL na temelju zadanog puta, a zatim ažurira predložak. Svojstvo `window.location.origin` vraća korijen URL-a, omogućujući nam rekonstrukciju kompletnog URL-a iz zadanog puta.
+Ova metoda prvo ažurira trenutni URL na temelju danog puta, a zatim ažurira predložak. Svojstvo `window.location.origin` vraća korijen URL-a, omogućujući nam rekonstrukciju kompletnog URL-a iz danog puta.
 
 Sada kada imamo ovu funkciju, možemo riješiti problem koji imamo ako put ne odgovara nijednoj definiranoj ruti. Izmijenit ćemo funkciju `updateRoute` dodavanjem povratne opcije na jednu od postojećih ruta ako ne možemo pronaći podudaranje.
 
@@ -244,7 +244,7 @@ function updateRoute() {
 
 Ako ruta ne može biti pronađena, sada ćemo preusmjeriti na stranicu `login`.
 
-Sada stvorimo funkciju za dohvaćanje URL-a kada se klikne na poveznicu i za sprječavanje zadano ponašanje preglednika za poveznice:
+Sada stvorimo funkciju za dohvaćanje URL-a kada se klikne na poveznicu i za sprječavanje zadanog ponašanja preglednika za poveznice:
 
 ```js
 function onLinkClick(event) {
@@ -277,18 +277,18 @@ Korištenje `history.pushState` stvara nove unose u povijesti navigacije pregled
 
 Ako pokušate kliknuti na gumb za povratak nekoliko puta, vidjet ćete da se trenutni URL mijenja i povijest se ažurira, ali isti predložak ostaje prikazan.
 
-To je zato što aplikacija ne zna da trebamo pozvati `updateRoute()` svaki put kada se povijest promijeni. Ako pogledate dokumentaciju za [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), možete vidjeti da ako se stanje promijeni - što znači da smo se pomaknuli na drugi URL - događaj [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) se pokreće. Koristit ćemo to za rješavanje ovog problema.
+To je zato što aplikacija ne zna da trebamo pozvati `updateRoute()` svaki put kad se povijest promijeni. Ako pogledate [dokumentaciju za `history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), možete vidjeti da ako se stanje promijeni - što znači da smo se pomaknuli na drugi URL - događaj [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) se aktivira. Koristit ćemo to za rješavanje ovog problema.
 
 ### Zadatak
 
-Kako bismo osigurali da se prikazani predložak ažurira kada se povijest preglednika promijeni, povezat ćemo novu funkciju koja poziva `updateRoute()`. To ćemo učiniti na dnu naše `app.js` datoteke:
+Kako bismo osigurali da se prikazani predložak ažurira kada se povijest preglednika promijeni, priložit ćemo novu funkciju koja poziva `updateRoute()`. To ćemo učiniti na dnu naše `app.js` datoteke:
 
 ```js
 window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Napomena: ovdje smo koristili [arrow funkciju](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) za deklariranje našeg `popstate` event handlera radi sažetosti, ali regularna funkcija bi radila isto.
+> Napomena: koristili smo [arrow funkciju](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) za deklariranje našeg `popstate` event handlera radi sažetosti, ali regularna funkcija bi radila isto.
 
 Evo osvježavajućeg videa o arrow funkcijama:
 
@@ -296,7 +296,7 @@ Evo osvježavajućeg videa o arrow funkcijama:
 
 > 🎥 Kliknite na sliku iznad za video o arrow funkcijama.
 
-Sada pokušajte koristiti gumbe za povratak i naprijed u pregledniku i provjerite da se prikazana ruta ispravno ažurira ovaj put.
+Sada pokušajte koristiti gumbe za povratak i naprijed u vašem pregledniku i provjerite da se prikazana ruta ispravno ažurira ovaj put.
 
 ---
 
@@ -304,13 +304,13 @@ Sada pokušajte koristiti gumbe za povratak i naprijed u pregledniku i provjerit
 
 Dodajte novi predložak i rutu za treću stranicu koja prikazuje zasluge za ovu aplikaciju.
 
-## Kviz nakon predavanja
+## Kviz nakon lekcije
 
-[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/42)
+[Kviz nakon lekcije](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Pregled i samostalno učenje
 
-Routing je jedan od iznenađujuće složenih dijelova web razvoja, posebno kako se web kreće od ponašanja osvježavanja stranica prema osvježavanju stranica u aplikacijama s jednom stranicom (Single Page Application). Pročitajte malo o [kako Azure Static Web App usluga](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) rukuje rutama. Možete li objasniti zašto su neke od odluka opisanih u tom dokumentu nužne?
+Rute su jedan od iznenađujuće složenih dijelova web razvoja, posebno kako se web kreće od ponašanja osvježavanja stranica prema osvježavanju stranica u aplikacijama s jednom stranicom. Pročitajte malo o [kako Azure Static Web App usluga](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) rukuje rutama. Možete li objasniti zašto su neke od odluka opisanih u tom dokumentu nužne?
 
 ## Zadatak
 
@@ -319,4 +319,4 @@ Routing je jedan od iznenađujuće složenih dijelova web razvoja, posebno kako 
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane stručnjaka. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije proizašle iz korištenja ovog prijevoda.

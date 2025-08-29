@@ -1,37 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-28T04:00:46+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T10:29:31+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "hu"
 }
 -->
-# Űrjáték készítése 6. rész: Befejezés és újrakezdés
+# Űrjáték építése 6. rész: Befejezés és újrakezdés
 
 ## Előadás előtti kvíz
 
 [Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Számos módja van annak, hogy kifejezzük egy játék *befejezési feltételét*. A játék készítőjeként rajtad múlik, hogy meghatározd, miért ér véget a játék. Íme néhány ok, ha feltételezzük, hogy az eddig épített űrjátékról van szó:
+Egy játékban különböző módokon lehet kifejezni a *befejezési feltételt*. Mint a játék készítője, rajtad múlik, hogy meghatározd, miért ér véget a játék. Íme néhány ok, ha feltételezzük, hogy az eddig épített űrjátékról beszélünk:
 
-- **`N` ellenséges hajó megsemmisítése**: Gyakori, hogy egy játékot különböző szintekre osztanak, és egy szint teljesítéséhez meg kell semmisíteni `N` ellenséges hajót.
-- **A hajód megsemmisült**: Vannak olyan játékok, ahol elveszíted a játékot, ha a hajód megsemmisül. Egy másik gyakori megközelítés az, hogy életek fogalmát vezetik be. Minden alkalommal, amikor a hajód megsemmisül, egy életet levonnak. Ha minden élet elfogy, akkor vége a játéknak.
-- **`N` pontot gyűjtöttél**: Egy másik gyakori befejezési feltétel, hogy pontokat gyűjts. Az, hogy hogyan szerzel pontokat, rajtad múlik, de gyakori, hogy pontokat rendelnek különböző tevékenységekhez, például ellenséges hajó megsemmisítéséhez vagy tárgyak gyűjtéséhez, amelyeket a tárgyak *eldobnak*, amikor megsemmisülnek.
-- **Egy szint teljesítése**: Ez több feltételt is magában foglalhat, például `X` ellenséges hajó megsemmisítése, `Y` pontok gyűjtése, vagy esetleg egy adott tárgy begyűjtése.
+- **`N` ellenséges hajó megsemmisült**: Gyakori, hogy ha egy játékot különböző szintekre osztasz, akkor egy szint teljesítéséhez `N` ellenséges hajót kell megsemmisíteni.
+- **A hajód megsemmisült**: Vannak olyan játékok, ahol elveszíted a játékot, ha a hajód megsemmisül. Egy másik gyakori megközelítés az, hogy életek fogalmát vezeted be. Minden alkalommal, amikor a hajód megsemmisül, elveszítesz egy életet. Ha minden életed elfogyott, akkor vége a játéknak.
+- **Összegyűjtöttél `N` pontot**: Egy másik gyakori befejezési feltétel, hogy pontokat gyűjts. Az, hogy hogyan szerzel pontokat, rajtad múlik, de gyakori, hogy pontokat rendelnek különböző tevékenységekhez, például egy ellenséges hajó megsemmisítéséhez vagy tárgyak gyűjtéséhez, amelyeket a tárgyak *eldobnak*, amikor megsemmisülnek.
+- **Teljesítettél egy szintet**: Ez több feltételt is magában foglalhat, például `X` ellenséges hajó megsemmisítését, `Y` pont összegyűjtését, vagy esetleg egy adott tárgy megszerzését.
 
 ## Újrakezdés
 
-Ha az emberek élvezik a játékodat, valószínűleg újra szeretnék játszani. Amikor a játék bármilyen okból véget ér, biztosítsd az újrakezdés lehetőségét.
+Ha az emberek élvezik a játékodat, valószínűleg újra szeretnék játszani. Amikor a játék bármilyen okból véget ér, biztosíts egy lehetőséget az újrakezdésre.
 
-✅ Gondolkodj el azon, hogy milyen feltételek mellett ér véget egy játék, és hogyan ösztönöznek az újrakezdésre.
+✅ Gondold át, hogy milyen feltételek mellett ér véget egy játék, és hogyan ösztönöznek az újrakezdésre.
 
 ## Mit kell építeni
 
 A következő szabályokat fogod hozzáadni a játékodhoz:
 
-1. **A játék megnyerése**. Ha minden ellenséges hajót megsemmisítettél, megnyered a játékot. Ezen kívül jeleníts meg valamilyen győzelmi üzenetet.
-1. **Újrakezdés**. Ha minden életed elfogyott, vagy megnyerted a játékot, biztosítsd az újrakezdés lehetőségét. Ne feledd! Újra kell inicializálnod a játékot, és a korábbi játékállapotot törölni kell.
+1. **A játék megnyerése**. Ha az összes ellenséges hajót megsemmisítetted, megnyered a játékot. Ezenkívül jeleníts meg valamilyen győzelmi üzenetet.
+2. **Újrakezdés**. Ha minden életed elfogyott, vagy megnyerted a játékot, biztosíts egy lehetőséget a játék újrakezdésére. Ne feledd! Újra kell inicializálnod a játékot, és a korábbi játékállapotot törölni kell.
 
 ## Ajánlott lépések
 
@@ -48,16 +48,16 @@ Keresd meg azokat a fájlokat, amelyeket a `your-work` almappában hoztak létre
 -| package.json
 ```
 
-Indítsd el a projektedet a `your_work` mappában az alábbi parancs begépelésével:
+A projektedet a `your_work` mappában indíthatod el az alábbi parancs beírásával:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy böngészőt, és írd be ezt a címet. A játékodnak játszható állapotban kell lennie.
+A fenti parancs egy HTTP szervert indít a `http://localhost:5000` címen. Nyiss meg egy böngészőt, és írd be ezt a címet. A játékodnak játszható állapotban kell lennie.
 
-> Tipp: hogy elkerüld a figyelmeztetéseket a Visual Studio Code-ban, szerkeszd a `window.onload` függvényt úgy, hogy a `gameLoopId`-t hívja meg (a `let` nélkül), és deklaráld a `gameLoopId`-t a fájl tetején, külön: `let gameLoopId;`
+> Tipp: hogy elkerüld a figyelmeztetéseket a Visual Studio Code-ban, szerkeszd a `window.onload` függvényt úgy, hogy a `gameLoopId`-t hívja meg (a `let` nélkül), és deklaráld a `gameLoopId`-t a fájl tetején külön: `let gameLoopId;`
 
 ### Kód hozzáadása
 
@@ -108,16 +108,16 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
     });
     ```
 
-1. **Új üzenettípusok hozzáadása**. Add hozzá ezeket az üzeneteket a constants objektumhoz:
+1. **Új üzenettípusok hozzáadása**. Add hozzá ezeket az Üzeneteket a constants objektumhoz:
 
     ```javascript
     GAME_END_LOSS: "GAME_END_LOSS",
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Újrakezdési kód hozzáadása**. Adj hozzá kódot, amely újraindítja a játékot egy kiválasztott gomb megnyomásával.
+2. **Újrakezdési kód hozzáadása**. Adj hozzá kódot, amely újraindítja a játékot egy kiválasztott gomb megnyomásakor.
 
-   1. **Hallgatás az `Enter` billentyű lenyomására**. Szerkeszd az ablakod eventListener-jét, hogy figyeljen erre a lenyomásra:
+   1. **Figyelj az `Enter` billentyű lenyomására**. Szerkeszd az ablakod eventListener-jét, hogy figyeljen erre a billentyűre:
 
     ```javascript
      else if(evt.key === "Enter") {
@@ -125,7 +125,7 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
       }
     ```
 
-   1. **Újrakezdési üzenet hozzáadása**. Add hozzá ezt az üzenetet az üzenetek constants objektumhoz:
+   1. **Újrakezdési üzenet hozzáadása**. Add hozzá ezt az Üzenetet az Üzenetek konstanshoz:
 
         ```javascript
         KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
@@ -133,7 +133,7 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
 
 1. **Játékszabályok megvalósítása**. Valósítsd meg a következő játékszabályokat:
 
-   1. **Játékos győzelmi feltétele**. Ha minden ellenséges hajót megsemmisítettél, jeleníts meg egy győzelmi üzenetet.
+   1. **Játékos győzelmi feltétele**. Ha az összes ellenséges hajót megsemmisítetted, jeleníts meg egy győzelmi üzenetet.
 
       1. Először hozz létre egy `displayMessage()` függvényt:
 
@@ -171,9 +171,9 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
         }
         ```
 
-   1. **Újrakezdési logika**. Ha minden élet elfogyott, vagy a játékos megnyerte a játékot, jelenítsd meg, hogy a játék újrakezdhető. Ezen kívül indítsd újra a játékot, amikor az *újrakezdés* gombot megnyomják (te döntheted el, melyik gomb legyen az újrakezdéshez hozzárendelve).
+   1. **Újrakezdési logika**. Ha minden életed elfogyott, vagy megnyerted a játékot, jelenítsd meg, hogy a játék újraindítható. Ezenkívül indítsd újra a játékot, amikor az *újrakezdés* gombot megnyomják (te döntöd el, melyik billentyű legyen az újrakezdéshez rendelve).
 
-      1. Hozz létre egy `resetGame()` függvényt:
+      1. Hozd létre a `resetGame()` függvényt:
 
         ```javascript
         function resetGame() {
@@ -216,7 +216,7 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
 
 ## 🚀 Kihívás
 
-Adj hozzá hangot! Tudsz hangot hozzáadni, hogy fokozd a játékélményt, például amikor lézer találat történik, vagy a hős meghal vagy győz? Nézd meg ezt a [sandboxot](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play), hogy megtanuld, hogyan lehet hangot lejátszani JavaScript segítségével.
+Adj hozzá hangot! Tudsz hangot hozzáadni, hogy fokozd a játékélményt? Például, amikor egy lézer talál, vagy a hős meghal, vagy győz? Nézd meg ezt a [sandboxot](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play), hogy megtanuld, hogyan lehet hangot lejátszani JavaScript segítségével.
 
 ## Előadás utáni kvíz
 
@@ -224,13 +224,13 @@ Adj hozzá hangot! Tudsz hangot hozzáadni, hogy fokozd a játékélményt, pél
 
 ## Áttekintés és önálló tanulás
 
-A feladatod, hogy készíts egy új mintajátékot, ezért fedezd fel néhány érdekes játékot, hogy inspirációt kapj, milyen típusú játékot építhetnél.
+A feladatod egy új minta játék létrehozása, ezért fedezz fel néhány érdekes játékot, hogy inspirációt kapj, milyen típusú játékot építhetnél.
 
 ## Feladat
 
-[Mintajáték készítése](assignment.md)
+[Minta játék építése](assignment.md)
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+**Felelősségkizárás**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális, emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

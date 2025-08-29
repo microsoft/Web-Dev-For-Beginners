@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-27T22:42:28+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T12:53:30+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "sl"
 }
@@ -43,9 +43,9 @@ To je prazna tabela, vendar lahko tabele deklariramo že napolnjene s podatki. V
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 ```
 
-Vrednosti v tabeli so dodeljene edinstveni vrednosti, imenovani **indeks**, ki je celo število, dodeljeno glede na oddaljenost od začetka tabele. V zgornjem primeru ima niz "Čokolada" indeks 0, indeks "Rocky Road" pa je 4. Indeks uporabite z oglati oklepaji za pridobivanje, spreminjanje ali vstavljanje vrednosti v tabelo.
+Vrednosti v tabeli so dodeljene edinstveni vrednosti, imenovani **indeks**, ki je celo število, dodeljeno glede na oddaljenost od začetka tabele. V zgornjem primeru ima niz "Chocolate" indeks 0, indeks "Rocky Road" pa je 4. Indeks uporabite z oglati oklepaji za pridobivanje, spreminjanje ali vstavljanje vrednosti v tabelo.
 
-✅ Vas preseneča, da tabele začnejo z indeksom nič? V nekaterih programskih jezikih indeksi začnejo z 1. Obstaja zanimiva zgodovina o tem, ki jo lahko [preberete na Wikipediji](https://en.wikipedia.org/wiki/Zero-based_numbering).
+✅ Vas preseneča, da tabele začnejo z indeksom nič? V nekaterih programskih jezikih indeksi začnejo z 1. Zanimivo zgodovino o tem lahko [preberete na Wikipediji](https://en.wikipedia.org/wiki/Zero-based_numbering).
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
@@ -64,7 +64,7 @@ In novo vrednost lahko vstavite na določen indeks, kot je to:
 iceCreamFlavors[5] = "Cookie Dough"; //Added "Cookie Dough"
 ```
 
-✅ Pogostejši način dodajanja vrednosti v tabelo je uporaba operaterjev tabele, kot je array.push().
+✅ Pogostejši način dodajanja vrednosti v tabelo je uporaba operaterjev, kot je array.push().
 
 Če želite izvedeti, koliko elementov je v tabeli, uporabite lastnost `length`.
 
@@ -77,15 +77,15 @@ iceCreamFlavors.length; //5
 
 ## Zanke
 
-Zanke nam omogočajo izvajanje ponavljajočih se ali **iterativnih** nalog, kar lahko prihrani veliko časa in kode. Vsaka iteracija se lahko razlikuje po svojih spremenljivkah, vrednostih in pogojih. V JavaScriptu obstajajo različne vrste zank, ki imajo majhne razlike, vendar v bistvu opravljajo isto nalogo: prehajajo skozi podatke.
+Zanke nam omogočajo izvajanje ponavljajočih se ali **iterativnih** nalog in lahko prihranijo veliko časa in kode. Vsaka iteracija se lahko razlikuje po svojih spremenljivkah, vrednostih in pogojih. V JavaScriptu obstajajo različne vrste zank, ki imajo vse majhne razlike, vendar v bistvu opravljajo isto nalogo: ponavljajo se nad podatki.
 
-### Zanka For
+### For zanka
 
-Zanka `for` zahteva 3 dele za iteracijo:
-- `števec` Spremenljivka, ki je običajno inicializirana s številom, ki šteje število iteracij
-- `pogoj` Izraz, ki uporablja primerjalne operatorje, da povzroči ustavitev zanke, ko je `false`
-- `iteracijski izraz` Izvede se na koncu vsake iteracije, običajno za spremembo vrednosti števca
-  
+`for` zanka zahteva 3 dele za iteracijo:
+- `counter` Spremenljivka, ki je običajno inicializirana s številom, ki šteje število iteracij
+- `condition` Izraz, ki uporablja primerjalne operatorje, da povzroči ustavitev zanke, ko je `false`
+- `iteration-expression` Izvede se na koncu vsake iteracije, običajno se uporablja za spreminjanje vrednosti števca
+
 ```javascript
 // Counting up to 10
 for (let i = 0; i < 10; i++) {
@@ -93,11 +93,11 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-✅ Zaženite to kodo v konzoli brskalnika. Kaj se zgodi, ko naredite majhne spremembe števca, pogoja ali iteracijskega izraza? Ali lahko naredite, da se izvaja nazaj, kot odštevanje?
+✅ Zaženite to kodo v konzoli brskalnika. Kaj se zgodi, ko naredite majhne spremembe števca, pogoja ali izraza za iteracijo? Ali lahko naredite, da se zanka izvaja nazaj, kot odštevanje?
 
-### Zanka While
+### While zanka
 
-Za razliko od sintakse zanke `for`, zanke `while` zahtevajo le pogoj, ki bo ustavil zanko, ko bo pogoj postal `false`. Pogoji v zankah običajno temeljijo na drugih vrednostih, kot so števci, in jih je treba upravljati med zanko. Začetne vrednosti števcev je treba ustvariti zunaj zanke, vsi izrazi za izpolnitev pogoja, vključno s spreminjanjem števca, pa morajo biti vzdrževani znotraj zanke.
+Za razliko od sintakse `for` zanke, `while` zanke zahtevajo le pogoj, ki bo ustavil zanko, ko bo pogoj postal `false`. Pogoji v zankah običajno temeljijo na drugih vrednostih, kot so števci, in jih je treba upravljati med zanko. Začetne vrednosti števcev je treba ustvariti zunaj zanke, vsi izrazi za izpolnitev pogoja, vključno s spreminjanjem števca, pa morajo biti vzdrževani znotraj zanke.
 
 ```javascript
 //Counting up to 10
@@ -108,7 +108,7 @@ while (i < 10) {
 }
 ```
 
-✅ Zakaj bi izbrali zanko for namesto while? 17.000 uporabnikov je imelo isto vprašanje na StackOverflow, in nekatera mnenja [bi vam lahko bila zanimiva](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
+✅ Zakaj bi izbrali for zanko namesto while zanke? 17.000 uporabnikov je imelo isto vprašanje na StackOverflow, nekatera mnenja [bi vam lahko bila zanimiva](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
 
 ## Zanke in tabele
 
@@ -122,13 +122,13 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 } //Ends when all flavors are printed
 ```
 
-✅ Eksperimentirajte z iteracijo skozi tabelo po svoji izbiri v konzoli brskalnika.
+✅ Eksperimentirajte z iteracijo nad tabelo po svoji izbiri v konzoli brskalnika.
 
 ---
 
 ## 🚀 Izziv
 
-Obstajajo tudi drugi načini iteracije skozi tabele, poleg zank for in while. Obstajajo [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) in [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Prepišite svojo zanko skozi tabelo z eno od teh tehnik.
+Obstajajo tudi drugi načini iteracije nad tabelami, poleg for in while zank. Obstajajo [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) in [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Prepišite svojo zanko nad tabelo z eno od teh tehnik.
 
 ## Kviz po predavanju
 [Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/14)
@@ -139,7 +139,7 @@ Tabele v JavaScriptu imajo veliko metod, ki so izjemno uporabne za manipulacijo 
 
 ## Naloga
 
-[Iterirajte skozi tabelo](assignment.md)
+[Iterirajte tabelo](assignment.md)
 
 ---
 

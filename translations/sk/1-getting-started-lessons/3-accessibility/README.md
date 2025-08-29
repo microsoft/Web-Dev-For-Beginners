@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e4cd5b1faed4adab5acf720f82798003",
-  "translation_date": "2025-08-27T23:02:18+00:00",
+  "original_hash": "f0c88c3e2cefa8952d356f802b1e47ca",
+  "translation_date": "2025-08-29T11:20:59+00:00",
   "source_file": "1-getting-started-lessons/3-accessibility/README.md",
   "language_code": "sk"
 }
@@ -13,27 +13,27 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kvíz pred prednáškou
-[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/5)
+[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/)
 
-> Sila webu spočíva v jeho univerzálnosti. Prístup pre každého, bez ohľadu na zdravotné postihnutie, je nevyhnutným aspektom.
+> Sila webu spočíva v jeho univerzálnosti. Prístup pre každého, bez ohľadu na postihnutie, je nevyhnutným aspektom.
 >
 > \- Sir Timothy Berners-Lee, riaditeľ W3C a vynálezca World Wide Web
 
-Tento citát dokonale zdôrazňuje dôležitosť vytvárania prístupných webových stránok. Aplikácia, ktorá nie je prístupná pre všetkých, je zo svojej podstaty vylučujúca. Ako weboví vývojári by sme mali mať prístupnosť vždy na pamäti. Ak sa na to zameriate už od začiatku, budete na dobrej ceste zabezpečiť, že všetci budú mať prístup k stránkam, ktoré vytvoríte. V tejto lekcii sa naučíte o nástrojoch, ktoré vám môžu pomôcť zabezpečiť prístupnosť vašich webových zdrojov, a o tom, ako stavať s ohľadom na prístupnosť.
+Tento citát dokonale zdôrazňuje dôležitosť vytvárania prístupných webových stránok. Aplikácia, ktorá nie je prístupná pre všetkých, je zo svojej podstaty vylučujúca. Ako weboví vývojári by sme mali mať prístupnosť vždy na pamäti. Ak sa na to zameriate už od začiatku, budete na dobrej ceste zabezpečiť, že všetci budú mať prístup k stránkam, ktoré vytvoríte. V tejto lekcii sa naučíte o nástrojoch, ktoré vám môžu pomôcť zabezpečiť prístupnosť vašich webových zdrojov, a ako stavať s ohľadom na prístupnosť.
 
 > Túto lekciu si môžete prejsť na [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
 
-## Nástroje na použitie
+## Nástroje, ktoré môžete použiť
 
 ### Čítačky obrazovky
 
 Jedným z najznámejších nástrojov na prístupnosť sú čítačky obrazovky.
 
-[Čítačky obrazovky](https://en.wikipedia.org/wiki/Screen_reader) sú bežne používané klientmi so zrakovým postihnutím. Tak ako venujeme čas tomu, aby prehliadač správne sprostredkoval informácie, ktoré chceme zdieľať, musíme zabezpečiť, aby to isté dokázala aj čítačka obrazovky.
+[Čítačky obrazovky](https://en.wikipedia.org/wiki/Screen_reader) sú bežne používané klientmi so zrakovým postihnutím. Rovnako ako sa snažíme zabezpečiť, aby prehliadač správne sprostredkoval informácie, ktoré chceme zdieľať, musíme zabezpečiť, aby to isté dokázala aj čítačka obrazovky.
 
 V základnej podobe čítačka obrazovky číta stránku odhora nadol nahlas. Ak je vaša stránka čisto textová, čítačka sprostredkuje informácie podobne ako prehliadač. Samozrejme, webové stránky zriedka obsahujú iba text; obsahujú odkazy, grafiku, farby a ďalšie vizuálne prvky. Je potrebné dbať na to, aby tieto informácie boli čítačkou obrazovky správne interpretované.
 
-Každý webový vývojár by sa mal oboznámiť s čítačkou obrazovky. Ako bolo uvedené vyššie, je to klient, ktorý vaši používatelia využívajú. Rovnako ako poznáte fungovanie prehliadača, mali by ste sa naučiť, ako funguje čítačka obrazovky. Našťastie sú čítačky obrazovky zabudované vo väčšine operačných systémov.
+Každý webový vývojár by sa mal oboznámiť s čítačkou obrazovky. Ako bolo uvedené vyššie, je to klient, ktorý vaši používatelia využijú. Rovnako ako poznáte fungovanie prehliadača, mali by ste sa naučiť, ako funguje čítačka obrazovky. Našťastie sú čítačky obrazovky zabudované vo väčšine operačných systémov.
 
 Niektoré prehliadače majú tiež zabudované nástroje a rozšírenia, ktoré dokážu čítať text nahlas alebo poskytovať základné navigačné funkcie, ako napríklad [tieto nástroje zamerané na prístupnosť v prehliadači Edge](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features). Tieto nástroje sú tiež dôležité, ale fungujú veľmi odlišne od čítačiek obrazovky a nemali by byť považované za nástroje na testovanie čítačiek obrazovky.
 
@@ -41,9 +41,9 @@ Niektoré prehliadače majú tiež zabudované nástroje a rozšírenia, ktoré 
 
 ### Priblíženie (Zoom)
 
-Ďalším nástrojom, ktorý bežne používajú ľudia so zrakovým postihnutím, je priblíženie. Najzákladnejší typ priblíženia je statický zoom, ovládaný pomocou `Control + znamienko plus (+)` alebo znížením rozlíšenia obrazovky. Tento typ priblíženia spôsobí, že sa celá stránka zväčší, takže použitie [responzívneho dizajnu](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) je dôležité na zabezpečenie dobrého používateľského zážitku pri zvýšených úrovniach priblíženia.
+Ďalším nástrojom, ktorý často používajú ľudia so zrakovým postihnutím, je priblíženie. Najzákladnejší typ priblíženia je statické priblíženie, ovládané pomocou `Control + znamienko plus (+)` alebo znížením rozlíšenia obrazovky. Tento typ priblíženia spôsobí, že sa celá stránka zväčší, takže použitie [responzívneho dizajnu](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) je dôležité na zabezpečenie dobrého používateľského zážitku pri zvýšených úrovniach priblíženia.
 
-Iný typ priblíženia využíva špecializovaný softvér na zväčšenie jednej oblasti obrazovky a posúvanie, podobne ako pri použití skutočnej lupy. Vo Windows je zabudovaný [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198), a [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) je softvér tretích strán na zväčšovanie s viacerými funkciami a väčšou používateľskou základňou. Na macOS a iOS je zabudovaný softvér na zväčšovanie s názvom [Zoom](https://www.apple.com/accessibility/mac/vision/).
+Ďalší typ priblíženia využíva špecializovaný softvér na zväčšenie jednej oblasti obrazovky a posúvanie, podobne ako pri použití skutočnej lupy. Vo Windows je zabudovaný [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198), a [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) je softvér tretích strán s viacerými funkciami a väčšou používateľskou základňou. Na macOS a iOS je zabudovaný softvér na zväčšenie s názvom [Zoom](https://www.apple.com/accessibility/mac/vision/).
 
 ### Kontrola kontrastu
 
@@ -53,17 +53,17 @@ Farby na webových stránkach musia byť starostlivo vybrané, aby vyhovovali po
 
 ### Lighthouse
 
-V oblasti nástrojov pre vývojárov vo vašom prehliadači nájdete nástroj Lighthouse. Tento nástroj je dôležitý na získanie prvého pohľadu na prístupnosť (ako aj iné analýzy) webovej stránky. Aj keď je dôležité nespoliehať sa výlučne na Lighthouse, skóre 100 % je veľmi užitočné ako základ.
+V oblasti nástrojov pre vývojárov vo vašom prehliadači nájdete nástroj Lighthouse. Tento nástroj je dôležitý na získanie prvého pohľadu na prístupnosť (ako aj iné analýzy) webovej stránky. Aj keď sa na Lighthouse nemožno spoliehať výlučne, skóre 100 % je veľmi užitočné ako základ.
 
-✅ Nájdite Lighthouse v paneli nástrojov pre vývojárov vo vašom prehliadači a spustite analýzu na akejkoľvek stránke. Čo ste zistili?
+✅ Nájdite Lighthouse v paneli nástrojov pre vývojárov vášho prehliadača a spustite analýzu na akejkoľvek stránke. Čo ste zistili?
 
 ## Navrhovanie s ohľadom na prístupnosť
 
-Prístupnosť je pomerne rozsiahla téma. Aby sme vám pomohli, existuje množstvo dostupných zdrojov.
+Prístupnosť je pomerne rozsiahla téma. Na pomoc existuje množstvo dostupných zdrojov.
 
 - [Accessible U - University of Minnesota](https://accessibility.umn.edu/your-role/web-developers)
 
-Aj keď nebudeme schopní pokryť každý aspekt vytvárania prístupných stránok, nižšie sú uvedené niektoré základné princípy, ktoré budete chcieť implementovať. Navrhnúť prístupnú stránku od začiatku je **vždy** jednoduchšie, ako sa vracať k existujúcej stránke a robiť ju prístupnou.
+Aj keď nebudeme schopní pokryť každý aspekt vytvárania prístupných stránok, nižšie sú uvedené niektoré základné princípy, ktoré budete chcieť implementovať. Navrhovanie prístupnej stránky od začiatku je **vždy** jednoduchšie, ako sa vracať k existujúcej stránke a robiť ju prístupnou.
 
 ## Dobré princípy zobrazenia
 
@@ -75,25 +75,25 @@ Aj keď nebudeme schopní pokryť každý aspekt vytvárania prístupných strá
 
 ### Používajte správne HTML
 
-Pomocou CSS a JavaScriptu je možné vytvoriť akýkoľvek prvok, ktorý vyzerá ako akýkoľvek typ ovládacieho prvku. `<span>` by sa mohol použiť na vytvorenie `<button>`, a `<b>` by sa mohol stať hypertextovým odkazom. Aj keď by to mohlo byť považované za jednoduchšie na štýlovanie, čítačke obrazovky to nič nehovorí. Používajte vhodné HTML pri vytváraní ovládacích prvkov na stránke. Ak chcete hypertextový odkaz, použite `<a>`. Používanie správneho HTML pre správny ovládací prvok sa nazýva používanie sémantického HTML.
+Pomocou CSS a JavaScriptu je možné akýkoľvek prvok vyzerať ako akýkoľvek typ ovládacieho prvku. `<span>` by sa mohol použiť na vytvorenie `<button>`, a `<b>` by sa mohol stať hypertextovým odkazom. Aj keď by to mohlo byť považované za jednoduchšie na štýlovanie, čítačke obrazovky to nič nehovorí. Používajte vhodné HTML pri vytváraní ovládacích prvkov na stránke. Ak chcete hypertextový odkaz, použite `<a>`. Používanie správneho HTML pre správny ovládací prvok sa nazýva používanie sémantického HTML.
 
 ✅ Prejdite na akúkoľvek webovú stránku a zistite, či dizajnéri a vývojári používajú HTML správne. Nájdete tlačidlo, ktoré by malo byť odkazom? Tip: kliknite pravým tlačidlom myši a vyberte 'Zobraziť zdroj stránky' vo vašom prehliadači, aby ste si pozreli základný kód.
 
 ### Vytvorte popisnú hierarchiu nadpisov
 
-Používatelia čítačiek obrazovky [veľmi závisia od nadpisov](https://webaim.org/projects/screenreadersurvey8/#finding) na vyhľadávanie informácií a navigáciu na stránke. Písanie popisného obsahu nadpisov a používanie sémantických značiek nadpisov je dôležité pre vytvorenie ľahko navigovateľnej stránky pre používateľov čítačiek obrazovky.
+Používatelia čítačiek obrazovky [sa veľmi spoliehajú na nadpisy](https://webaim.org/projects/screenreadersurvey8/#finding) pri hľadaní informácií a navigácii na stránke. Písanie popisného obsahu nadpisov a používanie sémantických značiek nadpisov je dôležité pre vytvorenie ľahko navigovateľnej stránky pre používateľov čítačiek obrazovky.
 
 ### Používajte dobré vizuálne stopy
 
-CSS ponúka úplnú kontrolu nad vzhľadom akéhokoľvek prvku na stránke. Môžete vytvoriť textové polia bez obrysu alebo hypertextové odkazy bez podčiarknutia. Bohužiaľ, odstránenie týchto stôp môže sťažiť niekomu, kto na nich závisí, rozpoznať typ ovládacieho prvku.
+CSS ponúka úplnú kontrolu nad vzhľadom akéhokoľvek prvku na stránke. Môžete vytvoriť textové polia bez obrysu alebo hypertextové odkazy bez podčiarknutia. Bohužiaľ, odstránenie týchto stôp môže sťažiť niekomu, kto sa na ne spolieha, rozpoznať typ ovládacieho prvku.
 
 ## Dôležitosť textu odkazov
 
-Hypertextové odkazy sú jadrom navigácie na webe. Preto je zabezpečenie, aby čítačka obrazovky správne čítala odkazy, kľúčové pre umožnenie navigácie všetkým používateľom.
+Hypertextové odkazy sú jadrom navigácie na webe. Preto zabezpečenie, že čítačka obrazovky dokáže správne čítať odkazy, umožňuje všetkým používateľom navigovať na vašej stránke.
 
 ### Čítačky obrazovky a odkazy
 
-Ako by ste očakávali, čítačky obrazovky čítajú text odkazov rovnakým spôsobom, ako čítajú akýkoľvek iný text na stránke. S týmto na pamäti by text uvedený nižšie mohol pôsobiť úplne prijateľne.
+Ako by ste očakávali, čítačky obrazovky čítajú text odkazov rovnakým spôsobom, ako čítajú akýkoľvek iný text na stránke. S týmto na pamäti sa text uvedený nižšie môže zdať úplne prijateľný.
 
 > Malý tučniak, niekedy známy ako vílí tučniak, je najmenší tučniak na svete. [Kliknite sem](https://en.wikipedia.org/wiki/Little_penguin) pre viac informácií.
 
@@ -109,11 +109,11 @@ Pamätajte, že čítačky obrazovky sú iné rozhranie ako prehliadače s inou 
 
 ### Problém s "kliknite sem"
 
-Čítačky obrazovky majú tiež schopnosť čítať iba hypertextové odkazy na stránke, podobne ako by vidiaci človek prechádzal stránku a hľadal odkazy. Ak je text odkazu vždy "kliknite sem", všetko, čo používateľ bude počuť, je "kliknite sem, kliknite sem, kliknite sem, kliknite sem, kliknite sem, ..." Všetky odkazy sú teraz nerozoznateľné.
+Čítačky obrazovky majú tiež schopnosť čítať iba hypertextové odkazy na stránke, podobne ako by vidiaci človek prehľadával stránku kvôli odkazom. Ak je text odkazu vždy "kliknite sem", všetko, čo používateľ bude počuť, je "kliknite sem, kliknite sem, kliknite sem, kliknite sem, kliknite sem, ..." Všetky odkazy sú teraz nerozoznateľné.
 
 ### Dobrý text odkazu
 
-Dobrý text odkazu stručne opisuje, čo je na druhej strane odkazu. V uvedenom príklade o malých tučniakoch odkazuje odkaz na stránku Wikipédie o tomto druhu. Fráza *malý tučniak* by bola ideálnym textom odkazu, pretože jasne uvádza, čo sa niekto dozvie, ak klikne na odkaz - malý tučniak.
+Dobrý text odkazu stručne opisuje, čo je na druhej strane odkazu. V uvedenom príklade o malých tučniakoch odkazuje odkaz na stránku Wikipédie o tomto druhu. Fráza *malý tučniak* by bola ideálnym textom odkazu, pretože jasne hovorí, čo sa niekto dozvie, ak klikne na odkaz - malý tučniak.
 
 > [Malý tučniak](https://en.wikipedia.org/wiki/Little_penguin), niekedy známy ako vílí tučniak, je najmenší tučniak na svete.
 
@@ -132,13 +132,13 @@ Predstavte si nasledujúcu stránku:
 | Widget       | [Popis](../../../../1-getting-started-lessons/3-accessibility/')      | [Objednávka](../../../../1-getting-started-lessons/3-accessibility/') |
 | Super widget | [Popis](../../../../1-getting-started-lessons/3-accessibility/')      | [Objednávka](../../../../1-getting-started-lessons/3-accessibility/') |
 
-V tomto príklade dáva duplikovanie textu popisu a objednávky zmysel pre niekoho, kto používa prehliadač. Avšak niekto, kto používa čítačku obrazovky, by počul iba slová *popis* a *objednávka* opakovane bez kontextu.
+V tomto príklade duplikovanie textu popisu a objednávky dáva zmysel pre niekoho, kto používa prehliadač. Avšak niekto, kto používa čítačku obrazovky, by počul iba slová *popis* a *objednávka* opakovane bez kontextu.
 
 Na podporu týchto typov scenárov HTML podporuje sadu atribútov známych ako [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA). Tieto atribúty vám umožňujú poskytnúť čítačkám obrazovky ďalšie informácie.
 
-> **NOTE**: Rovnako ako mnohé aspekty HTML, podpora prehliadačov a čítačiek obrazovky sa môže líšiť. Väčšina hlavných klientov však podporuje atribúty ARIA.
+> **NOTE**: Rovnako ako pri mnohých aspektoch HTML, podpora prehliadačov a čítačiek obrazovky sa môže líšiť. Väčšina hlavných klientov však podporuje atribúty ARIA.
 
-Môžete použiť `aria-label` na popis odkazu, keď formát stránky neumožňuje iný spôsob. Popis pre widget by mohol byť nastavený ako
+Môžete použiť `aria-label` na popis odkazu, keď formát stránky neumožňuje inak. Popis pre widget by mohol byť nastavený ako
 
 ``` html
 <a href="#" aria-label="Widget description">description</a>
@@ -161,7 +161,7 @@ Je samozrejmé, že čítačky obrazovky nedokážu automaticky prečítať, čo
 
 ## Klávesnica
 
-Niektorí používatelia nemôžu používať myš alebo trackpad a namiesto toho sa spoliehajú na interakcie pomocou klávesnice, aby prechádzali z jedného prvku na druhý. Je dôležité, aby vaša webová stránka prezentovala váš obsah v logickom poradí, aby používateľ klávesnice mohol pristupovať ku každému interaktívnemu prvku, keď sa posúva dokumentom. Ak vytvárate svoje webové stránky so sémantickým označením a používate CSS na štýlovanie ich vizuálneho roz
+Niektorí používatelia nemôžu používať myš alebo trackpad a namiesto toho sa spoliehajú na interakcie pomocou klávesnice, aby prechádzali z jedného prvku na druhý. Je dôležité, aby vaša webová stránka prezentovala obsah v logickom poradí, aby používateľ klávesnice mohol pristupovať ku každému interaktívnemu prvku, keď sa posúva dokumentom. Ak vytvárate svoje webové stránky so sémantickým označením a používate CSS na štýlovanie ich vizuálneho rozloženia, vaša stránka by mala byť navigovateľná pomocou klávesnice, ale je dôležité
 Mnohé vlády majú zákony týkajúce sa požiadaviek na prístupnosť. Preštudujte si zákony o prístupnosti vo vašej krajine. Čo je pokryté a čo nie? Príkladom je [táto vládna webová stránka](https://accessibility.blog.gov.uk/).
 
 ## Zadanie
@@ -173,4 +173,4 @@ Kredity: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) od I
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za záväzný zdroj. Pre dôležité informácie odporúčame profesionálny preklad vykonaný človekom. Nezodpovedáme za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

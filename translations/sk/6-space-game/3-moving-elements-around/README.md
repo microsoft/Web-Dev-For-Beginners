@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-27T22:25:40+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T11:10:14+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "sk"
 }
@@ -22,9 +22,9 @@ Ako teda pohybujeme vecami na obrazovke? Všetko je to o karteziánskych súradn
 
 Typicky potrebujete nasledujúce kroky na dosiahnutie *pohybu* na obrazovke:
 
-1. **Nastaviť novú polohu** objektu; to je potrebné na to, aby sa objekt javil ako pohybujúci sa.
+1. **Nastaviť novú polohu** objektu; to je potrebné na to, aby sa objekt javil, že sa pohybuje.
 2. **Vyčistiť obrazovku**, obrazovka musí byť vyčistená medzi jednotlivými prekresleniami. Môžeme ju vyčistiť nakreslením obdĺžnika, ktorý vyplníme farbou pozadia.
-3. **Prekresliť objekt** na novej polohe. Týmto konečne dosiahneme pohyb objektu z jedného miesta na druhé.
+3. **Prekresliť objekt** na novej polohe. Týmto konečne dosiahneme pohyb objektu z jednej polohy na druhú.
 
 Takto to môže vyzerať v kóde:
 
@@ -60,14 +60,14 @@ window.addEventListener('keyup', (evt) => {
 
 Pre udalosti klávesnice existujú dve vlastnosti na udalosti, ktoré môžete použiť na zistenie, ktorá klávesa bola stlačená:
 
-- `key`, toto je reťazcová reprezentácia stlačenej klávesy, napríklad `ArrowUp`
+- `key`, toto je reťazcová reprezentácia stlačenej klávesy, napríklad `ArrowUp`.
 - `keyCode`, toto je číselná reprezentácia, napríklad `37`, čo zodpovedá `ArrowLeft`.
 
-✅ Manipulácia s udalosťami klávesnice je užitočná aj mimo vývoja hier. Na aké iné použitia by ste mohli túto techniku využiť?
+✅ Manipulácia s udalosťami klávesnice je užitočná aj mimo vývoja hier. Na aké iné použitia tejto techniky dokážete myslieť?
 
 ### Špeciálne klávesy: upozornenie
 
-Existujú niektoré *špeciálne* klávesy, ktoré ovplyvňujú okno. To znamená, že ak počúvate udalosť `keyup` a použijete tieto špeciálne klávesy na pohyb vášho hrdinu, vykoná sa aj horizontálne posúvanie. Z tohto dôvodu možno budete chcieť *vypnúť* toto predvolené správanie prehliadača pri budovaní vašej hry. Potrebujete kód ako tento:
+Existujú niektoré *špeciálne* klávesy, ktoré ovplyvňujú okno. To znamená, že ak počúvate udalosť `keyup` a použijete tieto špeciálne klávesy na pohyb vášho hrdinu, vykoná sa aj horizontálne posúvanie. Z tohto dôvodu možno budete chcieť *vypnúť* toto vstavané správanie prehliadača, keď budete budovať svoju hru. Potrebujete kód ako tento:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -103,9 +103,9 @@ let id = setInterval(() => {
 
 ## Herná slučka
 
-Herná slučka je koncept, ktorý je v podstate funkciou vyvolávanou v pravidelných intervaloch. Nazýva sa herná slučka, pretože všetko, čo by malo byť viditeľné pre používateľa, sa kreslí v rámci tejto slučky. Herná slučka využíva všetky herné objekty, ktoré sú súčasťou hry, a kreslí ich, pokiaľ z nejakého dôvodu už nie sú súčasťou hry. Napríklad, ak je objekt nepriateľ, ktorý bol zasiahnutý laserom a vybuchne, už nie je súčasťou aktuálnej hernej slučky (o tomto sa dozviete viac v nasledujúcich lekciách).
+Herná slučka je koncept, ktorý v podstate predstavuje funkciu, ktorá sa spúšťa v pravidelných intervaloch. Nazýva sa herná slučka, pretože všetko, čo by malo byť viditeľné pre používateľa, sa kreslí v rámci tejto slučky. Herná slučka využíva všetky herné objekty, ktoré sú súčasťou hry, a kreslí ich, pokiaľ z nejakého dôvodu už nie sú súčasťou hry. Napríklad, ak je objekt nepriateľ, ktorý bol zasiahnutý laserom a exploduje, už nie je súčasťou aktuálnej hernej slučky (o tom sa dozviete viac v nasledujúcich lekciách).
 
-Takto môže typicky vyzerať herná slučka, vyjadrená v kóde:
+Takto môže typická herná slučka vyzerať, vyjadrená v kóde:
 
 ```javascript
 let gameLoopId = setInterval(() =>
@@ -119,7 +119,7 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-Vyššie uvedená slučka sa vyvoláva každých `200` milisekúnd na prekreslenie plátna. Máte možnosť zvoliť si najlepší interval, ktorý má zmysel pre vašu hru.
+Vyššie uvedená slučka sa spúšťa každých `200` milisekúnd na prekreslenie plátna. Máte možnosť zvoliť si najlepší interval, ktorý dáva zmysel pre vašu hru.
 
 ## Pokračovanie vo vesmírnej hre
 
@@ -148,13 +148,15 @@ cd your-work
 npm start
 ```
 
-Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte prehliadač a zadajte túto adresu, momentálne by sa mal zobraziť hrdina a všetci nepriatelia; nič sa však ešte nehýbe!
+Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte prehliadač a zadajte túto adresu, momentálne by sa mal zobraziť hrdina a všetci nepriatelia; zatiaľ sa nič nehýbe!
 
 ### Pridajte kód
 
-1. **Pridajte dedikované objekty** pre `hero`, `enemy` a `game object`, mali by mať vlastnosti `x` a `y`. (Pamätajte na časť o [dedičnosti alebo kompozícii](../README.md)).
+1. **Pridajte špecifické objekty** pre `hero`, `enemy` a `game object`, mali by mať vlastnosti `x` a `y`. (Pamätajte na časť o [Dedičnosti alebo kompozícii](../README.md)).
 
-   *TIP*: Začnite pridaním novej triedy GameObject s jej konštruktorom definovaným nasledovne a potom ju nakreslite na plátno:
+   *TIP*: `game object` by mal byť ten, ktorý má `x` a `y` a schopnosť kresliť sa na plátno.
+
+   >tip: začnite pridaním novej triedy GameObject s jej konštruktorom, ako je uvedené nižšie, a potom ju nakreslite na plátno:
   
     ```javascript
         
@@ -205,7 +207,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
 
 2. **Pridajte spracovanie udalostí klávesnice** na spracovanie navigácie klávesami (pohyb hrdinu hore/dole, vľavo/vpravo).
 
-   *PAMÄTAJTE*: Je to karteziánsky systém, ľavý horný roh je `0,0`. Tiež nezabudnite pridať kód na zastavenie *predvoleného správania*.
+   *PAMÄTAJTE*: ide o karteziánsky systém, ľavý horný roh je `0,0`. Tiež nezabudnite pridať kód na zastavenie *predvoleného správania*.
 
    >tip: vytvorte svoju funkciu onKeyDown a pripojte ju k oknu:
 
@@ -221,7 +223,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
     
    Skontrolujte konzolu prehliadača v tomto bode a sledujte, ako sa zaznamenávajú stlačenia kláves.
 
-3. **Implementujte** [Pub sub pattern](../README.md), aby bol váš kód čistý, keď budete pokračovať v ďalších častiach.
+3. **Implementujte** [Pub sub vzor](../README.md), ktorý udrží váš kód čistý, keď budete pokračovať v ďalších častiach.
 
    Na vykonanie tejto poslednej časti môžete:
 
@@ -241,7 +243,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
         });
         ```
 
-    1. **Vytvoriť triedu EventEmitter** na publikovanie a odber správ:
+    1. **Vytvoriť triedu EventEmitter** na publikovanie a odoberanie správ:
 
         ```javascript
         class EventEmitter {
@@ -309,7 +311,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
     }
     ```
 
-1. **Nastavte hernú slučku**
+1. **Nastaviť hernú slučku**
 
    Refaktorujte funkciu window.onload na inicializáciu hry a nastavenie hernej slučky v dobrom intervale. Tiež pridáte laserový lúč:
 
@@ -332,7 +334,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
     };
     ```
 
-5. **Pridajte kód** na pohyb nepriateľov v určitom intervale.
+5. **Pridajte kód** na pohyb nepriateľov v určitých intervaloch.
 
     Refaktorujte funkciu `createEnemies()` na vytvorenie nepriateľov a ich pridanie do novej triedy gameObjects:
 
@@ -386,9 +388,9 @@ Ako vidíte, váš kód sa môže zmeniť na "špagetový kód", keď začnete p
 
 [Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/34)
 
-## Prehľad a samoštúdium
+## Recenzia a samoštúdium
 
-Aj keď píšeme našu hru bez použitia frameworkov, existuje mnoho JavaScriptových frameworkov pre vývoj hier na plátne. Nájdite si čas na [čítanie o nich](https://github.com/collections/javascript-game-engines).
+Aj keď píšeme našu hru bez použitia frameworkov, existuje mnoho JavaScriptových frameworkov pre vývoj hier na báze plátna. Nájdite si čas na [čítanie o nich](https://github.com/collections/javascript-game-engines).
 
 ## Zadanie
 
@@ -397,4 +399,4 @@ Aj keď píšeme našu hru bez použitia frameworkov, existuje mnoho JavaScripto
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

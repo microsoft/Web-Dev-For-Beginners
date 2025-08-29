@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-27T22:29:17+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T11:11:13+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "sk"
 }
@@ -26,13 +26,13 @@ Stručne povedané, vy -- *hrdina* -- musíte zasiahnuť všetkých nepriateľov
 
 ✅ Urobte si malý prieskum o úplne prvej počítačovej hre, ktorá bola kedy napísaná. Aká bola jej funkčnosť?
 
-Buďme spolu hrdinami!
+Buďme hrdinami spolu!
 
 ## Detekcia kolízií
 
 Ako vykonáme detekciu kolízií? Musíme si predstaviť naše herné objekty ako obdĺžniky, ktoré sa pohybujú. Prečo? Pretože obrázok použitý na vykreslenie herného objektu je obdĺžnik: má `x`, `y`, `šírku` a `výšku`.
 
-Ak sa dva obdĺžniky, napríklad hrdina a nepriateľ, *pretínajú*, nastane kolízia. Čo by sa malo stať, závisí od pravidiel hry. Na implementáciu detekcie kolízií potrebujete nasledovné:
+Ak sa dva obdĺžniky, napríklad hrdina a nepriateľ, *pretínajú*, máte kolíziu. Čo by sa malo stať, závisí od pravidiel hry. Na implementáciu detekcie kolízií potrebujete nasledovné:
 
 1. Spôsob, ako získať obdĺžnikovú reprezentáciu herného objektu, niečo takéto:
 
@@ -47,7 +47,7 @@ Ak sa dva obdĺžniky, napríklad hrdina a nepriateľ, *pretínajú*, nastane ko
    }
    ```
 
-2. Funkciu na porovnanie, ktorá môže vyzerať takto:
+2. Porovnávaciu funkciu, ktorá môže vyzerať takto:
 
    ```javascript
    function intersectRect(r1, r2) {
@@ -78,12 +78,12 @@ gameObjects = gameObject.filter(go => !go.dead);
 Vystrelenie lasera znamená reagovať na udalosť stlačenia klávesy a vytvoriť objekt, ktorý sa pohybuje určitým smerom. Preto musíme vykonať nasledujúce kroky:
 
 1. **Vytvoriť objekt lasera**: z vrchnej časti lode hrdinu, ktorý sa po vytvorení začne pohybovať nahor smerom k hornej časti obrazovky.
-2. **Pripojiť kód k udalosti stlačenia klávesy**: musíme vybrať kláves na klávesnici, ktorý bude predstavovať vystrelenie lasera hráčom.
+2. **Pripojiť kód k udalosti stlačenia klávesy**: musíme vybrať kláves na klávesnici, ktorý bude predstavovať hráča strieľajúceho laser.
 3. **Vytvoriť herný objekt, ktorý vyzerá ako laser**, keď je kláves stlačený.
 
 ## Časový odstup pre laser
 
-Laser musí vystreliť vždy, keď stlačíte kláves, napríklad *medzerník*. Aby sme zabránili tomu, že hra vytvorí príliš veľa laserov v krátkom čase, musíme to opraviť. Oprava spočíva v implementácii tzv. *časového odstupu*, časovača, ktorý zabezpečí, že laser môže byť vystrelený len v určitých intervaloch. Môžete to implementovať nasledovne:
+Laser musí vystreliť vždy, keď stlačíte kláves, napríklad *medzerník*. Aby sme zabránili hre vytvárať príliš veľa laserov v krátkom čase, musíme to opraviť. Oprava spočíva v implementácii tzv. *časového odstupu*, časovača, ktorý zabezpečí, že laser môže byť vystrelený len v určitých intervaloch. Môžete to implementovať nasledovne:
 
 ```javascript
 class Cooldown {
@@ -113,9 +113,9 @@ class Weapon {
 
 ## Čo vytvoriť
 
-Vezmite existujúci kód (ktorý by ste mali vyčistiť a refaktorovať) z predchádzajúcej lekcie a rozšírte ho. Buď začnite s kódom z časti II, alebo použite kód z [časti III - štartovací kód](../../../../../../../../../your-work).
+Vezmete existujúci kód (ktorý by ste mali vyčistiť a refaktorovať) z predchádzajúcej lekcie a rozšírite ho. Buď začnite s kódom z časti II, alebo použite kód na [Časť III - štartovací](../../../../6-space-game/4-collision-detection/your-work).
 
-> tip: laser, s ktorým budete pracovať, je už vo vašom priečinku s aktívami a je referencovaný vaším kódom
+> tip: laser, s ktorým budete pracovať, je už vo vašom priečinku s prostriedkami a je referencovaný vaším kódom
 
 - **Pridajte detekciu kolízií**, keď laser narazí na niečo, mali by platiť nasledujúce pravidlá:
    1. **Laser zasiahne nepriateľa**: nepriateľ zomrie, ak ho zasiahne laser
@@ -137,18 +137,18 @@ Vyhľadajte súbory, ktoré boli pre vás vytvorené v podpriečinku `your-work`
 -| package.json
 ```
 
-Spustite svoj projekt v priečinku `your_work` zadaním:
+Svoj projekt spustíte v priečinku `your_work` zadaním:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte prehliadač a zadajte túto adresu, momentálne by sa mal zobraziť hrdina a všetci nepriatelia, zatiaľ sa nič nehýbe :).
+Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte prehliadač a zadajte túto adresu, momentálne by sa mal zobraziť hrdina a všetci nepriatelia, nič sa však ešte nehýbe :).
 
 ### Pridajte kód
 
-1. **Nastavte obdĺžnikovú reprezentáciu vášho herného objektu na spracovanie kolízií** Nasledujúci kód vám umožní získať obdĺžnikovú reprezentáciu `GameObject`. Upraviť triedu GameObject tak, aby ju rozšírila:
+1. **Nastavte obdĺžnikovú reprezentáciu vášho herného objektu na spracovanie kolízií** Nasledujúci kód umožňuje získať obdĺžnikovú reprezentáciu `GameObject`. Upraviť triedu GameObject tak, aby ju rozšírila:
 
     ```javascript
     rectFromGameObject() {
@@ -230,7 +230,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
       }
       ```
 
-   1. **Spracujte kolízie**, Implementujte pravidlá kolízií pre laser. Pridajte funkciu `updateGameObjects()`, ktorá testuje kolízie objektov:
+   1. **Spracujte kolízie**, Implementujte pravidlá kolízií pre laser. Pridajte funkciu `updateGameObjects()`, ktorá testuje objekty na kolízie:
 
       ```javascript
       function updateGameObjects() {
@@ -256,7 +256,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
 
    4. **Implementujte časový odstup** pre laser, aby mohol byť vystrelený len v určitých intervaloch.
 
-      Nakoniec upravte triedu Hero tak, aby mohla mať časový odstup:
+      Nakoniec upravte triedu Hero tak, aby mala časový odstup:
 
        ```javascript
       class Hero extends GameObject {
@@ -291,7 +291,7 @@ V tomto bode má vaša hra určitú funkčnosť! Môžete sa pohybovať pomocou 
 
 ## 🚀 Výzva
 
-Pridajte explóziu! Pozrite sa na herné aktíva v [repozitári Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) a skúste pridať explóziu, keď laser zasiahne mimozemšťana.
+Pridajte explóziu! Pozrite sa na herné prostriedky v [repozitári Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) a skúste pridať explóziu, keď laser zasiahne mimozemšťana.
 
 ## Kvíz po prednáške
 
@@ -308,4 +308,4 @@ Experimentujte s intervalmi vo vašej hre doteraz. Čo sa stane, keď ich zmení
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

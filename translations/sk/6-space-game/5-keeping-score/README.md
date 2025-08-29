@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-27T22:27:25+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T11:10:50+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "sk"
 }
 -->
-# Vytvorte vesmírnu hru, časť 5: Body a životy
+# Vytvorenie vesmírnej hry, časť 5: Skóre a životy
 
 ## Kvíz pred prednáškou
 
 [Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/37)
 
-V tejto lekcii sa naučíte, ako pridať bodovanie do hry a počítať životy.
+V tejto lekcii sa naučíte, ako pridať skóre do hry a vypočítať životy.
 
 ## Zobrazenie textu na obrazovke
 
-Aby ste mohli zobrazovať skóre hry na obrazovke, musíte vedieť, ako umiestniť text na obrazovku. Odpoveďou je použitie metódy `fillText()` na objekte canvas. Môžete tiež ovládať ďalšie aspekty, ako napríklad aké písmo použiť, farbu textu a dokonca aj jeho zarovnanie (vľavo, vpravo, na stred). Nižšie je uvedený kód, ktorý zobrazuje text na obrazovke.
+Aby ste mohli zobraziť skóre hry na obrazovke, musíte vedieť, ako umiestniť text na obrazovku. Odpoveďou je použitie metódy `fillText()` na objekte canvas. Môžete tiež ovládať ďalšie aspekty, ako napríklad aké písmo použiť, farbu textu a dokonca aj jeho zarovnanie (vľavo, vpravo, na stred). Nižšie je uvedený kód, ktorý zobrazuje text na obrazovke.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,18 +26,18 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Prečítajte si viac o [tom, ako pridať text na plátno](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), a pokojne si ho upravte podľa svojich predstáv!
+✅ Prečítajte si viac o [tom, ako pridať text na plátno](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), a pokojne si ho upravte podľa svojho vkusu!
 
 ## Život ako herný koncept
 
-Koncept života v hre je len číslo. V kontexte vesmírnej hry je bežné priradiť určitý počet životov, ktoré sa odpočítavajú jeden po druhom, keď vaša loď utrpí poškodenie. Je pekné, ak môžete namiesto čísla zobraziť grafickú reprezentáciu, ako sú malé lode alebo srdcia.
+Koncept života v hre je len číslo. V kontexte vesmírnej hry je bežné priradiť určitý počet životov, ktoré sa odpočítavajú jeden po druhom, keď vaša loď utrpí poškodenie. Je pekné, ak môžete namiesto čísla zobraziť grafickú reprezentáciu, ako sú malé lodičky alebo srdcia.
 
 ## Čo vytvoriť
 
-Pridajte do svojej hry nasledujúce prvky:
+Pridajme do vašej hry nasledujúce:
 
 - **Herné skóre**: Za každú zničenú nepriateľskú loď by mal hrdina získať body, odporúčame 100 bodov za loď. Herné skóre by sa malo zobrazovať v ľavom dolnom rohu.
-- **Životy**: Vaša loď má tri životy. O život prídete zakaždým, keď do vás narazí nepriateľská loď. Počet životov by sa mal zobrazovať v pravom dolnom rohu a mal by byť reprezentovaný nasledujúcou grafikou ![obrázok života](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.sk.png).
+- **Životy**: Vaša loď má tri životy. O život prídete zakaždým, keď do vás narazí nepriateľská loď. Počet životov by sa mal zobrazovať v pravom dolnom rohu a mal by byť vytvorený z nasledujúcej grafiky ![obrázok života](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.sk.png).
 
 ## Odporúčané kroky
 
@@ -53,7 +53,7 @@ Nájdite súbory, ktoré boli pre vás vytvorené v podpriečinku `your-work`. M
 -| package.json
 ```
 
-Spustite svoj projekt v priečinku `your_work` zadaním:
+Svoj projekt spustíte v priečinku `your_work` zadaním:
 
 ```bash
 cd your-work
@@ -64,7 +64,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
 
 ### Pridanie kódu
 
-1. **Skopírujte potrebné zdroje** z priečinka `solution/assets/` do priečinka `your-work`; pridáte zdroj `life.png`. Pridajte `lifeImg` do funkcie `window.onload`:
+1. **Skopírujte potrebné zdroje** z priečinka `solution/assets/` do priečinka `your-work`; pridáte súbor `life.png`. Pridajte `lifeImg` do funkcie `window.onload`: 
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
@@ -128,7 +128,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
 
         ```
 
-   1. **Pridajte metódy do hernej slučky**. Uistite sa, že ste pridali tieto funkcie do funkcie `window.onload` pod `updateGameObjects()`:
+   1. **Pridajte metódy do hernej slučky**. Uistite sa, že ste tieto funkcie pridali do funkcie `window.onload` pod `updateGameObjects()`:
 
         ```javascript
         drawPoints();
@@ -177,7 +177,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
 
 ✅ Urobte si malý prieskum a objavte ďalšie hry, ktoré sú vytvorené pomocou JavaScriptu/Canvasu. Aké majú spoločné črty?
 
-Na konci tejto práce by ste mali vidieť malé lode reprezentujúce životy v pravom dolnom rohu, body v ľavom dolnom rohu a mali by ste vidieť, ako sa počet životov znižuje pri kolíziách s nepriateľmi a body sa zvyšujú, keď zostreľujete nepriateľov. Skvelá práca! Vaša hra je takmer hotová.
+Na konci tejto práce by ste mali vidieť malé lodičky života v pravom dolnom rohu, body v ľavom dolnom rohu a mali by ste vidieť, ako sa počet životov znižuje pri kolíziách s nepriateľmi a body sa zvyšujú, keď zostreľujete nepriateľov. Skvelá práca! Vaša hra je takmer hotová.
 
 ---
 
@@ -195,9 +195,9 @@ Preskúmajte spôsoby, ako môžete zvyšovať a znižovať herné skóre a živ
 
 ## Zadanie
 
-[Postavte hru s bodovaním](assignment.md)
+[Vytvorte hru so skórovaním](assignment.md)
 
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

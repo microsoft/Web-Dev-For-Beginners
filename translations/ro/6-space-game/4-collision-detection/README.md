@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-28T07:56:56+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T11:31:45+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "ro"
 }
@@ -16,13 +16,13 @@ CO_OP_TRANSLATOR_METADATA:
 În această lecție vei învăța cum să tragi cu lasere folosind JavaScript! Vom adăuga două lucruri în jocul nostru:
 
 - **Un laser**: acest laser este tras din nava eroului tău și se deplasează vertical în sus
-- **Detectarea coliziunilor**, ca parte a implementării capacității de a *trage*, vom adăuga și câteva reguli interesante de joc:
-   - **Laserul lovește inamicul**: Inamicul moare dacă este lovit de un laser
-   - **Laserul lovește partea de sus a ecranului**: Un laser este distrus dacă lovește partea de sus a ecranului
+- **Detectarea coliziunilor**, ca parte a implementării funcției de *tragere*, vom adăuga și câteva reguli interesante de joc:
+   - **Laserul lovește un inamic**: Inamicul moare dacă este lovit de un laser
+   - **Laserul lovește partea de sus a ecranului**: Laserul este distrus dacă atinge partea de sus a ecranului
    - **Coliziunea dintre inamic și erou**: Un inamic și eroul sunt distruși dacă se lovesc unul de altul
-   - **Inamicul lovește partea de jos a ecranului**: Un inamic și eroul sunt distruși dacă inamicul ajunge în partea de jos a ecranului
+   - **Inamicul atinge partea de jos a ecranului**: Un inamic și eroul sunt distruși dacă inamicul ajunge la partea de jos a ecranului
 
-Pe scurt, tu -- *eroul* -- trebuie să lovești toți inamicii cu un laser înainte ca aceștia să ajungă în partea de jos a ecranului.
+Pe scurt, tu -- *eroul* -- trebuie să lovești toți inamicii cu un laser înainte ca aceștia să ajungă la partea de jos a ecranului.
 
 ✅ Fă puțină cercetare despre primul joc pe calculator scris vreodată. Ce funcționalitate avea?
 
@@ -30,7 +30,7 @@ Să fim eroici împreună!
 
 ## Detectarea coliziunilor
 
-Cum facem detectarea coliziunilor? Trebuie să ne gândim la obiectele din joc ca la niște dreptunghiuri care se mișcă. De ce, te-ai putea întreba? Ei bine, imaginea folosită pentru a desena un obiect de joc este un dreptunghi: are un `x`, `y`, `lățime` și `înălțime`.
+Cum realizăm detectarea coliziunilor? Trebuie să ne gândim la obiectele din joc ca la niște dreptunghiuri care se mișcă. De ce, te-ai putea întreba? Ei bine, imaginea folosită pentru a desena un obiect de joc este un dreptunghi: are un `x`, `y`, `lățime` și `înălțime`.
 
 Dacă două dreptunghiuri, adică un erou și un inamic, *se intersectează*, ai o coliziune. Ce ar trebui să se întâmple atunci depinde de regulile jocului. Pentru a implementa detectarea coliziunilor, ai nevoie de următoarele:
 
@@ -60,7 +60,7 @@ Dacă două dreptunghiuri, adică un erou și un inamic, *se intersectează*, ai
 
 ## Cum distrugem lucruri
 
-Pentru a distruge lucruri într-un joc, trebuie să informezi jocul că nu ar mai trebui să deseneze acel obiect în bucla jocului care se declanșează la un anumit interval. O modalitate de a face acest lucru este să marchezi un obiect de joc ca fiind *mort* atunci când se întâmplă ceva, astfel:
+Pentru a distruge lucruri într-un joc, trebuie să informezi jocul că nu ar mai trebui să deseneze acel obiect în bucla de joc care se declanșează la un anumit interval. O modalitate de a face acest lucru este să marchezi un obiect de joc ca fiind *mort* atunci când se întâmplă ceva, astfel:
 
 ```javascript
 // collision happened
@@ -75,15 +75,15 @@ gameObjects = gameObject.filter(go => !go.dead);
 
 ## Cum tragem cu un laser
 
-Tragerea cu un laser înseamnă să răspunzi la un eveniment de tastatură și să creezi un obiect care se mișcă într-o anumită direcție. Prin urmare, trebuie să parcurgem următorii pași:
+Tragerea cu un laser înseamnă să răspunzi la un eveniment de tastă și să creezi un obiect care se mișcă într-o anumită direcție. Prin urmare, trebuie să parcurgi următorii pași:
 
 1. **Creează un obiect laser**: din partea de sus a navei eroului, care, odată creat, începe să se deplaseze în sus spre partea de sus a ecranului.
-2. **Atașează cod la un eveniment de tastatură**: trebuie să alegem o tastă de pe tastatură care să reprezinte acțiunea de a trage cu laserul.
+2. **Atașează cod la un eveniment de tastă**: trebuie să alegem o tastă de pe tastatură care să reprezinte acțiunea de tragere a laserului de către jucător.
 3. **Creează un obiect de joc care arată ca un laser** atunci când tasta este apăsată.
 
 ## Cooldown pentru laser
 
-Laserul trebuie să fie tras de fiecare dată când apeși o tastă, cum ar fi *space*. Pentru a preveni ca jocul să producă prea multe lasere într-un timp scurt, trebuie să rezolvăm acest lucru. Soluția este implementarea unui așa-numit *cooldown*, un cronometru, care asigură că un laser poate fi tras doar la anumite intervale. Poți implementa acest lucru astfel:
+Laserul trebuie să fie tras de fiecare dată când apeși o tastă, cum ar fi *space*, de exemplu. Pentru a preveni ca jocul să producă prea multe lasere într-un timp scurt, trebuie să rezolvăm acest lucru. Soluția este implementarea unui așa-numit *cooldown*, un cronometru, care asigură că un laser poate fi tras doar la anumite intervale. Poți implementa acest lucru astfel:
 
 ```javascript
 class Cooldown {
@@ -113,19 +113,19 @@ class Weapon {
 
 ## Ce să construiești
 
-Vei lua codul existent (pe care ar fi trebuit să-l cureți și să-l refactorizezi) din lecția anterioară și îl vei extinde. Poți începe fie cu codul din partea a II-a, fie cu codul din [Partea III - starter](../../../../../../../../../your-work).
+Vei lua codul existent (pe care ar fi trebuit să-l cureți și să-l refactorizezi) din lecția anterioară și îl vei extinde. Poți începe fie cu codul din partea a II-a, fie cu codul de la [Partea III - starter](../../../../../../../../../your-work).
 
 > sfat: laserul cu care vei lucra este deja în folderul tău de resurse și este referit de codul tău
 
-- **Adaugă detectarea coliziunilor**, când un laser se ciocnește cu ceva, următoarele reguli ar trebui să se aplice:
-   1. **Laserul lovește inamicul**: inamicul moare dacă este lovit de un laser
-   2. **Laserul lovește partea de sus a ecranului**: Un laser este distrus dacă lovește partea de sus a ecranului
+- **Adaugă detectarea coliziunilor**, când un laser se ciocnește cu ceva, ar trebui să se aplice următoarele reguli:
+   1. **Laserul lovește un inamic**: inamicul moare dacă este lovit de un laser
+   2. **Laserul lovește partea de sus a ecranului**: Laserul este distrus dacă atinge partea de sus a ecranului
    3. **Coliziunea dintre inamic și erou**: un inamic și eroul sunt distruși dacă se lovesc unul de altul
-   4. **Inamicul lovește partea de jos a ecranului**: Un inamic și eroul sunt distruși dacă inamicul ajunge în partea de jos a ecranului
+   4. **Inamicul atinge partea de jos a ecranului**: Un inamic și eroul sunt distruși dacă inamicul ajunge la partea de jos a ecranului
 
 ## Pași recomandați
 
-Găsește fișierele care au fost create pentru tine în subfolderul `your-work`. Acesta ar trebui să conțină următoarele:
+Localizează fișierele care au fost create pentru tine în subfolderul `your-work`. Acesta ar trebui să conțină următoarele:
 
 ```bash
 -| assets
@@ -144,11 +144,11 @@ cd your-work
 npm start
 ```
 
-Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. Deschide un browser și introdu acea adresă, iar în acest moment ar trebui să afișeze eroul și toți inamicii, dar nimic nu se mișcă - încă :).
+Comanda de mai sus va porni un server HTTP pe adresa `http://localhost:5000`. Deschide un browser și introdu acea adresă, iar în acest moment ar trebui să afișeze eroul și toți inamicii, dar nimic nu se mișcă - încă :).
 
 ### Adaugă cod
 
-1. **Configurează o reprezentare dreptunghiulară a obiectului tău de joc pentru a gestiona coliziunile** Codul de mai jos îți permite să obții o reprezentare dreptunghiulară a unui `GameObject`. Editează clasa GameObject pentru a o extinde:
+1. **Configurează o reprezentare dreptunghiulară a obiectului de joc pentru a gestiona coliziunile** Codul de mai jos îți permite să obții o reprezentare dreptunghiulară a unui `GameObject`. Editează clasa GameObject pentru a o extinde:
 
     ```javascript
     rectFromGameObject() {
@@ -175,7 +175,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
     ```
 
 3. **Adaugă capacitatea de a trage cu laserul**
-   1. **Adaugă un mesaj pentru evenimentul de tastatură**. Tasta *space* ar trebui să creeze un laser chiar deasupra navei eroului. Adaugă trei constante în obiectul Messages:
+   1. **Adaugă mesaj pentru evenimentul de tastă**. Tasta *space* ar trebui să creeze un laser chiar deasupra navei eroului. Adaugă trei constante în obiectul Messages:
 
        ```javascript
         KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
@@ -183,7 +183,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
         COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
        ```
 
-   1. **Gestionează tasta space**. Editează funcția `window.addEventListener` pentru evenimentul keyup pentru a gestiona tasta space:
+   1. **Gestionează tasta space**. Editează funcția `window.addEventListener` pentru evenimentul `keyup` astfel încât să gestioneze tasta space:
 
       ```javascript
         } else if(evt.keyCode === 32) {
@@ -291,7 +291,7 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
 
 ## 🚀 Provocare
 
-Adaugă o explozie! Uită-te la resursele jocului din [repo-ul Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) și încearcă să adaugi o explozie atunci când laserul lovește un extraterestru.
+Adaugă o explozie! Aruncă o privire la resursele jocului din [repo-ul Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) și încearcă să adaugi o explozie atunci când laserul lovește un inamic.
 
 ## Chestionar Post-Lecție
 
@@ -299,7 +299,7 @@ Adaugă o explozie! Uită-te la resursele jocului din [repo-ul Space Art](../../
 
 ## Recapitulare și Studiu Individual
 
-Experimentează cu intervalele din jocul tău de până acum. Ce se întâmplă când le schimbi? Citește mai multe despre [evenimentele de temporizare în JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
+Experimentează cu intervalele din jocul tău de până acum. Ce se întâmplă când le modifici? Citește mai multe despre [evenimentele de temporizare în JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
 ## Temă
 
@@ -307,5 +307,5 @@ Experimentează cu intervalele din jocul tău de până acum. Ce se întâmplă 
 
 ---
 
-**Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinarea responsabilității**:  
+Acest document a fost tradus utilizând serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

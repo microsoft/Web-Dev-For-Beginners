@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-28T04:02:39+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T10:30:09+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "hu"
 }
@@ -17,30 +17,30 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Öröklődés és kompozíció a játékfejlesztésben
 
-Korábbi leckékben nem volt szükség az alkalmazások tervezési architektúrájának mélyebb átgondolására, mivel a projektek nagyon kis méretűek voltak. Azonban, ahogy az alkalmazások mérete és összetettsége növekszik, az architekturális döntések egyre fontosabbá válnak. Két fő megközelítés létezik nagyobb alkalmazások létrehozására JavaScriptben: *kompozíció* vagy *öröklődés*. Mindkettőnek vannak előnyei és hátrányai, de nézzük meg őket egy játék kontextusában.
+Korábbi leckékben nem volt szükség arra, hogy az általad készített alkalmazások tervezési architektúrájával foglalkozz, mivel a projektek nagyon kis méretűek voltak. Azonban, ahogy az alkalmazásaid mérete és összetettsége növekszik, az architekturális döntések egyre fontosabbá válnak. Két fő megközelítés létezik nagyobb JavaScript alkalmazások létrehozására: *kompozíció* vagy *öröklődés*. Mindkettőnek vannak előnyei és hátrányai, de nézzük meg ezeket egy játék kontextusában.
 
 ✅ Az egyik leghíresebb programozási könyv a [tervezési mintákról](https://en.wikipedia.org/wiki/Design_Patterns) szól.
 
-Egy játékban vannak `játékobjektumok`, amelyek a képernyőn létező objektumok. Ez azt jelenti, hogy van helyük egy derékszögű koordináta-rendszerben, amelyet egy `x` és `y` koordináta jellemez. Ahogy fejleszted a játékot, észre fogod venni, hogy minden játékobjektum rendelkezik egy standard tulajdonsággal, amely minden játékban közös, nevezetesen olyan elemekkel, amelyek:
+Egy játékban vannak `játékobjektumok`, amelyek a képernyőn létező objektumok. Ez azt jelenti, hogy van helyük egy derékszögű koordináta-rendszerben, amelyet egy `x` és `y` koordináta jellemez. Ahogy fejleszted a játékot, észre fogod venni, hogy minden játékobjektum rendelkezik egy standard tulajdonsággal, amely minden általad készített játékban közös, nevezetesen az alábbi elemekkel:
 
-- **helyalapúak** A legtöbb, ha nem minden, játékelem helyalapú. Ez azt jelenti, hogy van helyük, egy `x` és `y`.
-- **mozgathatóak** Ezek olyan objektumok, amelyek új helyre tudnak mozogni. Ez általában egy hős, egy szörny vagy egy NPC (nem játékos karakter), de például nem egy statikus objektum, mint egy fa.
-- **önmegsemmisítőek** Ezek az objektumok csak egy meghatározott ideig léteznek, mielőtt törlésre kerülnek. Általában ezt egy `halott` vagy `megsemmisült` logikai érték jelzi, amely azt mutatja a játékmotornak, hogy ezt az objektumot már nem kell megjeleníteni.
-- **lehűlési idővel rendelkeznek** A 'lehűlési idő' tipikus tulajdonság a rövid életű objektumok között. Egy tipikus példa egy szövegrészlet vagy grafikai effekt, mint például egy robbanás, amelyet csak néhány milliszekundumig kell látni.
+- **helyalapú** A legtöbb, ha nem az összes játékobjektum helyalapú. Ez azt jelenti, hogy van helyük, egy `x` és `y` koordinátájuk.
+- **mozgatható** Ezek olyan objektumok, amelyek új helyre tudnak mozogni. Ez általában egy hős, egy szörny vagy egy NPC (nem játékos karakter), de például nem egy statikus objektum, mint egy fa.
+- **önmegsemmisítő** Ezek az objektumok csak egy meghatározott ideig léteznek, mielőtt törlésre kerülnek. Általában ezt egy `halott` vagy `megsemmisült` logikai érték jelzi, amely a játék motornak jelzi, hogy ezt az objektumot már nem kell megjeleníteni.
+- **lehűlési idő** A 'lehűlési idő' tipikus tulajdonság a rövid életű objektumok között. Egy tipikus példa egy szövegrészlet vagy grafikai effekt, mint például egy robbanás, amelyet csak néhány milliszekundumig kell látni.
 
-✅ Gondolj egy játékra, mint például a Pac-Man. Fel tudod ismerni a fent felsorolt négy objektumtípust ebben a játékban?
+✅ Gondolj egy Pac-Man játékra. Fel tudod ismerni a fent felsorolt négy objektumtípust ebben a játékban?
 
 ### Viselkedés kifejezése
 
-Minden, amit fent leírtunk, olyan viselkedés, amelyet a játékobjektumok birtokolhatnak. Hogyan kódoljuk ezeket? Ezt a viselkedést osztályokhoz vagy objektumokhoz társított metódusokként fejezhetjük ki.
+Minden, amit fent leírtunk, olyan viselkedés, amelyet a játékobjektumok birtokolhatnak. Hogyan kódoljuk ezeket? Ezeket a viselkedéseket osztályokhoz vagy objektumokhoz társított metódusokként fejezhetjük ki.
 
 **Osztályok**
 
-Az ötlet az, hogy `osztályokat` használjunk az `öröklődéssel` együtt, hogy egy bizonyos viselkedést hozzáadjunk egy osztályhoz.
+Az ötlet az, hogy `osztályokat` használjunk az `öröklődéssel` együtt, hogy egy bizonyos viselkedést adjunk egy osztályhoz.
 
 ✅ Az öröklődés egy fontos fogalom, amit érdemes megérteni. Tudj meg többet az [MDN öröklődésről szóló cikkéből](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Kód formájában kifejezve egy játékobjektum általában így nézhet ki:
+Kód formájában kifejezve egy játékobjektum általában így néz ki:
 
 ```javascript
 
@@ -88,11 +88,11 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Szánj néhány percet arra, hogy újragondolj egy Pac-Man hőst (például Inky, Pinky vagy Blinky), és hogyan lehetne JavaScriptben megírni.
+✅ Szánj néhány percet arra, hogy újragondold egy Pac-Man hős (például Inky, Pinky vagy Blinky) JavaScript-ben való megírását.
 
 **Kompozíció**
 
-Az objektumöröklődés kezelésének másik módja a *kompozíció* használata. Ekkor az objektumok így fejezik ki viselkedésüket:
+Az objektumöröklődés kezelésének egy másik módja a *kompozíció* használata. Ekkor az objektumok így fejezik ki viselkedésüket:
 
 ```javascript
 //create a constant gameObject
@@ -137,7 +137,7 @@ hero.moveTo(5,5);
 const tree = createStatic(0,0, 'Tree'); 
 ```
 
-**Melyik mintát válasszam?**
+**Melyik mintát használjam?**
 
 Rajtatok múlik, melyik mintát választjátok. A JavaScript mindkét paradigmát támogatja.
 
@@ -153,9 +153,9 @@ Ez a minta azt az elképzelést valósítja meg, hogy az alkalmazás különböz
 
 - **üzenet**: Az üzenet általában egy szöveges karakterlánc, amelyhez opcionálisan egy adatcsomag (payload) társul, amely tisztázza, miről szól az üzenet. Egy tipikus üzenet egy játékban lehet például `KEY_PRESSED_ENTER`.
 - **közzétevő**: Ez az elem *közzétesz* egy üzenetet, és elküldi azt minden feliratkozónak.
-- **feliratkozó**: Ez az elem *figyel* bizonyos üzenetekre, és valamilyen feladatot hajt végre az üzenet fogadásának eredményeként, például lézert lő ki.
+- **feliratkozó**: Ez az elem *figyel* bizonyos üzeneteket, és valamilyen feladatot hajt végre az üzenet fogadásának eredményeként, például lézert lő ki.
 
-A megvalósítás mérete kicsi, de nagyon erős minta. Így lehet megvalósítani:
+A megvalósítás mérete kicsi, de nagyon erőteljes minta. Így valósítható meg:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -180,7 +180,7 @@ class EventEmitter {
 
 ```
 
-A fenti kódot használva létrehozhatunk egy nagyon kicsi implementációt:
+A fenti kód használatához létrehozhatunk egy nagyon kicsi implementációt:
 
 ```javascript
 //set up a message structure
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-A fentiekben összekapcsolunk egy billentyűzet eseményt, `ArrowLeft`, és elküldjük a `HERO_MOVE_LEFT` üzenetet. Figyelünk erre az üzenetre, és ennek eredményeként mozgatjuk a `hőst`. Ennek a mintának az ereje abban rejlik, hogy az eseményfigyelő és a hős nem ismerik egymást. Át lehet térképezni az `ArrowLeft`-et az `A` billentyűre. Emellett lehetséges valami teljesen mást csinálni az `ArrowLeft`-re, ha néhány módosítást végzünk az eventEmitter `on` függvényében:
+A fentiekben egy billentyűzet eseményt, `ArrowLeft`-et kapcsolunk össze, és elküldjük a `HERO_MOVE_LEFT` üzenetet. Figyelünk erre az üzenetre, és ennek eredményeként mozgatjuk a `hőst`. Ennek a mintának az ereje abban rejlik, hogy az eseményfigyelő és a hős nem ismerik egymást. Az `ArrowLeft`-et át lehet térképezni az `A` billentyűre. Emellett teljesen más dolgot is lehet tenni az `ArrowLeft`-re, ha néhány módosítást végzünk az eventEmitter `on` függvényén:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,13 +212,13 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-Ahogy a játék bonyolultabbá válik, ez a minta ugyanazon a komplexitási szinten marad, és a kód tiszta marad. Nagyon ajánlott ezt a mintát alkalmazni.
+Ahogy a játék bonyolultabbá válik, ez a minta változatlan marad a komplexitásban, és a kódod tiszta marad. Nagyon ajánlott ezt a mintát alkalmazni.
 
 ---
 
 ## 🚀 Kihívás
 
-Gondold át, hogyan javíthatja a pub-sub minta egy játékot. Mely részeknek kellene eseményeket kibocsátaniuk, és hogyan kellene a játéknak reagálnia rájuk? Most itt az alkalom, hogy kreatív legyél, és gondolj egy új játékra, valamint arra, hogyan viselkednének annak részei.
+Gondold át, hogyan javíthatja a pub-sub minta egy játékot. Mely részeknek kellene eseményeket kibocsátaniuk, és hogyan kellene a játéknak reagálnia rájuk? Most itt az alkalom, hogy kreatív legyél, és kitalálj egy új játékot, valamint annak részeinek viselkedését.
 
 ## Előadás utáni kvíz
 
@@ -226,7 +226,7 @@ Gondold át, hogyan javíthatja a pub-sub minta egy játékot. Mely részeknek k
 
 ## Áttekintés és önálló tanulás
 
-Tudj meg többet a Pub/Sub-ról [olvasd el róla](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
+Tudj meg többet a Pub/Sub-ról [olvass róla](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
 ## Feladat
 
@@ -234,5 +234,5 @@ Tudj meg többet a Pub/Sub-ról [olvasd el róla](https://docs.microsoft.com/azu
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+**Felelősségkizárás**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális, emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

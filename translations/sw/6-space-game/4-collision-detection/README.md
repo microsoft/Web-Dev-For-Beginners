@@ -1,38 +1,38 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-28T03:56:31+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T10:05:46+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "sw"
 }
 -->
 # Jenga Mchezo wa Anga Sehemu ya 4: Kuongeza Laser na Kugundua Migongano
 
-## Maswali ya Awali ya Somo
+## Jaribio la Kabla ya Somo
 
-[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/35)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/35)
 
-Katika somo hili utajifunza jinsi ya kurusha laser kwa kutumia JavaScript! Tutaongeza vitu viwili kwenye mchezo wetu:
+Katika somo hili utajifunza jinsi ya kufyatua laser kwa kutumia JavaScript! Tutaongeza vitu viwili kwenye mchezo wetu:
 
-- **Laser**: laser hii inarushwa kutoka kwenye chombo cha shujaa wako na kwenda juu wima.
-- **Ugunduzi wa migongano**, kama sehemu ya kutekeleza uwezo wa *kurusha*, tutaongeza sheria nzuri za mchezo:
-   - **Laser inagonga adui**: Adui hufa ikiwa atagongwa na laser.
-   - **Laser inagonga sehemu ya juu ya skrini**: Laser inaharibiwa ikiwa itagonga sehemu ya juu ya skrini.
-   - **Adui na shujaa wanagongana**: Adui na shujaa wanaharibiwa ikiwa watagongana.
-   - **Adui anagonga chini ya skrini**: Adui na shujaa wanaharibiwa ikiwa adui atagonga chini ya skrini.
+- **Laser**: laser hii inafyatuliwa kutoka kwenye chombo cha shujaa wako na kuelekea juu wima.
+- **Ugunduzi wa migongano**, kama sehemu ya kutekeleza uwezo wa *kufyatua*, tutaongeza sheria nzuri za mchezo:
+   - **Laser inapogonga adui**: Adui hufa ikiwa atagongwa na laser.
+   - **Laser inapogonga juu ya skrini**: Laser huharibiwa ikiwa itagonga sehemu ya juu ya skrini.
+   - **Adui na shujaa wanapogongana**: Adui na shujaa huharibiwa wanapogongana.
+   - **Adui anapogonga chini ya skrini**: Adui na shujaa huharibiwa ikiwa adui atafika chini ya skrini.
 
-Kwa ufupi, wewe -- *shujaa* -- unahitaji kugonga maadui wote kwa laser kabla hawajafika chini ya skrini.
+Kwa ufupi, wewe -- *shujaa* -- unahitaji kuwaua maadui wote kwa kutumia laser kabla hawajafika chini ya skrini.
 
-✅ Fanya utafiti kidogo kuhusu mchezo wa kwanza kabisa wa kompyuta uliowahi kuandikwa. Je, ulikuwa na uwezo gani?
+✅ Fanya utafiti kidogo kuhusu mchezo wa kwanza kabisa wa kompyuta uliowahi kuandikwa. Ulikuwa na uwezo gani?
 
 Tuwe mashujaa pamoja!
 
 ## Ugunduzi wa Migongano
 
-Tunafanyaje ugunduzi wa migongano? Tunahitaji kufikiria vitu vya mchezo wetu kama mstatili unaosogea. Kwa nini? Kwa sababu picha inayotumika kuchora kitu cha mchezo ni mstatili: ina `x`, `y`, `width` na `height`.
+Tunawezaje kugundua migongano? Tunahitaji kufikiria vitu vya mchezo wetu kama miraba inayosogea. Kwa nini? Kwa sababu picha inayotumika kuchora kitu cha mchezo ni mstatili: ina `x`, `y`, `upana` na `urefu`.
 
-Ikiwa mistatili miwili, yaani shujaa na adui *inagongana*, kuna mgongano. Kinachotakiwa kutokea baada ya hapo kinategemea sheria za mchezo. Ili kutekeleza ugunduzi wa migongano unahitaji yafuatayo:
+Ikiwa miraba miwili, yaani shujaa na adui *itakutana*, kuna mgongano. Kinachotakiwa kutokea baada ya hapo kinategemea sheria za mchezo. Ili kutekeleza ugunduzi wa migongano unahitaji yafuatayo:
 
 1. Njia ya kupata uwakilishi wa mstatili wa kitu cha mchezo, kitu kama hiki:
 
@@ -58,32 +58,32 @@ Ikiwa mistatili miwili, yaani shujaa na adui *inagongana*, kuna mgongano. Kinach
    }
    ```
 
-## Tunaharibu vipi vitu
+## Tunaharibu Vitu Vipi
 
-Ili kuharibu vitu kwenye mchezo, unahitaji kuujulisha mchezo kwamba haupaswi tena kuchora kipengele hicho kwenye mzunguko wa mchezo unaotokea kwa muda fulani. Njia ya kufanya hivyo ni kuweka alama kitu cha mchezo kama *kimekufa* pale kitu fulani kinapotokea, kama hivi:
+Ili kuharibu vitu kwenye mchezo, unahitaji kuufahamisha mchezo kwamba haupaswi tena kuchora kipengele hiki kwenye mzunguko wa mchezo unaotokea kwa muda fulani. Njia ya kufanya hivi ni kuweka alama kwa kitu cha mchezo kama *kimekufa* pale kitu fulani kinapotokea, kama hivi:
 
 ```javascript
 // collision happened
 enemy.dead = true
 ```
 
-Kisha unaweza kuendelea kuchuja vitu *vilivyokufa* kabla ya kuchora tena skrini, kama hivi:
+Kisha unaweza kuondoa vitu *vilivyokufa* kabla ya kuchora skrini tena, kama hivi:
 
 ```javascript
 gameObjects = gameObject.filter(go => !go.dead);
 ```
 
-## Tunarushaje laser
+## Tunafyatuaje Laser
 
-Kurusha laser kunamaanisha kujibu tukio la kubonyeza kitufe na kuunda kipengele kinachosogea katika mwelekeo fulani. Kwa hivyo tunahitaji kufanya hatua zifuatazo:
+Kufyatua laser kunamaanisha kujibu tukio la kubonyeza kitufe na kuunda kitu kinachosogea kuelekea upande fulani. Kwa hivyo tunahitaji kufanya hatua zifuatazo:
 
-1. **Unda kipengele cha laser**: kutoka juu ya chombo cha shujaa wako, ambacho mara tu kinapoundwa kinaanza kusogea juu kuelekea sehemu ya juu ya skrini.
-2. **Ambatanisha msimbo kwenye tukio la kitufe**: tunahitaji kuchagua kitufe kwenye kibodi kinachowakilisha mchezaji anayepiga laser.
-3. **Unda kipengele cha mchezo kinachoonekana kama laser** pale kitufe kinapobonyezwa.
+1. **Unda kitu cha laser**: kutoka juu ya chombo cha shujaa wako, ambacho mara tu kinapoundwa huanza kusogea juu kuelekea sehemu ya juu ya skrini.
+2. **Ambatanisha msimbo kwenye tukio la kitufe**: tunahitaji kuchagua kitufe kwenye kibodi kinachowakilisha mchezaji anayefyatua laser.
+3. **Unda kitu cha mchezo kinachoonekana kama laser** wakati kitufe kinapobonyezwa.
 
-## Muda wa kupumzika kwa laser yetu
+## Muda wa Kupumzika kwa Laser
 
-Laser inahitaji kurushwa kila wakati unapobonyeza kitufe, kama *space* kwa mfano. Ili kuzuia mchezo kuzalisha laser nyingi sana kwa muda mfupi, tunahitaji kurekebisha hili. Suluhisho ni kutekeleza kinachoitwa *cooldown*, kipima muda, kinachohakikisha kwamba laser inaweza kurushwa mara chache tu. Unaweza kutekeleza hivyo kwa njia ifuatayo:
+Laser inapaswa kufyatuliwa kila wakati unapobonyeza kitufe, kama vile *space* kwa mfano. Ili kuzuia mchezo kuzalisha laser nyingi sana kwa muda mfupi, tunahitaji kurekebisha hili. Suluhisho ni kwa kutekeleza kinachoitwa *cooldown*, kipima muda, kinachohakikisha kwamba laser inaweza kufyatuliwa mara chache tu. Unaweza kutekeleza hivyo kwa njia ifuatayo:
 
 ```javascript
 class Cooldown {
@@ -109,23 +109,23 @@ class Weapon {
 }
 ```
 
-✅ Rejelea somo la 1 katika mfululizo wa michezo ya anga ili kujikumbusha kuhusu *cooldowns*.
+✅ Rejea somo la 1 katika mfululizo wa mchezo wa anga ili kujikumbusha kuhusu *cooldowns*.
 
-## Kitu cha Kujenga
+## Nini cha Kujenga
 
-Utachukua msimbo uliopo (ambao unapaswa kuwa umesafisha na kuufanyia marekebisho) kutoka somo lililopita, na kuupanua. Anza na msimbo kutoka Sehemu ya II au tumia msimbo katika [Sehemu ya III - mwanzo](../../../../../../../../../your-work).
+Utachukua msimbo uliopo (ambao unapaswa kuwa umesafishwa na kupangwa upya) kutoka somo lililopita, na kuupanua. Ama anza na msimbo kutoka sehemu ya II au tumia msimbo katika [Sehemu ya III - mwanzo](../../../../../../../../../your-work).
 
-> tip: laser unayofanyia kazi tayari ipo kwenye folda ya mali zako na imerejelewa na msimbo wako.
+> kidokezo: laser utakayofanyia kazi tayari ipo kwenye folda yako ya mali na imerejelewa na msimbo wako
 
-- **Ongeza ugunduzi wa migongano**, pale laser inapogongana na kitu, sheria zifuatazo zinapaswa kutumika:
-   1. **Laser inagonga adui**: adui hufa ikiwa atagongwa na laser.
-   2. **Laser inagonga sehemu ya juu ya skrini**: Laser inaharibiwa ikiwa itagonga sehemu ya juu ya skrini yetu.
-   3. **Adui na shujaa wanagongana**: Adui na shujaa wanaharibiwa ikiwa watagongana.
-   4. **Adui anagonga chini ya skrini**: Adui na shujaa wanaharibiwa ikiwa adui atagonga chini ya skrini.
+- **Ongeza ugunduzi wa migongano**, wakati laser inapogongana na kitu sheria zifuatazo zinapaswa kutumika:
+   1. **Laser inapogonga adui**: adui hufa ikiwa atagongwa na laser.
+   2. **Laser inapogonga juu ya skrini**: Laser huharibiwa ikiwa itagonga sehemu ya juu ya skrini yetu.
+   3. **Adui na shujaa wanapogongana**: adui na shujaa huharibiwa wanapogongana.
+   4. **Adui anapogonga chini ya skrini**: Adui na shujaa huharibiwa ikiwa adui atafika chini ya skrini.
 
 ## Hatua Zinazopendekezwa
 
-Tafuta faili ambazo zimeundwa kwa ajili yako kwenye folda ndogo ya `your-work`. Inapaswa kuwa na yafuatayo:
+Tafuta faili zilizoundwa kwa ajili yako kwenye folda ndogo ya `your-work`. Inapaswa kuwa na yafuatayo:
 
 ```bash
 -| assets
@@ -137,18 +137,18 @@ Tafuta faili ambazo zimeundwa kwa ajili yako kwenye folda ndogo ya `your-work`. 
 -| package.json
 ```
 
-Anza mradi wako kwenye folda ya `your_work` kwa kuandika:
+Anzisha mradi wako kwenye folda ya `your_work` kwa kuandika:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Hii itaanzisha HTTP Server kwenye anwani `http://localhost:5000`. Fungua kivinjari na ingiza anwani hiyo, kwa sasa inapaswa kuonyesha shujaa na maadui wote, hakuna kinachosogea - bado :).
+Hii itaanzisha HTTP Server kwenye anwani `http://localhost:5000`. Fungua kivinjari na uweke anwani hiyo, kwa sasa inapaswa kuonyesha shujaa na maadui wote, hakuna kinachosogea - bado :).
 
 ### Ongeza Msimbo
 
-1. **Sanidi uwakilishi wa mstatili wa kipengele chako cha mchezo, ili kushughulikia migongano** Msimbo ulio hapa chini unakuruhusu kupata uwakilishi wa mstatili wa `GameObject`. Hariri darasa lako la GameObject ili kulipanua:
+1. **Sanidi uwakilishi wa mstatili wa kitu chako cha mchezo, ili kushughulikia migongano** Msimbo hapa chini unakuruhusu kupata uwakilishi wa mstatili wa `GameObject`. Hariri darasa lako la GameObject ili kulipanua:
 
     ```javascript
     rectFromGameObject() {
@@ -161,7 +161,7 @@ Hii itaanzisha HTTP Server kwenye anwani `http://localhost:5000`. Fungua kivinja
       }
     ```
 
-2. **Ongeza msimbo unaochunguza migongano** Hii itakuwa kazi mpya inayojaribu kama mistatili miwili inagongana:
+2. **Ongeza msimbo unaokagua migongano** Hii itakuwa kazi mpya inayojaribu kama miraba miwili inakutana:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -174,8 +174,8 @@ Hii itaanzisha HTTP Server kwenye anwani `http://localhost:5000`. Fungua kivinja
     }
     ```
 
-3. **Ongeza uwezo wa kurusha laser**
-   1. **Ongeza ujumbe wa tukio la kitufe**. Kitufe cha *space* kinapaswa kuunda laser juu ya chombo cha shujaa. Ongeza vigezo vitatu kwenye kitu cha Messages:
+3. **Ongeza uwezo wa kufyatua laser**
+   1. **Ongeza ujumbe wa tukio la kitufe**. Kitufe cha *space* kinapaswa kuunda laser juu kidogo ya chombo cha shujaa. Ongeza vigezo vitatu kwenye kitu cha Messages:
 
        ```javascript
         KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
@@ -191,7 +191,7 @@ Hii itaanzisha HTTP Server kwenye anwani `http://localhost:5000`. Fungua kivinja
         }
       ```
 
-    1. **Ongeza wasikilizaji**. Hariri kazi ya `initGame()` ili kuhakikisha kwamba shujaa anaweza kurusha pale space inapobonyezwa:
+    1. **Ongeza wasikilizaji**. Hariri kazi ya `initGame()` ili kuhakikisha kwamba shujaa anaweza kufyatua wakati kitufe cha space kinapobonyezwa:
 
        ```javascript
        eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
@@ -200,7 +200,7 @@ Hii itaanzisha HTTP Server kwenye anwani `http://localhost:5000`. Fungua kivinja
         }
        ```
 
-       na ongeza kazi mpya ya `eventEmitter.on()` ili kuhakikisha tabia pale adui anapogongana na laser:
+       na ongeza kazi mpya ya `eventEmitter.on()` ili kuhakikisha tabia wakati adui anakutana na laser:
 
           ```javascript
           eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -209,7 +209,7 @@ Hii itaanzisha HTTP Server kwenye anwani `http://localhost:5000`. Fungua kivinja
           })
           ```
 
-   1. **Sogeza kipengele**, Hakikisha laser inasogea juu ya skrini hatua kwa hatua. Utaunda darasa jipya la Laser linalopanua `GameObject`, kama ulivyofanya awali: 
+   1. **Sogeza kitu**, Hakikisha laser inasogea kuelekea juu ya skrini hatua kwa hatua. Utaunda darasa jipya la Laser linalopanua `GameObject`, kama ulivyofanya hapo awali: 
    
       ```javascript
         class Laser extends GameObject {
@@ -252,9 +252,9 @@ Hii itaanzisha HTTP Server kwenye anwani `http://localhost:5000`. Fungua kivinja
       }  
       ```
 
-      Hakikisha unaongeza `updateGameObjects()` kwenye mzunguko wa mchezo wako katika `window.onload`.
+      Hakikisha kuongeza `updateGameObjects()` kwenye mzunguko wa mchezo wako katika `window.onload`.
 
-   4. **Tekeleza muda wa kupumzika** kwa laser, ili iweze kurushwa mara chache tu.
+   4. **Tekeleza muda wa kupumzika** kwa laser, ili iweze kufyatuliwa mara chache tu.
 
       Hatimaye, hariri darasa la Hero ili liweze kupumzika:
 
@@ -285,21 +285,21 @@ Hii itaanzisha HTTP Server kwenye anwani `http://localhost:5000`. Fungua kivinja
       }
       ```
 
-Kwa hatua hii, mchezo wako una baadhi ya uwezo! Unaweza kusogea kwa kutumia funguo za mshale, kurusha laser kwa space bar, na maadui wanatoweka unapowagonga. Hongera!
+Kwa hatua hii, mchezo wako una baadhi ya uwezo! Unaweza kusogea kwa kutumia mishale, kufyatua laser kwa kutumia space bar, na maadui wanatoweka unapowagonga. Hongera!
 
 ---
 
 ## 🚀 Changamoto
 
-Ongeza mlipuko! Angalia mali za mchezo katika [repo ya Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) na jaribu kuongeza mlipuko pale laser inapogonga mgeni.
+Ongeza mlipuko! Angalia mali za mchezo kwenye [repo ya Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) na jaribu kuongeza mlipuko wakati laser inapogonga mgeni.
 
-## Maswali ya Baada ya Somo
+## Jaribio la Baada ya Somo
 
-[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/36)
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Mapitio na Kujisomea
 
-Jaribu kubadilisha vipindi kwenye mchezo wako hadi sasa. Nini kinatokea unapovibadilisha? Soma zaidi kuhusu [matukio ya muda ya JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
+Jaribu kubadilisha vipindi kwenye mchezo wako hadi sasa. Nini hutokea unapovibadilisha? Soma zaidi kuhusu [matukio ya muda ya JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
 ## Kazi
 
@@ -308,4 +308,4 @@ Jaribu kubadilisha vipindi kwenye mchezo wako hadi sasa. Nini kinatokea unapovib
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya mtafsiri wa kibinadamu mtaalamu. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

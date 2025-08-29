@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c63675cfaf1d223b37bb9fecbfe7c252",
-  "translation_date": "2025-08-28T04:29:57+00:00",
+  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
+  "translation_date": "2025-08-29T10:38:12+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "hu"
 }
 -->
 # Bevezetés a programozási nyelvekbe és az eszközök világába
 
-Ez a lecke a programozási nyelvek alapjait tárgyalja. Az itt bemutatott témák a legtöbb modern programozási nyelvre alkalmazhatók. Az „Eszközök világa” részben megismerkedhetsz hasznos szoftverekkel, amelyek segítenek fejlesztőként.
+Ez a lecke a programozási nyelvek alapjait tárgyalja. Az itt bemutatott témák a legtöbb modern programozási nyelvre alkalmazhatók. Az „Eszközök világa” részben hasznos szoftvereket ismerhetsz meg, amelyek segítenek fejlesztőként.
 
 ![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.hu.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
@@ -19,7 +19,7 @@ Ez a lecke a programozási nyelvek alapjait tárgyalja. Az itt bemutatott témá
 
 ## Bevezetés
 
-Ebben a leckében az alábbiakról lesz szó:
+Ebben a leckében az alábbiakat tárgyaljuk:
 
 - Mi a programozás?
 - Programozási nyelvek típusai
@@ -30,21 +30,21 @@ Ebben a leckében az alábbiakról lesz szó:
 
 ## Mi a programozás?
 
-A programozás (más néven kódolás) az a folyamat, amely során utasításokat írunk egy eszköz, például számítógép vagy mobil eszköz számára. Ezeket az utasításokat programozási nyelven írjuk, amelyet az eszköz értelmez. Ezeket az utasításokat különböző neveken ismerhetjük, például *program*, *számítógépes program*, *alkalmazás (app)* vagy *futtatható fájl*.
+A programozás (más néven kódolás) az a folyamat, amely során utasításokat írunk egy eszköz, például számítógép vagy mobil eszköz számára. Ezeket az utasításokat programozási nyelv segítségével írjuk, amelyet az eszköz értelmez. Ezeket az utasításokat különböző neveken ismerhetjük, például *program*, *számítógépes program*, *alkalmazás (app)* vagy *futtatható fájl*.
 
-Egy *program* bármi lehet, amit kóddal írtak; weboldalak, játékok és telefonos alkalmazások is programok. Bár lehetséges programot létrehozni kódolás nélkül, az alapvető logikát az eszköz értelmezi, és ezt a logikát valószínűleg kóddal írták. Egy program, amely *fut* vagy *végrehajt* kódot, éppen utasításokat hajt végre. Az eszköz, amelyen ezt a leckét olvasod, egy programot futtat, hogy megjelenítse a képernyődön.
+Egy *program* bármi lehet, amit kóddal írtak; weboldalak, játékok és telefonos alkalmazások is programok. Bár lehetséges programot létrehozni kód írása nélkül, az alapvető logikát az eszköz értelmezi, és ezt a logikát valószínűleg kóddal írták. Egy program, amely *fut* vagy *végrehajtja* a kódot, éppen utasításokat hajt végre. Az az eszköz, amelyen ezt a leckét olvasod, egy programot futtat, hogy megjelenítse a képernyődön.
 
 ✅ Kutass egy kicsit: kit tartanak a világ első számítógépes programozójának?
 
 ## Programozási nyelvek
 
-A programozási nyelvek lehetővé teszik a fejlesztők számára, hogy utasításokat írjanak egy eszköz számára. Az eszközök csak bináris (1-esek és 0-ák) formátumot értenek, ami a *legtöbb* fejlesztő számára nem túl hatékony kommunikációs mód. A programozási nyelvek hidat képeznek az emberek és a számítógépek közötti kommunikációban.
+A programozási nyelvek lehetővé teszik a fejlesztők számára, hogy utasításokat írjanak egy eszköz számára. Az eszközök csak bináris (1-esek és 0-ák) formátumot értenek, ami *a legtöbb* fejlesztő számára nem túl hatékony kommunikációs mód. A programozási nyelvek hidat képeznek az emberek és a számítógépek közötti kommunikációban.
 
 A programozási nyelvek különböző formátumokban léteznek, és különböző célokat szolgálhatnak. Például a JavaScript elsősorban webalkalmazásokhoz használatos, míg a Bash elsősorban operációs rendszerekhez.
 
-Az *alacsony szintű nyelvek* általában kevesebb lépést igényelnek az eszköz számára az utasítások értelmezéséhez, mint a *magas szintű nyelvek*. A magas szintű nyelvek azonban olvashatóságuk és támogatottságuk miatt népszerűek. A JavaScript például magas szintű nyelvnek számít.
+Az *alacsony szintű nyelvek* általában kevesebb lépést igényelnek az eszköz számára az utasítások értelmezéséhez, mint a *magas szintű nyelvek*. A magas szintű nyelvek azonban népszerűek az olvashatóságuk és a támogatottságuk miatt. A JavaScript például magas szintű nyelvnek számít.
 
-Az alábbi kód példát mutat arra, hogy egy magas szintű nyelv (JavaScript) és egy alacsony szintű nyelv (ARM assembly kód) hogyan különbözik egymástól.
+Az alábbi kód példák bemutatják a különbséget egy magas szintű nyelv (JavaScript) és egy alacsony szintű nyelv (ARM assembly kód) között.
 
 ```javascript
 let number = 10
@@ -89,23 +89,23 @@ Hihetetlen, de *mindkettő ugyanazt csinálja*: egy Fibonacci-sorozatot nyomtat 
 
 ## Egy program elemei
 
-Egy program egyetlen utasítását *utasításnak* nevezzük, amely általában egy karakterrel vagy sortöréssel jelzi, hogy hol ér véget, vagyis *lezárul*. Az, hogy egy program hogyan zárul le, nyelvenként eltérő.
+Egy program egyetlen utasítását *utasításnak* nevezzük, amely általában egy karakterrel vagy sortöréssel jelzi, hogy hol ér véget, vagyis *lezárul*. Az, hogy egy program hogyan zárja le az utasításokat, nyelvenként eltérő.
 
-Az utasítások egy programban gyakran a felhasználó által megadott vagy máshonnan származó adatokra támaszkodnak az utasítások végrehajtásához. Az adatok megváltoztathatják a program viselkedését, ezért a programozási nyelvek lehetőséget biztosítanak arra, hogy az adatokat ideiglenesen tároljuk, hogy később felhasználhassuk őket. Ezeket *változóknak* nevezzük. A változók olyan utasítások, amelyek arra utasítják az eszközt, hogy adatokat tároljon a memóriájában. A változók a programozásban hasonlóak az algebrában használt változókhoz: egyedi nevük van, és értékük idővel változhat.
+Az utasítások egy programban gyakran felhasználói vagy más forrásból származó adatokra támaszkodnak az utasítások végrehajtásához. Az adatok megváltoztathatják a program viselkedését, ezért a programozási nyelvek lehetőséget biztosítanak az adatok ideiglenes tárolására, hogy később felhasználhatók legyenek. Ezeket *változóknak* nevezzük. A változók olyan utasítások, amelyek arra utasítják az eszközt, hogy adatokat tároljon a memóriájában. A változók a programokban hasonlóak az algebrában használt változókhoz: egyedi nevük van, és értékük idővel változhat.
 
-Előfordulhat, hogy egyes utasításokat az eszköz nem hajt végre. Ez általában a fejlesztő szándékos döntése, vagy véletlenül történik, amikor váratlan hiba lép fel. Az alkalmazás feletti ilyen típusú kontroll robusztusabbá és karbantarthatóbbá teszi azt. Ezek a kontrollváltozások általában bizonyos feltételek teljesülésekor következnek be. Egy gyakori utasítás, amelyet a modern programozásban használnak a program futásának irányítására, az `if..else` utasítás.
+Előfordulhat, hogy egyes utasításokat az eszköz nem hajt végre. Ez általában a fejlesztő szándékos döntése, vagy véletlenül történik, amikor váratlan hiba lép fel. Ez a fajta kontroll egy alkalmazás felett robusztusabbá és karbantarthatóbbá teszi azt. Az ilyen változások általában bizonyos feltételek teljesülésekor következnek be. Egy gyakori utasítás, amelyet a modern programozásban használnak a program futásának irányítására, az `if..else` utasítás.
 
-✅ Erről az utasítástípusról a következő leckékben tanulsz majd többet.
+✅ Erről az utasításról többet tanulsz a következő leckékben.
 
-## Eszközök világa
+## Az eszközök világa
 
-[![Eszközök világa](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Eszközök világa")
+[![Az eszközök világa](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Az eszközök világa")
 
 > 🎥 Kattints a fenti képre egy videóért az eszközökről
 
-Ebben a részben megismerkedhetsz néhány olyan szoftverrel, amelyet hasznosnak találhatsz, amikor elkezded szakmai fejlesztői utadat.
+Ebben a részben megismerhetsz néhány szoftvert, amelyeket hasznosnak találhatsz, amikor elkezded a profi fejlesztői utadat.
 
-Egy **fejlesztői környezet** egyedi eszközök és funkciók halmaza, amelyeket a fejlesztők gyakran használnak szoftverírás közben. Ezeket az eszközöket a fejlesztő egyedi igényeihez igazították, és idővel változhatnak, ha a fejlesztő prioritásai megváltoznak a munkában, személyes projektekben, vagy ha más programozási nyelvet használ.
+Egy **fejlesztői környezet** egyedi eszközök és funkciók halmaza, amelyeket egy fejlesztő gyakran használ a szoftverírás során. Ezek az eszközök a fejlesztő egyedi igényeihez igazodhatnak, és idővel változhatnak, ha a fejlesztő prioritásai megváltoznak a munkában, személyes projektekben, vagy ha más programozási nyelvet használ.
 
 ### Szerkesztők
 
@@ -115,8 +115,8 @@ A fejlesztők több okból is támaszkodnak a szerkesztőkre:
 
 - A *hibakeresés* segít feltárni a hibákat és problémákat, lépésről lépésre végighaladva a kódon. Néhány szerkesztő rendelkezik hibakeresési funkciókkal, amelyek testreszabhatók és hozzáadhatók bizonyos programozási nyelvekhez.
 - A *szintaxiskiemelés* színeket és szövegformázást ad a kódhoz, megkönnyítve annak olvasását. A legtöbb szerkesztő lehetővé teszi a szintaxiskiemelés testreszabását.
-- Az *extensionök és integrációk* speciális eszközök, amelyeket fejlesztők készítettek fejlesztők számára. Ezek az eszközök nem voltak beépítve az alap szerkesztőbe. Például sok fejlesztő dokumentálja a kódját, hogy elmagyarázza, hogyan működik. Telepíthetnek helyesírás-ellenőrző bővítményt, hogy segítsenek megtalálni a dokumentációban lévő elírásokat.
-- A *testreszabás* lehetővé teszi a fejlesztők számára, hogy egyedi fejlesztői környezetet hozzanak létre saját igényeikhez igazítva.
+- Az *integrációk és bővítmények* speciális eszközök, amelyeket fejlesztők készítettek fejlesztők számára. Ezek az eszközök nem részei az alap szerkesztőnek. Például sok fejlesztő dokumentálja a kódját, hogy elmagyarázza, hogyan működik. Telepíthetnek helyesírás-ellenőrző bővítményt, hogy segítsenek megtalálni a dokumentációban lévő elírásokat. A legtöbb bővítmény egy adott szerkesztőhöz készült, és a legtöbb szerkesztő lehetőséget biztosít a bővítmények keresésére.
+- A *testreszabás* lehetővé teszi a fejlesztők számára, hogy egyedi fejlesztői környezetet hozzanak létre az igényeiknek megfelelően. A legtöbb szerkesztő rendkívül testreszabható, és lehetővé teszi egyedi bővítmények létrehozását is.
 
 #### Népszerű szerkesztők és webfejlesztési bővítmények
 
@@ -137,7 +137,7 @@ A fejlesztők több okból is támaszkodnak a szerkesztőkre:
 
 Egy másik kulcsfontosságú eszköz a böngésző. A webfejlesztők a böngészőre támaszkodnak, hogy lássák, hogyan fut a kódjuk a weben. A böngésző megjeleníti azokat a vizuális elemeket is, amelyeket a szerkesztőben írtak, például a HTML-t.
 
-Sok böngésző rendelkezik *fejlesztői eszközökkel* (DevTools), amelyek hasznos funkciókat és információkat tartalmaznak, hogy segítsenek a fejlesztőknek fontos adatokat gyűjteni az alkalmazásukról.
+Sok böngésző rendelkezik *fejlesztői eszközökkel* (DevTools), amelyek hasznos funkciókat és információkat tartalmaznak, hogy segítsenek a fejlesztőknek fontos adatokat gyűjteni az alkalmazásukról. Például: Ha egy weboldalon hibák vannak, néha hasznos tudni, mikor történtek. A böngésző DevTools eszközei konfigurálhatók, hogy rögzítsék ezeket az információkat.
 
 #### Népszerű böngészők és DevTools
 
@@ -147,46 +147,65 @@ Sok böngésző rendelkezik *fejlesztői eszközökkel* (DevTools), amelyek hasz
 
 ### Parancssori eszközök
 
-Néhány fejlesztő kevésbé grafikus nézetet részesít előnyben napi feladataihoz, és a parancssorra támaszkodik. A parancssor lehetővé teszi, hogy billentyűzeten maradva gyorsan végezz el feladatokat, anélkül hogy az egeret használnád.
+Néhány fejlesztő kevésbé grafikus nézetet részesít előnyben a napi feladataihoz, és a parancssort használja erre. A kódírás jelentős mennyiségű gépelést igényel, és néhány fejlesztő nem szeretné megszakítani a billentyűzeten való munkafolyamatát. A parancssor lehetővé teszi, hogy sok feladatot elvégezzenek anélkül, hogy az egér és a billentyűzet között váltogatnának. A parancssor másik előnye, hogy konfigurálható, és a beállítások menthetők, később módosíthatók, és más fejlesztői gépekre importálhatók. Mivel a fejlesztői környezetek annyira egyediek, egyes fejlesztők teljesen elkerülik a parancssort, mások teljes mértékben támaszkodnak rá, míg megint mások a kettő kombinációját részesítik előnyben.
 
-#### Népszerű parancssori lehetőségek
+### Népszerű parancssori lehetőségek
 
-- Windows: [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7/?WT.mc_id=academic-77807-sagibbon), CMD
-- MacOS: [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac), iTerm
-- Linux: [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html), KDE Konsole
+A parancssori lehetőségek az operációs rendszertől függően eltérőek.
+
+*💻 = előre telepítve az operációs rendszeren.*
+
+#### Windows
+
+- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7/?WT.mc_id=academic-77807-sagibbon) 💻
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (más néven CMD) 💻
+- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)
+- [mintty](https://mintty.github.io/)
+  
+#### MacOS
+
+- [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) 💻
+- [iTerm](https://iterm2.com/)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
+
+#### Linux
+
+- [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
+- [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
+- [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
 
 #### Népszerű parancssori eszközök
 
-- [Git](https://git-scm.com/)
+- [Git](https://git-scm.com/) (💻 a legtöbb operációs rendszeren)
 - [NPM](https://www.npmjs.com/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/cli/)
 
 ### Dokumentáció
 
-A fejlesztők gyakran dokumentációhoz fordulnak, hogy új dolgokat tanuljanak meg, vagy mélyebb ismereteket szerezzenek.
+Amikor egy fejlesztő valami újat szeretne megtanulni, valószínűleg dokumentációhoz fordul, hogy megtudja, hogyan kell használni. A fejlesztők gyakran támaszkodnak a dokumentációra, hogy eligazodjanak az eszközök és nyelvek helyes használatában, valamint hogy mélyebb ismereteket szerezzenek azok működéséről.
 
-#### Népszerű dokumentációk
+#### Népszerű dokumentációk webfejlesztéshez
 
-- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web)
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), a Mozilla-tól, a [Firefox](https://www.mozilla.org/firefox/) böngésző kiadójától
 - [Frontend Masters](https://frontendmasters.com/learn/)
-- [Web.dev](https://web.dev)
-- [Microsoft fejlesztői dokumentáció](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers)
+- [Web.dev](https://web.dev), a Google-tól, a [Chrome](https://www.google.com/chrome/) kiadójától
+- [Microsoft fejlesztői dokumentációja](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), a [Microsoft Edge](https://www.microsoft.com/edge) böngészőhöz
 - [W3 Schools](https://www.w3schools.com/where_to_start.asp)
 
-✅ Kutass: Most, hogy ismered a webfejlesztői környezet alapjait, hasonlítsd össze egy webdizájner környezetével.
+✅ Kutass egy kicsit: Most, hogy ismered a webfejlesztői környezet alapjait, hasonlítsd össze egy webdizájner környezetével.
 
 ---
 
 ## 🚀 Kihívás
 
-Hasonlíts össze néhány programozási nyelvet. Milyen egyedi jellemzői vannak a JavaScriptnek a Javához képest? És mi a helyzet a COBOL és a Go esetében?
+Hasonlíts össze néhány programozási nyelvet. Milyen egyedi jellemzői vannak a JavaScript-nek a Java-hoz képest? És mi a helyzet a COBOL-lal és a Go-val?
 
 ## Előadás utáni kvíz
-[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/2)
+[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/)
 
 ## Áttekintés és önálló tanulás
 
-Tanulmányozd a programozók számára elérhető különböző nyelveket. Próbálj meg írni egy sort egy nyelven, majd írd át két másik nyelvre. Mit tanultál?
+Tanulmányozd a programozók számára elérhető különböző nyelveket. Próbálj meg írni egy sort az egyik nyelven, majd írd át két másik nyelvre. Mit tanultál?
 
 ## Feladat
 
@@ -194,5 +213,5 @@ Tanulmányozd a programozók számára elérhető különböző nyelveket. Prób
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális, emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+**Felelősségkizárás**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális, emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

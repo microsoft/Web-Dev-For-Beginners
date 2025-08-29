@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-28T08:04:45+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T11:34:02+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "ro"
 }
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Test înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Luarea deciziilor și controlul ordinii în care rulează codul tău fac ca acesta să fie reutilizabil și robust. Această secțiune acoperă sintaxa pentru controlul fluxului de date în JavaScript și semnificația sa atunci când este utilizată cu tipurile de date Boolean.
+Luarea deciziilor și controlul ordinii în care codul tău rulează fac codul reutilizabil și robust. Această secțiune acoperă sintaxa pentru controlul fluxului de date în JavaScript și importanța sa atunci când este utilizată cu tipurile de date Boolean.
 
 [![Luarea deciziilor](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Luarea deciziilor")
 
@@ -25,7 +25,7 @@ Luarea deciziilor și controlul ordinii în care rulează codul tău fac ca aces
 
 > Poți parcurge această lecție pe [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 
-## O recapitulare scurtă despre Booleans
+## O recapitulare rapidă despre Booleans
 
 Booleans pot avea doar două valori: `true` sau `false`. Booleans ajută la luarea deciziilor despre ce linii de cod ar trebui să ruleze atunci când anumite condiții sunt îndeplinite.
 
@@ -34,7 +34,7 @@ Setează un boolean să fie true sau false astfel:
 `let myTrueBool = true`  
 `let myFalseBool = false`
 
-✅ Booleans sunt denumite după matematicianul, filosoful și logicianul englez George Boole (1815–1864).
+✅ Booleans sunt numite după matematicianul, filosoful și logicianul englez George Boole (1815–1864).
 
 ## Operatori de comparație și Booleans
 
@@ -47,7 +47,7 @@ Operatorii sunt utilizați pentru a evalua condiții prin realizarea de compara�
 | `>`    | **Mai mare decât**: Compară două valori și returnează tipul de date Boolean `true` dacă valoarea din partea stângă este mai mare decât cea din dreapta       | `5 > 6 // false`   |
 | `>=`   | **Mai mare sau egal cu**: Compară două valori și returnează tipul de date Boolean `true` dacă valoarea din partea stângă este mai mare sau egală cu cea din dreapta | `5 >= 6 // false`  |
 | `===`  | **Egalitate strictă**: Compară două valori și returnează tipul de date Boolean `true` dacă valorile din dreapta și stânga sunt egale ȘI sunt de același tip de date | `5 === 6 // false` |
-| `!==`  | **Inegalitate**: Compară două valori și returnează valoarea Boolean opusă celei pe care ar returna-o un operator de egalitate strictă                        | `5 !== 6 // true`  |
+| `!==`  | **Inegalitate**: Compară două valori și returnează valoarea Boolean opusă celei pe care ar returna-o operatorul de egalitate strictă                         | `5 !== 6 // true`  |
 
 ✅ Verifică-ți cunoștințele scriind câteva comparații în consola browserului tău. Te surprinde vreun rezultat returnat?
 
@@ -220,7 +220,7 @@ Creează un program care este scris mai întâi cu operatori logici, apoi rescri
 
 Citește mai multe despre numeroșii operatori disponibili utilizatorului [pe MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
-Parcurge minunatul [operator lookup](https://joshwcomeau.com/operator-lookup/) al lui Josh Comeau!
+Parcurge minunatul [lookup de operatori](https://joshwcomeau.com/operator-lookup/) al lui Josh Comeau!
 
 ## Temă
 
@@ -229,4 +229,4 @@ Parcurge minunatul [operator lookup](https://joshwcomeau.com/operator-lookup/) a
 ---
 
 **Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus utilizând serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea realizată de un profesionist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

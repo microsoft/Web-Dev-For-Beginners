@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-27T22:35:07+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T12:51:52+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "sl"
 }
 -->
-# Ustvari vesoljsko igro, 1. del: Uvod
+# Izdelava vesoljske igre, 1. del: Uvod
 
 ![video](../../../../6-space-game/images/pewpew.gif)
 
@@ -17,30 +17,30 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Dedovanje in kompozicija pri razvoju iger
 
-V prejšnjih lekcijah ni bilo veliko potrebe po skrbi za arhitekturo aplikacij, ki ste jih ustvarili, saj so bili projekti zelo majhnega obsega. Ko pa vaše aplikacije rastejo v velikosti in obsegu, postanejo arhitekturne odločitve pomembnejše. Obstajata dva glavna pristopa za ustvarjanje večjih aplikacij v JavaScriptu: *kompozicija* ali *dedovanje*. Obe imata svoje prednosti in slabosti, vendar ju bomo razložili v kontekstu igre.
+V prejšnjih lekcijah ni bilo veliko potrebe po skrbi za arhitekturo aplikacij, ki ste jih ustvarili, saj so bili projekti zelo majhnega obsega. Ko pa vaše aplikacije rastejo v velikosti in obsegu, postanejo arhitekturne odločitve pomembnejše. Obstajata dva glavna pristopa k ustvarjanju večjih aplikacij v JavaScriptu: *kompozicija* ali *dedovanje*. Obe imata svoje prednosti in slabosti, vendar ju bomo razložili v kontekstu igre.
 
-✅ Ena najbolj znanih programerskih knjig vseh časov se ukvarja z [načrtnimi vzorci](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Ena najbolj znanih knjig o programiranju je povezana z [oblikovalskimi vzorci](https://en.wikipedia.org/wiki/Design_Patterns).
 
-V igri imate `igralne objekte`, ki so objekti, ki obstajajo na zaslonu. To pomeni, da imajo lokacijo v kartezičnem koordinatnem sistemu, ki jo določata koordinati `x` in `y`. Ko razvijate igro, boste opazili, da imajo vsi vaši igralni objekti standardne lastnosti, ki so skupne za vsako igro, ki jo ustvarite, in sicer elementi, ki so:
+V igri imate `objekte igre`, ki so objekti, ki obstajajo na zaslonu. To pomeni, da imajo lokacijo v kartezijskem koordinatnem sistemu, opredeljeno z `x` in `y` koordinato. Ko razvijate igro, boste opazili, da imajo vsi vaši objekti igre standardne lastnosti, skupne za vsako igro, ki jo ustvarite, in sicer elemente, ki so:
 
-- **lokacijsko osnovani** Večina, če ne vsi, igralni elementi so osnovani na lokaciji. To pomeni, da imajo lokacijo, `x` in `y`.
+- **lokacijsko osnovani** Večina, če ne vsi, elementi igre temeljijo na lokaciji. To pomeni, da imajo lokacijo, `x` in `y`.
 - **premični** To so objekti, ki se lahko premaknejo na novo lokacijo. To je običajno junak, pošast ali NPC (ne-igralni lik), ne pa na primer statični objekt, kot je drevo.
-- **samouničujoči** Ti objekti obstajajo le določen čas, preden se pripravijo na izbris. Običajno je to predstavljeno z logično vrednostjo `mrtvo` ali `uničeno`, ki signalizira igralnemu pogonu, da tega objekta ni več treba prikazovati.
+- **samouničujoči** Ti objekti obstajajo le določen čas, preden se pripravijo na brisanje. Običajno je to predstavljeno z logično vrednostjo `mrtvo` ali `uničeno`, ki signalizira igralnemu pogonu, da tega objekta ni več treba prikazovati.
 - **časovno omejeni** 'Časovna omejitev' je tipična lastnost kratkotrajnih objektov. Tipičen primer je kos besedila ali grafični učinek, kot je eksplozija, ki naj bo viden le nekaj milisekund.
 
-✅ Pomislite na igro, kot je Pac-Man. Ali lahko v tej igri prepoznate štiri zgoraj navedene tipe objektov?
+✅ Pomislite na igro, kot je Pac-Man. Ali lahko prepoznate štiri zgoraj navedene tipe objektov v tej igri?
 
 ### Izražanje vedenja
 
-Vse, kar smo opisali zgoraj, so vedenja, ki jih lahko imajo igralni objekti. Kako jih torej kodiramo? To vedenje lahko izrazimo kot metode, povezane z razredi ali objekti.
+Vse, kar smo opisali zgoraj, so vedenja, ki jih lahko imajo objekti igre. Kako jih torej kodiramo? To vedenje lahko izrazimo kot metode, povezane bodisi s klasami bodisi z objekti.
 
-**Razredi**
+**Klase**
 
-Ideja je uporabiti `razrede` v kombinaciji z `dedovanjem`, da dodamo določeno vedenje razredu.
+Ideja je uporabiti `klase` v kombinaciji z `dedovanjem`, da dodamo določeno vedenje klasi.
 
 ✅ Dedovanje je pomemben koncept za razumevanje. Več o tem preberite v [članku MDN o dedovanju](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Izraženo s kodo, lahko igralni objekt običajno izgleda takole:
+V kodi je objekt igre običajno videti takole:
 
 ```javascript
 
@@ -92,7 +92,7 @@ const tree = new Tree();
 
 **Kompozicija**
 
-Drugačen način obravnave dedovanja objektov je uporaba *kompozicije*. Nato objekti izražajo svoje vedenje takole:
+Drugačen način obravnave dedovanja objektov je uporaba *kompozicije*. Takrat objekti izražajo svoje vedenje takole:
 
 ```javascript
 //create a constant gameObject
@@ -145,17 +145,17 @@ Odločitev je vaša, kateri vzorec boste izbrali. JavaScript podpira oba pristop
 
 Drug pogost vzorec pri razvoju iger obravnava problem upravljanja uporabniške izkušnje in zmogljivosti igre.
 
-## Vzorec Pub/Sub
+## Pub/sub vzorec
 
 ✅ Pub/Sub pomeni 'objavi-naroči se'
 
-Ta vzorec obravnava idejo, da si različni deli vaše aplikacije ne bi smeli biti medsebojno poznani. Zakaj? To omogoča lažje razumevanje dogajanja na splošno, če so različni deli ločeni. Prav tako omogoča enostavno spreminjanje vedenja, če je to potrebno. Kako to dosežemo? To storimo z vzpostavitvijo nekaterih konceptov:
+Ta vzorec obravnava idejo, da si različni deli vaše aplikacije ne bi smeli medsebojno poznati. Zakaj? To omogoča lažji pregled nad dogajanjem na splošno, če so različni deli ločeni. Prav tako omogoča enostavno spremembo vedenja, če je to potrebno. Kako to dosežemo? Z vzpostavitvijo nekaterih konceptov:
 
-- **sporočilo**: Sporočilo je običajno besedilni niz, ki mu lahko sledi dodatna vsebina (kos podatkov, ki pojasnjuje, za kaj gre pri sporočilu). Tipično sporočilo v igri je lahko `KEY_PRESSED_ENTER`.
+- **sporočilo**: Sporočilo je običajno besedilni niz, ki ga spremlja neobvezna vsebina (kos podatkov, ki pojasnjuje, kaj sporočilo pomeni). Tipično sporočilo v igri je lahko `KEY_PRESSED_ENTER`.
 - **objavljalec**: Ta element *objavi* sporočilo in ga pošlje vsem naročnikom.
 - **naročnik**: Ta element *posluša* določena sporočila in izvede neko nalogo kot rezultat prejetega sporočila, na primer izstreli laser.
 
-Implementacija je precej majhna, vendar je to zelo močan vzorec. Tukaj je, kako ga lahko implementiramo:
+Implementacija je zelo majhna, vendar je to zelo močan vzorec. Tukaj je, kako ga lahko implementiramo:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Zgoraj povežemo dogodek tipkovnice, `ArrowLeft`, in pošljemo sporočilo `HERO_MOVE_LEFT`. Poslušamo to sporočilo in premaknemo `junaka` kot rezultat. Prednost tega vzorca je, da poslušalec dogodkov in junak ne vesta drug za drugega. Lahko premapirate `ArrowLeft` na tipko `A`. Poleg tega bi bilo mogoče narediti nekaj povsem drugega na `ArrowLeft` z nekaj spremembami v funkciji `on` eventEmitterja:
+Zgoraj povežemo dogodek tipkovnice, `ArrowLeft`, in pošljemo sporočilo `HERO_MOVE_LEFT`. Poslušamo to sporočilo in premaknemo `junaka` kot rezultat. Prednost tega vzorca je, da poslušalec dogodkov in junak ne poznata drug drugega. Lahko premapirate `ArrowLeft` na tipko `A`. Poleg tega bi bilo mogoče narediti nekaj povsem drugega na `ArrowLeft` z nekaj spremembami funkcije `on` v eventEmitterju:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,13 +212,13 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-Ko postanejo stvari bolj zapletene, ko vaša igra raste, ta vzorec ostane enako zapleten in vaša koda ostane čista. Zelo priporočljivo je, da sprejmete ta vzorec.
+Ko se stvari zapletejo, ko vaša igra raste, ta vzorec ostane enako zapleten, vaša koda pa ostane čista. Zelo priporočljivo je, da sprejmete ta vzorec.
 
 ---
 
 ## 🚀 Izziv
 
-Razmislite, kako lahko vzorec pub-sub izboljša igro. Kateri deli naj oddajajo dogodke in kako naj igra nanje reagira? Zdaj imate priložnost, da postanete ustvarjalni in razmislite o novi igri ter o tem, kako bi se njeni deli lahko obnašali.
+Razmislite, kako lahko pub-sub vzorec izboljša igro. Kateri deli naj oddajajo dogodke in kako naj igra nanje reagira? Zdaj imate priložnost, da postanete kreativni in razmislite o novi igri ter kako bi se njeni deli obnašali.
 
 ## Zaključni kviz
 
@@ -226,13 +226,13 @@ Razmislite, kako lahko vzorec pub-sub izboljša igro. Kateri deli naj oddajajo d
 
 ## Pregled in samostojno učenje
 
-Več o Pub/Sub preberite [tukaj](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
+Več o Pub/Sub vzorcu preberite [tukaj](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
 ## Naloga
 
-[Zasnujte igro](assignment.md)
+[Ustvarite osnutek igre](assignment.md)
 
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

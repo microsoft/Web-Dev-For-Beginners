@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-28T04:06:33+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T10:31:17+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "hu"
 }
@@ -17,19 +17,19 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/11)
 
-A döntéshozatal és a kód futási sorrendjének irányítása újrahasznosíthatóvá és robusztussá teszi a kódot. Ez a rész bemutatja a JavaScript adatfolyamának irányításához szükséges szintaxist, valamint annak jelentőségét a Boolean adattípusokkal való használat során.
+A döntéshozatal és a kód futási sorrendjének irányítása újrafelhasználhatóvá és robusztussá teszi a kódot. Ez a rész bemutatja a JavaScript adatfolyamának irányításához szükséges szintaxist, valamint annak jelentőségét, különösen a Boolean adattípusokkal való használat során.
 
 [![Döntéshozatal](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Döntéshozatal")
 
-> 🎥 Kattints a fenti képre a döntéshozatalról szóló videóért.
+> 🎥 Kattints a fenti képre egy videóért a döntéshozatalról.
 
-> Ezt a leckét elérheted a [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon) oldalon!
+> Ezt a leckét elérheted a [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon) oldalán!
 
 ## Rövid áttekintés a Booleans-ról
 
-A Booleans csak két értéket vehet fel: `true` vagy `false`. A Booleans segít eldönteni, hogy melyik kódsor fusson le, amikor bizonyos feltételek teljesülnek.
+A Booleans csak két értéket vehet fel: `true` vagy `false`. A Booleans segít eldönteni, hogy mely kódsorok fussanak, amikor bizonyos feltételek teljesülnek.
 
-Állítsd be a Boolean értékét `true` vagy `false` értékre így:
+Állítsd be a Boolean értékét `true` vagy `false`-ra így:
 
 `let myTrueBool = true`  
 `let myFalseBool = false`
@@ -38,7 +38,7 @@ A Booleans csak két értéket vehet fel: `true` vagy `false`. A Booleans segít
 
 ## Összehasonlító operátorok és Booleans
 
-Az operátorokat arra használjuk, hogy feltételeket értékeljünk ki, összehasonlításokat végezzünk, amelyek Boolean értéket hoznak létre. Az alábbiakban néhány gyakran használt operátor található.
+Az operátorok feltételek értékelésére szolgálnak, összehasonlításokat végezve, amelyek Boolean értéket hoznak létre. Az alábbiakban néhány gyakran használt operátor található.
 
 | Szimbólum | Leírás                                                                                                                                                     | Példa              |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
@@ -49,11 +49,11 @@ Az operátorokat arra használjuk, hogy feltételeket értékeljünk ki, összeh
 | `===`     | **Szigorú egyenlőség**: Összehasonlít két értéket, és `true` Boolean adattípust ad vissza, ha a jobb és bal oldali értékek egyenlők ÉS azonos adattípusúak  | `5 === 6 // false` |
 | `!==`     | **Egyenlőtlenség**: Összehasonlít két értéket, és az ellenkező Boolean értéket adja vissza, mint amit a szigorú egyenlőség operátor adna                     | `5 !== 6 // true`  |
 
-✅ Ellenőrizd a tudásodat úgy, hogy néhány összehasonlítást írsz a böngésződ konzoljába. Meglepett valamelyik visszaadott adat?
+✅ Ellenőrizd a tudásodat néhány összehasonlítás írásával a böngésződ konzoljában. Meglepett valamelyik visszaadott adat?
 
 ## If utasítás
 
-Az if utasítás lefuttatja a kódot a blokkjai között, ha a feltétel igaz.
+Az if utasítás a feltétel teljesülése esetén futtatja a kódot a blokkjai között.
 
 ```javascript
 if (condition) {
@@ -75,7 +75,7 @@ if (currentMoney >= laptopPrice) {
 
 ## If..Else utasítás
 
-Az `else` utasítás lefuttatja a kódot a blokkjai között, amikor a feltétel hamis. Ez opcionális az `if` utasítással.
+Az `else` utasítás a blokkjai közötti kódot futtatja, ha a feltétel hamis. Az `if` utasítással opcionális.
 
 ```javascript
 let currentMoney;
@@ -90,11 +90,11 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-✅ Teszteld a kód megértését úgy, hogy futtatod a böngésző konzoljában. Változtasd meg a currentMoney és laptopPrice változók értékeit, hogy megváltoztasd a visszaadott `console.log()`-ot.
+✅ Teszteld a kód megértését úgy, hogy futtatod a böngésző konzoljában. Módosítsd a currentMoney és laptopPrice változók értékeit, hogy megváltoztasd a `console.log()` visszaadott értékét.
 
 ## Switch utasítás
 
-A `switch` utasítást arra használjuk, hogy különböző feltételek alapján különböző műveleteket hajtsunk végre. Használd a `switch` utasítást, hogy kiválaszd, melyik kódblokkot kell végrehajtani.
+A `switch` utasítás különböző feltételek alapján különböző műveletek végrehajtására szolgál. Használd a `switch` utasítást, hogy kiválaszd, melyik kódblokkot kell végrehajtani.
 
 ```javascript
 switch (expression) {
@@ -127,21 +127,21 @@ switch (a) {
 console.log(`The value is ${a}`);
 ```
 
-✅ Teszteld a kód megértését úgy, hogy futtatod a böngésző konzoljában. Változtasd meg az `a` változó értékét, hogy megváltoztasd a visszaadott `console.log()`-ot.
+✅ Teszteld a kód megértését úgy, hogy futtatod a böngésző konzoljában. Módosítsd az `a` változó értékét, hogy megváltoztasd a `console.log()` visszaadott értékét.
 
 ## Logikai operátorok és Booleans
 
-A döntésekhez több összehasonlításra is szükség lehet, amelyeket logikai operátorokkal lehet összefűzni, hogy Boolean értéket kapjunk.
+A döntésekhez több összehasonlításra is szükség lehet, amelyeket logikai operátorokkal lehet összekapcsolni, hogy Boolean értéket kapjunk.
 
 | Szimbólum | Leírás                                                                                     | Példa                                                                 |
 | --------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `&&`      | **Logikai ÉS**: Összehasonlít két Boolean kifejezést. Csak akkor ad vissza true értéket, ha mindkét oldal igaz | `(5 > 6) && (5 < 6 ) //Az egyik oldal hamis, a másik igaz. Visszaad false-t` |
-| `\|\|`    | **Logikai VAGY**: Összehasonlít két Boolean kifejezést. Akkor ad vissza true értéket, ha legalább az egyik oldal igaz | `(5 > 6) \|\| (5 < 6) //Az egyik oldal hamis, a másik igaz. Visszaad true-t` |
+| `&&`      | **Logikai ÉS**: Összehasonlít két Boolean kifejezést. Csak akkor ad vissza true értéket, ha mindkét oldal true | `(5 > 6) && (5 < 6 ) //Az egyik oldal hamis, a másik igaz. Visszaad false-t` |
+| `\|\|`    | **Logikai VAGY**: Összehasonlít két Boolean kifejezést. Akkor ad vissza true értéket, ha legalább az egyik oldal true | `(5 > 6) \|\| (5 < 6) //Az egyik oldal hamis, a másik igaz. Visszaad true-t` |
 | `!`       | **Logikai NEM**: A Boolean kifejezés ellentétes értékét adja vissza                         | `!(5 > 6) // 5 nem nagyobb, mint 6, de a "!" visszaad true-t`         |
 
 ## Feltételek és döntések logikai operátorokkal
 
-Logikai operátorokat használhatunk feltételek kialakítására if..else utasításokban.
+Logikai operátorok használhatók feltételek kialakítására if..else utasításokban.
 
 ```javascript
 let currentMoney;
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Negációs operátor
 
-Eddig láthattad, hogyan használhatod az `if...else` utasítást feltételes logika létrehozására. Bármi, ami az `if`-be kerül, true/false értékre kell kiértékelődjön. A `!` operátor használatával _tagadhatod_ a kifejezést. Ez így néz ki:
+Eddig láthattad, hogyan használhatod az `if...else` utasítást feltételes logika létrehozására. Bármi, ami az `if`-be kerül, true/false értékre kell, hogy kiértékelődjön. A `!` operátor használatával _tagadhatod_ a kifejezést. Így néz ki:
 
 ```javascript
 if (!condition) {
@@ -177,7 +177,7 @@ Az `if...else` nem az egyetlen módja a döntési logika kifejezésének. Haszn�
 let variable = condition ? <return this if true> : <return this if false>
 ```
 
-Az alábbiakban egy kézzelfoghatóbb példa látható:
+Az alábbiakban egy kézzelfoghatóbb példa:
 
 ```javascript
 let firstNumber = 20;
@@ -187,13 +187,13 @@ let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 
 ✅ Szánj egy percet arra, hogy többször elolvasd ezt a kódot. Érted, hogyan működnek ezek az operátorok?
 
-A fentiek azt mondják ki:
+A fentiek azt mondják:
 
 - ha `firstNumber` nagyobb, mint `secondNumber`
 - akkor rendeld hozzá a `firstNumber`-t a `biggestNumber`-hez
 - különben rendeld hozzá a `secondNumber`-t.
 
-A ternáris kifejezés csak egy tömör módja annak, hogy az alábbi kódot megírjuk:
+A ternáris kifejezés csak egy tömör módja az alábbi kód megírásának:
 
 ```javascript
 let biggestNumber;
@@ -228,5 +228,5 @@ Nézd át Josh Comeau csodálatos [operátor keresőjét](https://joshwcomeau.co
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+**Felelősségkizárás**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális, emberi fordítást igénybe venni. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

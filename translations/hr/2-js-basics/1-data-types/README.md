@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-27T22:40:23+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T12:36:05+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "hr"
 }
 -->
 # Osnove JavaScripta: Tipovi podataka
 
-![Osnove JavaScripta - Tipovi podataka](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c756480d3ffa46507f746e5975ebf80f99fdaaf1cff09a7f4.hr.png)  
+![Osnove JavaScripta - Tipovi podataka](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c756480d3ffa46507f746e5975ebf80f99fdaaf1cff09a7f4.hr.png)
 > Sketchnote autorice [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Kviz prije predavanja  
-[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/7)
+## Kviz prije predavanja
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/)
 
 Ova lekcija pokriva osnove JavaScripta, jezika koji omogućuje interaktivnost na webu.
 
@@ -36,8 +36,7 @@ Kreiranje i **deklariranje** varijable ima sljedeću sintaksu **[ključna riječ
 - **Ključna riječ**. Ključne riječi mogu biti `let` ili `var`.  
 
 ✅ Ključna riječ `let` uvedena je u ES6 i daje varijabli tzv. _blok scope_. Preporučuje se koristiti `let` umjesto `var`. Blok scope ćemo detaljnije obraditi u budućim dijelovima.
-
-- **Ime varijable**, ovo je ime koje sami odaberete.
+- **Ime varijable**, koje sami odabirete.
 
 ### Zadatak - rad s varijablama
 
@@ -47,15 +46,15 @@ Kreiranje i **deklariranje** varijable ima sljedeću sintaksu **[ključna riječ
     let myVariable;
     ```
 
-   `myVariable` je sada deklarirana koristeći ključnu riječ `let`. Trenutno nema vrijednost.
+   `myVariable` je sada deklarirana pomoću ključne riječi `let`. Trenutno nema vrijednost.
 
-1. **Dodijelite vrijednost**. Pohranite vrijednost u varijablu koristeći operator `=`, nakon kojeg slijedi očekivana vrijednost.
+1. **Dodijelite vrijednost**. Pohranite vrijednost u varijablu pomoću operatora `=`, nakon kojeg slijedi očekivana vrijednost.
 
     ```javascript
     myVariable = 123;
     ```
 
-   > Napomena: korištenje `=` u ovoj lekciji znači da koristimo "operator dodjele", koji se koristi za postavljanje vrijednosti varijabli. Ne označava jednakost.
+   > Napomena: korištenje `=` u ovoj lekciji označava "operator dodjele", koji se koristi za postavljanje vrijednosti varijabli. Ne označava jednakost.
 
    `myVariable` je sada *inicijalizirana* s vrijednošću 123.
 
@@ -79,13 +78,13 @@ Kreiranje i **deklariranje** varijable ima sljedeću sintaksu **[ključna riječ
 
 ## Konstante
 
-Deklaracija i inicijalizacija konstante slijedi iste koncepte kao i varijabla, s izuzetkom ključne riječi `const`. Konstante se obično deklariraju velikim slovima.
+Deklaracija i inicijalizacija konstante slijedi iste koncepte kao i varijabla, osim što se koristi ključna riječ `const`. Konstante se obično deklariraju velikim slovima.
 
 ```javascript
 const MY_VARIABLE = 123;
 ```
 
-Konstante su slične varijablama, s dvije iznimke:
+Konstante su slične varijablama, uz dvije iznimke:
 
 - **Moraju imati vrijednost**. Konstante moraju biti inicijalizirane, inače će se pojaviti greška prilikom pokretanja koda.
 - **Referenca se ne može promijeniti**. Referenca konstante ne može se promijeniti nakon inicijalizacije, inače će se pojaviti greška prilikom pokretanja koda. Pogledajmo dva primjera:
@@ -110,7 +109,7 @@ Konstante su slične varijablama, s dvije iznimke:
       obj.a = 5;  // allowed
       ```
 
-      Gore mijenjate vrijednost objekta, ali ne i samu referencu, što je dopušteno.
+      Ovdje mijenjate vrijednost objekta, ali ne i samu referencu, što je dopušteno.
 
    > Napomena, `const` znači da je referenca zaštićena od ponovnog dodjeljivanja. Međutim, vrijednost nije _nepromjenjiva_ i može se promijeniti, posebno ako je riječ o složenoj strukturi poput objekta.
 
@@ -132,13 +131,13 @@ Varijable mogu pohranjivati sve vrste brojeva, uključujući decimalne ili negat
 
 Postoji nekoliko vrsta operatora za izvođenje aritmetičkih funkcija, a neki su navedeni ovdje:
 
-| Simbol | Opis                                                                     | Primjer                          |
+| Simbol | Opis                                                                      | Primjer                          |
 | ------ | ------------------------------------------------------------------------ | -------------------------------- |
-| `+`    | **Zbrajanje**: Računa zbroj dvaju brojeva                                | `1 + 2 //očekivani rezultat je 3`   |
-| `-`    | **Oduzimanje**: Računa razliku dvaju brojeva                             | `1 - 2 //očekivani rezultat je -1`  |
-| `*`    | **Množenje**: Računa produkt dvaju brojeva                               | `1 * 2 //očekivani rezultat je 2`   |
-| `/`    | **Dijeljenje**: Računa kvocijent dvaju brojeva                           | `1 / 2 //očekivani rezultat je 0.5` |
-| `%`    | **Ostatak**: Računa ostatak od dijeljenja dvaju brojeva                  | `1 % 2 //očekivani rezultat je 1`   |
+| `+`    | **Zbrajanje**: Računa zbroj dvaju brojeva                                | `1 + 2 //očekivani odgovor je 3` |
+| `-`    | **Oduzimanje**: Računa razliku dvaju brojeva                             | `1 - 2 //očekivani odgovor je -1`|
+| `*`    | **Množenje**: Računa produkt dvaju brojeva                               | `1 * 2 //očekivani odgovor je 2` |
+| `/`    | **Dijeljenje**: Računa kvocijent dvaju brojeva                           | `1 / 2 //očekivani odgovor je 0.5`|
+| `%`    | **Ostatak**: Računa ostatak od dijeljenja dvaju brojeva                  | `1 % 2 //očekivani odgovor je 1` |
 
 ✅ Isprobajte! Isprobajte aritmetičku operaciju u konzoli vašeg preglednika. Iznenađuju li vas rezultati?
 
@@ -170,7 +169,7 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ✅ Zašto `1 + 1 = 2` u JavaScriptu, ali `'1' + '1' = 11?` Razmislite o tome. Što je s `'1' + 1`?
 
-**Predlošci stringova** (template literals) su još jedan način formatiranja stringova, osim što se umjesto navodnika koristi backtick. Sve što nije običan tekst mora biti smješteno unutar zagrada `${ }`. Ovo uključuje sve varijable koje mogu biti stringovi.
+**Template literali** su još jedan način formatiranja stringova, osim što se umjesto navodnika koristi backtick. Sve što nije običan tekst mora biti smješteno unutar placeholdera `${ }`. To uključuje sve varijable koje mogu biti stringovi.
 
 ```javascript
 let myString1 = "Hello";
@@ -180,27 +179,27 @@ let myString2 = "World";
 `${myString1}, ${myString2}!` //Hello, World!
 ```
 
-Svoje ciljeve formatiranja možete postići bilo kojom metodom, ali predlošci stringova poštuju razmake i prijelome linija.
+Svoje ciljeve formatiranja možete postići bilo kojom metodom, ali template literali poštuju razmake i prijelome linija.
 
-✅ Kada biste koristili predložak stringa umjesto običnog stringa?
+✅ Kada biste koristili template literal umjesto običnog stringa?
 
 ### Booleovi
 
-Booleovi mogu imati samo dvije vrijednosti: `true` ili `false`. Booleovi mogu pomoći u donošenju odluka o tome koje linije koda bi se trebale izvršiti kada su ispunjeni određeni uvjeti. U mnogim slučajevima, [operatori](../../../../2-js-basics/1-data-types) pomažu u postavljanju vrijednosti Booleova, a često ćete primijetiti i pisati varijable koje se inicijaliziraju ili njihove vrijednosti ažuriraju pomoću operatora.
+Booleovi mogu imati samo dvije vrijednosti: `true` ili `false`. Booleovi mogu pomoći u donošenju odluka o tome koje linije koda bi se trebale izvršiti kada su ispunjeni određeni uvjeti. U mnogim slučajevima, [operatori](../../../../2-js-basics/1-data-types) pomažu u postavljanju vrijednosti Booleova, a često ćete primijetiti i pisati varijable koje se inicijaliziraju ili im se vrijednosti ažuriraju pomoću operatora.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ Varijabla se može smatrati 'istinitom' (truthy) ako se procijeni kao boolean `true`. Zanimljivo je da su u JavaScriptu [sve vrijednosti istinite osim ako nisu definirane kao lažne](https://developer.mozilla.org/docs/Glossary/Truthy).
+✅ Varijabla se može smatrati 'istinitom' ako se procijeni kao boolean `true`. Zanimljivo je da su u JavaScriptu [sve vrijednosti istinite osim ako nisu definirane kao lažne](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 ---
 
 ## 🚀 Izazov
 
-JavaScript je poznat po svojim iznenađujućim načinima rukovanja tipovima podataka. Istražite malo o ovim 'zamkama'. Na primjer: osjetljivost na velika i mala slova može vas zavarati! Isprobajte ovo u svojoj konzoli: `let age = 1; let Age = 2; age == Age` (rezultat je `false` -- zašto?). Koje još zamke možete pronaći?
+JavaScript je poznat po svojim iznenađujućim načinima rukovanja tipovima podataka. Istražite ove 'zamke'. Na primjer: osjetljivost na velika i mala slova može vas zavarati! Isprobajte ovo u svojoj konzoli: `let age = 1; let Age = 2; age == Age` (rezultat je `false` -- zašto?). Koje još zamke možete pronaći?
 
-## Kviz nakon predavanja  
-[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/8)
+## Kviz nakon predavanja
+[Kviz nakon predavanja](https://ff-quizzes.netlify.app)
 
 ## Pregled i samostalno učenje
 
@@ -208,9 +207,9 @@ Pogledajte [ovaj popis JavaScript vježbi](https://css-tricks.com/snippets/javas
 
 ## Zadatak
 
-[Praksa s tipovima podataka](assignment.md)
+[Vježba s tipovima podataka](assignment.md)
 
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-27T22:39:15+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T11:13:50+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "sk"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Kvíz pred prednáškou
-[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/7)
+[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/)
 
 Táto lekcia pokrýva základy JavaScriptu, jazyka, ktorý poskytuje interaktivitu na webe.
 
@@ -29,7 +29,7 @@ Začnime s premennými a dátovými typmi, ktoré ich napĺňajú!
 
 ## Premenné
 
-Premenné ukladajú hodnoty, ktoré môžu byť použité a zmenené v priebehu vášho kódu.
+Premenné ukladajú hodnoty, ktoré môžete používať a meniť vo svojom kóde.
 
 Vytvorenie a **deklarácia** premennej má nasledujúcu syntax **[kľúčové slovo] [názov]**. Skladá sa z dvoch častí:
 
@@ -72,13 +72,13 @@ Vytvorenie a **deklarácia** premennej má nasledujúcu syntax **[kľúčové sl
    myVariable = 321;
    ```
 
-   Po deklarovaní premennej môžete jej hodnotu kedykoľvek v kóde zmeniť pomocou operátora `=` a novej hodnoty.
+   Po deklarovaní premennej môžete jej hodnotu kedykoľvek vo svojom kóde zmeniť pomocou operátora `=` a novej hodnoty.
 
-   ✅ Vyskúšajte to! Môžete písať JavaScript priamo vo svojom prehliadači. Otvorte okno prehliadača a prejdite do Nástrojov pre vývojárov. V konzole nájdete výzvu; napíšte `let myVariable = 123`, stlačte Enter a potom napíšte `myVariable`. Čo sa stane? Poznámka: o týchto konceptoch sa dozviete viac v ďalších lekciách.
+   ✅ Vyskúšajte to! Môžete písať JavaScript priamo vo svojom prehliadači. Otvorte okno prehliadača a prejdite do Nástrojov pre vývojárov. V konzole nájdete výzvu; napíšte `let myVariable = 123`, stlačte Enter a potom napíšte `myVariable`. Čo sa stane? Poznámka: o týchto konceptoch sa dozviete viac v nasledujúcich lekciách.
 
 ## Konštanty
 
-Deklarácia a inicializácia konštanty nasleduje rovnaké koncepty ako premenná, s výnimkou použitia kľúčového slova `const`. Konštanty sa zvyčajne deklarujú veľkými písmenami.
+Deklarácia a inicializácia konštanty nasleduje rovnaké princípy ako premenná, s výnimkou použitia kľúčového slova `const`. Konštanty sa zvyčajne deklarujú veľkými písmenami.
 
 ```javascript
 const MY_VARIABLE = 123;
@@ -87,7 +87,7 @@ const MY_VARIABLE = 123;
 Konštanty sú podobné premenným, s dvoma výnimkami:
 
 - **Musí mať hodnotu**. Konštanty musia byť inicializované, inak pri spustení kódu dôjde k chybe.
-- **Referenciu nie je možné zmeniť**. Referenciu konštanty nie je možné zmeniť po inicializácii, inak pri spustení kódu dôjde k chybe. Pozrime sa na dva príklady:
+- **Referenciu nie je možné zmeniť**. Referenciu konštanty nie je možné zmeniť po jej inicializácii, inak pri spustení kódu dôjde k chybe. Pozrime sa na dva príklady:
    - **Jednoduchá hodnota**. Nasledujúce NIE JE povolené:
    
       ```javascript
@@ -129,7 +129,7 @@ Premenné môžu ukladať všetky typy čísel, vrátane desatinných alebo záp
 
 ### Aritmetické operátory
 
-Existuje niekoľko typov operátorov na vykonávanie aritmetických funkcií, niektoré z nich sú uvedené nižšie:
+Existuje niekoľko typov operátorov na vykonávanie aritmetických funkcií, niektoré sú uvedené nižšie:
 
 | Symbol | Popis                                                                  | Príklad                          |
 | ------ | ---------------------------------------------------------------------- | -------------------------------- |
@@ -139,7 +139,7 @@ Existuje niekoľko typov operátorov na vykonávanie aritmetických funkcií, ni
 | `/`    | **Delenie**: Vypočíta podiel dvoch čísel                               | `1 / 2 //očakávaný výsledok je 0.5` |
 | `%`    | **Zvyšok**: Vypočíta zvyšok z delenia dvoch čísel                      | `1 % 2 //očakávaný výsledok je 1`   |
 
-✅ Vyskúšajte to! Skúste aritmetickú operáciu v konzole vášho prehliadača. Prekvapili vás výsledky?
+✅ Vyskúšajte to! Skúste aritmetickú operáciu v konzole svojho prehliadača. Prekvapili vás výsledky?
 
 ### Reťazce
 
@@ -149,7 +149,7 @@ Reťazce sú sady znakov, ktoré sa nachádzajú medzi jednoduchými alebo dvoji
 - `"Toto je tiež reťazec"`
 - `let myString = 'Toto je hodnota reťazca uložená v premennej';`
 
-Pamätajte, že pri písaní reťazca musíte použiť úvodzovky, inak JavaScript predpokladá, že ide o názov premennej.
+Nezabudnite použiť úvodzovky pri písaní reťazca, inak JavaScript predpokladá, že ide o názov premennej.
 
 ### Formátovanie reťazcov
 
@@ -169,7 +169,7 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ✅ Prečo v JavaScripte `1 + 1 = 2`, ale `'1' + '1' = 11`? Zamyslite sa nad tým. A čo `'1' + 1`?
 
-**Šablónové literály** sú ďalším spôsobom formátovania reťazcov, ale namiesto úvodzoviek sa používa spätný apostrof. Čokoľvek, čo nie je obyčajný text, musí byť umiestnené do zátvoriek `${ }`. To zahŕňa aj premenné, ktoré môžu byť reťazcami.
+**Šablónové literály** sú ďalším spôsobom formátovania reťazcov, okrem toho, že namiesto úvodzoviek sa používa spätný apostrof. Čokoľvek, čo nie je obyčajný text, musí byť umiestnené do zátvoriek `${ }`. To zahŕňa akékoľvek premenné, ktoré môžu byť reťazcami.
 
 ```javascript
 let myString1 = "Hello";
@@ -185,7 +185,7 @@ Svoje formátovacie ciele môžete dosiahnuť ktoroukoľvek metódou, ale šabl�
 
 ### Booleovské hodnoty
 
-Booleovské hodnoty môžu mať iba dve hodnoty: `true` alebo `false`. Booleovské hodnoty môžu pomôcť rozhodnúť, ktoré riadky kódu by sa mali spustiť, keď sú splnené určité podmienky. V mnohých prípadoch [operátory](../../../../2-js-basics/1-data-types) pomáhajú nastaviť hodnotu booleovskej premennej a často si všimnete a napíšete premenné, ktoré sú inicializované alebo ich hodnoty sú aktualizované pomocou operátora.
+Booleovské hodnoty môžu byť iba dve: `true` alebo `false`. Booleovské hodnoty môžu pomôcť rozhodnúť, ktoré riadky kódu by sa mali spustiť, keď sú splnené určité podmienky. V mnohých prípadoch [operátory](../../../../2-js-basics/1-data-types) pomáhajú nastaviť hodnotu booleovskej premennej a často si všimnete a napíšete premenné, ktoré sú inicializované alebo ich hodnoty sú aktualizované pomocou operátora.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
@@ -199,7 +199,7 @@ Booleovské hodnoty môžu mať iba dve hodnoty: `true` alebo `false`. Booleovsk
 JavaScript je známy svojimi prekvapivými spôsobmi, ako občas zaobchádza s dátovými typmi. Urobte si malý prieskum o týchto 'nástrahách'. Napríklad: citlivosť na veľké a malé písmená vás môže prekvapiť! Skúste toto vo svojej konzole: `let age = 1; let Age = 2; age == Age` (výsledok je `false` -- prečo?). Aké ďalšie nástrahy nájdete?
 
 ## Kvíz po prednáške
-[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/8)
+[Kvíz po prednáške](https://ff-quizzes.netlify.app)
 
 ## Prehľad a samoštúdium
 
@@ -212,4 +212,4 @@ Pozrite si [tento zoznam cvičení v JavaScripte](https://css-tricks.com/snippet
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

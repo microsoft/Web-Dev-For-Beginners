@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "30f8903a1f290e3d438dc2c70fe60259",
-  "translation_date": "2025-08-28T04:20:09+00:00",
+  "original_hash": "61c14b27044861e5e69db35dd52c4403",
+  "translation_date": "2025-08-29T10:56:37+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "cs"
 }
@@ -20,7 +20,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Manipulace s DOM, neboli "Document Object Model", je klíčovým aspektem vývoje webu. Podle [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction) je "Document Object Model (DOM) datovou reprezentací objektů, které tvoří strukturu a obsah dokumentu na webu." Výzvy spojené s manipulací s DOM na webu často vedly k používání JavaScriptových frameworků namísto čistého JavaScriptu pro správu DOM, ale my si vystačíme sami!
 
-Kromě toho tato lekce představí koncept [JavaScriptového uzávěru](https://developer.mozilla.org/docs/Web/JavaScript/Closures), který si můžete představit jako funkci uzavřenou jinou funkcí, takže vnitřní funkce má přístup k rozsahu vnější funkce.
+Kromě toho tato lekce představí koncept [JavaScriptového uzávěru](https://developer.mozilla.org/docs/Web/JavaScript/Closures), což si můžete představit jako funkci uzavřenou jinou funkcí, takže vnitřní funkce má přístup k rozsahu vnější funkce.
 
 > JavaScriptové uzávěry jsou rozsáhlé a složité téma. Tato lekce se dotýká pouze základní myšlenky, že v kódu tohoto terrária najdete uzávěr: vnitřní funkci a vnější funkci, které jsou konstruovány tak, aby vnitřní funkce měla přístup k rozsahu vnější funkce. Pro mnohem více informací o tom, jak to funguje, navštivte [rozsáhlou dokumentaci](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
 
@@ -40,7 +40,7 @@ Měli byste mít vytvořený HTML a CSS pro vaše terrárium. Na konci této lek
 
 ### Úkol
 
-Ve složce terrária vytvořte nový soubor s názvem `script.js`. Tento soubor importujte do sekce `<head>`:
+Ve složce terrária vytvořte nový soubor s názvem `script.js`. Importujte tento soubor do sekce `<head>`:
 
 ```html
 	<script src="./script.js" defer></script>
@@ -72,7 +72,7 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-Co se zde děje? Odkazujete na dokument a procházíte jeho DOM, abyste našli prvek s konkrétním Id. Pamatujete si, že jste v první lekci o HTML přiřadili jednotlivá Id ke každému obrázku rostliny (`id="plant1"`)? Nyní tuto práci využijete. Po identifikaci každého prvku předáte tento prvek funkci `dragElement`, kterou za chvíli vytvoříte. Tím se prvek v HTML stane přetahovatelným, nebo brzy bude.
+Co se zde děje? Odkazujete na dokument a procházíte jeho DOM, abyste našli prvek s konkrétním Id. Pamatujete si, že jste v první lekci o HTML přiřadili jednotlivá Id každému obrázku rostliny (`id="plant1"`)? Nyní tuto práci využijete. Po identifikaci každého prvku předáte tuto položku funkci `dragElement`, kterou za chvíli vytvoříte. Tím se prvek v HTML stane přetahovatelným, nebo brzy bude.
 
 ✅ Proč odkazujeme na prvky podle Id? Proč ne podle jejich CSS třídy? Můžete se vrátit k předchozí lekci o CSS, abyste na tuto otázku odpověděli.
 
@@ -80,7 +80,7 @@ Co se zde děje? Odkazujete na dokument a procházíte jeho DOM, abyste našli p
 
 ## Uzávěr
 
-Nyní jste připraveni vytvořit uzávěr `dragElement`, což je vnější funkce, která uzavírá vnitřní funkci nebo funkce (v našem případě budou tři).
+Nyní jste připraveni vytvořit uzávěr `dragElement`, což je vnější funkce, která uzavírá vnitřní funkci nebo funkce (v našem případě budeme mít tři).
 
 Uzávěry jsou užitečné, když jedna nebo více funkcí potřebuje přístup k rozsahu vnější funkce. Zde je příklad:
 
@@ -115,11 +115,11 @@ function dragElement(terrariumElement) {
 }
 ```
 
-`dragElement` získá svůj objekt `terrariumElement` z deklarací na začátku skriptu. Poté nastavíte některé lokální pozice na `0` pro objekt předaný do funkce. Tyto lokální proměnné budou manipulovány pro každý prvek, jakmile přidáte funkčnost přetahování a upouštění v rámci uzávěru pro každý prvek. Terrárium bude naplněno těmito přetaženými prvky, takže aplikace musí sledovat, kam jsou umístěny.
+`dragElement` získá svůj objekt `terrariumElement` z deklarací na začátku skriptu. Poté nastavíte některé lokální pozice na `0` pro objekt předaný do funkce. Tyto lokální proměnné budou manipulovány pro každý prvek, jakmile přidáte funkčnost přetahování a upouštění v rámci uzávěru pro každý prvek. Terrárium bude naplněno těmito přetahovanými prvky, takže aplikace musí sledovat, kam jsou umístěny.
 
-Kromě toho je prvku `terrariumElement`, který je předán této funkci, přiřazena událost `pointerdown`, která je součástí [webových API](https://developer.mozilla.org/docs/Web/API) navržených pro správu DOM. `onpointerdown` se spustí, když je stisknuto tlačítko nebo v našem případě je dotčen přetahovatelný prvek. Tento obslužný program událostí funguje jak na [webových, tak mobilních prohlížečích](https://caniuse.com/?search=onpointerdown), s několika výjimkami.
+Kromě toho je prvku `terrariumElement`, který je předán této funkci, přiřazena událost `pointerdown`, která je součástí [webových API](https://developer.mozilla.org/docs/Web/API) navržených pro pomoc s manipulací s DOM. `onpointerdown` se spustí, když je stisknuto tlačítko, nebo v našem případě, když je dotčen přetahovatelný prvek. Tento obslužný program událostí funguje jak na [webových, tak mobilních prohlížečích](https://caniuse.com/?search=onpointerdown), s několika výjimkami.
 
-✅ [Obslužný program událostí `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) má mnohem větší podporu napříč prohlížeči; proč byste jej zde nepoužili? Zamyslete se nad konkrétním typem interakce, kterou se snažíte vytvořit.
+✅ [Obslužný program událostí `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) má mnohem větší podporu napříč prohlížeči; proč byste jej zde nepoužili? Přemýšlejte o přesném typu interakce, kterou se snažíte vytvořit.
 
 ---
 
@@ -140,13 +140,13 @@ function pointerDrag(e) {
 
 Děje se několik věcí. Nejprve zabráníte výchozím událostem, které by normálně nastaly při pointerdown, pomocí `e.preventDefault();`. Tím získáte větší kontrolu nad chováním rozhraní.
 
-> Vraťte se k tomuto řádku, až budete mít skript kompletně vytvořen, a zkuste to bez `e.preventDefault()` - co se stane?
+> Vraťte se k tomuto řádku, až budete mít skriptový soubor kompletně vytvořený, a zkuste to bez `e.preventDefault()` - co se stane?
 
-Za druhé, otevřete `index.html` v okně prohlížeče a zkontrolujte rozhraní. Když kliknete na rostlinu, můžete vidět, jak je událost 'e' zachycena. Prozkoumejte událost a podívejte se, kolik informací je shromážděno jednou událostí pointerdown!  
+Za druhé, otevřete `index.html` v okně prohlížeče a zkontrolujte rozhraní. Když kliknete na rostlinu, můžete vidět, jak je událost 'e' zachycena. Prozkoumejte událost, abyste viděli, kolik informací je shromážděno jednou událostí pointerdown!  
 
 Dále si všimněte, jak jsou lokální proměnné `pos3` a `pos4` nastaveny na e.clientX. Tyto hodnoty můžete najít v inspekčním panelu. Tyto hodnoty zachycují souřadnice x a y rostliny v okamžiku, kdy na ni kliknete nebo se jí dotknete. Budete potřebovat jemnou kontrolu nad chováním rostlin při jejich klikání a přetahování, takže sledujete jejich souřadnice.
 
-✅ Je stále jasnější, proč je celá tato aplikace postavena na jednom velkém uzávěru? Pokud by tomu tak nebylo, jak byste udrželi rozsah pro každou ze 14 přetahovatelných rostlin?
+✅ Je stále jasnější, proč je celá tato aplikace postavena na jednom velkém uzávěru? Pokud by tomu tak nebylo, jak byste udrželi rozsah pro každou z 14 přetahovatelných rostlin?
 
 Dokončete počáteční funkci přidáním dalších dvou manipulací událostí pointer pod `pos4 = e.clientY`:
 
@@ -154,11 +154,11 @@ Dokončete počáteční funkci přidáním dalších dvou manipulací událost�
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
-Nyní naznačujete, že chcete, aby se rostlina pohybovala spolu s ukazatelem, jakmile ji přetáhnete, a aby se gesto přetahování zastavilo, když rostlinu odznačíte. `onpointermove` a `onpointerup` jsou všechny součástí stejného API jako `onpointerdown`. Rozhraní nyní bude házet chyby, protože jste dosud nedefinovali funkce `elementDrag` a `stopElementDrag`, takže je vytvořte jako další.
+Nyní naznačujete, že chcete, aby se rostlina přetahovala spolu s ukazatelem, jakmile ji přesunete, a aby se gesto přetahování zastavilo, když rostlinu odznačíte. `onpointermove` a `onpointerup` jsou všechny součástí stejného API jako `onpointerdown`. Rozhraní nyní bude házet chyby, protože jste dosud nedefinovali funkce `elementDrag` a `stopElementDrag`, takže je vytvořte jako další.
 
 ## Funkce elementDrag a stopElementDrag
 
-Uzávěr dokončíte přidáním dalších dvou vnitřních funkcí, které budou řešit, co se stane, když přetahujete rostlinu a přestanete ji přetahovat. Chování, které chcete, je, že můžete kdykoli přetáhnout jakoukoli rostlinu a umístit ji kamkoli na obrazovku. Toto rozhraní je poměrně neomezené (například zde není žádná zóna pro upuštění), aby vám umožnilo navrhnout vaše terrárium přesně podle vašich představ přidáváním, odebíráním a přemisťováním rostlin.
+Uzávěr dokončíte přidáním dalších dvou vnitřních funkcí, které budou řešit, co se stane, když přetahujete rostlinu a přestanete ji přetahovat. Chování, které chcete, je, že můžete kdykoli přetáhnout jakoukoli rostlinu a umístit ji kamkoli na obrazovku. Toto rozhraní je poměrně neomezující (například neexistuje žádná zóna pro upuštění), aby vám umožnilo navrhnout vaše terrárium přesně podle vašich představ přidáváním, odstraňováním a přemísťováním rostlin.
 
 ### Úkol
 
@@ -177,7 +177,7 @@ function elementDrag(e) {
 ```
 V této funkci provádíte mnoho úprav počátečních pozic 1-4, které jste nastavili jako lokální proměnné ve vnější funkci. Co se zde děje?
 
-Při přetahování znovu přiřazujete `pos1` tak, že jej nastavíte na hodnotu `pos3` (kterou jste dříve nastavili jako `e.clientX`) minus aktuální hodnotu `e.clientX`. Podobnou operaci provádíte s `pos2`. Poté resetujete `pos3` a `pos4` na nové souřadnice X a Y prvku. Tyto změny můžete sledovat v konzoli při přetahování. Poté manipulujete s CSS stylem rostliny, abyste nastavili její novou pozici na základě nových pozic `pos1` a `pos2`, přičemž vypočítáváte souřadnice X a Y rostliny na základě porovnání jejího offsetu s těmito novými pozicemi.
+Při přetahování znovu přiřazujete `pos1` tak, že jej nastavíte na `pos3` (které jste dříve nastavili jako `e.clientX`) minus aktuální hodnotu `e.clientX`. Podobnou operaci provádíte s `pos2`. Poté resetujete `pos3` a `pos4` na nové souřadnice X a Y prvku. Tyto změny můžete sledovat v konzoli při přetahování. Poté manipulujete s CSS stylem rostliny, abyste nastavili její novou pozici na základě nových pozic `pos1` a `pos2`, přičemž vypočítáváte horní a levé souřadnice X a Y rostliny na základě porovnání jejího offsetu s těmito novými pozicemi.
 
 > `offsetTop` a `offsetLeft` jsou vlastnosti CSS, které nastavují pozici prvku na základě jeho rodiče; jeho rodičem může být jakýkoli prvek, který není pozicován jako `static`. 
 
@@ -206,13 +206,13 @@ Nyní jste dokončili svůj projekt!
 
 ## 🚀Výzva
 
-Přidejte nový obslužný program událostí do svého uzávěru, aby rostliny dělaly něco navíc; například dvojitým kliknutím na rostlinu ji přesuňte do popředí. Buďte kreativní!
+Přidejte nový obslužný program událostí do svého uzávěru, aby rostliny dělaly něco dalšího; například dvojitým kliknutím na rostlinu ji přesuňte do popředí. Buďte kreativní!
 
 ## Kvíz po lekci
 
 [Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/20)
 
-## Přehled a samostudium
+## Recenze a samostudium
 
 I když se přetahování prvků po obrazovce může zdát triviální, existuje mnoho způsobů, jak to udělat, a mnoho úskalí, v závislosti na efektu, kterého chcete dosáhnout. Ve skutečnosti existuje celé [API pro přetahování a upouštění](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API), které můžete vyzkoušet. V tomto modulu jsme jej nepoužili, protože efekt, který jsme chtěli, byl poněkud odlišný, ale zkuste toto API na svém vlastním projektu a uvidíte, čeho můžete dosáhnout.
 
@@ -227,4 +227,4 @@ Vždy kontrolujte schopnosti prohlížečů pomocí [CanIUse.com](https://canius
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.

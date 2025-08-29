@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-27T22:09:54+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T11:07:02+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "sk"
 }
@@ -15,13 +15,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Úvod
 
-Od vzniku JavaScriptu v prehliadačoch sa webové stránky stávajú interaktívnejšími a zložitejšími ako kedykoľvek predtým. Webové technológie sa dnes bežne používajú na vytváranie plne funkčných aplikácií, ktoré bežia priamo v prehliadači a nazývame ich [webové aplikácie](https://en.wikipedia.org/wiki/Web_application). Keďže webové aplikácie sú vysoko interaktívne, používatelia nechcú čakať na úplné obnovenie stránky zakaždým, keď vykonajú nejakú akciu. Preto sa používa JavaScript na priamu aktualizáciu HTML pomocou DOM, aby sa zabezpečil plynulejší používateľský zážitok.
+Od vzniku JavaScriptu v prehliadačoch sa webové stránky stávajú interaktívnejšími a komplexnejšími ako kedykoľvek predtým. Webové technológie sa teraz bežne používajú na vytváranie plne funkčných aplikácií, ktoré bežia priamo v prehliadači, a nazývame ich [webové aplikácie](https://en.wikipedia.org/wiki/Web_application). Keďže webové aplikácie sú vysoko interaktívne, používatelia nechcú čakať na úplné načítanie stránky pri každej vykonanej akcii. Preto sa používa JavaScript na priamu aktualizáciu HTML pomocou DOM, aby sa zabezpečil plynulejší používateľský zážitok.
 
-V tejto lekcii si položíme základy na vytvorenie bankovej webovej aplikácie, pričom použijeme HTML šablóny na vytvorenie viacerých obrazoviek, ktoré sa môžu zobrazovať a aktualizovať bez potreby opätovného načítania celej HTML stránky.
+V tejto lekcii si položíme základy na vytvorenie bankovej webovej aplikácie, pričom použijeme HTML šablóny na vytvorenie viacerých obrazoviek, ktoré je možné zobraziť a aktualizovať bez nutnosti načítania celej HTML stránky.
 
 ### Predpoklady
 
-Na testovanie webovej aplikácie, ktorú v tejto lekcii vytvoríme, budete potrebovať lokálny webový server. Ak ho nemáte, môžete si nainštalovať [Node.js](https://nodejs.org) a použiť príkaz `npx lite-server` vo vašom projektovom priečinku. Tento príkaz vytvorí lokálny webový server a otvorí vašu aplikáciu v prehliadači.
+Na testovanie webovej aplikácie, ktorú budeme v tejto lekcii vytvárať, potrebujete lokálny webový server. Ak ho nemáte, môžete si nainštalovať [Node.js](https://nodejs.org) a použiť príkaz `npx lite-server` z priečinka vášho projektu. Tým sa vytvorí lokálny webový server a otvorí sa vaša aplikácia v prehliadači.
 
 ### Príprava
 
@@ -50,21 +50,21 @@ Ak chcete vytvoriť viacero obrazoviek pre webovú stránku, jedným z riešení
 - Pri prepínaní obrazoviek musíte načítať celé HTML, čo môže byť pomalé.
 - Je ťažké zdieľať údaje medzi rôznymi obrazovkami.
 
-Iným prístupom je mať iba jeden HTML súbor a definovať viacero [HTML šablón](https://developer.mozilla.org/docs/Web/HTML/Element/template) pomocou elementu `<template>`. Šablóna je opakovane použiteľný HTML blok, ktorý sa v prehliadači nezobrazuje a musí byť inštanciovaný počas behu pomocou JavaScriptu.
+Iný prístup je mať iba jeden HTML súbor a definovať viacero [HTML šablón](https://developer.mozilla.org/docs/Web/HTML/Element/template) pomocou elementu `<template>`. Šablóna je opakovane použiteľný HTML blok, ktorý sa v prehliadači nezobrazuje a musí byť inštanciovaný počas behu aplikácie pomocou JavaScriptu.
 
 ### Úloha
 
-Vytvoríme bankovú aplikáciu s dvoma obrazovkami: prihlasovacou stránkou a dashboardom. Najprv pridajme do tela HTML zástupný element, ktorý použijeme na inštanciovanie rôznych obrazoviek našej aplikácie:
+Vytvoríme bankovú aplikáciu s dvoma obrazovkami: prihlasovacou stránkou a dashboardom. Najskôr pridáme do tela HTML zástupný element, ktorý použijeme na inštanciovanie rôznych obrazoviek našej aplikácie:
 
 ```html
 <div id="app">Loading...</div>
 ```
 
-Pridali sme mu atribút `id`, aby sme ho neskôr mohli ľahšie nájsť pomocou JavaScriptu.
+Dávame mu atribút `id`, aby sme ho neskôr mohli ľahšie nájsť pomocou JavaScriptu.
 
-> Tip: Keďže obsah tohto elementu bude nahradený, môžeme doň vložiť správu alebo indikátor načítania, ktorý sa zobrazí počas načítavania aplikácie.
+> Tip: Keďže obsah tohto elementu bude nahradený, môžeme do neho vložiť načítaciu správu alebo indikátor, ktorý sa zobrazí počas načítania aplikácie.
 
-Ďalej pridajme pod tento element HTML šablónu pre prihlasovaciu stránku. Zatiaľ do nej vložíme iba nadpis a sekciu obsahujúcu odkaz, ktorý použijeme na navigáciu.
+Ďalej pridáme pod tento element HTML šablónu pre prihlasovaciu stránku. Zatiaľ do nej vložíme iba nadpis a sekciu obsahujúcu odkaz, ktorý použijeme na navigáciu.
 
 ```html
 <template id="login">
@@ -79,7 +79,7 @@ Potom pridáme ďalšiu HTML šablónu pre stránku dashboardu. Táto stránka b
 
 - Hlavičku s nadpisom a odkazom na odhlásenie
 - Aktuálny zostatok na bankovom účte
-- Zoznam transakcií zobrazený v tabuľke
+- Zoznam transakcií, zobrazený v tabuľke
 
 ```html
 <template id="dashboard">
@@ -106,13 +106,13 @@ Potom pridáme ďalšiu HTML šablónu pre stránku dashboardu. Táto stránka b
 </template>
 ```
 
-> Tip: Pri vytváraní HTML šablón, ak chcete vidieť, ako budú vyzerať, môžete zakomentovať riadky `<template>` a `</template>` tak, že ich obalíte do `<!-- -->`.
+> Tip: Pri vytváraní HTML šablón, ak chcete vidieť, ako budú vyzerať, môžete zakomentovať riadky `<template>` a `</template>` tak, že ich obklopíte `<!-- -->`.
 
 ✅ Prečo si myslíte, že používame atribúty `id` na šablónach? Mohli by sme použiť niečo iné, napríklad triedy?
 
 ## Zobrazovanie šablón pomocou JavaScriptu
 
-Ak si aktuálny HTML súbor otvoríte v prehliadači, uvidíte, že zostane zobrazené iba `Loading...`. Je to preto, že musíme pridať JavaScriptový kód na inštanciovanie a zobrazenie HTML šablón.
+Ak skúsite aktuálny HTML súbor v prehliadači, uvidíte, že sa zasekne na zobrazení `Loading...`. Je to preto, že musíme pridať nejaký JavaScriptový kód na inštanciovanie a zobrazenie HTML šablón.
 
 Inštanciovanie šablóny sa zvyčajne vykonáva v 3 krokoch:
 
@@ -120,11 +120,11 @@ Inštanciovanie šablóny sa zvyčajne vykonáva v 3 krokoch:
 2. Klonovanie elementu šablóny pomocou [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
 3. Pripojenie k DOM pod viditeľný element, napríklad pomocou [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
-✅ Prečo musíme šablónu klonovať pred jej pripojením k DOM? Čo si myslíte, že by sa stalo, keby sme tento krok vynechali?
+✅ Prečo potrebujeme klonovať šablónu pred jej pripojením k DOM? Čo si myslíte, že by sa stalo, keby sme tento krok preskočili?
 
 ### Úloha
 
-Vytvorte nový súbor s názvom `app.js` vo vašom projektovom priečinku a importujte tento súbor do sekcie `<head>` vášho HTML:
+Vytvorte nový súbor s názvom `app.js` vo vašom priečinku projektu a importujte tento súbor do sekcie `<head>` vášho HTML:
 
 ```html
 <script src="app.js" defer></script>
@@ -142,7 +142,7 @@ function updateRoute(templateId) {
 }
 ```
 
-To, čo tu robíme, sú presne 3 kroky popísané vyššie. Inštanciujeme šablónu s `id` `templateId` a jej klonovaný obsah vložíme do nášho zástupného elementu aplikácie. Všimnite si, že musíme použiť `cloneNode(true)`, aby sme skopírovali celý podstrom šablóny.
+Tu robíme presne 3 kroky popísané vyššie. Inštanciujeme šablónu s id `templateId` a jej klonovaný obsah vložíme do zástupného elementu našej aplikácie. Všimnite si, že musíme použiť `cloneNode(true)`, aby sme skopírovali celý podstrom šablóny.
 
 Teraz zavolajte túto funkciu s jednou zo šablón a pozrite sa na výsledok.
 
@@ -150,11 +150,11 @@ Teraz zavolajte túto funkciu s jednou zo šablón a pozrite sa na výsledok.
 updateRoute('login');
 ```
 
-✅ Aký je účel tohto kódu `app.innerHTML = '';`? Čo sa stane, ak ho vynecháme?
+✅ Aký je účel tohto kódu `app.innerHTML = '';`? Čo sa stane bez neho?
 
 ## Vytváranie trás
 
-Keď hovoríme o webovej aplikácii, nazývame *Routing* zámer mapovať **URL adresy** na konkrétne obrazovky, ktoré by sa mali zobraziť. Na webovej stránke s viacerými HTML súbormi sa to deje automaticky, pretože cesty k súborom sa odrážajú v URL. Napríklad s týmito súbormi vo vašom projektovom priečinku:
+Keď hovoríme o webovej aplikácii, nazývame *Routing* zámer mapovať **URL** na konkrétne obrazovky, ktoré by sa mali zobraziť. Na webovej stránke s viacerými HTML súbormi sa to robí automaticky, pretože cesty súborov sa odrážajú v URL. Napríklad s týmito súbormi vo vašom priečinku projektu:
 
 ```
 mywebsite/index.html
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-Teraz trochu upravíme funkciu `updateRoute`. Namiesto toho, aby sme priamo odovzdávali `templateId` ako argument, chceme ho získať najprv pohľadom na aktuálnu URL a potom použiť našu mapu na získanie zodpovedajúcej hodnoty `templateId`. Môžeme použiť [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) na získanie iba časti cesty z URL.
+Teraz trochu upravíme funkciu `updateRoute`. Namiesto toho, aby sme priamo odovzdávali `templateId` ako argument, chceme ho získať najskôr pohľadom na aktuálnu URL a potom použiť našu mapu na získanie zodpovedajúcej hodnoty id šablóny. Môžeme použiť [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) na získanie iba časti cesty z URL.
 
 ```js
 function updateRoute() {
@@ -198,22 +198,22 @@ function updateRoute() {
 }
 ```
 
-Tu sme mapovali trasy, ktoré sme deklarovali, na zodpovedajúce šablóny. Môžete si overiť, že to funguje správne, manuálnou zmenou URL vo vašom prehliadači.
+Tu sme mapovali trasy, ktoré sme deklarovali, na zodpovedajúce šablóny. Môžete si vyskúšať, že to funguje správne, manuálnou zmenou URL vo vašom prehliadači.
 
 ✅ Čo sa stane, ak zadáte neznámu cestu do URL? Ako by sme to mohli vyriešiť?
 
-## Pridanie navigácie
+## Pridávanie navigácie
 
-Ďalším krokom pre našu aplikáciu je pridanie možnosti navigovať medzi stránkami bez potreby manuálne meniť URL. To zahŕňa dve veci:
+Ďalším krokom pre našu aplikáciu je pridanie možnosti navigovať medzi stránkami bez nutnosti manuálne meniť URL. To zahŕňa dve veci:
 
 1. Aktualizáciu aktuálnej URL
 2. Aktualizáciu zobrazenej šablóny na základe novej URL
 
 Druhú časť sme už vyriešili pomocou funkcie `updateRoute`, takže musíme zistiť, ako aktualizovať aktuálnu URL.
 
-Budeme musieť použiť JavaScript a konkrétne [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), ktorý umožňuje aktualizovať URL a vytvoriť nový záznam v histórii prehliadania bez opätovného načítania HTML.
+Budeme musieť použiť JavaScript a konkrétne [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), ktorý umožňuje aktualizovať URL a vytvoriť nový záznam v histórii prehliadania bez načítania HTML.
 
-> Poznámka: Hoci HTML element kotvy [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) môže byť použitý na vytváranie hypertextových odkazov na rôzne URL, predvolene spôsobí, že prehliadač načíta HTML znova. Je potrebné zabrániť tomuto správaniu pri spracovaní trás pomocou vlastného JavaScriptu, použitím funkcie `preventDefault()` na udalosti kliknutia.
+> Poznámka: Zatiaľ čo HTML kotvový element [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) môže byť použitý samostatne na vytváranie hypertextových odkazov na rôzne URL, predvolene spôsobí, že prehliadač načíta HTML. Je potrebné zabrániť tomuto správaniu pri spracovaní trás pomocou vlastného JavaScriptu, použitím funkcie preventDefault() na udalosti kliknutia.
 
 ### Úloha
 
@@ -226,9 +226,9 @@ function navigate(path) {
 }
 ```
 
-Táto metóda najprv aktualizuje aktuálnu URL na základe zadanej cesty a potom aktualizuje šablónu. Vlastnosť `window.location.origin` vráti koreň URL, čo nám umožňuje rekonštruovať úplnú URL z danej cesty.
+Táto metóda najskôr aktualizuje aktuálnu URL na základe zadanej cesty a potom aktualizuje šablónu. Vlastnosť `window.location.origin` vráti koreň URL, čo nám umožňuje rekonštruovať kompletnú URL zo zadanej cesty.
 
-Teraz, keď máme túto funkciu, môžeme vyriešiť problém, ktorý máme, ak cesta nezodpovedá žiadnej definovanej trase. Upravením funkcie `updateRoute` pridáme záložné riešenie na jednu z existujúcich trás, ak nenájdeme zhodu.
+Teraz, keď máme túto funkciu, môžeme vyriešiť problém, ktorý máme, ak cesta nezodpovedá žiadnej definovanej trase. Upravením funkcie `updateRoute` pridáme záložné riešenie na jednu z existujúcich trás, ak nemôžeme nájsť zhodu.
 
 ```js
 function updateRoute() {
@@ -242,9 +242,9 @@ function updateRoute() {
   ...
 ```
 
-Ak sa trasa nenájde, teraz budeme presmerovaní na prihlasovaciu stránku.
+Ak sa trasa nedá nájsť, teraz presmerujeme na stránku `login`.
 
-Vytvorme teraz funkciu na získanie URL pri kliknutí na odkaz a na zabránenie predvoleného správania prehliadača:
+Teraz vytvorme funkciu na získanie URL pri kliknutí na odkaz a na zabránenie predvoleného správania prehliadača pri odkazoch:
 
 ```js
 function onLinkClick(event) {
@@ -263,21 +263,21 @@ Dokončime navigačný systém pridaním väzieb na naše odkazy *Login* a *Logo
 
 Objekt `event` vyššie zachytáva udalosť `click` a odovzdáva ju našej funkcii `onLinkClick`.
 
-Pomocou atribútu [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) priraďte udalosť `click` kódu JavaScriptu, tu volaniu funkcie `navigate()`.
+Pomocou atribútu [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) priraďte udalosť `click` k JavaScriptovému kódu, tu k volaniu funkcie `navigate()`.
 
-Vyskúšajte kliknutie na tieto odkazy, teraz by ste mali byť schopní navigovať medzi rôznymi obrazovkami vašej aplikácie.
+Skúste kliknúť na tieto odkazy, teraz by ste mali byť schopní navigovať medzi rôznymi obrazovkami vašej aplikácie.
 
-✅ Metóda `history.pushState` je súčasťou štandardu HTML5 a je implementovaná vo [všetkých moderných prehliadačoch](https://caniuse.com/?search=pushState). Ak vytvárate webovú aplikáciu pre staršie prehliadače, existuje trik, ktorý môžete použiť namiesto tohto API: použitie [hashu (`#`)](https://en.wikipedia.org/wiki/URI_fragment) pred cestou umožňuje implementovať trasovanie, ktoré funguje s bežnou navigáciou kotvami a nenačítava stránku znova, pretože jeho účelom bolo vytvárať vnútorné odkazy v rámci stránky.
+✅ Metóda `history.pushState` je súčasťou štandardu HTML5 a implementovaná vo [všetkých moderných prehliadačoch](https://caniuse.com/?search=pushState). Ak vytvárate webovú aplikáciu pre staršie prehliadače, existuje trik, ktorý môžete použiť namiesto tejto API: použitie [hashu (`#`)](https://en.wikipedia.org/wiki/URI_fragment) pred cestou vám umožní implementovať trasovanie, ktoré funguje s bežnou navigáciou kotvami a nenačítava stránku, pretože jeho účelom bolo vytvárať interné odkazy v rámci stránky.
 
 ## Spracovanie tlačidiel späť a dopredu v prehliadači
 
-Použitie `history.pushState` vytvára nové záznamy v histórii navigácie prehliadača. Môžete to overiť podržaním *tlačidla späť* vo vašom prehliadači, malo by sa zobraziť niečo takéto:
+Použitie `history.pushState` vytvára nové záznamy v histórii navigácie prehliadača. Môžete to skontrolovať podržaním *tlačidla späť* vo vašom prehliadači, malo by sa zobraziť niečo takéto:
 
-![Snímka obrazovky histórie navigácie](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.sk.png)
+![Screenshot histórie navigácie](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.sk.png)
 
-Ak skúsite niekoľkokrát kliknúť na tlačidlo späť, uvidíte, že aktuálna URL sa mení a história sa aktualizuje, ale stále sa zobrazuje rovnaká šablóna.
+Ak skúsite kliknúť na tlačidlo späť niekoľkokrát, uvidíte, že aktuálna URL sa mení a história sa aktualizuje, ale stále sa zobrazuje rovnaká šablóna.
 
-Je to preto, že aplikácia nevie, že musíme zavolať `updateRoute()` zakaždým, keď sa história zmení. Ak sa pozriete na [dokumentáciu `history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), môžete vidieť, že ak sa stav zmení - čo znamená, že sme sa presunuli na inú URL - je spustená udalosť [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event). Použijeme to na vyriešenie tohto problému.
+Je to preto, že aplikácia nevie, že musíme zavolať `updateRoute()` vždy, keď sa história zmení. Ak sa pozriete na [dokumentáciu `history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), môžete vidieť, že ak sa stav zmení - čo znamená, že sme sa presunuli na inú URL - je spustená udalosť [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event). Použijeme to na vyriešenie tohto problému.
 
 ### Úloha
 
@@ -288,21 +288,21 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Poznámka: Na deklaráciu nášho obslužného programu udalosti `popstate` sme tu použili [šípkovú funkciu](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) pre stručnosť, ale fungovala by aj bežná funkcia.
+> Poznámka: Použili sme [arrow function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) na deklarovanie nášho obslužného programu udalosti `popstate` pre stručnosť, ale bežná funkcia by fungovala rovnako.
 
-Tu je video na zopakovanie šípkových funkcií:
+Tu je video na osvieženie o arrow funkciách:
 
-[![Šípkové funkcie](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Šípkové funkcie")
+[![Arrow Functions](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Arrow Functions")
 
-> 🎥 Kliknite na obrázok vyššie pre video o šípkových funkciách.
+> 🎥 Kliknite na obrázok vyššie pre video o arrow funkciách.
 
-Teraz skúste použiť tlačidlá späť a dopredu vo vašom prehliadači a overte, že zobrazená trasa sa tentokrát správne aktualizuje.
+Teraz skúste použiť tlačidlá späť a dopredu vo vašom prehliadači a skontrolujte, či sa zobrazená trasa správne aktualizuje tentoraz.
 
 ---
 
 ## 🚀 Výzva
 
-Pridajte novú šablónu a trasu pre tretiu stránku, ktorá zobrazí kredity pre túto aplikáciu.
+Pridajte novú šablónu a trasu pre tretiu stránku, ktorá zobrazuje kredity pre túto aplikáciu.
 
 ## Kvíz po prednáške
 
@@ -310,7 +310,7 @@ Pridajte novú šablónu a trasu pre tretiu stránku, ktorá zobrazí kredity pr
 
 ## Prehľad a samoštúdium
 
-Trasovanie je jednou z prekvapivo zložitých častí vývoja webu, najmä keď sa web presúva od správania s obnovovaním stránok k obnovovaniu stránok v rámci aplikácií typu Single Page Application. Prečítajte si niečo o tom, [ako služba Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) spracováva trasovanie. Dokážete vysvetliť, prečo sú niektoré rozhodnutia popísané v tomto dokumente nevyhnutné?
+Trasovanie je jednou z prekvapivo zložitých častí vývoja webu, najmä keď sa web presúva od správania pri obnovení stránky k obnoveniu stránok v aplikáciách typu Single Page Application. Prečítajte si niečo o tom, [ako služba Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) spracováva trasovanie. Dokážete vysvetliť, prečo sú niektoré rozhodnutia popísané v tomto dokumente nevyhnutné?
 
 ## Zadanie
 
@@ -319,4 +319,4 @@ Trasovanie je jednou z prekvapivo zložitých častí vývoja webu, najmä keď 
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

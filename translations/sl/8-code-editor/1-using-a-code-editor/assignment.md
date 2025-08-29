@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-27T22:54:48+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T12:56:22+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "sl"
 }
 -->
-# Ustvarite spletno stran za življenjepis z uporabo vscode.dev
+# Ustvarite spletno stran z življenjepisom z uporabo vscode.dev
 
 _Kako kul bi bilo, če bi vas zaposlovalec prosil za vaš življenjepis, vi pa bi mu poslali kar URL?_ 😎
 
@@ -23,9 +23,9 @@ Po tej nalogi boste znali:
 
 ## Koraki
 
-**Korak 1:** Ustvarite novo GitHub repozitorij in mu dajte ime `my-resume`.
+**Korak 1:** Ustvarite novo GitHub repozitorij in ga poimenujte `my-resume`
 
-**Korak 2:** V svojem repozitoriju ustvarite datoteko `index.html`. Na github.com bomo dodali vsaj eno datoteko, saj praznega repozitorija ni mogoče odpreti v vscode.dev.
+**Korak 2:** Ustvarite datoteko `index.html` v svojem repozitoriju. Na github.com bomo dodali vsaj eno datoteko, saj praznega repozitorija ni mogoče odpreti v vscode.dev.
 
 Kliknite povezavo `creating a new file`, vnesite ime `index.html` in izberite gumb `Commit new file`.
 
@@ -33,9 +33,9 @@ Kliknite povezavo `creating a new file`, vnesite ime `index.html` in izberite gu
 
 **Korak 3:** Odprite [VSCode.dev](https://vscode.dev) in izberite gumb `Open Remote Repository`.
 
-Kopirajte URL repozitorija, ki ste ga pravkar ustvarili za svojo spletno stran življenjepisa, in ga prilepite v vnosno polje:
+Kopirajte URL repozitorija, ki ste ga pravkar ustvarili za svojo spletno stran z življenjepisom, in ga prilepite v vnosno polje:
 
-_Zamenjajte `your-username` z vašim GitHub uporabniškim imenom._
+_Zamenjajte `your-username` s svojim GitHub uporabniškim imenom._
 
 ```
 https://github.com/your-username/my-resume
@@ -45,10 +45,10 @@ https://github.com/your-username/my-resume
 
 ![Ustvarite novo datoteko](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.sl.png)
 
-**Korak 4:** Odprite datoteko `index.html`, prilepite spodnjo kodo v območje kode in shranite.
+**Korak 4:** Odprite datoteko `index.html`, prilepite spodnjo kodo v svoje delovno območje in shranite.
 
 <details>
-    <summary><b>HTML koda, ki je odgovorna za vsebino vaše spletne strani življenjepisa.</b></summary>
+    <summary><b>HTML koda, ki je odgovorna za vsebino vaše spletne strani z življenjepisom.</b></summary>
     
         <html>
 
@@ -69,7 +69,7 @@ https://github.com/your-username/my-resume
                     <article id="mainLeft">
                         <section>
                             <h2>KONTAKT</h2>
-                            <!-- kontaktni podatki, vključno s socialnimi omrežji -->
+                            <!-- kontaktni podatki, vključno z družbenimi omrežji -->
                             <p>
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <a href="mailto:username@domain.top-level domain">Vnesite svoj e-poštni naslov tukaj</a>
@@ -217,9 +217,9 @@ Dodajte podrobnosti svojega življenjepisa, da zamenjate _nadomestno besedilo_ v
     "styles": []
     }
 
-**Korak 7:** Namestite razširitev `Codeswing`, da si ogledate spletno stran življenjepisa na območju kode.
+**Korak 7:** Namestite razširitev `Codeswing`, da si ogledate spletno stran z življenjepisom v delovnem območju.
 
-Kliknite ikono _`Extensions`_ na orodni vrstici in vnesite Codeswing. Kliknite _modri gumb za namestitev_ na razširjeni orodni vrstici ali uporabite gumb za namestitev, ki se prikaže na območju kode, ko izberete razširitev za nalaganje dodatnih informacij. Takoj po namestitvi razširitve opazujte spremembe v svojem projektu 😃.
+Kliknite ikono _`Extensions`_ v orodni vrstici in vnesite Codeswing. Kliknite _modri gumb za namestitev_ na razširjeni orodni vrstici ali uporabite gumb za namestitev, ki se prikaže v delovnem območju, ko izberete razširitev za nalaganje dodatnih informacij. Takoj po namestitvi razširitve opazujte spremembe v svojem projektu 😃.
 
 ![Namestitev razširitev](../../../../8-code-editor/images/install-extension.gif)
 
@@ -229,13 +229,13 @@ To je tisto, kar boste videli na zaslonu po namestitvi razširitve.
 
 Če ste zadovoljni s spremembami, ki ste jih naredili, premaknite kazalec na mapo `Changes` in kliknite gumb `+`, da pripravite spremembe.
 
-Vnesite sporočilo za commit _(Opis spremembe, ki ste jo naredili v projektu)_ in potrdite svoje spremembe s klikom na `check`. Ko končate z delom na projektu, izberite ikono hamburger menija v zgornjem levem kotu, da se vrnete v repozitorij na GitHubu.
+Vnesite sporočilo za commit _(Opis spremembe, ki ste jo naredili v projektu)_ in potrdite svoje spremembe s klikom na `check`. Ko končate z delom na projektu, izberite ikono menija hamburger v zgornjem levem kotu, da se vrnete v repozitorij na GitHubu.
 
-Čestitke 🎉 Pravkar ste ustvarili svojo spletno stran življenjepisa z uporabo vscode.dev v nekaj korakih.
+Čestitke 🎉 Pravkar ste ustvarili svojo spletno stran z življenjepisom z uporabo vscode.dev v nekaj korakih.
 
 ## 🚀 Izziv
 
-Odprite oddaljeni repozitorij, za katerega imate dovoljenja za urejanje, in posodobite nekaj datotek. Nato poskusite ustvariti novo vejo s svojimi spremembami in ustvariti Pull Request.
+Odprite oddaljeni repozitorij, za katerega imate dovoljenja za spreminjanje, in posodobite nekaj datotek. Nato poskusite ustvariti novo vejo s svojimi spremembami in ustvariti Pull Request.
 
 ## Pregled in samostojno učenje
 
@@ -244,4 +244,4 @@ Preberite več o [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-w
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna napačna razumevanja ali napačne interpretacije, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da se zavedate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo strokovno človeško prevajanje. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

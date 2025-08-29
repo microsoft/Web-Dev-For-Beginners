@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-27T22:41:47+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T11:14:32+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "sk"
 }
@@ -27,7 +27,7 @@ Táto lekcia pokrýva základy JavaScriptu, jazyka, ktorý poskytuje interaktivi
 
 ## Polia
 
-Práca s dátami je bežnou úlohou v každom programovacom jazyku, a je oveľa jednoduchšia, keď sú dáta organizované v štruktúrovanom formáte, ako sú polia. V poliach sú dáta uložené v štruktúre podobnej zoznamu. Jednou z hlavných výhod polí je, že môžete uložiť rôzne typy dát do jedného poľa.
+Práca s dátami je bežnou úlohou v akomkoľvek jazyku, a je oveľa jednoduchšia, keď sú dáta organizované v štruktúrovanom formáte, ako sú polia. V poliach sú dáta uložené v štruktúre podobnej zoznamu. Jednou z hlavných výhod polí je, že môžete uložiť rôzne typy dát do jedného poľa.
 
 ✅ Polia sú všade okolo nás! Dokážete si predstaviť reálny príklad poľa, ako napríklad pole solárnych panelov?
 
@@ -37,7 +37,7 @@ Syntax pre pole je pár hranatých zátvoriek.
 let myArray = [];
 ```
 
-Toto je prázdne pole, ale polia môžu byť deklarované už naplnené dátami. Viacero hodnôt v poli je oddelených čiarkou.
+Toto je prázdne pole, ale polia môžu byť deklarované už naplnené dátami. Viaceré hodnoty v poli sú oddelené čiarkou.
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
@@ -73,18 +73,18 @@ let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky
 iceCreamFlavors.length; //5
 ```
 
-✅ Vyskúšajte si to sami! Použite konzolu vášho prehliadača na vytvorenie a manipuláciu s poľom podľa vášho výberu.
+✅ Vyskúšajte si to sami! Použite konzolu vášho prehliadača na vytvorenie a manipuláciu s vlastným poľom.
 
 ## Cykly
 
-Cykly nám umožňujú vykonávať opakujúce sa alebo **iteratívne** úlohy, a môžu ušetriť veľa času a kódu. Každá iterácia môže mať rôzne premenné, hodnoty a podmienky. V JavaScripte existujú rôzne typy cyklov, ktoré majú malé rozdiely, ale v podstate robia to isté: prechádzajú dáta.
+Cykly nám umožňujú vykonávať opakujúce sa alebo **iteratívne** úlohy, a môžu ušetriť veľa času a kódu. Každá iterácia môže byť odlišná vo svojich premenných, hodnotách a podmienkach. V JavaScripte existujú rôzne typy cyklov, ktoré majú malé rozdiely, ale v podstate robia to isté: prechádzajú dáta.
 
 ### For cyklus
 
 Cyklus `for` vyžaduje 3 časti na iteráciu:
 - `counter` Premenná, ktorá je zvyčajne inicializovaná číslom, ktoré počíta počet iterácií
 - `condition` Výraz, ktorý používa porovnávacie operátory na zastavenie cyklu, keď je `false`
-- `iteration-expression` Spúšťa sa na konci každej iterácie, zvyčajne sa používa na zmenu hodnoty counteru
+- `iteration-expression` Spúšťa sa na konci každej iterácie, zvyčajne sa používa na zmenu hodnoty počítadla
   
 ```javascript
 // Counting up to 10
@@ -93,11 +93,11 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-✅ Spustite tento kód v konzole prehliadača. Čo sa stane, keď urobíte malé zmeny v counteri, podmienke alebo iteratívnom výraze? Dokážete ho spustiť dozadu, vytvoriť odpočítavanie?
+✅ Spustite tento kód v konzole prehliadača. Čo sa stane, keď urobíte malé zmeny v počítadle, podmienke alebo výraze iterácie? Dokážete ho spustiť opačne, vytvoriť odpočítavanie?
 
 ### While cyklus
 
-Na rozdiel od syntaxe cyklu `for`, cykly `while` vyžadujú iba podmienku, ktorá zastaví cyklus, keď sa podmienka stane `false`. Podmienky v cykloch zvyčajne závisia od iných hodnôt, ako sú countery, a musia byť spravované počas cyklu. Počiatočné hodnoty counterov musia byť vytvorené mimo cyklu, a akékoľvek výrazy na splnenie podmienky, vrátane zmeny counteru, musia byť udržiavané vo vnútri cyklu.
+Na rozdiel od syntaxe cyklu `for`, cykly `while` vyžadujú iba podmienku, ktorá zastaví cyklus, keď sa podmienka stane `false`. Podmienky v cykloch zvyčajne závisia od iných hodnôt, ako sú počítadlá, a musia byť spravované počas cyklu. Počiatočné hodnoty počítadiel musia byť vytvorené mimo cyklu a akékoľvek výrazy na splnenie podmienky, vrátane zmeny počítadla, musia byť udržiavané vo vnútri cyklu.
 
 ```javascript
 //Counting up to 10
@@ -108,11 +108,11 @@ while (i < 10) {
 }
 ```
 
-✅ Prečo by ste si vybrali for cyklus namiesto while cyklu? 17 tisíc divákov malo rovnakú otázku na StackOverflow, a niektoré názory [by vás mohli zaujímať](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
+✅ Prečo by ste si vybrali for cyklus namiesto while cyklu? 17 tisíc divákov malo rovnakú otázku na StackOverflow, a niektoré názory [môžu byť pre vás zaujímavé](https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript).
 
 ## Cykly a polia
 
-Polia sa často používajú s cyklami, pretože väčšina podmienok vyžaduje dĺžku poľa na zastavenie cyklu, a index môže byť tiež hodnotou counteru.
+Polia sa často používajú s cyklami, pretože väčšina podmienok vyžaduje dĺžku poľa na zastavenie cyklu, a index môže byť tiež hodnotou počítadla.
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
@@ -122,26 +122,26 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 } //Ends when all flavors are printed
 ```
 
-✅ Experimentujte s prechádzaním poľa podľa vášho výberu vo vašej konzole prehliadača. 
+✅ Experimentujte s prechádzaním poľa, ktoré si sami vytvoríte, v konzole vášho prehliadača. 
 
 ---
 
 ## 🚀 Výzva
 
-Existujú aj iné spôsoby prechádzania polí než for a while cykly. Existujú [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) a [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Prepíšte váš cyklus poľa pomocou jednej z týchto techník.
+Existujú aj iné spôsoby prechádzania polí než for a while cykly. Existujú [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) a [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Prepíšte svoj cyklus poľa pomocou jednej z týchto techník.
 
 ## Kvíz po prednáške
 [Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## Prehľad a samostatné štúdium
 
-Polia v JavaScripte majú mnoho metód, ktoré sú mimoriadne užitočné na manipuláciu s dátami. [Prečítajte si o týchto metódach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) a vyskúšajte niektoré z nich (ako push, pop, slice a splice) na poli podľa vášho výberu.
+Polia v JavaScripte majú mnoho metód, ktoré sú mimoriadne užitočné na manipuláciu s dátami. [Prečítajte si o týchto metódach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) a vyskúšajte niektoré z nich (ako push, pop, slice a splice) na poli, ktoré si sami vytvoríte.
 
 ## Zadanie
 
-[Prejdite pole](assignment.md)
+[Prejdite pole pomocou cyklu](assignment.md)
 
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za záväzný zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

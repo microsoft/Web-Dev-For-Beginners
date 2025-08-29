@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-27T22:26:12+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T12:32:27+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "hr"
 }
@@ -16,15 +16,15 @@ CO_OP_TRANSLATOR_METADATA:
 Igre nisu baš zabavne dok nemate vanzemaljce koji se kreću po ekranu! U ovoj igri koristit ćemo dvije vrste kretanja:
 
 - **Kretanje pomoću tipkovnice/miša**: kada korisnik koristi tipkovnicu ili miš za pomicanje objekta na ekranu.
-- **Kretanje uzrokovano igrom**: kada igra pomiče objekt u određenim vremenskim intervalima.
+- **Kretanje izazvano igrom**: kada igra pomiče objekt u određenim vremenskim intervalima.
 
-Kako pomičemo stvari na ekranu? Sve se svodi na kartezijanske koordinate: mijenjamo lokaciju (x, y) objekta i zatim ponovno crtamo ekran.
+Kako onda pomičemo stvari na ekranu? Sve se svodi na kartezijske koordinate: mijenjamo lokaciju (x, y) objekta i zatim ponovno crtamo ekran.
 
-Obično su potrebni sljedeći koraci za ostvarivanje *kretanja* na ekranu:
+Obično su potrebni sljedeći koraci za postizanje *kretanja* na ekranu:
 
 1. **Postavite novu lokaciju** za objekt; to je potrebno kako bi se objekt doživio kao da se pomaknuo.
-2. **Očistite ekran**, ekran treba očistiti između crtanja. To možemo učiniti crtanjem pravokutnika koji ispunimo bojom pozadine.
-3. **Ponovno nacrtajte objekt** na novoj lokaciji. Time konačno ostvarujemo pomicanje objekta s jedne lokacije na drugu.
+2. **Očistite ekran**, ekran treba očistiti između crtanja. To možemo učiniti crtanjem pravokutnika koji ispunjavamo bojom pozadine.
+3. **Ponovno nacrtajte objekt** na novoj lokaciji. Na taj način konačno postižemo pomicanje objekta s jedne lokacije na drugu.
 
 Evo kako to može izgledati u kodu:
 
@@ -43,7 +43,7 @@ ctx.drawImage(heroImg, hero.x, hero.y);
 
 ## Rukovanje događajima tipkovnice
 
-Događajima upravljate povezivanjem specifičnih događaja s kodom. Događaji tipkovnice aktiviraju se na cijelom prozoru, dok se događaji miša poput `click` mogu povezati s klikom na određeni element. Koristit ćemo događaje tipkovnice tijekom ovog projekta.
+Događajima upravljate povezivanjem specifičnih događaja s kodom. Događaji tipkovnice aktiviraju se na cijelom prozoru, dok se događaji miša poput `click` mogu povezati s klikom na određeni element. Kroz ovaj projekt koristit ćemo događaje tipkovnice.
 
 Za rukovanje događajem trebate koristiti metodu `addEventListener()` prozora i pružiti joj dva ulazna parametra. Prvi parametar je naziv događaja, na primjer `keyup`. Drugi parametar je funkcija koja bi se trebala pozvati kao rezultat događaja.
 
@@ -60,14 +60,14 @@ window.addEventListener('keyup', (evt) => {
 
 Za događaje tipki postoje dva svojstva na događaju koja možete koristiti za provjeru koja je tipka pritisnuta:
 
-- `key`, ovo je tekstualni prikaz pritisnute tipke, na primjer `ArrowUp`.
-- `keyCode`, ovo je brojčani prikaz, na primjer `37`, odgovara `ArrowLeft`.
+- `key`, ovo je tekstualni prikaz pritisnute tipke, na primjer `ArrowUp`
+- `keyCode`, ovo je brojčani prikaz, na primjer `37`, što odgovara `ArrowLeft`.
 
 ✅ Manipulacija događajima tipki korisna je i izvan razvoja igara. Koje druge primjene možete zamisliti za ovu tehniku?
 
 ### Posebne tipke: upozorenje
 
-Postoje neke *posebne* tipke koje utječu na prozor. To znači da ako slušate događaj `keyup` i koristite te posebne tipke za pomicanje heroja, također će se dogoditi horizontalno pomicanje. Zbog toga ćete možda htjeti *isključiti* ovo ugrađeno ponašanje preglednika dok gradite svoju igru. Trebate kod poput ovog:
+Postoje neke *posebne* tipke koje utječu na prozor. To znači da ako slušate događaj `keyup` i koristite te posebne tipke za pomicanje heroja, također će se dogoditi horizontalno pomicanje. Zbog toga ćete možda htjeti *isključiti* ovo ugrađeno ponašanje preglednika dok gradite svoju igru. Trebat će vam kod poput ovog:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -90,9 +90,9 @@ window.addEventListener('keydown', onKeyDown);
 
 Gornji kod osigurava da tipke sa strelicama i razmaknica imaju svoje *zadano* ponašanje isključeno. Mehanizam *isključivanja* događa se kada pozovemo `e.preventDefault()`.
 
-## Kretanje uzrokovano igrom
+## Kretanje izazvano igrom
 
-Možemo učiniti da se stvari same kreću pomoću timera poput funkcija `setTimeout()` ili `setInterval()` koje ažuriraju lokaciju objekta na svakom taktu ili vremenskom intervalu. Evo kako to može izgledati:
+Možemo učiniti da se stvari same kreću pomoću timera poput funkcija `setTimeout()` ili `setInterval()` koje ažuriraju lokaciju objekta pri svakom intervalu. Evo kako to može izgledati:
 
 ```javascript
 let id = setInterval(() => {
@@ -103,9 +103,9 @@ let id = setInterval(() => {
 
 ## Petlja igre
 
-Petlja igre je koncept koji se u osnovi odnosi na funkciju koja se poziva u redovitim intervalima. Zove se petlja igre jer se sve što bi trebalo biti vidljivo korisniku crta unutar petlje. Petlja igre koristi sve objekte igre koji su dio igre, crtajući ih sve osim ako iz nekog razloga više ne bi trebali biti dio igre. Na primjer, ako je objekt neprijatelj kojeg je pogodio laser i eksplodirao, više nije dio trenutne petlje igre (o tome ćete više naučiti u sljedećim lekcijama).
+Petlja igre je koncept koji se u osnovi odnosi na funkciju koja se poziva u redovitim intervalima. Zove se petlja igre jer se sve što bi trebalo biti vidljivo korisniku crta unutar te petlje. Petlja igre koristi sve objekte igre koji su dio igre, crtajući ih sve osim ako iz nekog razloga više ne bi trebali biti dio igre. Na primjer, ako je objekt neprijatelj kojeg je pogodio laser i eksplodirao, više nije dio trenutne petlje igre (o tome ćete više naučiti u sljedećim lekcijama).
 
-Evo kako petlja igre obično izgleda, izražena u kodu:
+Evo kako petlja igre obično izgleda, izraženo u kodu:
 
 ```javascript
 let gameLoopId = setInterval(() =>
@@ -119,14 +119,14 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-Gornja petlja se poziva svakih `200` milisekundi za ponovno crtanje platna. Imate mogućnost odabrati najbolji interval koji ima smisla za vašu igru.
+Gornja petlja poziva se svakih `200` milisekundi kako bi se ponovno nacrtao platno. Imate mogućnost odabrati najbolji interval koji ima smisla za vašu igru.
 
 ## Nastavak svemirske igre
 
 Uzet ćete postojeći kod i proširiti ga. Možete započeti s kodom koji ste dovršili tijekom prvog dijela ili koristiti kod iz [Dio II - početni](../../../../6-space-game/3-moving-elements-around/your-work).
 
-- **Pomicanje heroja**: dodati ćete kod kako biste omogućili pomicanje heroja pomoću tipki sa strelicama.
-- **Pomicanje neprijatelja**: također ćete trebati dodati kod kako biste osigurali da se neprijatelji pomiču od vrha prema dnu određenom brzinom.
+- **Pomicanje heroja**: dodat ćete kod kako biste osigurali da možete pomicati heroja pomoću tipki sa strelicama.
+- **Pomicanje neprijatelja**: također ćete trebati dodati kod kako biste osigurali da se neprijatelji kreću odozgo prema dolje određenom brzinom.
 
 ## Preporučeni koraci
 
@@ -141,22 +141,22 @@ Pronađite datoteke koje su stvorene za vas u podmapi `your-work`. Trebale bi sa
 -| package.json
 ```
 
-Započnite svoj projekt u mapi `your_work` upisivanjem:
+Pokrenite svoj projekt u mapi `your_work` upisivanjem:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Gornji kod će pokrenuti HTTP poslužitelj na adresi `http://localhost:5000`. Otvorite preglednik i unesite tu adresu, trenutno bi trebao prikazati heroja i sve neprijatelje; ništa se još ne kreće!
+Gornji kod pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`. Otvorite preglednik i unesite tu adresu, trenutno bi trebao prikazati heroja i sve neprijatelje; ništa se još ne kreće!
 
 ### Dodajte kod
 
-1. **Dodajte posvećene objekte** za `heroja`, `neprijatelja` i `objekt igre`, oni bi trebali imati svojstva `x` i `y`. (Sjetite se dijela o [Nasljeđivanju ili kompoziciji](../README.md)).
+1. **Dodajte namjenske objekte** za `hero`, `enemy` i `game object`, oni bi trebali imati svojstva `x` i `y`. (Sjetite se dijela o [Nasljeđivanju ili kompoziciji](../README.md)).
 
-   *SAVJET* `objekt igre` trebao bi biti onaj s `x` i `y` te sposobnošću da se nacrta na platnu.
+   *SAVJET* `game object` bi trebao biti onaj s `x` i `y` i mogućnošću crtanja na platno.
 
-   >savjet: započnite dodavanjem nove klase GameObject s konstruktorom definiranim kao dolje, a zatim ga nacrtajte na platnu:
+   >savjet: započnite dodavanjem nove klase GameObject s konstruktorom definiranom kao dolje, a zatim je nacrtajte na platno:
   
     ```javascript
         
@@ -177,7 +177,7 @@ Gornji kod će pokrenuti HTTP poslužitelj na adresi `http://localhost:5000`. Ot
     }
     ```
 
-    Sada proširite ovaj GameObject kako biste stvorili Heroja i Neprijatelja.
+    Sada proširite ovaj GameObject kako biste stvorili Hero i Enemy.
     
     ```javascript
     class Hero extends GameObject {
@@ -207,7 +207,7 @@ Gornji kod će pokrenuti HTTP poslužitelj na adresi `http://localhost:5000`. Ot
 
 2. **Dodajte rukovatelje događajima tipki** za upravljanje navigacijom tipki (pomicanje heroja gore/dolje lijevo/desno).
 
-   *ZAPAMTITE* to je kartezijanski sustav, gornji lijevi kut je `0,0`. Također zapamtite da dodate kod za zaustavljanje *zadanog ponašanja*.
+   *ZAPAMTITE* to je kartezijski sustav, gornji lijevi kut je `0,0`. Također zapamtite dodati kod za zaustavljanje *zadanog ponašanja*.
 
    >savjet: kreirajte svoju funkciju onKeyDown i povežite je s prozorom:
 
@@ -221,11 +221,11 @@ Gornji kod će pokrenuti HTTP poslužitelj na adresi `http://localhost:5000`. Ot
     window.addEventListener("keydown", onKeyDown);
    ```
     
-   Provjerite konzolu preglednika u ovom trenutku i pratite pritiske tipki.
+   Provjerite konzolu preglednika u ovom trenutku i pratite pritiske tipki koje se bilježe.
 
 3. **Implementirajte** [Pub sub obrazac](../README.md), ovo će održati vaš kod čistim dok pratite preostale dijelove.
 
-   Da biste dovršili ovaj zadnji dio, možete:
+   Da biste to učinili, možete:
 
    1. **Dodajte slušatelja događaja** na prozor:
 
@@ -313,7 +313,7 @@ Gornji kod će pokrenuti HTTP poslužitelj na adresi `http://localhost:5000`. Ot
 
 1. **Postavite petlju igre**
 
-   Refaktorirajte funkciju window.onload kako biste inicijalizirali igru i postavili petlju igre na dobar interval. Također ćete dodati laserski zrak:
+   Refaktorirajte funkciju window.onload kako biste inicijalizirali igru i postavili petlju igre u dobrom intervalu. Također ćete dodati laserski snop:
 
     ```javascript
     window.onload = async () => {
@@ -376,13 +376,13 @@ Gornji kod će pokrenuti HTTP poslužitelj na adresi `http://localhost:5000`. Ot
     }
     ```
 
-    Vaši neprijatelji bi trebali početi napredovati prema vašem svemirskom brodu heroja!
+    Vaši neprijatelji trebali bi početi napredovati prema vašem svemirskom brodu heroja!
 
 ---
 
 ## 🚀 Izazov
 
-Kao što možete vidjeti, vaš kod može postati 'spaghetti kod' kada počnete dodavati funkcije, varijable i klase. Kako možete bolje organizirati svoj kod kako bi bio čitljiviji? Osmislite sustav za organizaciju koda, čak i ako još uvijek ostaje u jednoj datoteci.
+Kao što vidite, vaš kod može postati 'spaghetti kod' kada počnete dodavati funkcije, varijable i klase. Kako možete bolje organizirati svoj kod kako bi bio čitljiviji? Skicirajte sustav za organizaciju koda, čak i ako još uvijek ostaje u jednoj datoteci.
 
 ## Kviz nakon predavanja
 
@@ -390,7 +390,7 @@ Kao što možete vidjeti, vaš kod može postati 'spaghetti kod' kada počnete d
 
 ## Pregled i samostalno učenje
 
-Iako pišemo svoju igru bez korištenja okvira, postoji mnogo okvira za razvoj igara temeljenih na JavaScriptu za rad s platnom. Odvojite vrijeme za [čitanje o njima](https://github.com/collections/javascript-game-engines).
+Iako pišemo našu igru bez korištenja okvira, postoji mnogo okvira za razvoj igara temeljenih na JavaScript platnu. Odvojite malo vremena za [čitanje o njima](https://github.com/collections/javascript-game-engines).
 
 ## Zadatak
 
@@ -399,4 +399,4 @@ Iako pišemo svoju igru bez korištenja okvira, postoji mnogo okvira za razvoj i
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane stručnjaka. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.
