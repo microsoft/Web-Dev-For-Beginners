@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-28T11:38:23+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T13:22:15+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "en"
 }
@@ -17,16 +17,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Inheritance and Composition in game development
 
-In earlier lessons, the design architecture of the apps you built wasn't a major concern because the projects were relatively small. However, as your applications grow in size and complexity, architectural decisions become increasingly important. There are two main approaches to building larger applications in JavaScript: *composition* and *inheritance*. Both have their advantages and disadvantages, but let's explore them in the context of game development.
+In earlier lessons, you didn’t need to worry much about the design architecture of the apps you built, as the projects were small in scope. However, as your applications grow in size and complexity, architectural decisions become more important. There are two major approaches to building larger applications in JavaScript: *composition* and *inheritance*. Both have their advantages and disadvantages, but let’s explore them in the context of a game.
 
-✅ One of the most famous programming books ever written focuses on [design patterns](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ One of the most famous programming books ever written is about [design patterns](https://en.wikipedia.org/wiki/Design_Patterns).
 
-In a game, you have `game objects`, which are entities that exist on the screen. These objects have a location within a cartesian coordinate system, defined by an `x` and `y` coordinate. As you develop a game, you'll notice that all your game objects share certain common properties, which are typical for any game you create. These include:
+In a game, you have `game objects`, which are objects that exist on the screen. This means they have a location on a Cartesian coordinate system, defined by `x` and `y` coordinates. As you develop a game, you’ll notice that all your game objects share some standard properties, common to every game you create. These include:
 
-- **location-based** Most, if not all, game elements are tied to a specific location. This means they have an `x` and `y` coordinate.
-- **movable** These objects can move to a new location. Examples include heroes, monsters, or NPCs (non-player characters), but not static objects like trees.
-- **self-destructing** These objects exist for a limited time before they are marked for deletion. This is often represented by a `dead` or `destroyed` boolean that signals to the game engine that the object should no longer be rendered.
-- **cool-down** 'Cool-down' is a common property for short-lived objects. For example, a piece of text or a graphical effect like an explosion that should only appear for a few milliseconds.
+- **location-based**: Most, if not all, game elements are location-based. This means they have an `x` and `y` coordinate.
+- **movable**: These are objects that can move to a new location. Typically, this includes heroes, monsters, or NPCs (non-player characters), but not static objects like trees.
+- **self-destructing**: These objects exist for a limited time before marking themselves for deletion. This is often represented by a `dead` or `destroyed` boolean that signals to the game engine that the object should no longer be rendered.
+- **cool-down**: 'Cool-down' is a common property for short-lived objects. For example, a piece of text or a graphical effect like an explosion that should only appear for a few milliseconds.
 
 ✅ Think about a game like Pac-Man. Can you identify the four object types listed above in this game?
 
@@ -38,7 +38,7 @@ The properties described above represent behaviors that game objects can have. S
 
 One approach is to use `classes` along with `inheritance` to add specific behaviors to a class.
 
-✅ Inheritance is an important concept to understand. Learn more from [MDN's article about inheritance](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+✅ Inheritance is an important concept to understand. Learn more in [MDN's article about inheritance](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 In code, a game object might look like this:
 
@@ -88,11 +88,11 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Take a few minutes to imagine how a Pac-Man character (like Inky, Pinky, or Blinky) could be implemented in JavaScript.
+✅ Take a few minutes to imagine how a Pac-Man character (like Inky, Pinky, or Blinky) could be written in JavaScript.
 
 **Composition**
 
-An alternative way to handle object inheritance is through *Composition*. In this approach, objects express their behaviors like this:
+Another way to handle object inheritance is through *Composition*. In this approach, objects express their behavior like this:
 
 ```javascript
 //create a constant gameObject
@@ -139,23 +139,23 @@ const tree = createStatic(0,0, 'Tree');
 
 **Which pattern should I use?**
 
-The choice between these patterns is up to you. JavaScript supports both paradigms.
+The choice is yours. JavaScript supports both paradigms.
 
 --
 
-Another common pattern in game development addresses the challenge of managing the game's user experience and performance.
+Another common pattern in game development addresses the challenge of managing the game’s user experience and performance.
 
 ## Pub/sub pattern
 
 ✅ Pub/Sub stands for 'publish-subscribe'
 
-This pattern is based on the idea that different parts of your application shouldn't directly depend on one another. Why is this beneficial? It makes it easier to understand the overall structure of your application when its components are decoupled. It also simplifies making changes to behavior when needed. Here's how this is achieved:
+This pattern is based on the idea that different parts of your application shouldn’t need to know about each other. Why is this important? It makes it easier to understand the overall system and simplifies making changes to behavior when needed. Here’s how it works:
 
-- **message**: A message is typically a text string, sometimes accompanied by an optional payload (data that provides additional context about the message). For example, a typical message in a game might be `KEY_PRESSED_ENTER`.
+- **message**: A message is typically a text string, sometimes accompanied by an optional payload (data that provides additional context about the message). For example, a common message in a game might be `KEY_PRESSED_ENTER`.
 - **publisher**: This component *publishes* a message and sends it to all subscribers.
-- **subscriber**: This component *listens* for specific messages and performs an action in response, such as firing a laser.
+- **subscriber**: This component *listens* for specific messages and performs a task in response, such as firing a laser.
 
-Although the implementation is relatively small, this pattern is incredibly powerful. Here's an example of how it can be implemented:
+The implementation is relatively small but incredibly powerful. Here’s an example:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-In this example, we connect a keyboard event, `ArrowLeft`, to send the `HERO_MOVE_LEFT` message. We then listen for that message and move the `hero` accordingly. The advantage of this pattern is that the event listener and the hero are completely independent of each other. You could remap the `ArrowLeft` key to the `A` key, or even make the `ArrowLeft` key trigger a completely different action by modifying the eventEmitter's `on` function:
+In this example, we connect a keyboard event, `ArrowLeft`, to send the `HERO_MOVE_LEFT` message. We then listen for that message and move the `hero` accordingly. The strength of this pattern lies in the fact that the event listener and the hero don’t need to know about each other. You could remap `ArrowLeft` to the `A` key, or even assign a completely different action to `ArrowLeft` by making a few changes to the eventEmitter’s `on` function:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,13 +212,13 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-As your game becomes more complex, this pattern remains consistent in its simplicity, helping to keep your code clean. It's highly recommended to adopt this approach.
+As your game grows in complexity, this pattern remains consistent, keeping your code clean and manageable. It’s highly recommended to adopt this approach.
 
 ---
 
 ## 🚀 Challenge
 
-Consider how the pub-sub pattern could improve a game. Which components should emit events, and how should the game respond to them? Use this opportunity to get creative and brainstorm a new game concept, thinking about how its parts might interact.
+Think about how the pub-sub pattern could improve a game. Which parts of the game should emit events, and how should the game respond to them? Use your creativity to imagine a new game and how its components might interact.
 
 ## Post-Lecture Quiz
 

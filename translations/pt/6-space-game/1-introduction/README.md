@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-24T12:39:45+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T16:14:01+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "pt"
 }
@@ -19,13 +19,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 Nas lições anteriores, não havia muita necessidade de se preocupar com a arquitetura de design dos aplicativos que você criou, pois os projetos eram muito pequenos em escopo. No entanto, à medida que suas aplicações crescem em tamanho e complexidade, as decisões arquiteturais tornam-se uma preocupação maior. Existem duas abordagens principais para criar aplicações maiores em JavaScript: *composição* ou *herança*. Ambas têm prós e contras, mas vamos explicá-las no contexto de um jogo.
 
-✅ Um dos livros mais famosos sobre programação trata de [padrões de design](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Um dos livros de programação mais famosos já escritos trata de [padrões de design](https://en.wikipedia.org/wiki/Design_Patterns).
 
 Em um jogo, você tem `objetos de jogo`, que são objetos que existem na tela. Isso significa que eles têm uma localização em um sistema de coordenadas cartesianas, caracterizada por ter uma coordenada `x` e `y`. À medida que você desenvolve um jogo, perceberá que todos os seus objetos de jogo têm uma propriedade padrão, comum a todos os jogos que você cria, ou seja, elementos que são:
 
 - **baseados em localização** A maioria, senão todos, os elementos de jogo são baseados em localização. Isso significa que eles têm uma localização, um `x` e um `y`.
 - **móveis** Estes são objetos que podem se mover para uma nova localização. Normalmente, é um herói, um monstro ou um NPC (personagem não jogável), mas não, por exemplo, um objeto estático como uma árvore.
-- **autodestrutivos** Estes objetos existem apenas por um período de tempo definido antes de serem configurados para exclusão. Geralmente, isso é representado por um booleano `morto` ou `destruído`, que sinaliza ao motor do jogo que este objeto não deve mais ser renderizado.
+- **autodestrutivos** Estes objetos existem apenas por um período de tempo definido antes de se prepararem para exclusão. Geralmente, isso é representado por um booleano `morto` ou `destruído`, que sinaliza ao motor do jogo que este objeto não deve mais ser renderizado.
 - **tempo de espera** 'Tempo de espera' é uma propriedade típica entre objetos de curta duração. Um exemplo típico é um pedaço de texto ou efeito gráfico, como uma explosão, que deve ser visto apenas por alguns milissegundos.
 
 ✅ Pense em um jogo como Pac-Man. Consegue identificar os quatro tipos de objetos listados acima neste jogo?
@@ -151,7 +151,7 @@ Outro padrão comum no desenvolvimento de jogos aborda o problema de lidar com a
 
 Este padrão aborda a ideia de que as partes distintas da sua aplicação não devem saber umas das outras. Por quê? Isso torna muito mais fácil entender o que está acontecendo em geral se as várias partes estiverem separadas. Também facilita mudar o comportamento repentinamente, se necessário. Como conseguimos isso? Fazemos isso estabelecendo alguns conceitos:
 
-- **mensagem**: Uma mensagem geralmente é uma string de texto acompanhada por uma carga opcional (um pedaço de dados que esclarece sobre o que é a mensagem). Uma mensagem típica em um jogo pode ser `KEY_PRESSED_ENTER`.
+- **mensagem**: Uma mensagem geralmente é uma string de texto acompanhada por um payload opcional (um pedaço de dados que esclarece sobre o que é a mensagem). Uma mensagem típica em um jogo pode ser `KEY_PRESSED_ENTER`.
 - **publicador**: Este elemento *publica* uma mensagem e a envia para todos os assinantes.
 - **assinante**: Este elemento *ouve* mensagens específicas e realiza alguma tarefa como resultado de receber essa mensagem, como disparar um laser.
 
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Acima, conectamos um evento de teclado, `ArrowLeft`, e enviamos a mensagem `HERO_MOVE_LEFT`. Ouvimos essa mensagem e movemos o `herói` como resultado. A força desse padrão é que o ouvinte de eventos e o herói não sabem um do outro. Você pode remapear o `ArrowLeft` para a tecla `A`. Além disso, seria possível fazer algo completamente diferente no `ArrowLeft` fazendo algumas edições na função `on` do eventEmitter:
+Acima, conectamos um evento de teclado, `ArrowLeft`, e enviamos a mensagem `HERO_MOVE_LEFT`. Ouvimos essa mensagem e movemos o `herói` como resultado. A força desse padrão é que o listener de eventos e o herói não sabem um do outro. Você pode remapear o `ArrowLeft` para a tecla `A`. Além disso, seria possível fazer algo completamente diferente no `ArrowLeft` fazendo algumas edições na função `on` do eventEmitter:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -226,11 +226,13 @@ Pense em como o padrão pub-sub pode melhorar um jogo. Quais partes devem emitir
 
 ## Revisão e Estudo Individual
 
-Saiba mais sobre Pub/Sub [lendo sobre isso](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
+Saiba mais sobre Pub/Sub [lendo sobre o assunto](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
 ## Tarefa
 
 [Crie um protótipo de jogo](assignment.md)
 
+---
+
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

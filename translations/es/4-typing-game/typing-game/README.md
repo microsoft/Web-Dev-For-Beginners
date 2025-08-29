@@ -1,38 +1,38 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e982871b8388c59c22a41b73b5fca70f",
-  "translation_date": "2025-08-24T13:51:17+00:00",
+  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
+  "translation_date": "2025-08-29T14:00:41+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "es"
 }
 -->
 # Creando un juego usando eventos
 
-## Cuestionario previo a la lección
+## Cuestionario previo a la clase
 
-[Cuestionario previo a la lección](https://ff-quizzes.netlify.app/web/quiz/21)
+[Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/21)
 
-## Programación orientada a eventos
+## Programación basada en eventos
 
 Cuando creamos una aplicación basada en navegador, proporcionamos una interfaz gráfica de usuario (GUI) para que el usuario interactúe con lo que hemos construido. La forma más común de interactuar con el navegador es haciendo clic y escribiendo en varios elementos. ¡El desafío que enfrentamos como desarrolladores es que no sabemos cuándo van a realizar estas operaciones!
 
-[La programación orientada a eventos](https://es.wikipedia.org/wiki/Programaci%C3%B3n_dirigida_por_eventos) es el nombre del tipo de programación que necesitamos para crear nuestra GUI. Si desglosamos un poco esta frase, vemos que la palabra clave aquí es **evento**. [Evento](https://www.merriam-webster.com/dictionary/event), según Merriam-Webster, se define como "algo que sucede". Esto describe perfectamente nuestra situación. Sabemos que algo va a suceder para lo cual queremos ejecutar algún código en respuesta, pero no sabemos cuándo ocurrirá.
+[La programación basada en eventos](https://es.wikipedia.org/wiki/Programaci%C3%B3n_dirigida_por_eventos) es el nombre del tipo de programación que necesitamos para crear nuestra GUI. Si desglosamos un poco esta frase, vemos que la palabra clave aquí es **evento**. [Evento](https://www.merriam-webster.com/dictionary/event), según Merriam-Webster, se define como "algo que sucede". Esto describe nuestra situación perfectamente. Sabemos que algo va a suceder y queremos ejecutar algún código en respuesta, pero no sabemos cuándo ocurrirá.
 
-La forma en que marcamos una sección de código que queremos ejecutar es creando una función. Cuando pensamos en [programación procedural](https://es.wikipedia.org/wiki/Programaci%C3%B3n_procedimental), las funciones se llaman en un orden específico. Lo mismo será cierto con la programación orientada a eventos. La diferencia está en **cómo** se llamarán las funciones.
+La forma en que marcamos una sección de código que queremos ejecutar es creando una función. Cuando pensamos en [programación procedural](https://es.wikipedia.org/wiki/Programaci%C3%B3n_procedimental), las funciones se llaman en un orden específico. Lo mismo ocurre con la programación basada en eventos. La diferencia está en **cómo** se llaman las funciones.
 
-Para manejar eventos (clics de botones, escritura, etc.), registramos **escuchadores de eventos**. Un escuchador de eventos es una función que escucha un evento y se ejecuta en respuesta. Los escuchadores de eventos pueden actualizar la interfaz de usuario, hacer llamadas al servidor o cualquier otra cosa que sea necesaria en respuesta a la acción del usuario. Agregamos un escuchador de eventos usando [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) y proporcionando una función para ejecutar.
+Para manejar eventos (clics de botones, escritura, etc.), registramos **event listeners**. Un event listener es una función que escucha un evento y se ejecuta en respuesta. Los event listeners pueden actualizar la interfaz de usuario, hacer llamadas al servidor o realizar cualquier otra acción necesaria en respuesta a la acción del usuario. Agregamos un event listener usando [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) y proporcionando una función para ejecutar.
 
-> **NOTE:** Vale la pena destacar que hay muchas formas de crear escuchadores de eventos. Puedes usar funciones anónimas o crear funciones con nombre. Puedes usar varios atajos, como establecer la propiedad `click` o usar `addEventListener`. En nuestro ejercicio nos centraremos en `addEventListener` y funciones anónimas, ya que probablemente sea la técnica más común que usan los desarrolladores web. También es la más flexible, ya que `addEventListener` funciona para todos los eventos, y el nombre del evento se puede proporcionar como un parámetro.
+> **NOTE:** Vale la pena destacar que hay muchas formas de crear event listeners. Puedes usar funciones anónimas o crear funciones con nombre. Puedes usar varios atajos, como establecer la propiedad `click` o usar `addEventListener`. En nuestro ejercicio nos vamos a centrar en `addEventListener` y funciones anónimas, ya que probablemente sea la técnica más común que usan los desarrolladores web. También es la más flexible, ya que `addEventListener` funciona para todos los eventos y el nombre del evento se puede proporcionar como un parámetro.
 
 ### Eventos comunes
 
-Hay [docenas de eventos](https://developer.mozilla.org/docs/Web/Events) disponibles para escuchar al crear una aplicación. Básicamente, cualquier cosa que un usuario haga en una página genera un evento, lo que te da mucho poder para garantizar que obtengan la experiencia que deseas. Afortunadamente, normalmente solo necesitarás un pequeño puñado de eventos. Aquí tienes algunos comunes (incluidos los dos que usaremos al crear nuestro juego):
+Hay [docenas de eventos](https://developer.mozilla.org/docs/Web/Events) disponibles para escuchar al crear una aplicación. Básicamente, cualquier cosa que un usuario haga en una página genera un evento, lo que te da mucho poder para garantizar que obtengan la experiencia que deseas. Afortunadamente, normalmente solo necesitarás un pequeño grupo de eventos. Aquí hay algunos comunes (incluidos los dos que usaremos al crear nuestro juego):
 
 - [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): El usuario hizo clic en algo, típicamente un botón o enlace
 - [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): El usuario hizo clic con el botón derecho del ratón
-- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): El usuario seleccionó algún texto
-- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): El usuario ingresó algún texto
+- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): El usuario seleccionó texto
+- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): El usuario ingresó texto
 
 ## Creando el juego
 
@@ -40,17 +40,17 @@ Vamos a crear un juego para explorar cómo funcionan los eventos en JavaScript. 
 
 - El jugador hace clic en el botón de inicio y se le presenta una cita para escribir
 - El jugador escribe la cita lo más rápido que pueda en un cuadro de texto
-  - A medida que se completa cada palabra, la siguiente se resalta
-  - Si el jugador comete un error, el cuadro de texto se pone rojo
+  - A medida que cada palabra se completa, la siguiente se resalta
+  - Si el jugador comete un error, el cuadro de texto se actualiza a rojo
   - Cuando el jugador completa la cita, se muestra un mensaje de éxito con el tiempo transcurrido
 
 ¡Construyamos nuestro juego y aprendamos sobre eventos!
 
 ### Estructura de archivos
 
-Vamos a necesitar tres archivos en total: **index.html**, **script.js** y **style.css**. Comencemos configurándolos para facilitarnos el trabajo.
+Vamos a necesitar tres archivos en total: **index.html**, **script.js** y **style.css**. Comencemos configurándolos para facilitar nuestro trabajo.
 
-- Crea una nueva carpeta para tu trabajo abriendo una consola o terminal y ejecutando el siguiente comando:
+- Crea una nueva carpeta para tu trabajo abriendo una consola o ventana de terminal y ejecutando el siguiente comando:
 
 ```bash
 # Linux or macOS
@@ -107,12 +107,12 @@ Crea un nuevo archivo llamado **index.html**. Agrega el siguiente HTML:
 
 ### Lanzar la aplicación
 
-Siempre es mejor desarrollar de manera iterativa para ver cómo se ve todo. Lancemos nuestra aplicación. Hay una maravillosa extensión para Visual Studio Code llamada [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) que alojará tu aplicación localmente y actualizará el navegador cada vez que guardes.
+Siempre es mejor desarrollar de manera iterativa para ver cómo se ve. Lancemos nuestra aplicación. Hay una maravillosa extensión para Visual Studio Code llamada [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) que alojará tu aplicación localmente y actualizará el navegador cada vez que guardes.
 
 - Instala [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) siguiendo el enlace y haciendo clic en **Install**
   - El navegador te pedirá abrir Visual Studio Code, y luego Visual Studio Code te pedirá realizar la instalación
   - Reinicia Visual Studio Code si se te solicita
-- Una vez instalado, en Visual Studio Code, presiona Ctrl-Shift-P (o Cmd-Shift-P) para abrir el panel de comandos
+- Una vez instalado, en Visual Studio Code, haz clic en Ctrl-Shift-P (o Cmd-Shift-P) para abrir el panel de comandos
 - Escribe **Live Server: Open with Live Server**
   - Live Server comenzará a alojar tu aplicación
 - Abre un navegador y navega a **https://localhost:5500**
@@ -122,7 +122,7 @@ Agreguemos algo de funcionalidad.
 
 ## Agregar el CSS
 
-Con nuestro HTML creado, agreguemos el CSS para el estilo principal. Necesitamos resaltar la palabra que el jugador debe escribir y colorear el cuadro de texto si lo que han escrito es incorrecto. Haremos esto con dos clases.
+Con nuestro HTML creado, agreguemos el CSS para el estilo principal. Necesitamos resaltar la palabra que el jugador debe escribir y colorear el cuadro de texto si lo que ha escrito es incorrecto. Haremos esto con dos clases.
 
 Crea un nuevo archivo llamado **style.css** y agrega la siguiente sintaxis.
 
@@ -138,19 +138,19 @@ Crea un nuevo archivo llamado **style.css** y agrega la siguiente sintaxis.
 }
 ```
 
-✅ Cuando se trata de CSS, puedes diseñar tu página como prefieras. Tómate un tiempo para hacer que la página se vea más atractiva:
+✅ En cuanto al CSS, puedes diseñar tu página como prefieras. Tómate un tiempo para hacer que la página se vea más atractiva:
 
 - Elige una fuente diferente
 - Colorea los encabezados
-- Cambia el tamaño de los elementos
+- Redimensiona los elementos
 
 ## JavaScript
 
-Con nuestra interfaz de usuario creada, es hora de centrarnos en el JavaScript que proporcionará la lógica. Vamos a desglosarlo en varios pasos:
+Con nuestra interfaz de usuario creada, es hora de centrarnos en el JavaScript que proporcionará la lógica. Vamos a dividir esto en varios pasos:
 
 - [Crear las constantes](../../../../4-typing-game/typing-game)
-- [Escuchador de eventos para iniciar el juego](../../../../4-typing-game/typing-game)
-- [Escuchador de eventos para escribir](../../../../4-typing-game/typing-game)
+- [Event listener para iniciar el juego](../../../../4-typing-game/typing-game)
+- [Event listener para escribir](../../../../4-typing-game/typing-game)
 
 Pero primero, crea un nuevo archivo llamado **script.js**.
 
@@ -166,7 +166,7 @@ Vamos a necesitar algunos elementos para facilitarnos la programación. Nuevamen
 También vamos a querer referencias a los elementos de la interfaz de usuario:
 
 - El cuadro de texto (**typed-value**)
-- La visualización de la cita (**quote**)
+- La cita (**quote**)
 - El mensaje (**message**)
 
 ```javascript
@@ -194,7 +194,7 @@ const typedValueElement = document.getElementById('typed-value');
 
 ✅ Adelante, agrega más citas a tu juego
 
-> **NOTE:** Podemos recuperar los elementos siempre que queramos en el código usando `document.getElementById`. Debido a que vamos a referirnos a estos elementos regularmente, vamos a evitar errores tipográficos con literales de cadena usando constantes. Frameworks como [Vue.js](https://vuejs.org/) o [React](https://reactjs.org/) pueden ayudarte a gestionar mejor la centralización de tu código.
+> **NOTE:** Podemos recuperar los elementos cuando queramos en el código usando `document.getElementById`. Debido al hecho de que vamos a referirnos a estos elementos regularmente, vamos a evitar errores tipográficos con literales de cadena usando constantes. Frameworks como [Vue.js](https://vuejs.org/) o [React](https://reactjs.org/) pueden ayudarte a gestionar mejor la centralización de tu código.
 
 Tómate un minuto para ver un video sobre el uso de `const`, `let` y `var`
 
@@ -204,9 +204,9 @@ Tómate un minuto para ver un video sobre el uso de `const`, `let` y `var`
 
 ### Agregar lógica de inicio
 
-Para comenzar el juego, el jugador hará clic en iniciar. Por supuesto, no sabemos cuándo harán clic en iniciar. Aquí es donde entra en juego un [escuchador de eventos](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener). Un escuchador de eventos nos permitirá escuchar algo que ocurra (un evento) y ejecutar código en respuesta. En nuestro caso, queremos ejecutar código cuando el usuario haga clic en iniciar.
+Para comenzar el juego, el jugador hará clic en iniciar. Por supuesto, no sabemos cuándo van a hacer clic en iniciar. Aquí es donde entra en juego un [event listener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener). Un event listener nos permitirá escuchar algo que ocurra (un evento) y ejecutar código en respuesta. En nuestro caso, queremos ejecutar código cuando el usuario haga clic en iniciar.
 
-Cuando el usuario haga clic en **start**, necesitamos seleccionar una cita, configurar la interfaz de usuario y configurar el seguimiento de la palabra actual y el tiempo. A continuación, se muestra el JavaScript que necesitarás agregar; lo discutimos justo después del bloque de código.
+Cuando el usuario haga clic en **start**, necesitamos seleccionar una cita, configurar la interfaz de usuario y configurar el seguimiento de la palabra actual y el tiempo. A continuación está el JavaScript que necesitas agregar; lo discutimos justo después del bloque de código.
 
 ```javascript
 // at the end of script.js
@@ -243,25 +243,25 @@ document.getElementById('start').addEventListener('click', () => {
 
 Desglosemos el código:
 
-- Configuración del seguimiento de palabras
+- Configurar el seguimiento de palabras
   - Usar [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) y [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) nos permite seleccionar aleatoriamente una cita del array `quotes`
   - Convertimos la `quote` en un array de `words` para poder rastrear la palabra que el jugador está escribiendo actualmente
   - `wordIndex` se establece en 0, ya que el jugador comenzará con la primera palabra
-- Configuración de la interfaz de usuario
+- Configurar la interfaz de usuario
   - Crear un array de `spanWords`, que contiene cada palabra dentro de un elemento `span`
     - Esto nos permitirá resaltar la palabra en la pantalla
   - `join` el array para crear una cadena que podamos usar para actualizar el `innerHTML` en `quoteElement`
     - Esto mostrará la cita al jugador
   - Establecer el `className` del primer elemento `span` en `highlight` para resaltarlo en amarillo
   - Limpiar el `messageElement` estableciendo `innerText` en `''`
-- Configuración del cuadro de texto
+- Configurar el cuadro de texto
   - Limpiar el `value` actual en `typedValueElement`
   - Establecer el `focus` en `typedValueElement`
 - Iniciar el temporizador llamando a `getTime`
 
 ### Agregar lógica de escritura
 
-A medida que el jugador escribe, se generará un evento `input`. Este escuchador de eventos verificará que el jugador esté escribiendo la palabra correctamente y manejará el estado actual del juego. Volviendo a **script.js**, agrega el siguiente código al final. Lo desglosaremos después.
+A medida que el jugador escribe, se generará un evento `input`. Este event listener verificará que el jugador esté escribiendo la palabra correctamente y manejará el estado actual del juego. Volviendo a **script.js**, agrega el siguiente código al final. Lo desglosaremos después.
 
 ```javascript
 // at the end of script.js
@@ -300,25 +300,25 @@ typedValueElement.addEventListener('input', () => {
 });
 ```
 
-Desglosemos el código: comenzamos obteniendo la palabra actual y el valor que el jugador ha escrito hasta ahora. Luego tenemos una lógica en cascada, donde verificamos si la cita está completa, la palabra está completa, la palabra es correcta o (finalmente), si hay un error.
+Desglosemos el código. Comenzamos obteniendo la palabra actual y el valor que el jugador ha escrito hasta ahora. Luego tenemos una lógica en cascada, donde verificamos si la cita está completa, la palabra está completa, la palabra es correcta o (finalmente), si hay un error.
 
-- La cita está completa, indicado por `typedValue` siendo igual a `currentWord` y `wordIndex` siendo igual a uno menos que la `length` de `words`
+- La cita está completa, indicada por `typedValue` siendo igual a `currentWord` y `wordIndex` siendo igual a uno menos que la `length` de `words`
   - Calcular `elapsedTime` restando `startTime` del tiempo actual
   - Dividir `elapsedTime` por 1,000 para convertir de milisegundos a segundos
   - Mostrar un mensaje de éxito
-- La palabra está completa, indicado por `typedValue` terminando con un espacio (el final de una palabra) y `typedValue` siendo igual a `currentWord`
+- La palabra está completa, indicada por `typedValue` terminando con un espacio (el final de una palabra) y `typedValue` siendo igual a `currentWord`
   - Establecer `value` en `typedElement` como `''` para permitir que se escriba la siguiente palabra
   - Incrementar `wordIndex` para pasar a la siguiente palabra
   - Recorrer todos los `childNodes` de `quoteElement` para establecer `className` en `''` y volver a la visualización predeterminada
   - Establecer `className` de la palabra actual en `highlight` para marcarla como la siguiente palabra a escribir
-- La palabra está escrita correctamente (pero no completa), indicado por `currentWord` comenzando con `typedValue`
+- La palabra está escrita correctamente (pero no completa), indicada por `currentWord` comenzando con `typedValue`
   - Asegurarse de que `typedValueElement` se muestre como predeterminado limpiando `className`
 - Si llegamos hasta aquí, hay un error
   - Establecer `className` en `typedValueElement` como `error`
 
-## Probar tu aplicación
+## Prueba tu aplicación
 
-¡Has llegado al final! El último paso es asegurarte de que tu aplicación funcione. ¡Pruébala! No te preocupes si hay errores; **todos los desarrolladores** tienen errores. Examina los mensajes y depura según sea necesario.
+¡Has llegado al final! El último paso es asegurarte de que nuestra aplicación funcione. ¡Pruébala! No te preocupes si hay errores; **todos los desarrolladores** tienen errores. Examina los mensajes y depura según sea necesario.
 
 Haz clic en **start** y comienza a escribir. ¡Debería verse un poco como la animación que vimos antes!
 
@@ -328,13 +328,12 @@ Haz clic en **start** y comienza a escribir. ¡Debería verse un poco como la an
 
 ## 🚀 Desafío
 
-Agrega más funcionalidad:
+Agrega más funcionalidad
 
-- Deshabilita el escuchador de eventos `input` al completar el juego y vuelve a habilitarlo cuando se haga clic en el botón
-- Deshabilita el cuadro de texto cuando el jugador complete la cita
+- Desactiva el event listener de `input` al completar la cita y vuelve a activarlo cuando se haga clic en el botón
+- Desactiva el cuadro de texto cuando el jugador complete la cita
 - Muestra un cuadro de diálogo modal con el mensaje de éxito
-- Almacena puntuaciones altas usando [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
-
+- Almacena las puntuaciones más altas usando [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
 ## Cuestionario posterior a la clase
 
 [Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/22)
@@ -345,7 +344,9 @@ Lee sobre [todos los eventos disponibles](https://developer.mozilla.org/docs/Web
 
 ## Tarea
 
-[Crea un nuevo juego de teclado](assignment.md)
+[Crear un nuevo juego de teclado](assignment.md)
+
+---
 
 **Descargo de responsabilidad**:  
 Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

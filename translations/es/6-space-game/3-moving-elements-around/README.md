@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-24T12:30:26+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T13:54:24+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "es"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ¡Los juegos no son muy divertidos hasta que tienes alienígenas moviéndose por la pantalla! En este juego, utilizaremos dos tipos de movimientos:
 
-- **Movimiento por teclado/ratón**: cuando el usuario interactúa con el teclado o el ratón para mover un objeto en la pantalla.
+- **Movimiento con teclado/ratón**: cuando el usuario interactúa con el teclado o el ratón para mover un objeto en la pantalla.
 - **Movimiento inducido por el juego**: cuando el juego mueve un objeto en intervalos de tiempo determinados.
 
 Entonces, ¿cómo movemos cosas en una pantalla? Todo se trata de coordenadas cartesianas: cambiamos la ubicación (x, y) del objeto y luego redibujamos la pantalla.
@@ -43,7 +43,7 @@ ctx.drawImage(heroImg, hero.x, hero.y);
 
 ## Manejar eventos de teclado
 
-Manejas eventos adjuntando eventos específicos al código. Los eventos de teclado se activan en toda la ventana, mientras que los eventos de ratón como un `click` pueden conectarse a hacer clic en un elemento específico. Usaremos eventos de teclado a lo largo de este proyecto.
+Manejas eventos adjuntando eventos específicos al código. Los eventos de teclado se activan en toda la ventana, mientras que los eventos de ratón como un `click` pueden conectarse a un elemento específico. Usaremos eventos de teclado a lo largo de este proyecto.
 
 Para manejar un evento necesitas usar el método `addEventListener()` de la ventana y proporcionarle dos parámetros de entrada. El primer parámetro es el nombre del evento, por ejemplo `keyup`. El segundo parámetro es la función que debe ser invocada como resultado de que ocurra el evento.
 
@@ -67,7 +67,7 @@ Para los eventos de teclado hay dos propiedades en el evento que puedes usar par
 
 ### Teclas especiales: una advertencia
 
-Hay algunas *teclas especiales* que afectan la ventana. Esto significa que si estás escuchando un evento `keyup` y usas estas teclas especiales para mover tu héroe, también realizará desplazamiento horizontal. Por esa razón, podrías querer *desactivar* este comportamiento predeterminado del navegador mientras desarrollas tu juego. Necesitas un código como este:
+Hay algunas *teclas especiales* que afectan la ventana. Esto significa que si estás escuchando un evento `keyup` y usas estas teclas especiales para mover tu héroe, también se realizará un desplazamiento horizontal. Por esa razón, podrías querer *desactivar* este comportamiento predeterminado del navegador mientras desarrollas tu juego. Necesitas un código como este:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -92,7 +92,7 @@ El código anterior asegurará que las teclas de flecha y la barra espaciadora t
 
 ## Movimiento inducido por el juego
 
-Podemos hacer que las cosas se muevan por sí mismas utilizando temporizadores como las funciones `setTimeout()` o `setInterval()` que actualizan la ubicación del objeto en cada intervalo de tiempo. Así es como puede verse:
+Podemos hacer que las cosas se muevan por sí solas utilizando temporizadores como las funciones `setTimeout()` o `setInterval()` que actualizan la ubicación del objeto en cada intervalo de tiempo. Así es como puede verse:
 
 ```javascript
 let id = setInterval(() => {
@@ -125,8 +125,8 @@ El bucle anterior se invoca cada `200` milisegundos para redibujar el lienzo. Ti
 
 Tomarás el código existente y lo extenderás. Puedes comenzar con el código que completaste durante la parte I o usar el código en [Parte II - inicial](../../../../6-space-game/3-moving-elements-around/your-work).
 
-- **Mover el héroe**: agregarás código para asegurarte de que puedes mover al héroe usando las teclas de flecha.
-- **Mover enemigos**: también necesitarás agregar código para asegurarte de que los enemigos se muevan de arriba hacia abajo a un ritmo determinado.
+- **Mover al héroe**: agregarás código para asegurarte de que puedes mover al héroe usando las teclas de flecha.
+- **Mover enemigos**: también necesitarás agregar código para asegurarte de que los enemigos se muevan de arriba hacia abajo a una velocidad determinada.
 
 ## Pasos recomendados
 
@@ -148,7 +148,7 @@ cd your-work
 npm start
 ```
 
-Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`. Abre un navegador e ingresa esa dirección, ahora mismo debería renderizar al héroe y a todos los enemigos; ¡nada se está moviendo - aún!
+Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`. Abre un navegador e ingresa esa dirección, ahora debería renderizar al héroe y a todos los enemigos; ¡nada se está moviendo - aún!
 
 ### Agregar código
 
@@ -205,7 +205,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
     }
     ```
 
-2. **Agregar manejadores de eventos de teclado** para manejar la navegación por teclas (mover al héroe arriba/abajo izquierda/derecha).
+2. **Agregar manejadores de eventos de teclado** para manejar la navegación con teclas (mover al héroe arriba/abajo izquierda/derecha).
 
    *RECUERDA* es un sistema cartesiano, la esquina superior izquierda es `0,0`. También recuerda agregar código para detener el *comportamiento predeterminado*.
 
@@ -355,7 +355,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
     }
     ```
     
-    y agrega una función `createHero()` para hacer un proceso similar para el héroe.
+    y agrega una función `createHero()` para realizar un proceso similar para el héroe.
     
     ```javascript
     function createHero() {
@@ -382,19 +382,21 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
 ## 🚀 Desafío
 
-Como puedes ver, tu código puede convertirse en 'código espagueti' cuando comienzas a agregar funciones, variables y clases. ¿Cómo puedes organizar mejor tu código para que sea más legible? Diseña un sistema para organizar tu código, incluso si todavía reside en un solo archivo.
+Como puedes ver, tu código puede convertirse en un 'código espagueti' cuando comienzas a agregar funciones, variables y clases. ¿Cómo puedes organizar mejor tu código para que sea más legible? Diseña un sistema para organizar tu código, incluso si todavía reside en un solo archivo.
 
 ## Cuestionario Posterior a la Clase
 
 [Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/34)
 
-## Revisión y Estudio Personal
+## Repaso y Estudio Personal
 
 Aunque estamos escribiendo nuestro juego sin usar frameworks, hay muchos frameworks basados en JavaScript para desarrollo de juegos con canvas. Tómate un tiempo para hacer [lectura sobre estos](https://github.com/collections/javascript-game-engines).
 
 ## Tarea
 
 [Comenta tu código](assignment.md)
+
+---
 
 **Descargo de responsabilidad**:  
 Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

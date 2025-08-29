@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7aa6e4f270d38d9cb17f2b5bd86b863d",
-  "translation_date": "2025-08-28T11:54:26+00:00",
+  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
+  "translation_date": "2025-08-29T13:25:55+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "en"
 }
@@ -21,7 +21,7 @@ In this lesson, you will learn how to:
 
 ### Prerequisites
 
-Before starting, you need to create an account on [GitHub](https://github.com). If you don’t already have one, go to [GitHub](https://github.com/) and sign up.
+Before starting, you need to create an account on [GitHub](https://github.com). Visit [GitHub](https://github.com/) and sign up if you don’t already have an account.
 
 ### Introduction
 
@@ -29,7 +29,7 @@ A code editor is a vital tool for writing programs and collaborating on coding p
 
 ## Getting started with VSCode.dev
 
-[VSCode.dev](https://vscode.dev) is a web-based code editor. You don’t need to install anything to use it—just open it like any other website. To get started, visit [https://vscode.dev](https://vscode.dev). If you’re not signed in to [GitHub](https://github.com/), follow the prompts to log in or create an account.
+[VSCode.dev](https://vscode.dev) is a web-based code editor. You don’t need to install anything to use it—just open it like any other website. To get started, visit [https://vscode.dev](https://vscode.dev). If you’re not signed in to [GitHub](https://github.com/), follow the prompts to log in or create a new account.
 
 Once it loads, the interface should look something like this:
 
@@ -47,7 +47,7 @@ When you create or modify code, it will happen in the large area on the right. T
 
 ## Open a GitHub repository
 
-The first step is to open a GitHub repository. There are several ways to do this. Below are two methods to open a repository and start making changes.
+To begin, you need to open a GitHub repository. There are several ways to do this. Below are two methods for opening a repository so you can start making changes.
 
 ### 1. Using the editor
 
@@ -55,7 +55,7 @@ You can open a remote repository directly from the editor. When you visit [VSCod
 
 ![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.en.png)
 
-Alternatively, you can use the command palette. The command palette is a search box where you can type commands or actions to find and execute them. To open it, go to the top-left menu, select _View_, and then choose _Command Palette_. You can also use the keyboard shortcut Ctrl-Shift-P (or Command-Shift-P on MacOS).
+Alternatively, you can use the command palette. The command palette is a search box where you can type commands or actions to find and execute them. Open it by selecting _View_ from the top-left menu, then choosing _Command Palette_, or by using the keyboard shortcut Ctrl-Shift-P (on macOS, Command-Shift-P).
 
 ![Palette Menu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.en.png)
 
@@ -69,7 +69,7 @@ https://github.com/microsoft/Web-Dev-For-Beginners
 
 ### 2. Using the URL
 
-You can also load a repository directly using its URL. For example, the full URL for the current repository is [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners). By replacing the GitHub domain with `VSCode.dev/github`, you can open the repository directly. The resulting URL would be [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+You can also load a repository directly using its URL. For example, the full URL for the current repository is [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners). Replace the GitHub domain with `VSCode.dev/github` to load the repository directly. The resulting URL would be [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
 
 ## Edit files
 
@@ -97,9 +97,9 @@ If you’re satisfied with your changes, hover over the `Changes` folder and cli
 
 If you want to discard certain changes, hover over the `Changes` folder and click the `undo` icon.
 
-Next, type a `commit message` (a description of your changes), and click the `check icon` to commit and push your changes.
+Finally, type a `commit message` (a description of your changes), click the `check icon` to commit and push your changes.
 
-When you’re done, click the `hamburger menu icon` at the top left to return to the repository on github.com.
+When you’re done, click the `hamburger menu icon` in the top-left corner to return to the repository on github.com.
 
 ![Stage & commit changes](../../../../8-code-editor/images/edit-vscode.dev.gif)
 
@@ -107,7 +107,7 @@ When you’re done, click the `hamburger menu icon` at the top left to return to
 
 Extensions in VSCode add new features and customization options to improve your development workflow. They also provide support for multiple programming languages and can be either general-purpose or language-specific.
 
-To browse available extensions, click the _`Extensions icon`_ in the activity bar and type the extension’s name in the _'Search Extensions in Marketplace'_ field. You’ll see a list of extensions, each showing the **name, publisher, description, download count**, and **star rating**.
+To browse available extensions, click the _`Extensions icon`_ in the activity bar and type the extension’s name in the _'Search Extensions in Marketplace'_ field. You’ll see a list of extensions, each showing **the extension name, publisher, a brief description, download count**, and **star rating**.
 
 ![Extension details](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.en.png)
 
@@ -126,19 +126,19 @@ To install an extension, type its name in the search field. Once it appears, cli
 
 ### 2. Customize Extensions
 
-After installing an extension, you may want to adjust its settings. To do this, click the _Extensions icon_, find the extension in the _Installed folder_, click the _**Gear icon**_, and select _Extensions Setting_.
+After installing an extension, you may want to adjust its settings. To do this, click the _Extensions icon_, find your extension in the _Installed folder_, click the _**Gear icon**_, and navigate to _Extensions Setting_.
 
 ![Modify extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.en.png)
 
 ### 3. Manage Extensions
 
-You can manage extensions based on your needs. For example:
+You can manage your extensions based on your needs. For example:
 
 - **Disable:** Temporarily turn off an extension without uninstalling it.  
-  To disable, select the extension in the activity bar, click the Gear icon, and choose 'Disable' or 'Disable (Workspace)'. Alternatively, open the extension in the code area and click the blue Disable button.
+  To disable, select the installed extension in the activity bar, click the Gear icon, and choose 'Disable' or 'Disable (Workspace).' Alternatively, open the extension in the code area and click the blue Disable button.
 
 - **Uninstall:** Remove an extension completely.  
-  To uninstall, select the extension in the activity bar, click the Gear icon, and choose 'Uninstall'. Alternatively, open the extension in the code area and click the blue Uninstall button.
+  To uninstall, select the installed extension in the activity bar, click the Gear icon, and choose 'Uninstall.' Alternatively, open the extension in the code area and click the blue Uninstall button.
 
 ---
 
@@ -148,9 +148,9 @@ You can manage extensions based on your needs. For example:
 
 ## Review & Self Study
 
-Learn more about [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) and its features.
+Learn more about [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) and its additional features.
 
 ---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the definitive source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

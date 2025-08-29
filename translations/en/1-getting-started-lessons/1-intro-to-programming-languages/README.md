@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c63675cfaf1d223b37bb9fecbfe7c252",
-  "translation_date": "2025-08-28T11:59:07+00:00",
+  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
+  "translation_date": "2025-08-29T13:27:32+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "en"
 }
@@ -19,30 +19,30 @@ This lesson introduces the fundamentals of programming languages. The topics dis
 
 ## Introduction
 
-In this lesson, we’ll cover:
+In this lesson, you'll learn about:
 
 - What programming is
-- Types of programming languages
+- Different types of programming languages
 - Basic components of a program
-- Useful software and tools for professional developers
+- Software and tools that are useful for professional developers
 
-> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
+> You can access this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
 
 ## What is Programming?
 
-Programming (or coding) is the process of writing instructions for a device, such as a computer or mobile device. These instructions are written using a programming language, which the device interprets. These instructions can be referred to by various names, such as *program*, *computer program*, *application (app)*, or *executable*.
+Programming, often called coding, is the act of writing instructions for devices like computers or mobile phones. These instructions are written using a programming language, which the device interprets. These instructions can be referred to by various names, such as *program*, *computer program*, *application (app)*, or *executable*.
 
-A *program* can be anything created with code—websites, games, and phone apps are all examples. While some programs can be created without writing code, the underlying logic is interpreted by the device, and that logic is typically written in code. A program that is *running* or *executing* is carrying out instructions. The device you’re using to read this lesson is running a program to display it on your screen.
+A *program* is essentially anything created using code—websites, games, and mobile apps are all examples of programs. While some programs can be created without directly writing code, the underlying logic is still interpreted by the device, and that logic is typically written in code. A program that is *running* or *executing* is actively performing the instructions it contains. The device you're using to read this lesson is running a program to display it on your screen.
 
-✅ Do some research: Who is considered the world’s first computer programmer?
+✅ Research task: Who is considered the world's first computer programmer?
 
 ## Programming Languages
 
-Programming languages allow developers to write instructions for devices. Devices only understand binary (1s and 0s), which isn’t an efficient way for most developers to communicate. Programming languages act as a bridge between humans and computers.
+Programming languages allow developers to write instructions for devices. Since devices only understand binary (1s and 0s), programming languages serve as a more efficient way for humans to communicate with computers.
 
-Programming languages come in various formats and serve different purposes. For instance, JavaScript is primarily used for web applications, while Bash is mainly used for operating systems.
+Programming languages come in various formats and are designed for different purposes. For instance, JavaScript is primarily used for web applications, while Bash is mainly used for operating systems.
 
-*Low-level languages* require fewer steps for a device to interpret instructions compared to *high-level languages*. However, high-level languages are popular due to their readability and support. JavaScript is considered a high-level language.
+*Low-level languages* require fewer steps for a device to interpret instructions compared to *high-level languages*. However, high-level languages are popular because they are easier to read and have better support. JavaScript is an example of a high-level language.
 
 The following code demonstrates the difference between a high-level language (JavaScript) and a low-level language (ARM assembly code).
 
@@ -83,29 +83,29 @@ back add r0,r1
  end
 ```
 
-Believe it or not, *both are doing the same thing*: printing a Fibonacci sequence up to 10.
+Believe it or not, *both codes perform the same task*: printing a Fibonacci sequence up to 10.
 
 ✅ A Fibonacci sequence is [defined](https://en.wikipedia.org/wiki/Fibonacci_number) as a series of numbers where each number is the sum of the two preceding ones, starting from 0 and 1. The first 10 numbers in the Fibonacci sequence are 0, 1, 1, 2, 3, 5, 8, 13, 21, and 34.
 
 ## Elements of a Program
 
-A single instruction in a program is called a *statement*. Statements usually have a character or line spacing that marks where the instruction ends, or *terminates*. The way a program terminates depends on the programming language.
+A single instruction in a program is called a *statement*. Statements usually have a specific character or spacing that marks where the instruction ends, or *terminates*. The way a program terminates depends on the programming language.
 
-Statements in a program may depend on data provided by a user or other sources to execute instructions. Data can influence how a program behaves, so programming languages include ways to temporarily store data for later use. These are called *variables*. Variables instruct a device to save data in its memory. In programs, variables are similar to those in algebra—they have unique names, and their values can change over time.
+Statements in a program often rely on data provided by a user or other sources to execute instructions. Since data can influence how a program behaves, programming languages include ways to temporarily store data for later use. These are called *variables*. Variables are instructions that tell a device to save data in its memory. In programming, variables are similar to those in algebra—they have unique names and their values can change over time.
 
-Not all statements in a program will necessarily be executed. This can happen intentionally, as designed by the developer, or accidentally due to unexpected errors. Controlling how a program runs makes it more robust and maintainable. Typically, these changes in control occur when certain conditions are met. A common statement used in modern programming for this purpose is the `if..else` statement.
+Not all statements in a program will necessarily be executed. This can happen intentionally, as designed by the developer, or accidentally due to unexpected errors. Controlling how a program runs makes it more robust and easier to maintain. Typically, these changes in control occur when certain conditions are met. A common statement used in modern programming to manage program flow is the `if..else` statement.
 
-✅ You’ll learn more about this type of statement in future lessons.
+✅ You'll learn more about this type of statement in future lessons.
 
 ## Tools of the Trade
 
 [![Tools of the Trade](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Tools of the Trade")
 
-> 🎥 Click the image above to watch a video about tools
+> 🎥 Click the image above to watch a video about development tools.
 
-In this section, you’ll explore software that can be helpful as you begin your journey as a professional developer.
+In this section, you'll explore software that can be helpful as you begin your journey as a professional developer.
 
-A **development environment** is a unique set of tools and features that developers use frequently when writing software. These tools are often customized to meet a developer’s specific needs and may evolve over time as priorities shift, personal projects change, or new programming languages are adopted. Development environments are as unique as the developers who use them.
+A **development environment** is a personalized set of tools and features that developers use frequently when writing software. These tools are often tailored to meet a developer's specific needs and may evolve over time as priorities shift, personal projects change, or new programming languages are adopted. Development environments are as unique as the developers who use them.
 
 ### Editors
 
@@ -113,10 +113,10 @@ One of the most essential tools for software development is the editor. Editors 
 
 Editors are valuable for several reasons:
 
-- *Debugging* helps identify bugs and errors by stepping through the code line by line. Some editors include debugging features that can be customized for specific programming languages.
-- *Syntax highlighting* uses colors and text formatting to make code easier to read. Most editors allow syntax highlighting to be customized.
-- *Extensions and integrations* are specialized tools created by developers for developers. These tools aren’t part of the base editor. For example, developers often document their code to explain how it works. They might install a spell-check extension to catch typos in the documentation. Most extensions are designed for specific editors, and editors typically include ways to search for available extensions.
-- *Customization* allows developers to tailor their development environment to their needs. Most editors are highly customizable and may even allow developers to create their own extensions.
+- *Debugging* helps identify bugs and errors by allowing developers to step through their code line by line. Some editors include debugging features that can be customized for specific programming languages.
+- *Syntax highlighting* uses colors and text formatting to make code easier to read. Most editors allow developers to customize syntax highlighting.
+- *Extensions and integrations* are additional tools created by developers for developers. These tools are not part of the base editor. For example, developers often document their code to explain how it works. A spell-check extension can help identify typos in the documentation. Most extensions are designed for specific editors, and editors typically include a way to search for available extensions.
+- *Customization* allows developers to create a unique development environment tailored to their needs. Most editors are highly customizable and may even allow developers to create their own extensions.
 
 #### Popular Editors and Web Development Extensions
 
@@ -136,7 +136,7 @@ Editors are valuable for several reasons:
 
 Another essential tool is the browser. Web developers use browsers to test how their code runs on the web. Browsers also display the visual elements of a web page written in the editor, such as HTML.
 
-Many browsers include *developer tools* (DevTools), which provide features and information to help developers gather and analyze important details about their applications. For example, if a web page has errors, DevTools can be configured to capture information about when the errors occurred.
+Many browsers include *developer tools* (DevTools), which provide features and information to help developers gather and analyze important details about their applications. For example, if a web page encounters errors, DevTools can be configured to capture information about when and why the errors occurred.
 
 #### Popular Browsers and DevTools
 
@@ -146,7 +146,7 @@ Many browsers include *developer tools* (DevTools), which provide features and i
 
 ### Command Line Tools
 
-Some developers prefer a less graphical interface for their daily tasks and rely on the command line. Writing code involves a lot of typing, and some developers prefer not to interrupt their workflow by switching between the keyboard and mouse. They use keyboard shortcuts to navigate between windows, work on files, and use tools. While most tasks can be completed with a mouse, the command line allows developers to perform many actions without switching between input devices. Another advantage of the command line is its configurability—you can save custom configurations, modify them later, and import them to other development machines. Since development environments are highly personalized, some developers avoid the command line, others rely on it entirely, and some use a mix of both.
+Some developers prefer a less graphical interface for their daily tasks and rely on the command line. Writing code involves a lot of typing, and some developers prefer not to interrupt their workflow by switching between the keyboard and mouse. Using keyboard shortcuts, they can navigate between windows, work on different files, and use tools efficiently. While most tasks can be completed with a mouse, the command line allows developers to perform many actions without switching between input devices. Additionally, command line tools are highly configurable, enabling developers to save custom configurations, modify them later, and transfer them to other machines. Since development environments are highly personal, some developers avoid the command line, others rely on it entirely, and some use a mix of both.
 
 ### Popular Command Line Options
 
@@ -185,22 +185,22 @@ When developers want to learn something new, they often turn to documentation fo
 
 #### Popular Documentation on Web Development
 
-- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), from Mozilla, the publishers of the [Firefox](https://www.mozilla.org/firefox/) browser
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), created by Mozilla, the publishers of the [Firefox](https://www.mozilla.org/firefox/) browser
 - [Frontend Masters](https://frontendmasters.com/learn/)
-- [Web.dev](https://web.dev), from Google, publishers of [Chrome](https://www.google.com/chrome/)
-- [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
+- [Web.dev](https://web.dev), created by Google, the publishers of [Chrome](https://www.google.com/chrome/)
+- [Microsoft's developer documentation](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
 - [W3 Schools](https://www.w3schools.com/where_to_start.asp)
 
-✅ Do some research: Now that you understand the basics of a web developer’s environment, compare it to a web designer’s environment.
+✅ Research task: Now that you understand the basics of a web developer's environment, compare it with a web designer's environment.
 
 ---
 
 ## 🚀 Challenge
 
-Compare some programming languages. What are some unique characteristics of JavaScript versus Java? How about COBOL versus Go?
+Compare some programming languages. What are the unique characteristics of JavaScript compared to Java? How about COBOL versus Go?
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/2)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/)
 
 ## Review & Self Study
 

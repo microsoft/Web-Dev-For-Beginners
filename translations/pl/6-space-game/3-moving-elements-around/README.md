@@ -1,32 +1,32 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-24T12:31:49+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T16:29:25+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "pl"
 }
 -->
-# Budowanie gry kosmicznej, część 3: Dodawanie ruchu
+# Tworzenie gry kosmicznej, część 3: Dodawanie ruchu
 
 ## Quiz przed wykładem
 
 [Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/33)
 
-Gry stają się ciekawsze, gdy na ekranie pojawiają się poruszające się obiekty, takie jak kosmici! W tej grze wykorzystamy dwa rodzaje ruchu:
+Gry nie są zbyt ekscytujące, dopóki na ekranie nie pojawią się poruszające się obiekty! W tej grze wykorzystamy dwa rodzaje ruchu:
 
 - **Ruch za pomocą klawiatury/myszy**: gdy użytkownik używa klawiatury lub myszy, aby poruszać obiektem na ekranie.
 - **Ruch generowany przez grę**: gdy gra automatycznie porusza obiektem w określonych odstępach czasu.
 
-Jak więc poruszać obiektami na ekranie? Wszystko opiera się na współrzędnych kartezjańskich: zmieniamy lokalizację obiektu (x, y), a następnie odświeżamy ekran.
+Jak więc poruszać obiektami na ekranie? Wszystko sprowadza się do współrzędnych kartezjańskich: zmieniamy położenie (x, y) obiektu, a następnie odświeżamy ekran.
 
 Typowe kroki, aby osiągnąć *ruch* na ekranie, to:
 
-1. **Ustawienie nowej lokalizacji** obiektu; jest to konieczne, aby użytkownik mógł zauważyć, że obiekt się poruszył.
-2. **Wyczyszczenie ekranu**, ekran musi być wyczyszczony między kolejnymi rysowaniami. Możemy to zrobić, rysując prostokąt wypełniony kolorem tła.
+1. **Ustawienie nowej lokalizacji** obiektu; jest to konieczne, aby obiekt wydawał się poruszać.
+2. **Wyczyszczenie ekranu**, ekran musi być czyszczony pomiędzy kolejnymi rysowaniami. Możemy to zrobić, rysując prostokąt wypełniony kolorem tła.
 3. **Ponowne narysowanie obiektu** w nowej lokalizacji. Dzięki temu osiągamy efekt przesunięcia obiektu z jednego miejsca na drugie.
 
-Oto jak może wyglądać kod:
+Oto jak to może wyglądać w kodzie:
 
 ```javascript
 //set the hero's location
@@ -39,13 +39,13 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Czy potrafisz wymyślić powód, dla którego wielokrotne rysowanie bohatera w wielu klatkach na sekundę może powodować problemy z wydajnością? Przeczytaj o [alternatywach dla tego wzorca](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+✅ Czy potrafisz wymyślić, dlaczego rysowanie bohatera wiele razy na sekundę może powodować problemy z wydajnością? Przeczytaj o [alternatywach dla tego wzorca](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Obsługa zdarzeń klawiatury
 
-Zdarzenia obsługujemy, przypisując określone zdarzenia do kodu. Zdarzenia klawiatury są wywoływane na całym oknie, podczas gdy zdarzenia myszy, takie jak `click`, mogą być powiązane z kliknięciem konkretnego elementu. W tym projekcie będziemy korzystać ze zdarzeń klawiatury.
+Zdarzenia obsługujemy, przypisując konkretne zdarzenia do kodu. Zdarzenia klawiatury są wywoływane na całym oknie, podczas gdy zdarzenia myszy, takie jak `click`, mogą być powiązane z kliknięciem konkretnego elementu. W tym projekcie będziemy korzystać ze zdarzeń klawiatury.
 
-Aby obsłużyć zdarzenie, należy użyć metody `addEventListener()` okna i podać jej dwa parametry wejściowe. Pierwszym parametrem jest nazwa zdarzenia, na przykład `keyup`. Drugim parametrem jest funkcja, która ma zostać wywołana w wyniku wystąpienia zdarzenia.
+Aby obsłużyć zdarzenie, należy użyć metody `addEventListener()` okna i podać jej dwa parametry wejściowe. Pierwszy parametr to nazwa zdarzenia, na przykład `keyup`. Drugi parametr to funkcja, która ma zostać wywołana w wyniku wystąpienia zdarzenia.
 
 Oto przykład:
 
@@ -58,16 +58,16 @@ window.addEventListener('keyup', (evt) => {
 })
 ```
 
-Dla zdarzeń klawiatury dostępne są dwie właściwości zdarzenia, które można wykorzystać do sprawdzenia, który klawisz został naciśnięty:
+Dla zdarzeń klawiatury istnieją dwie właściwości zdarzenia, które można wykorzystać, aby sprawdzić, który klawisz został naciśnięty:
 
-- `key`, czyli tekstowa reprezentacja naciśniętego klawisza, na przykład `ArrowUp`.
-- `keyCode`, czyli numeryczna reprezentacja, na przykład `37`, odpowiadająca `ArrowLeft`.
+- `key`, czyli reprezentacja tekstowa naciśniętego klawisza, na przykład `ArrowUp`.
+- `keyCode`, czyli reprezentacja numeryczna, na przykład `37`, odpowiadająca `ArrowLeft`.
 
-✅ Manipulacja zdarzeniami klawiatury jest przydatna nie tylko w tworzeniu gier. Jakie inne zastosowania możesz wymyślić dla tej techniki?
+✅ Manipulacja zdarzeniami klawiatury jest przydatna nie tylko w tworzeniu gier. Jakie inne zastosowania tej techniki przychodzą Ci do głowy?
 
 ### Klawisze specjalne: uwaga
 
-Niektóre *specjalne* klawisze wpływają na okno. Oznacza to, że jeśli nasłuchujesz zdarzenia `keyup` i używasz tych specjalnych klawiszy do poruszania bohaterem, może to również powodować przewijanie poziome. Z tego powodu warto wyłączyć domyślne zachowanie przeglądarki podczas tworzenia gry. Potrzebujesz kodu takiego jak ten:
+Istnieją pewne *specjalne* klawisze, które wpływają na okno. Oznacza to, że jeśli nasłuchujesz zdarzenia `keyup` i używasz tych klawiszy do poruszania bohaterem, może to również powodować przewijanie poziome. Z tego powodu możesz chcieć *wyłączyć* to wbudowane zachowanie przeglądarki podczas tworzenia gry. Potrzebujesz kodu takiego jak ten:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -88,11 +88,11 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Powyższy kod zapewni, że klawisze strzałek oraz spacja będą miały wyłączone *domyślne* zachowanie. Mechanizm wyłączania działa, gdy wywołujemy `e.preventDefault()`.
+Powyższy kod zapewni, że klawisze strzałek i spacja będą miały *domyślne* zachowanie wyłączone. Mechanizm *wyłączania* działa, gdy wywołujemy `e.preventDefault()`.
 
 ## Ruch generowany przez grę
 
-Możemy sprawić, że obiekty będą poruszać się same, używając timerów, takich jak funkcje `setTimeout()` lub `setInterval()`, które aktualizują lokalizację obiektu w każdym cyklu czasowym. Oto jak może to wyglądać:
+Możemy sprawić, że obiekty będą poruszać się same, używając timerów, takich jak funkcje `setTimeout()` lub `setInterval()`, które aktualizują lokalizację obiektu w każdym cyklu czasowym. Oto jak to może wyglądać:
 
 ```javascript
 let id = setInterval(() => {
@@ -103,7 +103,7 @@ let id = setInterval(() => {
 
 ## Pętla gry
 
-Pętla gry to koncepcja, która polega na funkcji wywoływanej w regularnych odstępach czasu. Nazywa się ją pętlą gry, ponieważ wszystko, co powinno być widoczne dla użytkownika, jest rysowane w tej pętli. Pętla gry wykorzystuje wszystkie obiekty gry, które są jej częścią, rysując je, chyba że z jakiegoś powodu nie powinny już być częścią gry. Na przykład, jeśli obiekt jest wrogiem, który został trafiony laserem i eksplodował, nie jest już częścią bieżącej pętli gry (więcej na ten temat dowiesz się w kolejnych lekcjach).
+Pętla gry to koncepcja, która polega na funkcji wywoływanej w regularnych odstępach czasu. Nazywa się ją pętlą gry, ponieważ wszystko, co powinno być widoczne dla użytkownika, jest rysowane w tej pętli. Pętla gry wykorzystuje wszystkie obiekty gry, które są jej częścią, rysując je, chyba że z jakiegoś powodu nie powinny już być częścią gry. Na przykład, jeśli obiekt to wróg, który został trafiony laserem i eksploduje, nie jest już częścią bieżącej pętli gry (więcej na ten temat dowiesz się w kolejnych lekcjach).
 
 Oto jak typowa pętla gry może wyglądać w kodzie:
 
@@ -119,18 +119,18 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-Powyższa pętla jest wywoływana co `200` milisekund, aby odświeżyć płótno. Możesz wybrać najlepszy interwał, który będzie odpowiedni dla Twojej gry.
+Powyższa pętla jest wywoływana co `200` milisekund, aby odświeżyć płótno. Możesz wybrać najlepszy interwał, który ma sens dla Twojej gry.
 
 ## Kontynuacja gry kosmicznej
 
-Weź istniejący kod i rozbuduj go. Możesz zacząć od kodu, który ukończyłeś w części I, lub skorzystać z kodu w [Part II- starter](../../../../6-space-game/3-moving-elements-around/your-work).
+Weźmiesz istniejący kod i go rozbudujesz. Możesz zacząć od kodu, który ukończyłeś w części I, lub użyć kodu z [Part II- starter](../../../../6-space-game/3-moving-elements-around/your-work).
 
-- **Poruszanie bohaterem**: dodasz kod, który umożliwi poruszanie bohaterem za pomocą klawiszy strzałek.
-- **Poruszanie wrogami**: dodasz również kod, który sprawi, że wrogowie będą poruszać się z góry na dół w określonym tempie.
+- **Ruch bohatera**: dodasz kod, aby umożliwić poruszanie bohaterem za pomocą klawiszy strzałek.
+- **Ruch wrogów**: dodasz również kod, aby wrogowie poruszali się z góry na dół w określonym tempie.
 
 ## Zalecane kroki
 
-Znajdź pliki utworzone dla Ciebie w podfolderze `your-work`. Powinny zawierać następujące:
+Znajdź pliki, które zostały dla Ciebie utworzone w podfolderze `your-work`. Powinny zawierać następujące:
 
 ```bash
 -| assets
@@ -141,22 +141,22 @@ Znajdź pliki utworzone dla Ciebie w podfolderze `your-work`. Powinny zawierać 
 -| package.json
 ```
 
-Rozpocznij projekt w folderze `your_work`, wpisując:
+Uruchom swój projekt w folderze `your_work`, wpisując:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz przeglądarkę i wpisz ten adres. Na razie powinien wyświetlać bohatera i wszystkich wrogów; nic się jeszcze nie porusza!
+Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz przeglądarkę i wpisz ten adres. Na razie powinien wyświetlać bohatera i wszystkich wrogów; nic się jeszcze nie porusza!
 
 ### Dodaj kod
 
-1. **Dodaj dedykowane obiekty** dla `hero`, `enemy` i `game object`, które powinny mieć właściwości `x` i `y`. (Pamiętaj o części dotyczącej [Dziedziczenia lub kompozycji](../README.md)).
+1. **Dodaj dedykowane obiekty** dla `hero`, `enemy` i `game object`, które powinny mieć właściwości `x` i `y`. (Pamiętaj o części dotyczącej [dziedziczenia lub kompozycji](../README.md)).
 
-   *Wskazówka*: `game object` powinien być tym, który ma właściwości `x` i `y` oraz możliwość rysowania się na płótnie.
+   *PODPOWIEDŹ* `game object` powinien być tym, który ma `x` i `y` oraz zdolność rysowania się na płótnie.
 
-   >Wskazówka: zacznij od dodania nowej klasy GameObject z jej konstruktorem zdefiniowanym poniżej, a następnie narysuj ją na płótnie:
+   > wskazówka: zacznij od dodania nowej klasy GameObject z jej konstruktorem zdefiniowanym jak poniżej, a następnie narysuj ją na płótnie:
   
     ```javascript
         
@@ -177,7 +177,7 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
     }
     ```
 
-    Teraz rozszerz tę klasę GameObject, aby utworzyć Hero i Enemy.
+    Teraz rozszerz ten GameObject, aby utworzyć Hero i Enemy.
     
     ```javascript
     class Hero extends GameObject {
@@ -205,11 +205,11 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
     }
     ```
 
-2. **Dodaj obsługę zdarzeń klawiatury**, aby obsługiwać nawigację klawiszami (poruszanie bohaterem w górę/dół, lewo/prawo).
+2. **Dodaj obsługę zdarzeń klawiatury**, aby obsługiwać nawigację klawiszami (poruszanie bohaterem w górę/dół, w lewo/prawo).
 
-   *Pamiętaj*: to system kartezjański, lewy górny róg to `0,0`. Pamiętaj również, aby dodać kod zatrzymujący *domyślne zachowanie*.
+   *PAMIĘTAJ* to układ kartezjański, lewy górny róg to `0,0`. Pamiętaj również, aby dodać kod zatrzymujący *domyślne zachowanie*.
 
-   >Wskazówka: utwórz funkcję onKeyDown i przypisz ją do okna:
+   > wskazówka: utwórz swoją funkcję onKeyDown i przypisz ją do okna:
 
    ```javascript
     let onKeyDown = function (e) {
@@ -221,13 +221,13 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
     window.addEventListener("keydown", onKeyDown);
    ```
     
-   Sprawdź konsolę przeglądarki w tym momencie i obserwuj logowane naciśnięcia klawiszy. 
+   Sprawdź konsolę przeglądarki w tym momencie i obserwuj logowane naciśnięcia klawiszy.
 
-3. **Zaimplementuj** [Wzorzec publikacja-subskrypcja](../README.md), aby utrzymać kod w czystości podczas realizacji kolejnych części.
+3. **Zaimplementuj** [wzorzec Pub-Sub](../README.md), aby Twój kod był bardziej przejrzysty w kolejnych częściach.
 
-   Aby wykonać ten ostatni krok, możesz:
+   Aby to zrobić, możesz:
 
-   1. **Dodać nasłuch zdarzeń** do okna:
+   1. **Dodać nasłuchiwacza zdarzeń** do okna:
 
        ```javascript
         window.addEventListener("keyup", (evt) => {
@@ -313,7 +313,7 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
 
 1. **Skonfiguruj pętlę gry**
 
-   Przekształć funkcję window.onload, aby zainicjalizować grę i ustawić pętlę gry w odpowiednim interwale. Dodasz również wiązkę laserową:
+   Zrefaktoruj funkcję window.onload, aby zainicjalizować grę i ustawić pętlę gry w odpowiednim interwale. Dodasz również wiązkę laserową:
 
     ```javascript
     window.onload = async () => {
@@ -334,9 +334,9 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
     };
     ```
 
-5. **Dodaj kod**, aby poruszać wrogami w określonym interwale
+5. **Dodaj kod**, aby wrogowie poruszali się w określonych odstępach czasu.
 
-    Przekształć funkcję `createEnemies()`, aby tworzyła wrogów i dodawała ich do nowej klasy gameObjects:
+    Zrefaktoruj funkcję `createEnemies()`, aby tworzyła wrogów i dodawała ich do nowej klasy gameObjects:
 
     ```javascript
     function createEnemies() {
@@ -368,7 +368,7 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
     }
     ```
 
-    na koniec dodaj funkcję `drawGameObjects()`, aby rozpocząć rysowanie:
+    Na koniec dodaj funkcję `drawGameObjects()`, aby rozpocząć rysowanie:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -390,11 +390,13 @@ Jak widzisz, Twój kod może zamienić się w "spaghetti", gdy zaczynasz dodawa�
 
 ## Przegląd i samodzielna nauka
 
-Chociaż piszemy naszą grę bez użycia frameworków, istnieje wiele frameworków opartych na JavaScript dla rozwoju gier na płótnie. Poświęć trochę czasu na [przeczytanie o nich](https://github.com/collections/javascript-game-engines).
+Chociaż piszemy naszą grę bez użycia frameworków, istnieje wiele frameworków opartych na JavaScript do tworzenia gier na płótnie. Poświęć trochę czasu na [przeczytanie o nich](https://github.com/collections/javascript-game-engines).
 
 ## Zadanie
 
 [Skomentuj swój kod](assignment.md)
 
+---
+
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego języku źródłowym powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-24T13:33:31+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-29T13:49:14+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "es"
 }
@@ -21,7 +21,7 @@ En esta lección, veremos cómo obtener datos de un servidor de manera asincrón
 
 ### Prerrequisitos
 
-Necesitas haber construido la parte de la aplicación web [Formulario de Inicio de Sesión y Registro](../2-forms/README.md) para esta lección. También necesitas instalar [Node.js](https://nodejs.org) y [ejecutar la API del servidor](../api/README.md) localmente para obtener datos de cuentas.
+Necesitas haber construido la parte de [Formulario de Inicio de Sesión y Registro](../2-forms/README.md) de la aplicación web para esta lección. También necesitas instalar [Node.js](https://nodejs.org) y [ejecutar la API del servidor](../api/README.md) localmente para obtener datos de cuentas.
 
 Puedes probar que el servidor está funcionando correctamente ejecutando este comando en una terminal:
 
@@ -34,21 +34,21 @@ curl http://localhost:5000/api
 
 ## AJAX y obtención de datos
 
-Los sitios web tradicionales actualizan el contenido mostrado cuando el usuario selecciona un enlace o envía datos usando un formulario, recargando la página HTML completa. Cada vez que se necesitan cargar nuevos datos, el servidor web devuelve una página HTML completamente nueva que debe ser procesada por el navegador, interrumpiendo la acción actual del usuario y limitando las interacciones durante la recarga. Este flujo de trabajo también se conoce como una *Aplicación de Múltiples Páginas* o *MPA*.
+Los sitios web tradicionales actualizan el contenido mostrado cuando el usuario selecciona un enlace o envía datos mediante un formulario, recargando la página HTML completa. Cada vez que se necesitan cargar nuevos datos, el servidor web devuelve una página HTML completamente nueva que debe ser procesada por el navegador, interrumpiendo la acción actual del usuario y limitando las interacciones durante la recarga. Este flujo de trabajo también se conoce como una *Aplicación de Múltiples Páginas* o *MPA*.
 
-![Flujo de actualización en una aplicación de múltiples páginas](../../../../7-bank-project/3-data/images/mpa.png)
+![Flujo de actualización en una aplicación de múltiples páginas](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.es.png)
 
-Cuando las aplicaciones web comenzaron a volverse más complejas e interactivas, surgió una nueva técnica llamada [AJAX (JavaScript y XML Asíncronos)](https://es.wikipedia.org/wiki/AJAX). Esta técnica permite a las aplicaciones web enviar y recuperar datos de un servidor de manera asincrónica usando JavaScript, sin tener que recargar la página HTML, lo que resulta en actualizaciones más rápidas e interacciones más fluidas. Cuando se reciben nuevos datos del servidor, la página HTML actual también puede ser actualizada con JavaScript usando la API del [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model). Con el tiempo, este enfoque ha evolucionado hacia lo que ahora se llama una [*Aplicación de Página Única* o *SPA*](https://es.wikipedia.org/wiki/Aplicaci%C3%B3n_de_p%C3%A1gina_%C3%BAnica).
+Cuando las aplicaciones web comenzaron a volverse más complejas e interactivas, surgió una nueva técnica llamada [AJAX (JavaScript y XML Asíncronos)](https://es.wikipedia.org/wiki/AJAX). Esta técnica permite que las aplicaciones web envíen y recuperen datos de un servidor de manera asincrónica usando JavaScript, sin tener que recargar la página HTML, lo que resulta en actualizaciones más rápidas e interacciones más fluidas. Cuando se reciben nuevos datos del servidor, la página HTML actual también puede ser actualizada con JavaScript usando la API del [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model). Con el tiempo, este enfoque ha evolucionado hacia lo que ahora se llama una [*Aplicación de Página Única* o *SPA*](https://es.wikipedia.org/wiki/Aplicaci%C3%B3n_de_p%C3%A1gina_%C3%BAnica).
 
-![Flujo de actualización en una aplicación de página única](../../../../7-bank-project/3-data/images/spa.png)
+![Flujo de actualización en una aplicación de página única](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.es.png)
 
-Cuando se introdujo AJAX por primera vez, la única API disponible para obtener datos de manera asincrónica era [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Pero los navegadores modernos ahora también implementan la más conveniente y poderosa [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), que utiliza promesas y es más adecuada para manipular datos JSON.
+Cuando se introdujo AJAX por primera vez, la única API disponible para obtener datos de manera asincrónica era [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Sin embargo, los navegadores modernos ahora también implementan la más conveniente y poderosa [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), que utiliza promesas y es más adecuada para manipular datos JSON.
 
-> Aunque todos los navegadores modernos soportan la `Fetch API`, si deseas que tu aplicación web funcione en navegadores antiguos o heredados, siempre es una buena idea verificar primero la [tabla de compatibilidad en caniuse.com](https://caniuse.com/fetch).
+> Aunque todos los navegadores modernos admiten la `Fetch API`, si deseas que tu aplicación web funcione en navegadores antiguos o heredados, siempre es una buena idea verificar primero la [tabla de compatibilidad en caniuse.com](https://caniuse.com/fetch).
 
 ### Tarea
 
-En [la lección anterior](../2-forms/README.md) implementamos el formulario de registro para crear una cuenta. Ahora agregaremos código para iniciar sesión usando una cuenta existente y obtener sus datos. Abre el archivo `app.js` y añade una nueva función `login`:
+En [la lección anterior](../2-forms/README.md) implementamos el formulario de registro para crear una cuenta. Ahora agregaremos código para iniciar sesión usando una cuenta existente y obtener sus datos. Abre el archivo `app.js` y agrega una nueva función `login`:
 
 ```js
 async function login() {
@@ -72,7 +72,7 @@ async function getAccount(user) {
 }
 ```
 
-Usamos la API `fetch` para solicitar los datos de manera asincrónica al servidor, pero esta vez no necesitamos ningún parámetro adicional aparte de la URL a llamar, ya que solo estamos consultando datos. Por defecto, `fetch` crea una solicitud HTTP [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET), que es lo que buscamos aquí.
+Usamos la API `fetch` para solicitar los datos de manera asincrónica al servidor, pero esta vez no necesitamos ningún parámetro adicional aparte de la URL que queremos llamar, ya que solo estamos consultando datos. Por defecto, `fetch` crea una solicitud HTTP [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET), que es lo que buscamos aquí.
 
 ✅ `encodeURIComponent()` es una función que escapa caracteres especiales para URLs. ¿Qué problemas podríamos tener si no llamamos a esta función y usamos directamente el valor de `user` en la URL?
 
@@ -93,9 +93,9 @@ async function login() {
 }
 ```
 
-Primero, como `getAccount` es una función asincrónica, necesitamos usar la palabra clave `await` para esperar el resultado del servidor. Como con cualquier solicitud al servidor, también debemos manejar los casos de error. Por ahora, solo agregaremos un mensaje de registro para mostrar el error y volveremos a esto más adelante.
+Primero, como `getAccount` es una función asincrónica, necesitamos usar la palabra clave `await` para esperar el resultado del servidor. Como con cualquier solicitud al servidor, también tenemos que manejar los casos de error. Por ahora, solo agregaremos un mensaje de registro para mostrar el error y volveremos a esto más adelante.
 
-Luego, debemos almacenar los datos en algún lugar para poder usarlos más tarde y mostrar la información del tablero. Dado que la variable `account` aún no existe, crearemos una variable global para ella en la parte superior de nuestro archivo:
+Luego, tenemos que almacenar los datos en algún lugar para poder usarlos más tarde y mostrar la información del tablero. Dado que la variable `account` aún no existe, crearemos una variable global para ello al principio de nuestro archivo:
 
 ```js
 let account = null;
@@ -111,7 +111,7 @@ Finalmente, necesitamos llamar a nuestra función `login` cuando se envíe el fo
 
 Prueba que todo funcione correctamente registrando una nueva cuenta e intentando iniciar sesión con la misma cuenta.
 
-Antes de pasar a la siguiente parte, también podemos completar la función `register` añadiendo esto al final de la función:
+Antes de pasar a la siguiente parte, también podemos completar la función `register` agregando esto al final de la función:
 
 ```js
 account = result;
@@ -124,7 +124,7 @@ navigate('/dashboard');
 
 ## Actualizar HTML para mostrar datos
 
-Ahora que tenemos los datos del usuario, debemos actualizar el HTML existente para mostrarlos. Ya sabemos cómo recuperar un elemento del DOM usando, por ejemplo, `document.getElementById()`. Después de tener un elemento base, aquí hay algunas APIs que puedes usar para modificarlo o agregar elementos secundarios:
+Ahora que tenemos los datos del usuario, tenemos que actualizar el HTML existente para mostrarlos. Ya sabemos cómo recuperar un elemento del DOM usando, por ejemplo, `document.getElementById()`. Después de tener un elemento base, aquí hay algunas APIs que puedes usar para modificarlo o agregar elementos secundarios:
 
 - Usando la propiedad [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) puedes cambiar el texto de un elemento. Ten en cuenta que cambiar este valor elimina todos los elementos secundarios del elemento (si los hay) y los reemplaza con el texto proporcionado. Por lo tanto, también es un método eficiente para eliminar todos los elementos secundarios de un elemento dado asignando una cadena vacía `''` a él.
 
@@ -134,9 +134,9 @@ Ahora que tenemos los datos del usuario, debemos actualizar el HTML existente pa
 
 ### Tarea
 
-Antes de pasar a la pantalla del tablero, hay una cosa más que deberíamos hacer en la página de *login*. Actualmente, si intentas iniciar sesión con un nombre de usuario que no existe, se muestra un mensaje en la consola, pero para un usuario normal no cambia nada y no sabes qué está pasando.
+Antes de pasar a la pantalla del tablero, hay una cosa más que deberíamos hacer en la página de *login*. Actualmente, si intentas iniciar sesión con un nombre de usuario que no existe, se muestra un mensaje en la consola, pero para un usuario normal nada cambia y no sabes qué está pasando.
 
-Agreguemos un elemento de marcador de posición en el formulario de inicio de sesión donde podamos mostrar un mensaje de error si es necesario. Un buen lugar sería justo antes del `<button>` de inicio de sesión:
+Agreguemos un elemento de marcador de posición en el formulario de inicio de sesión donde podamos mostrar un mensaje de error si es necesario. Un buen lugar sería justo antes del botón de inicio de sesión `<button>`:
 
 ```html
 ...
@@ -145,7 +145,7 @@ Agreguemos un elemento de marcador de posición en el formulario de inicio de se
 ...
 ```
 
-Este elemento `<div>` está vacío, lo que significa que no se mostrará nada en la pantalla hasta que le agreguemos contenido. También le damos un `id` para poder recuperarlo fácilmente con JavaScript.
+Este elemento `<div>` está vacío, lo que significa que no se mostrará nada en la pantalla hasta que agreguemos contenido. También le damos un `id` para poder recuperarlo fácilmente con JavaScript.
 
 Vuelve al archivo `app.js` y crea una nueva función auxiliar `updateElement`:
 
@@ -166,9 +166,9 @@ if (data.error) {
 
 Ahora, si intentas iniciar sesión con una cuenta inválida, deberías ver algo como esto:
 
-![Captura de pantalla mostrando el mensaje de error durante el inicio de sesión](../../../../7-bank-project/3-data/images/login-error.png)
+![Captura de pantalla mostrando el mensaje de error durante el inicio de sesión](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.es.png)
 
-Ahora tenemos un texto de error que aparece visualmente, pero si lo intentas con un lector de pantalla, notarás que no se anuncia nada. Para que el texto que se agrega dinámicamente a una página sea anunciado por los lectores de pantalla, necesitará usar algo llamado [Región Viva](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Aquí vamos a usar un tipo específico de región viva llamada alerta:
+Ahora tenemos un texto de error que aparece visualmente, pero si lo intentas con un lector de pantalla notarás que no se anuncia nada. Para que el texto que se agrega dinámicamente a una página sea anunciado por los lectores de pantalla, necesitará usar algo llamado [Región Viva](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Aquí vamos a usar un tipo específico de región viva llamada alerta:
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -234,7 +234,7 @@ Primero, verificamos que tenemos los datos de la cuenta que necesitamos antes de
 
 > Para hacer que la visualización del balance sea más atractiva, usamos el método [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) para forzar la visualización del valor con 2 dígitos después del punto decimal.
 
-Ahora necesitamos llamar a nuestra función `updateDashboard()` cada vez que se cargue la página del tablero. Si ya terminaste la [tarea de la lección 1](../1-template-route/assignment.md), esto debería ser sencillo; de lo contrario, puedes usar la siguiente implementación.
+Ahora necesitamos llamar a nuestra función `updateDashboard()` cada vez que se cargue la página del tablero. Si ya terminaste la [tarea de la lección 1](../1-template-route/assignment.md), esto debería ser sencillo, de lo contrario puedes usar la siguiente implementación.
 
 Agrega este código al final de la función `updateRoute()`:
 
@@ -253,7 +253,7 @@ const routes = {
 };
 ```
 
-Con este cambio, cada vez que se muestre la página del tablero, se llamará a la función `updateDashboard()`. Después de un inicio de sesión, deberías poder ver el balance de la cuenta, la moneda y la descripción.
+Con este cambio, cada vez que se muestra la página del tablero, se llama a la función `updateDashboard()`. Después de un inicio de sesión, deberías poder ver el balance de la cuenta, la moneda y la descripción.
 
 ## Crear filas de tabla dinámicamente con plantillas HTML
 
@@ -310,7 +310,7 @@ updateElement('transactions', transactionsRows);
 
 Aquí usamos el método [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) que crea un nuevo fragmento del DOM en el que podemos trabajar, antes de finalmente adjuntarlo a nuestra tabla HTML.
 
-Todavía hay una cosa más que debemos hacer antes de que este código funcione, ya que nuestra función `updateElement()` actualmente solo soporta contenido de texto. Cambiemos su código un poco:
+Todavía hay una cosa más que debemos hacer antes de que este código funcione, ya que nuestra función `updateElement()` actualmente solo admite contenido de texto. Cambiemos su código un poco:
 
 ```js
 function updateElement(id, textOrNode) {
@@ -327,11 +327,11 @@ Si intentas usar la cuenta `test` para iniciar sesión, ahora deberías ver una 
 
 ## 🚀 Desafío
 
-Trabajen juntos para hacer que la página del panel de control se parezca a una aplicación bancaria real. Si ya has estilizado tu aplicación, intenta usar [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) para crear un [diseño responsivo](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) que funcione bien tanto en dispositivos de escritorio como en móviles.
+Trabajen juntos para hacer que la página del panel de control se parezca a una aplicación bancaria real. Si ya has estilizado tu aplicación, intenta usar [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) para crear un [diseño responsivo](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) que funcione bien tanto en dispositivos de escritorio como móviles.
 
 Aquí tienes un ejemplo de una página de panel de control estilizada:
 
-![Captura de pantalla de un ejemplo del resultado del panel de control después de estilizarlo](../../../../7-bank-project/images/screen2.png)
+![Captura de pantalla de un ejemplo del resultado del panel de control después de estilizarlo](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.es.png)
 
 ## Cuestionario posterior a la clase
 
@@ -340,6 +340,8 @@ Aquí tienes un ejemplo de una página de panel de control estilizada:
 ## Tarea
 
 [Refactoriza y comenta tu código](assignment.md)
+
+---
 
 **Descargo de responsabilidad**:  
 Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

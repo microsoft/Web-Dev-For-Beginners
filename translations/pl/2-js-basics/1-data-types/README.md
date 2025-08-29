@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-24T12:22:55+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T16:33:48+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "pl"
 }
 -->
 # Podstawy JavaScript: Typy danych
 
-![Podstawy JavaScript - Typy danych](../../../../sketchnotes/webdev101-js-datatypes.png)
+![Podstawy JavaScript - Typy danych](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c756480d3ffa46507f746e5975ebf80f99fdaaf1cff09a7f4.pl.png)
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz przed wykładem
-[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/7)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/)
 
 Ta lekcja obejmuje podstawy JavaScript, języka, który zapewnia interaktywność w sieci.
 
@@ -74,11 +74,11 @@ Tworzenie i **deklarowanie** zmiennej ma następującą składnię **[słowo klu
 
    Po zadeklarowaniu zmiennej możesz zmienić jej wartość w dowolnym momencie w kodzie za pomocą operatora `=` i nowej wartości.
 
-   ✅ Spróbuj! Możesz pisać kod JavaScript bezpośrednio w przeglądarce. Otwórz okno przeglądarki i przejdź do Narzędzi dla deweloperów. W konsoli znajdziesz polecenie; wpisz `let myVariable = 123`, naciśnij Enter, a następnie wpisz `myVariable`. Co się dzieje? Uwaga, więcej o tych koncepcjach dowiesz się w kolejnych lekcjach.
+   ✅ Spróbuj! Możesz pisać kod JavaScript bezpośrednio w swojej przeglądarce. Otwórz okno przeglądarki i przejdź do Narzędzi dla deweloperów. W konsoli znajdziesz polecenie; wpisz `let myVariable = 123`, naciśnij Enter, a następnie wpisz `myVariable`. Co się dzieje? Zauważ, że więcej o tych koncepcjach dowiesz się w kolejnych lekcjach.
 
 ## Stałe
 
-Deklaracja i inicjalizacja stałej odbywa się według tych samych zasad co zmienna, z wyjątkiem użycia słowa kluczowego `const`. Stałe są zazwyczaj deklarowane wielkimi literami.
+Deklaracja i inicjalizacja stałej odbywa się według tych samych zasad co zmiennej, z wyjątkiem użycia słowa kluczowego `const`. Stałe są zazwyczaj deklarowane wielkimi literami.
 
 ```javascript
 const MY_VARIABLE = 123;
@@ -87,7 +87,7 @@ const MY_VARIABLE = 123;
 Stałe są podobne do zmiennych, z dwoma wyjątkami:
 
 - **Muszą mieć wartość**. Stałe muszą być zainicjalizowane, w przeciwnym razie wystąpi błąd podczas uruchamiania kodu.
-- **Referencja nie może być zmieniona**. Referencja stałej nie może być zmieniona po zainicjalizowaniu, w przeciwnym razie wystąpi błąd podczas uruchamiania kodu. Spójrzmy na dwa przykłady:
+- **Referencja nie może być zmieniona**. Referencja stałej nie może być zmieniona po jej zainicjalizowaniu, w przeciwnym razie wystąpi błąd podczas uruchamiania kodu. Spójrzmy na dwa przykłady:
    - **Prosta wartość**. Poniższe NIE jest dozwolone:
    
       ```javascript
@@ -109,9 +109,9 @@ Stałe są podobne do zmiennych, z dwoma wyjątkami:
       obj.a = 5;  // allowed
       ```
 
-      Powyżej zmieniasz wartość obiektu, ale nie samą referencję, co jest dozwolone.
+      Powyżej zmieniasz wartość obiektu, ale nie jego referencję, co jest dozwolone.
 
-   > Uwaga, `const` oznacza, że referencja jest chroniona przed ponownym przypisaniem. Wartość nie jest jednak _niezmienna_ i może się zmieniać, szczególnie jeśli jest to złożona struktura, taka jak obiekt.
+   > Uwaga, `const` oznacza, że referencja jest chroniona przed ponownym przypisaniem. Wartość jednak nie jest _niezmienna_ i może się zmieniać, szczególnie jeśli jest to złożona struktura, jak obiekt.
 
 ## Typy danych
 
@@ -125,7 +125,7 @@ W poprzedniej sekcji wartość `myVariable` była typu liczbowego.
 
 `let myVariable = 123;`
 
-Zmienne mogą przechowywać wszystkie typy liczb, w tym dziesiętne lub ujemne. Liczby mogą być również używane z operatorami arytmetycznymi, omówionymi w [następnej sekcji](../../../../2-js-basics/1-data-types).
+Zmienne mogą przechowywać wszystkie typy liczb, w tym liczby dziesiętne czy ujemne. Liczby mogą być również używane z operatorami arytmetycznymi, omówionymi w [następnej sekcji](../../../../2-js-basics/1-data-types).
 
 ### Operatory arytmetyczne
 
@@ -141,21 +141,21 @@ Istnieje kilka typów operatorów do wykonywania funkcji arytmetycznych, a niekt
 
 ✅ Spróbuj! Wypróbuj operację arytmetyczną w konsoli przeglądarki. Czy wyniki Cię zaskakują?
 
-### Ciągi znaków (Strings)
+### Łańcuchy znaków (Strings)
 
-Ciągi znaków to zestawy znaków umieszczone między pojedynczymi lub podwójnymi cudzysłowami.
+Łańcuchy znaków to zestawy znaków umieszczone między pojedynczymi lub podwójnymi cudzysłowami.
 
-- `'To jest ciąg znaków'`
-- `"To też jest ciąg znaków"`
-- `let myString = 'To jest wartość ciągu znaków przechowywana w zmiennej';`
+- `'To jest łańcuch znaków'`
+- `"To też jest łańcuch znaków"`
+- `let myString = 'To jest wartość łańcucha znaków przechowywana w zmiennej';`
 
-Pamiętaj, aby używać cudzysłowów podczas pisania ciągu znaków, w przeciwnym razie JavaScript założy, że to nazwa zmiennej.
+Pamiętaj, aby używać cudzysłowów podczas pisania łańcucha znaków, w przeciwnym razie JavaScript założy, że to nazwa zmiennej.
 
-### Formatowanie ciągów znaków
+### Formatowanie łańcuchów znaków
 
-Ciągi znaków są tekstowe i czasami wymagają formatowania.
+Łańcuchy znaków są tekstowe i czasami wymagają formatowania.
 
-Aby **konkatenować** dwa lub więcej ciągów znaków, czyli połączyć je, użyj operatora `+`.
+Aby **konkatenować** dwa lub więcej łańcuchów znaków, czyli połączyć je, użyj operatora `+`.
 
 ```javascript
 let myString1 = "Hello";
@@ -169,7 +169,7 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ✅ Dlaczego `1 + 1 = 2` w JavaScript, ale `'1' + '1' = 11?` Zastanów się nad tym. A co z `'1' + 1`?
 
-**Szablony literowe** (Template literals) to inny sposób formatowania ciągów znaków, z tą różnicą, że zamiast cudzysłowów używa się odwrotnego apostrofu. Wszystko, co nie jest zwykłym tekstem, musi być umieszczone w nawiasach `${ }`. Dotyczy to również zmiennych, które mogą być ciągami znaków.
+**Szablony tekstowe** (template literals) to inny sposób formatowania łańcuchów znaków, z tą różnicą, że zamiast cudzysłowów używa się odwrotnego apostrofu. Wszystko, co nie jest zwykłym tekstem, musi być umieszczone w nawiasach `${ }`. Dotyczy to również zmiennych, które mogą być łańcuchami znaków.
 
 ```javascript
 let myString1 = "Hello";
@@ -179,9 +179,9 @@ let myString2 = "World";
 `${myString1}, ${myString2}!` //Hello, World!
 ```
 
-Możesz osiągnąć swoje cele formatowania za pomocą obu metod, ale szablony literowe będą respektować wszelkie spacje i łamanie linii.
+Możesz osiągnąć swoje cele formatowania za pomocą obu metod, ale szablony tekstowe będą respektować wszelkie spacje i łamanie linii.
 
-✅ Kiedy użyłbyś szablonu literowego zamiast zwykłego ciągu znaków?
+✅ Kiedy użyłbyś szablonu tekstowego zamiast zwykłego łańcucha znaków?
 
 ### Booleany
 
@@ -196,18 +196,20 @@ Booleany mogą przyjmować tylko dwie wartości: `true` lub `false`. Booleany po
 
 ## 🚀 Wyzwanie
 
-JavaScript jest znany ze swoich zaskakujących sposobów obsługi typów danych. Poszukaj informacji o tych 'pułapkach'. Na przykład: wrażliwość na wielkość liter może być problematyczna! Wypróbuj to w konsoli: `let age = 1; let Age = 2; age == Age` (rezultatem jest `false` -- dlaczego?). Jakie inne pułapki możesz znaleźć?
+JavaScript jest znany ze swoich zaskakujących sposobów obsługi typów danych. Poszukaj informacji o tych 'pułapkach'. Na przykład: wrażliwość na wielkość liter może być problematyczna! Spróbuj tego w konsoli: `let age = 1; let Age = 2; age == Age` (rezultat `false` -- dlaczego?). Jakie inne pułapki możesz znaleźć?
 
 ## Quiz po wykładzie
-[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/8)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app)
 
 ## Przegląd i samodzielna nauka
 
-Spójrz na [tę listę ćwiczeń z JavaScript](https://css-tricks.com/snippets/javascript/) i spróbuj wykonać jedno. Czego się nauczyłeś?
+Spójrz na [tę listę ćwiczeń z JavaScript](https://css-tricks.com/snippets/javascript/) i spróbuj jednego. Czego się nauczyłeś?
 
 ## Zadanie
 
-[Ćwiczenia z typami danych](assignment.md)
+[Ćwiczenia z typów danych](assignment.md)
+
+---
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego języku źródłowym powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

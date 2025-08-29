@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-28T11:32:05+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T13:20:25+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "en"
 }
@@ -13,20 +13,20 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/33)
 
-Games become more engaging when objects like aliens start moving on the screen! In this lesson, we’ll explore two types of movement:
+Games become much more engaging when you have aliens moving around on the screen! In this lesson, we’ll explore two types of movement:
 
-- **Keyboard/Mouse movement**: when the user interacts with the keyboard or mouse to move an object on the screen.
-- **Game-induced movement**: when the game itself moves an object at regular intervals.
+- **Keyboard/Mouse movement**: When the user interacts with the keyboard or mouse to move an object on the screen.
+- **Game-induced movement**: When the game itself moves an object at specific time intervals.
 
-How do we make objects move on the screen? It’s all about cartesian coordinates: we update the position (x, y) of the object and then redraw the screen.
+So, how do we make objects move on the screen? It all comes down to cartesian coordinates: we change the object's location (x, y) and then redraw the screen.
 
 To achieve *movement* on the screen, you typically follow these steps:
 
-1. **Set a new position** for the object. This makes it appear as though the object has moved.
-2. **Clear the screen**. The screen needs to be cleared between redraws. This can be done by drawing a rectangle filled with a background color.
-3. **Redraw the object** at its new position. This completes the process of moving the object from one location to another.
+1. **Set a new location** for the object. This is necessary to make it appear as though the object has moved.
+2. **Clear the screen**. The screen must be cleared between draws. This can be done by drawing a rectangle filled with the background color.
+3. **Redraw the object** at its new location. This step completes the process of moving the object from one position to another.
 
-Here’s an example of what this looks like in code:
+Here’s an example of what this might look like in code:
 
 ```javascript
 //set the hero's location
@@ -39,13 +39,13 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Can you think of why redrawing your hero multiple times per second might lead to performance issues? Check out [alternatives to this pattern](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+✅ Can you think of why redrawing your hero many times per second might lead to performance issues? Check out [alternatives to this pattern](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Handle keyboard events
 
-Events are handled by attaching specific actions to code. Keyboard events are triggered on the entire window, while mouse events like `click` can be tied to specific elements. In this project, we’ll focus on keyboard events.
+You can handle events by attaching specific events to your code. Keyboard events are triggered on the entire window, while mouse events like `click` can be tied to specific elements. In this project, we’ll use keyboard events.
 
-To handle an event, you use the window’s `addEventListener()` method, which takes two parameters. The first is the name of the event, such as `keyup`. The second is the function to be executed when the event occurs.
+To handle an event, you use the window's `addEventListener()` method, which takes two input parameters. The first parameter is the event name, such as `keyup`. The second parameter is the function to be executed when the event occurs.
 
 Here’s an example:
 
@@ -58,16 +58,16 @@ window.addEventListener('keyup', (evt) => {
 })
 ```
 
-For keyboard events, there are two properties on the event object that can help identify which key was pressed:
+For key events, you can use two properties on the event object to determine which key was pressed:
 
 - `key`: A string representation of the pressed key, such as `ArrowUp`.
 - `keyCode`: A numeric representation, such as `37`, which corresponds to `ArrowLeft`.
 
-✅ Key event manipulation is useful beyond game development. Can you think of other applications for this technique?
+✅ Key event handling is useful beyond game development. Can you think of other applications for this technique?
 
 ### Special keys: a caveat
 
-Some *special* keys affect the browser window. For example, if you’re listening for a `keyup` event and use these keys to move your hero, it might also trigger horizontal scrolling. To prevent this, you can disable the browser’s default behavior using code like this:
+Some *special* keys affect the browser window. For example, if you’re listening for a `keyup` event and use these special keys to move your hero, the browser might also perform horizontal scrolling. To prevent this, you can disable the browser's default behavior with the following code:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -88,11 +88,11 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-The code above ensures that the arrow keys and the spacebar have their default behavior disabled. This is achieved by calling `e.preventDefault()`.
+This code ensures that the arrow keys and the spacebar have their *default* behavior disabled. The disabling happens when we call `e.preventDefault()`.
 
 ## Game-induced movement
 
-Objects can move automatically using timers like `setTimeout()` or `setInterval()`, which update the object’s position at regular intervals. Here’s an example:
+Objects can move on their own using timers like `setTimeout()` or `setInterval()`. These functions update the object's location at regular intervals. Here’s an example:
 
 ```javascript
 let id = setInterval(() => {
@@ -103,7 +103,7 @@ let id = setInterval(() => {
 
 ## The game loop
 
-The game loop is a function that runs at regular intervals, drawing everything that should be visible to the player. It includes all game objects, unless they’re no longer part of the game (e.g., an enemy destroyed by a laser). You’ll learn more about this in later lessons.
+The game loop is a fundamental concept in game development. It’s essentially a function that runs at regular intervals, drawing everything that should be visible to the player. The game loop processes all game objects, drawing them unless they’re no longer part of the game (e.g., an enemy destroyed by a laser).
 
 Here’s an example of a typical game loop in code:
 
@@ -119,14 +119,14 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-This loop redraws the canvas every `200` milliseconds. You can adjust the interval to suit your game’s needs.
+This loop runs every `200` milliseconds to redraw the canvas. You can adjust the interval to suit your game’s needs.
 
 ## Continuing the Space Game
 
-You’ll build on the existing code. Start with the code you completed in Part I or use the starter code from [Part II](../../../../6-space-game/3-moving-elements-around/your-work).
+You’ll build on the existing code. Start with the code you completed in Part I, or use the code provided in [Part II - starter](../../../../6-space-game/3-moving-elements-around/your-work).
 
-- **Moving the hero**: Add code to move the hero using the arrow keys.
-- **Moving enemies**: Add code to make enemies move from top to bottom at a fixed rate.
+- **Move the hero**: Add code to allow the hero to move using the arrow keys.
+- **Move enemies**: Add code to make the enemies move from top to bottom at a set speed.
 
 ## Recommended steps
 
@@ -141,14 +141,14 @@ Locate the files in the `your-work` folder. It should contain the following:
 -| package.json
 ```
 
-Start your project in the `your_work` folder by running:
+Start your project by navigating to the `your_work` folder and typing:
 
 ```bash
 cd your-work
 npm start
 ```
 
-This will start an HTTP server at `http://localhost:5000`. Open this address in a browser. At this point, you should see the hero and enemies rendered, but nothing is moving yet!
+This will start an HTTP server at `http://localhost:5000`. Open a browser and navigate to that address. At this point, you should see the hero and enemies on the screen, but nothing is moving—yet!
 
 ### Add code
 
@@ -156,7 +156,7 @@ This will start an HTTP server at `http://localhost:5000`. Open this address in 
 
    *HINT*: The `game object` should include `x` and `y` properties and the ability to draw itself on the canvas.
 
-   >Tip: Start by creating a GameObject class with the following constructor, and then draw it on the canvas:
+   > Tip: Start by creating a `GameObject` class with the following constructor, and then draw it on the canvas:
 
    ```javascript
         
@@ -177,7 +177,7 @@ This will start an HTTP server at `http://localhost:5000`. Open this address in 
     }
     ```
 
-   Next, extend the GameObject class to create the Hero and Enemy classes:
+   Next, extend the `GameObject` class to create the `Hero` and `Enemy` classes:
 
    ```javascript
     class Hero extends GameObject {
@@ -205,11 +205,11 @@ This will start an HTTP server at `http://localhost:5000`. Open this address in 
     }
     ```
 
-2. **Add key-event handlers** to handle navigation (move the hero up, down, left, or right).
+2. **Add key-event handlers** to handle navigation (move the hero up, down, left, and right).
 
-   *REMEMBER*: The coordinate system starts at `0,0` in the top-left corner. Also, don’t forget to disable default browser behavior.
+   *REMEMBER*: The coordinate system starts at the top-left corner, which is `(0, 0)`. Also, don’t forget to disable the default browser behavior.
 
-   >Tip: Create an `onKeyDown` function and attach it to the window:
+   > Tip: Create an `onKeyDown` function and attach it to the window:
 
    ```javascript
     let onKeyDown = function (e) {
@@ -223,9 +223,9 @@ This will start an HTTP server at `http://localhost:5000`. Open this address in 
 
    Check your browser console to see the keystrokes being logged.
 
-3. **Implement** the [Pub-Sub pattern](../README.md) to keep your code organized as you progress.
+3. **Implement** the [Pub-Sub pattern](../README.md) to keep your code clean as you continue building the game.
 
-   To do this:
+   To do this, follow these steps:
 
    1. **Add an event listener** to the window:
 
@@ -243,7 +243,7 @@ This will start an HTTP server at `http://localhost:5000`. Open this address in 
         });
         ```
 
-   2. **Create an EventEmitter class** to handle publishing and subscribing to messages:
+   2. **Create an EventEmitter class** to manage publishing and subscribing to messages:
 
        ```javascript
         class EventEmitter {
@@ -313,7 +313,7 @@ This will start an HTTP server at `http://localhost:5000`. Open this address in 
 
 4. **Set up the game loop**
 
-   Refactor the `window.onload` function to initialize the game and set up a game loop with a suitable interval. Add a laser beam:
+   Refactor the `window.onload` function to initialize the game and set up a game loop with an appropriate interval. Add a laser beam as well:
 
    ```javascript
     window.onload = async () => {
@@ -334,9 +334,9 @@ This will start an HTTP server at `http://localhost:5000`. Open this address in 
     };
     ```
 
-5. **Add code** to move enemies at regular intervals.
+5. **Move enemies at intervals**
 
-   Refactor the `createEnemies()` function to generate enemies and add them to the new gameObjects class:
+   Refactor the `createEnemies()` function to generate enemies and add them to the new `gameObjects` class:
 
    ```javascript
     function createEnemies() {
@@ -368,7 +368,7 @@ This will start an HTTP server at `http://localhost:5000`. Open this address in 
     }
     ```
 
-   Finally, add a `drawGameObjects()` function to start rendering:
+   Finally, add a `drawGameObjects()` function to start drawing:
 
    ```javascript
     function drawGameObjects(ctx) {
@@ -376,13 +376,13 @@ This will start an HTTP server at `http://localhost:5000`. Open this address in 
     }
     ```
 
-   Your enemies should now start advancing toward your hero spaceship!
+   Your enemies should now begin advancing toward your hero spaceship!
 
 ---
 
 ## 🚀 Challenge
 
-As you’ve seen, adding functions, variables, and classes can lead to ‘spaghetti code.’ How can you better organize your code to make it more readable? Sketch out a system for organizing your code, even if it remains in a single file.
+As you’ve seen, adding more functions, variables, and classes can lead to 'spaghetti code.' How can you better organize your code to make it more readable? Sketch out a system for organizing your code, even if it’s still in a single file.
 
 ## Post-Lecture Quiz
 
@@ -390,7 +390,7 @@ As you’ve seen, adding functions, variables, and classes can lead to ‘spaghe
 
 ## Review & Self Study
 
-While we’re building this game without frameworks, there are many JavaScript-based canvas frameworks for game development. Take some time to [read about them](https://github.com/collections/javascript-game-engines).
+While we’re building this game without frameworks, there are many JavaScript-based canvas frameworks for game development. Take some time to [read about these](https://github.com/collections/javascript-game-engines).
 
 ## Assignment
 
@@ -399,4 +399,4 @@ While we’re building this game without frameworks, there are many JavaScript-b
 ---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

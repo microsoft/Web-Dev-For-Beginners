@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-24T12:08:12+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T14:15:18+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "de"
 }
 -->
 # Terrarium-Projekt Teil 2: Einführung in CSS
 
-![Einführung in CSS](../../../../sketchnotes/webdev101-css.png)
+![Einführung in CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.de.png)
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz vor der Vorlesung
@@ -18,9 +18,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Einführung
 
-CSS, oder Cascading Style Sheets, lösen ein wichtiges Problem der Webentwicklung: Wie man eine Website ansprechend gestaltet. Das Styling deiner Apps macht sie benutzerfreundlicher und optisch ansprechender; außerdem kannst du CSS nutzen, um Responsive Web Design (RWD) zu erstellen – so sehen deine Apps unabhängig von der Bildschirmgröße gut aus. CSS ist nicht nur dafür da, deine App schön aussehen zu lassen; die Spezifikation umfasst auch Animationen und Transformationen, die komplexe Interaktionen für deine Apps ermöglichen können. Die CSS-Arbeitsgruppe hilft dabei, aktuelle CSS-Spezifikationen zu pflegen; du kannst ihre Arbeit auf der [Website des World Wide Web Consortiums](https://www.w3.org/Style/CSS/members) verfolgen.
+CSS, oder Cascading Style Sheets, löst ein wichtiges Problem der Webentwicklung: Wie man eine Website ansprechend gestaltet. Das Styling deiner Apps macht sie benutzerfreundlicher und optisch ansprechender; außerdem kannst du mit CSS ein Responsive Web Design (RWD) erstellen – so sehen deine Apps auf jedem Bildschirm gut aus, unabhängig von der Größe. CSS ist nicht nur dafür da, deine App schön aussehen zu lassen; die Spezifikation umfasst auch Animationen und Transformationen, die komplexe Interaktionen für deine Apps ermöglichen können. Die CSS-Arbeitsgruppe hilft dabei, aktuelle CSS-Spezifikationen zu pflegen; du kannst ihre Arbeit auf der [Website des World Wide Web Consortiums](https://www.w3.org/Style/CSS/members) verfolgen.
 
-> Hinweis: CSS ist eine Sprache, die sich wie alles im Web weiterentwickelt, und nicht alle Browser unterstützen neuere Teile der Spezifikation. Überprüfe deine Implementierungen immer, indem du [CanIUse.com](https://caniuse.com) konsultierst.
+> Hinweis: CSS ist eine Sprache, die sich wie alles im Web weiterentwickelt, und nicht alle Browser unterstützen neuere Teile der Spezifikation. Überprüfe deine Implementierungen immer auf [CanIUse.com](https://caniuse.com).
 
 In dieser Lektion werden wir unserem Online-Terrarium Styles hinzufügen und mehr über verschiedene CSS-Konzepte lernen: die Kaskade, Vererbung, die Verwendung von Selektoren, Positionierung und die Nutzung von CSS für Layouts. Dabei werden wir das Terrarium layouten und das eigentliche Terrarium erstellen.
 
@@ -35,7 +35,7 @@ Du solltest das HTML für dein Terrarium erstellt und bereit zum Stylen haben.
 
 ### Aufgabe
 
-Erstelle in deinem Terrarium-Ordner eine neue Datei namens `style.css`. Importiere diese Datei im `<head>`-Abschnitt:
+Erstelle in deinem Terrarium-Ordner eine neue Datei namens `style.css`. Importiere diese Datei im `<head>`-Bereich:
 
 ```html
 <link rel="stylesheet" href="./style.css" />
@@ -45,11 +45,11 @@ Erstelle in deinem Terrarium-Ordner eine neue Datei namens `style.css`. Importie
 
 ## Die Kaskade
 
-Cascading Style Sheets beinhalten die Idee, dass die Styles „kaskadieren“, sodass die Anwendung eines Styles durch seine Priorität gesteuert wird. Styles, die von einem Website-Autor festgelegt werden, haben Vorrang vor denen, die von einem Browser festgelegt werden. Inline-Styles haben Vorrang vor denen, die in einem externen Stylesheet festgelegt sind.
+Cascading Style Sheets beinhalten die Idee, dass Styles „kaskadieren“, sodass die Anwendung eines Styles durch seine Priorität gesteuert wird. Styles, die von einem Website-Autor festgelegt werden, haben Vorrang vor denen, die von einem Browser festgelegt werden. Inline-Styles haben Vorrang vor denen, die in einem externen Stylesheet festgelegt sind.
 
 ### Aufgabe
 
-Füge dem `<h1>`-Tag den Inline-Style „color: red“ hinzu:
+Füge deinem `<h1>`-Tag den Inline-Style „color: red“ hinzu:
 
 ```HTML
 <h1 style="color: red">My Terrarium</h1>
@@ -69,7 +69,7 @@ h1 {
 
 ## Vererbung
 
-Styles werden von einem übergeordneten Style an einen untergeordneten weitergegeben, sodass verschachtelte Elemente die Styles ihrer Eltern erben.
+Styles werden von einem übergeordneten Element an ein untergeordnetes Element vererbt, sodass verschachtelte Elemente die Styles ihrer Eltern übernehmen.
 
 ### Aufgabe
 
@@ -83,7 +83,7 @@ body {
 
 Öffne die Konsole deines Browsers im Tab „Elemente“ und beobachte die Schriftart des H1. Es erbt seine Schriftart vom Body, wie im Browser angegeben:
 
-![geerbte Schriftart](../../../../3-terrarium/2-intro-to-css/images/1.png)
+![geerbte Schriftart](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.de.png)
 
 ✅ Kannst du einen verschachtelten Style dazu bringen, eine andere Eigenschaft zu erben?
 
@@ -110,7 +110,7 @@ Diese Art, ein Tag zu stylen, gibt dir Kontrolle über einzigartige Elemente, ab
 
 ### IDs
 
-Füge etwas Style hinzu, um die linken und rechten Container zu layouten. Da es nur einen linken Container und nur einen rechten Container gibt, erhalten sie IDs im Markup. Um sie zu stylen, verwende `#`:
+Füge etwas Style hinzu, um die linken und rechten Container zu layouten. Da es nur einen linken und einen rechten Container gibt, erhalten sie IDs im Markup. Um sie zu stylen, verwende `#`:
 
 ```CSS
 #left-container {
@@ -136,7 +136,7 @@ Füge etwas Style hinzu, um die linken und rechten Container zu layouten. Da es 
 
 Hier hast du diese Container mit absoluter Positionierung ganz links und rechts auf dem Bildschirm platziert und Prozentsätze für ihre Breite verwendet, damit sie auch auf kleinen mobilen Bildschirmen skalieren können.
 
-✅ Dieser Code ist ziemlich wiederholt und daher nicht „DRY“ (Don't Repeat Yourself); kannst du eine bessere Möglichkeit finden, diese IDs zu stylen, vielleicht mit einer ID und einer Klasse? Du müsstest das Markup ändern und das CSS refaktorisieren:
+✅ Dieser Code ist ziemlich wiederholt und somit nicht „DRY“ (Don't Repeat Yourself); kannst du eine bessere Möglichkeit finden, diese IDs zu stylen, vielleicht mit einer ID und einer Klasse? Du müsstest das Markup ändern und das CSS refaktorisieren:
 
 ```html
 <div id="left-container" class="container"></div>
@@ -154,7 +154,7 @@ Beachte, dass jede Pflanze im HTML-Markup eine Kombination aus IDs und Klassen h
 </div>
 ```
 
-Füge das Folgende zu deiner `style.css`-Datei hinzu:
+Füge den folgenden Code zu deiner `style.css`-Datei hinzu:
 
 ```CSS
 .plant-holder {
@@ -173,13 +173,13 @@ Füge das Folgende zu deiner `style.css`-Datei hinzu:
 
 Bemerkenswert in diesem Ausschnitt ist die Mischung aus relativer und absoluter Positionierung, die wir im nächsten Abschnitt behandeln werden. Schau dir an, wie die Höhen durch Prozentsätze gehandhabt werden:
 
-Du setzt die Höhe des Pflanzenhalters auf 13 %, eine gute Zahl, um sicherzustellen, dass alle Pflanzen in jedem vertikalen Container angezeigt werden, ohne dass ein Scrollen erforderlich ist.
+Du setzt die Höhe des Pflanzenhalters auf 13 %, eine gute Zahl, um sicherzustellen, dass alle Pflanzen in jedem vertikalen Container angezeigt werden, ohne dass gescrollt werden muss.
 
-Du verschiebst den Pflanzenhalter nach links, damit die Pflanzen innerhalb ihres Containers besser zentriert sind. Die Bilder haben einen großen transparenten Hintergrund, um sie besser verschiebbar zu machen, und müssen nach links verschoben werden, um besser auf den Bildschirm zu passen.
+Du verschiebst den Pflanzenhalter nach links, damit die Pflanzen besser in ihrem Container zentriert sind. Die Bilder haben einen großen transparenten Hintergrund, um sie besser verschiebbar zu machen, und müssen nach links verschoben werden, um besser auf den Bildschirm zu passen.
 
-Dann erhält die Pflanze selbst eine maximale Breite von 150 %. Dadurch kann sie sich verkleinern, wenn der Browser verkleinert wird. Versuche, deinen Browser zu verkleinern; die Pflanzen bleiben in ihren Containern, passen sich aber der Größe an.
+Dann erhält die Pflanze selbst eine maximale Breite von 150 %. Dadurch kann sie sich verkleinern, wenn der Browser verkleinert wird. Probiere aus, deinen Browser zu verkleinern; die Pflanzen bleiben in ihren Containern, passen sich aber der Größe an.
 
-Ebenfalls bemerkenswert ist die Verwendung von z-index, das die relative Höhe eines Elements steuert (damit die Pflanzen auf dem Container sitzen und im Terrarium erscheinen).
+Ebenfalls bemerkenswert ist die Verwendung von z-index, das die relative Höhe eines Elements steuert (damit die Pflanzen auf dem Container sitzen und so aussehen, als ob sie im Terrarium sitzen).
 
 ✅ Warum brauchst du sowohl einen Pflanzenhalter- als auch einen Pflanzen-CSS-Selektor?
 
@@ -201,7 +201,7 @@ In unserem Beispiel ist der `plant-holder` ein relativ positioniertes Element, d
 
 Jetzt wirst du das Gelernte nutzen, um das Terrarium selbst zu erstellen, alles mit CSS!
 
-Stile zuerst die `.terrarium`-div-Kinder als abgerundetes Rechteck mit CSS:
+Style zuerst die `.terrarium`-div-Kinder als abgerundetes Rechteck mit CSS:
 
 ```CSS
 .jar-walls {
@@ -250,11 +250,11 @@ Stile zuerst die `.terrarium`-div-Kinder als abgerundetes Rechteck mit CSS:
 }
 ```
 
-Beachte die Verwendung von Prozentsätzen hier. Wenn du deinen Browser verkleinerst, kannst du sehen, wie sich das Glas ebenfalls skaliert. Beachte auch die Breiten- und Höhenprozentsätze für die Glaselemente und wie jedes Element absolut in der Mitte positioniert ist, am unteren Rand des Viewports fixiert.
+Beachte die Verwendung von Prozentsätzen hier. Wenn du deinen Browser verkleinerst, kannst du sehen, wie sich das Glas ebenfalls verkleinert. Beachte auch die Breiten- und Höhenprozentsätze für die Glaselemente und wie jedes Element absolut in der Mitte positioniert ist, am unteren Rand des Viewports fixiert.
 
 Wir verwenden auch `rem` für die border-radius, eine schriftbezogene Länge. Lies mehr über diese Art der relativen Messung in der [CSS-Spezifikation](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
-✅ Versuche, die Farben und die Deckkraft des Glases im Vergleich zu denen der Erde zu ändern. Was passiert? Warum?
+✅ Versuche, die Farben und die Opazität des Glases im Vergleich zu denen der Erde zu ändern. Was passiert? Warum?
 
 ---
 
@@ -262,7 +262,7 @@ Wir verwenden auch `rem` für die border-radius, eine schriftbezogene Länge. Li
 
 Füge einen „Blasen“-Glanz in den unteren linken Bereich des Glases hinzu, um es glasähnlicher aussehen zu lassen. Du wirst die `.jar-glossy-long` und `.jar-glossy-short` stylen, um wie ein reflektierter Glanz auszusehen. So würde es aussehen:
 
-![fertiges Terrarium](../../../../3-terrarium/2-intro-to-css/images/terrarium-final.png)
+![fertiges Terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.de.png)
 
 Um das Quiz nach der Vorlesung abzuschließen, gehe durch dieses Lernmodul: [Style your HTML app with CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
@@ -276,7 +276,9 @@ CSS scheint täuschend einfach zu sein, aber es gibt viele Herausforderungen, we
 
 ## Aufgabe
 
-[CSS-Refaktorisierung](assignment.md)
+[CSS Refactoring](assignment.md)
+
+---
 
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.

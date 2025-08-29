@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-24T12:07:49+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T13:58:49+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "es"
 }
 -->
 # Proyecto Terrario Parte 2: Introducción a CSS
 
-![Introducción a CSS](../../../../sketchnotes/webdev101-css.png)
+![Introducción a CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.es.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Cuestionario Previo a la Clase
@@ -18,7 +18,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introducción
 
-CSS, o Hojas de Estilo en Cascada, resuelve un problema importante en el desarrollo web: cómo hacer que tu sitio web se vea bien. Estilizar tus aplicaciones las hace más usables y atractivas; también puedes usar CSS para crear Diseño Web Responsivo (RWD), permitiendo que tus aplicaciones se vean bien sin importar el tamaño de pantalla en el que se muestren. CSS no solo se trata de hacer que tu aplicación se vea bien; su especificación incluye animaciones y transformaciones que pueden habilitar interacciones sofisticadas para tus aplicaciones. El Grupo de Trabajo de CSS ayuda a mantener las especificaciones actuales de CSS; puedes seguir su trabajo en el [sitio del World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
+CSS, o Hojas de Estilo en Cascada, resuelve un problema importante en el desarrollo web: cómo hacer que tu sitio web se vea bien. Estilizar tus aplicaciones las hace más usables y atractivas; también puedes usar CSS para crear Diseño Web Responsivo (RWD) - permitiendo que tus aplicaciones se vean bien sin importar el tamaño de la pantalla en la que se muestren. CSS no solo se trata de hacer que tu aplicación se vea bien; su especificación incluye animaciones y transformaciones que pueden habilitar interacciones sofisticadas para tus aplicaciones. El Grupo de Trabajo de CSS ayuda a mantener las especificaciones actuales de CSS; puedes seguir su trabajo en el [sitio del World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
 
 > Nota: CSS es un lenguaje que evoluciona, como todo en la web, y no todos los navegadores soportan las partes más nuevas de la especificación. Siempre verifica tus implementaciones consultando [CanIUse.com](https://caniuse.com).
 
@@ -83,7 +83,7 @@ body {
 
 Abre la consola de tu navegador en la pestaña 'Elements' y observa la fuente del H1. Hereda su fuente del cuerpo, como se indica dentro del navegador:
 
-![fuente heredada](../../../../3-terrarium/2-intro-to-css/images/1.png)
+![fuente heredada](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.es.png)
 
 ✅ ¿Puedes hacer que un estilo anidado herede una propiedad diferente?
 
@@ -175,13 +175,13 @@ Es notable en este fragmento la mezcla de posicionamiento relativo y absoluto, q
 
 Estableces la altura del soporte de plantas en 13%, un buen número para asegurar que todas las plantas se muestren en cada contenedor vertical sin necesidad de desplazarse.
 
-Mueves el soporte de plantas hacia la izquierda para permitir que las plantas estén más centradas dentro de su contenedor. Las imágenes tienen una gran cantidad de fondo transparente para hacerlas más arrastrables, por lo que necesitan ser empujadas hacia la izquierda para ajustarse mejor en la pantalla.
+Mueves el soporte de plantas hacia la izquierda para permitir que las plantas estén más centradas dentro de su contenedor. Las imágenes tienen una gran cantidad de fondo transparente para hacerlas más arrastrables, por lo que necesitan ser empujadas hacia la izquierda para ajustarse mejor a la pantalla.
 
 Luego, la planta en sí tiene un ancho máximo de 150%. Esto permite que se reduzca a medida que el navegador se reduce. Intenta cambiar el tamaño de tu navegador; las plantas permanecen en sus contenedores pero se reducen para ajustarse.
 
 También es notable el uso de z-index, que controla la altitud relativa de un elemento (para que las plantas se sitúen encima del contenedor y parezcan estar dentro del terrario).
 
-✅ ¿Por qué necesitas tanto un selector de soporte de plantas como un selector de plantas en CSS?
+✅ ¿Por qué necesitas tanto un selector CSS para el soporte de plantas como para la planta?
 
 ## Posicionamiento en CSS
 
@@ -191,7 +191,7 @@ Los elementos posicionados absolutamente se posicionan en relación con sus ance
 
 Los elementos posicionados relativamente se posicionan según las instrucciones de CSS para ajustar su ubicación lejos de su posición inicial.
 
-En nuestro ejemplo, el `plant-holder` es un elemento posicionado relativamente que se posiciona dentro de un contenedor posicionado absolutamente. El comportamiento resultante es que los contenedores de la barra lateral están fijados a la izquierda y derecha, y el `plant-holder` está anidado, ajustándose dentro de las barras laterales, dando espacio para que las plantas se coloquen en una fila vertical.
+En nuestro ejemplo, el `plant-holder` es un elemento posicionado de forma relativa que se posiciona dentro de un contenedor posicionado de forma absoluta. El comportamiento resultante es que los contenedores de la barra lateral están fijados a la izquierda y derecha, y el `plant-holder` está anidado, ajustándose dentro de las barras laterales, dando espacio para que las plantas se coloquen en una fila vertical.
 
 > La `plant` en sí también tiene posicionamiento absoluto, necesario para hacerla arrastrable, como descubrirás en la próxima lección.
 
@@ -250,7 +250,7 @@ Primero, estiliza los hijos del div `.terrarium` como un rectángulo redondeado 
 }
 ```
 
-Nota el uso de porcentajes aquí. Si reduces el tamaño de tu navegador, puedes ver cómo el frasco también se escala. También observa los porcentajes de ancho y altura para los elementos del frasco y cómo cada elemento está posicionado absolutamente en el centro, fijado al fondo de la ventana.
+Nota el uso de porcentajes aquí. Si reduces el tamaño de tu navegador, puedes ver cómo el frasco también se escala. También observa los porcentajes de ancho y altura para los elementos del frasco y cómo cada elemento está posicionado absolutamente en el centro, fijado en la parte inferior de la ventana.
 
 También estamos usando `rem` para el radio del borde, una longitud relativa a la fuente. Lee más sobre este tipo de medida relativa en la [especificación de CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
@@ -262,7 +262,7 @@ También estamos usando `rem` para el radio del borde, una longitud relativa a l
 
 Agrega un brillo de 'burbuja' en la parte inferior izquierda del frasco para que parezca más de vidrio. Estilizarás `.jar-glossy-long` y `.jar-glossy-short` para que parezcan un brillo reflejado. Así es como se vería:
 
-![terrario terminado](../../../../3-terrarium/2-intro-to-css/images/terrarium-final.png)
+![terrario terminado](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.es.png)
 
 Para completar el cuestionario posterior a la clase, revisa este módulo de Learn: [Estiliza tu aplicación HTML con CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
@@ -270,13 +270,15 @@ Para completar el cuestionario posterior a la clase, revisa este módulo de Lear
 
 [Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/18)
 
-## Revisión y Estudio Personal
+## Repaso y Estudio Personal
 
-CSS parece engañosamente sencillo, pero hay muchos desafíos al intentar estilizar una aplicación perfectamente para todos los navegadores y tamaños de pantalla. CSS-Grid y Flexbox son herramientas que se han desarrollado para hacer el trabajo un poco más estructurado y confiable. Aprende sobre estas herramientas jugando [Flexbox Froggy](https://flexboxfroggy.com/) y [Grid Garden](https://codepip.com/games/grid-garden/).
+CSS parece engañosamente sencillo, pero hay muchos desafíos al intentar estilizar una aplicación perfectamente para todos los navegadores y todos los tamaños de pantalla. CSS-Grid y Flexbox son herramientas que se han desarrollado para hacer el trabajo un poco más estructurado y confiable. Aprende sobre estas herramientas jugando [Flexbox Froggy](https://flexboxfroggy.com/) y [Grid Garden](https://codepip.com/games/grid-garden/).
 
 ## Tarea
 
 [Refactorización de CSS](assignment.md)
 
+---
+
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

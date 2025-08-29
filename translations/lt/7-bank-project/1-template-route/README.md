@@ -1,31 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-28T11:21:45+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T16:46:42+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "lt"
 }
 -->
-# Sukurkite banko programėlę 1 dalis: HTML šablonai ir maršrutai internetinėje programėlėje
+# Sukurkite banko programėlę 1 dalis: HTML šablonai ir maršrutai žiniatinklio programėlėje
 
-## Prieš paskaitą – testas
+## Prieš paskaitą: testas
 
-[Prieš paskaitą – testas](https://ff-quizzes.netlify.app/web/quiz/41)
+[Prieš paskaitą: testas](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Įvadas
 
-Nuo tada, kai naršyklėse atsirado JavaScript, svetainės tapo interaktyvesnės ir sudėtingesnės nei bet kada anksčiau. Interneto technologijos dabar dažnai naudojamos kuriant visiškai funkcionalias programėles, kurios veikia tiesiogiai naršyklėje ir vadinamos [internetinėmis programėlėmis](https://en.wikipedia.org/wiki/Web_application). Kadangi internetinės programėlės yra labai interaktyvios, vartotojai nenori laukti, kol kiekvieną kartą atliekant veiksmą bus iš naujo įkeliamas visas puslapis. Štai kodėl JavaScript naudojamas tiesiogiai atnaujinti HTML per DOM, kad vartotojo patirtis būtų sklandesnė.
+Nuo tada, kai naršyklėse atsirado JavaScript, svetainės tapo interaktyvesnės ir sudėtingesnės nei bet kada anksčiau. Žiniatinklio technologijos dabar dažnai naudojamos kuriant visiškai funkcionalias programėles, kurios veikia tiesiogiai naršyklėje ir vadinamos [žiniatinklio programėlėmis](https://en.wikipedia.org/wiki/Web_application). Kadangi žiniatinklio programėlės yra labai interaktyvios, vartotojai nenori laukti, kol puslapis bus visiškai perkrautas kiekvieną kartą atliekant veiksmą. Todėl JavaScript naudojamas HTML atnaujinimui tiesiogiai per DOM, kad būtų užtikrinta sklandesnė vartotojo patirtis.
 
-Šioje pamokoje mes sukursime pagrindus banko internetinei programėlei, naudodami HTML šablonus, kad sukurtume kelis ekranus, kuriuos galima rodyti ir atnaujinti be poreikio iš naujo įkelti visą HTML puslapį.
+Šioje pamokoje mes sukursime pagrindus banko žiniatinklio programėlei, naudodami HTML šablonus, kad sukurtume kelis ekranus, kurie gali būti rodomi ir atnaujinami be viso HTML puslapio perkrovimo.
 
 ### Būtinos žinios
 
-Jums reikės vietinio interneto serverio, kad galėtumėte išbandyti programėlę, kurią kursime šioje pamokoje. Jei jo neturite, galite įdiegti [Node.js](https://nodejs.org) ir naudoti komandą `npx lite-server` iš savo projekto aplanko. Tai sukurs vietinį interneto serverį ir atidarys jūsų programėlę naršyklėje.
+Jums reikės vietinio žiniatinklio serverio, kad galėtumėte išbandyti žiniatinklio programėlę, kurią kursime šioje pamokoje. Jei jo neturite, galite įdiegti [Node.js](https://nodejs.org) ir naudoti komandą `npx lite-server` iš savo projekto aplanko. Tai sukurs vietinį žiniatinklio serverį ir atidarys jūsų programėlę naršyklėje.
 
 ### Pasiruošimas
 
-Savo kompiuteryje sukurkite aplanką, pavadintą `bank`, su failu `index.html` viduje. Pradėsime nuo šio HTML [šablono](https://en.wikipedia.org/wiki/Boilerplate_code):
+Savo kompiuteryje sukurkite aplanką pavadinimu `bank` su failu `index.html` viduje. Pradėsime nuo šio HTML [šablono](https://en.wikipedia.org/wiki/Boilerplate_code):
 
 ```html
 <!DOCTYPE html>
@@ -45,12 +45,12 @@ Savo kompiuteryje sukurkite aplanką, pavadintą `bank`, su failu `index.html` v
 
 ## HTML šablonai
 
-Jei norite sukurti kelis ekranus interneto puslapiui, vienas sprendimas būtų sukurti po vieną HTML failą kiekvienam ekranui, kurį norite rodyti. Tačiau šis sprendimas turi tam tikrų nepatogumų:
+Jei norite sukurti kelis ekranus žiniatinklio puslapiui, vienas sprendimas būtų sukurti po vieną HTML failą kiekvienam ekranui, kurį norite rodyti. Tačiau šis sprendimas turi tam tikrų nepatogumų:
 
-- Kiekvieną kartą keičiant ekraną reikia iš naujo įkelti visą HTML, o tai gali būti lėta.
+- Perjungiant ekraną reikia iš naujo įkelti visą HTML, o tai gali būti lėta.
 - Sunku dalintis duomenimis tarp skirtingų ekranų.
 
-Kitas požiūris yra turėti tik vieną HTML failą ir apibrėžti kelis [HTML šablonus](https://developer.mozilla.org/docs/Web/HTML/Element/template), naudojant `<template>` elementą. Šablonas yra pakartotinai naudojamas HTML blokas, kurio naršyklė nerodo, ir jis turi būti sukurtas vykdymo metu naudojant JavaScript.
+Kitas požiūris yra turėti tik vieną HTML failą ir apibrėžti kelis [HTML šablonus](https://developer.mozilla.org/docs/Web/HTML/Element/template), naudojant `<template>` elementą. Šablonas yra pakartotinai naudojamas HTML blokas, kuris naršyklėje nerodomas ir turi būti sukurtas vykdymo metu naudojant JavaScript.
 
 ### Užduotis
 
@@ -60,11 +60,11 @@ Sukursime banko programėlę su dviem ekranais: prisijungimo puslapiu ir prietai
 <div id="app">Loading...</div>
 ```
 
-Mes suteikiame jam `id`, kad vėliau būtų lengviau jį surasti naudojant JavaScript.
+Mes suteikiame jam `id`, kad vėliau būtų lengviau jį rasti naudojant JavaScript.
 
 > Patarimas: kadangi šio elemento turinys bus pakeistas, galime įdėti įkėlimo pranešimą arba indikatorių, kuris bus rodomas, kol programėlė kraunasi.
 
-Toliau pridėkime HTML šabloną prisijungimo puslapiui. Šiuo metu ten įdėsime tik pavadinimą ir sekciją su nuoroda, kurią naudosime navigacijai.
+Toliau pridėkime HTML šabloną prisijungimo puslapiui. Šiuo metu įdėsime tik pavadinimą ir skyrių su nuoroda, kurią naudosime navigacijai.
 
 ```html
 <template id="login">
@@ -75,7 +75,7 @@ Toliau pridėkime HTML šabloną prisijungimo puslapiui. Šiuo metu ten įdėsim
 </template>
 ```
 
-Tada pridėsime kitą HTML šabloną prietaisų skydelio puslapiui. Šiame puslapyje bus skirtingos sekcijos:
+Tada pridėsime kitą HTML šabloną prietaisų skydelio puslapiui. Šiame puslapyje bus skirtingi skyriai:
 
 - Antraštė su pavadinimu ir atsijungimo nuoroda
 - Dabartinis banko sąskaitos likutis
@@ -112,11 +112,11 @@ Tada pridėsime kitą HTML šabloną prietaisų skydelio puslapiui. Šiame pusla
 
 ## Šablonų rodymas naudojant JavaScript
 
-Jei bandysite dabartinį HTML failą naršyklėje, pamatysite, kad jis užstringa rodydamas `Loading...`. Taip yra todėl, kad mums reikia pridėti JavaScript kodą, kad sukurtume ir parodytume HTML šablonus.
+Jei bandysite dabartinį HTML failą naršyklėje, pamatysite, kad jis užstringa rodydamas `Loading...`. Taip yra todėl, kad mums reikia pridėti JavaScript kodą, kad sukurtume ir rodytume HTML šablonus.
 
 Šablono sukūrimas paprastai atliekamas 3 etapais:
 
-1. Surasti šablono elementą DOM'e, pavyzdžiui, naudojant [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
+1. Rasti šablono elementą DOM'e, pavyzdžiui, naudojant [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
 2. Nukopijuoti šablono elementą, naudojant [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
 3. Pridėti jį prie DOM po matomu elementu, pavyzdžiui, naudojant [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
@@ -124,7 +124,7 @@ Jei bandysite dabartinį HTML failą naršyklėje, pamatysite, kad jis užstring
 
 ### Užduotis
 
-Sukurkite naują failą, pavadintą `app.js`, savo projekto aplanke ir importuokite šį failą į HTML `<head>` sekciją:
+Sukurkite naują failą pavadinimu `app.js` savo projekto aplanke ir importuokite šį failą į HTML `<head>` skyrių:
 
 ```html
 <script src="app.js" defer></script>
@@ -154,7 +154,7 @@ updateRoute('login');
 
 ## Maršrutų kūrimas
 
-Kalbant apie internetinę programėlę, maršrutizavimas (*Routing*) reiškia ketinimą susieti **URL** su konkrečiais ekranais, kurie turėtų būti rodomi. Svetainėje su keliais HTML failais tai atliekama automatiškai, nes failų keliai atsispindi URL. Pavyzdžiui, su šiais failais jūsų projekto aplanke:
+Kalbant apie žiniatinklio programėlę, maršrutizavimas (*Routing*) reiškia ketinimą susieti **URL** su konkrečiais ekranais, kurie turėtų būti rodomi. Svetainėje su keliais HTML failais tai daroma automatiškai, nes failų keliai atsispindi URL. Pavyzdžiui, su šiais failais jūsų projekto aplanke:
 
 ```
 mywebsite/index.html
@@ -162,7 +162,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-Jei sukursite interneto serverį su `mywebsite` kaip šaknimi, URL susiejimas bus toks:
+Jei sukursite žiniatinklio serverį su `mywebsite` kaip šaknimi, URL susiejimas bus toks:
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -170,7 +170,7 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-Tačiau mūsų internetinei programėlei mes naudojame vieną HTML failą, kuriame yra visi ekranai, todėl šis numatytasis elgesys mums nepadės. Turime rankiniu būdu sukurti šį susiejimą ir atnaujinti rodomą šabloną naudodami JavaScript.
+Tačiau mūsų žiniatinklio programėlei mes naudojame vieną HTML failą, kuriame yra visi ekranai, todėl šis numatytasis elgesys mums nepadės. Turime rankiniu būdu sukurti šį susiejimą ir atnaujinti rodomą šabloną naudodami JavaScript.
 
 ### Užduotis
 
@@ -198,26 +198,26 @@ function updateRoute() {
 }
 ```
 
-Čia mes susiejome deklaruotus maršrutus su atitinkamu šablonu. Galite išbandyti, ar tai veikia teisingai, rankiniu būdu pakeisdami URL savo naršyklėje.
+Čia mes susiejome deklaruotus maršrutus su atitinkamu šablonu. Galite išbandyti, ar tai veikia teisingai, rankiniu būdu pakeisdami URL naršyklėje.
 
 ✅ Kas nutinka, jei įvedate nežinomą kelią URL? Kaip galėtume tai išspręsti?
 
 ## Navigacijos pridėjimas
 
-Kitas mūsų programėlės žingsnis yra pridėti galimybę pereiti tarp puslapių, nereikia rankiniu būdu keisti URL. Tai apima du dalykus:
+Kitas mūsų programėlės žingsnis yra pridėti galimybę naršyti tarp puslapių, nereikia rankiniu būdu keisti URL. Tai apima du dalykus:
 
-1. Atnaujinti dabartinį URL
-2. Atnaujinti rodomą šabloną pagal naują URL
+1. Dabartinio URL atnaujinimas
+2. Rodymo šablono atnaujinimas pagal naują URL
 
 Antrąją dalį jau pasirūpinome su `updateRoute` funkcija, todėl turime išsiaiškinti, kaip atnaujinti dabartinį URL.
 
-Turėsime naudoti JavaScript, o konkrečiau [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), kuris leidžia atnaujinti URL ir sukurti naują įrašą naršymo istorijoje, neperkraunant HTML.
+Turėsime naudoti JavaScript ir konkrečiai [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), kuris leidžia atnaujinti URL ir sukurti naują įrašą naršymo istorijoje, neperkraunant HTML.
 
-> Pastaba: Nors HTML inkaro elementas [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) gali būti naudojamas savarankiškai kuriant nuorodas į skirtingus URL, jis pagal numatytuosius nustatymus privers naršyklę iš naujo įkelti HTML. Būtina užkirsti kelią šiam elgesiui, kai maršrutizavimas tvarkomas naudojant JavaScript, naudojant `preventDefault()` funkciją ant paspaudimo įvykio.
+> Pastaba: Nors HTML inkarų elementas [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) gali būti naudojamas savarankiškai kuriant hipernuorodas į skirtingus URL, jis pagal numatytuosius nustatymus privers naršyklę perkrauti HTML. Šį elgesį būtina užkirsti, kai maršrutizavimas tvarkomas naudojant pasirinktą JavaScript, naudojant `preventDefault()` funkciją ant paspaudimo įvykio.
 
 ### Užduotis
 
-Sukurkime naują funkciją, kurią galėsime naudoti navigacijai savo programėlėje:
+Sukurkime naują funkciją, kurią galime naudoti navigacijai programėlėje:
 
 ```js
 function navigate(path) {
@@ -242,9 +242,9 @@ function updateRoute() {
   ...
 ```
 
-Jei maršrutas negali būti rastas, dabar nukreipsime į prisijungimo puslapį.
+Jei maršrutas nerandamas, dabar nukreipsime į prisijungimo puslapį.
 
-Dabar sukurkime funkciją, kuri gautų URL, kai paspaudžiama nuoroda, ir užkirstų kelią naršyklės numatytam nuorodos elgesiui:
+Dabar sukurkime funkciją, kad gautume URL, kai paspaudžiama nuoroda, ir užkirstume kelią naršyklės numatytam nuorodos elgesiui:
 
 ```js
 function onLinkClick(event) {
@@ -265,52 +265,52 @@ Aukščiau esantis `event` objektas užfiksuoja `click` įvykį ir perduoda jį 
 
 Naudodami [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) atributą, susiekite `click` įvykį su JavaScript kodu, šiuo atveju su `navigate()` funkcijos iškvietimu.
 
-Pabandykite paspausti šias nuorodas, dabar turėtumėte galėti pereiti tarp skirtingų savo programėlės ekranų.
+Pabandykite paspausti šias nuorodas, dabar turėtumėte galėti naršyti tarp skirtingų programėlės ekranų.
 
-✅ `history.pushState` metodas yra HTML5 standarto dalis ir įgyvendintas [visose moderniose naršyklėse](https://caniuse.com/?search=pushState). Jei kuriate internetinę programėlę senesnėms naršyklėms, yra triukas, kurį galite naudoti vietoj šios API: naudodami [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) prieš kelią galite įgyvendinti maršrutizavimą, kuris veikia su įprasta inkaro navigacija ir neperkrauna puslapio, nes jo paskirtis buvo kurti vidines nuorodas puslapyje.
+✅ `history.pushState` metodas yra HTML5 standarto dalis ir įgyvendintas [visose moderniose naršyklėse](https://caniuse.com/?search=pushState). Jei kuriate žiniatinklio programėlę senesnėms naršyklėms, yra triukas, kurį galite naudoti vietoj šio API: naudodami [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) prieš kelią galite įgyvendinti maršrutizavimą, kuris veikia su įprasta inkarų navigacija ir neperkrauna puslapio, nes jo paskirtis buvo kurti vidines nuorodas puslapyje.
 
 ## Naršyklės mygtukų „Atgal“ ir „Pirmyn“ tvarkymas
 
-Naudojant `history.pushState` sukuriami nauji įrašai naršyklės naršymo istorijoje. Galite tai patikrinti, laikydami naršyklės *atgal* mygtuką, jis turėtų rodyti kažką panašaus į tai:
+Naudojant `history.pushState` sukuriami nauji įrašai naršyklės naršymo istorijoje. Galite tai patikrinti, laikydami naršyklės *atgal mygtuką*, jis turėtų rodyti kažką panašaus į tai:
 
 ![Naršymo istorijos ekrano nuotrauka](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.lt.png)
 
 Jei bandysite kelis kartus paspausti atgal mygtuką, pamatysite, kad dabartinis URL keičiasi ir istorija atnaujinama, tačiau tas pats šablonas vis tiek rodomas.
 
-Taip yra todėl, kad programėlė nežino, kad reikia iškviesti `updateRoute()` kiekvieną kartą, kai istorija keičiasi. Jei pažvelgsite į [`history.pushState` dokumentaciją](https://developer.mozilla.org/docs/Web/API/History/pushState), pamatysite, kad jei būsena keičiasi – tai reiškia, kad perėjome į kitą URL – įvykis [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) yra suaktyvinamas. Naudosime tai, kad išspręstume šią problemą.
+Taip yra todėl, kad programėlė nežino, kad reikia iškviesti `updateRoute()` kiekvieną kartą, kai istorija keičiasi. Jei pažvelgsite į [`history.pushState` dokumentaciją](https://developer.mozilla.org/docs/Web/API/History/pushState), pamatysite, kad jei būsena keičiasi - tai reiškia, kad perėjome į kitą URL - suveikia [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) įvykis. Naudosime tai, kad išspręstume šią problemą.
 
 ### Užduotis
 
-Norėdami užtikrinti, kad rodomas šablonas būtų atnaujintas, kai naršyklės istorija keičiasi, pridėsime naują funkciją, kuri iškviečia `updateRoute()`. Tai padarysime `app.js` failo apačioje:
+Kad įsitikintume, jog rodomas šablonas atnaujinamas, kai naršyklės istorija keičiasi, pridėsime naują funkciją, kuri iškviečia `updateRoute()`. Tai padarysime `app.js` failo apačioje:
 
 ```js
 window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Pastaba: čia naudojome [rodyklės funkciją](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), kad deklaruotume mūsų `popstate` įvykio tvarkytuvą trumpumo dėlei, tačiau įprasta funkcija veiktų taip pat.
+> Pastaba: čia naudojome [rodyklės funkciją](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), kad deklaruotume `popstate` įvykio tvarkyklę trumpumo dėlei, tačiau įprasta funkcija veiktų taip pat.
 
 Štai vaizdo įrašas apie rodyklės funkcijas:
 
 [![Rodyklės funkcijos](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Rodyklės funkcijos")
 
-> 🎥 Spustelėkite aukščiau esančią nuotrauką, kad pamatytumėte vaizdo įrašą apie rodyklės funkcijas.
+> 🎥 Spustelėkite aukščiau esantį vaizdą, kad pamatytumėte vaizdo įrašą apie rodyklės funkcijas.
 
-Dabar pabandykite naudoti naršyklės mygtukus „Atgal“ ir „Pirmyn“ ir patikrinkite, ar rodomas maršrutas dabar teisingai atnaujinamas.
+Dabar pabandykite naudoti naršyklės mygtukus „Atgal“ ir „Pirmyn“ ir patikrinkite, ar rodomas maršrutas šį kartą teisingai atnaujinamas.
 
 ---
 
 ## 🚀 Iššūkis
 
-Pridėkite naują šabloną ir maršrutą trečiam puslapiui, kuris rodo šios programėlės kūrėjų kreditus.
+Pridėkite naują šabloną ir maršrutą trečiam puslapiui, kuris rodo šios programėlės autorius.
 
-## Po paskaitos – testas
+## Po paskaitos: testas
 
-[Po paskaitos – testas](https://ff-quizzes.netlify.app/web/quiz/42)
+[Po paskaitos: testas](https://ff-quizzes.netlify.app/web/quiz/42)
 
 ## Apžvalga ir savarankiškas mokymasis
 
-Maršrutizavimas yra viena iš stebėtinai sudėtingų interneto kūrimo dalių, ypač kai internetas pereina nuo puslapio atnaujinimo elgesio prie vieno puslapio programėlių atnaujinimo. Perskaitykite šiek tiek apie [kaip Azure Static Web App paslauga](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) tvarko maršrutizavimą. Ar galite paaiškinti, kodėl kai kurie sprendimai, aprašyti tame dokumente, yra būtini?
+Maršrutizavimas yra vienas iš stebėtinai sudėtingų žiniatinklio kūrimo dalių, ypač kai žiniatinklis pereina nuo puslapio atnaujinimo elgesio prie vieno puslapio programėlių atnaujinimų. Perskaitykite šiek tiek apie [kaip „Azure Static Web App“ paslauga](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) tvarko maršrutizavimą. Ar galite paaiškinti, kodėl kai kurie sprendimai, aprašyti tame dokumente, yra būtini?
 
 ## Užduotis
 
@@ -319,4 +319,4 @@ Maršrutizavimas yra viena iš stebėtinai sudėtingų interneto kūrimo dalių,
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.

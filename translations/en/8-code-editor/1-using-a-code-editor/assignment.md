@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-28T11:55:25+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T13:26:20+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "en"
 }
 -->
 # Create a Resume Website Using vscode.dev
 
-_How cool would it be if a recruiter asked for your resume and you sent them a URL?_ 😎
+_How cool would it be to have a recruiter ask for your resume and you send them a URL?_ 😎
 
 ## Objectives
 
@@ -25,7 +25,7 @@ After completing this assignment, you will learn how to:
 
 **Step 1:** Create a new GitHub repository and name it `my-resume`.
 
-**Step 2:** Create an `index.html` file in your repository. We’ll add at least one file directly on github.com because you can’t open an empty repository in vscode.dev.
+**Step 2:** Create an `index.html` file in your repository. We will add at least one file directly on github.com because you cannot open an empty repository on vscode.dev.
 
 Click the `creating a new file` link, type the name `index.html`, and select the `Commit new file` button.
 
@@ -45,10 +45,10 @@ https://github.com/your-username/my-resume
 
 ![Create a new file](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.en.png)
 
-**Step 4:** Open the `index.html` file, paste the code below into the code area, and save.
+**Step 4:** Open the `index.html` file, paste the code below into your code area, and save.
 
 <details>
-    <summary><b>HTML code for the content of your resume website.</b></summary>
+    <summary><b>HTML code responsible for the content on your resume website.</b></summary>
     
         <html>
 
@@ -59,7 +59,7 @@ https://github.com/your-username/my-resume
             </head>
             <body>
                 <header id="header">
-                    <!-- Resume header with your name and title -->
+                    <!-- resume header with your name and title -->
                     <h1>Your Name Goes Here!</h1>
                     <hr>
                     Your Role!
@@ -69,7 +69,7 @@ https://github.com/your-username/my-resume
                     <article id="mainLeft">
                         <section>
                             <h2>CONTACT</h2>
-                            <!-- Contact info including social media -->
+                            <!-- contact info including social media -->
                             <p>
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <a href="mailto:username@domain.top-level domain">Write your email here</a>
@@ -85,7 +85,7 @@ https://github.com/your-username/my-resume
                         </section>
                         <section>
                             <h2>SKILLS</h2>
-                            <!-- Your skills -->
+                            <!-- your skills -->
                             <ul>
                                 <li>Skill 1!</li>
                                 <li>Skill 2!</li>
@@ -95,7 +95,7 @@ https://github.com/your-username/my-resume
                         </section>
                         <section>
                             <h2>EDUCATION</h2>
-                            <!-- Your education -->
+                            <!-- your education -->
                             <h3>Write your course here!</h3>
                             <p>
                                 Write your institution here!
@@ -108,12 +108,12 @@ https://github.com/your-username/my-resume
                     <article id="mainRight">
                         <section>
                             <h2>ABOUT</h2>
-                            <!-- About you -->
+                            <!-- about you -->
                             <p>Write a blurb about yourself!</p>
                         </section>
                         <section>
                             <h2>WORK EXPERIENCE</h2>
-                            <!-- Your work experience -->
+                            <!-- your work experience -->
                             <h3>Job Title</h3>
                             <p>
                                 Organization Name Goes Here | Start Month – End Month
@@ -217,17 +217,17 @@ Replace the _placeholder text_ in the HTML code with your resume details.
     "styles": []
     }
 
-**Step 7:** Install the `Codeswing extension` to preview the resume website in the code area.
+**Step 7:** Install the `Codeswing` extension to preview the resume website in the code area.
 
-Click the _`Extensions`_ icon in the activity bar and type in Codeswing. Either click the _blue install button_ in the expanded activity bar to install it or use the install button that appears in the code area when you select the extension to load more information. Once the extension is installed, you’ll see changes in your project in the code area 😃.
+Click the _`Extensions`_ icon on the activity bar and type in Codeswing. Either click the _blue install button_ on the expanded activity bar to install it or use the install button that appears in the code area once you select the extension to load additional information. After installing the extension, check your code area to see the changes to your project 😃.
 
 ![Install extensions](../../../../8-code-editor/images/install-extension.gif)
 
-This is what your screen will look like after installing the extension.
+This is what you will see on your screen after installing the extension.
 
 ![Codeswing extension in action](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.en.png)
 
-If you’re happy with the changes you made, hover over the `Changes` folder and click the `+` button to stage the changes.
+If you’re satisfied with the changes you made, hover over the `Changes` folder and click the `+` button to stage the changes.
 
 Type a commit message _(a description of the changes you made to the project)_ and commit your changes by clicking the `check`. Once you’re done working on your project, select the hamburger menu icon at the top left to return to the repository on GitHub.
 
@@ -235,7 +235,7 @@ Congratulations 🎉 You’ve just created your resume website using vscode.dev 
 
 ## 🚀 Challenge
 
-Open a remote repository where you have permission to make changes and update some files. Then, try creating a new branch with your changes and make a Pull Request.
+Open a remote repository where you have permissions to make changes and update some files. Next, try creating a new branch with your changes and make a Pull Request.
 
 ## Review & Self Study
 
@@ -244,4 +244,4 @@ Read more about [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-we
 ---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

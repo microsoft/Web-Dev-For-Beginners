@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-24T13:05:00+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T16:17:40+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "pt"
 }
@@ -10,6 +10,17 @@ CO_OP_TRANSLATOR_METADATA:
 # Criar um site de currículo usando vscode.dev
 
 _Que incrível seria se um recrutador pedisse o teu currículo e tu enviasses um URL?_ 😎
+
+<!----
+TODO: adicionar uma imagem opcional
+![Usando um editor de código](../../../../translated_images/webdev101-vscode-dev.f53c14e8dad231ea09d9e07a2db4a01551d2dc6cdf21225038389e11156af023.pt.png)
+> Sketchnote por [Nome do Autor](https://example.com)
+---->
+
+<!---
+## Questionário Pré-Aula
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/3)
+---->
 
 ## Objetivos
 
@@ -25,17 +36,17 @@ Após esta tarefa, vais aprender a:
 
 **Passo 1:** Cria um novo repositório no GitHub e dá-lhe o nome `my-resume`
 
-**Passo 2:** Cria um ficheiro `index.html` no teu repositório. Vamos adicionar pelo menos um ficheiro diretamente no github.com, porque não é possível abrir um repositório vazio no vscode.dev.
+**Passo 2:** Cria um ficheiro `index.html` no teu repositório. Vamos adicionar pelo menos um ficheiro diretamente no github.com, pois não é possível abrir um repositório vazio no vscode.dev.
 
 Clica no link `creating a new file`, escreve o nome `index.html` e seleciona o botão `Commit new file`.
 
-![Criar um novo ficheiro no github.com](../../../../8-code-editor/images/new-file-github.com.png)
+![Criar um novo ficheiro no github.com](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.pt.png)
 
 **Passo 3:** Abre [VSCode.dev](https://vscode.dev) e seleciona o botão `Open Remote Repository`.
 
-Copia o URL do repositório que acabaste de criar para o teu site de currículo e cola-o na caixa de entrada:
+Copia o URL do repositório que acabaste de criar para o site do teu currículo e cola-o na caixa de entrada:
 
-_Substitui `your-username` pelo teu nome de utilizador do GitHub_
+_Substitui `your-username` pelo teu nome de utilizador do GitHub._
 
 ```
 https://github.com/your-username/my-resume
@@ -43,12 +54,12 @@ https://github.com/your-username/my-resume
 
 ✅ Se for bem-sucedido, vais ver o teu projeto e o ficheiro index.html abertos no editor de texto no navegador.
 
-![Criar um novo ficheiro](../../../../8-code-editor/images/project-on-vscode.dev.png)
+![Criar um novo ficheiro](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.pt.png)
 
 **Passo 4:** Abre o ficheiro `index.html`, cola o código abaixo na área de código e guarda.
 
 <details>
-    <summary><b>Código HTML responsável pelo conteúdo do teu site de currículo.</b></summary>
+    <summary><b>Código HTML responsável pelo conteúdo do site do teu currículo.</b></summary>
     
         <html>
 
@@ -72,15 +83,15 @@ https://github.com/your-username/my-resume
                             <!-- informações de contacto, incluindo redes sociais -->
                             <p>
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <a href="mailto:username@domain.top-level domain">Escreve aqui o teu email</a>
+                                <a href="mailto:username@domain.top-level domain">Escreve o teu email aqui</a>
                             </p>
                             <p>
                                 <i class="fab fa-github" aria-hidden="true"></i>
-                                <a href="github.com/yourGitHubUsername">Escreve aqui o teu nome de utilizador!</a>
+                                <a href="github.com/yourGitHubUsername">Escreve o teu nome de utilizador aqui!</a>
                             </p>
                             <p>
                                 <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                <a href="linkedin.com/yourLinkedInUsername">Escreve aqui o teu nome de utilizador!</a>
+                                <a href="linkedin.com/yourLinkedInUsername">Escreve o teu nome de utilizador aqui!</a>
                             </p>
                         </section>
                         <section>
@@ -94,11 +105,11 @@ https://github.com/your-username/my-resume
                             </ul>
                         </section>
                         <section>
-                            <h2>FORMAÇÃO</h2>
+                            <h2>EDUCAÇÃO</h2>
                             <!-- a tua formação -->
-                            <h3>Escreve aqui o teu curso!</h3>
+                            <h3>Escreve o teu curso aqui!</h3>
                             <p>
-                                Escreve aqui a tua instituição!
+                                Escreve a tua instituição aqui!
                             </p>
                             <p>
                                 Data de início - Data de fim
@@ -109,7 +120,7 @@ https://github.com/your-username/my-resume
                         <section>
                             <h2>SOBRE</h2>
                             <!-- sobre ti -->
-                            <p>Escreve uma breve descrição sobre ti!</p>
+                            <p>Escreve um resumo sobre ti!</p>
                         </section>
                         <section>
                             <h2>EXPERIÊNCIA PROFISSIONAL</h2>
@@ -219,17 +230,17 @@ Adiciona os detalhes do teu currículo para substituir o _texto de exemplo_ no c
 
 **Passo 7:** Instala a extensão `Codeswing` para visualizar o site do currículo na área de código.
 
-Clica no ícone _`Extensions`_ na barra de atividades e escreve Codeswing. Clica no _botão azul de instalação_ na barra de atividades expandida para instalar ou usa o botão de instalação que aparece na área de código ao selecionar a extensão para carregar informações adicionais. Assim que instalares a extensão, observa as mudanças no teu projeto na área de código 😃.
+Clica no ícone _`Extensions`_ na barra de atividades e escreve Codeswing. Clica no _botão azul de instalação_ na barra de atividades expandida para instalar ou usa o botão de instalação que aparece na área de código ao selecionar a extensão para carregar informações adicionais. Imediatamente após instalar a extensão, observa a área de código para ver as alterações no teu projeto 😃.
 
 ![Instalar extensões](../../../../8-code-editor/images/install-extension.gif)
 
 Isto é o que vais ver no teu ecrã após instalar a extensão.
 
-![Extensão Codeswing em ação](../../../../8-code-editor/images/after-codeswing-extension-pb.png)
+![Extensão Codeswing em ação](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.pt.png)
 
-Se estiveres satisfeito com as alterações feitas, passa o cursor sobre a pasta `Changes` e clica no botão `+` para preparar as alterações.
+Se estiveres satisfeito com as alterações que fizeste, passa o cursor sobre a pasta `Changes` e clica no botão `+` para preparar as alterações.
 
-Escreve uma mensagem de commit _(Uma descrição das alterações feitas no projeto)_ e confirma as alterações clicando no `check`. Quando terminares de trabalhar no teu projeto, seleciona o ícone do menu hambúrguer no canto superior esquerdo para voltar ao repositório no GitHub.
+Escreve uma mensagem de commit _(Uma descrição da alteração que fizeste no projeto)_ e confirma as tuas alterações clicando no `check`. Quando terminares de trabalhar no teu projeto, seleciona o ícone do menu hambúrguer no canto superior esquerdo para voltar ao repositório no GitHub.
 
 Parabéns 🎉 Acabaste de criar o teu site de currículo usando vscode.dev em poucos passos.
 
@@ -237,9 +248,16 @@ Parabéns 🎉 Acabaste de criar o teu site de currículo usando vscode.dev em p
 
 Abre um repositório remoto onde tens permissões para fazer alterações e atualiza alguns ficheiros. Em seguida, tenta criar um novo ramo com as tuas alterações e faz um Pull Request.
 
-## Revisão e Autoestudo
+<!----
+## Questionário Pós-Aula
+[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/4)
+---->
+
+## Revisão & Autoestudo
 
 Lê mais sobre [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) e algumas das suas outras funcionalidades.
 
-**Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+---
+
+**Aviso**:  
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

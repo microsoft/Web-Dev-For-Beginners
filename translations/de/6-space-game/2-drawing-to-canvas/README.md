@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-24T12:33:59+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T14:11:57+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "de"
 }
@@ -15,9 +15,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Die Leinwand
 
-Die Leinwand ist ein HTML-Element, das standardmäßig keinen Inhalt hat; sie ist eine leere Fläche. Du musst darauf zeichnen, um Inhalte hinzuzufügen.
+Die Leinwand ist ein HTML-Element, das standardmäßig keinen Inhalt hat; sie ist eine leere Fläche. Du musst sie durch Zeichnen darauf füllen.
 
-✅ Lies [mehr über die Canvas-API](https://developer.mozilla.org/docs/Web/API/Canvas_API) auf MDN.
+✅ Lies [mehr über die Canvas API](https://developer.mozilla.org/docs/Web/API/Canvas_API) auf MDN.
 
 So wird sie typischerweise als Teil des Seitenkörpers deklariert:
 
@@ -35,10 +35,10 @@ Oben setzen wir die Attribute `id`, `width` und `height`.
 
 Die Leinwand verwendet ein kartesisches Koordinatensystem, um Dinge zu zeichnen. Sie nutzt daher eine x-Achse und eine y-Achse, um auszudrücken, wo sich etwas befindet. Die Position `0,0` ist die obere linke Ecke, und die untere rechte Ecke entspricht der von dir festgelegten BREITE und HÖHE der Leinwand.
 
-![Das Raster der Leinwand](../../../../6-space-game/2-drawing-to-canvas/canvas_grid.png)  
+![Das Raster der Leinwand](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.de.png)  
 > Bild von [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-Um auf das Leinwand-Element zu zeichnen, musst du die folgenden Schritte durchlaufen:
+Um auf das Leinwand-Element zu zeichnen, musst du die folgenden Schritte ausführen:
 
 1. **Hole eine Referenz** zum Canvas-Element.
 2. **Hole eine Referenz** zum Kontext-Element, das auf dem Canvas-Element sitzt.
@@ -61,21 +61,21 @@ ctx.fillStyle = 'red';
 ctx.fillRect(0,0, 200, 200) // x,y,width, height
 ```
 
-✅ Die Canvas-API konzentriert sich hauptsächlich auf 2D-Formen, aber du kannst auch 3D-Elemente auf einer Webseite zeichnen; dafür könntest du die [WebGL-API](https://developer.mozilla.org/docs/Web/API/WebGL_API) verwenden.
+✅ Die Canvas API konzentriert sich hauptsächlich auf 2D-Formen, aber du kannst auch 3D-Elemente auf einer Webseite zeichnen; dafür könntest du die [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) verwenden.
 
-Mit der Canvas-API kannst du allerlei Dinge zeichnen, wie:
+Mit der Canvas API kannst du allerlei Dinge zeichnen, wie:
 
 - **Geometrische Formen**: Wir haben bereits gezeigt, wie man ein Rechteck zeichnet, aber es gibt noch viel mehr, was du zeichnen kannst.
 - **Text**: Du kannst Text mit beliebiger Schriftart und Farbe zeichnen.
 - **Bilder**: Du kannst ein Bild basierend auf einer Bilddatei wie z. B. .jpg oder .png zeichnen.
 
-✅ Probier es aus! Du weißt, wie man ein Rechteck zeichnet – kannst du einen Kreis auf eine Seite zeichnen? Schau dir einige interessante Canvas-Zeichnungen auf CodePen an. Hier ist ein [besonders beeindruckendes Beispiel](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Probier es aus! Du weißt, wie man ein Rechteck zeichnet – kannst du einen Kreis auf die Seite zeichnen? Schau dir einige interessante Canvas-Zeichnungen auf CodePen an. Hier ist ein [besonders beeindruckendes Beispiel](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Lade und zeichne ein Bild-Asset
+## Bildressourcen laden und zeichnen
 
-Du lädst ein Bild-Asset, indem du ein `Image`-Objekt erstellst und dessen `src`-Eigenschaft setzt. Dann hörst du auf das `load`-Event, um zu wissen, wann es bereit ist, verwendet zu werden. Der Code sieht so aus:
+Du lädst eine Bildressource, indem du ein `Image`-Objekt erstellst und dessen `src`-Eigenschaft setzt. Dann hörst du auf das `load`-Event, um zu wissen, wann es bereit ist, verwendet zu werden. Der Code sieht so aus:
 
-### Asset laden
+### Ressource laden
 
 ```javascript
 const img = new Image();
@@ -85,7 +85,7 @@ img.onload = () => {
 }
 ```
 
-### Asset-Lade-Muster
+### Muster zum Laden von Ressourcen
 
 Es wird empfohlen, das oben Genannte in eine Konstruktion wie diese einzubinden, damit es einfacher zu verwenden ist und du es nur dann manipulierst, wenn es vollständig geladen ist:
 
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-Um Spiel-Assets auf einen Bildschirm zu zeichnen, würde dein Code so aussehen:
+Um Spielressourcen auf einen Bildschirm zu zeichnen, würde dein Code so aussehen:
 
 ```javascript
 async function run() {
@@ -128,15 +128,15 @@ async function run() {
 
 ### Was du bauen sollst
 
-Du wirst eine Webseite mit einem Canvas-Element erstellen. Es sollte einen schwarzen Bildschirm mit den Maßen `1024*768` rendern. Wir haben dir zwei Bilder bereitgestellt:
+Du wirst eine Webseite mit einem Canvas-Element erstellen. Es sollte einen schwarzen Bildschirm mit den Maßen `1024*768` anzeigen. Wir haben dir zwei Bilder bereitgestellt:
 
-- Helden-Schiff
+- Heldenschiff
 
-   ![Helden-Schiff](../../../../6-space-game/2-drawing-to-canvas/solution/assets/player.png)
+   ![Heldenschiff](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.de.png)
 
 - 5*5 Monster
 
-   ![Monster-Schiff](../../../../6-space-game/2-drawing-to-canvas/solution/assets/enemyShip.png)
+   ![Monsterschiff](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.de.png)
 
 ### Empfohlene Schritte für den Entwicklungsstart
 
@@ -151,9 +151,9 @@ Finde die Dateien, die für dich im Unterordner `your-work` erstellt wurden. Sie
 -| package.json
 ```
 
-Öffne eine Kopie dieses Ordners in Visual Studio Code. Du solltest eine lokale Entwicklungsumgebung eingerichtet haben, vorzugsweise mit Visual Studio Code, NPM und Node installiert. Falls du `npm` noch nicht auf deinem Computer eingerichtet hast, [hier erfährst du, wie das geht](https://www.npmjs.com/get-npm).
+Öffne eine Kopie dieses Ordners in Visual Studio Code. Du solltest eine lokale Entwicklungsumgebung eingerichtet haben, vorzugsweise mit Visual Studio Code, NPM und Node installiert. Falls du `npm` nicht auf deinem Computer eingerichtet hast, [hier erfährst du, wie das geht](https://www.npmjs.com/get-npm).
 
-Starte dein Projekt, indem du zum Ordner `your_work` navigierst:
+Starte dein Projekt, indem du in den Ordner `your_work` navigierst:
 
 ```bash
 cd your-work
@@ -171,7 +171,7 @@ Füge den benötigten Code zu `your-work/app.js` hinzu, um die folgenden Aufgabe
 1. **Zeichne** eine Leinwand mit schwarzem Hintergrund  
    > Tipp: Füge zwei Zeilen unter dem entsprechenden TODO in `/app.js` hinzu, indem du das `ctx`-Element auf Schwarz setzt und die oberen/linken Koordinaten auf 0,0 sowie die Höhe und Breite auf die der Leinwand setzt.
 2. **Lade** Texturen  
-   > Tipp: Lade die Spieler- und Gegnerbilder mit `await loadTexture` und übergebe den Bildpfad. Du wirst sie noch nicht auf dem Bildschirm sehen!
+   > Tipp: Füge die Spieler- und Gegnerbilder mit `await loadTexture` hinzu und übergib den Bildpfad. Du wirst sie noch nicht auf dem Bildschirm sehen!
 3. **Zeichne** den Helden in die Mitte des unteren Bildschirmbereichs  
    > Tipp: Verwende die `drawImage`-API, um heroImg auf den Bildschirm zu zeichnen, und setze `canvas.width / 2 - 45` und `canvas.height - canvas.height / 4)`.
 4. **Zeichne** 5*5 Monster  
@@ -200,7 +200,7 @@ Füge den benötigten Code zu `your-work/app.js` hinzu, um die folgenden Aufgabe
 
 Das fertige Ergebnis sollte so aussehen:
 
-![Schwarzer Bildschirm mit einem Helden und 5*5 Monstern](../../../../6-space-game/2-drawing-to-canvas/partI-solution.png)
+![Schwarzer Bildschirm mit einem Helden und 5*5 Monstern](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.de.png)
 
 ## Lösung
 
@@ -210,19 +210,21 @@ Versuche zuerst, es selbst zu lösen, aber wenn du nicht weiterkommst, sieh dir 
 
 ## 🚀 Herausforderung
 
-Du hast gelernt, mit der 2D-fokussierten Canvas-API zu zeichnen; schau dir die [WebGL-API](https://developer.mozilla.org/docs/Web/API/WebGL_API) an und versuche, ein 3D-Objekt zu zeichnen.
+Du hast gelernt, mit der 2D-fokussierten Canvas API zu zeichnen; sieh dir die [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) an und versuche, ein 3D-Objekt zu zeichnen.
 
 ## Quiz nach der Vorlesung
 
 [Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/32)
 
-## Rückblick & Selbststudium
+## Wiederholung & Selbststudium
 
-Lerne mehr über die Canvas-API, indem du [darüber liest](https://developer.mozilla.org/docs/Web/API/Canvas_API).
+Lerne mehr über die Canvas API, indem du [darüber liest](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
 ## Aufgabe
 
-[Spiele mit der Canvas-API](assignment.md)
+[Experimentiere mit der Canvas API](assignment.md)
+
+---
 
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

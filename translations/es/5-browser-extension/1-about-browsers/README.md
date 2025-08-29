@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0bb55e0b98600afab801eea115228873",
-  "translation_date": "2025-08-24T13:13:14+00:00",
+  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
+  "translation_date": "2025-08-29T13:52:11+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "es"
 }
 -->
 # Proyecto de Extensión de Navegador Parte 1: Todo sobre los Navegadores
 
-![Dibujo de navegador](../../../../sketchnotes/browser.jpg)
+![Dibujo del navegador](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.es.jpg)
 > Dibujo por [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Cuestionario Previo a la Clase
@@ -22,20 +22,20 @@ Las extensiones de navegador añaden funcionalidad adicional a un navegador. Per
 
 ### Sobre el navegador
 
-En esta serie de lecciones, aprenderás cómo construir una extensión de navegador que funcione en Chrome, Firefox y Edge. En esta parte, descubrirás cómo funcionan los navegadores y estructurarás los elementos de la extensión de navegador.
+En esta serie de lecciones, aprenderás cómo construir una extensión de navegador que funcione en los navegadores Chrome, Firefox y Edge. En esta parte, descubrirás cómo funcionan los navegadores y estructurarás los elementos de la extensión de navegador.
 
 Pero, ¿qué es exactamente un navegador? Es una aplicación de software que permite a un usuario final acceder a contenido desde un servidor y mostrarlo en páginas web.
 
 ✅ Un poco de historia: el primer navegador se llamó 'WorldWideWeb' y fue creado por Sir Timothy Berners-Lee en 1990.
 
-![primeros navegadores](../../../../5-browser-extension/1-about-browsers/images/earlybrowsers.jpg)
+![primeros navegadores](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.es.jpg)
 > Algunos de los primeros navegadores, vía [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 Cuando un usuario se conecta a internet utilizando una dirección URL (Localizador Uniforme de Recursos), generalmente a través del Protocolo de Transferencia de Hipertexto mediante una dirección `http` o `https`, el navegador se comunica con un servidor web y obtiene una página web.
 
-En este punto, el motor de renderizado del navegador la muestra en el dispositivo del usuario, que podría ser un teléfono móvil, una computadora de escritorio o una laptop.
+En este punto, el motor de renderizado del navegador la muestra en el dispositivo del usuario, que podría ser un teléfono móvil, una computadora de escritorio o un portátil.
 
-Los navegadores también tienen la capacidad de almacenar en caché contenido para que no tenga que ser recuperado del servidor cada vez. Pueden registrar el historial de actividad de navegación de un usuario, almacenar 'cookies', que son pequeños fragmentos de datos que contienen información utilizada para registrar la actividad del usuario, y más.
+Los navegadores también tienen la capacidad de almacenar en caché contenido para que no tenga que ser recuperado del servidor cada vez. Pueden registrar el historial de navegación de un usuario, almacenar 'cookies', que son pequeños fragmentos de datos que contienen información utilizada para registrar la actividad del usuario, y más.
 
 Algo muy importante que recordar sobre los navegadores es que no todos son iguales. Cada navegador tiene sus fortalezas y debilidades, y un desarrollador web profesional necesita entender cómo hacer que las páginas web funcionen bien en diferentes navegadores. Esto incluye manejar vistas pequeñas como las de un teléfono móvil, así como un usuario que esté desconectado.
 
@@ -45,7 +45,7 @@ Un sitio web realmente útil que probablemente deberías marcar como favorito en
 
 ## Extensiones de navegador
 
-¿Por qué querrías construir una extensión de navegador? Es algo práctico para adjuntar a tu navegador cuando necesitas acceso rápido a tareas que tiendes a repetir. Por ejemplo, si necesitas verificar colores en las diversas páginas web con las que interactúas, podrías instalar una extensión de navegador para seleccionar colores. Si tienes problemas para recordar contraseñas, podrías usar una extensión de navegador para gestionar contraseñas.
+¿Por qué querrías construir una extensión de navegador? Es una herramienta útil para adjuntar a tu navegador cuando necesitas acceso rápido a tareas que tiendes a repetir. Por ejemplo, si necesitas verificar colores en las diversas páginas web con las que interactúas, podrías instalar una extensión de navegador para seleccionar colores. Si tienes problemas para recordar contraseñas, podrías usar una extensión de navegador para gestionar contraseñas.
 
 Las extensiones de navegador también son divertidas de desarrollar. Tienden a gestionar un número limitado de tareas que realizan bien.
 
@@ -55,14 +55,14 @@ Las extensiones de navegador también son divertidas de desarrollar. Tienden a g
 
 Antes de comenzar a construir, echa un vistazo al proceso de creación y despliegue de una extensión de navegador. Aunque cada navegador varía un poco en cómo gestionan esta tarea, el proceso es similar en Chrome y Firefox a este ejemplo en Edge:
 
-![captura de pantalla del navegador Edge mostrando la página edge://extensions abierta y el menú de configuración abierto](../../../../5-browser-extension/1-about-browsers/images/install-on-edge.png)
+![captura de pantalla del navegador Edge mostrando la página edge://extensions abierta y el menú de configuración abierto](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.es.png)
 
 > Nota: Asegúrate de activar el modo desarrollador y permitir extensiones de otras tiendas.
 
 En esencia, el proceso será:
 
 - construir tu extensión usando `npm run build` 
-- navegar en el navegador al panel de extensiones usando el botón "Configuración y más" (el ícono `...`) en la parte superior derecha
+- navegar en el navegador al panel de extensiones usando el botón "Configuración y más" (el icono `...`) en la parte superior derecha
 - si es una instalación nueva, elegir `load unpacked` para cargar una extensión nueva desde su carpeta de construcción (en nuestro caso es `/dist`) 
 - o, hacer clic en `reload` si estás recargando la extensión ya instalada
 
@@ -74,7 +74,7 @@ Vas a construir una extensión de navegador que muestre la huella de carbono de 
 
 **Necesitas:**
 
-- [una clave de API](https://www.co2signal.com/); ingresa tu correo electrónico en el cuadro de esta página y te enviarán una
+- [una clave de API](https://www.co2signal.com/); ingresa tu correo electrónico en el cuadro de esta página y se te enviará una
 - el [código de tu región](http://api.electricitymap.org/v3/zones) correspondiente al [Electricity Map](https://www.electricitymap.org/map) (en Boston, por ejemplo, uso 'US-NEISO').
 - el [código inicial](../../../../5-browser-extension/start). Descarga la carpeta `start`; completarás el código en esta carpeta.
 - [NPM](https://www.npmjs.com) - NPM es una herramienta de gestión de paquetes; instálala localmente y los paquetes listados en tu archivo `package.json` serán instalados para su uso en tu proyecto web
@@ -84,24 +84,24 @@ Vas a construir una extensión de navegador que muestre la huella de carbono de 
 Tómate un minuto para revisar la base de código:
 
 dist
-    -|manifest.json (configuraciones predeterminadas aquí)
+    -|manifest.json (configuración predeterminada aquí)
     -|index.html (marcado HTML del front-end aquí)
     -|background.js (JS de fondo aquí)
     -|main.js (JS compilado)
 src
     -|index.js (tu código JS va aquí)
 
-✅ Una vez que tengas tu clave de API y el código de tu región a la mano, guárdalos en una nota para uso futuro.
+✅ Una vez que tengas tu clave de API y el código de tu región a mano, guárdalos en una nota para uso futuro.
 
 ### Construye el HTML para la extensión
 
 Esta extensión tiene dos vistas. Una para recopilar la clave de API y el código de región:
 
-![captura de pantalla de la extensión completada abierta en un navegador, mostrando un formulario con entradas para el nombre de la región y la clave de API.](../../../../5-browser-extension/1-about-browsers/images/1.png)
+![captura de pantalla de la extensión completada abierta en un navegador, mostrando un formulario con entradas para el nombre de la región y la clave de API.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.es.png)
 
 Y la segunda para mostrar el uso de carbono de la región:
 
-![captura de pantalla de la extensión completada mostrando valores de uso de carbono y porcentaje de combustibles fósiles para la región US-NEISO.](../../../../5-browser-extension/1-about-browsers/images/2.png)
+![captura de pantalla de la extensión completada mostrando valores de uso de carbono y porcentaje de combustibles fósiles para la región US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.es.png)
 
 Comencemos construyendo el HTML para el formulario y estilizándolo con CSS.
 
@@ -150,7 +150,7 @@ Este comando usará npm, el Administrador de Paquetes de Node, para instalar web
 
 Por ahora, la extensión debería construirse y, si la despliegas en Edge como una extensión, verás un formulario mostrado de manera ordenada.
 
-¡Felicidades! Has dado los primeros pasos para construir una extensión de navegador. En lecciones posteriores, la harás más funcional y útil.
+¡Felicidades! Has dado los primeros pasos hacia la construcción de una extensión de navegador. En lecciones posteriores, la harás más funcional y útil.
 
 ---
 
@@ -175,6 +175,8 @@ En esta lección aprendiste un poco sobre la historia del navegador web; aprovec
 ## Tarea 
 
 [Rediseña tu extensión](assignment.md)
+
+---
 
 **Descargo de responsabilidad**:  
 Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

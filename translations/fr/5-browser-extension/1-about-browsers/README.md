@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "0bb55e0b98600afab801eea115228873",
-  "translation_date": "2025-08-23T23:43:29+00:00",
+  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
+  "translation_date": "2025-08-29T13:34:26+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "fr"
 }
 -->
 # Projet d'extension de navigateur Partie 1 : Tout sur les navigateurs
 
-![Croquis de navigateur](../../../../sketchnotes/browser.jpg)
+![Croquis de navigateur](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.fr.jpg)
 > Croquis par [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Quiz avant le cours
@@ -18,17 +18,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introduction
 
-Les extensions de navigateur ajoutent des fonctionnalités supplémentaires à un navigateur. Mais avant d'en créer une, il est utile de comprendre un peu comment les navigateurs fonctionnent.
+Les extensions de navigateur ajoutent des fonctionnalités supplémentaires à un navigateur. Mais avant d'en créer une, vous devriez apprendre un peu comment les navigateurs fonctionnent.
 
 ### À propos du navigateur
 
 Dans cette série de leçons, vous apprendrez à créer une extension de navigateur qui fonctionnera sur les navigateurs Chrome, Firefox et Edge. Dans cette partie, vous découvrirez comment les navigateurs fonctionnent et vous préparerez les éléments de l'extension de navigateur.
 
-Mais qu'est-ce qu'un navigateur exactement ? C'est une application logicielle qui permet à un utilisateur d'accéder à du contenu depuis un serveur et de l'afficher sur des pages web.
+Mais qu'est-ce qu'un navigateur exactement ? C'est une application logicielle qui permet à un utilisateur final d'accéder à du contenu depuis un serveur et de l'afficher sur des pages web.
 
 ✅ Un peu d'histoire : le premier navigateur s'appelait 'WorldWideWeb' et a été créé par Sir Timothy Berners-Lee en 1990.
 
-![premiers navigateurs](../../../../5-browser-extension/1-about-browsers/images/earlybrowsers.jpg)
+![premiers navigateurs](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.fr.jpg)
 > Quelques premiers navigateurs, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 Lorsqu'un utilisateur se connecte à Internet en utilisant une adresse URL (Uniform Resource Locator), généralement via le protocole Hypertext Transfer Protocol avec une adresse `http` ou `https`, le navigateur communique avec un serveur web et récupère une page web.
@@ -37,17 +37,17 @@ Lorsqu'un utilisateur se connecte à Internet en utilisant une adresse URL (Unif
 
 Les navigateurs ont également la capacité de mettre en cache du contenu afin qu'il n'ait pas besoin d'être récupéré depuis le serveur à chaque fois. Ils peuvent enregistrer l'historique de navigation d'un utilisateur, stocker des 'cookies', qui sont de petits morceaux de données contenant des informations utilisées pour enregistrer l'activité d'un utilisateur, et bien plus encore.
 
-Un point très important à retenir sur les navigateurs est qu'ils ne sont pas tous identiques ! Chaque navigateur a ses forces et ses faiblesses, et un développeur web professionnel doit comprendre comment rendre les pages web performantes sur différents navigateurs. Cela inclut la gestion des petits écrans comme ceux des téléphones mobiles, ainsi que des utilisateurs hors ligne.
+Un point très important à retenir à propos des navigateurs est qu'ils ne sont pas tous identiques ! Chaque navigateur a ses forces et ses faiblesses, et un développeur web professionnel doit comprendre comment rendre les pages web performantes sur différents navigateurs. Cela inclut la gestion des petits écrans comme ceux des téléphones mobiles, ainsi que des utilisateurs hors ligne.
 
 Un site web très utile que vous devriez probablement ajouter à vos favoris dans le navigateur que vous préférez utiliser est [caniuse.com](https://www.caniuse.com). Lorsque vous créez des pages web, il est très utile d'utiliser les listes de technologies prises en charge par caniuse pour mieux répondre aux besoins de vos utilisateurs.
 
-✅ Comment savoir quels navigateurs sont les plus populaires auprès des utilisateurs de votre site web ? Consultez vos analyses - vous pouvez installer divers outils d'analyse dans le cadre de votre processus de développement web, et ils vous indiqueront quels navigateurs sont les plus utilisés.
+✅ Comment savoir quels navigateurs sont les plus populaires auprès des utilisateurs de votre site web ? Consultez vos analyses - vous pouvez installer divers outils d'analyse dans le cadre de votre processus de développement web, et ils vous indiqueront quels navigateurs sont les plus utilisés parmi les navigateurs populaires.
 
 ## Extensions de navigateur
 
 Pourquoi voudriez-vous créer une extension de navigateur ? C'est un outil pratique à ajouter à votre navigateur lorsque vous avez besoin d'un accès rapide à des tâches que vous effectuez souvent. Par exemple, si vous avez besoin de vérifier les couleurs sur les différentes pages web que vous consultez, vous pourriez installer une extension de navigateur pour choisir les couleurs. Si vous avez du mal à vous souvenir de vos mots de passe, vous pourriez utiliser une extension de gestion des mots de passe.
 
-Les extensions de navigateur sont également amusantes à développer. Elles ont tendance à gérer un nombre limité de tâches qu'elles exécutent efficacement.
+Les extensions de navigateur sont également amusantes à développer. Elles ont tendance à gérer un nombre limité de tâches qu'elles exécutent bien.
 
 ✅ Quelles sont vos extensions de navigateur préférées ? Quelles tâches accomplissent-elles ?
 
@@ -55,7 +55,7 @@ Les extensions de navigateur sont également amusantes à développer. Elles ont
 
 Avant de commencer à créer, examinez le processus de création et de déploiement d'une extension de navigateur. Bien que chaque navigateur varie légèrement dans la gestion de cette tâche, le processus est similaire sur Chrome et Firefox à cet exemple sur Edge :
 
-![capture d'écran du navigateur Edge montrant la page edge://extensions ouverte et le menu des paramètres ouvert](../../../../5-browser-extension/1-about-browsers/images/install-on-edge.png)
+![capture d'écran du navigateur Edge montrant la page edge://extensions ouverte et le menu des paramètres ouvert](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.fr.png)
 
 > Note : Assurez-vous d'activer le mode développeur et de permettre les extensions provenant d'autres magasins.
 
@@ -77,9 +77,9 @@ Vous allez créer une extension de navigateur qui affiche l'empreinte carbone de
 - [une clé API](https://www.co2signal.com/) ; entrez votre email dans la boîte sur cette page et une clé vous sera envoyée
 - le [code de votre région](http://api.electricitymap.org/v3/zones) correspondant à la [Electricity Map](https://www.electricitymap.org/map) (à Boston, par exemple, j'utilise 'US-NEISO').
 - le [code de départ](../../../../5-browser-extension/start). Téléchargez le dossier `start` ; vous compléterez le code dans ce dossier.
-- [NPM](https://www.npmjs.com) - NPM est un outil de gestion de paquets ; installez-le localement et les paquets listés dans votre fichier `package.json` seront installés pour être utilisés par votre projet web.
+- [NPM](https://www.npmjs.com) - NPM est un outil de gestion de paquets ; installez-le localement et les paquets listés dans votre fichier `package.json` seront installés pour être utilisés par votre ressource web
 
-✅ Apprenez-en plus sur la gestion des paquets dans ce [module d'apprentissage excellent](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+✅ Apprenez-en plus sur la gestion des paquets dans ce [excellent module d'apprentissage](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
 Prenez un moment pour parcourir la base de code :
 
@@ -91,19 +91,19 @@ dist
 src
     -|index.js (votre code JS va ici)
 
-✅ Une fois que vous avez votre clé API et le code de votre région à portée de main, conservez-les quelque part dans une note pour une utilisation future.
+✅ Une fois que vous avez votre clé API et votre code de région à portée de main, conservez-les quelque part dans une note pour une utilisation future.
 
-### Construire le HTML pour l'extension
+### Construire le HTML de l'extension
 
 Cette extension a deux vues. Une pour recueillir la clé API et le code de région :
 
-![capture d'écran de l'extension terminée ouverte dans un navigateur, affichant un formulaire avec des champs pour le nom de la région et la clé API.](../../../../5-browser-extension/1-about-browsers/images/1.png)
+![capture d'écran de l'extension terminée ouverte dans un navigateur, affichant un formulaire avec des champs pour le nom de la région et la clé API.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.fr.png)
 
 Et la seconde pour afficher la consommation de carbone de la région :
 
-![capture d'écran de l'extension terminée affichant les valeurs de consommation de carbone et le pourcentage de combustibles fossiles pour la région US-NEISO.](../../../../5-browser-extension/1-about-browsers/images/2.png)
+![capture d'écran de l'extension terminée affichant les valeurs de consommation de carbone et le pourcentage de combustibles fossiles pour la région US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.fr.png)
 
-Commençons par construire le HTML pour le formulaire et le styliser avec du CSS.
+Commençons par construire le HTML du formulaire et le styliser avec du CSS.
 
 Dans le dossier `/dist`, vous allez construire un formulaire et une zone de résultats. Dans le fichier `index.html`, remplissez la zone de formulaire délimitée :
 
@@ -156,7 +156,7 @@ Félicitations, vous avez fait les premiers pas vers la création d'une extensio
 
 ## 🚀 Défi
 
-Explorez un magasin d'extensions de navigateur et installez-en une dans votre navigateur. Vous pouvez examiner ses fichiers de manière intéressante. Qu'avez-vous découvert ?
+Explorez un magasin d'extensions de navigateur et installez-en une sur votre navigateur. Vous pouvez examiner ses fichiers de manière intéressante. Que découvrez-vous ?
 
 ## Quiz après le cours
 
@@ -174,7 +174,9 @@ Dans cette leçon, vous avez appris un peu sur l'histoire du navigateur web ; pr
 
 ## Devoir 
 
-[Re-stylisez votre extension](assignment.md)
+[Restylez votre extension](assignment.md)
+
+---
 
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

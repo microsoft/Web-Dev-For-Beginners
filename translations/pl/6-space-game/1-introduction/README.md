@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-24T12:40:54+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T16:32:04+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "pl"
 }
 -->
-# Tworzenie gry kosmicznej, część 1: Wprowadzenie
+# Stwórz grę kosmiczną, część 1: Wprowadzenie
 
 ![video](../../../../6-space-game/images/pewpew.gif)
 
@@ -17,28 +17,28 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Dziedziczenie i kompozycja w tworzeniu gier
 
-W poprzednich lekcjach nie było potrzeby martwić się o architekturę aplikacji, ponieważ projekty były bardzo małe. Jednak gdy aplikacje rosną pod względem rozmiaru i zakresu, decyzje architektoniczne stają się coraz ważniejsze. Istnieją dwa główne podejścia do tworzenia większych aplikacji w JavaScript: *kompozycja* lub *dziedziczenie*. Oba mają swoje zalety i wady, ale wyjaśnijmy je w kontekście gry.
+W poprzednich lekcjach nie było potrzeby martwić się o architekturę projektową aplikacji, ponieważ projekty miały niewielki zakres. Jednak gdy Twoje aplikacje rosną pod względem rozmiaru i złożoności, decyzje architektoniczne stają się coraz ważniejsze. Istnieją dwa główne podejścia do tworzenia większych aplikacji w JavaScript: *kompozycja* lub *dziedziczenie*. Oba mają swoje zalety i wady, ale wyjaśnijmy je w kontekście gry.
 
-✅ Jedna z najbardziej znanych książek o programowaniu dotyczy [wzorców projektowych](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Jedna z najsłynniejszych książek o programowaniu dotyczy [wzorców projektowych](https://en.wikipedia.org/wiki/Design_Patterns).
 
-W grze mamy `obiekty gry`, czyli obiekty, które istnieją na ekranie. Oznacza to, że mają lokalizację w układzie współrzędnych kartezjańskich, charakteryzowaną przez współrzędne `x` i `y`. Podczas tworzenia gry zauważysz, że wszystkie obiekty gry mają standardowe właściwości, wspólne dla każdej gry, które obejmują:
+W grze masz `obiekty gry`, czyli obiekty, które istnieją na ekranie. Oznacza to, że mają one lokalizację w kartezjańskim układzie współrzędnych, charakteryzowaną przez współrzędne `x` i `y`. Tworząc grę, zauważysz, że wszystkie obiekty gry mają standardowe właściwości, wspólne dla każdej gry, które tworzysz, a mianowicie elementy, które są:
 
-- **oparte na lokalizacji** Większość, jeśli nie wszystkie, elementy gry są oparte na lokalizacji. Oznacza to, że mają lokalizację, `x` i `y`.
+- **oparte na lokalizacji** Większość, jeśli nie wszystkie, elementy gry są oparte na lokalizacji. Oznacza to, że mają one lokalizację, `x` i `y`.
 - **ruchome** Są to obiekty, które mogą przemieszczać się do nowej lokalizacji. Zazwyczaj jest to bohater, potwór lub NPC (postać niezależna), ale nie na przykład obiekt statyczny, taki jak drzewo.
-- **samodestrukcyjne** Te obiekty istnieją tylko przez określony czas, zanim zostaną oznaczone do usunięcia. Zwykle jest to reprezentowane przez wartość logiczną `dead` lub `destroyed`, która sygnalizuje silnikowi gry, że obiekt nie powinien być już renderowany.
-- **czas odnowienia** 'Czas odnowienia' to typowa właściwość krótkotrwałych obiektów. Typowym przykładem jest kawałek tekstu lub efekt graficzny, taki jak eksplozja, który powinien być widoczny tylko przez kilka milisekund.
+- **samodestrukcyjne** Te obiekty istnieją tylko przez określony czas, zanim zostaną oznaczone do usunięcia. Zazwyczaj jest to reprezentowane przez wartość logiczną `dead` lub `destroyed`, która sygnalizuje silnikowi gry, że ten obiekt nie powinien być już renderowany.
+- **z czasem odnowienia** 'Czas odnowienia' to typowa właściwość krótkotrwałych obiektów. Typowym przykładem jest kawałek tekstu lub efekt graficzny, taki jak eksplozja, który powinien być widoczny tylko przez kilka milisekund.
 
-✅ Pomyśl o grze Pac-Man. Czy potrafisz zidentyfikować cztery typy obiektów wymienione powyżej w tej grze?
+✅ Pomyśl o grze, takiej jak Pac-Man. Czy potrafisz zidentyfikować cztery wymienione powyżej typy obiektów w tej grze?
 
 ### Wyrażanie zachowań
 
-Wszystko, co opisaliśmy powyżej, to zachowania, które mogą mieć obiekty gry. Jak je zakodować? Możemy wyrazić te zachowania jako metody powiązane z klasami lub obiektami.
+Wszystkie opisane powyżej cechy to zachowania, które mogą mieć obiekty gry. Jak je zakodować? Możemy wyrazić te zachowania jako metody powiązane z klasami lub obiektami.
 
 **Klasy**
 
 Pomysł polega na użyciu `klas` w połączeniu z `dziedziczeniem`, aby dodać określone zachowanie do klasy.
 
-✅ Dziedziczenie to ważna koncepcja, którą warto zrozumieć. Dowiedz się więcej z [artykułu MDN o dziedziczeniu](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+✅ Dziedziczenie to ważna koncepcja do zrozumienia. Dowiedz się więcej z [artykułu MDN o dziedziczeniu](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 Wyrażone w kodzie, obiekt gry może wyglądać tak:
 
@@ -92,7 +92,7 @@ const tree = new Tree();
 
 **Kompozycja**
 
-Innym sposobem obsługi dziedziczenia obiektów jest użycie *kompozycji*. Wtedy obiekty wyrażają swoje zachowanie w następujący sposób:
+Innym sposobem radzenia sobie z dziedziczeniem obiektów jest użycie *kompozycji*. Wtedy obiekty wyrażają swoje zachowanie w ten sposób:
 
 ```javascript
 //create a constant gameObject
@@ -143,19 +143,19 @@ To zależy od Ciebie, który wzorzec wybierzesz. JavaScript obsługuje oba te pa
 
 --
 
-Innym wzorcem często stosowanym w tworzeniu gier jest wzorzec, który rozwiązuje problem obsługi doświadczenia użytkownika i wydajności gry.
+Inny wzorzec, powszechny w tworzeniu gier, rozwiązuje problem zarządzania doświadczeniem użytkownika i wydajnością gry.
 
 ## Wzorzec pub/sub
 
 ✅ Pub/Sub oznacza 'publish-subscribe' (publikuj-subskrybuj)
 
-Ten wzorzec zakłada, że różne części Twojej aplikacji nie powinny wiedzieć o sobie nawzajem. Dlaczego? Dzięki temu łatwiej jest zrozumieć, co się dzieje w ogóle, jeśli różne części są od siebie oddzielone. Ułatwia to również nagłą zmianę zachowania, jeśli zajdzie taka potrzeba. Jak to osiągnąć? Robimy to, wprowadzając kilka koncepcji:
+Ten wzorzec odnosi się do idei, że różne części Twojej aplikacji nie powinny wiedzieć o sobie nawzajem. Dlaczego? Dzięki temu łatwiej jest zrozumieć, co się dzieje w ogóle, jeśli różne części są oddzielone. Ułatwia to również nagłą zmianę zachowania, jeśli zajdzie taka potrzeba. Jak to osiągnąć? Robimy to, wprowadzając kilka pojęć:
 
-- **wiadomość**: Wiadomość to zazwyczaj ciąg tekstowy z opcjonalnym ładunkiem (dane, które wyjaśniają, czego dotyczy wiadomość). Typowa wiadomość w grze może być `KEY_PRESSED_ENTER`.
+- **wiadomość**: Wiadomość to zazwyczaj ciąg tekstowy z opcjonalnym ładunkiem (danymi, które wyjaśniają, czego dotyczy wiadomość). Typowa wiadomość w grze może być `KEY_PRESSED_ENTER`.
 - **wydawca**: Ten element *publikuje* wiadomość i wysyła ją do wszystkich subskrybentów.
 - **subskrybent**: Ten element *nasłuchuje* określonych wiadomości i wykonuje jakieś zadanie w wyniku ich otrzymania, na przykład wystrzelenie lasera.
 
-Implementacja jest bardzo mała, ale to bardzo potężny wzorzec. Oto jak można go zaimplementować:
+Implementacja jest dość mała, ale to bardzo potężny wzorzec. Oto jak można go zaimplementować:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Powyżej łączymy zdarzenie klawiatury, `ArrowLeft`, i wysyłamy wiadomość `HERO_MOVE_LEFT`. Nasłuchujemy tej wiadomości i w wyniku tego przesuwamy `hero`. Siła tego wzorca polega na tym, że nasłuchiwacz zdarzeń i bohater nie wiedzą o sobie nawzajem. Możesz przypisać `ArrowLeft` do klawisza `A`. Dodatkowo możliwe byłoby zrobienie czegoś zupełnie innego na `ArrowLeft`, dokonując kilku edycji funkcji `on` w eventEmitterze:
+Powyżej łączymy zdarzenie klawiatury, `ArrowLeft`, i wysyłamy wiadomość `HERO_MOVE_LEFT`. Nasłuchujemy tej wiadomości i w wyniku tego przesuwamy `hero`. Siła tego wzorca polega na tym, że nasłuchiwacz zdarzeń i bohater nie wiedzą o sobie nawzajem. Możesz przypisać `ArrowLeft` do klawisza `A`. Dodatkowo możliwe byłoby zrobienie czegoś zupełnie innego na `ArrowLeft`, dokonując kilku edycji funkcji `on` w `eventEmitter`:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,13 +212,13 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-Gdy gra staje się bardziej skomplikowana, ten wzorzec pozostaje tak samo prosty, a Twój kod pozostaje czysty. Naprawdę warto przyjąć ten wzorzec.
+Gdy Twoja gra staje się bardziej skomplikowana, ten wzorzec pozostaje tak samo prosty, a Twój kod pozostaje czysty. Naprawdę warto przyjąć ten wzorzec.
 
 ---
 
 ## 🚀 Wyzwanie
 
-Pomyśl, jak wzorzec pub-sub może ulepszyć grę. Które części powinny emitować zdarzenia, a jak gra powinna na nie reagować? Teraz masz szansę być kreatywnym, wymyślając nową grę i sposób, w jaki jej części mogą się zachowywać.
+Pomyśl, jak wzorzec pub-sub może ulepszyć grę. Które części powinny emitować zdarzenia, a jak gra powinna na nie reagować? Teraz masz szansę być kreatywnym, wymyślając nową grę i sposób, w jaki jej elementy mogą się zachowywać.
 
 ## Quiz po wykładzie
 
@@ -232,5 +232,7 @@ Dowiedz się więcej o Pub/Sub, [czytając o tym](https://docs.microsoft.com/azu
 
 [Zaprojektuj grę](assignment.md)
 
+---
+
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

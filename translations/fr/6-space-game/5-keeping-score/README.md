@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-23T22:52:42+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T13:37:29+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "fr"
 }
@@ -17,7 +17,7 @@ Dans cette leçon, vous apprendrez à ajouter un système de score à un jeu et 
 
 ## Afficher du texte à l'écran
 
-Pour afficher un score de jeu à l'écran, vous devez savoir comment placer du texte sur l'écran. La méthode à utiliser est `fillText()` sur l'objet canvas. Vous pouvez également contrôler d'autres aspects comme la police à utiliser, la couleur du texte et même son alignement (gauche, droite, centre). Voici un exemple de code qui affiche du texte à l'écran.
+Pour afficher un score de jeu à l'écran, vous devez savoir comment placer du texte sur l'écran. La solution consiste à utiliser la méthode `fillText()` sur l'objet canvas. Vous pouvez également contrôler d'autres aspects comme la police à utiliser, la couleur du texte et même son alignement (gauche, droite, centre). Voici un exemple de code qui dessine du texte à l'écran.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -30,18 +30,18 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ## La vie, en tant que concept de jeu
 
-Le concept de vie dans un jeu n'est qu'un simple nombre. Dans le contexte d'un jeu spatial, il est courant d'attribuer un certain nombre de vies qui sont déduites une par une lorsque votre vaisseau subit des dégâts. Il est agréable de représenter cela graphiquement, par exemple avec des mini-vaisseaux ou des cœurs, au lieu d'un simple nombre.
+Le concept de vie dans un jeu n'est qu'un nombre. Dans le contexte d'un jeu spatial, il est courant d'attribuer un certain nombre de vies qui sont déduites une par une lorsque votre vaisseau subit des dégâts. Il est agréable de représenter cela graphiquement, par exemple avec des mini-vaisseaux ou des cœurs, plutôt qu'un simple nombre.
 
 ## Ce que vous allez construire
 
 Ajoutons les éléments suivants à votre jeu :
 
-- **Score du jeu** : Pour chaque vaisseau ennemi détruit, le héros doit recevoir des points, nous suggérons 100 points par vaisseau. Le score du jeu doit être affiché en bas à gauche.
-- **Vies** : Votre vaisseau dispose de trois vies. Vous perdez une vie chaque fois qu'un vaisseau ennemi entre en collision avec vous. Le nombre de vies doit être affiché en bas à droite sous forme de graphique comme celui-ci : ![image de vie](../../../../6-space-game/5-keeping-score/solution/assets/life.png).
+- **Score du jeu** : Pour chaque vaisseau ennemi détruit, le héros devrait recevoir des points. Nous suggérons 100 points par vaisseau. Le score du jeu devrait être affiché en bas à gauche.
+- **Vies** : Votre vaisseau dispose de trois vies. Vous perdez une vie chaque fois qu'un vaisseau ennemi entre en collision avec vous. Les vies devraient être affichées en bas à droite sous forme de graphique comme celui-ci : ![image de vie](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.fr.png).
 
 ## Étapes recommandées
 
-Trouvez les fichiers qui ont été créés pour vous dans le sous-dossier `your-work`. Il devrait contenir les éléments suivants :
+Localisez les fichiers qui ont été créés pour vous dans le sous-dossier `your-work`. Il devrait contenir les éléments suivants :
 
 ```bash
 -| assets
@@ -60,11 +60,11 @@ cd your-work
 npm start
 ```
 
-Cela lancera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et entrez cette adresse. Actuellement, cela devrait afficher le héros et tous les ennemis, et lorsque vous appuyez sur les flèches gauche et droite, le héros se déplace et peut tirer sur les ennemis.
+Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et entrez cette adresse. À ce stade, vous devriez voir le héros et tous les ennemis, et lorsque vous appuyez sur les flèches gauche et droite, le héros se déplace et peut abattre les ennemis.
 
 ### Ajouter du code
 
-1. **Copiez les ressources nécessaires** du dossier `solution/assets/` dans le dossier `your-work` ; vous ajouterez une ressource `life.png`. Ajoutez `lifeImg` à la fonction `window.onload` :
+1. **Copiez les ressources nécessaires** du dossier `solution/assets/` dans le dossier `your-work`. Vous ajouterez l'asset `life.png`. Ajoutez `lifeImg` à la fonction `window.onload` :
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
@@ -93,8 +93,8 @@ Cela lancera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un nav
       })
     ```
 
-4. **Ajoutez les éléments "vie" et "points"**. 
-   1. **Initialisez les variables**. Sous `this.cooldown = 0` dans la classe `Hero`, définissez les variables `life` et `points` :
+4. **Ajoutez les vies et les points**. 
+   1. **Initialisez les variables**. Sous `this.cooldown = 0` dans la classe `Hero`, définissez les vies et les points :
 
         ```javascript
         this.life = 3;
@@ -177,7 +177,7 @@ Cela lancera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un nav
 
 ✅ Faites quelques recherches pour découvrir d'autres jeux créés avec JavaScript/Canvas. Quels sont leurs traits communs ?
 
-À la fin de ce travail, vous devriez voir les petits vaisseaux "vie" en bas à droite, les points en bas à gauche, et vous devriez voir votre nombre de vies diminuer lorsque vous entrez en collision avec des ennemis et vos points augmenter lorsque vous tirez sur des ennemis. Bien joué ! Votre jeu est presque terminé.
+À la fin de ce travail, vous devriez voir les petits vaisseaux représentant les vies en bas à droite, les points en bas à gauche, et vous devriez voir votre nombre de vies diminuer lorsque vous entrez en collision avec des ennemis et vos points augmenter lorsque vous abattez des ennemis. Bien joué ! Votre jeu est presque terminé.
 
 ---
 
@@ -189,13 +189,15 @@ Votre code est presque complet. Pouvez-vous imaginer les prochaines étapes ?
 
 [Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/38)
 
-## Révision et auto-apprentissage
+## Révision et étude personnelle
 
-Faites des recherches sur les différentes façons d'incrémenter et de décrémenter les scores et les vies dans un jeu. Il existe des moteurs de jeu intéressants comme [PlayFab](https://playfab.com). Comment l'utilisation de l'un d'entre eux pourrait-elle améliorer votre jeu ?
+Cherchez des moyens d'incrémenter et de décrémenter les scores et les vies dans un jeu. Il existe des moteurs de jeu intéressants comme [PlayFab](https://playfab.com). Comment l'utilisation de l'un de ces moteurs pourrait-elle améliorer votre jeu ?
 
 ## Devoir
 
 [Construire un jeu avec un système de score](assignment.md)
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

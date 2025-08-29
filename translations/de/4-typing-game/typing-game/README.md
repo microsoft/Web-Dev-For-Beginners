@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e982871b8388c59c22a41b73b5fca70f",
-  "translation_date": "2025-08-24T13:51:57+00:00",
+  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
+  "translation_date": "2025-08-29T14:17:32+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "de"
 }
 -->
-# Ein Spiel mit Ereignissen erstellen
+# Erstellen eines Spiels mit Ereignissen
 
 ## Quiz vor der Vorlesung
 
@@ -15,36 +15,36 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ereignisgesteuerte Programmierung
 
-Beim Erstellen einer browserbasierten Anwendung stellen wir eine grafische Benutzeroberfläche (GUI) bereit, die der Benutzer verwenden kann, um mit dem zu interagieren, was wir gebaut haben. Die häufigste Art, mit dem Browser zu interagieren, ist durch Klicken und Tippen auf verschiedene Elemente. Die Herausforderung, der wir als Entwickler gegenüberstehen, ist, dass wir nicht wissen, wann der Benutzer diese Aktionen ausführen wird!
+Beim Erstellen einer browserbasierten Anwendung stellen wir eine grafische Benutzeroberfläche (GUI) bereit, die der Benutzer verwenden kann, um mit dem zu interagieren, was wir erstellt haben. Die häufigste Art der Interaktion mit dem Browser erfolgt durch Klicken und Tippen auf verschiedene Elemente. Die Herausforderung für uns als Entwickler besteht darin, dass wir nicht wissen, wann der Benutzer diese Aktionen ausführen wird!
 
-[Ereignisgesteuerte Programmierung](https://de.wikipedia.org/wiki/Ereignisgesteuerte_Programmierung) ist der Name für die Art der Programmierung, die wir benötigen, um unsere GUI zu erstellen. Wenn wir diesen Begriff ein wenig aufschlüsseln, sehen wir, dass das Kernwort hier **Ereignis** ist. [Ereignis](https://www.merriam-webster.com/dictionary/event) wird laut Merriam-Webster definiert als "etwas, das passiert". Das beschreibt unsere Situation perfekt. Wir wissen, dass etwas passieren wird, für das wir Code ausführen möchten, aber wir wissen nicht, wann es stattfinden wird.
+[Ereignisgesteuerte Programmierung](https://de.wikipedia.org/wiki/Ereignisgesteuerte_Programmierung) ist der Name für die Art der Programmierung, die wir benötigen, um unsere GUI zu erstellen. Wenn wir diesen Begriff ein wenig aufschlüsseln, sehen wir, dass das Kernwort hier **Ereignis** ist. [Ereignis](https://www.merriam-webster.com/dictionary/event) wird laut Merriam-Webster definiert als "etwas, das passiert". Das beschreibt unsere Situation perfekt. Wir wissen, dass etwas passieren wird, für das wir Code ausführen möchten, aber wir wissen nicht, wann es passieren wird.
 
 Die Art und Weise, wie wir einen Abschnitt von Code markieren, den wir ausführen möchten, besteht darin, eine Funktion zu erstellen. Wenn wir an [prozedurale Programmierung](https://de.wikipedia.org/wiki/Prozedurale_Programmierung) denken, werden Funktionen in einer bestimmten Reihenfolge aufgerufen. Dasselbe gilt auch für ereignisgesteuerte Programmierung. Der Unterschied liegt darin, **wie** die Funktionen aufgerufen werden.
 
 Um Ereignisse (Button-Klicks, Eingaben usw.) zu behandeln, registrieren wir **Ereignis-Listener**. Ein Ereignis-Listener ist eine Funktion, die auf ein Ereignis wartet und daraufhin ausgeführt wird. Ereignis-Listener können die Benutzeroberfläche aktualisieren, Serveraufrufe durchführen oder alles andere erledigen, was als Reaktion auf die Aktion des Benutzers erforderlich ist. Wir fügen einen Ereignis-Listener hinzu, indem wir [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) verwenden und eine Funktion bereitstellen, die ausgeführt werden soll.
 
-> **NOTE:** Es ist erwähnenswert, dass es zahlreiche Möglichkeiten gibt, Ereignis-Listener zu erstellen. Sie können anonyme Funktionen verwenden oder benannte Funktionen erstellen. Sie können verschiedene Abkürzungen nutzen, wie das Setzen der `click`-Eigenschaft oder die Verwendung von `addEventListener`. In unserer Übung konzentrieren wir uns auf `addEventListener` und anonyme Funktionen, da dies wahrscheinlich die am häufigsten verwendete Technik von Webentwicklern ist. Es ist auch die flexibelste, da `addEventListener` für alle Ereignisse funktioniert und der Ereignisname als Parameter übergeben werden kann.
+> **NOTE:** Es ist erwähnenswert, dass es zahlreiche Möglichkeiten gibt, Ereignis-Listener zu erstellen. Sie können anonyme Funktionen verwenden oder benannte Funktionen erstellen. Sie können verschiedene Abkürzungen nutzen, wie das Setzen der `click`-Eigenschaft oder die Verwendung von `addEventListener`. In unserer Übung konzentrieren wir uns auf `addEventListener` und anonyme Funktionen, da dies wahrscheinlich die am häufigsten verwendete Technik von Webentwicklern ist. Es ist auch die flexibelste Methode, da `addEventListener` für alle Ereignisse funktioniert und der Ereignisname als Parameter angegeben werden kann.
 
 ### Häufige Ereignisse
 
-Es gibt [Dutzende von Ereignissen](https://developer.mozilla.org/docs/Web/Events), die Sie beim Erstellen einer Anwendung überwachen können. Grundsätzlich löst alles, was ein Benutzer auf einer Seite tut, ein Ereignis aus, was Ihnen viel Macht gibt, um sicherzustellen, dass der Benutzer die gewünschte Erfahrung erhält. Glücklicherweise benötigen Sie normalerweise nur eine kleine Auswahl an Ereignissen. Hier sind einige häufige (einschließlich der beiden, die wir beim Erstellen unseres Spiels verwenden werden):
+Es gibt [Dutzende von Ereignissen](https://developer.mozilla.org/docs/Web/Events), die Sie beim Erstellen einer Anwendung überwachen können. Grundsätzlich löst alles, was ein Benutzer auf einer Seite tut, ein Ereignis aus, was Ihnen viel Macht gibt, um sicherzustellen, dass der Benutzer die gewünschte Erfahrung macht. Glücklicherweise benötigen Sie normalerweise nur eine kleine Auswahl an Ereignissen. Hier sind einige häufige Ereignisse (einschließlich der beiden, die wir beim Erstellen unseres Spiels verwenden werden):
 
-- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Der Benutzer hat auf etwas geklickt, typischerweise auf einen Button oder Hyperlink
+- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Der Benutzer hat auf etwas geklickt, typischerweise einen Button oder Hyperlink
 - [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Der Benutzer hat die rechte Maustaste geklickt
 - [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Der Benutzer hat Text markiert
 - [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Der Benutzer hat Text eingegeben
 
 ## Das Spiel erstellen
 
-Wir werden ein Spiel erstellen, um zu erkunden, wie Ereignisse in JavaScript funktionieren. Unser Spiel wird die Tippfähigkeiten eines Spielers testen, eine der am meisten unterschätzten Fähigkeiten, die alle Entwickler haben sollten. Wir sollten alle unsere Tippfähigkeiten üben! Der allgemeine Ablauf des Spiels sieht folgendermaßen aus:
+Wir werden ein Spiel erstellen, um zu erkunden, wie Ereignisse in JavaScript funktionieren. Unser Spiel wird die Tippfähigkeiten eines Spielers testen, eine der am meisten unterschätzten Fähigkeiten, die alle Entwickler haben sollten. Wir sollten alle unsere Tippfähigkeiten üben! Der allgemeine Ablauf des Spiels sieht wie folgt aus:
 
 - Der Spieler klickt auf den Start-Button und erhält ein Zitat, das er tippen soll
 - Der Spieler tippt das Zitat so schnell wie möglich in ein Textfeld
-  - Jedes Wort wird hervorgehoben, sobald es abgeschlossen ist
-  - Wenn der Spieler einen Tippfehler macht, wird das Textfeld rot
-  - Wenn der Spieler das Zitat abschließt, wird eine Erfolgsmeldung mit der verstrichenen Zeit angezeigt
+  - Sobald ein Wort abgeschlossen ist, wird das nächste hervorgehoben
+  - Wenn der Spieler einen Tippfehler macht, wird das Textfeld rot markiert
+  - Wenn der Spieler das Zitat abgeschlossen hat, wird eine Erfolgsmeldung mit der verstrichenen Zeit angezeigt
 
-Lassen Sie uns unser Spiel bauen und dabei etwas über Ereignisse lernen!
+Lassen Sie uns unser Spiel erstellen und dabei etwas über Ereignisse lernen!
 
 ### Dateistruktur
 
@@ -73,14 +73,14 @@ code .
 
 ## Die Benutzeroberfläche erstellen
 
-Wenn wir die Anforderungen untersuchen, wissen wir, dass wir eine Handvoll Elemente auf unserer HTML-Seite benötigen. Das ist ein bisschen wie ein Rezept, bei dem wir einige Zutaten brauchen:
+Wenn wir die Anforderungen betrachten, wissen wir, dass wir einige Elemente auf unserer HTML-Seite benötigen. Das ist ein bisschen wie ein Rezept, bei dem wir einige Zutaten brauchen:
 
 - Einen Bereich, um das Zitat anzuzeigen, das der Benutzer tippen soll
 - Einen Bereich, um Nachrichten wie eine Erfolgsmeldung anzuzeigen
 - Ein Textfeld zum Tippen
 - Einen Start-Button
 
-Jedes dieser Elemente benötigt IDs, damit wir mit ihnen in unserem JavaScript arbeiten können. Wir werden auch Verweise auf die CSS- und JavaScript-Dateien hinzufügen, die wir erstellen werden.
+Jedes dieser Elemente benötigt IDs, damit wir sie in unserem JavaScript verwenden können. Wir werden auch Verweise auf die CSS- und JavaScript-Dateien hinzufügen, die wir erstellen werden.
 
 Erstellen Sie eine neue Datei namens **index.html**. Fügen Sie den folgenden HTML-Code hinzu:
 
@@ -107,12 +107,12 @@ Erstellen Sie eine neue Datei namens **index.html**. Fügen Sie den folgenden HT
 
 ### Die Anwendung starten
 
-Es ist immer am besten, iterativ zu entwickeln, um zu sehen, wie die Dinge aussehen. Lassen Sie uns unsere Anwendung starten. Es gibt eine wunderbare Erweiterung für Visual Studio Code namens [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), die Ihre Anwendung lokal hostet und den Browser jedes Mal aktualisiert, wenn Sie speichern.
+Es ist immer am besten, iterativ zu entwickeln, um zu sehen, wie die Dinge aussehen. Lassen Sie uns unsere Anwendung starten. Es gibt eine großartige Erweiterung für Visual Studio Code namens [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), die Ihre Anwendung lokal hostet und den Browser jedes Mal aktualisiert, wenn Sie speichern.
 
-- Installieren Sie [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), indem Sie dem Link folgen und auf **Installieren** klicken
+- Installieren Sie [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), indem Sie auf den Link klicken und **Installieren** auswählen
   - Der Browser fordert Sie auf, Visual Studio Code zu öffnen, und Visual Studio Code fordert Sie auf, die Installation durchzuführen
   - Starten Sie Visual Studio Code neu, falls erforderlich
-- Sobald die Installation abgeschlossen ist, klicken Sie in Visual Studio Code auf Strg-Shift-P (oder Cmd-Shift-P), um die Befehls-Palette zu öffnen
+- Sobald die Installation abgeschlossen ist, klicken Sie in Visual Studio Code auf Strg-Shift-P (oder Cmd-Shift-P), um die Befehlspalette zu öffnen
 - Geben Sie **Live Server: Open with Live Server** ein
   - Live Server beginnt, Ihre Anwendung zu hosten
 - Öffnen Sie einen Browser und navigieren Sie zu **https://localhost:5500**
@@ -122,7 +122,7 @@ Lassen Sie uns etwas Funktionalität hinzufügen.
 
 ## CSS hinzufügen
 
-Nachdem wir unser HTML erstellt haben, fügen wir das CSS für die grundlegende Gestaltung hinzu. Wir müssen das Wort hervorheben, das der Spieler tippen soll, und das Textfeld einfärben, wenn das, was er getippt hat, falsch ist. Wir werden dies mit zwei Klassen tun.
+Nachdem wir unser HTML erstellt haben, fügen wir das CSS für die grundlegende Gestaltung hinzu. Wir müssen das Wort hervorheben, das der Spieler tippen soll, und das Textfeld farblich markieren, wenn das, was er getippt hat, falsch ist. Wir werden dies mit zwei Klassen tun.
 
 Erstellen Sie eine neue Datei namens **style.css** und fügen Sie den folgenden Syntax hinzu.
 
@@ -138,15 +138,15 @@ Erstellen Sie eine neue Datei namens **style.css** und fügen Sie den folgenden 
 }
 ```
 
-✅ Wenn es um CSS geht, können Sie Ihre Seite so gestalten, wie Sie möchten. Nehmen Sie sich etwas Zeit, um die Seite ansprechender zu gestalten:
+✅ Wenn es um CSS geht, können Sie Ihre Seite nach Belieben gestalten. Nehmen Sie sich etwas Zeit, um die Seite ansprechender zu gestalten:
 
 - Wählen Sie eine andere Schriftart
-- Färben Sie die Überschriften ein
+- Färben Sie die Überschriften
 - Ändern Sie die Größe der Elemente
 
 ## JavaScript
 
-Nachdem wir unsere Benutzeroberfläche erstellt haben, konzentrieren wir uns nun auf das JavaScript, das die Logik bereitstellt. Wir werden dies in eine Handvoll Schritte unterteilen:
+Nachdem wir unsere Benutzeroberfläche erstellt haben, konzentrieren wir uns nun auf das JavaScript, das die Logik bereitstellt. Wir werden dies in einige Schritte unterteilen:
 
 - [Die Konstanten erstellen](../../../../4-typing-game/typing-game)
 - [Ereignis-Listener für den Spielstart](../../../../4-typing-game/typing-game)
@@ -154,9 +154,9 @@ Nachdem wir unsere Benutzeroberfläche erstellt haben, konzentrieren wir uns nun
 
 Erstellen Sie zunächst eine neue Datei namens **script.js**.
 
-### Die Konstanten hinzufügen
+### Die Konstanten erstellen
 
-Wir benötigen einige Elemente, um uns das Programmieren zu erleichtern. Wieder ähnlich wie ein Rezept, hier ist, was wir brauchen:
+Wir benötigen einige Elemente, um uns die Programmierung zu erleichtern. Wieder ähnlich wie ein Rezept, hier ist, was wir brauchen:
 
 - Ein Array mit der Liste aller Zitate
 - Ein leeres Array, um alle Wörter des aktuellen Zitats zu speichern
@@ -192,9 +192,9 @@ const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
 ```
 
-✅ Fügen Sie Ihrem Spiel weitere Zitate hinzu
+✅ Fügen Sie weitere Zitate zu Ihrem Spiel hinzu
 
-> **NOTE:** Wir können die Elemente jederzeit im Code abrufen, indem wir `document.getElementById` verwenden. Da wir diese Elemente regelmäßig referenzieren werden, vermeiden wir Tippfehler mit Zeichenkettenliteralen, indem wir Konstanten verwenden. Frameworks wie [Vue.js](https://vuejs.org/) oder [React](https://reactjs.org/) können Ihnen helfen, Ihre zentrale Codeverwaltung besser zu organisieren.
+> **NOTE:** Wir können die Elemente jederzeit im Code abrufen, indem wir `document.getElementById` verwenden. Da wir diese Elemente regelmäßig referenzieren werden, vermeiden wir Tippfehler mit Zeichenkettenliteralen, indem wir Konstanten verwenden. Frameworks wie [Vue.js](https://vuejs.org/) oder [React](https://reactjs.org/) können Ihnen helfen, Ihre Codezentralisierung besser zu verwalten.
 
 Nehmen Sie sich eine Minute Zeit, um ein Video über die Verwendung von `const`, `let` und `var` anzusehen.
 
@@ -251,7 +251,7 @@ Lassen Sie uns den Code aufschlüsseln!
   - Erstellen eines Arrays von `spanWords`, das jedes Wort in einem `span`-Element enthält
     - Dadurch können wir das Wort auf der Anzeige hervorheben
   - `join` des Arrays, um eine Zeichenkette zu erstellen, die wir verwenden können, um das `innerHTML` auf `quoteElement` zu aktualisieren
-    - Dies zeigt dem Spieler das Zitat an
+    - Dadurch wird das Zitat für den Spieler angezeigt
   - Setzen der `className` des ersten `span`-Elements auf `highlight`, um es gelb hervorzuheben
   - Bereinigen des `messageElement`, indem `innerText` auf `''` gesetzt wird
 - Einrichtung des Textfelds
@@ -300,7 +300,7 @@ typedValueElement.addEventListener('input', () => {
 });
 ```
 
-Lassen Sie uns den Code aufschlüsseln! Wir beginnen damit, das aktuelle Wort und den Wert zu erfassen, den der Spieler bisher getippt hat. Dann haben wir eine Wasserfall-Logik, bei der wir überprüfen, ob das Zitat abgeschlossen ist, das Wort abgeschlossen ist, das Wort korrekt ist oder (schließlich), ob ein Fehler vorliegt.
+Lassen Sie uns den Code aufschlüsseln! Wir beginnen damit, das aktuelle Wort und den Wert zu erfassen, den der Spieler bisher eingegeben hat. Dann haben wir eine Wasserfall-Logik, bei der wir überprüfen, ob das Zitat abgeschlossen ist, das Wort abgeschlossen ist, das Wort korrekt ist oder (schließlich), ob ein Fehler vorliegt.
 
 - Das Zitat ist abgeschlossen, angezeigt durch `typedValue`, das gleich `currentWord` ist, und `wordIndex`, das gleich der Länge von `words` minus eins ist
   - Berechnen von `elapsedTime`, indem `startTime` von der aktuellen Zeit subtrahiert wird
@@ -309,16 +309,16 @@ Lassen Sie uns den Code aufschlüsseln! Wir beginnen damit, das aktuelle Wort un
 - Das Wort ist abgeschlossen, angezeigt durch `typedValue`, das mit einem Leerzeichen endet (das Ende eines Wortes), und `typedValue`, das gleich `currentWord` ist
   - Setzen von `value` auf `typedElement` auf `''`, um das nächste Wort tippen zu können
   - Erhöhen von `wordIndex`, um zum nächsten Wort zu wechseln
-  - Durchlaufen aller `childNodes` von `quoteElement`, um `className` auf `''` zu setzen, um die Standardanzeige wiederherzustellen
-  - Setzen von `className` des aktuellen Wortes auf `highlight`, um es als nächstes zu tippendes Wort zu markieren
-- Das Wort wird derzeit korrekt getippt (aber nicht abgeschlossen), angezeigt durch `currentWord`, das mit `typedValue` beginnt
+  - Durchlaufen aller `childNodes` von `quoteElement`, um `className` auf `''` zu setzen und die Standardanzeige wiederherzustellen
+  - Setzen von `className` des aktuellen Wortes auf `highlight`, um es als das nächste zu tippende Wort zu markieren
+- Das Wort ist derzeit korrekt getippt (aber nicht abgeschlossen), angezeigt durch `currentWord`, das mit `typedValue` beginnt
   - Sicherstellen, dass `typedValueElement` als Standard angezeigt wird, indem `className` gelöscht wird
 - Wenn wir bis hierher gekommen sind, liegt ein Fehler vor
   - Setzen von `className` auf `typedValueElement` auf `error`
 
 ## Testen Sie Ihre Anwendung
 
-Sie haben es bis zum Ende geschafft! Der letzte Schritt besteht darin, sicherzustellen, dass unsere Anwendung funktioniert. Probieren Sie es aus! Machen Sie sich keine Sorgen, wenn es Fehler gibt; **alle Entwickler** haben Fehler. Untersuchen Sie die Nachrichten und debuggen Sie bei Bedarf.
+Sie haben es bis zum Ende geschafft! Der letzte Schritt besteht darin, sicherzustellen, dass unsere Anwendung funktioniert. Probieren Sie es aus! Machen Sie sich keine Sorgen, wenn Fehler auftreten; **alle Entwickler** haben Fehler. Untersuchen Sie die Nachrichten und debuggen Sie bei Bedarf.
 
 Klicken Sie auf **Start** und beginnen Sie zu tippen! Es sollte ein wenig wie die Animation aussehen, die wir zuvor gesehen haben.
 
@@ -330,22 +330,23 @@ Klicken Sie auf **Start** und beginnen Sie zu tippen! Es sollte ein wenig wie di
 
 Fügen Sie weitere Funktionen hinzu:
 
-- Deaktivieren Sie den `input`-Ereignis-Listener bei Abschluss und aktivieren Sie ihn erneut, wenn der Button geklickt wird
-- Deaktivieren Sie das Textfeld, wenn der Spieler das Zitat abschließt
-- Zeigen Sie ein modales Dialogfeld mit der Erfolgsmeldung an
-- Speichere hohe Punktzahlen mit [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
-
+- Deaktivieren Sie den `input`-Ereignis-Listener nach Abschluss und aktivieren Sie ihn erneut, wenn der Button geklickt wird
+- Deaktivieren Sie das Textfeld, wenn der Spieler das Zitat abgeschlossen hat
+- Anzeigen eines modalen Dialogfelds mit der Erfolgsmeldung
+- Speichern Sie Highscores mit [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
 ## Quiz nach der Vorlesung
 
 [Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/22)
 
-## Überprüfung & Selbststudium
+## Wiederholung & Selbststudium
 
-Lies über [alle verfügbaren Ereignisse](https://developer.mozilla.org/docs/Web/Events), die Entwicklern über den Webbrowser zur Verfügung stehen, und überlege, in welchen Szenarien du jedes davon verwenden würdest.
+Lies dir [alle verfügbaren Events](https://developer.mozilla.org/docs/Web/Events) durch, die Entwicklern über den Webbrowser zur Verfügung stehen, und überlege, in welchen Szenarien du jedes davon verwenden würdest.
 
 ## Aufgabe
 
 [Erstelle ein neues Tastaturspiel](assignment.md)
 
+---
+
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.

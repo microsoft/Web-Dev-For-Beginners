@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-24T12:27:58+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T16:30:08+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "pl"
 }
@@ -17,7 +17,7 @@ W tej lekcji dowiesz się, jak dodać system punktacji do gry oraz jak obliczać
 
 ## Wyświetlanie tekstu na ekranie
 
-Aby wyświetlić wynik gry na ekranie, musisz wiedzieć, jak umieścić tekst na ekranie. Odpowiedzią jest użycie metody `fillText()` na obiekcie canvas. Możesz również kontrolować inne aspekty, takie jak czcionka, kolor tekstu, a nawet jego wyrównanie (lewo, prawo, środek). Poniżej znajduje się kod rysujący tekst na ekranie.
+Aby wyświetlić wynik gry na ekranie, musisz wiedzieć, jak umieścić tekst na ekranie. Odpowiedzią jest metoda `fillText()` obiektu canvas. Możesz również kontrolować inne aspekty, takie jak czcionka, kolor tekstu czy jego wyrównanie (lewo, prawo, środek). Poniżej znajduje się kod, który rysuje tekst na ekranie.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -30,14 +30,14 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ## Życie jako koncepcja w grze
 
-Koncepcja życia w grze to po prostu liczba. W kontekście gry kosmicznej często przypisuje się zestaw żyć, które są odejmowane jedno po drugim, gdy Twój statek zostaje uszkodzony. Fajnie jest, jeśli możesz pokazać graficzną reprezentację tego, na przykład w postaci miniaturowych statków lub serc zamiast liczby.
+Koncepcja życia w grze to po prostu liczba. W kontekście gry kosmicznej często przypisuje się zestaw żyć, które są odejmowane jedno po drugim, gdy Twój statek zostaje uszkodzony. Fajnie jest, jeśli możesz pokazać graficzną reprezentację tego, na przykład w postaci miniaturowych statków lub serc, zamiast samej liczby.
 
 ## Co zbudować
 
 Dodajmy następujące elementy do Twojej gry:
 
-- **Wynik gry**: Za każdy zniszczony statek wroga bohater powinien otrzymać punkty, sugerujemy 100 punktów za statek. Wynik gry powinien być wyświetlany w dolnym lewym rogu.
-- **Życia**: Twój statek ma trzy życia. Tracisz jedno życie za każdym razem, gdy statek wroga zderzy się z Tobą. Liczba żyć powinna być wyświetlana w dolnym prawym rogu i przedstawiona za pomocą następującej grafiki ![grafika życia](../../../../6-space-game/5-keeping-score/solution/assets/life.png).
+- **Wynik gry**: Za każdy zniszczony statek wroga bohater powinien otrzymać punkty, sugerujemy 100 punktów za statek. Wynik gry powinien być wyświetlany w lewym dolnym rogu.
+- **Życia**: Twój statek ma trzy życia. Tracisz jedno życie za każdym razem, gdy statek wroga zderzy się z Tobą. Liczba żyć powinna być wyświetlana w prawym dolnym rogu i przedstawiona za pomocą następującej grafiki ![grafika życia](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.pl.png).
 
 ## Sugerowane kroki
 
@@ -60,7 +60,7 @@ cd your-work
 npm start
 ```
 
-Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz przeglądarkę i wpisz ten adres. W tym momencie powinien być widoczny bohater i wszyscy wrogowie, a po naciśnięciu strzałek w lewo i w prawo bohater będzie się poruszał i mógł zestrzeliwać wrogów.
+Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz przeglądarkę i wpisz ten adres. W tym momencie powinien być widoczny bohater i wszyscy wrogowie, a gdy naciśniesz strzałki w lewo i w prawo, bohater będzie się poruszał i mógł zestrzeliwać wrogów.
 
 ### Dodaj kod
 
@@ -101,7 +101,7 @@ Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Ot
         this.points = 0;
         ```
 
-   1. **Wyświetl zmienne na ekranie**. Wyświetl te wartości na ekranie:
+   1. **Rysuj zmienne na ekranie**. Wyświetl te wartości na ekranie:
 
         ```javascript
         function drawLife() {
@@ -128,7 +128,7 @@ Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Ot
 
         ```
 
-   1. **Dodaj metody do pętli gry**. Upewnij się, że dodałeś te funkcje do swojej funkcji `window.onload` pod `updateGameObjects()`:
+   1. **Dodaj metody do pętli gry**. Upewnij się, że dodałeś te funkcje do funkcji `window.onload` pod `updateGameObjects()`:
 
         ```javascript
         drawPoints();
@@ -150,7 +150,7 @@ Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Ot
         }
         ```
 
-   2. **Za każdy laser trafiający w wroga** zwiększ wynik gry o 100 punktów.
+   2. **Za każdy laser, który trafi wroga**, zwiększ wynik gry o 100 punktów.
 
       Rozszerz klasę `Hero`, aby zwiększyć wynik:
     
@@ -177,7 +177,7 @@ Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Ot
 
 ✅ Poszukaj informacji o innych grach stworzonych za pomocą JavaScript/Canvas. Jakie mają wspólne cechy?
 
-Po zakończeniu tej pracy powinieneś zobaczyć małe statki reprezentujące życie w dolnym prawym rogu, punkty w dolnym lewym rogu, a także zmniejszającą się liczbę żyć po kolizji z wrogami i rosnące punkty po zestrzeleniu wrogów. Świetna robota! Twoja gra jest prawie gotowa.
+Po zakończeniu tej pracy powinieneś zobaczyć małe statki reprezentujące życie w prawym dolnym rogu, punkty w lewym dolnym rogu, a także zmniejszającą się liczbę żyć po kolizji z wrogami oraz rosnące punkty po zestrzeleniu wrogów. Świetna robota! Twoja gra jest prawie gotowa.
 
 ---
 
@@ -191,11 +191,13 @@ Twój kod jest prawie gotowy. Czy potrafisz wyobrazić sobie kolejne kroki?
 
 ## Przegląd i samodzielna nauka
 
-Poszukaj sposobów na zwiększanie i zmniejszanie punktów oraz żyć w grze. Istnieją ciekawe silniki gier, takie jak [PlayFab](https://playfab.com). Jak ich użycie mogłoby ulepszyć Twoją grę?
+Zbadaj sposoby, w jakie można zwiększać i zmniejszać wyniki gry oraz liczbę żyć. Istnieją interesujące silniki gier, takie jak [PlayFab](https://playfab.com). Jak ich użycie mogłoby ulepszyć Twoją grę?
 
 ## Zadanie
 
 [Stwórz grę z punktacją](assignment.md)
 
+---
+
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby zapewnić precyzję, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

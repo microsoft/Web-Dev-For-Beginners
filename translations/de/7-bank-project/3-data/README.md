@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-24T13:34:07+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-29T14:05:09+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "de"
 }
@@ -15,13 +15,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Einführung
 
-Im Kern jeder Webanwendung stehen *Daten*. Daten können viele Formen annehmen, aber ihr Hauptzweck ist es immer, dem Benutzer Informationen anzuzeigen. Da Webanwendungen zunehmend interaktiver und komplexer werden, ist die Art und Weise, wie der Benutzer auf Informationen zugreift und mit ihnen interagiert, ein zentraler Bestandteil der Webentwicklung.
+Im Kern jeder Webanwendung stehen *Daten*. Daten können viele Formen annehmen, aber ihr Hauptzweck ist es immer, dem Benutzer Informationen anzuzeigen. Da Webanwendungen immer interaktiver und komplexer werden, ist die Art und Weise, wie der Benutzer auf Informationen zugreift und mit ihnen interagiert, ein zentraler Bestandteil der Webentwicklung.
 
 In dieser Lektion werden wir sehen, wie man Daten asynchron von einem Server abruft und diese Daten verwendet, um Informationen auf einer Webseite anzuzeigen, ohne das HTML neu zu laden.
 
 ### Voraussetzungen
 
-Für diese Lektion musst du den [Login- und Registrierungsformular](../2-forms/README.md)-Teil der Webanwendung erstellt haben. Außerdem musst du [Node.js](https://nodejs.org) installieren und die [Server-API](../api/README.md) lokal ausführen, um auf Kontodaten zuzugreifen.
+Für diese Lektion musst du das [Login- und Registrierungsformular](../2-forms/README.md) der Web-App erstellt haben. Außerdem musst du [Node.js](https://nodejs.org) installieren und die [Server-API](../api/README.md) lokal ausführen, um auf Kontodaten zuzugreifen.
 
 Du kannst testen, ob der Server ordnungsgemäß läuft, indem du diesen Befehl in einem Terminal ausführst:
 
@@ -34,21 +34,21 @@ curl http://localhost:5000/api
 
 ## AJAX und Datenabruf
 
-Traditionelle Webseiten aktualisieren den angezeigten Inhalt, wenn der Benutzer einen Link auswählt oder Daten über ein Formular sendet, indem die gesamte HTML-Seite neu geladen wird. Jedes Mal, wenn neue Daten geladen werden müssen, liefert der Webserver eine komplett neue HTML-Seite, die vom Browser verarbeitet werden muss. Dies unterbricht die aktuelle Benutzeraktion und schränkt die Interaktionen während des Neuladens ein. Dieser Workflow wird auch als *Multi-Page Application* oder *MPA* bezeichnet.
+Traditionelle Webseiten aktualisieren die angezeigten Inhalte, wenn der Benutzer einen Link auswählt oder Daten über ein Formular sendet, indem die gesamte HTML-Seite neu geladen wird. Jedes Mal, wenn neue Daten geladen werden müssen, liefert der Webserver eine komplett neue HTML-Seite, die vom Browser verarbeitet werden muss. Dies unterbricht die aktuelle Benutzeraktion und schränkt die Interaktionen während des Neuladens ein. Dieser Workflow wird auch als *Multi-Page Application* oder *MPA* bezeichnet.
 
-![Aktualisierungsworkflow in einer Multi-Page-Anwendung](../../../../7-bank-project/3-data/images/mpa.png)
+![Aktualisierungsworkflow in einer Multi-Page-Anwendung](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.de.png)
 
-Als Webanwendungen komplexer und interaktiver wurden, entstand eine neue Technik namens [AJAX (Asynchronous JavaScript and XML)](https://de.wikipedia.org/wiki/Ajax_(Programmierung)). Diese Technik ermöglicht es Webanwendungen, Daten asynchron von einem Server zu senden und abzurufen, ohne die HTML-Seite neu laden zu müssen. Das führt zu schnelleren Updates und flüssigeren Benutzerinteraktionen. Wenn neue Daten vom Server empfangen werden, kann die aktuelle HTML-Seite auch mit JavaScript über die [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)-API aktualisiert werden. Im Laufe der Zeit hat sich dieser Ansatz zu dem entwickelt, was heute als [*Single-Page Application* oder *SPA*](https://de.wikipedia.org/wiki/Single-Page-Webanwendung) bekannt ist.
+Als Webanwendungen komplexer und interaktiver wurden, entstand eine neue Technik namens [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Diese Technik ermöglicht es Webanwendungen, Daten asynchron von einem Server zu senden und abzurufen, ohne die HTML-Seite neu laden zu müssen. Das führt zu schnelleren Updates und flüssigeren Benutzerinteraktionen. Wenn neue Daten vom Server empfangen werden, kann die aktuelle HTML-Seite auch mit JavaScript und der [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)-API aktualisiert werden. Im Laufe der Zeit hat sich dieser Ansatz zu dem entwickelt, was heute als [*Single-Page Application* oder *SPA*](https://en.wikipedia.org/wiki/Single-page_application) bekannt ist.
 
-![Aktualisierungsworkflow in einer Single-Page-Anwendung](../../../../7-bank-project/3-data/images/spa.png)
+![Aktualisierungsworkflow in einer Single-Page-Anwendung](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.de.png)
 
-Als AJAX erstmals eingeführt wurde, war die einzige verfügbare API zum asynchronen Abrufen von Daten [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Moderne Browser implementieren jedoch auch die bequemere und leistungsfähigere [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), die auf Promises basiert und besser geeignet ist, um JSON-Daten zu verarbeiten.
+Als AJAX erstmals eingeführt wurde, war die einzige verfügbare API zum asynchronen Abrufen von Daten [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Moderne Browser implementieren jedoch auch die bequemere und leistungsstärkere [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), die Promises verwendet und besser für die Verarbeitung von JSON-Daten geeignet ist.
 
-> Obwohl alle modernen Browser die `Fetch API` unterstützen, solltest du, wenn deine Webanwendung auch auf älteren Browsern funktionieren soll, immer die [Kompatibilitätstabelle auf caniuse.com](https://caniuse.com/fetch) überprüfen.
+> Obwohl alle modernen Browser die `Fetch API` unterstützen, solltest du, wenn deine Webanwendung auch auf älteren Browsern funktionieren soll, immer zuerst die [Kompatibilitätstabelle auf caniuse.com](https://caniuse.com/fetch) überprüfen.
 
 ### Aufgabe
 
-In [der vorherigen Lektion](../2-forms/README.md) haben wir das Registrierungsformular implementiert, um ein Konto zu erstellen. Jetzt fügen wir Code hinzu, um sich mit einem bestehenden Konto anzumelden und dessen Daten abzurufen. Öffne die Datei `app.js` und füge eine neue Funktion `login` hinzu:
+In [der vorherigen Lektion](../2-forms/README.md) haben wir das Registrierungsformular implementiert, um ein Konto zu erstellen. Jetzt fügen wir Code hinzu, um sich mit einem bestehenden Konto anzumelden und dessen Daten abzurufen. Öffne die Datei `app.js` und füge eine neue `login`-Funktion hinzu:
 
 ```js
 async function login() {
@@ -72,11 +72,11 @@ async function getAccount(user) {
 }
 ```
 
-Wir verwenden die `fetch` API, um die Daten asynchron vom Server anzufordern. Diesmal benötigen wir keine zusätzlichen Parameter außer der URL, da wir nur Daten abfragen. Standardmäßig erstellt `fetch` eine [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET)-HTTP-Anfrage, was hier genau das ist, was wir brauchen.
+Wir verwenden die `fetch` API, um die Daten asynchron vom Server anzufordern. Diesmal benötigen wir keine zusätzlichen Parameter außer der URL, da wir nur Daten abfragen. Standardmäßig erstellt `fetch` eine [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET)-HTTP-Anfrage, was genau das ist, was wir hier benötigen.
 
-✅ `encodeURIComponent()` ist eine Funktion, die Sonderzeichen für URLs maskiert. Welche Probleme könnten auftreten, wenn wir diese Funktion nicht aufrufen und den Wert von `user` direkt in der URL verwenden?
+✅ `encodeURIComponent()` ist eine Funktion, die Sonderzeichen für URLs maskiert. Welche Probleme könnten auftreten, wenn wir diese Funktion nicht aufrufen und den `user`-Wert direkt in der URL verwenden?
 
-Jetzt aktualisieren wir unsere `login`-Funktion, um `getAccount` zu verwenden:
+Nun aktualisieren wir unsere `login`-Funktion, um `getAccount` zu verwenden:
 
 ```js
 async function login() {
@@ -93,7 +93,7 @@ async function login() {
 }
 ```
 
-Da `getAccount` eine asynchrone Funktion ist, müssen wir sie mit dem Schlüsselwort `await` verwenden, um auf das Serverergebnis zu warten. Wie bei jeder Serveranfrage müssen wir auch Fehlerfälle behandeln. Für den Moment fügen wir nur eine Log-Nachricht hinzu, um den Fehler anzuzeigen, und kommen später darauf zurück.
+Da `getAccount` eine asynchrone Funktion ist, müssen wir sie mit dem Schlüsselwort `await` verwenden, um auf das Serverergebnis zu warten. Wie bei jeder Serveranfrage müssen wir auch Fehlerfälle behandeln. Vorerst fügen wir nur eine Log-Nachricht hinzu, um den Fehler anzuzeigen, und kommen später darauf zurück.
 
 Dann müssen wir die Daten irgendwo speichern, damit wir sie später verwenden können, um die Dashboard-Informationen anzuzeigen. Da die Variable `account` noch nicht existiert, erstellen wir eine globale Variable dafür am Anfang unserer Datei:
 
@@ -118,25 +118,25 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ Wusstest du, dass du standardmäßig nur Server-APIs von derselben *Domain und Port* wie die Webseite, die du ansiehst, aufrufen kannst? Dies ist ein Sicherheitsmechanismus, der von Browsern durchgesetzt wird. Aber Moment mal, unsere Web-App läuft auf `localhost:3000`, während die Server-API auf `localhost:5000` läuft. Warum funktioniert das? Durch die Verwendung einer Technik namens [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) ist es möglich, Cross-Origin-HTTP-Anfragen auszuführen, wenn der Server spezielle Header zur Antwort hinzufügt, die Ausnahmen für bestimmte Domains erlauben.
+✅ Wusstest du, dass du standardmäßig nur Server-APIs von derselben *Domain und Port* wie die Webseite, die du ansiehst, aufrufen kannst? Dies ist ein Sicherheitsmechanismus, der von Browsern durchgesetzt wird. Aber Moment mal, unsere Web-App läuft auf `localhost:3000`, während die Server-API auf `localhost:5000` läuft. Warum funktioniert es trotzdem? Durch die Verwendung einer Technik namens [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) ist es möglich, Cross-Origin-HTTP-Anfragen auszuführen, wenn der Server spezielle Header zur Antwort hinzufügt, die Ausnahmen für bestimmte Domains erlauben.
 
-> Erfahre mehr über APIs in dieser [Lektion](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
+> Erfahre mehr über APIs, indem du diese [Lektion](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon) durcharbeitest.
 
 ## HTML aktualisieren, um Daten anzuzeigen
 
 Jetzt, da wir die Benutzerdaten haben, müssen wir das bestehende HTML aktualisieren, um sie anzuzeigen. Wir wissen bereits, wie man ein Element aus dem DOM abruft, z. B. mit `document.getElementById()`. Nachdem du ein Basiselement hast, kannst du mit diesen APIs den Inhalt ändern oder Kind-Elemente hinzufügen:
 
-- Mit der [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent)-Eigenschaft kannst du den Text eines Elements ändern. Beachte, dass das Ändern dieses Werts alle Kind-Elemente des Elements (falls vorhanden) entfernt und durch den angegebenen Text ersetzt. Daher ist es auch eine effiziente Methode, alle Kinder eines Elements zu entfernen, indem man ihm einen leeren String `''` zuweist.
+- Mit der [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent)-Eigenschaft kannst du den Text eines Elements ändern. Beachte, dass das Ändern dieses Werts alle Kind-Elemente des Elements (falls vorhanden) entfernt und durch den angegebenen Text ersetzt. Daher ist es auch eine effiziente Methode, um alle Kinder eines bestimmten Elements zu entfernen, indem man ihm einen leeren String `''` zuweist.
 
-- Mit [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) und der [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-Methode kannst du ein oder mehrere neue Kind-Elemente erstellen und anhängen.
+- Mit [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) zusammen mit der [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-Methode kannst du ein oder mehrere neue Kind-Elemente erstellen und anhängen.
 
 ✅ Mit der [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML)-Eigenschaft eines Elements ist es ebenfalls möglich, dessen HTML-Inhalt zu ändern. Diese Methode sollte jedoch vermieden werden, da sie anfällig für [Cross-Site-Scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting)-Angriffe ist.
 
 ### Aufgabe
 
-Bevor wir zur Dashboard-Seite übergehen, sollten wir noch etwas auf der *Login*-Seite erledigen. Derzeit wird, wenn du versuchst, dich mit einem nicht existierenden Benutzernamen anzumelden, eine Nachricht in der Konsole angezeigt, aber für einen normalen Benutzer ändert sich nichts, und man weiß nicht, was los ist.
+Bevor wir zur Dashboard-Seite übergehen, gibt es noch etwas, das wir auf der *Login*-Seite tun sollten. Derzeit wird, wenn du versuchst, dich mit einem nicht existierenden Benutzernamen anzumelden, eine Nachricht in der Konsole angezeigt, aber für einen normalen Benutzer ändert sich nichts, und man weiß nicht, was los ist.
 
-Fügen wir ein Platzhalterelement im Login-Formular hinzu, in dem wir bei Bedarf eine Fehlermeldung anzeigen können. Ein guter Platz wäre direkt vor dem Login-`<button>`:
+Fügen wir ein Platzhalter-Element im Login-Formular hinzu, in dem wir bei Bedarf eine Fehlermeldung anzeigen können. Ein guter Platz wäre direkt vor dem Login-`<button>`:
 
 ```html
 ...
@@ -156,7 +156,7 @@ function updateElement(id, text) {
 }
 ```
 
-Diese Funktion ist ziemlich einfach: Sie aktualisiert den Textinhalt des DOM-Elements mit der passenden `id`, basierend auf den übergebenen Parametern *id* und *text*. Verwenden wir diese Methode anstelle der vorherigen Fehlermeldung in der `login`-Funktion:
+Diese Funktion ist ziemlich einfach: Sie aktualisiert den Textinhalt des DOM-Elements mit der angegebenen `id` und dem übergebenen Text. Lass uns diese Methode anstelle der vorherigen Fehlermeldung in der `login`-Funktion verwenden:
 
 ```js
 if (data.error) {
@@ -166,9 +166,9 @@ if (data.error) {
 
 Wenn du jetzt versuchst, dich mit einem ungültigen Konto anzumelden, solltest du etwas wie das Folgende sehen:
 
-![Screenshot, der die Fehlermeldung während des Logins anzeigt](../../../../7-bank-project/3-data/images/login-error.png)
+![Screenshot, der die Fehlermeldung beim Login anzeigt](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.de.png)
 
-Jetzt haben wir einen Fehlertext, der visuell angezeigt wird. Wenn du jedoch einen Screenreader verwendest, wirst du feststellen, dass nichts angesagt wird. Damit Text, der dynamisch zu einer Seite hinzugefügt wird, von Screenreadern angesagt wird, muss er eine sogenannte [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) verwenden. Hier verwenden wir eine spezielle Art von Live-Region, die als Alert bezeichnet wird:
+Jetzt haben wir einen Fehlertext, der visuell angezeigt wird. Wenn du jedoch einen Screenreader verwendest, wirst du feststellen, dass nichts angekündigt wird. Damit Text, der dynamisch zu einer Seite hinzugefügt wird, von Screenreadern angekündigt wird, muss er eine sogenannte [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) verwenden. Hier verwenden wir eine spezielle Art von Live-Region, die als Alert bezeichnet wird:
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -196,11 +196,11 @@ So sieht ein vom Server empfangenes Kontoobjekt aus:
 }
 ```
 
-> Hinweis: Um dir das Leben zu erleichtern, kannst du das vorgefertigte `test`-Konto verwenden, das bereits mit Daten gefüllt ist.
+> Hinweis: Um dir das Leben zu erleichtern, kannst du das vorab erstellte `test`-Konto verwenden, das bereits mit Daten gefüllt ist.
 
 ### Aufgabe
 
-Beginnen wir damit, den Abschnitt "Balance" im HTML zu ersetzen, um Platzhalterelemente hinzuzufügen:
+Beginnen wir damit, den Abschnitt "Balance" im HTML zu ersetzen, um Platzhalter-Elemente hinzuzufügen:
 
 ```html
 <section>
@@ -216,7 +216,7 @@ Wir fügen auch einen neuen Abschnitt direkt darunter hinzu, um die Kontobeschre
 
 ✅ Da die Kontobeschreibung als Titel für den darunter liegenden Inhalt fungiert, wird sie semantisch als Überschrift ausgezeichnet. Erfahre mehr darüber, wie [Überschriftenstruktur](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) für die Barrierefreiheit wichtig ist, und wirf einen kritischen Blick auf die Seite, um zu bestimmen, was sonst noch eine Überschrift sein könnte.
 
-Als Nächstes erstellen wir eine neue Funktion in `app.js`, um die Platzhalter zu füllen:
+Als Nächstes erstellen wir eine neue Funktion in `app.js`, um die Platzhalter auszufüllen:
 
 ```js
 function updateDashboard() {
@@ -230,11 +230,11 @@ function updateDashboard() {
 }
 ```
 
-Zuerst überprüfen wir, ob wir die benötigten Kontodaten haben, bevor wir fortfahren. Dann verwenden wir die zuvor erstellte Funktion `updateElement()`, um das HTML zu aktualisieren.
+Zuerst überprüfen wir, ob wir die benötigten Kontodaten haben, bevor wir fortfahren. Dann verwenden wir die Funktion `updateElement()`, die wir zuvor erstellt haben, um das HTML zu aktualisieren.
 
 > Um die Anzeige des Kontostands ansprechender zu gestalten, verwenden wir die Methode [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), um den Wert mit 2 Nachkommastellen anzuzeigen.
 
-Jetzt müssen wir unsere `updateDashboard()`-Funktion jedes Mal aufrufen, wenn das Dashboard geladen wird. Wenn du die [Aufgabe aus Lektion 1](../1-template-route/assignment.md) bereits abgeschlossen hast, sollte dies einfach sein. Andernfalls kannst du die folgende Implementierung verwenden.
+Nun müssen wir unsere `updateDashboard()`-Funktion jedes Mal aufrufen, wenn das Dashboard geladen wird. Wenn du die [Aufgabe der Lektion 1](../1-template-route/assignment.md) bereits abgeschlossen hast, sollte dies einfach sein. Andernfalls kannst du die folgende Implementierung verwenden.
 
 Füge diesen Code am Ende der Funktion `updateRoute()` hinzu:
 
@@ -257,7 +257,7 @@ Mit dieser Änderung wird die Funktion `updateDashboard()` jedes Mal aufgerufen,
 
 ## Tabellenzeilen dynamisch mit HTML-Templates erstellen
 
-In der [ersten Lektion](../1-template-route/README.md) haben wir HTML-Templates zusammen mit der Methode [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) verwendet, um die Navigation in unserer App zu implementieren. Templates können auch kleiner sein und verwendet werden, um sich wiederholende Teile einer Seite dynamisch zu füllen.
+In der [ersten Lektion](../1-template-route/README.md) haben wir HTML-Templates zusammen mit der Methode [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) verwendet, um die Navigation in unserer App zu implementieren. Templates können auch kleiner sein und verwendet werden, um wiederholte Teile einer Seite dynamisch zu füllen.
 
 Wir verwenden einen ähnlichen Ansatz, um die Liste der Transaktionen in der HTML-Tabelle anzuzeigen.
 
@@ -275,9 +275,9 @@ Füge ein neues Template in den HTML-`<body>`-Bereich ein:
 </template>
 ```
 
-Dieses Template stellt eine einzelne Tabellenzeile dar, mit den 3 Spalten, die wir füllen möchten: *Datum*, *Objekt* und *Betrag* einer Transaktion.
+Dieses Template stellt eine einzelne Tabellenzeile dar, mit den 3 Spalten, die wir ausfüllen möchten: *Datum*, *Objekt* und *Betrag* einer Transaktion.
 
-Füge dann diese `id`-Eigenschaft zum `<tbody>`-Element der Tabelle im Dashboard-Template hinzu, um es mit JavaScript leichter zu finden:
+Füge dann diese `id`-Eigenschaft zum `<tbody>`-Element der Tabelle innerhalb des Dashboard-Templates hinzu, um es mit JavaScript leichter zu finden:
 
 ```html
 <tbody id="transactions"></tbody>
@@ -308,7 +308,7 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-Hier verwenden wir die Methode [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment), die ein neues DOM-Fragment erstellt, mit dem wir arbeiten können, bevor wir es schließlich an unsere HTML-Tabelle anhängen.
+Hier verwenden wir die Methode [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment), die ein neues DOM-Fragment erstellt, an dem wir arbeiten können, bevor wir es schließlich an unsere HTML-Tabelle anhängen.
 
 Es gibt noch eine Sache, die wir tun müssen, bevor dieser Code funktioniert, da unsere Funktion `updateElement()` derzeit nur Textinhalte unterstützt. Ändern wir ihren Code ein wenig:
 
@@ -321,7 +321,7 @@ function updateElement(id, textOrNode) {
 ```
 
 Wir verwenden die Methode [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append), da sie es ermöglicht, entweder Text oder [DOM-Knoten](https://developer.mozilla.org/docs/Web/API/Node) an ein übergeordnetes Element anzuhängen, was perfekt für all unsere Anwendungsfälle ist.
-Wenn Sie versuchen, sich mit dem `test`-Konto anzumelden, sollten Sie jetzt eine Transaktionsliste auf dem Dashboard sehen 🎉.
+Wenn du versuchst, dich mit dem `test`-Konto anzumelden, solltest du jetzt eine Transaktionsliste auf dem Dashboard sehen 🎉.
 
 ---
 
@@ -331,7 +331,7 @@ Arbeitet zusammen, um die Dashboard-Seite wie eine echte Banking-App aussehen zu
 
 Hier ist ein Beispiel für eine gestaltete Dashboard-Seite:
 
-![Screenshot eines Beispielergebnisses des Dashboards nach der Gestaltung](../../../../7-bank-project/images/screen2.png)
+![Screenshot eines Beispielergebnisses des Dashboards nach der Gestaltung](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.de.png)
 
 ## Quiz nach der Vorlesung
 
@@ -339,7 +339,9 @@ Hier ist ein Beispiel für eine gestaltete Dashboard-Seite:
 
 ## Aufgabe
 
-[Refaktorieren und kommentieren Sie Ihren Code](assignment.md)
+[Refaktoriert und kommentiert euren Code](assignment.md)
+
+---
 
 **Haftungsausschluss**:  
 Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-24T12:35:58+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T16:13:03+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "pt"
 }
@@ -13,13 +13,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/35)
 
-Nesta lição, vais aprender a disparar lasers com JavaScript! Vamos adicionar duas coisas ao nosso jogo:
+Nesta lição vais aprender a disparar lasers com JavaScript! Vamos adicionar duas coisas ao nosso jogo:
 
 - **Um laser**: este laser é disparado da nave do herói e segue verticalmente para cima.
 - **Deteção de colisões**, como parte da implementação da capacidade de *disparar*, também vamos adicionar algumas regras interessantes ao jogo:
    - **Laser atinge inimigo**: O inimigo morre se for atingido por um laser.
    - **Laser atinge o topo do ecrã**: Um laser é destruído se atingir a parte superior do ecrã.
-   - **Colisão entre inimigo e herói**: Um inimigo e o herói são destruídos se colidirem.
+   - **Colisão entre inimigo e herói**: Um inimigo e o herói são destruídos se colidirem um com o outro.
    - **Inimigo atinge o fundo do ecrã**: Um inimigo e o herói são destruídos se o inimigo atingir o fundo do ecrã.
 
 Resumindo, tu -- *o herói* -- precisas de atingir todos os inimigos com um laser antes que eles consigam chegar ao fundo do ecrã.
@@ -30,7 +30,7 @@ Vamos ser heróicos juntos!
 
 ## Deteção de colisões
 
-Como fazemos a deteção de colisões? Precisamos de pensar nos objetos do jogo como retângulos em movimento. Porquê, perguntas tu? Bem, a imagem usada para desenhar um objeto do jogo é um retângulo: tem um `x`, `y`, `largura` e `altura`.
+Como fazemos a deteção de colisões? Precisamos de pensar nos objetos do jogo como retângulos em movimento. Porquê, perguntas tu? Bem, a imagem usada para desenhar um objeto do jogo é um retângulo: tem `x`, `y`, `largura` e `altura`.
 
 Se dois retângulos, ou seja, um herói e um inimigo *intersetarem*, tens uma colisão. O que deve acontecer a seguir depende das regras do jogo. Para implementar a deteção de colisões, precisas do seguinte:
 
@@ -60,14 +60,14 @@ Se dois retângulos, ou seja, um herói e um inimigo *intersetarem*, tens uma co
 
 ## Como destruímos coisas
 
-Para destruir coisas num jogo, precisas de informar o jogo que não deve mais pintar esse item no ciclo de jogo que é acionado em determinado intervalo. Uma forma de fazer isso é marcar um objeto do jogo como *morto* quando algo acontece, assim:
+Para destruir coisas num jogo, precisas de informar o jogo que não deve mais pintar esse item no ciclo de jogo que é acionado em intervalos específicos. Uma forma de fazer isso é marcar um objeto do jogo como *morto* quando algo acontece, assim:
 
 ```javascript
 // collision happened
 enemy.dead = true
 ```
 
-Depois podes proceder para eliminar os objetos *mortos* antes de repintar o ecrã, assim:
+Depois podes proceder para filtrar os objetos *mortos* antes de repintar o ecrã, assim:
 
 ```javascript
 gameObjects = gameObject.filter(go => !go.dead);
@@ -75,15 +75,15 @@ gameObjects = gameObject.filter(go => !go.dead);
 
 ## Como disparamos um laser
 
-Disparar um laser traduz-se em responder a um evento de tecla e criar um objeto que se move numa determinada direção. Por isso, precisamos de realizar os seguintes passos:
+Disparar um laser traduz-se em responder a um evento de tecla e criar um objeto que se move numa direção específica. Por isso, precisamos de realizar os seguintes passos:
 
 1. **Criar um objeto laser**: a partir do topo da nave do herói, que ao ser criado começa a mover-se para cima em direção ao topo do ecrã.
 2. **Associar código a um evento de tecla**: precisamos de escolher uma tecla no teclado que represente o jogador a disparar o laser.
 3. **Criar um objeto do jogo que se pareça com um laser** quando a tecla é pressionada.
 
-## Intervalo entre disparos do laser
+## Intervalo de disparo do laser
 
-O laser precisa de ser disparado sempre que pressionas uma tecla, como *espaço*, por exemplo. Para evitar que o jogo produza demasiados lasers num curto espaço de tempo, precisamos de corrigir isso. A solução é implementar um chamado *intervalo*, um temporizador, que garante que um laser só pode ser disparado de tempos em tempos. Podes implementar isso da seguinte forma:
+O laser precisa de ser disparado sempre que pressionas uma tecla, como *espaço*, por exemplo. Para evitar que o jogo produza demasiados lasers num curto espaço de tempo, precisamos de corrigir isso. A solução é implementar um chamado *intervalo de disparo*, um temporizador, que garante que um laser só pode ser disparado de tempos em tempos. Podes implementar isso da seguinte forma:
 
 ```javascript
 class Cooldown {
@@ -109,7 +109,7 @@ class Weapon {
 }
 ```
 
-✅ Consulta a lição 1 da série de jogos espaciais para te lembrares sobre *intervalos*.
+✅ Consulta a lição 1 da série de jogos espaciais para te lembrares sobre *intervalos de disparo*.
 
 ## O que construir
 
@@ -119,9 +119,9 @@ Vais pegar no código existente (que deves ter limpo e refatorado) da lição an
 
 - **Adicionar deteção de colisões**, quando um laser colide com algo, as seguintes regras devem ser aplicadas:
    1. **Laser atinge inimigo**: o inimigo morre se for atingido por um laser.
-   2. **Laser atinge o topo do ecrã**: um laser é destruído se atingir a parte superior do ecrã.
-   3. **Colisão entre inimigo e herói**: um inimigo e o herói são destruídos se colidirem.
-   4. **Inimigo atinge o fundo do ecrã**: um inimigo e o herói são destruídos se o inimigo atingir o fundo do ecrã.
+   2. **Laser atinge o topo do ecrã**: Um laser é destruído se atingir a parte superior do ecrã.
+   3. **Colisão entre inimigo e herói**: um inimigo e o herói são destruídos se colidirem um com o outro.
+   4. **Inimigo atinge o fundo do ecrã**: Um inimigo e o herói são destruídos se o inimigo atingir o fundo do ecrã.
 
 ## Passos recomendados
 
@@ -230,7 +230,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
       }
       ```
 
-   1. **Lidar com colisões**, Implementa regras de colisão para o laser. Adiciona uma função `updateGameObjects()` que testa objetos colidindo por impactos:
+   1. **Lidar com colisões**, Implementa regras de colisão para o laser. Adiciona uma função `updateGameObjects()` que testa objetos em colisão:
 
       ```javascript
       function updateGameObjects() {
@@ -254,9 +254,9 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
       Certifica-te de adicionar `updateGameObjects()` no teu ciclo de jogo em `window.onload`.
 
-   4. **Implementar intervalo** no laser, para que só possa ser disparado de tempos em tempos.
+   4. **Implementar intervalo de disparo** no laser, para que só possa ser disparado de tempos em tempos.
 
-      Finalmente, edita a classe Hero para que possa ter intervalo:
+      Finalmente, edita a classe Hero para que possa ter intervalo de disparo:
 
        ```javascript
       class Hero extends GameObject {
@@ -291,13 +291,13 @@ Neste ponto, o teu jogo já tem alguma funcionalidade! Podes navegar com as tecl
 
 ## 🚀 Desafio
 
-Adiciona uma explosão! Dá uma olhada nos recursos do jogo no [repositório Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) e tenta adicionar uma explosão quando o laser atingir um alienígena.
+Adiciona uma explosão! Dá uma olhada nos recursos do jogo no [repositório Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) e tenta adicionar uma explosão quando o laser atinge um alienígena.
 
 ## Questionário Pós-Aula
 
 [Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/36)
 
-## Revisão & Estudo Individual
+## Revisão e Estudo Individual
 
 Experimenta com os intervalos no teu jogo até agora. O que acontece quando os alteras? Lê mais sobre [eventos de temporização em JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
@@ -305,5 +305,7 @@ Experimenta com os intervalos no teu jogo até agora. O que acontece quando os a
 
 [Explorar colisões](assignment.md)
 
+---
+
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original no seu idioma nativo deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante ter em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

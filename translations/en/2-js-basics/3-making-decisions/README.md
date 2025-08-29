@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-28T11:40:43+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T13:23:01+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "en"
 }
@@ -21,13 +21,13 @@ Making decisions and controlling the flow of your code makes it reusable and rel
 
 [![Making Decisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
 
-> 🎥 Click the image above to watch a video about making decisions.
+> 🎥 Click the image above for a video about making decisions.
 
-> You can explore this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
+> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 
 ## A Brief Recap on Booleans
 
-Booleans can only have two values: `true` or `false`. They are used to decide which lines of code should execute when certain conditions are met.
+Booleans can only have two values: `true` or `false`. They are used to decide which lines of code should execute based on specific conditions.
 
 You can set a Boolean value like this:
 
@@ -46,14 +46,14 @@ Operators are used to evaluate conditions by comparing values, resulting in a Bo
 | `<=`   | **Less than or equal to**: Compares two values and returns `true` if the value on the left is smaller than or equal to the value on the right                 | `5 <= 6 // true`   |
 | `>`    | **Greater than**: Compares two values and returns `true` if the value on the left is larger than the value on the right                                       | `5 > 6 // false`   |
 | `>=`   | **Greater than or equal to**: Compares two values and returns `true` if the value on the left is larger than or equal to the value on the right               | `5 >= 6 // false`  |
-| `===`  | **Strict equality**: Compares two values and returns `true` if the values are equal and of the same data type                                                 | `5 === 6 // false` |
+| `===`  | **Strict equality**: Compares two values and returns `true` if both values are equal and of the same data type                                                | `5 === 6 // false` |
 | `!==`  | **Inequality**: Compares two values and returns the opposite Boolean value of what a strict equality operator would return                                    | `5 !== 6 // true`  |
 
 ✅ Test your understanding by writing some comparisons in your browser's console. Were any results unexpected?
 
 ## If Statement
 
-An `if` statement runs the code inside its block if the condition evaluates to `true`.
+The `if` statement executes the code within its block if the condition evaluates to `true`.
 
 ```javascript
 if (condition) {
@@ -75,7 +75,7 @@ if (currentMoney >= laptopPrice) {
 
 ## If..Else Statement
 
-The `else` statement runs the code inside its block when the condition is `false`. It is optional when using an `if` statement.
+The `else` statement executes the code within its block when the condition is `false`. It is optional when using an `if` statement.
 
 ```javascript
 let currentMoney;
@@ -90,11 +90,11 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-✅ Test your understanding of this code and the next example by running them in a browser console. Change the values of the `currentMoney` and `laptopPrice` variables to see how the `console.log()` output changes.
+✅ Test your understanding of this code and the following code by running it in a browser console. Modify the values of the `currentMoney` and `laptopPrice` variables to see how the `console.log()` output changes.
 
 ## Switch Statement
 
-The `switch` statement is used to execute different actions based on different conditions. It allows you to select one of many code blocks to run.
+The `switch` statement allows you to perform different actions based on different conditions. Use it to select one of many code blocks to execute.
 
 ```javascript
 switch (expression) {
@@ -127,7 +127,7 @@ switch (a) {
 console.log(`The value is ${a}`);
 ```
 
-✅ Test your understanding of this code and the next example by running them in a browser console. Change the value of the variable `a` to see how the `console.log()` output changes.
+✅ Test your understanding of this code and the following code by running it in a browser console. Modify the value of the variable `a` to see how the `console.log()` output changes.
 
 ## Logical Operators and Booleans
 
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Negation Operator
 
-You've seen how `if...else` statements can be used to create conditional logic. Anything inside an `if` must evaluate to `true` or `false`. Using the `!` operator, you can _negate_ an expression. Here's an example:
+You've seen how `if...else` statements can be used to create conditional logic. Anything inside an `if` must evaluate to `true` or `false`. The `!` operator allows you to _negate_ an expression, like this:
 
 ```javascript
 if (!condition) {
@@ -171,7 +171,7 @@ if (!condition) {
 
 ### Ternary Expressions
 
-`if...else` isn't the only way to write decision logic. You can also use a ternary operator, which has the following syntax:
+`if...else` isn't the only way to express decision-making logic. You can also use a ternary operator, which has the following syntax:
 
 ```javascript
 let variable = condition ? <return this if true> : <return this if false>
@@ -189,7 +189,8 @@ let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 
 The example above states:
 
-- If `firstNumber` is greater than `secondNumber`, assign `firstNumber` to `biggestNumber`.
+- If `firstNumber` is greater than `secondNumber`,  
+  assign `firstNumber` to `biggestNumber`.  
 - Otherwise, assign `secondNumber`.
 
 The ternary expression is simply a compact way of writing the following code:
@@ -217,7 +218,7 @@ Write a program using logical operators, then rewrite it using a ternary express
 
 ## Review & Self Study
 
-Learn more about the various operators available [on MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
+Learn more about the various operators available to you [on MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
 Check out Josh Comeau's excellent [operator lookup](https://joshwcomeau.com/operator-lookup/)!
 

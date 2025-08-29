@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c63675cfaf1d223b37bb9fecbfe7c252",
-  "translation_date": "2025-08-24T12:58:43+00:00",
+  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
+  "translation_date": "2025-08-29T14:18:15+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "de"
 }
 -->
 # Einführung in Programmiersprachen und Werkzeuge des Handwerks
 
-Diese Lektion behandelt die Grundlagen von Programmiersprachen. Die hier behandelten Themen gelten für die meisten modernen Programmiersprachen. Im Abschnitt "Werkzeuge des Handwerks" lernst du nützliche Software kennen, die dir als Entwickler:in hilft.
+Diese Lektion behandelt die Grundlagen von Programmiersprachen. Die hier behandelten Themen gelten für die meisten modernen Programmiersprachen. Im Abschnitt "Werkzeuge des Handwerks" lernst du nützliche Software kennen, die dir als Entwickler hilft.
 
-![Intro Programmierung](../../../../sketchnotes/webdev101-programming.png)
+![Intro Programmierung](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.de.png)
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz vor der Vorlesung
@@ -21,30 +21,30 @@ Diese Lektion behandelt die Grundlagen von Programmiersprachen. Die hier behande
 
 In dieser Lektion behandeln wir:
 
-- Was ist Programmieren?
+- Was ist Programmierung?
 - Arten von Programmiersprachen
 - Grundelemente eines Programms
-- Nützliche Software und Werkzeuge für professionelle Entwickler:innen
+- Nützliche Software und Tools für professionelle Entwickler
 
 > Du kannst diese Lektion auf [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon) absolvieren!
 
-## Was ist Programmieren?
+## Was ist Programmierung?
 
-Programmieren (auch bekannt als Codieren) ist der Prozess, Anweisungen für ein Gerät wie einen Computer oder ein mobiles Gerät zu schreiben. Wir schreiben diese Anweisungen mit einer Programmiersprache, die dann vom Gerät interpretiert wird. Diese Anweisungen können verschiedene Namen haben, aber *Programm*, *Computerprogramm*, *Anwendung (App)* und *ausführbare Datei* sind einige gängige Bezeichnungen.
+Programmierung (auch bekannt als Codierung) ist der Prozess des Schreibens von Anweisungen für ein Gerät wie einen Computer oder ein mobiles Gerät. Wir schreiben diese Anweisungen mit einer Programmiersprache, die dann vom Gerät interpretiert wird. Diese Anweisungen können verschiedene Namen haben, aber *Programm*, *Computerprogramm*, *Anwendung (App)* und *ausführbare Datei* sind einige gängige Begriffe.
 
-Ein *Programm* kann alles sein, was mit Code geschrieben wurde; Websites, Spiele und Handy-Apps sind Programme. Auch wenn es möglich ist, ein Programm ohne Code zu erstellen, wird die zugrunde liegende Logik vom Gerät interpretiert, und diese Logik wurde höchstwahrscheinlich mit Code geschrieben. Ein Programm, das *läuft* oder *ausgeführt* wird, führt Anweisungen aus. Das Gerät, mit dem du diese Lektion liest, führt ein Programm aus, um sie auf deinem Bildschirm anzuzeigen.
+Ein *Programm* kann alles sein, was mit Code geschrieben wurde; Websites, Spiele und Handy-Apps sind Programme. Obwohl es möglich ist, ein Programm ohne Code zu erstellen, wird die zugrunde liegende Logik vom Gerät interpretiert, und diese Logik wurde höchstwahrscheinlich mit Code geschrieben. Ein Programm, das *läuft* oder *ausgeführt* wird, führt Anweisungen aus. Das Gerät, mit dem du diese Lektion liest, führt ein Programm aus, um sie auf deinem Bildschirm anzuzeigen.
 
-✅ Recherchiere ein wenig: Wer gilt als der/die erste Computerprogrammierer:in der Welt?
+✅ Recherchiere ein wenig: Wer gilt als der erste Computerprogrammierer der Welt?
 
 ## Programmiersprachen
 
-Programmiersprachen ermöglichen es Entwickler:innen, Anweisungen für ein Gerät zu schreiben. Geräte können nur Binärcode (1en und 0en) verstehen, und für *die meisten* Entwickler:innen ist das keine sehr effiziente Art der Kommunikation. Programmiersprachen sind das Mittel zur Kommunikation zwischen Menschen und Computern.
+Programmiersprachen ermöglichen es Entwicklern, Anweisungen für ein Gerät zu schreiben. Geräte können nur Binärdaten (1en und 0en) verstehen, und für *die meisten* Entwickler ist das keine sehr effiziente Art der Kommunikation. Programmiersprachen sind das Mittel der Kommunikation zwischen Menschen und Computern.
 
-Programmiersprachen gibt es in verschiedenen Formaten und sie können unterschiedlichen Zwecken dienen. Zum Beispiel wird JavaScript hauptsächlich für Webanwendungen verwendet, während Bash hauptsächlich für Betriebssysteme genutzt wird.
+Programmiersprachen gibt es in verschiedenen Formaten und sie können unterschiedliche Zwecke erfüllen. Zum Beispiel wird JavaScript hauptsächlich für Webanwendungen verwendet, während Bash hauptsächlich für Betriebssysteme genutzt wird.
 
-*Low-Level-Sprachen* erfordern in der Regel weniger Schritte als *High-Level-Sprachen*, damit ein Gerät Anweisungen interpretieren kann. Was High-Level-Sprachen jedoch beliebt macht, ist ihre Lesbarkeit und Unterstützung. JavaScript gilt als High-Level-Sprache.
+*Low-Level-Sprachen* erfordern in der Regel weniger Schritte als *High-Level-Sprachen*, damit ein Gerät Anweisungen interpretieren kann. Was High-Level-Sprachen jedoch beliebt macht, ist ihre Lesbarkeit und Unterstützung. JavaScript wird als High-Level-Sprache angesehen.
 
-Der folgende Code zeigt den Unterschied zwischen einer High-Level-Sprache wie JavaScript und einer Low-Level-Sprache wie ARM-Assemblercode.
+Der folgende Code zeigt den Unterschied zwischen einer High-Level-Sprache wie JavaScript und einer Low-Level-Sprache wie ARM-Assembler-Code.
 
 ```javascript
 let number = 10
@@ -91,32 +91,32 @@ Glaub es oder nicht, *sie tun beide dasselbe*: Sie geben eine Fibonacci-Sequenz 
 
 Eine einzelne Anweisung in einem Programm wird als *Statement* bezeichnet und hat normalerweise ein Zeichen oder einen Zeilenabstand, der markiert, wo die Anweisung endet oder *terminiert*. Wie ein Programm terminiert, variiert je nach Sprache.
 
-Anweisungen in einem Programm können von Daten abhängen, die von einem Benutzer oder einer anderen Quelle bereitgestellt werden, um Anweisungen auszuführen. Daten können beeinflussen, wie sich ein Programm verhält, daher bieten Programmiersprachen eine Möglichkeit, Daten vorübergehend zu speichern, damit sie später verwendet werden können. Diese werden als *Variablen* bezeichnet. Variablen sind Anweisungen, die ein Gerät anweisen, Daten im Speicher zu speichern. Variablen in Programmen ähneln Variablen in der Algebra, da sie einen eindeutigen Namen haben und sich ihr Wert im Laufe der Zeit ändern kann.
+Anweisungen in einem Programm können von Daten abhängen, die von einem Benutzer oder anderswo bereitgestellt werden, um Anweisungen auszuführen. Daten können beeinflussen, wie ein Programm sich verhält, daher bieten Programmiersprachen eine Möglichkeit, Daten vorübergehend zu speichern, damit sie später verwendet werden können. Diese werden als *Variablen* bezeichnet. Variablen sind Anweisungen, die ein Gerät anweisen, Daten in seinem Speicher zu speichern. Variablen in Programmen sind ähnlich wie Variablen in der Algebra, bei denen sie einen eindeutigen Namen haben und ihr Wert sich im Laufe der Zeit ändern kann.
 
-Es besteht die Möglichkeit, dass einige Anweisungen von einem Gerät nicht ausgeführt werden. Dies geschieht in der Regel absichtlich, wenn es vom Entwickler so geschrieben wurde, oder versehentlich, wenn ein unerwarteter Fehler auftritt. Diese Art der Kontrolle über eine Anwendung macht sie robuster und wartbarer. Typischerweise treten diese Kontrolländerungen auf, wenn bestimmte Bedingungen erfüllt sind. Eine gängige Anweisung in modernen Programmiersprachen, um zu steuern, wie ein Programm ausgeführt wird, ist die `if..else`-Anweisung.
+Es besteht die Möglichkeit, dass einige Anweisungen von einem Gerät nicht ausgeführt werden. Dies geschieht normalerweise absichtlich, wenn es vom Entwickler geschrieben wurde, oder versehentlich, wenn ein unerwarteter Fehler auftritt. Diese Art der Kontrolle über eine Anwendung macht sie robuster und wartungsfreundlicher. Typischerweise treten diese Änderungen in der Kontrolle auf, wenn bestimmte Bedingungen erfüllt sind. Eine gängige Anweisung, die in der modernen Programmierung verwendet wird, um zu steuern, wie ein Programm läuft, ist die `if..else`-Anweisung.
 
-✅ Du wirst mehr über diese Art von Anweisungen in späteren Lektionen lernen.
+✅ Du wirst mehr über diese Art von Anweisung in den folgenden Lektionen lernen.
 
 ## Werkzeuge des Handwerks
 
 [![Werkzeuge des Handwerks](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Werkzeuge des Handwerks")
 
-> 🎥 Klicke auf das Bild oben, um ein Video über Werkzeuge anzusehen
+> 🎥 Klicke auf das Bild oben für ein Video über Tools
 
-In diesem Abschnitt lernst du einige Software kennen, die du als nützlich empfinden könntest, wenn du deine Reise als professionelle:r Entwickler:in beginnst.
+In diesem Abschnitt lernst du einige Software kennen, die du als nützlich empfinden könntest, wenn du deine professionelle Entwicklerreise beginnst.
 
-Eine **Entwicklungsumgebung** ist eine einzigartige Sammlung von Werkzeugen und Funktionen, die ein:e Entwickler:in häufig beim Schreiben von Software verwendet. Einige dieser Werkzeuge wurden speziell auf die Bedürfnisse eines:einer Entwickler:in zugeschnitten und können sich im Laufe der Zeit ändern, wenn sich die Prioritäten in der Arbeit, bei persönlichen Projekten oder bei der Verwendung einer anderen Programmiersprache ändern. Entwicklungsumgebungen sind so einzigartig wie die Entwickler:innen, die sie nutzen.
+Eine **Entwicklungsumgebung** ist eine einzigartige Sammlung von Tools und Funktionen, die ein Entwickler häufig beim Schreiben von Software verwendet. Einige dieser Tools wurden für die spezifischen Bedürfnisse eines Entwicklers angepasst und können sich im Laufe der Zeit ändern, wenn sich die Prioritäten des Entwicklers in der Arbeit, bei persönlichen Projekten oder bei der Verwendung einer anderen Programmiersprache ändern. Entwicklungsumgebungen sind so einzigartig wie die Entwickler, die sie nutzen.
 
 ### Editoren
 
 Eines der wichtigsten Werkzeuge für die Softwareentwicklung ist der Editor. Editoren sind der Ort, an dem du deinen Code schreibst und manchmal auch ausführst.
 
-Entwickler:innen verlassen sich aus mehreren Gründen auf Editoren:
+Entwickler verlassen sich aus mehreren Gründen auf Editoren:
 
-- *Debugging* hilft, Fehler und Probleme aufzudecken, indem der Code Zeile für Zeile durchgegangen wird. Einige Editoren verfügen über Debugging-Funktionen, die für bestimmte Programmiersprachen angepasst und hinzugefügt werden können.
-- *Syntaxhervorhebung* fügt Farben und Textformatierungen zum Code hinzu, was ihn leichter lesbar macht. Die meisten Editoren erlauben eine angepasste Syntaxhervorhebung.
-- *Erweiterungen und Integrationen* sind spezialisierte Werkzeuge für Entwickler:innen, die von anderen Entwickler:innen erstellt wurden. Diese Werkzeuge sind nicht im Basis-Editor enthalten. Zum Beispiel dokumentieren viele Entwickler:innen ihren Code, um zu erklären, wie er funktioniert. Sie könnten eine Rechtschreibprüfungserweiterung installieren, um Tippfehler in der Dokumentation zu finden. Die meisten Erweiterungen sind für die Verwendung in einem bestimmten Editor gedacht, und die meisten Editoren bieten eine Möglichkeit, nach verfügbaren Erweiterungen zu suchen.
-- *Anpassung* ermöglicht es Entwickler:innen, eine einzigartige Entwicklungsumgebung zu schaffen, die ihren Bedürfnissen entspricht. Die meisten Editoren sind extrem anpassbar und erlauben es Entwickler:innen, eigene Erweiterungen zu erstellen.
+- *Debugging* hilft, Fehler und Probleme aufzudecken, indem der Code Zeile für Zeile durchgegangen wird. Einige Editoren haben Debugging-Funktionen; sie können angepasst und für bestimmte Programmiersprachen hinzugefügt werden.
+- *Syntax-Hervorhebung* fügt Farben und Textformatierungen zum Code hinzu, wodurch er leichter lesbar wird. Die meisten Editoren erlauben eine angepasste Syntax-Hervorhebung.
+- *Erweiterungen und Integrationen* sind spezialisierte Tools für Entwickler, von Entwicklern. Diese Tools sind nicht in den Basiseditor integriert. Zum Beispiel dokumentieren viele Entwickler ihren Code, um zu erklären, wie er funktioniert. Sie könnten eine Rechtschreibprüfungserweiterung installieren, um Tippfehler in der Dokumentation zu finden. Die meisten Erweiterungen sind für die Verwendung in einem bestimmten Editor gedacht, und die meisten Editoren bieten eine Möglichkeit, nach verfügbaren Erweiterungen zu suchen.
+- *Anpassung* ermöglicht es Entwicklern, eine einzigartige Entwicklungsumgebung zu schaffen, die ihren Bedürfnissen entspricht. Die meisten Editoren sind extrem anpassbar und erlauben es Entwicklern möglicherweise auch, benutzerdefinierte Erweiterungen zu erstellen.
 
 #### Beliebte Editoren und Webentwicklungs-Erweiterungen
 
@@ -135,9 +135,9 @@ Entwickler:innen verlassen sich aus mehreren Gründen auf Editoren:
 
 ### Browser
 
-Ein weiteres wichtiges Werkzeug ist der Browser. Webentwickler:innen verlassen sich auf den Browser, um zu sehen, wie ihr Code im Web ausgeführt wird. Er wird auch verwendet, um die visuellen Elemente einer Webseite anzuzeigen, die im Editor geschrieben wurden, wie HTML.
+Ein weiteres wichtiges Werkzeug ist der Browser. Webentwickler verlassen sich auf den Browser, um zu sehen, wie ihr Code im Web ausgeführt wird. Er wird auch verwendet, um die visuellen Elemente einer Webseite anzuzeigen, die im Editor geschrieben wurden, wie HTML.
 
-Viele Browser verfügen über *Entwicklerwerkzeuge* (DevTools), die eine Reihe hilfreicher Funktionen und Informationen enthalten, um Entwickler:innen dabei zu helfen, wichtige Informationen über ihre Anwendung zu sammeln und zu erfassen. Zum Beispiel: Wenn eine Webseite Fehler hat, ist es manchmal hilfreich zu wissen, wann sie aufgetreten sind. DevTools in einem Browser können so konfiguriert werden, dass diese Informationen erfasst werden.
+Viele Browser verfügen über *Entwicklertools* (DevTools), die eine Reihe hilfreicher Funktionen und Informationen enthalten, um Entwicklern zu helfen, wichtige Informationen über ihre Anwendung zu sammeln und zu erfassen. Zum Beispiel: Wenn eine Webseite Fehler hat, ist es manchmal hilfreich zu wissen, wann sie aufgetreten sind. DevTools in einem Browser können so konfiguriert werden, dass diese Informationen erfasst werden.
 
 #### Beliebte Browser und DevTools
 
@@ -145,15 +145,15 @@ Viele Browser verfügen über *Entwicklerwerkzeuge* (DevTools), die eine Reihe h
 - [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
 - [Firefox](https://developer.mozilla.org/docs/Tools)
 
-### Kommandozeilenwerkzeuge
+### Kommandozeilen-Tools
 
-Einige Entwickler:innen bevorzugen eine weniger grafische Ansicht für ihre täglichen Aufgaben und verlassen sich auf die Kommandozeile, um dies zu erreichen. Das Schreiben von Code erfordert eine erhebliche Menge an Tippen, und einige Entwickler:innen bevorzugen es, ihren Arbeitsfluss auf der Tastatur nicht zu unterbrechen. Sie verwenden Tastenkombinationen, um zwischen Desktop-Fenstern zu wechseln, an verschiedenen Dateien zu arbeiten und Werkzeuge zu nutzen. Die meisten Aufgaben können mit einer Maus erledigt werden, aber ein Vorteil der Kommandozeile ist, dass vieles mit Kommandozeilenwerkzeugen erledigt werden kann, ohne zwischen Maus und Tastatur wechseln zu müssen. Ein weiterer Vorteil der Kommandozeile ist, dass sie konfigurierbar ist und du eine benutzerdefinierte Konfiguration speichern, später ändern und auf andere Entwicklungsmaschinen importieren kannst. Da Entwicklungsumgebungen so einzigartig für jede:n Entwickler:in sind, vermeiden einige die Kommandozeile, andere verlassen sich vollständig darauf, und wieder andere bevorzugen eine Mischung aus beidem.
+Einige Entwickler bevorzugen eine weniger grafische Ansicht für ihre täglichen Aufgaben und verlassen sich auf die Kommandozeile, um dies zu erreichen. Das Schreiben von Code erfordert eine erhebliche Menge an Tippen, und einige Entwickler bevorzugen es, ihren Arbeitsfluss auf der Tastatur nicht zu unterbrechen. Sie verwenden Tastenkombinationen, um zwischen Desktop-Fenstern zu wechseln, an verschiedenen Dateien zu arbeiten und Tools zu verwenden. Die meisten Aufgaben können mit einer Maus erledigt werden, aber ein Vorteil der Kommandozeile ist, dass vieles mit Kommandozeilen-Tools erledigt werden kann, ohne zwischen Maus und Tastatur wechseln zu müssen. Ein weiterer Vorteil der Kommandozeile ist, dass sie konfigurierbar ist und du eine benutzerdefinierte Konfiguration speichern, später ändern und auf andere Entwicklungsmaschinen importieren kannst. Da Entwicklungsumgebungen so einzigartig für jeden Entwickler sind, vermeiden einige die Kommandozeile, andere verlassen sich vollständig darauf, und wieder andere bevorzugen eine Mischung aus beidem.
 
-### Beliebte Kommandozeilenoptionen
+### Beliebte Kommandozeilen-Optionen
 
 Die Optionen für die Kommandozeile unterscheiden sich je nach Betriebssystem.
 
-*💻 = ist standardmäßig auf dem Betriebssystem vorinstalliert.*
+*💻 = ist vorinstalliert auf dem Betriebssystem.*
 
 #### Windows
 
@@ -174,7 +174,7 @@ Die Optionen für die Kommandozeile unterscheiden sich je nach Betriebssystem.
 - [KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)
 - [Powershell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7/?WT.mc_id=academic-77807-sagibbon)
 
-#### Beliebte Kommandozeilenwerkzeuge
+#### Beliebte Kommandozeilen-Tools
 
 - [Git](https://git-scm.com/) (💻 auf den meisten Betriebssystemen)
 - [NPM](https://www.npmjs.com/)
@@ -182,17 +182,17 @@ Die Optionen für die Kommandozeile unterscheiden sich je nach Betriebssystem.
 
 ### Dokumentation
 
-Wenn ein:e Entwickler:in etwas Neues lernen möchte, wird er:sie sich höchstwahrscheinlich an die Dokumentation wenden, um zu erfahren, wie man es benutzt. Entwickler:innen verlassen sich oft auf Dokumentationen, um sich darüber zu informieren, wie Werkzeuge und Sprachen richtig verwendet werden, und um ein tieferes Verständnis dafür zu erlangen, wie sie funktionieren.
+Wenn ein Entwickler etwas Neues lernen möchte, wendet er sich höchstwahrscheinlich an die Dokumentation, um zu erfahren, wie man es benutzt. Entwickler verlassen sich oft auf Dokumentationen, um sich durch die richtige Nutzung von Tools und Sprachen zu führen und auch um ein tieferes Verständnis dafür zu gewinnen, wie sie funktionieren.
 
 #### Beliebte Dokumentationen zur Webentwicklung
 
-- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), von Mozilla, den Herausgebern des [Firefox](https://www.mozilla.org/firefox/)-Browsers
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), von Mozilla, den Herausgebern des [Firefox](https://www.mozilla.org/firefox/) Browsers
 - [Frontend Masters](https://frontendmasters.com/learn/)
 - [Web.dev](https://web.dev), von Google, den Herausgebern von [Chrome](https://www.google.com/chrome/)
 - [Microsofts eigene Entwicklerdokumentation](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), für [Microsoft Edge](https://www.microsoft.com/edge)
 - [W3 Schools](https://www.w3schools.com/where_to_start.asp)
 
-✅ Recherchiere: Jetzt, da du die Grundlagen der Umgebung eines Webentwicklers kennst, vergleiche sie mit der Umgebung eines Webdesigners.
+✅ Recherchiere: Jetzt, da du die Grundlagen der Umgebung eines Webentwicklers kennst, vergleiche und kontrastiere sie mit der Umgebung eines Webdesigners.
 
 ---
 
@@ -201,15 +201,17 @@ Wenn ein:e Entwickler:in etwas Neues lernen möchte, wird er:sie sich höchstwah
 Vergleiche einige Programmiersprachen. Was sind einige der einzigartigen Merkmale von JavaScript im Vergleich zu Java? Wie sieht es mit COBOL im Vergleich zu Go aus?
 
 ## Quiz nach der Vorlesung
-[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/2)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/)
 
-## Wiederholung & Selbststudium
+## Überprüfung & Selbststudium
 
-Lerne ein wenig über die verschiedenen Programmiersprachen, die einem Programmierer zur Verfügung stehen. Versuche, eine Zeile in einer Sprache zu schreiben, und schreibe sie dann in zwei anderen Sprachen um. Was hast du dabei gelernt?
+Studier ein wenig über die verschiedenen Sprachen, die einem Programmierer zur Verfügung stehen. Versuche, eine Zeile in einer Sprache zu schreiben und sie dann in zwei anderen neu zu schreiben. Was hast du gelernt?
 
 ## Aufgabe
 
 [Die Dokumentation lesen](assignment.md)
+
+---
 
 **Haftungsausschluss**:  
 Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

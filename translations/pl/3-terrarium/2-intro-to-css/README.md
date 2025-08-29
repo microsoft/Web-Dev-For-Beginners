@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-24T12:09:09+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T16:35:19+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "pl"
 }
 -->
 # Projekt Terrarium, Część 2: Wprowadzenie do CSS
 
-![Wprowadzenie do CSS](../../../../sketchnotes/webdev101-css.png)
+![Wprowadzenie do CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.pl.png)
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz przed wykładem
@@ -18,11 +18,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Wprowadzenie
 
-CSS, czyli Kaskadowe Arkusze Stylów, rozwiązują ważny problem w tworzeniu stron internetowych: jak sprawić, by Twoja strona wyglądała atrakcyjnie. Stylizowanie aplikacji sprawia, że są bardziej użyteczne i estetyczne; CSS pozwala również na tworzenie Responsywnego Projektowania Stron (RWD) - dzięki czemu aplikacje wyglądają dobrze niezależnie od rozmiaru ekranu, na którym są wyświetlane. CSS to nie tylko estetyka; jego specyfikacja obejmuje animacje i transformacje, które umożliwiają zaawansowane interakcje w aplikacjach. Grupa robocza CSS pomaga utrzymywać aktualne specyfikacje CSS; możesz śledzić ich pracę na stronie [World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
+CSS, czyli Kaskadowe Arkusze Stylów, rozwiązują istotny problem w tworzeniu stron internetowych: jak sprawić, by Twoja strona wyglądała atrakcyjnie. Stylizowanie aplikacji sprawia, że są bardziej użyteczne i estetyczne; CSS pozwala również na tworzenie Responsywnego Projektowania Stron (RWD) - dzięki czemu aplikacje wyglądają dobrze niezależnie od rozmiaru ekranu, na którym są wyświetlane. CSS to nie tylko narzędzie do poprawy wyglądu aplikacji; jego specyfikacja obejmuje animacje i transformacje, które umożliwiają zaawansowane interakcje w aplikacjach. Grupa robocza CSS pomaga utrzymywać aktualne specyfikacje CSS; możesz śledzić ich pracę na [stronie World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
 
 > Uwaga: CSS to język, który ewoluuje, jak wszystko w sieci, i nie wszystkie przeglądarki obsługują nowsze części specyfikacji. Zawsze sprawdzaj swoje implementacje, korzystając z [CanIUse.com](https://caniuse.com).
 
-W tej lekcji dodamy style do naszego internetowego terrarium i dowiemy się więcej o kilku koncepcjach CSS: kaskadzie, dziedziczeniu, użyciu selektorów, pozycjonowaniu oraz wykorzystaniu CSS do budowy układów. W trakcie pracy zaprojektujemy układ terrarium i stworzymy samo terrarium.
+W tej lekcji dodamy style do naszego internetowego terrarium i dowiemy się więcej o kilku koncepcjach CSS: kaskadowości, dziedziczeniu, użyciu selektorów, pozycjonowaniu oraz wykorzystaniu CSS do budowy układów. W trakcie pracy zaprojektujemy układ terrarium i stworzymy samo terrarium.
 
 ### Wymagania wstępne
 
@@ -43,9 +43,9 @@ W folderze terrarium utwórz nowy plik o nazwie `style.css`. Zaimportuj ten plik
 
 ---
 
-## Kaskada
+## Kaskadowość
 
-Kaskadowe Arkusze Stylów uwzględniają ideę, że style „kaskadują”, co oznacza, że zastosowanie stylu jest kierowane jego priorytetem. Style ustawione przez autora strony internetowej mają priorytet nad tymi ustawionymi przez przeglądarkę. Style ustawione „inline” mają priorytet nad tymi ustawionymi w zewnętrznym arkuszu stylów.
+Kaskadowe Arkusze Stylów uwzględniają ideę, że style „kaskadują”, co oznacza, że zastosowanie stylu jest kierowane jego priorytetem. Style ustawione przez autora strony internetowej mają wyższy priorytet niż te ustawione przez przeglądarkę. Style ustawione „inline” mają wyższy priorytet niż te ustawione w zewnętrznym arkuszu stylów.
 
 ### Zadanie
 
@@ -63,7 +63,7 @@ h1 {
 }
 ```
 
-✅ Jaki kolor wyświetla się w Twojej aplikacji internetowej? Dlaczego? Czy możesz znaleźć sposób na nadpisanie stylów? Kiedy chciałbyś to zrobić, a kiedy nie?
+✅ Jaki kolor wyświetla się w Twojej aplikacji internetowej? Dlaczego? Czy potrafisz znaleźć sposób na nadpisanie stylów? Kiedy chciałbyś to zrobić, a kiedy nie?
 
 ---
 
@@ -73,7 +73,7 @@ Style są dziedziczone od stylu przodka do potomka, co oznacza, że zagnieżdżo
 
 ### Zadanie
 
-Ustaw czcionkę dla ciała strony na określoną czcionkę i sprawdź czcionkę zagnieżdżonego elementu:
+Ustaw czcionkę dla ciała dokumentu i sprawdź czcionkę zagnieżdżonego elementu:
 
 ```CSS
 body {
@@ -81,9 +81,9 @@ body {
 }
 ```
 
-Otwórz konsolę przeglądarki na zakładce „Elements” i zaobserwuj czcionkę H1. Dziedziczy swoją czcionkę z ciała strony, jak wskazuje przeglądarka:
+Otwórz konsolę przeglądarki na zakładce „Elements” i zaobserwuj czcionkę H1. Dziedziczy swoją czcionkę z ciała dokumentu, co jest wskazane w przeglądarce:
 
-![dziedziczona czcionka](../../../../3-terrarium/2-intro-to-css/images/1.png)
+![dziedziczona czcionka](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.pl.png)
 
 ✅ Czy możesz sprawić, by zagnieżdżony styl dziedziczył inną właściwość?
 
@@ -106,11 +106,11 @@ h1 {
 }
 ```
 
-Ten sposób stylizowania tagu daje kontrolę nad unikalnymi elementami, ale potrzebujesz kontroli nad stylami wielu roślin w swoim terrarium. Aby to zrobić, musisz wykorzystać selektory CSS.
+Ten sposób stylizowania tagu daje Ci kontrolę nad unikalnymi elementami, ale potrzebujesz kontroli nad stylami wielu roślin w swoim terrarium. Aby to zrobić, musisz wykorzystać selektory CSS.
 
 ### Identyfikatory (Ids)
 
-Dodaj trochę stylu, aby zaprojektować kontenery po lewej i prawej stronie. Ponieważ jest tylko jeden kontener po lewej stronie i jeden po prawej stronie, w znacznikach HTML nadano im identyfikatory. Aby je stylizować, użyj `#`:
+Dodaj styl do układu lewego i prawego kontenera. Ponieważ istnieje tylko jeden lewy kontener i jeden prawy kontener, w znacznikach HTML nadano im identyfikatory. Aby je stylizować, użyj `#`:
 
 ```CSS
 #left-container {
@@ -134,9 +134,9 @@ Dodaj trochę stylu, aby zaprojektować kontenery po lewej i prawej stronie. Pon
 }
 ```
 
-Tutaj umieściłeś te kontenery za pomocą absolutnego pozycjonowania na skrajnie lewej i prawej stronie ekranu, używając procentów dla ich szerokości, aby mogły skalować się na małych ekranach mobilnych.
+Tutaj umieściłeś te kontenery z absolutnym pozycjonowaniem na skrajnie lewej i prawej stronie ekranu oraz użyłeś procentów dla ich szerokości, aby mogły skalować się na małych ekranach mobilnych.
 
-✅ Ten kod jest dość powtarzalny, a więc nie „DRY” (Don't Repeat Yourself); czy możesz znaleźć lepszy sposób na stylizowanie tych identyfikatorów, być może za pomocą identyfikatora i klasy? Musiałbyś zmienić znacznik i zrefaktoryzować CSS:
+✅ Ten kod jest dość powtarzalny, a więc nie jest zgodny z zasadą „DRY” (Don't Repeat Yourself). Czy możesz znaleźć lepszy sposób na stylizowanie tych identyfikatorów, być może za pomocą identyfikatora i klasy? Musiałbyś zmienić znaczniki HTML i zrefaktoryzować CSS:
 
 ```html
 <div id="left-container" class="container"></div>
@@ -144,7 +144,7 @@ Tutaj umieściłeś te kontenery za pomocą absolutnego pozycjonowania na skrajn
 
 ### Klasy
 
-W powyższym przykładzie stylizowałeś dwa unikalne elementy na ekranie. Jeśli chcesz, aby style dotyczyły wielu elementów na ekranie, możesz użyć klas CSS. Zrób to, aby zaprojektować rośliny w kontenerach po lewej i prawej stronie.
+W powyższym przykładzie stylizowałeś dwa unikalne elementy na ekranie. Jeśli chcesz, aby style dotyczyły wielu elementów na ekranie, możesz użyć klas CSS. Zrób to, aby zaprojektować rośliny w lewym i prawym kontenerze.
 
 Zauważ, że każda roślina w znacznikach HTML ma kombinację identyfikatorów i klas. Identyfikatory są tutaj używane przez JavaScript, który dodasz później, aby manipulować rozmieszczeniem roślin w terrarium. Klasy natomiast nadają wszystkim roślinom określony styl.
 
@@ -171,31 +171,31 @@ Dodaj poniższy kod do swojego pliku `style.css`:
 }
 ```
 
-Warto zauważyć w tym fragmencie mieszanie pozycjonowania względnego i absolutnego, które omówimy w następnej sekcji. Zwróć uwagę na sposób obsługi wysokości za pomocą procentów:
+Warto zwrócić uwagę na mieszankę pozycjonowania względnego i absolutnego, które omówimy w następnej sekcji. Przyjrzyj się, jak wysokości są obsługiwane za pomocą procentów:
 
 Ustawiasz wysokość uchwytu rośliny na 13%, co jest dobrym wyborem, aby wszystkie rośliny były wyświetlane w każdym pionowym kontenerze bez potrzeby przewijania.
 
-Ustawiasz uchwyt rośliny tak, aby przesunął się w lewo, aby rośliny były bardziej wyśrodkowane w swoim kontenerze. Obrazy mają dużą ilość przezroczystego tła, aby można je było łatwiej przeciągać, więc muszą być przesunięte w lewo, aby lepiej pasowały do ekranu.
+Przesuwasz uchwyt rośliny w lewo, aby rośliny były bardziej wyśrodkowane w swoim kontenerze. Obrazy mają dużą ilość przezroczystego tła, aby można je było łatwiej przeciągać, więc muszą być przesunięte w lewo, aby lepiej pasowały na ekranie.
 
-Następnie sama roślina ma maksymalną szerokość 150%. Pozwala to na jej skalowanie w dół, gdy przeglądarka jest skalowana w dół. Spróbuj zmienić rozmiar przeglądarki; rośliny pozostają w swoich kontenerach, ale skalują się w dół, aby pasować.
+Następnie roślina sama w sobie ma maksymalną szerokość 150%. Dzięki temu skaluje się w dół, gdy przeglądarka jest skalowana w dół. Spróbuj zmienić rozmiar swojej przeglądarki; rośliny pozostają w swoich kontenerach, ale skalują się w dół, aby pasować.
 
-Warto również zauważyć użycie z-index, który kontroluje względną wysokość elementu (tak aby rośliny znajdowały się na kontenerze i wyglądały, jakby znajdowały się wewnątrz terrarium).
+Warto również zwrócić uwagę na użycie z-index, który kontroluje względną wysokość elementu (tak aby rośliny znajdowały się na kontenerze i wyglądały, jakby były w terrarium).
 
-✅ Dlaczego potrzebujesz zarówno selektora CSS dla uchwytu rośliny, jak i samej rośliny?
+✅ Dlaczego potrzebujesz zarówno selektora CSS dla uchwytu rośliny, jak i dla samej rośliny?
 
 ## Pozycjonowanie CSS
 
-Mieszanie właściwości pozycjonowania (są to pozycje statyczne, względne, stałe, absolutne i klejące) może być nieco trudne, ale jeśli jest wykonane poprawnie, daje dobrą kontrolę nad elementami na Twoich stronach.
+Mieszanie właściwości pozycjonowania (statyczne, względne, stałe, absolutne i przyklejone) może być nieco skomplikowane, ale jeśli jest wykonane poprawnie, daje dobrą kontrolę nad elementami na Twoich stronach.
 
-Elementy pozycjonowane absolutnie są pozycjonowane względem najbliższych pozycjonowanych przodków, a jeśli ich nie ma, są pozycjonowane względem dokumentu.
+Elementy pozycjonowane absolutnie są pozycjonowane względem najbliższego pozycjonowanego przodka, a jeśli takiego nie ma, są pozycjonowane względem ciała dokumentu.
 
-Elementy pozycjonowane względnie są pozycjonowane na podstawie wskazówek CSS, które dostosowują ich położenie względem początkowej pozycji.
+Elementy pozycjonowane względnie są pozycjonowane na podstawie wskazówek CSS, które przesuwają je z ich początkowej pozycji.
 
-W naszym przykładzie `plant-holder` jest elementem pozycjonowanym względnie, który jest pozycjonowany wewnątrz kontenera pozycjonowanego absolutnie. Rezultatem jest to, że kontenery boczne są przypięte do lewej i prawej strony, a `plant-holder` jest zagnieżdżony, dostosowując się w obrębie kontenerów bocznych, dając miejsce na umieszczenie roślin w pionowym rzędzie.
+W naszym przykładzie `plant-holder` jest elementem pozycjonowanym względnie, który jest pozycjonowany w absolutnie pozycjonowanym kontenerze. Rezultatem jest to, że kontenery boczne są przypięte do lewej i prawej strony, a `plant-holder` jest zagnieżdżony, dostosowując się w obrębie kontenerów bocznych, tworząc miejsce na rośliny w pionowym rzędzie.
 
 > Sama `plant` również ma pozycjonowanie absolutne, co jest konieczne, aby można ją było przeciągać, jak dowiesz się w następnej lekcji.
 
-✅ Eksperymentuj z przełączaniem typów pozycjonowania kontenerów bocznych i `plant-holder`. Co się dzieje?
+✅ Eksperymentuj, zmieniając typy pozycjonowania kontenerów bocznych i `plant-holder`. Co się dzieje?
 
 ## Układy CSS
 
@@ -250,9 +250,9 @@ Najpierw wystylizuj dzieci div `.terrarium` jako zaokrąglony prostokąt za pomo
 }
 ```
 
-Zwróć uwagę na użycie procentów tutaj. Jeśli zmniejszysz przeglądarkę, możesz zobaczyć, jak słoik również się skaluje. Zauważ także szerokości i wysokości procentowe dla elementów słoika oraz sposób, w jaki każdy element jest absolutnie pozycjonowany w centrum, przypięty do dolnej części widoku.
+Zwróć uwagę na użycie procentów. Jeśli zmniejszysz rozmiar przeglądarki, zobaczysz, jak słoik również się skaluje. Zauważ także szerokości i wysokości procentowe dla elementów słoika oraz sposób, w jaki każdy element jest absolutnie pozycjonowany w centrum, przypięty do dolnej części widoku.
 
-Używamy również `rem` dla border-radius, długości względnej względem czcionki. Przeczytaj więcej o tym typie względnego pomiaru w [specyfikacji CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
+Używamy również `rem` dla border-radius, czyli długości względnej względem czcionki. Przeczytaj więcej o tego typu względnych miarach w [specyfikacji CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
 ✅ Spróbuj zmienić kolory słoika i jego przezroczystość w porównaniu do ziemi. Co się dzieje? Dlaczego?
 
@@ -262,7 +262,7 @@ Używamy również `rem` dla border-radius, długości względnej względem czci
 
 Dodaj „bąbelkowy” połysk do dolnej lewej części słoika, aby wyglądał bardziej jak szkło. Będziesz stylizować `.jar-glossy-long` i `.jar-glossy-short`, aby wyglądały jak odbity połysk. Oto jak to będzie wyglądać:
 
-![gotowe terrarium](../../../../3-terrarium/2-intro-to-css/images/terrarium-final.png)
+![gotowe terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.pl.png)
 
 Aby ukończyć quiz po wykładzie, przejdź przez ten moduł Learn: [Stylizuj swoją aplikację HTML za pomocą CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
@@ -278,5 +278,7 @@ CSS wydaje się pozornie prosty, ale istnieje wiele wyzwań związanych z prób�
 
 [Refaktoryzacja CSS](assignment.md)
 
+---
+
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego języku źródłowym powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-28T11:36:04+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T13:21:31+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "en"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## The Canvas
 
-The canvas is an HTML element that starts off empty; it's essentially a blank space. You can add content to it by drawing on it.
+The canvas is an HTML element that starts off empty; it's like a blank sheet of paper. You can add content to it by drawing on it.
 
 ✅ Read [more about the Canvas API](https://developer.mozilla.org/docs/Web/API/Canvas_API) on MDN.
 
@@ -28,12 +28,12 @@ Here's how it's typically defined as part of the page's body:
 In the code above, we are setting the `id`, `width`, and `height`.
 
 - `id`: This allows you to reference the canvas when you need to interact with it.
-- `width`: Specifies the width of the canvas element.
-- `height`: Specifies the height of the canvas element.
+- `width`: This defines the width of the canvas.
+- `height`: This defines the height of the canvas.
 
 ## Drawing simple geometry
 
-The canvas uses a Cartesian coordinate system for drawing. This means it uses an x-axis and y-axis to determine the position of elements. The point `0,0` is located at the top-left corner, while the bottom-right corner corresponds to the WIDTH and HEIGHT you set for the canvas.
+The canvas uses a Cartesian coordinate system to draw shapes. This means it uses an x-axis and y-axis to determine where things are placed. The position `0,0` is the top-left corner, and the bottom-right corner corresponds to the `width` and `height` of the canvas.
 
 ![the canvas's grid](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.en.png)
 > Image from [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
@@ -42,7 +42,7 @@ To draw on the canvas, follow these steps:
 
 1. **Get a reference** to the canvas element.
 2. **Get a reference** to the context object associated with the canvas.
-3. **Perform drawing operations** using the context object.
+3. **Perform a drawing operation** using the context object.
 
 The code for these steps typically looks like this:
 
@@ -61,19 +61,19 @@ ctx.fillStyle = 'red';
 ctx.fillRect(0,0, 200, 200) // x,y,width, height
 ```
 
-✅ The Canvas API is primarily designed for 2D shapes, but you can also create 3D elements on a webpage using the [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
+✅ The Canvas API is primarily designed for 2D graphics, but you can also create 3D graphics on a webpage using the [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
-With the Canvas API, you can draw various elements, such as:
+With the Canvas API, you can draw a variety of things, such as:
 
 - **Geometric shapes**: We've already shown how to draw a rectangle, but there are many other shapes you can create.
-- **Text**: You can draw text in any font and color you choose.
-- **Images**: You can display images from assets like .jpg or .png files.
+- **Text**: You can draw text in any font and color you like.
+- **Images**: You can display images from assets like `.jpg` or `.png` files.
 
 ✅ Try it! Now that you know how to draw a rectangle, can you draw a circle on the page? Check out some creative Canvas drawings on CodePen. Here's a [particularly impressive example](https://codepen.io/dissimulate/pen/KrAwx).
 
 ## Load and draw an image asset
 
-To load an image asset, create an `Image` object and set its `src` property. Then, listen for the `load` event to know when the image is ready to use. Here's the code:
+To load an image asset, create an `Image` object and set its `src` property. Then, listen for the `load` event to know when the image is ready to use. The code looks like this:
 
 ### Load asset
 
@@ -87,7 +87,7 @@ img.onload = () => {
 
 ### Load asset pattern
 
-It's a good idea to wrap the above code in a structure like this, making it easier to use and ensuring you only manipulate the image once it's fully loaded:
+It's a good idea to wrap the code above in a reusable structure, so you can easily use it and ensure the image is fully loaded before manipulating it:
 
 ```javascript
 function loadAsset(path) {
@@ -128,19 +128,19 @@ async function run() {
 
 ### What to build
 
-You will create a webpage with a canvas element that displays a black screen with dimensions `1024*768`. We've provided two images for you:
+You will create a webpage with a canvas element. The canvas should display a black screen with dimensions `1024x768`. We've provided two images for you:
 
-- Hero ship
+- Hero ship:
 
    ![Hero ship](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.en.png)
 
-- 5x5 monster grid
+- 5x5 monster grid:
 
    ![Monster ship](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.en.png)
 
 ### Recommended steps to start development
 
-Locate the files provided for you in the `your-work` subfolder. It should contain the following:
+Locate the files provided in the `your-work` subfolder. It should contain the following:
 
 ```bash
 -| assets
@@ -160,22 +160,22 @@ cd your-work
 npm start
 ```
 
-This will start an HTTP server at `http://localhost:5000`. Open a browser and enter that address. You'll see a blank page for now, but that will change.
+This will start an HTTP server at `http://localhost:5000`. Open a browser and go to that address. The page will be blank for now, but that will change soon.
 
-> Note: Refresh your browser to see updates on the screen.
+> Note: To see updates on your screen, refresh your browser.
 
 ### Add code
 
 Add the necessary code to `your-work/app.js` to complete the following tasks:
 
 1. **Draw** a canvas with a black background.
-   > Tip: Add two lines under the appropriate TODO in `/app.js`, setting the `ctx` element to black and positioning the top-left corner at `0,0` with the height and width matching the canvas dimensions.
+   > Tip: Add two lines of code under the appropriate TODO in `/app.js` to set the `ctx` element's background to black. Set the top-left coordinates to `0,0` and the height and width to match the canvas dimensions.
 2. **Load** textures.
-   > Tip: Use `await loadTexture` to load the player and enemy images by passing their file paths. You won't see them on the screen yet!
-3. **Draw** the hero in the center of the screen's bottom half.
-   > Tip: Use the `drawImage` API to display `heroImg` on the screen, positioning it at `canvas.width / 2 - 45` and `canvas.height - canvas.height / 4`.
+   > Tip: Use `await loadTexture` to load the player and enemy images by passing their file paths. You won't see them on the screen just yet!
+3. **Draw** the hero in the center of the screen, near the bottom.
+   > Tip: Use the `drawImage` API to draw `heroImg` on the screen. Set the coordinates to `canvas.width / 2 - 45` and `canvas.height - canvas.height / 4`.
 4. **Draw** a 5x5 grid of monsters.
-   > Tip: Uncomment the code to draw enemies on the screen. Then, complete the `createEnemies` function.
+   > Tip: Uncomment the code to draw enemies on the screen. Then, go to the `createEnemies` function and complete it.
 
    Start by defining some constants:
 
@@ -186,7 +186,7 @@ Add the necessary code to `your-work/app.js` to complete the following tasks:
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    Next, create a loop to draw the array of monsters on the screen:
+   Next, create a loop to draw the array of monsters on the screen:
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {
@@ -204,13 +204,13 @@ The final result should look like this:
 
 ## Solution
 
-Try solving it yourself first, but if you get stuck, check out the [solution](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
+Try solving this on your own first, but if you get stuck, you can check out the [solution](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
 
 ---
 
 ## 🚀 Challenge
 
-Now that you've learned about drawing with the 2D-focused Canvas API, explore the [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) and try creating a 3D object.
+Now that you've learned how to draw with the 2D-focused Canvas API, explore the [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) and try creating a 3D object.
 
 ## Post-Lecture Quiz
 
@@ -227,4 +227,4 @@ Learn more about the Canvas API by [reading about it](https://developer.mozilla.
 ---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

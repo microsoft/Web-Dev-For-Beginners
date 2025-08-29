@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46a0639e719b9cf1dfd062aa24cad639",
-  "translation_date": "2025-08-24T11:59:44+00:00",
+  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
+  "translation_date": "2025-08-29T13:58:19+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "es"
 }
 -->
 # Proyecto Terrario Parte 1: Introducción a HTML
 
-![Introducción a HTML](../../../../sketchnotes/webdev101-html.png)  
+![Introducción a HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.es.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Cuestionario Previo a la Clase
@@ -29,16 +29,16 @@ En esta lección, usaremos HTML para estructurar el 'esqueleto' de la interfaz d
 
 ### Tarea
 
-En tu computadora, crea una carpeta llamada 'terrarium' y dentro de ella, un archivo llamado 'index.html'. Puedes hacer esto en Visual Studio Code después de crear tu carpeta terrarium abriendo una nueva ventana de VS Code, haciendo clic en 'abrir carpeta' y navegando a tu nueva carpeta. Haz clic en el pequeño botón de 'archivo' en el panel Explorador y crea el nuevo archivo:
+En tu computadora, crea una carpeta llamada 'terrarium' y dentro de ella, un archivo llamado 'index.html'. Puedes hacerlo en Visual Studio Code después de crear tu carpeta terrarium abriendo una nueva ventana de VS Code, haciendo clic en 'abrir carpeta' y navegando hasta tu nueva carpeta. Haz clic en el pequeño botón de 'archivo' en el panel Explorador y crea el nuevo archivo:
 
-![explorador en VS Code](../../../../3-terrarium/1-intro-to-html/images/vs-code-index.png)
+![explorador en VS Code](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.es.png)
 
 O
 
-Usa estos comandos en tu terminal git bash:  
-* `mkdir terrarium`  
-* `cd terrarium`  
-* `touch index.html`  
+Usa estos comandos en tu terminal git bash:
+* `mkdir terrarium`
+* `cd terrarium`
+* `touch index.html`
 * `code index.html` o `nano index.html`
 
 > Los archivos index.html indican a un navegador que es el archivo predeterminado en una carpeta; URLs como `https://anysite.com/test` podrían estar construidas usando una estructura de carpetas que incluye una carpeta llamada `test` con un archivo `index.html` dentro; `index.html` no tiene que aparecer en la URL.
@@ -51,7 +51,7 @@ La primera línea de un archivo HTML es su doctype. Es un poco sorprendente que 
 
 > Consejo: en VS Code, puedes pasar el cursor sobre una etiqueta y obtener información sobre su uso desde las guías de referencia de MDN.
 
-La segunda línea debe ser la etiqueta de apertura `<html>`, seguida inmediatamente por su etiqueta de cierre `</html>`. Estas etiquetas son los elementos raíz de tu interfaz.
+La segunda línea debe ser la etiqueta de apertura `<html>`, seguida ahora por su etiqueta de cierre `</html>`. Estas etiquetas son los elementos raíz de tu interfaz.
 
 ### Tarea
 
@@ -70,11 +70,11 @@ Agrega estas líneas en la parte superior de tu archivo `index.html`:
 
 El área 'head' del documento HTML incluye información crucial sobre tu página web, también conocida como [metadatos](https://developer.mozilla.org/docs/Web/HTML/Element/meta). En nuestro caso, le indicamos al servidor web al que se enviará esta página para ser renderizada, estas cuatro cosas:
 
--   el título de la página  
--   metadatos de la página, incluyendo:  
-    -   el 'conjunto de caracteres', que indica qué codificación de caracteres se usa en la página  
-    -   información del navegador, incluyendo `x-ua-compatible`, que indica que el navegador IE=edge es compatible  
-    -   información sobre cómo debe comportarse la ventana gráfica (viewport) cuando se carga. Configurar la ventana gráfica con una escala inicial de 1 controla el nivel de zoom cuando se carga la página por primera vez.
+-   el título de la página
+-   metadatos de la página, incluyendo:
+    -   el 'conjunto de caracteres', que indica qué codificación de caracteres se usa en la página
+    -   información del navegador, incluyendo `x-ua-compatible`, que indica que el navegador IE=edge es compatible
+    -   información sobre cómo debe comportarse el viewport cuando se carga. Configurar el viewport con una escala inicial de 1 controla el nivel de zoom cuando se carga la página por primera vez.
 
 ### Tarea
 
@@ -177,9 +177,9 @@ Agrega esas imágenes de plantas en dos columnas entre las etiquetas `<body></bo
 </div>
 ```
 
-> Nota: Spans vs. Divs. Los Divs se consideran elementos de 'bloque', y los Spans son 'en línea'. ¿Qué pasaría si transformaras estos divs en spans?
+> Nota: Spans vs. Divs. Los Divs se consideran elementos 'de bloque', y los Spans son 'en línea'. ¿Qué pasaría si transformaras estos divs en spans?
 
-Con este marcado, las plantas ahora aparecen en la pantalla. Se ve bastante mal, porque aún no están estilizadas con CSS, y haremos eso en la próxima lección.
+Con este marcado, las plantas ahora aparecen en la pantalla. Se ve bastante mal, porque aún no están estilizadas con CSS, y lo haremos en la próxima lección.
 
 Cada imagen tiene texto alternativo que aparecerá incluso si no puedes ver o renderizar una imagen. Este es un atributo importante para incluir por razones de accesibilidad. Aprende más sobre accesibilidad en lecciones futuras; por ahora, recuerda que el atributo alt proporciona información alternativa para una imagen si un usuario, por alguna razón, no puede verla (debido a una conexión lenta, un error en el atributo src, o si el usuario utiliza un lector de pantalla).
 
@@ -189,7 +189,7 @@ Cada imagen tiene texto alternativo que aparecerá incluso si no puedes ver o re
 
 ## Marcado semántico
 
-En general, es preferible usar 'semántica' significativa al escribir HTML. ¿Qué significa eso? Significa que usas etiquetas HTML para representar el tipo de datos o interacción para los que fueron diseñadas. Por ejemplo, el texto principal de un título en una página debería usar una etiqueta `<h1>`.
+En general, es preferible usar 'semántica' significativa al escribir HTML. ¿Qué significa esto? Significa que usas etiquetas HTML para representar el tipo de datos o interacción para los que fueron diseñadas. Por ejemplo, el texto principal de un título en una página debería usar una etiqueta `<h1>`.
 
 Agrega la siguiente línea justo debajo de tu etiqueta de apertura `<body>`:
 
@@ -243,5 +243,7 @@ Aprende más sobre cómo construir sitios para la web y dispositivos móviles en
 
 [Practica tu HTML: Crea un diseño de blog](assignment.md)
 
+---
+
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

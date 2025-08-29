@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46a0639e719b9cf1dfd062aa24cad639",
-  "translation_date": "2025-08-24T12:01:12+00:00",
+  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
+  "translation_date": "2025-08-29T16:34:43+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "pl"
 }
 -->
 # Projekt Terrarium Część 1: Wprowadzenie do HTML
 
-![Wprowadzenie do HTML](../../../../sketchnotes/webdev101-html.png)
+![Wprowadzenie do HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.pl.png)
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz przed wykładem
@@ -31,17 +31,17 @@ W tej lekcji użyjemy HTML do stworzenia 'szkieletu' interfejsu naszego wirtualn
 
 Na swoim komputerze utwórz folder o nazwie 'terrarium', a w nim plik o nazwie 'index.html'. Możesz to zrobić w Visual Studio Code, otwierając nowe okno VS Code, klikając 'open folder' i przechodząc do nowo utworzonego folderu. Kliknij mały przycisk 'file' w panelu Explorer i utwórz nowy plik:
 
-![explorer w VS Code](../../../../3-terrarium/1-intro-to-html/images/vs-code-index.png)
+![explorer w VS Code](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.pl.png)
 
 Lub
 
-Użyj tych poleceń w swoim git bash:
+Użyj tych poleceń w git bash:
 * `mkdir terrarium`
 * `cd terrarium`
 * `touch index.html`
 * `code index.html` lub `nano index.html`
 
-> Pliki index.html wskazują przeglądarce, że jest to domyślny plik w folderze; adresy URL takie jak `https://anysite.com/test` mogą być zbudowane z użyciem struktury folderów, w tym folderu o nazwie `test` z plikiem `index.html` w środku; `index.html` nie musi być widoczny w adresie URL.
+> Pliki index.html wskazują przeglądarce, że jest to domyślny plik w folderze; adresy URL takie jak `https://anysite.com/test` mogą być zbudowane na podstawie struktury folderów, w tym folderu o nazwie `test` z plikiem `index.html` w środku; `index.html` nie musi być widoczny w adresie URL.
 
 ---
 
@@ -51,7 +51,7 @@ Pierwsza linia pliku HTML to jego doctype. Może to być zaskakujące, że ta li
 
 > Wskazówka: w VS Code możesz najechać kursorem na tag, aby uzyskać informacje o jego zastosowaniu z przewodników referencyjnych MDN.
 
-Druga linia powinna zawierać otwierający tag `<html>`, a zaraz po nim zamykający tag `</html>`. Te tagi są głównymi elementami Twojego interfejsu.
+Druga linia powinna zawierać otwierający tag `<html>`, a zaraz po nim zamykający tag `</html>`. Te tagi są elementami głównymi Twojego interfejsu.
 
 ### Zadanie
 
@@ -68,17 +68,17 @@ Dodaj te linie na początku swojego pliku `index.html`:
 
 ## 'Head' dokumentu
 
-Obszar 'head' dokumentu HTML zawiera kluczowe informacje o Twojej stronie internetowej, znane również jako [metadane](https://developer.mozilla.org/docs/Web/HTML/Element/meta). W naszym przypadku informujemy serwer internetowy, na którym strona zostanie wyrenderowana, o następujących czterech rzeczach:
+Obszar 'head' dokumentu HTML zawiera kluczowe informacje o Twojej stronie internetowej, znane również jako [metadane](https://developer.mozilla.org/docs/Web/HTML/Element/meta). W naszym przypadku informujemy serwer internetowy, na który ta strona zostanie wysłana do renderowania, o następujących czterech rzeczach:
 
 -   tytule strony
 -   metadanych strony, w tym:
-    -   'zestawie znaków', informującym o kodowaniu znaków używanym na stronie
+    -   'character set', informującym o używanym kodowaniu znaków
     -   informacji o przeglądarce, w tym `x-ua-compatible`, co wskazuje, że obsługiwana jest przeglądarka IE=edge
     -   informacji o tym, jak viewport powinien się zachowywać po załadowaniu. Ustawienie viewportu na początkową skalę 1 kontroluje poziom powiększenia po załadowaniu strony.
 
 ### Zadanie
 
-Dodaj blok 'head' do swojego dokumentu pomiędzy otwierającym i zamykającym tagiem `<html>`.
+Dodaj blok 'head' do swojego dokumentu pomiędzy otwierającymi i zamykającymi tagami `<html>`.
 
 ```html
 <head>
@@ -118,7 +118,7 @@ Teraz możesz zacząć budować swoją stronę. Zazwyczaj używasz tagów `<div>
 
 ### Obrazy
 
-Jednym z tagów HTML, który nie wymaga zamykającego tagu, jest `<img>`, ponieważ ma element `src`, który zawiera wszystkie informacje potrzebne stronie do wyrenderowania elementu.
+Jednym z tagów HTML, który nie wymaga zamykającego tagu, jest `<img>`, ponieważ ma element `src`, który zawiera wszystkie informacje potrzebne do renderowania elementu na stronie.
 
 Utwórz folder w swojej aplikacji o nazwie `images` i dodaj do niego wszystkie obrazy z [folderu kodu źródłowego](../../../../3-terrarium/solution/images); (jest tam 14 obrazów roślin).
 
@@ -181,15 +181,15 @@ Dodaj te obrazy roślin do dwóch kolumn pomiędzy tagami `<body></body>`:
 
 Dzięki temu kodowi rośliny pojawią się na ekranie. Wygląda to dość źle, ponieważ nie są jeszcze wystylizowane za pomocą CSS, co zrobimy w następnej lekcji.
 
-Każdy obraz ma tekst alternatywny, który pojawi się, nawet jeśli nie można zobaczyć lub wyrenderować obrazu. Jest to ważny atrybut dla dostępności. Dowiedz się więcej o dostępności w przyszłych lekcjach; na razie pamiętaj, że atrybut alt dostarcza alternatywnych informacji o obrazie, jeśli użytkownik z jakiegoś powodu nie może go zobaczyć (z powodu wolnego połączenia, błędu w atrybucie src lub jeśli użytkownik korzysta z czytnika ekranu).
+Każdy obraz ma tekst alternatywny (alt), który pojawi się, nawet jeśli nie można zobaczyć lub załadować obrazu. Jest to ważny atrybut dla dostępności. Dowiedz się więcej o dostępności w przyszłych lekcjach; na razie pamiętaj, że atrybut alt dostarcza alternatywnych informacji o obrazie, jeśli użytkownik z jakiegoś powodu nie może go zobaczyć (z powodu wolnego połączenia, błędu w atrybucie src lub jeśli użytkownik korzysta z czytnika ekranu).
 
 ✅ Zauważyłeś, że każdy obraz ma ten sam tag alt? Czy to dobra praktyka? Dlaczego tak/nie? Czy możesz poprawić ten kod?
 
 ---
 
-## Semantyczny kod
+## Semantyczne znaczniki
 
-Ogólnie rzecz biorąc, lepiej jest używać znaczącej 'semantyki' podczas pisania HTML. Co to oznacza? Oznacza to, że używasz tagów HTML, aby reprezentować typ danych lub interakcji, do których zostały zaprojektowane. Na przykład główny tytuł tekstu na stronie powinien używać tagu `<h1>`.
+Ogólnie rzecz biorąc, lepiej jest używać znaczących 'semantyk' podczas pisania HTML. Co to oznacza? Oznacza to, że używasz tagów HTML, aby reprezentować typ danych lub interakcji, do których zostały zaprojektowane. Na przykład główny tytuł tekstowy na stronie powinien używać tagu `<h1>`.
 
 Dodaj następującą linię tuż poniżej otwierającego tagu `<body>`:
 
@@ -197,13 +197,13 @@ Dodaj następującą linię tuż poniżej otwierającego tagu `<body>`:
 <h1>My Terrarium</h1>
 ```
 
-Używanie semantycznego kodu, takiego jak nagłówki `<h1>` i listy nieuporządkowane `<ul>`, pomaga czytnikom ekranu nawigować po stronie. Ogólnie rzecz biorąc, przyciski powinny być pisane jako `<button>`, a listy jako `<li>`. Chociaż _można_ używać specjalnie stylizowanych elementów `<span>` z obsługą kliknięć, aby imitować przyciski, lepiej jest, aby użytkownicy z niepełnosprawnościami mogli korzystać z technologii, które określają, gdzie na stronie znajduje się przycisk i jak z nim wchodzić w interakcję, jeśli element pojawia się jako przycisk. Z tego powodu staraj się używać semantycznego kodu tak często, jak to możliwe.
+Używanie semantycznych znaczników, takich jak nagłówki `<h1>` i listy nieuporządkowane `<ul>`, pomaga czytnikom ekranu nawigować po stronie. Ogólnie rzecz biorąc, przyciski powinny być pisane jako `<button>`, a listy jako `<li>`. Chociaż _można_ używać specjalnie stylizowanych elementów `<span>` z obsługą kliknięć, aby imitować przyciski, lepiej jest, aby technologie wspomagające mogły określić, gdzie na stronie znajduje się przycisk i jak z nim wchodzić w interakcję, jeśli element pojawia się jako przycisk. Z tego powodu staraj się używać semantycznych znaczników tak często, jak to możliwe.
 
-✅ Spójrz na czytnik ekranu i [jak wchodzi w interakcję ze stroną internetową](https://www.youtube.com/watch?v=OUDV1gqs9GA). Czy widzisz, dlaczego brak semantycznego kodu może frustrować użytkownika?
+✅ Spójrz na czytnik ekranu i [jak wchodzi w interakcję ze stroną internetową](https://www.youtube.com/watch?v=OUDV1gqs9GA). Czy widzisz, dlaczego brak semantycznych znaczników może frustrować użytkownika?
 
 ## Terrarium
 
-Ostatnia część tego interfejsu polega na stworzeniu kodu, który zostanie wystylizowany, aby stworzyć terrarium.
+Ostatnia część tego interfejsu polega na stworzeniu znaczników, które zostaną wystylizowane, aby stworzyć terrarium.
 
 ### Zadanie:
 
@@ -221,13 +221,13 @@ Dodaj ten kod powyżej ostatniego tagu `</div>`:
 </div>
 ```
 
-✅ Mimo że dodałeś ten kod na ekran, nic się nie wyświetla. Dlaczego?
+✅ Mimo że dodałeś ten kod do ekranu, nic się nie wyświetla. Dlaczego?
 
 ---
 
 ## 🚀Wyzwanie
 
-Istnieją pewne 'starsze' tagi w HTML, które wciąż są zabawne do eksperymentowania, chociaż nie powinno się używać przestarzałych tagów, takich jak [te tagi](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) w swoim kodzie. Mimo to, czy możesz użyć starego tagu `<marquee>`, aby sprawić, że tytuł h1 będzie przewijał się poziomo? (jeśli to zrobisz, nie zapomnij go później usunąć)
+Istnieją pewne 'starsze' znaczniki w HTML, które wciąż są zabawne do użycia, choć nie powinno się używać przestarzałych znaczników, takich jak [te znaczniki](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) w swoim kodzie. Mimo to, czy możesz użyć starego tagu `<marquee>`, aby sprawić, że tytuł h1 będzie przewijał się poziomo? (jeśli to zrobisz, nie zapomnij go później usunąć)
 
 ## Quiz po wykładzie
 
@@ -235,7 +235,7 @@ Istnieją pewne 'starsze' tagi w HTML, które wciąż są zabawne do eksperyment
 
 ## Przegląd i samodzielna nauka
 
-HTML to 'sprawdzony i niezawodny' system budowania, który pomógł stworzyć internet takim, jakim jest dzisiaj. Dowiedz się trochę o jego historii, studiując stare i nowe tagi. Czy potrafisz zrozumieć, dlaczego niektóre tagi zostały wycofane, a inne dodane? Jakie tagi mogą zostać wprowadzone w przyszłości?
+HTML to 'sprawdzony i niezawodny' system budowania, który pomógł stworzyć internet takim, jakim jest dzisiaj. Dowiedz się trochę o jego historii, studiując stare i nowe znaczniki. Czy potrafisz zrozumieć, dlaczego niektóre znaczniki zostały wycofane, a inne dodane? Jakie znaczniki mogą zostać wprowadzone w przyszłości?
 
 Dowiedz się więcej o budowaniu stron internetowych i aplikacji mobilnych na [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
 
@@ -243,5 +243,7 @@ Dowiedz się więcej o budowaniu stron internetowych i aplikacji mobilnych na [M
 
 [Ćwicz HTML: Stwórz makietę bloga](assignment.md)
 
+---
+
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego języku źródłowym powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

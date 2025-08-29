@@ -1,25 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-24T12:34:36+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T16:31:16+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "pl"
 }
 -->
-# Zbuduj grę kosmiczną, część 2: Rysowanie bohatera i potworów na płótnie
+# Stwórz grę kosmiczną, część 2: Rysowanie bohatera i potworów na Canvasie
 
 ## Quiz przed wykładem
 
 [Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/31)
 
-## Płótno (Canvas)
+## Canvas
 
-Płótno to element HTML, który domyślnie nie ma żadnej zawartości; jest to pusta przestrzeń. Musisz dodać do niego zawartość, rysując na nim.
+Canvas to element HTML, który domyślnie nie ma żadnej zawartości; to pusta przestrzeń. Musisz dodać do niego zawartość, rysując na nim.
 
 ✅ Przeczytaj [więcej o Canvas API](https://developer.mozilla.org/docs/Web/API/Canvas_API) na MDN.
 
-Oto jak zazwyczaj jest deklarowane, jako część ciała strony:
+Oto jak zazwyczaj jest deklarowany, jako część ciała strony:
 
 ```html
 <canvas id="myCanvas" width="200" height="100"></canvas>
@@ -31,17 +31,17 @@ Powyżej ustawiamy `id`, `width` i `height`.
 - `width`: szerokość elementu.
 - `height`: wysokość elementu.
 
-## Rysowanie prostych kształtów geometrycznych
+## Rysowanie prostych kształtów
 
-Canvas używa kartezjańskiego układu współrzędnych do rysowania. Oznacza to, że korzysta z osi x i y, aby określić, gdzie coś się znajduje. Pozycja `0,0` to lewy górny róg, a prawy dolny róg to szerokość (WIDTH) i wysokość (HEIGHT) płótna.
+Canvas używa kartezjańskiego układu współrzędnych do rysowania. Oznacza to, że korzysta z osi x i y, aby określić, gdzie coś się znajduje. Pozycja `0,0` to lewy górny róg, a prawy dolny róg to wartości WIDTH i HEIGHT ustawione dla canvasa.
 
-![siatka płótna](../../../../6-space-game/2-drawing-to-canvas/canvas_grid.png)  
+![siatka canvasa](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.pl.png)  
 > Obraz z [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-Aby rysować na elemencie płótna, musisz wykonać następujące kroki:
+Aby rysować na elemencie canvas, musisz wykonać następujące kroki:
 
 1. **Uzyskaj referencję** do elementu Canvas.
-2. **Uzyskaj referencję** do elementu Context, który znajduje się na płótnie.
+2. **Uzyskaj referencję** do elementu Context, który znajduje się na canvasie.
 3. **Wykonaj operację rysowania** za pomocą elementu Context.
 
 Kod dla powyższych kroków zazwyczaj wygląda tak:
@@ -65,11 +65,11 @@ ctx.fillRect(0,0, 200, 200) // x,y,width, height
 
 Za pomocą Canvas API możesz rysować różne rzeczy, takie jak:
 
-- **Kształty geometryczne** – już pokazaliśmy, jak narysować prostokąt, ale można narysować znacznie więcej.
+- **Kształty geometryczne** – już pokazaliśmy, jak narysować prostokąt, ale można rysować znacznie więcej.
 - **Tekst** – możesz rysować tekst w dowolnej czcionce i kolorze.
 - **Obrazy** – możesz rysować obrazy na podstawie zasobów graficznych, takich jak .jpg czy .png.
 
-✅ Spróbuj! Wiesz już, jak narysować prostokąt, czy potrafisz narysować koło na stronie? Zobacz kilka ciekawych rysunków na Canvas na CodePen. Oto [szczególnie imponujący przykład](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Spróbuj! Wiesz już, jak narysować prostokąt, czy potrafisz narysować koło na stronie? Zobacz kilka ciekawych rysunków na Canvasie na CodePen. Oto [szczególnie imponujący przykład](https://codepen.io/dissimulate/pen/KrAwx).
 
 ## Wczytywanie i rysowanie zasobu graficznego
 
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-Aby narysować zasoby gry na ekranie, Twój kod wyglądałby tak:
+Aby narysować zasoby gry na ekranie, twój kod wyglądałby tak:
 
 ```javascript
 async function run() {
@@ -128,19 +128,19 @@ async function run() {
 
 ### Co zbudować
 
-Zbudujesz stronę internetową z elementem Canvas. Powinna wyświetlać czarny ekran o rozmiarze `1024*768`. Udostępniliśmy Ci dwa obrazy:
+Zbudujesz stronę internetową z elementem Canvas. Powinna renderować czarny ekran o wymiarach `1024*768`. Udostępniliśmy ci dwa obrazy:
 
 - Statek bohatera
 
-   ![Statek bohatera](../../../../6-space-game/2-drawing-to-canvas/solution/assets/player.png)
+   ![Statek bohatera](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.pl.png)
 
 - 5*5 potworów
 
-   ![Statek potwora](../../../../6-space-game/2-drawing-to-canvas/solution/assets/enemyShip.png)
+   ![Statek potwora](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.pl.png)
 
-### Zalecane kroki rozpoczęcia pracy
+### Zalecane kroki na początek
 
-Znajdź pliki, które zostały dla Ciebie utworzone w podfolderze `your-work`. Powinny zawierać następujące:
+Znajdź pliki, które zostały dla ciebie utworzone w podfolderze `your-work`. Powinny zawierać następujące:
 
 ```bash
 -| assets
@@ -153,7 +153,7 @@ Znajdź pliki, które zostały dla Ciebie utworzone w podfolderze `your-work`. P
 
 Otwórz kopię tego folderu w Visual Studio Code. Musisz mieć skonfigurowane lokalne środowisko programistyczne, najlepiej z Visual Studio Code z zainstalowanymi NPM i Node. Jeśli nie masz skonfigurowanego `npm` na swoim komputerze, [oto jak to zrobić](https://www.npmjs.com/get-npm).
 
-Rozpocznij swój projekt, przechodząc do folderu `your_work`:
+Rozpocznij projekt, przechodząc do folderu `your_work`:
 
 ```bash
 cd your-work
@@ -168,9 +168,9 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
 
 Dodaj potrzebny kod do `your-work/app.js`, aby rozwiązać poniższe:
 
-1. **Narysuj** płótno z czarnym tłem  
-   > wskazówka: dodaj dwie linie pod odpowiednim TODO w `/app.js`, ustawiając element `ctx` na czarny, a współrzędne górne/lewe na 0,0 oraz wysokość i szerokość równe wymiarom płótna.
-2. **Wczytaj** tekstury  
+1. **Narysuj** canvas z czarnym tłem  
+   > wskazówka: dodaj dwie linie pod odpowiednim TODO w `/app.js`, ustawiając element `ctx` na czarny, a współrzędne górne/lewe na 0,0 oraz wysokość i szerokość równą wymiarom canvasa.
+2. **Załaduj** tekstury  
    > wskazówka: dodaj obrazy gracza i wroga, używając `await loadTexture` i przekazując ścieżkę do obrazu. Na razie nie zobaczysz ich na ekranie!
 3. **Narysuj** bohatera na środku ekranu w dolnej połowie  
    > wskazówka: użyj API `drawImage`, aby narysować heroImg na ekranie, ustawiając `canvas.width / 2 - 45` i `canvas.height - canvas.height / 4)`.
@@ -200,7 +200,7 @@ Dodaj potrzebny kod do `your-work/app.js`, aby rozwiązać poniższe:
 
 Gotowy wynik powinien wyglądać tak:
 
-![Czarny ekran z bohaterem i 5*5 potworami](../../../../6-space-game/2-drawing-to-canvas/partI-solution.png)
+![Czarny ekran z bohaterem i 5*5 potworami](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.pl.png)
 
 ## Rozwiązanie
 
@@ -224,5 +224,7 @@ Dowiedz się więcej o Canvas API, [czytając o nim](https://developer.mozilla.o
 
 [Pobaw się Canvas API](assignment.md)
 
+---
+
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby zapewnić poprawność tłumaczenia, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

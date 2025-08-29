@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e4cd5b1faed4adab5acf720f82798003",
-  "translation_date": "2025-08-28T12:01:07+00:00",
+  "original_hash": "f0c88c3e2cefa8952d356f802b1e47ca",
+  "translation_date": "2025-08-29T13:28:09+00:00",
   "source_file": "1-getting-started-lessons/3-accessibility/README.md",
   "language_code": "en"
 }
@@ -13,13 +13,13 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/5)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/)
 
 > The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
 >
 > \- Sir Timothy Berners-Lee, W3C Director and inventor of the World Wide Web
 
-This quote perfectly captures the importance of building accessible websites. An application that excludes certain users is inherently discriminatory. As web developers, we should always prioritize accessibility. By focusing on it from the start, you'll be well on your way to ensuring everyone can access the pages you create. In this lesson, you'll learn about tools that can help you ensure your web assets are accessible and how to design with accessibility in mind.
+This quote perfectly captures the importance of building accessible websites. An application that excludes certain users is inherently discriminatory. As web developers, we should always prioritize accessibility. By focusing on it from the start, you'll be well on your way to ensuring that everyone can access the pages you create. In this lesson, you'll learn about tools that can help you ensure your web assets are accessible and how to design with accessibility in mind.
 
 > You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
 
@@ -27,27 +27,29 @@ This quote perfectly captures the importance of building accessible websites. An
 
 ### Screen readers
 
-Screen readers are one of the most widely known accessibility tools.
+Screen readers are among the most well-known accessibility tools.
 
-[Screen readers](https://en.wikipedia.org/wiki/Screen_reader) are commonly used by individuals with vision impairments. While we spend time ensuring browsers display information correctly, we must also ensure screen readers convey the same information effectively.
+[Screen readers](https://en.wikipedia.org/wiki/Screen_reader) are commonly used by individuals with vision impairments. Just as we ensure browsers display information correctly, we must also ensure screen readers convey the same information accurately.
 
-At their core, screen readers audibly read a page from top to bottom. If your page is entirely text, the reader will present the information similarly to a browser. However, web pages often include links, images, colors, and other visual elements. Care must be taken to ensure this information is interpreted correctly by a screen reader.
+At their core, screen readers audibly read a page from top to bottom. If your page is entirely text, the reader will present the information similarly to a browser. However, web pages often include links, images, colors, and other visual elements. Care must be taken to ensure this information is conveyed correctly by a screen reader.
 
-Every web developer should familiarize themselves with screen readers. Just as you understand how browsers work, you should learn how screen readers operate. Fortunately, most operating systems come with built-in screen readers.
+Every web developer should become familiar with screen readers. Just as you understand how browsers work, you should also learn how screen readers operate. Fortunately, most operating systems come with built-in screen readers.
 
-Some browsers also offer built-in tools and extensions that can read text aloud or provide basic navigation features, such as [these accessibility-focused Edge browser tools](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features). While these tools are useful, they function differently from screen readers and should not be mistaken for screen reader testing tools.
+Some browsers also include tools and extensions that can read text aloud or provide basic navigation features, such as [these accessibility-focused Edge browser tools](https://support.microsoft.com/help/4000734/microsoft-edge-accessibility-features). While useful, these tools function differently from screen readers and should not be used as substitutes for screen reader testing.
 
-✅ Try a screen reader and browser text reader. On Windows, [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) is included by default, and [JAWS](https://webaim.org/articles/jaws/) and [NVDA](https://www.nvaccess.org/about-nvda/) can also be installed. On macOS and iOS, [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) is installed by default.
+✅ Try a screen reader and browser text reader. On Windows, [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) is included by default, and [JAWS](https://webaim.org/articles/jaws/) and [NVDA](https://www.nvaccess.org/about-nvda/) can also be installed. On macOS and iOS, [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) is pre-installed.
 
 ### Zoom
 
-Zooming is another tool frequently used by individuals with vision impairments. The simplest form of zooming is static zoom, controlled via `Control + plus sign (+)` or by lowering screen resolution. This type of zoom resizes the entire page, so using [responsive design](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) is crucial for providing a good user experience at higher zoom levels.
+Zooming is another tool frequently used by individuals with vision impairments. 
 
-Another type of zoom uses specialized software to magnify specific areas of the screen and pan, similar to using a physical magnifying glass. On Windows, [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) is built in, while [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) is a third-party magnification tool with more features and a larger user base. Both macOS and iOS include built-in magnification software called [Zoom](https://www.apple.com/accessibility/mac/vision/).
+The simplest form of zooming is static zoom, which can be controlled using `Control + plus sign (+)` or by lowering the screen resolution. This type of zoom enlarges the entire page, so using [responsive design](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design) is essential to ensure a good user experience at higher zoom levels.
+
+Another type of zoom involves specialized software that magnifies specific areas of the screen and allows panning, similar to using a magnifying glass. On Windows, [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) is built in, while [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/) is a third-party magnification tool with additional features and a larger user base. Both macOS and iOS include a built-in magnification tool called [Zoom](https://www.apple.com/accessibility/mac/vision/).
 
 ### Contrast checkers
 
-Colors on websites must be chosen carefully to accommodate users with color blindness or difficulty seeing low-contrast colors.
+Colors on websites must be chosen carefully to accommodate users who are color-blind or have difficulty perceiving low-contrast colors.
 
 ✅ Test a website you enjoy using for its color choices with a browser extension like [WCAG's color checker](https://microsoftedge.microsoft.com/addons/detail/wcag-color-contrast-check/idahaggnlnekelhgplklhfpchbfdmkjp?hl=en-US&WT.mc_id=academic-77807-sagibbon). What do you learn?
 
@@ -55,7 +57,7 @@ Colors on websites must be chosen carefully to accommodate users with color blin
 
 Your browser's developer tools include the Lighthouse tool, which provides an initial analysis of a website's accessibility (along with other metrics). While you shouldn't rely solely on Lighthouse, achieving a 100% score is a helpful starting point.
 
-✅ Locate Lighthouse in your browser's developer tools and run an analysis on any site. What do you discover?
+✅ Open Lighthouse in your browser's developer tools and analyze any website. What do you discover?
 
 ## Designing for accessibility
 
@@ -63,88 +65,86 @@ Accessibility is a broad topic, but there are many resources available to help y
 
 - [Accessible U - University of Minnesota](https://accessibility.umn.edu/your-role/web-developers)
 
-While we can't cover every aspect of creating accessible sites, here are some key principles to implement. Designing an accessible page from the beginning is **always** easier than retrofitting an existing page.
+While we can't cover every aspect of creating accessible websites, the following are some core principles to implement. Designing an accessible page from the beginning is **always** easier than retrofitting an existing page.
 
 ## Good display principles
 
-### Color safe palettes
+### Color-safe palettes
 
-People perceive colors differently. When choosing a color scheme for your site, ensure it's accessible to all. A great [tool for generating color palettes is Color Safe](http://colorsafe.co/).
+People perceive colors differently. When choosing a color scheme for your site, ensure it's accessible to everyone. A great [tool for generating color palettes is Color Safe](http://colorsafe.co/).
 
-✅ Identify a website with problematic color usage. Why is it problematic?
+✅ Identify a website with problematic color usage. Why is it an issue?
 
 ### Use the correct HTML
 
-CSS and JavaScript can make any element look like any type of control. For example, `<span>` could be styled to resemble a `<button>`, and `<b>` could mimic a hyperlink. While this might seem convenient for styling, it provides no context to screen readers. Always use the appropriate HTML for controls. If you need a hyperlink, use `<a>`. Using the correct HTML for each control is called Semantic HTML.
+With CSS and JavaScript, you can make any element look like any type of control. For example, a `<span>` could be styled to look like a `<button>`, or a `<b>` could resemble a hyperlink. While this might seem convenient, it provides no context to a screen reader. Always use the appropriate HTML elements for their intended purposes. For instance, use `<a>` for hyperlinks. This practice is known as Semantic HTML.
 
-✅ Visit a website and check if the designers and developers are using HTML correctly. Can you find a button that should be a link? Hint: Right-click and select 'View Page Source' in your browser to examine the underlying code.
+✅ Visit a website and check if the developers are using HTML correctly. Can you find a button that should be a link? Hint: Right-click and select 'View Page Source' in your browser to inspect the code.
 
 ### Create a descriptive heading hierarchy
 
-Screen reader users [rely heavily on headings](https://webaim.org/projects/screenreadersurvey8/#finding) to locate information and navigate pages. Writing descriptive headings and using semantic heading tags are essential for creating a site that's easy to navigate for screen reader users.
+Screen reader users [rely heavily on headings](https://webaim.org/projects/screenreadersurvey8/#finding) to navigate and locate information on a page. Writing descriptive headings and using semantic heading tags are crucial for creating a site that's easy to navigate for screen reader users.
 
-### Use good visual clues
+### Use clear visual cues
 
-CSS allows complete control over the appearance of elements on a page. You can create text boxes without outlines or hyperlinks without underlines. However, removing these visual cues can make it harder for users who depend on them to identify controls.
+CSS allows you to customize the appearance of any element on a page. For example, you can create text boxes without outlines or hyperlinks without underlines. However, removing these visual cues can make it harder for users who rely on them to identify interactive elements.
 
 ## The importance of link text
 
-Hyperlinks are fundamental to web navigation. Ensuring screen readers can interpret links properly allows all users to navigate your site.
+Hyperlinks are fundamental to web navigation. Ensuring that screen readers can interpret links correctly is essential for accessibility.
 
 ### Screen readers and links
 
-Screen readers read link text just like any other text on the page. At first glance, the examples below might seem acceptable:
+Screen readers read link text just like any other text on a page. At first glance, the examples below might seem acceptable:
 
 > The little penguin, sometimes known as the fairy penguin, is the smallest penguin in the world. [Click here](https://en.wikipedia.org/wiki/Little_penguin) for more information.
 
 > The little penguin, sometimes known as the fairy penguin, is the smallest penguin in the world. Visit https://en.wikipedia.org/wiki/Little_penguin for more information.
 
-> **NOTE** As you'll see, you should **never** create links like the examples above.
-
-Screen readers are a different interface from browsers, with unique features.
+> **NOTE**: As you'll see, you should **never** create links like the examples above.
 
 ### The problem with using the URL
 
-Screen readers read text aloud. If a URL appears in the text, the screen reader will read the URL, which often doesn't convey meaningful information and can sound unpleasant. You may have experienced this if your phone has ever read a text message with a URL.
+Screen readers will read the URL aloud, which can be uninformative and annoying. You've likely experienced this if your phone has ever read a text message containing a URL.
 
 ### The problem with "click here"
 
-Screen readers can read only the hyperlinks on a page, similar to how sighted users scan for links. If all link text is "click here," the user will hear "click here, click here, click here..." making the links indistinguishable.
+Screen readers can list all the links on a page. If all the links are labeled "click here," the user will hear "click here, click here, click here..."—making it impossible to distinguish between links.
 
 ### Good link text
 
-Good link text briefly describes the destination of the link. In the example about little penguins, the link leads to the Wikipedia page about the species. The phrase *little penguins* would be ideal link text, as it clearly indicates what the user will learn by clicking.
+Good link text briefly describes the destination. For example, in the case of the little penguin, the link text *little penguin* clearly indicates what the user will learn about.
 
 > The [little penguin](https://en.wikipedia.org/wiki/Little_penguin), sometimes known as the fairy penguin, is the smallest penguin in the world.
 
-✅ Browse the web for a few minutes to find pages with unclear link strategies. Compare them to sites with better link practices. What do you learn?
+✅ Browse the web and find pages with unclear link text. Compare them to pages with descriptive links. What do you notice?
 
 #### Search engine notes
 
-Using accessible link text also benefits search engines, as they use link text to understand page topics. Good link text helps everyone!
+Using descriptive link text also helps search engines understand your site, improving navigation for everyone.
 
 ### ARIA
 
-Consider the following page:
+Consider the following table:
 
 | Product      | Description        | Order        |
 | ------------ | ------------------ | ------------ |
 | Widget       | [Description](../../../../1-getting-started-lessons/3-accessibility/') | [Order](../../../../1-getting-started-lessons/3-accessibility/') |
 | Super widget | [Description](../../../../1-getting-started-lessons/3-accessibility/') | [Order](../../../../1-getting-started-lessons/3-accessibility/') |
 
-For browser users, repeating "description" and "order" makes sense. However, screen reader users would only hear "description" and "order" repeatedly without context.
+For a browser user, the repeated "Description" and "Order" links make sense. However, a screen reader user would hear "Description" and "Order" repeated without context.
 
-To address this, HTML includes [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) attributes, which provide additional information to screen readers.
+To address this, HTML includes [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) attributes, which provide additional context for screen readers.
 
-> **NOTE**: Browser and screen reader support for ARIA may vary, but most mainstream clients support ARIA attributes.
+> **NOTE**: ARIA support varies across browsers and screen readers, but most major clients support it.
 
-You can use `aria-label` to describe links when the page format doesn't allow for clear text. For example, the description for "widget" could be set as:
+You can use `aria-label` to add context to links. For example, the description link for the widget could be labeled as:
 
 ``` html
 <a href="#" aria-label="Widget description">description</a>
 ```
 
-✅ Generally, using Semantic HTML as described earlier is preferable to ARIA, but ARIA is useful when no semantic equivalent exists (e.g., for a tree structure). The [MDN documentation on ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) offers more details.
+✅ While Semantic HTML should always be your first choice, ARIA is useful when no semantic equivalent exists (e.g., for a tree structure). The [MDN documentation on ARIA](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) is a great resource.
 
 ```html
 <h2 id="tree-label">File Viewer</h2>
@@ -155,19 +155,19 @@ You can use `aria-label` to describe links when the page format doesn't allow fo
 
 ## Images
 
-Screen readers cannot automatically interpret images. Making images accessible is simple—use the `alt` attribute to describe them. All meaningful images should have an `alt` attribute. Decorative images should have an empty `alt` attribute: `alt=""`. This prevents screen readers from announcing unnecessary decorative images.
+Screen readers cannot interpret images, which is why the `alt` attribute is essential. All meaningful images should include an `alt` description. Decorative images should have an empty `alt` attribute (`alt=""`) to prevent unnecessary announcements.
 
-✅ Search engines also rely on alt text to understand images. Once again, making your page accessible has additional benefits!
+✅ Search engines also rely on `alt` text, so making your images accessible benefits everyone!
 
 ## The keyboard
 
-Some users cannot use a mouse or trackpad and rely on keyboard navigation to move between elements. Your website should present content in a logical order so keyboard users can access interactive elements sequentially. Building pages with semantic markup and styling them with CSS should make your site keyboard-navigable, but it's important to test this manually. Learn more about [keyboard navigation strategies](https://webaim.org/techniques/keyboard/).
+Some users navigate websites using only a keyboard. It's important to structure your content logically so that keyboard users can access interactive elements in the correct order. Building pages with semantic HTML and styling them with CSS usually ensures keyboard accessibility, but manual testing is essential. Learn more about [keyboard navigation strategies](https://webaim.org/techniques/keyboard/).
 
-✅ Visit a website and try navigating it using only your keyboard. What works? What doesn't? Why?
+✅ Visit a website and try navigating it using only your keyboard. What works well? What doesn't? Why?
 
 ## Summary
 
-A web that's accessible to only some is not truly a "world-wide web." The best way to ensure your sites are accessible is to incorporate accessibility best practices from the start. While it requires extra effort, adopting these practices now will ensure all your future pages are accessible.
+A web that's only accessible to some is not truly "world-wide." The best way to ensure your sites are accessible is to incorporate accessibility best practices from the start. While it may require extra effort, adopting these practices now will ensure all your future pages are inclusive.
 
 ---
 
@@ -219,25 +219,25 @@ Take this HTML and rewrite it to be as accessible as possible, using the strateg
           <p class="nav-item nav-item-bull"><a href="../semantic">Semantic Example</a></p>
         </div>
       </div>
-      <p class="footer-copyright">&copy; 2016 Instrument</span>
+      <p class="footer-copyright">&copy; 2016 Instrument</p>
     </div>
   </body>
 </html>
 ```
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/6)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/en/)
 
 ## Review & Self Study
-Many governments have laws regarding accessibility requirements. Familiarize yourself with the accessibility laws in your country. What aspects are included, and what are not? An example is [this government web site](https://accessibility.blog.gov.uk/).
+Many governments have laws related to accessibility requirements. Research the accessibility laws in your country. What aspects are included, and what are not? An example is [this government website](https://accessibility.blog.gov.uk/).
 
 ## Assignment
 
-[Analyze a non-accessible web site](assignment.md)
+[Analyze a non-accessible website](assignment.md)
 
 Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument
 
 ---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

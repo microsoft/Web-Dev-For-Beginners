@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-23T23:07:41+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T13:38:36+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "fr"
 }
@@ -13,29 +13,29 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Il existe différentes façons d'exprimer une *condition de fin* dans un jeu. En tant que créateur du jeu, c'est à vous de décider pourquoi le jeu se termine. Voici quelques raisons, en supposant que nous parlons du jeu spatial que vous avez construit jusqu'à présent :
+Il existe différentes façons d'exprimer une *condition de fin* dans un jeu. En tant que créateur du jeu, c'est à vous de décider pourquoi le jeu se termine. Voici quelques raisons possibles, en supposant que nous parlons du jeu spatial que vous avez construit jusqu'à présent :
 
 - **`N` vaisseaux ennemis ont été détruits** : Il est assez courant, si vous divisez un jeu en différents niveaux, de devoir détruire `N` vaisseaux ennemis pour terminer un niveau.
-- **Votre vaisseau a été détruit** : Il existe des jeux où vous perdez si votre vaisseau est détruit. Une autre approche courante est d'introduire le concept de vies. Chaque fois que votre vaisseau est détruit, une vie est déduite. Une fois toutes les vies perdues, vous perdez le jeu.
-- **Vous avez collecté `N` points** : Une autre condition de fin courante est de collecter des points. La manière dont vous obtenez des points dépend de vous, mais il est assez courant d'attribuer des points à diverses activités comme détruire un vaisseau ennemi ou collecter des objets que les ennemis *laissent tomber* lorsqu'ils sont détruits.
+- **Votre vaisseau a été détruit** : Il existe des jeux où vous perdez si votre vaisseau est détruit. Une autre approche courante est d'introduire le concept de vies. Chaque fois que votre vaisseau est détruit, une vie est déduite. Une fois toutes les vies perdues, vous perdez la partie.
+- **Vous avez collecté `N` points** : Une autre condition de fin courante est de collecter des points. La manière dont vous obtenez ces points dépend de vous, mais il est fréquent d'attribuer des points à diverses activités comme détruire un vaisseau ennemi ou collecter des objets qui tombent lorsque des ennemis sont détruits.
 - **Terminer un niveau** : Cela peut impliquer plusieurs conditions, comme détruire `X` vaisseaux ennemis, collecter `Y` points ou peut-être récupérer un objet spécifique.
 
 ## Redémarrage
 
-Si les gens apprécient votre jeu, ils voudront probablement le rejouer. Une fois le jeu terminé, quelle qu'en soit la raison, vous devriez offrir une option pour recommencer.
+Si les joueurs apprécient votre jeu, ils voudront probablement y rejouer. Une fois le jeu terminé, quelle qu'en soit la raison, vous devriez offrir une option pour redémarrer.
 
-✅ Réfléchissez un peu aux conditions dans lesquelles un jeu se termine, puis à la manière dont vous êtes invité à le redémarrer.
+✅ Réfléchissez aux conditions dans lesquelles un jeu se termine, puis à la manière dont vous invitez les joueurs à redémarrer.
 
 ## Ce que vous allez construire
 
 Vous allez ajouter ces règles à votre jeu :
 
-1. **Gagner le jeu**. Une fois que tous les vaisseaux ennemis ont été détruits, vous gagnez le jeu. Affichez également un message de victoire.
-1. **Redémarrer**. Une fois que toutes vos vies sont perdues ou que le jeu est gagné, vous devez offrir un moyen de redémarrer le jeu. N'oubliez pas ! Vous devrez réinitialiser le jeu et effacer l'état précédent.
+1. **Gagner la partie**. Une fois que tous les vaisseaux ennemis ont été détruits, vous gagnez la partie. Affichez également un message de victoire.
+1. **Redémarrer**. Une fois que toutes vos vies sont perdues ou que le jeu est gagné, vous devez offrir une option pour redémarrer le jeu. N'oubliez pas ! Vous devrez réinitialiser le jeu et effacer l'état précédent.
 
 ## Étapes recommandées
 
-Localisez les fichiers qui ont été créés pour vous dans le sous-dossier `your-work`. Il devrait contenir les éléments suivants :
+Repérez les fichiers qui ont été créés pour vous dans le sous-dossier `your-work`. Il devrait contenir les éléments suivants :
 
 ```bash
 -| assets
@@ -55,13 +55,13 @@ cd your-work
 npm start
 ```
 
-Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et entrez cette adresse. Votre jeu devrait être dans un état jouable.
+Cela lancera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et entrez cette adresse. Votre jeu devrait être jouable.
 
 > astuce : pour éviter les avertissements dans Visual Studio Code, modifiez la fonction `window.onload` pour appeler `gameLoopId` tel quel (sans `let`), et déclarez `gameLoopId` en haut du fichier, indépendamment : `let gameLoopId;`
 
 ### Ajouter du code
 
-1. **Suivre la condition de fin**. Ajoutez du code qui suit le nombre d'ennemis ou si le vaisseau héros a été détruit en ajoutant ces deux fonctions :
+1. **Suivre la condition de fin**. Ajoutez du code pour suivre le nombre d'ennemis ou vérifier si le vaisseau du héros a été détruit en ajoutant ces deux fonctions :
 
     ```javascript
     function isHeroDead() {
@@ -108,14 +108,14 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
     });
     ```
 
-1. **Ajouter de nouveaux types de messages**. Ajoutez ces Messages à l'objet constants :
+1. **Ajouter de nouveaux types de messages**. Ajoutez ces messages à l'objet constants :
 
     ```javascript
     GAME_END_LOSS: "GAME_END_LOSS",
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Ajouter du code de redémarrage** qui redémarre le jeu à la pression d'un bouton sélectionné.
+2. **Ajouter le code de redémarrage** pour redémarrer le jeu en appuyant sur une touche sélectionnée.
 
    1. **Écouter la touche `Entrée`**. Modifiez l'eventListener de votre fenêtre pour écouter cette touche :
 
@@ -125,7 +125,7 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
       }
     ```
 
-   1. **Ajouter un message de redémarrage**. Ajoutez ce Message à votre constante Messages :
+   1. **Ajouter un message de redémarrage**. Ajoutez ce message à votre constante Messages :
 
         ```javascript
         KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
@@ -171,7 +171,7 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
         }
         ```
 
-   1. **Logique de redémarrage**. Lorsque toutes les vies sont perdues ou que le joueur a gagné le jeu, affichez que le jeu peut être redémarré. Redémarrez également le jeu lorsque la touche *redémarrer* est pressée (vous pouvez décider quelle touche sera associée au redémarrage).
+   1. **Logique de redémarrage**. Lorsque toutes les vies sont perdues ou que le joueur a gagné, affichez que le jeu peut être redémarré. Redémarrez également le jeu lorsque la touche de *redémarrage* est pressée (vous pouvez décider quelle touche sera utilisée pour redémarrer).
 
       1. Créez la fonction `resetGame()` :
 
@@ -194,7 +194,7 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
         }
         ```
 
-     1. Ajoutez un appel au `eventEmitter` pour réinitialiser le jeu dans `initGame()` :
+     1. Ajoutez un appel à `eventEmitter` pour réinitialiser le jeu dans `initGame()` :
 
         ```javascript
         eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
@@ -216,13 +216,13 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
 
 ## 🚀 Défi
 
-Ajoutez un son ! Pouvez-vous ajouter un son pour améliorer l'expérience de jeu, peut-être lorsqu'un laser touche, ou lorsque le héros meurt ou gagne ? Consultez ce [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) pour apprendre à jouer un son avec JavaScript.
+Ajoutez un son ! Pouvez-vous ajouter un son pour améliorer l'expérience de jeu, peut-être lorsqu'un laser touche une cible, ou lorsque le héros meurt ou gagne ? Consultez ce [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) pour apprendre à jouer un son avec JavaScript.
 
 ## Quiz après le cours
 
 [Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/40)
 
-## Révision et étude personnelle
+## Révision et auto-apprentissage
 
 Votre mission est de créer un nouveau jeu d'exemple, alors explorez certains des jeux intéressants disponibles pour voir quel type de jeu vous pourriez construire.
 
@@ -230,5 +230,7 @@ Votre mission est de créer un nouveau jeu d'exemple, alors explorez certains de
 
 [Créer un jeu d'exemple](assignment.md)
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

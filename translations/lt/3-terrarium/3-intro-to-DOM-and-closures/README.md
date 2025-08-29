@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "30f8903a1f290e3d438dc2c70fe60259",
-  "translation_date": "2025-08-28T11:52:59+00:00",
+  "original_hash": "61c14b27044861e5e69db35dd52c4403",
+  "translation_date": "2025-08-29T16:56:20+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "lt"
 }
@@ -20,13 +20,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 DOM manipuliacija, arba "Dokumento Objektų Modelis", yra pagrindinis interneto kūrimo aspektas. Pasak [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "Dokumento Objektų Modelis (DOM) yra duomenų reprezentacija objektų, sudarančių dokumento struktūrą ir turinį internete." DOM manipuliacijos iššūkiai dažnai paskatino naudoti JavaScript karkasus vietoj gryno JavaScript, kad būtų lengviau valdyti DOM, tačiau mes susitvarkysime patys!
 
-Be to, ši pamoka supažindins su [JavaScript uždara funkcija](https://developer.mozilla.org/docs/Web/JavaScript/Closures), kurią galite įsivaizduoti kaip funkciją, apgaubtą kita funkcija, kad vidinė funkcija turėtų prieigą prie išorinės funkcijos srities.
+Be to, ši pamoka supažindins su [JavaScript uždara funkcija](https://developer.mozilla.org/docs/Web/JavaScript/Closures), kurią galite įsivaizduoti kaip funkciją, apgaubtą kita funkcija, leidžiančią vidinei funkcijai pasiekti išorinės funkcijos sritį.
 
-> JavaScript uždaros funkcijos yra plati ir sudėtinga tema. Ši pamoka paliečia pagrindinę idėją, kad šiame terariumo kode rasite uždarą funkciją: vidinę funkciją ir išorinę funkciją, sukonstruotas taip, kad vidinė funkcija galėtų pasiekti išorinės funkcijos sritį. Daugiau informacijos apie tai, kaip tai veikia, rasite [išsamioje dokumentacijoje](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
+> JavaScript uždaros funkcijos yra plati ir sudėtinga tema. Ši pamoka apima pagrindinę idėją, kad šiame terariumo kode rasite uždarą funkciją: vidinę funkciją ir išorinę funkciją, sukonstruotą taip, kad vidinė funkcija galėtų pasiekti išorinės funkcijos sritį. Daugiau informacijos apie tai, kaip tai veikia, rasite [išsamioje dokumentacijoje](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
 
-Mes naudosime uždarą funkciją, kad manipuliuotume DOM.
+Mes naudosime uždarą funkciją DOM manipuliacijai.
 
-Įsivaizduokite DOM kaip medį, kuris reprezentuoja visus būdus, kaip galima manipuliuoti interneto puslapio dokumentu. Buvo sukurti įvairūs API (Programų Sąsajos), kad programuotojai, naudodami savo pasirinktą programavimo kalbą, galėtų pasiekti DOM ir jį redaguoti, keisti, pertvarkyti bei kitaip valdyti.
+Įsivaizduokite DOM kaip medį, kuris reprezentuoja visus būdus, kaip galima manipuliuoti interneto puslapio dokumentu. Buvo sukurta įvairių API (Programų Sąsajų), kad programuotojai, naudodami savo pasirinktą programavimo kalbą, galėtų pasiekti DOM ir jį redaguoti, keisti, pertvarkyti bei kitaip valdyti.
 
 ![DOM medžio reprezentacija](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.lt.png)
 
@@ -34,19 +34,19 @@ Mes naudosime uždarą funkciją, kad manipuliuotume DOM.
 
 Šioje pamokoje užbaigsime interaktyvų terariumo projektą, sukurdami JavaScript kodą, kuris leis vartotojui manipuliuoti augalais puslapyje.
 
-### Būtinos žinios
+### Reikalavimai
 
-Jūs turėtumėte būti sukūrę HTML ir CSS savo terariumui. Pamokos pabaigoje galėsite perkelti augalus į terariumą ir iš jo, juos vilkdami.
+Jūs turėtumėte turėti sukurtą HTML ir CSS savo terariumui. Pamokos pabaigoje galėsite perkelti augalus į terariumą ir iš jo, juos vilkdami.
 
 ### Užduotis
 
-Savo terariumo aplanke sukurkite naują failą, pavadintą `script.js`. Importuokite šį failą į `<head>` sekciją:
+Savo terariumo aplanke sukurkite naują failą pavadinimu `script.js`. Importuokite šį failą į `<head>` sekciją:
 
 ```html
 	<script src="./script.js" defer></script>
 ```
 
-> Pastaba: naudokite `defer`, kai importuojate išorinį JavaScript failą į HTML failą, kad JavaScript būtų vykdomas tik po to, kai HTML failas bus visiškai įkeltas. Taip pat galite naudoti atributą `async`, kuris leidžia skriptui vykdyti, kol HTML failas yra analizuojamas, tačiau mūsų atveju svarbu, kad HTML elementai būtų visiškai prieinami vilkimui prieš leidžiant vykdyti vilkimo skriptą.
+> Pastaba: naudokite `defer`, kai importuojate išorinį JavaScript failą į HTML failą, kad JavaScript būtų vykdomas tik po to, kai HTML failas bus visiškai įkeltas. Taip pat galite naudoti atributą `async`, kuris leidžia skriptui vykdyti, kol HTML failas yra apdorojamas, tačiau mūsų atveju svarbu, kad HTML elementai būtų visiškai prieinami vilkimui prieš leidžiant vykdyti vilkimo skriptą.
 ---
 
 ## DOM elementai
@@ -72,7 +72,7 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-Kas čia vyksta? Jūs nurodote dokumentą ir ieškote jo DOM elemento su konkrečiu Id. Prisiminkite, kad pirmoje HTML pamokoje kiekvienam augalo paveikslėliui priskyrėte individualius Id (`id="plant1"`)? Dabar pasinaudosite šiuo darbu. Identifikavę kiekvieną elementą, perduodate jį funkcijai `dragElement`, kurią netrukus sukursite. Taigi, HTML elementas dabar yra paruoštas vilkimui arba netrukus bus.
+Kas čia vyksta? Jūs nurodote dokumentą ir ieškote jo DOM elemento su konkrečiu Id. Prisiminkite, kad pirmoje HTML pamokoje kiekvienam augalo paveikslėliui priskyrėte individualius Id (`id="plant1"`)? Dabar pasinaudosite šiuo darbu. Identifikavę kiekvieną elementą, perduodate jį funkcijai `dragElement`, kurią netrukus sukursite. Taigi, HTML elementas dabar yra paruoštas vilkimui arba bus netrukus.
 
 ✅ Kodėl mes nurodome elementus pagal Id? Kodėl ne pagal jų CSS klasę? Galite grįžti prie ankstesnės pamokos apie CSS, kad atsakytumėte į šį klausimą.
 
@@ -80,9 +80,9 @@ Kas čia vyksta? Jūs nurodote dokumentą ir ieškote jo DOM elemento su konkre�
 
 ## Uždara funkcija
 
-Dabar esate pasiruošę sukurti `dragElement` uždarą funkciją, kuri yra išorinė funkcija, apgaubianti vidinę funkciją ar funkcijas (mūsų atveju turėsime tris).
+Dabar esate pasiruošę sukurti uždarą funkciją `dragElement`, kuri yra išorinė funkcija, apgaubianti vidinę funkciją ar funkcijas (mūsų atveju turėsime tris).
 
-Uždaros funkcijos yra naudingos, kai viena ar daugiau funkcijų turi prieigą prie išorinės funkcijos srities. Štai pavyzdys:
+Uždaros funkcijos yra naudingos, kai viena ar daugiau funkcijų turi pasiekti išorinės funkcijos sritį. Štai pavyzdys:
 
 ```javascript
 function displayCandy(){
@@ -96,9 +96,9 @@ displayCandy();
 console.log(candy)
 ```
 
-Šiame pavyzdyje funkcija `displayCandy` apgaubia funkciją, kuri įterpia naują saldainių tipą į masyvą, kuris jau egzistuoja funkcijoje. Jei paleistumėte šį kodą, masyvas `candy` būtų neapibrėžtas, nes jis yra vietinis kintamasis (vietinis uždarai funkcijai).
+Šiame pavyzdyje funkcija `displayCandy` apgaubia funkciją, kuri įterpia naują saldainių tipą į masyvą, kuris jau egzistuoja funkcijoje. Jei vykdytumėte šį kodą, masyvas `candy` būtų neapibrėžtas, nes jis yra lokalus kintamasis (lokalus uždarai funkcijai).
 
-✅ Kaip galite padaryti, kad masyvas `candy` būtų prieinamas? Pabandykite perkelti jį už uždaros funkcijos ribų. Tokiu būdu masyvas taps globalus, o ne liks prieinamas tik uždaros funkcijos vietinei sričiai.
+✅ Kaip galite padaryti, kad masyvas `candy` būtų prieinamas? Pabandykite perkelti jį už uždaros funkcijos ribų. Tokiu būdu masyvas taps globalus, o ne liks prieinamas tik uždaros funkcijos lokalioje srityje.
 
 ### Užduotis
 
@@ -115,9 +115,9 @@ function dragElement(terrariumElement) {
 }
 ```
 
-`dragElement` gauna savo `terrariumElement` objektą iš deklaracijų skripto viršuje. Tada jūs nustatote keletą vietinių pozicijų kaip `0` objektui, perduotam funkcijai. Tai yra vietiniai kintamieji, kurie bus manipuliuojami kiekvienam elementui, kai pridėsite vilkimo ir numetimo funkcionalumą uždaroje funkcijoje. Terariumas bus užpildytas šiais vilktais elementais, todėl programa turi sekti, kur jie yra patalpinti.
+`dragElement` gauna savo `terrariumElement` objektą iš deklaracijų skripto viršuje. Tada jūs nustatote keletą lokalių pozicijų kaip `0` objektui, perduotam funkcijai. Tai yra lokalūs kintamieji, kurie bus manipuliuojami kiekvienam elementui, kai pridėsite vilkimo ir numetimo funkcionalumą uždaroje funkcijoje kiekvienam elementui. Terariumas bus užpildytas šiais vilktais elementais, todėl programa turi sekti, kur jie yra išdėstyti.
 
-Be to, `terrariumElement`, perduotas šiai funkcijai, priskiriamas `pointerdown` įvykis, kuris yra dalis [web API](https://developer.mozilla.org/docs/Web/API), sukurtų padėti valdyti DOM. `onpointerdown` įvykis įvyksta, kai paspaudžiamas mygtukas arba, mūsų atveju, paliečiamas vilkimo elementas. Šis įvykio tvarkytuvas veikia tiek [interneto, tiek mobiliuosiuose naršyklėse](https://caniuse.com/?search=onpointerdown), su keliomis išimtimis.
+Be to, funkcijai perduotas `terrariumElement` priskiriamas `pointerdown` įvykis, kuris yra dalis [web API](https://developer.mozilla.org/docs/Web/API), skirtų padėti valdyti DOM. `onpointerdown` įvykis įvyksta, kai paspaudžiamas mygtukas arba, mūsų atveju, kai paliečiamas vilkimo elementas. Šis įvykio tvarkytuvas veikia tiek [interneto, tiek mobiliuosiuose naršyklėse](https://caniuse.com/?search=onpointerdown), su keliomis išimtimis.
 
 ✅ [Įvykio tvarkytuvas `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) turi daug didesnį palaikymą įvairiose naršyklėse; kodėl jo nenaudotumėte čia? Pagalvokite apie tikslų ekrano sąveikos tipą, kurį bandote sukurti.
 
@@ -125,7 +125,7 @@ Be to, `terrariumElement`, perduotas šiai funkcijai, priskiriamas `pointerdown`
 
 ## Pointerdrag funkcija
 
-`terrariumElement` yra pasiruošęs būti vilkamas; kai įvyksta `onpointerdown` įvykis, funkcija `pointerDrag` yra iškviečiama. Pridėkite šią funkciją tiesiai po šia eilute: `terrariumElement.onpointerdown = pointerDrag;`:
+`terrariumElement` yra pasiruošęs būti vilkamas; kai įvyksta `onpointerdown` įvykis, iškviečiama funkcija `pointerDrag`. Pridėkite šią funkciją tiesiai po šia eilute: `terrariumElement.onpointerdown = pointerDrag;`:
 
 ### Užduotis 
 
@@ -138,27 +138,27 @@ function pointerDrag(e) {
 }
 ```
 
-Įvyksta keli dalykai. Pirma, jūs užkertate kelią numatytiesiems įvykiams, kurie paprastai įvyksta `pointerdown` metu, naudodami `e.preventDefault();`. Taip jūs turite daugiau kontrolės interfeiso elgesio atžvilgiu.
+Įvyksta keli dalykai. Pirma, jūs užkertate kelią numatytiems įvykiams, kurie paprastai įvyksta paspaudus pointerdown, naudodami `e.preventDefault();`. Tokiu būdu turite daugiau kontrolės sąsajos elgesyje.
 
 > Grįžkite prie šios eilutės, kai visiškai sukursite skripto failą, ir pabandykite be `e.preventDefault()` - kas nutinka?
 
-Antra, atidarykite `index.html` naršyklės lange ir patikrinkite interfeisą. Kai spustelėsite augalą, galėsite pamatyti, kaip užfiksuojamas 'e' įvykis. Išanalizuokite įvykį, kad pamatytumėte, kiek informacijos surenkama vieno `pointerdown` įvykio metu!  
+Antra, atidarykite `index.html` naršyklės lange ir patikrinkite sąsają. Kai spustelėsite augalą, pamatysite, kaip užfiksuojamas 'e' įvykis. Išanalizuokite įvykį, kad pamatytumėte, kiek informacijos surenkama vieno pointerdown įvykio metu!  
 
-Toliau atkreipkite dėmesį, kaip vietiniai kintamieji `pos3` ir `pos4` nustatomi kaip `e.clientX`. Šias `e` reikšmes galite rasti inspektavimo lange. Šios reikšmės užfiksuoja augalo x ir y koordinates tuo momentu, kai jį spustelėjate arba paliečiate. Jums reikės detalaus valdymo augalų elgesiui, kai juos spustelėsite ir vilksite, todėl sekate jų koordinates.
+Toliau atkreipkite dėmesį, kaip lokalūs kintamieji `pos3` ir `pos4` nustatomi kaip e.clientX. Šias `e` reikšmes galite rasti inspektavimo lange. Šios reikšmės užfiksuoja augalo x ir y koordinates tuo momentu, kai jį spustelėjate arba paliečiate. Jums reikės detalaus valdymo augalų elgesyje, kai juos spustelėsite ir vilksite, todėl sekate jų koordinates.
 
-✅ Ar tampa aiškiau, kodėl visa ši programa yra sukurta naudojant vieną didelę uždarą funkciją? Jei ne, kaip išlaikytumėte sritį kiekvienam iš 14 vilkimo augalų?
+✅ Ar tampa aiškiau, kodėl visa ši programa sukurta naudojant vieną didelę uždarą funkciją? Jei ne, kaip išlaikytumėte sritį kiekvienam iš 14 vilkimo augalų?
 
-Užbaikite pradinę funkciją pridėdami dar du manipuliavimus pointer įvykiais po `pos4 = e.clientY`:
+Užbaikite pradinę funkciją pridėdami dar du pointer įvykių manipuliavimus po `pos4 = e.clientY`:
 
 ```html
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
-Dabar jūs nurodote, kad norite, jog augalas būtų vilkamas kartu su pointer, kai jį judinate, ir kad vilkimo gestas sustotų, kai nustojate pasirinkti augalą. `onpointermove` ir `onpointerup` yra tos pačios API dalys kaip `onpointerdown`. Interfeisas dabar mes klaidas, nes dar neapibrėžėte funkcijų `elementDrag` ir `stopElementDrag`, todėl sukurkite jas toliau.
+Dabar jūs nurodote, kad norite, jog augalas būtų vilkamas kartu su pointer, kai jį judinate, ir kad vilkimo gestas sustotų, kai nustojate pasirinkti augalą. `onpointermove` ir `onpointerup` yra tos pačios API dalys kaip `onpointerdown`. Sąsaja dabar išmes klaidas, nes dar neapibrėžėte funkcijų `elementDrag` ir `stopElementDrag`, todėl sukurkite jas toliau.
 
 ## Funkcijos elementDrag ir stopElementDrag
 
-Užbaigsite savo uždarą funkciją pridėdami dar dvi vidines funkcijas, kurios tvarkys, kas nutinka, kai vilkote augalą ir nustojate jį vilkti. Norimas elgesys yra toks, kad bet kuriuo metu galėtumėte vilkti bet kurį augalą ir patalpinti jį bet kur ekrane. Šis interfeisas yra gana neapibrėžtas (pavyzdžiui, nėra numetimo zonos), kad galėtumėte sukurti savo terariumą taip, kaip norite, pridėdami, pašalindami ir perstatydami augalus.
+Užbaigsite savo uždarą funkciją pridėdami dar dvi vidines funkcijas, kurios tvarkys, kas nutinka, kai vilkite augalą ir nustojate jį vilkti. Norimas elgesys yra toks, kad bet kuriuo metu galėtumėte vilkti bet kurį augalą ir padėti jį bet kur ekrane. Ši sąsaja yra gana neapibrėžta (pavyzdžiui, nėra numetimo zonos), kad galėtumėte sukurti savo terariumą taip, kaip norite, pridėdami, pašalindami ir perstatydami augalus.
 
 ### Užduotis
 
@@ -175,17 +175,17 @@ function elementDrag(e) {
 	terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
 }
 ```
-Šioje funkcijoje jūs daug redaguojate pradinės pozicijos 1-4, kurias nustatėte kaip vietinius kintamuosius išorinėje funkcijoje. Kas čia vyksta?
+Šioje funkcijoje jūs daug redaguojate pradinės pozicijos 1-4, kurias nustatėte kaip lokalūs kintamieji išorinėje funkcijoje. Kas čia vyksta?
 
-Kai vilkote, jūs iš naujo priskiriate `pos1`, padarydami ją lygią `pos3` (kurią anksčiau nustatėte kaip `e.clientX`) minus dabartinę `e.clientX` reikšmę. Panaši operacija atliekama su `pos2`. Tada jūs iš naujo nustatote `pos3` ir `pos4` į naujas elemento X ir Y koordinates. Šiuos pokyčius galite stebėti konsolėje, kai vilkote. Tada jūs manipuliuojate augalo CSS stiliumi, kad nustatytumėte jo naują poziciją, remdamiesi naujomis `pos1` ir `pos2` pozicijomis, apskaičiuodami augalo viršutinę ir kairę X ir Y koordinates, remdamiesi jo poslinkiu su šiomis naujomis pozicijomis.
+Kai vilkite, jūs iš naujo priskiriate `pos1`, padarydami ją lygią `pos3` (kurią anksčiau nustatėte kaip `e.clientX`) minus dabartinę `e.clientX` reikšmę. Panaši operacija atliekama su `pos2`. Tada jūs iš naujo nustatote `pos3` ir `pos4` į naujas elemento X ir Y koordinates. Šiuos pokyčius galite stebėti konsolėje, kai vilkite. Tada jūs manipuliuojate augalo CSS stiliumi, kad nustatytumėte jo naują poziciją, remdamiesi naujomis `pos1` ir `pos2` pozicijomis, apskaičiuodami augalo viršutinę ir kairę X ir Y koordinates, palygindami jo poslinkį su šiomis naujomis pozicijomis.
 
 > `offsetTop` ir `offsetLeft` yra CSS savybės, kurios nustato elemento poziciją, remiantis jo tėviniu elementu; tėvinis elementas gali būti bet kuris elementas, kuris nėra pozicionuotas kaip `static`. 
 
-Visa ši pozicijų perskaičiavimo operacija leidžia jums tiksliai sureguliuoti terariumo ir jo augalų elgesį.
+Visa ši pozicijų perskaičiavimas leidžia jums tiksliai sureguliuoti terariumo ir jo augalų elgesį.
 
 ### Užduotis 
 
-Paskutinė užduotis, kad užbaigtumėte interfeisą, yra pridėti funkciją `stopElementDrag` po `elementDrag` uždarymo skliaustu:
+Paskutinė užduotis, norint užbaigti sąsają, yra pridėti funkciją `stopElementDrag` po `elementDrag` uždarymo skliaustu:
 
 ```javascript
 function stopElementDrag() {
@@ -194,7 +194,7 @@ function stopElementDrag() {
 }
 ```
 
-Ši maža funkcija iš naujo nustato `onpointerup` ir `onpointermove` įvykius, kad galėtumėte arba iš naujo pradėti augalo vilkimo procesą, pradėdami jį vilkti iš naujo, arba pradėti vilkti naują augalą.
+Ši nedidelė funkcija iš naujo nustato `onpointerup` ir `onpointermove` įvykius, kad galėtumėte arba iš naujo pradėti augalo vilkimo procesą, arba pradėti vilkti naują augalą.
 
 ✅ Kas nutinka, jei nenustatote šių įvykių kaip null?
 
@@ -206,7 +206,7 @@ Dabar jūs užbaigėte savo projektą!
 
 ## 🚀Iššūkis
 
-Pridėkite naują įvykio tvarkytuvą savo uždaroje funkcijoje, kad augalai atliktų kažką daugiau; pavyzdžiui, dukart spustelėkite augalą, kad jis būtų perkeltas į priekį. Būkite kūrybingi!
+Pridėkite naują įvykio tvarkytuvą savo uždaroje funkcijoje, kad augalai atliktų kažką daugiau; pavyzdžiui, dukart spustelėkite augalą, kad jis būtų perkeliamas į priekį. Būkite kūrybingi!
 
 ## Po paskaitos: testas
 
@@ -226,5 +226,5 @@ Visada patikrinkite naršyklių galimybes naudodami [CanIUse.com](https://canius
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipiame dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudotis profesionalių vertėjų paslaugomis. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus aiškinimus, kylančius dėl šio vertimo naudojimo.
+**Atsakomybės atsisakymas**:  
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Dėl svarbios informacijos rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.

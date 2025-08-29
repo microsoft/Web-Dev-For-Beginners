@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f198c6b817b4b2a99749f4662e7cae98",
-  "translation_date": "2025-08-28T11:25:53+00:00",
+  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
+  "translation_date": "2025-08-29T16:48:36+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "lt"
 }
 -->
-# Naršyklės plėtinio projektas 3 dalis: Sužinokite apie fono užduotis ir našumą
+# Naršyklės plėtinio projektas 3 dalis: Sužinokite apie fonines užduotis ir našumą
 
 ## Klausimynas prieš paskaitą
 
@@ -15,59 +15,59 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Įvadas
 
-Per paskutines dvi šio modulio pamokas išmokote sukurti formą ir duomenų rodymo sritį, skirtą informacijai iš API. Tai labai standartinis būdas kurti internetinį buvimą internete. Jūs netgi išmokote tvarkyti asinchroninį duomenų gavimą. Jūsų naršyklės plėtinys beveik baigtas.
+Paskutinėse dviejose šio modulio pamokose išmokote sukurti formą ir duomenų rodymo sritį, kuri naudoja API užklausas. Tai labai standartinis būdas kurti internetinį projektą. Jūs netgi išmokote, kaip tvarkyti asinchronines duomenų užklausas. Jūsų naršyklės plėtinys beveik baigtas.
 
-Liko valdyti kai kurias fono užduotis, įskaitant plėtinio piktogramos spalvos atnaujinimą, todėl tai puikus metas aptarti, kaip naršyklė tvarko tokio tipo užduotis. Pagalvokime apie šias naršyklės užduotis jūsų internetinių išteklių našumo kontekste, kai juos kuriate.
+Liko valdyti kelias fonines užduotis, įskaitant plėtinio piktogramos spalvos atnaujinimą, todėl tai puikus metas aptarti, kaip naršyklė tvarko tokio tipo užduotis. Pažvelkime į šias naršyklės užduotis jūsų interneto turinio našumo kontekste, kai jį kuriate.
 
 ## Interneto našumo pagrindai
 
-> „Svetainės našumas susijęs su dviem dalykais: kaip greitai puslapis įkeliama ir kaip greitai jame veikia kodas.“ -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
+> „Interneto svetainės našumas susijęs su dviem dalykais: kaip greitai puslapis įkeliamas ir kaip greitai jame veikia kodas.“ -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
-Kaip padaryti, kad jūsų svetainės veiktų žaibiškai greitai visų tipų įrenginiuose, visų tipų vartotojams ir visose situacijose, yra, nenuostabu, labai plati tema. Štai keletas dalykų, kuriuos verta prisiminti, kuriant standartinį interneto projektą ar naršyklės plėtinį.
+Kaip padaryti, kad jūsų svetainės būtų itin greitos visų tipų įrenginiuose, visų tipų vartotojams ir visose situacijose, yra labai plati tema. Štai keli punktai, kuriuos verta prisiminti kuriant standartinį interneto projektą ar naršyklės plėtinį.
 
-Pirmas dalykas, kurį turite padaryti, kad užtikrintumėte efektyvų svetainės veikimą, yra surinkti duomenis apie jos našumą. Pirmoji vieta, kur tai padaryti, yra jūsų naršyklės kūrėjo įrankiai. Naršyklėje „Edge“ galite pasirinkti mygtuką „Nustatymai ir daugiau“ (trijų taškų piktograma viršutiniame dešiniajame naršyklės kampe), tada eiti į Daugiau įrankių > Kūrėjo įrankiai ir atidaryti našumo skirtuką. Taip pat galite naudoti klaviatūros sparčiuosius klavišus `Ctrl` + `Shift` + `I` „Windows“ arba `Option` + `Command` + `I` „Mac“, kad atidarytumėte kūrėjo įrankius.
+Pirmas dalykas, kurį reikia padaryti, kad užtikrintumėte efektyvų svetainės veikimą, yra surinkti duomenis apie jos našumą. Pirmoji vieta tai padaryti yra jūsų naršyklės kūrėjų įrankiai. Edge naršyklėje galite pasirinkti mygtuką „Nustatymai ir daugiau“ (trijų taškų piktograma viršutiniame dešiniajame naršyklės kampe), tada eiti į Daugiau įrankių > Kūrėjų įrankiai ir atidaryti našumo skirtuką. Taip pat galite naudoti klaviatūros sparčiuosius klavišus `Ctrl` + `Shift` + `I` Windows sistemoje arba `Option` + `Command` + `I` Mac sistemoje, kad atidarytumėte kūrėjų įrankius.
 
-Našumo skirtuke yra Profilio įrankis. Atidarykite svetainę (pavyzdžiui, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) ir spustelėkite mygtuką „Įrašyti“, tada atnaujinkite svetainę. Bet kuriuo metu sustabdykite įrašymą ir galėsite pamatyti rutinas, kurios generuojamos „script“, „render“ ir „paint“ svetainės:
+Našumo skirtuke yra profiliavimo įrankis. Atidarykite svetainę (pavyzdžiui, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) ir spustelėkite mygtuką „Įrašyti“, tada atnaujinkite svetainę. Bet kuriuo metu sustabdę įrašymą galėsite pamatyti rutinas, kurios generuojamos „script“, „render“ ir „paint“ svetainės:
 
-![Edge profileris](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.lt.png)
+![Edge profiliavimo įrankis](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.lt.png)
 
-✅ Aplankykite [Microsoft dokumentaciją](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) apie našumo skydelį „Edge“.
+✅ Apsilankykite [Microsoft dokumentacijoje](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) apie Edge našumo panelę.
 
 > Patarimas: norėdami gauti tikslius svetainės paleidimo laiko duomenis, išvalykite naršyklės talpyklą.
 
-Pasirinkite profilio laiko juostos elementus, kad priartintumėte įvykius, vykstančius, kol jūsų puslapis įkeliama.
+Pasirinkite profilio laiko juostos elementus, kad priartintumėte įvykius, vykstančius puslapio įkėlimo metu.
 
-Gaukite savo puslapio našumo momentinę nuotrauką, pasirinkdami profilio laiko juostos dalį ir peržiūrėdami santraukos skydelį:
+Gaukite savo puslapio našumo momentinę nuotrauką pasirinkdami profilio laiko juostos dalį ir peržiūrėdami santraukos skydelį:
 
-![Edge profilerio momentinė nuotrauka](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.lt.png)
+![Edge profilio momentinė nuotrauka](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.lt.png)
 
-Patikrinkite įvykių žurnalo skydelį, kad pamatytumėte, ar kuris nors įvykis truko ilgiau nei 15 ms:
+Patikrinkite įvykių žurnalo skydelį, kad pamatytumėte, ar kuris nors įvykis užtruko ilgiau nei 15 ms:
 
 ![Edge įvykių žurnalas](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.lt.png)
 
-✅ Susipažinkite su savo profiliuotoju! Atidarykite kūrėjo įrankius šioje svetainėje ir pažiūrėkite, ar yra kokių nors kliūčių. Koks yra lėčiausiai įkeliantis išteklius? Greičiausias?
+✅ Susipažinkite su savo profiliavimo įrankiu! Atidarykite kūrėjų įrankius šioje svetainėje ir pažiūrėkite, ar yra kokių nors kliūčių. Kas yra lėčiausiai įkeliama turinio dalis? Greičiausiai?
 
-## Profilio patikrinimai
+## Profiliavimo patikrinimai
 
-Apskritai, yra keletas „probleminių sričių“, į kurias kiekvienas interneto kūrėjas turėtų atkreipti dėmesį, kurdamas svetainę, kad išvengtų nemalonių staigmenų, kai ateis laikas ją diegti į gamybą.
+Apskritai, yra keletas „probleminių sričių“, kurias kiekvienas interneto kūrėjas turėtų stebėti kurdamas svetainę, kad išvengtų nemalonių staigmenų, kai ateis laikas ją paleisti į gamybą.
 
-**Išteklių dydžiai**: Per pastaruosius kelerius metus internetas tapo „sunkesnis“ ir todėl lėtesnis. Dalis šio svorio susijusi su vaizdų naudojimu.
+**Turinio dydžiai**: Internetas per pastaruosius metus tapo „sunkesnis“, todėl lėtesnis. Dalis šio svorio susijusi su vaizdų naudojimu.
 
 ✅ Peržiūrėkite [Interneto archyvą](https://httparchive.org/reports/page-weight), kad pamatytumėte istorinius puslapio svorio duomenis ir daugiau.
 
 Gera praktika yra užtikrinti, kad jūsų vaizdai būtų optimizuoti ir pateikti tinkamo dydžio bei raiškos jūsų vartotojams.
 
-**DOM naršymas**: Naršyklė turi sukurti savo Dokumento objektų modelį pagal jūsų parašytą kodą, todėl geram puslapio našumui svarbu, kad jūsų žymos būtų minimalios, naudojant ir stiliuojant tik tai, ko reikia puslapiui. Šiuo atžvilgiu perteklinė CSS, susijusi su puslapiu, galėtų būti optimizuota; stiliai, kurie turi būti naudojami tik viename puslapyje, neturėtų būti įtraukti į pagrindinį stiliaus lapą, pavyzdžiui.
+**DOM perėjimai**: Naršyklė turi sukurti savo dokumento objektų modelį (DOM) pagal jūsų parašytą kodą, todėl geram puslapio našumui svarbu, kad jūsų žymos būtų minimalios, naudojant ir stiliuojant tik tai, ko puslapiui reikia. Pavyzdžiui, perteklinis CSS, susijęs su puslapiu, galėtų būti optimizuotas; stiliai, kurie reikalingi tik viename puslapyje, neturėtų būti įtraukti į pagrindinį stilių lapą.
 
-**JavaScript**: Kiekvienas JavaScript kūrėjas turėtų stebėti „render-blocking“ scenarijus, kurie turi būti įkelti prieš naršyklės galimybę naršyti ir piešti likusį DOM. Apsvarstykite galimybę naudoti `defer` su savo įterptaisiais scenarijais (kaip tai daroma „Terrarium“ modulyje).
+**JavaScript**: Kiekvienas JavaScript kūrėjas turėtų stebėti „render-blocking“ scenarijus, kurie turi būti įkelti prieš naršyklės DOM perėjimą ir piešimą. Apsvarstykite galimybę naudoti `defer` su savo inline scenarijais (kaip tai daroma Terrarium modulyje).
 
-✅ Išbandykite keletą svetainių [Svetainės greičio testavimo svetainėje](https://www.webpagetest.org/), kad sužinotumėte daugiau apie įprastus patikrinimus, kurie atliekami siekiant nustatyti svetainės našumą.
+✅ Išbandykite kelias svetaines [Svetainės greičio testavimo svetainėje](https://www.webpagetest.org/), kad sužinotumėte daugiau apie įprastus patikrinimus, kurie atliekami siekiant nustatyti svetainės našumą.
 
-Dabar, kai turite idėją, kaip naršyklė atvaizduoja jūsų siunčiamus išteklius, pažvelkime į paskutinius kelis dalykus, kuriuos reikia padaryti, kad užbaigtumėte savo plėtinį:
+Dabar, kai turite idėją, kaip naršyklė pateikia jūsų siunčiamą turinį, pažvelkime į paskutinius kelis dalykus, kuriuos reikia padaryti, kad užbaigtumėte savo plėtinį:
 
 ### Sukurkite funkciją spalvai apskaičiuoti
 
-Dirbdami su `/src/index.js`, pridėkite funkciją, pavadintą `calculateColor()`, po serijos `const` kintamųjų, kuriuos nustatėte, kad gautumėte prieigą prie DOM:
+Dirbdami su `/src/index.js`, pridėkite funkciją `calculateColor()` po serijos `const` kintamųjų, kuriuos nustatėte, kad gautumėte prieigą prie DOM:
 
 ```JavaScript
 function calculateColor(value) {
@@ -88,19 +88,19 @@ function calculateColor(value) {
 }
 ```
 
-Kas čia vyksta? Jūs perduodate reikšmę (anglies intensyvumą) iš API užklausos, kurią užbaigėte per paskutinę pamoką, ir tada apskaičiuojate, kaip arti jos reikšmė yra spalvų masyve pateikto indekso. Tada siunčiate tą artimiausią spalvos reikšmę į „chrome runtime“.
+Kas čia vyksta? Jūs perduodate vertę (anglies intensyvumą) iš API užklausos, kurią atlikote paskutinėje pamokoje, ir tada apskaičiuojate, kaip arti jos vertė yra spalvų masyvo indekso. Tada siunčiate artimiausią spalvos vertę į chrome runtime.
 
-„chrome.runtime“ turi [API](https://developer.chrome.com/extensions/runtime), kuris tvarko įvairias fono užduotis, ir jūsų plėtinys tuo naudojasi:
+Chrome.runtime turi [API](https://developer.chrome.com/extensions/runtime), kuris tvarko įvairias fonines užduotis, ir jūsų plėtinys tuo naudojasi:
 
-> „Naudokite „chrome.runtime“ API, kad gautumėte fono puslapį, grąžintumėte informaciją apie manifestą ir klausytumėte bei reaguotumėte į įvykius programos ar plėtinio gyvavimo cikle. Taip pat galite naudoti šią API, kad konvertuotumėte santykinius URL kelių į visiškai kvalifikuotus URL.“
+> „Naudokite chrome.runtime API, kad gautumėte foninį puslapį, grąžintumėte informaciją apie manifestą ir klausytumėte bei reaguotumėte į įvykius programos ar plėtinio gyvavimo cikle. Taip pat galite naudoti šį API, kad konvertuotumėte santykinius URL kelių į pilnai kvalifikuotus URL.“
 
-✅ Jei kuriate šį naršyklės plėtinį „Edge“, jus gali nustebinti, kad naudojate „chrome“ API. Naujesnės „Edge“ naršyklės versijos veikia „Chromium“ naršyklės variklyje, todėl galite naudotis šiais įrankiais.
+✅ Jei kuriate šį naršyklės plėtinį Edge naršyklei, gali nustebinti, kad naudojate chrome API. Naujesnės Edge naršyklės versijos veikia Chromium naršyklės variklyje, todėl galite naudotis šiais įrankiais.
 
-> Pastaba: jei norite profiliuoti naršyklės plėtinį, paleiskite kūrėjo įrankius iš paties plėtinio, nes tai yra atskira naršyklės instancija.
+> Pastaba: jei norite profiliuoti naršyklės plėtinį, paleiskite kūrėjų įrankius pačiame plėtinyje, nes tai yra atskira naršyklės instancija.
 
 ### Nustatykite numatytąją piktogramos spalvą
 
-Dabar, funkcijoje `init()`, nustatykite piktogramą kaip bendrą žalią spalvą, iš naujo iškviesdami „chrome“ `updateIcon` veiksmą:
+Dabar, funkcijoje `init()`, nustatykite piktogramą kaip bendrą žalią spalvą, pradėdami vėl naudoti chrome `updateIcon` veiksmą:
 
 ```JavaScript
 chrome.runtime.sendMessage({
@@ -113,14 +113,14 @@ chrome.runtime.sendMessage({
 
 ### Iškvieskite funkciją, vykdykite užklausą
 
-Toliau iškvieskite ką tik sukurtą funkciją, pridėdami ją prie pažado, kurį grąžina C02Signal API:
+Tada iškvieskite ką tik sukurtą funkciją, pridėdami ją prie pažado, kurį grąžina C02Signal API:
 
 ```JavaScript
 //let CO2...
 calculateColor(CO2);
 ```
 
-Ir galiausiai, faile `/dist/background.js`, pridėkite klausytoją šiems fono veiksmų iškvietimams:
+Ir galiausiai, faile `/dist/background.js`, pridėkite klausytoją šiems foninių veiksmų užklausoms:
 
 ```JavaScript
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
@@ -142,19 +142,19 @@ function drawIcon(value) {
 }
 ```
 
-Šiame kode pridedate klausytoją bet kokioms žinutėms, siunčiamoms į užduočių valdytoją fone. Jei ji vadinama „updateIcon“, tada vykdomas kitas kodas, kuris piešia tinkamos spalvos piktogramą, naudojant „Canvas API“.
+Šiame kode jūs pridedate klausytoją bet kokioms žinutėms, kurios siunčiamos į foninių užduočių tvarkyklę. Jei ji vadinama „updateIcon“, tada vykdomas kitas kodas, kuris piešia tinkamos spalvos piktogramą naudojant Canvas API.
 
-✅ Daugiau apie „Canvas API“ sužinosite [Kosmoso žaidimo pamokose](../../6-space-game/2-drawing-to-canvas/README.md).
+✅ Daugiau apie Canvas API sužinosite [Kosminio žaidimo pamokose](../../6-space-game/2-drawing-to-canvas/README.md).
 
-Dabar, iš naujo sukurkite savo plėtinį (`npm run build`), atnaujinkite ir paleiskite savo plėtinį ir stebėkite, kaip keičiasi spalva. Ar tai tinkamas metas atlikti kokį nors darbą ar išplauti indus? Dabar jūs žinote!
+Dabar, perkurkite savo plėtinį (`npm run build`), atnaujinkite ir paleiskite plėtinį, ir stebėkite spalvos pokyčius. Ar tai geras metas atlikti kokį nors darbą ar išplauti indus? Dabar žinote!
 
-Sveikiname, jūs sukūrėte naudingą naršyklės plėtinį ir daugiau sužinojote apie tai, kaip veikia naršyklė ir kaip profiliuoti jos našumą.
+Sveikiname, jūs sukūrėte naudingą naršyklės plėtinį ir sužinojote daugiau apie tai, kaip veikia naršyklė ir kaip profiliuoti jos našumą.
 
 ---
 
 ## 🚀 Iššūkis
 
-Ištirkite kai kurias atvirojo kodo svetaines, kurios egzistuoja jau ilgą laiką, ir, remdamiesi jų „GitHub“ istorija, pabandykite nustatyti, kaip jos buvo optimizuotos našumui per metus, jei iš viso buvo. Koks yra dažniausias skausmo taškas?
+Ištirkite keletą atvirojo kodo svetainių, kurios egzistuoja jau ilgą laiką, ir, remdamiesi jų GitHub istorija, pabandykite nustatyti, kaip jos buvo optimizuotos našumui per metus, jei išvis. Koks yra dažniausias skausmo taškas?
 
 ## Klausimynas po paskaitos
 
@@ -164,7 +164,7 @@ Ištirkite kai kurias atvirojo kodo svetaines, kurios egzistuoja jau ilgą laik�
 
 Apsvarstykite galimybę užsiprenumeruoti [našumo naujienlaiškį](https://perf.email/).
 
-Ištirkite kai kuriuos būdus, kaip naršyklės vertina interneto našumą, peržiūrėdami jų kūrėjo įrankių našumo skirtukus. Ar pastebėjote kokių nors esminių skirtumų?
+Ištirkite kai kuriuos būdus, kuriais naršyklės vertina interneto našumą, peržiūrėdami našumo skirtukus jų interneto įrankiuose. Ar pastebėjote kokių nors esminių skirtumų?
 
 ## Užduotis
 

@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-23T22:44:05+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T15:06:10+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "hk"
 }
 -->
 # JavaScript 基礎：陣列與迴圈
 
-![JavaScript 基礎 - 陣列](../../../../sketchnotes/webdev101-js-arrays.png)
+![JavaScript 基礎 - 陣列](../../../../translated_images/webdev101-js-arrays.439d7528b8a294558d0e4302e448d193f8ad7495cc407539cc81f1afe904b470.hk.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## 課前測驗
@@ -27,7 +27,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 陣列
 
-處理數據是任何程式語言中的常見任務，而當數據以結構化格式（例如陣列）組織時，這項任務會變得更加簡單。使用陣列，數據以類似清單的結構存儲。陣列的一大優勢是你可以在一個陣列中存儲不同類型的數據。
+處理數據是任何程式語言中的常見任務，而當數據以結構化格式（例如陣列）組織時，這項任務會變得更加簡單。使用陣列時，數據以類似清單的結構存儲。陣列的一大優勢是你可以在一個陣列中存儲不同類型的數據。
 
 ✅ 陣列在我們周圍隨處可見！你能想到一個現實生活中的陣列例子嗎，例如太陽能板陣列？
 
@@ -43,9 +43,9 @@ let myArray = [];
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 ```
 
-陣列中的值被分配了一個獨特的值，稱為 **索引**，這是一個基於其距離陣列開頭的整數。在上面的例子中，字串值 "Chocolate" 的索引是 0，而 "Rocky Road" 的索引是 4。使用索引和方括號可以檢索、更改或插入陣列中的值。
+陣列中的值會被分配一個獨特的值，稱為 **索引**，這是一個基於其距離陣列開頭的整數。在上面的例子中，字串值 "Chocolate" 的索引是 0，而 "Rocky Road" 的索引是 4。使用索引和方括號可以檢索、更改或插入陣列中的值。
 
-✅ 你是否感到驚訝，陣列的索引是從 0 開始的？在某些程式語言中，索引是從 1 開始的。這背後有一段有趣的歷史，你可以在 [維基百科](https://en.wikipedia.org/wiki/Zero-based_numbering) 上閱讀相關內容。
+✅ 你是否感到驚訝，陣列的索引是從零開始的？在某些程式語言中，索引是從 1 開始的。這背後有一段有趣的歷史，你可以在 [Wikipedia](https://en.wikipedia.org/wiki/Zero-based_numbering) 上閱讀。
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
@@ -58,7 +58,7 @@ iceCreamFlavors[2]; //"Vanilla"
 iceCreamFlavors[4] = "Butter Pecan"; //Changed "Rocky Road" to "Butter Pecan"
 ```
 
-你也可以在指定的索引處插入新值，例如：
+你也可以在指定索引處插入新值，例如：
 
 ```javascript
 iceCreamFlavors[5] = "Cookie Dough"; //Added "Cookie Dough"
@@ -73,11 +73,11 @@ let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky
 iceCreamFlavors.length; //5
 ```
 
-✅ 試試看！使用瀏覽器的控制台創建並操作一個你自己設計的陣列。
+✅ 試試看！使用你的瀏覽器控制台創建並操作一個你自己設計的陣列。
 
 ## 迴圈
 
-迴圈允許我們執行重複或 **迭代** 的任務，可以節省大量時間和程式碼。每次迭代可以在變數、值和條件上有所不同。JavaScript 中有不同類型的迴圈，它們之間有些微差異，但基本上都做同樣的事情：迴圈處理數據。
+迴圈允許我們執行重複或 **迭代** 的任務，可以節省大量時間和代碼。每次迭代可以在變數、值和條件上有所不同。JavaScript 中有不同類型的迴圈，它們之間有些微差異，但基本上都做同樣的事情：迭代數據。
 
 ### For 迴圈
 
@@ -93,11 +93,11 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-✅ 在瀏覽器控制台中運行這段程式碼。當你對計數器、條件或迭代表達式進行小改動時會發生什麼？你能讓它倒著運行，創建一個倒數嗎？
+✅ 在瀏覽器控制台中運行這段代碼。當你對計數器、條件或迭代表達式進行小改動時會發生什麼？你能讓它倒著運行，創建一個倒數嗎？
 
 ### While 迴圈
 
-與 `for` 迴圈的語法不同，`while` 迴圈只需要一個條件，當條件變為 `false` 時迴圈停止。迴圈中的條件通常依賴於其他值，例如計數器，並且必須在迴圈中進行管理。計數器的初始值必須在迴圈外創建，並且任何滿足條件的表達式（包括更改計數器）必須在迴圈內維護。
+與 `for` 迴圈的語法不同，`while` 迴圈只需要一個條件，當條件變為 `false` 時迴圈停止。迴圈中的條件通常依賴於其他值，例如計數器，並且必須在迴圈中進行管理。計數器的初始值必須在迴圈外創建，並且任何滿足條件的表達式（包括更改計數器）都必須在迴圈內維護。
 
 ```javascript
 //Counting up to 10
@@ -122,24 +122,26 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 } //Ends when all flavors are printed
 ```
 
-✅ 在瀏覽器的控制台中嘗試迴圈處理一個你自己設計的陣列。
+✅ 在瀏覽器控制台中嘗試迭代一個你自己設計的陣列。
 
 ---
 
 ## 🚀 挑戰
 
-除了 for 和 while 迴圈之外，還有其他方式可以迴圈處理陣列，例如 [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) 和 [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。使用其中一種技術重寫你的陣列迴圈。
+除了 for 和 while 迴圈之外，還有其他方法可以迭代陣列，例如 [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)、[for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of) 和 [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map)。使用其中一種技術重寫你的陣列迴圈。
 
 ## 課後測驗
 [課後測驗](https://ff-quizzes.netlify.app/web/quiz/14)
 
 ## 回顧與自學
 
-JavaScript 中的陣列附帶了許多方法，這些方法對數據操作非常有用。[閱讀這些方法](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)，並嘗試在你自己設計的陣列上使用一些方法（例如 push、pop、slice 和 splice）。
+JavaScript 中的陣列附帶許多方法，這些方法對數據操作非常有用。[閱讀這些方法](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)，並嘗試在你自己設計的陣列上使用一些方法（例如 push、pop、slice 和 splice）。
 
 ## 作業
 
-[迴圈處理陣列](assignment.md)
+[迭代陣列](assignment.md)
+
+---
 
 **免責聲明**：  
-本文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原文文件作為權威來源。對於關鍵資訊，建議尋求專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。
+本文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。

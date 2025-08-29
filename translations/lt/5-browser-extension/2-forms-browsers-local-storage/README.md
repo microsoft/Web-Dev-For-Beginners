@@ -1,29 +1,29 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e10f168beac4e7b05e30e0eb5c92bf11",
-  "translation_date": "2025-08-28T11:30:56+00:00",
+  "original_hash": "a7587943d38d095de8613e1b508609f5",
+  "translation_date": "2025-08-29T16:49:49+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "lt"
 }
 -->
 # Naršyklės plėtinio projektas 2 dalis: API iškvietimas, vietinės saugyklos naudojimas
 
-## Klausimynas prieš paskaitą
+## Klausimai prieš paskaitą
 
-[Klausimynas prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/25)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ### Įvadas
 
-Šioje pamokoje išmoksite iškviesti API, pateikdami savo naršyklės plėtinio formą ir rodydami rezultatus plėtinio lange. Be to, sužinosite, kaip galite saugoti duomenis naršyklės vietinėje saugykloje, kad galėtumėte juos naudoti ateityje.
+Šioje pamokoje iškviesite API, pateikdami savo naršyklės plėtinio formą, ir rodysite rezultatus plėtinyje. Be to, sužinosite, kaip galite saugoti duomenis naršyklės vietinėje saugykloje, kad galėtumėte juos naudoti ateityje.
 
-✅ Vadovaukitės numeruotais segmentais atitinkamuose failuose, kad žinotumėte, kur įterpti savo kodą.
+✅ Sekite numeruotus segmentus atitinkamuose failuose, kad žinotumėte, kur įterpti savo kodą.
 
 ### Sukurkite elementus, kuriuos manipuliuosite plėtinyje:
 
-Iki šio momento jau sukūrėte HTML formos ir rezultatų `<div>` savo naršyklės plėtiniui. Dabar turėsite dirbti su `/src/index.js` failu ir po truputį kurti savo plėtinį. Peržiūrėkite [ankstesnę pamoką](../1-about-browsers/README.md), kad prisimintumėte, kaip nustatyti projektą ir kaip vyksta kūrimo procesas.
+Iki šiol jau sukūrėte HTML formą ir rezultatų `<div>` savo naršyklės plėtiniui. Nuo šiol dirbsite su `/src/index.js` failu ir po truputį kursite savo plėtinį. Peržiūrėkite [ankstesnę pamoką](../1-about-browsers/README.md), kad sužinotumėte, kaip nustatyti projektą ir vykdyti kūrimo procesą.
 
-Dirbdami su `index.js` failu, pradėkite nuo kelių `const` kintamųjų sukūrimo, kad išsaugotumėte reikšmes, susijusias su įvairiais laukais:
+Dirbdami su `index.js` failu, pradėkite kurti keletą `const` kintamųjų, kad išsaugotumėte reikšmes, susijusias su įvairiais laukais:
 
 ```JavaScript
 // form fields
@@ -41,11 +41,11 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Visi šie laukai yra nurodyti pagal jų CSS klasę, kaip nustatėte HTML faile ankstesnėje pamokoje.
+Visi šie laukai yra nurodyti pagal jų CSS klasę, kaip tai buvo nustatyta HTML ankstesnėje pamokoje.
 
 ### Pridėkite klausytojus
 
-Toliau pridėkite įvykių klausytojus prie formos ir mygtuko, kuris išvalo formą, kad, jei vartotojas pateiktų formą arba paspaustų išvalymo mygtuką, kažkas įvyktų. Taip pat pridėkite iškvietimą, kuris inicijuoja programą failo apačioje:
+Toliau pridėkite įvykių klausytojus formoje ir mygtuke „Išvalyti“, kuris atstato formą, kad, jei vartotojas pateikia formą arba paspaudžia atstatymo mygtuką, kažkas įvyktų. Pridėkite funkcijos, inicijuojančios programą, iškvietimą failo apačioje:
 
 ```JavaScript
 form.addEventListener('submit', (e) => handleSubmit(e));
@@ -53,7 +53,7 @@ clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Atkreipkite dėmesį į trumpinį, naudojamą klausytis pateikimo ar paspaudimo įvykių, ir kaip įvykis perduodamas `handleSubmit` arba `reset` funkcijoms. Ar galite parašyti šio trumpinio ekvivalentą ilgesniu formatu? Kuris variantas jums labiau patinka?
+✅ Atkreipkite dėmesį į sutrumpintą būdą klausytis pateikimo arba paspaudimo įvykio ir kaip įvykis perduodamas `handleSubmit` arba `reset` funkcijoms. Ar galite parašyti šio sutrumpinto formato ekvivalentą ilgesniu formatu? Kuris jums labiau patinka?
 
 ### Sukurkite `init()` ir `reset()` funkcijas:
 
@@ -93,34 +93,34 @@ function reset(e) {
 
 ```
 
-Šioje funkcijoje yra įdomi logika. Perskaitykite ją ir pažiūrėkite, kas vyksta:
+Šioje funkcijoje yra įdomi logika. Perskaitydami ją, ar galite suprasti, kas vyksta?
 
-- Sukuriami du `const`, kurie patikrina, ar vartotojas saugojo APIKey ir regiono kodą vietinėje saugykloje.
-- Jei kuris nors iš jų yra `null`, forma rodoma pakeičiant jos stilių į 'block'.
-- Paslepiami rezultatai, įkėlimo indikatorius ir `clearBtn`, o klaidos tekstas nustatomas kaip tuščias.
+- Sukuriami du `const`, kad patikrintų, ar vartotojas vietinėje saugykloje išsaugojo APIKey ir regiono kodą.
+- Jei kuris nors iš jų yra `null`, forma rodoma pakeičiant jos stilių į „block“.
+- Paslepiami rezultatai, įkėlimo indikatorius ir mygtukas „Išvalyti“, o klaidos tekstas nustatomas kaip tuščias.
 - Jei yra raktas ir regionas, pradedama rutina:
   - Iškviečiama API, kad gautų anglies naudojimo duomenis.
   - Paslepiama rezultatų sritis.
   - Paslepiama forma.
-  - Parodomas išvalymo mygtukas.
+  - Parodomas atstatymo mygtukas.
 
-Prieš tęsiant, naudinga sužinoti apie labai svarbią naršyklių funkciją: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage yra naudinga priemonė saugoti eilutes naršyklėje kaip `key-value` poras. Šio tipo žiniatinklio saugyklą galima valdyti naudojant JavaScript. LocalStorage neturi galiojimo laiko, o SessionStorage, kita saugyklos rūšis, išvaloma uždarius naršyklę. Skirtingos saugyklos rūšys turi savo privalumų ir trūkumų.
+Prieš tęsiant, naudinga sužinoti apie labai svarbią naršyklėse prieinamą koncepciją: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage yra naudingas būdas saugoti eilutes naršyklėje kaip `key-value` poras. Šio tipo žiniatinklio saugyklą galima valdyti naudojant JavaScript, kad būtų tvarkomi duomenys naršyklėje. LocalStorage neturi galiojimo pabaigos, o SessionStorage, kita žiniatinklio saugyklos rūšis, išvaloma uždarius naršyklę. Skirtingos saugyklos rūšys turi privalumų ir trūkumų.
 
 > Pastaba - jūsų naršyklės plėtinys turi savo vietinę saugyklą; pagrindinis naršyklės langas yra atskira instancija ir veikia atskirai.
 
-Jūs nustatote savo APIKey kaip eilutės reikšmę, pavyzdžiui, ir galite matyti, kad ji nustatyta Edge naršyklėje, "inspektuojant" tinklalapį (galite dešiniuoju pelės mygtuku spustelėti naršyklę, kad inspektuotumėte) ir eiti į skirtuką "Applications", kad pamatytumėte saugyklą.
+Jūs nustatote savo APIKey kaip eilutės reikšmę, pavyzdžiui, ir galite matyti, kad ji nustatyta Edge naršyklėje „inspektuojant“ tinklalapį (dešiniuoju pelės mygtuku spustelėkite naršyklę, kad inspektuotumėte) ir eidami į skirtuką „Applications“, kad pamatytumėte saugyklą.
 
 ![Vietinės saugyklos langas](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.lt.png)
 
-✅ Pagalvokite apie situacijas, kai NENORĖTUMĖTE saugoti tam tikrų duomenų LocalStorage. Apskritai, API raktų saugojimas LocalStorage yra bloga idėja! Ar suprantate kodėl? Mūsų atveju, kadangi mūsų programa yra skirta tik mokymuisi ir nebus įkelta į programų parduotuvę, mes naudosime šį metodą.
+✅ Pagalvokite apie situacijas, kai nenorėtumėte saugoti tam tikrų duomenų LocalStorage. Apskritai, API raktų saugojimas LocalStorage yra bloga idėja! Ar galite suprasti kodėl? Mūsų atveju, kadangi mūsų programa skirta tik mokymuisi ir nebus publikuojama programų parduotuvėje, naudosime šį metodą.
 
-Atkreipkite dėmesį, kad naudojate žiniatinklio API, kad manipuliuotumėte LocalStorage, naudodami `getItem()`, `setItem()` arba `removeItem()`. Tai plačiai palaikoma naršyklėse.
+Atkreipkite dėmesį, kad naudojate Web API, kad manipuliuotumėte LocalStorage, naudodami `getItem()`, `setItem()` arba `removeItem()`. Tai plačiai palaikoma įvairiose naršyklėse.
 
-Prieš kuriant `displayCarbonUsage()` funkciją, kuri yra iškviečiama `init()` funkcijoje, sukurkime funkcionalumą, kuris apdoroja pradinį formos pateikimą.
+Prieš kuriant `displayCarbonUsage()` funkciją, kuri yra iškviečiama `init()`, sukurkime funkcionalumą, kuris apdoroja pradinį formos pateikimą.
 
 ### Apdorokite formos pateikimą
 
-Sukurkite funkciją, vadinamą `handleSubmit`, kuri priima įvykio argumentą `(e)`. Sustabdykite įvykio plitimą (šiuo atveju norime sustabdyti naršyklės atnaujinimą) ir iškvieskite naują funkciją, `setUpUser`, perduodami argumentus `apiKey.value` ir `region.value`. Tokiu būdu naudojate dvi reikšmes, kurios gaunamos per pradinę formą, kai atitinkami laukai yra užpildyti.
+Sukurkite funkciją, vadinamą `handleSubmit`, kuri priima įvykio argumentą `(e)`. Sustabdykite įvykio plitimą (šiuo atveju norime sustabdyti naršyklės atnaujinimą) ir iškvieskite naują funkciją `setUpUser`, perduodami argumentus `apiKey.value` ir `region.value`. Tokiu būdu naudojate dvi reikšmes, kurios gaunamos per pradinę formą, kai atitinkami laukai yra užpildyti.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -129,11 +129,11 @@ function handleSubmit(e) {
 }
 ```
 
-✅ Atsigaivinkite atmintį - HTML, kurį sukūrėte ankstesnėje pamokoje, turi du įvesties laukus, kurių `values` yra užfiksuoti per `const`, kuriuos nustatėte failo viršuje, ir jie abu yra `required`, todėl naršyklė neleidžia vartotojams įvesti tuščių reikšmių.
+✅ Atgaivinkite savo atmintį - HTML, kurį sukūrėte paskutinėje pamokoje, turi du įvesties laukus, kurių `values` yra užfiksuoti per `const`, kurį nustatėte failo viršuje, ir jie abu yra `required`, todėl naršyklė sustabdo vartotojus nuo null reikšmių įvedimo.
 
 ### Nustatykite vartotoją
 
-Pereikime prie `setUpUser` funkcijos, kurioje nustatote vietinės saugyklos reikšmes `apiKey` ir `regionName`. Pridėkite naują funkciją:
+Toliau pereikime prie `setUpUser` funkcijos, kurioje nustatote vietinės saugyklos reikšmes apiKey ir regionName. Pridėkite naują funkciją:
 
 ```JavaScript
 function setUpUser(apiKey, regionName) {
@@ -147,25 +147,25 @@ function setUpUser(apiKey, regionName) {
 }
 ```
 
-Ši funkcija nustato įkėlimo pranešimą, kuris rodomas, kol API yra iškviečiama. Šiuo metu pasiekėte svarbiausią šio naršyklės plėtinio funkciją!
+Ši funkcija rodo įkėlimo pranešimą, kol API yra iškviečiama. Šiuo metu pasiekėte svarbiausią šio naršyklės plėtinio funkciją!
 
 ### Rodykite anglies naudojimą
 
 Pagaliau atėjo laikas užklausti API!
 
-Prieš tęsiant, turėtume aptarti API. API, arba [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), yra svarbi žiniatinklio kūrėjo įrankių dalis. Jos suteikia standartinius būdus programoms sąveikauti ir bendrauti tarpusavyje. Pavyzdžiui, jei kuriate svetainę, kuri turi užklausti duomenų bazę, kažkas galėjo sukurti API, kurią galite naudoti. Nors yra daug API tipų, vienas populiariausių yra [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Prieš tęsiant, turėtume aptarti API. API, arba [Programų sąsajos](https://www.webopedia.com/TERM/A/API.html), yra kritinis žiniatinklio kūrėjo įrankių elementas. Jie suteikia standartinius būdus programoms sąveikauti ir bendrauti tarpusavyje. Pavyzdžiui, jei kuriate svetainę, kuri turi užklausti duomenų bazę, kažkas galėjo sukurti API, kurį galite naudoti. Nors yra daug API tipų, vienas populiariausių yra [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
-✅ Terminas 'REST' reiškia 'Representational State Transfer' ir apima įvairiai sukonfigūruotų URL naudojimą duomenims gauti. Atlikite nedidelį tyrimą apie įvairius API tipus, prieinamus kūrėjams. Koks formatas jums atrodo patraukliausias?
+✅ Terminas „REST“ reiškia „Reprezentacinė būsenos perdavimo sąsaja“ ir apima įvairiai sukonfigūruotų URL naudojimą duomenims gauti. Atlikite nedidelį tyrimą apie įvairius API tipus, prieinamus kūrėjams. Koks formatas jums atrodo patrauklus?
 
-Šioje funkcijoje yra svarbių dalykų, į kuriuos reikia atkreipti dėmesį. Pirma, atkreipkite dėmesį į [`async` raktinį žodį](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Rašydami savo funkcijas taip, kad jos veiktų asinchroniškai, užtikrinate, kad jos lauktų veiksmo, pvz., duomenų gavimo, užbaigimo prieš tęsiant.
+Šioje funkcijoje yra svarbių dalykų, į kuriuos reikia atkreipti dėmesį. Pirmiausia, atkreipkite dėmesį į [`async` raktažodį](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Rašydami savo funkcijas taip, kad jos veiktų asinchroniškai, užtikrinate, kad jos lauktų veiksmo, pvz., duomenų grąžinimo, užbaigimo prieš tęsiant.
 
 Štai trumpas vaizdo įrašas apie `async`:
 
-[![Async ir Await valdyti pažadus](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async ir Await valdyti pažadus")
+[![Async ir Await pažadų valdymui](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async ir Await pažadų valdymui")
 
-> 🎥 Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte vaizdo įrašą apie async/await.
+> 🎥 Spustelėkite aukščiau esančią nuotrauką, kad pamatytumėte vaizdo įrašą apie async/await.
 
-Sukurkite naują funkciją, skirtą užklausti C02Signal API:
+Sukurkite naują funkciją, kad užklaustumėte C02Signal API:
 
 ```JavaScript
 import axios from '../node_modules/axios';
@@ -207,28 +207,28 @@ async function displayCarbonUsage(apiKey, region) {
 
 Tai didelė funkcija. Kas čia vyksta?
 
-- Vadovaujantis geriausia praktika, naudojate `async` raktinį žodį, kad ši funkcija veiktų asinchroniškai. Funkcija turi `try/catch` bloką, nes ji grąžins pažadą, kai API grąžins duomenis. Kadangi neturite kontrolės dėl API atsako greičio (ji gali visai neatsakyti!), turite valdyti šį neapibrėžtumą, iškviesdami ją asinchroniškai.
-- Užklausiate co2signal API, kad gautumėte savo regiono duomenis, naudodami savo API raktą. Norėdami naudoti šį raktą, turite naudoti autentifikacijos tipą savo antraštės parametruose.
-- Kai API atsako, priskiriate įvairius jos atsako duomenų elementus ekrano dalims, kurias nustatėte šiems duomenims rodyti.
-- Jei yra klaida arba nėra rezultato, rodote klaidos pranešimą.
+- Laikantis geriausios praktikos, naudojate `async` raktažodį, kad ši funkcija veiktų asinchroniškai. Funkcija turi `try/catch` bloką, nes ji grąžins pažadą, kai API grąžins duomenis. Kadangi neturite kontrolės, kaip greitai API atsakys (ji gali visai neatsakyti!), turite tvarkyti šį neapibrėžtumą, iškviesdami ją asinchroniškai.
+- Užklausiama co2signal API, kad gautų jūsų regiono duomenis, naudojant jūsų API raktą. Norėdami naudoti tą raktą, turite naudoti tam tikrą autentifikaciją savo antraštės parametruose.
+- Kai API atsako, įvairūs jos atsakymo duomenų elementai priskiriami ekrano dalims, kurias nustatėte šiems duomenims rodyti.
+- Jei įvyksta klaida arba nėra rezultato, rodomas klaidos pranešimas.
 
-✅ Asinchroninio programavimo modelių naudojimas yra dar vienas labai naudingas įrankis jūsų arsenale. Perskaitykite [apie įvairius būdus](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), kaip galite konfigūruoti tokio tipo kodą.
+✅ Asinchroninių programavimo modelių naudojimas yra dar vienas labai naudingas įrankis jūsų įrankių dėžėje. Perskaitykite [apie įvairius būdus](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), kaip galite konfigūruoti tokio tipo kodą.
 
-Sveikiname! Jei sukursite savo plėtinį (`npm run build`) ir atnaujinsite jį savo plėtinių lange, turėsite veikiantį plėtinį! Vienintelis dalykas, kuris neveikia, yra piktograma, ir tai ištaisysite kitoje pamokoje.
+Sveikiname! Jei sukursite savo plėtinį (`npm run build`) ir atnaujinsite jį plėtinių skydelyje, turėsite veikiantį plėtinį! Vienintelis dalykas, kuris neveikia, yra piktograma, ir tai ištaisysite kitoje pamokoje.
 
 ---
 
 ## 🚀 Iššūkis
 
-Šiose pamokose aptarėme kelis API tipus. Pasirinkite vieną žiniatinklio API ir išsamiai ištirkite, ką ji siūlo. Pavyzdžiui, peržiūrėkite API, prieinamas naršyklėse, pvz., [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Kas, jūsų nuomone, sudaro puikią API?
+Šiose pamokose aptarėme kelis API tipus. Pasirinkite žiniatinklio API ir išsamiai ištirkite, ką ji siūlo. Pavyzdžiui, pažvelkite į API, prieinamas naršyklėse, tokias kaip [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Kas, jūsų nuomone, sudaro puikų API?
 
-## Klausimynas po paskaitos
+## Klausimai po paskaitos
 
-[Klausimynas po paskaitos](https://ff-quizzes.netlify.app/web/quiz/26)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Apžvalga ir savarankiškas mokymasis
 
-Šioje pamokoje sužinojote apie LocalStorage ir API, abu labai naudingus profesionaliam žiniatinklio kūrėjui. Ar galite pagalvoti, kaip šie du dalykai veikia kartu? Pagalvokite, kaip sukurtumėte svetainę, kuri saugotų elementus, kuriuos naudotų API.
+Šioje pamokoje sužinojote apie LocalStorage ir API, abu labai naudingus profesionaliam žiniatinklio kūrėjui. Ar galite pagalvoti, kaip šie du dalykai veikia kartu? Pagalvokite, kaip sukurtumėte svetainę, kuri saugotų elementus, kuriuos naudoja API.
 
 ## Užduotis
 
@@ -237,4 +237,4 @@ Sveikiname! Jei sukursite savo plėtinį (`npm run build`) ir atnaujinsite jį s
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.

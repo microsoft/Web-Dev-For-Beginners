@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-24T13:05:26+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T14:00:15+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "es"
 }
@@ -29,7 +29,7 @@ Después de esta tarea, aprenderás a:
 
 Haz clic en el enlace `creating a new file`, escribe el nombre `index.html` y selecciona el botón `Commit new file`.
 
-![Crear un nuevo archivo en github.com](../../../../8-code-editor/images/new-file-github.com.png)
+![Crear un nuevo archivo en github.com](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.es.png)
 
 **Paso 3:** Abre [VSCode.dev](https://vscode.dev) y selecciona el botón `Open Remote Repository`.
 
@@ -41,11 +41,11 @@ _Reemplaza `your-username` con tu nombre de usuario de GitHub._
 https://github.com/your-username/my-resume
 ```
 
-✅ Si es exitoso, verás tu proyecto y el archivo index.html abierto en el editor de texto en el navegador.
+✅ Si todo salió bien, verás tu proyecto y el archivo index.html abierto en el editor de texto en el navegador.
 
-![Crear un nuevo archivo](../../../../8-code-editor/images/project-on-vscode.dev.png)
+![Crear un nuevo archivo](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.es.png)
 
-**Paso 4:** Abre el archivo `index.html`, pega el código a continuación en tu área de código y guarda.
+**Paso 4:** Abre el archivo `index.html`, pega el siguiente código en tu área de código y guarda.
 
 <details>
     <summary><b>Código HTML responsable del contenido de tu sitio web de currículum.</b></summary>
@@ -101,7 +101,7 @@ https://github.com/your-username/my-resume
                                 ¡Escribe tu institución aquí!
                             </p>
                             <p>
-                                Fecha de inicio - Fecha de fin
+                                Fecha de inicio - Fecha de finalización
                             </p>
                         </section>            
                     </article>
@@ -116,7 +116,7 @@ https://github.com/your-username/my-resume
                             <!-- tu experiencia laboral -->
                             <h3>Título del puesto</h3>
                             <p>
-                                Nombre de la organización | Mes de inicio – Mes de fin
+                                Nombre de la organización | Mes de inicio – Mes de finalización
                             </p>
                             <ul>
                                     <li>Tarea 1 - ¡Escribe lo que hiciste!</li>
@@ -126,7 +126,7 @@ https://github.com/your-username/my-resume
                             </ul>
                             <h3>Título del puesto 2</h3>
                             <p>
-                                Nombre de la organización | Mes de inicio – Mes de fin
+                                Nombre de la organización | Mes de inicio – Mes de finalización
                             </p>
                             <ul>
                                     <li>Tarea 1 - ¡Escribe lo que hiciste!</li>
@@ -145,7 +145,7 @@ Agrega los detalles de tu currículum para reemplazar el _texto de marcador de p
 
 **Paso 5:** Pasa el cursor sobre la carpeta My-Resume, haz clic en el ícono `New File ...` y crea 2 nuevos archivos en tu proyecto: `style.css` y `codeswing.json`.
 
-**Paso 6:** Abre el archivo `style.css`, pega el código a continuación y guarda.
+**Paso 6:** Abre el archivo `style.css`, pega el siguiente código y guarda.
 
 <details>
         <summary><b>Código CSS para dar formato al diseño del sitio.</b></summary>
@@ -210,7 +210,7 @@ Agrega los detalles de tu currículum para reemplazar el _texto de marcador de p
             
 </details>
 
-**Paso 6:** Abre el archivo `codeswing.json`, pega el código a continuación y guarda.
+**Paso 6:** Abre el archivo `codeswing.json`, pega el siguiente código y guarda.
 
     {
     "scripts": [],
@@ -225,21 +225,23 @@ Haz clic en el ícono _`Extensions`_ en la barra de actividades y escribe Codesw
 
 Esto es lo que verás en tu pantalla después de instalar la extensión.
 
-![Extensión Codeswing en acción](../../../../8-code-editor/images/after-codeswing-extension-pb.png)
+![Extensión Codeswing en acción](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.es.png)
 
-Si estás satisfecho con los cambios que hiciste, pasa el cursor sobre la carpeta `Changes` y haz clic en el botón `+` para preparar los cambios.
+Si estás satisfecho con los cambios que realizaste, pasa el cursor sobre la carpeta `Changes` y haz clic en el botón `+` para preparar los cambios.
 
-Escribe un mensaje de commit _(Una descripción del cambio que hiciste en el proyecto)_ y confirma tus cambios haciendo clic en el `check`. Una vez que termines de trabajar en tu proyecto, selecciona el ícono del menú hamburguesa en la parte superior izquierda para regresar al repositorio en GitHub.
+Escribe un mensaje de confirmación _(Una descripción del cambio que realizaste en el proyecto)_ y confirma tus cambios haciendo clic en el `check`. Una vez que hayas terminado de trabajar en tu proyecto, selecciona el ícono del menú hamburguesa en la parte superior izquierda para regresar al repositorio en GitHub.
 
 ¡Felicidades 🎉! Acabas de crear tu sitio web de currículum usando vscode.dev en unos pocos pasos.
 
 ## 🚀 Desafío
 
-Abre un repositorio remoto en el que tengas permisos para hacer cambios y actualiza algunos archivos. Luego, intenta crear una nueva rama con tus cambios y haz un Pull Request.
+Abre un repositorio remoto en el que tengas permisos para realizar cambios y actualiza algunos archivos. Luego, intenta crear una nueva rama con tus cambios y haz un Pull Request.
 
 ## Revisión y Autoestudio
 
 Lee más sobre [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) y algunas de sus otras características.
 
+---
+
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
