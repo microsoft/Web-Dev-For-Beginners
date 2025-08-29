@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-28T11:42:17+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T16:54:08+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "lt"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote sukūrė [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Klausimai prieš paskaitą
-[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/7)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/)
 
 Ši pamoka apima JavaScript pagrindus – kalbą, kuri suteikia interaktyvumo internete.
 
@@ -54,19 +54,19 @@ Kintamojo **sukūrimas** ir **deklaravimas** turi tokią sintaksę: **[raktinis 
     myVariable = 123;
     ```
 
-   > Pastaba: šioje pamokoje `=` reiškia "priskyrimo operatorių", naudojamą reikšmei priskirti kintamajam. Jis nereiškia lygybės.
+   > Pastaba: `=` šiame pamokoje reiškia "priskyrimo operatorių", naudojamą reikšmei priskirti kintamajam. Jis nereiškia lygybės.
 
    `myVariable` dabar yra *inicializuotas* su reikšme 123.
 
-1. **Refaktorizuokite**. Pakeiskite savo kodą šiuo teiginiu.
+1. **Refaktorizuokite**. Pakeiskite savo kodą šiuo teiginiu:
 
     ```javascript
     let myVariable = 123;
     ```
 
-    Aukščiau pateiktas pavyzdys vadinamas _aiški inicializacija_, kai kintamasis deklaruojamas ir tuo pačiu metu jam priskiriama reikšmė.
+    Aukščiau pateiktas pavyzdys vadinamas _aiškiu inicializavimu_, kai kintamasis deklaruojamas ir jam tuo pačiu metu priskiriama reikšmė.
 
-1. **Pakeiskite kintamojo reikšmę**. Pakeiskite kintamojo reikšmę šiuo būdu:
+1. **Pakeiskite kintamojo reikšmę**. Pakeiskite kintamojo reikšmę taip:
 
    ```javascript
    myVariable = 321;
@@ -84,10 +84,10 @@ Konstantos deklaravimas ir inicializavimas vyksta taip pat kaip kintamųjų, iš
 const MY_VARIABLE = 123;
 ```
 
-Konstantos yra panašios į kintamuosius, tačiau yra dvi išimtys:
+Konstantos yra panašios į kintamuosius, tačiau turi dvi išimtis:
 
 - **Privalo turėti reikšmę**. Konstantos turi būti inicializuotos, kitaip vykdant kodą įvyks klaida.
-- **Nuorodos negalima keisti**. Konstantos nuorodos negalima keisti po inicializavimo, kitaip vykdant kodą įvyks klaida. Pažvelkime į du pavyzdžius:
+- **Nuoroda negali būti pakeista**. Konstantos nuoroda negali būti pakeista po inicializavimo, kitaip vykdant kodą įvyks klaida. Pažvelkime į du pavyzdžius:
    - **Paprasta reikšmė**. Šis veiksmas NĖRA leidžiamas:
    
       ```javascript
@@ -109,7 +109,7 @@ Konstantos yra panašios į kintamuosius, tačiau yra dvi išimtys:
       obj.a = 5;  // allowed
       ```
 
-      Aukščiau pateiktame pavyzdyje jūs keičiate objekto reikšmę, bet ne pačią nuorodą, todėl tai leidžiama.
+      Aukščiau pateiktame pavyzdyje keičiate objekto reikšmę, bet ne pačią nuorodą, todėl tai yra leidžiama.
 
    > Pastaba: `const` reiškia, kad nuoroda yra apsaugota nuo perrašymo. Tačiau reikšmė nėra _nekintama_ ir gali keistis, ypač jei tai sudėtinga struktūra, pvz., objektas.
 
@@ -137,7 +137,7 @@ Yra keli operatorių tipai, kuriuos galima naudoti atliekant aritmetines funkcij
 | `-`      | **Atimtis**: Apskaičiuoja dviejų skaičių skirtumą                       | `1 - 2 //tikėtinas atsakymas yra -1`  |
 | `*`      | **Daugyba**: Apskaičiuoja dviejų skaičių sandaugą                       | `1 * 2 //tikėtinas atsakymas yra 2`   |
 | `/`      | **Dalyba**: Apskaičiuoja dviejų skaičių dalmenį                         | `1 / 2 //tikėtinas atsakymas yra 0.5` |
-| `%`      | **Liekana**: Apskaičiuoja dviejų skaičių dalybos liekaną                | `1 % 2 //tikėtinas atsakymas yra 1`   |
+| `%`      | **Liekana**: Apskaičiuoja liekaną po dviejų skaičių dalybos             | `1 % 2 //tikėtinas atsakymas yra 1`   |
 
 ✅ Išbandykite! Išbandykite aritmetinę operaciją savo naršyklės konsolėje. Ar rezultatai jus nustebino?
 
@@ -149,7 +149,7 @@ Eilutės yra simbolių rinkiniai, kurie yra tarp viengubų arba dvigubų kabuči
 - `"Tai taip pat yra eilutė"`
 - `let myString = 'Tai yra eilutės reikšmė, saugoma kintamajame';`
 
-Nepamirškite naudoti kabučių rašydami eilutę, kitaip JavaScript laikys ją kintamojo pavadinimu.
+Nepamirškite naudoti kabučių rašydami eilutę, kitaip JavaScript manys, kad tai kintamojo pavadinimas.
 
 ### Eilučių formatavimas
 
@@ -169,7 +169,7 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ✅ Kodėl `1 + 1 = 2` JavaScript, bet `'1' + '1' = 11?` Pagalvokite apie tai. O kaip `'1' + 1`?
 
-**Šablonų literatai** yra dar vienas būdas formatuoti eilutes, išskyrus tai, kad vietoj kabučių naudojama atgalinė kabutė. Viskas, kas nėra paprastas tekstas, turi būti dedama į vietos rezervatorius `${ }`. Tai apima bet kokius kintamuosius, kurie gali būti eilutės.
+**Šablonų literatai** yra dar vienas būdas formatuoti eilutes, tačiau vietoj kabučių naudojama atgalinė kabutė. Viskas, kas nėra paprastas tekstas, turi būti dedama į vietos rezervatorius `${ }`. Tai apima bet kokius kintamuosius, kurie gali būti eilutės.
 
 ```javascript
 let myString1 = "Hello";
@@ -179,13 +179,13 @@ let myString2 = "World";
 `${myString1}, ${myString2}!` //Hello, World!
 ```
 
-Galite pasiekti savo formatavimo tikslus naudodami bet kurį metodą, tačiau šablonų literatai gerbs bet kokias tarpus ir eilutės pertraukas.
+Galite pasiekti savo formatavimo tikslus bet kuriuo metodu, tačiau šablonų literatai gerbia visas tarpus ir eilutės pertraukas.
 
 ✅ Kada naudotumėte šablonų literatą, o kada paprastą eilutę?
 
 ### Buliai
 
-Buliai gali turėti tik dvi reikšmes: `true` arba `false`. Buliai gali padėti priimti sprendimus, kurios kodo eilutės turėtų būti vykdomos, kai tam tikros sąlygos yra įvykdytos. Daugeliu atvejų [operatoriai](../../../../2-js-basics/1-data-types) padeda nustatyti buliaus reikšmę, ir dažnai pastebėsite bei rašysite kintamuosius, kurie yra inicializuojami arba jų reikšmės atnaujinamos naudojant operatorių.
+Buliai gali turėti tik dvi reikšmes: `true` arba `false`. Buliai padeda priimti sprendimus, kurios kodo eilutės turėtų būti vykdomos, kai tam tikros sąlygos yra įvykdytos. Daugeliu atvejų [operatoriai](../../../../2-js-basics/1-data-types) padeda nustatyti buliaus reikšmę, ir dažnai pastebėsite bei rašysite kintamuosius, kurie yra inicializuojami arba jų reikšmės atnaujinamos naudojant operatorių.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
@@ -196,10 +196,10 @@ Buliai gali turėti tik dvi reikšmes: `true` arba `false`. Buliai gali padėti 
 
 ## 🚀 Iššūkis
 
-JavaScript garsėja savo netikėtais būdais kartais tvarkyti duomenų tipus. Šiek tiek pasidomėkite šiais 'netikėtumais'. Pavyzdžiui: didžiųjų ir mažųjų raidžių jautrumas gali sukelti problemų! Išbandykite tai savo konsolėje: `let age = 1; let Age = 2; age == Age` (rezultatas `false` – kodėl?). Kokius kitus netikėtumus galite rasti?
+JavaScript garsėja savo netikėtais būdais, kaip kartais tvarkomi duomenų tipai. Šiek tiek pasidomėkite šiais 'netikėtumais'. Pavyzdžiui: didžiųjų ir mažųjų raidžių jautrumas gali sukelti problemų! Išbandykite tai savo konsolėje: `let age = 1; let Age = 2; age == Age` (rezultatas `false` – kodėl?). Kokius kitus netikėtumus galite rasti?
 
 ## Klausimai po paskaitos
-[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/8)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app)
 
 ## Apžvalga ir savarankiškas mokymasis
 
@@ -212,4 +212,4 @@ Pažvelkite į [šį JavaScript užduočių sąrašą](https://css-tricks.com/sn
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.

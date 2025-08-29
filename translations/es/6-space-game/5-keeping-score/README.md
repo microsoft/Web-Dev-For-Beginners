@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-24T12:27:13+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T13:54:50+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "es"
 }
@@ -30,14 +30,14 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ## La vida, como concepto de juego
 
-El concepto de tener vidas en un juego es simplemente un número. En el contexto de un juego espacial, es común asignar un conjunto de vidas que se van descontando una por una cuando tu nave recibe daño. Es agradable si puedes mostrar una representación gráfica de esto, como mini-naves o corazones en lugar de un número.
+El concepto de tener vidas en un juego es simplemente un número. En el contexto de un juego espacial, es común asignar un conjunto de vidas que se van descontando una por una cuando tu nave recibe daño. Es agradable si puedes mostrar una representación gráfica de esto, como mini-naves o corazones, en lugar de un número.
 
 ## Qué construir
 
 Vamos a agregar lo siguiente a tu juego:
 
 - **Puntuación del juego**: Por cada nave enemiga que sea destruida, el héroe debería recibir algunos puntos; sugerimos 100 puntos por nave. La puntuación del juego debería mostrarse en la parte inferior izquierda.
-- **Vidas**: Tu nave tiene tres vidas. Pierdes una vida cada vez que una nave enemiga choca contigo. Las vidas deberían mostrarse en la parte inferior derecha y estar representadas por el siguiente gráfico ![imagen de vida](../../../../6-space-game/5-keeping-score/solution/assets/life.png).
+- **Vidas**: Tu nave tiene tres vidas. Pierdes una vida cada vez que una nave enemiga choca contigo. Las vidas deberían mostrarse en la parte inferior derecha y estar representadas por el siguiente gráfico ![imagen de vida](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.es.png).
 
 ## Pasos recomendados
 
@@ -94,7 +94,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
     ```
 
 4. **Agrega `vidas` y `puntos`**. 
-   1. **Inicializa variables**. Debajo de `this.cooldown = 0` en la clase `Hero`, establece vidas y puntos:
+   1. **Inicializa variables**. Bajo `this.cooldown = 0` en la clase `Hero`, establece vidas y puntos:
 
         ```javascript
         this.life = 3;
@@ -128,7 +128,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
         ```
 
-   1. **Agrega métodos al bucle del juego**. Asegúrate de agregar estas funciones a tu función window.onload debajo de `updateGameObjects()`:
+   1. **Agrega métodos al bucle del juego**. Asegúrate de agregar estas funciones a tu función window.onload bajo `updateGameObjects()`:
 
         ```javascript
         drawPoints();
@@ -152,7 +152,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
    2. **Por cada láser que golpee a un enemigo**, incrementa la puntuación del juego en 100 puntos.
 
-      Extiende la clase `Hero` para realizar este incremento:
+      Extiende la clase Hero para realizar este incremento:
     
         ```javascript
           incrementPoints() {
@@ -177,7 +177,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
 ✅ Investiga un poco para descubrir otros juegos que se han creado usando JavaScript/Canvas. ¿Cuáles son sus características comunes?
 
-Al final de este trabajo, deberías ver las pequeñas naves de 'vida' en la parte inferior derecha, los puntos en la parte inferior izquierda, y deberías ver cómo tu contador de vidas disminuye al chocar con enemigos y cómo tus puntos aumentan al dispararles. ¡Bien hecho! Tu juego está casi completo.
+Al final de este trabajo, deberías ver las pequeñas naves de 'vida' en la parte inferior derecha, los puntos en la parte inferior izquierda, y deberías ver cómo tu contador de vidas disminuye al chocar con enemigos y cómo tus puntos aumentan al disparar a los enemigos. ¡Bien hecho! Tu juego está casi completo.
 
 ---
 
@@ -197,5 +197,7 @@ Investiga algunas formas en las que puedes incrementar y decrementar las puntuac
 
 [Construir un Juego de Puntuación](assignment.md)
 
+---
+
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

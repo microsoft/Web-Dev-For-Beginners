@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-23T22:38:14+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T13:39:41+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "fr"
 }
 -->
 # Notions de base en JavaScript : Prendre des décisions
 
-![Notions de base en JavaScript - Prendre des décisions](../../../../sketchnotes/webdev101-js-decisions.png)
+![Notions de base en JavaScript - Prendre des décisions](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.fr.png)
 
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Prendre des décisions et contrôler l'ordre d'exécution de votre code le rend réutilisable et robuste. Cette section couvre la syntaxe pour contrôler le flux de données en JavaScript et son importance lorsqu'elle est utilisée avec des types de données booléens.
+Prendre des décisions et contrôler l'ordre d'exécution de votre code rend celui-ci réutilisable et robuste. Cette section couvre la syntaxe pour contrôler le flux de données en JavaScript et son importance lorsqu'elle est utilisée avec les types de données booléens.
 
 [![Prendre des décisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Prendre des décisions")
 
@@ -25,11 +25,11 @@ Prendre des décisions et contrôler l'ordre d'exécution de votre code le rend 
 
 > Vous pouvez suivre cette leçon sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 
-## Petit rappel sur les booléens
+## Bref rappel sur les booléens
 
-Les booléens ne peuvent avoir que deux valeurs : `true` ou `false`. Les booléens aident à décider quelles lignes de code doivent s'exécuter lorsque certaines conditions sont remplies.
+Les booléens ne peuvent avoir que deux valeurs : `true` ou `false`. Ils permettent de décider quelles lignes de code doivent s'exécuter lorsque certaines conditions sont remplies.
 
-Définissez votre booléen sur true ou false comme ceci :
+Définissez votre booléen sur `true` ou `false` comme ceci :
 
 `let myTrueBool = true`  
 `let myFalseBool = false`
@@ -49,7 +49,7 @@ Les opérateurs sont utilisés pour évaluer des conditions en effectuant des co
 | `===`   | **Égalité stricte** : Compare deux valeurs et retourne le type de données booléen `true` si les valeurs à gauche et à droite sont égales ET du même type     | `5 === 6 // false` |
 | `!==`   | **Inégalité** : Compare deux valeurs et retourne la valeur booléenne opposée à celle qu'un opérateur d'égalité stricte retournerait                          | `5 !== 6 // true`  |
 
-✅ Testez vos connaissances en écrivant quelques comparaisons dans la console de votre navigateur. Certains résultats vous surprennent-ils ?
+✅ Testez vos connaissances en écrivant quelques comparaisons dans la console de votre navigateur. Certaines données retournées vous surprennent-elles ?
 
 ## Instruction If
 
@@ -94,7 +94,7 @@ if (currentMoney >= laptopPrice) {
 
 ## Instruction Switch
 
-L'instruction `switch` est utilisée pour effectuer différentes actions en fonction de différentes conditions. Utilisez l'instruction `switch` pour sélectionner un des nombreux blocs de code à exécuter.
+L'instruction `switch` est utilisée pour effectuer différentes actions en fonction de différentes conditions. Utilisez l'instruction `switch` pour sélectionner l'un des nombreux blocs de code à exécuter.
 
 ```javascript
 switch (expression) {
@@ -135,13 +135,13 @@ Les décisions peuvent nécessiter plus d'une comparaison et peuvent être encha
 
 | Symbole | Description                                                                                     | Exemple                                                                 |
 | ------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`    | **ET logique** : Compare deux expressions booléennes. Retourne true **seulement** si les deux côtés sont vrais | `(5 > 6) && (5 < 6 ) //Un côté est faux, l'autre est vrai. Retourne false` |
-| `\|\|`  | **OU logique** : Compare deux expressions booléennes. Retourne true si au moins un côté est vrai | `(5 > 6) \|\| (5 < 6) //Un côté est faux, l'autre est vrai. Retourne true` |
+| `&&`    | **ET logique** : Compare deux expressions booléennes. Retourne `true` **seulement** si les deux côtés sont vrais | `(5 > 6) && (5 < 6 ) // Un côté est faux, l'autre est vrai. Retourne false` |
+| `\|\|`  | **OU logique** : Compare deux expressions booléennes. Retourne `true` si au moins un côté est vrai | `(5 > 6) \|\| (5 < 6) // Un côté est faux, l'autre est vrai. Retourne true` |
 | `!`     | **NON logique** : Retourne la valeur opposée d'une expression booléenne                         | `!(5 > 6) // 5 n'est pas supérieur à 6, mais "!" retournera true`         |
 
 ## Conditions et décisions avec des opérateurs logiques
 
-Les opérateurs logiques peuvent être utilisés pour former des conditions dans des instructions if..else.
+Les opérateurs logiques peuvent être utilisés pour former des conditions dans des instructions `if..else`.
 
 ```javascript
 let currentMoney;
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Opérateur de négation
 
-Vous avez vu jusqu'à présent comment utiliser une instruction `if...else` pour créer une logique conditionnelle. Tout ce qui entre dans un `if` doit s'évaluer à true/false. En utilisant l'opérateur `!`, vous pouvez _nier_ l'expression. Cela ressemblerait à ceci :
+Vous avez vu jusqu'à présent comment utiliser une instruction `if...else` pour créer une logique conditionnelle. Tout ce qui entre dans un `if` doit s'évaluer à vrai/faux. En utilisant l'opérateur `!`, vous pouvez _nier_ l'expression. Cela ressemblerait à ceci :
 
 ```javascript
 if (!condition) {
@@ -171,7 +171,7 @@ if (!condition) {
 
 ### Expressions ternaires
 
-`if...else` n'est pas le seul moyen d'exprimer une logique décisionnelle. Vous pouvez également utiliser ce qu'on appelle un opérateur ternaire. La syntaxe ressemble à ceci :
+`if...else` n'est pas la seule façon d'exprimer une logique décisionnelle. Vous pouvez également utiliser ce qu'on appelle un opérateur ternaire. La syntaxe ressemble à ceci :
 
 ```javascript
 let variable = condition ? <return this if true> : <return this if false>
@@ -187,11 +187,11 @@ let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 
 ✅ Prenez une minute pour lire ce code plusieurs fois. Comprenez-vous comment ces opérateurs fonctionnent ?
 
-Ce qui précède indique que :
+Le code ci-dessus indique que :
 
 - si `firstNumber` est plus grand que `secondNumber`
-- alors attribuez `firstNumber` à `biggestNumber`
-- sinon attribuez `secondNumber`.
+- alors assignez `firstNumber` à `biggestNumber`
+- sinon assignez `secondNumber`.
 
 L'expression ternaire est simplement une manière compacte d'écrire le code ci-dessous :
 
@@ -220,11 +220,13 @@ Créez un programme écrit d'abord avec des opérateurs logiques, puis réécriv
 
 Lisez-en davantage sur les nombreux opérateurs disponibles pour l'utilisateur [sur MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
-Explorez l'excellent [outil de recherche d'opérateurs](https://joshwcomeau.com/operator-lookup/) de Josh Comeau !
+Parcourez l'excellent [outil de recherche d'opérateurs](https://joshwcomeau.com/operator-lookup/) de Josh Comeau !
 
 ## Devoir
 
 [Opérateurs](assignment.md)
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

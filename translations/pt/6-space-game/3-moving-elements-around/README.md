@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-24T12:30:04+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T16:12:26+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "pt"
 }
@@ -13,18 +13,18 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/33)
 
-Os jogos não são muito divertidos até que tenhamos alienígenas a movimentar-se no ecrã! Neste jogo, vamos utilizar dois tipos de movimentos:
+Os jogos não são muito divertidos até que você tenha alienígenas se movendo na tela! Neste jogo, vamos usar dois tipos de movimentos:
 
-- **Movimento por teclado/rato**: quando o utilizador interage com o teclado ou rato para mover um objeto no ecrã.
+- **Movimento por teclado/rato**: quando o utilizador interage com o teclado ou rato para mover um objeto na tela.
 - **Movimento induzido pelo jogo**: quando o jogo move um objeto em intervalos de tempo definidos.
 
-Então, como movemos coisas no ecrã? Tudo se resume a coordenadas cartesianas: alteramos a localização (x, y) do objeto e depois redesenhamos o ecrã.
+Então, como movemos coisas na tela? Tudo se resume a coordenadas cartesianas: alteramos a localização (x, y) do objeto e depois redesenhamos a tela.
 
-Normalmente, são necessários os seguintes passos para realizar *movimento* no ecrã:
+Normalmente, são necessários os seguintes passos para realizar o *movimento* na tela:
 
-1. **Definir uma nova localização** para um objeto; isto é necessário para que o objeto pareça ter-se movido.
-2. **Limpar o ecrã**, o ecrã precisa de ser limpo entre os desenhos. Podemos limpá-lo desenhando um retângulo preenchido com uma cor de fundo.
-3. **Redesenhar o objeto** na nova localização. Ao fazer isto, conseguimos finalmente mover o objeto de uma localização para outra.
+1. **Definir uma nova localização** para um objeto; isso é necessário para que o objeto pareça ter se movido.
+2. **Limpar a tela**, a tela precisa ser limpa entre os desenhos. Podemos limpá-la desenhando um retângulo preenchido com uma cor de fundo.
+3. **Redesenhar o objeto** na nova localização. Ao fazer isso, finalmente conseguimos mover o objeto de um local para outro.
 
 Aqui está como isso pode parecer em código:
 
@@ -39,13 +39,13 @@ ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Consegues pensar numa razão pela qual redesenhar o teu herói várias vezes por segundo pode gerar custos de desempenho? Lê sobre [alternativas a este padrão](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+✅ Consegue pensar em uma razão pela qual redesenhar o seu herói várias vezes por segundo pode gerar custos de desempenho? Leia sobre [alternativas para este padrão](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Lidar com eventos de teclado
 
-Lidamos com eventos ao associar eventos específicos ao código. Os eventos de teclado são acionados em toda a janela, enquanto eventos de rato, como um `click`, podem ser conectados ao clique num elemento específico. Vamos usar eventos de teclado ao longo deste projeto.
+Lidamos com eventos ao associar eventos específicos ao código. Eventos de teclado são acionados em toda a janela, enquanto eventos de rato, como um `click`, podem ser conectados ao clique em um elemento específico. Vamos usar eventos de teclado ao longo deste projeto.
 
-Para lidar com um evento, precisas de usar o método `addEventListener()` da janela e fornecer-lhe dois parâmetros de entrada. O primeiro parâmetro é o nome do evento, por exemplo, `keyup`. O segundo parâmetro é a função que deve ser invocada como resultado do evento.
+Para lidar com um evento, é necessário usar o método `addEventListener()` da janela e fornecer dois parâmetros de entrada. O primeiro parâmetro é o nome do evento, por exemplo, `keyup`. O segundo parâmetro é a função que deve ser invocada como resultado do evento.
 
 Aqui está um exemplo:
 
@@ -58,16 +58,16 @@ window.addEventListener('keyup', (evt) => {
 })
 ```
 
-Para eventos de teclado, existem duas propriedades no evento que podes usar para ver qual tecla foi pressionada:
+Para eventos de teclado, há duas propriedades no evento que podem ser usadas para identificar qual tecla foi pressionada:
 
-- `key`, esta é uma representação em texto da tecla pressionada, por exemplo, `ArrowUp`.
+- `key`, esta é uma representação em string da tecla pressionada, por exemplo, `ArrowUp`.
 - `keyCode`, esta é uma representação numérica, por exemplo, `37`, que corresponde a `ArrowLeft`.
 
-✅ Manipulação de eventos de teclado é útil fora do desenvolvimento de jogos. Que outros usos consegues imaginar para esta técnica?
+✅ Manipulação de eventos de teclado é útil fora do desenvolvimento de jogos. Que outros usos consegue imaginar para esta técnica?
 
 ### Teclas especiais: um alerta
 
-Existem algumas *teclas especiais* que afetam a janela. Isso significa que, se estiveres a ouvir um evento `keyup` e usares essas teclas especiais para mover o teu herói, também será realizado o scroll horizontal. Por essa razão, talvez queiras *desativar* este comportamento padrão do navegador enquanto desenvolves o teu jogo. Precisarás de código como este:
+Existem algumas teclas *especiais* que afetam a janela. Isso significa que, se estiver a ouvir um evento `keyup` e usar essas teclas especiais para mover o herói, também ocorrerá rolagem horizontal. Por essa razão, pode ser necessário *desativar* este comportamento padrão do navegador ao construir o seu jogo. É necessário um código como este:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -92,7 +92,7 @@ O código acima garantirá que as teclas de seta e a tecla de espaço tenham o s
 
 ## Movimento induzido pelo jogo
 
-Podemos fazer com que as coisas se movam sozinhas usando temporizadores como as funções `setTimeout()` ou `setInterval()` que atualizam a localização do objeto em cada intervalo de tempo. Aqui está como isso pode parecer:
+Podemos fazer com que os objetos se movam sozinhos usando temporizadores, como as funções `setTimeout()` ou `setInterval()`, que atualizam a localização do objeto a cada intervalo de tempo. Aqui está como isso pode parecer:
 
 ```javascript
 let id = setInterval(() => {
@@ -103,9 +103,9 @@ let id = setInterval(() => {
 
 ## O loop do jogo
 
-O loop do jogo é um conceito que é essencialmente uma função invocada em intervalos regulares. É chamado de loop do jogo porque tudo o que deve ser visível para o utilizador é desenhado dentro do loop. O loop do jogo utiliza todos os objetos do jogo que fazem parte do jogo, desenhando todos eles, a menos que, por algum motivo, não devam mais fazer parte do jogo. Por exemplo, se um objeto for um inimigo que foi atingido por um laser e explodiu, ele já não faz parte do loop atual do jogo (vais aprender mais sobre isso em lições subsequentes).
+O loop do jogo é um conceito que, essencialmente, é uma função invocada em intervalos regulares. É chamado de loop do jogo porque tudo o que deve ser visível para o utilizador é desenhado dentro do loop. O loop do jogo utiliza todos os objetos do jogo que fazem parte dele, desenhando todos eles, a menos que, por algum motivo, não devam mais fazer parte do jogo. Por exemplo, se um objeto for um inimigo que foi atingido por um laser e explodiu, ele não faz mais parte do loop atual do jogo (vai aprender mais sobre isso em lições subsequentes).
 
-Aqui está como um loop do jogo pode tipicamente parecer, expresso em código:
+Aqui está como um loop de jogo pode ser tipicamente expresso em código:
 
 ```javascript
 let gameLoopId = setInterval(() =>
@@ -119,18 +119,18 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-O loop acima é invocado a cada `200` milissegundos para redesenhar o canvas. Tens a capacidade de escolher o melhor intervalo que faz sentido para o teu jogo.
+O loop acima é invocado a cada `200` milissegundos para redesenhar o canvas. Pode escolher o intervalo que faz mais sentido para o seu jogo.
 
 ## Continuando o Jogo Espacial
 
-Vais pegar no código existente e expandi-lo. Podes começar com o código que completaste durante a parte I ou usar o código em [Parte II - inicial](../../../../6-space-game/3-moving-elements-around/your-work).
+Vai pegar o código existente e expandi-lo. Pode começar com o código que completou na Parte I ou usar o código em [Parte II - inicial](../../../../6-space-game/3-moving-elements-around/your-work).
 
-- **Mover o herói**: vais adicionar código para garantir que podes mover o herói usando as teclas de seta.
-- **Mover inimigos**: também precisarás de adicionar código para garantir que os inimigos se movam de cima para baixo a uma determinada velocidade.
+- **Mover o herói**: vai adicionar código para garantir que pode mover o herói usando as teclas de seta.
+- **Mover inimigos**: também precisará adicionar código para garantir que os inimigos se movam de cima para baixo a uma determinada velocidade.
 
 ## Passos recomendados
 
-Localiza os ficheiros que foram criados para ti na subpasta `your-work`. Deve conter o seguinte:
+Localize os ficheiros que foram criados para si na subpasta `your-work`. Deve conter o seguinte:
 
 ```bash
 -| assets
@@ -141,22 +141,22 @@ Localiza os ficheiros que foram criados para ti na subpasta `your-work`. Deve co
 -| package.json
 ```
 
-Começa o teu projeto na pasta `your_work` digitando:
+Inicie o seu projeto na pasta `your_work` digitando:
 
 ```bash
 cd your-work
 npm start
 ```
 
-O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`. Abre um navegador e insere esse endereço; neste momento, deve renderizar o herói e todos os inimigos; nada está a mover-se - ainda!
+O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`. Abra um navegador e insira esse endereço; neste momento, deve renderizar o herói e todos os inimigos; nada está a mover-se - ainda!
 
 ### Adicionar código
 
-1. **Adicionar objetos dedicados** para `hero`, `enemy` e `game object`, eles devem ter propriedades `x` e `y`. (Lembra-te da parte sobre [Herança ou composição](../README.md)).
+1. **Adicionar objetos dedicados** para `hero`, `enemy` e `game object`, que devem ter propriedades `x` e `y`. (Lembre-se da parte sobre [Herança ou composição](../README.md)).
 
-   *DICA*: `game object` deve ser aquele com `x` e `y` e a capacidade de se desenhar num canvas.
+   *DICA*: `game object` deve ser o objeto com `x` e `y` e a capacidade de se desenhar no canvas.
 
-   > dica: começa por adicionar uma nova classe GameObject com o seu construtor delineado como abaixo, e depois desenha-a no canvas:
+   > dica: comece por adicionar uma nova classe GameObject com o seu construtor delineado como abaixo e, em seguida, desenhe-a no canvas:
   
     ```javascript
         
@@ -177,7 +177,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
     }
     ```
 
-    Agora, estende este GameObject para criar o Hero e o Enemy.
+    Agora, estenda este GameObject para criar o Hero e o Enemy.
     
     ```javascript
     class Hero extends GameObject {
@@ -207,9 +207,9 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
 2. **Adicionar manipuladores de eventos de teclado** para lidar com a navegação por teclas (mover o herói para cima/baixo/esquerda/direita).
 
-   *LEMBRA-TE*: é um sistema cartesiano, o canto superior esquerdo é `0,0`. Também lembra-te de adicionar código para parar o *comportamento padrão*.
+   *LEMBRE-SE*: é um sistema cartesiano, o canto superior esquerdo é `0,0`. Também lembre-se de adicionar código para parar o *comportamento padrão*.
 
-   > dica: cria a tua função onKeyDown e associa-a à janela:
+   > dica: crie a sua função onKeyDown e associe-a à janela:
 
    ```javascript
     let onKeyDown = function (e) {
@@ -221,13 +221,13 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
     window.addEventListener("keydown", onKeyDown);
    ```
     
-   Verifica o console do navegador neste ponto e observa as teclas a serem registadas.
+   Verifique o console do navegador neste ponto e veja as teclas sendo registadas.
 
-3. **Implementar** o [Padrão Pub/Sub](../README.md), isto manterá o teu código limpo enquanto segues as partes restantes.
+3. **Implementar** o [Padrão Pub/Sub](../README.md), isso manterá o seu código limpo enquanto segue as partes restantes.
 
-   Para fazer esta última parte, podes:
+   Para fazer esta última parte, pode:
 
-   1. **Adicionar um listener de eventos** na janela:
+   1. **Adicionar um ouvinte de eventos** na janela:
 
        ```javascript
         window.addEventListener("keyup", (evt) => {
@@ -313,7 +313,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
 1. **Configurar o loop do jogo**
 
-   Refatora a função window.onload para inicializar o jogo e configurar um loop do jogo num intervalo adequado. Também vais adicionar um feixe de laser:
+   Refatore a função window.onload para inicializar o jogo e configurar um loop de jogo com um bom intervalo. Também adicionará um feixe de laser:
 
     ```javascript
     window.onload = async () => {
@@ -334,9 +334,9 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
     };
     ```
 
-5. **Adicionar código** para mover inimigos num determinado intervalo
+5. **Adicionar código** para mover inimigos em um determinado intervalo
 
-    Refatora a função `createEnemies()` para criar os inimigos e adicioná-los à nova classe gameObjects:
+    Refatore a função `createEnemies()` para criar os inimigos e adicioná-los à nova classe gameObjects:
 
     ```javascript
     function createEnemies() {
@@ -355,7 +355,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
     }
     ```
     
-    e adiciona uma função `createHero()` para realizar um processo semelhante para o herói.
+    e adicione uma função `createHero()` para realizar um processo semelhante para o herói.
     
     ```javascript
     function createHero() {
@@ -368,7 +368,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
     }
     ```
 
-    e, finalmente, adiciona uma função `drawGameObjects()` para começar o desenho:
+    e, finalmente, adicione uma função `drawGameObjects()` para iniciar o desenho:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -376,13 +376,13 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
     }
     ```
 
-    Os teus inimigos devem começar a avançar na direção da tua nave espacial!
+    Os seus inimigos devem começar a avançar na direção da sua nave espacial!
 
 ---
 
 ## 🚀 Desafio
 
-Como podes ver, o teu código pode transformar-se em 'código espaguete' quando começas a adicionar funções, variáveis e classes. Como podes organizar melhor o teu código para que seja mais legível? Esboça um sistema para organizar o teu código, mesmo que ainda esteja num único ficheiro.
+Como pode ver, o seu código pode transformar-se em 'código espaguete' quando começa a adicionar funções, variáveis e classes. Como pode organizar melhor o seu código para que seja mais legível? Esboce um sistema para organizar o seu código, mesmo que ainda esteja num único ficheiro.
 
 ## Questionário Pós-Aula
 
@@ -390,11 +390,13 @@ Como podes ver, o teu código pode transformar-se em 'código espaguete' quando 
 
 ## Revisão & Autoestudo
 
-Embora estejamos a escrever o nosso jogo sem usar frameworks, existem muitos frameworks baseados em JavaScript para desenvolvimento de jogos com canvas. Dedica algum tempo a [ler sobre eles](https://github.com/collections/javascript-game-engines).
+Embora estejamos a escrever o nosso jogo sem usar frameworks, existem muitos frameworks baseados em JavaScript para desenvolvimento de jogos com canvas. Dedique algum tempo para [ler sobre eles](https://github.com/collections/javascript-game-engines).
 
 ## Tarefa
 
-[Comenta o teu código](assignment.md)
+[Comente o seu código](assignment.md)
+
+---
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original no seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante ter em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

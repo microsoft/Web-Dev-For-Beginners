@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-28T11:37:24+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T16:52:18+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "lt"
 }
@@ -13,12 +13,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Yra įvairių būdų, kaip žaidime išreikšti *pabaigos sąlygą*. Jūs, kaip žaidimo kūrėjas, nusprendžiate, kodėl žaidimas baigiasi. Štai keletas priežasčių, jei kalbame apie kosminį žaidimą, kurį kūrėte iki šiol:
+Yra įvairių būdų išreikšti *žaidimo pabaigos sąlygą*. Jūs, kaip žaidimo kūrėjas, nusprendžiate, kodėl žaidimas baigiasi. Štai keletas priežasčių, jei kalbame apie kosminį žaidimą, kurį kūrėte iki šiol:
 
-- **Sunaikinta `N` priešo laivų**: Dažnai žaidimas yra padalintas į skirtingus lygius, kuriuose reikia sunaikinti `N` priešo laivų, kad užbaigtumėte lygį.
-- **Jūsų laivas sunaikintas**: Yra žaidimų, kuriuose pralaimite, jei jūsų laivas sunaikinamas. Kitas dažnas požiūris yra gyvybių koncepcija. Kiekvieną kartą, kai jūsų laivas sunaikinamas, prarandate gyvybę. Kai visos gyvybės prarandamos, pralaimite žaidimą.
-- **Surinkta `N` taškų**: Kita dažna pabaigos sąlyga yra taškų rinkimas. Kaip gaunate taškus, priklauso nuo jūsų, tačiau dažnai taškai priskiriami įvairioms veikloms, pavyzdžiui, priešo laivo sunaikinimui arba daiktų rinkimui, kurie atsiranda, kai jie sunaikinami.
-- **Užbaigtas lygis**: Tai gali apimti kelias sąlygas, tokias kaip `X` sunaikinti priešo laivai, `Y` surinkti taškai arba galbūt specifinio daikto surinkimas.
+- **`N` Priešo laivų sunaikinta**: Dažnai žaidimas yra padalintas į lygius, kuriuose reikia sunaikinti `N` priešo laivų, kad užbaigtumėte lygį.
+- **Jūsų laivas sunaikintas**: Yra žaidimų, kuriuose pralaimite, jei jūsų laivas sunaikinamas. Kitas dažnas požiūris yra gyvybių koncepcija. Kiekvieną kartą, kai jūsų laivas sunaikinamas, prarandate gyvybę. Kai visos gyvybės prarandamos, žaidimas baigiasi.
+- **Surinkote `N` taškų**: Kita dažna pabaigos sąlyga yra taškų rinkimas. Kaip gaunate taškus, priklauso nuo jūsų, tačiau dažnai taškai priskiriami įvairioms veikloms, pvz., priešo laivo sunaikinimui arba daiktų rinkimui, kurie *iškrenta*, kai jie sunaikinami.
+- **Užbaigėte lygį**: Tai gali apimti kelias sąlygas, tokias kaip `X` priešo laivų sunaikinta, `Y` taškų surinkta arba galbūt surinktas konkretus daiktas.
 
 ## Paleidimas iš naujo
 
@@ -108,14 +108,14 @@ Tai paleis HTTP serverį adresu `http://localhost:5000`. Atidarykite naršyklę 
     });
     ```
 
-1. **Pridėkite naujų pranešimų tipus**. Pridėkite šiuos pranešimus į constants objektą:
+1. **Pridėkite naujų pranešimų tipų**. Pridėkite šiuos pranešimus į constants objektą:
 
     ```javascript
     GAME_END_LOSS: "GAME_END_LOSS",
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Pridėkite paleidimo iš naujo kodą**. Kodas, kuris paleidžia žaidimą iš naujo paspaudus pasirinktą mygtuką.
+2. **Pridėkite kodą paleidimui iš naujo**. Pridėkite kodą, kuris paleidžia žaidimą iš naujo paspaudus pasirinktą mygtuką.
 
    1. **Klausykite klavišo paspaudimo `Enter`**. Redaguokite savo lango eventListener, kad klausytų šio paspaudimo:
 
@@ -171,7 +171,7 @@ Tai paleis HTTP serverį adresu `http://localhost:5000`. Atidarykite naršyklę 
         }
         ```
 
-   1. **Paleidimo iš naujo logika**. Kai visos gyvybės prarandamos arba žaidėjas laimi žaidimą, parodykite, kad žaidimą galima paleisti iš naujo. Be to, paleiskite žaidimą iš naujo, kai paspaudžiamas *paleidimo iš naujo* klavišas (jūs galite nuspręsti, kuris klavišas bus priskirtas paleidimui iš naujo).
+   1. **Paleidimo iš naujo logika**. Kai visos gyvybės prarandamos arba žaidėjas laimi žaidimą, parodykite, kad žaidimą galima paleisti iš naujo. Be to, paleiskite žaidimą iš naujo, kai paspaudžiamas *restart* klavišas (jūs galite nuspręsti, kuris klavišas bus priskirtas paleidimui iš naujo).
 
       1. Sukurkite funkciją `resetGame()`:
 
@@ -233,4 +233,4 @@ Jūsų užduotis yra sukurti naują pavyzdinį žaidimą, todėl išnagrinėkite
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipkite dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.

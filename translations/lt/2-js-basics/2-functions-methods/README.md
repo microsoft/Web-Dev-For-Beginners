@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4612bbb9ace984f374fcc80e3e035ad",
-  "translation_date": "2025-08-28T11:39:54+00:00",
+  "original_hash": "92e136090efc4341b1d51c37924c1802",
+  "translation_date": "2025-08-29T16:53:09+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "lt"
 }
@@ -13,9 +13,9 @@ CO_OP_TRANSLATOR_METADATA:
 > Sketchnote sukūrė [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Klausimai prieš paskaitą
-[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/9)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app)
 
-Rašydami kodą visada norime užtikrinti, kad jis būtų lengvai skaitomas. Nors tai gali atrodyti nelogiška, kodas yra skaitomas daug dažniau nei rašomas. Vienas pagrindinių įrankių, padedančių kurti lengvai prižiūrimą kodą, yra **funkcija**.
+Kai galvojame apie kodo rašymą, visada norime užtikrinti, kad mūsų kodas būtų lengvai skaitomas. Nors tai gali atrodyti nelogiška, kodas yra skaitomas daug daugiau kartų nei rašomas. Vienas pagrindinių įrankių, padedančių kurti lengvai prižiūrimą kodą, yra **funkcija**.
 
 [![Metodai ir funkcijos](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Metodai ir funkcijos")
 
@@ -25,9 +25,9 @@ Rašydami kodą visada norime užtikrinti, kad jis būtų lengvai skaitomas. Nor
 
 ## Funkcijos
 
-Funkcija iš esmės yra kodo blokas, kurį galime vykdyti pagal poreikį. Tai puikiai tinka situacijoms, kai reikia atlikti tą pačią užduotį kelis kartus; vietoj to, kad logiką dubliuotume keliose vietose (kas apsunkintų atnaujinimą ateityje), galime ją centralizuoti vienoje vietoje ir iškviesti, kai tik reikia atlikti operaciją – funkcijas netgi galima kviesti iš kitų funkcijų!
+Funkcija iš esmės yra kodo blokas, kurį galime vykdyti pagal poreikį. Tai puikiai tinka situacijoms, kai reikia atlikti tą pačią užduotį kelis kartus; vietoj to, kad logiką dubliuotume keliose vietose (kas apsunkintų atnaujinimą ateityje), galime ją centralizuoti vienoje vietoje ir iškviesti, kai tik reikia atlikti operaciją – funkcijas netgi galima iškviesti iš kitų funkcijų!
 
-Ne mažiau svarbu yra suteikti funkcijai pavadinimą. Nors tai gali atrodyti nereikšminga, pavadinimas suteikia greitą būdą dokumentuoti kodo dalį. Galite tai įsivaizduoti kaip mygtuko etiketę. Jei paspausiu mygtuką, ant kurio parašyta „Atšaukti laikmatį“, žinosiu, kad jis sustabdys laikrodžio veikimą.
+Taip pat svarbu suteikti funkcijai pavadinimą. Nors tai gali atrodyti nereikšminga, pavadinimas suteikia greitą būdą dokumentuoti kodo dalį. Galite tai įsivaizduoti kaip etiketę ant mygtuko. Jei paspausiu mygtuką, ant kurio parašyta „Atšaukti laikmatį“, žinau, kad jis sustabdys laikrodžio veikimą.
 
 ## Funkcijos kūrimas ir iškvietimas
 
@@ -47,26 +47,26 @@ function displayGreeting() {
 }
 ```
 
-Kai norime iškviesti (arba vykdyti) funkciją, naudojame funkcijos pavadinimą, po kurio rašome `()`. Verta paminėti, kad funkcija gali būti apibrėžta prieš arba po jos iškvietimo; JavaScript kompiliatorius ją suras už jus.
+Kai norime iškviesti (arba aktyvuoti) savo funkciją, naudojame funkcijos pavadinimą, po kurio seka `()`. Verta paminėti, kad funkcija gali būti apibrėžta prieš arba po jos iškvietimo; JavaScript kompiliatorius ją suras už jus.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** Yra specialus funkcijos tipas, vadinamas **metodu**, kurį jau naudojote! Iš tiesų, tai matėme aukščiau pateiktame pavyzdyje, kai naudojome `console.log`. Metodas skiriasi nuo funkcijos tuo, kad jis yra priskirtas objektui (mūsų pavyzdyje – `console`), o funkcija yra laisvai plaukiojanti. Daugelis programuotojų šiuos terminus naudoja pakaitomis.
+> **NOTE:** Yra specialus funkcijų tipas, vadinamas **metodu**, kurį jūs jau naudojote! Iš tiesų, tai matėme aukščiau pateiktame pavyzdyje, kai naudojome `console.log`. Skirtumas tarp metodo ir funkcijos yra tas, kad metodas yra priskirtas objektui (mūsų pavyzdyje – `console`), o funkcija yra laisvai plaukiojanti. Daugelis programuotojų šiuos terminus naudoja pakaitomis.
 
 ### Geriausios praktikos kuriant funkcijas
 
 Kuriant funkcijas verta atsižvelgti į keletą geriausių praktikų:
 
-- Visada naudokite aprašomuosius pavadinimus, kad žinotumėte, ką funkcija atliks
+- Visada naudokite aiškius pavadinimus, kad žinotumėte, ką funkcija atliks
 - Naudokite **camelCasing**, kad sujungtumėte žodžius
 - Funkcijas orientuokite į konkrečią užduotį
 
 ## Informacijos perdavimas funkcijai
 
-Kad funkcija būtų universalesnė, dažnai norėsite perduoti jai informaciją. Jei pažvelgtume į mūsų aukščiau pateiktą `displayGreeting` pavyzdį, jis rodys tik **Hello, world!**. Tai nėra pati naudingiausia funkcija, kokią galėtume sukurti. Jei norime ją padaryti šiek tiek lankstesnę, pavyzdžiui, leisti nurodyti asmens, kurį sveikiname, vardą, galime pridėti **parametrą**. Parametras (kartais vadinamas **argumentu**) yra papildoma informacija, siunčiama funkcijai.
+Kad funkcija būtų universalesnė, dažnai norėsite perduoti jai informaciją. Jei pažvelgtume į mūsų aukščiau pateiktą `displayGreeting` pavyzdį, jis rodys tik **Hello, world!**. Tai nėra pati naudingiausia funkcija, kurią galima sukurti. Jei norime ją padaryti šiek tiek lankstesnę, pavyzdžiui, leisti nurodyti asmens, kuriam sveikinamės, vardą, galime pridėti **parametrą**. Parametras (kartais vadinamas **argumentu**) yra papildoma informacija, perduodama funkcijai.
 
 Parametrai nurodomi apibrėžimo dalyje, skliausteliuose, ir yra atskirti kableliais, kaip parodyta:
 
@@ -76,7 +76,7 @@ function name(param, param2, param3) {
 }
 ```
 
-Galime atnaujinti `displayGreeting`, kad priimtų vardą ir jį rodytų.
+Galime atnaujinti savo `displayGreeting`, kad priimtų vardą ir jį rodytų.
 
 ```javascript
 function displayGreeting(name) {
@@ -94,7 +94,7 @@ displayGreeting('Christopher');
 
 ## Numatytosios reikšmės
 
-Funkciją galime padaryti dar lankstesnę, pridėdami daugiau parametrų. Bet ką daryti, jei nenorime, kad kiekviena reikšmė būtų privaloma? Grįžtant prie mūsų pasisveikinimo pavyzdžio, galime palikti vardą kaip privalomą (mums reikia žinoti, su kuo sveikinamės), tačiau norime leisti pasisveikinimą pritaikyti pagal poreikį. Jei kas nors nenori jo pritaikyti, vietoj to pateikiame numatytąją reikšmę. Norėdami nustatyti numatytąją parametro reikšmę, ją nustatome taip pat, kaip nustatytume kintamojo reikšmę – `parameterName = 'defaultValue'`. Pilnas pavyzdys:
+Funkciją galime padaryti dar lankstesnę, pridėdami daugiau parametrų. Bet ką daryti, jei nenorime, kad kiekviena reikšmė būtų privaloma? Grįžtant prie mūsų sveikinimo pavyzdžio, galime palikti vardą kaip privalomą (mums reikia žinoti, kam sveikinamės), tačiau norime leisti sveikinimą pritaikyti pagal poreikį. Jei kas nors nenori jo pritaikyti, vietoj to pateikiame numatytąją reikšmę. Norėdami nustatyti numatytąją parametro reikšmę, ją nustatome taip pat, kaip nustatytume reikšmę kintamajam – `parameterName = 'defaultValue'`. Pilnas pavyzdys:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +102,7 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Kai kviečiame funkciją, galime nuspręsti, ar norime nustatyti reikšmę `salutation`.
+Kai iškviečiame funkciją, galime nuspręsti, ar norime nustatyti reikšmę `salutation`.
 
 ```javascript
 displayGreeting('Christopher');
@@ -114,17 +114,17 @@ displayGreeting('Christopher', 'Hi');
 
 ## Grąžinamosios reikšmės
 
-Iki šiol mūsų sukurta funkcija visada išves informaciją į [konsolę](https://developer.mozilla.org/docs/Web/API/console). Kartais tai gali būti būtent tai, ko ieškome, ypač kai kuriame funkcijas, kurios kvies kitas paslaugas. Bet ką daryti, jei noriu sukurti pagalbinę funkciją, kuri atliktų skaičiavimą ir grąžintų reikšmę, kad galėčiau ją naudoti kitur?
+Iki šiol mūsų sukurta funkcija visada išves informaciją į [console](https://developer.mozilla.org/docs/Web/API/console). Kartais tai gali būti būtent tai, ko ieškome, ypač kai kuriame funkcijas, kurios iškvies kitas paslaugas. Bet ką daryti, jei noriu sukurti pagalbinę funkciją, kuri atliktų skaičiavimą ir grąžintų reikšmę, kad galėčiau ją naudoti kitur?
 
 Tai galime padaryti naudodami **grąžinamąją reikšmę**. Grąžinamoji reikšmė yra grąžinama funkcijos ir gali būti saugoma kintamajame taip pat, kaip galėtume saugoti literalinę reikšmę, pvz., eilutę ar skaičių.
 
-Jei funkcija grąžina ką nors, naudojamas raktažodis `return`. Raktažodis `return` tikisi reikšmės arba nuorodos į tai, kas grąžinama, kaip parodyta:
+Jei funkcija grąžina kažką, tada naudojamas raktažodis `return`. Raktažodis `return` tikisi reikšmės arba nuorodos į tai, kas grąžinama, kaip parodyta:
 
 ```javascript
 return myVariable;
 ```  
 
-Galime sukurti funkciją, kuri sukurtų pasisveikinimo pranešimą ir grąžintų reikšmę atgal kvietėjui.
+Galime sukurti funkciją, kuri sukurtų sveikinimo pranešimą ir grąžintų reikšmę atgal kvietėjui.
 
 ```javascript
 function createGreetingMessage(name) {
@@ -141,11 +141,11 @@ const greetingMessage = createGreetingMessage('Christopher');
 
 ## Funkcijos kaip funkcijų parametrai
 
-Tobulėjant jūsų programavimo karjerai, susidursite su funkcijomis, kurios priima funkcijas kaip parametrus. Šis įdomus triukas dažnai naudojamas, kai nežinome, kada kas nors įvyks ar baigsis, bet žinome, kad reikia atlikti operaciją reaguojant į tai.
+Tobulėjant jūsų programavimo karjerai, susidursite su funkcijomis, kurios priima funkcijas kaip parametrus. Šis įdomus triukas dažnai naudojamas, kai nežinome, kada kažkas įvyks ar baigsis, bet žinome, kad reikia atlikti operaciją reaguojant į tai.
 
-Pavyzdžiui, apsvarstykite [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), kuris pradeda laikmatį ir vykdo kodą, kai jis baigiasi. Turime pasakyti, kokį kodą norime vykdyti. Skamba kaip puikus darbas funkcijai!
+Pavyzdžiui, apsvarstykite [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), kuris pradeda laikmatį ir vykdo kodą, kai jis baigiasi. Turime nurodyti, kokį kodą norime vykdyti. Skamba kaip puikus darbas funkcijai!
 
-Jei vykdysite žemiau pateiktą kodą, po 3 sekundžių pamatysite pranešimą **Praėjo 3 sekundės**.
+Jei paleisite žemiau pateiktą kodą, po 3 sekundžių pamatysite pranešimą **Praėjo 3 sekundės**.
 
 ```javascript
 function displayDone() {
@@ -157,9 +157,9 @@ setTimeout(displayDone, 3000);
 
 ### Anoniminės funkcijos
 
-Pažvelkime dar kartą į tai, ką sukūrėme. Kuriame funkciją su pavadinimu, kuri bus naudojama tik vieną kartą. Kai mūsų programa tampa sudėtingesnė, galime pastebėti, kad kuriame daug funkcijų, kurios bus naudojamos tik vieną kartą. Tai nėra idealu. Pasirodo, ne visada reikia suteikti pavadinimą!
+Pažvelkime dar kartą į tai, ką sukūrėme. Mes sukuriame funkciją su pavadinimu, kuri bus naudojama tik vieną kartą. Kai mūsų programa tampa sudėtingesnė, galime pastebėti, kad kuriame daug funkcijų, kurios bus iškviestos tik vieną kartą. Tai nėra idealu. Pasirodo, ne visada reikia suteikti funkcijai pavadinimą!
 
-Kai perduodame funkciją kaip parametrą, galime praleisti jos kūrimą iš anksto ir vietoj to ją sukurti kaip parametro dalį. Naudojame tą patį raktažodį `function`, tačiau ją kuriame kaip parametrą.
+Kai perduodame funkciją kaip parametrą, galime apeiti jos kūrimą iš anksto ir vietoj to ją sukurti kaip parametro dalį. Naudojame tą patį raktažodį `function`, tačiau ją sukuriame kaip parametrą.
 
 Perrašykime aukščiau pateiktą kodą, kad naudotume anoniminę funkciją:
 
@@ -169,11 +169,11 @@ setTimeout(function() {
 }, 3000);
 ```
 
-Jei vykdysite mūsų naują kodą, pastebėsite, kad gauname tuos pačius rezultatus. Sukūrėme funkciją, bet nereikėjo suteikti jai pavadinimo!
+Jei paleisite mūsų naują kodą, pastebėsite, kad gauname tuos pačius rezultatus. Sukūrėme funkciją, tačiau nereikėjo suteikti jai pavadinimo!
 
 ### Fat arrow funkcijos
 
-Vienas iš dažnai naudojamų trumpinių daugelyje programavimo kalbų (įskaitant JavaScript) yra galimybė naudoti vadinamąją **arrow** arba **fat arrow** funkciją. Ji naudoja specialų simbolį `=>`, kuris atrodo kaip rodyklė – todėl toks pavadinimas! Naudodami `=>`, galime praleisti raktažodį `function`.
+Vienas iš dažnai naudojamų trumpinių daugelyje programavimo kalbų (įskaitant JavaScript) yra vadinamosios **arrow** arba **fat arrow** funkcijos. Jos naudoja specialų simbolį `=>`, kuris atrodo kaip rodyklė – todėl toks pavadinimas! Naudodami `=>`, galime praleisti raktažodį `function`.
 
 Perrašykime mūsų kodą dar kartą, kad naudotume fat arrow funkciją:
 
@@ -194,7 +194,7 @@ Dabar matėte, kad turime tris būdus perduoti funkciją kaip parametrą ir galb
 Ar galite vienu sakiniu paaiškinti skirtumą tarp funkcijų ir metodų? Pabandykite!
 
 ## Klausimai po paskaitos
-[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/10)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app)
 
 ## Apžvalga ir savarankiškas mokymasis
 
@@ -207,4 +207,4 @@ Verta [pasidomėti daugiau apie arrow funkcijas](https://developer.mozilla.org/d
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipkite dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus aiškinimus, atsiradusius dėl šio vertimo naudojimo.

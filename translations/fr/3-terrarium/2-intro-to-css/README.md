@@ -1,24 +1,24 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e375c2aeb94e2407f2667633d39580bd",
-  "translation_date": "2025-08-23T22:33:33+00:00",
+  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
+  "translation_date": "2025-08-29T13:41:56+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "fr"
 }
 -->
 # Projet Terrarium Partie 2 : Introduction au CSS
 
-![Introduction au CSS](../../../../sketchnotes/webdev101-css.png)  
+![Introduction au CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.fr.png)
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Quiz Pré-Conférence
+## Quiz Pré-Lecture
 
-[Quiz pré-conférence](https://ff-quizzes.netlify.app/web/quiz/17)
+[Quiz pré-lecture](https://ff-quizzes.netlify.app/web/quiz/17)
 
 ### Introduction
 
-Le CSS, ou Cascading Style Sheets, résout un problème important du développement web : comment rendre votre site web attrayant. Styliser vos applications les rend plus utilisables et esthétiques ; vous pouvez également utiliser le CSS pour créer un design web réactif (Responsive Web Design - RWD), permettant à vos applications d'avoir une belle apparence quel que soit la taille de l'écran. Le CSS ne se limite pas à embellir votre application ; ses spécifications incluent des animations et des transformations qui permettent des interactions sophistiquées pour vos applications. Le CSS Working Group aide à maintenir les spécifications actuelles du CSS ; vous pouvez suivre leur travail sur le [site du World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
+Le CSS, ou Cascading Style Sheets, résout un problème important du développement web : comment rendre votre site web attrayant. Styliser vos applications les rend plus utilisables et plus agréables visuellement ; vous pouvez également utiliser le CSS pour créer un design web adaptatif (Responsive Web Design - RWD), permettant à vos applications d'avoir une belle apparence quelle que soit la taille de l'écran. Le CSS ne se limite pas à embellir votre application ; ses spécifications incluent des animations et des transformations qui permettent des interactions sophistiquées. Le CSS Working Group aide à maintenir les spécifications actuelles du CSS ; vous pouvez suivre leur travail sur le [site du World Wide Web Consortium](https://www.w3.org/Style/CSS/members).
 
 > Notez que le CSS est un langage qui évolue, comme tout sur le web, et que tous les navigateurs ne prennent pas en charge les parties les plus récentes des spécifications. Vérifiez toujours vos implémentations en consultant [CanIUse.com](https://caniuse.com).
 
@@ -45,11 +45,11 @@ Dans votre dossier terrarium, créez un nouveau fichier appelé `style.css`. Imp
 
 ## La Cascade
 
-Les feuilles de style en cascade (CSS) intègrent l'idée que les styles "cascadent", de sorte que l'application d'un style est guidée par sa priorité. Les styles définis par un auteur de site web ont priorité sur ceux définis par un navigateur. Les styles définis "inline" ont priorité sur ceux définis dans une feuille de style externe.
+Les feuilles de style en cascade (Cascading Style Sheets) intègrent l'idée que les styles "cascadent", de sorte que l'application d'un style est guidée par sa priorité. Les styles définis par l'auteur d'un site web ont la priorité sur ceux définis par un navigateur. Les styles définis "en ligne" ont la priorité sur ceux définis dans une feuille de style externe.
 
 ### Tâche
 
-Ajoutez le style inline "color: red" à votre balise `<h1>` :
+Ajoutez le style en ligne "color: red" à votre balise `<h1>` :
 
 ```HTML
 <h1 style="color: red">My Terrarium</h1>
@@ -63,13 +63,13 @@ h1 {
 }
 ```
 
-✅ Quelle couleur s'affiche dans votre application web ? Pourquoi ? Pouvez-vous trouver un moyen de remplacer les styles ? Quand voudriez-vous faire cela, ou pourquoi pas ?
+✅ Quelle couleur s'affiche dans votre application web ? Pourquoi ? Pouvez-vous trouver un moyen de remplacer les styles ? Dans quels cas voudriez-vous faire cela, ou pourquoi pas ?
 
 ---
 
 ## L'Héritage
 
-Les styles sont hérités d'un style ancêtre vers un descendant, de sorte que les éléments imbriqués héritent des styles de leurs parents.
+Les styles sont hérités d'un style ancêtre à un descendant, de sorte que les éléments imbriqués héritent des styles de leurs parents.
 
 ### Tâche
 
@@ -83,7 +83,7 @@ body {
 
 Ouvrez la console de votre navigateur dans l'onglet 'Éléments' et observez la police du H1. Elle hérite de la police du corps, comme indiqué dans le navigateur :
 
-![police héritée](../../../../3-terrarium/2-intro-to-css/images/1.png)
+![police héritée](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.fr.png)
 
 ✅ Pouvez-vous faire en sorte qu'un style imbriqué hérite d'une propriété différente ?
 
@@ -93,7 +93,7 @@ Ouvrez la console de votre navigateur dans l'onglet 'Éléments' et observez la 
 
 ### Balises
 
-Jusqu'à présent, votre fichier `style.css` ne contient que quelques balises stylisées, et l'application semble assez étrange :
+Jusqu'à présent, votre fichier `style.css` ne contient que quelques balises stylisées, et l'application a un aspect assez étrange :
 
 ```CSS
 body {
@@ -106,7 +106,7 @@ h1 {
 }
 ```
 
-Cette manière de styliser une balise vous donne le contrôle sur des éléments uniques, mais vous devez contrôler les styles de nombreuses plantes dans votre terrarium. Pour cela, vous devez utiliser les sélecteurs CSS.
+Cette manière de styliser une balise vous donne le contrôle sur des éléments uniques, mais vous devez contrôler les styles de nombreuses plantes dans votre terrarium. Pour cela, vous devez exploiter les sélecteurs CSS.
 
 ### Ids
 
@@ -134,7 +134,7 @@ Ajoutez un style pour organiser les conteneurs gauche et droit. Comme il n'y a q
 }
 ```
 
-Ici, vous avez positionné ces conteneurs avec un positionnement absolu à l'extrême gauche et droite de l'écran, et utilisé des pourcentages pour leur largeur afin qu'ils puissent s'adapter aux petits écrans mobiles.
+Ici, vous avez placé ces conteneurs avec un positionnement absolu à l'extrême gauche et à l'extrême droite de l'écran, et utilisé des pourcentages pour leur largeur afin qu'ils puissent s'adapter aux petits écrans mobiles.
 
 ✅ Ce code est assez répétitif, donc pas "DRY" (Don't Repeat Yourself) ; pouvez-vous trouver une meilleure façon de styliser ces ids, peut-être avec un id et une classe ? Vous devrez modifier le balisage et refactoriser le CSS :
 
@@ -171,15 +171,15 @@ Ajoutez le code suivant à votre fichier `style.css` :
 }
 ```
 
-Ce qui est notable dans cet extrait, c'est le mélange de positionnement relatif et absolu, que nous aborderons dans la section suivante. Regardez la façon dont les hauteurs sont gérées par pourcentages :
+Ce qui est notable dans cet extrait, c'est le mélange de positionnement relatif et absolu, que nous aborderons dans la section suivante. Regardez comment les hauteurs sont gérées par des pourcentages :
 
-Vous définissez la hauteur du support de plante à 13 %, un bon chiffre pour garantir que toutes les plantes s'affichent dans chaque conteneur vertical sans besoin de défilement.
+Vous définissez la hauteur du support de plante à 13 %, un bon chiffre pour s'assurer que toutes les plantes s'affichent dans chaque conteneur vertical sans besoin de défilement.
 
-Vous déplacez le support de plante vers la gauche pour permettre aux plantes d'être plus centrées dans leur conteneur. Les images ont une grande quantité d'arrière-plan transparent pour les rendre plus faciles à déplacer, donc elles doivent être poussées vers la gauche pour mieux s'adapter à l'écran.
+Vous déplacez le support de plante vers la gauche pour que les plantes soient plus centrées dans leur conteneur. Les images ont une grande quantité d'arrière-plan transparent pour les rendre plus faciles à déplacer, donc elles doivent être poussées vers la gauche pour mieux s'adapter à l'écran.
 
-Ensuite, la plante elle-même reçoit une largeur maximale de 150 %. Cela lui permet de se réduire à mesure que le navigateur se réduit. Essayez de redimensionner votre navigateur ; les plantes restent dans leurs conteneurs mais se réduisent pour s'adapter.
+Ensuite, la plante elle-même reçoit une largeur maximale de 150 %. Cela lui permet de se redimensionner à mesure que le navigateur se redimensionne. Essayez de redimensionner votre navigateur ; les plantes restent dans leurs conteneurs mais se redimensionnent pour s'adapter.
 
-Un autre point notable est l'utilisation de z-index, qui contrôle l'altitude relative d'un élément (de sorte que les plantes se trouvent au-dessus du conteneur et semblent être à l'intérieur du terrarium).
+Autre point notable : l'utilisation de z-index, qui contrôle l'altitude relative d'un élément (afin que les plantes soient au-dessus du conteneur et semblent être à l'intérieur du terrarium).
 
 ✅ Pourquoi avez-vous besoin à la fois d'un sélecteur CSS pour le support de plante et pour la plante ?
 
@@ -199,7 +199,7 @@ Dans notre exemple, le `plant-holder` est un élément positionné en relatif qu
 
 ## Mises en page CSS
 
-Vous allez maintenant utiliser ce que vous avez appris pour construire le terrarium lui-même, uniquement avec du CSS !
+Maintenant, vous allez utiliser ce que vous avez appris pour construire le terrarium lui-même, entièrement en CSS !
 
 Tout d'abord, stylisez les enfants de la div `.terrarium` comme un rectangle arrondi en utilisant le CSS :
 
@@ -250,7 +250,7 @@ Tout d'abord, stylisez les enfants de la div `.terrarium` comme un rectangle arr
 }
 ```
 
-Notez l'utilisation des pourcentages ici. Si vous réduisez votre navigateur, vous pouvez voir comment le bocal s'adapte également. Notez également les pourcentages de largeur et de hauteur pour les éléments du bocal et comment chaque élément est positionné en absolu au centre, fixé en bas de la fenêtre.
+Notez l'utilisation des pourcentages ici. Si vous réduisez votre navigateur, vous pouvez voir comment le bocal se redimensionne également. Remarquez également les pourcentages de largeur et de hauteur pour les éléments du bocal et comment chaque élément est positionné absolument au centre, fixé en bas de la fenêtre.
 
 Nous utilisons également `rem` pour le rayon de bordure, une longueur relative à la police. Lisez-en plus sur ce type de mesure relative dans les [spécifications CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
 
@@ -260,23 +260,25 @@ Nous utilisons également `rem` pour le rayon de bordure, une longueur relative 
 
 ## 🚀Défi
 
-Ajoutez un éclat "bulle" dans la zone inférieure gauche du bocal pour le rendre plus semblable à du verre. Vous styliserez les `.jar-glossy-long` et `.jar-glossy-short` pour ressembler à un reflet brillant. Voici à quoi cela ressemblerait :
+Ajoutez un éclat "bulle" dans la zone inférieure gauche du bocal pour lui donner un aspect plus vitreux. Vous styliserez les `.jar-glossy-long` et `.jar-glossy-short` pour ressembler à un reflet brillant. Voici à quoi cela ressemblerait :
 
-![terrarium terminé](../../../../3-terrarium/2-intro-to-css/images/terrarium-final.png)
+![terrarium terminé](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.fr.png)
 
-Pour compléter le quiz post-conférence, parcourez ce module Learn : [Stylisez votre application HTML avec CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+Pour compléter le quiz post-lecture, parcourez ce module Learn : [Stylisez votre application HTML avec CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
-## Quiz Post-Conférence
+## Quiz Post-Lecture
 
-[Quiz post-conférence](https://ff-quizzes.netlify.app/web/quiz/18)
+[Quiz post-lecture](https://ff-quizzes.netlify.app/web/quiz/18)
 
-## Révision & Auto-Étude
+## Révision & Étude Personnelle
 
-Le CSS semble trompeusement simple, mais il y a de nombreux défis lorsqu'il s'agit de styliser une application parfaitement pour tous les navigateurs et toutes les tailles d'écran. CSS-Grid et Flexbox sont des outils développés pour rendre le travail un peu plus structuré et fiable. Apprenez-en plus sur ces outils en jouant à [Flexbox Froggy](https://flexboxfroggy.com/) et [Grid Garden](https://codepip.com/games/grid-garden/).
+Le CSS semble trompeusement simple, mais il y a de nombreux défis lorsqu'il s'agit de styliser parfaitement une application pour tous les navigateurs et toutes les tailles d'écran. CSS-Grid et Flexbox sont des outils développés pour rendre le travail un peu plus structuré et fiable. Apprenez à utiliser ces outils en jouant à [Flexbox Froggy](https://flexboxfroggy.com/) et [Grid Garden](https://codepip.com/games/grid-garden/).
 
 ## Devoir
 
 [Refactorisation CSS](assignment.md)
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-28T11:41:04+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T16:53:39+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "lt"
 }
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Sprendimų priėmimas ir kodo vykdymo eigos valdymas padaro jūsų kodą pakartotinai naudojamą ir patikimą. Šiame skyriuje aptariama, kaip valdyti duomenų srautą JavaScript'e ir kodėl tai svarbu, ypač naudojant Boolean duomenų tipus.
+Sprendimų priėmimas ir kodo vykdymo eigos valdymas padaro jūsų kodą pakartotinai naudojamą ir patikimą. Šiame skyriuje aptariama JavaScript duomenų srauto valdymo sintaksė ir jos svarba naudojant su loginiais (Boolean) duomenų tipais.
 
 [![Sprendimų priėmimas](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Sprendimų priėmimas")
 
@@ -25,31 +25,31 @@ Sprendimų priėmimas ir kodo vykdymo eigos valdymas padaro jūsų kodą pakarto
 
 > Šią pamoką galite rasti [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 
-## Trumpas Booleans apžvalga
+## Trumpas loginių reikšmių (Boolean) priminimas
 
-Boolean reikšmės gali būti tik dvi: `true` arba `false`. Boolean padeda nuspręsti, kurios kodo eilutės turėtų būti vykdomos, kai tenkinamos tam tikros sąlygos.
+Loginės reikšmės gali turėti tik dvi reikšmes: `true` arba `false`. Jos padeda nuspręsti, kurios kodo eilutės turėtų būti vykdomos, kai tenkinamos tam tikros sąlygos.
 
-Boolean reikšmę galite nustatyti taip:
+Nustatykite loginę reikšmę kaip true arba false taip:
 
 `let myTrueBool = true`  
 `let myFalseBool = false`
 
-✅ Boolean pavadinimas kilo nuo anglų matematiko, filosofo ir logiko George Boole (1815–1864).
+✅ Loginės reikšmės pavadintos pagal anglų matematiką, filosofą ir logiką George'ą Boole'ą (1815–1864).
 
-## Palyginimo operatoriai ir Boolean
+## Palyginimo operatoriai ir loginės reikšmės
 
-Operatoriai naudojami sąlygoms įvertinti, atliekant palyginimus, kurie sukuria Boolean reikšmę. Žemiau pateikiamas dažniausiai naudojamų operatorių sąrašas.
+Operatoriai naudojami sąlygoms įvertinti, atliekant palyginimus, kurie sukuria loginę reikšmę. Žemiau pateikiamas dažnai naudojamų operatorių sąrašas.
 
 | Simbolis | Aprašymas                                                                                                                                                   | Pavyzdys           |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`      | **Mažiau nei**: Palygina dvi reikšmes ir grąžina `true`, jei kairėje pusėje esanti reikšmė yra mažesnė už dešinėje esančią                                   | `5 < 6 // true`    |
-| `<=`     | **Mažiau arba lygu**: Palygina dvi reikšmes ir grąžina `true`, jei kairėje pusėje esanti reikšmė yra mažesnė arba lygi dešinėje esančiai                     | `5 <= 6 // true`   |
-| `>`      | **Daugiau nei**: Palygina dvi reikšmes ir grąžina `true`, jei kairėje pusėje esanti reikšmė yra didesnė už dešinėje esančią                                  | `5 > 6 // false`   |
-| `>=`     | **Daugiau arba lygu**: Palygina dvi reikšmes ir grąžina `true`, jei kairėje pusėje esanti reikšmė yra didesnė arba lygi dešinėje esančiai                   | `5 >= 6 // false`  |
-| `===`    | **Griežta lygybė**: Palygina dvi reikšmes ir grąžina `true`, jei reikšmės kairėje ir dešinėje yra lygios IR yra to paties duomenų tipo                      | `5 === 6 // false` |
-| `!==`    | **Nelygybė**: Palygina dvi reikšmes ir grąžina priešingą Boolean reikšmę, nei griežtos lygybės operatorius                                                  | `5 !== 6 // true`  |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| `<`      | **Mažiau nei**: Palygina dvi reikšmes ir grąžina `true`, jei kairėje pusėje esanti reikšmė yra mažesnė už dešinėje                                           | `5 < 6 // true`     |
+| `<=`     | **Mažiau arba lygu**: Palygina dvi reikšmes ir grąžina `true`, jei kairėje pusėje esanti reikšmė yra mažesnė arba lygi dešinėje                              | `5 <= 6 // true`    |
+| `>`      | **Daugiau nei**: Palygina dvi reikšmes ir grąžina `true`, jei kairėje pusėje esanti reikšmė yra didesnė už dešinėje                                          | `5 > 6 // false`    |
+| `>=`     | **Daugiau arba lygu**: Palygina dvi reikšmes ir grąžina `true`, jei kairėje pusėje esanti reikšmė yra didesnė arba lygi dešinėje                             | `5 >= 6 // false`   |
+| `===`    | **Griežta lygybė**: Palygina dvi reikšmes ir grąžina `true`, jei reikšmės kairėje ir dešinėje yra lygios IR yra to paties duomenų tipo                       | `5 === 6 // false`  |
+| `!==`    | **Nelygybė**: Palygina dvi reikšmes ir grąžina priešingą loginę reikšmę, nei griežtos lygybės operatorius                                                   | `5 !== 6 // true`   |
 
-✅ Patikrinkite savo žinias, parašydami keletą palyginimų naršyklės konsolėje. Ar jus nustebino kokie nors gauti duomenys?
+✅ Patikrinkite savo žinias, rašydami palyginimus naršyklės konsolėje. Ar kokie nors grąžinti duomenys jus nustebino?
 
 ## If sakinys
 
@@ -90,7 +90,7 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-✅ Patikrinkite savo supratimą apie šį kodą ir žemiau pateiktą kodą, paleisdami jį naršyklės konsolėje. Pakeiskite `currentMoney` ir `laptopPrice` kintamųjų reikšmes, kad pakeistumėte `console.log()` rezultatą.
+✅ Patikrinkite savo supratimą apie šį kodą ir žemiau pateiktą kodą, vykdydami jį naršyklės konsolėje. Pakeiskite `currentMoney` ir `laptopPrice` kintamųjų reikšmes, kad pakeistumėte grąžintą `console.log()`.
 
 ## Switch sakinys
 
@@ -127,17 +127,17 @@ switch (a) {
 console.log(`The value is ${a}`);
 ```
 
-✅ Patikrinkite savo supratimą apie šį kodą ir žemiau pateiktą kodą, paleisdami jį naršyklės konsolėje. Pakeiskite kintamojo `a` reikšmes, kad pakeistumėte `console.log()` rezultatą.
+✅ Patikrinkite savo supratimą apie šį kodą ir žemiau pateiktą kodą, vykdydami jį naršyklės konsolėje. Pakeiskite kintamojo `a` reikšmes, kad pakeistumėte grąžintą `console.log()`.
 
-## Loginiai operatoriai ir Boolean
+## Loginiai operatoriai ir loginės reikšmės
 
-Sprendimams gali prireikti daugiau nei vieno palyginimo, ir jie gali būti sujungti naudojant loginius operatorius, kad būtų gauta Boolean reikšmė.
+Sprendimams gali prireikti daugiau nei vieno palyginimo, ir jie gali būti sujungti naudojant loginius operatorius, kad būtų gauta loginė reikšmė.
 
 | Simbolis | Aprašymas                                                                                     | Pavyzdys                                                                 |
 | -------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`     | **Loginis IR**: Palygina dvi Boolean išraiškas. Grąžina `true` tik tada, jei abi pusės yra teisingos | `(5 > 6) && (5 < 6 ) // Viena pusė klaidinga, kita teisinga. Grąžina false` |
-| `\|\|`   | **Loginis ARBA**: Palygina dvi Boolean išraiškas. Grąžina `true`, jei bent viena pusė yra teisinga | `(5 > 6) \|\| (5 < 6) // Viena pusė klaidinga, kita teisinga. Grąžina true` |
-| `!`      | **Loginis NE**: Grąžina priešingą Boolean išraiškos reikšmę                                   | `!(5 > 6) // 5 nėra didesnis už 6, bet "!" grąžins true`                |
+| `&&`     | **Loginis IR**: Palygina dvi logines išraiškas. Grąžina `true` tik tada, jei abi pusės yra teisingos | `(5 > 6) && (5 < 6 ) // Viena pusė klaidinga, kita teisinga. Grąžina false` |
+| `\|\|`   | **Loginis ARBA**: Palygina dvi logines išraiškas. Grąžina `true`, jei bent viena pusė yra teisinga | `(5 > 6) \|\| (5 < 6) // Viena pusė klaidinga, kita teisinga. Grąžina true` |
+| `!`      | **Loginis NE**: Grąžina priešingą loginės išraiškos reikšmę                                   | `!(5 > 6) // 5 nėra didesnis už 6, bet "!" grąžins true`                |
 
 ## Sąlygos ir sprendimai su loginiais operatoriais
 
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Neigimo operatorius
 
-Jūs jau matėte, kaip galima naudoti `if...else` sakinį sąlyginei logikai kurti. Viskas, kas patenka į `if`, turi būti įvertinta kaip `true` arba `false`. Naudodami `!` operatorių galite _neigti_ išraišką. Tai atrodytų taip:
+Jūs jau matėte, kaip galima naudoti `if...else` sakinį sąlyginei logikai kurti. Viskas, kas patenka į `if`, turi būti įvertinta kaip true/false. Naudodami `!` operatorių galite _neigti_ išraišką. Tai atrodytų taip:
 
 ```javascript
 if (!condition) {
@@ -208,7 +208,7 @@ if (firstNumber > secondNumber) {
 
 ## 🚀 Iššūkis
 
-Sukurkite programą, kuri pirmiausia būtų parašyta naudojant loginius operatorius, o tada perrašykite ją naudodami ternarinę išraišką. Kuri sintaksė jums labiau patinka?
+Sukurkite programą, kuri pirmiausia būtų parašyta naudojant loginius operatorius, o tada perrašykite ją naudodami ternarinę išraišką. Kuris sintaksės būdas jums labiau patinka?
 
 ---
 
@@ -216,11 +216,11 @@ Sukurkite programą, kuri pirmiausia būtų parašyta naudojant loginius operato
 
 [Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/12)
 
-## Apžvalga ir savarankiškas mokymasis
+## Peržiūra ir savarankiškas mokymasis
 
-Plačiau apie daugybę vartotojui prieinamų operatorių skaitykite [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
+Skaitykite daugiau apie daugybę vartotojui prieinamų operatorių [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
-Peržiūrėkite Josh Comeau nuostabų [operatorių vadovą](https://joshwcomeau.com/operator-lookup/)!
+Peržiūrėkite nuostabų Josh Comeau [operatorių vadovą](https://joshwcomeau.com/operator-lookup/)!
 
 ## Užduotis
 
@@ -229,4 +229,4 @@ Peržiūrėkite Josh Comeau nuostabų [operatorių vadovą](https://joshwcomeau.
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus aiškinimus, atsiradusius dėl šio vertimo naudojimo.

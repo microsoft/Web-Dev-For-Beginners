@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-24T12:33:38+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T13:55:32+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "es"
 }
 -->
-# Construye un Juego Espacial Parte 2: Dibuja al Héroe y Monstruos en el Canvas
+# Construye un Juego Espacial Parte 2: Dibuja al Héroe y a los Monstruos en el Lienzo
 
 ## Cuestionario Previo a la Clase
 
 [Cuestionario previo a la clase](https://ff-quizzes.netlify.app/web/quiz/31)
 
-## El Canvas
+## El Lienzo
 
-El canvas es un elemento HTML que por defecto no tiene contenido; es como un lienzo en blanco. Necesitas agregarle contenido dibujando sobre él.
+El lienzo es un elemento HTML que, por defecto, no tiene contenido; es como una hoja en blanco. Necesitas agregarle contenido dibujando sobre él.
 
 ✅ Lee [más sobre la API de Canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API) en MDN.
 
@@ -33,18 +33,18 @@ Arriba estamos configurando el `id`, `width` y `height`.
 
 ## Dibujando geometría simple
 
-El Canvas utiliza un sistema de coordenadas cartesianas para dibujar cosas. Por lo tanto, usa un eje x y un eje y para expresar dónde se encuentra algo. La ubicación `0,0` es la esquina superior izquierda, y la esquina inferior derecha es lo que definiste como el ANCHO y la ALTURA del canvas.
+El lienzo utiliza un sistema de coordenadas cartesianas para dibujar cosas. Por lo tanto, usa un eje x y un eje y para expresar dónde se encuentra algo. La ubicación `0,0` es la esquina superior izquierda, y la esquina inferior derecha corresponde al ANCHO y ALTO que definiste para el lienzo.
 
-![la cuadrícula del canvas](../../../../6-space-game/2-drawing-to-canvas/canvas_grid.png)  
+![la cuadrícula del lienzo](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.es.png)  
 > Imagen de [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-Para dibujar en el elemento canvas, necesitas seguir los siguientes pasos:
+Para dibujar en el elemento lienzo, necesitas seguir los siguientes pasos:
 
 1. **Obtener una referencia** al elemento Canvas.
-2. **Obtener una referencia** al elemento Context que se encuentra en el canvas.
+2. **Obtener una referencia** al elemento Context que está en el lienzo.
 3. **Realizar una operación de dibujo** usando el elemento Context.
 
-El código para los pasos anteriores generalmente se ve así:
+El código para los pasos anteriores usualmente se ve así:
 
 ```javascript
 // draws a red rectangle
@@ -67,13 +67,13 @@ Con la API de Canvas puedes dibujar todo tipo de cosas, como:
 
 - **Formas geométricas**, ya mostramos cómo dibujar un rectángulo, pero hay mucho más que puedes dibujar.
 - **Texto**, puedes dibujar texto con cualquier fuente y color que desees.
-- **Imágenes**, puedes dibujar una imagen basada en un recurso gráfico como un .jpg o .png, por ejemplo.
+- **Imágenes**, puedes dibujar una imagen basada en un recurso gráfico como un archivo .jpg o .png, por ejemplo.
 
-✅ ¡Inténtalo! Ya sabes cómo dibujar un rectángulo, ¿puedes dibujar un círculo en una página? Echa un vistazo a algunos dibujos interesantes en Canvas en CodePen. Aquí tienes un [ejemplo particularmente impresionante](https://codepen.io/dissimulate/pen/KrAwx).
+✅ ¡Inténtalo! Ya sabes cómo dibujar un rectángulo, ¿puedes dibujar un círculo en una página? Echa un vistazo a algunos dibujos interesantes hechos con Canvas en CodePen. Aquí tienes un [ejemplo particularmente impresionante](https://codepen.io/dissimulate/pen/KrAwx).
 
 ## Cargar y dibujar un recurso gráfico
 
-Puedes cargar un recurso gráfico creando un objeto `Image` y configurando su propiedad `src`. Luego escuchas el evento `load` para saber cuándo está listo para ser usado. El código se ve así:
+Cargas un recurso gráfico creando un objeto `Image` y configurando su propiedad `src`. Luego escuchas el evento `load` para saber cuándo está listo para ser usado. El código se ve así:
 
 ### Cargar recurso
 
@@ -132,11 +132,11 @@ Construirás una página web con un elemento Canvas. Debería renderizar una pan
 
 - Nave del héroe
 
-   ![Nave del héroe](../../../../6-space-game/2-drawing-to-canvas/solution/assets/player.png)
+   ![Nave del héroe](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.es.png)
 
 - Monstruo 5*5
 
-   ![Nave del monstruo](../../../../6-space-game/2-drawing-to-canvas/solution/assets/enemyShip.png)
+   ![Nave del monstruo](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.es.png)
 
 ### Pasos recomendados para comenzar el desarrollo
 
@@ -151,7 +151,7 @@ Ubica los archivos que se han creado para ti en la subcarpeta `your-work`. Deber
 -| package.json
 ```
 
-Abre la copia de esta carpeta en Visual Studio Code. Necesitas tener configurado un entorno de desarrollo local, preferiblemente con Visual Studio Code con NPM y Node instalados. Si no tienes `npm` configurado en tu computadora, [aquí te explicamos cómo hacerlo](https://www.npmjs.com/get-npm).
+Abre la copia de esta carpeta en Visual Studio Code. Necesitas tener configurado un entorno de desarrollo local, preferiblemente con Visual Studio Code, NPM y Node instalados. Si no tienes `npm` configurado en tu computadora, [aquí te mostramos cómo hacerlo](https://www.npmjs.com/get-npm).
 
 Inicia tu proyecto navegando a la carpeta `your_work`:
 
@@ -160,16 +160,16 @@ cd your-work
 npm start
 ```
 
-Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`. Abre un navegador e ingresa esa dirección. Ahora es una página en blanco, pero eso cambiará.
+Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`. Abre un navegador e ingresa esa dirección. Ahora mismo es una página en blanco, pero eso cambiará.
 
 > Nota: para ver los cambios en tu pantalla, actualiza tu navegador.
 
 ### Agregar código
 
-Agrega el código necesario a `your-work/app.js` para resolver lo siguiente:
+Agrega el código necesario en `your-work/app.js` para resolver lo siguiente:
 
-1. **Dibuja** un canvas con fondo negro  
-   > consejo: agrega dos líneas bajo el TODO correspondiente en `/app.js`, configurando el elemento `ctx` para que sea negro y las coordenadas superior/izquierda en 0,0, y la altura y el ancho iguales a los del canvas.
+1. **Dibuja** un lienzo con fondo negro  
+   > consejo: agrega dos líneas bajo el TODO correspondiente en `/app.js`, configurando el elemento `ctx` para que sea negro y las coordenadas superior/izquierda en 0,0, con la altura y el ancho iguales a los del lienzo.
 2. **Carga** texturas  
    > consejo: agrega las imágenes del jugador y del enemigo usando `await loadTexture` y pasando la ruta de la imagen. ¡Aún no las verás en la pantalla!
 3. **Dibuja** al héroe en el centro de la pantalla en la mitad inferior  
@@ -200,11 +200,11 @@ Agrega el código necesario a `your-work/app.js` para resolver lo siguiente:
 
 El resultado final debería verse así:
 
-![Pantalla negra con un héroe y 5*5 monstruos](../../../../6-space-game/2-drawing-to-canvas/partI-solution.png)
+![Pantalla negra con un héroe y 5*5 monstruos](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.es.png)
 
 ## Solución
 
-Por favor, intenta resolverlo tú mismo primero, pero si te quedas atascado, echa un vistazo a una [solución](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
+Por favor, intenta resolverlo tú mismo primero, pero si te quedas atascado, revisa una [solución](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
 
 ---
 
@@ -216,13 +216,15 @@ Has aprendido sobre cómo dibujar con la API de Canvas enfocada en 2D; echa un v
 
 [Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/32)
 
-## Revisión y Autoestudio
+## Repaso y Estudio Personal
 
 Aprende más sobre la API de Canvas [leyendo sobre ella](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
 ## Tarea
 
-[Juega con la API de Canvas](assignment.md)
+[Experimenta con la API de Canvas](assignment.md)
+
+---
 
 **Descargo de responsabilidad**:  
 Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

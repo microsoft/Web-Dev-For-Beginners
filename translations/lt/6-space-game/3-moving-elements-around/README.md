@@ -1,30 +1,30 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-28T11:32:26+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T16:50:26+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "lt"
 }
 -->
-# Sukurkite Kosmoso Žaidimą 3 dalis: Judesio pridėjimas
+# Sukurkite kosminį žaidimą, 3 dalis: judėjimo pridėjimas
 
-## Prieš paskaitą testas
+## Klausimai prieš paskaitą
 
-[Prieš paskaitą testas](https://ff-quizzes.netlify.app/web/quiz/33)
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/33)
 
-Žaidimai nėra labai smagūs, kol ekrane nesimato judančių ateivių! Šiame žaidime naudosime dviejų tipų judesius:
+Žaidimai nėra labai įdomūs, kol ekrane nepasirodo judantys ateiviai! Šiame žaidime naudosime dviejų tipų judesius:
 
-- **Klaviatūros/pelės judesys**: kai vartotojas sąveikauja su klaviatūra ar pele, kad perkelti objektą ekrane.
-- **Žaidimo sukeltas judesys**: kai žaidimas perkelia objektą tam tikru laiko intervalu.
+- **Klaviatūros/pelės judėjimas**: kai vartotojas sąveikauja su klaviatūra ar pele, kad judintų objektą ekrane.
+- **Žaidimo sukeltas judėjimas**: kai žaidimas juda objektą tam tikru laiko intervalu.
 
 Taigi, kaip mes judiname objektus ekrane? Viskas remiasi į Dekarto koordinates: keičiame objekto vietą (x, y) ir tada perpiešiame ekraną.
 
-Paprastai reikia atlikti šiuos veiksmus, kad pasiektumėte *judesį* ekrane:
+Paprastai reikia atlikti šiuos veiksmus, kad objektas ekrane judėtų:
 
-1. **Nustatyti naują vietą** objektui; tai būtina, kad objektas atrodytų kaip pajudėjęs.
-2. **Išvalyti ekraną**, ekranas turi būti išvalytas tarp piešimų. Galime jį išvalyti nupiešdami stačiakampį su fono spalva.
-3. **Perpiešti objektą** naujoje vietoje. Tai atlikę galiausiai pasiekiame objekto perkėlimą iš vienos vietos į kitą.
+1. **Nustatyti naują vietą** objektui; tai būtina, kad atrodytų, jog objektas pajudėjo.
+2. **Išvalyti ekraną**, ekranas turi būti išvalytas tarp piešimų. Galime jį išvalyti nupiešdami stačiakampį, užpildytą fono spalva.
+3. **Perpiešti objektą** naujoje vietoje. Tai atlikę galiausiai pasiekiame, kad objektas judėtų iš vienos vietos į kitą.
 
 Štai kaip tai gali atrodyti kode:
 
@@ -45,7 +45,7 @@ ctx.drawImage(heroImg, hero.x, hero.y);
 
 Įvykius valdote priskirdami konkrečius įvykius kodui. Klaviatūros įvykiai suaktyvinami visame lange, o pelės įvykiai, tokie kaip `click`, gali būti susieti su konkretaus elemento paspaudimu. Šiame projekte naudosime klaviatūros įvykius.
 
-Norėdami valdyti įvykį, turite naudoti lango metodą `addEventListener()` ir pateikti jam du įvesties parametrus. Pirmasis parametras yra įvykio pavadinimas, pavyzdžiui, `keyup`. Antrasis parametras yra funkcija, kuri turėtų būti iškviečiama įvykio metu.
+Norėdami valdyti įvykį, turite naudoti lango metodą `addEventListener()` ir pateikti jam du įvesties parametrus. Pirmasis parametras yra įvykio pavadinimas, pavyzdžiui, `keyup`. Antrasis parametras yra funkcija, kurią reikia iškviesti, kai įvykis įvyksta.
 
 Štai pavyzdys:
 
@@ -60,14 +60,14 @@ window.addEventListener('keyup', (evt) => {
 
 Klavišų įvykiams yra dvi savybės, kurias galite naudoti norėdami pamatyti, kuris klavišas buvo paspaustas:
 
-- `key`, tai yra paspausto klavišo simbolinė reprezentacija, pavyzdžiui, `ArrowUp`
-- `keyCode`, tai yra skaitinė reprezentacija, pavyzdžiui, `37`, atitinkanti `ArrowLeft`.
+- `key`, tai yra paspausto klavišo simbolinė reikšmė, pavyzdžiui, `ArrowUp`.
+- `keyCode`, tai yra skaitinė reikšmė, pavyzdžiui, `37`, atitinkanti `ArrowLeft`.
 
 ✅ Klavišų įvykių valdymas yra naudingas ne tik žaidimų kūrime. Kokius kitus šios technikos panaudojimo būdus galite sugalvoti?
 
 ### Specialūs klavišai: įspėjimas
 
-Yra keletas *specialių* klavišų, kurie veikia langą. Tai reiškia, kad jei klausotės `keyup` įvykio ir naudojate šiuos specialius klavišus, kad perkeltumėte savo herojų, jie taip pat atliks horizontalų slinkimą. Dėl šios priežasties, kurdami savo žaidimą, galbūt norėsite *išjungti* šį įmontuotą naršyklės elgesį. Tam reikia tokio kodo:
+Yra keletas *specialių* klavišų, kurie veikia langą. Tai reiškia, kad jei klausotės `keyup` įvykio ir naudojate šiuos specialius klavišus, kad judintumėte savo herojų, jie taip pat atliks horizontalų slinkimą. Dėl šios priežasties, kurdami žaidimą, galbūt norėsite *išjungti* šį įmontuotą naršyklės elgesį. Tam reikia tokio kodo:
 
 ```javascript
 let onKeyDown = function (e) {
@@ -88,11 +88,11 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Aukščiau pateiktas kodas užtikrins, kad rodyklių klavišai ir tarpo klavišas turės *numatytąjį* elgesį išjungtą. *Išjungimo* mechanizmas įvyksta, kai iškviečiame `e.preventDefault()`.
+Aukščiau pateiktas kodas užtikrins, kad rodyklių klavišai ir tarpo klavišas turėtų *numatytąjį* elgesį išjungtą. *Išjungimo* mechanizmas įvyksta, kai iškviečiame `e.preventDefault()`.
 
-## Žaidimo sukeltas judesys
+## Žaidimo sukeltas judėjimas
 
-Galime priversti objektus judėti patys naudodami laikmačius, tokius kaip `setTimeout()` arba `setInterval()`, kurie atnaujina objekto vietą kiekviename intervale. Štai kaip tai gali atrodyti:
+Galime priversti objektus judėti patys naudodami laikmačius, tokius kaip `setTimeout()` arba `setInterval()` funkcijas, kurios atnaujina objekto vietą kiekvieną intervalą. Štai kaip tai gali atrodyti:
 
 ```javascript
 let id = setInterval(() => {
@@ -103,7 +103,7 @@ let id = setInterval(() => {
 
 ## Žaidimo ciklas
 
-Žaidimo ciklas yra koncepcija, kuri iš esmės yra funkcija, iškviečiama reguliariais intervalais. Jis vadinamas žaidimo ciklu, nes viskas, kas turėtų būti matoma vartotojui, yra piešiama cikle. Žaidimo ciklas naudoja visus žaidimo objektus, kurie yra žaidimo dalis, piešdamas juos visus, nebent dėl kokios nors priežasties jie nebėra žaidimo dalis. Pavyzdžiui, jei objektas yra priešas, kurį pataikė lazeris ir jis susprogo, jis nebėra dabartinio žaidimo ciklo dalis (apie tai sužinosite daugiau vėlesnėse pamokose).
+Žaidimo ciklas yra koncepcija, kuri iš esmės yra funkcija, iškviečiama reguliariais intervalais. Jis vadinamas žaidimo ciklu, nes viskas, kas turėtų būti matoma vartotojui, yra nupiešiama šiame cikle. Žaidimo ciklas naudoja visus žaidimo objektus, kurie yra žaidimo dalis, piešdamas juos visus, nebent dėl kokios nors priežasties jie nebeturėtų būti žaidimo dalis. Pavyzdžiui, jei objektas yra priešas, kurį pataikė lazeris ir jis susprogo, jis nebėra dabartinio žaidimo ciklo dalis (apie tai sužinosite daugiau vėlesnėse pamokose).
 
 Štai kaip žaidimo ciklas paprastai atrodo, išreikštas kode:
 
@@ -121,7 +121,7 @@ let gameLoopId = setInterval(() =>
 
 Aukščiau pateiktas ciklas iškviečiamas kas `200` milisekundžių, kad perpieštų drobę. Galite pasirinkti geriausią intervalą, kuris tinka jūsų žaidimui.
 
-## Tęsiame Kosmoso Žaidimą
+## Tęsiame kosminį žaidimą
 
 Jūs paimsite esamą kodą ir jį išplėsite. Galite pradėti nuo kodo, kurį užbaigėte pirmoje dalyje, arba naudoti kodą iš [II dalies pradžios](../../../../6-space-game/3-moving-elements-around/your-work).
 
@@ -148,15 +148,15 @@ cd your-work
 npm start
 ```
 
-Aukščiau pateiktas veiksmas paleis HTTP serverį adresu `http://localhost:5000`. Atidarykite naršyklę ir įveskite šį adresą, šiuo metu turėtų būti matomas herojus ir visi priešai; dar niekas nejuda!
+Aukščiau pateiktas kodas paleis HTTP serverį adresu `http://localhost:5000`. Atidarykite naršyklę ir įveskite šį adresą. Šiuo metu turėtų būti matomas herojus ir visi priešai; niekas dar nejuda!
 
 ### Pridėkite kodą
 
-1. **Pridėkite specialius objektus** `hero`, `enemy` ir `game object`, jie turėtų turėti `x` ir `y` savybes. (Prisiminkite skyrių apie [Paveldėjimą arba kompoziciją](../README.md)).
+1. **Pridėkite specialius objektus** `hero`, `enemy` ir `game object`, jie turėtų turėti `x` ir `y` savybes. (Prisiminkite skyrių apie [Paveldėjimą ar kompoziciją](../README.md)).
 
-   *PATARIMAS* `game object` turėtų būti tas, kuris turi `x` ir `y` bei galimybę piešti save ant drobės.
+   *PATARIMAS* `game object` turėtų būti tas, kuris turi `x` ir `y` savybes bei galimybę piešti save ant drobės.
 
-   >patarimas: pradėkite pridėdami naują GameObject klasę su jos konstruktoriaus apibrėžimu, kaip parodyta žemiau, ir tada nupieškite ją ant drobės:
+   >patikslinimas: pradėkite pridėdami naują GameObject klasę su jos konstruktoriaus apibrėžimu, kaip parodyta žemiau, ir tada nupieškite ją ant drobės:
   
     ```javascript
         
@@ -177,8 +177,8 @@ Aukščiau pateiktas veiksmas paleis HTTP serverį adresu `http://localhost:5000
     }
     ```
 
-    Dabar išplėskite šį GameObject, kad sukurtumėte Hero ir Enemy.
-    
+    Dabar išplėskite šią GameObject klasę, kad sukurtumėte Hero ir Enemy.
+
     ```javascript
     class Hero extends GameObject {
       constructor(x, y) {
@@ -205,11 +205,11 @@ Aukščiau pateiktas veiksmas paleis HTTP serverį adresu `http://localhost:5000
     }
     ```
 
-2. **Pridėkite klavišų įvykių valdiklius**, kad valdytumėte herojaus judėjimą aukštyn/žemyn kairėn/dešinėn.
+2. **Pridėkite klavišų įvykių valdiklius**, kad galėtumėte valdyti herojaus judėjimą (aukštyn/žemyn, kairėn/dešinėn).
 
-   *ATMINKITE*, kad tai yra Dekarto sistema, viršutinis kairysis kampas yra `0,0`. Taip pat nepamirškite pridėti kodo, kad sustabdytumėte *numatytąjį elgesį*.
+   *PRISIMINKITE*, tai yra Dekarto sistema, viršutinis kairysis kampas yra `0,0`. Taip pat nepamirškite pridėti kodo, kad sustabdytumėte *numatytąjį elgesį*.
 
-   >patarimas: sukurkite savo onKeyDown funkciją ir priskirkite ją langui:
+   >patikslinimas: sukurkite savo onKeyDown funkciją ir priskirkite ją langui:
 
    ```javascript
     let onKeyDown = function (e) {
@@ -223,11 +223,11 @@ Aukščiau pateiktas veiksmas paleis HTTP serverį adresu `http://localhost:5000
     
    Šiuo metu patikrinkite savo naršyklės konsolę ir stebėkite, kaip registruojami klavišų paspaudimai.
 
-3. **Įgyvendinkite** [Pub sub modelį](../README.md), tai padės išlaikyti jūsų kodą švarų, kai tęsite likusias dalis.
+3. **Įgyvendinkite** [Pub sub modelį](../README.md), tai padės išlaikyti jūsų kodą tvarkingą, kai tęsite likusias dalis.
 
    Norėdami atlikti šią paskutinę dalį, galite:
 
-   1. **Pridėti įvykio klausiklį** prie lango:
+   1. **Pridėti įvykių klausiklį** prie lango:
 
        ```javascript
         window.addEventListener("keyup", (evt) => {
@@ -243,7 +243,7 @@ Aukščiau pateiktas veiksmas paleis HTTP serverį adresu `http://localhost:5000
         });
         ```
 
-    1. **Sukurti EventEmitter klasę**, kad galėtumėte skelbti ir prenumeruoti pranešimus:
+    1. **Sukurti EventEmitter klasę**, kad galėtumėte publikuoti ir prenumeruoti pranešimus:
 
         ```javascript
         class EventEmitter {
@@ -356,7 +356,7 @@ Aukščiau pateiktas veiksmas paleis HTTP serverį adresu `http://localhost:5000
     ```
     
     ir pridėkite `createHero()` funkciją, kad atliktumėte panašų procesą herojui.
-    
+
     ```javascript
     function createHero() {
       hero = new Hero(
@@ -384,9 +384,9 @@ Aukščiau pateiktas veiksmas paleis HTTP serverį adresu `http://localhost:5000
 
 Kaip matote, jūsų kodas gali tapti „spagečių kodu“, kai pradedate pridėti funkcijas, kintamuosius ir klases. Kaip galite geriau organizuoti savo kodą, kad jis būtų lengviau skaitomas? Nubraižykite sistemą, kaip organizuoti savo kodą, net jei jis vis dar yra viename faile.
 
-## Po paskaitos testas
+## Klausimai po paskaitos
 
-[Po paskaitos testas](https://ff-quizzes.netlify.app/web/quiz/34)
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Peržiūra ir savarankiškas mokymasis
 
@@ -394,9 +394,9 @@ Nors mes rašome savo žaidimą nenaudodami karkasų, yra daug JavaScript pagrin
 
 ## Užduotis
 
-[Pakomentuokite savo kodą](assignment.md)
+[Komentuokite savo kodą](assignment.md)
 
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Dėl svarbios informacijos rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.

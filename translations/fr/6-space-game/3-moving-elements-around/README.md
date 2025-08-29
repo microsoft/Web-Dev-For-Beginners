@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "23f088add24f0f1fa51014a9e27ea280",
-  "translation_date": "2025-08-23T22:56:13+00:00",
+  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
+  "translation_date": "2025-08-29T13:36:52+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "fr"
 }
@@ -13,18 +13,18 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/33)
 
-Les jeux ne sont pas très amusants tant que vous n'avez pas des aliens qui se déplacent à l'écran ! Dans ce jeu, nous allons utiliser deux types de mouvements :
+Les jeux ne sont pas très amusants tant que vous n'avez pas des extraterrestres qui se déplacent à l'écran ! Dans ce jeu, nous allons utiliser deux types de mouvements :
 
 - **Mouvement clavier/souris** : lorsque l'utilisateur interagit avec le clavier ou la souris pour déplacer un objet à l'écran.
 - **Mouvement induit par le jeu** : lorsque le jeu déplace un objet à un certain intervalle de temps.
 
 Alors, comment déplace-t-on des objets à l'écran ? Tout repose sur les coordonnées cartésiennes : on modifie la position (x, y) de l'objet, puis on redessine l'écran.
 
-En général, voici les étapes nécessaires pour accomplir un *mouvement* à l'écran :
+En général, voici les étapes nécessaires pour réaliser un *mouvement* à l'écran :
 
 1. **Définir une nouvelle position** pour un objet ; cela est nécessaire pour donner l'impression que l'objet s'est déplacé.
-2. **Effacer l'écran**, l'écran doit être nettoyé entre chaque dessin. On peut le faire en dessinant un rectangle rempli d'une couleur de fond.
-3. **Redessiner l'objet** à sa nouvelle position. En faisant cela, on parvient finalement à déplacer l'objet d'un endroit à un autre.
+2. **Effacer l'écran**, l'écran doit être nettoyé entre chaque dessin. On peut le faire en dessinant un rectangle rempli avec une couleur de fond.
+3. **Redessiner l'objet** à sa nouvelle position. Cela permet finalement de déplacer l'objet d'un endroit à un autre.
 
 Voici à quoi cela peut ressembler en code :
 
@@ -43,9 +43,9 @@ ctx.drawImage(heroImg, hero.x, hero.y);
 
 ## Gérer les événements clavier
 
-Vous gérez les événements en attachant des événements spécifiques à du code. Les événements clavier sont déclenchés sur l'ensemble de la fenêtre, tandis que les événements souris comme un `click` peuvent être liés à un élément spécifique. Nous utiliserons des événements clavier tout au long de ce projet.
+Vous gérez les événements en attachant des événements spécifiques à du code. Les événements clavier sont déclenchés sur l'ensemble de la fenêtre, tandis que les événements souris comme un `click` peuvent être connectés à un élément spécifique. Nous utiliserons des événements clavier tout au long de ce projet.
 
-Pour gérer un événement, vous devez utiliser la méthode `addEventListener()` de la fenêtre et lui fournir deux paramètres d'entrée. Le premier paramètre est le nom de l'événement, par exemple `keyup`. Le second paramètre est la fonction qui doit être invoquée lorsque l'événement se produit.
+Pour gérer un événement, vous devez utiliser la méthode `addEventListener()` de la fenêtre et lui fournir deux paramètres. Le premier paramètre est le nom de l'événement, par exemple `keyup`. Le second paramètre est la fonction qui doit être invoquée lorsque l'événement se produit.
 
 Voici un exemple :
 
@@ -58,16 +58,16 @@ window.addEventListener('keyup', (evt) => {
 })
 ```
 
-Pour les événements clavier, il existe deux propriétés sur l'événement que vous pouvez utiliser pour voir quelle touche a été pressée :
+Pour les événements clavier, il existe deux propriétés sur l'événement que vous pouvez utiliser pour savoir quelle touche a été pressée :
 
-- `key`, c'est une représentation sous forme de chaîne de la touche pressée, par exemple `ArrowUp`.
-- `keyCode`, c'est une représentation sous forme de nombre, par exemple `37`, qui correspond à `ArrowLeft`.
+- `key`, qui est une représentation sous forme de chaîne de la touche pressée, par exemple `ArrowUp`.
+- `keyCode`, qui est une représentation numérique, par exemple `37`, correspondant à `ArrowLeft`.
 
-✅ La manipulation des événements clavier est utile en dehors du développement de jeux. À quels autres usages pouvez-vous penser pour cette technique ?
+✅ La manipulation des événements clavier est utile en dehors du développement de jeux. À quelles autres utilisations pouvez-vous penser pour cette technique ?
 
 ### Touches spéciales : une mise en garde
 
-Il existe certaines touches *spéciales* qui affectent la fenêtre. Cela signifie que si vous écoutez un événement `keyup` et que vous utilisez ces touches spéciales pour déplacer votre héros, cela entraînera également un défilement horizontal. Pour cette raison, vous pourriez vouloir *désactiver* ce comportement intégré du navigateur lorsque vous développez votre jeu. Vous avez besoin de code comme celui-ci :
+Certaines touches *spéciales* affectent la fenêtre. Cela signifie que si vous écoutez un événement `keyup` et que vous utilisez ces touches spéciales pour déplacer votre héros, cela entraînera également un défilement horizontal. Pour cette raison, vous pourriez vouloir *désactiver* ce comportement intégré du navigateur lorsque vous développez votre jeu. Vous avez besoin d'un code comme celui-ci :
 
 ```javascript
 let onKeyDown = function (e) {
@@ -88,11 +88,11 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Le code ci-dessus garantira que les touches fléchées et la touche espace ont leur comportement *par défaut* désactivé. Le mécanisme de *désactivation* se produit lorsque nous appelons `e.preventDefault()`.
+Le code ci-dessus garantit que les touches fléchées et la barre d'espace ont leur comportement *par défaut* désactivé. Le mécanisme de *désactivation* se produit lorsque nous appelons `e.preventDefault()`.
 
 ## Mouvement induit par le jeu
 
-Nous pouvons faire bouger des objets par eux-mêmes en utilisant des minuteries comme les fonctions `setTimeout()` ou `setInterval()` qui mettent à jour la position de l'objet à chaque tick ou intervalle de temps. Voici à quoi cela peut ressembler :
+Nous pouvons faire bouger des objets par eux-mêmes en utilisant des minuteries comme les fonctions `setTimeout()` ou `setInterval()` qui mettent à jour la position de l'objet à chaque tick, ou intervalle de temps. Voici à quoi cela peut ressembler :
 
 ```javascript
 let id = setInterval(() => {
@@ -103,9 +103,9 @@ let id = setInterval(() => {
 
 ## La boucle de jeu
 
-La boucle de jeu est un concept qui est essentiellement une fonction invoquée à intervalles réguliers. On l'appelle la boucle de jeu car tout ce qui doit être visible pour l'utilisateur est dessiné dans cette boucle. La boucle de jeu utilise tous les objets du jeu qui en font partie, en les dessinant tous sauf si, pour une raison quelconque, ils ne doivent plus faire partie du jeu. Par exemple, si un objet est un ennemi qui a été touché par un laser et explose, il ne fait plus partie de la boucle de jeu actuelle (vous en apprendrez davantage à ce sujet dans les leçons suivantes).
+La boucle de jeu est un concept qui consiste essentiellement en une fonction invoquée à intervalles réguliers. On l'appelle la boucle de jeu car tout ce qui doit être visible pour l'utilisateur est dessiné dans cette boucle. La boucle de jeu utilise tous les objets du jeu qui en font partie, en les dessinant tous sauf si, pour une raison quelconque, ils ne font plus partie du jeu. Par exemple, si un objet est un ennemi touché par un laser et explose, il ne fait plus partie de la boucle de jeu actuelle (vous en apprendrez davantage à ce sujet dans les leçons suivantes).
 
-Voici à quoi une boucle de jeu peut typiquement ressembler, exprimée en code :
+Voici à quoi une boucle de jeu peut ressembler, exprimée en code :
 
 ```javascript
 let gameLoopId = setInterval(() =>
@@ -119,18 +119,18 @@ let gameLoopId = setInterval(() =>
 }, 200);
 ```
 
-La boucle ci-dessus est invoquée toutes les `200` millisecondes pour redessiner le canvas. Vous avez la possibilité de choisir l'intervalle qui convient le mieux à votre jeu.
+La boucle ci-dessus est invoquée toutes les `200` millisecondes pour redessiner le canvas. Vous pouvez choisir l'intervalle qui convient le mieux à votre jeu.
 
 ## Poursuivre le jeu spatial
 
-Vous allez prendre le code existant et l'étendre. Soit vous commencez avec le code que vous avez terminé lors de la partie I, soit vous utilisez le code de [Partie II - starter](../../../../6-space-game/3-moving-elements-around/your-work).
+Vous allez prendre le code existant et l'étendre. Soit vous commencez avec le code que vous avez complété lors de la partie I, soit vous utilisez le code dans [Partie II - starter](../../../../6-space-game/3-moving-elements-around/your-work).
 
 - **Déplacer le héros** : vous ajouterez du code pour permettre de déplacer le héros à l'aide des touches fléchées.
 - **Déplacer les ennemis** : vous devrez également ajouter du code pour que les ennemis se déplacent de haut en bas à un rythme donné.
 
 ## Étapes recommandées
 
-Localisez les fichiers qui ont été créés pour vous dans le sous-dossier `your-work`. Il devrait contenir les éléments suivants :
+Trouvez les fichiers qui ont été créés pour vous dans le sous-dossier `your-work`. Il devrait contenir les éléments suivants :
 
 ```bash
 -| assets
@@ -148,15 +148,15 @@ cd your-work
 npm start
 ```
 
-Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et entrez cette adresse, pour l'instant cela devrait afficher le héros et tous les ennemis ; rien ne bouge - encore !
+Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et entrez cette adresse, pour l'instant, cela devrait afficher le héros et tous les ennemis ; rien ne bouge - encore !
 
 ### Ajouter du code
 
-1. **Ajouter des objets dédiés** pour `hero`, `enemy` et `game object`, ils devraient avoir des propriétés `x` et `y`. (Rappelez-vous la partie sur [Héritage ou composition](../README.md)).
+1. **Ajoutez des objets dédiés** pour `hero`, `enemy` et `game object`, ils devraient avoir des propriétés `x` et `y`. (Rappelez-vous la section sur [Héritage ou composition](../README.md)).
 
-   *ASTUCE* `game object` devrait être celui avec `x` et `y` et la capacité de se dessiner sur un canvas.
+   *CONSEIL* `game object` devrait être celui avec les propriétés `x` et `y` et la capacité de se dessiner sur un canvas.
 
-   >astuce : commencez par ajouter une nouvelle classe GameObject avec son constructeur défini comme ci-dessous, puis dessinez-la sur le canvas :
+   > Conseil : commencez par ajouter une nouvelle classe GameObject avec son constructeur défini comme ci-dessous, puis dessinez-la sur le canvas :
   
     ```javascript
         
@@ -177,7 +177,7 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
     }
     ```
 
-    Maintenant, étendez ce GameObject pour créer le Hero et Enemy.
+    Maintenant, étendez cet objet GameObject pour créer le Hero et l'Enemy.
     
     ```javascript
     class Hero extends GameObject {
@@ -205,11 +205,11 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
     }
     ```
 
-2. **Ajouter des gestionnaires d'événements clavier** pour gérer la navigation (déplacer le héros vers le haut/bas gauche/droite).
+2. **Ajoutez des gestionnaires d'événements clavier** pour gérer la navigation (déplacer le héros vers le haut/bas gauche/droite).
 
-   *RAPPELEZ-VOUS* c'est un système cartésien, en haut à gauche est `0,0`. Rappelez-vous également d'ajouter du code pour arrêter le *comportement par défaut*.
+   *RAPPEL* c'est un système cartésien, le coin supérieur gauche est `0,0`. N'oubliez pas non plus d'ajouter du code pour arrêter le *comportement par défaut*.
 
-   >astuce : créez votre fonction onKeyDown et attachez-la à la fenêtre :
+   > Conseil : créez votre fonction onKeyDown et attachez-la à la fenêtre :
 
    ```javascript
     let onKeyDown = function (e) {
@@ -221,11 +221,11 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
     window.addEventListener("keydown", onKeyDown);
    ```
     
-   Vérifiez la console de votre navigateur à ce stade, et observez les frappes de touches qui sont enregistrées.
+   Vérifiez la console de votre navigateur à ce stade, et observez les frappes de touches enregistrées.
 
-3. **Implémenter** le [modèle Pub/Sub](../README.md), cela gardera votre code propre pour les parties restantes.
+3. **Implémentez** le [modèle Pub/Sub](../README.md), cela gardera votre code propre pour les parties restantes.
 
-   Pour réaliser cette dernière partie, vous pouvez :
+   Pour cette dernière partie, vous pouvez :
 
    1. **Ajouter un écouteur d'événements** sur la fenêtre :
 
@@ -334,7 +334,7 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
     };
     ```
 
-5. **Ajouter du code** pour déplacer les ennemis à un certain intervalle.
+5. **Ajoutez du code** pour déplacer les ennemis à un certain intervalle
 
     Refactorisez la fonction `createEnemies()` pour créer les ennemis et les ajouter à la nouvelle classe gameObjects :
 
@@ -382,19 +382,21 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
 
 ## 🚀 Défi
 
-Comme vous pouvez le constater, votre code peut devenir un "code spaghetti" lorsque vous commencez à ajouter des fonctions, des variables et des classes. Comment pouvez-vous mieux organiser votre code pour qu'il soit plus lisible ? Dessinez un système pour organiser votre code, même s'il reste dans un seul fichier.
+Comme vous pouvez le constater, votre code peut devenir un "code spaghetti" lorsque vous commencez à ajouter des fonctions, des variables et des classes. Comment pouvez-vous mieux organiser votre code pour qu'il soit plus lisible ? Esquissez un système pour organiser votre code, même s'il reste dans un seul fichier.
 
 ## Quiz après le cours
 
 [Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/34)
 
-## Révision et étude personnelle
+## Révision et auto-apprentissage
 
-Bien que nous écrivions notre jeu sans utiliser de frameworks, il existe de nombreux frameworks basés sur JavaScript pour le développement de jeux sur canvas. Prenez le temps de faire des [recherches à ce sujet](https://github.com/collections/javascript-game-engines).
+Bien que nous écrivions notre jeu sans utiliser de frameworks, il existe de nombreux frameworks JavaScript basés sur le canvas pour le développement de jeux. Prenez le temps de faire quelques [lectures à ce sujet](https://github.com/collections/javascript-game-engines).
 
 ## Devoir
 
 [Commentez votre code](assignment.md)
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

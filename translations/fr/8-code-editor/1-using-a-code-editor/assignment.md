@@ -1,26 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-23T23:35:41+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T13:43:39+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "fr"
 }
 -->
-# Créer un site web de CV avec vscode.dev
+# Créer un site web CV avec vscode.dev
 
-_Quelle classe d'envoyer une URL à un recruteur qui demande votre CV ?_ 😎
-
-<!----
-TODO : ajouter une image optionnelle
-![Utiliser un éditeur de code](../../../../sketchnotes/webdev101-vscode-dev.png)
-> Sketchnote par [Nom de l'auteur](https://example.com)
----->
-
-<!---
-## Quiz avant la leçon
-[Quiz avant la leçon](https://ff-quizzes.netlify.app/web/quiz/3)
----->
+_Quelle classe d'avoir un recruteur qui vous demande votre CV et vous lui envoyez une URL ?_ 😎
 
 ## Objectifs
 
@@ -34,17 +23,17 @@ Après cette tâche, vous apprendrez à :
 
 ## Étapes
 
-**Étape 1 :** Créez un nouveau dépôt GitHub et donnez-lui le nom `my-resume`.
+**Étape 1 :** Créez un nouveau dépôt GitHub et nommez-le `my-resume`.
 
-**Étape 2 :** Créez un fichier `index.html` dans votre dépôt. Nous ajouterons au moins un fichier directement sur github.com car vous ne pouvez pas ouvrir un dépôt vide sur vscode.dev.
+**Étape 2 :** Créez un fichier `index.html` dans votre dépôt. Nous ajouterons au moins un fichier directement sur github.com, car vous ne pouvez pas ouvrir un dépôt vide sur vscode.dev.
 
 Cliquez sur le lien `creating a new file`, tapez le nom `index.html` et sélectionnez le bouton `Commit new file`.
 
-![Créer un nouveau fichier sur github.com](../../../../8-code-editor/images/new-file-github.com.png)
+![Créer un nouveau fichier sur github.com](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.fr.png)
 
 **Étape 3 :** Ouvrez [VSCode.dev](https://vscode.dev) et sélectionnez le bouton `Open Remote Repository`.
 
-Copiez l'URL du dépôt que vous venez de créer pour votre site de CV et collez-la dans la boîte de saisie :
+Copiez l'URL du dépôt que vous venez de créer pour votre site CV et collez-la dans la boîte de saisie :
 
 _Remplacez `your-username` par votre nom d'utilisateur GitHub._
 
@@ -52,14 +41,14 @@ _Remplacez `your-username` par votre nom d'utilisateur GitHub._
 https://github.com/your-username/my-resume
 ```
 
-✅ Si tout fonctionne, vous verrez votre projet et le fichier index.html ouverts dans l'éditeur de texte sur le navigateur.
+✅ Si tout se passe bien, vous verrez votre projet et le fichier index.html s'ouvrir dans l'éditeur de texte sur le navigateur.
 
-![Créer un nouveau fichier](../../../../8-code-editor/images/project-on-vscode.dev.png)
+![Créer un nouveau fichier](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.fr.png)
 
 **Étape 4 :** Ouvrez le fichier `index.html`, collez le code ci-dessous dans votre zone de code et enregistrez.
 
 <details>
-    <summary><b>Code HTML responsable du contenu de votre site web de CV.</b></summary>
+    <summary><b>Code HTML responsable du contenu de votre site CV.</b></summary>
     
         <html>
 
@@ -130,9 +119,9 @@ https://github.com/your-username/my-resume
                                 Nom de l'organisation ici | Mois de début – Mois de fin
                             </p>
                             <ul>
-                                    <li>Tâche 1 - Écrivez ce que vous avez fait !</li>
-                                    <li>Tâche 2 - Écrivez ce que vous avez fait !</li>
-                                    <li>Écrivez les résultats/impacts de votre contribution</li>
+                                    <li>Tâche 1 - Décrivez ce que vous avez fait !</li>
+                                    <li>Tâche 2 - Décrivez ce que vous avez fait !</li>
+                                    <li>Décrivez les résultats/impacts de votre contribution</li>
                                     
                             </ul>
                             <h3>Titre du poste 2</h3>
@@ -140,9 +129,9 @@ https://github.com/your-username/my-resume
                                 Nom de l'organisation ici | Mois de début – Mois de fin
                             </p>
                             <ul>
-                                    <li>Tâche 1 - Écrivez ce que vous avez fait !</li>
-                                    <li>Tâche 2 - Écrivez ce que vous avez fait !</li>
-                                    <li>Écrivez les résultats/impacts de votre contribution</li>
+                                    <li>Tâche 1 - Décrivez ce que vous avez fait !</li>
+                                    <li>Tâche 2 - Décrivez ce que vous avez fait !</li>
+                                    <li>Décrivez les résultats/impacts de votre contribution</li>
                                     
                             </ul>
                         </section>
@@ -228,34 +217,31 @@ Ajoutez les détails de votre CV pour remplacer le _texte de remplacement_ dans 
     "styles": []
     }
 
-**Étape 7 :** Installez l'extension `Codeswing` pour visualiser le site web du CV dans la zone de code.
+**Étape 7 :** Installez l'extension `Codeswing` pour visualiser le site CV dans la zone de code.
 
-Cliquez sur l'icône _`Extensions`_ dans la barre d'activité et tapez Codeswing. Cliquez soit sur le _bouton bleu d'installation_ dans la barre d'activité étendue pour installer, soit sur le bouton d'installation qui apparaît dans la zone de code une fois que vous avez sélectionné l'extension pour charger des informations supplémentaires. Immédiatement après l'installation de l'extension, observez votre zone de code pour voir les changements dans votre projet 😃.
+Cliquez sur l'icône _`Extensions`_ dans la barre d'activité et tapez Codeswing. Cliquez soit sur le _bouton bleu Installer_ dans la barre d'activité étendue pour installer, soit sur le bouton d'installation qui apparaît dans la zone de code une fois l'extension sélectionnée pour charger des informations supplémentaires. Immédiatement après l'installation de l'extension, observez les changements dans votre projet 😃.
 
 ![Installer des extensions](../../../../8-code-editor/images/install-extension.gif)
 
-Voici ce que vous verrez sur votre écran après avoir installé l'extension.
+Voici ce que vous verrez à l'écran après avoir installé l'extension.
 
-![Extension Codeswing en action](../../../../8-code-editor/images/after-codeswing-extension-pb.png)
+![Extension Codeswing en action](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.fr.png)
 
 Si vous êtes satisfait des modifications apportées, survolez le dossier `Changes` et cliquez sur le bouton `+` pour mettre en scène les modifications.
 
-Tapez un message de commit _(Une description des modifications apportées au projet)_ et validez vos modifications en cliquant sur le `check`. Une fois que vous avez terminé de travailler sur votre projet, sélectionnez l'icône du menu hamburger en haut à gauche pour revenir au dépôt sur GitHub.
+Tapez un message de commit _(Une description des modifications apportées au projet)_ et validez vos modifications en cliquant sur la `coche`. Une fois votre travail terminé, sélectionnez l'icône du menu hamburger en haut à gauche pour revenir au dépôt sur GitHub.
 
-Félicitations 🎉 Vous venez de créer votre site web de CV avec vscode.dev en quelques étapes.
+Félicitations 🎉 Vous venez de créer votre site web CV en utilisant vscode.dev en quelques étapes.
 
 ## 🚀 Défi
 
-Ouvrez un dépôt distant sur lequel vous avez les permissions pour apporter des modifications et mettez à jour certains fichiers. Ensuite, essayez de créer une nouvelle branche avec vos modifications et faites une Pull Request.
+Ouvrez un dépôt distant sur lequel vous avez les permissions de faire des modifications et mettez à jour certains fichiers. Ensuite, essayez de créer une nouvelle branche avec vos modifications et faites une Pull Request.
 
-<!----
-## Quiz après la leçon
-[Quiz après la leçon](https://ff-quizzes.netlify.app/web/quiz/4)
----->
-
-## Révision & Auto-apprentissage
+## Révision & Étude personnelle
 
 Lisez-en davantage sur [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) et certaines de ses autres fonctionnalités.
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

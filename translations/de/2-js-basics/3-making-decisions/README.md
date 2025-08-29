@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "888609c48329c280ca2477d2df40f2e5",
-  "translation_date": "2025-08-24T12:13:08+00:00",
+  "original_hash": "f7009631b73556168ca435120a231c98",
+  "translation_date": "2025-08-29T14:13:36+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "de"
 }
 -->
 # JavaScript-Grundlagen: Entscheidungen treffen
 
-![JavaScript Basics - Entscheidungen treffen](../../../../sketchnotes/webdev101-js-decisions.png)
+![JavaScript-Grundlagen - Entscheidungen treffen](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.de.png)
 
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Entscheidungen zu treffen und die Reihenfolge zu kontrollieren, in der dein Code ausgeführt wird, macht deinen Code wiederverwendbar und robust. In diesem Abschnitt geht es um die Syntax zur Steuerung des Datenflusses in JavaScript und deren Bedeutung im Zusammenhang mit Booleschen Datentypen.
+Entscheidungen zu treffen und die Reihenfolge zu steuern, in der dein Code ausgeführt wird, macht deinen Code wiederverwendbar und robust. In diesem Abschnitt geht es um die Syntax zur Steuerung des Datenflusses in JavaScript und deren Bedeutung im Zusammenhang mit Booleschen Datentypen.
 
 [![Entscheidungen treffen](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Entscheidungen treffen")
 
@@ -42,18 +42,18 @@ Operatoren werden verwendet, um Bedingungen zu bewerten, indem sie Vergleiche an
 
 | Symbol | Beschreibung                                                                                                                                                   | Beispiel           |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`    | **Kleiner als**: Vergleicht zwei Werte und gibt den Booleschen Wert `true` zurück, wenn der Wert auf der linken Seite kleiner ist als der auf der rechten Seite | `5 < 6 // true`    |
+| `<`    | **Kleiner als**: Vergleicht zwei Werte und gibt den Booleschen Wert `true` zurück, wenn der Wert auf der linken Seite kleiner als der auf der rechten Seite ist | `5 < 6 // true`    |
 | `<=`   | **Kleiner oder gleich**: Vergleicht zwei Werte und gibt den Booleschen Wert `true` zurück, wenn der Wert auf der linken Seite kleiner oder gleich dem auf der rechten Seite ist | `5 <= 6 // true`   |
-| `>`    | **Größer als**: Vergleicht zwei Werte und gibt den Booleschen Wert `true` zurück, wenn der Wert auf der linken Seite größer ist als der auf der rechten Seite   | `5 > 6 // false`   |
+| `>`    | **Größer als**: Vergleicht zwei Werte und gibt den Booleschen Wert `true` zurück, wenn der Wert auf der linken Seite größer als der auf der rechten Seite ist   | `5 > 6 // false`   |
 | `>=`   | **Größer oder gleich**: Vergleicht zwei Werte und gibt den Booleschen Wert `true` zurück, wenn der Wert auf der linken Seite größer oder gleich dem auf der rechten Seite ist | `5 >= 6 // false`  |
 | `===`  | **Strikte Gleichheit**: Vergleicht zwei Werte und gibt den Booleschen Wert `true` zurück, wenn die Werte auf der rechten und linken Seite gleich sind UND denselben Datentyp haben | `5 === 6 // false` |
 | `!==`  | **Ungleichheit**: Vergleicht zwei Werte und gibt den entgegengesetzten Booleschen Wert zurück, den ein strikter Gleichheitsoperator zurückgeben würde           | `5 !== 6 // true`  |
 
-✅ Überprüfe dein Wissen, indem du einige Vergleiche in der Konsole deines Browsers schreibst. Überrascht dich irgendein zurückgegebener Wert?
+✅ Überprüfe dein Wissen, indem du einige Vergleiche in der Konsole deines Browsers schreibst. Gibt es Ergebnisse, die dich überraschen?
 
 ## If-Anweisung
 
-Die If-Anweisung führt den Code innerhalb ihrer Blöcke aus, wenn die Bedingung wahr ist.
+Die If-Anweisung führt den Code zwischen ihren Blöcken aus, wenn die Bedingung wahr ist.
 
 ```javascript
 if (condition) {
@@ -75,7 +75,7 @@ if (currentMoney >= laptopPrice) {
 
 ## If..Else-Anweisung
 
-Die `else`-Anweisung führt den Code innerhalb ihrer Blöcke aus, wenn die Bedingung falsch ist. Sie ist optional bei einer `if`-Anweisung.
+Die `else`-Anweisung führt den Code zwischen ihren Blöcken aus, wenn die Bedingung falsch ist. Sie ist optional bei einer `if`-Anweisung.
 
 ```javascript
 let currentMoney;
@@ -90,11 +90,11 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-✅ Teste dein Verständnis dieses Codes und des folgenden Codes, indem du ihn in einer Browser-Konsole ausführst. Ändere die Werte der Variablen `currentMoney` und `laptopPrice`, um die zurückgegebenen `console.log()`-Ausgaben zu ändern.
+✅ Teste dein Verständnis dieses Codes und des folgenden Codes, indem du ihn in einer Browser-Konsole ausführst. Ändere die Werte der Variablen `currentMoney` und `laptopPrice`, um die Ausgabe von `console.log()` zu ändern.
 
 ## Switch-Anweisung
 
-Die `switch`-Anweisung wird verwendet, um verschiedene Aktionen basierend auf unterschiedlichen Bedingungen auszuführen. Mit der `switch`-Anweisung kannst du einen von vielen Codeblöcken auswählen, die ausgeführt werden sollen.
+Die `switch`-Anweisung wird verwendet, um verschiedene Aktionen basierend auf unterschiedlichen Bedingungen auszuführen. Verwende die `switch`-Anweisung, um einen von vielen Codeblöcken auszuwählen, die ausgeführt werden sollen.
 
 ```javascript
 switch (expression) {
@@ -127,7 +127,7 @@ switch (a) {
 console.log(`The value is ${a}`);
 ```
 
-✅ Teste dein Verständnis dieses Codes und des folgenden Codes, indem du ihn in einer Browser-Konsole ausführst. Ändere die Werte der Variablen `a`, um die zurückgegebenen `console.log()`-Ausgaben zu ändern.
+✅ Teste dein Verständnis dieses Codes und des folgenden Codes, indem du ihn in einer Browser-Konsole ausführst. Ändere die Werte der Variablen `a`, um die Ausgabe von `console.log()` zu ändern.
 
 ## Logische Operatoren und Boolesche Werte
 
@@ -135,8 +135,8 @@ Entscheidungen können mehr als einen Vergleich erfordern und können mit logisc
 
 | Symbol | Beschreibung                                                                                     | Beispiel                                                                 |
 | ------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **Logisches UND**: Vergleicht zwei Boolesche Ausdrücke. Gibt true **nur** zurück, wenn beide Seiten wahr sind | `(5 > 6) && (5 < 6 ) //Eine Seite ist falsch, die andere ist wahr. Gibt false zurück` |
-| `\|\|` | **Logisches ODER**: Vergleicht zwei Boolesche Ausdrücke. Gibt true zurück, wenn mindestens eine Seite wahr ist | `(5 > 6) \|\| (5 < 6) //Eine Seite ist falsch, die andere ist wahr. Gibt true zurück` |
+| `&&`   | **Logisches UND**: Vergleicht zwei Boolesche Ausdrücke. Gibt `true` **nur** zurück, wenn beide Seiten wahr sind | `(5 > 6) && (5 < 6 ) //Eine Seite ist falsch, die andere ist wahr. Gibt false zurück` |
+| `\|\|` | **Logisches ODER**: Vergleicht zwei Boolesche Ausdrücke. Gibt `true` zurück, wenn mindestens eine Seite wahr ist | `(5 > 6) \|\| (5 < 6) //Eine Seite ist falsch, die andere ist wahr. Gibt true zurück` |
 | `!`    | **Logisches NICHT**: Gibt den entgegengesetzten Wert eines Booleschen Ausdrucks zurück            | `!(5 > 6) // 5 ist nicht größer als 6, aber "!" gibt true zurück`       |
 
 ## Bedingungen und Entscheidungen mit logischen Operatoren
@@ -159,7 +159,7 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 
 ### Negationsoperator
 
-Du hast bisher gesehen, wie du eine `if...else`-Anweisung verwenden kannst, um bedingte Logik zu erstellen. Alles, was in ein `if` kommt, muss zu true/false ausgewertet werden. Mit dem `!`-Operator kannst du den Ausdruck _negieren_. Es würde so aussehen:
+Du hast bisher gesehen, wie du eine `if...else`-Anweisung verwenden kannst, um bedingte Logik zu erstellen. Alles, was in ein `if` kommt, muss zu true oder false ausgewertet werden. Mit dem `!`-Operator kannst du den Ausdruck _negieren_. Das würde so aussehen:
 
 ```javascript
 if (!condition) {
@@ -177,7 +177,7 @@ if (!condition) {
 let variable = condition ? <return this if true> : <return this if false>
 ```
 
-Unten ist ein greifbareres Beispiel:
+Hier ist ein greifbareres Beispiel:
 
 ```javascript
 let firstNumber = 20;
@@ -187,10 +187,10 @@ let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 
 ✅ Nimm dir eine Minute Zeit, um diesen Code ein paar Mal zu lesen. Verstehst du, wie diese Operatoren funktionieren?
 
-Das oben Gesagte bedeutet:
+Das obige Beispiel besagt:
 
-- Wenn `firstNumber` größer ist als `secondNumber`
-- dann weise `firstNumber` der Variablen `biggestNumber` zu
+- Wenn `firstNumber` größer als `secondNumber` ist,  
+- dann weise `firstNumber` der Variablen `biggestNumber` zu,  
 - andernfalls weise `secondNumber` zu.
 
 Der ternäre Ausdruck ist nur eine kompakte Art, den folgenden Code zu schreiben:
@@ -216,9 +216,9 @@ Erstelle ein Programm, das zuerst mit logischen Operatoren geschrieben wird und 
 
 [Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/12)
 
-## Überprüfung & Selbststudium
+## Wiederholung & Selbststudium
 
-Lies mehr über die vielen Operatoren, die dem Benutzer zur Verfügung stehen, [auf MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
+Lies mehr über die vielen verfügbaren Operatoren [auf MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
 Schau dir Josh Comeaus großartige [Operator-Übersicht](https://joshwcomeau.com/operator-lookup/) an!
 
@@ -226,5 +226,7 @@ Schau dir Josh Comeaus großartige [Operator-Übersicht](https://joshwcomeau.com
 
 [Operatoren](assignment.md)
 
+---
+
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

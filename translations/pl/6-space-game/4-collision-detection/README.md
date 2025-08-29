@@ -1,40 +1,40 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-24T12:37:24+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T16:30:32+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "pl"
 }
 -->
-# Budowanie gry kosmicznej, część 4: Dodawanie lasera i wykrywanie kolizji
+# Stwórz grę kosmiczną, część 4: Dodawanie lasera i wykrywanie kolizji
 
-## Quiz przed lekcją
+## Quiz przed wykładem
 
-[Quiz przed lekcją](https://ff-quizzes.netlify.app/web/quiz/35)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/35)
 
-W tej lekcji nauczysz się strzelać laserami za pomocą JavaScriptu! Dodamy dwie rzeczy do naszej gry:
+W tej lekcji nauczysz się, jak strzelać laserami za pomocą JavaScript! Dodamy dwie rzeczy do naszej gry:
 
-- **Laser**: laser wystrzeliwany z statku bohatera, poruszający się pionowo w górę
+- **Laser**: laser wystrzeliwany z Twojego statku bohatera, poruszający się pionowo w górę
 - **Wykrywanie kolizji**, jako część implementacji możliwości *strzelania*, dodamy również kilka zasad gry:
-   - **Laser trafia w przeciwnika**: Przeciwnik ginie, jeśli zostanie trafiony laserem
-   - **Laser trafia w górną część ekranu**: Laser zostaje zniszczony, jeśli trafi w górną część ekranu
-   - **Kolizja przeciwnika z bohaterem**: Przeciwnik i bohater giną, jeśli zderzą się ze sobą
-   - **Przeciwnik trafia w dolną część ekranu**: Przeciwnik i bohater giną, jeśli przeciwnik dotrze do dolnej części ekranu
+   - **Laser trafia wroga**: Wróg ginie, jeśli zostanie trafiony laserem
+   - **Laser trafia górną część ekranu**: Laser zostaje zniszczony, jeśli uderzy w górną część ekranu
+   - **Kolizja wroga i bohatera**: Wróg i bohater zostają zniszczeni, jeśli się zderzą
+   - **Wróg trafia dolną część ekranu**: Wróg i bohater zostają zniszczeni, jeśli wróg dotrze do dolnej części ekranu
 
-Krótko mówiąc, Ty -- *bohater* -- musisz zestrzelić wszystkich przeciwników laserem, zanim dotrą do dolnej części ekranu.
+Krótko mówiąc, Ty -- *bohater* -- musisz trafić wszystkich wrogów laserem, zanim uda im się dotrzeć do dolnej części ekranu.
 
-✅ Zrób małe badania na temat pierwszej gry komputerowej, jaka kiedykolwiek została napisana. Jakie miała funkcje?
+✅ Poszukaj informacji o pierwszej grze komputerowej, jaka kiedykolwiek powstała. Jakie miała funkcje?
 
-Bądźmy razem bohaterami!
+Bądźmy bohaterami razem!
 
 ## Wykrywanie kolizji
 
-Jak wykrywać kolizje? Musimy traktować nasze obiekty w grze jako poruszające się prostokąty. Dlaczego? Ponieważ obraz używany do rysowania obiektu gry to prostokąt: ma `x`, `y`, `szerokość` i `wysokość`.
+Jak wykrywać kolizje? Musimy traktować nasze obiekty w grze jako prostokąty poruszające się po ekranie. Dlaczego? Ponieważ obraz używany do rysowania obiektu w grze to prostokąt: ma `x`, `y`, `szerokość` i `wysokość`.
 
-Jeśli dwa prostokąty, np. bohater i przeciwnik, *przecinają się*, mamy kolizję. Co powinno się wtedy wydarzyć, zależy od zasad gry. Aby zaimplementować wykrywanie kolizji, potrzebujesz:
+Jeśli dwa prostokąty, np. bohater i wróg, *przecinają się*, mamy kolizję. Co powinno się wtedy wydarzyć, zależy od zasad gry. Aby zaimplementować wykrywanie kolizji, potrzebujesz:
 
-1. Sposobu na uzyskanie reprezentacji prostokąta obiektu gry, coś takiego:
+1. Sposobu na uzyskanie reprezentacji prostokąta dla obiektu w grze, coś takiego:
 
    ```javascript
    rectFromGameObject() {
@@ -60,14 +60,14 @@ Jeśli dwa prostokąty, np. bohater i przeciwnik, *przecinają się*, mamy koliz
 
 ## Jak niszczyć obiekty
 
-Aby niszczyć obiekty w grze, musisz poinformować grę, że nie powinna już rysować tego elementu w pętli gry, która uruchamia się w określonych odstępach czasu. Można to zrobić, oznaczając obiekt gry jako *martwy*, gdy coś się wydarzy, na przykład tak:
+Aby niszczyć obiekty w grze, musisz poinformować grę, że nie powinna już rysować tego elementu w pętli gry, która uruchamia się w określonych odstępach czasu. Można to zrobić, oznaczając obiekt w grze jako *martwy*, gdy coś się wydarzy, na przykład:
 
 ```javascript
 // collision happened
 enemy.dead = true
 ```
 
-Następnie możesz przefiltrować *martwe* obiekty przed ponownym narysowaniem ekranu, na przykład tak:
+Następnie możesz usunąć *martwe* obiekty przed ponownym rysowaniem ekranu, na przykład:
 
 ```javascript
 gameObjects = gameObject.filter(go => !go.dead);
@@ -75,15 +75,15 @@ gameObjects = gameObject.filter(go => !go.dead);
 
 ## Jak wystrzelić laser
 
-Wystrzelenie lasera oznacza reakcję na zdarzenie klawisza i stworzenie obiektu, który porusza się w określonym kierunku. Musimy wykonać następujące kroki:
+Wystrzelenie lasera oznacza reakcję na zdarzenie klawisza i utworzenie obiektu, który porusza się w określonym kierunku. Musimy zatem wykonać następujące kroki:
 
-1. **Stworzyć obiekt lasera**: z górnej części statku bohatera, który po utworzeniu zaczyna poruszać się w górę, w kierunku górnej części ekranu.
-2. **Podłączyć kod do zdarzenia klawisza**: musimy wybrać klawisz na klawiaturze, który będzie reprezentował strzał laserem przez gracza.
-3. **Stworzyć obiekt gry, który wygląda jak laser**, gdy klawisz zostanie naciśnięty.
+1. **Utwórz obiekt lasera**: zaczynając od górnej części statku bohatera, który po utworzeniu zaczyna poruszać się w górę w kierunku górnej części ekranu.
+2. **Podłącz kod do zdarzenia klawisza**: musimy wybrać klawisz na klawiaturze, który będzie reprezentował strzał lasera przez gracza.
+3. **Utwórz obiekt gry, który wygląda jak laser**, gdy klawisz zostanie naciśnięty.
 
 ## Czas odnowienia lasera
 
-Laser musi być wystrzeliwany za każdym razem, gdy naciśniesz klawisz, na przykład *spację*. Aby zapobiec generowaniu zbyt wielu laserów w krótkim czasie, musimy to naprawić. Rozwiązaniem jest zaimplementowanie tzw. *czasu odnowienia*, czyli timera, który zapewnia, że laser może być wystrzeliwany tylko co jakiś czas. Możesz to zaimplementować w następujący sposób:
+Laser musi być wystrzeliwany za każdym razem, gdy naciśniesz klawisz, na przykład *spację*. Aby zapobiec tworzeniu zbyt wielu laserów w krótkim czasie, musimy to naprawić. Rozwiązaniem jest zaimplementowanie tzw. *czasu odnowienia* (cooldown), czyli timera, który zapewnia, że laser może być wystrzeliwany tylko co jakiś czas. Możesz to zaimplementować w następujący sposób:
 
 ```javascript
 class Cooldown {
@@ -109,23 +109,23 @@ class Weapon {
 }
 ```
 
-✅ Przypomnij sobie lekcję 1 z serii o grze kosmicznej, aby przypomnieć sobie, czym jest *czas odnowienia*.
+✅ Przypomnij sobie lekcję 1 z serii o grze kosmicznej, aby przypomnieć sobie, czym jest *cooldown*.
 
 ## Co zbudować
 
-Weźmiesz istniejący kod (który powinieneś już uporządkować i zrefaktoryzować) z poprzedniej lekcji i rozszerzysz go. Możesz zacząć od kodu z części II lub użyć kodu z [Część III - starter](../../../../../../../../../your-work).
+Weź istniejący kod (który powinieneś już uporządkować i zrefaktoryzować) z poprzedniej lekcji i rozbuduj go. Możesz zacząć od kodu z części II lub użyć kodu z [Części III - starter](../../../../../../../../../your-work).
 
-> wskazówka: laser, nad którym będziesz pracować, znajduje się już w folderze z zasobami i jest referencjonowany przez Twój kod
+> wskazówka: laser, z którym będziesz pracować, znajduje się już w Twoim folderze z zasobami i jest odwoływany w Twoim kodzie
 
 - **Dodaj wykrywanie kolizji**, gdy laser zderzy się z czymś, powinny obowiązywać następujące zasady:
-   1. **Laser trafia w przeciwnika**: przeciwnik ginie, jeśli zostanie trafiony laserem
-   2. **Laser trafia w górną część ekranu**: laser zostaje zniszczony, jeśli trafi w górną część ekranu
-   3. **Kolizja przeciwnika z bohaterem**: przeciwnik i bohater giną, jeśli zderzą się ze sobą
-   4. **Przeciwnik trafia w dolną część ekranu**: przeciwnik i bohater giną, jeśli przeciwnik dotrze do dolnej części ekranu
+   1. **Laser trafia wroga**: wróg ginie, jeśli zostanie trafiony laserem
+   2. **Laser trafia górną część ekranu**: laser zostaje zniszczony, jeśli uderzy w górną część ekranu
+   3. **Kolizja wroga i bohatera**: wróg i bohater zostają zniszczeni, jeśli się zderzą
+   4. **Wróg trafia dolną część ekranu**: wróg i bohater zostają zniszczeni, jeśli wróg dotrze do dolnej części ekranu
 
 ## Zalecane kroki
 
-Znajdź pliki, które zostały dla Ciebie utworzone w podfolderze `your-work`. Powinny zawierać:
+Zlokalizuj pliki, które zostały dla Ciebie utworzone w podfolderze `your-work`. Powinny zawierać:
 
 ```bash
 -| assets
@@ -137,18 +137,18 @@ Znajdź pliki, które zostały dla Ciebie utworzone w podfolderze `your-work`. P
 -| package.json
 ```
 
-Rozpocznij swój projekt w folderze `your_work`, wpisując:
+Rozpocznij projekt w folderze `your_work`, wpisując:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz przeglądarkę i wpisz ten adres, obecnie powinien renderować bohatera i wszystkich przeciwników, nic się jeszcze nie porusza :).
+Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz przeglądarkę i wpisz ten adres, obecnie powinien wyświetlać bohatera i wszystkich wrogów, ale nic się jeszcze nie porusza :).
 
 ### Dodaj kod
 
-1. **Ustaw reprezentację prostokąta dla swojego obiektu gry, aby obsłużyć kolizję**. Poniższy kod pozwala uzyskać reprezentację prostokąta dla `GameObject`. Edytuj klasę GameObject, aby ją rozszerzyć:
+1. **Utwórz reprezentację prostokąta dla obiektu gry, aby obsłużyć kolizje**. Poniższy kod pozwala uzyskać reprezentację prostokąta dla `GameObject`. Edytuj klasę GameObject, aby ją rozszerzyć:
 
     ```javascript
     rectFromGameObject() {
@@ -161,7 +161,7 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
       }
     ```
 
-2. **Dodaj kod sprawdzający kolizję**. To będzie nowa funkcja testująca, czy dwa prostokąty się przecinają:
+2. **Dodaj kod sprawdzający kolizje**. Będzie to nowa funkcja testująca, czy dwa prostokąty się przecinają:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -183,7 +183,7 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
         COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
        ```
 
-   1. **Obsłuż klawisz spacji**. Edytuj funkcję `window.addEventListener` dla zdarzenia keyup, aby obsłużyć spację:
+   1. **Obsłuż klawisz spacji**. Edytuj funkcję `window.addEventListener` dla zdarzenia keyup, aby obsługiwała spację:
 
       ```javascript
         } else if(evt.keyCode === 32) {
@@ -191,7 +191,7 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
         }
       ```
 
-    1. **Dodaj nasłuchy**. Edytuj funkcję `initGame()`, aby upewnić się, że bohater może strzelać, gdy naciśnięty zostanie klawisz spacji:
+    1. **Dodaj nasłuchiwacze**. Edytuj funkcję `initGame()`, aby upewnić się, że bohater może strzelać, gdy naciśnięty zostanie klawisz spacji:
 
        ```javascript
        eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
@@ -200,7 +200,7 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
         }
        ```
 
-       i dodaj nową funkcję `eventEmitter.on()`, aby zapewnić odpowiednie zachowanie, gdy przeciwnik zderzy się z laserem:
+       oraz dodaj nową funkcję `eventEmitter.on()`, aby zapewnić odpowiednie zachowanie, gdy wróg zderzy się z laserem:
 
           ```javascript
           eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -209,8 +209,8 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
           })
           ```
 
-   1. **Porusz obiektem**, Upewnij się, że laser stopniowo porusza się w górę ekranu. Stworzysz nową klasę Laser, która rozszerza `GameObject`, tak jak wcześniej: 
-   
+   1. **Porusz obiektem**, Upewnij się, że laser stopniowo przesuwa się w górę ekranu. Utworzysz nową klasę Laser, która rozszerza `GameObject`, jak wcześniej:
+
       ```javascript
         class Laser extends GameObject {
         constructor(x, y) {
@@ -230,7 +230,7 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
       }
       ```
 
-   1. **Obsłuż kolizje**, Zaimplementuj zasady kolizji dla lasera. Dodaj funkcję `updateGameObjects()`, która testuje zderzające się obiekty pod kątem trafień:
+   1. **Obsłuż kolizje**, Zaimplementuj zasady kolizji dla lasera. Dodaj funkcję `updateGameObjects()`, która testuje kolidujące obiekty:
 
       ```javascript
       function updateGameObjects() {
@@ -252,11 +252,11 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
       }  
       ```
 
-      Upewnij się, że dodasz `updateGameObjects()` do swojej pętli gry w `window.onload`.
+      Upewnij się, że dodałeś `updateGameObjects()` do swojej pętli gry w `window.onload`.
 
-   4. **Zaimplementuj czas odnowienia** dla lasera, aby mógł być wystrzeliwany tylko co jakiś czas.
+   4. **Zaimplementuj cooldown** dla lasera, aby mógł być wystrzeliwany tylko co jakiś czas.
 
-      Na koniec edytuj klasę Hero, aby mogła obsłużyć czas odnowienia:
+      Na koniec edytuj klasę Hero, aby mogła obsługiwać cooldown:
 
        ```javascript
       class Hero extends GameObject {
@@ -285,7 +285,7 @@ Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz prze
       }
       ```
 
-Na tym etapie Twoja gra ma już pewną funkcjonalność! Możesz poruszać się za pomocą klawiszy strzałek, strzelać laserem za pomocą klawisza spacji, a przeciwnicy znikają, gdy ich trafisz. Brawo!
+Na tym etapie Twoja gra ma już pewną funkcjonalność! Możesz poruszać się za pomocą klawiszy strzałek, strzelać laserem za pomocą spacji, a wrogowie znikają, gdy ich trafisz. Brawo!
 
 ---
 
@@ -293,9 +293,9 @@ Na tym etapie Twoja gra ma już pewną funkcjonalność! Możesz poruszać się 
 
 Dodaj eksplozję! Sprawdź zasoby gry w [repozytorium Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) i spróbuj dodać eksplozję, gdy laser trafi w obcego.
 
-## Quiz po lekcji
+## Quiz po wykładzie
 
-[Quiz po lekcji](https://ff-quizzes.netlify.app/web/quiz/36)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Przegląd i samodzielna nauka
 
@@ -305,5 +305,7 @@ Eksperymentuj z interwałami w swojej grze. Co się stanie, gdy je zmienisz? Prz
 
 [Zbadaj kolizje](assignment.md)
 
+---
+
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-24T12:21:59+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T14:13:58+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "de"
 }
 -->
-# JavaScript Grundlagen: Datentypen
+# JavaScript-Grundlagen: Datentypen
 
-![JavaScript Grundlagen - Datentypen](../../../../sketchnotes/webdev101-js-datatypes.png)
+![JavaScript-Grundlagen - Datentypen](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c756480d3ffa46507f746e5975ebf80f99fdaaf1cff09a7f4.de.png)
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz vor der Lektion
-[Quiz vor der Lektion](https://ff-quizzes.netlify.app/web/quiz/7)
+[Quiz vor der Lektion](https://ff-quizzes.netlify.app/web/)
 
 Diese Lektion behandelt die Grundlagen von JavaScript, der Sprache, die Interaktivität im Web ermöglicht.
 
@@ -35,7 +35,7 @@ Das Erstellen und **Deklarieren** einer Variablen hat die folgende Syntax **[Sch
 
 - **Schlüsselwort**. Schlüsselwörter können `let` oder `var` sein.  
 
-✅ Das Schlüsselwort `let` wurde in ES6 eingeführt und gibt deiner Variablen einen sogenannten _Block Scope_. Es wird empfohlen, `let` anstelle von `var` zu verwenden. Wir werden Block Scopes später ausführlicher behandeln.
+✅ Das Schlüsselwort `let` wurde in ES6 eingeführt und gibt deiner Variablen einen sogenannten _Block Scope_. Es wird empfohlen, `let` anstelle von `var` zu verwenden. Wir werden Block Scopes in späteren Teilen ausführlicher behandeln.
 - **Der Variablenname**, den du selbst auswählst.
 
 ### Aufgabe - Arbeiten mit Variablen
@@ -84,7 +84,7 @@ Die Deklaration und Initialisierung einer Konstante folgt denselben Konzepten wi
 const MY_VARIABLE = 123;
 ```
 
-Konstanten sind ähnlich wie Variablen, mit zwei Ausnahmen:
+Konstanten ähneln Variablen, mit zwei Ausnahmen:
 
 - **Muss einen Wert haben**. Konstanten müssen initialisiert werden, sonst tritt ein Fehler auf, wenn der Code ausgeführt wird.
 - **Referenz kann nicht geändert werden**. Die Referenz einer Konstante kann nach der Initialisierung nicht geändert werden, sonst tritt ein Fehler auf, wenn der Code ausgeführt wird. Schauen wir uns zwei Beispiele an:
@@ -115,7 +115,7 @@ Konstanten sind ähnlich wie Variablen, mit zwei Ausnahmen:
 
 ## Datentypen
 
-Variablen können viele verschiedene Arten von Werten speichern, wie Zahlen und Text. Diese verschiedenen Arten von Werten werden als **Datentyp** bezeichnet. Datentypen sind ein wichtiger Bestandteil der Softwareentwicklung, da sie Entwicklern helfen, Entscheidungen darüber zu treffen, wie der Code geschrieben und wie die Software ausgeführt werden soll. Darüber hinaus haben einige Datentypen einzigartige Eigenschaften, die helfen, zusätzliche Informationen aus einem Wert zu extrahieren oder ihn zu transformieren.
+Variablen können viele verschiedene Arten von Werten speichern, wie Zahlen und Text. Diese verschiedenen Arten von Werten werden als **Datentypen** bezeichnet. Datentypen sind ein wichtiger Bestandteil der Softwareentwicklung, da sie Entwicklern helfen, Entscheidungen darüber zu treffen, wie der Code geschrieben und wie die Software ausgeführt werden soll. Darüber hinaus haben einige Datentypen einzigartige Eigenschaften, die helfen, zusätzliche Informationen in einem Wert zu transformieren oder zu extrahieren.
 
 ✅ Datentypen werden auch als JavaScript-Datenprimitiven bezeichnet, da sie die niedrigsten Datentypen sind, die von der Sprache bereitgestellt werden. Es gibt 7 primitive Datentypen: string, number, bigint, boolean, undefined, null und symbol. Nimm dir einen Moment Zeit, um dir vorzustellen, was jeder dieser Primitiven darstellen könnte. Was ist ein `zebra`? Wie wäre es mit `0`? `true`?
 
@@ -131,13 +131,13 @@ Variablen können alle Arten von Zahlen speichern, einschließlich Dezimalzahlen
 
 Es gibt verschiedene Arten von Operatoren, die bei der Durchführung arithmetischer Funktionen verwendet werden können, und einige sind hier aufgeführt:
 
-| Symbol | Beschreibung                                                              | Beispiel                          |
-| ------ | ------------------------------------------------------------------------ | -------------------------------- |
-| `+`    | **Addition**: Berechnet die Summe von zwei Zahlen                        | `1 + 2 //erwartete Antwort ist 3`   |
-| `-`    | **Subtraktion**: Berechnet die Differenz von zwei Zahlen                 | `1 - 2 //erwartete Antwort ist -1`  |
-| `*`    | **Multiplikation**: Berechnet das Produkt von zwei Zahlen                | `1 * 2 //erwartete Antwort ist 2`   |
-| `/`    | **Division**: Berechnet den Quotienten von zwei Zahlen                   | `1 / 2 //erwartete Antwort ist 0.5` |
-| `%`    | **Rest**: Berechnet den Rest der Division von zwei Zahlen                | `1 % 2 //erwartete Antwort ist 1`   |
+| Symbol | Beschreibung                                                             | Beispiel                          |
+| ------ | ------------------------------------------------------------------------ | --------------------------------- |
+| `+`    | **Addition**: Berechnet die Summe von zwei Zahlen                        | `1 + 2 //erwartete Antwort ist 3` |
+| `-`    | **Subtraktion**: Berechnet die Differenz von zwei Zahlen                 | `1 - 2 //erwartete Antwort ist -1`|
+| `*`    | **Multiplikation**: Berechnet das Produkt von zwei Zahlen                | `1 * 2 //erwartete Antwort ist 2` |
+| `/`    | **Division**: Berechnet den Quotienten von zwei Zahlen                   | `1 / 2 //erwartete Antwort ist 0.5`|
+| `%`    | **Rest**: Berechnet den Rest der Division von zwei Zahlen                | `1 % 2 //erwartete Antwort ist 1` |
 
 ✅ Probier es aus! Probiere eine arithmetische Operation in der Konsole deines Browsers aus. Überraschen dich die Ergebnisse?
 
@@ -155,7 +155,7 @@ Denke daran, Anführungszeichen zu verwenden, wenn du einen String schreibst, so
 
 Strings sind textuell und müssen von Zeit zu Zeit formatiert werden.
 
-Um zwei oder mehr Strings zu **konkatenieren**, also zusammenzufügen, verwende den `+`-Operator.
+Um zwei oder mehr Strings zu **konkatenieren** oder zusammenzufügen, verwende den `+`-Operator.
 
 ```javascript
 let myString1 = "Hello";
@@ -169,7 +169,7 @@ myString1 + ", " + myString2 + "!"; //Hello, World!
 
 ✅ Warum ergibt `1 + 1 = 2` in JavaScript, aber `'1' + '1' = 11`? Denk darüber nach. Was ist mit `'1' + 1`?
 
-**Template Literals** sind eine andere Möglichkeit, Strings zu formatieren. Statt Anführungszeichen wird hier das Backtick verwendet. Alles, was kein reiner Text ist, muss in Platzhalter `${ }` gesetzt werden. Dazu gehören auch Variablen, die Strings sein können.
+**Template Literals** sind eine andere Möglichkeit, Strings zu formatieren, außer dass anstelle von Anführungszeichen der Backtick verwendet wird. Alles, was kein reiner Text ist, muss in Platzhalter `${ }` gesetzt werden. Dazu gehören auch Variablen, die Strings sein können.
 
 ```javascript
 let myString1 = "Hello";
@@ -185,23 +185,23 @@ Du kannst deine Formatierungsziele mit beiden Methoden erreichen, aber Template 
 
 ### Booleans
 
-Booleans können nur zwei Werte haben: `true` oder `false`. Booleans können helfen, Entscheidungen darüber zu treffen, welche Codezeilen ausgeführt werden sollen, wenn bestimmte Bedingungen erfüllt sind. In vielen Fällen helfen [Operatoren](../../../../2-js-basics/1-data-types) dabei, den Wert eines Booleans festzulegen, und du wirst oft Variablen bemerken und schreiben, die initialisiert werden oder deren Werte mit einem Operator aktualisiert werden.
+Booleans können nur zwei Werte haben: `true` oder `false`. Booleans können helfen, Entscheidungen darüber zu treffen, welche Codezeilen ausgeführt werden sollen, wenn bestimmte Bedingungen erfüllt sind. In vielen Fällen helfen [Operatoren](../../../../2-js-basics/1-data-types) dabei, den Wert eines Booleans festzulegen, und du wirst oft bemerken, dass Variablen initialisiert oder ihre Werte mit einem Operator aktualisiert werden.
 
 - `let myTrueBool = true`
 - `let myFalseBool = false`
 
-✅ Eine Variable kann als 'truthy' betrachtet werden, wenn sie zu einem Boolean `true` ausgewertet wird. Interessanterweise sind in JavaScript [alle Werte truthy, es sei denn, sie sind als falsy definiert](https://developer.mozilla.org/docs/Glossary/Truthy).
+✅ Eine Variable kann als 'truthy' betrachtet werden, wenn sie zu einem Boolean `true` evaluiert. Interessanterweise sind in JavaScript [alle Werte truthy, es sei denn, sie sind als falsy definiert](https://developer.mozilla.org/docs/Glossary/Truthy).
 
 ---
 
 ## 🚀 Herausforderung
 
-JavaScript ist berüchtigt für seine gelegentlich überraschenden Arten, Datentypen zu behandeln. Recherchiere ein wenig über diese 'Fallstricke'. Zum Beispiel: Groß- und Kleinschreibung kann problematisch sein! Probiere dies in deiner Konsole: `let age = 1; let Age = 2; age == Age` (ergibt `false` -- warum?). Welche anderen Fallstricke kannst du finden?
+JavaScript ist berüchtigt für seine überraschenden Arten, Datentypen gelegentlich zu behandeln. Recherchiere ein wenig über diese 'Fallstricke'. Zum Beispiel: Groß- und Kleinschreibung kann problematisch sein! Probiere dies in deiner Konsole: `let age = 1; let Age = 2; age == Age` (ergibt `false` -- warum?). Welche anderen Fallstricke kannst du finden?
 
 ## Quiz nach der Lektion
-[Quiz nach der Lektion](https://ff-quizzes.netlify.app/web/quiz/8)
+[Quiz nach der Lektion](https://ff-quizzes.netlify.app)
 
-## Wiederholung & Selbststudium
+## Überprüfung & Selbststudium
 
 Schau dir [diese Liste von JavaScript-Übungen](https://css-tricks.com/snippets/javascript/) an und probiere eine aus. Was hast du gelernt?
 
@@ -209,5 +209,7 @@ Schau dir [diese Liste von JavaScript-Übungen](https://css-tricks.com/snippets/
 
 [Übung zu Datentypen](assignment.md)
 
+---
+
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

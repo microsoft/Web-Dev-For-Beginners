@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-24T00:08:06+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T13:33:30+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "fr"
 }
@@ -45,7 +45,7 @@ Sur votre ordinateur, créez un dossier nommé `bank` avec un fichier nommé `in
 
 ## Modèles HTML
 
-Si vous souhaitez créer plusieurs écrans pour une page web, une solution serait de créer un fichier HTML pour chaque écran que vous voulez afficher. Cependant, cette solution présente quelques inconvénients :
+Si vous souhaitez créer plusieurs écrans pour une page web, une solution serait de créer un fichier HTML pour chaque écran que vous voulez afficher. Cependant, cette solution présente certains inconvénients :
 
 - Vous devez recharger tout le HTML lors du changement d'écran, ce qui peut être lent.
 - Il est difficile de partager des données entre les différents écrans.
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-Modifions maintenant un peu la fonction `updateRoute`. Au lieu de passer directement l'`templateId` comme argument, nous voulons le récupérer en regardant d'abord l'URL actuelle, puis utiliser notre map pour obtenir la valeur correspondante de l'id du modèle. Nous pouvons utiliser [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) pour obtenir uniquement la section du chemin de l'URL.
+Modifions maintenant un peu la fonction `updateRoute`. Au lieu de passer directement `templateId` comme argument, nous voulons le récupérer en regardant d'abord l'URL actuelle, puis utiliser notre map pour obtenir la valeur de l'id du modèle correspondant. Nous pouvons utiliser [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) pour obtenir uniquement la section du chemin de l'URL.
 
 ```js
 function updateRoute() {
@@ -198,7 +198,7 @@ function updateRoute() {
 }
 ```
 
-Ici, nous avons mappé les routes que nous avons déclarées aux modèles correspondants. Vous pouvez essayer de vérifier que cela fonctionne correctement en modifiant l'URL manuellement dans votre navigateur.
+Ici, nous avons mappé les routes que nous avons déclarées au modèle correspondant. Vous pouvez essayer de vérifier que cela fonctionne correctement en modifiant l'URL manuellement dans votre navigateur.
 
 ✅ Que se passe-t-il si vous entrez un chemin inconnu dans l'URL ? Comment pourrions-nous résoudre cela ?
 
@@ -209,7 +209,7 @@ La prochaine étape pour notre application est d'ajouter la possibilité de navi
 1. Mettre à jour l'URL actuelle
 2. Mettre à jour le modèle affiché en fonction de la nouvelle URL
 
-Nous avons déjà pris en charge la deuxième partie avec la fonction `updateRoute`, donc nous devons trouver comment mettre à jour l'URL actuelle.
+Nous avons déjà pris en charge la deuxième partie avec la fonction `updateRoute`, donc nous devons comprendre comment mettre à jour l'URL actuelle.
 
 Nous devrons utiliser JavaScript et plus précisément [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), qui permet de mettre à jour l'URL et de créer une nouvelle entrée dans l'historique de navigation, sans recharger le HTML.
 
@@ -228,7 +228,7 @@ function navigate(path) {
 
 Cette méthode met d'abord à jour l'URL actuelle en fonction du chemin donné, puis met à jour le modèle. La propriété `window.location.origin` retourne la racine de l'URL, nous permettant de reconstruire une URL complète à partir d'un chemin donné.
 
-Maintenant que nous avons cette fonction, nous pouvons résoudre le problème que nous avons si un chemin ne correspond à aucune route définie. Nous allons modifier la fonction `updateRoute` en ajoutant une solution de repli vers l'une des routes existantes si nous ne trouvons pas de correspondance.
+Maintenant que nous avons cette fonction, nous pouvons résoudre le problème que nous avons si un chemin ne correspond à aucune route définie. Nous allons modifier la fonction `updateRoute` en ajoutant une solution de secours vers l'une des routes existantes si nous ne trouvons pas de correspondance.
 
 ```js
 function updateRoute() {
@@ -271,13 +271,13 @@ Essayez de cliquer sur ces liens, vous devriez maintenant pouvoir naviguer entre
 
 ## Gérer les boutons de retour et d'avance du navigateur
 
-L'utilisation de `history.pushState` crée de nouvelles entrées dans l'historique de navigation du navigateur. Vous pouvez vérifier cela en maintenant le *bouton retour* de votre navigateur, il devrait afficher quelque chose comme ceci :
+L'utilisation de `history.pushState` crée de nouvelles entrées dans l'historique de navigation du navigateur. Vous pouvez vérifier cela en maintenant le bouton *retour* de votre navigateur, il devrait afficher quelque chose comme ceci :
 
-![Capture d'écran de l'historique de navigation](../../../../7-bank-project/1-template-route/history.png)
+![Capture d'écran de l'historique de navigation](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.fr.png)
 
 Si vous essayez de cliquer plusieurs fois sur le bouton retour, vous verrez que l'URL actuelle change et que l'historique est mis à jour, mais le même modèle continue d'être affiché.
 
-C'est parce que l'application ne sait pas que nous devons appeler `updateRoute()` chaque fois que l'historique change. Si vous regardez la [documentation de `history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), vous verrez que si l'état change - c'est-à-dire que nous avons déplacé vers une URL différente - l'événement [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) est déclenché. Nous allons utiliser cela pour corriger ce problème.
+C'est parce que l'application ne sait pas que nous devons appeler `updateRoute()` chaque fois que l'historique change. Si vous consultez la documentation de [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), vous verrez que si l'état change - c'est-à-dire que nous avons déplacé vers une URL différente - l'événement [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) est déclenché. Nous allons utiliser cela pour corriger ce problème.
 
 ### Tâche
 
@@ -288,7 +288,7 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Note : nous avons utilisé une [fonction fléchée](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) ici pour déclarer notre gestionnaire d'événement `popstate` par souci de concision, mais une fonction classique fonctionnerait de la même manière.
+> Note : nous avons utilisé une [fonction fléchée](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) ici pour déclarer notre gestionnaire d'événement `popstate` par souci de concision, mais une fonction régulière fonctionnerait de la même manière.
 
 Voici une vidéo de rappel sur les fonctions fléchées :
 
@@ -316,5 +316,7 @@ Le routage est l'une des parties étonnamment complexes du développement web, s
 
 [Améliorez le routage](assignment.md)
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

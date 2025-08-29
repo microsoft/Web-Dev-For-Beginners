@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-28T11:55:53+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T16:57:32+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "lt"
 }
@@ -11,11 +11,22 @@ CO_OP_TRANSLATOR_METADATA:
 
 _Kaip šaunu būtų, jei darbdavys paprašytų jūsų gyvenimo aprašymo, o jūs jam atsiųstumėte nuorodą?_ 😎
 
+<!----
+TODO: pridėti pasirenkamą paveikslėlį
+![Naudojant kodo redaktorių](../../../../translated_images/webdev101-vscode-dev.f53c14e8dad231ea09d9e07a2db4a01551d2dc6cdf21225038389e11156af023.lt.png)
+> Sketchnote sukūrė [Autoriaus vardas](https://example.com)
+---->
+
+<!---
+## Klausimai prieš paskaitą
+[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/3)
+---->
+
 ## Tikslai
 
 Po šios užduoties jūs išmoksite:
 
-- Sukurti svetainę, kurioje būtų pateiktas jūsų gyvenimo aprašymas
+- Sukurti svetainę, kurioje galėsite pristatyti savo gyvenimo aprašymą
 
 ### Reikalavimai
 
@@ -23,7 +34,7 @@ Po šios užduoties jūs išmoksite:
 
 ## Žingsniai
 
-**1 žingsnis:** Sukurkite naują GitHub saugyklą ir pavadinkite ją `my-resume`.
+**1 žingsnis:** Sukurkite naują GitHub saugyklą ir pavadinkite ją `my-resume`
 
 **2 žingsnis:** Sukurkite `index.html` failą savo saugykloje. Pridėsime bent vieną failą tiesiogiai github.com, nes tuščios saugyklos negalima atidaryti vscode.dev.
 
@@ -33,9 +44,9 @@ Paspauskite nuorodą `creating a new file`, įveskite pavadinimą `index.html` i
 
 **3 žingsnis:** Atidarykite [VSCode.dev](https://vscode.dev) ir pasirinkite mygtuką `Open Remote Repository`.
 
-Nukopijuokite nuorodą į ką tik sukurtą saugyklą ir įklijuokite ją į įvesties laukelį:
+Nukopijuokite nuorodą į saugyklą, kurią ką tik sukūrėte savo gyvenimo aprašymo svetainei, ir įklijuokite ją į įvesties laukelį:
 
-_Pakeiskite `your-username` savo GitHub naudotojo vardu._
+_Pakeiskite `your-username` savo GitHub vartotojo vardu_
 
 ```
 https://github.com/your-username/my-resume
@@ -76,11 +87,11 @@ https://github.com/your-username/my-resume
                             </p>
                             <p>
                                 <i class="fab fa-github" aria-hidden="true"></i>
-                                <a href="github.com/yourGitHubUsername">Įrašykite savo naudotojo vardą čia!</a>
+                                <a href="github.com/yourGitHubUsername">Įrašykite savo vartotojo vardą čia!</a>
                             </p>
                             <p>
                                 <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                <a href="linkedin.com/yourLinkedInUsername">Įrašykite savo naudotojo vardą čia!</a>
+                                <a href="linkedin.com/yourLinkedInUsername">Įrašykite savo vartotojo vardą čia!</a>
                             </p>
                         </section>
                         <section>
@@ -96,7 +107,7 @@ https://github.com/your-username/my-resume
                         <section>
                             <h2>IŠSILAVINIMAS</h2>
                             <!-- jūsų išsilavinimas -->
-                            <h3>Įrašykite savo studijų programą čia!</h3>
+                            <h3>Įrašykite savo kursą čia!</h3>
                             <p>
                                 Įrašykite savo instituciją čia!
                             </p>
@@ -141,9 +152,9 @@ https://github.com/your-username/my-resume
         </html>
 </details>
 
-Pakeiskite _vietos rezervavimo tekstą_ savo gyvenimo aprašymo informacija.
+Pridėkite savo gyvenimo aprašymo detales, pakeisdami _vietos rezervavimo tekstą_ HTML kode.
 
-**5 žingsnis:** Užveskite pelės žymeklį ant My-Resume aplanko, spustelėkite `New File ...` piktogramą ir sukurkite 2 naujus failus savo projekte: `style.css` ir `codeswing.json`.
+**5 žingsnis:** Užveskite pelės žymeklį ant My-Resume aplanko, spustelėkite piktogramą `New File ...` ir sukurkite 2 naujus failus savo projekte: `style.css` ir `codeswing.json`.
 
 **6 žingsnis:** Atidarykite `style.css` failą, įklijuokite žemiau pateiktą kodą ir išsaugokite.
 
@@ -219,17 +230,17 @@ Pakeiskite _vietos rezervavimo tekstą_ savo gyvenimo aprašymo informacija.
 
 **7 žingsnis:** Įdiekite `Codeswing` plėtinį, kad galėtumėte peržiūrėti gyvenimo aprašymo svetainę kodo srityje.
 
-Paspauskite _`Extensions`_ piktogramą veiklos juostoje ir įveskite Codeswing. Spustelėkite _mėlyną įdiegimo mygtuką_ išplėstoje veiklos juostoje arba naudokite įdiegimo mygtuką, kuris pasirodo kodo srityje, kai pasirenkate plėtinį. Iškart po plėtinio įdiegimo stebėkite, kaip jūsų projektas pasikeičia 😃
+Paspauskite _`Extensions`_ piktogramą veiklos juostoje ir įveskite Codeswing. Spustelėkite _mėlyną įdiegimo mygtuką_ išplėstoje veiklos juostoje arba naudokite įdiegimo mygtuką, kuris pasirodo kodo srityje, kai pasirenkate plėtinį, kad įkeltumėte papildomą informaciją. Iškart po plėtinio įdiegimo stebėkite savo kodo sritį, kad pamatytumėte projekto pokyčius 😃.
 
 ![Įdiegti plėtinius](../../../../8-code-editor/images/install-extension.gif)
 
-Štai ką pamatysite savo ekrane po plėtinio įdiegimo.
+Tai, ką pamatysite savo ekrane po plėtinio įdiegimo.
 
-![Codeswing plėtinys veikia](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.lt.png)
+![Codeswing plėtinys veiksme](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.lt.png)
 
 Jei esate patenkinti atliktais pakeitimais, užveskite pelės žymeklį ant `Changes` aplanko ir spustelėkite `+` mygtuką, kad įtrauktumėte pakeitimus.
 
-Įveskite įsipareigojimo pranešimą _(projekto pakeitimų aprašymą)_ ir įsipareigokite pakeitimus spustelėdami `check`. Baigę darbą su projektu, pasirinkite viršutiniame kairiajame kampe esančią meniu piktogramą, kad grįžtumėte į saugyklą GitHub.
+Įveskite įsipareigojimo pranešimą _(projekto pakeitimų aprašymą)_ ir įsipareigokite savo pakeitimus spustelėdami `check`. Baigę darbą su projektu, pasirinkite hamburgerio meniu piktogramą viršutiniame kairiajame kampe, kad grįžtumėte į saugyklą GitHub.
 
 Sveikiname 🎉 Jūs ką tik sukūrėte savo gyvenimo aprašymo svetainę naudodami vscode.dev vos keliais žingsniais.
 
@@ -237,11 +248,16 @@ Sveikiname 🎉 Jūs ką tik sukūrėte savo gyvenimo aprašymo svetainę naudod
 
 Atidarykite nuotolinę saugyklą, kurioje turite leidimus atlikti pakeitimus, ir atnaujinkite kelis failus. Tada pabandykite sukurti naują šaką su savo pakeitimais ir pateikti „Pull Request“.
 
-## Peržiūra ir savarankiškas mokymasis
+<!----
+## Klausimai po paskaitos
+[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/4)
+---->
+
+## Apžvalga ir savarankiškas mokymasis
 
 Skaitykite daugiau apie [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) ir kitas jo funkcijas.
 
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Dėl svarbios informacijos rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.

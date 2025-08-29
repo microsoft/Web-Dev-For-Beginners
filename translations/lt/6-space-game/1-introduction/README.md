@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-28T11:38:41+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T16:52:42+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "lt"
 }
@@ -11,36 +11,36 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![video](../../../../6-space-game/images/pewpew.gif)
 
-## Prieš paskaitą: testas
+## Klausimynas prieš paskaitą
 
-[Prieš paskaitą: testas](https://ff-quizzes.netlify.app/web/quiz/29)
+[Klausimynas prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ### Paveldėjimas ir kompozicija žaidimų kūrime
 
-Ankstesnėse pamokose nebuvo didelio poreikio rūpintis programų architektūra, nes projektai buvo labai nedideli. Tačiau, kai jūsų programos auga ir tampa sudėtingesnės, architektūriniai sprendimai tampa svarbesni. Yra du pagrindiniai būdai kurti didesnes programas JavaScript kalboje: *kompozicija* arba *paveldėjimas*. Abu turi savo privalumų ir trūkumų, tačiau paaiškinkime juos žaidimo kontekste.
+Ankstesnėse pamokose nebuvo didelio poreikio rūpintis programų architektūra, nes projektai buvo labai maži. Tačiau, kai jūsų programos tampa didesnės ir sudėtingesnės, architektūriniai sprendimai tampa svarbesni. Yra du pagrindiniai būdai kurti didesnes programas JavaScript kalba: *kompozicija* arba *paveldėjimas*. Abu metodai turi savo privalumų ir trūkumų, tačiau paaiškinkime juos žaidimo kontekste.
 
-✅ Viena garsiausių programavimo knygų yra susijusi su [projektavimo šablonais](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Viena garsiausių programavimo knygų yra susijusi su [dizaino šablonais](https://en.wikipedia.org/wiki/Design_Patterns).
 
-Žaidime turite `žaidimo objektus`, kurie yra objektai, egzistuojantys ekrane. Tai reiškia, kad jie turi vietą kartėzietinėje koordinačių sistemoje, apibūdinamą `x` ir `y` koordinatėmis. Kurdamas žaidimą pastebėsite, kad visi jūsų žaidimo objektai turi standartines savybes, bendras kiekvienam žaidimui, būtent elementus, kurie yra:
+Žaidime turite `žaidimo objektus`, kurie yra objektai, egzistuojantys ekrane. Tai reiškia, kad jie turi vietą koordinačių sistemoje, apibūdinamą `x` ir `y` koordinatėmis. Kurdami žaidimą pastebėsite, kad visi jūsų žaidimo objektai turi standartines savybes, būdingas kiekvienam žaidimui, būtent elementus, kurie yra:
 
-- **vietos pagrindu** Dauguma, jei ne visi, žaidimo elementai yra vietos pagrindu. Tai reiškia, kad jie turi vietą, `x` ir `y`.
-- **judantys** Tai objektai, kurie gali judėti į naują vietą. Paprastai tai herojus, monstras arba NPC (ne žaidėjo personažas), bet ne, pavyzdžiui, statinis objektas, kaip medis.
-- **sunaikinantys save** Šie objektai egzistuoja tik tam tikrą laiką, kol jie pasiruošia ištrynimui. Paprastai tai yra `dead` arba `destroyed` logine reikšme, kuri signalizuoja žaidimo varikliui, kad šio objekto nebereikia rodyti.
-- **atsinaujinantys** 'Atsinaujinimas' yra tipiška savybė trumpalaikiams objektams. Tipiškas pavyzdys yra tekstas arba grafinis efektas, kaip sprogimas, kuris turėtų būti matomas tik kelias milisekundes.
+- **vietos pagrindu** Dauguma, jei ne visi, žaidimo elementai yra susiję su vieta. Tai reiškia, kad jie turi vietą, `x` ir `y`.
+- **judantys** Tai objektai, kurie gali judėti į naują vietą. Paprastai tai yra herojus, monstras arba NPC (ne žaidėjo veikėjas), bet ne, pavyzdžiui, statiškas objektas, kaip medis.
+- **sunaikinantys save** Šie objektai egzistuoja tik tam tikrą laiką, kol jie pasiruošia būti ištrinti. Paprastai tai atspindi `miręs` arba `sunaikintas` loginis kintamasis, kuris signalizuoja žaidimo varikliui, kad šio objekto nebereikia rodyti.
+- **atsinaujinimo laikas** 'Atsinaujinimo laikas' yra būdinga savybė trumpalaikiams objektams. Tipinis pavyzdys yra teksto ar grafinis efektas, kaip sprogimas, kuris turėtų būti matomas tik kelias milisekundes.
 
-✅ Pagalvokite apie žaidimą Pac-Man. Ar galite identifikuoti keturis aukščiau išvardintus objektų tipus šiame žaidime?
+✅ Pagalvokite apie žaidimą, kaip Pac-Man. Ar galite atpažinti keturis aukščiau išvardytus objektų tipus šiame žaidime?
 
-### Elgesio išreiškimas
+### Elgsenos išreiškimas
 
-Visa tai, ką aprašėme aukščiau, yra elgesys, kurį žaidimo objektai gali turėti. Taigi, kaip mes tai užkoduojame? Šį elgesį galime išreikšti kaip metodus, susijusius su klasėmis arba objektais.
+Visa tai, ką aprašėme aukščiau, yra elgsena, kurią gali turėti žaidimo objektai. Taigi, kaip mes tai užkoduojame? Šią elgseną galime išreikšti kaip metodus, susijusius su klasėmis arba objektais.
 
 **Klasės**
 
-Idėja yra naudoti `klases` kartu su `paveldėjimu`, kad pridėtume tam tikrą elgesį klasei.
+Idėja yra naudoti `klases` kartu su `paveldėjimu`, kad būtų galima pridėti tam tikrą elgseną klasei.
 
 ✅ Paveldėjimas yra svarbi sąvoka, kurią reikia suprasti. Sužinokite daugiau [MDN straipsnyje apie paveldėjimą](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Išreikšta per kodą, žaidimo objektas paprastai gali atrodyti taip:
+Kodu išreikšta, žaidimo objektas paprastai gali atrodyti taip:
 
 ```javascript
 
@@ -88,11 +88,11 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Skirkite kelias minutes, kad įsivaizduotumėte Pac-Man herojų (pavyzdžiui, Inky, Pinky ar Blinky) ir kaip jis būtų parašytas JavaScript kalba.
+✅ Skirkite kelias minutes ir įsivaizduokite Pac-Man herojų (pavyzdžiui, Inky, Pinky ar Blinky) ir kaip jis būtų parašytas JavaScript kalba.
 
 **Kompozicija**
 
-Kitas būdas tvarkyti objektų paveldėjimą yra naudojant *kompoziciją*. Tada objektai išreiškia savo elgesį taip:
+Kitas būdas tvarkyti objektų paveldėjimą yra naudoti *kompoziciją*. Tada objektai išreiškia savo elgseną taip:
 
 ```javascript
 //create a constant gameObject
@@ -139,7 +139,7 @@ const tree = createStatic(0,0, 'Tree');
 
 **Kokį šabloną turėčiau naudoti?**
 
-Pasirinkimas priklauso nuo jūsų. JavaScript palaiko abu šiuos paradigmus.
+Tai priklauso nuo jūsų, kurį šabloną pasirinksite. JavaScript palaiko abu šiuos paradigmus.
 
 --
 
@@ -149,11 +149,11 @@ Kitas šablonas, dažnai naudojamas žaidimų kūrime, sprendžia žaidimo naudo
 
 ✅ Pub/Sub reiškia 'publikuoti-prenumeruoti'
 
-Šis šablonas sprendžia idėją, kad skirtingos jūsų programos dalys neturėtų žinoti viena apie kitą. Kodėl? Tai leidžia lengviau suprasti, kas vyksta apskritai, jei įvairios dalys yra atskirtos. Taip pat lengviau staiga pakeisti elgesį, jei to reikia. Kaip tai pasiekti? Tai darome įgyvendindami keletą sąvokų:
+Šis šablonas sprendžia idėją, kad skirtingos jūsų programos dalys neturėtų žinoti viena apie kitą. Kodėl? Tai leidžia lengviau suprasti, kas vyksta apskritai, jei įvairios dalys yra atskirtos. Taip pat lengviau staiga pakeisti elgseną, jei to prireiktų. Kaip tai pasiekiame? Tai darome įgyvendindami keletą sąvokų:
 
-- **žinutė**: Žinutė paprastai yra tekstinė eilutė, lydima pasirinktinio duomenų paketo (duomenų, kurie paaiškina, apie ką yra žinutė). Tipiška žinutė žaidime gali būti `KEY_PRESSED_ENTER`.
-- **publikuotojas**: Šis elementas *publikuoja* žinutę ir siunčia ją visiems prenumeratoriams.
-- **prenumeratorius**: Šis elementas *klausosi* specifinių žinučių ir atlieka tam tikrą užduotį gavęs šią žinutę, pavyzdžiui, paleidžia lazerį.
+- **pranešimas**: Pranešimas paprastai yra teksto eilutė, kurią lydi neprivalomas turinys (duomenų dalis, paaiškinanti, apie ką yra pranešimas). Tipinis pranešimas žaidime gali būti `KEY_PRESSED_ENTER`.
+- **leidėjas**: Šis elementas *publikuoja* pranešimą ir siunčia jį visiems prenumeratoriams.
+- **prenumeratorius**: Šis elementas *klausosi* konkrečių pranešimų ir atlieka tam tikrą užduotį gavęs šį pranešimą, pavyzdžiui, šaudo lazeriu.
 
 Įgyvendinimas yra gana mažas, tačiau tai labai galingas šablonas. Štai kaip jis gali būti įgyvendintas:
 
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Aukščiau mes sujungiame klaviatūros įvykį, `ArrowLeft`, ir siunčiame `HERO_MOVE_LEFT` žinutę. Mes klausomės tos žinutės ir judiname `herojų` kaip rezultatą. Šio šablono stiprybė yra ta, kad įvykio klausytojas ir herojus nežino vienas apie kitą. Galite perkelti `ArrowLeft` į `A` klavišą. Be to, būtų galima padaryti kažką visiškai kitokio su `ArrowLeft`, atlikus kelis pakeitimus eventEmitter funkcijoje `on`:
+Aukščiau mes susiejame klaviatūros įvykį, `ArrowLeft`, ir siunčiame `HERO_MOVE_LEFT` pranešimą. Mes klausomės šio pranešimo ir kaip rezultatą judiname `herojų`. Šio šablono stiprybė yra ta, kad įvykių klausytojas ir herojus nežino vienas apie kitą. Galite perkonfigūruoti `ArrowLeft` į `A` klavišą. Be to, būtų galima atlikti kažką visiškai kitokio su `ArrowLeft`, atlikus kelis pakeitimus eventEmitter `on` funkcijoje:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,17 +212,17 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-Kai jūsų žaidimas tampa sudėtingesnis, šis šablonas išlieka tokio pat sudėtingumo, o jūsų kodas išlieka švarus. Labai rekomenduojama naudoti šį šabloną.
+Kai jūsų žaidimas tampa sudėtingesnis, šis šablonas išlieka tokio pat sudėtingumo, o jūsų kodas išlieka tvarkingas. Labai rekomenduojama naudoti šį šabloną.
 
 ---
 
 ## 🚀 Iššūkis
 
-Pagalvokite, kaip pub-sub šablonas gali pagerinti žaidimą. Kurios dalys turėtų siųsti įvykius, o kaip žaidimas turėtų į juos reaguoti? Dabar turite galimybę būti kūrybingi, sugalvodami naują žaidimą ir kaip jo dalys galėtų elgtis.
+Pagalvokite, kaip pub-sub šablonas gali pagerinti žaidimą. Kurios dalys turėtų siųsti įvykius, o kaip žaidimas turėtų į juos reaguoti? Dabar turite galimybę būti kūrybingi, sugalvoti naują žaidimą ir kaip jo dalys galėtų elgtis.
 
-## Po paskaitos: testas
+## Klausimynas po paskaitos
 
-[Po paskaitos: testas](https://ff-quizzes.netlify.app/web/quiz/30)
+[Klausimynas po paskaitos](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Apžvalga ir savarankiškas mokymasis
 
@@ -230,7 +230,7 @@ Sužinokite daugiau apie Pub/Sub [skaitydami apie tai](https://docs.microsoft.co
 
 ## Užduotis
 
-[Maketuokite žaidimą](assignment.md)
+[Sumaketuokite žaidimą](assignment.md)
 
 ---
 

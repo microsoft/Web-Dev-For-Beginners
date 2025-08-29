@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "30f8903a1f290e3d438dc2c70fe60259",
-  "translation_date": "2025-08-24T12:03:32+00:00",
+  "original_hash": "61c14b27044861e5e69db35dd52c4403",
+  "translation_date": "2025-08-29T13:59:17+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "es"
 }
 -->
 # Proyecto Terrario Parte 3: Manipulación del DOM y un Closure
 
-![DOM y un closure](../../../../sketchnotes/webdev101-js.png)
+![DOM y un closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.es.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Cuestionario Previo a la Clase
@@ -18,17 +18,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introducción
 
-Manipular el DOM, o "Modelo de Objeto de Documento", es un aspecto clave del desarrollo web. Según [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "El Modelo de Objeto de Documento (DOM) es la representación de datos de los objetos que conforman la estructura y el contenido de un documento en la web". Los desafíos relacionados con la manipulación del DOM en la web han sido a menudo el motivo detrás del uso de frameworks de JavaScript en lugar de JavaScript puro para gestionar el DOM, ¡pero nosotros lo haremos por nuestra cuenta!
+Manipular el DOM, o el "Modelo de Objeto de Documento", es un aspecto clave del desarrollo web. Según [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "El Modelo de Objeto de Documento (DOM) es la representación de datos de los objetos que conforman la estructura y el contenido de un documento en la web". Los desafíos relacionados con la manipulación del DOM en la web han sido, a menudo, el motivo detrás del uso de frameworks de JavaScript en lugar de JavaScript puro para gestionar el DOM, ¡pero nosotros lo haremos por nuestra cuenta!
 
 Además, esta lección introducirá la idea de un [closure en JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), que puedes pensar como una función encerrada por otra función, de manera que la función interna tiene acceso al ámbito de la función externa.
 
-> Los closures en JavaScript son un tema amplio y complejo. Esta lección aborda la idea más básica: en el código de este terrario encontrarás un closure: una función interna y una función externa construidas de manera que la función interna tenga acceso al ámbito de la función externa. Para obtener más información sobre cómo funciona esto, visita la [documentación extensa](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
+> Los closures en JavaScript son un tema amplio y complejo. Esta lección aborda la idea más básica: en el código de este terrario encontrarás un closure: una función interna y una función externa construidas de manera que la función interna tenga acceso al ámbito de la función externa. Para obtener mucha más información sobre cómo funciona esto, visita la [documentación extensa](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
 
 Usaremos un closure para manipular el DOM.
 
-Piensa en el DOM como un árbol que representa todas las formas en que se puede manipular un documento de página web. Se han escrito varias APIs (Interfaces de Programación de Aplicaciones) para que los programadores, utilizando su lenguaje de programación preferido, puedan acceder al DOM y editarlo, cambiarlo, reorganizarlo y gestionarlo de otras maneras.
+Piensa en el DOM como un árbol que representa todas las formas en que se puede manipular un documento de página web. Se han escrito varias APIs (Interfaces de Programación de Aplicaciones) para que los programadores, usando su lenguaje de programación preferido, puedan acceder al DOM y editarlo, cambiarlo, reorganizarlo y gestionarlo de otras maneras.
 
-![Representación del árbol DOM](../../../../3-terrarium/3-intro-to-DOM-and-closures/images/dom-tree.png)
+![Representación del árbol del DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.es.png)
 
 > Una representación del DOM y el marcado HTML que lo referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -72,7 +72,7 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-¿Qué está pasando aquí? Estás haciendo referencia al documento y buscando en su DOM para encontrar un elemento con un Id particular. Recuerda que en la primera lección sobre HTML diste Ids individuales a cada imagen de planta (`id="plant1"`). Ahora harás uso de ese esfuerzo. Después de identificar cada elemento, pasas ese elemento a una función llamada `dragElement` que construirás en un momento. Por lo tanto, el elemento en el HTML ahora está habilitado para arrastrar, o lo estará pronto.
+¿Qué está pasando aquí? Estás haciendo referencia al documento y buscando en su DOM para encontrar un elemento con un Id particular. Recuerda que en la primera lección sobre HTML diste Ids individuales a cada imagen de planta (`id="plant1"`). Ahora harás uso de ese esfuerzo. Después de identificar cada elemento, pasas ese elemento a una función llamada `dragElement` que construirás en un momento. Por lo tanto, el elemento en el HTML ahora está habilitado para arrastrar, o lo estará en breve.
 
 ✅ ¿Por qué hacemos referencia a los elementos por Id? ¿Por qué no por su clase CSS? Podrías referirte a la lección anterior sobre CSS para responder esta pregunta.
 
@@ -96,9 +96,9 @@ displayCandy();
 console.log(candy)
 ```
 
-En este ejemplo, la función `displayCandy` rodea una función que agrega un nuevo tipo de dulce a un arreglo que ya existe en la función. Si ejecutaras este código, el arreglo `candy` sería indefinido, ya que es una variable local (local al closure).
+En este ejemplo, la función `displayCandy` rodea una función que agrega un nuevo tipo de dulce a un array que ya existe en la función. Si ejecutaras este código, el array `candy` estaría indefinido, ya que es una variable local (local al closure).
 
-✅ ¿Cómo puedes hacer que el arreglo `candy` sea accesible? Intenta moverlo fuera del closure. De esta manera, el arreglo se vuelve global, en lugar de permanecer disponible solo en el ámbito local del closure.
+✅ ¿Cómo puedes hacer que el array `candy` sea accesible? Intenta moverlo fuera del closure. De esta manera, el array se vuelve global, en lugar de permanecer solo disponible en el ámbito local del closure.
 
 ### Tarea
 
@@ -138,13 +138,13 @@ function pointerDrag(e) {
 }
 ```
 
-Ocurren varias cosas. Primero, evitas que los eventos predeterminados que normalmente ocurren en `pointerdown` sucedan utilizando `e.preventDefault();`. De esta manera tienes más control sobre el comportamiento de la interfaz.
+Ocurren varias cosas. Primero, evitas que los eventos predeterminados que normalmente ocurren en `pointerdown` sucedan usando `e.preventDefault();`. De esta manera tienes más control sobre el comportamiento de la interfaz.
 
 > Vuelve a esta línea cuando hayas construido completamente el archivo de script e intenta sin `e.preventDefault()` - ¿qué sucede?
 
-Segundo, abre `index.html` en una ventana del navegador e inspecciona la interfaz. Cuando haces clic en una planta, puedes ver cómo se captura el evento 'e'. Explora el evento para ver cuánta información se recopila con un solo evento de pointerdown.
+Segundo, abre `index.html` en una ventana del navegador e inspecciona la interfaz. Cuando haces clic en una planta, puedes ver cómo se captura el evento 'e'. Investiga el evento para ver cuánta información se recopila con un solo evento de pointerdown.
 
-Luego, observa cómo las variables locales `pos3` y `pos4` se configuran en e.clientX. Puedes encontrar los valores de `e` en el panel de inspección. Estos valores capturan las coordenadas x e y de la planta en el momento en que haces clic o la tocas. Necesitarás un control detallado sobre el comportamiento de las plantas mientras las arrastras, por lo que realizas un seguimiento de sus coordenadas.
+Luego, observa cómo las variables locales `pos3` y `pos4` se configuran como e.clientX. Puedes encontrar los valores de `e` en el panel de inspección. Estos valores capturan las coordenadas x e y de la planta en el momento en que haces clic o la tocas. Necesitarás un control detallado sobre el comportamiento de las plantas mientras las haces clic y las arrastras, por lo que realizas un seguimiento de sus coordenadas.
 
 ✅ ¿Está quedando más claro por qué toda esta aplicación se construye con un gran closure? Si no fuera así, ¿cómo mantendrías el ámbito para cada una de las 14 plantas arrastrables?
 
@@ -177,9 +177,9 @@ function elementDrag(e) {
 ```
 En esta función, haces muchas ediciones de las posiciones iniciales 1-4 que configuraste como variables locales en la función externa. ¿Qué está pasando aquí?
 
-Mientras arrastras, reasignas `pos1` haciéndolo igual a `pos3` (que configuraste anteriormente como `e.clientX`) menos el valor actual de `e.clientX`. Realizas una operación similar con `pos2`. Luego, restableces `pos3` y `pos4` a las nuevas coordenadas X e Y del elemento. Puedes observar estos cambios en la consola mientras arrastras. Luego, manipulas el estilo CSS de la planta para establecer su nueva posición basada en las nuevas posiciones de `pos1` y `pos2`, calculando las coordenadas X e Y de la planta basándote en la comparación de su desplazamiento con estas nuevas posiciones.
+Mientras arrastras, reasignas `pos1` haciéndolo igual a `pos3` (que configuraste anteriormente como `e.clientX`) menos el valor actual de `e.clientX`. Realizas una operación similar con `pos2`. Luego, restableces `pos3` y `pos4` a las nuevas coordenadas X e Y del elemento. Puedes observar estos cambios en la consola mientras arrastras. Luego, manipulas el estilo CSS de la planta para establecer su nueva posición basada en las nuevas posiciones de `pos1` y `pos2`, calculando las coordenadas X e Y de la planta en la parte superior e izquierda basándote en la comparación de su desplazamiento con estas nuevas posiciones.
 
-> `offsetTop` y `offsetLeft` son propiedades CSS que establecen la posición de un elemento en función de la de su padre; su padre puede ser cualquier elemento que no esté posicionado como `static`.
+> `offsetTop` y `offsetLeft` son propiedades CSS que establecen la posición de un elemento basada en la de su padre; su padre puede ser cualquier elemento que no esté posicionado como `static`.
 
 Toda esta recalculación de posicionamiento te permite ajustar el comportamiento del terrario y sus plantas.
 
@@ -196,17 +196,17 @@ function stopElementDrag() {
 
 Esta pequeña función restablece los eventos `onpointerup` y `onpointermove` para que puedas reiniciar el progreso de tu planta comenzando a arrastrarla nuevamente, o comenzar a arrastrar una nueva planta.
 
-✅ ¿Qué sucede si no configuras estos eventos en null?
+✅ ¿Qué sucede si no configuras estos eventos como null?
 
 ¡Ahora has completado tu proyecto!
 
-🥇¡Felicidades! Has terminado tu hermoso terrario. ![terrario terminado](../../../../3-terrarium/3-intro-to-DOM-and-closures/images/terrarium-final.png)
+🥇¡Felicidades! Has terminado tu hermoso terrario. ![terrario terminado](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.es.png)
 
 ---
 
 ## 🚀Desafío
 
-Agrega un nuevo controlador de eventos a tu closure para hacer algo más con las plantas; por ejemplo, haz doble clic en una planta para traerla al frente. ¡Sé creativo!
+Agrega un nuevo controlador de eventos a tu closure para hacer algo más con las plantas; por ejemplo, haz doble clic en una planta para llevarla al frente. ¡Sé creativo!
 
 ## Cuestionario Posterior a la Clase
 
@@ -223,6 +223,8 @@ Siempre verifica las capacidades del navegador usando [CanIUse.com](https://cani
 ## Asignación
 
 [Trabaja un poco más con el DOM](assignment.md)
+
+---
 
 **Descargo de responsabilidad**:  
 Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

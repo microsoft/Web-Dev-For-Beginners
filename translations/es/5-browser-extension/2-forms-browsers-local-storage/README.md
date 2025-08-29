@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e10f168beac4e7b05e30e0eb5c92bf11",
-  "translation_date": "2025-08-24T13:08:44+00:00",
+  "original_hash": "a7587943d38d095de8613e1b508609f5",
+  "translation_date": "2025-08-29T13:53:59+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "es"
 }
@@ -15,13 +15,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introducción
 
-En esta lección, llamarás a una API enviando el formulario de tu extensión de navegador y mostrando los resultados en la extensión. Además, aprenderás cómo almacenar datos en el almacenamiento local de tu navegador para referencia y uso futuro.
+En esta lección, llamarás a una API enviando el formulario de tu extensión de navegador y mostrando los resultados en la extensión. Además, aprenderás cómo puedes almacenar datos en el almacenamiento local de tu navegador para referencia y uso futuro.
 
 ✅ Sigue los segmentos numerados en los archivos correspondientes para saber dónde colocar tu código.
 
 ### Configura los elementos para manipular en la extensión:
 
-Hasta este punto, ya has creado el HTML para el formulario y el `<div>` de resultados de tu extensión de navegador. A partir de ahora, necesitarás trabajar en el archivo `/src/index.js` y construir tu extensión poco a poco. Consulta la [lección anterior](../1-about-browsers/README.md) para configurar tu proyecto y el proceso de construcción.
+Hasta este punto, has creado el HTML para el formulario y el `<div>` de resultados de tu extensión de navegador. A partir de ahora, necesitarás trabajar en el archivo `/src/index.js` y construir tu extensión poco a poco. Consulta la [lección anterior](../1-about-browsers/README.md) para configurar tu proyecto y sobre el proceso de construcción.
 
 Trabajando en tu archivo `index.js`, comienza creando algunas variables `const` para almacenar los valores asociados con varios campos:
 
@@ -43,9 +43,9 @@ const clearBtn = document.querySelector('.clear-btn');
 
 Todos estos campos se referencian por su clase CSS, como lo configuraste en el HTML en la lección anterior.
 
-### Agrega listeners
+### Agregar listeners
 
-A continuación, agrega listeners de eventos al formulario y al botón de reinicio que restablece el formulario, para que si un usuario envía el formulario o hace clic en ese botón de reinicio, ocurra algo. Además, agrega la llamada para inicializar la aplicación al final del archivo:
+A continuación, agrega listeners de eventos al formulario y al botón de limpiar que reinicia el formulario, para que si un usuario envía el formulario o hace clic en ese botón de reinicio, ocurra algo, y agrega la llamada para inicializar la aplicación al final del archivo:
 
 ```JavaScript
 form.addEventListener('submit', (e) => handleSubmit(e));
@@ -53,9 +53,9 @@ clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Observa la forma abreviada utilizada para escuchar un evento de envío o clic, y cómo el evento se pasa a las funciones handleSubmit o reset. ¿Puedes escribir el equivalente de esta abreviatura en un formato más largo? ¿Cuál prefieres?
+✅ Observa la forma abreviada utilizada para escuchar un evento de envío o clic, y cómo el evento se pasa a las funciones handleSubmit o reset. ¿Puedes escribir el equivalente de esta forma abreviada en un formato más largo? ¿Cuál prefieres?
 
-### Construye las funciones init() y reset():
+### Construir las funciones init() y reset():
 
 Ahora vas a construir la función que inicializa la extensión, llamada init():
 
@@ -106,21 +106,21 @@ En esta función, hay lógica interesante. Leyéndola, ¿puedes ver qué sucede?
 
 Antes de continuar, es útil aprender sobre un concepto muy importante disponible en los navegadores: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage es una forma útil de almacenar cadenas en el navegador como un par `clave-valor`. Este tipo de almacenamiento web puede ser manipulado por JavaScript para gestionar datos en el navegador. LocalStorage no expira, mientras que SessionStorage, otro tipo de almacenamiento web, se borra cuando se cierra el navegador. Los diversos tipos de almacenamiento tienen pros y contras en su uso.
 
-> Nota: la extensión de tu navegador tiene su propio almacenamiento local; la ventana principal del navegador es una instancia diferente y se comporta de manera separada.
+> Nota: tu extensión de navegador tiene su propio almacenamiento local; la ventana principal del navegador es una instancia diferente y se comporta de manera separada.
 
 Configuras tu APIKey para que tenga un valor de cadena, por ejemplo, y puedes ver que está configurada en Edge al "inspeccionar" una página web (puedes hacer clic derecho en un navegador para inspeccionar) y dirigirte a la pestaña de Aplicaciones para ver el almacenamiento.
 
-![Panel de almacenamiento local](../../../../5-browser-extension/2-forms-browsers-local-storage/images/localstorage.png)
+![Panel de almacenamiento local](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.es.png)
 
-✅ Piensa en situaciones en las que NO querrías almacenar algunos datos en LocalStorage. En general, ¡colocar claves de API en LocalStorage es una mala idea! ¿Puedes ver por qué? En nuestro caso, dado que nuestra aplicación es puramente para aprendizaje y no se implementará en una tienda de aplicaciones, utilizaremos este método.
+✅ Piensa en situaciones donde NO querrías almacenar algunos datos en LocalStorage. En general, ¡colocar claves de API en LocalStorage es una mala idea! ¿Puedes ver por qué? En nuestro caso, dado que nuestra aplicación es puramente para aprendizaje y no se desplegará en una tienda de aplicaciones, utilizaremos este método.
 
-Observa que utilizas la API Web para manipular LocalStorage, ya sea usando `getItem()`, `setItem()` o `removeItem()`. Es ampliamente compatible entre navegadores.
+Observa que utilizas la API Web para manipular LocalStorage, ya sea usando `getItem()`, `setItem()` o `removeItem()`. Es ampliamente compatible en los navegadores.
 
 Antes de construir la función `displayCarbonUsage()` que se llama en `init()`, construyamos la funcionalidad para manejar el envío inicial del formulario.
 
-### Maneja el envío del formulario
+### Manejar el envío del formulario
 
-Crea una función llamada `handleSubmit` que acepte un argumento de evento `(e)`. Detén la propagación del evento (en este caso, queremos evitar que el navegador se actualice) y llama a una nueva función, `setUpUser`, pasando los argumentos `apiKey.value` y `region.value`. De esta manera, utilizas los dos valores que se obtienen a través del formulario inicial cuando se completan los campos correspondientes.
+Crea una función llamada `handleSubmit` que acepte un argumento de evento `(e)`. Detén la propagación del evento (en este caso, queremos detener que el navegador se actualice) y llama a una nueva función, `setUpUser`, pasando los argumentos `apiKey.value` y `region.value`. De esta manera, utilizas los dos valores que se obtienen a través del formulario inicial cuando se completan los campos correspondientes.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -131,7 +131,7 @@ function handleSubmit(e) {
 
 ✅ Refresca tu memoria: el HTML que configuraste en la última lección tiene dos campos de entrada cuyos `values` se capturan a través de los `const` que configuraste al principio del archivo, y ambos son `required`, por lo que el navegador evita que los usuarios ingresen valores nulos.
 
-### Configura al usuario
+### Configurar al usuario
 
 Pasando a la función `setUpUser`, aquí es donde configuras los valores de almacenamiento local para apiKey y regionName. Agrega una nueva función:
 
@@ -147,17 +147,17 @@ function setUpUser(apiKey, regionName) {
 }
 ```
 
-Esta función muestra un mensaje de carga mientras se llama a la API. En este punto, has llegado a crear la función más importante de esta extensión de navegador.
+Esta función establece un mensaje de carga para mostrar mientras se llama a la API. En este punto, has llegado a crear la función más importante de esta extensión de navegador.
 
-### Muestra el uso de carbono
+### Mostrar Uso de Carbono
 
 Finalmente, es hora de consultar la API.
 
 Antes de continuar, deberíamos discutir las APIs. Las APIs, o [Interfaces de Programación de Aplicaciones](https://www.webopedia.com/TERM/A/API.html), son un elemento crítico en la caja de herramientas de un desarrollador web. Proporcionan formas estándar para que los programas interactúen y se conecten entre sí. Por ejemplo, si estás construyendo un sitio web que necesita consultar una base de datos, alguien podría haber creado una API para que la utilices. Aunque hay muchos tipos de APIs, una de las más populares es una [API REST](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
-✅ El término 'REST' significa 'Transferencia de Estado Representacional' y utiliza URLs configuradas de diversas maneras para obtener datos. Investiga un poco sobre los diversos tipos de APIs disponibles para desarrolladores. ¿Qué formato te resulta más atractivo?
+✅ El término 'REST' significa 'Transferencia de Estado Representacional' y utiliza URLs configuradas de diversas maneras para obtener datos. Investiga un poco sobre los diversos tipos de APIs disponibles para desarrolladores. ¿Qué formato te atrae más?
 
-Hay cosas importantes que notar sobre esta función. Primero, observa la palabra clave [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Escribir tus funciones para que se ejecuten de manera asincrónica significa que esperan a que se complete una acción, como el retorno de datos, antes de continuar.
+Hay cosas importantes que notar sobre esta función. Primero, observa la palabra clave [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Escribir tus funciones para que se ejecuten de manera asíncrona significa que esperan a que se complete una acción, como el retorno de datos, antes de continuar.
 
 Aquí hay un video rápido sobre `async`:
 
@@ -207,12 +207,12 @@ async function displayCarbonUsage(apiKey, region) {
 
 Esta es una función grande. ¿Qué está sucediendo aquí?
 
-- Siguiendo las mejores prácticas, utilizas la palabra clave `async` para que esta función se comporte de manera asincrónica. La función contiene un bloque `try/catch`, ya que devolverá una promesa cuando la API devuelva datos. Debido a que no tienes control sobre la velocidad con la que la API responderá (¡puede que no responda en absoluto!), necesitas manejar esta incertidumbre llamándola de manera asincrónica.
-- Estás consultando la API de co2signal para obtener los datos de tu región, utilizando tu clave de API. Para usar esa clave, debes usar un tipo de autenticación en los parámetros del encabezado.
+- Siguiendo las mejores prácticas, utilizas la palabra clave `async` para hacer que esta función se comporte de manera asíncrona. La función contiene un bloque `try/catch`, ya que devolverá una promesa cuando la API devuelva datos. Debido a que no tienes control sobre la velocidad con la que la API responderá (¡puede que no responda en absoluto!), necesitas manejar esta incertidumbre llamándola de manera asíncrona.
+- Estás consultando la API de co2signal para obtener los datos de tu región, utilizando tu API Key. Para usar esa clave, debes usar un tipo de autenticación en los parámetros del encabezado.
 - Una vez que la API responde, asignas varios elementos de sus datos de respuesta a las partes de tu pantalla que configuraste para mostrar estos datos.
 - Si hay un error, o si no hay resultado, muestras un mensaje de error.
 
-✅ Usar patrones de programación asincrónica es otra herramienta muy útil en tu caja de herramientas. Lee [sobre las diversas formas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) en que puedes configurar este tipo de código.
+✅ Utilizar patrones de programación asíncronos es otra herramienta muy útil en tu caja de herramientas. Lee [sobre las diversas formas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) en que puedes configurar este tipo de código.
 
 ¡Felicidades! Si construyes tu extensión (`npm run build`) y la actualizas en el panel de extensiones, ¡tienes una extensión funcional! Lo único que no funciona es el ícono, y lo arreglarás en la próxima lección.
 
@@ -220,19 +220,21 @@ Esta es una función grande. ¿Qué está sucediendo aquí?
 
 ## 🚀 Desafío
 
-Hemos discutido varios tipos de APIs hasta ahora en estas lecciones. Elige una API web e investiga en profundidad lo que ofrece. Por ejemplo, echa un vistazo a las APIs disponibles dentro de los navegadores, como la [API de Arrastrar y Soltar en HTML](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). ¿Qué hace que una API sea excelente en tu opinión?
+Hemos discutido varios tipos de API hasta ahora en estas lecciones. Elige una API web e investiga en profundidad lo que ofrece. Por ejemplo, echa un vistazo a las APIs disponibles dentro de los navegadores, como la [API de Arrastrar y Soltar en HTML](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). ¿Qué hace que una API sea excelente en tu opinión?
 
 ## Cuestionario Posterior a la Clase
 
 [Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/26)
 
-## Repaso y Estudio Personal
+## Repaso y Autoestudio
 
 En esta lección aprendiste sobre LocalStorage y APIs, ambos muy útiles para el desarrollador web profesional. ¿Puedes pensar en cómo estas dos cosas trabajan juntas? Piensa en cómo diseñarías un sitio web que almacenara elementos para ser utilizados por una API.
 
 ## Tarea
 
 [Adopta una API](assignment.md)
+
+---
 
 **Descargo de responsabilidad**:  
 Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

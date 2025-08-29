@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4612bbb9ace984f374fcc80e3e035ad",
-  "translation_date": "2025-08-24T12:17:00+00:00",
+  "original_hash": "92e136090efc4341b1d51c37924c1802",
+  "translation_date": "2025-08-29T16:32:31+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "pl"
 }
 -->
 # Podstawy JavaScript: Metody i Funkcje
 
-![Podstawy JavaScript - Funkcje](../../../../sketchnotes/webdev101-js-functions.png)
+![Podstawy JavaScript - Funkcje](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.pl.png)
 > Sketchnotka autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz przed wykładem
-[Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/9)
+[Quiz przed wykładem](https://ff-quizzes.netlify.app)
 
 Kiedy myślimy o pisaniu kodu, zawsze chcemy, aby był on czytelny. Choć może to brzmieć paradoksalnie, kod jest czytany znacznie częściej niż pisany. Jednym z podstawowych narzędzi w zestawie programisty, które pomaga w tworzeniu łatwego do utrzymania kodu, jest **funkcja**.
 
@@ -25,7 +25,7 @@ Kiedy myślimy o pisaniu kodu, zawsze chcemy, aby był on czytelny. Choć może 
 
 ## Funkcje
 
-Funkcja to w swojej istocie blok kodu, który możemy wykonać na żądanie. Jest to idealne rozwiązanie w sytuacjach, gdy musimy wykonać to samo zadanie wielokrotnie; zamiast duplikować logikę w różnych miejscach (co utrudniałoby jej aktualizację w przyszłości), możemy scentralizować ją w jednym miejscu i wywoływać, gdy tylko zajdzie potrzeba. Co więcej, funkcje można wywoływać z innych funkcji!
+Funkcja to w swojej istocie blok kodu, który możemy wykonać na żądanie. Jest to idealne rozwiązanie w sytuacjach, gdy musimy wykonać to samo zadanie wielokrotnie; zamiast duplikować logikę w wielu miejscach (co utrudniałoby jej aktualizację w przyszłości), możemy scentralizować ją w jednym miejscu i wywoływać, kiedy tylko zajdzie potrzeba - funkcje można nawet wywoływać z innych funkcji!
 
 Równie ważna jest możliwość nadania funkcji nazwy. Choć może to wydawać się trywialne, nazwa stanowi szybki sposób na udokumentowanie fragmentu kodu. Można to porównać do etykiety na przycisku. Jeśli kliknę przycisk z napisem „Anuluj timer”, wiem, że zatrzyma on odliczanie.
 
@@ -54,19 +54,19 @@ Kiedy chcemy wywołać (lub uruchomić) naszą funkcję, używamy jej nazwy, a n
 displayGreeting();
 ```
 
-> **NOTE:** Istnieje specjalny typ funkcji znany jako **metoda**, z którym już się spotkałeś! Widzieliśmy to w naszym przykładzie, gdy używaliśmy `console.log`. To, co odróżnia metodę od funkcji, to fakt, że metoda jest przypisana do obiektu (w naszym przykładzie `console`), podczas gdy funkcja jest niezależna. Wielu programistów używa tych terminów zamiennie.
+> **NOTE:** Istnieje specjalny rodzaj funkcji znany jako **metoda**, z którym już się spotkałeś! W rzeczywistości widzieliśmy to w naszym przykładzie powyżej, gdy używaliśmy `console.log`. To, co odróżnia metodę od funkcji, to fakt, że metoda jest przypisana do obiektu (w naszym przykładzie `console`), podczas gdy funkcja jest niezależna. Wielu programistów używa tych terminów zamiennie.
 
 ### Najlepsze praktyki dotyczące funkcji
 
 Oto kilka najlepszych praktyk, o których warto pamiętać podczas tworzenia funkcji:
 
-- Zawsze używaj opisowych nazw, aby wiedzieć, co dana funkcja robi
+- Jak zawsze, używaj opisowych nazw, aby wiedzieć, co dana funkcja robi
 - Stosuj **camelCase** do łączenia słów
-- Skupiaj funkcje na jednym, konkretnym zadaniu
+- Skupiaj funkcje na konkretnym zadaniu
 
 ## Przekazywanie informacji do funkcji
 
-Aby funkcja była bardziej uniwersalna, często będziesz chciał przekazywać do niej informacje. Jeśli weźmiemy nasz przykład `displayGreeting`, wyświetli on jedynie **Hello, world!**. Niezbyt użyteczna funkcja, prawda? Aby uczynić ją bardziej elastyczną, możemy pozwolić użytkownikowi określić imię osoby, którą chcemy powitać, dodając **parametr**. Parametr (czasami nazywany również **argumentem**) to dodatkowa informacja przekazywana do funkcji.
+Aby funkcja była bardziej uniwersalna, często będziesz chciał przekazać do niej informacje. Jeśli weźmiemy nasz przykład `displayGreeting`, wyświetli on jedynie **Hello, world!**. Niezbyt użyteczna funkcja. Jeśli chcemy, aby była bardziej elastyczna, na przykład pozwalała określić imię osoby, którą witamy, możemy dodać **parametr**. Parametr (czasami nazywany również **argumentem**) to dodatkowa informacja przekazywana do funkcji.
 
 Parametry są wymieniane w definicji funkcji w nawiasach i oddzielane przecinkami, jak poniżej:
 
@@ -85,7 +85,7 @@ function displayGreeting(name) {
 }
 ```
 
-Kiedy chcemy wywołać funkcję i przekazać parametr, podajemy go w nawiasach.
+Kiedy chcemy wywołać naszą funkcję i przekazać parametr, podajemy go w nawiasach.
 
 ```javascript
 displayGreeting('Christopher');
@@ -94,7 +94,7 @@ displayGreeting('Christopher');
 
 ## Wartości domyślne
 
-Możemy uczynić naszą funkcję jeszcze bardziej elastyczną, dodając więcej parametrów. Ale co, jeśli nie chcemy wymagać podania każdej wartości? Wracając do naszego przykładu powitania, możemy pozostawić imię jako wymagane (musimy wiedzieć, kogo witamy), ale chcemy umożliwić dostosowanie samego powitania. Jeśli ktoś nie chce go zmieniać, możemy zapewnić wartość domyślną. Aby ustawić wartość domyślną dla parametru, przypisujemy ją w podobny sposób, jak przypisujemy wartość do zmiennej - `parameterName = 'defaultValue'`. Oto pełny przykład:
+Możemy uczynić naszą funkcję jeszcze bardziej elastyczną, dodając więcej parametrów. Ale co, jeśli nie chcemy wymagać podania każdej wartości? Wracając do naszego przykładu powitania, możemy pozostawić imię jako wymagane (musimy wiedzieć, kogo witamy), ale chcemy umożliwić dostosowanie samego powitania. Jeśli ktoś nie chce go dostosowywać, możemy zapewnić wartość domyślną. Aby ustawić wartość domyślną dla parametru, przypisujemy ją w podobny sposób, jak przypisujemy wartość do zmiennej - `parameterName = 'defaultValue'`. Oto pełny przykład:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +102,7 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Podczas wywoływania funkcji możemy zdecydować, czy chcemy ustawić wartość dla `salutation`.
+Kiedy wywołujemy funkcję, możemy zdecydować, czy chcemy ustawić wartość dla `salutation`.
 
 ```javascript
 displayGreeting('Christopher');
@@ -114,7 +114,7 @@ displayGreeting('Christopher', 'Hi');
 
 ## Wartości zwracane
 
-Do tej pory funkcje, które stworzyliśmy, zawsze wyświetlały wynik w [konsoli](https://developer.mozilla.org/docs/Web/API/console). Czasami jest to dokładnie to, czego potrzebujemy, zwłaszcza gdy tworzymy funkcje wywołujące inne usługi. Ale co, jeśli chcemy stworzyć funkcję pomocniczą, która wykona obliczenie i zwróci wynik, abyśmy mogli go użyć gdzie indziej?
+Do tej pory funkcje, które stworzyliśmy, zawsze wyświetlały wynik w [konsoli](https://developer.mozilla.org/docs/Web/API/console). Czasami jest to dokładnie to, czego potrzebujemy, zwłaszcza gdy tworzymy funkcje, które będą wywoływać inne usługi. Ale co, jeśli chcemy stworzyć funkcję pomocniczą, która wykona obliczenie i zwróci wartość, abyśmy mogli ją wykorzystać gdzie indziej?
 
 Możemy to zrobić, używając **wartości zwracanej**. Wartość zwracana jest zwracana przez funkcję i może być przechowywana w zmiennej, tak samo jak możemy przechowywać wartość literalną, taką jak ciąg znaków lub liczba.
 
@@ -124,7 +124,7 @@ Jeśli funkcja zwraca coś, używamy słowa kluczowego `return`. Słowo kluczowe
 return myVariable;
 ```  
 
-Możemy stworzyć funkcję, która tworzy wiadomość powitalną i zwraca ją do wywołującego.
+Możemy stworzyć funkcję, która tworzy wiadomość powitalną i zwraca wartość do wywołującego.
 
 ```javascript
 function createGreetingMessage(name) {
@@ -145,7 +145,7 @@ W miarę postępów w karierze programistycznej napotkasz funkcje, które akcept
 
 Na przykład, rozważ [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), który uruchamia timer i wykonuje kod po jego zakończeniu. Musimy powiedzieć mu, jaki kod chcemy wykonać. Brzmi jak idealne zadanie dla funkcji!
 
-Jeśli uruchomisz poniższy kod, po 3 sekundach zobaczysz wiadomość **3 sekundy minęły**.
+Jeśli uruchomisz poniższy kod, po 3 sekundach zobaczysz komunikat **3 sekundy minęły**.
 
 ```javascript
 function displayDone() {
@@ -194,7 +194,7 @@ Widziałeś teraz trzy sposoby przekazywania funkcji jako parametru i możesz si
 Czy potrafisz w jednym zdaniu wyjaśnić różnicę między funkcjami a metodami? Spróbuj!
 
 ## Quiz po wykładzie
-[Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/10)
+[Quiz po wykładzie](https://ff-quizzes.netlify.app)
 
 ## Przegląd i samodzielna nauka
 
@@ -203,6 +203,8 @@ Warto [przeczytać więcej o funkcjach strzałkowych](https://developer.mozilla.
 ## Zadanie
 
 [Zabawa z funkcjami](assignment.md)
+
+---
 
 **Zastrzeżenie**:  
 Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

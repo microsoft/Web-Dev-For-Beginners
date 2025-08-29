@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-28T11:46:52+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T16:54:42+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "lt"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## Klausimai prieš paskaitą
 [Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/13)
 
-Ši pamoka apima JavaScript pagrindus – kalbą, kuri suteikia interaktyvumo internete. Šioje pamokoje sužinosite apie masyvus ir ciklus, kurie naudojami duomenims manipuliuoti.
+Ši pamoka apima JavaScript pagrindus – kalbą, kuri suteikia interaktyvumo internete. Šioje pamokoje sužinosite apie masyvus ir ciklus, kurie naudojami duomenims apdoroti.
 
 [![Masyvai](https://img.youtube.com/vi/1U4qTyq02Xw/0.jpg)](https://youtube.com/watch?v=1U4qTyq02Xw "Masyvai")
 
@@ -27,7 +27,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Masyvai
 
-Darbas su duomenimis yra dažna užduotis bet kurioje programavimo kalboje, ir tai tampa daug lengviau, kai duomenys yra organizuoti struktūriškai, pavyzdžiui, masyvuose. Masyvuose duomenys saugomi struktūroje, panašioje į sąrašą. Vienas iš pagrindinių masyvų privalumų yra tas, kad viename masyve galite saugoti skirtingų tipų duomenis.
+Darbas su duomenimis yra dažna užduotis bet kurioje programavimo kalboje, ir tai tampa daug paprasčiau, kai duomenys organizuojami struktūriškai, pavyzdžiui, masyvuose. Masyvuose duomenys saugomi struktūroje, panašioje į sąrašą. Vienas iš pagrindinių masyvų privalumų yra tas, kad viename masyve galite saugoti skirtingų tipų duomenis.
 
 ✅ Masyvai yra visur aplink mus! Ar galite sugalvoti realaus gyvenimo pavyzdį, pavyzdžiui, saulės baterijų masyvą?
 
@@ -37,13 +37,13 @@ Masyvo sintaksė yra kvadratinių skliaustų pora.
 let myArray = [];
 ```
 
-Tai tuščias masyvas, tačiau masyvai gali būti deklaruojami jau užpildyti duomenimis. Keli masyvo elementai atskiriami kableliu.
+Tai yra tuščias masyvas, tačiau masyvai gali būti deklaruojami jau užpildyti duomenimis. Keli masyvo elementai atskiriami kableliu.
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 ```
 
-Masyvo reikšmėms priskiriama unikali reikšmė, vadinama **indeksu**, kuris yra sveikasis skaičius, priskiriamas pagal jo atstumą nuo masyvo pradžios. Aukščiau pateiktame pavyzdyje eilutės reikšmė „Chocolate“ turi indeksą 0, o „Rocky Road“ indeksas yra 4. Naudokite indeksą su kvadratiniais skliaustais, kad gautumėte, pakeistumėte arba įterptumėte masyvo reikšmes.
+Masyvo elementams priskiriama unikali reikšmė, vadinama **indeksu**, kuris yra sveikasis skaičius, priskiriamas pagal jo atstumą nuo masyvo pradžios. Aukščiau pateiktame pavyzdyje eilutės reikšmė „Chocolate“ turi indeksą 0, o „Rocky Road“ indeksas yra 4. Naudokite indeksą su kvadratiniais skliaustais, kad gautumėte, pakeistumėte ar įterptumėte masyvo reikšmes.
 
 ✅ Ar jus stebina, kad masyvai prasideda nuo nulio indekso? Kai kuriose programavimo kalbose indeksai prasideda nuo 1. Apie tai yra įdomi istorija, kurią galite [perskaityti Vikipedijoje](https://en.wikipedia.org/wiki/Zero-based_numbering).
 
@@ -52,13 +52,13 @@ let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky
 iceCreamFlavors[2]; //"Vanilla"
 ```
 
-Indeksą galite panaudoti reikšmei pakeisti, kaip šiame pavyzdyje:
+Indeksą galite panaudoti reikšmei pakeisti, pavyzdžiui, taip:
 
 ```javascript
 iceCreamFlavors[4] = "Butter Pecan"; //Changed "Rocky Road" to "Butter Pecan"
 ```
 
-Taip pat galite įterpti naują reikšmę tam tikrame indekse, kaip šiame pavyzdyje:
+Taip pat galite įterpti naują reikšmę tam tikru indeksu:
 
 ```javascript
 iceCreamFlavors[5] = "Cookie Dough"; //Added "Cookie Dough"
@@ -77,13 +77,13 @@ iceCreamFlavors.length; //5
 
 ## Ciklai
 
-Ciklai leidžia atlikti pasikartojančias arba **iteracines** užduotis ir gali sutaupyti daug laiko bei kodo. Kiekviena iteracija gali skirtis savo kintamaisiais, reikšmėmis ir sąlygomis. JavaScript yra skirtingų tipų ciklų, kurie turi nedidelius skirtumus, tačiau iš esmės atlieka tą patį: iteruoja per duomenis.
+Ciklai leidžia atlikti pasikartojančias arba **iteracines** užduotis ir gali sutaupyti daug laiko bei kodo. Kiekviena iteracija gali skirtis savo kintamaisiais, reikšmėmis ir sąlygomis. JavaScript yra įvairių tipų ciklų, kurie turi nedidelių skirtumų, tačiau iš esmės atlieka tą patį: kartoja duomenis.
 
 ### For ciklas
 
 `for` ciklas reikalauja 3 dalių, kad galėtų iteruoti:
 - `counter` Kintamasis, kuris paprastai inicializuojamas skaičiumi, skaičiuojančiu iteracijų skaičių
-- `condition` Išraiška, naudojanti palyginimo operatorius, kad ciklas sustotų, kai reikšmė yra `false`
+- `condition` Išraiška, naudojanti palyginimo operatorius, kad ciklas sustotų, kai reikšmė tampa `false`
 - `iteration-expression` Vykdoma kiekvienos iteracijos pabaigoje, paprastai naudojama keisti skaitiklio reikšmę
   
 ```javascript
@@ -97,7 +97,7 @@ for (let i = 0; i < 10; i++) {
 
 ### While ciklas
 
-Skirtingai nuo `for` ciklo sintaksės, `while` ciklai reikalauja tik sąlygos, kuri sustabdys ciklą, kai sąlyga taps `false`. Ciklų sąlygos paprastai priklauso nuo kitų reikšmių, tokių kaip skaitikliai, ir turi būti valdomos ciklo metu. Pradinės skaitiklių reikšmės turi būti sukurtos už ciklo ribų, o bet kokios išraiškos, reikalingos sąlygai įvykdyti, įskaitant skaitiklio keitimą, turi būti palaikomos ciklo viduje.
+Skirtingai nuo `for` ciklo sintaksės, `while` ciklai reikalauja tik sąlygos, kuri sustabdys ciklą, kai sąlyga taps `false`. Sąlygos cikluose paprastai remiasi kitomis reikšmėmis, tokiomis kaip skaitikliai, ir turi būti valdomos ciklo metu. Pradinės skaitiklių reikšmės turi būti sukurtos už ciklo ribų, o bet kokios išraiškos, atitinkančios sąlygą, įskaitant skaitiklio keitimą, turi būti palaikomos ciklo viduje.
 
 ```javascript
 //Counting up to 10
@@ -139,9 +139,9 @@ JavaScript masyvai turi daug metodų, kurie yra labai naudingi duomenų manipuli
 
 ## Užduotis
 
-[Iteruokite per masyvą](assignment.md)
+[Iteruoti per masyvą](assignment.md)
 
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-28T11:36:32+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T16:51:51+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "lt"
 }
@@ -11,15 +11,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Klausimai prieš paskaitą
 
-[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/31)
+[Prieš paskaitos klausimynas](https://ff-quizzes.netlify.app/web/quiz/31)
 
-## Drobė
+## Drobė (Canvas)
 
-Drobė yra HTML elementas, kuris pagal numatytuosius nustatymus neturi turinio – tai tuščias lapas. Jūs turite ją užpildyti piešdami ant jos.
+Drobė yra HTML elementas, kuris pagal nutylėjimą neturi jokio turinio – tai tuščias lapas. Norėdami ką nors pridėti, turite ant jo piešti.
 
 ✅ Skaitykite [daugiau apie Canvas API](https://developer.mozilla.org/docs/Web/API/Canvas_API) MDN svetainėje.
 
-Štai kaip ji paprastai deklaruojama kaip puslapio dalis:
+Štai kaip ji paprastai deklaruojama kaip puslapio kūno dalis:
 
 ```html
 <canvas id="myCanvas" width="200" height="100"></canvas>
@@ -27,24 +27,24 @@ Drobė yra HTML elementas, kuris pagal numatytuosius nustatymus neturi turinio �
 
 Aukščiau nustatome `id`, `width` ir `height`.
 
-- `id`: nustatykite, kad galėtumėte gauti nuorodą, kai reikia su ja sąveikauti.
+- `id`: nustatykite, kad galėtumėte gauti nuorodą, kai reikės su ja sąveikauti.
 - `width`: tai elemento plotis.
 - `height`: tai elemento aukštis.
 
-## Paprastos geometrijos piešimas
+## Paprastų geometrinių figūrų piešimas
 
-Drobė naudoja Dekarto koordinačių sistemą objektų piešimui. Taigi, ji naudoja x ir y ašis, kad išreikštų, kur kažkas yra. Koordinatė `0,0` yra viršutinis kairysis kampas, o apatinis dešinysis kampas yra tai, ką nustatėte kaip drobės PLOTĮ ir AUKŠTĮ.
+Drobė naudoja Dekarto koordinačių sistemą piešimui. Ji naudoja x ir y ašis, kad nurodytų, kur kažkas yra. Koordinatė `0,0` yra viršutiniame kairiajame kampe, o apatinis dešinysis kampas atitinka jūsų nurodytą drobės PLOTĮ ir AUKŠTĮ.
 
 ![drobės tinklelis](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.lt.png)  
 > Vaizdas iš [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Norėdami piešti ant drobės elemento, turite atlikti šiuos veiksmus:
 
-1. **Gauti nuorodą** į drobės elementą.
-2. **Gauti nuorodą** į konteksto elementą, kuris yra drobės viduje.
+1. **Gauti nuorodą** į drobės elementą.  
+2. **Gauti nuorodą** į Konteksto elementą, kuris yra drobės elemente.  
 3. **Atlikti piešimo operaciją** naudojant konteksto elementą.
 
-Kodą šiems veiksmams paprastai sudaro:
+Kodas, atitinkantis aukščiau nurodytus veiksmus, paprastai atrodo taip:
 
 ```javascript
 // draws a red rectangle
@@ -63,19 +63,19 @@ ctx.fillRect(0,0, 200, 200) // x,y,width, height
 
 ✅ Canvas API daugiausia dėmesio skiria 2D formoms, tačiau taip pat galite piešti 3D elementus tinklalapyje; tam galite naudoti [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
-Su Canvas API galite piešti įvairius dalykus, pavyzdžiui:
+Naudodami Canvas API galite piešti įvairius dalykus, tokius kaip:
 
-- **Geometrines figūras**, jau parodėme, kaip piešti stačiakampį, tačiau yra daug daugiau, ką galite piešti.
-- **Tekstą**, galite piešti tekstą su bet kokiu šriftu ir spalva.
-- **Vaizdus**, galite piešti vaizdą, remdamiesi vaizdo failu, pvz., .jpg ar .png.
+- **Geometrinės figūros** – jau parodėme, kaip piešti stačiakampį, tačiau galite piešti daug daugiau.  
+- **Tekstas** – galite piešti tekstą su bet kokiu šriftu ir spalva.  
+- **Vaizdai** – galite piešti vaizdą, naudodami tokį failą kaip .jpg ar .png.  
 
-✅ Išbandykite! Jūs jau žinote, kaip piešti stačiakampį, ar galite nupiešti apskritimą puslapyje? Pažvelkite į keletą įdomių Canvas piešinių CodePen svetainėje. Štai [ypatingai įspūdingas pavyzdys](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Išbandykite! Jūs jau žinote, kaip piešti stačiakampį, ar galite nupiešti apskritimą puslapyje? Pažvelkite į įdomius Canvas piešinius CodePen svetainėje. Štai [ypač įspūdingas pavyzdys](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Įkelkite ir pieškite vaizdo failą
+## Vaizdo išteklio įkėlimas ir piešimas
 
-Vaizdo failą įkeliate sukurdami `Image` objektą ir nustatydami jo `src` savybę. Tada klausotės `load` įvykio, kad sužinotumėte, kada jis paruoštas naudoti. Kodas atrodo taip:
+Vaizdo išteklius įkeliamas sukuriant `Image` objektą ir nustatant jo `src` savybę. Tada klausomasi `load` įvykio, kad žinotumėte, kada jis paruoštas naudoti. Kodas atrodo taip:
 
-### Įkelkite failą
+### Išteklių įkėlimas
 
 ```javascript
 const img = new Image();
@@ -85,9 +85,9 @@ img.onload = () => {
 }
 ```
 
-### Įkėlimo šablonas
+### Išteklių įkėlimo šablonas
 
-Rekomenduojama aukščiau pateiktą kodą apgaubti tokiu konstruktu, kad būtų lengviau naudoti ir manipuliuoti tik tada, kai jis visiškai įkeltas:
+Rekomenduojama aukščiau pateiktą kodą įdėti į tokią konstrukciją, kad būtų lengviau naudoti ir manipuliuoti tik tada, kai jis visiškai įkeltas:
 
 ```javascript
 function loadAsset(path) {
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-Norėdami piešti žaidimo elementus ekrane, jūsų kodas atrodytų taip:
+Norėdami piešti žaidimo išteklius ekrane, jūsų kodas atrodytų taip:
 
 ```javascript
 async function run() {
@@ -128,19 +128,19 @@ async function run() {
 
 ### Ką kurti
 
-Jūs sukursite tinklalapį su drobės elementu. Jis turėtų rodyti juodą ekraną `1024*768`. Mes jums pateikėme du vaizdus:
+Sukurkite tinklalapį su Canvas elementu. Jis turėtų rodyti juodą ekraną `1024*768`. Mes pateikėme jums du vaizdus:
 
-- Herojaus laivas
+- Herojaus laivas  
 
    ![Herojaus laivas](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.lt.png)
 
-- 5*5 monstras
+- 5*5 monstrų  
 
-   ![Monstro laivas](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.lt.png)
+   ![Monstrų laivas](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.lt.png)
 
 ### Rekomenduojami žingsniai pradėti kūrimą
 
-Suraskite failus, kurie buvo sukurti jums aplanke `your-work`. Jame turėtų būti:
+Raskite failus, kurie buvo sukurti jums `your-work` aplanke. Jame turėtų būti:
 
 ```bash
 -| assets
@@ -151,31 +151,31 @@ Suraskite failus, kurie buvo sukurti jums aplanke `your-work`. Jame turėtų bū
 -| package.json
 ```
 
-Atidarykite šio aplanko kopiją Visual Studio Code programoje. Jums reikia turėti vietinę kūrimo aplinką, pageidautina su Visual Studio Code, NPM ir Node įdiegtais. Jei jūsų kompiuteryje nėra įdiegto `npm`, [štai kaip tai padaryti](https://www.npmjs.com/get-npm).
+Atidarykite šio aplanko kopiją Visual Studio Code programoje. Jums reikia turėti vietinę kūrimo aplinką, geriausia su Visual Studio Code, NPM ir Node įdiegtais. Jei jūsų kompiuteryje nėra nustatyto `npm`, [štai kaip tai padaryti](https://www.npmjs.com/get-npm).
 
-Pradėkite projektą, naršydami į aplanką `your_work`:
+Pradėkite savo projektą, pereidami į `your_work` aplanką:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Aukščiau pateiktas kodas paleis HTTP serverį adresu `http://localhost:5000`. Atidarykite naršyklę ir įveskite šį adresą. Dabar tai tuščias puslapis, bet tai pasikeis.
+Aukščiau pateiktas veiksmas paleis HTTP serverį adresu `http://localhost:5000`. Atidarykite naršyklę ir įveskite šį adresą. Šiuo metu tai tuščias puslapis, bet tai pasikeis.
 
-> Pastaba: norėdami pamatyti pakeitimus ekrane, atnaujinkite naršyklę.
+> Pastaba: norėdami matyti pakeitimus ekrane, atnaujinkite naršyklę.
 
 ### Pridėkite kodą
 
-Pridėkite reikalingą kodą į `your-work/app.js`, kad išspręstumėte žemiau pateiktus uždavinius:
+Pridėkite reikiamą kodą į `your-work/app.js`, kad išspręstumėte šiuos uždavinius:
 
 1. **Nupieškite** drobę su juodu fonu  
-   > patarimas: pridėkite dvi eilutes po atitinkamu TODO `/app.js` faile, nustatydami `ctx` elementą kaip juodą, o viršutinius/kairiuosius koordinates kaip 0,0, o aukštį ir plotį kaip drobės dydį.
+   > patarimas: pridėkite dvi eilutes po atitinkamu TODO `/app.js` faile, nustatydami `ctx` elementą juodai spalvai, o viršutinius/kairiuosius koordinates – 0,0, o aukštį ir plotį – lyg drobės dydžiui.  
 2. **Įkelkite** tekstūras  
-   > patarimas: pridėkite žaidėjo ir priešo vaizdus naudodami `await loadTexture` ir perduodami vaizdo kelią. Jų dar nematysite ekrane!
+   > patarimas: pridėkite žaidėjo ir priešo vaizdus naudodami `await loadTexture` ir perduodami vaizdo kelią. Jų dar nematysite ekrane!  
 3. **Nupieškite** herojų ekrano centre apatinėje pusėje  
-   > patarimas: naudokite `drawImage` API, kad nupieštumėte heroImg ekrane, nustatydami `canvas.width / 2 - 45` ir `canvas.height - canvas.height / 4)`.
+   > patarimas: naudokite `drawImage` API, kad nupieštumėte heroImg ekrane, nustatydami `canvas.width / 2 - 45` ir `canvas.height - canvas.height / 4)`.  
 4. **Nupieškite** 5*5 monstrus  
-   > patarimas: dabar galite atkomentuoti kodą, kad nupieštumėte priešus ekrane. Tada eikite į `createEnemies` funkciją ir ją sukurkite.
+   > patarimas: dabar galite atkomentuoti kodą, kad nupieštumėte priešus ekrane. Tada eikite į `createEnemies` funkciją ir ją užbaikite.
 
    Pirmiausia nustatykite keletą konstantų:
 
@@ -186,7 +186,7 @@ Pridėkite reikalingą kodą į `your-work/app.js`, kad išspręstumėte žemiau
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    tada sukurkite ciklą, kad nupieštumėte monstrų masyvą ekrane:
+   tada sukurkite ciklą, kad nupieštumėte monstrų masyvą ekrane:
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {
@@ -204,25 +204,25 @@ Galutinis rezultatas turėtų atrodyti taip:
 
 ## Sprendimas
 
-Pabandykite išspręsti patys, bet jei užstrigsite, peržiūrėkite [sprendimą](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
+Pabandykite išspręsti patys, tačiau jei užstrigsite, peržiūrėkite [sprendimą](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
 
 ---
 
 ## 🚀 Iššūkis
 
-Jūs išmokote piešti su 2D orientuota Canvas API; pažiūrėkite į [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) ir pabandykite nupiešti 3D objektą.
+Jūs išmokote piešti naudodami 2D orientuotą Canvas API; pažiūrėkite į [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) ir pabandykite nupiešti 3D objektą.
 
 ## Klausimai po paskaitos
 
-[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/32)
+[Po paskaitos klausimynas](https://ff-quizzes.netlify.app/web/quiz/32)
 
 ## Apžvalga ir savarankiškas mokymasis
 
-Sužinokite daugiau apie Canvas API [skaitydami apie ją](https://developer.mozilla.org/docs/Web/API/Canvas_API).
+Sužinokite daugiau apie Canvas API [skaitydami apie tai](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
 ## Užduotis
 
-[Eksperimentuokite su Canvas API](assignment.md)
+[Pažaiskite su Canvas API](assignment.md)
 
 ---
 

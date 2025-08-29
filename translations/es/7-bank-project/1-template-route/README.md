@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8da1b5e2c63f749808858c53f37b8ce7",
-  "translation_date": "2025-08-24T13:38:22+00:00",
+  "original_hash": "8a07db14e75ac62f013b7de5df05981d",
+  "translation_date": "2025-08-29T13:51:27+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "es"
 }
@@ -17,9 +17,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 Desde la llegada de JavaScript en los navegadores, los sitios web se han vuelto más interactivos y complejos que nunca. Las tecnologías web ahora se utilizan comúnmente para crear aplicaciones completamente funcionales que se ejecutan directamente en un navegador, conocidas como [aplicaciones web](https://es.wikipedia.org/wiki/Aplicaci%C3%B3n_web). Dado que las aplicaciones web son altamente interactivas, los usuarios no quieren esperar a que se recargue toda la página cada vez que realizan una acción. Por eso se utiliza JavaScript para actualizar el HTML directamente mediante el DOM, proporcionando una experiencia de usuario más fluida.
 
-En esta lección, sentaremos las bases para crear una aplicación bancaria web, utilizando plantillas HTML para crear múltiples pantallas que se pueden mostrar y actualizar sin necesidad de recargar toda la página HTML.
+En esta lección, vamos a sentar las bases para crear una aplicación bancaria web, utilizando plantillas HTML para crear múltiples pantallas que se puedan mostrar y actualizar sin necesidad de recargar toda la página HTML.
 
-### Prerrequisitos
+### Requisito Previo
 
 Necesitas un servidor web local para probar la aplicación web que construiremos en esta lección. Si no tienes uno, puedes instalar [Node.js](https://nodejs.org) y usar el comando `npx lite-server` desde tu carpeta de proyecto. Esto creará un servidor web local y abrirá tu aplicación en un navegador.
 
@@ -50,7 +50,7 @@ Si deseas crear múltiples pantallas para una página web, una solución sería 
 - Tienes que recargar todo el HTML al cambiar de pantalla, lo que puede ser lento.
 - Es difícil compartir datos entre las diferentes pantallas.
 
-Otra opción es tener un solo archivo HTML y definir múltiples [plantillas HTML](https://developer.mozilla.org/docs/Web/HTML/Element/template) utilizando el elemento `<template>`. Una plantilla es un bloque HTML reutilizable que no se muestra en el navegador y que necesita ser instanciado en tiempo de ejecución usando JavaScript.
+Otra opción es tener un solo archivo HTML y definir múltiples [plantillas HTML](https://developer.mozilla.org/es/docs/Web/HTML/Element/template) utilizando el elemento `<template>`. Una plantilla es un bloque HTML reutilizable que no se muestra en el navegador y que necesita ser instanciado en tiempo de ejecución usando JavaScript.
 
 ### Tarea
 
@@ -64,7 +64,7 @@ Le damos un `id` para que sea más fácil localizarlo con JavaScript más adelan
 
 > Consejo: dado que el contenido de este elemento será reemplazado, podemos poner un mensaje o indicador de carga que se mostrará mientras la aplicación se está cargando.
 
-A continuación, añadamos debajo la plantilla HTML para la página de inicio de sesión. Por ahora, solo pondremos un título y una sección que contiene un enlace que utilizaremos para realizar la navegación.
+A continuación, añadamos debajo la plantilla HTML para la página de inicio de sesión. Por ahora, solo pondremos un título y una sección que contendrá un enlace que utilizaremos para realizar la navegación.
 
 ```html
 <template id="login">
@@ -116,9 +116,9 @@ Si pruebas tu archivo HTML actual en un navegador, verás que se queda mostrando
 
 Instanciar una plantilla generalmente se realiza en 3 pasos:
 
-1. Recuperar el elemento de la plantilla en el DOM, por ejemplo, usando [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
-2. Clonar el elemento de la plantilla, usando [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
-3. Adjuntarlo al DOM bajo un elemento visible, por ejemplo, usando [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
+1. Recuperar el elemento de la plantilla en el DOM, por ejemplo, usando [`document.getElementById`](https://developer.mozilla.org/es/docs/Web/API/Document/getElementById).
+2. Clonar el elemento de la plantilla, usando [`cloneNode`](https://developer.mozilla.org/es/docs/Web/API/Node/cloneNode).
+3. Adjuntarlo al DOM bajo un elemento visible, por ejemplo, usando [`appendChild`](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild).
 
 ✅ ¿Por qué necesitamos clonar la plantilla antes de adjuntarla al DOM? ¿Qué crees que sucedería si omitimos este paso?
 
@@ -152,7 +152,7 @@ updateRoute('login');
 
 ✅ ¿Cuál es el propósito de este código `app.innerHTML = '';`? ¿Qué sucede sin él?
 
-## Creando rutas
+## Creación de rutas
 
 Cuando hablamos de una aplicación web, llamamos *Ruteo* a la intención de mapear **URLs** a pantallas específicas que deben mostrarse. En un sitio web con múltiples archivos HTML, esto se hace automáticamente ya que las rutas de los archivos se reflejan en la URL. Por ejemplo, con estos archivos en tu carpeta de proyecto:
 
@@ -183,7 +183,7 @@ const routes = {
 };
 ```
 
-Ahora modifiquemos un poco la función `updateRoute`. En lugar de pasar directamente el `templateId` como argumento, queremos recuperarlo primero mirando la URL actual y luego usar nuestro mapa para obtener el valor correspondiente del ID de la plantilla. Podemos usar [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) para obtener solo la sección de la ruta de la URL.
+Ahora modifiquemos un poco la función `updateRoute`. En lugar de pasar directamente el `templateId` como argumento, queremos recuperarlo primero mirando la URL actual y luego usar nuestro mapa para obtener el valor correspondiente del ID de la plantilla. Podemos usar [`window.location.pathname`](https://developer.mozilla.org/es/docs/Web/API/Location/pathname) para obtener solo la sección de la ruta de la URL.
 
 ```js
 function updateRoute() {
@@ -198,7 +198,7 @@ function updateRoute() {
 }
 ```
 
-Aquí mapeamos las rutas que declaramos al ID de plantilla correspondiente. Puedes probar que funciona correctamente cambiando la URL manualmente en tu navegador.
+Aquí mapeamos las rutas que declaramos a la plantilla correspondiente. Puedes probar que funciona correctamente cambiando la URL manualmente en tu navegador.
 
 ✅ ¿Qué sucede si introduces una ruta desconocida en la URL? ¿Cómo podríamos resolver esto?
 
@@ -206,14 +206,14 @@ Aquí mapeamos las rutas que declaramos al ID de plantilla correspondiente. Pued
 
 El siguiente paso para nuestra aplicación es añadir la posibilidad de navegar entre páginas sin tener que cambiar la URL manualmente. Esto implica dos cosas:
 
-1. Actualizar la URL actual.
-2. Actualizar la plantilla mostrada en función de la nueva URL.
+  1. Actualizar la URL actual.
+  2. Actualizar la plantilla mostrada basada en la nueva URL.
 
 Ya nos encargamos de la segunda parte con la función `updateRoute`, así que tenemos que averiguar cómo actualizar la URL actual.
 
-Tendremos que usar JavaScript y, más específicamente, el método [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), que permite actualizar la URL y crear una nueva entrada en el historial de navegación, sin recargar el HTML.
+Usaremos JavaScript y, más específicamente, [`history.pushState`](https://developer.mozilla.org/es/docs/Web/API/History/pushState), que permite actualizar la URL y crear una nueva entrada en el historial de navegación, sin recargar el HTML.
 
-> Nota: Aunque el elemento de anclaje HTML [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) puede usarse por sí solo para crear hipervínculos a diferentes URLs, hará que el navegador recargue el HTML por defecto. Es necesario evitar este comportamiento al manejar el ruteo con JavaScript personalizado, usando la función `preventDefault()` en el evento de clic.
+> Nota: Aunque el elemento de anclaje HTML [`<a href>`](https://developer.mozilla.org/es/docs/Web/HTML/Element/a) puede usarse por sí solo para crear hipervínculos a diferentes URLs, hará que el navegador recargue el HTML por defecto. Es necesario evitar este comportamiento al manejar el ruteo con JavaScript personalizado, usando la función `preventDefault()` en el evento de clic.
 
 ### Tarea
 
@@ -226,7 +226,7 @@ function navigate(path) {
 }
 ```
 
-Este método primero actualiza la URL actual en función de la ruta dada y luego actualiza la plantilla. La propiedad `window.location.origin` devuelve la raíz de la URL, lo que nos permite reconstruir una URL completa a partir de una ruta dada.
+Este método primero actualiza la URL actual basada en la ruta dada, luego actualiza la plantilla. La propiedad `window.location.origin` devuelve la raíz de la URL, lo que nos permite reconstruir una URL completa a partir de una ruta dada.
 
 Ahora que tenemos esta función, podemos encargarnos del problema que tenemos si una ruta no coincide con ninguna ruta definida. Modificaremos la función `updateRoute` añadiendo un caso de respaldo a una de las rutas existentes si no encontramos una coincidencia.
 
@@ -242,7 +242,7 @@ function updateRoute() {
   ...
 ```
 
-Si no se encuentra una ruta, ahora redirigiremos a la página de inicio de sesión.
+Si no se encuentra una ruta, ahora redirigiremos a la página de `login`.
 
 Ahora creemos una función para obtener la URL cuando se hace clic en un enlace y evitar el comportamiento predeterminado del navegador:
 
@@ -253,7 +253,7 @@ function onLinkClick(event) {
 }
 ```
 
-Completemos el sistema de navegación añadiendo enlaces a nuestros botones de *Iniciar sesión* y *Cerrar sesión* en el HTML.
+Completemos el sistema de navegación añadiendo enlaces a nuestros botones de *Login* y *Logout* en el HTML.
 
 ```html
 <a href="/dashboard" onclick="onLinkClick(event)">Login</a>
@@ -263,7 +263,7 @@ Completemos el sistema de navegación añadiendo enlaces a nuestros botones de *
 
 El objeto `event` anterior captura el evento `click` y lo pasa a nuestra función `onLinkClick`.
 
-Usando el atributo [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick), vincula el evento `click` al código JavaScript, en este caso, la llamada a la función `navigate()`.
+Usando el atributo [`onclick`](https://developer.mozilla.org/es/docs/Web/API/GlobalEventHandlers/onclick), vincula el evento `click` al código JavaScript, en este caso, la llamada a la función `navigate()`.
 
 Prueba hacer clic en estos enlaces, ahora deberías poder navegar entre las diferentes pantallas de tu aplicación.
 
@@ -273,11 +273,11 @@ Prueba hacer clic en estos enlaces, ahora deberías poder navegar entre las dife
 
 Usar `history.pushState` crea nuevas entradas en el historial de navegación del navegador. Puedes comprobarlo manteniendo presionado el *botón de retroceso* de tu navegador, debería mostrar algo como esto:
 
-![Captura de pantalla del historial de navegación](../../../../7-bank-project/1-template-route/history.png)
+![Captura de pantalla del historial de navegación](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.es.png)
 
 Si intentas hacer clic en el botón de retroceso varias veces, verás que la URL actual cambia y el historial se actualiza, pero la misma plantilla sigue mostrándose.
 
-Esto se debe a que la aplicación no sabe que necesitamos llamar a `updateRoute()` cada vez que cambia el historial. Si revisas la documentación de [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), puedes ver que si el estado cambia - es decir, nos movemos a una URL diferente - se dispara el evento [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event). Usaremos esto para solucionar el problema.
+Esto se debe a que la aplicación no sabe que necesitamos llamar a `updateRoute()` cada vez que cambia el historial. Si revisas la [documentación de `history.pushState`](https://developer.mozilla.org/es/docs/Web/API/History/pushState), puedes ver que si el estado cambia - es decir, que nos movimos a una URL diferente - se dispara el evento [`popstate`](https://developer.mozilla.org/es/docs/Web/API/Window/popstate_event). Usaremos eso para solucionar este problema.
 
 ### Tarea
 
@@ -288,13 +288,13 @@ window.onpopstate = () => updateRoute();
 updateRoute();
 ```
 
-> Nota: usamos una [función flecha](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) aquí para declarar nuestro manejador del evento `popstate` por concisión, pero una función regular funcionaría igual.
+> Nota: usamos una [función flecha](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions) aquí para declarar nuestro manejador del evento `popstate` por concisión, pero una función regular funcionaría igual.
 
 Aquí tienes un video de repaso sobre funciones flecha:
 
 [![Funciones Flecha](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Funciones Flecha")
 
-> 🎥 Haz clic en la imagen de arriba para ver un video sobre funciones flecha.
+> 🎥 Haz clic en la imagen de arriba para un video sobre funciones flecha.
 
 Ahora intenta usar los botones de retroceso y avance de tu navegador, y verifica que la ruta mostrada se actualice correctamente esta vez.
 
@@ -310,11 +310,13 @@ Añade una nueva plantilla y ruta para una tercera página que muestre los créd
 
 ## Repaso y Autoestudio
 
-El ruteo es una de las partes sorprendentemente complicadas del desarrollo web, especialmente a medida que la web se mueve de comportamientos de recarga de página a recargas de aplicaciones de una sola página (Single Page Application). Lee un poco sobre [cómo el servicio Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) maneja el ruteo. ¿Puedes explicar por qué algunas de las decisiones descritas en ese documento son necesarias?
+El ruteo es una de las partes sorprendentemente complicadas del desarrollo web, especialmente a medida que la web pasa de comportamientos de recarga de página a recargas de aplicaciones de una sola página (SPA). Lee un poco sobre [cómo el servicio Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) maneja el ruteo. ¿Puedes explicar por qué algunas de las decisiones descritas en ese documento son necesarias?
 
 ## Tarea
 
 [Mejora el ruteo](assignment.md)
 
+---
+
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-24T12:27:27+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T14:11:11+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "de"
 }
@@ -26,18 +26,18 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Lies mehr darüber, [wie man Text zu einem Canvas hinzufügt](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), und gestalte deinen Text ruhig etwas schicker!
+✅ Lies mehr darüber, [wie man Text zu einem Canvas hinzufügt](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), und gestalte deinen Text gerne etwas schicker!
 
 ## Leben als Spielkonzept
 
-Das Konzept von Leben in einem Spiel ist lediglich eine Zahl. Im Kontext eines Weltraumspiels ist es üblich, eine bestimmte Anzahl von Leben zuzuweisen, die nach und nach abgezogen werden, wenn dein Schiff Schaden nimmt. Es ist schön, wenn man dies grafisch darstellen kann, z. B. mit kleinen Schiffen oder Herzen anstelle einer Zahl.
+Das Konzept von Leben in einem Spiel ist lediglich eine Zahl. Im Kontext eines Weltraumspiels ist es üblich, eine bestimmte Anzahl von Leben zuzuweisen, die eins nach dem anderen abgezogen werden, wenn dein Schiff Schaden nimmt. Es ist schön, wenn du eine grafische Darstellung davon zeigen kannst, wie kleine Schiffe oder Herzen, anstatt nur eine Zahl.
 
 ## Was soll gebaut werden?
 
 Füge deinem Spiel Folgendes hinzu:
 
-- **Punktestand**: Für jedes feindliche Schiff, das zerstört wird, sollte der Held Punkte erhalten. Wir schlagen 100 Punkte pro Schiff vor. Der Punktestand sollte unten links angezeigt werden.
-- **Leben**: Dein Schiff hat drei Leben. Du verlierst ein Leben, jedes Mal wenn ein feindliches Schiff mit dir kollidiert. Die Lebensanzeige sollte unten rechts angezeigt werden und aus der folgenden Grafik bestehen: ![life image](../../../../6-space-game/5-keeping-score/solution/assets/life.png).
+- **Punktestand**: Für jedes feindliche Schiff, das zerstört wird, sollte der Held Punkte erhalten, wir schlagen 100 Punkte pro Schiff vor. Der Punktestand sollte unten links angezeigt werden.
+- **Leben**: Dein Schiff hat drei Leben. Du verlierst ein Leben jedes Mal, wenn ein feindliches Schiff mit dir kollidiert. Die Lebensanzeige sollte unten rechts angezeigt werden und aus der folgenden Grafik bestehen: ![life image](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.de.png).
 
 ## Empfohlene Schritte
 
@@ -60,11 +60,11 @@ cd your-work
 npm start
 ```
 
-Das oben Genannte startet einen HTTP-Server unter der Adresse `http://localhost:5000`. Öffne einen Browser und gib diese Adresse ein. Derzeit sollten der Held und alle Feinde angezeigt werden, und wenn du die Pfeiltasten links und rechts drückst, bewegt sich der Held und kann Feinde abschießen.
+Das oben Genannte startet einen HTTP-Server unter der Adresse `http://localhost:5000`. Öffne einen Browser und gib diese Adresse ein. Momentan sollte der Held und alle Feinde angezeigt werden, und wenn du die Pfeiltasten links und rechts drückst, bewegt sich der Held und kann Feinde abschießen.
 
 ### Code hinzufügen
 
-1. **Kopiere die benötigten Assets** aus dem Ordner `solution/assets/` in den Ordner `your-work`; du wirst ein `life.png`-Asset hinzufügen. Füge das `lifeImg` zur Funktion `window.onload` hinzu:
+1. **Kopiere die benötigten Assets** aus dem Ordner `solution/assets/` in den Ordner `your-work`; du wirst das Asset `life.png` hinzufügen. Füge das `lifeImg` zur Funktion `window.onload` hinzu:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
@@ -94,14 +94,14 @@ Das oben Genannte startet einen HTTP-Server unter der Adresse `http://localhost:
     ```
 
 4. **Füge Leben und Punkte hinzu**. 
-   1. **Initialisiere Variablen**. Unter `this.cooldown = 0` in der Klasse `Hero` setze Leben und Punkte:
+   1. **Initialisiere Variablen**. Unter `this.cooldown = 0` in der Klasse `Hero`, setze Leben und Punkte:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Zeichne Variablen auf den Bildschirm**. Zeige diese Werte auf dem Bildschirm an:
+   1. **Zeichne Variablen auf den Bildschirm**. Zeichne diese Werte auf den Bildschirm:
 
         ```javascript
         function drawLife() {
@@ -137,7 +137,7 @@ Das oben Genannte startet einen HTTP-Server unter der Adresse `http://localhost:
 
 1. **Implementiere Spielregeln**. Implementiere die folgenden Spielregeln:
 
-   1. **Für jede Kollision zwischen Held und Feind** ziehe ein Leben ab.
+   1. **Für jede Kollision zwischen Held und Feind**, ziehe ein Leben ab.
    
       Erweitere die Klasse `Hero`, um diese Abzüge vorzunehmen:
 
@@ -160,7 +160,7 @@ Das oben Genannte startet einen HTTP-Server unter der Adresse `http://localhost:
           }
         ```
 
-        Füge diese Funktionen zu deinen Collision Event Emitters hinzu:
+        Füge diese Funktionen zu deinen Kollisionsereignis-Emittern hinzu:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -177,7 +177,7 @@ Das oben Genannte startet einen HTTP-Server unter der Adresse `http://localhost:
 
 ✅ Recherchiere ein wenig, um andere Spiele zu entdecken, die mit JavaScript/Canvas erstellt wurden. Was sind ihre gemeinsamen Merkmale?
 
-Am Ende dieser Arbeit solltest du die kleinen 'Lebens'-Schiffe unten rechts, Punkte unten links sehen und beobachten können, wie deine Lebensanzahl bei Kollisionen mit Feinden abnimmt und deine Punkte steigen, wenn du Feinde abschießt. Gut gemacht! Dein Spiel ist fast fertig.
+Am Ende dieser Arbeit solltest du die kleinen 'Lebens'-Schiffe unten rechts sehen, Punkte unten links, und du solltest sehen, wie deine Lebensanzahl abnimmt, wenn du mit Feinden kollidierst, und deine Punkte steigen, wenn du Feinde abschießt. Gut gemacht! Dein Spiel ist fast fertig.
 
 ---
 
@@ -197,5 +197,7 @@ Recherchiere einige Möglichkeiten, wie du Punktestände und Leben in einem Spie
 
 [Baue ein Punktespiel](assignment.md)
 
+---
+
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.

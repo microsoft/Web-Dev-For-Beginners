@@ -1,29 +1,29 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f587e913e3f7c0b1c549a05dd74ee8e5",
-  "translation_date": "2025-08-24T00:03:32+00:00",
+  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
+  "translation_date": "2025-08-29T13:30:52+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "fr"
 }
 -->
 # Créer une application bancaire Partie 3 : Méthodes pour récupérer et utiliser des données
 
-## Quiz avant le cours
+## Quiz pré-lecture
 
-[Quiz avant le cours](https://ff-quizzes.netlify.app/web/quiz/45)
+[Quiz pré-lecture](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Introduction
 
-Au cœur de chaque application web se trouvent les *données*. Les données peuvent prendre de nombreuses formes, mais leur objectif principal est toujours d'afficher des informations à l'utilisateur. Avec des applications web devenant de plus en plus interactives et complexes, la manière dont l'utilisateur accède et interagit avec les informations est désormais un aspect clé du développement web.
+Au cœur de chaque application web se trouvent les *données*. Les données peuvent prendre de nombreuses formes, mais leur objectif principal est toujours d'afficher des informations à l'utilisateur. Avec des applications web devenant de plus en plus interactives et complexes, la manière dont l'utilisateur accède et interagit avec ces informations est désormais un aspect clé du développement web.
 
 Dans cette leçon, nous verrons comment récupérer des données d'un serveur de manière asynchrone et utiliser ces données pour afficher des informations sur une page web sans recharger le HTML.
 
 ### Prérequis
 
-Vous devez avoir construit la partie [Formulaire de connexion et d'inscription](../2-forms/README.md) de l'application web pour cette leçon. Vous devez également installer [Node.js](https://nodejs.org) et [exécuter l'API du serveur](../api/README.md) localement pour obtenir les données de compte.
+Vous devez avoir construit la partie [Formulaire de connexion et d'inscription](../2-forms/README.md) de l'application web pour cette leçon. Vous devez également installer [Node.js](https://nodejs.org) et [exécuter l'API serveur](../api/README.md) localement pour obtenir les données de compte.
 
-Vous pouvez tester que le serveur fonctionne correctement en exécutant cette commande dans un terminal :
+Vous pouvez vérifier que le serveur fonctionne correctement en exécutant cette commande dans un terminal :
 
 ```sh
 curl http://localhost:5000/api
@@ -36,15 +36,15 @@ curl http://localhost:5000/api
 
 Les sites web traditionnels mettent à jour le contenu affiché lorsque l'utilisateur sélectionne un lien ou soumet des données via un formulaire, en rechargeant la page HTML complète. Chaque fois que de nouvelles données doivent être chargées, le serveur web renvoie une toute nouvelle page HTML qui doit être traitée par le navigateur, interrompant l'action en cours de l'utilisateur et limitant les interactions pendant le rechargement. Ce flux de travail est également appelé *Application Multi-Page* ou *MPA*.
 
-![Flux de mise à jour dans une application multi-page](../../../../7-bank-project/3-data/images/mpa.png)
+![Flux de mise à jour dans une application multi-page](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.fr.png)
 
-Lorsque les applications web ont commencé à devenir plus complexes et interactives, une nouvelle technique appelée [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) a émergé. Cette technique permet aux applications web d'envoyer et de récupérer des données d'un serveur de manière asynchrone en utilisant JavaScript, sans avoir à recharger la page HTML, ce qui entraîne des mises à jour plus rapides et des interactions utilisateur plus fluides. Lorsque de nouvelles données sont reçues du serveur, la page HTML actuelle peut également être mise à jour avec JavaScript en utilisant l'API [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model). Avec le temps, cette approche a évolué pour devenir ce que l'on appelle aujourd'hui une [*Application Mono-Page* ou *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+Lorsque les applications web ont commencé à devenir plus complexes et interactives, une nouvelle technique appelée [AJAX (Asynchronous JavaScript and XML)](https://fr.wikipedia.org/wiki/Ajax_(informatique)) a émergé. Cette technique permet aux applications web d'envoyer et de récupérer des données d'un serveur de manière asynchrone en utilisant JavaScript, sans avoir à recharger la page HTML, ce qui entraîne des mises à jour plus rapides et des interactions utilisateur plus fluides. Lorsque de nouvelles données sont reçues du serveur, la page HTML actuelle peut également être mise à jour avec JavaScript en utilisant l'API [DOM](https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model). Avec le temps, cette approche a évolué pour devenir ce que l'on appelle aujourd'hui une [*Application Mono-Page* ou *SPA*](https://fr.wikipedia.org/wiki/Application_web_monopage).
 
-![Flux de mise à jour dans une application mono-page](../../../../7-bank-project/3-data/images/spa.png)
+![Flux de mise à jour dans une application mono-page](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.fr.png)
 
-Lorsque AJAX a été introduit pour la première fois, la seule API disponible pour récupérer des données de manière asynchrone était [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Mais les navigateurs modernes implémentent désormais l'API [`Fetch`](https://developer.mozilla.org/docs/Web/API/Fetch_API), plus pratique et puissante, qui utilise des promesses et est mieux adaptée pour manipuler des données JSON.
+Lorsque AJAX a été introduit pour la première fois, la seule API disponible pour récupérer des données de manière asynchrone était [`XMLHttpRequest`](https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Mais les navigateurs modernes implémentent désormais l'API [`Fetch`](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API), plus pratique et puissante, qui utilise des promesses et est mieux adaptée pour manipuler des données JSON.
 
-> Bien que tous les navigateurs modernes prennent en charge l'API `Fetch`, si vous souhaitez que votre application web fonctionne sur des navigateurs anciens ou obsolètes, il est toujours judicieux de vérifier d'abord le [tableau de compatibilité sur caniuse.com](https://caniuse.com/fetch).
+> Bien que tous les navigateurs modernes prennent en charge l'API `Fetch`, si vous souhaitez que votre application web fonctionne sur des navigateurs anciens ou obsolètes, il est toujours conseillé de vérifier d'abord le [tableau de compatibilité sur caniuse.com](https://caniuse.com/fetch).
 
 ### Tâche
 
@@ -57,7 +57,7 @@ async function login() {
 }
 ```
 
-Ici, nous commençons par récupérer l'élément du formulaire avec `getElementById()`, puis nous obtenons le nom d'utilisateur à partir de l'entrée avec `loginForm.user.value`. Chaque contrôle de formulaire peut être accédé par son nom (défini dans le HTML à l'aide de l'attribut `name`) en tant que propriété du formulaire.
+Ici, nous commençons par récupérer l'élément formulaire avec `getElementById()`, puis nous obtenons le nom d'utilisateur à partir de l'entrée avec `loginForm.user.value`. Chaque contrôle de formulaire peut être accédé par son nom (défini dans le HTML avec l'attribut `name`) en tant que propriété du formulaire.
 
 De manière similaire à ce que nous avons fait pour l'inscription, nous allons créer une autre fonction pour effectuer une requête au serveur, mais cette fois pour récupérer les données du compte :
 
@@ -72,9 +72,9 @@ async function getAccount(user) {
 }
 ```
 
-Nous utilisons l'API `fetch` pour demander les données de manière asynchrone au serveur, mais cette fois, nous n'avons pas besoin de paramètres supplémentaires autres que l'URL à appeler, car nous ne faisons que demander des données. Par défaut, `fetch` crée une requête HTTP [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET), ce qui est exactement ce que nous recherchons ici.
+Nous utilisons l'API `fetch` pour demander les données de manière asynchrone au serveur, mais cette fois, nous n'avons pas besoin de paramètres supplémentaires autres que l'URL à appeler, car nous ne faisons que demander des données. Par défaut, `fetch` crée une requête HTTP [`GET`](https://developer.mozilla.org/fr/docs/Web/HTTP/Methods/GET), ce qui est exactement ce que nous recherchons ici.
 
-✅ `encodeURIComponent()` est une fonction qui échappe les caractères spéciaux pour les URL. Quels problèmes pourrions-nous rencontrer si nous ne faisons pas appel à cette fonction et utilisons directement la valeur `user` dans l'URL ?
+✅ `encodeURIComponent()` est une fonction qui échappe les caractères spéciaux pour les URL. Quels problèmes pourrions-nous rencontrer si nous n'appelons pas cette fonction et utilisons directement la valeur `user` dans l'URL ?
 
 Mettons maintenant à jour notre fonction `login` pour utiliser `getAccount` :
 
@@ -93,7 +93,7 @@ async function login() {
 }
 ```
 
-Tout d'abord, comme `getAccount` est une fonction asynchrone, nous devons l'associer au mot-clé `await` pour attendre le résultat du serveur. Comme pour toute requête serveur, nous devons également gérer les cas d'erreur. Pour l'instant, nous ajouterons simplement un message de journal pour afficher l'erreur et y reviendrons plus tard.
+Tout d'abord, comme `getAccount` est une fonction asynchrone, nous devons utiliser le mot-clé `await` pour attendre le résultat du serveur. Comme pour toute requête serveur, nous devons également gérer les cas d'erreur. Pour l'instant, nous ajouterons simplement un message de journal pour afficher l'erreur, et nous y reviendrons plus tard.
 
 Ensuite, nous devons stocker les données quelque part pour pouvoir les utiliser plus tard pour afficher les informations du tableau de bord. Comme la variable `account` n'existe pas encore, nous allons créer une variable globale pour cela en haut de notre fichier :
 
@@ -101,7 +101,7 @@ Ensuite, nous devons stocker les données quelque part pour pouvoir les utiliser
 let account = null;
 ```
 
-Une fois que les données utilisateur sont enregistrées dans une variable, nous pouvons naviguer de la page *login* à la page *dashboard* en utilisant la fonction `navigate()` que nous avons déjà.
+Une fois les données utilisateur enregistrées dans une variable, nous pouvons naviguer de la page *login* à la page *dashboard* en utilisant la fonction `navigate()` que nous avons déjà.
 
 Enfin, nous devons appeler notre fonction `login` lorsque le formulaire de connexion est soumis, en modifiant le HTML :
 
@@ -118,25 +118,25 @@ account = result;
 navigate('/dashboard');
 ```
 
-✅ Saviez-vous que par défaut, vous ne pouvez appeler les API serveur que depuis le *même domaine et port* que la page web que vous consultez ? C'est un mécanisme de sécurité appliqué par les navigateurs. Mais attendez, notre application web fonctionne sur `localhost:3000` alors que l'API du serveur fonctionne sur `localhost:5000`, pourquoi cela fonctionne-t-il ? En utilisant une technique appelée [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), il est possible d'effectuer des requêtes HTTP inter-origines si le serveur ajoute des en-têtes spéciaux à la réponse, permettant des exceptions pour des domaines spécifiques.
+✅ Saviez-vous que par défaut, vous ne pouvez appeler les API serveur que depuis le *même domaine et port* que la page web que vous consultez ? C'est un mécanisme de sécurité appliqué par les navigateurs. Mais attendez, notre application web fonctionne sur `localhost:3000` alors que l'API serveur fonctionne sur `localhost:5000`, pourquoi cela fonctionne-t-il ? En utilisant une technique appelée [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/fr/docs/Web/HTTP/CORS), il est possible d'effectuer des requêtes HTTP inter-origines si le serveur ajoute des en-têtes spéciaux à la réponse, permettant des exceptions pour des domaines spécifiques.
 
 > Apprenez-en davantage sur les API en suivant cette [leçon](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
 
 ## Mettre à jour le HTML pour afficher les données
 
-Maintenant que nous avons les données utilisateur, nous devons mettre à jour le HTML existant pour les afficher. Nous savons déjà comment récupérer un élément du DOM en utilisant par exemple `document.getElementById()`. Une fois que vous avez un élément de base, voici quelques API que vous pouvez utiliser pour le modifier ou ajouter des éléments enfants :
+Maintenant que nous avons les données utilisateur, nous devons mettre à jour le HTML existant pour les afficher. Nous savons déjà comment récupérer un élément du DOM en utilisant par exemple `document.getElementById()`. Une fois que vous avez un élément de base, voici quelques API que vous pouvez utiliser pour le modifier ou lui ajouter des éléments enfants :
 
-- En utilisant la propriété [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent), vous pouvez changer le texte d'un élément. Notez que changer cette valeur supprime tous les enfants de l'élément (s'il y en a) et les remplace par le texte fourni. Ainsi, c'est également une méthode efficace pour supprimer tous les enfants d'un élément donné en lui assignant une chaîne vide `''`.
+- En utilisant la propriété [`textContent`](https://developer.mozilla.org/fr/docs/Web/API/Node/textContent), vous pouvez changer le texte d'un élément. Notez que changer cette valeur supprime tous les enfants de l'élément (s'il y en a) et les remplace par le texte fourni. Ainsi, c'est également une méthode efficace pour supprimer tous les enfants d'un élément donné en lui assignant une chaîne vide `''`.
 
-- En utilisant [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) avec la méthode [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append), vous pouvez créer et attacher un ou plusieurs nouveaux éléments enfants.
+- En utilisant [`document.createElement()`](https://developer.mozilla.org/fr/docs/Web/API/Document/createElement) avec la méthode [`append()`](https://developer.mozilla.org/fr/docs/Web/API/ParentNode/append), vous pouvez créer et attacher un ou plusieurs nouveaux éléments enfants.
 
-✅ En utilisant la propriété [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) d'un élément, il est également possible de changer son contenu HTML, mais cela doit être évité car c'est vulnérable aux attaques de [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting).
+✅ En utilisant la propriété [`innerHTML`](https://developer.mozilla.org/fr/docs/Web/API/Element/innerHTML) d'un élément, il est également possible de modifier son contenu HTML, mais cela doit être évité car c'est vulnérable aux attaques de [cross-site scripting (XSS)](https://developer.mozilla.org/fr/docs/Glossary/Cross-site_scripting).
 
 ### Tâche
 
 Avant de passer à l'écran du tableau de bord, il y a une chose de plus que nous devrions faire sur la page *login*. Actuellement, si vous essayez de vous connecter avec un nom d'utilisateur qui n'existe pas, un message est affiché dans la console, mais pour un utilisateur normal, rien ne change et vous ne savez pas ce qui se passe.
 
-Ajoutons un élément de remplacement dans le formulaire de connexion où nous pourrons afficher un message d'erreur si nécessaire. Un bon endroit serait juste avant le bouton de connexion `<button>` :
+Ajoutons un élément de type placeholder dans le formulaire de connexion où nous pourrons afficher un message d'erreur si nécessaire. Un bon endroit serait juste avant le bouton `<button>` de connexion :
 
 ```html
 ...
@@ -145,9 +145,9 @@ Ajoutons un élément de remplacement dans le formulaire de connexion où nous p
 ...
 ```
 
-Cet élément `<div>` est vide, ce qui signifie que rien ne sera affiché à l'écran tant que nous n'y ajouterons pas du contenu. Nous lui donnons également un `id` pour pouvoir le récupérer facilement avec JavaScript.
+Cet élément `<div>` est vide, ce qui signifie que rien ne sera affiché à l'écran tant que nous n'y ajouterons pas de contenu. Nous lui donnons également un `id` pour pouvoir le récupérer facilement avec JavaScript.
 
-Revenez au fichier `app.js` et créez une nouvelle fonction utilitaire `updateElement` :
+Retournez dans le fichier `app.js` et créez une nouvelle fonction utilitaire `updateElement` :
 
 ```js
 function updateElement(id, text) {
@@ -156,7 +156,7 @@ function updateElement(id, text) {
 }
 ```
 
-Celle-ci est assez simple : étant donné un *id* d'élément et un *texte*, elle mettra à jour le contenu texte de l'élément DOM correspondant à l'`id`. Utilisons cette méthode à la place du précédent message d'erreur dans la fonction `login` :
+Celle-ci est assez simple : étant donné un *id* d'élément et un *texte*, elle mettra à jour le contenu texte de l'élément DOM correspondant à cet `id`. Utilisons cette méthode à la place du précédent message d'erreur dans la fonction `login` :
 
 ```js
 if (data.error) {
@@ -166,9 +166,9 @@ if (data.error) {
 
 Maintenant, si vous essayez de vous connecter avec un compte invalide, vous devriez voir quelque chose comme ceci :
 
-![Capture d'écran montrant le message d'erreur affiché lors de la connexion](../../../../7-bank-project/3-data/images/login-error.png)
+![Capture d'écran montrant le message d'erreur affiché lors de la connexion](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.fr.png)
 
-Nous avons maintenant un texte d'erreur qui s'affiche visuellement, mais si vous essayez avec un lecteur d'écran, vous remarquerez que rien n'est annoncé. Pour que le texte ajouté dynamiquement à une page soit annoncé par les lecteurs d'écran, il devra utiliser quelque chose appelé une [Région Active](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Ici, nous allons utiliser un type spécifique de région active appelé une alerte :
+Nous avons maintenant un texte d'erreur qui s'affiche visuellement, mais si vous essayez avec un lecteur d'écran, vous remarquerez que rien n'est annoncé. Pour que le texte ajouté dynamiquement à une page soit annoncé par les lecteurs d'écran, il devra utiliser quelque chose appelé une [Région Active (Live Region)](https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Ici, nous allons utiliser un type spécifique de région active appelé une alerte :
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -200,7 +200,7 @@ Voici à quoi ressemble un objet compte reçu du serveur :
 
 ### Tâche
 
-Commençons par remplacer la section "Balance" dans le HTML pour ajouter des éléments de remplacement :
+Commençons par remplacer la section "Balance" dans le HTML pour ajouter des éléments de type placeholder :
 
 ```html
 <section>
@@ -214,9 +214,9 @@ Nous ajouterons également une nouvelle section juste en dessous pour afficher l
 <h2 id="description"></h2>
 ```
 
-✅ Comme la description du compte fonctionne comme un titre pour le contenu en dessous, elle est balisée de manière sémantique comme un titre. Apprenez-en davantage sur l'importance de la [structure des titres](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) pour l'accessibilité et examinez de manière critique la page pour déterminer ce qui pourrait également être un titre.
+✅ Comme la description du compte fonctionne comme un titre pour le contenu en dessous, elle est balisée sémantiquement comme un titre. Apprenez-en davantage sur l'importance de la [structure des titres](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) pour l'accessibilité, et examinez attentivement la page pour déterminer ce qui pourrait également être un titre.
 
-Ensuite, nous allons créer une nouvelle fonction dans `app.js` pour remplir les éléments de remplacement :
+Ensuite, nous allons créer une nouvelle fonction dans `app.js` pour remplir le placeholder :
 
 ```js
 function updateDashboard() {
@@ -232,9 +232,9 @@ function updateDashboard() {
 
 Tout d'abord, nous vérifions que nous avons les données du compte nécessaires avant d'aller plus loin. Ensuite, nous utilisons la fonction `updateElement()` que nous avons créée plus tôt pour mettre à jour le HTML.
 
-> Pour rendre l'affichage du solde plus joli, nous utilisons la méthode [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) pour forcer l'affichage de la valeur avec 2 chiffres après la virgule.
+> Pour rendre l'affichage du solde plus joli, nous utilisons la méthode [`toFixed(2)`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) pour forcer l'affichage de la valeur avec 2 chiffres après la virgule.
 
-Nous devons maintenant appeler notre fonction `updateDashboard()` chaque fois que le tableau de bord est chargé. Si vous avez déjà terminé l'[exercice de la leçon 1](../1-template-route/assignment.md), cela devrait être simple, sinon vous pouvez utiliser l'implémentation suivante.
+Nous devons maintenant appeler notre fonction `updateDashboard()` chaque fois que la page du tableau de bord est chargée. Si vous avez déjà terminé l'[exercice de la leçon 1](../1-template-route/assignment.md), cela devrait être simple, sinon vous pouvez utiliser l'implémentation suivante.
 
 Ajoutez ce code à la fin de la fonction `updateRoute()` :
 
@@ -257,7 +257,7 @@ Avec ce changement, chaque fois que la page du tableau de bord est affichée, la
 
 ## Créer dynamiquement des lignes de tableau avec des modèles HTML
 
-Dans la [première leçon](../1-template-route/README.md), nous avons utilisé des modèles HTML avec la méthode [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) pour implémenter la navigation dans notre application. Les modèles peuvent également être plus petits et utilisés pour remplir dynamiquement des parties répétitives d'une page.
+Dans la [première leçon](../1-template-route/README.md), nous avons utilisé des modèles HTML avec la méthode [`appendChild()`](https://developer.mozilla.org/fr/docs/Web/API/Node/appendChild) pour implémenter la navigation dans notre application. Les modèles peuvent également être plus petits et utilisés pour remplir dynamiquement des parties répétitives d'une page.
 
 Nous allons utiliser une approche similaire pour afficher la liste des transactions dans le tableau HTML.
 
@@ -308,7 +308,7 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-Ici, nous utilisons la méthode [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) qui crée un nouveau fragment DOM sur lequel nous pouvons travailler, avant de l'attacher finalement à notre tableau HTML.
+Ici, nous utilisons la méthode [`document.createDocumentFragment()`](https://developer.mozilla.org/fr/docs/Web/API/Document/createDocumentFragment) qui crée un nouveau fragment DOM sur lequel nous pouvons travailler, avant de l'attacher finalement à notre tableau HTML.
 
 Il reste encore une chose à faire avant que ce code puisse fonctionner, car notre fonction `updateElement()` prend actuellement en charge uniquement le contenu texte. Modifions un peu son code :
 
@@ -320,18 +320,18 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-Nous utilisons la méthode [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) car elle permet d'attacher soit du texte, soit des [nœuds DOM](https://developer.mozilla.org/docs/Web/API/Node) à un élément parent, ce qui est parfait pour tous nos cas d'utilisation.
-Si vous essayez d'utiliser le compte `test` pour vous connecter, vous devriez maintenant voir une liste de transactions sur le tableau de bord 🎉.
+Nous utilisons la méthode [`append()`](https://developer.mozilla.org/fr/docs/Web/API/ParentNode/append) car elle permet d'attacher soit du texte, soit des [nœuds DOM](https://developer.mozilla.org/fr/docs/Web/API/Node) à un élément parent, ce qui est parfait pour tous nos cas d'utilisation.
+Si vous essayez de vous connecter avec le compte `test`, vous devriez maintenant voir une liste de transactions sur le tableau de bord 🎉.
 
 ---
 
 ## 🚀 Défi
 
-Travaillez ensemble pour rendre la page du tableau de bord semblable à une véritable application bancaire. Si vous avez déjà stylisé votre application, essayez d'utiliser [les media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) pour créer un [design responsive](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) qui fonctionne bien à la fois sur les appareils de bureau et mobiles.
+Travaillez ensemble pour faire en sorte que la page du tableau de bord ressemble à une véritable application bancaire. Si vous avez déjà stylisé votre application, essayez d'utiliser des [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) pour créer un [design responsive](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) qui fonctionne bien à la fois sur les appareils de bureau et mobiles.
 
 Voici un exemple de page de tableau de bord stylisée :
 
-![Capture d'écran d'un exemple de résultat du tableau de bord après stylisation](../../../../7-bank-project/images/screen2.png)
+![Capture d'écran d'un exemple de résultat du tableau de bord après stylisation](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.fr.png)
 
 ## Quiz après le cours
 
@@ -341,5 +341,7 @@ Voici un exemple de page de tableau de bord stylisée :
 
 [Refactorisez et commentez votre code](assignment.md)
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-24T13:06:41+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T16:37:30+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "pl"
 }
@@ -15,11 +15,11 @@ _Jak fajnie byłoby, gdyby rekruter poprosił o Twoje CV, a Ty wysłałbyś mu l
 
 Po wykonaniu tego zadania nauczysz się:
 
-- Tworzyć stronę internetową prezentującą Twoje CV
+- Tworzyć stronę internetową, aby zaprezentować swoje CV
 
 ### Wymagania wstępne
 
-1. Konto na GitHub. Przejdź na [GitHub](https://github.com/) i załóż konto, jeśli jeszcze go nie masz.
+1. Konto na GitHub. Przejdź do [GitHub](https://github.com/) i załóż konto, jeśli jeszcze go nie masz.
 
 ## Kroki
 
@@ -29,13 +29,13 @@ Po wykonaniu tego zadania nauczysz się:
 
 Kliknij link `creating a new file`, wpisz nazwę `index.html` i wybierz przycisk `Commit new file`.
 
-![Utwórz nowy plik na github.com](../../../../8-code-editor/images/new-file-github.com.png)
+![Utwórz nowy plik na github.com](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.pl.png)
 
 **Krok 3:** Otwórz [VSCode.dev](https://vscode.dev) i wybierz przycisk `Open Remote Repository`.
 
 Skopiuj adres URL repozytorium, które właśnie utworzyłeś dla swojej strony z CV, i wklej go w polu tekstowym:
 
-_Zamień `your-username` na swoją nazwę użytkownika na GitHub._
+_Zamień `your-username` na swoją nazwę użytkownika GitHub._
 
 ```
 https://github.com/your-username/my-resume
@@ -43,7 +43,7 @@ https://github.com/your-username/my-resume
 
 ✅ Jeśli wszystko się udało, zobaczysz swój projekt oraz plik index.html otwarty w edytorze tekstu w przeglądarce.
 
-![Utwórz nowy plik](../../../../8-code-editor/images/project-on-vscode.dev.png)
+![Utwórz nowy plik](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.pl.png)
 
 **Krok 4:** Otwórz plik `index.html`, wklej poniższy kod w obszarze kodu i zapisz.
 
@@ -72,15 +72,15 @@ https://github.com/your-username/my-resume
                             <!-- dane kontaktowe, w tym media społecznościowe -->
                             <p>
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <a href="mailto:username@domain.top-level domain">Wpisz swój e-mail tutaj</a>
+                                <a href="mailto:username@domain.top-level domain">Wpisz tutaj swój e-mail</a>
                             </p>
                             <p>
                                 <i class="fab fa-github" aria-hidden="true"></i>
-                                <a href="github.com/yourGitHubUsername">Wpisz swoją nazwę użytkownika tutaj!</a>
+                                <a href="github.com/yourGitHubUsername">Wpisz tutaj swoją nazwę użytkownika!</a>
                             </p>
                             <p>
                                 <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                <a href="linkedin.com/yourLinkedInUsername">Wpisz swoją nazwę użytkownika tutaj!</a>
+                                <a href="linkedin.com/yourLinkedInUsername">Wpisz tutaj swoją nazwę użytkownika!</a>
                             </p>
                         </section>
                         <section>
@@ -98,7 +98,7 @@ https://github.com/your-username/my-resume
                             <!-- Twoje wykształcenie -->
                             <h3>Wpisz tutaj swój kierunek studiów!</h3>
                             <p>
-                                Wpisz tutaj nazwę instytucji!
+                                Wpisz tutaj nazwę swojej uczelni!
                             </p>
                             <p>
                                 Data rozpoczęcia - Data zakończenia
@@ -109,7 +109,7 @@ https://github.com/your-username/my-resume
                         <section>
                             <h2>O MNIE</h2>
                             <!-- informacje o Tobie -->
-                            <p>Wpisz kilka słów o sobie!</p>
+                            <p>Wpisz tutaj kilka słów o sobie!</p>
                         </section>
                         <section>
                             <h2>DOŚWIADCZENIE ZAWODOWE</h2>
@@ -219,13 +219,13 @@ Dodaj szczegóły swojego CV, zastępując _tekst zastępczy_ w kodzie HTML.
 
 **Krok 7:** Zainstaluj rozszerzenie `Codeswing`, aby zobaczyć stronę z CV w obszarze kodu.
 
-Kliknij ikonę _`Extensions`_ na pasku aktywności i wpisz Codeswing. Kliknij _niebieski przycisk instalacji_ na rozszerzonym pasku aktywności, aby zainstalować, lub użyj przycisku instalacji, który pojawi się w obszarze kodu po wybraniu rozszerzenia. Po zainstalowaniu rozszerzenia zobaczysz zmiany w swoim projekcie 😃
+Kliknij ikonę _`Extensions`_ na pasku aktywności i wpisz Codeswing. Kliknij _niebieski przycisk instalacji_ na rozszerzonym pasku aktywności, aby zainstalować, lub użyj przycisku instalacji, który pojawi się w obszarze kodu po wybraniu rozszerzenia, aby załadować dodatkowe informacje. Natychmiast po zainstalowaniu rozszerzenia zobaczysz zmiany w swoim projekcie 😃
 
 ![Zainstaluj rozszerzenia](../../../../8-code-editor/images/install-extension.gif)
 
 Tak będzie wyglądał Twój ekran po zainstalowaniu rozszerzenia.
 
-![Rozszerzenie Codeswing w akcji](../../../../8-code-editor/images/after-codeswing-extension-pb.png)
+![Rozszerzenie Codeswing w akcji](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.pl.png)
 
 Jeśli jesteś zadowolony ze zmian, które wprowadziłeś, najedź na folder `Changes` i kliknij przycisk `+`, aby dodać zmiany.
 
@@ -235,11 +235,13 @@ Gratulacje 🎉 Właśnie stworzyłeś stronę internetową z CV za pomocą vsco
 
 ## 🚀 Wyzwanie
 
-Otwórz zdalne repozytorium, w którym masz uprawnienia do wprowadzania zmian, i zaktualizuj kilka plików. Następnie spróbuj utworzyć nową gałąź ze swoimi zmianami i wykonaj Pull Request.
+Otwórz zdalne repozytorium, do którego masz uprawnienia do wprowadzania zmian, i zaktualizuj kilka plików. Następnie spróbuj utworzyć nową gałąź ze swoimi zmianami i wykonaj Pull Request.
 
 ## Przegląd i samodzielna nauka
 
 Przeczytaj więcej o [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) i jego innych funkcjach.
 
+---
+
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego języku źródłowym powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

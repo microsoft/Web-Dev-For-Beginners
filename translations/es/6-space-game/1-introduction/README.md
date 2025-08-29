@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-24T12:39:59+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T13:56:14+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "es"
 }
 -->
-# Construir un Juego Espacial Parte 1: Introducción
+# Construye un Juego Espacial Parte 1: Introducción
 
 ![video](../../../../6-space-game/images/pewpew.gif)
 
@@ -17,30 +17,30 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Herencia y Composición en el desarrollo de juegos
 
-En lecciones anteriores, no había mucha necesidad de preocuparse por la arquitectura de diseño de las aplicaciones que construiste, ya que los proyectos eran muy pequeños en alcance. Sin embargo, cuando tus aplicaciones crecen en tamaño y alcance, las decisiones arquitectónicas se vuelven una preocupación mayor. Hay dos enfoques principales para crear aplicaciones más grandes en JavaScript: *composición* o *herencia*. Ambos tienen ventajas y desventajas, pero vamos a explicarlos en el contexto de un juego.
+En lecciones anteriores, no era necesario preocuparse mucho por la arquitectura de diseño de las aplicaciones que construiste, ya que los proyectos eran muy pequeños en alcance. Sin embargo, cuando tus aplicaciones crecen en tamaño y alcance, las decisiones arquitectónicas se vuelven una preocupación mayor. Hay dos enfoques principales para crear aplicaciones más grandes en JavaScript: *composición* o *herencia*. Ambos tienen ventajas y desventajas, pero expliquémoslos en el contexto de un juego.
 
-✅ Uno de los libros de programación más famosos jamás escritos tiene que ver con [patrones de diseño](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Uno de los libros de programación más famosos jamás escritos trata sobre [patrones de diseño](https://en.wikipedia.org/wiki/Design_Patterns).
 
 En un juego tienes `objetos del juego`, que son objetos que existen en una pantalla. Esto significa que tienen una ubicación en un sistema de coordenadas cartesianas, caracterizado por tener una coordenada `x` y `y`. A medida que desarrollas un juego, notarás que todos tus objetos del juego tienen una propiedad estándar, común para cada juego que creas, a saber, elementos que son:
 
-- **basados en ubicación** La mayoría, si no todos, los elementos del juego están basados en ubicación. Esto significa que tienen una ubicación, un `x` y un `y`.
-- **móviles** Estos son objetos que pueden moverse a una nueva ubicación. Normalmente son un héroe, un monstruo o un NPC (un personaje no jugador), pero no, por ejemplo, un objeto estático como un árbol.
-- **autodestructivos** Estos objetos solo existen por un período de tiempo determinado antes de prepararse para su eliminación. Por lo general, esto se representa mediante un booleano `muerto` o `destruido` que indica al motor del juego que este objeto ya no debe ser renderizado.
-- **tiempo de espera** 'Tiempo de espera' es una propiedad típica entre objetos de corta duración. Un ejemplo típico es un texto o efecto gráfico como una explosión que solo debe verse durante unos pocos milisegundos.
+- **basados en ubicación**: La mayoría, si no todos, los elementos del juego están basados en ubicación. Esto significa que tienen una ubicación, un `x` y un `y`.
+- **móviles**: Son objetos que pueden moverse a una nueva ubicación. Normalmente, esto incluye a un héroe, un monstruo o un NPC (personaje no jugable), pero no, por ejemplo, a un objeto estático como un árbol.
+- **autodestructibles**: Estos objetos solo existen por un período de tiempo determinado antes de prepararse para su eliminación. Generalmente, esto se representa con un booleano `muerto` o `destruido` que indica al motor del juego que este objeto ya no debe renderizarse.
+- **con enfriamiento**: El 'enfriamiento' es una propiedad típica entre los objetos de corta duración. Un ejemplo típico es un texto o un efecto gráfico como una explosión que solo debe verse durante unos pocos milisegundos.
 
 ✅ Piensa en un juego como Pac-Man. ¿Puedes identificar los cuatro tipos de objetos mencionados anteriormente en este juego?
 
 ### Expresando comportamiento
 
-Todo lo que describimos anteriormente son comportamientos que los objetos del juego pueden tener. Entonces, ¿cómo codificamos eso? Podemos expresar este comportamiento como métodos asociados a clases u objetos.
+Todo lo que describimos anteriormente son comportamientos que los objetos del juego pueden tener. Entonces, ¿cómo los codificamos? Podemos expresar este comportamiento como métodos asociados a clases u objetos.
 
 **Clases**
 
-La idea es usar `clases` junto con `herencia` para lograr agregar un cierto comportamiento a una clase.
+La idea es usar `clases` junto con `herencia` para agregar un cierto comportamiento a una clase.
 
-✅ La herencia es un concepto importante para entender. Aprende más en [el artículo de MDN sobre herencia](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+✅ La herencia es un concepto importante de entender. Aprende más en el [artículo de MDN sobre herencia](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Expresado en código, un objeto del juego típicamente puede verse así:
+Expresado en código, un objeto del juego puede verse típicamente así:
 
 ```javascript
 
@@ -88,11 +88,11 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Tómate unos minutos para imaginar un héroe de Pac-Man (Inky, Pinky o Blinky, por ejemplo) y cómo se escribiría en JavaScript.
+✅ Tómate unos minutos para imaginar cómo sería un héroe de Pac-Man (Inky, Pinky o Blinky, por ejemplo) escrito en JavaScript.
 
 **Composición**
 
-Una forma diferente de manejar la herencia de objetos es utilizando *Composición*. Entonces, los objetos expresan su comportamiento de esta manera:
+Otra forma de manejar la herencia de objetos es mediante la *Composición*. En este caso, los objetos expresan su comportamiento de esta manera:
 
 ```javascript
 //create a constant gameObject
@@ -149,13 +149,13 @@ Otro patrón común en el desarrollo de juegos aborda el problema de manejar la 
 
 ✅ Pub/Sub significa 'publicar-suscribirse'
 
-Este patrón aborda la idea de que las partes dispares de tu aplicación no deberían conocerse entre sí. ¿Por qué es eso? Hace que sea mucho más fácil ver lo que está sucediendo en general si varias partes están separadas. También facilita cambiar repentinamente el comportamiento si es necesario. ¿Cómo logramos esto? Lo hacemos estableciendo algunos conceptos:
+Este patrón aborda la idea de que las partes dispersas de tu aplicación no deberían conocerse entre sí. ¿Por qué? Hace que sea mucho más fácil entender lo que está sucediendo en general si las diversas partes están separadas. También facilita cambiar el comportamiento de repente si es necesario. ¿Cómo logramos esto? Lo hacemos estableciendo algunos conceptos:
 
 - **mensaje**: Un mensaje suele ser una cadena de texto acompañada de una carga útil opcional (un dato que aclara de qué trata el mensaje). Un mensaje típico en un juego puede ser `KEY_PRESSED_ENTER`.
 - **publicador**: Este elemento *publica* un mensaje y lo envía a todos los suscriptores.
 - **suscriptor**: Este elemento *escucha* mensajes específicos y realiza alguna tarea como resultado de recibir este mensaje, como disparar un láser.
 
-La implementación es bastante pequeña en tamaño, pero es un patrón muy poderoso. Aquí está cómo puede implementarse:
+La implementación es bastante pequeña en tamaño, pero es un patrón muy poderoso. Así es como se puede implementar:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Arriba conectamos un evento de teclado, `ArrowLeft` y enviamos el mensaje `HERO_MOVE_LEFT`. Escuchamos ese mensaje y movemos al `hero` como resultado. La fortaleza de este patrón es que el listener del evento y el héroe no se conocen entre sí. Puedes reasignar la tecla `ArrowLeft` a la tecla `A`. Además, sería posible hacer algo completamente diferente en `ArrowLeft` haciendo algunos cambios en la función `on` del eventEmitter:
+En el ejemplo anterior conectamos un evento de teclado, `ArrowLeft`, y enviamos el mensaje `HERO_MOVE_LEFT`. Escuchamos ese mensaje y movemos al `héroe` como resultado. La fortaleza de este patrón es que el listener del evento y el héroe no se conocen entre sí. Puedes reasignar la tecla `ArrowLeft` a la tecla `A`. Además, sería posible hacer algo completamente diferente con `ArrowLeft` haciendo unos pocos cambios en la función `on` del eventEmitter:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,19 +212,19 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-A medida que las cosas se complican cuando tu juego crece, este patrón mantiene la misma complejidad y tu código permanece limpio. Realmente se recomienda adoptar este patrón.
+A medida que las cosas se complican cuando tu juego crece, este patrón mantiene la misma complejidad y tu código se mantiene limpio. Es muy recomendable adoptar este patrón.
 
 ---
 
 ## 🚀 Desafío
 
-Piensa en cómo el patrón pub-sub puede mejorar un juego. ¿Qué partes deberían emitir eventos y cómo debería reaccionar el juego ante ellos? Ahora es tu oportunidad de ser creativo, pensando en un nuevo juego y cómo podrían comportarse sus partes.
+Piensa en cómo el patrón pub-sub puede mejorar un juego. ¿Qué partes deberían emitir eventos y cómo debería reaccionar el juego a ellos? Ahora es tu oportunidad de ser creativo, pensando en un nuevo juego y cómo podrían comportarse sus partes.
 
 ## Cuestionario Posterior a la Clase
 
 [Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/web/quiz/30)
 
-## Repaso y Estudio Personal
+## Revisión y Autoestudio
 
 Aprende más sobre Pub/Sub [leyendo sobre ello](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
@@ -232,5 +232,7 @@ Aprende más sobre Pub/Sub [leyendo sobre ello](https://docs.microsoft.com/azure
 
 [Diseña un juego](assignment.md)
 
+---
+
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

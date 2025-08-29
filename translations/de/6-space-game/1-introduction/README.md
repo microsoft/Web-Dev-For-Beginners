@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-24T12:40:15+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T14:12:42+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "de"
 }
@@ -17,30 +17,30 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Vererbung und Komposition in der Spieleentwicklung
 
-In den vorherigen Lektionen war es nicht notwendig, sich Gedanken über die Architektur der Apps zu machen, da die Projekte sehr klein waren. Wenn jedoch deine Anwendungen größer werden, werden architektonische Entscheidungen immer wichtiger. Es gibt zwei Hauptansätze, um größere Anwendungen in JavaScript zu erstellen: *Komposition* oder *Vererbung*. Beide haben Vor- und Nachteile, aber wir erklären sie im Kontext eines Spiels.
+In früheren Lektionen war es nicht notwendig, sich viele Gedanken über die Architektur der Apps zu machen, die du erstellt hast, da die Projekte sehr klein waren. Wenn jedoch deine Anwendungen an Größe und Umfang zunehmen, werden architektonische Entscheidungen immer wichtiger. Es gibt zwei Hauptansätze, um größere Anwendungen in JavaScript zu erstellen: *Komposition* oder *Vererbung*. Beide haben Vor- und Nachteile, aber lass uns diese Ansätze im Kontext eines Spiels erklären.
 
-✅ Eines der bekanntesten Programmierbücher aller Zeiten beschäftigt sich mit [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Eines der bekanntesten Bücher über Programmierung beschäftigt sich mit [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns).
 
-In einem Spiel gibt es `Spielobjekte`, die Objekte sind, die auf einem Bildschirm existieren. Das bedeutet, dass sie eine Position in einem kartesischen Koordinatensystem haben, charakterisiert durch `x`- und `y`-Koordinaten. Während du ein Spiel entwickelst, wirst du feststellen, dass alle deine Spielobjekte eine Standard-Eigenschaft haben, die für jedes Spiel, das du erstellst, gleich ist. Diese Elemente sind:
+In einem Spiel gibt es `Spielobjekte`, die Objekte sind, die auf einem Bildschirm existieren. Das bedeutet, dass sie eine Position in einem kartesischen Koordinatensystem haben, gekennzeichnet durch `x`- und `y`-Koordinaten. Während du ein Spiel entwickelst, wirst du feststellen, dass alle deine Spielobjekte eine Standard-Eigenschaft haben, die für jedes Spiel, das du erstellst, gleich ist. Diese Elemente sind:
 
-- **positionsbasiert** Die meisten, wenn nicht alle, Spielelemente sind positionsbasiert. Das bedeutet, dass sie eine Position haben, ein `x` und ein `y`.
-- **beweglich** Dies sind Objekte, die sich an eine neue Position bewegen können. Typischerweise handelt es sich um einen Helden, ein Monster oder einen NPC (einen Nicht-Spieler-Charakter), aber nicht z. B. um ein statisches Objekt wie einen Baum.
-- **selbstzerstörend** Diese Objekte existieren nur für eine bestimmte Zeit, bevor sie sich selbst zur Löschung vorbereiten. Dies wird normalerweise durch ein `dead`- oder `destroyed`-Boolean dargestellt, das der Spiel-Engine signalisiert, dass dieses Objekt nicht mehr gerendert werden soll.
+- **positionsbasiert** Die meisten, wenn nicht alle, Spielelemente basieren auf einer Position. Das bedeutet, dass sie eine Position haben, ein `x` und ein `y`.
+- **beweglich** Dies sind Objekte, die sich an eine neue Position bewegen können. Typischerweise handelt es sich dabei um einen Helden, ein Monster oder einen NPC (einen Nicht-Spieler-Charakter), aber nicht um ein statisches Objekt wie einen Baum.
+- **selbstzerstörend** Diese Objekte existieren nur für einen bestimmten Zeitraum, bevor sie sich selbst zur Löschung vorbereiten. Dies wird normalerweise durch einen `dead`- oder `destroyed`-Boolean dargestellt, der der Spiel-Engine signalisiert, dass dieses Objekt nicht mehr gerendert werden soll.
 - **Abklingzeit** 'Abklingzeit' ist eine typische Eigenschaft von kurzlebigen Objekten. Ein typisches Beispiel ist ein Textstück oder ein grafischer Effekt wie eine Explosion, die nur für ein paar Millisekunden sichtbar sein soll.
 
 ✅ Denke an ein Spiel wie Pac-Man. Kannst du die vier oben genannten Objekttypen in diesem Spiel identifizieren?
 
 ### Verhalten ausdrücken
 
-Alles, was wir oben beschrieben haben, sind Verhaltensweisen, die Spielobjekte haben können. Aber wie kodieren wir diese? Wir können dieses Verhalten als Methoden ausdrücken, die entweder Klassen oder Objekten zugeordnet sind.
+Alles, was wir oben beschrieben haben, sind Verhaltensweisen, die Spielobjekte haben können. Wie kodieren wir diese? Wir können dieses Verhalten als Methoden ausdrücken, die entweder Klassen oder Objekten zugeordnet sind.
 
 **Klassen**
 
 Die Idee ist, `Klassen` in Verbindung mit `Vererbung` zu verwenden, um einer Klasse ein bestimmtes Verhalten hinzuzufügen.
 
-✅ Vererbung ist ein wichtiges Konzept, das es zu verstehen gilt. Erfahre mehr im [MDN-Artikel über Vererbung](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+✅ Vererbung ist ein wichtiges Konzept, das du verstehen solltest. Erfahre mehr im [MDN-Artikel über Vererbung](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-In Code ausgedrückt, könnte ein Spielobjekt typischerweise so aussehen:
+In Code ausgedrückt könnte ein Spielobjekt typischerweise so aussehen:
 
 ```javascript
 
@@ -88,11 +88,11 @@ hero.moveTo(5,5);
 const tree = new Tree();
 ```
 
-✅ Nimm dir ein paar Minuten Zeit, um dir einen Pac-Man-Helden (z. B. Inky, Pinky oder Blinky) vorzustellen und wie er in JavaScript geschrieben werden könnte.
+✅ Nimm dir ein paar Minuten Zeit, um dir einen Pac-Man-Helden (zum Beispiel Inky, Pinky oder Blinky) vorzustellen und wie er in JavaScript geschrieben werden könnte.
 
 **Komposition**
 
-Ein anderer Ansatz zur Handhabung von Objektvererbung ist die Verwendung von *Komposition*. Dabei drücken Objekte ihr Verhalten so aus:
+Ein anderer Ansatz zur Handhabung von Objektvererbung ist die Verwendung von *Komposition*. Dabei drücken Objekte ihr Verhalten wie folgt aus:
 
 ```javascript
 //create a constant gameObject
@@ -143,19 +143,19 @@ Es liegt an dir, welches Muster du wählst. JavaScript unterstützt beide Paradi
 
 --
 
-Ein weiteres Muster, das in der Spieleentwicklung häufig vorkommt, befasst sich mit der Benutzererfahrung und der Leistung des Spiels.
+Ein weiteres Muster, das in der Spieleentwicklung häufig vorkommt, befasst sich mit der Handhabung der Benutzererfahrung und der Leistung des Spiels.
 
 ## Pub/Sub-Muster
 
 ✅ Pub/Sub steht für 'Publish-Subscribe' (Veröffentlichen-Abonnieren)
 
-Dieses Muster behandelt die Idee, dass die verschiedenen Teile deiner Anwendung nichts voneinander wissen sollten. Warum? Es macht es viel einfacher, den Überblick zu behalten, wenn die verschiedenen Teile getrennt sind. Außerdem wird es einfacher, das Verhalten bei Bedarf plötzlich zu ändern. Wie erreichen wir das? Indem wir einige Konzepte einführen:
+Dieses Muster behandelt die Idee, dass die verschiedenen Teile deiner Anwendung nichts voneinander wissen sollten. Warum ist das so? Es macht es viel einfacher, den Überblick zu behalten, wenn die verschiedenen Teile getrennt sind. Außerdem wird es einfacher, das Verhalten plötzlich zu ändern, wenn es nötig ist. Wie erreichen wir das? Indem wir einige Konzepte einführen:
 
 - **Nachricht**: Eine Nachricht ist normalerweise ein Textstring, begleitet von einer optionalen Nutzlast (ein Datenstück, das klärt, worum es bei der Nachricht geht). Eine typische Nachricht in einem Spiel könnte `KEY_PRESSED_ENTER` sein.
 - **Publisher**: Dieses Element *veröffentlicht* eine Nachricht und sendet sie an alle Abonnenten.
-- **Subscriber**: Dieses Element *hört* auf bestimmte Nachrichten und führt als Reaktion auf den Empfang dieser Nachricht eine Aufgabe aus, z. B. das Abfeuern eines Lasers.
+- **Subscriber**: Dieses Element *hört* auf bestimmte Nachrichten und führt eine Aufgabe aus, wenn es diese Nachricht erhält, wie zum Beispiel das Abfeuern eines Lasers.
 
-Die Implementierung ist recht klein, aber es ist ein sehr mächtiges Muster. So kann es implementiert werden:
+Die Implementierung ist recht klein, aber es ist ein sehr mächtiges Muster. So könnte es implementiert werden:
 
 ```javascript
 //set up an EventEmitter class that contains listeners
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Oben verbinden wir ein Tastaturereignis, `ArrowLeft`, und senden die Nachricht `HERO_MOVE_LEFT`. Wir hören auf diese Nachricht und bewegen den `Helden` als Ergebnis. Die Stärke dieses Musters liegt darin, dass der Event-Listener und der Held nichts voneinander wissen. Du kannst `ArrowLeft` auf die Taste `A` umlegen. Außerdem wäre es möglich, bei `ArrowLeft` etwas völlig anderes zu tun, indem du ein paar Änderungen an der `on`-Funktion des EventEmitters vornimmst:
+Oben verbinden wir ein Tastaturereignis, `ArrowLeft`, und senden die Nachricht `HERO_MOVE_LEFT`. Wir hören auf diese Nachricht und bewegen den `Helden` als Ergebnis. Die Stärke dieses Musters liegt darin, dass der Event-Listener und der Held nichts voneinander wissen. Du kannst `ArrowLeft` auf die `A`-Taste umlegen. Außerdem wäre es möglich, etwas völlig anderes bei `ArrowLeft` zu tun, indem du ein paar Änderungen an der `on`-Funktion des EventEmitters vornimmst:
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -212,19 +212,19 @@ eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
 });
 ```
 
-Wenn dein Spiel wächst und komplexer wird, bleibt dieses Muster gleich in seiner Komplexität und dein Code bleibt sauber. Es wird wirklich empfohlen, dieses Muster zu übernehmen.
+Wenn dein Spiel wächst und komplexer wird, bleibt dieses Muster gleichbleibend einfach und dein Code bleibt sauber. Es wird wirklich empfohlen, dieses Muster zu übernehmen.
 
 ---
 
 ## 🚀 Herausforderung
 
-Überlege, wie das Pub-Sub-Muster ein Spiel verbessern kann. Welche Teile sollten Ereignisse auslösen, und wie sollte das Spiel darauf reagieren? Jetzt hast du die Chance, kreativ zu werden und dir ein neues Spiel auszudenken, sowie das Verhalten seiner Teile zu planen.
+Überlege, wie das Pub-Sub-Muster ein Spiel verbessern kann. Welche Teile sollten Ereignisse auslösen, und wie sollte das Spiel darauf reagieren? Jetzt hast du die Chance, kreativ zu werden, dir ein neues Spiel auszudenken und zu überlegen, wie sich dessen Teile verhalten könnten.
 
 ## Quiz nach der Vorlesung
 
 [Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/30)
 
-## Rückblick & Selbststudium
+## Überprüfung & Selbststudium
 
 Erfahre mehr über Pub/Sub, indem du [darüber liest](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
@@ -232,5 +232,7 @@ Erfahre mehr über Pub/Sub, indem du [darüber liest](https://docs.microsoft.com
 
 [Entwirf ein Spiel](assignment.md)
 
+---
+
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

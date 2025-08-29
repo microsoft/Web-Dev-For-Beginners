@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3f7f87871312cf6cc12662da7d973182",
-  "translation_date": "2025-08-24T12:18:40+00:00",
+  "original_hash": "9029f96b0e034839c1799f4595e4bb66",
+  "translation_date": "2025-08-29T16:15:24+00:00",
   "source_file": "2-js-basics/4-arrays-loops/README.md",
   "language_code": "pt"
 }
 -->
 # Fundamentos de JavaScript: Arrays e Ciclos
 
-![Fundamentos de JavaScript - Arrays](../../../../sketchnotes/webdev101-js-arrays.png)
+![Fundamentos de JavaScript - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a294558d0e4302e448d193f8ad7495cc407539cc81f1afe904b470.pt.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Questionário Pré-Aula
@@ -27,7 +27,7 @@ Esta lição aborda os fundamentos do JavaScript, a linguagem que proporciona in
 
 ## Arrays
 
-Trabalhar com dados é uma tarefa comum em qualquer linguagem, e torna-se muito mais fácil quando os dados estão organizados num formato estrutural, como arrays. Com arrays, os dados são armazenados numa estrutura semelhante a uma lista. Uma grande vantagem dos arrays é que podes armazenar diferentes tipos de dados num único array.
+Trabalhar com dados é uma tarefa comum em qualquer linguagem, e é muito mais fácil quando os dados estão organizados num formato estrutural, como arrays. Com arrays, os dados são armazenados numa estrutura semelhante a uma lista. Uma grande vantagem dos arrays é que podes armazenar diferentes tipos de dados num único array.
 
 ✅ Arrays estão por todo o lado! Consegues pensar num exemplo da vida real de um array, como um conjunto de painéis solares?
 
@@ -43,7 +43,7 @@ Este é um array vazio, mas os arrays podem ser declarados já preenchidos com d
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
 ```
 
-Os valores do array são atribuídos a um valor único chamado **índice**, um número inteiro que é atribuído com base na sua distância do início do array. No exemplo acima, o valor de string "Chocolate" tem um índice de 0, e o índice de "Rocky Road" é 4. Usa o índice com colchetes para recuperar, alterar ou inserir valores no array.
+Os valores do array são atribuídos a um valor único chamado **índice**, um número inteiro que é atribuído com base na sua distância desde o início do array. No exemplo acima, o valor de string "Chocolate" tem um índice de 0, e o índice de "Rocky Road" é 4. Usa o índice com colchetes para recuperar, alterar ou inserir valores no array.
 
 ✅ Surpreende-te que os arrays começam no índice zero? Em algumas linguagens de programação, os índices começam em 1. Há uma história interessante sobre isto, que podes [ler na Wikipedia](https://en.wikipedia.org/wiki/Zero-based_numbering).
 
@@ -64,9 +64,9 @@ E podes inserir um novo valor num índice específico assim:
 iceCreamFlavors[5] = "Cookie Dough"; //Added "Cookie Dough"
 ```
 
-✅ Uma forma mais comum de adicionar valores a um array é utilizando operadores como array.push()
+✅ Uma forma mais comum de adicionar valores a um array é utilizando operadores de array como array.push()
 
-Para descobrir quantos itens existem num array, usa a propriedade `length`.
+Para descobrir quantos itens estão num array, usa a propriedade `length`.
 
 ```javascript
 let iceCreamFlavors = ["Chocolate", "Strawberry", "Vanilla", "Pistachio", "Rocky Road"];
@@ -84,7 +84,7 @@ Os ciclos permitem-nos realizar tarefas repetitivas ou **iterativas**, e podem p
 O ciclo `for` requer 3 partes para iterar:
 - `counter` Uma variável que é tipicamente inicializada com um número que conta o número de iterações
 - `condition` Expressão que utiliza operadores de comparação para fazer o ciclo parar quando for `false`
-- `iteration-expression` Executa no final de cada iteração, normalmente usado para alterar o valor do contador
+- `iteration-expression` Executa no final de cada iteração, tipicamente usado para alterar o valor do contador
   
 ```javascript
 // Counting up to 10
@@ -122,7 +122,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 } //Ends when all flavors are printed
 ```
 
-✅ Experimenta iterar sobre um array da tua própria criação no console do navegador.
+✅ Experimenta iterar sobre um array da tua própria criação no console do navegador. 
 
 ---
 
@@ -141,5 +141,7 @@ Os arrays em JavaScript têm muitos métodos associados a eles, que são extrema
 
 [Iterar um Array](assignment.md)
 
+---
+
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original no seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante ter em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

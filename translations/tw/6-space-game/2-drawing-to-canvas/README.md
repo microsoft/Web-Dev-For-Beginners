@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-23T22:58:10+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T15:22:21+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "tw"
 }
@@ -15,11 +15,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Canvas
 
-Canvas 是一個 HTML 元素，預設沒有內容；它是一個空白的畫布。你需要透過繪製來添加內容。
+Canvas 是一個 HTML 元素，預設沒有任何內容；它是一個空白的畫布。你需要透過在上面繪圖來添加內容。
 
-✅ 在 MDN 上閱讀 [更多關於 Canvas API 的資訊](https://developer.mozilla.org/docs/Web/API/Canvas_API)。
+✅ 在 MDN 上閱讀 [更多關於 Canvas API 的內容](https://developer.mozilla.org/docs/Web/API/Canvas_API)。
 
-以下是它通常在頁面中宣告的方式：
+以下是它通常在頁面 body 中的宣告方式：
 
 ```html
 <canvas id="myCanvas" width="200" height="100"></canvas>
@@ -27,7 +27,7 @@ Canvas 是一個 HTML 元素，預設沒有內容；它是一個空白的畫布�
 
 上面我們設定了 `id`、`width` 和 `height`。
 
-- `id`：設定這個值以便在需要與其互動時取得引用。
+- `id`：設定這個值以便在需要與其互動時取得參考。
 - `width`：這是元素的寬度。
 - `height`：這是元素的高度。
 
@@ -35,14 +35,14 @@ Canvas 是一個 HTML 元素，預設沒有內容；它是一個空白的畫布�
 
 Canvas 使用笛卡爾座標系統來繪製物件。因此，它使用 x 軸和 y 軸來表示物件的位置。位置 `0,0` 是左上角，而右下角則是你設定的 Canvas 的寬度和高度。
 
-![Canvas 的網格](../../../../6-space-game/2-drawing-to-canvas/canvas_grid.png)  
+![Canvas 的網格](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.tw.png)  
 > 圖片來源：[MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-要在 Canvas 元素上繪製，你需要完成以下步驟：
+要在 Canvas 元素上繪圖，你需要完成以下步驟：
 
-1. **取得 Canvas 元素的引用**。
-2. **取得 Canvas 元素上的 Context 元素的引用**。
-3. **使用 Context 元素執行繪製操作**。
+1. **取得 Canvas 元素的參考**。
+2. **取得位於 Canvas 元素上的 Context 元素的參考**。
+3. **使用 Context 元素執行繪圖操作**。
 
 上述步驟的程式碼通常如下所示：
 
@@ -65,17 +65,17 @@ ctx.fillRect(0,0, 200, 200) // x,y,width, height
 
 使用 Canvas API，你可以繪製各種內容，例如：
 
-- **幾何圖形**，我們已展示如何繪製矩形，但還有更多可以繪製的內容。
-- **文字**，你可以使用任何字體和顏色繪製文字。
+- **幾何圖形**，我們已經展示了如何繪製矩形，但還有更多可以繪製的內容。
+- **文字**，你可以繪製任何字體和顏色的文字。
 - **圖片**，你可以基於圖片資源（例如 .jpg 或 .png）繪製圖片。
 
-✅ 試試看！你已經知道如何繪製矩形，能否嘗試在頁面上繪製一個圓形？看看 CodePen 上一些有趣的 Canvas 繪圖。這裡有一個 [特別令人印象深刻的例子](https://codepen.io/dissimulate/pen/KrAwx)。
+✅ 試試看！你已經知道如何繪製矩形，那麼你能在頁面上繪製一個圓形嗎？看看 CodePen 上一些有趣的 Canvas 繪圖。這裡有一個 [特別令人印象深刻的例子](https://codepen.io/dissimulate/pen/KrAwx)。
 
-## 加載並繪製圖片資源
+## 載入並繪製圖片資源
 
-你可以透過建立一個 `Image` 物件並設定其 `src` 屬性來加載圖片資源。然後，監聽 `load` 事件以確保圖片已準備好使用。程式碼如下：
+你可以透過建立一個 `Image` 物件並設定其 `src` 屬性來載入圖片資源。然後，監聽 `load` 事件以確保圖片已準備好使用。程式碼如下：
 
-### 加載資源
+### 載入資源
 
 ```javascript
 const img = new Image();
@@ -85,9 +85,9 @@ img.onload = () => {
 }
 ```
 
-### 加載資源模式
+### 載入資源模式
 
-建議將上述程式碼包裝在如下結構中，這樣更容易使用，並且只有在圖片完全加載後才嘗試操作它：
+建議將上述程式碼包裝在如下結構中，這樣更容易使用，並且只有在圖片完全載入後才嘗試操作它：
 
 ```javascript
 function loadAsset(path) {
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-要將遊戲資源繪製到螢幕上，程式碼如下：
+要將遊戲資源繪製到螢幕上，程式碼會如下所示：
 
 ```javascript
 async function run() {
@@ -124,23 +124,23 @@ async function run() {
 }
 ```
 
-## 現在是開始建立你的遊戲的時候了
+## 現在是時候開始建立你的遊戲了
 
 ### 要建立什麼
 
-你將建立一個包含 Canvas 元素的網頁。它應該渲染一個黑色螢幕，大小為 `1024*768`。我們已提供兩張圖片：
+你將建立一個包含 Canvas 元素的網頁。它應該渲染一個黑色螢幕，大小為 `1024*768`。我們已經為你提供了兩張圖片：
 
-- 英雄飛船
+- 英雄飛船  
 
-   ![英雄飛船](../../../../6-space-game/2-drawing-to-canvas/solution/assets/player.png)
+   ![英雄飛船](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.tw.png)
 
-- 5*5 怪物
+- 5*5 怪物  
 
-   ![怪物飛船](../../../../6-space-game/2-drawing-to-canvas/solution/assets/enemyShip.png)
+   ![怪物飛船](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.tw.png)
 
 ### 建議的開發步驟
 
-找到在 `your-work` 子資料夾中為你建立的檔案。它應包含以下內容：
+找到在 `your-work` 子資料夾中為你建立的檔案。它應該包含以下內容：
 
 ```bash
 -| assets
@@ -151,31 +151,31 @@ async function run() {
 -| package.json
 ```
 
-在 Visual Studio Code 中打開這個資料夾的副本。你需要設置本地開發環境，最好使用 Visual Studio Code，並安裝 NPM 和 Node。如果你的電腦尚未設置 `npm`，[這裡是設置方法](https://www.npmjs.com/get-npm)。
+在 Visual Studio Code 中打開這個資料夾的副本。你需要設置一個本地開發環境，最好是使用已安裝 NPM 和 Node 的 Visual Studio Code。如果你的電腦上尚未設置 `npm`，[這裡有教學](https://www.npmjs.com/get-npm)。
 
-通過導航到 `your_work` 資料夾來啟動你的專案：
+透過導航到 `your_work` 資料夾來啟動你的專案：
 
 ```bash
 cd your-work
 npm start
 ```
 
-上述指令會在地址 `http://localhost:5000` 上啟動一個 HTTP 伺服器。打開瀏覽器並輸入該地址。現在是一個空白頁面，但很快就會改變。
+上述指令會在地址 `http://localhost:5000` 啟動一個 HTTP 伺服器。打開瀏覽器並輸入該地址。目前它是一個空白頁面，但這將會改變。
 
-> 注意：要在螢幕上看到更改，請刷新瀏覽器。
+> 注意：要在螢幕上看到變更，請重新整理瀏覽器。
 
 ### 添加程式碼
 
-在 `your-work/app.js` 中添加所需程式碼以完成以下內容：
+在 `your-work/app.js` 中添加所需的程式碼來完成以下內容：
 
 1. **繪製**一個黑色背景的 Canvas  
-   > 提示：在 `/app.js` 中適當的 TODO 下添加兩行程式碼，將 `ctx` 元素設置為黑色，並將左上角座標設置為 0,0，高度和寬度等於 Canvas 的大小。
-2. **加載**材質  
-   > 提示：使用 `await loadTexture` 並傳入圖片路徑來添加玩家和敵人圖片。你暫時還看不到它們出現在螢幕上！
-3. **繪製**英雄到螢幕中央的下半部分  
-   > 提示：使用 `drawImage` API 將 heroImg 繪製到螢幕上，座標設置為 `canvas.width / 2 - 45` 和 `canvas.height - canvas.height / 4)`。
-4. **繪製** 5*5 怪物  
-   > 提示：現在你可以取消註解程式碼以在螢幕上繪製敵人。接下來，進入 `createEnemies` 函數並完成它。
+   > 提示：在 `/app.js` 中適當的 TODO 下添加兩行程式碼，將 `ctx` 元素設置為黑色，並將頂部/左側座標設置為 0,0，高度和寬度等於 Canvas 的大小。
+2. **載入**材質  
+   > 提示：使用 `await loadTexture` 並傳入圖片路徑來添加玩家和敵人的圖片。你目前還不會在螢幕上看到它們！
+3. **繪製**英雄在螢幕下半部的中央  
+   > 提示：使用 `drawImage` API 將 heroImg 繪製到螢幕上，設定 `canvas.width / 2 - 45` 和 `canvas.height - canvas.height / 4`。
+4. **繪製** 5*5 的怪物  
+   > 提示：現在你可以取消註解程式碼，將敵人繪製到螢幕上。接下來，前往 `createEnemies` 函數並完成它。
 
    首先，設置一些常數：
 
@@ -186,7 +186,7 @@ npm start
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    然後，建立一個迴圈以將怪物陣列繪製到螢幕上：
+    然後，建立一個迴圈來將怪物陣列繪製到螢幕上：
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {
@@ -198,19 +198,19 @@ npm start
 
 ## 結果
 
-完成的結果應如下所示：
+完成後的結果應如下所示：
 
-![黑色螢幕，中央有英雄和 5*5 怪物](../../../../6-space-game/2-drawing-to-canvas/partI-solution.png)
+![黑色螢幕，包含一個英雄和 5*5 的怪物](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.tw.png)
 
 ## 解答
 
-請先嘗試自己解決，但如果遇到困難，可以查看 [解答](../../../../6-space-game/2-drawing-to-canvas/solution/app.js)。
+請先嘗試自己解決，但如果卡住了，可以查看 [解答](../../../../6-space-game/2-drawing-to-canvas/solution/app.js)。
 
 ---
 
 ## 🚀 挑戰
 
-你已經學習了使用以 2D 為主的 Canvas API；看看 [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API)，並嘗試繪製一個 3D 物件。
+你已經學習了使用以 2D 為主的 Canvas API；現在看看 [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API)，嘗試繪製一個 3D 物件。
 
 ## 課後測驗
 
@@ -218,11 +218,13 @@ npm start
 
 ## 複習與自學
 
-透過 [閱讀相關內容](https://developer.mozilla.org/docs/Web/API/Canvas_API) 來深入了解 Canvas API。
+透過 [閱讀相關內容](https://developer.mozilla.org/docs/Web/API/Canvas_API) 來進一步了解 Canvas API。
 
 ## 作業
 
-[使用 Canvas API](assignment.md)
+[玩轉 Canvas API](assignment.md)
+
+---
 
 **免責聲明**：  
-本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。
+本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原始語言的文件作為權威來源。對於關鍵資訊，建議尋求專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或錯誤解讀概不負責。

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e10f168beac4e7b05e30e0eb5c92bf11",
-  "translation_date": "2025-08-23T23:39:20+00:00",
+  "original_hash": "a7587943d38d095de8613e1b508609f5",
+  "translation_date": "2025-08-29T13:36:23+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "fr"
 }
@@ -41,11 +41,11 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Tous ces champs sont référencés par leur classe CSS, comme vous les avez configurés dans le HTML lors de la leçon précédente.
+Tous ces champs sont référencés par leur classe CSS, comme vous l'avez configuré dans le HTML lors de la leçon précédente.
 
 ### Ajoutez des écouteurs d'événements
 
-Ensuite, ajoutez des écouteurs d'événements au formulaire et au bouton de réinitialisation qui remet le formulaire à zéro, afin que si un utilisateur soumet le formulaire ou clique sur ce bouton, une action se produise. Ajoutez également l'appel pour initialiser l'application en bas du fichier :
+Ensuite, ajoutez des écouteurs d'événements au formulaire et au bouton de réinitialisation qui remet le formulaire à zéro, afin que lorsqu'un utilisateur soumet le formulaire ou clique sur ce bouton, une action se produise. Ajoutez également l'appel pour initialiser l'application en bas du fichier :
 
 ```JavaScript
 form.addEventListener('submit', (e) => handleSubmit(e));
@@ -53,7 +53,7 @@ clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Remarquez la syntaxe abrégée utilisée pour écouter un événement de soumission ou de clic, et comment l'événement est transmis aux fonctions `handleSubmit` ou `reset`. Pouvez-vous écrire l'équivalent de cette syntaxe abrégée dans un format plus long ? Lequel préférez-vous ?
+✅ Remarquez la syntaxe abrégée utilisée pour écouter un événement de soumission ou de clic, et comment l'événement est passé aux fonctions `handleSubmit` ou `reset`. Pouvez-vous écrire l'équivalent de cette syntaxe abrégée dans un format plus long ? Lequel préférez-vous ?
 
 ### Construisez les fonctions `init()` et `reset()` :
 
@@ -93,26 +93,26 @@ function reset(e) {
 
 ```
 
-Dans cette fonction, il y a une logique intéressante. En la lisant, pouvez-vous voir ce qui se passe ?
+Dans cette fonction, il y a une logique intéressante. En la lisant, pouvez-vous comprendre ce qui se passe ?
 
-- Deux constantes `const` sont définies pour vérifier si l'utilisateur a stocké une clé API (`APIKey`) et un code de région dans le stockage local.
-- Si l'une de ces valeurs est nulle, affichez le formulaire en modifiant son style pour qu'il s'affiche en mode 'block'.
-- Masquez les résultats, le chargement et le bouton de réinitialisation, et définissez tout texte d'erreur sur une chaîne vide.
+- Deux `const` sont définis pour vérifier si l'utilisateur a stocké une clé API et un code de région dans le stockage local.
+- Si l'un de ces éléments est nul, affichez le formulaire en modifiant son style pour qu'il soit affiché en mode 'block'.
+- Masquez les résultats, le chargement et le bouton `clearBtn`, et définissez tout texte d'erreur sur une chaîne vide.
 - Si une clé et une région existent, lancez une routine pour :
   - Appeler l'API pour obtenir des données sur l'utilisation du carbone.
   - Masquer la zone des résultats.
   - Masquer le formulaire.
   - Afficher le bouton de réinitialisation.
 
-Avant de continuer, il est utile d'apprendre un concept très important disponible dans les navigateurs : [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage est un moyen pratique de stocker des chaînes de caractères dans le navigateur sous forme de paires `clé-valeur`. Ce type de stockage web peut être manipulé par JavaScript pour gérer des données dans le navigateur. LocalStorage ne s'expire pas, tandis que SessionStorage, un autre type de stockage web, est effacé lorsque le navigateur est fermé. Les différents types de stockage ont leurs avantages et inconvénients.
+Avant de continuer, il est utile d'apprendre un concept très important disponible dans les navigateurs : [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage est un moyen pratique de stocker des chaînes dans le navigateur sous forme de paires `clé-valeur`. Ce type de stockage web peut être manipulé par JavaScript pour gérer des données dans le navigateur. LocalStorage ne s'expire pas, tandis que SessionStorage, un autre type de stockage web, est effacé lorsque le navigateur est fermé. Les différents types de stockage ont leurs avantages et inconvénients.
 
 > Note - votre extension de navigateur a son propre stockage local ; la fenêtre principale du navigateur est une instance différente et se comporte séparément.
 
-Vous définissez votre clé API (`APIKey`) avec une valeur de chaîne, par exemple, et vous pouvez voir qu'elle est définie dans Edge en "inspectant" une page web (vous pouvez faire un clic droit sur un navigateur pour inspecter) et en allant dans l'onglet Applications pour voir le stockage.
+Vous définissez votre clé API pour avoir une valeur de chaîne, par exemple, et vous pouvez voir qu'elle est définie sur Edge en "inspectant" une page web (vous pouvez faire un clic droit sur un navigateur pour inspecter) et en allant dans l'onglet Applications pour voir le stockage.
 
-![Volet de stockage local](../../../../5-browser-extension/2-forms-browsers-local-storage/images/localstorage.png)
+![Volet de stockage local](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.fr.png)
 
-✅ Réfléchissez à des situations où vous NE voudriez PAS stocker certaines données dans LocalStorage. En général, placer des clés API dans LocalStorage est une mauvaise idée ! Pouvez-vous comprendre pourquoi ? Dans notre cas, puisque notre application est purement éducative et ne sera pas déployée dans un magasin d'applications, nous utiliserons cette méthode.
+✅ Réfléchissez aux situations où vous NE voudriez PAS stocker certaines données dans LocalStorage. En général, placer des clés API dans LocalStorage est une mauvaise idée ! Pouvez-vous comprendre pourquoi ? Dans notre cas, puisque notre application est purement éducative et ne sera pas déployée dans un magasin d'applications, nous utiliserons cette méthode.
 
 Remarquez que vous utilisez l'API Web pour manipuler LocalStorage, soit en utilisant `getItem()`, `setItem()`, ou `removeItem()`. C'est largement pris en charge par les navigateurs.
 
@@ -120,7 +120,7 @@ Avant de construire la fonction `displayCarbonUsage()` appelée dans `init()`, c
 
 ### Gérez la soumission du formulaire
 
-Créez une fonction appelée `handleSubmit` qui accepte un argument événementiel `(e)`. Empêchez l'événement de se propager (dans ce cas, nous voulons empêcher le navigateur de se rafraîchir) et appelez une nouvelle fonction, `setUpUser`, en passant les arguments `apiKey.value` et `region.value`. De cette manière, vous utilisez les deux valeurs saisies via le formulaire initial lorsque les champs appropriés sont remplis.
+Créez une fonction appelée `handleSubmit` qui accepte un argument d'événement `(e)`. Empêchez l'événement de se propager (dans ce cas, nous voulons empêcher le navigateur de se rafraîchir) et appelez une nouvelle fonction, `setUpUser`, en passant les arguments `apiKey.value` et `region.value`. De cette manière, vous utilisez les deux valeurs qui sont récupérées via le formulaire initial lorsque les champs appropriés sont remplis.
 
 ```JavaScript
 function handleSubmit(e) {
@@ -129,11 +129,11 @@ function handleSubmit(e) {
 }
 ```
 
-✅ Rafraîchissez votre mémoire - le HTML que vous avez configuré dans la dernière leçon contient deux champs de saisie dont les `values` sont capturées via les constantes que vous avez définies en haut du fichier, et ils sont tous deux `required`, donc le navigateur empêche les utilisateurs de saisir des valeurs nulles.
+✅ Rafraîchissez votre mémoire - le HTML que vous avez configuré dans la dernière leçon contient deux champs d'entrée dont les `values` sont capturées via les `const` que vous avez définies en haut du fichier, et ils sont tous deux `required`, donc le navigateur empêche les utilisateurs d'entrer des valeurs nulles.
 
 ### Configurez l'utilisateur
 
-Passons à la fonction `setUpUser`, où vous définissez les valeurs de stockage local pour `apiKey` et `regionName`. Ajoutez une nouvelle fonction :
+Passons maintenant à la fonction `setUpUser`, où vous définissez les valeurs de stockage local pour `apiKey` et `regionName`. Ajoutez une nouvelle fonction :
 
 ```JavaScript
 function setUpUser(apiKey, regionName) {
@@ -153,11 +153,11 @@ Cette fonction affiche un message de chargement pendant que l'API est appelée. 
 
 Enfin, il est temps d'interroger l'API !
 
-Avant d'aller plus loin, nous devrions discuter des API. Les API, ou [Interfaces de Programmation d'Applications](https://www.webopedia.com/TERM/A/API.html), sont un élément essentiel de la boîte à outils d'un développeur web. Elles fournissent des moyens standardisés pour que les programmes interagissent et communiquent entre eux. Par exemple, si vous construisez un site web qui doit interroger une base de données, quelqu'un pourrait avoir créé une API pour vous permettre de l'utiliser. Bien qu'il existe de nombreux types d'API, l'un des plus populaires est une [API REST](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Avant d'aller plus loin, nous devrions discuter des API. Les API, ou [Interfaces de Programmation d'Applications](https://www.webopedia.com/TERM/A/API.html), sont un élément essentiel de la boîte à outils d'un développeur web. Elles fournissent des moyens standardisés pour que les programmes interagissent et communiquent entre eux. Par exemple, si vous construisez un site web qui doit interroger une base de données, quelqu'un pourrait avoir créé une API pour vous permettre de le faire. Bien qu'il existe de nombreux types d'API, l'un des plus populaires est une [API REST](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
-✅ Le terme 'REST' signifie 'Transfert d'État Représentationnel' et repose sur l'utilisation d'URL configurées de différentes manières pour récupérer des données. Faites quelques recherches sur les différents types d'API disponibles pour les développeurs. Quel format vous semble le plus intéressant ?
+✅ Le terme 'REST' signifie 'Transfert d'État Représentationnel' et utilise des URL configurées de différentes manières pour récupérer des données. Faites quelques recherches sur les différents types d'API disponibles pour les développeurs. Quel format vous semble le plus intéressant ?
 
-Il y a des points importants à noter à propos de cette fonction. Tout d'abord, remarquez le mot-clé [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Écrire vos fonctions pour qu'elles s'exécutent de manière asynchrone signifie qu'elles attendent qu'une action, comme le retour de données, soit terminée avant de continuer.
+Il y a des points importants à noter sur cette fonction. Tout d'abord, remarquez le mot-clé [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Écrire vos fonctions pour qu'elles s'exécutent de manière asynchrone signifie qu'elles attendent qu'une action, comme le retour de données, soit terminée avant de continuer.
 
 Voici une courte vidéo sur `async` :
 
@@ -207,14 +207,14 @@ async function displayCarbonUsage(apiKey, region) {
 
 C'est une grande fonction. Que se passe-t-il ici ?
 
-- En suivant les bonnes pratiques, vous utilisez le mot-clé `async` pour que cette fonction se comporte de manière asynchrone. La fonction contient un bloc `try/catch` car elle retournera une promesse lorsque l'API renverra des données. Comme vous n'avez pas de contrôle sur la vitesse de réponse de l'API (elle peut ne pas répondre du tout !), vous devez gérer cette incertitude en l'appelant de manière asynchrone.
+- En suivant les bonnes pratiques, vous utilisez un mot-clé `async` pour que cette fonction se comporte de manière asynchrone. La fonction contient un bloc `try/catch` car elle retournera une promesse lorsque l'API renverra des données. Comme vous n'avez pas le contrôle sur la vitesse de réponse de l'API (elle peut ne pas répondre du tout !), vous devez gérer cette incertitude en l'appelant de manière asynchrone.
 - Vous interrogez l'API co2signal pour obtenir les données de votre région, en utilisant votre clé API. Pour utiliser cette clé, vous devez utiliser un type d'authentification dans les paramètres d'en-tête.
 - Une fois que l'API répond, vous assignez divers éléments de ses données de réponse aux parties de votre écran que vous avez configurées pour afficher ces données.
 - S'il y a une erreur ou s'il n'y a pas de résultat, vous affichez un message d'erreur.
 
-✅ Utiliser des modèles de programmation asynchrone est un autre outil très utile dans votre boîte à outils. Lisez [à propos des différentes manières](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) de configurer ce type de code.
+✅ Utiliser des modèles de programmation asynchrone est un autre outil très utile dans votre boîte à outils. Lisez [sur les différentes manières](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) de configurer ce type de code.
 
-Félicitations ! Si vous construisez votre extension (`npm run build`) et la rafraîchissez dans votre panneau d'extensions, vous avez une extension fonctionnelle ! La seule chose qui ne fonctionne pas est l'icône, et vous corrigerez cela dans la prochaine leçon.
+Félicitations ! Si vous construisez votre extension (`npm run build`) et la rafraîchissez dans votre panneau d'extensions, vous avez une extension fonctionnelle ! La seule chose qui ne fonctionne pas est l'icône, et vous la corrigerez dans la prochaine leçon.
 
 ---
 
@@ -228,11 +228,13 @@ Nous avons discuté de plusieurs types d'API jusqu'à présent dans ces leçons.
 
 ## Révision et auto-apprentissage
 
-Vous avez appris à propos de LocalStorage et des API dans cette leçon, deux outils très utiles pour le développeur web professionnel. Pouvez-vous réfléchir à la manière dont ces deux éléments fonctionnent ensemble ? Pensez à la façon dont vous architectureriez un site web qui stockerait des éléments à utiliser par une API.
+Vous avez appris à propos de LocalStorage et des API dans cette leçon, deux outils très utiles pour le développeur web professionnel. Pouvez-vous réfléchir à la manière dont ces deux éléments fonctionnent ensemble ? Imaginez comment vous architectureriez un site web qui stockerait des éléments à utiliser par une API.
 
 ## Devoir
 
 [Adoptez une API](assignment.md)
+
+---
 
 **Avertissement** :  
 Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

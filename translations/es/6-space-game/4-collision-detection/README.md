@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-24T12:36:17+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T13:55:06+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "es"
 }
 -->
-# Construye un Juego Espacial Parte 4: Añadiendo un Láser y Detectando Colisiones
+# Construir un Juego Espacial Parte 4: Añadiendo un Láser y Detectando Colisiones
 
 ## Cuestionario Previo a la Lección
 
@@ -15,14 +15,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 En esta lección aprenderás a disparar láseres con JavaScript. Añadiremos dos cosas a nuestro juego:
 
-- **Un láser**: este láser se dispara desde la nave de tu héroe hacia arriba.
+- **Un láser**: este láser será disparado desde la nave de tu héroe hacia arriba, de forma vertical.
 - **Detección de colisiones**, como parte de la implementación de la habilidad de *disparar*, también añadiremos algunas reglas interesantes al juego:
-   - **Láser golpea al enemigo**: el enemigo muere si es alcanzado por un láser.
-   - **Láser golpea la parte superior de la pantalla**: un láser se destruye si alcanza la parte superior de la pantalla.
-   - **Colisión entre enemigo y héroe**: un enemigo y el héroe se destruyen si chocan entre sí.
-   - **Enemigo alcanza la parte inferior de la pantalla**: un enemigo y el héroe se destruyen si el enemigo llega a la parte inferior de la pantalla.
+   - **Láser impacta a un enemigo**: El enemigo muere si es alcanzado por un láser.
+   - **Láser alcanza la parte superior de la pantalla**: El láser se destruye si llega a la parte superior de la pantalla.
+   - **Colisión entre enemigo y héroe**: Tanto el enemigo como el héroe se destruyen si chocan entre sí.
+   - **Enemigo alcanza la parte inferior de la pantalla**: Tanto el enemigo como el héroe se destruyen si el enemigo llega a la parte inferior de la pantalla.
 
-En resumen, tú -- *el héroe* -- necesitas eliminar a todos los enemigos con un láser antes de que logren llegar a la parte inferior de la pantalla.
+En resumen, tú -- *el héroe* -- necesitas eliminar a todos los enemigos con un láser antes de que logren llegar al fondo de la pantalla.
 
 ✅ Investiga un poco sobre el primer videojuego de computadora jamás creado. ¿Cuál era su funcionalidad?
 
@@ -32,9 +32,9 @@ En resumen, tú -- *el héroe* -- necesitas eliminar a todos los enemigos con un
 
 ¿Cómo hacemos la detección de colisiones? Necesitamos pensar en nuestros objetos del juego como rectángulos en movimiento. ¿Por qué, te preguntarás? Bueno, la imagen utilizada para dibujar un objeto del juego es un rectángulo: tiene un `x`, `y`, `ancho` y `alto`.
 
-Si dos rectángulos, es decir, un héroe y un enemigo, *se intersectan*, tienes una colisión. Lo que debería suceder después depende de las reglas del juego. Para implementar la detección de colisiones necesitas lo siguiente:
+Si dos rectángulos, es decir, un héroe y un enemigo, *se intersectan*, tienes una colisión. Lo que debería suceder después depende de las reglas del juego. Para implementar la detección de colisiones, necesitas lo siguiente:
 
-1. Una forma de obtener una representación rectangular de un objeto del juego, algo como esto:
+1. Una forma de obtener una representación en forma de rectángulo de un objeto del juego, algo como esto:
 
    ```javascript
    rectFromGameObject() {
@@ -47,7 +47,7 @@ Si dos rectángulos, es decir, un héroe y un enemigo, *se intersectan*, tienes 
    }
    ```
 
-2. Una función de comparación, esta función puede verse así:
+2. Una función de comparación, que podría verse así:
 
    ```javascript
    function intersectRect(r1, r2) {
@@ -60,14 +60,14 @@ Si dos rectángulos, es decir, un héroe y un enemigo, *se intersectan*, tienes 
 
 ## ¿Cómo destruimos cosas?
 
-Para destruir cosas en un juego, necesitas informar al juego que ya no debe pintar este objeto en el bucle del juego que se activa en un intervalo determinado. Una forma de hacer esto es marcar un objeto del juego como *muerto* cuando algo sucede, de esta manera:
+Para destruir cosas en un juego, necesitas informar al juego que ya no debe pintar ese objeto en el bucle del juego que se activa en un intervalo determinado. Una forma de hacer esto es marcar un objeto del juego como *muerto* cuando algo sucede, de esta manera:
 
 ```javascript
 // collision happened
 enemy.dead = true
 ```
 
-Luego puedes proceder a eliminar los objetos *muertos* antes de repintar la pantalla, de esta manera:
+Luego puedes proceder a eliminar los objetos *muertos* antes de volver a pintar la pantalla, así:
 
 ```javascript
 gameObjects = gameObject.filter(go => !go.dead);
@@ -75,15 +75,15 @@ gameObjects = gameObject.filter(go => !go.dead);
 
 ## ¿Cómo disparamos un láser?
 
-Disparar un láser significa responder a un evento de teclado y crear un objeto que se mueva en una dirección determinada. Por lo tanto, necesitamos realizar los siguientes pasos:
+Disparar un láser implica responder a un evento de teclado y crear un objeto que se mueva en una dirección específica. Por lo tanto, necesitamos realizar los siguientes pasos:
 
-1. **Crear un objeto láser**: desde la parte superior de la nave de nuestro héroe, que al crearse comienza a moverse hacia arriba en dirección a la parte superior de la pantalla.
+1. **Crear un objeto láser**: desde la parte superior de la nave de nuestro héroe, que al crearse comienza a moverse hacia arriba, en dirección a la parte superior de la pantalla.
 2. **Asociar código a un evento de teclado**: necesitamos elegir una tecla en el teclado que represente al jugador disparando el láser.
-3. **Crear un objeto del juego que se vea como un láser** cuando se presione la tecla.
+3. **Crear un objeto del juego que se vea como un láser** cuando se presiona la tecla.
 
 ## Enfriamiento del láser
 
-El láser necesita dispararse cada vez que presionas una tecla, como *espacio*, por ejemplo. Para evitar que el juego produzca demasiados láseres en un corto período de tiempo, necesitamos solucionar esto. La solución es implementar un llamado *enfriamiento*, un temporizador, que asegure que un láser solo pueda dispararse cada cierto tiempo. Puedes implementarlo de la siguiente manera:
+El láser necesita dispararse cada vez que presionas una tecla, como *espacio*, por ejemplo. Para evitar que el juego genere demasiados láseres en un corto período de tiempo, necesitamos solucionar esto. La solución es implementar un llamado *enfriamiento*, un temporizador, que asegure que un láser solo pueda dispararse cada cierto tiempo. Puedes implementarlo de la siguiente manera:
 
 ```javascript
 class Cooldown {
@@ -113,15 +113,15 @@ class Weapon {
 
 ## Qué construir
 
-Tomarás el código existente (que deberías haber limpiado y refactorizado) de la lección anterior y lo extenderás. Puedes comenzar con el código de la parte II o usar el código en [Parte III - inicial](../../../../../../../../../your-work).
+Tomarás el código existente (que deberías haber limpiado y refactorizado) de la lección anterior y lo extenderás. Puedes comenzar con el código de la parte II o usar el código en [Parte III - inicio](../../../../../../../../../your-work).
 
 > consejo: el láser con el que trabajarás ya está en tu carpeta de recursos y referenciado por tu código.
 
-- **Añade detección de colisiones**, cuando un láser colisiona con algo, deben aplicarse las siguientes reglas:
-   1. **Láser golpea al enemigo**: el enemigo muere si es alcanzado por un láser.
-   2. **Láser golpea la parte superior de la pantalla**: un láser se destruye si alcanza la parte superior de nuestra pantalla.
-   3. **Colisión entre enemigo y héroe**: un enemigo y el héroe se destruyen si chocan entre sí.
-   4. **Enemigo alcanza la parte inferior de la pantalla**: un enemigo y el héroe se destruyen si el enemigo llega a la parte inferior de la pantalla.
+- **Añadir detección de colisiones**, cuando un láser colisiona con algo, deberían aplicarse las siguientes reglas:
+   1. **Láser impacta a un enemigo**: el enemigo muere si es alcanzado por un láser.
+   2. **Láser alcanza la parte superior de la pantalla**: el láser se destruye si llega a la parte superior de nuestra pantalla.
+   3. **Colisión entre enemigo y héroe**: tanto el enemigo como el héroe se destruyen si chocan entre sí.
+   4. **Enemigo alcanza la parte inferior de la pantalla**: tanto el enemigo como el héroe se destruyen si el enemigo llega a la parte inferior de la pantalla.
 
 ## Pasos recomendados
 
@@ -144,11 +144,11 @@ cd your-work
 npm start
 ```
 
-Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`. Abre un navegador e ingresa esa dirección, por ahora debería renderizar al héroe y a todos los enemigos, nada se está moviendo - aún :).
+Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`. Abre un navegador e ingresa esa dirección, por ahora debería renderizar al héroe y a todos los enemigos, pero nada se está moviendo aún :).
 
-### Añade código
+### Añadir código
 
-1. **Configura una representación rectangular de tu objeto del juego para manejar colisiones**. El siguiente código te permite obtener una representación rectangular de un `GameObject`. Edita tu clase GameObject para extenderla:
+1. **Configura una representación en forma de rectángulo de tu objeto del juego para manejar colisiones**. El siguiente código te permite obtener una representación en forma de rectángulo de un `GameObject`. Edita tu clase GameObject para extenderla:
 
     ```javascript
     rectFromGameObject() {
@@ -161,7 +161,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
       }
     ```
 
-2. **Añade código que verifique colisiones**. Esta será una nueva función que prueba si dos rectángulos se intersectan:
+2. **Añade código que verifique colisiones**. Esto será una nueva función que prueba si dos rectángulos se intersectan:
 
     ```javascript
     function intersectRect(r1, r2) {
@@ -254,7 +254,7 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
 
       Asegúrate de añadir `updateGameObjects()` en tu bucle del juego en `window.onload`.
 
-   4. **Implementa el enfriamiento** en el láser, para que solo pueda dispararse cada cierto tiempo.
+   4. **Implementa el enfriamiento** del láser, para que solo pueda dispararse cada cierto tiempo.
 
       Finalmente, edita la clase Hero para que pueda manejar el enfriamiento:
 
@@ -285,13 +285,13 @@ Lo anterior iniciará un servidor HTTP en la dirección `http://localhost:5000`.
       }
       ```
 
-En este punto, ¡tu juego tiene algo de funcionalidad! Puedes navegar con las teclas de flecha, disparar un láser con la barra espaciadora y los enemigos desaparecen cuando los golpeas. ¡Bien hecho!
+En este punto, ¡tu juego tiene algo de funcionalidad! Puedes navegar con las teclas de flecha, disparar un láser con la barra espaciadora, y los enemigos desaparecen cuando los alcanzas. ¡Bien hecho!
 
 ---
 
 ## 🚀 Desafío
 
-¡Añade una explosión! Echa un vistazo a los recursos del juego en [el repositorio de Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) e intenta añadir una explosión cuando el láser golpee a un alienígena.
+¡Añade una explosión! Echa un vistazo a los recursos del juego en [el repositorio Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) e intenta añadir una explosión cuando el láser impacte a un alienígena.
 
 ## Cuestionario Posterior a la Lección
 
@@ -305,5 +305,7 @@ Experimenta con los intervalos en tu juego hasta ahora. ¿Qué sucede cuando los
 
 [Explora colisiones](assignment.md)
 
+---
+
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

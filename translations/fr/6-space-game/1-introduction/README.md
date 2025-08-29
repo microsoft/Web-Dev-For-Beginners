@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d9da6dc61fb712b29f65e108c79b8a5d",
-  "translation_date": "2025-08-23T23:05:15+00:00",
+  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
+  "translation_date": "2025-08-29T13:38:55+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "fr"
 }
@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Héritage et composition dans le développement de jeux
 
-Dans les leçons précédentes, il n'était pas nécessaire de se préoccuper de l'architecture des applications que vous avez créées, car les projets étaient de petite envergure. Cependant, lorsque vos applications prennent de l'ampleur, les décisions architecturales deviennent plus importantes. Il existe deux approches principales pour créer des applications plus complexes en JavaScript : *composition* ou *héritage*. Ces deux approches ont leurs avantages et inconvénients, mais expliquons-les dans le contexte d'un jeu.
+Dans les leçons précédentes, il n'était pas nécessaire de se préoccuper de l'architecture des applications que vous avez créées, car les projets étaient de petite envergure. Cependant, lorsque vos applications grandissent en taille et en portée, les décisions architecturales deviennent plus importantes. Il existe deux approches principales pour créer des applications plus grandes en JavaScript : *composition* ou *héritage*. Ces deux approches ont leurs avantages et inconvénients, mais expliquons-les dans le contexte d'un jeu.
 
 ✅ L'un des livres les plus célèbres sur la programmation traite des [design patterns](https://en.wikipedia.org/wiki/Design_Patterns).
 
@@ -25,18 +25,18 @@ Dans un jeu, vous avez des `objets de jeu`, qui sont des objets présents à l'�
 
 - **basés sur la localisation** La plupart, sinon tous, les éléments de jeu sont basés sur la localisation. Cela signifie qu'ils ont une position, un `x` et un `y`.
 - **mobiles** Ce sont des objets qui peuvent se déplacer vers une nouvelle position. Il s'agit généralement d'un héros, d'un monstre ou d'un PNJ (personnage non joueur), mais pas, par exemple, d'un objet statique comme un arbre.
-- **auto-destructeurs** Ces objets n'existent que pendant une période définie avant de se préparer à être supprimés. Cela est généralement représenté par un booléen `mort` ou `détruit` qui indique au moteur de jeu que cet objet ne doit plus être affiché.
+- **auto-destructeurs** Ces objets n'existent que pendant une période définie avant de se préparer à être supprimés. Cela est généralement représenté par un booléen `dead` ou `destroyed` qui indique au moteur de jeu que cet objet ne doit plus être rendu.
 - **temps de recharge** Le 'temps de recharge' est une propriété typique des objets de courte durée. Un exemple typique est un morceau de texte ou un effet graphique comme une explosion qui ne doit être visible que pendant quelques millisecondes.
 
 ✅ Pensez à un jeu comme Pac-Man. Pouvez-vous identifier les quatre types d'objets mentionnés ci-dessus dans ce jeu ?
 
 ### Exprimer des comportements
 
-Tout ce que nous avons décrit ci-dessus représente des comportements que les objets de jeu peuvent avoir. Alors, comment les coder ? Nous pouvons exprimer ces comportements sous forme de méthodes associées à des classes ou des objets.
+Tout ce que nous avons décrit ci-dessus représente des comportements que les objets de jeu peuvent avoir. Alors, comment les encoder ? Nous pouvons exprimer ces comportements sous forme de méthodes associées à des classes ou des objets.
 
 **Classes**
 
-L'idée est d'utiliser des `classes` en combinaison avec l'`héritage` pour ajouter un certain comportement à une classe.
+L'idée est d'utiliser des `classes` en conjonction avec l'`héritage` pour ajouter un certain comportement à une classe.
 
 ✅ L'héritage est un concept important à comprendre. Apprenez-en davantage grâce à [l'article de MDN sur l'héritage](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
@@ -149,9 +149,9 @@ Un autre modèle courant dans le développement de jeux traite du problème de g
 
 ✅ Pub/Sub signifie 'publish-subscribe' (publier-s'abonner)
 
-Ce modèle repose sur l'idée que les différentes parties de votre application ne devraient pas se connaître entre elles. Pourquoi cela ? Cela facilite la compréhension globale de ce qui se passe lorsque les différentes parties sont séparées. Cela permet également de modifier soudainement un comportement si nécessaire. Comment y parvenir ? En établissant certains concepts :
+Ce modèle repose sur l'idée que les différentes parties de votre application ne devraient pas se connaître. Pourquoi cela ? Cela rend beaucoup plus facile de comprendre ce qui se passe en général si les différentes parties sont séparées. Cela permet également de modifier soudainement un comportement si nécessaire. Comment y parvenir ? En établissant certains concepts :
 
-- **message** : Un message est généralement une chaîne de texte accompagnée d'une charge utile optionnelle (un morceau de données qui clarifie le contenu du message). Un message typique dans un jeu peut être `KEY_PRESSED_ENTER`.
+- **message** : Un message est généralement une chaîne de texte accompagnée d'une charge utile optionnelle (un morceau de données qui clarifie le sujet du message). Un message typique dans un jeu peut être `KEY_PRESSED_ENTER`.
 - **éditeur** : Cet élément *publie* un message et l'envoie à tous les abonnés.
 - **abonné** : Cet élément *écoute* des messages spécifiques et exécute une tâche en réponse à la réception de ce message, comme tirer un laser.
 
@@ -204,7 +204,7 @@ window.addEventListener('keyup', (evt) => {
 });
 ```
 
-Dans l'exemple ci-dessus, nous connectons un événement clavier, `ArrowLeft`, et envoyons le message `HERO_MOVE_LEFT`. Nous écoutons ce message et déplaçons le `hero` en conséquence. La force de ce modèle réside dans le fait que l'écouteur d'événements et le héros ne se connaissent pas. Vous pouvez remapper la touche `ArrowLeft` à la touche `A`. De plus, il serait possible de faire quelque chose de complètement différent sur `ArrowLeft` en modifiant légèrement la fonction `on` de l'eventEmitter :
+Dans l'exemple ci-dessus, nous connectons un événement clavier, `ArrowLeft`, et envoyons le message `HERO_MOVE_LEFT`. Nous écoutons ce message et déplaçons le `hero` en conséquence. La force de ce modèle réside dans le fait que l'écouteur d'événements et le héros ne se connaissent pas. Vous pouvez remapper la touche `ArrowLeft` à la touche `A`. De plus, il serait possible de faire quelque chose de complètement différent sur `ArrowLeft` en apportant quelques modifications à la fonction `on` de l'eventEmitter :
 
 ```javascript
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
@@ -232,5 +232,7 @@ Apprenez-en davantage sur le modèle Pub/Sub en [lisant à ce sujet](https://doc
 
 [Créez une maquette de jeu](assignment.md)
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

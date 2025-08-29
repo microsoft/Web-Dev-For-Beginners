@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46a0639e719b9cf1dfd062aa24cad639",
-  "translation_date": "2025-08-23T22:25:11+00:00",
+  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
+  "translation_date": "2025-08-29T13:41:31+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "fr"
 }
 -->
 # Projet Terrarium Partie 1 : Introduction à HTML
 
-![Introduction à HTML](../../../../sketchnotes/webdev101-html.png)
+![Introduction à HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.fr.png)
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz avant le cours
@@ -24,15 +24,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introduction
 
-HTML, ou HyperText Markup Language, est le 'squelette' du web. Si CSS 'habille' votre HTML et que JavaScript lui donne vie, HTML est le corps de votre application web. La syntaxe de HTML reflète même cette idée, puisqu'elle inclut des balises "head", "body" et "footer".
+HTML, ou HyperText Markup Language, est le 'squelette' du web. Si CSS 'habille' votre HTML et que JavaScript lui donne vie, HTML constitue le corps de votre application web. La syntaxe de HTML reflète même cette idée, puisqu'elle inclut des balises "head", "body" et "footer".
 
-Dans cette leçon, nous allons utiliser HTML pour structurer le 'squelette' de l'interface de notre terrarium virtuel. Il comportera un titre et trois colonnes : une colonne à gauche et une à droite où se trouveront les plantes déplaçables, et une zone centrale qui représentera le terrarium en verre. À la fin de cette leçon, vous pourrez voir les plantes dans les colonnes, mais l'interface aura un aspect un peu étrange ; ne vous inquiétez pas, dans la section suivante, vous ajouterez des styles CSS pour améliorer l'apparence de l'interface.
+Dans cette leçon, nous allons utiliser HTML pour structurer le 'squelette' de l'interface de notre terrarium virtuel. Elle comportera un titre et trois colonnes : une colonne à gauche et une à droite où se trouveront les plantes déplaçables, et une zone centrale qui représentera le terrarium en verre. À la fin de cette leçon, vous pourrez voir les plantes dans les colonnes, mais l'interface semblera un peu étrange ; ne vous inquiétez pas, dans la section suivante, vous ajouterez des styles CSS pour améliorer l'apparence de l'interface.
 
 ### Tâche
 
-Sur votre ordinateur, créez un dossier appelé 'terrarium' et, à l'intérieur, un fichier nommé 'index.html'. Vous pouvez le faire dans Visual Studio Code après avoir créé votre dossier terrarium en ouvrant une nouvelle fenêtre VS Code, en cliquant sur 'ouvrir un dossier', et en naviguant vers votre nouveau dossier. Cliquez sur le petit bouton 'fichier' dans le volet Explorateur et créez le nouveau fichier :
+Sur votre ordinateur, créez un dossier appelé 'terrarium' et, à l'intérieur, un fichier nommé 'index.html'. Vous pouvez le faire dans Visual Studio Code après avoir créé votre dossier terrarium en ouvrant une nouvelle fenêtre VS Code, en cliquant sur 'ouvrir un dossier', et en naviguant jusqu'à votre nouveau dossier. Cliquez sur le petit bouton 'fichier' dans le volet Explorateur et créez le nouveau fichier :
 
-![explorateur dans VS Code](../../../../3-terrarium/1-intro-to-html/images/vs-code-index.png)
+![explorateur dans VS Code](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.fr.png)
 
 Ou
 
@@ -42,7 +42,7 @@ Utilisez ces commandes dans votre terminal git bash :
 * `touch index.html`
 * `code index.html` ou `nano index.html`
 
-> Les fichiers index.html indiquent à un navigateur qu'il s'agit du fichier par défaut dans un dossier ; des URL comme `https://anysite.com/test` peuvent être construites à partir d'une structure de dossier incluant un dossier appelé `test` avec `index.html` à l'intérieur ; `index.html` n'a pas besoin d'apparaître dans l'URL.
+> Les fichiers index.html indiquent à un navigateur qu'il s'agit du fichier par défaut dans un dossier ; des URL comme `https://anysite.com/test` peuvent être construites à partir d'une structure de dossier incluant un dossier appelé `test` avec `index.html` à l'intérieur ; `index.html` n'a pas besoin d'apparaître dans une URL.
 
 ---
 
@@ -63,7 +63,7 @@ Ajoutez ces lignes en haut de votre fichier `index.html` :
 <html></html>
 ```
 
-✅ Il existe plusieurs modes qui peuvent être déterminés en définissant le DocType avec une chaîne de requête : [Mode Quirks et Mode Standards](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Ces modes étaient utilisés pour prendre en charge des navigateurs très anciens qui ne sont généralement plus utilisés aujourd'hui (Netscape Navigator 4 et Internet Explorer 5). Vous pouvez vous en tenir à la déclaration standard du doctype.
+✅ Il existe plusieurs modes différents qui peuvent être déterminés en définissant le DocType avec une chaîne de requête : [Mode Quirks et Mode Standards](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Ces modes étaient utilisés pour prendre en charge des navigateurs très anciens qui ne sont généralement plus utilisés aujourd'hui (Netscape Navigator 4 et Internet Explorer 5). Vous pouvez vous en tenir à la déclaration standard du doctype.
 
 ---
 
@@ -75,7 +75,7 @@ La zone 'head' du document HTML inclut des informations cruciales sur votre page
 -   les métadonnées de la page, y compris :
     -   le 'jeu de caractères', qui indique quel encodage de caractères est utilisé dans la page
     -   des informations sur le navigateur, y compris `x-ua-compatible` qui indique que le navigateur IE=edge est pris en charge
-    -   des informations sur le comportement du viewport lorsqu'il est chargé. Définir le viewport avec une échelle initiale de 1 contrôle le niveau de zoom lorsque la page est chargée pour la première fois.
+    -   des informations sur le comportement du viewport lors du chargement. Définir le viewport avec une échelle initiale de 1 contrôle le niveau de zoom lorsque la page est chargée pour la première fois.
 
 ### Tâche
 
@@ -180,9 +180,9 @@ Ajoutez ces images de plantes dans deux colonnes entre les balises `<body></body
 
 > Note : Spans vs. Divs. Les Divs sont considérés comme des éléments 'block', et les Spans comme des éléments 'inline'. Que se passerait-il si vous transformiez ces divs en spans ?
 
-Avec ce balisage, les plantes apparaissent maintenant à l'écran. Cela a un aspect assez mauvais, car elles ne sont pas encore stylées avec CSS, ce que nous ferons dans la prochaine leçon.
+Avec ce balisage, les plantes apparaissent maintenant à l'écran. Cela semble assez mauvais, car elles ne sont pas encore stylées avec CSS, ce que nous ferons dans la prochaine leçon.
 
-Chaque image possède un texte alternatif qui apparaîtra même si vous ne pouvez pas voir ou rendre une image. C'est un attribut important à inclure pour l'accessibilité. Vous en apprendrez davantage sur l'accessibilité dans les leçons futures ; pour l'instant, rappelez-vous que l'attribut alt fournit des informations alternatives pour une image si un utilisateur ne peut pas la voir (en raison d'une connexion lente, d'une erreur dans l'attribut src, ou si l'utilisateur utilise un lecteur d'écran).
+Chaque image possède un texte alternatif qui apparaîtra même si vous ne pouvez pas voir ou rendre une image. C'est un attribut important à inclure pour l'accessibilité. Vous en apprendrez davantage sur l'accessibilité dans les prochaines leçons ; pour l'instant, rappelez-vous que l'attribut alt fournit des informations alternatives pour une image si un utilisateur ne peut pas la voir (en raison d'une connexion lente, d'une erreur dans l'attribut src, ou si l'utilisateur utilise un lecteur d'écran).
 
 ✅ Avez-vous remarqué que chaque image a le même texte alternatif ? Est-ce une bonne pratique ? Pourquoi ou pourquoi pas ? Pouvez-vous améliorer ce code ?
 
@@ -190,7 +190,7 @@ Chaque image possède un texte alternatif qui apparaîtra même si vous ne pouve
 
 ## Balisage sémantique
 
-En général, il est préférable d'utiliser des 'sémantiques' significatives lors de l'écriture de HTML. Qu'est-ce que cela signifie ? Cela signifie que vous utilisez des balises HTML pour représenter le type de données ou d'interaction pour lequel elles ont été conçues. Par exemple, le texte principal d'un titre sur une page devrait utiliser une balise `<h1>`.
+En général, il est préférable d'utiliser des 'balises sémantiques' significatives lors de l'écriture de HTML. Qu'est-ce que cela signifie ? Cela signifie que vous utilisez des balises HTML pour représenter le type de données ou d'interaction pour lesquelles elles ont été conçues. Par exemple, le texte principal d'un titre sur une page devrait utiliser une balise `<h1>`.
 
 Ajoutez la ligne suivante juste en dessous de votre balise d'ouverture `<body>` :
 
@@ -222,28 +222,29 @@ Ajoutez ce balisage au-dessus de la dernière balise `</div>` :
 </div>
 ```
 
-✅ Même si vous avez ajouté ce balisage à l'écran, vous ne voyez absolument rien s'afficher. Pourquoi ?
+✅ Bien que vous ayez ajouté ce balisage à l'écran, vous ne voyez absolument rien s'afficher. Pourquoi ?
 
 ---
 
 ## 🚀Défi
 
-Il existe des balises 'anciennes' amusantes en HTML qui sont encore intéressantes à expérimenter, bien que vous ne devriez pas utiliser des balises obsolètes comme [ces balises](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) dans votre balisage. Cependant, pouvez-vous utiliser l'ancienne balise `<marquee>` pour faire défiler horizontalement le titre h1 ? (si vous le faites, n'oubliez pas de la supprimer ensuite)
+Il existe des balises 'anciennes' amusantes en HTML qui sont encore utilisables, bien que vous ne devriez pas utiliser des balises obsolètes comme [ces balises](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) dans votre balisage. Cependant, pouvez-vous utiliser l'ancienne balise `<marquee>` pour faire défiler horizontalement le titre h1 ? (si vous le faites, n'oubliez pas de la supprimer ensuite)
 
 ## Quiz après le cours
 
 [Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/16)
 
-## Révision et auto-apprentissage
+## Révision et étude personnelle
 
 HTML est le système de construction 'éprouvé' qui a aidé à construire le web tel qu'il est aujourd'hui. Apprenez un peu sur son histoire en étudiant des balises anciennes et nouvelles. Pouvez-vous comprendre pourquoi certaines balises ont été abandonnées et d'autres ajoutées ? Quelles balises pourraient être introduites à l'avenir ?
 
 Apprenez-en davantage sur la création de sites pour le web et les appareils mobiles sur [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
 
-
 ## Devoir
 
 [Pratiquez votre HTML : Créez une maquette de blog](assignment.md)
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

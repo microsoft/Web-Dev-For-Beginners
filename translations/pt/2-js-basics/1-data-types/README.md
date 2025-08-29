@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "fc6aef8ecfdd5b0ad2afa6e6ba52bfde",
-  "translation_date": "2025-08-24T12:21:14+00:00",
+  "original_hash": "b95fdd8310ef467305015ece1b0f9411",
+  "translation_date": "2025-08-29T16:15:00+00:00",
   "source_file": "2-js-basics/1-data-types/README.md",
   "language_code": "pt"
 }
 -->
 # Fundamentos de JavaScript: Tipos de Dados
 
-![Fundamentos de JavaScript - Tipos de Dados](../../../../sketchnotes/webdev101-js-datatypes.png)
+![Fundamentos de JavaScript - Tipos de Dados](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c756480d3ffa46507f746e5975ebf80f99fdaaf1cff09a7f4.pt.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Questionário Pré-Aula
-[Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/7)
+[Questionário pré-aula](https://ff-quizzes.netlify.app/web/)
 
 Esta lição aborda os fundamentos do JavaScript, a linguagem que proporciona interatividade na web.
 
@@ -29,7 +29,7 @@ Vamos começar com variáveis e os tipos de dados que as preenchem!
 
 ## Variáveis
 
-As variáveis armazenam valores que podem ser utilizados e alterados ao longo do seu código.
+As variáveis armazenam valores que podem ser usados e alterados ao longo do seu código.
 
 Criar e **declarar** uma variável tem a seguinte sintaxe **[palavra-chave] [nome]**. É composta por duas partes:
 
@@ -48,7 +48,7 @@ Criar e **declarar** uma variável tem a seguinte sintaxe **[palavra-chave] [nom
 
    `myVariable` foi agora declarada usando a palavra-chave `let`. Atualmente, não tem um valor.
 
-1. **Atribuir um valor**. Armazene um valor numa variável com o operador `=` seguido do valor esperado.
+1. **Atribuir um valor**. Armazene um valor numa variável com o operador `=`, seguido do valor esperado.
 
     ```javascript
     myVariable = 123;
@@ -74,11 +74,11 @@ Criar e **declarar** uma variável tem a seguinte sintaxe **[palavra-chave] [nom
 
    Uma vez que uma variável é declarada, pode alterar o seu valor em qualquer ponto do seu código com o operador `=` e o novo valor.
 
-   ✅ Experimente! Pode escrever JavaScript diretamente no seu navegador. Abra uma janela do navegador e navegue até às Ferramentas de Programador. No console, encontrará um prompt; digite `let myVariable = 123`, pressione Enter, depois digite `myVariable`. O que acontece? Nota, aprenderá mais sobre estes conceitos em lições subsequentes.
+   ✅ Experimente! Pode escrever JavaScript diretamente no seu navegador. Abra uma janela do navegador e navegue até às Ferramentas de Programador. No console, encontrará um prompt; escreva `let myVariable = 123`, pressione Enter, depois escreva `myVariable`. O que acontece? Nota, aprenderá mais sobre estes conceitos em lições subsequentes.
 
 ## Constantes
 
-A declaração e inicialização de uma constante seguem os mesmos conceitos de uma variável, com a exceção da palavra-chave `const`. As constantes são tipicamente declaradas com todas as letras em maiúsculas.
+A declaração e inicialização de uma constante seguem os mesmos conceitos de uma variável, com a exceção da palavra-chave `const`. As constantes são normalmente declaradas com todas as letras maiúsculas.
 
 ```javascript
 const MY_VARIABLE = 123;
@@ -95,14 +95,14 @@ As constantes são semelhantes às variáveis, com duas exceções:
       PI = 4; // not allowed
       ```
  
-   - **A referência de um objeto está protegida**. O seguinte NÃO é permitido.
+   - **A referência do objeto está protegida**. O seguinte NÃO é permitido.
    
       ```javascript
       const obj = { a: 3 };
       obj = { b: 5 } // not allowed
       ```
 
-    - **O valor de um objeto não está protegido**. O seguinte É permitido:
+    - **O valor do objeto não está protegido**. O seguinte É permitido:
     
       ```javascript
       const obj = { a: 3 };
@@ -134,7 +134,7 @@ Existem vários tipos de operadores para usar ao realizar funções aritméticas
 | Símbolo | Descrição                                                               | Exemplo                          |
 | ------  | ----------------------------------------------------------------------- | -------------------------------- |
 | `+`     | **Adição**: Calcula a soma de dois números                              | `1 + 2 //resposta esperada é 3`  |
-| `-`     | **Subtração**: Calcula a diferença entre dois números                   | `1 - 2 //resposta esperada é -1` |
+| `-`     | **Subtração**: Calcula a diferença de dois números                      | `1 - 2 //resposta esperada é -1` |
 | `*`     | **Multiplicação**: Calcula o produto de dois números                    | `1 * 2 //resposta esperada é 2`  |
 | `/`     | **Divisão**: Calcula o quociente de dois números                        | `1 / 2 //resposta esperada é 0.5`|
 | `%`     | **Resto**: Calcula o resto da divisão de dois números                   | `1 % 2 //resposta esperada é 1`  |
@@ -151,7 +151,7 @@ Strings são conjuntos de caracteres que residem entre aspas simples ou duplas.
 
 Lembre-se de usar aspas ao escrever uma string, ou o JavaScript assumirá que é um nome de variável.
 
-### Formatar Strings
+### Formatação de Strings
 
 Strings são textuais e, ocasionalmente, precisarão de formatação.
 
@@ -199,15 +199,17 @@ Booleans podem ter apenas dois valores: `true` ou `false`. Booleans ajudam a tom
 JavaScript é conhecido pelas suas formas surpreendentes de lidar com tipos de dados ocasionalmente. Faça uma pesquisa sobre estes 'gotchas'. Por exemplo: a sensibilidade a maiúsculas pode ser traiçoeira! Experimente isto no seu console: `let age = 1; let Age = 2; age == Age` (resolve `false` -- por quê?). Que outros gotchas consegue encontrar?
 
 ## Questionário Pós-Aula
-[Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/8)
+[Questionário pós-aula](https://ff-quizzes.netlify.app)
 
 ## Revisão & Autoestudo
 
-Dê uma olhada nesta [lista de exercícios de JavaScript](https://css-tricks.com/snippets/javascript/) e experimente um. O que aprendeu?
+Dê uma olhada [nesta lista de exercícios de JavaScript](https://css-tricks.com/snippets/javascript/) e experimente um. O que aprendeu?
 
 ## Tarefa
 
 [Prática de Tipos de Dados](assignment.md)
 
+---
+
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original no seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante ter em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b667b7d601e2ee19acb5aa9d102dc9f3",
-  "translation_date": "2025-08-24T13:30:26+00:00",
+  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
+  "translation_date": "2025-08-29T16:23:35+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "pl"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Wprowadzenie
 
-W niemal wszystkich nowoczesnych aplikacjach internetowych możesz założyć konto, aby mieć własną prywatną przestrzeń. Ponieważ wiele użytkowników może jednocześnie korzystać z aplikacji internetowej, potrzebny jest mechanizm do przechowywania danych osobowych każdego użytkownika oddzielnie i wybierania, które informacje wyświetlić. Nie będziemy omawiać, jak [bezpiecznie zarządzać tożsamością użytkownika](https://en.wikipedia.org/wiki/Authentication), ponieważ jest to obszerny temat sam w sobie, ale zadbamy o to, aby każdy użytkownik mógł utworzyć jedno (lub więcej) konto bankowe w naszej aplikacji.
+W niemal wszystkich nowoczesnych aplikacjach internetowych możesz założyć konto, aby mieć własną prywatną przestrzeń. Ponieważ wiele użytkowników może jednocześnie korzystać z aplikacji internetowej, potrzebny jest mechanizm do przechowywania danych osobowych każdego użytkownika oddzielnie i wybierania, które informacje mają być wyświetlane. Nie będziemy omawiać, jak [bezpiecznie zarządzać tożsamością użytkownika](https://en.wikipedia.org/wiki/Authentication), ponieważ jest to obszerny temat sam w sobie, ale zadbamy o to, aby każdy użytkownik mógł założyć jedno (lub więcej) konto bankowe w naszej aplikacji.
 
 W tej części użyjemy formularzy HTML, aby dodać logowanie i rejestrację do naszej aplikacji internetowej. Zobaczymy, jak programowo przesyłać dane do API serwera, a ostatecznie jak zdefiniować podstawowe zasady walidacji danych wprowadzanych przez użytkownika.
 
@@ -41,7 +41,7 @@ curl http://localhost:5000/api
 
 ## Formularz i kontrolki
 
-Element `<form>` obejmuje sekcję dokumentu HTML, w której użytkownik może wprowadzać i przesyłać dane za pomocą interaktywnych kontrolek. Istnieje wiele różnych kontrolek interfejsu użytkownika (UI), które można używać w formularzu, z których najczęściej używane to elementy `<input>` i `<button>`.
+Element `<form>` obejmuje sekcję dokumentu HTML, w której użytkownik może wprowadzać i przesyłać dane za pomocą interaktywnych kontrolek. Istnieje wiele różnych elementów interfejsu użytkownika (UI), które można używać w formularzu, najczęściej są to elementy `<input>` i `<button>`.
 
 Istnieje wiele różnych [typów](https://developer.mozilla.org/docs/Web/HTML/Element/input) `<input>`, na przykład, aby utworzyć pole, w którym użytkownik może wprowadzić swoją nazwę użytkownika, możesz użyć:
 
@@ -49,7 +49,7 @@ Istnieje wiele różnych [typów](https://developer.mozilla.org/docs/Web/HTML/El
 <input id="username" name="username" type="text">
 ```
 
-Atrybut `name` będzie używany jako nazwa właściwości, gdy dane formularza zostaną przesłane. Atrybut `id` służy do powiązania elementu `<label>` z kontrolką formularza.
+Atrybut `name` będzie używany jako nazwa właściwości, gdy dane formularza zostaną przesłane. Atrybut `id` służy do powiązania `<label>` z kontrolką formularza.
 
 > Zapoznaj się z pełną listą [typów `<input>`](https://developer.mozilla.org/docs/Web/HTML/Element/input) oraz [innych kontrolek formularza](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls), aby dowiedzieć się, jakie natywne elementy interfejsu użytkownika możesz wykorzystać podczas budowy swojego UI.
 
@@ -63,7 +63,7 @@ Element `<button>` w formularzu jest trochę wyjątkowy. Jeśli nie określisz j
 
 ### Zadanie
 
-Zacznijmy od dodania formularza do szablonu `login`. Potrzebujemy pola *username* oraz przycisku *Login*.
+Zacznijmy od dodania formularza do szablonu `login`. Będziemy potrzebować pola *username* oraz przycisku *Login*.
 
 ```html
 <template id="login">
@@ -79,10 +79,10 @@ Zacznijmy od dodania formularza do szablonu `login`. Potrzebujemy pola *username
 </template>
 ```
 
-Jeśli przyjrzysz się bliżej, zauważysz, że dodaliśmy tutaj również element `<label>`. Elementy `<label>` służą do dodawania nazwy do kontrolek interfejsu użytkownika, takich jak nasze pole nazwy użytkownika. Etykiety są ważne dla czytelności formularzy, ale mają również dodatkowe korzyści:
+Jeśli przyjrzysz się bliżej, zauważysz, że dodaliśmy tutaj również element `<label>`. Elementy `<label>` służą do dodawania nazwy do kontrolek UI, takich jak nasze pole nazwy użytkownika. Etykiety są ważne dla czytelności formularzy, ale mają również dodatkowe korzyści:
 
-- Powiązanie etykiety z kontrolką formularza pomaga użytkownikom korzystającym z technologii wspomagających (np. czytników ekranu) zrozumieć, jakie dane powinni podać.
-- Możesz kliknąć etykietę, aby bezpośrednio skupić się na powiązanym polu, co ułatwia dostęp na urządzeniach z ekranem dotykowym.
+- Powiązanie etykiety z kontrolką formularza pomaga użytkownikom korzystającym z technologii wspomagających (np. czytników ekranu) zrozumieć, jakie dane mają podać.
+- Możesz kliknąć etykietę, aby bezpośrednio skupić się na powiązanym polu, co ułatwia korzystanie na urządzeniach z ekranem dotykowym.
 
 > [Dostępność](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) w sieci to bardzo ważny temat, który często jest pomijany. Dzięki [semantycznym elementom HTML](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) nie jest trudno tworzyć dostępne treści, jeśli używasz ich poprawnie. Możesz [przeczytać więcej o dostępności](https://developer.mozilla.org/docs/Web/Accessibility), aby unikać typowych błędów i stać się odpowiedzialnym deweloperem.
 
@@ -110,13 +110,13 @@ Za pomocą atrybutu `value` możemy zdefiniować domyślną wartość dla danego
 
 ## Przesyłanie danych do serwera
 
-Teraz, gdy mamy funkcjonalny interfejs użytkownika, kolejnym krokiem jest przesłanie danych do naszego serwera. Zróbmy szybki test, używając naszego obecnego kodu: co się dzieje, gdy klikniesz przycisk *Login* lub *Register*?
+Teraz, gdy mamy funkcjonalny interfejs użytkownika, kolejnym krokiem jest przesłanie danych do naszego serwera. Zróbmy szybki test za pomocą naszego obecnego kodu: co się dzieje, gdy klikniesz przycisk *Login* lub *Register*?
 
 Czy zauważyłeś zmianę w sekcji URL przeglądarki?
 
-![Zrzut ekranu pokazujący zmianę URL przeglądarki po kliknięciu przycisku Register](../../../../7-bank-project/2-forms/images/click-register.png)
+![Zrzut ekranu pokazujący zmianę URL przeglądarki po kliknięciu przycisku Register](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.pl.png)
 
-Domyślna akcja dla `<form>` polega na przesłaniu formularza do bieżącego URL serwera za pomocą [metody GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), dołączając dane formularza bezpośrednio do URL. Ta metoda ma jednak pewne ograniczenia:
+Domyślna akcja dla `<form>` to przesłanie formularza do bieżącego URL serwera za pomocą [metody GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), dołączając dane formularza bezpośrednio do URL. Ta metoda ma jednak pewne ograniczenia:
 
 - Przesyłane dane są bardzo ograniczone pod względem rozmiaru (około 2000 znaków)
 - Dane są bezpośrednio widoczne w URL (co nie jest idealne dla haseł)
@@ -134,11 +134,11 @@ Dodaj właściwości `action` i `method` do formularza rejestracji:
 <form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
 ```
 
-Teraz spróbuj zarejestrować nowe konto, podając swoje imię. Po kliknięciu przycisku *Register* powinieneś zobaczyć coś takiego:
+Teraz spróbuj zarejestrować nowe konto ze swoim imieniem. Po kliknięciu przycisku *Register* powinieneś zobaczyć coś takiego:
 
-![Okno przeglądarki pod adresem localhost:5000/api/accounts, pokazujące ciąg JSON z danymi użytkownika](../../../../7-bank-project/2-forms/images/form-post.png)
+![Okno przeglądarki pod adresem localhost:5000/api/accounts, pokazujące ciąg JSON z danymi użytkownika](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.pl.png)
 
-Jeśli wszystko działa poprawnie, serwer powinien odpowiedzieć na Twoje żądanie odpowiedzią [JSON](https://www.json.org/json-en.html) zawierającą dane utworzonego konta.
+Jeśli wszystko pójdzie dobrze, serwer powinien odpowiedzieć na Twoje żądanie odpowiedzią [JSON](https://www.json.org/json-en.html) zawierającą dane utworzonego konta.
 
 ✅ Spróbuj zarejestrować się ponownie z tym samym imieniem. Co się dzieje?
 
@@ -154,7 +154,7 @@ Aby przesłać dane formularza do serwera bez wymuszania przeładowania strony, 
 
 ### Zadanie
 
-Zastąp właściwość `action` formularza rejestracji:
+Zamień właściwość `action` formularza rejestracji na:
 
 ```html
 <form id="registerForm" action="javascript:register()">
@@ -190,7 +190,7 @@ async function createAccount(account) {
 }
 ```
 
-Co robi ta funkcja? Po pierwsze, zauważ słowo kluczowe `async`. Oznacza to, że funkcja zawiera kod, który będzie wykonywany [**asynchronicznie**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). W połączeniu ze słowem kluczowym `await` pozwala czekać na wykonanie kodu asynchronicznego - na przykład czekanie na odpowiedź serwera - zanim kontynuujemy.
+Co robi ta funkcja? Po pierwsze, zauważ słowo kluczowe `async`. Oznacza to, że funkcja zawiera kod, który będzie wykonywany [**asynchronicznie**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Gdy jest używane razem ze słowem kluczowym `await`, pozwala czekać na wykonanie kodu asynchronicznego - na przykład czekanie na odpowiedź serwera tutaj - zanim kontynuujemy.
 
 Oto krótki film o użyciu `async/await`:
 
@@ -234,9 +234,9 @@ async function register() {
 }
 ```
 
-To było trochę długie, ale dotarliśmy do celu! Jeśli otworzysz [narzędzia deweloperskie przeglądarki](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools) i spróbujesz zarejestrować nowe konto, nie powinieneś zauważyć żadnej zmiany na stronie internetowej, ale w konsoli pojawi się komunikat potwierdzający, że wszystko działa.
+To było trochę długie, ale dotarliśmy do końca! Jeśli otworzysz [narzędzia deweloperskie przeglądarki](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools) i spróbujesz zarejestrować nowe konto, nie powinieneś zauważyć żadnej zmiany na stronie internetowej, ale w konsoli pojawi się komunikat potwierdzający, że wszystko działa.
 
-![Zrzut ekranu pokazujący komunikat logowania w konsoli przeglądarki](../../../../7-bank-project/2-forms/images/browser-console.png)
+![Zrzut ekranu pokazujący komunikat logowania w konsoli przeglądarki](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.pl.png)
 
 ✅ Czy uważasz, że dane są przesyłane do serwera w sposób bezpieczny? Co jeśli ktoś byłby w stanie przechwycić żądanie? Możesz przeczytać o [HTTPS](https://en.wikipedia.org/wiki/HTTPS), aby dowiedzieć się więcej o bezpiecznej komunikacji danych.
 
@@ -244,17 +244,17 @@ To było trochę długie, ale dotarliśmy do celu! Jeśli otworzysz [narzędzia 
 
 Jeśli spróbujesz zarejestrować nowe konto bez ustawienia nazwy użytkownika, możesz zauważyć, że serwer zwraca błąd z kodem statusu [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
 
-Przed przesłaniem danych do serwera dobrą praktyką jest [walidacja danych formularza](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) wcześniej, jeśli to możliwe, aby upewnić się, że wysyłasz poprawne żądanie. Kontrolki formularzy HTML5 zapewniają wbudowaną walidację za pomocą różnych atrybutów:
+Przed przesłaniem danych do serwera dobrą praktyką jest [walidacja danych formularza](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) z wyprzedzeniem, aby upewnić się, że wysyłasz poprawne żądanie. Kontrolki formularzy HTML5 oferują wbudowaną walidację za pomocą różnych atrybutów:
 
 - `required`: pole musi być wypełnione, w przeciwnym razie formularz nie może zostać przesłany.
-- `minlength` i `maxlength`: definiuje minimalną i maksymalną liczbę znaków w polach tekstowych.
-- `min` i `max`: definiuje minimalną i maksymalną wartość pola numerycznego.
+- `minlength` i `maxlength`: definiują minimalną i maksymalną liczbę znaków w polach tekstowych.
+- `min` i `max`: definiują minimalną i maksymalną wartość pola numerycznego.
 - `type`: definiuje rodzaj oczekiwanych danych, takich jak `number`, `email`, `file` lub [inne wbudowane typy](https://developer.mozilla.org/docs/Web/HTML/Element/input). Ten atrybut może również zmienić wizualne renderowanie kontrolki formularza.
 - `pattern`: pozwala zdefiniować wzorzec [wyrażenia regularnego](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions), aby sprawdzić, czy wprowadzone dane są poprawne.
-Wskazówka: możesz dostosować wygląd elementów formularza w zależności od tego, czy są poprawne, czy nie, używając pseudoklas CSS `:valid` i `:invalid`.
+Wskazówka: możesz dostosować wygląd swoich elementów formularza w zależności od tego, czy są poprawne, czy nie, używając pseudoklas CSS `:valid` i `:invalid`.
 ### Zadanie
 
-Aby utworzyć poprawne nowe konto, wymagane są dwa pola: nazwa użytkownika i waluta, pozostałe pola są opcjonalne. Zaktualizuj HTML formularza, używając zarówno atrybutu `required`, jak i tekstu w etykiecie pola, aby:
+Aby utworzyć poprawne nowe konto, wymagane są dwa pola: nazwa użytkownika i waluta, pozostałe pola są opcjonalne. Zaktualizuj HTML formularza, używając zarówno atrybutu `required`, jak i tekstu w etykiecie pola, aby to uwzględnić:
 
 ```html
 <label for="user">Username (required)</label>
@@ -264,7 +264,7 @@ Aby utworzyć poprawne nowe konto, wymagane są dwa pola: nazwa użytkownika i w
 <input id="currency" name="currency" type="text" value="$" required>
 ```
 
-Chociaż ta konkretna implementacja serwera nie wymusza określonych limitów maksymalnej długości pól, zawsze warto ustalić rozsądne limity dla dowolnego tekstu wprowadzanego przez użytkownika.
+Chociaż ta konkretna implementacja serwera nie narzuca ograniczeń dotyczących maksymalnej długości pól, zawsze warto ustalić rozsądne limity dla wprowadzanych przez użytkownika danych tekstowych.
 
 Dodaj atrybut `maxlength` do pól tekstowych:
 
@@ -276,11 +276,11 @@ Dodaj atrybut `maxlength` do pól tekstowych:
 <input id="description" name="description" type="text" maxlength="100">
 ```
 
-Teraz, jeśli naciśniesz przycisk *Zarejestruj się* i któreś z pól nie spełni zdefiniowanych zasad walidacji, powinieneś zobaczyć coś takiego:
+Teraz, jeśli naciśniesz przycisk *Zarejestruj się* i któreś z pól nie spełnia zdefiniowanych zasad walidacji, powinieneś zobaczyć coś takiego:
 
-![Zrzut ekranu pokazujący błąd walidacji podczas próby przesłania formularza](../../../../7-bank-project/2-forms/images/validation-error.png)
+![Zrzut ekranu pokazujący błąd walidacji podczas próby przesłania formularza](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.pl.png)
 
-Walidacja wykonywana *przed* wysłaniem jakichkolwiek danych na serwer nazywana jest walidacją **po stronie klienta**. Jednak należy pamiętać, że nie zawsze możliwe jest wykonanie wszystkich sprawdzeń bez wysyłania danych. Na przykład, nie możemy tutaj sprawdzić, czy konto z tą samą nazwą użytkownika już istnieje, bez wysłania zapytania do serwera. Dodatkowa walidacja wykonywana na serwerze nazywana jest walidacją **po stronie serwera**.
+Walidacja taka, jak ta, wykonywana *przed* wysłaniem danych na serwer, nazywana jest walidacją **po stronie klienta**. Jednak należy pamiętać, że nie zawsze możliwe jest przeprowadzenie wszystkich sprawdzeń bez wysyłania danych. Na przykład, nie możemy tutaj sprawdzić, czy konto z tą samą nazwą użytkownika już istnieje, bez wysłania zapytania do serwera. Dodatkowa walidacja wykonywana na serwerze nazywana jest walidacją **po stronie serwera**.
 
 Zazwyczaj obie metody muszą być zaimplementowane. Walidacja po stronie klienta poprawia doświadczenie użytkownika, zapewniając natychmiastową informację zwrotną, ale walidacja po stronie serwera jest kluczowa, aby upewnić się, że dane użytkownika, które przetwarzasz, są poprawne i bezpieczne.
 
@@ -290,9 +290,9 @@ Zazwyczaj obie metody muszą być zaimplementowane. Walidacja po stronie klienta
 
 Wyświetl komunikat o błędzie w HTML, jeśli użytkownik już istnieje.
 
-Oto przykład, jak może wyglądać finalna strona logowania po dodaniu stylów:
+Oto przykład, jak może wyglądać ostateczna strona logowania po dodaniu stylów:
 
-![Zrzut ekranu strony logowania po dodaniu stylów CSS](../../../../7-bank-project/2-forms/images/result.png)
+![Zrzut ekranu strony logowania po dodaniu stylów CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.pl.png)
 
 ## Quiz po wykładzie
 
@@ -300,11 +300,13 @@ Oto przykład, jak może wyglądać finalna strona logowania po dodaniu stylów:
 
 ## Przegląd i samodzielna nauka
 
-Programiści wykazali się dużą kreatywnością w tworzeniu formularzy, zwłaszcza w zakresie strategii walidacji. Dowiedz się więcej o różnych przepływach formularzy, przeglądając [CodePen](https://codepen.com); czy znajdziesz jakieś interesujące i inspirujące formularze?
+Programiści wykazali się dużą kreatywnością w tworzeniu formularzy, szczególnie w zakresie strategii walidacji. Dowiedz się więcej o różnych przepływach formularzy, przeglądając [CodePen](https://codepen.com); czy znajdziesz jakieś interesujące i inspirujące formularze?
 
 ## Zadanie
 
 [Stwórz styl dla swojej aplikacji bankowej](assignment.md)
 
+---
+
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby zapewnić poprawność tłumaczenia, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

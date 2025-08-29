@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2fcb983b8dbadadb1bc2e97f8c12dac5",
-  "translation_date": "2025-08-24T13:05:46+00:00",
+  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
+  "translation_date": "2025-08-29T14:16:56+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "de"
 }
@@ -13,7 +13,7 @@ _Wie cool wäre es, wenn ein Recruiter nach deinem Lebenslauf fragt und du ihm e
 
 <!----
 TODO: ein optionales Bild hinzufügen
-![Mit einem Code-Editor arbeiten](../../../../sketchnotes/webdev101-vscode-dev.png)
+![Mit einem Code-Editor arbeiten](../../../../translated_images/webdev101-vscode-dev.f53c14e8dad231ea09d9e07a2db4a01551d2dc6cdf21225038389e11156af023.de.png)
 > Sketchnote von [Author name](https://example.com)
 ---->
 
@@ -24,9 +24,9 @@ TODO: ein optionales Bild hinzufügen
 
 ## Lernziele
 
-Nach dieser Aufgabe wirst du lernen, wie man:
+Nach dieser Aufgabe wirst du gelernt haben:
 
-- Eine Website erstellt, um deinen Lebenslauf zu präsentieren
+- Eine Website zu erstellen, um deinen Lebenslauf zu präsentieren
 
 ### Voraussetzungen
 
@@ -40,7 +40,7 @@ Nach dieser Aufgabe wirst du lernen, wie man:
 
 Klicke auf den Link `creating a new file`, gib den Namen `index.html` ein und wähle die Schaltfläche `Commit new file`.
 
-![Eine neue Datei auf github.com erstellen](../../../../8-code-editor/images/new-file-github.com.png)
+![Eine neue Datei auf github.com erstellen](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.de.png)
 
 **Schritt 3:** Öffne [VSCode.dev](https://vscode.dev) und wähle die Schaltfläche `Open Remote Repository`.
 
@@ -54,9 +54,9 @@ https://github.com/your-username/my-resume
 
 ✅ Wenn erfolgreich, siehst du dein Projekt und die Datei `index.html` im Texteditor im Browser geöffnet.
 
-![Eine neue Datei erstellen](../../../../8-code-editor/images/project-on-vscode.dev.png)
+![Eine neue Datei erstellen](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.de.png)
 
-**Schritt 4:** Öffne die Datei `index.html`, füge den untenstehenden Code in den Codebereich ein und speichere ihn.
+**Schritt 4:** Öffne die Datei `index.html`, füge den folgenden Code in den Codebereich ein und speichere ihn.
 
 <details>
     <summary><b>HTML-Code, der für den Inhalt deiner Lebenslauf-Website verantwortlich ist.</b></summary>
@@ -132,7 +132,7 @@ https://github.com/your-username/my-resume
                             <ul>
                                     <li>Aufgabe 1 - Schreibe, was du gemacht hast!</li>
                                     <li>Aufgabe 2 - Schreibe, was du gemacht hast!</li>
-                                    <li>Schreibe die Ergebnisse/den Einfluss deiner Beiträge</li>
+                                    <li>Beschreibe die Ergebnisse/den Einfluss deiner Arbeit</li>
                                     
                             </ul>
                             <h3>Berufsbezeichnung 2</h3>
@@ -142,7 +142,7 @@ https://github.com/your-username/my-resume
                             <ul>
                                     <li>Aufgabe 1 - Schreibe, was du gemacht hast!</li>
                                     <li>Aufgabe 2 - Schreibe, was du gemacht hast!</li>
-                                    <li>Schreibe die Ergebnisse/den Einfluss deiner Beiträge</li>
+                                    <li>Beschreibe die Ergebnisse/den Einfluss deiner Arbeit</li>
                                     
                             </ul>
                         </section>
@@ -156,7 +156,7 @@ Füge deine Lebenslaufdetails ein, um den _Platzhaltertext_ im HTML-Code zu erse
 
 **Schritt 5:** Bewege den Mauszeiger über den Ordner `My-Resume`, klicke auf das Symbol `New File ...` und erstelle 2 neue Dateien in deinem Projekt: `style.css` und `codeswing.json`.
 
-**Schritt 6:** Öffne die Datei `style.css`, füge den untenstehenden Code ein und speichere ihn.
+**Schritt 6:** Öffne die Datei `style.css`, füge den folgenden Code ein und speichere ihn.
 
 <details>
         <summary><b>CSS-Code zur Formatierung des Layouts der Website.</b></summary>
@@ -221,7 +221,7 @@ Füge deine Lebenslaufdetails ein, um den _Platzhaltertext_ im HTML-Code zu erse
             
 </details>
 
-**Schritt 6:** Öffne die Datei `codeswing.json`, füge den untenstehenden Code ein und speichere ihn.
+**Schritt 6:** Öffne die Datei `codeswing.json`, füge den folgenden Code ein und speichere ihn.
 
     {
     "scripts": [],
@@ -230,17 +230,17 @@ Füge deine Lebenslaufdetails ein, um den _Platzhaltertext_ im HTML-Code zu erse
 
 **Schritt 7:** Installiere die Erweiterung `Codeswing`, um die Lebenslauf-Website im Codebereich zu visualisieren.
 
-Klicke auf das Symbol _`Extensions`_ in der Aktivitätsleiste und gib Codeswing ein. Klicke entweder auf die _blaue Installationsschaltfläche_ in der erweiterten Aktivitätsleiste, um die Erweiterung zu installieren, oder nutze die Installationsschaltfläche, die im Codebereich erscheint, sobald du die Erweiterung auswählst, um zusätzliche Informationen zu laden. Direkt nach der Installation der Erweiterung kannst du die Änderungen an deinem Projekt im Codebereich beobachten 😃.
+Klicke auf das Symbol _`Extensions`_ in der Aktivitätsleiste und gib Codeswing ein. Klicke entweder auf die _blaue Installationsschaltfläche_ in der erweiterten Aktivitätsleiste, um die Erweiterung zu installieren, oder nutze die Installationsschaltfläche, die im Codebereich erscheint, sobald du die Erweiterung auswählst, um weitere Informationen zu laden. Direkt nach der Installation der Erweiterung kannst du die Änderungen an deinem Projekt im Codebereich beobachten 😃.
 
 ![Erweiterungen installieren](../../../../8-code-editor/images/install-extension.gif)
 
 Das wirst du auf deinem Bildschirm sehen, nachdem du die Erweiterung installiert hast.
 
-![Codeswing-Erweiterung in Aktion](../../../../8-code-editor/images/after-codeswing-extension-pb.png)
+![Codeswing-Erweiterung in Aktion](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.de.png)
 
 Wenn du mit den Änderungen zufrieden bist, bewege den Mauszeiger über den Ordner `Changes` und klicke auf die Schaltfläche `+`, um die Änderungen zu stagen.
 
-Gib eine Commit-Nachricht ein _(Eine Beschreibung der Änderungen, die du am Projekt vorgenommen hast)_ und committe deine Änderungen, indem du auf das `Häkchen` klickst. Wenn du mit deinem Projekt fertig bist, wähle das Hamburger-Menü-Symbol oben links, um zum Repository auf GitHub zurückzukehren.
+Gib eine Commit-Nachricht ein _(Eine Beschreibung der Änderungen, die du am Projekt vorgenommen hast)_ und committe deine Änderungen, indem du auf das `Häkchen` klickst. Sobald du mit deinem Projekt fertig bist, wähle das Hamburger-Menü-Symbol oben links, um zum Repository auf GitHub zurückzukehren.
 
 Herzlichen Glückwunsch 🎉 Du hast gerade in wenigen Schritten deine Lebenslauf-Website mit vscode.dev erstellt.
 
@@ -257,5 +257,7 @@ Herzlichen Glückwunsch 🎉 Du hast gerade in wenigen Schritten deine Lebenslau
 
 Lies mehr über [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) und einige seiner weiteren Funktionen.
 
+---
+
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.

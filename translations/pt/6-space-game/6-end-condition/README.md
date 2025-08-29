@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "01336cddd638242e99b133614111ea40",
-  "translation_date": "2025-08-24T12:42:08+00:00",
+  "original_hash": "05be6c37791668e3719c4fba94566367",
+  "translation_date": "2025-08-29T16:13:44+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "pt"
 }
@@ -13,16 +13,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Questionário pré-aula](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Existem várias formas de expressar uma *condição de fim* num jogo. Cabe a ti, como criador do jogo, decidir por que motivo o jogo termina. Aqui estão algumas razões, assumindo que estamos a falar do jogo espacial que tens vindo a construir até agora:
+Existem diferentes formas de expressar uma *condição de fim* num jogo. Cabe a ti, como criador do jogo, decidir por que razão o jogo termina. Aqui estão algumas razões, assumindo que estamos a falar do jogo espacial que tens vindo a construir até agora:
 
 - **`N` Naves inimigas foram destruídas**: É bastante comum, se dividires o jogo em diferentes níveis, que seja necessário destruir `N` naves inimigas para completar um nível.
-- **A tua nave foi destruída**: Existem jogos em que perdes se a tua nave for destruída. Outra abordagem comum é ter o conceito de vidas. Sempre que a tua nave é destruída, perdes uma vida. Quando todas as vidas se esgotam, perdes o jogo.
-- **Colecionaste `N` pontos**: Outra condição de fim comum é colecionar pontos. Como obténs pontos depende de ti, mas é habitual atribuir pontos a várias atividades, como destruir uma nave inimiga ou talvez colecionar itens que *caem* quando são destruídos.
-- **Completaste um nível**: Isto pode envolver várias condições, como `X` naves inimigas destruídas, `Y` pontos colecionados ou talvez a recolha de um item específico.
+- **A tua nave foi destruída**: Existem jogos em que perdes o jogo se a tua nave for destruída. Outra abordagem comum é ter o conceito de vidas. Cada vez que a tua nave é destruída, perde-se uma vida. Quando todas as vidas forem perdidas, o jogo termina.
+- **Colecionaste `N` pontos**: Outra condição de fim comum é colecionar pontos. Como obténs os pontos depende de ti, mas é bastante comum atribuir pontos a várias atividades, como destruir uma nave inimiga ou talvez colecionar itens que são *largados* quando são destruídos.
+- **Completar um nível**: Isto pode envolver várias condições, como destruir `X` naves inimigas, colecionar `Y` pontos ou talvez obter um item específico.
 
-## Reiniciar
+## Reinício
 
-Se as pessoas gostarem do teu jogo, é provável que queiram jogá-lo novamente. Assim que o jogo terminar, por qualquer motivo, deves oferecer uma opção para reiniciar.
+Se as pessoas gostarem do teu jogo, é provável que queiram jogá-lo novamente. Quando o jogo termina, seja qual for o motivo, deves oferecer uma alternativa para reiniciar.
 
 ✅ Pensa um pouco sobre as condições em que achas que um jogo termina e como és incentivado a reiniciá-lo.
 
@@ -30,8 +30,8 @@ Se as pessoas gostarem do teu jogo, é provável que queiram jogá-lo novamente.
 
 Vais adicionar estas regras ao teu jogo:
 
-1. **Vencer o jogo**. Assim que todas as naves inimigas forem destruídas, ganhas o jogo. Além disso, exibe uma mensagem de vitória.
-1. **Reiniciar**. Quando todas as vidas forem perdidas ou o jogo for ganho, deves oferecer uma forma de reiniciar o jogo. Lembra-te! Precisarás de reinicializar o jogo e limpar o estado anterior.
+1. **Vencer o jogo**. Quando todas as naves inimigas forem destruídas, ganhas o jogo. Além disso, exibe uma mensagem de vitória.
+1. **Reinício**. Quando todas as vidas forem perdidas ou o jogo for vencido, deves oferecer uma forma de reiniciar o jogo. Lembra-te! Vais precisar de reinicializar o jogo e limpar o estado anterior.
 
 ## Passos recomendados
 
@@ -57,11 +57,11 @@ npm start
 
 O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`. Abre um navegador e insere esse endereço. O teu jogo deve estar num estado jogável.
 
-> dica: para evitar avisos no Visual Studio Code, edita a função `window.onload` para chamar `gameLoopId` como está (sem `let`), e declara o gameLoopId no topo do ficheiro, independentemente: `let gameLoopId;`
+> dica: para evitar avisos no Visual Studio Code, edita a função `window.onload` para chamar `gameLoopId` como está (sem `let`) e declara o gameLoopId no topo do ficheiro, independentemente: `let gameLoopId;`
 
 ### Adicionar código
 
-1. **Acompanhar a condição de fim**. Adiciona código que acompanhe o número de inimigos ou se a nave do herói foi destruída, adicionando estas duas funções:
+1. **Rastrear condição de fim**. Adiciona código que rastreia o número de inimigos ou se a nave do herói foi destruída, adicionando estas duas funções:
 
     ```javascript
     function isHeroDead() {
@@ -108,14 +108,14 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
     });
     ```
 
-1. **Adicionar novos tipos de mensagens**. Adiciona estas Mensagens ao objeto de constantes:
+1. **Adicionar novos tipos de mensagens**. Adiciona estas mensagens ao objeto de constantes:
 
     ```javascript
     GAME_END_LOSS: "GAME_END_LOSS",
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Adicionar código de reinício** que reinicie o jogo ao pressionar um botão selecionado.
+2. **Adicionar código de reinício** que reinicia o jogo ao pressionar um botão selecionado.
 
    1. **Ouvir a tecla `Enter`**. Edita o eventListener da tua janela para ouvir esta tecla:
 
@@ -125,7 +125,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
       }
     ```
 
-   1. **Adicionar mensagem de reinício**. Adiciona esta Mensagem às constantes de Mensagens:
+   1. **Adicionar mensagem de reinício**. Adiciona esta mensagem às constantes de mensagens:
 
         ```javascript
         KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
@@ -171,7 +171,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
         }
         ```
 
-   1. **Lógica de reinício**. Quando todas as vidas forem perdidas ou o jogador vencer o jogo, exibe que o jogo pode ser reiniciado. Além disso, reinicia o jogo quando a tecla de *reinício* for pressionada (podes decidir qual tecla será mapeada para reiniciar).
+   1. **Lógica de reinício**. Quando todas as vidas forem perdidas ou o jogador vencer o jogo, exibe que o jogo pode ser reiniciado. Além disso, reinicia o jogo quando a tecla de *reinício* for pressionada (podes decidir qual tecla será mapeada para reinício).
 
       1. Cria a função `resetGame()`:
 
@@ -216,19 +216,21 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
 ## 🚀 Desafio
 
-Adiciona um som! Consegues adicionar um som para melhorar a experiência do jogo, talvez quando um laser acerta, ou quando o herói morre ou vence? Dá uma olhada neste [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) para aprenderes a tocar som usando JavaScript.
+Adiciona um som! Consegues adicionar um som para melhorar a jogabilidade, talvez quando houver um disparo de laser, ou quando o herói morrer ou vencer? Dá uma olhada neste [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) para aprender como tocar som usando JavaScript.
 
 ## Questionário Pós-Aula
 
 [Questionário pós-aula](https://ff-quizzes.netlify.app/web/quiz/40)
 
-## Revisão e Autoestudo
+## Revisão & Estudo Individual
 
-A tua tarefa é criar um novo jogo de exemplo, por isso explora alguns jogos interessantes por aí para veres que tipo de jogo podes construir.
+A tua tarefa é criar um novo jogo de exemplo, por isso explora alguns jogos interessantes por aí para ver que tipo de jogo podes construir.
 
 ## Tarefa
 
-[Construir um Jogo de Exemplo](assignment.md)
+[Criar um Jogo de Exemplo](assignment.md)
+
+---
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante ter em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

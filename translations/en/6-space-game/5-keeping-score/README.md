@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4e8250db84b027c9ff816b4e4c093457",
-  "translation_date": "2025-08-28T11:33:26+00:00",
+  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
+  "translation_date": "2025-08-29T13:20:51+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "en"
 }
@@ -17,7 +17,7 @@ In this lesson, you'll learn how to add scoring to a game and manage lives.
 
 ## Draw text on the screen
 
-To display a game score on the screen, you need to know how to render text. This can be done using the `fillText()` method on the canvas object. You can also customize aspects like the font, text color, and alignment (left, right, center). Below is an example of code that draws text on the screen.
+To display a game score on the screen, you need to know how to render text. The solution is using the `fillText()` method on the canvas object. You can also customize aspects like the font, text color, and alignment (left, right, center). Below is an example of code that draws text on the screen.
 
 ```javascript
 ctx.font = "30px Arial";
@@ -30,14 +30,14 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ## Life, as a game concept
 
-In games, the concept of "lives" is simply a number. In a space game, it's common to assign a set number of lives that decrease one by one when your ship takes damage. It's even better if you can represent this visually, like using small ships or hearts instead of just a number.
+In games, the concept of "life" is simply a number. In a space game, it's common to assign a set number of lives that decrease one by one when your ship takes damage. It's even better if you can visually represent this with icons like small ships or hearts instead of just a number.
 
 ## What to build
 
 Let's add the following features to your game:
 
 - **Game score**: Award points for every enemy ship destroyed. We suggest 100 points per ship. The score should be displayed in the bottom left corner.
-- **Lives**: Your ship starts with three lives. You lose a life whenever an enemy ship collides with you. Lives should be displayed in the bottom right corner using the following graphic: ![life image](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.en.png).
+- **Life**: Your ship starts with three lives. You lose a life whenever an enemy ship collides with you. Lives should be displayed in the bottom right corner using the following graphic: ![life image](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.en.png).
 
 ## Recommended steps
 
@@ -93,15 +93,15 @@ This will start an HTTP server at `http://localhost:5000`. Open a browser and na
       })
     ```
 
-4. **Add lives and points**. 
-   1. **Initialize variables**. Inside the `Hero` class, under `this.cooldown = 0`, initialize the lives and points:
+4. **Add `life` and `points`**. 
+   1. **Initialize variables**. In the `Hero` class, under `this.cooldown = 0`, initialize the life and points variables:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Display variables on the screen**. Render these values on the screen:
+   1. **Draw variables on the screen**. Render these values on the screen:
 
         ```javascript
         function drawLife() {
@@ -135,11 +135,11 @@ This will start an HTTP server at `http://localhost:5000`. Open a browser and na
         drawLife();
         ```
 
-1. **Implement game rules**. Add the following rules:
+1. **Implement game rules**. Add the following rules to your game:
 
    1. **Deduct a life for every collision between the hero and an enemy**.
    
-      Extend the `Hero` class to handle this deduction:
+      Extend the `Hero` class to handle life deduction:
 
         ```javascript
         decrementLife() {
@@ -152,7 +152,7 @@ This will start an HTTP server at `http://localhost:5000`. Open a browser and na
 
    2. **Increase the score by 100 points for every laser that hits an enemy**.
 
-      Extend the `Hero` class to handle this increment:
+      Extend the `Hero` class to handle score increments:
     
         ```javascript
           incrementPoints() {
@@ -175,15 +175,15 @@ This will start an HTTP server at `http://localhost:5000`. Open a browser and na
         });
         ```
 
-✅ Explore other games created using JavaScript/Canvas. What common features do they share?
+✅ Explore other games built using JavaScript/Canvas. What common features do they share?
 
-By the end of this task, you should see small 'life' ships displayed in the bottom right corner, points displayed in the bottom left corner, and observe your life count decreasing when you collide with enemies and your score increasing when you shoot enemies. Great job! Your game is almost complete.
+By the end of this task, you should see small "life" icons in the bottom right corner, points displayed in the bottom left corner, and observe your life count decrease when colliding with enemies and your score increase when shooting enemies. Great job! Your game is almost finished.
 
 ---
 
 ## 🚀 Challenge
 
-Your code is nearly finished. What do you think your next steps should be?
+Your code is nearly complete. What do you think your next steps should be?
 
 ## Post-Lecture Quiz
 
@@ -200,4 +200,4 @@ Research different ways to increment and decrement game scores and lives. There 
 ---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

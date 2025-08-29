@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "30f8903a1f290e3d438dc2c70fe60259",
-  "translation_date": "2025-08-24T12:03:04+00:00",
+  "original_hash": "61c14b27044861e5e69db35dd52c4403",
+  "translation_date": "2025-08-29T16:16:39+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "pt"
 }
 -->
 # Projeto Terrário Parte 3: Manipulação do DOM e um Closure
 
-![DOM e um closure](../../../../sketchnotes/webdev101-js.png)
+![DOM e um closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.pt.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Questionário Pré-Aula
@@ -18,17 +18,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introdução
 
-Manipular o DOM, ou "Document Object Model", é um aspecto fundamental do desenvolvimento web. De acordo com [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "O Document Object Model (DOM) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na web." Os desafios em torno da manipulação do DOM na web frequentemente motivaram o uso de frameworks JavaScript em vez de JavaScript puro para gerenciar o DOM, mas nós vamos lidar com isso por conta própria!
+Manipular o DOM, ou "Document Object Model", é um aspecto fundamental do desenvolvimento web. De acordo com a [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "O Document Object Model (DOM) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na web." Os desafios em torno da manipulação do DOM na web frequentemente motivaram o uso de frameworks JavaScript em vez de JavaScript puro para gerenciar o DOM, mas nós vamos lidar com isso por conta própria!
 
-Além disso, esta lição introduzirá a ideia de um [closure em JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), que você pode pensar como uma função encapsulada por outra função, permitindo que a função interna tenha acesso ao escopo da função externa.
+Além disso, esta lição introduzirá a ideia de um [closure em JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), que você pode imaginar como uma função encapsulada por outra função, permitindo que a função interna tenha acesso ao escopo da função externa.
 
 > Closures em JavaScript são um tópico vasto e complexo. Esta lição aborda a ideia mais básica: no código deste terrário, você encontrará um closure: uma função interna e uma função externa construídas de forma a permitir que a função interna acesse o escopo da função externa. Para muito mais informações sobre como isso funciona, visite a [documentação extensa](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
 
 Usaremos um closure para manipular o DOM.
 
-Pense no DOM como uma árvore, representando todas as formas pelas quais um documento de página web pode ser manipulado. Diversas APIs (Interfaces de Programação de Aplicações) foram escritas para que os programadores, usando sua linguagem de programação preferida, possam acessar o DOM e editá-lo, alterá-lo, reorganizá-lo e gerenciá-lo de outras formas.
+Pense no DOM como uma árvore, representando todas as formas pelas quais um documento de página web pode ser manipulado. Diversas APIs (Interfaces de Programação de Aplicações) foram criadas para que programadores, usando a linguagem de programação de sua escolha, possam acessar o DOM e editá-lo, alterá-lo, reorganizá-lo e gerenciá-lo de outras formas.
 
-![Representação da árvore DOM](../../../../3-terrarium/3-intro-to-DOM-and-closures/images/dom-tree.png)
+![Representação da árvore do DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.pt.png)
 
 > Uma representação do DOM e da marcação HTML que o referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -40,18 +40,18 @@ Você deve ter o HTML e o CSS do seu terrário prontos. Ao final desta lição, 
 
 ### Tarefa
 
-Na pasta do seu terrário, crie um novo arquivo chamado `script.js`. Importe esse arquivo na seção `<head>`:
+Na sua pasta do terrário, crie um novo arquivo chamado `script.js`. Importe esse arquivo na seção `<head>`:
 
 ```html
 	<script src="./script.js" defer></script>
 ```
 
-> Nota: use `defer` ao importar um arquivo JavaScript externo no arquivo HTML para permitir que o JavaScript seja executado apenas após o arquivo HTML ter sido totalmente carregado. Você também poderia usar o atributo `async`, que permite que o script seja executado enquanto o arquivo HTML está sendo analisado, mas no nosso caso, é importante que os elementos HTML estejam totalmente disponíveis para arrastar antes de permitir que o script de arrastar seja executado.
+> Nota: use `defer` ao importar um arquivo JavaScript externo no arquivo HTML para permitir que o JavaScript seja executado apenas após o arquivo HTML ter sido completamente carregado. Você também poderia usar o atributo `async`, que permite que o script seja executado enquanto o arquivo HTML está sendo analisado, mas no nosso caso, é importante que os elementos HTML estejam totalmente disponíveis para arrastar antes de permitirmos que o script de arrastar seja executado.
 ---
 
 ## Os elementos do DOM
 
-A primeira coisa que você precisa fazer é criar referências aos elementos que deseja manipular no DOM. No nosso caso, são as 14 plantas atualmente esperando nas barras laterais.
+A primeira coisa que você precisa fazer é criar referências aos elementos que deseja manipular no DOM. No nosso caso, são as 14 plantas atualmente localizadas nas barras laterais.
 
 ### Tarefa
 
@@ -72,15 +72,15 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-O que está acontecendo aqui? Você está referenciando o documento e procurando em seu DOM um elemento com um Id específico. Lembre-se de que na primeira lição sobre HTML você deu Ids individuais a cada imagem de planta (`id="plant1"`)? Agora você fará uso desse esforço. Após identificar cada elemento, você passa esse item para uma função chamada `dragElement` que você construirá em breve. Assim, o elemento no HTML agora está habilitado para arrastar, ou estará em breve.
+O que está acontecendo aqui? Você está referenciando o documento e procurando no seu DOM um elemento com um Id específico. Lembra-se de que, na primeira lição sobre HTML, você deu Ids individuais a cada imagem de planta (`id="plant1"`)? Agora você fará uso desse esforço. Após identificar cada elemento, você passa esse item para uma função chamada `dragElement`, que você criará em breve. Assim, o elemento no HTML agora está habilitado para ser arrastado, ou estará em breve.
 
-✅ Por que referenciamos elementos por Id? Por que não pela classe CSS? Você pode consultar a lição anterior sobre CSS para responder a esta pergunta.
+✅ Por que referenciamos elementos pelo Id? Por que não pela sua classe CSS? Você pode consultar a lição anterior sobre CSS para responder a esta pergunta.
 
 ---
 
 ## O Closure
 
-Agora você está pronto para criar o closure `dragElement`, que é uma função externa que encapsula uma função ou funções internas (no nosso caso, teremos três).
+Agora você está pronto para criar o closure `dragElement`, que é uma função externa que encapsula uma ou mais funções internas (no nosso caso, teremos três).
 
 Closures são úteis quando uma ou mais funções precisam acessar o escopo de uma função externa. Aqui está um exemplo:
 
@@ -98,7 +98,7 @@ console.log(candy)
 
 Neste exemplo, a função `displayCandy` envolve uma função que adiciona um novo tipo de doce a um array que já existe na função. Se você executar este código, o array `candy` será indefinido, pois é uma variável local (local ao closure).
 
-✅ Como você pode tornar o array `candy` acessível? Tente movê-lo para fora do closure. Desta forma, o array se torna global, em vez de permanecer disponível apenas no escopo local do closure.
+✅ Como você pode tornar o array `candy` acessível? Experimente movê-lo para fora do closure. Assim, o array se torna global, em vez de permanecer disponível apenas no escopo local do closure.
 
 ### Tarefa
 
@@ -115,17 +115,17 @@ function dragElement(terrariumElement) {
 }
 ```
 
-`dragElement` obtém seu objeto `terrariumElement` das declarações no topo do script. Em seguida, você define algumas posições locais como `0` para o objeto passado para a função. Estas são as variáveis locais que serão manipuladas para cada elemento enquanto você adiciona funcionalidade de arrastar e soltar dentro do closure para cada elemento. O terrário será preenchido por esses elementos arrastados, então o aplicativo precisa acompanhar onde eles são colocados.
+`dragElement` obtém seu objeto `terrariumElement` das declarações no início do script. Em seguida, você define algumas posições locais como `0` para o objeto passado para a função. Estas são as variáveis locais que serão manipuladas para cada elemento à medida que você adiciona a funcionalidade de arrastar e soltar dentro do closure para cada elemento. O terrário será preenchido por esses elementos arrastados, então o aplicativo precisa acompanhar onde eles são colocados.
 
-Além disso, o `terrariumElement` que é passado para esta função é atribuído a um evento `pointerdown`, que faz parte das [APIs web](https://developer.mozilla.org/docs/Web/API) projetadas para ajudar na gestão do DOM. `onpointerdown` é disparado quando um botão é pressionado ou, no nosso caso, um elemento arrastável é tocado. Este manipulador de eventos funciona tanto em [navegadores web quanto móveis](https://caniuse.com/?search=onpointerdown), com algumas exceções.
+Além disso, o `terrariumElement` que é passado para esta função é atribuído a um evento `pointerdown`, que faz parte das [APIs da web](https://developer.mozilla.org/docs/Web/API) projetadas para ajudar no gerenciamento do DOM. O `onpointerdown` é acionado quando um botão é pressionado ou, no nosso caso, quando um elemento arrastável é tocado. Este manipulador de eventos funciona tanto em [navegadores web quanto móveis](https://caniuse.com/?search=onpointerdown), com algumas exceções.
 
-✅ O [manipulador de eventos `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) tem muito mais suporte entre navegadores; por que você não o usaria aqui? Pense no tipo exato de interação com a tela que você está tentando criar.
+✅ O [manipulador de eventos `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) tem muito mais suporte entre navegadores; por que você não o usaria aqui? Pense no tipo exato de interação de tela que você está tentando criar aqui.
 
 ---
 
 ## A função Pointerdrag
 
-O `terrariumElement` está pronto para ser arrastado; quando o evento `onpointerdown` é disparado, a função `pointerDrag` é invocada. Adicione essa função logo abaixo desta linha: `terrariumElement.onpointerdown = pointerDrag;`:
+O `terrariumElement` está pronto para ser arrastado; quando o evento `onpointerdown` é acionado, a função `pointerDrag` é invocada. Adicione essa função logo abaixo desta linha: `terrariumElement.onpointerdown = pointerDrag;`:
 
 ### Tarefa 
 
@@ -138,13 +138,13 @@ function pointerDrag(e) {
 }
 ```
 
-Várias coisas acontecem. Primeiro, você impede que os eventos padrão que normalmente ocorrem no pointerdown aconteçam usando `e.preventDefault();`. Desta forma, você tem mais controle sobre o comportamento da interface.
+Várias coisas acontecem. Primeiro, você impede que os eventos padrão que normalmente ocorrem no `pointerdown` aconteçam, usando `e.preventDefault();`. Assim, você tem mais controle sobre o comportamento da interface.
 
-> Volte a esta linha quando tiver construído completamente o arquivo de script e tente sem `e.preventDefault()` - o que acontece?
+> Volte a esta linha quando tiver construído completamente o arquivo de script e experimente sem o `e.preventDefault()` - o que acontece?
 
-Em segundo lugar, abra `index.html` em uma janela do navegador e inspecione a interface. Quando você clica em uma planta, pode ver como o evento 'e' é capturado. Explore o evento para ver quanta informação é coletada por um único evento pointerdown!  
+Em segundo lugar, abra o `index.html` em uma janela do navegador e inspecione a interface. Quando você clica em uma planta, pode ver como o evento 'e' é capturado. Explore o evento para ver quanta informação é coletada por um único evento de `pointerdown`!
 
-Em seguida, observe como as variáveis locais `pos3` e `pos4` são definidas como e.clientX. Você pode encontrar os valores de `e` no painel de inspeção. Esses valores capturam as coordenadas x e y da planta no momento em que você clica ou toca nela. Você precisará de controle detalhado sobre o comportamento das plantas enquanto as clica e arrasta, então você acompanha suas coordenadas.
+Em seguida, observe como as variáveis locais `pos3` e `pos4` são definidas como `e.clientX`. Você pode encontrar os valores de `e` no painel de inspeção. Esses valores capturam as coordenadas x e y da planta no momento em que você clica ou toca nela. Você precisará de controle detalhado sobre o comportamento das plantas enquanto as arrasta, então você acompanha suas coordenadas.
 
 ✅ Está ficando mais claro por que todo este aplicativo é construído com um grande closure? Se não fosse, como você manteria o escopo para cada uma das 14 plantas arrastáveis?
 
@@ -154,7 +154,7 @@ Complete a função inicial adicionando mais duas manipulações de eventos de p
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
-Agora você está indicando que deseja que a planta seja arrastada junto com o ponteiro enquanto você o move, e que o gesto de arrastar pare quando você deselecionar a planta. `onpointermove` e `onpointerup` fazem parte da mesma API que `onpointerdown`. A interface lançará erros agora, pois você ainda não definiu as funções `elementDrag` e `stopElementDrag`, então construa-as a seguir.
+Agora você está indicando que deseja que a planta seja arrastada junto com o ponteiro enquanto você a move, e que o gesto de arrastar pare quando você deselecionar a planta. `onpointermove` e `onpointerup` fazem parte da mesma API que `onpointerdown`. A interface lançará erros agora, pois você ainda não definiu as funções `elementDrag` e `stopElementDrag`, então construa-as a seguir.
 
 ## As funções elementDrag e stopElementDrag
 
@@ -177,9 +177,9 @@ function elementDrag(e) {
 ```
 Nesta função, você faz muitas edições das posições iniciais 1-4 que definiu como variáveis locais na função externa. O que está acontecendo aqui?
 
-Enquanto você arrasta, você redefine `pos1` tornando-o igual a `pos3` (que você definiu anteriormente como `e.clientX`) menos o valor atual de `e.clientX`. Você faz uma operação semelhante em `pos2`. Em seguida, você redefine `pos3` e `pos4` para as novas coordenadas X e Y do elemento. Você pode observar essas mudanças no console enquanto arrasta. Então, você manipula o estilo CSS da planta para definir sua nova posição com base nas novas posições de `pos1` e `pos2`, calculando as coordenadas X e Y da planta com base na comparação de seu deslocamento com essas novas posições.
+Enquanto você arrasta, você redefine `pos1` tornando-o igual a `pos3` (que você definiu anteriormente como `e.clientX`) menos o valor atual de `e.clientX`. Você faz uma operação semelhante em `pos2`. Em seguida, redefine `pos3` e `pos4` para as novas coordenadas X e Y do elemento. Você pode observar essas mudanças no console enquanto arrasta. Depois, você manipula o estilo CSS da planta para definir sua nova posição com base nas novas posições de `pos1` e `pos2`, calculando as coordenadas X e Y da planta com base na comparação de seu deslocamento com essas novas posições.
 
-> `offsetTop` e `offsetLeft` são propriedades CSS que definem a posição de um elemento com base na posição de seu pai; seu pai pode ser qualquer elemento que não esteja posicionado como `static`. 
+> `offsetTop` e `offsetLeft` são propriedades CSS que definem a posição de um elemento com base na de seu elemento pai; seu pai pode ser qualquer elemento que não esteja posicionado como `static`. 
 
 Toda essa recalculação de posicionamento permite que você ajuste o comportamento do terrário e suas plantas.
 
@@ -200,13 +200,13 @@ Esta pequena função redefine os eventos `onpointerup` e `onpointermove` para q
 
 Agora você completou seu projeto!
 
-🥇Parabéns! Você terminou seu lindo terrário. ![terrário finalizado](../../../../3-terrarium/3-intro-to-DOM-and-closures/images/terrarium-final.png)
+🥇Parabéns! Você terminou seu lindo terrário. ![terrário finalizado](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.pt.png)
 
 ---
 
 ## 🚀Desafio
 
-Adicione um novo manipulador de eventos ao seu closure para fazer algo mais com as plantas; por exemplo, clique duas vezes em uma planta para trazê-la para frente. Seja criativo!
+Adicione um novo manipulador de eventos ao seu closure para fazer algo mais com as plantas; por exemplo, clique duas vezes em uma planta para trazê-la para a frente. Seja criativo!
 
 ## Questionário Pós-Aula
 
@@ -214,9 +214,9 @@ Adicione um novo manipulador de eventos ao seu closure para fazer algo mais com 
 
 ## Revisão e Autoestudo
 
-Embora arrastar elementos pela tela pareça trivial, existem muitas maneiras de fazer isso e muitos desafios, dependendo do efeito que você busca. Na verdade, existe uma [API de arrastar e soltar](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) que você pode experimentar. Não a usamos neste módulo porque o efeito que queríamos era um pouco diferente, mas experimente esta API em seu próprio projeto e veja o que você consegue alcançar.
+Embora arrastar elementos pela tela pareça trivial, existem muitas maneiras de fazer isso e muitos desafios, dependendo do efeito que você deseja. Na verdade, existe uma [API de arrastar e soltar](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) inteira que você pode experimentar. Não a usamos neste módulo porque o efeito que queríamos era um pouco diferente, mas experimente esta API no seu próprio projeto e veja o que consegue alcançar.
 
-Encontre mais informações sobre eventos de ponteiro nos [documentos W3C](https://www.w3.org/TR/pointerevents1/) e nos [documentos web do MDN](https://developer.mozilla.org/docs/Web/API/Pointer_events).
+Encontre mais informações sobre eventos de ponteiro na [documentação W3C](https://www.w3.org/TR/pointerevents1/) e na [documentação MDN](https://developer.mozilla.org/docs/Web/API/Pointer_events).
 
 Sempre verifique as capacidades dos navegadores usando [CanIUse.com](https://caniuse.com/).
 
@@ -224,5 +224,7 @@ Sempre verifique as capacidades dos navegadores usando [CanIUse.com](https://can
 
 [Trabalhe um pouco mais com o DOM](assignment.md)
 
+---
+
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original no seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

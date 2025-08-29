@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4612bbb9ace984f374fcc80e3e035ad",
-  "translation_date": "2025-08-23T22:40:31+00:00",
+  "original_hash": "92e136090efc4341b1d51c37924c1802",
+  "translation_date": "2025-08-29T15:23:28+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "tw"
 }
 -->
 # JavaScript 基礎：方法與函式
 
-![JavaScript 基礎 - 函式](../../../../sketchnotes/webdev101-js-functions.png)
+![JavaScript 基礎 - 函式](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.tw.png)
 > 繪圖筆記由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
 
 ## 課前測驗
-[課前測驗](https://ff-quizzes.netlify.app/web/quiz/9)
+[課前測驗](https://ff-quizzes.netlify.app)
 
-在撰寫程式碼時，我們總是希望程式碼易於閱讀。雖然這聽起來有些矛盾，但事實上程式碼被閱讀的次數遠多於被撰寫的次數。開發者工具箱中的一個核心工具就是 **函式**，它能幫助我們確保程式碼的可維護性。
+在撰寫程式碼時，我們總是希望確保程式碼具有可讀性。雖然這聽起來有些矛盾，但程式碼被閱讀的次數遠遠多於被撰寫的次數。開發者工具箱中的一個核心工具就是 **函式**，它能幫助我們確保程式碼的可維護性。
 
 [![方法與函式](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "方法與函式")
 
@@ -66,9 +66,9 @@ displayGreeting();
 
 ## 傳遞資訊給函式
 
-為了讓函式更具重用性，您通常需要向函式傳遞資訊。如果我們考慮上面的 `displayGreeting` 示例，它只會顯示 **Hello, world!**。這並不是一個非常有用的函式。如果我們想讓它更靈活，例如允許指定要問候的人的名字，我們可以添加一個 **參數**。參數（有時也稱為 **引數**）是傳遞給函式的額外資訊。
+為了讓函式更具重用性，您通常需要向函式傳遞資訊。如果我們考慮上面的 `displayGreeting` 示例，它只會顯示 **Hello, world!**。這並不是一個非常有用的函式。如果我們希望它更靈活一些，例如允許指定要問候的人的名字，我們可以添加一個 **參數**。參數（有時也稱為 **引數**）是傳遞給函式的額外資訊。
 
-參數列在定義部分的括號內，並用逗號分隔，如下所示：
+參數在定義部分列於括號內，並以逗號分隔，如下所示：
 
 ```javascript
 function name(param, param2, param3) {
@@ -114,11 +114,11 @@ displayGreeting('Christopher', 'Hi');
 
 ## 回傳值
 
-到目前為止，我們建立的函式會始終輸出到 [console](https://developer.mozilla.org/docs/Web/API/console)。有時這正是我們所需要的，特別是當我們建立的函式會呼叫其他服務時。但如果我想建立一個輔助函式來執行計算並將值回傳以便在其他地方使用呢？
+到目前為止，我們建立的函式會始終輸出到 [console](https://developer.mozilla.org/docs/Web/API/console)。有時這正是我們所需要的，特別是當我們建立會呼叫其他服務的函式時。但如果我想建立一個輔助函式來執行計算並將值回傳，以便我可以在其他地方使用它呢？
 
-我們可以通過使用 **回傳值** 來實現。回傳值由函式回傳，並可以像存儲字串或數字等靜態值一樣存儲在變數中。
+我們可以通過使用 **回傳值** 來實現。回傳值由函式回傳，並且可以像字串或數字等靜態值一樣存儲在變數中。
 
-如果函式確實回傳某些內容，則使用關鍵字 `return`。`return` 關鍵字需要一個值或引用作為回傳內容，如下所示：
+如果函式確實回傳某些內容，則使用關鍵字 `return`。`return` 關鍵字需要一個值或參考作為回傳內容，如下所示：
 
 ```javascript
 return myVariable;
@@ -141,9 +141,9 @@ const greetingMessage = createGreetingMessage('Christopher');
 
 ## 函式作為函式的參數
 
-隨著您在程式設計職業生涯中的進步，您會遇到接受函式作為參數的函式。這個巧妙的技巧通常用於我們不知道某件事何時會發生或完成，但我們知道需要執行某個操作作為響應。
+隨著您在程式設計生涯中的進步，您會遇到接受函式作為參數的函式。這個巧妙的技巧通常用於我們不知道某件事何時會發生或完成，但我們知道需要執行某個操作作為回應。
 
-例如，[setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) 開始一個計時器並在完成時執行程式碼。我們需要告訴它我們想執行什麼程式碼。聽起來這正是函式的完美工作！
+例如，考慮 [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)，它啟動一個計時器並在完成時執行程式碼。我們需要告訴它我們想執行什麼程式碼。聽起來像是函式的完美工作！
 
 如果您執行以下程式碼，3 秒後您會看到訊息 **3 seconds has elapsed**。
 
@@ -157,11 +157,11 @@ setTimeout(displayDone, 3000);
 
 ### 匿名函式
 
-讓我們再看看我們建立的內容。我們建立了一個有名稱的函式，但它只會被使用一次。隨著應用程式變得更加複雜，我們可能會建立許多只會被呼叫一次的函式。這並不理想。事實證明，我們並不總是需要提供名稱！
+讓我們再看看我們建立的內容。我們正在建立一個只會使用一次的具名函式。隨著應用程式變得更加複雜，我們可能會建立許多只會被呼叫一次的函式。這並不理想。事實證明，我們並不總是需要提供名稱！
 
-當我們將函式作為參數傳遞時，可以跳過事先建立函式，而是在參數中直接建立它。我們使用相同的 `function` 關鍵字，但將其作為參數的一部分來建立。
+當我們將函式作為參數傳遞時，我們可以跳過事先建立函式，而是在參數中直接建立它。我們使用相同的 `function` 關鍵字，但將其作為參數來建立。
 
-讓我們重寫上面的程式碼以使用匿名函式：
+讓我們重寫上述程式碼以使用匿名函式：
 
 ```javascript
 setTimeout(function() {
@@ -194,7 +194,7 @@ setTimeout(() => {
 您能否用一句話說明函式與方法的區別？試試看！
 
 ## 課後測驗
-[課後測驗](https://ff-quizzes.netlify.app/web/quiz/10)
+[課後測驗](https://ff-quizzes.netlify.app)
 
 ## 複習與自學
 
@@ -202,7 +202,9 @@ setTimeout(() => {
 
 ## 作業
 
-[函式的趣味練習](assignment.md)
+[函式趣味練習](assignment.md)
+
+---
 
 **免責聲明**：  
-本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原文文件作為權威來源。對於關鍵資訊，建議尋求專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原始語言的文件作為權威來源。對於關鍵資訊，建議尋求專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解讀概不負責。

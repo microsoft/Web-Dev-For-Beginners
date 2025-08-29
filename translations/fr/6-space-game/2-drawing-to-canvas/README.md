@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "41be8d35e7f30aa9dad10773c35e89c4",
-  "translation_date": "2025-08-23T22:58:47+00:00",
+  "original_hash": "056641280211e52fd0adb81b6058ec55",
+  "translation_date": "2025-08-29T13:38:11+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "fr"
 }
 -->
-# Construire un jeu spatial Partie 2 : Dessiner le héros et les monstres sur le canvas
+# Construire un jeu spatial Partie 2 : Dessiner le héros et les monstres sur le Canvas
 
 ## Quiz avant le cours
 
@@ -27,24 +27,24 @@ Voici comment il est généralement déclaré, en tant que partie du corps de la
 
 Ci-dessus, nous définissons les propriétés `id`, `width` et `height`.
 
-- `id` : définissez cela pour obtenir une référence lorsque vous devez interagir avec le canvas.
+- `id` : définissez cet identifiant pour pouvoir y faire référence lorsque vous devez interagir avec lui.
 - `width` : c'est la largeur de l'élément.
 - `height` : c'est la hauteur de l'élément.
 
 ## Dessiner des formes simples
 
-Le canvas utilise un système de coordonnées cartésiennes pour dessiner des éléments. Il utilise donc un axe x et un axe y pour exprimer où quelque chose est situé. La position `0,0` est le coin supérieur gauche, et le coin inférieur droit correspond à la largeur et à la hauteur que vous avez définies pour le canvas.
+Le Canvas utilise un système de coordonnées cartésiennes pour dessiner des éléments. Il utilise donc un axe x et un axe y pour exprimer où quelque chose est situé. La position `0,0` correspond au coin supérieur gauche, et le coin inférieur droit correspond aux valeurs WIDTH et HEIGHT que vous avez définies pour le canvas.
 
-![la grille du canvas](../../../../6-space-game/2-drawing-to-canvas/canvas_grid.png)  
-> Image tirée de [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+![la grille du canvas](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.fr.png)
+> Image provenant de [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Pour dessiner sur l'élément canvas, vous devez suivre les étapes suivantes :
 
 1. **Obtenir une référence** à l'élément Canvas.
 2. **Obtenir une référence** au contexte qui se trouve sur l'élément Canvas.
-3. **Effectuer une opération de dessin** en utilisant le contexte.
+3. **Effectuer une opération de dessin** en utilisant l'élément contexte.
 
-Le code pour les étapes ci-dessus ressemble généralement à ceci :
+Le code correspondant à ces étapes ressemble généralement à ceci :
 
 ```javascript
 // draws a red rectangle
@@ -63,13 +63,13 @@ ctx.fillRect(0,0, 200, 200) // x,y,width, height
 
 ✅ L'API Canvas se concentre principalement sur les formes 2D, mais vous pouvez également dessiner des éléments 3D sur un site web ; pour cela, vous pourriez utiliser l'[API WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
-Vous pouvez dessiner toutes sortes de choses avec l'API Canvas, comme :
+Avec l'API Canvas, vous pouvez dessiner toutes sortes de choses, comme :
 
-- **Formes géométriques** : nous avons déjà montré comment dessiner un rectangle, mais il y a bien plus que vous pouvez dessiner.
-- **Texte** : vous pouvez dessiner du texte avec n'importe quelle police et couleur.
-- **Images** : vous pouvez dessiner une image à partir d'une ressource comme un fichier .jpg ou .png, par exemple.
+- **Des formes géométriques** : nous avons déjà montré comment dessiner un rectangle, mais il y a bien plus à explorer.
+- **Du texte** : vous pouvez dessiner du texte avec n'importe quelle police et couleur.
+- **Des images** : vous pouvez dessiner une image à partir d'une ressource comme un fichier .jpg ou .png, par exemple.
 
-✅ Essayez-le ! Vous savez comment dessiner un rectangle, pouvez-vous dessiner un cercle sur une page ? Regardez quelques dessins intéressants réalisés avec Canvas sur CodePen. Voici un [exemple particulièrement impressionnant](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Essayez-le ! Vous savez comment dessiner un rectangle, pouvez-vous dessiner un cercle sur une page ? Consultez des dessins intéressants réalisés avec Canvas sur CodePen. Voici un [exemple particulièrement impressionnant](https://codepen.io/dissimulate/pen/KrAwx).
 
 ## Charger et dessiner une ressource image
 
@@ -110,7 +110,7 @@ async function run() {
 
 ```
 
-Pour dessiner des ressources de jeu sur un écran, votre code ressemblerait à ceci :
+Pour dessiner des ressources de jeu à l'écran, votre code ressemblerait à ceci :
 
 ```javascript
 async function run() {
@@ -124,7 +124,7 @@ async function run() {
 }
 ```
 
-## Il est maintenant temps de commencer à construire votre jeu
+## Il est temps de commencer à construire votre jeu
 
 ### Ce que vous allez construire
 
@@ -132,13 +132,13 @@ Vous allez créer une page web avec un élément Canvas. Elle doit afficher un �
 
 - Vaisseau du héros
 
-   ![Vaisseau du héros](../../../../6-space-game/2-drawing-to-canvas/solution/assets/player.png)
+   ![Vaisseau du héros](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.fr.png)
 
 - Monstre 5*5
 
-   ![Vaisseau monstre](../../../../6-space-game/2-drawing-to-canvas/solution/assets/enemyShip.png)
+   ![Vaisseau monstre](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.fr.png)
 
-### Étapes recommandées pour commencer le développement
+### Étapes recommandées pour démarrer le développement
 
 Trouvez les fichiers qui ont été créés pour vous dans le sous-dossier `your-work`. Il devrait contenir les éléments suivants :
 
@@ -151,33 +151,33 @@ Trouvez les fichiers qui ont été créés pour vous dans le sous-dossier `your-
 -| package.json
 ```
 
-Ouvrez une copie de ce dossier dans Visual Studio Code. Vous devez avoir un environnement de développement local configuré, de préférence avec Visual Studio Code, NPM et Node installés. Si vous n'avez pas configuré `npm` sur votre ordinateur, [voici comment faire](https://www.npmjs.com/get-npm).
+Ouvrez une copie de ce dossier dans Visual Studio Code. Vous devez avoir un environnement de développement local configuré, de préférence avec Visual Studio Code, NPM et Node installés. Si vous n'avez pas `npm` configuré sur votre ordinateur, [voici comment faire](https://www.npmjs.com/get-npm).
 
-Commencez votre projet en naviguant vers le dossier `your_work` :
+Démarrez votre projet en naviguant dans le dossier `your_work` :
 
 ```bash
 cd your-work
 npm start
 ```
 
-Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et entrez cette adresse. C'est une page blanche pour l'instant, mais cela va changer.
+Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un navigateur et entrez cette adresse. Pour l'instant, la page est vide, mais cela va changer.
 
-> Remarque : pour voir les modifications sur votre écran, actualisez votre navigateur.
+> Remarque : pour voir les modifications à l'écran, actualisez votre navigateur.
 
 ### Ajouter du code
 
 Ajoutez le code nécessaire dans `your-work/app.js` pour résoudre les points suivants :
 
 1. **Dessiner** un canvas avec un fond noir  
-   > Astuce : ajoutez deux lignes sous le TODO approprié dans `/app.js`, en définissant l'élément `ctx` comme noir et les coordonnées haut/gauche à 0,0, avec la hauteur et la largeur égales à celles du canvas.
+   > astuce : ajoutez deux lignes sous le TODO approprié dans `/app.js`, en définissant l'élément `ctx` sur noir et les coordonnées haut/gauche à 0,0, avec une hauteur et une largeur égales à celles du canvas.
 2. **Charger** les textures  
-   > Astuce : ajoutez les images du joueur et des ennemis en utilisant `await loadTexture` et en passant le chemin de l'image. Vous ne les verrez pas encore à l'écran !
+   > astuce : ajoutez les images du joueur et des ennemis en utilisant `await loadTexture` et en passant le chemin de l'image. Vous ne les verrez pas encore à l'écran !
 3. **Dessiner** le héros au centre de l'écran dans la moitié inférieure  
-   > Astuce : utilisez l'API `drawImage` pour dessiner `heroImg` sur l'écran, en définissant `canvas.width / 2 - 45` et `canvas.height - canvas.height / 4)`.
+   > astuce : utilisez l'API `drawImage` pour dessiner `heroImg` à l'écran, en définissant `canvas.width / 2 - 45` et `canvas.height - canvas.height / 4)`.
 4. **Dessiner** 5*5 monstres  
-   > Astuce : maintenant, vous pouvez décommenter le code pour dessiner les ennemis sur l'écran. Ensuite, allez dans la fonction `createEnemies` et complétez-la.
+   > astuce : vous pouvez maintenant décommenter le code pour dessiner les ennemis à l'écran. Ensuite, allez dans la fonction `createEnemies` et complétez-la.
 
-   Tout d'abord, configurez quelques constantes :
+   Tout d'abord, définissez quelques constantes :
 
     ```javascript
     const MONSTER_TOTAL = 5;
@@ -186,7 +186,7 @@ Ajoutez le code nécessaire dans `your-work/app.js` pour résoudre les points su
     const STOP_X = START_X + MONSTER_WIDTH;
     ```
 
-    Ensuite, créez une boucle pour dessiner le tableau de monstres sur l'écran :
+    puis, créez une boucle pour dessiner le tableau de monstres à l'écran :
 
     ```javascript
     for (let x = START_X; x < STOP_X; x += 98) {
@@ -200,29 +200,31 @@ Ajoutez le code nécessaire dans `your-work/app.js` pour résoudre les points su
 
 Le résultat final devrait ressembler à ceci :
 
-![Écran noir avec un héros et 5*5 monstres](../../../../6-space-game/2-drawing-to-canvas/partI-solution.png)
+![Écran noir avec un héros et 5*5 monstres](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.fr.png)
 
 ## Solution
 
-Essayez de résoudre cela vous-même d'abord, mais si vous êtes bloqué, consultez une [solution](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
+Essayez de résoudre cela par vous-même d'abord, mais si vous êtes bloqué, consultez une [solution](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
 
 ---
 
 ## 🚀 Défi
 
-Vous avez appris à dessiner avec l'API Canvas orientée 2D ; jetez un œil à l'[API WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API) et essayez de dessiner un objet 3D.
+Vous avez appris à dessiner avec l'API Canvas axée sur la 2D ; jetez un œil à l'[API WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API) et essayez de dessiner un objet 3D.
 
 ## Quiz après le cours
 
 [Quiz après le cours](https://ff-quizzes.netlify.app/web/quiz/32)
 
-## Révision et étude personnelle
+## Révision et auto-apprentissage
 
 Apprenez-en davantage sur l'API Canvas en [lisant à ce sujet](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
 ## Devoir
 
-[Amusez-vous avec l'API Canvas](assignment.md)
+[Expérimentez avec l'API Canvas](assignment.md)
+
+---
 
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction professionnelle humaine. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2e83e38c35dc003f046d7cc0bbfd4920",
-  "translation_date": "2025-08-23T23:01:33+00:00",
+  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
+  "translation_date": "2025-08-29T13:37:45+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "fr"
 }
@@ -16,13 +16,13 @@ CO_OP_TRANSLATOR_METADATA:
 Dans cette leçon, vous apprendrez à tirer des lasers avec JavaScript ! Nous allons ajouter deux éléments à notre jeu :
 
 - **Un laser** : ce laser est tiré depuis le vaisseau de votre héros et se déplace verticalement vers le haut.
-- **Détection de collisions**, dans le cadre de la mise en œuvre de la capacité à *tirer*, nous ajouterons également quelques règles intéressantes au jeu :
+- **Détection de collisions**, dans le cadre de la mise en œuvre de la capacité de *tirer*, nous ajouterons également quelques règles intéressantes au jeu :
    - **Laser touche un ennemi** : l'ennemi meurt s'il est touché par un laser.
    - **Laser touche le haut de l'écran** : un laser est détruit s'il atteint la partie supérieure de l'écran.
    - **Collision entre ennemi et héros** : un ennemi et le héros sont détruits s'ils se percutent.
    - **Ennemi atteint le bas de l'écran** : un ennemi et un héros sont détruits si l'ennemi atteint le bas de l'écran.
 
-En résumé, vous -- *le héros* -- devez éliminer tous les ennemis avec un laser avant qu'ils n'atteignent le bas de l'écran.
+En résumé, vous -- *le héros* -- devez toucher tous les ennemis avec un laser avant qu'ils n'atteignent le bas de l'écran.
 
 ✅ Faites quelques recherches sur le tout premier jeu informatique jamais créé. Quelle était sa fonctionnalité ?
 
@@ -77,7 +77,7 @@ gameObjects = gameObject.filter(go => !go.dead);
 
 Tirer un laser revient à répondre à un événement de touche et à créer un objet qui se déplace dans une certaine direction. Nous devons donc effectuer les étapes suivantes :
 
-1. **Créer un objet laser** : à partir du sommet du vaisseau de notre héros, qui commence à se déplacer vers le haut de l'écran dès sa création.
+1. **Créer un objet laser** : à partir du sommet du vaisseau de notre héros, qui commence à se déplacer vers le haut dès sa création.
 2. **Associer du code à un événement de touche** : nous devons choisir une touche du clavier qui représente le joueur tirant le laser.
 3. **Créer un objet de jeu qui ressemble à un laser** lorsque la touche est pressée.
 
@@ -117,9 +117,9 @@ Vous allez prendre le code existant (que vous devriez avoir nettoyé et refactor
 
 > astuce : le laser avec lequel vous allez travailler est déjà dans votre dossier d'actifs et référencé par votre code.
 
-- **Ajoutez la détection de collisions**, lorsque le laser entre en collision avec quelque chose, les règles suivantes doivent s'appliquer :
+- **Ajoutez la détection de collisions**, lorsque un laser entre en collision avec quelque chose, les règles suivantes doivent s'appliquer :
    1. **Laser touche un ennemi** : l'ennemi meurt s'il est touché par un laser.
-   2. **Laser touche le haut de l'écran** : un laser est détruit s'il atteint la partie supérieure de l'écran.
+   2. **Laser touche le haut de l'écran** : un laser est détruit s'il atteint la partie supérieure de notre écran.
    3. **Collision entre ennemi et héros** : un ennemi et le héros sont détruits s'ils se percutent.
    4. **Ennemi atteint le bas de l'écran** : un ennemi et un héros sont détruits si l'ennemi atteint le bas de l'écran.
 
@@ -174,7 +174,7 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
     }
     ```
 
-3. **Ajoutez la capacité de tirer un laser**
+3. **Ajoutez la capacité de tirer des lasers**
    1. **Ajoutez un message d'événement de touche**. La touche *espace* doit créer un laser juste au-dessus du vaisseau du héros. Ajoutez trois constantes dans l'objet Messages :
 
        ```javascript
@@ -183,7 +183,7 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
         COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
        ```
 
-   1. **Gérez la touche espace**. Modifiez la fonction `window.addEventListener` keyup pour gérer les espaces :
+   1. **Gérez la touche espace**. Modifiez la fonction `window.addEventListener` keyup pour gérer la touche espace :
 
       ```javascript
         } else if(evt.keyCode === 32) {
@@ -285,13 +285,13 @@ Cela démarrera un serveur HTTP à l'adresse `http://localhost:5000`. Ouvrez un 
       }
       ```
 
-À ce stade, votre jeu a une certaine fonctionnalité ! Vous pouvez naviguer avec vos touches fléchées, tirer un laser avec votre barre d'espace, et les ennemis disparaissent lorsque vous les touchez. Bravo !
+À ce stade, votre jeu a une certaine fonctionnalité ! Vous pouvez naviguer avec vos touches fléchées, tirer un laser avec votre barre d'espace, et les ennemis disparaissent lorsque vous les touchez. Bien joué !
 
 ---
 
 ## 🚀 Défi
 
-Ajoutez une explosion ! Consultez les ressources du jeu dans [le dépôt Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) et essayez d'ajouter une explosion lorsque le laser touche un alien.
+Ajoutez une explosion ! Consultez les actifs du jeu dans [le dépôt Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) et essayez d'ajouter une explosion lorsque le laser touche un alien.
 
 ## Quiz après le cours
 
@@ -305,5 +305,7 @@ Expérimentez avec les intervalles dans votre jeu jusqu'à présent. Que se pass
 
 [Explorez les collisions](assignment.md)
 
+---
+
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

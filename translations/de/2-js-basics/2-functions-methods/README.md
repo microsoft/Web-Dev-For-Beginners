@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4612bbb9ace984f374fcc80e3e035ad",
-  "translation_date": "2025-08-24T12:16:12+00:00",
+  "original_hash": "92e136090efc4341b1d51c37924c1802",
+  "translation_date": "2025-08-29T14:13:12+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "de"
 }
 -->
 # JavaScript-Grundlagen: Methoden und Funktionen
 
-![JavaScript Basics - Funktionen](../../../../sketchnotes/webdev101-js-functions.png)
+![JavaScript Basics - Funktionen](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.de.png)
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz vor der Vorlesung
-[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/9)
+[Quiz vor der Vorlesung](https://ff-quizzes.netlify.app)
 
-Wenn wir über das Schreiben von Code nachdenken, möchten wir immer sicherstellen, dass unser Code lesbar ist. Auch wenn das zunächst widersprüchlich klingt, wird Code viel häufiger gelesen als geschrieben. Ein zentrales Werkzeug im Werkzeugkasten eines Entwicklers, um wartbaren Code zu gewährleisten, ist die **Funktion**.
+Wenn wir über das Schreiben von Code nachdenken, möchten wir immer sicherstellen, dass unser Code lesbar ist. Auch wenn das zunächst widersprüchlich klingt, wird Code viel häufiger gelesen als geschrieben. Ein wichtiges Werkzeug im Werkzeugkasten eines Entwicklers, um wartbaren Code zu gewährleisten, ist die **Funktion**.
 
 [![Methoden und Funktionen](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Methoden und Funktionen")
 
@@ -25,9 +25,9 @@ Wenn wir über das Schreiben von Code nachdenken, möchten wir immer sicherstell
 
 ## Funktionen
 
-Im Kern ist eine Funktion ein Codeblock, den wir bei Bedarf ausführen können. Dies ist ideal für Szenarien, in denen wir dieselbe Aufgabe mehrfach ausführen müssen; anstatt die Logik an mehreren Stellen zu duplizieren (was es schwierig machen würde, sie später zu aktualisieren), können wir sie an einem zentralen Ort bündeln und sie aufrufen, wann immer wir die Operation ausführen möchten – Sie können sogar Funktionen aus anderen Funktionen aufrufen!
+Im Kern ist eine Funktion ein Codeblock, den wir bei Bedarf ausführen können. Das ist ideal für Szenarien, in denen wir dieselbe Aufgabe mehrfach ausführen müssen; anstatt die Logik an mehreren Stellen zu duplizieren (was die Aktualisierung später erschweren würde), können wir sie an einem zentralen Ort bündeln und sie immer dann aufrufen, wenn wir die Operation ausführen möchten – Sie können sogar Funktionen aus anderen Funktionen aufrufen!
 
-Ebenso wichtig ist die Möglichkeit, einer Funktion einen Namen zu geben. Auch wenn dies trivial erscheinen mag, bietet der Name eine schnelle Möglichkeit, einen Abschnitt des Codes zu dokumentieren. Sie können dies wie ein Etikett auf einem Knopf betrachten. Wenn ich auf einen Knopf klicke, auf dem „Timer abbrechen“ steht, weiß ich, dass er die Uhr anhalten wird.
+Ebenso wichtig ist die Möglichkeit, einer Funktion einen Namen zu geben. Auch wenn das trivial erscheinen mag, bietet der Name eine schnelle Möglichkeit, einen Abschnitt des Codes zu dokumentieren. Sie können sich das wie ein Etikett auf einem Knopf vorstellen. Wenn ich auf einen Knopf klicke, auf dem "Timer abbrechen" steht, weiß ich, dass er die Uhr anhalten wird.
 
 ## Erstellen und Aufrufen einer Funktion
 
@@ -54,11 +54,11 @@ Wann immer wir unsere Funktion aufrufen (oder ausführen) möchten, verwenden wi
 displayGreeting();
 ```
 
-> **NOTE:** Es gibt eine spezielle Art von Funktion, die als **Methode** bekannt ist, die Sie bereits verwendet haben! Tatsächlich haben wir dies in unserem obigen Beispiel gesehen, als wir `console.log` verwendet haben. Der Unterschied zwischen einer Methode und einer Funktion besteht darin, dass eine Methode an ein Objekt angehängt ist (in unserem Beispiel `console`), während eine Funktion frei schwebend ist. Viele Entwickler verwenden diese Begriffe jedoch synonym.
+> **NOTE:** Es gibt eine spezielle Art von Funktion, die als **Methode** bekannt ist und die Sie bereits verwendet haben! Tatsächlich haben wir dies in unserem obigen Beispiel gesehen, als wir `console.log` verwendet haben. Der Unterschied zwischen einer Methode und einer Funktion besteht darin, dass eine Methode an ein Objekt angehängt ist (in unserem Beispiel `console`), während eine Funktion frei schwebend ist. Viele Entwickler verwenden diese Begriffe jedoch synonym.
 
 ### Best Practices für Funktionen
 
-Es gibt einige bewährte Praktiken, die Sie beim Erstellen von Funktionen beachten sollten:
+Es gibt einige Best Practices, die Sie beim Erstellen von Funktionen beachten sollten:
 
 - Verwenden Sie wie immer aussagekräftige Namen, damit Sie wissen, was die Funktion tun wird.
 - Verwenden Sie **camelCasing**, um Wörter zu kombinieren.
@@ -66,7 +66,7 @@ Es gibt einige bewährte Praktiken, die Sie beim Erstellen von Funktionen beacht
 
 ## Informationen an eine Funktion übergeben
 
-Um eine Funktion vielseitiger zu machen, möchten Sie oft Informationen an sie übergeben. Wenn wir unser Beispiel `displayGreeting` oben betrachten, wird es nur **Hello, world!** anzeigen. Nicht die nützlichste Funktion, die man erstellen könnte. Wenn wir sie etwas flexibler gestalten möchten, z. B. jemandem erlauben, den Namen der Person anzugeben, die begrüßt werden soll, können wir einen **Parameter** hinzufügen. Ein Parameter (manchmal auch als **Argument** bezeichnet) ist zusätzliche Information, die an eine Funktion gesendet wird.
+Um eine Funktion vielseitiger zu machen, möchten Sie oft Informationen an sie übergeben. Wenn wir unser Beispiel `displayGreeting` betrachten, wird es nur **Hello, world!** anzeigen. Nicht die nützlichste Funktion, die man erstellen könnte. Wenn wir sie etwas flexibler gestalten möchten, z. B. indem wir jemandem erlauben, den Namen der Person anzugeben, die begrüßt werden soll, können wir einen **Parameter** hinzufügen. Ein Parameter (auch manchmal als **Argument** bezeichnet) ist zusätzliche Information, die an eine Funktion gesendet wird.
 
 Parameter werden im Definitionsabschnitt in Klammern aufgelistet und durch Kommas getrennt, wie folgt:
 
@@ -114,9 +114,9 @@ displayGreeting('Christopher', 'Hi');
 
 ## Rückgabewerte
 
-Bis jetzt wird die Funktion, die wir erstellt haben, immer an die [Konsole](https://developer.mozilla.org/docs/Web/API/console) ausgeben. Manchmal kann dies genau das sein, was wir suchen, insbesondere wenn wir Funktionen erstellen, die andere Dienste aufrufen werden. Aber was, wenn ich eine Hilfsfunktion erstellen möchte, um eine Berechnung durchzuführen und den Wert zurückzugeben, damit ich ihn anderswo verwenden kann?
+Bis jetzt wird die von uns erstellte Funktion immer an die [Konsole](https://developer.mozilla.org/docs/Web/API/console) ausgeben. Manchmal kann dies genau das sein, was wir suchen, insbesondere wenn wir Funktionen erstellen, die andere Dienste aufrufen werden. Aber was, wenn ich eine Hilfsfunktion erstellen möchte, um eine Berechnung durchzuführen und den Wert zurückzugeben, damit ich ihn anderswo verwenden kann?
 
-Wir können dies tun, indem wir einen **Rückgabewert** verwenden. Ein Rückgabewert wird von der Funktion zurückgegeben und kann genauso in einer Variablen gespeichert werden, wie wir einen Literalwert wie eine Zeichenkette oder Zahl speichern könnten.
+Das können wir mit einem **Rückgabewert** tun. Ein Rückgabewert wird von der Funktion zurückgegeben und kann genauso in einer Variablen gespeichert werden, wie wir einen Literalwert wie eine Zeichenkette oder Zahl speichern könnten.
 
 Wenn eine Funktion etwas zurückgibt, wird das Schlüsselwort `return` verwendet. Das Schlüsselwort `return` erwartet einen Wert oder eine Referenz dessen, was zurückgegeben wird, wie folgt:
 
@@ -133,7 +133,7 @@ function createGreetingMessage(name) {
 }
 ```
 
-Wenn wir diese Funktion aufrufen, speichern wir den Wert in einer Variablen. Dies ist ähnlich wie wenn wir eine Variable auf einen statischen Wert setzen (wie `const name = 'Christopher'`).
+Beim Aufrufen dieser Funktion speichern wir den Wert in einer Variablen. Das ist ähnlich wie wenn wir eine Variable auf einen statischen Wert setzen (z. B. `const name = 'Christopher'`).
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
@@ -141,7 +141,7 @@ const greetingMessage = createGreetingMessage('Christopher');
 
 ## Funktionen als Parameter für Funktionen
 
-Im Laufe Ihrer Programmierkarriere werden Sie auf Funktionen stoßen, die Funktionen als Parameter akzeptieren. Dieser clevere Trick wird häufig verwendet, wenn wir nicht wissen, wann etwas passieren oder abgeschlossen sein wird, aber wir wissen, dass wir eine Operation als Reaktion ausführen müssen.
+Im Laufe Ihrer Programmierkarriere werden Sie auf Funktionen stoßen, die Funktionen als Parameter akzeptieren. Dieser clevere Trick wird häufig verwendet, wenn wir nicht wissen, wann etwas passieren oder abgeschlossen sein wird, aber wir wissen, dass wir eine Operation als Reaktion darauf ausführen müssen.
 
 Als Beispiel betrachten Sie [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), das einen Timer startet und Code ausführt, wenn er abgeschlossen ist. Wir müssen ihm mitteilen, welchen Code wir ausführen möchten. Klingt nach einem perfekten Job für eine Funktion!
 
@@ -159,7 +159,7 @@ setTimeout(displayDone, 3000);
 
 Schauen wir uns noch einmal an, was wir gebaut haben. Wir erstellen eine Funktion mit einem Namen, die nur einmal verwendet wird. Wenn unsere Anwendung komplexer wird, können wir uns vorstellen, viele Funktionen zu erstellen, die nur einmal aufgerufen werden. Das ist nicht ideal. Wie sich herausstellt, müssen wir nicht immer einen Namen angeben!
 
-Wenn wir eine Funktion als Parameter übergeben, können wir darauf verzichten, sie im Voraus zu erstellen, und stattdessen eine als Teil des Parameters erstellen. Wir verwenden das gleiche Schlüsselwort `function`, aber wir erstellen sie als Parameter.
+Wenn wir eine Funktion als Parameter übergeben, können wir darauf verzichten, sie im Voraus zu erstellen, und stattdessen eine direkt als Teil des Parameters erstellen. Wir verwenden das Schlüsselwort `function`, aber erstellen sie direkt als Parameter.
 
 Lassen Sie uns den obigen Code umschreiben, um eine anonyme Funktion zu verwenden:
 
@@ -173,7 +173,7 @@ Wenn Sie unseren neuen Code ausführen, werden Sie feststellen, dass wir die gle
 
 ### Fat Arrow-Funktionen
 
-Eine Abkürzung, die in vielen Programmiersprachen (einschließlich JavaScript) üblich ist, ist die Möglichkeit, sogenannte **Arrow**- oder **Fat Arrow**-Funktionen zu verwenden. Sie verwenden einen speziellen Indikator `=>`, der wie ein Pfeil aussieht – daher der Name! Durch die Verwendung von `=>` können wir das Schlüsselwort `function` überspringen.
+Eine Abkürzung, die in vielen Programmiersprachen (einschließlich JavaScript) üblich ist, ist die Möglichkeit, sogenannte **Arrow**- oder **Fat Arrow**-Funktionen zu verwenden. Sie verwenden einen speziellen Indikator `=>`, der wie ein Pfeil aussieht – daher der Name! Mit `=>` können wir das Schlüsselwort `function` überspringen.
 
 Lassen Sie uns unseren Code noch einmal umschreiben, um eine Fat Arrow-Funktion zu verwenden:
 
@@ -185,7 +185,7 @@ setTimeout(() => {
 
 ### Wann welche Strategie verwenden?
 
-Sie haben nun gesehen, dass wir drei Möglichkeiten haben, eine Funktion als Parameter zu übergeben, und fragen sich vielleicht, wann welche verwendet werden sollte. Wenn Sie wissen, dass Sie die Funktion mehr als einmal verwenden werden, erstellen Sie sie wie gewohnt. Wenn Sie sie nur für eine Stelle verwenden, ist es im Allgemeinen am besten, eine anonyme Funktion zu verwenden. Ob Sie eine Fat Arrow-Funktion oder die traditionellere `function`-Syntax verwenden, bleibt Ihnen überlassen, aber Sie werden feststellen, dass die meisten modernen Entwickler `=>` bevorzugen.
+Sie haben nun gesehen, dass wir drei Möglichkeiten haben, eine Funktion als Parameter zu übergeben, und fragen sich vielleicht, wann welche verwendet werden sollte. Wenn Sie wissen, dass Sie die Funktion mehr als einmal verwenden werden, erstellen Sie sie wie gewohnt. Wenn Sie sie nur für eine bestimmte Stelle verwenden, ist es in der Regel am besten, eine anonyme Funktion zu verwenden. Ob Sie eine Fat Arrow-Funktion oder die traditionellere `function`-Syntax verwenden, bleibt Ihnen überlassen, aber Sie werden feststellen, dass die meisten modernen Entwickler `=>` bevorzugen.
 
 ---
 
@@ -194,15 +194,17 @@ Sie haben nun gesehen, dass wir drei Möglichkeiten haben, eine Funktion als Par
 Können Sie in einem Satz den Unterschied zwischen Funktionen und Methoden erklären? Versuchen Sie es!
 
 ## Quiz nach der Vorlesung
-[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/10)
+[Quiz nach der Vorlesung](https://ff-quizzes.netlify.app)
 
 ## Überprüfung & Selbststudium
 
-Es lohnt sich, [etwas mehr über Arrow-Funktionen zu lesen](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), da sie zunehmend in Codebasen verwendet werden. Üben Sie, eine Funktion zu schreiben, und schreiben Sie sie dann mit dieser Syntax um.
+Es lohnt sich, [etwas mehr über Arrow-Funktionen zu lesen](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), da sie zunehmend in Codebasen verwendet werden. Üben Sie das Schreiben einer Funktion und das anschließende Umschreiben mit dieser Syntax.
 
 ## Aufgabe
 
 [Spaß mit Funktionen](assignment.md)
 
+---
+
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.
+Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, weisen wir darauf hin, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
