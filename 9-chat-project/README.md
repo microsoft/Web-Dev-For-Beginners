@@ -25,6 +25,8 @@ As we said, select the "Code" tab and your chosen runtime.
   <img src="./assets/playground-choice.png" alt="playground choice" with="600">
 </div>
 
+### Using Python
+
 In this case we select Python, which will mean we pick this code:
 
 ```python
@@ -100,6 +102,8 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 Great, we have an AI part done, let's see how we can integrate that into a Web API. For the Web API, we're choosing to use Flask, but any web framework should be good. Let's see the code for it:
 
+### Using Python
+
 ```python
 # api.py
 from flask import Flask, request, jsonify
@@ -168,9 +172,13 @@ To integrate *llm.py* here's what we need to do:
 
 Great, now we have done what we need.
 
-### Configure Cors
+## Configure Cors
 
-We should call out that we set up something like CORS, cross-origin resource sharing. This means that because our backend and frontend will ron on different ports, we need to allow the frontend to call into the backend. There's a piece of code in *api.py* that sets this up:
+We should call out that we set up something like CORS, cross-origin resource sharing. This means that because our backend and frontend will ron on different ports, we need to allow the frontend to call into the backend. 
+
+### Using Python
+
+There's a piece of code in *api.py* that sets this up:
 
 ```python
 from flask_cors import CORS
@@ -182,6 +190,10 @@ CORS(app)   # *   example.com
 Right now it's been set up to allow "*" which is all origins and that's a bit unsafe, we should restrict it once we go to production.
 
 ## Run your project
+
+To run your project, you need to start up your backend first and then your frontend.
+
+### Using Python
 
 Ok, so we have *llm.py* and *api.py*, how can we make this work with a backend? Well, there's two things we need to do:
 
@@ -338,8 +350,7 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
 Copy the content from what was instructed from above but feel free to customize to your liking
@@ -350,11 +361,17 @@ Copy the content from what was instructed from above but feel free to customize 
 
 ## Bonus
 
-Try changing the personality of the AI assistant. When you call `call_llm` in *api.py* you can change the second argument to what you want, for example:
+Try changing the personality of the AI assistant. 
+
+### For Python
+
+When you call `call_llm` in *api.py* you can change the second argument to what you want, for example:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
+
+### Frontend
 
 Change also the CSS and text to your liking, so do changes in *index.html* and *styles.css*.
 
