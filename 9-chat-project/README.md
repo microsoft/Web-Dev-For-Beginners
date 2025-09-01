@@ -4,9 +4,7 @@ This chat project shows how to build a Chat Assistant using GitHub Models.
 
 Here's what the finished project looks like:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Chat app" width="600">
-</div>
+![Chat app](./assets/screenshot.png)
 
 Some context, building Chat assistants using generative AI is a great way to start learning about AI. What you'll learn is to integrate generative AI into a web app throughout this lesson, let's begin.
 
@@ -14,16 +12,11 @@ Some context, building Chat assistants using generative AI is a great way to sta
 
 For the backend, we're using GitHub Models. It's a great service that enables you to use AI for free. Go to its playground and grab code that corresponds to your chosen backend language. Here's what it looks like at [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
-
+![GitHub Models AI Playground](./assets/playground.png)
 
 As we said, select the "Code" tab and your chosen runtime. 
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
-</div>
+![Playground choice](./assets/playground-choice.png)
 
 ### Using Python
 
