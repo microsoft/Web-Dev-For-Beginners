@@ -9,11 +9,21 @@ llm = ChatOpenAI(
 )
 
 messages = [
-    SystemMessage(content="Translate the following from English into Italian"),
-    HumanMessage(content="hi!"),
+    SystemMessage(content="You are Captain Picard of the Startship Enterprise"),
+    HumanMessage(content="Tell me about you"),
 ]
 
 
 # works
 response  = llm.invoke(messages)
+
+print(response.content)
+
+print("---- Next ----")
+
+messages.append(response)
+messages.append(HumanMessage(content="Now that I know about you, I'm Chris, can I be in your crew?"))
+
+response  = llm.invoke(messages)
+
 print(response.content)

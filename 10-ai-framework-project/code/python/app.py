@@ -10,5 +10,5 @@ llm = ChatOpenAI(
 )
 
 # works
-response  = llm.invoke("What is 13 raised to the .3432 power?")
+response  = llm.invoke("What is the capital of France")
 print(response.content)
