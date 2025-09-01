@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T13:03:56+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:39:52+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "sl"
 }
 -->
-# Projekt klepeta
+# Projekt klepet
 
 Ta projekt klepeta prikazuje, kako zgraditi klepetalnega asistenta z uporabo GitHub Modelov.
 
@@ -17,21 +17,23 @@ Tako izgleda končan projekt:
   <img src="./assets/screenshot.png" alt="Aplikacija za klepet" width="600">
 </div>
 
-Nekaj konteksta: gradnja klepetalnih asistentov z uporabo generativne umetne inteligence je odličen način za začetek učenja o umetni inteligenci. V tej lekciji se boste naučili, kako integrirati generativno umetno inteligenco v spletno aplikacijo. Začnimo.
+Nekaj konteksta: gradnja klepetalnih asistentov z uporabo generativne umetne inteligence je odličen način za začetek učenja o AI. V tej lekciji se boste naučili, kako integrirati generativno AI v spletno aplikacijo. Začnimo.
 
-## Povezovanje z generativno umetno inteligenco
+## Povezovanje z generativno AI
 
-Za zaledje uporabljamo GitHub Modele. To je odlična storitev, ki omogoča brezplačno uporabo umetne inteligence. Obiščite njihovo testno okolje in pridobite kodo, ki ustreza vašemu izbranemu programskemu jeziku za zaledje. Tako izgleda na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
-
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
-
-Kot rečeno, izberite zavihek "Code" in svoj izbrani runtime.
+Za zaledje uporabljamo GitHub Model. To je odlična storitev, ki omogoča brezplačno uporabo AI. Obiščite njihov "playground" in pridobite kodo, ki ustreza vašemu izbranemu jeziku za zaledje. Tukaj je primer, kako to izgleda na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
 
 <div>
-  <img src="./assets/playground-choice.png" alt="Izbira v testnem okolju" with="600">
+  <img src="./assets/playground.png" alt="GitHub Models AI Playground" width="600">
 </div>
+
+Kot smo omenili, izberite zavihek "Code" in vaš izbrani runtime.
+
+<div>
+  <img src="./assets/playground-choice.png" alt="Izbira v playgroundu" width="600">
+</div>
+
+### Uporaba Pythona
 
 V tem primeru izberemo Python, kar pomeni, da uporabimo to kodo:
 
@@ -70,7 +72,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-To kodo bomo nekoliko očistili, da bo bolj uporabna:
+To kodo nekoliko očistimo, da bo bolj uporabna:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -94,11 +96,11 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-S to funkcijo `call_llm` lahko zdaj podamo poziv in sistemski poziv, funkcija pa vrne rezultat.
+S funkcijo `call_llm` lahko zdaj podamo poziv in sistemski poziv, funkcija pa vrne rezultat.
 
 ### Prilagoditev AI asistenta
 
-Če želite prilagoditi AI asistenta, lahko določite, kako naj se obnaša, tako da izpolnite sistemski poziv, kot je prikazano:
+Če želite prilagoditi AI asistenta, lahko določite, kako naj se obnaša, tako da izpolnite sistemski poziv, kot je prikazano tukaj:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Izpostavitev prek spletnega API-ja
 
-Odlično, AI del je zaključen, poglejmo, kako ga lahko integriramo v spletni API. Za spletni API smo izbrali Flask, vendar je primeren kateri koli spletni okvir. Tukaj je koda:
+Odlično, AI del je končan, poglejmo, kako ga lahko integriramo v spletni API. Za spletni API smo izbrali Flask, vendar je primeren katerikoli spletni okvir. Tukaj je koda:
+
+### Uporaba Pythona
 
 ```python
 # api.py
@@ -137,7 +141,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Tukaj ustvarimo Flask API in definiramo privzeto pot "/" ter "/chat". Slednja je namenjena uporabi s strani našega uporabniškega vmesnika za posredovanje vprašanj.
+Tukaj ustvarimo Flask API in definiramo privzeto pot "/" ter "/chat". Slednja je namenjena uporabi s strani našega sprednjega dela za posredovanje vprašanj.
 
 Za integracijo *llm.py* moramo narediti naslednje:
 
@@ -163,7 +167,7 @@ Za integracijo *llm.py* moramo narediti naslednje:
       })
    ```
 
-   Tukaj razčlenimo dohodno zahtevo, da pridobimo lastnost `message` iz telesa JSON. Nato pokličemo LLM s tem klicem:
+   Tukaj razčlenimo dohodno zahtevo, da pridobimo lastnost `message` iz JSON telesa. Nato pokličemo LLM s tem klicem:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -176,9 +180,13 @@ Za integracijo *llm.py* moramo narediti naslednje:
 
 Odlično, zdaj smo naredili, kar je potrebno.
 
-### Konfiguracija Cors
+## Konfiguracija Cors
 
-Omeniti moramo, da smo nastavili nekaj, kot je CORS (deljenje virov med različnimi izviri). To pomeni, da ker bosta naše zaledje in uporabniški vmesnik delovala na različnih vratih, moramo omogočiti, da uporabniški vmesnik kliče zaledje. V datoteki *api.py* je del kode, ki to omogoča:
+Omeniti moramo, da nastavimo nekaj, kot je CORS (cross-origin resource sharing). To pomeni, da ker bosta naše zaledje in sprednji del delovala na različnih vratih, moramo omogočiti sprednjemu delu, da kliče zaledje.
+
+### Uporaba Pythona
+
+V datoteki *api.py* je kos kode, ki to nastavi:
 
 ```python
 from flask_cors import CORS
@@ -187,13 +195,17 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Trenutno je nastavljeno, da dovoljuje "*", kar pomeni vse izvore, kar je nekoliko nevarno. To bi morali omejiti, ko gremo v produkcijo.
+Trenutno je nastavljeno, da dovoljuje "*", kar pomeni vse izvorne naslove, kar je nekoliko nevarno. To bi morali omejiti, ko gremo v produkcijo.
 
 ## Zagon projekta
 
-Torej, imamo *llm.py* in *api.py*, kako lahko to deluje z zaledjem? Potrebujemo dve stvari:
+Za zagon projekta morate najprej zagnati zaledje in nato sprednji del.
 
-- Namestitev odvisnosti:
+### Uporaba Pythona
+
+Imamo *llm.py* in *api.py*, kako lahko to deluje z zaledjem? Tukaj sta dve stvari, ki ju moramo narediti:
+
+- Namestiti odvisnosti:
 
    ```sh
    cd backend
@@ -203,17 +215,17 @@ Torej, imamo *llm.py* in *api.py*, kako lahko to deluje z zaledjem? Potrebujemo 
    pip install openai flask flask-cors openai
    ```
 
-- Zagon API-ja:
+- Zagnati API:
 
    ```sh
    python api.py
    ```
 
-   Če uporabljate Codespaces, morate v spodnjem delu urejevalnika odpreti zavihke za vrata, z desno tipko miške klikniti nanje, izbrati "Port Visibility" in izbrati "Public".
+   Če ste v Codespaces, morate iti na "Ports" v spodnjem delu urejevalnika, desno klikniti nanj, izbrati "Port Visibility" in izbrati "Public".
 
-### Delo na uporabniškem vmesniku
+### Delo na sprednjem delu
 
-Zdaj, ko imamo API, ustvarimo uporabniški vmesnik. Minimalni uporabniški vmesnik, ki ga bomo postopoma izboljšali. V mapi *frontend* ustvarite naslednje:
+Zdaj, ko imamo API, ki deluje, ustvarimo sprednji del za to. Minimalni sprednji del, ki ga bomo postopoma izboljšali. V mapi *frontend* ustvarite naslednje:
 
 ```text
 backend/
@@ -241,7 +253,7 @@ Začnimo z **index.html**:
 </html>    
 ```
 
-Zgornje je absolutni minimum, ki ga potrebujete za podporo klepetalnega okna, saj vsebuje besedilno polje, kjer bodo prikazana sporočila, vnosno polje za vnos sporočila in gumb za pošiljanje sporočila zaledju. Poglejmo naslednji JavaScript v *app.js*.
+Zgornje je absolutni minimum, ki ga potrebujete za podporo oknu za klepet, saj vsebuje besedilno polje, kjer se bodo prikazovala sporočila, vnosno polje za vnos sporočila in gumb za pošiljanje sporočila zaledju. Poglejmo naslednji JavaScript v *app.js*.
 
 **app.js**
 
@@ -298,14 +310,14 @@ Zgornje je absolutni minimum, ki ga potrebujete za podporo klepetalnega okna, sa
 })();
 ```
 
-Pojdimo skozi kodo po odsekih:
+Pojdimo skozi kodo po delih:
 
-- 1) Tukaj pridobimo sklice na vse elemente, na katere se bomo sklicevali kasneje v kodi.
+- 1) Tukaj dobimo referenco na vse elemente, ki jih bomo kasneje uporabljali v kodi.
 - 2) V tem delu ustvarimo funkcijo, ki uporablja vgrajeno metodo `fetch` za klic našega zaledja.
-- 3) `appendMessage` pomaga dodajati odgovore in tudi to, kar uporabnik vnese.
-- 4) Tukaj poslušamo dogodek oddaje, preberemo vnosno polje, uporabnikovo sporočilo postavimo v besedilno polje, pokličemo API in prikažemo odgovor v besedilnem polju.
+- 3) `appendMessage` pomaga dodajati odgovore, kot tudi sporočila, ki jih vnesete kot uporabnik.
+- 4) Tukaj poslušamo dogodek "submit" in preberemo vnosno polje, postavimo uporabnikovo sporočilo v besedilno polje, pokličemo API in prikažemo odgovor v besedilnem polju.
 
-Poglejmo še oblikovanje, tukaj lahko resnično ustvarite nekaj po svojem okusu, vendar so tukaj nekateri predlogi:
+Poglejmo še oblikovanje, tukaj lahko resnično ustvarite videz po svoji želji, vendar tukaj so nekateri predlogi:
 
 **styles.css**
 
@@ -326,14 +338,14 @@ Poglejmo še oblikovanje, tukaj lahko resnično ustvarite nekaj po svojem okusu,
 } 
 ```
 
-S temi tremi razredi boste oblikovali sporočila različno, odvisno od tega, ali prihajajo od asistenta ali uporabnika. Če potrebujete navdih, si oglejte mapo `solution/frontend/styles.css`.
+S temi tremi razredi boste oblikovali sporočila različno, odvisno od tega, ali prihajajo od asistenta ali od vas kot uporabnika. Če želite navdih, si oglejte mapo `solution/frontend/styles.css`.
 
 ### Sprememba osnovnega URL-ja
 
-Ena stvar, ki je tukaj nismo nastavili, je `BASE_URL`. Ta ni znan, dokler zaledje ni zagnano. Za nastavitev:
+Obstaja ena stvar, ki je tukaj nismo nastavili, in to je `BASE_URL`. Ta ni znan, dokler vaše zaledje ni zagnano. Za nastavitev:
 
-- Če API zaženete lokalno, bi moral biti nastavljen na nekaj, kot je `http://localhost:5000`.
-- Če ga zaženete v Codespaces, bi moral izgledati nekaj takega: "[name]app.github.dev".
+- Če API deluje lokalno, ga nastavite na nekaj, kot je `http://localhost:5000`.
+- Če deluje v Codespaces, bo videti nekaj takega: "[name]app.github.dev".
 
 ## Naloga
 
@@ -346,11 +358,10 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
-Kopirajte vsebino iz zgoraj navedenih navodil, vendar jo po želji prilagodite.
+Kopirajte vsebino iz zgoraj navedenih navodil, vendar jo prilagodite po svoji želji.
 
 ## Rešitev
 
@@ -358,21 +369,27 @@ Kopirajte vsebino iz zgoraj navedenih navodil, vendar jo po želji prilagodite.
 
 ## Bonus
 
-Poskusite spremeniti osebnost AI asistenta. Ko pokličete `call_llm` v *api.py*, lahko spremenite drugi argument v nekaj po svoji izbiri, na primer:
+Poskusite spremeniti osebnost AI asistenta.
+
+### Za Python
+
+Ko pokličete `call_llm` v *api.py*, lahko spremenite drugi argument v kar koli želite, na primer:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
-Prav tako spremenite CSS in besedilo po svojem okusu, torej naredite spremembe v *index.html* in *styles.css*.
+### Sprednji del
+
+Spremenite tudi CSS in besedilo po svoji želji, torej naredite spremembe v *index.html* in *styles.css*.
 
 ## Povzetek
 
-Odlično, naučili ste se, kako iz nič ustvariti osebnega asistenta z uporabo umetne inteligence. To smo naredili z uporabo GitHub Modelov, zaledja v Pythonu in uporabniškega vmesnika v HTML, CSS in JavaScript.
+Odlično, naučili ste se, kako od začetka ustvariti osebnega asistenta z uporabo AI. To smo naredili z uporabo GitHub Modelov, zaledja v Pythonu in sprednjega dela v HTML, CSS in JavaScript.
 
 ## Nastavitev s Codespaces
 
-- Pojdite na: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Pojdite na: [Repozitorij Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
 - Ustvarite iz predloge (prepričajte se, da ste prijavljeni v GitHub) v zgornjem desnem kotu:
 
     ![Ustvari iz predloge](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.sl.png)
@@ -386,4 +403,4 @@ Odlično, naučili ste se, kako iz nič ustvariti osebnega asistenta z uporabo u
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo strokovno človeško prevajanje. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.

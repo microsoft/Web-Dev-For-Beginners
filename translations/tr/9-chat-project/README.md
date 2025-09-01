@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T01:26:18+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:29:54+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "tr"
 }
 -->
 # Sohbet Projesi
 
-Bu sohbet projesi, GitHub Modelleri kullanarak bir Sohbet Asistanı oluşturmayı gösterir.
+Bu sohbet projesi, GitHub Modellerini kullanarak bir Sohbet Asistanı oluşturmayı gösterir.
 
 İşte bitmiş projenin nasıl göründüğü:
 
@@ -17,23 +17,25 @@ Bu sohbet projesi, GitHub Modelleri kullanarak bir Sohbet Asistanı oluşturmay�
   <img src="./assets/screenshot.png" alt="Sohbet uygulaması" width="600">
 </div>
 
-Biraz bağlam vermek gerekirse, üretken yapay zeka kullanarak Sohbet asistanları oluşturmak, yapay zeka hakkında öğrenmeye başlamak için harika bir yoldur. Bu derste, üretken yapay zekayı bir web uygulamasına entegre etmeyi öğreneceksiniz. Hadi başlayalım.
+Biraz bağlam vermek gerekirse, üretken yapay zeka kullanarak Sohbet Asistanları oluşturmak, yapay zeka hakkında öğrenmeye başlamak için harika bir yoldur. Bu derste, üretken yapay zekayı bir web uygulamasına entegre etmeyi öğreneceksiniz. Hadi başlayalım.
 
 ## Üretken Yapay Zekaya Bağlanma
 
-Backend için GitHub Modellerini kullanıyoruz. Bu, yapay zekayı ücretsiz olarak kullanmanıza olanak tanıyan harika bir hizmettir. Oyun alanına gidin ve seçtiğiniz backend diline karşılık gelen kodu alın. İşte [GitHub Modelleri Oyun Alanı](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) böyle görünüyor:
+Backend için GitHub Modellerini kullanıyoruz. Bu, yapay zekayı ücretsiz olarak kullanmanıza olanak tanıyan harika bir hizmettir. Playground'a gidin ve seçtiğiniz backend diline karşılık gelen kodu alın. İşte [GitHub Modelleri Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) adresinde nasıl göründüğü:
 
 <div>
-  <img src="./assets/playground.png" alt="GitHub Modelleri Yapay Zeka Oyun Alanı" with="600">
+  <img src="./assets/playground.png" alt="GitHub Modelleri AI Playground" with="600">
 </div>
 
-Dediğimiz gibi, "Kod" sekmesini ve seçtiğiniz çalışma zamanını seçin.
+Dediğimiz gibi, "Code" sekmesini ve seçtiğiniz çalışma zamanını seçin.
 
 <div>
-  <img src="./assets/playground-choice.png" alt="oyun alanı seçimi" with="600">
+  <img src="./assets/playground-choice.png" alt="playground seçimi" with="600">
 </div>
 
-Bu durumda Python'u seçiyoruz, bu da şu kodu alacağımız anlamına geliyor:
+### Python Kullanımı
+
+Bu durumda Python'u seçiyoruz, bu da şu kodu seçmemiz gerektiği anlamına geliyor:
 
 ```python
 """Run this model in Python
@@ -94,19 +96,21 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-Bu `call_llm` fonksiyonu ile artık bir istem ve bir sistem istemi alabilir ve fonksiyon sonucu döndürebilir.
+Bu `call_llm` fonksiyonu ile artık bir prompt ve bir sistem prompt alabilir ve fonksiyon sonucu döndürebilir.
 
 ### Yapay Zeka Asistanını Özelleştirme
 
-Yapay zeka asistanını özelleştirmek isterseniz, sistem istemini şu şekilde doldurarak nasıl davranmasını istediğinizi belirtebilirsiniz:
+Yapay zeka asistanını özelleştirmek isterseniz, sistem promptunu şu şekilde doldurarak nasıl davranmasını istediğinizi belirtebilirsiniz:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Bir Web API'si Üzerinden Sunma
+## Bir Web API Üzerinden Sunma
 
-Harika, yapay zeka kısmını tamamladık, şimdi bunu bir Web API'sine nasıl entegre edebileceğimize bakalım. Web API'si için Flask kullanmayı seçiyoruz, ancak herhangi bir web çerçevesi uygun olacaktır. İşte bunun için kod:
+Harika, yapay zeka kısmını tamamladık, şimdi bunu bir Web API'ye nasıl entegre edebileceğimize bakalım. Web API için Flask kullanmayı seçiyoruz, ancak herhangi bir web çerçevesi uygun olacaktır. İşte bunun için kod:
+
+### Python Kullanımı
 
 ```python
 # api.py
@@ -137,9 +141,9 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Burada bir Flask API'si oluşturuyoruz ve "/" ve "/chat" olmak üzere iki rota tanımlıyoruz. İkincisi, frontendimizin soruları backend'e iletmesi için tasarlanmıştır.
+Burada bir Flask API oluşturuyoruz ve "/" ve "/chat" adında iki rota tanımlıyoruz. İkincisi, frontendimizin soruları backend'e iletmesi için kullanılır.
 
-*llm.py* dosyasını entegre etmek için yapmamız gerekenler şunlardır:
+*llm.py* dosyasını entegre etmek için şunları yapmamız gerekiyor:
 
 - `call_llm` fonksiyonunu içe aktarın:
 
@@ -148,7 +152,7 @@ Burada bir Flask API'si oluşturuyoruz ve "/" ve "/chat" olmak üzere iki rota t
    from flask import Flask, request
    ```
 
-- "/chat" rotasından çağırın:
+- "/chat" rotasında çağırın:
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -163,7 +167,7 @@ Burada bir Flask API'si oluşturuyoruz ve "/" ve "/chat" olmak üzere iki rota t
       })
    ```
 
-   Burada gelen isteği ayrıştırarak JSON gövdesindeki `message` özelliğini alıyoruz. Daha sonra bu çağrıyı LLM ile yapıyoruz:
+   Burada gelen isteği ayrıştırarak JSON gövdesindeki `message` özelliğini alıyoruz. Daha sonra LLM'yi şu şekilde çağırıyoruz:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -174,11 +178,15 @@ Burada bir Flask API'si oluşturuyoruz ve "/" ve "/chat" olmak üzere iki rota t
    })
    ```
 
-Harika, şimdi ihtiyacımız olan her şeyi yaptık.
+Harika, şimdi ihtiyacımız olanı yaptık.
 
-### Cors'u Yapılandırma
+## Cors'u Yapılandırma
 
-Backend ve frontend farklı portlarda çalışacağı için, frontend'in backend'e çağrı yapmasına izin vermek için CORS (çapraz kaynak paylaşımı) gibi bir şey ayarlamamız gerektiğini belirtmeliyiz. *api.py* dosyasında bunu ayarlayan bir kod parçası var:
+Backend ve frontend farklı portlarda çalışacağı için, frontend'in backend'e çağrı yapmasına izin vermek için CORS (cross-origin resource sharing) gibi bir şey ayarlamamız gerektiğini belirtmeliyiz.
+
+### Python Kullanımı
+
+*api.py* dosyasında bunu ayarlayan bir kod parçası var:
 
 ```python
 from flask_cors import CORS
@@ -187,9 +195,13 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Şu anda "*" yani tüm kaynaklara izin verecek şekilde ayarlandı ve bu biraz güvensiz. Üretime geçtiğimizde bunu sınırlamalıyız.
+Şu anda "*" yani tüm kökenlere izin verecek şekilde ayarlanmış durumda ve bu biraz güvensizdir. Üretime geçtiğimizde bunu kısıtlamalıyız.
 
 ## Projenizi Çalıştırma
+
+Projenizi çalıştırmak için önce backend'i, ardından frontend'i başlatmanız gerekiyor.
+
+### Python Kullanımı
 
 Tamam, elimizde *llm.py* ve *api.py* var, bunu bir backend ile nasıl çalıştırabiliriz? İki şey yapmamız gerekiyor:
 
@@ -209,11 +221,11 @@ Tamam, elimizde *llm.py* ve *api.py* var, bunu bir backend ile nasıl çalışt�
    python api.py
    ```
 
-   Eğer Codespaces kullanıyorsanız, editörün alt kısmındaki Portlar bölümüne gidin, sağ tıklayın ve "Port Visibility" seçeneğini seçerek "Public" yapın.
+   Codespaces kullanıyorsanız, editörün alt kısmındaki Ports bölümüne gidin, sağ tıklayın ve "Port Visibility" seçeneğini seçerek "Public" yapın.
 
-### Bir Frontend Üzerinde Çalışma
+### Frontend Üzerinde Çalışma
 
-Artık bir API'miz çalışıyor, bunun için bir frontend oluşturalım. Adım adım geliştireceğimiz minimum bir frontend ile başlayacağız. *frontend* klasöründe şu dosyaları oluşturun:
+Artık bir API'miz çalışıyor, bunun için bir frontend oluşturalım. Adım adım geliştireceğimiz minimum bir frontend. *frontend* klasöründe şu dosyaları oluşturun:
 
 ```text
 backend/
@@ -241,7 +253,7 @@ styles.css
 </html>    
 ```
 
-Yukarıdaki, bir sohbet penceresini desteklemek için gereken minimum yapıdır. Bir textarea, mesajların görüntüleneceği bir alan, bir giriş alanı ve mesajınızı backend'e göndermek için bir düğme içerir. Şimdi *app.js* içindeki JavaScript'e bakalım.
+Yukarıdaki kod, bir sohbet penceresini desteklemek için gereken mutlak minimumdur. Bir textarea, bir input ve bir gönderme butonundan oluşur. Şimdi *app.js* içindeki JavaScript'e bakalım.
 
 **app.js**
 
@@ -300,12 +312,12 @@ Yukarıdaki, bir sohbet penceresini desteklemek için gereken minimum yapıdır.
 
 Kodu bölüm bölüm inceleyelim:
 
-- 1) Burada, daha sonra kodda başvuracağımız tüm öğelere bir referans alıyoruz.
-- 2) Bu bölümde, yerleşik `fetch` yöntemini kullanarak backend'e çağrı yapan bir fonksiyon oluşturuyoruz.
-- 3) `appendMessage`, hem kullanıcı olarak yazdığınız mesajları hem de yanıtları eklemeye yardımcı olur.
-- 4) Burada, gönderme olayını dinliyoruz ve giriş alanını okuyarak, kullanıcının mesajını textarea'ya yerleştiriyoruz, API'yi çağırıyoruz ve yanıtı textarea'da görüntülüyoruz.
+- 1) Burada daha sonra kodda başvuracağımız tüm öğelere referans alıyoruz.
+- 2) Bu bölümde, yerleşik `fetch` metodunu kullanarak backend'e çağrı yapan bir fonksiyon oluşturuyoruz.
+- 3) `appendMessage`, yanıtları ve kullanıcı olarak yazdığınız mesajları eklemeye yardımcı olur.
+- 4) Burada submit olayını dinliyoruz ve input alanını okuyarak, kullanıcının mesajını textarea'ya yerleştiriyoruz, API'yi çağırıyoruz ve yanıtı textarea'da gösteriyoruz.
 
-Şimdi stil kısmına bakalım. Burada tamamen özgürsünüz ve istediğiniz gibi tasarlayabilirsiniz, ancak işte bazı öneriler:
+Şimdi stil kısmına bakalım, burada tamamen özgürsünüz, ancak işte bazı öneriler:
 
 **styles.css**
 
@@ -326,18 +338,18 @@ Kodu bölüm bölüm inceleyelim:
 } 
 ```
 
-Bu üç sınıf ile, mesajları bir asistandan mı yoksa bir kullanıcıdan mı geldiğine bağlı olarak farklı şekilde stillendirebilirsiniz. İlham almak isterseniz, `solution/frontend/styles.css` klasörüne göz atabilirsiniz.
+Bu üç sınıf ile mesajları, asistan veya kullanıcıdan gelmesine bağlı olarak farklı şekilde stillendirebilirsiniz. İlham almak isterseniz, `solution/frontend/styles.css` klasörüne göz atabilirsiniz.
 
-### Base URL'yi Değiştirme
+### Base Url'i Değiştirme
 
-Burada ayarlamadığımız bir şey vardı, o da `BASE_URL`. Backend başlatılana kadar bu bilinmez. Bunu ayarlamak için:
+Burada ayarlamadığımız bir şey vardı, o da `BASE_URL`. Bu, backend başlatılana kadar bilinmez. Ayarlamak için:
 
 - API'yi yerel olarak çalıştırıyorsanız, `http://localhost:5000` gibi bir şey olmalıdır.
 - Codespaces'te çalıştırıyorsanız, "[name]app.github.dev" gibi bir şey olmalıdır.
 
 ## Ödev
 
-*project* adında kendi klasörünüzü oluşturun ve şu şekilde içerik ekleyin:
+*project* adında bir klasör oluşturun ve şu şekilde içerik ekleyin:
 
 ```text
 project/
@@ -346,11 +358,10 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
-Yukarıda talimat verilen içerikleri kopyalayın, ancak istediğiniz gibi özelleştirmekten çekinmeyin.
+Yukarıda talimat verilen içeriği kopyalayın, ancak istediğiniz gibi özelleştirmekten çekinmeyin.
 
 ## Çözüm
 
@@ -358,13 +369,19 @@ Yukarıda talimat verilen içerikleri kopyalayın, ancak istediğiniz gibi özel
 
 ## Bonus
 
-Yapay zeka asistanının kişiliğini değiştirmeyi deneyin. *api.py* dosyasında `call_llm` fonksiyonunu çağırırken ikinci argümanı istediğiniz gibi değiştirebilirsiniz, örneğin:
+Yapay zeka asistanının kişiliğini değiştirmeyi deneyin.
+
+### Python İçin
+
+*api.py* dosyasında `call_llm` çağrıldığında, ikinci argümanı istediğiniz şekilde değiştirebilirsiniz, örneğin:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
-Ayrıca CSS ve metni istediğiniz gibi değiştirin, bu nedenle *index.html* ve *styles.css* dosyalarında değişiklik yapın.
+### Frontend
+
+Ayrıca CSS ve metni de istediğiniz gibi değiştirin, bu nedenle *index.html* ve *styles.css* dosyalarında değişiklik yapın.
 
 ## Özet
 
@@ -377,13 +394,13 @@ Harika, sıfırdan bir yapay zeka kullanarak kişisel bir asistan oluşturmayı 
 
     ![Şablondan oluştur](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.tr.png)
 
-- Kendi deponuzda, bir Codespace oluşturun:
+- Depo içindeyken bir Codespace oluşturun:
 
     ![Codespace oluştur](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.tr.png)
 
-    Bu, artık üzerinde çalışabileceğiniz bir ortam başlatacaktır.
+    Bu, artık çalışabileceğiniz bir ortam başlatmalıdır.
 
 ---
 
 **Feragatname**:  
-Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluğu sağlamak için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.

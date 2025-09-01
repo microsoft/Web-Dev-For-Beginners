@@ -1,37 +1,39 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T13:02:15+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:38:00+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "ro"
 }
 -->
-# Proiect de Chat
+# Proiect Chat
 
-Acest proiect de chat arată cum să construiești un Asistent de Chat folosind Modelele GitHub.
+Acest proiect de chat arată cum să construiești un Asistent Chat folosind Modelele GitHub.
 
 Iată cum arată proiectul finalizat:
 
 <div>
-  <img src="./assets/screenshot.png" alt="Aplicație de chat" width="600">
+  <img src="./assets/screenshot.png" alt="Aplicație Chat" width="600">
 </div>
 
-Un pic de context: construirea asistenților de chat folosind AI generativ este o modalitate excelentă de a începe să înveți despre AI. Vei învăța cum să integrezi AI generativ într-o aplicație web pe parcursul acestei lecții. Să începem.
+Un pic de context: construirea asistenților de chat folosind AI generativ este o modalitate excelentă de a începe să înveți despre AI. Ce vei învăța este cum să integrezi AI generativ într-o aplicație web pe parcursul acestei lecții. Să începem.
 
 ## Conectarea la AI generativ
 
-Pentru backend, folosim Modelele GitHub. Este un serviciu excelent care îți permite să utilizezi AI gratuit. Accesează playground-ul său și preia codul corespunzător limbajului de backend ales. Iată cum arată la [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Pentru backend, folosim Modelele GitHub. Este un serviciu excelent care îți permite să folosești AI gratuit. Accesează playground-ul său și obține codul corespunzător limbajului backend ales. Iată cum arată la [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
 <div>
   <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
 </div>
 
-Așa cum am menționat, selectează fila "Code" și runtime-ul ales.
+Așa cum am spus, selectează fila "Code" și runtime-ul ales.
 
 <div>
-  <img src="./assets/playground-choice.png" alt="alegerea playground-ului" with="600">
+  <img src="./assets/playground-choice.png" alt="alegere playground" with="600">
 </div>
+
+### Utilizarea Python
 
 În acest caz, selectăm Python, ceea ce înseamnă că alegem acest cod:
 
@@ -98,7 +100,7 @@ Cu această funcție `call_llm`, putem acum să luăm un prompt și un prompt de
 
 ### Personalizarea Asistentului AI
 
-Dacă dorești să personalizezi asistentul AI, poți specifica cum vrei să se comporte, completând promptul de sistem astfel:
+Dacă dorești să personalizezi asistentul AI, poți specifica cum vrei să se comporte prin completarea promptului de sistem astfel:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Expunerea printr-un Web API
 
-Grozav, am terminat partea de AI, să vedem cum putem integra aceasta într-un Web API. Pentru Web API, alegem să folosim Flask, dar orice framework web ar trebui să fie bun. Iată codul pentru aceasta:
+Excelent, am terminat partea AI, să vedem cum putem integra aceasta într-un Web API. Pentru Web API, alegem să folosim Flask, dar orice framework web ar trebui să fie bun. Să vedem codul pentru aceasta:
+
+### Utilizarea Python
 
 ```python
 # api.py
@@ -137,7 +141,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Aici, creăm un API Flask și definim o rută implicită "/" și "/chat". Cea din urmă este destinată utilizării de către frontend pentru a trimite întrebări.
+Aici, creăm un API Flask și definim o rută implicită "/" și "/chat". Ultima este destinată să fie utilizată de frontend-ul nostru pentru a transmite întrebări.
 
 Pentru a integra *llm.py*, iată ce trebuie să facem:
 
@@ -148,7 +152,7 @@ Pentru a integra *llm.py*, iată ce trebuie să facem:
    from flask import Flask, request
    ```
 
-- Apeleaz-o din ruta "/chat":
+- Apelează funcția din ruta "/chat":
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -174,11 +178,15 @@ Pentru a integra *llm.py*, iată ce trebuie să facem:
    })
    ```
 
-Grozav, acum am făcut ce era necesar.
+Excelent, acum am făcut ce era necesar.
 
-### Configurarea Cors
+## Configurarea Cors
 
-Trebuie să menționăm că am configurat ceva numit CORS, partajarea resurselor între origini diferite. Asta înseamnă că, deoarece backend-ul și frontend-ul nostru vor rula pe porturi diferite, trebuie să permitem frontend-ului să apeleze backend-ul. Există un fragment de cod în *api.py* care configurează acest lucru:
+Trebuie să menționăm că am configurat ceva numit CORS, partajarea resurselor între origini. Acest lucru înseamnă că, deoarece backend-ul și frontend-ul nostru vor rula pe porturi diferite, trebuie să permitem frontend-ului să apeleze backend-ul.
+
+### Utilizarea Python
+
+Există un fragment de cod în *api.py* care configurează acest lucru:
 
 ```python
 from flask_cors import CORS
@@ -187,9 +195,13 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-În prezent, este configurat să permită "*" (toate originile), ceea ce este puțin nesigur. Ar trebui să restricționăm acest lucru odată ce trecem la producție.
+În prezent, este configurat să permită "*" adică toate originile, ceea ce este puțin nesigur. Ar trebui să restricționăm acest lucru odată ce trecem la producție.
 
 ## Rulează proiectul
+
+Pentru a rula proiectul, trebuie să pornești mai întâi backend-ul și apoi frontend-ul.
+
+### Utilizarea Python
 
 Ok, avem *llm.py* și *api.py*, cum putem face să funcționeze cu un backend? Ei bine, sunt două lucruri pe care trebuie să le facem:
 
@@ -203,13 +215,13 @@ Ok, avem *llm.py* și *api.py*, cum putem face să funcționeze cu un backend? E
    pip install openai flask flask-cors openai
    ```
 
-- Pornește API-ul:
+- Pornește API-ul
 
    ```sh
    python api.py
    ```
 
-   Dacă ești în Codespaces, trebuie să mergi la Ports în partea de jos a editorului, să dai clic dreapta pe el, să selectezi "Port Visibility" și să alegi "Public".
+   Dacă ești în Codespaces, trebuie să mergi la Ports în partea de jos a editorului, să dai clic dreapta pe el și să selectezi "Port Visibility" și să alegi "Public".
 
 ### Lucrează la un frontend
 
@@ -241,7 +253,7 @@ Să începem cu **index.html**:
 </html>    
 ```
 
-Acesta este minimul absolut necesar pentru a susține o fereastră de chat, deoarece constă dintr-o zonă de text unde vor fi afișate mesajele, un câmp de introducere pentru a scrie mesajul și un buton pentru a trimite mesajul către backend. Să analizăm următorul cod JavaScript din *app.js*.
+Acesta este minimul absolut necesar pentru a susține o fereastră de chat, deoarece constă dintr-un textarea unde mesajele vor fi afișate, un input pentru a scrie mesajul și un buton pentru a trimite mesajul către backend. Să vedem următorul cod JavaScript în *app.js*
 
 **app.js**
 
@@ -300,12 +312,12 @@ Acesta este minimul absolut necesar pentru a susține o fereastră de chat, deoa
 
 Să parcurgem codul pe secțiuni:
 
-- 1) Aici obținem o referință la toate elementele noastre pe care le vom folosi mai târziu în cod.
+- 1) Aici obținem o referință la toate elementele pe care le vom folosi mai târziu în cod.
 - 2) În această secțiune, creăm o funcție care folosește metoda încorporată `fetch` pentru a apela backend-ul nostru.
 - 3) `appendMessage` ajută la adăugarea răspunsurilor, precum și a ceea ce tastezi ca utilizator.
-- 4) Aici ascultăm evenimentul de submit și citim câmpul de introducere, plasăm mesajul utilizatorului în zona de text, apelăm API-ul și afișăm răspunsul în zona de text.
+- 4) Aici ascultăm evenimentul de submit și citim câmpul de input, plasăm mesajul utilizatorului în textarea, apelăm API-ul și afișăm răspunsul în textarea.
 
-Să analizăm acum stilizarea. Aici poți fi foarte creativ și să faci să arate cum dorești, dar iată câteva sugestii:
+Să vedem stilizarea, unde poți fi creativ și să faci să arate cum dorești, dar iată câteva sugestii:
 
 **styles.css**
 
@@ -326,18 +338,18 @@ Să analizăm acum stilizarea. Aici poți fi foarte creativ și să faci să ara
 } 
 ```
 
-Cu aceste trei clase, vei stiliza mesajele diferit, în funcție de unde provin: de la asistent sau de la tine ca utilizator. Dacă vrei să te inspiri, verifică folderul `solution/frontend/styles.css`.
+Cu aceste trei clase, vei stiliza mesajele diferit, în funcție de sursa lor: asistent sau utilizator. Dacă vrei să te inspiri, verifică folderul `solution/frontend/styles.css`.
 
 ### Schimbă URL-ul de bază
 
-A fost un lucru pe care nu l-am setat aici și acesta este `BASE_URL`. Acesta nu este cunoscut până când backend-ul tău este pornit. Pentru a-l seta:
+Există un lucru pe care nu l-am setat aici și acesta este `BASE_URL`, care nu este cunoscut până când backend-ul tău este pornit. Pentru a-l seta:
 
 - Dacă rulezi API-ul local, ar trebui să fie ceva de genul `http://localhost:5000`.
 - Dacă rulezi în Codespaces, ar trebui să arate ceva de genul "[name]app.github.dev".
 
-## Sarcină
+## Temă
 
-Creează propriul tău folder *project* cu conținutul astfel:
+Creează propriul folder *project* cu conținutul astfel:
 
 ```text
 project/
@@ -346,11 +358,10 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
-Copiază conținutul din ceea ce a fost instruit mai sus, dar simte-te liber să personalizezi după bunul plac.
+Copiază conținutul din ceea ce a fost instruit mai sus, dar simte-te liber să personalizezi după preferințe.
 
 ## Soluție
 
@@ -358,32 +369,38 @@ Copiază conținutul din ceea ce a fost instruit mai sus, dar simte-te liber să
 
 ## Bonus
 
-Încearcă să schimbi personalitatea asistentului AI. Când apelezi `call_llm` în *api.py*, poți schimba al doilea argument la ceea ce dorești, de exemplu:
+Încearcă să schimbi personalitatea asistentului AI.
+
+### Pentru Python
+
+Când apelezi `call_llm` în *api.py*, poți schimba al doilea argument cu ceea ce dorești, de exemplu:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
-Schimbă, de asemenea, CSS-ul și textul după bunul plac, făcând modificări în *index.html* și *styles.css*.
+### Frontend
+
+Schimbă și CSS-ul și textul după preferințe, fă modificări în *index.html* și *styles.css*.
 
 ## Rezumat
 
-Grozav, ai învățat de la zero cum să creezi un asistent personal folosind AI. Am făcut acest lucru folosind Modelele GitHub, un backend în Python și un frontend în HTML, CSS și JavaScript.
+Excelent, ai învățat de la zero cum să creezi un asistent personal folosind AI. Am făcut acest lucru folosind Modelele GitHub, un backend în Python și un frontend în HTML, CSS și JavaScript.
 
 ## Configurare cu Codespaces
 
 - Navighează la: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Creează dintr-un șablon (asigură-te că ești conectat la GitHub) în colțul din dreapta sus:
+- Creează dintr-un template (asigură-te că ești autentificat în GitHub) în colțul din dreapta sus:
 
-    ![Creează din șablon](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.ro.png)
+    ![Creează din template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.ro.png)
 
 - Odată ajuns în repo-ul tău, creează un Codespace:
 
     ![Creează codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.ro.png)
 
-    Acest lucru ar trebui să pornească un mediu cu care poți lucra acum.
+    Acesta ar trebui să pornească un mediu cu care poți lucra acum.
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus utilizând serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

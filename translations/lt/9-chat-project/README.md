@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T17:07:13+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:41:23+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "lt"
 }
@@ -33,7 +33,9 @@ Kaip minėjome, pasirinkite „Code“ skirtuką ir savo pasirinktą vykdymo apl
   <img src="./assets/playground-choice.png" alt="playground pasirinkimas" with="600">
 </div>
 
-Šiuo atveju pasirenkame Python, tai reiškia, kad naudosime šį kodą:
+### Naudojant Python
+
+Šiuo atveju pasirenkame Python, o tai reiškia, kad naudosime šį kodą:
 
 ```python
 """Run this model in Python
@@ -70,7 +72,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Šiek tiek patvarkykime šį kodą, kad jis būtų patogesnis naudoti:
+Šiek tiek išvalykime šį kodą, kad jis būtų tinkamas naudoti:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## API sukūrimas
 
-Puiku, AI dalis baigta, pažiūrėkime, kaip ją integruoti į internetinę API. API daliai pasirinkome Flask, bet tinka bet kuris interneto karkasas. Štai kodas:
+Puiku, AI dalis baigta, pažiūrėkime, kaip ją integruoti į internetinę API. API dalyje pasirinkome Flask, bet tinka bet kuris interneto karkasas. Štai kodas:
+
+### Naudojant Python
 
 ```python
 # api.py
@@ -137,7 +141,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Čia sukuriame Flask API ir apibrėžiame numatytąjį maršrutą „/“ ir „/chat“. Pastarasis skirtas mūsų frontendui perduoti klausimus.
+Čia sukuriame Flask API ir apibrėžiame numatytąjį maršrutą "/" ir "/chat". Pastarasis skirtas mūsų frontendui perduoti klausimus.
 
 Norėdami integruoti *llm.py*, turime atlikti šiuos veiksmus:
 
@@ -148,7 +152,7 @@ Norėdami integruoti *llm.py*, turime atlikti šiuos veiksmus:
    from flask import Flask, request
    ```
 
-- Iškviesti ją iš „/chat“ maršruto:
+- Iškvietimas iš "/chat" maršruto:
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -174,11 +178,15 @@ Norėdami integruoti *llm.py*, turime atlikti šiuos veiksmus:
    })
    ```
 
-Puiku, dabar turime viską, ko reikia.
+Puiku, dabar turime tai, ko reikia.
 
-### Cors konfigūravimas
+## Cors konfigūracija
 
-Reikėtų paminėti, kad nustatėme kažką panašaus į CORS (kryžminio kilmės išteklių dalijimąsi). Tai reiškia, kad kadangi mūsų backend ir frontend veiks skirtinguose portuose, turime leisti frontendui prisijungti prie backend. Štai kodas *api.py*, kuris tai nustato:
+Reikėtų paminėti, kad nustatėme kažką panašaus į CORS – išteklių dalijimąsi tarp skirtingų kilmių. Tai reiškia, kad kadangi mūsų backend ir frontend veiks skirtinguose portuose, turime leisti frontendui kreiptis į backend.
+
+### Naudojant Python
+
+Štai kodas *api.py*, kuris tai nustato:
 
 ```python
 from flask_cors import CORS
@@ -187,11 +195,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Šiuo metu nustatyta leisti „*“, tai yra visoms kilmėms, ir tai nėra labai saugu. Turėtume tai apriboti, kai pereisime į gamybą.
+Šiuo metu nustatyta leisti "*" – visas kilmes, tačiau tai nėra saugu. Turėtume tai apriboti, kai pereisime į gamybą.
 
 ## Projekto paleidimas
 
-Gerai, turime *llm.py* ir *api.py*. Kaip tai paleisti su backend? Štai ką reikia padaryti:
+Norėdami paleisti projektą, pirmiausia turite paleisti backend, o tada frontend.
+
+### Naudojant Python
+
+Gerai, turime *llm.py* ir *api.py*. Kaip tai padaryti, kad veiktų su backend? Štai du dalykai, kuriuos reikia atlikti:
 
 - Įdiegti priklausomybes:
 
@@ -203,7 +215,7 @@ Gerai, turime *llm.py* ir *api.py*. Kaip tai paleisti su backend? Štai ką reik
    pip install openai flask flask-cors openai
    ```
 
-- Paleisti API:
+- Paleisti API
 
    ```sh
    python api.py
@@ -213,7 +225,7 @@ Gerai, turime *llm.py* ir *api.py*. Kaip tai paleisti su backend? Štai ką reik
 
 ### Darbas su frontend
 
-Dabar, kai API veikia, sukurkime frontend. Minimalus frontend, kurį tobulinsime palaipsniui. Kataloge *frontend* sukurkite šiuos failus:
+Dabar, kai API veikia, sukurkime frontend. Minimalų frontend, kurį tobulinsime palaipsniui. Kataloge *frontend* sukurkite šiuos failus:
 
 ```text
 backend/
@@ -241,7 +253,7 @@ Pradėkime nuo **index.html**:
 </html>    
 ```
 
-Tai yra absoliutus minimumas, kurio reikia pokalbių langui palaikyti, nes jis susideda iš teksto srities, kur bus rodomi pranešimai, įvesties lauko, kur rašysite pranešimą, ir mygtuko, kuris siunčia jūsų pranešimą į backend. Pažiūrėkime į JavaScript failą *app.js*.
+Tai yra absoliutus minimumas, kurio reikia pokalbių langui palaikyti, nes jis susideda iš teksto srities, kur bus rodomos žinutės, įvesties laukelio, kur rašyti žinutę, ir mygtuko, kuris siunčia jūsų žinutę į backend. Pažiūrėkime į JavaScript failą *app.js*.
 
 **app.js**
 
@@ -300,12 +312,12 @@ Tai yra absoliutus minimumas, kurio reikia pokalbių langui palaikyti, nes jis s
 
 Paaiškinkime kodą pagal sekcijas:
 
-- 1) Čia gauname nuorodą į visus elementus, kuriuos naudosime vėliau kode.
-- 2) Šioje sekcijoje sukuriame funkciją, kuri naudoja įmontuotą `fetch` metodą, kad iškviestų mūsų backend.
-- 3) `appendMessage` padeda pridėti atsakymus, taip pat tai, ką jūs kaip vartotojas įvedate.
-- 4) Čia klausomės „submit“ įvykio, skaitome įvesties lauką, dedame vartotojo pranešimą į teksto sritį, iškviečiame API, ir rodome atsakymą teksto srityje.
+- 1) Čia gauname nuorodas į visus elementus, kuriuos naudosime vėliau kode.
+- 2) Šioje sekcijoje sukuriame funkciją, kuri naudoja įmontuotą `fetch` metodą, kad kreiptųsi į mūsų backend.
+- 3) `appendMessage` padeda pridėti atsakymus, taip pat tai, ką įvedate kaip vartotojas.
+- 4) Čia klausomės „submit“ įvykio, skaitome įvesties laukelį, dedame vartotojo žinutę į teksto sritį, iškviečiame API, o atsakymą pateikiame teksto srityje.
 
-Pažiūrėkime į stilių, čia galite būti kūrybingi ir sukurti tai, kas jums patinka, bet štai keletas pasiūlymų:
+Pažiūrėkime į stilių, čia galite būti kūrybingi ir sukurti, kaip norite, bet štai keletas pasiūlymų:
 
 **styles.css**
 
@@ -326,18 +338,18 @@ Pažiūrėkime į stilių, čia galite būti kūrybingi ir sukurti tai, kas jums
 } 
 ```
 
-Su šiomis trimis klasėmis galite skirtingai stilizuoti pranešimus, priklausomai nuo to, ar jie yra iš asistento, ar iš vartotojo. Jei norite įkvėpimo, pažiūrėkite į `solution/frontend/styles.css` katalogą.
+Su šiomis trimis klasėmis galite stiliuoti žinutes skirtingai, priklausomai nuo to, iš kur jos ateina – iš asistento ar iš jūsų kaip vartotojo. Jei norite įkvėpimo, pažiūrėkite į `solution/frontend/styles.css` katalogą.
 
-### Pagrindinio URL pakeitimas
+### Pagrindinio URL keitimas
 
-Yra vienas dalykas, kurio dar nenustatėme, tai `BASE_URL`. Jis nežinomas, kol backend nėra paleistas. Norėdami jį nustatyti:
+Čia buvo vienas dalykas, kurio nenustatėme – `BASE_URL`. Jis nežinomas, kol backend nepradėtas. Norėdami jį nustatyti:
 
 - Jei API paleidžiate lokaliai, jis turėtų būti nustatytas kaip `http://localhost:5000`.
-- Jei paleidžiate Codespaces, jis turėtų atrodyti maždaug taip: "[name]app.github.dev".
+- Jei paleidžiate Codespaces, jis turėtų atrodyti kaip "[name]app.github.dev".
 
 ## Užduotis
 
-Sukurkite savo katalogą *project* su turiniu, kaip nurodyta aukščiau:
+Sukurkite savo katalogą *project* su turiniu, kaip nurodyta:
 
 ```text
 project/
@@ -346,11 +358,10 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
-Nukopijuokite turinį iš to, kas buvo nurodyta aukščiau, bet drąsiai pritaikykite pagal savo poreikius.
+Nukopijuokite turinį iš aukščiau pateiktų nurodymų, bet drąsiai pritaikykite pagal savo poreikius.
 
 ## Sprendimas
 
@@ -358,11 +369,17 @@ Nukopijuokite turinį iš to, kas buvo nurodyta aukščiau, bet drąsiai pritaik
 
 ## Papildoma
 
-Pabandykite pakeisti AI asistento asmenybę. Kai iškviečiate `call_llm` *api.py*, galite pakeisti antrą argumentą į tai, ką norite, pavyzdžiui:
+Pabandykite pakeisti AI asistento asmenybę.
+
+### Naudojant Python
+
+Kai iškviečiate `call_llm` *api.py*, galite pakeisti antrą argumentą į tai, ką norite, pavyzdžiui:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
+
+### Frontend
 
 Taip pat pakeiskite CSS ir tekstą pagal savo poreikius, atlikite pakeitimus *index.html* ir *styles.css*.
 
@@ -386,4 +403,4 @@ Puiku, jūs išmokote nuo nulio sukurti asmeninį asistentą naudojant AI. Tai p
 ---
 
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.

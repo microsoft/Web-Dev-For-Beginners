@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T13:03:34+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:39:23+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "hr"
 }
 -->
-# Projekt za chat
+# Chat projekt
 
-Ovaj projekt za chat pokazuje kako izraditi Chat asistenta koristeći GitHub Models.
+Ovaj chat projekt pokazuje kako izraditi Chat Asistenta koristeći GitHub modele.
 
 Evo kako izgleda gotov projekt:
 
@@ -17,23 +17,25 @@ Evo kako izgleda gotov projekt:
   <img src="./assets/screenshot.png" alt="Chat aplikacija" width="600">
 </div>
 
-Malo konteksta: izrada chat asistenata pomoću generativne AI tehnologije odličan je način za početak učenja o umjetnoj inteligenciji. Tijekom ove lekcije naučit ćete kako integrirati generativnu AI u web aplikaciju. Krenimo!
+Malo konteksta, izrada chat asistenata pomoću generativne umjetne inteligencije odličan je način za početak učenja o AI-ju. Tijekom ove lekcije naučit ćete kako integrirati generativnu AI u web aplikaciju. Krenimo.
 
 ## Povezivanje s generativnom AI
 
-Za backend koristimo GitHub Models. To je odlična usluga koja omogućuje besplatno korištenje AI. Posjetite njihov playground i preuzmite kod koji odgovara vašem odabranom jeziku za backend. Evo kako to izgleda na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Za backend koristimo GitHub modele. To je odlična usluga koja vam omogućuje korištenje AI-ja besplatno. Posjetite njihov playground i preuzmite kod koji odgovara vašem odabranom jeziku za backend. Evo kako to izgleda na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
 <div>
   <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
 </div>
 
-Kao što smo rekli, odaberite karticu "Code" i vaš odabrani runtime.
+Kao što smo rekli, odaberite karticu "Code" i svoj runtime.
 
 <div>
-  <img src="./assets/playground-choice.png" alt="playground izbor" with="600">
+  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
 </div>
 
-U ovom slučaju odabiremo Python, što znači da biramo ovaj kod:
+### Korištenje Pythona
+
+U ovom slučaju odabiremo Python, što znači da ćemo koristiti ovaj kod:
 
 ```python
 """Run this model in Python
@@ -70,7 +72,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Očistimo ovaj kod malo kako bi bio ponovno upotrebljiv:
+Očistimo ovaj kod kako bi bio ponovno upotrebljiv:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -94,7 +96,7 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-S ovom funkcijom `call_llm` sada možemo uzeti prompt i sistemski prompt, a funkcija vraća rezultat.
+S ovom funkcijom `call_llm` sada možemo uzeti prompt i sistemski prompt, a funkcija će vratiti rezultat.
 
 ### Prilagodba AI asistenta
 
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Izlaganje putem Web API-ja
 
-Odlično, završili smo AI dio, sada pogledajmo kako ga možemo integrirati u Web API. Za Web API odabiremo Flask, ali bilo koji web framework bi trebao biti dobar. Pogledajmo kod za to:
+Odlično, završili smo AI dio, sada pogledajmo kako to možemo integrirati u Web API. Za Web API koristimo Flask, ali bilo koji web framework bi trebao biti dobar. Pogledajmo kod za to:
+
+### Korištenje Pythona
 
 ```python
 # api.py
@@ -137,11 +141,11 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Ovdje kreiramo Flask API i definiramo zadanu rutu "/" i "/chat". Potonja ruta namijenjena je za korištenje od strane našeg frontenda za slanje pitanja.
+Ovdje kreiramo Flask API i definiramo zadanu rutu "/" i "/chat". Potonja je namijenjena za korištenje od strane našeg frontenda za slanje pitanja.
 
 Za integraciju *llm.py* trebamo učiniti sljedeće:
 
-- Importirati funkciju `call_llm`:
+- Uvesti funkciju `call_llm`:
 
    ```python
    from llm import call_llm
@@ -174,11 +178,15 @@ Za integraciju *llm.py* trebamo učiniti sljedeće:
    })
    ```
 
-Odlično, sada smo napravili što je potrebno.
+Odlično, sada smo završili što je potrebno.
 
-### Konfiguracija Cors
+## Konfiguriranje CORS-a
 
-Treba napomenuti da postavljamo nešto poput CORS-a, dijeljenja resursa između različitih izvora. To znači da, budući da će naš backend i frontend raditi na različitim portovima, moramo omogućiti frontendu da poziva backend. Postoji dio koda u *api.py* koji to postavlja:
+Trebamo napomenuti da smo postavili nešto poput CORS-a, dijeljenja resursa između različitih izvora. To znači da, budući da će naš backend i frontend raditi na različitim portovima, moramo omogućiti frontendu da poziva backend.
+
+### Korištenje Pythona
+
+Postoji dio koda u *api.py* koji to postavlja:
 
 ```python
 from flask_cors import CORS
@@ -190,6 +198,10 @@ CORS(app)   # *   example.com
 Trenutno je postavljeno da dopušta "*" što znači sve izvore, što je pomalo nesigurno. Trebali bismo to ograničiti kada idemo u produkciju.
 
 ## Pokretanje projekta
+
+Za pokretanje projekta prvo trebate pokrenuti backend, a zatim frontend.
+
+### Korištenje Pythona
 
 Ok, imamo *llm.py* i *api.py*, kako to možemo pokrenuti s backendom? Postoje dvije stvari koje trebamo učiniti:
 
@@ -209,7 +221,7 @@ Ok, imamo *llm.py* i *api.py*, kako to možemo pokrenuti s backendom? Postoje dv
    python api.py
    ```
 
-   Ako ste u Codespaces, trebate otići na Ports u donjem dijelu uređivača, desnim klikom odabrati "Port Visibility" i odabrati "Public".
+   Ako koristite Codespaces, trebate otići na Ports u donjem dijelu uređivača, desnim klikom odabrati "Port Visibility" i odabrati "Public".
 
 ### Rad na frontendu
 
@@ -223,7 +235,7 @@ app.js
 styles.css
 ```
 
-Krenimo s **index.html**:
+Počnimo s **index.html**:
 
 ```html
 <html>
@@ -241,7 +253,7 @@ Krenimo s **index.html**:
 </html>    
 ```
 
-Ovo gore je apsolutni minimum potreban za podršku prozoru za chat, jer se sastoji od tekstualnog područja gdje će se prikazivati poruke, polja za unos gdje se upisuje poruka i gumba za slanje poruke na backend. Pogledajmo sljedeće JavaScript u *app.js*
+Ovo gore je apsolutni minimum potreban za podršku chat prozoru, jer se sastoji od tekstualnog područja gdje će se prikazivati poruke, unosa za upisivanje poruke i gumba za slanje poruke na backend. Pogledajmo sljedeće JavaScript u *app.js*
 
 **app.js**
 
@@ -302,10 +314,10 @@ Prođimo kroz kod po sekcijama:
 
 - 1) Ovdje dobivamo referencu na sve elemente koje ćemo kasnije koristiti u kodu.
 - 2) U ovom dijelu kreiramo funkciju koja koristi ugrađenu metodu `fetch` za pozivanje našeg backenda.
-- 3) `appendMessage` pomaže dodati odgovore kao i ono što korisnik upisuje.
+- 3) `appendMessage` pomaže dodati odgovore kao i ono što vi kao korisnik upišete.
 - 4) Ovdje slušamo događaj submit i na kraju čitamo polje za unos, stavljamo korisnikovu poruku u tekstualno područje, pozivamo API i prikazujemo odgovor u tekstualnom području.
 
-Pogledajmo sljedeće stiliziranje, ovdje možete biti kreativni i napraviti izgled kakav želite, ali evo nekih prijedloga:
+Pogledajmo sljedeće stiliziranje, ovdje možete biti kreativni i napraviti da izgleda kako želite, ali evo nekih prijedloga:
 
 **styles.css**
 
@@ -326,18 +338,18 @@ Pogledajmo sljedeće stiliziranje, ovdje možete biti kreativni i napraviti izgl
 } 
 ```
 
-S ove tri klase stilizirat ćete poruke različito ovisno o tome dolaze li od asistenta ili od korisnika. Ako želite inspiraciju, pogledajte mapu `solution/frontend/styles.css`.
+S ove tri klase stilizirat ćete poruke različito ovisno o tome dolaze li od asistenta ili od vas kao korisnika. Ako želite inspiraciju, pogledajte mapu `solution/frontend/styles.css`.
 
 ### Promjena osnovnog URL-a
 
-Postoji jedna stvar koju ovdje nismo postavili, a to je `BASE_URL`. To nije poznato dok vaš backend ne bude pokrenut. Za postavljanje:
+Postoji jedna stvar koju ovdje nismo postavili, a to je `BASE_URL`. Ovo nije poznato dok vaš backend ne bude pokrenut. Da biste ga postavili:
 
-- Ako pokrećete API lokalno, treba ga postaviti na nešto poput `http://localhost:5000`.
-- Ako ga pokrećete u Codespaces, trebao bi izgledati nešto poput "[name]app.github.dev".
+- Ako pokrećete API lokalno, trebao bi biti postavljen na nešto poput `http://localhost:5000`.
+- Ako ga pokrećete u Codespaces, trebao bi izgledati otprilike ovako: "[name]app.github.dev".
 
 ## Zadatak
 
-Kreirajte vlastitu mapu *project* sa sadržajem poput ovoga:
+Kreirajte vlastitu mapu *project* sa sadržajem poput ovog:
 
 ```text
 project/
@@ -346,11 +358,10 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
-Kopirajte sadržaj iz gore navedenih uputa, ali slobodno ga prilagodite prema vlastitim željama.
+Kopirajte sadržaj iz gore navedenih uputa, ali slobodno prilagodite prema vlastitim željama.
 
 ## Rješenje
 
@@ -358,22 +369,28 @@ Kopirajte sadržaj iz gore navedenih uputa, ali slobodno ga prilagodite prema vl
 
 ## Bonus
 
-Pokušajte promijeniti osobnost AI asistenta. Kada pozivate `call_llm` u *api.py*, možete promijeniti drugi argument u ono što želite, na primjer:
+Pokušajte promijeniti osobnost AI asistenta.
+
+### Za Python
+
+Kada pozivate `call_llm` u *api.py*, možete promijeniti drugi argument u ono što želite, na primjer:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
-Promijenite također CSS i tekst prema vlastitim željama, napravite promjene u *index.html* i *styles.css*.
+### Frontend
+
+Promijenite također CSS i tekst prema vlastitim željama, tako da napravite izmjene u *index.html* i *styles.css*.
 
 ## Sažetak
 
-Odlično, naučili ste od početka kako kreirati osobnog asistenta koristeći AI. To smo učinili koristeći GitHub Models, backend u Pythonu i frontend u HTML-u, CSS-u i JavaScriptu.
+Odlično, naučili ste od nule kako kreirati osobnog asistenta koristeći AI. To smo učinili koristeći GitHub modele, backend u Pythonu i frontend u HTML-u, CSS-u i JavaScriptu.
 
 ## Postavljanje s Codespaces
 
 - Navigirajte na: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Kreirajte iz predloška (pobrinite se da ste prijavljeni na GitHub) u gornjem desnom kutu:
+- Kreirajte iz predloška (provjerite jeste li prijavljeni na GitHub) u gornjem desnom kutu:
 
     ![Kreiraj iz predloška](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.hr.png)
 
@@ -386,4 +403,4 @@ Odlično, naučili ste od početka kako kreirati osobnog asistenta koristeći AI
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane stručnjaka. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije proizašle iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.

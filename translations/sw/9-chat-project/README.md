@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T13:00:30+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:36:06+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "sw"
 }
@@ -14,26 +14,28 @@ Mradi huu wa gumzo unaonyesha jinsi ya kujenga Msaidizi wa Gumzo kwa kutumia Git
 Hivi ndivyo mradi uliokamilika unavyoonekana:
 
 <div>
-  <img src="./assets/screenshot.png" alt="Programu ya Gumzo" width="600">
+  <img src="./assets/screenshot.png" alt="App ya Gumzo" width="600">
 </div>
 
-Kama muktadha, kujenga wasaidizi wa gumzo kwa kutumia AI ya kizazi ni njia nzuri ya kuanza kujifunza kuhusu AI. Kile utakachojifunza ni jinsi ya kuunganisha AI ya kizazi kwenye programu ya wavuti katika somo hili, hebu tuanze.
+Kwa muktadha, kujenga wasaidizi wa gumzo kwa kutumia AI ya kizazi ni njia nzuri ya kuanza kujifunza kuhusu AI. Kile utakachojifunza ni jinsi ya kuunganisha AI ya kizazi kwenye programu ya wavuti katika somo hili, hebu tuanze.
 
-## Kuunganisha na AI ya Kizazi
+## Kuunganisha na AI ya kizazi
 
-Kwa upande wa nyuma (backend), tunatumia GitHub Models. Ni huduma nzuri inayokuwezesha kutumia AI bila malipo. Nenda kwenye uwanja wake wa majaribio na uchukue msimbo unaolingana na lugha ya nyuma unayochagua. Hivi ndivyo inavyoonekana kwenye [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Kwa upande wa backend, tunatumia GitHub Models. Ni huduma nzuri inayokuwezesha kutumia AI bila malipo. Nenda kwenye uwanja wake wa majaribio na uchukue msimbo unaolingana na lugha ya backend unayochagua. Hivi ndivyo inavyoonekana kwenye [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
 <div>
-  <img src="./assets/playground.png" alt="Uwanja wa GitHub Models AI" with="600">
+  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
 </div>
 
-Kama tulivyosema, chagua kichupo cha "Code" na muda wako wa utekelezaji uliouchagua.
+Kama tulivyosema, chagua kichupo cha "Code" na runtime unayochagua.
 
 <div>
-  <img src="./assets/playground-choice.png" alt="chaguo la uwanja wa majaribio" with="600">
+  <img src="./assets/playground-choice.png" alt="uchaguzi wa uwanja wa majaribio" with="600">
 </div>
 
-Katika kesi hii tunachagua Python, ambayo itamaanisha tunachukua msimbo huu:
+### Kutumia Python
+
+Katika hali hii tunachagua Python, ambayo itamaanisha tunachukua msimbo huu:
 
 ```python
 """Run this model in Python
@@ -98,15 +100,17 @@ Kwa kutumia kazi hii `call_llm` sasa tunaweza kuchukua maelekezo na maelekezo ya
 
 ### Kubinafsisha Msaidizi wa AI
 
-Ikiwa unataka kubinafsisha msaidizi wa AI unaweza kubainisha jinsi unavyotaka awe kwa kujaza maelekezo ya mfumo kama hivi:
+Ikiwa unataka kubinafsisha msaidizi wa AI unaweza kubainisha jinsi unavyotaka awe kwa kujaza maelekezo ya mfumo kama ifuatavyo:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Kuiweka Kupitia API ya Wavuti
+## Kuufichua kupitia Web API
 
-Vizuri, tumemaliza sehemu ya AI, hebu tuone jinsi tunavyoweza kuunganisha hiyo kwenye API ya Wavuti. Kwa API ya Wavuti, tunachagua kutumia Flask, lakini mfumo wowote wa wavuti unafaa. Hebu tuone msimbo wake:
+Nzuri, tumemaliza sehemu ya AI, hebu tuone jinsi tunavyoweza kuunganisha hiyo kwenye Web API. Kwa Web API, tunachagua kutumia Flask, lakini mfumo wowote wa wavuti unafaa. Hebu tuone msimbo wake:
+
+### Kutumia Python
 
 ```python
 # api.py
@@ -137,18 +141,18 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Hapa, tunaunda API ya Flask na kufafanua njia ya msingi "/" na "/chat". Njia ya mwisho inakusudiwa kutumiwa na sehemu ya mbele (frontend) yetu kupitisha maswali kwake.
+Hapa, tunaunda API ya flask na kufafanua njia ya msingi "/" na "/chat". Ya mwisho inakusudiwa kutumiwa na frontend yetu kupitisha maswali kwake.
 
-Kuunganisha *llm.py* hivi ndivyo tunavyohitaji kufanya:
+Kuunganisha *llm.py* tunachohitaji kufanya ni:
 
-- Leta kazi ya `call_llm`:
+- Kuingiza kazi ya `call_llm`:
 
    ```python
    from llm import call_llm
    from flask import Flask, request
    ```
 
-- Iite kutoka kwenye njia ya "/chat":
+- Kuiita kutoka njia ya "/chat":
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -163,7 +167,7 @@ Kuunganisha *llm.py* hivi ndivyo tunavyohitaji kufanya:
       })
    ```
 
-   Hapa tunachanganua ombi linaloingia ili kupata mali ya `message` kutoka kwa mwili wa JSON. Baadaye tunaita LLM kwa simu hii:
+   Hapa tunachambua ombi linalokuja ili kupata mali ya `message` kutoka kwa mwili wa JSON. Baadaye tunaita LLM kwa simu hii:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -174,11 +178,15 @@ Kuunganisha *llm.py* hivi ndivyo tunavyohitaji kufanya:
    })
    ```
 
-Vizuri, sasa tumemaliza kile tunachohitaji.
+Nzuri, sasa tumemaliza kile tunachohitaji.
 
-### Kusakinisha Cors
+## Kuseti Cors
 
-Tunapaswa kutaja kwamba tumeweka kitu kama CORS, kushiriki rasilimali kati ya asili tofauti. Hii inamaanisha kwamba kwa sababu sehemu yetu ya nyuma na mbele zitaendesha kwenye bandari tofauti, tunahitaji kuruhusu sehemu ya mbele kupiga simu kwenye sehemu ya nyuma. Kuna kipande cha msimbo katika *api.py* kinachoweka hili:
+Tunapaswa kutaja kwamba tunaseti kitu kama CORS, kushiriki rasilimali za asili tofauti. Hii inamaanisha kwamba kwa sababu backend yetu na frontend zitaendesha kwenye bandari tofauti, tunahitaji kuruhusu frontend kupiga simu kwenye backend.
+
+### Kutumia Python
+
+Kuna kipande cha msimbo katika *api.py* kinachoseti hili:
 
 ```python
 from flask_cors import CORS
@@ -187,11 +195,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Kwa sasa imewekwa kuruhusu "*" ambayo ni asili zote, na hiyo si salama sana, tunapaswa kuibana mara tu tunapokwenda kwenye uzalishaji.
+Kwa sasa kimesetiwa kuruhusu "*" ambayo ni asili zote, na hiyo si salama sana, tunapaswa kuibana mara tu tunapofika kwenye uzalishaji.
 
-## Kuendesha Mradi Wako
+## Endesha mradi wako
 
-Sawa, kwa hivyo tuna *llm.py* na *api.py*, tunawezaje kufanya kazi hii na sehemu ya nyuma? Vizuri, kuna mambo mawili tunahitaji kufanya:
+Kuendesha mradi wako, unahitaji kuanzisha backend yako kwanza na kisha frontend yako.
+
+### Kutumia Python
+
+Sawa, kwa hivyo tuna *llm.py* na *api.py*, tunawezaje kufanya hii ifanye kazi na backend? Naam, kuna mambo mawili tunahitaji kufanya:
 
 - Sakinisha utegemezi:
 
@@ -209,11 +221,11 @@ Sawa, kwa hivyo tuna *llm.py* na *api.py*, tunawezaje kufanya kazi hii na sehemu
    python api.py
    ```
 
-   Ikiwa uko kwenye Codespaces unahitaji kwenda kwenye Ports chini ya mhariri, bofya kulia juu yake na uchague "Port Visibility" na uchague "Public".
+   Ikiwa uko kwenye Codespaces unahitaji kwenda kwenye Ports katika sehemu ya chini ya mhariri, bofya kulia juu yake na bonyeza "Port Visibility" na uchague "Public".
 
-### Kufanya Kazi Kwenye Sehemu ya Mbele
+### Fanya kazi kwenye frontend
 
-Sasa kwa kuwa tuna API inayoendesha, hebu tuunde sehemu ya mbele kwa hili. Sehemu ya mbele ya kiwango cha chini kabisa ambayo tutaiboresha hatua kwa hatua. Katika folda ya *frontend*, unda yafuatayo:
+Sasa kwa kuwa tuna API inayofanya kazi, hebu tuunde frontend kwa ajili ya hii. Frontend ya kiwango cha chini kabisa ambayo tutaboresha hatua kwa hatua. Katika folda ya *frontend*, unda yafuatayo:
 
 ```text
 backend/
@@ -223,7 +235,7 @@ app.js
 styles.css
 ```
 
-Tuanze na **index.html**:
+Hebu tuanze na **index.html**:
 
 ```html
 <html>
@@ -241,7 +253,7 @@ Tuanze na **index.html**:
 </html>    
 ```
 
-Hii hapo juu ni kiwango cha chini kabisa unachohitaji kusaidia dirisha la gumzo, kwani lina sehemu ya maandishi ambapo ujumbe utaonyeshwa, sehemu ya kuingiza kwa ajili ya kuandika ujumbe na kitufe cha kutuma ujumbe wako kwa sehemu ya nyuma. Hebu tuangalie JavaScript inayofuata katika *app.js*
+Hii hapo juu ni kiwango cha chini kabisa unachohitaji ili kusaidia dirisha la gumzo, kwani linajumuisha eneo la maandishi ambapo ujumbe utaonyeshwa, ingizo la mahali pa kuandika ujumbe na kitufe cha kutuma ujumbe wako kwa backend. Hebu tuangalie JavaScript inayofuata katika *app.js*
 
 **app.js**
 
@@ -298,14 +310,14 @@ Hii hapo juu ni kiwango cha chini kabisa unachohitaji kusaidia dirisha la gumzo,
 })();
 ```
 
-Hebu tupitie msimbo kwa kila sehemu:
+Hebu tuende kupitia msimbo kwa kila sehemu:
 
-- 1) Hapa tunapata marejeleo ya vipengele vyote tutakavyotumia baadaye kwenye msimbo.
-- 2) Katika sehemu hii, tunaunda kazi inayotumia njia ya kujengwa ya `fetch` ambayo inaita sehemu yetu ya nyuma.
-- 3) `appendMessage` husaidia kuongeza majibu pamoja na kile unachoandika kama mtumiaji.
-- 4) Hapa tunasikiliza tukio la kuwasilisha na tunasoma sehemu ya kuingiza, kuweka ujumbe wa mtumiaji kwenye sehemu ya maandishi, kuita API, na kuonyesha jibu hilo kwenye sehemu ya maandishi.
+- 1) Hapa tunapata rejeleo kwa vipengele vyote ambavyo tutarejelea baadaye katika msimbo
+- 2) Katika sehemu hii, tunaunda kazi inayotumia njia ya kujengwa ya `fetch` inayopiga simu backend yetu
+- 3) `appendMessage` husaidia kuongeza majibu pamoja na kile unachotype kama mtumiaji.
+- 4) Hapa tunasikiliza tukio la submit na tunasoma uwanja wa ingizo, kuweka ujumbe wa mtumiaji katika eneo la maandishi, kupiga API, na kuonyesha jibu hilo katika eneo la maandishi.
 
-Hebu tuangalie mitindo inayofuata, hapa ndipo unaweza kuwa mbunifu na kufanya ionekane unavyotaka, lakini hapa kuna mapendekezo:
+Hebu tuangalie mitindo inayofuata, hapa ndipo unaweza kwenda mbali na kuifanya ionekane unavyotaka, lakini hapa kuna mapendekezo:
 
 **styles.css**
 
@@ -326,18 +338,18 @@ Hebu tuangalie mitindo inayofuata, hapa ndipo unaweza kuwa mbunifu na kufanya io
 } 
 ```
 
-Kwa madarasa haya matatu, utaweza kutofautisha mitindo ya ujumbe kulingana na chanzo chake, iwe ni kutoka kwa msaidizi au wewe kama mtumiaji. Ikiwa unataka kupata msukumo, angalia folda ya `solution/frontend/styles.css`.
+Kwa darasa hizi tatu, utapanga ujumbe tofauti kulingana na mahali zinapotoka, msaidizi au wewe kama mtumiaji. Ikiwa unataka kupata msukumo, angalia folda ya `solution/frontend/styles.css`.
 
 ### Badilisha Base Url
 
-Kuna jambo moja hapa hatukuweka, nalo ni `BASE_URL`, hili halijulikani hadi sehemu yako ya nyuma ianze. Ili kuiweka:
+Kuna jambo moja hapa hatukuseti, nalo ni `BASE_URL`, hili halijulikani hadi backend yako ianze. Ili kuiseti:
 
-- Ikiwa unaendesha API ndani ya nchi, inapaswa kuwekwa kama `http://localhost:5000`.
+- Ikiwa unaendesha API kwa ndani, inapaswa kusetiwa kwa kitu kama `http://localhost:5000`.
 - Ikiwa unaendesha kwenye Codespaces, inapaswa kuonekana kama "[name]app.github.dev".
 
 ## Kazi
 
-Unda folda yako mwenyewe *project* yenye maudhui kama haya:
+Unda folda yako mwenyewe *project* yenye maudhui kama ifuatavyo:
 
 ```text
 project/
@@ -346,34 +358,39 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
 Nakili maudhui kutoka kwa yale yaliyoelekezwa hapo juu lakini jisikie huru kubinafsisha unavyopenda.
 
 ## Suluhisho
 
-[Suluhisho](./solution/README.md)
+[Solution](./solution/README.md)
 
 ## Ziada
 
-Jaribu kubadilisha tabia ya msaidizi wa AI. Unapopiga simu `call_llm` katika *api.py* unaweza kubadilisha hoja ya pili kwa unavyotaka, kwa mfano:
+Jaribu kubadilisha tabia ya msaidizi wa AI.
+
+### Kwa Python
+
+Unapopiga `call_llm` katika *api.py* unaweza kubadilisha hoja ya pili kwa unachotaka, kwa mfano:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
+### Frontend
+
 Badilisha pia CSS na maandishi unavyopenda, kwa hivyo fanya mabadiliko katika *index.html* na *styles.css*.
 
 ## Muhtasari
 
-Vizuri, umejifunza kutoka mwanzo jinsi ya kuunda msaidizi wa kibinafsi kwa kutumia AI. Tumefanya hivyo kwa kutumia GitHub Models, sehemu ya nyuma kwa Python na sehemu ya mbele kwa HTML, CSS na JavaScript.
+Nzuri, umejifunza kutoka mwanzo jinsi ya kuunda msaidizi wa kibinafsi kwa kutumia AI. Tumefanya hivyo kwa kutumia GitHub Models, backend katika Python na frontend katika HTML, CSS na JavaScript.
 
-## Kuweka na Codespaces
+## Kuseti na Codespaces
 
-- Nenda kwenye: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Unda kutoka kwa kiolezo (hakikisha umeingia kwenye GitHub) kwenye kona ya juu-kulia:
+- Tembelea: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Unda kutoka kwa kiolezo (hakikisha umeingia kwenye GitHub) kwenye kona ya juu kulia:
 
     ![Unda kutoka kwa kiolezo](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.sw.png)
 
@@ -381,9 +398,9 @@ Vizuri, umejifunza kutoka mwanzo jinsi ya kuunda msaidizi wa kibinafsi kwa kutum
 
     ![Unda codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.sw.png)
 
-    Hii inapaswa kuanzisha mazingira unayoweza kufanya kazi nayo sasa.
+    Hii inapaswa kuanzisha mazingira ambayo sasa unaweza kufanya kazi nayo.
 
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya kiasili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

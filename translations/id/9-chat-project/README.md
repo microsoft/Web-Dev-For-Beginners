@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T09:47:44+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:34:35+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "id"
 }
@@ -21,7 +21,7 @@ Sebagai konteks, membangun asisten chat menggunakan AI generatif adalah cara yan
 
 ## Menghubungkan ke AI Generatif
 
-Untuk backend, kita menggunakan GitHub Models. Ini adalah layanan hebat yang memungkinkan Anda menggunakan AI secara gratis. Kunjungi playground-nya dan ambil kode yang sesuai dengan bahasa backend pilihan Anda. Berikut adalah tampilan [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
+Untuk backend, kita menggunakan GitHub Models. Ini adalah layanan hebat yang memungkinkan Anda menggunakan AI secara gratis. Kunjungi playground-nya dan ambil kode yang sesuai dengan bahasa backend pilihan Anda. Berikut adalah tampilannya di [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
 <div>
   <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
@@ -32,6 +32,8 @@ Seperti yang disebutkan, pilih tab "Code" dan runtime pilihan Anda.
 <div>
   <img src="./assets/playground-choice.png" alt="pilihan playground" with="600">
 </div>
+
+### Menggunakan Python
 
 Dalam kasus ini, kita memilih Python, yang berarti kita akan menggunakan kode berikut:
 
@@ -98,7 +100,7 @@ Dengan fungsi `call_llm` ini, kita dapat mengambil prompt dan sistem prompt, lal
 
 ### Kustomisasi Asisten AI
 
-Jika Anda ingin menyesuaikan asisten AI, Anda dapat menentukan bagaimana ia harus berperilaku dengan mengisi sistem prompt seperti ini:
+Jika Anda ingin menyesuaikan asisten AI, Anda dapat menentukan bagaimana perilakunya dengan mengisi sistem prompt seperti ini:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Mengeksposnya melalui Web API
 
-Bagus, kita telah menyelesaikan bagian AI, sekarang mari kita lihat bagaimana kita dapat mengintegrasikannya ke dalam Web API. Untuk Web API, kita memilih menggunakan Flask, tetapi framework web lainnya juga bisa digunakan. Berikut adalah kodenya:
+Bagus, bagian AI sudah selesai. Sekarang mari kita lihat bagaimana kita dapat mengintegrasikannya ke dalam Web API. Untuk Web API, kita memilih menggunakan Flask, tetapi framework web apa pun seharusnya bisa digunakan. Berikut adalah kodenya:
+
+### Menggunakan Python
 
 ```python
 # api.py
@@ -137,7 +141,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Di sini, kita membuat API Flask dan mendefinisikan rute default "/" dan "/chat". Rute "/chat" dimaksudkan untuk digunakan oleh frontend kita untuk mengirimkan pertanyaan.
+Di sini, kita membuat API Flask dan mendefinisikan rute default "/" dan "/chat". Rute yang terakhir dimaksudkan untuk digunakan oleh frontend kita untuk mengirimkan pertanyaan.
 
 Untuk mengintegrasikan *llm.py*, berikut yang perlu kita lakukan:
 
@@ -174,11 +178,15 @@ Untuk mengintegrasikan *llm.py*, berikut yang perlu kita lakukan:
    })
    ```
 
-Bagus, sekarang kita telah menyelesaikan apa yang diperlukan.
+Bagus, sekarang kita sudah menyelesaikan apa yang diperlukan.
 
-### Konfigurasi Cors
+## Konfigurasi Cors
 
-Kita perlu menyebutkan bahwa kita mengatur sesuatu seperti CORS (Cross-Origin Resource Sharing). Ini berarti bahwa karena backend dan frontend kita akan berjalan di port yang berbeda, kita perlu mengizinkan frontend untuk memanggil backend. Ada potongan kode di *api.py* yang mengatur ini:
+Kita perlu menyebutkan bahwa kita mengatur sesuatu seperti CORS, cross-origin resource sharing. Ini berarti karena backend dan frontend kita akan berjalan di port yang berbeda, kita perlu mengizinkan frontend untuk memanggil backend.
+
+### Menggunakan Python
+
+Ada potongan kode di *api.py* yang mengatur ini:
 
 ```python
 from flask_cors import CORS
@@ -187,11 +195,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Saat ini, pengaturan ini mengizinkan "*" yang berarti semua origin, dan ini agak tidak aman. Kita harus membatasinya saat masuk ke produksi.
+Saat ini, pengaturannya memungkinkan "*" yang berarti semua origin, dan ini agak tidak aman. Kita harus membatasinya saat masuk ke produksi.
 
 ## Menjalankan Proyek Anda
 
-Oke, jadi kita memiliki *llm.py* dan *api.py*, bagaimana kita bisa membuat ini bekerja dengan backend? Ada dua hal yang perlu kita lakukan:
+Untuk menjalankan proyek Anda, Anda perlu memulai backend terlebih dahulu, lalu frontend Anda.
+
+### Menggunakan Python
+
+Baik, jadi kita memiliki *llm.py* dan *api.py*. Bagaimana kita membuat ini bekerja dengan backend? Ada dua hal yang perlu kita lakukan:
 
 - Instal dependensi:
 
@@ -209,11 +221,11 @@ Oke, jadi kita memiliki *llm.py* dan *api.py*, bagaimana kita bisa membuat ini b
    python api.py
    ```
 
-   Jika Anda menggunakan Codespaces, Anda perlu pergi ke bagian Ports di bagian bawah editor, klik kanan di atasnya, lalu klik "Port Visibility" dan pilih "Public".
+   Jika Anda menggunakan Codespaces, Anda perlu pergi ke Ports di bagian bawah editor, klik kanan di atasnya, lalu klik "Port Visibility" dan pilih "Public".
 
 ### Mengerjakan Frontend
 
-Sekarang kita memiliki API yang berjalan, mari kita buat frontend untuk ini. Frontend minimal yang akan kita tingkatkan secara bertahap. Di folder *frontend*, buat file berikut:
+Sekarang kita memiliki API yang berjalan, mari kita buat frontend untuk ini. Frontend minimum yang akan kita tingkatkan secara bertahap. Di folder *frontend*, buat file berikut:
 
 ```text
 backend/
@@ -241,7 +253,7 @@ Mari kita mulai dengan **index.html**:
 </html>    
 ```
 
-Di atas adalah kebutuhan minimum untuk mendukung jendela chat, yang terdiri dari textarea tempat pesan akan ditampilkan, input untuk mengetik pesan, dan tombol untuk mengirim pesan ke backend. Selanjutnya, mari kita lihat JavaScript di *app.js*.
+Di atas adalah minimum absolut yang Anda butuhkan untuk mendukung jendela chat, karena terdiri dari textarea tempat pesan akan dirender, input untuk mengetik pesan, dan tombol untuk mengirim pesan Anda ke backend. Selanjutnya, mari kita lihat JavaScript di *app.js*
 
 **app.js**
 
@@ -300,12 +312,12 @@ Di atas adalah kebutuhan minimum untuk mendukung jendela chat, yang terdiri dari
 
 Mari kita bahas kode ini per bagian:
 
-- 1) Di sini kita mendapatkan referensi ke semua elemen yang akan kita gunakan nanti di kode.
+- 1) Di sini kita mendapatkan referensi ke semua elemen yang akan kita gunakan nanti dalam kode.
 - 2) Pada bagian ini, kita membuat fungsi yang menggunakan metode bawaan `fetch` untuk memanggil backend kita.
 - 3) `appendMessage` membantu menambahkan respons serta apa yang Anda ketik sebagai pengguna.
-- 4) Di sini kita mendengarkan event submit, membaca input field, menempatkan pesan pengguna di textarea, memanggil API, dan menampilkan respons di textarea.
+- 4) Di sini kita mendengarkan event submit, membaca input field, menempatkan pesan pengguna di textarea, memanggil API, dan merender respons di textarea.
 
-Selanjutnya, mari kita lihat styling. Di sini Anda bisa berkreasi sesuka hati, tetapi berikut adalah beberapa saran:
+Selanjutnya, mari kita lihat styling. Di sinilah Anda bisa berkreasi dan membuatnya terlihat seperti yang Anda inginkan, tetapi berikut adalah beberapa saran:
 
 **styles.css**
 
@@ -326,14 +338,14 @@ Selanjutnya, mari kita lihat styling. Di sini Anda bisa berkreasi sesuka hati, t
 } 
 ```
 
-Dengan tiga kelas ini, Anda dapat menata pesan secara berbeda tergantung dari mana asalnya, apakah dari asisten atau dari Anda sebagai pengguna. Jika Anda ingin mendapatkan inspirasi, lihat folder `solution/frontend/styles.css`.
+Dengan tiga kelas ini, Anda akan menata pesan secara berbeda tergantung dari mana asalnya, apakah dari asisten atau Anda sebagai pengguna. Jika Anda ingin terinspirasi, lihat folder `solution/frontend/styles.css`.
 
-### Mengubah Base URL
+### Ubah Base Url
 
-Ada satu hal yang belum kita atur, yaitu `BASE_URL`. Ini tidak diketahui sampai backend Anda berjalan. Untuk mengaturnya:
+Ada satu hal yang belum kita atur, yaitu `BASE_URL`. Ini tidak diketahui sampai backend Anda dijalankan. Untuk mengaturnya:
 
-- Jika Anda menjalankan API secara lokal, atur ke sesuatu seperti `http://localhost:5000`.
-- Jika dijalankan di Codespaces, URL-nya akan terlihat seperti "[name]app.github.dev".
+- Jika Anda menjalankan API secara lokal, itu harus diatur ke sesuatu seperti `http://localhost:5000`.
+- Jika dijalankan di Codespaces, itu akan terlihat seperti "[name]app.github.dev".
 
 ## Tugas
 
@@ -346,8 +358,7 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
 Salin konten dari instruksi di atas, tetapi jangan ragu untuk menyesuaikannya sesuai keinginan Anda.
@@ -358,11 +369,17 @@ Salin konten dari instruksi di atas, tetapi jangan ragu untuk menyesuaikannya se
 
 ## Bonus
 
-Cobalah mengubah kepribadian asisten AI. Saat Anda memanggil `call_llm` di *api.py*, Anda dapat mengubah argumen kedua sesuai keinginan Anda, misalnya:
+Cobalah mengubah kepribadian asisten AI.
+
+### Untuk Python
+
+Saat Anda memanggil `call_llm` di *api.py*, Anda dapat mengubah argumen kedua sesuai keinginan Anda, misalnya:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
+
+### Frontend
 
 Ubah juga CSS dan teks sesuai keinginan Anda, jadi lakukan perubahan di *index.html* dan *styles.css*.
 
@@ -372,7 +389,7 @@ Bagus, Anda telah belajar dari awal cara membuat asisten pribadi menggunakan AI.
 
 ## Pengaturan dengan Codespaces
 
-- Arahkan ke: [Repo Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Navigasikan ke: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
 - Buat dari template (pastikan Anda sudah login ke GitHub) di pojok kanan atas:
 
     ![Buat dari template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.id.png)

@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T17:03:14+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:18:23+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "es"
 }
 -->
 # Proyecto de Chat
 
-Este proyecto de chat muestra cómo construir un Asistente de Chat utilizando los Modelos de GitHub.
+Este proyecto de chat muestra cómo construir un Asistente de Chat utilizando GitHub Models.
 
 Así es como se ve el proyecto terminado:
 
@@ -17,11 +17,11 @@ Así es como se ve el proyecto terminado:
   <img src="./assets/screenshot.png" alt="Aplicación de chat" width="600">
 </div>
 
-Un poco de contexto: construir asistentes de chat utilizando IA generativa es una excelente manera de comenzar a aprender sobre IA. Lo que aprenderás es a integrar IA generativa en una aplicación web a lo largo de esta lección. ¡Comencemos!
+Un poco de contexto: construir asistentes de chat utilizando IA generativa es una excelente manera de comenzar a aprender sobre IA. Lo que aprenderás es cómo integrar IA generativa en una aplicación web a lo largo de esta lección. ¡Comencemos!
 
 ## Conectando con IA generativa
 
-Para el backend, estamos utilizando los Modelos de GitHub. Es un gran servicio que te permite usar IA de forma gratuita. Ve a su playground y obtén el código que corresponde a tu lenguaje de backend elegido. Así es como se ve en [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Para el backend, estamos utilizando GitHub Models. Es un excelente servicio que te permite usar IA de forma gratuita. Ve a su playground y obtén el código que corresponde al lenguaje de backend que elijas. Así es como se ve en [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
 <div>
   <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
@@ -32,6 +32,8 @@ Como mencionamos, selecciona la pestaña "Code" y tu entorno de ejecución prefe
 <div>
   <img src="./assets/playground-choice.png" alt="Elección en el playground" with="600">
 </div>
+
+### Usando Python
 
 En este caso, seleccionamos Python, lo que significa que elegimos este código:
 
@@ -70,7 +72,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Vamos a limpiar este código un poco para que sea reutilizable:
+Limpiemos un poco este código para que sea reutilizable:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -94,7 +96,7 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-Con esta función `call_llm`, ahora podemos tomar un prompt y un prompt del sistema, y la función devolverá el resultado.
+Con esta función `call_llm` ahora podemos tomar un prompt y un prompt del sistema, y la función termina devolviendo el resultado.
 
 ### Personalizar el Asistente de IA
 
@@ -107,6 +109,8 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 ## Exponerlo a través de una API Web
 
 Genial, ya tenemos la parte de IA lista. Veamos cómo podemos integrarla en una API Web. Para la API Web, elegimos usar Flask, pero cualquier framework web debería funcionar. Veamos el código:
+
+### Usando Python
 
 ```python
 # api.py
@@ -174,11 +178,15 @@ Para integrar *llm.py*, esto es lo que necesitamos hacer:
    })
    ```
 
-Genial, ahora hemos hecho lo necesario.
+Genial, ahora hemos hecho lo que necesitamos.
 
-### Configurar Cors
+## Configurar Cors
 
-Debemos mencionar que configuramos algo como CORS, intercambio de recursos de origen cruzado. Esto significa que, dado que nuestro backend y frontend se ejecutarán en diferentes puertos, necesitamos permitir que el frontend llame al backend. Hay un fragmento de código en *api.py* que configura esto:
+Debemos mencionar que configuramos algo como CORS, intercambio de recursos de origen cruzado. Esto significa que, dado que nuestro backend y frontend se ejecutarán en diferentes puertos, necesitamos permitir que el frontend llame al backend.
+
+### Usando Python
+
+Hay un fragmento de código en *api.py* que configura esto:
 
 ```python
 from flask_cors import CORS
@@ -187,11 +195,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-En este momento, está configurado para permitir "*", que son todos los orígenes, y eso es un poco inseguro. Deberíamos restringirlo una vez que pasemos a producción.
+Actualmente está configurado para permitir "*", que son todos los orígenes, y eso es un poco inseguro. Deberíamos restringirlo una vez que pasemos a producción.
 
 ## Ejecutar tu proyecto
 
-Bien, ya tenemos *llm.py* y *api.py*. ¿Cómo podemos hacer que esto funcione con un backend? Bueno, hay dos cosas que necesitamos hacer:
+Para ejecutar tu proyecto, primero necesitas iniciar tu backend y luego tu frontend.
+
+### Usando Python
+
+Bien, tenemos *llm.py* y *api.py*. ¿Cómo podemos hacer que esto funcione con un backend? Bueno, hay dos cosas que necesitamos hacer:
 
 - Instalar dependencias:
 
@@ -209,7 +221,7 @@ Bien, ya tenemos *llm.py* y *api.py*. ¿Cómo podemos hacer que esto funcione co
    python api.py
    ```
 
-   Si estás en Codespaces, necesitas ir a Puertos en la parte inferior del editor, hacer clic derecho sobre él y seleccionar "Port Visibility" y luego "Public".
+   Si estás en Codespaces, necesitas ir a Puertos en la parte inferior del editor, hacer clic derecho sobre él y seleccionar "Port Visibility" y elegir "Public".
 
 ### Trabajar en un frontend
 
@@ -241,7 +253,7 @@ Comencemos con **index.html**:
 </html>    
 ```
 
-Lo anterior es lo mínimo necesario para soportar una ventana de chat, ya que consiste en un área de texto donde se renderizarán los mensajes, un campo de entrada para escribir el mensaje y un botón para enviarlo al backend. Veamos el JavaScript a continuación en *app.js*.
+Lo anterior es lo mínimo absoluto que necesitas para soportar una ventana de chat, ya que consiste en un área de texto donde se renderizarán los mensajes, un campo de entrada para escribir el mensaje y un botón para enviar tu mensaje al backend. Veamos el JavaScript a continuación en *app.js*
 
 **app.js**
 
@@ -300,12 +312,12 @@ Lo anterior es lo mínimo necesario para soportar una ventana de chat, ya que co
 
 Analicemos el código por sección:
 
-- 1) Aquí obtenemos una referencia a todos nuestros elementos que usaremos más adelante en el código.
+- 1) Aquí obtenemos una referencia a todos nuestros elementos que utilizaremos más adelante en el código.
 - 2) En esta sección, creamos una función que utiliza el método `fetch` incorporado para llamar a nuestro backend.
-- 3) `appendMessage` ayuda a agregar respuestas, así como lo que escribes como usuario.
+- 3) `appendMessage` ayuda a agregar respuestas, así como lo que tú como usuario escribes.
 - 4) Aquí escuchamos el evento de envío, leemos el campo de entrada, colocamos el mensaje del usuario en el área de texto, llamamos a la API y renderizamos la respuesta en el área de texto.
 
-Veamos el estilo a continuación. Aquí puedes ser muy creativo y hacerlo como quieras, pero aquí tienes algunas sugerencias:
+Veamos el estilo a continuación. Aquí es donde puedes ser realmente creativo y hacer que se vea como quieras, pero aquí hay algunas sugerencias:
 
 **styles.css**
 
@@ -326,11 +338,11 @@ Veamos el estilo a continuación. Aquí puedes ser muy creativo y hacerlo como q
 } 
 ```
 
-Con estas tres clases, puedes estilizar los mensajes de manera diferente dependiendo de si provienen del asistente o de ti como usuario. Si necesitas inspiración, revisa la carpeta `solution/frontend/styles.css`.
+Con estas tres clases, estilizarás los mensajes de manera diferente dependiendo de si provienen del asistente o de ti como usuario. Si quieres inspirarte, revisa la carpeta `solution/frontend/styles.css`.
 
 ### Cambiar la URL Base
 
-Hay algo que no configuramos aquí, y es `BASE_URL`. Esto no se conoce hasta que tu backend esté iniciado. Para configurarlo:
+Hay una cosa que no configuramos aquí y fue `BASE_URL`. Esto no se conoce hasta que tu backend esté iniciado. Para configurarlo:
 
 - Si ejecutas la API localmente, debería configurarse como algo como `http://localhost:5000`.
 - Si se ejecuta en Codespaces, debería verse algo como "[name]app.github.dev".
@@ -346,8 +358,7 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
 Copia el contenido de lo que se indicó anteriormente, pero siéntete libre de personalizarlo a tu gusto.
@@ -358,22 +369,28 @@ Copia el contenido de lo que se indicó anteriormente, pero siéntete libre de p
 
 ## Bonus
 
-Intenta cambiar la personalidad del asistente de IA. Cuando llames a `call_llm` en *api.py*, puedes cambiar el segundo argumento a lo que desees, por ejemplo:
+Intenta cambiar la personalidad del asistente de IA.
+
+### Para Python
+
+Cuando llames a `call_llm` en *api.py*, puedes cambiar el segundo argumento a lo que desees, por ejemplo:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
-Cambia también el CSS y el texto a tu gusto, haciendo cambios en *index.html* y *styles.css*.
+### Frontend
+
+Cambia también el CSS y el texto a tu gusto, realiza cambios en *index.html* y *styles.css*.
 
 ## Resumen
 
-¡Genial! Has aprendido desde cero cómo crear un asistente personal utilizando IA. Lo hemos hecho utilizando los Modelos de GitHub, un backend en Python y un frontend en HTML, CSS y JavaScript.
+Genial, has aprendido desde cero cómo crear un asistente personal utilizando IA. Lo hemos hecho utilizando GitHub Models, un backend en Python y un frontend en HTML, CSS y JavaScript.
 
 ## Configuración con Codespaces
 
-- Navega a: [Repositorio Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Crea desde una plantilla (asegúrate de haber iniciado sesión en GitHub) en la esquina superior derecha:
+- Navega a: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Crea desde una plantilla (asegúrate de estar conectado a GitHub) en la esquina superior derecha:
 
     ![Crear desde plantilla](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.es.png)
 

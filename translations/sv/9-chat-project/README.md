@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T09:46:01+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:31:27+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "sv"
 }
@@ -27,13 +27,15 @@ För backend använder vi GitHub Models. Det är en fantastisk tjänst som gör 
   <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
 </div>
 
-Som sagt, välj fliken "Code" och din valda runtime.
+Som vi nämnde, välj fliken "Code" och din valda runtime.
 
 <div>
   <img src="./assets/playground-choice.png" alt="playground choice" with="600">
 </div>
 
-I detta fall väljer vi Python, vilket innebär att vi använder denna kod:
+### Använda Python
+
+I det här fallet väljer vi Python, vilket innebär att vi använder denna kod:
 
 ```python
 """Run this model in Python
@@ -104,9 +106,11 @@ Om du vill anpassa AI-assistenten kan du specificera hur du vill att den ska bet
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Exponera den via ett webb-API
+## Exponera det via ett webb-API
 
-Bra, vi har gjort AI-delen, låt oss se hur vi kan integrera det i ett webb-API. För webb-API:t väljer vi att använda Flask, men vilken webbframework som helst borde fungera. Här är koden för det:
+Bra, vi har gjort AI-delen, låt oss se hur vi kan integrera det i ett webb-API. För webb-API:t väljer vi Flask, men vilken webbframework som helst borde fungera. Låt oss se koden för det:
+
+### Använda Python
 
 ```python
 # api.py
@@ -176,9 +180,13 @@ För att integrera *llm.py* behöver vi göra följande:
 
 Bra, nu har vi gjort det vi behöver.
 
-### Konfigurera Cors
+## Konfigurera Cors
 
-Vi bör nämna att vi ställer in något som CORS, cross-origin resource sharing. Detta innebär att eftersom vår backend och frontend kommer att köras på olika portar, måste vi tillåta frontenden att anropa backend. Det finns en kodsnutt i *api.py* som ställer in detta:
+Vi bör nämna att vi ställer in något som CORS, cross-origin resource sharing. Detta innebär att eftersom vår backend och frontend kommer att köras på olika portar, måste vi tillåta att frontenden kan anropa backend.
+
+### Använda Python
+
+Det finns en kodsnutt i *api.py* som ställer in detta:
 
 ```python
 from flask_cors import CORS
@@ -190,6 +198,10 @@ CORS(app)   # *   example.com
 Just nu är det inställt att tillåta "*" vilket är alla ursprung, och det är lite osäkert. Vi bör begränsa det när vi går till produktion.
 
 ## Kör ditt projekt
+
+För att köra ditt projekt behöver du starta upp din backend först och sedan din frontend.
+
+### Använda Python
 
 Ok, så vi har *llm.py* och *api.py*, hur kan vi få detta att fungera med en backend? Det finns två saker vi behöver göra:
 
@@ -241,7 +253,7 @@ Låt oss börja med **index.html**:
 </html>    
 ```
 
-Ovanstående är det absolut minsta du behöver för att stödja ett chattfönster, eftersom det består av en textarea där meddelanden kommer att visas, ett inputfält för att skriva meddelandet och en knapp för att skicka ditt meddelande till backend. Låt oss titta på JavaScript nästa i *app.js*
+Ovan är det absolut minsta du behöver för att stödja ett chattfönster, eftersom det består av en textarea där meddelanden kommer att visas, ett inputfält för att skriva meddelandet och en knapp för att skicka ditt meddelande till backend. Låt oss titta på JavaScript i *app.js*.
 
 **app.js**
 
@@ -300,12 +312,12 @@ Ovanstående är det absolut minsta du behöver för att stödja ett chattfönst
 
 Låt oss gå igenom koden per sektion:
 
-- 1) Här hämtar vi referenser till alla våra element som vi kommer att referera till senare i koden.
+- 1) Här hämtar vi en referens till alla våra element som vi kommer att referera till senare i koden.
 - 2) I denna sektion skapar vi en funktion som använder den inbyggda metoden `fetch` för att anropa vår backend.
 - 3) `appendMessage` hjälper till att lägga till svar samt det du som användare skriver.
 - 4) Här lyssnar vi på submit-händelsen och läser inputfältet, placerar användarens meddelande i textarean, anropar API:t och renderar svaret i textarean.
 
-Låt oss titta på styling nästa, här kan du verkligen gå loss och få det att se ut som du vill, men här är några förslag:
+Låt oss titta på styling härnäst, här kan du verkligen gå loss och få det att se ut som du vill, men här är några förslag:
 
 **styles.css**
 
@@ -326,11 +338,11 @@ Låt oss titta på styling nästa, här kan du verkligen gå loss och få det at
 } 
 ```
 
-Med dessa tre klasser kommer du att styla meddelanden olika beroende på om de kommer från en assistent eller dig som användare. Om du vill bli inspirerad, kolla in mappen `solution/frontend/styles.css`.
+Med dessa tre klasser kommer du att styla meddelanden olika beroende på om de kommer från en assistent eller dig som användare. Om du vill bli inspirerad, kolla in `solution/frontend/styles.css`-mappen.
 
 ### Ändra Base Url
 
-Det var en sak här vi inte satte och det var `BASE_URL`, detta är inte känt förrän din backend är igång. För att ställa in det:
+Det var en sak här vi inte satte och det var `BASE_URL`, detta är inte känt förrän din backend är startad. För att ställa in det:
 
 - Om du kör API:t lokalt, bör det ställas in till något som `http://localhost:5000`.
 - Om det körs i Codespaces, bör det se ut som "[name]app.github.dev".
@@ -346,11 +358,10 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
-Kopiera innehållet från vad som instruerades ovan men känn dig fri att anpassa det efter dina önskemål.
+Kopiera innehållet från det som instruerades ovan men känn dig fri att anpassa det efter dina önskemål.
 
 ## Lösning
 
@@ -358,17 +369,23 @@ Kopiera innehållet från vad som instruerades ovan men känn dig fri att anpass
 
 ## Bonus
 
-Försök att ändra personligheten hos AI-assistenten. När du anropar `call_llm` i *api.py* kan du ändra det andra argumentet till vad du vill, till exempel:
+Prova att ändra personligheten hos AI-assistenten.
+
+### För Python
+
+När du anropar `call_llm` i *api.py* kan du ändra det andra argumentet till vad du vill, till exempel:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
+### Frontend
+
 Ändra också CSS och text efter dina önskemål, så gör ändringar i *index.html* och *styles.css*.
 
 ## Sammanfattning
 
-Bra, du har lärt dig från grunden hur man skapar en personlig assistent med hjälp av AI. Vi har gjort det med GitHub Models, en backend i Python och en frontend i HTML, CSS och JavaScript.
+Bra, du har lärt dig från grunden hur man skapar en personlig assistent med hjälp av AI. Vi har gjort det med hjälp av GitHub Models, en backend i Python och en frontend i HTML, CSS och JavaScript.
 
 ## Sätt upp med Codespaces
 
@@ -386,4 +403,4 @@ Bra, du har lärt dig från grunden hur man skapar en personlig assistent med hj
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som kan uppstå vid användning av denna översättning.

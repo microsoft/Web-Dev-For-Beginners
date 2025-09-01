@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T13:00:57+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:36:32+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "hu"
 }
@@ -17,14 +17,14 @@ Ez a chat projekt bemutatja, hogyan lehet egy Chat Asszisztenst létrehozni GitH
   <img src="./assets/screenshot.png" alt="Chat alkalmazás" width="600">
 </div>
 
-Egy kis háttérinformáció: generatív AI használatával chat asszisztensek építése remek módja annak, hogy elkezdjünk ismerkedni a mesterséges intelligenciával. Ebben a leckében megtanulhatod, hogyan integrálj generatív AI-t egy webalkalmazásba. Kezdjük is el!
+Egy kis háttérinformáció: generatív MI használatával chat asszisztensek építése remek módja annak, hogy elkezdjünk ismerkedni a mesterséges intelligenciával. Ebben a leckében megtanulhatod, hogyan integrálj generatív MI-t egy webalkalmazásba. Kezdjük is!
 
-## Kapcsolódás a generatív AI-hoz
+## Kapcsolódás a generatív MI-hez
 
-A backendhez a GitHub Modelleket használjuk. Ez egy nagyszerű szolgáltatás, amely lehetővé teszi, hogy ingyenesen használj AI-t. Látogass el a playground oldalára, és szerezd meg a kódot, amely megfelel a választott backend nyelvednek. Így néz ki a [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
+A backendhez a GitHub Modelleket használjuk. Ez egy nagyszerű szolgáltatás, amely lehetővé teszi, hogy ingyenesen használj mesterséges intelligenciát. Látogass el a playground oldalára, és szerezd meg a kódot, amely megfelel a választott backend nyelvednek. Így néz ki a [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground):
 
 <div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
+  <img src="./assets/playground.png" alt="GitHub Models MI Playground" with="600">
 </div>
 
 Ahogy említettük, válaszd ki a "Code" fület és a preferált futtatási környezetet.
@@ -33,7 +33,9 @@ Ahogy említettük, válaszd ki a "Code" fület és a preferált futtatási kör
   <img src="./assets/playground-choice.png" alt="playground választás" with="600">
 </div>
 
-Ebben az esetben a Python-t választjuk, ami azt jelenti, hogy ezt a kódot használjuk:
+### Python használata
+
+Ebben az esetben a Python-t választjuk, ami azt jelenti, hogy ezt a kódot választjuk:
 
 ```python
 """Run this model in Python
@@ -96,9 +98,9 @@ def call_llm(prompt: str, system_message: str):
 
 Ezzel a `call_llm` függvénnyel most már megadhatunk egy promptot és egy rendszerpromptot, és a függvény visszaadja az eredményt.
 
-### AI Asszisztens testreszabása
+### MI Asszisztens testreszabása
 
-Ha testre szeretnéd szabni az AI asszisztenst, megadhatod, hogyan viselkedjen, a rendszerprompt kitöltésével, például így:
+Ha testre szeretnéd szabni az MI asszisztenst, megadhatod, hogyan viselkedjen, a rendszerprompt kitöltésével, például így:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Web API-n keresztüli elérés
 
-Szuper, az AI rész készen van, nézzük meg, hogyan integrálhatjuk ezt egy Web API-ba. A Web API-hoz a Flask-et választjuk, de bármelyik webes keretrendszer megfelelő lehet. Íme a kód:
+Szuper, az MI rész készen van, nézzük meg, hogyan integrálhatjuk ezt egy Web API-ba. A Web API-hoz a Flask-et választjuk, de bármelyik webes keretrendszer megfelelő lehet. Íme a kód:
+
+### Python használata
 
 ```python
 # api.py
@@ -174,11 +178,15 @@ Az *llm.py* integrálásához a következőket kell tennünk:
    })
    ```
 
-Szuper, most már mindent elvégeztünk, amire szükség volt.
+Szuper, most már készen vagyunk.
 
-### Cors konfigurálása
+## Cors konfigurálása
 
-Fontos megemlíteni, hogy beállítottunk valamit, amit CORS-nak (cross-origin resource sharing) hívnak. Ez azt jelenti, hogy mivel a backend és a frontend különböző portokon fog futni, engedélyeznünk kell, hogy a frontend hívásokat küldhessen a backendnek. Az *api.py*-ban van egy kódrészlet, amely ezt beállítja:
+Fontos megemlíteni, hogy beállítottunk valamit, amit CORS-nak (cross-origin resource sharing) hívnak. Ez azt jelenti, hogy mivel a backend és a frontend különböző portokon fog futni, engedélyeznünk kell, hogy a frontend hívásokat kezdeményezzen a backend felé.
+
+### Python használata
+
+Az *api.py*-ban van egy kódrészlet, amely ezt beállítja:
 
 ```python
 from flask_cors import CORS
@@ -189,9 +197,13 @@ CORS(app)   # *   example.com
 
 Jelenleg úgy van beállítva, hogy minden eredetet ("*") engedélyezzen, ami nem túl biztonságos. Ezt szigorítani kell, amikor éles környezetbe kerül a projekt.
 
-## A projekt futtatása
+## Projekt futtatása
 
-Rendben, tehát megvan az *llm.py* és az *api.py*. Hogyan működtethetjük ezt a backenden? Két dolgot kell tennünk:
+A projekt futtatásához először a backendet, majd a frontendet kell elindítanod.
+
+### Python használata
+
+Oké, tehát van *llm.py* és *api.py* fájlunk. Hogyan működtethetjük ezeket a backenddel? Két dolgot kell tennünk:
 
 - Függőségek telepítése:
 
@@ -203,7 +215,7 @@ Rendben, tehát megvan az *llm.py* és az *api.py*. Hogyan működtethetjük ezt
    pip install openai flask flask-cors openai
    ```
 
-- Az API indítása:
+- API indítása:
 
    ```sh
    python api.py
@@ -213,7 +225,7 @@ Rendben, tehát megvan az *llm.py* és az *api.py*. Hogyan működtethetjük ezt
 
 ### Frontend fejlesztése
 
-Most, hogy az API működik, hozzunk létre egy frontendet hozzá. Egy minimális frontenddel kezdünk, amit lépésről lépésre fejlesztünk tovább. A *frontend* mappában hozz létre a következőket:
+Most, hogy az API működik, hozzunk létre egy frontendet. Egy minimális frontenddel kezdünk, amit lépésről lépésre fejlesztünk. A *frontend* mappában hozz létre a következőket:
 
 ```text
 backend/
@@ -241,7 +253,7 @@ Kezdjük az **index.html**-lel:
 </html>    
 ```
 
-A fenti a minimális szükséges kód egy chat ablak támogatásához. Tartalmaz egy textarea-t, ahol az üzenetek megjelennek, egy input mezőt az üzenetek beírásához, és egy gombot az üzenetek backendre küldéséhez. Nézzük meg a JavaScript kódot az *app.js*-ben.
+Ez a minimális szükséges kód egy chatablak támogatásához: egy textarea az üzenetek megjelenítéséhez, egy input mező az üzenet beírásához, és egy gomb az üzenet backendhez küldéséhez. Nézzük meg a JavaScript kódot az *app.js*-ben.
 
 **app.js**
 
@@ -330,14 +342,14 @@ Ezzel a három osztállyal különbözőképpen formázhatod az üzeneteket att�
 
 ### Alap URL módosítása
 
-Van itt egy dolog, amit még nem állítottunk be, ez pedig a `BASE_URL`. Ez addig nem ismert, amíg a backend el nem indul. Az alap URL beállítása:
+Egy dolgot még nem állítottunk be, ez pedig a `BASE_URL`. Ez csak akkor ismert, ha a backend már fut. Beállításához:
 
 - Ha az API-t helyileg futtatod, valami ilyesminek kell lennie: `http://localhost:5000`.
-- Ha Codespaces-ben futtatod, valami ilyesminek kell kinéznie: "[name]app.github.dev".
+- Ha Codespaces-ben futtatod, valami ilyesmi lesz: "[név]app.github.dev".
 
 ## Feladat
 
-Hozz létre egy saját *project* mappát a következő tartalommal:
+Hozz létre egy saját *project* mappát az alábbi tartalommal:
 
 ```text
 project/
@@ -346,11 +358,10 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
-Másold be a fentiekben ismertetett tartalmat, de nyugodtan testreszabhatod az ízlésed szerint.
+Másold be a fentiekben ismertetett tartalmat, de szabadon testreszabhatod az ízlésed szerint.
 
 ## Megoldás
 
@@ -358,22 +369,28 @@ Másold be a fentiekben ismertetett tartalmat, de nyugodtan testreszabhatod az �
 
 ## Bónusz
 
-Próbáld megváltoztatni az AI asszisztens személyiségét. Amikor az *api.py*-ban meghívod a `call_llm` függvényt, megváltoztathatod a második argumentumot arra, amit szeretnél, például:
+Próbáld megváltoztatni az MI asszisztens személyiségét.
+
+### Python esetén
+
+Amikor a *api.py*-ban meghívod a `call_llm` függvényt, megváltoztathatod a második argumentumot, például:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
+### Frontend
+
 Változtasd meg a CSS-t és a szöveget is az ízlésed szerint, tehát végezz módosításokat az *index.html*-ben és a *styles.css*-ben.
 
 ## Összefoglalás
 
-Szuper, most már tudod, hogyan hozz létre egy személyes asszisztenst AI segítségével a semmiből. Ezt GitHub Modellek, egy Python backend, valamint HTML, CSS és JavaScript frontend használatával valósítottuk meg.
+Szuper, most már tudod, hogyan készíts egy személyes asszisztenst a semmiből mesterséges intelligencia segítségével. Ezt GitHub Modellek, egy Python backend, valamint HTML, CSS és JavaScript frontend használatával valósítottuk meg.
 
 ## Beállítás Codespaces-szel
 
 - Navigálj ide: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Hozz létre egy sablonból (győződj meg róla, hogy be vagy jelentkezve a GitHub-ba) a jobb felső sarokban:
+- Hozz létre egy sablonból (győződj meg róla, hogy be vagy jelentkezve a GitHub-ra) a jobb felső sarokban:
 
     ![Sablon létrehozása](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.hu.png)
 
@@ -385,5 +402,5 @@ Szuper, most már tudod, hogyan hozz létre egy személyes asszisztenst AI segí
 
 ---
 
-**Felelősségkizárás**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális, emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Felelősség kizárása**:  
+Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

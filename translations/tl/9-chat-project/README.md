@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-28T15:56:49+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:35:29+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "tl"
 }
 -->
-# Chat Project
+# Chat project
 
 Ang proyektong ito ay nagpapakita kung paano bumuo ng isang Chat Assistant gamit ang GitHub Models.
 
@@ -17,9 +17,9 @@ Ganito ang magiging hitsura ng natapos na proyekto:
   <img src="./assets/screenshot.png" alt="Chat app" width="600">
 </div>
 
-Kaunting konteksto, ang paggawa ng Chat assistants gamit ang generative AI ay isang mahusay na paraan upang magsimula sa pag-aaral tungkol sa AI. Sa araling ito, matututuhan mo kung paano i-integrate ang generative AI sa isang web app. Simulan na natin.
+Kaunting konteksto, ang paggawa ng Chat assistants gamit ang generative AI ay isang mahusay na paraan upang magsimulang matuto tungkol sa AI. Sa araling ito, matututuhan mong isama ang generative AI sa isang web app. Simulan na natin.
 
-## Pagkonekta sa Generative AI
+## Pagkonekta sa generative AI
 
 Para sa backend, gagamit tayo ng GitHub Models. Isa itong mahusay na serbisyo na nagbibigay-daan sa iyo na gumamit ng AI nang libre. Pumunta sa playground nito at kunin ang code na tumutugma sa napili mong backend na wika. Ganito ang itsura nito sa [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
@@ -33,7 +33,9 @@ Tulad ng nabanggit, piliin ang tab na "Code" at ang runtime na gusto mo.
   <img src="./assets/playground-choice.png" alt="playground choice" with="600">
 </div>
 
-Sa kasong ito, pinili natin ang Python, kaya't ito ang code na gagamitin natin:
+### Gamit ang Python
+
+Sa kasong ito, pipiliin natin ang Python, kaya't ito ang code na gagamitin:
 
 ```python
 """Run this model in Python
@@ -98,7 +100,7 @@ Sa pamamagitan ng function na `call_llm`, maaari na nating kunin ang isang promp
 
 ### I-customize ang AI Assistant
 
-Kung nais mong i-customize ang AI assistant, maaari mong tukuyin kung paano ito magpapakita ng ugali sa pamamagitan ng paglalagay ng system prompt tulad nito:
+Kung nais mong i-customize ang AI assistant, maaari mong tukuyin kung paano ito dapat kumilos sa pamamagitan ng paglalagay ng system prompt tulad nito:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## I-expose ito sa pamamagitan ng Web API
 
-Magaling, natapos na natin ang AI na bahagi, tingnan natin kung paano natin ito maisasama sa isang Web API. Para sa Web API, gagamit tayo ng Flask, ngunit anumang web framework ay maaaring gamitin. Narito ang code para dito:
+Magaling, tapos na natin ang AI na bahagi. Tingnan natin kung paano natin ito maisasama sa isang Web API. Para sa Web API, gagamit tayo ng Flask, ngunit anumang web framework ay maaaring gamitin. Narito ang code para dito:
+
+### Gamit ang Python
 
 ```python
 # api.py
@@ -139,7 +143,7 @@ if __name__ == "__main__":
 
 Dito, lumikha tayo ng isang Flask API at nagtakda ng default na ruta na "/" at "/chat". Ang huli ay gagamitin ng ating frontend upang maipasa ang mga tanong dito.
 
-Upang maisama ang *llm.py*, narito ang mga hakbang na dapat gawin:
+Upang maisama ang *llm.py*, narito ang mga hakbang na kailangan gawin:
 
 - I-import ang function na `call_llm`:
 
@@ -163,7 +167,7 @@ Upang maisama ang *llm.py*, narito ang mga hakbang na dapat gawin:
       })
    ```
 
-   Dito, ini-parse natin ang papasok na request upang makuha ang property na `message` mula sa JSON body. Pagkatapos nito, tinatawagan natin ang LLM gamit ang tawag na ito:
+   Dito, ini-parse natin ang papasok na request upang makuha ang property na `message` mula sa JSON body. Pagkatapos, tatawagin natin ang LLM gamit ang tawag na ito:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -176,9 +180,13 @@ Upang maisama ang *llm.py*, narito ang mga hakbang na dapat gawin:
 
 Magaling, natapos na natin ang kailangan.
 
-### I-configure ang Cors
+## I-configure ang Cors
 
-Dapat nating banggitin na nag-set up tayo ng isang bagay tulad ng CORS, o cross-origin resource sharing. Nangangahulugan ito na dahil ang ating backend at frontend ay tatakbo sa magkaibang ports, kailangan nating payagan ang frontend na tumawag sa backend. Narito ang isang piraso ng code sa *api.py* na nagse-set up nito:
+Dapat nating banggitin na nag-set up tayo ng isang bagay tulad ng CORS, o cross-origin resource sharing. Nangangahulugan ito na dahil ang ating backend at frontend ay tatakbo sa magkaibang ports, kailangan nating payagan ang frontend na tumawag sa backend.
+
+### Gamit ang Python
+
+Narito ang isang piraso ng code sa *api.py* na nagse-set up nito:
 
 ```python
 from flask_cors import CORS
@@ -187,11 +195,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Sa ngayon, naka-set up ito upang payagan ang "*" o lahat ng origins, ngunit medyo hindi ito ligtas. Dapat natin itong limitahan kapag nasa production na.
+Sa kasalukuyan, naka-set up ito upang payagan ang "*" o lahat ng origins, ngunit hindi ito ligtas. Dapat natin itong limitahan kapag nasa production na.
 
-## Patakbuhin ang Iyong Proyekto
+## Patakbuhin ang iyong proyekto
 
-Ok, mayroon na tayong *llm.py* at *api.py*, paano natin ito mapapagana kasama ang backend? Dalawang bagay ang kailangan nating gawin:
+Upang patakbuhin ang iyong proyekto, kailangan mong simulan muna ang iyong backend at pagkatapos ang iyong frontend.
+
+### Gamit ang Python
+
+Ok, mayroon tayong *llm.py* at *api.py*. Paano natin ito mapapagana sa backend? Narito ang dalawang hakbang:
 
 - I-install ang mga dependencies:
 
@@ -203,7 +215,7 @@ Ok, mayroon na tayong *llm.py* at *api.py*, paano natin ito mapapagana kasama an
    pip install openai flask flask-cors openai
    ```
 
-- I-start ang API:
+- Simulan ang API:
 
    ```sh
    python api.py
@@ -211,9 +223,9 @@ Ok, mayroon na tayong *llm.py* at *api.py*, paano natin ito mapapagana kasama an
 
    Kung nasa Codespaces ka, pumunta sa Ports sa ibabang bahagi ng editor, i-right-click ito at i-click ang "Port Visibility" at piliin ang "Public".
 
-### Gumawa ng Frontend
+### Gumawa ng frontend
 
-Ngayon na may API na tayong tumatakbo, gumawa tayo ng frontend para dito. Isang pinakasimpleng frontend na ating pagagandahin nang paunti-unti. Sa isang *frontend* folder, gumawa ng mga sumusunod:
+Ngayon na may API na tayong tumatakbo, gumawa tayo ng frontend para dito. Isang pinakasimpleng frontend na unti-unti nating pagagandahin. Sa isang *frontend* folder, gumawa ng mga sumusunod:
 
 ```text
 backend/
@@ -298,14 +310,14 @@ Ang nasa itaas ay ang pinakapayak na kailangan mo upang suportahan ang isang cha
 })();
 ```
 
-Talakayin natin ang code bawat seksyon:
+Tingnan natin ang code bawat seksyon:
 
 - 1) Dito, kinukuha natin ang reference sa lahat ng mga elemento na gagamitin natin sa code.
-- 2) Sa seksyong ito, lumikha tayo ng function na gumagamit ng built-in na `fetch` method upang tawagan ang ating backend.
+- 2) Sa seksyong ito, lumikha tayo ng function na gumagamit ng built-in na `fetch` method upang tawagin ang ating backend.
 - 3) Ang `appendMessage` ay tumutulong magdagdag ng mga sagot pati na rin ang mga mensaheng tina-type ng user.
-- 4) Dito, nakikinig tayo sa submit event, binabasa ang input field, inilalagay ang mensahe ng user sa textarea, tinatawagan ang API, at irerender ang sagot sa textarea.
+- 4) Dito, nakikinig tayo sa submit event, binabasa ang input field, inilalagay ang mensahe ng user sa textarea, tinatawag ang API, at irerender ang sagot sa textarea.
 
-Tingnan natin ang styling, narito kung saan maaari kang maging malikhain at gawing ayon sa gusto mo, ngunit narito ang ilang mungkahi:
+Tingnan natin ang styling, narito kung saan maaari kang maging malikhain at gawing ayon sa gusto mo. Narito ang ilang mungkahi:
 
 **styles.css**
 
@@ -326,14 +338,14 @@ Tingnan natin ang styling, narito kung saan maaari kang maging malikhain at gawi
 } 
 ```
 
-Sa tatlong klase na ito, maitatakda mo ang estilo ng mga mensahe depende kung galing ito sa assistant o sa user. Kung nais mong ma-inspire, tingnan ang `solution/frontend/styles.css` folder.
+Sa tatlong klase na ito, iba-iba ang istilo ng mga mensahe depende kung galing ito sa assistant o sa user. Kung nais mong ma-inspire, tingnan ang `solution/frontend/styles.css` folder.
 
-### Baguhin ang Base URL
+### Baguhin ang Base Url
 
-May isang bagay dito na hindi pa natin na-set, at iyon ay ang `BASE_URL`. Hindi ito malalaman hanggang sa ma-start ang iyong backend. Upang i-set ito:
+May isang bagay dito na hindi pa natin na-set, at iyon ay ang `BASE_URL`. Hindi ito malalaman hanggang sa magsimula ang iyong backend. Upang i-set ito:
 
 - Kung ang API ay tumatakbo nang lokal, dapat itong i-set sa `http://localhost:5000`.
-- Kung tumatakbo sa Codespaces, dapat itong magmukhang ganito: "[name]app.github.dev".
+- Kung tumatakbo sa Codespaces, dapat itong magmukhang "[name]app.github.dev".
 
 ## Gawain
 
@@ -346,8 +358,7 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
 Kopyahin ang nilalaman mula sa mga itinuro sa itaas ngunit malaya kang i-customize ayon sa gusto mo.
@@ -358,11 +369,17 @@ Kopyahin ang nilalaman mula sa mga itinuro sa itaas ngunit malaya kang i-customi
 
 ## Bonus
 
-Subukang baguhin ang personalidad ng AI assistant. Kapag tinawag ang `call_llm` sa *api.py*, maaari mong baguhin ang pangalawang argumento ayon sa gusto mo, halimbawa:
+Subukang baguhin ang personalidad ng AI assistant.
+
+### Para sa Python
+
+Kapag tinawag mo ang `call_llm` sa *api.py*, maaari mong baguhin ang pangalawang argumento ayon sa gusto mo, halimbawa:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
+
+### Frontend
 
 Baguhin din ang CSS at teksto ayon sa gusto mo, kaya't gumawa ng mga pagbabago sa *index.html* at *styles.css*.
 
@@ -373,7 +390,7 @@ Magaling, natutunan mo mula sa simula kung paano gumawa ng personal assistant ga
 ## I-set up gamit ang Codespaces
 
 - Pumunta sa: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Gumawa mula sa template (siguraduhing naka-log in ka sa GitHub) sa kanang itaas na bahagi:
+- Gumawa mula sa isang template (siguraduhing naka-log in ka sa GitHub) sa kanang itaas na bahagi:
 
     ![Create from template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.tl.png)
 
