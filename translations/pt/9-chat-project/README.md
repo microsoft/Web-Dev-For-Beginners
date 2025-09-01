@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T17:06:33+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:27:52+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "pt"
 }
@@ -17,23 +17,25 @@ Aqui está como o projeto finalizado se parece:
   <img src="./assets/screenshot.png" alt="Aplicação de Chat" width="600">
 </div>
 
-Para contextualizar, criar assistentes de chat utilizando IA generativa é uma ótima forma de começar a aprender sobre IA. O que você aprenderá nesta lição é como integrar IA generativa em uma aplicação web. Vamos começar.
+Para contextualizar, criar assistentes de chat utilizando IA generativa é uma ótima forma de começar a aprender sobre IA. O que vais aprender é como integrar IA generativa numa aplicação web ao longo desta lição. Vamos começar.
 
-## Conectando à IA generativa
+## Conectar à IA generativa
 
-Para o backend, estamos a usar os Modelos do GitHub. É um excelente serviço que permite utilizar IA gratuitamente. Aceda ao playground e obtenha o código correspondente à linguagem de backend escolhida. Aqui está como ele se parece no [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Para o backend, estamos a usar os Modelos do GitHub. É um excelente serviço que permite usar IA gratuitamente. Vai ao playground e obtém o código que corresponde à linguagem de backend escolhida. Aqui está como se parece no [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
 <div>
-  <img src="./assets/playground.png" alt="Playground de IA dos Modelos do GitHub" with="600">
+  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
 </div>
 
-Como mencionado, selecione o separador "Code" e o runtime escolhido.
+Como mencionado, seleciona o separador "Code" e o runtime escolhido.
 
 <div>
   <img src="./assets/playground-choice.png" alt="Escolha no playground" with="600">
 </div>
 
-Neste caso, escolhemos Python, o que significa que selecionamos este código:
+### Usar Python
+
+Neste caso, selecionamos Python, o que significa que escolhemos este código:
 
 ```python
 """Run this model in Python
@@ -98,7 +100,7 @@ Com esta função `call_llm`, agora podemos passar um prompt e um prompt de sist
 
 ### Personalizar o Assistente de IA
 
-Se quiser personalizar o assistente de IA, pode especificar como deseja que ele se comporte preenchendo o prompt de sistema desta forma:
+Se quiseres personalizar o assistente de IA, podes especificar como queres que ele se comporte preenchendo o prompt de sistema desta forma:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -107,6 +109,8 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 ## Expor via uma API Web
 
 Ótimo, já temos a parte de IA concluída. Vamos ver como podemos integrá-la numa API Web. Para a API Web, escolhemos usar Flask, mas qualquer framework web deve funcionar. Vamos ver o código:
+
+### Usar Python
 
 ```python
 # api.py
@@ -139,7 +143,7 @@ if __name__ == "__main__":
 
 Aqui, criamos uma API Flask e definimos uma rota padrão "/" e "/chat". Esta última é destinada a ser usada pelo frontend para enviar perguntas.
 
-Para integrar *llm.py*, aqui está o que precisamos fazer:
+Para integrar o *llm.py*, aqui está o que precisamos fazer:
 
 - Importar a função `call_llm`:
 
@@ -163,7 +167,7 @@ Para integrar *llm.py*, aqui está o que precisamos fazer:
       })
    ```
 
-   Aqui, analisamos a solicitação recebida para obter a propriedade `message` do corpo JSON. Em seguida, chamamos o LLM com esta chamada:
+   Aqui analisamos a solicitação recebida para obter a propriedade `message` do corpo JSON. Depois disso, chamamos o LLM com esta chamada:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -176,9 +180,13 @@ Para integrar *llm.py*, aqui está o que precisamos fazer:
 
 Ótimo, agora fizemos o que era necessário.
 
-### Configurar Cors
+## Configurar Cors
 
-Devemos mencionar que configuramos algo como CORS, partilha de recursos entre origens. Isto significa que, como o nosso backend e frontend irão correr em portas diferentes, precisamos permitir que o frontend aceda ao backend. Há um trecho de código em *api.py* que configura isto:
+Devemos mencionar que configuramos algo como CORS, partilha de recursos entre origens. Isto significa que, como o nosso backend e frontend vão correr em portas diferentes, precisamos permitir que o frontend aceda ao backend.
+
+### Usar Python
+
+Há um trecho de código em *api.py* que configura isto:
 
 ```python
 from flask_cors import CORS
@@ -187,11 +195,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Atualmente, está configurado para permitir "*" que são todas as origens, e isso é um pouco inseguro. Devemos restringir isto quando formos para produção.
+Neste momento, está configurado para permitir "*" que são todas as origens, e isso é um pouco inseguro. Devemos restringir isto quando formos para produção.
 
 ## Executar o projeto
 
-Ok, temos *llm.py* e *api.py*. Como podemos fazer isto funcionar com um backend? Bem, há duas coisas que precisamos fazer:
+Para executar o projeto, precisas iniciar primeiro o backend e depois o frontend.
+
+### Usar Python
+
+Ok, então temos *llm.py* e *api.py*. Como podemos fazer isto funcionar com um backend? Bem, há duas coisas que precisamos fazer:
 
 - Instalar dependências:
 
@@ -209,11 +221,11 @@ Ok, temos *llm.py* e *api.py*. Como podemos fazer isto funcionar com um backend?
    python api.py
    ```
 
-   Se estiver a usar Codespaces, precisa ir a Ports na parte inferior do editor, clicar com o botão direito sobre ele e selecionar "Port Visibility" e escolher "Public".
+   Se estiveres a usar Codespaces, precisas ir a Ports na parte inferior do editor, clicar com o botão direito e selecionar "Port Visibility" e escolher "Public".
 
 ### Trabalhar num frontend
 
-Agora que temos uma API em funcionamento, vamos criar um frontend para isto. Um frontend mínimo que iremos melhorar gradualmente. Na pasta *frontend*, crie o seguinte:
+Agora que temos uma API a funcionar, vamos criar um frontend para isto. Um frontend mínimo que iremos melhorar passo a passo. Na pasta *frontend*, cria o seguinte:
 
 ```text
 backend/
@@ -241,7 +253,7 @@ Vamos começar com **index.html**:
 </html>    
 ```
 
-O acima é o mínimo necessário para suportar uma janela de chat, pois consiste num textarea onde as mensagens serão exibidas, um campo de entrada para digitar a mensagem e um botão para enviar a mensagem ao backend. Vamos ver o JavaScript a seguir em *app.js*.
+O acima é o mínimo absoluto necessário para suportar uma janela de chat, pois consiste num textarea onde as mensagens serão renderizadas, um campo de entrada para digitar a mensagem e um botão para enviar a mensagem ao backend. Vamos ver o JavaScript a seguir em *app.js*.
 
 **app.js**
 
@@ -298,14 +310,14 @@ O acima é o mínimo necessário para suportar uma janela de chat, pois consiste
 })();
 ```
 
-Vamos analisar o código por seção:
+Vamos analisar o código por secção:
 
-- 1) Aqui obtemos uma referência a todos os elementos que iremos referenciar mais tarde no código.
-- 2) Nesta seção, criamos uma função que utiliza o método `fetch` embutido para chamar o nosso backend.
-- 3) `appendMessage` ajuda a adicionar respostas, bem como o que o utilizador digita.
+- 1) Aqui obtemos uma referência a todos os elementos que iremos usar mais tarde no código.
+- 2) Nesta secção, criamos uma função que utiliza o método `fetch` embutido para chamar o nosso backend.
+- 3) `appendMessage` ajuda a adicionar respostas, bem como o que tu, como utilizador, digitas.
 - 4) Aqui ouvimos o evento de envio e acabamos por ler o campo de entrada, colocar a mensagem do utilizador no textarea, chamar a API e renderizar a resposta no textarea.
 
-Vamos ver o estilo a seguir. Aqui pode ser criativo e fazer com que pareça como quiser, mas aqui estão algumas sugestões:
+Vamos ver o estilo a seguir. Aqui podes ser criativo e fazer com que pareça como quiseres, mas aqui estão algumas sugestões:
 
 **styles.css**
 
@@ -326,18 +338,18 @@ Vamos ver o estilo a seguir. Aqui pode ser criativo e fazer com que pareça como
 } 
 ```
 
-Com estas três classes, irá estilizar as mensagens de forma diferente dependendo de onde vêm, do assistente ou do utilizador. Se quiser inspiração, veja a pasta `solution/frontend/styles.css`.
+Com estas três classes, vais estilizar as mensagens de forma diferente dependendo de onde vêm, do assistente ou de ti como utilizador. Se quiseres inspiração, consulta a pasta `solution/frontend/styles.css`.
 
 ### Alterar Base Url
 
-Há uma coisa que não configurámos aqui, que foi `BASE_URL`. Isto não é conhecido até que o backend seja iniciado. Para configurá-lo:
+Há uma coisa que não configurámos aqui, que foi o `BASE_URL`. Isto não é conhecido até o backend ser iniciado. Para configurá-lo:
 
-- Se executar a API localmente, deve ser algo como `http://localhost:5000`.
-- Se executar em Codespaces, deve ser algo como "[name]app.github.dev".
+- Se executares a API localmente, deve ser algo como `http://localhost:5000`.
+- Se executares em Codespaces, deve ser algo como "[name]app.github.dev".
 
 ## Tarefa
 
-Crie a sua própria pasta *project* com conteúdo como este:
+Cria a tua própria pasta *project* com conteúdo como este:
 
 ```text
 project/
@@ -346,11 +358,10 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
-Copie o conteúdo do que foi instruído acima, mas sinta-se à vontade para personalizar ao seu gosto.
+Copia o conteúdo do que foi instruído acima, mas sente-te à vontade para personalizar como quiseres.
 
 ## Solução
 
@@ -358,32 +369,38 @@ Copie o conteúdo do que foi instruído acima, mas sinta-se à vontade para pers
 
 ## Bónus
 
-Experimente alterar a personalidade do assistente de IA. Quando chamar `call_llm` em *api.py*, pode alterar o segundo argumento para o que quiser, por exemplo:
+Experimenta alterar a personalidade do assistente de IA.
+
+### Para Python
+
+Quando chamas `call_llm` em *api.py*, podes alterar o segundo argumento para o que quiseres, por exemplo:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
-Altere também o CSS e o texto ao seu gosto, fazendo alterações em *index.html* e *styles.css*.
+### Frontend
+
+Altera também o CSS e o texto como preferires, fazendo mudanças em *index.html* e *styles.css*.
 
 ## Resumo
 
-Ótimo, aprendeu do zero como criar um assistente pessoal utilizando IA. Fizemos isso utilizando os Modelos do GitHub, um backend em Python e um frontend em HTML, CSS e JavaScript.
+Ótimo, aprendeste do zero como criar um assistente pessoal utilizando IA. Fizemos isso usando os Modelos do GitHub, um backend em Python e um frontend em HTML, CSS e JavaScript.
 
 ## Configurar com Codespaces
 
-- Navegue para: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Crie a partir de um template (certifique-se de que está autenticado no GitHub) no canto superior direito:
+- Navega para: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Cria a partir de um template (certifica-te de que estás autenticado no GitHub) no canto superior direito:
 
     ![Criar a partir de template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.pt.png)
 
-- Uma vez no seu repositório, crie um Codespace:
+- Uma vez no teu repositório, cria um Codespace:
 
     ![Criar codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.pt.png)
 
-    Isto deve iniciar um ambiente com o qual pode trabalhar.
+    Isto deve iniciar um ambiente com o qual podes trabalhar agora.
 
 ---
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante ter em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

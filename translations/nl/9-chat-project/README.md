@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T01:27:12+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:33:10+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "nl"
 }
@@ -21,17 +21,19 @@ Wat context: het bouwen van chatassistenten met generatieve AI is een geweldige 
 
 ## Verbinden met generatieve AI
 
-Voor de backend gebruiken we GitHub Models. Dit is een geweldige service waarmee je gratis AI kunt gebruiken. Ga naar de playground en haal de code op die overeenkomt met de door jou gekozen backend-taal. Hier is hoe het eruitziet op [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Voor de backend gebruiken we GitHub Models. Dit is een geweldige dienst waarmee je gratis AI kunt gebruiken. Ga naar de playground en haal de code op die overeenkomt met de door jou gekozen backend-taal. Hier is hoe het eruitziet op [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
 <div>
   <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
 </div>
 
-Zoals gezegd, selecteer het tabblad "Code" en je gekozen runtime.
+Zoals gezegd, selecteer het tabblad "Code" en kies je runtime.
 
 <div>
-  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
+  <img src="./assets/playground-choice.png" alt="playground keuze" with="600">
 </div>
+
+### Gebruik van Python
 
 In dit geval kiezen we Python, wat betekent dat we deze code selecteren:
 
@@ -108,6 +110,8 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 Geweldig, we hebben het AI-gedeelte klaar. Laten we nu kijken hoe we dit kunnen integreren in een Web API. Voor de Web API kiezen we Flask, maar elk webframework zou geschikt moeten zijn. Hier is de code:
 
+### Gebruik van Python
+
 ```python
 # api.py
 from flask import Flask, request, jsonify
@@ -137,11 +141,11 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Hier maken we een Flask API en definiëren we een standaardroute "/" en "/chat". De laatste is bedoeld om door onze frontend gebruikt te worden om vragen door te geven.
+Hier maken we een Flask API en definiëren we een standaardroute "/" en "/chat". De laatste is bedoeld om door onze frontend te worden gebruikt om vragen door te geven.
 
 Om *llm.py* te integreren, moeten we het volgende doen:
 
-- Importeer de `call_llm` functie:
+- Importeer de functie `call_llm`:
 
    ```python
    from llm import call_llm
@@ -176,9 +180,13 @@ Om *llm.py* te integreren, moeten we het volgende doen:
 
 Geweldig, nu hebben we gedaan wat nodig is.
 
-### Cors configureren
+## Cors configureren
 
-We moeten vermelden dat we iets als CORS hebben ingesteld, cross-origin resource sharing. Dit betekent dat, omdat onze backend en frontend op verschillende poorten draaien, we de frontend moeten toestaan om de backend aan te roepen. Er is een stukje code in *api.py* dat dit instelt:
+We moeten vermelden dat we iets als CORS hebben ingesteld, oftewel cross-origin resource sharing. Dit betekent dat, omdat onze backend en frontend op verschillende poorten draaien, we de frontend toegang moeten geven tot de backend.
+
+### Gebruik van Python
+
+Er is een stukje code in *api.py* dat dit instelt:
 
 ```python
 from flask_cors import CORS
@@ -190,6 +198,10 @@ CORS(app)   # *   example.com
 Op dit moment is het ingesteld om "*" toe te staan, wat alle origins betekent, en dat is een beetje onveilig. We zouden dit moeten beperken zodra we naar productie gaan.
 
 ## Voer je project uit
+
+Om je project uit te voeren, moet je eerst je backend starten en daarna je frontend.
+
+### Gebruik van Python
 
 Oké, we hebben *llm.py* en *api.py*. Hoe kunnen we dit laten werken met een backend? Er zijn twee dingen die we moeten doen:
 
@@ -203,7 +215,7 @@ Oké, we hebben *llm.py* en *api.py*. Hoe kunnen we dit laten werken met een bac
    pip install openai flask flask-cors openai
    ```
 
-- Start de API:
+- Start de API
 
    ```sh
    python api.py
@@ -241,7 +253,7 @@ Laten we beginnen met **index.html**:
 </html>    
 ```
 
-Dit hierboven is het absolute minimum dat je nodig hebt om een chatvenster te ondersteunen. Het bestaat uit een tekstvak waarin berichten worden weergegeven, een invoerveld om het bericht te typen en een knop om je bericht naar de backend te sturen. Laten we nu naar de JavaScript kijken in *app.js*.
+Bovenstaande is het absolute minimum dat je nodig hebt om een chatvenster te ondersteunen. Het bestaat uit een tekstgebied waar berichten worden weergegeven, een invoerveld om berichten te typen en een knop om je bericht naar de backend te sturen. Laten we nu naar de JavaScript kijken in *app.js*.
 
 **app.js**
 
@@ -301,11 +313,11 @@ Dit hierboven is het absolute minimum dat je nodig hebt om een chatvenster te on
 Laten we de code per sectie doornemen:
 
 - 1) Hier halen we een referentie op naar alle elementen die we later in de code zullen gebruiken.
-- 2) In deze sectie maken we een functie die de ingebouwde `fetch` methode gebruikt om onze backend aan te roepen.
+- 2) In deze sectie maken we een functie die de ingebouwde `fetch`-methode gebruikt om onze backend aan te roepen.
 - 3) `appendMessage` helpt bij het toevoegen van reacties en wat jij als gebruiker typt.
-- 4) Hier luisteren we naar het submit-event en lezen we het invoerveld uit, plaatsen het bericht van de gebruiker in het tekstvak, roepen de API aan en renderen de reactie in het tekstvak.
+- 4) Hier luisteren we naar het submit-event, lezen we het invoerveld, plaatsen we het bericht van de gebruiker in het tekstgebied, roepen we de API aan en renderen we de reactie in het tekstgebied.
 
-Laten we nu naar de styling kijken. Hier kun je helemaal losgaan en het eruit laten zien zoals je wilt, maar hier zijn wat suggesties:
+Laten we nu naar de styling kijken. Hier kun je helemaal losgaan en het eruit laten zien zoals je wilt, maar hier zijn enkele suggesties:
 
 **styles.css**
 
@@ -330,10 +342,10 @@ Met deze drie klassen kun je berichten verschillend stylen, afhankelijk van of z
 
 ### Basis-URL wijzigen
 
-Er was één ding dat we hier niet hebben ingesteld, en dat was `BASE_URL`. Dit is niet bekend totdat je backend is gestart. Om dit in te stellen:
+Er is één ding dat we hier niet hebben ingesteld, en dat is `BASE_URL`. Dit is niet bekend totdat je backend is gestart. Om dit in te stellen:
 
-- Als je de API lokaal draait, moet het iets zijn als `http://localhost:5000`.
-- Als je in Codespaces draait, zou het er ongeveer zo uit moeten zien: "[name]app.github.dev".
+- Als je de API lokaal uitvoert, moet het iets zijn als `http://localhost:5000`.
+- Als je het in Codespaces uitvoert, zou het er ongeveer zo uitzien: "[naam]app.github.dev".
 
 ## Opdracht
 
@@ -346,11 +358,10 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
-Kopieer de inhoud van wat hierboven is uitgelegd, maar voel je vrij om het naar eigen wens aan te passen.
+Kopieer de inhoud van wat hierboven is uitgelegd, maar voel je vrij om het naar wens aan te passen.
 
 ## Oplossing
 
@@ -358,13 +369,19 @@ Kopieer de inhoud van wat hierboven is uitgelegd, maar voel je vrij om het naar 
 
 ## Bonus
 
-Probeer de persoonlijkheid van de AI-assistent te veranderen. Wanneer je `call_llm` aanroept in *api.py*, kun je het tweede argument aanpassen naar wat je wilt, bijvoorbeeld:
+Probeer de persoonlijkheid van de AI-assistent te veranderen.
+
+### Voor Python
+
+Wanneer je `call_llm` aanroept in *api.py*, kun je het tweede argument wijzigen naar wat je wilt, bijvoorbeeld:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
-Pas ook de CSS en tekst aan naar jouw smaak, dus doe wijzigingen in *index.html* en *styles.css*.
+### Frontend
+
+Wijzig ook de CSS en tekst naar wens, dus breng wijzigingen aan in *index.html* en *styles.css*.
 
 ## Samenvatting
 
@@ -373,11 +390,11 @@ Geweldig, je hebt geleerd hoe je vanaf nul een persoonlijke assistent kunt maken
 ## Instellen met Codespaces
 
 - Navigeer naar: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Maak een nieuwe repo vanuit een template (zorg ervoor dat je bent ingelogd op GitHub) in de rechterbovenhoek:
+- Maak een nieuwe repo van een template (zorg ervoor dat je bent ingelogd op GitHub) in de rechterbovenhoek:
 
-    ![Maak vanuit template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.nl.png)
+    ![Maak van template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.nl.png)
 
-- Zodra je in je repo bent, maak een Codespace:
+- Zodra je in je repo bent, maak je een Codespace:
 
     ![Maak codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.nl.png)
 
@@ -386,4 +403,4 @@ Geweldig, je hebt geleerd hoe je vanaf nul een persoonlijke assistent kunt maken
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

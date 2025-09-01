@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T13:01:29+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:37:08+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "cs"
 }
 -->
 # Chat projekt
 
-Tento chat projekt ukazuje, jak vytvořit Chat Asistenta pomocí GitHub Models.
+Tento chat projekt ukazuje, jak vytvořit Chat Assistenta pomocí GitHub Models.
 
 Takto vypadá hotový projekt:
 
@@ -17,9 +17,9 @@ Takto vypadá hotový projekt:
   <img src="./assets/screenshot.png" alt="Chat app" width="600">
 </div>
 
-Trocha kontextu: vytváření chatovacích asistentů pomocí generativní AI je skvělý způsob, jak začít učit se o AI. V této lekci se naučíte, jak integrovat generativní AI do webové aplikace. Pojďme začít.
+Trochu kontextu: vytváření chatovacích asistentů pomocí generativní AI je skvělý způsob, jak začít učit se o AI. V této lekci se naučíte, jak integrovat generativní AI do webové aplikace. Pojďme začít.
 
-## Připojení ke generativní AI
+## Připojení k generativní AI
 
 Pro backend používáme GitHub Models. Je to skvělá služba, která vám umožňuje používat AI zdarma. Přejděte na její playground a získejte kód odpovídající vašemu zvolenému backendovému jazyku. Takto to vypadá na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
@@ -32,6 +32,8 @@ Jak jsme zmínili, vyberte záložku "Code" a svůj zvolený runtime.
 <div>
   <img src="./assets/playground-choice.png" alt="playground choice" with="600">
 </div>
+
+### Použití Pythonu
 
 V tomto případě vybereme Python, což znamená, že použijeme tento kód:
 
@@ -70,7 +72,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Trochu tento kód upravíme, aby byl znovu použitelný:
+Trochu upravme tento kód, aby byl znovu použitelný:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Zpřístupnění přes Web API
 
-Skvělé, máme hotovou AI část, podívejme se, jak ji můžeme integrovat do Web API. Pro Web API jsme se rozhodli použít Flask, ale jakýkoli webový framework by měl být vhodný. Podívejme se na kód:
+Skvělé, máme hotovou AI část, podívejme se, jak ji můžeme integrovat do Web API. Pro Web API jsme se rozhodli použít Flask, ale jakýkoli webový framework by měl být v pořádku. Podívejme se na kód:
+
+### Použití Pythonu
 
 ```python
 # api.py
@@ -139,7 +143,7 @@ if __name__ == "__main__":
 
 Zde vytvoříme Flask API a definujeme výchozí trasu "/" a "/chat". Druhá je určena pro použití naším frontendem k předávání otázek.
 
-Pro integraci *llm.py* je třeba udělat následující:
+Pro integraci *llm.py* potřebujeme udělat následující:
 
 - Importovat funkci `call_llm`:
 
@@ -176,9 +180,13 @@ Pro integraci *llm.py* je třeba udělat následující:
 
 Skvělé, nyní máme hotovo, co jsme potřebovali.
 
-### Nastavení Cors
+## Nastavení Cors
 
-Je třeba zmínit, že jsme nastavili něco jako CORS, sdílení zdrojů mezi různými originy. To znamená, že protože náš backend a frontend budou běžet na různých portech, musíme umožnit frontendu volat backend. V *api.py* je kód, který to nastavuje:
+Je třeba zmínit, že jsme nastavili něco jako CORS, sdílení zdrojů mezi různými originy. To znamená, že protože náš backend a frontend budou běžet na různých portech, musíme umožnit frontendu volat backend.
+
+### Použití Pythonu
+
+V *api.py* je kód, který to nastavuje:
 
 ```python
 from flask_cors import CORS
@@ -191,7 +199,11 @@ Momentálně je nastaveno na povolení "*" což znamená všechny originy, což 
 
 ## Spuštění projektu
 
-Dobře, máme *llm.py* a *api.py*, jak to můžeme zprovoznit s backendem? Jsou dvě věci, které musíme udělat:
+Pro spuštění projektu je třeba nejprve spustit backend a poté frontend.
+
+### Použití Pythonu
+
+Dobře, máme *llm.py* a *api.py*, jak to můžeme zprovoznit s backendem? Potřebujeme udělat dvě věci:
 
 - Nainstalovat závislosti:
 
@@ -213,7 +225,7 @@ Dobře, máme *llm.py* a *api.py*, jak to můžeme zprovoznit s backendem? Jsou 
 
 ### Práce na frontendu
 
-Nyní, když máme API spuštěné, vytvoříme frontend pro tento projekt. Minimální frontend, který budeme postupně vylepšovat. Ve složce *frontend* vytvořte následující:
+Nyní, když máme API spuštěné, vytvoříme frontend. Minimální frontend, který budeme postupně vylepšovat. Ve složce *frontend* vytvořte následující:
 
 ```text
 backend/
@@ -330,10 +342,10 @@ S těmito třemi třídami budete stylovat zprávy různě podle toho, odkud poc
 
 ### Změna Base Url
 
-Jedna věc, kterou jsme zde nenastavili, je `BASE_URL`, která není známa, dokud není backend spuštěn. Nastavte ji takto:
+Jedna věc, kterou jsme zde nenastavili, byla `BASE_URL`, která není známa, dokud není backend spuštěn. Pro nastavení:
 
 - Pokud spouštíte API lokálně, mělo by být nastaveno na něco jako `http://localhost:5000`.
-- Pokud běží v Codespaces, mělo by vypadat něco jako "[name]app.github.dev".
+- Pokud běží v Codespaces, mělo by vypadat jako "[name]app.github.dev".
 
 ## Úkol
 
@@ -346,8 +358,7 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
 Zkopírujte obsah z toho, co bylo uvedeno výše, ale klidně si jej přizpůsobte podle svých představ.
@@ -358,32 +369,38 @@ Zkopírujte obsah z toho, co bylo uvedeno výše, ale klidně si jej přizpůsob
 
 ## Bonus
 
-Zkuste změnit osobnost AI asistenta. Když voláte `call_llm` v *api.py*, můžete změnit druhý argument na cokoli chcete, například:
+Zkuste změnit osobnost AI asistenta.
+
+### Pro Python
+
+Když voláte `call_llm` v *api.py*, můžete změnit druhý argument na to, co chcete, například:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
+### Frontend
+
 Změňte také CSS a text podle svých představ, tedy proveďte změny v *index.html* a *styles.css*.
 
 ## Shrnutí
 
-Skvělé, naučili jste se od základů, jak vytvořit osobního asistenta pomocí AI. Udělali jsme to pomocí GitHub Models, backendu v Pythonu a frontendu v HTML, CSS a JavaScriptu.
+Skvělé, naučili jste se od začátku, jak vytvořit osobního asistenta pomocí AI. Udělali jsme to pomocí GitHub Models, backendu v Pythonu a frontendu v HTML, CSS a JavaScriptu.
 
 ## Nastavení s Codespaces
 
 - Přejděte na: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
 - Vytvořte z šablony (ujistěte se, že jste přihlášeni na GitHub) v pravém horním rohu:
 
-    ![Vytvořit ze šablony](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.cs.png)
+    ![Create from template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.cs.png)
 
-- Jakmile budete ve svém repozitáři, vytvořte Codespace:
+- Jakmile jste ve svém repozitáři, vytvořte Codespace:
 
-    ![Vytvořit codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.cs.png)
+    ![Create codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.cs.png)
 
     To by mělo spustit prostředí, se kterým nyní můžete pracovat.
 
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádné nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

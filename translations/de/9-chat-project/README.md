@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T17:03:38+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:18:49+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "de"
 }
@@ -19,9 +19,9 @@ So sieht das fertige Projekt aus:
 
 Ein wenig Kontext: Chat-Assistenten mit generativer KI zu erstellen, ist eine großartige Möglichkeit, um mit KI zu beginnen. In dieser Lektion lernst du, generative KI in eine Web-App zu integrieren. Lass uns anfangen.
 
-## Verbindung zu generativer KI herstellen
+## Verbindung zur generativen KI
 
-Für das Backend verwenden wir GitHub Models. Es ist ein großartiger Dienst, der es ermöglicht, KI kostenlos zu nutzen. Gehe zu seinem Playground und hole dir den Code, der zu deiner bevorzugten Backend-Sprache passt. So sieht es im [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) aus:
+Für das Backend verwenden wir GitHub Models. Es ist ein großartiger Dienst, der es ermöglicht, KI kostenlos zu nutzen. Gehe zum Playground und hole dir den Code, der zu deiner bevorzugten Backend-Sprache passt. So sieht es im [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) aus:
 
 <div>
   <img src="./assets/playground.png" alt="GitHub Models AI Playground" width="600">
@@ -32,6 +32,8 @@ Wie gesagt, wähle den Tab "Code" und deine bevorzugte Laufzeitumgebung.
 <div>
   <img src="./assets/playground-choice.png" alt="Playground-Auswahl" width="600">
 </div>
+
+### Verwendung von Python
 
 In diesem Fall wählen wir Python, was bedeutet, dass wir diesen Code verwenden:
 
@@ -70,7 +72,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Lass uns diesen Code ein wenig bereinigen, damit er wiederverwendbar ist:
+Lass uns den Code ein wenig bereinigen, damit er wiederverwendbar ist:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Über eine Web-API bereitstellen
 
-Super, wir haben den KI-Teil fertiggestellt. Schauen wir uns an, wie wir das in eine Web-API integrieren können. Für die Web-API verwenden wir Flask, aber jedes Web-Framework sollte geeignet sein. Hier ist der Code dafür:
+Super, wir haben den KI-Teil fertiggestellt. Schauen wir uns an, wie wir ihn in eine Web-API integrieren können. Für die Web-API verwenden wir Flask, aber jedes Web-Framework sollte geeignet sein. Hier ist der Code dazu:
+
+### Verwendung von Python
 
 ```python
 # api.py
@@ -137,7 +141,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Hier erstellen wir eine Flask-API und definieren eine Standardroute "/" und "/chat". Letztere soll von unserem Frontend verwendet werden, um Fragen an die API zu übermitteln.
+Hier erstellen wir eine Flask-API und definieren eine Standardroute "/" und "/chat". Letztere soll von unserem Frontend verwendet werden, um Fragen an das Backend zu übermitteln.
 
 Um *llm.py* zu integrieren, müssen wir Folgendes tun:
 
@@ -176,9 +180,13 @@ Um *llm.py* zu integrieren, müssen wir Folgendes tun:
 
 Super, jetzt haben wir alles erledigt, was wir brauchen.
 
-### Cors konfigurieren
+## Cors konfigurieren
 
-Wir sollten erwähnen, dass wir etwas wie CORS eingerichtet haben, also Cross-Origin Resource Sharing. Das bedeutet, dass unser Backend und Frontend auf unterschiedlichen Ports laufen werden, und wir müssen dem Frontend erlauben, das Backend aufzurufen. Es gibt einen Codeabschnitt in *api.py*, der dies einrichtet:
+Wir sollten erwähnen, dass wir etwas wie CORS eingerichtet haben, also Cross-Origin Resource Sharing. Das bedeutet, dass unser Backend und Frontend auf unterschiedlichen Ports laufen werden, und wir müssen dem Frontend erlauben, das Backend aufzurufen.
+
+### Verwendung von Python
+
+Es gibt ein Stück Code in *api.py*, das dies einrichtet:
 
 ```python
 from flask_cors import CORS
@@ -187,11 +195,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Momentan ist es so eingerichtet, dass alle Ursprünge ("*") erlaubt sind, was etwas unsicher ist. Wir sollten dies einschränken, sobald wir in die Produktion gehen.
+Momentan ist es so eingerichtet, dass "*" erlaubt ist, also alle Ursprünge. Das ist etwas unsicher, und wir sollten es einschränken, sobald wir in die Produktion gehen.
 
 ## Projekt ausführen
 
-Okay, wir haben *llm.py* und *api.py*. Wie können wir das mit einem Backend zum Laufen bringen? Es gibt zwei Dinge, die wir tun müssen:
+Um dein Projekt auszuführen, musst du zuerst dein Backend und dann dein Frontend starten.
+
+### Verwendung von Python
+
+Ok, wir haben *llm.py* und *api.py*. Wie können wir das mit einem Backend zum Laufen bringen? Es gibt zwei Dinge, die wir tun müssen:
 
 - Abhängigkeiten installieren:
 
@@ -209,7 +221,7 @@ Okay, wir haben *llm.py* und *api.py*. Wie können wir das mit einem Backend zum
    python api.py
    ```
 
-   Wenn du in Codespaces arbeitest, musst du im unteren Teil des Editors zu "Ports" gehen, mit der rechten Maustaste darauf klicken und "Port Visibility" auswählen und "Public" auswählen.
+   Wenn du in Codespaces arbeitest, musst du im unteren Teil des Editors zu Ports gehen, mit der rechten Maustaste darauf klicken und "Port Visibility" auswählen und "Public" auswählen.
 
 ### Am Frontend arbeiten
 
@@ -298,12 +310,12 @@ Das oben Genannte ist das absolute Minimum, das du benötigst, um ein Chat-Fenst
 })();
 ```
 
-Lass uns den Code Abschnitt für Abschnitt durchgehen:
+Gehen wir den Code Abschnitt für Abschnitt durch:
 
-- 1) Hier holen wir uns eine Referenz zu allen Elementen, auf die wir später im Code zugreifen werden.
+- 1) Hier holen wir uns Referenzen zu allen Elementen, auf die wir später im Code zugreifen werden.
 - 2) In diesem Abschnitt erstellen wir eine Funktion, die die eingebaute `fetch`-Methode verwendet, um unser Backend aufzurufen.
-- 3) `appendMessage` hilft dabei, Antworten sowie die vom Benutzer eingegebenen Nachrichten hinzuzufügen.
-- 4) Hier hören wir auf das Submit-Ereignis, lesen das Eingabefeld aus, platzieren die Nachricht des Benutzers im Textbereich, rufen die API auf und rendern die Antwort im Textbereich.
+- 3) `appendMessage` hilft dabei, sowohl Antworten als auch die vom Benutzer eingegebenen Nachrichten hinzuzufügen.
+- 4) Hier hören wir auf das Submit-Event, lesen das Eingabefeld aus, platzieren die Nachricht des Benutzers im Textbereich, rufen die API auf und zeigen die Antwort im Textbereich an.
 
 Schauen wir uns als Nächstes das Styling an. Hier kannst du deiner Kreativität freien Lauf lassen und es so gestalten, wie du möchtest. Hier sind einige Vorschläge:
 
@@ -326,11 +338,11 @@ Schauen wir uns als Nächstes das Styling an. Hier kannst du deiner Kreativität
 } 
 ```
 
-Mit diesen drei Klassen kannst du Nachrichten unterschiedlich stylen, je nachdem, ob sie vom Assistenten oder vom Benutzer stammen. Wenn du Inspiration suchst, schau dir den Ordner `solution/frontend/styles.css` an.
+Mit diesen drei Klassen kannst du Nachrichten unterschiedlich gestalten, je nachdem, ob sie vom Assistenten oder vom Benutzer stammen. Wenn du Inspiration suchst, schau dir den Ordner `solution/frontend/styles.css` an.
 
 ### Basis-URL ändern
 
-Es gibt eine Sache, die wir hier noch nicht festgelegt haben, und das ist `BASE_URL`. Diese ist erst bekannt, wenn dein Backend gestartet ist. Um sie festzulegen:
+Es gibt eine Sache, die wir hier noch nicht festgelegt haben, und das ist die `BASE_URL`. Diese ist erst bekannt, wenn dein Backend gestartet ist. Um sie festzulegen:
 
 - Wenn du die API lokal ausführst, sollte sie etwa auf `http://localhost:5000` gesetzt werden.
 - Wenn du sie in Codespaces ausführst, sollte sie etwa so aussehen: "[name]app.github.dev".
@@ -346,8 +358,7 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
 Kopiere den Inhalt aus den oben genannten Anweisungen, aber passe ihn gerne nach deinen Wünschen an.
@@ -358,13 +369,19 @@ Kopiere den Inhalt aus den oben genannten Anweisungen, aber passe ihn gerne nach
 
 ## Bonus
 
-Versuche, die Persönlichkeit des KI-Assistenten zu ändern. Wenn du `call_llm` in *api.py* aufrufst, kannst du das zweite Argument nach Belieben ändern, zum Beispiel:
+Versuche, die Persönlichkeit des KI-Assistenten zu ändern.
+
+### Für Python
+
+Wenn du `call_llm` in *api.py* aufrufst, kannst du das zweite Argument ändern, um es nach deinen Wünschen anzupassen, zum Beispiel:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
-Ändere auch das CSS und den Text nach deinen Wünschen, also mache Änderungen in *index.html* und *styles.css*.
+### Frontend
+
+Ändere auch das CSS und den Text nach deinen Wünschen, also nimm Änderungen in *index.html* und *styles.css* vor.
 
 ## Zusammenfassung
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T09:48:09+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:35:00+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "ms"
 }
@@ -21,7 +21,7 @@ Sedikit konteks, membina pembantu chat menggunakan AI generatif adalah cara yang
 
 ## Menyambung ke AI Generatif
 
-Untuk bahagian backend, kami menggunakan Model GitHub. Ia adalah perkhidmatan hebat yang membolehkan anda menggunakan AI secara percuma. Pergi ke ruang mainannya dan ambil kod yang sepadan dengan bahasa backend pilihan anda. Berikut adalah rupa ruang mainan di [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Untuk bahagian backend, kami menggunakan Model GitHub. Ia adalah perkhidmatan hebat yang membolehkan anda menggunakan AI secara percuma. Pergi ke ruang mainannya dan ambil kod yang sepadan dengan bahasa backend pilihan anda. Berikut adalah rupa ruang mainan tersebut di [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
 <div>
   <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
@@ -32,6 +32,8 @@ Seperti yang dinyatakan, pilih tab "Code" dan runtime pilihan anda.
 <div>
   <img src="./assets/playground-choice.png" alt="pilihan playground" with="600">
 </div>
+
+### Menggunakan Python
 
 Dalam kes ini, kami memilih Python, yang bermaksud kami memilih kod ini:
 
@@ -96,9 +98,9 @@ def call_llm(prompt: str, system_message: str):
 
 Dengan fungsi `call_llm` ini, kita kini boleh mengambil prompt dan sistem prompt, dan fungsi ini akan mengembalikan hasilnya.
 
-### Sesuaikan Pembantu AI
+### Menyesuaikan Pembantu AI
 
-Jika anda ingin menyesuaikan pembantu AI, anda boleh menentukan bagaimana anda mahu ia berfungsi dengan mengisi sistem prompt seperti berikut:
+Jika anda ingin menyesuaikan pembantu AI, anda boleh menentukan bagaimana anda mahu ia berkelakuan dengan mengisi sistem prompt seperti berikut:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Dedahkan melalui API Web
 
-Hebat, kita telah menyelesaikan bahagian AI, mari kita lihat bagaimana kita boleh mengintegrasikannya ke dalam API Web. Untuk API Web, kami memilih untuk menggunakan Flask, tetapi mana-mana rangka kerja web juga boleh digunakan. Berikut adalah kodnya:
+Hebat, bahagian AI telah selesai, mari kita lihat bagaimana kita boleh mengintegrasikannya ke dalam API Web. Untuk API Web, kami memilih untuk menggunakan Flask, tetapi mana-mana rangka kerja web juga boleh digunakan. Mari lihat kodnya:
+
+### Menggunakan Python
 
 ```python
 # api.py
@@ -139,7 +143,7 @@ if __name__ == "__main__":
 
 Di sini, kami mencipta API Flask dan mentakrifkan laluan lalai "/" dan "/chat". Laluan kedua ini bertujuan untuk digunakan oleh frontend kami untuk menghantar soalan kepadanya.
 
-Untuk mengintegrasikan *llm.py*, berikut adalah apa yang perlu kita lakukan:
+Untuk mengintegrasikan *llm.py*, berikut adalah apa yang perlu dilakukan:
 
 - Import fungsi `call_llm`:
 
@@ -176,9 +180,13 @@ Untuk mengintegrasikan *llm.py*, berikut adalah apa yang perlu kita lakukan:
 
 Hebat, sekarang kita telah menyelesaikan apa yang diperlukan.
 
-### Konfigurasi Cors
+## Konfigurasi Cors
 
-Kami perlu menyebut bahawa kami menyediakan sesuatu seperti CORS, perkongsian sumber silang asal. Ini bermaksud bahawa kerana backend dan frontend kami akan berjalan pada port yang berbeza, kami perlu membenarkan frontend untuk memanggil backend. Terdapat sekeping kod dalam *api.py* yang menyediakan ini:
+Kami perlu menyebut bahawa kami menyediakan sesuatu seperti CORS, perkongsian sumber silang asal. Ini bermaksud bahawa kerana backend dan frontend kami akan berjalan pada port yang berbeza, kami perlu membenarkan frontend untuk memanggil backend.
+
+### Menggunakan Python
+
+Terdapat sekeping kod dalam *api.py* yang menyediakan ini:
 
 ```python
 from flask_cors import CORS
@@ -191,7 +199,11 @@ Sekarang ia telah disediakan untuk membenarkan "*" iaitu semua asal, dan ini aga
 
 ## Jalankan Projek Anda
 
-Baiklah, jadi kita ada *llm.py* dan *api.py*, bagaimana kita boleh membuat ini berfungsi dengan backend? Ada dua perkara yang perlu kita lakukan:
+Untuk menjalankan projek anda, anda perlu memulakan backend terlebih dahulu dan kemudian frontend anda.
+
+### Menggunakan Python
+
+Baiklah, jadi kita ada *llm.py* dan *api.py*, bagaimana kita boleh membuat ini berfungsi dengan backend? Ada dua perkara yang perlu dilakukan:
 
 - Pasang kebergantungan:
 
@@ -211,7 +223,7 @@ Baiklah, jadi kita ada *llm.py* dan *api.py*, bagaimana kita boleh membuat ini b
 
    Jika anda berada dalam Codespaces, anda perlu pergi ke Ports di bahagian bawah editor, klik kanan padanya dan klik "Port Visibility" dan pilih "Public".
 
-### Bekerja pada Frontend
+### Kerja pada Frontend
 
 Sekarang kita mempunyai API yang berjalan, mari kita cipta frontend untuk ini. Frontend minimum yang akan kita tingkatkan secara berperingkat. Dalam folder *frontend*, cipta perkara berikut:
 
@@ -223,7 +235,7 @@ app.js
 styles.css
 ```
 
-Mari kita mulakan dengan **index.html**:
+Mari mulakan dengan **index.html**:
 
 ```html
 <html>
@@ -241,7 +253,7 @@ Mari kita mulakan dengan **index.html**:
 </html>    
 ```
 
-Di atas adalah minimum yang diperlukan untuk menyokong tetingkap chat, kerana ia terdiri daripada textarea di mana mesej akan dipaparkan, input untuk menaip mesej, dan butang untuk menghantar mesej anda ke backend. Mari kita lihat JavaScript seterusnya dalam *app.js*
+Di atas adalah minimum yang diperlukan untuk menyokong tetingkap chat, kerana ia terdiri daripada textarea di mana mesej akan dipaparkan, input untuk menaip mesej, dan butang untuk menghantar mesej anda ke backend. Mari lihat JavaScript seterusnya dalam *app.js*
 
 **app.js**
 
@@ -300,12 +312,12 @@ Di atas adalah minimum yang diperlukan untuk menyokong tetingkap chat, kerana ia
 
 Mari kita lihat kod ini mengikut bahagian:
 
-- 1) Di sini kita mendapatkan rujukan kepada semua elemen yang akan kita rujuk kemudian dalam kod.
-- 2) Dalam bahagian ini, kita mencipta fungsi yang menggunakan kaedah `fetch` terbina dalam untuk memanggil backend kita.
+- 1) Di sini kita mendapatkan rujukan kepada semua elemen yang akan dirujuk kemudian dalam kod.
+- 2) Dalam bahagian ini, kita mencipta fungsi yang menggunakan kaedah terbina dalam `fetch` untuk memanggil backend kita.
 - 3) `appendMessage` membantu menambah respons serta apa yang anda taip sebagai pengguna.
 - 4) Di sini kita mendengar acara submit dan akhirnya membaca medan input, meletakkan mesej pengguna dalam textarea, memanggil API, dan memaparkan respons dalam textarea.
 
-Mari kita lihat gaya seterusnya, di sinilah anda boleh menjadi kreatif dan membuatnya kelihatan seperti yang anda mahu, tetapi berikut adalah beberapa cadangan:
+Mari lihat gaya seterusnya, di sini anda boleh menjadi kreatif dan membuatnya kelihatan seperti yang anda mahukan, tetapi berikut adalah beberapa cadangan:
 
 **styles.css**
 
@@ -326,7 +338,7 @@ Mari kita lihat gaya seterusnya, di sinilah anda boleh menjadi kreatif dan membu
 } 
 ```
 
-Dengan tiga kelas ini, anda akan menggayakan mesej secara berbeza bergantung pada asalnya, sama ada daripada pembantu atau anda sebagai pengguna. Jika anda ingin mendapatkan inspirasi, lihat folder `solution/frontend/styles.css`.
+Dengan tiga kelas ini, anda akan menggayakan mesej secara berbeza bergantung pada asalnya, sama ada dari pembantu atau anda sebagai pengguna. Jika anda ingin mendapatkan inspirasi, lihat folder `solution/frontend/styles.css`.
 
 ### Tukar Base Url
 
@@ -346,8 +358,7 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
 Salin kandungan daripada apa yang diarahkan di atas tetapi jangan ragu untuk menyesuaikan mengikut kesukaan anda.
@@ -358,11 +369,17 @@ Salin kandungan daripada apa yang diarahkan di atas tetapi jangan ragu untuk men
 
 ## Bonus
 
-Cuba ubah personaliti pembantu AI. Apabila anda memanggil `call_llm` dalam *api.py*, anda boleh menukar argumen kedua kepada apa sahaja yang anda mahu, contohnya:
+Cuba ubah personaliti pembantu AI.
+
+### Untuk Python
+
+Apabila anda memanggil `call_llm` dalam *api.py*, anda boleh menukar argumen kedua kepada apa sahaja yang anda mahu, contohnya:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
+
+### Frontend
 
 Ubah juga CSS dan teks mengikut kesukaan anda, jadi buat perubahan dalam *index.html* dan *styles.css*.
 
@@ -372,7 +389,7 @@ Hebat, anda telah belajar dari awal cara mencipta pembantu peribadi menggunakan 
 
 ## Tetapkan dengan Codespaces
 
-- Navigasi ke: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Navigasi ke: [Repo Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
 - Cipta daripada templat (pastikan anda log masuk ke GitHub) di sudut kanan atas:
 
     ![Cipta daripada templat](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.ms.png)
@@ -386,4 +403,4 @@ Hebat, anda telah belajar dari awal cara mencipta pembantu peribadi menggunakan 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

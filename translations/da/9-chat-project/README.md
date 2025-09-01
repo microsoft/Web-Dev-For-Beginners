@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cf15ff7770c5a484349383bb27d1131f",
-  "translation_date": "2025-08-29T09:46:31+00:00",
+  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
+  "translation_date": "2025-09-01T15:31:50+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "da"
 }
@@ -21,7 +21,7 @@ Lidt kontekst: At bygge chatassistenter ved hjælp af generativ AI er en fantast
 
 ## Forbindelse til generativ AI
 
-Til backend bruger vi GitHub Models. Det er en fremragende tjeneste, der giver dig mulighed for at bruge AI gratis. Gå til dens playground og hent kode, der svarer til det backend-sprog, du har valgt. Her ser det sådan ud på [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Til backend bruger vi GitHub Models. Det er en fantastisk tjeneste, der giver dig mulighed for at bruge AI gratis. Gå til dens playground og hent kode, der svarer til det valgte backend-sprog. Her er, hvordan det ser ud på [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
 <div>
   <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
@@ -32,6 +32,8 @@ Som nævnt skal du vælge fanen "Code" og din valgte runtime.
 <div>
   <img src="./assets/playground-choice.png" alt="playground choice" with="600">
 </div>
+
+### Brug af Python
 
 I dette tilfælde vælger vi Python, hvilket betyder, at vi vælger denne kode:
 
@@ -96,9 +98,9 @@ def call_llm(prompt: str, system_message: str):
 
 Med denne funktion `call_llm` kan vi nu tage en prompt og en systemprompt, og funktionen returnerer resultatet.
 
-### Tilpas AI Assistenten
+### Tilpas AI Assistent
 
-Hvis du vil tilpasse AI-assistenten, kan du specificere, hvordan du vil have den til at opføre sig, ved at udfylde systemprompten som vist her:
+Hvis du vil tilpasse AI-assistenten, kan du specificere, hvordan du vil have den til at opføre sig ved at udfylde systemprompten som følger:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -106,7 +108,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Eksponér det via en Web API
 
-Fantastisk, vi har AI-delen klar. Lad os se, hvordan vi kan integrere det i en Web API. Til Web API vælger vi Flask, men enhver webframework burde fungere. Her er koden:
+Fantastisk, vi har AI-delen klar, lad os se, hvordan vi kan integrere det i en Web API. Til Web API vælger vi Flask, men enhver webframework burde fungere. Lad os se koden for det:
+
+### Brug af Python
 
 ```python
 # api.py
@@ -137,7 +141,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Her opretter vi en Flask API og definerer en standardrute "/" og "/chat". Sidstnævnte er beregnet til at blive brugt af vores frontend til at sende spørgsmål til den.
+Her opretter vi en Flask API og definerer en standardroute "/" og "/chat". Sidstnævnte er beregnet til at blive brugt af vores frontend til at sende spørgsmål til den.
 
 For at integrere *llm.py* skal vi gøre følgende:
 
@@ -148,7 +152,7 @@ For at integrere *llm.py* skal vi gøre følgende:
    from flask import Flask, request
    ```
 
-- Kalde den fra "/chat"-ruten:
+- Kalde den fra "/chat"-routen:
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -163,7 +167,7 @@ For at integrere *llm.py* skal vi gøre følgende:
       })
    ```
 
-   Her parser vi den indkommende anmodning for at hente egenskaben `message` fra JSON-bodyen. Derefter kalder vi LLM med dette kald:
+   Her parser vi den indkommende anmodning for at hente `message`-egenskaben fra JSON-bodyen. Derefter kalder vi LLM med dette kald:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -176,9 +180,13 @@ For at integrere *llm.py* skal vi gøre følgende:
 
 Fantastisk, nu har vi gjort, hvad der er nødvendigt.
 
-### Konfigurer Cors
+## Konfigurer Cors
 
-Vi bør nævne, at vi opsætter noget som CORS, cross-origin resource sharing. Det betyder, at fordi vores backend og frontend vil køre på forskellige porte, skal vi tillade frontenden at kalde backend. Der er et stykke kode i *api.py*, der opsætter dette:
+Vi bør nævne, at vi opsætter noget som CORS, cross-origin resource sharing. Det betyder, at fordi vores backend og frontend vil køre på forskellige porte, skal vi tillade frontenden at kalde ind i backenden.
+
+### Brug af Python
+
+Der er et stykke kode i *api.py*, der opsætter dette:
 
 ```python
 from flask_cors import CORS
@@ -187,11 +195,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Lige nu er det sat op til at tillade "*", hvilket er alle oprindelser, og det er lidt usikkert. Vi bør begrænse det, når vi går i produktion.
+Lige nu er det opsat til at tillade "*", hvilket er alle oprindelser, og det er lidt usikkert. Vi bør begrænse det, når vi går i produktion.
 
 ## Kør dit projekt
 
-Ok, så vi har *llm.py* og *api.py*. Hvordan kan vi få dette til at fungere med en backend? Der er to ting, vi skal gøre:
+For at køre dit projekt skal du først starte din backend og derefter din frontend.
+
+### Brug af Python
+
+Ok, så vi har *llm.py* og *api.py*, hvordan kan vi få dette til at fungere med en backend? Der er to ting, vi skal gøre:
 
 - Installere afhængigheder:
 
@@ -203,17 +215,17 @@ Ok, så vi har *llm.py* og *api.py*. Hvordan kan vi få dette til at fungere med
    pip install openai flask flask-cors openai
    ```
 
-- Starte API'en:
+- Starte API'en
 
    ```sh
    python api.py
    ```
 
-   Hvis du er i Codespaces, skal du gå til Ports nederst i editoren, højreklikke på det og klikke på "Port Visibility" og vælge "Public".
+   Hvis du er i Codespaces, skal du gå til Ports i den nederste del af editoren, højreklikke på det og klikke på "Port Visibility" og vælge "Public".
 
 ### Arbejd på en frontend
 
-Nu hvor vi har en API oppe at køre, lad os oprette en frontend til dette. En helt basal frontend, som vi vil forbedre trinvis. I en *frontend*-mappe skal du oprette følgende:
+Nu hvor vi har en API oppe og køre, lad os oprette en frontend til dette. En helt basal frontend, som vi vil forbedre trinvis. I en *frontend*-mappe skal du oprette følgende:
 
 ```text
 backend/
@@ -241,7 +253,7 @@ Lad os starte med **index.html**:
 </html>    
 ```
 
-Ovenstående er det absolut minimum, du har brug for til at understøtte et chatvindue, da det består af en textarea, hvor beskeder vil blive vist, et inputfelt til at skrive beskeder og en knap til at sende beskeden til backend. Lad os se på JavaScript i *app.js*.
+Ovenstående er det absolut minimum, du har brug for for at understøtte et chatvindue, da det består af en textarea, hvor beskeder vil blive vist, et inputfelt til at skrive beskeden og en knap til at sende din besked til backenden. Lad os se på JavaScript næste i *app.js*
 
 **app.js**
 
@@ -303,9 +315,9 @@ Lad os gennemgå koden sektion for sektion:
 - 1) Her får vi en reference til alle vores elementer, som vi vil referere til senere i koden.
 - 2) I denne sektion opretter vi en funktion, der bruger den indbyggede `fetch`-metode til at kalde vores backend.
 - 3) `appendMessage` hjælper med at tilføje svar samt det, du som bruger skriver.
-- 4) Her lytter vi til submit-eventet, og vi ender med at læse inputfeltet, placere brugerens besked i textarea, kalde API'en og vise svaret i textarea.
+- 4) Her lytter vi til submit-eventet, og vi ender med at læse inputfeltet, placere brugerens besked i tekstområdet, kalde API'en og vise svaret i tekstområdet.
 
-Lad os se på styling næste gang. Her kan du virkelig gå amok og få det til at se ud, som du vil, men her er nogle forslag:
+Lad os se på styling næste. Her kan du virkelig gå amok og få det til at se ud, som du vil, men her er nogle forslag:
 
 **styles.css**
 
@@ -326,9 +338,9 @@ Lad os se på styling næste gang. Her kan du virkelig gå amok og få det til a
 } 
 ```
 
-Med disse tre klasser vil du style beskeder forskelligt afhængigt af, om de kommer fra assistenten eller dig som bruger. Hvis du vil have inspiration, kan du tjekke `solution/frontend/styles.css`-mappen.
+Med disse tre klasser vil du style beskeder forskelligt afhængigt af, om de kommer fra assistenten eller dig som bruger. Hvis du vil inspireres, kan du tjekke `solution/frontend/styles.css`-mappen.
 
-### Skift Base Url
+### Ændring af Base Url
 
 Der var én ting, vi ikke satte, og det var `BASE_URL`. Dette er ikke kendt, før din backend er startet. For at sætte det:
 
@@ -346,8 +358,7 @@ project/
     app.js
     styles.css
   backend/
-    api.py
-    llm.py
+    ...
 ```
 
 Kopier indholdet fra det, der blev instrueret ovenfor, men føl dig fri til at tilpasse det efter din smag.
@@ -358,11 +369,17 @@ Kopier indholdet fra det, der blev instrueret ovenfor, men føl dig fri til at t
 
 ## Bonus
 
-Prøv at ændre personligheden af AI-assistenten. Når du kalder `call_llm` i *api.py*, kan du ændre det andet argument til det, du ønsker, for eksempel:
+Prøv at ændre personligheden af AI-assistenten.
+
+### For Python
+
+Når du kalder `call_llm` i *api.py*, kan du ændre det andet argument til det, du ønsker, for eksempel:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
+
+### Frontend
 
 Ændr også CSS og tekst efter din smag, så lav ændringer i *index.html* og *styles.css*.
 
@@ -386,4 +403,4 @@ Fantastisk, du har lært fra bunden, hvordan man opretter en personlig assistent
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
