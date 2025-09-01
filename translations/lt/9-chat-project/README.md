@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:41:23+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T17:04:34+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "lt"
 }
@@ -13,25 +13,19 @@ CO_OP_TRANSLATOR_METADATA:
 
 Štai kaip atrodo baigtas projektas:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Pokalbių programa" width="600">
-</div>
+![Pokalbių programa](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.lt.png)
 
-Šiek tiek konteksto: kurti pokalbių asistentus naudojant generatyvinį AI yra puikus būdas pradėti mokytis apie dirbtinį intelektą. Šioje pamokoje išmoksite integruoti generatyvinį AI į internetinę programą. Pradėkime.
+Šiek tiek konteksto: kurti pokalbių asistentus naudojant generatyvųjį AI yra puikus būdas pradėti mokytis apie dirbtinį intelektą. Šioje pamokoje išmoksite integruoti generatyvųjį AI į internetinę programą. Pradėkime.
 
-## Prisijungimas prie generatyvinio AI
+## Prisijungimas prie generatyviojo AI
 
 Backend dalyje naudojame GitHub Models. Tai puiki paslauga, leidžianti nemokamai naudoti AI. Eikite į jos „playground“ ir paimkite kodą, atitinkantį jūsų pasirinktą backend kalbą. Štai kaip tai atrodo [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.lt.png)
 
 Kaip minėjome, pasirinkite „Code“ skirtuką ir savo pasirinktą vykdymo aplinką.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground pasirinkimas" with="600">
-</div>
+![Playground pasirinkimas](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.lt.png)
 
 ### Naudojant Python
 
@@ -72,7 +66,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Šiek tiek išvalykime šį kodą, kad jis būtų tinkamas naudoti:
+Šiek tiek patvarkykime šį kodą, kad jis būtų patogesnis naudoti:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -96,7 +90,7 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-Su šia funkcija `call_llm` dabar galime pateikti užklausą ir sistemos užklausą, o funkcija grąžins rezultatą.
+Naudodami funkciją `call_llm`, dabar galime pateikti užklausą ir sistemos užklausą, o funkcija grąžins rezultatą.
 
 ### AI asistento pritaikymas
 
@@ -141,7 +135,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Čia sukuriame Flask API ir apibrėžiame numatytąjį maršrutą "/" ir "/chat". Pastarasis skirtas mūsų frontendui perduoti klausimus.
+Čia sukuriame Flask API ir apibrėžiame numatytąjį maršrutą „/“ ir „/chat“. Pastarasis skirtas mūsų frontendui perduoti klausimus.
 
 Norėdami integruoti *llm.py*, turime atlikti šiuos veiksmus:
 
@@ -152,7 +146,7 @@ Norėdami integruoti *llm.py*, turime atlikti šiuos veiksmus:
    from flask import Flask, request
    ```
 
-- Iškvietimas iš "/chat" maršruto:
+- Iškviesti ją iš „/chat“ maršruto:
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -167,7 +161,7 @@ Norėdami integruoti *llm.py*, turime atlikti šiuos veiksmus:
       })
    ```
 
-   Čia analizuojame gaunamą užklausą, kad gautume `message` savybę iš JSON kūno. Po to iškviečiame LLM su šiuo skambučiu:
+   Čia analizuojame gaunamą užklausą, kad gautume `message` savybę iš JSON kūno. Tada iškviečiame LLM su šiuo skambučiu:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -178,15 +172,15 @@ Norėdami integruoti *llm.py*, turime atlikti šiuos veiksmus:
    })
    ```
 
-Puiku, dabar turime tai, ko reikia.
+Puiku, dabar turime viską, ko reikia.
 
-## Cors konfigūracija
+## Cors konfigūravimas
 
-Reikėtų paminėti, kad nustatėme kažką panašaus į CORS – išteklių dalijimąsi tarp skirtingų kilmių. Tai reiškia, kad kadangi mūsų backend ir frontend veiks skirtinguose portuose, turime leisti frontendui kreiptis į backend.
+Reikėtų paminėti, kad nustatėme kažką panašaus į CORS – kryžminį išteklių dalijimąsi. Tai reiškia, kad kadangi mūsų backend ir frontend veiks skirtinguose portuose, turime leisti frontendui kreiptis į backend.
 
 ### Naudojant Python
 
-Štai kodas *api.py*, kuris tai nustato:
+*api.py* faile yra kodo dalis, kuri tai nustato:
 
 ```python
 from flask_cors import CORS
@@ -195,7 +189,7 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Šiuo metu nustatyta leisti "*" – visas kilmes, tačiau tai nėra saugu. Turėtume tai apriboti, kai pereisime į gamybą.
+Šiuo metu nustatyta, kad leidžiama „*“, tai yra visi šaltiniai, ir tai nėra labai saugu. Turėtume tai apriboti, kai pereisime į gamybą.
 
 ## Projekto paleidimas
 
@@ -225,7 +219,7 @@ Gerai, turime *llm.py* ir *api.py*. Kaip tai padaryti, kad veiktų su backend? �
 
 ### Darbas su frontend
 
-Dabar, kai API veikia, sukurkime frontend. Minimalų frontend, kurį tobulinsime palaipsniui. Kataloge *frontend* sukurkite šiuos failus:
+Dabar, kai API veikia, sukurkime frontend. Minimalų frontend, kurį tobulinsime palaipsniui. *frontend* aplanke sukurkite šiuos failus:
 
 ```text
 backend/
@@ -253,7 +247,7 @@ Pradėkime nuo **index.html**:
 </html>    
 ```
 
-Tai yra absoliutus minimumas, kurio reikia pokalbių langui palaikyti, nes jis susideda iš teksto srities, kur bus rodomos žinutės, įvesties laukelio, kur rašyti žinutę, ir mygtuko, kuris siunčia jūsų žinutę į backend. Pažiūrėkime į JavaScript failą *app.js*.
+Tai yra absoliutus minimumas, kurio reikia pokalbių langui palaikyti, nes jis susideda iš teksto srities, kurioje bus rodomi pranešimai, įvesties lauko, kuriame rašysite pranešimą, ir mygtuko, kuris siunčia jūsų pranešimą į backend. Pažiūrėkime į JavaScript failą *app.js*.
 
 **app.js**
 
@@ -312,12 +306,12 @@ Tai yra absoliutus minimumas, kurio reikia pokalbių langui palaikyti, nes jis s
 
 Paaiškinkime kodą pagal sekcijas:
 
-- 1) Čia gauname nuorodas į visus elementus, kuriuos naudosime vėliau kode.
-- 2) Šioje sekcijoje sukuriame funkciją, kuri naudoja įmontuotą `fetch` metodą, kad kreiptųsi į mūsų backend.
-- 3) `appendMessage` padeda pridėti atsakymus, taip pat tai, ką įvedate kaip vartotojas.
-- 4) Čia klausomės „submit“ įvykio, skaitome įvesties laukelį, dedame vartotojo žinutę į teksto sritį, iškviečiame API, o atsakymą pateikiame teksto srityje.
+- 1) Čia gauname nuorodą į visus elementus, kuriuos naudosime vėliau kode.
+- 2) Šioje sekcijoje sukuriame funkciją, kuri naudoja įmontuotą `fetch` metodą, kad iškviestų mūsų backend.
+- 3) `appendMessage` padeda pridėti atsakymus, taip pat tai, ką jūs kaip vartotojas įvedate.
+- 4) Čia klausomės „submit“ įvykio, skaitome įvesties lauką, dedame vartotojo pranešimą į teksto sritį, iškviečiame API, o atsakymą pateikiame teksto srityje.
 
-Pažiūrėkime į stilių, čia galite būti kūrybingi ir sukurti, kaip norite, bet štai keletas pasiūlymų:
+Pažiūrėkime į stilių, čia galite būti kūrybingi ir sukurti tai, kas jums patinka, bet štai keletas pasiūlymų:
 
 **styles.css**
 
@@ -338,18 +332,18 @@ Pažiūrėkime į stilių, čia galite būti kūrybingi ir sukurti, kaip norite,
 } 
 ```
 
-Su šiomis trimis klasėmis galite stiliuoti žinutes skirtingai, priklausomai nuo to, iš kur jos ateina – iš asistento ar iš jūsų kaip vartotojo. Jei norite įkvėpimo, pažiūrėkite į `solution/frontend/styles.css` katalogą.
+Su šiomis trimis klasėmis galite stilizuoti pranešimus skirtingai, priklausomai nuo to, iš kur jie ateina – iš asistento ar iš jūsų kaip vartotojo. Jei norite įkvėpimo, pažiūrėkite į `solution/frontend/styles.css` aplanką.
 
 ### Pagrindinio URL keitimas
 
-Čia buvo vienas dalykas, kurio nenustatėme – `BASE_URL`. Jis nežinomas, kol backend nepradėtas. Norėdami jį nustatyti:
+Yra vienas dalykas, kurio dar nenustatėme – tai `BASE_URL`. Jis nežinomas, kol backend nėra paleistas. Norėdami jį nustatyti:
 
 - Jei API paleidžiate lokaliai, jis turėtų būti nustatytas kaip `http://localhost:5000`.
-- Jei paleidžiate Codespaces, jis turėtų atrodyti kaip "[name]app.github.dev".
+- Jei paleidžiate Codespaces, jis turėtų atrodyti maždaug taip: "[name]app.github.dev".
 
 ## Užduotis
 
-Sukurkite savo katalogą *project* su turiniu, kaip nurodyta:
+Sukurkite savo aplanką *project* su turiniu, kaip nurodyta aukščiau:
 
 ```text
 project/
@@ -361,7 +355,7 @@ project/
     ...
 ```
 
-Nukopijuokite turinį iš aukščiau pateiktų nurodymų, bet drąsiai pritaikykite pagal savo poreikius.
+Nukopijuokite turinį iš to, kas buvo nurodyta aukščiau, bet drąsiai pritaikykite pagal savo norus.
 
 ## Sprendimas
 
@@ -373,7 +367,7 @@ Pabandykite pakeisti AI asistento asmenybę.
 
 ### Naudojant Python
 
-Kai iškviečiate `call_llm` *api.py*, galite pakeisti antrą argumentą į tai, ką norite, pavyzdžiui:
+Kai iškviečiate `call_llm` *api.py* faile, galite pakeisti antrą argumentą į tai, ką norite, pavyzdžiui:
 
 ```python
 call_llm(message, "You are Captain Picard")
@@ -381,9 +375,9 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Taip pat pakeiskite CSS ir tekstą pagal savo poreikius, atlikite pakeitimus *index.html* ir *styles.css*.
+Taip pat pakeiskite CSS ir tekstą pagal savo norus, atlikite pakeitimus *index.html* ir *styles.css*.
 
-## Santrauka
+## Apibendrinimas
 
 Puiku, jūs išmokote nuo nulio sukurti asmeninį asistentą naudojant AI. Tai padarėme naudodami GitHub Models, backend su Python ir frontend su HTML, CSS ir JavaScript.
 
@@ -396,7 +390,7 @@ Puiku, jūs išmokote nuo nulio sukurti asmeninį asistentą naudojant AI. Tai p
 
 - Kai būsite savo repozitorijoje, sukurkite Codespace:
 
-    ![Sukurti codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.lt.png)
+    ![Sukurti Codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.lt.png)
 
     Tai turėtų paleisti aplinką, su kuria dabar galite dirbti.
 

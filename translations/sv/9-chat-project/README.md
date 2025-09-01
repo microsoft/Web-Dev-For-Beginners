@@ -1,41 +1,35 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:31:27+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:56:06+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "sv"
 }
 -->
-# Chatprojekt
+# Chattprojekt
 
-Det här chatprojektet visar hur man bygger en chattassistent med hjälp av GitHub Models.
+Detta chattprojekt visar hur man bygger en Chattassistent med hjälp av GitHub Models.
 
 Så här ser det färdiga projektet ut:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Chat app" width="600">
-</div>
+![Chattapp](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.sv.png)
 
-Lite bakgrund, att bygga chattassistenter med generativ AI är ett utmärkt sätt att börja lära sig om AI. Det du kommer att lära dig är att integrera generativ AI i en webbapplikation under denna lektion, låt oss börja.
+Lite bakgrund, att bygga chattassistenter med generativ AI är ett utmärkt sätt att börja lära sig om AI. Det du kommer att lära dig är att integrera generativ AI i en webbapp under denna lektion, låt oss börja.
 
-## Anslutning till generativ AI
+## Ansluta till generativ AI
 
-För backend använder vi GitHub Models. Det är en fantastisk tjänst som gör det möjligt att använda AI gratis. Gå till dess playground och hämta kod som motsvarar ditt valda backend-språk. Så här ser det ut på [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+För backend använder vi GitHub Models. Det är en fantastisk tjänst som låter dig använda AI gratis. Gå till dess playground och hämta koden som motsvarar ditt valda backend-språk. Så här ser det ut på [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.sv.png)
 
-Som vi nämnde, välj fliken "Code" och din valda runtime.
+Som vi nämnde, välj fliken "Code" och din valda runtime. 
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
-</div>
+![Playground-val](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.sv.png)
 
 ### Använda Python
 
-I det här fallet väljer vi Python, vilket innebär att vi använder denna kod:
+I detta fall väljer vi Python, vilket innebär att vi väljer denna kod:
 
 ```python
 """Run this model in Python
@@ -106,9 +100,9 @@ Om du vill anpassa AI-assistenten kan du specificera hur du vill att den ska bet
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Exponera det via ett webb-API
+## Exponera det via ett Web API
 
-Bra, vi har gjort AI-delen, låt oss se hur vi kan integrera det i ett webb-API. För webb-API:t väljer vi Flask, men vilken webbframework som helst borde fungera. Låt oss se koden för det:
+Bra, vi har gjort AI-delen, låt oss se hur vi kan integrera det i ett Web API. För Web API väljer vi att använda Flask, men vilket webbframework som helst borde fungera. Låt oss titta på koden för det:
 
 ### Använda Python
 
@@ -141,7 +135,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Här skapar vi ett Flask-API och definierar en standardroute "/" och "/chat". Den senare är tänkt att användas av vår frontend för att skicka frågor till den.
+Här skapar vi ett Flask-API och definierar en standardrutt "/" och "/chat". Den senare är tänkt att användas av vår frontend för att skicka frågor till den. 
 
 För att integrera *llm.py* behöver vi göra följande:
 
@@ -152,7 +146,7 @@ För att integrera *llm.py* behöver vi göra följande:
    from flask import Flask, request
    ```
 
-- Anropa den från "/chat"-route:
+- Anropa den från "/chat"-rutten:
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -182,7 +176,7 @@ Bra, nu har vi gjort det vi behöver.
 
 ## Konfigurera Cors
 
-Vi bör nämna att vi ställer in något som CORS, cross-origin resource sharing. Detta innebär att eftersom vår backend och frontend kommer att köras på olika portar, måste vi tillåta att frontenden kan anropa backend.
+Vi bör nämna att vi ställer in något som CORS, cross-origin resource sharing. Detta innebär att eftersom vår backend och frontend kommer att köras på olika portar, måste vi tillåta frontenden att anropa backenden. 
 
 ### Använda Python
 
@@ -199,7 +193,7 @@ Just nu är det inställt att tillåta "*" vilket är alla ursprung, och det är
 
 ## Kör ditt projekt
 
-För att köra ditt projekt behöver du starta upp din backend först och sedan din frontend.
+För att köra ditt projekt behöver du starta din backend först och sedan din frontend.
 
 ### Använda Python
 
@@ -223,7 +217,7 @@ Ok, så vi har *llm.py* och *api.py*, hur kan vi få detta att fungera med en ba
 
    Om du är i Codespaces behöver du gå till Ports längst ner i redigeraren, högerklicka på det och klicka på "Port Visibility" och välj "Public".
 
-### Arbeta med en frontend
+### Arbeta på en frontend
 
 Nu när vi har ett API igång, låt oss skapa en frontend för detta. En minimal frontend som vi kommer att förbättra stegvis. I en *frontend*-mapp, skapa följande:
 
@@ -253,7 +247,7 @@ Låt oss börja med **index.html**:
 </html>    
 ```
 
-Ovan är det absolut minsta du behöver för att stödja ett chattfönster, eftersom det består av en textarea där meddelanden kommer att visas, ett inputfält för att skriva meddelandet och en knapp för att skicka ditt meddelande till backend. Låt oss titta på JavaScript i *app.js*.
+Ovanstående är det absolut minsta du behöver för att stödja ett chattfönster, eftersom det består av en textarea där meddelanden kommer att visas, ett inputfält för att skriva meddelanden och en knapp för att skicka ditt meddelande till backenden. Låt oss titta på JavaScript i *app.js*.
 
 **app.js**
 
@@ -310,12 +304,12 @@ Ovan är det absolut minsta du behöver för att stödja ett chattfönster, efte
 })();
 ```
 
-Låt oss gå igenom koden per sektion:
+Låt oss gå igenom koden sektion för sektion:
 
 - 1) Här hämtar vi en referens till alla våra element som vi kommer att referera till senare i koden.
 - 2) I denna sektion skapar vi en funktion som använder den inbyggda metoden `fetch` för att anropa vår backend.
-- 3) `appendMessage` hjälper till att lägga till svar samt det du som användare skriver.
-- 4) Här lyssnar vi på submit-händelsen och läser inputfältet, placerar användarens meddelande i textarean, anropar API:t och renderar svaret i textarean.
+- 3) `appendMessage` hjälper till att lägga till svar samt vad du som användare skriver.
+- 4) Här lyssnar vi på submit-händelsen och läser inmatningsfältet, placerar användarens meddelande i textområdet, anropar API:t och renderar svaret i textområdet.
 
 Låt oss titta på styling härnäst, här kan du verkligen gå loss och få det att se ut som du vill, men här är några förslag:
 
@@ -338,14 +332,14 @@ Låt oss titta på styling härnäst, här kan du verkligen gå loss och få det
 } 
 ```
 
-Med dessa tre klasser kommer du att styla meddelanden olika beroende på om de kommer från en assistent eller dig som användare. Om du vill bli inspirerad, kolla in `solution/frontend/styles.css`-mappen.
+Med dessa tre klasser kommer du att styla meddelanden olika beroende på om de kommer från assistenten eller dig som användare. Om du vill bli inspirerad, kolla in `solution/frontend/styles.css`-mappen.
 
-### Ändra Base Url
+### Ändra Bas-URL
 
-Det var en sak här vi inte satte och det var `BASE_URL`, detta är inte känt förrän din backend är startad. För att ställa in det:
+Det var en sak vi inte satte här och det var `BASE_URL`, detta är inte känt förrän din backend är startad. För att ställa in det:
 
-- Om du kör API:t lokalt, bör det ställas in till något som `http://localhost:5000`.
-- Om det körs i Codespaces, bör det se ut som "[name]app.github.dev".
+- Om du kör API:t lokalt bör det ställas in till något som `http://localhost:5000`.
+- Om det körs i Codespaces bör det se ut som "[name]app.github.dev".
 
 ## Uppgift
 
@@ -361,7 +355,7 @@ project/
     ...
 ```
 
-Kopiera innehållet från det som instruerades ovan men känn dig fri att anpassa det efter dina önskemål.
+Kopiera innehållet från det som instruerades ovan men känn dig fri att anpassa det efter din smak.
 
 ## Lösning
 
@@ -369,7 +363,7 @@ Kopiera innehållet från det som instruerades ovan men känn dig fri att anpass
 
 ## Bonus
 
-Prova att ändra personligheten hos AI-assistenten.
+Försök att ändra AI-assistentens personlighet. 
 
 ### För Python
 
@@ -381,13 +375,13 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Ändra också CSS och text efter dina önskemål, så gör ändringar i *index.html* och *styles.css*.
+Ändra också CSS och text efter din smak, så gör ändringar i *index.html* och *styles.css*.
 
 ## Sammanfattning
 
 Bra, du har lärt dig från grunden hur man skapar en personlig assistent med hjälp av AI. Vi har gjort det med hjälp av GitHub Models, en backend i Python och en frontend i HTML, CSS och JavaScript.
 
-## Sätt upp med Codespaces
+## Ställ in med Codespaces
 
 - Navigera till: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
 - Skapa från en mall (se till att du är inloggad på GitHub) i det övre högra hörnet:
@@ -403,4 +397,4 @@ Bra, du har lärt dig från grunden hur man skapar en personlig assistent med hj
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som kan uppstå vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

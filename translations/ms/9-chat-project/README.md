@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:35:00+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:59:16+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "ms"
 }
@@ -13,25 +13,19 @@ Projek chat ini menunjukkan cara membina Pembantu Chat menggunakan Model GitHub.
 
 Berikut adalah rupa projek yang telah siap:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Aplikasi Chat" width="600">
-</div>
+![Aplikasi Chat](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.ms.png)
 
 Sedikit konteks, membina pembantu chat menggunakan AI generatif adalah cara yang hebat untuk mula belajar tentang AI. Apa yang akan anda pelajari ialah cara mengintegrasikan AI generatif ke dalam aplikasi web sepanjang pelajaran ini, mari kita mulakan.
 
 ## Menyambung ke AI Generatif
 
-Untuk bahagian backend, kami menggunakan Model GitHub. Ia adalah perkhidmatan hebat yang membolehkan anda menggunakan AI secara percuma. Pergi ke ruang mainannya dan ambil kod yang sepadan dengan bahasa backend pilihan anda. Berikut adalah rupa ruang mainan tersebut di [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Untuk bahagian backend, kami menggunakan Model GitHub. Ia adalah perkhidmatan hebat yang membolehkan anda menggunakan AI secara percuma. Pergi ke ruang mainannya dan ambil kod yang sepadan dengan bahasa backend pilihan anda. Berikut adalah rupa ruang mainan di [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.ms.png)
 
 Seperti yang dinyatakan, pilih tab "Code" dan runtime pilihan anda.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="pilihan playground" with="600">
-</div>
+![Pilihan Playground](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.ms.png)
 
 ### Menggunakan Python
 
@@ -98,7 +92,7 @@ def call_llm(prompt: str, system_message: str):
 
 Dengan fungsi `call_llm` ini, kita kini boleh mengambil prompt dan sistem prompt, dan fungsi ini akan mengembalikan hasilnya.
 
-### Menyesuaikan Pembantu AI
+### Sesuaikan Pembantu AI
 
 Jika anda ingin menyesuaikan pembantu AI, anda boleh menentukan bagaimana anda mahu ia berkelakuan dengan mengisi sistem prompt seperti berikut:
 
@@ -106,9 +100,9 @@ Jika anda ingin menyesuaikan pembantu AI, anda boleh menentukan bagaimana anda m
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Dedahkan melalui API Web
+## Dedahkan melalui Web API
 
-Hebat, bahagian AI telah selesai, mari kita lihat bagaimana kita boleh mengintegrasikannya ke dalam API Web. Untuk API Web, kami memilih untuk menggunakan Flask, tetapi mana-mana rangka kerja web juga boleh digunakan. Mari lihat kodnya:
+Hebat, kita telah menyelesaikan bahagian AI, mari kita lihat bagaimana kita boleh mengintegrasikannya ke dalam Web API. Untuk Web API, kami memilih untuk menggunakan Flask, tetapi mana-mana rangka kerja web sepatutnya berfungsi. Mari lihat kodnya:
 
 ### Menggunakan Python
 
@@ -143,7 +137,7 @@ if __name__ == "__main__":
 
 Di sini, kami mencipta API Flask dan mentakrifkan laluan lalai "/" dan "/chat". Laluan kedua ini bertujuan untuk digunakan oleh frontend kami untuk menghantar soalan kepadanya.
 
-Untuk mengintegrasikan *llm.py*, berikut adalah apa yang perlu dilakukan:
+Untuk mengintegrasikan *llm.py*, berikut adalah apa yang perlu kita lakukan:
 
 - Import fungsi `call_llm`:
 
@@ -203,7 +197,7 @@ Untuk menjalankan projek anda, anda perlu memulakan backend terlebih dahulu dan 
 
 ### Menggunakan Python
 
-Baiklah, jadi kita ada *llm.py* dan *api.py*, bagaimana kita boleh membuat ini berfungsi dengan backend? Ada dua perkara yang perlu dilakukan:
+Baiklah, jadi kita ada *llm.py* dan *api.py*, bagaimana kita boleh membuat ini berfungsi dengan backend? Ada dua perkara yang perlu kita lakukan:
 
 - Pasang kebergantungan:
 
@@ -221,7 +215,7 @@ Baiklah, jadi kita ada *llm.py* dan *api.py*, bagaimana kita boleh membuat ini b
    python api.py
    ```
 
-   Jika anda berada dalam Codespaces, anda perlu pergi ke Ports di bahagian bawah editor, klik kanan padanya dan klik "Port Visibility" dan pilih "Public".
+   Jika anda berada dalam Codespaces, anda perlu pergi ke Ports di bahagian bawah editor, klik kanan di atasnya dan klik "Port Visibility" dan pilih "Public".
 
 ### Kerja pada Frontend
 
@@ -253,7 +247,7 @@ Mari mulakan dengan **index.html**:
 </html>    
 ```
 
-Di atas adalah minimum yang diperlukan untuk menyokong tetingkap chat, kerana ia terdiri daripada textarea di mana mesej akan dipaparkan, input untuk menaip mesej, dan butang untuk menghantar mesej anda ke backend. Mari lihat JavaScript seterusnya dalam *app.js*
+Di atas adalah minimum mutlak yang anda perlukan untuk menyokong tetingkap chat, kerana ia terdiri daripada textarea di mana mesej akan dipaparkan, input untuk menaip mesej, dan butang untuk menghantar mesej anda ke backend. Mari lihat JavaScript seterusnya dalam *app.js*
 
 **app.js**
 
@@ -312,12 +306,12 @@ Di atas adalah minimum yang diperlukan untuk menyokong tetingkap chat, kerana ia
 
 Mari kita lihat kod ini mengikut bahagian:
 
-- 1) Di sini kita mendapatkan rujukan kepada semua elemen yang akan dirujuk kemudian dalam kod.
-- 2) Dalam bahagian ini, kita mencipta fungsi yang menggunakan kaedah terbina dalam `fetch` untuk memanggil backend kita.
+- 1) Di sini kita mendapatkan rujukan kepada semua elemen yang akan kita rujuk kemudian dalam kod.
+- 2) Dalam bahagian ini, kita mencipta fungsi yang menggunakan kaedah `fetch` terbina dalam untuk memanggil backend kita.
 - 3) `appendMessage` membantu menambah respons serta apa yang anda taip sebagai pengguna.
 - 4) Di sini kita mendengar acara submit dan akhirnya membaca medan input, meletakkan mesej pengguna dalam textarea, memanggil API, dan memaparkan respons dalam textarea.
 
-Mari lihat gaya seterusnya, di sini anda boleh menjadi kreatif dan membuatnya kelihatan seperti yang anda mahukan, tetapi berikut adalah beberapa cadangan:
+Mari lihat gaya seterusnya, di sini anda boleh menjadi kreatif dan membuatnya kelihatan seperti yang anda mahu, tetapi berikut adalah beberapa cadangan:
 
 **styles.css**
 
@@ -338,14 +332,14 @@ Mari lihat gaya seterusnya, di sini anda boleh menjadi kreatif dan membuatnya ke
 } 
 ```
 
-Dengan tiga kelas ini, anda akan menggayakan mesej secara berbeza bergantung pada asalnya, sama ada dari pembantu atau anda sebagai pengguna. Jika anda ingin mendapatkan inspirasi, lihat folder `solution/frontend/styles.css`.
+Dengan tiga kelas ini, anda akan menggayakan mesej secara berbeza bergantung pada asalnya, sama ada daripada pembantu atau anda sebagai pengguna. Jika anda ingin mendapatkan inspirasi, lihat folder `solution/frontend/styles.css`.
 
 ### Tukar Base Url
 
 Ada satu perkara di sini yang belum kita tetapkan iaitu `BASE_URL`, ini tidak diketahui sehingga backend anda dimulakan. Untuk menetapkannya:
 
-- Jika anda menjalankan API secara tempatan, ia harus ditetapkan kepada sesuatu seperti `http://localhost:5000`.
-- Jika dijalankan dalam Codespaces, ia mungkin kelihatan seperti "[name]app.github.dev".
+- Jika anda menjalankan API secara tempatan, ia sepatutnya ditetapkan kepada sesuatu seperti `http://localhost:5000`.
+- Jika dijalankan dalam Codespaces, ia sepatutnya kelihatan seperti "[name]app.github.dev".
 
 ## Tugasan
 
@@ -373,7 +367,7 @@ Cuba ubah personaliti pembantu AI.
 
 ### Untuk Python
 
-Apabila anda memanggil `call_llm` dalam *api.py*, anda boleh menukar argumen kedua kepada apa sahaja yang anda mahu, contohnya:
+Apabila anda memanggil `call_llm` dalam *api.py*, anda boleh menukar argumen kedua kepada apa yang anda mahu, contohnya:
 
 ```python
 call_llm(message, "You are Captain Picard")
@@ -387,7 +381,7 @@ Ubah juga CSS dan teks mengikut kesukaan anda, jadi buat perubahan dalam *index.
 
 Hebat, anda telah belajar dari awal cara mencipta pembantu peribadi menggunakan AI. Kami telah melakukannya menggunakan Model GitHub, backend dalam Python, dan frontend dalam HTML, CSS, dan JavaScript.
 
-## Tetapkan dengan Codespaces
+## Sediakan dengan Codespaces
 
 - Navigasi ke: [Repo Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
 - Cipta daripada templat (pastikan anda log masuk ke GitHub) di sudut kanan atas:
@@ -398,9 +392,9 @@ Hebat, anda telah belajar dari awal cara mencipta pembantu peribadi menggunakan 
 
     ![Cipta codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.ms.png)
 
-    Ini akan memulakan persekitaran yang kini boleh anda gunakan.
+    Ini sepatutnya memulakan persekitaran yang kini boleh anda gunakan.
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

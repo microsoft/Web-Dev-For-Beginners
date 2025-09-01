@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:39:23+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T17:03:03+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "hr"
 }
@@ -13,29 +13,23 @@ Ovaj chat projekt pokazuje kako izraditi Chat Asistenta koristeći GitHub modele
 
 Evo kako izgleda gotov projekt:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Chat aplikacija" width="600">
-</div>
+![Chat aplikacija](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.hr.png)
 
-Malo konteksta, izrada chat asistenata pomoću generativne umjetne inteligencije odličan je način za početak učenja o AI-ju. Tijekom ove lekcije naučit ćete kako integrirati generativnu AI u web aplikaciju. Krenimo.
+Malo konteksta, izrada chat asistenata pomoću generativne umjetne inteligencije odličan je način za početak učenja o AI-ju. Tijekom ove lekcije naučit ćete kako integrirati generativnu AI u web aplikaciju, pa krenimo.
 
 ## Povezivanje s generativnom AI
 
 Za backend koristimo GitHub modele. To je odlična usluga koja vam omogućuje korištenje AI-ja besplatno. Posjetite njihov playground i preuzmite kod koji odgovara vašem odabranom jeziku za backend. Evo kako to izgleda na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.hr.png)
 
-Kao što smo rekli, odaberite karticu "Code" i svoj runtime.
+Kao što smo rekli, odaberite karticu "Code" i svoj odabrani runtime.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
-</div>
+![Odabir na playgroundu](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.hr.png)
 
 ### Korištenje Pythona
 
-U ovom slučaju odabiremo Python, što znači da ćemo koristiti ovaj kod:
+U ovom slučaju odabiremo Python, što znači da biramo ovaj kod:
 
 ```python
 """Run this model in Python
@@ -72,7 +66,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Očistimo ovaj kod kako bi bio ponovno upotrebljiv:
+Očistimo ovaj kod malo kako bi bio ponovno upotrebljiv:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -108,7 +102,7 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Izlaganje putem Web API-ja
 
-Odlično, završili smo AI dio, sada pogledajmo kako to možemo integrirati u Web API. Za Web API koristimo Flask, ali bilo koji web framework bi trebao biti dobar. Pogledajmo kod za to:
+Odlično, završili smo AI dio, sada pogledajmo kako to možemo integrirati u Web API. Za Web API koristimo Flask, ali bilo koji web okvir bi trebao biti dobar. Pogledajmo kod za to:
 
 ### Korištenje Pythona
 
@@ -145,7 +139,7 @@ Ovdje kreiramo Flask API i definiramo zadanu rutu "/" i "/chat". Potonja je nami
 
 Za integraciju *llm.py* trebamo učiniti sljedeće:
 
-- Uvesti funkciju `call_llm`:
+- Importirati funkciju `call_llm`:
 
    ```python
    from llm import call_llm
@@ -167,7 +161,7 @@ Za integraciju *llm.py* trebamo učiniti sljedeće:
       })
    ```
 
-   Ovdje parsiramo dolazni zahtjev kako bismo dohvatili svojstvo `message` iz JSON tijela. Nakon toga pozivamo LLM s ovim pozivom:
+   Ovdje analiziramo dolazni zahtjev kako bismo dohvatili svojstvo `message` iz JSON tijela. Nakon toga pozivamo LLM s ovim pozivom:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -178,7 +172,7 @@ Za integraciju *llm.py* trebamo učiniti sljedeće:
    })
    ```
 
-Odlično, sada smo završili što je potrebno.
+Odlično, sada smo napravili što je potrebno.
 
 ## Konfiguriranje CORS-a
 
@@ -195,7 +189,7 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Trenutno je postavljeno da dopušta "*" što znači sve izvore, što je pomalo nesigurno. Trebali bismo to ograničiti kada idemo u produkciju.
+Trenutno je postavljeno da dopušta "*" što znači sve izvore, a to nije baš sigurno. Trebali bismo to ograničiti kada idemo u produkciju.
 
 ## Pokretanje projekta
 
@@ -253,7 +247,7 @@ Počnimo s **index.html**:
 </html>    
 ```
 
-Ovo gore je apsolutni minimum potreban za podršku chat prozoru, jer se sastoji od tekstualnog područja gdje će se prikazivati poruke, unosa za upisivanje poruke i gumba za slanje poruke na backend. Pogledajmo sljedeće JavaScript u *app.js*
+Ovo gore je apsolutni minimum potreban za podršku chat prozora, jer se sastoji od tekstualnog područja gdje će se prikazivati poruke, polja za unos gdje ćete upisivati poruku i gumba za slanje poruke na backend. Pogledajmo JavaScript u *app.js*
 
 **app.js**
 
@@ -317,7 +311,7 @@ Prođimo kroz kod po sekcijama:
 - 3) `appendMessage` pomaže dodati odgovore kao i ono što vi kao korisnik upišete.
 - 4) Ovdje slušamo događaj submit i na kraju čitamo polje za unos, stavljamo korisnikovu poruku u tekstualno područje, pozivamo API i prikazujemo odgovor u tekstualnom području.
 
-Pogledajmo sljedeće stiliziranje, ovdje možete biti kreativni i napraviti da izgleda kako želite, ali evo nekih prijedloga:
+Pogledajmo sada stiliziranje, ovdje možete biti kreativni i napraviti izgled kakav želite, ali evo nekih prijedloga:
 
 **styles.css**
 
@@ -338,14 +332,14 @@ Pogledajmo sljedeće stiliziranje, ovdje možete biti kreativni i napraviti da i
 } 
 ```
 
-S ove tri klase stilizirat ćete poruke različito ovisno o tome dolaze li od asistenta ili od vas kao korisnika. Ako želite inspiraciju, pogledajte mapu `solution/frontend/styles.css`.
+S ove tri klase stilizirat ćete poruke različito ovisno o tome dolaze li od asistenta ili od vas kao korisnika. Ako trebate inspiraciju, pogledajte mapu `solution/frontend/styles.css`.
 
 ### Promjena osnovnog URL-a
 
 Postoji jedna stvar koju ovdje nismo postavili, a to je `BASE_URL`. Ovo nije poznato dok vaš backend ne bude pokrenut. Da biste ga postavili:
 
-- Ako pokrećete API lokalno, trebao bi biti postavljen na nešto poput `http://localhost:5000`.
-- Ako ga pokrećete u Codespaces, trebao bi izgledati otprilike ovako: "[name]app.github.dev".
+- Ako pokrećete API lokalno, treba biti postavljen na nešto poput `http://localhost:5000`.
+- Ako pokrećete u Codespaces, treba izgledati nešto poput "[name]app.github.dev".
 
 ## Zadatak
 
@@ -361,7 +355,7 @@ project/
     ...
 ```
 
-Kopirajte sadržaj iz gore navedenih uputa, ali slobodno prilagodite prema vlastitim željama.
+Kopirajte sadržaj prema gore navedenim uputama, ali slobodno prilagodite prema vlastitim željama.
 
 ## Rješenje
 
@@ -381,11 +375,11 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Promijenite također CSS i tekst prema vlastitim željama, tako da napravite izmjene u *index.html* i *styles.css*.
+Promijenite također CSS i tekst prema vlastitim željama, napravite promjene u *index.html* i *styles.css*.
 
 ## Sažetak
 
-Odlično, naučili ste od nule kako kreirati osobnog asistenta koristeći AI. To smo učinili koristeći GitHub modele, backend u Pythonu i frontend u HTML-u, CSS-u i JavaScriptu.
+Odlično, naučili ste od nule kako stvoriti osobnog asistenta koristeći AI. To smo učinili koristeći GitHub modele, backend u Pythonu i frontend u HTML-u, CSS-u i JavaScriptu.
 
 ## Postavljanje s Codespaces
 
@@ -403,4 +397,4 @@ Odlično, naučili ste od nule kako kreirati osobnog asistenta koristeći AI. To
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.

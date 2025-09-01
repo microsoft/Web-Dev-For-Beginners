@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:34:35+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:58:51+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "id"
 }
@@ -11,31 +11,25 @@ CO_OP_TRANSLATOR_METADATA:
 
 Proyek chat ini menunjukkan cara membangun Asisten Chat menggunakan GitHub Models.
 
-Berikut adalah tampilan akhir dari proyek ini:
+Berikut adalah tampilan proyek yang sudah selesai:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Aplikasi Chat" width="600">
-</div>
+![Aplikasi Chat](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.id.png)
 
 Sebagai konteks, membangun asisten chat menggunakan AI generatif adalah cara yang bagus untuk mulai belajar tentang AI. Dalam pelajaran ini, Anda akan belajar cara mengintegrasikan AI generatif ke dalam aplikasi web. Mari kita mulai.
 
 ## Menghubungkan ke AI Generatif
 
-Untuk backend, kita menggunakan GitHub Models. Ini adalah layanan hebat yang memungkinkan Anda menggunakan AI secara gratis. Kunjungi playground-nya dan ambil kode yang sesuai dengan bahasa backend pilihan Anda. Berikut adalah tampilannya di [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Untuk backend, kita menggunakan GitHub Models. Ini adalah layanan yang luar biasa yang memungkinkan Anda menggunakan AI secara gratis. Kunjungi playground-nya dan ambil kode yang sesuai dengan bahasa backend pilihan Anda. Berikut adalah tampilan [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.id.png)
 
 Seperti yang disebutkan, pilih tab "Code" dan runtime pilihan Anda.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="pilihan playground" with="600">
-</div>
+![Pilihan Playground](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.id.png)
 
 ### Menggunakan Python
 
-Dalam kasus ini, kita memilih Python, yang berarti kita akan menggunakan kode berikut:
+Dalam kasus ini, kita memilih Python, yang berarti kita menggunakan kode berikut:
 
 ```python
 """Run this model in Python
@@ -100,7 +94,7 @@ Dengan fungsi `call_llm` ini, kita dapat mengambil prompt dan sistem prompt, lal
 
 ### Kustomisasi Asisten AI
 
-Jika Anda ingin menyesuaikan asisten AI, Anda dapat menentukan bagaimana perilakunya dengan mengisi sistem prompt seperti ini:
+Jika Anda ingin mengkustomisasi asisten AI, Anda dapat menentukan bagaimana Anda ingin asisten tersebut berperilaku dengan mengisi sistem prompt seperti ini:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -108,7 +102,7 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Mengeksposnya melalui Web API
 
-Bagus, bagian AI sudah selesai. Sekarang mari kita lihat bagaimana kita dapat mengintegrasikannya ke dalam Web API. Untuk Web API, kita memilih menggunakan Flask, tetapi framework web apa pun seharusnya bisa digunakan. Berikut adalah kodenya:
+Bagus, bagian AI sudah selesai. Sekarang mari kita lihat bagaimana kita dapat mengintegrasikannya ke dalam Web API. Untuk Web API, kita memilih menggunakan Flask, tetapi framework web lainnya juga bisa digunakan. Berikut adalah kode untuk itu:
 
 ### Menggunakan Python
 
@@ -141,7 +135,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Di sini, kita membuat API Flask dan mendefinisikan rute default "/" dan "/chat". Rute yang terakhir dimaksudkan untuk digunakan oleh frontend kita untuk mengirimkan pertanyaan.
+Di sini, kita membuat API Flask dan mendefinisikan rute default "/" dan "/chat". Rute "/chat" dimaksudkan untuk digunakan oleh frontend kita untuk mengirimkan pertanyaan.
 
 Untuk mengintegrasikan *llm.py*, berikut yang perlu kita lakukan:
 
@@ -195,7 +189,7 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Saat ini, pengaturannya memungkinkan "*" yang berarti semua origin, dan ini agak tidak aman. Kita harus membatasinya saat masuk ke produksi.
+Saat ini, pengaturan ini memungkinkan "*" yang berarti semua asal, dan ini agak tidak aman. Kita harus membatasinya saat masuk ke produksi.
 
 ## Menjalankan Proyek Anda
 
@@ -203,7 +197,7 @@ Untuk menjalankan proyek Anda, Anda perlu memulai backend terlebih dahulu, lalu 
 
 ### Menggunakan Python
 
-Baik, jadi kita memiliki *llm.py* dan *api.py*. Bagaimana kita membuat ini bekerja dengan backend? Ada dua hal yang perlu kita lakukan:
+Baik, kita memiliki *llm.py* dan *api.py*. Bagaimana kita membuat ini bekerja dengan backend? Ada dua hal yang perlu kita lakukan:
 
 - Instal dependensi:
 
@@ -215,7 +209,7 @@ Baik, jadi kita memiliki *llm.py* dan *api.py*. Bagaimana kita membuat ini beker
    pip install openai flask flask-cors openai
    ```
 
-- Jalankan API
+- Mulai API
 
    ```sh
    python api.py
@@ -225,7 +219,7 @@ Baik, jadi kita memiliki *llm.py* dan *api.py*. Bagaimana kita membuat ini beker
 
 ### Mengerjakan Frontend
 
-Sekarang kita memiliki API yang berjalan, mari kita buat frontend untuk ini. Frontend minimum yang akan kita tingkatkan secara bertahap. Di folder *frontend*, buat file berikut:
+Sekarang kita memiliki API yang berjalan, mari kita buat frontend untuk ini. Frontend minimum yang akan kita tingkatkan secara bertahap. Di folder *frontend*, buat hal berikut:
 
 ```text
 backend/
@@ -253,7 +247,7 @@ Mari kita mulai dengan **index.html**:
 </html>    
 ```
 
-Di atas adalah minimum absolut yang Anda butuhkan untuk mendukung jendela chat, karena terdiri dari textarea tempat pesan akan dirender, input untuk mengetik pesan, dan tombol untuk mengirim pesan Anda ke backend. Selanjutnya, mari kita lihat JavaScript di *app.js*
+Di atas adalah minimum absolut yang Anda butuhkan untuk mendukung jendela chat, karena terdiri dari textarea tempat pesan akan ditampilkan, input untuk mengetik pesan, dan tombol untuk mengirim pesan Anda ke backend. Selanjutnya, mari kita lihat JavaScript di *app.js*.
 
 **app.js**
 
@@ -310,14 +304,14 @@ Di atas adalah minimum absolut yang Anda butuhkan untuk mendukung jendela chat, 
 })();
 ```
 
-Mari kita bahas kode ini per bagian:
+Mari kita bahas kode per bagian:
 
 - 1) Di sini kita mendapatkan referensi ke semua elemen yang akan kita gunakan nanti dalam kode.
-- 2) Pada bagian ini, kita membuat fungsi yang menggunakan metode bawaan `fetch` untuk memanggil backend kita.
+- 2) Di bagian ini, kita membuat fungsi yang menggunakan metode bawaan `fetch` untuk memanggil backend kita.
 - 3) `appendMessage` membantu menambahkan respons serta apa yang Anda ketik sebagai pengguna.
-- 4) Di sini kita mendengarkan event submit, membaca input field, menempatkan pesan pengguna di textarea, memanggil API, dan merender respons di textarea.
+- 4) Di sini kita mendengarkan event submit, membaca input field, menempatkan pesan pengguna di textarea, memanggil API, dan menampilkan respons di textarea.
 
-Selanjutnya, mari kita lihat styling. Di sinilah Anda bisa berkreasi dan membuatnya terlihat seperti yang Anda inginkan, tetapi berikut adalah beberapa saran:
+Selanjutnya, mari kita lihat styling. Di sini Anda bisa berkreasi dan membuatnya sesuai keinginan Anda, tetapi berikut adalah beberapa saran:
 
 **styles.css**
 
@@ -342,10 +336,10 @@ Dengan tiga kelas ini, Anda akan menata pesan secara berbeda tergantung dari man
 
 ### Ubah Base Url
 
-Ada satu hal yang belum kita atur, yaitu `BASE_URL`. Ini tidak diketahui sampai backend Anda dijalankan. Untuk mengaturnya:
+Ada satu hal yang belum kita atur, yaitu `BASE_URL`. Ini tidak diketahui sampai backend Anda berjalan. Untuk mengaturnya:
 
 - Jika Anda menjalankan API secara lokal, itu harus diatur ke sesuatu seperti `http://localhost:5000`.
-- Jika dijalankan di Codespaces, itu akan terlihat seperti "[name]app.github.dev".
+- Jika dijalankan di Codespaces, itu harus terlihat seperti "[name]app.github.dev".
 
 ## Tugas
 
@@ -389,7 +383,7 @@ Bagus, Anda telah belajar dari awal cara membuat asisten pribadi menggunakan AI.
 
 ## Pengaturan dengan Codespaces
 
-- Navigasikan ke: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Navigasikan ke: [Repo Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
 - Buat dari template (pastikan Anda sudah login ke GitHub) di pojok kanan atas:
 
     ![Buat dari template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.id.png)
@@ -403,4 +397,4 @@ Bagus, Anda telah belajar dari awal cara membuat asisten pribadi menggunakan AI.
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

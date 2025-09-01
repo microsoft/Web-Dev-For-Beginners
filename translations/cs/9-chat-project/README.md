@@ -1,37 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:37:08+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T17:00:47+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "cs"
 }
 -->
 # Chat projekt
 
-Tento chat projekt ukazuje, jak vytvořit Chat Assistenta pomocí GitHub Models.
+Tento chat projekt ukazuje, jak vytvořit Chat Asistenta pomocí GitHub Models.
 
 Takto vypadá hotový projekt:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Chat app" width="600">
-</div>
+![Chat aplikace](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.cs.png)
 
-Trochu kontextu: vytváření chatovacích asistentů pomocí generativní AI je skvělý způsob, jak začít učit se o AI. V této lekci se naučíte, jak integrovat generativní AI do webové aplikace. Pojďme začít.
+Trocha kontextu: vytváření chatovacích asistentů pomocí generativní AI je skvělý způsob, jak začít s učením o AI. V této lekci se naučíte, jak integrovat generativní AI do webové aplikace. Pojďme začít.
 
-## Připojení k generativní AI
+## Připojení ke generativní AI
 
-Pro backend používáme GitHub Models. Je to skvělá služba, která vám umožňuje používat AI zdarma. Přejděte na její playground a získejte kód odpovídající vašemu zvolenému backendovému jazyku. Takto to vypadá na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Pro backend používáme GitHub Models. Je to skvělá služba, která vám umožňuje používat AI zdarma. Přejděte na její playground a získejte kód odpovídající vašemu zvolenému backendovému jazyku. Takto vypadá [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.cs.png)
 
-Jak jsme zmínili, vyberte záložku "Code" a svůj zvolený runtime.
+Jak jsme zmínili, vyberte záložku "Code" a váš zvolený runtime.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
-</div>
+![Výběr v playgroundu](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.cs.png)
 
 ### Použití Pythonu
 
@@ -72,7 +66,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Trochu upravme tento kód, aby byl znovu použitelný:
+Trochu tento kód upravíme, aby byl znovu použitelný:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -96,7 +90,7 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-S touto funkcí `call_llm` nyní můžeme vzít prompt a systémový prompt a funkce vrátí výsledek.
+S touto funkcí `call_llm` nyní můžeme zadat prompt a systémový prompt a funkce vrátí výsledek.
 
 ### Přizpůsobení AI asistenta
 
@@ -108,7 +102,7 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Zpřístupnění přes Web API
 
-Skvělé, máme hotovou AI část, podívejme se, jak ji můžeme integrovat do Web API. Pro Web API jsme se rozhodli použít Flask, ale jakýkoli webový framework by měl být v pořádku. Podívejme se na kód:
+Skvělé, AI část máme hotovou, podívejme se, jak ji můžeme integrovat do Web API. Pro Web API jsme zvolili Flask, ale jakýkoli webový framework by měl být v pořádku. Podívejme se na kód:
 
 ### Použití Pythonu
 
@@ -141,9 +135,9 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Zde vytvoříme Flask API a definujeme výchozí trasu "/" a "/chat". Druhá je určena pro použití naším frontendem k předávání otázek.
+Zde vytvoříme Flask API a definujeme výchozí trasu "/" a "/chat". Druhá trasa je určena pro použití naším frontendem k předávání otázek.
 
-Pro integraci *llm.py* potřebujeme udělat následující:
+Pro integraci *llm.py* je třeba udělat následující:
 
 - Importovat funkci `call_llm`:
 
@@ -167,7 +161,7 @@ Pro integraci *llm.py* potřebujeme udělat následující:
       })
    ```
 
-   Zde analyzujeme příchozí požadavek, abychom získali vlastnost `message` z JSON těla. Poté zavoláme LLM tímto způsobem:
+   Zde zpracujeme příchozí požadavek, abychom získali vlastnost `message` z JSON těla. Poté zavoláme LLM tímto způsobem:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -178,15 +172,15 @@ Pro integraci *llm.py* potřebujeme udělat následující:
    })
    ```
 
-Skvělé, nyní máme hotovo, co jsme potřebovali.
+Skvělé, nyní máme vše, co potřebujeme.
 
 ## Nastavení Cors
 
-Je třeba zmínit, že jsme nastavili něco jako CORS, sdílení zdrojů mezi různými originy. To znamená, že protože náš backend a frontend budou běžet na různých portech, musíme umožnit frontendu volat backend.
+Je třeba zmínit, že jsme nastavili něco jako CORS, sdílení zdrojů mezi různými doménami. To znamená, že protože náš backend a frontend poběží na různých portech, musíme povolit frontendu volat backend.
 
 ### Použití Pythonu
 
-V *api.py* je kód, který to nastavuje:
+V souboru *api.py* je kód, který toto nastavuje:
 
 ```python
 from flask_cors import CORS
@@ -195,7 +189,7 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Momentálně je nastaveno na povolení "*" což znamená všechny originy, což je trochu nebezpečné. Měli bychom to omezit, jakmile půjdeme do produkce.
+Momentálně je nastaveno povolení pro všechny domény "*", což je trochu nebezpečné. Měli bychom to omezit, jakmile přejdeme do produkce.
 
 ## Spuštění projektu
 
@@ -203,7 +197,7 @@ Pro spuštění projektu je třeba nejprve spustit backend a poté frontend.
 
 ### Použití Pythonu
 
-Dobře, máme *llm.py* a *api.py*, jak to můžeme zprovoznit s backendem? Potřebujeme udělat dvě věci:
+Dobře, máme *llm.py* a *api.py*. Jak to můžeme zprovoznit s backendem? Potřebujeme udělat dvě věci:
 
 - Nainstalovat závislosti:
 
@@ -215,17 +209,17 @@ Dobře, máme *llm.py* a *api.py*, jak to můžeme zprovoznit s backendem? Potř
    pip install openai flask flask-cors openai
    ```
 
-- Spustit API
+- Spustit API:
 
    ```sh
    python api.py
    ```
 
-   Pokud jste v Codespaces, musíte přejít na Ports v dolní části editoru, kliknout pravým tlačítkem na něj a vybrat "Port Visibility" a zvolit "Public".
+   Pokud jste v Codespaces, musíte přejít do sekce Ports v dolní části editoru, kliknout pravým tlačítkem a vybrat "Port Visibility" a zvolit "Public".
 
 ### Práce na frontendu
 
-Nyní, když máme API spuštěné, vytvoříme frontend. Minimální frontend, který budeme postupně vylepšovat. Ve složce *frontend* vytvořte následující:
+Nyní, když máme API spuštěné, vytvoříme frontend. Začneme s minimálním frontendem, který budeme postupně vylepšovat. Ve složce *frontend* vytvořte následující:
 
 ```text
 backend/
@@ -253,7 +247,7 @@ Začněme s **index.html**:
 </html>    
 ```
 
-Toto je absolutní minimum, které potřebujete k podpoře chatovacího okna, protože obsahuje textové pole, kde se budou zobrazovat zprávy, vstupní pole pro psaní zprávy a tlačítko pro odeslání zprávy na backend. Podívejme se na JavaScript v *app.js*
+Toto je absolutní minimum potřebné pro podporu chatovacího okna. Obsahuje textové pole, kde se zobrazují zprávy, vstupní pole pro psaní zpráv a tlačítko pro odeslání zprávy na backend. Podívejme se nyní na JavaScript v *app.js*.
 
 **app.js**
 
@@ -310,14 +304,14 @@ Toto je absolutní minimum, které potřebujete k podpoře chatovacího okna, pr
 })();
 ```
 
-Projděme si kód po sekcích:
+Projděme si kód po částech:
 
-- 1) Zde získáme referenci na všechny naše prvky, na které budeme později odkazovat v kódu.
-- 2) V této sekci vytvoříme funkci, která používá vestavěnou metodu `fetch` pro volání našeho backendu.
-- 3) `appendMessage` pomáhá přidávat odpovědi i to, co jako uživatel napíšete.
-- 4) Zde posloucháme událost submit, čteme vstupní pole, umístíme zprávu uživatele do textového pole, zavoláme API a zobrazíme odpověď v textovém poli.
+- 1) Získáme referenci na všechny prvky, které budeme později v kódu používat.
+- 2) Vytvoříme funkci, která pomocí vestavěné metody `fetch` volá náš backend.
+- 3) `appendMessage` pomáhá přidávat odpovědi i zprávy, které uživatel napíše.
+- 4) Posloucháme událost odeslání, přečteme vstupní pole, umístíme uživatelovu zprávu do textového pole, zavoláme API a zobrazíme odpověď v textovém poli.
 
-Podívejme se na stylování, zde můžete být opravdu kreativní a vytvořit vzhled podle svých představ, ale zde jsou některé návrhy:
+Podívejme se na stylování, kde se můžete opravdu vyřádit. Zde je několik návrhů:
 
 **styles.css**
 
@@ -338,18 +332,18 @@ Podívejme se na stylování, zde můžete být opravdu kreativní a vytvořit v
 } 
 ```
 
-S těmito třemi třídami budete stylovat zprávy různě podle toho, odkud pocházejí – od asistenta nebo od vás jako uživatele. Pokud chcete inspiraci, podívejte se do složky `solution/frontend/styles.css`.
+S těmito třemi třídami budete stylovat zprávy odlišně podle toho, zda pocházejí od asistenta nebo od uživatele. Pokud hledáte inspiraci, podívejte se do složky `solution/frontend/styles.css`.
 
-### Změna Base Url
+### Změna Base URL
 
-Jedna věc, kterou jsme zde nenastavili, byla `BASE_URL`, která není známa, dokud není backend spuštěn. Pro nastavení:
+Jedna věc, kterou jsme zde nenastavili, je `BASE_URL`. Ta není známa, dokud není backend spuštěn. Pro nastavení:
 
 - Pokud spouštíte API lokálně, mělo by být nastaveno na něco jako `http://localhost:5000`.
 - Pokud běží v Codespaces, mělo by vypadat jako "[name]app.github.dev".
 
-## Úkol
+## Zadání
 
-Vytvořte vlastní složku *project* s obsahem takto:
+Vytvořte si vlastní složku *project* s obsahem takto:
 
 ```text
 project/
@@ -361,7 +355,7 @@ project/
     ...
 ```
 
-Zkopírujte obsah z toho, co bylo uvedeno výše, ale klidně si jej přizpůsobte podle svých představ.
+Zkopírujte obsah podle výše uvedených pokynů, ale klidně si jej přizpůsobte podle svého.
 
 ## Řešení
 
@@ -373,7 +367,7 @@ Zkuste změnit osobnost AI asistenta.
 
 ### Pro Python
 
-Když voláte `call_llm` v *api.py*, můžete změnit druhý argument na to, co chcete, například:
+Když voláte `call_llm` v *api.py*, můžete změnit druhý argument na cokoli chcete, například:
 
 ```python
 call_llm(message, "You are Captain Picard")
@@ -381,26 +375,26 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Změňte také CSS a text podle svých představ, tedy proveďte změny v *index.html* a *styles.css*.
+Změňte také CSS a text podle svého vkusu, tedy proveďte změny v *index.html* a *styles.css*.
 
 ## Shrnutí
 
-Skvělé, naučili jste se od začátku, jak vytvořit osobního asistenta pomocí AI. Udělali jsme to pomocí GitHub Models, backendu v Pythonu a frontendu v HTML, CSS a JavaScriptu.
+Skvělé, naučili jste se od základů, jak vytvořit osobního asistenta pomocí AI. Použili jsme GitHub Models, backend v Pythonu a frontend v HTML, CSS a JavaScriptu.
 
 ## Nastavení s Codespaces
 
 - Přejděte na: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Vytvořte z šablony (ujistěte se, že jste přihlášeni na GitHub) v pravém horním rohu:
+- Vytvořte z šablony (ujistěte se, že jste přihlášeni do GitHubu) v pravém horním rohu:
 
-    ![Create from template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.cs.png)
+    ![Vytvořit ze šablony](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.cs.png)
 
 - Jakmile jste ve svém repozitáři, vytvořte Codespace:
 
-    ![Create codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.cs.png)
+    ![Vytvořit Codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.cs.png)
 
-    To by mělo spustit prostředí, se kterým nyní můžete pracovat.
+    Tím se spustí prostředí, se kterým nyní můžete pracovat.
 
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádné nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

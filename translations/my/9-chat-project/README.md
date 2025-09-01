@@ -1,41 +1,35 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:40:19+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T17:03:47+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "my"
 }
 -->
 # Chat project
 
-ဒီ chat project က GitHub Models ကို အသုံးပြုပြီး Chat Assistant တစ်ခုကို ဘယ်လိုတည်ဆောက်ရမလဲဆိုတာ ပြသပေးမှာဖြစ်ပါတယ်။
+ဒီ chat project က GitHub Models ကို အသုံးပြုပြီး Chat Assistant တစ်ခုကို ဘယ်လိုတည်ဆောက်ရမလဲဆိုတာ ပြသပေးပါတယ်။
 
-ဒီ project ရဲ့ အဆုံးသတ်ပုံက ဒီလိုပါ:
+အဆုံးသတ် project ရဲ့ ရုပ်ပုံက ဒီလိုပဲဖြစ်ပါတယ်:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Chat app" width="600">
-</div>
+![Chat app](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.my.png)
 
-အနည်းငယ်ရှင်းပြရမယ်ဆိုရင်၊ generative AI ကို အသုံးပြုပြီး Chat assistants တစ်ခုတည်ဆောက်တာက AI ကို စတင်လေ့လာဖို့အတွက် အကောင်းဆုံးနည်းလမ်းတစ်ခုဖြစ်ပါတယ်။ ဒီသင်ခန်းစာတစ်ခုလုံးအတွင်းမှာ generative AI ကို web app ထဲမှာ ဘယ်လိုပေါင်းစည်းရမလဲဆိုတာကို သင်လေ့လာရမှာဖြစ်ပါတယ်။ စလိုက်ကြရအောင်။
+အနည်းငယ် context ပေးရမယ်ဆိုရင်၊ generative AI ကို အသုံးပြုပြီး Chat assistants တစ်ခုကို တည်ဆောက်တာက AI ကို စတင်လေ့လာဖို့အတွက် အကောင်းဆုံးနည်းလမ်းတစ်ခုဖြစ်ပါတယ်။ ဒီသင်ခန်းစာတစ်ခုလုံးအတွင်းမှာ generative AI ကို web app အတွင်းမှာ ပေါင်းစည်းအသုံးပြုနည်းကို သင်ယူရမှာဖြစ်ပါတယ်။ စတင်လိုက်ကြစို့။
 
-## Generative AI နဲ့ ချိတ်ဆက်ခြင်း
+## Generative AI ကို ချိတ်ဆက်ခြင်း
 
-Backend အတွက်တော့ GitHub Models ကို အသုံးပြုထားပါတယ်။ ဒါက AI ကို အခမဲ့အသုံးပြုနိုင်စေတဲ့ ဝန်ဆောင်မှုကောင်းတစ်ခုဖြစ်ပါတယ်။ သူ့ရဲ့ playground ကို သွားပြီး သင့်ရဲ့ backend language နဲ့ ကိုက်ညီတဲ့ code ကို ရယူပါ။ [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) မှာ ဒီလိုပုံစံနဲ့ တွေ့ရပါမယ်။
+Backend အတွက် GitHub Models ကို အသုံးပြုထားပါတယ်။ AI ကို အခမဲ့အသုံးပြုနိုင်တဲ့ အကောင်းဆုံးဝန်ဆောင်မှုတစ်ခုဖြစ်ပါတယ်။ သူ့ရဲ့ playground ကို သွားပြီး သင့်ရဲ့ backend language ရွေးချယ်မှုနဲ့ ကိုက်ညီတဲ့ code ကို ရယူပါ။ GitHub Models Playground မှာ ဒီလိုပုံစံဖြစ်ပါတယ် [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.my.png)
 
-"Code" tab နဲ့ သင့်ရဲ့ runtime ကို ရွေးချယ်ပါ။
+အဆိုပါ "Code" tab ကို ရွေးချယ်ပြီး သင့်ရဲ့ runtime ကို ရွေးပါ။
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
-</div>
+![Playground choice](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.my.png)
 
 ### Python ကို အသုံးပြုခြင်း
 
-ဒီအခါမှာတော့ Python ကို ရွေးချယ်ပြီး ဒီ code ကို ရယူပါ:
+ဒီအခါမှာ Python ကို ရွေးချယ်ပြီး ဒီ code ကို ရွေးပါ:
 
 ```python
 """Run this model in Python
@@ -72,7 +66,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-ဒီ code ကို နည်းနည်းသန့်ရှင်းအောင် ပြင်ဆင်ပြီး အသုံးပြုနိုင်အောင်လုပ်ပါ:
+ဒီ code ကို အသုံးပြုနိုင်အောင် နည်းနည်းသန့်စင်လိုက်ရအောင်:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -96,19 +90,19 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-`call_llm` ဆိုတဲ့ function နဲ့ prompt တစ်ခုနဲ့ system prompt တစ်ခုကို ထည့်ပြီး ရလဒ်ကို ပြန်ပေးနိုင်ပါပြီ။
+ဒီ `call_llm` function နဲ့ prompt တစ်ခုနဲ့ system prompt တစ်ခုကို ထည့်ပြီး function က အဖြေကို ပြန်ပေးပါလိမ့်မယ်။
 
 ### AI Assistant ကို Customize လုပ်ခြင်း
 
-AI assistant ကို သင့်လိုအပ်ချက်အတိုင်း ပြင်ဆင်ချင်ရင် system prompt ကို ဒီလိုဖြည့်စွက်နိုင်ပါတယ်:
+AI assistant ကို သင့်လိုအပ်ချက်အတိုင်း ပြင်ဆင်ချင်ရင် system prompt ကို ဒီလိုပုံစံဖြင့် ဖြည့်စွက်နိုင်ပါတယ်:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Web API မှတစ်ဆင့် ထုတ်ဖော်ခြင်း
+## Web API မှတဆင့် ထုတ်ဖော်ခြင်း
 
-AI အပိုင်းကို ပြီးဆုံးသွားပြီဆိုရင်၊ Web API ထဲမှာ ဘယ်လိုပေါင်းစည်းရမလဲဆိုတာ ကြည့်ကြရအောင်။ Web API အတွက် Flask ကို အသုံးပြုထားပေမယ့်၊ ဘယ် web framework မဆို အသုံးပြုနိုင်ပါတယ်။ Code ကို ကြည့်ကြရအောင်:
+အကောင်းဆုံးပါပြီ၊ AI အပိုင်းကို ပြီးမြောက်သွားပြီ၊ အခု Web API အတွင်းမှာ ပေါင်းစည်းပေးရအောင်။ Web API အတွက် Flask ကို ရွေးချယ်ထားပါတယ်၊ ဒါပေမယ့် ဘယ် web framework မဆို အသုံးပြုနိုင်ပါတယ်။ ဒီ code ကို ကြည့်လိုက်ရအောင်:
 
 ### Python ကို အသုံးပြုခြင်း
 
@@ -141,7 +135,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-ဒီမှာ Flask API တစ်ခုကို ဖန်တီးပြီး "/" နဲ့ "/chat" ဆိုတဲ့ route နှစ်ခုကို သတ်မှတ်ထားပါတယ်။ "/chat" ကတော့ frontend ကနေ မေးခွန်းတွေကို ပေးပို့ဖို့အတွက် ဖြစ်ပါတယ်။
+ဒီမှာ flask API တစ်ခုကို ဖန်တီးပြီး "/" နဲ့ "/chat" ဆိုတဲ့ default route ကို သတ်မှတ်ထားပါတယ်။ နောက်ဆုံး route က frontend ကနေ backend ကို မေးခွန်းတွေ ပေးပို့ဖို့အတွက် ဖြစ်ပါတယ်။
 
 *llm.py* ကို ပေါင်းစည်းဖို့ ဒီလိုလုပ်ရပါမယ်:
 
@@ -152,7 +146,7 @@ if __name__ == "__main__":
    from flask import Flask, request
    ```
 
-- "/chat" route ထဲမှာ ခေါ်ပါ:
+- "/chat" route မှာ function ကို ခေါ်ပါ:
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -167,7 +161,7 @@ if __name__ == "__main__":
       })
    ```
 
-   ဒီမှာ incoming request ကို parse လုပ်ပြီး JSON body ထဲက `message` property ကို ရယူပါတယ်။ ထို့နောက် LLM ကို ဒီလိုခေါ်ပါတယ်:
+   ဒီမှာ JSON body မှ message property ကို ရယူဖို့ incoming request ကို parse လုပ်ပါတယ်။ ထို့နောက် LLM ကို ဒီလိုခေါ်ပါတယ်:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -178,15 +172,15 @@ if __name__ == "__main__":
    })
    ```
 
-အိုကေ၊ အခုတော့ လိုအပ်တာတွေ ပြီးဆုံးသွားပါပြီ။
+အကောင်းဆုံးပါပြီ၊ လိုအပ်တာတွေ ပြီးမြောက်သွားပါပြီ။
 
-## Cors ကို Configure လုပ်ခြင်း
+## Cors ကို Configure လုပ်ပါ
 
-Backend နဲ့ frontend က အခြားအခြား port တွေမှာ run ဖြစ်နေမယ်ဆိုတော့ CORS (cross-origin resource sharing) ကို သတ်မှတ်ဖို့ လိုအပ်ပါတယ်။
+Cors, cross-origin resource sharing ကို စီစဉ်ထားတာကို ပြောပြရမယ်။ ဒါက backend နဲ့ frontend က အခြား port တွေမှာ run ဖြစ်နေတဲ့အတွက် frontend က backend ကို ခေါ်နိုင်ဖို့ လိုအပ်ပါတယ်။
 
 ### Python ကို အသုံးပြုခြင်း
 
-*api.py* ထဲမှာ ဒီလို code တစ်ခုရှိပါတယ်:
+*api.py* မှာ ဒီကို စီစဉ်ထားတဲ့ code တစ်ခုရှိပါတယ်:
 
 ```python
 from flask_cors import CORS
@@ -195,15 +189,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-အခု "*" ဆိုတာအားလုံးကို ခွင့်ပြုထားတာဖြစ်ပြီး၊ production မှာသွားတဲ့အခါမှာတော့ အကန့်အသတ်ထားဖို့ လိုအပ်ပါတယ်။
+အခု "*" ဆိုတဲ့ all origins ကို ခွင့်ပြုထားပါတယ်၊ ဒါက production မှာ သွားရောက်တဲ့အခါမှာ အန္တရာယ်ရှိနိုင်ပါတယ်၊ ထို့ကြောင့် ထိန်းချုပ်ထားသင့်ပါတယ်။
 
-## Project ကို Run လုပ်ခြင်း
+## Project ကို Run လုပ်ပါ
 
-Project ကို run လုပ်ဖို့အတွက် backend ကို စတင်ပြီးနောက် frontend ကို စတင်ရပါမယ်။
+Project ကို run လုပ်ဖို့ backend ကို အရင်စတင်ပြီး frontend ကို စတင်ရပါမယ်။
 
 ### Python ကို အသုံးပြုခြင်း
 
-အိုကေ၊ *llm.py* နဲ့ *api.py* ကို ဘယ်လို backend နဲ့ အလုပ်လုပ်စေမလဲဆိုတာ ကြည့်ကြရအောင်:
+အခု *llm.py* နဲ့ *api.py* ရှိပြီး backend နဲ့ အလုပ်လုပ်ဖို့ ဘာလုပ်ရမလဲ? အခုလုပ်ရမယ့်အရာနှစ်ခုရှိပါတယ်:
 
 - Dependencies တွေကို Install လုပ်ပါ:
 
@@ -221,11 +215,11 @@ Project ကို run လုပ်ဖို့အတွက် backend ကို 
    python api.py
    ```
 
-   Codespaces မှာဆိုရင် Ports ကို editor ရဲ့ အောက်ခြေမှာ သွားပြီး right-click လုပ်ပြီး "Port Visibility" ကို နှိပ်ပြီး "Public" ကို ရွေးချယ်ပါ။
+   Codespaces မှာ run လုပ်ရင် editor ရဲ့ အောက်ပိုင်းမှာ Ports ကို သွားပြီး right-click လုပ်ပါ၊ "Port Visibility" ကို click လုပ်ပြီး "Public" ကို ရွေးပါ။
 
-### Frontend အပေါ် အလုပ်လုပ်ခြင်း
+### Frontend အပေါ်မှာ အလုပ်လုပ်ပါ
 
-API ကို run လုပ်ပြီးပြီဆိုရင်၊ frontend တစ်ခုကို ဖန်တီးရပါမယ်။ အနည်းဆုံး frontend တစ်ခုကို ဖန်တီးပြီး အဆင့်ဆင့် တိုးတက်အောင်လုပ်ပါမယ်။ *frontend* folder ထဲမှာ ဒီလိုဖိုင်တွေ ဖန်တီးပါ:
+API run ဖြစ်ပြီးသားဖြစ်တဲ့အခါ frontend တစ်ခုကို ဖန်တီးရအောင်။ အနည်းဆုံး frontend တစ်ခုကို ဖန်တီးပြီး အဆင့်ဆင့်တိုးတက်အောင်လုပ်ပါမယ်။ *frontend* folder တစ်ခုမှာ ဒီလိုဖိုင်တွေ ဖန်တီးပါ:
 
 ```text
 backend/
@@ -235,7 +229,7 @@ app.js
 styles.css
 ```
 
-**index.html** ကို စတင်ကြည့်ကြရအောင်:
+အရင်ဆုံး **index.html** ကို စတင်ကြည့်ပါ:
 
 ```html
 <html>
@@ -253,7 +247,7 @@ styles.css
 </html>    
 ```
 
-အထက်မှာပါတဲ့ code က chat window ကို အနည်းဆုံး support လုပ်ဖို့ လိုအပ်တဲ့အရာတွေပါ။ textarea တစ်ခုမှာ message တွေကို ပြသပြီး၊ input တစ်ခုမှာ message ကို ရိုက်ထည့်နိုင်ပြီး၊ button တစ်ခုက message ကို backend ဆီပို့နိုင်စေပါတယ်။ နောက်တစ်ခုကတော့ *app.js* ထဲမှာ JavaScript ကို ကြည့်ကြရအောင်:
+အထက်မှာ chat window ကို ပံ့ပိုးဖို့အတွက် လိုအပ်တဲ့ အနည်းဆုံးအရာတွေပါဝင်ပါတယ်၊ textarea တစ်ခုမှာ message တွေကို ပြသပေးပြီး input တစ်ခုမှာ message ကို ရိုက်ထည့်နိုင်ပါတယ်၊ button တစ်ခုက message ကို backend ကို ပေးပို့ဖို့အတွက် ဖြစ်ပါတယ်။ နောက်တစ်ခု JavaScript ကို *app.js* မှာ ကြည့်လိုက်ရအောင်။
 
 **app.js**
 
@@ -310,14 +304,14 @@ styles.css
 })();
 ```
 
-Code ကို အပိုင်းလိုက်ရှင်းပြရမယ်ဆိုရင်:
+Code ကို အပိုင်းလိုက်ကြည့်ရအောင်:
 
-- 1) Element တွေကို reference လုပ်ထားတာ
-- 2) Backend ကို ခေါ်ဖို့ `fetch` method ကို အသုံးပြုထားတာ
-- 3) `appendMessage` က user ရဲ့ message နဲ့ assistant ရဲ့ response ကို textarea ထဲမှာ ထည့်ပေးတာ
-- 4) Submit event ကို နားထောင်ပြီး input field ထဲက message ကို ဖတ်ပြီး textarea ထဲမှာ ပြသတာ
+- 1) ဒီမှာ element တွေကို reference လုပ်ပြီး နောက် code မှာ အသုံးပြုမယ့်အတွက် ရယူထားပါတယ်။
+- 2) ဒီအပိုင်းမှာ built-in `fetch` method ကို အသုံးပြုပြီး backend ကို ခေါ်တဲ့ function တစ်ခုကို ဖန်တီးထားပါတယ်။
+- 3) `appendMessage` က assistant response တွေကို user ရဲ့ message နဲ့အတူ textarea မှာ ထည့်ပေးပါတယ်။
+- 4) submit event ကို နားထောင်ပြီး input field ကို ဖတ်ပြီး user ရဲ့ message ကို textarea မှာ ထည့်ပေးပြီး API ကို ခေါ်ပြီး response ကို textarea မှာ ပြသပေးပါတယ်။
 
-Styling ကို ကြည့်ကြရအောင်၊ ဒီမှာ သင့်စိတ်ကြိုက် ပြင်ဆင်နိုင်ပါတယ်၊ ဒါပေမယ့် အောက်မှာ အကြံပြုထားတာတွေပါ:
+Styling ကို ကြည့်လိုက်ရအောင်၊ ဒီမှာ သင့်စိတ်ကြိုက် ပြင်ဆင်နိုင်ပါတယ်၊ ဒါပေမယ့် အောက်ပါအတိုင်း အကြံပေးထားပါတယ်:
 
 **styles.css**
 
@@ -338,18 +332,18 @@ Styling ကို ကြည့်ကြရအောင်၊ ဒီမှာ သ
 } 
 ```
 
-ဒီ class သုံးခုနဲ့ assistant နဲ့ user ရဲ့ message တွေကို မတူညီအောင် style လုပ်နိုင်ပါတယ်။ အခြား design အတွက် `solution/frontend/styles.css` folder ကို ကြည့်ပါ။
+ဒီ classes သုံးခုနဲ့ message တွေကို assistant ကနေလာတာလား user ကနေလာတာလားဆိုတာကို ခွဲခြားပြီး style လုပ်နိုင်ပါတယ်။ အခြား design အတွက် `solution/frontend/styles.css` folder ကို ကြည့်ပါ။
 
-### Base Url ကို ပြောင်းလဲခြင်း
+### Base Url ကို ပြောင်းပါ
 
-ဒီမှာ `BASE_URL` ကို သတ်မှတ်ထားခြင်းမရှိသေးပါဘူး၊ backend ကို စတင်ပြီးမှ သိနိုင်ပါတယ်။ သတ်မှတ်ဖို့:
+ဒီမှာ မသတ်မှတ်ထားတဲ့အရာတစ်ခုရှိပါတယ်၊ အဲဒါက `BASE_URL` ဖြစ်ပါတယ်၊ backend စတင်ပြီးမှ သိနိုင်ပါတယ်။ သတ်မှတ်ဖို့:
 
-- API ကို locally run လုပ်ရင် `http://localhost:5000` လိုမျိုးဖြစ်ရမယ်။
-- Codespaces မှာ run လုပ်ရင် "[name]app.github.dev" လိုမျိုးဖြစ်ရမယ်။
+- API ကို locally run လုပ်ရင် `http://localhost:5000` လိုမျိုး သတ်မှတ်ပါ။
+- Codespaces မှာ run လုပ်ရင် "[name]app.github.dev" လိုမျိုး ဖြစ်ပါတယ်။
 
 ## Assignment
 
-*project* ဆိုတဲ့ folder တစ်ခု ဖန်တီးပြီး အောက်ပါအတိုင်း ဖိုင်တွေ ထည့်ပါ:
+*project* folder တစ်ခု ဖန်တီးပြီး အောက်ပါအတိုင်း content ထည့်ပါ:
 
 ```text
 project/
@@ -361,7 +355,7 @@ project/
     ...
 ```
 
-အထက်မှာ ပြောထားတဲ့အတိုင်း content တွေကို ကူးယူပြီး သင့်စိတ်ကြိုက် ပြင်ဆင်နိုင်ပါတယ်။
+အထက်မှာ ပြောထားတဲ့အတိုင်း content ကို ကူးယူပြီး သင့်စိတ်ကြိုက် ပြင်ဆင်နိုင်ပါတယ်။
 
 ## Solution
 
@@ -369,11 +363,11 @@ project/
 
 ## Bonus
 
-AI assistant ရဲ့ personality ကို ပြောင်းလဲကြည့်ပါ။
+AI assistant ရဲ့ personality ကို ပြောင်းကြည့်ပါ။
 
 ### Python အတွက်
 
-*api.py* ထဲမှာ `call_llm` ကို ခေါ်တဲ့အခါ ဒုတိယ argument ကို သင့်လိုအပ်ချက်အတိုင်း ပြောင်းလဲနိုင်ပါတယ်၊ ဥပမာ:
+*api.py* မှာ `call_llm` ကို ခေါ်တဲ့အခါ ဒုတိယ argument ကို သင့်လိုအပ်ချက်အတိုင်း ပြောင်းနိုင်ပါတယ်၊ ဥပမာ:
 
 ```python
 call_llm(message, "You are Captain Picard")
@@ -381,26 +375,26 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-CSS နဲ့ text တွေကို သင့်စိတ်ကြိုက် ပြောင်းလဲပါ၊ *index.html* နဲ့ *styles.css* ထဲမှာ ပြင်ဆင်ပါ။
+CSS နဲ့ text ကို သင့်စိတ်ကြိုက် ပြောင်းပါ၊ *index.html* နဲ့ *styles.css* မှာ ပြင်ဆင်ပါ။
 
 ## Summary
 
-အိုကေ၊ AI ကို အသုံးပြုပြီး ကိုယ်ပိုင် personal assistant တစ်ခုကို ဘယ်လိုတည်ဆောက်ရမလဲဆိုတာ အစမှ အဆုံး သင်ယူပြီးဖြစ်ပါပြီ။ GitHub Models, Python backend, HTML, CSS, JavaScript frontend တို့ကို အသုံးပြုပြီး လုပ်ဆောင်ခဲ့ပါတယ်။
+အကောင်းဆုံးပါပြီ၊ AI ကို အသုံးပြုပြီး personal assistant တစ်ခုကို ဘယ်လိုတည်ဆောက်ရမလဲဆိုတာ အခြေခံကနေ သင်ယူပြီးပြီ။ GitHub Models ကို အသုံးပြုပြီး Python backend နဲ့ HTML, CSS, JavaScript frontend ကို အသုံးပြုထားပါတယ်။
 
-## Codespaces နဲ့ တည်ဆောက်ခြင်း
+## Codespaces နဲ့ Set up လုပ်ပါ
 
-- ဒီနေရာကို သွားပါ: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Template မှာ Create လုပ်ပါ (GitHub မှာ login လုပ်ထားဖို့ လိုအပ်ပါတယ်):
+- သွားပါ: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Template မှာ Create လုပ်ပါ (GitHub မှာ login လုပ်ထားတာ သေချာပါစေ) အပေါ်ညာဘက်မှာ:
 
     ![Create from template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.my.png)
 
-- သင့် repo ထဲမှာ Codespace တစ်ခု ဖန်တီးပါ:
+- သင့် repo မှာ Codespace တစ်ခု ဖန်တီးပါ:
 
     ![Create codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.my.png)
 
-    အခုတော့ သင့်အတွက် အလုပ်လုပ်နိုင်တဲ့ environment တစ်ခု စတင်ထားပါပြီ။
+    ဒီမှာ သင့်အလုပ်လုပ်နိုင်တဲ့ environment တစ်ခု စတင်ပါလိမ့်မယ်။
 
 ---
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါရှိနိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာရှိသော ရင်းမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွတ်များ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူရင်းဘာသာစကားဖြင့် အာဏာတရားရှိသော ရင်းမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွတ်များ သို့မဟုတ် အနားယူမှုမှားများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။

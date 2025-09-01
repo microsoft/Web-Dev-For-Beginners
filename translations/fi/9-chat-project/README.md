@@ -1,37 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:32:42+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:57:13+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "fi"
 }
 -->
 # Chat-projekti
 
-Tämä chat-projekti näyttää, kuinka rakentaa Chat-avustaja käyttämällä GitHub-malleja.
+Tämä chat-projekti näyttää, kuinka rakentaa Chat Assistant GitHub Models -mallien avulla.
 
 Tältä valmis projekti näyttää:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Chat-sovellus" width="600">
-</div>
+![Chat-sovellus](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.fi.png)
 
-Hieman taustaa: Chat-avustajien rakentaminen generatiivisen tekoälyn avulla on erinomainen tapa aloittaa tekoälyn opiskelu. Tässä oppitunnissa opit integroimaan generatiivisen tekoälyn verkkosovellukseen. Aloitetaan!
+Hieman taustaa: Chat-assistenttien rakentaminen generatiivisen tekoälyn avulla on loistava tapa aloittaa tekoälyyn tutustuminen. Tässä oppitunnissa opit integroimaan generatiivisen tekoälyn verkkosovellukseen. Aloitetaan.
 
 ## Yhteys generatiiviseen tekoälyyn
 
-Taustajärjestelmässä käytämme GitHub-malleja. Se on loistava palvelu, joka mahdollistaa tekoälyn käytön ilmaiseksi. Mene sen kokeiluympäristöön ja kopioi koodi, joka vastaa valitsemaasi taustajärjestelmän kieltä. Tältä se näyttää [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)-sivustolla.
+Taustajärjestelmässä käytämme GitHub Models -malleja. Tämä on loistava palvelu, joka mahdollistaa tekoälyn käytön ilmaiseksi. Mene sen kokeiluympäristöön ja kopioi koodi, joka vastaa valitsemaasi taustakielen ympäristöä. Näin se näyttää [GitHub Models Playgroundissa](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.fi.png)
 
-Kuten mainittiin, valitse "Code"-välilehti ja haluamasi ajonaikainen ympäristö.
+Kuten mainitsimme, valitse "Code"-välilehti ja haluamasi ajonaikainen ympäristö.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
-</div>
+![Playground-valinta](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.fi.png)
 
 ### Pythonin käyttö
 
@@ -72,7 +66,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Siistitään koodi hieman, jotta se on uudelleenkäytettävä:
+Siistitään koodia hieman, jotta se on uudelleenkäytettävä:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -96,19 +90,19 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-Tällä `call_llm`-funktiolla voimme nyt ottaa kehotteen ja järjestelmäkehotteen, ja funktio palauttaa tuloksen.
+Tällä `call_llm`-funktiolla voimme nyt antaa kehotteen ja järjestelmäkehotteen, ja funktio palauttaa tuloksen.
 
-### AI-avustajan muokkaaminen
+### Mukauta AI-assistenttia
 
-Jos haluat muokata AI-avustajaa, voit määrittää sen käyttäytymisen täyttämällä järjestelmäkehotteen seuraavasti:
+Jos haluat mukauttaa AI-assistenttia, voit määrittää sen käyttäytymisen täyttämällä järjestelmäkehotteen seuraavasti:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Julkaisu Web API:n kautta
+## Julkaise se Web API:n kautta
 
-Hienoa, tekoälyosa on valmis. Katsotaan, kuinka voimme integroida sen Web API:iin. Web API:lle valitsemme Flaskin, mutta mikä tahansa verkkokehys käy. Katsotaan koodi:
+Hienoa, AI-osuus on valmis. Katsotaanpa, kuinka voimme integroida sen Web API:in. Web API:ksi valitsemme Flaskin, mutta mikä tahansa verkkokehys käy. Tässä on koodi:
 
 ### Pythonin käyttö
 
@@ -141,9 +135,9 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Tässä luomme Flask-API:n ja määrittelemme oletusreitin "/" ja "/chat". Jälkimmäistä käytetään frontendissä kysymysten välittämiseen.
+Tässä luomme Flask-API:n ja määrittelemme oletusreitin "/" ja "/chat". Jälkimmäistä käytetään frontendin kautta kysymysten välittämiseen.
 
-Integroitaaksesi *llm.py*:n, tee seuraavat:
+Integroitaessa *llm.py*-tiedostoa meidän täytyy tehdä seuraavat asiat:
 
 - Tuo `call_llm`-funktio:
 
@@ -167,7 +161,7 @@ Integroitaaksesi *llm.py*:n, tee seuraavat:
       })
    ```
 
-   Tässä jäsennämme saapuvan pyynnön saadaksemme `message`-ominaisuuden JSON-runko-osasta. Sen jälkeen kutsumme LLM:ää tällä tavalla:
+   Tässä jäsennämme saapuvan pyynnön saadaksemme `message`-ominaisuuden JSON-rungosta. Sen jälkeen kutsumme LLM:ää seuraavasti:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -180,13 +174,13 @@ Integroitaaksesi *llm.py*:n, tee seuraavat:
 
 Hienoa, nyt olemme tehneet tarvittavat toimenpiteet.
 
-## Corsin konfigurointi
+## Määritä Cors
 
-On syytä mainita, että asetamme jotain kuten CORS (Cross-Origin Resource Sharing). Tämä tarkoittaa, että koska taustajärjestelmä ja käyttöliittymä toimivat eri porteissa, meidän täytyy sallia käyttöliittymän kutsut taustajärjestelmään.
+On tärkeää huomioida, että meidän täytyy määrittää CORS (Cross-Origin Resource Sharing). Tämä johtuu siitä, että taustajärjestelmä ja käyttöliittymä toimivat eri porteissa, joten meidän täytyy sallia käyttöliittymän kutsut taustajärjestelmään.
 
 ### Pythonin käyttö
 
-*api.py*-tiedostossa on koodinpätkä, joka asettaa tämän:
+*api.py*-tiedostossa on koodinpätkä, joka hoitaa tämän:
 
 ```python
 from flask_cors import CORS
@@ -195,15 +189,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Tällä hetkellä se on asetettu sallimaan "*", eli kaikki alkuperät, mikä on hieman turvatonta. Tämä tulisi rajoittaa, kun siirrytään tuotantoon.
+Tällä hetkellä se on asetettu sallimaan kaikki alkuperät ("*"), mikä on hieman turvatonta. Tämä tulisi rajoittaa tuotantoympäristössä.
 
-## Projektin käynnistäminen
+## Aja projektisi
 
-Projektin käynnistämiseksi sinun täytyy ensin käynnistää taustajärjestelmä ja sitten käyttöliittymä.
+Projektin ajamiseksi sinun täytyy ensin käynnistää taustajärjestelmä ja sen jälkeen käyttöliittymä.
 
 ### Pythonin käyttö
 
-Ok, meillä on *llm.py* ja *api.py*. Kuinka saamme tämän toimimaan taustajärjestelmän kanssa? Tarvitsemme kaksi asiaa:
+Meillä on nyt *llm.py* ja *api.py*. Kuinka saamme nämä toimimaan taustajärjestelmän kanssa? Meidän täytyy tehdä kaksi asiaa:
 
 - Asenna riippuvuudet:
 
@@ -215,17 +209,17 @@ Ok, meillä on *llm.py* ja *api.py*. Kuinka saamme tämän toimimaan taustajärj
    pip install openai flask flask-cors openai
    ```
 
-- Käynnistä API
+- Käynnistä API:
 
    ```sh
    python api.py
    ```
 
-   Jos käytät Codespacesia, sinun täytyy mennä editorin alaosassa Ports-osioon, napsauttaa sitä oikealla ja valita "Port Visibility" ja valita "Public".
+   Jos käytät Codespacesia, mene editorin alaosassa Ports-osioon, napsauta sitä hiiren oikealla painikkeella ja valitse "Port Visibility" ja valitse "Public".
 
-### Työskentely käyttöliittymän parissa
+### Työskentele käyttöliittymän parissa
 
-Nyt kun meillä on API käynnissä, luodaan käyttöliittymä. Aloitetaan yksinkertaisimmalla käyttöliittymällä, jota parannamme vaiheittain. Luo *frontend*-kansioon seuraavat:
+Nyt kun meillä on API käynnissä, luodaan käyttöliittymä. Aloitetaan yksinkertaisimmasta mahdollisesta käyttöliittymästä, jota parannamme vaiheittain. Luo *frontend*-kansioon seuraavat tiedostot:
 
 ```text
 backend/
@@ -253,7 +247,7 @@ Aloitetaan **index.html**-tiedostosta:
 </html>    
 ```
 
-Tämä on ehdoton minimi, joka tarvitaan chat-ikkunan tukemiseen. Se sisältää tekstialueen, jossa viestit näytetään, syöttökentän viestin kirjoittamista varten ja painikkeen viestin lähettämiseen taustajärjestelmään. Katsotaan seuraavaksi JavaScriptiä tiedostossa *app.js*.
+Yllä oleva on minimivaatimus chat-ikkunan tukemiseksi. Se sisältää tekstialueen viestien näyttämiseen, syötekentän viestin kirjoittamista varten ja painikkeen viestin lähettämiseen taustajärjestelmään. Katsotaan seuraavaksi JavaScriptiä tiedostossa *app.js*.
 
 **app.js**
 
@@ -310,14 +304,14 @@ Tämä on ehdoton minimi, joka tarvitaan chat-ikkunan tukemiseen. Se sisältää
 })();
 ```
 
-Käydään koodi läpi osittain:
+Käydään koodi läpi osioittain:
 
 - 1) Tässä haemme viittaukset kaikkiin elementteihin, joita käytämme myöhemmin koodissa.
 - 2) Tässä osiossa luomme funktion, joka käyttää sisäänrakennettua `fetch`-metodia taustajärjestelmän kutsumiseen.
 - 3) `appendMessage` auttaa lisäämään vastaukset sekä käyttäjän kirjoittamat viestit.
-- 4) Tässä kuuntelemme submit-tapahtumaa, luemme syöttökentän, lisäämme käyttäjän viestin tekstialueelle, kutsumme API:a ja näytämme vastauksen tekstialueella.
+- 4) Tässä kuuntelemme submit-tapahtumaa, luemme syötekentän, lisäämme käyttäjän viestin tekstialueelle, kutsumme API:a ja näytämme vastauksen tekstialueella.
 
-Katsotaan seuraavaksi tyylit. Tässä voit olla luova ja tehdä ulkoasusta haluamasi, mutta tässä muutama ehdotus:
+Katsotaan seuraavaksi tyylitiedostoa. Tässä voit käyttää luovuuttasi ja tehdä siitä haluamasi näköisen, mutta tässä on joitakin ehdotuksia:
 
 **styles.css**
 
@@ -338,14 +332,14 @@ Katsotaan seuraavaksi tyylit. Tässä voit olla luova ja tehdä ulkoasusta halua
 } 
 ```
 
-Näillä kolmella luokalla voit muotoilla viestit eri tavalla riippuen siitä, tulevatko ne avustajalta vai käyttäjältä. Jos haluat inspiraatiota, katso `solution/frontend/styles.css`-kansio.
+Näillä kolmella luokalla voit tyylitellä viestit eri tavalla riippuen siitä, tulevatko ne assistentilta vai käyttäjältä. Jos kaipaat inspiraatiota, katso `solution/frontend/styles.css`-kansiota.
 
-### Perus-URL:n muuttaminen
+### Muuta Base URL
 
-Yksi asia, jota emme vielä asettaneet, on `BASE_URL`. Tämä ei ole tiedossa ennen kuin taustajärjestelmä käynnistetään. Aseta se seuraavasti:
+Yksi asia, jota emme vielä asettaneet, on `BASE_URL`. Tätä ei tiedetä ennen kuin taustajärjestelmä on käynnistetty. Aseta se seuraavasti:
 
-- Jos API toimii paikallisesti, sen pitäisi olla jotain kuten `http://localhost:5000`.
-- Jos käytät Codespacesia, sen pitäisi näyttää jotain kuten "[name]app.github.dev".
+- Jos ajat API:a paikallisesti, sen pitäisi olla jotain kuten `http://localhost:5000`.
+- Jos käytät Codespacesia, se näyttää jotain tällaista: "[name]app.github.dev".
 
 ## Tehtävä
 
@@ -361,7 +355,7 @@ project/
     ...
 ```
 
-Kopioi sisältö yllä olevista ohjeista, mutta muokkaa sitä haluamallasi tavalla.
+Kopioi sisältö yllä olevista ohjeista, mutta voit mukauttaa sitä haluamallasi tavalla.
 
 ## Ratkaisu
 
@@ -369,7 +363,7 @@ Kopioi sisältö yllä olevista ohjeista, mutta muokkaa sitä haluamallasi taval
 
 ## Bonus
 
-Kokeile muuttaa AI-avustajan persoonallisuutta.
+Kokeile muuttaa AI-assistentin persoonallisuutta.
 
 ### Pythonille
 
@@ -381,26 +375,26 @@ call_llm(message, "You are Captain Picard")
 
 ### Käyttöliittymä
 
-Muuta myös CSS:ää ja tekstiä haluamallasi tavalla, eli tee muutoksia *index.html*- ja *styles.css*-tiedostoihin.
+Muuta myös CSS-tyylejä ja tekstejä haluamallasi tavalla, eli tee muutoksia *index.html*- ja *styles.css*-tiedostoihin.
 
 ## Yhteenveto
 
-Hienoa, olet oppinut alusta alkaen, kuinka luoda henkilökohtainen avustaja tekoälyn avulla. Teimme sen käyttämällä GitHub-malleja, taustajärjestelmää Pythonilla ja käyttöliittymää HTML:llä, CSS:llä ja JavaScriptillä.
+Hienoa, olet oppinut alusta alkaen, kuinka luoda henkilökohtainen assistentti tekoälyn avulla. Teimme sen GitHub Models -mallien, Python-taustajärjestelmän sekä HTML-, CSS- ja JavaScript-käyttöliittymän avulla.
 
-## Codespacesin käyttö
+## Käyttöönotto Codespacesilla
 
-- Siirry: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Luo mallista (varmista, että olet kirjautunut GitHubiin) oikeassa yläkulmassa:
+- Siirry: [Web Dev For Beginners -repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Luo uusi repositorio mallista (varmista, että olet kirjautunut GitHubiin) oikeasta yläkulmasta:
 
     ![Luo mallista](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.fi.png)
 
-- Kun olet omassa repossasi, luo Codespace:
+- Kun olet omassa repositoriossasi, luo Codespace:
 
-    ![Luo codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.fi.png)
+    ![Luo Codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.fi.png)
 
     Tämä käynnistää ympäristön, jossa voit nyt työskennellä.
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

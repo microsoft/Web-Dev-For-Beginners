@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:34:07+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:58:23+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "vi"
 }
@@ -13,29 +13,23 @@ Dự án chat này hướng dẫn cách xây dựng một Trợ lý Chat sử d�
 
 Dưới đây là hình ảnh của dự án hoàn chỉnh:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Ứng dụng Chat" width="600">
-</div>
+![Ứng dụng Chat](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.vi.png)
 
 Một chút bối cảnh, việc xây dựng các trợ lý Chat sử dụng AI tạo sinh là một cách tuyệt vời để bắt đầu học về AI. Trong bài học này, bạn sẽ học cách tích hợp AI tạo sinh vào một ứng dụng web. Hãy bắt đầu nào.
 
 ## Kết nối với AI tạo sinh
 
-Ở phần backend, chúng ta sử dụng GitHub Models. Đây là một dịch vụ tuyệt vời cho phép bạn sử dụng AI miễn phí. Hãy truy cập playground của nó và lấy mã tương ứng với ngôn ngữ backend mà bạn chọn. Đây là giao diện tại [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Về phía backend, chúng ta sử dụng GitHub Models. Đây là một dịch vụ tuyệt vời cho phép bạn sử dụng AI miễn phí. Truy cập playground của nó và lấy đoạn mã phù hợp với ngôn ngữ backend mà bạn chọn. Đây là giao diện tại [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" width="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.vi.png)
 
-Như đã nói, hãy chọn tab "Code" và runtime mà bạn muốn.
+Như đã nói, chọn tab "Code" và runtime mà bạn muốn.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="Lựa chọn playground" width="600">
-</div>
+![Lựa chọn Playground](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.vi.png)
 
 ### Sử dụng Python
 
-Trong trường hợp này, chúng ta chọn Python, nghĩa là chúng ta sẽ sử dụng đoạn mã sau:
+Trong trường hợp này, chúng ta chọn Python, điều này có nghĩa là chúng ta sẽ sử dụng đoạn mã sau:
 
 ```python
 """Run this model in Python
@@ -96,11 +90,11 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-Với hàm `call_llm`, chúng ta có thể truyền vào một prompt và một system prompt, và hàm này sẽ trả về kết quả.
+Với hàm `call_llm`, giờ đây chúng ta có thể truyền vào một prompt và một system prompt, và hàm này sẽ trả về kết quả.
 
 ### Tùy chỉnh Trợ lý AI
 
-Nếu bạn muốn tùy chỉnh Trợ lý AI, bạn có thể chỉ định cách bạn muốn nó hoạt động bằng cách điền vào system prompt như sau:
+Nếu bạn muốn tùy chỉnh trợ lý AI, bạn có thể chỉ định cách bạn muốn nó hoạt động bằng cách điền vào system prompt như sau:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -108,7 +102,7 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Triển khai qua Web API
 
-Tuyệt vời, chúng ta đã hoàn thành phần AI, giờ hãy xem cách tích hợp nó vào một Web API. Đối với Web API, chúng ta chọn sử dụng Flask, nhưng bất kỳ framework web nào cũng đều phù hợp. Dưới đây là đoạn mã:
+Tuyệt vời, chúng ta đã hoàn thành phần AI, giờ hãy xem cách tích hợp nó vào một Web API. Đối với Web API, chúng ta chọn sử dụng Flask, nhưng bất kỳ framework web nào cũng có thể sử dụng được. Dưới đây là đoạn mã:
 
 ### Sử dụng Python
 
@@ -141,9 +135,9 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Ở đây, chúng ta tạo một API Flask và định nghĩa hai route: "/" và "/chat". Route thứ hai được sử dụng bởi frontend để gửi câu hỏi đến backend.
+Ở đây, chúng ta tạo một API Flask và định nghĩa hai route mặc định là "/" và "/chat". Route thứ hai được sử dụng bởi frontend để gửi câu hỏi đến backend.
 
-Để tích hợp *llm.py*, đây là những gì cần làm:
+Để tích hợp *llm.py*, chúng ta cần làm như sau:
 
 - Import hàm `call_llm`:
 
@@ -167,7 +161,7 @@ if __name__ == "__main__":
       })
    ```
 
-   Ở đây, chúng ta phân tích yêu cầu gửi đến để lấy thuộc tính `message` từ JSON body. Sau đó, chúng ta gọi LLM với lệnh sau:
+   Ở đây, chúng ta phân tích yêu cầu đến để lấy thuộc tính `message` từ JSON body. Sau đó, chúng ta gọi LLM bằng lệnh sau:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -178,11 +172,11 @@ if __name__ == "__main__":
    })
    ```
 
-Tuyệt vời, giờ chúng ta đã hoàn thành phần cần thiết.
+Tuyệt vời, giờ chúng ta đã hoàn thành những gì cần thiết.
 
 ## Cấu hình Cors
 
-Chúng ta cần thiết lập CORS, chia sẻ tài nguyên giữa các nguồn. Điều này có nghĩa là vì backend và frontend sẽ chạy trên các cổng khác nhau, chúng ta cần cho phép frontend gọi vào backend.
+Chúng ta cần thiết lập CORS (chia sẻ tài nguyên giữa các nguồn gốc). Điều này có nghĩa là vì backend và frontend sẽ chạy trên các cổng khác nhau, chúng ta cần cho phép frontend gọi vào backend.
 
 ### Sử dụng Python
 
@@ -195,7 +189,7 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Hiện tại, nó được thiết lập để cho phép "*" tức là tất cả các nguồn, điều này không an toàn lắm. Chúng ta nên giới hạn lại khi triển khai sản phẩm.
+Hiện tại, nó được thiết lập để cho phép "*" tức là tất cả các nguồn gốc, điều này không an toàn lắm. Chúng ta nên giới hạn lại khi triển khai lên môi trường sản xuất.
 
 ## Chạy dự án của bạn
 
@@ -203,7 +197,7 @@ Hiện tại, nó được thiết lập để cho phép "*" tức là tất c�
 
 ### Sử dụng Python
 
-Ok, chúng ta có *llm.py* và *api.py*, làm thế nào để chạy backend? Có hai bước cần làm:
+Ok, chúng ta có *llm.py* và *api.py*, làm thế nào để chạy backend? Có hai bước cần thực hiện:
 
 - Cài đặt các thư viện phụ thuộc:
 
@@ -221,7 +215,7 @@ Ok, chúng ta có *llm.py* và *api.py*, làm thế nào để chạy backend? C
    python api.py
    ```
 
-   Nếu bạn đang sử dụng Codespaces, hãy vào phần Ports ở dưới cùng của trình chỉnh sửa, nhấp chuột phải và chọn "Port Visibility", sau đó chọn "Public".
+   Nếu bạn đang sử dụng Codespaces, hãy vào mục Ports ở phần dưới của trình chỉnh sửa, nhấp chuột phải và chọn "Port Visibility", sau đó chọn "Public".
 
 ### Làm việc với frontend
 
@@ -253,7 +247,7 @@ Bắt đầu với **index.html**:
 </html>    
 ```
 
-Đoạn mã trên là tối thiểu cần thiết để hỗ trợ một cửa sổ chat, bao gồm một textarea để hiển thị tin nhắn, một input để nhập tin nhắn và một nút để gửi tin nhắn đến backend. Tiếp theo, hãy xem JavaScript trong *app.js*
+Đoạn trên là tối thiểu cần thiết để hỗ trợ một cửa sổ chat, bao gồm một textarea để hiển thị tin nhắn, một input để nhập tin nhắn và một nút để gửi tin nhắn đến backend. Tiếp theo, hãy xem JavaScript trong *app.js*.
 
 **app.js**
 
@@ -312,12 +306,12 @@ Bắt đầu với **index.html**:
 
 Hãy đi qua từng phần của đoạn mã:
 
-- 1) Ở đây, chúng ta lấy tham chiếu đến tất cả các phần tử sẽ sử dụng sau này trong mã.
+- 1) Ở đây, chúng ta lấy tham chiếu đến tất cả các phần tử sẽ được sử dụng sau này trong mã.
 - 2) Trong phần này, chúng ta tạo một hàm sử dụng phương thức `fetch` tích hợp để gọi backend.
-- 3) `appendMessage` giúp thêm phản hồi cũng như tin nhắn mà người dùng nhập.
-- 4) Ở đây, chúng ta lắng nghe sự kiện submit, đọc trường input, đặt tin nhắn của người dùng vào textarea, gọi API, và hiển thị phản hồi trong textarea.
+- 3) Hàm `appendMessage` giúp thêm các phản hồi cũng như tin nhắn mà người dùng nhập.
+- 4) Ở đây, chúng ta lắng nghe sự kiện submit, đọc trường input, đặt tin nhắn của người dùng vào textarea, gọi API và hiển thị phản hồi trong textarea.
 
-Tiếp theo, hãy xem phần styling, đây là nơi bạn có thể tùy chỉnh giao diện theo ý thích, nhưng dưới đây là một số gợi ý:
+Tiếp theo, hãy xem phần styling. Đây là nơi bạn có thể sáng tạo để giao diện trông như ý muốn, nhưng dưới đây là một số gợi ý:
 
 **styles.css**
 
@@ -338,18 +332,18 @@ Tiếp theo, hãy xem phần styling, đây là nơi bạn có thể tùy chỉn
 } 
 ```
 
-Với ba lớp này, bạn sẽ định dạng tin nhắn khác nhau tùy thuộc vào nguồn gốc của chúng, từ trợ lý hoặc từ người dùng. Nếu bạn muốn lấy cảm hứng, hãy xem thư mục `solution/frontend/styles.css`.
+Với ba class này, bạn sẽ định dạng tin nhắn khác nhau tùy thuộc vào việc chúng đến từ trợ lý hay từ người dùng. Nếu muốn lấy cảm hứng, hãy xem thư mục `solution/frontend/styles.css`.
 
 ### Thay đổi Base Url
 
-Có một điều chúng ta chưa thiết lập, đó là `BASE_URL`. Giá trị này chỉ được biết khi backend của bạn đã khởi động. Để thiết lập:
+Có một điều chúng ta chưa thiết lập, đó là `BASE_URL`. Điều này chỉ được biết khi backend của bạn đã khởi động. Để thiết lập:
 
-- Nếu bạn chạy API cục bộ, giá trị sẽ là `http://localhost:5000`.
-- Nếu chạy trong Codespaces, giá trị sẽ giống như "[name]app.github.dev".
+- Nếu bạn chạy API cục bộ, nó sẽ là `http://localhost:5000`.
+- Nếu chạy trong Codespaces, nó sẽ có dạng "[name]app.github.dev".
 
 ## Bài tập
 
-Tạo thư mục của riêng bạn *project* với nội dung như sau:
+Tạo thư mục riêng của bạn *project* với nội dung như sau:
 
 ```text
 project/
@@ -361,7 +355,7 @@ project/
     ...
 ```
 
-Sao chép nội dung từ hướng dẫn ở trên, nhưng bạn có thể tùy chỉnh theo ý thích.
+Sao chép nội dung từ hướng dẫn trên, nhưng bạn có thể tùy chỉnh theo ý thích.
 
 ## Giải pháp
 
@@ -369,11 +363,11 @@ Sao chép nội dung từ hướng dẫn ở trên, nhưng bạn có thể tùy 
 
 ## Phần thưởng
 
-Hãy thử thay đổi tính cách của Trợ lý AI.
+Hãy thử thay đổi tính cách của trợ lý AI.
 
 ### Đối với Python
 
-Khi bạn gọi `call_llm` trong *api.py*, bạn có thể thay đổi tham số thứ hai thành bất kỳ giá trị nào bạn muốn, ví dụ:
+Khi bạn gọi `call_llm` trong *api.py*, bạn có thể thay đổi tham số thứ hai thành bất kỳ nội dung nào bạn muốn, ví dụ:
 
 ```python
 call_llm(message, "You are Captain Picard")
@@ -381,16 +375,16 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Cũng thay đổi CSS và văn bản theo ý thích, thực hiện các thay đổi trong *index.html* và *styles.css*.
+Cũng thay đổi CSS và văn bản theo ý thích của bạn, thực hiện các thay đổi trong *index.html* và *styles.css*.
 
 ## Tóm tắt
 
-Tuyệt vời, bạn đã học từ đầu cách tạo một trợ lý cá nhân sử dụng AI. Chúng ta đã thực hiện điều này bằng cách sử dụng GitHub Models, backend bằng Python và frontend bằng HTML, CSS và JavaScript.
+Tuyệt vời, bạn đã học từ đầu cách tạo một trợ lý cá nhân sử dụng AI. Chúng ta đã thực hiện điều này bằng cách sử dụng GitHub Models, một backend bằng Python và một frontend bằng HTML, CSS và JavaScript.
 
 ## Thiết lập với Codespaces
 
-- Truy cập: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Tạo từ template (đảm bảo bạn đã đăng nhập vào GitHub) ở góc trên bên phải:
+- Điều hướng đến: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Tạo từ template (đảm bảo bạn đã đăng nhập GitHub) ở góc trên bên phải:
 
     ![Tạo từ template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.vi.png)
 

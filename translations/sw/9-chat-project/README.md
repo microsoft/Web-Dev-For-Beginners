@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:36:06+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T17:00:01+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "sw"
 }
@@ -13,25 +13,19 @@ Mradi huu wa gumzo unaonyesha jinsi ya kujenga Msaidizi wa Gumzo kwa kutumia Git
 
 Hivi ndivyo mradi uliokamilika unavyoonekana:
 
-<div>
-  <img src="./assets/screenshot.png" alt="App ya Gumzo" width="600">
-</div>
+![Programu ya Gumzo](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.sw.png)
 
 Kwa muktadha, kujenga wasaidizi wa gumzo kwa kutumia AI ya kizazi ni njia nzuri ya kuanza kujifunza kuhusu AI. Kile utakachojifunza ni jinsi ya kuunganisha AI ya kizazi kwenye programu ya wavuti katika somo hili, hebu tuanze.
 
 ## Kuunganisha na AI ya kizazi
 
-Kwa upande wa backend, tunatumia GitHub Models. Ni huduma nzuri inayokuwezesha kutumia AI bila malipo. Nenda kwenye uwanja wake wa majaribio na uchukue msimbo unaolingana na lugha ya backend unayochagua. Hivi ndivyo inavyoonekana kwenye [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Kwa upande wa nyuma (backend), tunatumia GitHub Models. Ni huduma nzuri inayokuwezesha kutumia AI bila malipo. Nenda kwenye uwanja wake wa majaribio na chukua msimbo unaolingana na lugha ya nyuma unayochagua. Hivi ndivyo inavyoonekana kwenye [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![Uwanja wa AI wa GitHub Models](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.sw.png)
 
-Kama tulivyosema, chagua kichupo cha "Code" na runtime unayochagua.
+Kama tulivyosema, chagua kichupo cha "Code" na mazingira unayopendelea.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="uchaguzi wa uwanja wa majaribio" with="600">
-</div>
+![Chaguo la Uwanja wa Mchezo](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.sw.png)
 
 ### Kutumia Python
 
@@ -96,11 +90,11 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-Kwa kutumia kazi hii `call_llm` sasa tunaweza kuchukua maelekezo na maelekezo ya mfumo, na kazi hiyo itarudisha matokeo.
+Kwa kutumia kazi hii `call_llm` sasa tunaweza kuchukua maelezo ya awali na maelezo ya mfumo, na kazi hii itarudisha matokeo.
 
 ### Kubinafsisha Msaidizi wa AI
 
-Ikiwa unataka kubinafsisha msaidizi wa AI unaweza kubainisha jinsi unavyotaka awe kwa kujaza maelekezo ya mfumo kama ifuatavyo:
+Ikiwa unataka kubinafsisha msaidizi wa AI unaweza kubainisha jinsi unavyotaka awe kwa kujaza maelezo ya mfumo kama hivi:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -141,9 +135,9 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Hapa, tunaunda API ya flask na kufafanua njia ya msingi "/" na "/chat". Ya mwisho inakusudiwa kutumiwa na frontend yetu kupitisha maswali kwake.
+Hapa, tunaunda API ya Flask na kufafanua njia ya msingi "/" na "/chat". Njia ya pili imekusudiwa kutumiwa na sehemu ya mbele (frontend) kupitisha maswali kwake.
 
-Kuunganisha *llm.py* tunachohitaji kufanya ni:
+Ili kuunganisha *llm.py* tunachohitaji kufanya ni:
 
 - Kuingiza kazi ya `call_llm`:
 
@@ -152,7 +146,7 @@ Kuunganisha *llm.py* tunachohitaji kufanya ni:
    from flask import Flask, request
    ```
 
-- Kuiita kutoka njia ya "/chat":
+- Kuiita kutoka kwenye njia ya "/chat":
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -167,7 +161,7 @@ Kuunganisha *llm.py* tunachohitaji kufanya ni:
       })
    ```
 
-   Hapa tunachambua ombi linalokuja ili kupata mali ya `message` kutoka kwa mwili wa JSON. Baadaye tunaita LLM kwa simu hii:
+   Hapa tunachambua ombi linalokuja ili kupata mali ya `message` kutoka kwa mwili wa JSON. Baadaye tunaita LLM kwa mwito huu:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -182,7 +176,7 @@ Nzuri, sasa tumemaliza kile tunachohitaji.
 
 ## Kuseti Cors
 
-Tunapaswa kutaja kwamba tunaseti kitu kama CORS, kushiriki rasilimali za asili tofauti. Hii inamaanisha kwamba kwa sababu backend yetu na frontend zitaendesha kwenye bandari tofauti, tunahitaji kuruhusu frontend kupiga simu kwenye backend.
+Tunapaswa kutaja kwamba tunaseti kitu kama CORS, kushiriki rasilimali kati ya asili tofauti. Hii inamaanisha kwamba kwa sababu sehemu yetu ya nyuma na ya mbele zitakimbia kwenye bandari tofauti, tunahitaji kuruhusu sehemu ya mbele kupiga simu kwenye sehemu ya nyuma.
 
 ### Kutumia Python
 
@@ -195,15 +189,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Kwa sasa kimesetiwa kuruhusu "*" ambayo ni asili zote, na hiyo si salama sana, tunapaswa kuibana mara tu tunapofika kwenye uzalishaji.
+Kwa sasa kimeseti kuruhusu "*" ambayo ni asili zote, na hiyo si salama sana, tunapaswa kuibana mara tu tunapofika kwenye uzalishaji.
 
 ## Endesha mradi wako
 
-Kuendesha mradi wako, unahitaji kuanzisha backend yako kwanza na kisha frontend yako.
+Ili kuendesha mradi wako, unahitaji kuanza sehemu ya nyuma kwanza na kisha sehemu ya mbele.
 
 ### Kutumia Python
 
-Sawa, kwa hivyo tuna *llm.py* na *api.py*, tunawezaje kufanya hii ifanye kazi na backend? Naam, kuna mambo mawili tunahitaji kufanya:
+Sawa, kwa hivyo tuna *llm.py* na *api.py*, tunawezaje kufanya kazi hii na sehemu ya nyuma? Naam, kuna mambo mawili tunahitaji kufanya:
 
 - Sakinisha utegemezi:
 
@@ -223,9 +217,9 @@ Sawa, kwa hivyo tuna *llm.py* na *api.py*, tunawezaje kufanya hii ifanye kazi na
 
    Ikiwa uko kwenye Codespaces unahitaji kwenda kwenye Ports katika sehemu ya chini ya mhariri, bofya kulia juu yake na bonyeza "Port Visibility" na uchague "Public".
 
-### Fanya kazi kwenye frontend
+### Fanya kazi kwenye sehemu ya mbele
 
-Sasa kwa kuwa tuna API inayofanya kazi, hebu tuunde frontend kwa ajili ya hii. Frontend ya kiwango cha chini kabisa ambayo tutaboresha hatua kwa hatua. Katika folda ya *frontend*, unda yafuatayo:
+Sasa kwa kuwa tuna API inayofanya kazi, hebu tuunde sehemu ya mbele kwa ajili ya hii. Sehemu ya mbele ya kiwango cha chini kabisa ambayo tutaboresha hatua kwa hatua. Katika folda ya *frontend*, unda yafuatayo:
 
 ```text
 backend/
@@ -253,7 +247,7 @@ Hebu tuanze na **index.html**:
 </html>    
 ```
 
-Hii hapo juu ni kiwango cha chini kabisa unachohitaji ili kusaidia dirisha la gumzo, kwani linajumuisha eneo la maandishi ambapo ujumbe utaonyeshwa, ingizo la mahali pa kuandika ujumbe na kitufe cha kutuma ujumbe wako kwa backend. Hebu tuangalie JavaScript inayofuata katika *app.js*
+Hii hapo juu ni kiwango cha chini kabisa unachohitaji ili kusaidia dirisha la gumzo, kwani lina sehemu ya maandishi ambapo ujumbe utaonyeshwa, sehemu ya kuingiza ambapo utaandika ujumbe, na kitufe cha kutuma ujumbe wako kwa sehemu ya nyuma. Hebu tuangalie JavaScript inayofuata katika *app.js*
 
 **app.js**
 
@@ -312,12 +306,12 @@ Hii hapo juu ni kiwango cha chini kabisa unachohitaji ili kusaidia dirisha la gu
 
 Hebu tuende kupitia msimbo kwa kila sehemu:
 
-- 1) Hapa tunapata rejeleo kwa vipengele vyote ambavyo tutarejelea baadaye katika msimbo
-- 2) Katika sehemu hii, tunaunda kazi inayotumia njia ya kujengwa ya `fetch` inayopiga simu backend yetu
+- 1) Hapa tunapata rejeleo kwa vipengele vyote tutakavyorejelea baadaye katika msimbo
+- 2) Katika sehemu hii, tunaunda kazi inayotumia njia ya kujengwa ya `fetch` inayopiga simu sehemu ya nyuma
 - 3) `appendMessage` husaidia kuongeza majibu pamoja na kile unachotype kama mtumiaji.
-- 4) Hapa tunasikiliza tukio la submit na tunasoma uwanja wa ingizo, kuweka ujumbe wa mtumiaji katika eneo la maandishi, kupiga API, na kuonyesha jibu hilo katika eneo la maandishi.
+- 4) Hapa tunasikiliza tukio la kuwasilisha na tunasoma sehemu ya kuingiza, kuweka ujumbe wa mtumiaji kwenye sehemu ya maandishi, kupiga simu API, na kuonyesha jibu hilo kwenye sehemu ya maandishi.
 
-Hebu tuangalie mitindo inayofuata, hapa ndipo unaweza kwenda mbali na kuifanya ionekane unavyotaka, lakini hapa kuna mapendekezo:
+Hebu tuangalie mitindo inayofuata, hapa ndipo unaweza kuwa mbunifu na kuifanya ionekane unavyotaka, lakini hapa kuna mapendekezo:
 
 **styles.css**
 
@@ -338,18 +332,18 @@ Hebu tuangalie mitindo inayofuata, hapa ndipo unaweza kwenda mbali na kuifanya i
 } 
 ```
 
-Kwa darasa hizi tatu, utapanga ujumbe tofauti kulingana na mahali zinapotoka, msaidizi au wewe kama mtumiaji. Ikiwa unataka kupata msukumo, angalia folda ya `solution/frontend/styles.css`.
+Kwa darasa hizi tatu, utaweza kutengeneza mitindo tofauti kulingana na mahali ujumbe unatoka, msaidizi au wewe kama mtumiaji. Ikiwa unataka kupata msukumo, angalia folda ya `solution/frontend/styles.css`.
 
 ### Badilisha Base Url
 
-Kuna jambo moja hapa hatukuseti, nalo ni `BASE_URL`, hili halijulikani hadi backend yako ianze. Ili kuiseti:
+Kuna jambo moja hapa hatukuseti, nalo ni `BASE_URL`, hili halijulikani hadi sehemu ya nyuma ianze. Ili kuiseti:
 
-- Ikiwa unaendesha API kwa ndani, inapaswa kusetiwa kwa kitu kama `http://localhost:5000`.
+- Ikiwa unaendesha API kwa ndani, inapaswa kusetiwa kama `http://localhost:5000`.
 - Ikiwa unaendesha kwenye Codespaces, inapaswa kuonekana kama "[name]app.github.dev".
 
 ## Kazi
 
-Unda folda yako mwenyewe *project* yenye maudhui kama ifuatavyo:
+Unda folda yako mwenyewe *project* yenye maudhui kama hivi:
 
 ```text
 project/
@@ -365,7 +359,7 @@ Nakili maudhui kutoka kwa yale yaliyoelekezwa hapo juu lakini jisikie huru kubin
 
 ## Suluhisho
 
-[Solution](./solution/README.md)
+[Suluhisho](./solution/README.md)
 
 ## Ziada
 
@@ -373,19 +367,19 @@ Jaribu kubadilisha tabia ya msaidizi wa AI.
 
 ### Kwa Python
 
-Unapopiga `call_llm` katika *api.py* unaweza kubadilisha hoja ya pili kwa unachotaka, kwa mfano:
+Unapopiga `call_llm` katika *api.py* unaweza kubadilisha hoja ya pili kwa unavyotaka, kwa mfano:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
-### Frontend
+### Sehemu ya mbele
 
 Badilisha pia CSS na maandishi unavyopenda, kwa hivyo fanya mabadiliko katika *index.html* na *styles.css*.
 
 ## Muhtasari
 
-Nzuri, umejifunza kutoka mwanzo jinsi ya kuunda msaidizi wa kibinafsi kwa kutumia AI. Tumefanya hivyo kwa kutumia GitHub Models, backend katika Python na frontend katika HTML, CSS na JavaScript.
+Nzuri, umejifunza kutoka mwanzo jinsi ya kuunda msaidizi wa kibinafsi kwa kutumia AI. Tumefanya hivyo kwa kutumia GitHub Models, sehemu ya nyuma katika Python na sehemu ya mbele katika HTML, CSS na JavaScript.
 
 ## Kuseti na Codespaces
 
@@ -398,9 +392,9 @@ Nzuri, umejifunza kutoka mwanzo jinsi ya kuunda msaidizi wa kibinafsi kwa kutumi
 
     ![Unda codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.sw.png)
 
-    Hii inapaswa kuanzisha mazingira ambayo sasa unaweza kufanya kazi nayo.
+    Hii inapaswa kuanzisha mazingira unayoweza kufanya kazi nayo sasa.
 
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya kiasili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
