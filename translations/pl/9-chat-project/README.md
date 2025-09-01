@@ -1,41 +1,35 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:29:24+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:54:35+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "pl"
 }
 -->
 # Projekt czatu
 
-Ten projekt czatu pokazuje, jak zbudować Asystenta Czatu korzystając z GitHub Models.
+Ten projekt czatu pokazuje, jak zbudować Asystenta Czatu przy użyciu GitHub Models.
 
-Tak wygląda ukończony projekt:
+Oto jak wygląda ukończony projekt:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Aplikacja czatu" width="600">
-</div>
+![Aplikacja czatu](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.pl.png)
 
-Kilka słów wstępu: budowanie asystentów czatu przy użyciu generatywnej AI to świetny sposób na rozpoczęcie nauki o sztucznej inteligencji. W trakcie tej lekcji nauczysz się, jak zintegrować generatywną AI z aplikacją internetową. Zaczynajmy!
+Kilka słów wstępu: budowanie asystentów czatu z wykorzystaniem generatywnej AI to świetny sposób na rozpoczęcie nauki o sztucznej inteligencji. W tej lekcji nauczysz się, jak zintegrować generatywną AI z aplikacją webową. Zaczynajmy!
 
 ## Połączenie z generatywną AI
 
-Na backendzie używamy GitHub Models. To świetna usługa, która pozwala korzystać z AI za darmo. Przejdź do jej playground i pobierz kod odpowiadający wybranemu przez Ciebie językowi backendu. Tak wygląda [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
+Na backendzie używamy GitHub Models. To świetna usługa, która pozwala korzystać z AI za darmo. Przejdź do jej playground i skopiuj kod odpowiadający wybranemu językowi backendu. Oto jak wygląda [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground):
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.pl.png)
 
 Jak wspomniano, wybierz zakładkę "Code" i swój preferowany runtime.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="Wybór playground" with="600">
-</div>
+![Wybór w playground](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.pl.png)
 
-### Korzystanie z Pythona
+### Użycie Pythona
 
-W tym przypadku wybieramy Python, co oznacza, że wybieramy ten kod:
+W tym przypadku wybieramy Pythona, co oznacza, że wybieramy ten kod:
 
 ```python
 """Run this model in Python
@@ -72,7 +66,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Oczyśćmy ten kod, aby był bardziej użyteczny:
+Oczyśćmy ten kod, aby był bardziej uniwersalny:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -96,11 +90,11 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-Dzięki funkcji `call_llm` możemy teraz podać prompt i system prompt, a funkcja zwróci wynik.
+Dzięki tej funkcji `call_llm` możemy teraz podać prompt i system prompt, a funkcja zwróci wynik.
 
-### Personalizacja Asystenta AI
+### Dostosowanie Asystenta AI
 
-Jeśli chcesz dostosować zachowanie Asystenta AI, możesz określić, jak ma się zachowywać, wypełniając system prompt w ten sposób:
+Jeśli chcesz dostosować asystenta AI, możesz określić, jak ma się zachowywać, wypełniając system prompt w ten sposób:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -108,9 +102,9 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Udostępnienie przez Web API
 
-Świetnie, mamy część AI gotową, zobaczmy, jak możemy zintegrować ją z Web API. Dla Web API wybieramy Flask, ale każdy framework webowy powinien być odpowiedni. Oto kod:
+Świetnie, mamy część AI gotową, zobaczmy, jak możemy zintegrować ją z Web API. W przypadku Web API wybieramy Flask, ale każdy framework webowy będzie odpowiedni. Oto kod:
 
-### Korzystanie z Pythona
+### Użycie Pythona
 
 ```python
 # api.py
@@ -141,7 +135,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Tutaj tworzymy API Flask i definiujemy domyślną trasę "/" oraz "/chat". Ta ostatnia jest przeznaczona dla naszego frontend, aby przesyłać pytania.
+Tutaj tworzymy API we Flasku i definiujemy domyślną trasę "/" oraz "/chat". Ta druga jest przeznaczona do komunikacji z frontendem, aby przesyłać pytania.
 
 Aby zintegrować *llm.py*, musimy zrobić następujące kroki:
 
@@ -152,7 +146,7 @@ Aby zintegrować *llm.py*, musimy zrobić następujące kroki:
    from flask import Flask, request
    ```
 
-- Wywołać ją z trasy "/chat":
+- Wywołać ją w trasie "/chat":
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -167,7 +161,7 @@ Aby zintegrować *llm.py*, musimy zrobić następujące kroki:
       })
    ```
 
-   Tutaj analizujemy przychodzące żądanie, aby pobrać właściwość `message` z ciała JSON. Następnie wywołujemy LLM za pomocą tego wywołania:
+   Tutaj analizujemy przychodzące żądanie, aby pobrać właściwość `message` z ciała JSON. Następnie wywołujemy LLM w ten sposób:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -182,11 +176,11 @@ Aby zintegrować *llm.py*, musimy zrobić następujące kroki:
 
 ## Konfiguracja Cors
 
-Warto wspomnieć, że ustawiamy coś takiego jak CORS, czyli cross-origin resource sharing. Oznacza to, że ponieważ nasz backend i frontend będą działać na różnych portach, musimy pozwolić frontendowi na wywoływanie backendu.
+Warto wspomnieć, że ustawiliśmy coś takiego jak CORS, czyli współdzielenie zasobów między różnymi domenami. Oznacza to, że ponieważ nasz backend i frontend będą działać na różnych portach, musimy pozwolić frontendowi na komunikację z backendem.
 
-### Korzystanie z Pythona
+### Użycie Pythona
 
-W pliku *api.py* znajduje się kod, który to ustawia:
+W pliku *api.py* znajduje się fragment kodu, który to ustawia:
 
 ```python
 from flask_cors import CORS
@@ -195,15 +189,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Obecnie jest ustawiony na "*" (wszystkie źródła), co jest trochę niebezpieczne. Powinniśmy to ograniczyć, gdy przejdziemy do produkcji.
+Obecnie jest ustawione na "*" (wszystkie domeny), co jest nieco niebezpieczne. Powinniśmy to ograniczyć, gdy przejdziemy do produkcji.
 
 ## Uruchomienie projektu
 
 Aby uruchomić projekt, najpierw musisz uruchomić backend, a potem frontend.
 
-### Korzystanie z Pythona
+### Użycie Pythona
 
-Ok, mamy *llm.py* i *api.py*. Jak sprawić, żeby działały z backendem? Są dwa kroki:
+Mamy *llm.py* i *api.py*, jak to uruchomić na backendzie? Są dwa kroki:
 
 - Zainstaluj zależności:
 
@@ -221,7 +215,7 @@ Ok, mamy *llm.py* i *api.py*. Jak sprawić, żeby działały z backendem? Są dw
    python api.py
    ```
 
-   Jeśli korzystasz z Codespaces, musisz przejść do sekcji Ports w dolnej części edytora, kliknąć prawym przyciskiem myszy i wybrać "Port Visibility", a następnie "Public".
+   Jeśli korzystasz z Codespaces, przejdź do sekcji Ports w dolnej części edytora, kliknij prawym przyciskiem myszy i wybierz "Port Visibility", a następnie "Public".
 
 ### Praca nad frontendem
 
@@ -253,7 +247,7 @@ Zacznijmy od **index.html**:
 </html>    
 ```
 
-Powyższy kod to absolutne minimum potrzebne do obsługi okna czatu. Składa się z pola tekstowego, w którym będą wyświetlane wiadomości, pola wejściowego do wpisywania wiadomości oraz przycisku do wysyłania wiadomości do backendu. Teraz przejdźmy do JavaScript w pliku *app.js*.
+Powyższy kod to absolutne minimum potrzebne do obsługi okna czatu. Składa się z pola tekstowego, w którym będą wyświetlane wiadomości, pola wejściowego do wpisywania wiadomości oraz przycisku do wysyłania wiadomości do backendu. Teraz spójrzmy na JavaScript w pliku *app.js*.
 
 **app.js**
 
@@ -312,8 +306,8 @@ Powyższy kod to absolutne minimum potrzebne do obsługi okna czatu. Składa si�
 
 Omówmy kod sekcja po sekcji:
 
-- 1) Tutaj uzyskujemy referencje do wszystkich elementów, które będziemy później używać w kodzie.
-- 2) W tej sekcji tworzymy funkcję, która korzysta z wbudowanej metody `fetch` do wywoływania naszego backendu.
+- 1) Tutaj uzyskujemy referencje do wszystkich elementów, których będziemy używać w kodzie.
+- 2) W tej sekcji tworzymy funkcję, która korzysta z wbudowanej metody `fetch`, aby wywołać nasze API.
 - 3) `appendMessage` pomaga dodawać odpowiedzi oraz wiadomości wpisane przez użytkownika.
 - 4) Tutaj nasłuchujemy zdarzenia submit, odczytujemy pole wejściowe, umieszczamy wiadomość użytkownika w polu tekstowym, wywołujemy API i renderujemy odpowiedź w polu tekstowym.
 
@@ -338,18 +332,18 @@ Teraz przejdźmy do stylizacji. Możesz tutaj zaszaleć i dostosować wygląd we
 } 
 ```
 
-Dzięki tym trzem klasom możesz stylizować wiadomości w zależności od ich pochodzenia – od asystenta lub od użytkownika. Jeśli potrzebujesz inspiracji, zajrzyj do folderu `solution/frontend/styles.css`.
+Dzięki tym trzem klasom możesz stylizować wiadomości w zależności od tego, czy pochodzą od asystenta, czy od użytkownika. Jeśli potrzebujesz inspiracji, zajrzyj do folderu `solution/frontend/styles.css`.
 
 ### Zmiana Base Url
 
-Jest jedna rzecz, której tutaj nie ustawiliśmy, a mianowicie `BASE_URL`. Nie jest ona znana, dopóki backend nie zostanie uruchomiony. Aby ją ustawić:
+Jest jedna rzecz, której jeszcze nie ustawiliśmy, a mianowicie `BASE_URL`. Nie jest ona znana, dopóki backend nie zostanie uruchomiony. Aby ją ustawić:
 
-- Jeśli uruchamiasz API lokalnie, powinno być ustawione na coś w rodzaju `http://localhost:5000`.
-- Jeśli uruchamiasz w Codespaces, powinno wyglądać jak "[name]app.github.dev".
+- Jeśli uruchamiasz API lokalnie, powinna być ustawiona na coś w stylu `http://localhost:5000`.
+- Jeśli uruchamiasz w Codespaces, powinna wyglądać mniej więcej tak: "[name]app.github.dev".
 
 ## Zadanie
 
-Stwórz własny folder *project* z zawartością jak poniżej:
+Utwórz własny folder *project* z zawartością jak poniżej:
 
 ```text
 project/
@@ -361,15 +355,15 @@ project/
     ...
 ```
 
-Skopiuj zawartość zgodnie z instrukcjami powyżej, ale możesz dostosować ją według własnych upodobań.
+Skopiuj zawartość zgodnie z powyższymi instrukcjami, ale możesz dostosować ją według własnych upodobań.
 
 ## Rozwiązanie
 
-[Rozwiązanie](./solution/README.md)
+[Solution](./solution/README.md)
 
 ## Bonus
 
-Spróbuj zmienić osobowość Asystenta AI.
+Spróbuj zmienić osobowość asystenta AI.
 
 ### Dla Pythona
 
@@ -381,20 +375,20 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Zmień również CSS i tekst według własnych upodobań, dokonując zmian w *index.html* i *styles.css*.
+Zmień również CSS i tekst według własnych upodobań, wprowadzając zmiany w *index.html* i *styles.css*.
 
 ## Podsumowanie
 
-Świetnie, nauczyłeś się od podstaw, jak stworzyć osobistego asystenta korzystając z AI. Zrobiliśmy to używając GitHub Models, backendu w Pythonie oraz frontendu w HTML, CSS i JavaScript.
+Świetnie, nauczyłeś się od podstaw, jak stworzyć osobistego asystenta z wykorzystaniem AI. Zrobiliśmy to przy użyciu GitHub Models, backendu w Pythonie oraz frontendu w HTML, CSS i JavaScript.
 
-## Konfiguracja z Codespaces
+## Konfiguracja w Codespaces
 
 - Przejdź do: [Repozytorium Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Utwórz z szablonu (upewnij się, że jesteś zalogowany na GitHub) w prawym górnym rogu:
+- Utwórz repozytorium z szablonu (upewnij się, że jesteś zalogowany na GitHubie) w prawym górnym rogu:
 
     ![Utwórz z szablonu](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.pl.png)
 
-- Po przejściu do swojego repozytorium, utwórz Codespace:
+- Po wejściu do repozytorium utwórz Codespace:
 
     ![Utwórz Codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.pl.png)
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:18:49+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:47:24+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "de"
 }
@@ -13,25 +13,19 @@ Dieses Chat-Projekt zeigt, wie man einen Chat-Assistenten mit GitHub Models erst
 
 So sieht das fertige Projekt aus:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Chat-App" width="600">
-</div>
+![Chat-App](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.de.png)
 
-Ein wenig Kontext: Chat-Assistenten mit generativer KI zu erstellen, ist eine großartige Möglichkeit, um mit KI zu beginnen. In dieser Lektion lernst du, generative KI in eine Web-App zu integrieren. Lass uns anfangen.
+Ein bisschen Kontext: Chat-Assistenten mit generativer KI zu erstellen, ist eine großartige Möglichkeit, um mit KI zu beginnen. In dieser Lektion lernst du, generative KI in eine Web-App zu integrieren. Lass uns anfangen.
 
 ## Verbindung zur generativen KI
 
-Für das Backend verwenden wir GitHub Models. Es ist ein großartiger Dienst, der es ermöglicht, KI kostenlos zu nutzen. Gehe zum Playground und hole dir den Code, der zu deiner bevorzugten Backend-Sprache passt. So sieht es im [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) aus:
+Für das Backend verwenden wir GitHub Models. Es ist ein großartiger Dienst, der es dir ermöglicht, KI kostenlos zu nutzen. Gehe zu seinem Playground und hole dir den Code, der zu deiner gewählten Backend-Sprache passt. So sieht es im [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) aus:
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" width="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.de.png)
 
 Wie gesagt, wähle den Tab "Code" und deine bevorzugte Laufzeitumgebung.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="Playground-Auswahl" width="600">
-</div>
+![Playground-Auswahl](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.de.png)
 
 ### Verwendung von Python
 
@@ -72,7 +66,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Lass uns den Code ein wenig bereinigen, damit er wiederverwendbar ist:
+Lass uns diesen Code ein wenig bereinigen, damit er wiederverwendbar ist:
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -108,7 +102,7 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Über eine Web-API bereitstellen
 
-Super, wir haben den KI-Teil fertiggestellt. Schauen wir uns an, wie wir ihn in eine Web-API integrieren können. Für die Web-API verwenden wir Flask, aber jedes Web-Framework sollte geeignet sein. Hier ist der Code dazu:
+Super, wir haben den KI-Teil fertiggestellt. Schauen wir uns an, wie wir das in eine Web-API integrieren können. Für die Web-API verwenden wir Flask, aber jedes Web-Framework sollte geeignet sein. Hier ist der Code dazu:
 
 ### Verwendung von Python
 
@@ -141,7 +135,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Hier erstellen wir eine Flask-API und definieren eine Standardroute "/" und "/chat". Letztere soll von unserem Frontend verwendet werden, um Fragen an das Backend zu übermitteln.
+Hier erstellen wir eine Flask-API und definieren eine Standardroute "/" und "/chat". Letztere soll von unserem Frontend verwendet werden, um Fragen an die API zu übermitteln.
 
 Um *llm.py* zu integrieren, müssen wir Folgendes tun:
 
@@ -178,11 +172,11 @@ Um *llm.py* zu integrieren, müssen wir Folgendes tun:
    })
    ```
 
-Super, jetzt haben wir alles erledigt, was wir brauchen.
+Super, jetzt haben wir alles erledigt.
 
 ## Cors konfigurieren
 
-Wir sollten erwähnen, dass wir etwas wie CORS eingerichtet haben, also Cross-Origin Resource Sharing. Das bedeutet, dass unser Backend und Frontend auf unterschiedlichen Ports laufen werden, und wir müssen dem Frontend erlauben, das Backend aufzurufen.
+Wir sollten erwähnen, dass wir etwas wie CORS (Cross-Origin Resource Sharing) einrichten. Das bedeutet, dass unser Backend und Frontend auf unterschiedlichen Ports laufen werden, und wir müssen dem Frontend erlauben, auf das Backend zuzugreifen.
 
 ### Verwendung von Python
 
@@ -195,7 +189,7 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Momentan ist es so eingerichtet, dass "*" erlaubt ist, also alle Ursprünge. Das ist etwas unsicher, und wir sollten es einschränken, sobald wir in die Produktion gehen.
+Momentan ist es so konfiguriert, dass alle Ursprünge ("*") erlaubt sind, was etwas unsicher ist. Wir sollten dies einschränken, sobald wir in die Produktion gehen.
 
 ## Projekt ausführen
 
@@ -221,11 +215,11 @@ Ok, wir haben *llm.py* und *api.py*. Wie können wir das mit einem Backend zum L
    python api.py
    ```
 
-   Wenn du in Codespaces arbeitest, musst du im unteren Teil des Editors zu Ports gehen, mit der rechten Maustaste darauf klicken und "Port Visibility" auswählen und "Public" auswählen.
+   Wenn du in Codespaces arbeitest, musst du im unteren Teil des Editors zu "Ports" gehen, mit der rechten Maustaste darauf klicken, "Port Visibility" auswählen und "Public" auswählen.
 
 ### Am Frontend arbeiten
 
-Jetzt, da wir eine API am Laufen haben, erstellen wir ein Frontend dafür. Ein minimalistisches Frontend, das wir schrittweise verbessern werden. Erstelle im Ordner *frontend* Folgendes:
+Jetzt, da wir eine API am Laufen haben, erstellen wir ein Frontend dafür. Ein minimales Frontend, das wir schrittweise verbessern werden. Erstelle im Ordner *frontend* Folgendes:
 
 ```text
 backend/
@@ -253,7 +247,7 @@ Beginnen wir mit **index.html**:
 </html>    
 ```
 
-Das oben Genannte ist das absolute Minimum, das du benötigst, um ein Chat-Fenster zu unterstützen. Es besteht aus einem Textbereich, in dem Nachrichten angezeigt werden, einem Eingabefeld, in das die Nachricht eingegeben wird, und einem Button, um die Nachricht an das Backend zu senden. Schauen wir uns als Nächstes das JavaScript in *app.js* an.
+Das oben Gezeigte ist das absolute Minimum, das du benötigst, um ein Chat-Fenster zu unterstützen. Es besteht aus einem Textbereich, in dem Nachrichten angezeigt werden, einem Eingabefeld, in das die Nachricht eingegeben wird, und einem Button, um die Nachricht an das Backend zu senden. Schauen wir uns als Nächstes das JavaScript in *app.js* an.
 
 **app.js**
 
@@ -314,7 +308,7 @@ Gehen wir den Code Abschnitt für Abschnitt durch:
 
 - 1) Hier holen wir uns Referenzen zu allen Elementen, auf die wir später im Code zugreifen werden.
 - 2) In diesem Abschnitt erstellen wir eine Funktion, die die eingebaute `fetch`-Methode verwendet, um unser Backend aufzurufen.
-- 3) `appendMessage` hilft dabei, sowohl Antworten als auch die vom Benutzer eingegebenen Nachrichten hinzuzufügen.
+- 3) `appendMessage` hilft dabei, sowohl die Antworten als auch die vom Benutzer eingegebenen Nachrichten hinzuzufügen.
 - 4) Hier hören wir auf das Submit-Event, lesen das Eingabefeld aus, platzieren die Nachricht des Benutzers im Textbereich, rufen die API auf und zeigen die Antwort im Textbereich an.
 
 Schauen wir uns als Nächstes das Styling an. Hier kannst du deiner Kreativität freien Lauf lassen und es so gestalten, wie du möchtest. Hier sind einige Vorschläge:
@@ -342,9 +336,9 @@ Mit diesen drei Klassen kannst du Nachrichten unterschiedlich gestalten, je nach
 
 ### Basis-URL ändern
 
-Es gibt eine Sache, die wir hier noch nicht festgelegt haben, und das ist die `BASE_URL`. Diese ist erst bekannt, wenn dein Backend gestartet ist. Um sie festzulegen:
+Es gibt eine Sache, die wir hier noch nicht festgelegt haben, und das ist `BASE_URL`. Diese ist erst bekannt, wenn dein Backend gestartet ist. Um sie festzulegen:
 
-- Wenn du die API lokal ausführst, sollte sie etwa auf `http://localhost:5000` gesetzt werden.
+- Wenn du die API lokal ausführst, sollte sie auf etwas wie `http://localhost:5000` gesetzt werden.
 - Wenn du sie in Codespaces ausführst, sollte sie etwa so aussehen: "[name]app.github.dev".
 
 ## Aufgabe

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:23:01+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:50:28+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "tw"
 }
@@ -13,25 +13,19 @@ CO_OP_TRANSLATOR_METADATA:
 
 以下是完成的專案樣貌：
 
-<div>
-  <img src="./assets/screenshot.png" alt="聊天應用程式" width="600">
-</div>
+![聊天應用程式](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.tw.png)
 
-一些背景資訊，使用生成式 AI 建立聊天助手是一個學習 AI 的好方法。在這堂課中，你將學到如何將生成式 AI整合到網頁應用程式中，讓我們開始吧。
+一些背景資訊，使用生成式 AI 建立聊天助手是一個學習 AI 的絕佳起點。在這堂課中，你將學習如何將生成式 AI整合到網頁應用程式中，讓我們開始吧。
 
 ## 連接生成式 AI
 
-在後端部分，我們使用 GitHub Models。這是一個很棒的服務，讓你可以免費使用 AI。前往它的 Playground，並取得與你選擇的後端語言相對應的程式碼。以下是 [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) 的樣子：
+在後端部分，我們使用 GitHub Models。這是一個很棒的服務，可以免費使用 AI。前往它的 Playground，並取得與你選擇的後端語言相對應的程式碼。以下是 [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) 的樣子：
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.tw.png)
 
-如我們所說，選擇 "Code" 標籤和你選擇的執行環境。
+如前所述，選擇 "Code" 標籤和你選擇的執行環境。
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground 選擇" with="600">
-</div>
+![Playground 選擇](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.tw.png)
 
 ### 使用 Python
 
@@ -72,7 +66,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-讓我們稍微清理一下這段程式碼，使其可重複使用：
+讓我們稍微整理一下這段程式碼，使其更具可重用性：
 
 ```python
 def call_llm(prompt: str, system_message: str):
@@ -96,7 +90,7 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-有了這個函數 `call_llm`，我們現在可以傳入提示和系統提示，函數最終會返回結果。
+透過這個函數 `call_llm`，我們現在可以傳入提示和系統提示，函數最終會返回結果。
 
 ### 自訂 AI 助手
 
@@ -106,7 +100,7 @@ def call_llm(prompt: str, system_message: str):
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## 通過 Web API 暴露功能
+## 透過 Web API 暴露功能
 
 太棒了，我們已完成 AI 部分，接下來看看如何將其整合到 Web API 中。對於 Web API，我們選擇使用 Flask，但任何網頁框架都可以。以下是程式碼：
 
@@ -180,9 +174,9 @@ if __name__ == "__main__":
 
 太棒了，現在我們已完成所需的部分。
 
-## 配置 Cors
+## 設定 Cors
 
-我們需要提到的是，我們設置了類似 CORS（跨來源資源共享）的東西。這意味著，由於後端和前端將在不同的端口上運行，我們需要允許前端調用後端。
+我們需要提到的是，我們設置了類似 CORS（跨來源資源共享）的功能。這意味著，由於後端和前端將在不同的端口上運行，我們需要允許前端調用後端。
 
 ### 使用 Python
 
@@ -195,7 +189,7 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-目前它被設置為允許 "*"，即所有來源，但這樣有點不安全，當進入生產環境時應該限制它。
+目前它被設置為允許 "*"，即所有來源，但這樣有點不安全，應該在進入生產環境時進行限制。
 
 ## 運行你的專案
 
@@ -203,7 +197,7 @@ CORS(app)   # *   example.com
 
 ### 使用 Python
 
-好的，我們有 *llm.py* 和 *api.py*，如何讓它們在後端運行呢？有兩件事需要做：
+好的，我們有 *llm.py* 和 *api.py*，如何讓它們在後端運作呢？我們需要做以下兩件事：
 
 - 安裝依賴項：
 
@@ -225,7 +219,7 @@ CORS(app)   # *   example.com
 
 ### 開發前端
 
-現在我們的 API 已經啟動並運行，讓我們為此建立一個前端。這是一個最低限度的前端，我們將逐步改進它。在 *frontend* 資料夾中，建立以下內容：
+現在我們的 API 已經啟動並運行，讓我們為此建立一個前端。以下是一個最低限度的前端，我們將逐步改進它。在 *frontend* 資料夾中，建立以下內容：
 
 ```text
 backend/
@@ -253,7 +247,7 @@ styles.css
 </html>    
 ```
 
-以上是支持聊天窗口所需的最低限度，它包括一個 textarea 用於顯示訊息，一個輸入框用於輸入訊息，以及一個按鈕用於將訊息發送到後端。接下來看看 *app.js* 中的 JavaScript。
+以上是支持聊天窗口所需的最低限度，它包含一個用於顯示訊息的文字區域、一個輸入框用於輸入訊息，以及一個按鈕用於將訊息發送到後端。接下來看看 *app.js* 中的 JavaScript。
 
 **app.js**
 
@@ -312,10 +306,10 @@ styles.css
 
 讓我們逐段解析程式碼：
 
-- 1) 在這裡，我們獲取所有稍後會引用的元素。
+- 1) 在這裡，我們獲取所有稍後會在程式碼中引用的元素。
 - 2) 在這部分，我們建立了一個函數，使用內建的 `fetch` 方法來調用後端。
 - 3) `appendMessage` 幫助添加回應以及用戶輸入的訊息。
-- 4) 在這裡，我們監聽提交事件，讀取輸入框，將用戶的訊息放入 textarea，調用 API，並將回應渲染到 textarea。
+- 4) 在這裡，我們監聽提交事件，讀取輸入欄位，將用戶的訊息放入文字區域，調用 API，並將回應渲染到文字區域。
 
 接下來看看樣式部分，這裡你可以自由發揮，讓它看起來像你想要的樣子，但以下是一些建議：
 
@@ -338,11 +332,11 @@ styles.css
 } 
 ```
 
-有了這三個類別，你可以根據訊息的來源（助手或用戶）來區分樣式。如果需要靈感，可以查看 `solution/frontend/styles.css` 資料夾。
+透過這三個類別，你可以根據訊息的來源（助手或用戶）來區分樣式。如果需要靈感，可以查看 `solution/frontend/styles.css` 資料夾。
 
 ### 更改 Base Url
 
-有一件事我們還沒設置，那就是 `BASE_URL`，這在後端啟動之前是未知的。設置方法如下：
+有一件事我們尚未設置，那就是 `BASE_URL`，這在後端啟動之前是未知的。設置方式如下：
 
 - 如果你在本地運行 API，應設置為類似 `http://localhost:5000`。
 - 如果在 Codespaces 中運行，應設置為類似 "[name]app.github.dev"。
@@ -385,7 +379,7 @@ call_llm(message, "You are Captain Picard")
 
 ## 總結
 
-太棒了，你已經從零開始學會如何使用 AI 建立個人助手。我們使用了 GitHub Models、Python 後端以及 HTML、CSS 和 JavaScript 前端完成了這項工作。
+太棒了，你已經從零開始學習如何使用 AI 建立個人助手。我們使用了 GitHub Models、Python 後端以及 HTML、CSS 和 JavaScript 前端完成了這項工作。
 
 ## 使用 Codespaces 設置
 
@@ -398,9 +392,9 @@ call_llm(message, "You are Captain Picard")
 
     ![建立 Codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.tw.png)
 
-    這將啟動一個你可以使用的環境。
+    這將啟動一個你可以開始工作的環境。
 
 ---
 
 **免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們致力於提供準確的翻譯，請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。

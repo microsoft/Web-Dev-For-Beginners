@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:28:54+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:54:14+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "it"
 }
@@ -13,25 +13,19 @@ Questo progetto di chat mostra come costruire un Assistente Chat utilizzando i M
 
 Ecco come appare il progetto finito:
 
-<div>
-  <img src="./assets/screenshot.png" alt="App di chat" width="600">
-</div>
+![App di chat](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.it.png)
 
-Un po' di contesto: costruire assistenti chat utilizzando l'AI generativa è un ottimo modo per iniziare a imparare sull'AI. In questa lezione imparerai a integrare l'AI generativa in un'app web. Iniziamo!
+Un po' di contesto: costruire assistenti chat utilizzando l'IA generativa è un ottimo modo per iniziare a imparare sull'IA. In questa lezione imparerai a integrare l'IA generativa in un'app web. Iniziamo.
 
-## Collegarsi all'AI generativa
+## Connessione all'IA generativa
 
-Per il backend, utilizziamo i Modelli di GitHub. È un ottimo servizio che ti permette di utilizzare l'AI gratuitamente. Vai al suo playground e prendi il codice corrispondente al linguaggio backend che hai scelto. Ecco come appare il [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Per il backend, utilizziamo i Modelli di GitHub. È un ottimo servizio che ti consente di utilizzare l'IA gratuitamente. Vai al suo playground e prendi il codice corrispondente al linguaggio backend che hai scelto. Ecco come appare il [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.it.png)
 
 Come detto, seleziona la scheda "Code" e il runtime che preferisci.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="scelta del playground" with="600">
-</div>
+![Scelta del playground](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.it.png)
 
 ### Utilizzo di Python
 
@@ -98,9 +92,9 @@ def call_llm(prompt: str, system_message: str):
 
 Con questa funzione `call_llm` possiamo ora prendere un prompt e un system prompt, e la funzione restituirà il risultato.
 
-### Personalizzare l'Assistente AI
+### Personalizza l'Assistente AI
 
-Se vuoi personalizzare l'assistente AI, puoi specificare come vuoi che si comporti popolando il system prompt in questo modo:
+Se vuoi personalizzare l'assistente AI, puoi specificare come desideri che si comporti popolando il system prompt in questo modo:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -108,7 +102,7 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Esponilo tramite una Web API
 
-Ottimo, abbiamo completato la parte AI. Vediamo ora come possiamo integrarla in una Web API. Per la Web API, scegliamo di utilizzare Flask, ma qualsiasi framework web andrà bene. Ecco il codice:
+Perfetto, abbiamo completato la parte relativa all'IA. Vediamo ora come possiamo integrarla in una Web API. Per la Web API, scegliamo di utilizzare Flask, ma qualsiasi framework web andrà bene. Ecco il codice:
 
 ### Utilizzo di Python
 
@@ -178,7 +172,7 @@ Per integrare *llm.py*, ecco cosa dobbiamo fare:
    })
    ```
 
-Ottimo, ora abbiamo fatto ciò che era necessario.
+Perfetto, ora abbiamo fatto ciò che serve.
 
 ## Configurare Cors
 
@@ -203,7 +197,7 @@ Per eseguire il tuo progetto, devi prima avviare il backend e poi il frontend.
 
 ### Utilizzo di Python
 
-Ok, abbiamo *llm.py* e *api.py*. Come possiamo far funzionare tutto con un backend? Ci sono due cose da fare:
+Ok, abbiamo *llm.py* e *api.py*. Come possiamo far funzionare tutto con un backend? Ci sono due cose che dobbiamo fare:
 
 - Installare le dipendenze:
 
@@ -223,9 +217,9 @@ Ok, abbiamo *llm.py* e *api.py*. Come possiamo far funzionare tutto con un backe
 
    Se stai utilizzando Codespaces, devi andare su Ports nella parte inferiore dell'editor, fare clic destro su di esso, selezionare "Port Visibility" e scegliere "Public".
 
-### Lavorare su un frontend
+### Lavora su un frontend
 
-Ora che abbiamo un'API funzionante, creiamo un frontend per essa. Un frontend minimo che miglioreremo passo dopo passo. Nella cartella *frontend*, crea quanto segue:
+Ora che abbiamo un'API funzionante, creiamo un frontend per questa. Un frontend minimo che miglioreremo passo dopo passo. Nella cartella *frontend*, crea quanto segue:
 
 ```text
 backend/
@@ -338,18 +332,18 @@ Passiamo ora allo stile. Qui puoi sbizzarrirti e personalizzarlo come preferisci
 } 
 ```
 
-Con queste tre classi, puoi stilizzare i messaggi in modo diverso a seconda che provengano dall'assistente o dall'utente. Se vuoi ispirarti, dai un'occhiata alla cartella `solution/frontend/styles.css`.
+Con queste tre classi, puoi stilizzare i messaggi in modo diverso a seconda che provengano dall'assistente o da te come utente. Se vuoi ispirarti, dai un'occhiata alla cartella `solution/frontend/styles.css`.
 
-### Cambiare la Base Url
+### Cambia Base Url
 
-C'è una cosa che non abbiamo impostato: `BASE_URL`. Questo valore non è noto finché il backend non è avviato. Per impostarlo:
+C'è una cosa che non abbiamo impostato: `BASE_URL`. Questo non è noto fino a quando il backend non è avviato. Per impostarlo:
 
 - Se esegui l'API localmente, dovrebbe essere qualcosa come `http://localhost:5000`.
-- Se esegui in un Codespaces, dovrebbe essere qualcosa come "[name]app.github.dev".
+- Se esegui in Codespaces, dovrebbe essere qualcosa come "[name]app.github.dev".
 
 ## Compito
 
-Crea la tua cartella *project* con il contenuto seguente:
+Crea la tua cartella *project* con il contenuto come segue:
 
 ```text
 project/
@@ -381,11 +375,11 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Cambia anche il CSS e il testo a tuo piacimento, quindi modifica *index.html* e *styles.css*.
+Cambia anche il CSS e il testo a tuo piacimento, quindi apporta modifiche in *index.html* e *styles.css*.
 
 ## Riepilogo
 
-Ottimo, hai imparato da zero come creare un assistente personale utilizzando l'AI. Lo abbiamo fatto utilizzando i Modelli di GitHub, un backend in Python e un frontend in HTML, CSS e JavaScript.
+Ottimo, hai imparato da zero come creare un assistente personale utilizzando l'IA. Lo abbiamo fatto utilizzando i Modelli di GitHub, un backend in Python e un frontend in HTML, CSS e JavaScript.
 
 ## Configurazione con Codespaces
 
@@ -403,4 +397,4 @@ Ottimo, hai imparato da zero come creare un assistente personale utilizzando l'A
 ---
 
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un esperto umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

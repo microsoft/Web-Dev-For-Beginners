@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:39:52+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T17:03:27+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "sl"
 }
@@ -11,27 +11,21 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ta projekt klepeta prikazuje, kako zgraditi klepetalnega asistenta z uporabo GitHub Modelov.
 
-Tako izgleda končan projekt:
+Tako izgleda končni projekt:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Aplikacija za klepet" width="600">
-</div>
+![Aplikacija za klepet](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.sl.png)
 
-Nekaj konteksta: gradnja klepetalnih asistentov z uporabo generativne umetne inteligence je odličen način za začetek učenja o AI. V tej lekciji se boste naučili, kako integrirati generativno AI v spletno aplikacijo. Začnimo.
+Nekaj konteksta: gradnja klepetalnih asistentov z generativno umetno inteligenco je odličen način za začetek učenja o umetni inteligenci. V tej lekciji se boste naučili, kako integrirati generativno umetno inteligenco v spletno aplikacijo. Začnimo.
 
-## Povezovanje z generativno AI
+## Povezovanje z generativno umetno inteligenco
 
-Za zaledje uporabljamo GitHub Model. To je odlična storitev, ki omogoča brezplačno uporabo AI. Obiščite njihov "playground" in pridobite kodo, ki ustreza vašemu izbranemu jeziku za zaledje. Tukaj je primer, kako to izgleda na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
+Za zaledje uporabljamo GitHub Modele. To je odlična storitev, ki omogoča uporabo umetne inteligence brezplačno. Obiščite njihov "playground" in pridobite kodo, ki ustreza vašemu izbranemu jeziku za zaledje. Tako izgleda na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" width="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.sl.png)
 
-Kot smo omenili, izberite zavihek "Code" in vaš izbrani runtime.
+Kot smo rekli, izberite zavihek "Code" in vaš izbrani runtime.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="Izbira v playgroundu" width="600">
-</div>
+![Izbira na playgroundu](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.sl.png)
 
 ### Uporaba Pythona
 
@@ -100,15 +94,15 @@ S funkcijo `call_llm` lahko zdaj podamo poziv in sistemski poziv, funkcija pa vr
 
 ### Prilagoditev AI asistenta
 
-Če želite prilagoditi AI asistenta, lahko določite, kako naj se obnaša, tako da izpolnite sistemski poziv, kot je prikazano tukaj:
+Če želite prilagoditi AI asistenta, lahko določite, kako naj se obnaša, tako da izpolnite sistemski poziv, kot je prikazano:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Izpostavitev prek spletnega API-ja
+## Izpostavite ga prek spletnega API-ja
 
-Odlično, AI del je končan, poglejmo, kako ga lahko integriramo v spletni API. Za spletni API smo izbrali Flask, vendar je primeren katerikoli spletni okvir. Tukaj je koda:
+Odlično, AI del je končan, poglejmo, kako ga lahko integriramo v spletni API. Za spletni API smo izbrali Flask, vendar je primeren kateri koli spletni okvir. Tukaj je koda:
 
 ### Uporaba Pythona
 
@@ -141,18 +135,18 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Tukaj ustvarimo Flask API in definiramo privzeto pot "/" ter "/chat". Slednja je namenjena uporabi s strani našega sprednjega dela za posredovanje vprašanj.
+Tukaj ustvarimo Flask API in definiramo privzeto pot "/" ter "/chat". Slednja je namenjena naši sprednji strani, da ji posreduje vprašanja.
 
-Za integracijo *llm.py* moramo narediti naslednje:
+Za integracijo *llm.py* potrebujemo naslednje:
 
-- Uvoziti funkcijo `call_llm`:
+- Uvoz funkcije `call_llm`:
 
    ```python
    from llm import call_llm
    from flask import Flask, request
    ```
 
-- Poklicati jo iz poti "/chat":
+- Klic funkcije iz poti "/chat":
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -180,9 +174,9 @@ Za integracijo *llm.py* moramo narediti naslednje:
 
 Odlično, zdaj smo naredili, kar je potrebno.
 
-## Konfiguracija Cors
+## Konfigurirajte Cors
 
-Omeniti moramo, da nastavimo nekaj, kot je CORS (cross-origin resource sharing). To pomeni, da ker bosta naše zaledje in sprednji del delovala na različnih vratih, moramo omogočiti sprednjemu delu, da kliče zaledje.
+Omeniti moramo, da smo nastavili nekaj, kot je CORS (deljenje virov med različnimi izvorami). To pomeni, da ker bosta naše zaledje in sprednje strani delovali na različnih vratih, moramo omogočiti sprednji strani, da kliče zaledje.
 
 ### Uporaba Pythona
 
@@ -195,17 +189,17 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Trenutno je nastavljeno, da dovoljuje "*", kar pomeni vse izvorne naslove, kar je nekoliko nevarno. To bi morali omejiti, ko gremo v produkcijo.
+Trenutno je nastavljeno, da dovoljuje "*", kar pomeni vse izvore, kar je nekoliko nevarno. To bi morali omejiti, ko gremo v produkcijo.
 
-## Zagon projekta
+## Zaženite svoj projekt
 
-Za zagon projekta morate najprej zagnati zaledje in nato sprednji del.
+Za zagon projekta morate najprej zagnati zaledje in nato sprednjo stran.
 
 ### Uporaba Pythona
 
 Imamo *llm.py* in *api.py*, kako lahko to deluje z zaledjem? Tukaj sta dve stvari, ki ju moramo narediti:
 
-- Namestiti odvisnosti:
+- Namestite odvisnosti:
 
    ```sh
    cd backend
@@ -215,17 +209,17 @@ Imamo *llm.py* in *api.py*, kako lahko to deluje z zaledjem? Tukaj sta dve stvar
    pip install openai flask flask-cors openai
    ```
 
-- Zagnati API:
+- Zaženite API
 
    ```sh
    python api.py
    ```
 
-   Če ste v Codespaces, morate iti na "Ports" v spodnjem delu urejevalnika, desno klikniti nanj, izbrati "Port Visibility" in izbrati "Public".
+   Če ste v Codespaces, morate iti na "Ports" v spodnjem delu urejevalnika, klikniti z desno tipko miške in izbrati "Port Visibility" ter nato "Public".
 
-### Delo na sprednjem delu
+### Delo na sprednji strani
 
-Zdaj, ko imamo API, ki deluje, ustvarimo sprednji del za to. Minimalni sprednji del, ki ga bomo postopoma izboljšali. V mapi *frontend* ustvarite naslednje:
+Zdaj, ko imamo API, ki deluje, ustvarimo sprednjo stran za to. Minimalno sprednjo stran bomo postopoma izboljšali. V mapi *frontend* ustvarite naslednje:
 
 ```text
 backend/
@@ -253,7 +247,7 @@ Začnimo z **index.html**:
 </html>    
 ```
 
-Zgornje je absolutni minimum, ki ga potrebujete za podporo oknu za klepet, saj vsebuje besedilno polje, kjer se bodo prikazovala sporočila, vnosno polje za vnos sporočila in gumb za pošiljanje sporočila zaledju. Poglejmo naslednji JavaScript v *app.js*.
+Zgornje je absolutni minimum, ki ga potrebujete za podporo oknu za klepet, saj vsebuje besedilno polje, kjer bodo prikazana sporočila, vnosno polje za vnos sporočila in gumb za pošiljanje sporočila zaledju. Poglejmo JavaScript v datoteki *app.js*.
 
 **app.js**
 
@@ -310,12 +304,12 @@ Zgornje je absolutni minimum, ki ga potrebujete za podporo oknu za klepet, saj v
 })();
 ```
 
-Pojdimo skozi kodo po delih:
+Pojdimo skozi kodo po odsekih:
 
-- 1) Tukaj dobimo referenco na vse elemente, ki jih bomo kasneje uporabljali v kodi.
-- 2) V tem delu ustvarimo funkcijo, ki uporablja vgrajeno metodo `fetch` za klic našega zaledja.
+- 1) Tukaj pridobimo referenco na vse elemente, na katere se bomo kasneje sklicevali v kodi.
+- 2) V tem odseku ustvarimo funkcijo, ki uporablja vgrajeno metodo `fetch` za klic našega zaledja.
 - 3) `appendMessage` pomaga dodajati odgovore, kot tudi sporočila, ki jih vnesete kot uporabnik.
-- 4) Tukaj poslušamo dogodek "submit" in preberemo vnosno polje, postavimo uporabnikovo sporočilo v besedilno polje, pokličemo API in prikažemo odgovor v besedilnem polju.
+- 4) Tukaj poslušamo dogodek "submit", preberemo vnosno polje, postavimo uporabnikovo sporočilo v besedilno polje, pokličemo API in prikažemo odgovor v besedilnem polju.
 
 Poglejmo še oblikovanje, tukaj lahko resnično ustvarite videz po svoji želji, vendar tukaj so nekateri predlogi:
 
@@ -342,10 +336,10 @@ S temi tremi razredi boste oblikovali sporočila različno, odvisno od tega, ali
 
 ### Sprememba osnovnega URL-ja
 
-Obstaja ena stvar, ki je tukaj nismo nastavili, in to je `BASE_URL`. Ta ni znan, dokler vaše zaledje ni zagnano. Za nastavitev:
+Tukaj je ena stvar, ki je nismo nastavili, in to je `BASE_URL`. Ta ni znan, dokler vaše zaledje ni zagnano. Za nastavitev:
 
-- Če API deluje lokalno, ga nastavite na nekaj, kot je `http://localhost:5000`.
-- Če deluje v Codespaces, bo videti nekaj takega: "[name]app.github.dev".
+- Če API zaženete lokalno, bi moral biti nastavljen na nekaj, kot je `http://localhost:5000`.
+- Če ga zaženete v Codespaces, bi moral izgledati nekaj, kot je "[name]app.github.dev".
 
 ## Naloga
 
@@ -361,7 +355,7 @@ project/
     ...
 ```
 
-Kopirajte vsebino iz zgoraj navedenih navodil, vendar jo prilagodite po svoji želji.
+Kopirajte vsebino iz zgoraj navedenih navodil, vendar jo po želji prilagodite.
 
 ## Rešitev
 
@@ -373,34 +367,34 @@ Poskusite spremeniti osebnost AI asistenta.
 
 ### Za Python
 
-Ko pokličete `call_llm` v *api.py*, lahko spremenite drugi argument v kar koli želite, na primer:
+Ko kličete `call_llm` v *api.py*, lahko spremenite drugi argument v kar želite, na primer:
 
 ```python
 call_llm(message, "You are Captain Picard")
 ```
 
-### Sprednji del
+### Sprednja stran
 
 Spremenite tudi CSS in besedilo po svoji želji, torej naredite spremembe v *index.html* in *styles.css*.
 
 ## Povzetek
 
-Odlično, naučili ste se, kako od začetka ustvariti osebnega asistenta z uporabo AI. To smo naredili z uporabo GitHub Modelov, zaledja v Pythonu in sprednjega dela v HTML, CSS in JavaScript.
+Odlično, naučili ste se, kako od začetka ustvariti osebnega asistenta z uporabo umetne inteligence. To smo storili z uporabo GitHub Modelov, zaledja v Pythonu in sprednje strani v HTML, CSS in JavaScript.
 
 ## Nastavitev s Codespaces
 
 - Pojdite na: [Repozitorij Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
 - Ustvarite iz predloge (prepričajte se, da ste prijavljeni v GitHub) v zgornjem desnem kotu:
 
-    ![Ustvari iz predloge](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.sl.png)
+    ![Ustvarite iz predloge](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.sl.png)
 
 - Ko ste v svojem repozitoriju, ustvarite Codespace:
 
-    ![Ustvari Codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.sl.png)
+    ![Ustvarite Codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.sl.png)
 
     To bi moralo zagnati okolje, s katerim lahko zdaj delate.
 
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.

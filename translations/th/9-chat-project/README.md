@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:31:00+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:55:47+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "th"
 }
@@ -13,9 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 นี่คือลักษณะของโปรเจคที่เสร็จสมบูรณ์:
 
-<div>
-  <img src="./assets/screenshot.png" alt="แอปแชท" width="600">
-</div>
+![แอปแชท](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.th.png)
 
 ข้อมูลเบื้องต้น การสร้างผู้ช่วยแชทโดยใช้ Generative AI เป็นวิธีที่ดีในการเริ่มเรียนรู้เกี่ยวกับ AI สิ่งที่คุณจะได้เรียนรู้คือการผสาน Generative AI เข้ากับเว็บแอปตลอดบทเรียนนี้ มาเริ่มกันเลย
 
@@ -23,15 +21,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 สำหรับ Backend เราใช้ GitHub Models ซึ่งเป็นบริการที่ยอดเยี่ยมที่ช่วยให้คุณใช้ AI ได้ฟรี ไปที่ Playground ของมันและดึงโค้ดที่ตรงกับภาษาของ Backend ที่คุณเลือก นี่คือลักษณะของมันที่ [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.th.png)
 
 ดังที่กล่าวไว้ เลือกแท็บ "Code" และ Runtime ที่คุณเลือก
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
-</div>
+![ตัวเลือก Playground](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.th.png)
 
 ### การใช้ Python
 
@@ -100,7 +94,7 @@ def call_llm(prompt: str, system_message: str):
 
 ### ปรับแต่งผู้ช่วย AI
 
-หากคุณต้องการปรับแต่งผู้ช่วย AI คุณสามารถกำหนดวิธีการที่คุณต้องการให้มันทำงานโดยการเติม System Prompt ดังนี้:
+หากคุณต้องการปรับแต่งผู้ช่วย AI คุณสามารถระบุวิธีที่คุณต้องการให้มันทำงานโดยการเติม System Prompt เช่นนี้:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
@@ -108,7 +102,7 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## เปิดใช้งานผ่าน Web API
 
-เยี่ยม เราได้ทำส่วน AI เสร็จแล้ว มาดูกันว่าเราจะผสานมันเข้ากับ Web API ได้อย่างไร สำหรับ Web API เราเลือกใช้ Flask แต่ Framework เว็บใด ๆ ก็น่าจะใช้ได้ มาดูโค้ดกัน:
+เยี่ยม เราได้ทำส่วน AI เสร็จแล้ว มาดูกันว่าเราจะผสานมันเข้ากับ Web API ได้อย่างไร สำหรับ Web API เราเลือกใช้ Flask แต่ Framework เว็บใด ๆ ก็สามารถใช้ได้ มาดูโค้ดกัน:
 
 ### การใช้ Python
 
@@ -141,18 +135,18 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-ที่นี่ เราสร้าง Flask API และกำหนด Route เริ่มต้น "/" และ "/chat" โดย Route หลังนี้มีไว้สำหรับ Frontend เพื่อส่งคำถามเข้ามา
+ที่นี่ เราสร้าง Flask API และกำหนด Route เริ่มต้น "/" และ "/chat" โดย Route หลังนี้ถูกออกแบบมาให้ Frontend ของเราส่งคำถามเข้ามา
 
 เพื่อผสาน *llm.py* นี่คือสิ่งที่เราต้องทำ:
 
-- Import ฟังก์ชัน `call_llm`:
+- นำเข้า `call_llm` ฟังก์ชัน:
 
    ```python
    from llm import call_llm
    from flask import Flask, request
    ```
 
-- เรียกใช้มันจาก Route "/chat":
+- เรียกใช้จาก Route "/chat":
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -167,7 +161,7 @@ if __name__ == "__main__":
       })
    ```
 
-   ที่นี่เราวิเคราะห์คำขอที่เข้ามาเพื่อดึง Property `message` จาก JSON Body หลังจากนั้นเราเรียกใช้ LLM ด้วยการเรียกนี้:
+   ที่นี่เราวิเคราะห์คำขอที่เข้ามาเพื่อดึงคุณสมบัติ `message` จาก JSON body หลังจากนั้นเราเรียก LLM ด้วยการเรียกนี้:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -182,7 +176,7 @@ if __name__ == "__main__":
 
 ## ตั้งค่า Cors
 
-เราควรกล่าวถึงว่าเราตั้งค่าบางอย่างเช่น CORS หรือ Cross-Origin Resource Sharing ซึ่งหมายความว่าเนื่องจาก Backend และ Frontend ของเราจะทำงานบนพอร์ตที่ต่างกัน เราจำเป็นต้องอนุญาตให้ Frontend เรียก Backend ได้
+เราควรกล่าวถึงว่าเราได้ตั้งค่า Cors หรือ Cross-Origin Resource Sharing ซึ่งหมายความว่าเนื่องจาก Backend และ Frontend ของเราจะทำงานบนพอร์ตที่ต่างกัน เราจำเป็นต้องอนุญาตให้ Frontend เรียก Backend ได้
 
 ### การใช้ Python
 
@@ -253,7 +247,7 @@ styles.css
 </html>    
 ```
 
-ข้างต้นคือสิ่งที่จำเป็นขั้นต่ำสุดที่คุณต้องมีเพื่อรองรับหน้าต่างแชท ประกอบด้วย Textarea ที่จะแสดงข้อความ Input สำหรับพิมพ์ข้อความ และปุ่มสำหรับส่งข้อความไปยัง Backend มาดู JavaScript ต่อใน *app.js*
+ข้างต้นคือสิ่งที่จำเป็นขั้นต่ำที่คุณต้องมีเพื่อรองรับหน้าต่างแชท ซึ่งประกอบด้วย Textarea ที่จะแสดงข้อความ Input สำหรับพิมพ์ข้อความ และปุ่มสำหรับส่งข้อความไปยัง Backend มาดู JavaScript ต่อใน *app.js*
 
 **app.js**
 
@@ -312,12 +306,12 @@ styles.css
 
 มาดูโค้ดทีละส่วน:
 
-- 1) ที่นี่เราอ้างอิงถึง Element ทั้งหมดที่เราจะใช้ในโค้ดต่อไป
-- 2) ในส่วนนี้ เราสร้างฟังก์ชันที่ใช้ `fetch` ซึ่งเป็น Method ในตัวที่เรียก Backend ของเรา
+- 1) ที่นี่เราอ้างอิงถึงองค์ประกอบทั้งหมดที่เราจะใช้ในโค้ดต่อไป
+- 2) ในส่วนนี้ เราสร้างฟังก์ชันที่ใช้ `fetch` ซึ่งเป็นวิธีในตัวที่เรียก Backend ของเรา
 - 3) `appendMessage` ช่วยเพิ่มการตอบกลับรวมถึงข้อความที่คุณพิมพ์ในฐานะผู้ใช้
-- 4) ที่นี่เราฟัง Event `submit` และอ่าน Input Field วางข้อความของผู้ใช้ใน Textarea เรียก API และแสดงการตอบกลับใน Textarea
+- 4) ที่นี่เราฟัง Event การส่งข้อมูล และเราจะอ่าน Input Field วางข้อความของผู้ใช้ใน Textarea เรียก API และแสดงการตอบกลับใน Textarea
 
-มาดูการจัดสไตล์ต่อ นี่คือที่ที่คุณสามารถสร้างสรรค์ได้เต็มที่และทำให้มันดูเหมือนที่คุณต้องการ แต่มีคำแนะนำบางอย่าง:
+มาดูการจัดแต่งต่อไป นี่คือที่ที่คุณสามารถสร้างสรรค์ได้เต็มที่และทำให้มันดูเหมือนที่คุณต้องการ แต่มีคำแนะนำบางอย่าง:
 
 **styles.css**
 
@@ -338,14 +332,14 @@ styles.css
 } 
 ```
 
-ด้วยสามคลาสนี้ คุณจะจัดสไตล์ข้อความต่างกันขึ้นอยู่กับว่ามาจากผู้ช่วยหรือคุณในฐานะผู้ใช้ หากคุณต้องการแรงบันดาลใจ ลองดูที่โฟลเดอร์ `solution/frontend/styles.css`
+ด้วยสามคลาสนี้ คุณจะจัดแต่งข้อความต่างกันขึ้นอยู่กับว่ามาจากผู้ช่วยหรือคุณในฐานะผู้ใช้ หากคุณต้องการแรงบันดาลใจ ลองดูที่โฟลเดอร์ `solution/frontend/styles.css`
 
 ### เปลี่ยน Base Url
 
 มีสิ่งหนึ่งที่เรายังไม่ได้ตั้งค่า นั่นคือ `BASE_URL` ซึ่งจะไม่ทราบจนกว่า Backend ของคุณจะเริ่มต้นขึ้น ในการตั้งค่า:
 
 - หากคุณรัน API ในเครื่อง ควรตั้งค่าเป็น `http://localhost:5000`
-- หากรันใน Codespaces ควรมีลักษณะบางอย่างเช่น "[name]app.github.dev"
+- หากรันใน Codespaces ควรมีลักษณะคล้าย "[name]app.github.dev"
 
 ## งานที่ได้รับมอบหมาย
 
@@ -361,11 +355,11 @@ project/
     ...
 ```
 
-คัดลอกเนื้อหาจากที่ได้รับคำแนะนำข้างต้น แต่ปรับแต่งตามที่คุณต้องการ
+คัดลอกเนื้อหาจากที่ได้รับคำแนะนำข้างต้น แต่สามารถปรับแต่งตามความชอบของคุณได้
 
 ## โซลูชัน
 
-[Solution](./solution/README.md)
+[โซลูชัน](./solution/README.md)
 
 ## โบนัส
 
@@ -381,7 +375,7 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-เปลี่ยน CSS และข้อความตามที่คุณต้องการ ดังนั้นให้เปลี่ยนใน *index.html* และ *styles.css*
+เปลี่ยน CSS และข้อความตามความชอบของคุณ ดังนั้นให้เปลี่ยนใน *index.html* และ *styles.css*
 
 ## สรุป
 
@@ -392,15 +386,15 @@ call_llm(message, "You are Captain Picard")
 - ไปที่: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
 - สร้างจาก Template (ตรวจสอบให้แน่ใจว่าคุณเข้าสู่ระบบ GitHub) ที่มุมขวาบน:
 
-    ![Create from template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.th.png)
+    ![สร้างจาก Template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.th.png)
 
 - เมื่ออยู่ใน Repo ของคุณ สร้าง Codespace:
 
-    ![Create codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.th.png)
+    ![สร้าง Codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.th.png)
 
     สิ่งนี้จะเริ่มต้น Environment ที่คุณสามารถทำงานได้
 
 ---
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดที่เกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้องมากที่สุด แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดที่เกิดจากการใช้การแปลนี้

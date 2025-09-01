@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:23:31+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:50:47+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "ja"
 }
@@ -13,29 +13,23 @@ CO_OP_TRANSLATOR_METADATA:
 
 完成したプロジェクトは以下のようになります：
 
-<div>
-  <img src="./assets/screenshot.png" alt="チャットアプリ" width="600">
-</div>
+![チャットアプリ](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.ja.png)
 
-少し背景を説明すると、生成AIを使用してチャットアシスタントを構築することは、AIについて学び始めるのに最適な方法です。このレッスンを通じて、生成AIをウェブアプリに統合する方法を学びます。それでは始めましょう。
+少し背景を説明すると、生成AIを使用してチャットアシスタントを構築することは、AIについて学び始める素晴らしい方法です。このレッスンを通じて、生成AIをウェブアプリに統合する方法を学びます。それでは始めましょう。
 
 ## 生成AIへの接続
 
-バックエンドにはGitHub Modelsを使用します。これは、無料でAIを利用できる素晴らしいサービスです。プレイグラウンドにアクセスして、選択したバックエンド言語に対応するコードを取得してください。以下は[GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)の例です。
+バックエンドにはGitHub Modelsを使用します。これは無料でAIを利用できる素晴らしいサービスです。プレイグラウンドにアクセスして、選択したバックエンド言語に対応するコードを取得してください。以下はその例です：[GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.ja.png)
 
 先ほど述べたように、「Code」タブと選択したランタイムを選びます。
 
-<div>
-  <img src="./assets/playground-choice.png" alt="プレイグラウンドの選択" with="600">
-</div>
+![プレイグラウンド選択](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.ja.png)
 
 ### Pythonを使用する場合
 
-この場合、Pythonを選択します。すると以下のコードが選ばれます：
+この場合、Pythonを選択します。すると以下のコードを取得します：
 
 ```python
 """Run this model in Python
@@ -96,7 +90,7 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-この`call_llm`関数を使用すると、プロンプトとシステムプロンプトを渡して結果を返すことができます。
+この関数`call_llm`を使用すると、プロンプトとシステムプロンプトを渡して結果を返すことができます。
 
 ### AIアシスタントのカスタマイズ
 
@@ -106,7 +100,7 @@ AIアシスタントをカスタマイズしたい場合は、以下のように
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Web APIを通じて公開
+## Web APIを介して公開
 
 素晴らしいですね。AI部分が完成したので、これをWeb APIに統合する方法を見てみましょう。Web APIにはFlaskを使用しますが、他のウェブフレームワークでも問題ありません。以下はそのコードです：
 
@@ -141,7 +135,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-ここでは、Flask APIを作成し、デフォルトルート「/」と「/chat」を定義しています。「/chat」はフロントエンドが質問を送信するために使用されます。
+ここでは、Flask APIを作成し、デフォルトルート「/」と「/chat」を定義します。「/chat」はフロントエンドが質問を送信するために使用されます。
 
 *llm.py*を統合するには以下を行います：
 
@@ -167,7 +161,7 @@ if __name__ == "__main__":
       })
    ```
 
-   ここでは、受信リクエストを解析してJSONボディから`message`プロパティを取得します。その後、以下のようにLLMを呼び出します：
+   ここでは、受信リクエストを解析してJSONボディから`message`プロパティを取得します。その後、以下の呼び出しでLLMを使用します：
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -178,15 +172,15 @@ if __name__ == "__main__":
    })
    ```
 
-これで必要なことは完了です。
+素晴らしいですね。必要なことはこれで完了です。
 
 ## Corsの設定
 
-バックエンドとフロントエンドが異なるポートで動作するため、フロントエンドがバックエンドにアクセスできるようにCORS（クロスオリジンリソース共有）を設定する必要があります。
+バックエンドとフロントエンドが異なるポートで動作するため、フロントエンドがバックエンドにアクセスできるようにするためにCORS（クロスオリジンリソース共有）を設定する必要があります。
 
 ### Pythonを使用する場合
 
-*api.py*には以下のようなコードがあります：
+*api.py*には以下のコードが含まれています：
 
 ```python
 from flask_cors import CORS
@@ -195,7 +189,7 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-現在はすべてのオリジン（"*"）を許可するように設定されていますが、これは安全ではないため、本番環境では制限する必要があります。
+現在はすべてのオリジンを許可する「*」に設定されていますが、これは安全ではないため、運用環境では制限する必要があります。
 
 ## プロジェクトを実行する
 
@@ -203,7 +197,7 @@ CORS(app)   # *   example.com
 
 ### Pythonを使用する場合
 
-*llm.py*と*api.py*がありますが、バックエンドを動作させるには以下を行います：
+*llm.py*と*api.py*を使用してバックエンドを動作させるには以下を行います：
 
 - 依存関係をインストール：
 
@@ -221,11 +215,11 @@ CORS(app)   # *   example.com
    python api.py
    ```
 
-   Codespacesを使用している場合は、エディタの下部にある「Ports」に移動し、右クリックして「Port Visibility」を選択し、「Public」を選択してください。
+   Codespacesを使用している場合は、エディタの下部にあるPortsに移動し、右クリックして「Port Visibility」を選択し、「Public」を選択してください。
 
-### フロントエンドの作業
+### フロントエンドの作成
 
-APIが動作しているので、次にフロントエンドを作成します。最低限のフロントエンドを作成し、段階的に改善していきます。*frontend*フォルダに以下を作成してください：
+APIが動作しているので、これに対応するフロントエンドを作成しましょう。最低限のフロントエンドを作成し、段階的に改善していきます。*frontend*フォルダに以下を作成します：
 
 ```text
 backend/
@@ -235,7 +229,7 @@ app.js
 styles.css
 ```
 
-まず**index.html**を作成します：
+まず**index.html**を見てみましょう：
 
 ```html
 <html>
@@ -312,10 +306,10 @@ styles.css
 
 コードをセクションごとに説明します：
 
-- 1) 後で参照するための要素を取得します。
-- 2) 組み込みの`fetch`メソッドを使用してバックエンドを呼び出す関数を作成します。
-- 3) `appendMessage`は、ユーザーが入力した内容やレスポンスを追加します。
-- 4) `submit`イベントをリッスンし、入力フィールドを読み取り、ユーザーのメッセージをテキストエリアに配置し、APIを呼び出し、レスポンスをテキストエリアに表示します。
+- 1) ここでは後で参照するすべての要素を取得します。
+- 2) このセクションでは、組み込みの`fetch`メソッドを使用してバックエンドを呼び出す関数を作成します。
+- 3) `appendMessage`は、ユーザーが入力した内容やレスポンスを追加するのに役立ちます。
+- 4) ここではsubmitイベントを監視し、入力フィールドを読み取り、ユーザーのメッセージをテキストエリアに配置し、APIを呼び出し、レスポンスをテキストエリアに表示します。
 
 次にスタイリングを見てみましょう。ここでは自由にデザインできますが、以下は一例です：
 
@@ -338,18 +332,18 @@ styles.css
 } 
 ```
 
-これらの3つのクラスを使用して、アシスタントからのメッセージとユーザーからのメッセージを異なるスタイルで表示します。インスピレーションが欲しい場合は、`solution/frontend/styles.css`フォルダを参照してください。
+これらの3つのクラスを使用して、アシスタントからのメッセージとユーザーからのメッセージを異なるスタイルで表示します。インスピレーションを得たい場合は、`solution/frontend/styles.css`フォルダをチェックしてください。
 
-### ベースURLの変更
+### Base Urlの変更
 
-ここで設定していないものが1つあります。それは`BASE_URL`です。これはバックエンドが起動するまでわかりません。設定方法は以下の通りです：
+ここで設定していないものが1つあります。それは`BASE_URL`です。これはバックエンドが起動するまでわかりません。設定方法：
 
 - APIをローカルで実行する場合、`http://localhost:5000`のように設定します。
 - Codespacesで実行する場合、`[name]app.github.dev`のようになります。
 
 ## 課題
 
-*project*というフォルダを作成し、以下のような内容を含めてください：
+*project*というフォルダを作成し、以下のような内容を含めます：
 
 ```text
 project/
@@ -373,7 +367,7 @@ AIアシスタントの性格を変更してみましょう。
 
 ### Pythonの場合
 
-*api.py*で`call_llm`を呼び出す際、第2引数を変更してみてください。例えば：
+*api.py*で`call_llm`を呼び出す際に、第2引数を変更して好きな内容に設定できます。例えば：
 
 ```python
 call_llm(message, "You are Captain Picard")
@@ -381,7 +375,7 @@ call_llm(message, "You are Captain Picard")
 
 ### フロントエンド
 
-CSSやテキストも変更してみてください。*index.html*や*styles.css*で変更を行いましょう。
+CSSやテキストも変更してみましょう。*index.html*や*styles.css*で変更を加えてください。
 
 ## まとめ
 
@@ -390,7 +384,7 @@ CSSやテキストも変更してみてください。*index.html*や*styles.css
 ## Codespacesでのセットアップ
 
 - 以下に移動：[Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- テンプレートから作成（GitHubにログインしていることを確認）右上のコーナーで：
+- テンプレートから作成（GitHubにログインしていることを確認してください）右上：
 
     ![テンプレートから作成](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.ja.png)
 
@@ -398,9 +392,9 @@ CSSやテキストも変更してみてください。*index.html*や*styles.css
 
     ![Codespaceを作成](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.ja.png)
 
-    これで作業可能な環境が起動します。
+    これで作業可能な環境が開始されます。
 
 ---
 
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された原文が正式な情報源と見なされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用に起因する誤解や誤認について、当社は一切の責任を負いません。
+この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知ください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は一切の責任を負いません。

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:38:00+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T17:01:42+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "ro"
 }
@@ -13,25 +13,19 @@ Acest proiect de chat arată cum să construiești un Asistent Chat folosind Mod
 
 Iată cum arată proiectul finalizat:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Aplicație Chat" width="600">
-</div>
+![Aplicație Chat](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.ro.png)
 
-Un pic de context: construirea asistenților de chat folosind AI generativ este o modalitate excelentă de a începe să înveți despre AI. Ce vei învăța este cum să integrezi AI generativ într-o aplicație web pe parcursul acestei lecții. Să începem.
+Un pic de context: construirea asistenților de chat folosind AI generativ este o modalitate excelentă de a începe să înveți despre inteligența artificială. Ce vei învăța este cum să integrezi AI generativ într-o aplicație web pe parcursul acestei lecții. Să începem.
 
 ## Conectarea la AI generativ
 
-Pentru backend, folosim Modelele GitHub. Este un serviciu excelent care îți permite să folosești AI gratuit. Accesează playground-ul său și obține codul corespunzător limbajului backend ales. Iată cum arată la [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Pentru partea de backend, folosim Modelele GitHub. Este un serviciu excelent care îți permite să folosești AI gratuit. Accesează playground-ul său și obține codul corespunzător limbajului de backend ales. Iată cum arată la [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.ro.png)
 
 Așa cum am spus, selectează fila "Code" și runtime-ul ales.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="alegere playground" with="600">
-</div>
+![Alegerea în Playground](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.ro.png)
 
 ### Utilizarea Python
 
@@ -106,9 +100,9 @@ Dacă dorești să personalizezi asistentul AI, poți specifica cum vrei să se 
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Expunerea printr-un Web API
+## Expunerea printr-un API Web
 
-Excelent, am terminat partea AI, să vedem cum putem integra aceasta într-un Web API. Pentru Web API, alegem să folosim Flask, dar orice framework web ar trebui să fie bun. Să vedem codul pentru aceasta:
+Excelent, am terminat partea de AI, să vedem cum putem integra aceasta într-un API Web. Pentru API-ul Web, alegem să folosim Flask, dar orice framework web ar trebui să fie bun. Să vedem codul pentru aceasta:
 
 ### Utilizarea Python
 
@@ -141,7 +135,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Aici, creăm un API Flask și definim o rută implicită "/" și "/chat". Ultima este destinată să fie utilizată de frontend-ul nostru pentru a transmite întrebări.
+Aici, creăm un API Flask și definim o rută implicită "/" și "/chat". Ultima este destinată să fie utilizată de frontend-ul nostru pentru a transmite întrebări către backend.
 
 Pentru a integra *llm.py*, iată ce trebuie să facem:
 
@@ -195,7 +189,7 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-În prezent, este configurat să permită "*" adică toate originile, ceea ce este puțin nesigur. Ar trebui să restricționăm acest lucru odată ce trecem la producție.
+În prezent, este configurat să permită "*" ceea ce înseamnă toate originile, și asta este puțin nesigur. Ar trebui să restricționăm acest lucru odată ce trecem la producție.
 
 ## Rulează proiectul
 
@@ -253,7 +247,7 @@ Să începem cu **index.html**:
 </html>    
 ```
 
-Acesta este minimul absolut necesar pentru a susține o fereastră de chat, deoarece constă dintr-un textarea unde mesajele vor fi afișate, un input pentru a scrie mesajul și un buton pentru a trimite mesajul către backend. Să vedem următorul cod JavaScript în *app.js*
+Acesta este minimul absolut necesar pentru a susține o fereastră de chat, deoarece constă într-un textarea unde mesajele vor fi afișate, un input pentru a scrie mesajul și un buton pentru a trimite mesajul către backend. Să vedem următorul cod JavaScript în *app.js*
 
 **app.js**
 
@@ -338,7 +332,7 @@ Să vedem stilizarea, unde poți fi creativ și să faci să arate cum dorești,
 } 
 ```
 
-Cu aceste trei clase, vei stiliza mesajele diferit, în funcție de sursa lor: asistent sau utilizator. Dacă vrei să te inspiri, verifică folderul `solution/frontend/styles.css`.
+Cu aceste trei clase, vei stiliza mesajele diferit în funcție de sursa lor: asistent sau utilizator. Dacă vrei să te inspiri, verifică folderul `solution/frontend/styles.css`.
 
 ### Schimbă URL-ul de bază
 
@@ -381,7 +375,7 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Schimbă și CSS-ul și textul după preferințe, fă modificări în *index.html* și *styles.css*.
+Schimbă și CSS-ul și textul după preferințe, astfel încât să faci modificări în *index.html* și *styles.css*.
 
 ## Rezumat
 
@@ -389,7 +383,7 @@ Excelent, ai învățat de la zero cum să creezi un asistent personal folosind 
 
 ## Configurare cu Codespaces
 
-- Navighează la: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Navighează la: [Repo Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
 - Creează dintr-un template (asigură-te că ești autentificat în GitHub) în colțul din dreapta sus:
 
     ![Creează din template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.ro.png)
@@ -403,4 +397,4 @@ Excelent, ai învățat de la zero cum să creezi un asistent personal folosind 
 ---
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

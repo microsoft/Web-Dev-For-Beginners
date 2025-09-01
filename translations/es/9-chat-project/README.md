@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:18:23+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:47:03+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "es"
 }
@@ -13,25 +13,19 @@ Este proyecto de chat muestra cómo construir un Asistente de Chat utilizando Gi
 
 Así es como se ve el proyecto terminado:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Aplicación de chat" width="600">
-</div>
+![Aplicación de chat](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.es.png)
 
 Un poco de contexto: construir asistentes de chat utilizando IA generativa es una excelente manera de comenzar a aprender sobre IA. Lo que aprenderás es cómo integrar IA generativa en una aplicación web a lo largo de esta lección. ¡Comencemos!
 
-## Conectando con IA generativa
+## Conexión con IA generativa
 
 Para el backend, estamos utilizando GitHub Models. Es un excelente servicio que te permite usar IA de forma gratuita. Ve a su playground y obtén el código que corresponde al lenguaje de backend que elijas. Así es como se ve en [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.es.png)
 
 Como mencionamos, selecciona la pestaña "Code" y tu entorno de ejecución preferido.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="Elección en el playground" with="600">
-</div>
+![Elección en el playground](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.es.png)
 
 ### Usando Python
 
@@ -96,7 +90,7 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-Con esta función `call_llm` ahora podemos tomar un prompt y un prompt del sistema, y la función termina devolviendo el resultado.
+Con esta función `call_llm` ahora podemos tomar un prompt y un prompt del sistema, y la función devuelve el resultado.
 
 ### Personalizar el Asistente de IA
 
@@ -182,7 +176,7 @@ Genial, ahora hemos hecho lo que necesitamos.
 
 ## Configurar Cors
 
-Debemos mencionar que configuramos algo como CORS, intercambio de recursos de origen cruzado. Esto significa que, dado que nuestro backend y frontend se ejecutarán en diferentes puertos, necesitamos permitir que el frontend llame al backend.
+Debemos mencionar que configuramos algo como CORS, el intercambio de recursos de origen cruzado. Esto significa que, dado que nuestro backend y frontend se ejecutarán en diferentes puertos, necesitamos permitir que el frontend llame al backend.
 
 ### Usando Python
 
@@ -221,7 +215,7 @@ Bien, tenemos *llm.py* y *api.py*. ¿Cómo podemos hacer que esto funcione con u
    python api.py
    ```
 
-   Si estás en Codespaces, necesitas ir a Puertos en la parte inferior del editor, hacer clic derecho sobre él y seleccionar "Port Visibility" y elegir "Public".
+   Si estás en Codespaces, necesitas ir a Puertos en la parte inferior del editor, hacer clic derecho sobre él, seleccionar "Port Visibility" y elegir "Public".
 
 ### Trabajar en un frontend
 
@@ -253,7 +247,7 @@ Comencemos con **index.html**:
 </html>    
 ```
 
-Lo anterior es lo mínimo absoluto que necesitas para soportar una ventana de chat, ya que consiste en un área de texto donde se renderizarán los mensajes, un campo de entrada para escribir el mensaje y un botón para enviar tu mensaje al backend. Veamos el JavaScript a continuación en *app.js*
+Lo anterior es lo mínimo necesario para soportar una ventana de chat, ya que consiste en un área de texto donde se renderizarán los mensajes, un campo de entrada para escribir el mensaje y un botón para enviar tu mensaje al backend. Veamos el JavaScript a continuación en *app.js*.
 
 **app.js**
 
@@ -310,14 +304,14 @@ Lo anterior es lo mínimo absoluto que necesitas para soportar una ventana de ch
 })();
 ```
 
-Analicemos el código por sección:
+Repasemos el código por sección:
 
 - 1) Aquí obtenemos una referencia a todos nuestros elementos que utilizaremos más adelante en el código.
 - 2) En esta sección, creamos una función que utiliza el método `fetch` incorporado para llamar a nuestro backend.
 - 3) `appendMessage` ayuda a agregar respuestas, así como lo que tú como usuario escribes.
 - 4) Aquí escuchamos el evento de envío, leemos el campo de entrada, colocamos el mensaje del usuario en el área de texto, llamamos a la API y renderizamos la respuesta en el área de texto.
 
-Veamos el estilo a continuación. Aquí es donde puedes ser realmente creativo y hacer que se vea como quieras, pero aquí hay algunas sugerencias:
+Veamos el estilo a continuación. Aquí puedes ser realmente creativo y hacer que se vea como quieras, pero aquí hay algunas sugerencias:
 
 **styles.css**
 
@@ -389,8 +383,8 @@ Genial, has aprendido desde cero cómo crear un asistente personal utilizando IA
 
 ## Configuración con Codespaces
 
-- Navega a: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Crea desde una plantilla (asegúrate de estar conectado a GitHub) en la esquina superior derecha:
+- Navega a: [Repositorio Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
+- Crea desde una plantilla (asegúrate de haber iniciado sesión en GitHub) en la esquina superior derecha:
 
     ![Crear desde plantilla](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.es.png)
 

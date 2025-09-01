@@ -1,37 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:17:31+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:46:10+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "en"
 }
 -->
-# Chat project
+# Chat Project
 
 This chat project demonstrates how to build a Chat Assistant using GitHub Models.
 
 Here's what the completed project looks like:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Chat app" width="600">
-</div>
+![Chat app](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.en.png)
 
-Building Chat assistants with generative AI is an excellent way to start learning about AI. In this lesson, you'll learn how to integrate generative AI into a web app. Let's get started.
+To provide some context, building Chat Assistants with generative AI is an excellent way to start learning about AI. In this lesson, you'll learn how to integrate generative AI into a web app. Let's get started.
 
-## Connecting to generative AI
+## Connecting to Generative AI
 
-For the backend, we're using GitHub Models. It's a fantastic service that lets you use AI for free. Visit its playground and grab the code for your preferred backend language. Here's what it looks like at [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
+For the backend, we're using GitHub Models. It's a fantastic service that allows you to use AI for free. Visit its playground and grab the code corresponding to your preferred backend language. Here's what it looks like at [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" width="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.en.png)
 
-As mentioned, select the "Code" tab and choose your runtime.
+As mentioned, select the "Code" tab and your preferred runtime.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground choice" width="600">
-</div>
+![Playground choice](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.en.png)
 
 ### Using Python
 
@@ -96,19 +90,19 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-With the `call_llm` function, we can now pass a prompt and a system prompt, and the function will return the result.
+With this `call_llm` function, we can now pass a prompt and a system prompt, and the function will return the result.
 
-### Customize AI Assistant
+### Customizing the AI Assistant
 
-To customize the AI assistant, you can define its behavior by setting the system prompt like this:
+To customize the AI assistant, you can define its behavior by modifying the system prompt like this:
 
 ```python
 call_llm("Tell me about you", "You're Albert Einstein, you only know of things in the time you were alive")
 ```
 
-## Expose it via a Web API
+## Exposing It via a Web API
 
-Now that the AI part is done, let's integrate it into a Web API. For the Web API, we'll use Flask, but any web framework will work. Here's the code:
+Great, we've completed the AI part. Now, let's see how to integrate it into a Web API. For the Web API, we'll use Flask, but any web framework should work. Here's the code:
 
 ### Using Python
 
@@ -141,9 +135,9 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-In this code, we create a Flask API and define two routes: "/" and "/chat". The "/chat" route is intended for the frontend to send questions to the backend.
+In this code, we create a Flask API and define two routes: the default route "/" and "/chat". The "/chat" route is intended for the frontend to send questions to the backend.
 
-To integrate *llm.py*, follow these steps:
+To integrate *llm.py*, here's what we need to do:
 
 - Import the `call_llm` function:
 
@@ -167,7 +161,7 @@ To integrate *llm.py*, follow these steps:
       })
    ```
 
-   Here, we parse the incoming request to extract the `message` property from the JSON body. Then, we call the LLM using this function:
+   In this step, we parse the incoming request to extract the `message` property from the JSON body. Then, we call the LLM with this:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -178,15 +172,15 @@ To integrate *llm.py*, follow these steps:
    })
    ```
 
-That's it! The integration is complete.
+Great, now we've completed the necessary steps.
 
-## Configure Cors
+## Configuring CORS
 
-It's important to set up CORS (Cross-Origin Resource Sharing). Since the backend and frontend will run on different ports, we need to allow the frontend to communicate with the backend.
+It's important to set up CORS (Cross-Origin Resource Sharing). Since our backend and frontend will run on different ports, we need to allow the frontend to communicate with the backend.
 
 ### Using Python
 
-In *api.py*, there's a piece of code that configures CORS:
+Here's a piece of code in *api.py* that sets this up:
 
 ```python
 from flask_cors import CORS
@@ -195,15 +189,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Currently, it's set to allow all origins ("*"), which is not secure. Make sure to restrict it when deploying to production.
+Currently, it's configured to allow all origins ("*"), which is not secure. This should be restricted when moving to production.
 
-## Run your project
+## Running Your Project
 
 To run your project, start the backend first, followed by the frontend.
 
 ### Using Python
 
-With *llm.py* and *api.py* ready, here's how to get the backend running:
+Now that we have *llm.py* and *api.py*, how do we make the backend work? There are two steps:
 
 - Install dependencies:
 
@@ -221,11 +215,11 @@ With *llm.py* and *api.py* ready, here's how to get the backend running:
    python api.py
    ```
 
-   If you're using Codespaces, go to the Ports section at the bottom of the editor, right-click on the port, select "Port Visibility," and choose "Public."
+   If you're using Codespaces, go to the Ports section at the bottom of the editor, right-click on it, select "Port Visibility," and choose "Public."
 
-### Work on a frontend
+### Working on the Frontend
 
-Now that the API is running, let's create a basic frontend that we'll improve step by step. In a *frontend* folder, create the following:
+Now that the API is up and running, let's create a frontend for it. We'll start with a basic frontend and improve it step by step. In a *frontend* folder, create the following:
 
 ```text
 backend/
@@ -235,7 +229,7 @@ app.js
 styles.css
 ```
 
-Start with **index.html**:
+Let's begin with **index.html**:
 
 ```html
 <html>
@@ -253,7 +247,7 @@ Start with **index.html**:
 </html>    
 ```
 
-This is the bare minimum needed for a chat window. It includes a textarea for displaying messages, an input field for typing messages, and a button for sending messages to the backend. Next, let's look at the JavaScript in *app.js*.
+The above code is the bare minimum needed to support a chat window. It includes a textarea for displaying messages, an input field for typing messages, and a button to send messages to the backend. Next, let's look at the JavaScript in *app.js*.
 
 **app.js**
 
@@ -313,11 +307,11 @@ This is the bare minimum needed for a chat window. It includes a textarea for di
 Here's a breakdown of the code:
 
 1. We get references to all the elements we'll use later in the code.
-2. This section defines a function that uses the built-in `fetch` method to call the backend.
-3. The `appendMessage` function adds both user messages and assistant responses to the textarea.
+2. This section defines a function that uses the built-in `fetch` method to call our backend.
+3. The `appendMessage` function adds both the user's messages and the assistant's responses to the textarea.
 4. We listen for the submit event, read the input field, display the user's message in the textarea, call the API, and render the response in the textarea.
 
-Now, let's move on to styling. You can customize the design as much as you like, but here are some suggestions:
+Next, let's look at styling. You can get creative here, but here are some suggestions:
 
 **styles.css**
 
@@ -340,16 +334,16 @@ Now, let's move on to styling. You can customize the design as much as you like,
 
 These three classes style messages differently depending on whether they come from the assistant or the user. For inspiration, check out the `solution/frontend/styles.css` folder.
 
-### Change Base URL
+### Changing the Base URL
 
 One thing we haven't set yet is the `BASE_URL`. This depends on where your backend is running. To set it:
 
-- If you're running the API locally, use something like `http://localhost:5000`.
-- If you're using Codespaces, it will look like "[name]app.github.dev".
+- If you're running the API locally, it should be something like `http://localhost:5000`.
+- If you're using Codespaces, it will look something like "[name]app.github.dev".
 
 ## Assignment
 
-Create your own folder *project* with the following structure:
+Create your own folder named *project* with the following structure:
 
 ```text
 project/
@@ -373,7 +367,7 @@ Try changing the personality of the AI assistant.
 
 ### For Python
 
-In *api.py*, when calling `call_llm`, you can modify the second argument to define the assistant's personality. For example:
+When calling `call_llm` in *api.py*, you can modify the second argument to customize the assistant's behavior. For example:
 
 ```python
 call_llm(message, "You are Captain Picard")
@@ -381,20 +375,20 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Customize the CSS and text to your liking by editing *index.html* and *styles.css*.
+You can also customize the CSS and text to your liking by editing *index.html* and *styles.css*.
 
 ## Summary
 
-Congratulations! You've learned how to create a personal assistant using AI from scratch. We used GitHub Models for the backend, Python for the API, and HTML, CSS, and JavaScript for the frontend.
+Congratulations! You've learned how to create a personal assistant using AI from scratch. We accomplished this using GitHub Models, a Python backend, and a frontend built with HTML, CSS, and JavaScript.
 
-## Set up with Codespaces
+## Setting Up with Codespaces
 
 - Navigate to: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners).
-- Create a repository from the template (make sure you're logged into GitHub) using the button in the top-right corner:
+- Create a new repository from the template (make sure you're logged into GitHub) by clicking the button in the top-right corner:
 
     ![Create from template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.en.png)
 
-- Once your repository is ready, create a Codespace:
+- Once you're in your repository, create a Codespace:
 
     ![Create codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.en.png)
 

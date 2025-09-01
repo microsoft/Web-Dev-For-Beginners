@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:37:33+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T17:01:13+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "sk"
 }
@@ -13,29 +13,23 @@ Tento chat projekt ukazuje, ako vytvoriť Chat Asistenta pomocou GitHub Models.
 
 Takto vyzerá hotový projekt:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Chat app" width="600">
-</div>
+![Chat aplikácia](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.sk.png)
 
-Trochu kontextu: vytváranie chat asistentov pomocou generatívnej AI je skvelý spôsob, ako začať učiť sa o AI. V tejto lekcii sa naučíte, ako integrovať generatívnu AI do webovej aplikácie. Poďme na to.
+Trochu kontextu: vytváranie chat asistentov pomocou generatívnej AI je skvelý spôsob, ako začať s učením o AI. V tejto lekcii sa naučíte, ako integrovať generatívnu AI do webovej aplikácie. Poďme na to.
 
 ## Pripojenie ku generatívnej AI
 
-Na backend používame GitHub Models. Je to skvelá služba, ktorá vám umožňuje používať AI zadarmo. Prejdite na jej playground a získajte kód, ktorý zodpovedá vášmu zvolenému backend jazyku. Takto to vyzerá na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Na backend používame GitHub Models. Je to skvelá služba, ktorá vám umožňuje používať AI zadarmo. Prejdite na jej playground a získajte kód, ktorý zodpovedá vášmu zvolenému backendovému jazyku. Takto to vyzerá na [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.sk.png)
 
-Ako sme povedali, vyberte kartu "Code" a váš zvolený runtime.
+Ako sme povedali, vyberte kartu "Code" a váš preferovaný runtime.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground choice" with="600">
-</div>
+![Výber na playgrounde](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.sk.png)
 
 ### Použitie Pythonu
 
-V tomto prípade vyberieme Python, čo znamená, že použijeme tento kód:
+V tomto prípade vyberáme Python, čo znamená, že použijeme tento kód:
 
 ```python
 """Run this model in Python
@@ -96,7 +90,7 @@ def call_llm(prompt: str, system_message: str):
     return response.choices[0].message.content
 ```
 
-S touto funkciou `call_llm` môžeme teraz zadať prompt a systémový prompt a funkcia nám vráti výsledok.
+S touto funkciou `call_llm` teraz môžeme zadať prompt a systémový prompt a funkcia nám vráti výsledok.
 
 ### Prispôsobenie AI asistenta
 
@@ -108,7 +102,7 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Zverejnenie cez Web API
 
-Skvelé, máme hotovú AI časť, teraz sa pozrime, ako ju môžeme integrovať do Web API. Pre Web API sme si vybrali Flask, ale akýkoľvek webový framework by mal byť vhodný. Pozrime sa na kód:
+Skvelé, AI časť máme hotovú, pozrime sa, ako ju môžeme integrovať do Web API. Pre Web API sme si vybrali Flask, ale akýkoľvek webový framework by mal byť vhodný. Pozrime sa na kód:
 
 ### Použitie Pythonu
 
@@ -141,7 +135,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-Tu vytvárame Flask API a definujeme predvolenú trasu "/" a "/chat". Tá druhá je určená na použitie naším frontendom na odosielanie otázok.
+Tu vytvárame Flask API a definujeme predvolenú trasu "/" a "/chat". Druhá je určená na použitie naším frontendom na odosielanie otázok.
 
 Na integráciu *llm.py* potrebujeme urobiť nasledovné:
 
@@ -167,7 +161,7 @@ Na integráciu *llm.py* potrebujeme urobiť nasledovné:
       })
    ```
 
-   Tu analyzujeme prichádzajúcu požiadavku, aby sme získali vlastnosť `message` z JSON tela. Následne zavoláme LLM pomocou tohto volania:
+   Tu analyzujeme prichádzajúcu požiadavku, aby sme získali vlastnosť `message` z JSON tela. Následne zavoláme LLM týmto spôsobom:
 
    ```python
    response = call_llm(message, "You are a helpful assistant")
@@ -178,11 +172,11 @@ Na integráciu *llm.py* potrebujeme urobiť nasledovné:
    })
    ```
 
-Skvelé, teraz máme hotovo, čo sme potrebovali.
+Skvelé, teraz máme všetko, čo potrebujeme.
 
 ## Nastavenie Cors
 
-Mali by sme spomenúť, že sme nastavili niečo ako CORS, zdieľanie zdrojov medzi rôznymi doménami. To znamená, že keďže náš backend a frontend budú bežať na rôznych portoch, musíme povoliť frontendu, aby mohol volať backend.
+Mali by sme spomenúť, že sme nastavili niečo ako CORS, teda zdieľanie zdrojov medzi rôznymi doménami. To znamená, že keďže náš backend a frontend budú bežať na rôznych portoch, musíme povoliť frontendu volať backend.
 
 ### Použitie Pythonu
 
@@ -195,15 +189,15 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Momentálne je nastavený na povolenie "*" čo znamená všetky domény, čo je trochu nebezpečné. Mali by sme to obmedziť, keď prejdeme do produkcie.
+Momentálne je nastavené povolenie pre všetky domény "*", čo je trochu nebezpečné. Mali by sme to obmedziť, keď prejdeme do produkcie.
 
 ## Spustenie projektu
 
-Na spustenie projektu musíte najskôr spustiť backend a potom frontend.
+Na spustenie projektu musíte najprv spustiť backend a potom frontend.
 
 ### Použitie Pythonu
 
-Ok, máme *llm.py* a *api.py*, ako to môžeme spustiť s backendom? Potrebujeme urobiť dve veci:
+Dobre, máme *llm.py* a *api.py*, ako to môžeme rozbehnúť s backendom? Potrebujeme urobiť dve veci:
 
 - Nainštalovať závislosti:
 
@@ -221,11 +215,11 @@ Ok, máme *llm.py* a *api.py*, ako to môžeme spustiť s backendom? Potrebujeme
    python api.py
    ```
 
-   Ak ste v Codespaces, musíte prejsť na Ports v spodnej časti editora, kliknúť pravým tlačidlom myši na port a vybrať "Port Visibility" a zvoliť "Public".
+   Ak ste v Codespaces, musíte prejsť na Ports v dolnej časti editora, kliknúť pravým tlačidlom a vybrať "Port Visibility" a zvoliť "Public".
 
-### Práca na fronte
+### Práca na frontende
 
-Teraz, keď máme API spustené, vytvorme frontend pre tento projekt. Minimálny frontend, ktorý budeme postupne vylepšovať. V priečinku *frontend* vytvorte nasledovné:
+Teraz, keď máme API spustené, vytvorme frontend. Začneme s minimálnym frontendom, ktorý budeme postupne vylepšovať. V priečinku *frontend* vytvorte nasledujúce:
 
 ```text
 backend/
@@ -253,7 +247,7 @@ Začnime s **index.html**:
 </html>    
 ```
 
-Toto je absolútne minimum, ktoré potrebujete na podporu chatovacieho okna, pretože obsahuje textové pole, kde sa budú zobrazovať správy, vstupné pole na písanie správ a tlačidlo na odoslanie správy na backend. Pozrime sa na JavaScript v *app.js*
+Toto je absolútne minimum potrebné na podporu chatovacieho okna. Obsahuje textové pole, kde sa budú zobrazovať správy, vstupné pole na písanie správ a tlačidlo na odoslanie správy na backend. Pozrime sa teraz na JavaScript v *app.js*.
 
 **app.js**
 
@@ -312,12 +306,12 @@ Toto je absolútne minimum, ktoré potrebujete na podporu chatovacieho okna, pre
 
 Prejdime si kód po sekciách:
 
-- 1) Tu získavame referencie na všetky naše prvky, ktoré budeme neskôr používať v kóde.
-- 2) V tejto sekcii vytvárame funkciu, ktorá používa zabudovanú metódu `fetch` na volanie nášho backendu.
-- 3) `appendMessage` pomáha pridávať odpovede, ako aj to, čo napíšete ako používateľ.
-- 4) Tu počúvame udalosť submit, čítame vstupné pole, umiestňujeme správu používateľa do textového poľa, voláme API a zobrazujeme odpoveď v textovom poli.
+- 1) Tu získavame referencie na všetky prvky, ktoré budeme neskôr v kóde používať.
+- 2) V tejto sekcii vytvárame funkciu, ktorá používa vstavanú metódu `fetch` na volanie nášho backendu.
+- 3) `appendMessage` pomáha pridávať odpovede aj správy, ktoré píšete ako používateľ.
+- 4) Tu počúvame na udalosť submit, čítame vstupné pole, umiestňujeme správu používateľa do textového poľa, voláme API a zobrazujeme odpoveď v textovom poli.
 
-Pozrime sa na štýlovanie, tu môžete byť naozaj kreatívni a upraviť vzhľad podľa svojich predstáv, ale tu sú niektoré návrhy:
+Pozrime sa na štýlovanie, tu môžete byť kreatívni a prispôsobiť si vzhľad podľa seba, ale tu sú niektoré návrhy:
 
 **styles.css**
 
@@ -338,18 +332,18 @@ Pozrime sa na štýlovanie, tu môžete byť naozaj kreatívni a upraviť vzhľa
 } 
 ```
 
-S týmito tromi triedami budete štýlovať správy rôzne v závislosti od toho, či pochádzajú od asistenta alebo od vás ako používateľa. Ak chcete inšpiráciu, pozrite si priečinok `solution/frontend/styles.css`.
+S týmito tromi triedami budete štýlovať správy rôzne podľa toho, či pochádzajú od asistenta alebo od používateľa. Ak chcete inšpiráciu, pozrite sa do priečinka `solution/frontend/styles.css`.
 
-### Zmena Base Url
+### Zmena základnej URL
 
-Jedna vec, ktorú sme tu nenastavili, bola `BASE_URL`, ktorá nie je známa, kým váš backend nie je spustený. Na nastavenie:
+Jedna vec, ktorú sme tu nenastavili, bola `BASE_URL`. Táto hodnota nie je známa, kým backend nie je spustený. Na jej nastavenie:
 
-- Ak spúšťate API lokálne, malo by byť nastavené na niečo ako `http://localhost:5000`.
-- Ak spúšťate v Codespaces, malo by vyzerať ako "[name]app.github.dev".
+- Ak spúšťate API lokálne, mala by byť nastavená na niečo ako `http://localhost:5000`.
+- Ak spúšťate v Codespaces, mala by vyzerať ako "[name]app.github.dev".
 
 ## Zadanie
 
-Vytvorte vlastný priečinok *project* s obsahom takto:
+Vytvorte si vlastný priečinok *project* s obsahom, ako je uvedené vyššie:
 
 ```text
 project/
@@ -361,7 +355,7 @@ project/
     ...
 ```
 
-Skopírujte obsah z toho, čo bolo uvedené vyššie, ale pokojne si ho prispôsobte podľa svojich predstáv.
+Skopírujte obsah podľa inštrukcií vyššie, ale pokojne si ho prispôsobte podľa seba.
 
 ## Riešenie
 
@@ -381,7 +375,7 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Zmeňte tiež CSS a text podľa svojich predstáv, teda urobte zmeny v *index.html* a *styles.css*.
+Zmeňte tiež CSS a text podľa seba, teda upravte *index.html* a *styles.css*.
 
 ## Zhrnutie
 
@@ -390,17 +384,17 @@ Skvelé, naučili ste sa od základov, ako vytvoriť osobného asistenta pomocou
 ## Nastavenie s Codespaces
 
 - Prejdite na: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Vytvorte z template (uistite sa, že ste prihlásení do GitHub) v pravom hornom rohu:
+- Vytvorte z template (uistite sa, že ste prihlásený do GitHubu) v pravom hornom rohu:
 
-    ![Create from template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.sk.png)
+    ![Vytvoriť z template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.sk.png)
 
 - Keď ste vo svojom repozitári, vytvorte Codespace:
 
-    ![Create codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.sk.png)
+    ![Vytvoriť codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.sk.png)
 
-    Toto by malo spustiť prostredie, s ktorým teraz môžete pracovať.
+    Toto by malo spustiť prostredie, s ktorým môžete teraz pracovať.
 
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

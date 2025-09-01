@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "002304ffe0059e55b33e2ee5283788ad",
-  "translation_date": "2025-09-01T15:33:10+00:00",
+  "original_hash": "11cf36165c243947b6cd85b88cf6faa6",
+  "translation_date": "2025-09-01T16:57:38+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "nl"
 }
@@ -11,27 +11,21 @@ CO_OP_TRANSLATOR_METADATA:
 
 Dit chatproject laat zien hoe je een Chat Assistent kunt bouwen met behulp van GitHub Models.
 
-Hier is hoe het eindproject eruitziet:
+Hier is hoe het uiteindelijke project eruitziet:
 
-<div>
-  <img src="./assets/screenshot.png" alt="Chat app" width="600">
-</div>
+![Chat app](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.nl.png)
 
 Wat context: het bouwen van chatassistenten met generatieve AI is een geweldige manier om te beginnen met leren over AI. In deze les leer je hoe je generatieve AI integreert in een webapplicatie. Laten we beginnen.
 
 ## Verbinden met generatieve AI
 
-Voor de backend gebruiken we GitHub Models. Dit is een geweldige dienst waarmee je gratis AI kunt gebruiken. Ga naar de playground en haal de code op die overeenkomt met de door jou gekozen backend-taal. Hier is hoe het eruitziet op [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
+Voor de backend gebruiken we GitHub Models. Dit is een geweldige service waarmee je gratis AI kunt gebruiken. Ga naar de playground en haal de code op die overeenkomt met de door jou gekozen backend-taal. Hier is hoe het eruitziet op [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground)
 
-<div>
-  <img src="./assets/playground.png" alt="GitHub Models AI Playground" with="600">
-</div>
+![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.nl.png)
 
-Zoals gezegd, selecteer het tabblad "Code" en kies je runtime.
+Zoals gezegd, selecteer het tabblad "Code" en jouw gekozen runtime.
 
-<div>
-  <img src="./assets/playground-choice.png" alt="playground keuze" with="600">
-</div>
+![Playground keuze](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.nl.png)
 
 ### Gebruik van Python
 
@@ -108,7 +102,7 @@ call_llm("Tell me about you", "You're Albert Einstein, you only know of things i
 
 ## Exposeer het via een Web API
 
-Geweldig, we hebben het AI-gedeelte klaar. Laten we nu kijken hoe we dit kunnen integreren in een Web API. Voor de Web API kiezen we Flask, maar elk webframework zou geschikt moeten zijn. Hier is de code:
+Geweldig, we hebben het AI-gedeelte klaar. Laten we nu kijken hoe we dit kunnen integreren in een Web API. Voor de Web API kiezen we Flask, maar elk webframework zou goed moeten werken. Hier is de code:
 
 ### Gebruik van Python
 
@@ -152,7 +146,7 @@ Om *llm.py* te integreren, moeten we het volgende doen:
    from flask import Flask, request
    ```
 
-- Roep het aan vanuit de "/chat" route:
+- Roep het aan vanuit de "/chat"-route:
 
    ```python
    @app.route("/hello", methods=["POST"])
@@ -182,7 +176,7 @@ Geweldig, nu hebben we gedaan wat nodig is.
 
 ## Cors configureren
 
-We moeten vermelden dat we iets als CORS hebben ingesteld, oftewel cross-origin resource sharing. Dit betekent dat, omdat onze backend en frontend op verschillende poorten draaien, we de frontend toegang moeten geven tot de backend.
+We moeten vermelden dat we iets zoals CORS hebben ingesteld, oftewel cross-origin resource sharing. Dit betekent dat, omdat onze backend en frontend op verschillende poorten draaien, we de frontend toegang moeten geven tot de backend.
 
 ### Gebruik van Python
 
@@ -195,7 +189,7 @@ app = Flask(__name__)
 CORS(app)   # *   example.com
 ```
 
-Op dit moment is het ingesteld om "*" toe te staan, wat alle origins betekent, en dat is een beetje onveilig. We zouden dit moeten beperken zodra we naar productie gaan.
+Op dit moment is het ingesteld om "*" toe te staan, wat alle origins betekent, en dat is een beetje onveilig. We moeten dit beperken zodra we naar productie gaan.
 
 ## Voer je project uit
 
@@ -221,11 +215,11 @@ Oké, we hebben *llm.py* en *api.py*. Hoe kunnen we dit laten werken met een bac
    python api.py
    ```
 
-   Als je in Codespaces werkt, moet je naar Ports gaan in het onderste deel van de editor, er met de rechtermuisknop op klikken en "Port Visibility" selecteren en "Public" kiezen.
+   Als je in Codespaces werkt, moet je naar Ports gaan in het onderste deel van de editor, er met de rechtermuisknop op klikken, "Port Visibility" selecteren en "Public" kiezen.
 
 ### Werk aan een frontend
 
-Nu we een API hebben draaien, laten we een frontend maken. Een minimale frontend die we stap voor stap zullen verbeteren. Maak in een *frontend* map het volgende:
+Nu we een API hebben draaien, laten we een frontend maken. Een minimale frontend die we stap voor stap zullen verbeteren. Maak in een *frontend*-map het volgende aan:
 
 ```text
 backend/
@@ -253,7 +247,7 @@ Laten we beginnen met **index.html**:
 </html>    
 ```
 
-Bovenstaande is het absolute minimum dat je nodig hebt om een chatvenster te ondersteunen. Het bestaat uit een tekstgebied waar berichten worden weergegeven, een invoerveld om berichten te typen en een knop om je bericht naar de backend te sturen. Laten we nu naar de JavaScript kijken in *app.js*.
+Het bovenstaande is het absolute minimum dat je nodig hebt om een chatvenster te ondersteunen. Het bestaat uit een tekstgebied waar berichten worden weergegeven, een invoerveld om berichten te typen en een knop om je bericht naar de backend te sturen. Laten we nu naar de JavaScript kijken in *app.js*.
 
 **app.js**
 
@@ -314,10 +308,10 @@ Laten we de code per sectie doornemen:
 
 - 1) Hier halen we een referentie op naar alle elementen die we later in de code zullen gebruiken.
 - 2) In deze sectie maken we een functie die de ingebouwde `fetch`-methode gebruikt om onze backend aan te roepen.
-- 3) `appendMessage` helpt bij het toevoegen van reacties en wat jij als gebruiker typt.
-- 4) Hier luisteren we naar het submit-event, lezen we het invoerveld, plaatsen we het bericht van de gebruiker in het tekstgebied, roepen we de API aan en renderen we de reactie in het tekstgebied.
+- 3) `appendMessage` helpt om zowel de antwoorden als wat jij als gebruiker typt toe te voegen.
+- 4) Hier luisteren we naar het submit-event, lezen we het invoerveld, plaatsen we het bericht van de gebruiker in het tekstgebied, roepen we de API aan en renderen we het antwoord in het tekstgebied.
 
-Laten we nu naar de styling kijken. Hier kun je helemaal losgaan en het eruit laten zien zoals je wilt, maar hier zijn enkele suggesties:
+Laten we nu naar de styling kijken. Hier kun je echt creatief zijn en het eruit laten zien zoals je wilt, maar hier zijn enkele suggesties:
 
 **styles.css**
 
@@ -338,14 +332,14 @@ Laten we nu naar de styling kijken. Hier kun je helemaal losgaan en het eruit la
 } 
 ```
 
-Met deze drie klassen kun je berichten verschillend stylen, afhankelijk van of ze van de assistent of van jou als gebruiker komen. Als je inspiratie wilt, bekijk dan de map `solution/frontend/styles.css`.
+Met deze drie klassen kun je berichten anders stylen, afhankelijk van of ze van de assistent of van jou als gebruiker komen. Als je inspiratie wilt, bekijk dan de map `solution/frontend/styles.css`.
 
 ### Basis-URL wijzigen
 
 Er is één ding dat we hier niet hebben ingesteld, en dat is `BASE_URL`. Dit is niet bekend totdat je backend is gestart. Om dit in te stellen:
 
-- Als je de API lokaal uitvoert, moet het iets zijn als `http://localhost:5000`.
-- Als je het in Codespaces uitvoert, zou het er ongeveer zo uitzien: "[naam]app.github.dev".
+- Als je de API lokaal uitvoert, moet het iets zijn zoals `http://localhost:5000`.
+- Als je het in Codespaces uitvoert, moet het eruitzien als "[name]app.github.dev".
 
 ## Opdracht
 
@@ -361,7 +355,7 @@ project/
     ...
 ```
 
-Kopieer de inhoud van wat hierboven is uitgelegd, maar voel je vrij om het naar wens aan te passen.
+Kopieer de inhoud van wat hierboven is uitgelegd, maar voel je vrij om het naar eigen wens aan te passen.
 
 ## Oplossing
 
@@ -381,20 +375,20 @@ call_llm(message, "You are Captain Picard")
 
 ### Frontend
 
-Wijzig ook de CSS en tekst naar wens, dus breng wijzigingen aan in *index.html* en *styles.css*.
+Verander ook de CSS en tekst naar jouw smaak, dus voer wijzigingen door in *index.html* en *styles.css*.
 
 ## Samenvatting
 
-Geweldig, je hebt geleerd hoe je vanaf nul een persoonlijke assistent kunt maken met behulp van AI. We hebben dit gedaan met GitHub Models, een backend in Python en een frontend in HTML, CSS en JavaScript.
+Geweldig, je hebt geleerd hoe je vanaf nul een persoonlijke assistent kunt maken met AI. We hebben dit gedaan met behulp van GitHub Models, een backend in Python en een frontend in HTML, CSS en JavaScript.
 
 ## Instellen met Codespaces
 
 - Navigeer naar: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners)
-- Maak een nieuwe repo van een template (zorg ervoor dat je bent ingelogd op GitHub) in de rechterbovenhoek:
+- Maak een template (zorg ervoor dat je bent ingelogd op GitHub) in de rechterbovenhoek:
 
-    ![Maak van template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.nl.png)
+    ![Maak een template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.nl.png)
 
-- Zodra je in je repo bent, maak je een Codespace:
+- Zodra je in je repo bent, maak je een Codespace aan:
 
     ![Maak codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.nl.png)
 
@@ -403,4 +397,4 @@ Geweldig, je hebt geleerd hoe je vanaf nul een persoonlijke assistent kunt maken
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
