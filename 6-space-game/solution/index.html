@@ -1,20 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Space Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Canvas-based Space Game with accessible controls, HUD, and settings." />
+  <meta name="theme-color" content="#0b1023" />
+
+  <!-- Google Fonts: performance preconnect + fonts (apply via CSS later) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Swap or add families as desired -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 (Free) via cdnjs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-bWn0gM3Yx6w5OV6v4p+WB6l3Zl9sJ2jQ4kN0N1bK2qgkvI6l3F8Vd6k1oB7f/0g0a9Qyxgkq+K6X1JQmJv9zYg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Optional PWA hooks (files to be created later) -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
 
-<p>Image to use:</p>
-<p>Canvas:</p>
+  <a href="#play" aria-label="Skip to game">Skip to Game</a>
 
-<canvas id="myCanvas" width="1024" height="768" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
+  <header>
+    <h1 aria-label="Space Game">
+      <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+      Space Game
+    </h1>
 
-<script src="app.js">
+    <nav aria-label="Primary">
+      <button type="button" data-action="start" aria-label="Start">
+        <i class="fa-solid fa-play" aria-hidden="true"></i> Start
+      </button>
+      <button type="button" data-action="pause" aria-label="Pause">
+        <i class="fa-solid fa-circle-pause" aria-hidden="true"></i> Pause
+      </button>
+      <button type="button" data-action="reset" aria-label="Reset">
+        <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Reset
+      </button>
+      <button type="button" data-action="mute" aria-pressed="false" aria-label="Mute">
+        <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i> Mute
+      </button>
+      <button type="button" data-action="fullscreen" aria-label="Toggle fullscreen">
+        <i class="fa-solid fa-expand" aria-hidden="true"></i> Fullscreen
+      </button>
+      <button type="button" data-action="open-settings" aria-controls="settingsDialog" aria-haspopup="dialog">
+        <i class="fa-solid fa-gear" aria-hidden="true"></i> Settings
+      </button>
+    </nav>
+  </header>
 
-</script>
+  <main id="main" tabindex="-1">
 
+    <!-- HUD -->
+    <section id="hud" aria-label="Game HUD">
+      <div role="status" aria-live="polite">
+        <span><i class="fa-solid fa-trophy" aria-hidden="true"></i> Score: <output id="score" name="score">0</output></span>
+        <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Level: <output id="level" name="level">1</output></span>
+        <span><i class="fa-solid fa-heart" aria-hidden="true"></i> Lives: <output id="lives" name="lives">3</output></span>
+        <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Shield: <output id="shield" name="shield">100%</output></span>
+        <span><i class="fa-solid fa-gauge" aria-hidden="true"></i> FPS: <output id="fps" name="fps">0</output></span>
+        <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Time: <output id="time" name="time">00:00</output></span>
+      </div>
+    </section>
+
+    <!-- Game Canvas -->
+    <section id="play" aria-label="Game Canvas">
+      <figure>
+        <figcaption>Canvas</figcaption>
+        <canvas id="myCanvas" width="1024" height="768">
+          Your browser does not support the HTML5 canvas tag.
+        </canvas>
+      </figure>
+    </section>
+
+    <!-- Controls Help -->
+    <section id="help" aria-label="Controls Guide">
+      <h2><i class="fa-solid fa-gamepad" aria-hidden="true"></i> Controls</h2>
+      <ul>
+        <li>Move: Arrow keys or WASD</li>
+        <li>Fire: Space</li>
+        <li>Special: Shift</li>
+        <li>Pause: P</li>
+        <li>Toggle Fullscreen: F</li>
+      </ul>
+    </section>
+
+    <!-- Assets and Audio Hooks (managed by app.js) -->
+    <section id="assets" hidden aria-hidden="true">
+      <h2><i class="fa-regular fa-image" aria-hidden="true"></i> Assets</h2>
+
+      <!-- Optional: let players provide an image URL for background/sprites (read by app.js) -->
+      <label for="bgImageUrl">Background image URL</label>
+      <input id="bgImageUrl" type="url" placeholder="https://example.com/space.jpg" inputmode="url">
+
+      <label for="spriteUpload">Upload sprite images</label>
+      <input id="spriteUpload" type="file" accept="image/*" multiple>
+
+      <!-- Preloadable audio (sources to be provided) -->
+      <audio id="sfxShoot" preload="auto">
+        <source src="assets/audio/shoot.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="sfxExplosion" preload="auto">
+        <source src="assets/audio/explosion.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="bgMusic" preload="auto" loop>
+        <source src="assets/audio/music.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <!-- Leaderboard -->
+    <section id="leaderboard" aria-label="Leaderboard">
+      <h2><i class="fa-solid fa-ranking-star" aria-hidden="true"></i> Leaderboard</h2>
+      <ol id="scores">
+        <li data-initials="AAA" data-score="10000">AAA — 10,000</li>
+        <li data-initials="BBB" data-score="8000">BBB — 8,000</li>
+        <li data-initials="CCC" data-score="5000">CCC — 5,000</li>
+      </ol>
+    </section>
+
+    <!-- Settings Dialog (open via Settings button; JS can call showModal()) -->
+    <dialog id="settingsDialog" aria-labelledby="settingsTitle">
+      <form method="dialog">
+        <header>
+          <h2 id="settingsTitle">
+            <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+            Settings
+          </h2>
+        </header>
+
+        <section>
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty" name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+            <option value="insane">Insane</option>
+          </select>
+
+          <label for="graphics">Graphics</label>
+          <select id="graphics" name="graphics">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+            <option value="ultra">Ultra</option>
+          </select>
+
+          <label for="musicVolume">Music Volume</label>
+          <input id="musicVolume" name="musicVolume" type="range" min="0" max="100" value="60" />
+
+          <label for="sfxVolume">SFX Volume</label>
+          <input id="sfxVolume" name="sfxVolume" type="range" min="0" max="100" value="80" />
+
+          <label for="controlScheme">Control Scheme</label>
+          <select id="controlScheme" name="controlScheme">
+            <option value="wasd" selected>WASD + Space</option>
+            <option value="arrows">Arrows + Space</option>
+            <option value="custom">Custom</option>
+          </select>
+        </section>
+
+        <menu>
+          <button value="cancel" aria-label="Close settings">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            Close
+          </button>
+          <button value="apply" data-action="apply-settings" aria-label="Apply settings">
+            <i class="fa-solid fa-check" aria-hidden="true"></i>
+            Apply
+          </button>
+        </menu>
+      </form>
+    </dialog>
+
+    <!-- Pause Overlay (can be shown via JS) -->
+    <dialog id="pauseDialog" aria-labelledby="pauseTitle">
+      <form method="dialog">
+        <h2 id="pauseTitle"><i class="fa-solid fa-circle-pause" aria-hidden="true"></i> Paused</h2>
+        <p>Game is paused.</p>
+        <menu>
+          <button value="resume" data-action="resume">
+            <i class="fa-solid fa-play" aria-hidden="true"></i>
+            Resume
+          </button>
+          <button value="restart" data-action="reset">
+            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+            Restart
+          </button>
+        </menu>
+      </form>
+    </dialog>
+
+  </main>
+
+  <footer>
+    <small>
+      <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+      Tip: Ensure app.js wires up data-action buttons, dialog show/close, audio, and canvas rendering.
+    </small>
+  </footer>
+
+  <noscript>
+    JavaScript is required to play this game.
+  </noscript>
+
+  <!-- Keep your game logic here -->
+  <script defer src="app.js"></script>
 </body>
 </html>
