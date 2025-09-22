@@ -1,23 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Typing</title>
-		<link rel="stylesheet" href="./index.css" />
-	</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Typing</title>
+        <!-- Font Awesome CDN for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <link rel="stylesheet" href="./index.css" />
+		<style>
+						
+			
+			#datetime {
+				text-align: center;
+				margin-bottom: 1rem;
+				font-size: 1.1rem;
+				color: #2d7c6f;
+			}
+			
+			#datetime .fas {
+				margin-right: 0.3rem;
+				color: #3a241d;
+				font-size: 1.1em;
+				vertical-align: middle;
+			}
+			
+			/* Hide label visually but keep for accessibility */
+			.hidden-label {
+				position: absolute;
+				left: -10000px;
+				top: auto;
+				width: 1px;
+				height: 1px;
+				overflow: hidden;
+			}
+			
+			/* ...existing code... */
+		</style>
+    </head>
 
-	<body>
-		<h1>Practice your typing</h1>
-		<div>Click start to have a quote displayed. Type the quote as fast as you can!</div>
+    <body>
+        <h1>
+            <i class="fas fa-keyboard"></i> Practice your typing
+        </h1>
+        <div>
+            <i class="fas fa-info-circle"></i>
+            Click start to have a quote displayed. Type the quote as fast as you can!
+        </div>
 
-		<p id="quote"></p>
-		<p id="message"></p>
-		<div>
-			<input type="text" aria-label="current word" id="typed-value" />
-		</div>
-		<div>
-			<button id="start" type="button">Start</button>
-		</div>
-		<script src="./index.js"></script>
-	</body>
+        <p id="quote"></p>
+        <p id="message"></p>
+        <div>
+            <label for="typed-value" class="hidden-label">Current word</label>
+            <input type="text" aria-label="current word" id="typed-value" placeholder="Type here..." />
+            <i class="fas fa-pen"></i>
+        </div>
+        <div>
+            <button id="start" type="button">
+                <i class="fas fa-play"></i> Start
+            </button>
+        </div>
+        <script src="./index.js"></script>
+				<!-- ...existing code... -->
+		<body>
+			<h1>
+				<i class="fas fa-keyboard"></i> Practice your typing
+			</h1>
+			<div id="datetime">
+				<i class="fas fa-calendar-day"></i>
+				<span id="current-date"></span>
+				&nbsp;|&nbsp;
+				<i class="fas fa-clock"></i>
+				<span id="current-time"></span>
+			</div>
+			<!-- ...existing code... -->
+		</body>
+		<!-- ...existing code... -->
+		 <script>	
+						// ...existing code...
+			
+			function updateDateTime() {
+				const now = new Date();
+			
+				// Format date as DD/MM/YYYY
+				const day = String(now.getDate()).padStart(2, '0');
+				const month = String(now.getMonth() + 1).padStart(2, '0');
+				const year = now.getFullYear();
+				const formattedDate = `${day}/${month}/${year}`;
+			
+				// Format time as HH:MM AM/PM (12-hour)
+				let hours = now.getHours();
+				const minutes = String(now.getMinutes()).padStart(2, '0');
+				const ampm = hours >= 12 ? 'PM' : 'AM';
+				hours = hours % 12;
+				hours = hours ? hours : 12; // 0 should be 12
+				const formattedTime = `${hours}:${minutes} ${ampm}`;
+			
+				document.getElementById('current-date').textContent = formattedDate;
+				document.getElementById('current-time').textContent = formattedTime;
+			}
+			
+			// Initial call and update every minute
+			updateDateTime();
+			setInterval(updateDateTime, 60000);
+			
+			// ...existing code...
+		 </script>
+    </body>
 </html>
+

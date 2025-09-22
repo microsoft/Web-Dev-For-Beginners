@@ -6,3 +6,151 @@
 	background-color: lightcoral;
 	border-color: red;
 }
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f9fafb, #e3f2ef);
+  color: #2d3436;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Title */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d7c6f;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Info */
+div i.fa-info-circle {
+  color: #00796b;
+  margin-right: 0.4rem;
+}
+
+div {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 500px;
+  color: #555;
+}
+
+/* Quote Display */
+#quote {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-left: 4px solid #2d7c6f;
+  background: #f1fdfb;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Message */
+#message {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.8rem;
+  color: #ff7043;
+  text-align: center;
+}
+
+/* Input Box */
+input#typed-value {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  width: 280px;
+  border: 2px solid #2d7c6f;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.3s ease;
+  margin-right: 0.4rem;
+}
+
+input#typed-value:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 8px rgba(0, 121, 107, 0.3);
+}
+
+/* Pen Icon */
+.fa-pen {
+  color: #2d7c6f;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+/* Start Button */
+button#start {
+  background: linear-gradient(135deg, #2d7c6f, #26a69a);
+  color: white;
+  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button#start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+button#start i {
+  margin-right: 0.4rem;
+}
+
+/* Date & Time */
+#datetime {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #37474f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+#datetime .fas {
+  color: #2d7c6f;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #quote {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  input#typed-value {
+    width: 200px;
+  }
+
+  button#start {
+    width: 100%;
+  }
+}
