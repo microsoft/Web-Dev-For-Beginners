@@ -1,4 +1,4 @@
-Here is an upgraded and enhanced version of your lesson on using VSCode.dev, making it more engaging, comprehensive, and visually appealing—while preserving all your original image links and references.
+
 
 ***
 
@@ -161,3 +161,4 @@ Test your skills: [Create a resume website using vscode.dev](https://github.com/
 ***
 
 **Now you’re ready to code, create, and collaborate—from anywhere, on any device, using VSCode.dev!**
+
