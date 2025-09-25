@@ -1,14 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Character encoding and viewport -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark light" />
-    <title>Stellar AI Chat</title>
 
-    <!-- Fonts: Inter variable -->
+    <!-- Explicit color-scheme support and order of preference -->
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Theming the browser UI for light/dark modes -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0f" />
+
+    <!-- Site metadata -->
+    <title>Stellar AI Chat</title>
+    <meta name="description" content="Accessible, dark-mode chat UI powered by a backend AI with live-region announcements and robust keyboard navigation." />
+    <meta name="referrer" content="no-referrer" />
+
+    <!-- PWA hooks (optional; provide files if used) -->
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <!-- Performance: DNS + connection warming -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Fonts: Inter variable -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap"
       rel="stylesheet"
@@ -21,14 +41,23 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- App styles -->
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Respect reduced motion; define in CSS with @media (prefers-reduced-motion: reduce) -->
   </head>
   <body>
+    <noscript>
+      <p role="status" aria-live="polite">
+        JavaScript is required for live chat updates and sending messages.
+      </p>
+    </noscript>
+
     <div class="app" id="app" data-theme="dark">
       <header class="header">
         <div class="brand">
           <div class="logo" aria-hidden="true">
-            <i class="fa-solid fa-robot"></i>
+            <i class="fa-solid fa-robot" aria-hidden="true"></i>
           </div>
           <div>
             <h1 class="title">My company</h1>
@@ -37,50 +66,106 @@
         </div>
 
         <nav class="actions" aria-label="Header actions">
-          <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
-            <i class="fa-solid fa-moon"></i>
+          <button
+            class="icon-btn"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+          >
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
           </button>
-          <button class="icon-btn" id="clearChat" aria-label="Clear chat">
-            <i class="fa-solid fa-trash"></i>
+
+          <button
+            class="icon-btn"
+            id="clearChat"
+            type="button"
+            aria-label="Clear chat"
+          >
+            <i class="fa-solid fa-trash" aria-hidden="true"></i>
           </button>
-          <button class="icon-btn" id="settings" aria-label="Settings">
-            <i class="fa-solid fa-gear"></i>
+
+          <button
+            class="icon-btn"
+            id="settings"
+            type="button"
+            aria-label="Settings"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-gear" aria-hidden="true"></i>
           </button>
         </nav>
       </header>
 
       <main class="chat" id="chat">
-        <div class="messages" id="messages" aria-live="polite" aria-label="Chat messages"></div>
+        <!-- Live message stream for assistive tech:
+             role="log" conveys an updating feed; aria-live polite avoids interruption; aria-relevant focuses announcements -->
+        <div
+          class="messages"
+          id="messages"
+          role="log"
+          aria-live="polite"
+          aria-relevant="additions text"
+          aria-atomic="false"
+          aria-label="Chat messages"
+        ></div>
 
-        <form id="composer" class="composer" action="#">
-          <button class="icon-left" type="button" id="attachBtn" aria-label="Attach">
-            <i class="fa-solid fa-paperclip"></i>
+        <form id="composer" class="composer" action="#" novalidate>
+          <button
+            class="icon-left"
+            type="button"
+            id="attachBtn"
+            aria-label="Attach"
+          >
+            <i class="fa-solid fa-paperclip" aria-hidden="true"></i>
           </button>
 
+          <!-- Associate a real label for better accessibility -->
+          <label for="input" class="visually-hidden">Message</label>
           <textarea
             id="input"
             class="input"
             placeholder="Say hello — Enter to send, Shift+Enter for newline"
             rows="1"
             spellcheck="true"
-            autocomplete="off"
+            autocomplete="on"
+            autocapitalize="sentences"
+            enterkeyhint="send"
             aria-label="Message input"
+            aria-describedby="composerHelp"
           ></textarea>
+          <div id="composerHelp" class="visually-hidden">
+            Press Enter to send, Shift+Enter for newline.
+          </div>
 
           <div class="composer-actions">
-            <button class="icon-btn" type="button" id="micBtn" aria-label="Voice">
-              <i class="fa-solid fa-microphone"></i>
+            <button
+              class="icon-btn"
+              type="button"
+              id="micBtn"
+              aria-label="Voice"
+              aria-pressed="false"
+            >
+              <i class="fa-solid fa-microphone" aria-hidden="true"></i>
             </button>
-            <button id="send" class="send-btn" type="submit" aria-label="Send">
+
+            <button
+              id="send"
+              class="send-btn"
+              type="submit"
+              aria-label="Send"
+            >
               <span>Send</span>
-              <i class="fa-solid fa-paper-plane"></i>
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
             </button>
           </div>
         </form>
       </main>
 
       <footer class="footer">
-        <div class="status">
+        <!-- role="status" is appropriate for non-interruptive live updates -->
+        <div class="status" role="status" aria-live="polite">
           <span class="dot" id="statusDot" aria-hidden="true"></span>
           <span>Backend:</span>
           <code>http://127.0.0.1:5000/hello</code>
@@ -88,6 +173,7 @@
       </footer>
     </div>
 
-    <script src="app.js"></script>
+    <!-- App script; consider type=module and defer for performance -->
+    <script src="app.js" defer></script>
   </body>
 </html>
