@@ -1,3 +1,108 @@
 .app-nav ul li {
   width: max-content;
 }
+body {
+  font-family: 'Inter', Arial, sans-serif;
+}
+/* Body and Typography */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f7f8fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+h1, h2, h3 {
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.02em;
+}
+
+h1 i, h2 i, h3 i {
+  color: #0078d4;
+  margin-right: 0.5em;
+}
+
+/* Navigation Bar */
+.app-nav {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1em 2em;
+}
+
+.app-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.app-nav ul li {
+  width: max-content;
+}
+
+.app-nav a {
+  text-decoration: none;
+  color: #0078d4;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.app-nav a:hover {
+  color: #005fa3;
+}
+
+/* Card Component */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 2em;
+  margin: 2em 0;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Button Styling */
+.button {
+  background: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.button:hover {
+  background: #005fa3;
+}
+
+/* Font Awesome Icon Styling */
+.fa {
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+  .app-nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .card {
+    padding: 1em;
+  }
+}

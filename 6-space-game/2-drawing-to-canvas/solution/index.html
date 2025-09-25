@@ -1,6 +1,49 @@
-<html>
-  <body>
-    <canvas id ="canvas" width="1024" height="768"></canvas>
-    <script src="app.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Canvas Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #2d2a4a 0%, #181733 100%);
+      color: #fff;
+      font-family: 'Orbitron', 'Arial', sans-serif;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Orbitron', monospace;
+      margin-top: 32px;
+      font-size: 2.7rem;
+      letter-spacing: 2px;
+      text-shadow: 0 3px 12px #ff007f;
+    }
+    .info-bar {
+      margin: 20px 0;
+      font-size: 1.3rem;
+    }
+    #canvas {
+      border: 4px solid #ff007f;
+      box-shadow: 0 0 40px #ff007f22;
+      display: block;
+      margin: 20px auto;
+      background: #12121c;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <i class="fa-solid fa-rocket"></i>
+    Arcade Monster Attack
+    <i class="fa-solid fa-skull-crossbones"></i>
+  </h1>
+  <div class="info-bar">
+    <i class="fa-solid fa-star"></i> Score: <span id="score">0</span>
+    <i class="fa-solid fa-heart"></i> Lives: <span id="lives">3</span>
+  </div>
+  <canvas id="canvas" width="1024" height="768"></canvas>
 </html>

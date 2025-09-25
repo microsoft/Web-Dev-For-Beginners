@@ -1,20 +1,523 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Space Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Canvas-based Space Game with accessible controls, HUD, and settings." />
+  <meta name="theme-color" content="#0b1023" />
+
+  <!-- Google Fonts: performance preconnect + fonts (apply via CSS later) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Swap or add families as desired -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 (Free) via cdnjs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-bWn0gM3Yx6w5OV6v4p+WB6l3Zl9sJ2jQ4kN0N1bK2qgkvI6l3F8Vd6k1oB7f/0g0a9Qyxgkq+K6X1JQmJv9zYg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Optional PWA hooks (files to be created later) -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
+  <style>
+    /* Space Game — CSS */
+/* Typography + Theme */
+:root {
+  --bg: #070a1a;
+  --bg-2: #0b1023;
+  --panel: rgba(12, 17, 38, 0.75);
+  --panel-solid: #0c1126;
+  --primary: #5ac8fa;
+  --accent: #a78bfa;
+  --danger: #ff6b6b;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --text: #e6eaf2;
+  --muted: #9aa4bf;
+  --border: #192243;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 10%, #0f1533 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, #0b1b3a 0%, transparent 40%),
+    radial-gradient(circle at 30% 80%, #111a39 0%, transparent 40%),
+    var(--bg);
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+}
+
+/* Header + Nav */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: linear-gradient(180deg, rgba(7,10,26,0.85) 0%, rgba(7,10,26,0.6) 100%);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-family: "Orbitron", "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+nav[aria-label="Primary"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+nav[aria-label="Primary"] button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #121a3a 0%, #0d1430 100%);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.55rem 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.06s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+
+nav[aria-label="Primary"] button:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 18px rgba(90, 200, 250, 0.25);
+}
+
+nav[aria-label="Primary"] button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+nav [data-action="start"] { background: linear-gradient(180deg, #10314a 0%, #0d2438 100%); }
+nav [data-action="pause"] { background: linear-gradient(180deg, #1a1f3f 0%, #131936 100%); }
+nav [data-action="reset"] { background: linear-gradient(180deg, #3b0d0d 0%, #2a0a0a 100%); }
+nav [data-action="mute"][aria-pressed="true"] { background: linear-gradient(180deg, #3f1a1a 0%, #2a0e0e 100%); }
+nav [data-action="fullscreen"] { background: linear-gradient(180deg, #162c3a 0%, #0f2331 100%); }
+nav [data-action="open-settings"] { background: linear-gradient(180deg, #1a1440 0%, #13103a 100%); }
+
+/* Main Layout */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* HUD overlay */
+#hud {
+  position: fixed;
+  left: 50%;
+  top: 64px;
+  transform: translateX(-50%);
+  width: min(100% - 2rem, 1180px);
+  z-index: 15;
+}
+
+#hud [role="status"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+  backdrop-filter: blur(4px);
+}
+
+#hud span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+#hud output {
+  color: var(--primary);
+  font-family: "Orbitron", "Poppins", sans-serif;
+  letter-spacing: 0.4px;
+}
+
+/* Canvas section */
+#play {
+  position: relative;
+  margin-top: 1rem;
+}
+
+#play figure {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background:
+    radial-gradient(1200px 600px at 70% 30%, rgba(70, 78, 150, 0.15), transparent 60%),
+    radial-gradient(800px 400px at 20% 70%, rgba(88, 131, 186, 0.12), transparent 60%),
+    #081022;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.02);
+  overflow: hidden;
+}
+
+#play figcaption {
+  position: absolute;
+  z-index: 5;
+  inset: 0 auto auto 0;
+  margin: 0.5rem 0 0 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(8, 16, 34, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+#myCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, #000814 0%, #001d3d 100%);
+}
+
+/* Help + Leaderboard */
+#help, #leaderboard {
+  margin-top: 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+#help h2, #leaderboard h2 {
+  margin-top: 0;
+  font-family: "Orbitron", "Poppins", sans-serif;
+}
+
+#help ul {
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+}
+
+#scores {
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+}
+
+#scores li {
+  margin: 0.25rem 0;
+  color: var(--text);
+}
+
+/* Dialogs */
+dialog {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  background: var(--panel-solid);
+  color: var(--text);
+  width: min(520px, calc(100% - 2rem));
+  box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+}
+
+dialog header h2 {
+  margin: 0 0 0.5rem 0;
+  font-family: "Orbitron", "Poppins", sans-serif;
+}
+
+dialog section {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+dialog label {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+dialog input[type="range"],
+dialog select,
+dialog input[type="url"],
+dialog input[type="file"] {
+  width: 100%;
+  color: var(--text);
+  background: #0f1733;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+dialog menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.5rem 0 0 0;
+}
+
+dialog button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #121a3a 0%, #0d1430 100%);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.5rem 0.85rem;
+  cursor: pointer;
+}
+
+dialog::backdrop {
+  background: rgba(3, 6, 20, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+/* Footer */
+footer {
+  margin: 1rem 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Fullscreen adjustments */
+#play:fullscreen, /* section fullscreen */
+#myCanvas:fullscreen {
+  background: #000;
+}
+
+#play:fullscreen #myCanvas,
+#myCanvas:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  #hud [role="status"] {
+    justify-content: space-between;
+  }
+  nav[aria-label="Primary"] {
+    gap: 0.4rem;
+  }
+  nav[aria-label="Primary"] button {
+    padding: 0.5rem 0.65rem;
+  }
+}
+
+  </style>
 <body>
 
-<p>Image to use:</p>
-<p>Canvas:</p>
+  <a href="#play" aria-label="Skip to game">Skip to Game</a>
 
-<canvas id="myCanvas" width="1024" height="768" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
+  <header>
+    <h1 aria-label="Space Game">
+      <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+      Space Game
+    </h1>
 
-<script src="app.js">
+    <nav aria-label="Primary">
+      <button type="button" data-action="start" aria-label="Start">
+        <i class="fa-solid fa-play" aria-hidden="true"></i> Start
+      </button>
+      <button type="button" data-action="pause" aria-label="Pause">
+        <i class="fa-solid fa-circle-pause" aria-hidden="true"></i> Pause
+      </button>
+      <button type="button" data-action="reset" aria-label="Reset">
+        <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Reset
+      </button>
+      <button type="button" data-action="mute" aria-pressed="false" aria-label="Mute">
+        <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i> Mute
+      </button>
+      <button type="button" data-action="fullscreen" aria-label="Toggle fullscreen">
+        <i class="fa-solid fa-expand" aria-hidden="true"></i> Fullscreen
+      </button>
+      <button type="button" data-action="open-settings" aria-controls="settingsDialog" aria-haspopup="dialog">
+        <i class="fa-solid fa-gear" aria-hidden="true"></i> Settings
+      </button>
+    </nav>
+  </header>
 
-</script>
+  <main id="main" tabindex="-1">
 
+    <!-- HUD -->
+    <section id="hud" aria-label="Game HUD">
+      <div role="status" aria-live="polite">
+        <span><i class="fa-solid fa-trophy" aria-hidden="true"></i> Score: <output id="score" name="score">0</output></span>
+        <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Level: <output id="level" name="level">1</output></span>
+        <span><i class="fa-solid fa-heart" aria-hidden="true"></i> Lives: <output id="lives" name="lives">3</output></span>
+        <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Shield: <output id="shield" name="shield">100%</output></span>
+        <span><i class="fa-solid fa-gauge" aria-hidden="true"></i> FPS: <output id="fps" name="fps">0</output></span>
+        <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Time: <output id="time" name="time">00:00</output></span>
+      </div>
+    </section>
+
+    <!-- Game Canvas -->
+    <section id="play" aria-label="Game Canvas">
+      <figure>
+        <figcaption>Canvas</figcaption>
+        <canvas id="myCanvas" width="1024" height="768">
+          Your browser does not support the HTML5 canvas tag.
+        </canvas>
+      </figure>
+    </section>
+
+    <!-- Controls Help -->
+    <section id="help" aria-label="Controls Guide">
+      <h2><i class="fa-solid fa-gamepad" aria-hidden="true"></i> Controls</h2>
+      <ul>
+        <li>Move: Arrow keys or WASD</li>
+        <li>Fire: Space</li>
+        <li>Special: Shift</li>
+        <li>Pause: P</li>
+        <li>Toggle Fullscreen: F</li>
+      </ul>
+    </section>
+
+    <!-- Assets and Audio Hooks (managed by app.js) -->
+    <section id="assets" hidden aria-hidden="true">
+      <h2><i class="fa-regular fa-image" aria-hidden="true"></i> Assets</h2>
+
+      <!-- Optional: let players provide an image URL for background/sprites (read by app.js) -->
+      <label for="bgImageUrl">Background image URL</label>
+      <input id="bgImageUrl" type="url" placeholder="https://example.com/space.jpg" inputmode="url">
+
+      <label for="spriteUpload">Upload sprite images</label>
+      <input id="spriteUpload" type="file" accept="image/*" multiple>
+
+      <!-- Preloadable audio (sources to be provided) -->
+      <audio id="sfxShoot" preload="auto">
+        <source src="assets/audio/shoot.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="sfxExplosion" preload="auto">
+        <source src="assets/audio/explosion.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="bgMusic" preload="auto" loop>
+        <source src="assets/audio/music.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <!-- Leaderboard -->
+    <section id="leaderboard" aria-label="Leaderboard">
+      <h2><i class="fa-solid fa-ranking-star" aria-hidden="true"></i> Leaderboard</h2>
+      <ol id="scores">
+        <li data-initials="AAA" data-score="10000">AAA — 10,000</li>
+        <li data-initials="BBB" data-score="8000">BBB — 8,000</li>
+        <li data-initials="CCC" data-score="5000">CCC — 5,000</li>
+      </ol>
+    </section>
+
+    <!-- Settings Dialog (open via Settings button; JS can call showModal()) -->
+    <dialog id="settingsDialog" aria-labelledby="settingsTitle">
+      <form method="dialog">
+        <header>
+          <h2 id="settingsTitle">
+            <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+            Settings
+          </h2>
+        </header>
+
+        <section>
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty" name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+            <option value="insane">Insane</option>
+          </select>
+
+          <label for="graphics">Graphics</label>
+          <select id="graphics" name="graphics">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+            <option value="ultra">Ultra</option>
+          </select>
+
+          <label for="musicVolume">Music Volume</label>
+          <input id="musicVolume" name="musicVolume" type="range" min="0" max="100" value="60" />
+
+          <label for="sfxVolume">SFX Volume</label>
+          <input id="sfxVolume" name="sfxVolume" type="range" min="0" max="100" value="80" />
+
+          <label for="controlScheme">Control Scheme</label>
+          <select id="controlScheme" name="controlScheme">
+            <option value="wasd" selected>WASD + Space</option>
+            <option value="arrows">Arrows + Space</option>
+            <option value="custom">Custom</option>
+          </select>
+        </section>
+
+        <menu>
+          <button value="cancel" aria-label="Close settings">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            Close
+          </button>
+          <button value="apply" data-action="apply-settings" aria-label="Apply settings">
+            <i class="fa-solid fa-check" aria-hidden="true"></i>
+            Apply
+          </button>
+        </menu>
+      </form>
+    </dialog>
+
+    <!-- Pause Overlay (can be shown via JS) -->
+    <dialog id="pauseDialog" aria-labelledby="pauseTitle">
+      <form method="dialog">
+        <h2 id="pauseTitle"><i class="fa-solid fa-circle-pause" aria-hidden="true"></i> Paused</h2>
+        <p>Game is paused.</p>
+        <menu>
+          <button value="resume" data-action="resume">
+            <i class="fa-solid fa-play" aria-hidden="true"></i>
+            Resume
+          </button>
+          <button value="restart" data-action="reset">
+            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+            Restart
+          </button>
+        </menu>
+      </form>
+    </dialog>
+
+  </main>
+
+  <footer>
+    <small>
+      <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+      Tip: Ensure app.js wires up data-action buttons, dialog show/close, audio, and canvas rendering.
+    </small>
+  </footer>
+
+  <noscript>
+    JavaScript is required to play this game.
+  </noscript>
+
+  <!-- Keep your game logic here -->
+  <script defer src="app.js"></script>
 </body>
 </html>

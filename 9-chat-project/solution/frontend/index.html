@@ -1,35 +1,179 @@
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Stellar AI Chat</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-      <div class="app">
-        <header class="header">
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div class="logo">🤖</div>
-            <div>
-              <h1>My company</h1>
-              <p class="subtitle">Dark-mode chat UI — powered by the backend AI</p>
-            </div>
+  <head>
+    <!-- Character encoding and viewport -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Explicit color-scheme support and order of preference -->
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Theming the browser UI for light/dark modes -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0f" />
+
+    <!-- Site metadata -->
+    <title>Stellar AI Chat</title>
+    <meta name="description" content="Accessible, dark-mode chat UI powered by a backend AI with live-region announcements and robust keyboard navigation." />
+    <meta name="referrer" content="no-referrer" />
+
+    <!-- PWA hooks (optional; provide files if used) -->
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <!-- Performance: DNS + connection warming -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Fonts: Inter variable -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons: Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Respect reduced motion; define in CSS with @media (prefers-reduced-motion: reduce) -->
+  </head>
+  <body>
+    <noscript>
+      <p role="status" aria-live="polite">
+        JavaScript is required for live chat updates and sending messages.
+      </p>
+    </noscript>
+
+    <div class="app" id="app" data-theme="dark">
+      <header class="header">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">
+            <i class="fa-solid fa-robot" aria-hidden="true"></i>
           </div>
-        </header>
+          <div>
+            <h1 class="title">My company</h1>
+            <p class="subtitle">Dark‑mode chat UI — powered by the backend AI</p>
+          </div>
+        </div>
 
-        <main class="chat" id="chat">
-          <div class="messages" id="messages" aria-live="polite"></div>
+        <nav class="actions" aria-label="Header actions">
+          <button
+            class="icon-btn"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+          >
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
 
-          <form id="composer" class="composer" action="#">
-            <textarea id="input" placeholder="Say hello — press Enter to send (Shift+Enter for newline)" rows="2"></textarea>
-            <button id="send" type="submit">Send</button>
-          </form>
-        </main>
+          <button
+            class="icon-btn"
+            id="clearChat"
+            type="button"
+            aria-label="Clear chat"
+          >
+            <i class="fa-solid fa-trash" aria-hidden="true"></i>
+          </button>
 
-        <footer class="footer">Running with backend at <code>http://127.0.0.1:5000/hello</code></footer>
-      </div>
+          <button
+            class="icon-btn"
+            id="settings"
+            type="button"
+            aria-label="Settings"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+          </button>
+        </nav>
+      </header>
 
-      <script src="app.js"></script>
-    </body>
+      <main class="chat" id="chat">
+        <!-- Live message stream for assistive tech:
+             role="log" conveys an updating feed; aria-live polite avoids interruption; aria-relevant focuses announcements -->
+        <div
+          class="messages"
+          id="messages"
+          role="log"
+          aria-live="polite"
+          aria-relevant="additions text"
+          aria-atomic="false"
+          aria-label="Chat messages"
+        ></div>
+
+        <form id="composer" class="composer" action="#" novalidate>
+          <button
+            class="icon-left"
+            type="button"
+            id="attachBtn"
+            aria-label="Attach"
+          >
+            <i class="fa-solid fa-paperclip" aria-hidden="true"></i>
+          </button>
+
+          <!-- Associate a real label for better accessibility -->
+          <label for="input" class="visually-hidden">Message</label>
+          <textarea
+            id="input"
+            class="input"
+            placeholder="Say hello — Enter to send, Shift+Enter for newline"
+            rows="1"
+            spellcheck="true"
+            autocomplete="on"
+            autocapitalize="sentences"
+            enterkeyhint="send"
+            aria-label="Message input"
+            aria-describedby="composerHelp"
+          ></textarea>
+          <div id="composerHelp" class="visually-hidden">
+            Press Enter to send, Shift+Enter for newline.
+          </div>
+
+          <div class="composer-actions">
+            <button
+              class="icon-btn"
+              type="button"
+              id="micBtn"
+              aria-label="Voice"
+              aria-pressed="false"
+            >
+              <i class="fa-solid fa-microphone" aria-hidden="true"></i>
+            </button>
+
+            <button
+              id="send"
+              class="send-btn"
+              type="submit"
+              aria-label="Send"
+            >
+              <span>Send</span>
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </button>
+          </div>
+        </form>
+      </main>
+
+      <footer class="footer">
+        <!-- role="status" is appropriate for non-interruptive live updates -->
+        <div class="status" role="status" aria-live="polite">
+          <span class="dot" id="statusDot" aria-hidden="true"></span>
+          <span>Backend:</span>
+          <code>http://127.0.0.1:5000/hello</code>
+        </div>
+      </footer>
+    </div>
+
+    <!-- App script; consider type=module and defer for performance -->
+    <script src="app.js" defer></script>
+  </body>
 </html>
