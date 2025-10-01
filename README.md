@@ -88,7 +88,7 @@ Follow these steps:
 
 In your copy of this repository that you created, click the **Code** button and select **Open with Codespaces**. This will create a new Codespace for you to work in.
 
-[!Codespace]()./images/createcodespace.png)
+![Codespace](./images/createcodespace.png)
 
 #### Running the curriculum locally on your computer
 
@@ -99,7 +99,7 @@ Our recommendation is to use [Visual Studio Code](https://code.visualstudio.com/
 
 1. Clone your repository to your computer. You can do this by clicking the **Code** button and copying the URL:
 
-    [!CodeSpace](./images/createcodespace.png)
+    [CodeSpace](./images/createcodespace.png)
 
     Then, open [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) within [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) and run the following command, replacing `<your-repository-url>` with the URL you just copied:
 
