@@ -29,7 +29,7 @@ const MemoryGame = () => {
       setGridSize(size);
       setError(""); 
     } else {
-      setError("Please enter a grid size where gridSize is even (e.g. 2, 4, 6, 8, 10)");
+      setError("Please enter a grid size where size is even (e.g. 2, 4, 6, 8, 10)");
     }
   };
 
