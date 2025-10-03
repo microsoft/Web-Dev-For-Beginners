@@ -124,7 +124,7 @@ const MemoryGame = () => {
           <div
             key={card.id}
             onClick={() => handleClick(card.id)}
-            className={`aspect-square flex items-center justify-center text-xl transition-all duration-300 font-bold rounded-lg  cursor-pointer ${
+            className={`aspect-square flex items-center justify-center text-xl transition-all duration-300 font-bold rounded-lg cursor-pointer ${
               isFlipped(card.id)
                 ? isSelectedPairs(card.id)
                   ? "bg-green-500 text-white"
