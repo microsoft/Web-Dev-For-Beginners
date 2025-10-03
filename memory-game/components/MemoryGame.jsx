@@ -25,11 +25,11 @@ const MemoryGame = () => {
 
   const handleGridSize = (e) => {
     const size = parseInt(e.target.value);
-    if (2 <= size && size <= 10 && (size * size) % 2 === 0) {
+    if (2 <= size && size <= 10 && (size % 2 === 0)) {
       setGridSize(size);
       setError(""); 
     } else {
-      setError("Please enter a grid size where gridSize x gridSize is even (e.g. 2, 4, 6, 8, 10)");
+      setError("Please enter a grid size where gridSize is even (e.g. 2, 4, 6, 8, 10)");
     }
   };
 
