@@ -103,3 +103,108 @@ h1 {
 	bottom: 45%;
 	left: 5%;
 }
+/* ...existing code... */
+
+/* Navigation Bar Styles */
+nav {
+    background: linear-gradient(90deg, #d1e1df 60%, #b2c9c6 100%);
+    box-shadow: 0 2px 8px rgba(58,36,29,0.08);
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    color: #3a241d;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+nav li a:hover, nav li a:focus {
+    background: #e6f2f0;
+    color: #2d7c6f;
+    box-shadow: 0 2px 8px rgba(45,124,111,0.08);
+}
+
+/* Font Awesome Icon Styles */
+.fas, .fab {
+    color: #2d7c6f;
+    font-size: 1.2em;
+    vertical-align: middle;
+    transition: color 0.2s;
+}
+
+nav li a:hover .fas,
+nav li a:hover .fab {
+    color: #3a241d;
+}
+
+header h1 .fas {
+    color: #3a241d;
+    margin-right: 0.5rem;
+    font-size: 1.3em;
+}
+
+header p .fas {
+    color: #2d7c6f;
+    margin-left: 0.3rem;
+}
+
+footer {
+    background: #d1e1df;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #3a241d;
+    border-top: 2px solid #b2c9c6;
+}
+
+footer a {
+    color: #2d7c6f;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+footer a:hover, footer a:focus {
+    color: #3a241d;
+    text-decoration: underline;
+}
+
+footer .fab, footer .fas {
+    margin-right: 0.3rem;
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+
+/* Responsive adjustments for navigation */
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav li a {
+        font-size: 1rem;
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+/* ...existing code... */

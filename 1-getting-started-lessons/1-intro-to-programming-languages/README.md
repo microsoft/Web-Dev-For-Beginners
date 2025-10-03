@@ -198,6 +198,9 @@ Compare some programming languages. What are some of the unique traits of JavaSc
 
 Study a bit on the different languages available to the programmer. Try to write a line in one language, and then rewrite it in two others. What did you learn?
 
+
 ## Assignment
 
 [Reading the Docs](assignment.md)
+
+> Note: When selecting tools for your assignment, do not choose editors, browsers, or command line tools already listed above.
