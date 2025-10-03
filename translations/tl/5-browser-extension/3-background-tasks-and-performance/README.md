@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
-  "translation_date": "2025-08-28T15:42:19+00:00",
+  "original_hash": "b91cbf14240ee59411b96448b994ace1",
+  "translation_date": "2025-10-03T12:29:46+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "tl"
 }
 -->
-# Proyek Browser Extension Part 3: Alamin ang Tungkol sa Background Tasks at Performance
+# Browser Extension Project Part 3: Alamin ang Tungkol sa Background Tasks at Performance
 
 ## Pre-Lecture Quiz
 
@@ -15,9 +15,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Panimula
 
-Sa huling dalawang aralin ng module na ito, natutunan mo kung paano gumawa ng form at display area para sa data na kinukuha mula sa isang API. Ito ay isang karaniwang paraan ng paglikha ng presensya sa web. Natutunan mo rin kung paano mag-handle ng asynchronous na pagkuha ng data. Malapit nang matapos ang iyong browser extension.
+Sa huling dalawang aralin ng module na ito, natutunan mo kung paano gumawa ng form at display area para sa data na kinukuha mula sa isang API. Ito ay isang karaniwang paraan ng paglikha ng presensya sa web. Natutunan mo rin kung paano mag-handle ng asynchronous na pagkuha ng data. Halos tapos na ang iyong browser extension.
 
-Ang natitira ay ang pamamahala ng ilang background tasks, kabilang ang pag-refresh ng kulay ng icon ng extension, kaya magandang pagkakataon ito para pag-usapan kung paano pinamamahalaan ng browser ang ganitong uri ng gawain. Isipin natin ang mga browser tasks na ito sa konteksto ng performance ng iyong web assets habang ginagawa mo ang mga ito.
+Ang natitira na lang ay ang pamamahala ng ilang background tasks, kabilang ang pag-refresh ng kulay ng icon ng extension, kaya magandang pagkakataon ito para pag-usapan kung paano pinamamahalaan ng browser ang ganitong uri ng gawain. Isipin natin ang mga browser tasks na ito sa konteksto ng performance ng iyong web assets habang ginagawa mo ang mga ito.
 
 ## Mga Pangunahing Kaalaman sa Web Performance
 
@@ -31,13 +31,13 @@ Ang Performance tab ay naglalaman ng Profiling tool. Buksan ang isang website (s
 
 ![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.tl.png)
 
-✅ Bisitahin ang [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) tungkol sa Performance panel sa Edge
+✅ Bisitahin ang [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) sa Performance panel sa Edge
 
-> Tip: upang makakuha ng tumpak na pagbasa ng oras ng pagsisimula ng iyong website, i-clear ang cache ng iyong browser
+> Tip: upang makakuha ng tumpak na pagbasa ng startup time ng iyong website, i-clear ang cache ng iyong browser
 
 Piliin ang mga elemento ng profile timeline upang mag-zoom in sa mga event na nangyayari habang naglo-load ang iyong pahina.
 
-Kumuha ng snapshot ng performance ng iyong pahina sa pamamagitan ng pagpili ng bahagi ng profile timeline at pagtingin sa summary pane:
+Makakuha ng snapshot ng performance ng iyong pahina sa pamamagitan ng pagpili ng bahagi ng profile timeline at pagtingin sa summary pane:
 
 ![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.tl.png)
 
@@ -45,7 +45,7 @@ Suriin ang Event Log pane upang makita kung may anumang event na tumagal ng higi
 
 ![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.tl.png)
 
-✅ Kilalanin ang iyong profiler! Buksan ang developer tools sa site na ito at tingnan kung may mga bottleneck. Ano ang asset na pinakamabagal mag-load? Ang pinakamabilis?
+✅ Kilalanin ang iyong profiler! Buksan ang developer tools sa site na ito at tingnan kung may mga bottleneck. Ano ang pinakamabagal na asset na naglo-load? Ang pinakamabilis?
 
 ## Mga Profiling Checks
 
@@ -53,21 +53,21 @@ Sa pangkalahatan, may ilang "problem areas" na dapat bantayan ng bawat web devel
 
 **Asset sizes**: Ang web ay naging 'mas mabigat', at sa gayon ay mas mabagal, sa nakalipas na ilang taon. Ang ilan sa bigat na ito ay may kinalaman sa paggamit ng mga imahe.
 
-✅ Tingnan ang [Internet Archive](https://httparchive.org/reports/page-weight) para sa isang historical view ng page weight at iba pa.
+✅ Tingnan ang [Internet Archive](https://httparchive.org/reports/page-weight) para sa isang historical na pananaw sa page weight at iba pa.
 
-Isang magandang kasanayan ang tiyakin na ang iyong mga imahe ay na-optimize at naihatid sa tamang laki at resolution para sa iyong mga user.
+Isang magandang kasanayan ang tiyakin na ang iyong mga imahe ay na-optimize at naihatid sa tamang laki at resolusyon para sa iyong mga user.
 
-**DOM traversals**: Kailangang buuin ng browser ang Document Object Model nito batay sa code na isinulat mo, kaya't para sa magandang performance ng pahina, panatilihing minimal ang iyong mga tag, gamit at inaayos lamang ang kailangan ng pahina. Sa puntong ito, ang sobrang CSS na nauugnay sa isang pahina ay maaaring ma-optimize; ang mga style na kailangang gamitin lamang sa isang pahina ay hindi kailangang isama sa pangunahing style sheet, halimbawa.
+**DOM traversals**: Kailangang buuin ng browser ang Document Object Model nito batay sa code na isinulat mo, kaya't nasa interes ng magandang page performance na panatilihing minimal ang iyong mga tag, gamit lamang at inaayos ang kailangan ng pahina. Sa puntong ito, ang sobrang CSS na nauugnay sa isang pahina ay maaaring ma-optimize; ang mga style na kailangang gamitin lamang sa isang pahina ay hindi kailangang isama sa pangunahing style sheet, halimbawa.
 
-**JavaScript**: Ang bawat JavaScript developer ay dapat magbantay para sa 'render-blocking' scripts na kailangang i-load bago ma-traverse at ma-paint ang natitirang bahagi ng DOM sa browser. Isaalang-alang ang paggamit ng `defer` sa iyong inline scripts (tulad ng ginawa sa Terrarium module).
+**JavaScript**: Ang bawat JavaScript developer ay dapat magbantay para sa 'render-blocking' scripts na kailangang i-load bago ma-traverse at ma-paint ang natitirang bahagi ng DOM sa browser. Isaalang-alang ang paggamit ng `defer` sa iyong inline scripts (gaya ng ginawa sa Terrarium module).
 
-✅ Subukan ang ilang mga site sa isang [Site Speed Test website](https://www.webpagetest.org/) upang matuto nang higit pa tungkol sa mga karaniwang checks na ginagawa upang matukoy ang performance ng site.
+✅ Subukan ang ilang site sa isang [Site Speed Test website](https://www.webpagetest.org/) upang matuto nang higit pa tungkol sa mga karaniwang checks na ginagawa upang matukoy ang performance ng site.
 
-Ngayon na mayroon kang ideya kung paano nire-render ng browser ang mga assets na ipinapadala mo dito, tingnan natin ang huling ilang bagay na kailangan mong gawin upang makumpleto ang iyong extension:
+Ngayon na mayroon kang ideya kung paano nire-render ng browser ang mga asset na ipinapadala mo dito, tingnan natin ang huling ilang bagay na kailangan mong gawin upang makumpleto ang iyong extension:
 
-### Gumawa ng Function para Kalkulahin ang Kulay
+### Gumawa ng function para mag-calculate ng kulay
 
-Sa `/src/index.js`, magdagdag ng function na tinatawag na `calculateColor()` pagkatapos ng serye ng `const` variables na itinakda mo upang makakuha ng access sa DOM:
+Sa `/src/index.js`, magdagdag ng function na tinatawag na `calculateColor()` pagkatapos ng serye ng mga `const` variables na itinakda mo upang makakuha ng access sa DOM:
 
 ```JavaScript
 function calculateColor(value) {
@@ -88,17 +88,17 @@ function calculateColor(value) {
 }
 ```
 
-Ano ang nangyayari dito? Nagpapasa ka ng isang value (ang carbon intensity) mula sa API call na natapos mo sa huling aralin, at pagkatapos ay kinakalkula mo kung gaano kalapit ang value nito sa index na ipinakita sa colors array. Pagkatapos ay ipinapadala mo ang pinakamalapit na color value sa chrome runtime.
+Ano ang nangyayari dito? Ipinapasa mo ang isang value (ang carbon intensity) mula sa API call na natapos mo sa huling aralin, at pagkatapos ay kinakalkula mo kung gaano kalapit ang value nito sa index na ipinakita sa colors array. Pagkatapos ay ipinapadala mo ang pinakamalapit na color value sa chrome runtime.
 
-Ang chrome.runtime ay may [API](https://developer.chrome.com/extensions/runtime) na humahawak sa lahat ng uri ng background tasks, at ginagamit ng iyong extension ang mga ito:
+Ang chrome.runtime ay may [API](https://developer.chrome.com/extensions/runtime) na humahawak sa lahat ng uri ng background tasks, at ang iyong extension ay ginagamit ito:
 
-> "Gamitin ang chrome.runtime API upang kunin ang background page, magbalik ng mga detalye tungkol sa manifest, at makinig at tumugon sa mga event sa lifecycle ng app o extension. Maaari mo ring gamitin ang API na ito upang i-convert ang relative path ng URLs sa fully-qualified URLs."
+> "Gamitin ang chrome.runtime API upang kunin ang background page, magbalik ng mga detalye tungkol sa manifest, at makinig at tumugon sa mga event sa lifecycle ng app o extension. Maaari mo ring gamitin ang API na ito upang i-convert ang relative path ng mga URL sa fully-qualified URLs."
 
-✅ Kung dine-develop mo ang browser extension na ito para sa Edge, maaaring magulat ka na gumagamit ka ng chrome API. Ang mga mas bagong bersyon ng Edge browser ay tumatakbo sa Chromium browser engine, kaya maaari mong gamitin ang mga tool na ito.
+✅ Kung ginagawa mo ang browser extension na ito para sa Edge, maaaring magulat ka na gumagamit ka ng chrome API. Ang mga mas bagong bersyon ng Edge browser ay tumatakbo sa Chromium browser engine, kaya maaari mong gamitin ang mga tool na ito.
 
 > Tandaan, kung nais mong i-profile ang isang browser extension, ilunsad ang dev tools mula sa loob ng extension mismo, dahil ito ay sarili nitong hiwalay na browser instance.
 
-### Mag-set ng Default Icon Color
+### Mag-set ng default na kulay ng icon
 
 Ngayon, sa `init()` function, itakda ang icon na maging generic green sa simula sa pamamagitan ng muling pagtawag sa chrome's `updateIcon` action:
 
@@ -110,8 +110,7 @@ chrome.runtime.sendMessage({
 		},
 });
 ```
-
-### Tawagin ang Function, I-execute ang Call
+### Tawagin ang function, i-execute ang call
 
 Susunod, tawagin ang function na ginawa mo sa pamamagitan ng pagdaragdag nito sa promise na ibinalik ng C02Signal API:
 
@@ -125,12 +124,12 @@ At sa wakas, sa `/dist/background.js`, magdagdag ng listener para sa mga backgro
 ```JavaScript
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	if (msg.action === 'updateIcon') {
-		chrome.browserAction.setIcon({ imageData: drawIcon(msg.value) });
+		chrome.action.setIcon({ imageData: drawIcon(msg.value) });
 	}
 });
 //borrowed from energy lollipop extension, nice feature!
 function drawIcon(value) {
-	let canvas = document.createElement('canvas');
+	let canvas = new OffscreenCanvas(200, 200);
 	let context = canvas.getContext('2d');
 
 	context.beginPath();
@@ -148,7 +147,7 @@ Sa code na ito, nagdaragdag ka ng listener para sa anumang mga mensahe na papunt
 
 Ngayon, i-rebuild ang iyong extension (`npm run build`), i-refresh at ilunsad ang iyong extension, at panoorin ang pagbabago ng kulay. Panahon na ba para mag-ayos o maghugas ng pinggan? Ngayon alam mo na!
 
-Binabati kita, nakagawa ka ng isang kapaki-pakinabang na browser extension at natutunan mo pa ang tungkol sa kung paano gumagana ang browser at kung paano i-profile ang performance nito.
+Binabati kita, nakagawa ka ng isang kapaki-pakinabang na browser extension at natutunan ang higit pa tungkol sa kung paano gumagana ang browser at kung paano i-profile ang performance nito.
 
 ---
 
@@ -160,17 +159,17 @@ Suriin ang ilang open source websites na matagal nang umiiral, at, batay sa kani
 
 [Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/28)
 
-## Review at Pag-aaral sa Sarili
+## Review & Self Study
 
 Isaalang-alang ang pag-subscribe sa isang [performance newsletter](https://perf.email/)
 
 Suriin ang ilan sa mga paraan kung paano sinusukat ng mga browser ang web performance sa pamamagitan ng pagtingin sa performance tabs sa kanilang web tools. May nakita ka bang malalaking pagkakaiba?
 
-## Takdang-Aralin
+## Assignment
 
-[Surihin ang isang site para sa performance](assignment.md)
+[Analyze a site for performance](assignment.md)
 
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

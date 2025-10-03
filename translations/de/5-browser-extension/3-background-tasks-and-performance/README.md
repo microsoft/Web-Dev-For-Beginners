@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
-  "translation_date": "2025-08-29T14:09:19+00:00",
+  "original_hash": "b91cbf14240ee59411b96448b994ace1",
+  "translation_date": "2025-10-03T12:13:45+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "de"
 }
 -->
-# Browser-Erweiterungsprojekt Teil 3: Hintergrundaufgaben und Leistung kennenlernen
+# Browser-Erweiterungsprojekt Teil 3: Lernen Sie mehr über Hintergrundaufgaben und Leistung
 
 ## Quiz vor der Vorlesung
 
@@ -15,59 +15,59 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Einführung
 
-In den letzten beiden Lektionen dieses Moduls hast du gelernt, wie man ein Formular und einen Anzeigebereich für Daten erstellt, die von einer API abgerufen werden. Das ist eine sehr gängige Methode, um eine Webpräsenz zu erstellen. Du hast sogar gelernt, wie man Daten asynchron abruft. Deine Browser-Erweiterung ist fast fertig.
+In den letzten beiden Lektionen dieses Moduls haben Sie gelernt, wie man ein Formular und einen Anzeigebereich für Daten erstellt, die von einer API abgerufen werden. Dies ist eine sehr gängige Methode, um eine Webpräsenz zu erstellen. Sie haben sogar gelernt, wie man Daten asynchron abruft. Ihre Browser-Erweiterung ist fast fertig.
 
-Es bleibt noch, einige Hintergrundaufgaben zu verwalten, einschließlich der Aktualisierung der Farbe des Erweiterungssymbols. Dies ist ein guter Zeitpunkt, um darüber zu sprechen, wie der Browser solche Aufgaben handhabt. Lass uns diese Browser-Aufgaben im Kontext der Leistung deiner Webressourcen betrachten, während du sie erstellst.
+Es bleibt, einige Hintergrundaufgaben zu verwalten, einschließlich der Aktualisierung der Farbe des Erweiterungssymbols. Dies ist ein guter Zeitpunkt, um darüber zu sprechen, wie der Browser solche Aufgaben verwaltet. Lassen Sie uns über diese Browser-Aufgaben im Kontext der Leistung Ihrer Webressourcen nachdenken, während Sie sie erstellen.
 
-## Grundlagen der Web-Performance
+## Grundlagen der Web-Leistung
 
-> "Website-Performance dreht sich um zwei Dinge: wie schnell die Seite lädt und wie schnell der Code darauf ausgeführt wird." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
+> "Website-Leistung dreht sich um zwei Dinge: wie schnell die Seite lädt und wie schnell der Code darauf ausgeführt wird." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
-Das Thema, wie man Websites auf allen Arten von Geräten, für alle Arten von Nutzern und in allen möglichen Situationen blitzschnell macht, ist erwartungsgemäß umfangreich. Hier sind einige Punkte, die du beachten solltest, wenn du entweder ein Standard-Webprojekt oder eine Browser-Erweiterung erstellst.
+Das Thema, wie man Websites auf allen Arten von Geräten, für alle Arten von Benutzern und in allen möglichen Situationen blitzschnell macht, ist erwartungsgemäß umfangreich. Hier sind einige Punkte, die Sie beachten sollten, wenn Sie entweder ein Standard-Webprojekt oder eine Browser-Erweiterung erstellen.
 
-Das Erste, was du tun musst, um sicherzustellen, dass deine Website effizient läuft, ist, Daten über ihre Leistung zu sammeln. Der erste Ort, um dies zu tun, sind die Entwicklertools deines Webbrowsers. In Edge kannst du die Schaltfläche "Einstellungen und mehr" (das Drei-Punkte-Symbol oben rechts im Browser) auswählen, dann zu Weitere Tools > Entwicklertools navigieren und den Tab "Leistung" öffnen. Du kannst auch die Tastenkombination `Strg` + `Umschalt` + `I` unter Windows oder `Option` + `Befehl` + `I` auf einem Mac verwenden, um die Entwicklertools zu öffnen.
+Das Erste, was Sie tun müssen, um sicherzustellen, dass Ihre Website effizient läuft, ist, Daten über ihre Leistung zu sammeln. Der erste Ort, an dem Sie dies tun können, sind die Entwicklertools Ihres Webbrowsers. In Edge können Sie die Schaltfläche "Einstellungen und mehr" (das Drei-Punkte-Symbol oben rechts im Browser) auswählen, dann zu Weitere Tools > Entwicklertools navigieren und die Registerkarte Leistung öffnen. Sie können auch die Tastenkombinationen `Strg` + `Umschalt` + `I` unter Windows oder `Option` + `Befehl` + `I` auf Mac verwenden, um die Entwicklertools zu öffnen.
 
-Der Tab "Leistung" enthält ein Profiling-Tool. Öffne eine Website (probiere zum Beispiel [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) und klicke auf die Schaltfläche "Aufzeichnen", dann aktualisiere die Seite. Beende die Aufzeichnung jederzeit, und du kannst die Routinen sehen, die generiert werden, um die Seite zu "skripten", "rendern" und "zeichnen":
+Die Registerkarte Leistung enthält ein Profiling-Tool. Öffnen Sie eine Website (versuchen Sie beispielsweise [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) und klicken Sie auf die Schaltfläche "Aufzeichnen", dann aktualisieren Sie die Website. Beenden Sie die Aufzeichnung jederzeit, und Sie können die Routinen sehen, die generiert werden, um die Website zu 'skripten', 'rendern' und 'malen':
 
-![Edge-Profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.de.png)
+![Edge Profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.de.png)
 
-✅ Besuche die [Microsoft-Dokumentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) zum Leistungspanel in Edge.
+✅ Besuchen Sie die [Microsoft-Dokumentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) zur Leistungsübersicht in Edge.
 
-> Tipp: Um eine genaue Messung der Startzeit deiner Website zu erhalten, leere den Cache deines Browsers.
+> Tipp: Um eine genaue Messung der Startzeit Ihrer Website zu erhalten, leeren Sie den Cache Ihres Browsers.
 
-Wähle Elemente der Profil-Zeitleiste aus, um Ereignisse zu vergrößern, die während des Ladens deiner Seite auftreten.
+Wählen Sie Elemente der Profil-Zeitleiste aus, um Ereignisse zu vergrößern, die während des Ladens Ihrer Seite auftreten.
 
-Erhalte eine Momentaufnahme der Leistung deiner Seite, indem du einen Teil der Profil-Zeitleiste auswählst und dir das Zusammenfassungsfenster ansiehst:
+Erhalten Sie eine Momentaufnahme der Leistung Ihrer Seite, indem Sie einen Teil der Profil-Zeitleiste auswählen und das Zusammenfassungsfenster betrachten:
 
-![Edge-Profiler-Momentaufnahme](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.de.png)
+![Edge Profiler Momentaufnahme](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.de.png)
 
-Überprüfe das Ereignisprotokoll, um zu sehen, ob ein Ereignis länger als 15 ms gedauert hat:
+Überprüfen Sie das Ereignisprotokoll, um zu sehen, ob ein Ereignis länger als 15 ms gedauert hat:
 
-![Edge-Ereignisprotokoll](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.de.png)
+![Edge Ereignisprotokoll](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.de.png)
 
-✅ Lerne deinen Profiler kennen! Öffne die Entwicklertools auf dieser Seite und überprüfe, ob es Engpässe gibt. Was ist die am langsamsten ladende Ressource? Die schnellste?
+✅ Lernen Sie Ihren Profiler kennen! Öffnen Sie die Entwicklertools auf dieser Website und prüfen Sie, ob es Engpässe gibt. Was ist die am langsamsten ladende Ressource? Die schnellste?
 
 ## Profiling-Checks
 
-Im Allgemeinen gibt es einige "Problemzonen", auf die jeder Webentwickler achten sollte, wenn er eine Website erstellt, um böse Überraschungen beim Deployment in die Produktion zu vermeiden.
+Im Allgemeinen gibt es einige "Problemzonen", die jeder Webentwickler beim Erstellen einer Website im Auge behalten sollte, um unangenehme Überraschungen zu vermeiden, wenn es Zeit ist, sie in Produktion zu bringen.
 
-**Asset-Größen**: Das Web ist in den letzten Jahren "schwerer" und damit langsamer geworden. Ein Teil dieses Gewichts hängt mit der Verwendung von Bildern zusammen.
+**Asset-Größen**: Das Web ist in den letzten Jahren 'schwerer' und damit langsamer geworden. Ein Teil dieses Gewichts hat mit der Verwendung von Bildern zu tun.
 
-✅ Sieh dir das [Internetarchiv](https://httparchive.org/reports/page-weight) an, um einen historischen Überblick über das Seitengewicht und mehr zu erhalten.
+✅ Schauen Sie sich das [Internet-Archiv](https://httparchive.org/reports/page-weight) für eine historische Ansicht des Seitengewichts und mehr an.
 
-Eine gute Praxis ist es, sicherzustellen, dass deine Bilder optimiert sind und in der richtigen Größe und Auflösung für deine Nutzer bereitgestellt werden.
+Eine gute Praxis ist sicherzustellen, dass Ihre Bilder optimiert sind und in der richtigen Größe und Auflösung für Ihre Benutzer bereitgestellt werden.
 
-**DOM-Traversierungen**: Der Browser muss sein Document Object Model basierend auf dem von dir geschriebenen Code erstellen. Daher ist es im Interesse einer guten Seitenleistung, die Tags minimal zu halten und nur das zu verwenden und zu stylen, was die Seite benötigt. In diesem Zusammenhang könnte überschüssiges CSS, das mit einer Seite verbunden ist, optimiert werden; Stile, die nur auf einer Seite verwendet werden müssen, müssen beispielsweise nicht im Haupt-Stylesheet enthalten sein.
+**DOM-Durchläufe**: Der Browser muss sein Document Object Model basierend auf dem von Ihnen geschriebenen Code erstellen, daher ist es im Interesse einer guten Seitenleistung, Ihre Tags minimal zu halten und nur das zu verwenden und zu stylen, was die Seite benötigt. In diesem Zusammenhang könnte überschüssiges CSS, das mit einer Seite verbunden ist, optimiert werden; Stile, die nur auf einer Seite verwendet werden müssen, müssen beispielsweise nicht im Hauptstilblatt enthalten sein.
 
-**JavaScript**: Jeder JavaScript-Entwickler sollte auf "render-blockierende" Skripte achten, die geladen werden müssen, bevor der Rest des DOM durchlaufen und im Browser dargestellt werden kann. Erwäge die Verwendung von `defer` mit deinen Inline-Skripten (wie es im Terrarium-Modul gemacht wird).
+**JavaScript**: Jeder JavaScript-Entwickler sollte auf 'render-blockierende' Skripte achten, die geladen werden müssen, bevor der Rest des DOM durchlaufen und im Browser dargestellt werden kann. Erwägen Sie die Verwendung von `defer` mit Ihren Inline-Skripten (wie im Terrarium-Modul).
 
-✅ Probiere einige Websites auf einer [Website-Geschwindigkeitstest-Seite](https://www.webpagetest.org/) aus, um mehr über die gängigen Prüfungen zu erfahren, die durchgeführt werden, um die Leistung einer Website zu bestimmen.
+✅ Probieren Sie einige Websites auf einer [Website-Geschwindigkeitstest-Seite](https://www.webpagetest.org/) aus, um mehr über die üblichen Checks zu erfahren, die durchgeführt werden, um die Leistung einer Website zu bestimmen.
 
-Jetzt, da du eine Vorstellung davon hast, wie der Browser die von dir gesendeten Ressourcen rendert, lass uns die letzten Dinge betrachten, die du tun musst, um deine Erweiterung abzuschließen:
+Jetzt, da Sie eine Vorstellung davon haben, wie der Browser die von Ihnen gesendeten Ressourcen rendert, schauen wir uns die letzten Dinge an, die Sie tun müssen, um Ihre Erweiterung abzuschließen:
 
-### Eine Funktion zur Farbberechnung erstellen
+### Erstellen Sie eine Funktion zur Berechnung der Farbe
 
-Arbeite in `/src/index.js` und füge nach der Reihe von `const`-Variablen, die du gesetzt hast, um Zugriff auf das DOM zu erhalten, eine Funktion namens `calculateColor()` hinzu:
+Arbeiten Sie in `/src/index.js` und fügen Sie eine Funktion namens `calculateColor()` nach der Reihe von `const`-Variablen hinzu, die Sie festgelegt haben, um Zugriff auf das DOM zu erhalten:
 
 ```JavaScript
 function calculateColor(value) {
@@ -88,19 +88,19 @@ function calculateColor(value) {
 }
 ```
 
-Was passiert hier? Du übergibst einen Wert (die Kohlenstoffintensität) aus dem API-Aufruf, den du in der letzten Lektion abgeschlossen hast, und berechnest dann, wie nah sein Wert am Index im Farben-Array liegt. Dann sendest du diesen nächstgelegenen Farbwert an den Chrome-Runtime.
+Was passiert hier? Sie übergeben einen Wert (die Kohlenstoffintensität) aus dem API-Aufruf, den Sie in der letzten Lektion abgeschlossen haben, und berechnen dann, wie nah sein Wert am Index im Farben-Array liegt. Dann senden Sie diesen nächstgelegenen Farbwert an die Chrome-Laufzeit.
 
-Die chrome.runtime verfügt über [eine API](https://developer.chrome.com/extensions/runtime), die alle Arten von Hintergrundaufgaben handhabt, und deine Erweiterung nutzt diese:
+Die chrome.runtime hat [eine API](https://developer.chrome.com/extensions/runtime), die alle Arten von Hintergrundaufgaben verwaltet, und Ihre Erweiterung nutzt diese:
 
-> "Verwende die chrome.runtime-API, um die Hintergrundseite abzurufen, Details zum Manifest zurückzugeben und auf Ereignisse im Lebenszyklus der App oder Erweiterung zu hören und darauf zu reagieren. Du kannst diese API auch verwenden, um relative Pfade von URLs in vollständig qualifizierte URLs umzuwandeln."
+> "Verwenden Sie die chrome.runtime-API, um die Hintergrundseite abzurufen, Details zum Manifest zurückzugeben und auf Ereignisse im Lebenszyklus der App oder Erweiterung zu hören und darauf zu reagieren. Sie können diese API auch verwenden, um den relativen Pfad von URLs in vollständig qualifizierte URLs umzuwandeln."
 
-✅ Wenn du diese Browser-Erweiterung für Edge entwickelst, könnte es dich überraschen, dass du eine Chrome-API verwendest. Die neueren Edge-Browser-Versionen laufen auf der Chromium-Browser-Engine, sodass du diese Tools nutzen kannst.
+✅ Wenn Sie diese Browser-Erweiterung für Edge entwickeln, könnte es Sie überraschen, dass Sie eine Chrome-API verwenden. Die neueren Edge-Browser-Versionen laufen auf der Chromium-Browser-Engine, sodass Sie diese Tools nutzen können.
 
-> Hinweis: Wenn du eine Browser-Erweiterung profilieren möchtest, starte die Entwicklertools direkt aus der Erweiterung heraus, da sie ihre eigene separate Browserinstanz ist.
+> Hinweis: Wenn Sie eine Browser-Erweiterung profilieren möchten, starten Sie die Entwicklertools innerhalb der Erweiterung selbst, da sie eine eigene separate Browser-Instanz ist.
 
-### Eine Standard-Symbolfarbe festlegen
+### Setzen Sie eine Standard-Symbolfarbe
 
-Setze nun in der `init()`-Funktion das Symbol zunächst auf ein generisches Grün, indem du erneut die `updateIcon`-Aktion von Chrome aufrufst:
+Setzen Sie nun in der `init()`-Funktion das Symbol zunächst auf ein generisches Grün, indem Sie erneut die `updateIcon`-Aktion von Chrome aufrufen:
 
 ```JavaScript
 chrome.runtime.sendMessage({
@@ -110,27 +110,26 @@ chrome.runtime.sendMessage({
 		},
 });
 ```
+### Rufen Sie die Funktion auf, führen Sie den Aufruf aus
 
-### Die Funktion aufrufen und den Aufruf ausführen
-
-Rufe als Nächstes die Funktion, die du gerade erstellt hast, auf, indem du sie dem Promise hinzufügst, das von der C02Signal-API zurückgegeben wird:
+Rufen Sie als Nächstes die Funktion auf, die Sie gerade erstellt haben, indem Sie sie dem Promise hinzufügen, das von der C02Signal-API zurückgegeben wird:
 
 ```JavaScript
 //let CO2...
 calculateColor(CO2);
 ```
 
-Und schließlich füge in `/dist/background.js` den Listener für diese Hintergrundaktionsaufrufe hinzu:
+Und schließlich fügen Sie in `/dist/background.js` den Listener für diese Hintergrundaktionsaufrufe hinzu:
 
 ```JavaScript
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	if (msg.action === 'updateIcon') {
-		chrome.browserAction.setIcon({ imageData: drawIcon(msg.value) });
+		chrome.action.setIcon({ imageData: drawIcon(msg.value) });
 	}
 });
 //borrowed from energy lollipop extension, nice feature!
 function drawIcon(value) {
-	let canvas = document.createElement('canvas');
+	let canvas = new OffscreenCanvas(200, 200);
 	let context = canvas.getContext('2d');
 
 	context.beginPath();
@@ -141,34 +140,33 @@ function drawIcon(value) {
 	return context.getImageData(50, 50, 100, 100);
 }
 ```
+In diesem Code fügen Sie einen Listener für alle Nachrichten hinzu, die an den Backend-Aufgabenmanager gesendet werden. Wenn er 'updateIcon' genannt wird, wird der nächste Code ausgeführt, um ein Symbol der richtigen Farbe mit der Canvas-API zu zeichnen.
 
-In diesem Code fügst du einen Listener für alle Nachrichten hinzu, die an den Backend-Task-Manager gesendet werden. Wenn er 'updateIcon' genannt wird, wird der nächste Code ausgeführt, um ein Symbol der richtigen Farbe mithilfe der Canvas-API zu zeichnen.
+✅ Sie werden mehr über die Canvas-API in den [Space Game-Lektionen](../../6-space-game/2-drawing-to-canvas/README.md) lernen.
 
-✅ Du wirst mehr über die Canvas-API in den [Space Game-Lektionen](../../6-space-game/2-drawing-to-canvas/README.md) lernen.
+Jetzt bauen Sie Ihre Erweiterung neu (`npm run build`), aktualisieren und starten Sie Ihre Erweiterung und beobachten Sie, wie sich die Farbe ändert. Ist es ein guter Zeitpunkt, um Besorgungen zu machen oder das Geschirr zu spülen? Jetzt wissen Sie es!
 
-Baue nun deine Erweiterung neu (`npm run build`), aktualisiere und starte deine Erweiterung und beobachte, wie sich die Farbe ändert. Ist es ein guter Zeitpunkt, um Besorgungen zu machen oder das Geschirr zu spülen? Jetzt weißt du es!
-
-Herzlichen Glückwunsch, du hast eine nützliche Browser-Erweiterung erstellt und mehr darüber gelernt, wie der Browser funktioniert und wie man seine Leistung profiliert.
+Herzlichen Glückwunsch, Sie haben eine nützliche Browser-Erweiterung erstellt und mehr darüber gelernt, wie der Browser funktioniert und wie man seine Leistung profiliert.
 
 ---
 
 ## 🚀 Herausforderung
 
-Untersuche einige Open-Source-Websites, die es schon lange gibt, und versuche anhand ihrer GitHub-Historie herauszufinden, ob und wie sie im Laufe der Jahre für die Leistung optimiert wurden. Was ist der häufigste Schwachpunkt?
+Untersuchen Sie einige Open-Source-Websites, die es schon lange gibt, und versuchen Sie anhand ihrer GitHub-Historie herauszufinden, wie sie im Laufe der Jahre für die Leistung optimiert wurden, falls überhaupt. Was ist der häufigste Schmerzpunkt?
 
 ## Quiz nach der Vorlesung
 
 [Quiz nach der Vorlesung](https://ff-quizzes.netlify.app/web/quiz/28)
 
-## Rückblick & Selbststudium
+## Überprüfung & Selbststudium
 
-Ziehe in Betracht, dich für einen [Performance-Newsletter](https://perf.email/) anzumelden.
+Erwägen Sie, sich für einen [Leistungs-Newsletter](https://perf.email/) anzumelden.
 
-Untersuche einige der Möglichkeiten, wie Browser die Web-Performance bewerten, indem du die Leistungstabs in ihren Webtools durchgehst. Findest du größere Unterschiede?
+Untersuchen Sie einige der Möglichkeiten, wie Browser die Web-Leistung messen, indem Sie die Leistungsregisterkarten in ihren Webtools durchsehen. Finden Sie wesentliche Unterschiede?
 
 ## Aufgabe
 
-[Analysiere eine Website auf Leistung](assignment.md)
+[Analysieren Sie eine Website auf Leistung](assignment.md)
 
 ---
 
