@@ -35,7 +35,7 @@ const MemoryGame = () => {
 
   const initializeGame = useCallback(() => {
     const totalCards = gridSize * gridSize;
-    const pairCount = Math.floor(totalCards / 2);
+    const pairCount = totalCards / 2;
 
     const numbers = [...Array(pairCount).keys()].map((n) => n + 1);
     const cardNumbers = [...numbers, ...numbers];
