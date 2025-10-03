@@ -146,7 +146,7 @@ Let's say you have a folder locally with some code project and you want to start
    git push -u origin main
    ```
 
-   This sends your commits in your "main" branch to GitHub. Setting the `upstream` branch including `-u` in the command establishes a link between your local branch and the remote branch, so you can simply use git push or git pull without specifying the branch name in the future. Git will automatically use the upstream branch and  ou you won't need to specify the branch name explicitly in future commands.
+   This sends your commits in your "main" branch to GitHub. Setting the `upstream` branch including `-u` in the command establishes a link between your local branch and the remote branch, so you can simply use git push or git pull without specifying the branch name in the future. Git will automatically use the upstream branch and you won't need to specify the branch name explicitly in future commands.
 
 2. **To add more changes**. If you want to continue making changes and pushing them to GitHub you’ll just need to use the following three commands:
 
