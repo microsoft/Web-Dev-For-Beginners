@@ -129,7 +129,7 @@ const MemoryGame = () => {
                 ? isSelectedPairs(card.id)
                   ? "bg-green-500 text-white"
                   : "bg-blue-500 text-white"
-                : "bg-gray-300 text-gray-400 "
+                : "bg-gray-300 text-gray-400"
             }`}
           >
             {isFlipped(card.id) ? card.number : "?"}
