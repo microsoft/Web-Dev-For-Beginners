@@ -97,7 +97,7 @@ const MemoryGame = () => {
   }, [selectedPairs, array]);
 
   return (
-    <div className="h-[100vh] flex flex-col justify-center items-center p-4 bg-gray-100 ">
+    <div className="h-screen flex flex-col justify-center items-center p-4 bg-gray-100 ">
       {/* Heading */}
       <h1 className="text-3xl font-bold mb-6 ">Memory Game</h1>
       {/* Grid Size */}
