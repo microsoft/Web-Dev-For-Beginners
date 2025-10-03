@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "04683f4cfa46004179b0404b89a3065c",
-  "translation_date": "2025-08-27T22:58:35+00:00",
+  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
+  "translation_date": "2025-10-03T13:29:19+00:00",
   "source_file": "1-getting-started-lessons/README.md",
   "language_code": "sk"
 }
 -->
-# Začíname s webovým vývojom
+# Začíname s vývojom webu
 
-V tejto časti učebného plánu sa zoznámite s konceptmi, ktoré nie sú založené na projektoch, ale sú dôležité pre to, aby ste sa stali profesionálnym vývojárom.
+V tejto časti učebného plánu sa oboznámite s konceptmi, ktoré nie sú založené na projektoch, ale sú dôležité pre to, aby ste sa stali profesionálnym vývojárom.
 
 ### Témy
 
@@ -17,7 +17,7 @@ V tejto časti učebného plánu sa zoznámite s konceptmi, ktoré nie sú zalo�
 2. [Úvod do GitHubu](2-github-basics/README.md)
 3. [Základy prístupnosti](3-accessibility/README.md)
 
-### Kredity
+### Poďakovania
 
 Úvod do programovacích jazykov a nástrojov bol napísaný s ♥️ [Jasmine Greenaway](https://twitter.com/paladique)
 
@@ -28,4 +28,4 @@ Základy prístupnosti boli napísané s ♥️ [Christopher Harrison](https://t
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, uvedomte si, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

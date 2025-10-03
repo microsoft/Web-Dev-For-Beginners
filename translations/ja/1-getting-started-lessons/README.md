@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "04683f4cfa46004179b0404b89a3065c",
-  "translation_date": "2025-08-23T23:16:24+00:00",
+  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
+  "translation_date": "2025-10-03T13:26:18+00:00",
   "source_file": "1-getting-started-lessons/README.md",
   "language_code": "ja"
 }
 -->
-# ウェブ開発の始め方
+# Web開発の始め方
 
-このカリキュラムのセクションでは、プロフェッショナルな開発者になるために重要な、プロジェクトベースではない概念を紹介します。
+このカリキュラムのセクションでは、プロフェッショナルな開発者になるために重要な、プロジェクトベースではない概念について紹介します。
 
 ### トピック
 
@@ -25,5 +25,7 @@ GitHubの基本は [Floor Drees](https://twitter.com/floordrees) によって♥
 
 アクセシビリティの基礎は [Christopher Harrison](https://twitter.com/geektrainer) によって♥️を込めて書かれました。
 
+---
+
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知ください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は一切の責任を負いません。
+この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は責任を負いません。
