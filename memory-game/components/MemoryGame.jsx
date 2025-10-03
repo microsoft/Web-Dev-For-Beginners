@@ -133,7 +133,7 @@ const MemoryGame = () => {
         {won ? "You Won!" : ""}
       </div>
 
-      {/* Rest Button */}
+      {/* Reset Button */}
       <button
         className="px-5 py-2 bg-green-500 rounded text-white mt-5"
         onClick={initalizeGame}
