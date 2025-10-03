@@ -99,7 +99,7 @@ const MemoryGame = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center p-4 bg-gray-100 ">
       {/* Heading */}
-      <h1 className="text-3xl font-bold mb-6 ">Memory Game</h1>
+      <h1 className="text-3xl font-bold mb-6">Memory Game</h1>
       {/* Grid Size */}
       <div className="mb-4">
         <label htmlFor="gridSize">Grid Size: (max 10)</label>
