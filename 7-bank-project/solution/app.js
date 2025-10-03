@@ -232,7 +232,7 @@ function updateDashboard() {
 
   updateElement('description', account.description);
   updateElement('balance', account.balance.toFixed(2));
-  updateElement('balance-currency', account.currency); // Fixed ID for currency display
+  updateElement('currency', account.currency); // Fixed ID for currency display
 
   // Update transactions
   const transactionsRows = document.createDocumentFragment();
