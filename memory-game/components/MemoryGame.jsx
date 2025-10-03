@@ -24,13 +24,13 @@ const MemoryGame = () => {
   const [won, setWon] = useState(false);
 
   const handleGridSize = (e) => {
-  const size = parseInt(e.target.value);
-  if (2 <= size && size <= 10 && (size * size) % 2 === 0) {
-    setGridSize(size);
-    setError(""); 
-  } else {
-    setError("Please enter a grid size where gridSize x gridSize is even (e.g. 2, 4, 6, 8, 10)");
-  }
+    const size = parseInt(e.target.value);
+    if (2 <= size && size <= 10 && (size * size) % 2 === 0) {
+      setGridSize(size);
+      setError(""); 
+    } else {
+      setError("Please enter a grid size where gridSize x gridSize is even (e.g. 2, 4, 6, 8, 10)");
+    }
   };
 
   const initializeGame = useCallback(() => {
@@ -115,6 +115,9 @@ const MemoryGame = () => {
           value={gridSize}
           onChange={handleGridSize}
         />
+        {error && (
+          <div className="text-sm text-red-500 mt-2">{error}</div>
+        )}
       </div>
       {/* Cards */}
       <div
