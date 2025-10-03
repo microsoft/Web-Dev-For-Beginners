@@ -25,14 +25,14 @@ const MemoryGame = () => {
     const pairCount = Math.floor(totalCards / 2);
 
     const numbers = [...Array(pairCount).keys()].map((n) => n + 1);
-    const suffledCards = [...numbers, ...numbers]
+    const shuffledCards = [...numbers, ...numbers]
       .sort(() => Math.random() - 0.5)
       .map((number, index) => ({
         id: index,
         number,
       }));
 
-    setArray(suffledCards);
+    setArray(shuffledCards);
     setFlipped([]);
     setSelectedPairs([]);
     setDisabled(false);
