@@ -22,12 +22,12 @@ const MemoryGame = () => {
 
   const [won, setWon] = useState(false);
 
-const handleGridSize = (e) => {
-  const size = parseInt(e.target.value);
-  if (2 <= size && size <= 10 && (size * size) % 2 === 0) {
-    setGridSize(size);
-  }
-};
+  const handleGridSize = (e) => {
+    const size = parseInt(e.target.value);
+    if (2 <= size && size <= 10 && (size * size) % 2 === 0) {
+      setGridSize(size);
+    }
+  };
 
   const initializeGame = useCallback(() => {
     const totalCards = gridSize * gridSize;
