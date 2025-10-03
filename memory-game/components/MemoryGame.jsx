@@ -19,14 +19,18 @@ const MemoryGame = () => {
   const [flipped, setFlipped] = useState([]);
   const [selectedPairs, setSelectedPairs] = useState([]);
   const [disabled, setDisabled] = useState(false);
+  const [error, setError] = useState("");
 
   const [won, setWon] = useState(false);
 
   const handleGridSize = (e) => {
-    const size = parseInt(e.target.value);
-    if (2 <= size && size <= 10 && (size * size) % 2 === 0) {
-      setGridSize(size);
-    }
+  const size = parseInt(e.target.value);
+  if (2 <= size && size <= 10 && (size * size) % 2 === 0) {
+    setGridSize(size);
+    setError(""); 
+  } else {
+    setError("Please enter a grid size where gridSize x gridSize is even (e.g. 2, 4, 6, 8, 10)");
+  }
   };
 
   const initializeGame = useCallback(() => {
