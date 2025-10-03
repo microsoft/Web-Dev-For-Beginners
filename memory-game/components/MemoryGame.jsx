@@ -7,20 +7,19 @@ const MemoryGame = () => {
 
   const [array, setArray] = useState([]);
   const [flipped, setFlipped] = useState([]);
-  const [slectedPairs, setSelectedPairs] = useState([]);
+  const [selectedPairs, setSelectedPairs] = useState([]);
   const [disabled, setDisabled] = useState(false);
 
   const [won, setWon] = useState(false);
 
   const handleGridSize = (e) => {
     const size = parseInt(e.target.value);
-    //console.log(size)
     if (2 <= size && size <= 10) {
       setGridSize(size);
     }
   };
 
-  const initalizeGame = () => {
+  const initializeGame = () => {
     const totalCards = gridSize * gridSize;
     const pairCount = Math.floor(totalCards / 2);
 
@@ -55,7 +54,7 @@ const MemoryGame = () => {
   };
 
   useEffect(() => {
-    initalizeGame();
+    initializeGame();
   }, [gridSize]);
 
   const handleClick = (id) => {
@@ -67,10 +66,9 @@ const MemoryGame = () => {
     }
 
     if (flipped.length === 1) {
-      setDisabled(true); //so we cant choose another one
+      setDisabled(true);
       if (id !== flipped[0]) {
         setFlipped([...flipped, id]);
-        //check match logic
         handleMatch(id);
       } else {
         setFlipped([]);
@@ -79,14 +77,14 @@ const MemoryGame = () => {
     }
   };
 
-  const isFlipped = (id) => flipped.includes(id) || slectedPairs.includes(id);
-  const isselectedpairs = (id) => slectedPairs.includes(id);
+  const isFlipped = (id) => flipped.includes(id) || selectedPairs.includes(id);
+  const isSelectedPairs = (id) => selectedPairs.includes(id);
 
   useEffect(() => {
-    if (slectedPairs.length === array.length && array.length > 0) {
+    if (selectedPairs.length === array.length && array.length > 0) {
       setWon(true);
     }
-  }, [slectedPairs, array]);
+  }, [selectedPairs, array]);
 
   return (
     <div className="h-[100vh] flex flex-col justify-center items-center p-4 bg-gray-100 ">
@@ -112,19 +110,19 @@ const MemoryGame = () => {
           width: `min(100%,${gridSize * 5.5}rem)`,
         }}
       >
-        {array.map((array) => (
+        {array.map((card) => (
           <div
-            key={array.id}
-            onClick={() => handleClick(array.id)}
+            key={card.id}
+            onClick={() => handleClick(card.id)}
             className={`aspect-square flex items-center justify-center text-xl transition-all duration-300 font-bold rounded-lg  cursor-pointer ${
-              isFlipped(array.id)
-                ? isSelectedPairs(array.id)
+              isFlipped(card.id)
+                ? isSelectedPairs(card.id)
                   ? "bg-green-500 text-white"
                   : "bg-blue-500 text-white"
                 : "bg-gray-300 text-gray-400 "
             }`}
           >
-            {isFlipped(array.id) ? array.number : "?"}
+            {isFlipped(card.id) ? card.number : "?"}
           </div>
         ))}
       </div>
@@ -136,7 +134,7 @@ const MemoryGame = () => {
       {/* Reset Button */}
       <button
         className="px-5 py-2 bg-green-500 rounded text-white mt-5"
-        onClick={initalizeGame}
+        onClick={initializeGame}
       >
         Reset
       </button>
