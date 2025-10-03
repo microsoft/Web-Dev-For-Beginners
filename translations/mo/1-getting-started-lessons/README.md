@@ -1,29 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "04683f4cfa46004179b0404b89a3065c",
-  "translation_date": "2025-08-25T22:41:38+00:00",
+  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
+  "translation_date": "2025-10-03T13:26:01+00:00",
   "source_file": "1-getting-started-lessons/README.md",
   "language_code": "mo"
 }
 -->
-# 開始學習網頁開發
+# 網頁開發入門
 
-在這部分的課程中，你將學習到一些非專案導向但對成為專業開發者至關重要的概念。
+在本課程的這部分，你將學習一些非專案型的概念，這些概念對成為專業開發者非常重要。
 
 ### 主題
 
-1. [程式語言與開發工具的介紹](1-intro-to-programming-languages/README.md)
+1. [程式語言介紹及開發工具](1-intro-to-programming-languages/README.md)
 2. [GitHub 基礎介紹](2-github-basics/README.md)
 3. [無障礙設計基礎](3-accessibility/README.md)
 
-### 貢獻者
+### 致謝
 
-程式語言與開發工具的介紹由 [Jasmine Greenaway](https://twitter.com/paladique) 用 ♥️ 撰寫
+程式語言介紹及開發工具由 [Jasmine Greenaway](https://twitter.com/paladique) 用 ♥️ 撰寫
 
 GitHub 基礎介紹由 [Floor Drees](https://twitter.com/floordrees) 用 ♥️ 撰寫
 
 無障礙設計基礎由 [Christopher Harrison](https://twitter.com/geektrainer) 用 ♥️ 撰寫
 
+---
+
 **免責聲明**：  
-本文檔使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始語言的文件應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。
+本文檔已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原始語言的文件作為權威來源。對於關鍵信息，建議尋求專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或錯誤解讀概不負責。

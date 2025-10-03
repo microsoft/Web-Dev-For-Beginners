@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "04683f4cfa46004179b0404b89a3065c",
-  "translation_date": "2025-08-26T22:11:32+00:00",
+  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
+  "translation_date": "2025-10-03T13:28:06+00:00",
   "source_file": "1-getting-started-lessons/README.md",
   "language_code": "no"
 }
@@ -17,7 +17,7 @@ I denne delen av læreplanen vil du bli introdusert for ikke-prosjektbaserte kon
 2. [Introduksjon til GitHub](2-github-basics/README.md)
 3. [Grunnleggende om tilgjengelighet](3-accessibility/README.md)
 
-### Kreditering
+### Krediteringer
 
 Introduksjon til programmeringsspråk og verktøy ble skrevet med ♥️ av [Jasmine Greenaway](https://twitter.com/paladique)
 
@@ -28,4 +28,4 @@ Grunnleggende om tilgjengelighet ble skrevet med ♥️ av [Christopher Harrison
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
