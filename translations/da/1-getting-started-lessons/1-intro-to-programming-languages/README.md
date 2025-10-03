@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
-  "translation_date": "2025-08-29T08:22:39+00:00",
+  "original_hash": "2581528206a2a01c3a0b9c88e039b7bc",
+  "translation_date": "2025-10-03T09:59:09+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "da"
 }
@@ -32,7 +32,7 @@ I denne lektion vil vi dække:
 
 Programmering (også kendt som kodning) er processen med at skrive instruktioner til en enhed som en computer eller mobil enhed. Vi skriver disse instruktioner med et programmeringssprog, som derefter bliver fortolket af enheden. Disse sæt af instruktioner kan kaldes forskellige ting, men *program*, *computerprogram*, *applikation (app)* og *eksekverbar fil* er nogle populære navne.
 
-Et *program* kan være alt, der er skrevet med kode; hjemmesider, spil og telefonapps er programmer. Selvom det er muligt at skabe et program uden at skrive kode, bliver den underliggende logik fortolket af enheden, og den logik er sandsynligvis skrevet med kode. Et program, der *kører* eller *eksekverer* kode, udfører instruktioner. Enheden, du læser denne lektion på, kører et program for at vise den på din skærm.
+Et *program* kan være alt, der er skrevet med kode; hjemmesider, spil og telefonapps er programmer. Selvom det er muligt at lave et program uden at skrive kode, bliver den underliggende logik fortolket af enheden, og den logik er sandsynligvis skrevet med kode. Et program, der *kører* eller *eksekverer* kode, udfører instruktioner. Den enhed, du læser denne lektion på, kører et program for at vise den på din skærm.
 
 ✅ Lav lidt research: Hvem anses for at være verdens første computerprogrammør?
 
@@ -83,7 +83,7 @@ back add r0,r1
  end
 ```
 
-Tro det eller ej, *de gør begge det samme*: udskriver en Fibonacci-sekvens op til 10.
+Tro det eller ej, *de gør begge det samme*: de udskriver en Fibonacci-sekvens op til 10.
 
 ✅ En Fibonacci-sekvens er [defineret](https://en.wikipedia.org/wiki/Fibonacci_number) som en række tal, hvor hvert tal er summen af de to foregående, startende fra 0 og 1. De første 10 tal i Fibonacci-sekvensen er 0, 1, 1, 2, 3, 5, 8, 13, 21 og 34.
 
@@ -91,11 +91,11 @@ Tro det eller ej, *de gør begge det samme*: udskriver en Fibonacci-sekvens op t
 
 En enkelt instruktion i et program kaldes en *statement* og vil normalt have et tegn eller en linjeafstand, der markerer, hvor instruktionen slutter, eller *terminerer*. Hvordan et program terminerer varierer med hvert sprog.
 
-Statements i et program kan afhænge af data, der leveres af en bruger eller andetsteds, for at udføre instruktioner. Data kan ændre, hvordan et program opfører sig, så programmeringssprog kommer med en måde at midlertidigt gemme data, så det kan bruges senere. Disse kaldes *variabler*. Variabler er statements, der instruerer en enhed til at gemme data i sin hukommelse. Variabler i programmer ligner variabler i algebra, hvor de har et unikt navn, og deres værdi kan ændre sig over tid.
+Statements i et program kan afhænge af data, der leveres af en bruger eller andetsteds, for at udføre instruktioner. Data kan ændre, hvordan et program opfører sig, så programmeringssprog kommer med en måde at midlertidigt gemme data, så det kan bruges senere. Disse kaldes *variabler*. Variabler er statements, der instruerer en enhed i at gemme data i dens hukommelse. Variabler i programmer ligner variabler i algebra, hvor de har et unikt navn, og deres værdi kan ændre sig over tid.
 
 Der er en chance for, at nogle statements ikke bliver eksekveret af en enhed. Dette er normalt med vilje, når det er skrevet af udvikleren, eller ved et uheld, når en uventet fejl opstår. Denne type kontrol over en applikation gør den mere robust og vedligeholdelsesvenlig. Typisk sker disse ændringer i kontrol, når visse betingelser er opfyldt. En almindelig statement, der bruges i moderne programmering til at kontrollere, hvordan et program kører, er `if..else` statement.
 
-✅ Du vil lære mere om denne type statement i efterfølgende lektioner.
+✅ Du vil lære mere om denne type statement i senere lektioner.
 
 ## Værktøjer
 
@@ -103,7 +103,7 @@ Der er en chance for, at nogle statements ikke bliver eksekveret af en enhed. De
 
 > 🎥 Klik på billedet ovenfor for en video om værktøjer
 
-I dette afsnit lærer du om noget software, som du måske finder meget nyttigt, når du begynder din professionelle udviklingsrejse.
+I dette afsnit vil du lære om noget software, som du måske finder meget nyttigt, når du begynder din professionelle udviklingsrejse.
 
 Et **udviklingsmiljø** er et unikt sæt af værktøjer og funktioner, som en udvikler ofte bruger, når de skriver software. Nogle af disse værktøjer er blevet tilpasset til en udviklers specifikke behov og kan ændre sig over tid, hvis den udvikler ændrer prioriteter i arbejde, personlige projekter eller når de bruger et andet programmeringssprog. Udviklingsmiljøer er lige så unikke som de udviklere, der bruger dem.
 
@@ -114,9 +114,9 @@ Et af de mest afgørende værktøjer til softwareudvikling er editoren. Editorer
 Udviklere stoler på editorer af flere grunde:
 
 - *Debugging* hjælper med at finde fejl og problemer ved at gennemgå koden linje for linje. Nogle editorer har debugging-funktioner; de kan tilpasses og tilføjes til specifikke programmeringssprog.
-- *Syntax highlighting* tilføjer farver og tekstformatering til kode, hvilket gør det lettere at læse. De fleste editorer tillader tilpasset syntax highlighting.
-- *Extensions og integrationer* er specialiserede værktøjer for udviklere, lavet af udviklere. Disse værktøjer var ikke indbygget i den grundlæggende editor. For eksempel dokumenterer mange udviklere deres kode for at forklare, hvordan den fungerer. De kan installere en stavekontrol-udvidelse for at finde stavefejl i dokumentationen. De fleste udvidelser er beregnet til brug inden for en specifik editor, og de fleste editorer kommer med en måde at søge efter tilgængelige udvidelser.
-- *Tilpasning* gør det muligt for udviklere at skabe et unikt udviklingsmiljø, der passer til deres behov. De fleste editorer er ekstremt tilpasselige og kan også give udviklere mulighed for at skabe egne udvidelser.
+- *Syntax highlighting* tilføjer farver og tekstformatering til kode, hvilket gør den lettere at læse. De fleste editorer tillader tilpasset syntax highlighting.
+- *Extensions og integrationer* er specialiserede værktøjer til udviklere, lavet af udviklere. Disse værktøjer var ikke indbygget i editorens grundfunktioner. For eksempel dokumenterer mange udviklere deres kode for at forklare, hvordan den fungerer. De kan installere en stavekontrol-udvidelse for at finde stavefejl i dokumentationen. De fleste udvidelser er beregnet til brug inden for en specifik editor, og de fleste editorer har en måde at søge efter tilgængelige udvidelser.
+- *Tilpasning* gør det muligt for udviklere at skabe et unikt udviklingsmiljø, der passer til deres behov. De fleste editorer er ekstremt tilpasselige og kan også give udviklere mulighed for at lave egne udvidelser.
 
 #### Populære editorer og webudviklingsudvidelser
 
@@ -137,7 +137,7 @@ Udviklere stoler på editorer af flere grunde:
 
 Et andet afgørende værktøj er browseren. Webudviklere stoler på browseren for at se, hvordan deres kode kører på nettet. Den bruges også til at vise de visuelle elementer på en webside, der er skrevet i editoren, som HTML.
 
-Mange browsere kommer med *udviklerværktøjer* (DevTools), der indeholder et sæt nyttige funktioner og informationer til at hjælpe udviklere med at indsamle og fange vigtig information om deres applikation. For eksempel: Hvis en webside har fejl, kan det nogle gange være nyttigt at vide, hvornår de opstod. DevTools i en browser kan konfigureres til at fange denne information.
+Mange browsere kommer med *udviklerværktøjer* (DevTools), der indeholder et sæt nyttige funktioner og informationer, der hjælper udviklere med at indsamle og fange vigtig information om deres applikation. For eksempel: Hvis en webside har fejl, kan det nogle gange være nyttigt at vide, hvornår de opstod. DevTools i en browser kan konfigureres til at fange denne information.
 
 #### Populære browsere og DevTools
 
@@ -147,7 +147,7 @@ Mange browsere kommer med *udviklerværktøjer* (DevTools), der indeholder et s�
 
 ### Kommandolinjeværktøjer
 
-Nogle udviklere foretrækker en mindre grafisk visning til deres daglige opgaver og stoler på kommandolinjen for at opnå dette. At skrive kode kræver en betydelig mængde tastning, og nogle udviklere foretrækker ikke at forstyrre deres flow på tastaturet. De vil bruge tastaturgenveje til at skifte mellem desktopvinduer, arbejde på forskellige filer og bruge værktøjer. De fleste opgaver kan udføres med en mus, men en fordel ved at bruge kommandolinjen er, at meget kan gøres med kommandolinjeværktøjer uden behov for at skifte mellem mus og tastatur. En anden fordel ved kommandolinjen er, at den kan konfigureres, og du kan gemme en brugerdefineret konfiguration, ændre den senere og importere den til andre udviklingsmaskiner. Fordi udviklingsmiljøer er så unikke for hver udvikler, vil nogle undgå at bruge kommandolinjen, nogle vil stole helt på den, og nogle foretrækker en blanding af de to.
+Nogle udviklere foretrækker en mindre grafisk visning til deres daglige opgaver og stoler på kommandolinjen for at opnå dette. At skrive kode kræver en betydelig mængde tastning, og nogle udviklere foretrækker ikke at forstyrre deres flow på tastaturet. De vil bruge tastaturgenveje til at skifte mellem desktop-vinduer, arbejde på forskellige filer og bruge værktøjer. De fleste opgaver kan udføres med en mus, men en fordel ved at bruge kommandolinjen er, at meget kan gøres med kommandolinjeværktøjer uden behov for at skifte mellem mus og tastatur. En anden fordel ved kommandolinjen er, at de er konfigurerbare, og du kan gemme en brugerdefineret konfiguration, ændre den senere og importere den til andre udviklingsmaskiner. Fordi udviklingsmiljøer er så unikke for hver udvikler, vil nogle undgå at bruge kommandolinjen, nogle vil stole helt på den, og nogle foretrækker en blanding af de to.
 
 ### Populære kommandolinjevalg
 
@@ -158,7 +158,7 @@ Valg for kommandolinjen vil variere afhængigt af det operativsystem, du bruger.
 #### Windows
 
 - [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7/?WT.mc_id=academic-77807-sagibbon) 💻
-- [Kommandolinje](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (også kendt som CMD) 💻
+- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands/?WT.mc_id=academic-77807-sagibbon) (også kendt som CMD) 💻
 - [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)
 - [mintty](https://mintty.github.io/)
   
@@ -205,13 +205,15 @@ Sammenlign nogle programmeringssprog. Hvad er nogle af de unikke træk ved JavaS
 
 ## Gennemgang & Selvstudie
 
-Undersøg lidt om de forskellige sprog, der er tilgængelige for programmøren. Prøv at skrive en linje i ét sprog og derefter omskrive den i to andre. Hvad lærte du?
+Undersøg lidt om de forskellige sprog, der er tilgængelige for programmøren. Prøv at skrive en linje i ét sprog og omskriv den derefter i to andre. Hvad lærte du?
 
 ## Opgave
 
 [Læse dokumentationen](assignment.md)
 
+> Bemærk: Når du vælger værktøjer til din opgave, må du ikke vælge editorer, browsere eller kommandolinjeværktøjer, der allerede er nævnt ovenfor.
+
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.

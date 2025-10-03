@@ -1,47 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-27T20:02:40+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T10:06:52+00:00",
   "source_file": "for-teachers.md",
   "language_code": "nl"
 }
 -->
-## Voor Docenten
+### Voor docenten
 
-Wilt u dit lesprogramma in uw klas gebruiken? Voel u vrij om dat te doen!
+U bent van harte welkom om dit lesprogramma in uw klas te gebruiken. Het werkt naadloos met GitHub Classroom en toonaangevende LMS-platforms, en kan ook als een zelfstandige repository met uw studenten worden gebruikt.
 
-U kunt het zelfs direct binnen GitHub gebruiken door gebruik te maken van GitHub Classroom.
+### Gebruik met GitHub Classroom
 
-Om dit te doen, fork deze repository. U zult een aparte repository moeten maken voor elke les, dus u moet elke map in een aparte repository plaatsen. Op die manier kan [GitHub Classroom](https://classroom.github.com/classrooms) elke les afzonderlijk oppakken.
+Om lessen en opdrachten per cohort te beheren, maakt u één repository per les aan zodat GitHub Classroom elke opdracht onafhankelijk kan koppelen.
 
-Deze [volledige instructies](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) geven u een idee van hoe u uw klaslokaal kunt opzetten.
+- Fork deze repository naar uw organisatie.
+- Maak een aparte repository voor elke les door elke lesmap in een eigen repository te plaatsen.
+  - Optie A: Maak lege repositories (één per les) en kopieer de inhoud van de lesmap naar elk.
+  - Optie B: Gebruik een methode die de Git-geschiedenis behoudt (bijv. een map splitsen in een nieuwe repository) als u herkomst nodig heeft.
+- Maak in GitHub Classroom een opdracht per les en wijs deze toe aan de bijbehorende lesrepository.
+- Aanbevolen instellingen:
+  - Repositoryzichtbaarheid: privé voor studentenwerk.
+  - Gebruik startcode van de standaardbranch van de lesrepository.
+  - Voeg issue- en pull request-sjablonen toe voor quizzen en inzendingen.
+  - Configureer optioneel automatische beoordeling en tests als uw lessen deze bevatten.
+- Handige conventies:
+  - Repositorynamen zoals lesson-01-intro, lesson-02-html, enz.
+  - Labels: quiz, opdracht, needs-review, late, resubmission.
+  - Tags/releases per cohort (bijv. v2025-term1).
 
-## Gebruik in Moodle, Canvas of Blackboard
+Tip: Vermijd het opslaan van repositories in gesynchroniseerde mappen (bijv. OneDrive/Google Drive) om Git-conflicten op Windows te voorkomen.
 
-Dit lesprogramma werkt goed in deze Learning Management Systems! Gebruik het [Moodle uploadbestand](../../../../../../../teaching-files/webdev-moodle.mbz) voor de volledige inhoud, of probeer het [Common Cartridge-bestand](../../../../../../../teaching-files/webdev-common-cartridge.imscc) dat een deel van de inhoud bevat. Moodle Cloud ondersteunt geen volledige Common Cartridge-exporten, dus het is beter om het Moodle-downloadbestand te gebruiken, dat kan worden geüpload in Canvas. Laat ons weten hoe we deze ervaring kunnen verbeteren.
+### Gebruik met Moodle, Canvas of Blackboard
+
+Dit lesprogramma bevat importeerbare pakketten voor gangbare LMS-workflows.
+
+- Moodle: Gebruik het Moodle-uploadbestand [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) om de volledige cursus te laden.
+- Common Cartridge: Gebruik het Common Cartridge-bestand [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) voor bredere LMS-compatibiliteit.
+- Opmerkingen:
+  - Moodle Cloud heeft beperkte ondersteuning voor Common Cartridge. Geef de voorkeur aan het bovenstaande Moodle-bestand, dat ook in Canvas kan worden geüpload.
+  - Controleer na import de modules, deadlines en quizinstellingen om aan te sluiten bij uw semesterschema.
 
 ![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.nl.png)
-> Het lesprogramma in een Moodle-klaslokaal
+> Het lesprogramma in een Moodle-klas
 
 ![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.nl.png)
 > Het lesprogramma in Canvas
 
-## Gebruik van de repository zoals deze is
+### Gebruik de repository direct (zonder Classroom)
 
-Als u deze repository wilt gebruiken zoals deze nu is, zonder gebruik te maken van GitHub Classroom, is dat ook mogelijk. U moet dan met uw studenten communiceren over welke les ze samen moeten doorlopen.
+Als u liever geen gebruik maakt van GitHub Classroom, kunt u de cursus direct vanuit deze repository uitvoeren.
 
-In een online format (Zoom, Teams of andere) kunt u breakout rooms maken voor de quizzen en studenten begeleiden om hen klaar te stomen om te leren. Nodig vervolgens studenten uit voor de quizzen en laat hen hun antwoorden indienen als 'issues' op een bepaald moment. U kunt hetzelfde doen met opdrachten als u wilt dat studenten openlijk samenwerken.
+- Synchrone/online formats (Zoom/Teams):
+  - Voer korte mentorgeleide opwarmers uit; gebruik breakout rooms voor quizzen.
+  - Kondig een tijdsvenster aan voor quizzen; studenten dienen antwoorden in als GitHub Issues.
+  - Voor samenwerkingsopdrachten werken studenten in openbare lesrepositories en openen pull requests.
+- Privé/asynchrone formats:
+  - Studenten forken elke les naar hun eigen **privé** repositories en voegen u toe als medewerker.
+  - Ze dienen in via Issues (quizzen) en Pull Requests (opdrachten) op uw klasrepository of hun privéforks.
 
-Als u de voorkeur geeft aan een meer privéformat, vraag uw studenten dan om het lesprogramma, les voor les, te forken naar hun eigen privé GitHub-repositories en geef u toegang. Vervolgens kunnen ze quizzen en opdrachten privé voltooien en deze via issues op uw klaslokaal-repository aan u indienen.
+### Beste praktijken
 
-Er zijn veel manieren om dit te laten werken in een online klaslokaal. Laat ons weten wat voor u het beste werkt!
+- Geef een oriëntatieles over de basis van Git/GitHub, Issues en PRs.
+- Gebruik checklists in Issues voor meerstapsquizzen/opdrachten.
+- Voeg CONTRIBUTING.md en CODE_OF_CONDUCT.md toe om klasnormen vast te stellen.
+- Voeg toegankelijkheidsnotities toe (alt-tekst, ondertitels) en bied printbare PDF's aan.
+- Versieer uw inhoud per semester en bevries lesrepositories na publicatie.
 
-## Geef ons uw mening!
+### Feedback en ondersteuning
 
-We willen dit lesprogramma laten werken voor u en uw studenten. Neem contact met ons op via de [Teacher corner](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) en open een [**nieuw issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) voor verzoeken, bugs en feedback.
+We willen dat dit lesprogramma werkt voor u en uw studenten. Open een nieuw Issue in deze repository voor bugs, verzoeken of verbeteringen, of start een discussie in de Teacher Corner.
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

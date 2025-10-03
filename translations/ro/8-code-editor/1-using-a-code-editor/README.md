@@ -1,159 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T11:37:05+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T10:44:26+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "ro"
 }
 -->
-# Utilizarea unui editor de cod
+***
 
-Această lecție acoperă elementele de bază ale utilizării [VSCode.dev](https://vscode.dev), un editor de cod bazat pe web, astfel încât să poți face modificări în codul tău și să contribui la un proiect fără a instala nimic pe computerul tău.
+# Utilizarea unui Editor de Cod: Stăpânirea [VSCode.dev](https://vscode.dev)
 
-## Obiectivele învățării
+**Bun venit!**  
+Această lecție te va ghida de la bazele utilizării până la funcționalități avansate ale [VSCode.dev](https://vscode.dev)—editorul de cod puternic, bazat pe web. Vei învăța cum să editezi cod cu încredere, să gestionezi proiecte, să urmărești modificările, să instalezi extensii și să colaborezi ca un profesionist—totul direct din browser, fără a fi nevoie de instalare.
 
-În această lecție, vei învăța cum să:
+***
 
-- Utilizezi un editor de cod într-un proiect de cod
-- Urmărești modificările cu ajutorul controlului versiunilor
-- Personalizezi editorul pentru dezvoltare
+## Obiective de Învățare
 
-### Cerințe preliminare
+La finalul acestei lecții, vei putea:
 
-Înainte de a începe, va trebui să îți creezi un cont pe [GitHub](https://github.com). Accesează [GitHub](https://github.com/) și creează un cont dacă nu ai deja unul.
+- Utiliza eficient un editor de cod pentru orice proiect, oriunde
+- Urmări fără efort munca ta cu controlul versiunilor integrat
+- Personaliza și îmbunătăți fluxul de lucru de dezvoltare cu ajustări ale editorului și extensii
 
-### Introducere
+***
 
-Un editor de cod este un instrument esențial pentru scrierea programelor și colaborarea la proiecte de cod existente. Odată ce înțelegi elementele de bază ale unui editor și cum să utilizezi funcțiile acestuia, vei putea să le aplici atunci când scrii cod.
+## Cerințe Prealabile
 
-## Începutul cu VSCode.dev
+Pentru a începe, **creează un cont gratuit pe [GitHub](https://github.com)**, care îți permite să gestionezi depozite de cod și să colaborezi la nivel global. Dacă nu ai încă un cont, [creează unul aici](https://github.com/).
 
-[VSCode.dev](https://vscode.dev) este un editor de cod pe web. Nu trebuie să instalezi nimic pentru a-l utiliza, la fel ca atunci când deschizi orice alt site web. Pentru a începe cu editorul, deschide următorul link: [https://vscode.dev](https://vscode.dev). Dacă nu ești conectat la [GitHub](https://github.com/), urmează instrucțiunile pentru a te conecta sau pentru a crea un cont nou și apoi conectează-te.
+***
 
-După ce se încarcă, ar trebui să arate similar cu această imagine:
+## De ce să folosești un editor de cod bazat pe web?
 
-![VSCode.dev implicit](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.ro.png)
+Un **editor de cod** precum VSCode.dev este centrul tău de comandă pentru scrierea, editarea și gestionarea codului. Cu o interfață intuitivă, o mulțime de funcționalități și acces imediat prin browser, poți:
 
-Există trei secțiuni principale, începând din partea stângă și mergând spre dreapta:
+- Edita proiecte pe orice dispozitiv
+- Evita complicațiile instalărilor
+- Colabora și contribui instantaneu
 
-1. _Bara de activitate_ care include câteva pictograme, cum ar fi lupa 🔎, roata dințată ⚙️ și altele câteva.
-2. Bara de activitate extinsă, care implicit este _Explorer_, numită _bara laterală_.
-3. Și, în final, zona de cod din dreapta.
+Odată ce te familiarizezi cu VSCode.dev, vei fi pregătit să abordezi sarcini de programare de oriunde, oricând.
 
-Fă clic pe fiecare dintre pictograme pentru a afișa un meniu diferit. După ce ai terminat, fă clic pe _Explorer_ pentru a reveni la starea inițială.
+***
 
-Când începi să creezi cod sau să modifici cod existent, acest lucru se va întâmpla în cea mai mare zonă din dreapta. Vei folosi această zonă și pentru a vizualiza codul existent, ceea ce vei face în continuare.
+## Începerea cu VSCode.dev
 
-## Deschide un depozit GitHub
+Accesează **[VSCode.dev](https://vscode.dev)**—fără instalare, fără descărcări. Autentificarea cu GitHub îți oferă acces complet, inclusiv sincronizarea setărilor, extensiilor și depozitelor. Dacă ți se cere, conectează-ți contul GitHub.
 
-Primul lucru pe care trebuie să-l faci este să deschizi un depozit GitHub. Există mai multe moduri de a deschide un depozit. În această secțiune vei vedea două moduri diferite prin care poți deschide un depozit pentru a începe să lucrezi la modificări.
+După încărcare, spațiul tău de lucru va arăta astfel:
 
-### 1. Cu editorul
+![VSCode.dev implicit](../images/default-vscode-dev are trei secțiuni principale de la stânga la dreapta:
+- **Bară de activitate:** Icoane precum 🔎 (Căutare), ⚙️ (Setări), fișiere, control sursă etc.
+- **Bară laterală:** Se schimbă în funcție de icoana selectată din bara de activitate (implicit *Explorer* pentru a afișa fișierele).
+- **Zona de editare/cod:** Cea mai mare secțiune din dreapta—unde vei edita și vizualiza codul.
 
-Folosește editorul pentru a deschide un depozit de la distanță. Dacă accesezi [VSCode.dev](https://vscode.dev), vei vedea un buton _"Open Remote Repository"_:
+Explorează funcționalitățile făcând clic pe icoane, dar revino la _Explorer_ pentru a-ți păstra locul.
 
-![Deschide un depozit de la distanță](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.ro.png)
+***
 
-Poți folosi și paleta de comenzi. Paleta de comenzi este o casetă de introducere unde poți tasta orice cuvânt care face parte dintr-o comandă sau o acțiune pentru a găsi comanda potrivită de executat. Folosește meniul din stânga sus, apoi selectează _View_ și alege _Command Palette_, sau folosește următoarea combinație de taste: Ctrl-Shift-P (pe MacOS ar fi Command-Shift-P).
+## Deschiderea unui Depozit GitHub
 
-![Meniul paletei](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.ro.png)
+### Metoda 1: Din Editor
 
-După ce meniul se deschide, tastează _open remote repository_ și apoi selectează prima opțiune. Vor apărea mai multe depozite din care faci parte sau pe care le-ai deschis recent. Poți folosi și un URL complet GitHub pentru a selecta unul. Folosește următorul URL și lipește-l în casetă:
+1. Accesează [VSCode.dev](https://vscode.dev). Fă clic pe **"Open Remote Repository."**
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+   ![Deschide depozit remote](../../../../8-code-editor/images/open-remote-repository folosește _Command Palette_ (Ctrl-Shift-P sau Cmd-Shift-P pe Mac).
 
-✅ Dacă totul a fost realizat cu succes, vei vedea toate fișierele acestui depozit încărcate în editorul de text.
+   ![Meniu paletă](../images/palette-menu.pngopen remote repository.”
+   - Selectează opțiunea.
+   - Introdu URL-ul depozitului GitHub (ex.: `https://github.com/microsoft/Web-Dev-For-Beginners`) și apasă Enter.
 
-### 2. Utilizând URL-ul
+Dacă totul merge bine, vei vedea întregul proiect încărcat și gata de editare!
 
-Poți folosi și un URL direct pentru a încărca un depozit. De exemplu, URL-ul complet pentru depozitul curent este [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), dar poți înlocui domeniul GitHub cu `VSCode.dev/github` și să încarci depozitul direct. URL-ul rezultat ar fi [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+***
 
-## Editează fișiere
+### Metoda 2: Instantaneu prin URL
 
-După ce ai deschis depozitul în browser/vscode.dev, următorul pas este să faci actualizări sau modificări la proiect.
+Transformă orice URL de depozit GitHub pentru a-l deschide direct în VSCode.dev înlocuind `github.com` cu `vscode.dev/github`.  
+Ex.:
 
-### 1. Creează un fișier nou
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-Poți crea un fișier fie într-un folder existent, fie în directorul/folderul rădăcină. Pentru a crea un fișier nou, deschide locația/directorul în care vrei să salvezi fișierul și selectează pictograma _'New file ...'_ din bara de activitate _(stânga)_, dă-i un nume și apasă Enter.
+Această funcționalitate accelerează accesul rapid la ORICE proiect.
 
-![Creează un fișier nou](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.ro.png)
+***
 
-### 2. Editează și salvează un fișier în depozit
+## Editarea Fișierelor din Proiectul Tău
 
-Utilizarea vscode.dev este utilă ori de câte ori vrei să faci actualizări rapide la proiectul tău fără a încărca vreun software local.
+Odată ce depozitul tău este deschis, poți:
 
-Pentru a-ți actualiza codul, fă clic pe pictograma 'Explorer', situată tot pe bara de activitate, pentru a vizualiza fișierele și folderele din depozit. Selectează un fișier pentru a-l deschide în zona de cod, fă modificările și salvează.
+### 1. **Crea un Fișier Nou**
+- În bara laterală *Explorer*, navighează la folderul dorit sau folosește rădăcina.
+- Fă clic pe icoana _‘New file ...’_.
+- Denumește fișierul, apasă **Enter**, iar fișierul va apărea instantaneu.
 
-![Editează un fișier](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.ro.png)
+![Creează un fișier nou](../images/create-new-file 2. **Editează și Salvează Fișiere**
 
-După ce ai terminat de actualizat proiectul, selectează pictograma _`source control`_, care conține toate modificările noi pe care le-ai făcut în depozit.
+- Fă clic pe un fișier din *Explorer* pentru a-l deschide în zona de cod.
+- Fă modificările necesare.
+- VSCode.dev salvează automat modificările, dar poți apăsa Ctrl+S pentru a salva manual.
 
-Pentru a vizualiza modificările pe care le-ai făcut în proiect, selectează fișierul(ele) din folderul `Changes` din bara de activitate extinsă. Acest lucru va deschide un 'Working Tree' pentru a vedea vizual modificările pe care le-ai făcut în fișier. Roșu indică o omisiune din proiect, în timp ce verdele semnifică o adăugare.
+![Editează un fișier](../images/edit-a-file.png. **Urmărește & Comite Modificări cu Controlul Versiunilor**
 
-![Vizualizează modificările](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.ro.png)
+VSCode.dev are integrat **Git** pentru controlul versiunilor!
 
-Dacă ești mulțumit de modificările pe care le-ai făcut, treci cu mouse-ul peste folderul `Changes` și fă clic pe butonul `+` pentru a stabili modificările. Stabilirea înseamnă pur și simplu pregătirea modificărilor pentru a le trimite pe GitHub.
+- Fă clic pe icoana _'Source Control'_ pentru a vedea toate modificările făcute.
+- Fișierele din folderul `Changes` arată adăugiri (verde) și ștergeri (roșu).  
+  ![Vizualizează modificările](../images/working-tree.png modificările făcând clic pe `+` lângă fișiere pentru a le pregăti pentru commit.
+- **Renunță** la modificările nedorite făcând clic pe icoana de undo.
+- Introdu un mesaj clar de commit, apoi fă clic pe bifa pentru a comite și a împinge modificările.
 
-Dacă, totuși, nu ești confortabil cu unele modificări și vrei să le anulezi, treci cu mouse-ul peste folderul `Changes` și selectează pictograma `undo`.
+Pentru a reveni la depozitul tău pe GitHub, selectează meniul hamburger din stânga sus.
 
-Apoi, tastează un `commit message` _(O descriere a modificării pe care ai făcut-o proiectului)_, fă clic pe pictograma `check` pentru a confirma și trimite modificările.
+![Stagiază & comite modificări](../images/edit-vscode.dev Cu Extensii
 
-După ce ai terminat de lucrat la proiectul tău, selectează pictograma `hamburger menu` din stânga sus pentru a reveni la depozitul de pe github.com.
+Extensiile îți permit să adaugi limbaje, teme, depanatori și instrumente de productivitate în VSCode.dev—făcând viața ta de programator mai ușoară și mai plăcută.
 
-![Stabilește și confirmă modificările](../../../../8-code-editor/images/edit-vscode.dev.gif)
+### Navigarea și Gestionarea Extensiilor
 
-## Utilizarea extensiilor
+- Fă clic pe **icoana Extensii** din bara de activitate.
+- Caută o extensie în caseta _'Search Extensions in Marketplace'_.
 
-Instalarea extensiilor în VSCode îți permite să adaugi funcții noi și opțiuni personalizate pentru mediul de dezvoltare în editorul tău, pentru a-ți îmbunătăți fluxul de lucru. Aceste extensii te ajută, de asemenea, să adaugi suport pentru mai multe limbaje de programare și sunt adesea fie extensii generice, fie extensii bazate pe limbaj.
+  ![Detalii extensie](../images/extension-details:
+  - **Installed**: Toate extensiile pe care le-ai adăugat
+  - **Popular**: Favoritele industriei
+  - **Recommended**: Personalizate pentru fluxul tău de lucru
 
-Pentru a naviga prin lista tuturor extensiilor disponibile, fă clic pe pictograma _`Extensions`_ din bara de activitate și începe să tastezi numele extensiei în câmpul de text etichetat _'Search Extensions in Marketplace'_.
+  ![Vizualizează extensiile](
 
-Vei vedea o listă de extensii, fiecare conținând **numele extensiei, numele editorului, o descriere de o propoziție, numărul de descărcări** și **un rating cu stele**.
+  
 
-![Detalii despre extensii](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.ro.png)
+***
 
-Poți vizualiza, de asemenea, toate extensiile instalate anterior extinzând folderul _`Installed`_, extensiile populare utilizate de majoritatea dezvoltatorilor în folderul _`Popular`_ și extensiile recomandate pentru tine fie de utilizatori din același workspace, fie pe baza fișierelor deschise recent în folderul _`Recommended`_.
+### 1. **Instalează Extensii**
 
-![Vizualizează extensiile](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.ro.png)
+- Introdu numele extensiei în căutare, fă clic pe ea și consultă detaliile în editor.
+- Apasă butonul **albastru Install** din bara laterală _sau_ din zona principală de cod.
 
-### 1. Instalează extensii
+  ![Instalează extensii](../images/install-extension 2. **Personalizează Extensiile**
 
-Pentru a instala o extensie, tastează numele extensiei în câmpul de căutare și fă clic pe ea pentru a vizualiza informații suplimentare despre extensie în zona de cod, odată ce apare în bara de activitate extinsă.
+- Găsește extensia instalată.
+- Fă clic pe **icoana Gear** → selectează _Extension Settings_ pentru a ajusta comportamentele după preferințe.
 
-Poți face clic pe _butonul albastru de instalare_ din bara de activitate extinsă pentru a instala sau poți folosi butonul de instalare care apare în zona de cod odată ce selectezi extensia pentru a încărca informații suplimentare.
+  ![Modifică setările extensiei](../images/extension-settings 3. **Gestionează Extensiile**
+Poți:
 
-![Instalează extensii](../../../../8-code-editor/images/install-extension.gif)
+- **Dezactiva:** Dezactivează temporar o extensie păstrând-o instalată
+- **Dezinstala:** Elimin-o permanent dacă nu mai este necesară
 
-### 2. Personalizează extensiile
+  Găsește extensia, apasă pe icoana Gear și selectează ‘Disable’ sau ‘Uninstall,’ sau folosește butoanele albastre din zona de cod.
 
-După instalarea extensiei, este posibil să fie nevoie să îi modifici comportamentul și să o personalizezi în funcție de preferințele tale. Pentru a face acest lucru, selectează pictograma Extensions, iar de această dată extensia ta va apărea în folderul _Installed_, fă clic pe _**pictograma Gear**_ și navighează la _Extensions Setting_.
-
-![Modifică setările extensiei](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.ro.png)
-
-### 3. Gestionează extensiile
-
-După instalarea și utilizarea extensiei, vscode.dev oferă opțiuni pentru a gestiona extensia în funcție de diferite nevoi. De exemplu, poți alege să:
-
-- **Dezactivezi:** _(Dezactivezi temporar o extensie atunci când nu mai ai nevoie de ea, dar nu vrei să o dezinstalezi complet)_
-
-    Selectează extensia instalată din bara de activitate extinsă > fă clic pe pictograma Gear > selectează 'Disable' sau 'Disable (Workspace)' **SAU** Deschide extensia în zona de cod și fă clic pe butonul albastru Disable.
-
-- **Dezinstalezi:** Selectează extensia instalată din bara de activitate extinsă > fă clic pe pictograma Gear > selectează 'Uninstall' **SAU** Deschide extensia în zona de cod și fă clic pe butonul albastru Uninstall.
-
----
+***
 
 ## Temă
 
-[Crează un site de tip CV folosind vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Testează-ți abilitățile: [Creează un site de CV folosind vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Recapitulare și studiu individual
+***
 
-Citește mai multe despre [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) și alte funcții ale acestuia.
+## Explorare și Studiu Individual
+
+- Aprofundează cu [Documentația oficială VSCode Web](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Explorează funcționalități avansate ale spațiului de lucru, scurtături de tastatură și setări.
+
+***
+
+**Acum ești pregătit să programezi, să creezi și să colaborezi—de oriunde, pe orice dispozitiv, folosind VSCode.dev!**
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus utilizând serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea realizată de un profesionist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

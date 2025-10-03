@@ -1,25 +1,41 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d4d75af51aaccfe9af778f792c62919",
-  "translation_date": "2025-08-28T08:15:28+00:00",
+  "original_hash": "a212cc22a18eddf9046b7a16dfbafd8b",
+  "translation_date": "2025-10-03T10:45:51+00:00",
   "source_file": "3-terrarium/2-intro-to-css/assignment.md",
   "language_code": "ro"
 }
 -->
-# Refactorizarea CSS
+# Tema de Refactorizare CSS
+
+## Obiectiv
+
+Refactorizează proiectul terrarium pentru a utiliza **Flexbox** sau **CSS Grid** pentru layout. Actualizează HTML-ul și CSS-ul după cum este necesar pentru a obține un design modern și responsiv. Nu este nevoie să implementezi elemente drag-and-drop—concentrează-te doar pe layout și stilizare.
 
 ## Instrucțiuni
 
-Restilizează terariul folosind fie Flexbox, fie CSS Grid și fă capturi de ecran pentru a demonstra că l-ai testat pe mai multe browsere. Este posibil să fie nevoie să modifici structura HTML, așa că creează o nouă versiune a aplicației cu arta în loc pentru refactorizare. Nu te preocupa de faptul că elementele trebuie să fie deplasabile; pentru moment, refactorizează doar HTML-ul și CSS-ul.
+1. **Creează o versiune nouă** a aplicației terrarium. Actualizează marcajul și CSS-ul pentru a utiliza Flexbox sau CSS Grid pentru layout.
+2. **Asigură-te că arta și elementele sunt prezente** la fel ca în versiunea originală.
+3. **Testează designul** în cel puțin două browsere diferite (de exemplu, Chrome, Firefox, Edge).
+4. **Fă capturi de ecran** ale terrarium-ului în fiecare browser pentru a demonstra compatibilitatea între browsere.
+5. **Trimite** codul actualizat și capturile de ecran.
 
-## Criterii de evaluare
+## Criterii de Evaluare
 
-| Criteriu | Exemplară                                                         | Adecvat                       | Necesită îmbunătățiri                |
-| -------- | ----------------------------------------------------------------- | ----------------------------- | ------------------------------------ |
-|          | Prezintă un terariu complet restilizat folosind Flexbox sau CSS Grid | Restilizează câteva elemente  | Nu reușește să restilizeze terariul deloc |
+| Criteriu   | Exemplară                                                                 | Adecvat                              | Necesită Îmbunătățiri                  |
+|------------|--------------------------------------------------------------------------|---------------------------------------|----------------------------------------|
+| Layout     | Refactorizat complet folosind Flexbox sau CSS Grid; aspect vizual plăcut și responsiv | Unele elemente refactorizate; utilizare parțială a Flexbox sau Grid | Utilizare redusă sau inexistentă a Flexbox sau Grid; layout neschimbat |
+| Compatibilitate între Browsere | Capturi de ecran furnizate pentru mai multe browsere; aspect consistent      | Capturi de ecran pentru un singur browser; mici inconsistențe | Fără capturi de ecran sau inconsistențe majore |
+| Calitatea Codului | HTML/CSS curat, bine organizat; comentarii clare                         | Organizare parțială; puține comentarii        | Cod dezorganizat; lipsa comentariilor      |
+
+## Sfaturi
+
+- Consultă ghidurile [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) și [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).
+- Folosește instrumentele de dezvoltare ale browserului pentru a testa responsivitatea.
+- Comentează codul pentru claritate.
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea realizată de un profesionist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

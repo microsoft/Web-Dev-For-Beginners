@@ -1,158 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T16:17:16+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T09:31:00+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "pt"
 }
 -->
-# Usar um editor de código
+***
 
-Esta lição aborda os conceitos básicos de utilização do [VSCode.dev](https://vscode.dev), um editor de código baseado na web, para que possa fazer alterações no seu código e contribuir para um projeto sem instalar nada no seu computador.
+# Utilizar um Editor de Código: Dominar o [VSCode.dev](https://vscode.dev)
 
-## Objetivos de aprendizagem
+**Bem-vindo!**  
+Esta lição leva-o desde os conceitos básicos até ao uso avançado do [VSCode.dev](https://vscode.dev)—o poderoso editor de código baseado na web. Vai aprender a editar código com confiança, gerir projetos, acompanhar alterações, instalar extensões e colaborar como um profissional—tudo diretamente no seu navegador, sem necessidade de instalação.
 
-Nesta lição, irá aprender a:
+***
 
-- Utilizar um editor de código num projeto de programação
-- Acompanhar alterações com controlo de versão
-- Personalizar o editor para desenvolvimento
+## Objetivos de Aprendizagem
 
-### Pré-requisitos
+No final desta lição, será capaz de:
 
-Antes de começar, precisará de criar uma conta no [GitHub](https://github.com). Navegue até [GitHub](https://github.com/) e crie uma conta, caso ainda não tenha uma.
+- Utilizar eficientemente um editor de código em qualquer projeto, em qualquer lugar
+- Acompanhar o seu trabalho de forma integrada com controlo de versão
+- Personalizar e melhorar o seu fluxo de trabalho de desenvolvimento com personalizações e extensões do editor
 
-### Introdução
+***
 
-Um editor de código é uma ferramenta essencial para escrever programas e colaborar em projetos de programação existentes. Assim que compreender os conceitos básicos de um editor e como utilizar as suas funcionalidades, poderá aplicá-los ao escrever código.
+## Pré-requisitos
+
+Para começar, **crie uma conta gratuita no [GitHub](https://github.com)**, que lhe permitirá gerir repositórios de código e colaborar globalmente. Se ainda não tem uma conta, [crie uma aqui](https://github.com/).
+
+***
+
+## Porquê Utilizar um Editor de Código Baseado na Web?
+
+Um **editor de código** como o VSCode.dev é o seu centro de comando para escrever, editar e gerir código. Com uma interface intuitiva, inúmeras funcionalidades e acesso imediato via navegador, pode:
+
+- Editar projetos em qualquer dispositivo
+- Evitar complicações de instalações
+- Colaborar e contribuir instantaneamente
+
+Quando estiver confortável com o VSCode.dev, estará preparado para enfrentar tarefas de programação em qualquer lugar, a qualquer momento.
+
+***
 
 ## Começar com o VSCode.dev
 
-[VSCode.dev](https://vscode.dev) é um editor de código na web. Não precisa de instalar nada para utilizá-lo, tal como abrir qualquer outro site. Para começar a usar o editor, abra o seguinte link: [https://vscode.dev](https://vscode.dev). Se não estiver autenticado no [GitHub](https://github.com/), siga as instruções para iniciar sessão ou criar uma nova conta e, em seguida, autentique-se.
+Aceda a **[VSCode.dev](https://vscode.dev)**—sem instalação, sem downloads. Ao iniciar sessão com o GitHub, desbloqueia acesso total, incluindo sincronização de definições, extensões e repositórios. Se solicitado, conecte a sua conta GitHub.
 
-Depois de carregar, deverá parecer-se com esta imagem:
+Depois de carregar, o seu espaço de trabalho terá este aspeto:
 
-![VSCode.dev padrão](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.pt.png)
+![VSCode.dev padrão](../images/default-vscode-dev tem três secções principais da esquerda para a direita:
+- **Barra de Atividades:** Ícones como 🔎 (Pesquisa), ⚙️ (Definições), ficheiros, controlo de origem, etc.
+- **Barra Lateral:** Altera o contexto com base no ícone selecionado na barra de atividades (por padrão, mostra o *Explorador* para exibir ficheiros).
+- **Área de Código/Editor:** A maior secção à direita—onde realmente edita e visualiza o código.
 
-Existem três secções principais, começando pela esquerda e movendo-se para a direita:
+Clique nos ícones para explorar funcionalidades, mas volte ao _Explorador_ para manter o seu lugar.
 
-1. A _barra de atividades_, que inclui alguns ícones, como a lupa 🔎, a engrenagem ⚙️ e outros.
-2. A barra de atividades expandida, que por padrão é o _Explorador_, chamada de _barra lateral_.
-3. E, finalmente, a área de código à direita.
+***
 
-Clique em cada um dos ícones para exibir um menu diferente. Quando terminar, clique no _Explorador_ para voltar ao ponto de partida.
+## Abrir um Repositório GitHub
 
-Quando começar a criar ou modificar código existente, isso acontecerá na maior área à direita. Utilizará esta área para visualizar código existente também, o que fará a seguir.
+### Método 1: A partir do Editor
 
-## Abrir um repositório GitHub
+1. Aceda a [VSCode.dev](https://vscode.dev). Clique em **"Open Remote Repository."**
 
-A primeira coisa que precisará é abrir um repositório GitHub. Existem várias formas de abrir um repositório. Nesta secção, verá duas maneiras diferentes de abrir um repositório para começar a trabalhar nas alterações.
+   ![Abrir repositório remoto](../../../../8-code-editor/images/open-remote-repository utilize o _Command Palette_ (Ctrl-Shift-P, ou Cmd-Shift-P no Mac).
 
-### 1. Com o editor
+   ![Menu Palette](../images/palette-menu.pngopen remote repository.”
+   - Selecione a opção.
+   - Cole o URL do seu repositório GitHub (ex.: `https://github.com/microsoft/Web-Dev-For-Beginners`) e pressione Enter.
 
-Utilize o próprio editor para abrir um repositório remoto. Se for ao [VSCode.dev](https://vscode.dev), verá um botão _"Open Remote Repository"_:
+Se for bem-sucedido, verá o projeto completo carregado e pronto para editar!
 
-![Abrir repositório remoto](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.pt.png)
+***
 
-Também pode usar o _command palette_. O _command palette_ é uma caixa de entrada onde pode digitar qualquer palavra que faça parte de um comando ou ação para encontrar o comando certo a executar. Utilize o menu no canto superior esquerdo, selecione _View_ e, em seguida, escolha _Command Palette_, ou utilize o seguinte atalho de teclado: Ctrl-Shift-P (no MacOS seria Command-Shift-P).
+### Método 2: Diretamente via URL
 
-![Menu do Palette](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.pt.png)
+Transforme qualquer URL de repositório GitHub para abrir diretamente no VSCode.dev substituindo `github.com` por `vscode.dev/github`.  
+Ex.:
 
-Quando o menu abrir, digite _open remote repository_ e selecione a primeira opção. Vários repositórios dos quais faz parte ou que abriu recentemente aparecerão. Também pode usar um URL completo do GitHub para selecionar um. Utilize o seguinte URL e cole na caixa:
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Esta funcionalidade acelera o acesso rápido a QUALQUER projeto.
 
-✅ Se for bem-sucedido, verá todos os ficheiros deste repositório carregados no editor de texto.
+***
 
-### 2. Usando o URL
+## Editar Ficheiros no Seu Projeto
 
-Também pode usar diretamente um URL para carregar um repositório. Por exemplo, o URL completo do repositório atual é [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), mas pode substituir o domínio do GitHub por `VSCode.dev/github` e carregar o repositório diretamente. O URL resultante seria [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Depois de abrir o seu repositório, pode:
 
-## Editar ficheiros
+### 1. **Criar um Novo Ficheiro**
+- Na barra lateral *Explorador*, navegue até à pasta desejada ou utilize a raiz.
+- Clique no ícone _‘New file ...’_.
+- Nomeie o ficheiro, pressione **Enter**, e o ficheiro aparece instantaneamente.
 
-Depois de abrir o repositório no navegador/VSCode.dev, o próximo passo será fazer atualizações ou alterações no projeto.
+![Criar um novo ficheiro](../images/create-new-file 2. **Editar e Guardar Ficheiros**
 
-### 1. Criar um novo ficheiro
+- Clique num ficheiro no *Explorador* para abri-lo na área de código.
+- Faça as alterações necessárias.
+- O VSCode.dev guarda automaticamente as suas alterações, mas pode pressionar Ctrl+S para guardar manualmente.
 
-Pode criar um ficheiro dentro de uma pasta existente ou na diretoria/pasta raiz. Para criar um novo ficheiro, abra um local/diretoria onde deseja que o ficheiro seja guardado e selecione o ícone _'New file ...'_ na barra de atividades _(à esquerda)_, dê-lhe um nome e pressione Enter.
+![Editar um ficheiro](../images/edit-a-file.png. **Acompanhar & Confirmar Alterações com Controlo de Versão**
 
-![Criar um novo ficheiro](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.pt.png)
+O VSCode.dev tem **Git** integrado para controlo de versão!
 
-### 2. Editar e guardar um ficheiro no repositório
+- Clique no ícone _'Source Control'_ para ver todas as alterações feitas.
+- Os ficheiros na pasta `Changes` mostram adições (verde) e eliminações (vermelho).  
+  ![Ver alterações](../images/working-tree.png alterações clicando no `+` ao lado dos ficheiros para preparar para commit.
+- **Descartar** alterações indesejadas clicando no ícone de desfazer.
+- Escreva uma mensagem clara de commit e clique no visto para confirmar e enviar.
 
-Usar o VSCode.dev é útil sempre que quiser fazer atualizações rápidas ao seu projeto sem precisar de carregar qualquer software localmente.  
-Para atualizar o seu código, clique no ícone 'Explorer', também localizado na barra de atividades, para visualizar os ficheiros e pastas no repositório.  
-Selecione um ficheiro para abri-lo na área de código, faça as alterações e guarde.
+Para voltar ao seu repositório no GitHub, selecione o menu hambúrguer no canto superior esquerdo.
 
-![Editar um ficheiro](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.pt.png)
+![Preparar & confirmar alterações](../images/edit-vscode.dev Com Extensões
 
-Depois de terminar de atualizar o seu projeto, selecione o ícone _`source control`_, que contém todas as novas alterações feitas ao repositório.
+As extensões permitem adicionar linguagens, temas, depuradores e ferramentas de produtividade ao VSCode.dev—tornando a sua vida de programação mais fácil e divertida.
 
-Para visualizar as alterações feitas ao projeto, selecione os ficheiros na pasta `Changes` na barra de atividades expandida. Isso abrirá um 'Working Tree' para que possa ver visualmente as alterações feitas ao ficheiro. Vermelho indica uma omissão no projeto, enquanto verde indica uma adição.
+### Navegar e Gerir Extensões
 
-![Visualizar alterações](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.pt.png)
+- Clique no **ícone de Extensões** na barra de atividades.
+- Procure uma extensão na caixa _'Search Extensions in Marketplace'_.
 
-Se estiver satisfeito com as alterações feitas, passe o cursor sobre a pasta `Changes` e clique no botão `+` para preparar as alterações. Preparar significa simplesmente preparar as alterações para serem enviadas ao GitHub.
+  ![Detalhes da extensão](../images/extension-details:
+  - **Installed**: Todas as extensões que adicionou
+  - **Popular**: Favoritas da indústria
+  - **Recommended**: Adaptadas ao seu fluxo de trabalho
 
-Se, no entanto, não estiver confortável com algumas alterações e quiser descartá-las, passe o cursor sobre a pasta `Changes` e selecione o ícone `undo`.
+  ![Ver extensões](
 
-Depois, escreva uma `commit message` _(uma descrição das alterações feitas ao projeto)_, clique no ícone de verificação para confirmar e enviar as alterações.
+  
 
-Quando terminar de trabalhar no projeto, selecione o ícone do menu hambúrguer no canto superior esquerdo para voltar ao repositório no github.com.
+***
 
-![Preparar e confirmar alterações](../../../../8-code-editor/images/edit-vscode.dev.gif)
+### 1. **Instalar Extensões**
 
-## Usar extensões
+- Insira o nome da extensão na pesquisa, clique nela e reveja os detalhes no editor.
+- Clique no **botão azul Install** na barra lateral _ou_ na área principal de código.
 
-Instalar extensões no VSCode permite adicionar novas funcionalidades e opções de personalização ao ambiente de desenvolvimento no editor, melhorando o fluxo de trabalho. Estas extensões também ajudam a adicionar suporte para várias linguagens de programação e são frequentemente extensões genéricas ou baseadas em linguagens.
+  ![Instalar extensões](../images/install-extension 2. **Personalizar Extensões**
 
-Para navegar pela lista de todas as extensões disponíveis, clique no ícone _`Extensions`_ na barra de atividades e comece a digitar o nome da extensão no campo de texto rotulado _'Search Extensions in Marketplace'_.  
-Verá uma lista de extensões, cada uma contendo **o nome da extensão, o nome do editor, uma descrição de uma frase, número de downloads** e **uma classificação por estrelas**.
+- Encontre a extensão instalada.
+- Clique no **ícone de engrenagem** → selecione _Extension Settings_ para ajustar os comportamentos ao seu gosto.
 
-![Detalhes da extensão](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.pt.png)
+  ![Modificar definições da extensão](../images/extension-settings 3. **Gerir Extensões**
+Pode:
 
-Também pode visualizar todas as extensões previamente instaladas expandindo a pasta _`Installed`_, extensões populares usadas pela maioria dos programadores na pasta _`Popular`_ e extensões recomendadas para si, seja por utilizadores no mesmo espaço de trabalho ou com base nos ficheiros recentemente abertos, na pasta _`Recommended`_.
+- **Desativar:** Desligar temporariamente uma extensão mantendo-a instalada
+- **Desinstalar:** Remover permanentemente se já não for necessária
 
-![Visualizar extensões](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.pt.png)
+  Encontre a extensão, clique no ícone de engrenagem e selecione ‘Disable’ ou ‘Uninstall,’ ou utilize os botões azuis na área de código.
 
-### 1. Instalar extensões
-
-Para instalar uma extensão, digite o nome da extensão no campo de pesquisa e clique nela para visualizar informações adicionais sobre a extensão na área de código, assim que aparecer na barra de atividades expandida.
-
-Pode clicar no _botão azul de instalação_ na barra de atividades expandida para instalar ou usar o botão de instalação que aparece na área de código ao selecionar a extensão para carregar informações adicionais.
-
-![Instalar extensões](../../../../8-code-editor/images/install-extension.gif)
-
-### 2. Personalizar extensões
-
-Depois de instalar a extensão, pode precisar de modificar o seu comportamento e personalizá-la com base nas suas preferências. Para fazer isso, selecione o ícone Extensions e, desta vez, a sua extensão aparecerá na pasta _Installed_. Clique no _**ícone de engrenagem**_ e navegue até _Extensions Setting_.
-
-![Modificar configurações da extensão](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.pt.png)
-
-### 3. Gerir extensões
-
-Depois de instalar e usar a sua extensão, o VSCode.dev oferece opções para gerir a extensão com base em diferentes necessidades. Por exemplo, pode optar por:
-
-- **Desativar:** _(Desative temporariamente uma extensão quando não precisar dela, mas não quer desinstalá-la completamente)_
-
-    Selecione a extensão instalada na barra de atividades expandida > clique no ícone de engrenagem > selecione 'Disable' ou 'Disable (Workspace)' **OU** abra a extensão na área de código e clique no botão azul Disable.
-
-- **Desinstalar:** Selecione a extensão instalada na barra de atividades expandida > clique no ícone de engrenagem > selecione 'Uninstall' **OU** abra a extensão na área de código e clique no botão azul Uninstall.
-
----
+***
 
 ## Tarefa
 
-[Crie um site de currículo usando vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Teste as suas competências: [Crie um site de currículo utilizando vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Revisão e estudo autónomo
+***
 
-Leia mais sobre [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) e algumas das suas outras funcionalidades.
+## Exploração Adicional e Autoestudo
+
+- Aprofunde-se com [a documentação oficial do VSCode Web](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Explore funcionalidades avançadas do espaço de trabalho, atalhos de teclado e definições.
+
+***
+
+**Agora está pronto para programar, criar e colaborar—de qualquer lugar, em qualquer dispositivo, utilizando o VSCode.dev!**
 
 ---
 
-**Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante ter em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
+**Aviso**:  
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

@@ -1,45 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-25T20:57:22+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T09:35:25+00:00",
   "source_file": "for-teachers.md",
   "language_code": "it"
 }
 -->
-## Per gli Educatori
+### Per gli educatori
 
-Vorresti utilizzare questo curriculum nella tua classe? Sentiti libero di farlo!
+Siete invitati a utilizzare questo curriculum nella vostra classe. Funziona perfettamente con GitHub Classroom e le principali piattaforme LMS, e può anche essere utilizzato come repository autonomo con i vostri studenti.
 
-Infatti, puoi usarlo direttamente su GitHub utilizzando GitHub Classroom.
+### Utilizzo con GitHub Classroom
 
-Per farlo, fai un fork di questo repository. Avrai bisogno di creare un repository per ogni lezione, quindi dovrai estrarre ogni cartella in un repository separato. In questo modo, [GitHub Classroom](https://classroom.github.com/classrooms) potrà gestire ogni lezione separatamente.
+Per gestire lezioni e compiti per ogni gruppo, create un repository per ogni lezione in modo che GitHub Classroom possa collegare ogni compito in modo indipendente.
 
-Queste [istruzioni complete](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) ti daranno un'idea di come configurare la tua classe.
+- Forkate questo repository nella vostra organizzazione.
+- Create un repository separato per ogni lezione estraendo ogni cartella della lezione in un proprio repository.
+  - Opzione A: Create repository vuoti (uno per lezione) e copiate i contenuti della cartella della lezione in ciascuno.
+  - Opzione B: Utilizzate un approccio che preservi la cronologia Git (ad esempio, dividere una cartella in un nuovo repository) se avete bisogno della provenienza.
+- In GitHub Classroom, create un compito per ogni lezione e collegatelo al repository corrispondente.
+- Impostazioni consigliate:
+  - Visibilità del repository: privata per il lavoro degli studenti.
+  - Utilizzate il codice iniziale dal branch predefinito del repository della lezione.
+  - Aggiungete modelli di issue e pull request per quiz e consegne.
+  - Configurate opzionalmente autovalutazioni e test se le vostre lezioni li includono.
+- Convenzioni utili:
+  - Nomi dei repository come lesson-01-intro, lesson-02-html, ecc.
+  - Etichette: quiz, assignment, needs-review, late, resubmission.
+  - Tag/rilasci per gruppo (ad esempio, v2025-term1).
 
-## Utilizzarlo in Moodle, Canvas o Blackboard
+Suggerimento: Evitate di archiviare i repository in cartelle sincronizzate (ad esempio, OneDrive/Google Drive) per prevenire conflitti Git su Windows.
 
-Questo curriculum funziona bene in questi Sistemi di Gestione dell'Apprendimento! Usa il [file di caricamento per Moodle](../../../../../../../teaching-files/webdev-moodle.mbz) per il contenuto completo, oppure prova il [file Common Cartridge](../../../../../../../teaching-files/webdev-common-cartridge.imscc) che contiene parte del contenuto. Moodle Cloud non supporta esportazioni complete in formato Common Cartridge, quindi è preferibile utilizzare il file di download per Moodle, che può essere caricato in Canvas. Facci sapere come possiamo migliorare questa esperienza.
+### Utilizzo con Moodle, Canvas o Blackboard
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.it.png)  
+Questo curriculum include pacchetti importabili per flussi di lavoro comuni su LMS.
+
+- Moodle: Utilizzate il file di caricamento Moodle [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) per caricare l'intero corso.
+- Common Cartridge: Utilizzate il file Common Cartridge [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) per una compatibilità più ampia con gli LMS.
+- Note:
+  - Moodle Cloud ha un supporto limitato per Common Cartridge. Preferite il file Moodle sopra, che può anche essere caricato in Canvas.
+  - Dopo l'importazione, rivedete i moduli, le date di scadenza e le impostazioni dei quiz per adattarli al vostro calendario.
+
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.it.png)
 > Il curriculum in una classe Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.it.png)  
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.it.png)
 > Il curriculum in Canvas
 
-## Utilizzare il repository così com'è
+### Utilizzo diretto del repository (senza Classroom)
 
-Se desideri utilizzare questo repository nello stato attuale, senza passare per GitHub Classroom, è possibile farlo. Dovrai comunicare ai tuoi studenti quale lezione seguire insieme.
+Se preferite non utilizzare GitHub Classroom, potete gestire il corso direttamente da questo repository.
 
-In un formato online (Zoom, Teams o altri), potresti creare stanze di gruppo per i quiz e fare da mentore agli studenti per aiutarli a prepararsi all'apprendimento. Poi invita gli studenti a partecipare ai quiz e a inviare le loro risposte come 'issue' a un orario stabilito. Potresti fare lo stesso con i compiti, se desideri che gli studenti lavorino in modo collaborativo e in modo aperto.
+- Formati sincroni/online (Zoom/Teams):
+  - Organizzate brevi sessioni introduttive guidate da un mentore; utilizzate le breakout rooms per i quiz.
+  - Annunciate una finestra temporale per i quiz; gli studenti inviano le risposte come Issues su GitHub.
+  - Per i compiti collaborativi, gli studenti lavorano nei repository pubblici delle lezioni e aprono pull request.
+- Formati privati/asincroni:
+  - Gli studenti forkano ogni lezione nei propri repository **privati** e vi aggiungono come collaboratore.
+  - Consegne tramite Issues (quiz) e Pull Requests (compiti) sul vostro repository della classe o sui loro fork privati.
 
-Se preferisci un formato più privato, chiedi ai tuoi studenti di fare un fork del curriculum, lezione per lezione, nei loro repository GitHub privati, e di darti accesso. In questo modo, potranno completare quiz e compiti in privato e inviarteli tramite issue sul tuo repository della classe.
+### Migliori pratiche
 
-Ci sono molti modi per far funzionare questo approccio in un'aula online. Facci sapere quale funziona meglio per te!
+- Fornite una lezione di orientamento sulle basi di Git/GitHub, Issues e PRs.
+- Utilizzate checklist negli Issues per quiz/compiti a più passaggi.
+- Aggiungete CONTRIBUTING.md e CODE_OF_CONDUCT.md per stabilire le norme della classe.
+- Aggiungete note sull'accessibilità (testo alternativo, didascalie) e offrite PDF stampabili.
+- Versionate i vostri contenuti per ogni termine e bloccate i repository delle lezioni dopo la pubblicazione.
 
-## Dacci il tuo feedback!
+### Feedback e supporto
 
-Vogliamo rendere questo curriculum utile per te e i tuoi studenti. Connettiti con noi nella [Teacher corner](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) e apri una [**nuova issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) per qualsiasi richiesta, bug o feedback.
+Vogliamo che questo curriculum funzioni per voi e i vostri studenti. Aprite un nuovo Issue in questo repository per segnalare bug, richieste o miglioramenti, oppure avviate una discussione nella Teacher Corner.
 
-**Disclaimer (Avvertenza)**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di tenere presente che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali malintesi o interpretazioni errate derivanti dall'uso di questa traduzione.
+---
+
+**Disclaimer**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un esperto umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

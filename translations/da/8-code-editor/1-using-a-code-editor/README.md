@@ -1,156 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T08:20:39+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T09:58:53+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "da"
 }
 -->
-# Brug af en kodeeditor
+***
 
-Denne lektion dækker det grundlæggende i at bruge [VSCode.dev](https://vscode.dev), en webbaseret kodeeditor, så du kan foretage ændringer i din kode og bidrage til et projekt uden at skulle installere noget på din computer.
+# Brug af en kodeeditor: Bliv ekspert i [VSCode.dev](https://vscode.dev)
+
+**Velkommen!**  
+Denne lektion tager dig fra det grundlæggende til avanceret brug af [VSCode.dev](https://vscode.dev)—den kraftfulde, webbaserede kodeeditor. Du lærer at redigere kode med selvtillid, administrere projekter, spore ændringer, installere udvidelser og samarbejde som en professionel—alt sammen direkte fra din browser, uden behov for installation.
+
+***
 
 ## Læringsmål
 
-I denne lektion vil du lære at:
+Ved afslutningen af denne lektion vil du kunne:
 
-- Bruge en kodeeditor i et kodeprojekt
-- Holde styr på ændringer med versionskontrol
-- Tilpasse editoren til udvikling
+- Effektivt bruge en kodeeditor til ethvert projekt, hvor som helst
+- Problemfrit spore dit arbejde med indbygget versionskontrol
+- Tilpasse og optimere din udviklingsarbejdsgang med editorindstillinger og udvidelser
 
-### Forudsætninger
+***
 
-Før du begynder, skal du oprette en konto hos [GitHub](https://github.com). Gå til [GitHub](https://github.com/) og opret en konto, hvis du ikke allerede har en.
+## Forudsætninger
 
-### Introduktion
+For at komme i gang skal du **tilmelde dig en gratis [GitHub](https://github.com)-konto**, som giver dig mulighed for at administrere kodearkiver og samarbejde globalt. Hvis du ikke har en konto endnu, [opret en her](https://github.com/).
 
-En kodeeditor er et vigtigt værktøj til at skrive programmer og samarbejde om eksisterende kodeprojekter. Når du forstår det grundlæggende i en editor og hvordan du udnytter dens funktioner, kan du anvende dem, når du skriver kode.
+***
+
+## Hvorfor bruge en webbaseret kodeeditor?
+
+En **kodeeditor** som VSCode.dev er dit kommandocenter til at skrive, redigere og administrere kode. Med en intuitiv grænseflade, masser af funktioner og øjeblikkelig adgang via browseren kan du:
+
+- Redigere projekter på enhver enhed
+- Undgå besværet med installationer
+- Samarbejde og bidrage med det samme
+
+Når du er fortrolig med VSCode.dev, vil du være klar til at tackle kodningsopgaver hvor som helst, når som helst.
+
+***
 
 ## Kom godt i gang med VSCode.dev
 
-[VSCode.dev](https://vscode.dev) er en kodeeditor på nettet. Du behøver ikke at installere noget for at bruge den, det er lige så nemt som at åbne en hvilken som helst anden hjemmeside. For at komme i gang med editoren skal du åbne følgende link: [https://vscode.dev](https://vscode.dev). Hvis du ikke er logget ind på [GitHub](https://github.com/), skal du følge vejledningen for at logge ind eller oprette en ny konto og derefter logge ind.
+Gå til **[VSCode.dev](https://vscode.dev)**—ingen installation, ingen downloads. Når du logger ind med GitHub, får du fuld adgang, inklusive synkronisering af dine indstillinger, udvidelser og arkiver. Hvis du bliver bedt om det, skal du forbinde din GitHub-konto.
 
-Når editoren er indlæst, bør den se nogenlunde sådan ud:
+Når du har indlæst, vil din arbejdsplads se sådan ud:
 
-![Standard VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.da.png)
+![Standard VSCode.dev](../images/default-vscode-dev har tre kerneområder fra venstre mod højre:
+- **Aktivitetslinje:** Ikoner som 🔎 (Søg), ⚙️ (Indstillinger), filer, kildekontrol osv.
+- **Sidebar:** Skifter kontekst baseret på det valgte ikon i aktivitetslinjen (standard er *Explorer* til visning af filer).
+- **Editor/kodeområde:** Det største område til højre—hvor du faktisk redigerer og ser kode.
 
-Der er tre hovedsektioner, fra venstre mod højre:
+Klik på ikonerne for at udforske funktionerne, men vend tilbage til _Explorer_ for at holde styr på dit sted.
 
-1. _Aktivitetsbjælken_, som inkluderer nogle ikoner, som for eksempel forstørrelsesglasset 🔎, tandhjulet ⚙️ og et par andre.
-2. Den udvidede aktivitetsbjælke, som som standard viser _Explorer_, kaldet _sidebjælken_.
-3. Og til sidst kodeområdet til højre.
+***
 
-Klik på hvert af ikonerne for at vise en anden menu. Når du er færdig, skal du klikke på _Explorer_, så du er tilbage, hvor du startede.
+## Åbning af et GitHub-arkiv
 
-Når du begynder at oprette kode eller ændre eksisterende kode, sker det i det største område til højre. Du vil også bruge dette område til at visualisere eksisterende kode, hvilket du vil gøre næste gang.
+### Metode 1: Fra editoren
 
-## Åbn et GitHub-repository
+1. Gå til [VSCode.dev](https://vscode.dev). Klik på **"Open Remote Repository."**
 
-Det første, du skal gøre, er at åbne et GitHub-repository. Der er flere måder at åbne et repository på. I dette afsnit vil du se to forskellige måder, du kan åbne et repository på, så du kan begynde at arbejde med ændringer.
+   ![Åbn fjernarkiv](../../../../8-code-editor/images/open-remote-repository brug _Command Palette_ (Ctrl-Shift-P eller Cmd-Shift-P på Mac).
 
-### 1. Med editoren
+   ![Palette-menu](../images/palette-menu.pngopen remote repository.”
+   - Vælg muligheden.
+   - Indsæt din GitHub repo URL (f.eks. `https://github.com/microsoft/Web-Dev-For-Beginners`) og tryk Enter.
 
-Brug selve editoren til at åbne et eksternt repository. Hvis du går til [VSCode.dev](https://vscode.dev), vil du se en knap med teksten _"Open Remote Repository"_:
+Hvis det lykkes, vil du se hele projektet indlæst og klar til redigering!
 
-![Åbn eksternt repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.da.png)
+***
 
-Du kan også bruge kommando-paletten. Kommando-paletten er en inputboks, hvor du kan skrive et hvilket som helst ord, der er en del af en kommando eller handling, for at finde den rigtige kommando at udføre. Brug menuen øverst til venstre, vælg derefter _View_, og vælg derefter _Command Palette_, eller brug følgende tastaturgenvej: Ctrl-Shift-P (på MacOS ville det være Command-Shift-P).
+### Metode 2: Direkte via URL
 
-![Palette-menu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.da.png)
+Transformér enhver GitHub repo URL til at åbne direkte i VSCode.dev ved at erstatte `github.com` med `vscode.dev/github`.  
+F.eks.:
 
-Når menuen åbnes, skal du skrive _open remote repository_ og derefter vælge den første mulighed. Flere repositories, som du er en del af, eller som du for nylig har åbnet, vil blive vist. Du kan også bruge en fuld GitHub-URL til at vælge et. Brug følgende URL og indsæt den i boksen:
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Denne funktion giver lynhurtig adgang til ethvert projekt.
 
-✅ Hvis det lykkes, vil du se alle filer for dette repository indlæst i teksteditoren.
+***
 
-### 2. Brug af URL
+## Redigering af filer i dit projekt
 
-Du kan også bruge en URL direkte til at indlæse et repository. For eksempel er den fulde URL for det aktuelle repository [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), men du kan erstatte GitHub-domænet med `VSCode.dev/github` og indlæse repositoryet direkte. Den resulterende URL ville være [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Når dit arkiv er åbent, kan du:
 
-## Rediger filer
+### 1. **Oprette en ny fil**
+- I *Explorer*-sidebaren skal du navigere til den ønskede mappe eller bruge roden.
+- Klik på _‘Ny fil ...’_ ikonet.
+- Navngiv din fil, tryk **Enter**, og din fil vises med det samme.
 
-Når du har åbnet repositoryet i browseren/vscode.dev, er det næste skridt at foretage opdateringer eller ændringer i projektet.
+![Opret en ny fil](../images/create-new-file 2. **Rediger og gem filer**
 
-### 1. Opret en ny fil
+- Klik på en fil i *Explorer* for at åbne den i kodeområdet.
+- Foretag de nødvendige ændringer.
+- VSCode.dev gemmer automatisk dine ændringer, men du kan trykke Ctrl+S for at gemme manuelt.
 
-Du kan enten oprette en fil i en eksisterende mappe eller oprette den i rodmappen. For at oprette en ny fil skal du åbne den placering/mappe, hvor du vil gemme filen, vælge ikonet _'New file ...'_ på aktivitetsbjælken _(venstre)_, give den et navn og trykke enter.
+![Rediger en fil](../images/edit-a-file.png. **Spor & commit ændringer med versionskontrol**
 
-![Opret en ny fil](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.da.png)
+VSCode.dev har integreret **Git** versionskontrol!
 
-### 2. Rediger og gem en fil i repositoryet
+- Klik på _'Source Control'_ ikonet for at se alle foretagne ændringer.
+- Filer i `Changes`-mappen viser tilføjelser (grøn) og sletninger (rød).  
+  ![Se ændringer](../images/working-tree.png ændringer ved at klikke på `+` ved siden af filer for at forberede til commit.
+- **Forkast** uønskede ændringer ved at klikke på fortryd-ikonet.
+- Skriv en klar commit-besked, og klik derefter på fluebenet for at committe og pushe.
 
-At bruge vscode.dev er nyttigt, når du hurtigt vil opdatere dit projekt uden at skulle indlæse nogen software lokalt. For at opdatere din kode skal du klikke på 'Explorer'-ikonet, som også findes på aktivitetsbjælken, for at se filer og mapper i repositoryet. Vælg en fil for at åbne den i kodeområdet, foretag dine ændringer og gem.
+For at vende tilbage til dit arkiv på GitHub skal du vælge hamburger-menuen øverst til venstre.
 
-![Rediger en fil](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.da.png)
+![Stage & commit ændringer](../images/edit-vscode.dev Op med udvidelser
 
-Når du er færdig med at opdatere dit projekt, skal du vælge ikonet _`source control`_, som indeholder alle de nye ændringer, du har foretaget i dit repository.
+Udvidelser giver dig mulighed for at tilføje sprog, temaer, debuggere og produktivitetsværktøjer til VSCode.dev—hvilket gør dit kodningsliv lettere og sjovere.
 
-For at se de ændringer, du har foretaget i dit projekt, skal du vælge filen(e) i mappen `Changes` i den udvidede aktivitetsbjælke. Dette åbner et 'Working Tree', så du visuelt kan se de ændringer, du har foretaget i filen. Rød viser en fjernelse fra projektet, mens grøn angiver en tilføjelse.
+### Gennemse og administrere udvidelser
 
-![Se ændringer](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.da.png)
+- Klik på **Udvidelsesikonet** i aktivitetslinjen.
+- Søg efter en udvidelse i _'Search Extensions in Marketplace'_ boksen.
 
-Hvis du er tilfreds med de ændringer, du har foretaget, skal du holde musen over mappen `Changes` og klikke på `+`-knappen for at stage ændringerne. At stage betyder blot at forberede dine ændringer til at blive committet til GitHub.
+  ![Udvidelsesdetaljer](../images/extension-details:
+  - **Installeret**: Alle udvidelser, du har tilføjet
+  - **Populær**: Branchens favoritter
+  - **Anbefalet**: Skræddersyet til din arbejdsgang
 
-Hvis du derimod ikke er tilfreds med nogle ændringer og ønsker at kassere dem, skal du holde musen over mappen `Changes` og vælge ikonet `undo`.
+  ![Se udvidelser](
 
-Derefter skal du skrive en `commit-besked` _(En beskrivelse af den ændring, du har foretaget i projektet)_, klikke på `check-ikonet` for at committe og pushe dine ændringer.
+  
 
-Når du er færdig med at arbejde på dit projekt, skal du vælge `hamburger-menuikonet` øverst til venstre for at vende tilbage til repositoryet på github.com.
+***
 
-![Stage & commit ændringer](../../../../8-code-editor/images/edit-vscode.dev.gif)
+### 1. **Installer udvidelser**
 
-## Brug af udvidelser
+- Indtast udvidelsens navn i søgefeltet, klik på den, og gennemgå detaljerne i editoren.
+- Tryk på **den blå Installér-knap** i sidebar _eller_ i hovedkodeområdet.
 
-At installere udvidelser i VSCode giver dig mulighed for at tilføje nye funktioner og tilpasse udviklingsmiljøet i din editor for at forbedre din udviklingsarbejdsgang. Disse udvidelser hjælper dig også med at tilføje understøttelse af flere programmeringssprog og er ofte enten generiske udvidelser eller sprog-specifikke udvidelser.
+  ![Installer udvidelser](../images/install-extension 2. **Tilpas udvidelser**
 
-For at gennemse listen over alle tilgængelige udvidelser skal du klikke på ikonet _`Extensions`_ på aktivitetsbjælken og begynde at skrive navnet på udvidelsen i tekstfeltet mærket _'Search Extensions in Marketplace'_.
-Du vil se en liste over udvidelser, hver med **udvidelsens navn, udgiverens navn, en kort beskrivelse, antal downloads** og **en stjernebedømmelse**.
+- Find din installerede udvidelse.
+- Klik på **Gear-ikonet** → vælg _Extension Settings_ for at finjustere funktioner efter dine præferencer.
 
-![Udvidelsesdetaljer](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.da.png)
+  ![Rediger udvidelsesindstillinger](../images/extension-settings 3. **Administrer udvidelser**
+Du kan:
 
-Du kan også se alle tidligere installerede udvidelser ved at udvide mappen _`Installed`_, populære udvidelser brugt af de fleste udviklere i mappen _`Popular`_ og anbefalede udvidelser til dig enten af brugere i samme arbejdsområde eller baseret på dine nyligt åbnede filer i mappen _`Recommended`_.
+- **Deaktivere:** Midlertidigt slå en udvidelse fra, mens den stadig er installeret
+- **Afinstallere:** Fjerne den permanent, hvis den ikke længere er nødvendig
 
-![Se udvidelser](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.da.png)
+  Find udvidelsen, tryk på Gear-ikonet, og vælg ‘Deaktiver’ eller ‘Afinstaller,’ eller brug de blå knapper i kodeområdet.
 
-### 1. Installer udvidelser
-
-For at installere en udvidelse skal du skrive udvidelsens navn i søgefeltet og klikke på den for at se yderligere oplysninger om udvidelsen i kodeområdet, når den vises i den udvidede aktivitetsbjælke.
-
-Du kan enten klikke på den _blå installer-knap_ i den udvidede aktivitetsbjælke for at installere eller bruge installer-knappen, der vises i kodeområdet, når du vælger udvidelsen for at indlæse yderligere oplysninger.
-
-![Installer udvidelser](../../../../8-code-editor/images/install-extension.gif)
-
-### 2. Tilpas udvidelser
-
-Efter installation af udvidelsen kan det være nødvendigt at ændre dens adfærd og tilpasse den baseret på dine præferencer. For at gøre dette skal du vælge ikonet Extensions, og denne gang vil din udvidelse vises i mappen _Installed_, klikke på _**Gear-ikonet**_ og navigere til _Extensions Setting_.
-
-![Tilpas udvidelsesindstillinger](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.da.png)
-
-### 3. Administrer udvidelser
-
-Efter installation og brug af din udvidelse tilbyder vscode.dev muligheder for at administrere din udvidelse baseret på forskellige behov. For eksempel kan du vælge at:
-
-- **Deaktivere:** _(Du kan midlertidigt deaktivere en udvidelse, når du ikke længere har brug for den, men ikke ønsker at afinstallere den helt)_
-
-    Vælg den installerede udvidelse i den udvidede aktivitetsbjælke > klik på Gear-ikonet > vælg 'Disable' eller 'Disable (Workspace)' **ELLER** Åbn udvidelsen i kodeområdet og klik på den blå Disable-knap.
-
-- **Afinstallere:** Vælg den installerede udvidelse i den udvidede aktivitetsbjælke > klik på Gear-ikonet > vælg 'Uninstall' **ELLER** Åbn udvidelsen i kodeområdet og klik på den blå Uninstall-knap.
-
----
+***
 
 ## Opgave
 
-[Opret et CV-websted ved hjælp af vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Test dine færdigheder: [Opret et CV-websted ved hjælp af vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Gennemgang & Selvstudie
+***
 
-Læs mere om [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) og nogle af dets andre funktioner.
+## Yderligere udforskning og selvstudie
+
+- Gå dybere med [de officielle VSCode Web Docs](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Udforsk avancerede arbejdspladsfunktioner, tastaturgenveje og indstillinger.
+
+***
+
+**Nu er du klar til at kode, skabe og samarbejde—fra hvor som helst, på enhver enhed, ved hjælp af VSCode.dev!**
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

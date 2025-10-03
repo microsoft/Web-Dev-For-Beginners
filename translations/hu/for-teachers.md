@@ -1,47 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-28T03:22:27+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T10:30:25+00:00",
   "source_file": "for-teachers.md",
   "language_code": "hu"
 }
 -->
-## Oktatóknak
+### Oktatóknak
 
-Szeretné használni ezt a tananyagot az osztályában? Nyugodtan tegye meg!
+Örömmel használhatja ezt a tananyagot az osztályában. Zökkenőmentesen működik a GitHub Classroommal és a vezető LMS platformokkal, de önálló repóként is használható a diákjaival.
 
-Valójában a GitHubon belül is használhatja, ha a GitHub Classroomot használja.
+### Használat GitHub Classroommal
 
-Ehhez forkolja ezt a repót. Minden leckéhez létre kell hoznia egy külön repót, így minden mappát külön repóba kell kiválasztania. Így a [GitHub Classroom](https://classroom.github.com/classrooms) külön-külön tudja kezelni az egyes leckéket.
+Az órák és feladatok csoportonkénti kezeléséhez hozzon létre egy repót minden egyes órához, hogy a GitHub Classroom külön-külön tudja csatolni az egyes feladatokat.
 
-Ezek az [részletes útmutatók](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) segítenek abban, hogyan állítsa be az osztályát.
+- Forkolja ezt a repót a szervezetébe.
+- Hozzon létre külön repót minden egyes órához úgy, hogy az óra mappáját külön repóba helyezi.
+  - Opció A: Hozzon létre üres repókat (egy-egy minden órához), és másolja bele az óra mappa tartalmát.
+  - Opció B: Használjon Git történet-megőrző megoldást (pl. egy mappa szétválasztása új repóba), ha szüksége van az eredetiség megőrzésére.
+- A GitHub Classroomban hozzon létre egy feladatot minden órához, és mutasson az adott óra repójára.
+- Ajánlott beállítások:
+  - Repó láthatósága: privát a diákok munkájához.
+  - Használjon kezdőkódot az óra repójának alapértelmezett ágából.
+  - Adjon hozzá issue- és pull request-sablonokat a kvízekhez és beadásokhoz.
+  - Opcionálisan konfiguráljon automatikus értékelést és teszteket, ha az órák tartalmazzák ezeket.
+- Hasznos konvenciók:
+  - Repónevek, mint például lesson-01-intro, lesson-02-html stb.
+  - Címkék: quiz, assignment, needs-review, late, resubmission.
+  - Címkék/kiadások csoportonként (pl. v2025-term1).
 
-## Használata Moodle-ben, Canvasben vagy Blackboardban
+Tipp: Kerülje a repók szinkronizált mappákban (pl. OneDrive/Google Drive) való tárolását, hogy elkerülje a Git konfliktusokat Windows rendszeren.
 
-Ez a tananyag jól működik ezekben a tanulásmenedzsment rendszerekben! Használja a [Moodle feltöltési fájlt](../../../../../../../teaching-files/webdev-moodle.mbz) a teljes tartalomhoz, vagy próbálja ki a [Common Cartridge fájlt](../../../../../../../teaching-files/webdev-common-cartridge.imscc), amely néhány tartalmat tartalmaz. A Moodle Cloud nem támogatja a teljes Common Cartridge exportokat, ezért célszerűbb a Moodle letöltési fájlt használni, amely feltölthető a Canvasba. Kérjük, ossza meg velünk, hogyan javíthatnánk ezen az élményen.
+### Használat Moodle, Canvas vagy Blackboard platformmal
+
+Ez a tananyag importálható csomagokat tartalmaz a gyakori LMS munkafolyamatokhoz.
+
+- Moodle: Használja a Moodle feltöltési fájlt [Moodle feltöltési fájl](../../../../../../../teaching-files/webdev-moodle.mbz) a teljes kurzus betöltéséhez.
+- Common Cartridge: Használja a Common Cartridge fájlt [Common Cartridge fájl](../../../../../../../teaching-files/webdev-common-cartridge.imscc) a szélesebb LMS kompatibilitás érdekében.
+- Megjegyzések:
+  - A Moodle Cloud korlátozott Common Cartridge támogatással rendelkezik. Előnyben részesítse a fenti Moodle fájlt, amely Canvasba is feltölthető.
+  - Az importálás után ellenőrizze a modulokat, határidőket és kvízbeállításokat, hogy illeszkedjenek az Ön tanévi ütemtervéhez.
 
 ![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.hu.png)
 > A tananyag egy Moodle osztályteremben
 
 ![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.hu.png)
-> A tananyag a Canvasben
+> A tananyag a Canvasban
 
-## A repó használata jelenlegi formájában
+### A repó közvetlen használata (Classroom nélkül)
 
-Ha szeretné a repót a jelenlegi formájában használni, GitHub Classroom nélkül, az is lehetséges. Ebben az esetben kommunikálnia kell a diákjaival, hogy melyik leckén dolgozzanak együtt.
+Ha nem szeretné használni a GitHub Classroomot, a kurzust közvetlenül ebből a repóból is futtathatja.
 
-Online formátumban (Zoom, Teams vagy más) például létrehozhat csoportszobákat a kvízekhez, és mentorálhatja a diákokat, hogy felkészüljenek a tanulásra. Ezután meghívhatja a diákokat a kvízekre, és kérheti, hogy egy adott időpontban 'issues' formájában nyújtsák be a válaszaikat. Ugyanezt megteheti a feladatokkal is, ha azt szeretné, hogy a diákok nyíltan, együttműködve dolgozzanak.
+- Szinkron/online formátumok (Zoom/Teams):
+  - Tartson rövid mentorált bemelegítéseket; használjon breakout szobákat a kvízekhez.
+  - Jelöljön ki egy időablakot a kvízekhez; a diákok GitHub Issue-ként nyújtsák be a válaszaikat.
+  - Együttműködő feladatokhoz a diákok nyilvános óra repókban dolgoznak, és pull requesteket nyitnak.
+- Privát/aszinkron formátumok:
+  - A diákok forkolják az egyes órákat saját **privát** repóikba, és adják hozzá Önt mint közreműködőt.
+  - Issue-ként (kvízek) és Pull Requestként (feladatok) nyújtsák be a beadásokat az Ön osztálytermi repójában vagy a saját privát forkjaikban.
 
-Ha inkább egy privátabb formátumot részesít előnyben, kérje meg a diákjait, hogy forkolják a tananyagot, leckéről leckére, saját GitHub repóikba privát repóként, és adjanak Önnek hozzáférést. Ezután a diákok privát módon kitölthetik a kvízeket és feladatokat, és azokat az Ön osztálytermi repóján keresztül issues formájában nyújthatják be.
+### Legjobb gyakorlatok
 
-Számos módja van annak, hogy ez működjön egy online osztálytermi formátumban. Kérjük, ossza meg velünk, hogy Önnek mi működik a legjobban!
+- Tartson egy orientációs órát a Git/GitHub alapokról, Issue-król és PR-ekről.
+- Használjon ellenőrzőlistákat az Issue-kban a több lépéses kvízekhez/feladatokhoz.
+- Adjon hozzá CONTRIBUTING.md és CODE_OF_CONDUCT.md fájlokat az osztálytermi normák meghatározásához.
+- Adjon hozzá akadálymentességi megjegyzéseket (alt szöveg, feliratok), és kínáljon nyomtatható PDF-eket.
+- Verziózza a tartalmat tanévenként, és fagyassza be az óra repókat a közzététel után.
 
-## Kérjük, ossza meg velünk a véleményét!
+### Visszajelzés és támogatás
 
-Szeretnénk, ha ez a tananyag az Ön és a diákjai számára is megfelelően működne. Vegye fel velünk a kapcsolatot a [Tanári sarokban](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner), és nyisson egy [**új issue-t**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) bármilyen kérés, hiba vagy visszajelzés esetén.
+Azt szeretnénk, hogy ez a tananyag működjön Önnek és a diákjainak. Kérjük, nyisson egy új Issue-t ebben a repóban hibák, kérések vagy fejlesztések esetén, vagy kezdjen egy beszélgetést a Teacher Cornerben.
 
 ---
 
 **Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével került lefordításra. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével került lefordításra. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

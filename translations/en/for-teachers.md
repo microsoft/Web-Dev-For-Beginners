@@ -1,25 +1,46 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-28T11:13:15+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T08:19:51+00:00",
   "source_file": "for-teachers.md",
   "language_code": "en"
 }
 -->
-## For Educators
+### For Educators
 
-Would you like to use this curriculum in your classroom? Feel free to do so!
+Feel free to use this curriculum in your classroom. It integrates smoothly with GitHub Classroom and popular LMS platforms, and it can also be used as a standalone repository with your students.
 
-In fact, you can use it directly on GitHub by leveraging GitHub Classroom.
+### Using GitHub Classroom
 
-To get started, fork this repository. You'll need to create a separate repository for each lesson, so you'll need to extract each folder into its own repository. This way, [GitHub Classroom](https://classroom.github.com/classrooms) can handle each lesson individually.
+To manage lessons and assignments for each cohort, create a separate repository for each lesson so GitHub Classroom can link each assignment individually.
 
-These [detailed instructions](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) will guide you on how to set up your classroom.
+- Fork this repository to your organization.
+- Create a dedicated repository for each lesson by extracting each lesson folder into its own repository.
+  - Option A: Create empty repositories (one per lesson) and copy the contents of the lesson folder into each.
+  - Option B: Use a method that preserves Git history (e.g., splitting a folder into a new repository) if you need to maintain provenance.
+- In GitHub Classroom, set up an assignment for each lesson and link it to the corresponding lesson repository.
+- Recommended settings:
+  - Repository visibility: private for student submissions.
+  - Use starter code from the default branch of the lesson repository.
+  - Add issue and pull request templates for quizzes and submissions.
+  - Optionally configure autograding and tests if your lessons include them.
+- Helpful conventions:
+  - Repository names like lesson-01-intro, lesson-02-html, etc.
+  - Labels: quiz, assignment, needs-review, late, resubmission.
+  - Tags/releases for each cohort (e.g., v2025-term1).
 
-## Using it in Moodle, Canvas, or Blackboard
+Tip: Avoid storing repositories in synced folders (e.g., OneDrive/Google Drive) to prevent Git conflicts on Windows.
 
-This curriculum is compatible with these Learning Management Systems! You can use the [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) for the complete content or try the [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc), which includes part of the content. Note that Moodle Cloud does not support full Common Cartridge exports, so it's better to use the Moodle download file, which can also be uploaded into Canvas. Let us know how we can enhance this experience for you.
+### Using Moodle, Canvas, or Blackboard
+
+This curriculum includes importable packages for common LMS workflows.
+
+- Moodle: Use the Moodle upload file [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) to load the entire course.
+- Common Cartridge: Use the Common Cartridge file [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) for broader LMS compatibility.
+- Notes:
+  - Moodle Cloud has limited support for Common Cartridge files. Prefer the Moodle file above, which can also be uploaded into Canvas.
+  - After importing, review modules, due dates, and quiz settings to align with your term schedule.
 
 ![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.en.png)
 > The curriculum displayed in a Moodle classroom
@@ -27,21 +48,31 @@ This curriculum is compatible with these Learning Management Systems! You can us
 ![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.en.png)
 > The curriculum displayed in Canvas
 
-## Using the repository as is
+### Using the Repository Directly (Without GitHub Classroom)
 
-If you'd prefer to use this repository as it currently stands, without GitHub Classroom, that's also an option. You'll need to coordinate with your students on which lesson to work through together.
+If you choose not to use GitHub Classroom, you can run the course directly from this repository.
 
-In an online format (Zoom, Teams, or similar), you could create breakout rooms for quizzes and mentor students to prepare them for learning. Then, invite students to complete the quizzes and submit their answers as 'issues' at a designated time. You could follow the same approach for assignments if you want students to collaborate openly.
+- Synchronous/online formats (Zoom/Teams):
+  - Conduct short mentor-led warmups; use breakout rooms for quizzes.
+  - Announce a time window for quizzes; students submit their answers as GitHub Issues.
+  - For collaborative assignments, students work in public lesson repositories and submit pull requests.
+- Private/asynchronous formats:
+  - Students fork each lesson into their own **private** repositories and add you as a collaborator.
+  - They submit via Issues (quizzes) and Pull Requests (assignments) on your classroom repository or their private forks.
 
-If you'd rather use a more private format, ask your students to fork the curriculum, lesson by lesson, into their own private GitHub repositories and grant you access. This way, they can complete quizzes and assignments privately and submit them to you via issues on your classroom repository.
+### Best Practices
 
-There are many ways to adapt this for an online classroom setting. Let us know what works best for you!
+- Offer an introductory lesson on Git/GitHub basics, Issues, and Pull Requests.
+- Use checklists in Issues for multi-step quizzes/assignments.
+- Add CONTRIBUTING.md and CODE_OF_CONDUCT.md to establish classroom norms.
+- Include accessibility notes (alt text, captions) and provide printable PDFs.
+- Version your content for each term and freeze lesson repositories after publishing.
 
-## Please share your feedback!
+### Feedback and Support
 
-We want this curriculum to be as effective as possible for you and your students. Connect with us in the [Teacher corner](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) and open a [**new issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) to share your requests, report bugs, or provide feedback.
+We want this curriculum to be effective for you and your students. Please open a new Issue in this repository for bugs, suggestions, or improvements, or start a discussion in the Teacher Corner.
 
 ---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

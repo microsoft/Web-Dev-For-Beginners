@@ -1,47 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-28T07:29:50+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T10:42:19+00:00",
   "source_file": "for-teachers.md",
   "language_code": "ro"
 }
 -->
-## Pentru educatori
+### Pentru educatori
 
-Doriți să folosiți acest curriculum în sala de clasă? Vă rugăm să o faceți!
+Sunteți bineveniți să utilizați acest curriculum în sala de clasă. Funcționează perfect cu GitHub Classroom și platformele LMS de top și poate fi folosit și ca un depozit independent împreună cu elevii.
 
-De fapt, îl puteți utiliza direct pe GitHub, folosind GitHub Classroom.
+### Utilizare cu GitHub Classroom
 
-Pentru a face acest lucru, creați un fork al acestui repo. Va trebui să creați un repo pentru fiecare lecție, așa că va trebui să extrageți fiecare folder într-un repo separat. Astfel, [GitHub Classroom](https://classroom.github.com/classrooms) poate prelua fiecare lecție separat.
+Pentru a gestiona lecțiile și temele pe cohortă, creați un depozit separat pentru fiecare lecție, astfel încât GitHub Classroom să poată atașa fiecare temă în mod independent.
 
-Aceste [instrucțiuni complete](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) vă vor oferi o idee despre cum să vă configurați sala de clasă.
+- Faceți fork acestui depozit în organizația dvs.
+- Creați un depozit separat pentru fiecare lecție, extrăgând folderul lecției respective într-un depozit propriu.
+  - Opțiunea A: Creați depozite goale (câte unul pentru fiecare lecție) și copiați conținutul folderului lecției în fiecare.
+  - Opțiunea B: Utilizați o abordare care păstrează istoricul Git (de exemplu, împărțiți un folder într-un nou depozit) dacă aveți nevoie de proveniență.
+- În GitHub Classroom, creați o temă pentru fiecare lecție și indicați către depozitul lecției corespunzătoare.
+- Setări recomandate:
+  - Vizibilitatea depozitului: privat pentru lucrările elevilor.
+  - Utilizați codul de pornire din branch-ul implicit al depozitului lecției.
+  - Adăugați șabloane pentru probleme și cereri de pull pentru chestionare și trimiteri.
+  - Configurați opțional autograding și teste dacă lecțiile dvs. le includ.
+- Convenții utile:
+  - Nume de depozite precum lesson-01-intro, lesson-02-html, etc.
+  - Etichete: quiz, assignment, needs-review, late, resubmission.
+  - Tag-uri/release-uri pe cohortă (de exemplu, v2025-term1).
 
-## Utilizarea în Moodle, Canvas sau Blackboard
+Sfat: Evitați stocarea depozitelor în foldere sincronizate (de exemplu, OneDrive/Google Drive) pentru a preveni conflictele Git pe Windows.
 
-Acest curriculum funcționează bine în aceste sisteme de management al învățării! Utilizați [fișierul de upload pentru Moodle](../../../../../../../teaching-files/webdev-moodle.mbz) pentru conținutul complet sau încercați [fișierul Common Cartridge](../../../../../../../teaching-files/webdev-common-cartridge.imscc), care conține o parte din conținut. Moodle Cloud nu suportă exporturi complete Common Cartridge, așa că este preferabil să utilizați fișierul de descărcare pentru Moodle, care poate fi încărcat în Canvas. Vă rugăm să ne spuneți cum putem îmbunătăți această experiență.
+### Utilizare cu Moodle, Canvas sau Blackboard
+
+Acest curriculum include pachete importabile pentru fluxuri de lucru comune LMS.
+
+- Moodle: Utilizați fișierul de încărcare Moodle [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) pentru a încărca întregul curs.
+- Common Cartridge: Utilizați fișierul Common Cartridge [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) pentru o compatibilitate mai largă cu LMS.
+- Note:
+  - Moodle Cloud are suport limitat pentru Common Cartridge. Preferabil să utilizați fișierul Moodle de mai sus, care poate fi încărcat și în Canvas.
+  - După import, revizuiți modulele, termenele limită și setările chestionarelor pentru a se potrivi cu programul dvs. de semestru.
 
 ![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.ro.png)
-> Curriculumul într-o sală de clasă Moodle
+> Curriculumul într-o clasă Moodle
 
 ![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.ro.png)
 > Curriculumul în Canvas
 
-## Utilizarea repo-ului așa cum este
+### Utilizare directă a depozitului (fără Classroom)
 
-Dacă doriți să utilizați acest repo în forma sa actuală, fără să folosiți GitHub Classroom, acest lucru este posibil. Va trebui să comunicați cu studenții despre lecția pe care să o parcurgeți împreună.
+Dacă preferați să nu utilizați GitHub Classroom, puteți desfășura cursul direct din acest depozit.
 
-În format online (Zoom, Teams sau altul), puteți forma grupuri de lucru pentru quiz-uri și să mentorizați studenții pentru a-i pregăti să învețe. Apoi, invitați studenții să participe la quiz-uri și să își trimită răspunsurile ca 'issues' la un anumit moment. Puteți face același lucru cu temele, dacă doriți ca studenții să lucreze colaborativ, în mod deschis.
+- Formate sincron/online (Zoom/Teams):
+  - Organizați scurte sesiuni de încălzire conduse de mentori; utilizați camere de grup pentru chestionare.
+  - Anunțați un interval de timp pentru chestionare; elevii trimit răspunsurile ca GitHub Issues.
+  - Pentru teme colaborative, elevii lucrează în depozitele publice ale lecțiilor și deschid cereri de pull.
+- Formate private/asinc:
+  - Elevii fac fork fiecărei lecții în propriile depozite **private** și vă adaugă ca colaborator.
+  - Trimit prin Issues (chestionare) și Pull Requests (teme) pe depozitul dvs. de clasă sau pe fork-urile lor private.
 
-Dacă preferați un format mai privat, cereți studenților să facă fork curriculumului, lecție cu lecție, în propriile lor repo-uri GitHub private și să vă ofere acces. Astfel, ei pot completa quiz-uri și teme în mod privat și să vi le trimită prin issues pe repo-ul clasei.
+### Cele mai bune practici
 
-Există multe modalități de a face acest lucru să funcționeze într-un format de clasă online. Vă rugăm să ne spuneți ce funcționează cel mai bine pentru dumneavoastră!
+- Oferiți o lecție de orientare despre bazele Git/GitHub, Issues și PR-uri.
+- Utilizați liste de verificare în Issues pentru chestionare/teme cu mai mulți pași.
+- Adăugați CONTRIBUTING.md și CODE_OF_CONDUCT.md pentru a stabili normele clasei.
+- Includeți note de accesibilitate (text alternativ, subtitrări) și oferiți PDF-uri imprimabile.
+- Versiuneați conținutul pe semestru și înghețați depozitele lecțiilor după publicare.
 
-## Vă rugăm să ne împărtășiți gândurile!
+### Feedback și suport
 
-Dorim să facem acest curriculum să funcționeze pentru dumneavoastră și studenții dumneavoastră. Conectați-vă cu noi la [Colțul profesorilor](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) și deschideți un [**issue nou**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) pentru orice cereri, erori sau feedback.
+Ne dorim ca acest curriculum să funcționeze pentru dvs. și elevii dvs. Vă rugăm să deschideți un nou Issue în acest depozit pentru erori, cereri sau îmbunătățiri, sau să începeți o discuție în Teacher Corner.
 
 ---
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

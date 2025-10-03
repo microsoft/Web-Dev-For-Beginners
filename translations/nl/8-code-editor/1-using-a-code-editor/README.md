@@ -1,174 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T01:02:49+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T10:08:23+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "nl"
 }
 -->
-# Een code-editor gebruiken
+***
 
-Deze les behandelt de basisprincipes van het gebruik van [VSCode.dev](https://vscode.dev), een webgebaseerde code-editor, zodat je wijzigingen kunt aanbrengen in je code en kunt bijdragen aan een project zonder iets op je computer te installeren.
+# Een code-editor gebruiken: Meester worden in [VSCode.dev](https://vscode.dev)
 
-<!----
-TODO: voeg een optionele afbeelding toe
-![Een code-editor gebruiken](../../../../translated_images/webdev101-vscode-dev.f53c14e8dad231ea09d9e07a2db4a01551d2dc6cdf21225038389e11156af023.nl.png)
-> Sketchnote door [Auteur naam](https://example.com)
----->
+**Welkom!**  
+Deze les neemt je mee van de basis tot het gevorderde gebruik van [VSCode.dev](https://vscode.dev)—de krachtige, webgebaseerde code-editor. Je leert hoe je vol vertrouwen code kunt bewerken, projecten kunt beheren, wijzigingen kunt bijhouden, extensies kunt installeren en als een professional kunt samenwerken—allemaal vanuit je browser, zonder installatie.
 
-<!---
-## Pre-Lecture Quiz
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/3)
----->
+***
 
 ## Leerdoelen
 
-In deze les leer je:
+Aan het einde van deze les kun je:
 
-- Een code-editor gebruiken in een codeproject
-- Wijzigingen bijhouden met versiebeheer
-- De editor aanpassen voor ontwikkeling
+- Efficiënt een code-editor gebruiken voor elk project, waar je ook bent
+- Naadloos je werk bijhouden met ingebouwde versiebeheer
+- Je ontwikkelworkflow personaliseren en verbeteren met editor-aanpassingen en extensies
 
-### Vereisten
+***
 
-Voordat je begint, moet je een account aanmaken bij [GitHub](https://github.com). Ga naar [GitHub](https://github.com/) en maak een account aan als je dat nog niet hebt gedaan.
+## Vereisten
 
-### Introductie
+Om te beginnen, **meld je aan voor een gratis [GitHub](https://github.com) account**, waarmee je code-repositories kunt beheren en wereldwijd kunt samenwerken. Als je nog geen account hebt, [maak er hier een aan](https://github.com/).
 
-Een code-editor is een essentieel hulpmiddel voor het schrijven van programma's en het samenwerken aan bestaande codeprojecten. Zodra je de basisprincipes van een editor begrijpt en weet hoe je de functies kunt gebruiken, kun je ze toepassen bij het schrijven van code.
+***
+
+## Waarom een webgebaseerde code-editor gebruiken?
+
+Een **code-editor** zoals VSCode.dev is jouw commandocentrum voor het schrijven, bewerken en beheren van code. Met een intuïtieve interface, talloze functies en directe toegang via de browser kun je:
+
+- Projecten bewerken op elk apparaat
+- Het gedoe van installaties vermijden
+- Direct samenwerken en bijdragen
+
+Zodra je vertrouwd bent met VSCode.dev, ben je klaar om codetaken overal en altijd aan te pakken.
+
+***
 
 ## Aan de slag met VSCode.dev
 
-[VSCode.dev](https://vscode.dev) is een code-editor op het web. Je hoeft niets te installeren om het te gebruiken, net zoals je een andere website opent. Om te beginnen met de editor, open je de volgende link: [https://vscode.dev](https://vscode.dev). Als je niet bent ingelogd bij [GitHub](https://github.com/), volg dan de aanwijzingen om in te loggen of een nieuw account aan te maken en log vervolgens in.
+Ga naar **[VSCode.dev](https://vscode.dev)**—geen installatie, geen downloads. Inloggen met GitHub geeft volledige toegang, inclusief het synchroniseren van je instellingen, extensies en repositories. Als daarom wordt gevraagd, verbind je je GitHub-account.
 
-Zodra het is geladen, zou het er ongeveer zo uit moeten zien:
+Na het laden ziet je werkruimte er zo uit:
 
-![Standaard VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.nl.png)
+![Standaard VSCode.dev](../images/default-vscode-dev heeft drie kernsecties van links naar rechts:
+- **Activiteitenbalk:** De pictogrammen zoals 🔎 (Zoeken), ⚙️ (Instellingen), bestanden, versiebeheer, enz.
+- **Zijbalk:** Verandert van context op basis van het geselecteerde pictogram in de activiteitenbalk (standaard *Verkenner* om bestanden te tonen).
+- **Editor/codegebied:** Het grootste gedeelte aan de rechterkant—waar je daadwerkelijk code bewerkt en bekijkt.
 
-Er zijn drie hoofdsecties, beginnend vanaf de meest linkse kant en bewegend naar rechts:
+Klik door de pictogrammen om functies te verkennen, maar keer terug naar de _Verkenner_ om je plek te behouden.
 
-1. De _activiteitsbalk_ met enkele pictogrammen, zoals het vergrootglas 🔎, het tandwiel ⚙️, en een paar andere.
-2. De uitgebreide activiteitsbalk die standaard de _Explorer_ toont, ook wel de _zijbalk_ genoemd.
-3. En tot slot het codegebied aan de rechterkant.
-
-Klik op elk van de pictogrammen om een ander menu weer te geven. Als je klaar bent, klik je op de _Explorer_ zodat je terug bent waar je begon.
-
-Wanneer je begint met het maken van code of het wijzigen van bestaande code, gebeurt dit in het grootste gebied aan de rechterkant. Je gebruikt dit gebied ook om bestaande code te visualiseren, wat je hierna zult doen.
+***
 
 ## Een GitHub-repository openen
 
-Het eerste wat je nodig hebt, is een GitHub-repository openen. Er zijn meerdere manieren om een repository te openen. In deze sectie zie je twee verschillende manieren waarop je een repository kunt openen om wijzigingen aan te brengen.
+### Methode 1: Vanuit de editor
 
-### 1. Met de editor
+1. Ga naar [VSCode.dev](https://vscode.dev). Klik op **"Open Remote Repository."**
 
-Gebruik de editor zelf om een externe repository te openen. Als je naar [VSCode.dev](https://vscode.dev) gaat, zie je een knop _"Open Remote Repository"_:
+   ![Open remote repository](../../../../8-code-editor/images/open-remote-repository gebruik het _Command Palette_ (Ctrl-Shift-P, of Cmd-Shift-P op Mac).
 
-![Externe repository openen](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.nl.png)
+   ![Paletmenu](../images/palette-menu.pngopen remote repository.”
+   - Selecteer de optie.
+   - Plak de URL van je GitHub-repo (bijv. `https://github.com/microsoft/Web-Dev-For-Beginners`) en druk op Enter.
 
-Je kunt ook de opdrachtpalet gebruiken. De opdrachtpalet is een invoerveld waarin je een woord kunt typen dat deel uitmaakt van een opdracht of actie om de juiste opdracht te vinden en uit te voeren. Gebruik het menu linksboven, selecteer vervolgens _View_, en kies daarna _Command Palette_, of gebruik de volgende sneltoets: Ctrl-Shift-P (op MacOS is dat Command-Shift-P).
+Als het succesvol is, zie je het hele project geladen en klaar om te bewerken!
 
-![Paletmenu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.nl.png)
+***
 
-Wanneer het menu opent, typ je _open remote repository_, en selecteer je de eerste optie. Meerdere repositories waar je deel van uitmaakt of die je onlangs hebt geopend, worden weergegeven. Je kunt ook een volledige GitHub-URL gebruiken om er een te selecteren. Gebruik de volgende URL en plak deze in het veld:
+### Methode 2: Direct via URL
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Transformeer elke GitHub-repo-URL om direct te openen in VSCode.dev door `github.com` te vervangen door `vscode.dev/github`.  
+Bijv.:
 
-✅ Als het succesvol is, zie je alle bestanden van deze repository geladen in de teksteditor.
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-### 2. Met de URL
+Deze functie versnelt snelle toegang tot ELK project.
 
-Je kunt ook direct een URL gebruiken om een repository te laden. Bijvoorbeeld, de volledige URL voor de huidige repository is [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), maar je kunt het GitHub-domein vervangen door `VSCode.dev/github` en de repository direct laden. De resulterende URL zou zijn [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+***
 
-## Bestanden bewerken
+## Bestanden bewerken in je project
 
-Zodra je de repository in de browser/vscode.dev hebt geopend, is de volgende stap het maken van updates of wijzigingen aan het project.
+Zodra je repo is geopend, kun je:
 
-### 1. Een nieuw bestand maken
+### 1. **Een nieuw bestand maken**
+- In de *Verkenner*-zijbalk, navigeer naar de gewenste map of gebruik de hoofdmap.
+- Klik op het pictogram _‘Nieuw bestand ...’_.
+- Geef je bestand een naam, druk op **Enter**, en je bestand verschijnt direct.
 
-Je kunt een bestand maken in een bestaande map of in de hoofdmap. Om een nieuw bestand te maken, open je een locatie/map waar je het bestand wilt opslaan en selecteer je het pictogram _'Nieuw bestand ...'_ op de activiteitsbalk _(links)_, geef het een naam en druk op enter.
+![Maak een nieuw bestand](../images/create-new-file 2. **Bestanden bewerken en opslaan**
 
-![Een nieuw bestand maken](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.nl.png)
+- Klik op een bestand in de *Verkenner* om het te openen in het codegebied.
+- Breng de gewenste wijzigingen aan.
+- VSCode.dev slaat je wijzigingen automatisch op, maar je kunt handmatig opslaan door op Ctrl+S te drukken.
 
-### 2. Een bestand bewerken en opslaan in de repository
+![Bewerk een bestand](../images/edit-a-file.png. **Wijzigingen bijhouden en vastleggen met versiebeheer**
 
-Het gebruik van vscode.dev is handig wanneer je snel updates wilt maken aan je project zonder software lokaal te laden.  
-Om je code bij te werken, klik je op het pictogram 'Explorer', ook te vinden op de activiteitsbalk, om bestanden en mappen in de repository te bekijken.  
-Selecteer een bestand om het te openen in het codegebied, maak je wijzigingen en sla op.
+VSCode.dev heeft geïntegreerd **Git** versiebeheer!
 
-![Een bestand bewerken](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.nl.png)
+- Klik op het _'Source Control'_ pictogram om alle aangebrachte wijzigingen te bekijken.
+- Bestanden in de `Changes` map tonen toevoegingen (groen) en verwijderingen (rood).  
+  ![Bekijk wijzigingen](../images/working-tree.png wijzigingen door op het `+` naast bestanden te klikken om ze voor te bereiden op commit.
+- **Verwijder** ongewenste wijzigingen door op het undo-pictogram te klikken.
+- Typ een duidelijke commit-bericht en klik vervolgens op het vinkje om te committen en te pushen.
 
-Wanneer je klaar bent met het bijwerken van je project, selecteer je het pictogram _`source control`_, dat alle nieuwe wijzigingen bevat die je hebt aangebracht in je repository.
+Om terug te keren naar je repository op GitHub, selecteer je het hamburgermenu linksboven.
 
-Om de wijzigingen te bekijken die je hebt aangebracht, selecteer je de bestanden in de map `Changes` in de uitgebreide activiteitsbalk. Dit opent een 'Working Tree' waarin je visueel de wijzigingen kunt zien die je hebt aangebracht in het bestand. Rood geeft een verwijdering aan, terwijl groen een toevoeging aangeeft.
+![Wijzigingen voorbereiden en committen](../images/edit-vscode.dev uitbreiden met extensies
 
-![Wijzigingen bekijken](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.nl.png)
+Extensies laten je talen, thema's, debuggers en productiviteitstools toevoegen aan VSCode.dev—waardoor je coderen eenvoudiger en leuker wordt.
 
-Als je tevreden bent met de wijzigingen die je hebt aangebracht, beweeg je over de map `Changes` en klik je op de knop `+` om de wijzigingen te stage-en. Stage-en betekent simpelweg dat je je wijzigingen voorbereidt om ze te committen naar GitHub.
+### Extensies zoeken en beheren
 
-Als je echter niet tevreden bent met sommige wijzigingen en ze wilt verwijderen, beweeg je over de map `Changes` en selecteer je het pictogram `undo`.
+- Klik op het **Extensies-pictogram** in de activiteitenbalk.
+- Zoek naar een extensie in het _'Zoek extensies in Marketplace'_ vak.
 
-Typ vervolgens een `commit message` _(Een beschrijving van de wijziging die je hebt aangebracht in het project)_, klik op het `check-pictogram` om te committen en je wijzigingen te pushen.
+  ![Details van extensies](../images/extension-details:
+  - **Geïnstalleerd**: Alle extensies die je hebt toegevoegd
+  - **Populair**: Favorieten uit de industrie
+  - **Aanbevolen**: Afgestemd op jouw workflow
 
-Wanneer je klaar bent met werken aan je project, selecteer je het pictogram `hamburgermenu` linksboven om terug te keren naar de repository op github.com.
+  ![Bekijk extensies](
 
-![Wijzigingen stage-en & committen](../../../../8-code-editor/images/edit-vscode.dev.gif)
+  
 
-## Extensies gebruiken
+***
 
-Het installeren van extensies in VSCode stelt je in staat om nieuwe functies en opties voor een aangepaste ontwikkelomgeving toe te voegen aan je editor om je ontwikkelworkflow te verbeteren. Deze extensies helpen je ook ondersteuning toe te voegen voor meerdere programmeertalen en zijn vaak generieke extensies of taalgebaseerde extensies.
+### 1. **Extensies installeren**
 
-Om door de lijst van alle beschikbare extensies te bladeren, klik je op het pictogram _`Extensies`_ op de activiteitsbalk en begin je de naam van de extensie te typen in het tekstveld met het label _'Search Extensions in Marketplace'_.  
-Je ziet een lijst met extensies, elk met **de naam van de extensie, de naam van de uitgever, een korte beschrijving, het aantal downloads** en **een sterbeoordeling**.
+- Voer de naam van de extensie in bij zoeken, klik erop en bekijk de details in de editor.
+- Klik op de **blauwe Installeren-knop** in de zijbalk _of_ in het hoofdcodegebied.
 
-![Details van extensies](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.nl.png)
+  ![Extensies installeren](../images/install-extension 2. **Extensies aanpassen**
 
-Je kunt ook alle eerder geïnstalleerde extensies bekijken door de map _`Installed`_ uit te vouwen, populaire extensies die door de meeste ontwikkelaars worden gebruikt in de map _`Popular`_ en aanbevolen extensies voor jou, gebaseerd op gebruikers in dezelfde werkruimte of op je recent geopende bestanden, in de map _`Recommended`_.
+- Zoek je geïnstalleerde extensie.
+- Klik op het **Tandwielpictogram** → selecteer _Extensie-instellingen_ om het gedrag naar wens aan te passen.
 
-![Extensies bekijken](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.nl.png)
+  ![Extensie-instellingen aanpassen](../images/extension-settings 3. **Extensies beheren**
+Je kunt:
 
-### 1. Extensies installeren
+- **Uitschakelen:** Tijdelijk een extensie uitschakelen terwijl deze geïnstalleerd blijft
+- **Verwijderen:** Permanent verwijderen als deze niet meer nodig is
 
-Om een extensie te installeren, typ je de naam van de extensie in het zoekveld en klik je erop om aanvullende informatie over de extensie te bekijken in het codegebied zodra deze verschijnt in de uitgebreide activiteitsbalk.
+  Zoek de extensie, klik op het tandwielpictogram en selecteer ‘Uitschakelen’ of ‘Verwijderen,’ of gebruik de blauwe knoppen in het codegebied.
 
-Je kunt op de _blauwe install-knop_ klikken in de uitgebreide activiteitsbalk om te installeren of de install-knop gebruiken die verschijnt in het codegebied zodra je de extensie selecteert om aanvullende informatie te laden.
-
-![Extensies installeren](../../../../8-code-editor/images/install-extension.gif)
-
-### 2. Extensies aanpassen
-
-Na het installeren van de extensie moet je mogelijk het gedrag aanpassen en personaliseren op basis van je voorkeuren. Om dit te doen, selecteer je het pictogram Extensies, en deze keer verschijnt je extensie in de map _Installed_, klik op het _**tandwielpictogram**_ en navigeer naar _Extensions Setting_.
-
-![Extensie-instellingen aanpassen](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.nl.png)
-
-### 3. Extensies beheren
-
-Na het installeren en gebruiken van je extensie biedt vscode.dev opties om je extensie te beheren op basis van verschillende behoeften. Bijvoorbeeld, je kunt ervoor kiezen om:
-
-- **Uitschakelen:** _(Je schakelt een extensie tijdelijk uit wanneer je deze niet meer nodig hebt, maar niet volledig wilt verwijderen)_
-
-    Selecteer de geïnstalleerde extensie in de uitgebreide activiteitsbalk > klik op het tandwielpictogram > selecteer 'Disable' of 'Disable (Workspace)' **OF** Open de extensie in het codegebied en klik op de blauwe Disable-knop.
-
-- **Verwijderen:** Selecteer de geïnstalleerde extensie in de uitgebreide activiteitsbalk > klik op het tandwielpictogram > selecteer 'Uninstall' **OF** Open de extensie in het codegebied en klik op de blauwe Uninstall-knop.
-
----
+***
 
 ## Opdracht
 
-[Maak een cv-website met vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Test je vaardigheden: [Maak een cv-website met vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-<!----
-## Post-Lecture Quiz
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/4)
----->
+***
 
-## Review & Zelfstudie
+## Verdere verkenning en zelfstudie
 
-Lees meer over [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) en enkele van de andere functies ervan.
+- Verdiep je met [de officiële VSCode Web Docs](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Verken geavanceerde werkruimtefuncties, sneltoetsen en instellingen.
+
+***
+
+**Nu ben je klaar om te coderen, creëren en samenwerken—vanuit overal, op elk apparaat, met VSCode.dev!**
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

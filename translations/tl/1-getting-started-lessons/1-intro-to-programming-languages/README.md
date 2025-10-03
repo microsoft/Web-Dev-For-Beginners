@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
-  "translation_date": "2025-08-28T15:53:29+00:00",
+  "original_hash": "2581528206a2a01c3a0b9c88e039b7bc",
+  "translation_date": "2025-10-03T10:24:12+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "tl"
 }
 -->
 # Panimula sa Mga Wika ng Programming at Mga Kasangkapan ng Propesyon
 
-Ang araling ito ay tumatalakay sa mga pangunahing kaalaman ng mga wika ng programming. Ang mga paksang tinalakay dito ay naaangkop sa karamihan ng mga modernong wika ng programming ngayon. Sa seksyong 'Mga Kasangkapan ng Propesyon', matututo ka tungkol sa mga kapaki-pakinabang na software na makakatulong sa iyo bilang isang developer.
+Ang araling ito ay tumatalakay sa mga pangunahing kaalaman ng mga wika ng programming. Ang mga paksang tinatalakay dito ay naaangkop sa karamihan ng mga modernong wika ng programming ngayon. Sa seksyong 'Mga Kasangkapan ng Propesyon', matututo ka tungkol sa mga kapaki-pakinabang na software na makakatulong sa iyo bilang isang developer.
 
 ![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.tl.png)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
@@ -30,15 +30,15 @@ Sa araling ito, tatalakayin natin:
 
 ## Ano ang Programming?
 
-Ang programming (kilala rin bilang coding) ay ang proseso ng pagsulat ng mga tagubilin para sa isang device tulad ng computer o mobile device. Isinusulat natin ang mga tagubilin gamit ang isang wika ng programming, na pagkatapos ay binibigyang-kahulugan ng device. Ang mga set ng tagubilin na ito ay maaaring tawaging iba't ibang pangalan, ngunit *program*, *computer program*, *application (app)*, at *executable* ay ilan sa mga sikat na pangalan.
+Ang programming (kilala rin bilang coding) ay ang proseso ng pagsulat ng mga tagubilin para sa isang device tulad ng computer o mobile device. Isinusulat natin ang mga tagubilin gamit ang isang wika ng programming, na pagkatapos ay binibigyang-kahulugan ng device. Ang mga set ng tagubilin na ito ay maaaring tawagin sa iba't ibang pangalan, ngunit *program*, *computer program*, *application (app)*, at *executable* ay ilan sa mga sikat na pangalan.
 
-Ang isang *program* ay maaaring anumang bagay na isinulat gamit ang code; mga website, laro, at mga app sa telepono ay mga programa. Bagama't posible na lumikha ng isang programa nang hindi nagsusulat ng code, ang pinagbabatayan na lohika ay binibigyang-kahulugan ng device at ang lohikang iyon ay malamang na isinulat gamit ang code. Ang isang programang *tumatakbo* o *nagpapatupad* ng code ay nagsasagawa ng mga tagubilin. Ang device na ginagamit mo upang basahin ang araling ito ay tumatakbo ng isang programa upang ipakita ito sa iyong screen.
+Ang isang *program* ay maaaring anumang bagay na isinulat gamit ang code; mga website, laro, at mga app sa telepono ay mga programa. Bagama't posible na lumikha ng isang programa nang hindi nagsusulat ng code, ang pinagbabatayan na lohika ay binibigyang-kahulugan ng device at ang lohikang iyon ay malamang na isinulat gamit ang code. Ang isang program na *tumatakbo* o *nag-eexecute* ng code ay nagsasagawa ng mga tagubilin. Ang device na ginagamit mo upang basahin ang araling ito ay tumatakbo ng isang programa upang ipakita ito sa iyong screen.
 
 ✅ Mag-research ng kaunti: Sino ang itinuturing na unang computer programmer sa mundo?
 
 ## Mga Wika ng Programming
 
-Ang mga wika ng programming ay nagbibigay-daan sa mga developer na magsulat ng mga tagubilin para sa isang device. Ang mga device ay maaari lamang makaintindi ng binary (1s at 0s), at para sa *karamihan* ng mga developer, hindi ito isang epektibong paraan ng komunikasyon. Ang mga wika ng programming ang nagsisilbing tulay ng komunikasyon sa pagitan ng tao at ng computer.
+Ang mga wika ng programming ay nagbibigay-daan sa mga developer na magsulat ng mga tagubilin para sa isang device. Ang mga device ay maaari lamang makaintindi ng binary (1s at 0s), at para sa *karamihan* ng mga developer, hindi ito isang epektibong paraan ng komunikasyon. Ang mga wika ng programming ang nagsisilbing tulay ng komunikasyon sa pagitan ng tao at computer.
 
 Ang mga wika ng programming ay may iba't ibang format at maaaring maglingkod sa iba't ibang layunin. Halimbawa, ang JavaScript ay pangunahing ginagamit para sa mga web application, habang ang Bash ay pangunahing ginagamit para sa mga operating system.
 
@@ -87,13 +87,13 @@ Maniwala ka man o hindi, *pareho lang ang ginagawa nila*: nagpi-print ng Fibonac
 
 ✅ Ang Fibonacci sequence ay [tinukoy](https://en.wikipedia.org/wiki/Fibonacci_number) bilang isang set ng mga numero kung saan ang bawat numero ay ang kabuuan ng dalawang naunang numero, simula sa 0 at 1. Ang unang 10 numero sa Fibonacci sequence ay 0, 1, 1, 2, 3, 5, 8, 13, 21, at 34.
 
-## Mga Elemento ng Isang Programa
+## Mga Elemento ng isang Programa
 
 Ang isang solong tagubilin sa isang programa ay tinatawag na *statement* at karaniwang may karakter o espasyo sa linya na nagmamarka kung saan nagtatapos ang tagubilin, o *terminates*. Ang paraan ng pag-terminate ng isang programa ay nag-iiba sa bawat wika.
 
-Ang mga statement sa loob ng isang programa ay maaaring umasa sa data na ibinigay ng isang user o mula sa ibang lugar upang maisagawa ang mga tagubilin. Ang data ay maaaring magbago kung paano kumikilos ang isang programa, kaya ang mga wika ng programming ay may paraan upang pansamantalang iimbak ang data upang magamit ito sa hinaharap. Ang mga ito ay tinatawag na *variables*. Ang mga variables ay mga statement na nag-uutos sa isang device na i-save ang data sa memory nito. Ang mga variables sa mga programa ay katulad ng mga variables sa algebra, kung saan mayroon silang natatanging pangalan at ang kanilang halaga ay maaaring magbago sa paglipas ng panahon.
+Ang mga statement sa loob ng isang programa ay maaaring umasa sa data na ibinigay ng isang user o mula sa ibang lugar upang maisagawa ang mga tagubilin. Ang data ay maaaring magbago kung paano kumikilos ang isang programa, kaya ang mga wika ng programming ay may paraan upang pansamantalang mag-imbak ng data upang magamit ito sa hinaharap. Ang mga ito ay tinatawag na *variables*. Ang mga variables ay mga statement na nag-uutos sa isang device na i-save ang data sa memory nito. Ang mga variables sa mga programa ay katulad ng mga variables sa algebra, kung saan mayroon silang natatanging pangalan at ang kanilang halaga ay maaaring magbago sa paglipas ng panahon.
 
-May posibilidad na ang ilang mga statement ay hindi maisasagawa ng isang device. Karaniwan itong sinasadya kapag isinulat ng developer o hindi sinasadya kapag nagkaroon ng hindi inaasahang error. Ang ganitong uri ng kontrol sa isang application ay ginagawa itong mas matatag at mas madaling mapanatili. Karaniwan, ang mga pagbabagong ito sa kontrol ay nangyayari kapag natugunan ang ilang mga kondisyon. Ang isang karaniwang statement na ginagamit sa modernong programming upang kontrolin kung paano tumatakbo ang isang programa ay ang `if..else` statement.
+May posibilidad na ang ilang mga statement ay hindi ma-execute ng isang device. Karaniwan, ito ay sinasadya kapag isinulat ng developer o hindi sinasadya kapag nagkaroon ng hindi inaasahang error. Ang ganitong uri ng kontrol sa isang application ay ginagawa itong mas matatag at madaling mapanatili. Karaniwan, ang mga pagbabagong ito sa kontrol ay nangyayari kapag natugunan ang ilang mga kondisyon. Isang karaniwang statement na ginagamit sa modernong programming upang kontrolin kung paano tumatakbo ang isang programa ay ang `if..else` statement.
 
 ✅ Matututo ka pa tungkol sa ganitong uri ng statement sa mga susunod na aralin.
 
@@ -113,9 +113,9 @@ Isa sa pinakamahalagang kasangkapan para sa software development ay ang editor. 
 
 Umaasa ang mga developer sa mga editor para sa ilang karagdagang dahilan:
 
-- *Debugging* ay tumutulong na matuklasan ang mga bug at error sa pamamagitan ng pagdaan sa code, linya bawat linya. Ang ilang editor ay may kakayahan sa debugging; maaari itong i-customize at idagdag para sa mga partikular na wika ng programming.
-- *Syntax highlighting* ay nagdadagdag ng mga kulay at pag-format ng teksto sa code, na ginagawang mas madaling basahin. Karamihan sa mga editor ay nagpapahintulot ng customized syntax highlighting.
-- *Extensions and Integrations* ay mga espesyal na kasangkapan para sa mga developer, gawa ng mga developer. Ang mga kasangkapang ito ay hindi bahagi ng base editor. Halimbawa, maraming developer ang nagdodokumento ng kanilang code upang ipaliwanag kung paano ito gumagana. Maaari silang mag-install ng spell check extension upang matulungan silang makita ang mga typo sa dokumentasyon. Karamihan sa mga extension ay nilalayon para sa paggamit sa loob ng isang partikular na editor, at karamihan sa mga editor ay may paraan upang maghanap ng mga available na extension.
+- *Debugging* ay tumutulong upang matuklasan ang mga bug at error sa pamamagitan ng pagdaan sa code, linya bawat linya. Ang ilang mga editor ay may kakayahan sa debugging; maaari silang i-customize at idagdag para sa mga partikular na wika ng programming.
+- *Syntax highlighting* ay nagdadagdag ng mga kulay at pag-format ng teksto sa code, na ginagawang mas madaling basahin. Karamihan sa mga editor ay nagpapahintulot ng customized na syntax highlighting.
+- *Extensions and Integrations* ay mga espesyal na kasangkapan para sa mga developer, gawa ng mga developer. Ang mga kasangkapang ito ay hindi bahagi ng base editor. Halimbawa, maraming developer ang nagdodokumento ng kanilang code upang ipaliwanag kung paano ito gumagana. Maaari silang mag-install ng spell check extension upang matulungan silang mahanap ang mga typo sa dokumentasyon. Karamihan sa mga extension ay nilalayon para sa paggamit sa loob ng isang partikular na editor, at karamihan sa mga editor ay may paraan upang maghanap ng mga available na extension.
 - *Customization* ay nagbibigay-daan sa mga developer na lumikha ng natatanging development environment na angkop sa kanilang mga pangangailangan. Karamihan sa mga editor ay lubos na nako-customize at maaari ring payagan ang mga developer na lumikha ng mga custom na extension.
 
 #### Mga Sikat na Editor at Web Development Extensions
@@ -147,11 +147,11 @@ Maraming browser ang may *developer tools* (DevTools) na naglalaman ng set ng mg
 
 ### Mga Kasangkapan sa Command Line
 
-Ang ilang mga developer ay mas gusto ang mas hindi graphical na view para sa kanilang pang-araw-araw na gawain at umaasa sa command line upang makamit ito. Ang pagsusulat ng code ay nangangailangan ng malaking dami ng pagta-type at ang ilang mga developer ay mas gustong hindi maantala ang kanilang daloy sa keyboard. Gagamit sila ng mga keyboard shortcut upang magpalipat-lipat sa mga desktop window, magtrabaho sa iba't ibang file, at gumamit ng mga kasangkapan. Karamihan sa mga gawain ay maaaring gawin gamit ang mouse, ngunit ang isang benepisyo ng paggamit ng command line ay marami ang maaaring gawin gamit ang mga kasangkapan sa command line nang hindi kinakailangang magpalipat-lipat sa pagitan ng mouse at keyboard. Isa pang benepisyo ng command line ay ang mga ito ay nako-configure at maaari mong i-save ang isang custom na configuration, baguhin ito sa ibang pagkakataon, at i-import ito sa iba pang development machines. Dahil ang mga development environment ay napaka-natatangi sa bawat developer, ang ilan ay iiwas sa paggamit ng command line, ang ilan ay lubos na umaasa dito, at ang ilan ay mas gusto ang halo ng dalawa.
+Ang ilang mga developer ay mas gusto ang mas hindi graphical na view para sa kanilang pang-araw-araw na gawain at umaasa sa command line upang makamit ito. Ang pagsusulat ng code ay nangangailangan ng malaking dami ng pagta-type at ang ilang mga developer ay mas gustong hindi maistorbo ang kanilang daloy sa keyboard. Gagamit sila ng mga keyboard shortcut upang magpalipat-lipat sa mga desktop window, magtrabaho sa iba't ibang file, at gumamit ng mga kasangkapan. Karamihan sa mga gawain ay maaaring gawin gamit ang mouse, ngunit ang isang benepisyo ng paggamit ng command line ay marami ang maaaring gawin gamit ang mga kasangkapan sa command line nang hindi kinakailangang magpalipat-lipat sa pagitan ng mouse at keyboard. Isa pang benepisyo ng command line ay ang pagiging configurable nito at maaari kang mag-save ng custom na configuration, baguhin ito sa ibang pagkakataon, at i-import ito sa iba pang development machines. Dahil ang mga development environment ay napaka-natatangi sa bawat developer, ang ilan ay iiwas sa paggamit ng command line, ang ilan ay lubos na umaasa dito, at ang ilan ay mas gusto ang halo ng dalawa.
 
 ### Mga Sikat na Opsyon sa Command Line
 
-Ang mga opsyon para sa command line ay nag-iiba batay sa operating system na ginagamit mo.
+Ang mga opsyon para sa command line ay mag-iiba depende sa operating system na ginagamit mo.
 
 *💻 = naka-preinstall sa operating system.*
 
@@ -176,13 +176,13 @@ Ang mga opsyon para sa command line ay nag-iiba batay sa operating system na gin
 
 #### Mga Sikat na Kasangkapan sa Command Line
 
-- [Git](https://git-scm.com/) (💻 sa karamihan ng mga operating system)
+- [Git](https://git-scm.com/) (💻 sa karamihan ng operating systems)
 - [NPM](https://www.npmjs.com/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/cli/)
 
 ### Dokumentasyon
 
-Kapag ang isang developer ay gustong matuto ng bago, malamang na babaling sila sa dokumentasyon upang matutunan kung paano ito gamitin. Madalas na umaasa ang mga developer sa dokumentasyon upang gabayan sila kung paano gamitin nang tama ang mga kasangkapan at wika, at upang makakuha ng mas malalim na kaalaman kung paano ito gumagana.
+Kapag ang isang developer ay gustong matuto ng bago, malamang na babaling sila sa dokumentasyon upang matutunan kung paano ito gamitin. Madalas umaasa ang mga developer sa dokumentasyon upang gabayan sila kung paano gamitin nang tama ang mga kasangkapan at wika, at upang makakuha ng mas malalim na kaalaman kung paano ito gumagana.
 
 #### Mga Sikat na Dokumentasyon sa Web Development
 
@@ -198,20 +198,22 @@ Kapag ang isang developer ay gustong matuto ng bago, malamang na babaling sila s
 
 ## 🚀 Hamon
 
-Ihambing ang ilang mga wika ng programming. Ano ang ilan sa mga natatanging katangian ng JavaScript kumpara sa Java? Paano naman ang COBOL kumpara sa Go?
+Ihambing ang ilang mga wika ng programming. Ano ang mga natatanging katangian ng JavaScript kumpara sa Java? Paano naman ang COBOL kumpara sa Go?
 
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ff-quizzes.netlify.app/web/)
 
-## Review & Self Study
+## Review at Pag-aaral sa Sarili
 
-Mag-aral ng kaunti tungkol sa iba't ibang wika na magagamit ng programmer. Subukang magsulat ng isang linya sa isang wika, at pagkatapos ay isulat ito muli sa dalawa pang wika. Ano ang natutunan mo?
+Mag-aral ng kaunti tungkol sa iba't ibang wika na magagamit ng programmer. Subukang magsulat ng isang linya sa isang wika, at pagkatapos ay isulat ito muli sa dalawa pang iba. Ano ang natutunan mo?
 
 ## Takdang-Aralin
 
 [Reading the Docs](assignment.md)
 
+> Paalala: Kapag pumipili ng mga kasangkapan para sa iyong takdang-aralin, huwag pumili ng mga editor, browser, o mga kasangkapan sa command line na nakalista na sa itaas.
+
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

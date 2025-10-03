@@ -1,25 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3869244ceda606c4969d8cdd82679867",
-  "translation_date": "2025-08-27T22:41:41+00:00",
+  "original_hash": "de0ec12c337394806425c7fd2f003b62",
+  "translation_date": "2025-10-03T10:58:49+00:00",
   "source_file": "2-js-basics/1-data-types/assignment.md",
   "language_code": "sl"
 }
 -->
-# Praksa podatkovnih tipov
+# Vadba podatkovnih tipov
 
 ## Navodila
 
-Predstavljajte si, da ustvarjate nakupovalno košarico. Napišite dokumentacijo o podatkovnih tipih, ki bi jih potrebovali za dokončanje nakupovalne izkušnje. Kako ste prišli do svojih odločitev?
+Predstavljajte si, da ustvarjate nakupovalni voziček. Napišite dokumentacijo o podatkovnih tipih, ki jih potrebujete za popolno nakupovalno izkušnjo. Za vsak podatkovni tip pojasnite, kako in zakaj bi ga uporabili, ter navedite primer. Šest podatkovnih tipov v JavaScriptu so: String, Number, Boolean, Null, Undefined in Object.
 
-## Merila
+## Merila ocenjevanja
 
-Kriterij | Odlično | Zadostno | Potrebna izboljšava
+Merilo | Odlično | Zadostno | Potrebno izboljšanje
 --- | --- | --- | --- |
-||Šest podatkovnih tipov je navedenih in podrobno raziskanih, dokumentirana je njihova uporaba|Štirje podatkovni tipi so raziskani|Raziskana sta dva podatkovna tipa|
+Podatkovni tipi | Vseh šest podatkovnih tipov je navedenih, podrobno raziskanih in dokumentiranih s primeri | Štirje podatkovni tipi so raziskani z nekaj razlage | Dva podatkovna tipa sta raziskana z minimalno razlago |
 
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

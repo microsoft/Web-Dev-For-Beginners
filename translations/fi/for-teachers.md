@@ -1,45 +1,76 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-27T20:02:29+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T10:03:24+00:00",
   "source_file": "for-teachers.md",
   "language_code": "fi"
 }
 -->
-## Opettajille
+### Opettajille
 
-Haluaisitko käyttää tätä opetussuunnitelmaa luokassasi? Ole hyvä ja käytä vapaasti!
+Voit käyttää tätä opetusohjelmaa luokassasi. Se toimii saumattomasti GitHub Classroomin ja johtavien LMS-alustojen kanssa, ja sitä voidaan käyttää myös itsenäisenä repositoriona opiskelijoiden kanssa.
 
-Itse asiassa voit käyttää sitä suoraan GitHubissa hyödyntämällä GitHub Classroomia.
+### Käyttö GitHub Classroomin kanssa
 
-Tätä varten haaroita tämä repositorio. Sinun täytyy luoda repositorio jokaiselle oppitunnille, joten sinun täytyy jakaa jokainen kansio erilliseen repositorioon. Näin [GitHub Classroom](https://classroom.github.com/classrooms) voi käsitellä jokaisen oppitunnin erikseen.
+Hallinnoidaksesi oppitunteja ja tehtäviä ryhmittäin, luo yksi repositorio per oppitunti, jotta GitHub Classroom voi liittää jokaisen tehtävän itsenäisesti.
 
-Nämä [täydelliset ohjeet](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) antavat sinulle käsityksen siitä, miten luokkahuoneesi voi asettaa.
+- Haarauta tämä repositorio organisaatioosi.
+- Luo erillinen repositorio jokaiselle oppitunnille siirtämällä kunkin oppitunnin kansio omaan repositorioon.
+  - Vaihtoehto A: Luo tyhjät repositoriot (yksi per oppitunti) ja kopioi oppitunnin kansion sisältö kuhunkin.
+  - Vaihtoehto B: Käytä Git-historian säilyttävää lähestymistapaa (esim. jaa kansio uuteen repositorioon), jos tarvitset alkuperätietoja.
+- GitHub Classroomissa luo tehtävä per oppitunti ja osoita se vastaavaan oppitunnin repositorioon.
+- Suositellut asetukset:
+  - Repositorion näkyvyys: yksityinen opiskelijoiden töille.
+  - Käytä aloituskoodia oppitunnin repositorion oletushaarasta.
+  - Lisää ongelma- ja pull request -mallit visailuja ja palautuksia varten.
+  - Konfiguroi tarvittaessa automaattinen arviointi ja testit, jos oppitunneilla on niitä.
+- Hyödylliset käytännöt:
+  - Repositorion nimet, kuten lesson-01-intro, lesson-02-html jne.
+  - Tunnisteet: quiz, assignment, needs-review, late, resubmission.
+  - Tagit/julkaisut ryhmittäin (esim. v2025-term1).
 
-## Käyttö Moodle-, Canvas- tai Blackboard-järjestelmissä
+Vinkki: Vältä repositorioiden tallentamista synkronoituihin kansioihin (esim. OneDrive/Google Drive) Git-konfliktien välttämiseksi Windowsissa.
 
-Tämä opetussuunnitelma toimii hyvin näissä oppimisen hallintajärjestelmissä! Käytä [Moodle-tiedostoa](../../../../../../../teaching-files/webdev-moodle.mbz) saadaksesi koko sisällön, tai kokeile [Common Cartridge -tiedostoa](../../../../../../../teaching-files/webdev-common-cartridge.imscc), joka sisältää osan sisällöstä. Moodle Cloud ei tue täydellisiä Common Cartridge -vientejä, joten on suositeltavaa käyttää Moodle-lataustiedostoa, joka voidaan ladata Canvas-järjestelmään. Kerro meille, miten voimme parantaa tätä kokemusta.
+### Käyttö Moodlen, Canvasin tai Blackboardin kanssa
+
+Tämä opetusohjelma sisältää tuontipaketteja yleisiin LMS-työnkulkuihin.
+
+- Moodle: Käytä Moodle-tiedostoa [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) ladataksesi koko kurssin.
+- Common Cartridge: Käytä Common Cartridge -tiedostoa [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) laajempaan LMS-yhteensopivuuteen.
+- Huomioita:
+  - Moodle Cloud tukee rajoitetusti Common Cartridgea. Suosi yllä olevaa Moodle-tiedostoa, joka voidaan myös ladata Canvasiin.
+  - Tuonnin jälkeen tarkista moduulit, määräajat ja visailuasetukset, jotta ne vastaavat lukukautesi aikataulua.
 
 ![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.fi.png)
-> Opetussuunnitelma Moodle-luokkahuoneessa
+> Opetusohjelma Moodle-luokassa
 
 ![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.fi.png)
-> Opetussuunnitelma Canvasissa
+> Opetusohjelma Canvasissa
 
-## Repositorion käyttö sellaisenaan
+### Repositorion käyttö suoraan (ilman Classroomia)
 
-Jos haluat käyttää tätä repositoriota sellaisenaan ilman GitHub Classroomia, sekin onnistuu. Sinun täytyy vain kertoa opiskelijoillesi, minkä oppitunnin parissa työskennellään yhdessä.
+Jos et halua käyttää GitHub Classroomia, voit suorittaa kurssin suoraan tästä repositoriosta.
 
-Verkko-opetuksessa (Zoom, Teams tai muu vastaava) voit muodostaa pienryhmiä visailuja varten ja ohjata opiskelijoita valmistautumaan oppimiseen. Kutsu sitten opiskelijat visailuihin ja pyydä heitä lähettämään vastauksensa 'issueina' tiettyyn aikaan. Voit tehdä saman myös tehtävien kanssa, jos haluat opiskelijoiden työskentelevän yhteistyössä avoimesti.
+- Synkroniset/verkkopohjaiset muodot (Zoom/Teams):
+  - Pidä lyhyitä mentorin vetämiä alkulämmittelyjä; käytä ryhmähuoneita visailuja varten.
+  - Ilmoita visailujen aikaväli; opiskelijat lähettävät vastaukset GitHub Issueina.
+  - Yhteistyötehtäviä varten opiskelijat työskentelevät julkisissa oppituntirepositorioissa ja avaavat pull requesteja.
+- Yksityiset/asynkroniset muodot:
+  - Opiskelijat haarauttavat jokaisen oppitunnin omiin **yksityisiin** repositorioihinsa ja lisäävät sinut yhteistyökumppaniksi.
+  - He palauttavat tehtävät Issueina (visailut) ja Pull Requesteina (tehtävät) luokkasi repositorioon tai omiin yksityisiin haaroihinsa.
 
-Jos haluat mieluummin yksityisemmän lähestymistavan, pyydä opiskelijoita haaroittamaan opetussuunnitelma oppitunti kerrallaan omiin yksityisiin GitHub-repositorioihinsa ja antamaan sinulle käyttöoikeus. Tämän jälkeen he voivat suorittaa visailut ja tehtävät yksityisesti ja lähettää ne sinulle issueina luokkahuoneesi repositorioon.
+### Parhaat käytännöt
 
-On monia tapoja saada tämä toimimaan verkkoluokkahuoneessa. Kerro meille, mikä toimii parhaiten sinulle!
+- Tarjoa orientaatio-oppitunti Git/GitHubin perusteista, Issueista ja PR:stä.
+- Käytä tarkistuslistoja Issueissa monivaiheisia visailuja/tehtäviä varten.
+- Lisää CONTRIBUTING.md ja CODE_OF_CONDUCT.md luokan normeja varten.
+- Lisää saavutettavuusmuistiinpanot (alt-teksti, kuvatekstit) ja tarjoa tulostettavia PDF-tiedostoja.
+- Versioi sisältösi lukukausittain ja jäädytä oppituntirepositoriot julkaisun jälkeen.
 
-## Kerro meille mielipiteesi!
+### Palaute ja tuki
 
-Haluamme tehdä tästä opetussuunnitelmasta toimivan sinulle ja opiskelijoillesi. Ota meihin yhteyttä [Opettajien nurkkauksessa](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) ja avaa [**uusi issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) esittääksesi pyyntöjä, raportoimaan virheitä tai antamaan palautetta.
+Haluamme, että tämä opetusohjelma toimii sinulle ja opiskelijoillesi. Avaa uusi Issue tässä repositoriossa virheiden, pyyntöjen tai parannusten osalta, tai aloita keskustelu Teacher Cornerissa.
 
 ---
 

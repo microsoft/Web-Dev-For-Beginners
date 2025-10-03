@@ -1,156 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T16:56:58+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T11:10:03+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "lt"
 }
 -->
-# Naudojimasis kodo redaktoriumi
+***
 
-Ši pamoka apima pagrindus, kaip naudotis [VSCode.dev](https://vscode.dev) – internetiniu kodo redaktoriumi, kad galėtumėte keisti savo kodą ir prisidėti prie projekto, nieko neįdiegdami savo kompiuteryje.
+# Naudojimasis kodo redaktoriumi: Įvaldykite [VSCode.dev](https://vscode.dev)
+
+**Sveiki atvykę!**  
+Ši pamoka padės jums nuo pagrindų iki pažangaus [VSCode.dev](https://vscode.dev) naudojimo – galingo, internetinio kodo redaktoriaus. Išmoksite užtikrintai redaguoti kodą, valdyti projektus, sekti pakeitimus, diegti plėtinius ir bendradarbiauti kaip profesionalas – visa tai tiesiai iš naršyklės, be jokio diegimo.
+
+***
 
 ## Mokymosi tikslai
 
-Šioje pamokoje išmoksite:
+Pamokos pabaigoje galėsite:
 
-- Naudotis kodo redaktoriumi kodo projekte
-- Sekti pakeitimus naudojant versijų kontrolę
-- Pritaikyti redaktorių programavimui
+- Efektyviai naudoti kodo redaktorių bet kuriame projekte, bet kurioje vietoje
+- Sklandžiai sekti savo darbą naudojant integruotą versijų valdymą
+- Personalizuoti ir optimizuoti savo kūrimo procesą su redaktoriaus pritaikymais ir plėtiniais
 
-### Reikalavimai
+***
 
-Prieš pradėdami, turite susikurti paskyrą [GitHub](https://github.com). Eikite į [GitHub](https://github.com/) ir susikurkite paskyrą, jei dar neturite.
+## Reikalavimai
 
-### Įvadas
+Norėdami pradėti, **užsiregistruokite nemokamai [GitHub](https://github.com) paskyrai**, kuri leidžia valdyti kodo saugyklas ir bendradarbiauti visame pasaulyje. Jei dar neturite paskyros, [sukurkite ją čia](https://github.com/).
 
-Kodo redaktorius yra esminis įrankis programoms rašyti ir bendradarbiauti su esamais kodavimo projektais. Kai suprasite redaktoriaus pagrindus ir kaip naudotis jo funkcijomis, galėsite jas pritaikyti rašydami kodą.
+***
 
-## Darbo pradžia su VSCode.dev
+## Kodėl verta naudoti internetinį kodo redaktorių?
 
-[VSCode.dev](https://vscode.dev) yra internetinis kodo redaktorius. Jums nereikia nieko įdiegti, kad juo naudotumėtės – tai taip paprasta, kaip atidaryti bet kurią kitą svetainę. Norėdami pradėti naudotis redaktoriumi, atidarykite šią nuorodą: [https://vscode.dev](https://vscode.dev). Jei nesate prisijungę prie [GitHub](https://github.com/), vykdykite nurodymus, kad prisijungtumėte arba susikurtumėte naują paskyrą, o tada prisijunkite.
+**Kodo redaktorius**, kaip VSCode.dev, yra jūsų valdymo centras rašant, redaguojant ir valdant kodą. Su intuityvia sąsaja, daugybe funkcijų ir tiesiogine prieiga per naršyklę galite:
 
-Kai redaktorius užsikraus, jis turėtų atrodyti panašiai kaip šiame paveikslėlyje:
+- Redaguoti projektus bet kuriame įrenginyje
+- Vengti diegimo rūpesčių
+- Bendradarbiauti ir prisidėti akimirksniu
 
-![Numatytasis VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.lt.png)
+Kai įvaldysite VSCode.dev, būsite pasiruošę spręsti kodavimo užduotis iš bet kur, bet kada.
 
-Yra trys pagrindinės sekcijos, pradedant nuo kairės ir judant į dešinę:
+***
 
-1. _Veiklos juosta_ su keliais piktogramomis, tokiomis kaip didinamoji stiklo 🔎, krumpliaračio ⚙️ ir kitomis.
-2. Išplėsta veiklos juosta, kuri pagal numatymą yra _Naršyklė_, vadinama _šonine juosta_.
-3. Ir galiausiai kodo sritis dešinėje.
+## Pradžia su VSCode.dev
 
-Spustelėkite kiekvieną piktogramą, kad pamatytumėte skirtingus meniu. Baigę, spustelėkite _Naršyklę_, kad grįžtumėte į pradinę padėtį.
+Eikite į **[VSCode.dev](https://vscode.dev)** – be diegimo, be atsisiuntimų. Prisijungimas su GitHub suteikia pilną prieigą, įskaitant nustatymų, plėtinių ir saugyklų sinchronizavimą. Jei paprašyta, prijunkite savo GitHub paskyrą.
 
-Kai pradėsite kurti kodą arba keisti esamą kodą, tai vyks didžiausioje srityje dešinėje. Šią sritį taip pat naudosite esamam kodui peržiūrėti, ką ir padarysite toliau.
+Įkrovus, jūsų darbo aplinka atrodys taip:
 
-## Atidarykite GitHub saugyklą
+![Numatytasis VSCode.dev](../images/default-vscode-dev turi tris pagrindines sekcijas iš kairės į dešinę:
+- **Veiklos juosta:** Piktogramos, tokios kaip 🔎 (Paieška), ⚙️ (Nustatymai), failai, versijų kontrolė ir kt.
+- **Šoninė juosta:** Keičia kontekstą pagal pasirinktą veiklos juostos piktogramą (numatytasis *Explorer* rodo failus).
+- **Redaktoriaus/kodo sritis:** Didžiausia sekcija dešinėje – čia redaguosite ir peržiūrėsite kodą.
 
-Pirmiausia turite atidaryti GitHub saugyklą. Yra keli būdai, kaip atidaryti saugyklą. Šioje sekcijoje pamatysite du skirtingus būdus, kaip galite atidaryti saugyklą ir pradėti dirbti su pakeitimais.
+Paspauskite piktogramas, kad tyrinėtumėte funkcijas, bet grįžkite į _Explorer_, kad išlaikytumėte vietą.
 
-### 1. Naudojant redaktorių
+***
 
-Naudokite patį redaktorių, kad atidarytumėte nuotolinę saugyklą. Jei eiksite į [VSCode.dev](https://vscode.dev), pamatysite mygtuką _"Open Remote Repository"_:
+## GitHub saugyklos atidarymas
 
-![Atidaryti nuotolinę saugyklą](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.lt.png)
+### Metodas 1: Iš redaktoriaus
 
-Taip pat galite naudoti komandų paletę. Komandų paletė yra įvesties langelis, kuriame galite įvesti bet kurį žodį, susijusį su komanda ar veiksmu, kad rastumėte tinkamą komandą vykdymui. Naudokite meniu viršuje kairėje, tada pasirinkite _View_, o tada _Command Palette_, arba naudokite šį klavišų derinį: Ctrl-Shift-P (MacOS sistemoje tai būtų Command-Shift-P).
+1. Eikite į [VSCode.dev](https://vscode.dev). Spustelėkite **"Open Remote Repository."**
 
-![Paletės meniu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.lt.png)
+   ![Atidaryti nuotolinę saugyklą](../../../../8-code-editor/images/open-remote-repository naudokite _Komandų paletę_ (Ctrl-Shift-P arba Cmd-Shift-P Mac).
 
-Kai meniu atsidarys, įveskite _open remote repository_, o tada pasirinkite pirmąją parinktį. Pasirodys kelios saugyklos, kurių dalimi esate arba kurias neseniai atidarėte. Taip pat galite naudoti pilną GitHub URL, kad pasirinktumėte vieną. Naudokite šį URL ir įklijuokite į langelį:
+   ![Paletės meniu](../images/palette-menu.png atidaryti nuotolinę saugyklą.”
+   - Pasirinkite parinktį.
+   - Įklijuokite savo GitHub saugyklos URL (pvz., `https://github.com/microsoft/Web-Dev-For-Beginners`) ir paspauskite Enter.
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Jei pavyks, pamatysite visą projektą, paruoštą redagavimui!
 
-✅ Jei viskas pavyko, visi šios saugyklos failai bus įkelti į tekstų redaktorių.
+***
 
-### 2. Naudojant URL
+### Metodas 2: Tiesiogiai per URL
 
-Taip pat galite naudoti URL tiesiogiai, kad įkeltumėte saugyklą. Pavyzdžiui, pilnas URL dabartinei saugyklai yra [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), tačiau galite pakeisti GitHub domeną į `VSCode.dev/github` ir tiesiogiai įkelti saugyklą. Rezultatas būtų [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Pakeiskite bet kurį GitHub saugyklos URL, kad jis būtų atidarytas tiesiogiai VSCode.dev, pakeisdami `github.com` į `vscode.dev/github`.  
+Pvz.:
 
-## Redaguokite failus
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-Kai atidarėte saugyklą naršyklėje/vscode.dev, kitas žingsnis būtų atnaujinti ar pakeisti projektą.
+Ši funkcija leidžia greitai pasiekti BET kurį projektą.
 
-### 1. Sukurkite naują failą
+***
 
-Galite sukurti failą esamame aplanke arba šakniniame kataloge/aplanke. Norėdami sukurti naują failą, atidarykite vietą/katalogą, kur norite išsaugoti failą, ir pasirinkite _'New file ...'_ piktogramą veiklos juostoje _(kairėje)_, suteikite failui pavadinimą ir paspauskite Enter.
+## Failų redagavimas projekte
 
-![Sukurti naują failą](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.lt.png)
+Kai jūsų saugykla atidaryta, galite:
 
-### 2. Redaguokite ir išsaugokite failą saugykloje
+### 1. **Sukurti naują failą**
+- *Explorer* šoninėje juostoje eikite į norimą aplanką arba naudokite šaknį.
+- Spustelėkite _‘New file ...’_ piktogramą.
+- Pavadinkite failą, paspauskite **Enter**, ir failas atsiras akimirksniu.
 
-Naudojimasis vscode.dev yra naudingas, kai norite greitai atnaujinti savo projektą, neįkeldami jokios programinės įrangos lokaliai. Norėdami atnaujinti kodą, spustelėkite 'Naršyklės' piktogramą, taip pat esančią veiklos juostoje, kad peržiūrėtumėte failus ir aplankus saugykloje. Pasirinkite failą, kad atidarytumėte jį kodo srityje, atlikite pakeitimus ir išsaugokite.
+![Sukurti naują failą](../images/create-new-file 2. **Redaguoti ir išsaugoti failus**
 
-![Redaguoti failą](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.lt.png)
+- Spustelėkite failą *Explorer*, kad atidarytumėte jį kodo srityje.
+- Atlikite reikiamus pakeitimus.
+- VSCode.dev automatiškai išsaugo jūsų pakeitimus, bet galite paspausti Ctrl+S, kad išsaugotumėte rankiniu būdu.
 
-Kai baigsite atnaujinti projektą, pasirinkite _`source control`_ piktogramą, kurioje yra visi nauji pakeitimai, kuriuos atlikote savo saugykloje.
+![Redaguoti failą](../images/edit-a-file.png. **Sekti ir įsipareigoti pakeitimus su versijų kontrole**
 
-Norėdami peržiūrėti pakeitimus, kuriuos atlikote projekte, pasirinkite failą(-us) aplanke `Changes` išplėstoje veiklos juostoje. Tai atidarys 'Darbo medį', kuriame vizualiai matysite pakeitimus, kuriuos atlikote faile. Raudona spalva rodo pašalinimą iš projekto, o žalia – pridėjimą.
+VSCode.dev turi integruotą **Git** versijų kontrolę!
 
-![Peržiūrėti pakeitimus](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.lt.png)
+- Spustelėkite _'Source Control'_ piktogramą, kad peržiūrėtumėte visus atliktus pakeitimus.
+- Failai `Changes` aplanke rodo papildymus (žalia) ir ištrynimus (raudona).  
+  ![Peržiūrėti pakeitimus](../images/working-tree.png pakeitimus spustelėdami `+` šalia failų, kad pasiruoštumėte įsipareigojimui.
+- **Atšaukti** nepageidaujamus pakeitimus spustelėdami atšaukimo piktogramą.
+- Įveskite aiškią įsipareigojimo žinutę, tada spustelėkite varnelę, kad įsipareigotumėte ir išsiųstumėte.
 
-Jei esate patenkinti atliktais pakeitimais, užveskite pelės žymeklį ant aplanko `Changes` ir spustelėkite mygtuką `+`, kad paruoštumėte pakeitimus. Paruošimas reiškia, kad ruošiate pakeitimus įkelti į GitHub.
+Norėdami grįžti į savo saugyklą GitHub, pasirinkite hamburgerio meniu viršuje kairėje.
 
-Jei vis dėlto nesate patenkinti kai kuriais pakeitimais ir norite juos atmesti, užveskite pelės žymeklį ant aplanko `Changes` ir pasirinkite piktogramą `undo`.
+![Paruošti ir įsipareigoti pakeitimus](../images/edit-vscode.dev Su plėtiniais
 
-Tada įveskite `commit message` _(aprašymą apie pakeitimą, kurį atlikote projekte)_, spustelėkite piktogramą `check`, kad patvirtintumėte ir įkeltumėte pakeitimus.
+Plėtiniai leidžia pridėti kalbas, temas, derintuvus ir produktyvumo įrankius į VSCode.dev – palengvinant jūsų kodavimo procesą ir padarant jį smagesnį.
 
-Baigę darbą su projektu, pasirinkite `hamburger menu icon` viršuje kairėje, kad grįžtumėte į saugyklą github.com.
+### Plėtinių naršymas ir valdymas
 
-![Paruošti ir patvirtinti pakeitimus](../../../../8-code-editor/images/edit-vscode.dev.gif)
+- Spustelėkite **Plėtinių piktogramą** veiklos juostoje.
+- Ieškokite plėtinio _'Search Extensions in Marketplace'_ laukelyje.
 
-## Naudojimasis plėtiniais
+  ![Plėtinių detalės](../images/extension-details:
+  - **Įdiegti**: Visi plėtiniai, kuriuos pridėjote
+  - **Populiarūs**: Pramonės favoritai
+  - **Rekomenduojami**: Pritaikyti jūsų darbo eigai
 
-Plėtinių įdiegimas VSCode leidžia pridėti naujų funkcijų ir pritaikyti redaktoriaus aplinką, kad pagerintumėte savo darbo eigą. Šie plėtiniai taip pat padeda pridėti palaikymą kelioms programavimo kalboms ir dažniausiai yra arba bendrieji plėtiniai, arba kalbos pagrindu sukurti plėtiniai.
+  ![Peržiūrėti plėtinius](
 
-Norėdami peržiūrėti visų galimų plėtinių sąrašą, spustelėkite _`Extensions icon`_ veiklos juostoje ir pradėkite rašyti plėtinio pavadinimą teksto lauke, pažymėtame _'Search Extensions in Marketplace'_.
-Pamatysite plėtinių sąrašą, kuriame bus **plėtinio pavadinimas, leidėjo vardas, vieno sakinio aprašymas, atsisiuntimų skaičius** ir **žvaigždučių įvertinimas**.
+  
 
-![Plėtinių detalės](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.lt.png)
+***
 
-Taip pat galite peržiūrėti visus anksčiau įdiegtus plėtinius, išplėsdami aplanką _`Installed folder`_, populiarius plėtinius, kuriuos naudoja dauguma kūrėjų, aplanke _`Popular folder`_ ir rekomenduojamus plėtinius jums, remiantis vartotojais toje pačioje darbo aplinkoje arba neseniai atidarytais failais aplanke _`recommended folder`_.
+### 1. **Įdiegti plėtinius**
 
-![Peržiūrėti plėtinius](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.lt.png)
+- Įveskite plėtinio pavadinimą paieškoje, spustelėkite jį ir peržiūrėkite detales redaktoriuje.
+- Paspauskite **mėlyną Įdiegti mygtuką** šoninėje juostoje _arba_ pagrindinėje kodo srityje.
 
-### 1. Įdiegti plėtinius
+  ![Įdiegti plėtinius](../images/install-extension 2. **Pritaikyti plėtinius**
 
-Norėdami įdiegti plėtinį, įveskite plėtinio pavadinimą paieškos lauke ir spustelėkite jį, kad peržiūrėtumėte papildomą informaciją apie plėtinį kodo srityje, kai jis pasirodys išplėstoje veiklos juostoje.
+- Suraskite įdiegtą plėtinį.
+- Spustelėkite **Pavaros piktogramą** → pasirinkite _Plėtinio nustatymai_, kad pritaikytumėte elgesį pagal savo poreikius.
 
-Galite spustelėti _mėlyną įdiegimo mygtuką_ išplėstoje veiklos juostoje arba naudoti įdiegimo mygtuką, kuris pasirodo kodo srityje, kai pasirenkate plėtinį, kad įkeltumėte papildomą informaciją.
+  ![Keisti plėtinio nustatymus](../images/extension-settings 3. **Valdyti plėtinius**
+Galite:
 
-![Įdiegti plėtinius](../../../../8-code-editor/images/install-extension.gif)
+- **Išjungti:** Laikinai išjungti plėtinį, paliekant jį įdiegtą
+- **Pašalinti:** Visam laikui pašalinti, jei jo nebereikia
 
-### 2. Pritaikyti plėtinius
+  Suraskite plėtinį, paspauskite Pavaros piktogramą ir pasirinkite ‘Išjungti’ arba ‘Pašalinti’, arba naudokite mėlynus mygtukus kodo srityje.
 
-Įdiegę plėtinį, gali tekti pakeisti jo veikimą ir pritaikyti jį pagal savo poreikius. Norėdami tai padaryti, pasirinkite Plėtinių piktogramą, ir šį kartą jūsų plėtinys pasirodys aplanke _Installed folder_, spustelėkite _**Gear icon**_ ir eikite į _Extensions Setting_.
-
-![Keisti plėtinio nustatymus](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.lt.png)
-
-### 3. Valdyti plėtinius
-
-Įdiegę ir naudodami plėtinį, vscode.dev siūlo galimybes valdyti plėtinį pagal skirtingus poreikius. Pavyzdžiui, galite pasirinkti:
-
-- **Išjungti:** _(Laikinai išjungiate plėtinį, kai jo nebereikia, bet nenorite jo visiškai pašalinti)_
-
-    Pasirinkite įdiegtą plėtinį išplėstoje veiklos juostoje > spustelėkite Gear piktogramą > pasirinkite 'Disable' arba 'Disable (Workspace)' **ARBA** atidarykite plėtinį kodo srityje ir spustelėkite mėlyną Disable mygtuką.
-
-- **Pašalinti:** Pasirinkite įdiegtą plėtinį išplėstoje veiklos juostoje > spustelėkite Gear piktogramą > pasirinkite 'Uninstall' **ARBA** atidarykite plėtinį kodo srityje ir spustelėkite mėlyną Uninstall mygtuką.
-
----
+***
 
 ## Užduotis
 
-[Sukurkite gyvenimo aprašymo svetainę naudodami vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Išbandykite savo įgūdžius: [Sukurkite gyvenimo aprašymo svetainę naudodami vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Peržiūra ir savarankiškas mokymasis
+***
 
-Skaitykite daugiau apie [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) ir kai kurias kitas jo funkcijas.
+## Tolimesnė tyrinėjimo ir savarankiško mokymosi medžiaga
+
+- Gilinkitės su [oficialia VSCode Web dokumentacija](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Tyrinėkite pažangias darbo aplinkos funkcijas, klaviatūros nuorodas ir nustatymus.
+
+***
+
+**Dabar esate pasiruošę koduoti, kurti ir bendradarbiauti – iš bet kur, bet kuriame įrenginyje, naudodami VSCode.dev!**
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.
+**Atsakomybės atsisakymas**:  
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingą interpretaciją, atsiradusią dėl šio vertimo naudojimo.

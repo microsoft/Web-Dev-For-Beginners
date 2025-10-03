@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3869244ceda606c4969d8cdd82679867",
-  "translation_date": "2025-08-27T22:51:40+00:00",
+  "original_hash": "de0ec12c337394806425c7fd2f003b62",
+  "translation_date": "2025-10-03T10:14:35+00:00",
   "source_file": "2-js-basics/1-data-types/assignment.md",
   "language_code": "vi"
 }
 -->
-# Thực Hành Kiểu Dữ Liệu
+# Thực hành Kiểu Dữ Liệu
 
-## Hướng Dẫn
+## Hướng dẫn
 
-Hãy tưởng tượng bạn đang xây dựng một giỏ hàng. Viết một số tài liệu về các kiểu dữ liệu mà bạn cần để hoàn thiện trải nghiệm mua sắm. Làm thế nào bạn đưa ra được các lựa chọn này?
+Hãy tưởng tượng bạn đang xây dựng một giỏ hàng. Viết tài liệu về các kiểu dữ liệu bạn cần để hoàn thiện trải nghiệm mua sắm. Đối với mỗi kiểu dữ liệu, giải thích cách và lý do bạn sử dụng nó, đồng thời cung cấp một ví dụ. Sáu kiểu dữ liệu trong JavaScript là: String, Number, Boolean, Null, Undefined, và Object.
 
-## Tiêu Chí Đánh Giá
+## Tiêu chí đánh giá
 
-Tiêu Chí | Xuất Sắc | Đạt Yêu Cầu | Cần Cải Thiện
+Tiêu chí | Xuất sắc | Đạt yêu cầu | Cần cải thiện
 --- | --- | --- | --- |
-||Sáu kiểu dữ liệu được liệt kê và phân tích chi tiết, giải thích cách sử dụng của chúng|Bốn kiểu dữ liệu được phân tích|Hai kiểu dữ liệu được phân tích|
+Kiểu dữ liệu | Cả sáu kiểu dữ liệu đều được liệt kê, phân tích chi tiết và có ví dụ minh họa | Bốn kiểu dữ liệu được phân tích với một số giải thích | Hai kiểu dữ liệu được phân tích với giải thích tối thiểu |
 
 ---
 

@@ -1,47 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-26T21:25:03+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T10:00:12+00:00",
   "source_file": "for-teachers.md",
   "language_code": "no"
 }
 -->
-## For lærere
+### For lærere
 
-Vil du bruke dette læreplanen i klasserommet ditt? Vær så god, bruk det gjerne!
+Du er velkommen til å bruke dette pensumet i klasserommet ditt. Det fungerer sømløst med GitHub Classroom og ledende LMS-plattformer, og det kan også brukes som et frittstående repo med studentene dine.
 
-Faktisk kan du bruke det direkte i GitHub ved å bruke GitHub Classroom.
+### Bruk med GitHub Classroom
 
-For å gjøre det, lag en fork av dette repoet. Du må opprette et repo for hver leksjon, så du må trekke ut hver mappe til et eget repo. På den måten kan [GitHub Classroom](https://classroom.github.com/classrooms) hente hver leksjon separat.
+For å administrere leksjoner og oppgaver per kohort, opprett ett repository per leksjon slik at GitHub Classroom kan knytte hver oppgave uavhengig.
 
-Disse [fullstendige instruksjonene](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) gir deg en idé om hvordan du setter opp klasserommet ditt.
+- Fork dette repoet til organisasjonen din.
+- Opprett et separat repo for hver leksjon ved å trekke ut hver leksjonsmappe til sitt eget repository.
+  - Alternativ A: Opprett tomme repos (ett per leksjon) og kopier innholdet fra leksjonsmappen inn i hver.
+  - Alternativ B: Bruk en metode som bevarer Git-historikken (f.eks. del en mappe inn i et nytt repo) hvis du trenger opprinnelse.
+- I GitHub Classroom, opprett en oppgave per leksjon og pek den til det tilsvarende leksjonsrepoet.
+- Anbefalte innstillinger:
+  - Repository-synlighet: privat for studentarbeid.
+  - Bruk startkode fra standardgrenen til leksjonsrepoet.
+  - Legg til maler for Issues og Pull Requests for quizzer og innleveringer.
+  - Konfigurer eventuelt autogradering og tester hvis leksjonene dine inkluderer dette.
+- Konvensjoner som hjelper:
+  - Repository-navn som lesson-01-intro, lesson-02-html, osv.
+  - Etiketter: quiz, assignment, needs-review, late, resubmission.
+  - Tags/releases per kohort (f.eks. v2025-term1).
 
-## Bruke det i Moodle, Canvas eller Blackboard
+Tips: Unngå å lagre repositories inne i synkroniserte mapper (f.eks. OneDrive/Google Drive) for å forhindre Git-konflikter på Windows.
 
-Denne læreplanen fungerer godt i disse læringsplattformene! Bruk [Moodle-opplastingsfilen](../../../../../../../teaching-files/webdev-moodle.mbz) for hele innholdet, eller prøv [Common Cartridge-filen](../../../../../../../teaching-files/webdev-common-cartridge.imscc) som inneholder noe av innholdet. Moodle Cloud støtter ikke fullstendige Common Cartridge-eksporter, så det er bedre å bruke Moodle-nedlastingsfilen som kan lastes opp i Canvas. Gi oss gjerne beskjed om hvordan vi kan forbedre denne opplevelsen.
+### Bruk med Moodle, Canvas eller Blackboard
+
+Dette pensumet inkluderer importbare pakker for vanlige LMS-arbeidsflyter.
+
+- Moodle: Bruk Moodle-opplastingsfilen [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) for å laste inn hele kurset.
+- Common Cartridge: Bruk Common Cartridge-filen [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) for bredere LMS-kompatibilitet.
+- Notater:
+  - Moodle Cloud har begrenset støtte for Common Cartridge. Foretrekk Moodle-filen ovenfor, som også kan lastes opp til Canvas.
+  - Etter import, gjennomgå moduler, frister og quiz-innstillinger for å tilpasse til din terminplan.
 
 ![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.no.png)
-> Læreplanen i et Moodle-klasserom
+> Pensumet i et Moodle-klasserom
 
 ![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.no.png)
-> Læreplanen i Canvas
+> Pensumet i Canvas
 
-## Bruke repoet som det er
+### Bruk repoet direkte (uten Classroom)
 
-Hvis du ønsker å bruke dette repoet slik det står, uten å bruke GitHub Classroom, er det også mulig. Du må kommunisere med studentene dine om hvilken leksjon dere skal jobbe med sammen.
+Hvis du foretrekker å ikke bruke GitHub Classroom, kan du kjøre kurset direkte fra dette repoet.
 
-I et nettbasert format (Zoom, Teams eller andre) kan du opprette grupperom for quizene og veilede studentene for å hjelpe dem med å forberede seg på læring. Deretter kan du invitere studentene til quizene og be dem sende inn svarene som 'issues' på et bestemt tidspunkt. Du kan gjøre det samme med oppgaver hvis du ønsker at studentene skal jobbe sammen i det åpne.
+- Synkrone/online formater (Zoom/Teams):
+  - Kjør korte mentorledede oppvarminger; bruk grupperom for quizzer.
+  - Annonser et tidsvindu for quizzer; studentene sender inn svar som GitHub Issues.
+  - For samarbeidsoppgaver, jobber studentene i offentlige leksjonsrepoer og åpner Pull Requests.
+- Private/asynkrone formater:
+  - Studentene forker hver leksjon til sine egne **private** repoer og legger deg til som samarbeidspartner.
+  - De sender inn via Issues (quizzer) og Pull Requests (oppgaver) på ditt klasseromsrepo eller deres private forks.
 
-Hvis du foretrekker et mer privat format, kan du be studentene dine om å forke læreplanen, leksjon for leksjon, til sine egne private GitHub-repoer og gi deg tilgang. Da kan de fullføre quizer og oppgaver privat og sende dem til deg via issues i klasseromsrepoet ditt.
+### Beste praksis
 
-Det finnes mange måter å få dette til å fungere i et nettbasert klasseromsformat. Gi oss beskjed om hva som fungerer best for deg!
+- Gi en orienteringsleksjon om Git/GitHub-grunnleggende, Issues og PRs.
+- Bruk sjekklister i Issues for oppgaver/quizzer med flere steg.
+- Legg til CONTRIBUTING.md og CODE_OF_CONDUCT.md for å sette klasseromsnormer.
+- Legg til tilgjengelighetsnotater (alt-tekst, bildetekster) og tilby utskrivbare PDF-er.
+- Versjoner innholdet ditt per termin og frys leksjonsrepoer etter publisering.
 
-## Gi oss dine tilbakemeldinger!
+### Tilbakemeldinger og støtte
 
-Vi ønsker å gjøre denne læreplanen best mulig for deg og studentene dine. Ta kontakt med oss i [Teacher corner](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) og åpne en [**ny issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) for eventuelle forespørsler, feil og tilbakemeldinger.
+Vi ønsker at dette pensumet skal fungere for deg og studentene dine. Vennligst åpne en ny Issue i dette repoet for feil, forespørsler eller forbedringer, eller start en diskusjon i Teacher Corner.
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

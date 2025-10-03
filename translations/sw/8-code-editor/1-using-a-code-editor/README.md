@@ -1,159 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T10:11:42+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T10:26:59+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "sw"
 }
 -->
-# Kutumia mhariri wa msimbo
+***
 
-Somo hili linashughulikia misingi ya kutumia [VSCode.dev](https://vscode.dev), mhariri wa msimbo unaotumia wavuti, ili uweze kufanya mabadiliko kwenye msimbo wako na kuchangia mradi bila kufunga chochote kwenye kompyuta yako.
+# Kutumia Mhariri wa Nambari: Kumasteri [VSCode.dev](https://vscode.dev)
 
-## Malengo ya kujifunza
+**Karibu!**  
+Somo hili litakuchukua kutoka misingi hadi matumizi ya hali ya juu ya [VSCode.dev](https://vscode.dev)—mhariri wa nambari wa mtandao wenye nguvu. Utajifunza jinsi ya kuhariri nambari kwa ujasiri, kusimamia miradi, kufuatilia mabadiliko, kusakinisha viendelezi, na kushirikiana kama mtaalamu—yote kutoka kwa kivinjari chako, bila haja ya usakinishaji wowote.
 
-Katika somo hili, utajifunza jinsi ya:
+***
 
-- Kutumia mhariri wa msimbo katika mradi wa msimbo
-- Kufuatilia mabadiliko kwa kutumia udhibiti wa toleo
-- Kubinafsisha mhariri kwa ajili ya maendeleo
+## Malengo ya Kujifunza
 
-### Mahitaji ya awali
+Mwisho wa somo hili, utaweza:
 
-Kabla ya kuanza, utahitaji kuunda akaunti na [GitHub](https://github.com). Tembelea [GitHub](https://github.com/) na uunde akaunti ikiwa bado huna.
+- Kutumia mhariri wa nambari kwa ufanisi kwenye mradi wowote, popote
+- Kufuatilia kazi yako kwa urahisi kwa kutumia udhibiti wa toleo lililojengwa ndani
+- Kubinafsisha na kuboresha mtiririko wako wa kazi wa maendeleo kwa kutumia marekebisho ya mhariri na viendelezi
 
-### Utangulizi
+***
 
-Mhariri wa msimbo ni zana muhimu kwa kuandika programu na kushirikiana katika miradi ya msimbo iliyopo. Mara tu unapofahamu misingi ya mhariri na jinsi ya kutumia vipengele vyake, utaweza kuzitumia unapokuwa unaandika msimbo.
+## Mahitaji ya Awali
+
+Ili kuanza, **jisajili kwa akaunti ya bure ya [GitHub](https://github.com)**, ambayo inakuruhusu kusimamia hazina za nambari na kushirikiana duniani kote. Ikiwa huna akaunti bado, [unda moja hapa](https://github.com/).
+
+***
+
+## Kwa Nini Utumie Mhariri wa Nambari wa Mtandao?
+
+**Mhariri wa nambari** kama VSCode.dev ni kituo chako cha amri kwa kuandika, kuhariri, na kusimamia nambari. Ukiwa na kiolesura cha angavu, vipengele vingi, na ufikiaji wa papo hapo kupitia kivinjari, unaweza:
+
+- Kuhariri miradi kwenye kifaa chochote
+- Kuepuka usumbufu wa usakinishaji
+- Kushirikiana na kuchangia mara moja
+
+Ukishazoea VSCode.dev, utakuwa tayari kushughulikia kazi za nambari kutoka popote, wakati wowote.
+
+***
 
 ## Kuanza na VSCode.dev
 
-[VSCode.dev](https://vscode.dev) ni mhariri wa msimbo unaopatikana mtandaoni. Huna haja ya kufunga chochote ili kuitumia, ni kama kufungua tovuti nyingine yoyote. Ili kuanza na mhariri huu, fungua kiungo kifuatacho: [https://vscode.dev](https://vscode.dev). Ikiwa hujaingia kwenye [GitHub](https://github.com/), fuata maagizo ya kuingia au kuunda akaunti mpya kisha uingie.
+Nenda kwenye **[VSCode.dev](https://vscode.dev)**—hakuna usakinishaji, hakuna upakuaji. Kuingia kwa kutumia GitHub kunafungua ufikiaji kamili, ikiwa ni pamoja na kusawazisha mipangilio yako, viendelezi, na hazina. Ukihimizwa, unganisha akaunti yako ya GitHub.
 
-Mara inaposheheni, inapaswa kuonekana kama picha hii:
+Baada ya kupakia, eneo lako la kazi litaonekana hivi:
 
-![Default VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.sw.png)
+![Default VSCode.dev](../images/default-vscode-dev ina sehemu kuu tatu kutoka kushoto kwenda kulia:
+- **Upau wa Shughuli:** Aikoni kama 🔎 (Tafuta), ⚙️ (Mipangilio), faili, udhibiti wa chanzo, n.k.
+- **Upau wa Pembeni:** Hubadilisha muktadha kulingana na aikoni ya upau wa shughuli iliyochaguliwa (chaguo-msingi ni *Explorer* kuonyesha faili).
+- **Eneo la Mhariri/Nambari:** Sehemu kubwa zaidi upande wa kulia—ambapo utaweza kuhariri na kuona nambari.
 
-Kuna sehemu kuu tatu, kuanzia kushoto kabisa na kuelekea kulia:
+Bonyeza aikoni ili kuchunguza vipengele, lakini rudi kwenye _Explorer_ ili kubaki mahali pako.
 
-1. _Activity bar_ ambayo ina ikoni kadhaa, kama kioo cha kukuza 🔎, gia ⚙️, na nyingine chache.
-2. _Side bar_ ambayo kwa kawaida huonesha _Explorer_.
-3. Mwisho, eneo la msimbo upande wa kulia.
+***
 
-Bonyeza kila ikoni ili kuonesha menyu tofauti. Ukimaliza, bonyeza _Explorer_ ili urudi pale ulipoanzia.
+## Kufungua Hazina ya GitHub
 
-Unapoanza kuunda msimbo au kubadilisha msimbo uliopo, itafanyika katika eneo kubwa zaidi upande wa kulia. Utatumia eneo hili pia kuona msimbo uliopo, jambo ambalo utafanya baadaye.
+### Njia ya 1: Kutoka kwa Mhariri
 
-## Kufungua hifadhi ya GitHub
+1. Nenda kwenye [VSCode.dev](https://vscode.dev). Bonyeza **"Open Remote Repository."**
 
-Jambo la kwanza unalohitaji ni kufungua hifadhi ya GitHub. Kuna njia nyingi za kufungua hifadhi. Katika sehemu hii utaona njia mbili tofauti za kufungua hifadhi ili uanze kufanya mabadiliko.
+   ![Open remote repository](../../../../8-code-editor/images/open-remote-repository tumia _Command Palette_ (Ctrl-Shift-P, au Cmd-Shift-P kwenye Mac).
 
-### 1. Kupitia mhariri
+   ![Palette Menu](../images/palette-menu.pngopen remote repository.”
+   - Chagua chaguo hilo.
+   - Bandika URL ya hazina yako ya GitHub (mfano, `https://github.com/microsoft/Web-Dev-For-Beginners`) na bonyeza Enter.
 
-Tumia mhariri kufungua hifadhi ya mbali. Ukienda [VSCode.dev](https://vscode.dev) utaona kitufe cha _"Open Remote Repository"_:
+Ikiwa imefanikiwa, utaona mradi mzima umefunguliwa na uko tayari kuhaririwa!
 
-![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.sw.png)
+***
 
-Unaweza pia kutumia _command palette_. _Command palette_ ni kisanduku cha kuingiza ambapo unaweza kuandika neno lolote linalohusiana na amri au hatua ili kupata amri sahihi ya kutekeleza. Tumia menyu ya juu-kushoto, kisha uchague _View_, na kisha uchague _Command Palette_, au tumia njia ya mkato ya kibodi: Ctrl-Shift-P (kwa MacOS itakuwa Command-Shift-P).
+### Njia ya 2: Mara Moja Kupitia URL
 
-![Palette Menu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.sw.png)
+Badilisha URL yoyote ya hazina ya GitHub kufunguka moja kwa moja kwenye VSCode.dev kwa kubadilisha `github.com` na `vscode.dev/github`.  
+Mfano:
 
-Mara menyu inapofunguka, andika _open remote repository_, kisha uchague chaguo la kwanza. Hifadhi nyingi ambazo ni sehemu yako au ulizofungua hivi karibuni zitaonekana. Unaweza pia kutumia URL kamili ya GitHub kuchagua moja. Tumia URL ifuatayo na ubandike kwenye kisanduku:
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Kipengele hiki kinaharakisha ufikiaji wa haraka wa mradi WOWOTE.
 
-✅ Ikiwa imefanikiwa, utaona faili zote za hifadhi hii zimepakiwa kwenye mhariri wa maandishi.
+***
 
-### 2. Kutumia URL
+## Kuhariri Faili Katika Mradi Wako
 
-Unaweza pia kutumia URL moja kwa moja kupakia hifadhi. Kwa mfano, URL kamili ya hifadhi ya sasa ni [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), lakini unaweza kubadilisha kikoa cha GitHub na `VSCode.dev/github` na kupakia hifadhi moja kwa moja. URL inayotokana itakuwa [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Baada ya hazina yako kufunguliwa, unaweza:
 
-## Kuhariri faili
+### 1. **Kuunda Faili Mpya**
+- Katika upau wa *Explorer*, nenda kwenye folda unayotaka au tumia mzizi.
+- Bonyeza aikoni ya _‘New file ...’_.
+- Taja faili lako, bonyeza **Enter**, na faili lako linaonekana mara moja.
 
-Mara unapofungua hifadhi kwenye kivinjari/vscode.dev, hatua inayofuata itakuwa kufanya masasisho au mabadiliko kwenye mradi.
+![Create a new file](../images/create-new-file 2. **Hariri na Hifadhi Faili**
 
-### 1. Kuunda faili mpya
+- Bonyeza faili kwenye *Explorer* ili kufungua katika eneo la nambari.
+- Fanya mabadiliko yako kama inavyohitajika.
+- VSCode.dev huhifadhi mabadiliko yako kiotomatiki, lakini unaweza kubonyeza Ctrl+S kuhifadhi kwa mkono.
 
-Unaweza kuunda faili ndani ya folda iliyopo, au kuiunda kwenye folda kuu. Ili kuunda faili mpya, fungua eneo/folda unayotaka faili ihifadhiwe na uchague ikoni ya _'New file ...'_ kwenye _activity bar_ (kushoto), ipe jina na bonyeza enter.
+![Edit a file](../images/edit-a-file.png. **Fuatilia & Thibitisha Mabadiliko kwa Udhibiti wa Toleo**
 
-![Create a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.sw.png)
+VSCode.dev ina **Git** iliyojengwa ndani kwa udhibiti wa toleo!
 
-### 2. Kuhariri na kuhifadhi faili kwenye hifadhi
+- Bonyeza aikoni ya _'Source Control'_ ili kuona mabadiliko yote yaliyofanywa.
+- Faili katika folda ya `Changes` zinaonyesha nyongeza (kijani) na kufutwa (nyekundu).  
+  ![View changes](../images/working-tree.png mabadiliko kwa kubonyeza `+` karibu na faili ili kuandaa kwa uthibitisho.
+- **Futa** mabadiliko yasiyotakiwa kwa kubonyeza aikoni ya kurudisha nyuma.
+- Andika ujumbe wa uthibitisho wazi, kisha bonyeza alama ya tiki ili kuthibitisha na kusukuma.
 
-Kutumia vscode.dev ni muhimu kila unapohitaji kufanya masasisho ya haraka kwenye mradi wako bila kupakia programu yoyote ndani ya kompyuta.
+Ili kurudi kwenye hazina yako ya GitHub, chagua menyu ya hamburger juu kushoto.
 
-Ili kusasisha msimbo wako, bonyeza ikoni ya 'Explorer', pia iliyoko kwenye _activity bar_ ili kuona faili na folda kwenye hifadhi. Chagua faili ili kufungua kwenye eneo la msimbo, fanya mabadiliko yako na uhifadhi.
+![Stage & commit changes](../images/edit-vscode.dev na Viendelezi
 
-![Edit a file](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.sw.png)
+Viendelezi hukuruhusu kuongeza lugha, mandhari, zana za kutatua hitilafu, na zana za uzalishaji kwenye VSCode.dev—kufanya maisha yako ya uandishi wa nambari kuwa rahisi na ya kufurahisha.
 
-Mara unapomaliza kusasisha mradi wako, chagua ikoni ya _`source control`_ ambayo ina mabadiliko yote mapya uliyoyafanya kwenye hifadhi yako.
+### Kutafuta na Kusimamia Viendelezi
 
-Ili kuona mabadiliko uliyoyafanya kwenye mradi wako, chagua faili kwenye folda ya `Changes` kwenye _side bar_ iliyopanuliwa. Hii itafungua 'Working Tree' ili kuona mabadiliko uliyoyafanya kwenye faili. Rangi nyekundu inaonesha kilichofutwa, wakati kijani kinaonesha kilichoongezwa.
+- Bonyeza **aikoni ya Viendelezi** kwenye upau wa shughuli.
+- Tafuta kiendelezi kwenye kisanduku cha _'Search Extensions in Marketplace'_.
 
-![View changes](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.sw.png)
+  ![Extension details](../images/extension-details:
+  - **Installed**: Viendelezi vyote ulivyoongeza
+  - **Popular**: Vinavyopendwa na sekta
+  - **Recommended**: Vilivyopendekezwa kwa mtiririko wako wa kazi
 
-Ikiwa unaridhika na mabadiliko uliyoyafanya, weka kipanya juu ya folda ya `Changes` na bonyeza kitufe cha `+` ili kuweka mabadiliko. Kuweka mabadiliko kunamaanisha kuandaa mabadiliko yako ili kuyachapisha kwenye GitHub.
+  ![View extensions](
 
-Ikiwa hujaridhika na baadhi ya mabadiliko na unataka kuyafuta, weka kipanya juu ya folda ya `Changes` na uchague ikoni ya `undo`.
+  
 
-Kisha, andika `commit message` _(Maelezo ya mabadiliko uliyoyafanya kwenye mradi)_, bonyeza ikoni ya tiki ili kuyachapisha.
+***
 
-Mara unapomaliza kufanya kazi kwenye mradi wako, chagua ikoni ya menyu ya hamburger upande wa juu kushoto ili kurudi kwenye hifadhi kwenye github.com.
+### 1. **Sakinisha Viendelezi**
 
-![Stage & commit changes](../../../../8-code-editor/images/edit-vscode.dev.gif)
+- Weka jina la kiendelezi kwenye utafutaji, bonyeza, na kagua maelezo kwenye mhariri.
+- Bonyeza **kitufe cha Bluu cha Sakinisha** kwenye upau wa pembeni _au_ kwenye eneo kuu la nambari.
 
-## Kutumia viendelezi
+  ![Install extensions](../images/install-extension 2. **Binafsisha Viendelezi**
 
-Kufunga viendelezi kwenye VSCode hukuruhusu kuongeza vipengele vipya na chaguo za mazingira ya maendeleo yaliyobinafsishwa kwenye mhariri wako ili kuboresha mtiririko wa kazi wa maendeleo. Viendelezi hivi pia husaidia kuongeza msaada kwa lugha mbalimbali za programu na mara nyingi huwa ni viendelezi vya jumla au vya lugha maalum.
+- Tafuta kiendelezi chako kilichosakinishwa.
+- Bonyeza **aikoni ya Gia** → chagua _Extension Settings_ kurekebisha tabia kulingana na upendeleo wako.
 
-Ili kuvinjari orodha ya viendelezi vyote vinavyopatikana, bonyeza ikoni ya _`Extensions`_ kwenye _activity bar_ na uanze kuandika jina la kiendelezi kwenye kisanduku cha maandishi kilichoandikwa _'Search Extensions in Marketplace'_.
+  ![Modify extension settings](../images/extension-settings 3. **Simamia Viendelezi**
+Unaweza:
 
-Utaona orodha ya viendelezi, kila kimoja kikiwa na **jina la kiendelezi, jina la mchapishaji, maelezo mafupi, idadi ya upakuaji** na **alama za nyota**.
+- **Zima:** Zima kiendelezi kwa muda huku ukiendelea kukiweka
+- **Ondoa:** Kiondoe kabisa ikiwa hakihitajiki tena
 
-![Extension details](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.sw.png)
+  Tafuta kiendelezi, bonyeza aikoni ya Gia, na chagua ‘Disable’ au ‘Uninstall,’ au tumia vitufe vya bluu kwenye eneo la nambari.
 
-Unaweza pia kuona viendelezi vyote vilivyofungwa hapo awali kwa kupanua _`Installed folder`_, viendelezi maarufu vinavyotumiwa na watengenezaji wengi kwenye _`Popular folder`_ na viendelezi vilivyopendekezwa kwa ajili yako ama na watumiaji walioko kwenye mazingira sawa au kulingana na faili ulizofungua hivi karibuni kwenye _`recommended folder`_.
+***
 
-![View extensions](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.sw.png)
+## Kazi
 
-### 1. Kufunga viendelezi
+Jaribu ujuzi wako: [Tengeneza tovuti ya wasifu ukitumia vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-Ili kufunga kiendelezi, andika jina la kiendelezi kwenye kisanduku cha utafutaji na bonyeza juu yake ili kuona maelezo ya ziada kuhusu kiendelezi kwenye eneo la msimbo mara kinapoonekana kwenye _side bar_ iliyopanuliwa.
+***
 
-Unaweza kubonyeza kitufe cha _blue install_ kwenye _side bar_ iliyopanuliwa ili kufunga au kutumia kitufe cha kufunga kinachoonekana kwenye eneo la msimbo mara unapochagua kiendelezi ili kupakia maelezo ya ziada.
+## Uchunguzi Zaidi na Kujifunza Binafsi
 
-![Install extensions](../../../../8-code-editor/images/install-extension.gif)
+- Chunguza zaidi na [Hati Rasmi za VSCode Web](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Chunguza vipengele vya hali ya juu vya eneo la kazi, njia za mkato za kibodi, na mipangilio.
 
-### 2. Kubinafsisha viendelezi
+***
 
-Baada ya kufunga kiendelezi, huenda ukahitaji kurekebisha tabia yake na kuibinafsisha kulingana na mapendeleo yako. Ili kufanya hivyo, chagua ikoni ya Viendelezi, na wakati huu, kiendelezi chako kitaonekana kwenye _Installed folder_, bonyeza _**Gear icon**_ na uende kwenye _Extensions Setting_.
-
-![Modify extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.sw.png)
-
-### 3. Kusimamia viendelezi
-
-Baada ya kufunga na kutumia kiendelezi chako, vscode.dev inatoa chaguo za kusimamia kiendelezi chako kulingana na mahitaji tofauti. Kwa mfano, unaweza kuchagua:
-
-- **Kuzima:** _(Unazima kiendelezi kwa muda ikiwa hukihitaji kwa sasa lakini hutaki kukiondoa kabisa)_
-
-    Chagua kiendelezi kilichofungwa kwenye _side bar_ iliyopanuliwa > bonyeza Gear icon > chagua 'Disable' au 'Disable (Workspace)' **AU** Fungua kiendelezi kwenye eneo la msimbo na bonyeza kitufe cha bluu cha Disable.
-
-- **Kuondoa:** Chagua kiendelezi kilichofungwa kwenye _side bar_ iliyopanuliwa > bonyeza Gear icon > chagua 'Uninstall' **AU** Fungua kiendelezi kwenye eneo la msimbo na bonyeza kitufe cha bluu cha Uninstall.
-
----
-
-## Kazi ya nyumbani
-
-[Unda tovuti ya wasifu ukitumia vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
-
-## Mapitio na Kujisomea
-
-Soma zaidi kuhusu [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) na baadhi ya vipengele vyake vingine.
+**Sasa uko tayari kuandika nambari, kuunda, na kushirikiana—kutoka popote, kwenye kifaa chochote, ukitumia VSCode.dev!**
 
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
