@@ -118,7 +118,7 @@ const MemoryGame = () => {
             onClick={() => handleClick(array.id)}
             className={`aspect-square flex items-center justify-center text-xl transition-all duration-300 font-bold rounded-lg  cursor-pointer ${
               isFlipped(array.id)
-                ? isselectedpairs(array.id)
+                ? isSelectedPairs(array.id)
                   ? "bg-green-500 text-white"
                   : "bg-blue-500 text-white"
                 : "bg-gray-300 text-gray-400 "
