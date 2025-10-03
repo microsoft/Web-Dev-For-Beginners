@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3bea83a071750b68d3c8755f1155f805",
-  "translation_date": "2025-10-03T10:42:44+00:00",
+  "original_hash": "1f45a6242179e3c001907339ab26af87",
+  "translation_date": "2025-10-03T15:25:22+00:00",
   "source_file": "README.md",
   "language_code": "ro"
 }
@@ -19,18 +19,18 @@ CO_OP_TRANSLATOR_METADATA:
 
 [![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://discord.gg/zxKYvhSnVp?WT.mc_id=academic-000002-leestott)  
 
-[![Deschide în Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)  
+# Dezvoltare Web pentru Începători - Un Curriculum  
+
+Învață fundamentele dezvoltării web cu cursul nostru cuprinzător de 12 săptămâni oferit de Microsoft Cloud Advocates. Fiecare dintre cele 24 de lecții explorează JavaScript, CSS și HTML prin proiecte practice precum terarii, extensii de browser și jocuri spațiale. Participă la quiz-uri, discuții și teme practice. Îmbunătățește-ți abilitățile și optimizează-ți retenția cunoștințelor cu pedagogia noastră bazată pe proiecte. Începe călătoria ta în programare astăzi!  
+
+Alătură-te comunității Discord Azure AI Foundry  
 
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)  
 
-Urmați acești pași pentru a începe să utilizați aceste resurse:  
-1. **Forkați Repozitoriul**: Click [![Fork-uri GitHub](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)  
-2. **Clonați Repozitoriul**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`  
-3. [**Alăturați-vă Discordului Azure AI Foundry și întâlniți experți și alți dezvoltatori**](https://discord.com/invite/ByRwuEEgH4)  
-
-# Dezvoltare Web pentru Începători - Un Curriculum  
-
-Învață fundamentele dezvoltării web cu cursul nostru cuprinzător de 12 săptămâni oferit de Microsoft Cloud Advocates. Fiecare dintre cele 24 de lecții explorează JavaScript, CSS și HTML prin proiecte practice precum terarii, extensii de browser și jocuri spațiale. Participă la quiz-uri, discuții și teme practice. Îmbunătățește-ți abilitățile și optimizează-ți reținerea cunoștințelor cu pedagogia noastră bazată pe proiecte. Începe călătoria ta în programare astăzi!  
+Urmează acești pași pentru a începe să folosești aceste resurse:  
+1. **Forkează Repozitoriul**: Click [![Fork-uri GitHub](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)  
+2. **Clonează Repozitoriul**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`  
+3. [**Alătură-te Discordului Azure AI Foundry și întâlnește experți și alți dezvoltatori**](https://discord.com/invite/ByRwuEEgH4)  
 
 ### 🌐 Suport Multi-Limbă  
 
@@ -38,15 +38,17 @@ Urmați acești pași pentru a începe să utilizați aceste resurse:
 
 [Franceză](../fr/README.md) | [Spaniolă](../es/README.md) | [Germană](../de/README.md) | [Rusă](../ru/README.md) | [Arabă](../ar/README.md) | [Persană (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chineză (Simplificată)](../zh/README.md) | [Chineză (Tradițională, Macau)](../mo/README.md) | [Chineză (Tradițională, Hong Kong)](../hk/README.md) | [Chineză (Tradițională, Taiwan)](../tw/README.md) | [Japoneză](../ja/README.md) | [Coreeană](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepaleză](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugheză (Portugalia)](../pt/README.md) | [Portugheză (Brazilia)](../br/README.md) | [Italiană](../it/README.md) | [Poloneză](../pl/README.md) | [Turcă](../tr/README.md) | [Greacă](../el/README.md) | [Thailandeză](../th/README.md) | [Suedeză](../sv/README.md) | [Daneză](../da/README.md) | [Norvegiană](../no/README.md) | [Finlandeză](../fi/README.md) | [Olandeză](../nl/README.md) | [Ebraică](../he/README.md) | [Vietnameză](../vi/README.md) | [Indoneziană](../id/README.md) | [Malayeză](../ms/README.md) | [Tagalog (Filipineză)](../tl/README.md) | [Swahili](../sw/README.md) | [Maghiară](../hu/README.md) | [Cehă](../cs/README.md) | [Slovacă](../sk/README.md) | [Română](./README.md) | [Bulgară](../bg/README.md) | [Sârbă (Chirilică)](../sr/README.md) | [Croată](../hr/README.md) | [Slovenă](../sl/README.md) | [Ucraineană](../uk/README.md) | [Birmaneză (Myanmar)](../my/README.md)  
 
-**Dacă doriți să aveți suport pentru limbi suplimentare, acestea sunt listate [aici](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**  
+**Dacă dorești să fie suportate alte limbi, lista acestora este disponibilă [aici](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**  
+
+[![Deschide în Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)  
 
 #### 🧑‍🎓 _Ești student?_  
 
-Vizitează [**Pagina Hub pentru Studenți**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) unde vei găsi resurse pentru începători, pachete pentru studenți și chiar modalități de a obține un voucher pentru certificare gratuită. Aceasta este pagina pe care vrei să o salvezi și să o verifici periodic, deoarece conținutul este schimbat lunar.  
+Vizitează [**pagina Student Hub**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) unde vei găsi resurse pentru începători, pachete pentru studenți și chiar modalități de a obține un voucher pentru certificare gratuită. Aceasta este pagina pe care vrei să o salvezi și să o verifici periodic, deoarece conținutul este schimbat lunar.  
 
 ### 📣 Anunț - _Proiect Nou de construit folosind AI Generativ_  
 
-Un nou proiect de Asistent AI tocmai a fost adăugat, verifică-l [proiect](./09-chat-project/README.md)  
+Un nou proiect de asistent AI tocmai a fost adăugat, verifică-l [proiect](./09-chat-project/README.md)  
 
 ### 📣 Anunț - _Curriculum Nou_ despre AI Generativ pentru JavaScript tocmai a fost lansat  
 
@@ -67,28 +69,28 @@ Fiecare lecție include o temă de completat, o verificare a cunoștințelor și
 - Generarea de aplicații text și imagine  
 - Aplicații de căutare  
 
-Vizitează [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) pentru a începe!  
+Vizitează [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) pentru a începe!  
 
-## 🌱 Începeți  
+## 🌱 Începe  
 
-> **Profesori**, am [inclus câteva sugestii](for-teachers.md) despre cum să utilizați acest curriculum. Ne-ar plăcea să primim feedback-ul vostru [în forumul nostru de discuții](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!  
+> **Profesori**, am [inclus câteva sugestii](for-teachers.md) despre cum să folosiți acest curriculum. Ne-ar plăcea să primim feedback-ul vostru [în forumul nostru de discuții](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!  
 
 **[Cursanți](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, pentru fiecare lecție, începeți cu un quiz de pre-lectură și continuați cu citirea materialului de curs, completarea diferitelor activități și verificați-vă înțelegerea cu quiz-ul de post-lectură.  
 
 Pentru a îmbunătăți experiența de învățare, conectați-vă cu colegii pentru a lucra împreună la proiecte! Discuțiile sunt încurajate în [forumul nostru de discuții](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), unde echipa noastră de moderatori va fi disponibilă pentru a răspunde întrebărilor voastre.  
 
-Pentru a vă continua educația, recomandăm cu tărie explorarea [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) pentru materiale de studiu suplimentare.  
+Pentru a vă continua educația, recomandăm cu tărie explorarea [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) pentru materiale suplimentare de studiu.  
 
 ### 📋 Configurarea mediului  
 
 Acest curriculum are un mediu de dezvoltare gata de utilizare! Pe măsură ce începeți, puteți alege să rulați curriculum-ul într-un [Codespace](https://github.com/features/codespaces/) (_un mediu bazat pe browser, fără instalări necesare_), sau local pe computerul vostru folosind un editor de text precum [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).  
 
-#### Creați-vă repo-ul  
-Pentru a salva cu ușurință munca voastră, se recomandă să creați propria copie a acestui repo. Puteți face acest lucru făcând clic pe butonul **Use this template** din partea de sus a paginii. Acest lucru va crea un nou repo în contul vostru GitHub cu o copie a curriculum-ului.  
+#### Creați repo-ul vostru  
+Pentru a salva cu ușurință munca voastră, se recomandă să creați o copie proprie a acestui repo. Puteți face acest lucru făcând clic pe butonul **Use this template** din partea de sus a paginii. Acest lucru va crea un nou repo în contul vostru GitHub cu o copie a curriculum-ului.  
 
 Urmați acești pași:  
-1. **Forkați Repozitoriul**: Faceți clic pe butonul "Fork" din colțul din dreapta sus al acestei pagini.  
-2. **Clonați Repozitoriul**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`  
+1. **Forkează Repozitoriul**: Click pe butonul "Fork" din colțul dreapta-sus al acestei pagini.  
+2. **Clonează Repozitoriul**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`  
 
 #### Rularea curriculum-ului într-un Codespace  
 
@@ -100,7 +102,7 @@ Urmați acești pași:
 
 Pentru a rula acest curriculum local pe computerul vostru, veți avea nevoie de un editor de text, un browser și un instrument de linie de comandă. Prima noastră lecție, [Introducere în Limbaje de Programare și Instrumente](../../1-getting-started-lessons/1-intro-to-programming-languages), vă va ghida prin diverse opțiuni pentru fiecare dintre aceste instrumente, astfel încât să selectați ceea ce funcționează cel mai bine pentru voi.  
 
-Recomandarea noastră este să utilizați [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ca editor, care are și un [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) integrat. Puteți descărca Visual Studio Code [aici](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).  
+Recomandarea noastră este să folosiți [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ca editor, care are și un [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) integrat. Puteți descărca Visual Studio Code [aici](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).  
 
 1. Clonați repo-ul vostru pe computer. Puteți face acest lucru făcând clic pe butonul **Code** și copiind URL-ul:  
 
@@ -131,21 +133,21 @@ Recomandarea noastră este să utilizați [Visual Studio Code](https://code.visu
 - lectură suplimentară  
 - temă  
 - [quiz de după lecție](https://ff-quizzes.netlify.app/web/)  
-> **O notă despre chestionare**: Toate chestionarele sunt incluse în folderul Quiz-app, 48 de chestionare în total, fiecare având câte trei întrebări. Acestea sunt disponibile [aici](https://ff-quizzes.netlify.app/web/). Aplicația de chestionare poate fi rulată local sau implementată pe Azure; urmați instrucțiunile din folderul `quiz-app`.
+> **O notă despre chestionare**: Toate chestionarele sunt incluse în folderul Quiz-app, 48 de chestionare în total, fiecare având câte trei întrebări. Ele sunt disponibile [aici](https://ff-quizzes.netlify.app/web/); aplicația de chestionare poate fi rulată local sau implementată pe Azure. Urmați instrucțiunile din folderul `quiz-app`.
 
 ## 🗃️ Lecții
 
-|     |                       Nume Proiect                       |                            Concepte Predate                             | Obiective de Învățare                                                                                                               |                                                         Lecție Legată                                                          |         Autor          |
+|     |                       Nume Proiect                       |                            Concepte Predate                            | Obiective de Învățare                                                                                                               |                                                         Lecție Legată                                                          |         Autor          |
 | :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
-| 01  |                     Introducere                          |           Introducere în Programare și Instrumentele Utilizate          | Învață bazele comune ale majorității limbajelor de programare și despre software-ul care ajută dezvoltatorii profesioniști să-și facă treaba | [Introducere în Limbaje de Programare și Instrumente Utilizate](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
-| 02  |                     Introducere                          |             Bazele GitHub, inclusiv lucrul în echipă                    | Cum să folosești GitHub în proiectul tău, cum să colaborezi cu alții pe o bază de cod                                                |                            [Introducere în GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
-| 03  |                     Introducere                          |                             Accesibilitate                              | Învață bazele accesibilității web                                                                                                   |                       [Fundamentele Accesibilității](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
-| 04  |                        Bazele JS                         |                         Tipuri de Date în JavaScript                    | Bazele tipurilor de date în JavaScript                                                                                              |                                       [Tipuri de Date](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
-| 05  |                        Bazele JS                         |                         Funcții și Metode                               | Învață despre funcții și metode pentru a gestiona fluxul logic al unei aplicații                                                    |                              [Funcții și Metode](./2-js-basics/2-functions-methods/README.md)                               | Jasmine și Christopher |
-| 06  |                        Bazele JS                         |                        Luarea Deciziilor cu JS                          | Învață cum să creezi condiții în codul tău folosind metode de luare a deciziilor                                                    |                                 [Luarea Deciziilor](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
-| 07  |                        Bazele JS                         |                            Arrays și Bucle                              | Lucrează cu date folosind arrays și bucle în JavaScript                                                                             |                                   [Arrays și Bucle](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
+| 01  |                     Începuturi                          |           Introducere în Programare și Instrumentele Utilizate          | Învață fundamentele majorității limbajelor de programare și despre software-ul care ajută dezvoltatorii profesioniști să își facă treaba | [Introducere în Limbaje de Programare și Instrumente Utilizate](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
+| 02  |                     Începuturi                          |             Bazele GitHub, inclusiv lucrul în echipă                    | Cum să folosești GitHub în proiectul tău, cum să colaborezi cu alții pe o bază de cod                                                |                            [Introducere în GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
+| 03  |                     Începuturi                          |                             Accesibilitate                              | Învață elementele de bază ale accesibilității web                                                                                   |                       [Fundamentele Accesibilității](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
+| 04  |                        Bazele JS                        |                         Tipuri de Date în JavaScript                    | Bazele tipurilor de date în JavaScript                                                                                              |                                       [Tipuri de Date](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
+| 05  |                        Bazele JS                        |                         Funcții și Metode                               | Învață despre funcții și metode pentru a gestiona fluxul logic al unei aplicații                                                    |                              [Funcții și Metode](./2-js-basics/2-functions-methods/README.md)                               | Jasmine și Christopher |
+| 06  |                        Bazele JS                        |                        Luarea Deciziilor cu JS                          | Învață cum să creezi condiții în codul tău folosind metode de luare a deciziilor                                                    |                                 [Luarea Deciziilor](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
+| 07  |                        Bazele JS                        |                            Arrays și Bucluri                            | Lucrează cu date folosind arrays și bucle în JavaScript                                                                             |                                   [Arrays și Bucluri](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
 | 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML în Practică                             | Construiește HTML-ul pentru a crea un terrarium online, concentrându-te pe crearea unui layout                                      |                                 [Introducere în HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS în Practică                              | Construiește CSS-ul pentru a stiliza terrarium-ul online, concentrându-te pe bazele CSS, inclusiv pe crearea unei pagini responsive |                                  [Introducere în CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
+| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS în Practică                              | Construiește CSS-ul pentru a stiliza terrarium-ul online, concentrându-te pe elementele de bază ale CSS, inclusiv pe responsivitate |                                  [Introducere în CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
 | 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 Closures în JavaScript, manipularea DOM                 | Construiește JavaScript-ul pentru a face terrarium-ul să funcționeze ca o interfață drag/drop, concentrându-te pe closures și manipularea DOM |                  [Closures în JavaScript, manipularea DOM](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
 | 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          Construiește un Joc de Tastare                 | Învață cum să folosești evenimentele tastaturii pentru a conduce logica aplicației tale JavaScript                                   |                                [Programare Bazată pe Evenimente](./4-typing-game/typing-game/README.md)                                |       Christopher       |
 | 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         Lucrul cu Browsere                              | Învață cum funcționează browserele, istoria lor și cum să creezi primele elemente ale unei extensii de browser                      |                               [Despre Browsere](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
@@ -153,14 +155,14 @@ Recomandarea noastră este să utilizați [Visual Studio Code](https://code.visu
 | 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          Procese de fundal în browser, performanța web                  | Folosește procesele de fundal ale browserului pentru a gestiona iconița extensiei; învață despre performanța web și câteva optimizări |             [Sarcini de Fundal și Performanță](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
 | 15  |           [Space Game](./6-space-game/solution/README.md)           |             Dezvoltare de Jocuri Mai Avansată cu JavaScript             | Învață despre Moștenire folosind atât Clase cât și Compoziție și modelul Pub/Sub, în pregătirea pentru construirea unui joc         |                      [Introducere în Dezvoltarea Avansată de Jocuri](./6-space-game/1-introduction/README.md)                       |          Chris          |
 | 16  |           [Space Game](./6-space-game/solution/README.md)           |                           Desenarea pe canvas                           | Învață despre API-ul Canvas, folosit pentru a desena elemente pe ecran                                                              |                                [Desenarea pe Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
-| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   Mișcarea elementelor pe ecran                         | Descoperă cum elementele pot dobândi mișcare folosind coordonatele carteziene și API-ul Canvas                                      |                           [Mișcarea Elementelor](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
-| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          Detectarea coliziunilor                        | Fă elementele să se ciocnească și să reacționeze unele la altele folosind apăsări de taste și oferă o funcție de cooldown pentru a asigura performanța jocului |                              [Detectarea Coliziunilor](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
+| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   Mișcarea elementelor pe ecran                         | Descoperă cum elementele pot obține mișcare folosind coordonatele carteziene și API-ul Canvas                                       |                           [Mișcarea Elementelor](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          Detectarea coliziunilor                        | Fă elementele să se ciocnească și să reacționeze între ele folosind apăsări de taste și oferă o funcție de cooldown pentru performanța jocului |                              [Detectarea Coliziunilor](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
 | 19  |           [Space Game](./6-space-game/solution/README.md)           |                             Păstrarea scorului                          | Efectuează calcule matematice bazate pe starea și performanța jocului                                                               |                                    [Păstrarea Scorului](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
 | 20  |           [Space Game](./6-space-game/solution/README.md)           |                     Terminarea și reluarea jocului                      | Învață despre terminarea și reluarea jocului, inclusiv curățarea resurselor și resetarea valorilor variabile                        |                                [Condiția de Terminare](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
 | 21  |         [Banking App](./7-bank-project/solution/README.md)          |                 Șabloane HTML și Rute într-o Aplicație Web              | Învață cum să creezi structura arhitecturii unui site web multipagină folosind rutare și șabloane HTML                              |                            [Șabloane HTML și Rute](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
 | 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  Construirea unui Formular de Login și Înregistrare     | Învață despre construirea formularelor și gestionarea rutinei de validare                                                           |                                           [Formulare](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
 | 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   Metode de Preluare și Utilizare a Datelor             | Cum circulă datele în și din aplicația ta, cum să le preiei, să le stochezi și să le elimini                                        |                                            [Date](./7-bank-project/3-data/README.md)                                            |          Yohan          |
-| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      Concepte de Gestionare a Stării                    | Învață cum aplicația ta păstrează starea și cum să o gestionezi programatic                                                         |                                [Gestionarea Stării](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
+| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      Concepte de Gestionare a Stării                   | Învață cum aplicația ta păstrează starea și cum să o gestionezi programatic                                                         |                                [Gestionarea Stării](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
 | 25 | [Browser/VScode Code](../../8-code-editor) | Lucrul cu VScode | Învață cum să folosești un editor de cod | [Utilizarea Editorului de Cod VScode](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
 | 26 | [AI Assistants](./9-chat-project/README.md) | Lucrul cu AI | Învață cum să construiești propriul asistent AI | [Proiect Asistent AI](./9-chat-project/README.md) | Chris |
 
@@ -170,11 +172,11 @@ Curriculum-ul nostru este conceput având în vedere două principii pedagogice 
 * învățare bazată pe proiecte
 * chestionare frecvente
 
-Programul predă fundamentele JavaScript, HTML și CSS, precum și cele mai recente instrumente și tehnici utilizate de dezvoltatorii web de astăzi. Studenții vor avea oportunitatea de a dobândi experiență practică prin construirea unui joc de tastare, a unui terrarium virtual, a unei extensii de browser eco-friendly, a unui joc în stil space-invader și a unei aplicații bancare pentru afaceri. Până la sfârșitul seriei, studenții vor avea o înțelegere solidă a dezvoltării web.
+Programul predă fundamentele JavaScript, HTML și CSS, precum și cele mai noi instrumente și tehnici utilizate de dezvoltatorii web de astăzi. Studenții vor avea oportunitatea de a dobândi experiență practică construind un joc de tastare, un terrarium virtual, o extensie de browser eco-friendly, un joc de tip space-invader și o aplicație bancară pentru afaceri. Până la sfârșitul seriei, studenții vor avea o înțelegere solidă a dezvoltării web.
 
 > 🎓 Puteți parcurge primele câteva lecții din acest curriculum ca [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) pe Microsoft Learn!
 
-Prin asigurarea alinierii conținutului cu proiectele, procesul devine mai captivant pentru studenți, iar retenția conceptelor va fi îmbunătățită. De asemenea, am scris câteva lecții introductive despre bazele JavaScript pentru a introduce concepte, însoțite de un videoclip din colecția "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" de tutoriale video, unii dintre autorii cărora au contribuit la acest curriculum.
+Prin asigurarea alinierii conținutului cu proiectele, procesul devine mai captivant pentru studenți, iar retenția conceptelor va fi îmbunătățită. De asemenea, am scris câteva lecții introductive în JavaScript pentru a introduce concepte, însoțite de un videoclip din colecția "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" de tutoriale video, unii dintre autorii cărora au contribuit la acest curriculum.
 
 În plus, un chestionar cu miză redusă înainte de o clasă setează intenția studentului spre învățarea unui subiect, în timp ce un al doilea chestionar după clasă asigură o retenție suplimentară. Acest curriculum a fost conceput să fie flexibil și distractiv și poate fi parcurs în întregime sau parțial. Proiectele încep mici și devin din ce în ce mai complexe până la sfârșitul ciclului de 12 săptămâni.
 
@@ -194,36 +196,38 @@ Un PDF cu toate lecțiile poate fi găsit [aici](https://microsoft.github.io/Web
 
 Echipa noastră produce și alte cursuri! Verificați:
 
-- [Generative AI for Beginners](https://aka.ms/genai-beginners)
-- [Generative AI for Beginners .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generative AI with JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
-- [Generative AI with Java](https://github.com/microsoft/Generative-AI-for-beginners-java)
-- [AI for Beginners](https://aka.ms/ai-beginners)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners)
-- [ML for Beginners](https://aka.ms/ml-beginners)
-- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101)
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
-- [IoT for Beginners](https://aka.ms/iot-beginners)
-- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot for Agentic use](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming)
-- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [MCP pentru Începători](https://aka.ms/mcp-for-beginners)
+- [Edge AI pentru Începători](https://aka.ms/edgeai-for-beginners)
+- [Agenți AI pentru Începători](https://aka.ms/ai-agents-beginners)
+- [Generative AI pentru Începători .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generative AI cu JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
+- [Generative AI cu Java](https://github.com/microsoft/Generative-AI-for-beginners-java)
+- [AI pentru Începători](https://aka.ms/ai-beginners)
+- [Data Science pentru Începători](https://aka.ms/datascience-beginners)
+- [ML pentru Începători](https://aka.ms/ml-beginners)
+- [Cybersecurity pentru Începători](https://github.com/microsoft/Security-101)
+- [Web Dev pentru Începători](https://aka.ms/webdev-beginners)
+- [IoT pentru Începători](https://aka.ms/iot-beginners)
+- [Dezvoltare XR pentru Începători](https://github.com/microsoft/xr-development-for-beginners)
+- [Stăpânirea GitHub Copilot pentru utilizare agentică](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming)
+- [Stăpânirea GitHub Copilot pentru Dezvoltatori C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Alege-ți propria aventură Copilot](https://github.com/microsoft/CopilotAdventures)
 
 ## Obținerea ajutorului
 
-Dacă întâmpini dificultăți sau ai întrebări despre construirea aplicațiilor AI, alătură-te:
+Dacă întâmpinați dificultăți sau aveți întrebări despre construirea aplicațiilor AI, alăturați-vă:
 
 [![Discord Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Dacă ai feedback despre produs sau întâmpini erori în timpul construirii, vizitează:
+Dacă aveți feedback despre produs sau erori în timpul construirii, vizitați:
 
-[![Forumul dezvoltatorilor Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Forum pentru Dezvoltatori Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licență
 
-Acest depozit este licențiat sub licența MIT. Vezi fișierul [LICENSE](../../LICENSE) pentru mai multe informații.
+Acest depozit este licențiat sub licența MIT. Consultați fișierul [LICENSE](../../LICENSE) pentru mai multe informații.
 
 ---
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

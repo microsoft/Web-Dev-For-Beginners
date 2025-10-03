@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3bea83a071750b68d3c8755f1155f805",
-  "translation_date": "2025-10-03T08:20:05+00:00",
+  "original_hash": "1f45a6242179e3c001907339ab26af87",
+  "translation_date": "2025-10-03T14:33:25+00:00",
   "source_file": "README.md",
   "language_code": "en"
 }
@@ -19,18 +19,18 @@ CO_OP_TRANSLATOR_METADATA:
 
 [![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://discord.gg/zxKYvhSnVp?WT.mc_id=academic-000002-leestott)  
 
-[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)  
+# Web Development for Beginners - A Curriculum  
+
+Learn the basics of web development with this 12-week course created by Microsoft Cloud Advocates. The curriculum includes 24 lessons covering JavaScript, CSS, and HTML through hands-on projects like terrariums, browser extensions, and space games. Engage with quizzes, discussions, and practical assignments to solidify your understanding. This project-based approach ensures effective learning and retention. Start your coding journey today!  
+
+Join the Azure AI Foundry Discord Community  
 
 [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)  
 
-Follow these steps to start using these resources:  
+Follow these steps to begin using these resources:  
 1. **Fork the Repository**: Click [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)  
 2. **Clone the Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`  
 3. [**Join The Azure AI Foundry Discord and connect with experts and fellow developers**](https://discord.com/invite/ByRwuEEgH4)  
-
-# Web Development for Beginners - A Curriculum  
-
-Learn the basics of web development with this 12-week comprehensive course from Microsoft Cloud Advocates. The 24 lessons cover JavaScript, CSS, and HTML through hands-on projects like terrariums, browser extensions, and space games. Engage with quizzes, discussions, and practical assignments. Strengthen your skills and improve knowledge retention with our project-based learning approach. Start your coding journey today!  
 
 ### 🌐 Multi-Language Support  
 
@@ -40,9 +40,11 @@ Learn the basics of web development with this 12-week comprehensive course from 
 
 **If you'd like additional translations, supported languages are listed [here](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**  
 
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)  
+
 #### 🧑‍🎓 _Are you a student?_  
 
-Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) for beginner resources, student packs, and even opportunities to get a free certificate voucher. Bookmark this page and check back regularly as content is updated monthly.  
+Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) for beginner resources, student packs, and even opportunities to earn free certificate vouchers. Bookmark this page and check back regularly as content is updated monthly.  
 
 ### 📣 Announcement - _New Project to build using Generative AI_  
 
@@ -75,15 +77,16 @@ Visit [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) to get st
 
 **[Learners](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, for each lesson, start with a pre-lecture quiz, read the lecture material, complete the activities, and check your understanding with the post-lecture quiz.  
 
-To enhance your learning experience, collaborate with peers on projects! Discussions are encouraged in our [discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), where moderators are available to answer your questions.  
+Enhance your learning experience by collaborating with peers on projects! Join discussions in our [discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), where moderators are available to answer your questions.  
 
-For further learning, explore [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) for additional study materials.  
+For additional study materials, explore [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon).  
 
 ### 📋 Setting up your environment  
 
-This curriculum comes with a ready-to-use development environment! You can choose to run it in a [Codespace](https://github.com/features/codespaces/) (_browser-based, no installation required_), or locally on your computer using a text editor like [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).  
+This curriculum comes with a ready-to-use development environment! You can choose to run it in a [Codespace](https://github.com/features/codespaces/) (_browser-based, no installation required_) or locally on your computer using a text editor like [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).  
 
 #### Create your repository  
+
 To save your work, create your own copy of this repository. Click the **Use this template** button at the top of the page to create a new repository in your GitHub account with a copy of the curriculum.  
 
 Follow these steps:  
@@ -98,7 +101,7 @@ In your copy of this repository, click the **Code** button and select **Open wit
 
 #### Running the curriculum locally on your computer  
 
-To run this curriculum locally, you'll need a text editor, a browser, and a command-line tool. The first lesson, [Introduction to Programming Languages and Tools of the Trade](../../1-getting-started-lessons/1-intro-to-programming-languages), will guide you through various options for these tools so you can choose what works best for you.  
+To run this curriculum locally, you'll need a text editor, a browser, and a command-line tool. The first lesson, [Introduction to Programming Languages and Tools of the Trade](../../1-getting-started-lessons/1-intro-to-programming-languages), will guide you through selecting the tools that work best for you.  
 
 We recommend using [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) as your editor, which includes a built-in [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). You can download Visual Studio Code [here](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).  
 
@@ -112,6 +115,7 @@ We recommend using [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=
     git clone <your-repository-url>
     ```
   
+
 2. Open the folder in Visual Studio Code. Click **File** > **Open Folder** and select the folder you just cloned.  
 
 > Recommended Visual Studio Code extensions:  
@@ -125,7 +129,7 @@ We recommend using [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=
 - Optional supplemental video  
 - Pre-lesson warmup quiz  
 - Written lesson  
-- For project-based lessons, step-by-step guides on how to build the project  
+- Step-by-step guides for project-based lessons  
 - Knowledge checks  
 - A challenge  
 - Supplemental reading  
@@ -137,23 +141,23 @@ We recommend using [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=
 
 |     |                       Project Name                       |                            Concepts Taught                             | Learning Objectives                                                                                                                 |                                                         Linked Lesson                                                          |         Author          |
 | :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
-| 01  |                     Getting Started                      |           Introduction to Programming and Tools of the Trade           | Learn the basic foundations of most programming languages and the software that helps professional developers in their work         | [Intro to Programming Languages and Tools of the Trade](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
+| 01  |                     Getting Started                      |           Introduction to Programming and Tools of the Trade           | Learn the basic principles behind most programming languages and the software that helps professional developers in their work      | [Intro to Programming Languages and Tools of the Trade](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
 | 02  |                     Getting Started                      |             Basics of GitHub, includes working with a team             | Learn how to use GitHub in your project and collaborate with others on a codebase                                                   |                            [Intro to GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
 | 03  |                     Getting Started                      |                             Accessibility                              | Learn the fundamentals of web accessibility                                                                                        |                       [Accessibility Fundamentals](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
 | 04  |                        JS Basics                         |                         JavaScript Data Types                          | Understand the basics of JavaScript data types                                                                                      |                                       [Data Types](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
-| 05  |                        JS Basics                         |                         Functions and Methods                          | Learn about functions and methods to manage the logic flow of an application                                                        |                              [Functions and Methods](./2-js-basics/2-functions-methods/README.md)                               | Jasmine and Christopher |
-| 06  |                        JS Basics                         |                        Making Decisions with JS                        | Learn how to create conditions in your code using decision-making methods                                                           |                                 [Making Decisions](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
+| 05  |                        JS Basics                         |                         Functions and Methods                          | Learn about functions and methods to control the logic flow of an application                                                      |                              [Functions and Methods](./2-js-basics/2-functions-methods/README.md)                               | Jasmine and Christopher |
+| 06  |                        JS Basics                         |                        Making Decisions with JS                        | Learn how to create conditions in your code using decision-making techniques                                                       |                                 [Making Decisions](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
 | 07  |                        JS Basics                         |                            Arrays and Loops                            | Work with data using arrays and loops in JavaScript                                                                                 |                                   [Arrays and Loops](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
 | 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML in Practice                            | Build the HTML to create an online terrarium, focusing on layout creation                                                           |                                 [Introduction to HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
 | 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS in Practice                             | Build the CSS to style the online terrarium, focusing on CSS basics, including making the page responsive                           |                                  [Introduction to CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScript Closures, DOM manipulation                  | Build the JavaScript to make the terrarium function as a drag/drop interface, focusing on closures and DOM manipulation             |                  [JavaScript Closures, DOM manipulation](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
+| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScript Closures, DOM manipulation                  | Build the JavaScript to make the terrarium function as a drag-and-drop interface, focusing on closures and DOM manipulation         |                  [JavaScript Closures, DOM manipulation](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
 | 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          Build a Typing Game                           | Learn how to use keyboard events to drive the logic of your JavaScript app                                                          |                                [Event-Driven Programming](./4-typing-game/typing-game/README.md)                                |       Christopher       |
 | 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         Working with Browsers                          | Learn how browsers work, their history, and how to scaffold the first elements of a browser extension                               |                               [About Browsers](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
 | 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | Building a form, calling an API and storing variables in local storage | Build the JavaScript elements of your browser extension to call an API using variables stored in local storage                      |                [APIs, Forms, and Local Storage](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
-| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          Background processes in the browser, web performance          | Use the browser's background processes to manage the extension's icon; learn about web performance and some optimizations to make   |             [Background Tasks and Performance](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
+| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          Background processes in the browser, web performance          | Use the browser's background processes to manage the extension's icon; learn about web performance and some optimizations           |             [Background Tasks and Performance](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
 | 15  |           [Space Game](./6-space-game/solution/README.md)           |             More Advanced Game Development with JavaScript             | Learn about inheritance using both classes and composition, and the Pub/Sub pattern, in preparation for building a game             |                      [Introduction to Advanced Game Development](./6-space-game/1-introduction/README.md)                       |          Chris          |
 | 16  |           [Space Game](./6-space-game/solution/README.md)           |                           Drawing to canvas                            | Learn about the Canvas API, used to draw elements on a screen                                                                       |                                [Drawing to Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
-| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   Moving elements around the screen                    | Discover how elements can gain motion using Cartesian coordinates and the Canvas API                                                |                           [Moving Elements Around](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   Moving elements around the screen                    | Discover how elements can move using Cartesian coordinates and the Canvas API                                                      |                           [Moving Elements Around](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
 | 18  |           [Space Game](./6-space-game/solution/README.md)           |                          Collision detection                           | Make elements collide and react to each other using keypresses, and provide a cooldown function to ensure game performance          |                              [Collision Detection](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
 | 19  |           [Space Game](./6-space-game/solution/README.md)           |                             Keeping score                              | Perform math calculations based on the game's status and performance                                                                |                                    [Keeping Score](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
 | 20  |           [Space Game](./6-space-game/solution/README.md)           |                     Ending and restarting the game                     | Learn about ending and restarting the game, including cleaning up assets and resetting variable values                              |                                [The Ending Condition](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
@@ -178,7 +182,7 @@ By aligning the content with projects, the learning process becomes more engagin
 
 Additionally, a low-stakes quiz before class helps set the student's focus on the topic, while a second quiz after class reinforces retention. This curriculum is designed to be flexible and enjoyable, and it can be completed in full or in part. The projects start small and gradually increase in complexity over the 12-week cycle.
 
-While we intentionally avoided introducing JavaScript frameworks to focus on the essential skills needed as a web developer before adopting a framework, a good next step after completing this curriculum would be learning about Node.js through another video series: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
+While we intentionally avoided introducing JavaScript frameworks to focus on the foundational skills needed as a web developer before adopting a framework, a good next step after completing this curriculum would be learning about Node.js through another video series: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
 > Visit our [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.md) guidelines. We welcome your constructive feedback!
 
@@ -192,9 +196,11 @@ A PDF of all the lessons can be found [here](https://microsoft.github.io/Web-Dev
 
 ## 🎒 Other Courses
 
-Our team offers other courses! Check out:
+Our team produces other courses! Check out:
 
-- [Generative AI for Beginners](https://aka.ms/genai-beginners)
+- [MCP for Beginners](https://aka.ms/mcp-for-beginners)
+- [Edge AI for Beginners](https://aka.ms/edgeai-for-beginners)
+- [AI Agents for Beginners](https://aka.ms/ai-agents-beginners)
 - [Generative AI for Beginners .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generative AI with JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generative AI with Java](https://github.com/microsoft/Generative-AI-for-beginners-java)
@@ -211,17 +217,17 @@ Our team offers other courses! Check out:
 
 ## Getting Help
 
-If you encounter difficulties or have questions about creating AI applications, join:
+If you're stuck or have questions about building AI applications, join:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-If you have product feedback or experience issues during development, visit:
+If you have product feedback or encounter issues while building, visit:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## License
 
-This repository is licensed under the MIT license. Refer to the [LICENSE](../../LICENSE) file for more details.
+This repository is licensed under the MIT license. See the [LICENSE](../../LICENSE) file for more details.
 
 ---
 
