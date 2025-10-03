@@ -252,7 +252,7 @@ Let's go through a contributor workflow. Assume the contributor has already _for
    ```bash
    git checkout -b [branch_name]
    ```
-   The command will create a new branch and immediately switch to the new branch
+   The command will create a new branch and immediately switch to the new branch.
 
    This will bring in all changes from `main` into your branch and hopefully you can just continue. If not, VS Code will tell you where Git is _confused_ and you just alter the affected files to say which content is the most accurate.
 
