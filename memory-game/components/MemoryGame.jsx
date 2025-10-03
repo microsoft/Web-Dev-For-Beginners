@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 // Fisher-Yates shuffle for unbiased randomization
 function fisherYatesShuffle(array) {
@@ -29,7 +29,7 @@ const MemoryGame = () => {
     }
   };
 
-  const initializeGame = () => {
+  const initializeGame = useCallback(() => {
     const totalCards = gridSize * gridSize;
     const pairCount = Math.floor(totalCards / 2);
 
@@ -46,7 +46,11 @@ const MemoryGame = () => {
     setSelectedPairs([]);
     setDisabled(false);
     setWon(false);
-  };
+  }, [gridSize]);
+
+  useEffect(() => {
+    initializeGame();
+  }, [initializeGame]);
 
   const handleMatch = (secondId) => {
     const [firstId] = flipped;
@@ -62,10 +66,6 @@ const MemoryGame = () => {
       }, 1000);
     }
   };
-
-  useEffect(() => {
-    initializeGame();
-  }, [gridSize]);
 
   const handleClick = (id) => {
     if (disabled || won) return;
