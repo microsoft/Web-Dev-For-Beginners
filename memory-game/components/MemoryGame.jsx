@@ -42,7 +42,7 @@ const MemoryGame = () => {
   const handleMatch = (secondId) => {
     const [firstId] = flipped;
 
-    if (array[firstId].number == array[secondId].number) {
+    if (array[firstId].number === array[secondId].number) {
       setSelectedPairs([...slectedPairs, firstId, secondId]);
       setFlipped([]);
       setDisabled(false);
