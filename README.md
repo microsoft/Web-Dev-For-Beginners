@@ -193,7 +193,9 @@ A PDF of all of the lessons can be found [here](https://microsoft.github.io/Web-
 
 Our team produces other courses! Check out:
 
-- [Generative AI for Beginners](https://aka.ms/genai-beginners)
+- [MCP for Beginners](https://aka.ms/mcp-for-beginners)
+- [Edge AI for Beginners](https://aka.ms/edgeai-for-beginners)
+- [AI Agents for Beginners](https://aka.ms/ai-agents-beginners)
 - [Generative AI for Beginners .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generative AI with JavaScript](https://github.com/microsoft/generative-ai-with-javascript)
 - [Generative AI with Java](https://github.com/microsoft/Generative-AI-for-beginners-java)
