@@ -1,159 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T08:58:47+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T10:14:41+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "vi"
 }
 -->
-# Sử dụng trình soạn thảo mã
+***
 
-Bài học này giới thiệu những kiến thức cơ bản về việc sử dụng [VSCode.dev](https://vscode.dev), một trình soạn thảo mã trên nền web, để bạn có thể chỉnh sửa mã và đóng góp vào một dự án mà không cần cài đặt bất kỳ phần mềm nào trên máy tính của mình.
+# Sử dụng Trình Soạn Thảo Mã: Làm Chủ [VSCode.dev](https://vscode.dev)
+
+**Chào mừng bạn!**  
+Bài học này sẽ hướng dẫn bạn từ cơ bản đến nâng cao về cách sử dụng [VSCode.dev](https://vscode.dev)—trình soạn thảo mã mạnh mẽ trên nền web. Bạn sẽ học cách chỉnh sửa mã, quản lý dự án, theo dõi thay đổi, cài đặt tiện ích mở rộng, và cộng tác như một chuyên gia—tất cả chỉ cần trình duyệt, không cần cài đặt.
+
+***
 
 ## Mục tiêu học tập
 
-Trong bài học này, bạn sẽ học cách:
+Sau bài học này, bạn sẽ có thể:
 
-- Sử dụng trình soạn thảo mã trong một dự án mã
-- Theo dõi các thay đổi với hệ thống kiểm soát phiên bản
-- Tùy chỉnh trình soạn thảo để phát triển
+- Sử dụng trình soạn thảo mã hiệu quả cho bất kỳ dự án nào, ở bất kỳ đâu
+- Theo dõi công việc một cách liền mạch với tính năng kiểm soát phiên bản tích hợp
+- Cá nhân hóa và nâng cao quy trình phát triển của bạn với các tùy chỉnh và tiện ích mở rộng của trình soạn thảo
 
-### Yêu cầu trước khi bắt đầu
+***
 
-Trước khi bắt đầu, bạn cần tạo một tài khoản trên [GitHub](https://github.com). Truy cập [GitHub](https://github.com/) và tạo tài khoản nếu bạn chưa có.
+## Điều kiện tiên quyết
 
-### Giới thiệu
+Để bắt đầu, **đăng ký tài khoản [GitHub](https://github.com) miễn phí**, giúp bạn quản lý kho mã và cộng tác trên toàn thế giới. Nếu bạn chưa có tài khoản, [tạo tài khoản tại đây](https://github.com/).
 
-Trình soạn thảo mã là một công cụ quan trọng để viết chương trình và cộng tác trong các dự án mã hiện có. Khi bạn hiểu được những kiến thức cơ bản về trình soạn thảo và cách sử dụng các tính năng của nó, bạn sẽ có thể áp dụng chúng khi viết mã.
+***
+
+## Tại sao nên sử dụng trình soạn thảo mã trên nền web?
+
+Một **trình soạn thảo mã** như VSCode.dev là trung tâm điều khiển của bạn để viết, chỉnh sửa, và quản lý mã. Với giao diện trực quan, nhiều tính năng, và khả năng truy cập ngay lập tức qua trình duyệt, bạn có thể:
+
+- Chỉnh sửa dự án trên bất kỳ thiết bị nào
+- Tránh phiền phức khi cài đặt phần mềm
+- Cộng tác và đóng góp ngay lập tức
+
+Khi bạn đã quen với VSCode.dev, bạn sẽ sẵn sàng xử lý các nhiệm vụ lập trình từ bất kỳ đâu, bất kỳ lúc nào.
+
+***
 
 ## Bắt đầu với VSCode.dev
 
-[VSCode.dev](https://vscode.dev) là một trình soạn thảo mã trên nền web. Bạn không cần cài đặt bất kỳ thứ gì để sử dụng nó, giống như mở bất kỳ trang web nào khác. Để bắt đầu với trình soạn thảo, hãy mở liên kết sau: [https://vscode.dev](https://vscode.dev). Nếu bạn chưa đăng nhập vào [GitHub](https://github.com/), hãy làm theo hướng dẫn để đăng nhập hoặc tạo tài khoản mới và sau đó đăng nhập.
+Truy cập **[VSCode.dev](https://vscode.dev)**—không cần cài đặt, không cần tải xuống. Đăng nhập bằng GitHub để mở khóa toàn bộ tính năng, bao gồm đồng bộ hóa cài đặt, tiện ích mở rộng, và kho mã. Nếu được yêu cầu, hãy kết nối tài khoản GitHub của bạn.
 
-Khi trình soạn thảo tải xong, giao diện sẽ trông giống như hình dưới đây:
+Sau khi tải xong, không gian làm việc của bạn sẽ trông như thế này:
 
-![Giao diện mặc định của VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.vi.png)
+![Default VSCode.dev](../images/default-vscode-dev có ba phần chính từ trái sang phải:
+- **Thanh hoạt động:** Các biểu tượng như 🔎 (Tìm kiếm), ⚙️ (Cài đặt), tệp, kiểm soát nguồn, v.v.
+- **Thanh bên:** Thay đổi ngữ cảnh dựa trên biểu tượng được chọn ở thanh hoạt động (mặc định là *Explorer* để hiển thị tệp).
+- **Khu vực chỉnh sửa/mã:** Phần lớn nhất ở bên phải—nơi bạn thực sự chỉnh sửa và xem mã.
 
-Có ba phần chính, từ trái sang phải:
+Nhấp vào các biểu tượng để khám phá tính năng, nhưng quay lại _Explorer_ để giữ vị trí của bạn.
 
-1. _Thanh hoạt động_ (_activity bar_) bao gồm một số biểu tượng, như kính lúp 🔎, bánh răng ⚙️, và một vài biểu tượng khác.
-2. Thanh hoạt động mở rộng, mặc định là _Explorer_, được gọi là _thanh bên_ (_side bar_).
-3. Và cuối cùng là khu vực mã ở bên phải.
+***
 
-Nhấp vào từng biểu tượng để hiển thị các menu khác nhau. Sau khi xong, nhấp vào _Explorer_ để quay lại nơi bạn bắt đầu.
+## Mở kho GitHub
 
-Khi bạn bắt đầu tạo mã hoặc chỉnh sửa mã hiện có, điều này sẽ diễn ra trong khu vực lớn nhất ở bên phải. Bạn cũng sẽ sử dụng khu vực này để xem mã hiện có, điều mà bạn sẽ làm tiếp theo.
+### Phương pháp 1: Từ trình soạn thảo
 
-## Mở một kho lưu trữ GitHub
+1. Truy cập [VSCode.dev](https://vscode.dev). Nhấp vào **"Open Remote Repository."**
 
-Điều đầu tiên bạn cần làm là mở một kho lưu trữ GitHub. Có nhiều cách để mở một kho lưu trữ. Trong phần này, bạn sẽ thấy hai cách khác nhau để mở một kho lưu trữ và bắt đầu làm việc với các thay đổi.
+   ![Open remote repository](../../../../8-code-editor/images/open-remote-repository sử dụng _Command Palette_ (Ctrl-Shift-P, hoặc Cmd-Shift-P trên Mac).
 
-### 1. Sử dụng trình soạn thảo
+   ![Palette Menu](../images/palette-menu.pngopen remote repository.”
+   - Chọn tùy chọn này.
+   - Dán URL kho GitHub của bạn (ví dụ: `https://github.com/microsoft/Web-Dev-For-Beginners`) và nhấn Enter.
 
-Sử dụng chính trình soạn thảo để mở một kho lưu trữ từ xa. Nếu bạn truy cập [VSCode.dev](https://vscode.dev), bạn sẽ thấy nút _"Open Remote Repository"_:
+Nếu thành công, bạn sẽ thấy toàn bộ dự án được tải lên và sẵn sàng chỉnh sửa!
 
-![Mở kho lưu trữ từ xa](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.vi.png)
+***
 
-Bạn cũng có thể sử dụng bảng lệnh (_command palette_). Bảng lệnh là một hộp nhập liệu nơi bạn có thể gõ bất kỳ từ nào liên quan đến một lệnh hoặc hành động để tìm lệnh phù hợp để thực thi. Sử dụng menu ở góc trên bên trái, sau đó chọn _View_, và chọn _Command Palette_, hoặc sử dụng phím tắt: Ctrl-Shift-P (trên MacOS là Command-Shift-P).
+### Phương pháp 2: Mở ngay qua URL
 
-![Menu bảng lệnh](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.vi.png)
+Biến đổi bất kỳ URL kho GitHub nào để mở trực tiếp trong VSCode.dev bằng cách thay thế `github.com` bằng `vscode.dev/github`.  
+Ví dụ:
 
-Khi menu mở ra, gõ _open remote repository_, và sau đó chọn tùy chọn đầu tiên. Nhiều kho lưu trữ mà bạn tham gia hoặc đã mở gần đây sẽ xuất hiện. Bạn cũng có thể sử dụng một URL GitHub đầy đủ để chọn một kho lưu trữ. Sử dụng URL sau và dán vào hộp:
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Tính năng này giúp truy cập nhanh chóng vào BẤT KỲ dự án nào.
 
-✅ Nếu thành công, bạn sẽ thấy tất cả các tệp của kho lưu trữ này được tải trong trình soạn thảo văn bản.
+***
 
-### 2. Sử dụng URL
+## Chỉnh sửa tệp trong dự án của bạn
 
-Bạn cũng có thể sử dụng trực tiếp một URL để tải một kho lưu trữ. Ví dụ, URL đầy đủ cho kho lưu trữ hiện tại là [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), nhưng bạn có thể thay thế miền GitHub bằng `VSCode.dev/github` và tải kho lưu trữ trực tiếp. URL kết quả sẽ là [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Khi kho của bạn đã được mở, bạn có thể:
 
-## Chỉnh sửa tệp
+### 1. **Tạo tệp mới**
+- Trong thanh bên *Explorer*, điều hướng đến thư mục mong muốn hoặc sử dụng thư mục gốc.
+- Nhấp vào biểu tượng _‘New file ...’_.
+- Đặt tên cho tệp, nhấn **Enter**, và tệp của bạn sẽ xuất hiện ngay lập tức.
 
-Khi bạn đã mở kho lưu trữ trên trình duyệt/vscode.dev, bước tiếp theo là thực hiện các cập nhật hoặc thay đổi cho dự án.
+![Create a new file](../images/create-new-file 2. **Chỉnh sửa và lưu tệp**
 
-### 1. Tạo tệp mới
+- Nhấp vào một tệp trong *Explorer* để mở nó trong khu vực mã.
+- Thực hiện các thay đổi cần thiết.
+- VSCode.dev tự động lưu thay đổi của bạn, nhưng bạn có thể nhấn Ctrl+S để lưu thủ công.
 
-Bạn có thể tạo tệp trong một thư mục hiện có hoặc tạo nó trong thư mục gốc. Để tạo một tệp mới, mở vị trí/thư mục nơi bạn muốn lưu tệp và chọn biểu tượng _'New file ...'_ trên thanh hoạt động _(bên trái)_, đặt tên cho tệp và nhấn Enter.
+![Edit a file](../images/edit-a-file.png. **Theo dõi & Cam kết thay đổi với kiểm soát phiên bản**
 
-![Tạo tệp mới](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.vi.png)
+VSCode.dev tích hợp sẵn **Git** để kiểm soát phiên bản!
 
-### 2. Chỉnh sửa và lưu tệp trong kho lưu trữ
+- Nhấp vào biểu tượng _'Source Control'_ để xem tất cả các thay đổi đã thực hiện.
+- Các tệp trong thư mục `Changes` hiển thị bổ sung (màu xanh lá) và xóa bỏ (màu đỏ).  
+  ![View changes](../images/working-tree.png thay đổi bằng cách nhấp vào `+` bên cạnh tệp để chuẩn bị cho cam kết.
+- **Loại bỏ** các thay đổi không mong muốn bằng cách nhấp vào biểu tượng hoàn tác.
+- Nhập một thông điệp cam kết rõ ràng, sau đó nhấp vào dấu kiểm để cam kết và đẩy lên.
 
-Sử dụng vscode.dev rất hữu ích khi bạn muốn thực hiện các cập nhật nhanh chóng cho dự án của mình mà không cần tải bất kỳ phần mềm nào về máy.
+Để quay lại kho của bạn trên GitHub, chọn biểu tượng menu hamburger ở góc trên bên trái.
 
-Để cập nhật mã của bạn, nhấp vào biểu tượng 'Explorer', cũng nằm trên thanh hoạt động, để xem các tệp và thư mục trong kho lưu trữ. Chọn một tệp để mở nó trong khu vực mã, thực hiện các thay đổi và lưu lại.
+![Stage & commit changes](../images/edit-vscode.dev Up với Tiện ích Mở rộng
 
-![Chỉnh sửa tệp](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.vi.png)
+Tiện ích mở rộng cho phép bạn thêm ngôn ngữ, giao diện, trình gỡ lỗi, và công cụ năng suất vào VSCode.dev—giúp việc lập trình trở nên dễ dàng và thú vị hơn.
 
-Khi bạn hoàn tất việc cập nhật dự án, chọn biểu tượng _`source control`_ để xem tất cả các thay đổi mới mà bạn đã thực hiện trong kho lưu trữ.
+### Duyệt và Quản lý Tiện ích Mở rộng
 
-Để xem các thay đổi bạn đã thực hiện, chọn tệp trong thư mục `Changes` trên thanh hoạt động mở rộng. Điều này sẽ mở một 'Working Tree' để bạn có thể xem trực quan các thay đổi trong tệp. Màu đỏ biểu thị phần bị xóa khỏi dự án, trong khi màu xanh lá biểu thị phần được thêm vào.
+- Nhấp vào biểu tượng **Extensions** trên thanh hoạt động.
+- Tìm kiếm tiện ích mở rộng trong hộp _'Search Extensions in Marketplace'_.
 
-![Xem thay đổi](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.vi.png)
+  ![Extension details](../images/extension-details:
+  - **Installed**: Tất cả các tiện ích mở rộng bạn đã thêm
+  - **Popular**: Các tiện ích được yêu thích trong ngành
+  - **Recommended**: Được đề xuất phù hợp với quy trình làm việc của bạn
 
-Nếu bạn hài lòng với các thay đổi, di chuột qua thư mục `Changes` và nhấp vào nút `+` để đưa các thay đổi vào trạng thái chờ. Trạng thái chờ có nghĩa là chuẩn bị các thay đổi để cam kết chúng lên GitHub.
+  ![View extensions](
 
-Nếu bạn không hài lòng với một số thay đổi và muốn hủy bỏ chúng, di chuột qua thư mục `Changes` và chọn biểu tượng `undo`.
+  
 
-Sau đó, nhập một `commit message` _(Mô tả thay đổi bạn đã thực hiện đối với dự án)_, nhấp vào biểu tượng `check` để cam kết và đẩy các thay đổi của bạn.
+***
 
-Khi hoàn tất công việc trên dự án, chọn biểu tượng `hamburger menu` ở góc trên bên trái để quay lại kho lưu trữ trên github.com.
+### 1. **Cài đặt Tiện ích Mở rộng**
 
-![Đưa vào trạng thái chờ & cam kết thay đổi](../../../../8-code-editor/images/edit-vscode.dev.gif)
+- Nhập tên tiện ích mở rộng vào ô tìm kiếm, nhấp vào nó, và xem chi tiết trong trình soạn thảo.
+- Nhấn nút **Install màu xanh** ở thanh bên _hoặc_ trong khu vực mã chính.
 
-## Sử dụng tiện ích mở rộng
+  ![Install extensions](../images/install-extension 2. **Tùy chỉnh Tiện ích Mở rộng**
 
-Cài đặt tiện ích mở rộng trên VSCode cho phép bạn thêm các tính năng mới và tùy chỉnh môi trường phát triển trên trình soạn thảo để cải thiện quy trình làm việc. Các tiện ích mở rộng này cũng giúp bạn hỗ trợ nhiều ngôn ngữ lập trình và thường là tiện ích mở rộng chung hoặc tiện ích mở rộng theo ngôn ngữ.
+- Tìm tiện ích mở rộng đã cài đặt của bạn.
+- Nhấp vào biểu tượng **Gear** → chọn _Extension Settings_ để điều chỉnh hành vi theo ý thích.
 
-Để duyệt qua danh sách tất cả các tiện ích mở rộng có sẵn, nhấp vào biểu tượng _`Extensions`_ trên thanh hoạt động và bắt đầu gõ tên tiện ích mở rộng vào trường văn bản có nhãn _'Search Extensions in Marketplace'_.
+  ![Modify extension settings](../images/extension-settings 3. **Quản lý Tiện ích Mở rộng**
+Bạn có thể:
 
-Bạn sẽ thấy danh sách các tiện ích mở rộng, mỗi tiện ích bao gồm **tên tiện ích, tên nhà phát hành, mô tả ngắn gọn, số lượt tải xuống** và **xếp hạng sao**.
+- **Disable:** Tạm thời tắt tiện ích mở rộng nhưng vẫn giữ nó được cài đặt
+- **Uninstall:** Gỡ bỏ hoàn toàn nếu không còn cần thiết
 
-![Chi tiết tiện ích mở rộng](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.vi.png)
+  Tìm tiện ích mở rộng, nhấn biểu tượng Gear, và chọn ‘Disable’ hoặc ‘Uninstall,’ hoặc sử dụng các nút màu xanh trong khu vực mã.
 
-Bạn cũng có thể xem tất cả các tiện ích mở rộng đã cài đặt trước đó bằng cách mở rộng thư mục _`Installed`_, các tiện ích phổ biến được sử dụng bởi hầu hết các nhà phát triển trong thư mục _`Popular`_, và các tiện ích được đề xuất cho bạn dựa trên các tệp bạn đã mở gần đây hoặc người dùng trong cùng không gian làm việc trong thư mục _`Recommended`_.
-
-![Xem tiện ích mở rộng](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.vi.png)
-
-### 1. Cài đặt tiện ích mở rộng
-
-Để cài đặt một tiện ích mở rộng, gõ tên tiện ích vào trường tìm kiếm và nhấp vào tiện ích để xem thêm thông tin trong khu vực mã khi nó xuất hiện trên thanh hoạt động mở rộng.
-
-Bạn có thể nhấp vào _nút cài đặt màu xanh_ trên thanh hoạt động mở rộng để cài đặt hoặc sử dụng nút cài đặt xuất hiện trong khu vực mã khi bạn chọn tiện ích để tải thêm thông tin.
-
-![Cài đặt tiện ích mở rộng](../../../../8-code-editor/images/install-extension.gif)
-
-### 2. Tùy chỉnh tiện ích mở rộng
-
-Sau khi cài đặt tiện ích mở rộng, bạn có thể cần thay đổi hành vi của nó và tùy chỉnh theo sở thích của mình. Để làm điều này, chọn biểu tượng Extensions, và lần này, tiện ích mở rộng của bạn sẽ xuất hiện trong thư mục _Installed_, nhấp vào biểu tượng _**Gear**_ và điều hướng đến _Extensions Setting_.
-
-![Tùy chỉnh cài đặt tiện ích](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.vi.png)
-
-### 3. Quản lý tiện ích mở rộng
-
-Sau khi cài đặt và sử dụng tiện ích mở rộng, vscode.dev cung cấp các tùy chọn để quản lý tiện ích dựa trên các nhu cầu khác nhau. Ví dụ, bạn có thể:
-
-- **Vô hiệu hóa:** _(Tạm thời vô hiệu hóa tiện ích khi bạn không cần sử dụng nhưng không muốn gỡ cài đặt hoàn toàn)_
-
-    Chọn tiện ích đã cài đặt trên thanh hoạt động mở rộng > nhấp vào biểu tượng Gear > chọn 'Disable' hoặc 'Disable (Workspace)' **HOẶC** Mở tiện ích trong khu vực mã và nhấp vào nút Disable màu xanh.
-
-- **Gỡ cài đặt:** Chọn tiện ích đã cài đặt trên thanh hoạt động mở rộng > nhấp vào biểu tượng Gear > chọn 'Uninstall' **HOẶC** Mở tiện ích trong khu vực mã và nhấp vào nút Uninstall màu xanh.
-
----
+***
 
 ## Bài tập
 
-[Tạo một trang web sơ yếu lý lịch bằng vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Kiểm tra kỹ năng của bạn: [Tạo một trang web sơ yếu lý lịch bằng vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Ôn tập & Tự học
+***
 
-Đọc thêm về [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) và một số tính năng khác của nó.
+## Khám phá thêm và Tự học
+
+- Tìm hiểu sâu hơn với [Tài liệu chính thức về VSCode Web](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Khám phá các tính năng không gian làm việc nâng cao, phím tắt, và cài đặt.
+
+***
+
+**Giờ đây bạn đã sẵn sàng lập trình, tạo ra, và cộng tác—từ bất kỳ đâu, trên bất kỳ thiết bị nào, với VSCode.dev!**
 
 ---
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc sự không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, chúng tôi khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

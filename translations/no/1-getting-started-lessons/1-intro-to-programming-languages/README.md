@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
-  "translation_date": "2025-08-29T08:41:44+00:00",
+  "original_hash": "2581528206a2a01c3a0b9c88e039b7bc",
+  "translation_date": "2025-10-03T10:02:17+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "no"
 }
 -->
-# Introduksjon til programmeringsspråk og verktøyene i faget
+# Introduksjon til programmeringsspråk og verktøy
 
-Denne leksjonen dekker det grunnleggende om programmeringsspråk. Temaene som dekkes her gjelder for de fleste moderne programmeringsspråk i dag. I delen "Verktøyene i faget" vil du lære om nyttig programvare som hjelper deg som utvikler.
+Denne leksjonen dekker grunnleggende programmeringsspråk. Temaene som tas opp her gjelder for de fleste moderne programmeringsspråk i dag. I delen "Verktøyene i faget" vil du lære om nyttig programvare som hjelper deg som utvikler.
 
 ![Intro Programmering](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.no.png)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Quiz før forelesning
-[Quiz før forelesning](https://forms.office.com/r/dru4TE0U9n?origin=lprLink)
+## Quiz før leksjonen
+[Quiz før leksjonen](https://forms.office.com/r/dru4TE0U9n?origin=lprLink)
 
 ## Introduksjon
 
@@ -30,21 +30,21 @@ I denne leksjonen skal vi dekke:
 
 ## Hva er programmering?
 
-Programmering (også kjent som koding) er prosessen med å skrive instruksjoner for en enhet som en datamaskin eller mobiltelefon. Vi skriver disse instruksjonene med et programmeringsspråk, som deretter tolkes av enheten. Disse instruksjonene kan ha ulike navn, men *program*, *dataprogram*, *applikasjon (app)* og *kjørbar fil* er noen vanlige betegnelser.
+Programmering (også kjent som koding) er prosessen med å skrive instruksjoner for en enhet, som en datamaskin eller mobil enhet. Vi skriver disse instruksjonene med et programmeringsspråk, som deretter tolkes av enheten. Disse instruksjonene kan ha ulike navn, men *program*, *dataprogram*, *applikasjon (app)* og *kjørbar fil* er noen populære betegnelser.
 
-Et *program* kan være hva som helst som er skrevet med kode; nettsider, spill og mobilapper er programmer. Selv om det er mulig å lage et program uten å skrive kode, tolkes den underliggende logikken av enheten, og denne logikken er mest sannsynlig skrevet med kode. Et program som *kjører* eller *utfører* kode, følger instruksjonene. Enheten du leser denne leksjonen på, kjører et program for å vise den på skjermen din.
+Et *program* kan være hva som helst som er skrevet med kode; nettsider, spill og mobilapper er programmer. Selv om det er mulig å lage et program uten å skrive kode, blir den underliggende logikken tolket av enheten, og den logikken er mest sannsynlig skrevet med kode. Et program som *kjører* eller *utfører* kode, utfører instruksjoner. Enheten du leser denne leksjonen på, kjører et program for å vise den på skjermen.
 
 ✅ Gjør litt research: Hvem regnes som verdens første dataprogrammerer?
 
 ## Programmeringsspråk
 
-Programmeringsspråk gjør det mulig for utviklere å skrive instruksjoner for en enhet. Enheter kan kun forstå binærkode (1 og 0), og for *de fleste* utviklere er ikke det en særlig effektiv måte å kommunisere på. Programmeringsspråk er verktøyet som gjør kommunikasjon mellom mennesker og datamaskiner mulig.
+Programmeringsspråk gjør det mulig for utviklere å skrive instruksjoner for en enhet. Enheter kan bare forstå binærkode (1 og 0), og for *de fleste* utviklere er det ikke en veldig effektiv måte å kommunisere på. Programmeringsspråk er verktøyet som gjør kommunikasjon mellom mennesker og datamaskiner mulig.
 
-Programmeringsspråk finnes i ulike formater og kan tjene forskjellige formål. For eksempel brukes JavaScript primært til webapplikasjoner, mens Bash brukes hovedsakelig til operativsystemer.
+Programmeringsspråk kommer i ulike formater og kan tjene forskjellige formål. For eksempel brukes JavaScript primært til webapplikasjoner, mens Bash brukes hovedsakelig til operativsystemer.
 
-*Lavnivåspråk* krever vanligvis færre steg enn *høynivåspråk* for at en enhet skal tolke instruksjonene. Det som imidlertid gjør høynivåspråk populære, er deres lesbarhet og støtte. JavaScript regnes som et høynivåspråk.
+*Lavnivåspråk* krever vanligvis færre steg enn *høynivåspråk* for at en enhet skal tolke instruksjoner. Det som gjør høynivåspråk populære, er imidlertid deres lesbarhet og støtte. JavaScript regnes som et høynivåspråk.
 
-Følgende kode viser forskjellen mellom et høynivåspråk med JavaScript og et lavnivåspråk med ARM-assemblerkode.
+Følgende kode illustrerer forskjellen mellom et høynivåspråk med JavaScript og et lavnivåspråk med ARM assembly-kode.
 
 ```javascript
 let number = 10
@@ -83,17 +83,17 @@ back add r0,r1
  end
 ```
 
-Tro det eller ei, *de gjør akkurat det samme*: skriver ut en Fibonacci-sekvens opp til 10.
+Tro det eller ei, *de gjør begge det samme*: skriver ut en Fibonacci-sekvens opp til 10.
 
 ✅ En Fibonacci-sekvens er [definert](https://en.wikipedia.org/wiki/Fibonacci_number) som en rekke tall der hvert tall er summen av de to foregående, med start fra 0 og 1. De første 10 tallene i Fibonacci-sekvensen er 0, 1, 1, 2, 3, 5, 8, 13, 21 og 34.
 
 ## Elementer i et program
 
-En enkelt instruksjon i et program kalles en *setning* og vil vanligvis ha et tegn eller linjeskift som markerer hvor instruksjonen slutter, eller *terminerer*. Hvordan en setning termineres, varierer mellom språk.
+En enkelt instruksjon i et program kalles en *setning* og vil vanligvis ha et tegn eller linjeavstand som markerer hvor instruksjonen slutter, eller *terminerer*. Hvordan en setning termineres varierer med hvert språk.
 
-Setninger i et program kan være avhengige av data som gis av en bruker eller hentes fra andre steder for å utføre instruksjoner. Data kan endre hvordan et program oppfører seg, så programmeringsspråk har en måte å midlertidig lagre data på slik at det kan brukes senere. Disse kalles *variabler*. Variabler er setninger som instruerer en enhet om å lagre data i minnet sitt. Variabler i programmering ligner på variabler i algebra, der de har et unikt navn og verdien deres kan endres over tid.
+Setninger i et program kan avhenge av data som er gitt av en bruker eller fra andre steder for å utføre instruksjoner. Data kan endre hvordan et program oppfører seg, så programmeringsspråk har en måte å midlertidig lagre data på slik at det kan brukes senere. Disse kalles *variabler*. Variabler er setninger som instruerer en enhet til å lagre data i minnet sitt. Variabler i programmer ligner på variabler i algebra, der de har et unikt navn og verdien kan endres over tid.
 
-Det er en sjanse for at noen setninger ikke blir utført av en enhet. Dette er vanligvis med vilje når det er skrevet av utvikleren, eller ved en feiltakelse når en uventet feil oppstår. Denne typen kontroll over et program gjør det mer robust og vedlikeholdbart. Typisk skjer disse endringene i kontroll når visse betingelser er oppfylt. En vanlig setning som brukes i moderne programmering for å kontrollere hvordan et program kjører, er `if..else`-setningen.
+Det er en sjanse for at noen setninger ikke blir utført av en enhet. Dette er vanligvis med vilje når det er skrevet av utvikleren, eller ved et uhell når en uventet feil oppstår. Denne typen kontroll over en applikasjon gjør den mer robust og vedlikeholdbar. Typisk skjer disse endringene i kontroll når visse betingelser er oppfylt. En vanlig setning som brukes i moderne programmering for å kontrollere hvordan et program kjører, er `if..else`-setningen.
 
 ✅ Du vil lære mer om denne typen setning i senere leksjoner.
 
@@ -103,9 +103,9 @@ Det er en sjanse for at noen setninger ikke blir utført av en enhet. Dette er v
 
 > 🎥 Klikk på bildet over for en video om verktøy
 
-I denne delen vil du lære om noe programvare som kan være svært nyttig når du starter din profesjonelle utviklingsreise.
+I denne delen vil du lære om noen programvarer som kan være svært nyttige når du starter din profesjonelle utviklingsreise.
 
-Et **utviklingsmiljø** er et unikt sett med verktøy og funksjoner som en utvikler ofte bruker når de skriver programvare. Noen av disse verktøyene er tilpasset en utviklers spesifikke behov og kan endres over tid hvis utvikleren endrer prioriteringer i arbeid, personlige prosjekter eller når de bruker et annet programmeringsspråk. Utviklingsmiljøer er like unike som utviklerne som bruker dem.
+Et **utviklingsmiljø** er et unikt sett med verktøy og funksjoner som en utvikler ofte bruker når de skriver programvare. Noen av disse verktøyene er tilpasset utviklerens spesifikke behov, og kan endres over tid hvis utvikleren endrer prioriteringer i arbeid, personlige prosjekter, eller når de bruker et annet programmeringsspråk. Utviklingsmiljøer er like unike som utviklerne som bruker dem.
 
 ### Redaktører
 
@@ -113,12 +113,12 @@ Et av de mest avgjørende verktøyene for programvareutvikling er redaktøren. R
 
 Utviklere stoler på redaktører av flere grunner:
 
-- *Feilsøking* hjelper med å avdekke feil og problemer ved å gå gjennom koden, linje for linje. Noen redaktører har innebygde feilsøkingsfunksjoner som kan tilpasses for spesifikke programmeringsspråk.
-- *Syntaksutheving* legger til farger og tekstformatering i koden, noe som gjør den lettere å lese. De fleste redaktører tillater tilpasset syntaksutheving.
-- *Utvidelser og integrasjoner* er spesialiserte verktøy laget av og for utviklere. Disse verktøyene er ikke innebygd i selve redaktøren. For eksempel dokumenterer mange utviklere koden sin for å forklare hvordan den fungerer. De kan installere en stavekontrollutvidelse for å finne skrivefeil i dokumentasjonen. De fleste utvidelser er laget for spesifikke redaktører, og de fleste redaktører har en måte å søke etter tilgjengelige utvidelser på.
-- *Tilpasning* gjør det mulig for utviklere å skape et unikt utviklingsmiljø som passer deres behov. De fleste redaktører er svært tilpassbare og kan også tillate utviklere å lage egne utvidelser.
+- *Feilsøking* hjelper med å avdekke feil og problemer ved å gå gjennom koden linje for linje. Noen redaktører har feilsøkingsfunksjoner; de kan tilpasses og legges til for spesifikke programmeringsspråk.
+- *Syntaksmarkering* legger til farger og tekstformatering i koden, noe som gjør den lettere å lese. De fleste redaktører tillater tilpasset syntaksmarkering.
+- *Utvidelser og integrasjoner* er spesialiserte verktøy for utviklere, laget av utviklere. Disse verktøyene var ikke innebygd i den grunnleggende redaktøren. For eksempel dokumenterer mange utviklere koden sin for å forklare hvordan den fungerer. De kan installere en stavekontrollutvidelse for å finne skrivefeil i dokumentasjonen. De fleste utvidelser er ment for bruk innenfor en spesifikk redaktør, og de fleste redaktører har en måte å søke etter tilgjengelige utvidelser.
+- *Tilpasning* gjør det mulig for utviklere å lage et unikt utviklingsmiljø som passer deres behov. De fleste redaktører er svært tilpassbare og kan også tillate utviklere å lage egne utvidelser.
 
-#### Populære redaktører og utvidelser for webutvikling
+#### Populære redaktører og webutviklingsutvidelser
 
 - [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)
   - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
@@ -135,9 +135,9 @@ Utviklere stoler på redaktører av flere grunner:
 
 ### Nettlesere
 
-Et annet viktig verktøy er nettleseren. Webutviklere stoler på nettleseren for å se hvordan koden deres kjører på nettet. Den brukes også til å vise de visuelle elementene på en nettside som er skrevet i redaktøren, som HTML.
+Et annet avgjørende verktøy er nettleseren. Webutviklere stoler på nettleseren for å se hvordan koden deres kjører på nettet. Den brukes også til å vise de visuelle elementene på en nettside som er skrevet i redaktøren, som HTML.
 
-Mange nettlesere har *utviklerverktøy* (DevTools) som inneholder et sett med nyttige funksjoner og informasjon for å hjelpe utviklere med å samle og fange opp viktig informasjon om applikasjonen deres. For eksempel: Hvis en nettside har feil, kan det være nyttig å vite når de oppsto. DevTools i en nettleser kan konfigureres til å fange opp denne informasjonen.
+Mange nettlesere kommer med *utviklerverktøy* (DevTools) som inneholder et sett med nyttige funksjoner og informasjon for å hjelpe utviklere med å samle og fange viktig informasjon om applikasjonen deres. For eksempel: Hvis en nettside har feil, kan det noen ganger være nyttig å vite når de oppsto. DevTools i en nettleser kan konfigureres til å fange denne informasjonen.
 
 #### Populære nettlesere og DevTools
 
@@ -147,13 +147,13 @@ Mange nettlesere har *utviklerverktøy* (DevTools) som inneholder et sett med ny
 
 ### Kommandolinjeverktøy
 
-Noen utviklere foretrekker en mindre grafisk tilnærming til daglige oppgaver og stoler på kommandolinjen for dette. Å skrive kode krever mye skriving, og noen utviklere foretrekker å ikke avbryte flyten sin på tastaturet. De bruker hurtigtaster for å bytte mellom vinduer, jobbe med forskjellige filer og bruke verktøy. De fleste oppgaver kan utføres med en mus, men en fordel med kommandolinjen er at mye kan gjøres uten å bytte mellom mus og tastatur. En annen fordel med kommandolinjen er at den kan konfigureres, og du kan lagre en tilpasset konfigurasjon, endre den senere og importere den til andre utviklingsmaskiner. Fordi utviklingsmiljøer er så unike for hver utvikler, vil noen unngå å bruke kommandolinjen, noen vil stole helt på den, og andre foretrekker en blanding av begge.
+Noen utviklere foretrekker en mindre grafisk visning for sine daglige oppgaver og stoler på kommandolinjen for å oppnå dette. Å skrive kode krever en betydelig mengde tasting, og noen utviklere foretrekker å ikke avbryte flyten på tastaturet. De bruker tastatursnarveier for å bytte mellom skrivebordsvinduer, jobbe med forskjellige filer og bruke verktøy. De fleste oppgaver kan utføres med en mus, men en fordel med å bruke kommandolinjen er at mye kan gjøres med kommandolinjeverktøy uten behov for å bytte mellom mus og tastatur. En annen fordel med kommandolinjen er at den kan konfigureres, og du kan lagre en tilpasset konfigurasjon, endre den senere og importere den til andre utviklingsmaskiner. Fordi utviklingsmiljøer er så unike for hver utvikler, vil noen unngå å bruke kommandolinjen, noen vil stole helt på den, og noen foretrekker en blanding av de to.
 
-### Populære alternativer for kommandolinjen
+### Populære kommandolinjealternativer
 
-Alternativene for kommandolinjen varierer avhengig av operativsystemet du bruker.
+Alternativer for kommandolinjen vil variere basert på operativsystemet du bruker.
 
-*💻 = forhåndsinstallert på operativsystemet.*
+*💻 = kommer forhåndsinstallert på operativsystemet.*
 
 #### Windows
 
@@ -182,11 +182,11 @@ Alternativene for kommandolinjen varierer avhengig av operativsystemet du bruker
 
 ### Dokumentasjon
 
-Når en utvikler ønsker å lære noe nytt, vil de mest sannsynlig vende seg til dokumentasjon for å lære hvordan de skal bruke det. Utviklere stoler ofte på dokumentasjon for å veilede dem i hvordan de bruker verktøy og språk riktig, og også for å få dypere kunnskap om hvordan det fungerer.
+Når en utvikler ønsker å lære noe nytt, vil de mest sannsynlig vende seg til dokumentasjon for å lære hvordan de skal bruke det. Utviklere stoler ofte på dokumentasjon for å veilede dem gjennom hvordan de bruker verktøy og språk riktig, og også for å få dypere kunnskap om hvordan det fungerer.
 
 #### Populær dokumentasjon om webutvikling
 
-- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), fra Mozilla, utgiverne av [Firefox](https://www.mozilla.org/firefox/) nettleseren
+- [Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web), fra Mozilla, utgiverne av [Firefox](https://www.mozilla.org/firefox/) nettleser
 - [Frontend Masters](https://frontendmasters.com/learn/)
 - [Web.dev](https://web.dev), fra Google, utgiverne av [Chrome](https://www.google.com/chrome/)
 - [Microsofts egne utviklerdokumenter](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
@@ -200,8 +200,8 @@ Når en utvikler ønsker å lære noe nytt, vil de mest sannsynlig vende seg til
 
 Sammenlign noen programmeringsspråk. Hva er noen av de unike egenskapene til JavaScript vs. Java? Hva med COBOL vs. Go?
 
-## Quiz etter forelesning
-[Quiz etter forelesning](https://ff-quizzes.netlify.app/web/)
+## Quiz etter leksjonen
+[Quiz etter leksjonen](https://ff-quizzes.netlify.app/web/)
 
 ## Gjennomgang og selvstudium
 
@@ -211,7 +211,9 @@ Studer litt om de forskjellige språkene som er tilgjengelige for programmerere.
 
 [Les dokumentasjonen](assignment.md)
 
+> Merk: Når du velger verktøy for oppgaven din, må du ikke velge redaktører, nettlesere eller kommandolinjeverktøy som allerede er nevnt ovenfor.
+
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

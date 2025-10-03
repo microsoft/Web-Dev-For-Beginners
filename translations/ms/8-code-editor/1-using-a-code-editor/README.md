@@ -1,158 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T09:34:23+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T10:20:44+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "ms"
 }
 -->
-# Menggunakan editor kod
+***
 
-Pelajaran ini merangkumi asas penggunaan [VSCode.dev](https://vscode.dev), sebuah editor kod berasaskan web, supaya anda boleh membuat perubahan pada kod anda dan menyumbang kepada projek tanpa perlu memasang apa-apa pada komputer anda.
+# Menggunakan Editor Kod: Menguasai [VSCode.dev](https://vscode.dev)
 
-## Objektif pembelajaran
+**Selamat Datang!**  
+Pelajaran ini membawa anda dari asas hingga penggunaan lanjutan [VSCode.dev](https://vscode.dev)—editor kod berasaskan web yang hebat. Anda akan belajar cara mengedit kod dengan yakin, mengurus projek, menjejaki perubahan, memasang sambungan, dan bekerjasama seperti seorang profesional—semuanya dari pelayar anda, tanpa perlu pemasangan.
 
-Dalam pelajaran ini, anda akan belajar bagaimana untuk:
+***
 
-- Menggunakan editor kod dalam projek kod
-- Menjejaki perubahan dengan kawalan versi
-- Menyesuaikan editor untuk pembangunan
+## Objektif Pembelajaran
 
-### Prasyarat
+Pada akhir pelajaran ini, anda akan dapat:
 
-Sebelum anda bermula, anda perlu membuat akaun dengan [GitHub](https://github.com). Pergi ke [GitHub](https://github.com/) dan buat akaun jika anda belum memilikinya.
+- Menggunakan editor kod dengan cekap untuk sebarang projek, di mana-mana sahaja
+- Menjejaki kerja anda dengan lancar menggunakan kawalan versi terbina dalam
+- Memperibadikan dan meningkatkan aliran kerja pembangunan anda dengan penyesuaian editor dan sambungan
 
-### Pengenalan
+***
 
-Editor kod adalah alat penting untuk menulis program dan bekerjasama dalam projek kod sedia ada. Setelah anda memahami asas editor dan cara menggunakan ciri-cirinya, anda boleh menerapkannya semasa menulis kod.
+## Prasyarat
+
+Untuk bermula, **daftar untuk akaun [GitHub](https://github.com) percuma**, yang membolehkan anda mengurus repositori kod dan bekerjasama di seluruh dunia. Jika anda belum mempunyai akaun, [buat satu di sini](https://github.com/).
+
+***
+
+## Mengapa Menggunakan Editor Kod Berasaskan Web?
+
+**Editor kod** seperti VSCode.dev adalah pusat kawalan anda untuk menulis, mengedit, dan mengurus kod. Dengan antara muka yang intuitif, pelbagai ciri, dan akses segera melalui pelayar, anda boleh:
+
+- Mengedit projek pada mana-mana peranti
+- Mengelakkan kerumitan pemasangan
+- Bekerjasama dan menyumbang dengan segera
+
+Setelah anda selesa dengan VSCode.dev, anda akan bersedia untuk menangani tugas pengekodan dari mana-mana sahaja, pada bila-bila masa.
+
+***
 
 ## Bermula dengan VSCode.dev
 
-[VSCode.dev](https://vscode.dev) adalah editor kod di web. Anda tidak perlu memasang apa-apa untuk menggunakannya, sama seperti membuka laman web lain. Untuk bermula dengan editor ini, buka pautan berikut: [https://vscode.dev](https://vscode.dev). Jika anda belum log masuk ke [GitHub](https://github.com/), ikuti arahan untuk log masuk atau buat akaun baru dan kemudian log masuk.
+Navigasi ke **[VSCode.dev](https://vscode.dev)**—tanpa pemasangan, tanpa muat turun. Log masuk dengan GitHub membuka akses penuh, termasuk penyelarasan tetapan, sambungan, dan repositori anda. Jika diminta, sambungkan akaun GitHub anda.
 
-Setelah dimuatkan, ia sepatutnya kelihatan seperti gambar ini:
+Selepas dimuatkan, ruang kerja anda akan kelihatan seperti ini:
 
-![Default VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.ms.png)
+![Default VSCode.dev](../images/default-vscode-dev mempunyai tiga bahagian utama dari kiri ke kanan:
+- **Bar Aktiviti:** Ikon seperti 🔎 (Carian), ⚙️ (Tetapan), fail, kawalan sumber, dll.
+- **Bar sisi:** Berubah konteks berdasarkan ikon bar aktiviti yang dipilih (lalai kepada *Explorer* untuk menunjukkan fail).
+- **Kawasan editor/kod:** Bahagian terbesar di sebelah kanan—di mana anda akan mengedit dan melihat kod.
 
-Terdapat tiga bahagian utama, bermula dari kiri ke kanan:
+Klik ikon untuk meneroka ciri, tetapi kembali ke _Explorer_ untuk kekal di tempat anda.
 
-1. _Activity bar_ yang mengandungi beberapa ikon, seperti kaca pembesar 🔎, gear ⚙️, dan beberapa lagi.
-2. _Side bar_ yang merupakan bar aktiviti yang diperluas, secara lalai dipanggil _Explorer_.
-3. Dan akhirnya, kawasan kod di sebelah kanan.
+***
 
-Klik pada setiap ikon untuk memaparkan menu yang berbeza. Setelah selesai, klik pada _Explorer_ supaya anda kembali ke tempat asal.
+## Membuka Repositori GitHub
 
-Apabila anda mula mencipta kod atau mengubah kod sedia ada, ia akan berlaku di kawasan terbesar di sebelah kanan. Anda juga akan menggunakan kawasan ini untuk melihat kod sedia ada, yang akan anda lakukan seterusnya.
+### Kaedah 1: Dari Editor
 
-## Membuka repositori GitHub
+1. Pergi ke [VSCode.dev](https://vscode.dev). Klik **"Open Remote Repository."**
 
-Perkara pertama yang anda perlukan ialah membuka repositori GitHub. Terdapat beberapa cara untuk membuka repositori. Dalam bahagian ini, anda akan melihat dua cara berbeza untuk membuka repositori supaya anda boleh mula membuat perubahan.
+   ![Open remote repository](../../../../8-code-editor/images/open-remote-repository gunakan _Command Palette_ (Ctrl-Shift-P, atau Cmd-Shift-P pada Mac).
 
-### 1. Dengan editor
+   ![Palette Menu](../images/palette-menu.pngopen remote repository.”
+   - Pilih pilihan tersebut.
+   - Tampal URL repo GitHub anda (contoh: `https://github.com/microsoft/Web-Dev-For-Beginners`) dan tekan Enter.
 
-Gunakan editor itu sendiri untuk membuka repositori jauh. Jika anda pergi ke [VSCode.dev](https://vscode.dev), anda akan melihat butang _"Open Remote Repository"_:
+Jika berjaya, anda akan melihat keseluruhan projek dimuatkan dan sedia untuk diedit!
 
-![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.ms.png)
+***
 
-Anda juga boleh menggunakan _command palette_. _Command palette_ adalah kotak input di mana anda boleh menaip sebarang perkataan yang merupakan sebahagian daripada arahan atau tindakan untuk mencari arahan yang betul untuk dilaksanakan. Gunakan menu di bahagian atas kiri, kemudian pilih _View_, dan kemudian pilih _Command Palette_, atau gunakan pintasan papan kekunci berikut: Ctrl-Shift-P (pada MacOS ia adalah Command-Shift-P).
+### Kaedah 2: Segera melalui URL
 
-![Palette Menu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.ms.png)
+Ubah mana-mana URL repo GitHub untuk dibuka terus dalam VSCode.dev dengan menggantikan `github.com` dengan `vscode.dev/github`.  
+Contoh:
 
-Setelah menu dibuka, taip _open remote repository_, dan kemudian pilih pilihan pertama. Beberapa repositori yang anda sertai atau yang telah anda buka baru-baru ini akan muncul. Anda juga boleh menggunakan URL GitHub penuh untuk memilih satu. Gunakan URL berikut dan tampal ke dalam kotak:
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Ciri ini mempercepatkan akses pantas ke MANA-MANA projek.
 
-✅ Jika berjaya, anda akan melihat semua fail untuk repositori ini dimuatkan dalam editor teks.
+***
 
-### 2. Menggunakan URL
+## Mengedit Fail dalam Projek Anda
 
-Anda juga boleh menggunakan URL secara langsung untuk memuatkan repositori. Sebagai contoh, URL penuh untuk repositori semasa ialah [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), tetapi anda boleh menukar domain GitHub dengan `VSCode.dev/github` dan memuatkan repositori secara langsung. URL yang terhasil ialah [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Setelah repo anda dibuka, anda boleh:
 
-## Mengedit fail
+### 1. **Membuat Fail Baru**
+- Dalam bar sisi *Explorer*, navigasi ke folder yang diingini atau gunakan root.
+- Klik ikon _‘New file ...’_.
+- Namakan fail anda, tekan **Enter**, dan fail anda akan muncul serta-merta.
 
-Setelah anda membuka repositori pada pelayar/vscode.dev, langkah seterusnya ialah membuat kemas kini atau perubahan pada projek.
+![Create a new file](../images/create-new-file 2. **Edit dan Simpan Fail**
 
-### 1. Cipta fail baru
+- Klik pada fail dalam *Explorer* untuk membukanya di kawasan kod.
+- Lakukan perubahan yang diperlukan.
+- VSCode.dev secara automatik menyimpan perubahan anda, tetapi anda boleh menekan Ctrl+S untuk menyimpan secara manual.
 
-Anda boleh mencipta fail di dalam folder sedia ada, atau menciptanya di direktori/folder akar. Untuk mencipta fail baru, buka lokasi/direktori di mana anda mahu fail disimpan dan pilih ikon _'New file ...'_ pada _activity bar_ _(kiri)_, beri nama dan tekan enter.
+![Edit a file](../images/edit-a-file.png. **Jejak & Komit Perubahan dengan Kawalan Versi**
 
-![Create a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.ms.png)
+VSCode.dev mempunyai kawalan versi **Git** yang terintegrasi!
 
-### 2. Edit dan simpan fail pada repositori
+- Klik ikon _'Source Control'_ untuk melihat semua perubahan yang dibuat.
+- Fail dalam folder `Changes` menunjukkan penambahan (hijau) dan penghapusan (merah).  
+  ![View changes](../images/working-tree.png perubahan dengan mengklik `+` di sebelah fail untuk bersedia untuk komit.
+- **Buang** perubahan yang tidak diingini dengan mengklik ikon undo.
+- Taip mesej komit yang jelas, kemudian klik tanda semak untuk komit dan push.
 
-Menggunakan vscode.dev sangat berguna apabila anda ingin membuat kemas kini cepat pada projek anda tanpa perlu memuatkan sebarang perisian secara tempatan.  
-Untuk mengemas kini kod anda, klik ikon 'Explorer', yang juga terletak pada _activity bar_ untuk melihat fail & folder dalam repositori.  
-Pilih fail untuk membukanya di kawasan kod, buat perubahan anda dan simpan.
+Untuk kembali ke repositori anda di GitHub, pilih menu hamburger di bahagian atas kiri.
 
-![Edit a file](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.ms.png)
+![Stage & commit changes](../images/edit-vscode.dev Up dengan Sambungan
 
-Setelah anda selesai mengemas kini projek anda, pilih ikon _`source control`_ yang mengandungi semua perubahan baru yang telah anda buat pada repositori anda.
+Sambungan membolehkan anda menambah bahasa, tema, debugger, dan alat produktiviti ke VSCode.dev—menjadikan kehidupan pengekodan anda lebih mudah dan menyeronokkan.
 
-Untuk melihat perubahan yang anda buat pada projek, pilih fail dalam folder `Changes` di _activity bar_ yang diperluas. Ini akan membuka 'Working Tree' untuk anda melihat secara visual perubahan yang anda buat pada fail. Warna merah menunjukkan penghapusan pada projek, manakala warna hijau menunjukkan penambahan.
+### Melayari dan Mengurus Sambungan
 
-![View changes](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.ms.png)
+- Klik ikon **Extensions** pada bar aktiviti.
+- Cari sambungan dalam kotak _'Search Extensions in Marketplace'_.
 
-Jika anda berpuas hati dengan perubahan yang anda buat, letakkan kursor pada folder `Changes` dan klik butang `+` untuk _stage_ perubahan tersebut. _Staging_ bermaksud menyediakan perubahan anda untuk dikomitkan ke GitHub.
+  ![Extension details](../images/extension-details:
+  - **Installed**: Semua sambungan yang telah anda tambahkan
+  - **Popular**: Pilihan kegemaran industri
+  - **Recommended**: Disesuaikan dengan aliran kerja anda
 
-Jika anda tidak selesa dengan beberapa perubahan dan ingin membatalkannya, letakkan kursor pada folder `Changes` dan pilih ikon `undo`.
+  ![View extensions](
 
-Kemudian, taipkan `commit message` _(Deskripsi perubahan yang anda buat pada projek)_, klik ikon `check` untuk _commit_ dan _push_ perubahan anda.
+  
 
-Setelah selesai bekerja pada projek anda, pilih ikon `hamburger menu` di bahagian atas kiri untuk kembali ke repositori di github.com.
+***
 
-![Stage & commit changes](../../../../8-code-editor/images/edit-vscode.dev.gif)
+### 1. **Pasang Sambungan**
 
-## Menggunakan sambungan (extensions)
+- Masukkan nama sambungan dalam carian, klik padanya, dan semak butiran dalam editor.
+- Tekan butang **Install biru** di bar sisi _atau_ di kawasan kod utama.
 
-Memasang sambungan pada VSCode membolehkan anda menambah ciri baru dan pilihan persekitaran pembangunan yang disesuaikan pada editor anda untuk meningkatkan aliran kerja pembangunan anda. Sambungan ini juga membantu anda menambah sokongan untuk pelbagai bahasa pengaturcaraan dan sering kali sama ada sambungan generik atau sambungan berasaskan bahasa.
+  ![Install extensions](../images/install-extension 2. **Sesuaikan Sambungan**
 
-Untuk menyemak senarai semua sambungan yang tersedia, klik ikon _`Extensions`_ pada _activity bar_ dan mula menaip nama sambungan pada medan teks yang dilabelkan _'Search Extensions in Marketplace'_.  
-Anda akan melihat senarai sambungan, setiap satu mengandungi **nama sambungan, nama penerbit, deskripsi satu ayat, jumlah muat turun** dan **penilaian bintang**.
+- Cari sambungan yang telah dipasang.
+- Klik ikon **Gear** → pilih _Extension Settings_ untuk menyesuaikan tingkah laku mengikut kesukaan anda.
 
-![Extension details](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.ms.png)
+  ![Modify extension settings](../images/extension-settings 3. **Urus Sambungan**
+Anda boleh:
 
-Anda juga boleh melihat semua sambungan yang telah dipasang sebelum ini dengan mengembangkan folder _`Installed`_, sambungan popular yang digunakan oleh kebanyakan pembangun dalam folder _`Popular`_, dan sambungan yang disyorkan untuk anda sama ada oleh pengguna dalam ruang kerja yang sama atau berdasarkan fail yang baru dibuka dalam folder _`Recommended`_.
+- **Disable:** Matikan sementara sambungan sambil mengekalkannya dipasang
+- **Uninstall:** Buang secara kekal jika tidak lagi diperlukan
 
-![View extensions](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.ms.png)
+  Cari sambungan, tekan ikon Gear, dan pilih ‘Disable’ atau ‘Uninstall,’ atau gunakan butang biru di kawasan kod.
 
-### 1. Pasang Sambungan
-
-Untuk memasang sambungan, taip nama sambungan dalam medan carian dan klik padanya untuk melihat maklumat tambahan tentang sambungan tersebut di kawasan kod setelah ia muncul di _activity bar_ yang diperluas.
-
-Anda boleh klik butang _install biru_ pada _activity bar_ yang diperluas untuk memasang atau gunakan butang pasang yang muncul di kawasan kod setelah anda memilih sambungan untuk memuatkan maklumat tambahan.
-
-![Install extensions](../../../../8-code-editor/images/install-extension.gif)
-
-### 2. Sesuaikan Sambungan
-
-Setelah memasang sambungan, anda mungkin perlu mengubah tingkah lakunya dan menyesuaikannya berdasarkan keutamaan anda. Untuk melakukan ini, pilih ikon Extensions, dan kali ini, sambungan anda akan muncul dalam folder _Installed_, klik pada ikon _**Gear**_ dan navigasi ke _Extensions Setting_.
-
-![Modify extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.ms.png)
-
-### 3. Urus Sambungan
-
-Setelah memasang dan menggunakan sambungan anda, vscode.dev menawarkan pilihan untuk mengurus sambungan anda berdasarkan keperluan yang berbeza. Sebagai contoh, anda boleh memilih untuk:
-
-- **Disable:** _(Anda boleh melumpuhkan sambungan buat sementara waktu apabila anda tidak lagi memerlukannya tetapi tidak mahu menyahpasangnya sepenuhnya)_
-
-    Pilih sambungan yang dipasang pada _activity bar_ yang diperluas > klik ikon Gear > pilih 'Disable' atau 'Disable (Workspace)' **ATAU** Buka sambungan pada kawasan kod dan klik butang Disable biru.
-
-- **Uninstall:** Pilih sambungan yang dipasang pada _activity bar_ yang diperluas > klik ikon Gear > pilih 'Uninstall' **ATAU** Buka sambungan pada kawasan kod dan klik butang Uninstall biru.
-
----
+***
 
 ## Tugasan
 
-[Cipta laman web resume menggunakan vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Uji kemahiran anda: [Buat laman web resume menggunakan vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Kajian & Pembelajaran Kendiri
+***
 
-Baca lebih lanjut tentang [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) dan beberapa ciri lain yang ditawarkannya.
+## Penjelajahan Lanjut dan Kajian Kendiri
+
+- Selami lebih mendalam dengan [Dokumentasi Web VSCode rasmi](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Terokai ciri ruang kerja lanjutan, pintasan papan kekunci, dan tetapan.
+
+***
+
+**Kini anda bersedia untuk mengekod, mencipta, dan bekerjasama—dari mana-mana sahaja, pada mana-mana peranti, menggunakan VSCode.dev!**
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

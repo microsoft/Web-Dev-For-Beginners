@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2dcbb9259dee4f20a4f08d9a1aa2bd4c",
-  "translation_date": "2025-08-29T13:45:10+00:00",
+  "original_hash": "2581528206a2a01c3a0b9c88e039b7bc",
+  "translation_date": "2025-10-03T08:24:52+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "fr"
 }
 -->
-# Introduction aux langages de programmation et outils essentiels
+# Introduction aux langages de programmation et outils du métier
 
-Cette leçon couvre les bases des langages de programmation. Les sujets abordés ici s'appliquent à la plupart des langages de programmation modernes. Dans la section "Outils essentiels", vous découvrirez des logiciels utiles pour vous en tant que développeur.
+Cette leçon couvre les bases des langages de programmation. Les sujets abordés ici s'appliquent à la plupart des langages de programmation modernes. Dans la section "Outils du métier", vous découvrirez des logiciels utiles pour vous en tant que développeur.
 
 ![Intro Programmation](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.fr.png)
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Quiz pré-lecture
-[Quiz pré-lecture](https://forms.office.com/r/dru4TE0U9n?origin=lprLink)
+## Quiz avant la leçon
+[Quiz avant la leçon](https://forms.office.com/r/dru4TE0U9n?origin=lprLink)
 
 ## Introduction
 
@@ -30,17 +30,17 @@ Dans cette leçon, nous aborderons :
 
 ## Qu'est-ce que la programmation ?
 
-La programmation (également appelée codage) est le processus d'écriture d'instructions pour un appareil tel qu'un ordinateur ou un appareil mobile. Nous écrivons ces instructions avec un langage de programmation, qui est ensuite interprété par l'appareil. Ces ensembles d'instructions peuvent être appelés par divers noms, mais *programme*, *programme informatique*, *application (app)* et *exécutable* sont quelques noms courants.
+La programmation (également appelée codage) est le processus d'écriture d'instructions pour un appareil tel qu'un ordinateur ou un appareil mobile. Nous écrivons ces instructions avec un langage de programmation, qui est ensuite interprété par l'appareil. Ces ensembles d'instructions peuvent être appelés par divers noms, mais *programme*, *programme informatique*, *application (app)* et *exécutable* sont quelques noms populaires.
 
-Un *programme* peut être tout ce qui est écrit avec du code : sites web, jeux, applications mobiles, etc. Bien qu'il soit possible de créer un programme sans écrire de code, la logique sous-jacente est interprétée par l'appareil, et cette logique a très probablement été écrite avec du code. Un programme qui *s'exécute* ou *interprète* du code exécute des instructions. L'appareil que vous utilisez pour lire cette leçon exécute un programme pour l'afficher sur votre écran.
+Un *programme* peut être tout ce qui est écrit avec du code : sites web, jeux, et applications mobiles sont des programmes. Bien qu'il soit possible de créer un programme sans écrire de code, la logique sous-jacente est interprétée par l'appareil et cette logique a très probablement été écrite avec du code. Un programme qui *s'exécute* ou *exécute* du code réalise des instructions. L'appareil avec lequel vous lisez cette leçon exécute un programme pour l'afficher sur votre écran.
 
 ✅ Faites une petite recherche : qui est considéré comme le premier programmeur informatique au monde ?
 
 ## Langages de programmation
 
-Les langages de programmation permettent aux développeurs d'écrire des instructions pour un appareil. Les appareils ne comprennent que le binaire (1 et 0), et pour *la plupart* des développeurs, ce n'est pas une manière très efficace de communiquer. Les langages de programmation servent de pont entre les humains et les ordinateurs.
+Les langages de programmation permettent aux développeurs d'écrire des instructions pour un appareil. Les appareils ne comprennent que le binaire (1 et 0), et pour *la plupart* des développeurs, ce n'est pas une manière très efficace de communiquer. Les langages de programmation sont le moyen de communication entre les humains et les ordinateurs.
 
-Les langages de programmation existent sous différents formats et peuvent avoir des objectifs variés. Par exemple, JavaScript est principalement utilisé pour les applications web, tandis que Bash est principalement utilisé pour les systèmes d'exploitation.
+Les langages de programmation existent sous différents formats et peuvent servir à des fins différentes. Par exemple, JavaScript est principalement utilisé pour les applications web, tandis que Bash est principalement utilisé pour les systèmes d'exploitation.
 
 Les *langages de bas niveau* nécessitent généralement moins d'étapes que les *langages de haut niveau* pour qu'un appareil interprète les instructions. Cependant, ce qui rend les langages de haut niveau populaires, c'est leur lisibilité et leur support. JavaScript est considéré comme un langage de haut niveau.
 
@@ -83,39 +83,39 @@ back add r0,r1
  end
 ```
 
-Croyez-le ou non, *ils font exactement la même chose* : afficher une séquence de Fibonacci jusqu'à 10.
+Croyez-le ou non, *ils font la même chose* : imprimer une séquence de Fibonacci jusqu'à 10.
 
-✅ Une séquence de Fibonacci est [définie](https://en.wikipedia.org/wiki/Fibonacci_number) comme un ensemble de nombres où chaque nombre est la somme des deux précédents, en commençant par 0 et 1. Les 10 premiers nombres de la séquence de Fibonacci sont 0, 1, 1, 2, 3, 5, 8, 13, 21 et 34.
+✅ Une séquence de Fibonacci est [définie](https://en.wikipedia.org/wiki/Fibonacci_number) comme un ensemble de nombres où chaque nombre est la somme des deux précédents, en commençant par 0 et 1. Les 10 premiers nombres suivant la séquence de Fibonacci sont 0, 1, 1, 2, 3, 5, 8, 13, 21 et 34.
 
 ## Éléments d'un programme
 
-Une seule instruction dans un programme est appelée une *instruction* et comporte généralement un caractère ou un espacement de ligne qui marque où l'instruction se termine, ou *se termine*. La manière dont une instruction se termine varie selon les langages.
+Une seule instruction dans un programme est appelée une *instruction* et aura généralement un caractère ou un espacement de ligne qui marque où l'instruction se termine, ou *se termine*. La manière dont un programme se termine varie selon chaque langage.
 
-Les instructions dans un programme peuvent dépendre de données fournies par un utilisateur ou provenant d'ailleurs pour exécuter des instructions. Les données peuvent modifier le comportement d'un programme, c'est pourquoi les langages de programmation incluent un moyen de stocker temporairement des données pour une utilisation ultérieure. Ces moyens sont appelés *variables*. Les variables sont des instructions qui demandent à un appareil de sauvegarder des données dans sa mémoire. Les variables dans les programmes sont similaires aux variables en algèbre, où elles ont un nom unique et leur valeur peut changer au fil du temps.
+Les instructions dans un programme peuvent dépendre des données fournies par un utilisateur ou ailleurs pour exécuter des instructions. Les données peuvent modifier le comportement d'un programme, c'est pourquoi les langages de programmation incluent un moyen de stocker temporairement des données pour qu'elles puissent être utilisées ultérieurement. Ce sont les *variables*. Les variables sont des instructions qui demandent à un appareil de sauvegarder des données dans sa mémoire. Les variables dans les programmes sont similaires aux variables en algèbre, où elles ont un nom unique et leur valeur peut changer au fil du temps.
 
-Il est possible que certaines instructions ne soient pas exécutées par un appareil. Cela peut être intentionnel, écrit par le développeur, ou accidentel, en cas d'erreur inattendue. Ce type de contrôle sur une application la rend plus robuste et maintenable. En général, ces changements de contrôle se produisent lorsque certaines conditions sont remplies. Une instruction courante utilisée dans la programmation moderne pour contrôler l'exécution d'un programme est l'instruction `if..else`.
+Il est possible que certaines instructions ne soient pas exécutées par un appareil. Cela se produit généralement par conception lorsqu'elles sont écrites par le développeur ou par accident lorsqu'une erreur inattendue survient. Ce type de contrôle sur une application la rend plus robuste et maintenable. En général, ces changements de contrôle se produisent lorsque certaines conditions sont remplies. Une instruction courante utilisée dans la programmation moderne pour contrôler le fonctionnement d'un programme est l'instruction `if..else`.
 
 ✅ Vous en apprendrez davantage sur ce type d'instruction dans les leçons suivantes.
 
-## Outils essentiels
+## Outils du métier
 
-[![Outils essentiels](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Outils essentiels")
+[![Outils du métier](https://img.youtube.com/vi/69WJeXGBdxg/0.jpg)](https://youtube.com/watch?v=69WJeXGBdxg "Outils du métier")
 
 > 🎥 Cliquez sur l'image ci-dessus pour une vidéo sur les outils
 
-Dans cette section, vous découvrirez des logiciels que vous pourriez trouver très utiles au début de votre parcours de développement professionnel.
+Dans cette section, vous découvrirez certains logiciels que vous pourriez trouver très utiles au début de votre parcours de développement professionnel.
 
-Un **environnement de développement** est un ensemble unique d'outils et de fonctionnalités qu'un développeur utilise fréquemment pour écrire des logiciels. Certains de ces outils ont été personnalisés pour répondre aux besoins spécifiques d'un développeur et peuvent évoluer avec le temps si ce développeur change de priorités dans son travail, ses projets personnels ou lorsqu'il utilise un autre langage de programmation. Les environnements de développement sont aussi uniques que les développeurs qui les utilisent.
+Un **environnement de développement** est un ensemble unique d'outils et de fonctionnalités qu'un développeur utilise souvent lorsqu'il écrit des logiciels. Certains de ces outils ont été personnalisés pour répondre aux besoins spécifiques d'un développeur et peuvent évoluer avec le temps si ce développeur change de priorités dans son travail, ses projets personnels ou lorsqu'il utilise un langage de programmation différent. Les environnements de développement sont aussi uniques que les développeurs qui les utilisent.
 
 ### Éditeurs
 
-L'un des outils les plus cruciaux pour le développement logiciel est l'éditeur. Les éditeurs sont l'endroit où vous écrivez votre code et parfois où vous l'exécutez.
+L'un des outils les plus cruciaux pour le développement logiciel est l'éditeur. Les éditeurs sont l'endroit où vous écrivez votre code et parfois où vous exécutez votre code.
 
 Les développeurs s'appuient sur les éditeurs pour plusieurs raisons supplémentaires :
 
-- Le *débogage* permet de détecter les bugs et erreurs en parcourant le code, ligne par ligne. Certains éditeurs disposent de capacités de débogage ; ils peuvent être personnalisés et enrichis pour des langages spécifiques.
-- La *coloration syntaxique* ajoute des couleurs et des formats de texte au code, le rendant plus lisible. La plupart des éditeurs permettent de personnaliser la coloration syntaxique.
-- Les *extensions et intégrations* sont des outils spécialisés pour les développeurs, créés par des développeurs. Ces outils ne sont pas intégrés à l'éditeur de base. Par exemple, de nombreux développeurs documentent leur code pour expliquer son fonctionnement. Ils peuvent installer une extension de vérification orthographique pour repérer les fautes dans la documentation. La plupart des extensions sont conçues pour un éditeur spécifique, et la plupart des éditeurs permettent de rechercher les extensions disponibles.
+- Le *débogage* aide à découvrir les bugs et les erreurs en parcourant le code, ligne par ligne. Certains éditeurs ont des capacités de débogage ; ils peuvent être personnalisés et ajoutés pour des langages de programmation spécifiques.
+- La *coloration syntaxique* ajoute des couleurs et des formats de texte au code, le rendant plus facile à lire. La plupart des éditeurs permettent une coloration syntaxique personnalisée.
+- Les *extensions et intégrations* sont des outils spécialisés pour les développeurs, créés par des développeurs. Ces outils n'ont pas été intégrés dans l'éditeur de base. Par exemple, de nombreux développeurs documentent leur code pour expliquer son fonctionnement. Ils peuvent installer une extension de vérification orthographique pour repérer les fautes de frappe dans la documentation. La plupart des extensions sont destinées à être utilisées dans un éditeur spécifique, et la plupart des éditeurs permettent de rechercher les extensions disponibles.
 - La *personnalisation* permet aux développeurs de créer un environnement de développement unique adapté à leurs besoins. La plupart des éditeurs sont extrêmement personnalisables et peuvent également permettre aux développeurs de créer des extensions personnalisées.
 
 #### Éditeurs populaires et extensions pour le développement web
@@ -137,7 +137,7 @@ Les développeurs s'appuient sur les éditeurs pour plusieurs raisons supplémen
 
 Un autre outil crucial est le navigateur. Les développeurs web s'appuient sur le navigateur pour voir comment leur code s'exécute sur le web. Il est également utilisé pour afficher les éléments visuels d'une page web écrits dans l'éditeur, comme le HTML.
 
-De nombreux navigateurs sont équipés d'*outils de développement* (DevTools) qui contiennent un ensemble de fonctionnalités utiles et d'informations pour aider les développeurs à collecter et capturer des informations importantes sur leur application. Par exemple : si une page web contient des erreurs, il est parfois utile de savoir quand elles se sont produites. Les DevTools d'un navigateur peuvent être configurés pour capturer ces informations.
+De nombreux navigateurs sont équipés d'*outils de développement* (DevTools) qui contiennent un ensemble de fonctionnalités utiles et d'informations pour aider les développeurs à collecter et capturer des informations importantes sur leur application. Par exemple : Si une page web contient des erreurs, il est parfois utile de savoir quand elles se sont produites. Les DevTools d'un navigateur peuvent être configurés pour capturer ces informations.
 
 #### Navigateurs populaires et DevTools
 
@@ -147,7 +147,7 @@ De nombreux navigateurs sont équipés d'*outils de développement* (DevTools) q
 
 ### Outils en ligne de commande
 
-Certains développeurs préfèrent une vue moins graphique pour leurs tâches quotidiennes et s'appuient sur la ligne de commande pour cela. Écrire du code nécessite une grande quantité de saisie, et certains développeurs préfèrent ne pas interrompre leur flux sur le clavier. Ils utilisent des raccourcis clavier pour basculer entre les fenêtres du bureau, travailler sur différents fichiers et utiliser des outils. La plupart des tâches peuvent être effectuées avec une souris, mais un avantage de la ligne de commande est qu'il est possible d'accomplir beaucoup de choses sans avoir à alterner entre la souris et le clavier. Un autre avantage de la ligne de commande est qu'elle est configurable : vous pouvez enregistrer une configuration personnalisée, la modifier plus tard et l'importer sur d'autres machines de développement. Comme les environnements de développement sont uniques à chaque développeur, certains éviteront la ligne de commande, d'autres s'y fieront entièrement, et certains préféreront un mélange des deux.
+Certains développeurs préfèrent une vue moins graphique pour leurs tâches quotidiennes et s'appuient sur la ligne de commande pour y parvenir. Écrire du code nécessite une quantité importante de saisie et certains développeurs préfèrent ne pas interrompre leur flux sur le clavier. Ils utiliseront des raccourcis clavier pour basculer entre les fenêtres du bureau, travailler sur différents fichiers et utiliser des outils. La plupart des tâches peuvent être effectuées avec une souris, mais un avantage de la ligne de commande est qu'il est possible de réaliser beaucoup de choses avec des outils en ligne de commande sans avoir besoin de basculer entre la souris et le clavier. Un autre avantage de la ligne de commande est qu'elle est configurable et qu'il est possible de sauvegarder une configuration personnalisée, de la modifier ultérieurement et de l'importer sur d'autres machines de développement. Étant donné que les environnements de développement sont si uniques à chaque développeur, certains éviteront d'utiliser la ligne de commande, d'autres s'y fieront entièrement, et certains préféreront un mélange des deux.
 
 ### Options populaires pour la ligne de commande
 
@@ -182,7 +182,7 @@ Les options pour la ligne de commande diffèrent selon le système d'exploitatio
 
 ### Documentation
 
-Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tourne généralement vers la documentation pour apprendre à l'utiliser. Les développeurs s'appuient souvent sur la documentation pour les guider dans l'utilisation correcte des outils et des langages, et aussi pour approfondir leur compréhension de leur fonctionnement.
+Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tournera probablement vers la documentation pour apprendre à l'utiliser. Les développeurs s'appuient souvent sur la documentation pour les guider sur la manière d'utiliser correctement les outils et les langages, et aussi pour approfondir leurs connaissances sur leur fonctionnement.
 
 #### Documentation populaire sur le développement web
 
@@ -200,18 +200,20 @@ Lorsqu'un développeur souhaite apprendre quelque chose de nouveau, il se tourne
 
 Comparez quelques langages de programmation. Quelles sont les caractéristiques uniques de JavaScript par rapport à Java ? Et de COBOL par rapport à Go ?
 
-## Quiz post-lecture
-[Quiz post-lecture](https://ff-quizzes.netlify.app/web/)
+## Quiz après la leçon
+[Quiz après la leçon](https://ff-quizzes.netlify.app/web/)
 
-## Révision et auto-apprentissage
+## Révision et étude personnelle
 
-Étudiez un peu les différents langages disponibles pour les programmeurs. Essayez d'écrire une ligne dans un langage, puis réécrivez-la dans deux autres. Qu'avez-vous appris ?
+Étudiez un peu les différents langages disponibles pour le programmeur. Essayez d'écrire une ligne dans un langage, puis réécrivez-la dans deux autres. Qu'avez-vous appris ?
 
 ## Devoir
 
 [Lire la documentation](assignment.md)
 
+> Remarque : Lors de la sélection des outils pour votre devoir, ne choisissez pas les éditeurs, navigateurs ou outils en ligne de commande déjà listés ci-dessus.
+
 ---
 
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

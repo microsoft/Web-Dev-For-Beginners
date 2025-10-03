@@ -1,155 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T00:46:19+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T10:05:12+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "fi"
 }
 -->
-# Koodieditorin käyttö
+***
 
-Tässä oppitunnissa käsitellään [VSCode.dev](https://vscode.dev)-verkkopohjaisen koodieditorin perusteita, jotta voit tehdä muutoksia koodiisi ja osallistua projekteihin asentamatta mitään tietokoneellesi.
+# Koodieditorin käyttö: Hallitse [VSCode.dev](https://vscode.dev)
+
+**Tervetuloa!**  
+Tämä oppitunti vie sinut perusteista edistyneeseen käyttöön [VSCode.dev](https://vscode.dev)—tehokas, verkkopohjainen koodieditori. Opit muokkaamaan koodia itsevarmasti, hallitsemaan projekteja, seuraamaan muutoksia, asentamaan laajennuksia ja tekemään yhteistyötä kuin ammattilainen—kaikki suoraan selaimesta, ilman asennuksia.
+
+***
 
 ## Oppimistavoitteet
 
-Tässä oppitunnissa opit:
+Oppitunnin lopussa osaat:
 
-- Käyttämään koodieditoria koodiprojektissa
-- Seuraamaan muutoksia versionhallinnan avulla
-- Mukauttamaan editoria kehitystyötä varten
+- Käyttää koodieditoria tehokkaasti missä tahansa projektissa, missä tahansa
+- Seurata työtäsi saumattomasti sisäänrakennetulla versionhallinnalla
+- Personoida ja tehostaa kehitystyötäsi editorin mukautuksilla ja laajennuksilla
 
-### Esitiedot
+***
 
-Ennen kuin aloitat, sinun täytyy luoda tili [GitHubiin](https://github.com). Siirry [GitHubiin](https://github.com/) ja luo tili, jos sinulla ei vielä ole sellaista.
+## Esivaatimukset
 
-### Johdanto
+Aloittaaksesi, **rekisteröidy ilmaiseksi [GitHub](https://github.com)-tilille**, joka mahdollistaa koodivarastojen hallinnan ja maailmanlaajuisen yhteistyön. Jos sinulla ei vielä ole tiliä, [luo yksi täällä](https://github.com/).
 
-Koodieditori on olennainen työkalu ohjelmien kirjoittamiseen ja yhteistyöhön olemassa olevien koodiprojektien parissa. Kun ymmärrät editorin perusteet ja osaat hyödyntää sen ominaisuuksia, voit soveltaa niitä koodin kirjoittamisessa.
+***
 
-## Aloittaminen VSCode.devillä
+## Miksi käyttää verkkopohjaista koodieditoria?
 
-[VSCode.dev](https://vscode.dev) on verkkopohjainen koodieditori. Sen käyttö ei vaadi mitään asennuksia, aivan kuten minkä tahansa verkkosivun avaaminen. Aloittaaksesi editorin käytön, avaa seuraava linkki: [https://vscode.dev](https://vscode.dev). Jos et ole kirjautunut [GitHubiin](https://github.com/), seuraa ohjeita kirjautuaksesi sisään tai luodaksesi uuden tilin ja kirjaudu sitten sisään.
+**Koodieditori**, kuten VSCode.dev, on komentokeskuksesi koodin kirjoittamiseen, muokkaamiseen ja hallintaan. Intuitiivisen käyttöliittymän, lukemattomien ominaisuuksien ja välittömän selaimen kautta tapahtuvan pääsyn ansiosta voit:
 
-Kun editori latautuu, sen pitäisi näyttää tältä:
+- Muokata projekteja millä tahansa laitteella
+- Välttää asennusten vaivaa
+- Tehdä yhteistyötä ja osallistua välittömästi
 
-![Oletusnäkymä VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.fi.png)
+Kun olet perehtynyt VSCode.dev:iin, olet valmis tarttumaan koodaushaasteisiin mistä tahansa, milloin tahansa.
 
-Editorissa on kolme pääosaa, vasemmalta oikealle:
+***
 
-1. _Toimintopalkki_ (activity bar), jossa on joitakin kuvakkeita, kuten suurennuslasi 🔎, hammasratas ⚙️ ja muita.
-2. Laajennettu toimintopalkki, joka oletuksena näyttää _Resurssienhallinnan_ (Explorer) ja jota kutsutaan _sivupalkiksi_ (side bar).
-3. Koodialue oikealla, jossa varsinainen koodin kirjoittaminen ja tarkastelu tapahtuu.
+## Aloittaminen VSCode.dev:in kanssa
 
-Klikkaa kutakin kuvaketta nähdäksesi eri valikot. Kun olet valmis, palaa _Resurssienhallintaan_ (Explorer), jotta olet takaisin aloitusnäkymässä.
+Siirry **[VSCode.dev](https://vscode.dev)**-sivustolle—ei asennuksia, ei latauksia. Kirjautuminen GitHubilla avaa täyden pääsyn, mukaan lukien asetusten, laajennusten ja varastojen synkronoinnin. Jos sinua pyydetään, yhdistä GitHub-tilisi.
 
-Kun alat luoda tai muokata koodia, se tapahtuu oikeanpuoleisimmassa, suurimmassa alueessa. Käytät tätä aluetta myös tarkastellaksesi olemassa olevaa koodia, kuten seuraavaksi teet.
+Kun editori latautuu, työtilasi näyttää tältä:
 
-## GitHub-repositorion avaaminen
+![Oletus VSCode.dev](../images/default-vscode-dev sisältää kolme pääosaa vasemmalta oikealle:
+- **Toimintopalkki:** Kuvakkeet, kuten 🔎 (Haku), ⚙️ (Asetukset), tiedostot, versionhallinta jne.
+- **Sivupalkki:** Muuttaa kontekstia valitun toimintopalkin kuvakkeen mukaan (oletuksena *Explorer* näyttää tiedostot).
+- **Editorin/koodin alue:** Suurin osa oikealla—paikka, jossa muokkaat ja tarkastelet koodia.
 
-Ensimmäinen askel on avata GitHub-repositorio. Repositorion avaamiseen on useita tapoja. Tässä osiossa näet kaksi eri tapaa, joilla voit avata repositorion ja aloittaa muutosten tekemisen.
+Klikkaa kuvakkeita tutkiaksesi ominaisuuksia, mutta palaa _Explorer_-osioon pysyäksesi kartalla.
 
-### 1. Editorin kautta
+***
 
-Käytä editoria avataksesi etärepositorio. Kun siirryt [VSCode.dev](https://vscode.dev)-sivustolle, näet _"Open Remote Repository"_ -painikkeen:
+## GitHub-varaston avaaminen
 
-![Avaa etärepositorio](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.fi.png)
+### Menetelmä 1: Editorista
 
-Voit myös käyttää komentopalettia. Komentopaletti on syöttökenttä, johon voit kirjoittaa minkä tahansa komennon tai toiminnon löytääksesi oikean komennon suoritettavaksi. Käytä vasemman yläkulman valikkoa, valitse _View_ ja sitten _Command Palette_, tai käytä seuraavaa pikanäppäintä: Ctrl-Shift-P (MacOS:lla Command-Shift-P).
+1. Siirry [VSCode.dev](https://vscode.dev)-sivustolle. Klikkaa **"Open Remote Repository."**
 
-![Palettivalikko](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.fi.png)
+   ![Avaa etävarasto](../../../../8-code-editor/images/open-remote-repository käytä _Command Palette_-valikkoa (Ctrl-Shift-P tai Cmd-Shift-P Macilla).
 
-Kun valikko avautuu, kirjoita _open remote repository_ ja valitse ensimmäinen vaihtoehto. Näet useita repositorioita, joihin kuulut tai jotka olet avannut äskettäin. Voit myös käyttää täydellistä GitHub-URL-osoitetta valitaksesi yhden. Käytä seuraavaa URL-osoitetta ja liitä se kenttään:
+   ![Palettivalikko](../images/palette-menu.pngavaa etävarasto.”
+   - Valitse vaihtoehto.
+   - Liitä GitHub-varastosi URL-osoite (esim. `https://github.com/microsoft/Web-Dev-For-Beginners`) ja paina Enter.
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Jos onnistuu, näet koko projektin ladattuna ja valmiina muokattavaksi!
 
-✅ Jos onnistut, näet kaikki tämän repositorion tiedostot ladattuna tekstieditoriin.
+***
 
-### 2. URL-osoitteen avulla
+### Menetelmä 2: Välittömästi URL-osoitteen kautta
 
-Voit myös käyttää suoraan URL-osoitetta ladataksesi repositorion. Esimerkiksi tämänhetkisen repositorion täydellinen URL-osoite on [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), mutta voit vaihtaa GitHub-verkkotunnuksen `VSCode.dev/github`-muotoon ja ladata repositorion suoraan. Tuloksena oleva URL-osoite olisi [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Muuta mikä tahansa GitHub-varaston URL-osoite avautumaan suoraan VSCode.dev:ssä korvaamalla `github.com` `vscode.dev/github`:illa.  
+Esim.:
 
-## Tiedostojen muokkaaminen
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-Kun olet avannut repositorion selaimessa/vscode.devissä, seuraava askel on tehdä päivityksiä tai muutoksia projektiin.
+Tämä ominaisuus nopeuttaa pääsyä mihin tahansa projektiin.
 
-### 1. Uuden tiedoston luominen
+***
 
-Voit luoda tiedoston joko olemassa olevan kansion sisälle tai juurihakemistoon. Luodaksesi uuden tiedoston, avaa sijainti/hakemisto, johon haluat tallentaa tiedoston, ja valitse toimintopalkista _'New file ...'_ -kuvake, anna tiedostolle nimi ja paina Enter.
+## Tiedostojen muokkaaminen projektissasi
 
-![Luo uusi tiedosto](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.fi.png)
+Kun varastosi on avattu, voit:
 
-### 2. Tiedoston muokkaaminen ja tallentaminen repositorioon
+### 1. **Luoda uuden tiedoston**
+- *Explorer*-sivupalkissa, siirry haluamaasi kansioon tai käytä juurihakemistoa.
+- Klikkaa _‘New file ...’_ -kuvaketta.
+- Nimeä tiedostosi, paina **Enter**, ja tiedostosi ilmestyy välittömästi.
 
-VSCode.dev on hyödyllinen, kun haluat tehdä nopeita päivityksiä projektiisi ilman, että sinun tarvitsee ladata mitään ohjelmistoa paikallisesti. Päivittääksesi koodiasi, klikkaa toimintopalkissa olevaa _Resurssienhallinta_-kuvaketta nähdäksesi repositorion tiedostot ja kansiot. Valitse tiedosto avataksesi sen koodialueelle, tee muutokset ja tallenna.
+![Luo uusi tiedosto](../images/create-new-file 2. **Muokkaa ja tallenna tiedostoja**
 
-![Muokkaa tiedostoa](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.fi.png)
+- Klikkaa tiedostoa *Explorer*-osiossa avataksesi sen koodialueella.
+- Tee tarvittavat muutokset.
+- VSCode.dev tallentaa muutokset automaattisesti, mutta voit painaa Ctrl+S tallentaaksesi manuaalisesti.
 
-Kun olet tehnyt päivitykset projektiisi, valitse _`lähdekontrolli`_-kuvake, joka sisältää kaikki tekemäsi muutokset repositorioon.
+![Muokkaa tiedostoa](../images/edit-a-file.png. **Seuraa & sitoudu muutoksiin versionhallinnalla**
 
-Tarkastellaksesi tekemiäsi muutoksia, valitse tiedosto(t) `Changes`-kansiosta laajennetussa toimintopalkissa. Tämä avaa 'Working Tree' -näkymän, jossa voit visuaalisesti nähdä tiedostoon tekemäsi muutokset. Punainen väri osoittaa poistettuja osia, kun taas vihreä väri osoittaa lisäyksiä.
+VSCode.dev sisältää integroidun **Git**-versionhallinnan!
 
-![Näytä muutokset](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.fi.png)
+- Klikkaa _'Source Control'_ -kuvaketta nähdäksesi kaikki tehdyt muutokset.
+- Tiedostot `Changes`-kansiossa näyttävät lisäykset (vihreä) ja poistot (punainen).  
+  ![Näytä muutokset](../images/working-tree.png muutokset klikkaamalla `+` tiedostojen vieressä valmistellaksesi sitoumusta.
+- **Hylkää** ei-toivotut muutokset klikkaamalla kumoa-kuvaketta.
+- Kirjoita selkeä sitoumusviesti ja klikkaa valintamerkkiä sitoutuaksesi ja lähettääksesi.
 
-Jos olet tyytyväinen tekemiisi muutoksiin, vie hiiri `Changes`-kansion päälle ja klikkaa `+`-painiketta lisätäksesi muutokset vaiheeseen. Vaiheistus tarkoittaa muutosten valmistelua niiden sitomista varten GitHubiin.
+Palataksesi varastoosi GitHubissa, valitse hampurilaisvalikko vasemmasta yläkulmasta.
 
-Jos taas et ole tyytyväinen joihinkin muutoksiin ja haluat peruuttaa ne, vie hiiri `Changes`-kansion päälle ja valitse `undo`-kuvake.
+![Valmistele & sitoudu muutoksiin](../images/edit-vscode.dev Laajennusten käyttö
 
-Kirjoita sitten `commit message` _(kuvaus tekemästäsi muutoksesta projektiin)_, klikkaa `check`-kuvaketta sitouttaaksesi ja lähettääksesi muutokset.
+Laajennukset mahdollistavat kielten, teemojen, virheenkorjaajien ja tuottavuustyökalujen lisäämisen VSCode.dev:iin—tehden koodauselämästäsi helpompaa ja hauskempaa.
 
-Kun olet valmis projektisi kanssa, valitse vasemman yläkulman `hampurilaisvalikko`-kuvake palataksesi repositorioon github.comissa.
+### Laajennusten selaaminen ja hallinta
 
-![Vaiheista ja sitoudu muutoksiin](../../../../8-code-editor/images/edit-vscode.dev.gif)
+- Klikkaa **Laajennukset-kuvaketta** toimintopalkissa.
+- Etsi laajennusta _'Search Extensions in Marketplace'_ -laatikossa.
 
-## Laajennusten käyttö
+  ![Laajennuksen tiedot](../images/extension-details:
+  - **Asennetut**: Kaikki lisäämäsi laajennukset
+  - **Suositut**: Alan suosikit
+  - **Suositellut**: Työskentelytapasi mukaan räätälöidyt
 
-Laajennusten asentaminen VSCodeen mahdollistaa uusien ominaisuuksien lisäämisen ja kehitysympäristön mukauttamisen editorissa, mikä parantaa kehitystyön sujuvuutta. Nämä laajennukset auttavat myös lisäämään tukea useille ohjelmointikielille ja ovat usein joko yleisiä tai kielikohtaisia laajennuksia.
+  ![Näytä laajennukset](
 
-Selaa kaikkia saatavilla olevia laajennuksia klikkaamalla toimintopalkin _`Laajennukset`_-kuvaketta ja kirjoittamalla laajennuksen nimi tekstikenttään, jossa lukee _'Search Extensions in Marketplace'_.
-Näet listan laajennuksista, joista jokaisessa on **laajennuksen nimi, julkaisijan nimi, yhden lauseen kuvaus, latausten määrä** ja **tähtiluokitus**.
+  
 
-![Laajennuksen tiedot](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.fi.png)
+***
 
-Voit myös tarkastella aiemmin asennettuja laajennuksia laajentamalla _`Installed`_-kansion, suosittuja laajennuksia _`Popular`_-kansiossa ja sinulle suositeltuja laajennuksia joko saman työtilan käyttäjien tai äskettäin avattujen tiedostojen perusteella _`Recommended`_-kansiossa.
+### 1. **Asenna laajennuksia**
 
-![Näytä laajennukset](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.fi.png)
+- Syötä laajennuksen nimi hakukenttään, klikkaa sitä ja tarkista tiedot editorissa.
+- Paina **sinistä Asenna-painiketta** sivupalkissa _tai_ pääkoodialueella.
 
-### 1. Laajennusten asentaminen
+  ![Asenna laajennuksia](../images/install-extension 2. **Mukauta laajennuksia**
 
-Asentaaksesi laajennuksen, kirjoita sen nimi hakukenttään ja klikkaa sitä nähdäksesi lisätietoja laajennuksesta koodialueella, kun se ilmestyy laajennettuun toimintopalkkiin.
+- Etsi asennettu laajennuksesi.
+- Klikkaa **Hammasratas-kuvaketta** → valitse _Extension Settings_ hienosäätääksesi asetuksia mielesi mukaan.
 
-Voit joko klikata _sinistä asennuspainiketta_ laajennetussa toimintopalkissa tai käyttää koodialueella näkyvää asennuspainiketta, kun valitset laajennuksen ladataksesi lisätietoja.
+  ![Muokkaa laajennusasetuksia](../images/extension-settings 3. **Hallitse laajennuksia**
+Voit:
 
-![Asenna laajennuksia](../../../../8-code-editor/images/install-extension.gif)
+- **Poistaa käytöstä:** Sammuttaa laajennuksen väliaikaisesti säilyttäen sen asennettuna
+- **Poistaa:** Poistaa sen pysyvästi, jos et enää tarvitse sitä
 
-### 2. Laajennusten mukauttaminen
+  Etsi laajennus, paina Hammasratas-kuvaketta ja valitse ‘Disable’ tai ‘Uninstall,’ tai käytä sinisiä painikkeita koodialueella.
 
-Asennettuasi laajennuksen saatat haluta muokata sen toimintaa ja mukauttaa sitä omien mieltymystesi mukaan. Tee tämä valitsemalla Laajennukset-kuvake, ja tällä kertaa laajennuksesi näkyy _Installed_-kansiossa. Klikkaa _**Hammasratas-kuvaketta**_ ja siirry _Extensions Setting_ -kohtaan.
-
-![Muokkaa laajennuksen asetuksia](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.fi.png)
-
-### 3. Laajennusten hallinta
-
-Asennettuasi ja käytettyäsi laajennusta vscode.dev tarjoaa vaihtoehtoja hallita laajennusta eri tarpeiden mukaan. Esimerkiksi voit:
-
-- **Poistaa käytöstä:** _(Voit tilapäisesti poistaa laajennuksen käytöstä, jos et enää tarvitse sitä, mutta et halua poistaa sitä kokonaan.)_
-
-    Valitse asennettu laajennus laajennetusta toimintopalkista > klikkaa Hammasratas-kuvaketta > valitse 'Disable' tai 'Disable (Workspace)' **TAI** avaa laajennus koodialueella ja klikkaa sinistä Disable-painiketta.
-
-- **Poistaa asennuksen:** Valitse asennettu laajennus laajennetusta toimintopalkista > klikkaa Hammasratas-kuvaketta > valitse 'Uninstall' **TAI** avaa laajennus koodialueella ja klikkaa sinistä Uninstall-painiketta.
-
----
+***
 
 ## Tehtävä
-[Luo ansioluettelosivusto käyttämällä vscode.dev:iä](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Kertaus ja itseopiskelu
+Testaa taitosi: [Luo ansioluettelosivusto käyttäen vscode.dev:ia](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-Lue lisää [VSCode.devistä](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) ja sen muista ominaisuuksista.
+***
+
+## Lisätutkimus ja itseopiskelu
+
+- Sukella syvemmälle [virallisilla VSCode Web -dokumenteilla](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Tutki edistyneitä työtilan ominaisuuksia, pikanäppäimiä ja asetuksia.
+
+***
+
+**Nyt olet valmis koodaamaan, luomaan ja tekemään yhteistyötä—mistä tahansa, millä tahansa laitteella, käyttäen VSCode.dev:ia!**
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

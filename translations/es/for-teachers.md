@@ -1,45 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-24T11:54:22+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T08:26:01+00:00",
   "source_file": "for-teachers.md",
   "language_code": "es"
 }
 -->
-## Para Educadores
+### Para Educadores
 
-¿Te gustaría usar este plan de estudios en tu aula? ¡Siéntete libre de hacerlo!
+Estás invitado a usar este plan de estudios en tu aula. Funciona perfectamente con GitHub Classroom y las principales plataformas LMS, y también puede utilizarse como un repositorio independiente con tus estudiantes.
 
-De hecho, puedes usarlo directamente en GitHub utilizando GitHub Classroom.
+### Uso con GitHub Classroom
 
-Para hacerlo, haz un fork de este repositorio. Necesitarás crear un repositorio para cada lección, por lo que tendrás que extraer cada carpeta en un repositorio separado. De esta manera, [GitHub Classroom](https://classroom.github.com/classrooms) podrá identificar cada lección por separado.
+Para gestionar lecciones y tareas por grupo, crea un repositorio por lección para que GitHub Classroom pueda vincular cada tarea de forma independiente.
 
-Estas [instrucciones completas](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) te darán una idea de cómo configurar tu aula.
+- Haz un fork de este repositorio en tu organización.
+- Crea un repositorio separado para cada lección extrayendo cada carpeta de lección en su propio repositorio.
+  - Opción A: Crea repositorios vacíos (uno por lección) y copia el contenido de la carpeta de la lección en cada uno.
+  - Opción B: Usa un enfoque que preserve el historial de Git (por ejemplo, dividir una carpeta en un nuevo repositorio) si necesitas mantener la procedencia.
+- En GitHub Classroom, crea una tarea por lección y vincúlala al repositorio correspondiente.
+- Configuración recomendada:
+  - Visibilidad del repositorio: privado para el trabajo de los estudiantes.
+  - Usa el código inicial de la rama predeterminada del repositorio de la lección.
+  - Agrega plantillas de issues y pull requests para cuestionarios y entregas.
+  - Opcionalmente, configura autoevaluación y pruebas si tus lecciones las incluyen.
+- Convenciones útiles:
+  - Nombres de repositorios como lesson-01-intro, lesson-02-html, etc.
+  - Etiquetas: quiz, assignment, needs-review, late, resubmission.
+  - Tags/releases por grupo (por ejemplo, v2025-term1).
 
-## Usándolo en Moodle, Canvas o Blackboard
+Consejo: Evita almacenar repositorios dentro de carpetas sincronizadas (por ejemplo, OneDrive/Google Drive) para prevenir conflictos de Git en Windows.
 
-¡Este plan de estudios funciona muy bien en estos Sistemas de Gestión de Aprendizaje! Usa el [archivo de carga para Moodle](../../../../../../../teaching-files/webdev-moodle.mbz) para obtener el contenido completo, o prueba el [archivo Common Cartridge](../../../../../../../teaching-files/webdev-common-cartridge.imscc), que contiene parte del contenido. Moodle Cloud no admite exportaciones completas de Common Cartridge, por lo que es preferible usar el archivo de descarga de Moodle, que se puede cargar en Canvas. Por favor, háznos saber cómo podemos mejorar esta experiencia.
+### Uso con Moodle, Canvas o Blackboard
 
-![Moodle](/teaching-files/moodle.png)
+Este plan de estudios incluye paquetes importables para flujos de trabajo comunes en LMS.
+
+- Moodle: Usa el archivo de carga de Moodle [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) para cargar el curso completo.
+- Common Cartridge: Usa el archivo Common Cartridge [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) para una mayor compatibilidad con LMS.
+- Notas:
+  - Moodle Cloud tiene soporte limitado para Common Cartridge. Es preferible usar el archivo de Moodle mencionado anteriormente, que también puede cargarse en Canvas.
+  - Después de importar, revisa los módulos, fechas de entrega y configuraciones de cuestionarios para ajustarlos al calendario de tu periodo.
+
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.es.png)
 > El plan de estudios en un aula de Moodle
 
-![Canvas](/teaching-files/canvas.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.es.png)
 > El plan de estudios en Canvas
 
-## Usando el repositorio tal como está
+### Uso del repositorio directamente (sin Classroom)
 
-Si prefieres usar este repositorio tal como está, sin utilizar GitHub Classroom, también es posible. Necesitarás comunicarte con tus estudiantes para indicarles qué lección trabajar juntos.
+Si prefieres no usar GitHub Classroom, puedes ejecutar el curso directamente desde este repositorio.
 
-En un formato en línea (Zoom, Teams u otro), podrías formar salas de trabajo para los cuestionarios y guiar a los estudiantes para que se preparen para aprender. Luego, invítalos a realizar los cuestionarios y a enviar sus respuestas como 'issues' en un momento determinado. Podrías hacer lo mismo con las tareas si deseas que los estudiantes trabajen de manera colaborativa y abierta.
+- Formatos sincrónicos/en línea (Zoom/Teams):
+  - Realiza calentamientos breves dirigidos por mentores; usa salas de grupo para cuestionarios.
+  - Anuncia una ventana de tiempo para los cuestionarios; los estudiantes envían respuestas como Issues en GitHub.
+  - Para tareas colaborativas, los estudiantes trabajan en repositorios públicos de lecciones y abren pull requests.
+- Formatos privados/asincrónicos:
+  - Los estudiantes hacen fork de cada lección en sus propios repositorios **privados** y te agregan como colaborador.
+  - Envían sus entregas mediante Issues (cuestionarios) y Pull Requests (tareas) en tu repositorio de aula o en sus forks privados.
 
-Si prefieres un formato más privado, pide a tus estudiantes que hagan un fork del plan de estudios, lección por lección, en sus propios repositorios privados de GitHub y te den acceso. De esta manera, podrán completar cuestionarios y tareas de forma privada y enviártelos a través de issues en tu repositorio de aula.
+### Mejores prácticas
 
-Hay muchas maneras de hacer que esto funcione en un aula en línea. ¡Por favor, cuéntanos qué funciona mejor para ti!
+- Ofrece una lección de orientación sobre conceptos básicos de Git/GitHub, Issues y PRs.
+- Usa listas de verificación en Issues para cuestionarios/tareas de varios pasos.
+- Agrega CONTRIBUTING.md y CODE_OF_CONDUCT.md para establecer normas en el aula.
+- Incluye notas de accesibilidad (texto alternativo, subtítulos) y ofrece PDFs imprimibles.
+- Versiona tu contenido por periodo y congela los repositorios de lecciones después de publicarlos.
 
-## ¡Danos tu opinión!
+### Comentarios y soporte
 
-Queremos que este plan de estudios funcione para ti y tus estudiantes. Conéctate con nosotros en el [Teacher corner](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) y abre un [**nuevo issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) para cualquier solicitud, error o comentario.
+Queremos que este plan de estudios funcione para ti y tus estudiantes. Por favor, abre un nuevo Issue en este repositorio para reportar errores, realizar solicitudes o sugerir mejoras, o inicia una discusión en el Teacher Corner.
+
+---
 
 **Descargo de responsabilidad**:  
 Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

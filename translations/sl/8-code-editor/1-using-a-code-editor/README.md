@@ -1,158 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T12:55:46+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T10:58:56+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "sl"
 }
 -->
-# Uporaba urejevalnika kode
+***
 
-Ta lekcija zajema osnove uporabe [VSCode.dev](https://vscode.dev), spletnega urejevalnika kode, ki vam omogoča spreminjanje kode in prispevanje k projektu brez potrebe po nameščanju programske opreme na vaš računalnik.
+# Uporaba urejevalnika kode: Obvladovanje [VSCode.dev](https://vscode.dev)
 
-## Učni cilji
+**Dobrodošli!**  
+Ta lekcija vas popelje od osnov do napredne uporabe [VSCode.dev](https://vscode.dev)—zmogljivega, spletnega urejevalnika kode. Naučili se boste samozavestno urejati kodo, upravljati projekte, slediti spremembam, nameščati razširitve in sodelovati kot profesionalec—vse iz vašega brskalnika, brez potrebe po namestitvi.
 
-V tej lekciji boste spoznali, kako:
+***
 
-- Uporabljati urejevalnik kode v projektu
-- Spremljati spremembe z uporabo sistema za nadzor različic
-- Prilagoditi urejevalnik za razvoj
+## Cilji učenja
 
-### Predpogoji
+Na koncu te lekcije boste sposobni:
 
-Preden začnete, morate ustvariti račun na [GitHub](https://github.com). Obiščite [GitHub](https://github.com/) in ustvarite račun, če ga še nimate.
+- Učinkovito uporabljati urejevalnik kode za kateri koli projekt, kjerkoli
+- Brez težav slediti svojemu delu z vgrajenim nadzorom različic
+- Prilagoditi in izboljšati svoj razvojni potek dela z nastavitvami urejevalnika in razširitvami
 
-### Uvod
+***
 
-Urejevalnik kode je ključno orodje za pisanje programov in sodelovanje pri obstoječih projektih. Ko boste razumeli osnove urejevalnika in kako izkoristiti njegove funkcije, jih boste lahko uporabili pri pisanju kode.
+## Predpogoji
+
+Za začetek si **ustvarite brezplačen [GitHub](https://github.com) račun**, ki vam omogoča upravljanje repozitorijev kode in sodelovanje po vsem svetu. Če računa še nimate, ga [ustvarite tukaj](https://github.com/).
+
+***
+
+## Zakaj uporabljati spletni urejevalnik kode?
+
+**Urejevalnik kode**, kot je VSCode.dev, je vaše poveljniško središče za pisanje, urejanje in upravljanje kode. Z intuitivnim vmesnikom, številnimi funkcijami in takojšnjim dostopom prek brskalnika lahko:
+
+- Urejate projekte na katerikoli napravi
+- Izognete se težavam z namestitvami
+- Sodelujete in prispevate takoj
+
+Ko se boste udobno počutili z VSCode.dev, boste pripravljeni na reševanje nalog kodiranja od kjerkoli, kadarkoli.
+
+***
 
 ## Začetek z VSCode.dev
 
-[VSCode.dev](https://vscode.dev) je spletni urejevalnik kode. Za njegovo uporabo vam ni treba ničesar namestiti, saj deluje podobno kot odpiranje katere koli druge spletne strani. Za začetek odprite naslednjo povezavo: [https://vscode.dev](https://vscode.dev). Če niste prijavljeni v [GitHub](https://github.com/), sledite navodilom za prijavo ali ustvarite nov račun in se nato prijavite.
+Odprite **[VSCode.dev](https://vscode.dev)**—brez namestitve, brez prenosov. Prijava z GitHub računom omogoča poln dostop, vključno s sinhronizacijo vaših nastavitev, razširitev in repozitorijev. Če vas sistem pozove, povežite svoj GitHub račun.
 
-Ko se urejevalnik naloži, bi moral izgledati podobno kot na tej sliki:
+Ko se naloži, bo vaše delovno okolje videti takole:
 
-![Privzeti VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.sl.png)
+![Privzeti VSCode.dev](../images/default-vscode-dev ima tri glavne razdelke od leve proti desni:
+- **Orodna vrstica:** Ikone, kot so 🔎 (Iskanje), ⚙️ (Nastavitve), datoteke, nadzor izvorne kode itd.
+- **Stranska vrstica:** Spreminja kontekst glede na izbrano ikono v orodni vrstici (privzeto *Raziskovalec*, ki prikazuje datoteke).
+- **Urejevalnik/območje kode:** Največji razdelek na desni—kjer dejansko urejate in si ogledujete kodo.
 
-Obstajajo trije glavni deli, od leve proti desni:
+Kliknite ikone, da raziščete funkcije, vendar se vrnite na _Raziskovalec_, da ohranite svoj položaj.
 
-1. _Vrstica dejavnosti_ (_activity bar_), ki vključuje ikone, kot so povečevalno steklo 🔎, zobnik ⚙️ in nekaj drugih.
-2. Razširjena vrstica dejavnosti, ki privzeto prikazuje _Raziskovalec_ (_Explorer_), imenovana _stranska vrstica_ (_side bar_).
-3. In nazadnje, območje kode na desni strani.
+***
 
-Kliknite na vsako od ikon, da prikažete različne menije. Ko končate, kliknite na _Raziskovalec_, da se vrnete na začetno točko.
+## Odpiranje GitHub repozitorija
 
-Ko začnete ustvarjati ali spreminjati kodo, se to dogaja v največjem območju na desni strani. To območje boste uporabili tudi za pregled obstoječe kode, kar boste storili v nadaljevanju.
+### Metoda 1: Iz urejevalnika
 
-## Odprite GitHub repozitorij
+1. Pojdite na [VSCode.dev](https://vscode.dev). Kliknite **"Odpri oddaljeni repozitorij."**
 
-Prva stvar, ki jo potrebujete, je odpreti GitHub repozitorij. Obstaja več načinov za odpiranje repozitorija. V tem razdelku boste spoznali dva različna načina, kako lahko odprete repozitorij in začnete delati na spremembah.
+   ![Odpri oddaljeni repozitorij](../../../../8-code-editor/images/open-remote-repository uporabite _Ukazno paleto_ (Ctrl-Shift-P ali Cmd-Shift-P na Macu).
 
-### 1. Z uporabo urejevalnika
+   ![Meni palete](../images/palette-menu.pngodpri oddaljeni repozitorij.”
+   - Izberite možnost.
+   - Prilepite URL svojega GitHub repozitorija (npr. `https://github.com/microsoft/Web-Dev-For-Beginners`) in pritisnite Enter.
 
-Uporabite urejevalnik za odpiranje oddaljenega repozitorija. Če obiščete [VSCode.dev](https://vscode.dev), boste videli gumb _"Open Remote Repository"_:
+Če je uspešno, boste videli celoten projekt, pripravljen za urejanje!
 
-![Odpri oddaljeni repozitorij](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.sl.png)
+***
 
-Lahko uporabite tudi ukazno paleto. Ukazna paleta je vnosno polje, kjer lahko vnesete katero koli besedo, ki je del ukaza ali dejanja, da najdete pravi ukaz za izvedbo. Uporabite meni v zgornjem levem kotu, nato izberite _View_ in nato _Command Palette_, ali uporabite naslednjo bližnjico na tipkovnici: Ctrl-Shift-P (na MacOS Command-Shift-P).
+### Metoda 2: Takoj prek URL-ja
 
-![Meni palete](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.sl.png)
+Spremenite kateri koli URL GitHub repozitorija, da se odpre neposredno v VSCode.dev, tako da zamenjate `github.com` z `vscode.dev/github`.  
+Npr.:
 
-Ko se meni odpre, vnesite _open remote repository_ in nato izberite prvo možnost. Prikazali se bodo repozitoriji, katerih del ste, ali tisti, ki ste jih nedavno odprli. Uporabite tudi celoten GitHub URL za izbiro repozitorija. Vnesite naslednji URL v polje:
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Ta funkcija omogoča hiter dostop do KATERIKOLI projekta.
 
-✅ Če je bilo uspešno, boste videli vse datoteke tega repozitorija naložene v urejevalniku.
+***
 
-### 2. Z uporabo URL-ja
+## Urejanje datotek v vašem projektu
 
-Repozitorij lahko naložite tudi neposredno z uporabo URL-ja. Na primer, celoten URL za trenutni repozitorij je [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), vendar lahko domeno GitHub zamenjate z `VSCode.dev/github` in repozitorij naložite neposredno. Rezultirajoči URL bi bil [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Ko je vaš repozitorij odprt, lahko:
 
-## Urejanje datotek
+### 1. **Ustvarite novo datoteko**
+- V stranski vrstici *Raziskovalec* pojdite do želene mape ali uporabite koren.
+- Kliknite ikono _‘Nova datoteka ...’_.
+- Poimenujte datoteko, pritisnite **Enter**, in datoteka se takoj prikaže.
 
-Ko odprete repozitorij v brskalniku/vscode.dev, je naslednji korak posodobitev ali sprememba projekta.
+![Ustvarite novo datoteko](../images/create-new-file 2. **Urejajte in shranjujte datoteke**
 
-### 1. Ustvarite novo datoteko
+- Kliknite na datoteko v *Raziskovalcu*, da jo odprete v območju kode.
+- Naredite potrebne spremembe.
+- VSCode.dev samodejno shrani vaše spremembe, vendar lahko pritisnete Ctrl+S za ročno shranjevanje.
 
-Datoteko lahko ustvarite znotraj obstoječe mape ali v korenskem imeniku/mapi. Za ustvarjanje nove datoteke odprite lokacijo/mapo, kamor želite shraniti datoteko, in izberite ikono _'New file ...'_ na vrstici dejavnosti _(levo)_, poimenujte datoteko in pritisnite Enter.
+![Urejanje datoteke](../images/edit-a-file.png. **Sledite in potrjujte spremembe z nadzorom različic**
 
-![Ustvari novo datoteko](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.sl.png)
+VSCode.dev ima integriran **Git** nadzor različic!
 
-### 2. Uredite in shranite datoteko v repozitoriju
+- Kliknite ikono _'Nadzor izvorne kode'_, da si ogledate vse narejene spremembe.
+- Datoteke v mapi `Spremembe` prikazujejo dodatke (zeleno) in brisanja (rdeče).  
+  ![Ogled sprememb](../images/working-tree.png spremembe s klikom na `+` poleg datotek, da jih pripravite za potrditev.
+- **Zavrzite** neželene spremembe s klikom na ikono za razveljavitev.
+- Vnesite jasno sporočilo o potrditvi, nato kliknite kljukico za potrditev in potiskanje.
 
-Uporaba vscode.dev je koristna, kadar želite hitro posodobiti svoj projekt brez nalaganja programske opreme lokalno.  
-Za posodobitev kode kliknite ikono 'Raziskovalec', ki se nahaja tudi na vrstici dejavnosti, da si ogledate datoteke in mape v repozitoriju.  
-Izberite datoteko, da jo odprete v območju kode, naredite spremembe in shranite.
+Za vrnitev v vaš repozitorij na GitHubu izberite meni hamburger na vrhu levo.
 
-![Uredi datoteko](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.sl.png)
+![Priprava in potrditev sprememb](../images/edit-vscode.dev z razširitvami
 
-Ko končate s posodabljanjem projekta, izberite ikono _`source control`_, ki vsebuje vse nove spremembe, ki ste jih naredili v repozitoriju.
+Razširitve vam omogočajo dodajanje jezikov, tem, razhroščevalnikov in orodij za produktivnost v VSCode.dev—kar olajša in popestri vaše kodiranje.
 
-Za ogled sprememb, ki ste jih naredili v projektu, izberite datoteko(-e) v mapi `Changes` v razširjeni vrstici dejavnosti. To bo odprlo 'Delovno drevo' (_Working Tree_), kjer lahko vizualno vidite spremembe, ki ste jih naredili v datoteki. Rdeča barva označuje izbris, zelena pa dodatek.
+### Brskanje in upravljanje razširitev
 
-![Ogled sprememb](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.sl.png)
+- Kliknite ikono **Razširitve** v orodni vrstici.
+- Poiščite razširitev v polju _'Iskanje razširitev na tržnici'_.
 
-Če ste zadovoljni s spremembami, ki ste jih naredili, se pomaknite na mapo `Changes` in kliknite gumb `+`, da pripravite spremembe za oddajo. Priprava pomeni, da spremembe pripravite za oddajo na GitHub.
+  ![Podrobnosti razširitev](../images/extension-details:
+  - **Nameščene**: Vse razširitve, ki ste jih dodali
+  - **Priljubljene**: Industrijski favoriti
+  - **Priporočene**: Prilagojene vašemu poteku dela
 
-Če pa niste zadovoljni z nekaterimi spremembami in jih želite zavreči, se pomaknite na mapo `Changes` in izberite ikono `undo`.
+  ![Ogled razširitev](
 
-Nato vnesite `commit message` _(opis spremembe, ki ste jo naredili v projektu)_, kliknite ikono za potrditev (check icon) in oddajte spremembe.
+  
 
-Ko končate z delom na projektu, izberite ikono menija (hamburger menu) v zgornjem levem kotu, da se vrnete na repozitorij na github.com.
+***
 
-![Priprava in oddaja sprememb](../../../../8-code-editor/images/edit-vscode.dev.gif)
+### 1. **Namestite razširitve**
 
-## Uporaba razširitev
+- Vnesite ime razširitve v iskalnik, kliknite nanjo in si oglejte podrobnosti v urejevalniku.
+- Kliknite **modri gumb za namestitev** v stranski vrstici _ali_ v glavnem območju kode.
 
-Nameščanje razširitev v VSCode omogoča dodajanje novih funkcij in prilagoditev okolja za razvoj v urejevalniku, kar izboljša vaš delovni tok. Te razširitve omogočajo tudi podporo za več programskih jezikov in so pogosto splošne ali specifične za določen jezik.
+  ![Namestitev razširitev](../images/install-extension 2. **Prilagodite razširitve**
 
-Za pregled seznama vseh razpoložljivih razširitev kliknite ikono _`Extensions`_ na vrstici dejavnosti in začnite vnašati ime razširitve v iskalno polje z oznako _'Search Extensions in Marketplace'_.  
-Prikazal se bo seznam razširitev, vsaka z **imenom razširitve, imenom založnika, enovrstičnim opisom, številom prenosov** in **oceno z zvezdicami**.
+- Poiščite nameščeno razširitev.
+- Kliknite **Ikono zobnika** → izberite _Nastavitve razširitve_, da prilagodite vedenje po vaših željah.
 
-![Podrobnosti razširitev](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.sl.png)
+  ![Sprememba nastavitev razširitev](../images/extension-settings 3. **Upravljanje razširitev**
+Lahko:
 
-Prav tako si lahko ogledate vse prej nameščene razširitve v razširjeni mapi _`Installed`_, priljubljene razširitve, ki jih uporablja večina razvijalcev, v mapi _`Popular`_ in priporočene razširitve za vas bodisi na podlagi uporabnikov v istem delovnem prostoru ali na podlagi vaših nedavno odprtih datotek v mapi _`Recommended`_.
+- **Onemogočite:** Začasno izklopite razširitev, medtem ko jo ohranite nameščeno
+- **Odstranite:** Trajno odstranite, če je ne potrebujete več
 
-![Ogled razširitev](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.sl.png)
+  Poiščite razširitev, kliknite ikono zobnika in izberite ‘Onemogoči’ ali ‘Odstrani’, ali uporabite modre gumbe v območju kode.
 
-### 1. Namestitev razširitev
-
-Za namestitev razširitve vnesite ime razširitve v iskalno polje in kliknite nanjo, da si ogledate dodatne informacije o razširitvi v območju kode, ko se prikaže v razširjeni vrstici dejavnosti.
-
-Lahko kliknete _modri gumb za namestitev_ v razširjeni vrstici dejavnosti za namestitev ali uporabite gumb za namestitev, ki se prikaže v območju kode, ko izberete razširitev za nalaganje dodatnih informacij.
-
-![Namestitev razširitev](../../../../8-code-editor/images/install-extension.gif)
-
-### 2. Prilagoditev razširitev
-
-Po namestitvi razširitve boste morda morali prilagoditi njeno vedenje in jo nastaviti glede na svoje želje. To storite tako, da izberete ikono Razširitve, nato pa se bo vaša razširitev prikazala v mapi _Installed_. Kliknite na _**ikono zobnika**_ in pojdite na _Extensions Setting_.
-
-![Prilagoditev nastavitev razširitev](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.sl.png)
-
-### 3. Upravljanje razširitev
-
-Po namestitvi in uporabi razširitve vam vscode.dev ponuja možnosti za upravljanje razširitev glede na različne potrebe. Na primer, lahko:
-
-- **Onemogočite:** _(Začasno onemogočite razširitev, ko je ne potrebujete, vendar je ne želite popolnoma odstraniti.)_
-
-    Izberite nameščeno razširitev v razširjeni vrstici dejavnosti > kliknite ikono zobnika > izberite 'Disable' ali 'Disable (Workspace)' **ALI** odprite razširitev v območju kode in kliknite modri gumb Disable.
-
-- **Odstranite:** Izberite nameščeno razširitev v razširjeni vrstici dejavnosti > kliknite ikono zobnika > izberite 'Uninstall' **ALI** odprite razširitev v območju kode in kliknite modri gumb Uninstall.
-
----
+***
 
 ## Naloga
 
-[Ustvarite spletno stran življenjepisa z uporabo vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Preizkusite svoje veščine: [Ustvarite spletno stran življenjepisa z uporabo vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Pregled in samostojno učenje
+***
 
-Preberite več o [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) in nekaterih njegovih drugih funkcijah.
+## Nadaljnje raziskovanje in samostojno učenje
+
+- Poglobite se z [uradno dokumentacijo VSCode Web](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Raziščite napredne funkcije delovnega okolja, bližnjice na tipkovnici in nastavitve.
+
+***
+
+**Zdaj ste pripravljeni na kodiranje, ustvarjanje in sodelovanje—od kjerkoli, na katerikoli napravi, z uporabo VSCode.dev!**
 
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

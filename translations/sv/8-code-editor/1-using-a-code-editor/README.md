@@ -1,158 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T07:59:52+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T09:55:46+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "sv"
 }
 -->
-# Använda en kodredigerare
+***
 
-Den här lektionen täcker grunderna i att använda [VSCode.dev](https://vscode.dev), en webbaserad kodredigerare, så att du kan göra ändringar i din kod och bidra till ett projekt utan att installera något på din dator.
+# Använda en kodredigerare: Mästra [VSCode.dev](https://vscode.dev)
+
+**Välkommen!**  
+Den här lektionen tar dig från grunderna till avancerad användning av [VSCode.dev](https://vscode.dev)—den kraftfulla, webbaserade kodredigeraren. Du kommer att lära dig att redigera kod med självförtroende, hantera projekt, spåra ändringar, installera tillägg och samarbeta som ett proffs—allt direkt från din webbläsare, utan att behöva installera något.
+
+***
 
 ## Lärandemål
 
-I den här lektionen kommer du att lära dig att:
+I slutet av denna lektion kommer du att kunna:
 
-- Använda en kodredigerare i ett kodprojekt
-- Hålla koll på ändringar med versionskontroll
-- Anpassa redigeraren för utveckling
+- Effektivt använda en kodredigerare för vilket projekt som helst, var som helst
+- Sömlöst spåra ditt arbete med inbyggd versionskontroll
+- Anpassa och förbättra din utvecklingsarbetsflöde med redigerarinställningar och tillägg
 
-### Förkunskaper
+***
 
-Innan du börjar behöver du skapa ett konto hos [GitHub](https://github.com). Navigera till [GitHub](https://github.com/) och skapa ett konto om du inte redan har ett.
+## Förkunskaper
 
-### Introduktion
+För att komma igång, **registrera dig för ett gratis [GitHub](https://github.com)-konto**, vilket låter dig hantera kodarkiv och samarbeta globalt. Om du inte har ett konto ännu, [skapa ett här](https://github.com/).
 
-En kodredigerare är ett viktigt verktyg för att skriva program och samarbeta med befintliga kodprojekt. När du förstår grunderna i en redigerare och hur du använder dess funktioner kan du tillämpa dem när du skriver kod.
+***
+
+## Varför använda en webbaserad kodredigerare?
+
+En **kodredigerare** som VSCode.dev är ditt kontrollcenter för att skriva, redigera och hantera kod. Med ett intuitivt gränssnitt, massor av funktioner och omedelbar åtkomst via webbläsaren kan du:
+
+- Redigera projekt på vilken enhet som helst
+- Undvika besväret med installationer
+- Samarbeta och bidra direkt
+
+När du är bekväm med VSCode.dev kommer du att vara redo att ta itu med kodningsuppgifter var som helst, när som helst.
+
+***
 
 ## Kom igång med VSCode.dev
 
-[VSCode.dev](https://vscode.dev) är en kodredigerare på webben. Du behöver inte installera något för att använda den, precis som att öppna vilken annan webbplats som helst. För att komma igång med redigeraren, öppna följande länk: [https://vscode.dev](https://vscode.dev). Om du inte är inloggad på [GitHub](https://github.com/), följ instruktionerna för att logga in eller skapa ett nytt konto och logga sedan in.
+Navigera till **[VSCode.dev](https://vscode.dev)**—ingen installation, inga nedladdningar. Genom att logga in med GitHub får du full åtkomst, inklusive synkronisering av dina inställningar, tillägg och arkiv. Om du blir ombedd, anslut ditt GitHub-konto.
 
-När den har laddats bör den se ut ungefär som på denna bild:
+När du har laddat, kommer din arbetsyta att se ut så här:
 
-![Standard VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.sv.png)
+![Standard VSCode.dev](../images/default-vscode-dev har tre huvudsektioner från vänster till höger:
+- **Aktivitetsfält:** Ikoner som 🔎 (Sök), ⚙️ (Inställningar), filer, versionskontroll, etc.
+- **Sidofält:** Ändrar kontext baserat på den ikon som valts i aktivitetsfältet (standard är *Utforskaren* för att visa filer).
+- **Redigerings-/kodområde:** Den största sektionen till höger—där du faktiskt redigerar och visar kod.
 
-Det finns tre huvudsakliga sektioner, från längst till vänster och rör sig mot höger:
+Klicka igenom ikonerna för att utforska funktioner, men återgå till _Utforskaren_ för att hålla dig på rätt plats.
 
-1. _Aktivitetsfältet_ som innehåller några ikoner, som förstoringsglaset 🔎, kugghjulet ⚙️ och några andra.
-2. Det utökade aktivitetsfältet som som standard visar _Utforskaren_, kallad _sidofältet_.
-3. Och slutligen kodområdet till höger.
+***
 
-Klicka på varje ikon för att visa en annan meny. När du är klar, klicka på _Utforskaren_ så att du är tillbaka där du började.
+## Öppna ett GitHub-arkiv
 
-När du börjar skapa kod eller ändra befintlig kod kommer det att ske i det största området till höger. Du kommer att använda detta område för att visualisera befintlig kod också, vilket du kommer att göra härnäst.
+### Metod 1: Från redigeraren
 
-## Öppna ett GitHub-repository
+1. Gå till [VSCode.dev](https://vscode.dev). Klicka på **"Open Remote Repository."**
 
-Det första du behöver göra är att öppna ett GitHub-repository. Det finns flera sätt att öppna ett repository. I det här avsnittet kommer du att se två olika sätt att öppna ett repository så att du kan börja arbeta med ändringar.
+   ![Öppna fjärrarkiv](../../../../8-code-editor/images/open-remote-repository använd _Kommandopaletten_ (Ctrl-Shift-P, eller Cmd-Shift-P på Mac).
 
-### 1. Med redigeraren
+   ![Palettmeny](../images/palette-menu.png öppna fjärrarkiv.”
+   - Välj alternativet.
+   - Klistra in din GitHub-repo-URL (t.ex. `https://github.com/microsoft/Web-Dev-For-Beginners`) och tryck på Enter.
 
-Använd själva redigeraren för att öppna ett fjärrrepository. Om du går till [VSCode.dev](https://vscode.dev) kommer du att se en knapp som heter _"Open Remote Repository"_:
+Om det lyckas, kommer du att se hela projektet laddat och redo att redigeras!
 
-![Öppna fjärrrepository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.sv.png)
+***
 
-Du kan också använda kommandopaletten. Kommandopaletten är en inmatningsruta där du kan skriva vilket ord som helst som är en del av ett kommando eller en åtgärd för att hitta rätt kommando att utföra. Använd menyn längst upp till vänster, välj sedan _Visa_ och välj därefter _Kommandopalett_, eller använd följande tangentbordsgenväg: Ctrl-Shift-P (på MacOS är det Command-Shift-P).
+### Metod 2: Direkt via URL
 
-![Palettmeny](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.sv.png)
+Förvandla vilken GitHub-repo-URL som helst för att öppna direkt i VSCode.dev genom att ersätta `github.com` med `vscode.dev/github`.  
+Exempel:
 
-När menyn öppnas, skriv _open remote repository_ och välj sedan det första alternativet. Flera repositories som du är en del av eller som du har öppnat nyligen kommer att visas. Du kan också använda en fullständig GitHub-URL för att välja ett. Använd följande URL och klistra in den i rutan:
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Denna funktion ger snabb åtkomst till VILKET projekt som helst.
 
-✅ Om det lyckas kommer du att se alla filer för detta repository laddade i textredigeraren.
+***
 
-### 2. Använda URL
+## Redigera filer i ditt projekt
 
-Du kan också använda en URL direkt för att ladda ett repository. Till exempel är den fullständiga URL:en för det aktuella repositoryt [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), men du kan byta ut GitHub-domänen med `VSCode.dev/github` och ladda repositoryt direkt. Den resulterande URL:en skulle vara [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+När ditt arkiv är öppet kan du:
 
-## Redigera filer
+### 1. **Skapa en ny fil**
+- I *Utforskaren*-sidofältet, navigera till önskad mapp eller använd roten.
+- Klicka på ikonen _‘Ny fil ...’_.
+- Namnge din fil, tryck på **Enter**, och din fil visas direkt.
 
-När du har öppnat repositoryt i webbläsaren/vscode.dev är nästa steg att göra uppdateringar eller ändringar i projektet.
+![Skapa en ny fil](../images/create-new-file 2. **Redigera och spara filer**
 
-### 1. Skapa en ny fil
+- Klicka på en fil i *Utforskaren* för att öppna den i kodområdet.
+- Gör dina ändringar efter behov.
+- VSCode.dev sparar automatiskt dina ändringar, men du kan trycka på Ctrl+S för att spara manuellt.
 
-Du kan antingen skapa en fil i en befintlig mapp eller skapa den i rotkatalogen/mappen. För att skapa en ny fil, öppna en plats/katalog där du vill att filen ska sparas och välj ikonen _'Ny fil ...'_ på aktivitetsfältet _(vänster)_, ge den ett namn och tryck på enter.
+![Redigera en fil](../images/edit-a-file.png. **Spåra & commit ändringar med versionskontroll**
 
-![Skapa en ny fil](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.sv.png)
+VSCode.dev har integrerad **Git** versionskontroll!
 
-### 2. Redigera och spara en fil i repositoryt
+- Klicka på _'Versionskontroll'_ ikonen för att visa alla gjorda ändringar.
+- Filer i `Ändringar`-mappen visar tillägg (grönt) och borttagningar (rött).  
+  ![Visa ändringar](../images/working-tree.png ändringar genom att klicka på `+` bredvid filer för att förbereda för commit.
+- **Ångra** oönskade ändringar genom att klicka på ångra-ikonen.
+- Skriv ett tydligt commit-meddelande, klicka sedan på bockmarkeringen för att commit och pusha.
 
-Att använda vscode.dev är användbart när du vill göra snabba uppdateringar av ditt projekt utan att behöva ladda någon programvara lokalt.  
-För att uppdatera din kod, klicka på ikonen 'Utforskaren', som också finns på aktivitetsfältet, för att visa filer och mappar i repositoryt.  
-Välj en fil för att öppna den i kodområdet, gör dina ändringar och spara.
+För att återgå till ditt arkiv på GitHub, välj hamburgermenyn längst upp till vänster.
 
-![Redigera en fil](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.sv.png)
+![Stage & commit ändringar](../images/edit-vscode.dev Med tillägg
 
-När du är klar med att uppdatera ditt projekt, välj ikonen _`versionskontroll`_ som innehåller alla nya ändringar du har gjort i repositoryt.
+Tillägg låter dig lägga till språk, teman, felsökare och produktivitetsverktyg till VSCode.dev—vilket gör ditt kodningsliv enklare och roligare.
 
-För att visa de ändringar du har gjort i ditt projekt, välj filerna i mappen `Ändringar` i det utökade aktivitetsfältet. Detta öppnar ett 'Arbetsträd' där du visuellt kan se de ändringar du har gjort i filen. Rött visar en borttagning från projektet, medan grönt betyder ett tillägg.
+### Bläddra och hantera tillägg
 
-![Visa ändringar](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.sv.png)
+- Klicka på **Tilläggsikonen** i aktivitetsfältet.
+- Sök efter ett tillägg i _'Sök tillägg i Marketplace'_ rutan.
 
-Om du är nöjd med de ändringar du har gjort, hovra över mappen `Ändringar` och klicka på `+`-knappen för att lägga till ändringarna. Att lägga till ändringar innebär att förbereda dem för att skickas till GitHub.
+  ![Tilläggsdetaljer](../images/extension-details:
+  - **Installerade**: Alla tillägg du har lagt till
+  - **Populära**: Branschfavoriter
+  - **Rekommenderade**: Skräddarsydda för ditt arbetsflöde
 
-Om du däremot inte är bekväm med vissa ändringar och vill ta bort dem, hovra över mappen `Ändringar` och välj ikonen `ångra`.
+  ![Visa tillägg](
 
-Skriv sedan ett `commit-meddelande` _(En beskrivning av ändringen du har gjort i projektet)_, klicka på ikonen `check` för att skicka och pusha dina ändringar.
+  
 
-När du är klar med att arbeta på ditt projekt, välj ikonen `hamburgermeny` längst upp till vänster för att återgå till repositoryt på github.com.
+***
 
-![Lägg till & skicka ändringar](../../../../8-code-editor/images/edit-vscode.dev.gif)
+### 1. **Installera tillägg**
 
-## Använda tillägg
+- Ange tilläggets namn i sökfältet, klicka på det och granska detaljerna i redigeraren.
+- Tryck på **den blå Installera-knappen** i sidofältet _eller_ i huvudkodområdet.
 
-Att installera tillägg i VSCode gör att du kan lägga till nya funktioner och anpassade utvecklingsmiljöalternativ i din redigerare för att förbättra ditt arbetsflöde. Dessa tillägg hjälper dig också att lägga till stöd för flera programmeringsspråk och är ofta antingen generiska tillägg eller språkbaserade tillägg.
+  ![Installera tillägg](../images/install-extension 2. **Anpassa tillägg**
 
-För att bläddra igenom listan över alla tillgängliga tillägg, klicka på ikonen _`Tillägg`_ på aktivitetsfältet och börja skriva namnet på tillägget i textfältet märkt _'Sök tillägg i Marketplace'_.  
-Du kommer att se en lista över tillägg, var och en innehållande **tilläggets namn, utgivarens namn, en kort beskrivning, antal nedladdningar** och **en stjärnklassificering**.
+- Hitta ditt installerade tillägg.
+- Klicka på **Gear-ikonen** → välj _Tilläggsinställningar_ för att finjustera beteenden efter dina önskemål.
 
-![Detaljer om tillägg](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.sv.png)
+  ![Ändra tilläggsinställningar](../images/extension-settings 3. **Hantera tillägg**
+Du kan:
 
-Du kan också visa alla tidigare installerade tillägg genom att expandera mappen _`Installerade`_, populära tillägg som används av de flesta utvecklare i mappen _`Populära`_ och rekommenderade tillägg för dig, antingen av användare i samma arbetsyta eller baserat på dina nyligen öppnade filer, i mappen _`Rekommenderade`_.
+- **Inaktivera:** Tillfälligt stänga av ett tillägg medan det fortfarande är installerat
+- **Avinstallera:** Ta bort det permanent om det inte längre behövs
 
-![Visa tillägg](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.sv.png)
+  Hitta tillägget, tryck på Gear-ikonen och välj ‘Inaktivera’ eller ‘Avinstallera,’ eller använd de blå knapparna i kodområdet.
 
-### 1. Installera tillägg
-
-För att installera ett tillägg, skriv tilläggets namn i sökfältet och klicka på det för att visa ytterligare information om tillägget i kodområdet när det visas i det utökade aktivitetsfältet.
-
-Du kan antingen klicka på den _blå installationsknappen_ i det utökade aktivitetsfältet för att installera eller använda installationsknappen som visas i kodområdet när du väljer tillägget för att ladda ytterligare information.
-
-![Installera tillägg](../../../../8-code-editor/images/install-extension.gif)
-
-### 2. Anpassa tillägg
-
-Efter att ha installerat tillägget kan du behöva ändra dess beteende och anpassa det baserat på dina preferenser. För att göra detta, välj ikonen Tillägg, och den här gången kommer ditt tillägg att visas i mappen _Installerade_, klicka på _**Kugghjulsikonen**_ och navigera till _Tilläggsinställningar_.
-
-![Ändra inställningar för tillägg](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.sv.png)
-
-### 3. Hantera tillägg
-
-Efter att ha installerat och använt ditt tillägg erbjuder vscode.dev alternativ för att hantera ditt tillägg baserat på olika behov. Till exempel kan du välja att:
-
-- **Inaktivera:** _(Du inaktiverar tillfälligt ett tillägg när du inte längre behöver det men inte vill avinstallera det helt)_
-
-    Välj det installerade tillägget i det utökade aktivitetsfältet > klicka på kugghjulsikonen > välj 'Inaktivera' eller 'Inaktivera (Arbetsyta)' **ELLER** Öppna tillägget i kodområdet och klicka på den blå Inaktivera-knappen.
-
-- **Avinstallera:** Välj det installerade tillägget i det utökade aktivitetsfältet > klicka på kugghjulsikonen > välj 'Avinstallera' **ELLER** Öppna tillägget i kodområdet och klicka på den blå Avinstallera-knappen.
-
----
+***
 
 ## Uppgift
 
-[Skapa en CV-webbplats med vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Testa dina färdigheter: [Skapa en CV-webbplats med vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Granskning & Självstudier
+***
 
-Läs mer om [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) och några av dess andra funktioner.
+## Vidare utforskning och självstudier
+
+- Fördjupa dig med [de officiella VSCode Web Docs](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Utforska avancerade arbetsytfunktioner, kortkommandon och inställningar.
+
+***
+
+**Nu är du redo att koda, skapa och samarbeta—var som helst, på vilken enhet som helst, med VSCode.dev!**
 
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

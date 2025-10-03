@@ -1,159 +1,192 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T14:51:11+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T08:48:42+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "zh"
 }
 -->
-# 使用代码编辑器
+***
 
-本课将介绍如何使用 [VSCode.dev](https://vscode.dev)，一个基于网页的代码编辑器，让你无需在电脑上安装任何软件即可修改代码并为项目做出贡献。
+# 使用代码编辑器：[VSCode.dev](https://vscode.dev) 高级指南
+
+**欢迎！**  
+本课程将带你从基础到高级使用 [VSCode.dev](https://vscode.dev)——一个强大的基于网页的代码编辑器。你将学会如何自信地编辑代码、管理项目、跟踪更改、安装扩展以及像专业人士一样协作——这一切都可以直接在浏览器中完成，无需安装任何软件。
+
+***
 
 ## 学习目标
 
-在本课中，你将学习如何：
+完成本课程后，你将能够：
 
-- 在代码项目中使用代码编辑器
-- 使用版本控制跟踪更改
-- 自定义编辑器以适应开发需求
+- 高效地在任何项目上使用代码编辑器，无论身处何地
+- 使用内置版本控制无缝跟踪工作进度
+- 通过编辑器自定义和扩展提升开发工作流程
 
-### 前置条件
+***
 
-在开始之前，你需要创建一个 [GitHub](https://github.com) 账户。如果你还没有账户，请访问 [GitHub](https://github.com/) 并创建一个账户。
+## 前置条件
 
-### 简介
+开始之前，请**注册一个免费的 [GitHub](https://github.com) 账号**，它可以帮助你管理代码库并与全球开发者协作。如果你还没有账号，[点击这里创建一个](https://github.com/)。
 
-代码编辑器是编写程序和协作开发现有代码项目的重要工具。一旦你掌握了编辑器的基础知识并学会如何利用其功能，你就可以在编写代码时应用这些技能。
+***
+
+## 为什么选择基于网页的代码编辑器？
+
+像 VSCode.dev 这样的**代码编辑器**是你编写、编辑和管理代码的指挥中心。它拥有直观的界面、丰富的功能，并且可以通过浏览器即时访问，你可以：
+
+- 在任何设备上编辑项目
+- 避免安装的麻烦
+- 即时协作和贡献
+
+一旦熟悉了 VSCode.dev，你就可以随时随地处理编码任务。
+
+***
 
 ## 开始使用 VSCode.dev
 
-[VSCode.dev](https://vscode.dev) 是一个基于网页的代码编辑器。你无需安装任何软件，就像打开其他网站一样简单。要开始使用编辑器，请打开以下链接：[https://vscode.dev](https://vscode.dev)。如果你尚未登录 [GitHub](https://github.com/)，请按照提示登录或创建一个新账户并登录。
+访问 **[VSCode.dev](https://vscode.dev)**——无需安装，无需下载。使用 GitHub 登录可以解锁完整功能，包括同步你的设置、扩展和代码库。如果系统提示，请连接你的 GitHub 账号。
 
-加载完成后，界面应类似于下图：
+加载后，你的工作区将如下所示：
 
-![默认 VSCode.dev 界面](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.zh.png)
+![默认 VSCode.dev](../../../../8-code-editor/images/default-vscode-dev)
 
-界面主要分为三个部分，从左到右依次是：
+VSCode.dev 的界面分为三个核心部分，从左到右分别是：
+- **活动栏：** 包括图标如 🔎（搜索）、⚙️（设置）、文件、源代码控制等。
+- **侧边栏：** 根据活动栏中选择的图标改变上下文（默认显示 *资源管理器*，用于展示文件）。
+- **编辑器/代码区域：** 最右侧的最大部分——你将在这里编辑和查看代码。
 
-1. **活动栏**，包括一些图标，如放大镜 🔎、齿轮 ⚙️ 等。
-2. 默认展开的活动栏，称为 **侧边栏**，通常显示为 **资源管理器**。
-3. 最右侧是代码区域。
+点击图标探索功能，但记得返回 _资源管理器_ 保持位置。
 
-点击每个图标可以显示不同的菜单。完成后，点击 **资源管理器** 图标返回初始界面。
+***
 
-当你开始创建或修改代码时，操作会发生在右侧最大的区域中。你也可以在这里查看现有代码，接下来我们将进行相关操作。
+## 打开 GitHub 仓库
 
-## 打开一个 GitHub 仓库
+### 方法 1：通过编辑器打开
 
-首先，你需要打开一个 GitHub 仓库。有多种方式可以打开仓库，本节将介绍两种方法，帮助你开始修改代码。
+1. 访问 [VSCode.dev](https://vscode.dev)。点击 **"Open Remote Repository"**。
 
-### 1. 使用编辑器
+   ![打开远程仓库](../../../../8-code-editor/images/open-remote-repository)
 
-通过编辑器本身打开远程仓库。如果你访问 [VSCode.dev](https://vscode.dev)，会看到一个 **"Open Remote Repository"** 按钮：
+2. 使用 _命令面板_（Ctrl-Shift-P 或 Mac 上的 Cmd-Shift-P）。
 
-![打开远程仓库](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.zh.png)
+   ![命令面板菜单](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.zh.png)
 
-你也可以使用命令面板。命令面板是一个输入框，你可以在其中输入命令或操作的关键词来找到相应的命令。点击左上角的菜单，选择 **View**，然后选择 **Command Palette**，或者使用以下快捷键：Ctrl-Shift-P（MacOS 上为 Command-Shift-P）。
+   - 选择“打开远程仓库”选项。
+   - 粘贴你的 GitHub 仓库 URL（例如 `https://github.com/microsoft/Web-Dev-For-Beginners`），然后按 Enter。
 
-![命令面板菜单](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.zh.png)
+如果成功，你将看到整个项目加载完成并准备编辑！
 
-打开菜单后，输入 **open remote repository**，然后选择第一个选项。你参与的或最近打开的多个仓库会显示出来。你也可以使用完整的 GitHub URL 选择一个仓库。将以下 URL 粘贴到输入框中：
+***
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+### 方法 2：通过 URL 快速打开
 
-✅ 如果成功，你将在文本编辑器中看到该仓库的所有文件。
+将任何 GitHub 仓库 URL 转换为 VSCode.dev 直接打开的链接，只需将 `github.com` 替换为 `vscode.dev/github`。  
+例如：
 
-### 2. 使用 URL
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-你也可以直接使用 URL 加载仓库。例如，当前仓库的完整 URL 是 [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)，但你可以将 GitHub 域名替换为 `VSCode.dev/github`，直接加载仓库。结果 URL 为 [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners)。
+此功能让你可以快速访问任何项目。
 
-## 编辑文件
+***
 
-在浏览器或 VSCode.dev 中打开仓库后，下一步是更新或修改项目。
+## 编辑项目中的文件
 
-### 1. 创建新文件
+打开仓库后，你可以：
 
-你可以在现有文件夹中创建文件，也可以在根目录/文件夹中创建。要创建新文件，打开你希望保存文件的位置/目录，点击活动栏（左侧）的 **"新建文件..."** 图标，命名文件并按回车。
+### 1. **创建新文件**
+- 在 *资源管理器* 侧边栏中，导航到目标文件夹或使用根目录。
+- 点击 _‘新建文件...’_ 图标。
+- 命名文件，按 **Enter**，文件会立即出现。
 
-![创建新文件](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.zh.png)
+![创建新文件](../../../../8-code-editor/images/create-new-file)
 
-### 2. 编辑并保存仓库中的文件
-
-使用 VSCode.dev 可以快速更新项目，而无需在本地加载任何软件。  
-要更新代码，点击活动栏上的 **资源管理器** 图标，查看仓库中的文件和文件夹。选择一个文件，在代码区域打开它，进行修改并保存。
+### 2. **编辑和保存文件**
+- 点击 *资源管理器* 中的文件，将其打开到代码区域。
+- 根据需要进行修改。
+- VSCode.dev 会自动保存你的更改，但你也可以按 Ctrl+S 手动保存。
 
 ![编辑文件](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.zh.png)
 
-完成项目更新后，选择 **`源代码管理`** 图标，查看你对仓库所做的所有更改。
+### 3. **使用版本控制跟踪和提交更改**
 
-要查看项目的更改，选择扩展活动栏中 `Changes` 文件夹中的文件。这将打开一个 **工作树**，让你直观地看到文件的更改。红色表示项目中删除的内容，绿色表示新增的内容。
+VSCode.dev 集成了 **Git** 版本控制！
 
-![查看更改](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.zh.png)
+- 点击 _'源代码控制'_ 图标查看所有更改。
+- `Changes` 文件夹中的文件显示新增内容（绿色）和删除内容（红色）。  
+  ![查看更改](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.zh.png)
 
-如果你对所做的更改感到满意，将鼠标悬停在 `Changes` 文件夹上，点击 `+` 按钮以暂存更改。暂存意味着准备好将更改提交到 GitHub。
+- 点击文件旁边的 `+` 准备提交更改。
+- 点击撤销图标 **丢弃** 不需要的更改。
+- 输入清晰的提交信息，然后点击复选标记提交并推送。
 
-如果你对某些更改不满意并希望丢弃它们，将鼠标悬停在 `Changes` 文件夹上，选择 `撤销` 图标。
+要返回 GitHub 仓库，请点击左上角的汉堡菜单。
 
-然后，输入一个 **提交信息**（对项目更改的描述），点击 **勾选图标** 提交并推送更改。
+![暂存并提交更改](../../../../8-code-editor/images/edit-vscode.dev)
 
-完成项目工作后，点击左上角的 **汉堡菜单图标** 返回 github.com 上的仓库。
+***
 
-![暂存并提交更改](../../../../8-code-editor/images/edit-vscode.dev.gif)
+## 使用扩展增强功能
 
-## 使用扩展
+扩展可以为 VSCode.dev 添加语言支持、主题、调试器和生产力工具——让你的编码生活更轻松、更有趣。
 
-在 VSCode 中安装扩展可以为编辑器添加新功能并自定义开发环境，从而提升开发工作流。这些扩展还可以帮助你支持多种编程语言，通常分为通用扩展或基于语言的扩展。
+### 浏览和管理扩展
 
-要浏览所有可用扩展的列表，点击活动栏上的 **`扩展图标`**，然后在标有 **"在市场中搜索扩展"** 的文本框中输入扩展名称。  
-你会看到一个扩展列表，每个扩展都包含 **扩展名称、发布者名称、一句话描述、下载次数** 和 **星级评分**。
+- 点击活动栏中的 **扩展图标**。
+- 在 _'搜索市场中的扩展'_ 框中搜索扩展。
 
-![扩展详情](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.zh.png)
+  ![扩展详情](../../../../8-code-editor/images/extension-details)
 
-你还可以通过展开 **`已安装文件夹`** 查看所有已安装的扩展，通过 **`热门文件夹`** 查看大多数开发者使用的热门扩展，以及通过 **`推荐文件夹`** 查看基于同一工作区用户或最近打开文件推荐的扩展。
+  - **已安装：** 所有你添加的扩展
+  - **热门：** 行业推荐
+  - **推荐：** 根据你的工作流程量身定制
 
-![查看扩展](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.zh.png)
+  ![查看扩展](
 
-### 1. 安装扩展
+***
 
-要安装扩展，在搜索框中输入扩展名称，点击它以在扩展活动栏中查看扩展的更多信息。
+### 1. **安装扩展**
 
-你可以点击扩展活动栏中的 **蓝色安装按钮** 安装扩展，或者在选择扩展后，点击代码区域中显示的安装按钮。
+- 在搜索框中输入扩展名称，点击扩展并在编辑器中查看详情。
+- 点击侧边栏或代码区域中的 **蓝色安装按钮**。
 
-![安装扩展](../../../../8-code-editor/images/install-extension.gif)
+  ![安装扩展](../../../../8-code-editor/images/install-extension)
 
-### 2. 自定义扩展
+### 2. **自定义扩展**
 
-安装扩展后，你可能需要根据自己的偏好修改其行为并进行自定义。为此，选择扩展图标，此时你的扩展会出现在 **已安装文件夹** 中，点击 **齿轮图标** 并导航到 **扩展设置**。
+- 找到已安装的扩展。
+- 点击 **齿轮图标** → 选择 _扩展设置_，根据需要调整行为。
 
-![修改扩展设置](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.zh.png)
+  ![修改扩展设置](../../../../8-code-editor/images/extension-settings)
 
-### 3. 管理扩展
+### 3. **管理扩展**
+你可以：
 
-安装并使用扩展后，VSCode.dev 提供了多种选项来根据不同需求管理扩展。例如，你可以选择：
+- **禁用：** 暂时关闭扩展但保留安装
+- **卸载：** 如果不再需要，可以永久移除
 
-- **禁用**： _(当你暂时不需要某个扩展但又不想完全卸载时，可以禁用它)_
+  找到扩展，点击齿轮图标，选择“禁用”或“卸载”，或者使用代码区域中的蓝色按钮。
 
-    选择扩展活动栏中的已安装扩展 > 点击齿轮图标 > 选择 **"禁用"** 或 **"禁用（工作区）"**  
-    **或者** 打开代码区域中的扩展，点击蓝色禁用按钮。
-
-- **卸载**：选择扩展活动栏中的已安装扩展 > 点击齿轮图标 > 选择 **"卸载"**  
-    **或者** 打开代码区域中的扩展，点击蓝色卸载按钮。
-
----
+***
 
 ## 作业
 
-[使用 vscode.dev 创建一个简历网站](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+测试你的技能：[使用 vscode.dev 创建一个简历网站](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## 复习与自学
+***
 
-阅读更多关于 [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) 及其其他功能的内容。
+## 深入探索和自学
+
+- 通过 [VSCode 官方网页文档](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) 深入了解。
+- 探索高级工作区功能、快捷键和设置。
+
+***
+
+**现在你已经准备好随时随地使用 VSCode.dev 进行编码、创建和协作了！**
 
 ---
 
 **免责声明**：  
-本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保准确性，但请注意，自动翻译可能包含错误或不准确之处。应以原始语言的文档作为权威来源。对于关键信息，建议使用专业人工翻译。因使用本翻译而导致的任何误解或误读，我们概不负责。
+本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于关键信息，建议使用专业人工翻译。我们不对因使用此翻译而产生的任何误解或误读承担责任。

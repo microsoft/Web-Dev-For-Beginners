@@ -1,155 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T09:16:01+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T10:17:50+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "id"
 }
 -->
-# Menggunakan editor kode
+***
 
-Pelajaran ini membahas dasar-dasar penggunaan [VSCode.dev](https://vscode.dev), sebuah editor kode berbasis web, sehingga Anda dapat membuat perubahan pada kode dan berkontribusi pada proyek tanpa perlu menginstal apa pun di komputer Anda.
+# Menggunakan Editor Kode: Menguasai [VSCode.dev](https://vscode.dev)
 
-## Tujuan pembelajaran
+**Selamat datang!**  
+Pelajaran ini akan membawa Anda dari dasar hingga penggunaan tingkat lanjut [VSCode.dev](https://vscode.dev)—editor kode berbasis web yang kuat. Anda akan belajar cara mengedit kode dengan percaya diri, mengelola proyek, melacak perubahan, menginstal ekstensi, dan berkolaborasi seperti seorang profesional—semuanya langsung dari browser Anda, tanpa perlu instalasi.
 
-Dalam pelajaran ini, Anda akan belajar bagaimana:
+***
 
-- Menggunakan editor kode dalam proyek kode
-- Melacak perubahan dengan kontrol versi
-- Menyesuaikan editor untuk pengembangan
+## Tujuan Pembelajaran
 
-### Prasyarat
+Pada akhir pelajaran ini, Anda akan dapat:
 
-Sebelum memulai, Anda perlu membuat akun di [GitHub](https://github.com). Kunjungi [GitHub](https://github.com/) dan buat akun jika Anda belum memilikinya.
+- Menggunakan editor kode secara efisien untuk proyek apa pun, di mana saja
+- Melacak pekerjaan Anda dengan kontrol versi bawaan
+- Mempersonalisasi dan meningkatkan alur kerja pengembangan Anda dengan kustomisasi editor dan ekstensi
 
-### Pengantar
+***
 
-Editor kode adalah alat penting untuk menulis program dan berkolaborasi dalam proyek coding yang sudah ada. Setelah Anda memahami dasar-dasar editor dan cara memanfaatkan fiturnya, Anda dapat menerapkannya saat menulis kode.
+## Prasyarat
+
+Untuk memulai, **daftar akun [GitHub](https://github.com) gratis**, yang memungkinkan Anda mengelola repositori kode dan berkolaborasi secara global. Jika Anda belum memiliki akun, [buat di sini](https://github.com/).
+
+***
+
+## Mengapa Menggunakan Editor Kode Berbasis Web?
+
+**Editor kode** seperti VSCode.dev adalah pusat kendali Anda untuk menulis, mengedit, dan mengelola kode. Dengan antarmuka yang intuitif, banyak fitur, dan akses langsung melalui browser, Anda dapat:
+
+- Mengedit proyek di perangkat apa pun
+- Menghindari kerumitan instalasi
+- Berkolaborasi dan berkontribusi secara instan
+
+Setelah Anda terbiasa dengan VSCode.dev, Anda akan siap menghadapi tugas coding dari mana saja, kapan saja.
+
+***
 
 ## Memulai dengan VSCode.dev
 
-[VSCode.dev](https://vscode.dev) adalah editor kode berbasis web. Anda tidak perlu menginstal apa pun untuk menggunakannya, seperti membuka situs web lainnya. Untuk memulai dengan editor ini, buka tautan berikut: [https://vscode.dev](https://vscode.dev). Jika Anda belum masuk ke [GitHub](https://github.com/), ikuti petunjuk untuk masuk atau buat akun baru, lalu masuk.
+Akses **[VSCode.dev](https://vscode.dev)**—tanpa instalasi, tanpa unduhan. Masuk dengan GitHub untuk membuka akses penuh, termasuk sinkronisasi pengaturan, ekstensi, dan repositori Anda. Jika diminta, hubungkan akun GitHub Anda.
 
-Setelah dimuat, tampilannya akan mirip dengan gambar berikut:
+Setelah dimuat, ruang kerja Anda akan terlihat seperti ini:
 
-![Default VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.id.png)
+![Default VSCode.dev](../images/default-vscode-dev memiliki tiga bagian inti dari kiri ke kanan:
+- **Activity bar:** Ikon seperti 🔎 (Pencarian), ⚙️ (Pengaturan), file, kontrol sumber, dll.
+- **Sidebar:** Berubah konteks berdasarkan ikon activity bar yang dipilih (default ke *Explorer* untuk menampilkan file).
+- **Area editor/kode:** Bagian terbesar di sebelah kanan—tempat Anda benar-benar mengedit dan melihat kode.
 
-Ada tiga bagian utama, mulai dari kiri ke kanan:
+Klik ikon untuk menjelajahi fitur, tetapi kembali ke _Explorer_ untuk tetap berada di tempat Anda.
 
-1. _Activity bar_ yang mencakup beberapa ikon, seperti kaca pembesar 🔎, roda gigi ⚙️, dan beberapa lainnya.
-2. _Side bar_ yang merupakan bagian yang diperluas dari activity bar, biasanya default ke _Explorer_.
-3. Area kode di sebelah kanan.
+***
 
-Klik setiap ikon untuk menampilkan menu yang berbeda. Setelah selesai, klik _Explorer_ untuk kembali ke tempat semula.
+## Membuka Repositori GitHub
 
-Saat Anda mulai membuat kode atau memodifikasi kode yang sudah ada, itu akan terjadi di area terbesar di sebelah kanan. Anda juga akan menggunakan area ini untuk melihat kode yang sudah ada, yang akan Anda lakukan selanjutnya.
+### Metode 1: Dari Editor
 
-## Membuka repositori GitHub
+1. Pergi ke [VSCode.dev](https://vscode.dev). Klik **"Open Remote Repository."**
 
-Hal pertama yang perlu Anda lakukan adalah membuka repositori GitHub. Ada beberapa cara untuk membuka repositori. Di bagian ini, Anda akan melihat dua cara berbeda untuk membuka repositori sehingga Anda dapat mulai bekerja pada perubahan.
+   ![Open remote repository](../../../../8-code-editor/images/open-remote-repository gunakan _Command Palette_ (Ctrl-Shift-P, atau Cmd-Shift-P di Mac).
 
-### 1. Dengan editor
+   ![Palette Menu](../images/palette-menu.pngopen remote repository.”
+   - Pilih opsi tersebut.
+   - Tempelkan URL repo GitHub Anda (misalnya, `https://github.com/microsoft/Web-Dev-For-Beginners`) dan tekan Enter.
 
-Gunakan editor itu sendiri untuk membuka repositori jarak jauh. Jika Anda pergi ke [VSCode.dev](https://vscode.dev), Anda akan melihat tombol _"Open Remote Repository"_:
+Jika berhasil, Anda akan melihat seluruh proyek dimuat dan siap untuk diedit!
 
-![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.id.png)
+***
 
-Anda juga dapat menggunakan _command palette_. _Command palette_ adalah kotak input tempat Anda dapat mengetik kata apa pun yang merupakan bagian dari perintah atau tindakan untuk menemukan perintah yang tepat untuk dijalankan. Gunakan menu di kiri atas, lalu pilih _View_, dan kemudian pilih _Command Palette_, atau gunakan pintasan keyboard berikut: Ctrl-Shift-P (di MacOS akan menjadi Command-Shift-P).
+### Metode 2: Langsung melalui URL
 
-![Palette Menu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.id.png)
+Ubah URL repo GitHub apa pun untuk langsung membukanya di VSCode.dev dengan mengganti `github.com` dengan `vscode.dev/github`.  
+Contoh:
 
-Setelah menu terbuka, ketik _open remote repository_, lalu pilih opsi pertama. Beberapa repositori yang Anda ikuti atau yang baru saja Anda buka akan muncul. Anda juga dapat menggunakan URL GitHub lengkap untuk memilih satu repositori. Gunakan URL berikut dan tempelkan ke dalam kotak:
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Fitur ini mempercepat akses cepat ke proyek APA PUN.
 
-✅ Jika berhasil, Anda akan melihat semua file untuk repositori ini dimuat di editor teks.
+***
 
-### 2. Menggunakan URL
+## Mengedit File dalam Proyek Anda
 
-Anda juga dapat menggunakan URL langsung untuk memuat repositori. Misalnya, URL lengkap untuk repositori saat ini adalah [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), tetapi Anda dapat mengganti domain GitHub dengan `VSCode.dev/github` dan memuat repositori langsung. URL yang dihasilkan akan menjadi [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Setelah repo Anda terbuka, Anda dapat:
 
-## Mengedit file
+### 1. **Membuat File Baru**
+- Di sidebar *Explorer*, navigasikan ke folder yang diinginkan atau gunakan root.
+- Klik ikon _‘New file ...’_.
+- Beri nama file Anda, tekan **Enter**, dan file Anda muncul seketika.
 
-Setelah Anda membuka repositori di browser/vscode.dev, langkah berikutnya adalah membuat pembaruan atau perubahan pada proyek.
+![Create a new file](../images/create-new-file 2. **Mengedit dan Menyimpan File**
 
-### 1. Membuat file baru
+- Klik pada file di *Explorer* untuk membukanya di area kode.
+- Lakukan perubahan sesuai kebutuhan.
+- VSCode.dev secara otomatis menyimpan perubahan Anda, tetapi Anda dapat menekan Ctrl+S untuk menyimpan secara manual.
 
-Anda dapat membuat file di dalam folder yang sudah ada, atau membuatnya di direktori/folder root. Untuk membuat file baru, buka lokasi/direktori tempat Anda ingin menyimpan file dan pilih ikon _'New file ...'_ di activity bar _(kiri)_, beri nama file tersebut, lalu tekan enter.
+![Edit a file](../images/edit-a-file.png. **Melacak & Melakukan Commit Perubahan dengan Kontrol Versi**
 
-![Create a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.id.png)
+VSCode.dev memiliki kontrol versi **Git** terintegrasi!
 
-### 2. Mengedit dan menyimpan file di repositori
+- Klik ikon _'Source Control'_ untuk melihat semua perubahan yang dibuat.
+- File dalam folder `Changes` menunjukkan penambahan (hijau) dan penghapusan (merah).  
+  ![View changes](../images/working-tree.png perubahan dengan mengklik `+` di sebelah file untuk mempersiapkan commit.
+- **Batalkan** perubahan yang tidak diinginkan dengan mengklik ikon undo.
+- Ketik pesan commit yang jelas, lalu klik tanda centang untuk melakukan commit dan push.
 
-Menggunakan vscode.dev sangat berguna saat Anda ingin membuat pembaruan cepat pada proyek Anda tanpa harus memuat perangkat lunak secara lokal. Untuk memperbarui kode Anda, klik ikon 'Explorer', yang juga terletak di activity bar untuk melihat file & folder di repositori. Pilih file untuk membukanya di area kode, buat perubahan, lalu simpan.
+Untuk kembali ke repositori Anda di GitHub, pilih menu hamburger di kiri atas.
 
-![Edit a file](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.id.png)
+![Stage & commit changes](../images/edit-vscode.dev Up dengan Ekstensi
 
-Setelah Anda selesai memperbarui proyek Anda, pilih ikon _`source control`_ yang berisi semua perubahan baru yang telah Anda buat pada repositori Anda.
+Ekstensi memungkinkan Anda menambahkan bahasa, tema, debugger, dan alat produktivitas ke VSCode.dev—membuat hidup coding Anda lebih mudah dan menyenangkan.
 
-Untuk melihat perubahan yang Anda buat pada proyek, pilih file di folder `Changes` di _side bar_ yang diperluas. Ini akan membuka 'Working Tree' untuk Anda melihat secara visual perubahan yang Anda buat pada file. Warna merah menunjukkan penghapusan dari proyek, sedangkan warna hijau menunjukkan penambahan.
+### Menjelajahi dan Mengelola Ekstensi
 
-![View changes](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.id.png)
+- Klik ikon **Extensions** di activity bar.
+- Cari ekstensi di kotak _'Search Extensions in Marketplace'_.
 
-Jika Anda puas dengan perubahan yang Anda buat, arahkan kursor ke folder `Changes` dan klik tombol `+` untuk _stage_ perubahan. _Staging_ berarti mempersiapkan perubahan Anda untuk dikomit ke GitHub.
+  ![Extension details](../images/extension-details:
+  - **Installed**: Semua ekstensi yang telah Anda tambahkan
+  - **Popular**: Favorit industri
+  - **Recommended**: Disesuaikan dengan alur kerja Anda
 
-Jika Anda tidak nyaman dengan beberapa perubahan dan ingin membatalkannya, arahkan kursor ke folder `Changes` dan pilih ikon `undo`.
+  ![View extensions](
 
-Kemudian, ketikkan `commit message` _(Deskripsi perubahan yang telah Anda buat pada proyek)_, klik ikon `check` untuk mengkomit dan mendorong perubahan Anda.
+  
 
-Setelah selesai bekerja pada proyek Anda, pilih ikon `hamburger menu` di kiri atas untuk kembali ke repositori di github.com.
+***
 
-![Stage & commit changes](../../../../8-code-editor/images/edit-vscode.dev.gif)
+### 1. **Menginstal Ekstensi**
 
-## Menggunakan ekstensi
+- Masukkan nama ekstensi di pencarian, klik, dan tinjau detailnya di editor.
+- Tekan tombol **Install biru** di sidebar _atau_ di area kode utama.
 
-Menginstal ekstensi di VSCode memungkinkan Anda menambahkan fitur baru dan opsi lingkungan pengembangan yang disesuaikan pada editor Anda untuk meningkatkan alur kerja pengembangan Anda. Ekstensi ini juga membantu Anda menambahkan dukungan untuk berbagai bahasa pemrograman dan sering kali berupa ekstensi generik atau berbasis bahasa.
+  ![Install extensions](../images/install-extension 2. **Menyesuaikan Ekstensi**
 
-Untuk menjelajahi daftar semua ekstensi yang tersedia, klik ikon _`Extensions`_ di activity bar dan mulai mengetik nama ekstensi di bidang teks yang diberi label _'Search Extensions in Marketplace'_. Anda akan melihat daftar ekstensi, masing-masing berisi **nama ekstensi, nama penerbit, deskripsi singkat, jumlah unduhan**, dan **rating bintang**.
+- Temukan ekstensi yang telah diinstal.
+- Klik ikon **Gear** → pilih _Extension Settings_ untuk menyesuaikan perilaku sesuai keinginan Anda.
 
-![Extension details](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.id.png)
+  ![Modify extension settings](../images/extension-settings 3. **Mengelola Ekstensi**
+Anda dapat:
 
-Anda juga dapat melihat semua ekstensi yang telah diinstal sebelumnya dengan memperluas folder _`Installed`_, ekstensi populer yang digunakan oleh sebagian besar pengembang di folder _`Popular`_, dan ekstensi yang direkomendasikan untuk Anda baik oleh pengguna di workspace yang sama atau berdasarkan file yang baru saja Anda buka di folder _`Recommended`_.
+- **Disable:** Mematikan sementara ekstensi sambil tetap mempertahankannya terinstal
+- **Uninstall:** Menghapusnya secara permanen jika tidak lagi diperlukan
 
-![View extensions](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.id.png)
+  Temukan ekstensi, tekan ikon Gear, dan pilih ‘Disable’ atau ‘Uninstall,’ atau gunakan tombol biru di area kode.
 
-### 1. Menginstal ekstensi
-
-Untuk menginstal ekstensi, ketik nama ekstensi di bidang pencarian dan klik untuk melihat informasi tambahan tentang ekstensi di area kode setelah muncul di _side bar_ yang diperluas.
-
-Anda dapat mengklik tombol _install biru_ di _side bar_ yang diperluas untuk menginstal atau menggunakan tombol install yang muncul di area kode setelah Anda memilih ekstensi untuk memuat informasi tambahan.
-
-![Install extensions](../../../../8-code-editor/images/install-extension.gif)
-
-### 2. Menyesuaikan ekstensi
-
-Setelah menginstal ekstensi, Anda mungkin perlu memodifikasi perilakunya dan menyesuaikannya berdasarkan preferensi Anda. Untuk melakukannya, pilih ikon Extensions, dan kali ini, ekstensi Anda akan muncul di folder _Installed_, klik ikon _**Gear**_ dan navigasikan ke _Extensions Setting_.
-
-![Modify extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.id.png)
-
-### 3. Mengelola ekstensi
-
-Setelah menginstal dan menggunakan ekstensi Anda, vscode.dev menawarkan opsi untuk mengelola ekstensi Anda berdasarkan kebutuhan yang berbeda. Misalnya, Anda dapat memilih untuk:
-
-- **Menonaktifkan:** _(Anda dapat menonaktifkan ekstensi sementara saat Anda tidak membutuhkannya tetapi tidak ingin menghapusnya sepenuhnya)_
-
-    Pilih ekstensi yang diinstal di _side bar_ yang diperluas > klik ikon Gear > pilih 'Disable' atau 'Disable (Workspace)' **ATAU** buka ekstensi di area kode dan klik tombol biru Disable.
-
-- **Menghapus:** Pilih ekstensi yang diinstal di _side bar_ yang diperluas > klik ikon Gear > pilih 'Uninstall' **ATAU** buka ekstensi di area kode dan klik tombol biru Uninstall.
-
----
+***
 
 ## Tugas
 
-[Buat situs web resume menggunakan vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Uji kemampuan Anda: [Buat situs web resume menggunakan vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Tinjauan & Studi Mandiri
+***
 
-Baca lebih lanjut tentang [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) dan beberapa fitur lainnya.
+## Eksplorasi Lebih Lanjut dan Belajar Mandiri
+
+- Pelajari lebih dalam dengan [Dokumentasi Resmi VSCode Web](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Jelajahi fitur ruang kerja tingkat lanjut, pintasan keyboard, dan pengaturan.
+
+***
+
+**Sekarang Anda siap untuk coding, membuat, dan berkolaborasi—dari mana saja, di perangkat apa pun, menggunakan VSCode.dev!**
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

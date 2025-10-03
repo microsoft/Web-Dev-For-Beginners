@@ -1,23 +1,39 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d4d75af51aaccfe9af778f792c62919",
-  "translation_date": "2025-08-28T11:51:52+00:00",
+  "original_hash": "a212cc22a18eddf9046b7a16dfbafd8b",
+  "translation_date": "2025-10-03T08:22:36+00:00",
   "source_file": "3-terrarium/2-intro-to-css/assignment.md",
   "language_code": "en"
 }
 -->
-# CSS Refactoring
+# CSS Refactoring Assignment
+
+## Objective
+
+Refactor the terrarium project to use **Flexbox** or **CSS Grid** for layout. Update the HTML and CSS as needed to achieve a modern, responsive design. You do not need to implement draggable elements—focus solely on layout and styling.
 
 ## Instructions
 
-Restyle the terrarium using either Flexbox or CSS Grid, and take screenshots to demonstrate that you have tested it on multiple browsers. You may need to modify the markup, so create a new version of the app with the artwork in place for your refactor. Don't worry about making the elements draggable; for now, focus only on refactoring the HTML and CSS.
+1. **Create a new version** of the terrarium app. Modify the HTML and CSS to utilize Flexbox or CSS Grid for layout.
+2. **Ensure all artwork and elements are properly displayed** as in the original version.
+3. **Test your design** in at least two different browsers (e.g., Chrome, Firefox, Edge).
+4. **Take screenshots** of your terrarium in each browser to showcase cross-browser compatibility.
+5. **Submit** your updated code along with the screenshots.
 
 ## Rubric
 
-| Criteria | Exemplary                                                         | Adequate                      | Needs Improvement                    |
-| -------- | ----------------------------------------------------------------- | ----------------------------- | ------------------------------------ |
-|          | Present a completely restyled terrarium using Flexbox or CSS Grid | Restyle a few of the elements | Fail to restyle the terrarium at all |
+| Criteria   | Outstanding                                                              | Satisfactory                          | Needs Improvement                      |
+|------------|--------------------------------------------------------------------------|---------------------------------------|----------------------------------------|
+| Layout     | Fully refactored using Flexbox or CSS Grid; visually appealing and responsive | Partial refactoring; some use of Flexbox or Grid | Minimal or no use of Flexbox or Grid; layout unchanged |
+| Cross-Browser | Screenshots provided for multiple browsers; consistent appearance      | Screenshots for one browser; minor inconsistencies | No screenshots or major inconsistencies |
+| Code Quality | Clean, well-structured HTML/CSS; clear comments                        | Some structure; few comments          | Disorganized code; lacks comments      |
+
+## Tips
+
+- Refer to [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) and [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) guides.
+- Use browser developer tools to check responsiveness.
+- Add comments to your code for better clarity.
 
 ---
 
