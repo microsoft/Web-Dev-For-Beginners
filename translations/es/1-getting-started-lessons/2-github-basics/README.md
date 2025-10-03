@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "361249da70432ddfd4741c917d1a6f50",
-  "translation_date": "2025-08-29T14:02:54+00:00",
+  "original_hash": "ea65b75e488aa33a3cc5cb1c6c3f047a",
+  "translation_date": "2025-10-03T13:36:05+00:00",
   "source_file": "1-getting-started-lessons/2-github-basics/README.md",
   "language_code": "es"
 }
@@ -37,7 +37,7 @@ Si Git no está instalado, [descarga Git](https://git-scm.com/downloads). Luego,
 Para verificar si Git ya está configurado, puedes escribir:
 `git config --list`
 
-También necesitarás una cuenta de GitHub, un editor de código (como Visual Studio Code) y abrir tu terminal (o símbolo del sistema).
+También necesitarás una cuenta de GitHub, un editor de código (como Visual Studio Code) y abrir tu terminal (o: símbolo del sistema).
 
 Navega a [github.com](https://github.com/) y crea una cuenta si aún no lo has hecho, o inicia sesión y completa tu perfil. 
 
@@ -45,7 +45,7 @@ Navega a [github.com](https://github.com/) y crea una cuenta si aún no lo has h
 
 ### Preparación
 
-Necesitarás una carpeta con un proyecto de código en tu máquina local (laptop o PC) y un repositorio público en GitHub, que servirá como ejemplo de cómo contribuir a los proyectos de otros.  
+Necesitarás tanto una carpeta con un proyecto de código en tu máquina local (laptop o PC) como un repositorio público en GitHub, que servirá como ejemplo de cómo contribuir a los proyectos de otros.  
 
 ---
 
@@ -70,7 +70,7 @@ Supongamos que tienes una carpeta localmente con algún proyecto de código y qu
    cd [name of your folder]
    ```
 
-1. **Inicializa un repositorio de git**. En tu proyecto escribe:
+1. **Inicializa un repositorio git**. En tu proyecto escribe:
 
    ```bash
    git init
@@ -104,31 +104,31 @@ Supongamos que tienes una carpeta localmente con algún proyecto de código y qu
 
    El argumento `git add` más `.` indica que todos tus archivos y cambios serán rastreados. 
 
-1. **Agrega archivos seleccionados para rastrear**
+1. **Agregar archivos seleccionados para rastrear**
 
    ```bash
    git add [file or folder name]
    ```
 
-   Esto nos ayuda a agregar solo archivos seleccionados al área de preparación cuando no queremos confirmar todos los archivos a la vez.
+   Esto nos ayuda a agregar solo archivos seleccionados al área de preparación cuando no queremos confirmar todos los archivos de una vez.
 
-1. **Quitar la preparación de todos los archivos**
+1. **Quitar todos los archivos de la preparación**
 
    ```bash
    git reset
    ```
 
-   Este comando nos ayuda a quitar la preparación de todos los archivos a la vez.
+   Este comando nos ayuda a quitar todos los archivos de la preparación de una vez.
 
-1. **Quitar la preparación de un archivo en particular**
+1. **Quitar un archivo en particular de la preparación**
 
    ```bash
    git reset [file or folder name]
    ```
 
-   Este comando nos ayuda a quitar la preparación de solo un archivo en particular que no queremos incluir en la próxima confirmación.
+   Este comando nos ayuda a quitar solo un archivo en particular de la preparación que no queremos incluir en la próxima confirmación.
 
-1. **Persistir tu trabajo**. En este punto, has agregado los archivos a un área llamada _área de preparación_. Un lugar donde Git está rastreando tus archivos. Para hacer el cambio permanente necesitas _confirmar_ los archivos. Para hacerlo, crea una _confirmación_ con el comando `git commit`. Una _confirmación_ representa un punto de guardado en la historia de tu repositorio. Escribe lo siguiente para crear una _confirmación_:
+1. **Persistir tu trabajo**. En este punto has agregado los archivos a un área llamada _área de preparación_. Un lugar donde Git está rastreando tus archivos. Para hacer el cambio permanente necesitas _confirmar_ los archivos. Para hacerlo, crea una _confirmación_ con el comando `git commit`. Una _confirmación_ representa un punto de guardado en la historia de tu repositorio. Escribe lo siguiente para crear una _confirmación_:
 
    ```bash
    git commit -m "first commit"
@@ -154,7 +154,7 @@ Supongamos que tienes una carpeta localmente con algún proyecto de código y qu
    git push -u origin main
    ```
 
-   Esto envía tus confirmaciones en tu rama "main" a GitHub.
+   Esto envía tus confirmaciones en tu rama "main" a GitHub. Configurar la rama `upstream` incluyendo `-u` en el comando establece un enlace entre tu rama local y la rama remota, para que puedas simplemente usar git push o git pull sin especificar el nombre de la rama en el futuro. Git usará automáticamente la rama upstream y no necesitarás especificar el nombre de la rama explícitamente en futuros comandos.
 
 2. **Para agregar más cambios**. Si deseas continuar haciendo cambios y enviándolos a GitHub, solo necesitarás usar los siguientes tres comandos:
 
@@ -192,13 +192,13 @@ En tu repositorio, navega a `Insights > Community` para ver cómo tu proyecto se
    - **Descripción**. ¿Agregaste una descripción para tu proyecto?
    - **README**. ¿Agregaste un README? GitHub proporciona orientación para escribir un [README](https://docs.github.com/articles/about-readmes/?WT.mc_id=academic-77807-sagibbon).
    - **Guía de contribución**. ¿Tu proyecto tiene [guías de contribución](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/?WT.mc_id=academic-77807-sagibbon)?
-   - **Código de conducta**. ¿Tiene un [Código de Conducta](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/)?
+   - **Código de conducta**. ¿Tiene un [Código de Conducta](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/)? 
    - **Licencia**. Quizás lo más importante, ¿tiene una [licencia](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
 
 
-Todos estos recursos beneficiarán la incorporación de nuevos miembros al equipo. Y típicamente son el tipo de cosas que los nuevos contribuyentes miran antes de siquiera mirar tu código, para averiguar si tu proyecto es el lugar adecuado para que inviertan su tiempo.
+Todos estos recursos beneficiarán la incorporación de nuevos miembros al equipo. Y típicamente son el tipo de cosas que los nuevos contribuyentes miran antes de siquiera mirar tu código, para averiguar si tu proyecto es el lugar adecuado para que dediquen su tiempo.
 
-✅ Los archivos README, aunque toman tiempo para prepararse, a menudo son descuidados por los mantenedores ocupados. ¿Puedes encontrar un ejemplo de uno particularmente descriptivo? Nota: hay algunos [herramientas para ayudar a crear buenos READMEs](https://www.makeareadme.com/) que podrías querer probar.
+✅ Los archivos README, aunque llevan tiempo prepararlos, a menudo son descuidados por los mantenedores ocupados. ¿Puedes encontrar un ejemplo de uno particularmente descriptivo? Nota: hay algunos [herramientas para ayudar a crear buenos READMEs](https://www.makeareadme.com/) que podrías querer probar.
 
 ### Tarea: Fusionar código
 
@@ -207,15 +207,15 @@ Los documentos de contribución ayudan a las personas a contribuir al proyecto. 
 1. **Hacer un fork de tu repositorio**. Probablemente querrás que las personas _hagan un fork_ de tu proyecto. Hacer un fork significa crear una réplica de tu repositorio en su perfil de GitHub.
 1. **Clonar**. Desde allí, clonarán el proyecto a su máquina local. 
 1. **Crear una rama**. Querrás pedirles que creen una _rama_ para su trabajo. 
-1. **Enfocar su cambio en un área**. Pide a los contribuyentes que concentren sus contribuciones en una sola cosa a la vez; de esa manera, las posibilidades de que puedas _fusionar_ su trabajo son mayores. Imagina que escriben una corrección de errores, agregan una nueva característica y actualizan varias pruebas; ¿qué pasa si quieres, o solo puedes implementar 2 de 3, o 1 de 3 cambios?
+1. **Enfocar su cambio en un área**. Pide a los contribuyentes que concentren sus contribuciones en una sola cosa a la vez; de esa manera, las posibilidades de que puedas _fusionar_ su trabajo son mayores. Imagina que escriben una corrección de errores, agregan una nueva funcionalidad y actualizan varias pruebas; ¿qué pasa si quieres, o solo puedes implementar 2 de 3, o 1 de 3 cambios?
 
-✅ Imagina una situación donde las ramas son particularmente críticas para escribir y enviar buen código. ¿Qué casos de uso se te ocurren?
+✅ Imagina una situación donde las ramas son particularmente críticas para escribir y enviar buen código. ¿Qué casos de uso puedes pensar?
 
-> Nota: sé el cambio que quieres ver en el mundo y crea ramas para tu propio trabajo también. Cualquier confirmación que hagas se realizará en la rama en la que estés "revisado". Usa `git status` para ver en qué rama estás.
+> Nota: sé el cambio que quieres ver en el mundo y crea ramas para tu propio trabajo también. Cualquier confirmación que hagas se realizará en la rama en la que estés "ubicado". Usa `git status` para ver en qué rama estás.
 
-Pasemos por un flujo de trabajo de contribuyente. Supongamos que el contribuyente ya ha _hecho un fork_ y _clonado_ el repositorio, por lo que tiene un repositorio de Git listo para trabajar en su máquina local:
+Vamos a recorrer un flujo de trabajo de contribuyente. Supongamos que el contribuyente ya ha hecho un _fork_ y _clonado_ el repositorio, por lo que tiene un repositorio Git listo para trabajar en su máquina local:
 
-1. **Crear una rama**. Usa el comando `git branch` para crear una rama que contendrá los cambios que planean contribuir:
+1. **Crear una rama**. Usa el comando `git branch` para crear una rama que contendrá los cambios que planea contribuir:
 
    ```bash
    git branch [branch-name]
@@ -236,21 +236,26 @@ Pasemos por un flujo de trabajo de contribuyente. Supongamos que el contribuyent
 
    Asegúrate de darle a tu confirmación un buen nombre, tanto para ti como para el mantenedor del repositorio al que estás ayudando.
 
-1. **Combinar tu trabajo con la rama `main`**. En algún momento terminas de trabajar y quieres combinar tu trabajo con el de la rama `main`. La rama `main` podría haber cambiado mientras tanto, así que asegúrate de actualizarla primero con los siguientes comandos:
+1. **Combinar tu trabajo con la rama `main`**. En algún momento habrás terminado de trabajar y querrás combinar tu trabajo con el de la rama `main`. La rama `main` podría haber cambiado mientras tanto, así que asegúrate de actualizarla primero con los siguientes comandos:
 
    ```bash
    git switch main
    git pull
    ```
 
-   En este punto, quieres asegurarte de que cualquier _conflicto_, situaciones donde Git no puede fácilmente _combinar_ los cambios, ocurra en tu rama de trabajo. Por lo tanto, ejecuta los siguientes comandos:
+   En este punto, querrás asegurarte de que cualquier _conflicto_, situaciones donde Git no puede fácilmente _combinar_ los cambios, ocurra en tu rama de trabajo. Por lo tanto, ejecuta los siguientes comandos:
 
    ```bash
    git switch [branch_name]
    git merge main
    ```
 
-   Esto traerá todos los cambios de `main` a tu rama y, con suerte, podrás continuar. Si no, VS Code te indicará dónde Git está _confundido_ y solo alteras los archivos afectados para decir qué contenido es el más preciso.
+   El comando `git merge main` traerá todos los cambios de `main` a tu rama. Con suerte, podrás continuar sin problemas. Si no, VS Code te indicará dónde Git está _confundido_ y solo tendrás que modificar los archivos afectados para indicar qué contenido es el más preciso.
+
+   Para cambiar a una rama diferente, usa el comando moderno `git switch`:
+   ```bash
+   git switch [branch_name]
+
 
 1. **Enviar tu trabajo a GitHub**. Enviar tu trabajo a GitHub significa dos cosas: empujar tu rama a tu repositorio y luego abrir un PR (Pull Request).
 
@@ -259,27 +264,27 @@ Pasemos por un flujo de trabajo de contribuyente. Supongamos que el contribuyent
    ```
 
    El comando anterior crea la rama en tu repositorio bifurcado.
+1. **Abre un PR**. Ahora, quieres abrir un PR. Para hacerlo, navega al repositorio bifurcado en GitHub. Verás una indicación en GitHub que te pregunta si deseas crear un nuevo PR; haz clic en eso y serás llevado a una interfaz donde puedes cambiar el título del mensaje de confirmación y darle una descripción más adecuada. Ahora el mantenedor del repositorio que bifurcaste verá este PR y, _crucemos los dedos_, apreciará y _fusionará_ tu PR. ¡Ahora eres un colaborador, yay! :)
 
-1. **Abrir un PR**. A continuación, quieres abrir un PR. Hazlo navegando al repositorio bifurcado en GitHub. Verás una indicación en GitHub donde pregunta si deseas crear un nuevo PR, haz clic en eso y serás llevado a una interfaz donde puedes cambiar el título del mensaje de confirmación, darle una descripción más adecuada. Ahora el mantenedor del repositorio que bifurcaste verá este PR y _crucemos los dedos_ apreciará y _fusionará_ tu PR. Ahora eres un contribuyente, ¡yay! :)
-
-1. **Limpiar**. Se considera una buena práctica _limpiar_ después de fusionar exitosamente un PR. Quieres limpiar tanto tu rama local como la rama que empujaste a GitHub. Primero, eliminémosla localmente con el siguiente comando: 
+1. **Limpieza**. Se considera una buena práctica _limpiar_ después de fusionar exitosamente un PR. Quieres limpiar tanto tu rama local como la rama que empujaste a GitHub. Primero, eliminémosla localmente con el siguiente comando:
 
    ```bash
    git branch -d [branch-name]
    ```
+  
+   Asegúrate de ir a la página de GitHub del repositorio bifurcado y eliminar la rama remota que acabas de empujar.
 
-   Asegúrate de ir a la página de GitHub para el repositorio bifurcado y eliminar la rama remota que acabas de empujar.
-`Pull request` parece un término extraño porque, en realidad, lo que quieres es enviar tus cambios al proyecto. Pero el mantenedor (propietario del proyecto) o el equipo principal necesita considerar tus cambios antes de fusionarlos con la rama "main" del proyecto, así que realmente estás solicitando una decisión de cambio al mantenedor.
+`Pull request` parece un término extraño porque realmente quieres empujar tus cambios al proyecto. Pero el mantenedor (propietario del proyecto) o el equipo principal necesita considerar tus cambios antes de fusionarlos con la rama "principal" del proyecto, así que realmente estás solicitando una decisión de cambio a un mantenedor.
 
-Un pull request es el lugar para comparar y discutir las diferencias introducidas en una rama con revisiones, comentarios, pruebas integradas y más. Un buen pull request sigue aproximadamente las mismas reglas que un mensaje de commit. Puedes agregar una referencia a un problema en el rastreador de problemas, por ejemplo, cuando tu trabajo soluciona un problema. Esto se hace usando un `#` seguido del número de tu problema. Por ejemplo, `#97`.
+Un pull request es el lugar para comparar y discutir las diferencias introducidas en una rama con revisiones, comentarios, pruebas integradas y más. Un buen pull request sigue aproximadamente las mismas reglas que un mensaje de confirmación. Puedes agregar una referencia a un problema en el rastreador de problemas, por ejemplo, cuando tu trabajo soluciona un problema. Esto se hace usando un `#` seguido del número de tu problema. Por ejemplo, `#97`.
 
-🤞Crucemos los dedos para que todas las verificaciones pasen y el/los propietario(s) del proyecto fusionen tus cambios en el proyecto🤞
+🤞Crucemos los dedos para que todas las verificaciones pasen y el propietario(s) del proyecto fusionen tus cambios en el proyecto🤞
 
 Actualiza tu rama de trabajo local actual con todos los nuevos commits de la rama remota correspondiente en GitHub:
 
 `git pull`
 
-## Cómo contribuir al código abierto
+## Cómo contribuir a código abierto
 
 Primero, busquemos un repositorio (o **repo**) en GitHub que te interese y al que te gustaría contribuir con un cambio. Querrás copiar su contenido a tu máquina.
 
@@ -287,12 +292,12 @@ Primero, busquemos un repositorio (o **repo**) en GitHub que te interese y al qu
 
 ![Copiar un repositorio localmente](../../../../translated_images/clone_repo.5085c48d666ead57664f050d806e325d7f883be6838c821e08bc823ab7c66665.es.png)
 
-Hay varias formas de copiar código. Una forma es "clonar" el contenido del repositorio, usando HTTPS, SSH o la CLI (Interfaz de Línea de Comandos) de GitHub.
+Hay varias formas de copiar código. Una forma es "clonar" el contenido del repositorio, usando HTTPS, SSH o utilizando la CLI (Interfaz de Línea de Comandos) de GitHub.
 
-Abre tu terminal y clona el repositorio de esta manera:
+Abre tu terminal y clona el repositorio de esta manera:  
 `git clone https://github.com/ProjectURL`
 
-Para trabajar en el proyecto, cambia a la carpeta correcta:
+Para trabajar en el proyecto, cambia a la carpeta correcta:  
 `cd ProjectURL`
 
 También puedes abrir el proyecto completo usando [Codespaces](https://github.com/features/codespaces), el editor de código integrado / entorno de desarrollo en la nube de GitHub, o [GitHub Desktop](https://desktop.github.com/).
@@ -301,9 +306,9 @@ Por último, puedes descargar el código en una carpeta comprimida.
 
 ### Algunas cosas interesantes sobre GitHub
 
-Puedes marcar con estrella, seguir y/o "forkear" cualquier repositorio público en GitHub. Puedes encontrar tus repositorios marcados con estrella en el menú desplegable de la esquina superior derecha. Es como guardar favoritos, pero para código.
+Puedes marcar con estrella, seguir y/o "bifurcar" cualquier repositorio público en GitHub. Puedes encontrar tus repositorios marcados con estrella en el menú desplegable de la esquina superior derecha. Es como guardar en favoritos, pero para código.
 
-Los proyectos tienen un rastreador de problemas, generalmente en GitHub en la pestaña "Issues", a menos que se indique lo contrario, donde las personas discuten problemas relacionados con el proyecto. Y la pestaña de Pull Requests es donde las personas discuten y revisan los cambios que están en progreso.
+Los proyectos tienen un rastreador de problemas, generalmente en GitHub en la pestaña "Issues" a menos que se indique lo contrario, donde las personas discuten problemas relacionados con el proyecto. Y la pestaña de Pull Requests es donde las personas discuten y revisan los cambios que están en progreso.
 
 Los proyectos también pueden tener discusiones en foros, listas de correo o canales de chat como Slack, Discord o IRC.
 
@@ -313,16 +318,16 @@ Los proyectos también pueden tener discusiones en foros, listas de correo o can
 
 ## 🚀 Desafío
 
-Trabaja en pareja con un amigo para colaborar en el código del otro. Crea un proyecto de manera colaborativa, haz un fork del código, crea ramas y fusiona cambios.
+Trabaja en pareja con un amigo para colaborar en el código de cada uno. Crea un proyecto de manera colaborativa, bifurca código, crea ramas y fusiona cambios.
 
-## Cuestionario post-clase
+## Cuestionario post-clase  
 [Cuestionario post-clase](https://ff-quizzes.netlify.app/web/en/)
 
 ## Revisión y autoestudio
 
-Lee más sobre [cómo contribuir al software de código abierto](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution).
+Lee más sobre [cómo contribuir a software de código abierto](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution).
 
-[Hoja de trucos de Git](https://training.github.com/downloads/github-git-cheat-sheet/).
+[Hoja de referencia de Git](https://training.github.com/downloads/github-git-cheat-sheet/).
 
 Practica, practica, practica. GitHub tiene excelentes rutas de aprendizaje disponibles en [skills.github.com](https://skills.github.com):
 
@@ -332,9 +337,9 @@ También encontrarás cursos más avanzados.
 
 ## Tarea
 
-Completa [el curso de la Primera Semana en GitHub](https://skills.github.com/#first-week-on-github)
+Completa [el curso Primera semana en GitHub](https://skills.github.com/#first-week-on-github)
 
 ---
 
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
