@@ -212,7 +212,7 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Try refreshing your the dashboard page in the browser now. What happens? Do you see the new transaction?
+Try refreshing your dashboard page in the browser now. What happens? Do you see the new transaction?
 
 The state is persisted indefinitely thanks to the `localStorage`, but that also means it's never updated until you log out of the app and log in again!
 
