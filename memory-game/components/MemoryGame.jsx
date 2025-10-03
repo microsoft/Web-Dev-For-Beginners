@@ -2,6 +2,16 @@
 
 import React, { useEffect, useState } from "react";
 
+// Fisher-Yates shuffle for unbiased randomization
+function fisherYatesShuffle(array) {
+  const arr = array.slice();
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 const MemoryGame = () => {
   const [gridSize, setGridSize] = useState(2);
 
@@ -24,12 +34,12 @@ const MemoryGame = () => {
     const pairCount = Math.floor(totalCards / 2);
 
     const numbers = [...Array(pairCount).keys()].map((n) => n + 1);
-    const shuffledCards = [...numbers, ...numbers]
-      .sort(() => Math.random() - 0.5)
-      .map((number, index) => ({
-        id: index,
-        number,
-      }));
+    const cardNumbers = [...numbers, ...numbers];
+    const shuffledCardNumbers = fisherYatesShuffle(cardNumbers);
+    const shuffledCards = shuffledCardNumbers.map((number, index) => ({
+      id: index,
+      number,
+    }));
 
     setArray(shuffledCards);
     setFlipped([]);
@@ -92,7 +102,7 @@ const MemoryGame = () => {
       <h1 className="text-3xl font-bold mb-6 ">Memory Game</h1>
       {/* Grid Size */}
       <div className="mb-4">
-        <label htmlFor="gridSize">Grid Size:(max 10)</label>
+        <label htmlFor="gridSize">Grid Size: (max 10)</label>
         <input
           type="number"
           className="w-[50px] ml-3 rounded border-2 px-1.5 py-1"
