@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "361249da70432ddfd4741c917d1a6f50",
-  "translation_date": "2025-08-29T08:24:24+00:00",
+  "original_hash": "ea65b75e488aa33a3cc5cb1c6c3f047a",
+  "translation_date": "2025-10-03T14:00:59+00:00",
   "source_file": "1-getting-started-lessons/2-github-basics/README.md",
   "language_code": "da"
 }
@@ -19,22 +19,22 @@ Denne lektion dækker det grundlæggende i GitHub, en platform til at hoste og a
 
 ## Introduktion
 
-I denne lektion vil vi gennemgå:
+I denne lektion vil vi dække:
 
 - hvordan du sporer det arbejde, du laver på din maskine
-- hvordan du arbejder på projekter sammen med andre
+- hvordan du arbejder på projekter med andre
 - hvordan du bidrager til open source-software
 
 ### Forudsætninger
 
-Før du begynder, skal du tjekke, om Git er installeret. Skriv i terminalen:  
+Før du begynder, skal du tjekke, om Git er installeret. I terminalen skal du skrive:  
 `git --version`
 
-Hvis Git ikke er installeret, [download Git](https://git-scm.com/downloads). Opsæt derefter din lokale Git-profil i terminalen:
+Hvis Git ikke er installeret, [download Git](https://git-scm.com/downloads). Derefter skal du opsætte din lokale Git-profil i terminalen:
 * `git config --global user.name "dit-navn"`
 * `git config --global user.email "din-email"`
 
-For at tjekke, om Git allerede er konfigureret, kan du skrive:
+For at tjekke, om Git allerede er konfigureret, kan du skrive:  
 `git config --list`
 
 Du skal også bruge en GitHub-konto, en kodeeditor (som Visual Studio Code), og du skal åbne din terminal (eller: kommandoprompt).
@@ -45,13 +45,13 @@ Gå til [github.com](https://github.com/) og opret en konto, hvis du ikke allere
 
 ### Forberedelse
 
-Du skal bruge både en mappe med et kodeprojekt på din lokale maskine (laptop eller PC) og et offentligt repository på GitHub, som vil tjene som et eksempel på, hvordan man bidrager til andres projekter.
+Du skal bruge både en mappe med et kodeprojekt på din lokale maskine (laptop eller PC) og et offentligt repository på GitHub, som vil fungere som et eksempel på, hvordan man bidrager til andres projekter.
 
 ---
 
-## Kodehåndtering
+## Kodestyring
 
-Lad os sige, at du har en mappe lokalt med et kodeprojekt, og du vil begynde at spore din fremgang ved hjælp af git - versionskontrolsystemet. Nogle sammenligner brugen af git med at skrive et kærlighedsbrev til dit fremtidige jeg. Når du læser dine commit-beskeder dage, uger eller måneder senere, vil du kunne huske, hvorfor du tog en beslutning, eller "rulle tilbage" en ændring - det vil sige, når du skriver gode "commit-beskeder".
+Lad os sige, at du har en mappe lokalt med et kodeprojekt, og du vil begynde at spore din fremgang ved hjælp af git - versionskontrolsystemet. Nogle mennesker sammenligner brugen af git med at skrive et kærlighedsbrev til dit fremtidige jeg. Når du læser dine commit-beskeder dage, uger eller måneder senere, vil du kunne huske, hvorfor du tog en beslutning, eller "rulle tilbage" en ændring - det vil sige, når du skriver gode "commit-beskeder".
 
 ### Opgave: Opret et repository og commit kode  
 
@@ -82,7 +82,7 @@ Lad os sige, at du har en mappe lokalt med et kodeprojekt, og du vil begynde at 
    git status
    ```
 
-   Outputtet kan se sådan ud:
+   outputtet kan se sådan ud:
 
    ```output
    Changes not staged for commit:
@@ -93,7 +93,7 @@ Lad os sige, at du har en mappe lokalt med et kodeprojekt, og du vil begynde at 
         modified:   file2.txt
    ```
 
-   Typisk fortæller en `git status`-kommando dig ting som hvilke filer, der er klar til at blive _gemt_ i repoet, eller som har ændringer, du måske vil gemme.
+   Typisk fortæller en `git status`-kommando dig ting som hvilke filer der er klar til at blive _gemt_ i repoet, eller som har ændringer, du måske vil gemme.
 
 1. **Tilføj alle filer til sporing**  
    Dette kaldes også at stage filer/tilføje filer til staging-området.
@@ -102,7 +102,7 @@ Lad os sige, at du har en mappe lokalt med et kodeprojekt, og du vil begynde at 
    git add .
    ```
 
-   Argumentet `git add` plus `.` angiver, at alle dine filer og ændringer skal spores.
+   `git add` plus `.` argumentet angiver, at alle dine filer og ændringer skal spores.
 
 1. **Tilføj udvalgte filer til sporing**
 
@@ -128,33 +128,33 @@ Lad os sige, at du har en mappe lokalt med et kodeprojekt, og du vil begynde at 
 
    Denne kommando hjælper os med kun at fjerne en bestemt fil fra staging-området, som vi ikke ønsker at inkludere i den næste commit.
 
-1. **Gem dit arbejde**. På dette tidspunkt har du tilføjet filerne til et såkaldt _staging-område_. Et sted, hvor Git sporer dine filer. For at gøre ændringen permanent skal du _commit_ filerne. For at gøre dette opretter du en _commit_ med kommandoen `git commit`. En _commit_ repræsenterer et gemmepunkt i historien for dit repo. Skriv følgende for at oprette en _commit_:
+1. **Gem dit arbejde**. På dette tidspunkt har du tilføjet filerne til et såkaldt _staging-område_. Et sted, hvor Git sporer dine filer. For at gøre ændringen permanent skal du _committe_ filerne. For at gøre dette opretter du en _commit_ med kommandoen `git commit`. En _commit_ repræsenterer et gemmepunkt i historien for dit repo. Skriv følgende for at oprette en _commit_:
 
    ```bash
    git commit -m "first commit"
    ```
 
-   Dette committer alle dine filer og tilføjer beskeden "first commit". For fremtidige commit-beskeder vil du gerne være mere beskrivende for at formidle, hvilken type ændring du har lavet.
+   Dette commit'er alle dine filer og tilføjer beskeden "first commit". For fremtidige commit-beskeder vil du gerne være mere beskrivende i din beskrivelse for at formidle, hvilken type ændring du har lavet.
 
-1. **Forbind dit lokale Git-repo med GitHub**. Et Git-repo er godt på din maskine, men på et tidspunkt vil du gerne have en backup af dine filer et sted og også invitere andre til at arbejde med dig på dit repo. Et godt sted at gøre dette er GitHub. Husk, at vi allerede har oprettet et repo på GitHub, så det eneste, vi skal gøre, er at forbinde vores lokale Git-repo med GitHub. Kommandoen `git remote add` gør netop dette. Skriv følgende kommando:
+1. **Forbind dit lokale Git-repo med GitHub**. Et Git-repo er godt på din maskine, men på et tidspunkt vil du gerne have en backup af dine filer et sted og også invitere andre til at arbejde med dig på dit repo. Et godt sted at gøre dette er GitHub. Husk, vi har allerede oprettet et repo på GitHub, så det eneste, vi skal gøre, er at forbinde vores lokale Git-repo med GitHub. Kommandoen `git remote add` vil gøre netop dette. Skriv følgende kommando:
 
-   > Bemærk, før du skriver kommandoen, skal du gå til din GitHub-repo-side for at finde repository-URL'en. Du vil bruge den i nedenstående kommando. Erstat ```https://github.com/username/repository_name.git``` med din GitHub-URL.
+   > Bemærk, før du skriver kommandoen, gå til din GitHub repo-side for at finde repository-URL'en. Du vil bruge den i nedenstående kommando. Erstat ```https://github.com/username/repository_name.git``` med din GitHub URL.
 
    ```bash
    git remote add origin https://github.com/username/repository_name.git
    ```
 
-   Dette opretter en _remote_, eller forbindelse, kaldet "origin", der peger på det GitHub-repository, du oprettede tidligere.
+   Dette opretter en _remote_, eller forbindelse, kaldet "origin", der peger på det GitHub repository, du oprettede tidligere.
 
-1. **Send lokale filer til GitHub**. Indtil videre har du oprettet en _forbindelse_ mellem det lokale repo og GitHub-repoet. Lad os sende disse filer til GitHub med følgende kommando `git push`, som følger:
+1. **Send lokale filer til GitHub**. Indtil videre har du oprettet en _forbindelse_ mellem det lokale repo og GitHub repoet. Lad os sende disse filer til GitHub med følgende kommando `git push`, som så:
 
-   > Bemærk, dit branch-navn kan være forskelligt som standard fra ```main```.
+   > Bemærk, dit branch-navn kan være anderledes som standard end ```main```.
 
    ```bash
    git push -u origin main
    ```
 
-   Dette sender dine commits i din "main"-branch til GitHub.
+   Dette sender dine commits i din "main"-branch til GitHub. Ved at inkludere `-u` i kommandoen etableres en forbindelse mellem din lokale branch og den eksterne branch, så du fremover kan bruge git push eller git pull uden at specificere branch-navnet.
 
 2. **Tilføj flere ændringer**. Hvis du vil fortsætte med at lave ændringer og sende dem til GitHub, skal du blot bruge følgende tre kommandoer:
 
@@ -164,17 +164,17 @@ Lad os sige, at du har en mappe lokalt med et kodeprojekt, og du vil begynde at 
    git push
    ```
 
-   > Tip: Du vil måske også adoptere en `.gitignore`-fil for at forhindre filer, du ikke ønsker at spore, i at dukke op på GitHub - som den notesfil, du gemmer i samme mappe, men som ikke hører hjemme i et offentligt repository. Du kan finde skabeloner til `.gitignore`-filer på [.gitignore templates](https://github.com/github/gitignore).
+   > Tip, du vil måske også adoptere en `.gitignore`-fil for at forhindre filer, du ikke ønsker at spore, i at dukke op på GitHub - som den notesfil, du gemmer i samme mappe, men som ikke har nogen plads i et offentligt repository. Du kan finde skabeloner til `.gitignore`-filer på [.gitignore templates](https://github.com/github/gitignore).
 
 #### Commit-beskeder
 
 En god Git commit-emnelinje fuldender følgende sætning:  
 Hvis anvendt, vil denne commit <din emnelinje her>
 
-For emnet skal du bruge den bydeform, nutid: "ændrer" i stedet for "ændrede" eller "ændringer".  
-Som i emnet skal du også i brødteksten (valgfrit) bruge den bydeform, nutid. Brødteksten bør inkludere motivationen for ændringen og kontrastere dette med tidligere adfærd. Du forklarer `hvorfor`, ikke `hvordan`.
+For emnet skal du bruge den imperativ, nutid: "ændre" i stedet for "ændrede" eller "ændringer".  
+Som i emnet skal du også i kroppen (valgfri) bruge den imperativ, nutid. Kroppen bør inkludere motivationen for ændringen og kontrastere dette med tidligere adfærd. Du forklarer `hvorfor`, ikke `hvordan`.
 
-✅ Brug et par minutter på at surfe rundt på GitHub. Kan du finde en virkelig god commit-besked? Kan du finde en meget minimal én? Hvilken information synes du er den vigtigste og mest nyttige at formidle i en commit-besked?
+✅ Tag et par minutter til at surfe rundt på GitHub. Kan du finde en virkelig god commit-besked? Kan du finde en virkelig minimal en? Hvilke oplysninger synes du er de vigtigste og mest nyttige at formidle i en commit-besked?
 
 ### Opgave: Samarbejd
 
@@ -197,36 +197,36 @@ I dit repository skal du navigere til `Insights > Community` for at se, hvordan 
 
 Alle disse ressourcer vil gavne onboarding af nye teammedlemmer. Og det er typisk den slags ting, nye bidragydere kigger på, før de overhovedet ser på din kode, for at finde ud af, om dit projekt er det rette sted for dem at bruge deres tid.
 
-✅ README-filer, selvom de tager tid at forberede, bliver ofte forsømt af travle vedligeholdere. Kan du finde et eksempel på en særlig beskrivende én? Bemærk: Der findes nogle [værktøjer til at hjælpe med at lave gode READMEs](https://www.makeareadme.com/), som du måske vil prøve.
+✅ README-filer, selvom de tager tid at forberede, bliver ofte overset af travle vedligeholdere. Kan du finde et eksempel på en særlig beskrivende README? Bemærk: der findes nogle [værktøjer til at hjælpe med at lave gode READMEs](https://www.makeareadme.com/), som du måske vil prøve.
 
 ### Opgave: Flet noget kode
 
-Bidragsdokumenter hjælper folk med at bidrage til projektet. De forklarer, hvilke typer bidrag du leder efter, og hvordan processen fungerer. Bidragydere skal gennemgå en række trin for at kunne bidrage til dit repo på GitHub:
+Bidragsdokumenter hjælper folk med at bidrage til projektet. De forklarer, hvilke typer bidrag du leder efter, og hvordan processen fungerer. Bidragydere skal gennem en række trin for at kunne bidrage til dit repo på GitHub:
 
-1. **Fork dit repo**. Du vil sandsynligvis have, at folk _forker_ dit projekt. At forke betyder at oprette en kopi af dit repository på deres GitHub-profil.
-1. **Klon**. Derefter vil de klone projektet til deres lokale maskine.
+1. **Fork dit repo**. Du vil sandsynligvis have, at folk _forker_ dit projekt. Forking betyder at oprette en kopi af dit repository på deres GitHub-profil.
+1. **Clone**. Derfra vil de clone projektet til deres lokale maskine.
 1. **Opret en branch**. Du vil bede dem om at oprette en _branch_ til deres arbejde.
-1. **Fokuser deres ændring på ét område**. Bed bidragydere om at koncentrere deres bidrag om én ting ad gangen - på den måde er chancerne for, at du kan _flette_ deres arbejde, højere. Forestil dig, at de skriver en fejlrettelse, tilføjer en ny funktion og opdaterer flere tests - hvad nu hvis du kun vil eller kan implementere 2 ud af 3 eller 1 ud af 3 ændringer?
+1. **Fokuser deres ændring på ét område**. Bed bidragydere om at koncentrere deres bidrag om én ting ad gangen - på den måde er chancerne for, at du kan _flette_ deres arbejde, højere. Forestil dig, at de skriver en fejlrettelse, tilføjer en ny funktion og opdaterer flere tests - hvad hvis du kun vil eller kan implementere 2 ud af 3 eller 1 ud af 3 ændringer?
 
-✅ Forestil dig en situation, hvor branches er særligt kritiske for at skrive og levere god kode. Hvilke brugsscenarier kan du komme i tanke om?
+✅ Forestil dig en situation, hvor branches er særligt kritiske for at skrive og levere god kode. Hvilke anvendelsesscenarier kan du komme i tanke om?
 
 > Bemærk, vær den forandring, du ønsker at se i verden, og opret branches til dit eget arbejde også. Enhver commit, du laver, vil blive lavet på den branch, du i øjeblikket er "checket ud" til. Brug `git status` for at se, hvilken branch det er.
 
-Lad os gennemgå en bidragyder-arbejdsgang. Antag, at bidragyderen allerede har _forket_ og _klonet_ repoet, så de har et Git-repo klar til at blive arbejdet på, på deres lokale maskine:
+Lad os gennemgå en bidragsarbejdsgang. Antag, at bidragsyderen allerede har _forket_ og _clonet_ repoet, så de har et Git-repo klar til at blive arbejdet på, på deres lokale maskine:
 
-1. **Opret en branch**. Brug kommandoen `git branch` til at oprette en branch, der vil indeholde de ændringer, de ønsker at bidrage med:
+1. **Opret en branch**. Brug kommandoen `git branch` til at oprette en branch, der vil indeholde de ændringer, de har til hensigt at bidrage med:
 
    ```bash
    git branch [branch-name]
    ```
 
-1. **Skift til arbejdsbranch**. Skift til den specificerede branch og opdater arbejdsbiblioteket med `git switch`:
+1. **Skift til arbejdsbranch**. Skift til den specificerede branch og opdater arbejdsmappen med `git switch`:
 
    ```bash
    git switch [branch-name]
    ```
 
-1. **Arbejd**. På dette tidspunkt vil du tilføje dine ændringer. Glem ikke at fortælle Git om det med følgende kommandoer:
+1. **Arbejd på projektet**. På dette tidspunkt vil du tilføje dine ændringer. Glem ikke at fortælle Git om det med følgende kommandoer:
 
    ```bash
    git add .
@@ -235,7 +235,7 @@ Lad os gennemgå en bidragyder-arbejdsgang. Antag, at bidragyderen allerede har 
 
    Sørg for at give din commit et godt navn, for din egen skyld såvel som for vedligeholderen af det repo, du hjælper med.
 
-1. **Kombiner dit arbejde med `main`-branchen**. På et tidspunkt er du færdig med at arbejde, og du vil kombinere dit arbejde med det i `main`-branchen. `Main`-branchen kan have ændret sig i mellemtiden, så sørg for først at opdatere den til den nyeste version med følgende kommandoer:
+1. **Kombiner dit arbejde med `main`-branchen**. På et tidspunkt er du færdig med at arbejde, og du vil kombinere dit arbejde med det i `main`-branchen. `main`-branchen kan have ændret sig i mellemtiden, så sørg for først at opdatere den til det nyeste med følgende kommandoer:
 
    ```bash
    git switch main
@@ -249,38 +249,43 @@ Lad os gennemgå en bidragyder-arbejdsgang. Antag, at bidragyderen allerede har 
    git merge main
    ```
 
-   Dette vil bringe alle ændringer fra `main` ind i din branch, og forhåbentlig kan du bare fortsætte. Hvis ikke, vil VS Code fortælle dig, hvor Git er _forvirret_, og du ændrer blot de berørte filer for at angive, hvilket indhold der er mest korrekt.
+   Kommandoen `git merge main` vil bringe alle ændringer fra `main` ind i din branch. Forhåbentlig kan du bare fortsætte. Hvis ikke, vil VS Code fortælle dig, hvor Git er _forvirret_, og du skal blot ændre de berørte filer for at angive, hvilket indhold der er mest korrekt.
 
-1. **Send dit arbejde til GitHub**. At sende dit arbejde til GitHub betyder to ting. At pushe din branch til dit repo og derefter åbne en PR, Pull Request.
+   For at skifte til en anden branch skal du bruge den moderne `git switch`-kommando:
+   ```bash
+   git switch [branch_name]
+
+
+1. **Send dit arbejde til GitHub**. At sende dit arbejde til GitHub betyder to ting: at pushe din branch til dit repo og derefter åbne en PR, Pull Request.
 
    ```bash
    git push --set-upstream origin [branch-name]
    ```
 
-   Kommandoen ovenfor opretter branchen på dit forkede repo.
+   Den ovenstående kommando opretter branchen på dit forkede repo.
+1. **Åbn en PR**. Næste skridt er at åbne en PR. Det gør du ved at navigere til den forkede repo på GitHub. Du vil se en indikation på GitHub, hvor der spørges, om du vil oprette en ny PR. Klik på det, og du bliver ført til en grænseflade, hvor du kan ændre commit-beskedens titel og give en mere passende beskrivelse. Nu vil vedligeholderen af det repo, du har forket, se denne PR, og _krydser fingre_ de vil sætte pris på og _merge_ din PR. Du er nu en bidragyder, yay :)
 
-1. **Åbn en PR**. Dernæst vil du åbne en PR. Det gør du ved at navigere til det forkede repo på GitHub. Du vil se en indikation på GitHub, hvor det spørger, om du vil oprette en ny PR. Klik på det, og du bliver ført til en grænseflade, hvor du kan ændre commit-beskedens titel og give den en mere passende beskrivelse. Nu vil vedligeholderen af det repo, du forkede, se denne PR, og _fingrene krydsede_, de vil sætte pris på og _flette_ din PR. Du er nu en bidragyder, yay :)
-
-1. **Ryd op**. Det anses for god praksis at _rydde op_, efter du har fået succes med at flette en PR. Du vil rydde op i både din lokale branch og den branch, du pushede til GitHub. Først skal du slette den lokalt med følgende kommando:
+1. **Ryd op**. Det anses som god praksis at _rydde op_, efter du har fået en PR succesfuldt merged. Du vil gerne rydde op både i din lokale branch og den branch, du har skubbet til GitHub. Først skal vi slette den lokalt med følgende kommando:
 
    ```bash
    git branch -d [branch-name]
    ```
 
-   Sørg for at gå til GitHub-siden for det forkede repo og fjerne den remote branch, du lige har pushet til.
-`Pull request` virker som et fjollet udtryk, fordi du egentlig ønsker at skubbe dine ændringer til projektet. Men vedligeholderen (projektets ejer) eller kerneholdet skal overveje dine ændringer, før de bliver flettet med projektets "main"-gren, så du anmoder faktisk om en beslutning om ændringen fra en vedligeholder.
+   Sørg for at gå til GitHub-siden for det forkede repo og fjerne den fjernbranch, du lige har skubbet til.
 
-En pull request er stedet, hvor man sammenligner og diskuterer forskellene, der er introduceret på en gren, med anmeldelser, kommentarer, integrerede tests og mere. En god pull request følger nogenlunde de samme regler som en commit-besked. Du kan tilføje en reference til et issue i issue tracker, når dit arbejde for eksempel løser et problem. Dette gøres ved at bruge et `#` efterfulgt af nummeret på dit issue. For eksempel `#97`.
+`Pull request` virker som et fjollet udtryk, fordi du egentlig vil skubbe dine ændringer til projektet. Men vedligeholderen (projektets ejer) eller kerneholdet skal overveje dine ændringer, før de merges med projektets "main"-branch, så du anmoder faktisk om en beslutning om ændringer fra en vedligeholder.
 
-🤞Kryds fingre for, at alle checks går igennem, og projektets ejer(e) fletter dine ændringer ind i projektet🤞
+En pull request er stedet, hvor man kan sammenligne og diskutere forskellene, der er introduceret på en branch, med anmeldelser, kommentarer, integrerede tests og mere. En god pull request følger nogenlunde de samme regler som en commit-besked. Du kan tilføje en reference til et issue i issue tracker, når dit arbejde for eksempel løser et problem. Dette gøres ved at bruge et `#` efterfulgt af nummeret på dit issue. For eksempel `#97`.
 
-Opdater din nuværende lokale arbejdsgren med alle nye commits fra den tilsvarende fjern-gren på GitHub:
+🤞Krydser fingre for, at alle checks går igennem, og projektets ejer(e) merger dine ændringer ind i projektet🤞
+
+Opdater din nuværende lokale arbejdsbranch med alle nye commits fra den tilsvarende fjernbranch på GitHub:
 
 `git pull`
 
-## Sådan bidrager du til open source
+## Hvordan bidrager man til open source
 
-Lad os først finde et repository (eller **repo**) på GitHub, som interesserer dig, og som du gerne vil bidrage med en ændring til. Du vil gerne kopiere dets indhold til din maskine.
+Først skal vi finde et repository (eller **repo**) på GitHub, som interesserer dig, og som du gerne vil bidrage med en ændring til. Du vil gerne kopiere dets indhold til din maskine.
 
 ✅ En god måde at finde 'begynder-venlige' repos er at [søge efter tagget 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
@@ -300,9 +305,9 @@ Til sidst kan du downloade koden i en zippet mappe.
 
 ### Et par flere interessante ting om GitHub
 
-Du kan stjerne, overvåge og/eller "forke" ethvert offentligt repository på GitHub. Du kan finde dine stjernemarkerede repositories i drop-down-menuen øverst til højre. Det er som bogmærker, men for kode.
+Du kan stjerne, følge og/eller "forke" ethvert offentligt repository på GitHub. Du kan finde dine stjernemarkerede repositories i drop-down-menuen øverst til højre. Det er som at bogmærke, men for kode.
 
-Projekter har en issue tracker, som oftest findes på GitHub under fanen "Issues", medmindre andet er angivet, hvor folk diskuterer problemer relateret til projektet. Og fanen Pull Requests er, hvor folk diskuterer og gennemgår ændringer, der er undervejs.
+Projekter har en issue tracker, som oftest på GitHub under fanen "Issues", medmindre andet er angivet, hvor folk diskuterer problemer relateret til projektet. Og fanen Pull Requests er, hvor folk diskuterer og gennemgår ændringer, der er undervejs.
 
 Projekter kan også have diskussioner i fora, mailinglister eller chatkanaler som Slack, Discord eller IRC.
 
@@ -312,7 +317,7 @@ Projekter kan også have diskussioner i fora, mailinglister eller chatkanaler so
 
 ## 🚀 Udfordring
 
-Samarbejd med en ven om hinandens kode. Opret et projekt sammen, fork kode, opret grene og flet ændringer.
+Samarbejd med en ven om at arbejde på hinandens kode. Opret et projekt sammen, fork kode, opret branches og merge ændringer.
 
 ## Quiz efter forelæsning
 [Quiz efter forelæsning](https://ff-quizzes.netlify.app/web/en/)
@@ -323,7 +328,7 @@ Læs mere om [at bidrage til open source software](https://opensource.guide/how-
 
 [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/).
 
-Øv dig, øv dig, øv dig. GitHub har fantastiske læringsforløb tilgængelige via [skills.github.com](https://skills.github.com):
+Øv, øv, øv. GitHub har fantastiske læringsforløb tilgængelige via [skills.github.com](https://skills.github.com):
 
 - [Første uge på GitHub](https://skills.github.com/#first-week-on-github)
 
@@ -336,4 +341,4 @@ Gennemfør [kurset Første uge på GitHub](https://skills.github.com/#first-week
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at opnå nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
