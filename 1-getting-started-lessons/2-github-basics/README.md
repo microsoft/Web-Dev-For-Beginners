@@ -243,17 +243,9 @@ Let's go through a contributor workflow. Assume the contributor has already _for
    git merge main
    ```
 
-   The user can also follow this command to switch to new branch:
+   To switch to a different branch, use the modern `git switch` command:
    ```bash
-   git checkout [branch_name]
-   ```
-
-   Alternatively, you can create and switch to a branch in one step:
-   ```bash
-   git checkout -b [branch_name]
-   ```
-   The command will create a new branch and immediately switch to the new branch.
-
+   git switch [branch_name]
    This will bring in all changes from `main` into your branch and hopefully you can just continue. If not, VS Code will tell you where Git is _confused_ and you just alter the affected files to say which content is the most accurate.
 
 1. **Send your work to GitHub**. Sending your work to GitHub means two things. Pushing your branch to your repo and then open up a PR, Pull Request.
