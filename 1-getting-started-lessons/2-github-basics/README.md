@@ -248,7 +248,7 @@ Let's go through a contributor workflow. Assume the contributor has already _for
    git checkout [branch_name]
    ```
 
-   Alternatively, you can create and switch to branch in one step:
+   Alternatively, you can create and switch to a branch in one step:
    ```bash
    git checkout -b [branch_name]
    ```
