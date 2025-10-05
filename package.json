@@ -1,7 +1,7 @@
 {
 	"name": "web-dev-for-beginners",
 	"version": "1.0.0",
-	"description": "Web Dev for Beginners - A Curriculum",
+	"description": "Web Dev for Beginners - A Curriculum by Microsoft (Updated by Contributer)",
 	"main": "index.js",
 	"scripts": {
 		"convert": "node_modules/.bin/docsify-to-pdf"
@@ -14,7 +14,8 @@
 		"web",
 		"dev",
 		"development",
-		"curriculum"
+		"curriculum",
+		"opensource"
 	],
 	"author": "Microsoft Cloud Advocates",
 	"license": "MIT",
