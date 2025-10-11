@@ -10,5 +10,5 @@ llm = ChatOpenAI(
 )
 
 # works
-response  = llm.invoke("What is the capital of France")
+response = llm.invoke("What is the capital of France")
 print(response.content)
