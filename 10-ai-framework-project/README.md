@@ -190,7 +190,7 @@ functions = {
 }
 ```
 
-What we're doing here is to create a description of a tool called `add`. By inheriting from `TypedDict` and adding members like `a` and `b` of type `Annotated` this can be converted to a schema that the LLM can understand. Ther creation of functions is a dictionary that ensures that we know what to do if a specific tool is identified.
+What we're doing here is to create a description of a tool called `add`. By inheriting from `TypedDict` and adding members like `a` and `b` of type `Annotated` this can be converted to a schema that the LLM can understand. The creation of functions is a dictionary that ensures that we know what to do if a specific tool is identified.
 
 Let's see how we call the LLM with this tool next:
 
