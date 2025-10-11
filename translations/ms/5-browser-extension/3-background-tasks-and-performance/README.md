@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
-  "translation_date": "2025-08-29T09:26:09+00:00",
+  "original_hash": "b91cbf14240ee59411b96448b994ace1",
+  "translation_date": "2025-10-03T12:29:22+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "ms"
 }
 -->
-# Projek Sambungan Pelayar Bahagian 3: Belajar tentang Tugas Latar Belakang dan Prestasi
+# Projek Sambungan Penyemak Imbas Bahagian 3: Belajar tentang Tugas Latar Belakang dan Prestasi
 
 ## Kuiz Pra-Kuliah
 
@@ -15,17 +15,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Pengenalan
 
-Dalam dua pelajaran terakhir modul ini, anda telah belajar cara membina borang dan kawasan paparan untuk data yang diambil dari API. Ini adalah cara yang sangat standard untuk mencipta kehadiran web di web. Anda juga telah belajar cara mengendalikan pengambilan data secara asinkron. Sambungan pelayar anda hampir siap sepenuhnya.
+Dalam dua pelajaran terakhir modul ini, anda telah belajar cara membina borang dan kawasan paparan untuk data yang diambil dari API. Ini adalah cara yang sangat standard untuk mencipta kehadiran web di internet. Anda juga telah belajar cara mengendalikan pengambilan data secara asinkron. Sambungan penyemak imbas anda hampir siap sepenuhnya.
 
-Masih ada tugas latar belakang yang perlu diuruskan, termasuk menyegarkan warna ikon sambungan, jadi ini adalah masa yang sesuai untuk membincangkan bagaimana pelayar menguruskan jenis tugas ini. Mari kita fikirkan tentang tugas pelayar ini dalam konteks prestasi aset web anda semasa anda membinanya.
+Masih ada tugas latar belakang yang perlu diuruskan, termasuk menyegarkan warna ikon sambungan, jadi ini adalah masa yang sesuai untuk membincangkan bagaimana penyemak imbas menguruskan jenis tugas ini. Mari kita fikirkan tentang tugas penyemak imbas ini dalam konteks prestasi aset web anda semasa anda membangunkannya.
 
 ## Asas Prestasi Web
 
 > "Prestasi laman web berkisar pada dua perkara: seberapa cepat halaman dimuat, dan seberapa cepat kod di dalamnya berjalan." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
-Topik tentang cara membuat laman web anda sangat pantas pada semua jenis peranti, untuk semua jenis pengguna, dalam semua jenis situasi, adalah sangat luas. Berikut adalah beberapa perkara yang perlu diingat semasa anda membina projek web standard atau sambungan pelayar.
+Topik tentang cara membuat laman web anda sangat pantas pada semua jenis peranti, untuk semua jenis pengguna, dalam semua jenis situasi, adalah sangat luas. Berikut adalah beberapa perkara yang perlu diingat semasa anda membina projek web standard atau sambungan penyemak imbas.
 
-Perkara pertama yang perlu anda lakukan untuk memastikan laman web anda berjalan dengan cekap adalah mengumpulkan data tentang prestasinya. Tempat pertama untuk melakukannya adalah dalam alat pembangun pelayar web anda. Dalam Edge, anda boleh memilih butang "Tetapan dan banyak lagi" (ikon tiga titik di bahagian atas kanan pelayar), kemudian navigasi ke Alat Lain > Alat Pembangun dan buka tab Prestasi. Anda juga boleh menggunakan pintasan papan kekunci `Ctrl` + `Shift` + `I` pada Windows atau `Option` + `Command` + `I` pada Mac untuk membuka alat pembangun.
+Perkara pertama yang perlu anda lakukan untuk memastikan laman web anda berjalan dengan cekap ialah mengumpulkan data tentang prestasinya. Tempat pertama untuk melakukannya ialah dalam alat pembangun penyemak imbas web anda. Dalam Edge, anda boleh memilih butang "Tetapan dan banyak lagi" (ikon tiga titik di bahagian atas kanan penyemak imbas), kemudian pergi ke Alat Lain > Alat Pembangun dan buka tab Prestasi. Anda juga boleh menggunakan pintasan papan kekunci `Ctrl` + `Shift` + `I` pada Windows atau `Option` + `Command` + `I` pada Mac untuk membuka alat pembangun.
 
 Tab Prestasi mengandungi alat Profiling. Buka laman web (cuba, sebagai contoh, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) dan klik butang 'Record', kemudian segarkan laman web tersebut. Hentikan rakaman pada bila-bila masa, dan anda akan dapat melihat rutin yang dihasilkan untuk 'script', 'render', dan 'paint' laman web:
 
@@ -33,9 +33,9 @@ Tab Prestasi mengandungi alat Profiling. Buka laman web (cuba, sebagai contoh, [
 
 ✅ Lawati [Dokumentasi Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) tentang panel Prestasi dalam Edge
 
-> Tip: untuk mendapatkan bacaan yang tepat tentang masa permulaan laman web anda, kosongkan cache pelayar anda
+> Tip: untuk mendapatkan bacaan yang tepat tentang masa permulaan laman web anda, kosongkan cache penyemak imbas anda
 
-Pilih elemen garis masa profil untuk mengezum masuk pada acara yang berlaku semasa halaman anda dimuat.
+Pilih elemen garis masa profil untuk memperbesar acara yang berlaku semasa halaman anda dimuat.
 
 Dapatkan gambaran prestasi halaman anda dengan memilih bahagian garis masa profil dan melihat panel ringkasan:
 
@@ -45,29 +45,29 @@ Periksa panel Log Acara untuk melihat jika ada acara yang mengambil masa lebih d
 
 ![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.ms.png)
 
-✅ Kenali profiler anda! Buka alat pembangun di laman ini dan lihat jika ada halangan. Apakah aset yang paling lambat dimuat? Yang paling pantas?
+✅ Kenali profiler anda! Buka alat pembangun di laman ini dan lihat jika ada halangan. Apakah aset yang paling lambat dimuat? Yang paling cepat?
 
 ## Pemeriksaan Profiling
 
 Secara umum, terdapat beberapa "kawasan masalah" yang setiap pembangun web harus perhatikan semasa membina laman web untuk mengelakkan kejutan yang tidak menyenangkan apabila tiba masa untuk melancarkan ke produksi.
 
-**Saiz aset**: Web telah menjadi lebih 'berat', dan dengan itu lebih lambat, dalam beberapa tahun kebelakangan ini. Sebahagian daripada berat ini berkaitan dengan penggunaan imej.
+**Saiz aset**: Web telah menjadi 'lebih berat', dan dengan itu lebih lambat, dalam beberapa tahun kebelakangan ini. Sebahagian daripada berat ini berkaitan dengan penggunaan imej.
 
 ✅ Lihat melalui [Internet Archive](https://httparchive.org/reports/page-weight) untuk pandangan sejarah tentang berat halaman dan banyak lagi.
 
 Amalan yang baik adalah memastikan imej anda dioptimumkan dan dihantar pada saiz dan resolusi yang sesuai untuk pengguna anda.
 
-**Traversals DOM**: Pelayar perlu membina Model Objek Dokumen berdasarkan kod yang anda tulis, jadi demi prestasi halaman yang baik, pastikan tag anda minimum, hanya menggunakan dan menggayakan apa yang diperlukan oleh halaman. Untuk perkara ini, CSS berlebihan yang dikaitkan dengan halaman boleh dioptimumkan; gaya yang hanya perlu digunakan pada satu halaman tidak perlu dimasukkan dalam helaian gaya utama, sebagai contoh.
+**Traversals DOM**: Penyemak imbas perlu membina Model Objek Dokumen berdasarkan kod yang anda tulis, jadi demi prestasi halaman yang baik, pastikan tag anda minimum, hanya menggunakan dan menggayakan apa yang diperlukan oleh halaman. Dalam hal ini, CSS berlebihan yang dikaitkan dengan halaman boleh dioptimumkan; gaya yang hanya perlu digunakan pada satu halaman tidak perlu dimasukkan dalam helaian gaya utama, sebagai contoh.
 
-**JavaScript**: Setiap pembangun JavaScript harus memerhatikan skrip 'render-blocking' yang mesti dimuat sebelum DOM yang lain dapat dilalui dan dilukis ke pelayar. Pertimbangkan untuk menggunakan `defer` dengan skrip inline anda (seperti yang dilakukan dalam modul Terrarium).
+**JavaScript**: Setiap pembangun JavaScript harus memerhatikan skrip 'render-blocking' yang mesti dimuat sebelum DOM yang lain dapat dilalui dan dilukis ke penyemak imbas. Pertimbangkan untuk menggunakan `defer` dengan skrip inline anda (seperti yang dilakukan dalam modul Terrarium).
 
 ✅ Cuba beberapa laman web di laman [Ujian Kelajuan Laman Web](https://www.webpagetest.org/) untuk mengetahui lebih lanjut tentang pemeriksaan biasa yang dilakukan untuk menentukan prestasi laman web.
 
-Sekarang anda mempunyai idea tentang bagaimana pelayar memaparkan aset yang anda hantar kepadanya, mari kita lihat beberapa perkara terakhir yang perlu anda lakukan untuk melengkapkan sambungan anda:
+Sekarang anda mempunyai idea tentang bagaimana penyemak imbas melukis aset yang anda hantar kepadanya, mari kita lihat beberapa perkara terakhir yang perlu anda lakukan untuk melengkapkan sambungan anda:
 
-### Cipta fungsi untuk mengira warna
+### Buat fungsi untuk mengira warna
 
-Bekerja dalam `/src/index.js`, tambahkan fungsi bernama `calculateColor()` selepas siri pembolehubah `const` yang anda tetapkan untuk mendapatkan akses kepada DOM:
+Bekerja dalam `/src/index.js`, tambahkan fungsi yang dipanggil `calculateColor()` selepas siri pembolehubah `const` yang anda tetapkan untuk mendapatkan akses kepada DOM:
 
 ```JavaScript
 function calculateColor(value) {
@@ -90,13 +90,13 @@ function calculateColor(value) {
 
 Apa yang berlaku di sini? Anda menghantar nilai (intensiti karbon) dari panggilan API yang anda selesaikan dalam pelajaran terakhir, dan kemudian anda mengira sejauh mana nilainya dengan indeks yang disajikan dalam array warna. Kemudian anda menghantar nilai warna terdekat itu ke runtime chrome.
 
-Runtime chrome mempunyai [API](https://developer.chrome.com/extensions/runtime) yang mengendalikan pelbagai jenis tugas latar belakang, dan sambungan anda memanfaatkan itu:
+Chrome.runtime mempunyai [API](https://developer.chrome.com/extensions/runtime) yang mengendalikan pelbagai jenis tugas latar belakang, dan sambungan anda memanfaatkan itu:
 
-> "Gunakan API chrome.runtime untuk mendapatkan halaman latar belakang, mengembalikan butiran tentang manifest, dan mendengar serta bertindak balas terhadap acara dalam kitaran hayat aplikasi atau sambungan. Anda juga boleh menggunakan API ini untuk menukar laluan relatif URL kepada URL yang sepenuhnya layak."
+> "Gunakan API chrome.runtime untuk mendapatkan halaman latar belakang, mengembalikan butiran tentang manifest, dan mendengar serta bertindak balas terhadap acara dalam kitaran hayat aplikasi atau sambungan. Anda juga boleh menggunakan API ini untuk menukar laluan relatif URL kepada URL yang layak sepenuhnya."
 
-✅ Jika anda sedang membangunkan sambungan pelayar ini untuk Edge, mungkin mengejutkan anda bahawa anda menggunakan API chrome. Versi pelayar Edge yang lebih baru berjalan pada enjin pelayar Chromium, jadi anda boleh memanfaatkan alat ini.
+✅ Jika anda sedang membangunkan sambungan penyemak imbas ini untuk Edge, mungkin mengejutkan anda bahawa anda menggunakan API chrome. Versi penyemak imbas Edge yang lebih baru berjalan pada enjin penyemak imbas Chromium, jadi anda boleh memanfaatkan alat ini.
 
-> Nota, jika anda ingin memprofil sambungan pelayar, lancarkan alat pembangun dari dalam sambungan itu sendiri, kerana ia adalah instance pelayar yang berasingan.
+> Nota, jika anda ingin memprofilkan sambungan penyemak imbas, lancarkan alat pembangun dari dalam sambungan itu sendiri, kerana ia adalah instance penyemak imbas yang berasingan.
 
 ### Tetapkan warna ikon lalai
 
@@ -110,10 +110,9 @@ chrome.runtime.sendMessage({
 		},
 });
 ```
-
 ### Panggil fungsi, laksanakan panggilan
 
-Seterusnya, panggil fungsi yang baru anda cipta dengan menambahkannya kepada janji yang dikembalikan oleh API C02Signal:
+Seterusnya, panggil fungsi yang baru anda buat dengan menambahkannya kepada janji yang dikembalikan oleh API C02Signal:
 
 ```JavaScript
 //let CO2...
@@ -125,12 +124,12 @@ Dan akhirnya, dalam `/dist/background.js`, tambahkan pendengar untuk panggilan t
 ```JavaScript
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	if (msg.action === 'updateIcon') {
-		chrome.browserAction.setIcon({ imageData: drawIcon(msg.value) });
+		chrome.action.setIcon({ imageData: drawIcon(msg.value) });
 	}
 });
 //borrowed from energy lollipop extension, nice feature!
 function drawIcon(value) {
-	let canvas = document.createElement('canvas');
+	let canvas = new OffscreenCanvas(200, 200);
 	let context = canvas.getContext('2d');
 
 	context.beginPath();
@@ -146,9 +145,9 @@ Dalam kod ini, anda menambah pendengar untuk sebarang mesej yang datang kepada p
 
 ✅ Anda akan belajar lebih lanjut tentang API Canvas dalam [pelajaran Permainan Angkasa](../../6-space-game/2-drawing-to-canvas/README.md).
 
-Sekarang, bina semula sambungan anda (`npm run build`), segarkan dan lancarkan sambungan anda, dan perhatikan perubahan warna. Adakah ini masa yang sesuai untuk menjalankan tugas atau mencuci pinggan? Sekarang anda tahu!
+Sekarang, bina semula sambungan anda (`npm run build`), segarkan dan lancarkan sambungan anda, dan lihat warna berubah. Adakah ini masa yang sesuai untuk menjalankan tugas atau mencuci pinggan? Sekarang anda tahu!
 
-Tahniah, anda telah membina sambungan pelayar yang berguna dan belajar lebih lanjut tentang bagaimana pelayar berfungsi dan cara memprofil prestasinya.
+Tahniah, anda telah membina sambungan penyemak imbas yang berguna dan belajar lebih lanjut tentang bagaimana penyemak imbas berfungsi dan cara memprofilkan prestasinya.
 
 ---
 
@@ -160,11 +159,11 @@ Selidiki beberapa laman web sumber terbuka yang telah wujud sejak lama dahulu, d
 
 [Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/28)
 
-## Kajian & Pembelajaran Kendiri
+## Kajian Semula & Kajian Kendiri
 
-Pertimbangkan untuk mendaftar [buletin prestasi](https://perf.email/)
+Pertimbangkan untuk mendaftar ke [buletin prestasi](https://perf.email/)
 
-Selidiki beberapa cara pelayar mengukur prestasi web dengan melihat melalui tab prestasi dalam alat web mereka. Adakah anda menemui sebarang perbezaan besar?
+Selidiki beberapa cara penyemak imbas mengukur prestasi web dengan melihat melalui tab prestasi dalam alat web mereka. Adakah anda menemui sebarang perbezaan utama?
 
 ## Tugasan
 
@@ -173,4 +172,4 @@ Selidiki beberapa cara pelayar mengukur prestasi web dengan melihat melalui tab 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

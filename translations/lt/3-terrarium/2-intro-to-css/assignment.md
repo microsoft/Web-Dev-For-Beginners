@@ -1,25 +1,41 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d4d75af51aaccfe9af778f792c62919",
-  "translation_date": "2025-08-28T11:51:58+00:00",
+  "original_hash": "a212cc22a18eddf9046b7a16dfbafd8b",
+  "translation_date": "2025-10-03T11:11:24+00:00",
   "source_file": "3-terrarium/2-intro-to-css/assignment.md",
   "language_code": "lt"
 }
 -->
-# CSS Refaktorizavimas
+# CSS Refaktorizavimo Užduotis
+
+## Tikslas
+
+Refaktorizuoti terariumo projektą, naudojant **Flexbox** arba **CSS Grid** išdėstymui. Atnaujinkite HTML ir CSS taip, kad būtų pasiektas modernus, prisitaikantis dizainas. Jums nereikia įgyvendinti vilkimo funkcionalumo – sutelkite dėmesį tik į išdėstymą ir stilių.
 
 ## Instrukcijos
 
-Pakeiskite terariumo stilių naudodami Flexbox arba CSS Grid ir padarykite ekrano nuotraukas, kad parodytumėte, jog išbandėte jį keliuose naršyklėse. Gali prireikti pakeisti žymėjimą, todėl sukurkite naują programos versiją su meno kūriniu, pritaikytu jūsų refaktorizavimui. Nesijaudinkite dėl elementų vilkimo funkcionalumo; šiuo metu refaktorizuokite tik HTML ir CSS.
+1. **Sukurkite naują** terariumo programos versiją. Atnaujinkite žymėjimą ir CSS, kad naudotumėte Flexbox arba CSS Grid išdėstymui.
+2. **Užtikrinkite, kad menas ir elementai** būtų tokie patys kaip pradiniame variante.
+3. **Išbandykite savo dizainą** bent dviejose skirtingose naršyklėse (pvz., Chrome, Firefox, Edge).
+4. **Padarykite ekrano nuotraukas** savo terariumo kiekvienoje naršyklėje, kad parodytumėte suderinamumą tarp naršyklių.
+5. **Pateikite** atnaujintą kodą ir ekrano nuotraukas.
 
 ## Vertinimo kriterijai
 
-| Kriterijai | Puikiai atlikta                                                | Pakankamai gerai              | Reikia patobulinimų                  |
-| ---------- | -------------------------------------------------------------- | ----------------------------- | ------------------------------------ |
-|            | Pateiktas visiškai naujai perstilizuotas terariumas naudojant Flexbox arba CSS Grid | Perstilizuota keletas elementų | Nepavyko perstilizuoti terariumo    |
+| Kriterijai | Puikiai                                                                  | Pakankamai                           | Reikia patobulinimų                   |
+|------------|--------------------------------------------------------------------------|--------------------------------------|---------------------------------------|
+| Išdėstymas | Visiškai refaktorizuota naudojant Flexbox arba CSS Grid; vizualiai patrauklu ir prisitaikantis | Kai kurie elementai refaktorizuoti; dalinis Flexbox arba Grid naudojimas | Mažai arba visai nenaudojamas Flexbox ar Grid; išdėstymas nepakitęs |
+| Suderinamumas tarp naršyklių | Pateiktos ekrano nuotraukos iš kelių naršyklių; išvaizda nuosekli | Ekrano nuotraukos iš vienos naršyklės; nedideli neatitikimai | Nėra ekrano nuotraukų arba dideli neatitikimai |
+| Kodo kokybė | Švarus, gerai organizuotas HTML/CSS; aiškūs komentarai                  | Kai kuri organizacija; mažai komentarų | Neorganizuotas kodas; trūksta komentarų |
+
+## Patarimai
+
+- Peržiūrėkite [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) ir [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) vadovus.
+- Naudokite naršyklės kūrimo įrankius, kad patikrintumėte prisitaikomumą.
+- Komentuokite savo kodą, kad jis būtų aiškesnis.
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+**Atsakomybės atsisakymas**:  
+Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.

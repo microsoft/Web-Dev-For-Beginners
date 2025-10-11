@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "04683f4cfa46004179b0404b89a3065c",
-  "translation_date": "2025-08-27T23:12:43+00:00",
+  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
+  "translation_date": "2025-10-03T13:28:41+00:00",
   "source_file": "1-getting-started-lessons/README.md",
   "language_code": "id"
 }
@@ -13,13 +13,13 @@ Di bagian kurikulum ini, Anda akan diperkenalkan dengan konsep-konsep non-proyek
 
 ### Topik
 
-1. [Pengenalan Bahasa Pemrograman dan Alat yang Digunakan](1-intro-to-programming-languages/README.md)
+1. [Pengenalan Bahasa Pemrograman dan Alat-alat yang Digunakan](1-intro-to-programming-languages/README.md)
 2. [Pengenalan GitHub](2-github-basics/README.md)
 3. [Dasar-dasar Aksesibilitas](3-accessibility/README.md)
 
 ### Kredit
 
-Pengenalan Bahasa Pemrograman dan Alat yang Digunakan ditulis dengan ♥️ oleh [Jasmine Greenaway](https://twitter.com/paladique)
+Pengenalan Bahasa Pemrograman dan Alat-alat yang Digunakan ditulis dengan ♥️ oleh [Jasmine Greenaway](https://twitter.com/paladique)
 
 Pengenalan GitHub ditulis dengan ♥️ oleh [Floor Drees](https://twitter.com/floordrees)
 
@@ -28,4 +28,4 @@ Dasar-dasar Aksesibilitas ditulis dengan ♥️ oleh [Christopher Harrison](http
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

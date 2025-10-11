@@ -1,25 +1,46 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-27T21:59:30+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T10:16:18+00:00",
   "source_file": "for-teachers.md",
   "language_code": "id"
 }
 -->
-## Untuk Pendidik
+### Untuk Pendidik
 
-Apakah Anda ingin menggunakan kurikulum ini di kelas Anda? Silakan saja!
+Anda dipersilakan menggunakan kurikulum ini di kelas Anda. Kurikulum ini bekerja dengan lancar menggunakan GitHub Classroom dan platform LMS terkemuka, serta dapat digunakan sebagai repositori mandiri bersama siswa Anda.
 
-Faktanya, Anda dapat menggunakannya langsung di GitHub dengan menggunakan GitHub Classroom.
+### Penggunaan dengan GitHub Classroom
 
-Untuk melakukannya, fork repo ini. Anda akan perlu membuat repo untuk setiap pelajaran, jadi Anda perlu mengekstrak setiap folder ke dalam repo terpisah. Dengan cara ini, [GitHub Classroom](https://classroom.github.com/classrooms) dapat mengambil setiap pelajaran secara terpisah.
+Untuk mengelola pelajaran dan tugas per kelompok, buat satu repositori per pelajaran sehingga GitHub Classroom dapat menghubungkan setiap tugas secara independen.
 
-[Instruksi lengkap ini](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) akan memberikan gambaran tentang cara mengatur kelas Anda.
+- Fork repositori ini ke organisasi Anda.
+- Buat repositori terpisah untuk setiap pelajaran dengan mengekstrak folder pelajaran ke repositori masing-masing.
+  - Opsi A: Buat repositori kosong (satu per pelajaran) dan salin isi folder pelajaran ke masing-masing repositori.
+  - Opsi B: Gunakan pendekatan yang mempertahankan riwayat Git (misalnya, memisahkan folder ke repositori baru) jika Anda memerlukan asal-usul.
+- Di GitHub Classroom, buat tugas per pelajaran dan arahkan ke repositori pelajaran yang sesuai.
+- Pengaturan yang direkomendasikan:
+  - Visibilitas repositori: privat untuk pekerjaan siswa.
+  - Gunakan kode awal dari cabang default repositori pelajaran.
+  - Tambahkan template issue dan pull request untuk kuis dan pengumpulan tugas.
+  - Opsional: konfigurasikan autograding dan tes jika pelajaran Anda menyertakannya.
+- Konvensi yang membantu:
+  - Nama repositori seperti lesson-01-intro, lesson-02-html, dll.
+  - Label: quiz, assignment, needs-review, late, resubmission.
+  - Tag/rilis per kelompok (misalnya, v2025-term1).
 
-## Menggunakannya di Moodle, Canvas, atau Blackboard
+Tip: Hindari menyimpan repositori di dalam folder yang disinkronkan (misalnya, OneDrive/Google Drive) untuk mencegah konflik Git di Windows.
 
-Kurikulum ini bekerja dengan baik di Sistem Manajemen Pembelajaran tersebut! Gunakan [file unggahan Moodle](../../../../../../../teaching-files/webdev-moodle.mbz) untuk konten lengkap, atau coba [file Common Cartridge](../../../../../../../teaching-files/webdev-common-cartridge.imscc) yang berisi sebagian konten. Moodle Cloud tidak mendukung ekspor Common Cartridge secara penuh, jadi lebih baik menggunakan file unduhan Moodle yang dapat diunggah ke Canvas. Beri tahu kami bagaimana kami dapat meningkatkan pengalaman ini.
+### Penggunaan dengan Moodle, Canvas, atau Blackboard
+
+Kurikulum ini mencakup paket yang dapat diimpor untuk alur kerja LMS umum.
+
+- Moodle: Gunakan file unggahan Moodle [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) untuk memuat seluruh kursus.
+- Common Cartridge: Gunakan file Common Cartridge [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) untuk kompatibilitas LMS yang lebih luas.
+- Catatan:
+  - Moodle Cloud memiliki dukungan Common Cartridge yang terbatas. Lebih baik gunakan file Moodle di atas, yang juga dapat diunggah ke Canvas.
+  - Setelah diimpor, tinjau modul, tanggal jatuh tempo, dan pengaturan kuis agar sesuai dengan jadwal semester Anda.
 
 ![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.id.png)
 > Kurikulum di kelas Moodle
@@ -27,21 +48,31 @@ Kurikulum ini bekerja dengan baik di Sistem Manajemen Pembelajaran tersebut! Gun
 ![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.id.png)
 > Kurikulum di Canvas
 
-## Menggunakan repo seperti apa adanya
+### Penggunaan repositori secara langsung (tanpa Classroom)
 
-Jika Anda ingin menggunakan repo ini seperti yang ada saat ini, tanpa menggunakan GitHub Classroom, itu juga bisa dilakukan. Anda perlu berkomunikasi dengan siswa Anda tentang pelajaran mana yang akan dipelajari bersama.
+Jika Anda lebih memilih untuk tidak menggunakan GitHub Classroom, Anda dapat menjalankan kursus langsung dari repositori ini.
 
-Dalam format online (Zoom, Teams, atau lainnya), Anda dapat membentuk breakout room untuk kuis, dan membimbing siswa agar siap belajar. Kemudian undang siswa ke kuis dan minta mereka mengirimkan jawaban mereka sebagai 'issues' pada waktu tertentu. Anda juga dapat melakukan hal yang sama dengan tugas jika Anda ingin siswa bekerja secara kolaboratif secara terbuka.
+- Format sinkron/daring (Zoom/Teams):
+  - Jalankan pemanasan singkat yang dipandu mentor; gunakan breakout room untuk kuis.
+  - Umumkan jendela waktu untuk kuis; siswa mengirimkan jawaban sebagai GitHub Issues.
+  - Untuk tugas kolaboratif, siswa bekerja di repositori pelajaran publik dan membuka pull request.
+- Format privat/asinkron:
+  - Siswa fork setiap pelajaran ke repositori **privat** mereka sendiri dan menambahkan Anda sebagai kolaborator.
+  - Mereka mengirimkan melalui Issues (kuis) dan Pull Requests (tugas) di repositori kelas Anda atau fork privat mereka.
 
-Jika Anda lebih memilih format yang lebih privat, minta siswa Anda untuk fork kurikulum ini, pelajaran demi pelajaran, ke repo GitHub mereka sendiri sebagai repo privat, dan berikan Anda akses. Kemudian mereka dapat menyelesaikan kuis dan tugas secara privat dan mengirimkannya kepada Anda melalui issues di repo kelas Anda.
+### Praktik terbaik
 
-Ada banyak cara untuk membuat ini berhasil dalam format kelas online. Beri tahu kami apa yang paling cocok untuk Anda!
+- Berikan pelajaran orientasi tentang dasar-dasar Git/GitHub, Issues, dan PRs.
+- Gunakan daftar periksa di Issues untuk kuis/tugas yang memiliki beberapa langkah.
+- Tambahkan CONTRIBUTING.md dan CODE_OF_CONDUCT.md untuk menetapkan norma kelas.
+- Tambahkan catatan aksesibilitas (teks alt, caption) dan tawarkan PDF yang dapat dicetak.
+- Versikan konten Anda per semester dan bekukan repositori pelajaran setelah dipublikasikan.
 
-## Berikan pendapat Anda!
+### Umpan balik dan dukungan
 
-Kami ingin membuat kurikulum ini bekerja untuk Anda dan siswa Anda. Hubungi kami di [Teacher corner](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) dan buka [**issue baru**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) untuk permintaan, bug, dan masukan apa pun.
+Kami ingin kurikulum ini bekerja untuk Anda dan siswa Anda. Silakan buka Issue baru di repositori ini untuk melaporkan bug, permintaan, atau perbaikan, atau mulai diskusi di Teacher Corner.
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

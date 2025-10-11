@@ -1,25 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3869244ceda606c4969d8cdd82679867",
-  "translation_date": "2025-08-27T22:51:56+00:00",
+  "original_hash": "de0ec12c337394806425c7fd2f003b62",
+  "translation_date": "2025-10-03T10:23:43+00:00",
   "source_file": "2-js-basics/1-data-types/assignment.md",
   "language_code": "tl"
 }
 -->
-# Pagsasanay sa Mga Uri ng Datos
+# Pagsasanay sa Mga Uri ng Data
 
 ## Mga Panuto
 
-Isipin na ikaw ay gumagawa ng isang shopping cart. Sumulat ng dokumentasyon tungkol sa mga uri ng datos na kakailanganin mo upang makumpleto ang iyong karanasan sa pamimili. Paano mo napili ang mga ito?
+Isipin na gumagawa ka ng isang shopping cart. Sumulat ng dokumentasyon tungkol sa mga uri ng data na kakailanganin mo upang makumpleto ang iyong karanasan sa pamimili. Para sa bawat uri ng data, ipaliwanag kung paano at bakit mo ito gagamitin, at magbigay ng halimbawa. Ang anim na uri ng data sa JavaScript ay: String, Number, Boolean, Null, Undefined, at Object.
 
 ## Rubric
 
-Kriteriya | Napakahusay | Katamtaman | Kailangan ng Pagpapabuti
+Pamantayan | Natatangi | Katanggap-tanggap | Kailangan ng Pagpapabuti
 --- | --- | --- | --- |
-||Ang anim na uri ng datos ay nakalista at detalyado, naipapaliwanag ang kanilang gamit|Apat na uri ng datos ang naipaliwanag|Dalawang uri ng datos ang naipaliwanag|
+Mga Uri ng Data | Ang lahat ng anim na uri ng data ay nakalista, detalyado, at may dokumentasyon na may mga halimbawa | Apat na uri ng data ang naipaliwanag na may kaunting paliwanag | Dalawang uri ng data ang naipaliwanag na may minimal na paliwanag |
 
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

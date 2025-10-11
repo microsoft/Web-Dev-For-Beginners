@@ -1,155 +1,193 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-28T17:58:51+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T09:03:08+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "ja"
 }
 -->
-# コードエディタの使用
+***
 
-このレッスンでは、[VSCode.dev](https://vscode.dev) というウェブベースのコードエディタの基本を学びます。これにより、コンピュータに何もインストールせずにコードを変更したり、プロジェクトに貢献したりすることができます。
+# コードエディターの使い方：[VSCode.dev](https://vscode.dev)をマスターしよう
+
+**ようこそ！**  
+このレッスンでは、強力なウェブベースのコードエディターである[VSCode.dev](https://vscode.dev)の基本から応用までを学びます。コードの編集、プロジェクト管理、変更の追跡、拡張機能のインストール、そしてプロのようにコラボレーションする方法を、ブラウザだけでインストール不要で習得できます。
+
+***
 
 ## 学習目標
 
-このレッスンでは以下を学びます：
+このレッスンを終える頃には、以下ができるようになります：
 
-- コードプロジェクトでコードエディタを使用する方法
-- バージョン管理で変更を追跡する方法
-- 開発のためにエディタをカスタマイズする方法
+- どんなプロジェクトでも効率的にコードエディターを使いこなす
+- 組み込みのバージョン管理機能で作業をスムーズに追跡する
+- エディターのカスタマイズや拡張機能で開発ワークフローを向上させる
 
-### 前提条件
+***
 
-始める前に、[GitHub](https://github.com) のアカウントを作成する必要があります。[GitHub](https://github.com/) にアクセスし、まだアカウントを持っていない場合は作成してください。
+## 前提条件
 
-### はじめに
+始めるには、**無料の[GitHub](https://github.com)アカウントに登録**してください。これにより、コードリポジトリを管理し、世界中の人々とコラボレーションできます。まだアカウントを持っていない場合は、[こちらで作成](https://github.com/)してください。
 
-コードエディタは、プログラムを書くための基本的なツールであり、既存のコーディングプロジェクトに協力するためにも重要です。エディタの基本とその機能の使い方を理解すれば、コードを書く際にそれらを活用できるようになります。
+***
 
-## VSCode.dev の使い方
+## なぜウェブベースのコードエディターを使うのか？
 
-[VSCode.dev](https://vscode.dev) はウェブ上で動作するコードエディタです。ウェブサイトを開くのと同じように、何もインストールせずに使用できます。エディタを使い始めるには、次のリンクを開いてください：[https://vscode.dev](https://vscode.dev)。[GitHub](https://github.com/) にサインインしていない場合は、指示に従ってサインインするか、新しいアカウントを作成してサインインしてください。
+**コードエディター**であるVSCode.devは、コードの作成、編集、管理を行うための指令センターです。直感的なインターフェース、多くの機能、そしてブラウザからすぐにアクセスできるため、以下が可能です：
 
-ロードが完了すると、次のような画面が表示されます：
+- どんなデバイスでもプロジェクトを編集
+- インストールの手間を回避
+- 即座にコラボレーションや貢献
 
-![Default VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.ja.png)
+VSCode.devに慣れれば、どこからでも、いつでもコーディングタスクに取り組む準備が整います。
 
-画面は左から右に向かって、主に以下の3つのセクションに分かれています：
+***
 
-1. _アクティビティバー_：虫眼鏡アイコン（🔎）、歯車アイコン（⚙️）などのアイコンが含まれています。
-2. 展開されたアクティビティバー（デフォルトでは _エクスプローラー_）で、_サイドバー_ と呼ばれます。
-3. 右側のコードエリア。
+## VSCode.devの使い方
 
-各アイコンをクリックすると、異なるメニューが表示されます。すべて確認したら、_エクスプローラー_ をクリックして元の状態に戻してください。
+**[VSCode.dev](https://vscode.dev)**にアクセスしてください。インストールもダウンロードも不要です。GitHubでサインインすると、設定、拡張機能、リポジトリの同期を含む完全なアクセスが可能になります。プロンプトが表示されたら、GitHubアカウントを接続してください。
 
-コードを作成したり既存のコードを変更したりする際は、右側の最も大きなエリアを使用します。このエリアを使って既存のコードを確認することもできます。次にそれを行います。
+読み込みが完了すると、ワークスペースは以下のように表示されます：
 
-## GitHub リポジトリを開く
+![Default VSCode.dev](../../../../8-code-editor/images/default-vscode-dev)
 
-最初に必要なのは、GitHub リポジトリを開くことです。リポジトリを開く方法はいくつかあります。このセクションでは、リポジトリを開いて変更作業を始めるための2つの方法を紹介します。
+ワークスペースは左から右に以下の3つの主要セクションで構成されています：
+- **アクティビティバー:** 🔎（検索）、⚙️（設定）、ファイル、ソース管理などのアイコン
+- **サイドバー:** アクティビティバーのアイコンに応じてコンテキストが変化（デフォルトは*Explorer*でファイルを表示）
+- **エディター/コードエリア:** 右側の最大セクション—ここでコードを編集・表示します
 
-### 1. エディタを使う
+アイコンをクリックして機能を探索してください。ただし、進行を維持するために_Explorer_に戻ることを忘れないでください。
 
-エディタ自体を使ってリモートリポジトリを開きます。[VSCode.dev](https://vscode.dev) にアクセスすると、_"Open Remote Repository"_ ボタンが表示されます：
+***
 
-![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.ja.png)
+## GitHubリポジトリを開く
 
-また、コマンドパレットを使用することもできます。コマンドパレットは、コマンドやアクションの一部の単語を入力して、実行するコマンドを見つけるための入力ボックスです。左上のメニューから _View_ を選択し、_Command Palette_ を選択します。または、次のキーボードショートカットを使用します：Ctrl-Shift-P（MacOS の場合は Command-Shift-P）。
+### 方法1: エディターから
 
-![Palette Menu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.ja.png)
+1. [VSCode.dev](https://vscode.dev)にアクセスし、**「Open Remote Repository」**をクリックします。
 
-メニューが開いたら、_open remote repository_ と入力し、最初のオプションを選択します。あなたが参加している、または最近開いたリポジトリが複数表示されます。完全な GitHub URL を使用して選択することもできます。次の URL をボックスに貼り付けてください：
+   ![Open remote repository](../../../../8-code-editor/images/open-remote-repository)
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+   _コマンドパレット_（Ctrl-Shift-P、またはMacではCmd-Shift-P）を使用することもできます。
 
-✅ 成功すると、このリポジトリのすべてのファイルがテキストエディタに読み込まれます。
+   ![Palette Menu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.ja.png)
 
-### 2. URL を使用する
+   - オプションを選択します。
+   - GitHubリポジトリのURL（例：`https://github.com/microsoft/Web-Dev-For-Beginners`）を貼り付けてEnterを押します。
 
-URL を直接使用してリポジトリを読み込むこともできます。たとえば、現在のリポジトリの完全な URL は [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners) ですが、GitHub ドメインを `VSCode.dev/github` に置き換えることで、リポジトリを直接読み込むことができます。結果として得られる URL は次のようになります：[https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners)。
+成功すると、プロジェクト全体が読み込まれ、編集可能になります！
 
-## ファイルを編集する
+***
 
-リポジトリをブラウザまたは vscode.dev で開いたら、次のステップはプロジェクトの更新や変更を行うことです。
+### 方法2: URLを直接使用
 
-### 1. 新しいファイルを作成する
+GitHubリポジトリのURLを変換して、VSCode.devで直接開くことができます。`github.com`を`vscode.dev/github`に置き換えるだけです。  
+例：
 
-既存のフォルダ内にファイルを作成するか、ルートディレクトリ/フォルダに作成することができます。新しいファイルを作成するには、保存したい場所/ディレクトリを開き、アクティビティバー（左側）の _'New file ...'_ アイコンを選択し、名前を付けて Enter を押します。
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-![Create a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.ja.png)
+この機能により、どんなプロジェクトでも迅速にアクセスできます。
 
-### 2. リポジトリ内のファイルを編集して保存する
+***
 
-vscode.dev を使用すると、ローカルにソフトウェアをロードすることなく、プロジェクトを迅速に更新するのに便利です。コードを更新するには、アクティビティバーにある 'Explorer' アイコンをクリックして、リポジトリ内のファイルとフォルダを表示します。ファイルを選択してコードエリアで開き、変更を加えて保存します。
+## プロジェクト内のファイルを編集する
+
+リポジトリを開いたら、以下ができます：
+
+### 1. **新しいファイルを作成**
+- *Explorer*サイドバーで目的のフォルダを選択するか、ルートを使用します。
+- _「New file ...」_アイコンをクリックします。
+- ファイル名を入力して**Enter**を押すと、ファイルが即座に表示されます。
+
+![Create a new file](../../../../8-code-editor/images/create-new-file)
+
+### 2. **ファイルを編集して保存**
+- *Explorer*でファイルをクリックしてコードエリアに開きます。
+- 必要に応じて変更を加えます。
+- VSCode.devは変更を自動保存しますが、手動で保存する場合はCtrl+Sを押してください。
 
 ![Edit a file](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.ja.png)
 
-プロジェクトの更新が完了したら、リポジトリに加えた新しい変更を含む _`source control`_ アイコンを選択します。
+### 3. **バージョン管理で変更を追跡してコミット**
+VSCode.devには統合された**Git**バージョン管理機能があります！
 
-プロジェクトに加えた変更を確認するには、展開されたアクティビティバー内の `Changes` フォルダ内のファイルを選択します。これにより、変更内容を視覚的に確認できる 'Working Tree' が開きます。赤はプロジェクトからの削除を示し、緑は追加を示します。
+- _「Source Control」_アイコンをクリックして、行った変更を確認します。
+- `Changes`フォルダ内のファイルは、追加（緑）や削除（赤）を表示します。  
+  ![View changes](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.ja.png)
 
-![View changes](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.ja.png)
+  - ファイルの横にある`+`をクリックして、コミットの準備をします。
+  - 不要な変更は元に戻すアイコンをクリックして**破棄**します。
+  - 明確なコミットメッセージを入力し、チェックマークをクリックしてコミットとプッシュを行います。
 
-変更に満足したら、`Changes` フォルダにカーソルを合わせて `+` ボタンをクリックして変更をステージングします。ステージングとは、変更を GitHub にコミットする準備をすることを意味します。
+GitHubのリポジトリに戻るには、左上のハンバーガーメニューを選択してください。
 
-変更に満足できない場合や破棄したい場合は、`Changes` フォルダにカーソルを合わせて `undo` アイコンを選択します。
+![Stage & commit changes](../../../../8-code-editor/images/edit-vscode.dev)
 
-その後、`commit message`（プロジェクトに加えた変更の説明）を入力し、`check icon` をクリックして変更をコミットしてプッシュします。
+***
 
-作業が完了したら、左上の `ハンバーガーメニューアイコン` を選択して github.com 上のリポジトリに戻ります。
+## 拡張機能で機能を強化
 
-![Stage & commit changes](../../../../8-code-editor/images/edit-vscode.dev.gif)
+拡張機能を使えば、言語、テーマ、デバッガー、生産性ツールをVSCode.devに追加でき、コーディングがより簡単で楽しくなります。
 
-## 拡張機能の使用
+### 拡張機能の閲覧と管理
 
-VSCode に拡張機能をインストールすると、エディタに新しい機能を追加したり、開発環境をカスタマイズしたりして、開発ワークフローを向上させることができます。これらの拡張機能は、複数のプログラミング言語をサポートするのにも役立ち、一般的な拡張機能や言語ベースの拡張機能があります。
+- アクティビティバーの**拡張機能アイコン**をクリックします。
+- _「Search Extensions in Marketplace」_ボックスで拡張機能を検索します。
 
-利用可能なすべての拡張機能のリストを閲覧するには、アクティビティバーの _`Extensions icon`_ をクリックし、_`Search Extensions in Marketplace`_ とラベル付けされたテキストフィールドに拡張機能の名前を入力します。拡張機能のリストには、**拡張機能名、発行者名、1文の説明、ダウンロード数**、および **星評価** が表示されます。
+  ![Extension details](../../../../8-code-editor/images/extension-details)
 
-![Extension details](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.ja.png)
+  - **Installed:** 追加済みの拡張機能
+  - **Popular:** 業界で人気のもの
+  - **Recommended:** ワークフローに合わせたおすすめ
 
-また、_`Installed folder`_ に展開して以前にインストールしたすべての拡張機能を表示したり、_`Popular folder`_ にある多くの開発者が使用している人気の拡張機能を確認したり、同じワークスペースのユーザーや最近開いたファイルに基づいて推奨される拡張機能を _`recommended folder`_ で確認したりできます。
+  ![View extensions](
 
-![View extensions](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.ja.png)
+  
 
-### 1. 拡張機能をインストールする
+***
 
-拡張機能をインストールするには、検索フィールドに拡張機能の名前を入力し、展開されたアクティビティバーに表示されたらクリックして、コードエリアで拡張機能の追加情報を表示します。
+### 1. **拡張機能をインストール**
 
-展開されたアクティビティバーの _青いインストールボタン_ をクリックするか、拡張機能を選択してコードエリアに追加情報を読み込んだ後に表示されるインストールボタンを使用してインストールします。
+- 検索ボックスに拡張機能名を入力し、クリックして詳細をエディターで確認します。
+- サイドバーまたはコードエリアの**青いインストールボタン**をクリックします。
 
-![Install extensions](../../../../8-code-editor/images/install-extension.gif)
+  ![Install extensions](../../../../8-code-editor/images/install-extension)
 
-### 2. 拡張機能をカスタマイズする
+### 2. **拡張機能をカスタマイズ**
 
-拡張機能をインストールした後、その動作を変更し、好みに応じてカスタマイズする必要がある場合があります。これを行うには、拡張機能アイコンを選択し、_Installed folder_ に表示される拡張機能をクリックして _**Gear icon**_ を選択し、_Extensions Setting_ に移動します。
+- インストール済みの拡張機能を見つけます。
+- **ギアアイコン**をクリック → _「Extension Settings」_を選択して動作を調整します。
 
-![Modify extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.ja.png)
+  ![Modify extension settings](../../../../8-code-editor/images/extension-settings)
 
-### 3. 拡張機能を管理する
+### 3. **拡張機能を管理**
+以下が可能です：
 
-拡張機能をインストールして使用した後、vscode.dev はさまざまなニーズに基づいて拡張機能を管理するオプションを提供します。たとえば、以下のような選択が可能です：
+- **無効化:** 拡張機能を一時的にオフにしてインストール状態を維持
+- **アンインストール:** 不要になった場合は完全に削除
 
-- **無効化する:**  _(一時的に拡張機能を無効化し、完全にアンインストールする必要がない場合に使用します)_
+  拡張機能を見つけ、ギアアイコンをクリックして「Disable」または「Uninstall」を選択するか、コードエリアの青いボタンを使用します。
 
-    展開されたアクティビティバーでインストール済みの拡張機能を選択 > ギアアイコンをクリック > 'Disable' または 'Disable (Workspace)' を選択 **または** コードエリアで拡張機能を開き、青い Disable ボタンをクリックします。
-
-- **アンインストールする:** 展開されたアクティビティバーでインストール済みの拡張機能を選択 > ギアアイコンをクリック > 'Uninstall' を選択 **または** コードエリアで拡張機能を開き、青い Uninstall ボタンをクリックします。
-
----
+***
 
 ## 課題
 
-[VSCode.dev を使用して履歴書ウェブサイトを作成する](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+スキルを試してみましょう：[VSCode.devを使って履歴書ウェブサイトを作成する](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## 復習と自己学習
+***
 
-[VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) とその他の機能についてさらに学びましょう。
+## さらなる探求と自己学習
+
+- [公式VSCode Web Docs](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza)でさらに深く学びましょう。
+- 高度なワークスペース機能、キーボードショートカット、設定を探索してください。
+
+***
+
+**これで、どこからでも、どんなデバイスでも、VSCode.devを使ってコードを書き、作成し、コラボレーションする準備が整いました！**
 
 ---
 
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源としてお考えください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は一切の責任を負いません。
+この文書は、AI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源とみなしてください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解について、当方は責任を負いません。

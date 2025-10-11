@@ -1,25 +1,41 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d4d75af51aaccfe9af778f792c62919",
-  "translation_date": "2025-08-28T04:17:41+00:00",
+  "original_hash": "a212cc22a18eddf9046b7a16dfbafd8b",
+  "translation_date": "2025-10-03T10:34:26+00:00",
   "source_file": "3-terrarium/2-intro-to-css/assignment.md",
   "language_code": "hu"
 }
 -->
-# CSS Átalakítás
+# CSS Refaktorálási Feladat
+
+## Célkitűzés
+
+Refaktoráld a terrárium projektet úgy, hogy **Flexbox** vagy **CSS Grid** segítségével valósítsd meg a layoutot. Frissítsd az HTML-t és a CSS-t, hogy modern, reszponzív dizájnt érj el. Nem szükséges megvalósítani a húzható elemeket—csak a layoutra és a stílusra koncentrálj.
 
 ## Útmutató
 
-Stílusozd újra a terráriumot Flexbox vagy CSS Grid használatával, és készíts képernyőképeket, hogy bemutasd, több böngészőben is tesztelted. Lehet, hogy módosítanod kell a jelölést, ezért hozz létre az alkalmazás egy új verzióját, amelyben a művészi elemek már a helyükön vannak az átalakításhoz. Ne aggódj az elemek húzhatóvá tételével kapcsolatban; egyelőre csak az HTML-t és a CSS-t alakítsd át.
+1. **Hozz létre egy új verziót** a terrárium alkalmazásból. Frissítsd a markupot és a CSS-t, hogy Flexbox vagy CSS Grid alapú legyen a layout.
+2. **Biztosítsd, hogy a művészeti elemek és az összetevők** ugyanúgy jelenjenek meg, mint az eredeti verzióban.
+3. **Teszteld a dizájnt** legalább két különböző böngészőben (pl. Chrome, Firefox, Edge).
+4. **Készíts képernyőképeket** a terráriumról minden böngészőben, hogy bemutasd a kompatibilitást.
+5. **Nyújtsd be** a frissített kódot és a képernyőképeket.
 
-## Értékelési szempontok
+## Értékelési Szempontok
 
-| Kritérium | Kiváló                                                          | Megfelelő                    | Fejlesztésre szorul                  |
-| --------- | ---------------------------------------------------------------- | ---------------------------- | ------------------------------------- |
-|           | Teljesen újra stílusozott terrárium Flexbox vagy CSS Grid használatával | Néhány elem újra stílusozása | A terrárium stílusának teljes hiánya |
+| Kritérium   | Kiemelkedő                                                              | Megfelelő                             | Fejlesztésre Szoruló                   |
+|-------------|------------------------------------------------------------------------|---------------------------------------|----------------------------------------|
+| Layout      | Teljesen refaktorált Flexbox vagy CSS Grid használatával; esztétikus és reszponzív | Néhány elem refaktorálva; részleges Flexbox vagy Grid használat | Kevés vagy semmilyen Flexbox vagy Grid használat; változatlan layout |
+| Böngészőközi kompatibilitás | Képernyőképek több böngészőről; következetes megjelenés | Képernyőképek egy böngészőről; kisebb eltérések | Nincsenek képernyőképek vagy jelentős eltérések |
+| Kódminőség  | Tiszta, jól szervezett HTML/CSS; egyértelmű kommentek                  | Néhány szervezettség; kevés komment   | Szétszórt kód; hiányzó kommentek       |
+
+## Tippek
+
+- Nézd át a [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) és a [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) útmutatókat.
+- Használd a böngésző fejlesztői eszközeit a reszponzivitás teszteléséhez.
+- Kommenteld a kódodat az érthetőség érdekében.
 
 ---
 
 **Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális, emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+Ezt a dokumentumot az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével fordították le. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

@@ -1,158 +1,175 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ba61d96a11309a2a6ea507496dcf7e5",
-  "translation_date": "2025-08-29T10:35:35+00:00",
+  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
+  "translation_date": "2025-10-03T10:32:51+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "hu"
 }
 -->
-# Kódszerkesztő használata
+***
 
-Ez a lecke bemutatja a [VSCode.dev](https://vscode.dev) webalapú kódszerkesztő alapjait, hogy módosíthasd a kódodat és hozzájárulhass egy projekthez anélkül, hogy bármit telepítenél a számítógépedre.
+# Kódszerkesztő használata: [VSCode.dev](https://vscode.dev) elsajátítása
+
+**Üdvözlünk!**  
+Ez a lecke az alapoktól a haladó szintig vezet be a [VSCode.dev](https://vscode.dev) használatába—a hatékony, webalapú kódszerkesztőbe. Megtanulod magabiztosan szerkeszteni a kódot, kezelni a projekteket, nyomon követni a változásokat, telepíteni bővítményeket, és profi módon együttműködni—mindezt a böngészőből, telepítés nélkül.
+
+***
 
 ## Tanulási célok
 
-Ebben a leckében megtanulod:
+A lecke végére képes leszel:
 
-- Hogyan használj kódszerkesztőt egy kódprojektben
-- Hogyan kövesd nyomon a változtatásokat verziókezeléssel
-- Hogyan testreszabhatod a szerkesztőt a fejlesztéshez
+- Hatékonyan használni egy kódszerkesztőt bármilyen projekten, bárhol
+- Zökkenőmentesen nyomon követni a munkádat beépített verziókezeléssel
+- Személyre szabni és javítani a fejlesztési munkafolyamatot szerkesztő testreszabásokkal és bővítményekkel
 
-### Előfeltételek
+***
 
-Mielőtt elkezdenéd, szükséged lesz egy [GitHub](https://github.com) fiókra. Látogass el a [GitHub](https://github.com/) oldalra, és hozz létre egy fiókot, ha még nincs.
+## Előfeltételek
 
-### Bevezetés
+A kezdéshez **regisztrálj egy ingyenes [GitHub](https://github.com) fiókot**, amely lehetővé teszi a kódrepozitóriumok kezelését és a globális együttműködést. Ha még nincs fiókod, [hozz létre egyet itt](https://github.com/).
 
-A kódszerkesztő alapvető eszköz a programok írásához és meglévő kódprojektekben való együttműködéshez. Ha megérted egy szerkesztő alapjait és annak funkcióit, akkor ezeket a tudásokat alkalmazhatod a kódírás során.
+***
+
+## Miért használjunk webalapú kódszerkesztőt?
+
+Egy **kódszerkesztő**, mint a VSCode.dev, a parancsnoki központod a kód írásához, szerkesztéséhez és kezeléséhez. Intuitív felületével, rengeteg funkciójával és azonnali böngészőn keresztüli hozzáféréssel lehetővé teszi:
+
+- Projektek szerkesztését bármilyen eszközön
+- Telepítési problémák elkerülését
+- Azonnali együttműködést és hozzájárulást
+
+Ha már magabiztosan használod a VSCode.dev-et, készen állsz arra, hogy bárhonnan, bármikor megoldj kódolási feladatokat.
+
+***
 
 ## Első lépések a VSCode.dev használatával
 
-A [VSCode.dev](https://vscode.dev) egy webalapú kódszerkesztő. Nem szükséges semmit telepítened a használatához, ugyanúgy megnyithatod, mint bármely más weboldalt. A szerkesztő elindításához nyisd meg a következő linket: [https://vscode.dev](https://vscode.dev). Ha nem vagy bejelentkezve a [GitHub](https://github.com/) fiókodba, kövesd az utasításokat a bejelentkezéshez vagy egy új fiók létrehozásához.
+Lépj be a **[VSCode.dev](https://vscode.dev)** oldalra—nincs telepítés, nincs letöltés. A GitHub-fiókkal való bejelentkezés teljes hozzáférést biztosít, beleértve a beállítások, bővítmények és repozitóriumok szinkronizálását. Ha szükséges, csatlakoztasd a GitHub-fiókodat.
 
-Amikor betöltődik, valami ilyesmit kell látnod:
+Betöltés után a munkaterületed így fog kinézni:
 
-![Alapértelmezett VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.hu.png)
+![Alapértelmezett VSCode.dev](../images/default-vscode-dev három fő szekcióval balról jobbra:
+- **Tevékenységsáv:** Ikonok, mint 🔎 (Keresés), ⚙️ (Beállítások), fájlok, verziókezelés stb.
+- **Oldalsáv:** A tevékenységsáv ikonja alapján változik (alapértelmezés szerint *Felfedező*, amely a fájlokat mutatja).
+- **Szerkesztő/kódterület:** A legnagyobb szekció jobbra—itt szerkesztheted és nézheted meg a kódot.
 
-Három fő szekció van, balról jobbra haladva:
+Kattints az ikonokra a funkciók felfedezéséhez, de térj vissza a _Felfedező_-höz, hogy megtartsd a helyed.
 
-1. Az _aktivitási sáv_, amely néhány ikont tartalmaz, például a nagyítót 🔎, a fogaskereket ⚙️ és néhány mást.
-2. Az aktivitási sáv kibővített része, amely alapértelmezetten az _Explorer_ (felfedező), más néven _oldalsáv_.
-3. És végül a kódterület a jobb oldalon.
+***
 
-Kattints az egyes ikonokra, hogy különböző menüket jeleníts meg. Ha végeztél, kattints az _Explorer_-re, hogy visszatérj az alapértelmezett nézethez.
+## GitHub repozitórium megnyitása
 
-Amikor elkezdesz kódot írni vagy meglévő kódot módosítani, az a jobb oldali legnagyobb területen fog történni. Ezt a területet használod majd a meglévő kód megtekintésére is, amit a következő lépésben fogsz megtenni.
+### 1. Módszer: A szerkesztőből
 
-## GitHub-tárház megnyitása
+1. Lépj be a [VSCode.dev](https://vscode.dev) oldalra. Kattints az **"Távoli repozitórium megnyitása"** gombra.
 
-Az első lépés egy GitHub-tárház megnyitása. Többféleképpen is megnyithatsz egy tárházat. Ebben a szekcióban két különböző módot láthatsz, hogy elkezdhesd a munkát.
+   ![Távoli repozitórium megnyitása](../../../../8-code-editor/images/open-remote-repository használja a _Parancspalettát_ (Ctrl-Shift-P, vagy Mac-en Cmd-Shift-P).
 
-### 1. A szerkesztővel
+   ![Paletta menü](../images/palette-menu.png távoli repozitórium megnyitása.”
+   - Válaszd ki az opciót.
+   - Illeszd be a GitHub repozitórium URL-jét (pl. `https://github.com/microsoft/Web-Dev-For-Beginners`) és nyomd meg az Entert.
 
-Használd magát a szerkesztőt egy távoli tárház megnyitásához. Ha ellátogatsz a [VSCode.dev](https://vscode.dev) oldalra, látni fogsz egy _"Open Remote Repository"_ gombot:
+Ha sikeres, az egész projekt betöltődik és készen áll a szerkesztésre!
 
-![Távoli tárház megnyitása](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.hu.png)
+***
 
-Használhatod a parancspalettát is. A parancspaletta egy beviteli mező, ahol bármilyen parancs vagy művelet nevét beírhatod, hogy megtaláld a megfelelő parancsot. Használd a bal felső menüt, válaszd a _View_ menüpontot, majd a _Command Palette_ opciót, vagy használd a következő billentyűkombinációt: Ctrl-Shift-P (MacOS-en Command-Shift-P).
+### 2. Módszer: Azonnal URL-en keresztül
 
-![Paletta menü](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.hu.png)
+Bármely GitHub repozitórium URL-jét átalakíthatod, hogy közvetlenül megnyíljon a VSCode.dev-ben, ha a `github.com`-ot `vscode.dev/github`-ra cseréled.  
+Példa:
 
-Amikor a menü megnyílik, írd be, hogy _open remote repository_, majd válaszd az első opciót. Megjelennek azok a tárházak, amelyeknek tagja vagy, vagy amelyeket nemrég megnyitottál. Használhatsz egy teljes GitHub URL-t is a kiválasztáshoz. Használd a következő URL-t, és illeszd be a mezőbe:
+- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
+- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
 
-```
-https://github.com/microsoft/Web-Dev-For-Beginners
-```
+Ez a funkció szupergyors hozzáférést biztosít bármely projekthez.
 
-✅ Ha sikeres volt, látni fogod a tárház összes fájlját a szövegszerkesztőben.
+***
 
-### 2. Az URL használatával
+## Fájlok szerkesztése a projektben
 
-Egy URL-t közvetlenül is használhatsz egy tárház betöltéséhez. Például a jelenlegi tárház teljes URL-je [https://github.com/microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners), de a GitHub domain helyett használhatod a `VSCode.dev/github` címet, és közvetlenül betöltheted a tárházat. Az eredményül kapott URL a következő lenne: [https://vscode.dev/github/microsoft/Web-Dev-For-Beginners](https://vscode.dev/github/microsoft/Web-Dev-For-Beginners).
+Miután megnyitottad a repozitóriumot, a következőket teheted:
 
-## Fájlok szerkesztése
+### 1. **Új fájl létrehozása**
+- A *Felfedező* oldalsávban navigálj a kívánt mappához, vagy használd a gyökérkönyvtárat.
+- Kattints az _‘Új fájl ...’_ ikonra.
+- Nevezd el a fájlt, nyomd meg az **Entert**, és a fájl azonnal megjelenik.
 
-Miután megnyitottad a tárházat a böngészőben vagy a vscode.dev-en, a következő lépés a projekt frissítése vagy módosítása.
+![Új fájl létrehozása](../images/create-new-file 2. **Fájlok szerkesztése és mentése**
 
-### 1. Új fájl létrehozása
+- Kattints egy fájlra a *Felfedező*-ben, hogy megnyisd a kódterületen.
+- Végezd el a szükséges módosításokat.
+- A VSCode.dev automatikusan menti a változtatásokat, de manuálisan is menthetsz Ctrl+S billentyűkombinációval.
 
-Új fájlt létrehozhatsz egy meglévő mappában, vagy a gyökérkönyvtárban. Egy új fájl létrehozásához nyisd meg azt a helyet/mappát, ahová a fájlt menteni szeretnéd, válaszd a _'New file ...'_ ikont az aktivitási sávon _(bal oldalon)_, adj neki egy nevet, majd nyomj Entert.
+![Fájl szerkesztése](../images/edit-a-file.png. **Változások nyomon követése és elkötelezése verziókezeléssel**
 
-![Új fájl létrehozása](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.hu.png)
+A VSCode.dev integrált **Git** verziókezeléssel rendelkezik!
 
-### 2. Fájl szerkesztése és mentése a tárházban
+- Kattints a _'Verziókezelés'_ ikonra, hogy megtekintsd az összes módosítást.
+- A `Változások` mappában a fájlok zölddel (hozzáadások) és pirossal (törlések) jelennek meg.  
+  ![Változások megtekintése](../images/working-tree.png változásokat a fájlok melletti `+` gombra kattintva készítsd elő az elkötelezéshez.
+- **Elvetheted** a nem kívánt változtatásokat az undo ikonra kattintva.
+- Írj egy egyértelmű elkötelezési üzenetet, majd kattints a pipára az elkötelezéshez és feltöltéshez.
 
-A vscode.dev különösen hasznos, ha gyors frissítéseket szeretnél végezni a projekteden anélkül, hogy bármilyen szoftvert helyileg betöltenél.  
-A kód frissítéséhez kattints az 'Explorer' ikonra, amely szintén az aktivitási sávon található, hogy megtekinthesd a tárház fájljait és mappáit.  
-Válassz ki egy fájlt, hogy megnyisd a kódterületen, végezd el a módosításokat, majd mentsd el.
+A GitHub repozitóriumodhoz való visszatéréshez válaszd a bal felső sarokban lévő hamburger menüt.
 
-![Fájl szerkesztése](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.hu.png)
+![Változások előkészítése és elkötelezése](../images/edit-vscode.dev Bővítményekkel
 
-Miután befejezted a projekt frissítését, válaszd a _`source control`_ ikont, amely tartalmazza az összes új változtatást, amit a tárházadban végeztél.
+A bővítmények lehetővé teszik, hogy nyelveket, témákat, hibakeresőket és produktivitási eszközöket adj hozzá a VSCode.dev-hez—könnyebbé és szórakoztatóbbá téve a kódolást.
 
-A projektedben végrehajtott változtatások megtekintéséhez válaszd ki a fájl(oka)t a `Changes` mappában a kibővített aktivitási sávon. Ez megnyit egy 'Working Tree'-t, ahol vizuálisan láthatod a fájlban végrehajtott változtatásokat. A piros a projektből való törlést, míg a zöld a hozzáadást jelzi.
+### Bővítmények böngészése és kezelése
 
-![Változtatások megtekintése](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.hu.png)
+- Kattints a **Bővítmények ikonra** a tevékenységsávon.
+- Keress egy bővítményt a _'Bővítmények keresése a piactéren'_ mezőben.
 
-Ha elégedett vagy a végrehajtott változtatásokkal, vidd az egeret a `Changes` mappa fölé, és kattints a `+` gombra a változtatások színpadra állításához. A színpadra állítás azt jelenti, hogy előkészíted a változtatásokat a GitHub-ra való elkötelezéshez.
+  ![Bővítmény részletei](../images/extension-details:
+  - **Telepítve**: Az összes hozzáadott bővítmény
+  - **Népszerű**: Az iparág kedvencei
+  - **Ajánlott**: A munkafolyamatodhoz igazítva
 
-Ha azonban nem vagy elégedett néhány változtatással, és el akarod vetni őket, vidd az egeret a `Changes` mappa fölé, és válaszd a `visszavonás` ikont.
+  ![Bővítmények megtekintése](
 
-Ezután írj be egy `commit üzenetet` _(egy leírás a projektben végrehajtott változtatásokról)_, kattints a `pipa ikonra`, hogy elkötelezd és feltöltsd a változtatásokat.
+  
 
-Miután befejezted a munkát a projekten, válaszd a `hamburger menü ikont` a bal felső sarokban, hogy visszatérj a tárházhoz a github.com-on.
+***
 
-![Változtatások színpadra állítása és elkötelezése](../../../../8-code-editor/images/edit-vscode.dev.gif)
+### 1. **Bővítmények telepítése**
 
-## Bővítmények használata
+- Írd be a bővítmény nevét a keresőbe, kattints rá, és nézd meg a részleteket a szerkesztőben.
+- Nyomd meg a **kék Telepítés gombot** az oldalsávon _vagy_ a fő kódterületen.
 
-A bővítmények telepítése a VSCode-ban lehetővé teszi új funkciók hozzáadását és a fejlesztési környezet testreszabását, hogy javítsd a fejlesztési munkafolyamatot. Ezek a bővítmények segítenek több programozási nyelv támogatásában, és gyakran általános vagy nyelvspecifikus bővítmények.
+  ![Bővítmények telepítése](../images/install-extension 2. **Bővítmények testreszabása**
 
-A rendelkezésre álló bővítmények listájának böngészéséhez kattints az _`Extensions ikonra`_ az aktivitási sávon, és kezd el beírni a bővítmény nevét a _'Search Extensions in Marketplace'_ mezőbe.  
-Egy listát fogsz látni a bővítményekről, amelyek tartalmazzák **a bővítmény nevét, a kiadó nevét, egy mondatos leírást, a letöltések számát** és **egy csillagos értékelést**.
+- Keresd meg a telepített bővítményt.
+- Kattints a **Fogaskerék ikonra** → válaszd a _Bővítmény beállításai_ opciót, hogy finomhangold a működést.
 
-![Bővítmény részletei](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.hu.png)
+  ![Bővítmény beállításainak módosítása](../images/extension-settings 3. **Bővítmények kezelése**
+A következőket teheted:
 
-Megtekintheted az összes korábban telepített bővítményt az _`Installed folder`_ kibontásával, a legtöbb fejlesztő által használt népszerű bővítményeket a _`Popular folder`_-ben, valamint az ajánlott bővítményeket, amelyeket vagy az azonos munkaterületen lévő felhasználók, vagy a nemrég megnyitott fájlok alapján javasolnak a _`recommended folder`_-ben.
+- **Letiltás:** Ideiglenesen kikapcsolhatod a bővítményt, miközben telepítve marad
+- **Eltávolítás:** Véglegesen törölheted, ha már nincs rá szükséged
 
-![Bővítmények megtekintése](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.hu.png)
+  Keresd meg a bővítményt, nyomd meg a Fogaskerék ikont, és válaszd a ‘Letiltás’ vagy ‘Eltávolítás’ opciót, vagy használd a kék gombokat a kódterületen.
 
-### 1. Bővítmények telepítése
-
-Egy bővítmény telepítéséhez írd be a bővítmény nevét a keresőmezőbe, és kattints rá, hogy további információkat jeleníts meg róla a kódterületen, amikor megjelenik a kibővített aktivitási sávon.
-
-Kattinthatsz a _kék telepítés gombra_ a kibővített aktivitási sávon, vagy használhatod a kódterületen megjelenő telepítés gombot, miután kiválasztottad a bővítményt.
-
-![Bővítmények telepítése](../../../../8-code-editor/images/install-extension.gif)
-
-### 2. Bővítmények testreszabása
-
-A bővítmény telepítése után előfordulhat, hogy módosítanod kell annak működését, és testre kell szabnod az igényeid szerint. Ehhez válaszd ki a Bővítmények ikont, és ezúttal a bővítményed megjelenik az _Installed folder_-ben. Kattints a _**Fogaskerék ikonra**_, majd navigálj az _Extensions Setting_ menüponthoz.
-
-![Bővítmény beállításainak módosítása](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.hu.png)
-
-### 3. Bővítmények kezelése
-
-A bővítmény telepítése és használata után a vscode.dev különböző lehetőségeket kínál a bővítmény kezelésére az igényeid szerint. Például dönthetsz úgy, hogy:
-
-- **Letiltod:** _(Ideiglenesen letilthatsz egy bővítményt, ha már nincs rá szükséged, de nem akarod teljesen eltávolítani.)_
-
-    Válaszd ki a telepített bővítményt a kibővített aktivitási sávon > kattints a Fogaskerék ikonra > válaszd a 'Disable' vagy 'Disable (Workspace)' opciót **VAGY** Nyisd meg a bővítményt a kódterületen, és kattints a kék Letiltás gombra.
-
-- **Eltávolítod:** Válaszd ki a telepített bővítményt a kibővített aktivitási sávon > kattints a Fogaskerék ikonra > válaszd az 'Uninstall' opciót **VAGY** Nyisd meg a bővítményt a kódterületen, és kattints a kék Eltávolítás gombra.
-
----
+***
 
 ## Feladat
 
-[Hozz létre egy önéletrajz weboldalt a vscode.dev segítségével](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+Teszteld a képességeidet: [Hozz létre egy önéletrajz weboldalt a vscode.dev használatával](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
 
-## Áttekintés és önálló tanulás
+***
 
-Olvass többet a [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) funkcióiról és egyéb lehetőségeiről.
+## További felfedezés és önálló tanulás
+
+- Merülj el mélyebben [a hivatalos VSCode Web dokumentációban](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
+- Fedezd fel a haladó munkaterület funkciókat, billentyűparancsokat és beállításokat.
+
+***
+
+**Most készen állsz arra, hogy kódolj, alkoss és együttműködj—bárhonnan, bármilyen eszközön, a VSCode.dev használatával!**
 
 ---
 
-**Felelősségkizárás**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális, emberi fordítást igénybe venni. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Felelősség kizárása**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

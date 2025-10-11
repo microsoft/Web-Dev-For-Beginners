@@ -1,45 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-23T22:19:21+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T08:53:49+00:00",
   "source_file": "for-teachers.md",
   "language_code": "hk"
 }
 -->
-## 給教育工作者
+### 給教育工作者
 
-想在課堂上使用這套課程嗎？請隨意使用！
+歡迎您在課堂上使用這份課程內容。它可以無縫配合 GitHub Classroom 和主流 LMS 平台使用，也可以作為獨立的資源庫供學生使用。
 
-事實上，你可以直接在 GitHub 上使用這套課程，透過 GitHub Classroom 來進行。
+### 配合 GitHub Classroom 使用
 
-要做到這點，請先 fork 此 repo。你需要為每一課建立一個 repo，因此需要將每個文件夾提取到一個獨立的 repo。這樣，[GitHub Classroom](https://classroom.github.com/classrooms) 就可以分別處理每一課。
+為了按班級管理課程和作業，請為每節課創建一個獨立的資源庫，這樣 GitHub Classroom 就能獨立附加每個作業。
 
-這些[完整指引](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/)可以幫助你了解如何設置你的課堂。
+- 將此資源庫 Fork 到您的組織。
+- 為每節課創建一個獨立的資源庫，將每節課的文件夾提取到自己的資源庫中。
+  - 選項 A：創建空的資源庫（每節課一個），並將課程文件夾內容複製到每個資源庫中。
+  - 選項 B：使用保留 Git 歷史記錄的方法（例如，將文件夾拆分到新資源庫中），如果您需要保留來源記錄。
+- 在 GitHub Classroom 中，為每節課創建一個作業，並指向相應的課程資源庫。
+- 推薦設置：
+  - 資源庫可見性：設置為私有以保護學生的作業。
+  - 使用課程資源庫的默認分支作為起始代碼。
+  - 為測驗和提交添加 Issue 和 Pull Request 模板。
+  - 如果課程中包含自動評分和測試，可以選擇性配置。
+- 有助於管理的命名規範：
+  - 資源庫名稱如 lesson-01-intro、lesson-02-html 等。
+  - 標籤：quiz、assignment、needs-review、late、resubmission。
+  - 按班級使用標籤/版本（例如，v2025-term1）。
 
-## 在 Moodle、Canvas 或 Blackboard 中使用
+提示：避免將資源庫存放在同步文件夾（例如 OneDrive/Google Drive）中，以防止在 Windows 上出現 Git 衝突。
 
-這套課程在這些學習管理系統中運作良好！使用 [Moodle 上傳檔案](../../../../../../../teaching-files/webdev-moodle.mbz) 來獲取完整內容，或者試試 [Common Cartridge 檔案](../../../../../../../teaching-files/webdev-common-cartridge.imscc)，其中包含部分內容。Moodle Cloud 不支援完整的 Common Cartridge 匯出，因此建議使用 Moodle 下載檔案，該檔案可以上傳到 Canvas。請告訴我們如何改進這個使用體驗。
+### 配合 Moodle、Canvas 或 Blackboard 使用
 
-![Moodle](/teaching-files/moodle.png)
+此課程包含可導入的包，適用於常見的 LMS 工作流程。
+
+- Moodle：使用 Moodle 上傳文件 [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) 加載完整課程。
+- Common Cartridge：使用 Common Cartridge 文件 [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) 以獲得更廣泛的 LMS 兼容性。
+- 注意事項：
+  - Moodle Cloud 對 Common Cartridge 的支持有限。建議使用上面的 Moodle 文件，該文件也可以上傳到 Canvas。
+  - 導入後，請檢查模塊、截止日期和測驗設置，以匹配您的學期安排。
+
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.hk.png)
 > Moodle 課堂中的課程內容
 
-![Canvas](/teaching-files/canvas.png)
-> Canvas 中的課程內容
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.hk.png)
+> Canvas 課堂中的課程內容
 
-## 直接使用此 repo
+### 直接使用資源庫（不使用 Classroom）
 
-如果你希望直接使用目前的 repo，而不使用 GitHub Classroom，也可以這樣做。你需要與學生溝通，告訴他們一起學習哪一課。
+如果您不想使用 GitHub Classroom，可以直接從此資源庫運行課程。
 
-在線上形式（如 Zoom、Teams 或其他）中，你可以為測驗設置分組討論室，並指導學生準備學習。然後邀請學生參加測驗，並在指定時間以 "issues" 的形式提交答案。如果你希望學生公開合作完成作業，也可以採用相同方式。
+- 同步/在線格式（Zoom/Teams）：
+  - 進行短時間的導師引導暖場活動；使用分組討論室進行測驗。
+  - 宣布測驗的時間窗口；學生以 GitHub Issues 提交答案。
+  - 對於協作作業，學生在公共課程資源庫中工作並提交 Pull Requests。
+- 私密/非同步格式：
+  - 學生將每節課 Fork 到自己的 **私有** 資源庫，並將您添加為協作者。
+  - 他們通過 Issues（測驗）和 Pull Requests（作業）提交到您的課堂資源庫或他們的私有 Fork。
 
-如果你更喜歡私密的形式，可以要求學生逐課 fork 課程到他們自己的 GitHub 私人 repo，並授予你訪問權限。然後他們可以私下完成測驗和作業，並通過 classroom repo 的 issues 提交給你。
+### 最佳實踐
 
-在線課堂有很多方式可以運作。請告訴我們哪種方式最適合你！
+- 提供一節關於 Git/GitHub 基礎知識、Issues 和 PR 的入門課程。
+- 在 Issues 中使用清單來管理多步驟的測驗/作業。
+- 添加 CONTRIBUTING.md 和 CODE_OF_CONDUCT.md 以設置課堂規範。
+- 添加無障礙使用的註釋（例如，替代文字、字幕），並提供可打印的 PDF。
+- 按學期版本化您的內容，並在發布後凍結課程資源庫。
 
-## 請分享你的想法！
+### 反饋與支持
 
-我們希望這套課程能夠滿足你和學生的需求。請在 [教師角落](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) 與我們聯繫，並開啟一個 [**新 issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) 提出任何需求、問題或反饋。
+我們希望這份課程能夠幫助您和您的學生。如果有任何錯誤、需求或改進建議，請在此資源庫中開啟新的 Issue，或者在 Teacher Corner 中發起討論。
+
+---
 
 **免責聲明**：  
-本文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始語言的文件應被視為權威來源。對於重要信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們致力於提供準確的翻譯，請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。

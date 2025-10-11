@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d2efabbc8f94d89f4317ee8646c3ce9",
-  "translation_date": "2025-08-29T09:07:08+00:00",
+  "original_hash": "b46acf79da8550d76445eed00b06c878",
+  "translation_date": "2025-10-03T13:09:20+00:00",
   "source_file": "7-bank-project/4-state-management/README.md",
   "language_code": "id"
 }
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Pendahuluan
 
-Seiring dengan berkembangnya aplikasi web, menjadi tantangan untuk melacak semua aliran data. Kode mana yang mendapatkan data, halaman mana yang menggunakannya, di mana dan kapan data perlu diperbarui...mudah sekali berakhir dengan kode yang berantakan dan sulit untuk dipelihara. Hal ini terutama berlaku ketika Anda perlu berbagi data di antara berbagai halaman aplikasi Anda, misalnya data pengguna. Konsep *manajemen state* selalu ada di semua jenis program, tetapi karena aplikasi web terus berkembang dalam kompleksitas, sekarang menjadi poin penting untuk dipikirkan selama pengembangan.
+Seiring dengan berkembangnya aplikasi web, menjadi tantangan untuk melacak semua aliran data. Kode mana yang mendapatkan data, halaman mana yang menggunakannya, di mana dan kapan data perlu diperbarui...mudah sekali berakhir dengan kode yang berantakan dan sulit untuk dikelola. Hal ini terutama berlaku ketika Anda perlu berbagi data di antara berbagai halaman aplikasi Anda, misalnya data pengguna. Konsep *manajemen state* selalu ada di semua jenis program, tetapi karena aplikasi web terus berkembang dalam kompleksitas, sekarang menjadi poin penting untuk dipikirkan selama pengembangan.
 
 Dalam bagian terakhir ini, kita akan meninjau kembali aplikasi yang telah kita bangun untuk memikirkan ulang bagaimana state dikelola, memungkinkan dukungan untuk penyegaran browser kapan saja, dan mempertahankan data di antara sesi pengguna.
 
@@ -32,32 +32,32 @@ curl http://localhost:5000/api
 
 ---
 
-## Memikirkan Ulang Manajemen State
+## Memikirkan ulang manajemen state
 
-Dalam [pelajaran sebelumnya](../3-data/README.md), kita memperkenalkan konsep dasar state dalam aplikasi kita dengan variabel global `account` yang berisi data bank untuk pengguna yang sedang masuk. Namun, implementasi kita saat ini memiliki beberapa kekurangan. Coba segarkan halaman saat Anda berada di dashboard. Apa yang terjadi?
+Dalam [pelajaran sebelumnya](../3-data/README.md), kami memperkenalkan konsep dasar state dalam aplikasi kami dengan variabel global `account` yang berisi data bank untuk pengguna yang sedang masuk. Namun, implementasi kami saat ini memiliki beberapa kekurangan. Coba segarkan halaman saat Anda berada di dashboard. Apa yang terjadi?
 
 Ada 3 masalah dengan kode saat ini:
 
 - State tidak dipertahankan, karena penyegaran browser membawa Anda kembali ke halaman login.
-- Ada beberapa fungsi yang memodifikasi state. Seiring dengan bertambahnya ukuran aplikasi, hal ini dapat membuat perubahan sulit dilacak dan mudah lupa untuk memperbarui salah satunya.
+- Ada beberapa fungsi yang memodifikasi state. Seiring dengan berkembangnya aplikasi, hal ini dapat membuat perubahan sulit dilacak dan mudah lupa untuk memperbarui salah satunya.
 - State tidak dibersihkan, sehingga ketika Anda mengklik *Logout*, data akun masih ada meskipun Anda berada di halaman login.
 
-Kita bisa memperbarui kode kita untuk mengatasi masalah ini satu per satu, tetapi itu akan menciptakan lebih banyak duplikasi kode dan membuat aplikasi lebih kompleks serta sulit dipelihara. Atau kita bisa berhenti sejenak dan memikirkan ulang strategi kita.
+Kami dapat memperbarui kode kami untuk mengatasi masalah ini satu per satu, tetapi itu akan menciptakan lebih banyak duplikasi kode dan membuat aplikasi lebih kompleks serta sulit untuk dikelola. Atau kami dapat berhenti sejenak dan memikirkan ulang strategi kami.
 
 > Masalah apa yang sebenarnya kita coba selesaikan di sini?
 
-[Manajemen state](https://en.wikipedia.org/wiki/State_management) adalah tentang menemukan pendekatan yang baik untuk menyelesaikan dua masalah utama ini:
+[Manajemen state](https://en.wikipedia.org/wiki/State_management) adalah tentang menemukan pendekatan yang baik untuk menyelesaikan dua masalah khusus ini:
 
-- Bagaimana cara menjaga aliran data dalam aplikasi tetap mudah dipahami?
+- Bagaimana cara menjaga aliran data dalam aplikasi tetap dapat dipahami?
 - Bagaimana cara menjaga data state selalu sinkron dengan antarmuka pengguna (dan sebaliknya)?
 
-Setelah Anda menangani ini, masalah lain yang mungkin Anda miliki mungkin sudah teratasi atau menjadi lebih mudah untuk diperbaiki. Ada banyak pendekatan yang mungkin untuk menyelesaikan masalah ini, tetapi kita akan menggunakan solusi umum yang terdiri dari **sentralisasi data dan cara untuk mengubahnya**. Aliran data akan berjalan seperti ini:
+Setelah Anda mengatasi masalah ini, masalah lain yang mungkin Anda miliki mungkin sudah teratasi atau menjadi lebih mudah untuk diperbaiki. Ada banyak pendekatan yang mungkin untuk menyelesaikan masalah ini, tetapi kami akan menggunakan solusi umum yang terdiri dari **memusatkan data dan cara untuk mengubahnya**. Aliran data akan berjalan seperti ini:
 
 ![Skema yang menunjukkan aliran data antara HTML, tindakan pengguna, dan state](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.id.png)
 
-> Di sini kita tidak akan membahas bagian di mana data secara otomatis memicu pembaruan tampilan, karena itu terkait dengan konsep yang lebih maju dari [Pemrograman Reaktif](https://en.wikipedia.org/wiki/Reactive_programming). Ini adalah subjek lanjutan yang bagus jika Anda ingin mendalami lebih jauh.
+> Di sini kami tidak akan membahas bagian di mana data secara otomatis memicu pembaruan tampilan, karena itu terkait dengan konsep yang lebih maju dari [Pemrograman Reaktif](https://en.wikipedia.org/wiki/Reactive_programming). Ini adalah subjek lanjutan yang bagus jika Anda ingin mendalami lebih jauh.
 
-✅ Ada banyak pustaka di luar sana dengan pendekatan berbeda untuk manajemen state, [Redux](https://redux.js.org) menjadi salah satu opsi populer. Lihatlah konsep dan pola yang digunakan karena sering kali menjadi cara yang baik untuk mempelajari potensi masalah yang mungkin Anda hadapi dalam aplikasi web besar dan bagaimana cara menyelesaikannya.
+✅ Ada banyak pustaka di luar sana dengan pendekatan berbeda untuk manajemen state, [Redux](https://redux.js.org) menjadi salah satu opsi populer. Lihatlah konsep dan pola yang digunakan karena sering kali merupakan cara yang baik untuk mempelajari potensi masalah yang mungkin Anda hadapi dalam aplikasi web besar dan bagaimana cara menyelesaikannya.
 
 ### Tugas
 
@@ -75,9 +75,9 @@ let state = {
 };
 ```
 
-Idenya adalah untuk *menyentralisasi* semua data aplikasi kita dalam satu objek state. Saat ini kita hanya memiliki `account` dalam state sehingga tidak banyak berubah, tetapi ini menciptakan jalur untuk evolusi.
+Idenya adalah untuk *memusatkan* semua data aplikasi kami dalam satu objek state. Saat ini kami hanya memiliki `account` dalam state sehingga tidak banyak berubah, tetapi ini menciptakan jalur untuk evolusi.
 
-Kita juga harus memperbarui fungsi yang menggunakannya. Dalam fungsi `register()` dan `login()`, ganti `account = ...` dengan `state.account = ...`;
+Kami juga harus memperbarui fungsi yang menggunakannya. Dalam fungsi `register()` dan `login()`, ganti `account = ...` dengan `state.account = ...`;
 
 Di bagian atas fungsi `updateDashboard()`, tambahkan baris ini:
 
@@ -87,15 +87,15 @@ const account = state.account;
 
 Refaktor ini sendiri tidak membawa banyak peningkatan, tetapi idenya adalah untuk meletakkan dasar bagi perubahan berikutnya.
 
-## Melacak Perubahan Data
+## Melacak perubahan data
 
-Sekarang kita telah menempatkan objek `state` untuk menyimpan data kita, langkah berikutnya adalah menyentralisasi pembaruan. Tujuannya adalah untuk mempermudah melacak setiap perubahan dan kapan perubahan itu terjadi.
+Sekarang setelah kami menempatkan objek `state` untuk menyimpan data kami, langkah berikutnya adalah memusatkan pembaruan. Tujuannya adalah untuk mempermudah melacak setiap perubahan dan kapan perubahan itu terjadi.
 
 Untuk menghindari perubahan yang dilakukan pada objek `state`, juga merupakan praktik yang baik untuk menganggapnya [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), yang berarti bahwa objek tersebut tidak dapat dimodifikasi sama sekali. Ini juga berarti bahwa Anda harus membuat objek state baru jika Anda ingin mengubah apa pun di dalamnya. Dengan melakukan ini, Anda membangun perlindungan terhadap [efek samping](https://en.wikipedia.org/wiki/Side_effect_(computer_science)) yang mungkin tidak diinginkan, dan membuka kemungkinan untuk fitur baru dalam aplikasi Anda seperti menerapkan undo/redo, sambil juga mempermudah debugging. Misalnya, Anda dapat mencatat setiap perubahan yang dilakukan pada state dan menyimpan riwayat perubahan untuk memahami sumber bug.
 
-Dalam JavaScript, Anda dapat menggunakan [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) untuk membuat versi immutable dari sebuah objek. Jika Anda mencoba membuat perubahan pada objek immutable, sebuah pengecualian akan muncul.
+Dalam JavaScript, Anda dapat menggunakan [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) untuk membuat versi objek yang tidak dapat diubah. Jika Anda mencoba membuat perubahan pada objek yang tidak dapat diubah, sebuah pengecualian akan muncul.
 
-✅ Apakah Anda tahu perbedaan antara objek immutable *shallow* dan *deep*? Anda dapat membacanya [di sini](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
+✅ Apakah Anda tahu perbedaan antara objek *shallow* dan *deep* yang tidak dapat diubah? Anda dapat membacanya [di sini](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
 
 ### Tugas
 
@@ -110,9 +110,9 @@ function updateState(property, newData) {
 }
 ```
 
-Dalam fungsi ini, kita membuat objek state baru dan menyalin data dari state sebelumnya menggunakan [*operator spread (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Kemudian kita menimpa properti tertentu dari objek state dengan data baru menggunakan [notasi bracket](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` untuk penugasan. Akhirnya, kita mengunci objek untuk mencegah modifikasi menggunakan `Object.freeze()`. Saat ini kita hanya memiliki properti `account` yang disimpan dalam state, tetapi dengan pendekatan ini Anda dapat menambahkan sebanyak mungkin properti yang Anda butuhkan dalam state.
+Dalam fungsi ini, kami membuat objek state baru dan menyalin data dari state sebelumnya menggunakan [*operator spread (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Kemudian kami menimpa properti tertentu dari objek state dengan data baru menggunakan [notasi kurung](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` untuk penugasan. Akhirnya, kami mengunci objek untuk mencegah modifikasi menggunakan `Object.freeze()`. Saat ini kami hanya memiliki properti `account` yang disimpan dalam state, tetapi dengan pendekatan ini Anda dapat menambahkan sebanyak mungkin properti yang Anda butuhkan dalam state.
 
-Kita juga akan memperbarui inisialisasi `state` untuk memastikan state awal juga dibekukan:
+Kami juga akan memperbarui inisialisasi `state` untuk memastikan state awal juga dibekukan:
 
 ```js
 let state = Object.freeze({
@@ -132,7 +132,7 @@ Lakukan hal yang sama dengan fungsi `login`, mengganti `state.account = data;` d
 updateState('account', data);
 ```
 
-Sekarang kita akan memperbaiki masalah data akun yang tidak dibersihkan ketika pengguna mengklik *Logout*.
+Kami sekarang akan mengambil kesempatan untuk memperbaiki masalah data akun yang tidak dibersihkan ketika pengguna mengklik *Logout*.
 
 Buat fungsi baru `logout()`:
 
@@ -145,13 +145,13 @@ function logout() {
 
 Dalam `updateDashboard()`, ganti pengalihan `return navigate('/login');` dengan `return logout()`;
 
-Coba daftarkan akun baru, keluar, dan masuk lagi untuk memeriksa apakah semuanya masih berfungsi dengan benar.
+Cobalah mendaftarkan akun baru, keluar, dan masuk lagi untuk memeriksa apakah semuanya masih berfungsi dengan benar.
 
 > Tip: Anda dapat melihat semua perubahan state dengan menambahkan `console.log(state)` di bagian bawah `updateState()` dan membuka konsol di alat pengembangan browser Anda.
 
-## Mempertahankan State
+## Mempertahankan state
 
-Sebagian besar aplikasi web perlu mempertahankan data agar dapat berfungsi dengan benar. Semua data penting biasanya disimpan di database dan diakses melalui server API, seperti data akun pengguna dalam kasus kita. Tetapi terkadang, juga menarik untuk mempertahankan beberapa data di aplikasi klien yang berjalan di browser Anda, untuk pengalaman pengguna yang lebih baik atau untuk meningkatkan kinerja pemuatan.
+Sebagian besar aplikasi web perlu mempertahankan data agar dapat berfungsi dengan benar. Semua data penting biasanya disimpan di database dan diakses melalui server API, seperti data akun pengguna dalam kasus kami. Tetapi terkadang, juga menarik untuk mempertahankan beberapa data di aplikasi klien yang berjalan di browser Anda, untuk pengalaman pengguna yang lebih baik atau untuk meningkatkan kinerja pemuatan.
 
 Ketika Anda ingin mempertahankan data di browser Anda, ada beberapa pertanyaan penting yang harus Anda tanyakan pada diri sendiri:
 
@@ -163,15 +163,15 @@ Ada beberapa cara untuk menyimpan informasi di dalam aplikasi web, tergantung pa
 Opsi lain adalah menggunakan salah satu dari banyak API browser untuk menyimpan data. Dua di antaranya sangat menarik:
 
 - [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): sebuah [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) yang memungkinkan untuk mempertahankan data spesifik untuk situs web saat ini di antara sesi yang berbeda. Data yang disimpan di dalamnya tidak pernah kedaluwarsa.
-- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): ini bekerja sama seperti `localStorage` kecuali bahwa data yang disimpan di dalamnya dihapus saat sesi berakhir (ketika browser ditutup).
+- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): yang satu ini bekerja sama seperti `localStorage` kecuali bahwa data yang disimpan di dalamnya dihapus saat sesi berakhir (saat browser ditutup).
 
 Perlu dicatat bahwa kedua API ini hanya memungkinkan untuk menyimpan [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String). Jika Anda ingin menyimpan objek kompleks, Anda perlu menyerialkannya ke format [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) menggunakan [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
 
-✅ Jika Anda ingin membuat aplikasi web yang tidak bekerja dengan server, juga memungkinkan untuk membuat database di klien menggunakan API [`IndexedDB`](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Ini disediakan untuk kasus penggunaan lanjutan atau jika Anda perlu menyimpan jumlah data yang signifikan, karena lebih kompleks untuk digunakan.
+✅ Jika Anda ingin membuat aplikasi web yang tidak bekerja dengan server, juga memungkinkan untuk membuat database di klien menggunakan API [`IndexedDB`](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Yang satu ini disediakan untuk kasus penggunaan lanjutan atau jika Anda perlu menyimpan sejumlah besar data, karena lebih kompleks untuk digunakan.
 
 ### Tugas
 
-Kita ingin pengguna tetap masuk sampai mereka secara eksplisit mengklik tombol *Logout*, jadi kita akan menggunakan `localStorage` untuk menyimpan data akun. Pertama, mari kita tentukan kunci yang akan kita gunakan untuk menyimpan data kita.
+Kami ingin pengguna kami tetap masuk hingga mereka secara eksplisit mengklik tombol *Logout*, jadi kami akan menggunakan `localStorage` untuk menyimpan data akun. Pertama, mari kita tentukan kunci yang akan kita gunakan untuk menyimpan data kita.
 
 ```js
 const storageKey = 'savedAccount';
@@ -183,9 +183,9 @@ Kemudian tambahkan baris ini di akhir fungsi `updateState()`:
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-Dengan ini, data akun pengguna akan dipertahankan dan selalu diperbarui karena sebelumnya kita telah menyentralisasi semua pembaruan state. Di sinilah kita mulai mendapatkan manfaat dari semua refaktor sebelumnya 🙂.
+Dengan ini, data akun pengguna akan dipertahankan dan selalu diperbarui karena sebelumnya kami memusatkan semua pembaruan state kami. Di sinilah kami mulai mendapatkan manfaat dari semua refaktor sebelumnya 🙂.
 
-Karena data disimpan, kita juga harus mengurus pemulihannya saat aplikasi dimuat. Karena kita akan mulai memiliki lebih banyak kode inisialisasi, mungkin ide yang baik untuk membuat fungsi baru `init`, yang juga mencakup kode sebelumnya di bagian bawah `app.js`:
+Karena data disimpan, kami juga harus mengurus pemulihannya saat aplikasi dimuat. Karena kami akan mulai memiliki lebih banyak kode inisialisasi, mungkin ide yang baik untuk membuat fungsi baru `init`, yang juga mencakup kode sebelumnya di bagian bawah `app.js`:
 
 ```js
 function init() {
@@ -202,15 +202,15 @@ function init() {
 init();
 ```
 
-Di sini kita mengambil data yang disimpan, dan jika ada, kita memperbarui state sesuai. Penting untuk melakukan ini *sebelum* memperbarui rute, karena mungkin ada kode yang bergantung pada state selama pembaruan halaman.
+Di sini kami mengambil data yang disimpan, dan jika ada, kami memperbarui state sesuai. Penting untuk melakukan ini *sebelum* memperbarui rute, karena mungkin ada kode yang bergantung pada state selama pembaruan halaman.
 
-Kita juga dapat menjadikan halaman *Dashboard* sebagai halaman default aplikasi kita, karena sekarang kita mempertahankan data akun. Jika tidak ada data yang ditemukan, dashboard akan mengurus pengalihan ke halaman *Login* bagaimanapun. Dalam `updateRoute()`, ganti fallback `return navigate('/login');` dengan `return navigate('/dashboard');`.
+Kami juga dapat menjadikan halaman *Dashboard* sebagai halaman default aplikasi kami, karena sekarang kami mempertahankan data akun. Jika tidak ada data yang ditemukan, dashboard akan mengurus pengalihan ke halaman *Login* bagaimanapun. Dalam `updateRoute()`, ganti fallback `return navigate('/login');` dengan `return navigate('/dashboard');`.
 
-Sekarang masuk ke aplikasi dan coba segarkan halaman. Anda seharusnya tetap berada di dashboard. Dengan pembaruan itu kita telah menangani semua masalah awal kita...
+Sekarang masuk ke aplikasi dan coba segarkan halaman. Anda seharusnya tetap berada di dashboard. Dengan pembaruan itu kami telah mengatasi semua masalah awal kami...
 
-## Menyegarkan Data
+## Menyegarkan data
 
-...Tetapi kita mungkin juga telah menciptakan masalah baru. Ups!
+...Tetapi kami mungkin juga telah menciptakan masalah baru. Ups!
 
 Pergi ke dashboard menggunakan akun `test`, lalu jalankan perintah ini di terminal untuk membuat transaksi baru:
 
@@ -221,9 +221,9 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Coba segarkan halaman dashboard di browser sekarang. Apa yang terjadi? Apakah Anda melihat transaksi baru?
+Coba segarkan halaman dashboard Anda di browser sekarang. Apa yang terjadi? Apakah Anda melihat transaksi baru?
 
-State dipertahankan tanpa batas waktu berkat `localStorage`, tetapi itu juga berarti tidak pernah diperbarui sampai Anda keluar dari aplikasi dan masuk lagi!
+State dipertahankan tanpa batas waktu berkat `localStorage`, tetapi itu juga berarti tidak pernah diperbarui hingga Anda keluar dari aplikasi dan masuk lagi!
 
 Salah satu strategi yang mungkin untuk memperbaikinya adalah memuat ulang data akun setiap kali dashboard dimuat, untuk menghindari data yang tidak diperbarui.
 
@@ -247,7 +247,7 @@ async function updateAccountData() {
 }
 ```
 
-Metode ini memeriksa bahwa kita saat ini masuk lalu memuat ulang data akun dari server.
+Metode ini memeriksa bahwa kami saat ini masuk lalu memuat ulang data akun dari server.
 
 Buat fungsi lain bernama `refresh`:
 
@@ -258,7 +258,7 @@ async function refresh() {
 }
 ```
 
-Yang satu ini memperbarui data akun, lalu mengurus pembaruan HTML halaman dashboard. Ini adalah apa yang perlu kita panggil ketika rute dashboard dimuat. Perbarui definisi rute dengan:
+Yang satu ini memperbarui data akun, lalu mengurus pembaruan HTML halaman dashboard. Ini adalah apa yang perlu kita panggil saat rute dashboard dimuat. Perbarui definisi rute dengan:
 
 ```js
 const routes = {
@@ -273,22 +273,22 @@ Coba muat ulang dashboard sekarang, seharusnya menampilkan data akun yang diperb
 
 ## 🚀 Tantangan
 
-Sekarang kita memuat ulang data akun setiap kali dashboard dimuat, apakah menurut Anda kita masih perlu mempertahankan *semua data akun*?
+Sekarang setelah kami memuat ulang data akun setiap kali dashboard dimuat, apakah menurut Anda kami masih perlu mempertahankan *semua data akun*?
 
 Cobalah bekerja sama untuk mengubah apa yang disimpan dan dimuat dari `localStorage` agar hanya mencakup apa yang benar-benar diperlukan untuk aplikasi berfungsi.
 
 ## Kuis Pasca-Pelajaran
-
-[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/48)
+[Kuis setelah kuliah](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Tugas
+
 [Implementasikan dialog "Tambah transaksi"](assignment.md)
 
 Berikut adalah contoh hasil setelah menyelesaikan tugas:
 
-![Tangkapan layar yang menunjukkan contoh dialog "Tambah transaksi"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.id.png)
+![Screenshot yang menunjukkan contoh dialog "Tambah transaksi"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.id.png)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemah manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

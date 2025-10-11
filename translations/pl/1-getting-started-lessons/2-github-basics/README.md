@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "361249da70432ddfd4741c917d1a6f50",
-  "translation_date": "2025-08-29T16:41:38+00:00",
+  "original_hash": "ea65b75e488aa33a3cc5cb1c6c3f047a",
+  "translation_date": "2025-10-03T13:55:20+00:00",
   "source_file": "1-getting-started-lessons/2-github-basics/README.md",
   "language_code": "pl"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ta lekcja obejmuje podstawy GitHub, platformy do hostowania i zarządzania zmianami w kodzie.
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f947909b4f9d343e2a23778aa716ca6b9d71df7174ee5009ac.pl.png)
+![Wprowadzenie do GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f947909b4f9d343e2a23778aa716ca6b9d71df7174ee5009ac.pl.png)
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Quiz przed lekcją
@@ -21,7 +21,7 @@ Ta lekcja obejmuje podstawy GitHub, platformy do hostowania i zarządzania zmian
 
 W tej lekcji omówimy:
 
-- śledzenie pracy wykonywanej na Twoim komputerze
+- śledzenie pracy na Twoim komputerze
 - pracę nad projektami z innymi
 - jak przyczyniać się do rozwoju oprogramowania open source
 
@@ -37,27 +37,27 @@ Jeśli Git nie jest zainstalowany, [pobierz Git](https://git-scm.com/downloads).
 Aby sprawdzić, czy Git jest już skonfigurowany, możesz wpisać:
 `git config --list`
 
-Będziesz także potrzebować konta na GitHub, edytora kodu (np. Visual Studio Code) oraz otwartego terminala (lub wiersza poleceń).
+Będziesz także potrzebować konta GitHub, edytora kodu (np. Visual Studio Code) oraz otwartego terminala (lub wiersza poleceń).
 
 Przejdź na [github.com](https://github.com/) i załóż konto, jeśli jeszcze go nie masz, lub zaloguj się i uzupełnij swój profil. 
 
-✅ GitHub nie jest jedynym repozytorium kodu na świecie; są inne, ale GitHub jest najbardziej znany.
+✅ GitHub nie jest jedynym repozytorium kodu na świecie; istnieją inne, ale GitHub jest najbardziej znany.
 
 ### Przygotowanie
 
-Będziesz potrzebować folderu z projektem kodu na swoim lokalnym komputerze (laptopie lub PC) oraz publicznego repozytorium na GitHub, które posłuży jako przykład, jak przyczyniać się do projektów innych osób.  
+Będziesz potrzebować zarówno folderu z projektem kodu na swoim lokalnym komputerze (laptopie lub PC), jak i publicznego repozytorium na GitHub, które posłuży jako przykład, jak przyczyniać się do projektów innych osób.  
 
 ---
 
 ## Zarządzanie kodem
 
-Załóżmy, że masz lokalnie folder z projektem kodu i chcesz zacząć śledzić swoje postępy za pomocą git - systemu kontroli wersji. Niektórzy porównują używanie git do pisania listu miłosnego do siebie w przyszłości. Czytając swoje wiadomości commit po dniach, tygodniach czy miesiącach, będziesz w stanie przypomnieć sobie, dlaczego podjąłeś daną decyzję lub "cofnąć" zmianę - pod warunkiem, że piszesz dobre wiadomości commit.
+Załóżmy, że masz lokalnie folder z projektem kodu i chcesz zacząć śledzić swoje postępy za pomocą git - systemu kontroli wersji. Niektórzy porównują używanie git do pisania listu miłosnego do swojego przyszłego "ja". Czytając swoje wiadomości commit po dniach, tygodniach czy miesiącach, będziesz w stanie przypomnieć sobie, dlaczego podjąłeś daną decyzję, lub "cofnąć" zmianę - pod warunkiem, że piszesz dobre wiadomości commit.
 
 ### Zadanie: Utwórz repozytorium i zatwierdź kod  
 
 > Obejrzyj wideo
 > 
-> [![Git i GitHub podstawy wideo](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
+> [![Podstawy Git i GitHub](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
 
 1. **Utwórz repozytorium na GitHub**. Na GitHub.com, w zakładce repozytoriów lub z paska nawigacyjnego w prawym górnym rogu, znajdź przycisk **new repo**.
 
@@ -102,7 +102,7 @@ Załóżmy, że masz lokalnie folder z projektem kodu i chcesz zacząć śledzi�
    git add .
    ```
 
-   Argument `git add` plus `.` oznacza, że wszystkie Twoje pliki i zmiany zostaną dodane do śledzenia. 
+   Argument `git add` plus `.` wskazuje, że wszystkie Twoje pliki i zmiany są gotowe do śledzenia. 
 
 1. **Dodaj wybrane pliki do śledzenia**
 
@@ -128,15 +128,15 @@ Załóżmy, że masz lokalnie folder z projektem kodu i chcesz zacząć śledzi�
 
    To polecenie pozwala cofnąć etapowanie tylko konkretnego pliku, którego nie chcesz uwzględniać w następnym zatwierdzeniu.
 
-1. **Utrwal swoją pracę**. Na tym etapie dodałeś pliki do tzw. _obszaru etapowania_. Miejsca, w którym Git śledzi Twoje pliki. Aby zmiana była trwała, musisz _zatwierdzić_ pliki. Aby to zrobić, tworzysz _commit_ za pomocą polecenia `git commit`. _Commit_ reprezentuje punkt zapisu w historii Twojego repozytorium. Wpisz następujące polecenie, aby utworzyć _commit_:
+1. **Utrwal swoją pracę**. Na tym etapie dodałeś pliki do tzw. _obszaru etapowania_. Miejsca, w którym Git śledzi Twoje pliki. Aby zmiana była trwała, musisz _zatwierdzić_ pliki. Aby to zrobić, tworzysz _commit_ za pomocą polecenia `git commit`. _Commit_ reprezentuje punkt zapisu w historii Twojego repozytorium. Wpisz poniższe polecenie, aby utworzyć _commit_:
 
    ```bash
    git commit -m "first commit"
    ```
 
-   To zatwierdza wszystkie Twoje pliki, dodając wiadomość "first commit". W przyszłych wiadomościach commit warto być bardziej opisowym, aby przekazać, jakiego rodzaju zmiany zostały dokonane.
+   To zatwierdza wszystkie Twoje pliki, dodając wiadomość "first commit". W przyszłych wiadomościach commit warto być bardziej opisowym, aby przekazać, jaki rodzaj zmiany został dokonany.
 
-1. **Połącz swoje lokalne repozytorium Git z GitHub**. Repozytorium Git na Twoim komputerze jest przydatne, ale w pewnym momencie będziesz chciał mieć kopię zapasową swoich plików gdzieś indziej i zaprosić innych do pracy nad swoim repozytorium. Jednym z takich miejsc jest GitHub. Pamiętaj, że już utworzyliśmy repozytorium na GitHub, więc jedyne, co musimy zrobić, to połączyć nasze lokalne repozytorium Git z GitHub. Polecenie `git remote add` właśnie to zrobi. Wpisz następujące polecenie:
+1. **Połącz lokalne repozytorium Git z GitHub**. Repozytorium Git na Twoim komputerze jest przydatne, ale w pewnym momencie będziesz chciał mieć kopię zapasową swoich plików gdzieś indziej i zaprosić innych do pracy nad swoim repozytorium. Jednym z takich miejsc jest GitHub. Pamiętaj, że już utworzyliśmy repozytorium na GitHub, więc jedyne, co musimy zrobić, to połączyć lokalne repozytorium Git z GitHub. Polecenie `git remote add` właśnie to zrobi. Wpisz poniższe polecenie:
 
    > Uwaga, zanim wpiszesz polecenie, przejdź na stronę swojego repozytorium GitHub, aby znaleźć URL repozytorium. Użyjesz go w poniższym poleceniu. Zastąp ```https://github.com/username/repository_name.git``` swoim URL GitHub.
 
@@ -146,17 +146,17 @@ Załóżmy, że masz lokalnie folder z projektem kodu i chcesz zacząć śledzi�
 
    To tworzy _remote_, czyli połączenie, nazwane "origin", wskazujące na repozytorium GitHub, które utworzyłeś wcześniej.
 
-1. **Wyślij lokalne pliki na GitHub**. Do tej pory utworzyłeś _połączenie_ między lokalnym repozytorium a repozytorium GitHub. Wyślij te pliki na GitHub za pomocą następującego polecenia `git push`, jak poniżej: 
-   
+1. **Wyślij lokalne pliki na GitHub**. Do tej pory utworzyłeś _połączenie_ między lokalnym repozytorium a repozytorium GitHub. Wyślij te pliki na GitHub za pomocą poniższego polecenia `git push`:
+
    > Uwaga, nazwa Twojej gałęzi może być domyślnie inna niż ```main```.
 
    ```bash
    git push -u origin main
    ```
 
-   To wysyła Twoje zatwierdzenia w gałęzi "main" na GitHub.
+   To wysyła Twoje commity w gałęzi "main" na GitHub. Ustawienie gałęzi `upstream`, w tym `-u` w poleceniu, tworzy link między lokalną gałęzią a gałęzią zdalną, dzięki czemu możesz po prostu używać git push lub git pull bez określania nazwy gałęzi w przyszłości. Git automatycznie użyje gałęzi upstream i nie będziesz musiał jawnie określać nazwy gałęzi w przyszłych poleceniach.
 
-2. **Dodawanie kolejnych zmian**. Jeśli chcesz kontynuować wprowadzanie zmian i wysyłanie ich na GitHub, wystarczy użyć następujących trzech poleceń:
+2. **Dodawanie kolejnych zmian**. Jeśli chcesz kontynuować wprowadzanie zmian i wysyłanie ich na GitHub, wystarczy użyć poniższych trzech poleceń:
 
    ```bash
    git add .
@@ -164,12 +164,12 @@ Załóżmy, że masz lokalnie folder z projektem kodu i chcesz zacząć śledzi�
    git push
    ```
 
-   > Wskazówka, możesz również rozważyć użycie pliku `.gitignore`, aby zapobiec śledzeniu plików, których nie chcesz umieszczać na GitHub - na przykład pliku z notatkami, który przechowujesz w tym samym folderze, ale nie powinien znaleźć się w publicznym repozytorium. Możesz znaleźć szablony plików `.gitignore` na stronie [.gitignore templates](https://github.com/github/gitignore).
+   > Wskazówka, możesz również rozważyć użycie pliku `.gitignore`, aby zapobiec śledzeniu plików, których nie chcesz umieszczać na GitHub - na przykład pliku z notatkami, który przechowujesz w tym samym folderze, ale nie ma miejsca w publicznym repozytorium. Możesz znaleźć szablony plików `.gitignore` na stronie [.gitignore templates](https://github.com/github/gitignore).
 
 #### Wiadomości commit
 
 Świetna wiadomość commit w linii tematu powinna kończyć następujące zdanie:
-Jeśli zostanie zastosowana, ten commit <tu wpisz swoją linię tematu>
+Jeśli zastosowane, ten commit <Twoja linia tematu tutaj>
 
 W temacie używaj trybu rozkazującego, czasu teraźniejszego: "zmień" zamiast "zmieniono" czy "zmienia". 
 Podobnie w treści (opcjonalnej) używaj trybu rozkazującego, czasu teraźniejszego. Treść powinna zawierać motywację dla zmiany i kontrastować ją z wcześniejszym zachowaniem. Wyjaśniasz `dlaczego`, a nie `jak`.
@@ -178,24 +178,25 @@ Podobnie w treści (opcjonalnej) używaj trybu rozkazującego, czasu teraźniejs
 
 ### Zadanie: Współpraca
 
-Głównym powodem umieszczania rzeczy na GitHub było umożliwienie współpracy z innymi programistami.
+Głównym powodem umieszczania rzeczy na GitHub było umożliwienie współpracy z innymi deweloperami.
 
 ## Praca nad projektami z innymi
 
 > Obejrzyj wideo
 >
-> [![Git i GitHub podstawy wideo](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
+> [![Podstawy Git i GitHub](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
-W swoim repozytorium przejdź do `Insights > Community`, aby zobaczyć, jak Twój projekt wypada w porównaniu do zalecanych standardów społeczności.
+W swoim repozytorium przejdź do `Insights > Community`, aby zobaczyć, jak Twój projekt wypada w porównaniu z zalecanymi standardami społeczności.
 
    Oto kilka rzeczy, które mogą poprawić Twoje repozytorium GitHub:
    - **Opis**. Czy dodałeś opis swojego projektu?
    - **README**. Czy dodałeś README? GitHub oferuje wskazówki dotyczące pisania [README](https://docs.github.com/articles/about-readmes/?WT.mc_id=academic-77807-sagibbon).
    - **Wytyczne dotyczące współpracy**. Czy Twój projekt ma [wytyczne dotyczące współpracy](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/?WT.mc_id=academic-77807-sagibbon)?
-   - **Kodeks postępowania**. Czy dodałeś [Kodeks postępowania](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/)?
-   - **Licencja**. Być może najważniejsze, czy dodałeś [licencję](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
+   - **Kodeks postępowania**. [Kodeks postępowania](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/),
+   - **Licencja**. Być może najważniejsze, [licencja](https://docs.github.com/articles/adding-a-license-to-a-repository/)?
 
-Wszystkie te zasoby będą korzystne dla nowych członków zespołu. Są to zazwyczaj rzeczy, na które nowi współpracownicy zwracają uwagę, zanim jeszcze spojrzą na Twój kod, aby dowiedzieć się, czy Twój projekt jest odpowiednim miejscem, w którym warto spędzać czas.
+
+Wszystkie te zasoby będą korzystne dla onboardingu nowych członków zespołu. Są to zazwyczaj rzeczy, na które nowi współpracownicy zwracają uwagę, zanim jeszcze spojrzą na Twój kod, aby dowiedzieć się, czy Twój projekt jest odpowiednim miejscem, w którym warto spędzać czas.
 
 ✅ Pliki README, choć wymagają czasu na przygotowanie, są często zaniedbywane przez zajętych opiekunów. Czy możesz znaleźć przykład szczególnie opisowego README? Uwaga: istnieją [narzędzia pomagające tworzyć dobre README](https://www.makeareadme.com/), które możesz wypróbować.
 
@@ -204,13 +205,13 @@ Wszystkie te zasoby będą korzystne dla nowych członków zespołu. Są to zazw
 Dokumenty dotyczące współpracy pomagają ludziom przyczyniać się do projektu. Wyjaśniają, jakiego rodzaju wkładu szukasz i jak działa proces. Współpracownicy będą musieli przejść przez szereg kroków, aby móc przyczynić się do Twojego repozytorium na GitHub:
 
 1. **Forkowanie Twojego repozytorium**. Prawdopodobnie będziesz chciał, aby ludzie _forkowali_ Twój projekt. Forkowanie oznacza utworzenie repliki Twojego repozytorium na ich profilu GitHub.
-1. **Klonowanie**. Następnie sklonują projekt na swój lokalny komputer. 
-1. **Utworzenie gałęzi**. Poproś ich o utworzenie _gałęzi_ dla swojej pracy. 
-1. **Skupienie się na jednej zmianie**. Poproś współpracowników, aby skoncentrowali swoje zmiany na jednej rzeczy naraz - w ten sposób szanse na to, że będziesz mógł _scalić_ ich pracę, są większe. Wyobraź sobie, że naprawiają błąd, dodają nową funkcję i aktualizują kilka testów - co jeśli chcesz lub możesz zaimplementować tylko 2 z 3, albo 1 z 3 zmian?
+1. **Klonowanie**. Następnie sklonują projekt na swój lokalny komputer.
+1. **Utworzenie gałęzi**. Poproś ich o utworzenie _gałęzi_ dla swojej pracy.
+1. **Skupienie się na jednej zmianie**. Poproś współpracowników, aby skoncentrowali swoje zmiany na jednej rzeczy naraz - w ten sposób szanse na to, że będziesz mógł _scalić_ ich pracę, są większe. Wyobraź sobie, że naprawiają błąd, dodają nową funkcję i aktualizują kilka testów - co jeśli chcesz lub możesz zaimplementować tylko 2 z 3, lub 1 z 3 zmian?
 
 ✅ Wyobraź sobie sytuację, w której gałęzie są szczególnie istotne dla pisania i dostarczania dobrego kodu. Jakie przypadki użycia przychodzą Ci na myśl?
 
-> Uwaga, bądź zmianą, którą chcesz zobaczyć na świecie, i twórz gałęzie dla swojej własnej pracy. Każde zatwierdzenie, które wykonasz, będzie wykonane na gałęzi, na której obecnie się znajdujesz. Użyj `git status`, aby zobaczyć, na której gałęzi jesteś.
+> Uwaga, bądź zmianą, którą chcesz zobaczyć na świecie, i twórz gałęzie dla swojej własnej pracy. Wszystkie commity, które wykonasz, będą wykonane na gałęzi, na której obecnie jesteś "zalogowany". Użyj `git status`, aby zobaczyć, na której gałęzi się znajdujesz.
 
 Przejdźmy przez proces pracy współpracownika. Załóżmy, że współpracownik już _forkował_ i _sklonował_ repozytorium, więc ma gotowe repozytorium Git na swoim lokalnym komputerze:
 
@@ -226,7 +227,7 @@ Przejdźmy przez proces pracy współpracownika. Załóżmy, że współpracowni
    git switch [branch-name]
    ```
 
-1. **Wykonaj pracę**. Na tym etapie chcesz wprowadzić swoje zmiany. Nie zapomnij poinformować o tym Git za pomocą następujących poleceń:
+1. **Wykonaj pracę**. Na tym etapie chcesz dodać swoje zmiany. Nie zapomnij poinformować o tym Git za pomocą poniższych poleceń:
 
    ```bash
    git add .
@@ -235,21 +236,26 @@ Przejdźmy przez proces pracy współpracownika. Załóżmy, że współpracowni
 
    Upewnij się, że nadajesz swojemu commitowi dobrą nazwę, zarówno dla siebie, jak i dla opiekuna repozytorium, któremu pomagasz.
 
-1. **Połącz swoją pracę z gałęzią `main`**. W pewnym momencie kończysz pracę i chcesz połączyć ją z gałęzią `main`. Gałąź `main` mogła się zmienić w międzyczasie, więc upewnij się, że najpierw ją zaktualizujesz do najnowszej wersji za pomocą następujących poleceń:
+1. **Połącz swoją pracę z gałęzią `main`**. W pewnym momencie kończysz pracę i chcesz połączyć ją z gałęzią `main`. Gałąź `main` mogła się zmienić w międzyczasie, więc upewnij się, że najpierw ją zaktualizujesz za pomocą poniższych poleceń:
 
    ```bash
    git switch main
    git pull
    ```
 
-   Na tym etapie chcesz upewnić się, że wszelkie _konflikty_, sytuacje, w których Git nie może łatwo _połączyć_ zmian, występują w Twojej gałęzi roboczej. Dlatego uruchom następujące polecenia:
+   Na tym etapie chcesz upewnić się, że wszelkie _konflikty_, sytuacje, w których Git nie może łatwo _połączyć_ zmian, występują w Twojej gałęzi roboczej. Dlatego uruchom poniższe polecenia:
 
    ```bash
    git switch [branch_name]
    git merge main
    ```
 
-   To wprowadzi wszystkie zmiany z `main` do Twojej gałęzi i miejmy nadzieję, że możesz po prostu kontynuować. Jeśli nie, VS Code wskaże, gdzie Git jest _zdezorientowany_, a Ty po prostu zmienisz odpowiednie pliki, aby określić, która zawartość jest najbardziej dokładna.
+   Polecenie `git merge main` wprowadzi wszystkie zmiany z `main` do Twojej gałęzi. Miejmy nadzieję, że możesz po prostu kontynuować. Jeśli nie, VS Code wskaże, gdzie Git jest _zdezorientowany_, a Ty po prostu zmienisz odpowiednie pliki, aby wskazać, która zawartość jest najbardziej dokładna.
+
+   Aby przełączyć się na inną gałąź, użyj nowoczesnego polecenia `git switch`:
+   ```bash
+   git switch [branch_name]
+
 
 1. **Wyślij swoją pracę na GitHub**. Wysłanie swojej pracy na GitHub oznacza dwie rzeczy. Wypchnięcie swojej gałęzi do repozytorium i otwarcie PR, Pull Request.
 
@@ -258,29 +264,29 @@ Przejdźmy przez proces pracy współpracownika. Załóżmy, że współpracowni
    ```
 
    Powyższe polecenie tworzy gałąź w Twoim repozytorium forkowanym.
+1. **Otwórz PR**. Następnie chcesz otworzyć PR. Robisz to, przechodząc do sforkowanego repozytorium na GitHub. Zobaczysz na GitHubie wskazówkę, która pyta, czy chcesz utworzyć nowy PR. Klikasz to i zostajesz przeniesiony do interfejsu, w którym możesz zmienić tytuł wiadomości commit, nadać jej bardziej odpowiedni opis. Teraz właściciel repozytorium, które sforkowałeś, zobaczy ten PR i _trzymamy kciuki_, że doceni go i _scali_ Twój PR. Jesteś teraz współtwórcą, hurra :)
 
-1. **Otwórz PR**. Następnie chcesz otworzyć PR. Robisz to, przechodząc do forkowanego repozytorium na GitHub. Zobaczysz wskazówkę na GitHub, gdzie pyta, czy chcesz utworzyć nowy PR, kliknij to, a zostaniesz przeniesiony do interfejsu, w którym możesz zmienić tytuł wiadomości commit, nadać jej bardziej odpowiedni opis. Teraz opiekun repozytorium, które forkowałeś, zobaczy ten PR i _trzymaj kciuki_, doceni go i _scali_ Twój PR. Jesteś teraz współpracownikiem, hurra :)
-
-1. **Posprzątaj**. Uważa się za dobrą praktykę _posprzątanie_ po pomyślnym scaleniu PR. Chcesz usunąć zarówno lokalną gałąź, jak i gałąź, którą wypchnąłeś na GitHub. Najpierw usuń ją lokalnie za pomocą następującego polecenia: 
+1. **Posprzątaj**. Uważa się za dobrą praktykę _posprzątanie_ po pomyślnym scaleniu PR. Chcesz posprzątać zarówno swoją lokalną gałąź, jak i gałąź, którą wypchnąłeś na GitHub. Najpierw usuń ją lokalnie za pomocą następującego polecenia:
 
    ```bash
    git branch -d [branch-name]
    ```
 
-   Upewnij się, że przechodzisz na stronę GitHub dla forkowanego repozytorium i usuwasz zdalną gałąź, którą właśnie tam wypchnąłeś.
-`Pull request` wydaje się być dziwnym określeniem, ponieważ tak naprawdę chcesz "wypchnąć" swoje zmiany do projektu. Jednak osoba odpowiedzialna za projekt (właściciel projektu) lub główny zespół musi rozważyć Twoje zmiany przed ich połączeniem z "główną" gałęzią projektu, więc w rzeczywistości prosisz o decyzję dotyczącą zmiany od osoby zarządzającej projektem.
+   Następnie przejdź na stronę GitHub dla sforkowanego repozytorium i usuń zdalną gałąź, którą właśnie tam wypchnąłeś.
 
-Pull request to miejsce, gdzie można porównać i omówić różnice wprowadzone w gałęzi, korzystając z recenzji, komentarzy, zintegrowanych testów i innych narzędzi. Dobry pull request przestrzega mniej więcej tych samych zasad co wiadomość commit. Możesz dodać odniesienie do problemu w trackerze problemów, na przykład gdy Twoja praca rozwiązuje jakiś problem. Robi się to za pomocą `#`, po którym następuje numer problemu. Na przykład `#97`.
+`Pull request` wydaje się być dziwnym terminem, ponieważ tak naprawdę chcesz wypchnąć swoje zmiany do projektu. Ale właściciel projektu lub główny zespół musi rozważyć Twoje zmiany przed scaleniem ich z "główną" gałęzią projektu, więc tak naprawdę prosisz o decyzję dotyczącą zmiany od właściciela projektu.
 
-🤞Trzymamy kciuki, że wszystkie testy przejdą pomyślnie i właściciel(e) projektu połączą Twoje zmiany z projektem🤞
+Pull request to miejsce, w którym można porównać i omówić różnice wprowadzone w gałęzi, z recenzjami, komentarzami, zintegrowanymi testami i nie tylko. Dobry pull request przestrzega mniej więcej tych samych zasad co wiadomość commit. Możesz dodać odniesienie do problemu w trackerze problemów, na przykład gdy Twoja praca rozwiązuje jakiś problem. Robi się to za pomocą `#`, po którym następuje numer problemu. Na przykład `#97`.
 
-Zaktualizuj swoją lokalną gałąź roboczą o wszystkie nowe commity z odpowiadającej jej zdalnej gałęzi na GitHubie:
+🤞Trzymamy kciuki, że wszystkie testy przejdą pomyślnie i właściciel(e) projektu scalą Twoje zmiany z projektem🤞
+
+Zaktualizuj swoją bieżącą lokalną gałąź roboczą o wszystkie nowe commity z odpowiadającej jej zdalnej gałęzi na GitHub:
 
 `git pull`
 
 ## Jak przyczynić się do rozwoju open source
 
-Najpierw znajdź repozytorium (lub **repo**) na GitHubie, które Cię interesuje i do którego chciałbyś wnieść zmiany. Będziesz chciał skopiować jego zawartość na swój komputer.
+Najpierw znajdź repozytorium (lub **repo**) na GitHub, które Cię interesuje i do którego chciałbyś wprowadzić zmiany. Chcesz skopiować jego zawartość na swój komputer.
 
 ✅ Dobrym sposobem na znalezienie repozytoriów przyjaznych dla początkujących jest [wyszukiwanie według tagu 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
@@ -288,31 +294,31 @@ Najpierw znajdź repozytorium (lub **repo**) na GitHubie, które Cię interesuje
 
 Istnieje kilka sposobów kopiowania kodu. Jednym z nich jest "klonowanie" zawartości repozytorium za pomocą HTTPS, SSH lub GitHub CLI (Command Line Interface).
 
-Otwórz terminal i sklonuj repozytorium w następujący sposób:
+Otwórz terminal i sklonuj repozytorium w ten sposób:
 `git clone https://github.com/ProjectURL`
 
 Aby pracować nad projektem, przejdź do odpowiedniego folderu:
 `cd ProjectURL`
 
-Możesz również otworzyć cały projekt za pomocą [Codespaces](https://github.com/features/codespaces), wbudowanego edytora kodu / środowiska programistycznego w chmurze od GitHuba, lub [GitHub Desktop](https://desktop.github.com/).
+Możesz również otworzyć cały projekt za pomocą [Codespaces](https://github.com/features/codespaces), wbudowanego edytora kodu / środowiska programistycznego w chmurze GitHub, lub [GitHub Desktop](https://desktop.github.com/).
 
-Na koniec możesz pobrać kod w formie spakowanego folderu.
+Na koniec możesz pobrać kod w spakowanym folderze.
 
-### Kilka ciekawych rzeczy o GitHubie
+### Kilka ciekawych rzeczy o GitHub
 
-Możesz oznaczyć gwiazdką, obserwować lub "forkować" dowolne publiczne repozytorium na GitHubie. Swoje oznaczone gwiazdką repozytoria znajdziesz w menu rozwijanym w prawym górnym rogu. To jak zakładki, ale dla kodu.
+Możesz oznaczyć gwiazdką, obserwować i/lub "sforkować" każde publiczne repozytorium na GitHub. Znajdziesz swoje oznaczone gwiazdką repozytoria w menu rozwijanym w prawym górnym rogu. To jak zakładki, ale dla kodu.
 
-Projekty mają tracker problemów, zazwyczaj na GitHubie w zakładce "Issues", chyba że wskazano inaczej, gdzie ludzie omawiają problemy związane z projektem. Zakładka Pull Requests to miejsce, gdzie ludzie omawiają i recenzują zmiany, które są w trakcie realizacji.
+Projekty mają tracker problemów, najczęściej na GitHub w zakładce "Issues", chyba że wskazano inaczej, gdzie ludzie omawiają problemy związane z projektem. Zakładka Pull Requests to miejsce, gdzie ludzie omawiają i recenzują zmiany, które są w toku.
 
 Projekty mogą również mieć dyskusje na forach, listach mailingowych lub kanałach czatu, takich jak Slack, Discord czy IRC.
 
-✅ Rozejrzyj się po swoim nowym repozytorium na GitHubie i spróbuj kilku rzeczy, takich jak edytowanie ustawień, dodawanie informacji do repozytorium i tworzenie projektu (np. tablicy Kanban). Możesz zrobić naprawdę wiele!
+✅ Rozejrzyj się po swoim nowym repozytorium na GitHub i spróbuj kilku rzeczy, takich jak edytowanie ustawień, dodawanie informacji do repozytorium i tworzenie projektu (np. tablicy Kanban). Możesz zrobić naprawdę wiele!
 
 ---
 
 ## 🚀 Wyzwanie
 
-Połącz siły z przyjacielem, aby pracować nad kodem nawzajem. Stwórzcie wspólnie projekt, forkowanie kodu, tworzenie gałęzi i łączenie zmian.
+Połącz siły z przyjacielem, aby pracować nad kodem nawzajem. Stwórzcie wspólnie projekt, sforkujcie kod, utwórzcie gałęzie i scalcie zmiany.
 
 ## Quiz po wykładzie
 [Quiz po wykładzie](https://ff-quizzes.netlify.app/web/en/)
@@ -325,13 +331,13 @@ Przeczytaj więcej o [przyczynianiu się do rozwoju oprogramowania open source](
 
 Ćwicz, ćwicz, ćwicz. GitHub oferuje świetne ścieżki edukacyjne dostępne na [skills.github.com](https://skills.github.com):
 
-- [Pierwszy tydzień na GitHubie](https://skills.github.com/#first-week-on-github)
+- [Pierwszy tydzień na GitHub](https://skills.github.com/#first-week-on-github)
 
 Znajdziesz tam również bardziej zaawansowane kursy.
 
 ## Zadanie
 
-Ukończ [kurs Pierwszy tydzień na GitHubie](https://skills.github.com/#first-week-on-github)
+Ukończ kurs [Pierwszy tydzień na GitHub](https://skills.github.com/#first-week-on-github)
 
 ---
 

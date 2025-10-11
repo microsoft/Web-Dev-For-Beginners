@@ -1,47 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-26T21:24:52+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T09:57:07+00:00",
   "source_file": "for-teachers.md",
   "language_code": "da"
 }
 -->
-## For undervisere
+### For undervisere
 
-Vil du bruge dette pensum i dit klasseværelse? Du er meget velkommen til det!
+Du er velkommen til at bruge dette pensum i din undervisning. Det fungerer problemfrit med GitHub Classroom og førende LMS-platforme, og det kan også bruges som et selvstændigt repo med dine elever.
 
-Faktisk kan du bruge det direkte på GitHub ved at bruge GitHub Classroom.
+### Brug med GitHub Classroom
 
-For at gøre det, skal du forgrene dette repo. Du skal oprette et repo for hver lektion, så du bliver nødt til at udtrække hver mappe til et separat repo. På den måde kan [GitHub Classroom](https://classroom.github.com/classrooms) håndtere hver lektion individuelt.
+For at administrere lektioner og opgaver pr. hold, opret et repository pr. lektion, så GitHub Classroom kan tilknytte hver opgave uafhængigt.
 
-Disse [fulde instruktioner](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) giver dig en idé om, hvordan du opsætter dit klasseværelse.
+- Fork dette repo til din organisation.
+- Opret et separat repo for hver lektion ved at udtrække hver lektionmappe til sit eget repository.
+  - Mulighed A: Opret tomme repos (et pr. lektion) og kopier indholdet af lektionmappen ind i hver.
+  - Mulighed B: Brug en metode, der bevarer Git-historikken (f.eks. split en mappe til et nyt repo), hvis du har brug for oprindelse.
+- I GitHub Classroom, opret en opgave pr. lektion og peg den til det tilsvarende lektionrepo.
+- Anbefalede indstillinger:
+  - Repository-synlighed: privat for elevarbejde.
+  - Brug startkode fra lektionrepoets standardgren.
+  - Tilføj issue- og pull request-skabeloner til quizzer og indsendelser.
+  - Konfigurer eventuelt autogradering og tests, hvis dine lektioner inkluderer dem.
+- Konventioner, der hjælper:
+  - Repository-navne som lesson-01-intro, lesson-02-html osv.
+  - Labels: quiz, assignment, needs-review, late, resubmission.
+  - Tags/releases pr. hold (f.eks. v2025-term1).
 
-## Brug i Moodle, Canvas eller Blackboard
+Tip: Undgå at gemme repositories i synkroniserede mapper (f.eks. OneDrive/Google Drive) for at forhindre Git-konflikter på Windows.
 
-Dette pensum fungerer godt i disse Learning Management Systems! Brug [Moodle-uploadfilen](../../../../../../../teaching-files/webdev-moodle.mbz) for det fulde indhold, eller prøv [Common Cartridge-filen](../../../../../../../teaching-files/webdev-common-cartridge.imscc), som indeholder noget af indholdet. Moodle Cloud understøtter ikke fulde Common Cartridge-eksporter, så det er bedre at bruge Moodle-downloadfilen, som kan uploades til Canvas. Fortæl os gerne, hvordan vi kan forbedre denne oplevelse.
+### Brug med Moodle, Canvas eller Blackboard
+
+Dette pensum inkluderer importbare pakker til almindelige LMS-arbejdsgange.
+
+- Moodle: Brug Moodle-uploadfilen [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) til at indlæse hele kurset.
+- Common Cartridge: Brug Common Cartridge-filen [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) for bredere LMS-kompatibilitet.
+- Bemærkninger:
+  - Moodle Cloud har begrænset Common Cartridge-support. Foretræk Moodle-filen ovenfor, som også kan uploades til Canvas.
+  - Efter import, gennemgå moduler, deadlines og quizindstillinger for at matche din terminsplan.
 
 ![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.da.png)
-> Pensum i et Moodle-klasseværelse
+> Pensum i et Moodle-klasselokale
 
 ![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.da.png)
 > Pensum i Canvas
 
-## Brug af repoet som det er
+### Brug repoet direkte (uden Classroom)
 
-Hvis du ønsker at bruge dette repo, som det er, uden at bruge GitHub Classroom, kan det også lade sig gøre. Du skal blot kommunikere med dine elever om, hvilken lektion de skal arbejde med.
+Hvis du foretrækker ikke at bruge GitHub Classroom, kan du køre kurset direkte fra dette repo.
 
-I et onlineformat (Zoom, Teams eller andre) kan du oprette breakout-rum til quizzerne og vejlede eleverne, så de er klar til at lære. Derefter kan du invitere eleverne til quizzerne og få dem til at indsende deres svar som 'issues' på et bestemt tidspunkt. Du kan gøre det samme med opgaver, hvis du ønsker, at eleverne skal arbejde sammen i det åbne.
+- Synkrone/online formater (Zoom/Teams):
+  - Kør korte mentorledede opvarmninger; brug breakout rooms til quizzer.
+  - Annoncer et tidsvindue for quizzer; elever indsender svar som GitHub Issues.
+  - Til samarbejdsopgaver arbejder elever i offentlige lektionrepos og åbner pull requests.
+- Private/asynkrone formater:
+  - Elever forker hver lektion til deres egne **private** repos og tilføjer dig som samarbejdspartner.
+  - De indsender via Issues (quizzer) og Pull Requests (opgaver) på dit klasselokale-repo eller deres private forks.
 
-Hvis du foretrækker et mere privat format, kan du bede dine elever om at forgrene pensum, lektion for lektion, til deres egne private GitHub-repos og give dig adgang. Derefter kan de gennemføre quizzer og opgaver privat og indsende dem til dig via issues på dit klasseværelsesrepo.
+### Bedste praksis
 
-Der er mange måder at få dette til at fungere i et online klasseværelsesformat. Fortæl os gerne, hvad der fungerer bedst for dig!
+- Giv en introduktionslektion om Git/GitHub-grundlæggende, Issues og PRs.
+- Brug tjeklister i Issues til opgaver/quizzer med flere trin.
+- Tilføj CONTRIBUTING.md og CODE_OF_CONDUCT.md for at sætte klasselokalenormer.
+- Tilføj tilgængelighedsnoter (alt-tekst, undertekster) og tilbyd printbare PDF'er.
+- Versionér dit indhold pr. termin og frys lektionrepos efter offentliggørelse.
 
-## Giv os din feedback!
+### Feedback og support
 
-Vi ønsker at gøre dette pensum brugbart for dig og dine elever. Kontakt os på [Teacher corner](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) og opret en [**ny issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) for eventuelle ønsker, fejl og feedback.
+Vi ønsker, at dette pensum skal fungere for dig og dine elever. Opret venligst et nyt Issue i dette repository for fejl, forespørgsler eller forbedringer, eller start en diskussion i Teacher Corner.
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

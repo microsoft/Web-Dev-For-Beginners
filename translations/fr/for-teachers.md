@@ -1,45 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-23T22:19:30+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T08:22:54+00:00",
   "source_file": "for-teachers.md",
   "language_code": "fr"
 }
 -->
-## Pour les enseignants
+### Pour les enseignants
 
-Souhaitez-vous utiliser ce programme dans votre classe ? N'hésitez pas !
+Vous êtes invités à utiliser ce programme dans votre classe. Il fonctionne parfaitement avec GitHub Classroom et les principales plateformes LMS, et peut également être utilisé comme un dépôt autonome avec vos élèves.
 
-En fait, vous pouvez l'utiliser directement sur GitHub en utilisant GitHub Classroom.
+### Utilisation avec GitHub Classroom
 
-Pour ce faire, clonez ce dépôt. Vous devrez créer un dépôt pour chaque leçon, donc il faudra extraire chaque dossier dans un dépôt séparé. Ainsi, [GitHub Classroom](https://classroom.github.com/classrooms) pourra gérer chaque leçon individuellement.
+Pour gérer les leçons et les devoirs par cohorte, créez un dépôt par leçon afin que GitHub Classroom puisse associer chaque devoir de manière indépendante.
 
-Ces [instructions complètes](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) vous donneront une idée de la manière de configurer votre classe.
+- Faites un fork de ce dépôt dans votre organisation.
+- Créez un dépôt séparé pour chaque leçon en extrayant chaque dossier de leçon dans son propre dépôt.
+  - Option A : Créez des dépôts vides (un par leçon) et copiez le contenu du dossier de la leçon dans chacun.
+  - Option B : Utilisez une approche qui préserve l'historique Git (par exemple, divisez un dossier en un nouveau dépôt) si vous avez besoin de conserver la provenance.
+- Dans GitHub Classroom, créez un devoir par leçon et pointez-le vers le dépôt correspondant.
+- Paramètres recommandés :
+  - Visibilité du dépôt : privée pour le travail des élèves.
+  - Utilisez le code de départ de la branche par défaut du dépôt de la leçon.
+  - Ajoutez des modèles d'issues et de pull requests pour les quiz et les soumissions.
+  - Configurez éventuellement l'auto-évaluation et les tests si vos leçons en incluent.
+- Conventions utiles :
+  - Noms de dépôts comme lesson-01-intro, lesson-02-html, etc.
+  - Étiquettes : quiz, assignment, needs-review, late, resubmission.
+  - Tags/versions par cohorte (par exemple, v2025-term1).
 
-## Utilisation dans Moodle, Canvas ou Blackboard
+Astuce : Évitez de stocker les dépôts dans des dossiers synchronisés (par exemple, OneDrive/Google Drive) pour éviter les conflits Git sous Windows.
 
-Ce programme fonctionne très bien dans ces systèmes de gestion de l'apprentissage ! Utilisez le [fichier d'importation Moodle](../../../../../../../teaching-files/webdev-moodle.mbz) pour accéder à tout le contenu, ou essayez le [fichier Common Cartridge](../../../../../../../teaching-files/webdev-common-cartridge.imscc) qui contient une partie du contenu. Moodle Cloud ne prend pas en charge les exports complets de Common Cartridge, il est donc préférable d'utiliser le fichier Moodle qui peut être importé dans Canvas. Faites-nous savoir comment nous pouvons améliorer cette expérience.
+### Utilisation avec Moodle, Canvas ou Blackboard
 
-![Moodle](/teaching-files/moodle.png)
+Ce programme inclut des packages importables pour les flux de travail LMS courants.
+
+- Moodle : Utilisez le fichier d'importation Moodle [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) pour charger le cours complet.
+- Common Cartridge : Utilisez le fichier Common Cartridge [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) pour une compatibilité LMS plus large.
+- Remarques :
+  - Moodle Cloud a un support limité pour Common Cartridge. Préférez le fichier Moodle ci-dessus, qui peut également être importé dans Canvas.
+  - Après l'importation, vérifiez les modules, les dates d'échéance et les paramètres des quiz pour les adapter à votre calendrier.
+
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.fr.png)
 > Le programme dans une classe Moodle
 
-![Canvas](/teaching-files/canvas.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.fr.png)
 > Le programme dans Canvas
 
-## Utilisation du dépôt tel quel
+### Utilisation directe du dépôt (sans Classroom)
 
-Si vous souhaitez utiliser ce dépôt tel qu'il est, sans passer par GitHub Classroom, cela est également possible. Vous devrez communiquer avec vos étudiants pour leur indiquer quelle leçon suivre ensemble.
+Si vous préférez ne pas utiliser GitHub Classroom, vous pouvez suivre le cours directement depuis ce dépôt.
 
-Dans un format en ligne (Zoom, Teams ou autre), vous pourriez créer des salles de discussion pour les quiz et encadrer les étudiants afin de les préparer à apprendre. Ensuite, invitez les étudiants à participer aux quiz et à soumettre leurs réponses sous forme de 'issues' à un moment donné. Vous pourriez faire de même avec les devoirs si vous souhaitez que les étudiants travaillent de manière collaborative et ouverte.
+- Formats synchrones/en ligne (Zoom/Teams) :
+  - Organisez des échauffements dirigés par un mentor ; utilisez des salles de discussion pour les quiz.
+  - Annoncez une plage horaire pour les quiz ; les élèves soumettent leurs réponses sous forme d'issues GitHub.
+  - Pour les devoirs collaboratifs, les élèves travaillent dans des dépôts publics de leçons et ouvrent des pull requests.
+- Formats privés/asynchrones :
+  - Les élèves font un fork de chaque leçon dans leurs propres dépôts **privés** et vous ajoutent comme collaborateur.
+  - Ils soumettent via des issues (quiz) et des pull requests (devoirs) sur votre dépôt de classe ou leurs forks privés.
 
-Si vous préférez un format plus privé, demandez à vos étudiants de cloner le programme, leçon par leçon, dans leurs propres dépôts GitHub privés, et donnez-vous accès. Ils pourront alors compléter les quiz et les devoirs de manière privée et vous les soumettre via des issues sur votre dépôt de classe.
+### Bonnes pratiques
 
-Il existe de nombreuses façons de faire fonctionner ce programme dans un format de classe en ligne. Faites-nous savoir ce qui fonctionne le mieux pour vous !
+- Proposez une leçon d'orientation sur les bases de Git/GitHub, les issues et les PRs.
+- Utilisez des listes de contrôle dans les issues pour les quiz/devoirs en plusieurs étapes.
+- Ajoutez un fichier CONTRIBUTING.md et un CODE_OF_CONDUCT.md pour définir les normes de la classe.
+- Ajoutez des notes sur l'accessibilité (texte alternatif, sous-titres) et proposez des PDF imprimables.
+- Versionnez votre contenu par trimestre et bloquez les dépôts de leçons après publication.
 
-## Donnez-nous votre avis !
+### Retour et assistance
 
-Nous souhaitons que ce programme soit adapté à vous et à vos étudiants. Connectez-vous avec nous dans le [coin des enseignants](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) et ouvrez une [**nouvelle issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) pour toute demande, problème ou retour.
+Nous souhaitons que ce programme fonctionne pour vous et vos élèves. Veuillez ouvrir une nouvelle issue dans ce dépôt pour signaler des bugs, faire des demandes ou proposer des améliorations, ou entamez une discussion dans le Teacher Corner.
+
+---
 
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction professionnelle humaine. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

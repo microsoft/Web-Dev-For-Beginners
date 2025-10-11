@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49b58721a71cfda824e2f3e1f46908c6",
-  "translation_date": "2025-08-29T09:09:11+00:00",
+  "original_hash": "b91cbf14240ee59411b96448b994ace1",
+  "translation_date": "2025-10-03T12:28:57+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "id"
 }
 -->
-# Proyek Ekstensi Browser Bagian 3: Pelajari Tentang Tugas Latar Belakang dan Performa
+# Proyek Ekstensi Browser Bagian 3: Pelajari Tugas Latar Belakang dan Performa
 
-## Kuis Sebelum Pelajaran
+## Kuis Pra-Pelajaran
 
-[Kuis sebelum pelajaran](https://ff-quizzes.netlify.app/web/quiz/27)
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/27)
 
-### Pengantar
+### Pendahuluan
 
 Dalam dua pelajaran terakhir dari modul ini, Anda telah belajar cara membuat formulir dan area tampilan untuk data yang diambil dari API. Ini adalah cara yang sangat standar untuk menciptakan kehadiran web di internet. Anda bahkan telah belajar cara menangani pengambilan data secara asinkron. Ekstensi browser Anda hampir selesai.
 
@@ -29,7 +29,7 @@ Hal pertama yang perlu Anda lakukan untuk memastikan situs Anda berjalan dengan 
 
 Tab Performa berisi alat Profiling. Buka sebuah situs web (coba, misalnya, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) dan klik tombol 'Record', lalu segarkan situs tersebut. Hentikan rekaman kapan saja, dan Anda akan dapat melihat rutinitas yang dihasilkan untuk 'script', 'render', dan 'paint' situs tersebut:
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.id.png)
+![Profiler Edge](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.id.png)
 
 ✅ Kunjungi [Dokumentasi Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) tentang panel Performa di Edge
 
@@ -39,27 +39,27 @@ Pilih elemen dari garis waktu profil untuk memperbesar peristiwa yang terjadi sa
 
 Dapatkan snapshot performa halaman Anda dengan memilih bagian dari garis waktu profil dan melihat panel ringkasan:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.id.png)
+![Snapshot Profiler Edge](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.id.png)
 
 Periksa panel Log Peristiwa untuk melihat apakah ada peristiwa yang memakan waktu lebih dari 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.id.png)
+![Log Peristiwa Edge](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.id.png)
 
 ✅ Kenali profiler Anda! Buka alat pengembang di situs ini dan lihat apakah ada hambatan. Apa aset yang paling lambat dimuat? Yang tercepat?
 
 ## Pemeriksaan Profiling
 
-Secara umum, ada beberapa "area masalah" yang harus diperhatikan setiap pengembang web saat membangun situs untuk menghindari kejutan buruk saat tiba waktunya untuk diterapkan ke produksi.
+Secara umum, ada beberapa "area masalah" yang harus diperhatikan setiap pengembang web saat membangun situs untuk menghindari kejutan buruk saat tiba waktunya untuk menerapkan ke produksi.
 
-**Ukuran aset**: Web menjadi lebih 'berat', dan dengan demikian lebih lambat, selama beberapa tahun terakhir. Sebagian dari berat ini berkaitan dengan penggunaan gambar.
+**Ukuran aset**: Web menjadi 'lebih berat', dan dengan demikian lebih lambat, selama beberapa tahun terakhir. Sebagian dari berat ini berkaitan dengan penggunaan gambar.
 
 ✅ Lihat melalui [Internet Archive](https://httparchive.org/reports/page-weight) untuk pandangan historis tentang berat halaman dan lainnya.
 
 Praktik yang baik adalah memastikan bahwa gambar Anda dioptimalkan dan disampaikan pada ukuran dan resolusi yang tepat untuk pengguna Anda.
 
-**Traversals DOM**: Browser harus membangun Model Objek Dokumen berdasarkan kode yang Anda tulis, jadi demi performa halaman yang baik, penting untuk menjaga tag seminimal mungkin, hanya menggunakan dan menata apa yang dibutuhkan halaman. Dalam hal ini, CSS berlebih yang terkait dengan halaman dapat dioptimalkan; gaya yang hanya perlu digunakan pada satu halaman tidak perlu dimasukkan dalam lembar gaya utama, misalnya.
+**Traversals DOM**: Browser harus membangun Model Objek Dokumen berdasarkan kode yang Anda tulis, jadi demi performa halaman yang baik, penting untuk menjaga tag seminimal mungkin, hanya menggunakan dan menata apa yang dibutuhkan halaman. Dalam hal ini, CSS berlebih yang terkait dengan halaman dapat dioptimalkan; gaya yang hanya perlu digunakan di satu halaman tidak perlu dimasukkan dalam lembar gaya utama, misalnya.
 
-**JavaScript**: Setiap pengembang JavaScript harus memperhatikan skrip 'render-blocking' yang harus dimuat sebelum sisa DOM dapat ditelusuri dan di-paint ke browser. Pertimbangkan untuk menggunakan `defer` dengan skrip inline Anda (seperti yang dilakukan dalam modul Terrarium).
+**JavaScript**: Setiap pengembang JavaScript harus memperhatikan skrip 'render-blocking' yang harus dimuat sebelum sisa DOM dapat ditelusuri dan dilukis ke browser. Pertimbangkan untuk menggunakan `defer` dengan skrip inline Anda (seperti yang dilakukan dalam modul Terrarium).
 
 ✅ Coba beberapa situs di [Situs Uji Kecepatan](https://www.webpagetest.org/) untuk mempelajari lebih lanjut tentang pemeriksaan umum yang dilakukan untuk menentukan performa situs.
 
@@ -88,7 +88,7 @@ function calculateColor(value) {
 }
 ```
 
-Apa yang terjadi di sini? Anda memasukkan nilai (intensitas karbon) dari panggilan API yang Anda selesaikan di pelajaran terakhir, lalu Anda menghitung seberapa dekat nilainya dengan indeks yang disajikan dalam array warna. Kemudian Anda mengirimkan nilai warna terdekat tersebut ke runtime chrome.
+Apa yang terjadi di sini? Anda memasukkan nilai (intensitas karbon) dari panggilan API yang Anda selesaikan di pelajaran terakhir, lalu Anda menghitung seberapa dekat nilainya dengan indeks yang disajikan dalam array warna. Kemudian Anda mengirimkan nilai warna terdekat itu ke runtime chrome.
 
 Chrome.runtime memiliki [API](https://developer.chrome.com/extensions/runtime) yang menangani berbagai jenis tugas latar belakang, dan ekstensi Anda memanfaatkan itu:
 
@@ -110,7 +110,6 @@ chrome.runtime.sendMessage({
 		},
 });
 ```
-
 ### Panggil fungsi, eksekusi panggilan
 
 Selanjutnya, panggil fungsi yang baru saja Anda buat dengan menambahkannya ke promise yang dikembalikan oleh API C02Signal:
@@ -125,12 +124,12 @@ Dan akhirnya, di `/dist/background.js`, tambahkan pendengar untuk panggilan aksi
 ```JavaScript
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	if (msg.action === 'updateIcon') {
-		chrome.browserAction.setIcon({ imageData: drawIcon(msg.value) });
+		chrome.action.setIcon({ imageData: drawIcon(msg.value) });
 	}
 });
 //borrowed from energy lollipop extension, nice feature!
 function drawIcon(value) {
-	let canvas = document.createElement('canvas');
+	let canvas = new OffscreenCanvas(200, 200);
 	let context = canvas.getContext('2d');
 
 	context.beginPath();
@@ -154,11 +153,11 @@ Selamat, Anda telah membangun ekstensi browser yang berguna dan belajar lebih ba
 
 ## 🚀 Tantangan
 
-Selidiki beberapa situs web open source yang telah ada sejak lama, dan, berdasarkan riwayat GitHub mereka, lihat apakah Anda dapat menentukan bagaimana mereka dioptimalkan selama bertahun-tahun untuk performa, jika ada. Apa titik masalah yang paling umum?
+Selidiki beberapa situs web open source yang telah ada sejak lama, dan, berdasarkan sejarah GitHub mereka, lihat apakah Anda dapat menentukan bagaimana mereka dioptimalkan selama bertahun-tahun untuk performa, jika ada. Apa titik masalah yang paling umum?
 
-## Kuis Setelah Pelajaran
+## Kuis Pasca-Pelajaran
 
-[Kuis setelah pelajaran](https://ff-quizzes.netlify.app/web/quiz/28)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Tinjauan & Studi Mandiri
 
@@ -173,4 +172,4 @@ Selidiki beberapa cara browser mengukur performa web dengan melihat melalui tab 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa terjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

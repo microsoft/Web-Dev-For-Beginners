@@ -1,47 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-27T21:59:26+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T10:54:08+00:00",
   "source_file": "for-teachers.md",
   "language_code": "hr"
 }
 -->
-## Za edukatore
+### Za edukatore
 
-Želite li koristiti ovaj kurikulum u svojoj učionici? Slobodno ga iskoristite!
+Slobodno koristite ovaj kurikulum u svojoj učionici. Odlično se integrira s GitHub Classroomom i vodećim LMS platformama, a može se koristiti i kao samostalni repozitorij sa studentima.
 
-Zapravo, možete ga koristiti direktno na GitHubu koristeći GitHub Classroom.
+### Korištenje s GitHub Classroomom
 
-Da biste to učinili, forkajte ovaj repozitorij. Trebat ćete kreirati repozitorij za svaku lekciju, pa ćete morati izdvojiti svaku mapu u zaseban repozitorij. Na taj način, [GitHub Classroom](https://classroom.github.com/classrooms) može prepoznati svaku lekciju zasebno.
+Za upravljanje lekcijama i zadacima po grupama, kreirajte jedan repozitorij po lekciji kako bi GitHub Classroom mogao zasebno povezati svaki zadatak.
 
-Ove [detaljne upute](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) pružit će vam ideju kako postaviti svoju učionicu.
+- Forkajte ovaj repozitorij u svoju organizaciju.
+- Kreirajte zaseban repozitorij za svaku lekciju tako da izvučete mapu lekcije u vlastiti repozitorij.
+  - Opcija A: Kreirajte prazne repozitorije (jedan po lekciji) i kopirajte sadržaj mape lekcije u svaki.
+  - Opcija B: Koristite pristup koji čuva povijest Git-a (npr. podijelite mapu u novi repozitorij) ako vam je potrebna povijest promjena.
+- U GitHub Classroomu, kreirajte zadatak po lekciji i povežite ga s odgovarajućim repozitorijem lekcije.
+- Preporučene postavke:
+  - Vidljivost repozitorija: privatna za studentski rad.
+  - Koristite početni kod iz zadane grane repozitorija lekcije.
+  - Dodajte predloške za probleme (Issues) i zahtjeve za povlačenje (Pull Requests) za kvizove i predaje.
+  - Opcionalno konfigurirajte automatsko ocjenjivanje i testove ako vaše lekcije uključuju takve elemente.
+- Korisne konvencije:
+  - Nazivi repozitorija poput lesson-01-intro, lesson-02-html, itd.
+  - Oznake: kviz, zadatak, treba-pregled, kasno, ponovna-predaja.
+  - Oznake/izdanja po grupama (npr. v2025-term1).
 
-## Korištenje u Moodleu, Canvasu ili Blackboardu
+Savjet: Izbjegavajte pohranjivanje repozitorija unutar sinkroniziranih mapa (npr. OneDrive/Google Drive) kako biste spriječili Git konflikte na Windowsima.
 
-Ovaj kurikulum odlično funkcionira u ovim sustavima za upravljanje učenjem! Koristite [Moodle datoteku za prijenos](../../../../../../../teaching-files/webdev-moodle.mbz) za puni sadržaj ili isprobajte [Common Cartridge datoteku](../../../../../../../teaching-files/webdev-common-cartridge.imscc) koja sadrži dio sadržaja. Moodle Cloud ne podržava potpune Common Cartridge izvoze, pa je bolje koristiti Moodle datoteku za preuzimanje koja se može prenijeti u Canvas. Javite nam kako možemo poboljšati ovo iskustvo.
+### Korištenje s Moodleom, Canvasom ili Blackboardom
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.hr.png)  
+Ovaj kurikulum uključuje pakete za uvoz koji su kompatibilni s uobičajenim LMS radnim procesima.
+
+- Moodle: Koristite Moodle datoteku za učitavanje [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) za učitavanje cijelog tečaja.
+- Common Cartridge: Koristite Common Cartridge datoteku [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) za širu LMS kompatibilnost.
+- Napomene:
+  - Moodle Cloud ima ograničenu podršku za Common Cartridge. Preferirajte gore navedenu Moodle datoteku, koja se također može učitati u Canvas.
+  - Nakon uvoza, pregledajte module, datume dospijeća i postavke kvizova kako bi odgovarali vašem rasporedu semestra.
+
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.hr.png)
 > Kurikulum u Moodle učionici
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.hr.png)  
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.hr.png)
 > Kurikulum u Canvasu
 
-## Korištenje repozitorija u trenutnom obliku
+### Korištenje repozitorija direktno (bez Classrooma)
 
-Ako želite koristiti ovaj repozitorij u trenutnom obliku, bez korištenja GitHub Classrooma, i to je moguće. Trebat ćete komunicirati sa svojim učenicima o tome koju lekciju zajedno obrađujete.
+Ako ne želite koristiti GitHub Classroom, tečaj možete voditi direktno iz ovog repozitorija.
 
-U online formatu (Zoom, Teams ili drugi) možete organizirati breakout sobe za kvizove i mentorirati učenike kako bi se pripremili za učenje. Zatim pozovite učenike na kvizove i neka predaju svoje odgovore kao 'issues' u određeno vrijeme. Isto možete učiniti i sa zadacima ako želite da učenici surađuju javno.
+- Sinkroni/online formati (Zoom/Teams):
+  - Vodite kratke uvodne sesije; koristite breakout sobe za kvizove.
+  - Najavite vremenski okvir za kvizove; studenti predaju odgovore kao GitHub Issues.
+  - Za suradničke zadatke, studenti rade u javnim repozitorijima lekcija i otvaraju Pull Requests.
+- Privatni/asinkroni formati:
+  - Studenti forkaju svaku lekciju u svoje **privatne** repozitorije i dodaju vas kao suradnika.
+  - Predaju putem Issues (kvizovi) i Pull Requests (zadatci) na vašem repozitoriju učionice ili njihovim privatnim forkovima.
 
-Ako preferirate privatniji format, zamolite učenike da forkaju kurikulum, lekciju po lekciju, u svoje privatne GitHub repozitorije i daju vam pristup. Tada mogu privatno rješavati kvizove i zadatke te ih predati vama putem 'issues' na vašem repozitoriju za učionicu.
+### Najbolje prakse
 
-Postoji mnogo načina kako ovo može funkcionirati u online učionici. Javite nam što vam najbolje odgovara!
+- Osigurajte uvodnu lekciju o osnovama Git-a/GitHuba, Issues i PR-ova.
+- Koristite kontrolne liste u Issues za višekorake kvizove/zadatke.
+- Dodajte CONTRIBUTING.md i CODE_OF_CONDUCT.md za postavljanje normi učionice.
+- Dodajte bilješke o pristupačnosti (alt tekst, titlovi) i ponudite ispisive PDF-ove.
+- Verzionirajte svoj sadržaj po semestru i zamrznite repozitorije lekcija nakon objave.
 
-## Podijelite svoje mišljenje s nama!
+### Povratne informacije i podrška
 
-Želimo da ovaj kurikulum funkcionira za vas i vaše učenike. Povežite se s nama na [Teacher corner](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) i otvorite [**novi issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) za bilo kakve zahtjeve, greške i povratne informacije.
+Želimo da ovaj kurikulum bude koristan vama i vašim studentima. Otvorite novi Issue u ovom repozitoriju za prijavu grešaka, zahtjeva ili poboljšanja, ili započnite raspravu u Teacher Corner.
 
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.

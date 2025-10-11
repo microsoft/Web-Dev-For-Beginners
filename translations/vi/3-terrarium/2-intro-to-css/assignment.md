@@ -1,23 +1,39 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9d4d75af51aaccfe9af778f792c62919",
-  "translation_date": "2025-08-27T23:00:44+00:00",
+  "original_hash": "a212cc22a18eddf9046b7a16dfbafd8b",
+  "translation_date": "2025-10-03T10:15:55+00:00",
   "source_file": "3-terrarium/2-intro-to-css/assignment.md",
   "language_code": "vi"
 }
 -->
-# Tái cấu trúc CSS
+# Bài Tập Tái Cấu Trúc CSS
 
-## Hướng dẫn
+## Mục Tiêu
 
-Thiết kế lại terrarium bằng cách sử dụng Flexbox hoặc CSS Grid, và chụp ảnh màn hình để chứng minh rằng bạn đã kiểm tra nó trên nhiều trình duyệt. Bạn có thể cần thay đổi mã HTML, vì vậy hãy tạo một phiên bản mới của ứng dụng với các hình ảnh nghệ thuật được đặt đúng vị trí cho việc tái cấu trúc. Không cần lo lắng về việc làm cho các phần tử có thể kéo thả; hiện tại chỉ cần tái cấu trúc HTML và CSS.
+Tái cấu trúc dự án terrarium để sử dụng **Flexbox** hoặc **CSS Grid** cho bố cục. Cập nhật HTML và CSS nếu cần để đạt được thiết kế hiện đại, đáp ứng. Bạn không cần triển khai các phần tử có thể kéo thả—chỉ tập trung vào bố cục và kiểu dáng.
 
-## Tiêu chí đánh giá
+## Hướng Dẫn
 
-| Tiêu chí  | Xuất sắc                                                          | Đạt yêu cầu                   | Cần cải thiện                        |
-| --------- | ----------------------------------------------------------------- | ----------------------------- | ------------------------------------ |
-|           | Trình bày terrarium được thiết kế lại hoàn toàn bằng Flexbox hoặc CSS Grid | Thiết kế lại một vài phần tử  | Không thiết kế lại terrarium chút nào |
+1. **Tạo một phiên bản mới** của ứng dụng terrarium. Cập nhật mã HTML và CSS để sử dụng Flexbox hoặc CSS Grid cho bố cục.
+2. **Đảm bảo các hình ảnh và phần tử được giữ nguyên** như trong phiên bản gốc.
+3. **Kiểm tra thiết kế của bạn** trên ít nhất hai trình duyệt khác nhau (ví dụ: Chrome, Firefox, Edge).
+4. **Chụp ảnh màn hình** terrarium của bạn trên mỗi trình duyệt để chứng minh khả năng tương thích đa trình duyệt.
+5. **Nộp** mã đã cập nhật và ảnh chụp màn hình.
+
+## Tiêu Chí Đánh Giá
+
+| Tiêu Chí   | Xuất Sắc                                                                 | Đạt Yêu Cầu                          | Cần Cải Thiện                          |
+|------------|--------------------------------------------------------------------------|---------------------------------------|----------------------------------------|
+| Bố Cục     | Được tái cấu trúc hoàn toàn bằng Flexbox hoặc CSS Grid; đẹp mắt và đáp ứng | Một số phần tử được tái cấu trúc; sử dụng một phần Flexbox hoặc Grid | Ít hoặc không sử dụng Flexbox hoặc Grid; bố cục không thay đổi |
+| Đa Trình Duyệt | Cung cấp ảnh chụp màn hình cho nhiều trình duyệt; hiển thị nhất quán      | Ảnh chụp màn hình cho một trình duyệt; có một số điểm không nhất quán | Không có ảnh chụp màn hình hoặc có nhiều điểm không nhất quán |
+| Chất Lượng Mã | HTML/CSS sạch sẽ, tổ chức tốt; có bình luận rõ ràng                     | Tổ chức ở mức trung bình; ít bình luận | Mã không tổ chức; thiếu bình luận      |
+
+## Mẹo
+
+- Xem lại hướng dẫn về [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) và [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).
+- Sử dụng công cụ phát triển trình duyệt để kiểm tra khả năng đáp ứng.
+- Bình luận mã của bạn để dễ hiểu.
 
 ---
 

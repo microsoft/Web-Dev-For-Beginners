@@ -1,25 +1,46 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-27T21:59:40+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T10:19:06+00:00",
   "source_file": "for-teachers.md",
   "language_code": "ms"
 }
 -->
-## Untuk Pendidik
+### Untuk Pendidik
 
-Adakah anda ingin menggunakan kurikulum ini di dalam kelas anda? Jangan ragu untuk menggunakannya!
+Anda dialu-alukan untuk menggunakan kurikulum ini di dalam kelas anda. Ia berfungsi dengan lancar bersama GitHub Classroom dan platform LMS terkemuka, dan juga boleh digunakan sebagai repositori mandiri dengan pelajar anda.
 
-Malah, anda boleh menggunakannya terus di GitHub dengan menggunakan GitHub Classroom.
+### Penggunaan dengan GitHub Classroom
 
-Untuk melakukannya, fork repo ini. Anda perlu mencipta repo untuk setiap pelajaran, jadi anda perlu mengekstrak setiap folder ke dalam repo yang berasingan. Dengan cara ini, [GitHub Classroom](https://classroom.github.com/classrooms) boleh mengambil setiap pelajaran secara berasingan.
+Untuk menguruskan pelajaran dan tugasan mengikut kumpulan, buat satu repositori bagi setiap pelajaran supaya GitHub Classroom dapat melampirkan setiap tugasan secara bebas.
 
-Arahan penuh ini [full instructions](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) akan memberikan anda gambaran tentang cara untuk menyediakan kelas anda.
+- Fork repositori ini ke organisasi anda.
+- Buat repositori berasingan untuk setiap pelajaran dengan mengekstrak folder pelajaran ke dalam repositori masing-masing.
+  - Pilihan A: Buat repositori kosong (satu untuk setiap pelajaran) dan salin kandungan folder pelajaran ke dalam setiap satu.
+  - Pilihan B: Gunakan pendekatan yang mengekalkan sejarah Git (contohnya, pecahkan folder ke repositori baru) jika anda memerlukan asal usul.
+- Dalam GitHub Classroom, buat tugasan bagi setiap pelajaran dan pautkan ke repositori pelajaran yang sepadan.
+- Tetapan yang disyorkan:
+  - Kebolehlihatan repositori: peribadi untuk kerja pelajar.
+  - Gunakan kod permulaan dari cabang lalai repositori pelajaran.
+  - Tambahkan templat isu dan permintaan tarik untuk kuiz dan penghantaran.
+  - Konfigurasikan penggredan automatik dan ujian jika pelajaran anda menyertakannya.
+- Konvensyen yang membantu:
+  - Nama repositori seperti lesson-01-intro, lesson-02-html, dan sebagainya.
+  - Label: kuiz, tugasan, perlu-ulasan, lewat, penghantaran semula.
+  - Tag/pelepasan mengikut kumpulan (contohnya, v2025-term1).
 
-## Menggunakannya di Moodle, Canvas atau Blackboard
+Tip: Elakkan menyimpan repositori di dalam folder yang diselaraskan (contohnya, OneDrive/Google Drive) untuk mengelakkan konflik Git pada Windows.
 
-Kurikulum ini berfungsi dengan baik dalam Sistem Pengurusan Pembelajaran ini! Gunakan [fail muat naik Moodle](../../../../../../../teaching-files/webdev-moodle.mbz) untuk kandungan penuh, atau cuba [fail Common Cartridge](../../../../../../../teaching-files/webdev-common-cartridge.imscc) yang mengandungi sebahagian daripada kandungan. Moodle Cloud tidak menyokong eksport penuh Common Cartridge, jadi adalah lebih baik untuk menggunakan fail muat turun Moodle yang boleh dimuat naik ke dalam Canvas. Sila maklumkan kepada kami bagaimana kami boleh memperbaiki pengalaman ini.
+### Penggunaan dengan Moodle, Canvas, atau Blackboard
+
+Kurikulum ini termasuk pakej yang boleh diimport untuk aliran kerja LMS yang biasa.
+
+- Moodle: Gunakan fail muat naik Moodle [Moodle upload file](../../../../../../../teaching-files/webdev-moodle.mbz) untuk memuatkan keseluruhan kursus.
+- Common Cartridge: Gunakan fail Common Cartridge [Common Cartridge file](../../../../../../../teaching-files/webdev-common-cartridge.imscc) untuk keserasian LMS yang lebih luas.
+- Nota:
+  - Moodle Cloud mempunyai sokongan Common Cartridge yang terhad. Lebih baik gunakan fail Moodle di atas, yang juga boleh dimuat naik ke Canvas.
+  - Selepas import, semak modul, tarikh akhir, dan tetapan kuiz untuk disesuaikan dengan jadual penggal anda.
 
 ![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.ms.png)
 > Kurikulum dalam kelas Moodle
@@ -27,21 +48,31 @@ Kurikulum ini berfungsi dengan baik dalam Sistem Pengurusan Pembelajaran ini! Gu
 ![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.ms.png)
 > Kurikulum dalam Canvas
 
-## Menggunakan repo seperti sedia ada
+### Penggunaan repositori secara langsung (tanpa Classroom)
 
-Jika anda ingin menggunakan repo ini seperti keadaannya sekarang, tanpa menggunakan GitHub Classroom, itu juga boleh dilakukan. Anda hanya perlu berkomunikasi dengan pelajar anda tentang pelajaran mana yang perlu dipelajari bersama.
+Jika anda lebih suka tidak menggunakan GitHub Classroom, anda boleh menjalankan kursus secara langsung dari repositori ini.
 
-Dalam format dalam talian (Zoom, Teams, atau lain-lain), anda boleh membentuk bilik perbincangan untuk kuiz, dan membimbing pelajar untuk membantu mereka bersedia untuk belajar. Kemudian jemput pelajar ke kuiz dan serahkan jawapan mereka sebagai 'issues' pada masa tertentu. Anda juga boleh melakukan perkara yang sama dengan tugasan jika anda mahu pelajar bekerja secara kolaboratif secara terbuka.
+- Format segerak/atas talian (Zoom/Teams):
+  - Jalankan pemanasan pendek yang dipimpin mentor; gunakan bilik pecahan untuk kuiz.
+  - Umumkan jangka masa untuk kuiz; pelajar menghantar jawapan sebagai Isu GitHub.
+  - Untuk tugasan kolaboratif, pelajar bekerja dalam repositori pelajaran awam dan membuka permintaan tarik.
+- Format peribadi/tidak segerak:
+  - Pelajar fork setiap pelajaran ke repositori **peribadi** mereka sendiri dan tambahkan anda sebagai kolaborator.
+  - Mereka menghantar melalui Isu (kuiz) dan Permintaan Tarik (tugasan) pada repositori kelas anda atau fork peribadi mereka.
 
-Jika anda lebih suka format yang lebih peribadi, minta pelajar anda untuk fork kurikulum ini, pelajaran demi pelajaran, ke repo GitHub mereka sendiri sebagai repo peribadi, dan berikan anda akses. Kemudian mereka boleh melengkapkan kuiz dan tugasan secara peribadi dan menyerahkannya kepada anda melalui issues pada repo kelas anda.
+### Amalan terbaik
 
-Terdapat banyak cara untuk menjadikan ini berfungsi dalam format kelas dalam talian. Sila maklumkan kepada kami apa yang paling sesuai untuk anda!
+- Sediakan pelajaran orientasi tentang asas Git/GitHub, Isu, dan PR.
+- Gunakan senarai semak dalam Isu untuk kuiz/tugasan berbilang langkah.
+- Tambahkan CONTRIBUTING.md dan CODE_OF_CONDUCT.md untuk menetapkan norma kelas.
+- Tambahkan nota kebolehaksesan (teks alt, kapsyen) dan tawarkan PDF yang boleh dicetak.
+- Versikan kandungan anda mengikut penggal dan bekukan repositori pelajaran selepas diterbitkan.
 
-## Sila berikan pendapat anda!
+### Maklum balas dan sokongan
 
-Kami ingin menjadikan kurikulum ini berfungsi untuk anda dan pelajar anda. Hubungi kami di [Teacher corner](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) dan buka [**isu baru**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) untuk sebarang permintaan, pepijat, dan maklum balas.
+Kami ingin kurikulum ini berfungsi untuk anda dan pelajar anda. Sila buka Isu baru dalam repositori ini untuk laporan pepijat, permintaan, atau penambahbaikan, atau mulakan perbincangan di Teacher Corner.
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

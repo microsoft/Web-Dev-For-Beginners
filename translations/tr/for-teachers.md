@@ -1,25 +1,46 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "75cb51f7ca9ea0b097ef4a1287e9290c",
-  "translation_date": "2025-08-25T20:57:34+00:00",
+  "original_hash": "71009af209f81cc01a1f2d324200375f",
+  "translation_date": "2025-10-03T09:41:56+00:00",
   "source_file": "for-teachers.md",
   "language_code": "tr"
 }
 -->
-## Eğitimciler İçin
+### Eğitimciler İçin
 
-Bu müfredatı sınıfınızda kullanmak ister misiniz? Lütfen çekinmeden kullanın!
+Bu müfredatı sınıfınızda kullanabilirsiniz. GitHub Classroom ve önde gelen LMS platformlarıyla sorunsuz bir şekilde çalışır ve öğrencilerinizle bağımsız bir depo olarak da kullanılabilir.
 
-Aslında, GitHub Classroom kullanarak bu müfredatı doğrudan GitHub üzerinde kullanabilirsiniz.
+### GitHub Classroom ile Kullanım
 
-Bunu yapmak için, bu depoyu çatallayın. Her ders için ayrı bir depo oluşturmanız gerekecek, bu yüzden her klasörü ayrı bir depoya çıkarmanız gerekecek. Böylece, [GitHub Classroom](https://classroom.github.com/classrooms) her dersi ayrı ayrı algılayabilir.
+Dersleri ve ödevleri her grup için yönetmek için, her ders için bir depo oluşturun, böylece GitHub Classroom her ödevi bağımsız olarak bağlayabilir.
 
-Bu [detaylı talimatlar](https://github.blog/2020-03-18-set-up-your-digital-classroom-with-github-classroom/) sınıfınızı nasıl kuracağınız konusunda size bir fikir verecektir.
+- Bu depoyu organizasyonunuza çatallayın.
+- Her ders için ayrı bir depo oluşturun; her ders klasörünü kendi deposuna ayırın.
+  - Seçenek A: Her ders için boş depolar oluşturun ve ders klasörü içeriğini her birine kopyalayın.
+  - Seçenek B: Geçmişi koruyan bir Git yaklaşımı kullanın (örneğin, bir klasörü yeni bir depoya ayırmak) eğer geçmişe ihtiyacınız varsa.
+- GitHub Classroom'da, her ders için bir ödev oluşturun ve ilgili ders deposuna yönlendirin.
+- Önerilen ayarlar:
+  - Depo görünürlüğü: Öğrenci çalışmaları için özel.
+  - Ders deposunun varsayılan dalından başlangıç kodu kullanın.
+  - Quizler ve gönderimler için sorun ve çekme isteği şablonları ekleyin.
+  - Derslerinizde otomatik değerlendirme ve testler varsa, isteğe bağlı olarak yapılandırın.
+- Yardımcı olabilecek kurallar:
+  - Depo adları: lesson-01-intro, lesson-02-html, vb.
+  - Etiketler: quiz, assignment, needs-review, late, resubmission.
+  - Her grup için etiketler/sürümler (örneğin, v2025-term1).
 
-## Moodle, Canvas veya Blackboard'da Kullanımı
+İpucu: Git çatışmalarını önlemek için depoları senkronize edilmiş klasörlerde (örneğin, OneDrive/Google Drive) saklamaktan kaçının.
 
-Bu müfredat, bu Öğrenim Yönetim Sistemlerinde gayet iyi çalışır! Tüm içerik için [Moodle yükleme dosyasını](../../../../../../../teaching-files/webdev-moodle.mbz) kullanabilir veya bazı içerikleri içeren [Common Cartridge dosyasını](../../../../../../../teaching-files/webdev-common-cartridge.imscc) deneyebilirsiniz. Moodle Cloud, tam Common Cartridge dışa aktarımlarını desteklemez, bu yüzden Canvas'a yüklenebilecek Moodle indirme dosyasını kullanmak daha uygundur. Bu deneyimi nasıl geliştirebileceğimizi bize bildirin.
+### Moodle, Canvas veya Blackboard ile Kullanım
+
+Bu müfredat, yaygın LMS iş akışları için içe aktarılabilir paketler içerir.
+
+- Moodle: Tam kursu yüklemek için [Moodle yükleme dosyasını](../../../../../../../teaching-files/webdev-moodle.mbz) kullanın.
+- Common Cartridge: Daha geniş LMS uyumluluğu için [Common Cartridge dosyasını](../../../../../../../teaching-files/webdev-common-cartridge.imscc) kullanın.
+- Notlar:
+  - Moodle Cloud, Common Cartridge desteği sınırlıdır. Yukarıdaki Moodle dosyasını tercih edin; bu dosya ayrıca Canvas'a da yüklenebilir.
+  - İçe aktarma işleminden sonra modülleri, teslim tarihlerini ve quiz ayarlarını dönem programınıza uygun şekilde gözden geçirin.
 
 ![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.tr.png)
 > Moodle sınıfında müfredat
@@ -27,19 +48,31 @@ Bu müfredat, bu Öğrenim Yönetim Sistemlerinde gayet iyi çalışır! Tüm i�
 ![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.tr.png)
 > Canvas'ta müfredat
 
-## Depoyu Olduğu Gibi Kullanma
+### Depoyu Doğrudan Kullanma (Classroom Olmadan)
 
-Eğer bu depoyu şu anki haliyle, GitHub Classroom kullanmadan kullanmak isterseniz, bu da mümkündür. Öğrencilerinizle hangi dersi birlikte işleyeceğinizi iletişim kurmanız gerekecek.
+GitHub Classroom kullanmamayı tercih ederseniz, kursu doğrudan bu depodan yürütebilirsiniz.
 
-Çevrimiçi bir formatta (Zoom, Teams veya başka bir platform) sınavlar için gruplar oluşturabilir ve öğrencileri öğrenmeye hazırlanmaları için yönlendirebilirsiniz. Daha sonra öğrencileri sınavlara davet edebilir ve cevaplarını belirli bir zamanda 'issue' olarak göndermelerini isteyebilirsiniz. Aynı yöntemi, öğrencilerin açık bir şekilde iş birliği yapmasını istediğiniz ödevler için de uygulayabilirsiniz.
+- Senkron/çevrimiçi formatlar (Zoom/Teams):
+  - Kısa mentor liderliğinde ısınma oturumları düzenleyin; quizler için breakout odaları kullanın.
+  - Quizler için bir zaman aralığı duyurun; öğrenciler yanıtlarını GitHub Issues olarak gönderir.
+  - İşbirlikçi ödevler için, öğrenciler halka açık ders depolarında çalışır ve çekme istekleri açar.
+- Özel/asenkron formatlar:
+  - Öğrenciler her dersi kendi **özel** depolarına çatallayıp sizi işbirlikçi olarak ekler.
+  - Quizler (Issues) ve ödevler (Pull Requests) için gönderimlerini sınıf deponuzda veya özel çatallarında yaparlar.
 
-Daha özel bir format tercih ediyorsanız, öğrencilerinizden müfredatı ders ders kendi GitHub depolarına, özel depolar olarak çatallamalarını ve size erişim vermelerini isteyin. Daha sonra sınavları ve ödevleri özel olarak tamamlayabilir ve bunları sınıf deponuzdaki 'issue'lar aracılığıyla size gönderebilirler.
+### En İyi Uygulamalar
 
-Çevrimiçi bir sınıf formatında bunu çalıştırmanın birçok yolu vardır. Sizin için en iyi neyin işe yaradığını bize bildirin!
+- Git/GitHub temelleri, Issues ve PR'lar hakkında bir tanıtım dersi sağlayın.
+- Çok adımlı quizler/ödevler için Issues içinde kontrol listeleri kullanın.
+- Sınıf normlarını belirlemek için CONTRIBUTING.md ve CODE_OF_CONDUCT.md ekleyin.
+- Erişilebilirlik notları (alt metin, altyazılar) ekleyin ve yazdırılabilir PDF'ler sunun.
+- İçeriğinizi dönem bazında sürümleyin ve yayınlandıktan sonra ders depolarını dondurun.
 
-## Lütfen Görüşlerinizi Bizimle Paylaşın!
+### Geri Bildirim ve Destek
 
-Bu müfredatı sizin ve öğrencileriniz için işe yarar hale getirmek istiyoruz. [Öğretmen köşesi](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) üzerinden bizimle iletişime geçin ve herhangi bir talep, hata veya geri bildirim için [**yeni bir issue**](https://github.com/microsoft/Web-Dev-For-Beginners/issues/new/choose) açın.
+Bu müfredatın sizin ve öğrencileriniz için işe yaramasını istiyoruz. Hatalar, talepler veya iyileştirmeler için bu depoda yeni bir Issue açabilir veya Öğretmen Köşesi'nde bir tartışma başlatabilirsiniz.
+
+---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
