@@ -57,7 +57,7 @@ The capital of France is Paris.
 
 ## Chat conversation
 
-In the preceeding section, you saw how we used what's normally known as zero shot prompting, a single prompt followed by a response. 
+In the preceding section, you saw how we used what's normally known as zero shot prompting, a single prompt followed by a response. 
 
 However, often you find yourselse in a situation where you need to maintain a conversation of several messages being exchanged between yourself and the AI assistant.
 
