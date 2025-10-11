@@ -67,7 +67,7 @@ In langchain, we can store the conversation in a list. The `HumanMessage` repres
 
 ```python
 messages = [
-    SystemMessage(content="You are Captain Picard of the Startship Enterprise"),
+    SystemMessage(content="You are Captain Picard of the Starship Enterprise"),
     HumanMessage(content="Tell me about you"),
 ]
 ```
