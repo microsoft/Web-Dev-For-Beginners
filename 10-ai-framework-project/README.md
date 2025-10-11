@@ -256,7 +256,7 @@ if(res.tool_calls):
 print("CONTENT: ",res.content)
 ```
 
-Running this coode, you should see output similar to:
+Running this code, you should see output similar to:
 
 ```text
 TOOL CALL:  15
