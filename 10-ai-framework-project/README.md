@@ -59,7 +59,7 @@ The capital of France is Paris.
 
 In the preceding section, you saw how we used what's normally known as zero shot prompting, a single prompt followed by a response. 
 
-However, often you find yourselse in a situation where you need to maintain a conversation of several messages being exchanged between yourself and the AI assistant.
+However, often you find yourself in a situation where you need to maintain a conversation of several messages being exchanged between yourself and the AI assistant.
 
 ### Using Python
 
