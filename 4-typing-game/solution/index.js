@@ -24,7 +24,7 @@ const startButton = document.querySelector("#start");
 
 // Messages system
 const messages = {
-  success: (seconds) => `🎉 Congratulations! You finished in ${seconds.toFixed(2)} seconds.`,
+  success: (seconds, wpm) => `🎉 Congratulations! You finished in ${seconds.toFixed(2)} seconds (${wpm} WPM).`,
   error: "⚠️ Oops! There's a mistake.",
   start: "⌨️ Start typing to begin the game."
 };
@@ -69,8 +69,14 @@ const handleTyping = () => {
   if (typedValue === currentWord && wordIndex === words.length - 1) {
     // Game finished
     const elapsedTime = (Date.now() - startTime) / 1000;
-    messageElement.textContent = messages.success(elapsedTime);
+    const elapsedMinutes = elapsedTime / 60;
+    const wordCount = words.length;
+    const wpm = (wordCount / elapsedMinutes).toFixed(2);
+
+    messageElement.textContent = messages.success(elapsedTime, wpm);
     typedValueElement.disabled = true;
+    document.getElementById("reset").style.display = "inline-block";
+    document.getElementById("start").style.display = "none";
   } else if (typedValue.endsWith(" ") && typedValue.trim() === currentWord) {
     // Word completed
     typedValueElement.value = "";
@@ -92,3 +98,15 @@ typedValueElement.addEventListener("input", handleTyping);
 
 // Default state
 messageElement.textContent = "👉 Click Start to begin!";
+
+const resetButton = document.getElementById("reset");
+
+resetButton.addEventListener("click", () => {
+  // Reset game state
+  typedValueElement.disabled = false;
+  typedValueElement.value = "";
+  messageElement.textContent = "👉 Click Start to begin!";
+  quoteElement.innerHTML = "";
+  startButton.style.display = "inline-block";
+  resetButton.style.display = "none";
+});

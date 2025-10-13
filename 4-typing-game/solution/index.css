@@ -154,3 +154,25 @@ button#start i {
     width: 100%;
   }
 }
+
+
+#reset {
+  color: white;
+  background: linear-gradient(to right, #ff7043, #e64a19);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+
+#reset:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
