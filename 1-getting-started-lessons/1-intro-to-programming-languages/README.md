@@ -1,5 +1,5 @@
 # Introduction to Programming Languages and Tools of the Trade
-
+ 
 This lesson covers the basics of programming languages. The topics covered here apply to most modern programming languages today. In the 'Tools of the Trade' section, you'll learn about useful software that helps you as a developer.
 
 ![Intro Programming](../../sketchnotes/webdev101-programming.png)
