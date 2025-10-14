@@ -280,6 +280,18 @@ Usually both need to be implemented, and while using client-side validation impr
 
 ---
 
+
+
+---
+
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Enhance the registration form with comprehensive client-side validation and user feedback. This challenge will help you practice form validation, error handling, and improving user experience with interactive feedback.
+
+**Prompt:** Create a complete form validation system for the registration form that includes: 1) Real-time validation feedback for each field as the user types, 2) Custom validation messages that appear below each input field, 3) A password confirmation field with matching validation, 4) Visual indicators (like green checkmarks for valid fields and red warnings for invalid ones), 5) A submit button that only becomes enabled when all validations pass. Use HTML5 validation attributes, CSS for styling the validation states, and JavaScript for the interactive behavior.
+
 ## 🚀 Challenge
 
 Show an error message in the HTML if the user already exists.

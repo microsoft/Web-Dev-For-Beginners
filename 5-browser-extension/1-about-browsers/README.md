@@ -144,6 +144,14 @@ For now, the extension should build and, if you deploy it into Edge as an extens
 
 Congratulations, you've taken the first steps towards building a browser extension. In subsequent lessons, you'll make it more functional and useful.
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Enhance the browser extension by adding form validation and user feedback features to improve the user experience when entering API keys and region codes.
+
+**Prompt:** Create JavaScript validation functions that check if the API key field contains at least 20 characters and if the region code follows the correct format (like 'US-NEISO'). Add visual feedback by changing input border colors to green for valid inputs and red for invalid ones. Also add a toggle feature to show/hide the API key for security purposes.
+
 ---
 
 ## 🚀 Challenge

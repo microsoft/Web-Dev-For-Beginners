@@ -205,6 +205,14 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Enhance the space game by implementing a level progression system with increasing difficulty and bonus features.
+
+**Prompt:** Create a multi-level space game system where each level has more enemy ships with increased speed and health. Add a scoring multiplier that increases with each level, and implement power-ups (like rapid fire or shield) that randomly appear when enemies are destroyed. Include a level completion bonus and display the current level on screen alongside the existing score and lives.
+
 ## 🚀 Challenge
 
 Add a sound! Can you add a sound to enhance your game play, maybe when there's a laser hit, or the hero dies or wins? Have a look at this [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) to learn how to play sound using JavaScript

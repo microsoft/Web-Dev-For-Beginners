@@ -249,6 +249,18 @@ We are also using `rem` for the border-radius, a font-relative length. Read more
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Create a CSS animation that makes the terrarium plants gently sway back and forth, simulating a natural breeze effect. This will help you practice CSS animations, transforms, and keyframes while enhancing the visual appeal of your terrarium.
+
+**Prompt:** Add CSS keyframe animations to make the plants in the terrarium sway gently from side to side. Create a swaying animation that rotates each plant slightly (2-3 degrees) left and right with a duration of 3-4 seconds, and apply it to the `.plant` class. Make sure the animation loops infinitely and has an easing function for natural movement.
+
+---
+
+
+
 ## 🚀Challenge
 
 Add a 'bubble' shine to the left bottom area of the jar to make it look more glasslike. You will be styling the `.jar-glossy-long` and `.jar-glossy-short` to look like a reflected shine. Here's how it would look:

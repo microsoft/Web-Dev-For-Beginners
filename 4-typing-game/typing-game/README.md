@@ -317,6 +317,21 @@ Click on **start**, and start typing away! It should look a little like the anim
 
 ---
 
+## GitHub Copilot Agent Challenge 🎮
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Extend the typing game by implementing a difficulty system that adjusts the game based on player performance. This challenge will help you practice advanced event handling, data analysis, and dynamic UI updates.
+
+**Prompt:** Create a difficulty adjustment system for the typing game that:
+1. Tracks the player's typing speed (words per minute) and accuracy percentage
+2. Automatically adjusts to three difficulty levels: Easy (simple quotes), Medium (current quotes), Hard (complex quotes with punctuation)
+3. Displays the current difficulty level and player statistics on the UI
+4. Implements a streak counter that increases difficulty after 3 consecutive good performances
+5. Adds visual feedback (colors, animations) to indicate difficulty changes
+
+Add the necessary HTML elements, CSS styles, and JavaScript functions to implement this feature. Include proper error handling and ensure the game remains accessible with appropriate ARIA labels.
+
 ## 🚀 Challenge
 
 Add more functionality

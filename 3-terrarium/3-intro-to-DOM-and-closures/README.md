@@ -195,6 +195,14 @@ Now you have completed your project!
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Enhance the terrarium project by adding a reset functionality that returns all plants to their original positions with smooth animations.
+
+**Prompt:** Create a reset button that, when clicked, animates all plants back to their original sidebar positions using CSS transitions. The function should store the original positions when the page loads and smoothly transition plants back to those positions over 1 second when the reset button is pressed.
+
 ## 🚀Challenge
 
 Add new event handler to your closure to do something more to the plants; for example, double-click a plant to bring it to the front. Get creative!

@@ -371,6 +371,14 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Enhance the space game by implementing boundary detection and smooth movement controls. This challenge will help you practice game object manipulation, event handling, and canvas rendering techniques.
+
+**Prompt:** Create a boundary detection system that prevents the hero spaceship from moving outside the canvas boundaries. Additionally, implement a smooth movement system where holding down arrow keys creates continuous movement instead of single-step movement. Make sure the hero stops immediately when keys are released and add visual feedback when the hero hits a boundary (like a brief color change or glow effect).
+
 ## 🚀 Challenge
 
 As you can see, your code can turn into 'spaghetti code' when you start adding functions and variables and classes. How can you better organize your code so that it is more readable? Sketch out a system to organize your code, even if it still resides in one file.

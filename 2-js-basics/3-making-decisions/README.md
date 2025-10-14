@@ -197,11 +197,36 @@ if (firstNumber > secondNumber) {
 
 ---
 
+
+
 ## 🚀 Challenge
 
 Create a program that is written first with logical operators, and then rewrite it using a ternary expression. What's your preferred syntax?
 
 ---
+
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Create a comprehensive grade calculator that demonstrates multiple decision-making concepts from this lesson, including if-else statements, switch statements, logical operators, and ternary expressions.
+
+**Prompt:** Write a JavaScript program that takes a student's numerical score (0-100) and determines their letter grade using the following criteria:
+- A: 90-100
+- B: 80-89  
+- C: 70-79
+- D: 60-69
+- F: Below 60
+
+Requirements:
+1. Use an if-else statement to determine the letter grade
+2. Use logical operators to check if the student passes (grade >= 60) AND has honors (grade >= 90)
+3. Use a switch statement to provide specific feedback for each letter grade
+4. Use a ternary operator to determine if the student is eligible for the next course (grade >= 70)
+5. Include input validation to ensure the score is between 0 and 100
+
+Test your program with various scores including edge cases like 59, 60, 89, 90, and invalid inputs.
+
 
 ## Post-Lecture Quiz
 

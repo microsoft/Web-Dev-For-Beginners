@@ -317,6 +317,14 @@ If you try using the `test` account to login, you should now see a transaction l
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Enhance the banking app by implementing a transaction search and filter feature that allows users to find specific transactions by date range, amount, or description.
+
+**Prompt:** Create a search functionality for the banking app that includes: 1) A search form with input fields for date range (from/to), minimum/maximum amount, and transaction description keywords, 2) A `filterTransactions()` function that filters the account.transactions array based on the search criteria, 3) Update the `updateDashboard()` function to show filtered results, and 4) Add a "Clear Filters" button to reset the view. Use modern JavaScript array methods like `filter()` and handle edge cases for empty search criteria.
+
 ## 🚀 Challenge
 
 Work together to make the dashboard page look like a real banking app. If you already styled your app, try to use [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) to create a [responsive design](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) working nicely on both desktop and mobile devices.
