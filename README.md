@@ -41,6 +41,8 @@ Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc
 
 ### 📣 Announcement - _New Project to build using Generative AI_ 
 
+New Challenge added, look for "GitHub Copilot Agent Challenge 🚀" in most chapters. That's a new challenge for you to complete using GitHub Copilot and Agent mode. If you haven't used Agent mode before it's capable of not just generating text but can also create and edit files, run commands and more.
+
 New AI Assistant project just added, check it out [project](./09-chat-project/README.md)
 
 ### 📣 Announcement - _New Curriculum_ on Generative AI for JavaScript was just released
