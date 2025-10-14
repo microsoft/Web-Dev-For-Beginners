@@ -39,9 +39,11 @@ Follow these steps to get started using these resources:
 
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
 
-### 📣 Announcement - _New Project to build using Generative AI_ 
+### 📣 Announcement - New GitHub Copilot Agent mode challenges to complete!
 
 New Challenge added, look for "GitHub Copilot Agent Challenge 🚀" in most chapters. That's a new challenge for you to complete using GitHub Copilot and Agent mode. If you haven't used Agent mode before it's capable of not just generating text but can also create and edit files, run commands and more.
+
+### 📣 Announcement - _New Project to build using Generative AI_ 
 
 New AI Assistant project just added, check it out [project](./09-chat-project/README.md)
 
