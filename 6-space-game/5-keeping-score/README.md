@@ -172,6 +172,16 @@ By the end of this work, you should see the small 'life' ships at the bottom rig
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Enhance the space game's scoring system by implementing a high score feature with persistent storage and bonus scoring mechanics.
+
+**Prompt:** Create a high score system that saves the player's best score to localStorage. Add bonus points for consecutive enemy kills (combo system) and implement different point values for different enemy types. Include a visual indicator when the player achieves a new high score and display the current high score on the game screen.
+
+
+
 ## 🚀 Challenge
 
 Your code is almost complete. Can you envision your next steps?

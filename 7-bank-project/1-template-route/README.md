@@ -291,6 +291,14 @@ Now try to use the back and forward buttons of your browsers, and check that the
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Enhance the banking app by implementing error handling and a 404 page template for invalid routes, improving the user experience when navigating to non-existent pages.
+
+**Prompt:** Create a new HTML template with id "not-found" that displays a user-friendly 404 error page with styling. Then modify the JavaScript routing logic to show this template when users navigate to invalid URLs, and add a "Go Home" button that navigates back to the login page.
+
 ## 🚀 Challenge
 
 Add a new template and route for a third page that shows the credits for this app.

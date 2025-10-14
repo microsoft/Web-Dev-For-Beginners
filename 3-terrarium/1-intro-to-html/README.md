@@ -217,9 +217,18 @@ Add this markup above the last `</div>` tag:
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Create a semantic HTML structure for a plant care guide section that could be added to the terrarium project.
+
+**Prompt:** Create a semantic HTML section that includes a main heading "Plant Care Guide", three subsections with headings "Watering", "Light Requirements", and "Soil Care", each containing a paragraph of plant care information. Use proper semantic HTML tags like `<section>`, `<h2>`, `<h3>`, and `<p>` to structure the content appropriately.
+
 ## 🚀Challenge
 
 There are some wild 'older' tags in HTML that are still fun to play with, though you shouldn't use deprecated tags such as [these tags](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) in your markup. Still, can you use the old `<marquee>` tag to make the h1 title scroll horizontally? (if you do, don't forget to remove it afterwards)
+
 
 ## Post-Lecture Quiz
 

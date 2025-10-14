@@ -117,6 +117,14 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Build a data processing function that combines arrays and loops to analyze a dataset.
+
+**Prompt:** Create a function called `analyzeGrades` that takes an array of student grade objects (each containing name and score properties) and returns statistics including the highest score, lowest score, average score, and count of students who passed (score >= 70). Use loops to process the data.
+
 ## 🚀 Challenge
 
 There are other ways of looping over arrays other than for and while loops. There are [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), and [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Rewrite your array loop using one of these techniques.

@@ -332,6 +332,16 @@ There was one thing here we didn't set and that was `BASE_URL`, this is not know
 - If you run API locally, it should be set to something like `http://localhost:5000`.
 - If run in a Codespaces, it should look something like "[name]app.github.dev".
 
+
+
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Enhance the chat assistant by adding conversation history and message persistence. This challenge will help you understand how to manage state in chat applications and implement data storage for better user experience.
+
+**Prompt:** Modify the chat application to include conversation history that persists between sessions. Add functionality to save chat messages to local storage, display conversation history when the page loads, and include a "Clear History" button. Also implement typing indicators and message timestamps to make the chat experience more realistic.
+
 ## Assignment
 
 Create your own folder *project* with content like so:

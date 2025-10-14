@@ -260,7 +260,13 @@ const routes = {
 
 Try reloading the dashboard now, it should display the updated account data.
 
----
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Implement a comprehensive state management system with undo/redo functionality for the banking app. This challenge will help you practice advanced state management concepts including state history tracking, immutable updates, and user interface synchronization.
+
+**Prompt:** Create an enhanced state management system that includes: 1) A state history array that tracks all previous states, 2) Undo and redo functions that can revert to previous states, 3) UI buttons for undo/redo operations on the dashboard, 4) A maximum history limit of 10 states to prevent memory issues, and 5) Proper cleanup of history when the user logs out. Ensure the undo/redo functionality works with account balance changes and persists across browser refreshes.
 
 ## 🚀 Challenge
 

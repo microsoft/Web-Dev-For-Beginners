@@ -139,7 +139,17 @@ Now, rebuild your extension (`npm run build`), refresh and launch your extension
 
 Congratulations, you've built a useful browser extension and learned more about how the browser works and how to profile its performance.
 
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Enhance the browser extension's performance monitoring capabilities by adding a feature that tracks and displays load times for different components of the extension.
+
+**Prompt:** Create a performance monitoring system for the browser extension that measures and logs the time it takes to fetch CO2 data from the API, calculate colors, and update the icon. Add a function called `performanceTracker` that uses the Performance API to measure these operations and displays the results in the browser console with timestamps and duration metrics.
+
 ---
+
+
 
 ## 🚀 Challenge
 

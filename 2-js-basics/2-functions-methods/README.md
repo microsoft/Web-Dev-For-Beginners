@@ -18,7 +18,7 @@ When we think about writing code, we always want to ensure our code is readable.
 
 At its core, a function is a block of code we can execute on demand. This is perfect for scenarios where we need to perform the same task multiple times; rather than duplicating the logic in multiple locations (which would make it hard to update when the time comes), we can centralize it in one location, and call it whenever we need the operation performed - you can even call functions from other functions!.
 
-Just as important is the ability to name a function. While this might seem trivial, the name provides a quick way of documenting a section of code. You could think of this as a label on a button. If I click on a button which reads "Cancel timer", I know it's going to stop running the clock.
+Just as important is the ability to name a function. While this might seem trivial, the name provides a quick way of documenting a section of code. You could think of this as a label on a button. If I click on a button which reads "Cancel timer", I know it's going to stop running the clock. 
 
 ## Creating and calling a function
 
@@ -180,9 +180,24 @@ You've now seen we have three ways to pass a function as a parameter and might b
 
 ---
 
+
+
 ## 🚀 Challenge
 
 Can you articulate in one sentence the difference between functions and methods? Give it a try!
+
+## GitHub Copilot Agent Challenge 🚀
+
+Use the Agent mode to complete the following challenge:
+
+**Description:** Create a utility library of mathematical functions that demonstrates different function concepts covered in this lesson, including parameters, default values, return values, and arrow functions.
+
+**Prompt:** Create a JavaScript file called `mathUtils.js` that contains the following functions:
+1. A function `add` that takes two parameters and returns their sum
+2. A function `multiply` with default parameter values (second parameter defaults to 1)
+3. An arrow function `square` that takes a number and returns its square
+4. A function `calculate` that accepts another function as a parameter and two numbers, then applies the function to those numbers
+5. Demonstrate calling each function with appropriate test cases
 
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ff-quizzes.netlify.app)
