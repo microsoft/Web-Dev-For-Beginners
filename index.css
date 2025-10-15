@@ -106,3 +106,78 @@ h1 i, h2 i, h3 i {
     padding: 1em;
   }
 }
+/* ===== Global Styles ===== */
+:root {
+    --color-background: #ffffff;
+    --color-background-soft: #f5f5f5;
+    --color-text: #333333;
+    --color-border: #e0e0e0;
+    --vt-c-indigo: #5c6bc0;
+    --vt-c-white: #ffffff;
+    --vt-c-text-light-1: #7986cb;
+}
+
+/* ===== Docsify Navigation & Button Styles ===== */
+
+/* Navigation Links */
+.sidebar-nav {
+    display: flex;           /* make links appear in a row */
+    gap: 1.5rem;             /* space between links */
+    list-style: none;        /* remove bullet points */
+    padding-left: 0;         /* remove default padding */
+}
+
+.sidebar-nav li a {
+    color: var(--color-text);        /* default link color */
+    text-decoration: none;           /* remove underline */
+    font-weight: 500;                /* medium font */
+    transition: color 0.3s ease;    /* smooth hover effect */
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a.active {
+    color: var(--vt-c-indigo);       /* color on hover or active link */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--vt-c-indigo);
+    color: var(--vt-c-white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--vt-c-text-light-1); /* hover effect for button */
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .sidebar-nav {
+        flex-direction: column;  /* stack links vertically */
+        display: none;           /* hide links initially */
+    }
+
+    .sidebar-nav.active {
+        display: flex;           /* show when hamburger menu is active */
+    }
+}
+/* Sidebar Download Button */
+.sidebar .btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--vt-c-indigo);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.sidebar .btn:hover {
+  background: var(--vt-c-text-light-1);
+}
