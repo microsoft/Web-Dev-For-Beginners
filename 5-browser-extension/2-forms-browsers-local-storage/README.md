@@ -4,19 +4,23 @@
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### Introduction
+## Introduction
 
-In this lesson, you'll call an API by submitting your browser extension's form and displaying the results in your browser extension. In addition, you'll learn about how you can store data in your browser's local storage for future reference and use.
+Now that you've built the foundation of your browser extension with HTML and CSS, it's time to bring it to life with dynamic functionality. In this lesson, you'll transform your static form into an interactive tool that communicates with external APIs and intelligently stores data for future use.
+
+API integration is a cornerstone skill in modern web development. Whether you're fetching weather data, user profiles, or carbon emission statistics like we'll do today, understanding how to work with APIs opens up endless possibilities for your applications. You'll also discover how browser storage works behind the scenes, allowing your extension to remember user preferences and data even after closing and reopening.
+
+By the end of this lesson, you'll have a fully functional browser extension that fetches real environmental data, stores user settings, and provides a polished user experience. Let's dive into the exciting world of API integration and data persistence!
 
 ✅ Follow the numbered segments in the appropriate files to know where to place your code
 
-### Set up the elements to manipulate in the extension:
+## Set up the elements to manipulate in the extension
 
-By this time you have built the HTML for the form and results `<div>` for your browser extension. From now on, you'll need to work in the `/src/index.js` file and build your extension bit by bit. Refer to the [previous lesson](../1-about-browsers/README.md) on getting your project set up and on the build process.
+Before we can make our extension interactive, we need to establish connections between our JavaScript code and the HTML elements we created earlier. Think of this step as creating a communication bridge between your code and the user interface.
 
-Working in your `index.js` file, start by creating some `const` variables to hold the values associated with various fields:
+Working in your `index.js` file, you'll start by creating `const` variables that reference each important element on your form. This approach keeps your code organized and makes it easy to update the interface later.
 
-```JavaScript
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -32,120 +36,171 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-All of these fields are referenced by their css class, as you set it up in the HTML in the previous lesson.
+**Here's what this code does:**
+- **Captures** form elements using `document.querySelector()` with CSS class selectors
+- **Creates** references to input fields for the region name and API key
+- **Establishes** connections to result display elements for carbon usage data
+- **Sets up** access to UI elements like loading indicators and error messages
+- **Stores** each element reference in a `const` variable for easy reuse throughout your code
 
-### Add listeners
+## Add event listeners
 
-Next, add event listeners to the form and the clear button that resets the form, so that if a user submits the form or clicks that reset button, something will happen, and add the call to initialize the app at the bottom of the file:
+Event listeners are like watchful assistants that wait for specific user actions and then execute your code in response. You'll add listeners for form submission and button clicks to make your extension interactive.
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Notice the shorthand used to listen for a submit or click event, and how the event it is passed to the handleSubmit or reset functions. Can you write the equivalent of this shorthand in a longer format? Which do you prefer?
+**Understanding these concepts:**
+- **Attaches** a submit listener to the form that triggers when users press Enter or click submit
+- **Connects** a click listener to the clear button for resetting the form
+- **Passes** the event object `(e)` to handler functions for additional control
+- **Calls** the `init()` function immediately to set up the initial state of your extension
 
-### Build out the init() function and the reset() function:
+✅ Notice the shorthand arrow function syntax used here. This modern JavaScript approach is cleaner than traditional function expressions, but both work equally well!
 
-Now you are going to build the function that initializes the extension, which is called init():
+## Build the initialization and reset functions
 
-```JavaScript
+The `init()` function is like the startup routine for your extension - it checks what data is already stored and decides what to show the user. The `reset()` function provides a clean slate when users want to start over.
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
-In this function, there is some interesting logic. Reading through it, can you see what happens?
 
-- two `const` are set up to check if the user has stored an APIKey and region code in local storage.
-- if either of those is null, show the form by changing its style to display as 'block'
-- hide the results, loading, and clearBtn and set any error text to an empty string
-- if there exists a key and region, start a routine to:
-  - call the API to get carbon usage data
-  - hide the results area
-  - hide the form
-  - show the reset button
+**Breaking down what happens here:**
+- **Retrieves** stored API key and region from browser's local storage
+- **Checks** if this is a first-time user (no stored credentials) or returning user
+- **Shows** the setup form for new users and hides other interface elements
+- **Loads** saved data automatically for returning users and displays the reset option
+- **Manages** the user interface state based on available data
 
-Before moving on, it's useful to learn about a very important concept available in browsers: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage is a useful way to store strings in the browser as a `key-value` pair. This type of web storage can be manipulated by JavaScript to manage data in the browser. LocalStorage does not expire, while SessionStorage, another kind of web storage, is cleared when the browser is closed. The various types of storage have pros and cons to their usage.
+**Key concepts about Local Storage:**
+- **Persists** data between browser sessions (unlike session storage)
+- **Stores** data as key-value pairs using `getItem()` and `setItem()`
+- **Returns** `null` when no data exists for a given key
+- **Provides** a simple way to remember user preferences and settings
 
-> Note - your browser extension has its own local storage; the main browser window is a different instance and behaves separately.
+> 💡 **Understanding Browser Storage**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) is one of several storage options available in web browsers. Think of it as a mini-database that lives in your user's browser.
+>
+> **What you need to know:**
+> - **Stores** data as key-value pairs that persist between browser sessions
+> - **Survives** browser restarts (unlike SessionStorage which expires when tabs close)
+> - **Provides** up to 5-10MB of storage space per domain
+> - **Works** synchronously, making it easy to use in your JavaScript code
 
-You set your APIKey to have a string value, for example, and you can see that it is set on Edge by "inspecting" a web page (you can right-click a browser to inspect) and going to the Applications tab to see the storage.
+> **Important Note**: Your browser extension has its own isolated local storage that's separate from regular web pages. This provides security and prevents conflicts with other websites.
+
+You can view your stored data by opening browser Developer Tools (F12), navigating to the **Application** tab, and expanding the **Local Storage** section.
 
 ![Local storage pane](images/localstorage.png)
 
-✅ Think about situations where you would NOT want to store some data in LocalStorage. In general, placing API Keys in LocalStorage is a bad idea! Can you see why? In our case, since our app is purely for learning and will not be deployed to an app store, we will use this method.
+> ⚠️ **Security Consideration**: In production applications, storing API keys in LocalStorage poses security risks since JavaScript can access this data. For learning purposes, this approach works fine, but real applications should use secure server-side storage for sensitive credentials.
 
-Notice that you use the Web API to manipulate LocalStorage, either by using `getItem()`, `setItem()`, or `removeItem()`. It's widely supported across browsers.
+## Handle form submission
 
-Before building the `displayCarbonUsage()` function that is called in `init()`, let's build the functionality to handle the initial form submission.
+When users submit your form, you need to intercept that action and process their input instead of letting the browser handle it normally. This is where form submission handling becomes crucial for single-page applications and extensions.
 
-### Handle the form submission
+Create a function that captures the form submission event and extracts the user's input:
 
-Create a function called `handleSubmit` that accepts an event argument `(e)`. Stop the event from propagating (in this case, we want to stop the browser from refreshing) and call a new function, `setUpUser`, passing in the arguments `apiKey.value` and `region.value`. In this way, you use the two values that are brought in via the initial form when the appropriate fields are populated.
-
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
-✅ Refresh your memory - the HTML you set up in the last lesson has two input fields whose `values` are captured via the `const` you set up at the top of the file, and they are both `required` so the browser stops users from inputting null values.
 
-### Set up the user
+**In the above, we've:**
+- **Prevents** the default form submission behavior that would refresh the page
+- **Extracts** user input values from the API key and region fields
+- **Passes** the form data to the `setUpUser()` function for processing
+- **Maintains** single-page application behavior by avoiding page reloads
 
-Moving on to the `setUpUser` function, here is where you set local storage values for apiKey and regionName. Add a new function:
+✅ Remember that your HTML form fields include the `required` attribute, so the browser automatically validates that users provide both the API key and region before this function runs.
 
-```JavaScript
+## Set up user preferences
+
+The `setUpUser` function is responsible for saving the user's credentials and initiating the first API call. This creates a smooth transition from setup to displaying results.
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
-This function sets a loading message to show while the API is called. At this point, you have arrived at creating the most important function of this browser extension!
 
-### Display Carbon Usage
+**Step by step, here's what's happening:**
+- **Saves** the API key and region name to local storage for future use
+- **Shows** a loading indicator to inform users that data is being fetched
+- **Clears** any previous error messages from the display
+- **Reveals** the clear button for users to reset their settings later
+- **Initiates** the API call to fetch real carbon usage data
 
-Finally, it's time to query the API!
+This function creates a seamless user experience by managing both data persistence and user interface updates in one coordinated action.
 
-Before going further, we should discuss APIs. APIs, or [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), is a critical element of a web developer's toolbox. They provide standard ways for programs to interact and interface with each other. For example, if you are building a web site that needs to query a database, someone might have created an API for you to use. While there are many types of APIs, one of the most popular is a [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+## Display carbon usage data
 
-✅ The term 'REST' stands for 'Representational State Transfer' and features using variously-configured URLs to fetch data. Do a little research on the various types of APIs available to developers. What format appeals to you?
+Now comes the exciting part - fetching real environmental data from an external API! This is where your extension transforms from a simple form into a powerful tool that provides valuable information to users.
 
-There are important things to note about this function. First, notice the [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Writing your functions so that they run asynchronously means that they wait for an action, such as data being returned, to be completed before continuing.
+**Understanding APIs in web development:**
+
+[Application Programming Interfaces (APIs)](https://www.webopedia.com/TERM/A/API.html) are the bridges that connect different software systems. Think of them as specialized messengers that allow your application to request specific data from external services. When you check the weather on your phone, submit a payment online, or share content on social media, APIs are working behind the scenes.
+
+**Key concepts about REST APIs:**
+- **REST** stands for 'Representational State Transfer'
+- **Uses** standard HTTP methods (GET, POST, PUT, DELETE) to interact with data
+- **Returns** data in predictable formats, typically JSON
+- **Provides** consistent, URL-based endpoints for different types of requests
+
+✅ The [CO2 Signal API](https://www.co2signal.com/) we'll use provides real-time carbon intensity data from electrical grids worldwide. This helps users understand the environmental impact of their electricity usage!
+
+> 💡 **Understanding Asynchronous JavaScript**: The [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) is essential for modern web development. When you make API calls, you're requesting data from external servers, which takes time.
+>
+> **Here's why async/await matters:**
+> - **Prevents** your application from freezing while waiting for API responses
+> - **Allows** other code to continue running during network requests
+> - **Provides** cleaner, more readable code compared to callback-based approaches
+> - **Handles** errors gracefully when network requests fail
 
 Here's a quick video about `async`:
 
@@ -153,56 +208,82 @@ Here's a quick video about `async`:
 
 > 🎥 Click the image above for a video about async/await.
 
-Create a new function to query the C02Signal API:
+Create the function to fetch and display carbon usage data:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-This is a big function. What's going on here?
+**Breaking down what happens here:**
+- **Uses** the modern `fetch()` API instead of external libraries like Axios for cleaner, dependency-free code
+- **Implements** proper error checking with `response.ok` to catch API failures early
+- **Handles** asynchronous operations with `async/await` for more readable code flow
+- **Authenticates** with the CO2 Signal API using the `auth-token` header
+- **Parses** JSON response data and extracts carbon intensity information
+- **Updates** multiple UI elements with formatted environmental data
+- **Provides** user-friendly error messages when API calls fail
 
-- following best practices, you use an `async` keyword to make this function behave asynchronously. The function contains a `try/catch` block as it will return a promise when the API returns data. Because you don't have control over the speed that the API will respond (it may not respond at all!), you need to handle this uncertainty by calling it asynchronously. 
-- you're querying the co2signal API to get your region's data, using your API Key. To use that key, you have to use a type of authentication in your header parameters.
-- once the API responds, you assign various elements of its response data to the parts of your screen you set up to show this data.
-- if there's an error, or if there is no result, you show an error message.
+**Key modern JavaScript concepts demonstrated:**
+- **Template literals** with `${}` syntax for clean string formatting
+- **Error handling** with try/catch blocks for robust applications
+- **Async/await** pattern for handling network requests gracefully
+- **Object destructuring** to extract specific data from API responses
+- **Method chaining** for multiple DOM manipulations
 
-✅ Using asynchronous programming patterns is another very useful tool in your toolbox. Read [about the various ways](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) you can configure this type of code.
+✅ This function showcases the complete lifecycle of API integration: authentication, request, data processing, UI updates, and error handling - all essential skills for modern web development!
 
-Congratulations! If you build your extension (`npm run build`) and refresh it in your extensions pane, you have a working extension! The only thing that isn't working is the icon, and you'll fix that in the next lesson.
+🎉 **Congratulations!** You've built a fully functional browser extension that:
+- **Integrates** with external APIs to fetch real-world data
+- **Stores** user preferences in local storage
+- **Handles** errors gracefully with user-friendly messages
+- **Provides** a smooth, interactive user experience
+
+To test your extension, run `npm run build` and refresh it in your browser's extensions panel. You now have a working carbon footprint tracker! The only feature left to implement is the dynamic icon, which you'll tackle in the next lesson.
 
 ---
 
@@ -216,7 +297,21 @@ Use the Agent mode to complete the following challenge:
 
 ## 🚀 Challenge
 
-We've discussed several types of API so far in these lessons. Choose a web API and research in depth what it offers. For example, take a look at APIs available within browsers such as the [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). What makes a great API in your opinion?
+Expand your understanding of APIs by exploring the wealth of browser-based APIs available for web development. Choose one of these browser APIs and build a small demonstration:
+
+- [Geolocation API](https://developer.mozilla.org/docs/Web/API/Geolocation_API) - Get user's current location
+- [Notification API](https://developer.mozilla.org/docs/Web/API/Notifications_API) - Send desktop notifications
+- [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) - Create interactive drag interfaces
+- [Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) - Advanced local storage techniques
+- [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) - Modern alternative to XMLHttpRequest
+
+**Research questions to consider:**
+- What real-world problems does this API solve?
+- How does the API handle errors and edge cases?
+- What security considerations exist when using this API?
+- How widely supported is this API across different browsers?
+
+After your research, identify what characteristics make an API developer-friendly and reliable.
 
 ## Post-Lecture Quiz
 
