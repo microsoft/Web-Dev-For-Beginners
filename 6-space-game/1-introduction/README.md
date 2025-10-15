@@ -1,41 +1,49 @@
 # Build a Space Game Part 1: Introduction
 
-![video](../images/pewpew.gif)
+![Space game animation showing gameplay](../images/pewpew.gif)
+
+Welcome to an exciting journey where you'll build your very own space game using JavaScript! In this lesson, you'll discover the fundamental design patterns that power modern game development. These patterns aren't just for games – they're essential architectural concepts that will make you a better programmer across all types of applications.
+
+You'll explore two powerful approaches to organizing code: inheritance and composition, and learn when to use each one. We'll also dive into the pub/sub (publish-subscribe) pattern, a communication system that keeps different parts of your application loosely connected yet perfectly coordinated. Think of it as a sophisticated messaging system that allows game objects to communicate without directly knowing about each other.
+
+By the end of this lesson, you'll understand how to structure larger applications, create flexible game architectures, and implement communication patterns that scale beautifully. These concepts will serve you well whether you're building games, web applications, or any complex software project. Let's begin building the foundation for your space game adventure!
 
 ## Pre-Lecture Quiz
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/29)
 
-### Inheritance and Composition in game development
+## Inheritance and Composition in Game Development
 
-In earlier lessons, there was not much need to worry about the design architecture of the apps you built, as the projects were very small in scope. However, when your applications grow in size and scope, architectural decisions become a larger concern. There are two major approaches to creating larger applications in JavaScript: *composition* or *inheritance*. There are pros and cons to both but let's explain them from within the context of a game.
+As your programming skills advance, you'll need to make important decisions about how to organize and structure your code. When applications grow beyond simple scripts into complex interactive experiences like games, architectural patterns become crucial for maintainability and scalability.
+
+In this section, you'll learn about two fundamental approaches to building larger JavaScript applications: inheritance and composition. Each approach offers unique advantages, and understanding both will help you choose the right pattern for different situations. We'll explore these concepts through the lens of game development, where objects interact in complex ways and clear organization is essential for success.
 
 ✅ One of the most famous programming books ever written has to do with [design patterns](https://en.wikipedia.org/wiki/Design_Patterns).
 
-In a game you have `game objects` which are objects that exist on a screen. This means they have a location on a cartesian coordinate system, characterized by having an `x` and `y` coordinate. As you develop a game you will notice that all your game objects have a standard property, common for every game you create, namely elements that are:
+In a game, you have `game objects` – entities that exist on screen and interact with players and each other. These objects live in a coordinate system with `x` and `y` positions, much like points on a map. As you develop games, you'll notice that most game objects share common behaviors and properties.
 
-- **location-based** Most, if not all, game elements are location based. This means that they have a location, an `x` and `y`.
-- **movable** These are objects that can move to a new location. This is typically a hero, a monster or an NPC (a non player character), but not for example, a static object like a tree.
-- **self-destructing** These objects only exist for a set period of time before they set themselves up for deletion. Usually this is represented by a `dead` or `destroyed` boolean that signals to the game engine that this object should no longer be rendered.
-- **cool-down** 'Cool-down' is a typical property among short-lived objects. A typical example is a piece of text or graphical effect like an explosion that should only be seen for a few milliseconds.
+**Here's what most game objects have in common:**
+- **Location-based positioning** – **Uses** `x` and `y` coordinates to define where the object appears on screen
+- **Movement capabilities** – **Enables** objects like heroes, enemies, or NPCs (non-player characters) to change position over time
+- **Lifecycle management** – **Controls** how long objects exist before being removed from the game
+- **Temporary effects** – **Handles** short-lived elements like explosions, power-ups, or visual effects that appear briefly
 
 ✅ Think about a game like Pac-Man. Can you identify the four object types listed above in this game?
 
-### Expressing behavior
+### Expressing Behavior Through Code
 
-All we described above are behavior that game objects can have. So how do we encode those? We can express this behavior as methods associated to either classes or objects.
+Now that you understand the common behaviors game objects share, let's explore how to implement these behaviors in JavaScript. You can express object behavior through methods attached to either classes or individual objects, and there are several approaches to choose from.
 
-**Classes**
+**The Class-Based Approach**
 
-The idea is to use `classes` in conjunction with `inheritance` to accomplish adding a certain behavior to a class.
+One powerful way to organize behavior is through `classes` combined with `inheritance`. This approach allows you to define shared behaviors in parent classes and extend them with specialized functionality in child classes.
 
 ✅ Inheritance is an important concept to understand. Learn more on [MDN's article about inheritance](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Expressed via code, a game object can typically look like this:
+Here's how you can implement game objects using classes and inheritance:
 
 ```javascript
-
-//set up the class GameObject
+// Step 1: Create the base GameObject class
 class GameObject {
   constructor(x, y, type) {
     this.x = x;
@@ -43,167 +51,279 @@ class GameObject {
     this.type = type;
   }
 }
+```
 
-//this class will extend the GameObject's inherent class properties
+**Breaking down what happens here:**
+- **Defines** a base class that all game objects will inherit from
+- **Stores** position coordinates (`x`, `y`) and object type in the constructor
+- **Establishes** the foundation for all objects in your game
+
+```javascript
+// Step 2: Add movement capability through inheritance
 class Movable extends GameObject {
-  constructor(x,y, type) {
-    super(x,y, type)
+  constructor(x, y, type) {
+    super(x, y, type); // Call parent constructor
   }
 
-//this movable object can be moved on the screen
+  // Add the ability to move to a new position
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
 }
-
-//this is a specific class that extends the Movable class, so it can take advantage of all the properties that it inherits
-class Hero extends Movable {
-  constructor(x,y) {
-    super(x,y, 'Hero')
-  }
-}
-
-//this class, on the other hand, only inherits the GameObject properties
-class Tree extends GameObject {
-  constructor(x,y) {
-    super(x,y, 'Tree')
-  }
-}
-
-//a hero can move...
-const hero = new Hero();
-hero.moveTo(5,5);
-
-//but a tree cannot
-const tree = new Tree();
 ```
+
+**In the above, we've:**
+- **Extended** the GameObject class to add movement functionality
+- **Called** the parent constructor using `super()` to initialize inherited properties
+- **Added** a `moveTo()` method that updates the object's position
+
+```javascript
+// Step 3: Create specific game object types
+class Hero extends Movable {
+  constructor(x, y) {
+    super(x, y, 'Hero'); // Set type automatically
+  }
+}
+
+class Tree extends GameObject {
+  constructor(x, y) {
+    super(x, y, 'Tree'); // Trees don't need movement
+  }
+}
+
+// Step 4: Use your game objects
+const hero = new Hero(0, 0);
+hero.moveTo(5, 5); // Hero can move!
+
+const tree = new Tree(10, 15);
+// tree.moveTo() would cause an error - trees can't move
+```
+
+**Understanding these concepts:**
+- **Creates** specialized object types that inherit appropriate behaviors
+- **Demonstrates** how inheritance allows selective feature inclusion
+- **Shows** that heroes can move while trees remain stationary
+- **Illustrates** how the class hierarchy prevents inappropriate actions
 
 ✅ Take a few minutes to re-envision a Pac-Man hero (Inky, Pinky or Blinky, for example) and how it would be written in JavaScript. 
 
-**Composition**
+**The Composition Approach**
 
-A different way of handling object inheritance is by using *Composition*. Then, objects express their behavior like this:
+Composition offers an alternative to inheritance by combining smaller, focused objects into larger ones. Instead of creating class hierarchies, you build objects by mixing and matching behaviors as needed.
 
 ```javascript
-//create a constant gameObject
+// Step 1: Create base behavior objects
 const gameObject = {
   x: 0,
   y: 0,
   type: ''
 };
 
-//...and a constant movable
 const movable = {
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
-}
-//then the constant movableObject is composed of the gameObject and movable constants
-const movableObject = {...gameObject, ...movable};
+};
+```
 
-//then create a function to create a new Hero who inherits the movableObject properties
+**Here's what this code does:**
+- **Defines** a base `gameObject` with position and type properties
+- **Creates** a separate `movable` behavior object with movement functionality
+- **Separates** concerns by keeping position data and movement logic independent
+
+```javascript
+// Step 2: Compose objects by combining behaviors
+const movableObject = { ...gameObject, ...movable };
+
+// Step 3: Create factory functions for different object types
 function createHero(x, y) {
   return {
     ...movableObject,
     x,
     y,
     type: 'Hero'
-  }
+  };
 }
-//...and a static object that inherits only the gameObject properties
+
 function createStatic(x, y, type) {
   return {
-    ...gameObject
+    ...gameObject,
     x,
     y,
     type
-  }
+  };
 }
-//create the hero and move it
-const hero = createHero(10,10);
-hero.moveTo(5,5);
-//and create a static tree which only stands around
-const tree = createStatic(0,0, 'Tree'); 
 ```
 
-**Which pattern should I use?**
-
-It's up to you which pattern you choose. JavaScript supports both these paradigms.
-
---
-
-Another pattern common in game development addresses the problem of handling the game's user experience and performance.
-
-## Pub/sub pattern
-
-✅ Pub/Sub stands for 'publish-subscribe'
-
-This pattern addresses the idea that the disparate parts of your application shouldn't know about one another. Why is that? It makes it a lot easier to see what's going on in general if various parts are separated. It also makes it easier to suddenly change behavior if you need to. How do we accomplish this? We do this by establishing some concepts:
-
-- **message**: A message is usually a text string accompanied by an optional payload (a piece of data that clarifies what the message is about). A typical message in a game can be `KEY_PRESSED_ENTER`.
-- **publisher**: This element *publishes* a message and sends it out to all subscribers.
-- **subscriber**: This element *listens* to specific messages and carries out some task as the result of receiving this message, such as firing a laser.
-
-The implementation is quite small in size but it's a very powerful pattern. Here's how it can be implemented:
+**In the above, we've:**
+- **Combined** base object properties with movement behavior using spread syntax
+- **Created** factory functions that return customized objects
+- **Enabled** flexible object creation without rigid class hierarchies
+- **Allowed** objects to have exactly the behaviors they need
 
 ```javascript
-//set up an EventEmitter class that contains listeners
+// Step 4: Create and use your composed objects
+const hero = createHero(10, 10);
+hero.moveTo(5, 5); // Works perfectly!
+
+const tree = createStatic(0, 0, 'Tree');
+// tree.moveTo() is undefined - no movement behavior was composed
+```
+
+**Key points to remember:**
+- **Composes** objects by mixing behaviors rather than inheriting them
+- **Provides** more flexibility than rigid inheritance hierarchies
+- **Allows** objects to have exactly the features they need
+- **Uses** modern JavaScript spread syntax for clean object combination 
+```
+
+**Which Pattern Should You Choose?**
+
+> 💡 **Pro Tip**: Both patterns have their place in modern JavaScript development. Classes work well for clearly defined hierarchies, while composition shines when you need maximum flexibility.
+> 
+**Here's when to use each approach:**
+- **Choose** inheritance when you have clear "is-a" relationships (a Hero *is-a* Movable object)
+- **Select** composition when you need "has-a" relationships (a Hero *has* movement abilities)
+- **Consider** your team's preferences and project requirements
+- **Remember** that you can mix both approaches in the same application
+
+## Communication Patterns: The Pub/Sub System
+
+As your game grows more complex, different parts need to communicate without becoming tightly coupled. The publish-subscribe (pub/sub) pattern solves this challenge by creating a messaging system that keeps components independent while enabling sophisticated interactions.
+
+This pattern is essential for game development because it allows objects to react to events without knowing exactly where those events come from. Imagine a game where the hero's health changes – with pub/sub, the health bar, sound effects, and visual indicators can all respond automatically without the hero object needing to know about any of them.
+
+✅ **Pub/Sub** stands for 'publish-subscribe'
+
+### Understanding the Pub/Sub Architecture
+
+The pub/sub pattern keeps different parts of your application loosely coupled, meaning they can work together without being directly dependent on each other. This separation makes your code more maintainable, testable, and flexible to changes.
+
+**Key concepts that make pub/sub work:**
+- **Message** – **Carries** information as a string identifier (like `'PLAYER_SCORED'`) with optional data
+- **Publisher** – **Broadcasts** messages when events occur, without knowing who will receive them
+- **Subscriber** – **Listens** for specific messages and responds accordingly
+- **Event System** – **Manages** the connection between publishers and subscribers
+
+### Building an Event System
+
+Let's create a simple but powerful event system that demonstrates these concepts:
+
+```javascript
+// Step 1: Create the EventEmitter class
 class EventEmitter {
   constructor() {
-    this.listeners = {};
+    this.listeners = {}; // Store all event listeners
   }
-//when a message is received, let the listener to handle its payload
+  
+  // Register a listener for a specific message type
   on(message, listener) {
     if (!this.listeners[message]) {
       this.listeners[message] = [];
     }
     this.listeners[message].push(listener);
   }
-//when a message is sent, send it to a listener with some payload
+  
+  // Send a message to all registered listeners
   emit(message, payload = null) {
     if (this.listeners[message]) {
-      this.listeners[message].forEach(l => l(message, payload))
+      this.listeners[message].forEach(listener => {
+        listener(message, payload);
+      });
     }
   }
 }
-
 ```
 
-To use the above code we can create a very small implementation:
+**Breaking down what happens here:**
+- **Creates** a central event management system using a simple class
+- **Stores** listeners in an object organized by message type
+- **Registers** new listeners using the `on()` method
+- **Broadcasts** messages to all interested listeners using `emit()`
+- **Supports** optional data payloads for passing relevant information
+
+### Putting It All Together: A Practical Example
+
+Let's see how the pub/sub pattern works in practice by creating a simple movement system:
 
 ```javascript
-//set up a message structure
+// Step 1: Define your message types
 const Messages = {
-  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT'
+  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT',
+  HERO_MOVE_RIGHT: 'HERO_MOVE_RIGHT',
+  ENEMY_SPOTTED: 'ENEMY_SPOTTED'
 };
-//invoke the eventEmitter you set up above
+
+// Step 2: Create your event system and game objects
 const eventEmitter = new EventEmitter();
-//set up a hero
-const hero = createHero(0,0);
-//let the eventEmitter know to watch for messages pertaining to the hero moving left, and act on it
+const hero = createHero(0, 0);
+```
+
+**Here's what this code does:**
+- **Defines** a constants object to prevent typos in message names
+- **Creates** an event emitter instance to handle all communication
+- **Initializes** a hero object at the starting position
+
+```javascript
+// Step 3: Set up event listeners (subscribers)
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
+  hero.moveTo(hero.x - 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
 });
 
-//set up the window to listen for the keyup event, specifically if the left arrow is hit, emit a message to move the hero left
-window.addEventListener('keyup', (evt) => {
-  if (evt.key === 'ArrowLeft') {
-    eventEmitter.emit(Messages.HERO_MOVE_LEFT)
+eventEmitter.on(Messages.HERO_MOVE_RIGHT, () => {
+  hero.moveTo(hero.x + 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
+});
+```
+
+**In the above, we've:**
+- **Registered** event listeners that respond to movement messages
+- **Updated** the hero's position based on the movement direction
+- **Added** console logging to track the hero's position changes
+- **Separated** the movement logic from the input handling
+
+```javascript
+// Step 4: Connect keyboard input to events (publishers)
+window.addEventListener('keydown', (event) => {
+  switch(event.key) {
+    case 'ArrowLeft':
+      eventEmitter.emit(Messages.HERO_MOVE_LEFT);
+      break;
+    case 'ArrowRight':
+      eventEmitter.emit(Messages.HERO_MOVE_RIGHT);
+      break;
   }
 });
 ```
 
-Above we connect a keyboard event, `ArrowLeft` and send the `HERO_MOVE_LEFT` message. We listen to that message and move the `hero` as a result. The strength with this pattern is that the event listener and the hero don't know about each other. You can remap the `ArrowLeft` to the `A` key. Additionally it would be possible to do something completely different on `ArrowLeft` by making a few edits to the eventEmitter's `on` function:
+**Understanding these concepts:**
+- **Connects** keyboard input to game events without tight coupling
+- **Enables** the input system to communicate with game objects indirectly
+- **Allows** multiple systems to respond to the same keyboard events
+- **Makes** it easy to change key bindings or add new input methods
 
-```javascript
-eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
-});
-```
+> 💡 **Pro Tip**: The beauty of this pattern is flexibility! You can easily add sound effects, screen shake, or particle effects by simply adding more event listeners – no need to modify the existing keyboard or movement code.
+> 
+**Benefits you'll discover:**
+- **Enables** easy addition of new features without modifying existing code
+- **Allows** multiple systems to respond to the same events
+- **Simplifies** testing by isolating different parts of your application
+- **Makes** debugging easier by centralizing event flow
 
-As things gets more complicated when your game grows, this pattern stays the same in complexity and your code stays clean. It's really recommended to adopt this pattern.
+### Why Pub/Sub Scales Beautifully
+
+As your game grows more complex with multiple enemies, power-ups, sound effects, and UI elements, the pub/sub pattern maintains its simplicity. You can add new features without touching existing code – just create new publishers and subscribers as needed.
+
+> ⚠️ **Common Mistake**: Don't create too many specific message types early on. Start with broad categories and refine them as your game's needs become clearer.
+> 
+**Best practices to follow:**
+- **Groups** related messages into logical categories
+- **Uses** descriptive names that clearly indicate what happened
+- **Keeps** message payloads simple and focused
+- **Documents** your message types for team collaboration
 
 ---
 
