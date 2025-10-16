@@ -1,35 +1,37 @@
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Stellar AI Chat</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-      <div class="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stellar AI Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="app">
         <header class="header">
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div class="logo">🤖</div>
-            <div>
-              <h1>My company</h1>
-              <p class="subtitle">Dark-mode chat UI — powered by the backend AI</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <div class="logo">🤖</div>
+                <div>
+                    <h1>My company</h1>
+                    <p class="subtitle">Dark-mode chat UI — powered by the backend AI</p>
+                </div>
             </div>
-          </div>
         </header>
 
         <main class="chat" id="chat">
-          <div class="messages" id="messages" aria-live="polite"></div>
-
-          <form id="composer" class="composer" action="#">
-            <textarea id="input" placeholder="Say hello — press Enter to send (Shift+Enter for newline)" rows="2"></textarea>
-            <button id="send" type="submit">Send</button>
-          </form>
+            <div class="messages" id="messages" aria-live="polite"></div>
         </main>
 
-        <footer class="footer">Running with backend at <code>http://127.0.0.1:5000/hello</code></footer>
-      </div>
+        <form id="composer" class="composer" action="#">
+            <textarea id="input" placeholder="Say hello — press Enter to send (Shift+Enter for newline)"
+                rows="2"></textarea>
+            <button id="send" type="submit" disabled>Send</button>
+        </form>
 
-      <script src="app.js"></script>
-    </body>
+        <footer class="footer">Running with backend at <code>http://127.0.0.1:5000/</code>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
 </html>
