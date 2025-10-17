@@ -1,103 +1,138 @@
 /* Dark, modern chat styles for the AI chat page */
-:root{
-  --bg-1: #0f1724;
-  --bg-2: #071226;
-  --panel: rgba(255,255,255,0.03);
-  --glass: rgba(255,255,255,0.04);
-  --accent: #7c3aed; /* purple */
-  --accent-2: #06b6d4; /* cyan */
-  --muted: rgba(255,255,255,0.55);
-  --user-bg: linear-gradient(135deg,#0ea5a4 0%, #06b6d4 100%);
-  --ai-bg: linear-gradient(135deg,#111827 0%, #0b1220 100%);
-  --radius: 14px;
-  --max-width: 900px;
+:root {
+    --bg-1: #0f1724;
+    --bg-2: #071226;
+    --panel-bg: rgba(255, 255, 255, 0.03);
+    --accent: #7c3aed; 
+    --accent-2: #06b6d4; 
+    --muted: rgba(255, 255, 255, 0.55);
+    --user-bg: linear-gradient(135deg, #0ea5a4 0%, #06b6d4 100%);
+    --ai-msg-bg: linear-gradient(135deg, #111827 0%, #0b1220 100%);
+    --shadow-color: rgba(2, 6, 23, 0.6);
+    --radius: 14px;
+    --max-width: 900px;
+
+    /*composer colors*/
+    --composer-bg: #1e293b;
+    --composer-input-bg: #334155;
 }
 
 *{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background: radial-gradient(1000px 500px at 10% 10%, rgba(124,58,237,0.12), transparent),
-              radial-gradient(800px 400px at 90% 90%, rgba(6,182,212,0.06), transparent),
-              linear-gradient(180deg,var(--bg-1), var(--bg-2));
-  color: #e6eef8;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  padding:32px;
+html,body {height:100%}
+
+body {
+    margin:0;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: radial-gradient(1000px 500px at 10% 10%, rgba(124,58,237,0.12), transparent),
+                radial-gradient(800px 400px at 90% 90%, rgba(6,182,212,0.06), transparent),
+                linear-gradient(180deg,var(--bg-1), var(--bg-2));
+    color: #e6eef8;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:32px;
 }
 
-.app{
-  max-width:var(--max-width);
-  margin:0 auto;
-  height:calc(100vh - 64px);
-  display:flex;
-  flex-direction:column;
-  gap:16px;
+/*focus ring for prompt box*/
+:focus-visible {
+    outline:none;
+    box-shadow: 0 0 0 3px var(--accent-2);
 }
 
-.header{
-  display:flex;
-  align-items:center;
-  gap:16px;
-  padding:16px 20px;
-  border-radius:12px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
-  backdrop-filter: blur(6px);
+.app {
+    max-width:var(--max-width);
+    margin:0 auto;
+    height:calc(100vh - 64px); 
+    display:flex;
+    flex-direction:column;
+    gap:16px;
 }
-.header .logo{
-  font-size:28px;
-  width:56px;height:56px;
-  display:flex;align-items:center;justify-content:center;
-  border-radius:12px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+
+.header {
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:16px 20px;
+    border-radius:12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    box-shadow: 0 6px 18px var(--shadow-color);
+    backdrop-filter: blur(6px);
 }
+
+.header .logo {
+    font-size:28px;
+    width:56px;
+    height:56px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+}
+
 .header h1{margin:0;font-size:18px}
 .header .subtitle{margin:0;font-size:12px;color:var(--muted)}
 
-.chat{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  padding:18px;
-  border-radius:16px;
-  flex:1 1 auto;
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
-  box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+.chat {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), transparent); 
+    padding:18px;
+    border-radius:16px;
+    flex:1 1 auto;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    box-shadow: 0 20px 40px var(--shadow-color);
 }
 
-.messages{
-  overflow:auto;
-  padding:8px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  scrollbar-width: thin;
+.messages {
+    overflow:auto;
+    padding:8px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    scrollbar-width:thin;
+}
+
+/*transparent scrollbar*/
+.messages {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.16) transparent; 
 }
 
 /* Message bubble */
-.message{
-  max-width:85%;
-  display:inline-block;
-  padding:12px 14px;
-  border-radius:12px;
-  color: #e6eef8;
-  line-height:1.4;
-  box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+.message {
+    max-width:85%;
+    display:inline-block;
+    padding:12px 14px;
+    border-radius:12px;
+    color: #e6eef8;
+    line-height:1.4;
+    box-shadow: 0 6px 18px var(--shadow-color);
 }
-.message.user{
-  margin-left:auto;
-  background: var(--user-bg);
-  border-radius: 16px 16px 6px 16px;
-  text-align:left;
+
+/* Copy & Delete button remove */
+.message .controls {
+    position: absolute;
+    top: -12px; 
+    padding: 2px 4px;
+    border-radius: 6px;
+    background: var(--composer-bg);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 10;
 }
-.message.ai{
-  margin-right:auto;
-  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.03);
-  color: #cfe6ff;
-  border-radius: 16px 16px 16px 6px;
+
+.message.user {
+    margin-left:auto;
+    background:var(--user-bg);
+    border-radius:16px 16px 6px 16px;
+    text-align:left;
+}
+.message.ai {
+    margin-right:auto;
+    background: var(--ai-msg-bg);
+    border: 1px solid rgba(255,255,255,0.03);
+    color: #cfe6ff;
+    border-radius: 16px 16px 16px 6px;
 }
 .message small{display:block;color:var(--muted);font-size:11px;margin-top:6px}
 
@@ -112,40 +147,69 @@ body{
 .typing .dot:nth-child(3){animation:blink 1s infinite 0.3s}
 
 /* Composer */
-.composer{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  padding-top:12px;
-  border-top:1px dashed rgba(255,255,255,0.02);
+.composer {
+    background: var(--composer-bg);
+    padding: 12px 16px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 8px;
 }
-.composer textarea{
-  resize:none;
-  min-height:44px;
-  max-height:160px;
-  padding:12px 14px;
-  border-radius:12px;
-  border: none;
-  outline: none;
-  background: rgba(255,255,255,0.02);
-  color: #e6eef8;
-  flex:1 1 auto;
-  font-size:14px;
-}
-.composer button{
-  background: linear-gradient(135deg,var(--accent),var(--accent-2));
-  color:white;
-  border:none;
-  padding:12px 16px;
-  border-radius:12px;
-  cursor:pointer;
-  font-weight:600;
-  box-shadow: 0 8px 24px rgba(12,6,40,0.5);
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-.composer button:active{transform:translateY(1px)}
 
-.footer{color:var(--muted);font-size:12px;text-align:center}
+.composer textarea {
+    resize: none;
+    min-height: 44px;
+    max-height: 160px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: var(--composer-input-bg);
+    border: 1px solid var(--panel-bg);
+    outline: none;
+    color: #e6eef8;
+    flex: 1 1 auto;
+    font-size: 14px;
+}
+
+.composer button {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(12,6,40,0.5);
+    transition: transform .12s ease, box-shadow .3s ease, opacity .3s ease;
+}
+
+/* Disabled state without glow */
+.composer button:disabled {
+    opacity: 0.4; 
+    box-shadow: none;
+    cursor: not-allowed;
+    animation: none; 
+}
+
+.composer button:active:not(:disabled) {
+    transform: translateY(1px)
+}
+
+.footer {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, var(--panel-bg), transparent);
+    box-shadow: 0 6px 18px var(--shadow-color);
+    backdrop-filter: blur(6px);
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+    flex-shrink: 0;
+}
 
 /* small screens */
 @media (max-width:640px){
