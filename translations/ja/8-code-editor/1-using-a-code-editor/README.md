@@ -46,7 +46,7 @@ VSCode.devに慣れれば、どこからでも、いつでもコーディング�
 
 ## VSCode.devの使い方
 
-**[VSCode.dev](https://vscode.dev)**にアクセスしてください。インストールもダウンロードも不要です。GitHubでサインインすると、設定、拡張機能、リポジトリの同期を含む完全なアクセスが可能になります。プロンプトが表示されたら、GitHubアカウントを接続してください。
+**[VSCode.dev](https://vscode.dev)** にアクセスしてください。インストールもダウンロードも不要です。GitHubでサインインすると、設定、拡張機能、リポジトリの同期を含む完全なアクセスが可能になります。プロンプトが表示されたら、GitHubアカウントを接続してください。
 
 読み込みが完了すると、ワークスペースは以下のように表示されます：
 
@@ -65,7 +65,7 @@ VSCode.devに慣れれば、どこからでも、いつでもコーディング�
 
 ### 方法1: エディターから
 
-1. [VSCode.dev](https://vscode.dev)にアクセスし、**「Open Remote Repository」**をクリックします。
+1. [VSCode.dev](https://vscode.dev)にアクセスし、**「Open Remote Repository」** をクリックします。
 
    ![Open remote repository](../../../../8-code-editor/images/open-remote-repository)
 
