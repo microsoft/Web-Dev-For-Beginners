@@ -1,56 +1,84 @@
-from flask import Flask, request, jsonify
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 from llm import call_llm
-from flask_cors import CORS
 import logging
 
-app = Flask(__name__)
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Create FastAPI application
+app = FastAPI(
+    title="AI Chat API",
+    description="A high-performance API for AI-powered chat applications",
+    version="1.0.0"
+)
 
 # Configure CORS (allow all origins for development; restrict in production)
-CORS(app, resources={r"/*": {"origins": "*"}})
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-# Set up logging
-logging.basicConfig(level=logging.INFO)
+# Pydantic models for request/response validation
+class ChatMessage(BaseModel):
+    message: str
 
-@app.route("/", methods=["GET"])
-def index():
+class ChatResponse(BaseModel):
+    response: str
+
+class HealthResponse(BaseModel):
+    status: str
+    service: str
+
+@app.get("/")
+async def index():
     """Root endpoint for API status."""
-    return jsonify({
+    return {
         "status": "ok",
-        "message": "Welcome to the Chat Project API"
-    })
+        "message": "Welcome to the Chat Project API",
+        "docs": "/docs",
+        "health": "/health"
+    }
 
-@app.route("/health", methods=["GET"])
-def health():
+@app.get("/health", response_model=HealthResponse)
+async def health():
     """Health check endpoint."""
-    return jsonify({"status": "healthy"}), 200
+    return HealthResponse(status="healthy", service="ai-chat-api")
 
-@app.route("/test", methods=["GET"])
-def test():
+@app.get("/test")
+async def test():
     """Simple test endpoint."""
-    return jsonify({"result": "Test successful"}), 200
+    return {"result": "Test successful"}
 
-@app.route("/hello", methods=["POST"])
-def hello():
+@app.post("/hello", response_model=ChatResponse)
+async def hello(chat_message: ChatMessage):
     """
     Chat endpoint.
     Expects JSON: { "message": "your message" }
     Returns: { "response": "LLM response" }
     """
     try:
-        data = request.get_json(force=True)
-        message = data.get("message", "").strip()
+        message = chat_message.message.strip()
         if not message:
-            logging.warning("No message provided in request.")
-            return jsonify({"error": "No message provided."}), 400
+            logger.warning("Empty message provided in request.")
+            raise HTTPException(status_code=400, detail="Message cannot be empty")
 
-        logging.info(f"Received message: {message}")
+        logger.info(f"Received message: {message}")
         response = call_llm(message, "You are a helpful assistant.")
-        return jsonify({"response": response}), 200
+        logger.info("LLM response generated successfully")
+        return ChatResponse(response=response)
 
+    except HTTPException:
+        raise
     except Exception as e:
-        logging.error(f"Error in /hello endpoint: {e}")
-        return jsonify({"error": "Internal server error."}), 500
+        logger.error(f"Error in /hello endpoint: {e}")
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 if __name__ == "__main__":
-    # Run the app with debug mode for development
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=5000, reload=True)
