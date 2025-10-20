@@ -1,58 +1,141 @@
 # Build a Banking App Part 3: Methods of Fetching and Using Data
 
+Data is the lifeblood of modern web applications. Every time you check your bank balance, refresh your social media feed, or search for a product online, you're witnessing the power of dynamic data fetching and display. Unlike traditional websites that required full page reloads to show new information, modern web applications can seamlessly update content in real-time, creating smooth and responsive user experiences.
+
+In this lesson, you'll discover how to transform your static banking app into a dynamic, data-driven application. You'll learn to fetch user account information from a server, handle asynchronous operations with modern JavaScript, and dynamically update your HTML to display real bank account data. This represents a crucial shift from hard-coded content to live, server-driven information.
+
+By the end of this lesson, you'll understand the fundamental concepts behind single-page applications and have the skills to create web apps that feel fast, responsive, and professional. Let's dive into the world of asynchronous data fetching and dynamic content updates!
+
 ## Pre-Lecture Quiz
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/45)
 
-### Introduction
+### Prerequisites
 
-At the core of every web application there's *data*. Data can take many forms, but its main purpose is always to display information to the user. With web apps becoming increasingly interactive and complex, how the user accesses and interacts with information is now a key part of web development.
+Before diving into data fetching, ensure you have these components ready:
 
-In this lesson, we'll see how to fetch data from a server asynchronously, and use this data to display information on a web page without reloading the HTML.
+- **Previous Lesson**: Complete the [Login and Registration Form](../2-forms/README.md) - we'll build on this foundation
+- **Local Server**: Install [Node.js](https://nodejs.org) and [run the server API](../api/README.md) to provide account data
+- **API Connection**: Test your server connection with this command:
 
-### Prerequisite
-
-You need to have built the [Login and Registration Form](../2-forms/README.md) part of the web app for this lesson. You also need to install [Node.js](https://nodejs.org) and [run the server API](../api/README.md) locally so you get account data.
-
-You can test that the server is running properly by executing this command in a terminal:
-
-```sh
+```bash
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# Expected response: "Bank API v1.0.0"
 ```
+
+**Testing your setup:**
+- **Verifies** that Node.js is properly installed on your system
+- **Confirms** the API server is running and accessible
+- **Establishes** the connection between your app and the data source
 
 ---
 
-## AJAX and data fetching
+## Understanding Data Fetching in Modern Web Apps
 
-Traditional web sites update the content displayed when the user selects a link or submits data using a form, by reloading the full HTML page. Every time new data needs to be loaded, the web server returns a brand new HTML page that needs to be processed by the browser, interrupting the current user action and limiting interactions during the reload. This workflow is also called a *Multi-Page Application* or *MPA*.
+The way web applications handle data has evolved dramatically over the past two decades. Understanding this evolution will help you appreciate why modern techniques like AJAX and the Fetch API are so powerful and why they've become essential tools for web developers.
+
+Let's explore how traditional websites worked compared to the dynamic, responsive applications we build today.
+
+### Traditional Multi-Page Applications (MPA)
+
+In the early days of the web, every user interaction required a complete page reload. When you clicked a link or submitted a form, the browser would request an entirely new HTML page from the server, causing the screen to flash white and interrupting the user's experience.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    
+    User->>Browser: Clicks link or submits form
+    Browser->>Server: Requests new HTML page
+    Note over Browser: Page goes blank
+    Server->>Browser: Returns complete HTML page
+    Browser->>User: Displays new page (flash/reload)
+```
 
 ![Update workflow in a multi-page application](./images/mpa.png)
 
-When web applications started to become more complex and interactive, a new technique called [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) emerged. This technique allows web apps to send and retrieve data from a server asynchronously using JavaScript, without having to reload the HTML page, resulting in faster updates and smoother user interactions. When new data is received from the server, the current HTML page can also be updated with JavaScript using the [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API. Over time, this approach has evolved into what is now called a [*Single-Page Application* or *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+**Understanding the MPA approach:**
+- **Reloads** the entire page for every data update or navigation
+- **Interrupts** user interaction with visible page refreshes
+- **Transfers** more data since complete HTML pages are sent
+- **Creates** a less smooth, desktop-app-like experience
+
+### Modern Single-Page Applications (SPA)
+
+Modern web applications use a technique called AJAX (Asynchronous JavaScript and XML) to fetch only the data they need, without reloading the entire page. This creates much smoother, app-like experiences that users have come to expect.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant JavaScript
+    participant Server
+    
+    User->>Browser: Interacts with page
+    Browser->>JavaScript: Triggers event handler
+    JavaScript->>Server: Fetches only needed data
+    Server->>JavaScript: Returns JSON data
+    JavaScript->>Browser: Updates specific page elements
+    Browser->>User: Shows updated content (no reload)
+```
 
 ![Update workflow in a single-page application](./images/spa.png)
 
-When AJAX was first introduced, the only API available to fetch data asynchronously was [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). But modern browsers now also implement the more convenient and powerful [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), which uses promises and is better suited to manipulate JSON data.
+**Here's what makes SPAs superior:**
+- **Updates** only the parts of the page that need to change
+- **Maintains** smooth user interactions without interruption
+- **Transfers** less data by sending only JSON instead of full HTML
+- **Provides** desktop-application-like responsiveness and speed
 
-> While all modern browsers support the `Fetch API`, if you want your web application to work on legacy or old browsers it's always a good idea to check the [compatibility table on caniuse.com](https://caniuse.com/fetch) first.
+### The Evolution to Modern Fetch API
 
-### Task
+While AJAX originally used the [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) API, modern browsers provide the more elegant [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API). The Fetch API uses promises and is specifically designed for handling JSON data - perfect for modern web applications.
 
-In [the previous lesson](../2-forms/README.md) we implemented the registration form to create an account. We'll now add code to login using an existing account, and fetch its data. Open the `app.js` file and add a new `login` function:
+| Feature | XMLHttpRequest | Fetch API |
+|---------|----------------|----------|
+| **Syntax** | Complex callback-based | Clean promise-based |
+| **JSON Handling** | Manual parsing required | Built-in `.json()` method |
+| **Error Handling** | Limited error information | Comprehensive error details |
+| **Modern Support** | Legacy compatibility | ES6+ promises and async/await |
 
-```js
+> 💡 **Browser Compatibility**: While all modern browsers support the Fetch API, you can always check the [compatibility table on caniuse.com](https://caniuse.com/fetch) to verify support for your target browsers.
+> 
+**What you need to know:**
+- **Supports** all current browser versions (Chrome, Firefox, Safari, Edge)
+- **Requires** polyfills only for Internet Explorer and very old browsers
+- **Provides** the foundation for modern async/await JavaScript patterns
+
+### Implementing User Login and Data Retrieval
+
+Now that you understand how modern web applications fetch data, let's implement these concepts in your banking app. You'll create a login function that authenticates users and retrieves their account information from the server - all without reloading the page.
+
+We'll build this functionality step by step, starting with a basic login function and then adding data fetching capabilities.
+
+#### Step 1: Create the Login Function Foundation
+
+Open your `app.js` file and add a new `login` function. This will handle the user authentication process:
+
+```javascript
 async function login() {
-  const loginForm = document.getElementById('loginForm')
+  const loginForm = document.getElementById('loginForm');
   const user = loginForm.user.value;
 }
 ```
 
-Here we start by retrieving the form element with `getElementById()`, and then we get the username from the input with `loginForm.user.value`. Every form control can be accessed by its name (set in the HTML using the `name` attribute) as a property of the form.
+**Breaking down what happens here:**
+- **Declares** an `async` function to handle asynchronous operations
+- **Retrieves** the login form element using `getElementById()`
+- **Extracts** the username value from the form input field
+- **Accesses** form controls by their `name` attribute as properties of the form
 
-In a similar fashion to what we did for the registration, we'll create another function to perform a server request, but this time for retrieving the account data:
+> 💡 **Form Access Pattern**: Every form control can be accessed by its name (set in the HTML using the `name` attribute) as a property of the form element. This provides a clean, readable way to get form data.
 
-```js
+#### Step 2: Create the Account Data Fetching Function
+
+Next, we'll create a dedicated function to retrieve account data from the server. This follows the same pattern as your registration function but focuses on data retrieval:
+
+```javascript
 async function getAccount(user) {
   try {
     const response = await fetch('//localhost:5000/api/accounts/' + encodeURIComponent(user));
@@ -63,15 +146,39 @@ async function getAccount(user) {
 }
 ```
 
-We use the `fetch` API to request the data asynchronously from the server, but this time we don't need any extra parameters other than the URL to call, as we're only querying data. By default, `fetch` creates a [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP request, which is what we are seeking here.
+**Here's what this code accomplishes:**
+- **Uses** the modern `fetch` API to request data asynchronously
+- **Constructs** a GET request URL with the username parameter
+- **Applies** `encodeURIComponent()` to safely handle special characters in URLs
+- **Converts** the response to JSON format for easy data manipulation
+- **Handles** errors gracefully by returning an error object instead of crashing
 
-✅ `encodeURIComponent()` is a function that escapes special characters for URL. What issues could we possibly have if we do not call this function and use directly the `user` value in the URL?
+> ⚠️ **Security Consideration**: The `encodeURIComponent()` function escapes special characters that could break URLs or cause security issues. What problems might occur if a username contained characters like `#`, `&`, or spaces without proper encoding?
+> 
+**Security implications to consider:**
+- **Prevents** URL parsing errors when usernames contain special characters
+- **Blocks** potential injection attacks through malformed URLs
+- **Ensures** consistent server-side processing of user data
+- **Maintains** proper HTTP request formatting standards
 
-Let's now update our `login` function to use `getAccount`:
+#### Understanding HTTP GET Requests
 
-```js
+By default, the `fetch` API creates a [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP request, which is perfect for retrieving data. Unlike POST requests (used for creating accounts), GET requests:
+
+| GET Request | POST Request |
+|-------------|-------------|
+| **Purpose** | Retrieve existing data | Send new data to server |
+| **Parameters** | In URL path/query string | In request body |
+| **Caching** | Can be cached by browsers | Not typically cached |
+| **Security** | Visible in URL/logs | Hidden in request body |
+
+#### Step 3: Complete the Login Function
+
+Now let's integrate the account fetching function into your login process. This creates a complete user authentication and data retrieval workflow:
+
+```javascript
 async function login() {
-  const loginForm = document.getElementById('loginForm')
+  const loginForm = document.getElementById('loginForm');
   const user = loginForm.user.value;
   const data = await getAccount(user);
 
@@ -84,94 +191,259 @@ async function login() {
 }
 ```
 
-First, as `getAccount` is an asynchronous function we need to match it with the `await` keyword to wait for the server result. As with any server request, we also have to deal with error cases. For now we'll only add a log message to display the error, and come back to it later.
+**Step by step, here's what's happening:**
+- **Retrieves** the username from the login form
+- **Calls** the `getAccount` function and waits for the server response
+- **Checks** for errors and logs them if they occur (we'll improve this soon)
+- **Stores** the account data in a global variable for app-wide access
+- **Navigates** to the dashboard page to display the account information
 
-Then we have to store the data somewhere so we can later use it to display the dashboard information. Since the `account` variable does not exist yet, we'll create a global variable for it at the top of our file:
+> 🎯 **Async/Await Pattern**: Since `getAccount` is an asynchronous function, we use the `await` keyword to pause execution until the server responds. This prevents the code from continuing with undefined data.
 
-```js
+#### Step 4: Set Up Global Data Storage
+
+Your app needs a place to store the account data so it can be accessed from different parts of your application. Add this global variable at the top of your `app.js` file:
+
+```javascript
+// Global variable to store current user account data
 let account = null;
 ```
 
-After the user data is saved into a variable we can navigate from the *login* page to the *dashboard* using the `navigate()` function we already have.
+**Understanding global state management:**
+- **Stores** account data accessible throughout the entire application
+- **Initializes** as `null` to indicate no user is currently logged in
+- **Updates** when users successfully log in or register
+- **Provides** a single source of truth for user account information
 
-Finally, we need to call our `login` function when the login form is submitted, by modifying the HTML:
+#### Step 5: Connect the Login Function to Your Form
+
+Update your HTML form to call the login function when submitted:
 
 ```html
 <form id="loginForm" action="javascript:login()">
+  <!-- Your existing form inputs -->
+</form>
 ```
 
-Test that everything is working correctly by registering a new account and trying to login using the same account.
+**What this accomplishes:**
+- **Prevents** the default form submission that would reload the page
+- **Triggers** your custom JavaScript login function instead
+- **Maintains** the single-page application experience
+- **Allows** for custom error handling and user feedback
 
-Before moving on to the next part, we can also complete the `register` function by adding this at the bottom of the function:
+#### Step 6: Enhance Your Registration Function
 
-```js
+For consistency, update your `register` function to also store account data and navigate to the dashboard:
+
+```javascript
+// Add these lines at the end of your register function
 account = result;
 navigate('/dashboard');
 ```
 
-✅ Did you know that by default, you can only call server APIs from the *same domain and port* than the web page you are viewing? This is security mechanism enforced by browsers. But wait, our web app is running on `localhost:3000` whereas the server API is running on ` localhost:5000`, why does it work? By using a technique called [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), it is possible to perform cross-origin HTTP requests if the server adds special headers to the response, allowing exceptions for specific domains.
+**This enhancement provides:**
+- **Seamless** transition from registration to dashboard
+- **Consistent** user experience between login and registration flows
+- **Immediate** access to account data after successful registration
 
-> Learn more about APIs by taking this [lesson](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
+#### Testing Your Implementation
 
-## Update HTML to display data
-
-Now that we have the user data, we have to update the existing HTML to display it. We already know how to retrieve an element from the DOM using for example `document.getElementById()`. After you have a base element, here are some APIs you can use to modify it or add child elements to it:
-
-- Using the [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) property you can change the text of an element. Note that changing this value removes all the element's children (if there's any) and replaces it with the text provided. As such, it's also an efficient method to remove all children of a given element by assigning an empty string `''` to it.
-
-- Using [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) along with the [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) method you can create and attach one or more new child elements.
-
-✅ Using the [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) property of an element it's also possible to change its HTML contents, but this one should be avoided as it's vulnerable to [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting) attacks.
-
-### Task
-
-Before moving on to the dashboard screen, there's one more thing we should do on the *login* page. Currently, if you try to login with a username that does not exist, a message is shown in the console but for a normal user nothing changes and you don't know what's going on.
-
-Let's add a placeholder element in the login form where we can display an error message if needed. A good place would be just before the login `<button>`:
-
-```html
-...
-<div id="loginError"></div>
-<button>Login</button>
-...
+```mermaid
+flowchart TD
+    A[User enters credentials] --> B[Login function called]
+    B --> C[Fetch account data from server]
+    C --> D{Data received successfully?}
+    D -->|Yes| E[Store account data globally]
+    D -->|No| F[Display error message]
+    E --> G[Navigate to dashboard]
+    F --> H[User stays on login page]
 ```
 
-This `<div>` element is empty, meaning that nothing will be displayed on the screen until we add some content to it. We also give it an `id` so we can retrieve it easily with JavaScript.
+**Test your login system:**
+1. **Register** a new account to ensure the API is working
+2. **Try logging in** with the same credentials
+3. **Check the browser console** for any error messages
+4. **Verify** that you're redirected to the dashboard after successful login
 
-Go back to the `app.js` file and create a new helper function `updateElement`:
+#### Understanding Cross-Origin Requests
 
-```js
+You might be wondering how our web app can communicate with the API server when they're running on different ports. This involves an important web security concept that every developer should understand.
+
+> 🔒 **Security Insight**: By default, browsers enforce the "same-origin policy" which only allows web pages to make requests to the same domain and port they were loaded from. This prevents malicious websites from accessing data from other sites.
+> 
+**Here's what this means:**
+- **Web app** runs on `localhost:3000` (your development server)
+- **API server** runs on `localhost:5000` (your backend)
+- **Browsers** would normally block this cross-origin communication
+- **CORS** (Cross-Origin Resource Sharing) allows controlled exceptions
+
+Our setup works because the API server includes special [CORS headers](https://developer.mozilla.org/docs/Web/HTTP/CORS) that tell the browser: "It's okay to allow requests from localhost:3000." This is a crucial concept for modern web development where frontend and backend often run on different servers.
+
+> 📚 **Learn More**: Dive deeper into APIs and data fetching with this comprehensive [Microsoft Learn module on APIs](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon).
+
+## Displaying Dynamic Data in Your HTML
+
+Now that your app can successfully fetch user data from the server, it's time to make that data visible to your users. This is where the magic happens - transforming raw JSON data into meaningful, interactive content that users can see and understand.
+
+Let's explore the essential techniques for dynamically updating HTML content with JavaScript, focusing on safe and efficient methods that create professional user experiences.
+
+### Understanding DOM Manipulation Methods
+
+When working with dynamic content, you have several tools available for updating HTML elements. Each method serves different purposes and has specific security considerations:
+
+| Method | Purpose | Best Use Case | Security Level |
+|--------|---------|---------------|----------------|
+| `textContent` | Update text safely | Displaying user data, simple text | ✅ Safe |
+| `createElement()` + `append()` | Create new elements | Building complex structures | ✅ Safe |
+| `innerHTML` | Set HTML content | ⚠️ Should be avoided | ❌ XSS vulnerable |
+
+#### Safe Text Content Updates
+
+The [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) property is your go-to method for safely displaying user data:
+
+```javascript
+// Safe way to update text content
+const balanceElement = document.getElementById('balance');
+balanceElement.textContent = account.balance;
+```
+
+**Key benefits of textContent:**
+- **Prevents** XSS attacks by treating all content as plain text
+- **Removes** all existing child elements when updated
+- **Provides** an efficient way to clear elements by setting to empty string `''`
+- **Ensures** safe display of user-generated content
+
+#### Creating Dynamic HTML Elements
+
+For more complex content, combine [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) with the [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) method:
+
+```javascript
+// Safe way to create new elements
+const transactionItem = document.createElement('div');
+transactionItem.className = 'transaction-item';
+transactionItem.textContent = `${transaction.date}: ${transaction.description}`;
+container.append(transactionItem);
+```
+
+**Understanding this approach:**
+- **Creates** new DOM elements programmatically
+- **Maintains** full control over element attributes and content
+- **Allows** for complex, nested element structures
+- **Preserves** security by separating structure from content
+
+> ⚠️ **Security Warning**: While the [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) property can update HTML content, it should be avoided because it's vulnerable to [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting) attacks.
+> 
+**Why innerHTML is dangerous:**
+- **Executes** any JavaScript code included in the HTML string
+- **Allows** malicious users to inject harmful scripts
+- **Creates** security vulnerabilities in production applications
+- **Better alternatives** exist for all common use cases
+
+### Implementing User-Friendly Error Handling
+
+Right now, when login fails, error messages only appear in the browser console - invisible to your users. Let's fix this by creating a professional error display system that provides clear feedback and works well for all users, including those using screen readers.
+
+This improvement transforms your app from a developer tool into a polished user experience.
+
+#### Step 1: Add Error Display Elements to Your HTML
+
+First, add a placeholder element in your login form where error messages can appear. Place it just before the login button for optimal visibility:
+
+```html
+<!-- Add this error display area to your login form -->
+<div id="loginError" role="alert"></div>
+<button>Login</button>
+```
+
+**Here's what this code does:**
+- **Creates** an empty container that's invisible until needed
+- **Positions** the error message where users naturally look for feedback
+- **Includes** the `role="alert"` attribute for screen reader accessibility
+- **Provides** a unique `id` for easy JavaScript targeting
+
+#### Step 2: Create a Reusable Update Function
+
+Next, create a helper function that can update any element's text content. This promotes code reusability and consistency:
+
+```javascript
 function updateElement(id, text) {
   const element = document.getElementById(id);
   element.textContent = text;
 }
 ```
 
-This one is quite straightforward: given an element *id* and *text*, it will update the text content of the DOM element with the matching `id`. Let's use this method in place of the previous error message in the `login` function:
+**Understanding this utility function:**
+- **Accepts** an element ID and text content as parameters
+- **Finds** the target element using `getElementById()`
+- **Updates** the element's text content safely using `textContent`
+- **Provides** a reusable pattern for updating any page element
 
-```js
+#### Step 3: Display Login Errors to Users
+
+Update your login function to show errors visually instead of just logging them:
+
+```javascript
+// Replace the console.log with user-visible error display
 if (data.error) {
   return updateElement('loginError', data.error);
 }
 ```
 
-Now if you try to login with an invalid account, you should see something like this:
+**What this improvement accomplishes:**
+- **Displays** error messages where users can see them
+- **Replaces** developer-only console messages with user-friendly feedback
+- **Stops** the login process when errors occur
+- **Provides** immediate, actionable feedback to users
+
+Now when you test with an invalid account, you'll see a clear error message:
 
 ![Screenshot showing the error message displayed during login](./images/login-error.png)
 
-Now we have error text that shows up visually, but if you try it with a screen reader you'll notice that nothing is announced. In order for text that is dynamically added to a page to be announced by screen readers, it will need to use something called a [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Here we're going to use a specific type of live region called an alert:
+#### Step 4: Ensure Accessibility with Live Regions
+
+The error message now appears visually, but screen reader users might miss it since it's added dynamically. The `role="alert"` attribute creates a [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) that announces changes to assistive technologies:
 
 ```html
 <div id="loginError" role="alert"></div>
 ```
 
-Implement the same behavior for the `register` function errors (don't forget to update the HTML).
+**Why accessibility matters:**
+- **Announces** error messages to screen reader users immediately
+- **Ensures** all users receive important feedback
+- **Complies** with web accessibility standards (WCAG)
+- **Creates** inclusive experiences for users with disabilities
 
-## Display information on the dashboard
+#### Step 5: Apply the Same Pattern to Registration
 
-Using the same techniques we've just seen, we'll also take care of displaying the account information on the dashboard page.
+For consistency, implement identical error handling in your registration form:
 
-This is what an account object received from the server looks like:
+1. **Add** an error display element to your registration HTML:
+```html
+<div id="registerError" role="alert"></div>
+```
+
+2. **Update** your register function to use the same error display pattern:
+```javascript
+if (data.error) {
+  return updateElement('registerError', data.error);
+}
+```
+
+**Benefits of consistent error handling:**
+- **Provides** uniform user experience across all forms
+- **Reduces** cognitive load by using familiar patterns
+- **Simplifies** maintenance with reusable code
+- **Ensures** accessibility standards are met throughout the app
+
+## Building Your Dynamic Dashboard
+
+Now comes the exciting part - transforming your static dashboard into a dynamic, data-driven interface that displays real account information. You'll apply the DOM manipulation techniques you've learned to create a professional banking dashboard that updates in real-time.
+
+Let's start by understanding the data structure you'll be working with, then build the dashboard step by step.
+
+### Understanding the Account Data Structure
+
+When your app successfully retrieves account data from the server, it receives a JSON object with all the information needed to display a complete banking dashboard:
 
 ```json
 {
@@ -183,15 +455,32 @@ This is what an account object received from the server looks like:
     { "id": "1", "date": "2020-10-01", "object": "Pocket money", "amount": 50 },
     { "id": "2", "date": "2020-10-03", "object": "Book", "amount": -10 },
     { "id": "3", "date": "2020-10-04", "object": "Sandwich", "amount": -5 }
-  ],
+  ]
 }
 ```
 
-> Note: to make your life easier, you can use the pre-existing `test` account that's already populated with data.
+**Breaking down this data structure:**
+- **`user`**: The account holder's username for personalization
+- **`currency`**: The currency symbol for proper formatting
+- **`description`**: A human-readable account description
+- **`balance`**: The current account balance as a number
+- **`transactions`**: An array of transaction objects with complete details
 
-### Task
+> 💡 **Development Tip**: For testing purposes, you can use the pre-existing `test` account that's already populated with sample data. This lets you see the dashboard in action without creating multiple test accounts.
+> 
+**What the test account provides:**
+- **Sample data** that demonstrates all dashboard features
+- **Realistic transactions** showing both income and expenses
+- **Consistent testing** environment for development
+- **Quick verification** that your implementation works correctly
 
-Let's start by replacing the "Balance" section in the HTML to add placeholder elements:
+### Creating the Dashboard Display Elements
+
+Let's build your dashboard interface step by step, starting with the account summary information and then moving on to more complex features like transaction lists.
+
+#### Step 1: Update Your HTML Structure
+
+First, replace the static "Balance" section with dynamic placeholder elements that your JavaScript can populate:
 
 ```html
 <section>
@@ -199,17 +488,25 @@ Let's start by replacing the "Balance" section in the HTML to add placeholder el
 </section>
 ```
 
-We'll also add a new section just below to display the account description:
+Next, add a section for the account description. Since this acts as a title for the dashboard content, use semantic HTML:
 
 ```html
 <h2 id="description"></h2>
 ```
 
-✅ Since the account description functions as a title for the content underneath it, it is marked up semantically as a heading. Learn more about how [heading structure](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) is important for accessibility, and take a critical look at the page to determine what else could be a heading.
+**Understanding the HTML structure:**
+- **Uses** separate `<span>` elements for balance and currency for individual control
+- **Applies** unique IDs to each element for JavaScript targeting
+- **Follows** semantic HTML by using `<h2>` for the account description
+- **Creates** a logical hierarchy for screen readers and SEO
 
-Next, we'll create a new function in `app.js` to fill in the placeholder:
+> ✅ **Accessibility Insight**: The account description functions as a title for the dashboard content, so it's marked up semantically as a heading. Learn more about how [heading structure](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) impacts accessibility. Can you identify other elements on your page that might benefit from heading tags?
 
-```js
+#### Step 2: Create the Dashboard Update Function
+
+Now create a function that populates your dashboard with real account data:
+
+```javascript
 function updateDashboard() {
   if (!account) {
     return navigate('/login');
@@ -221,40 +518,73 @@ function updateDashboard() {
 }
 ```
 
-First, we check that we have the account data we need before going further. Then we use the `updateElement()` function we created earlier to update the HTML.
+**Step by step, here's what this function does:**
+- **Validates** that account data exists before proceeding
+- **Redirects** unauthenticated users back to the login page
+- **Updates** the account description using the reusable `updateElement` function
+- **Formats** the balance to always show two decimal places
+- **Displays** the appropriate currency symbol
 
-> To make the balance display prettier, we use the method [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) to force displaying the value with 2 digits after the decimal point.
+> 💰 **Number Formatting**: The [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) method ensures the balance always displays with exactly 2 decimal places, making it look professional and consistent with banking standards (e.g., "75.00" instead of "75").
 
-Now we need to call our `updateDashboard()` function every time the dashboard is loaded. If you already finished the [lesson 1 assignment](../1-template-route/assignment.md) this should be straightforward, otherwise you can use the following implementation.
+#### Step 3: Integrate Dashboard Updates with Navigation
 
-Add this code to the end of the `updateRoute()` function:
+To ensure your dashboard updates every time it's displayed, you need to connect the `updateDashboard()` function to your routing system.
 
-```js
+If you completed the [lesson 1 assignment](../1-template-route/assignment.md), this integration should be straightforward. Otherwise, use this implementation:
+
+Add this code to the end of your `updateRoute()` function:
+
+```javascript
 if (typeof route.init === 'function') {
   route.init();
 }
 ```
 
-And update the routes definition with:
+Then update your routes definition to include the dashboard initialization:
 
-```js
+```javascript
 const routes = {
   '/login': { templateId: 'login' },
   '/dashboard': { templateId: 'dashboard', init: updateDashboard }
 };
 ```
 
-With this change, every time the dashboard page is displayed, the function `updateDashboard()` is called. After a login, you should then be able to see the account balance, currency and description.
+**Understanding this routing enhancement:**
+- **Checks** if a route has an initialization function defined
+- **Calls** the initialization function when the route is loaded
+- **Ensures** the dashboard displays fresh data every time it's visited
+- **Maintains** separation between routing logic and dashboard updates
 
-## Create table rows dynamically with HTML templates
+#### Testing Your Dashboard
 
-In the [first lesson](../1-template-route/README.md) we used HTML templates along with the [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) method to implement the navigation in our app. Templates can also be smaller and used to dynamically populate repetitive parts of a page.
+After implementing these changes, test your dashboard:
 
-We'll use a similar approach to display the list of transactions in the HTML table.
+1. **Log in** with a test account
+2. **Verify** you're redirected to the dashboard
+3. **Check** that the account description, balance, and currency display correctly
+4. **Try logging out and back in** to ensure data refreshes properly
 
-### Task
+Your dashboard should now display dynamic account information that updates based on the logged-in user's data!
 
-Add a new template in the HTML `<body>`:
+## Creating Dynamic Transaction Lists with HTML Templates
+
+One of the most powerful features of your banking dashboard will be the transaction history. Instead of hardcoding transaction data, you'll use HTML templates to dynamically generate table rows for each transaction. This technique scales beautifully - whether a user has 3 transactions or 300, your code handles them all efficiently.
+
+You've already used HTML templates for navigation in the [first lesson](../1-template-route/README.md). Now you'll apply the same powerful technique to create repeating content that adapts to your data.
+
+```mermaid
+flowchart LR
+    A[Transaction Data] --> B[HTML Template]
+    B --> C[Clone Template]
+    C --> D[Populate with Data]
+    D --> E[Add to DOM]
+    E --> F[Repeat for Each Transaction]
+```
+
+### Step 1: Create the Transaction Template
+
+First, add a reusable template for transaction rows in your HTML `<body>`:
 
 ```html
 <template id="transaction">
@@ -266,17 +596,30 @@ Add a new template in the HTML `<body>`:
 </template>
 ```
 
-This template represents a single table row, with the 3 columns we want to populate: *date*, *object* and *amount* of a transaction.
+**Understanding HTML templates:**
+- **Defines** the structure for a single table row
+- **Remains** invisible until cloned and populated with JavaScript
+- **Includes** three cells for date, description, and amount
+- **Provides** a reusable pattern for consistent formatting
 
-Then, add this `id` property to the `<tbody>` element of the table within the dashboard template to make it easier to find using JavaScript:
+### Step 2: Prepare Your Table for Dynamic Content
+
+Next, add an `id` to your table body so JavaScript can easily target it:
 
 ```html
 <tbody id="transactions"></tbody>
 ```
 
-Our HTML is ready, let's switch to JavaScript code and create a new function `createTransactionRow`:
+**What this accomplishes:**
+- **Creates** a clear target for inserting transaction rows
+- **Separates** the table structure from the dynamic content
+- **Enables** easy clearing and repopulating of transaction data
 
-```js
+### Step 3: Build the Transaction Row Factory Function
+
+Now create a function that transforms transaction data into HTML elements:
+
+```javascript
 function createTransactionRow(transaction) {
   const template = document.getElementById('transaction');
   const transactionRow = template.content.cloneNode(true);
@@ -288,9 +631,19 @@ function createTransactionRow(transaction) {
 }
 ```
 
-This function does exactly what its names implies: using the template we created earlier, it creates a new table row and fills in its contents using transaction data. We'll use this in our `updateDashboard()` function to populate the table:
+**Breaking down this factory function:**
+- **Retrieves** the template element by its ID
+- **Clones** the template content for safe manipulation
+- **Selects** the table row within the cloned content
+- **Populates** each cell with transaction data
+- **Formats** the amount to show proper decimal places
+- **Returns** the completed row ready for insertion
 
-```js
+### Step 4: Generate Multiple Transaction Rows Efficiently
+
+Add this code to your `updateDashboard()` function to display all transactions:
+
+```javascript
 const transactionsRows = document.createDocumentFragment();
 for (const transaction of account.transactions) {
   const transactionRow = createTransactionRow(transaction);
@@ -299,11 +652,20 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-Here we use the method [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) that creates a new DOM fragment on which we can work, before finally attaching it to our HTML table.
+**Understanding this efficient approach:**
+- **Creates** a document fragment to batch DOM operations
+- **Iterates** through all transactions in the account data
+- **Generates** a row for each transaction using the factory function
+- **Collects** all rows in the fragment before adding to the DOM
+- **Performs** a single DOM update instead of multiple individual insertions
 
-There's still one more thing we have to do before this code can work, as our `updateElement()` function currently supports text content only. Let's change its code a bit:
+> ⚡ **Performance Tip**: [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) creates an in-memory container that doesn't trigger layout recalculations until attached to the main DOM. This dramatically improves performance when adding multiple elements.
 
-```js
+### Step 5: Enhance the Update Function for Mixed Content
+
+Your `updateElement()` function currently only handles text content. Update it to work with both text and DOM nodes:
+
+```javascript
 function updateElement(id, textOrNode) {
   const element = document.getElementById(id);
   element.textContent = ''; // Removes all children
@@ -311,9 +673,28 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-We use the [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) method as it allows to attach either text or [DOM Nodes](https://developer.mozilla.org/docs/Web/API/Node) to a parent element, which is perfect for all our use cases.
+**Key improvements in this update:**
+- **Clears** existing content before adding new content
+- **Accepts** either text strings or DOM nodes as parameters
+- **Uses** the [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) method for flexibility
+- **Maintains** backward compatibility with existing text-based usage
 
-If you try using the `test` account to login, you should now see a transaction list on the dashboard 🎉.
+### Testing Your Dynamic Transaction List
+
+Now test your implementation:
+
+1. **Log in** with the `test` account to see sample transaction data
+2. **Navigate** to the dashboard
+3. **Verify** that transaction rows appear with proper formatting
+4. **Check** that dates, descriptions, and amounts display correctly
+
+You should now see a complete transaction list on your dashboard! 🎉
+
+**What you've accomplished:**
+- **Transformed** static HTML into dynamic, data-driven content
+- **Created** a scalable system that handles any number of transactions
+- **Applied** professional web development patterns using templates
+- **Built** an efficient, performant solution for repetitive content
 
 ---
 
