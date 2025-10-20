@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b91cbf14240ee59411b96448b994ace1",
-  "translation_date": "2025-10-03T12:29:46+00:00",
+  "original_hash": "640d7f35d57f0e02bbfe468bb0247741",
+  "translation_date": "2025-10-20T21:11:14+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "tl"
 }
@@ -15,9 +15,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Panimula
 
-Sa huling dalawang aralin ng module na ito, natutunan mo kung paano gumawa ng form at display area para sa data na kinukuha mula sa isang API. Ito ay isang karaniwang paraan ng paglikha ng presensya sa web. Natutunan mo rin kung paano mag-handle ng asynchronous na pagkuha ng data. Halos tapos na ang iyong browser extension.
+Sa huling dalawang aralin ng module na ito, natutunan mo kung paano gumawa ng form at display area para sa data na kinukuha mula sa isang API. Ito ay isang karaniwang paraan ng paglikha ng web presence sa web. Natutunan mo rin kung paano mag-handle ng asynchronous na pagkuha ng data. Halos tapos na ang iyong browser extension.
 
-Ang natitira na lang ay ang pamamahala ng ilang background tasks, kabilang ang pag-refresh ng kulay ng icon ng extension, kaya magandang pagkakataon ito para pag-usapan kung paano pinamamahalaan ng browser ang ganitong uri ng gawain. Isipin natin ang mga browser tasks na ito sa konteksto ng performance ng iyong web assets habang ginagawa mo ang mga ito.
+Ang natitira ay ang pamamahala ng ilang background tasks, kabilang ang pag-refresh ng kulay ng icon ng extension, kaya ito ay isang magandang pagkakataon upang pag-usapan kung paano pinamamahalaan ng browser ang ganitong uri ng gawain. Pag-isipan natin ang mga browser tasks na ito sa konteksto ng performance ng iyong web assets habang ginagawa mo ang mga ito.
 
 ## Mga Pangunahing Kaalaman sa Web Performance
 
@@ -27,43 +27,43 @@ Ang paksa ng kung paano gawing napakabilis ang iyong mga website sa lahat ng uri
 
 Ang unang bagay na kailangan mong gawin upang matiyak na ang iyong site ay tumatakbo nang mahusay ay ang mangolekta ng data tungkol sa performance nito. Ang unang lugar upang gawin ito ay sa developer tools ng iyong web browser. Sa Edge, maaari mong piliin ang "Settings and more" button (ang icon na tatlong tuldok sa kanang itaas ng browser), pagkatapos ay mag-navigate sa More Tools > Developer Tools at buksan ang Performance tab. Maaari mo ring gamitin ang keyboard shortcuts na `Ctrl` + `Shift` + `I` sa Windows o `Option` + `Command` + `I` sa Mac upang buksan ang developer tools.
 
-Ang Performance tab ay naglalaman ng Profiling tool. Buksan ang isang website (subukan, halimbawa, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) at i-click ang 'Record' button, pagkatapos ay i-refresh ang site. Itigil ang recording anumang oras, at makikita mo ang mga routine na nabuo upang 'script', 'render', at 'paint' ang site:
+Ang Performance tab ay naglalaman ng Profiling tool. Buksan ang isang website (subukan, halimbawa, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) at i-click ang 'Record' button, pagkatapos ay i-refresh ang site. Itigil ang recording anumang oras, at makikita mo ang mga routines na nabuo upang 'script', 'render', at 'paint' ang site:
 
 ![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.tl.png)
 
 ✅ Bisitahin ang [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) sa Performance panel sa Edge
 
-> Tip: upang makakuha ng tumpak na pagbasa ng startup time ng iyong website, i-clear ang cache ng iyong browser
+> Tip: upang makakuha ng tumpak na pagbabasa ng startup time ng iyong website, i-clear ang cache ng iyong browser
 
 Piliin ang mga elemento ng profile timeline upang mag-zoom in sa mga event na nangyayari habang naglo-load ang iyong pahina.
 
-Makakuha ng snapshot ng performance ng iyong pahina sa pamamagitan ng pagpili ng bahagi ng profile timeline at pagtingin sa summary pane:
+Kumuha ng snapshot ng performance ng iyong pahina sa pamamagitan ng pagpili ng bahagi ng profile timeline at pagtingin sa summary pane:
 
 ![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.tl.png)
 
-Suriin ang Event Log pane upang makita kung may anumang event na tumagal ng higit sa 15 ms:
+Suriin ang Event Log pane upang makita kung mayroong anumang event na tumagal ng higit sa 15 ms:
 
 ![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.tl.png)
 
-✅ Kilalanin ang iyong profiler! Buksan ang developer tools sa site na ito at tingnan kung may mga bottleneck. Ano ang pinakamabagal na asset na naglo-load? Ang pinakamabilis?
+✅ Kilalanin ang iyong profiler! Buksan ang developer tools sa site na ito at tingnan kung mayroong anumang bottlenecks. Ano ang pinakamabagal na asset na naglo-load? Ang pinakamabilis?
 
 ## Mga Profiling Checks
 
-Sa pangkalahatan, may ilang "problem areas" na dapat bantayan ng bawat web developer kapag gumagawa ng site upang maiwasan ang hindi kanais-nais na sorpresa kapag oras na para i-deploy sa production.
+Sa pangkalahatan, may ilang "problem areas" na dapat bantayan ng bawat web developer kapag gumagawa ng site upang maiwasan ang mga hindi kanais-nais na sorpresa kapag oras na para i-deploy sa production.
 
-**Asset sizes**: Ang web ay naging 'mas mabigat', at sa gayon ay mas mabagal, sa nakalipas na ilang taon. Ang ilan sa bigat na ito ay may kinalaman sa paggamit ng mga imahe.
+**Asset sizes**: Ang web ay naging mas "mabigat", at sa gayon ay mas mabagal, sa nakalipas na ilang taon. Ang ilan sa bigat na ito ay may kinalaman sa paggamit ng mga imahe.
 
 ✅ Tingnan ang [Internet Archive](https://httparchive.org/reports/page-weight) para sa isang historical na pananaw sa page weight at iba pa.
 
-Isang magandang kasanayan ang tiyakin na ang iyong mga imahe ay na-optimize at naihatid sa tamang laki at resolusyon para sa iyong mga user.
+Isang magandang kasanayan ang tiyakin na ang iyong mga imahe ay na-optimize at naihatid sa tamang laki at resolution para sa iyong mga user.
 
-**DOM traversals**: Kailangang buuin ng browser ang Document Object Model nito batay sa code na isinulat mo, kaya't nasa interes ng magandang page performance na panatilihing minimal ang iyong mga tag, gamit lamang at inaayos ang kailangan ng pahina. Sa puntong ito, ang sobrang CSS na nauugnay sa isang pahina ay maaaring ma-optimize; ang mga style na kailangang gamitin lamang sa isang pahina ay hindi kailangang isama sa pangunahing style sheet, halimbawa.
+**DOM traversals**: Kailangang buuin ng browser ang Document Object Model nito batay sa code na iyong isinulat, kaya't nasa interes ng mahusay na page performance na panatilihing minimal ang iyong mga tag, gamit at inaayos lamang ang kailangan ng pahina. Sa puntong ito, ang sobrang CSS na nauugnay sa isang pahina ay maaaring ma-optimize; ang mga style na kailangang gamitin lamang sa isang pahina ay hindi kailangang isama sa pangunahing style sheet, halimbawa.
 
-**JavaScript**: Ang bawat JavaScript developer ay dapat magbantay para sa 'render-blocking' scripts na kailangang i-load bago ma-traverse at ma-paint ang natitirang bahagi ng DOM sa browser. Isaalang-alang ang paggamit ng `defer` sa iyong inline scripts (gaya ng ginawa sa Terrarium module).
+**JavaScript**: Ang bawat JavaScript developer ay dapat magbantay para sa 'render-blocking' scripts na kailangang i-load bago ma-traverse at ma-paint ang natitirang bahagi ng DOM sa browser. Isaalang-alang ang paggamit ng `defer` sa iyong inline scripts (tulad ng ginawa sa Terrarium module).
 
-✅ Subukan ang ilang site sa isang [Site Speed Test website](https://www.webpagetest.org/) upang matuto nang higit pa tungkol sa mga karaniwang checks na ginagawa upang matukoy ang performance ng site.
+✅ Subukan ang ilang mga site sa isang [Site Speed Test website](https://www.webpagetest.org/) upang matuto nang higit pa tungkol sa mga karaniwang pagsusuri na ginagawa upang matukoy ang performance ng site.
 
-Ngayon na mayroon kang ideya kung paano nire-render ng browser ang mga asset na ipinapadala mo dito, tingnan natin ang huling ilang bagay na kailangan mong gawin upang makumpleto ang iyong extension:
+Ngayon na mayroon kang ideya kung paano i-render ng browser ang mga assets na ipinapadala mo dito, tingnan natin ang huling ilang bagay na kailangan mong gawin upang makumpleto ang iyong extension:
 
 ### Gumawa ng function para mag-calculate ng kulay
 
@@ -90,13 +90,13 @@ function calculateColor(value) {
 
 Ano ang nangyayari dito? Ipinapasa mo ang isang value (ang carbon intensity) mula sa API call na natapos mo sa huling aralin, at pagkatapos ay kinakalkula mo kung gaano kalapit ang value nito sa index na ipinakita sa colors array. Pagkatapos ay ipinapadala mo ang pinakamalapit na color value sa chrome runtime.
 
-Ang chrome.runtime ay may [API](https://developer.chrome.com/extensions/runtime) na humahawak sa lahat ng uri ng background tasks, at ang iyong extension ay ginagamit ito:
+Ang chrome.runtime ay may [API](https://developer.chrome.com/extensions/runtime) na humahawak sa lahat ng uri ng background tasks, at ginagamit ito ng iyong extension:
 
-> "Gamitin ang chrome.runtime API upang kunin ang background page, magbalik ng mga detalye tungkol sa manifest, at makinig at tumugon sa mga event sa lifecycle ng app o extension. Maaari mo ring gamitin ang API na ito upang i-convert ang relative path ng mga URL sa fully-qualified URLs."
+> "Gamitin ang chrome.runtime API upang makuha ang background page, ibalik ang mga detalye tungkol sa manifest, at makinig at tumugon sa mga event sa lifecycle ng app o extension. Maaari mo ring gamitin ang API na ito upang i-convert ang relative path ng mga URL sa fully-qualified URLs."
 
-✅ Kung ginagawa mo ang browser extension na ito para sa Edge, maaaring magulat ka na gumagamit ka ng chrome API. Ang mga mas bagong bersyon ng Edge browser ay tumatakbo sa Chromium browser engine, kaya maaari mong gamitin ang mga tool na ito.
+✅ Kung ikaw ay nagde-develop ng browser extension na ito para sa Edge, maaaring magulat ka na gumagamit ka ng chrome API. Ang mga mas bagong bersyon ng Edge browser ay tumatakbo sa Chromium browser engine, kaya maaari mong gamitin ang mga tools na ito.
 
-> Tandaan, kung nais mong i-profile ang isang browser extension, ilunsad ang dev tools mula sa loob ng extension mismo, dahil ito ay sarili nitong hiwalay na browser instance.
+> Tandaan, kung nais mong i-profile ang isang browser extension, ilunsad ang dev tools mula mismo sa loob ng extension, dahil ito ay sarili nitong hiwalay na browser instance.
 
 ### Mag-set ng default na kulay ng icon
 
@@ -140,20 +140,29 @@ function drawIcon(value) {
 	return context.getImageData(50, 50, 100, 100);
 }
 ```
-
-Sa code na ito, nagdaragdag ka ng listener para sa anumang mga mensahe na papunta sa backend task manager. Kung ito ay tinatawag na 'updateIcon', pagkatapos ay ang susunod na code ay tatakbo upang gumuhit ng icon ng tamang kulay gamit ang Canvas API.
+Sa code na ito, nagdaragdag ka ng listener para sa anumang mga mensahe na papunta sa backend task manager. Kung ito ay tinatawag na 'updateIcon', pagkatapos ay tatakbo ang susunod na code upang gumuhit ng icon ng tamang kulay gamit ang Canvas API.
 
 ✅ Matututo ka pa tungkol sa Canvas API sa [Space Game lessons](../../6-space-game/2-drawing-to-canvas/README.md).
 
 Ngayon, i-rebuild ang iyong extension (`npm run build`), i-refresh at ilunsad ang iyong extension, at panoorin ang pagbabago ng kulay. Panahon na ba para mag-ayos o maghugas ng pinggan? Ngayon alam mo na!
 
-Binabati kita, nakagawa ka ng isang kapaki-pakinabang na browser extension at natutunan ang higit pa tungkol sa kung paano gumagana ang browser at kung paano i-profile ang performance nito.
+Binabati kita, nakagawa ka ng isang kapaki-pakinabang na browser extension at natutunan mo pa ang tungkol sa kung paano gumagana ang browser at kung paano i-profile ang performance nito.
+
+## Hamon ng GitHub Copilot Agent 🚀
+
+Gamitin ang Agent mode upang tapusin ang sumusunod na hamon:
+
+**Deskripsyon:** Pagandahin ang kakayahan ng browser extension sa pag-monitor ng performance sa pamamagitan ng pagdaragdag ng feature na sumusubaybay at nagpapakita ng load times para sa iba't ibang bahagi ng extension.
+
+**Prompt:** Gumawa ng performance monitoring system para sa browser extension na sumusukat at naglo-log ng oras na kinakailangan upang makuha ang CO2 data mula sa API, mag-calculate ng mga kulay, at i-update ang icon. Magdagdag ng function na tinatawag na `performanceTracker` na gumagamit ng Performance API upang sukatin ang mga operasyong ito at ipakita ang mga resulta sa browser console na may timestamps at duration metrics.
 
 ---
 
+
+
 ## 🚀 Hamon
 
-Suriin ang ilang open source websites na matagal nang umiiral, at, batay sa kanilang GitHub history, tingnan kung maaari mong matukoy kung paano sila na-optimize sa paglipas ng mga taon para sa performance, kung mayroon man. Ano ang pinaka-karaniwang problema?
+Suriin ang ilang open source websites na matagal nang umiiral, at, batay sa kanilang kasaysayan sa GitHub, tingnan kung matutukoy mo kung paano sila na-optimize sa paglipas ng mga taon para sa performance, kung nagawa man. Ano ang pinaka-karaniwang problema?
 
 ## Post-Lecture Quiz
 
@@ -167,9 +176,9 @@ Suriin ang ilan sa mga paraan kung paano sinusukat ng mga browser ang web perfor
 
 ## Assignment
 
-[Analyze a site for performance](assignment.md)
+[Surin ang isang site para sa performance](assignment.md)
 
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na awtoritatibong pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

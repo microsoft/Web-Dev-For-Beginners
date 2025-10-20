@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
-  "translation_date": "2025-08-28T15:41:08+00:00",
+  "original_hash": "3f97452b78978031a401791449feaa06",
+  "translation_date": "2025-10-20T21:12:14+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "tl"
 }
 -->
-# Browser Extension Project Part 1: Tungkol sa Mga Browser
+# Proyekto ng Browser Extension Bahagi 1: Lahat Tungkol sa Mga Browser
 
 ![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.tl.jpg)
 > Sketchnote ni [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
@@ -18,42 +18,42 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Panimula
 
-Ang mga browser extension ay nagdadagdag ng karagdagang functionality sa isang browser. Ngunit bago ka gumawa ng isa, mahalagang maunawaan kung paano gumagana ang mga browser.
+Ang mga browser extension ay nagdadagdag ng karagdagang functionality sa isang browser. Ngunit bago ka magtayo ng isa, dapat kang matuto ng kaunti tungkol sa kung paano gumagana ang mga browser.
 
 ### Tungkol sa Browser
 
-Sa serye ng mga araling ito, matututuhan mong gumawa ng browser extension na gagana sa Chrome, Firefox, at Edge browsers. Sa bahaging ito, malalaman mo kung paano gumagana ang mga browser at bubuuin ang mga elemento ng browser extension.
+Sa serye ng mga araling ito, matututo kang gumawa ng browser extension na gagana sa mga browser tulad ng Chrome, Firefox, at Edge. Sa bahaging ito, matutuklasan mo kung paano gumagana ang mga browser at bubuuin ang mga elemento ng browser extension.
 
-Ngunit ano nga ba ang isang browser? Isa itong software application na nagbibigay-daan sa end user na ma-access ang nilalaman mula sa isang server at maipakita ito sa mga web page.
+Pero ano nga ba ang browser? Ito ay isang software application na nagbibigay-daan sa isang end user na ma-access ang nilalaman mula sa isang server at maipakita ito sa mga web page.
 
 ✅ Kaunting kasaysayan: ang unang browser ay tinawag na 'WorldWideWeb' at nilikha ni Sir Timothy Berners-Lee noong 1990.
 
 ![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.tl.jpg)
-> Ilang mga naunang browser, mula kay [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
+> Ilang maagang browser, mula kay [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 Kapag ang isang user ay kumonekta sa internet gamit ang isang URL (Uniform Resource Locator) address, karaniwang gamit ang Hypertext Transfer Protocol sa pamamagitan ng `http` o `https` address, ang browser ay nakikipag-ugnayan sa isang web server at kinukuha ang isang web page.
 
-Sa puntong ito, ang rendering engine ng browser ang nagpapakita nito sa device ng user, maaaring ito ay isang mobile phone, desktop, o laptop.
+Sa puntong ito, ang rendering engine ng browser ay ipinapakita ito sa device ng user, na maaaring isang mobile phone, desktop, o laptop.
 
-May kakayahan din ang mga browser na mag-cache ng nilalaman upang hindi na ito kailangang kunin mula sa server sa bawat pagkakataon. Maaari rin nilang i-record ang kasaysayan ng browsing activity ng user, mag-imbak ng 'cookies', na maliliit na piraso ng data na naglalaman ng impormasyon para sa aktibidad ng user, at marami pang iba.
+Ang mga browser ay may kakayahan ding mag-cache ng nilalaman upang hindi na ito kailangang kunin mula sa server sa bawat pagkakataon. Maaari rin nilang irekord ang kasaysayan ng aktibidad ng pag-browse ng user, mag-imbak ng 'cookies', na maliliit na piraso ng data na naglalaman ng impormasyon na ginagamit upang irekord ang aktibidad ng user, at marami pa.
 
-Isang mahalagang bagay na dapat tandaan tungkol sa mga browser ay hindi lahat ng mga ito ay pareho! Ang bawat browser ay may kani-kaniyang kalakasan at kahinaan, at mahalaga para sa isang propesyonal na web developer na maunawaan kung paano gawing mahusay ang performance ng mga web page sa iba't ibang browser. Kasama rito ang pag-aangkop sa maliliit na viewports tulad ng sa mobile phone, pati na rin ang user na offline.
+Isang mahalagang bagay na dapat tandaan tungkol sa mga browser ay hindi lahat ng mga ito ay pareho! Ang bawat browser ay may kani-kaniyang lakas at kahinaan, at ang isang propesyonal na web developer ay kailangang maunawaan kung paano gawing mahusay ang pagganap ng mga web page sa iba't ibang browser. Kasama na rito ang paghawak sa maliliit na screen tulad ng sa mobile phone, pati na rin ang user na offline.
 
-Isang kapaki-pakinabang na website na dapat mong i-bookmark sa kahit anong browser na ginagamit mo ay ang [caniuse.com](https://www.caniuse.com). Kapag gumagawa ka ng mga web page, malaking tulong ang mga listahan ng mga suportadong teknolohiya ng caniuse upang mas mahusay mong masuportahan ang iyong mga user.
+Isang kapaki-pakinabang na website na dapat mong i-bookmark sa kahit anong browser na gusto mong gamitin ay [caniuse.com](https://www.caniuse.com). Kapag gumagawa ka ng mga web page, napaka-kapaki-pakinabang na gamitin ang mga listahan ng mga suportadong teknolohiya ng caniuse upang mas maayos mong masuportahan ang iyong mga user.
 
-✅ Paano mo malalaman kung aling mga browser ang pinakapopular sa mga gumagamit ng iyong website? Tingnan ang iyong analytics - maaari kang mag-install ng iba't ibang analytics packages bilang bahagi ng iyong proseso ng web development, at ipapakita nito kung aling mga browser ang pinakaginagamit ng mga user.
+✅ Paano mo malalaman kung aling mga browser ang pinakapopular sa base ng user ng iyong website? Tingnan ang iyong analytics - maaari kang mag-install ng iba't ibang analytics packages bilang bahagi ng iyong proseso ng web development, at sasabihin nila sa iyo kung aling mga browser ang pinakaginagamit ng iba't ibang popular na browser.
 
 ## Mga Browser Extension
 
-Bakit mo gugustuhing gumawa ng browser extension? Kapaki-pakinabang ito para sa mabilisang pag-access sa mga gawain na madalas mong inuulit. Halimbawa, kung madalas mong kailangang suriin ang mga kulay sa iba't ibang web page na iyong ginagamit, maaari kang mag-install ng color-picker browser extension. Kung nahihirapan kang tandaan ang mga password, maaari kang gumamit ng password-management browser extension.
+Bakit mo gugustuhing gumawa ng browser extension? Ito ay isang kapaki-pakinabang na bagay na maikakabit sa iyong browser kapag kailangan mo ng mabilisang access sa mga gawain na madalas mong inuulit. Halimbawa, kung madalas kang kailangang suriin ang mga kulay sa iba't ibang web page na iyong ginagamit, maaari kang mag-install ng color-picker browser extension. Kung nahihirapan kang tandaan ang mga password, maaari kang gumamit ng password-management browser extension.
 
-Masaya ring gumawa ng browser extensions. Karaniwan, ang mga ito ay may limitadong bilang ng mga gawain na mahusay nilang nagagawa.
+Masaya rin ang paggawa ng browser extensions. Karaniwan, pinamamahalaan nila ang limitadong bilang ng mga gawain na mahusay nilang ginagawa.
 
 ✅ Ano ang iyong mga paboritong browser extension? Anong mga gawain ang kanilang ginagawa?
 
 ### Pag-install ng Extensions
 
-Bago ka magsimulang gumawa, tingnan ang proseso ng paggawa at pag-deploy ng isang browser extension. Bagama't bahagyang nagkakaiba ang bawat browser sa kung paano nila pinamamahalaan ang prosesong ito, halos pareho ang proseso sa Chrome at Firefox tulad ng halimbawa sa Edge:
+Bago ka magsimulang magtayo, tingnan ang proseso ng paggawa at pag-deploy ng isang browser extension. Bagama't bahagyang magkakaiba ang bawat browser sa kung paano nila pinamamahalaan ang gawaing ito, ang proseso ay katulad sa Chrome at Firefox sa halimbawang ito sa Edge:
 
 ![screenshot ng Edge browser na nagpapakita ng bukas na edge://extensions page at bukas na settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.tl.png)
 
@@ -61,27 +61,27 @@ Bago ka magsimulang gumawa, tingnan ang proseso ng paggawa at pag-deploy ng isan
 
 Sa esensya, ang proseso ay:
 
-- gawin ang iyong extension gamit ang `npm run build` 
-- mag-navigate sa browser papunta sa extensions pane gamit ang "Settings and more" button (ang `...` icon) sa kanang itaas
-- kung ito ay bagong installation, piliin ang `load unpacked` upang i-upload ang bagong extension mula sa build folder nito (sa ating kaso ito ay `/dist`) 
+- buuin ang iyong extension gamit ang `npm run build` 
+- mag-navigate sa browser sa extensions pane gamit ang "Settings and more" button (ang `...` icon) sa kanang itaas
+- kung ito ay bagong pag-install, piliin ang `load unpacked` upang mag-upload ng bagong extension mula sa build folder nito (sa ating kaso ito ay `/dist`) 
 - o, i-click ang `reload` kung nire-reload mo ang extension na na-install na
 
-✅ Ang mga tagubiling ito ay para sa mga extension na ikaw mismo ang gumawa; upang mag-install ng mga extension na nailabas na sa browser extension store ng bawat browser, dapat kang mag-navigate sa mga [store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) at i-install ang extension na iyong napili.
+✅ Ang mga tagubilin na ito ay para sa mga extension na ikaw mismo ang gumawa; upang mag-install ng mga extension na inilabas na sa browser extension store na nauugnay sa bawat browser, dapat kang mag-navigate sa mga [tindahan](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) at i-install ang extension na iyong pinili.
 
 ### Magsimula
 
-Gagawa ka ng browser extension na nagpapakita ng carbon footprint ng iyong rehiyon, kabilang ang paggamit ng enerhiya at pinagmulan ng enerhiya. Ang extension ay magkakaroon ng form na nangongolekta ng API key upang ma-access mo ang API ng CO2 Signal.
+Gagawa ka ng browser extension na nagpapakita ng carbon footprint ng iyong rehiyon, na ipinapakita ang paggamit ng enerhiya ng iyong rehiyon at ang pinagmulan ng enerhiya. Ang extension ay magkakaroon ng isang form na nangongolekta ng API key upang ma-access mo ang API ng CO2 Signal.
 
-**Kailangan mo ng:**
+**Kailangan mo:**
 
 - [isang API key](https://www.co2signal.com/); ilagay ang iyong email sa kahon sa pahinang ito at ipapadala ito sa iyo
-- ang [code para sa iyong rehiyon](http://api.electricitymap.org/v3/zones) na tumutugma sa [Electricity Map](https://www.electricitymap.org/map) (halimbawa, sa Boston, ginagamit ko ang 'US-NEISO').
-- ang [starter code](../../../../5-browser-extension/start). I-download ang `start` folder; kukumpletuhin mo ang code sa folder na ito.
-- [NPM](https://www.npmjs.com) - Ang NPM ay isang package management tool; i-install ito nang lokal at ang mga package na nakalista sa iyong `package.json` file ay mai-install para magamit sa iyong web asset
+- ang [code para sa iyong rehiyon](http://api.electricitymap.org/v3/zones) na tumutugma sa [Electricity Map](https://www.electricitymap.org/map) (sa Boston, halimbawa, ginagamit ko ang 'US-NEISO').
+- ang [starter code](../../../../5-browser-extension/start). I-download ang folder na `start`; kukumpletuhin mo ang code sa folder na ito.
+- [NPM](https://www.npmjs.com) - Ang NPM ay isang tool sa pamamahala ng package; i-install ito sa lokal at ang mga package na nakalista sa iyong `package.json` file ay mai-install para magamit sa iyong web asset.
 
-✅ Matuto pa tungkol sa package management sa [napakahusay na Learn module na ito](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+✅ Matuto pa tungkol sa pamamahala ng package sa [napakahusay na Learn module na ito](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
-Maglaan ng oras upang tingnan ang codebase:
+Maglaan ng sandali upang tingnan ang codebase:
 
 dist
     -|manifest.json (dito nakatakda ang mga default)
@@ -91,9 +91,9 @@ dist
 src
     -|index.js (dito ilalagay ang iyong JS code)
 
-✅ Kapag nakuha mo na ang iyong API key at Region code, itabi ang mga ito sa isang tala para sa hinaharap na paggamit.
+✅ Kapag mayroon ka nang API key at Region code, itago ang mga ito sa isang tala para sa hinaharap na paggamit.
 
-### Gawin ang HTML para sa Extension
+### Gumawa ng HTML para sa Extension
 
 Ang extension na ito ay may dalawang view. Isa para mangolekta ng API key at region code:
 
@@ -105,7 +105,7 @@ At ang pangalawa para ipakita ang carbon usage ng rehiyon:
 
 Magsimula tayo sa paggawa ng HTML para sa form at pag-style nito gamit ang CSS.
 
-Sa `/dist` folder, gagawa ka ng form at isang result area. Sa `index.html` file, punan ang delineated form area:
+Sa folder na `/dist`, gagawa ka ng form at isang result area. Sa file na `index.html`, punan ang delineated form area:
 
 ```HTML
 <form class="form-data" autocomplete="on">
@@ -123,9 +123,9 @@ Sa `/dist` folder, gagawa ka ng form at isang result area. Sa `index.html` file,
 	<button class="search-btn">Submit</button>
 </form>	
 ```
-Ito ang form kung saan ilalagay at ise-save ang iyong impormasyon sa local storage.
+Ito ang form kung saan ang iyong na-save na impormasyon ay ilalagay at mai-save sa local storage.
 
-Susunod, gumawa ng results area; sa ilalim ng final form tag, magdagdag ng ilang divs:
+Susunod, gumawa ng results area; sa ilalim ng huling form tag, magdagdag ng ilang divs:
 
 ```HTML
 <div class="result">
@@ -146,11 +146,19 @@ Sa puntong ito, maaari kang mag-try ng build. Siguraduhing i-install ang package
 npm install
 ```
 
-Ang command na ito ay gagamit ng npm, ang Node Package Manager, upang i-install ang webpack para sa build process ng iyong extension. Makikita mo ang output ng prosesong ito sa pamamagitan ng pagtingin sa `/dist/main.js` - makikita mong na-bundle na ang code.
+Ang command na ito ay gagamit ng npm, ang Node Package Manager, upang i-install ang webpack para sa proseso ng pagbuo ng iyong extension. Makikita mo ang output ng prosesong ito sa pamamagitan ng pagtingin sa `/dist/main.js` - makikita mo na ang code ay na-bundle na.
 
-Sa ngayon, dapat mag-build ang extension at, kung ide-deploy mo ito sa Edge bilang extension, makikita mo ang isang maayos na form na naka-display.
+Sa ngayon, dapat na mabuo ang extension at, kung ide-deploy mo ito sa Edge bilang isang extension, makikita mo ang isang form na maayos na ipinapakita.
 
-Binabati kita, nagawa mo na ang unang hakbang sa paggawa ng browser extension. Sa mga susunod na aralin, gagawin mo itong mas functional at kapaki-pakinabang.
+Binabati kita, nagawa mo na ang unang hakbang patungo sa paggawa ng isang browser extension. Sa mga susunod na aralin, gagawin mo itong mas functional at kapaki-pakinabang.
+
+## Hamon ng GitHub Copilot Agent 🚀
+
+Gamitin ang Agent mode upang kumpletuhin ang sumusunod na hamon:
+
+**Deskripsyon:** Pagandahin ang browser extension sa pamamagitan ng pagdaragdag ng mga feature para sa form validation at user feedback upang mapabuti ang karanasan ng user sa paglalagay ng API keys at region codes.
+
+**Prompt:** Gumawa ng mga JavaScript validation function na susuriin kung ang field ng API key ay naglalaman ng hindi bababa sa 20 characters at kung ang region code ay sumusunod sa tamang format (tulad ng 'US-NEISO'). Magdagdag ng visual feedback sa pamamagitan ng pagbabago ng kulay ng input border sa berde para sa mga valid na input at pula para sa mga invalid. Magdagdag din ng toggle feature upang ipakita/itago ang API key para sa seguridad.
 
 ---
 
@@ -162,7 +170,7 @@ Tingnan ang isang browser extension store at mag-install ng isa sa iyong browser
 
 [Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/24)
 
-## Review at Pag-aaral sa Sarili
+## Review & Pag-aaral sa Sarili
 
 Sa araling ito, natutunan mo ang kaunti tungkol sa kasaysayan ng web browser; samantalahin ang pagkakataong ito upang matuto pa tungkol sa kung paano inisip ng mga imbentor ng World Wide Web ang paggamit nito sa pamamagitan ng pagbabasa ng higit pa tungkol sa kasaysayan nito. Ilang kapaki-pakinabang na site ay:
 
@@ -170,13 +178,13 @@ Sa araling ito, natutunan mo ang kaunti tungkol sa kasaysayan ng web browser; sa
 
 [History of the Web](https://webfoundation.org/about/vision/history-of-the-web/)
 
-[Isang panayam kay Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)
+[Panayam kay Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)
 
-## Gawain 
+## Takdang-Aralin 
 
 [Restyle your extension](assignment.md)
 
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

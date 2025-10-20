@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "05be6c37791668e3719c4fba94566367",
-  "translation_date": "2025-08-28T15:45:59+00:00",
+  "original_hash": "7be341decc162fb251a9e0851b6600f6",
+  "translation_date": "2025-10-20T21:10:06+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "tl"
 }
@@ -13,29 +13,29 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/39)
 
-May iba't ibang paraan upang ipahayag ang *kondisyon ng pagtatapos* sa isang laro. Nasa iyo bilang tagalikha ng laro kung bakit ito magtatapos. Narito ang ilang mga dahilan, kung ipagpalagay natin na pinag-uusapan ang space game na iyong binubuo:
+May iba't ibang paraan upang ipahayag ang *kondisyon ng pagtatapos* sa isang laro. Nasa sa iyo bilang tagalikha ng laro kung bakit ito nagtatapos. Narito ang ilang mga dahilan, kung ipagpalagay natin na pinag-uusapan ang space game na ginagawa mo:
 
 - **`N` Mga barko ng kalaban ang nawasak**: Karaniwan ito kung hinahati mo ang laro sa iba't ibang antas kung saan kailangan mong wasakin ang `N` mga barko ng kalaban upang makumpleto ang isang antas.
 - **Ang iyong barko ay nawasak**: May mga laro kung saan talo ka kapag ang iyong barko ay nawasak. Isa pang karaniwang paraan ay ang konsepto ng "lives". Tuwing ang iyong barko ay nawasak, nababawasan ang isang buhay. Kapag naubos na ang lahat ng buhay, talo ka na sa laro.
-- **Nakolekta mo ang `N` puntos**: Isa pang karaniwang kondisyon ng pagtatapos ay ang pagkolekta ng puntos. Paano ka makakakuha ng puntos ay nasa iyo, ngunit karaniwan itong ibinibigay sa iba't ibang aktibidad tulad ng pagwasak sa barko ng kalaban o pagkolekta ng mga item na bumabagsak kapag sila ay nawasak.
-- **Nakumpleto ang isang antas**: Maaaring kabilang dito ang ilang mga kondisyon tulad ng `X` nawasak na barko ng kalaban, `Y` nakolektang puntos, o maaaring isang partikular na item ang nakolekta.
+- **Nakolekta mo ang `N` puntos**: Isa pang karaniwang kondisyon ng pagtatapos ay ang pagkolekta ng puntos. Paano ka makakakuha ng puntos ay nasa sa iyo, ngunit karaniwan itong ibinibigay sa iba't ibang aktibidad tulad ng pagwasak sa barko ng kalaban o pagkolekta ng mga item na bumabagsak kapag sila ay nawasak.
+- **Nakumpleto ang isang antas**: Maaaring kasama dito ang ilang mga kondisyon tulad ng `X` na barko ng kalaban ang nawasak, `Y` puntos ang nakolekta, o maaaring may natukoy na item na nakolekta.
 
 ## Pag-restart
 
-Kung nagustuhan ng mga tao ang iyong laro, malamang na gusto nilang ulitin ito. Kapag natapos ang laro sa anumang dahilan, dapat kang magbigay ng opsyon upang mag-restart.
+Kung nagustuhan ng mga tao ang iyong laro, malamang na gusto nilang ulitin ito. Kapag natapos na ang laro sa anumang dahilan, dapat kang magbigay ng opsyon upang mag-restart.
 
 ✅ Mag-isip ng kaunti tungkol sa kung anong mga kondisyon ang nagtatapos sa isang laro, at kung paano ka hinihikayat na mag-restart.
 
 ## Ano ang gagawin
 
-Idaragdag mo ang mga patakarang ito sa iyong laro:
+Idadagdag mo ang mga patakarang ito sa iyong laro:
 
-1. **Pagpanalo sa laro**. Kapag ang lahat ng barko ng kalaban ay nawasak, panalo ka sa laro. Bukod dito, magpakita ng isang uri ng mensahe ng tagumpay.
-1. **Pag-restart**. Kapag naubos na ang lahat ng iyong buhay o nanalo ka sa laro, dapat kang magbigay ng paraan upang mag-restart. Tandaan! Kailangan mong i-reinitialize ang laro at ang dating estado ng laro ay dapat na malinis.
+1. **Pagpanalo sa laro**. Kapag nawasak na ang lahat ng barko ng kalaban, panalo ka sa laro. Bukod dito, magpakita ng mensahe ng tagumpay.
+1. **Pag-restart**. Kapag naubos na ang lahat ng iyong buhay o nanalo ka sa laro, dapat kang magbigay ng paraan upang mag-restart. Tandaan! Kailangan mong i-reinitialize ang laro at linisin ang nakaraang estado ng laro.
 
 ## Mga Inirerekomendang Hakbang
 
-Hanapin ang mga file na ginawa para sa iyo sa sub-folder na `your-work`. Dapat itong naglalaman ng sumusunod:
+Hanapin ang mga file na ginawa para sa iyo sa sub-folder na `your-work`. Dapat itong naglalaman ng mga sumusunod:
 
 ```bash
 -| assets
@@ -48,20 +48,20 @@ Hanapin ang mga file na ginawa para sa iyo sa sub-folder na `your-work`. Dapat i
 -| package.json
 ```
 
-Simulan ang iyong proyekto sa folder na `your_work` sa pamamagitan ng pag-type:
+Simulan ang iyong proyekto sa folder na `your_work` sa pamamagitan ng pag-type ng:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5000`. Buksan ang browser at ilagay ang address na iyon. Ang iyong laro ay dapat nasa playable na estado.
+Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5000`. Buksan ang browser at ilagay ang address na iyon. Ang iyong laro ay dapat na nasa playable na estado.
 
-> tip: upang maiwasan ang mga babala sa Visual Studio Code, i-edit ang function na `window.onload` upang tawagin ang `gameLoopId` nang direkta (nang walang `let`), at ideklara ang gameLoopId sa itaas ng file, nang hiwalay: `let gameLoopId;`
+> tip: upang maiwasan ang mga babala sa Visual Studio Code, i-edit ang function na `window.onload` upang tawagin ang `gameLoopId` nang walang `let`, at ideklara ang gameLoopId sa itaas ng file, nang hiwalay: `let gameLoopId;`
 
 ### Magdagdag ng Code
 
-1. **Subaybayan ang kondisyon ng pagtatapos**. Magdagdag ng code na sumusubaybay sa bilang ng mga kalaban, o kung ang barko ng hero ay nawasak sa pamamagitan ng pagdaragdag ng dalawang function na ito:
+1. **Subaybayan ang kondisyon ng pagtatapos**. Magdagdag ng code na sumusubaybay sa bilang ng mga kalaban, o kung ang barko ng bayani ay nawasak sa pamamagitan ng pagdaragdag ng dalawang function na ito:
 
     ```javascript
     function isHeroDead() {
@@ -74,7 +74,7 @@ Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5
     }
     ```
 
-1. **Magdagdag ng lohika sa mga message handler**. I-edit ang `eventEmitter` upang pangasiwaan ang mga kondisyong ito:
+1. **Magdagdag ng lohika sa mga message handler**. I-edit ang `eventEmitter` upang hawakan ang mga kondisyong ito:
 
     ```javascript
     eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -115,9 +115,9 @@ Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5
     GAME_END_WIN: "GAME_END_WIN",
     ```
 
-2. **Magdagdag ng restart code** na magre-restart ng laro sa pagpindot ng napiling button.
+2. **Magdagdag ng code para sa pag-restart** na magre-restart sa laro sa pagpindot ng napiling button.
 
-   1. **Makinig sa key press `Enter`**. I-edit ang eventListener ng iyong window upang makinig sa pindot na ito:
+   1. **Makinig sa key press na `Enter`**. I-edit ang eventListener ng iyong window upang makinig sa pindot na ito:
 
     ```javascript
      else if(evt.key === "Enter") {
@@ -133,7 +133,7 @@ Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5
 
 1. **Ipapatupad ang mga patakaran ng laro**. Ipapatupad ang mga sumusunod na patakaran ng laro:
 
-   1. **Kondisyon ng panalo ng manlalaro**. Kapag ang lahat ng barko ng kalaban ay nawasak, magpakita ng mensahe ng tagumpay.
+   1. **Kondisyon ng panalo ng manlalaro**. Kapag nawasak na ang lahat ng barko ng kalaban, magpakita ng mensahe ng tagumpay.
 
       1. Una, gumawa ng function na `displayMessage()`:
 
@@ -171,7 +171,7 @@ Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5
         }
         ```
 
-   1. **Lohika ng pag-restart**. Kapag naubos na ang lahat ng buhay o nanalo ang manlalaro sa laro, ipakita na maaaring i-restart ang laro. Bukod dito, i-restart ang laro kapag pinindot ang *restart* key (maaari mong piliin kung anong key ang itatalaga sa pag-restart).
+   1. **Lohika ng pag-restart**. Kapag naubos na ang lahat ng buhay o nanalo ang manlalaro sa laro, magpakita na maaaring i-restart ang laro. Bukod dito, i-restart ang laro kapag pinindot ang *restart* key (maaari mong piliin kung anong key ang dapat i-map sa restart).
 
       1. Gumawa ng function na `resetGame()`:
 
@@ -210,13 +210,21 @@ Ang nasa itaas ay magpapasimula ng HTTP Server sa address na `http://localhost:5
         }
         ```
 
-👽 💥 🚀 Binabati kita, Kapitan! Kumpleto na ang iyong laro! Magaling! 🚀 💥 👽
+👽 💥 🚀 Binabati kita, Kapitan! Tapos na ang iyong laro! Magaling! 🚀 💥 👽
 
 ---
 
+## Hamon ng GitHub Copilot Agent 🚀
+
+Gamitin ang Agent mode upang tapusin ang sumusunod na hamon:
+
+**Deskripsyon:** Pagandahin ang space game sa pamamagitan ng pag-implement ng sistema ng pag-usad ng antas na may tumataas na kahirapan at mga bonus na tampok.
+
+**Prompt:** Gumawa ng multi-level na sistema ng space game kung saan ang bawat antas ay may mas maraming barko ng kalaban na may mas mataas na bilis at kalusugan. Magdagdag ng scoring multiplier na tumataas sa bawat antas, at mag-implement ng mga power-up (tulad ng rapid fire o shield) na random na lumalabas kapag nawasak ang mga kalaban. Isama ang bonus sa pagkumpleto ng antas at ipakita ang kasalukuyang antas sa screen kasama ang kasalukuyang puntos at buhay.
+
 ## 🚀 Hamon
 
-Magdagdag ng tunog! Kaya mo bang magdagdag ng tunog upang mapaganda ang gameplay ng iyong laro, marahil kapag may laser hit, o kapag namatay o nanalo ang hero? Tingnan ang [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) upang matutunan kung paano magpatugtog ng tunog gamit ang JavaScript.
+Magdagdag ng tunog! Kaya mo bang magdagdag ng tunog upang mapaganda ang gameplay ng iyong laro, marahil kapag may laser hit, o kapag namatay o nanalo ang bayani? Tingnan ang [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) upang matutunan kung paano magpatugtog ng tunog gamit ang JavaScript.
 
 ## Post-Lecture Quiz
 
@@ -224,7 +232,7 @@ Magdagdag ng tunog! Kaya mo bang magdagdag ng tunog upang mapaganda ang gameplay
 
 ## Review & Self Study
 
-Ang iyong takdang-aralin ay gumawa ng bagong sample na laro, kaya mag-explore ng ilang mga kawili-wiling laro upang makita kung anong uri ng laro ang maaari mong buuin.
+Ang iyong assignment ay gumawa ng bagong sample na laro, kaya't mag-explore ng ilang mga kawili-wiling laro upang makita kung anong uri ng laro ang maaari mong gawin.
 
 ## Assignment
 
@@ -233,4 +241,4 @@ Ang iyong takdang-aralin ay gumawa ng bagong sample na laro, kaya mag-explore ng
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
