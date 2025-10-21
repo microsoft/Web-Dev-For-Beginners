@@ -4,11 +4,13 @@
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/37)
 
-In this lesson, you'll learn how to add scoring to a game and calculate lives.
+Ready to make your space game feel like a real game? Let's add the satisfying elements that keep players coming back for more - scoring points and managing lives! This is where your game truly comes alive.
 
-## Draw text on the screen
+## Drawing Text on Screen - Your Game's Voice
 
-To be able to display a game score on the screen, you'll need to know how to place text on the screen. The answer is using the `fillText()` method on the canvas object. You can also control other aspects like what font to use, the color of the text and even its alignment (left, right, center). Below is some code drawing some text on the screen.
+Want to show off that epic score you're racking up? We need to learn how to put text on the screen! The secret weapon here is the `fillText()` method on your canvas object. Think of it as your game's way of talking to the player.
+
+Here's the cool part - you get to control everything about how that text looks:
 
 ```javascript
 ctx.font = "30px Arial";
@@ -17,22 +19,24 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Read more about [how to add text to a canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), and feel free to make yours look fancier!
+✅ Dive deeper into [adding text to a canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) - you might be surprised at how creative you can get with fonts and styling!
 
-## Life, as a game concept
+## Lives - More Than Just a Number
 
-The concept of having a life in a game is only a number. In the context of a space game it's common to assign a set of lives that get deducted one by one when your ship takes damage. It's nice if you can show a graphical representation of this like miniships or hearts instead of a number.
+Here's something interesting: in games, a "life" is really just a number that counts down. But what makes it feel meaningful? In space games, you typically start with a few lives, and each time an enemy ship crashes into you, you lose one. 
 
-## What to build
+The magic happens when you represent this visually - instead of just showing "Lives: 3", you might display tiny ship icons or hearts. It's amazing how much more engaging this feels for players!
 
-Let's add the following to your game:
+## Building Your Game's Reward System
 
-- **Game score**: For every enemy ship that is destroyed, the hero should be awarded some points, we suggest a 100 points per ship. The game score should be shown in the bottom left.
-- **Life**: Your ship has three lives. You lose a life every time an enemy ship collides with you. A life score should be displayed at the bottom right and be made out of the following graphic ![life image](solution/assets/life.png).
+Time to add those satisfying game elements that'll make players want to keep playing! Here's what we're going to implement:
 
-## Recommended steps
+- **Scoring system**: Every enemy ship you blast out of the sky earns you points - let's say 100 points per ship because round numbers feel good! We'll display this score in the bottom left corner.
+- **Life counter**: Your hero starts with three lives (the classic amount!). Each collision with an enemy costs you one life. We'll show this in the bottom right using this neat little graphic ![life image](solution/assets/life.png).
 
-Locate the files that have been created for you in the `your-work` sub folder. It should contain the following:
+## Let's Get Building!
+
+First things first - let's get your workspace ready. Navigate to the files in your `your-work` sub folder. You should see these familiar files waiting for you:
 
 ```bash
 -| assets
@@ -44,24 +48,24 @@ Locate the files that have been created for you in the `your-work` sub folder. I
 -| package.json
 ```
 
-You start your project the `your_work` folder by typing:
+Ready to see your game in action? Start your project by jumping into the `your_work` folder and firing up the server:
 
 ```bash
 cd your-work
 npm start
 ```
 
-The above will start a HTTP Server on address `http://localhost:5000`. Open up a browser and input that address, right now it should render the hero and all the enemies, and as you hit your left and right arrows, the hero moves and can shoot down enemies.
+This creates a local server at `http://localhost:5000`. Pop that address into your browser, and you should see your hero ready for action! Try moving with the arrow keys and shooting down some enemies - satisfying, right?
 
-### Add code
+### Time to Code!
 
-1. **Copy over the needed assets** from the `solution/assets/` folder into `your-work` folder; you will add a `life.png` asset. Add the lifeImg to the window.onload function: 
+1. **Grab the visual assets you'll need**. Copy the `life.png` asset from the `solution/assets/` folder into your `your-work` folder. Then add the lifeImg to your window.onload function: 
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
     ```
 
-1. Add the `lifeImg` to the list of assets:
+1. Don't forget to add the `lifeImg` to your assets list:
 
     ```javascript
     let heroImg,
@@ -71,9 +75,9 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
     eventEmitter = new EventEmitter();
     ```
   
-2. **Add variables**. Add code that represents your total score (0) and lives left (3), display these scores on a screen.
+2. **Set up your game variables**. Add some code to track your total score (starting at 0) and remaining lives (starting at 3). We'll display these on screen so players always know where they stand.
 
-3. **Extend `updateGameObjects()` function**. Extend the `updateGameObjects()` function to handle enemy collisions:
+3. **Make collisions matter**. Extend your `updateGameObjects()` function to detect when enemies crash into your hero:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -84,15 +88,15 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
       })
     ```
 
-4. **Add `life` and `points`**. 
-   1. **Initialize variables**. Under `this.cooldown = 0` in the `Hero` class, set life and points:
+4. **Add life and point tracking to your Hero**. 
+   1. **Initialize the counters**. Under `this.cooldown = 0` in your `Hero` class, set up life and points:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Draw variables on screen**. Draw these values to screen:
+   1. **Show these values to the player**. Create functions to draw these values on screen:
 
         ```javascript
         function drawLife() {
@@ -119,18 +123,18 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
 
         ```
 
-   1. **Add methods to Game loop**. Make sure you add these functions to your window.onload function under `updateGameObjects()`:
+   1. **Hook everything into your game loop**. Add these functions to your window.onload function right after `updateGameObjects()`:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Implement game rules**. Implement the following game rules:
+1. **Make the game rules feel real**. Now for the exciting part - implementing the consequences and rewards:
 
-   1. **For every hero and enemy collision**, deduct a life.
+   1. **Collisions cost lives**. Every time your hero crashes into an enemy, you should lose a life.
    
-      Extend the `Hero` class to do this deduction:
+      Add this method to your `Hero` class:
 
         ```javascript
         decrementLife() {
@@ -141,9 +145,9 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         }
         ```
 
-   2. **For every laser that hits an enemy**, increase game score with a 100 points.
+   2. **Shooting enemies earns points**. Every successful hit should reward you with 100 points - because destroying space enemies is no small feat!
 
-      Extend the Hero class to do this increment:
+      Extend your Hero class with this increment method:
     
         ```javascript
           incrementPoints() {
@@ -151,7 +155,7 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
           }
         ```
 
-        Add these functions to your Collision Event Emitters:
+        Now connect these functions to your collision events:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -166,9 +170,11 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
         });
         ```
 
-✅ Do a little research to discover other games that are created using JavaScript/Canvas. What are their common traits?
+✅ Curious about other games built with JavaScript and Canvas? Do some exploring - you might be amazed at what's possible!
 
-By the end of this work, you should see the small 'life' ships at the bottom right, points at the bottom left, and you should see your life count decrement as you collide with enemies and your points increment when you shoot enemies. Well done! Your game is almost complete.
+When you're done with all this coding, take a step back and admire what you've built! You should now see those little life ship icons in the bottom right, your points proudly displayed in the bottom left, and watch as your life count drops when enemies hit you and your points climb when you blast them away. 
+
+This is starting to feel like a real game, isn't it? You're almost there!
 
 ---
 
@@ -184,7 +190,7 @@ Use the Agent mode to complete the following challenge:
 
 ## 🚀 Challenge
 
-Your code is almost complete. Can you envision your next steps?
+You're so close to having a complete game! What features are you excited to add next?
 
 ## Post-Lecture Quiz
 
@@ -192,7 +198,7 @@ Your code is almost complete. Can you envision your next steps?
 
 ## Review & Self Study
 
-Research some ways that you can increment and decrement game scores and lives. There are some interesting game engines like [PlayFab](https://playfab.com). How could using one of these would enhance your game?
+Want to explore more? Research different approaches to game scoring and life systems. There are fascinating game engines out there like [PlayFab](https://playfab.com) that handle scoring, leaderboards, and player progression. How might integrating something like that take your game to the next level?
 
 ## Assignment
 

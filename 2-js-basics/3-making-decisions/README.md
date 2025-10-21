@@ -4,17 +4,17 @@
 
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-Making decisions is at the heart of programming and mirrors how we think in everyday life. Just as you decide what to wear based on the weather or which route to take based on traffic, your JavaScript programs need to make choices based on different conditions. This fundamental concept transforms static code into dynamic, intelligent applications that can respond to user input and changing circumstances.
+Ever wonder how your favorite apps know what to show you? Like how Netflix suggests movies based on what you've watched, or how a weather app tells you whether to bring an umbrella? That's the magic of decision-making in code!
 
-In this lesson, you'll discover how to use conditional statements, comparison operators, and logical expressions to control the flow of your programs. You'll learn about `if` statements, `switch` statements, and the powerful logical operators that help your code make smart decisions. These tools will enable you to create programs that can evaluate situations and respond appropriately.
+Just like you decide what to wear based on the weather or which route to take based on traffic, your JavaScript programs need to make choices based on different situations. This is what transforms boring, static code into smart, responsive applications that actually do useful things.
 
-By the end of this lesson, you'll be writing JavaScript that can analyze data, validate user input, and execute different code paths based on various conditions. Let's explore how to give your programs the power of decision-making!
+In this lesson, you'll learn how to give your code a brain! We'll explore conditional statements, comparison operators, and logical expressions that help your programs think through problems and respond appropriately. Think of these as the "if this, then that" rules that make your code intelligent.
 
 ## Pre-Lecture Quiz
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Making decisions and controlling the order in which your code runs makes your code reusable and robust. This section covers the syntax for controlling data flow in JavaScript and its significance when used with Boolean data types
+Making decisions and controlling which parts of your code run when is what makes programming really powerful. This section covers how to control the flow of your JavaScript programs using Boolean values (those true/false values we learned about before).
 
 [![Making Decisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
 
@@ -24,29 +24,26 @@ Making decisions and controlling the order in which your code runs makes your co
 
 ## A Brief Recap on Booleans
 
-Before we dive into decision-making, let's revisit Boolean values from our previous lessons. Booleans are the foundation of all conditional logic in programming – they represent the simple concept of "yes or no," "true or false," or "on or off."
+Before we jump into making decisions, let's quickly revisit those Boolean values we talked about earlier. Remember, Booleans are like digital switches – they're either on (`true`) or off (`false`). No middle ground, no "maybe" – just yes or no.
 
-Booleans can have only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.
+These simple true/false values are the foundation of all decision-making in programming. Every time your code needs to choose between doing something or not doing something, it comes down to a Boolean.
 
-Set your boolean to be true or false like this:
+Creating Boolean variables is straightforward:
 
 ```javascript
 let myTrueBool = true;
 let myFalseBool = false;
 ```
 
-**Here's what this code does:**
-- **Creates** a variable `myTrueBool` and assigns the value `true`
-- **Creates** a variable `myFalseBool` and assigns the value `false`
-- **Uses** the `let` keyword to declare variables that can be changed later
+Here we're creating two variables – one that's `true` and one that's `false`. Simple as that!
 
 ✅ Booleans are named after the English mathematician, philosopher and logician George Boole (1815–1864).
 
 ## Comparison Operators and Booleans
 
-Now that you understand Boolean values, let's explore how to create them using comparison operators. These operators are your tools for asking questions in code: "Is this number bigger than that one?" or "Are these two values the same?" Understanding these operators is crucial for writing effective conditional statements.
+Now here's where it gets interesting! Most of the time, you won't manually set Booleans to `true` or `false`. Instead, you'll create them by asking questions in your code: "Is this number bigger than that one?" or "Are these two things equal?"
 
-Operators are used to evaluate conditions by making comparisons that will create a Boolean value. The following is a list of operators that are frequently used.
+That's where comparison operators come in. Think of them as your code's way of asking questions and getting yes/no answers.
 
 | Symbol | Description                                                                                                                                                   | Example            |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
@@ -61,9 +58,9 @@ Operators are used to evaluate conditions by making comparisons that will create
 
 ## If Statement
 
-The `if` statement is your first tool for making decisions in JavaScript. Think of it as asking a question – if the answer is "yes" (true), then do something specific. This is the foundation of conditional logic and allows your programs to respond intelligently to different situations.
+The `if` statement is like asking a question in your code. "If this condition is true, then do this thing." It's probably the most important tool you'll use for making decisions in JavaScript.
 
-The `if` statement will run code in between its blocks if the condition is true.
+Here's how it works:
 
 ```javascript
 if (condition) {
@@ -71,12 +68,9 @@ if (condition) {
 }
 ```
 
-**Understanding this structure:**
-- **Evaluates** the condition inside the parentheses `()`
-- **Executes** the code inside the curly braces `{}` only if the condition is `true`
-- **Skips** the code block entirely if the condition is `false`
+The condition goes inside the parentheses, and if it's `true`, JavaScript runs the code inside the curly braces. If it's `false`, JavaScript just skips that whole block.
 
-Logical operators are often used to form the condition.
+You'll often use comparison operators to create these conditions. Let's see a practical example:
 
 ```javascript
 let currentMoney = 1000;
@@ -88,16 +82,13 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-**In the above, we've:**
-- **Declared** variables for current money and laptop price with realistic values
-- **Used** the greater than or equal operator `>=` to compare values
-- **Executed** the `console.log()` statement because `1000 >= 800` evaluates to `true`
+Since `1000 >= 800` is `true`, the code inside the curly braces runs, and you'll see "Getting a new laptop!" in the console. Makes sense, right?
 
 ## If..Else Statement
 
-Sometimes you want your program to do one thing when a condition is true and something different when it's false. The `else` statement provides this "Plan B" – it ensures your program always has a response, regardless of whether the initial condition is met.
+But what if you want your program to do something different when the condition is false? That's where `else` comes in – it's like having a backup plan.
 
-The `else` statement will run the code in between its blocks when the condition is false. It's optional with an `if` statement.
+The `else` statement gives you a way to say "if this condition isn't true, do this other thing instead."
 
 ```javascript
 let currentMoney = 500;
@@ -112,19 +103,15 @@ if (currentMoney >= laptopPrice) {
 }
 ```
 
-**Breaking down what happens here:**
-- **Compares** `currentMoney` (500) with `laptopPrice` (800)
-- **Evaluates** the condition `500 >= 800` as `false`
-- **Skips** the first code block because the condition failed
-- **Executes** the `else` block, displaying "Can't afford a new laptop, yet!"
+Now since `500 >= 800` is `false`, JavaScript skips the first block and runs the `else` block instead. You'll see "Can't afford a new laptop, yet!" in the console.
 
 ✅ Test your understanding of this code and the following code by running it in a browser console. Change the values of the currentMoney and laptopPrice variables to change the returned `console.log()`.
 
 ## Switch Statement
 
-When you need to compare a single value against multiple possible options, the `switch` statement provides a cleaner alternative to multiple `if..else` statements. Think of it like a restaurant menu where you pick one option from many choices – the `switch` statement makes this type of decision-making more readable and organized.
+Sometimes you need to compare one value against several different options. You could write a bunch of `if..else` statements, but that gets messy quickly. The `switch` statement is like a clean, organized way to handle multiple choices.
 
-The `switch` statement is used to perform different actions based on different conditions. Use the `switch` statement to select one of many code blocks to be executed.
+Think of it like a vending machine – you press one button (the value), and the machine does the corresponding action for that specific button.
 
 ```javascript
 switch (expression) {
@@ -139,11 +126,12 @@ switch (expression) {
 }
 ```
 
-**Understanding the structure:**
-- **Evaluates** the expression once at the beginning
-- **Compares** the result against each `case` value
-- **Executes** the matching case block and uses `break` to exit
-- **Runs** the `default` block if no cases match
+Here's how it's structured:
+- JavaScript evaluates the expression once
+- It looks through each `case` to find a match
+- When it finds a match, it runs that code block
+- The `break` tells JavaScript to stop and exit the switch
+- If no cases match, it runs the `default` block (if you have one)
 
 ```javascript
 // Program using switch statement for day of week
@@ -167,20 +155,15 @@ switch (dayNumber) {
 console.log(`Today is ${dayName}`);
 ```
 
-**Step by step, here's what's happening:**
-- **Declares** a variable `dayNumber` with the value `2`
-- **Evaluates** the switch expression and finds the matching `case 2`
-- **Assigns** "Tuesday" to the `dayName` variable
-- **Exits** the switch block using the `break` statement
-- **Displays** "Today is Tuesday" in the console
+In this example, JavaScript sees that `dayNumber` is `2`, finds the matching `case 2`, sets `dayName` to "Tuesday", and then breaks out of the switch. The result? "Today is Tuesday" gets logged to the console.
 
 ✅ Test your understanding of this code and the following code by running it in a browser console. Change the values of the variable a to change the returned `console.log()`.
 
 ## Logical Operators and Booleans
 
-Real-world decisions often involve multiple conditions. For example, you might go to the beach if it's sunny AND warm, or you might stay home if it's raining OR snowing. Logical operators allow you to combine multiple conditions in your JavaScript programs, making your decision-making logic more sophisticated and realistic.
+Real life isn't usually about simple yes/no questions. You might decide to go to the beach if it's sunny AND warm, or stay inside if it's raining OR snowing. Programming works the same way – you often need to combine multiple conditions to make smart decisions.
 
-Decisions might require more than one comparison, and can be strung together with logical operators to produce a Boolean value.
+That's where logical operators come in. They let you connect multiple true/false questions together.
 
 | Symbol | Description                                                                                     | Example                                                                 |
 | ------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -188,16 +171,14 @@ Decisions might require more than one comparison, and can be strung together wit
 | `\|\|` | **Logical OR**: Compares two Boolean expressions. Returns true if at least one side is true     | `(5 > 10) \|\| (5 < 10) // One side is false, other is true. Returns true` |
 | `!`    | **Logical NOT**: Returns the opposite value of a Boolean expression                             | `!(5 > 10) // 5 is not greater than 10, so "!" makes it true`         |
 
-**Understanding these operators:**
-- **Combines** multiple conditions using AND (`&&`) when all must be true
-- **Offers** alternatives using OR (`||`) when at least one must be true
-- **Reverses** logic using NOT (`!`) to flip true/false values
+These operators let you combine conditions in useful ways:
+- AND (`&&`) means both conditions must be true
+- OR (`||`) means at least one condition must be true  
+- NOT (`!`) flips true to false (and vice versa)
 
 ## Conditions and Decisions with Logical Operators
 
-Now let's see how logical operators work in practice with `if..else` statements. By combining logical operators with conditional statements, you can create sophisticated decision-making logic that handles complex real-world scenarios.
-
-Logical operators can be used to form conditions in `if..else` statements.
+Let's see these logical operators in action with a more realistic example:
 
 ```javascript
 let currentMoney = 600;
@@ -213,17 +194,11 @@ if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
 }
 ```
 
-**Let's understand each part:**
-- **Calculates** the discount price as 80% of original price (20% off)
-- **Uses** the OR operator (`||`) to check if either condition is true
-- **Evaluates** whether current money covers the full price OR the discount price
-- **Executes** "Getting a new laptop!" because `600 >= 640` (discount price) is true
+Here's what's happening: we calculate a 20% discount price (640), then check if our money covers either the full price OR the discounted price. Since 600 is enough for the discounted laptop at 640, the condition is true and we get the laptop!
 
 ### Negation Operator
 
-Sometimes it's easier to think about when something is NOT true rather than when it IS true. The negation operator (`!`) flips the logic, allowing you to write more intuitive conditions. For example, instead of checking "if user is not logged in," you can write "if not user is logged in."
-
-You've seen so far how you can use an `if...else` statement to create conditional logic. Anything that goes into an `if` needs to evaluate to true/false. By using the `!` operator you can _negate_ the expression. It would look like so:
+Sometimes it's easier to think about when something is NOT true. Like instead of asking "Is the user logged in?", you might want to ask "Is the user NOT logged in?" The exclamation mark (`!`) operator flips the logic for you.
 
 ```javascript
 if (!condition) {
@@ -233,25 +208,17 @@ if (!condition) {
 }
 ```
 
-**Key points to remember:**
-- **Flips** the Boolean value: `!true` becomes `false`, `!false` becomes `true`
-- **Reads** naturally: "if not condition" makes logical sense
-- **Simplifies** logic when you want to check for the absence of something
+The `!` operator is like saying "the opposite of..." – if something is `true`, `!` makes it `false`, and vice versa.
 
 ### Ternary Expressions
 
-For simple `if...else` decisions, JavaScript offers a more concise syntax called the ternary operator. Think of it as a shorthand way to write conditional assignments – it's particularly useful when you need to assign one of two values to a variable based on a condition.
-
-`if...else` isn't the only way to express decision logic. You can also use something called a ternary operator. The syntax for it looks like this:
+For simple decisions, JavaScript has a shortcut called the **ternary operator**. It's like a mini `if..else` statement that fits on one line. Great for when you need to assign one of two values to a variable based on a condition.
 
 ```javascript
 let variable = condition ? returnThisIfTrue : returnThisIfFalse;
 ```
 
-**Understanding the structure:**
-- **Evaluates** the condition before the question mark `?`
-- **Returns** the first value (after `?`) if condition is true
-- **Returns** the second value (after `:`) if condition is false
+It reads like a question: "Is this condition true? If yes, use this value. If no, use that value."
 
 Below is a more tangible example:
 
@@ -263,12 +230,9 @@ let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 
 ✅ Take a minute to read this code a few times. Do you understand how these operators are working?
 
-The above states that:
-- **Checks** if `firstNumber` is larger than `secondNumber`
-- **Assigns** `firstNumber` to `biggestNumber` if the condition is true
-- **Assigns** `secondNumber` to `biggestNumber` if the condition is false
+Here's what this line is saying: "Is `firstNumber` greater than `secondNumber`? If yes, put `firstNumber` in `biggestNumber`. If no, put `secondNumber` in `biggestNumber`."
 
-The ternary expression is just a compact way of writing the code below:
+The ternary operator is just a shorter way to write this traditional `if..else` statement:
 
 ```javascript
 let biggestNumber;
@@ -279,10 +243,7 @@ if (firstNumber > secondNumber) {
 }
 ```
 
-**What you need to know:**
-- **Provides** a concise alternative to simple `if...else` statements
-- **Works** best for straightforward conditional assignments
-- **Improves** code readability when used appropriately for simple conditions
+Both approaches do exactly the same thing – the ternary operator is just more compact. Use whichever feels more readable to you!
 
 ---
 
