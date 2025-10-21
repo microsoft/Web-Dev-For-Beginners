@@ -507,6 +507,8 @@ Use the Agent mode to complete the following challenge:
 
 Add the necessary HTML elements, CSS styles, and JavaScript functions to implement this feature. Include proper error handling and ensure the game remains accessible with appropriate ARIA labels.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## 🚀 Challenge
 
 Ready to take your typing game to the next level? Try implementing these advanced features to deepen your understanding of event handling and DOM manipulation:

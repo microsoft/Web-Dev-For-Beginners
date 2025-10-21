@@ -292,6 +292,8 @@ Use the Agent mode to complete the following challenge:
 
 **Prompt:** Create a semantic HTML section that includes a main heading "Plant Care Guide", three subsections with headings "Watering", "Light Requirements", and "Soil Care", each containing a paragraph of plant care information. Use proper semantic HTML tags like `<section>`, `<h2>`, `<h3>`, and `<p>` to structure the content appropriately.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## 🚀 Explore HTML History Challenge
 
 **Learning About Web Evolution**

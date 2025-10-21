@@ -307,6 +307,8 @@ Use the Agent mode to complete the following challenge:
 
 **Prompt:** Create a multi-level space game system where each level has more enemy ships with increased speed and health. Add a scoring multiplier that increases with each level, and implement power-ups (like rapid fire or shield) that randomly appear when enemies are destroyed. Include a level completion bonus and display the current level on screen alongside the existing score and lives.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## 🚀 Optional Enhancement Challenge
 
 **Add Audio to Your Game**: Enhance your gameplay experience by implementing sound effects! Consider adding audio for:

@@ -538,6 +538,8 @@ Use the Agent mode to complete the following challenge:
 
 **Prompt:** Create a new HTML template with id "not-found" that displays a user-friendly 404 error page with styling. Then modify the JavaScript routing logic to show this template when users navigate to invalid URLs, and add a "Go Home" button that navigates back to the login page.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## 🚀 Challenge
 
 Add a new template and route for a third page that shows the credits for this app.

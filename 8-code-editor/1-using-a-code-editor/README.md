@@ -332,6 +332,8 @@ Ready to put all these skills together? Here's a fun challenge that'll help you 
 
 By the end of this challenge, you'll have a real project that demonstrates you know your way around VSCode.dev like a pro. Plus, you'll have a workflow you can use for all your future projects!
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## Assignment
 
 Time to take these skills for a real test drive! I've got a hands-on project that'll let you practice everything we've covered: [Create a resume website using VSCode.dev](./assignment.md)

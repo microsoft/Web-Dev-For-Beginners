@@ -282,6 +282,8 @@ Use the Agent mode to complete the following challenge:
 
 **Prompt:** Create a new file called `enhanced-canvas.html` with a canvas that displays animated stars in the background, a pulsing health bar for the hero ship, and enemy ships that slowly move downward. Include JavaScript code that draws twinkling stars using random positions and opacity, implements a health bar that changes color based on health level (green > yellow > red), and animates the enemy ships to move down the screen at different speeds.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## 🚀 Challenge
 
 You've learned about drawing with the 2D-focused Canvas API; take a look at the [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API), and try to draw a 3D object.

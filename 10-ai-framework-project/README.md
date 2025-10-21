@@ -860,3 +860,5 @@ Use the Agent mode to complete the following challenge:
 5. A main chat interface that can handle code submissions and provide detailed, actionable feedback
 
 The assistant should be able to review code in multiple programming languages, maintain context across multiple code submissions in a session, and provide both summary scores and detailed improvement suggestions.
+
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.

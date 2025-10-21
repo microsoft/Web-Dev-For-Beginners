@@ -245,6 +245,8 @@ Use the Agent mode to complete the following challenge:
 4. A function `calculate` that accepts another function as a parameter and two numbers, then applies the function to those numbers
 5. Demonstrate calling each function with appropriate test cases
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ff-quizzes.netlify.app)
 

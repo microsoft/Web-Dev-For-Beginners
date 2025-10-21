@@ -1860,6 +1860,8 @@ Use the Agent mode to complete the following challenge:
 
 **Prompt:** Modify the chat application to include conversation history that persists between sessions. Add functionality to save chat messages to local storage, display conversation history when the page loads, and include a "Clear History" button. Also implement typing indicators and message timestamps to make the chat experience more realistic.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## Assignment: Build Your Personal AI Assistant
 
 Alright, here's where things get really exciting – it's time to create your own unique AI assistant! This isn't just about copying what we've built; it's your chance to get creative and make something that's uniquely yours.

@@ -277,6 +277,8 @@ Requirements:
 
 Test your program with various scores including edge cases like 59, 60, 89, 90, and invalid inputs.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 
 ## Post-Lecture Quiz
 

@@ -292,6 +292,8 @@ Use the Agent mode to complete the following challenge:
 
 **Prompt:** Build a JavaScript program that creates a user profile object containing: a person's name (string), age (number), is a student status (boolean), favorite colors as an array, and an address object with street, city, and zip code properties. Include functions to display the profile information and update individual fields. Make sure to demonstrate string concatenation, template literals, arithmetic operations with the age, and boolean logic for the student status.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## 🚀 Challenge
 
 Ready for a fun detective mission? JavaScript has some quirky behaviors that can catch even experienced developers off guard! Here's a classic one to get you started: try typing this in your browser console: `let age = 1; let Age = 2; age == Age` and see what happens. Spoiler alert: it returns `false` – can you figure out why?

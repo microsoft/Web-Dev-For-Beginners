@@ -518,6 +518,8 @@ Ready for a real challenge? Let's push your space game to the next level! This i
 
 **Here's what to build:** Create a system that keeps your hero spaceship on screen, and make the controls feel silky smooth. When players hold down an arrow key, the ship should glide continuously rather than hopping along. Bonus points if you can add some visual flair when the ship bumps against the screen edges – maybe a subtle glow or color change to let players know they've hit the boundary.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## 🚀 Challenge
 
 Here's something every developer learns the hard way – code has a sneaky habit of becoming a tangled mess when you're not looking! You might have noticed your file getting pretty crowded with functions, variables, and classes all mixed together. 

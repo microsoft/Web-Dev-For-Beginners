@@ -410,6 +410,8 @@ Use the Agent mode to complete the following challenge:
 
 **Prompt:** Create a reset button that, when clicked, animates all plants back to their original sidebar positions using CSS transitions. The function should store the original positions when the page loads and smoothly transition plants back to those positions over 1 second when the reset button is pressed.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## 🚀 Additional Challenge: Expand Your Skills
 
 Ready to take your terrarium to the next level? Try implementing these enhancements:

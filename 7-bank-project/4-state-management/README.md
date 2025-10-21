@@ -494,6 +494,8 @@ Use the Agent mode to complete the following challenge:
 
 **Prompt:** Create an enhanced state management system that includes: 1) A state history array that tracks all previous states, 2) Undo and redo functions that can revert to previous states, 3) UI buttons for undo/redo operations on the dashboard, 4) A maximum history limit of 10 states to prevent memory issues, and 5) Proper cleanup of history when the user logs out. Ensure the undo/redo functionality works with account balance changes and persists across browser refreshes.
 
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
+
 ## 🚀 Challenge Time: Become a Storage Optimization Pro
 
 Alright, you've built something pretty awesome here! Your app remembers users, refreshes data when needed, and handles state like a champ. But here's a question that'll make you think like a senior developer: are we being a bit... wasteful with our storage?
